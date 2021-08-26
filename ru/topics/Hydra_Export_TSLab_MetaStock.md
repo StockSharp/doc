@@ -2,11 +2,11 @@
 
 Для экспорта данных в файлы форматов TSLab и MetaStock необходимо из раскрывающегося списка выбрать формат Txt:
 
-![hydra export](~/images/hydra_export.png)
+![hydra export](../images/hydra_export.png)
 
 При экспорте в файлы текстового формата (Txt) появляется окно: 
 
-![hydra export TSLab Meta Stock 2](~/images/hydra_export_TSLab_MetaStock_2.png)
+![hydra export TSLab Meta Stock 2](../images/hydra_export_TSLab_MetaStock_2.png)
 
 В котором необходимо указать шаблон экспорта, где в фигурных скобках указаны свойства, которые необходимо экспортировать, и их порядок: 
 

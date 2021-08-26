@@ -4,10 +4,10 @@ The following describes how to create and configure a backup task.
 
 1. To create a task, click on the **Add tasks...** button, in the window that opens, select the **Backup** item and click the **OK** button..
 
-   ![hydra tasks backup add](~/images/hydra_tasks_backup_add.png)
+   ![hydra tasks backup add](../images/hydra_tasks_backup_add.png)
 2. Next, you need to configure the task.
 
-   ![hydra tasks backup](~/images/hydra_tasks_backup.png)
+   ![hydra tasks backup](../images/hydra_tasks_backup.png)
 
    **Backup**
    - **Service**
@@ -48,7 +48,7 @@ The following describes how to create and configure a backup task.
 
       \- setting up the board work schedule. 
 
-     ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+     ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
    - **Interval of operation**
 
       \- the interval of operation. 

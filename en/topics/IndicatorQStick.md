@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [QStick](../api/StockSharp.Algo.Indicators.QStick.html) class. 
 
-![IndicatorQStick](~/images/IndicatorQStick.png)
+![IndicatorQStick](../images/IndicatorQStick.png)
 
 ## Recommended content
 

@@ -11,7 +11,7 @@
 
 1. За основу взят пример SampleHistoryTesting, описанный в разделе тестирования [На истории](StrategyTestingHistory.md). Данный пример с обычного тестирования изменен на тестирование с оптимизацией через подбор оптимального значения длин скользящих средних: 
 
-   ![sample history test parallel](~/images/sample_history_test_parallel.png)
+   ![sample history test parallel](../images/sample_history_test_parallel.png)
 2. Создается несколько настроек длин скользящих средних (первое значение отвечает за длину длинной, второе за длину короткой, третье за цвет [кривой эквити](Equity.md)): 
 
    ```cs

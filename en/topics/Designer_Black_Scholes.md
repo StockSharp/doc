@@ -1,6 +1,6 @@
 # Black Scholes
 
-![Designer Black Sols 00](~/images/Designer_Black_Scholes_00.png)
+![Designer Black Sols 00](../images/Designer_Black_Scholes_00.png)
 
 The cube is used to calculate the main Greeks: Delta, Gamma, Vega, Theta, Ro at the current time.
 

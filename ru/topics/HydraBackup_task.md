@@ -4,10 +4,10 @@
 
 1. Для создания задачи необходимо щелкнуть по кнопке **Добавить задачи...**, в открывшемся окне отметить пункт **Резервный** и нажать кнопку **ОК**.
 
-   ![hydra tasks backup add](~/images/hydra_tasks_backup_add.png)
+   ![hydra tasks backup add](../images/hydra_tasks_backup_add.png)
 2. Далее следует настроить задачу.
 
-   ![hydra tasks backup](~/images/hydra_tasks_backup.png)
+   ![hydra tasks backup](../images/hydra_tasks_backup.png)
 
    **Резервный**
    - **Адрес**
@@ -50,7 +50,7 @@
       \- заголовок задачи. 
    - **Рабочее время** \- время начала работы задачи. При установке галочки в поле, появляется возможность настоить расписание работы площадки.
 
-     ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+     ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
    - **Интервал работы**
 
       \- интервал работы задачи. 

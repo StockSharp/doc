@@ -2,7 +2,7 @@
 
 Панель **Свойства** по умолчанию свернута справа во вкладки стратегии. Данная панель представляет собой таблицу свойств эмуляции или Live торговли. При выделении определенного свойства внизу таблицы появится подробное описание этого свойства. Все свойства сгруппированы в группы:
 
-![Designer Properties emulation 00](~/images/Designer_Properties_emulation_00.png)
+![Designer Properties emulation 00](../images/Designer_Properties_emulation_00.png)
 
 **Настройки**
 

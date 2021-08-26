@@ -1,6 +1,6 @@
 # Конвертер
 
-![Designer Converter 00](~/images/Designer_Converter_00.png)
+![Designer Converter 00](../images/Designer_Converter_00.png)
 
 Кубик используется для конвертации сложных объектов в простые типы данных. Например, позволяет получить значение шага цены для инструмента. 
 

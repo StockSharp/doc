@@ -1,6 +1,6 @@
 # Переменная
 
-![Designer Variable 00](~/images/Designer_Variable_00.png)
+![Designer Variable 00](../images/Designer_Variable_00.png)
 
 Кубик используется для хранения значений, передачи ранее сохраненного значения дальше по цепочке элементов.
 

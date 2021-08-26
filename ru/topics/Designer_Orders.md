@@ -2,7 +2,7 @@
 
 Компонент **Заявки** представляет собой таблицу с заявками, в которой отображается полная информация о всех заявках стратегии. 
 
-![Designer Applications 00](~/images/Designer_Applications_00.png)
+![Designer Applications 00](../images/Designer_Applications_00.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [ParabolicSar](../api/StockSharp.Algo.Indicators.ParabolicSar.html) class. 
 
-![IndicatorParabolicSar](~/images/IndicatorParabolicSar.png)
+![IndicatorParabolicSar](../images/IndicatorParabolicSar.png)
 
 ## Recommended content
 

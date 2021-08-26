@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](../api/StockSharp.Alerts.AlertSettingsWindow.html) \- Специальное окно для настройки контроля рисков. 
 
-![API GUI RiskWindow](~/images/API_GUI_RiskWindow.png)
+![API GUI RiskWindow](../images/API_GUI_RiskWindow.png)
 
 Ниже приведен пример кода вызова окна настройки контроля рисков для стратегии. 
 

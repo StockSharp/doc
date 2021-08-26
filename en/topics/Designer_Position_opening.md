@@ -1,6 +1,6 @@
 # Register order
 
-![Designer Position opening 00](~/images/Designer_Position_opening_00.png)
+![Designer Position opening 00](../images/Designer_Position_opening_00.png)
 
 The cube is used to open a position on the instrument.
 
@@ -35,7 +35,7 @@ Conditional order settings
 
 Conditional order is the order with additional conditions that determine the time of registration in the trading system depending on the current market situation.
 
-![Designer Conditional Application](~/images/Designer_Conditional_Application.png)
+![Designer Conditional Application](../images/Designer_Conditional_Application.png)
 
 - **Connection** \- the connection where the order will be registered.
 - **Stop\-order type** \- the stop\-order type.

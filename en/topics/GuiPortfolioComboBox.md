@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](../api/StockSharp.Xaml.PortfolioComboBox.html) is the combo box for portfolio selection.
 
-![Gui PortfolioComboBox](~/images/Gui_PortfolioComboBox.png)
+![Gui PortfolioComboBox](../images/Gui_PortfolioComboBox.png)
 
 **Main properties**
 

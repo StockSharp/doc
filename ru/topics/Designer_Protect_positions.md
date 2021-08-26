@@ -1,6 +1,6 @@
 # Защита позиции
 
-![Designer Protect positions 00](~/images/Designer_Protect_positions_00.png)
+![Designer Protect positions 00](../images/Designer_Protect_positions_00.png)
 
 Кубик используется для автоматической защиты открываемых сделок с помощью стоп\-лосса и тейк\-профита. 
 

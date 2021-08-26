@@ -1,6 +1,6 @@
 # Derivatives
 
-![Designer Derivatives 00](~/images/Designer_Derivatives_00.png)
+![Designer Derivatives 00](../images/Designer_Derivatives_00.png)
 
 The cube is used to obtain a list of options by a specified filter.
 

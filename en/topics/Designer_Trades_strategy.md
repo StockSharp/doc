@@ -1,6 +1,6 @@
 # Trades by strategy
 
-![Designer The transaction strategy 00](~/images/Designer_trades_strategy_00.png)
+![Designer The transaction strategy 00](../images/Designer_trades_strategy_00.png)
 
 The cube is used to obtain all the strategy trades. 
 

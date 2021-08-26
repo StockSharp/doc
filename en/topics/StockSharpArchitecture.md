@@ -24,7 +24,7 @@
 4. Big community unites different algorithmic traders, regardless of board, broker or connection type. 
 5. The increase of customers for trading strategies developers. 
 
-![ssapi schema](~/images/ssapi_schema.png)
+![ssapi schema](../images/ssapi_schema.png)
 
 The library is divided into the following main components:
 

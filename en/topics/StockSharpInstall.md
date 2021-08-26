@@ -18,13 +18,13 @@ Install from GitHub
 2. Go to[github.com\/StockSharp\/StockSharp](https://github.com/StockSharp/StockSharp) page in StockSharp repository.
 3. Select the **releases** icon, as shown in the following figure.
 
-   ![stocksharp instalation1](~/images/stocksharp_instalation1.png)
+   ![stocksharp instalation1](../images/stocksharp_instalation1.png)
 4. Select the required [S\#](StockSharpAbout.md) version on the opened page, and download the necessary archives from the **Downloads** section.
 
    > [!TIP]
    > Note that the Source Code archives contain source code and StockSharp\_\#.\#.\#.Zip archives contain library files (references) and examples source code.
 
-   ![stocksharp instalation2](~/images/stocksharp_instalation2.png)
+   ![stocksharp instalation2](../images/stocksharp_instalation2.png)
 5. Unlock and unzip the downloaded files.
 
 ### Install using the Nuget
@@ -36,16 +36,16 @@ Install using the Nuget
 
 1. In **Solution Explorer** right\-click the solution name, and select **Manage NuGet Packages for Solution...** in the context menu.
 
-   ![stocksharp instalation3](~/images/stocksharp_instalation3.png)
+   ![stocksharp instalation3](../images/stocksharp_instalation3.png)
 
    > [!TIP]
    > Another way to open **TOOLS \=\> NuGet Package Manager \=\> Manage NuGet Packages for Solution...** item in the Studio’s main menu.
 2. Select the tab Online **Online** in the opened window and type StockSharp in the search bar. Click Install **Install** after the StockSharp API (S\#.API) installation package found.
 
-   ![stocksharp instalation4](~/images/stocksharp_instalation4.png)
+   ![stocksharp instalation4](../images/stocksharp_instalation4.png)
 3. “Packages” folder appears in the solution folder after the package installation and the StockSharp.\#.\#.\# folder with the latest [S\#](StockSharpAbout.md) version in it.
 
-   ![stocksharp instalation5](~/images/stocksharp_instalation5.png)
+   ![stocksharp instalation5](../images/stocksharp_instalation5.png)
 
 ## Recommended content
 

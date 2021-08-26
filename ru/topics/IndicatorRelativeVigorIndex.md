@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [RelativeVigorIndex](../api/StockSharp.Algo.Indicators.RelativeVigorIndex.html). 
 
-![IndicatorRelativeVigorIndex](~/images/IndicatorRelativeVigorIndex.png)
+![IndicatorRelativeVigorIndex](../images/IndicatorRelativeVigorIndex.png)
 
 ## См. также
 

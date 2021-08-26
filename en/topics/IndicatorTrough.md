@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Trough](../api/StockSharp.Algo.Indicators.Trough.html) class. 
 
-![IndicatorTrough](~/images/IndicatorTrough.png)
+![IndicatorTrough](../images/IndicatorTrough.png)
 
 ## Recommended content
 

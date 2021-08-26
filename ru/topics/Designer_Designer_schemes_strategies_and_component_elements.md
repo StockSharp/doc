@@ -2,7 +2,7 @@
 
 Основной процесс работы по дизайну стратегии и составных элементов проходит в панели **Схема**, путём комбинирования кубиков и соединительных линий. Панель Схема состоит из панелей: **Палитра**, **Дизайнер**, **Свойства**. 
 
-![Designer Designer schemes strategies and component elements 00](~/images/Designer_Designer_schemes_strategies_and_component_elements_00.png)
+![Designer Designer schemes strategies and component elements 00](../images/Designer_Designer_schemes_strategies_and_component_elements_00.png)
 
 ### Панель Палитра
 
@@ -22,7 +22,7 @@
 
 На панели **Свойства** отображаются параметры выбранного кубика на панели **Дизайнер**. При выборе кубика на панели **Дизайнер** рамка вокруг него окрашивается в черный цвет. 
 
-![Designer The Properties Panel 00](~/images/Designer_Properties_Panel_00.png)
+![Designer The Properties Panel 00](../images/Designer_Properties_Panel_00.png)
 
 Все кубики содержат набор предопределенных свойств:
 

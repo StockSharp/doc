@@ -1,6 +1,6 @@
 # Хеджирование
 
-![Designer Hedging 00](~/images/Designer_Hedging_00.png)
+![Designer Hedging 00](../images/Designer_Hedging_00.png)
 
 Кубик используется для защиты позиции по опционным стратегиям.
 

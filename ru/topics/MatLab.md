@@ -1,6 +1,6 @@
 # S\#.MatLab
 
-![matlab stocksharp](~/images/matlab_stocksharp.png)
+![matlab stocksharp](../images/matlab_stocksharp.png)
 
 [S\#.MatLab](MatLab.md) создан для трейдеров, которые пишут торговые алгоритмы внутри среды [MatLab MathWorks](https://mathworks.com/). 
 

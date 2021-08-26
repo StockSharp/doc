@@ -1,6 +1,6 @@
 # Grouped order book
 
-![Designer Grouped glass 00](~/images/Designer_Grouped_glass_00.png)
+![Designer Grouped glass 00](../images/Designer_Grouped_glass_00.png)
 
 The cube is used to obtain a grouped order book. 
 

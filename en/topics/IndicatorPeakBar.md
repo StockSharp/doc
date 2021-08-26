@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [PeakBar](../api/StockSharp.Algo.Indicators.PeakBar.html) class. 
 
-![IndicatorPeakBar](~/images/IndicatorPeakBar.png)
+![IndicatorPeakBar](../images/IndicatorPeakBar.png)
 
 ## Recommended content
 

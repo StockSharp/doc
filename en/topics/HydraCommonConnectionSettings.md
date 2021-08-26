@@ -2,7 +2,7 @@
 
 Connection properties common to all sources.
 
-![hydra settings connectionparams](~/images/hydra_settings_connectionparams.png)
+![hydra settings connectionparams](../images/hydra_settings_connectionparams.png)
 
 **Connection**
 

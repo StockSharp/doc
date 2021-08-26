@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [BollingerBands](../api/StockSharp.Algo.Indicators.BollingerBands.html) class. 
 
-![IndicatorBollingerBands](~/images/IndicatorBollingerBands.png)
+![IndicatorBollingerBands](../images/IndicatorBollingerBands.png)
 
 ## Recommended content
 

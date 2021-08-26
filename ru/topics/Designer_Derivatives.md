@@ -1,6 +1,6 @@
 # Деривативы
 
-![Designer Derivatives 00](~/images/Designer_Derivatives_00.png)
+![Designer Derivatives 00](../images/Designer_Derivatives_00.png)
 
 Кубик используется для получения списка опционов по заданному фильтру.
 

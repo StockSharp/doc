@@ -1,6 +1,6 @@
 # Режим прогрева стратегии
 
-![Designer Warm up mode 00](~/images/Designer_Warm_up_mode_00.png)
+![Designer Warm up mode 00](../images/Designer_Warm_up_mode_00.png)
 
 При переходе из режима проектирования стратегии в режим торговли у всех стратегий установлен режим прогрева, о чем сообщает строка над схемой стратегии.
 

@@ -2,7 +2,7 @@
 
 During testing or trade there is a need to fully control the process. For complete control and analysis, [S\#.Designer](Designer.md) provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
 
-![Designer Components](~/images/Designer_Components.png)
+![Designer Components](../images/Designer_Components.png)
 
 - [Portfolios](Designer_Panel_Portfolios.md) \- is a table that shows the basic data on the portfolio, and the current positions for these portfolios.
 - [Chart](Designer_Chart.md) \- is a chart of candles or indicators, that contains all the [Chart](Designer_Panel_graphics.md), cubes that are in the strategy.

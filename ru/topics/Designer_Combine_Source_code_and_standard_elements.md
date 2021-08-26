@@ -45,7 +45,7 @@ public class NewStrategy : Strategy
 
 На общую схему необходимо вынести кубики [Переменная](Designer_Variable.md) с Типом **Инструмент**, [Свечи](Designer_Candles.md), 2 [Индикатор](Designer_Indicator.md) SMA, [Панель графика](Designer_Panel_graphics.md), [Сделки стратегии](Designer_Trades_strategy.md). Как это сделать подробно описано в пункте [Создание алгоритма из кубиков](Designer_Algorithm_creation_of_elements.md). Также на общую схему необходимо вынести кубик [Исходный код](Designer_Source_code.md), перенеся его в панель **Дизайнер** из панели **Палитра**. В свойствах кубика [Исходный код](Designer_Source_code.md) необходимо выбрать имя стратегии. Так как метод **ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)** принимает три параметра, то и на входе кубика будет три параметра. Первые два параметра типа Значения индикатора, а третий типа Свеча. Соединив все кубики линиями, получается схема:
 
-![Designer Combine cubes of Source code and standard cubes 00](~/images/Designer_Combine_Source_code_and_standard_elements_00.png)
+![Designer Combine cubes of Source code and standard cubes 00](../images/Designer_Combine_Source_code_and_standard_elements_00.png)
 
 В результате код стратегии уменьшился с 213 строк до 43. Но добавилось всего 4 стандартных кубика. Если сравнивать с такой же стратегией, созданной из кубиков в пункте [Использование кубиков](Designer_Creating_strategy_out_of_blocks.md), то количество кубиков уменьшилось с 17 до 7. 
 

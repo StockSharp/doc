@@ -1,6 +1,6 @@
 # Сделки по заявке
 
-![Designer Deals on request 00](~/images/Designer_Deals_on_request_00.png)
+![Designer Deals on request 00](../images/Designer_Deals_on_request_00.png)
 
 Кубик используется для получения сделок по конкретной заявке.
 

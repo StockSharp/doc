@@ -1,6 +1,6 @@
 # Options quoting
 
-![Designer Quoting 00](~/images/Designer_Quoting_00.png)
+![Designer Quoting 00](../images/Designer_Quoting_00.png)
 
 The cube is used to quote options according to the specified parameters.
 

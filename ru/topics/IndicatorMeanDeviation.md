@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [MeanDeviation](../api/StockSharp.Algo.Indicators.MeanDeviation.html). 
 
-![IndicatorMeanDeviation](~/images/IndicatorMeanDeviation.png)
+![IndicatorMeanDeviation](../images/IndicatorMeanDeviation.png)
 
 ## См. также
 

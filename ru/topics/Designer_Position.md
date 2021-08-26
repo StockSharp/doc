@@ -1,6 +1,6 @@
 # Позиция
 
-![Designer Position 00](~/images/Designer_Position_00.png)
+![Designer Position 00](../images/Designer_Position_00.png)
 
 Элемент используется для получения информации по изменению позиции для указанного инструмента и портфеля.
 

@@ -2,7 +2,7 @@
 
 Для упрощения мониторинга работы можно использовать специальное окно [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html). См. также [Визуальные компоненты логирования](GuiLogging.md). 
 
-![GUI LogControl](~/images/GUI_LogControl.png)
+![GUI LogControl](../images/GUI_LogControl.png)
 
 Данное окно позволяет выводить сообщения от всех [ILogSource](../api/StockSharp.Logging.ILogSource.html): 
 

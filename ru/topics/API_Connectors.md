@@ -4,7 +4,7 @@
 
 Рассмотрим работу с [Connector](../api/StockSharp.Algo.Connector.html). Исходные коды примера находятся в проекте Samples\/Common\/SampleConnection.
 
-![multiconnection main](~/images/multiconnection_main.png)
+![multiconnection main](../images/multiconnection_main.png)
 
 Создаём экземпляр класса [Connector](../api/StockSharp.Algo.Connector.html):
 
@@ -37,7 +37,7 @@ private void Setting\_Click(object sender, RoutedEventArgs e)
 	  				
 ```
 
-![API GUI ConnectorWindow](~/images/API_GUI_ConnectorWindow.png)
+![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
 Аналогично можно добавлять подключения напрямую из кода (без графических окон), воспользовавшись методом расширением [TraderHelper.AddAdapter\`\`1](../api/StockSharp.Algo.TraderHelper.AddAdapter``1.html):
 

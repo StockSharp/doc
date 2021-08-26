@@ -4,7 +4,7 @@
 
 Below is an example of using this component. The full example code is in the Samples\/Testing\/SampleRandomEmulation. 
 
-![Gui EquityCurveChart](~/images/Gui_EquityCurveChart.png)
+![Gui EquityCurveChart](../images/Gui_EquityCurveChart.png)
 
 ### Example of the EquityCurveChart plotting
 

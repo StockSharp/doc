@@ -6,7 +6,7 @@
 
 Например, кубик [Стакан](Designer_Depth.md) генерирует событие изменения стакана. При этом заранее не известно, когда произойдет изменение. Создав линию соединения между кубиком [Стакан](Designer_Depth.md) и кубиком [Конвертер](Designer_Converter.md), происходит подписание на изменение стакана для дальнейшей обработки кубиком [Конвертер](Designer_Converter.md) и т.д..:
 
-![Designer Event model 00](~/images/Designer_Event_model_00.png)
+![Designer Event model 00](../images/Designer_Event_model_00.png)
 
 ## См. также
 

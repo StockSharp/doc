@@ -2,7 +2,7 @@
 
 The task converts exchange data. For example, from the Order Logs to ticks or from ticks to candles, etc.
 
-![hydra tasks converter](~/images/hydra_tasks_converter.png)
+![hydra tasks converter](../images/hydra_tasks_converter.png)
 
 **Converter**
 
@@ -42,7 +42,7 @@ The task converts exchange data. For example, from the Order Logs to ticks or fr
   - **ITCH** \- is used for the ITCH protocol (exchanges: LSE and Nasdaq).
   - **Plaza** \- used for the Moscow Exchange.
 
-  ![hydra choose ITCH Plaza 00](~/images/hydra_choose_ITCH_Plaza_00.png)
+  ![hydra choose ITCH Plaza 00](../images/hydra_choose_ITCH_Plaza_00.png)
 
 **General**
 
@@ -53,7 +53,7 @@ The task converts exchange data. For example, from the Order Logs to ticks or fr
 
    \- setting up the board work schedule. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Interval of operation**
 
    \- the interval of operation. 
@@ -85,7 +85,7 @@ Let's consider an example of data conversion.
 
    . 
 
-   ![hydra tasks converter 00](~/images/hydra_tasks_converter_00.png)
+   ![hydra tasks converter 00](../images/hydra_tasks_converter_00.png)
 2. Select the instrument and in the window that appears, set the data type that we should receive during conversion, as well as the data type from which we should convert. For example, you need to convert Ticks into candles with a Time Frame of 15 minutes.
 
    > [!TIP]
@@ -93,11 +93,11 @@ Let's consider an example of data conversion.
 3. Specify the required directories. Time offset. Operation interval. 
 4. We start the conversion.
 
-   ![hydra tasks converter 01](~/images/hydra_tasks_converter_01.png)
+   ![hydra tasks converter 01](../images/hydra_tasks_converter_01.png)
 
 It can be seen that the data has been converted. [Let's review](HydraViewingMarketData.md) the resulting data. 
 
-![hydra tasks converter 02](~/images/hydra_tasks_converter_02.png)
+![hydra tasks converter 02](../images/hydra_tasks_converter_02.png)
 
 This function is similar to [getting the required market data](HydraUsingDifferentTypesMarketData.md) from another data type. 
 

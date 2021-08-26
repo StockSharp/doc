@@ -1,6 +1,6 @@
 # Сгруппированный стакан
 
-![Designer Grouped glass 00](~/images/Designer_Grouped_glass_00.png)
+![Designer Grouped glass 00](../images/Designer_Grouped_glass_00.png)
 
 Кубик используется для получения сгруппированного стакана. 
 

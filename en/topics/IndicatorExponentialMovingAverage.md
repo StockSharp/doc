@@ -4,7 +4,7 @@ Exponential Moving Average (EMA) is a type of moving average (MA) that gives mor
 
 To use the indicator, you must use the [ExponentialMovingAverage](../api/StockSharp.Algo.Indicators.ExponentialMovingAverage.html) class. 
 
-![IndicatorExponentialMovingAverage](~/images/IndicatorExponentialMovingAverage.png)
+![IndicatorExponentialMovingAverage](../images/IndicatorExponentialMovingAverage.png)
 
 ## Recommended content
 

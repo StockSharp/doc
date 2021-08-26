@@ -4,7 +4,7 @@ The Alligator indicator is a group of indicators of three moving averages. These
 
 To use the indicator, you must use the [Alligator](../api/StockSharp.Algo.Indicators.Alligator.html) class. 
 
-![IndicatorAlligator](~/images/IndicatorAlligator.png)
+![IndicatorAlligator](../images/IndicatorAlligator.png)
 
 ## Recommended content
 

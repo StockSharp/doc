@@ -6,7 +6,7 @@ To create a strategy based on an iteration model the [TimeFrameStrategy](../api/
 
 The example of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) trading algorithm (its simple implementation) shows the iteration model work. In example the inheriting class [TimeFrameStrategy](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.html) implemented, which stores the state of moving crosses (the long is above or below the short one) between the [OnProcess](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.OnProcess.html) method calls. 
 
-![samplesma](~/images/sample_sma.png)
+![samplesma](../images/sample_sma.png)
 
 ### The moving average algorithm:
 

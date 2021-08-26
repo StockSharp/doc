@@ -1,6 +1,6 @@
 # Protect position
 
-![Designer Protect positions 00](~/images/Designer_Protect_positions_00.png)
+![Designer Protect positions 00](../images/Designer_Protect_positions_00.png)
 
 The cube is used to automatically protect opened trades using stop loss and take\-profit.
 

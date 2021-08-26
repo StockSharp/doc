@@ -4,9 +4,9 @@
 
 Для начала необходимо создать простой UserControl в папке XAML вашей стратегии. 
 
-![Shell custom strategy panel 00](~/images/Shell_custom_strategy_panel_00.png)
+![Shell custom strategy panel 00](../images/Shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](~/images/Shell_custom_strategy_panel_01.png)
+![Shell custom strategy panel 01](../images/Shell_custom_strategy_panel_01.png)
 
 Заменить UserControl на controls:BaseStudioControl
 

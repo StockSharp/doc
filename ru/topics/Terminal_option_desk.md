@@ -6,7 +6,7 @@
 
 Дополнительно можно указать фильтр по точной дате экспирации опционов и фильтры по минимальному\/максимальному страйкам.
 
-![Terminal option desk 00](~/images/Terminal_option_desk_00.png)
+![Terminal option desk 00](../images/Terminal_option_desk_00.png)
 
 ## См. также
 

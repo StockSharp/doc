@@ -31,6 +31,6 @@ Currency conversion example
    ```
 4. Here is an example of currency conversion: 
 
-   ![samplecurrency](~/images/sample_currency.png)
+   ![samplecurrency](../images/sample_currency.png)
 
 ## Recommended content

@@ -2,6 +2,6 @@
 
 **Стохастический осциллятор K% (Stochastic Oscillator K%)** – K% линия [Stochastic Oscillator](IndicatorStochasticOscillator.md). 
 
-![IndicatorStochasticK](~/images/IndicatorStochasticK.png)
+![IndicatorStochasticK](../images/IndicatorStochasticK.png)
 
 ## См. также

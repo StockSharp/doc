@@ -1,6 +1,6 @@
 # Comparison
 
-![Designer Comparison 00](~/images/Designer_Comparison_00.png)
+![Designer Comparison 00](../images/Designer_Comparison_00.png)
 
 An element is used to compare two input objects.
 

@@ -2,7 +2,7 @@
 
 Механизм взаимодействия показан на данном рисунке:
 
-![smarttrader](~/images/SmartTrader.png)
+![smarttrader](../images/SmartTrader.png)
 
 В отличие от [Quik](Quik.md)\-а, для работы [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html) не нужно устанавливать и запускать торговый терминал, чтобы робот мог торговать. Достаточно скачать и установить [SmartCOM](https://iticapital.ru/software/smartcom). При создании объекта [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html) будет автоматически запущен процесс SmartCom2.exe, который регистрируется при установке как [Служба Windows](https://ru.wikipedia.org/wiki/Службы_Windows). Все взаимодействие между [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html) и [SmartCOM](https://iticapital.ru/software/smartcom) идет через технологию [COM](https://ru.wikipedia.org/wiki/Component_Object_Model). 
 

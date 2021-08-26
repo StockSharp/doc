@@ -4,7 +4,7 @@ In the [Backtesting settings](Designer_Properties_emulation.md) panel, you can s
 
 In the **Commissions** window, you should select the type of commission, set the commission value and the condition under which the commission will be charged.
 
-![Designer Commission Rule](~/images/Designer_Commission_Rule.png)
+![Designer Commission Rule](../images/Designer_Commission_Rule.png)
 
 #### List of commission types
 

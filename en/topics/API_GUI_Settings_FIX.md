@@ -2,7 +2,7 @@
 
 For all [S\#](StockSharpAbout.md) products, graphical configuration of the connection is performed on the [Connection settings window](API_UI_ConnectorWindow.md):
 
-![API GUI Settings FIX](~/images/API_GUI_Settings_FIX.png)
+![API GUI Settings FIX](../images/API_GUI_Settings_FIX.png)
 
 - **Dialect**
 

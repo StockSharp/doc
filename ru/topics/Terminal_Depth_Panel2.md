@@ -2,11 +2,11 @@
 
 Компонент **Стакан** представляет собой таблицу лимитных заявок на покупку и продажу. 
 
-При нажатии на кнопку настройки ![Designer The quick access toolbar 02](~/images/Designer_quick_access_toolbar_02.png) появляется панель в которой можно установить необходимый инструмент и портфель, а также настроить параметры отображения стакана. 
+При нажатии на кнопку настройки ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) появляется панель в которой можно установить необходимый инструмент и портфель, а также настроить параметры отображения стакана. 
 
 Заявки можно отправлять как нажатием на кнопки **Купить\/Продать**, так и нажатием на ячейку столбцов **Бид\/Офер** в самом стакане.
 
-![Terminal Panel Market Depth](~/images/Terminal_Panel_Market_Depth.png)
+![Terminal Panel Market Depth](../images/Terminal_Panel_Market_Depth.png)
 
 ## См. также
 

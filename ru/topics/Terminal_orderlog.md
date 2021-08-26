@@ -4,7 +4,7 @@
 
 **Лог заявок** имеет фильтр для выбора необходимых инструментов. Также имеется возможность настроить уведомления по событиям выбранных инструментов [Настройки уведомлений](Designer_notification_Setting.md).
 
-![Terminal orderlog 00](~/images/Terminal_orderlog_00.png)
+![Terminal orderlog 00](../images/Terminal_orderlog_00.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 **Level 1** имеет фильтр для выбора необходимых инструментов. Также имеется возможность настроить уведомления по событиям выбранных инструментов [Настройки уведомлений](Designer_notification_Setting.md).
 
-![Terminal Level1 00](~/images/Terminal_Level1_00.png)
+![Terminal Level1 00](../images/Terminal_Level1_00.png)
 
 ## См. также
 

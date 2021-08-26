@@ -29,9 +29,9 @@
 
 На следующих рисунках представлены графики [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) и [RangeCandle](../api/StockSharp.Algo.Candles.RangeCandle.html):
 
-![sample timeframecandles](~/images/sample_timeframecandles.png)
+![sample timeframecandles](../images/sample_timeframecandles.png)
 
-![sample rangecandles](~/images/sample_rangecandles.png)
+![sample rangecandles](../images/sample_rangecandles.png)
 
 ### Запуск получения данных
 

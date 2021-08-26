@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [AverageDirectionalIndex](../api/StockSharp.Algo.Indicators.AverageDirectionalIndex.html). 
 
-![IndicatorAverageDirectionalIndex](~/images/IndicatorAverageDirectionalIndex.png)
+![IndicatorAverageDirectionalIndex](../images/IndicatorAverageDirectionalIndex.png)
 
 ## См. также
 

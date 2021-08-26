@@ -8,11 +8,11 @@ Actually, the connection to the source occurs via [S\#.Data](Hydra.md), to which
 
 To enable [S\#.Data](Hydra.md) server mode, select the **Server mode** tab in the top menu of program.
 
-![hydra server menu](~/images/hydra_server_menu.png)
+![hydra server menu](../images/hydra_server_menu.png)
 
 After that, click on the **Settings** button to open the server mode settings window.
 
-![hydra server](~/images/hydra_server.png)
+![hydra server](../images/hydra_server.png)
 
 **S\#.Data Server**
 
@@ -65,6 +65,6 @@ After that, click on the **Settings** button to open the server mode settings wi
 
 If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab, after clicking on which the **Users** window appears
 
-![hydra users](~/images/hydra_users.png)
+![hydra users](../images/hydra_users.png)
 
 On the left side of window, you can add a new user, and on the right, set access rights for him. 

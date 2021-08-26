@@ -2,7 +2,7 @@
 
 To import order books, select **Import \=\> Order books** item from the main application menu.
 
-![hydra import depths](~/images/hydra_import_depths.png)
+![hydra import depths](../images/hydra_import_depths.png)
 
 ### The import process securities.
 
@@ -30,10 +30,10 @@ The import process securities.
    - For the {Side} field, select the **Direction** field from the **S\# field** window \- the trade direction (Buy or Sell). We assign it the value 6.
    - oThe field setting window will look like this:
 
-     ![hydra import prop depth](~/images/hydra_import_prop_depth.png)
+     ![hydra import prop depth](../images/hydra_import_prop_depth.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
 3. To preview the data, click the **Preview** button.
 
-   ![hydra import preview depth](~/images/hydra_import_preview_depth.png)
+   ![hydra import preview depth](../images/hydra_import_preview_depth.png)
 4. Click the **Import** button.

@@ -1,6 +1,6 @@
 # Индекс
 
-![Designer Index 00](~/images/Designer_Index_00.png)
+![Designer Index 00](../images/Designer_Index_00.png)
 
 Кубик используется для создания собственного индекса. 
 

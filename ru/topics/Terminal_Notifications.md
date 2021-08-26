@@ -14,7 +14,7 @@
 - **Лог** – сообщение будет отправлено в [Панель Логи](Terminal_Panel_Logs.md).
 - **Выключено** – уведомление показываться не будет.
 
-Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](Terminal_Notifications_Panel.md)) нажать на кнопку ![Designer Creation tool 00](~/images/Designer_Creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](~/images/Designer_Alert_Bell.png) непосредственно на панелях, поддерживающих уведомления.
+Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](Terminal_Notifications_Panel.md)) нажать на кнопку ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](../images/Designer_Alert_Bell.png) непосредственно на панелях, поддерживающих уведомления.
 
 О том как настраивать уведомления описано в пункте [Настройки уведомлений](Terminal_notification_Setting.md).
 

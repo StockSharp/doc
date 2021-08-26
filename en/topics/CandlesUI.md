@@ -2,7 +2,7 @@
 
 For a candles graphic display, you can use the special [Chart](../api/StockSharp.Xaml.Charting.Chart.html) component, which draws candles as follows: (see [Chart components](GUICharting.md)):
 
-![sample candleschart](~/images/sample_candleschart.png)
+![sample candleschart](../images/sample_candleschart.png)
 
 The candles passed into the [ChartHelper.Draw](../api/StockSharp.Xaml.Charting.ChartHelper.Draw.html) method for displaying.
 

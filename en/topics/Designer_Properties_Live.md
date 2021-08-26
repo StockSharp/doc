@@ -2,7 +2,7 @@
 
 The **Properties** panel is minimized on the right side of the strategy tab by default. This panel is a table of emulation properties or Live settings. When you select a specific property, a detailed description of this property appears at the bottom of the table. All properties are grouped into groups:
 
-![Designer Properties Live 00](~/images/Designer_Properties_Live_00.png)
+![Designer Properties Live 00](../images/Designer_Properties_Live_00.png)
 
 **Logging **
 

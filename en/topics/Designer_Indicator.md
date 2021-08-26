@@ -1,6 +1,6 @@
 # Indicator
 
-![Designer Indicator 00](~/images/Designer_Indicator_00.png)
+![Designer Indicator 00](../images/Designer_Indicator_00.png)
 
 The cube is used to calculate the indicator values.
 
@@ -22,7 +22,7 @@ Parameters
 
 - **Indicator type** \- the parameter used to select the required indicator, and several additional parameters that correspond to the selected indicator type. The set of these parameters changes when the selected indicator type is changed.
 
-![Designer Indicator 01](~/images/Designer_Indicator_01.png)
+![Designer Indicator 01](../images/Designer_Indicator_01.png)
 
 ## Recommended content
 

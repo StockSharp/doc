@@ -6,7 +6,7 @@ To display the volatility smile, you have to select the underlying asset and opt
 
 In addition, you can specify a filter for the exact expiration date of options and filters for minimum\/maximum strikes.
 
-![Terminal smile of volatility 00](~/images/Terminal_smile_of_volatility_00.png)
+![Terminal smile of volatility 00](../images/Terminal_smile_of_volatility_00.png)
 
 ## Recommended content
 

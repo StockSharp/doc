@@ -1,6 +1,6 @@
 # Order book
 
-![GUI MarketDepthControl](~/images/GUI_MarketDepthControl.png)
+![GUI MarketDepthControl](../images/GUI_MarketDepthControl.png)
 
 [MarketDepthControl](../api/StockSharp.Xaml.MarketDepthControl.html) \- is a graphical component for displaying an order book. The component allows you to display quotes and own orders. 
 

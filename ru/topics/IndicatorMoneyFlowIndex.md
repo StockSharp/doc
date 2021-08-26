@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [MoneyFlowIndex](../api/StockSharp.Algo.Indicators.MoneyFlowIndex.html). 
 
-![IndicatorMoneyFlowIndex](~/images/IndicatorMoneyFlowIndex.png)
+![IndicatorMoneyFlowIndex](../images/IndicatorMoneyFlowIndex.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [JurikMovingAverage](../api/StockSharp.Algo.Indicators.JurikMovingAverage.html) class. 
 
-![IndicatorJurikMovingAverage](~/images/IndicatorJurikMovingAverage.png)
+![IndicatorJurikMovingAverage](../images/IndicatorJurikMovingAverage.png)
 
 ## Recommended content
 

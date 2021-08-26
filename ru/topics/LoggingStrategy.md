@@ -78,7 +78,7 @@
    ```
 2. Вот как выглядит окно логов при работе стратегии котирования заявок ([Котирование](StrategyQuoting.md)): 
 
-   ![strategylogging](~/images/strategy_logging.png)
+   ![strategylogging](../images/strategy_logging.png)
 
 ## См. также
 

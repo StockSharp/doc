@@ -2,7 +2,7 @@
 
 The interaction mechanism is shown in this figure: 
 
-![OECTrader](~/images/OECTrader.png)
+![OECTrader](../images/OECTrader.png)
 
 As can be seen from the figure, [OpenECryMessageAdapter](../api/StockSharp.OpenECry.OpenECryMessageAdapter.html) communicates with the OEC server through the [GainFutures API](https://gainfutures.com/gainfuturesapi). The [GainFutures API](https://gainfutures.com/gainfuturesapi) using does not require a working OEC Trader terminal.
 

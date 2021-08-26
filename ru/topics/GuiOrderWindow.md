@@ -2,7 +2,7 @@
 
 [OrderWindow](../api/StockSharp.Xaml.OrderWindow.html) \- окно для создания заявки. 
 
-![GUI OrderWindow](~/images/GUI_OrderWindow.png)
+![GUI OrderWindow](../images/GUI_OrderWindow.png)
 
 Если подключение поддерживает выставление условной заявки (стоп\-лосс, тейк\-профи), то в этом окне можно выставить условную заявку с расширенными условиями установив флаг **Расширенные условия**.
 

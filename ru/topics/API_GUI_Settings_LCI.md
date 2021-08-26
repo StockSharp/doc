@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](StockSharpAbout.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](API_UI_ConnectorWindow.md):
 
-![API GUI Settings LCI](~/images/API_GUI_Settings_LCI.png)
+![API GUI Settings LCI](../images/API_GUI_Settings_LCI.png)
 
 - **Настройки переподключения**
 

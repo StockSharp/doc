@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [MovingAverageConvergenceDivergenceHistogram](../api/StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceHistogram.html) class. 
 
-![IndicatorMovingAverageConvergenceDivergenceHistogram](~/images/IndicatorMovingAverageConvergenceDivergenceHistogram.png)
+![IndicatorMovingAverageConvergenceDivergenceHistogram](../images/IndicatorMovingAverageConvergenceDivergenceHistogram.png)
 
 ## Recommended content
 

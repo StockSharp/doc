@@ -6,7 +6,7 @@
 
 Панель **Новости** имеет возможность настроить уведомления по выбранным событиям [Настройки уведомлений](Designer_notification_Setting.md).
 
-![Terminal news 00](~/images/Terminal_news_00.png)
+![Terminal news 00](../images/Terminal_news_00.png)
 
 ## См. также
 

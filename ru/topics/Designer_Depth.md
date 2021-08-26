@@ -1,6 +1,6 @@
 # Стакан
 
-![Designer Glass 00](~/images/Designer_Glass_00.png)
+![Designer Glass 00](../images/Designer_Glass_00.png)
 
 Кубик используется для получения стакана по заданному инструменту.
 

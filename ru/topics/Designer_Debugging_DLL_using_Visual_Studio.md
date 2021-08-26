@@ -4,15 +4,15 @@
 
 1. Для того чтобы присоединить к процессу и начать отладку DLL кубика необходимо, чтобы он был загружен в память. Загрузка DLL в память происходит после выбора имени стратегии в поле **Имя типа стратегии**. После загрузки DLL в память можно будет присоединить к процессу.
 
-![Designer Creating a DLL cube in Visual Studio 03](~/images/Designer_Creating_DLL_element_in_Visual_Studio_03.png)
+![Designer Creating a DLL cube in Visual Studio 03](../images/Designer_Creating_DLL_element_in_Visual_Studio_03.png)
 
 2. В Visual Studio выбрать пункт **Отладка \-\> Присоединить к процессу**.
 
-![Designer Debugging DLL cube using Visual Studio 00](~/images/Designer_Debugging_DLL_using_Visual_Studio_00.png)
+![Designer Debugging DLL cube using Visual Studio 00](../images/Designer_Debugging_DLL_using_Visual_Studio_00.png)
 
 3. В диалоговом окне **Присоединение к процессу** найти в списке **Доступные процессы** процесс **Designer.exe**, к которому требуется присоединиться.
 
-![Designer Debugging DLL cube using Visual Studio 01](~/images/Designer_Debugging_DLL_using_Visual_Studio_01.png)
+![Designer Debugging DLL cube using Visual Studio 01](../images/Designer_Debugging_DLL_using_Visual_Studio_01.png)
 
 Если процесс выполняется с другой учетной записи пользователя, необходимо установить флажок **Показать процессы всех пользователей**.
 
@@ -22,15 +22,15 @@
 - В диалоговом окне **Выбор типа кода** нажать кнопку **Выполнять** отладку кода следующих типов и выберите типы для отладки.
 - Нажать кнопку ОК.
 
-![Designer Debugging DLL cube using Visual Studio 02](~/images/Designer_Debugging_DLL_using_Visual_Studio_02.png)
+![Designer Debugging DLL cube using Visual Studio 02](../images/Designer_Debugging_DLL_using_Visual_Studio_02.png)
 
 5. Нажать кнопку Присоединить.
 
-6. В Visual Studio в коде необходимо расставить точки останова. Если точки останова красные и заполненные красным ![Designer Debugging DLL cube using Visual Studio 03](~/images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (и Студия в режиме отладки) то значит загрузилась именно та версия dll. А если точки останова красные и заполненные белым ![Designer Debugging DLL cube using Visual Studio 04](~/images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (и Студия в режиме отладки), то значит загрузилась не та версия dll. 
+6. В Visual Studio в коде необходимо расставить точки останова. Если точки останова красные и заполненные красным ![Designer Debugging DLL cube using Visual Studio 03](../images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (и Студия в режиме отладки) то значит загрузилась именно та версия dll. А если точки останова красные и заполненные белым ![Designer Debugging DLL cube using Visual Studio 04](../images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (и Студия в режиме отладки), то значит загрузилась не та версия dll. 
 
 7. В примере точка останова стоит в первой строчке метода **public void ProcessCandle(Candle candle)**. При запуске стратегии в [S\#.Designer](Designer.md), как только в DLL кубик начнут передаваться значения свечей, в Visual Studio произойдет остановка в месте установки точки останова. Далее можно будет отследить ход выполнения кода:
 
-![Designer Debugging DLL cube using Visual Studio 05](~/images/Designer_Debugging_DLL_using_Visual_Studio_05.png)
+![Designer Debugging DLL cube using Visual Studio 05](../images/Designer_Debugging_DLL_using_Visual_Studio_05.png)
 
 ## См. также
 

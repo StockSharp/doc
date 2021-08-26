@@ -151,7 +151,7 @@ Quoting by volatility
    }
    ```
 
-   ![sample quote iv](~/images/sample_quote_iv.png)
+   ![sample quote iv](../images/sample_quote_iv.png)
 6. The quoting ending and the strategy stop: 
 
    ```none

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [LinearRegSlope](../api/StockSharp.Algo.Indicators.LinearRegSlope.html). 
 
-![IndicatorLinearRegSlope](~/images/IndicatorLinearRegSlope.png)
+![IndicatorLinearRegSlope](../images/IndicatorLinearRegSlope.png)
 
 ## См. также
 

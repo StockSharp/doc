@@ -1,6 +1,6 @@
 # Разреженный стакан
 
-![Designer Empty glass 00](~/images/Designer_Empty_glass_00.png)
+![Designer Empty glass 00](../images/Designer_Empty_glass_00.png)
 
 Кубик используется для получения разреженного стакана по заданному.
 

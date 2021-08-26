@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Vidya](../api/StockSharp.Algo.Indicators.Vidya.html) class. 
 
-![IndicatorVidya](~/images/IndicatorVidya.png)
+![IndicatorVidya](../images/IndicatorVidya.png)
 
 ## Recommended content
 

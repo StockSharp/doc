@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [TripleExponentialMovingAverage](../api/StockSharp.Algo.Indicators.TripleExponentialMovingAverage.html). 
 
-![IndicatorTripleExponentialMovingAverage](~/images/IndicatorTripleExponentialMovingAverage.png)
+![IndicatorTripleExponentialMovingAverage](../images/IndicatorTripleExponentialMovingAverage.png)
 
 ## См. также
 

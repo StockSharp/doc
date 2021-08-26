@@ -1,6 +1,6 @@
 # Уведомление
 
-![Designer Notice 00](~/images/Designer_Notice_00.png)
+![Designer Notice 00](../images/Designer_Notice_00.png)
 
 Кубик используется для уведомления пользователя при возникновении определенных сигналов. 
 

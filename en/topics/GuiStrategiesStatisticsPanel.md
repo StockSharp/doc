@@ -2,7 +2,7 @@
 
 [StrategiesStatisticsPanel](../api/StockSharp.Xaml.StrategiesStatisticsPanel.html) \- is the table to display parameters and statistics of the strategies. 
 
-![GUI StrategiesStatisticsPanel](~/images/GUI_StrategiesStatisticsPanel.png)
+![GUI StrategiesStatisticsPanel](../images/GUI_StrategiesStatisticsPanel.png)
 
 **Main properties and methods**
 

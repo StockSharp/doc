@@ -1,6 +1,6 @@
 # Sparse order book
 
-![Designer Empty glass 00](~/images/Designer_Empty_glass_00.png)
+![Designer Empty glass 00](../images/Designer_Empty_glass_00.png)
 
 The cube is used to obtain a sparse order book by the specified one.
 

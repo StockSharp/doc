@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [ChaikinVolatility](../api/StockSharp.Algo.Indicators.ChaikinVolatility.html) class. 
 
-![IndicatorChaikinVolatility](~/images/IndicatorChaikinVolatility.png)
+![IndicatorChaikinVolatility](../images/IndicatorChaikinVolatility.png)
 
 ## Recommended content
 

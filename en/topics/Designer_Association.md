@@ -1,6 +1,6 @@
 # Combination
 
-![Designer Association 00](~/images/Designer_Association_00.png)
+![Designer Association 00](../images/Designer_Association_00.png)
 
 The cube is used to combine the same type of data coming from different cubes into one output parameter for further passing to some element. Or dividing the received data into several elements.
 

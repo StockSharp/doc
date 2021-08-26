@@ -2,7 +2,7 @@
 
 The task exports exchange data into various formats: Excel, xml, sql, bin, Json or txt.
 
-![hydra tasks export](~/images/hydra_tasks_export.png)
+![hydra tasks export](../images/hydra_tasks_export.png)
 
 **Database**
 
@@ -21,7 +21,7 @@ The task exports exchange data into various formats: Excel, xml, sql, bin, Json 
 
 **New connection string**
 
-![hydra tasks connstring](~/images/hydra_tasks_connstring.png)
+![hydra tasks connstring](../images/hydra_tasks_connstring.png)
 
 - **Provider**
 
@@ -57,7 +57,7 @@ The task exports exchange data into various formats: Excel, xml, sql, bin, Json 
 
    \- setting up the board work schedule. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Interval of operation**
 
    \- the interval of operation. 
@@ -121,17 +121,17 @@ Let's consider an example of automatic export:
 1. Select security.
 2. Set up the market data that needs to be exported..
 
-   ![hydra tasks export 00](~/images/hydra_tasks_export_00.png)
+   ![hydra tasks export 00](../images/hydra_tasks_export_00.png)
 3. Set the export period. If the download of market data in real time is configured, then you can omit the end date of period. In this case, the data will be exported in real time, according to the work interval (data update). 
 
-   ![hydra tasks export 01](~/images/hydra_tasks_export_01.png)
+   ![hydra tasks export 01](../images/hydra_tasks_export_01.png)
 4. Setting up directories. Operation interval. Data type. Data format.
 5. We start exporting.
 
-   ![hydra tasks export 02](~/images/hydra_tasks_export_02.png)
+   ![hydra tasks export 02](../images/hydra_tasks_export_02.png)
 
 Let's view the exported data
 
-![hydra tasks export 03](~/images/hydra_tasks_export_03.png)
+![hydra tasks export 03](../images/hydra_tasks_export_03.png)
 
 **Watch [video tutorial](HydraExportAutoVideo.md)**

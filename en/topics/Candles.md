@@ -29,9 +29,9 @@ How to work with candles is shown in the SampleConnection example, which is loca
 
 The following figures show [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) and [RangeCandle](../api/StockSharp.Algo.Candles.RangeCandle.html) charts:
 
-![sample timeframecandles](~/images/sample_timeframecandles.png)
+![sample timeframecandles](../images/sample_timeframecandles.png)
 
-![sample rangecandles](~/images/sample_rangecandles.png)
+![sample rangecandles](../images/sample_rangecandles.png)
 
 ### Start getting data
 

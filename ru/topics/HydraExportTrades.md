@@ -1,8 +1,8 @@
 # Сделки (Тики)
 
-В появившимся окне выбрать интересуемый диапазон времени, выбрать инструмент и нажать кнопку ![hydra find](~/images/hydra_find.png):
+В появившимся окне выбрать интересуемый диапазон времени, выбрать инструмент и нажать кнопку ![hydra find](../images/hydra_find.png):
 
-![hydra export trades](~/images/hydra_export_trades.png)
+![hydra export trades](../images/hydra_export_trades.png)
 
 Для выгрузки внесистемных сделок, необхщдимо установить галочку в поле **Внесистемные**.
 

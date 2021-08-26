@@ -2,13 +2,13 @@
 
 Inside each cube, an icon is displayed that characterizes it, as well as a name that can be changed to a user\-defined one in the **Properties** panel. A tooltip for the cube shows a description of what this cube is for. When you select a cube with a mouse, you can view its properties in the **Properties** panel and, if necessary, change some parameters.
 
-![Designer Description of cubes 00](~/images/Designer_Description_of_elements_00.png)
+![Designer Description of cubes 00](../images/Designer_Description_of_elements_00.png)
 
 To the left and to the right of the cube, the colored boxes show the incoming (left) and outgoing (right) parameters.
 
 Parameters are needed to fill the cube with information while the strategy is running. For example, for the [Candles](Designer_Candles.md) cube, the instrument for which you want to build a candle is passed to the input, and the built candles are returned at output. Which, in turn, can be used as an input parameter for the [Chart](Designer_Panel_graphics.md) element. Or to pass them to a method that determines the candle size.
 
-![Designer Description of cubes 01](~/images/Designer_Description_of_elements_01.png)
+![Designer Description of cubes 01](../images/Designer_Description_of_elements_01.png)
 
 The color denotes the type of data that is passed in the parameters. Different parameters in different cubes can receive and pass different and incompatible data types. The description of each parameter is indicated in the tooltip. To exclude a lot of errors when connecting parameters of different types, each parameter has its own data type, which differs in color. The following color set is used to indicate the parameters:
 

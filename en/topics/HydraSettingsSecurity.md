@@ -2,7 +2,7 @@
 
 If you click the **Instruments** button on the General tab, the **Instruments** panel appears. The **Instruments** panel displays all available instruments, as well as the market data for them. 
 
-![hydra securitiesPanel 00](~/images/hydra_securitiesPanel_00.png)
+![hydra securitiesPanel 00](../images/hydra_securitiesPanel_00.png)
 
 At the bottom of the **Instruments** panel are buttons that allow to:
 

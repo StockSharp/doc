@@ -2,7 +2,7 @@
 
 С помощью [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) можно так же создавать дочерние стратегии. Например, когда требуется реализовать процесс торговли, который оперирует стандартными (или уже ранее реализованными) алгоритмами, выстраивая их в единую цепочку: 
 
-![strategychilds](~/images/strategy_childs.png)
+![strategychilds](../images/strategy_childs.png)
 
 ### Предварительные условия
 

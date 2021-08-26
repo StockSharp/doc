@@ -64,7 +64,7 @@ Dll библиотеки добавляются нажатием кнопки **
 
 После объявления переменных необходимо задать свойства кубика. Эти свойства будут отображаться в панели **Свойства** на общей схеме:
 
-![Designer Creating a strategy from the source code 00](~/images/Designer_Creating_strategy_from_source_code_00.png)
+![Designer Creating a strategy from the source code 00](../images/Designer_Creating_strategy_from_source_code_00.png)
 
 ```cs
 public int Long

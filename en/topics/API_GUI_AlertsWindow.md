@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](../api/StockSharp.Alerts.AlertSettingsWindow.html) \- window for configuring notifications of certain events 
 
-![API GUI AlertWindow](~/images/API_GUI_AlertWindow.png)
+![API GUI AlertWindow](../images/API_GUI_AlertWindow.png)
 
 You can configure notifications about changing the following data types: Portfolio, Client code, Broker, Depository, Server time, Transaction, Data type, Cancel, Order ID, Order ID (string), Order ID (platform), Derivative, Derivative (string), Price, Volume (order), Volume (trade), Visible volume, Direction, Balance, Order type, Status, Comment, Order message, System order, Order expiration time, Execution condition, Price, Trade initiator, Open interest, Error, Condition, Uptrend, Commission, Delay, Slippage, Identifier (user), Currency, P\/L, Position, Market maker.
 

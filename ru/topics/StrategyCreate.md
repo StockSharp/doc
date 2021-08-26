@@ -6,7 +6,7 @@
 
 Работу итерационной модели, демонстрирует пример робота торгующего по алгоритму [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя) (его простой реализации). В нем реализован класс\-наследник [TimeFrameStrategy](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.html), хранящий между вызовами метода [OnProcess](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.OnProcess.html) состояние пересечений скользящих (длинная выше или ниже короткой). 
 
-![samplesma](~/images/sample_sma.png)
+![samplesma](../images/sample_sma.png)
 
 ### Алгоритм Скользящей Средней:
 

@@ -2,7 +2,7 @@
 
 Задача выполняет экспорт биржевых данных в различные форматы: Excel, xml, sql, bin, Json или txt.
 
-![hydra tasks export](~/images/hydra_tasks_export.png)
+![hydra tasks export](../images/hydra_tasks_export.png)
 
 **База данных**
 
@@ -21,7 +21,7 @@
 
 **Новая строка подключения**
 
-![hydra tasks connstring](~/images/hydra_tasks_connstring.png)
+![hydra tasks connstring](../images/hydra_tasks_connstring.png)
 
 - **Провайдер**
 
@@ -57,7 +57,7 @@
 
    \- настройка работы площадки. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Интервал работы**
 
    \- интервал работы. 
@@ -125,17 +125,17 @@
 1. Выбираем инструмент.
 2. Устанавливаем маркет данные которые необходимо экспортировать.
 
-   ![hydra tasks export 00](~/images/hydra_tasks_export_00.png)
+   ![hydra tasks export 00](../images/hydra_tasks_export_00.png)
 3. Устанавливаем период экспорта. Если настроено скачивание маркет данных в режиме реального времени, то можно не указывать дату окончания периода. В таком случае данные будут экспортироваться в режиме реального времени, в соответствии с интервалом работы (обновления данных). 
 
-   ![hydra tasks export 01](~/images/hydra_tasks_export_01.png)
+   ![hydra tasks export 01](../images/hydra_tasks_export_01.png)
 4. Настраиваем директории. Интервал работы. Тип данных. Формат данных.
 5. Запускаем экспорт.
 
-   ![hydra tasks export 02](~/images/hydra_tasks_export_02.png)
+   ![hydra tasks export 02](../images/hydra_tasks_export_02.png)
 
 Просмотрим экспортированные данные.
 
-![hydra tasks export 03](~/images/hydra_tasks_export_03.png)
+![hydra tasks export 03](../images/hydra_tasks_export_03.png)
 
 **Смотреть [видеоинструкцию](HydraExportAutoVideo.md)**

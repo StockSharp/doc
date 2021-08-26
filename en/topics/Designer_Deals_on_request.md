@@ -1,6 +1,6 @@
 # Trades by order
 
-![Designer Deals on request 00](~/images/Designer_Deals_on_request_00.png)
+![Designer Deals on request 00](../images/Designer_Deals_on_request_00.png)
 
 The cube is used to obtain trades for the particular order.
 

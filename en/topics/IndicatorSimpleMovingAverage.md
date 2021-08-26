@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) class. 
 
-![IndicatorSimpleMovingAverage](~/images/IndicatorSimpleMovingAverage.png)
+![IndicatorSimpleMovingAverage](../images/IndicatorSimpleMovingAverage.png)
 
 ## Recommended content
 

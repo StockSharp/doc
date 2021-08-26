@@ -4,4 +4,4 @@
 
 Здесь можно просмотреть основную информацию о торговых площадках, а также настроить часовой пояс и расписание их работы.
 
-![hydra boards](~/images/hydra_boards.png)
+![hydra boards](../images/hydra_boards.png)

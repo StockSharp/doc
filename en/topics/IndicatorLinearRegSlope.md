@@ -4,7 +4,7 @@ Interpretation of the **Linear Regression Slope** indicator shows the slope valu
 
 To use the indicator, you must use the [LinearRegSlope](../api/StockSharp.Algo.Indicators.LinearRegSlope.html) class. 
 
-![IndicatorLinearRegSlope](~/images/IndicatorLinearRegSlope.png)
+![IndicatorLinearRegSlope](../images/IndicatorLinearRegSlope.png)
 
 ## Recommended content
 

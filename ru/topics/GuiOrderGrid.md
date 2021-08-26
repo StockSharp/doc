@@ -2,7 +2,7 @@
 
 [OrderGrid](../api/StockSharp.Xaml.OrderGrid.html) \- таблица для отображения заявок и условных заявок. Кроме того контекстное меню этой таблицы содержит команды для операций с заявками: регистрация, замена и отмена заявок. Выбор пункта меню приводит к генерации событий: [OrderGrid.OrderRegistering](../api/StockSharp.Xaml.OrderGrid.OrderRegistering.html), [OrderGrid.OrderReRegistering](../api/StockSharp.Xaml.OrderGrid.OrderReRegistering.html) или [OrderGrid.OrderCanceling](../api/StockSharp.Xaml.OrderGrid.OrderCanceling.html) соответственно.
 
-![GUI OrderGrid](~/images/GUI_OrderGrid.png)
+![GUI OrderGrid](../images/GUI_OrderGrid.png)
 
 > [!TIP]
 > Сама операция (регистрация, замена, отмена) не выполняется. Соответствующий код нужно прописывать в обработчиках событий самостоятельно.

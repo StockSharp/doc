@@ -4,7 +4,7 @@
 
 Ниже приведен пример использования этого компонета. Полный код примера находится в Samples\/Testing\/SampleRandomEmulation. 
 
-![Gui EquityCurveChart](~/images/Gui_EquityCurveChart.png)
+![Gui EquityCurveChart](../images/Gui_EquityCurveChart.png)
 
 ### Пример построения графика EquityCurveChart
 

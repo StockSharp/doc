@@ -2,7 +2,7 @@
 
 [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) \- таблица для редактирования свойств объектов. В состав компонента входит набор дополнительных редакторов для системных типов и типов [S\#](StockSharpAbout.md). 
 
-![GUI PropertyDataGridEx](~/images/GUI_PropertyDataGridEx.png)
+![GUI PropertyDataGridEx](../images/GUI_PropertyDataGridEx.png)
 
 [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) имеет собственные редакторы для следующих типов: 
 

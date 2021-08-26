@@ -22,23 +22,23 @@
 
 Необходимо установить выбранные параметры:
 
-![Designer An example of backtesting 00](~/images/Designer_example_of_backtesting_00.png)
+![Designer An example of backtesting 00](../images/Designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](~/images/Designer_example_of_backtesting_01.png)
+![Designer An example of backtesting 01](../images/Designer_example_of_backtesting_01.png)
 
-После установки всех необходимых параметров, запускаем тестирование стратегии, нажав кнопку ![Designer Interface Backtesting 01](~/images/Designer_Interface_Backtesting_01.png). 
+После установки всех необходимых параметров, запускаем тестирование стратегии, нажав кнопку ![Designer Interface Backtesting 01](../images/Designer_Interface_Backtesting_01.png). 
 
 Во время или после тестирования можно рассмотреть графики и таблицы с информацией о тестировании.
 
-![Designer An example of backtesting 02](~/images/Designer_example_of_backtesting_02.png)
+![Designer An example of backtesting 02](../images/Designer_example_of_backtesting_02.png)
 
 На графике видно, что сделки проходят на пересечении скользящих средних, как и задумано стратегией. Также видно, что заявки удовлетворяются за несколько сделок. Это происходит из\-за того, что используется сгенерированный стакан, что увеличивает реалистичность тестирования. То, что заявки удовлетворяются за несколько сделок, видно и из таблиц Сделки, Статистика, графика Позиции.
 
-![Designer An example of backtesting 03](~/images/Designer_example_of_backtesting_03.png)
+![Designer An example of backtesting 03](../images/Designer_example_of_backtesting_03.png)
 
 На графике **Позиции** видно, что у стратегии уменьшился оперируемый объём. Это произошло потому, что генерируемый стакан имеет глубину 5 и вследствие чего всей глубины стакана не хватало, чтобы удовлетворить заявку в 200 лотов. А так как стратегия только переворачивает позицию, то каждый раз, когда глубины стакана не хватало удовлетворить заявку, оперируемый объём уменьшался.
 
-![Designer An example of backtesting 04](~/images/Designer_example_of_backtesting_04.png)
+![Designer An example of backtesting 04](../images/Designer_example_of_backtesting_04.png)
 
 График **П\/У** говорит об убыточности стратегии при таких параметрах.
 

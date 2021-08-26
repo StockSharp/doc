@@ -4,7 +4,7 @@ Awesome Oscillator (AO) is a classic technical indicator built by subtracting mo
 
 To use the indicator, you must use the [AwesomeOscillator](../api/StockSharp.Algo.Indicators.AwesomeOscillator.html) class. 
 
-![IndicatorAwesomeOscillator](~/images/IndicatorAwesomeOscillator.png)
+![IndicatorAwesomeOscillator](../images/IndicatorAwesomeOscillator.png)
 
 ## Recommended content
 

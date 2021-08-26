@@ -1,6 +1,6 @@
 # Рабочее время
 
-![Designer Working time 00](~/images/Designer_Working_time_00.png)
+![Designer Working time 00](../images/Designer_Working_time_00.png)
 
 Кубик используется для определения рабочего времени. Например, для определения, когда идут торги по определенному инструменту.
 
@@ -19,7 +19,7 @@
 
 Кубик может использоваться для определения момента, когда торги ведутся по нескольким инструментам с различных торговых площадок.
 
-![Designer Working time 01](~/images/Designer_Working_time_01.png)
+![Designer Working time 01](../images/Designer_Working_time_01.png)
 
 ## См. также
 

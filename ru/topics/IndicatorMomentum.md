@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Momentum](../api/StockSharp.Algo.Indicators.Momentum.html). 
 
-![IndicatorMomentum](~/images/IndicatorMomentum.png)
+![IndicatorMomentum](../images/IndicatorMomentum.png)
 
 ## См. также
 

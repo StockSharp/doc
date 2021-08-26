@@ -2,13 +2,13 @@
 
 [S\#.Designer](Designer.md) allows running the created strategies in the **Simulation** mode, to customize the **Simulation**, the following actions shall be performed:
 
-1. When clicking the arrow next to the **Connect**![Designer The quick access toolbar 00](~/images/Designer_quick_access_toolbar_00.png) button, the **Emulator settings** button appears:
+1. When clicking the arrow next to the **Connect**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) button, the **Emulator settings** button appears:
 
-![Designer The connection settings 00](~/images/Designer_connection_settings_00.png)
+![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 
 2. When clicking the **Emulator settings** button, the **Emulator settings** window opens:
 
-![Designer Properties emulation 00](~/images/Designer_Properties_emulation_00.png)
+![Designer Properties emulation 00](../images/Designer_Properties_emulation_00.png)
 
 1.**Simulator**
 

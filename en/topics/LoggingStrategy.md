@@ -78,7 +78,7 @@ Logging in to the LogWindow
    ```
 2. Here is the log window when orders quoting strategy working ([Quoting](StrategyQuoting.md)): 
 
-   ![strategylogging](~/images/strategy_logging.png)
+   ![strategylogging](../images/strategy_logging.png)
 
 ## Recommended content
 

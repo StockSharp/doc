@@ -1,32 +1,32 @@
 # Connections settings
 
-1. When clicking the arrow next to the **Connect**![Designer The quick access toolbar 00](~/images/Designer_quick_access_toolbar_00.png) button, the **Connection settings** button appears:
+1. When clicking the arrow next to the **Connect**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) button, the **Connection settings** button appears:
 
-![Designer The connection settings 00](~/images/Designer_connection_settings_00.png)
+![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 
 2. When clicking the **Connection settings** button, the **Connection settings** window opens:
 
-![Designer The connection settings 01](~/images/Designer_connection_settings_01.png)
+![Designer The connection settings 01](../images/Designer_connection_settings_01.png)
 
 The Connection settings window is divided to 3 areas.
 
-3. Clicking the ![Designer The connection settings 02](~/images/Designer_connection_settings_02.png) button activates the drop\-down list of supported connectors. The selected connectors are displayed in the area No. 1. The ![Designer The connection settings 03](~/images/Designer_connection_settings_03.png) button removes the selected connector. The first column of the area No. 1 displays whether the connector will connect when you click the Connect ![Designer The connection settings 04](~/images/Designer_connection_settings_04.png) button or will not connect ![Designer The connection settings 05](~/images/Designer_connection_settings_05.png). These values are set using the ![Designer The connection settings 06](~/images/Designer_connection_settings_06.png) and ![Designer The connection settings 07](~/images/Designer_connection_settings_07.png) buttons.
+3. Clicking the ![Designer The connection settings 02](../images/Designer_connection_settings_02.png) button activates the drop\-down list of supported connectors. The selected connectors are displayed in the area No. 1. The ![Designer The connection settings 03](../images/Designer_connection_settings_03.png) button removes the selected connector. The first column of the area No. 1 displays whether the connector will connect when you click the Connect ![Designer The connection settings 04](../images/Designer_connection_settings_04.png) button or will not connect ![Designer The connection settings 05](../images/Designer_connection_settings_05.png). These values are set using the ![Designer The connection settings 06](../images/Designer_connection_settings_06.png) and ![Designer The connection settings 07](../images/Designer_connection_settings_07.png) buttons.
 
 The **Market data** and **Trades** display, whether the connector supports market data and work with orders.
 
 4. When the **Auto\-connect** check box is selected, the connection is automatically connected with the start of the [S\#.Designer](Designer.md).
 
-5. The area No. 2 displays the selected connector settings. When the ![Designer The connection settings 09](~/images/Designer_connection_settings_09.png) is clicked, the program redirects to documentation ([S\#.API](StockSharpAbout.md)) on the selected connector adjustment.
+5. The area No. 2 displays the selected connector settings. When the ![Designer The connection settings 09](../images/Designer_connection_settings_09.png) is clicked, the program redirects to documentation ([S\#.API](StockSharpAbout.md)) on the selected connector adjustment.
 
 6. Clicking the **Check** button will check the current connector connection. If the check fails, a window with an error will appear, describing the reason for the unsuccessful connection. If the check is successful, a window will appear:
 
-![Designer The connection settings 10](~/images/Designer_connection_settings_10.png)
+![Designer The connection settings 10](../images/Designer_connection_settings_10.png)
 
-7. The area No. 3 displays data types, which will be received or transmitted by the connector. By clicking the ![Designer The connection settings 11](~/images/Designer_connection_settings_11.png)\/ ![Designer The connection settings 12](~/images/Designer_connection_settings_12.png) checkbox you can enable\/disable transmission or reception for this type of data.
+7. The area No. 3 displays data types, which will be received or transmitted by the connector. By clicking the ![Designer The connection settings 11](../images/Designer_connection_settings_11.png)\/ ![Designer The connection settings 12](../images/Designer_connection_settings_12.png) checkbox you can enable\/disable transmission or reception for this type of data.
 
 8. Clicking the **Network settings** button will open the **Proxy\-server settings** window:
 
-![Designer The connection settings 13](~/images/Designer_connection_settings_13.png)
+![Designer The connection settings 13](../images/Designer_connection_settings_13.png)
 
 ## Recommended content
 

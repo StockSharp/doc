@@ -6,7 +6,7 @@ To export data, files in [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin,
 
 For export, you should select the required file format from the drop\-down list:
 
-![hydra export](~/images/hydra_export.png)
+![hydra export](../images/hydra_export.png)
 
 Then you have to select a folder and change the file name if necessary.
 
@@ -18,13 +18,13 @@ Here, in curly braces, the properties to be exported and their order are indicat
 
 By clicking on the **Preview** button, you can see what data will be saved in the file.
 
-![hydra export TSLab Meta Stock 1](~/images/hydra_export_TSLab_MetaStock_1.png)
+![hydra export TSLab Meta Stock 1](../images/hydra_export_TSLab_MetaStock_1.png)
 
 The user can add additional properties such as instrument code via the **{SecurityId.SecurityCode}** property, or specify a Time Frame value.
 
 You can add a header indicating the name of properties. In this case, the record will look like this.
 
-![hydra export TSLab Meta Stock 2](~/images/hydra_export_TSLab_MetaStock_2.png)
+![hydra export TSLab Meta Stock 2](../images/hydra_export_TSLab_MetaStock_2.png)
 
 If you need to export in a format using colons, you should specify the default keyword as in the example above **{OpenTime:default:HH:mm:ss}**.
 

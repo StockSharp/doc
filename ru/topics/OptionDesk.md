@@ -4,7 +4,7 @@
 
 Ниже показан пример OptionCalculator, в котором используется этот компонент. Исходные коды примера можно найти в папке *Samples\/Misc\/SampleOptionQuoting*. 
 
-![option desk](~/images/option_desk.png)
+![option desk](../images/option_desk.png)
 
 ### Пример OptionCalculator
 

@@ -32,6 +32,6 @@
    ```
 4. Пример конвертации валюты выглядит так: 
 
-   ![samplecurrency](~/images/sample_currency.png)
+   ![samplecurrency](../images/sample_currency.png)
 
 ## См. также

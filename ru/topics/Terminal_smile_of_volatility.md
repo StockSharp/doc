@@ -6,7 +6,7 @@
 
 Дополнительно можно указать фильтр по точной дате экспирации опционов и фильтры по минимальному\/максимальному страйкам.
 
-![Terminal smile of volatility 00](~/images/Terminal_smile_of_volatility_00.png)
+![Terminal smile of volatility 00](../images/Terminal_smile_of_volatility_00.png)
 
 ## См. также
 

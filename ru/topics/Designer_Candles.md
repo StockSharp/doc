@@ -1,6 +1,6 @@
 # Свечи
 
-![Designer Candles 00](~/images/Designer_Candles_00.png)
+![Designer Candles 00](../images/Designer_Candles_00.png)
 
 Кубик используется для построения свечей по заданному инструменту. 
 

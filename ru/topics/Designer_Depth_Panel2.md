@@ -4,7 +4,7 @@
 
 В стратегии можно использовать несколько разных типов стаканов (или от разных инструментов) одновременно, и выводить их на разные панели. 
 
-![Designer Panel Market Depth](~/images/Designer_Panel_Market_Depth.png)
+![Designer Panel Market Depth](../images/Designer_Panel_Market_Depth.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 For simplifying the monitoring of the work, you can use the special [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html) window. See also [Visual logging components](GuiLogging.md). 
 
-![GUI LogControl](~/images/GUI_LogControl.png)
+![GUI LogControl](../images/GUI_LogControl.png)
 
 This window allows you to display messages from all [ILogSource](../api/StockSharp.Logging.ILogSource.html): 
 

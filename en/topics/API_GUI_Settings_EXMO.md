@@ -2,7 +2,7 @@
 
 For all [S\#](StockSharpAbout.md) products, graphical configuration of the connection is performed on the [Connection settings window](API_UI_ConnectorWindow.md):
 
-![API GUI Settings EXMO](~/images/API_GUI_Settings_EXMO.png)
+![API GUI Settings EXMO](../images/API_GUI_Settings_EXMO.png)
 
 - **Key**
 

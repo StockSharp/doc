@@ -14,10 +14,10 @@
 
 При первом открытии **Чата** появляется страница авторизации, где нужно ввести свой номер телефона и дождаться СМС с кодом активации. После авторизации вы получаете полноценный мессенджер **Telegram** внутри панели **Чат**.
 
-![Designer Chat](~/images/Designer_Chat.png)
+![Designer Chat](../images/Designer_Chat.png)
 
 После регистрации окно примет вид:
 
-![Designer Chat 00](~/images/Designer_Chat_00.png)
+![Designer Chat 00](../images/Designer_Chat_00.png)
 
 ## См. также

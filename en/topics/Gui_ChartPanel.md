@@ -4,7 +4,7 @@
 
 The following figures show the appearance of the component, as well as the functions of the toolbar buttons. 
 
-![Gui ChartPanel](~/images/Gui_ChartPanel.png)
+![Gui ChartPanel](../images/Gui_ChartPanel.png)
 
 1 \- Horizontal line;
 
@@ -20,7 +20,7 @@ The following figures show the appearance of the component, as well as the funct
 
 **Toolbar functionality**
 
-![Gui ChartPanelTools](~/images/Gui_ChartPanelTools.png)
+![Gui ChartPanelTools](../images/Gui_ChartPanelTools.png)
 
 1 \- Add panel;
 

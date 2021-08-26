@@ -2,7 +2,7 @@
 
 Для импорта сделок нужно выбрать вкладку **Импорт \=\> Тики**.
 
-![hydra import trades](~/images/hydra_import_trades.png)
+![hydra import trades](../images/hydra_import_trades.png)
 
 ### Процесс импорта сделок
 
@@ -31,11 +31,11 @@
    - Для поля {OriginSide} выбираем из окна **Поле S\#** поле **Инициатор** \- инициатор сделки (Продавец или Покупатель). Присваиваем ему значение 7.
    - Окно настройки полей будет выглядить следующим образом:
 
-     ![hydra import prop trade](~/images/hydra_import_prop_trade.png)
+     ![hydra import prop trade](../images/hydra_import_prop_trade.png)
 
    Пользователь может настроить большое количество свойств для скачиваемых данных. Исходя из шаблона импортируемого файла, нужно указывать свойство и присваивать ему нужный номер в последовательности. 
 3. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 
-   ![hydra import preview trade](~/images/hydra_import_preview_trade.png)
+   ![hydra import preview trade](../images/hydra_import_preview_trade.png)
 4. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 5. Нажать кнопку **Импорт**.

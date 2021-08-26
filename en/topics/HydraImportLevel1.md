@@ -2,7 +2,7 @@
 
 To import Level 1 data, select **Import \=\> Level 1** from the main application menu
 
-![hydra import level1](~/images/hydra_import_level1.png)
+![hydra import level1](../images/hydra_import_level1.png)
 
 ### The import process securities.
 
@@ -34,10 +34,10 @@ The import process securities.
    - For the {LastTradeVolume} field, select the **Last trade volume** field from the **S\# field** window. We assign it the value 10.
    - The field setting window will look like this:
 
-     ![hydra import prop level 1](~/images/hydra_import_prop_level1.png)
+     ![hydra import prop level 1](../images/hydra_import_prop_level1.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
 3. 3.To preview the data, click the **Preview** button.
 
-   ![hydra import preview level 1](~/images/hydra_import_preview_level1.png)
+   ![hydra import preview level 1](../images/hydra_import_preview_level1.png)
 4. Click the **Import** button..

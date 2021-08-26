@@ -1,6 +1,6 @@
 # Сделки стратегии
 
-![Designer The transaction strategy 00](~/images/Designer_trades_strategy_00.png)
+![Designer The transaction strategy 00](../images/Designer_trades_strategy_00.png)
 
 Кубик используется для получения всех сделок стратегии. 
 

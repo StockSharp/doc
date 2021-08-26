@@ -12,15 +12,15 @@ To select the required extended information, you need:
 
 1. in the Securities tab, click on the **Extended information** button
 
-   ![hydra Extension Info securities](~/images/hydra_ExtensionInfo_securities.png)
+   ![hydra Extension Info securities](../images/hydra_ExtensionInfo_securities.png)
 2. Then a window will appear in which you need to select the path to the required CSV file
 
-   ![hydra Extension Info window](~/images/hydra_ExtensionInfo_window.png)
+   ![hydra Extension Info window](../images/hydra_ExtensionInfo_window.png)
 
 Below is an example of **CSV** file of extended information opened in different editors **MS Excel** and **NotePad.**
 
-![hydra ExtensionInfo csv excel](~/images/hydra_ExtensionInfo_csv_excel.png)
+![hydra ExtensionInfo csv excel](../images/hydra_ExtensionInfo_csv_excel.png)
 
-![hydra ExtensionInfo csv notepad](~/images/hydra_ExtensionInfo_csv_notepad.png)
+![hydra ExtensionInfo csv notepad](../images/hydra_ExtensionInfo_csv_notepad.png)
 
 ## Recommended content

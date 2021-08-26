@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [KaufmannAdaptiveMovingAverage](../api/StockSharp.Algo.Indicators.KaufmannAdaptiveMovingAverage.html). 
 
-![IndicatorKaufmannAdaptiveMovingAverage](~/images/IndicatorKaufmannAdaptiveMovingAverage.png)
+![IndicatorKaufmannAdaptiveMovingAverage](../images/IndicatorKaufmannAdaptiveMovingAverage.png)
 
 ## См. также
 

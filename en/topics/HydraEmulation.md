@@ -2,7 +2,7 @@
 
 In server mode, the program allows you to enable emulation mode.
 
-![hydra emulator start](~/images/hydra_emulator_start.png)
+![hydra emulator start](../images/hydra_emulator_start.png)
 
 In emulation mode, the [S\#.Data](Hydra.md) program allows you to perform the following functions:
 
@@ -17,7 +17,7 @@ This mode is used when [testing strategies](Shell_emulation.md).
 
 Emulation settings.
 
-![hydra emulator prop](~/images/hydra_emulator_prop.png)
+![hydra emulator prop](../images/hydra_emulator_prop.png)
 
 - **Match on touch** \- when emulating trade matching, match orders when the trade price is equal to the order price.
 - **Order book (time in force)** \- the maximum period of order book in the emulator. If the order book has not been updated within the specified period, its value is erased. It is used to remove old order book data if there are gaps in the data.

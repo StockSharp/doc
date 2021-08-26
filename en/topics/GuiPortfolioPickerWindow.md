@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](../api/StockSharp.Xaml.PortfolioPickerWindow.html) is the window for selecting a portfolio. The window displays a list of portfolios and information about the cash positions of portfolios.
 
-![GUI PortfolioPickerWindow](~/images/GUI_PortfolioPickerWindow.png)
+![GUI PortfolioPickerWindow](../images/GUI_PortfolioPickerWindow.png)
 
 **Main properties**
 

@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Sum](../api/StockSharp.Algo.Indicators.Sum.html) class. 
 
-![IndicatorSum](~/images/IndicatorSum.png)
+![IndicatorSum](../images/IndicatorSum.png)
 
 ## Recommended content
 

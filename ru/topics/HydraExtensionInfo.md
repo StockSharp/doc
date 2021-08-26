@@ -12,15 +12,15 @@
 
 1. во вкладке инструменты нажать на кнопку **Расширенная информация**
 
-   ![hydra Extension Info securities](~/images/hydra_ExtensionInfo_securities.png)
+   ![hydra Extension Info securities](../images/hydra_ExtensionInfo_securities.png)
 2. После чего появиться окно, в котром необходимо выбрать путь к нужному CSV файлу.
 
-   ![hydra Extension Info window](~/images/hydra_ExtensionInfo_window.png)
+   ![hydra Extension Info window](../images/hydra_ExtensionInfo_window.png)
 
 Ниже представлен пример **CSV** файла расширенной информации открытый в разных редакторах **MS Excel** и **NotePad**
 
-![hydra ExtensionInfo csv excel](~/images/hydra_ExtensionInfo_csv_excel.png)
+![hydra ExtensionInfo csv excel](../images/hydra_ExtensionInfo_csv_excel.png)
 
-![hydra ExtensionInfo csv notepad](~/images/hydra_ExtensionInfo_csv_notepad.png)
+![hydra ExtensionInfo csv notepad](../images/hydra_ExtensionInfo_csv_notepad.png)
 
 ## См. также

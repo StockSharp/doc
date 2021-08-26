@@ -2,7 +2,7 @@
 
 For all [S\#](StockSharpAbout.md) products, graphical configuration of the connection is performed on the [Connection settings window](API_UI_ConnectorWindow.md):
 
-![API GUI Settings Yobit](~/images/API_GUI_Settings_Yobit.png)
+![API GUI Settings Yobit](../images/API_GUI_Settings_Yobit.png)
 
 - **Key**
 

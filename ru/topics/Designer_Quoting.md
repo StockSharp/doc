@@ -1,6 +1,6 @@
 # Котирование
 
-![Designer Quoting 00](~/images/Designer_Quoting_00.png)
+![Designer Quoting 00](../images/Designer_Quoting_00.png)
 
 Кубик используется для котирования опционов согласно заданным параметрам.
 

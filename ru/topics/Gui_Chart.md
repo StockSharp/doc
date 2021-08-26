@@ -4,7 +4,7 @@
 
 Ниже приведен пример построения графика при помощи компонета [Chart](../api/StockSharp.Xaml.Charting.Chart.html). За основу взят пример из Samples\/Common\/SampleConnection, в который внесены некоторые изменения. 
 
-![Gui ChartSample](~/images/Gui_ChartSample.png)
+![Gui ChartSample](../images/Gui_ChartSample.png)
 
 ### Пример построения графика при помощи Chart
 

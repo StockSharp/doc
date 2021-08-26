@@ -1,6 +1,6 @@
 # Обрезанный стакан
 
-![Designer MarketDepthTruncateDiagramElement 00](~/images/Designer_MarketDepthTruncateDiagramElement_00.png)
+![Designer MarketDepthTruncateDiagramElement 00](../images/Designer_MarketDepthTruncateDiagramElement_00.png)
 
 Кубик используется для получения обрезанного стакана на заданную глубину.
 

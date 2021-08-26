@@ -4,7 +4,7 @@
 
 Below is an example of the chart plotting using the [Chart](../api/StockSharp.Xaml.Charting.Chart.html). The example from Samples\/Chart\/SampleChart is taken as a basis, in which some changes were made. 
 
-![Gui ChartSample](~/images/Gui_ChartSample.png)
+![Gui ChartSample](../images/Gui_ChartSample.png)
 
 ### Example of chart plotting using Chart
 

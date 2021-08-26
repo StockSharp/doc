@@ -4,7 +4,7 @@ In the [Backtesting settings](Designer_Properties_emulation.md) and [Live settin
 
 In the Risk window, you should select the **Risk\-rule**, configure the trigger condition for the **Risk\-rule** and the action (Close positions, Stop trading, Cancel orders), which will be executed when the **Risk\-rule** condition is triggered.
 
-![Designer Risk Rule](~/images/Designer_Risk_Rule.png)
+![Designer Risk Rule](../images/Designer_Risk_Rule.png)
 
 #### List of Risk\-rules
 

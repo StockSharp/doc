@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [RateOfChange](../api/StockSharp.Algo.Indicators.RateOfChange.html) class. 
 
-![IndicatorRateOfChange](~/images/IndicatorRateOfChange.png)
+![IndicatorRateOfChange](../images/IndicatorRateOfChange.png)
 
 ## Recommended content
 

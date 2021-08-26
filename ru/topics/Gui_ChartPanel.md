@@ -4,7 +4,7 @@
 
 На следующих рисунках показаны внешний вид компонента, а также функции кнопок панели инструментов. 
 
-![Gui ChartPanel](~/images/Gui_ChartPanel.png)
+![Gui ChartPanel](../images/Gui_ChartPanel.png)
 
 1 \- Горизонтальная линия;
 
@@ -20,7 +20,7 @@
 
 **Функционал панели инструментов**
 
-![Gui ChartPanelTools](~/images/Gui_ChartPanelTools.png)
+![Gui ChartPanelTools](../images/Gui_ChartPanelTools.png)
 
 1 \-Добавление новой панели;
 

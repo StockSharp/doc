@@ -5,7 +5,7 @@
 
 [OrderConditionalWindow](../api/StockSharp.Xaml.OrderConditionalWindow.html) \- окно для создания условной заявки. 
 
-![GUI OrderConditionalWindow](~/images/GUI_OrderConditionalWindow.png)
+![GUI OrderConditionalWindow](../images/GUI_OrderConditionalWindow.png)
 
 **Основные свойства**
 

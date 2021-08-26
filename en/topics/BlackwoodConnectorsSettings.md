@@ -4,4 +4,4 @@ To work with a connector, you have to specify the **Login** and **Password**. **
 
 The interaction mechanism is shown in this figure: 
 
-![blackwood trader](~/images/blackwood_trader.png)
+![blackwood trader](../images/blackwood_trader.png)

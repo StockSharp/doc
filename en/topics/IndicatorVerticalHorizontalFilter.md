@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [VerticalHorizontalFilter](../api/StockSharp.Algo.Indicators.VerticalHorizontalFilter.html) class. 
 
-![IndicatorVerticalHorizontalFilter](~/images/IndicatorVerticalHorizontalFilter.png)
+![IndicatorVerticalHorizontalFilter](../images/IndicatorVerticalHorizontalFilter.png)
 
 ## Recommended content
 

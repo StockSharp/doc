@@ -14,10 +14,10 @@ Using the [S\#.Designer](Designer.md) chat on the basis of the **Telegram** mess
 
 When you first open the **Chat**, an authorization page appears, where you need to enter your phone number and wait for the SMS with the activation code. After authorization, you get a full\-featured **Telegram** messenger directly in the [S\#.Designer](Designer.md).
 
-![Designer Chat](~/images/Designer_Chat.png)
+![Designer Chat](../images/Designer_Chat.png)
 
 After registration, the window will look like this:
 
-![Designer Chat 00](~/images/Designer_Chat_00.png)
+![Designer Chat 00](../images/Designer_Chat_00.png)
 
 ## Recommended content

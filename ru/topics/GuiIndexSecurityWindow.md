@@ -4,7 +4,7 @@
 
 [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) \- специальный тип индексного инструмента, в основе которого лежит комбинирование нескольких инструментов при помощи математических формул. Этот тип имеет свойство [Expression](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression.html), в котором хранится формула в текстовом виде и список подлежащих инструментов [InnerSecurityIds](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds.html). 
 
-![GUI IndexSecurityWindow](~/images/GUI_IndexSecurityWindow.png)
+![GUI IndexSecurityWindow](../images/GUI_IndexSecurityWindow.png)
 
 **Основные свойства **
 

@@ -10,7 +10,7 @@ You can use S\# with any broker that supports our connection.
 
 S\#.Designer
 
-![StockSharpTitle 0](~/images/StockSharpTitle_0.png)
+![StockSharpTitle 0](../images/StockSharpTitle_0.png)
 
 [S\#.Designer](Designer.md) \- universal algorithmic strategies application for easy strategy creation: 
 
@@ -28,7 +28,7 @@ S\#.Designer
 
 S\#.Data
 
-![StockSharpTitle 1](~/images/StockSharpTitle_1.png)
+![StockSharpTitle 1](../images/StockSharpTitle_1.png)
 
 [S\#.Data](Hydra.md) \- the program for automatic download of historical and real\-time market data: 
 
@@ -47,7 +47,7 @@ S\#.Data
 
 S\#.Terminal
 
-![Terminal main 00](~/images/Terminal_main_00.png)
+![Terminal main 00](../images/Terminal_main_00.png)
 
 [S\#.Terminal](Terminal.md) \- trading charting application (trading terminal).
 

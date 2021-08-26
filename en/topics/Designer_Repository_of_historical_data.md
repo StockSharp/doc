@@ -4,7 +4,7 @@ The historical data storage is designed to load market data (instruments, candle
 
 To open the **Market data** tab, switch to the **Common** tab and click the **Market data** button. The **Market data** area is divided to three areas. The left area contains the list of all received instruments, from all sources that have ever been connected. The central areas contain the active instruments. Using these instruments, you can download or view the downloaded history. The right area displays the available data for the instrument selected in the central zone, and you also can download data using the selected instrument.
 
-![Designer Repository of historical data 00](~/images/Designer_Repository_of_historical_data_00.png)
+![Designer Repository of historical data 00](../images/Designer_Repository_of_historical_data_00.png)
 
 ## Recommended content
 

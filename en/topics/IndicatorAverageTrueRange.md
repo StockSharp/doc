@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [AverageTrueRange](../api/StockSharp.Algo.Indicators.AverageTrueRange.html) class. 
 
-![IndicatorAverageTrueRange](~/images/IndicatorAverageTrueRange.png)
+![IndicatorAverageTrueRange](../images/IndicatorAverageTrueRange.png)
 
 ## Recommended content
 

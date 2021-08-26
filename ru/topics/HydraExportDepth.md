@@ -1,8 +1,8 @@
 # Стаканы
 
-В появившимся окне выбрать интересуемый диапазон времени, выбрать инструмент и нажать кнопку ![hydra find](~/images/hydra_find.png):
+В появившимся окне выбрать интересуемый диапазон времени, выбрать инструмент и нажать кнопку ![hydra find](../images/hydra_find.png):
 
-![hydra export depth](~/images/hydra_export_depth.png)
+![hydra export depth](../images/hydra_export_depth.png)
 
 > [!TIP]
 > Стаканы могут быть созданы из [файлов лога заявок и Level 1](HydraUsingDifferentTypesMarketData.md). Кроме того можно настроить глубину и период обновления стакана.

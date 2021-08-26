@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](StockSharpAbout.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](API_UI_ConnectorWindow.md):
 
-![API GUI Settings FIX](~/images/API_GUI_Settings_FIX.png)
+![API GUI Settings FIX](../images/API_GUI_Settings_FIX.png)
 
 - **Адрес**
 

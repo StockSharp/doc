@@ -2,7 +2,7 @@
 
 The interaction mechanism is shown in this figure: 
 
-![IQFeed](~/images/IQFeed.jpg)
+![IQFeed](../images/IQFeed.jpg)
 
 To work with the **iQFeed** connector, you need to install the **IQ Feed Client** router on the computer, which can be installed on both the local computer and the remote one. Data exchange between the client application and the **IQ Feed Client**, as well as between the **IQ Feed Client** and the servers, is performed via the TCP\/IP protocol. 
 
@@ -12,11 +12,11 @@ After installing **IQ Feed Client**, it is recommended to restart the computer.
 
 After installing **IQ Feed Client, IQLink Launcher** must be started.
 
-![iQFeedIQLinkLauncher](~/images/iQFeedIQLinkLauncher.png)
+![iQFeedIQLinkLauncher](../images/iQFeedIQLinkLauncher.png)
 
 In the **IQLink Launcher** window that opens, click **Start IQLink**.
 
-![iQFeedIQConnectLogin](~/images/iQFeedIQConnectLogin.png)
+![iQFeedIQConnectLogin](../images/iQFeedIQConnectLogin.png)
 
 In the opened **IQ Connect Login** window it is necessary to enter the **Login** and **Password** (or PIN) received from the **iQFeed** service, in this case the Login and Password are not the Login and Password from the **iQFeed** site. After filling in Login and Password, you have to click **Connect** to connect.
 

@@ -6,7 +6,7 @@
 
 LogControl
 
-![GUI LogControl](~/images/GUI_LogControl.png)
+![GUI LogControl](../images/GUI_LogControl.png)
 
 Пример кода
 

@@ -1,6 +1,6 @@
 # График позиций опционов
 
-![Designer Graph options positions 00](~/images/Designer_Graph_options_positions_00.png)
+![Designer Graph options positions 00](../images/Designer_Graph_options_positions_00.png)
 
 Кубик используется для отображения **Графика позиций опционов**.
 
@@ -14,9 +14,9 @@
 - **Цена базового актива** – цена базового актива.
 - **Опционы** – список опционов из кубика **Деривативы**.
 
-![Designer Graph options positions 01](~/images/Designer_Graph_options_positions_01.png)
+![Designer Graph options positions 01](../images/Designer_Graph_options_positions_01.png)
 
-![Designer Graph options positions 02](~/images/Designer_Graph_options_positions_02.png)
+![Designer Graph options positions 02](../images/Designer_Graph_options_positions_02.png)
 
 ## См. также
 

@@ -6,7 +6,7 @@
 
 В дистрибутиве [S\#](StockSharpAbout.md) находится пример SampleHistoryTesting (а также архив HistoryData.zip, где лежат исторические данные по тикам, стаканам и свечам, для примера), который тестирует стратегию [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя) на истории. Для сравнения скорости и качества, тестирование идет с различным набором маркет\-данных: 
 
-![samplehistorytest](~/images/sample_history_test.png)
+![samplehistorytest](../images/sample_history_test.png)
 
 ### Тестирование на истории стратегии скользящих средних из примеров SampleSMA и SampleSmartSMA
 

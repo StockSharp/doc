@@ -2,7 +2,7 @@
 
 Для написания торговых роботов под прямое подключение к серверу [QUIK](https://arqatech.com/ru/products/quik/) через протокол [FIX](Fix.md) необходимо использовать [FIX\/FAST коннектор](Fix.md). Механизм взаимодействия показан на данном рисунке: 
 
-![quikfix trader](~/images/quikfix_trader.png)
+![quikfix trader](../images/quikfix_trader.png)
 
 При работе с коннектором используется прямое подключение, требующее **VPN** или **шифрованного** канала.
 

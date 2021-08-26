@@ -46,4 +46,4 @@
    ```
 2. Результат работы примера выглядит следующим образом: 
 
-   ![sampleemulationtest](~/images/sample_emulation_test.png)
+   ![sampleemulationtest](../images/sample_emulation_test.png)

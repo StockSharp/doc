@@ -1,6 +1,6 @@
 # Ticks
 
-![GUI TradeGrid](~/images/GUI_TradeGrid.png)
+![GUI TradeGrid](../images/GUI_TradeGrid.png)
 
 [TradeGrid](../api/StockSharp.Xaml.TradeGrid.html) \- trade table. 
 

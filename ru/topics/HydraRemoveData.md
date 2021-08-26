@@ -2,6 +2,6 @@
 
 Вкладка **Общее** кнопка **Удалить данные...**.
 
-![hydra data delete](~/images/hydra_data_delete.png)
+![hydra data delete](../images/hydra_data_delete.png)
 
 Позволяет удалить данные для конкретных или всех инструментов за определенные даты.

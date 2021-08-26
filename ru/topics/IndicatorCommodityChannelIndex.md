@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [CommodityChannelIndex](../api/StockSharp.Algo.Indicators.CommodityChannelIndex.html). 
 
-![IndicatorCommodityChannelIndex](~/images/IndicatorCommodityChannelIndex.png)
+![IndicatorCommodityChannelIndex](../images/IndicatorCommodityChannelIndex.png)
 
 ## См. также
 

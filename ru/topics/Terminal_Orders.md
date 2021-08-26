@@ -2,15 +2,15 @@
 
 Компонент **Заявки** представляет собой таблицу с заявками, в которой отображается полная информация о всех заявках. При нажатии на вторую кнопку мыши на заявке появится панель с которой можно выставить новую заявку, отменить или заменить выбранную заявку. 
 
-![Terminal Quick start 04](~/images/Terminal_Quick_start_04.png)
+![Terminal Quick start 04](../images/Terminal_Quick_start_04.png)
 
 При нажатии на кнопку **Регистрация заявки** появится окно. Для выставления новой заявки его необходимо заполнить и нажать кнопку **Отправить**.
 
-![Terminal OrderPanel 01](~/images/Terminal_OrderPanel_01.png)
+![Terminal OrderPanel 01](../images/Terminal_OrderPanel_01.png)
 
 При нажатии на кнопку **Заменить заявку** появится окно. Для замены заявки необходимо внести требуемые изменения и нажать кнопку **Отправить**.
 
-![Terminal OrderPanel 02](~/images/Terminal_OrderPanel_02.png)
+![Terminal OrderPanel 02](../images/Terminal_OrderPanel_02.png)
 
 ## См. также
 

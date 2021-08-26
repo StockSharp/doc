@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [ZigZag](../api/StockSharp.Algo.Indicators.ZigZag.html) class. 
 
-![IndicatorZigZag](~/images/IndicatorZigZag.png)
+![IndicatorZigZag](../images/IndicatorZigZag.png)
 
 ## Recommended content
 

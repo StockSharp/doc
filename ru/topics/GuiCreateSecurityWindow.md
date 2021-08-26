@@ -4,7 +4,7 @@
 
 Ниже показан внешний вид компонента и фрагмент кода с его использованием. 
 
-![Gui SecurityCreateWindow](~/images/Gui_SecurityCreateWindow.png)
+![Gui SecurityCreateWindow](../images/Gui_SecurityCreateWindow.png)
 
 ```cs
 private void Button\_Click(object sender, RoutedEventArgs e)

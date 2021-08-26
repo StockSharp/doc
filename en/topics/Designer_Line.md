@@ -2,7 +2,7 @@
 
 The strategy in the designer is a schema of a set of elements and links between them, called connections. Each connection goes from the output parameter of one cube to the input parameter of another cube. Usually, all connection lines are colored gray, but when you point to the cube to which they belong, the lines are painted black.
 
-![Designer Line 00](~/images/Designer_Line_00.png)
+![Designer Line 00](../images/Designer_Line_00.png)
 
 Each connection can be highlighted by pointing over it and clicking the left mouse button. The selected connection will be marked with circles at the ends of the line, taking for which, you can redirect the line. If you press the Del button on the selected line, it will be deleted.
 

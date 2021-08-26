@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [MedianPrice](../api/StockSharp.Algo.Indicators.MedianPrice.html). 
 
-![IndicatorMedianPrice](~/images/IndicatorMedianPrice.png)
+![IndicatorMedianPrice](../images/IndicatorMedianPrice.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 BoxChart \- специальный тип графика, предназначенный для отображения объемов в виде сетки цифр. Для использования этого типа графика необходимо задать специальный стиль [ChartCandleElement.DrawStyle](../api/StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle.html) \= [ChartCandleDrawStyles.BoxVolume](../api/StockSharp.Xaml.Charting.ChartCandleDrawStyles.BoxVolume.html) В качестве исходных данных этот график использует информацию из свойства [Candle.PriceLevels](../api/StockSharp.Algo.Candles.Candle.PriceLevels.html). 
 
-![Gui BoxChart](~/images/Gui_BoxChart.png)
+![Gui BoxChart](../images/Gui_BoxChart.png)
 
 **Основные свойства**
 

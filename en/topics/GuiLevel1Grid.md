@@ -1,6 +1,6 @@
 # Level1
 
-![GUI Leve1Grid](~/images/GUI_Leve1Grid.png)
+![GUI Leve1Grid](../images/GUI_Leve1Grid.png)
 
 [Level1Grid](../api/StockSharp.Xaml.Level1Grid.html) is the table for displaying the Level1 fields. This table uses the data as [Level1ChangeMessage](../api/StockSharp.Messages.Level1ChangeMessage.html) messages. 
 

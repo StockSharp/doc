@@ -4,6 +4,6 @@
 
 Нажав на кнопку **Ссылки** вкладки **Исходный код**, откроется окно **Дополнительные библиотеки**, в котором можно добавить или удалить Dll библиотеку.
 
-![Designer Add Dll Lib](~/images/Designer_Add_Dll_Lib.png)
+![Designer Add Dll Lib](../images/Designer_Add_Dll_Lib.png)
 
 ## См. также

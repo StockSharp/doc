@@ -2,7 +2,7 @@
 
 [MyTradeGrid](../api/StockSharp.Xaml.MyTradeGrid.html) \- a table to display own trades. 
 
-![GUI MytradeGrid](~/images/GUI_MytradeGrid.png)
+![GUI MytradeGrid](../images/GUI_MytradeGrid.png)
 
 **Main members**
 

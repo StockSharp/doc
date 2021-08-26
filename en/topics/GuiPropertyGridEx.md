@@ -2,7 +2,7 @@
 
 [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) \- the table for editing object properties. The component includes a set of additional editors for system types and [S\#](StockSharpAbout.md) types. 
 
-![GUI PropertyDataGridEx](~/images/GUI_PropertyDataGridEx.png)
+![GUI PropertyDataGridEx](../images/GUI_PropertyDataGridEx.png)
 
 [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) has its own editors for the following types: 
 

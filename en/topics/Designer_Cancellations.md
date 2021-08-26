@@ -1,6 +1,6 @@
 # Cancel order
 
-![Designer Cancellations 00](~/images/Designer_Cancellations_00.png)
+![Designer Cancellations 00](../images/Designer_Cancellations_00.png)
 
 The cube is used to cancel the order by the instrument.
 

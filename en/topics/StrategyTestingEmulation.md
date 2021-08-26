@@ -46,4 +46,4 @@ Testing on random data of moving averages strategy
    ```
 2. The result of the example work is as follows: 
 
-   ![sampleemulationtest](~/images/sample_emulation_test.png)
+   ![sampleemulationtest](../images/sample_emulation_test.png)

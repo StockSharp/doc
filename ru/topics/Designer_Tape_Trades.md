@@ -4,6 +4,6 @@
 
 **Лента сделок** имеет фильтр для выбора необходимых инструментов. Также имеется возможность настроить уведомления по событиям выбранных инструментов [Настройки уведомлений](Designer_notification_Setting.md).
 
-![Designer Tape Trades](~/images/Designer_Tape_Trades.png)
+![Designer Tape Trades](../images/Designer_Tape_Trades.png)
 
 ## См. также

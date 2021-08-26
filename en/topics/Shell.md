@@ -4,7 +4,7 @@
 
 You don't need to waste time creating a GUI (Graphical User Interface), a ready\-made robot is created faster without sacrificing application usability. Basic functionality for testing, trading, connecting to data sources, displaying charts, portfolios, positions, orders and trades is already in the box.
 
-![Shell Title 00](~/images/Shell_Title_00.png)
+![Shell Title 00](../images/Shell_Title_00.png)
 
 The main features of the trading robot shell:
 

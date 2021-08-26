@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [StandardError](../api/StockSharp.Algo.Indicators.StandardError.html). 
 
-![IndicatorStandardError](~/images/IndicatorStandardError.png)
+![IndicatorStandardError](../images/IndicatorStandardError.png)
 
 ## См. также
 

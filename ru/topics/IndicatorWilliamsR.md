@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [WilliamsR](../api/StockSharp.Algo.Indicators.WilliamsR.html). 
 
-![IndicatorWilliamsR](~/images/IndicatorWilliamsR.png)
+![IndicatorWilliamsR](../images/IndicatorWilliamsR.png)
 
 ## См. также
 

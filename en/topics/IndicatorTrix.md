@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Trix](../api/StockSharp.Algo.Indicators.Trix.html) class. 
 
-![IndicatorTrix](~/images/IndicatorTrix.png)
+![IndicatorTrix](../images/IndicatorTrix.png)
 
 ## Recommended content
 

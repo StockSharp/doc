@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](StockSharpAbout.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](API_UI_ConnectorWindow.md):
 
-![API GUI Settings Quik LUA  Market data](~/images/API_GUI_Settings_Quik LUA  Market data.png)
+![API GUI Settings Quik LUA  Market data](../images/API_GUI_Settings_Quik LUA  Market data.png)
 
 - **Адрес**
 

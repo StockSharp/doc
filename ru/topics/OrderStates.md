@@ -2,7 +2,7 @@
 
 Заявка во время своей жизни проходит следующие состояния:
 
-![OrderStates](~/images/OrderStates.png)
+![OrderStates](../images/OrderStates.png)
 
 - [None](../api/StockSharp.Messages.OrderStates.None.html)
 

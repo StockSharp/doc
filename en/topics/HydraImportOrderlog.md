@@ -2,7 +2,7 @@
 
 To import the order log, select the **Import \=\> Order log** item from the main application menu.
 
-![hydra import orderlog](~/images/hydra_import_orderlog.png)
+![hydra import orderlog](../images/hydra_import_orderlog.png)
 
 ### The import process securities.
 
@@ -35,10 +35,10 @@ The import process securities.
    - For the {TradePrice} field, select the **Price (trade)** field from the **S\# field** window \- the trade price. We assign it the value 11.
    - The field setting window will look like this:
 
-     ![hydra import prop orderlog](~/images/hydra_import_prop_orderlog.png)
+     ![hydra import prop orderlog](../images/hydra_import_prop_orderlog.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
 3. To preview the data, click the **Preview** button.
 
-   ![hydra import preview orderlog](~/images/hydra_import_preview_orderlog.png)
+   ![hydra import preview orderlog](../images/hydra_import_preview_orderlog.png)
 4. 5.Click the **Import** button.

@@ -4,7 +4,7 @@
 
 [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) \- is a special type of index security based on a combination of several securities using mathematical formulas. This type has the [Expression](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression.html), property, which stores the formula in text form and the list of underlying [InnerSecurityIds](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds.html) securities. 
 
-![GUI IndexSecurityWindow](~/images/GUI_IndexSecurityWindow.png)
+![GUI IndexSecurityWindow](../images/GUI_IndexSecurityWindow.png)
 
 **Basic properties**
 

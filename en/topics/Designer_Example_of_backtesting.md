@@ -22,23 +22,23 @@ The following parameters will be used in the example with the SMA strategy.
 
 It is required to set the selected parameters up:
 
-![Designer An example of backtesting 00](~/images/Designer_example_of_backtesting_00.png)
+![Designer An example of backtesting 00](../images/Designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](~/images/Designer_example_of_backtesting_01.png)
+![Designer An example of backtesting 01](../images/Designer_example_of_backtesting_01.png)
 
-After setting up all the required parameters, start up the strategy testing by clicking the ![Designer Interface Backtesting 01](~/images/Designer_Interface_Backtesting_01.png) button.
+After setting up all the required parameters, start up the strategy testing by clicking the ![Designer Interface Backtesting 01](../images/Designer_Interface_Backtesting_01.png) button.
 
 During or after the testing you can view chart and tables with the testing information.
 
-![Designer An example of backtesting 02](~/images/Designer_example_of_backtesting_02.png)
+![Designer An example of backtesting 02](../images/Designer_example_of_backtesting_02.png)
 
 The graph shows that the trades take place at the intersection of moving averages, as planned by the strategy. It can also be seen that orders are satisfied within several trades. It happens because of generated order book use, which increases the testing reality. The fact that orders are satisfied within several trades can be seen from the Trades tables, Statistics, and the Positions chart.
 
-![Designer An example of backtesting 03](~/images/Designer_example_of_backtesting_03.png)
+![Designer An example of backtesting 03](../images/Designer_example_of_backtesting_03.png)
 
 It can be seen on the **Positions chart**, that the strategy has decreased the volume operated. This happened because the generated order book has a depth of 5 and as a result, the entire order book depth was insufficient to satisfy the order of 200 lots. And since the strategy only reverses the position, every time the depth of the order book is not sufficient satisfy the order, the operated was reduced.
 
-![Designer An example of backtesting 04](~/images/Designer_example_of_backtesting_04.png)
+![Designer An example of backtesting 04](../images/Designer_example_of_backtesting_04.png)
 
 The **P\/L** chart indicates that the strategy is unprofitable with such parameters.
 

@@ -1,6 +1,6 @@
 # Индексатор
 
-![Designer Indexer 00](~/images/Designer_Indexer_00.png)
+![Designer Indexer 00](../images/Designer_Indexer_00.png)
 
 Элемент используется для получения элемента из коллекции с указанным индексом. 
 

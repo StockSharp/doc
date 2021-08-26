@@ -2,7 +2,7 @@
 
 To import instruments, select the **Import \=\> Security** tab.
 
-![hydra import securities](~/images/hydra_import_securities.png)
+![hydra import securities](../images/hydra_import_securities.png)
 
 ### The import process securities.
 
@@ -29,10 +29,10 @@ The import process securities.
    - For the {VolumeStep} field, select the **Min volume (base)** field from the **S\# field** window \- the base or minimum security volume. We assign it the value 4
    - The field setting window will look like this:
 
-     ![hydra import prop securitiy](~/images/hydra_import_prop_securitiy.png)
+     ![hydra import prop securitiy](../images/hydra_import_prop_securitiy.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence.
 3. To preview the data, click the **Preview** button..
 
-   ![hydra import preview securitiy](~/images/hydra_import_preview_securitiy.png)
+   ![hydra import preview securitiy](../images/hydra_import_preview_securitiy.png)
 4. Click the **Import** button.

@@ -2,7 +2,7 @@
 
 Задача выполняет конвертацию биржевых данных. Например, из Логов заявок в тики или тиков в свечи и т.п.
 
-![hydra tasks converter](~/images/hydra_tasks_converter.png)
+![hydra tasks converter](../images/hydra_tasks_converter.png)
 
 **Конвертер**
 
@@ -42,7 +42,7 @@
   - **ITCH** \- используется для протоколf ITCH (биржи: LSE и Nasdaq).
   - **Plaza** \- используется для Московской Биржи.
 
-  ![hydra choose ITCH Plaza 00](~/images/hydra_choose_ITCH_Plaza_00.png)
+  ![hydra choose ITCH Plaza 00](../images/hydra_choose_ITCH_Plaza_00.png)
 
 **Основные**
 
@@ -53,7 +53,7 @@
 
    \- настройка работы площадки. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Интервал работы**
 
    \- интервал работы. 
@@ -85,7 +85,7 @@
 
    . 
 
-   ![hydra tasks converter 00](~/images/hydra_tasks_converter_00.png)
+   ![hydra tasks converter 00](../images/hydra_tasks_converter_00.png)
 2. Выбираем инструмент и в появившемся окне устанавливаем тип данных, которые мы должны получить при конвертации, а так же тип данных из которого мы должны произвести конвертацию.
 
    Например, необходимо Тики сконвертировать в свечи с Тайм Фреймом 15 мин.
@@ -95,11 +95,11 @@
 3. Устанавливаем необходимые директории. Временной отступ. Интервал работы. 
 4. Запускаем конвертацию
 
-   ![hydra tasks converter 01](~/images/hydra_tasks_converter_01.png)
+   ![hydra tasks converter 01](../images/hydra_tasks_converter_01.png)
 
 Видно что данные сконвертированы. [Просмотрим](HydraViewingMarketData.md) полученные данные.
 
-![hydra tasks converter 02](~/images/hydra_tasks_converter_02.png)
+![hydra tasks converter 02](../images/hydra_tasks_converter_02.png)
 
 Данная функция схожа с [получением нужных маркет\-данных](HydraUsingDifferentTypesMarketData.md) из данных другого типа.
 

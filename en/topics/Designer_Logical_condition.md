@@ -1,6 +1,6 @@
 # Logical condition
 
-![Designer The logical condition 00](~/images/Designer_logical_condition_00.png)
+![Designer The logical condition 00](../images/Designer_logical_condition_00.png)
 
 The element is used to calculate a logical formula with two arguments.
 

@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](StockSharpAbout.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](API_UI_ConnectorWindow.md):
 
-![API GUI Settings GDAX](~/images/API_GUI_Settings_GDAX.png)
+![API GUI Settings GDAX](../images/API_GUI_Settings_GDAX.png)
 
 - **Ключ**
 

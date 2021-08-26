@@ -2,7 +2,7 @@
 
 ClusterChart \- is the special type of chart to display the volumes in the form of clusters with the bar charts. To use this type of the chart it is necessary to set the special style [ChartCandleElement.DrawStyle](../api/StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle.html) \= [ChartCandleDrawStyles.ClusterProfile](../api/StockSharp.Xaml.Charting.ChartCandleDrawStyles.ClusterProfile.html). This chart uses the information from the [Candle.PriceLevels](../api/StockSharp.Algo.Candles.Candle.PriceLevels.html) property as source data. 
 
-![Gui ClasterChart](~/images/Gui_ClasterChart.png)
+![Gui ClasterChart](../images/Gui_ClasterChart.png)
 
 **Main properties**
 

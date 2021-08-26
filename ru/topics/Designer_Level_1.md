@@ -1,6 +1,6 @@
 # Level 1
 
-![Designer Level 1 00](~/images/Designer_Level_1_00.png)
+![Designer Level 1 00](../images/Designer_Level_1_00.png)
 
 Кубик используется для получения **Level1** данных по инструменту. 
 

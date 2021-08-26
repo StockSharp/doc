@@ -4,7 +4,7 @@ The basis of the creating strategies is the [Strategy](../api/StockSharp.Algo.St
 
 It is recommended that the strategy code has been implemented without binding to specified instrument or portfolio. This approach allows you to use strategy with different instruments on different trading accounts simultaneously or in different time periods: 
 
-![strategy](~/images/strategy.png)
+![strategy](../images/strategy.png)
 
 The [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class uses an approach [based on events](EventModel.md). Such code is compact and quickly reacts to market events due instant recall. If you use the [iteration model](StrategyCreate.md), the code is called only after the [TimeFrameStrategy.TimeFrame](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.TimeFrame.html) timeframe end, and there is a chance to miss the necessary signals in the market. Therefore, it is recommended to use in the [S\#](StockSharpAbout.md) only events to create the logic of the strategies (all standard [S\#](StockSharpAbout.md) strategies implement this approach). 
 

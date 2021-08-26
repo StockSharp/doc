@@ -31,10 +31,10 @@
    > Исходные коды примера лежат в папке *Samples\\Quik\\DDE\\SampleDdeExtendedInfo*. Файл настроек для [Quik](Quik.md) называется info\_extended.wnd.
 2. Вначале, необходимо настроить таблицу Инструменты: 
 
-   ![securitiesex](~/images/security_ex_dde.png)
+   ![securitiesex](../images/security_ex_dde.png)
 3. А так же окно со стаканом: 
 
-   ![quotesex](~/images/quote_ex_dde.png)
+   ![quotesex](../images/quote_ex_dde.png)
 
    > [!TIP]
    > Пример работает с инструментом Лукойл. Для использования других инструментов необходимо настроить окна со стаканами по аналогии. 
@@ -133,11 +133,11 @@
    ```
 7. В итоге должно получиться следующее: 
 
-   ![samplesecuritiesex](~/images/sample_securities_ex.png)
+   ![samplesecuritiesex](../images/sample_securities_ex.png)
 
    И для стакана Лукойл: 
 
-   ![samplequotesex](~/images/sample_quote_ex.png)
+   ![samplequotesex](../images/sample_quote_ex.png)
 
 ### Следующие шаги
 

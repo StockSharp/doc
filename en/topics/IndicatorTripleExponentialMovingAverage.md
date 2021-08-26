@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [TripleExponentialMovingAverage](../api/StockSharp.Algo.Indicators.TripleExponentialMovingAverage.html) class. 
 
-![IndicatorTripleExponentialMovingAverage](~/images/IndicatorTripleExponentialMovingAverage.png)
+![IndicatorTripleExponentialMovingAverage](../images/IndicatorTripleExponentialMovingAverage.png)
 
 ## Recommended content
 

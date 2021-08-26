@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [StandardDeviation](../api/StockSharp.Algo.Indicators.StandardDeviation.html). 
 
-![IndicatorStandardDeviation](~/images/IndicatorStandardDeviation.png)
+![IndicatorStandardDeviation](../images/IndicatorStandardDeviation.png)
 
 ## См. также
 

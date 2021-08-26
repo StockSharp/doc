@@ -4,7 +4,7 @@ The graphic component [OptionPositionChart](../api/StockSharp.Xaml.Charting.Opti
 
 The following is the example SampleOptionQuoting, in which this chart is used. The source code of the example can be found in the *Samples\/Options\/SampleOptionQuoting* folder. 
 
-![option volsmile](~/images/option_volsmile.png)
+![option volsmile](../images/option_volsmile.png)
 
 ### SampleOptionQuoting example
 

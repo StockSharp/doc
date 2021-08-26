@@ -2,7 +2,7 @@
 
 [PortfolioGrid](../api/StockSharp.Xaml.PortfolioGrid.html) is a component that displays the status of portfolios and positions. 
 
-![GUI PortfolioGrid](~/images/GUI_PortfolioGrid.png)
+![GUI PortfolioGrid](../images/GUI_PortfolioGrid.png)
 
 **Main properties**
 

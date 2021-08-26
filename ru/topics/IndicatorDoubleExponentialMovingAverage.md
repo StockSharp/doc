@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [DoubleExponentialMovingAverage](../api/StockSharp.Algo.Indicators.DoubleExponentialMovingAverage.html). 
 
-![IndicatorDoubleExponentialMovingAverage](~/images/IndicatorDoubleExponentialMovingAverage.png)
+![IndicatorDoubleExponentialMovingAverage](../images/IndicatorDoubleExponentialMovingAverage.png)
 
 ## См. также
 

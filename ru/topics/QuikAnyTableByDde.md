@@ -12,7 +12,7 @@
 
 1. В начале необходимо загрузить **QPILE** скрипт в [Quik](Quik.md)\-е и создать по нему таблицу как показано на рисунке: 
 
-   ![candleqpile](~/images/candle_qpile.png)
+   ![candleqpile](../images/candle_qpile.png)
 
    > [!TIP]
    > Исходные коды примера + qpile файл лежат в дистрибутиве в папке *Samples\\Quik\\DDE\\SampleDdeCustomTable*. 
@@ -84,7 +84,7 @@
    Если необходимо не только получать новые строчки таблицы, но так же знать, когда обновились полученные ранее строчки, то необходимо использовать событие [QuikTrader.CustomTablesChanged](../api/StockSharp.Quik.QuikTrader.CustomTablesChanged.html). В случае, если ни одно из полей не было помечено атрибутом [Ecng.Serialization.IdentityAttribute](../api/Ecng.Serialization.IdentityAttribute.html), то событие [QuikTrader.CustomTablesChanged](../api/StockSharp.Quik.QuikTrader.CustomTablesChanged.html) не будет никогда вызываться, и все изменения будут приходит как новые строчки через [QuikTrader.NewCustomTables](../api/StockSharp.Quik.QuikTrader.NewCustomTables.html). 
 6. В итоге должно получиться следующее: 
 
-   ![samplecandleqpile](~/images/sample_candle_qpile.png)
+   ![samplecandleqpile](../images/sample_candle_qpile.png)
 7. Завершение работы: 
 
    ```cs

@@ -1,6 +1,6 @@
 # DLL import
 
-![Designer DLL Strategy 00](~/images/Designer_DLL_Strategy_00.png)
+![Designer DLL Strategy 00](../images/Designer_DLL_Strategy_00.png)
 
 The cube is used to import DLL libraries with strategies ([Create DLL in Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)).
 

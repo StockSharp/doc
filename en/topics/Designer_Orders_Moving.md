@@ -1,6 +1,6 @@
 # Modify order
 
-![Designer Moving applications 00](~/images/Designer_Moving_applications_00.png)
+![Designer Moving applications 00](../images/Designer_Moving_applications_00.png)
 
 The cube is used to change the order by the instrument.
 

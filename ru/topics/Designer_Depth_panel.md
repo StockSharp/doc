@@ -1,6 +1,6 @@
 # Панель стакана
 
-![Designer Glass Panel](~/images/Designer_Glass_Panel.png)
+![Designer Glass Panel](../images/Designer_Glass_Panel.png)
 
 Кубик предназначен для отображения стакана в специальном графическом компоненте [Стакан](Designer_Depth_Panel2.md).
 

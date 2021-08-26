@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Ichimoku](../api/StockSharp.Algo.Indicators.Ichimoku.html) class. 
 
-![IndicatorIchimoku](~/images/IndicatorIchimoku.png)
+![IndicatorIchimoku](../images/IndicatorIchimoku.png)
 
 ## Recommended content
 

@@ -2,7 +2,7 @@
 
 [OrderWindow](../api/StockSharp.Xaml.OrderWindow.html) \- window for creating an order. 
 
-![GUI OrderWindow](~/images/GUI_OrderWindow.png)
+![GUI OrderWindow](../images/GUI_OrderWindow.png)
 
 If the connection supports the registering a conditional order (stop\-loss, take\-profit), then in this window you can register a conditional order with advanced conditions by setting the **Advanced conditions** flag.
 

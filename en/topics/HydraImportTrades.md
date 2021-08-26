@@ -2,7 +2,7 @@
 
 To import trades, select the **Import \=\> Ticks** tab.
 
-![hydra import trades](~/images/hydra_import_trades.png)
+![hydra import trades](../images/hydra_import_trades.png)
 
 ### The import process securities.
 
@@ -31,10 +31,10 @@ The import process securities.
    - For the {OriginSide} field, select the **Initiator** field from the **S\# field** window \- the trade initiator (Seller or Buyer). We assign it the value 7.
    - The field setting window will look like this:
 
-     ![hydra import prop trade](~/images/hydra_import_prop_trade.png)
+     ![hydra import prop trade](../images/hydra_import_prop_trade.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
 3. To preview the data, click the **Preview** button.
 
-   ![hydra import preview trade](~/images/hydra_import_preview_trade.png)
+   ![hydra import preview trade](../images/hydra_import_preview_trade.png)
 4. Click the **Import** button.

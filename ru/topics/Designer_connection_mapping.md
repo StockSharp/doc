@@ -4,8 +4,8 @@
 
 Посмотреть, а также изменить сопоставленые портфели и подключения, можно нажав на кнопку **Портфели и подключения** панели быстрого доступа.
 
-![Designer The connection settings 00](~/images/Designer_connection_settings_00.png)
+![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 
-В появившемся окне можно удалить или добавить сопоставление портфелей и подключений. Например, нажав на кнопку ![Designer Creation tool 00](~/images/Designer_Creation_tool_00.png) и выбрав подключение Transaq и портфель Simulator, будут сопоставлены портфель Simulator с подключением Transaq. В дальнейшем при **Live торговле**, выбрав портфель для торговли Simulator, будет использоваться подключение Transaq.
+В появившемся окне можно удалить или добавить сопоставление портфелей и подключений. Например, нажав на кнопку ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) и выбрав подключение Transaq и портфель Simulator, будут сопоставлены портфель Simulator с подключением Transaq. В дальнейшем при **Live торговле**, выбрав портфель для торговли Simulator, будет использоваться подключение Transaq.
 
-![Designer connection mapping 0](~/images/Designer_connection_mapping_0.png)
+![Designer connection mapping 0](../images/Designer_connection_mapping_0.png)

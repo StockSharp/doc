@@ -1,6 +1,6 @@
 # Formula
 
-![Designer Universal formula 00](~/images/Designer_Universal_formula_00.png)
+![Designer Universal formula 00](../images/Designer_Universal_formula_00.png)
 
 A cube is used to calculate a mathematical formula with an arbitrary number of arguments. You can choose a formula from the available list or write your own. In the case of writing your own formula, the number of incoming sockets is determined automatically. 
 

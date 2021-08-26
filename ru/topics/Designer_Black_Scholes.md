@@ -1,6 +1,6 @@
 # Блэк\-Шоулз
 
-![Designer Black Sols 00](~/images/Designer_Black_Scholes_00.png)
+![Designer Black Sols 00](../images/Designer_Black_Scholes_00.png)
 
 Кубик используется для расчета основных "греков": Дельта, Гамма, Вега, Тета, Ро в текущий момент времени.
 

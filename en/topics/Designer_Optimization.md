@@ -2,7 +2,7 @@
 
 To switch to the strategy optimization mode, click the **Optimization** button on the **Emulation** tab.
 
-![Designer Optimization 00](~/images/Designer_Optimization_00.png)
+![Designer Optimization 00](../images/Designer_Optimization_00.png)
 
 A tab will open in the workspace with the name Optimization + Strategy Name. The Optimization tab is separated into three areas, **Properties**, **Parameters for optimization**, **Optimization result**: 
 
@@ -12,11 +12,11 @@ A tab will open in the workspace with the name Optimization + Strategy Name. The
 
 Further, optimization will be considered using the SMA strategy as an example. If in the SMA strategy, without preliminary preparation, click the **Optimization** button, there will be only one optimization parameter \- Volume. In order to add the moving average periods as optimization parameters it is necessary in the SMA Indicator Cube check the **Parameter** check box:
 
-![Designer Optimization 01](~/images/Designer_Optimization_01.png)
+![Designer Optimization 01](../images/Designer_Optimization_01.png)
 
 After checking the **Parameter** check box in the required units and clicking the **Optimization** button, the **SMA Optimization** tab is opened:
 
-![Designer Optimization 02](~/images/Designer_Optimization_02.png)
+![Designer Optimization 02](../images/Designer_Optimization_02.png)
 
 In the example, one optimization parameter is taken \- the length of short moving average, Short SMA, from 10 to 20 in increments of 1. As a result, we get 11 SMA strategies with different parameters.
 

@@ -1,6 +1,6 @@
 # Mass cancel orders
 
-![Designer Mass Cancellations 00](~/images/Designer_Mass_Cancellations_00.png)
+![Designer Mass Cancellations 00](../images/Designer_Mass_Cancellations_00.png)
 
 The cube is used to cancel all orders by the instrument.
 

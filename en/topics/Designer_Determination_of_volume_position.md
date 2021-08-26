@@ -2,7 +2,7 @@
 
 To get the volume required for flipping the current position to the opposite position, the schema used in the SMA strategy example can be used:
 
-![Designer Determination of the volume position 00](~/images/Designer_Determination_of_volume_position_00.png)
+![Designer Determination of the volume position 00](../images/Designer_Determination_of_volume_position_00.png)
 
 The **Instrument** data type is selected for the [Variable](Designer_Variable.md) cube. If the instrument is not specified, but the **Parameters** flag of the **Common** group is set, then it will be taken from the strategy, and then it will be passed to the [Position](Designer_Position.md).
 

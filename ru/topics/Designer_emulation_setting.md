@@ -2,13 +2,13 @@
 
 Присутствует возможность запустить программу в режиме **Симуляции**, для дополнительной настройки **Симуляции** необходимо выполнить следующие действия:
 
-1. При нажатии на стрелку возле кнопки **Подключиться**![Designer The quick access toolbar 00](~/images/Designer_quick_access_toolbar_00.png) появится кнопка **Настройки эмуляции**:
+1. При нажатии на стрелку возле кнопки **Подключиться**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) появится кнопка **Настройки эмуляции**:
 
-![Designer The connection settings 00](~/images/Designer_connection_settings_00.png)
+![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 
 2. При нажатии на кнопку **Настройки эмуляции**, появится окно **Настройки эмуляции**:
 
-![Designer Properties emulation 00](~/images/Designer_Properties_emulation_00.png)
+![Designer Properties emulation 00](../images/Designer_Properties_emulation_00.png)
 
 1.**Симулятор**
 

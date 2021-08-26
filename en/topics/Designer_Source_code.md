@@ -1,6 +1,6 @@
 # Source code
 
-![Designer Source code 00](~/images/Designer_Source_code_00.png)
+![Designer Source code 00](../images/Designer_Source_code_00.png)
 
 The cube is used to add cubes created from the source code ([Using C\#](Designer_Creating_strategy_from_code.md)). 
 

@@ -6,7 +6,7 @@ The following directories are important for work with the [S\#.Designer](Designe
 
 2. The [S\#.Designer](Designer.md) settings directory is located in the folders of user's documents …\\StockSharp\\Designer\\ (for example, c:\\Users\\User\\Documents\\StockSharp\\Designer\\). Deleting this directory will cause all S\#.Designer settings to be reset to the default, **all created strategies and downloaded instruments and other information stored in the settings directory will be DESTROYED.**
 
-![Designer Directory and edit the data manually 00](~/images/Designer_Directory_and_edit_data_manually_00.png)
+![Designer Directory and edit the data manually 00](../images/Designer_Directory_and_edit_data_manually_00.png)
 
 This directory contains the following folders and files:
 

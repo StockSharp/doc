@@ -4,7 +4,7 @@
 
 Далее показан пример SampleOptionQuoting, в котором используется этот график. Исходные коды примера можно найти в папке *Samples\/Misc\/SampleOptionQuoting*. 
 
-![option volsmile](~/images/option_volsmile.png)
+![option volsmile](../images/option_volsmile.png)
 
 ### Пример SampleOptionQuoting
 

@@ -2,7 +2,7 @@
 
 Для импорта данных Level 1 нужно выбрать пункт **Импорт \=\> Level 1** из главного меню приложения.
 
-![hydra import level1](~/images/hydra_import_level1.png)
+![hydra import level1](../images/hydra_import_level1.png)
 
 ### Процесс импорта сделок
 
@@ -34,11 +34,11 @@
    - Для поля {LastTradeVolume} выбираем из окна **Поле S\#** поле **Объем последней сделки**. Присваиваем ему значение 10.
    - Окно настройки полей будет выглядить следующим образом:
 
-     ![hydra import prop level 1](~/images/hydra_import_prop_level1.png)
+     ![hydra import prop level 1](../images/hydra_import_prop_level1.png)
 
    Пользователь может настроить большое количество свойств для скачиваемых данных. Исходя из шаблона импортируемого файла, нужно указывать свойство и присваивать ему нужный номер в последовательности. 
 3. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 
-   ![hydra import preview level 1](~/images/hydra_import_preview_level1.png)
+   ![hydra import preview level 1](../images/hydra_import_preview_level1.png)
 4. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 5. Нажать кнопку **Импорт**.

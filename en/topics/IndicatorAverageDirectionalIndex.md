@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [AverageDirectionalIndex](../api/StockSharp.Algo.Indicators.AverageDirectionalIndex.html). 
 
-![IndicatorAverageDirectionalIndex](~/images/IndicatorAverageDirectionalIndex.png)
+![IndicatorAverageDirectionalIndex](../images/IndicatorAverageDirectionalIndex.png)
 
 ## Recommended content
 

@@ -1,8 +1,8 @@
 # P&L equity
 
-The P\/L component is a chart of the Profit\/Loss (not realized), Profit\/Loss (realized) and commission. In the upper left corner of the chart, all the graphic elements added to the chart are shown, if you remove the ![Designer Schedule 00](~/images/Designer_Schedule_00.png) check box on the graphic element, the element is also removed from the chart. Click on the![Designer Schedule 01](~/images/Designer_Schedule_01.png) button will open the settings for the graphic element. 
+The P\/L component is a chart of the Profit\/Loss (not realized), Profit\/Loss (realized) and commission. In the upper left corner of the chart, all the graphic elements added to the chart are shown, if you remove the ![Designer Schedule 00](../images/Designer_Schedule_00.png) check box on the graphic element, the element is also removed from the chart. Click on the![Designer Schedule 01](../images/Designer_Schedule_01.png) button will open the settings for the graphic element. 
 
-![Designer Schedule PU 00](~/images/Designer_Schedule_PU_00.png)
+![Designer Schedule PU 00](../images/Designer_Schedule_PU_00.png)
 
 ## Recommended content
 

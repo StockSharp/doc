@@ -2,7 +2,7 @@
 
 [S\#](StockSharpAbout.md) provides the ability to add annotations to the chart in the form of text, lines, etc.
 
-![ChartAnnotations](~/images/ChartAnnotations.png)
+![ChartAnnotations](../images/ChartAnnotations.png)
 
 Adding annotations is the same as adding any other information to the chart. First you need to create [ChartAnnotation](../api/StockSharp.Xaml.Charting.ChartAnnotation.html) and add it to the chart area:
 

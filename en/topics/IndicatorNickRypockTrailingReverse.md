@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [NickRypockTrailingReverse](../api/StockSharp.Algo.Indicators.NickRypockTrailingReverse.html) class. 
 
-![IndicatorNickRypockTrailingReverse](~/images/IndicatorNickRypockTrailingReverse.png)
+![IndicatorNickRypockTrailingReverse](../images/IndicatorNickRypockTrailingReverse.png)
 
 ## Recommended content
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [HullMovingAverage](../api/StockSharp.Algo.Indicators.HullMovingAverage.html). 
 
-![IndicatorHullMovingAverage](~/images/IndicatorHullMovingAverage.png)
+![IndicatorHullMovingAverage](../images/IndicatorHullMovingAverage.png)
 
 ## См. также
 

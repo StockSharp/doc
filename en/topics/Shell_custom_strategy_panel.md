@@ -4,9 +4,9 @@ Own panels are a special control created by S\# to facilitate work with DevExpre
 
 First, you need to create a simple UserControl in the XAML folder of your strategy.
 
-![Shell custom strategy panel 00](~/images/Shell_custom_strategy_panel_00.png)
+![Shell custom strategy panel 00](../images/Shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](~/images/Shell_custom_strategy_panel_01.png)
+![Shell custom strategy panel 01](../images/Shell_custom_strategy_panel_01.png)
 
 Replace UserControl with controls:BaseStudioControl
 

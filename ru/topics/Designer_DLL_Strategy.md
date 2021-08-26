@@ -1,6 +1,6 @@
 # DLL стратегия
 
-![Designer DLL Strategy 00](~/images/Designer_DLL_Strategy_00.png)
+![Designer DLL Strategy 00](../images/Designer_DLL_Strategy_00.png)
 
 Кубик используется для импорта Dll библиотек со стратегиями([Создание DLL кубика в Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)).
 

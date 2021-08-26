@@ -18,7 +18,7 @@
    > [!CAUTION]
    > Если в таблице "Инструменты" включена сортировка по одному из столбцов, то при автоматическом открытии стакана методом [SubscribeMarketDepth](../api/StockSharp.Algo.Connector.SubscribeMarketDepth.html), любая сортировка будет отменена. 
 
-   ![quotes](~/images/quote_dde.png)
+   ![quotes](../images/quote_dde.png)
 
    Заголовок окна должен содержать через @ код и класс инструмента, по которому в [QuikTrader](../api/StockSharp.Quik.QuikTrader.html) будет происходить сопоставление объекта [Security](../api/StockSharp.BusinessEntities.Security.html) и стакана. Например, для Лукойла заголовок будет **LKOH@TQBR**. Для инструментов [РТС](http://rts.ru/) класс инструмента будет равен FORTS. Стакан для июньского фьючерса на индекс РТС, к примеру, будет иметь заголовок **RIM5@FORTS**. Подробнее, в разделе [Идентификатор инструмента](SecurityId.md). 
 

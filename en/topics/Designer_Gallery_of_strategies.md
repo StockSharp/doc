@@ -8,7 +8,7 @@ The **Strategy gallery** is a simple and convenient way to acquire or publish st
 
 You can open the **Strategy gallery** by clicking the **Strategy gallery** of the **Common** tab. Or by double\-clicking the Strategy gallery folder on the [Schemas](Designer_Panel_Schemas.md) panel. Opening the Strategy gallery panel automatically opens the Strategy gallery tab:
 
-![Designer The gallery of strategies 00](~/images/Designer_gallery_of_strategies_00.png)
+![Designer The gallery of strategies 00](../images/Designer_gallery_of_strategies_00.png)
 
 The **Strategy gallery** tab displays the current balance, which can be used to acquire strategies. After clicking the **Fill up balance **[S\#.Designer](Designer.md) will redirect you to the page, where you can fill up the balance form a bank card of PayPal.
 

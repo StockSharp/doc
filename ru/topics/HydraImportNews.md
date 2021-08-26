@@ -2,7 +2,7 @@
 
 Для импорта новостей нужно выбрать пункт **Импорт \=\> Новости** из главного меню приложения.
 
-![hydra import news](~/images/hydra_import_news.png)
+![hydra import news](../images/hydra_import_news.png)
 
 ### Процесс импорта новостей
 

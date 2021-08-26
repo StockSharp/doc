@@ -87,4 +87,4 @@
    ```
 7. Результат работы примера.
 
-   ![sample logging](~/images/sample_logging.png)
+   ![sample logging](../images/sample_logging.png)

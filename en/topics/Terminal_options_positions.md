@@ -6,7 +6,7 @@ To display the position by options, you have to select the underlying asset and 
 
 In addition, you can specify a filter for the exact expiration date of options and filters for minimum\/maximum strikes.
 
-![Terminal Graph options positions 00](~/images/Terminal_Graph_options_positions_00.png)
+![Terminal Graph options positions 00](../images/Terminal_Graph_options_positions_00.png)
 
 ## Recommended content
 

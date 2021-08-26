@@ -4,7 +4,7 @@ The [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html)\- graphic component is 
 
 Below is the **OptionCalculator** example, which uses this component. The source code of the example can be found in the *Samples\\Options\\SampleOptionQuoting* folder.
 
-![option desk](~/images/option_desk.png)
+![option desk](../images/option_desk.png)
 
 ### OptionCalculator example
 

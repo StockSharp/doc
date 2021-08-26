@@ -2,7 +2,7 @@
 
 Для импорта лога заявок нужно выбрать пункт **Импорт \=\> Лог заявок** из главного меню приложения.
 
-![hydra import orderlog](~/images/hydra_import_orderlog.png)
+![hydra import orderlog](../images/hydra_import_orderlog.png)
 
 ### Процесс импорта сделок
 
@@ -35,11 +35,11 @@
    - Для поля {{TradePrice} выбираем из окна **Поле S\#** поле **Цена (сделки)** \- цена сделки. Присваиваем ему значение 11.
    - Окно настройки полей будет выглядить следующим образом:
 
-     ![hydra import prop orderlog](~/images/hydra_import_prop_orderlog.png)
+     ![hydra import prop orderlog](../images/hydra_import_prop_orderlog.png)
 
    Пользователь может настроить большое количество свойств для скачиваемых данных. Исходя из шаблона импортируемого файла, нужно указывать свойство и присваивать ему нужный номер в последовательности. 
 3. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 
-   ![hydra import preview orderlog](~/images/hydra_import_preview_orderlog.png)
+   ![hydra import preview orderlog](../images/hydra_import_preview_orderlog.png)
 4. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 5. Нажать кнопку **Импорт**.

@@ -6,7 +6,7 @@ The data for backtesting must be pre\-downloaded and stored in a special [S\#](S
 
 The [S\#](StockSharpAbout.md) installation package contains an example of SampleHistoryTesting (as well as the HistoryData.zip archive, where are the historical data on ticks, order books and candles, for example) which tests the [Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) strategy on the history. Testing is carried out with a different sets of market data for a comparison of the speed and quality: 
 
-![samplehistorytest](~/images/sample_history_test.png)
+![samplehistorytest](../images/sample_history_test.png)
 
 ### Backtesting of moving averages strategy
 

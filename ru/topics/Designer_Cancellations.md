@@ -1,6 +1,6 @@
 # Отмена заявки
 
-![Designer Cancellations 00](~/images/Designer_Cancellations_00.png)
+![Designer Cancellations 00](../images/Designer_Cancellations_00.png)
 
 Кубик используется для отмены заявки по инструменту.
 

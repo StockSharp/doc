@@ -2,7 +2,7 @@
 
 [Monitor](../api/StockSharp.Xaml.Monitor.html) \- is the visual element where [LogControl](GUILogControl.md) is used in conjunction with the **TreeView** hierarchical tree, in which logs sources are shown. Initially, the component was designed to monitor the trading strategies. Therefore, by default, the "tree" includes the **Strategy** node. At the same time other sources can be used with this component. 
 
-![GUI Monitor](~/images/GUI_Monitor.png)
+![GUI Monitor](../images/GUI_Monitor.png)
 
 Sample code
 

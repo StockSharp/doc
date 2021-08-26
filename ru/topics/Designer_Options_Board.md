@@ -1,6 +1,6 @@
 # Доска опционов
 
-![Designer Options Board 00](~/images/Designer_Options_Board_00.png)
+![Designer Options Board 00](../images/Designer_Options_Board_00.png)
 
 Кубик используется для отображения доски опционов.
 
@@ -20,9 +20,9 @@
 
 - **Модель Блэка** – флаг, указывает будут ли рассчитываться значения согласно модели Блэка — Шоулза.
 
-![Designer Options Board 01](~/images/Designer_Options_Board_01.png)
+![Designer Options Board 01](../images/Designer_Options_Board_01.png)
 
-![Designer Options Board 02](~/images/Designer_Options_Board_02.png)
+![Designer Options Board 02](../images/Designer_Options_Board_02.png)
 
 ## См. также
 

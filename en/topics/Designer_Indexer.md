@@ -1,6 +1,6 @@
 # Indexer
 
-![Designer Indexer 00](~/images/Designer_Indexer_00.png)
+![Designer Indexer 00](../images/Designer_Indexer_00.png)
 
 The element is used to get an element from a collection with the specified index. 
 

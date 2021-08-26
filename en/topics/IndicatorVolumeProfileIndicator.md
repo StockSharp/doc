@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [VolumeProfileIndicator](../api/StockSharp.Algo.Indicators.VolumeProfileIndicator.html) class. 
 
-![Gui ClasterChart](~/images/Gui_ClasterChart.png)
+![Gui ClasterChart](../images/Gui_ClasterChart.png)
 
 ## Recommended content
 

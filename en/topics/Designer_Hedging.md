@@ -1,6 +1,6 @@
 # Hedging
 
-![Designer Hedging 00](~/images/Designer_Hedging_00.png)
+![Designer Hedging 00](../images/Designer_Hedging_00.png)
 
 The cube is used to protect the position on option strategies.
 

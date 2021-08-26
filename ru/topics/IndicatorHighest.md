@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Highest](../api/StockSharp.Algo.Indicators.Highest.html). 
 
-![IndicatorHighest](~/images/IndicatorHighest.png)
+![IndicatorHighest](../images/IndicatorHighest.png)
 
 ## См. также
 

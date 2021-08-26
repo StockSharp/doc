@@ -1,6 +1,6 @@
 # Исходный код
 
-![Designer Source code 00](~/images/Designer_Source_code_00.png)
+![Designer Source code 00](../images/Designer_Source_code_00.png)
 
 Кубик используется для добавления кубиков, созданных из исходного кода([Использование C\#](Designer_Creating_strategy_from_code.md)). 
 

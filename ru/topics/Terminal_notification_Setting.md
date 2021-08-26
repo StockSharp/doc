@@ -1,8 +1,8 @@
 # Настройки уведомлений
 
-Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](Terminal_Notifications_Panel.md)) нажать на кнопку ![Designer Creation tool 00](~/images/Designer_Creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](~/images/Designer_Alert_Bell.png) непосредственно на панелях, поддерживающих уведомления ([Портфели](Designer_Panel_Portfolios.md), [Лента сделок](Designer_Tape_Trades.md), [Новости](Terminal_news.md), [Level 1](Terminal_level1.md) ).
+Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](Terminal_Notifications_Panel.md)) нажать на кнопку ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](../images/Designer_Alert_Bell.png) непосредственно на панелях, поддерживающих уведомления ([Портфели](Designer_Panel_Portfolios.md), [Лента сделок](Designer_Tape_Trades.md), [Новости](Terminal_news.md), [Level 1](Terminal_level1.md) ).
 
-![Designer Notifications Setting](~/images/Designer_Notifications_Setting.png)
+![Designer Notifications Setting](../images/Designer_Notifications_Setting.png)
 
 Уведомление можно настроить на изменение следующих типов данных: Портфель, Код клиента, Брокер, Депозитарий, Серверное время, Транзакция, Тип данных, Отмена, Идентификатор заявки, Идентификатор заявки (строка), Идентификатор заявки (площадка), Производная, Производная (строка), Цена, Объем (заявка), Объем (сделка), Видимый объем, Направление, Остаток, Тип заявки, Состояние, Комментарий, Сообщение к заявке, Системная заявка, Время экспирации заявки, Условие исполнения, Цена, Инициатор сделки, Открытый интерес, Ошибка, Условие, Восходящий тренд, Комиссия, Задержка, Проскальзывание, Идентификатор (пользоват.), Валюта, П\/У, Позиция, Маркет\-мейкер.
 

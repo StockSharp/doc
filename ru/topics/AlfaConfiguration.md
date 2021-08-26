@@ -2,7 +2,7 @@
 
 Механизм взаимодействия показан на данном рисунке: 
 
-![AlfaTrader](~/images/AlfaTrader.png)
+![AlfaTrader](../images/AlfaTrader.png)
 
 Как видно из рисунка, [AlfaDirectMessageAdapter](../api/StockSharp.AlfaDirect.AlfaDirectMessageAdapter.html) взаимодействует с брокером через терминал [Альфа\-Директ](https://www.alfadirect.ru/). Связь между [AlfaDirectMessageAdapter](../api/StockSharp.AlfaDirect.AlfaDirectMessageAdapter.html) и [Альфа\-Директ](https://www.alfadirect.ru/) осуществляется по технологии [COM](https://ru.wikipedia.org/wiki/Component_Object_Model) посредством открытого интерфейса терминала. [Открытый интерфейс терминала Альфа\-Директ](https://www.alfadirect.ru/mobile-app/terminal-alfa-direct) позволяет получать в режиме реального времени всю доступную в терминале табличную информацию и подавать торговые поручения. 
 
@@ -17,19 +17,19 @@
 
    Пример (для фьючерсного контракта SBER\-6.11): 
 
-   ![AlfaCfgMyPositions](~/images/AlfaCfgMyPositions.png)
+   ![AlfaCfgMyPositions](../images/AlfaCfgMyPositions.png)
 
    > [!TIP]
    > Если у Вас не отображается инструмент в списке позиций, необходимо вручную выставить любую заявку по данному инструменту \- например, лимитная заявка на покупку по цене выше текущей и затем отменить его. 
 3. Далее необходимо отключить подтверждения при подаче поручений \- меню "Сервис \-\> Параметры" \-\> вкладка "Безопасность" \-\> поставить галочку "Отключить подтверждения при подаче поручений".
 
-   ![AlfaCfgDisableConfirmations](~/images/AlfaCfgDisableConfirmations.png)
+   ![AlfaCfgDisableConfirmations](../images/AlfaCfgDisableConfirmations.png)
 4. Для более частого пересчета баланса портфелей измените следующие настройки \- меню "Сервис \-\> Параметры" \-\> вкладка "Система" \-\> выставить значение "Шаг цены для пересчета балансов" равным 0,01%. 
 
-   ![AlfaCfgUpdateBalance](~/images/AlfaCfgUpdateBalance.png)
+   ![AlfaCfgUpdateBalance](../images/AlfaCfgUpdateBalance.png)
 5. Для увеличения скорости передачи данных включите опцию "Максимальная скорость обновления, максимальный трафик" \- меню "Сервис \-\> Параметры" \-\> вкладка "Система. 
 
-   ![AlfaCfgMaxSpeed](~/images/AlfaCfgMaxSpeed.png)
+   ![AlfaCfgMaxSpeed](../images/AlfaCfgMaxSpeed.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 With the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html), you can also create child strategies. For example, when you want to implement the trading process, which operates with standard (or previously implemented) algorithms, building them into a single chain: 
 
-![strategychilds](~/images/strategy_childs.png)
+![strategychilds](../images/strategy_childs.png)
 
 ### Prerequisites
 

@@ -1,6 +1,6 @@
 # Prev value
 
-![Designer The previous value 00](~/images/Designer_previous_value_00.png)
+![Designer The previous value 00](../images/Designer_previous_value_00.png)
 
 The cube is used to obtain the previous value passed to the input, with the specified offset.
 

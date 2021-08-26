@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [RelativeStrengthIndex](../api/StockSharp.Algo.Indicators.RelativeStrengthIndex.html) class. 
 
-![IndicatorRelativeStrengthIndex](~/images/IndicatorRelativeStrengthIndex.png)
+![IndicatorRelativeStrengthIndex](../images/IndicatorRelativeStrengthIndex.png)
 
 ## Recommended content
 

@@ -47,7 +47,7 @@ private void Draw(CandleSeries series, Candle candle)
 		
 ```
 
-![indicators chart](~/images/indicators_chart.png)
+![indicators chart](../images/indicators_chart.png)
 
 ## Recommended content
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Peak](../api/StockSharp.Algo.Indicators.Peak.html). 
 
-![IndicatorPeak](~/images/IndicatorPeak.png)
+![IndicatorPeak](../images/IndicatorPeak.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 In the **Board editor** panel, you can create **Boards** and **Exchanges**, and view or customize existing ones.
 
-![Designer Boards](~/images/Designer_Boards.png)
+![Designer Boards](../images/Designer_Boards.png)
 
 In [S\#](StockSharpAbout.md), instruments from different sources have a unified identifier that consists of the instrument code and the board code and the following syntax is used \- \[**instrument code\]@\[board code\]**. For example, for **AAPL** shares of the **NASDAQ** exchange, the identifier is **AAPL@NASDAQ**. Each instrument is attached to a specific board on which it is traded. With that, the instrument can be traded on different boards. In this case, the board codes will be different. For each board, you can set up a work schedule, work days and weekends.
 

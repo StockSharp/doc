@@ -2,7 +2,7 @@
 
 Свойства подключения, которые общие для всех источников.
 
-![hydra settings connectionparams](~/images/hydra_settings_connectionparams.png)
+![hydra settings connectionparams](../images/hydra_settings_connectionparams.png)
 
 **Подключение**
 

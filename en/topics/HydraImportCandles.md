@@ -2,7 +2,7 @@
 
 To import candles, select **Import \=\> Candles** item from the main application menu.
 
-![hydra import candles](~/images/hydra_import_candles.png)
+![hydra import candles](../images/hydra_import_candles.png)
 
 ### Candle import process
 
@@ -37,7 +37,7 @@ Candle import process
 
      Then the following setting will correspond to it:
 
-     ![hydra import prop candles](~/images/hydra_import_prop_candles.png)
+     ![hydra import prop candles](../images/hydra_import_prop_candles.png)
 
      Here:
 
@@ -53,5 +53,5 @@ Candle import process
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence.
 3. To preview the data, click the **Preview** button.
 
-   ![hydra import preview candles](~/images/hydra_import_preview_candles.png)
+   ![hydra import preview candles](../images/hydra_import_preview_candles.png)
 4. Click the **Import** button..

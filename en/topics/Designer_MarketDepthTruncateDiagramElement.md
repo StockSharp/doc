@@ -1,6 +1,6 @@
 # Truncated order book
 
-![Designer MarketDepthTruncateDiagramElement 00](~/images/Designer_MarketDepthTruncateDiagramElement_00.png)
+![Designer MarketDepthTruncateDiagramElement 00](../images/Designer_MarketDepthTruncateDiagramElement_00.png)
 
 The cube is used to obtain an order book truncated to a specified depth.
 

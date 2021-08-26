@@ -2,7 +2,7 @@
 
 The order during it’s life goes through the following states:
 
-![OrderStates](~/images/OrderStates.png)
+![OrderStates](../images/OrderStates.png)
 
 - [None](../api/StockSharp.Messages.OrderStates.None.html)
 

@@ -1,6 +1,6 @@
 # Сравнение
 
-![Designer Comparison 00](~/images/Designer_Comparison_00.png)
+![Designer Comparison 00](../images/Designer_Comparison_00.png)
 
 Элемент используется для сравнения двух поступающих на вход объектов.
 

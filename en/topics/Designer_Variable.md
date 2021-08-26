@@ -1,6 +1,6 @@
 # Variable
 
-![Designer Variable 00](~/images/Designer_Variable_00.png)
+![Designer Variable 00](../images/Designer_Variable_00.png)
 
 The cube is used to store values, pass the previously stored value further along the chain of elements.
 

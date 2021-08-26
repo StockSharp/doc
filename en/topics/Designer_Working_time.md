@@ -1,6 +1,6 @@
 # Working time
 
-![Designer Working time 00](~/images/Designer_Working_time_00.png)
+![Designer Working time 00](../images/Designer_Working_time_00.png)
 
 The cube is used to determine the working time. For example, to determine when a particular instrument is trading.
 
@@ -19,7 +19,7 @@ Outgoing sockets
 
 The cube can be used to determine the moment when trades are conducted on several instruments from various trading platforms.
 
-![Designer Working time 01](~/images/Designer_Working_time_01.png)
+![Designer Working time 01](../images/Designer_Working_time_01.png)
 
 ## Recommended content
 

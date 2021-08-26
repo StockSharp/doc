@@ -2,7 +2,7 @@
 
 [ContinuousSecurityWindow](../api/StockSharp.Xaml.ContinuousSecurityWindow.html) \- is a visual editor for creating *continuous* ([ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html)) instruments. See [Continuous futures](SecurityContinuous.md). 
 
-![HydraGluingCSCustom](~/images/HydraGluingCSCustom.png)
+![HydraGluingCSCustom](../images/HydraGluingCSCustom.png)
 
 This component includes: 
 

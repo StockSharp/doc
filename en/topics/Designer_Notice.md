@@ -1,6 +1,6 @@
 # Notification
 
-![Designer Notice 00](~/images/Designer_Notice_00.png)
+![Designer Notice 00](../images/Designer_Notice_00.png)
 
 The cube is used to notify the user when certain signals occur. 
 

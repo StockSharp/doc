@@ -2,7 +2,7 @@
 
 [OrderConditionalWindow](../api/StockSharp.Xaml.OrderConditionalWindow.html) \- the window for creating a conditional order. 
 
-![GUI OrderConditionalWindow](~/images/GUI_OrderConditionalWindow.png)
+![GUI OrderConditionalWindow](../images/GUI_OrderConditionalWindow.png)
 
 **Main properties**
 

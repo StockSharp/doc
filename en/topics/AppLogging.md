@@ -85,4 +85,4 @@ SampleLogging sample
    ```
 7. The result of example work.
 
-   ![sample logging](~/images/sample_logging.png)
+   ![sample logging](../images/sample_logging.png)

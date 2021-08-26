@@ -1,8 +1,8 @@
 # Getting started
 
-In order to create historical data storage, click the ![Designer Creating a repository of historical data 00](~/images/Designer_Creating_repository_of_historical_data_00.png) button on the **Market data** tab. By clicking the ![Designer Creating a repository of historical data 01](~/images/Designer_Creating_repository_of_historical_data_01.png) button, you can change the current storage parameters. By clicking the ![Designer Creating a repository of historical data 02](~/images/Designer_Creating_repository_of_historical_data_02.png) button, you can delete the current storage from the list of storages.
+In order to create historical data storage, click the ![Designer Creating a repository of historical data 00](../images/Designer_Creating_repository_of_historical_data_00.png) button on the **Market data** tab. By clicking the ![Designer Creating a repository of historical data 01](../images/Designer_Creating_repository_of_historical_data_01.png) button, you can change the current storage parameters. By clicking the ![Designer Creating a repository of historical data 02](../images/Designer_Creating_repository_of_historical_data_02.png) button, you can delete the current storage from the list of storages.
 
-![Designer Creating a repository of historical data 03](~/images/Designer_Creating_repository_of_historical_data_03.png)
+![Designer Creating a repository of historical data 03](../images/Designer_Creating_repository_of_historical_data_03.png)
 
 Historical data storage can be a local or remote.
 
@@ -12,15 +12,15 @@ Remote storage may be located on the remote computer. To set the remote storage 
 
 You can reproduce the remote storage on a local machine, using the [S\#.Data](Hydra.md) software (code name Hydra), designed for automatic loading of market data (instruments, candles, tick trades and order books etc.) from various source and for storing them in the local storage. To do that, switch [S\#.Data](Hydra.md) into a the server mode, such functionality is available in the extended license ([StockSharp Licensing](License.md)).
 
-![Designer Creating a repository of historical data 04](~/images/Designer_Creating_repository_of_historical_data_04.png)
+![Designer Creating a repository of historical data 04](../images/Designer_Creating_repository_of_historical_data_04.png)
 
-After that, in [S\#.Designer](Designer.md), create new storage by clicking the ![Designer Creating a repository of historical data 00](~/images/Designer_Creating_repository_of_historical_data_00.png) button. In the storage settings in the address field, specify "net.tcp:\/\/localhost:8000". Click OK. When using [S\#.Data](Hydra.md) as a remote storage, don't forget, that [S\#.Data](Hydra.md) shall be started up and configured accordingly.
+After that, in [S\#.Designer](Designer.md), create new storage by clicking the ![Designer Creating a repository of historical data 00](../images/Designer_Creating_repository_of_historical_data_00.png) button. In the storage settings in the address field, specify "net.tcp:\/\/localhost:8000". Click OK. When using [S\#.Data](Hydra.md) as a remote storage, don't forget, that [S\#.Data](Hydra.md) shall be started up and configured accordingly.
 
-![Designer Creating a repository of historical data 05](~/images/Designer_Creating_repository_of_historical_data_05.png)
+![Designer Creating a repository of historical data 05](../images/Designer_Creating_repository_of_historical_data_05.png)
 
 After adding a new storage, it can be selected in the **Storage** drop down list.
 
-![Designer Creating a repository of historical data 06](~/images/Designer_Creating_repository_of_historical_data_06.png)
+![Designer Creating a repository of historical data 06](../images/Designer_Creating_repository_of_historical_data_06.png)
 
 You also have to select the format of storage files \- BIN or CSV. Data can be stored in two formats: in a special binary BIN format, which provides the maximum compression ratio, or in text format CSV, which is convenient when analyzing data in other programs. The BIN format is preferred when there is a need to save space on disk. The CSV format is preferred when there is a need to adjust data manually. CSV is easily edited by standard notepad, MS Excel, etc.
 

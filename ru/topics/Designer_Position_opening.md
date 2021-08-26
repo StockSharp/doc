@@ -1,6 +1,6 @@
 # Регистрация заявки
 
-![Designer Position opening 00](~/images/Designer_Position_opening_00.png)
+![Designer Position opening 00](../images/Designer_Position_opening_00.png)
 
 Кубик используется для регистрации заявки по инструменту.
 
@@ -46,7 +46,7 @@
 
 **Условная заявка** — заявка с дополнительными условиями, определяющими момент постановки в торговую систему в зависимости от текущей рыночной ситуации.
 
-![Designer Conditional Application](~/images/Designer_Conditional_Application.png)
+![Designer Conditional Application](../images/Designer_Conditional_Application.png)
 
 - **Подключение** \- подключение куда будет выставляться заявка.
 - **Тип стоп\-заявки** \- тип стоп\-заявки.

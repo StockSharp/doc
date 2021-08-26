@@ -2,7 +2,7 @@
 
 During trade there is a need to fully control the process. For complete control and analysis, **S\#.Terminal** provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
 
-![Designer Components](~/images/Designer_Components.png)
+![Designer Components](../images/Designer_Components.png)
 
 - [Instruments](Terminal_Securities.md) \- is a table with instruments that displays information about all selected instruments.
 - [Level 1](Terminal_level1.md) \- is a table with a history of changing Level 1 for the selected instruments.

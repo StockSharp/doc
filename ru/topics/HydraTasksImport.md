@@ -4,13 +4,13 @@
 
 Для каждого выбранного типа маркет\-данных, шаблон настраивается во вкладке [Импорт данных](HydraImport.md).
 
-![hydra tasks import](~/images/hydra_tasks_import.png)
+![hydra tasks import](../images/hydra_tasks_import.png)
 
 В нижней части панели можно выбрать инструменты, по которым будут импортироваться данные, а также тип данных для импорта.
 
 Для каждого инструмента можно указать следующие свойства импорта данных:
 
-![hydra tasks proper import](~/images/hydra_tasks_proper_import.png)
+![hydra tasks proper import](../images/hydra_tasks_proper_import.png)
 
 **Импорт (авто)**
 
@@ -62,7 +62,7 @@
 
    \- настройка работы площадки. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Интервал работы**
 
    \- интервал работы. 

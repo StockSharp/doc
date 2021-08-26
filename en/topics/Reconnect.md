@@ -6,7 +6,7 @@ Visual reconnection settings
 
 All connectors provide the ability to configure reconnection in case of disconnection. In the [Connection settings window](API_UI_ConnectorWindow.md) graphic element, it looks like this: 
 
-![API GUI ReconnectionSettings](~/images/API_GUI_ReconnectionSettings.png)
+![API GUI ReconnectionSettings](../images/API_GUI_ReconnectionSettings.png)
 
 **Reconnection properties**
 
@@ -73,7 +73,7 @@ The reconnection mechanism is configured through the [Connector.ReConnectionSett
 2. To check how the connection control mechanism works, you can turn off the Internet connection: 
 3. Below is the program log, which shows that the application is initially in a connected state, and after turning off the Internet connection, the application tries to reconnect. After restoring the Internet connection, the application connection is restored: 
 
-   ![API ReconnectionLog](~/images/API_ReconnectionLog.png)
+   ![API ReconnectionLog](../images/API_ReconnectionLog.png)
 4. Since several connections can be used in [Connector](../api/StockSharp.Algo.Connector.html), by default events related to reconnection, such as [Connector.Restored](../api/StockSharp.Algo.Connector.Restored.html) are not triggered, and connection adapters try to reconnect themselves. For the event to start being raised, you need to set the value of the adapter's [BasketMessageAdapter.SuppressReconnectingErrors](../api/StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors.html) property to **false**. 
 
    ```cs
@@ -82,4 +82,4 @@ The reconnection mechanism is configured through the [Connector.ReConnectionSett
    Connector.Restored +\= () \=\> this.Sync(() \=\> MessageBox.Show(this, "Connection restored"));
    ```
 
-   ![sampleconnectionerror](~/images/sample_connection_error.png)![sampleconnectionrestore](~/images/sample_connection_restored.png)
+   ![sampleconnectionerror](../images/sample_connection_error.png)![sampleconnectionrestore](../images/sample_connection_restored.png)

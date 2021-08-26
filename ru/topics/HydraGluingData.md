@@ -6,34 +6,34 @@
 
 Перед тем как склеивать данные, необходимо проверить, какие маркет\-данные есть. Для этого выбирается путь где лежат данные и по очереди просматриваются инструменты, которые предполагается склеить. Если имеются пропуски, то необходимо докачать нужные маркет\-данные(например, с **Финама**).
 
-![HydraGluingCheckData](~/images/HydraGluingCheckData.png)
+![HydraGluingCheckData](../images/HydraGluingCheckData.png)
 
 В качестве примера будет рассмотрено склеивание по фьючерсу на индекс RTS.
 
 1. Для создания непрерывного фьючерса необходимо нажать на вкладке **Все инструменты.** кнопку **Создать инструмент\=\>Непрерывный инструмент**.
 
-   ![Hydra Gluing Check Data 00](~/images/HydraGluingCheckData_00.png)
+   ![Hydra Gluing Check Data 00](../images/HydraGluingCheckData_00.png)
 
    После этого появится окно следующего вида:
 
-   ![HydraGluingWindow](~/images/HydraGluingWindow.png)
+   ![HydraGluingWindow](../images/HydraGluingWindow.png)
 2. Для создания непрерывного фьючерса необходимо задать имя и добавить контракты.
 
    Добавить контракты можно двумя способами.
-   - Вручную, нажимая кнопку ![hydra add](~/images/hydra_add.png).
+   - Вручную, нажимая кнопку ![hydra add](../images/hydra_add.png).
 
-     ![HydraGluingCSCustom](~/images/HydraGluingCSCustom.png)
+     ![HydraGluingCSCustom](../images/HydraGluingCSCustom.png)
    - Если в качестве имени задать первые две буквы контракта, например, RI, и нажать кнопку **Авто**, то будут добавлены все найденные в БД инструменты.
 
-     ![HydraGluingCSAuto](~/images/HydraGluingCSAuto.png)
+     ![HydraGluingCSAuto](../images/HydraGluingCSAuto.png)
 3. Выбираем нужные контракты и устанавливаем даты перехода. 
 
-   ![Hydra GluingCSAuto 00](~/images/HydraGluingCSAuto_00.png)
+   ![Hydra GluingCSAuto 00](../images/HydraGluingCSAuto_00.png)
 4. Далее назначаем идентификатор инструмента **RI\_long9@FORTS** и нажать кнопку **ОК**, после чего создастся новый инструмент
-5. Далее, необходимо нажать кнопку [Свечи](HydraExportCandles.md) на вкладке **Общее**, выбрать полученый инструмент, период данных, в поле **Построить из:** установить значение **Составной элемент**. После чего нажать кнопку![hydra find](~/images/hydra_find.png).
+5. Далее, необходимо нажать кнопку [Свечи](HydraExportCandles.md) на вкладке **Общее**, выбрать полученый инструмент, период данных, в поле **Построить из:** установить значение **Составной элемент**. После чего нажать кнопку![hydra find](../images/hydra_find.png).
 
-   ![HydraGluingTrades](~/images/HydraGluingTrades.png)
+   ![HydraGluingTrades](../images/HydraGluingTrades.png)
 
 Сгенерированные данные можно экспортировать в форматы Excel, xml, Json или txt. Экспорт выполняется при помощи раскрывающегося списка:
 
-![hydra export](~/images/hydra_export.png)
+![hydra export](../images/hydra_export.png)

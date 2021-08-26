@@ -2,7 +2,7 @@
 
 [OrderGrid](../api/StockSharp.Xaml.OrderGrid.html) \- the table to display orders. In addition, the context menu of this table contains commands for operations with orders: registration, replacement and cancellation of orders. Selecting a menu item leads to the generation of events: [OrderGrid.OrderRegistering](../api/StockSharp.Xaml.OrderGrid.OrderRegistering.html), [OrderGrid.OrderReRegistering](../api/StockSharp.Xaml.OrderGrid.OrderReRegistering.html) or [OrderGrid.OrderCanceling](../api/StockSharp.Xaml.OrderGrid.OrderCanceling.html) respectively.
 
-![GUI OrderGrid](~/images/GUI_OrderGrid.png)
+![GUI OrderGrid](../images/GUI_OrderGrid.png)
 
 > [!TIP]
 > The operation itself (registration, replacement, cancellation) is not performed. The appropriate code must be written in the event handlers independently.

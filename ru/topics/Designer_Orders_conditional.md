@@ -2,7 +2,7 @@
 
 Компонент **Условные заявки** представляет собой таблицу с заявками, в которой отображается полная информация о всех **Условных заявках** стратегии. 
 
-![Designer Orders conditional](~/images/Designer_Orders_conditional.png)
+![Designer Orders conditional](../images/Designer_Orders_conditional.png)
 
 ## См. также
 

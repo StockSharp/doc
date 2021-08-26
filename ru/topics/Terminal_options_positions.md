@@ -6,7 +6,7 @@
 
 Дополнительно можно указать фильтр по точной дате экспирации опционов и фильтры по минимальному\/максимальному страйкам.
 
-![Terminal Graph options positions 00](~/images/Terminal_Graph_options_positions_00.png)
+![Terminal Graph options positions 00](../images/Terminal_Graph_options_positions_00.png)
 
 ## См. также
 

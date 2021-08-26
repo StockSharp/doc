@@ -2,7 +2,7 @@
 
 S\# allows to register orders from the chart, to activate this feature, you need to set the [OrderCreationMode](../api/StockSharp.Xaml.Charting.Chart.OrderCreationMode.html) property to **"True"**, it is disabled by default.
 
-![API GUI Trading from chart](~/images/API_GUI_Trading_from_chart.png)
+![API GUI Trading from chart](../images/API_GUI_Trading_from_chart.png)
 
 Orders for purchase will be registered using the **Ctrl + Left Mouse Button** combination.
 

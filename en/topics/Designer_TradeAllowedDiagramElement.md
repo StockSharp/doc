@@ -1,6 +1,6 @@
 # Is trade allowed
 
-![Designer TradeAllowedDiagramElement 00](~/images/Designer_TradeAllowedDiagramElement_00.png)
+![Designer TradeAllowedDiagramElement 00](../images/Designer_TradeAllowedDiagramElement_00.png)
 
 The cube is used to check if trade is currently allowed 
 

@@ -2,6 +2,6 @@
 
 Вкладка **Импорт \=\> Синхронизовать**.
 
-![hydra sync](~/images/hydra_sync.png)
+![hydra sync](../images/hydra_sync.png)
 
 Позволяет восстановить инструменты по скачанным файлам. См. [Аварийное восстановление.](HydraDisasterRecovery.md)

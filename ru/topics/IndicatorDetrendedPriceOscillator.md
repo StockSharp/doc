@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [DetrendedPriceOscillator](../api/StockSharp.Algo.Indicators.DetrendedPriceOscillator.html). 
 
-![IndicatorDetrendedPriceOscillator](~/images/IndicatorDetrendedPriceOscillator.png)
+![IndicatorDetrendedPriceOscillator](../images/IndicatorDetrendedPriceOscillator.png)
 
 ## См. также
 

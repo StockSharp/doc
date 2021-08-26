@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [GatorOscillator](../api/StockSharp.Algo.Indicators.GatorOscillator.html) class. 
 
-![IndicatorGatorOscillator](~/images/IndicatorGatorOscillator.png)
+![IndicatorGatorOscillator](../images/IndicatorGatorOscillator.png)
 
 ## Recommended content
 

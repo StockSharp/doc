@@ -2,7 +2,7 @@
 
 To import your transactions, you need to select **Import \=\> Own Transactions** from the main application menu.
 
-![hydra import executions](~/images/hydra_import_executions.png)
+![hydra import executions](../images/hydra_import_executions.png)
 
 ### The process of importing your transactions
 

@@ -6,7 +6,7 @@ To display the option desk, you have to select the underlying asset and the nece
 
 In addition, you can specify a filter for the exact expiration date of options and filters for minimum\/maximum strikes.
 
-![Terminal option desk 00](~/images/Terminal_option_desk_00.png)
+![Terminal option desk 00](../images/Terminal_option_desk_00.png)
 
 ## Recommended content
 

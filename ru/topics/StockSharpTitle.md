@@ -10,7 +10,7 @@
 
 S\#.Designer
 
-![StockSharpTitle 0](~/images/StockSharpTitle_0.png)
+![StockSharpTitle 0](../images/StockSharpTitle_0.png)
 
 [S\#.Designer](Designer.md) \- универсальная программа для создания торговых роботов и стратегий: 
 
@@ -28,7 +28,7 @@ S\#.Terminal
 
 [S\#.Terminal](Terminal.md) \- бесплатный торговый терминал. Основное преимущество, которого является одновременное подключение ко множеству торговых площадок, включая те, где нет собственного терминала. 
 
-![Terminal main 00](~/images/Terminal_main_00.png)
+![Terminal main 00](../images/Terminal_main_00.png)
 
 ### Преимущества и возможности S\#.Terminal:
 
@@ -57,7 +57,7 @@ S\#.Terminal
 
 S\#.Data
 
-![StockSharpTitle 1](~/images/StockSharpTitle_1.png)
+![StockSharpTitle 1](../images/StockSharpTitle_1.png)
 
 [S\#.Data (Hydra)](Hydra.md) \- программа для автоматического скачивания исторических и реал\-тайм маркет\-данных: 
 

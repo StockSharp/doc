@@ -4,13 +4,13 @@
 
 Для проверки доступных обновлений в ручную, необходимо нажать на кнопку **Обновления** в правом углу в окне программы.
 
-![force update installer](~/images/force_update_installer.png)
+![force update installer](../images/force_update_installer.png)
 
 Если для программы доступны обновления, то [S\#.Installer](SharpInstaller.md) выдаст соответсвующее уведомление.
 
 После чего нужно нажать на кнопку.
 
-![updat installer](~/images/updat_installer.png)
+![updat installer](../images/updat_installer.png)
 
 [S\#.Installer](SharpInstaller.md) не закрывается нажатием на **"Х"** в окне программы, а закрывается через панель инструментов.
 

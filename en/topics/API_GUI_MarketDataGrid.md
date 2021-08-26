@@ -2,7 +2,7 @@
 
 [MarketDataGrid](../api/StockSharp.Xaml.MarketDataGrid.html) \- a table displaying market data, in this table you can view available market data. 
 
-![API GUI MarketDataGrid](~/images/API_GUI_MarketDataGrid.png)
+![API GUI MarketDataGrid](../images/API_GUI_MarketDataGrid.png)
 
 The following is an example of the code for adding a [MarketDataGrid](../api/StockSharp.Xaml.MarketDataGrid.html) table to the screen form. 
 

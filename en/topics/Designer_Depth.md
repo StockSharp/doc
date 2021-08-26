@@ -1,6 +1,6 @@
 # Order book
 
-![Designer Glass 00](~/images/Designer_Glass_00.png)
+![Designer Glass 00](../images/Designer_Glass_00.png)
 
 The cube is used to get the order book by the specified instrument.
 

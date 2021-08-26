@@ -2,7 +2,7 @@
 
 S\# позволяет выставлять заявки с графика, для активации этой возможности необходимо свойство [OrderCreationMode](../api/StockSharp.Xaml.Charting.Chart.OrderCreationMode.html) установить в True, по умолчанию оно отключено.
 
-![API GUI Trading from chart](~/images/API_GUI_Trading_from_chart.png)
+![API GUI Trading from chart](../images/API_GUI_Trading_from_chart.png)
 
 Заявки на покупку будут выставляться по сочетанию клавиш Ctrl + ЛКМ. 
 

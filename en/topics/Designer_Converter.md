@@ -1,6 +1,6 @@
 # Converter
 
-![Designer Converter 00](~/images/Designer_Converter_00.png)
+![Designer Converter 00](../images/Designer_Converter_00.png)
 
 The cube is used to convert complex objects into simple data types. For example, it allows to get the value of the price step for the instrument. 
 

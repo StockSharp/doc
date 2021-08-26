@@ -6,7 +6,7 @@ Each [S\#.Designer](Designer.md) cube that has an output parameter is the event 
 
 For example, the [Order book](Designer_Depth.md) cube generates an order book change event. It is not known in advance when a change will occur. Having created a connection line between the [Order book](Designer_Depth.md) cube and the [Converter](Designer_Converter.md) cube, a subscribing is done to the order book change for further processing with the [Converter](Designer_Converter.md) cube, etc.:
 
-![Designer Event model 00](~/images/Designer_Event_model_00.png)
+![Designer Event model 00](../images/Designer_Event_model_00.png)
 
 ## Recommended content
 

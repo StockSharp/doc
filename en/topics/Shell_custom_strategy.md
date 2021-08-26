@@ -2,7 +2,7 @@
 
 To create your own strategy, create a folder for your strategy in the Strategies folder.
 
-![Shell custom strategy 00](~/images/Shell_custom_strategy_00.png)
+![Shell custom strategy 00](../images/Shell_custom_strategy_00.png)
 
 Using the example of SmaStrategy, you need to create the strategy itself.
 
@@ -38,7 +38,7 @@ And you also need to create the panels themselves. How to build your own testing
 > [!TIP]
 > If there are enough testing or monitoring panels for the strategy, which are used for default strategies, then you do not need to implement the IHaveTestControl and IHaveMonitoringControl interfaces. Shell will run the default testing or monitoring panels by itself. 
 
-![Shell custom strategy 01](~/images/Shell_custom_strategy_01.png)
+![Shell custom strategy 01](../images/Shell_custom_strategy_01.png)
 
 In order for the created strategy to be available in the strategy selection window, it must be added to the **DictionaryStrategies** dictionary of the main window. 
 

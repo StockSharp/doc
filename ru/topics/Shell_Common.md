@@ -2,11 +2,11 @@
 
 Вкладка [Общее](Shell_Common.md) позволяет посмотреть общую информацию по портфелям, заявкам, сделкам, инструментам. Также здесь можно установить тему интефейса [S\#.Shell](Shell.md)
 
-![Shell Common 00](~/images/Shell_Common_00.png)
+![Shell Common 00](../images/Shell_Common_00.png)
 
 На вкладке **Инструменты** можно загрузить инструменты из локального хранилища, а также изменить параметры инструментов.
 
-![Shell Common 01](~/images/Shell_Common_01.png)
+![Shell Common 01](../images/Shell_Common_01.png)
 
 ## См. также
 

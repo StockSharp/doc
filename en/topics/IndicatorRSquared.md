@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [RSquared](../api/StockSharp.Algo.Indicators.RSquared.html) class. 
 
-![IndicatorRSquared](~/images/IndicatorRSquared.png)
+![IndicatorRSquared](../images/IndicatorRSquared.png)
 
 ## Recommended content
 

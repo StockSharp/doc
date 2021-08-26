@@ -15,7 +15,7 @@
 
 На следующем рисунке показаны основные элементы графического компонента. 
 
-![Gui ChartElements](~/images/Gui_ChartElements.png)
+![Gui ChartElements](../images/Gui_ChartElements.png)
 
 ### Элементы графического компонента
 

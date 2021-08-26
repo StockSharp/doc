@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [LinearReg](../api/StockSharp.Algo.Indicators.LinearReg.html). 
 
-![IndicatorLinearReg](~/images/IndicatorLinearReg.png)
+![IndicatorLinearReg](../images/IndicatorLinearReg.png)
 
 ## См. также
 

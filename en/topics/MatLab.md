@@ -1,6 +1,6 @@
 # S\#.MatLab
 
-![matlab stocksharp](~/images/matlab_stocksharp.png)
+![matlab stocksharp](../images/matlab_stocksharp.png)
 
 The [S\#.MatLab](MatLab.md) is designed for traders who develop trading algorithms within the [MatLab MathWorks](https://www.mathworks.com/) environment. 
 

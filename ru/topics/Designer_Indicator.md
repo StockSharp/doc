@@ -1,6 +1,6 @@
 # Индикатор
 
-![Designer Indicator 00](~/images/Designer_Indicator_00.png)
+![Designer Indicator 00](../images/Designer_Indicator_00.png)
 
 Кубик используется для вычисления значений индикаторов.
 
@@ -22,7 +22,7 @@
 
 - **Тип индикатора** \- параметр который используется для выбора нужного индикатора, и нескольких дополнительных параметров, которые соответствуют выбранному типу индикатора. Набор этих параметров меняется при изменении выбранного типа индикатора.
 
-![Designer Indicator 01](~/images/Designer_Indicator_01.png)
+![Designer Indicator 01](../images/Designer_Indicator_01.png)
 
 ## См. также
 

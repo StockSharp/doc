@@ -2,7 +2,7 @@
 
 Для импорта инструментов нужно выбрать вкладку **Импорт \=\> Инструменты**.
 
-![hydra import securities](~/images/hydra_import_securities.png)
+![hydra import securities](../images/hydra_import_securities.png)
 
 ### Процесс импорта инструментов
 
@@ -29,10 +29,10 @@
    - Для поля {VolumeStep} выбираем из окна **Поле S\#** поле **Мин объем (базовый)** \- базовый или минимальный объем инсрумента. Присваиваем ему значение 4.
    - Окно настройки полей будет выглядить следующим образом:
 
-     ![hydra import prop securitiy](~/images/hydra_import_prop_securitiy.png)
+     ![hydra import prop securitiy](../images/hydra_import_prop_securitiy.png)
 
    Пользователь может настроить большое количество свойств для скачиваемых данных. Исходя из шаблона импортируемого файла, нужно указывать свойство и присваивать ему нужный номер в последовательности. 
 3. Для преварительного просмотра данных, нажать кнопку **Предпросмотр**.
 
-   ![hydra import preview securitiy](~/images/hydra_import_preview_securitiy.png)
+   ![hydra import preview securitiy](../images/hydra_import_preview_securitiy.png)
 4. Нажать кнопку **Импорт**.

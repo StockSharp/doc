@@ -1,6 +1,6 @@
 # Order book panel
 
-![Designer Glass Panel](~/images/Designer_Glass_Panel.png)
+![Designer Glass Panel](../images/Designer_Glass_Panel.png)
 
 The cube is designed to display an order book in a special graphic component [Order book](Designer_Depth_Panel2.md).
 

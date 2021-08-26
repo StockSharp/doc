@@ -4,4 +4,4 @@
 
 Механизм взаимодействия показан на данном рисунке: 
 
-![blackwood trader](~/images/blackwood_trader.png)
+![blackwood trader](../images/blackwood_trader.png)

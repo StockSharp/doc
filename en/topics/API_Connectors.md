@@ -4,7 +4,7 @@ To work with exchanges and data sources in [S\#](StockSharpAbout.md) it is recom
 
 Let's consider working with [Connector](../api/StockSharp.Algo.Connector.html). The example source codes are in the project Samples\/Common\/SampleConnection.
 
-![multiconnection main](~/images/multiconnection_main.png)
+![multiconnection main](../images/multiconnection_main.png)
 
 We create an instance of the [Connector](../api/StockSharp.Algo.Connector.html) class:
 
@@ -37,7 +37,7 @@ private void Setting\_Click(object sender, RoutedEventArgs e)
 	  				
 ```
 
-![API GUI ConnectorWindow](~/images/API_GUI_ConnectorWindow.png)
+![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
 Similarly, you can add connections directly from the code (without graphic windows) using the extension method [TraderHelper.AddAdapter\`\`1](../api/StockSharp.Algo.TraderHelper.AddAdapter``1.html):
 

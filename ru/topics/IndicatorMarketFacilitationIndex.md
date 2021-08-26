@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [MarketFacilitationIndex](../api/StockSharp.Algo.Indicators.MarketFacilitationIndex.html). 
 
-![IndicatorMarketFacilitationIndex](~/images/IndicatorMarketFacilitationIndex.png)
+![IndicatorMarketFacilitationIndex](../images/IndicatorMarketFacilitationIndex.png)
 
 ## См. также
 

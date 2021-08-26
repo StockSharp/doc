@@ -2,7 +2,7 @@
 
 [ConnectorWindow](../api/StockSharp.Xaml.ConnectorWindow.html) \- a special window for configuring adapters for connecting a connector. 
 
-![API GUI ConnectorWindow](~/images/API_GUI_ConnectorWindow.png)
+![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
 Here is the connection settings window. From the drop\-down list (opens with the '+' button), you need to select the necessary adapters and configure their properties in the properties window located on the right. 
 

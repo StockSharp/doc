@@ -4,7 +4,7 @@ The **Order book** component is a table of limit orders for the purchase and sal
 
 In the strategy, you can use several different types of order books (or from different instruments) simultaneously, and display them in different panels. 
 
-![Designer Panel Market Depth](~/images/Designer_Panel_Market_Depth.png)
+![Designer Panel Market Depth](../images/Designer_Panel_Market_Depth.png)
 
 ## Recommended content
 

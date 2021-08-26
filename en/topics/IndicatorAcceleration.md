@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [Acceleration](../api/StockSharp.Algo.Indicators.Acceleration.html) class. 
 
-![IndicatorAcceleration](~/images/IndicatorAcceleration.png)
+![IndicatorAcceleration](../images/IndicatorAcceleration.png)
 
 ## Recommended content
 

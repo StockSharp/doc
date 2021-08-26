@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [AwesomeOscillator](../api/StockSharp.Algo.Indicators.AwesomeOscillator.html). 
 
-![IndicatorAwesomeOscillator](~/images/IndicatorAwesomeOscillator.png)
+![IndicatorAwesomeOscillator](../images/IndicatorAwesomeOscillator.png)
 
 ## См. также
 

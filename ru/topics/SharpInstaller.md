@@ -11,7 +11,7 @@
 - скачать библиотеку [S\#.API](StockSharpAbout.md) и автоматически отслеживает ее обновления
 - скачать купленные уроки обучения, программу [S\#.Shell](Shell.md).
 
-![first win installer](~/images/first_win_installer.png)
+![first win installer](../images/first_win_installer.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 Компонент [SecurityPicker](../api/StockSharp.Xaml.SecurityPicker.html) предназначен для поиска и выбора инструментов. Поддерживается как одиночный, так и множественный выбор. Компонент позволяет фильтровать список инструментов по их типу. Также этот компонент может использоваться для отображения финансовой информации (полей level1), как показано в разделе [SecurityGrid](GuiSecurityGrid.md). 
 
-![GUI SecurityPicker2](~/images/GUI_SecurityPicker2.png)
+![GUI SecurityPicker2](../images/GUI_SecurityPicker2.png)
 
 [SecurityPicker](../api/StockSharp.Xaml.SecurityPicker.html) состоит из: 
 

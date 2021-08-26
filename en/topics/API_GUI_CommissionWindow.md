@@ -2,7 +2,7 @@
 
 [CommissionWindow](../api/StockSharp.Xaml.CommissionWindow.html) \- \- A special window for setting the rules for charging a commission. 
 
-![API ComissionWindow](~/images/API_ComissionWindow.png)
+![API ComissionWindow](../images/API_ComissionWindow.png)
 
 Below is an example of the code to call window for setting the rules for charging a commission. 
 

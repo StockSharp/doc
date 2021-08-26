@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Envelope](../api/StockSharp.Algo.Indicators.Envelope.html). 
 
-![IndicatorEnvelope](~/images/IndicatorEnvelope.png)
+![IndicatorEnvelope](../images/IndicatorEnvelope.png)
 
 ## См. также
 

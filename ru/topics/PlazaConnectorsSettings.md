@@ -2,11 +2,11 @@
 
 Механизм взаимодействия показан на рисунке: 
 
-![PlazaTrader](~/images/PlazaTrader.png)
+![PlazaTrader](../images/PlazaTrader.png)
 
 Для использования роботом Торговой платформы [Plaza II](https://moex.com/s444) на свой компьютер необходимо установить клиентский дистрибутив шлюза Plaza II. Его можно скачать с FTP\-сервера РТС. Шлюз можно установить как обыкновенную программу для Windows, либо как [Служба Windows](https://ru.wikipedia.org/wiki/Службы_Windows). При установке нужно учитывать разрядность системы. На FTP\-сервере выложены 32\-разрядный и 64\-разрядный дистрибутивы. 
 
-![PlazaConnection](~/images/PlazaConnection.png)
+![PlazaConnection](../images/PlazaConnection.png)
 
 **Основные настройки подключения к Plaza II**
 

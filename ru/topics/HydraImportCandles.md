@@ -2,7 +2,7 @@
 
 Для импорта свечей нужно выбрать пункт **Импорт \=\> Свечи** из главного меню приложения.
 
-![hydra import candles](~/images/hydra_import_candles.png)
+![hydra import candles](../images/hydra_import_candles.png)
 
 ### Процесс импорта свечей
 
@@ -37,7 +37,7 @@
 
      То ему будет соответсвовать следющая настройка:
 
-     ![hydra import prop candles](~/images/hydra_import_prop_candles.png)
+     ![hydra import prop candles](../images/hydra_import_prop_candles.png)
 
      Здесь:
 
@@ -53,5 +53,5 @@
    Пользователь может настроить большое количество свойств для скачиваемых данных. Исходя из шаблона импортируемого файла, нужно указывать свойство и присваивать ему нужный номер в последовательности. 
 3. Для предварительного просмотра данных, нажать кнопку **Предпросмотр**.
 
-   ![hydra import preview candles](~/images/hydra_import_preview_candles.png)
+   ![hydra import preview candles](../images/hydra_import_preview_candles.png)
 4. Нажать кнопку **Импорт**.

@@ -1,6 +1,6 @@
 # Стакан
 
-![GUI MarketDepthControl](~/images/GUI_MarketDepthControl.png)
+![GUI MarketDepthControl](../images/GUI_MarketDepthControl.png)
 
 [MarketDepthControl](../api/StockSharp.Xaml.MarketDepthControl.html) \- графический компонент для отображения стакана. Компонент позволяет отображать котировки и собственные заявки. 
 

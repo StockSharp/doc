@@ -6,7 +6,7 @@
 
 2. Директория настроек **S\#.Designer** расположена в документах пользователя в папках …\\StockSharp\\Designer\\ (например, c:\\Users\\ПОЛЬЗОВАТЕЛЬ\\Documents\\StockSharp\\Designer\\). Удаление этой директории приведет к тому, что все настройки [S\#.Designer](Designer.md) сбросятся до настроек по умолчанию, **все созданные стратегии и скачанные инструменты и другая информация, хранящаяся в директории настроек, будет УНИЧТОЖЕНА**.
 
-![Designer Directory and edit the data manually 00](~/images/Designer_Directory_and_edit_data_manually_00.png)
+![Designer Directory and edit the data manually 00](../images/Designer_Directory_and_edit_data_manually_00.png)
 
 В этой директории расположены следующие паки и файлы:
 

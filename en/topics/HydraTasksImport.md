@@ -4,13 +4,13 @@ The task performs automatic import of exchange data from files in the specified 
 
 For each selected market data type, the template is configured in the [Importing](HydraImport.md) tab.
 
-![hydra tasks import](~/images/hydra_tasks_import.png)
+![hydra tasks import](../images/hydra_tasks_import.png)
 
 At the bottom of panel, you can select the instruments by which data will be imported, as well as the data type to import.
 
 For each instrument, you can specify the following data import properties:
 
-![hydra tasks proper import](~/images/hydra_tasks_proper_import.png)
+![hydra tasks proper import](../images/hydra_tasks_proper_import.png)
 
 **Import (auto)**
 
@@ -62,7 +62,7 @@ For each instrument, you can specify the following data import properties:
 
    \- setting up the board work schedule. 
 
-  ![hydra tasks backup desk](~/images/hydra_tasks_backup_desk.png)
+  ![hydra tasks backup desk](../images/hydra_tasks_backup_desk.png)
 - **Interval of operation**
 
    \- the interval of operation. 

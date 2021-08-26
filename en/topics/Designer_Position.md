@@ -1,6 +1,6 @@
 # Position
 
-![Designer Position 00](~/images/Designer_Position_00.png)
+![Designer Position 00](../images/Designer_Position_00.png)
 
 The element is used to obtain information on the position change for the specified instrument and portfolio.
 

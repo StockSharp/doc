@@ -74,6 +74,6 @@ Work with the trading emulator on real data
    ```
 3. The following figure shows the result of the example work. 
 
-   ![sample realtaime emulation](~/images/sample_realtaime_emulation.png)
+   ![sample realtaime emulation](../images/sample_realtaime_emulation.png)
 
 ## Recommended content

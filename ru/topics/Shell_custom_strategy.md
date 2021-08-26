@@ -2,7 +2,7 @@
 
 Для создания собственной стратегии следует создать папку для своей стратегии в папке Strategies.
 
-![Shell custom strategy 00](~/images/Shell_custom_strategy_00.png)
+![Shell custom strategy 00](../images/Shell_custom_strategy_00.png)
 
 Воспользовавшись примером стратегии SmaStrategy необходимо создать саму стратегию.
 
@@ -38,7 +38,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 > [!TIP]
 > Если для стратегии достаточно панелей тестирования или мониторинга которые используются для стратегий по умолчанию, то реализовывать интерфейсы IHaveTestControl и IHaveMonitoringControl не нужно. Shell самостоятельно запустит панели тестирования или мониторинга которые используются по умолчанию. 
 
-![Shell custom strategy 01](~/images/Shell_custom_strategy_01.png)
+![Shell custom strategy 01](../images/Shell_custom_strategy_01.png)
 
 Чтобы созданная стратегия была доступна в окне выбора стратегий ее необходимо добавить в словарь **DictionaryStrategies** главного окна 
 

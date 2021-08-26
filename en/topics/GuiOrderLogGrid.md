@@ -1,6 +1,6 @@
 # Order log
 
-![GUI orderlog](~/images/GUI_orderlog.png)
+![GUI orderlog](../images/GUI_orderlog.png)
 
 [OrderLogGrid](../api/StockSharp.Xaml.OrderLogGrid.html) is a graphical component to display the order log ( [OrderLogItem](../api/StockSharp.BusinessEntities.OrderLogItem.html)). 
 

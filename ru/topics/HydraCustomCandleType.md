@@ -2,11 +2,11 @@
 
 Пользователь может выбрать **Пользовательский** тип свечей и самостоятельно выбрать какие свечи будут построены. при этом свечи будут строяться "на лету", тоесть сразу.
 
-![hydra type candle 00 00](~/images/hydra_type_candle_00_00.png)
+![hydra type candle 00 00](../images/hydra_type_candle_00_00.png)
 
 Раасмотрим пример такого построения. Биржа **Bitmex** не дает возможности получить свечи с Тайм Фреймом 10 мин.
 
-![hydra type candle 00 01](~/images/hydra_type_candle_00_01.png)
+![hydra type candle 00 01](../images/hydra_type_candle_00_01.png)
 
 Последовательность получения таких свечей:
 
@@ -14,16 +14,16 @@
 2. В настройках указываем свечи **ТФ** и период 10 мин.
 3. В источнике указываем из чего будут строяться свечи \- **Лог заявок**
 
-   ![hydra type candle 00 02](~/images/hydra_type_candle_00_02.png)
+   ![hydra type candle 00 02](../images/hydra_type_candle_00_02.png)
 4. Устанавливаем период. Как видно рядом с названием свечи появилось указание **Сгенерированные**.
 
-   ![hydra type candle 00 03](~/images/hydra_type_candle_00_03.png)
+   ![hydra type candle 00 03](../images/hydra_type_candle_00_03.png)
 5. Нажимаем на запуск и данные начинают скачиваться.
 
-   ![hydra type candle 00 04](~/images/hydra_type_candle_00_04.png)
+   ![hydra type candle 00 04](../images/hydra_type_candle_00_04.png)
 6. Перейдем в раздел свечи и [посмотрим скаченные данные](HydraViewingMarketData.md).
 
-   ![hydra type candle 00 06](~/images/hydra_type_candle_00_06.png)
+   ![hydra type candle 00 06](../images/hydra_type_candle_00_06.png)
 
 Как видно данные успешно получены.
 
@@ -33,11 +33,11 @@
 2. В настройках указываем свечи **Range** и объем 10.
 3. В источнике указываем из чего будут строяться свечи \- **Тики**
 
-   ![hydra type candle 00 07](~/images/hydra_type_candle_00_07.png)
+   ![hydra type candle 00 07](../images/hydra_type_candle_00_07.png)
 4. Устанавливаем период.
 5. Нажимаем на запуск и данные начинают скачиваться.
 
-   ![hydra type candle 00 08](~/images/hydra_type_candle_00_08.png)
+   ![hydra type candle 00 08](../images/hydra_type_candle_00_08.png)
 6. Перейдем в раздел свечи и [посмотрим скаченные данные](HydraViewingMarketData.md).
 
-   ![hydra type candle 00 09](~/images/hydra_type_candle_00_09.png)
+   ![hydra type candle 00 09](../images/hydra_type_candle_00_09.png)

@@ -6,13 +6,13 @@ To do this, on the **Common** tab, you need to select **Securities**, the **All 
 
 Before creating the **Index**, you need to check which market data is available. To do this, select the path where the data stored and in turn view the instruments that are supposed to participate in the calculation of the index. If there are omissions, then you need to download the necessary market data (for example, from Finam).
 
-![HydraGluingCheckData](~/images/HydraGluingCheckData.png)
+![HydraGluingCheckData](../images/HydraGluingCheckData.png)
 
 As an example, the instrument ratio index AAPL@NYSE\/GOOG@NYSE will be considered.
 
 The first step is the creation of the **Index**. To do this, click on the **All Securities** tab, the **Create security\=\>Index** button, after that, the following window will appear:
 
-![hydra index sec](~/images/hydra_index_sec.png)
+![hydra index sec](../images/hydra_index_sec.png)
 
 To create the **Index** instrument, you must specify a name and add the mathematical formula of a combination of several instruments. Together with the standard mathematical operators, you can use the following functions:
 
@@ -35,10 +35,10 @@ To create the **Index** instrument, you must specify a name and add the mathemat
 - **tan(a)** \- Returns the tangent of the specified angle.
 - **truncat(a)** \- Calculates the integer part of the specified number.
 
-Next, you need to click the [Candles](HydraExportCandles.md) button on the **Common** tab, select the obtained **Index** instrument, the data period, in the **Create From:** field set the **Composite Element** value. Then press the button ![hydra find](~/images/hydra_find.png).
+Next, you need to click the [Candles](HydraExportCandles.md) button on the **Common** tab, select the obtained **Index** instrument, the data period, in the **Create From:** field set the **Composite Element** value. Then press the button ![hydra find](../images/hydra_find.png).
 
-![hydra index candle](~/images/hydra_index_candle.png)
+![hydra index candle](../images/hydra_index_candle.png)
 
 The generated data can be exported to Excel, xml or txt formats. Export is done using the drop\-down list:
 
-![hydra export](~/images/hydra_export.png)
+![hydra export](../images/hydra_export.png)

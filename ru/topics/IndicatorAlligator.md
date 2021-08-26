@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Alligator](../api/StockSharp.Algo.Indicators.Alligator.html). 
 
-![IndicatorAlligator](~/images/IndicatorAlligator.png)
+![IndicatorAlligator](../images/IndicatorAlligator.png)
 
 ## См. также
 

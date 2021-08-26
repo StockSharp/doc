@@ -15,7 +15,7 @@ Besides that, [S\#](StockSharpAbout.md) includes two types of charts for the vol
 
 The following figure shows the basic elements of the graphical component. 
 
-![Gui ChartElements](~/images/Gui_ChartElements.png)
+![Gui ChartElements](../images/Gui_ChartElements.png)
 
 ### Chart's elements
 

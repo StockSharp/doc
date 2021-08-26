@@ -4,7 +4,7 @@ The [SecurityCreateWindow](../api/StockSharp.Xaml.SecurityCreateWindow.html) com
 
 Below is the appearance of the component and the code snippet with its use. 
 
-![Gui SecurityCreateWindow](~/images/Gui_SecurityCreateWindow.png)
+![Gui SecurityCreateWindow](../images/Gui_SecurityCreateWindow.png)
 
 ```cs
 private void Button\_Click(object sender, RoutedEventArgs e)

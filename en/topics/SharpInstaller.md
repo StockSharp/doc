@@ -10,7 +10,7 @@
 - download [S\#.API](StockSharpAbout.md) library and automatically monitor its updates
 - download purchased training lessons, [S\#.Shell](Shell.md) program.
 
-![first win installer](~/images/first_win_installer.png)
+![first win installer](../images/first_win_installer.png)
 
 ## Recommended content
 

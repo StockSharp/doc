@@ -1,6 +1,6 @@
 # Логическое условие
 
-![Designer The logical condition 00](~/images/Designer_logical_condition_00.png)
+![Designer The logical condition 00](../images/Designer_logical_condition_00.png)
 
 Элемент используется для вычисления логической формулы с двумя аргументами.
 

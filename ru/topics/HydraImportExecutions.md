@@ -2,7 +2,7 @@
 
 Для импорта своих транзакций нужно выбрать пункт **Импорт \=\> Свои транзакции** из главного меню приложения.
 
-![hydra import executions](~/images/hydra_import_executions.png)
+![hydra import executions](../images/hydra_import_executions.png)
 
 ### Процесс импорта своих транзакций
 

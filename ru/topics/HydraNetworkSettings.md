@@ -2,6 +2,6 @@
 
 Панель быстрого доступа приложения **Настройки \=\> Настройки сети**.
 
-![hydra proxy settings](~/images/hydra_proxy_settings.png)
+![hydra proxy settings](../images/hydra_proxy_settings.png)
 
 Позволяет настроить параметры прокси\-сервера.

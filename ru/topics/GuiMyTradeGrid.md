@@ -2,7 +2,7 @@
 
 [MyTradeGrid](../api/StockSharp.Xaml.MyTradeGrid.html) \- таблица для отображения собственных сделок. 
 
-![GUI MytradeGrid](~/images/GUI_MytradeGrid.png)
+![GUI MytradeGrid](../images/GUI_MytradeGrid.png)
 
 **Основные члены**
 

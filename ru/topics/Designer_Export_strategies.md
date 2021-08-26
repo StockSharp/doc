@@ -5,11 +5,11 @@
 - В панели **Схемы** нажать правую кнопку мыши на стратегии. В появившемся меню выбрать **Экспорт**.
 - На вкладке **Общее** нажать кнопку **Экспорт**:
 
-![Designer Export strategies 00](~/images/Designer_Export_strategies_00.png)
+![Designer Export strategies 00](../images/Designer_Export_strategies_00.png)
 
 После нажатия **Экспорт** появится окно **Экспортировать схему**, в котором необходимо указать имя файла, в который будет экспортироваться стратегия:
 
-![Designer Export strategies 01](~/images/Designer_Export_strategies_01.png)
+![Designer Export strategies 01](../images/Designer_Export_strategies_01.png)
 
 ## См. также
 

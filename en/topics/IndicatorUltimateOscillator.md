@@ -4,7 +4,7 @@
 
 To use the indicator, you must use the [UltimateOscillator](../api/StockSharp.Algo.Indicators.UltimateOscillator.html) class. 
 
-![IndicatorUltimateOscillator](~/images/IndicatorUltimateOscillator.png)
+![IndicatorUltimateOscillator](../images/IndicatorUltimateOscillator.png)
 
 ## Recommended content
 

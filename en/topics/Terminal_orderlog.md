@@ -4,7 +4,7 @@ The **Order log** component is a table with orders that displays complete inform
 
 The **Order log** has a filter for selecting the necessary instruments. It is also possible to configure notifications for events of the selected instruments \- [Notification settings](Designer_notification_Setting.md).
 
-![Terminal orderlog 00](~/images/Terminal_orderlog_00.png)
+![Terminal orderlog 00](../images/Terminal_orderlog_00.png)
 
 ## Recommended content
 

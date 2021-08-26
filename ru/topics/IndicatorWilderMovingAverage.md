@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [WilderMovingAverage](../api/StockSharp.Algo.Indicators.WilderMovingAverage.html). 
 
-![IndicatorWilderMovingAverage](~/images/IndicatorWilderMovingAverage.png)
+![IndicatorWilderMovingAverage](../images/IndicatorWilderMovingAverage.png)
 
 ## См. также
 

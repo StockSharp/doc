@@ -64,7 +64,7 @@ The [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramEx
 
 After declaring variables, you need to set the cube properties. These properties will be displayed in the **Properties** panel in the common schema:
 
-![Designer Creating a strategy from the source code 00](~/images/Designer_Creating_strategy_from_source_code_00.png)
+![Designer Creating a strategy from the source code 00](../images/Designer_Creating_strategy_from_source_code_00.png)
 
 ```cs
 public int Long

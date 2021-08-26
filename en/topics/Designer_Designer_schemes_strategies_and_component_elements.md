@@ -2,7 +2,7 @@
 
 The main process of working on the design of strategy and composite elements is in the **Schemas** panel, by combining cubes and connecting lines. The Schemas panel consists of panels: **Palette**, **Designer**, **Properties**.
 
-![\_](~/images/Designer_Designer_schemes_strategies_and_component_elements_00.png)
+![\_](../images/Designer_Designer_schemes_strategies_and_component_elements_00.png)
 
 \_
 
@@ -24,7 +24,7 @@ Properties panel
 
 The Properties panel displays the parameters of the cube selected in the **Designer** panel. When you select a cube in the **Designer** panel, the frame around it is painted black. 
 
-![Designer The Properties Panel 00](~/images/Designer_Properties_Panel_00.png)
+![Designer The Properties Panel 00](../images/Designer_Properties_Panel_00.png)
 
 All cubes contain a set of predefined properties:
 
