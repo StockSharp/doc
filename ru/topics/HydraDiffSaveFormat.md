@@ -4,4 +4,4 @@
 
 Настройка формата сохранения в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/hCyxYdLxx8c]
+> [!Video https://www.youtube.com/embed/hCyxYdLxx8c]

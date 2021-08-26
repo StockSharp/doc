@@ -4,4 +4,4 @@
 
 Пример настройки функции "Импорта" программе S\#.Data.
 
-![Video https://www.youtube.com/embed/mUPA3kV_pIQ]
+> [!Video https://www.youtube.com/embed/mUPA3kV_pIQ]

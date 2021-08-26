@@ -4,4 +4,4 @@
 
 Installing programs using S\#. Installer
 
-![Video https://www.youtube.com/embed/HVzCXbJEizc]
+> [!Video https://www.youtube.com/embed/HVzCXbJEizc]

@@ -4,4 +4,4 @@
 
 Пример настройки утилиты "Экспорт(авто)" в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/xTAbzpC3SSc]
+> [!Video https://www.youtube.com/embed/xTAbzpC3SSc]

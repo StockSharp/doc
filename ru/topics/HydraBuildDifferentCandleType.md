@@ -4,4 +4,4 @@
 
 Построение свечей различного типа в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/pOEzq_YN2TU]
+> [!Video https://www.youtube.com/embed/pOEzq_YN2TU]

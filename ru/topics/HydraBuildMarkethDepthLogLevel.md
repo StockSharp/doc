@@ -4,4 +4,4 @@
 
 Получение "Стакана" из различного типа данных в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/D9niWLrNNT0]
+> [!Video https://www.youtube.com/embed/D9niWLrNNT0]

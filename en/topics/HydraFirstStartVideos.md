@@ -4,4 +4,4 @@
 
 First launch of the S\#.Data.
 
-![Video https://www.youtube.com/embed/L_DJaBfAahI]
+> [!Video https://www.youtube.com/embed/L_DJaBfAahI]

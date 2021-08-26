@@ -4,4 +4,4 @@
 
 Подключение к бирже Binance в программах StockSharp.
 
-![Video https://www.youtube.com/embed/AuYHFMTVGy8]
+> [!Video https://www.youtube.com/embed/AuYHFMTVGy8]

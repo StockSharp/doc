@@ -4,4 +4,4 @@
 
 Пример настройки утилиты "Конвертер(авто)" в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/1L56outWENo]
+> [!Video https://www.youtube.com/embed/1L56outWENo]

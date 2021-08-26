@@ -4,4 +4,4 @@
 
 Configuring download tools in the S\#.Data program.
 
-![Video https://www.youtube.com/embed/nXEvtiHQH5c]
+> [!Video https://www.youtube.com/embed/nXEvtiHQH5c]

@@ -4,4 +4,4 @@
 
 Настройка инструментов для скачивания в программе S\#.Data.
 
-![Video https://www.youtube.com/embed/4WKFqJscS_E]
+> [!Video https://www.youtube.com/embed/4WKFqJscS_E]
