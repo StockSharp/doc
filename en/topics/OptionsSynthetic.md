@@ -1,0 +1,45 @@
+# Synthetics
+
+To create the synthetic positions by options (or, vice versa, option positions by the base instrument) you can use the special [Synthetic](../api/StockSharp.Algo.Derivatives.Synthetic.html) class. This class through [Synthetic.Buy](../api/StockSharp.Algo.Derivatives.Synthetic.Buy.html) and [Synthetic.Sell](../api/StockSharp.Algo.Derivatives.Synthetic.Sell.html) methods returns a combination of synthetic instruments to determine their possible position. 
+
+The synthetic combination can be used together with the degree of liquidity by the option determination (when it is impossible to get the required position). To do this you can use the order book liquidity analysis methods [Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades](../api/Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades.html): 
+
+```cs
+\/\/ order book of the option
+var depth \= \_connector.GetMarketDepth(option);
+\/\/ calc theoretical price for 100 contracts
+var trades \= depth.GetTheoreticalTrades(Sides.Buy, 100);
+\/\/ calc matched size
+var matchedVolume \= trades.Sum(t \=\> t.Trade.Volume);
+\/\/ a new order for the option
+\_connector.RegisterOrder(new Order
+{
+	Security \= option,
+	Volume \= matchedVolume,
+	Direction \= Sides.Buy,
+	\/\/ using max price
+	Price \= trades.Max(t \=\> t.Trade.Price),
+});
+\/\/ calc elapsed size
+var elapsedVolume \= 100 \- matchedVolume;
+if (elapsedVolume \> 0)
+{
+	\/\/ creating synthetic instruments
+	var syntheticBuy \= new Synthetic(option).Buy();
+	\/\/ registering orders with elapsed volumes
+	foreach (var pair in syntheticBuy)
+	{
+		\_connector.RegisterOrder(new Order
+		{
+			Security \= pair.Key,
+			Volume \= elapsedVolume,
+			Direction \= pair.Value,
+			Price \= pair.Key.LastTrade.Price,
+		});
+	}
+}
+```
+
+Similarly to options, you can also get the option position for the base instrument through [Synthetic.Buy](../api/StockSharp.Algo.Derivatives.Synthetic.Buy.html) and [Synthetic.Sell](../api/StockSharp.Algo.Derivatives.Synthetic.Sell.html) methods. 
+
+## Recommended content
