@@ -1,0 +1,1 @@
+docfx doc.json >> build.log

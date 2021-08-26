@@ -1,1 +1,0 @@
-docfx.exe docfx.json >> build.log
