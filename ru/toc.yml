@@ -1,2 +1,4 @@
 - name: StockSharp - платформа для трейдинга и торговых роботов
   href: topics/
+- name: API Документация
+  href: obj/api/

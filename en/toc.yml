@@ -1,2 +1,4 @@
 - name: StockSharp - trading and algorithmic trading platform
   href: topics/
+- name: API Documentation
+  href: obj/api/
