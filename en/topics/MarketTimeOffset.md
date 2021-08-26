@@ -10,13 +10,13 @@ Example of getting the corrected time
 
 - ```cs
   					
-  					\/\/ printing the current local time
+  					// printing the current local time
   					Console.WriteLine(TimeHelper.Now);
   					
-  					\/\/ doing a sync with internet clocks
+  					// doing a sync with internet clocks
   					TimeHelper.SyncMarketTime(10000);
   					
-  					\/\/ printing the current local time again
+  					// printing the current local time again
   					Console.WriteLine(TimeHelper.Now);
   					
   			  

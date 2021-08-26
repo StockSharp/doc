@@ -14,30 +14,30 @@ using StockSharp.Algo.Indicators;
 using StockSharp.Xaml.Diagram.Elements;
 public class NewStrategy : Strategy
 {
-    private bool \_isShortLessThenLong;
-    \[DiagramExternal\]
+    private bool _isShortLessThenLong;
+    [DiagramExternal]
     public void ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)
     {
-        \/\/ strategy are stopping
-        if (ProcessState \=\= ProcessStates.Stopping)
+        // strategy are stopping
+        if (ProcessState == ProcessStates.Stopping)
         {
             CancelActiveOrders();
             return;
         }
-        \/\/ calc new values for short and long
-        var isShortLessThenLong \= ssma.Value \< lsma.Value;
-        \/\/ crossing happened
-        if (\_isShortLessThenLong \!\= isShortLessThenLong)
+        // calc new values for short and long
+        var isShortLessThenLong = ssma.Value < lsma.Value;
+        // crossing happened
+        if (_isShortLessThenLong != isShortLessThenLong)
         {
-            \/\/ if short less than long, the sale, otherwise buy
-            var direction \= isShortLessThenLong ? Sides.Sell : Sides.Buy;
-            \/\/ calc size for open position or revert
-            var volume \= Position \=\= 0 ? Volume : Position.Abs().Min(Volume) \* 2;
-            \/\/ calc order price as a close price + offset
-            var price \= candle.ClosePrice + ((direction \=\= Sides.Buy ? Security.PriceStep : \-Security.PriceStep) ?? 1);
+            // if short less than long, the sale, otherwise buy
+            var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+            // calc size for open position or revert
+            var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+            // calc order price as a close price + offset
+            var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
             RegisterOrder(this.CreateOrder(direction, price, volume));
-            \/\/ store current values for short and long
-            \_isShortLessThenLong \= isShortLessThenLong;
+            // store current values for short and long
+            _isShortLessThenLong = isShortLessThenLong;
         }
     }
 }

@@ -3,13 +3,13 @@
 Код ниже демонстрирует как инициализировать [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new SmartComMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new SmartComMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
-    Address \= SmartComAddresses.Demo,
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
+    Address = SmartComAddresses.Demo,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

@@ -84,10 +84,10 @@ Quoting adding to the SampleSMA
 1. It is necessary to enable the export of the order book before starting work, so the moving average algorithm described in the [iteration model](StrategyCreate.md), section begin to work in association with the strategy:
 
    ```cs
-   if (\!\_isAaplOrderBookStarted)
+   if (!_isAaplOrderBookStarted)
    {
-   	\_connector.SubscribeMarketDepth(aapl);
-   	\_isAaplOrderBookStarted \= true;	
+   	_connector.SubscribeMarketDepth(aapl);
+   	_isAaplOrderBookStarted = true;	
    }
    ```
 2. It is necessary to replace the code in the SmaStrategy class from:
@@ -99,7 +99,7 @@ Quoting adding to the SampleSMA
    to: 
 
    ```cs
-   var strategy \= new MarketQuotingStrategy(direction, volume);
+   var strategy = new MarketQuotingStrategy(direction, volume);
    ChildStrategies.Add(strategy);
    ```
 

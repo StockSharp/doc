@@ -7,22 +7,22 @@ Unlike a regular order, for a stop order, you need to specify the [Order.Type](.
 Further, if you need to work with the order (for example, cancel it or change it), then this [Order](../api/StockSharp.BusinessEntities.Order.html). object shall be used. To register orders on the exchange, the [RegisterOrder](../api/StockSharp.Algo.Connector.RegisterOrder.html) method is provided, which sends an order to the server.
 
 ```cs
-Connector Connector \= new Connector();		
+Connector Connector = new Connector();		
 ...   
-private void StopOrder\_Click(object sender, RoutedEventArgs e)
+private void StopOrder_Click(object sender, RoutedEventArgs e)
 {
-	var order \= new Order
+	var order = new Order
 	{
-		Security \= SecurityEditor.SelectedSecurity,
-		Portfolio \= PortfolioEditor.SelectedPortfolio,
-		Price \= decimal.Parse(TextBoxPrice.Text),
-		Volume \= decimal.Parse(TextBoxVolumePrice.Text),
-		Direction \= Sides.Buy,
-        Type \= OrderTypes.Conditional,
-        Condition \= new FixOrderCondition()
+		Security = SecurityEditor.SelectedSecurity,
+		Portfolio = PortfolioEditor.SelectedPortfolio,
+		Price = decimal.Parse(TextBoxPrice.Text),
+		Volume = decimal.Parse(TextBoxVolumePrice.Text),
+		Direction = Sides.Buy,
+        Type = OrderTypes.Conditional,
+        Condition = new FixOrderCondition()
         {
-            Type \= FixOrderConditionTypes.StopLimit,
-            StopLimitPrice \= decimal.Parse(TextBoxStopLimitPrice.Text),
+            Type = FixOrderConditionTypes.StopLimit,
+            StopLimitPrice = decimal.Parse(TextBoxStopLimitPrice.Text),
         }
 	};
 	Connector.RegisterOrder(order);

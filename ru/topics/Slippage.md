@@ -21,8 +21,8 @@
    В окно вывода информации необходимо добавить текстовое поле для проскальзывания:
 
    ```cs
-   \<Label Grid.Column\="0" Grid.Row\="4" Content\="Проскаль.:" \/\>
-   \<Label x:Name\="Slippage" Grid.Column\="1" Grid.Row\="4" \/\>
+   <Label Grid.Column="0" Grid.Row="4" Content="Проскаль.:" />
+   <Label x:Name="Slippage" Grid.Column="1" Grid.Row="4" />
    						
    ```
 2. Далее, необходимо расширить метод\-обработчик события изменения параметров стратегии:
@@ -30,10 +30,10 @@
    ```cs
    private void OnStrategyPropertyChanged(object sender, PropertyChangedEventArgs e)
    {
-      this.GuiAsync(() \=\>
+      this.GuiAsync(() =>
       {
-         	Status.Content \= \_strategy.ProcessState;
-       	Slippage.Content \= \_strategy.Slippage;
+         	Status.Content = _strategy.ProcessState;
+       	Slippage.Content = _strategy.Slippage;
       });
    }
    						

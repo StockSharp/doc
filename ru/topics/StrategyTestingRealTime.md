@@ -11,64 +11,64 @@
 1. Создаем шлюз [RealTimeEmulationTrader\`1](../api/StockSharp.Algo.Testing.RealTimeEmulationTrader`1.html) и передаем в его конструктор адаптер сообщений [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html). Для создания идентификаторов "виртуальных" транзакций используем генератор идентификаторов **MillisecondIncrementalIdGenerator**. 
 
    ```cs
-   					\_connector \= new RealTimeEmulationTrader\<SmartComMessageAdapter\>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
+   					_connector = new RealTimeEmulationTrader<SmartComMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
    					{
-   						Login \= Login.Text,
-   						Password \= Password.Password.To\<SecureString\>(),
-   						Address \= Address.SelectedAddress
+   						Login = Login.Text,
+   						Password = Password.Password.To<SecureString>(),
+   						Address = Address.SelectedAddress
    					});
    					  
    ```
 2. Созданный шлюз используется как обычный коннектор. В нашем случае подписываемся на события, передаем информацию в графические компоненты и устанавливаем соединение. 
 
    ```cs
-   SecurityPicker.SecurityProvider \= new FilterableSecurityProvider(\_connector);
-   SecurityPicker.MarketDataProvider \= \_connector;
-   \_logManager.Sources.Add(\_connector);
+   SecurityPicker.SecurityProvider = new FilterableSecurityProvider(_connector);
+   SecurityPicker.MarketDataProvider = _connector;
+   _logManager.Sources.Add(_connector);
    					
-   \_connector.Connected +\= () \=\>
+   _connector.Connected += () =>
    {
-   	\/\/ update gui labels
-   	this.GuiAsync(() \=\> { ChangeConnectStatus(true); });
+   	// update gui labels
+   	this.GuiAsync(() => { ChangeConnectStatus(true); });
    };
-   \/\/ subscribe on disconnection event
-   \_connector.Disconnected +\= () \=\>
+   // subscribe on disconnection event
+   _connector.Disconnected += () =>
    {
-   	\/\/ update gui labels
-   	this.GuiAsync(() \=\> { ChangeConnectStatus(false); });
+   	// update gui labels
+   	this.GuiAsync(() => { ChangeConnectStatus(false); });
    };
-   \/\/ subscribe on connection error event
-   \_connector.ConnectionError +\= error \=\> this.GuiAsync(() \=\>
+   // subscribe on connection error event
+   _connector.ConnectionError += error => this.GuiAsync(() =>
    {
-   	\/\/ update gui labels
+   	// update gui labels
    	ChangeConnectStatus(false);
    	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
    });
-   \_connector.NewMarketDepth +\= OnDepth;
-   \_connector.MarketDepthChanged +\= OnDepth;
-   \_connector.NewPortfolio +\= PortfolioGrid.Portfolios.Add;
-   \_connector.NewPosition +\= PortfolioGrid.Positions.Add;
-   \_connector.NewOrder +\= OrderGrid.Orders.Add;
-   \_connector.NewMyTrade +\= TradeGrid.Trades.Add;
-   \/\/ subscribe on error of order registration event
-   \_connector.OrderRegisterFailed +\= OrderGrid.AddRegistrationFail;
-   \_connector.CandleSeriesProcessing +\= (s, candle) \=\>
+   _connector.NewMarketDepth += OnDepth;
+   _connector.MarketDepthChanged += OnDepth;
+   _connector.NewPortfolio += PortfolioGrid.Portfolios.Add;
+   _connector.NewPosition += PortfolioGrid.Positions.Add;
+   _connector.NewOrder += OrderGrid.Orders.Add;
+   _connector.NewMyTrade += TradeGrid.Trades.Add;
+   // subscribe on error of order registration event
+   _connector.OrderRegisterFailed += OrderGrid.AddRegistrationFail;
+   _connector.CandleSeriesProcessing += (s, candle) =>
    {
-   	if (candle.State \=\= CandleStates.Finished)
-   		\_buffer.Add(candle);
+   	if (candle.State == CandleStates.Finished)
+   		_buffer.Add(candle);
    };
-   \_connector.SubscribeCandles(series, DateTime.Today.Subtract(TimeSpan.FromDays(5)), DateTime.Now);	
-   \_connector.MassOrderCancelFailed +\= (transId, error) \=\>
-   	this.GuiAsync(() \=\> MessageBox.Show(this, error.ToString(), LocalizedStrings.Str716));
-   \/\/ subscribe on error event
-   \_connector.Error +\= error \=\>
-   	this.GuiAsync(() \=\> MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
-   \/\/ subscribe on error of market data subscription event
-   \_connector.MarketDataSubscriptionFailed +\= (security, msg, error) \=\>
+   _connector.SubscribeCandles(series, DateTime.Today.Subtract(TimeSpan.FromDays(5)), DateTime.Now);	
+   _connector.MassOrderCancelFailed += (transId, error) =>
+   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str716));
+   // subscribe on error event
+   _connector.Error += error =>
+   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
+   // subscribe on error of market data subscription event
+   _connector.MarketDataSubscriptionFailed += (security, msg, error) =>
    {
-   	if (error \=\= null)
+   	if (error == null)
    		return;
-   	this.GuiAsync(() \=\> MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2956Params.Put(msg.DataType, security)));
+   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2956Params.Put(msg.DataType, security)));
    };
    					  
    ```

@@ -10,34 +10,34 @@
 
 ```cs
 ...
-var subscription \= new Subscription(new MarketDataMessage
+var subscription = new Subscription(new MarketDataMessage
 {
-	DataType2 \= DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-	From \= DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
-	\/\/ null означает что подписка после истории перейдет в online для получения данных реального времени
-	To \= null,
+	DataType2 = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
+	// null означает что подписка после истории перейдет в online для получения данных реального времени
+	To = null,
 }, (SecurityMessage)sec);
-\/\/ подписка на события
-\_connector.CandleReceived +\= (sub, candle) \=\>
+// подписка на события
+_connector.CandleReceived += (sub, candle) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine(candle);
 };
-\_connector.SubscriptionOnline +\= (sub) \=\>
+_connector.SubscriptionOnline += (sub) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine("Online");
 };
-\_connector.SubscriptionFailed +\= (sub, error, isSubscribe) \=\>
+_connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine(error);
 };
-\/\/ запуск подписки
-\_connector.Subscribe(subscription);
+// запуск подписки
+_connector.Subscribe(subscription);
 ...
 			
 ```

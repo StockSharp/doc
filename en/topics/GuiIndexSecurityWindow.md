@@ -15,7 +15,7 @@ To use [IndexEditor](../api/StockSharp.Xaml.IndexEditor.html), first you need to
 
 ```cs
 ...
-ConfigManager.RegisterService\<ICompilerService\>(new RoslynCompilerService());
+ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
 ```
 
@@ -24,9 +24,9 @@ Next, the securities necessary for index calculating should be passed to [IndexE
 ```cs
 ...
 IndexEditor.Securities.AddRange(SecurityProvider.LookupAll());
-SecurityProvider.Added +\= OnAdded;
+SecurityProvider.Added += OnAdded;
 ...
-private void OnAdded(IEnumerable\<Security\> securities)
+private void OnAdded(IEnumerable<Security> securities)
      {
          IndexEditor.Securities.AddRange(securities);
      }

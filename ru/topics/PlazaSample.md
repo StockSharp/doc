@@ -3,14 +3,14 @@
 Код ниже демонстрирует как инициализировать [PlazaMessageAdapter](../api/StockSharp.Plaza.PlazaMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var address \= "\<Address\>".To\<IPAddress\>();
-var messageAdapter \= new PlazaMessageAdapter(Connector.TransactionIdGenerator)
+var address = "<Address>".To<IPAddress>();
+var messageAdapter = new PlazaMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
-    Address \= SmartComAddresses.Demo,
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
+    Address = SmartComAddresses.Demo,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

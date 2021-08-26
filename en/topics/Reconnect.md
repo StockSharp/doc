@@ -63,12 +63,12 @@ The reconnection mechanism is configured through the [Connector.ReConnectionSett
 1. When creating a gateway, you need to initialize the settings of the reconnection mechanism through the [Connector.ReConnectionSettings](../api/StockSharp.Algo.Connector.ReConnectionSettings.html) property: 
 
    ```cs
-   \/\/ initialize the reconnection mechanism (it will automatically connect 
-   \/\/ every 10 seconds if the gateway loses connection with the server)
-   Connector.ReConnectionSettings.Interval \= TimeSpan.FromSeconds(10);
-   \/\/ reconnection will work only during the operation of the RTS exchange
-   \/\/ (to disable reconnection when there is no trading normally, for example, at night)
-   Connector.ReConnectionSettings.WorkingTime \= Exchange.Rts.WorkingTime;
+   // initialize the reconnection mechanism (it will automatically connect 
+   // every 10 seconds if the gateway loses connection with the server)
+   Connector.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
+   // reconnection will work only during the operation of the RTS exchange
+   // (to disable reconnection when there is no trading normally, for example, at night)
+   Connector.ReConnectionSettings.WorkingTime = Exchange.Rts.WorkingTime;
    ```
 2. To check how the connection control mechanism works, you can turn off the Internet connection: 
 3. Below is the program log, which shows that the application is initially in a connected state, and after turning off the Internet connection, the application tries to reconnect. After restoring the Internet connection, the application connection is restored: 
@@ -77,9 +77,9 @@ The reconnection mechanism is configured through the [Connector.ReConnectionSett
 4. Since several connections can be used in [Connector](../api/StockSharp.Algo.Connector.html), by default events related to reconnection, such as [Connector.Restored](../api/StockSharp.Algo.Connector.Restored.html) are not triggered, and connection adapters try to reconnect themselves. For the event to start being raised, you need to set the value of the adapter's [BasketMessageAdapter.SuppressReconnectingErrors](../api/StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors.html) property to **false**. 
 
    ```cs
-   Connector.Adapter.SuppressReconnectingErrors \= false;
-   Connector.ConnectionError +\= error \=\> this.Sync(() \=\> MessageBox.Show(this, "Connection lost"));
-   Connector.Restored +\= () \=\> this.Sync(() \=\> MessageBox.Show(this, "Connection restored"));
+   Connector.Adapter.SuppressReconnectingErrors = false;
+   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Connection lost"));
+   Connector.Restored += () => this.Sync(() => MessageBox.Show(this, "Connection restored"));
    ```
 
    ![sampleconnectionerror](../images/sample_connection_error.png)![sampleconnectionrestore](../images/sample_connection_restored.png)

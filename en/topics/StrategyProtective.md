@@ -24,9 +24,9 @@ Take\-profit and stop\-loss
    {
    	public void OpenPosition()
    	{
-   		var longPos \= this.BuyAtMarket();
+   		var longPos = this.BuyAtMarket();
    		
-   		\/\/ applying rules to track the order's trades
+   		// applying rules to track the order's trades
    		longPos
    			.WhenNewTrade()
    			.Do(OnNewOrderTrade)
@@ -42,11 +42,11 @@ Take\-profit and stop\-loss
    ```cs
    private void OnNewOrderTrade(MyTrade trade)
    {
-       \/\/ take is 40 points
-       var takeProfit \= new TakeProfitStrategy(trade, 40);
-       \/\/ stop is 20 points
-       var stopLoss \= new StopLossStrategy(trade, 20);
-       var protectiveStrategies \= new TakeProfitStopLossStrategy(takeProfit, stopLoss);
+       // take is 40 points
+       var takeProfit = new TakeProfitStrategy(trade, 40);
+       // stop is 20 points
+       var stopLoss = new StopLossStrategy(trade, 20);
+       var protectiveStrategies = new TakeProfitStopLossStrategy(takeProfit, stopLoss);
        ChildStrategies.AddRange(protectiveStrategies);
    }
    ```

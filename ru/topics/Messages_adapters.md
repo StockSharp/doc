@@ -25,7 +25,7 @@
    ```cs
    public void SendInMessage(Message message)
    {
-   	\_inAdapter.SendInMessage(message);
+   	_inAdapter.SendInMessage(message);
    }
      			
    ```
@@ -56,21 +56,21 @@
    public BitStampMessageAdapter(IdGenerator transactionIdGenerator)
    	: base(transactionIdGenerator)
    {
-   	\/\/ для поддержания соединения шлем каждый 10 секунд пинг
-   	HeartbeatInterval \= TimeSpan.FromSeconds(10);
-   	\/\/ адаптер поддерживает как транзакции, так и маркет\-данные
+   	// для поддержания соединения шлем каждый 10 секунд пинг
+   	HeartbeatInterval = TimeSpan.FromSeconds(10);
+   	// адаптер поддерживает как транзакции, так и маркет-данные
    	this.AddMarketDataSupport();
    	this.AddTransactionalSupport();
    	
-   	\/\/ удаляем не поддерживаемые типы сообщий (были добавлены через AddTransactionalSupport все возможные транзакционные сообщения)
+   	// удаляем не поддерживаемые типы сообщий (были добавлены через AddTransactionalSupport все возможные транзакционные сообщения)
    	this.RemoveSupportedMessage(MessageTypes.Portfolio);
    	this.RemoveSupportedMessage(MessageTypes.OrderReplace);
-   	\/\/ адаптер поддерживает тики, стаканы и лог заявок
+   	// адаптер поддерживает тики, стаканы и лог заявок
    	this.AddSupportedMarketDataType(DataType.Ticks);
    	this.AddSupportedMarketDataType(DataType.MarketDepth);
-   	\/\/this.AddSupportedMarketDataType(DataType.Level1);
+   	//this.AddSupportedMarketDataType(DataType.Level1);
    	this.AddSupportedMarketDataType(DataType.OrderLog);
-   	\/\/ адаптер поддерживает результирующие сообщения для поиска инструментов, позиций и заявок
+   	// адаптер поддерживает результирующие сообщения для поиска инструментов, позиций и заявок
    	this.AddSupportedResultMessage(MessageTypes.SecurityLookup);
    	this.AddSupportedResultMessage(MessageTypes.PortfolioLookup);
    	this.AddSupportedResultMessage(MessageTypes.OrderStatus);
@@ -88,21 +88,21 @@
    ```cs
    private void SubscribePusherClient()
    {
-   	\_pusherClient.Connected +\= SessionOnPusherConnected;
-   	\_pusherClient.Disconnected +\= SessionOnPusherDisconnected;
-   	\_pusherClient.Error +\= SessionOnPusherError;
-   	\_pusherClient.NewOrderBook +\= SessionOnNewOrderBook;
-   	\_pusherClient.NewOrderLog +\= SessionOnNewOrderLog;
-   	\_pusherClient.NewTrade +\= SessionOnNewTrade;
+   	_pusherClient.Connected += SessionOnPusherConnected;
+   	_pusherClient.Disconnected += SessionOnPusherDisconnected;
+   	_pusherClient.Error += SessionOnPusherError;
+   	_pusherClient.NewOrderBook += SessionOnNewOrderBook;
+   	_pusherClient.NewOrderLog += SessionOnNewOrderLog;
+   	_pusherClient.NewTrade += SessionOnNewTrade;
    }
    private void UnsubscribePusherClient()
    {
-   	\_pusherClient.Connected \-\= SessionOnPusherConnected;
-   	\_pusherClient.Disconnected \-\= SessionOnPusherDisconnected;
-   	\_pusherClient.Error \-\= SessionOnPusherError;
-   	\_pusherClient.NewOrderBook \-\= SessionOnNewOrderBook;
-   	\_pusherClient.NewOrderLog \-\= SessionOnNewOrderLog;
-   	\_pusherClient.NewTrade \-\= SessionOnNewTrade;
+   	_pusherClient.Connected -= SessionOnPusherConnected;
+   	_pusherClient.Disconnected -= SessionOnPusherDisconnected;
+   	_pusherClient.Error -= SessionOnPusherError;
+   	_pusherClient.NewOrderBook -= SessionOnNewOrderBook;
+   	_pusherClient.NewOrderLog -= SessionOnNewOrderLog;
+   	_pusherClient.NewTrade -= SessionOnNewTrade;
    }
    		
    protected override bool OnSendInMessage(Message message)
@@ -111,57 +111,57 @@
        {
             case MessageTypes.Reset:
             {
-            	\_lastMyTradeId \= 0;
-   			\_lastTimeBalanceCheck \= null;
-   			if (\_httpClient \!\= null)
+            	_lastMyTradeId = 0;
+   			_lastTimeBalanceCheck = null;
+   			if (_httpClient != null)
    			{
    				try
    				{
-   					\_httpClient.Dispose();
+   					_httpClient.Dispose();
    				}
    				catch (Exception ex)
    				{
    					SendOutError(ex);
    				}
-   				\_httpClient \= null;
+   				_httpClient = null;
    			}
-   			if (\_pusherClient \!\= null)
+   			if (_pusherClient != null)
    			{
    				try
    				{
    					UnsubscribePusherClient();
-   					\_pusherClient.Disconnect();
+   					_pusherClient.Disconnect();
    				}
    				catch (Exception ex)
    				{
    					SendOutError(ex);
    				}
-   				\_pusherClient \= null;
+   				_pusherClient = null;
    			}
    			SendOutMessage(new ResetMessage());
              	break;
            }
            case MessageTypes.Connect:
            {
-               if (\_httpClient \!\= null)
+               if (_httpClient != null)
    				throw new InvalidOperationException(LocalizedStrings.Str1619);
-   			if (\_pusherClient \!\= null)
+   			if (_pusherClient != null)
    				throw new InvalidOperationException(LocalizedStrings.Str1619);
-   			\_httpClient \= new HttpClient(ClientId, Key, Secret, AuthV2) { Parent \= this };
-   			\_pusherClient \= new PusherClient { Parent \= this };
+   			_httpClient = new HttpClient(ClientId, Key, Secret, AuthV2) { Parent = this };
+   			_pusherClient = new PusherClient { Parent = this };
    			SubscribePusherClient();
-   			\_pusherClient.Connect();
+   			_pusherClient.Connect();
                break;
            }
            case MessageTypes.Disconnect:
            {
-               if (\_httpClient \=\= null)
+               if (_httpClient == null)
    				throw new InvalidOperationException(LocalizedStrings.Str1856);
-   			if (\_pusherClient \=\= null)
+   			if (_pusherClient == null)
    				throw new InvalidOperationException(LocalizedStrings.Str1856);
-   			\_httpClient.Dispose();
-   			\_httpClient \= null;
-   			\_pusherClient.Disconnect();
+   			_httpClient.Dispose();
+   			_httpClient = null;
+   			_pusherClient.Disconnect();
                break;
            }
            
@@ -241,39 +241,39 @@
    При получении этих сообщений необходимо вызвать функции [BitStamp](BitStamp.md), запрашивающие портфели и инструменты соответственно. А после получения всех данных необходимо послать сообщение [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html). Обратите внимание, как результирующему сообщению, так и сообщениям с данными, присваивается идентификатор подписки: 
 
    ```cs
-   \/\/ Запрашиваем список портфелей
+   // Запрашиваем список портфелей
    private void ProcessPortfolioLookup(PortfolioLookupMessage message)
    {
-   	if (\!message.IsSubscribe)
+   	if (!message.IsSubscribe)
    		return;
-   	var transactionId \= message.TransactionId;
-   	var pfName \= PortfolioName;
+   	var transactionId = message.TransactionId;
+   	var pfName = PortfolioName;
    	SendOutMessage(new PortfolioMessage
    	{
-   		PortfolioName \= pfName,
-   		BoardCode \= Extensions.BitStampBoard,
-   		OriginalTransactionId \= transactionId, \/\/ \<\- идентификатор подписки
+   		PortfolioName = pfName,
+   		BoardCode = Extensions.BitStampBoard,
+   		OriginalTransactionId = transactionId, // <- идентификатор подписки
    	});
    	
-   	var account \= \_httpClient.GetAccount(section);
+   	var account = _httpClient.GetAccount(section);
    	SendOutMessage(new PositionChangeMessage
    	{
-   		SecurityId \= SecurityId.Money, \/\/ \<\- для денежной позиции устанавливаем спец код инструмента Money
-   		PortfolioName \= GetPortfolioName(section),
-   		ServerTime \= time,	
+   		SecurityId = SecurityId.Money, // <- для денежной позиции устанавливаем спец код инструмента Money
+   		PortfolioName = GetPortfolioName(section),
+   		ServerTime = time,	
    	}
    	.TryAdd(PositionChangeTypes.Leverage, (decimal?)account.MarginLevel)
    	.TryAdd(PositionChangeTypes.CommissionTaker, (decimal?)account.TakerCommissionRate)
    	.TryAdd(PositionChangeTypes.CommissionMaker, (decimal?)account.MakerCommissionRate));
-   	var tuple \= \_httpClient.GetBalances();
+   	var tuple = _httpClient.GetBalances();
    	foreach (var pair in tuple.Item1)
    	{
-   		var currValue \= pair.Value.First;
-   		var currPrice \= pair.Value.Second;
-   		var blockValue \= pair.Value.Third;
-   		if (currValue \=\= null && currPrice \=\= null && blockValue \=\= null)
+   		var currValue = pair.Value.First;
+   		var currPrice = pair.Value.Second;
+   		var blockValue = pair.Value.Third;
+   		if (currValue == null && currPrice == null && blockValue == null)
    			continue;
-   		var msg \= this.CreatePositionChangeMessage(pfName, pair.Key.ToUpperInvariant().ToStockSharp(false));
+   		var msg = this.CreatePositionChangeMessage(pfName, pair.Key.ToUpperInvariant().ToStockSharp(false));
    		msg
    		.TryAdd(PositionChangeTypes.CurrentValue, currValue, true)
    		.TryAdd(PositionChangeTypes.CurrentPrice, currPrice, true)
@@ -281,32 +281,32 @@
    		SendOutMessage(msg);	
    	}
    	
-   	SendSubscriptionResult(message); \/\/ \<\- завершение подписки (если To \=\= null, то тут отправляется что подписка перешла в Online, иначе Finished)
+   	SendSubscriptionResult(message); // <- завершение подписки (если To == null, то тут отправляется что подписка перешла в Online, иначе Finished)
    	
-   	if (message.To \=\= null) \/\/ подписка не только на истори, но и на online
-   		\_pusher.SubscribeAccount();
+   	if (message.To == null) // подписка не только на истори, но и на online
+   		_pusher.SubscribeAccount();
    }
-   \/\/ Запрашиваем инструменты
+   // Запрашиваем инструменты
    private void ProcessSecurityLookup(SecurityLookupMessage lookupMsg)
    {
-   	var secTypes \= lookupMsg.GetSecurityTypes();
-   	foreach (var info in \_httpClient.GetPairsInfo())
+   	var secTypes = lookupMsg.GetSecurityTypes();
+   	foreach (var info in _httpClient.GetPairsInfo())
    	{
-   		var secMsg \= new SecurityMessage
+   		var secMsg = new SecurityMessage
    		{
-   			SecurityId \= info.Name.ToStockSharp(),
-   			SecurityType \= info.UrlSymbol \=\= \_eurusd ? SecurityTypes.Currency : SecurityTypes.CryptoCurrency,
-   			MinVolume \= info.MinimumOrder.Substring(0, info.MinimumOrder.IndexOf(' ')).To\<decimal\>(),
-   			Decimals \= info.BaseDecimals,
-   			Name \= info.Description,
-   			VolumeStep \= info.UrlSymbol \=\= \_eurusd ? 0.00001m : 0.00000001m,
-   			OriginalTransactionId \= lookupMsg.TransactionId, \/\/ \<\- идентификатор подписки
+   			SecurityId = info.Name.ToStockSharp(),
+   			SecurityType = info.UrlSymbol == _eurusd ? SecurityTypes.Currency : SecurityTypes.CryptoCurrency,
+   			MinVolume = info.MinimumOrder.Substring(0, info.MinimumOrder.IndexOf(' ')).To<decimal>(),
+   			Decimals = info.BaseDecimals,
+   			Name = info.Description,
+   			VolumeStep = info.UrlSymbol == _eurusd ? 0.00001m : 0.00000001m,
+   			OriginalTransactionId = lookupMsg.TransactionId, // <- идентификатор подписки
    		};
-   		if (\!secMsg.IsMatch(lookupMsg, secTypes))
+   		if (!secMsg.IsMatch(lookupMsg, secTypes))
    			continue;
    		SendOutMessage(secMsg);
    	}
-   	SendSubscriptionResult(lookupMsg); \/\/ \<\- завершение подписки
+   	SendSubscriptionResult(lookupMsg); // <- завершение подписки
    }
    						
    						
@@ -318,31 +318,31 @@
    ```cs
    		private void SessionOnAccountUpdated(AccountUpdate account)
    		{
-   			var time \= account.LastAccountUpdate ?? account.EventTime;
-   			var futData \= account.FuturesData;
-   			if (account.Balances \!\= null)
+   			var time = account.LastAccountUpdate ?? account.EventTime;
+   			var futData = account.FuturesData;
+   			if (account.Balances != null)
    			{
    				foreach (var balance in account.Balances)
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(section),
-   						SecurityId \= balance.Asset.InternalCreateSecurityId(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(section),
+   						SecurityId = balance.Asset.InternalCreateSecurityId(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)balance.Free, true)
    					.TryAdd(PositionChangeTypes.BlockedValue, (decimal)balance.Locked, true));
    				}
    			}
-   			else if (futData \!\= null)
+   			else if (futData != null)
    			{
    				foreach (var balance in futData.Balances)
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(section),
-   						SecurityId \= balance.Asset.InternalCreateSecurityId(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(section),
+   						SecurityId = balance.Asset.InternalCreateSecurityId(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)balance.Balance, true));
    				}
@@ -350,9 +350,9 @@
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(),
-   						SecurityId \= position.Symbol.ToStockSharp(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(),
+   						SecurityId = position.Symbol.ToStockSharp(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)position.Amount, true)
    					.TryAdd(PositionChangeTypes.AveragePrice, (decimal?)position.EntryPrice, true)
@@ -376,65 +376,65 @@
    ```cs
    		private void ProcessMarketData(MarketDataMessage mdMsg)
    		{
-   			if (\!mdMsg.SecurityId.IsAssociated())
+   			if (!mdMsg.SecurityId.IsAssociated())
    			{
    				SendSubscriptionNotSupported(mdMsg.TransactionId);
    				return;
    			}
-   			var currency \= mdMsg.SecurityId.ToCurrency();
-   			if (mdMsg.DataType2 \=\= DataType.OrderLog)
+   			var currency = mdMsg.SecurityId.ToCurrency();
+   			if (mdMsg.DataType2 == DataType.OrderLog)
    			{
    				if (mdMsg.IsSubscribe)
-   					\_pusherClient.SubscribeOrderLog(currency);
+   					_pusherClient.SubscribeOrderLog(currency);
    				else
-   					\_pusherClient.UnSubscribeOrderLog(currency);
+   					_pusherClient.UnSubscribeOrderLog(currency);
    			}
-   			else if (mdMsg.DataType2 \=\= DataType.MarketDepth)
+   			else if (mdMsg.DataType2 == DataType.MarketDepth)
    			{
    				if (mdMsg.IsSubscribe)
-   					\_pusherClient.SubscribeOrderBook(currency);
+   					_pusherClient.SubscribeOrderBook(currency);
    				else
-   					\_pusherClient.UnSubscribeOrderBook(currency);
+   					_pusherClient.UnSubscribeOrderBook(currency);
    			}
-   			else if (mdMsg.DataType2 \=\= DataType.Ticks)
+   			else if (mdMsg.DataType2 == DataType.Ticks)
    			{
    				if (mdMsg.IsSubscribe)
    				{
-   					if (mdMsg.To \!\= null)
+   					if (mdMsg.To != null)
    					{
    						SendSubscriptionReply(mdMsg.TransactionId);
-   						var diff \= DateTimeOffset.Now \- (mdMsg.From ?? DateTime.Today);
+   						var diff = DateTimeOffset.Now - (mdMsg.From ?? DateTime.Today);
    						string interval;
-   						if (diff.TotalMinutes \< 1)
-   							interval \= "minute";
-   						else if (diff.TotalDays \< 1)
-   							interval \= "hour";
+   						if (diff.TotalMinutes < 1)
+   							interval = "minute";
+   						else if (diff.TotalDays < 1)
+   							interval = "hour";
    						else
-   							interval \= "day";
-   						var trades \= \_httpClient.RequestTransactions(currency, interval);
-   						foreach (var trade in trades.OrderBy(t \=\> t.Time))
+   							interval = "day";
+   						var trades = _httpClient.RequestTransactions(currency, interval);
+   						foreach (var trade in trades.OrderBy(t => t.Time))
    						{
    							SendOutMessage(new ExecutionMessage
    							{
-   								ExecutionType \= ExecutionTypes.Tick,
-   								SecurityId \= mdMsg.SecurityId,
-   								TradeId \= trade.Id,
-   								TradePrice \= (decimal)trade.Price,
-   								TradeVolume \= trade.Amount.ToDecimal(),
-   								ServerTime \= trade.Time,
-   								OriginSide \= trade.Type.ToSide(),
-   								OriginalTransactionId \= mdMsg.TransactionId
+   								ExecutionType = ExecutionTypes.Tick,
+   								SecurityId = mdMsg.SecurityId,
+   								TradeId = trade.Id,
+   								TradePrice = (decimal)trade.Price,
+   								TradeVolume = trade.Amount.ToDecimal(),
+   								ServerTime = trade.Time,
+   								OriginSide = trade.Type.ToSide(),
+   								OriginalTransactionId = mdMsg.TransactionId
    							});
    						}
    						SendSubscriptionResult(mdMsg);
    						return;
    					}
    					else
-   						\_pusherClient.SubscribeTrades(currency);
+   						_pusherClient.SubscribeTrades(currency);
    				}
    				else
    				{
-   					\_pusherClient.UnSubscribeTrades(currency);
+   					_pusherClient.UnSubscribeTrades(currency);
    				}
    			}
    			else
@@ -455,13 +455,13 @@
    {
    	SendOutMessage(new ExecutionMessage
    	{
-   		ExecutionType \= ExecutionTypes.Tick,
-   		SecurityId \= pair.ToStockSharp(),
-   		TradeId \= trade.Id,
-   		TradePrice \= (decimal)trade.Price,
-   		TradeVolume \= (decimal)trade.Amount,
-   		ServerTime \= trade.Time,
-   		OriginSide \= trade.Type.ToSide(),
+   		ExecutionType = ExecutionTypes.Tick,
+   		SecurityId = pair.ToStockSharp(),
+   		TradeId = trade.Id,
+   		TradePrice = (decimal)trade.Price,
+   		TradeVolume = (decimal)trade.Amount,
+   		ServerTime = trade.Time,
+   		OriginSide = trade.Type.ToSide(),
    	});
    }
    		  

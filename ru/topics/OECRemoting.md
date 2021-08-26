@@ -11,7 +11,7 @@
 Для явного задания режима [OECRemoting](https://gainfutures.com/gainfuturesapi) необходимо сразу после создания объекта [OpenECryMessageAdapter](../api/StockSharp.OpenECry.OpenECryMessageAdapter.html) указать требуемый режим. Например, для указания режима [Secondary](../api/StockSharp.OpenECry.OpenECryRemoting.Secondary.html):
 
 ```cs
-		MessageAdapterMessageAdapter.Remoting \= OECRemoting.Secondary;
+		MessageAdapterMessageAdapter.Remoting = OECRemoting.Secondary;
 		
 ```
 

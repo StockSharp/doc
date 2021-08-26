@@ -41,7 +41,7 @@
 
    ```cs
    ...
-   \_candleSeries \= new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
+   _candleSeries = new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
    ...		
    					
    ```
@@ -50,11 +50,11 @@
    Для получения свечей необходимо подписаться на событие [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html), сигнализирующее о появлении нового значения для обработки:
 
    ```cs
-   \_connector.CandleSeriesProcessing +\= Connector\_CandleSeriesProcessing;
+   _connector.CandleSeriesProcessing += Connector_CandleSeriesProcessing;
    ...
-   private void Connector\_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
+   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
    {
-   	Chart.Draw(\_candleElement, candle);
+   	Chart.Draw(_candleElement, candle);
    }
    ...
    					
@@ -66,7 +66,7 @@
 
    ```cs
    ...
-   \_connector.SubscribeCandles(\_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
+   _connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
    ...
    		
    					
@@ -79,12 +79,12 @@
 
    ```cs
    ...
-   private void Connector\_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
+   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
    {
-       if (candle.State \=\= CandleStates.Finished) 
+       if (candle.State == CandleStates.Finished) 
        {
-          var chartData \= new ChartDrawData();
-          chartData.Group(candle.OpenTime).Add(\_candleElement, candle);
+          var chartData = new ChartDrawData();
+          chartData.Group(candle.OpenTime).Add(_candleElement, candle);
           Chart.Draw(chartData);
        }
    }
@@ -135,47 +135,47 @@
    - Так как большинство источников предоставляют свечи стандартных таймфреймом, то для получения таких свечей достаточно задать тип и таймфрейм: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
      					
      ```
    - Если необходимо просто загрузить готовые свечи, то необходимо задать свойство [BuildCandlesMode](../api/StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode.html) в [Load](../api/StockSharp.Messages.MarketDataBuildModes.Load.html): 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Load,
+     	BuildCandlesMode = MarketDataBuildModes.Load,
      };	
      					
      ```
    - Если источник не предоставляет свечей необходимого таймфрейма, то их можно построить из других маркет данных. Ниже приведен приме построения свечей с таймфреймом 21 секунда из сделок: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };	
      					
      ```
    - Если источник данных не предоставляет ни свечей, ни сделок свечи можно построить из спреда стакана: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-     	BuildCandlesField \= Level1Fields.SpreadMiddle,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
+     	BuildCandlesField = Level1Fields.SpreadMiddle,
      };	
      					
      ```
    - Так как не существует источников, предоставляющих готового **профиля объема**, его тоже необходимо строить из другого типа данных. Для прорисовки **профиля объема** необходимо установить свойство [IsCalcVolumeProfile](../api/StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile.html) в true, а также [BuildCandlesMode](../api/StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode.html) в [Build](../api/StockSharp.Messages.MarketDataBuildModes.Build.html). И указать тип данных из которого будет построен **профиль объема**. В данном случае это [Trades](../api/StockSharp.Messages.MarketDataTypes.Trades.html): 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
-         IsCalcVolumeProfile \= true,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
+         IsCalcVolumeProfile = true,
      };	
      					
      ```
@@ -184,11 +184,11 @@
      Следующий код демонстрирует построение [VolumeCandle](../api/StockSharp.Algo.Candles.VolumeCandle.html) с объемом в 1000 контрактов. В качестве источника данных для построения используется середина спреда стакана.
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(VolumeCandle), security, 1000m)
+     _candleSeries = new CandleSeries(typeof(VolumeCandle), security, 1000m)
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-     	BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-     	BuildCandlesField \= Level1Fields.SpreadMiddle,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
+     	BuildCandlesField = Level1Fields.SpreadMiddle,
      };
      					
      ```
@@ -196,42 +196,42 @@
 
      ```cs
      	   
-     \_candleSeries \= new CandleSeries(typeof(TickCandle), security, 1000)
+     _candleSeries = new CandleSeries(typeof(TickCandle), security, 1000)
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };
      					
      ```
    - Следующий код демонстрирует построение [RangeCandle](../api/StockSharp.Algo.Candles.RangeCandle.html) с диапазоном в 0.1 у.е. В качестве источника данных для построения используется лучшая покупка стакана:
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
+     _candleSeries = new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-         BuildCandlesField \= Level1Fields.BestBid,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+         BuildCandlesFrom = MarketDataTypes.MarketDepth,
+         BuildCandlesField = Level1Fields.BestBid,
      };
      					
      ```
    - Следующий код демонстрирует построение [RenkoCandle](../api/StockSharp.Algo.Candles.RenkoCandle.html). В качестве источника данных для построения используется цена последней сделки из Level1:
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
+     _candleSeries = new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom \= MarketDataTypes.Level1,
-         BuildCandlesField \= Level1Fields.LastTradePrice,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+         BuildCandlesFrom = MarketDataTypes.Level1,
+         BuildCandlesField = Level1Fields.LastTradePrice,
      };
      					
      ```
    - Следующий код демонстрирует построение [PnFCandle](../api/StockSharp.Algo.Candles.PnFCandle.html). В качестве источника данных для построения используются сделки.
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize \= 0.1m, ReversalAmount \=1})
+     _candleSeries = new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize = 0.1m, ReversalAmount =1})
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };	
      					
      ```

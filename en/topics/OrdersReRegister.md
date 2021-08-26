@@ -7,14 +7,14 @@ As the result or orders replacement the new [Order](../api/StockSharp.BusinessEn
 The following example shows how "to move" the order at the best price:
 
 ```cs
-if (registeredOrder.Security.BestBid \!\= null && registeredOrder.Security.BestAsk \!\= null)
+if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk != null)
 {
-	\/\/ registeredOrder \- successfully registered order.
-	var newOrder \= registeredOrder.Clone();
-	\/\/ changing the price to be the best on order book
-	newOrder.Price \= (registeredOrder.Direction \=\= Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
-	\/\/ sending request the replace our order with new price
-	\_connector.ReRegisterOrder(registeredOrder, newOrder);
+	// registeredOrder - successfully registered order.
+	var newOrder = registeredOrder.Clone();
+	// changing the price to be the best on order book
+	newOrder.Price = (registeredOrder.Direction == Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
+	// sending request the replace our order with new price
+	_connector.ReRegisterOrder(registeredOrder, newOrder);
 }
 ```
 

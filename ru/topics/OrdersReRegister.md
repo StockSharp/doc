@@ -7,14 +7,14 @@
 В примере ниже показан способ "движения" заявки по лучшей цене:
 
 ```cs
-if (registeredOrder.Security.BestBid \!\= null && registeredOrder.Security.BestAsk \!\= null)
+if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk != null)
 {
-	\/\/ registeredOrder \- это ранее зарегистрированная заявка.
-	var newOrder \= registeredOrder.Clone();
-	\/\/ изменяем цену на лучшую
-	newOrder.Price \= (registeredOrder.Direction \=\= Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
-	\/\/ заменяем заявку на бирже
-	\_connector.ReRegisterOrder(registeredOrder, newOrder);
+	// registeredOrder - это ранее зарегистрированная заявка.
+	var newOrder = registeredOrder.Clone();
+	// изменяем цену на лучшую
+	newOrder.Price = (registeredOrder.Direction == Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
+	// заменяем заявку на бирже
+	_connector.ReRegisterOrder(registeredOrder, newOrder);
 }
 ```
 

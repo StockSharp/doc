@@ -11,9 +11,9 @@ First, you need to create a simple UserControl in the XAML folder of your strate
 Replace UserControl with controls:BaseStudioControl
 
 ```xaml
-\<controls:BaseStudioControl\>
+<controls:BaseStudioControl>
 ...
-\<\/controls:BaseStudioControl\>
+</controls:BaseStudioControl>
 	  				
 ```
 
@@ -42,7 +42,7 @@ To save the strategy settings, you must override the **Load** and **Save** metho
 			base.Load(storage);
 			try
 			{
-				Strategy \= MainWindow.Instance.CreateStrategy(storage.GetValue\<SettingsStorage\>(nameof(Strategy)));
+				Strategy = MainWindow.Instance.CreateStrategy(storage.GetValue<SettingsStorage>(nameof(Strategy)));
 				Init(Strategy);
 			}
 			catch (Exception e)

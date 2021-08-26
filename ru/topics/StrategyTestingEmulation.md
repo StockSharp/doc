@@ -29,20 +29,20 @@
 1. Пример SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) практически идентичен примеру SampleHistoryTesting (его описание находится в разделе [тестирования на истории](StrategyTestingHistory.md)) за счет использования единого шлюза [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html). Но, в отличие от [тестирования на истории](StrategyTestingHistory.md), при тестировании на случайных данных маркет\-данные не подгружаются, а генерируются "на лету". Поэтому в пример добавляются два генератора случайных данных: для стакана и для тиковых сделок. В SampleHistoryTesting используется только один генератор \- для стакана, так как нет сохраненной истории. 
 
    ```cs
-   \_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
+   _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
    {
-       IsSubscribe \= true,
-       Generator \= new RandomWalkTradeGenerator(new SecurityId { SecurityCode \= security.Code })
+       IsSubscribe = true,
+       Generator = new RandomWalkTradeGenerator(new SecurityId { SecurityCode = security.Code })
        {
-           Interval \= TimeSpan.FromSeconds(1),
-           MaxVolume \= maxVolume,
-           MaxPriceStepCount \= 3,	
-           GenerateOriginSide \= true,
-           MinVolume \= minVolume,
-           RandomArrayLength \= 99,
+           Interval = TimeSpan.FromSeconds(1),
+           MaxVolume = maxVolume,
+           MaxPriceStepCount = 3,	
+           GenerateOriginSide = true,
+           MinVolume = minVolume,
+           RandomArrayLength = 99,
        }
    });
-   \_connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(\_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade \= false });
+   _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
 2. Результат работы примера выглядит следующим образом: 
 

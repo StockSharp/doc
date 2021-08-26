@@ -6,7 +6,7 @@ In the example shown in the previous sections, news arriving at the [NewNews](..
 
 ```cs
 ...
-Connector.NewNews +\= news \=\> \_newsWindow.NewsPanel.NewsGrid.News.Add(news);
+Connector.NewNews += news => _newsWindow.NewsPanel.NewsGrid.News.Add(news);
 ...
 							
 ```

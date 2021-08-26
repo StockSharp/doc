@@ -75,16 +75,16 @@
 Для того, чтобы узнать, в каком торговом состоянии находится заявка (какой объем реализован, была ли полностью удовлетворена заявка и т.д.) необходимо использовать методы [IsCanceled](../api/StockSharp.Algo.TraderHelper.IsCanceled.html), [IsMatchedEmpty](../api/StockSharp.Algo.TraderHelper.IsMatchedEmpty.html), [IsMatchedPartially](../api/StockSharp.Algo.TraderHelper.IsMatchedPartially.html), [IsMatched](../api/StockSharp.Algo.TraderHelper.IsMatched.html) и [GetMatchedVolume](../api/StockSharp.Algo.TraderHelper.GetMatchedVolume.html):
 
 ```cs
-\/\/ любая заявка
-Order order \= ....
-\/\/ отменена ли
+// любая заявка
+Order order = ....
+// отменена ли
 Console.WriteLine(order.IsCanceled());
-\/\/ исполнилась ли полностью
+// исполнилась ли полностью
 Console.WriteLine(order.IsMatched());
-\/\/ исполнилась ли частично
+// исполнилась ли частично
 Console.WriteLine(order.IsMatchedPartially());
-\/\/ исполнилась ли хотя бы одна часть заявки 
+// исполнилась ли хотя бы одна часть заявки 
 Console.WriteLine(order.IsMatchedEmpty());
-\/\/ получить реализованный объем
+// получить реализованный объем
 Console.WriteLine(order.GetMatchedVolume());
 ```

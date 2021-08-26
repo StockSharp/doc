@@ -15,20 +15,20 @@ The latency calculation adding to the SampleSMA
 1. You should add the text box for the total delay display in the information output window:
 
    ```cs
-   \<Label Grid.Column\="0" Grid.Row\="6" Content\="Latency:" \/\>
-   \<Label x:Name\="Latency" Grid.Column\="1" Grid.Row\="6" \/\>
+   <Label Grid.Column="0" Grid.Row="6" Content="Latency:" />
+   <Label x:Name="Latency" Grid.Column="1" Grid.Row="6" />
    						
    ```
 2. Next, you need to extend the event method\-handler of the strategy parameter change:
 
    ```cs
-   this.GuiAsync(() \=\>
+   this.GuiAsync(() =>
    {
-   	Status.Content \= \_strategy.ProcessState;
-   	PnL.Content \= \_strategy.PnL;
-   	Slippage.Content \= \_strategy.Slippage;
-   	Position.Content \= \_strategy.Position;
-   	Latency.Content \= \_strategy.Latency;
+   	Status.Content = _strategy.ProcessState;
+   	PnL.Content = _strategy.PnL;
+   	Slippage.Content = _strategy.Slippage;
+   	Position.Content = _strategy.Position;
+   	Latency.Content = _strategy.Latency;
    });
    						
    ```

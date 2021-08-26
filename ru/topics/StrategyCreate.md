@@ -26,56 +26,56 @@
    ```cs
    class SmaStrategy : Strategy
    {
-   	private readonly Connector \_connector;
-   	private readonly CandleSeries \_series;
-   	private bool \_isShortLessThenLong;
+   	private readonly Connector _connector;
+   	private readonly CandleSeries _series;
+   	private bool _isShortLessThenLong;
    	public SmaStrategy(CandleSeries series, SimpleMovingAverage longSma, SimpleMovingAverage shortSma)
    	{
-   		\_series \= series;
-   		\_connector \= ((Connector)this.Connector);
-   		LongSma \= longSma;
-   		ShortSma \= shortSma;
+   		_series = series;
+   		_connector = ((Connector)this.Connector);
+   		LongSma = longSma;
+   		ShortSma = shortSma;
    	}
    	public SimpleMovingAverage LongSma { get; }
    	public SimpleMovingAverage ShortSma { get; }
    	protected override void OnStarted()
    	{
-   		\_connector
-   			.WhenCandlesFinished(\_series)
+   		_connector
+   			.WhenCandlesFinished(_series)
    			.Do(ProcessCandle)
    			.Apply(this);
-   		\/\/ запоминаем текущее положение относительно друг друга
-   		\_isShortLessThenLong \= ShortSma.GetCurrentValue() \< LongSma.GetCurrentValue();
+   		// запоминаем текущее положение относительно друг друга
+   		_isShortLessThenLong = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
    		base.OnStarted();
    	}
    	private void ProcessCandle(Candle candle)
    	{
-   		\/\/ если наша стратегия в процессе остановки
-   		if (ProcessState \=\= ProcessStates.Stopping)
+   		// если наша стратегия в процессе остановки
+   		if (ProcessState == ProcessStates.Stopping)
    		{
-   			\/\/ отменяем активные заявки
+   			// отменяем активные заявки
    			CancelActiveOrders();
    			return;
    		}
-   		\/\/ добавляем новую свечу
+   		// добавляем новую свечу
    		LongSma.Process(candle);
    		ShortSma.Process(candle);
-   		\/\/ вычисляем новое положение относительно друг друга
-   		var isShortLessThenLong \= ShortSma.GetCurrentValue() \< LongSma.GetCurrentValue();
-   		\/\/ если произошло пересечение
-   		if (\_isShortLessThenLong \!\= isShortLessThenLong)
+   		// вычисляем новое положение относительно друг друга
+   		var isShortLessThenLong = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
+   		// если произошло пересечение
+   		if (_isShortLessThenLong != isShortLessThenLong)
    		{
-   			\/\/ если короткая меньше чем длинная, то продажа, иначе, покупка.
-   			var direction \= isShortLessThenLong ? Sides.Sell : Sides.Buy;
-   			\/\/ вычисляем размер для открытия или переворота позы
-   			var volume \= Position \=\= 0 ? Volume : Position.Abs() \* 2;
-   			\/\/ регистрируем заявку (обычным способом \- лимитированной заявкой)
-   			\/\/RegisterOrder(this.CreateOrder(direction, (decimal)Security.GetCurrentPrice(direction), volume));
-   			\/\/ переворачиваем позицию через котирование
-   			var strategy \= new MarketQuotingStrategy(direction, volume);
+   			// если короткая меньше чем длинная, то продажа, иначе, покупка.
+   			var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+   			// вычисляем размер для открытия или переворота позы
+   			var volume = Position == 0 ? Volume : Position.Abs() * 2;
+   			// регистрируем заявку (обычным способом - лимитированной заявкой)
+   			//RegisterOrder(this.CreateOrder(direction, (decimal)Security.GetCurrentPrice(direction), volume));
+   			// переворачиваем позицию через котирование
+   			var strategy = new MarketQuotingStrategy(direction, volume);
    			ChildStrategies.Add(strategy);
-   			\/\/ запоминаем текущее положение относительно друг друга
-   			\_isShortLessThenLong \= isShortLessThenLong;
+   			// запоминаем текущее положение относительно друг друга
+   			_isShortLessThenLong = isShortLessThenLong;
    		}
    	}
    }
@@ -94,109 +94,109 @@
 4. Инициализация самой стратегии и заполнение его историческими данными: 
 
    ```cs
-   \_connector.Connected +\= () \=\>
+   _connector.Connected += () =>
    {
-   	\_connector.NewSecurity +\= security \=\>
+   	_connector.NewSecurity += security =>
    	{
-   		if (\!security.Code.CompareIgnoreCase("LKOH"))
+   		if (!security.Code.CompareIgnoreCase("LKOH"))
    			return;
-   		\/\/ находим нужную бумагу
-   		var lkoh \= security;
-   		\_lkoh \= lkoh;
-   		this.GuiAsync(() \=\>
+   		// находим нужную бумагу
+   		var lkoh = security;
+   		_lkoh = lkoh;
+   		this.GuiAsync(() =>
    		{
-   			Start.IsEnabled \= true;
+   			Start.IsEnabled = true;
    		});
    	};
-   	\_connector.NewMyTrade +\= trade \=\>
+   	_connector.NewMyTrade += trade =>
    	{
-   		if (\_strategy \!\= null)
+   		if (_strategy != null)
    		{
-   			\/\/ найти те сделки, которые совершила стратегия скользящей средней
-   			if (\_strategy.Orders.Contains(trade.Order))
+   			// найти те сделки, которые совершила стратегия скользящей средней
+   			if (_strategy.Orders.Contains(trade.Order))
    				Trades.Trades.Add(trade);
    		}
    	};
-   	\_connector.CandleSeriesProcessing +\= (series, candle) \=\>
+   	_connector.CandleSeriesProcessing += (series, candle) =>
    	{
-   		\/\/ если скользящие за сегодняшний день отрисованны, то рисуем в реальном времени текущие скользящие
-   		if (\_isTodaySmaDrawn && candle.State \=\= CandleStates.Finished)
+   		// если скользящие за сегодняшний день отрисованны, то рисуем в реальном времени текущие скользящие
+   		if (_isTodaySmaDrawn && candle.State == CandleStates.Finished)
    			ProcessCandle(candle);
    	};
-   	\/\/\_connector.Error +\= ex \=\> this.GuiAsync(() \=\> MessageBox.Show(this, ex.ToString()));
-   	\_connector.ConnectionError +\= ex \=\>
+   	//_connector.Error += ex => this.GuiAsync(() => MessageBox.Show(this, ex.ToString()));
+   	_connector.ConnectionError += ex =>
    	{
-   		if (ex \!\= null)
-   			this.GuiAsync(() \=\> MessageBox.Show(this, ex.ToString()));
+   		if (ex != null)
+   			this.GuiAsync(() => MessageBox.Show(this, ex.ToString()));
    	};
-   	this.GuiAsync(() \=\>
+   	this.GuiAsync(() =>
    	{
-   		ConnectBtn.IsEnabled \= false;
-   		Report.IsEnabled \= true;
+   		ConnectBtn.IsEnabled = false;
+   		Report.IsEnabled = true;
    	});
    };
    ...
    private void StartClick(object sender, RoutedEventArgs e)
    {
-   	if (\_strategy \=\= null)
+   	if (_strategy == null)
    	{
-   		if (Portfolios.SelectedPortfolio \=\= null)
+   		if (Portfolios.SelectedPortfolio == null)
    		{
    			MessageBox.Show(this, LocalizedStrings.Str3009);
    			return;
    		}
-   		\/\/ регистрируем наш тайм\-фрейм
-   		var series \= new CandleSeries(typeof(TimeFrameCandle), \_lkoh, \_timeFrame);
-   		\/\/ создаем торговую стратегию, скользящие средние на 80 5\-минуток и 10 5\-минуток
-   		\_strategy \= new SmaStrategy(series, new SimpleMovingAverage { Length \= 80 }, new SimpleMovingAverage { Length \= 10 })
+   		// регистрируем наш тайм-фрейм
+   		var series = new CandleSeries(typeof(TimeFrameCandle), _lkoh, _timeFrame);
+   		// создаем торговую стратегию, скользящие средние на 80 5-минуток и 10 5-минуток
+   		_strategy = new SmaStrategy(series, new SimpleMovingAverage { Length = 80 }, new SimpleMovingAverage { Length = 10 })
    		{
-   			Volume \= 1,
-   			Security \= \_lkoh,
-   			Portfolio \= Portfolios.SelectedPortfolio,
-   			Connector \= \_connector,
+   			Volume = 1,
+   			Security = _lkoh,
+   			Portfolio = Portfolios.SelectedPortfolio,
+   			Connector = _connector,
    		};
-   		\_strategy.Log +\= OnLog;
-   		\_strategy.PropertyChanged +\= OnStrategyPropertyChanged;
-   		\_candlesElem \= new ChartCandleElement();
-   		\_area.Elements.Add(\_candlesElem);
-   		\_longMaElem \= new ChartIndicatorElement
+   		_strategy.Log += OnLog;
+   		_strategy.PropertyChanged += OnStrategyPropertyChanged;
+   		_candlesElem = new ChartCandleElement();
+   		_area.Elements.Add(_candlesElem);
+   		_longMaElem = new ChartIndicatorElement
    		{
-   			Title \= LocalizedStrings.Long,
-   			Color \= Colors.OrangeRed
+   			Title = LocalizedStrings.Long,
+   			Color = Colors.OrangeRed
    		};
-   		\_area.Elements.Add(\_longMaElem);
-   		\_shortMaElem \= new ChartIndicatorElement
+   		_area.Elements.Add(_longMaElem);
+   		_shortMaElem = new ChartIndicatorElement
    		{
-   			Title \= LocalizedStrings.Short,
-   			Color \= Colors.RoyalBlue
+   			Title = LocalizedStrings.Short,
+   			Color = Colors.RoyalBlue
    		};
-   		\_area.Elements.Add(\_shortMaElem);
-   		IEnumerable\<Candle\> candles \= CultureInfo.InvariantCulture.DoInCulture(() \=\> File.ReadAllLines("LKOH\_history.txt").Select(line \=\>
+   		_area.Elements.Add(_shortMaElem);
+   		IEnumerable<Candle> candles = CultureInfo.InvariantCulture.DoInCulture(() => File.ReadAllLines("LKOH_history.txt").Select(line =>
    		{
-   			var parts \= line.Split(',');
-   			var time \= (parts\[0\] + parts\[1\]).ToDateTime("yyyyMMddHHmmss").ApplyTimeZone(TimeHelper.Moscow);
+   			var parts = line.Split(',');
+   			var time = (parts[0] + parts[1]).ToDateTime("yyyyMMddHHmmss").ApplyTimeZone(TimeHelper.Moscow);
    			return (Candle)new TimeFrameCandle
    			{
-   				OpenPrice \= parts\[2\].To\<decimal\>(),
-   				HighPrice \= parts\[3\].To\<decimal\>(),
-   				LowPrice \= parts\[4\].To\<decimal\>(),
-   				ClosePrice \= parts\[5\].To\<decimal\>(),
-   				TimeFrame \= \_timeFrame,
-   				OpenTime \= time,
-   				CloseTime \= time + \_timeFrame,
-   				TotalVolume \= parts\[6\].To\<decimal\>(),
-   				Security \= \_lkoh,
-   				State \= CandleStates.Finished,
+   				OpenPrice = parts[2].To<decimal>(),
+   				HighPrice = parts[3].To<decimal>(),
+   				LowPrice = parts[4].To<decimal>(),
+   				ClosePrice = parts[5].To<decimal>(),
+   				TimeFrame = _timeFrame,
+   				OpenTime = time,
+   				CloseTime = time + _timeFrame,
+   				TotalVolume = parts[6].To<decimal>(),
+   				Security = _lkoh,
+   				State = CandleStates.Finished,
    			};
    		}).ToArray());
-   		var lastCandleTime \= default(DateTimeOffset);
-   		\/\/ начинаем вычислять скользящие средние
+   		var lastCandleTime = default(DateTimeOffset);
+   		// начинаем вычислять скользящие средние
    		foreach (var candle in candles)
    		{
    			ProcessCandle(candle);
-   			lastCandleTime \= candle.OpenTime;
+   			lastCandleTime = candle.OpenTime;
    		}
-   		\_connector.SubscribeCandles(\_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
+   		_connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
    ...
    ```
 
@@ -206,18 +206,18 @@
 
    ```cs
    ...
-   	if (\_strategy.ProcessState \=\= ProcessStates.Stopped)
+   	if (_strategy.ProcessState == ProcessStates.Stopped)
    	{
-   		\/\/ запускаем процесс получения стакана, необходимый для работы алгоритма котирования
-   		\_connector.SubscribeMarketDepth(\_strategy.Security);
-   		\_strategy.Start();
-   		Start.Content \= LocalizedStrings.Str242;
+   		// запускаем процесс получения стакана, необходимый для работы алгоритма котирования
+   		_connector.SubscribeMarketDepth(_strategy.Security);
+   		_strategy.Start();
+   		Start.Content = LocalizedStrings.Str242;
    	}
    	else
    	{
-   		\_connector.UnSubscribeMarketDepth(\_strategy.Security);
-   		\_strategy.Stop();
-   		Start.Content \= LocalizedStrings.Str2421;
+   		_connector.UnSubscribeMarketDepth(_strategy.Security);
+   		_strategy.Stop();
+   		Start.Content = LocalizedStrings.Str2421;
    	}
    ...	
    	
@@ -230,16 +230,16 @@
 6. Отрисовка на графике новых данных линий скользящий и свечей, показывающих тренд: 
 
    ```cs
-   \/\/ начинаем вычислять скользящие средние
+   // начинаем вычислять скользящие средние
    foreach (var candle in candles)
    {
    	ProcessCandle(candle);
-   	lastCandleTime \= candle.OpenTime;
+   	lastCandleTime = candle.OpenTime;
    }
-   \_connector.Start(series);
-   \/\/ вычисляем временные отрезки текущей свечи
-   var bounds \= \_timeFrame.GetCandleBounds(\_connector.CurrentTime);
-   candles \= \_connector.GetCandles(series, new Range\<DateTimeOffset\>(lastCandleTime + \_timeFrame, bounds.Min));
+   _connector.Start(series);
+   // вычисляем временные отрезки текущей свечи
+   var bounds = _timeFrame.GetCandleBounds(_connector.CurrentTime);
+   candles = _connector.GetCandles(series, new Range<DateTimeOffset>(lastCandleTime + _timeFrame, bounds.Min));
    foreach (var candle in candles)
    {
    	ProcessCandle(candle);
@@ -247,14 +247,14 @@
    ...
    private void ProcessCandle(Candle candle)
    {
-   	var longValue \= candle.State \=\= CandleStates.Finished ? \_strategy.LongSma.Process(candle) : null;
-   	var shortValue \= candle.State \=\= CandleStates.Finished ? \_strategy.ShortSma.Process(candle) : null;
-   	var chartData \= new ChartDrawData();
+   	var longValue = candle.State == CandleStates.Finished ? _strategy.LongSma.Process(candle) : null;
+   	var shortValue = candle.State == CandleStates.Finished ? _strategy.ShortSma.Process(candle) : null;
+   	var chartData = new ChartDrawData();
    	chartData
    		.Group(candle.OpenTime)
-   			.Add(\_candlesElem, candle)
-   			.Add(\_longMaElem, longValue)
-   			.Add(\_shortMaElem, shortValue);
+   			.Add(_candlesElem, candle)
+   			.Add(_longMaElem, longValue)
+   			.Add(_shortMaElem, shortValue);
    	Chart.Draw(chartData);
    }
    ```

@@ -5,12 +5,12 @@
 1. **CQG COM**, подключение через локальный **CQG Integrated Client**:
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new CqgComMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CqgComMessageAdapter(Connector.TransactionIdGenerator)
 {
-    UserName \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
+    UserName = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
@@ -20,13 +20,13 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 2. **CQG Continuum**, подключение напрямую к серверу:
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
 {
-    UserName \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
-    Address \= "\<Address\>".To\<IPAddress\>(),
+    UserName = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
+    Address = "<Address>".To<IPAddress>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

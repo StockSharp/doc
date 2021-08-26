@@ -11,29 +11,29 @@
 Для использования событийного подхода необходимо использовать свойство [Strategy.Rules](../api/StockSharp.Algo.Strategies.Strategy.Rules.html), через которое задается список правил. Каждое из правил хранит в себе условие срабатывания на событие и само действие, обрабатывающее данное событие. Ниже приведен код стратегии [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html), которая использует событийную модель: 
 
 ```cs
-\/\/\/ \<summary\>
-\/\/\/ Стратегия дельта хеджирования опционов.
-\/\/\/ \<\/summary\>
+/// <summary>
+/// Стратегия дельта хеджирования опционов.
+/// </summary>
 public class DeltaHedgeStrategy : Strategy
 {
-    private readonly Strategy \_tradingStrategy;
-    \/\/\/ \<summary\>
-    \/\/\/ Создать \<see cref\="DeltaHedgeStrategy"\/\>.
-    \/\/\/ \<\/summary\>
-    \/\/\/ \<param name\="tradingStrategy"\>Стратегия, содержащая в себе дочерние стратегии, которые торгуют по отдельному страйку.\<\/param\>
+    private readonly Strategy _tradingStrategy;
+    /// <summary>
+    /// Создать <see cref="DeltaHedgeStrategy"/>.
+    /// </summary>
+    /// <param name="tradingStrategy">Стратегия, содержащая в себе дочерние стратегии, которые торгуют по отдельному страйку.</param>
     public DeltaHedgeStrategy(Strategy tradingStrategy)
     {
-        if (tradingStrategy \=\= null)
+        if (tradingStrategy == null)
             throw new ArgumentNullException("tradingStrategy");
-        \_tradingStrategy \= tradingStrategy;
+        _tradingStrategy = tradingStrategy;
     }
-    \/\/\/ \<summary\>
-    \/\/\/ Метод вызывается тогда, когда вызвался метод \<see cref\="Strategy.Start"\/\>,
-    \/\/\/ но состояние процесса \<see cref\="Strategy.ProcessState"\/\> еще не перешло в значение \<see cref\="ProcessStates.Started"\/\>.
-    \/\/\/ \<\/summary\>
+    /// <summary>
+    /// Метод вызывается тогда, когда вызвался метод <see cref="Strategy.Start"/>,
+    /// но состояние процесса <see cref="Strategy.ProcessState"/> еще не перешло в значение <see cref="ProcessStates.Started"/>.
+    /// </summary>
     protected override void OnStarted()
     {
-        \_tradingStrategy
+        _tradingStrategy
             .WhenNewMyTrade()
             .Do(ReHedge).Apply(this);
         Security.WhenChanged(Connector).Do(ReHedge).Apply(this);
@@ -41,32 +41,32 @@ public class DeltaHedgeStrategy : Strategy
     }
     private void ReHedge()
     {
-        if (base.ChildStrategies.Count \> 0)
+        if (base.ChildStrategies.Count > 0)
         {
             this.AddWarningLog("Рехеджирование уже запущено.");
             return;
         }
-        var futurePosition \= \_tradingStrategy.ChildStrategies.SyncGet(c \=\> c.Sum(strategy \=\>
+        var futurePosition = _tradingStrategy.ChildStrategies.SyncGet(c => c.Sum(strategy =>
         {
-            var delta \= strategy.Security.Delta;
+            var delta = strategy.Security.Delta;
             this.AddInfoLog("Дельта по инструменту {0} равна {1}.", strategy.Security, delta);
             this.AddInfoLog("Позиция {0}.", strategy.PositionManager.Position);
-            return delta \* strategy.PositionManager.Position;
+            return delta * strategy.PositionManager.Position;
         }));
         this.AddInfoLog("Дельта суммарная {0}.", futurePosition);
-        var diff \= (int)futurePosition.Round() + (int)base.PositionManager.Position;
-        if (diff \!\= 0)
+        var diff = (int)futurePosition.Round() + (int)base.PositionManager.Position;
+        if (diff != 0)
         {
             this.AddInfoLog("Разница в позиции {0}.", diff);
-            base.ChildStrategies.Add(CreateQuoting(diff \> 0 ? Sides.Sell : Sides.Buy, diff.Abs()));
+            base.ChildStrategies.Add(CreateQuoting(diff > 0 ? Sides.Sell : Sides.Buy, diff.Abs()));
         }
     }
-    \/\/\/ \<summary\>
-    \/\/\/ Создать стратегию котирования для изменения позиции.
-    \/\/\/ \<\/summary\>
-    \/\/\/ \<param name\="direction"\>Направление котирования.\<\/param\>
-    \/\/\/ \<param name\="volume"\>Объем котирования.\<\/param\>
-    \/\/\/ \<returns\>Стратегия котирования.\<\/returns\>
+    /// <summary>
+    /// Создать стратегию котирования для изменения позиции.
+    /// </summary>
+    /// <param name="direction">Направление котирования.</param>
+    /// <param name="volume">Объем котирования.</param>
+    /// <returns>Стратегия котирования.</returns>
     protected virtual QuotingStrategy CreateQuoting(Sides direction, int volume)
     {
         return new MarketQuotingStrategy(direction, volume);
@@ -78,7 +78,7 @@ public class DeltaHedgeStrategy : Strategy
 Данная стратегия добавляет при запуске правило на событие появления новых сделок (для рехеджирования): 
 
 ```cs
-\_tradingStrategy.WhenNewMyTrade().Do(ReHedge).Apply(this);
+_tradingStrategy.WhenNewMyTrade().Do(ReHedge).Apply(this);
 		
 ```
 

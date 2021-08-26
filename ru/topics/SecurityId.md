@@ -16,15 +16,15 @@
    {
    	public override string GenerateId(string secCode, ExchangeBoard board)
    	{
-   		\/\/ генерация идентификатора вида CODE\-\-BOARD
-   		return secCode + "\-\-" + board.Code;
+   		// генерация идентификатора вида CODE--BOARD
+   		return secCode + "--" + board.Code;
    	}
    }
    ```
 2. Далее, созданный генератор нужно передать в шлюз: 
 
    ```cs
-   var \_connector.SecurityIdGenerator \= new CustomSecurityIdGenerator();
+   var _connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
    ```
 
 ## См. также

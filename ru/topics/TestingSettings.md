@@ -9,25 +9,25 @@
 Даже если стратегия тестируется на свечах, нужно подписываться на тиковые сделки:
 
 ```cs
-		\_connector.SubscribeTrades(security);
+		_connector.SubscribeTrades(security);
 		
 ```
 
 Если для стратегии нужны стаканы, нужно подписываться на стаканы:
 
 ```cs
-		\_connector.SubscribeMarketDepth(security);
+		_connector.SubscribeMarketDepth(security);
 		
 ```
 
 Если стаканов нет, то для проверки работоспособности стратегий, нуждающихся в стаканах, можно включить генерацию:
 
 ```cs
-var mdGenerator \= new TrendMarketDepthGenerator(connector.GetSecurityId(security));
-\_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
+var mdGenerator = new TrendMarketDepthGenerator(connector.GetSecurityId(security));
+_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe \= true,
-    Generator \= mdGeneratorб
+    IsSubscribe = true,
+    Generator = mdGeneratorб
 });
 		
 ```
@@ -35,33 +35,33 @@ var mdGenerator \= new TrendMarketDepthGenerator(connector.GetSecurityId(securit
 - Интервал обновления стакана [MarketDataGenerator.Interval](../api/StockSharp.Algo.Testing.MarketDataGenerator.Interval.html). Обновление не может быть чаще, чем приходят тиковые сделки (т.к. стаканы генерируются перед каждой сделкой):
 
   ```cs
-  mdGenerator.Interval \= TimeSpan.FromSeconds(1);
+  mdGenerator.Interval = TimeSpan.FromSeconds(1);
   				
   ```
 - Глубина стаканов [MarketDepthGenerator.MaxBidsDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth.html) и [MarketDepthGenerator.MaxAsksDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth.html). Чем больше \- тем медленнее тестирование:
 
   ```cs
-  mdGenerator.MaxAsksDepth \= 1; 
-  mdGenerator.MaxBidsDepth \= 1;
+  mdGenerator.MaxAsksDepth = 1; 
+  mdGenerator.MaxBidsDepth = 1;
   				
   ```
 - Объемы у [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) и [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) берутся из объема сделки, по которой идет генерация. Опция [MarketDepthGenerator.UseTradeVolume](../api/StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume.html) устанавливает реалистичный объем уровня в стакане:
 
   ```cs
-  mdGenerator.UseTradeVolume \= true;
+  mdGenerator.UseTradeVolume = true;
   				
   ```
 - Объем уровня [MarketDataGenerator.MinVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MinVolume.html) и [MarketDataGenerator.MaxVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume.html):
 
   ```cs
-  mdGenerator.MinVolume \= 1;
-  mdGenerator.MaxVolume \= 1;
+  mdGenerator.MinVolume = 1;
+  mdGenerator.MaxVolume = 1;
   				
   ```
 - Минимальный генерируемый спред равен [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html). Не следует генерировать спред между [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) и [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) больше чем 5 [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html) (чтобы при генерации из свечей не получалось слишком широкого спреда):
 
   ```cs
-  mdGenerator.MinSpreadStepCount \= 1;
-  mdGenerator.MaxSpreadStepCount \= 5;
+  mdGenerator.MinSpreadStepCount = 1;
+  mdGenerator.MaxSpreadStepCount = 5;
   				
   ```

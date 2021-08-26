@@ -12,18 +12,18 @@
    1. Создаем инструмент.
 
       ```none
-      var security \= new Security
+      var security = new Security
       {
-          Id \= secid,
-          Code \= secCode,
-          Board \= board
+          Id = secid,
+          Code = secCode,
+          Board = board
       };
        
       ```
    2. Создаем экземпляр класса загрузчика данных с Финама:
 
       ```none
-      \/\/ удаляем старый адаптер маркет\-данных и добавляем новый от Финам
+      // удаляем старый адаптер маркет-данных и добавляем новый от Финам
       connector.Adapter.InnerAdapters.Remove(connector.MarketDataAdapter);
       connector.Adapter.InnerAdapters.Add(new CustomHistoryMessageAdapter(new FinamMessageAdapter(connector.TransactionIdGenerator)));
       ```

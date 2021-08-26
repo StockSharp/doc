@@ -7,23 +7,23 @@
 Sample code
 
 ```xaml
-\<Window x:Class\="LoggingControls.MainWindow"
-        xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-        xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-        xmlns:sx\="clr\-namespace:StockSharp.Xaml;assembly\=StockSharp.Xaml"
-        Title\="MainWindow" Height\="350" Width\="525"\>
-    \<Grid\>
-        \<sx:Monitor x:Name\="Monitor" \/\>
-    \<\/Grid\>
-\<\/Window\>
+<Window x:Class="LoggingControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <sx:Monitor x:Name="Monitor" />
+    </Grid>
+</Window>
 				
 ```
 ```cs
-\/\/ creating a new instance of LogManager
-\_logManager \= new LogManager();
-\/\/ adding .NET traing as a logs source.
-\_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
-\/\/ adding Monitor as a logs listener.
-\_logManager.Listeners.Add(new GuiLogListener(Monitor));
+// creating a new instance of LogManager
+_logManager = new LogManager();
+// adding .NET traing as a logs source.
+_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+// adding Monitor as a logs listener.
+_logManager.Listeners.Add(new GuiLogListener(Monitor));
                   
 ```

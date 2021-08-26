@@ -3,7 +3,7 @@
 The code below demonstrates how to initialize the [XigniteMessageAdapter](../api/StockSharp.Xignite.XigniteMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-var messageAdapter \= new XigniteMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new XigniteMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
 							

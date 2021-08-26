@@ -11,11 +11,11 @@
    Также добавить соответствующий [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) в [Connector](../api/StockSharp.Algo.Connector.html) можно через код. Например, инициализация адаптера для [Interactive Brokers](IB.md) описана в пункте [Инициализация адаптера Interactive Brokers](IBSample.md) и выглядит следующим образом:
 
    ```cs
-   Connector Connector \= new Connector();				
+   Connector Connector = new Connector();				
    ...				
-   var messageAdapter \= new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
+   var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
    {
-   	Address \= "\<Your Address\>".To\<EndPoint\>(),
+   	Address = "<Your Address>".To<EndPoint>(),
    };
    Connector.Adapter.InnerAdapters.Add(messageAdapter);
    ...	
@@ -27,9 +27,9 @@
 
    ```cs
    ...
-   var tf \= (TimeSpan)CandlesPeriods.SelectedItem;
-   var series \= new CandleSeries(typeof(TimeFrameCandle), SelectedSecurity, tf);
-   Connector.SubscribeCandles(SelectedSecurity, DateTime.Now.Subtract(TimeSpan.FromTicks(tf.Ticks \* 100)), DateTime.Now);
+   var tf = (TimeSpan)CandlesPeriods.SelectedItem;
+   var series = new CandleSeries(typeof(TimeFrameCandle), SelectedSecurity, tf);
+   Connector.SubscribeCandles(SelectedSecurity, DateTime.Now.Subtract(TimeSpan.FromTicks(tf.Ticks * 100)), DateTime.Now);
    ...
    			
    ```
@@ -37,7 +37,7 @@
 
    ```cs
    ...
-   Connector.CandleSeriesProcessing +\= ProcessCandle;
+   Connector.CandleSeriesProcessing += ProcessCandle;
    ...
    			
    ```
@@ -54,9 +54,9 @@
    ```cs
    		
    ...         
-   var messageAdapter \= new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
+   var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
    {
-   	Address \= "\<Your Address\>".To\<EndPoint\>(),
+   	Address = "<Your Address>".To<EndPoint>(),
    };
    ...
    							
@@ -66,21 +66,21 @@
    ```cs
    	
    ...
-   SecurityNativeIdMessageAdapter \_securityAdapter;
+   SecurityNativeIdMessageAdapter _securityAdapter;
    if (adapter.IsNativeIdentifiers)
-   	\_securityAdapter \= new SecurityNativeIdMessageAdapter(adapter, new InMemoryNativeIdStorage());
-   var securities \= \_securityAdapter.GetSecurities(new SecurityLookupMessage
+   	_securityAdapter = new SecurityNativeIdMessageAdapter(adapter, new InMemoryNativeIdStorage());
+   var securities = _securityAdapter.GetSecurities(new SecurityLookupMessage
    {
-   	SecurityId \= new SecurityId
+   	SecurityId = new SecurityId
    	{
-   		SecurityCode \= "EUR"
+   		SecurityCode = "EUR"
    	}
    });
-   SecurityMessage eurUsd \= null;
+   SecurityMessage eurUsd = null;
    foreach (var security in securities)
    {
    	if (security.SecurityId.SecurityCode.CompareIgnoreCase("EURUSD"))
-   		eurUsd \= security;
+   		eurUsd = security;
    }
    ...
    							
@@ -89,7 +89,7 @@
 
    ```cs
    ...
-   var candles \= adapter.GetCandles(eurUsd.SecurityId, TimeSpan.FromDays(1), DateTimeOffset.Now.AddDays(\-100), DateTimeOffset.Now);
+   var candles = adapter.GetCandles(eurUsd.SecurityId, TimeSpan.FromDays(1), DateTimeOffset.Now.AddDays(-100), DateTimeOffset.Now);
    foreach (var candle in candles)
    {
    	Console.WriteLine(candle);

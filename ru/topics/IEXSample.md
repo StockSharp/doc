@@ -3,11 +3,11 @@
 Код ниже демонстрирует как инициализировать [IEXMessageAdapter](../api/StockSharp.IEX.IEXMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new IEXMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new IEXMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Token  \= "\<Your Token\>".To\<SecureString\>(),
+    Token  = "<Your Token>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

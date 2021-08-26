@@ -9,17 +9,17 @@ Rules suspension using
 - Out of the strategy:
 
   ```cs
-  MarketRuleHelper.SuspendRules(() \=\>	
+  MarketRuleHelper.SuspendRules(() =>	
   {
   	order
   		.WhenRegistered(Connector)
-  		.Do(() \=\> Connector.AddInfoLog("The order was successfully registered."))
+  		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
   		.Once()
   		.Apply(this);
   	
   	order
   		.WhenCancelled(Connector)
-  		.Do(() \=\> Connector.AddInfoLog("The order was successfully cancelled."))
+  		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
   		.Once()
   		.Apply(this);
   });
@@ -32,10 +32,10 @@ Rules suspension using
   {
   	...
   	
-         this.SuspendRules(() \=\>
+         this.SuspendRules(() =>
          {
-  		\_connector
-                 .WhenCandlesFinished(\_series)
+  		_connector
+                 .WhenCandlesFinished(_series)
                  .Do(FinishCandle)
                  .Apply(this);
              Security

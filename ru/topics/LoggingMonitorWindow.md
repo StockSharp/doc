@@ -31,13 +31,13 @@
 1. Вначале необходимо создать окно:
 
    ```cs
-   var monitor \= new MonitorWindow();
+   var monitor = new MonitorWindow();
    monitor.Show();
    ```
 2. Далее, созданное окно необходимо через [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html) добавить в свой [LogManager](../api/StockSharp.Logging.LogManager.html):
 
    ```cs
-   \_logManager.Listeners.Add(new GuiLogListener(monitor));
+   _logManager.Listeners.Add(new GuiLogListener(monitor));
    ```
 3. После этого все источники [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html) (стратегии, подключения и т.д.), будут посылать сообщения в [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html).
 

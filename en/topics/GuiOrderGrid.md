@@ -20,43 +20,43 @@
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 
 ```xaml
-\<Window x:Class\="Sample.OrdersWindow"
-    xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-    xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-    xmlns:loc\="clr\-namespace:StockSharp.Localization;assembly\=StockSharp.Localization"
-    xmlns:xaml\="http:\/\/schemas.stocksharp.com\/xaml"
-    Title\="{x:Static loc:LocalizedStrings.Orders}" Height\="410" Width\="930"\>
-	\<xaml:OrderGrid x:Name\="OrderGrid" x:FieldModifier\="public" OrderCanceling\="OrderGrid\_OnOrderCanceling" OrderReRegistering\="OrderGrid\_OnOrderReRegistering" \/\>
-\<\/Window\>
+<Window x:Class="Sample.OrdersWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+    xmlns:xaml="http://schemas.stocksharp.com/xaml"
+    Title="{x:Static loc:LocalizedStrings.Orders}" Height="410" Width="930">
+	<xaml:OrderGrid x:Name="OrderGrid" x:FieldModifier="public" OrderCanceling="OrderGrid_OnOrderCanceling" OrderReRegistering="OrderGrid_OnOrderReRegistering" />
+</Window>
 	  				
 ```
 ```cs
-private readonly Connector \_connector \= new Connector();
+private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
  	.......................................	
-	\_connector.NewOrder +\= order \=\> \_ordersWindow.OrderGrid.Orders.Add(order);
+	_connector.NewOrder += order => _ordersWindow.OrderGrid.Orders.Add(order);
 	
-	\_connector.NewStopOrder +\= order \=\> \_stopOrdersWindow.OrderGrid.Orders.Add(order);
+	_connector.NewStopOrder += order => _stopOrdersWindow.OrderGrid.Orders.Add(order);
 	.......................................			
 }
               	
-private void OrderGrid\_OnOrderCanceling(IEnumerable\<Order\> orders)
+private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 {
-	orders.ForEach(\_connector.CancelOrder);
+	orders.ForEach(_connector.CancelOrder);
 }
-private void OrderGrid\_OnOrderReRegistering(Order order)
+private void OrderGrid_OnOrderReRegistering(Order order)
 {
-	var window \= new OrderWindow
+	var window = new OrderWindow
 	{
-		Title \= LocalizedStrings.Str2976Params.Put(order.TransactionId),
-		SecurityProvider \= \_connector,
-		MarketDataProvider \= \_connector,
-		Portfolios \= new PortfolioDataSource(\_connector),
-		Order \= order.ReRegisterClone(newVolume: order.Balance)
+		Title = LocalizedStrings.Str2976Params.Put(order.TransactionId),
+		SecurityProvider = _connector,
+		MarketDataProvider = _connector,
+		Portfolios = new PortfolioDataSource(_connector),
+		Order = order.ReRegisterClone(newVolume: order.Balance)
 	};
 	if (window.ShowModal(this))
-		\_connector.ReRegisterOrder(order, window.Order);
+		_connector.ReRegisterOrder(order, window.Order);
 }
 	  				
 ```

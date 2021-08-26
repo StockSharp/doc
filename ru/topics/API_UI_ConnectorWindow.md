@@ -9,11 +9,11 @@
 Вызов данного окна следует выполнять через метод расширение [Configure](../api/StockSharp.Xaml.Extensions.Configure.html), в который передается [Connector](../api/StockSharp.Algo.Connector.html) и родительское окно. При удачной настройке метод расширение [Configure](../api/StockSharp.Xaml.Extensions.Configure.html) вернет значение "true". Ниже приведен код вызова окна настройки подключения коннектора и сохранения настроек в файл. 
 
 ```cs
-		private void Setting\_Click(object sender, RoutedEventArgs e)
+		private void Setting_Click(object sender, RoutedEventArgs e)
 		{
-			if (\_connector.Configure(this))
+			if (_connector.Configure(this))
 			{
-				new XmlSerializer\<SettingsStorage\>().Serialize(\_connector.Save(), \_connectorFile);
+				new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 		}
 	  				

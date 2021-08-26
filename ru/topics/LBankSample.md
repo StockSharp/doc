@@ -3,12 +3,12 @@
 Код ниже демонстрирует как инициализировать [LBankMessageAdapter](../api/StockSharp.LBank.LBankMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-            Connector Connector \= new Connector();				
+            Connector Connector = new Connector();				
             ...				
-            var messageAdapter \= new LBankMessageAdapter(Connector.TransactionIdGenerator)
+            var messageAdapter = new LBankMessageAdapter(Connector.TransactionIdGenerator)
             {
-                Key \= "\<Your API Key\>".To\<SecureString\>(),
-                Secret \= "\<Your API Secret\>".To\<SecureString\>(),
+                Key = "<Your API Key>".To<SecureString>(),
+                Secret = "<Your API Secret>".To<SecureString>(),
             };
             Connector.Adapter.InnerAdapters.Add(messageAdapter);
             ...	

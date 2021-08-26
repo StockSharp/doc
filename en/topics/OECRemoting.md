@@ -11,7 +11,7 @@ The following modes of [OpenECryRemoting](../api/StockSharp.OpenECry.OpenECryRem
 To explicitly set the [OECRemoting](https://gainfutures.com/gainfuturesapi) mode you should specify the desired mode immediately after the [OpenECryTrader](../api/StockSharp.OpenECry.OpenECryTrader.html) object creation. For example, to set the [Secondary](../api/StockSharp.OpenECry.OpenECryRemoting.Secondary.html) mode:
 
 ```cs
-Trader.RemotingRequired \= OECRemoting.Secondary;
+Trader.RemotingRequired = OECRemoting.Secondary;
 		
 ```
 

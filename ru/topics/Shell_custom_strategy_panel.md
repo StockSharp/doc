@@ -11,9 +11,9 @@
 Заменить UserControl на controls:BaseStudioControl
 
 ```xaml
-\<controls:BaseStudioControl\>
+<controls:BaseStudioControl>
 ...
-\<\/controls:BaseStudioControl\>
+</controls:BaseStudioControl>
 	  				
 ```
 
@@ -42,7 +42,7 @@
 			base.Load(storage);
 			try
 			{
-				Strategy \= MainWindow.Instance.CreateStrategy(storage.GetValue\<SettingsStorage\>(nameof(Strategy)));
+				Strategy = MainWindow.Instance.CreateStrategy(storage.GetValue<SettingsStorage>(nameof(Strategy)));
 				Init(Strategy);
 			}
 			catch (Exception e)

@@ -11,25 +11,25 @@ The [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class uses an ap
 To use event\-driven approach, you must use the [Strategy.Rules](../api/StockSharp.Algo.Strategies.Strategy.Rules.html) property. The list of rules set through this property. Each of the rules stores an event trigger condition and the action itself, which handles this event. Here is the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) strategy code, which uses the event model: 
 
 ```cs
-\/\/\/ \<summary\>
-\/\/\/ Delta hedging options strategy.
-\/\/\/ \<\/summary\>
+/// <summary>
+/// Delta hedging options strategy.
+/// </summary>
 public class DeltaHedgeStrategy : Strategy
 {
-    private readonly Strategy \_tradingStrategy;
-    \/\/\/ \<summary\>
-    \/\/\/ Create \<see cref\="DeltaHedgeStrategy"\/\>.
-    \/\/\/ \<\/summary\>
-    \/\/\/ \<param name\="tradingStrategy"\>A strategy that contains child strategies that trade on a separate strike.\<\/param\>
+    private readonly Strategy _tradingStrategy;
+    /// <summary>
+    /// Create <see cref="DeltaHedgeStrategy"/>.
+    /// </summary>
+    /// <param name="tradingStrategy">A strategy that contains child strategies that trade on a separate strike.</param>
     public DeltaHedgeStrategy(Strategy tradingStrategy)
     {
-        if (tradingStrategy \=\= null)
+        if (tradingStrategy == null)
             throw new ArgumentNullException("tradingStrategy");
-        \_tradingStrategy \= tradingStrategy;
+        _tradingStrategy = tradingStrategy;
     }
     protected override void OnStarted()
     {
-        \_tradingStrategy
+        _tradingStrategy
             .WhenNewMyTrade()
             .Do(ReHedge).Apply(this);
         Security.WhenChanged(Connector).Do(ReHedge).Apply(this);
@@ -37,32 +37,32 @@ public class DeltaHedgeStrategy : Strategy
     }
     private void ReHedge()
     {
-        if (base.ChildStrategies.Count \> 0)
+        if (base.ChildStrategies.Count > 0)
         {
-            this.AddWarningLog("Re\-hedging has already been launched.");
+            this.AddWarningLog("Re-hedging has already been launched.");
             return;
         }
-        var futurePosition \= \_tradingStrategy.ChildStrategies.SyncGet(c \=\> c.Sum(strategy \=\>
+        var futurePosition = _tradingStrategy.ChildStrategies.SyncGet(c => c.Sum(strategy =>
         {
-            var delta \= strategy.Security.Delta;
+            var delta = strategy.Security.Delta;
             this.AddInfoLog("The Delta for the {0} tool is equal to {1}.", strategy.Security, delta);
             this.AddInfoLog("Position {0}.", strategy.PositionManager.Position);
-            return delta \* strategy.PositionManager.Position;
+            return delta * strategy.PositionManager.Position;
         }));
         this.AddInfoLog("Delta total {0}.", futurePosition);
-        var diff \= (int)futurePosition.Round() + (int)base.PositionManager.Position;
-        if (diff \!\= 0)
+        var diff = (int)futurePosition.Round() + (int)base.PositionManager.Position;
+        if (diff != 0)
         {
             this.AddInfoLog("The difference in position {0}.", diff);
-            base.ChildStrategies.Add(CreateQuoting(diff \> 0 ? Sides.Sell : Sides.Buy, diff.Abs()));
+            base.ChildStrategies.Add(CreateQuoting(diff > 0 ? Sides.Sell : Sides.Buy, diff.Abs()));
         }
     }
-    \/\/\/ \<summary\>
-    \/\/\/ Create a quote strategy to change the position.
-    \/\/\/ \<\/summary\>
-    \/\/\/ \<param name\="direction"\>Direction of quotation.\<\/param\>
-    \/\/\/ \<param name\="volume"\>The volume of quotation.\<\/param\>
-    \/\/\/ \<returns\>The strategy of quoting.\<\/returns\>
+    /// <summary>
+    /// Create a quote strategy to change the position.
+    /// </summary>
+    /// <param name="direction">Direction of quotation.</param>
+    /// <param name="volume">The volume of quotation.</param>
+    /// <returns>The strategy of quoting.</returns>
     protected virtual QuotingStrategy CreateQuoting(Sides direction, int volume)
     {
         return new MarketQuotingStrategy(direction, volume);
@@ -74,7 +74,7 @@ public class DeltaHedgeStrategy : Strategy
 This strategy at start adds the rule on new trades event (for rehedging): 
 
 ```cs
-\_tradingStrategy.WhenNewMyTrade().Do(ReHedge).Apply(this);
+_tradingStrategy.WhenNewMyTrade().Do(ReHedge).Apply(this);
 		
 ```
 

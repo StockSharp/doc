@@ -7,11 +7,11 @@
 Ниже приведен пример кода вызова окна настройки контроля рисков для стратегии. 
 
 ```cs
-		private void RiskButton\_OnClick(object sender, RoutedEventArgs e)
+		private void RiskButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			var wnd \= new RiskWindow();
-			wnd.Rules.AddRange(Strategy.RiskManager.Rules.Select(r \=\> r.Clone()));
-			if (\!wnd.ShowModal(this))
+			var wnd = new RiskWindow();
+			wnd.Rules.AddRange(Strategy.RiskManager.Rules.Select(r => r.Clone()));
+			if (!wnd.ShowModal(this))
 				return;
 			Strategy.RiskManager.Rules.Clear();
 			Strategy.RiskManager.Rules.AddRange(wnd.Rules);

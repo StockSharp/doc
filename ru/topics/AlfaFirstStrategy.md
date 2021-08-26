@@ -3,12 +3,12 @@
 Код ниже демонстрирует как инициализировать [AlfaDirectMessageAdapter](../api/StockSharp.AlfaDirect.AlfaDirectMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new AlfaDirectMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new AlfaDirectMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

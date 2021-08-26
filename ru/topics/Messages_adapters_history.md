@@ -9,15 +9,15 @@
 ```cs
       		SendOutMessage(new TimeFrameCandleMessage
 			{
-				OpenPrice \= (decimal)candle.Open,
-				ClosePrice \= (decimal)candle.Close,
-				HighPrice \= (decimal)candle.High,
-				LowPrice \= (decimal)candle.Low,
-				TotalVolume \= (decimal)candle.AssetVolume,
-				OpenTime \= candle.StartTime,
-				State \= candle.IsFormed ? CandleStates.Finished : CandleStates.Active,
-				TotalTicks \= candle.TradesCount,
-				OriginalTransactionId \= \_candleTransactions.TryGetValue(Tuple.Create(secId, tf)), \/\/ \<\- заполняем идентификато подписки, по которому внешний код определит, какой инструмент и тайм\-фрейм был в подписке
+				OpenPrice = (decimal)candle.Open,
+				ClosePrice = (decimal)candle.Close,
+				HighPrice = (decimal)candle.High,
+				LowPrice = (decimal)candle.Low,
+				TotalVolume = (decimal)candle.AssetVolume,
+				OpenTime = candle.StartTime,
+				State = candle.IsFormed ? CandleStates.Finished : CandleStates.Active,
+				TotalTicks = candle.TradesCount,
+				OriginalTransactionId = _candleTransactions.TryGetValue(Tuple.Create(secId, tf)), // <- заполняем идентификато подписки, по которому внешний код определит, какой инструмент и тайм-фрейм был в подписке
 			});
       
 ```
@@ -27,15 +27,15 @@
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
 {
-	\/\/ ...
+	// ...
 	
-	\/\/\/ \<inheritdoc \/\>
+	/// <inheritdoc />
 	public override TimeSpan GetHistoryStepSize(DataType dataType, out TimeSpan iterationInterval)
 	{
-		var step \= base.GetHistoryStepSize(dataType, out iterationInterval);
+		var step = base.GetHistoryStepSize(dataType, out iterationInterval);
 			
-		if (dataType \=\= DataType.Ticks) \/\/ тиковые данные максимально поддерживает диапазон в один день
-			step \= TimeSpan.FromDays(1);
+		if (dataType == DataType.Ticks) // тиковые данные максимально поддерживает диапазон в один день
+			step = TimeSpan.FromDays(1);
 		return step;
 	}
 }

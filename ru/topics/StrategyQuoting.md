@@ -84,24 +84,24 @@
 1. Для того, чтобы алгоритм скользящей средней, описанный в разделе [Итерационная модель](StrategyCreate.md), стал работать совместно с котировщиком, перед началом работы необходимо запустить экспорт стакана:
 
    ```cs
-   if (\!\_isLkohOrderBookStarted)
+   if (!_isLkohOrderBookStarted)
    {
-   	\/\/ для алгоритма котирования необходимо включить экспорт стакана
-   	\_connector.SubscribeMarketDepth(lkoh);
-   	\_isLkohOrderBookStarted \= true;
+   	// для алгоритма котирования необходимо включить экспорт стакана
+   	_connector.SubscribeMarketDepth(lkoh);
+   	_isLkohOrderBookStarted = true;
    }
    ```
 2. Необходимо заменить код в классе SmaStrategy c:
 
    ```cs
-   \/\/ регистрируем ее
+   // регистрируем ее
    base.RegisterOrder(order);
    ```
 
    на: 
 
    ```cs
-   var strategy \= new MarketQuotingStrategy(direction, volume);
+   var strategy = new MarketQuotingStrategy(direction, volume);
    ChildStrategies.Add(strategy);
    ```
 

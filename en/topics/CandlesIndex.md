@@ -5,57 +5,57 @@ To create [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html), 
 For example, create 1 min candles for spread APM5 \- ESM5:
 
 ```cs
-private Connector \_connector;
-private Security \_instr1;
-private Security \_instr2;
-private WeightedIndexSecurity \_indexInstr;
-private const string \_secCode1 \= "APM5";
-private const string \_secCode2 \= "ESM5";
-private CandleSeries \_indexSeries;
-readonly TimeSpan \_timeFrame \= TimeSpan.FromMinutes(1);
-private ChartArea \_area;
-private ChartCandleElement \_candlesElem;
+private Connector _connector;
+private Security _instr1;
+private Security _instr2;
+private WeightedIndexSecurity _indexInstr;
+private const string _secCode1 = "APM5";
+private const string _secCode2 = "ESM5";
+private CandleSeries _indexSeries;
+readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
+private ChartArea _area;
+private ChartCandleElement _candlesElem;
 ...
-if (\_connector.Configure(this))
+if (_connector.Configure(this))
 			{
-				new XmlSerializer\<SettingsStorage\>().Serialize(\_connector.Save(), \_connectorFile);
+				new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 			
 ...
-\_area \= new ChartArea();
-\_chart.Areas.Add(\_area);
-\_candlesElem \= new ChartCandleElement();
-\_area.Candles.Add(\_candlesElem);
+_area = new ChartArea();
+_chart.Areas.Add(_area);
+_candlesElem = new ChartCandleElement();
+_area.Candles.Add(_candlesElem);
 ...
-\_connector.CandleSeriesProcessing +\= Connector\_CandleSeriesProcessing;
+_connector.CandleSeriesProcessing += Connector_CandleSeriesProcessing;
 ....
-ConfigManager.RegisterService\<ISecurityProvider\>(\_connector);
-ConfigManager.RegisterService\<ICompilerService\>(new RoslynCompilerService());
+ConfigManager.RegisterService<ISecurityProvider>(_connector);
+ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
-\_indexInstr \= new WeightedIndexSecurity() { Board \= ExchangeBoard.Nyse, Id \= "IndexInstr" };
-\_indexInstr.Weights.Add(\_instr1, 1);
-\_indexInstr.Weights.Add(\_instr2, \-1);
-\_indexSeries \=
-	new CandleSeries(typeof(TimeFrameCandle), \_indexInstr, \_timeFrame)
+_indexInstr = new WeightedIndexSecurity() { Board = ExchangeBoard.Nyse, Id = "IndexInstr" };
+_indexInstr.Weights.Add(_instr1, 1);
+_indexInstr.Weights.Add(_instr2, -1);
+_indexSeries =
+	new CandleSeries(typeof(TimeFrameCandle), _indexInstr, _timeFrame)
 	{
-		BuildCandlesMode \= MarketDataBuildModes.Build,
-		BuildCandlesFrom \= MarketDataTypes.Trades,
+		BuildCandlesMode = MarketDataBuildModes.Build,
+		BuildCandlesFrom = MarketDataTypes.Trades,
 	};
 ...
-\_connector.SubscribeCandles(\_indexSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);			
+_connector.SubscribeCandles(_indexSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);			
 		
 ```
 
 After that, the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) \- DrawCandles event handler will receive the candles, which can be displayed on the chart:
 
 ```cs
-private void Connector\_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
+private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
 {
-    if (candleSeries \=\= \_indexSeries) 
+    if (candleSeries == _indexSeries) 
        {
-          var chartData \= new ChartDrawData();
-          chartData.Group(candle.OpenTime).Add(\_candleElement, candle);
-          \_chart.Draw(chartData);
+          var chartData = new ChartDrawData();
+          chartData.Group(candle.OpenTime).Add(_candleElement, candle);
+          _chart.Draw(chartData);
        }
 }
 		

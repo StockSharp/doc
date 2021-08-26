@@ -16,22 +16,22 @@
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 
 ```xaml
-\<Window x:Class\="SampleBarChart.QuotesWindow"
-    xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-    xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-    xmlns:xaml\="http:\/\/schemas.stocksharp.com\/xaml"
-    Title\="QuotesWindow" Height\="600" Width\="280"\>
-	\<xaml:MarketDepthControl x:Name\="DepthCtrl" x:FieldModifier\="public" \/\>
-\<\/Window\>
+<Window x:Class="SampleBarChart.QuotesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:xaml="http://schemas.stocksharp.com/xaml"
+    Title="QuotesWindow" Height="600" Width="280">
+	<xaml:MarketDepthControl x:Name="DepthCtrl" x:FieldModifier="public" />
+</Window>
 	  				
 ```
 ```cs
-private void ConnectorOnMarketDepthsChanged(IEnumerable\<MarketDepth\> depths)
+private void ConnectorOnMarketDepthsChanged(IEnumerable<MarketDepth> depths)
 {
 	foreach (var depth in depths)
 	{
-		var wnd \= \_quotesWindows.TryGetValue(depth.Security);
-		if (wnd \!\= null)
+		var wnd = _quotesWindows.TryGetValue(depth.Security);
+		if (wnd != null)
 			wnd.DepthCtrl.UpdateDepth(depth);
 	}
 }

@@ -26,55 +26,55 @@ The moving average algorithm:
    ```cs
    class SmaStrategy : Strategy
    {
-   	private readonly Connector \_connector;
-   	private readonly CandleSeries \_series;
-   	private bool \_isShortLessThenLong;
+   	private readonly Connector _connector;
+   	private readonly CandleSeries _series;
+   	private bool _isShortLessThenLong;
    	public SmaStrategy(CandleSeries series, SimpleMovingAverage longSma, SimpleMovingAverage shortSma)
    	{
-   		\_series \= series;
-   		\_connector \= ((Connector)this.Connector);
-   		LongSma \= longSma;
-   		ShortSma \= shortSma;
+   		_series = series;
+   		_connector = ((Connector)this.Connector);
+   		LongSma = longSma;
+   		ShortSma = shortSma;
    	}
    	public SimpleMovingAverage LongSma { get; }
    	public SimpleMovingAverage ShortSma { get; }
    	protected override void OnStarted()
    	{
-   		\_connector
-   			.WhenCandlesFinished(\_series)
+   		_connector
+   			.WhenCandlesFinished(_series)
    			.Do(ProcessCandle)
    			.Apply(this);
-   		\/\/ store current values for short and long
-   		\_isShortLessThenLong \= ShortSma.GetCurrentValue() \< LongSma.GetCurrentValue();
+   		// store current values for short and long
+   		_isShortLessThenLong = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
    		base.OnStarted();
    	}
    	private void ProcessCandle(Candle candle)
    	{
-   		\/\/ strategy are stopping
-   		if (ProcessState \=\= ProcessStates.Stopping)
+   		// strategy are stopping
+   		if (ProcessState == ProcessStates.Stopping)
    		{
    			CancelActiveOrders();
    			return;
    		}
-   		\/\/ process new candle
+   		// process new candle
    		LongSma.Process(candle);
    		ShortSma.Process(candle);
-   		\/\/ calc new values for short and long
-   		var isShortLessThenLong \= ShortSma.GetCurrentValue() \< LongSma.GetCurrentValue();
-   		\/\/ crossing happened
-   		if (\_isShortLessThenLong \!\= isShortLessThenLong)
+   		// calc new values for short and long
+   		var isShortLessThenLong = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
+   		// crossing happened
+   		if (_isShortLessThenLong != isShortLessThenLong)
    		{
-   			\/\/ if short less than long, the sale, otherwise buy
-   			var direction \= isShortLessThenLong ? Sides.Sell : Sides.Buy;
-   			\/\/ calc size for open position or revert
-   			var volume \= Position \=\= 0 ? Volume : Position.Abs() \* 2;
-   			\/\/ register order (limit order)
-   			\/\/RegisterOrder(this.CreateOrder(direction, (decimal)Security.GetCurrentPrice(direction), volume));
-   			\/\/ or revert position via market quoting
-   			var strategy \= new MarketQuotingStrategy(direction, volume);
+   			// if short less than long, the sale, otherwise buy
+   			var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+   			// calc size for open position or revert
+   			var volume = Position == 0 ? Volume : Position.Abs() * 2;
+   			// register order (limit order)
+   			//RegisterOrder(this.CreateOrder(direction, (decimal)Security.GetCurrentPrice(direction), volume));
+   			// or revert position via market quoting
+   			var strategy = new MarketQuotingStrategy(direction, volume);
    			ChildStrategies.Add(strategy);
-   			\/\/ store current values for short and long
-   			\_isShortLessThenLong \= isShortLessThenLong;
+   			// store current values for short and long
+   			_isShortLessThenLong = isShortLessThenLong;
    		}
    	}
    }
@@ -93,119 +93,119 @@ The moving average algorithm:
 4. Initialization of the strategy itself and filling in its by the historical data: 
 
    ```cs
-   \_connector.Connected +\= () \=\>
+   _connector.Connected += () =>
    {
-   	\_connector.NewSecurity +\= security \=\>
+   	_connector.NewSecurity += security =>
    	{
-   		if (\!security.Code.CompareIgnoreCase("AAPL"))
+   		if (!security.Code.CompareIgnoreCase("AAPL"))
    			return;
-   		\_aapl \= security;
-   		this.GuiAsync(() \=\>
+   		_aapl = security;
+   		this.GuiAsync(() =>
    		{
-   			Start.IsEnabled \= true;
+   			Start.IsEnabled = true;
    		});
    	};
-   	\_connector.NewMyTrade +\= trade \=\>
+   	_connector.NewMyTrade += trade =>
    	{
-   		if (\_strategy \!\= null)
+   		if (_strategy != null)
    		{
-   			if (\_strategy.Orders.Contains(trade.Order))
+   			if (_strategy.Orders.Contains(trade.Order))
    				Trades.Trades.Add(trade);
    		}
    	};
-   	\_connector.CandleSeriesProcessing +\= (series, candle) \=\>
+   	_connector.CandleSeriesProcessing += (series, candle) =>
    	{
-   		if (\_isTodaySmaDrawn && candle.State \=\= CandleStates.Finished)
+   		if (_isTodaySmaDrawn && candle.State == CandleStates.Finished)
    			ProcessCandle(candle);
    	};
-   	\/\/\_connector.Error +\= ex \=\> this.GuiAsync(() \=\> MessageBox.Show(this, ex.ToString()));
-   	\_connector.ConnectionError +\= ex \=\>
+   	//_connector.Error += ex => this.GuiAsync(() => MessageBox.Show(this, ex.ToString()));
+   	_connector.ConnectionError += ex =>
    	{
-   		if (ex \!\= null)
-   			this.GuiAsync(() \=\> MessageBox.Show(this, ex.ToString()));
+   		if (ex != null)
+   			this.GuiAsync(() => MessageBox.Show(this, ex.ToString()));
    	};
-   	this.GuiAsync(() \=\>
+   	this.GuiAsync(() =>
    	{
-   		ConnectBtn.IsEnabled \= false;
-   		Report.IsEnabled \= true;
+   		ConnectBtn.IsEnabled = false;
+   		Report.IsEnabled = true;
    	});
    };
    ...
    private void StartClick(object sender, RoutedEventArgs e)
    {
-   	if (\_strategy \=\= null)
+   	if (_strategy == null)
    	{
-   		if (Portfolios.SelectedPortfolio \=\= null)
+   		if (Portfolios.SelectedPortfolio == null)
    		{
    			MessageBox.Show(this, LocalizedStrings.Str3009);
    			return;
    		}
-   		var series \= new CandleSeries(typeof(TimeFrameCandle), \_aapl, \_timeFrame);
-   		\_strategy \= new SmaStrategy(series, new SimpleMovingAverage { Length \= 80 }, new SimpleMovingAverage { Length \= 10 })
+   		var series = new CandleSeries(typeof(TimeFrameCandle), _aapl, _timeFrame);
+   		_strategy = new SmaStrategy(series, new SimpleMovingAverage { Length = 80 }, new SimpleMovingAverage { Length = 10 })
    		{
-   			Volume \= 1,
-   			Security \= \_aapl,
-   			Portfolio \= Portfolios.SelectedPortfolio,
-   			Connector \= \_connector,
+   			Volume = 1,
+   			Security = _aapl,
+   			Portfolio = Portfolios.SelectedPortfolio,
+   			Connector = _connector,
    		};
-   		\_strategy.Log +\= OnLog;
-   		\_strategy.PropertyChanged +\= OnStrategyPropertyChanged;
-   		\_candlesElem \= new ChartCandleElement();
-   		\_area.Elements.Add(\_candlesElem);
-   		\_longMaElem \= new ChartIndicatorElement
+   		_strategy.Log += OnLog;
+   		_strategy.PropertyChanged += OnStrategyPropertyChanged;
+   		_candlesElem = new ChartCandleElement();
+   		_area.Elements.Add(_candlesElem);
+   		_longMaElem = new ChartIndicatorElement
    		{
-   			Title \= LocalizedStrings.Long,
-   			Color \= Colors.OrangeRed
+   			Title = LocalizedStrings.Long,
+   			Color = Colors.OrangeRed
    		};
-   		\_area.Elements.Add(\_longMaElem);
-   		\_shortMaElem \= new ChartIndicatorElement
+   		_area.Elements.Add(_longMaElem);
+   		_shortMaElem = new ChartIndicatorElement
    		{
-   			Title \= LocalizedStrings.Short,
-   			Color \= Colors.RoyalBlue
+   			Title = LocalizedStrings.Short,
+   			Color = Colors.RoyalBlue
    		};
-   		\_area.Elements.Add(\_shortMaElem);
-   		IEnumerable\<Candle\> candles \= CultureInfo.InvariantCulture.DoInCulture(() \=\> File.ReadAllLines("AAPL\_history.txt").Select(line \=\>
+   		_area.Elements.Add(_shortMaElem);
+   		IEnumerable<Candle> candles = CultureInfo.InvariantCulture.DoInCulture(() => File.ReadAllLines("AAPL_history.txt").Select(line =>
    		{
-   			var parts \= line.Split(',');
-   			var time \= (parts\[0\] + parts\[1\]).ToDateTime("yyyyMMddHHmmss").ApplyTimeZone(TimeHelper.Moscow);
+   			var parts = line.Split(',');
+   			var time = (parts[0] + parts[1]).ToDateTime("yyyyMMddHHmmss").ApplyTimeZone(TimeHelper.Moscow);
    			return (Candle)new TimeFrameCandle
    			{
-   				OpenPrice \= parts\[2\].To\<decimal\>(),
-   				HighPrice \= parts\[3\].To\<decimal\>(),
-   				LowPrice \= parts\[4\].To\<decimal\>(),
-   				ClosePrice \= parts\[5\].To\<decimal\>(),
-   				TimeFrame \= \_timeFrame,
-   				OpenTime \= time,
-   				CloseTime \= time + \_timeFrame,
-   				TotalVolume \= parts\[6\].To\<decimal\>(),
-   				Security \= \_aapl,
-   				State \= CandleStates.Finished,
+   				OpenPrice = parts[2].To<decimal>(),
+   				HighPrice = parts[3].To<decimal>(),
+   				LowPrice = parts[4].To<decimal>(),
+   				ClosePrice = parts[5].To<decimal>(),
+   				TimeFrame = _timeFrame,
+   				OpenTime = time,
+   				CloseTime = time + _timeFrame,
+   				TotalVolume = parts[6].To<decimal>(),
+   				Security = _aapl,
+   				State = CandleStates.Finished,
    			};
    		}).ToArray());
-   		var lastCandleTime \= default(DateTimeOffset);
+   		var lastCandleTime = default(DateTimeOffset);
    		foreach (var candle in candles)
    		{
    			ProcessCandle(candle);
-   			lastCandleTime \= candle.OpenTime;
+   			lastCandleTime = candle.OpenTime;
    		}
-   		\_connector.SubscribeCandles(\_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
+   		_connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
    ...
    ```
 5. Start and stop of the trading strategy is as follows: 
 
    ```cs
    ...
-   	if (\_strategy.ProcessState \=\= ProcessStates.Stopped)
+   	if (_strategy.ProcessState == ProcessStates.Stopped)
    	{
-   		\_connector.SubscribeMarketDepth(\_strategy.Security);
-   		\_strategy.Start();
-   		Start.Content \= LocalizedStrings.Str242;
+   		_connector.SubscribeMarketDepth(_strategy.Security);
+   		_strategy.Start();
+   		Start.Content = LocalizedStrings.Str242;
    	}
    	else
    	{
-   		\_connector.UnSubscribeMarketDepth(\_strategy.Security);
-   		\_strategy.Stop();
-   		Start.Content \= LocalizedStrings.Str2421;
+   		_connector.UnSubscribeMarketDepth(_strategy.Security);
+   		_strategy.Stop();
+   		Start.Content = LocalizedStrings.Str2421;
    	}
    ...	
    	
@@ -221,11 +221,11 @@ The moving average algorithm:
    foreach (var candle in candles)
    {
    	ProcessCandle(candle);
-   	lastCandleTime \= candle.OpenTime;
+   	lastCandleTime = candle.OpenTime;
    }
-   \_connector.Start(series);
-   var bounds \= \_timeFrame.GetCandleBounds(\_connector.CurrentTime);
-   candles \= \_connector.GetCandles(series, new Range\<DateTimeOffset\>(lastCandleTime + \_timeFrame, bounds.Min));
+   _connector.Start(series);
+   var bounds = _timeFrame.GetCandleBounds(_connector.CurrentTime);
+   candles = _connector.GetCandles(series, new Range<DateTimeOffset>(lastCandleTime + _timeFrame, bounds.Min));
    foreach (var candle in candles)
    {
    	ProcessCandle(candle);
@@ -233,14 +233,14 @@ The moving average algorithm:
    ...
    private void ProcessCandle(Candle candle)
    {
-   	var longValue \= candle.State \=\= CandleStates.Finished ? \_strategy.LongSma.Process(candle) : null;
-   	var shortValue \= candle.State \=\= CandleStates.Finished ? \_strategy.ShortSma.Process(candle) : null;
-   	var chartData \= new ChartDrawData();
+   	var longValue = candle.State == CandleStates.Finished ? _strategy.LongSma.Process(candle) : null;
+   	var shortValue = candle.State == CandleStates.Finished ? _strategy.ShortSma.Process(candle) : null;
+   	var chartData = new ChartDrawData();
    	chartData
    		.Group(candle.OpenTime)
-   			.Add(\_candlesElem, candle)
-   			.Add(\_longMaElem, longValue)
-   			.Add(\_shortMaElem, shortValue);
+   			.Add(_candlesElem, candle)
+   			.Add(_longMaElem, longValue)
+   			.Add(_shortMaElem, shortValue);
    	Chart.Draw(chartData);
    }
    ```

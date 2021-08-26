@@ -6,13 +6,13 @@
 public override void Load(SettingsStorage settings)
 {
 	if (settings.Contains("UsedVolume"))
-	    Id \= settings.GetValue\<Guid\>("UsedVolume");
+	    Id = settings.GetValue<Guid>("UsedVolume");
 	
     if (settings.Contains("Ticks"))
-        Name \= settings.GetValue\<string\>("Ticks");
+        Name = settings.GetValue<string>("Ticks");
 	
     if (settings.Contains("SpreadVolume"))
-        Volume \= settings.GetValue\<decimal\>("SpreadVolume");
+        Volume = settings.GetValue<decimal>("SpreadVolume");
 	        
 	base.Load(settings);
 }
@@ -31,11 +31,11 @@ public override void Save(SettingsStorage settings)
 Для сохранения и загрузки настроек из внешнего файла можно воспользоваться соответственно сериализацией и десериализацией, реализованной в [S\#](StockSharpAbout.md). 
 
 ```cs
-var newStrategy \= new MarketProfileStrategy();
+var newStrategy = new MarketProfileStrategy();
 if (File.Exists("marketProfile.xml"))
 {
-    \/\/Загрузка настроек стратегии из существующего конфигурационного файла
-    var settingsStorage \= new XmlSerializer\<SettingsStorage\>().Deserialize("marketProfile.xml");
+    //Загрузка настроек стратегии из существующего конфигурационного файла
+    var settingsStorage = new XmlSerializer<SettingsStorage>().Deserialize("marketProfile.xml");
     newStrategy.Load(settingsStorage);
 }
 ```
@@ -52,8 +52,8 @@ public override void Save(SettingsStorage settings)
 	    
 	base.Save(settings);
 	
-	\/\/Сохраняем настройки в файл
-	new XmlSerializer\<SettingsStorage\>().Serialize(settings, "marketProfile.xml");
+	//Сохраняем настройки в файл
+	new XmlSerializer<SettingsStorage>().Serialize(settings, "marketProfile.xml");
 }
 ```
 

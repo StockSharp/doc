@@ -75,16 +75,16 @@ The order during it’s life goes through the following states:
 To find out the order trading state (what volume is matched, whether the order fully matched, and so on) the [IsCanceled](../api/StockSharp.Algo.TraderHelper.IsCanceled.html), [IsMatchedEmpty](../api/StockSharp.Algo.TraderHelper.IsMatchedEmpty.html), [IsMatchedPartially](../api/StockSharp.Algo.TraderHelper.IsMatchedPartially.html), [IsMatched](../api/StockSharp.Algo.TraderHelper.IsMatched.html) and [GetMatchedVolume](../api/StockSharp.Algo.TraderHelper.GetMatchedVolume.html) methods should be used: 
 
 ```cs
-\/\/ any order
-Order order \= ....
-\/\/ is the order was cancelled
+// any order
+Order order = ....
+// is the order was cancelled
 Console.WriteLine(order.IsCanceled());
-\/\/ or fully matched
+// or fully matched
 Console.WriteLine(order.IsMatched());
-\/\/ or just partially
+// or just partially
 Console.WriteLine(order.IsMatchedPartially());
-\/\/ or non of any contracts was matched 
+// or non of any contracts was matched 
 Console.WriteLine(order.IsMatchedEmpty());
-\/\/ so we are getting the realized (\=matched) order size.
+// so we are getting the realized (=matched) order size.
 Console.WriteLine(order.GetMatchedVolume());
 ```

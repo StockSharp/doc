@@ -28,34 +28,34 @@
 Ниже показан фрагмент кода с его использованием, взятый из примера *Samples\/Common\/SampleConnection*: 
 
 ```xaml
-\<Window x:Class\="Sample.SecuritiesWindow"
-    xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-    xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-    xmlns:loc\="clr\-namespace:StockSharp.Localization;assembly\=StockSharp.Localization"
-    xmlns:xaml\="http:\/\/schemas.stocksharp.com\/xaml"
-    Title\="{x:Static loc:LocalizedStrings.Securities}" Height\="415" Width\="1081"\>
-	\<Grid\>
-		\<Grid.RowDefinitions\>
-			\<RowDefinition Height\="\*" \/\>
-			\<RowDefinition Height\="Auto" \/\>
-		\<\/Grid.RowDefinitions\>
-		\<xaml:SecurityPicker x:Name\="SecurityPicker" x:FieldModifier\="public" SecuritySelected\="SecurityPicker\_OnSecuritySelected" ShowCommonStatColumns\="True" \/\>
-	\<\/Grid\>
-\<\/Window\>
+<Window x:Class="Sample.SecuritiesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+    xmlns:xaml="http://schemas.stocksharp.com/xaml"
+    Title="{x:Static loc:LocalizedStrings.Securities}" Height="415" Width="1081">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<xaml:SecurityPicker x:Name="SecurityPicker" x:FieldModifier="public" SecuritySelected="SecurityPicker_OnSecuritySelected" ShowCommonStatColumns="True" />
+	</Grid>
+</Window>
 	  	
 ```
 ```cs
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
     ......................................
-	\_connector.NewSecurity +\= security \=\> \_securitiesWindow.SecurityPicker.Securities.Add(security);
-	\/\/ устанавливаем поставщик маркет\-данных
-	\_securitiesWindow.SecurityPicker.MarketDataProvider \= \_connector;
+	_connector.NewSecurity += security => _securitiesWindow.SecurityPicker.Securities.Add(security);
+	// устанавливаем поставщик маркет-данных
+	_securitiesWindow.SecurityPicker.MarketDataProvider = _connector;
 	......................................
 }
-private void SecurityPicker\_OnSecuritySelected(Security security)
+private void SecurityPicker_OnSecuritySelected(Security security)
 {
-	NewStopOrder.IsEnabled \= NewOrder.IsEnabled \=
-	Level1.IsEnabled \= Depth.IsEnabled \= security \!\= null;
+	NewStopOrder.IsEnabled = NewOrder.IsEnabled =
+	Level1.IsEnabled = Depth.IsEnabled = security != null;
 }
 ```

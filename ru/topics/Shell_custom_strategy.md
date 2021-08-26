@@ -12,22 +12,22 @@
 public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 	{
 	...
-		\#region MonitoringControl
+		#region MonitoringControl
 		public BaseStudioControl AddMonitorigPanel()
 		{
-			var usercontrol \= new SmaMonitoringControl();
+			var usercontrol = new SmaMonitoringControl();
 			usercontrol.Init(this);
 			return usercontrol;
 		}
-		\#endregion
-		\#region TestingControl
+		#endregion
+		#region TestingControl
 		public BaseStudioControl AddTestPanel()
 		{
-			var usercontrol \= new SmaTestingControl();
+			var usercontrol = new SmaTestingControl();
 			usercontrol.Init(this);
 			return usercontrol;
 		}
-		\#endregion
+		#endregion
 	...	
 	}
 		
@@ -44,14 +44,14 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 
 ```cs
 	...
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-	DictionaryStrategies \= new ObservableDictionary\<Guid, Strategy\>
+	//---------------------------------------------------------------------
+	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
 	{
 		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
 		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
 		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
 	};
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+	//---------------------------------------------------------------------
 	...	
 		
 ```
@@ -79,26 +79,26 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 	{
 	...
-		\#region Load
+		#region Load
 		public override void Load(SettingsStorage storage)
 		{
 			base.Load(storage);
 			try
 			{
-				\_securityStr \= storage.GetValue\<string\>(nameof(Security));
-				\_portfolioStr \= storage.GetValue\<string\>(nameof(Portfolio));
-				LongSmaLength \= storage.GetValue\<int\>(nameof(LongSmaLength));
-				ShortSmaLength \= storage.GetValue\<int\>(nameof(ShortSmaLength));
-				Series.CandleType \= storage.GetValue(nameof(Series.CandleType), Series.CandleType);
-				Series.Arg \= storage.GetValue(nameof(Series.Arg), Series.Arg);
+				_securityStr = storage.GetValue<string>(nameof(Security));
+				_portfolioStr = storage.GetValue<string>(nameof(Portfolio));
+				LongSmaLength = storage.GetValue<int>(nameof(LongSmaLength));
+				ShortSmaLength = storage.GetValue<int>(nameof(ShortSmaLength));
+				Series.CandleType = storage.GetValue(nameof(Series.CandleType), Series.CandleType);
+				Series.Arg = storage.GetValue(nameof(Series.Arg), Series.Arg);
 			}
 			catch (Exception e)
 			{
 				e.LogError();
 			}
 		}
-		\#endregion
-		\#region Save
+		#endregion
+		#region Save
 		public override void Save(SettingsStorage storage)
 		{
 			base.Save(storage);
@@ -106,12 +106,12 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 			storage.SetValue(nameof(Portfolio), Portfolio?.Name);
 			storage.SetValue(nameof(LongSmaLength), LongSmaLength);
 			storage.SetValue(nameof(ShortSmaLength), ShortSmaLength);
-			if (Series.CandleType \!\= null)
+			if (Series.CandleType != null)
 				storage.SetValue(nameof(Series.CandleType), Series.CandleType.GetTypeName(false));
-			if (Series.Arg \!\= null)
+			if (Series.Arg != null)
 				storage.SetValue(nameof(Series.Arg), Series.Arg);
 		}
-		\#endregion
+		#endregion
 	...	
 	}
 		

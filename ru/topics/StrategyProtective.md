@@ -24,16 +24,16 @@
    {
    	public void OpenPosition()
    	{
-   		\/\/ создаем заявку для открытия длинной позиции
-   		var longPos \= this.BuyAtMarket();
+   		// создаем заявку для открытия длинной позиции
+   		var longPos = this.BuyAtMarket();
    		
-   		\/\/ регистрируем правило, отслеживающее появление новых сделок по заявке
+   		// регистрируем правило, отслеживающее появление новых сделок по заявке
    		longPos
    			.WhenNewTrade()
    			.Do(OnNewOrderTrade)
    			.Apply(this);
    		
-   		\/\/ отправляем заявку на регистрацию
+   		// отправляем заявку на регистрацию
    		RegisterOrder(longPos);
    	}
    }
@@ -44,12 +44,12 @@
    ```cs
    private void OnNewOrderTrade(MyTrade trade)
    {
-       \/\/ для сделки добавляем защитную пару стратегии
-       \/\/ выставляет тейк\-профит в 40 пунктов
-       var takeProfit \= new TakeProfitStrategy(trade, 40);
-       \/\/ выставляет стоп\-лосс в 20 пунктов
-       var stopLoss \= new StopLossStrategy(trade, 20);
-       var protectiveStrategies \= new TakeProfitStopLossStrategy(takeProfit, stopLoss);
+       // для сделки добавляем защитную пару стратегии
+       // выставляет тейк-профит в 40 пунктов
+       var takeProfit = new TakeProfitStrategy(trade, 40);
+       // выставляет стоп-лосс в 20 пунктов
+       var stopLoss = new StopLossStrategy(trade, 20);
+       var protectiveStrategies = new TakeProfitStopLossStrategy(takeProfit, stopLoss);
        ChildStrategies.AddRange(protectiveStrategies);
    }
    ```

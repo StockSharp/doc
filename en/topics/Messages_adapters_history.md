@@ -9,15 +9,15 @@ When processing the history results, the [IOriginalTransactionIdMessage.Original
 ```cs
       		SendOutMessage(new TimeFrameCandleMessage
 			{
-				OpenPrice \= (decimal)candle.Open,
-				ClosePrice \= (decimal)candle.Close,
-				HighPrice \= (decimal)candle.High,
-				LowPrice \= (decimal)candle.Low,
-				TotalVolume \= (decimal)candle.AssetVolume,
-				OpenTime \= candle.StartTime,
-				State \= candle.IsFormed ? CandleStates.Finished : CandleStates.Active,
-				TotalTicks \= candle.TradesCount,
-				OriginalTransactionId \= \_candleTransactions.TryGetValue(Tuple.Create(secId, tf)), \/\/ \<\- fill in the subscription ID, which is used by the external code to determine which instrument and timeframe was in the subscription
+				OpenPrice = (decimal)candle.Open,
+				ClosePrice = (decimal)candle.Close,
+				HighPrice = (decimal)candle.High,
+				LowPrice = (decimal)candle.Low,
+				TotalVolume = (decimal)candle.AssetVolume,
+				OpenTime = candle.StartTime,
+				State = candle.IsFormed ? CandleStates.Finished : CandleStates.Active,
+				TotalTicks = candle.TradesCount,
+				OriginalTransactionId = _candleTransactions.TryGetValue(Tuple.Create(secId, tf)), // <- fill in the subscription ID, which is used by the external code to determine which instrument and timeframe was in the subscription
 			});
       
 ```
@@ -27,15 +27,15 @@ Special [PartialDownloadMessageAdapter](../api/StockSharp.Algo.PartialDownloadMe
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
 {
-	\/\/ ...
+	// ...
 	
-	\/\/\/ \<inheritdoc \/\>
+	/// <inheritdoc />
 	public override TimeSpan GetHistoryStepSize(DataType dataType, out TimeSpan iterationInterval)
 	{
-		var step \= base.GetHistoryStepSize(dataType, out iterationInterval);
+		var step = base.GetHistoryStepSize(dataType, out iterationInterval);
 			
-		if (dataType \=\= DataType.Ticks) \/\/ tick data supports the maximum range of one day
-			step \= TimeSpan.FromDays(1);
+		if (dataType == DataType.Ticks) // tick data supports the maximum range of one day
+			step = TimeSpan.FromDays(1);
 		return step;
 	}
 }

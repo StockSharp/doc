@@ -101,14 +101,14 @@ If the [Transaction](../api/StockSharp.Messages.ExecutionTypes.Transaction.html)
 [S\#](StockSharpAbout.md) contains a set of extension methods to convert trade objects to messages and vice versa. For example, order [Order](../api/StockSharp.BusinessEntities.Order.html) can be converted into message [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html), and vice verse, as it is shown in the next code portion. 
 
 ```cs
-	var security \= new Security() {Id \= "ESM6@BATS" };
+	var security = new Security() {Id = "ESM6@BATS" };
 	
-	\/\/ sample Order's instance
-	var order \= new Order();
+	// sample Order's instance
+	var order = new Order();
 	
-	\/\/ converting to message
-	var message \= order.ToMessage();
+	// converting to message
+	var message = order.ToMessage();
 	
-	\/\/ and back to Order's instance
-	var order1 \= message.ToOrder(security);
+	// and back to Order's instance
+	var order1 = message.ToOrder(security);
 ```

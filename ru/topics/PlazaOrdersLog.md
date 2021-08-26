@@ -5,9 +5,9 @@
 Для того чтобы начать получать данные по ордер лог, надо подписаться на событие [NewOrderLogItem](../api/StockSharp.Algo.Connector.NewOrderLogItem.html):
 
 ```cs
-private Connector \_connector;
+private Connector _connector;
 ...
-\_connector.NewOrderLogItem +\= NewOrderLog;
+_connector.NewOrderLogItem += NewOrderLog;
 ...
 private void NewOrderLog(OrderLogItem orderLogItems)
 {

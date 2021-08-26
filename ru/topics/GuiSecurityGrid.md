@@ -18,37 +18,37 @@
 На рисунке компонент [SecurityGrid](../api/StockSharp.Xaml.SecurityGrid.html) показан в составе графического компонента [SecurityPicker](GuiSecurityPicker.md). 
 
 ```xaml
-\<Window x:Class\="SecurityGridSample.MainWindow"
-        xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-        xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-        xmlns:sx\="clr\-namespace:StockSharp.Xaml;assembly\=StockSharp.Xaml"
-        Title\="MainWindow" Height\="350" Width\="525"\>
-    \<Grid\>
-        \<sx:SecurityGrid x:Name\="SecurityGrid"\/\>
-    \<\/Grid\>
-\<\/Window\>
+<Window x:Class="SecurityGridSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <sx:SecurityGrid x:Name="SecurityGrid"/>
+    </Grid>
+</Window>
 	  				
 ```
 ```cs
-private readonly Connector \_connector \= new Connector();
-\/\/ Назначаем провайдер рыночных данных
-SecurityGrid.MarketDataProvider \= \_connector;
+private readonly Connector _connector = new Connector();
+// Назначаем провайдер рыночных данных
+SecurityGrid.MarketDataProvider = _connector;
 ..........................
-\/\/ Добавляем в сетку инструменты
-\_connector.NewSecurity +\= security \=\>
+// Добавляем в сетку инструменты
+_connector.NewSecurity += security =>
 {
 	SecurityGrid.Securities.Add(security);
 };
 ..........................
-\/\/ Здесь показано, как можно изменить видимость колонок в сетке
+// Здесь показано, как можно изменить видимость колонок в сетке
 private void ColumnsFilter()
 {
-	\/\/ Задаем список видимых колонок
-	string\[\] columns \= { "Board", "BestAsk.Price", "BestAsk.Volume" };
+	// Задаем список видимых колонок
+	string[] columns = { "Board", "BestAsk.Price", "BestAsk.Volume" };
 	
 	foreach (var column in SecurityGrid.Columns)
 	{
-		column.Visibility \= columns.Contains(column.SortMemberPath) ? Visibility.Visible : Visibility.Collapsed;
+		column.Visibility = columns.Contains(column.SortMemberPath) ? Visibility.Visible : Visibility.Collapsed;
 	}
 }
               

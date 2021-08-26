@@ -13,21 +13,21 @@ ContinuousSecurity creating
 1. To declare the compound instruments that will be included in the [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html) and in the [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html) itself:
 
    ```cs
-   private Security \_esm5;
-   private Security \_esu5;
-   private ContinuousSecurity \_es;
+   private Security _esm5;
+   private Security _esu5;
+   private ContinuousSecurity _es;
    							
    ```
 2. To create the [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html):
 
    ```cs
-   \_es \= new ContinuousSecurity { ExchangeBoard \= ExchangeBoard.Nyse, Id \= "ES" };
+   _es = new ContinuousSecurity { ExchangeBoard = ExchangeBoard.Nyse, Id = "ES" };
    							
    ```
 3. To add the compound instruments to it, specified the date and time of expiration for each added instrument:
 
    ```cs
-   \_es.ExpirationJumps.Add(\_esm5, new DateTime(2015, 6, 15, 18, 45, 00));
-   \_es.ExpirationJumps.Add(\_esu5, new DateTime(2015, 9, 15, 18, 45, 00));
+   _es.ExpirationJumps.Add(_esm5, new DateTime(2015, 6, 15, 18, 45, 00));
+   _es.ExpirationJumps.Add(_esu5, new DateTime(2015, 9, 15, 18, 45, 00));
    							
    ```

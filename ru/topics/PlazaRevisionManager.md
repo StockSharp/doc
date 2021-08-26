@@ -10,7 +10,7 @@
 public PlazaMessageAdapter Adapter;
 ...
 		
-var revisionManager \= Adapter.StreamManager.RevisionManager;
+var revisionManager = Adapter.StreamManager.RevisionManager;
 revisionManager.Tables.Add(Adapter.TableRegistry.IndexLog);
 revisionManager.Tables.Add(Adapter.TableRegistry.TradeFuture);
 revisionManager.Tables.Add(Adapter.TableRegistry.TradeOption);

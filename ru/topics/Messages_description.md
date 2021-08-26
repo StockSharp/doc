@@ -101,14 +101,14 @@
 [S\#](StockSharpAbout.md) содержит набор методов расширения для преобразования торговых объектов в сообщения и наоборот. Например, можно преобразовать заявку [Order](../api/StockSharp.BusinessEntities.Order.html) в сообщение [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html), а также выполнить обратную операцию, как это показано в следующем фрагменте кода. 
 
 ```cs
-	var security \= new Security() {Id \= "RIM6\#FORTS" };
+	var security = new Security() {Id = "RIM6#FORTS" };
 	
-	\/\/ Для демонстрационных целей детали создания заявки опущены
-	var order \= new Order();
+	// Для демонстрационных целей детали создания заявки опущены
+	var order = new Order();
 	
-	\/\/ Конвертируем заявку в сообщение
-	var message \= order.ToMessage();
+	// Конвертируем заявку в сообщение
+	var message = order.ToMessage();
 	
-	\/\/ Выполняем обратное преобразование
-	var order1 \= message.ToOrder(security);
+	// Выполняем обратное преобразование
+	var order1 = message.ToOrder(security);
 ```

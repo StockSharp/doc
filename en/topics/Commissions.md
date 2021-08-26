@@ -11,19 +11,19 @@ The CommissionManager creating
 1. To create the [CommissionManager](../api/StockSharp.Algo.Commissions.CommissionManager.html):
 
    ```cs
-   private CommissionManager \_commissionManager \= new CommissionManager();
+   private CommissionManager _commissionManager = new CommissionManager();
    						
    ```
 2. Then, you must create the rule:
 
    ```cs
-    CommissionRule commissionRule \=  new CommissionPerTradeRule {  Value \= new Unit(1m) };
+    CommissionRule commissionRule =  new CommissionPerTradeRule {  Value = new Unit(1m) };
    						
    ```
 3. And add it to the [CommissionManager](../api/StockSharp.Algo.Commissions.CommissionManager.html):
 
    ```cs
-   \_commissionManager.Rules.Add(commissionRule);;
+   _commissionManager.Rules.Add(commissionRule);;
    						
    ```
 

@@ -10,34 +10,34 @@ To work with subscriptions, you should use the [Subscription](../api/StockSharp.
 
 ```cs
 ...
-var subscription \= new Subscription(new MarketDataMessage
+var subscription = new Subscription(new MarketDataMessage
 {
-	DataType2 \= DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-	From \= DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
-	\/\/ null means make subscriptions goes online after historical data
-	To \= null,
+	DataType2 = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
+	// null means make subscriptions goes online after historical data
+	To = null,
 }, (SecurityMessage)sec);
-\/\/ subscribe to events
-\_connector.CandleReceived +\= (sub, candle) \=\>
+// subscribe to events
+_connector.CandleReceived += (sub, candle) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine(candle);
 };
-\_connector.SubscriptionOnline +\= (sub) \=\>
+_connector.SubscriptionOnline += (sub) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine("Online");
 };
-\_connector.SubscriptionFailed +\= (sub, error, isSubscribe) \=\>
+_connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
-	if (sub \!\= subscription)
+	if (sub != subscription)
 		return;
 	Console.WriteLine(error);
 };
-\/\/ start subscription
-\_connector.Subscribe(subscription);
+// start subscription
+_connector.Subscribe(subscription);
 ...
 			
 ```

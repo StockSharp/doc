@@ -11,19 +11,19 @@
 1. Создать [CommissionManager](../api/StockSharp.Algo.Commissions.CommissionManager.html):
 
    ```cs
-   private CommissionManager \_commissionManager \= new CommissionManager();
+   private CommissionManager _commissionManager = new CommissionManager();
    						
    ```
 2. Далее, необходимо создать правило:
 
    ```cs
-    CommissionRule commissionRule \=  new CommissionPerTradeRule {  Value \= new Unit(1m) };
+    CommissionRule commissionRule =  new CommissionPerTradeRule {  Value = new Unit(1m) };
    						
    ```
 3. И добавить его в [CommissionManager](../api/StockSharp.Algo.Commissions.CommissionManager.html):
 
    ```cs
-   \_commissionManager.Rules.Add(commissionRule);;
+   _commissionManager.Rules.Add(commissionRule);;
    						
    ```
 

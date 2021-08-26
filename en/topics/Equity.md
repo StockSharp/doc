@@ -7,14 +7,14 @@ To calculate the curve parameters (maximum drawdown, Sharpe ratio, etc.) [Statis
 The use of the [Strategy.PnLChanged](../api/StockSharp.Algo.Strategies.Strategy.PnLChanged.html) is shown in the [backtesting](StrategyTestingHistory.md) section in the context of [trading strategies](Strategy.md): 
 
 ```cs
-\_strategy.PnLChanged +\= () \=\>
+_strategy.PnLChanged += () =>
 {
-	var data \= new EquityData
+	var data = new EquityData
 	{
-		Time \= \_strategy.Trader.MarketTime,
-		Value \= \_strategy.PnL,
+		Time = _strategy.Trader.MarketTime,
+		Value = _strategy.PnL,
 	};
-	this.GuiAsync(() \=\> \_curveItems.Add(data));
+	this.GuiAsync(() => _curveItems.Add(data));
 };      
       
 ```

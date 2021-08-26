@@ -12,14 +12,14 @@
 Below is the code snippet with its use. 
 
 ```cs
-private void Button\_Click(object sender, RoutedEventArgs e)
+private void Button_Click(object sender, RoutedEventArgs e)
 {
-	var wnd \= new PortfolioPickerWindow();
-	if (Portfolios \!\= null)
-		wnd.Portfolios \= Portfolios;
+	var wnd = new PortfolioPickerWindow();
+	if (Portfolios != null)
+		wnd.Portfolios = Portfolios;
 	if (wnd.ShowModal(this))
 	{
-		SelectedPortfolio \= wnd.SelectedPortfolio;
+		SelectedPortfolio = wnd.SelectedPortfolio;
 	}
 }
 	  				

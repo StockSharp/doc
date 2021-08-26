@@ -3,46 +3,46 @@
 The following example shows adding of indicator to draw on the chart:
 
 ```cs
-private readonly Connector \_connector \= new Connector();
-private Security \_security;
-private CandleSeries \_candleSeries;
-private SimpleMovingAverage \_sma;
-readonly TimeSpan \_timeFrame \= TimeSpan.FromMinutes(1);
-private ChartArea \_area;
-private ChartCandleElement \_candlesElem;
-private ChartIndicatorElement \_longMaElem;
+private readonly Connector _connector = new Connector();
+private Security _security;
+private CandleSeries _candleSeries;
+private SimpleMovingAverage _sma;
+readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
+private ChartArea _area;
+private ChartCandleElement _candlesElem;
+private ChartIndicatorElement _longMaElem;
 ...
-\/\/ \_chart \- StockSharp.Xaml.Charting.Chart
-\/\/ new chart area
-\_area \= new ChartArea();
-\_chart.Areas.Add(\_area);
-\/\/ Special chart element to draw a candles
-\_candlesElem \= new ChartCandleElement();
-\_area.Elements.Add(\_candlesElem);
-\/\/ Special chart element to draw an indicator
-\_longMaElem \= new ChartIndicatorElement
+// _chart - StockSharp.Xaml.Charting.Chart
+// new chart area
+_area = new ChartArea();
+_chart.Areas.Add(_area);
+// Special chart element to draw a candles
+_candlesElem = new ChartCandleElement();
+_area.Elements.Add(_candlesElem);
+// Special chart element to draw an indicator
+_longMaElem = new ChartIndicatorElement
 {
-	Title \= "Long"
+	Title = "Long"
 };
-\_area.Elements.Add(\_longMaElem);
+_area.Elements.Add(_longMaElem);
 ...
-\_sma \= new SimpleMovingAverage() { Length \= 80 };
-\_connector.CandleSeriesProcessing +\= DrawCandle;
+_sma = new SimpleMovingAverage() { Length = 80 };
+_connector.CandleSeriesProcessing += DrawCandle;
 ...
-\_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), \_security, \_timeFrame);
-\_connector.SubscribeCandles(\_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
+_candleSeries = new CandleSeries(typeof(TimeFrameCandle), _security, _timeFrame);
+_connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
 ...
 private void Draw(CandleSeries series, Candle candle)
 {
-   if (candle.State \!\= CandleStates.Finished)
+   if (candle.State != CandleStates.Finished)
        return;
-	var longValue \= \_sma.Process(candle);
-	var data \= new ChartDrawData();
+	var longValue = _sma.Process(candle);
+	var data = new ChartDrawData();
 	data
 		.Group(candle.OpenTime)
-			.Add(\_candlesElem, candle)
-			.Add(\_longElem, longValue);
-	\_chart.Draw(data);
+			.Add(_candlesElem, candle)
+			.Add(_longElem, longValue);
+	_chart.Draw(data);
 }
 		
 ```

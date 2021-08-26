@@ -3,42 +3,42 @@
 To create your own indicator, you must implement the [IIndicator](../api/StockSharp.Algo.Indicators.IIndicator.html) interface. As an example you can take the source code of other indicators that are in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. Here is the code for the simple moving average indicator implementation [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html): 
 
 ```cs
-\/\/\/ \<summary\>
-\/\/\/ \<summary\> 
-\/\/\/ Simple moving average. 
-\/\/\/ \<\/summary\> 
-\[DisplayName("SMA")\] 
-\[DescriptionLoc(LocalizedStrings.Str818Key)\] 
-public class SimpleMovingAverage : LengthIndicator\<decimal\> 
+/// <summary>
+/// <summary> 
+/// Simple moving average. 
+/// </summary> 
+[DisplayName("SMA")] 
+[DescriptionLoc(LocalizedStrings.Str818Key)] 
+public class SimpleMovingAverage : LengthIndicator<decimal> 
 { 
-	\/\/\/ \<summary\> 
-	\/\/\/ Initializes a new instance of the \<see cref\="SimpleMovingAverage"\/\>. 
-	\/\/\/ \<\/summary\> 
+	/// <summary> 
+	/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>. 
+	/// </summary> 
 	public SimpleMovingAverage()
 	{ 
-		Length \= 32; 
+		Length = 32; 
 	} 
-	\/\/\/ \<summary\> 
-	\/\/\/ To handle the input value. 
-	\/\/\/ \<\/summary\> 
-	\/\/\/ \<param name\="input"\>The input value.\<\/param\> 
-	\/\/\/ \<returns\>The resulting value.\<\/returns\> 
+	/// <summary> 
+	/// To handle the input value. 
+	/// </summary> 
+	/// <param name="input">The input value.</param> 
+	/// <returns>The resulting value.</returns> 
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{ 
-		var newValue \= input.GetValue\<decimal\>(); 
+		var newValue = input.GetValue<decimal>(); 
         
 		if (input.IsFinal) 
 		{ 
 			Buffer.Add(newValue); 
             
-			if (Buffer.Count \> Length) 
+			if (Buffer.Count > Length) 
 				Buffer.RemoveAt(0); 
 		} 
         
 		if (input.IsFinal) 
-			return new DecimalIndicatorValue(this, Buffer.Sum() \/ Length); 
+			return new DecimalIndicatorValue(this, Buffer.Sum() / Length); 
         
-		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) \/ Length); 
+		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length); 
 	} 
 } 
 ```
@@ -48,73 +48,73 @@ public class SimpleMovingAverage : LengthIndicator\<decimal\>
 Some indicators are composite and use other indicators in their calculations. Therefore, you can reuse the indicators from each other, as shown as an example of realization of the Chaikin Volatility indicator [ChaikinVolatility](../api/StockSharp.Algo.Indicators.ChaikinVolatility.html): 
 
 ```cs
-\/\/\/ \<summary\>
-\/\/\/ Chaikin volatility.
-\/\/\/ \<\/summary\>
-\/\/\/ \<remarks\>
-\/\/\/ http:\/\/www2.wealth\-lab.com\/WL5Wiki\/Volatility.ashx http:\/\/www.incrediblecharts.com\/indicators\/chaikin\_volatility.php.
-\/\/\/ \<\/remarks\>
-\[DisplayName("Chaikin's Volatility")\]
-\[DescriptionLoc(LocalizedStrings.Str730Key)\]
+/// <summary>
+/// Chaikin volatility.
+/// </summary>
+/// <remarks>
+/// http://www2.wealth-lab.com/WL5Wiki/Volatility.ashx http://www.incrediblecharts.com/indicators/chaikin_volatility.php.
+/// </remarks>
+[DisplayName("Chaikin's Volatility")]
+[DescriptionLoc(LocalizedStrings.Str730Key)]
 public class ChaikinVolatility : BaseIndicator
 {
-	\/\/\/ \<summary\>
-	\/\/\/ Initializes a new instance of the \<see cref\="ChaikinVolatility"\/\>.
-	\/\/\/ \<\/summary\>
+	/// <summary>
+	/// Initializes a new instance of the <see cref="ChaikinVolatility"/>.
+	/// </summary>
 	public ChaikinVolatility()
 	{
-		Ema \= new ExponentialMovingAverage();
-		Roc \= new RateOfChange();
+		Ema = new ExponentialMovingAverage();
+		Roc = new RateOfChange();
 	}
-	\/\/\/ \<summary\>
-	\/\/\/ Moving Average.
-	\/\/\/ \<\/summary\>
-	\[TypeConverter(typeof(ExpandableObjectConverter))\]
-	\[DisplayName("MA")\]
-	\[DescriptionLoc(LocalizedStrings.Str731Key)\]
-	\[CategoryLoc(LocalizedStrings.GeneralKey)\]
+	/// <summary>
+	/// Moving Average.
+	/// </summary>
+	[TypeConverter(typeof(ExpandableObjectConverter))]
+	[DisplayName("MA")]
+	[DescriptionLoc(LocalizedStrings.Str731Key)]
+	[CategoryLoc(LocalizedStrings.GeneralKey)]
 	public ExponentialMovingAverage Ema { get; }
-	\/\/\/ \<summary\>
-	\/\/\/ Rate of change.
-	\/\/\/ \<\/summary\>
-	\[TypeConverter(typeof(ExpandableObjectConverter))\]
-	\[DisplayName("ROC")\]
-	\[DescriptionLoc(LocalizedStrings.Str732Key)\]
-	\[CategoryLoc(LocalizedStrings.GeneralKey)\]
+	/// <summary>
+	/// Rate of change.
+	/// </summary>
+	[TypeConverter(typeof(ExpandableObjectConverter))]
+	[DisplayName("ROC")]
+	[DescriptionLoc(LocalizedStrings.Str732Key)]
+	[CategoryLoc(LocalizedStrings.GeneralKey)]
 	public RateOfChange Roc { get; }
-	\/\/\/ \<summary\>
-	\/\/\/ Whether the indicator is set.
-	\/\/\/ \<\/summary\>
-	public override bool IsFormed \=\> Roc.IsFormed;
-	\/\/\/ \<summary\>
-	\/\/\/ To handle the input value.
-	\/\/\/ \<\/summary\>
-	\/\/\/ \<param name\="input"\>The input value.\<\/param\>
-	\/\/\/ \<returns\>The resulting value.\<\/returns\>
+	/// <summary>
+	/// Whether the indicator is set.
+	/// </summary>
+	public override bool IsFormed => Roc.IsFormed;
+	/// <summary>
+	/// To handle the input value.
+	/// </summary>
+	/// <param name="input">The input value.</param>
+	/// <returns>The resulting value.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
-		var candle \= input.GetValue\<Candle\>();
-		var emaValue \= Ema.Process(input.SetValue(this, candle.HighPrice \- candle.LowPrice));
+		var candle = input.GetValue<Candle>();
+		var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
 		if (Ema.IsFormed)
 		{
 			return Roc.Process(emaValue);
 		}
 		return input;				
 	}
-	\/\/\/ \<summary\>
-	\/\/\/ Load settings.
-	\/\/\/ \<\/summary\>
-	\/\/\/ \<param name\="settings"\>Settings storage.\<\/param\>
+	/// <summary>
+	/// Load settings.
+	/// </summary>
+	/// <param name="settings">Settings storage.</param>
 	public override void Load(SettingsStorage settings)
 	{
 		base.Load(settings);
 		Ema.LoadNotNull(settings, "Ema");
 		Roc.LoadNotNull(settings, "Roc");
 	}
-	\/\/\/ \<summary\>
-	\/\/\/ Save settings.
-	\/\/\/ \<\/summary\>
-	\/\/\/ \<param name\="settings"\>Settings storage.\<\/param\>
+	/// <summary>
+	/// Save settings.
+	/// </summary>
+	/// <param name="settings">Settings storage.</param>
 	public override void Save(SettingsStorage settings)
 	{
 		base.Save(settings);
@@ -127,75 +127,75 @@ public class ChaikinVolatility : BaseIndicator
 The last types of indicators are those that do not just consist of other indicators, but also graphically displayed in several states at the same time (with a few lines). For example, [AverageDirectionalIndex](../api/StockSharp.Algo.Indicators.AverageDirectionalIndex.html): 
 
 ```cs
-\/\/\/ \<summary\>
-\/\/\/ Welles Wilder Average Directional Index.
-\/\/\/ \<\/summary\>
-\[DisplayName("ADX")\] 
-\[DescriptionLoc(LocalizedStrings.Str757Key)\] 
+/// <summary>
+/// Welles Wilder Average Directional Index.
+/// </summary>
+[DisplayName("ADX")] 
+[DescriptionLoc(LocalizedStrings.Str757Key)] 
 public class AverageDirectionalIndex : BaseComplexIndicator 
 { 
-	\/\/\/ \<summary\> 
-	\/\/\/ Initializes a new instance of the \<see cref\="AverageDirectionalIndex"\/\>. 
-	\/\/\/ \<\/summary\> 
+	/// <summary> 
+	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>. 
+	/// </summary> 
 	public AverageDirectionalIndex()
-		: this(new DirectionalIndex { Length \= 14 }, new WilderMovingAverage { Length \= 14 }) 
+		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 }) 
 	{ 	} 
-	\/\/\/ \<summary\> 
-	\/\/\/ Initializes a new instance of the \<see cref\="AverageDirectionalIndex"\/\>. 
-	\/\/\/ \<\/summary\> 
-	\/\/\/ \<param name\="dx"\>Welles Wilder Directional Movement Index.\<\/param\> 
-	\/\/\/ \<param name\="movingAverage"\>Moving Average.\<\/param\> 
-	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator\<decimal\> movingAverage)
+	/// <summary> 
+	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>. 
+	/// </summary> 
+	/// <param name="dx">Welles Wilder Directional Movement Index.</param> 
+	/// <param name="movingAverage">Moving Average.</param> 
+	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
 	{ 
-		if (dx \=\= null) throw new ArgumentNullException(nameof(dx)); 
+		if (dx == null) throw new ArgumentNullException(nameof(dx)); 
         
-		if (movingAverage \=\= null) 	throw new ArgumentNullException(nameof(movingAverage)); 
+		if (movingAverage == null) 	throw new ArgumentNullException(nameof(movingAverage)); 
         
-		InnerIndicators.Add(Dx \= dx); 
-		InnerIndicators.Add(MovingAverage \= movingAverage); 
-		Mode \= ComplexIndicatorModes.Sequence; 
+		InnerIndicators.Add(Dx = dx); 
+		InnerIndicators.Add(MovingAverage = movingAverage); 
+		Mode = ComplexIndicatorModes.Sequence; 
 	} 
     
-	\/\/\/ \<summary\> 
-	\/\/\/ Welles Wilder Directional Movement Index. 
-	\/\/\/ \<\/summary\> 
-	\[Browsable(false)\] 
+	/// <summary> 
+	/// Welles Wilder Directional Movement Index. 
+	/// </summary> 
+	[Browsable(false)] 
 	public DirectionalIndex Dx { get; } 
     
-	\/\/\/ \<summary\> 
-	\/\/\/ Moving Average. 
-	\/\/\/ \<\/summary\> 
-	\[Browsable(false)\] 
-	public LengthIndicator\<decimal\> MovingAverage { get; } 
+	/// <summary> 
+	/// Moving Average. 
+	/// </summary> 
+	[Browsable(false)] 
+	public LengthIndicator<decimal> MovingAverage { get; } 
     
-	\/\/\/ \<summary\> 
-	\/\/\/ Period length. 
-	\/\/\/ \<\/summary\> 
-	\[DisplayNameLoc(LocalizedStrings.Str736Key)\] 
-	\[DescriptionLoc(LocalizedStrings.Str737Key)\] 
-	\[CategoryLoc(LocalizedStrings.GeneralKey)\] 
+	/// <summary> 
+	/// Period length. 
+	/// </summary> 
+	[DisplayNameLoc(LocalizedStrings.Str736Key)] 
+	[DescriptionLoc(LocalizedStrings.Str737Key)] 
+	[CategoryLoc(LocalizedStrings.GeneralKey)] 
 	public virtual int Length
 	{ 
 		get { return MovingAverage.Length; } 
 		set 
 		{ 
-			MovingAverage.Length \= Dx.Length \= value; 
+			MovingAverage.Length = Dx.Length = value; 
 			Reset(); 
 		} 
 	} 
-	\/\/\/ \<summary\> 
-	\/\/\/ Load settings. 
-	\/\/\/ \<\/summary\> 
-	\/\/\/ \<param name\="settings"\>Settings storage.\<\/param\> 
+	/// <summary> 
+	/// Load settings. 
+	/// </summary> 
+	/// <param name="settings">Settings storage.</param> 
 	public override void Load(SettingsStorage settings)
 	{ 
 		base.Load(settings); 
-		Length \= settings.GetValue\<int\>(nameof(Length)); 
+		Length = settings.GetValue<int>(nameof(Length)); 
 	} 
-	\/\/\/ \<summary\> 
-	\/\/\/ Save settings. 
-	\/\/\/ \<\/summary\> 
-	\/\/\/ \<param name\="settings"\>Settings storage.\<\/param\> 
+	/// <summary> 
+	/// Save settings. 
+	/// </summary> 
+	/// <param name="settings">Settings storage.</param> 
 	public override void Save(SettingsStorage settings)
 	{ 
 		base.Save(settings); 

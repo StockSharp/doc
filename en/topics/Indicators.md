@@ -9,7 +9,7 @@ Connecting the indicator to the robot
 1. At the very beginning, you need to create an indicator. The indicator is created, just like a regular .NET object:
 
    ```cs
-   var longSma \= new SimpleMovingAverage { Length \= 80 };
+   var longSma = new SimpleMovingAverage { Length = 80 };
    ```
 2. Next, you need to fill it with data. For example, this could be the candle closing price:
 
@@ -23,19 +23,19 @@ Connecting the indicator to the robot
 4. To get the current indicator value, the [GetValue\`\`1](../api/StockSharp.Algo.Indicators.IIndicatorValue.GetValue``1.html) method is used:
 
    ```cs
-   \/\/ calculate the new position relative to each other
-   var isShortLessThenLong \= ShortSma.GetCurrentValue() \< LongSma.GetCurrentValue();
-   \/\/ if there was an intersection
-   if (\_isShortLessThenLong \!\= isShortLessThenLong)
+   // calculate the new position relative to each other
+   var isShortLessThenLong = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
+   // if there was an intersection
+   if (_isShortLessThenLong != isShortLessThenLong)
    {
-   	\/\/ if short is less than long, then sale, otherwise, purchase.
-   	var direction \= isShortLessThenLong ? Sides.Sell : Sides.Buy;
-   	\/\/ register the order
-   	var volume \= Position \=\= 0 ? Volume : Position.Abs().Min(Volume) \* 2;
-   	var price \= candle.ClosePrice + ((direction \=\= Sides.Buy ? Security.PriceStep : \-Security.PriceStep) ?? 1);
+   	// if short is less than long, then sale, otherwise, purchase.
+   	var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+   	// register the order
+   	var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+   	var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
        RegisterOrder(this.CreateOrder(direction, price, volume));
-   	\/\/ remember the current position relative to each other
-   	\_isShortLessThenLong \= isShortLessThenLong;
+   	// remember the current position relative to each other
+   	_isShortLessThenLong = isShortLessThenLong;
    }
    ```
 5. All indicators have a [BaseIndicator.IsFormed](../api/StockSharp.Algo.Indicators.BaseIndicator.IsFormed.html), property, which indicates whether the indicator is ready for use. For example, the [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) indicator has a period, and until the indicator processes the number of candles equal to the indicator period, the indicator will be considered not ready for use. And the [BaseIndicator.IsFormed](../api/StockSharp.Algo.Indicators.BaseIndicator.IsFormed.html) property will be 'false'.

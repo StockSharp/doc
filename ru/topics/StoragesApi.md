@@ -21,33 +21,33 @@
 1. Пример SampleStorage, находящийся в дистрибутиве [S\#](StockSharpAbout.md), показывает, как сохранить и загрузить сделки через класс [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html). В начале создается инструмент, у которого инициализируются основные свойства \- [Id](../api/StockSharp.BusinessEntities.Security.Id.html) (для определения месторасположения), [StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html) и [Decimals](../api/StockSharp.BusinessEntities.Security.Decimals.html) (для сжатия цены в файле *trades.bin*):
 
    ```cs
-   var security \= new Security
+   var security = new Security
    {
-   	Id \= "TestId",
-   	MinStepSize \= 0.1,
-   	Decimals \= 1,
+   	Id = "TestId",
+   	MinStepSize = 0.1,
+   	Decimals = 1,
    };
    					
    ```
 2. Далее, в качестве исходных данных, создается список из 1000 произвольных сделок (в реальном приложении это будут те сделки, которые или получены из внешних источников, или торгового приложения):
 
    ```cs
-   var trades \= new List\<Trade\>();
-   \/\/ генерируем 1000 произвольных сделок
-   \/\/
-   var tradeGenerator \= new RandomWalkTradeGenerator(security, 99)
+   var trades = new List<Trade>();
+   // генерируем 1000 произвольных сделок
+   //
+   var tradeGenerator = new RandomWalkTradeGenerator(security, 99)
    {
-   	IdGenerator \= new IdGenerator
+   	IdGenerator = new IdGenerator
    	{
-   		Current \= DateTime.Now.Ticks
+   		Current = DateTime.Now.Ticks
    	}
    };
-   \/\/ инициализация генератора
+   // инициализация генератора
    tradeGenerator.Init();
-   for (var i \= 0; i \< 1000; i++)
+   for (var i = 0; i < 1000; i++)
    {
-   	var t \= tradeGenerator.Generate(DateTime.Today + TimeSpan.FromMinutes(i));
-   	t.Id \= i + 1;
+   	var t = tradeGenerator.Generate(DateTime.Today + TimeSpan.FromMinutes(i));
+   	t.Id = i + 1;
    	trades.Add(t);
    }
    					
@@ -55,13 +55,13 @@
 3. Следующим шагом создается сам [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html):
 
    ```cs
-   var storage \= new StorageRegistry();
+   var storage = new StorageRegistry();
    					
    ```
 4. Через хранилище торговых объектов получается хранилище маркет\-данных. В примере используется хранилище тиковых сделок, которое получается через метод [StorageRegistry.GetTradeStorage](../api/StockSharp.Algo.Storages.StorageRegistry.GetTradeStorage.html):
 
    ```cs
-   var tradeStorage \= storage.GetTradeStorage(security);
+   var tradeStorage = storage.GetTradeStorage(security);
    					
    ```
 5. Сохранение сделок:
@@ -73,7 +73,7 @@
 6. Загрузка сделок, сохраненных на предыдущем шаге:
 
    ```cs
-   var loadedTrades \= tradeStorage.Load(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
+   var loadedTrades = tradeStorage.Load(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
     	  
    foreach (var trade in loadedTrades)
    {

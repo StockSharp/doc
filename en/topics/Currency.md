@@ -9,25 +9,25 @@ Currency conversion example
 1. Below see the partial code from SampleCurrency, converting from one currency to another: 
 
    ```cs
-   var currency \= new Currency
+   var currency = new Currency
    {
-   	Type \= (CurrencyTypes)this.SourceCurrencyType.GetSelectedValue\<CurrencyTypes\>(),
-   	Value \= this.Amount.Text.To\<decimal\>(),
+   	Type = (CurrencyTypes)this.SourceCurrencyType.GetSelectedValue<CurrencyTypes>(),
+   	Value = this.Amount.Text.To<decimal>(),
    };
-   \/\/ doing the conversation
-   this.Result.Content \= currency.Convert((CurrencyTypes)this.TargetCurrencyType.GetSelectedValue\<CurrencyTypes\>()).Value;
+   // doing the conversation
+   this.Result.Content = currency.Convert((CurrencyTypes)this.TargetCurrencyType.GetSelectedValue<CurrencyTypes>()).Value;
    ```
 2. The following shall be written to find out the conversion rate: 
 
    ```cs
-   \/\/ Euro into USD
-   var rate \= CurrencyTypes.EUR.Convert(CurrencyTypes.USD);
+   // Euro into USD
+   var rate = CurrencyTypes.EUR.Convert(CurrencyTypes.USD);
    ```
 3. Additionally, the [S\#](StockSharpAbout.md) provides ability to find out the conversion rate history: 
 
    ```cs
-   \/\/ Euro into USD (prev day)
-   var rate \= CurrencyTypes.EUR.Convert(CurrencyTypes.USD, DateTime.Today \- TimeSpan.FromDays(1));
+   // Euro into USD (prev day)
+   var rate = CurrencyTypes.EUR.Convert(CurrencyTypes.USD, DateTime.Today - TimeSpan.FromDays(1));
    ```
 4. Here is an example of currency conversion: 
 

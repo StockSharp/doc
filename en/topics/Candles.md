@@ -41,7 +41,7 @@ Start getting data
 
    ```cs
    ...
-   \_candleSeries \= new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
+   _candleSeries = new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
    ...		
    					
    ```
@@ -50,11 +50,11 @@ Start getting data
    To get candles, you need to subscribe to the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html), event, which signals the appearance of a new value for processing:
 
    ```cs
-   \_connector.CandleSeriesProcessing +\= Connector\_CandleSeriesProcessing;
+   _connector.CandleSeriesProcessing += Connector_CandleSeriesProcessing;
    ...
-   private void Connector\_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
+   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
    {
-   	Chart.Draw(\_candleElement, candle);
+   	Chart.Draw(_candleElement, candle);
    }
    ...
    					
@@ -66,7 +66,7 @@ Start getting data
 
    ```cs
    ...
-   \_connector.SubscribeCandles(\_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
+   _connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
    ...
    		
    					
@@ -79,12 +79,12 @@ Start getting data
 
    ```cs
    ...
-   private void Connector\_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
+   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
    {
-       if (candle.State \=\= CandleStates.Finished) 
+       if (candle.State == CandleStates.Finished) 
        {
-          var chartData \= new ChartDrawData();
-          chartData.Group(candle.OpenTime).Add(\_candleElement, candle);
+          var chartData = new ChartDrawData();
+          chartData.Group(candle.OpenTime).Add(_candleElement, candle);
           Chart.Draw(chartData);
        }
    }
@@ -135,47 +135,47 @@ Start getting data
    - Since most sources provide candles with standard timeframes, it’s enough to set the type and timeframe to get such candles: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
      					
      ```
    - If you just want to load the finished candles, then you need to set the [BuildCandlesMode](../api/StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode.html) property in [Load](../api/StockSharp.Messages.MarketDataBuildModes.Load.html): 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Load,
+     	BuildCandlesMode = MarketDataBuildModes.Load,
      };	
      					
      ```
    - If the source does not provide the necessary timeframe candles, then they can be built from other market data. Below is an example of building candles with a timeframe of 21 seconds from trades: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };	
      					
      ```
    - If the data source provides neither candles nor trades, candles can be built from the market depth spread: 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-     	BuildCandlesField \= Level1Fields.SpreadMiddle,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
+     	BuildCandlesField = Level1Fields.SpreadMiddle,
      };	
      					
      ```
    - Since there are no sources providing a ready **volume profile**, it also needs to be built from another data type. To draw a **volume profile**, you need to set the [IsCalcVolumeProfile](../api/StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile.html) property to 'true', as well as [BuildCandlesMode](../api/StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode.html) to [Build](../api/StockSharp.Messages.MarketDataBuildModes.Build.html). And specify the data type from which the **volume profile** will be built. In this case, it's [Trades](../api/StockSharp.Messages.MarketDataTypes.Trades.html): 
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
+     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
-         IsCalcVolumeProfile \= true,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
+         IsCalcVolumeProfile = true,
      };	
      					
      ```
@@ -184,11 +184,11 @@ Start getting data
      The following code shows building a [VolumeCandle](../api/StockSharp.Algo.Candles.VolumeCandle.html) with a volume of 1000 contracts. The middle of the market depth spread is used as the data source for building.
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(VolumeCandle), security, 1000m)
+     _candleSeries = new CandleSeries(typeof(VolumeCandle), security, 1000m)
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-     	BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-     	BuildCandlesField \= Level1Fields.SpreadMiddle,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
+     	BuildCandlesField = Level1Fields.SpreadMiddle,
      };
      					
      ```
@@ -196,42 +196,42 @@ Start getting data
 
      ```cs
      	   
-     \_candleSeries \= new CandleSeries(typeof(TickCandle), security, 1000)
+     _candleSeries = new CandleSeries(typeof(TickCandle), security, 1000)
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };
      					
      ```
    - The following code shows building a [RangeCandle](../api/StockSharp.Algo.Candles.RangeCandle.html) with a range of 0.1 c.u. The best buy of a market depth is used as a data source for building:
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
+     _candleSeries = new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom \= MarketDataTypes.MarketDepth,
-         BuildCandlesField \= Level1Fields.BestBid,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+         BuildCandlesFrom = MarketDataTypes.MarketDepth,
+         BuildCandlesField = Level1Fields.BestBid,
      };
      					
      ```
    - The following code shows the building [RenkoCandle](../api/StockSharp.Algo.Candles.RenkoCandle.html). The price of the last trade from Level1 is used as a data source for building:
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
+     _candleSeries = new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
      {
-     	BuildCandlesMode \= MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom \= MarketDataTypes.Level1,
-         BuildCandlesField \= Level1Fields.LastTradePrice,
+     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
+         BuildCandlesFrom = MarketDataTypes.Level1,
+         BuildCandlesField = Level1Fields.LastTradePrice,
      };
      					
      ```
    - The following code shows the building [PnFCandle](../api/StockSharp.Algo.Candles.PnFCandle.html). Trades are used as a data source for building.
 
      ```cs
-     \_candleSeries \= new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize \= 0.1m, ReversalAmount \=1})
+     _candleSeries = new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize = 0.1m, ReversalAmount =1})
      {
-     	BuildCandlesMode \= MarketDataBuildModes.Build,
-     	BuildCandlesFrom \= MarketDataTypes.Trades,
+     	BuildCandlesMode = MarketDataBuildModes.Build,
+     	BuildCandlesFrom = MarketDataTypes.Trades,
      };	
      					
      ```

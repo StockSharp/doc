@@ -3,7 +3,7 @@
 Код ниже демонстрирует как инициализировать [GainCapitalMessageAdapter](../api/StockSharp.GainCapital.GainCapitalMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-var messageAdapter \= new GainCapitalMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new GainCapitalMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
 							

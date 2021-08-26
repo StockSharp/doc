@@ -10,10 +10,10 @@ The work with a database is performed using SQLite. The database is created at f
 To change the path of the database saving, it is necessary to edit the following part of the **Hydra.exe.config** file:
 
 ```none
-	\<connectionStrings\>
-		\<\!\-\-\<add name\="SqlServerConStr" connectionString\="Server\=.\\SQLExpress;Database\=Trading;User ID\=trading;Password\=trading;" providerName\=""\/\>\-\-\>
-		\<add name\="SQLiteConStr" connectionString\="Data Source\=%Documents%\\StockSharp\\Hydra\\StockSharp.db" providerName\="System.Data.SQLite" \/\>
-	\<\/connectionStrings\>
+	<connectionStrings>
+		<!--<add name="SqlServerConStr" connectionString="Server=.\SQLExpress;Database=Trading;User ID=trading;Password=trading;" providerName=""/>-->
+		<add name="SQLiteConStr" connectionString="Data Source=%Documents%\StockSharp\Hydra\StockSharp.db" providerName="System.Data.SQLite" />
+	</connectionStrings>
 		
 ```
 

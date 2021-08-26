@@ -9,11 +9,11 @@ Here is the connection settings window. From the drop\-down list (opens with the
 This window should be called through the [Configure](../api/StockSharp.Xaml.Extensions.Configure.html), extension method, into which the [Connector](../api/StockSharp.Algo.Connector.html) and the parent window are passed. If the configuration is successful, the [Configure](../api/StockSharp.Xaml.Extensions.Configure.html) extension method will return 'true'. Below is the code to call the connector connection settings window and save the settings to a file. 
 
 ```cs
-		private void Setting\_Click(object sender, RoutedEventArgs e)
+		private void Setting_Click(object sender, RoutedEventArgs e)
 		{
-			if (\_connector.Configure(this))
+			if (_connector.Configure(this))
 			{
-				new XmlSerializer\<SettingsStorage\>().Serialize(\_connector.Save(), \_connectorFile);
+				new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 		}
 	  				

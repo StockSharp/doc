@@ -37,16 +37,16 @@
 1. На форму необходимо добавить кнопку генерации отчета:
 
    ```none
-   \<Button x:Name\="Report" Grid.Column\="0" Width\="100" Grid.ColumnSpan\="2" Grid.Row\="11" IsEnabled\="False" Content\="Отчет" Click\="Report\_Click" \/\>
+   <Button x:Name="Report" Grid.Column="0" Width="100" Grid.ColumnSpan="2" Grid.Row="11" IsEnabled="False" Content="Отчет" Click="Report_Click" />
    ```
 2. Сам код генерации (срабатывает при нажатии кнопки):
 
    ```none
-   private void Report\_Click(object sender, RoutedEventArgs e)
+   private void Report_Click(object sender, RoutedEventArgs e)
    {
-   	\/\/ сгерерировать отчет по прошедшему тестированию
-   	new ExcelStrategyReport(\_strategy, "sma.xls").Generate();
-   	\/\/ открыть отчет
+   	// сгерерировать отчет по прошедшему тестированию
+   	new ExcelStrategyReport(_strategy, "sma.xls").Generate();
+   	// открыть отчет
    	Process.Start("sma.xls");
    }
    ```

@@ -15,7 +15,7 @@
 
 ```cs
 ...
-ConfigManager.RegisterService\<ICompilerService\>(new RoslynCompilerService());
+ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
 ```
 
@@ -24,9 +24,9 @@ ConfigManager.RegisterService\<ICompilerService\>(new RoslynCompilerService());
 ```cs
 ...
 IndexEditor.Securities.AddRange(SecurityProvider.LookupAll());
-SecurityProvider.Added +\= OnAdded;
+SecurityProvider.Added += OnAdded;
 ...
-private void OnAdded(IEnumerable\<Security\> securities)
+private void OnAdded(IEnumerable<Security> securities)
      {
          IndexEditor.Securities.AddRange(securities);
      }

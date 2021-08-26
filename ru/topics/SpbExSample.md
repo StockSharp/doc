@@ -3,13 +3,13 @@
 Код ниже демонстрирует как инициализировать [SpbExMessageAdapter](../api/StockSharp.SpbEx.SpbExMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new SpbExMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new SpbExMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
-    Config \= SpbExAddressConfig.Game,
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
+    Config = SpbExAddressConfig.Game,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

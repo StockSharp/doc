@@ -3,11 +3,11 @@
 Код ниже демонстрирует как инициализировать [BarChartMessageAdapter](../api/StockSharp.BarChart.BarChartMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new BarChartMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new BarChartMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Token \= "\<Your Token\>".To\<SecureString\>(),
+    Token = "<Your Token>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

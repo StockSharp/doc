@@ -29,36 +29,36 @@ Dll библиотеки добавляются нажатием кнопки **
 Далее в примере идет объявление переменных. Для работы стратегии SMA необходимы две скользящие средние средние с разными периодами расчёта, длинная SMA и короткая SMA:
 
 ```cs
- private readonly SimpleMovingAverage \_long;
- private readonly SimpleMovingAverage \_short;
+ private readonly SimpleMovingAverage _long;
+ private readonly SimpleMovingAverage _short;
 ```
 
 Объявляются параметры стратегии, в них будут храниться параметры индикаторов SMA:
 
 ```cs
- private readonly StrategyParam\<int\> \_longParam;
- private readonly StrategyParam\<int\> \_shortParam;
+ private readonly StrategyParam<int> _longParam;
+ private readonly StrategyParam<int> _shortParam;
 ```
 
 Так же объявляются переменные, необходимые для отображения графических элементов. Они не несут полезной нагрузки, и показаны в примере как демонстрация возможностей. Для отображения графических элементов лучше использовать стандартные кубики [S\#.Designer](Designer.md). Как это сделать показано в пункте [Комбинирование C\# и стандартных кубиков](Designer_Combine_Source_code_and_standard_elements.md):
 
 ```cs
- private readonly List\<MyTrade\> \_myTrades \= new List\<MyTrade\>();
- private readonly ChartCandleElement \_candlesElem;\/\/ Свечи
- private readonly ChartTradeElement \_tradesElem;\/\/ Сделки
- private readonly ChartIndicatorElement \_shortElem;\/\/ Индикатор
- private readonly ChartIndicatorElement \_longElem; \/\/ Индикатор
- private readonly ChartArea \_area \= new ChartArea();\/\/ Панель графиков
+ private readonly List<MyTrade> _myTrades = new List<MyTrade>();
+ private readonly ChartCandleElement _candlesElem;// Свечи
+ private readonly ChartTradeElement _tradesElem;// Сделки
+ private readonly ChartIndicatorElement _shortElem;// Индикатор
+ private readonly ChartIndicatorElement _longElem; // Индикатор
+ private readonly ChartArea _area = new ChartArea();// Панель графиков
 ```
 
 Атрибут [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html) необходим для обозначения входных и выходных параметров кубика. Если атрибутом обозначено событие, то значит это будет выходной параметр, если метод — значит это входной параметр:
 
 ```cs
- \[DiagramExternal\]
- public event Action\<Order\> NewMyOrder;
+ [DiagramExternal]
+ public event Action<Order> NewMyOrder;
 ```
 ```cs
- \[DiagramExternal\]
+ [DiagramExternal]
  public void ProcessCandle(Candle candle)
 ```
 
@@ -69,20 +69,20 @@ Dll библиотеки добавляются нажатием кнопки **
 ```cs
 public int Long
 {
-    get { return \_longParam.Value; }
+    get { return _longParam.Value; }
     set
     {
-        \_longParam.Value \= value;
-        \_long.Length \= value;
+        _longParam.Value = value;
+        _long.Length = value;
     }
 }
 public int Short
 {
-    get { return \_shortParam.Value; }
+    get { return _shortParam.Value; }
     set
     {
-        \_shortParam.Value \= value;
-        \_short.Length \= value;
+        _shortParam.Value = value;
+        _short.Length = value;
     }
 }
 ```
@@ -92,23 +92,23 @@ public int Short
 ```cs
 public NewStrategy()
 {
-    \_longParam \= new StrategyParam\<int\>(this, nameof(Long), 80);
-    \_shortParam \= new StrategyParam\<int\>(this, nameof(Short), 20);
-    \_long \= new SimpleMovingAverage { Length \= Long };
-    \_short \= new SimpleMovingAverage { Length \= Short };
-    \/\/Инициализация графических элементов
-    \_candlesElem \= new ChartCandleElement { ShowAxisMarker \= false };
-    \_tradesElem \= new ChartTradeElement { FullTitle \= LocalizedStrings.Str985 };
-    \_shortElem \= new ChartIndicatorElement
+    _longParam = new StrategyParam<int>(this, nameof(Long), 80);
+    _shortParam = new StrategyParam<int>(this, nameof(Short), 20);
+    _long = new SimpleMovingAverage { Length = Long };
+    _short = new SimpleMovingAverage { Length = Short };
+    //Инициализация графических элементов
+    _candlesElem = new ChartCandleElement { ShowAxisMarker = false };
+    _tradesElem = new ChartTradeElement { FullTitle = LocalizedStrings.Str985 };
+    _shortElem = new ChartIndicatorElement
     {
-        Color \= Colors.Coral,
-        ShowAxisMarker \= false,
-        FullTitle \= \_short.ToString()
+        Color = Colors.Coral,
+        ShowAxisMarker = false,
+        FullTitle = _short.ToString()
     };
-    \_longElem \= new ChartIndicatorElement
+    _longElem = new ChartIndicatorElement
     {
-        ShowAxisMarker \= false,
-        FullTitle \= \_long.ToString()
+        ShowAxisMarker = false,
+        FullTitle = _long.ToString()
     };
 }
 ```
@@ -119,18 +119,18 @@ public NewStrategy()
 protected override void OnReseted()
 {
     this.AddInfoLog("OnReseted");
-    \_long.Reset();
-    \_short.Reset();
-    var chart \= this.GetChart();
-    if (chart \!\= null)
+    _long.Reset();
+    _short.Reset();
+    var chart = this.GetChart();
+    if (chart != null)
     {
-        foreach (var element in \_area.Elements.ToArray())
+        foreach (var element in _area.Elements.ToArray())
         {
-            if (\_area.Elements.Contains(element))
-                chart.RemoveElement(\_area, element);
+            if (_area.Elements.Contains(element))
+                chart.RemoveElement(_area, element);
         }
-        if (chart.Areas.Contains(\_area))
-            chart.RemoveArea(\_area);
+        if (chart.Areas.Contains(_area))
+            chart.RemoveArea(_area);
     }
     base.OnReseted();
 }
@@ -142,31 +142,31 @@ protected override void OnReseted()
 protected override void OnStarted()
 {
     this.AddInfoLog("OnStarted");
-    \/\/ переинициализация скользящих средних
-    \_long.Reset();
-    \_short.Reset();
-    \/\/ добавление на график графических элементов
-    var chart \= this.GetChart();
-    if (\!chart.Areas.Contains(\_area))
+    // переинициализация скользящих средних
+    _long.Reset();
+    _short.Reset();
+    // добавление на график графических элементов
+    var chart = this.GetChart();
+    if (!chart.Areas.Contains(_area))
     {
-        chart.AddArea(\_area);
-        chart.AddElement(\_area, \_candlesElem);
-        chart.AddElement(\_area, \_tradesElem);
-        chart.AddElement(\_area, \_shortElem);
-        chart.AddElement(\_area, \_longElem);
+        chart.AddArea(_area);
+        chart.AddElement(_area, _candlesElem);
+        chart.AddElement(_area, _tradesElem);
+        chart.AddElement(_area, _shortElem);
+        chart.AddElement(_area, _longElem);
     }
-    \/\/ подписка на появление новых сделок, необходимо для отображения сделок
+    // подписка на появление новых сделок, необходимо для отображения сделок
     this
     .WhenNewMyTrades()
-    .Do(trades \=\> \_myTrades.AddRange(trades))
+    .Do(trades => _myTrades.AddRange(trades))
     .Apply(this);
-    \/\/ подписка на изменения заявок
+    // подписка на изменения заявок
     this
     .WhenOrderRegistered()
     .Or(this.WhenOrderChanged())
-    .Do(ord \=\> NewMyOrder?.Invoke(ord))
+    .Do(ord => NewMyOrder?.Invoke(ord))
     .Apply(this);
-    \/\/ начать получать новую информацию
+    // начать получать новую информацию
     Connector.SubscribeLevel1(Security);
     base.OnStarted();
 }
@@ -188,43 +188,43 @@ protected override void OnStopped()
 В методе ProcessCandle(Candle candle) идет основной расчёт стратегии. Так как он обозначен атрибутом [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html), значит это входной параметр кубика, принимающий **Свечи**.
 
 ```cs
-\[DiagramExternal\]
+[DiagramExternal]
 public void ProcessCandle(Candle candle)
 {
-    \/\/ Запущена или остановлена стратегия
-    if (ProcessState \=\= ProcessStates.Stopping)
+    // Запущена или остановлена стратегия
+    if (ProcessState == ProcessStates.Stopping)
     {
         CancelActiveOrders();
         return;
     }
     this.AddInfoLog(LocalizedStrings.Str3634Params.Put(candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.Security));
-    \/\/ Расчет скользящих средних
-    var longValue \= \_long.Process(candle);
-    var shortValue \= \_short.Process(candle);
-    var isShortLessThenLong \= \_short.GetCurrentValue() \< \_long.GetCurrentValue();
-    \/\/ пересекла ли короткая SMA длинную SMA
-    if (\_isShortLessThenLong \!\= isShortLessThenLong)
+    // Расчет скользящих средних
+    var longValue = _long.Process(candle);
+    var shortValue = _short.Process(candle);
+    var isShortLessThenLong = _short.GetCurrentValue() < _long.GetCurrentValue();
+    // пересекла ли короткая SMA длинную SMA
+    if (_isShortLessThenLong != isShortLessThenLong)
     {
-        \/\/ определение направление для заявки
-        var direction \= isShortLessThenLong ? Sides.Sell : Sides.Buy;
-        \/\/ объёма для заявки
-        var volume \= Position \=\= 0 ? Volume : Position.Abs().Min(Volume) \* 2;
-        \/\/ расчет цены для заявки
-        var price \= candle.ClosePrice + ((direction \=\= Sides.Buy ? Security.PriceStep : \-Security.PriceStep) ?? 1);
-        \/\/выставление заявки
+        // определение направление для заявки
+        var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+        // объёма для заявки
+        var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+        // расчет цены для заявки
+        var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
+        //выставление заявки
         RegisterOrder(this.CreateOrder(direction, price, volume));
-        \_isShortLessThenLong \= isShortLessThenLong;
+        _isShortLessThenLong = isShortLessThenLong;
     }
-    \/\/отрисовка графических элементов
-    var trade \= \_myTrades.FirstOrDefault();
-    \_myTrades.Clear();
-    var data \= new ChartDrawData();
+    //отрисовка графических элементов
+    var trade = _myTrades.FirstOrDefault();
+    _myTrades.Clear();
+    var data = new ChartDrawData();
     data
       .Group(candle.OpenTime)
-        .Add(\_candlesElem, candle)
-        .Add(\_shortElem, shortValue)
-        .Add(\_longElem, longValue)
-        .Add(\_tradesElem, trade);
+        .Add(_candlesElem, candle)
+        .Add(_shortElem, shortValue)
+        .Add(_longElem, longValue)
+        .Add(_tradesElem, trade);
     this.GetChart().Draw(data);
 }
 ```

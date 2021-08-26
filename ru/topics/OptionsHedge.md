@@ -10,26 +10,26 @@
 2. Сама стратегия [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) не запускается, а вместо этого она передается в качестве дочерней, для стратегии [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html)
 
    ```cs
-   \/\/ Создаем Дельта\-хедж стратегию
-   var hedge \= new DeltaHedgeStrategy
+   // Создаем Дельта-хедж стратегию
+   var hedge = new DeltaHedgeStrategy
    {
-   	Security \= option.GetUnderlyingAsset(Connector),
-   	Portfolio \= Portfolio.SelectedPortfolio,
-   	Connector \= Connector,
+   	Security = option.GetUnderlyingAsset(Connector),
+   	Portfolio = Portfolio.SelectedPortfolio,
+   	Connector = Connector,
    };
-   \/\/ создаем котирование на покупку 20\-ти контрактов
-   var quoting \= new VolatilityQuotingStrategy(Sides.Buy, 20,
-   		new Range\<decimal\>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
+   // создаем котирование на покупку 20-ти контрактов
+   var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
+   		new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    {
-   	\/\/ указываем, что котирование работает с объемом в 1 контракт
-   	Volume \= 1,
-   	Security \= option,
-   	Portfolio \= Portfolio.SelectedPortfolio,
-   	Connector \= Connector,
+   	// указываем, что котирование работает с объемом в 1 контракт
+   	Volume = 1,
+   	Security = option,
+   	Portfolio = Portfolio.SelectedPortfolio,
+   	Connector = Connector,
    };
-   \/\/ Передаем котирование в Дельта\-хедж стратегию
+   // Передаем котирование в Дельта-хедж стратегию
    hedge.ChildStrategies.Add(quoting);
-   \/\/ Запускаем Дельта\-хедж стратегию
+   // Запускаем Дельта-хедж стратегию
    hedge.Start();
    ```
 

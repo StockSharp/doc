@@ -41,7 +41,7 @@
 [DefaultFutureDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable.html) По умолчанию в шлюзе [PlazaMessageAdapter](../api/StockSharp.Plaza.PlazaMessageAdapter.html) используются стаканы глубиной в 5 котировок. Чтобы изменить глубину стакана, необходимо в шлюзе [PlazaMessageAdapter](../api/StockSharp.Plaza.PlazaMessageAdapter.html) свойству [DefaultFutureDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable.html) (для фьючерсов) или [DefaultOptionDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultOptionDepthTable.html) (для опционов) присвоить новое значение: 
 
 ```cs
-adapter.DefaultFutureDepthTable \= adapter.TableRegistry.Aggregation20Future;
+adapter.DefaultFutureDepthTable = adapter.TableRegistry.Aggregation20Future;
 ```
 
 ### Следующие шаги

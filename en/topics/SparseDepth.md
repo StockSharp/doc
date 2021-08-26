@@ -9,8 +9,8 @@ Order book modifications
 1. The creating of sparse order book from the normal one is carried out through the [Overload:StockSharp.Algo.TraderHelper.Sparse](../api/Overload:StockSharp.Algo.TraderHelper.Sparse.html) method: 
 
    ```cs
-   MarketDepth depth \= ....;
-   var sparseDepth \= depth.Sparse();
+   MarketDepth depth = ....;
+   var sparseDepth = depth.Sparse();
    ```
 
    All the [Quote](../api/StockSharp.BusinessEntities.Quote.html) quotations in the resulting order book will have zero volume, and they will created with the [Security.StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html) step. 
@@ -18,14 +18,14 @@ Order book modifications
    To combine the sparse order book with the original one (to connect the real and sparse quotations), you must call the [TraderHelper.Join](../api/StockSharp.Algo.TraderHelper.Join.html) method: 
 
    ```cs
-   var joinedDepth \= sparseDepth.Join(depth);
+   var joinedDepth = sparseDepth.Join(depth);
    ```
 2. The grouping of the order book by price levels is carried out through the [TraderHelper.Group](../api/StockSharp.Algo.TraderHelper.Group.html) method: 
 
    ```cs
-   MarketDepth depth \= ....;
-   \/\/ grouping of the order book by 10 points price levels
-   var grouppedDepth \= depth.Group(10.Points(depth.Security));
+   MarketDepth depth = ....;
+   // grouping of the order book by 10 points price levels
+   var grouppedDepth = depth.Group(10.Points(depth.Security));
    ```
 
    The result of the grouping will be the [MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html) order book, consisting of quotations of the [AggregatedQuote](../api/StockSharp.BusinessEntities.AggregatedQuote.html) type. Through the [AggregatedQuote.InnerQuotes](../api/StockSharp.BusinessEntities.AggregatedQuote.InnerQuotes.html) property the real order book quotations can get, on which the grouping by price level was done. 

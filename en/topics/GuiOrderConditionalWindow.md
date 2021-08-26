@@ -16,25 +16,25 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 
 ```cs
 ...
-private readonly Connector \_connector \= new Connector();
+private readonly Connector _connector = new Connector();
 ...
 private void NewStopOrderClick(object sender, RoutedEventArgs e)
 {
-	var newOrder \= new OrderConditionalWindow
+	var newOrder = new OrderConditionalWindow
 	{
-		Order \= new Order
+		Order = new Order
 		{
-			Security \= SecurityPicker.SelectedSecurity,
-			Type \= OrderTypes.Conditional,
-			ExpiryDate \= DateTime.Today
+			Security = SecurityPicker.SelectedSecurity,
+			Type = OrderTypes.Conditional,
+			ExpiryDate = DateTime.Today
 		},
-		SecurityProvider \= \_connector,
-		MarketDataProvider \= \_connector,
-		Portfolios \= new PortfolioDataSource(\_connector),
-		Adapter \= \_connector.Adapter
+		SecurityProvider = _connector,
+		MarketDataProvider = _connector,
+		Portfolios = new PortfolioDataSource(_connector),
+		Adapter = _connector.Adapter
 	};
 	if (newOrder.ShowModal(this))
-		\_connector.RegisterOrder(newOrder.Order);
+		_connector.RegisterOrder(newOrder.Order);
 }
               		
 	  				

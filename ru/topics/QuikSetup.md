@@ -172,8 +172,8 @@
 - Для увеличения скорости передачи данных по [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) для стакана рекомендуется прописать в файл *info.ini* следующие параметры: 
 
   ```cs
-  \[excel\]
-  price\-timeout\=10
+  [excel]
+  price-timeout=10
   ```
 
 ### Следующие шаги

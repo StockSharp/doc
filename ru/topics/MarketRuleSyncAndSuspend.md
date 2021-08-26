@@ -9,16 +9,16 @@
 - Вне стратегии:
 
   ```cs
-  MarketRuleHelper.SuspendRules(() \=\>
+  MarketRuleHelper.SuspendRules(() =>
   {
       order
           .WhenRegistered(Connector)
-          .Do(() \=\> Connector.AddInfoLog("Заявка успешно зарегистрирована"))
+          .Do(() => Connector.AddInfoLog("Заявка успешно зарегистрирована"))
           .Once()
           .Apply(this);
       order
           .WhenCanceled(Connector)
-          .Do(() \=\> Connector.AddInfoLog("Заявка успешно отменена"))
+          .Do(() => Connector.AddInfoLog("Заявка успешно отменена"))
           .Once()
           .Apply(this);
   });
@@ -31,10 +31,10 @@
   {
   	...
   	
-         this.SuspendRules(() \=\>
+         this.SuspendRules(() =>
          {
-  		\_connector
-                 .WhenCandlesFinished(\_series)
+  		_connector
+                 .WhenCandlesFinished(_series)
                  .Do(FinishCandle)
                  .Apply(this);
              Security

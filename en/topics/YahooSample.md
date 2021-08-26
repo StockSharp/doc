@@ -3,7 +3,7 @@
 The code below demonstrates how to initialize the [YahooMessageAdapter](../api/StockSharp.Yahoo.YahooMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-var messageAdapter \= new YahooMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new YahooMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
 							

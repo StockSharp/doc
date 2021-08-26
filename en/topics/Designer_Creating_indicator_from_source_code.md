@@ -9,48 +9,48 @@ First, you need to create a cube as described in [Getting started](Designer_Crea
 We describe the input and output parameters of the cube:
 
 ```cs
-		\[DiagramExternal\]
+		[DiagramExternal]
 		public void ProcessCandle(Candle candle)
 		{
-            \/\/...
+            //...
 		}
 ```
 ```cs
-		\[DiagramExternal\]
-		public event Action\<IIndicatorValue\> NewIndicator;
+		[DiagramExternal]
+		public event Action<IIndicatorValue> NewIndicator;
 ```
 
 Let's describe the indicator as a separate class:
 
 ```cs
-    \/\/\/ \<summary\>
-	\/\/\/ Simple moving average.
-	\/\/\/ \<\/summary\>
-	\[DisplayName("SMA")\]
-	public class NewSimpleMovingAverage : LengthIndicator\<decimal\>
+    /// <summary>
+	/// Simple moving average.
+	/// </summary>
+	[DisplayName("SMA")]
+	public class NewSimpleMovingAverage : LengthIndicator<decimal>
 	{
-		\/\/\/ \<summary\>
-		\/\/\/ Initializes a new instance of the \<see cref\="SimpleMovingAverage"\/\>.
-		\/\/\/ \<\/summary\>
+		/// <summary>
+		/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
+		/// </summary>
 		public NewSimpleMovingAverage()
 		{
-			Length \= 32;
+			Length = 32;
 		}
-		\/\/\/ \<summary\>
-		\/\/\/ To handle the input value.
-		\/\/\/ \<\/summary\>
-		\/\/\/ \<param name\="input"\>The input value.\<\/param\>
-		\/\/\/ \<returns\>The resulting value.\<\/returns\>
+		/// <summary>
+		/// To handle the input value.
+		/// </summary>
+		/// <param name="input">The input value.</param>
+		/// <returns>The resulting value.</returns>
 		protected override IIndicatorValue OnProcess(IIndicatorValue input)
 		{
-			var newValue \= input.GetValue\<decimal\>();
+			var newValue = input.GetValue<decimal>();
 			if (input.IsFinal)
 			{
 				Buffer.Add(newValue);
-				if (Buffer.Count \> Length) Buffer.RemoveAt(0);
+				if (Buffer.Count > Length) Buffer.RemoveAt(0);
 			}
-			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() \/ Length);
-			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) \/ Length);
+			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
+			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
 		}
 	}
 ```
@@ -58,10 +58,10 @@ Let's describe the indicator as a separate class:
 We add the indicator to the cube code and initialize it in the cube class constructor:
 
 ```cs
-		private SimpleMovingAverage \_NewSMA;
+		private SimpleMovingAverage _NewSMA;
 		public NewSMA ()
 		{
-			\_NewSMA \= new SimpleMovingAverage();
+			_NewSMA = new SimpleMovingAverage();
 		}
 ```
 
@@ -70,18 +70,18 @@ The SMA indicator has a single property, it is the period length. We describe th
 ```cs
 		public int Length
 		{
-			get { return \_NewSMA.Length; }
-			set { \_NewSMA.Length \= value;}
+			get { return _NewSMA.Length; }
+			set { _NewSMA.Length = value;}
 		}
 ```
 
 We add the **ProcessCandle** method so that it calculates the indicator value and generates an event of the output parameter:
 
 ```cs
-		\[DiagramExternal\]
+		[DiagramExternal]
 		public void ProcessCandle(Candle candle)
 		{
-			NewIndicator?.Invoke(\_NewSMA.Process(candle));
+			NewIndicator?.Invoke(_NewSMA.Process(candle));
 		}
 ```
 
@@ -111,56 +111,56 @@ namespace StockSharp.Designer.Strategies
 	using StockSharp.Xaml;
 	using StockSharp.Xaml.Charting;
 	using StockSharp.Xaml.Diagram.Elements;
-	\[Guid("eea2da25\-de12\-4b6c\-b43a\-6a98e2fdb01c")\]
+	[Guid("eea2da25-de12-4b6c-b43a-6a98e2fdb01c")]
 	public class NewSMA : Strategy
 	{
-		private SimpleMovingAverage \_NewSMA;
+		private SimpleMovingAverage _NewSMA;
 		public NewSMA ()
 		{
-			\_NewSMA \= new SimpleMovingAverage();
+			_NewSMA = new SimpleMovingAverage();
 		}
-		\[DiagramExternal\]
-		public event Action\<IIndicatorValue\> NewIndicator;
+		[DiagramExternal]
+		public event Action<IIndicatorValue> NewIndicator;
 		public int Length
 		{
-			get { return \_NewSMA.Length; }
-			set { \_NewSMA.Length \= value;}
+			get { return _NewSMA.Length; }
+			set { _NewSMA.Length = value;}
 		}
-		\[DiagramExternal\]
+		[DiagramExternal]
 		public void ProcessCandle(Candle candle)
 		{
-			NewIndicator?.Invoke(\_NewSMA.Process(candle));
+			NewIndicator?.Invoke(_NewSMA.Process(candle));
 		}
 	}
 	
-	\/\/\/ \<summary\>
-	\/\/\/ Simple moving average.
-	\/\/\/ \<\/summary\>
-	\[DisplayName("SMA")\]
-	public class NewSimpleMovingAverage : LengthIndicator\<decimal\>
+	/// <summary>
+	/// Simple moving average.
+	/// </summary>
+	[DisplayName("SMA")]
+	public class NewSimpleMovingAverage : LengthIndicator<decimal>
 	{
-		\/\/\/ \<summary\>
-		\/\/\/ Initializes a new instance of the \<see cref\="SimpleMovingAverage"\/\>.
-		\/\/\/ \<\/summary\>
+		/// <summary>
+		/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
+		/// </summary>
 		public NewSimpleMovingAverage()
 		{
-			Length \= 32;
+			Length = 32;
 		}
-		\/\/\/ \<summary\>
-		\/\/\/ To handle the input value.
-		\/\/\/ \<\/summary\>
-		\/\/\/ \<param name\="input"\>The input value.\<\/param\>
-		\/\/\/ \<returns\>The resulting value.\<\/returns\>
+		/// <summary>
+		/// To handle the input value.
+		/// </summary>
+		/// <param name="input">The input value.</param>
+		/// <returns>The resulting value.</returns>
 		protected override IIndicatorValue OnProcess(IIndicatorValue input)
 		{
-			var newValue \= input.GetValue\<decimal\>();
+			var newValue = input.GetValue<decimal>();
 			if (input.IsFinal)
 			{
 				Buffer.Add(newValue);
-				if (Buffer.Count \> Length) Buffer.RemoveAt(0);
+				if (Buffer.Count > Length) Buffer.RemoveAt(0);
 			}
-			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() \/ Length);
-			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) \/ Length);
+			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
+			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
 		}
 	}
 }

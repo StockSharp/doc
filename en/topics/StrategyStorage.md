@@ -6,13 +6,13 @@ To save and load strategy settings the overrides of [Save](../api/StockSharp.Alg
 public override void Load(SettingsStorage settings)
 {
 	if (settings.Contains("UsedVolume"))
-	    Id \= settings.GetValue\<Guid\>("UsedVolume");
+	    Id = settings.GetValue<Guid>("UsedVolume");
 	
     if (settings.Contains("Ticks"))
-        Name \= settings.GetValue\<string\>("Ticks");
+        Name = settings.GetValue<string>("Ticks");
 	
     if (settings.Contains("SpreadVolume"))
-        Volume \= settings.GetValue\<decimal\>("SpreadVolume");
+        Volume = settings.GetValue<decimal>("SpreadVolume");
 	        
 	base.Load(settings);
 }
@@ -31,10 +31,10 @@ public override void Save(SettingsStorage settings)
 To save and load settings from an external file, you can use serialization and deserialization, respectively, implemented in [S\#](StockSharpAbout.md). 
 
 ```cs
-var newStrategy \= new MarketProfileStrategy();
+var newStrategy = new MarketProfileStrategy();
 if (File.Exists("marketProfile.xml"))
 {
-    var settingsStorage \= new XmlSerializer\<SettingsStorage\>().Deserialize("marketProfile.xml");
+    var settingsStorage = new XmlSerializer<SettingsStorage>().Deserialize("marketProfile.xml");
     newStrategy.Load(settingsStorage);
 }
 ```
@@ -51,7 +51,7 @@ public override void Save(SettingsStorage settings)
 	    
 	base.Save(settings);
 	
-	new XmlSerializer\<PlazaTable\>().Serialize(settings, "marketProfile.xml");
+	new XmlSerializer<PlazaTable>().Serialize(settings, "marketProfile.xml");
 }
 ```
 

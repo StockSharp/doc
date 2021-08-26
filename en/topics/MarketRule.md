@@ -222,44 +222,44 @@ If you need to create your own unique rule (on any event, which is not provided 
 
 ```cs
 		
-private sealed class PortfolioRule : MarketRule\<Portfolio, Portfolio\>
+private sealed class PortfolioRule : MarketRule<Portfolio, Portfolio>
 {
-	private readonly Func\<Portfolio, bool\> \_changed;
-	private readonly Portfolio \_portfolio;
-	private readonly IConnector \_connector;
-	public PortfolioRule(Portfolio portfolio, IConnector connector, Func\<Portfolio, bool\> changed) : base(portfolio)
+	private readonly Func<Portfolio, bool> _changed;
+	private readonly Portfolio _portfolio;
+	private readonly IConnector _connector;
+	public PortfolioRule(Portfolio portfolio, IConnector connector, Func<Portfolio, bool> changed) : base(portfolio)
 	{
-		if (portfolio \=\= null)
+		if (portfolio == null)
 			throw new ArgumentNullException("portfolio");
-		if (changed \=\= null)
+		if (changed == null)
 			throw new ArgumentNullException("changed");
-		\_changed \= changed;
-		\_portfolio \= portfolio;
-		\_connector \= connector;
-		\_connector.PortfolioChanged +\= OnPortfolioChanged;
+		_changed = changed;
+		_portfolio = portfolio;
+		_connector = connector;
+		_connector.PortfolioChanged += OnPortfolioChanged;
 	}
 	private void OnPortfolioChanged(Portfolio portfolio)
 	{
-		if ((portfolio\=\=\_portfolio) && \_changed(\_portfolio))
-			Activate(\_portfolio);
+		if ((portfolio==_portfolio) && _changed(_portfolio))
+			Activate(_portfolio);
 	}
 	protected override void DisposeManaged()
 	{
-		\_connector.PortfolioChanged \-\= OnPortfolioChanged;
+		_connector.PortfolioChanged -= OnPortfolioChanged;
 		base.DisposeManaged();
 	}
 }
 		
-public static MarketRule\<Portfolio, Portfolio\> WhenMoneyMore(this Portfolio portfolio, Unit money)
+public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio portfolio, Unit money)
 {
-	if (portfolio \=\= null)
+	if (portfolio == null)
 		throw new ArgumentNullException("portfolio");
-	if (money \=\= null)
+	if (money == null)
 		throw new ArgumentNullException("money");
-	var finishMoney \= money.Type \=\= UnitTypes.Limit ? money : portfolio.CurrentValue + money;
-	return new PortfolioRule(portfolio, pf \=\> pf.CurrentValue \> finishMoney)
+	var finishMoney = money.Type == UnitTypes.Limit ? money : portfolio.CurrentValue + money;
+	return new PortfolioRule(portfolio, pf => pf.CurrentValue > finishMoney)
 	{
-		Name \= "Money increase of portfolio {0} above {1}".Put(portfolio, finishMoney)
+		Name = "Money increase of portfolio {0} above {1}".Put(portfolio, finishMoney)
 	};
 }
 		

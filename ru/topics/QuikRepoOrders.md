@@ -9,27 +9,27 @@
 1. Создаем новую заявку, указывая необходимый тип заявки: 
 
    ```cs
-   var order \= new Order
+   var order = new Order
    {
-   	Portfolio \= \_portfolio,
-   	Volume \= 1,
-   	Security \= \_lkoh,
-   	Price \= \_price,
-   	Type \= OrderTypes.Rps
+   	Portfolio = _portfolio,
+   	Volume = 1,
+   	Security = _lkoh,
+   	Price = _price,
+   	Type = OrderTypes.Rps
    };
    ```
 2. После этого инициализируем поле RpsInfo, заполняя необходимые для заявки поля (часть из полей [NtmOrderInfo](../api/StockSharp.Messages.NtmOrderInfo.html) являются необязательными): 
 
    ```cs
-   order.RpsInfo \= new NtmOrderInfo
+   order.RpsInfo = new NtmOrderInfo
    {
-   	Partner \= \_partner
+   	Partner = _partner
    };
    ```
 3. Последний шаг \- стандартная регистрация заявки: 
 
    ```cs
-   \_connector.RegisterOrder(order);
+   _connector.RegisterOrder(order);
    ```
 
 ## См. также

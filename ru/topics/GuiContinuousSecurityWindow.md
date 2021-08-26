@@ -20,31 +20,31 @@
 Ниже приведен фрагмент кода с его использованием. 
 
 ```cs
-private void CreateContinuousSecurity\_OnClick(object sender, RoutedEventArgs e)
+private void CreateContinuousSecurity_OnClick(object sender, RoutedEventArgs e)
 {
-	\_continuousSecurityWindow \= new ContinuousSecurityWindow
+	_continuousSecurityWindow = new ContinuousSecurityWindow
 	{
-		SecurityStorage \= \_entityRegistry.Securities,
-		Security \= new ContinuousSecurity { Board \= ExchangeBoard.Associated }
+		SecurityStorage = _entityRegistry.Securities,
+		Security = new ContinuousSecurity { Board = ExchangeBoard.Associated }
 	};
-	if (\!\_continuousSecurityWindow.ShowModal(this))
+	if (!_continuousSecurityWindow.ShowModal(this))
 		return;
-	\_continuousSecurity \= \_continuousSecurityWindow.Security;
-	ContinuousSecurity.Content \= \_continuousSecurity.Id;
-	var first \= \_continuousSecurity.InnerSecurities.First();
-	var gluingSecurity \= new Security
+	_continuousSecurity = _continuousSecurityWindow.Security;
+	ContinuousSecurity.Content = _continuousSecurity.Id;
+	var first = _continuousSecurity.InnerSecurities.First();
+	var gluingSecurity = new Security
 	{
-		Id \= \_continuousSecurity.Id,
-		Code \= \_continuousSecurity.Code,
-		Board \= ExchangeBoard.Associated,
-		Type \= \_continuousSecurity.Type,
-		VolumeStep \= first.VolumeStep,
-		PriceStep \= first.PriceStep,
-		ExtensionInfo \= new Dictionary\<object, object\> { { "GluingSecurity", true } }
+		Id = _continuousSecurity.Id,
+		Code = _continuousSecurity.Code,
+		Board = ExchangeBoard.Associated,
+		Type = _continuousSecurity.Type,
+		VolumeStep = first.VolumeStep,
+		PriceStep = first.PriceStep,
+		ExtensionInfo = new Dictionary<object, object> { { "GluingSecurity", true } }
 	};
-	if (\_entityRegistry.Securities.ReadById(gluingSecurity.Id) \=\= null)
+	if (_entityRegistry.Securities.ReadById(gluingSecurity.Id) == null)
 	{
-		\_entityRegistry.Securities.Save(gluingSecurity);
+		_entityRegistry.Securities.Save(gluingSecurity);
 	}
 }
 ```

@@ -15,14 +15,14 @@ Backtesting of moving averages strategy
 1. At the beginning it is necessary to create the settings for the testing: 
 
    ```cs
-   var settings \= new\[\]
+   var settings = new[]
    {
    	Tuple.Create(
    		TicksCheckBox,
    		TicksProgress,
    		TicksParameterGrid,
-   		\/\/ ticks
-   		new EmulationInfo {UseTicks \= true, CurveColor \= Colors.DarkGreen, StrategyName \= LocalizedStrings.Ticks},
+   		// ticks
+   		new EmulationInfo {UseTicks = true, CurveColor = Colors.DarkGreen, StrategyName = LocalizedStrings.Ticks},
    		TicksChart,
    		TicksEquity,
    		TicksPosition),
@@ -30,8 +30,8 @@ Backtesting of moving averages strategy
    		TicksAndDepthsCheckBox,
    		TicksAndDepthsProgress,
    		TicksAndDepthsParameterGrid,
-   		\/\/ ticks + order book
-   		new EmulationInfo {UseTicks \= true, UseMarketDepth \= true, CurveColor \= Colors.Red, StrategyName \= LocalizedStrings.XamlStr757},
+   		// ticks + order book
+   		new EmulationInfo {UseTicks = true, UseMarketDepth = true, CurveColor = Colors.Red, StrategyName = LocalizedStrings.XamlStr757},
    		TicksAndDepthsChart,
    		TicksAndDepthsEquity,
    		TicksAndDepthsPosition),
@@ -39,8 +39,8 @@ Backtesting of moving averages strategy
    		DepthsCheckBox,
    		DepthsProgress,
    		DepthsParameterGrid,
-   		\/\/ order book
-   		new EmulationInfo {UseMarketDepth \= true, CurveColor \= Colors.OrangeRed, StrategyName \= LocalizedStrings.MarketDepths},
+   		// order book
+   		new EmulationInfo {UseMarketDepth = true, CurveColor = Colors.OrangeRed, StrategyName = LocalizedStrings.MarketDepths},
    		DepthsChart,
    		DepthsEquity,
    		DepthsPosition),
@@ -48,8 +48,8 @@ Backtesting of moving averages strategy
    		CandlesCheckBox,
    		CandlesProgress,
    		CandlesParameterGrid,
-   		\/\/ candles
-   		new EmulationInfo {UseCandleTimeFrame \= timeFrame, CurveColor \= Colors.DarkBlue, StrategyName \= LocalizedStrings.Candles},
+   		// candles
+   		new EmulationInfo {UseCandleTimeFrame = timeFrame, CurveColor = Colors.DarkBlue, StrategyName = LocalizedStrings.Candles},
    		CandlesChart,
    		CandlesEquity,
    		CandlesPosition),
@@ -58,8 +58,8 @@ Backtesting of moving averages strategy
    		CandlesAndDepthsCheckBox,
    		CandlesAndDepthsProgress,
    		CandlesAndDepthsParameterGrid,
-   		\/\/ candles + orderbook
-   		new EmulationInfo {UseMarketDepth \= true, UseCandleTimeFrame \= timeFrame, CurveColor \= Colors.Cyan, StrategyName \= LocalizedStrings.XamlStr635},
+   		// candles + orderbook
+   		new EmulationInfo {UseMarketDepth = true, UseCandleTimeFrame = timeFrame, CurveColor = Colors.Cyan, StrategyName = LocalizedStrings.XamlStr635},
    		CandlesAndDepthsChart,
    		CandlesAndDepthsEquity,
    		CandlesAndDepthsPosition),
@@ -67,8 +67,8 @@ Backtesting of moving averages strategy
    		OrderLogCheckBox,
    		OrderLogProgress,
    		OrderLogParameterGrid,
-   		\/\/ order log
-   		new EmulationInfo {UseOrderLog \= true, CurveColor \= Colors.CornflowerBlue, StrategyName \= LocalizedStrings.OrderLog},
+   		// order log
+   		new EmulationInfo {UseOrderLog = true, CurveColor = Colors.CornflowerBlue, StrategyName = LocalizedStrings.OrderLog},
    		OrderLogChart,
    		OrderLogEquity,
    		OrderLogPosition),
@@ -76,8 +76,8 @@ Backtesting of moving averages strategy
    		Level1CheckBox,
    		Level1Progress,
    		Level1ParameterGrid,
-   		\/\/ order log
-   		new EmulationInfo {UseLevel1 \= true, CurveColor \= Colors.Aquamarine, StrategyName \= LocalizedStrings.Level1},
+   		// order log
+   		new EmulationInfo {UseLevel1 = true, CurveColor = Colors.Aquamarine, StrategyName = LocalizedStrings.Level1},
    		Level1Chart,
    		Level1Equity,
    		Level1Position),
@@ -85,8 +85,8 @@ Backtesting of moving averages strategy
    		FinamCandlesCheckBox,
    		FinamCandlesProgress,
    		FinamCandlesParameterGrid,
-   		\/\/ candles
-   		new EmulationInfo {UseCandleTimeFrame \= timeFrame, HistorySource \= d \=\> \_finamHistorySource.GetCandles(security, timeFrame, d.Date, d.Date), CurveColor \= Colors.DarkBlue, StrategyName \= LocalizedStrings.FinamCandles},
+   		// candles
+   		new EmulationInfo {UseCandleTimeFrame = timeFrame, HistorySource = d => _finamHistorySource.GetCandles(security, timeFrame, d.Date, d.Date), CurveColor = Colors.DarkBlue, StrategyName = LocalizedStrings.FinamCandles},
    		FinamCandlesChart,
    		FinamCandlesEquity,
    		FinamCandlesPosition),
@@ -94,8 +94,8 @@ Backtesting of moving averages strategy
    		YahooCandlesCheckBox,
    		YahooCandlesProgress,
    		YahooCandlesParameterGrid,
-   		\/\/ candles
-   		new EmulationInfo {UseCandleTimeFrame \= timeFrame, HistorySource \= d \=\> new YahooHistorySource(\_exchangeInfoProvider).GetCandles(security, timeFrame, d.Date, d.Date), CurveColor \= Colors.DarkBlue, StrategyName \= LocalizedStrings.YahooCandles},
+   		// candles
+   		new EmulationInfo {UseCandleTimeFrame = timeFrame, HistorySource = d => new YahooHistorySource(_exchangeInfoProvider).GetCandles(security, timeFrame, d.Date, d.Date), CurveColor = Colors.DarkBlue, StrategyName = LocalizedStrings.YahooCandles},
    		YahooCandlesChart,
    		YahooCandlesEquity,
    		YahooCandlesPosition),
@@ -105,11 +105,11 @@ Backtesting of moving averages strategy
 2. Next, to create the [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html) object, through which [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) will get historical data: 
 
    ```cs
-   \/\/ storage to historical data
-   var storageRegistry \= new StorageRegistry
+   // storage to historical data
+   var storageRegistry = new StorageRegistry
    {
-   	\/\/ set historical path
-   	DefaultDrive \= new LocalMarketDataDrive(HistoryPath.Folder)
+   	// set historical path
+   	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
    };
    ```
 
@@ -120,7 +120,7 @@ Backtesting of moving averages strategy
    ```cs
    foreach (var set in settings)
    {
-   	if (set.Item1.IsChecked \=\= false)
+   	if (set.Item1.IsChecked == false)
    		continue;
       .................
    }	
@@ -129,74 +129,74 @@ Backtesting of moving averages strategy
 4. Creating instruments and portfolios, by which the testing will be carried out: 
 
    ```cs
-   var security \= new Security
+   var security = new Security
    {
-   	Id \= SecId.Text, \/\/ sec id has the same name as folder with historical data
-   	Code \= secCode,
-   	Board \= board,
+   	Id = SecId.Text, // sec id has the same name as folder with historical data
+   	Code = secCode,
+   	Board = board,
    };
-   var portfolio \= new Portfolio
+   var portfolio = new Portfolio
    {
-   	Name \= "test account",
-   	BeginValue \= 1000000,
+   	Name = "test account",
+   	BeginValue = 1000000,
    };
    				
    ```
 5. Creation of [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) itself, to which instruments, portfolios. [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html) storage interface, and testing settings are passed: 
 
    ```cs
-   var connector \= new HistoryEmulationConnector(
-   	new\[\] { security },
-   	new\[\] { portfolio })
+   var connector = new HistoryEmulationConnector(
+   	new[] { security },
+   	new[] { portfolio })
    {
-   	EmulationAdapter \=
+   	EmulationAdapter =
    	{
-   		Emulator \=
+   		Emulator =
    		{
-   			Settings \=
+   			Settings =
    			{
-   				\/\/ match order if historical price touched our limit order price. 
-   				\/\/ It is terned off, and price should go through limit order price level
-   				\/\/ (more "severe" test mode)
-   				MatchOnTouch \= false,
+   				// match order if historical price touched our limit order price. 
+   				// It is terned off, and price should go through limit order price level
+   				// (more "severe" test mode)
+   				MatchOnTouch = false,
    			}
    		}
    	},
-   	\/\/UseExternalCandleSource \= emulationInfo.UseCandleTimeFrame \!\= null,
-   	CreateDepthFromOrdersLog \= emulationInfo.UseOrderLog,
-   	CreateTradesFromOrdersLog \= emulationInfo.UseOrderLog,
-   	HistoryMessageAdapter \=
+   	//UseExternalCandleSource = emulationInfo.UseCandleTimeFrame != null,
+   	CreateDepthFromOrdersLog = emulationInfo.UseOrderLog,
+   	CreateTradesFromOrdersLog = emulationInfo.UseOrderLog,
+   	HistoryMessageAdapter =
    	{
-   		StorageRegistry \= storageRegistry,
-   		\/\/ set history range
-   		StartDate \= startTime,
-   		StopDate \= stopTime,
-   		OrderLogMarketDepthBuilders \=
+   		StorageRegistry = storageRegistry,
+   		// set history range
+   		StartDate = startTime,
+   		StopDate = stopTime,
+   		OrderLogMarketDepthBuilders =
    		{
    			{
    				secId,
-   				LocalizedStrings.ActiveLanguage \=\= Languages.Russian
+   				LocalizedStrings.ActiveLanguage == Languages.Russian
    					? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
    					: new ItchOrderLogMarketDepthBuilder(secId)
    			}
    		}
    	},
-   	\/\/ set market time freq as time frame
-   	MarketTimeChangedInterval \= timeFrame,
+   	// set market time freq as time frame
+   	MarketTimeChangedInterval = timeFrame,
    };
    ```
 6. In the new instrument getting event we specify the Level1 initial values, register the order book or create and set up the order book generator. Also, depending on the settings, we register the order log and trades receiving. Starting the strategy and the candles generating. As well as starting the emulator itself. 
 
    ```cs
-   connector.NewSecurity +\= s \=\>
+   connector.NewSecurity += s =>
    {
-   	if (s \!\= security)
+   	if (s != security)
    		return;
-   	\/\/ fill level1 values
+   	// fill level1 values
    	connector.HistoryMessageAdapter.SendOutMessage(level1Info);
-   	if (emulationInfo.HistorySource \!\= null)
+   	if (emulationInfo.HistorySource != null)
    	{
-   		if (emulationInfo.UseCandleTimeFrame \!\= null)
+   		if (emulationInfo.UseCandleTimeFrame != null)
    		{
    			connector.RegisterHistorySource(security, MarketDataTypes.CandleTimeFrame, emulationInfo.UseCandleTimeFrame.Value, emulationInfo.HistorySource);
    		}
@@ -219,25 +219,25 @@ Backtesting of moving averages strategy
    		{
    			connector.SubscribeMarketDepth(security);
    			if (
-   				\/\/ if order book will be generated
-   					generateDepths \|\|
-   				\/\/ of backtesting will be on candles
-   					emulationInfo.UseCandleTimeFrame \!\= TimeSpan.Zero
+   				// if order book will be generated
+   					generateDepths ||
+   				// of backtesting will be on candles
+   					emulationInfo.UseCandleTimeFrame != TimeSpan.Zero
    				)
    			{
-   				\/\/ if no have order book historical data, but strategy is required,
-   				\/\/ use generator based on last prices
+   				// if no have order book historical data, but strategy is required,
+   				// use generator based on last prices
    				connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
    				{
-   					IsSubscribe \= true,
-   					Generator \= new RandomWalkTradeGenerator(new SecurityId { SecurityCode \= security.Code })
+   					IsSubscribe = true,
+   					Generator = new RandomWalkTradeGenerator(new SecurityId { SecurityCode = security.Code })
    					{
-   						Interval \= TimeSpan.FromSeconds(1),
-   						MaxVolume \= maxVolume,
-   						MaxPriceStepCount \= 3,	
-   						GenerateOriginSide \= true,
-   						MinVolume \= minVolume,
-   						RandomArrayLength \= 99,
+   						Interval = TimeSpan.FromSeconds(1),
+   						MaxVolume = maxVolume,
+   						MaxPriceStepCount = 3,	
+   						GenerateOriginSide = true,
+   						MinVolume = minVolume,
+   						RandomArrayLength = 99,
    					}
    				});
    			}
@@ -255,18 +255,18 @@ Backtesting of moving averages strategy
    			connector.SubscribeLevel1(security);
    		}
    	}
-   	\/\/ start strategy before emulation started
+   	// start strategy before emulation started
    	strategy.Start();
-   	\_series \= new CandleSeries(typeof(TimeFrameCandle), security, timeFrame);
+   	_series = new CandleSeries(typeof(TimeFrameCandle), security, timeFrame);
    	connector.SubscribeCandles(series);
-   	\/\/ start historical data loading when connection established successfully and all data subscribed
+   	// start historical data loading when connection established successfully and all data subscribed
    	connector.Start();
    };
    ```
 7. Connection: 
 
    ```cs
-   						\_connector.Connect();
+   						_connector.Connect();
    					
    ```
 
@@ -274,76 +274,76 @@ Backtesting of moving averages strategy
 8. Creation of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) strategy itself: 
 
    ```cs
-   \/\/ create strategy based on 80 5\-min and 10 5\-min
-   var strategy \= new SmaStrategy(chart, \_candlesElem, \_tradesElem, \_shortMa, \_shortElem, \_longMa, \_longElem, \_series)
+   // create strategy based on 80 5-min and 10 5-min
+   var strategy = new SmaStrategy(chart, _candlesElem, _tradesElem, _shortMa, _shortElem, _longMa, _longElem, _series)
    {
-   	Volume \= 1,
-   	Portfolio \= portfolio,
-   	Security \= security,
-   	Connector \= connector,
-   	LogLevel \= DebugLogCheckBox.IsChecked \=\= true ? LogLevels.Debug : LogLevels.Info,
-   	\/\/ by default interval is 1 min,
-   	\/\/ it is excessively for time range with several months
-   	UnrealizedPnLInterval \= ((stopTime \- startTime).Ticks \/ 1000).To\<TimeSpan\>()
+   	Volume = 1,
+   	Portfolio = portfolio,
+   	Security = security,
+   	Connector = connector,
+   	LogLevel = DebugLogCheckBox.IsChecked == true ? LogLevels.Debug : LogLevels.Info,
+   	// by default interval is 1 min,
+   	// it is excessively for time range with several months
+   	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
 9. Subscription to the [PnLChanged](../api/StockSharp.Algo.Strategies.Strategy.PnLChanged.html) event, to calculate the equity curve (for more details, see [Equity curve](Equity.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
 
    ```cs
-   \/\/ fill parameters panel
+   // fill parameters panel
    statistic.Parameters.Clear();
    statistic.Parameters.AddRange(strategy.StatisticManager.Parameters);
-   var equity \= set.Item6;
-   var pnlCurve \= equity.CreateCurve(LocalizedStrings.PnL + " " + emulationInfo.StrategyName, emulationInfo.CurveColor, ChartIndicatorDrawStyles.Area);
-   var unrealizedPnLCurve \= equity.CreateCurve(LocalizedStrings.PnLUnreal + emulationInfo.StrategyName, Colors.Black, ChartIndicatorDrawStyles.Line);
-   var commissionCurve \= equity.CreateCurve(LocalizedStrings.Str159 + " " + emulationInfo.StrategyName, Colors.Red, ChartIndicatorDrawStyles.DashedLine);
-   var posItems \= set.Item7.CreateCurve(emulationInfo.StrategyName, emulationInfo.CurveColor, ChartIndicatorDrawStyles.Line);
-   strategy.PnLChanged +\= () \=\>
+   var equity = set.Item6;
+   var pnlCurve = equity.CreateCurve(LocalizedStrings.PnL + " " + emulationInfo.StrategyName, emulationInfo.CurveColor, ChartIndicatorDrawStyles.Area);
+   var unrealizedPnLCurve = equity.CreateCurve(LocalizedStrings.PnLUnreal + emulationInfo.StrategyName, Colors.Black, ChartIndicatorDrawStyles.Line);
+   var commissionCurve = equity.CreateCurve(LocalizedStrings.Str159 + " " + emulationInfo.StrategyName, Colors.Red, ChartIndicatorDrawStyles.DashedLine);
+   var posItems = set.Item7.CreateCurve(emulationInfo.StrategyName, emulationInfo.CurveColor, ChartIndicatorDrawStyles.Line);
+   strategy.PnLChanged += () =>
    {
-   	var pnl \= new EquityData
+   	var pnl = new EquityData
    	{
-   		Time \= strategy.CurrentTime,
-   		Value \= strategy.PnL \- strategy.Commission ?? 0
+   		Time = strategy.CurrentTime,
+   		Value = strategy.PnL - strategy.Commission ?? 0
    	};
-   	var unrealizedPnL \= new EquityData
+   	var unrealizedPnL = new EquityData
    	{
-   		Time \= strategy.CurrentTime,
-   		Value \= strategy.PnLManager.UnrealizedPnL ?? 0
+   		Time = strategy.CurrentTime,
+   		Value = strategy.PnLManager.UnrealizedPnL ?? 0
    	};
-   	var commission \= new EquityData
+   	var commission = new EquityData
    	{
-   		Time \= strategy.CurrentTime,
-   		Value \= strategy.Commission ?? 0
+   		Time = strategy.CurrentTime,
+   		Value = strategy.Commission ?? 0
    	};
    	pnlCurve.Add(pnl);
    	unrealizedPnLCurve.Add(unrealizedPnL);
    	commissionCurve.Add(commission);
    };
-   strategy.PositionChanged +\= () \=\> posItems.Add(new EquityData { Time \= strategy.CurrentTime, Value \= strategy.Position });
-   var nextTime \= startTime + progressStep;
-   \/\/ handle historical time for update ProgressBar
-   connector.MarketTimeChanged +\= d \=\>
+   strategy.PositionChanged += () => posItems.Add(new EquityData { Time = strategy.CurrentTime, Value = strategy.Position });
+   var nextTime = startTime + progressStep;
+   // handle historical time for update ProgressBar
+   connector.MarketTimeChanged += d =>
    {
-   	if (connector.CurrentTime \< nextTime && connector.CurrentTime \< stopTime)
+   	if (connector.CurrentTime < nextTime && connector.CurrentTime < stopTime)
    		return;
-   	var steps \= (connector.CurrentTime \- startTime).Ticks \/ progressStep.Ticks + 1;
-   	nextTime \= startTime + (steps \* progressStep.Ticks).To\<TimeSpan\>();
-   	this.GuiAsync(() \=\> progressBar.Value \= steps);
+   	var steps = (connector.CurrentTime - startTime).Ticks / progressStep.Ticks + 1;
+   	nextTime = startTime + (steps * progressStep.Ticks).To<TimeSpan>();
+   	this.GuiAsync(() => progressBar.Value = steps);
    };
    					
    ```
 10. Starting the beginning of the testing: 
 
     ```cs
-    \/\/ start emulation
-    foreach (var connector in \_connectors)
+    // start emulation
+    foreach (var connector in _connectors)
     {
-    	\/\/ raise NewSecurity and NewPortfolio for full fill strategy properties
+    	// raise NewSecurity and NewPortfolio for full fill strategy properties
     	connector.Connect();
-    	\/\/ 1 cent commission for trade
+    	// 1 cent commission for trade
     		connector.SendInMessage(new CommissionRuleMessage
     		{
-    			Rule \= new CommissionPerTradeRule { Value \= 0.01m }
+    			Rule = new CommissionPerTradeRule { Value = 0.01m }
     		});
     }
     					 

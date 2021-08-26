@@ -7,12 +7,12 @@
 В разделе [тестирования на истории](StrategyTestingHistory.md) показано использование [Strategy.PnLChanged](../api/StockSharp.Algo.Strategies.Strategy.PnLChanged.html) применительно к [торговым стратегиям](Strategy.md): 
 
 ```cs
-\_strategy.PnLChanged +\= () \=\>
+_strategy.PnLChanged += () =>
 {
-	var pnl \= new EquityData
+	var pnl = new EquityData
 	{
-		Time \= strategy.CurrentTime,
-		Value \= strategy.PnL \- strategy.Commission ?? 0
+		Time = strategy.CurrentTime,
+		Value = strategy.PnL - strategy.Commission ?? 0
 	};
 	pnlCurve.Add(pnl);
 };      

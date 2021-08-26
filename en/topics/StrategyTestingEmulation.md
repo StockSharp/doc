@@ -29,20 +29,20 @@ Testing on random data of moving averages strategy
 1. The SampleRandomEmulation example (*..Samples\/Testing\/SampleRandomEmulation*) is almost identical to the SampleHistoryTesting example (its description can be found in the [testing on historical data](StrategyTestingHistory.md) section) due the use of the unified [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) class. But, unlike the [testing on historical data](StrategyTestingHistory.md), testing on random data the market data are not loaded and are generated "on the fly". Therefore, two random data generators are added to the example: for the order book and for the tick trades. In SampleHistoryTesting only one generator is used \- for the order book, as there is no history stored. 
 
    ```cs
-   \_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
+   _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
    {
-       IsSubscribe \= true,
-       Generator \= new RandomWalkTradeGenerator(new SecurityId { SecurityCode \= security.Code })
+       IsSubscribe = true,
+       Generator = new RandomWalkTradeGenerator(new SecurityId { SecurityCode = security.Code })
        {
-           Interval \= TimeSpan.FromSeconds(1),
-           MaxVolume \= maxVolume,
-           MaxPriceStepCount \= 3,	
-           GenerateOriginSide \= true,
-           MinVolume \= minVolume,
-           RandomArrayLength \= 99,
+           Interval = TimeSpan.FromSeconds(1),
+           MaxVolume = maxVolume,
+           MaxPriceStepCount = 3,	
+           GenerateOriginSide = true,
+           MinVolume = minVolume,
+           RandomArrayLength = 99,
        }
    });
-   \_connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(\_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade \= false });
+   _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
 2. The result of the example work is as follows: 
 

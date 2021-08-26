@@ -3,11 +3,11 @@
 Код ниже демонстрирует как инициализировать [InteractiveBrokersMessageAdapter](../api/StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Address \= "\<Your Address\>".To\<EndPoint\>(),
+	Address = "<Your Address>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

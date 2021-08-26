@@ -4,10 +4,10 @@
 
 ```cs
 ...	
-var messageAdapter \= new TrueFXMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new TrueFXMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
 };
 ...	
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

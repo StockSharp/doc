@@ -25,7 +25,7 @@ Before we start describing how to develop your own adapter, let's look at how to
    ```cs
    public void SendInMessage(Message message)
    {
-   	\_inAdapter.SendInMessage(message);
+   	_inAdapter.SendInMessage(message);
    }
      			
    ```
@@ -56,21 +56,21 @@ Example of creating a BitStamp message adapter
    public BitStampMessageAdapter(IdGenerator transactionIdGenerator)
    	: base(transactionIdGenerator)
    {
-   	\/\/ to maintain the connection, ping every 10 seconds
-   	HeartbeatInterval \= TimeSpan.FromSeconds(10);
-   	\/\/ the adapter supports both transactions and market data
+   	// to maintain the connection, ping every 10 seconds
+   	HeartbeatInterval = TimeSpan.FromSeconds(10);
+   	// the adapter supports both transactions and market data
    	this.AddMarketDataSupport();
    	this.AddTransactionalSupport();
    	
-   	\/\/ deleting unsupported message types (all possible transactional messages were added via AddTransactionalSupport)
+   	// deleting unsupported message types (all possible transactional messages were added via AddTransactionalSupport)
    	this.RemoveSupportedMessage(MessageTypes.Portfolio);
    	this.RemoveSupportedMessage(MessageTypes.OrderReplace);
-   	\/\/ the adapter supports ticks, glasses, and logs
+   	// the adapter supports ticks, glasses, and logs
    	this.AddSupportedMarketDataType(DataType.Ticks);
    	this.AddSupportedMarketDataType(DataType.MarketDepth);
-   	\/\/this.AddSupportedMarketDataType(DataType.Level1);
+   	//this.AddSupportedMarketDataType(DataType.Level1);
    	this.AddSupportedMarketDataType(DataType.OrderLog);
-   	\/\/ the adapter supports result messages for searching for tools, positions, and bids
+   	// the adapter supports result messages for searching for tools, positions, and bids
    	this.AddSupportedResultMessage(MessageTypes.SecurityLookup);
    	this.AddSupportedResultMessage(MessageTypes.PortfolioLookup);
    	this.AddSupportedResultMessage(MessageTypes.OrderStatus);
@@ -88,21 +88,21 @@ Example of creating a BitStamp message adapter
    ```cs
    private void SubscribePusherClient()
    {
-   	\_pusherClient.Connected +\= SessionOnPusherConnected;
-   	\_pusherClient.Disconnected +\= SessionOnPusherDisconnected;
-   	\_pusherClient.Error +\= SessionOnPusherError;
-   	\_pusherClient.NewOrderBook +\= SessionOnNewOrderBook;
-   	\_pusherClient.NewOrderLog +\= SessionOnNewOrderLog;
-   	\_pusherClient.NewTrade +\= SessionOnNewTrade;
+   	_pusherClient.Connected += SessionOnPusherConnected;
+   	_pusherClient.Disconnected += SessionOnPusherDisconnected;
+   	_pusherClient.Error += SessionOnPusherError;
+   	_pusherClient.NewOrderBook += SessionOnNewOrderBook;
+   	_pusherClient.NewOrderLog += SessionOnNewOrderLog;
+   	_pusherClient.NewTrade += SessionOnNewTrade;
    }
    private void UnsubscribePusherClient()
    {
-   	\_pusherClient.Connected \-\= SessionOnPusherConnected;
-   	\_pusherClient.Disconnected \-\= SessionOnPusherDisconnected;
-   	\_pusherClient.Error \-\= SessionOnPusherError;
-   	\_pusherClient.NewOrderBook \-\= SessionOnNewOrderBook;
-   	\_pusherClient.NewOrderLog \-\= SessionOnNewOrderLog;
-   	\_pusherClient.NewTrade \-\= SessionOnNewTrade;
+   	_pusherClient.Connected -= SessionOnPusherConnected;
+   	_pusherClient.Disconnected -= SessionOnPusherDisconnected;
+   	_pusherClient.Error -= SessionOnPusherError;
+   	_pusherClient.NewOrderBook -= SessionOnNewOrderBook;
+   	_pusherClient.NewOrderLog -= SessionOnNewOrderLog;
+   	_pusherClient.NewTrade -= SessionOnNewTrade;
    }
    		
    protected override bool OnSendInMessage(Message message)
@@ -111,57 +111,57 @@ Example of creating a BitStamp message adapter
        {
             case MessageTypes.Reset:
             {
-            	\_lastMyTradeId \= 0;
-   			\_lastTimeBalanceCheck \= null;
-   			if (\_httpClient \!\= null)
+            	_lastMyTradeId = 0;
+   			_lastTimeBalanceCheck = null;
+   			if (_httpClient != null)
    			{
    				try
    				{
-   					\_httpClient.Dispose();
+   					_httpClient.Dispose();
    				}
    				catch (Exception ex)
    				{
    					SendOutError(ex);
    				}
-   				\_httpClient \= null;
+   				_httpClient = null;
    			}
-   			if (\_pusherClient \!\= null)
+   			if (_pusherClient != null)
    			{
    				try
    				{
    					UnsubscribePusherClient();
-   					\_pusherClient.Disconnect();
+   					_pusherClient.Disconnect();
    				}
    				catch (Exception ex)
    				{
    					SendOutError(ex);
    				}
-   				\_pusherClient \= null;
+   				_pusherClient = null;
    			}
    			SendOutMessage(new ResetMessage());
              	break;
            }
            case MessageTypes.Connect:
            {
-               if (\_httpClient \!\= null)
+               if (_httpClient != null)
    				throw new InvalidOperationException(LocalizedStrings.Str1619);
-   			if (\_pusherClient \!\= null)
+   			if (_pusherClient != null)
    				throw new InvalidOperationException(LocalizedStrings.Str1619);
-   			\_httpClient \= new HttpClient(ClientId, Key, Secret, AuthV2) { Parent \= this };
-   			\_pusherClient \= new PusherClient { Parent \= this };
+   			_httpClient = new HttpClient(ClientId, Key, Secret, AuthV2) { Parent = this };
+   			_pusherClient = new PusherClient { Parent = this };
    			SubscribePusherClient();
-   			\_pusherClient.Connect();
+   			_pusherClient.Connect();
                break;
            }
            case MessageTypes.Disconnect:
            {
-               if (\_httpClient \=\= null)
+               if (_httpClient == null)
    				throw new InvalidOperationException(LocalizedStrings.Str1856);
-   			if (\_pusherClient \=\= null)
+   			if (_pusherClient == null)
    				throw new InvalidOperationException(LocalizedStrings.Str1856);
-   			\_httpClient.Dispose();
-   			\_httpClient \= null;
-   			\_pusherClient.Disconnect();
+   			_httpClient.Dispose();
+   			_httpClient = null;
+   			_pusherClient.Disconnect();
                break;
            }
            
@@ -241,39 +241,39 @@ Example of creating a BitStamp message adapter
    Upon receipt of these messages, it is necessary to call the [BitStamp](BitStamp.md) functions requesting portfolios and instruments, respectively. And after receiving all the data, you need to send the [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html) message. Note that the subscription ID is assigned to both the resulting message and the data messages: 
 
    ```cs
-   \/\/ Requesting a list of portfolios
+   // Requesting a list of portfolios
    private void ProcessPortfolioLookup(PortfolioLookupMessage message)
    {
-   	if (\!message.IsSubscribe)
+   	if (!message.IsSubscribe)
    		return;
-   	var transactionId \= message.TransactionId;
-   	var pfName \= PortfolioName;
+   	var transactionId = message.TransactionId;
+   	var pfName = PortfolioName;
    	SendOutMessage(new PortfolioMessage
    	{
-   		PortfolioName \= pfName,
-   		BoardCode \= Extensions.BitStampBoard,
-   		OriginalTransactionId \= transactionId, \/\/ \<\- the subscription ID
+   		PortfolioName = pfName,
+   		BoardCode = Extensions.BitStampBoard,
+   		OriginalTransactionId = transactionId, // <- the subscription ID
    	});
    	
-   	var account \= \_httpClient.GetAccount(section);
+   	var account = _httpClient.GetAccount(section);
    	SendOutMessage(new PositionChangeMessage
    	{
-   		SecurityId \= SecurityId.Money, \/\/ \<\- for a money position set the special code of the Money tool
-   		PortfolioName \= GetPortfolioName(section),
-   		ServerTime \= time,	
+   		SecurityId = SecurityId.Money, // <- for a money position set the special code of the Money tool
+   		PortfolioName = GetPortfolioName(section),
+   		ServerTime = time,	
    	}
    	.TryAdd(PositionChangeTypes.Leverage, (decimal?)account.MarginLevel)
    	.TryAdd(PositionChangeTypes.CommissionTaker, (decimal?)account.TakerCommissionRate)
    	.TryAdd(PositionChangeTypes.CommissionMaker, (decimal?)account.MakerCommissionRate));
-   	var tuple \= \_httpClient.GetBalances();
+   	var tuple = _httpClient.GetBalances();
    	foreach (var pair in tuple.Item1)
    	{
-   		var currValue \= pair.Value.First;
-   		var currPrice \= pair.Value.Second;
-   		var blockValue \= pair.Value.Third;
-   		if (currValue \=\= null && currPrice \=\= null && blockValue \=\= null)
+   		var currValue = pair.Value.First;
+   		var currPrice = pair.Value.Second;
+   		var blockValue = pair.Value.Third;
+   		if (currValue == null && currPrice == null && blockValue == null)
    			continue;
-   		var msg \= this.CreatePositionChangeMessage(pfName, pair.Key.ToUpperInvariant().ToStockSharp(false));
+   		var msg = this.CreatePositionChangeMessage(pfName, pair.Key.ToUpperInvariant().ToStockSharp(false));
    		msg
    		.TryAdd(PositionChangeTypes.CurrentValue, currValue, true)
    		.TryAdd(PositionChangeTypes.CurrentPrice, currPrice, true)
@@ -281,32 +281,32 @@ Example of creating a BitStamp message adapter
    		SendOutMessage(msg);	
    	}
    	
-   	SendSubscriptionResult(message); \/\/ \<\- end of subscription (if To \=\= null, then it is sent that the subscription went Online, otherwise Finished)
+   	SendSubscriptionResult(message); // <- end of subscription (if To == null, then it is sent that the subscription went Online, otherwise Finished)
    	
-   	if (message.To \=\= null) \/\/ subscribe not only to stories, but also to online
-   		\_pusher.SubscribeAccount();
+   	if (message.To == null) // subscribe not only to stories, but also to online
+   		_pusher.SubscribeAccount();
    }
-   \/\/ The requested tools
+   // The requested tools
    private void ProcessSecurityLookup(SecurityLookupMessage lookupMsg)
    {
-   	var secTypes \= lookupMsg.GetSecurityTypes();
-   	foreach (var info in \_httpClient.GetPairsInfo())
+   	var secTypes = lookupMsg.GetSecurityTypes();
+   	foreach (var info in _httpClient.GetPairsInfo())
    	{
-   		var secMsg \= new SecurityMessage
+   		var secMsg = new SecurityMessage
    		{
-   			SecurityId \= info.Name.ToStockSharp(),
-   			SecurityType \= info.UrlSymbol \=\= \_eurusd ? SecurityTypes.Currency : SecurityTypes.CryptoCurrency,
-   			MinVolume \= info.MinimumOrder.Substring(0, info.MinimumOrder.IndexOf(' ')).To\<decimal\>(),
-   			Decimals \= info.BaseDecimals,
-   			Name \= info.Description,
-   			VolumeStep \= info.UrlSymbol \=\= \_eurusd ? 0.00001m : 0.00000001m,
-   			OriginalTransactionId \= lookupMsg.TransactionId, \/\/ \<\- the subscription ID
+   			SecurityId = info.Name.ToStockSharp(),
+   			SecurityType = info.UrlSymbol == _eurusd ? SecurityTypes.Currency : SecurityTypes.CryptoCurrency,
+   			MinVolume = info.MinimumOrder.Substring(0, info.MinimumOrder.IndexOf(' ')).To<decimal>(),
+   			Decimals = info.BaseDecimals,
+   			Name = info.Description,
+   			VolumeStep = info.UrlSymbol == _eurusd ? 0.00001m : 0.00000001m,
+   			OriginalTransactionId = lookupMsg.TransactionId, // <- the subscription ID
    		};
-   		if (\!secMsg.IsMatch(lookupMsg, secTypes))
+   		if (!secMsg.IsMatch(lookupMsg, secTypes))
    			continue;
    		SendOutMessage(secMsg);
    	}
-   	SendSubscriptionResult(lookupMsg); \/\/ \<\- the completion of the subscription
+   	SendSubscriptionResult(lookupMsg); // <- the completion of the subscription
    }
    						
    						
@@ -318,31 +318,31 @@ Example of creating a BitStamp message adapter
    ```cs
    		private void SessionOnAccountUpdated(AccountUpdate account)
    		{
-   			var time \= account.LastAccountUpdate ?? account.EventTime;
-   			var futData \= account.FuturesData;
-   			if (account.Balances \!\= null)
+   			var time = account.LastAccountUpdate ?? account.EventTime;
+   			var futData = account.FuturesData;
+   			if (account.Balances != null)
    			{
    				foreach (var balance in account.Balances)
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(section),
-   						SecurityId \= balance.Asset.InternalCreateSecurityId(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(section),
+   						SecurityId = balance.Asset.InternalCreateSecurityId(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)balance.Free, true)
    					.TryAdd(PositionChangeTypes.BlockedValue, (decimal)balance.Locked, true));
    				}
    			}
-   			else if (futData \!\= null)
+   			else if (futData != null)
    			{
    				foreach (var balance in futData.Balances)
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(section),
-   						SecurityId \= balance.Asset.InternalCreateSecurityId(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(section),
+   						SecurityId = balance.Asset.InternalCreateSecurityId(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)balance.Balance, true));
    				}
@@ -350,9 +350,9 @@ Example of creating a BitStamp message adapter
    				{
    					SendOutMessage(new PositionChangeMessage
    					{
-   						PortfolioName \= GetPortfolioName(),
-   						SecurityId \= position.Symbol.ToStockSharp(),
-   						ServerTime \= time,
+   						PortfolioName = GetPortfolioName(),
+   						SecurityId = position.Symbol.ToStockSharp(),
+   						ServerTime = time,
    					}
    					.TryAdd(PositionChangeTypes.CurrentValue, (decimal)position.Amount, true)
    					.TryAdd(PositionChangeTypes.AveragePrice, (decimal?)position.EntryPrice, true)
@@ -376,65 +376,65 @@ Example of creating a BitStamp message adapter
    ```cs
    		private void ProcessMarketData(MarketDataMessage mdMsg)
    		{
-   			if (\!mdMsg.SecurityId.IsAssociated())
+   			if (!mdMsg.SecurityId.IsAssociated())
    			{
    				SendSubscriptionNotSupported(mdMsg.TransactionId);
    				return;
    			}
-   			var currency \= mdMsg.SecurityId.ToCurrency();
-   			if (mdMsg.DataType2 \=\= DataType.OrderLog)
+   			var currency = mdMsg.SecurityId.ToCurrency();
+   			if (mdMsg.DataType2 == DataType.OrderLog)
    			{
    				if (mdMsg.IsSubscribe)
-   					\_pusherClient.SubscribeOrderLog(currency);
+   					_pusherClient.SubscribeOrderLog(currency);
    				else
-   					\_pusherClient.UnSubscribeOrderLog(currency);
+   					_pusherClient.UnSubscribeOrderLog(currency);
    			}
-   			else if (mdMsg.DataType2 \=\= DataType.MarketDepth)
+   			else if (mdMsg.DataType2 == DataType.MarketDepth)
    			{
    				if (mdMsg.IsSubscribe)
-   					\_pusherClient.SubscribeOrderBook(currency);
+   					_pusherClient.SubscribeOrderBook(currency);
    				else
-   					\_pusherClient.UnSubscribeOrderBook(currency);
+   					_pusherClient.UnSubscribeOrderBook(currency);
    			}
-   			else if (mdMsg.DataType2 \=\= DataType.Ticks)
+   			else if (mdMsg.DataType2 == DataType.Ticks)
    			{
    				if (mdMsg.IsSubscribe)
    				{
-   					if (mdMsg.To \!\= null)
+   					if (mdMsg.To != null)
    					{
    						SendSubscriptionReply(mdMsg.TransactionId);
-   						var diff \= DateTimeOffset.Now \- (mdMsg.From ?? DateTime.Today);
+   						var diff = DateTimeOffset.Now - (mdMsg.From ?? DateTime.Today);
    						string interval;
-   						if (diff.TotalMinutes \< 1)
-   							interval \= "minute";
-   						else if (diff.TotalDays \< 1)
-   							interval \= "hour";
+   						if (diff.TotalMinutes < 1)
+   							interval = "minute";
+   						else if (diff.TotalDays < 1)
+   							interval = "hour";
    						else
-   							interval \= "day";
-   						var trades \= \_httpClient.RequestTransactions(currency, interval);
-   						foreach (var trade in trades.OrderBy(t \=\> t.Time))
+   							interval = "day";
+   						var trades = _httpClient.RequestTransactions(currency, interval);
+   						foreach (var trade in trades.OrderBy(t => t.Time))
    						{
    							SendOutMessage(new ExecutionMessage
    							{
-   								ExecutionType \= ExecutionTypes.Tick,
-   								SecurityId \= mdMsg.SecurityId,
-   								TradeId \= trade.Id,
-   								TradePrice \= (decimal)trade.Price,
-   								TradeVolume \= trade.Amount.ToDecimal(),
-   								ServerTime \= trade.Time,
-   								OriginSide \= trade.Type.ToSide(),
-   								OriginalTransactionId \= mdMsg.TransactionId
+   								ExecutionType = ExecutionTypes.Tick,
+   								SecurityId = mdMsg.SecurityId,
+   								TradeId = trade.Id,
+   								TradePrice = (decimal)trade.Price,
+   								TradeVolume = trade.Amount.ToDecimal(),
+   								ServerTime = trade.Time,
+   								OriginSide = trade.Type.ToSide(),
+   								OriginalTransactionId = mdMsg.TransactionId
    							});
    						}
    						SendSubscriptionResult(mdMsg);
    						return;
    					}
    					else
-   						\_pusherClient.SubscribeTrades(currency);
+   						_pusherClient.SubscribeTrades(currency);
    				}
    				else
    				{
-   					\_pusherClient.UnSubscribeTrades(currency);
+   					_pusherClient.UnSubscribeTrades(currency);
    				}
    			}
    			else
@@ -455,13 +455,13 @@ Example of creating a BitStamp message adapter
    {
    	SendOutMessage(new ExecutionMessage
    	{
-   		ExecutionType \= ExecutionTypes.Tick,
-   		SecurityId \= pair.ToStockSharp(),
-   		TradeId \= trade.Id,
-   		TradePrice \= (decimal)trade.Price,
-   		TradeVolume \= (decimal)trade.Amount,
-   		ServerTime \= trade.Time,
-   		OriginSide \= trade.Type.ToSide(),
+   		ExecutionType = ExecutionTypes.Tick,
+   		SecurityId = pair.ToStockSharp(),
+   		TradeId = trade.Id,
+   		TradePrice = (decimal)trade.Price,
+   		TradeVolume = (decimal)trade.Amount,
+   		ServerTime = trade.Time,
+   		OriginSide = trade.Type.ToSide(),
    	});
    }
    		  

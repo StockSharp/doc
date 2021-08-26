@@ -30,15 +30,15 @@ Common methods of work with candles
 - The candle time range getting through the [GetCandleBounds](../api/Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds.html) method. For example, you want to find out exactly when the current 10.5\-minute candle ends:
 
   ```cs
-  var candleTimeFrame \= TimeSpan.FromMinutes(10.5);
+  var candleTimeFrame = TimeSpan.FromMinutes(10.5);
   Console.WriteLine(candleTimeFrame.GetCandleBounds(DateTime.Now).Max);
   					
   ```
 - To get the candle length, its body, its shadows through [GetLength](../api/StockSharp.Algo.Candles.CandleHelper.GetLength.html), [GetBody](../api/StockSharp.Algo.Candles.CandleHelper.GetBody.html), [GetTopShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetTopShadow.html) and [GetBottomShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetBottomShadow.html):
 
   ```cs
-  \/\/ sample candle
-  var candle \= ...
+  // sample candle
+  var candle = ...
   Console.WriteLine(candle.GetCandleLength());
   Console.WriteLine(candle.GetCandleBody());
   Console.WriteLine(candle.GetCandleTopShadow());

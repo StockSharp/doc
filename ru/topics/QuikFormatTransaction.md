@@ -13,7 +13,7 @@
 1. Данный код написан в примере SampleConsole и закомментирован. Если необходима работа с [РТС Стандарт](http://rts.ru/ru/standard/), то его необходимо раскомментировать: 
 
    ```cs
-   trader.FormatTransaction +\= transaction \=\> transaction.RemoveInstruction(Transaction.ExecutionCondition);
+   trader.FormatTransaction += transaction => transaction.RemoveInstruction(Transaction.ExecutionCondition);
    ```
 
 ### История транзакций

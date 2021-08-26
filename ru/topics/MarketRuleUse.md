@@ -3,23 +3,23 @@
 - **Создание правила на условие регистрации заявки:**
 
   ```cs
-  private void btnBuy\_Click(object sender, RoutedEventArgs e)
+  private void btnBuy_Click(object sender, RoutedEventArgs e)
   {
-     var order \= new Order
+     var order = new Order
      { 
-         Portfolio \= Portfolio.SelectedPortfolio,
-         Price \= \_instr1.BestAsk.Price,
-         Security \= \_instr1,
-         Volume \= 1,
-         Direction \= Sides.Buy,
+         Portfolio = Portfolio.SelectedPortfolio,
+         Price = _instr1.BestAsk.Price,
+         Security = _instr1,
+         Volume = 1,
+         Direction = Sides.Buy,
      };
      order
          .WhenRegistered(Connector)
-         .Do(() \=\> Connector.AddInfoLog("Заявка успешно зарегистрирована"))
+         .Do(() => Connector.AddInfoLog("Заявка успешно зарегистрирована"))
          .Once()
          .Apply(this);
       
-  	\/\/ регистрация заявки
+  	// регистрация заявки
      Connector.RegisterOrder(order);
   }
   	  	  		
@@ -37,12 +37,12 @@
   	
   	protected override void OnStarting()
   	{
-  		\_connector
-  			.WhenCandlesFinished(\_series)
+  		_connector
+  			.WhenCandlesFinished(_series)
   			.Do(FinishCandle)
   			.Apply(this);
   		Security
-  			.WhenNewTrade(\_connector)
+  			.WhenNewTrade(_connector)
   			.Do(NewTrade)
   			.Apply(this);
   		base.OnStarting();
@@ -59,33 +59,33 @@
   Когда сработало правило успешной отмены заявки, то лучше удалить все остальные правила, связанные с этой заявкой:
 
   ```cs
-  var order \= this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);
-  var ruleCanceled \= order.WhenCanceled(Connector);
+  var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);
+  var ruleCanceled = order.WhenCanceled(Connector);
   ruleCanceled
-      .Do(() \=\>
+      .Do(() =>
       {
           this.AddInfoLog("Заявка успешно отменена");
-          \/\/ удаление всех правил связанных с order
+          // удаление всех правил связанных с order
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule) ruleCanceled.Token);
       })
       .Once()
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() \=\> this.AddInfoLog("Заявка успешно зарегистрирована"))
+      .Do(() => this.AddInfoLog("Заявка успешно зарегистрирована"))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() \=\> this.AddInfoLog("Заявка не принята биржей"))
+      .Do(() => this.AddInfoLog("Заявка не принята биржей"))
       .Once()
       .Apply(this);
   order
       .WhenMatched(Connector)
-      .Do(() \=\> this.AddInfoLog("Заявка полностью исполнена"))
+      .Do(() => this.AddInfoLog("Заявка полностью исполнена"))
       .Once()
       .Apply(this);
-  \/\/ регистрирация заявки
+  // регистрирация заявки
   RegisterOrder(order);
   	  	  		
   ```
@@ -94,13 +94,13 @@
   Когда выйдет время **ИЛИ** закроется свеча:
 
   ```cs
-  CandleSeries \_series;
-  TimeSpan \_holdTimeToOpen \= TimeSpan.FromMilliseconds(5000);
+  CandleSeries _series;
+  TimeSpan _holdTimeToOpen = TimeSpan.FromMilliseconds(5000);
   ...
-  \_connector
-  	.WhenIntervalElapsed(\_holdTimeToOpen)
-  	.Or(\_connector.WhenCandlesStarted(\_series))
-  	.Do(() \=\> this.AddInfoLog("Свеча закрыта или вышло время"))
+  _connector
+  	.WhenIntervalElapsed(_holdTimeToOpen)
+  	.Or(_connector.WhenCandlesStarted(_series))
+  	.Do(() => this.AddInfoLog("Свеча закрыта или вышло время"))
   	.Once()
   	.Apply(this);
   	  	  		
@@ -110,8 +110,8 @@
 
   ```cs
   MarketRuleHelper
-  	.Or(new IMarketRule\[\] {\_connector.WhenIntervalElapsed(\_holdTimeToOpen), \_connector.WhenCandlesStarted(\_series)})
-  	.Do(() \=\> this.AddInfoLog("Свеча закрыта или вышло время"))
+  	.Or(new IMarketRule[] {_connector.WhenIntervalElapsed(_holdTimeToOpen), _connector.WhenCandlesStarted(_series)})
+  	.Do(() => this.AddInfoLog("Свеча закрыта или вышло время"))
   	.Once()
   	.Apply(this);
   	  	  		
@@ -120,12 +120,12 @@
   Когда цена последней сделки будет выше 135000 **И** ниже 140000:
 
   ```cs
-  var priceMore \= new Unit(135000m, UnitTypes.Limit);
-  var priceLess \= new Unit(140000m, UnitTypes.Limit);
+  var priceMore = new Unit(135000m, UnitTypes.Limit);
+  var priceLess = new Unit(140000m, UnitTypes.Limit);
   				
   MarketRuleHelper
-  	.And(new IMarketRule\[\] {Security.WhenLastTradePriceMore(Connector, Connector, priceMore), Security.WhenLastTradePriceLess(Connector, Connector, priceLess)})
-  	.Do(() \=\> this.AddInfoLog(string.Format("Цена последней сделки находится в диапазоне от {0} до {1}", priceMore, priceLess)))
+  	.And(new IMarketRule[] {Security.WhenLastTradePriceMore(Connector, Connector, priceMore), Security.WhenLastTradePriceLess(Connector, Connector, priceLess)})
+  	.Do(() => this.AddInfoLog(string.Format("Цена последней сделки находится в диапазоне от {0} до {1}", priceMore, priceLess)))
   	.Apply(this);
   	  	  		
   ```
@@ -135,16 +135,16 @@
 - **Периодичность работы правила \- [Until](../api/StockSharp.Algo.IMarketRule.Until.html):**
 
   ```cs
-  bool flag \= false;
+  bool flag = false;
   ...
   				
   Security
   	.WhenNewTrade(Connector)
-  	.Do(() \=\>
+  	.Do(() =>
   			{
-  				if(условие) flag \= true;
+  				if(условие) flag = true;
   			})
-  	.Until(() \=\> flag)			
+  	.Until(() => flag)			
   	.Apply(this);
   	  	  		
   ```

@@ -5,28 +5,28 @@ FAST коннектор доступен в режиме dump. В этом сл�
 Для того, чтобы включить dump режим, необходимо перед подключение в коннектор передать через метод [IFastDialect.Dump](../api/StockSharp.Fix.Dialects.IFastDialect.Dump.html) dump файлы:
 
 ```cs
-\/\/ ... инициализация коннектора
-var fastAdapter \= (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
-IEnumerable\<string\> dumpFiles \= Directory.GetFiles(dumpDir, "\*.bin");
-var dict \= dumpFiles.Select(f \=\>
+// ... инициализация коннектора
+var fastAdapter = (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
+IEnumerable<string> dumpFiles = Directory.GetFiles(dumpDir, "*.bin");
+var dict = dumpFiles.Select(f =>
 {
-	var name \= Path.GetFileNameWithoutExtension(f);
-	var parts \= name.Split('\_').Skip(1).ToArray();
-	var groupAddr \= parts\[0\];
-	var port \= parts\[1\];
-	var sourceAddr \= parts\[2\];
+	var name = Path.GetFileNameWithoutExtension(f);
+	var parts = name.Split('_').Skip(1).ToArray();
+	var groupAddr = parts[0];
+	var port = parts[1];
+	var sourceAddr = parts[2];
 	if (sourceAddr.IsEmpty())
-		sourceAddr \= null;
+		sourceAddr = null;
 	return Tuple.Create(new MulticastSourceAddress
 	{
-		GroupAddress \= groupAddr.To\<IPAddress\>(),
-		Port \= port.To\<int\>(),
-		SourceAddress \= sourceAddr.To\<IPAddress\>(),
+		GroupAddress = groupAddr.To<IPAddress>(),
+		Port = port.To<int>(),
+		SourceAddress = sourceAddr.To<IPAddress>(),
 	}, f);
-}).GroupBy(t \=\> t.Item1).ToDictionary(g \=\> g.Key, g \=\> (IEnumerable\<Stream\>)g.Select(p \=\> File.OpenRead(p.Item2)).ToArray());
+}).GroupBy(t => t.Item1).ToDictionary(g => g.Key, g => (IEnumerable<Stream>)g.Select(p => File.OpenRead(p.Item2)).ToArray());
 			
 fastAdapter.DialectSettings.Dump(dict);
-\/\/ ...
+// ...
 connector.Connect();
 ```
 

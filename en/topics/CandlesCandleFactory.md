@@ -12,14 +12,14 @@ The implementation of tick candles
    > Tick candles are supported by [S\#](StockSharpAbout.md) as standard and this step is presented only as an example.
 
    ```cs
-   \/\/\/ \<summary\>
-   \/\/\/ Time\-frame candle
-   \/\/\/ \<\/summary\>
+   /// <summary>
+   /// Time-frame candle
+   /// </summary>
    public class TickCandle : Candle
    {
-       \/\/\/ \<summary\>
-       \/\/\/ The candle parameter
-       \/\/\/ \<\/summary\>
+       /// <summary>
+       /// The candle parameter
+       /// </summary>
        public override object Arg
        {
            get
@@ -28,49 +28,49 @@ The implementation of tick candles
            }
            set
            {
-               this.TradeCount \= (int) value;
+               this.TradeCount = (int) value;
            }
        }
-       \/\/\/ \<summary\>
-       \/\/\/ Maximum tick count
-       \/\/\/ \<\/summary\>
+       /// <summary>
+       /// Maximum tick count
+       /// </summary>
        public int TradeCount { get; set; }
    }
    ```
 2. Additionally, you need to create your own candle message type. More about [Messages](Messages.md). The type must inherit from the [CandleMessage](../api/StockSharp.Messages.CandleMessage.html) class:
 
    ```cs
-   \/\/\/ \<summary\>
-   \/\/\/ Tick candle
-   \/\/\/ \<\/summary\>
+   /// <summary>
+   /// Tick candle
+   /// </summary>
    public class TickCandleMessage : CandleMessage
    {
    	public TickCandleMessage()
    		: base(MessageTypes.CandleTick)
    	{
    	}
-   	\/\/\/ \<summary\>
-   	\/\/\/ Maximum tick count
-   	\/\/\/ \<\/summary\>
+   	/// <summary>
+   	/// Maximum tick count
+   	/// </summary>
    	public int MaxTradeCount { get; set; }
-   	\/\/\/ \<summary\>
-   	\/\/\/ Clone \<see cref\="TickCandleMessage"\/\>.
-   	\/\/\/ \<\/summary\>
-   	\/\/\/ \<returns\>Clone\<\/returns\>
+   	/// <summary>
+   	/// Clone <see cref="TickCandleMessage"/>.
+   	/// </summary>
+   	/// <returns>Clone</returns>
    	public override Message Clone()
    	{
    		return CopyTo(new TickCandleMessage
    		{
-   			MaxTradeCount \= MaxTradeCount
+   			MaxTradeCount = MaxTradeCount
    		});
    	}
-   	\/\/\/ \<summary\>
-   	\/\/\/ The candle parameter
-   	\/\/\/ \<\/summary\>
+   	/// <summary>
+   	/// The candle parameter
+   	/// </summary>
    	public override object Arg
    	{
-   		get \=\> MaxTradeCount;
-   		set \=\> MaxTradeCount \= (int)value;
+   		get => MaxTradeCount;
+   		set => MaxTradeCount = (int)value;
    	}
    }
    ```
@@ -79,77 +79,77 @@ The implementation of tick candles
    The [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) method shall return either a new candle (if new data led to the candle generation), or update the passed one (if the data is not enough to create a new candle). If the [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) method returns a new candle, [CandleBuilder\`1](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.html) calls it again, passing the same [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html). value to the method. The method will be called until [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) returns the passed candle. This is done for those cases when for one [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html) input value can be generated several candles: 
 
    ```cs
-   \/\/\/ \<summary\>
-   \/\/\/ The builder of candles of \<see cref\="T:StockSharp.Algo.Candles.TickCandle" \/\>.
-   \/\/\/ \<\/summary\>
-   public class TickCandleBuilder : CandleBuilder\<TickCandleMessage\>
+   /// <summary>
+   /// The builder of candles of <see cref="T:StockSharp.Algo.Candles.TickCandle" />.
+   /// </summary>
+   public class TickCandleBuilder : CandleBuilder<TickCandleMessage>
    {
-       \/\/\/ \<summary\>
-       \/\/\/ Create \<see cref\="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" \/\>.
-       \/\/\/ \<\/summary\>
+       /// <summary>
+       /// Create <see cref="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" />.
+       /// </summary>
        public TickCandleBuilder()
        {
        }
-       \/\/\/ \<summary\>
-       \/\/\/ Create \<see cref\="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" \/\>.
-       \/\/\/ \<\/summary\>
+       /// <summary>
+       /// Create <see cref="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" />.
+       /// </summary>
        public TickCandleBuilder()
        {
        }
-       \/\/\/ \<summary\>
-       \/\/\/ To create a new candle
-       \/\/\/ \<\/summary\>
-       \/\/\/ \<param name\="series"\>Candles series\<\/param\>
-       \/\/\/ \<param name\="transform"\>Data with which a new candle should be created\<\/param\>
-       \/\/\/ \<returns\>Created candle\<\/returns\>
+       /// <summary>
+       /// To create a new candle
+       /// </summary>
+       /// <param name="series">Candles series</param>
+       /// <param name="transform">Data with which a new candle should be created</param>
+       /// <returns>Created candle</returns>
        protected override TickCandle CreateCandle(CandleSeries series, ICandleBuilderValueTransform transform)
        {
-           var candle \= new TickCandleMessage
+           var candle = new TickCandleMessage
            {
-               TradeCount \= (int)series.Arg,
-               OpenTime \= transform.Time,
-               CloseTime \= transform.Time
+               TradeCount = (int)series.Arg,
+               OpenTime = transform.Time,
+               CloseTime = transform.Time
            };
            return this.FirstInitCandle(series, candle, transform);
        }
-       \/\/\/ \<summary\>
-       \/\/\/ To get time ranges for which this source of passed candles series has data
-       \/\/\/ \<\/summary\>
-       \/\/\/ \<param name\="series"\>Candles series\<\/param\>
-       \/\/\/ \<returns\>Time ranges.\<\/returns\>
-       public override IEnumerable\<Range\<DateTime\>\> GetSupportedRanges(CandleSeries series)
+       /// <summary>
+       /// To get time ranges for which this source of passed candles series has data
+       /// </summary>
+       /// <param name="series">Candles series</param>
+       /// <returns>Time ranges.</returns>
+       public override IEnumerable<Range<DateTime>> GetSupportedRanges(CandleSeries series)
        {
-           IEnumerable\<Range\<DateTime\>\> supportedRanges \= base.GetSupportedRanges(series);
-           if (\!supportedRanges.IsEmpty\<Range\<DateTime\>\>())
+           IEnumerable<Range<DateTime>> supportedRanges = base.GetSupportedRanges(series);
+           if (!supportedRanges.IsEmpty<Range<DateTime>>())
            {
-               if (\!(series.Arg is int))
+               if (!(series.Arg is int))
                {
                    throw new ArgumentException();
                }
-               if (((int) series.Arg) \<\= 0)
+               if (((int) series.Arg) <= 0)
                {
                    throw new ArgumentOutOfRangeException();
                }
            }
            return supportedRanges;
        }
-       \/\/\/ \<summary\>
-       \/\/\/ Whether the candle is created before data adding
-       \/\/\/ \<\/summary\>
-       \/\/\/ \<param name\="series"\>Candles series.\<\/param\>
-       \/\/\/ \<param name\="candle"\>Candle\<\/param\>
-       \/\/\/ \<param name\="transform"\>Data by which it is decided to end the current candle creation.\<\/param\>
-       \/\/\/ \<returns\>True, if the candle should be finished. Otherwise, false.\<\/returns\>
+       /// <summary>
+       /// Whether the candle is created before data adding
+       /// </summary>
+       /// <param name="series">Candles series.</param>
+       /// <param name="candle">Candle</param>
+       /// <param name="transform">Data by which it is decided to end the current candle creation.</param>
+       /// <returns>True, if the candle should be finished. Otherwise, false.</returns>
        protected override bool IsCandleFinishedBeforeChange(CandleSeries series, TickCandleMessage candle, ICandleBuilderValueTransform transform)
        {
-           return candle.TotalTicks \!\= null && candle.TotalTicks.Value \>\= candle.MaxTradeCount;
+           return candle.TotalTicks != null && candle.TotalTicks.Value >= candle.MaxTradeCount;
        }
-       \/\/\/ \<summary\>
-       \/\/\/ To update the candle data.
-       \/\/\/ \<\/summary\>
-       \/\/\/ \<param name\="series"\>Candles series.\<\/param\>
-       \/\/\/ \<param name\="candle"\>Candle.\<\/param\>
-       \/\/\/ \<param name\="transform"\>Data.\<\/param\>
+       /// <summary>
+       /// To update the candle data.
+       /// </summary>
+       /// <param name="series">Candles series.</param>
+       /// <param name="candle">Candle.</param>
+       /// <param name="transform">Data.</param>
        protected override void UpdateCandle(CandleSeries series, TickCandleMessage candle, ICandleBuilderValueTransform transform)
        {
    		base.UpdateCandle(series, candle, transform);
@@ -163,14 +163,14 @@ The implementation of tick candles
    > [TickCandleBuilder](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilder.html), as a candle source, is normally present in [CandleBuilderProvider](../api/StockSharp.Algo.Candles.Compression.CandleBuilderProvider.html). This step is presented only as an example.
 
    ```cs
-   private Connector \_connector;
+   private Connector _connector;
    ...
-   \_connector.Adapter.CandleBuilderProvider.Register(new TickCandleBuilder());
+   _connector.Adapter.CandleBuilderProvider.Register(new TickCandleBuilder());
    ```
 5. Create a [CandleSeries](../api/StockSharp.Algo.Candles.CandleSeries.html) and request data on it:
 
    ```cs
-   var series \= new CandleSeries(typeof(TickCandle), \_security, 1000);
+   var series = new CandleSeries(typeof(TickCandle), _security, 1000);
    ...
-   \_connector.SubscribeCandles(series);
+   _connector.SubscribeCandles(series);
    ```

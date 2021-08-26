@@ -3,12 +3,12 @@
 Код ниже демонстрирует как инициализировать [BitStampMessageAdapter](../api/StockSharp.BitStamp.BitStampMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-            Connector Connector \= new Connector();				
+            Connector Connector = new Connector();				
             ...				
-            var messageAdapter \= new BitStampMessageAdapter(Connector.TransactionIdGenerator)
+            var messageAdapter = new BitStampMessageAdapter(Connector.TransactionIdGenerator)
             {
-                Key \= "\<Your API Key\>".To\<SecureString\>(),
-                Secret \= "\<Your API Secret\>".To\<SecureString\>(),
+                Key = "<Your API Key>".To<SecureString>(),
+                Secret = "<Your API Secret>".To<SecureString>(),
             };
             Connector.Adapter.InnerAdapters.Add(messageAdapter);
             ...	

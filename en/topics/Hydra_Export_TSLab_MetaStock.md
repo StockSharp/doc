@@ -20,7 +20,7 @@ In the example, the timeframe of the candles in 5 minutes is indicated in the se
 Also, the first line (Header) should be set in the file: 
 
 ```none
-\<TICKER\>,\<PER\>,\<DATE\>,\<TIME\>,\<OPEN\>,\<HIGH\>,\<LOW\>,\<CLOSE\>,\<VOL\>
+<TICKER>,<PER>,<DATE>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>
 	  				
 ```
 

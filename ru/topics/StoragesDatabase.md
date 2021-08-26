@@ -10,10 +10,10 @@
 Для изменения сохранения пути БД, необходимо в Hydra.exe.config отредактировать следующее место:
 
 ```none
-	\<connectionStrings\>
-		\<\!\-\-\<add name\="SqlServerConStr" connectionString\="Server\=.\\SQLExpress;Database\=Trading;User ID\=trading;Password\=trading;" providerName\=""\/\>\-\-\>
-		\<add name\="SQLiteConStr" connectionString\="Data Source\=%Documents%\\StockSharp\\Hydra\\StockSharp.db" providerName\="System.Data.SQLite" \/\>
-	\<\/connectionStrings\>
+	<connectionStrings>
+		<!--<add name="SqlServerConStr" connectionString="Server=.\SQLExpress;Database=Trading;User ID=trading;Password=trading;" providerName=""/>-->
+		<add name="SQLiteConStr" connectionString="Data Source=%Documents%\StockSharp\Hydra\StockSharp.db" providerName="System.Data.SQLite" />
+	</connectionStrings>
 		
 ```
 

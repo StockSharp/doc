@@ -10,9 +10,9 @@
 
    ```cs
    Console.Write("Введите путь к директории с Quik: ");
-   var path \= Console.ReadLine();
-   var terminal \= QuikTerminal.Get(path);
-   if (\!terminal.IsLaunched)
+   var path = Console.ReadLine();
+   var terminal = QuikTerminal.Get(path);
+   if (!terminal.IsLaunched)
    {
    	Console.WriteLine("Запускается Quik...");
    	terminal.Launch();
@@ -25,10 +25,10 @@
 
    ```cs
    Console.Write("Введите логин: ");
-   var login \= Console.ReadLine();
+   var login = Console.ReadLine();
    Console.Write("Введите пароль: ");
-   var password \= Console.ReadLine();
-   if (\!terminal.IsConnected)
+   var password = Console.ReadLine();
+   if (!terminal.IsConnected)
    {
    	terminal.Login(login, password);
    	Console.WriteLine("Авторизация произведена.");

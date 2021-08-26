@@ -31,13 +31,13 @@ MonitorWindow using
 1. First, you need to create a window:
 
    ```cs
-   var monitor \= new MonitorWindow();
+   var monitor = new MonitorWindow();
    monitor.Show();
    ```
 2. Then, the created window must be added to your [LogManager](../api/StockSharp.Logging.LogManager.html) through the [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html):
 
    ```cs
-   \_logManager.Listeners.Add(new GuiLogListener(monitor));
+   _logManager.Listeners.Add(new GuiLogListener(monitor));
    ```
 3. Thereafter all sources [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html) (strategies, connectors, etc.) will send messages to the [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html).
 

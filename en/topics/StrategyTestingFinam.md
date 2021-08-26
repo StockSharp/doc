@@ -12,18 +12,18 @@ Testing with data downloaded from Google
    1. Create security.
 
       ```none
-      var security \= new Security
+      var security = new Security
       {
-          Id \= secid,
-          Code \= secCode,
-          Board \= board
+          Id = secid,
+          Code = secCode,
+          Board = board
       };
        
       ```
    2. Create an instance of the data loader class from Google:
 
       ```none
-      \/\/ remove the old market data adapter and add a new one from 
+      // remove the old market data adapter and add a new one from 
       connector.Adapter.InnerAdapters.Remove(connector.MarketDataAdapter);
       connector.Adapter.InnerAdapters.Add(new CustomHistoryMessageAdapter(new GoogleMessageAdapter(connector.TransactionIdGenerator)));
       ```

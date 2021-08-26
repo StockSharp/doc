@@ -30,15 +30,15 @@
 - Получение временных рамок свечи через метод [GetCandleBounds](../api/Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds.html). Например, необходимо точно узнать, когда закончится текущая 10.5\-минутная свеча:
 
   ```cs
-  var candleTimeFrame \= TimeSpan.FromMinutes(10.5);
+  var candleTimeFrame = TimeSpan.FromMinutes(10.5);
   Console.WriteLine(candleTimeFrame.GetCandleBounds(DateTime.Now).Max);
   					
   ```
 - Получить длину свечи, ее тела, ее теней через методы [GetLength](../api/StockSharp.Algo.Candles.CandleHelper.GetLength.html), [GetBody](../api/StockSharp.Algo.Candles.CandleHelper.GetBody.html), [GetTopShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetTopShadow.html) и [GetBottomShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetBottomShadow.html):
 
   ```cs
-  \/\/ любая свеча
-  var candle \= ...
+  // любая свеча
+  var candle = ...
   Console.WriteLine(candle.GetCandleLength());
   Console.WriteLine(candle.GetCandleBody());
   Console.WriteLine(candle.GetCandleTopShadow());

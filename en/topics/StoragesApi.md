@@ -21,33 +21,33 @@ Example of working with market data storage
 1. The SampleStorage example, located in the [S\#](StockSharpAbout.md) installation package, shows how to save and load the trades through the [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html)class. In the beginning an instrument created and its basic properties are initialized \- [Id](../api/StockSharp.BusinessEntities.Security.Id.html) (to determine location on disk), [StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html) and [Decimals](../api/StockSharp.BusinessEntities.Security.Decimals.html) (for decimal value compression in the **trades.bin** file):
 
    ```cs
-   var security \= new Security
+   var security = new Security
    {
-   	Id \= "TestId",
-   	MinStepSize \= 0.1,
-   	Decimals \= 1,
+   	Id = "TestId",
+   	MinStepSize = 0.1,
+   	Decimals = 1,
    };
    					
    ```
 2. Further, as initial data, a list of the 1,000 undefined trades created (in a real application, it will be those trades that are get from external sources or trade application):
 
    ```cs
-   var trades \= new List\<Trade\>();
-   \/\/ generating 1000 random ticks
-   \/\/
-   var tradeGenerator \= new RandomWalkTradeGenerator(security, 99)
+   var trades = new List<Trade>();
+   // generating 1000 random ticks
+   //
+   var tradeGenerator = new RandomWalkTradeGenerator(security, 99)
    {
-   	IdGenerator \= new IdGenerator
+   	IdGenerator = new IdGenerator
    	{
-   		Current \= DateTime.Now.Ticks
+   		Current = DateTime.Now.Ticks
    	}
    };
-   \/\/ generator initialization
+   // generator initialization
    tradeGenerator.Init();
-   for (var i \= 0; i \< 1000; i++)
+   for (var i = 0; i < 1000; i++)
    {
-   	var t \= tradeGenerator.Generate(DateTime.Today + TimeSpan.FromMinutes(i));
-   	t.Id \= i + 1;
+   	var t = tradeGenerator.Generate(DateTime.Today + TimeSpan.FromMinutes(i));
+   	t.Id = i + 1;
    	trades.Add(t);
    }
    					
@@ -55,13 +55,13 @@ Example of working with market data storage
 3. The [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) itself created on the next step:
 
    ```cs
-   var storage \= new StorageRegistry();
+   var storage = new StorageRegistry();
    					
    ```
 4. The market data storage obtained via the trade objects store. The tick trades storage, which is obtained via the [StorageRegistry.GetTradeStorage](../api/StockSharp.Algo.Storages.StorageRegistry.GetTradeStorage.html) method, used in example:
 
    ```cs
-   var tradeStorage \= storage.GetTradeStorage(security);
+   var tradeStorage = storage.GetTradeStorage(security);
    					
    ```
 5. The saving of trades:
@@ -73,7 +73,7 @@ Example of working with market data storage
 6. The loading of trades, which were saved in the previous step:
 
    ```cs
-   var loadedTrades \= tradeStorage.Load(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
+   var loadedTrades = tradeStorage.Load(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
     	  
    foreach (var trade in loadedTrades)
    {

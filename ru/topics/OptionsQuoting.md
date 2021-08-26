@@ -12,66 +12,66 @@
    ```cs
    private void InitConnector()
    {
-   	\/\/ subscribe on connection successfully event
-   	Connector.Connected +\= () \=\>
+   	// subscribe on connection successfully event
+   	Connector.Connected += () =>
    	{
-   		\/\/ update gui labels
-   		this.GuiAsync(() \=\> ChangeConnectStatus(true));
+   		// update gui labels
+   		this.GuiAsync(() => ChangeConnectStatus(true));
    	};
-   	\/\/ subscribe on disconnection event
-   	Connector.Disconnected +\= () \=\>
+   	// subscribe on disconnection event
+   	Connector.Disconnected += () =>
    	{
-   		\/\/ update gui labels
-   		this.GuiAsync(() \=\> ChangeConnectStatus(false));
+   		// update gui labels
+   		this.GuiAsync(() => ChangeConnectStatus(false));
    	};
-   	\/\/ subscribe on connection error event
-   	Connector.ConnectionError +\= error \=\> this.GuiAsync(() \=\>
+   	// subscribe on connection error event
+   	Connector.ConnectionError += error => this.GuiAsync(() =>
    	{
-   		\/\/ update gui labels
+   		// update gui labels
    		ChangeConnectStatus(false);
    		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
    	});
-   	\/\/ fill underlying asset's list
-   	Connector.NewSecurity +\= security \=\>
+   	// fill underlying asset's list
+   	Connector.NewSecurity += security =>
    	{
-   		if (security.Type \=\= SecurityTypes.Future)
-   			\_assets.Add(security);
+   		if (security.Type == SecurityTypes.Future)
+   			_assets.Add(security);
    	};
-   	Connector.SecurityChanged +\= security \=\>
+   	Connector.SecurityChanged += security =>
    	{
-   		if (\_model.UnderlyingAsset \=\= security \|\| \_model.UnderlyingAsset.Id \=\= security.UnderlyingSecurityId)
-   			\_isDirty \= true;
+   		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
+   			_isDirty = true;
    	};
-   	\/\/ subscribing on tick prices and updating asset price
-   	Connector.NewTrade +\= trade \=\>
+   	// subscribing on tick prices and updating asset price
+   	Connector.NewTrade += trade =>
    	{
-   		if (\_model.UnderlyingAsset \=\= trade.Security \|\| \_model.UnderlyingAsset.Id \=\= trade.Security.UnderlyingSecurityId)
-   			\_isDirty \= true;
+   		if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
+   			_isDirty = true;
    	};
-   	Connector.NewPosition +\= position \=\> this.GuiAsync(() \=\>
+   	Connector.NewPosition += position => this.GuiAsync(() =>
    	{
-   		var asset \= SelectedAsset;
-   		if (asset \=\= null)
+   		var asset = SelectedAsset;
+   		if (asset == null)
    			return;
-   		var assetPos \= position.Security \=\= asset;
-   		var newPos \= position.Security.UnderlyingSecurityId \=\= asset.Id;
-   		if (\!assetPos && \!newPos)
+   		var assetPos = position.Security == asset;
+   		var newPos = position.Security.UnderlyingSecurityId == asset.Id;
+   		if (!assetPos && !newPos)
    			return;
    		if (assetPos)
-   			PosChart.AssetPosition \= position;
+   			PosChart.AssetPosition = position;
    		if (newPos)
    			PosChart.Positions.Add(position);
    		RefreshChart();
    	});
-   	Connector.PositionChanged +\= position \=\> this.GuiAsync(() \=\>
+   	Connector.PositionChanged += position => this.GuiAsync(() =>
    	{
-   		if ((PosChart.AssetPosition \!\= null && PosChart.AssetPosition \=\= position) \|\| PosChart.Positions.Cache.Contains(position))
+   		if ((PosChart.AssetPosition != null && PosChart.AssetPosition == position) || PosChart.Positions.Cache.Contains(position))
    			RefreshChart();
    	});
    	try
    	{
-   		if (File.Exists(\_settingsFile))
-   			Connector.Load(new XmlSerializer\<SettingsStorage\>().Deserialize(\_settingsFile));
+   		if (File.Exists(_settingsFile))
+   			Connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_settingsFile));
    	}
    	catch
    	{
@@ -79,18 +79,18 @@
    }
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
-   	if (\!\_isConnected)
+   	if (!_isConnected)
    	{
-   		ConnectBtn.IsEnabled \= false;
-   		\_model.Clear();
-   		\_model.MarketDataProvider \= Connector;
+   		ConnectBtn.IsEnabled = false;
+   		_model.Clear();
+   		_model.MarketDataProvider = Connector;
    		ClearSmiles();
    		PosChart.Positions.Clear();
-   		PosChart.AssetPosition \= null;
+   		PosChart.AssetPosition = null;
    		PosChart.Refresh(1, 1, default(DateTimeOffset), default(DateTimeOffset));
-   		Portfolio.Portfolios \= new PortfolioDataSource(Connector);
-   		PosChart.MarketDataProvider \= Connector;
-   		PosChart.SecurityProvider \= Connector;
+   		Portfolio.Portfolios = new PortfolioDataSource(Connector);
+   		PosChart.MarketDataProvider = Connector;
+   		PosChart.SecurityProvider = Connector;
    		Connector.Connect();
    	}
    	else
@@ -103,37 +103,37 @@
    ```none
    private void StartClick(object sender, RoutedEventArgs e)
    {
-   	var option \= SelectedOption;
-   	\/\/ create DOM window
-   	var wnd \= new QuotesWindow { Title \= option.Name };
+   	var option = SelectedOption;
+   	// create DOM window
+   	var wnd = new QuotesWindow { Title = option.Name };
    	wnd.Init(option);
-   	\/\/ create delta hedge strategy
-   	var hedge \= new DeltaHedgeStrategy
+   	// create delta hedge strategy
+   	var hedge = new DeltaHedgeStrategy
    	{
-   		Security \= option.GetUnderlyingAsset(Connector),
-   		Portfolio \= Portfolio.SelectedPortfolio,
-   		Connector \= Connector,
+   		Security = option.GetUnderlyingAsset(Connector),
+   		Portfolio = Portfolio.SelectedPortfolio,
+   		Connector = Connector,
    	};
-   	\/\/ create option quoting for 20 contracts
-   	var quoting \= new VolatilityQuotingStrategy(Sides.Buy, 20,
-   			new Range\<decimal\>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
+   	// create option quoting for 20 contracts
+   	var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
+   			new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    	{
-   		\/\/ working size is 1 contract
-   		Volume \= 1,
-   		Security \= option,
-   		Portfolio \= Portfolio.SelectedPortfolio,
-   		Connector \= Connector,
+   		// working size is 1 contract
+   		Volume = 1,
+   		Security = option,
+   		Portfolio = Portfolio.SelectedPortfolio,
+   		Connector = Connector,
    	};
-   	\/\/ link quoting and hending
+   	// link quoting and hending
    	hedge.ChildStrategies.Add(quoting);
-   	\/\/ start henging
+   	// start henging
    	hedge.Start();
-   	wnd.Closed +\= (s1, e1) \=\>
+   	wnd.Closed += (s1, e1) =>
    	{
-   		\/\/ force close all strategies while the DOM was closed
+   		// force close all strategies while the DOM was closed
    		hedge.Stop();
    	};
-   	\/\/ show DOM
+   	// show DOM
    	wnd.Show();
    }
    ```
@@ -147,7 +147,7 @@
    ```cs
    private void OnQuotesChanged()
    {
-   	DepthCtrl.UpdateDepth(\_depth.ImpliedVolatility(Connector, Connector, Connector.CurrentTime));
+   	DepthCtrl.UpdateDepth(_depth.ImpliedVolatility(Connector, Connector, Connector.CurrentTime));
    }
    ```
 

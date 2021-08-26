@@ -9,15 +9,15 @@ The main limitation of the Windows visual API is that it is impossible to access
 Here is a simple example of how this is done:
 
 ```cs
-\/\/ the BeginInvoke method must be invoked for access to any UI compenents in market\-data handles
-\_connector.NewSecurity +\= security \=\> this.Dispatcher.BeginInvoke((Action)(() \=\> this.Security.ItemsSource \= \_connector.Securities));
+// the BeginInvoke method must be invoked for access to any UI compenents in market-data handles
+_connector.NewSecurity += security => this.Dispatcher.BeginInvoke((Action)(() => this.Security.ItemsSource = _connector.Securities));
 ```
 
 [S\#](StockSharpAbout.md) already has special methods that hide the Dispatcher use and simplify coding: 
 
 ```cs
-\/\/ the same as a prev example but uses short notation
-\_connector.NewSecurity +\= security \=\> this.GuiSync(() \=\> this.Security.ItemsSource \= \_connector.Securities);
+// the same as a prev example but uses short notation
+_connector.NewSecurity += security => this.GuiSync(() => this.Security.ItemsSource = _connector.Securities);
 ```
 
 ### Graphical components of S\#
@@ -36,17 +36,17 @@ Graphical components of S\#
 To access the [S\#](StockSharpAbout.md) graphical controls in the XAML code it is necessary to define the aliases for the corresponding namespace and to use these aliases in the XAML code. How to do this is shown in the following example: 
 
 ```xaml
-\<Window x:Class\="SampleSmartSMA.MainWindow"
-        xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-        xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-        xmlns:loc\="clr\-namespace:StockSharp.Localization;assembly\=StockSharp.Localization"
-        xmlns:sx\="clr\-namespace:StockSharp.Xaml;assembly\=StockSharp.Xaml"
-        xmlns:ss\="clr\-namespace:StockSharp.SmartCom.Xaml;assembly\=StockSharp.SmartCom"
-        xmlns:charting\="http:\/\/schemas.stocksharp.com\/xaml"
-        Title\="{x:Static loc:LocalizedStrings.XamlStr570}" Height\="700" Width\="900"\>
+<Window x:Class="SampleSmartSMA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+        xmlns:ss="clr-namespace:StockSharp.SmartCom.Xaml;assembly=StockSharp.SmartCom"
+        xmlns:charting="http://schemas.stocksharp.com/xaml"
+        Title="{x:Static loc:LocalizedStrings.XamlStr570}" Height="700" Width="900">
     
-    \<Grid\>
-   \<\/Grid\>
-\<\/Window\>
+    <Grid>
+   </Grid>
+</Window>
 	
 ```

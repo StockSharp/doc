@@ -9,16 +9,16 @@
 Вот простой пример, как это делается:
 
 ```cs
-\/\/ обязательно нужно вызвать метод BeginInvoke,
-\/\/ и уже в его обработчике можно обратиться к элементу окна 'Security' (это выпадающий список)
-\_connector.NewSecurity +\= security \=\> this.Dispatcher.BeginInvoke((Action)(() \=\> this.Security.ItemsSource \= \_connector.Securities));
+// обязательно нужно вызвать метод BeginInvoke,
+// и уже в его обработчике можно обратиться к элементу окна 'Security' (это выпадающий список)
+_connector.NewSecurity += security => this.Dispatcher.BeginInvoke((Action)(() => this.Security.ItemsSource = _connector.Securities));
 ```
 
 [S\#](StockSharpAbout.md) уже содержит специальные методы, которые скрывают использование Dispatcher и упрощают написание кода: 
 
 ```cs
-\/\/ обязательно нужно вызвать метод GuiSync, прежде чем обратиться к элементу окна 'Security' (это выпадающий список)
-\_connector.NewSecurity +\= security \=\> this.GuiSync(() \=\> this.Security.ItemsSource \= \_connector.Securities);
+// обязательно нужно вызвать метод GuiSync, прежде чем обратиться к элементу окна 'Security' (это выпадающий список)
+_connector.NewSecurity += security => this.GuiSync(() => this.Security.ItemsSource = _connector.Securities);
 ```
 
 ### Графические компоненты S\#
@@ -37,17 +37,17 @@
 Для доступа к графическим контролам [S\#](StockSharpAbout.md) в коде XAML необходимо определить псевдонимы для соответствующих пространств имен и использовать эти псевдонимы в коде XAML. Как это сделать показано в следующем примере: 
 
 ```xaml
-\<Window x:Class\="SampleSmartSMA.MainWindow"
-        xmlns\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml\/presentation"
-        xmlns:x\="http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml"
-        xmlns:loc\="clr\-namespace:StockSharp.Localization;assembly\=StockSharp.Localization"
-        xmlns:sx\="clr\-namespace:StockSharp.Xaml;assembly\=StockSharp.Xaml"
-        xmlns:ss\="clr\-namespace:StockSharp.SmartCom.Xaml;assembly\=StockSharp.SmartCom"
-        xmlns:charting\="http:\/\/schemas.stocksharp.com\/xaml"
-        Title\="{x:Static loc:LocalizedStrings.XamlStr570}" Height\="700" Width\="900"\>
+<Window x:Class="SampleSmartSMA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+        xmlns:ss="clr-namespace:StockSharp.SmartCom.Xaml;assembly=StockSharp.SmartCom"
+        xmlns:charting="http://schemas.stocksharp.com/xaml"
+        Title="{x:Static loc:LocalizedStrings.XamlStr570}" Height="700" Width="900">
     
-    \<Grid\>
-   \<\/Grid\>
-\<\/Window\>
+    <Grid>
+   </Grid>
+</Window>
 	
 ```

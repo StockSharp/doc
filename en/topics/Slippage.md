@@ -21,8 +21,8 @@ The slippage calculation adding to the SampleSMA
    The text box for the slippage should be added to the information output window:
 
    ```cs
-   \<Label Grid.Column\="0" Grid.Row\="4" Content\="Slippage:" \/\>
-   \<Label x:Name\="Slippage" Grid.Column\="1" Grid.Row\="4" \/\>
+   <Label Grid.Column="0" Grid.Row="4" Content="Slippage:" />
+   <Label x:Name="Slippage" Grid.Column="1" Grid.Row="4" />
    						
    ```
 2. Next, you need to extend the event method\-handler of the strategy parameter change:
@@ -30,10 +30,10 @@ The slippage calculation adding to the SampleSMA
    ```cs
    private void OnStrategyPropertyChanged(object sender, PropertyChangedEventArgs e)
    {
-      this.GuiAsync(() \=\>
+      this.GuiAsync(() =>
       {
-         	Status.Content \= \_strategy.ProcessState;
-       	Slippage.Content \= \_strategy.Slippage;
+         	Status.Content = _strategy.ProcessState;
+       	Slippage.Content = _strategy.Slippage;
       });
    }
    						

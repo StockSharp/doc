@@ -78,12 +78,12 @@
    Через [QuikTrader.SecuritiesTable](../api/StockSharp.Quik.QuikTrader.SecuritiesTable.html) и [QuikTrader.QuotesTable](../api/StockSharp.Quik.QuikTrader.QuotesTable.html) добавляются требуемые колонки в том порядке, в которым они были добавлены в [Quik](Quik.md): 
 
    ```cs
-   \/\/ добавляем на экспорт необходимые колонки
+   // добавляем на экспорт необходимые колонки
    this.Trader.SecuritiesTable.Columns.Add(DdeSecurityColumns.Volatility);
    this.Trader.SecuritiesTable.Columns.Add(DdeSecurityColumns.TheorPrice);
    this.Trader.SecuritiesTable.Columns.Add(DdeSecurityColumns.BaseSecurity);
    this.Trader.SecuritiesTable.Columns.Add(DdeSecurityColumns.MinStepPrice);
-   \/\/ добавляем экспорт дополнительных колонок из стакана (своя продажа и покупка)
+   // добавляем экспорт дополнительных колонок из стакана (своя продажа и покупка)
    this.Trader.QuotesTable.Columns.Add(DdeQuoteColumns.OwnAskVolume);
    this.Trader.QuotesTable.Columns.Add(DdeQuoteColumns.OwnBidVolume);
    ```
@@ -91,14 +91,14 @@
    Если колонки добавляются не в конец, а перемешаны с основными колонками, то необходимо вставлять колонки относительно их порядка следования друг за другом в таблице: 
 
    ```cs
-   \/\/ вставить колонку волатильность, чтобы она была 5\-ой с начала (нумерация идет с нуля)
-   \/\/ все последующие колонки за волатильностью автоматически перестраивают свой порядковый номер
+   // вставить колонку волатильность, чтобы она была 5-ой с начала (нумерация идет с нуля)
+   // все последующие колонки за волатильностью автоматически перестраивают свой порядковый номер
    this.Trader.SecuritiesTable.Columns.Insert(4, DdeSecurityColumns.Volatility);
    ```
 5. После этого, через события [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html) и [Connector.SecurityChanged](../api/StockSharp.Algo.Connector.SecurityChanged.html) будут приходить объекты [Security](../api/StockSharp.BusinessEntities.Security.html), содержащие расширенную информацию. Чтобы ее получить в коде, необходимо воспользоваться свойством [Security.ExtensionInfo](../api/StockSharp.BusinessEntities.Security.ExtensionInfo.html): 
 
    ```cs
-   Trader.NewSecurity +\= security \=\> \_securitiesWindow.SecurityPicker.Securities.Add(security);
+   Trader.NewSecurity += security => _securitiesWindow.SecurityPicker.Securities.Add(security);
    					
    ```
 
@@ -109,25 +109,25 @@
    ```cs
    private void DepthClick(object sender, RoutedEventArgs e)
    {
-   	var trader \= MainWindow.Instance.Trader;
-   	var window \= \_quotesWindows.SafeAdd(SecurityPicker.SelectedSecurity, security \=\>
+   	var trader = MainWindow.Instance.Trader;
+   	var window = _quotesWindows.SafeAdd(SecurityPicker.SelectedSecurity, security =>
    	{
-   		\/\/ начинаем получать котировки стакана
+   		// начинаем получать котировки стакана
    		trader.SubscribeMarketDepth(security);
-   		\/\/ создаем окно со стаканом
-   		var wnd \= new QuotesWindow { Title \= security.Id + " " + LocalizedStrings.MarketDepth };
+   		// создаем окно со стаканом
+   		var wnd = new QuotesWindow { Title = security.Id + " " + LocalizedStrings.MarketDepth };
    		wnd.MakeHideable();
    		return wnd;
    	});
-   	if (window.Visibility \=\= Visibility.Visible)
+   	if (window.Visibility == Visibility.Visible)
    		window.Hide();
    	else
    		window.Show();
-   	if (\!\_initialized)
+   	if (!_initialized)
    	{
    		TraderOnMarketDepthChanged(trader.GetMarketDepth(SecurityPicker.SelectedSecurity));
-   		trader.MarketDepthChanged +\= TraderOnMarketDepthChanged;
-   		\_initialized \= true;
+   		trader.MarketDepthChanged += TraderOnMarketDepthChanged;
+   		_initialized = true;
    	}
    }
    ```

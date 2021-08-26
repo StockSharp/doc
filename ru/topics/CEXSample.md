@@ -3,12 +3,12 @@
 Код ниже демонстрирует как инициализировать [CexMessageAdapter](../api/StockSharp.Cex.CexMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-            Connector Connector \= new Connector();				
+            Connector Connector = new Connector();				
             ...				
-            var messageAdapter \= new  CexMessageAdapter(Connector.TransactionIdGenerator)
+            var messageAdapter = new  CexMessageAdapter(Connector.TransactionIdGenerator)
             {
-                Key \= "\<Your API Key\>".To\<SecureString\>(),
-                Secret \= "\<Your API Secret\>".To\<SecureString\>(),
+                Key = "<Your API Key>".To<SecureString>(),
+                Secret = "<Your API Secret>".To<SecureString>(),
             };
             Connector.Adapter.InnerAdapters.Add(messageAdapter);
             ...	

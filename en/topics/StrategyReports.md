@@ -37,15 +37,15 @@ Excel report generation adding to the SampleSMA
 1. You need to add the report generate button on the form:
 
    ```none
-   \<Button x:Name\="Report" Grid.Column\="0" Width\="100" Grid.ColumnSpan\="2" Grid.Row\="11" IsEnabled\="False" Content\="Report" Click\="Report\_Click" \/\>
+   <Button x:Name="Report" Grid.Column="0" Width="100" Grid.ColumnSpan="2" Grid.Row="11" IsEnabled="False" Content="Report" Click="Report_Click" />
    ```
 2. The generation code (starts by pressing a button):
 
    ```none
-   private void Report\_Click(object sender, RoutedEventArgs e)
+   private void Report_Click(object sender, RoutedEventArgs e)
    {
-   	new ExcelStrategyReport(\_strategy, "sma.xlsx").Generate();
-   	\/\/ oppening the result file
+   	new ExcelStrategyReport(_strategy, "sma.xlsx").Generate();
+   	// oppening the result file
    	Process.Start("sma.xlsx");
    }
    ```

@@ -11,13 +11,13 @@ S\# позволяет выставлять заявки с графика, дл
 Получившуюся заявку можно перехватить через событие создания новой заявки.
 
 ```cs
-ChartPanel.CreateOrder +\= (chartArea,order) \=\>
+ChartPanel.CreateOrder += (chartArea,order) =>
 {
-	order.Portfolio \= \_portfolio;
-	order.Security \= \_security;
-	order.Volume \= 1;
+	order.Portfolio = _portfolio;
+	order.Security = _security;
+	order.Volume = 1;
 	
-	\_connector.RegisterOrder(order);
+	_connector.RegisterOrder(order);
 };
 ```
 

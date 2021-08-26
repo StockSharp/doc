@@ -9,100 +9,100 @@ Usage of Unit
 - The [Unit](../api/StockSharp.Messages.Unit.html) can be created using special design kits, or using shorter recording by [UnitHelper](../api/StockSharp.Messages.UnitHelper.html): 
 
   ```cs
-  \/\/ test instrument with pips \= 1 cent and points \= 10 usd
-  var security \= new Security
+  // test instrument with pips = 1 cent and points = 10 usd
+  var security = new Security
   {
-  	Id \= "AAPL@NASDAQ",
-  	StepPrice \= 10,
-  	PriceStep \= 0.01m,
+  	Id = "AAPL@NASDAQ",
+  	StepPrice = 10,
+  	PriceStep = 0.01m,
   };
   			
-  var absolute \= new Unit(30);
-  var percent \= 30.0.Percents();
-  var pips \= 30.0.Pips(security);
-  var point \= 30.0.Points(security);
+  var absolute = new Unit(30);
+  var percent = 30.0.Percents();
+  var pips = 30.0.Pips(security);
+  var point = 30.0.Points(security);
   ```
 - [Unit](../api/StockSharp.Messages.Unit.html) features formatted output. Therefore, reducing the values to a string depending on the [UnitTypes](../api/StockSharp.Messages.UnitTypes.html) type: 
 
   ```cs
-  Console.WriteLine("absolute \= " + absolute);
-  Console.WriteLine("percent \= " + percent);
-  Console.WriteLine("pips \= " + pips);
-  Console.WriteLine("point \= " + point);
+  Console.WriteLine("absolute = " + absolute);
+  Console.WriteLine("percent = " + percent);
+  Console.WriteLine("pips = " + pips);
+  Console.WriteLine("point = " + point);
   ```
 
   will output the following strings:
 
   ```none
-  absolute \= 30
-  percent \= 30%
-  pips \= 30s
-  point \= 30p
+  absolute = 30
+  percent = 30%
+  pips = 30s
+  point = 30p
   ```
 
   The s symbol means minimal price increment (pips), p \- cost of price increment (point).
 - Arithmetic operations with [Unit](../api/StockSharp.Messages.Unit.html) are performed in the same way, as with normal numbers: 
 
   ```cs
-  \/\/ addition of all values
-  Console.WriteLine("testValue + absolute \= " + (testValue + absolute));
-  Console.WriteLine("testValue + percent \= " + (testValue + percent));
-  Console.WriteLine("testValue + pips \= " + (testValue + pips));
-  Console.WriteLine("testValue + point \= " + (testValue + point));
+  // addition of all values
+  Console.WriteLine("testValue + absolute = " + (testValue + absolute));
+  Console.WriteLine("testValue + percent = " + (testValue + percent));
+  Console.WriteLine("testValue + pips = " + (testValue + pips));
+  Console.WriteLine("testValue + point = " + (testValue + point));
   Console.WriteLine();
-  \/\/ multiplication of all values
-  Console.WriteLine("testValue \* absolute \= " + (testValue \* absolute));
-  Console.WriteLine("testValue \* percent \= " + (testValue \* percent));
-  Console.WriteLine("testValue \* pips \= " + (testValue \* pips));
-  Console.WriteLine("testValue \* point \= " + (testValue \* point));
+  // multiplication of all values
+  Console.WriteLine("testValue * absolute = " + (testValue * absolute));
+  Console.WriteLine("testValue * percent = " + (testValue * percent));
+  Console.WriteLine("testValue * pips = " + (testValue * pips));
+  Console.WriteLine("testValue * point = " + (testValue * point));
   Console.WriteLine();
-  \/\/ subtraction of values
-  Console.WriteLine("testValue \- absolute \= " + (testValue \- absolute));
-  Console.WriteLine("testValue \- percent \= " + (testValue \- percent));
-  Console.WriteLine("testValue \- pips \= " + (testValue \- pips));
-  Console.WriteLine("testValue \- point \= " + (testValue \- point));
+  // subtraction of values
+  Console.WriteLine("testValue - absolute = " + (testValue - absolute));
+  Console.WriteLine("testValue - percent = " + (testValue - percent));
+  Console.WriteLine("testValue - pips = " + (testValue - pips));
+  Console.WriteLine("testValue - point = " + (testValue - point));
   Console.WriteLine();
-  \/\/ division of all values
-  Console.WriteLine("testValue \/ absolute \= " + (testValue \/ absolute));
-  Console.WriteLine("testValue \/ percent \= " + (testValue \/ percent));
-  Console.WriteLine("testValue \/ pips \= " + (testValue \/ pips));
-  Console.WriteLine("testValue \/ point \= " + (testValue \/ point));
+  // division of all values
+  Console.WriteLine("testValue / absolute = " + (testValue / absolute));
+  Console.WriteLine("testValue / percent = " + (testValue / percent));
+  Console.WriteLine("testValue / pips = " + (testValue / pips));
+  Console.WriteLine("testValue / point = " + (testValue / point));
   Console.WriteLine();
   ```
 - The result of arithmetic operations [Unit](../api/StockSharp.Messages.Unit.html) itself becomes [Unit](../api/StockSharp.Messages.Unit.html), type of each is equal to the first operand type. For example, when adding pips and points, the result will be in pips: 
 
   ```cs
-  \/\/ addition of pips and points
-  var resultPipsPoint \= pips + point;
-  \/\/ and casting to decimal
-  var resultPipsPointDecimal \= (decimal)resultPipsPoint;
-  Console.WriteLine("pips + point \= " + resultPipsPoint);
-  Console.WriteLine("(decimal)(pips + point) \= " + resultPipsPointDecimal);
+  // addition of pips and points
+  var resultPipsPoint = pips + point;
+  // and casting to decimal
+  var resultPipsPointDecimal = (decimal)resultPipsPoint;
+  Console.WriteLine("pips + point = " + resultPipsPoint);
+  Console.WriteLine("(decimal)(pips + point) = " + resultPipsPointDecimal);
   ```
 
   Output of such operation will be as follows:
 
   ```none
-  pips + point \= 30030s
-  (decimal)(pips + point) \= 300.3
+  pips + point = 30030s
+  (decimal)(pips + point) = 300.3
   ```
 
   Or, when adding pips and percent: 
 
   ```cs
-  \/\/ addition of pips and percents
-  var resultPipsPercents \= pips + percent;
-  \/\/ and casting to decimal
-  var resultPipsPercentsDecimal \= (decimal)resultPipsPercents;
-  Console.WriteLine("pips + percent \= " + resultPipsPercents);
-  Console.WriteLine("(decimal)(pips + percent) \= " + resultPipsPercentsDecimal);
+  // addition of pips and percents
+  var resultPipsPercents = pips + percent;
+  // and casting to decimal
+  var resultPipsPercentsDecimal = (decimal)resultPipsPercents;
+  Console.WriteLine("pips + percent = " + resultPipsPercents);
+  Console.WriteLine("(decimal)(pips + percent) = " + resultPipsPercentsDecimal);
   ```
 
   The output will be as follows:
 
   ```none
-  pips + percent \= 39s
-  (decimal)(pips + percent) \= 0.39
+  pips + percent = 39s
+  (decimal)(pips + percent) = 0.39
   ```
 
 ### Next Steps

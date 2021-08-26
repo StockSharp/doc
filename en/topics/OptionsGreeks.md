@@ -5,14 +5,14 @@ The formula of [Black–Scholes model](https://en.wikipedia.org/wiki/Black–Sch
 The following code shows the [BlackScholes](../api/StockSharp.Algo.Derivatives.BlackScholes.html) class methods to calculate the “Greeks”.
 
 ```cs
-var bs \= new BlackScholes(option, \_connector, \_connector);
-DateTimeOffset currentTime \= DateTimeOffset.Now;
-decimal delta \= bs.Delta(currentTime);
-decimal gamma \= bs.Gamma(currentTime);
-decimal vega \= bs.Vega(currentTime);
-decimal theta \= bs.Theta(currentTime);
-decimal rho \= bs.Rho(currentTime);
-decimal iv \= bs.ImpliedVolatility(currentTime, premium);  \/\/ premium is premium of the option contract
+var bs = new BlackScholes(option, _connector, _connector);
+DateTimeOffset currentTime = DateTimeOffset.Now;
+decimal delta = bs.Delta(currentTime);
+decimal gamma = bs.Gamma(currentTime);
+decimal vega = bs.Vega(currentTime);
+decimal theta = bs.Theta(currentTime);
+decimal rho = bs.Rho(currentTime);
+decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium is premium of the option contract
 ```
 
 In addition the installation package includes the OptionCalculator example, in which all the “Greeks” are calculated and visualized using the [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html) graphical component. See [Graphic components](OptionsGUI.md). 

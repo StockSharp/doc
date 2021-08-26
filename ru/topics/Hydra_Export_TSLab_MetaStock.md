@@ -20,7 +20,7 @@
 Также следует задать первую строку (Заголовок) в файле: 
 
 ```none
-\<TICKER\>,\<PER\>,\<DATE\>,\<TIME\>,\<OPEN\>,\<HIGH\>,\<LOW\>,\<CLOSE\>,\<VOL\>
+<TICKER>,<PER>,<DATE>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>
 	  				
 ```
 

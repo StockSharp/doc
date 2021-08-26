@@ -19,11 +19,11 @@
 2. Затем, описать строку таблицы со свечами в виде [.NET](https://ru.wikipedia.org/wiki/.NET_Framework) класса: 
 
    ```cs
-   public class QuikCandleDateTime : Equatable\<QuikCandleDateTime\>
+   public class QuikCandleDateTime : Equatable<QuikCandleDateTime>
    {
-   	\[DdeCustomColumn("Дата", Order \= 0)\]
+   	[DdeCustomColumn("Дата", Order = 0)]
    	public string Date { get; set; }
-   	\[DdeCustomColumn("Время", Order \= 1)\]
+   	[DdeCustomColumn("Время", Order = 1)]
    	public string Time { get; set; }
    	public override QuikCandleDateTime Clone()
    	{
@@ -35,24 +35,24 @@
    	}
    	protected override bool OnEquals(QuikCandleDateTime other)
    	{
-   		return this.Date \=\= other.Date && this.Time \=\= other.Time;
+   		return this.Date == other.Date && this.Time == other.Time;
    	}
    }
-   \[DdeCustomTable("Исторические свечи")\]
+   [DdeCustomTable("Исторические свечи")]
    public class QuikCandle
    {
-   	\[Identity\]
-   	\[InnerSchema\]
+   	[Identity]
+   	[InnerSchema]
    	public QuikCandleDateTime DateTime { get; set; }
-   	\[DdeCustomColumn("Цена открытия", Order \= 2)\]
+   	[DdeCustomColumn("Цена открытия", Order = 2)]
    	public decimal OpenPrice { get; set; }
-   	\[DdeCustomColumn("Максимальная цена", Order \= 3)\]
+   	[DdeCustomColumn("Максимальная цена", Order = 3)]
    	public decimal HighPrice { get; set; }
-   	\[DdeCustomColumn("Минимальная цена", Order \= 4)\]
+   	[DdeCustomColumn("Минимальная цена", Order = 4)]
    	public decimal LowPrice { get; set; }
-   	\[DdeCustomColumn("Цена закрытия", Order \= 5)\]
+   	[DdeCustomColumn("Цена закрытия", Order = 5)]
    	public decimal ClosePrice { get; set; }
-   	\[DdeCustomColumn("Объем", Order \= 6)\]
+   	[DdeCustomColumn("Объем", Order = 6)]
    	public int Volume { get; set; }
    }
    ```
@@ -63,21 +63,21 @@
 3. Далее, с помощью типа *QuikCandle* создается [DdeCustomTable](../api/StockSharp.Quik.DdeCustomTable.html), описывающий формат таблицы в терминале [Quik](Quik.md): 
 
    ```cs
-   \_table \= new DdeCustomTable(typeof(QuikCandle));
+   _table = new DdeCustomTable(typeof(QuikCandle));
    ```
 4. Созданная таблица добавляется через свойство [QuikTrader.CustomTables](../api/StockSharp.Quik.QuikTrader.CustomTables.html), чтобы [QuikTrader](../api/StockSharp.Quik.QuikTrader.html) смог начать обрабатывать неизвестный поток [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) данных 
 
    ```cs
-   this.Trader.CustomTables.Add(\_table);
+   this.Trader.CustomTables.Add(_table);
    ```
 5. Подключение к событию [QuikTrader.NewCustomTables](../api/StockSharp.Quik.QuikTrader.NewCustomTables.html): 
 
    ```cs
-   this.Trader.NewCustomTables +\= (type, objects) \=\>
+   this.Trader.NewCustomTables += (type, objects) =>
    {
-   	\/\/ нас интересует только QuikCandle
-   	if (type \=\= typeof(QuikCandle))
-   		\_candlesWindow.Candles.AddRange(objects.Cast\<QuikCandle\>());
+   	// нас интересует только QuikCandle
+   	if (type == typeof(QuikCandle))
+   		_candlesWindow.Candles.AddRange(objects.Cast<QuikCandle>());
    };
    ```
 

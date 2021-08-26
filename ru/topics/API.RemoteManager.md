@@ -6,9 +6,9 @@
 
 ```none
 ...
-xmlns:xamlRemote\= "clr\-namespace:StockSharp.RemoteManager;assembly\=StockSharp.RemoteManager"	  				
+xmlns:xamlRemote= "clr-namespace:StockSharp.RemoteManager;assembly=StockSharp.RemoteManager"	  				
 ...
-\<xamlRemote:RemoteManagerControl x:Name\="RemoteManagerControl"\/\>
+<xamlRemote:RemoteManagerControl x:Name="RemoteManagerControl"/>
 ...
 	  				
 ```
@@ -28,14 +28,14 @@ RemoteManagerControl.InitRemoteManagerClient(Connector);
 
 ```cs
 	...
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-	DictionaryStrategies \= new ObservableDictionary\<Guid, Strategy\>
+	//---------------------------------------------------------------------
+	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
 	{
 		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
 		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
 		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
 	};
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+	//---------------------------------------------------------------------
 	...	
 	RemoteManagerControl.InitRemoteManagerServer(DictionaryStrategies, RealtimeLayoutGroup.Strategies, LogManager);
 		

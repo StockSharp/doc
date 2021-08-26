@@ -17,19 +17,19 @@
 
 ```cs
 ...
-private readonly Connector \_connector \= new Connector();
+private readonly Connector _connector = new Connector();
 ...
 private void NewOrderClick(object sender, RoutedEventArgs e)
 {
-	var newOrder \= new OrderWindow
+	var newOrder = new OrderWindow
 	{
-		Order \= new Order { Security \= SecurityPicker.SelectedSecurity },
-		SecurityProvider \= \_connector,
-		MarketDataProvider \= \_connector,
-		Portfolios \= new PortfolioDataSource(\_connector),
+		Order = new Order { Security = SecurityPicker.SelectedSecurity },
+		SecurityProvider = _connector,
+		MarketDataProvider = _connector,
+		Portfolios = new PortfolioDataSource(_connector),
 	};
 	if (newOrder.ShowModal(this))
-		\_connector.RegisterOrder(newOrder.Order);
+		_connector.RegisterOrder(newOrder.Order);
 }
               		
 	  				

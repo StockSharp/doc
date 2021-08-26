@@ -16,48 +16,48 @@
 2. Создаем [LogManager](../api/StockSharp.Logging.LogManager.html) и декларируем переменную пользовательского класса.
 
    ```cs
-   private readonly LogManager \_logManager \= new LogManager();
-   private readonly TestSource \_testSource;
+   private readonly LogManager _logManager = new LogManager();
+   private readonly TestSource _testSource;
    				
    ```
 3. Добавляем источники логов.
 
    ```cs
-   \/\/ пользовательский класс в качестве источника
-   \_logManager.Sources.Add(\_testSource \= new TestSource());
-   \/\/ система трассировки .NET в качестве источника
-   \_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+   // пользовательский класс в качестве источника
+   _logManager.Sources.Add(_testSource = new TestSource());
+   // система трассировки .NET в качестве источника
+   _logManager.Sources.Add(new StockSharp.Logging.TraceSource());
    				
    ```
 4. Добавляем "слушателей" логов.
 
    ```cs
-   \/\/ выводим логи в окно Monitor
-   \_logManager.Listeners.Add(new GuiLogListener(Monitor));
-   \/\/ выводим логи в файл
-   \_logManager.Listeners.Add(new FileLogListener
+   // выводим логи в окно Monitor
+   _logManager.Listeners.Add(new GuiLogListener(Monitor));
+   // выводим логи в файл
+   _logManager.Listeners.Add(new FileLogListener
    {
-   	FileName \= "logs",
+   	FileName = "logs",
    });
    				
    ```
 5. Добавляем сообщения логирования пользовательского класса. Уровень логирования выбирается случайным образом.
 
    ```cs
-   var level \= RandomGen.GetEnum\<LogLevels\>();
+   var level = RandomGen.GetEnum<LogLevels>();
    switch (level)
    {
    	case LogLevels.Inherit:
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		\_testSource.AddInfoLog("{0} (source)\!\!\!".Put(level));
+   		_testSource.AddInfoLog("{0} (source)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		\_testSource.AddWarningLog("Warning (source)\!\!\!");
+   		_testSource.AddWarningLog("Warning (source)!!!");
    		break;
    	case LogLevels.Error:
-   		\_testSource.AddErrorLog("Error (source)\!\!\!");
+   		_testSource.AddErrorLog("Error (source)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();
@@ -66,20 +66,20 @@
 6. Добавляем сообщения трассировки.
 
    ```cs
-   var level \= RandomGen.GetEnum\<LogLevels\>();
+   var level = RandomGen.GetEnum<LogLevels>();
    switch (level)
    {
    	case LogLevels.Inherit:
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		Trace.TraceInformation("{0} (trace)\!\!\!".Put(level));
+   		Trace.TraceInformation("{0} (trace)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		Trace.TraceWarning("Warning (trace)\!\!\!");
+   		Trace.TraceWarning("Warning (trace)!!!");
    		break;
    	case LogLevels.Error:
-   		Trace.TraceError("Error (trace)\!\!\!");
+   		Trace.TraceError("Error (trace)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

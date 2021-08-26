@@ -10,7 +10,7 @@ To install the application theme, just write one line. For example, to set the V
 
 ```cs
 ...                 
-ApplicationThemeHelper.ApplicationThemeName \= Theme.VS2017DarkName;
+ApplicationThemeHelper.ApplicationThemeName = Theme.VS2017DarkName;
 ...
 ```
 

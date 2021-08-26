@@ -3,7 +3,7 @@
 Код ниже демонстрирует как инициализировать [MfdMessageAdapter](../api/StockSharp.Mfd.MfdMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-var messageAdapter \= new MfdMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new MfdMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
 							

@@ -10,7 +10,7 @@
 
 ```cs
 ...                 
-ApplicationThemeHelper.ApplicationThemeName \= Theme.VS2017DarkName;
+ApplicationThemeHelper.ApplicationThemeName = Theme.VS2017DarkName;
 ...
 ```
 

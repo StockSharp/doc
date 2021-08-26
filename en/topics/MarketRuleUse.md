@@ -3,23 +3,23 @@
 - **Creating a rule for the order registration condition:**
 
   ```cs
-  private void btnBuy\_Click(object sender, RoutedEventArgs e)
+  private void btnBuy_Click(object sender, RoutedEventArgs e)
   {
-     var order \= new Order
+     var order = new Order
      { 
-         Portfolio \= Portfolio.SelectedPortfolio,
-         Price \= \_instr1.BestAsk.Price,
-         Security \= \_instr1,
-         Volume \= 1,
-         Direction \= Sides.Buy,
+         Portfolio = Portfolio.SelectedPortfolio,
+         Price = _instr1.BestAsk.Price,
+         Security = _instr1,
+         Volume = 1,
+         Direction = Sides.Buy,
      };
      order
          .WhenRegistered(Connector)
-         .Do(() \=\> Connector.AddInfoLog("The order was successfully registered."))
+         .Do(() => Connector.AddInfoLog("The order was successfully registered."))
          .Once()
          .Apply(this);
       
-  	\/\/ registering the order
+  	// registering the order
      Connector.RegisterOrder(order);
   }
   	  	  		
@@ -37,12 +37,12 @@
   	
   	protected override void OnStarting()
   	{
-  		\_connector
-  			.WhenCandlesFinished(\_series)
+  		_connector
+  			.WhenCandlesFinished(_series)
   			.Do(FinishCandle)
   			.Apply(this);
   		Security
-  			.WhenNewTrade(\_connector)
+  			.WhenNewTrade(_connector)
   			.Do(NewTrade)
   			.Apply(this);
   		base.OnStarting();
@@ -59,33 +59,33 @@
   When the rule of the successful order cancel has worked, then it is better to remove all of the other rules related to this order:
 
   ```cs
-  var order \= this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);
-  var ruleCanceled \= order.WhenCanceled(Connector);
+  var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);
+  var ruleCanceled = order.WhenCanceled(Connector);
   ruleCanceled
-      .Do(() \=\>
+      .Do(() =>
       {
           this.AddInfoLog("The order was successfully cancelled.");
-  	\/\/ removing all rules associated with the specified order
+  	// removing all rules associated with the specified order
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule) ruleCanceled.Token);
       })
       .Once()
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() \=\> this.AddInfoLog("The order was successfully registered."))
+      .Do(() => this.AddInfoLog("The order was successfully registered."))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() \=\> this.AddInfoLog("The order was not accepted by broker."))
+      .Do(() => this.AddInfoLog("The order was not accepted by broker."))
       .Once()
       .Apply(this);
   order
       .WhenMatched(Connector)
-      .Do(() \=\> this.AddInfoLog("The order was fully matched."))
+      .Do(() => this.AddInfoLog("The order was fully matched."))
       .Once()
       .Apply(this);
-  \/\/ registering the order
+  // registering the order
   RegisterOrder(order);
   	  	  		
   ```
@@ -94,13 +94,13 @@
   When time is over **OR** the candle is closed:
 
   ```cs
-  CandleSeries \_series;
-  TimeSpan \_holdTimeToOpen \= TimeSpan.FromMilliseconds(5000);
+  CandleSeries _series;
+  TimeSpan _holdTimeToOpen = TimeSpan.FromMilliseconds(5000);
   ...
-  \_connector
-  	.WhenIntervalElapsed(\_holdTimeToOpen)
-  	.Or(\_connector.WhenCandlesStarted(\_series))
-  	.Do(() \=\> this.AddInfoLog("The candle is finished or time is over."))
+  _connector
+  	.WhenIntervalElapsed(_holdTimeToOpen)
+  	.Or(_connector.WhenCandlesStarted(_series))
+  	.Do(() => this.AddInfoLog("The candle is finished or time is over."))
   	.Once()
   	.Apply(this);
   	  	  		
@@ -110,8 +110,8 @@
 
   ```cs
   MarketRuleHelper
-  	.Or(new IMarketRule\[\] {\_connector.WhenIntervalElapsed(\_holdTimeToOpen), \_connector.WhenCandlesStarted(\_series)})
-  	.Do(() \=\> this.AddInfoLog("The candle is finished or time is over."))
+  	.Or(new IMarketRule[] {_connector.WhenIntervalElapsed(_holdTimeToOpen), _connector.WhenCandlesStarted(_series)})
+  	.Do(() => this.AddInfoLog("The candle is finished or time is over."))
   	.Once()
   	.Apply(this);
   	  	  		
@@ -120,12 +120,12 @@
   When the last trade price will be higher than 135000 **AND** lower than 140000:
 
   ```cs
-  var priceMore \= new Unit(135000m, UnitTypes.Limit);
-  var priceLess \= new Unit(140000m, UnitTypes.Limit);
+  var priceMore = new Unit(135000m, UnitTypes.Limit);
+  var priceLess = new Unit(140000m, UnitTypes.Limit);
   				
   MarketRuleHelper
-  	.And(new IMarketRule\[\] {Security.WhenLastTradePriceMore(Connector, Connector, priceMore), Security.WhenLastTradePriceLess(Connector, Connector, priceLess)})
-  	.Do(() \=\> this.AddInfoLog(string.Format("The price of the last transaction is in the range from {0} to {1}", priceMore, priceLess)))
+  	.And(new IMarketRule[] {Security.WhenLastTradePriceMore(Connector, Connector, priceMore), Security.WhenLastTradePriceLess(Connector, Connector, priceLess)})
+  	.Do(() => this.AddInfoLog(string.Format("The price of the last transaction is in the range from {0} to {1}", priceMore, priceLess)))
   	.Apply(this);
   	  	  		
   ```
@@ -135,16 +135,16 @@
 - **Periodicity of the rule \- [Until](../api/StockSharp.Algo.IMarketRule.Until.html):**
 
   ```cs
-  bool flag \= false;
+  bool flag = false;
   ...
   				
   Security
   	.WhenNewTrade()
-  	.Do(() \=\>
+  	.Do(() =>
   			{
-  				if(...) flag \= true;
+  				if(...) flag = true;
   			})
-  	.Until(() \=\> flag)			
+  	.Until(() => flag)			
   	.Apply(this);
   	  	  		
   ```

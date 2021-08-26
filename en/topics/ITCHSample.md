@@ -3,12 +3,12 @@
 The code below demonstrates how to initialize the [ItchMessageAdapter](../api/StockSharp.ITCH.ItchMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
 
 ```cs
-Connector Connector \= new Connector();				
+Connector Connector = new Connector();				
 ...				
-var messageAdapter \= new ItchMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new ItchMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login \= "\<Your Login\>",
-    Password \= "\<Your Password\>".To\<SecureString\>(),
+    Login = "<Your Login>",
+    Password = "<Your Password>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

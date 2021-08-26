@@ -16,15 +16,15 @@ Identifiers generation algorithm overriding
    {
    	public override string GenerateId(string secCode, ExchangeBoard board)
    	{
-   		\/\/ will be generate in CODE\-\-BOARD form
-   		return secCode + "\-\-" + board.Code;
+   		// will be generate in CODE--BOARD form
+   		return secCode + "--" + board.Code;
    	}
    }
    ```
 2. Then, the created generator must be passed to the connector: 
 
    ```cs
-   var \_connector.SecurityIdGenerator \= new CustomSecurityIdGenerator();
+   var _connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
    ```
 
 ## Recommended content

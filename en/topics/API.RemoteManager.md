@@ -6,9 +6,9 @@ To use the module, it must be added as a WPF element to the screen form.
 
 ```none
 ...
-xmlns:xamlRemote\= "clr\-namespace:StockSharp.RemoteManager;assembly\=StockSharp.RemoteManager"	  				
+xmlns:xamlRemote= "clr-namespace:StockSharp.RemoteManager;assembly=StockSharp.RemoteManager"	  				
 ...
-\<xamlRemote:RemoteManagerControl x:Name\="RemoteManagerControl"\/\>
+<xamlRemote:RemoteManagerControl x:Name="RemoteManagerControl"/>
 ...
 	  				
 ```
@@ -28,14 +28,14 @@ To initialize the server module, the **InitRemoteManagerServer** method must be 
 
 ```cs
 	...
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-	DictionaryStrategies \= new ObservableDictionary\<Guid, Strategy\>
+	//---------------------------------------------------------------------
+	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
 	{
 		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
 		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
 		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
 	};
-	\/\/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+	//---------------------------------------------------------------------
 	...	
 	RemoteManagerControl.InitRemoteManagerServer(DictionaryStrategies, RealtimeLayoutGroup.Strategies, LogManager);
 		

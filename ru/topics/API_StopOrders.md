@@ -7,22 +7,22 @@
 В дальнейшем, если требуется работа с заявкой (например, отменить ее или изменить), то необходимо использовать именно этот объект [Order](../api/StockSharp.BusinessEntities.Order.html). Для регистрации заявок на бирже предусмотрен метод [RegisterOrder](../api/StockSharp.Algo.Connector.RegisterOrder.html) который отправляет заявку на сервер.
 
 ```cs
-Connector Connector \= new Connector();		
+Connector Connector = new Connector();		
 ...   
-private void StopOrder\_Click(object sender, RoutedEventArgs e)
+private void StopOrder_Click(object sender, RoutedEventArgs e)
 {
-	var order \= new Order
+	var order = new Order
 	{
-		Security \= SecurityEditor.SelectedSecurity,
-		Portfolio \= PortfolioEditor.SelectedPortfolio,
-		Price \= decimal.Parse(TextBoxPrice.Text),
-		Volume \= decimal.Parse(TextBoxVolumePrice.Text),
-		Direction \= Sides.Buy,
-        Type \= OrderTypes.Conditional,
-        Condition \= new QuikOrderCondition()
+		Security = SecurityEditor.SelectedSecurity,
+		Portfolio = PortfolioEditor.SelectedPortfolio,
+		Price = decimal.Parse(TextBoxPrice.Text),
+		Volume = decimal.Parse(TextBoxVolumePrice.Text),
+		Direction = Sides.Buy,
+        Type = OrderTypes.Conditional,
+        Condition = new QuikOrderCondition()
         {
-            Type \= QuikOrderConditionTypes.StopLimit,
-            StopLimitPrice \= decimal.Parse(TextBoxStopLimitPrice.Text),
+            Type = QuikOrderConditionTypes.StopLimit,
+            StopLimitPrice = decimal.Parse(TextBoxStopLimitPrice.Text),
         }
 	};
 	Connector.RegisterOrder(order);

@@ -10,26 +10,26 @@ Delta hedging
 2. The [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) strategy does not start, but instead it is passed as a child, for the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) strategy. 
 
    ```cs
-   \/\/ create delta hedge strategy
-   var hedge \= new DeltaHedgeStrategy
+   // create delta hedge strategy
+   var hedge = new DeltaHedgeStrategy
    {
-   	Security \= option.GetUnderlyingAsset(Connector),
-   	Portfolio \= Portfolio.SelectedPortfolio,
-   	Connector \= Connector,
+   	Security = option.GetUnderlyingAsset(Connector),
+   	Portfolio = Portfolio.SelectedPortfolio,
+   	Connector = Connector,
    };
-   \/\/ create option quoting for 20 contracts
-   var quoting \= new VolatilityQuotingStrategy(Sides.Buy, 20,
-   		new Range\<decimal\>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
+   // create option quoting for 20 contracts
+   var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
+   		new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    {
-           \/\/ working size is 1 contract
-   	Volume \= 1,
-   	Security \= option,
-   	Portfolio \= Portfolio.SelectedPortfolio,
-   	Connector \= Connector,
+           // working size is 1 contract
+   	Volume = 1,
+   	Security = option,
+   	Portfolio = Portfolio.SelectedPortfolio,
+   	Connector = Connector,
    };
-   \/\/ link quoting and hending
+   // link quoting and hending
    hedge.ChildStrategies.Add(quoting);
-   \/\/ start henging
+   // start henging
    hedge.Start();
    ```
 

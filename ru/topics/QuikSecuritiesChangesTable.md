@@ -19,9 +19,9 @@
 Для того чтобы получать данные из этой таблицы необходимо добавить ее в экспорт:
 
 ```cs
-private QuikTrader \_trader;
+private QuikTrader _trader;
 ...
-\_trader.UseSecuritiesChange \= true;
+_trader.UseSecuritiesChange = true;
 		
 ```
 

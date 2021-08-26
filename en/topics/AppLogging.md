@@ -16,46 +16,46 @@ SampleLogging sample
 2. Create the [LogManager](../api/StockSharp.Logging.LogManager.html) and declare a variable of the user class.
 
    ```cs
-   private readonly LogManager \_logManager \= new LogManager();
-   private readonly TestSource \_testSource;
+   private readonly LogManager _logManager = new LogManager();
+   private readonly TestSource _testSource;
    				
    ```
 3. Add log sources.
 
    ```cs
-   \_logManager.Sources.Add(\_testSource \= new TestSource());
-   \_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+   _logManager.Sources.Add(_testSource = new TestSource());
+   _logManager.Sources.Add(new StockSharp.Logging.TraceSource());
    				
    ```
 4. Add log listeners.
 
    ```cs
-   \/\/ log messages will be displayed in GUI component
-   \_logManager.Listeners.Add(new GuiLogListener(Monitor));
-   \/\/ also writing in files
-   \_logManager.Listeners.Add(new FileLogListener
+   // log messages will be displayed in GUI component
+   _logManager.Listeners.Add(new GuiLogListener(Monitor));
+   // also writing in files
+   _logManager.Listeners.Add(new FileLogListener
    {
-   	FileName \= "logs",
+   	FileName = "logs",
    });
    				
    ```
 5. Add messages of the custom class logging. The level of logging is chosen randomly.
 
    ```cs
-   var level \= RandomGen.GetEnum\<LogLevels\>();
+   var level = RandomGen.GetEnum<LogLevels>();
    switch (level)
    {
    	case LogLevels.Inherit:
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		\_testSource.AddInfoLog("{0} (source)\!\!\!".Put(level));
+   		_testSource.AddInfoLog("{0} (source)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		\_testSource.AddWarningLog("Warning (source)\!\!\!");
+   		_testSource.AddWarningLog("Warning (source)!!!");
    		break;
    	case LogLevels.Error:
-   		\_testSource.AddErrorLog("Error (source)\!\!\!");
+   		_testSource.AddErrorLog("Error (source)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();
@@ -64,20 +64,20 @@ SampleLogging sample
 6. Add tracing messages.
 
    ```cs
-   var level \= RandomGen.GetEnum\<LogLevels\>();
+   var level = RandomGen.GetEnum<LogLevels>();
    switch (level)
    {
    	case LogLevels.Inherit:
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		Trace.TraceInformation("{0} (trace)\!\!\!".Put(level));
+   		Trace.TraceInformation("{0} (trace)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		Trace.TraceWarning("Warning (trace)\!\!\!");
+   		Trace.TraceWarning("Warning (trace)!!!");
    		break;
    	case LogLevels.Error:
-   		Trace.TraceError("Error (trace)\!\!\!");
+   		Trace.TraceError("Error (trace)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

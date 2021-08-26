@@ -5,17 +5,17 @@
 ```cs
 			SendOutMessage(new ExecutionMessage
 			{
-				ExecutionType \= ExecutionTypes.OrderLog, \/\/ \<\- устанавливаем признак того, что сообщение содержил ОЛ
-				ServerTime \= order.TradeTime,
-				SecurityId \= order.Symbol.ToStockSharp(section),
-				Side \= order.Side.ToSide(),
-				OrderPrice \= (decimal)order.Price,
-				OrderType \= order.Type.ToOrderType(out var postOnly, out \_),
-				OrderState \= order.Status.ToOrderState(),
-				OrderVolume \= order.Quantity,
-				Balance \= (decimal?)(order.Quantity \- order.AccumFilled),
-				TimeInForce \= order.Tif.ToTimeInForce(out var postOnly2),
-				AveragePrice \= (decimal?)order.AveragePrice,
+				ExecutionType = ExecutionTypes.OrderLog, // <- устанавливаем признак того, что сообщение содержил ОЛ
+				ServerTime = order.TradeTime,
+				SecurityId = order.Symbol.ToStockSharp(section),
+				Side = order.Side.ToSide(),
+				OrderPrice = (decimal)order.Price,
+				OrderType = order.Type.ToOrderType(out var postOnly, out _),
+				OrderState = order.Status.ToOrderState(),
+				OrderVolume = order.Quantity,
+				Balance = (decimal?)(order.Quantity - order.AccumFilled),
+				TimeInForce = order.Tif.ToTimeInForce(out var postOnly2),
+				AveragePrice = (decimal?)order.AveragePrice,
 			});
 ```
 
@@ -24,9 +24,9 @@
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
 {
-	\/\/ ...
+	// ...
 	
-	\/\/\/ \<inheritdoc \/\>
-	public IOrderLogMarketDepthBuilder CreateOrderLogMarketDepthBuilder(SecurityId securityId) \=\> new MyOwnOrderLogMarketDepthBuilder();
+	/// <inheritdoc />
+	public IOrderLogMarketDepthBuilder CreateOrderLogMarketDepthBuilder(SecurityId securityId) => new MyOwnOrderLogMarketDepthBuilder();
 }
 ```

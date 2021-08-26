@@ -5,16 +5,16 @@ To create a new order, you should create an [Order](../api/StockSharp.BusinessEn
 The example below shows the creation of an order and its registration on the exchange:
 
 ```cs
-	var order \= new Order
+	var order = new Order
     {
-        Type \= OrderTypes.Limit,
-        Portfolio \= Portfolio.SelectedPortfolio,
-        Volume \= Volume.Text.To\<decimal\>(),
-        Price \= Price.Text.To\<decimal\>(),
-        Security \= Security,
-        Direction \= Sides.Buy,
+        Type = OrderTypes.Limit,
+        Portfolio = Portfolio.SelectedPortfolio,
+        Volume = Volume.Text.To<decimal>(),
+        Price = Price.Text.To<decimal>(),
+        Security = Security,
+        Direction = Sides.Buy,
     };
-    \_connector.RegisterOrder(order);
+    _connector.RegisterOrder(order);
     
 ```
 

@@ -6,22 +6,22 @@
 
 ```cs
 ...
-private readonly Connector \_connector \= new Connector();
-private const string \_connectorFile \= "ConnectorFile";
+private readonly Connector _connector = new Connector();
+private const string _connectorFile = "ConnectorFile";
 ...
 public void Load()
 {
-	if (File.Exists(\_connectorFile))
+	if (File.Exists(_connectorFile))
 	{
-		\/\/Загрузка настроек коннектора из существующего конфигурационного файла
-		\_connector.Load(new XmlSerializer\<SettingsStorage\>().Deserialize(\_connectorFile));
+		//Загрузка настроек коннектора из существующего конфигурационного файла
+		_connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_connectorFile));
 	}
 }
 ...
 public void Save()
 {
-	\/\/Сохранение настроек коннектора в конфигурационный файл
-	new XmlSerializer\<SettingsStorage\>().Serialize(\_connector.Save(), \_connectorFile);
+	//Сохранение настроек коннектора в конфигурационный файл
+	new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 }
 ...
 		

@@ -10,23 +10,23 @@
 private class TestSource : BaseLogReceiver
 {
 }
-private readonly LogManager \_logManager \= new LogManager();
-private readonly TestSource \_testSource \= new TestSource();
+private readonly LogManager _logManager = new LogManager();
+private readonly TestSource _testSource = new TestSource();
 public MainWindow()
 {
 	InitializeComponent();
-	\/\/ immediate flush
-	\_logManager.FlushInterval \= TimeSpan.FromMilliseconds(1);
-	\/\/ set test log source
-	\_logManager.Sources.Add(\_testSource);
-	\/\/ set .NET Trace system based source
-	\_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
-	\/\/ write logs into MainWindow
-	\_logManager.Listeners.Add(new GuiLogListener(MonitorW));
-	\/\/ and file logs.txt
-	\_logManager.Listeners.Add(new FileLogListener
+	// immediate flush
+	_logManager.FlushInterval = TimeSpan.FromMilliseconds(1);
+	// set test log source
+	_logManager.Sources.Add(_testSource);
+	// set .NET Trace system based source
+	_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+	// write logs into MainWindow
+	_logManager.Listeners.Add(new GuiLogListener(MonitorW));
+	// and file logs.txt
+	_logManager.Listeners.Add(new FileLogListener
 	{
-		FileName \= "logs",
+		FileName = "logs",
 	});
 }
 	  				

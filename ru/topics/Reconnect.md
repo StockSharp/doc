@@ -63,12 +63,12 @@
 1. При создании шлюза необходимо проинициализировать настройки механизма переподключений через свойство [Connector.ReConnectionSettings](../api/StockSharp.Algo.Connector.ReConnectionSettings.html): 
 
    ```cs
-   \/\/ инициализируем механизм переподключения (будет автоматически соединяться
-   \/\/ каждые 10 секунд, если шлюз потеряется связь с сервером)
-   Connector.ReConnectionSettings.Interval \= TimeSpan.FromSeconds(10);
-   \/\/ переподключение будет работать только во время работы биржи РТС
-   \/\/ (чтобы отключить переподключение когда торгов нет штатно, например, ночью)
-   Connector.ReConnectionSettings.WorkingTime \= Exchange.Rts.WorkingTime;
+   // инициализируем механизм переподключения (будет автоматически соединяться
+   // каждые 10 секунд, если шлюз потеряется связь с сервером)
+   Connector.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
+   // переподключение будет работать только во время работы биржи РТС
+   // (чтобы отключить переподключение когда торгов нет штатно, например, ночью)
+   Connector.ReConnectionSettings.WorkingTime = Exchange.Rts.WorkingTime;
    ```
 2. Чтобы проверить, как работает механизм контроля соединения, можно выключить подключение к Интернету: 
 
@@ -79,9 +79,9 @@
 4. Так как в [Connector](../api/StockSharp.Algo.Connector.html) может использоваться несколько подключений, то по умолчанию события связанные с переподключением такие как [Connector.Restored](../api/StockSharp.Algo.Connector.Restored.html) не вызываются, а адаптеры подключений самостоятельно пытаются переподключиться. Для того чтобы событие начало вызываться необходимо у адаптера выставить свойство [BasketMessageAdapter.SuppressReconnectingErrors](../api/StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors.html) в **false**. 
 
    ```cs
-   Connector.Adapter.SuppressReconnectingErrors \= false;
-   Connector.ConnectionError +\= error \=\> this.Sync(() \=\> MessageBox.Show(this, "Соединение потеряно"));
-   Connector.Restored +\= () \=\> this.Sync(() \=\> MessageBox.Show(this, "Соединение восстановлено"));
+   Connector.Adapter.SuppressReconnectingErrors = false;
+   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Соединение потеряно"));
+   Connector.Restored += () => this.Sync(() => MessageBox.Show(this, "Соединение восстановлено"));
    ```
 
    ![sampleconnectionerror](../images/sample_connection_error.png)![sampleconnectionrestore](../images/sample_connection_restored.png)

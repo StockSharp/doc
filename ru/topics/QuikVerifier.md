@@ -26,9 +26,9 @@
 ```cs
 this.OkResult.SetVisibility(false);
 this.SettingErrors.Clear();
-\/\/ ...
+// ...
 this.SettingErrors.AddRange(trader.Terminal.GetTableSettings());
-if (this.SettingErrors.Count \=\= 0)
+if (this.SettingErrors.Count == 0)
 	this.OkResult.SetVisibility(true);
 ```
 

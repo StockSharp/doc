@@ -11,13 +11,13 @@ Orders for sale will be registered using the **Ctrl + Right Mouse Button** combi
 The resulting order can be intercepted through the event of a new order creation.
 
 ```cs
-ChartPanel.CreateOrder +\= (chartArea,order) \=\>
+ChartPanel.CreateOrder += (chartArea,order) =>
 {
-	order.Portfolio \= \_portfolio;
-	order.Security \= \_security;
-	order.Volume \= 1;
+	order.Portfolio = _portfolio;
+	order.Security = _security;
+	order.Volume = 1;
 	
-	\_connector.RegisterOrder(order);
+	_connector.RegisterOrder(order);
 };
 ```
 

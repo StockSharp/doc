@@ -9,25 +9,25 @@ Extended settings of [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.
 Even if the strategy is tested on the candles, it is necessary to subscribe to the tick trades:
 
 ```cs
-		\_connector.SubscribeTrades(security);
+		_connector.SubscribeTrades(security);
 		
 ```
 
 If the strategy needs the order books, it is necessary to subscribe to the order books:
 
 ```cs
-		\_connector.SubscribeMarketDepth(security);
+		_connector.SubscribeMarketDepth(security);
 		
 ```
 
 If there are no order books, then to check the working ability of strategies that need order books, it is possible to enable the generation:
 
 ```cs
-var mdGenerator \= new TrendMarketDepthGenerator(connector.GetSecurityId(security));
-\_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
+var mdGenerator = new TrendMarketDepthGenerator(connector.GetSecurityId(security));
+_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe \= true,
-    Generator \= mdGenerator
+    IsSubscribe = true,
+    Generator = mdGenerator
 });
 		
 ```
@@ -35,33 +35,33 @@ var mdGenerator \= new TrendMarketDepthGenerator(connector.GetSecurityId(securit
 - The order book update interval [MarketDataGenerator.Interval](../api/StockSharp.Algo.Testing.MarketDataGenerator.Interval.html). The update can not be more often than tick trades come (because the order books are generated before each trade):
 
   ```cs
-  mdGenerator.Interval \= TimeSpan.FromSeconds(1);
+  mdGenerator.Interval = TimeSpan.FromSeconds(1);
   				
   ```
 - The order books depth [MarketDepthGenerator.MaxBidsDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth.html) and [MarketDepthGenerator.MaxAsksDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth.html). The more \- the slower testing:
 
   ```cs
-  mdGenerator.MaxAsksDepth \= 1; 
-  mdGenerator.MaxBidsDepth \= 1;
+  mdGenerator.MaxAsksDepth = 1; 
+  mdGenerator.MaxBidsDepth = 1;
   				
   ```
 - Volumes of [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) and [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) are taken from the volume of the trade on which there is generation. The [MarketDepthGenerator.UseTradeVolume](../api/StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume.html) option sets realistic volume level in the order book:
 
   ```cs
-  mdGenerator.UseTradeVolume \= true;
+  mdGenerator.UseTradeVolume = true;
   				
   ```
 - The volume level [MarketDataGenerator.MinVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MinVolume.html) and [MarketDataGenerator.MaxVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume.html):
 
   ```cs
-  mdGenerator.MinVolume \= 1;
-  mdGenerator.MaxVolume \= 1;
+  mdGenerator.MinVolume = 1;
+  mdGenerator.MaxVolume = 1;
   				
   ```
 - The minimum generated spread is equal to [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html). It should not generate spread between [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) and [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) more than 5 [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html) (so do not get too wide spread while the generation from candles is performed):
 
   ```cs
-  mdGenerator.MinSpreadStepCount \= 1;
-  mdGenerator.MaxSpreadStepCount \= 5;
+  mdGenerator.MinSpreadStepCount = 1;
+  mdGenerator.MaxSpreadStepCount = 5;
   				
   ```
