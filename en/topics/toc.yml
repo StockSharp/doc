@@ -1,0 +1,1814 @@
+- name: About StockSharp
+  href: StockSharpTitle.md
+- name: StockSharp Licensing
+  href: License.md
+- name: Source codes
+  href: SourceCode.md
+- name: Reference materials
+  href: Materials.md
+- name: S#.Installer
+  href: SharpInstaller.md
+  items:
+  - name: Videos
+    items:
+    - name: Setup
+      href: InstallerSetup.md
+    - name: Install and remove apps
+      href: InstallerSetupPrograms.md
+    - name: Update apps
+      href: InstallerUpdateProgramsVideo.md
+  - name: Setup
+    href: Installer_Installation.md
+  - name: Install  and remove apps
+    href: Installer_installing_removing_programs.md
+  - name: Update apps
+    href: Installer_software_update.md
+- name: S#.API
+  href: StockSharpAbout.md
+  items:
+  - name: Architecture S#.API
+    href: StockSharpArchitecture.md
+  - name: Installation instruction
+    href: StockSharpInstall.md
+  - name: Releases history
+    href: WhatsNew.md
+  - name: Connectors
+    href: API_Connectors.md
+    items:
+    - name: Graphical configuration
+      href: API_ConnectorsUIConfiguration.md
+    - name: Connectors (Stock, Futures and Options)
+      items:
+      - name: AlphaVantage
+        href: AlphaVantage.md
+        items:
+        - name: Configuration AlphaVantage
+          href: AlphaVantageConnectorsSettings.md
+        - name: Graphical configuration AlphaVantage
+          href: API_GUI_Settings_AlphaVantage.md
+        - name: Adapter initialization AlphaVantage
+          href: AlphaVantageSample.md
+      - name: BarChart
+        href: BarChart.md
+        items:
+        - name: Configuration BarChart
+          href: BarChartConnectorsSettings.md
+        - name: Graphical configuration BarChart
+          href: API_GUI_Settings_Barchart.md
+        - name: Adapter initialization BarChart
+          href: BarChartSample.md
+      - name: Blackwood (Fusion)
+        href: Blackwood.md
+        items:
+        - name: Configuration Blackwood (Fusion)
+          href: BlackwoodConnectorsSettings.md
+        - name: Graphical configuration Blackwood (Fusion)
+          href: API_GUI_Settings_Fusion (Blackwood).md
+        - name: Adapter initialization Blackwood (Fusion)
+          href: BlackwoodSample.md
+      - name: CQG
+        href: CQG.md
+        items:
+        - name: Configuration CQG
+          href: CQGConnectorsSettings.md
+        - name: Graphical configuration CQG COM
+          href: API_GUI_Settings_CQG COM.md
+        - name: Graphical configuration CQG Continuum
+          href: API_GUI_Settings_CQG Continuum.md
+        - name: Adapter initialization CQG
+          href: CQGSample.md
+      - name: E*TRADE
+        href: ETrade.md
+        items:
+        - name: Configuration E*TRADE
+          href: ETradeConnectorsSettings.md
+        - name: Graphical configuration E*TRADE
+          href: API_GUI_Settings_E_TRADE.md
+        - name: Adapter initialization E*TRADE
+          href: ETradeSample.md
+      - name: Google
+        href: Google.md
+        items:
+        - name: Graphical configuration Google
+          href: API_GUI_Settings_Google.md
+        - name: Adapter initialization Google
+          href: GoogleSample.md
+      - name: IEX
+        href: IEX.md
+        items:
+        - name: Configuration IEX
+          href: IEXConnectorsSettings.md
+        - name: Graphical configuration IEX
+          href: API_GUI_Settings_IEX.md
+        - name: Adapter initialization IEX
+          href: IEXSample.md
+      - name: Interactive Brokers
+        href: IB.md
+        items:
+        - name: Configuration Interactive Brokers
+          href: IBSettings.md
+        - name: Graphical configuration Interactive Brokers
+          href: API_GUI_Settings_Interactive Brokers.md
+        - name: Adapter initialization Interactive Brokers
+          href: IBSample.md
+      - name: IQFeed
+        href: IQFeed.md
+        items:
+        - name: Configuration IQFeed
+          href: IQFeedConnectorsSettings.md
+        - name: Connection IQFeed
+          href: IQFeedConnect.md
+        - name: Graphical configuration IQFeed
+          href: API_GUI_Settings_IQFeed.md
+        - name: Adapter initialization IQFeed
+          href: IQFeedSample.md
+      - name: ITCH
+        href: ITCH.md
+        items:
+        - name: Configuration ITCH
+          href: ITCHConnectorsSettings.md
+        - name: Graphical configuration ITCH
+          href: API_GUI_Settings_ITCH.md
+        - name: Adapter initialization ITCH
+          href: ITCHSample.md
+      - name: OpenECry
+        href: OEC.md
+        items:
+        - name: Configuration OpenECry
+          href: OpenECryConnectorsSettings.md
+        - name: Graphical configuration OpenECry
+          href: API_GUI_Settings_OpenECry_GainFutures.md
+        - name: Adapter initialization OpenECry
+          href: OECSampleWork.md
+        - name: Several algorithms connection
+          href: OECRemoting.md
+        - name: Simultaneous terminal and algorithm operation
+          href: OECSettings.md
+      - name: Quandl
+        href: Quandl.md
+        items:
+        - name: Configuration Quandl
+          href: QuandlConnectorsSettings.md
+        - name: Graphical configuration Quandl
+          href: API_GUI_Settings_Quandl.md
+        - name: Adapter initialization Quandl
+          href: QuandlSample.md
+      - name: QuantFEED
+        href: QuantFeed.md
+        items:
+        - name: Configuration QuantFEED
+          href: QuantFEEDConnectorsSettings.md
+        - name: Graphical configuration QuantFEED
+          href: API_GUI_Settings_QuantFEED.md
+        - name: Adapter initialization QuantFEED
+          href: QuantFeedSample.md
+      - name: Rithmic
+        href: Rithmic.md
+        items:
+        - name: Configuration Rithmic
+          href: RithmicConnectorsSettings.md
+        - name: Graphical configuration Rithmic
+          href: API_GUI_Settings_Rithmic.md
+        - name: Adapter initialization Rithmic
+          href: RithmicSample.md
+      - name: Sterling
+        href: Sterling.md
+        items:
+        - name: Configuration Sterling
+          href: SterlingConnectorsSettings.md
+        - name: Graphical configuration Sterling
+          href: API_GUI_Settings_Sterling.md
+        - name: Adapter initialization Sterling
+          href: SterlingSample.md
+      - name: Tradier
+        href: Tradier.md
+        items:
+        - name: Configuration Tradier
+          href: TradierConnectorsSettings.md
+        - name: Graphical configuration Tradier
+          href: API_GUI_Settings_Tradier.md
+        - name: Adapter initialization Tradier
+          href: TradierSample.md
+      - name: Xignite
+        href: Xignite.md
+        items:
+        - name: Configuration Xignite
+          href: XigniteConnectorsSettings.md
+        - name: Graphical configuration Xignite
+          href: API_GUI_Settings_Xignite.md
+        - name: Adapter initialization Xignite
+          href: XigniteCopySample.md
+      - name: Yahoo
+        href: Yahoo.md
+        items:
+        - name: Graphical configuration Yahoo
+          href: API_GUI_Settings_Yahoo.md
+        - name: Adapter initialization Yahoo
+          href: YahooSample.md
+    - name: Connectors (Forex)
+      items:
+      - name: DukasCopy
+        href: DukasCopy.md
+        items:
+        - name: Graphical configuration DukasCopy
+          href: API_GUI_Settings_Dukascopy.md
+        - name: Adapter initialization DukasCopy
+          href: DukasCopySample.md
+      - name: FinViz
+        href: FinViz.md
+        items:
+        - name: Graphical configuration DukasCopy
+          href: API_GUI_Settings_FinViz.md
+        - name: Adapter initialization DukasCopy
+          href: FinVizSample.md
+      - name: FXCM
+        href: Fxcm.md
+        items:
+        - name: Configuration FXCM
+          href: FXCMConnectorsSettings.md
+        - name: Graphical configuration FXCM
+          href: API_GUI_Settings_FXCM.md
+        - name: Adapter initialization FXCM
+          href: FxcmSample.md
+      - name: GAIN Capital
+        href: GAIN Capital.md
+        items:
+        - name: Graphical configuration GAIN Capital
+          href: API_GUI_Settings_GAIN Capital.md
+        - name: Adapter initialization GAIN Capital
+          href: GAINCapitalSample.md
+      - name: LMAX
+        href: LMAX.md
+        items:
+        - name: Configuration LMAX
+          href: LMAXConnectorsSettings.md
+        - name: Graphical configuration LMAX
+          href: API_GUI_Settings_LMAX.md
+        - name: Adapter initialization LMAX
+          href: LMaxSample.md
+      - name: MB Trading
+        href: MB Trading.md
+        items:
+        - name: Configuration MB Trading
+          href: MBTradingConnectorsSettings.md
+        - name: Graphical configuration MB Trading
+          href: API_GUI_Settings_MB Trading.md
+        - name: Adapter initialization MB Trading
+          href: MBTradingSample.md
+      - name: Oanda
+        href: Oanda.md
+        items:
+        - name: Configuration Oanda
+          href: OandaConnectorsSettings.md
+        - name: Graphical configuration Oanda
+          href: API_GUI_Settings_OANDA.md
+        - name: Adapter initialization Oanda
+          href: OandaSample.md
+      - name: TrueFX
+        href: TrueFX.md
+        items:
+        - name: Configuration TrueFX
+          href: TrueFXConnectorsSettings.md
+        - name: Graphical configuration TrueFX
+          href: API_GUI_Settings_TrueFX.md
+        - name: Adapter initialization TrueFX
+          href: TrueFXSample.md
+    - name: Connectors (Cryptocurrencies)
+      items:
+      - name: Bibox
+        href: Bibox.md
+        items:
+        - name: Configuration Bibox
+          href: BiboxConnectorsSettings.md
+        - name: Graphical configuration Bibox
+          href: API_GUI_Settings_Bibox.md
+        - name: Adapter initialization Bibox
+          href: BiboxSample.md
+      - name: Binance
+        href: Binance.md
+        items:
+        - name: Configuration Binance
+          href: BinanceConnectorsSettings.md
+        - name: Graphical configuration Binance
+          href: API_GUI_Settings_Binance.md
+        - name: Adapter initialization Binance
+          href: BinanceSample.md
+      - name: Bitalong
+        href: Bitalong.md
+        items:
+        - name: Configuration Bitalong
+          href: BitalongConnectorsSettings.md
+        - name: Graphical configuration Bitalong
+          href: API_GUI_Settings_Bitalong.md
+        - name: Adapter initialization Bitalong
+          href: BitalongSample.md
+      - name: Bitbank
+        href: Bitbank.md
+        items:
+        - name: Configuration Bitbank
+          href: BitbankConnectorsSettings.md
+        - name: Graphical configuration Bitbank
+          href: API_GUI_Settings_Bitbank.md
+        - name: Adapter initialization Bitbank
+          href: BitbankSample.md
+      - name: Bitexbook
+        href: Bitexbook.md
+        items:
+        - name: Configuration Bitexbook
+          href: BitexbookConnectorsSettings.md
+        - name: Graphical configuration Bitexbook
+          href: API_GUI_Settings_Bitexbook.md
+        - name: Adapter initialization Bitexbook
+          href: BitexbookSample.md
+      - name: Bitfinex
+        href: Bitfinex.md
+        items:
+        - name: Configuration Bitfinex
+          href: BitfinexConnectorsSettings.md
+        - name: Graphical configuration Bitfinex
+          href: API_GUI_Settings_Bitfinex.md
+        - name: Adapter initialization Bitfinex
+          href: BitfinexSample.md
+      - name: Bithumb
+        href: Bithumb.md
+        items:
+        - name: Configuration Bithumb
+          href: BithumbConnectorsSettings.md
+        - name: Graphical configuration Bithumb
+          href: API_GUI_Settings_Bithumb.md
+        - name: Adapter initialization Bithumb
+          href: BithumbSample.md
+      - name: BitMax
+        href: BitMax.md
+        items:
+        - name: Configuration Bithumb
+          href: BitMaxConnectorsSettings.md
+        - name: Graphical configuration Bithumb
+          href: API_GUI_Settings_BitMax.md
+        - name: Adapter initialization Bithumb
+          href: BitMaxSample.md
+      - name: BitMEX
+        href: Bitmex.md
+        items:
+        - name: Configuration BitMEX
+          href: BitMEXConnectorsSettings.md
+        - name: Graphical configuration BitMEX
+          href: API_GUI_Settings_BitMEX.md
+        - name: Adapter initialization BitMEX
+          href: BitMEXSample.md
+      - name: BitStamp
+        href: BitStamp.md
+        items:
+        - name: Configuration BitStamp
+          href: BitStampConnectorsSettings.md
+        - name: Graphical configuration BitStamp
+          href: API_GUI_Settings_Bitstamp.md
+        - name: Adapter initialization BitStamp
+          href: BitStampSample.md
+      - name: Bittrex
+        href: Bittrex.md
+        items:
+        - name: Configuration Bittrex
+          href: BittrexConnectorsSettings.md
+        - name: Graphical configuration Bittrex
+          href: API_GUI_Settings_Bittrex.md
+        - name: Adapter initialization Bittrex
+          href: BittrexSample.md
+      - name: BitZ
+        href: BitZ.md
+        items:
+        - name: Configuration BitZ
+          href: BitZConnectorsSettings.md
+        - name: Graphical configuration BitZ
+          href: API_GUI_Settings_Bit-Z.md
+        - name: Adapter initialization BitZ
+          href: BitZSample.md
+      - name: BW
+        href: BW.md
+        items:
+        - name: Configuration BW
+          href: BWConnectorsSettings.md
+        - name: Graphical configuration BW
+          href: API_GUI_Settings_BW.md
+        - name: Adapter initialization BW
+          href: BWSample.md
+      - name: CEX.IO
+        href: Cex.md
+        items:
+        - name: Configuration CEX.IO
+          href: CexConnectorsSettings.md
+        - name: Graphical configuration CEX.IO
+          href: API_GUI_Settings_CEX.IO.md
+        - name: Adapter initialization CEX.IO
+          href: CEXSample.md
+      - name: Coinbase
+        href: Coinbase.md
+        items:
+        - name: Configuration Coinbase
+          href: CoinbaseConnectorsSettings.md
+        - name: Graphical configuration Coinbase
+          href: API_GUI_Settings_Coinbase.md
+        - name: Adapter initialization Coinbase
+          href: CoinbaseSample.md
+      - name: CoinBene
+        href: CoinBene.md
+        items:
+        - name: Configuration CoinBene
+          href: CoinBeneConnectorsSettings.md
+        - name: Graphical configuration CoinBene
+          href: API_GUI_Settings_CoinBene.md
+        - name: Adapter initialization CoinBene
+          href: CoinBeneSample.md
+      - name: CoinCap
+        href: CoinCap.md
+        items:
+        - name: Configuration CoinCap
+          href: CoinCapConnectorsSettings.md
+        - name: Graphical configuration CoinCap
+          href: API_GUI_Settings_CoinCap.md
+        - name: Adapter initialization CoinCap
+          href: CoinCapSample.md
+      - name: Coincheck
+        href: Coincheck.md
+        items:
+        - name: Configuration Coincheck
+          href: CoincheckConnectorsSettings.md
+        - name: Graphical configuration Coincheck
+          href: API_GUI_Settings_Coincheck.md
+        - name: Adapter initialization Coincheck
+          href: CoincheckSample.md
+      - name: CoinEx
+        href: CoinEx.md
+        items:
+        - name: Configuration CoinEx
+          href: CoinExConnectorsSettings.md
+        - name: Graphical configuration CoinEx
+          href: API_GUI_Settings_CoinEx.md
+        - name: Adapter initialization CoinEx
+          href: CoinExSample.md
+      - name: CoinExchange
+        href: CoinExchange.md
+        items:
+        - name: Configuration CoinExchange
+          href: CoinExchangeConnectorsSettings.md
+        - name: Graphical configuration CoinExchange
+          href: API_GUI_Settings_CoinExchange.md
+        - name: Adapter initialization CoinExchange
+          href: CoinExchangeSample.md
+      - name: Coinigy
+        href: Coinigy.md
+        items:
+        - name: Configuration Coinigy
+          href: CoinigyConnectorsSettings.md
+        - name: Graphical configuration Coinigy
+          href: API_GUI_Settings_Coinigy.md
+        - name: Adapter initialization Coinigy
+          href: CoinigySample.md
+      - name: CoinHub
+        href: CoinHub.md
+        items:
+        - name: Configuration CoinHub
+          href: CoinHubConnectorsSettings.md
+        - name: Graphical configuration CoinHub
+          href: API_GUI_Settings_CoinHub.md
+        - name: Adapter initialization CoinHub
+          href: CoinHubSample.md
+      - name: Cryptopia
+        href: Cryptopia.md
+        items:
+        - name: Configuration Cryptopia
+          href: CryptopiaConnectorsSettings.md
+        - name: Graphical configuration Cryptopia
+          href: API_GUI_Settings_Cryptopia.md
+        - name: Adapter initialization Cryptopia
+          href: CryptopiaSample.md
+      - name: Deribit
+        href: Deribit.md
+        items:
+        - name: Configuration Deribit
+          href: DeribitConnectorsSettings.md
+        - name: Graphical configuration Deribit
+          href: API_GUI_Settings_Deribit.md
+        - name: Adapter initialization Deribit
+          href: DeribitSample.md
+      - name: Digifinex
+        href: Digifinex.md
+        items:
+        - name: Configuration Digifinex
+          href: DigifinexConnectorsSettings.md
+        - name: Graphical configuration Digifinex
+          href: API_GUI_Settings_DigiFinex.md
+        - name: Adapter initialization Digifinex
+          href: DigifinexSample.md
+      - name: DigitexFutures
+        href: DigitexFutures.md
+        items:
+        - name: Configuration DigitexFutures
+          href: DigitexFuturesConnectorsSettings.md
+        - name: Graphical configuration DigitexFutures
+          href: API_GUI_Settings_DigitexFutures.md
+        - name: Adapter initialization DigitexFutures
+          href: DigitexFuturesSample.md
+      - name: EXMO
+        href: Exmo.md
+        items:
+        - name: Configuration EXMO
+          href: EXMOConnectorsSettings.md
+        - name: Graphical configuration EXMO
+          href: API_GUI_Settings_EXMO.md
+        - name: Adapter initialization EXMO
+          href: EXMOSample.md
+      - name: FatBTC
+        href: FatBTC.md
+        items:
+        - name: Configuration FatBTC
+          href: FatBTCConnectorsSettings.md
+        - name: Graphical configuration FatBTC
+          href: API_GUI_Settings_FatBTC.md
+        - name: Adapter initialization FatBTC
+          href: FatBTCSample.md
+      - name: GDAX
+        href: GDAX.md
+        items:
+        - name: Configuration GDAX
+          href: GDAXConnectorsSettings.md
+        - name: Graphical configuration GDAX
+          href: API_GUI_Settings_GDAX.md
+        - name: Adapter initialization GDAX
+          href: GDAXSample.md
+      - name: Gopax
+        href: Gopax.md
+        items:
+        - name: Configuration Gopax
+          href: GopaxConnectorsSettings.md
+        - name: Graphical configuration Gopax
+          href: API_GUI_Settings_Gopax.md
+        - name: Adapter initialization Gopax
+          href: GopaxSample.md
+      - name: HitBTC
+        href: HitBTC.md
+        items:
+        - name: Configuration HitBTC
+          href: HitBTCConnectorsSettings.md
+        - name: Graphical configuration HitBTC
+          href: API_GUI_Settings_HitBTC.md
+        - name: Adapter initialization HitBTC
+          href: HitBTCSample.md
+      - name: Hotbit
+        href: Hotbit.md
+        items:
+        - name: Configuration Hotbit
+          href: HotbitConnectorsSettings.md
+        - name: Graphical configuration Hotbit
+          href: API_GUI_Settings_Hotbit.md
+        - name: Adapter initialization Hotbit
+          href: HotbitSample.md
+      - name: Huobi
+        href: Huobi.md
+        items:
+        - name: Configuration Huobi
+          href: HuobiConnectorsSettings.md
+        - name: Graphical configuration Huobi
+          href: API_GUI_Settings_Huobi.md
+        - name: Adapter initialization Huobi
+          href: HuobiSample.md
+      - name: Idax
+        href: Idax.md
+        items:
+        - name: Configuration Idax
+          href: IdaxConnectorsSettings.md
+        - name: Graphical configuration Idax
+          href: API_GUI_Settings_IDAX.md
+        - name: Adapter initialization Idax
+          href: IdaxSample.md
+      - name: Kraken
+        href: Kraken.md
+        items:
+        - name: Configuration Kraken
+          href: KrakenConnectorsSettings.md
+        - name: Graphical configuration Kraken
+          href: API_GUI_Settings_Kraken.md
+        - name: Adapter initialization Kraken
+          href: KrakenSample.md
+      - name: Kucoin
+        href: Kucoin.md
+        items:
+        - name: Configuration Kucoin
+          href: KucoinConnectorsSettings.md
+        - name: Graphical configuration Kucoin
+          href: API_GUI_Settings_Kucoin.md
+        - name: Adapter initialization Kucoin
+          href: KucoinSample.md
+      - name: Latoken
+        href: Latoken.md
+        items:
+        - name: Configuration Latoken
+          href: LatokenConnectorsSettings.md
+        - name: Graphical configuration Latoken
+          href: API_GUI_Settings_Latoken.md
+        - name: Adapter initialization Latoken
+          href: LatokenSample.md
+      - name: LBank
+        href: LBank.md
+        items:
+        - name: Configuration LBank
+          href: LBankConnectorsSettings.md
+        - name: Graphical configuration LBank
+          href: API_GUI_Settings_LBank.md
+        - name: Adapter initialization LBank
+          href: LBankSample.md
+      - name: Liqui
+        href: Liqui.md
+        items:
+        - name: Configuration Liqui
+          href: LiquiConnectorsSettings.md
+        - name: Graphical configuration Liqui
+          href: API_GUI_Settings_Liqui.md
+        - name: Adapter initialization Liqui
+          href: LiquiSample.md
+      - name: Livecoin
+        href: LiveCoin.md
+        items:
+        - name: Configuration Livecoin
+          href: LivecoinConnectorsSettings.md
+        - name: Graphical configuration Livecoin
+          href: API_GUI_Settings_Livecoin.md
+        - name: Adapter initialization Livecoin
+          href: LivecoinSample.md
+      - name: OKCoin
+        href: OKCoin.md
+        items:
+        - name: Configuration OKCoin
+          href: OKCoinConnectorsSettings.md
+        - name: Graphical configuration OKCoin
+          href: API_GUI_Settings_OKCoin.md
+        - name: Adapter initialization OKCoin
+          href: OKCoinSample.md
+      - name: OKEx
+        href: Okex.md
+        items:
+        - name: Configuration OKEx
+          href: OKExConnectorsSettings.md
+        - name: Graphical configuration OKEx
+          href: API_GUI_Settings_OKEx.md
+        - name: Adapter initialization OKEx
+          href: OKexSample.md
+      - name: Poloniex
+        href: Poloniex.md
+        items:
+        - name: Configuration Poloniex
+          href: PoloniexConnectorsSettings.md
+        - name: Graphical configuration Poloniex
+          href: API_GUI_Settings_Poloniex.md
+        - name: Adapter initialization Poloniex
+          href: PoloniexSample.md
+      - name: PrizmBit
+        href: PrizmBit.md
+        items:
+        - name: Configuration PrizmBit
+          href: PrizmBitConnectorsSettings.md
+        - name: Graphical configuration PrizmBit
+          href: API_GUI_Settings_PrizmBit.md
+        - name: Adapter initialization PrizmBit
+          href: PrizmBitSample.md
+      - name: Quoinex
+        href: Quoinex.md
+        items:
+        - name: Configuration Quoinex
+          href: QuoinexConnectorsSettings.md
+        - name: Graphical configuration Quoinex
+          href: API_GUI_Settings_QUOINEX.md
+        - name: Adapter initialization Quoinex
+          href: QuoinexSample.md
+      - name: TradeOrge
+        href: TradeOrge.md
+        items:
+        - name: Configuration TradeOrge
+          href: TradeOrgeConnectorsSettings.md
+        - name: Graphical configuration TradeOrge
+          href: API_GUI_Settings_TradeOgre.md
+        - name: Adapter initialization TradeOrge
+          href: TradeOrgeSample.md
+      - name: Upbit
+        href: Upbit.md
+        items:
+        - name: Configuration Upbit
+          href: UpbitConnectorsSettings.md
+        - name: Graphical configuration Upbit
+          href: API_GUI_Settings_Upbit.md
+        - name: Adapter initialization Upbit
+          href: UpbitSample.md
+      - name: WEX (BTC-e)
+        href: Btce.md
+        items:
+        - name: Configuration WEX (BTC-e)
+          href: BtceConnectorsSettings.md
+        - name: Graphical configuration WEX (BTC-e)
+          href: API_GUI_Settings_WEX (BTC-e).md
+        - name: Adapter initialization WEX (BTC-e)
+          href: BtceSample.md
+      - name: Yobit
+        href: Yobit.md
+        items:
+        - name: Configuration Yobit
+          href: YobitConnectorsSettings.md
+        - name: Graphical configuration Yobit
+          href: API_GUI_Settings_Yobit.md
+        - name: Adapter initialization Yobit
+          href: YobitSample.md
+      - name: Zaif
+        href: Zaif.md
+        items:
+        - name: Configuration Zaif
+          href: ZaifConnectorsSettings.md
+        - name: Graphical configuration Zaif
+          href: API_GUI_Settings_Zaif.md
+        - name: Adapter initialization Zaif
+          href: ZaifSample.md
+      - name: ZB
+        href: ZB.md
+        items:
+        - name: Configuration ZB
+          href: ZBConnectorsSettings.md
+        - name: Graphical configuration ZB
+          href: API_GUI_Settings_ZB.COM.md
+        - name: Adapter initialization ZB
+          href: ZBSample.md
+      - name: Withdraw
+        href: API_Connectors_Crypto_Withdraw.md
+    - name: Connectors (common)
+      items:
+      - name: CSV
+        href: Csv.md
+        items:
+        - name: Graphical configuration CSV
+          href: API_GUI_Settings_CSV.md
+        - name: Adapter initialization CSV
+          href: CsvSample.md
+      - name: FIX protocol
+        href: Fix.md
+        items:
+        - name: Configuration FIX
+          href: FIXConnectorsSettings.md
+        - name: Graphical configuration FIX
+          href: API_GUI_Settings_FIX.md
+        - name: Adapter initialization FIX
+          href: FixSample.md
+      - name: FAST protocol
+        href: Fast.md
+        items:
+        - name: Graphical configuration FAST
+          href: API_GUI_Settings_FAST.md
+        - name: Adapter initialization FAST
+          href: FastSample.md
+        - name: S#.UDP Dumper
+          href: UdpDumper.md
+        - name: Dump mode
+          href: FastDump.md
+      - name: FIX Server
+        href: FixServer.md
+      - name: RSS
+        href: RSS.md
+        items:
+        - name: Graphical configuration RSS
+          href: API_GUI_Settings_RSS.md
+        - name: Adapter initialization RSS
+          href: RssSample.md
+    - name: Subscriptions
+      href: API_ConnectorsSubscriptions.md
+    - name: Getting historical data
+      href: API_Getting_historical_data.md
+    - name: Getting news data
+      href: API_Getting_news_data.md
+    - name: Creating own connector
+      href: ConnectorCreating.md
+    - name: Save and load settings
+      href: API_Connectors_SaveConnectorSettings.md
+    - name: Reconnection settings
+      href: Reconnect.md
+  - name: Orders management
+    href: Orders.md
+    items:
+    - name: Create new order
+      href: CreateNewOrder.md
+    - name: Create new stop order
+      href: API_StopOrders.md
+    - name: Getting orders information
+      href: OrdersEvents.md
+    - name: Orders states
+      href: OrderStates.md
+    - name: Order cancel
+      href: OrdersCancel.md
+    - name: Orders mass cancel
+      href: OrdersCancelGroup.md
+    - name: Orders replacement
+      href: OrdersReRegister.md
+    - name: Transaction number
+      href: OrdersTransactionId.md
+  - name: Instruments
+    href: Security.md
+    items:
+    - name: Instrument identifier
+      href: SecurityId.md
+    - name: Identifier *@ALL
+      href: ALLBoard.md
+    - name: Continuous futures
+      href: SecurityContinuous.md
+    - name: Index
+      href: SecurityIndex.md
+    - name: Instrument search
+      href: SecurityLookup.md
+  - name: Market-data storage
+    href: Storages.md
+    items:
+    - name: API
+      href: StoragesApi.md
+    - name: Messages storage
+      href: MessageStorage.md
+  - name: Candles
+    href: Candles.md
+    items:
+    - name: Chart
+      href: CandlesUI.md
+    - name: Patterns
+      href: CandlesPatterns.md
+    - name: Custom type of candle
+      href: CandlesCandleFactory.md
+    - name: Gluing candles, history + real-time
+      href: CandlesGluing.md
+    - name: Candle creation by the instruments basket
+      href: CandlesIndex.md
+  - name: Indicators
+    href: Indicators.md
+    items:
+    - name: Indicator adding to the chart
+      href: IndicatorsChart.md
+    - name: List of indicators
+      href: IndicatorsAll.md
+      items:
+      - name: '%R'
+        href: IndicatorWilliamsR.md
+      - name: A/C
+        href: IndicatorAcceleration.md
+      - name: ADX
+        href: IndicatorAverageDirectionalIndex.md
+      - name: Alligator
+        href: IndicatorAlligator.md
+      - name: AO
+        href: IndicatorAwesomeOscillator.md
+      - name: ATR
+        href: IndicatorAverageTrueRange.md
+      - name: Bollinger Bands
+        href: IndicatorBollingerBands.md
+      - name: CCI
+        href: IndicatorCommodityChannelIndex.md
+      - name: CHV
+        href: IndicatorChaikinVolatility.md
+      - name: CMO
+        href: IndicatorChandeMomentumOscillator.md
+      - name: DEMA
+        href: IndicatorDoubleExponentialMovingAverage.md
+      - name: DMI
+        href: IndicatorDirectionalIndex.md
+      - name: DPO
+        href: IndicatorDetrendedPriceOscillator.md
+      - name: EMA
+        href: IndicatorExponentialMovingAverage.md
+      - name: Envelope
+        href: IndicatorEnvelope.md
+      - name: Fractals
+        href: IndicatorFractals.md
+      - name: Gator Oscillator
+        href: IndicatorGatorOscillator.md
+      - name: 'Highest '
+        href: IndicatorHighest.md
+      - name: HMA
+        href: IndicatorHullMovingAverage.md
+      - name: Ichimoku
+        href: IndicatorIchimoku.md
+      - name: JMA
+        href: IndicatorJurikMovingAverage.md
+      - name: KAMA
+        href: IndicatorKaufmannAdaptiveMovingAverage.md
+      - name: Linear Regression R-Squared
+        href: IndicatorRSquared.md
+      - name: Linear Regression Slope
+        href: IndicatorLinearRegSlope.md
+      - name: 'Lowest '
+        href: IndicatorLowest.md
+      - name: LRC
+        href: IndicatorLinearReg.md
+      - name: MACD
+        href: IndicatorMovingAverageConvergenceDivergence.md
+      - name: MACD histogram
+        href: IndicatorMovingAverageConvergenceDivergenceHistogram.md
+      - name: MACD with signal line
+        href: IndicatorMovingAverageConvergenceDivergenceSignal.md
+      - name: Market Facilitation Index
+        href: IndicatorMarketFacilitationIndex.md
+      - name: Mean Deviation
+        href: IndicatorMeanDeviation.md
+      - name: Median Price
+        href: IndicatorMedianPrice.md
+      - name: Momentum
+        href: IndicatorMomentum.md
+      - name: Money Flow Index
+        href: IndicatorMoneyFlowIndex.md
+      - name: NRTR
+        href: IndicatorNickRypockTrailingReverse.md
+      - name: Optimal Tracking
+        href: IndicatorOptimalTrackingFilter.md
+      - name: Parabolic SAR
+        href: IndicatorParabolicSar.md
+      - name: Peak
+        href: IndicatorPeak.md
+      - name: PeakBar
+        href: IndicatorPeakBar.md
+      - name: QStick
+        href: IndicatorQStick.md
+      - name: RAVI
+        href: IndicatorRangeActionVerificationIndex.md
+      - name: RoC
+        href: IndicatorRateOfChange.md
+      - name: RSI
+        href: IndicatorRelativeStrengthIndex.md
+      - name: RVI
+        href: IndicatorRelativeVigorIndex.md
+      - name: SMA
+        href: IndicatorSimpleMovingAverage.md
+      - name: Smoothed MA
+        href: IndicatorSmoothedMovingAverage.md
+      - name: Standard Deviation
+        href: IndicatorStandardDeviation.md
+      - name: Standard Error
+        href: IndicatorStandardError.md
+      - name: Stochastic Oscillator
+        href: IndicatorStochasticOscillator.md
+      - name: Stochastic Oscillator K%
+        href: IndicatorStochasticK.md
+      - name: Sum N
+        href: IndicatorSum.md
+      - name: TEMA
+        href: IndicatorTripleExponentialMovingAverage.md
+      - name: TRIX
+        href: IndicatorTrix.md
+      - name: Trough
+        href: IndicatorTrough.md
+      - name: TroughBar
+        href: IndicatorTroughBar.md
+      - name: True Range
+        href: IndicatorTrueRange.md
+      - name: UO
+        href: IndicatorUltimateOscillator.md
+      - name: VHF
+        href: IndicatorVerticalHorizontalFilter.md
+      - name: VIDYA
+        href: IndicatorVidya.md
+      - name: Volume
+        href: IndicatorVolumeIndicator.md
+      - name: Volume Profile
+        href: IndicatorVolumeProfileIndicator.md
+      - name: Volume Weighted MA
+        href: IndicatorVolumeWeightedMovingAverage.md
+      - name: Weighted MA
+        href: IndicatorWeightedMovingAverage.md
+      - name: Wilder MA
+        href: IndicatorWilderMovingAverage.md
+      - name: ZigZag
+        href: IndicatorZigZag.md
+      - name: ZigZag (Metastock)
+        href: IndicatorZigZagEquis.md
+    - name: Custom indicator
+      href: IndicatorsCustom.md
+    - name: Graphic renderer of indicators
+      href: IndicatorPainter.md
+  - name: Logging
+    href: Logging.md
+    items:
+    - name: Strategy logging
+      href: LoggingStrategy.md
+    - name: IConnector logging
+      href: LoggingITrader.md
+    - name: Other logs sources
+      href: AppLogging.md
+    - name: Visual monitoring
+      href: LoggingMonitorWindow.md
+    - name: Custom ILogListener
+      href: LoggingCustomListener.md
+  - name: Strategies
+    href: Strategy.md
+    items:
+    - name: Creating strategies
+      href: StrategyAction.md
+    - name: Iteration model
+      href: StrategyCreate.md
+    - name: Child strategies
+      href: StrategyChilds.md
+    - name: Quoting
+      href: StrategyQuoting.md
+    - name: Take-profit and stop-loss
+      href: StrategyProtective.md
+    - name: Reports
+      href: StrategyReports.md
+    - name: Settings saving and loading
+      href: StrategyStorage.md
+    - name: Orders and trades loading
+      href: StrategyOrdersLoad.md
+  - name: Event model
+    href: EventModel.md
+    items:
+    - name: Rule
+      href: MarketRule.md
+    - name: Rules using
+      href: MarketRuleUse.md
+    - name: Rules suspension
+      href: MarketRuleSyncAndSuspend.md
+    - name: Mutually exclusive rules
+      href: MarketRuleExclusive.md
+  - name: Trading algorithms
+    href: StockSharpTradingAlgo.md
+    items:
+    - name: Slippage
+      href: Slippage.md
+    - name: Profit-loss
+      href: PnL.md
+    - name: Position
+      href: Position.md
+    - name: Latency
+      href: Latency.md
+    - name: Commission
+      href: Commissions.md
+    - name: Base algorithms
+      href: BasicAlgo.md
+    - name: 'Order book: algorithms'
+      href: SparseDepth.md
+    - name: Equity curve
+      href: Equity.md
+  - name: Options
+    href: Options.md
+    items:
+    - name: Greeks
+      href: OptionsGreeks.md
+    - name: Volatility trading
+      href: OptionsQuoting.md
+    - name: Delta hedging
+      href: OptionsHedge.md
+    - name: Synthetics
+      href: OptionsSynthetic.md
+    - name: Graphic components
+      href: OptionsGUI.md
+  - name: Backtesting/Emulation
+    href: StrategyTesting.md
+    items:
+    - name: Historical data
+      href: StrategyTestingHistory.md
+      items:
+      - name: Google Finance
+        href: StrategyTestingFinam.md
+    - name: Optimization
+      href: StrategyTestingOptimization.md
+    - name: Random data
+      href: StrategyTestingEmulation.md
+    - name: Simulator
+      href: StrategyTestingRealTime.md
+    - name: Extended settings
+      href: TestingSettings.md
+  - name: Graphical user interface
+    href: UIMarshalling.md
+    items:
+    - name: Charts
+      href: GUICharting.md
+      items:
+      - name: Candle chart
+        href: Gui_Chart.md
+      - name: Candle chart panel
+        href: Gui_ChartPanel.md
+      - name: Equity curve chart
+        href: Gui_EquityCurveChart.md
+      - name: Box chart
+        href: Gui_BoxChart.md
+      - name: Cluster chart
+        href: Gui_ClasterChart.md
+      - name: Registering of orders from the chart
+        href: API_GUI_Trading_From_Chart.md
+      - name: Annotations
+        href: ChartAnnotations.md
+    - name: Logging
+      href: GuiLogging.md
+      items:
+      - name: Log panel
+        href: GUILogControl.md
+      - name: Extended log panel
+        href: GUIMonitor.md
+    - name: Portfolios
+      href: GuiPortfolios.md
+      items:
+      - name: Drop down list
+        href: GuiPortfolioComboBox.md
+      - name: Picker
+        href: GuiPortfolioEditor.md
+      - name: Portfolio picker window
+        href: GuiPortfolioPickerWindow.md
+      - name: Table
+        href: GuiPortfolioGrid.md
+    - name: Instruments
+      href: GUISecurities.md
+      items:
+      - name: Window
+        href: GuiCreateSecurityWindow.md
+      - name: Table
+        href: GuiSecurityGrid.md
+      - name: Picker
+        href: GuiSecurityPicker.md
+      - name: Continuous futures
+        href: GuiContinuousSecurityWindow.md
+      - name: Index
+        href: GuiIndexSecurityWindow.md
+    - name: Market-data
+      href: GuiMarketData.md
+      items:
+      - name: Ticks
+        href: GuiTradeGrid.md
+      - name: Level1
+        href: GuiLevel1Grid.md
+      - name: Order book
+        href: GuiMarketDepthControl.md
+      - name: Order log
+        href: GuiOrderLogGrid.md
+      - name: News
+        href: GuiNewsGrid.md
+    - name: Trading
+      href: GuiTrading.md
+      items:
+      - name: Orders
+        href: GuiOrderGrid.md
+      - name: Own trades
+        href: GuiMyTradeGrid.md
+      - name: New order creation
+        href: GuiOrderWindow.md
+      - name: New stop order creation
+        href: GuiOrderConditionalWindow.md
+      - name: Table of available market data
+        href: API_GUI_MarketDataGrid.md
+      - name: Buy/Sell panel
+        href: API_GUI_BuySellPanel.md
+    - name: Strategies
+      href: GuiStrategies.md
+      items:
+      - name: Statistics
+        href: GuiStrategiesStatisticsPanel.md
+    - name: Options
+      href: GUIOptions.md
+      items:
+      - name: Option desk
+        href: OptionDesk.md
+      - name: Position chart
+        href: OptionPositionChart.md
+    - name: Object properties editing table
+      href: GuiPropertyGridEx.md
+    - name: Connection settings window
+      href: API_UI_ConnectorWindow.md
+    - name: Risk settings window
+      href: API_GUI_RiskWindow.md
+    - name: Commission settings window
+      href: API_GUI_CommissionWindow.md
+    - name: Notification settings window
+      href: API_GUI_AlertsWindow.md
+    - name: Themes of S# graphic components
+      href: API_GUI_Thems.md
+  - name: Messages
+    href: Messages.md
+    items:
+    - name: Description
+      href: Messages_description.md
+    - name: Adapters
+      href: Messages_adapters.md
+      items:
+      - name: Order books (incremental and regular)
+        href: Messages_adapters_books.md
+      - name: Historical data
+        href: Messages_adapters_history.md
+      - name: Order log
+        href: Messages_adapters_orderlog.md
+      - name: Adapters chain
+        href: Messages_adapters_chain.md
+      - name: Threading model
+        href: Messages_adapters_threading.md
+    - name: Storage
+      href: Messages_storage.md
+    - name: Networking
+      href: Messages_networking.md
+  - name: Exchange time
+    href: MarketTimeOffset.md
+  - name: Arithmetic operations
+    href: Unit.md
+  - name: Currency converter
+    href: Currency.md
+  - name: Examples
+    href: StockSharpSamples.md
+- name: S#.Designer
+  href: Designer.md
+  items:
+  - name: Installing S#.Designer
+    href: Designer_Installation.md
+  - name: Update to the new version
+    href: Designer_Update_to_new_version.md
+  - name: Quick start
+    href: Designer_Quick_start.md
+  - name: User interface
+    items:
+    - name: Quick access panel
+      href: Designer_Quick_access_toolbar.md
+    - name: Ribbon
+      href: Designer_Tape.md
+    - name: Workspace
+      href: Designer_Workspace.md
+    - name: Schemas
+      href: Designer_Panel_Schemas.md
+    - name: Logs
+      href: Designer_Panel_Logs.md
+    - name: Portfolios
+      href: Designer_Panel_Portfolios.md
+    - name: Boards
+      href: Designer_Boards.md
+    - name: Risk management
+      href: Designer_Risk_Rule.md
+    - name: Commissions
+      href: Designer_Commission_Rule.md
+    - name: Components
+      href: Designer_Components.md
+      items:
+      - name: Chart
+        href: Designer_Chart.md
+      - name: Orders
+        href: Designer_Orders.md
+      - name: Conditional orders
+        href: Designer_Orders_conditional.md
+      - name: Trades
+        href: Designer_Trades.md
+      - name: Order book
+        href: Designer_Depth_Panel2.md
+      - name: Positions
+        href: Designer_Chart_Position.md
+      - name: Statistics
+        href: Designer_Statistics.md
+      - name: P&L equity
+        href: Designer_Panel_Market_depth.md
+      - name: Backtesting settings
+        href: Designer_Properties_emulation.md
+      - name: Live settings
+        href: Designer_Properties_Live.md
+      - name: Tick trades
+        href: Designer_Tape_Trades.md
+  - name: Strategies
+    href: Designer_Creation_strategy.md
+    items:
+    - name: Using visual designer
+      href: Designer_Creating_strategy_out_of_blocks.md
+      items:
+      - name: Diagram panel
+        href: Designer_Designer_schemes_strategies_and_component_elements.md
+      - name: Elements
+        href: Designer_Description_of_elements.md
+        items:
+        - name: Common
+          items:
+          - name: Chart
+            href: Designer_Panel_graphics.md
+          - name: Working time
+            href: Designer_Working_time.md
+          - name: Comparison
+            href: Designer_Comparison.md
+          - name: Indicator
+            href: Designer_Indicator.md
+          - name: Logical condition
+            href: Designer_Logical_condition.md
+          - name: Formula
+            href: Designer_Universal_formula.md
+          - name: Trades by order
+            href: Designer_Deals_on_request.md
+          - name: Trades by strategy
+            href: Designer_Trades_strategy.md
+          - name: Combination
+            href: Designer_Association.md
+          - name: Position
+            href: Designer_Position.md
+          - name: Prev value
+            href: Designer_Previous_value.md
+          - name: Protect position
+            href: Designer_Protect_positions.md
+          - name: Source code
+            href: Designer_Source_code.md
+          - name: DLL import
+            href: Designer_DLL_Strategy.md
+          - name: Is trade allowed
+            href: Designer_TradeAllowedDiagramElement.md
+          - name: P&L strategy
+            href: Designer_StrategyPnLDiagramElement.md
+        - name: Data sources
+          items:
+          - name: Candles
+            href: Designer_Candles.md
+          - name: Level 1
+            href: Designer_Level_1.md
+          - name: Index
+            href: Designer_Index.md
+          - name: Variable
+            href: Designer_Variable.md
+        - name: Trading
+          items:
+          - name: Register order
+            href: Designer_Position_opening.md
+          - name: Cancel order
+            href: Designer_Cancellations.md
+          - name: Modify order
+            href: Designer_Orders_Moving.md
+          - name: Mass cancel orders
+            href: Designer_Mass_Cancellations.md
+        - name: Converters
+          items:
+          - name: Indexer
+            href: Designer_Indexer.md
+          - name: Converter
+            href: Designer_Converter.md
+        - name: Notifying
+          items:
+          - name: Notification
+            href: Designer_Notice.md
+        - name: Market depths
+          items:
+          - name: Order book
+            href: Designer_Depth.md
+          - name: Grouped order book
+            href: Designer_Depth_Grouped.md
+          - name: Order book panel
+            href: Designer_Depth_panel.md
+          - name: Sparse order book
+            href: Designer_Depth_Spread.md
+          - name: Truncated order book
+            href: Designer_MarketDepthTruncateDiagramElement.md
+        - name: Options
+          items:
+          - name: IV book
+            href: Designer_Depth_implied_volatility.md
+          - name: Option desk
+            href: Designer_Options_Board.md
+          - name: Chart positions
+            href: Designer_Graph_options_positions.md
+          - name: Black Scholes
+            href: Designer_Black_Scholes.md
+          - name: Hedging
+            href: Designer_Hedging.md
+          - name: Options quoting
+            href: Designer_Quoting.md
+          - name: Derivatives
+            href: Designer_Derivatives.md
+        - name: Composite elements
+          items:
+          - name: Crossing
+            href: Designer_Crossing.md
+          - name: Conditional operator
+            href: Designer_Conditional_operator.md
+      - name: Lines
+        href: Designer_Line.md
+      - name: Event model
+        href: Designer_Event_model.md
+      - name: First strategy
+        href: Designer_Algorithm_creation_of_elements.md
+      - name: Composite elements
+        href: Designer_Creating_composite_elements.md
+      - name: Schema samples
+        items:
+        - name: Display candles on chart
+          href: Designer_Conclusion_of_candles_on_chart.md
+        - name: Get best price for instrument
+          href: Designer_Get_best_quote_for_instrument.md
+        - name: Get current position
+          href: Designer_Determination_of_volume_position.md
+        - name: Get order book price level
+          href: Designer_Depth_Obtaining_Specified_level.md
+    - name: Using C#
+      href: Designer_Creating_strategy_from_code.md
+      items:
+      - name: Getting started
+        href: Designer_Creation_element_containing_source_code.md
+      - name: First C# strategy
+        href: Designer_Creating_strategy_from_source_code.md
+      - name: Put C# code into schema
+        href: Designer_Integration_Source_code_in_scheme.md
+      - name: External DLL
+        href: Designer_Add_Dll_Lib.md
+      - name: Combine C# code and visual designer
+        href: Designer_Combine_Source_code_and_standard_elements.md
+      - name: Create own indicator using C#
+        href: Designer_Creating_indicator_from_source_code.md
+      - name: Write code in Visual Studio
+        items:
+        - name: Create DLL in Visual Studio
+          href: Designer_Creating_DLL_element_in_Visual_Studio.md
+        - name: Debug DLL in Visual Studio
+          href: Designer_Debugging_DLL_using_Visual_Studio.md
+  - name: Indicators
+    href: Designer_Indicators.md
+  - name: Backtesting
+    items:
+    - name: User interface
+      href: Designer_Backtesting_Interface.md
+    - name: Debugging
+      href: Designer_Debug.md
+      items:
+      - name: Break points
+        href: Designer_Debug_Break_Points.md
+      - name: Step by step execution
+        href: Designer_Step.md
+    - name: Getting started
+      href: Designer_Example_of_backtesting.md
+    - name: Optimization
+      href: Designer_Optimization.md
+    - name: Portfolio optimization
+      href: Designer_Portfolio_Testing.md
+  - name: Market data storage
+    href: Designer_Repository_of_historical_data.md
+    items:
+    - name: Download instruments
+      href: Designer_Download_instruments.md
+    - name: Create instrument
+      href: Designer_Creation_tool.md
+    - name: Edit instrument
+      href: Designer_Edit_tool.md
+    - name: Index
+      href: Designer_create_index.md
+    - name: Continuous futures
+      href: Designer_GluingData.md
+    - name: Download market-data
+      href: Designer_Downloading_data.md
+    - name: Getting started
+      href: Designer_Creating_repository_of_historical_data.md
+    - name: Instrument extended info
+      href: Designer_Security_ExtensionInfo.md
+    - name: Symbol mapping
+      href: Designer_Security_mapping.md
+  - name: Live execution
+    href: Designer_Live_trade.md
+    items:
+    - name: Getting started
+      href: Designer_Add_strategy_Live_trade.md
+    - name: User interface
+      href: Designer_Live_trade_interface.md
+    - name: Strategies dashboard
+      href: Designer_Panel_strategies.md
+    - name: Live execution sample
+      href: Designer_Example_of_Live_trading.md
+    - name: Strategy warm-up
+      href: Designer_Warm_Up_mode.md
+    - name: Run strategy on server
+      href: Designer_run_strategy_on_server.md
+  - name: Connections settings
+    href: Designer_Connection_settings.md
+    items:
+    - name: Connectors settings
+      href: Connectors_setting.md
+    - name: Simulator
+      href: Designer_emulation_setting.md
+    - name: Account and connection mapping
+      href: Designer_connection_mapping.md
+    - name: Binding market data to connection
+      href: Designer_connector_security_mapping.md
+  - name: Strategy gallery
+    href: Designer_Gallery_of_strategies.md
+    items:
+    - name: Publish own strategy
+      href: Designer_Gallery_publish.md
+  - name: Team working
+    href: Designer_Teamwork.md
+    items:
+    - name: Chat
+      href: Designer_Chat.md
+    - name: Export
+      href: Designer_Export_strategies.md
+    - name: Export with encryption
+      href: Designer_Encryption.md
+    - name: Import
+      href: Designer_Import_strategies.md
+    - name: Share images for charts and tables
+      href: Designer_publish.md
+  - name: Options strategies
+    href: Designer_Options.md
+  - name: Misc settings
+    items:
+    - name: Notification settings
+      href: Designer_notification_Setting.md
+    - name: Launch settings
+      href: Designer_Start_mode.md
+    - name: Reset settings
+      href: Designer_Reset_language_settings.md
+    - name: Settings directory
+      href: Designer_Directory_and_edit_data_manually.md
+    - name: Feedback forms
+      href: Designer_contact_us.md
+- name: S#.Terminal
+  href: Terminal.md
+  items:
+  - name: Installing S#.Terminal
+    href: Terminal_Installation.md
+  - name: Update to the new version
+    href: Terminal_Update_to_new_version.md
+  - name: Quick start
+    href: Terminal_Quick_start.md
+  - name: User interface
+    items:
+    - name: Quick access panel
+      href: Terminal_Quick_access_toolbar.md
+    - name: Ribbon
+      href: Terminal_Tape.md
+    - name: Workspace
+      href: Terminal_Workspace.md
+    - name: Logs
+      href: Terminal_Panel_Logs.md
+    - name: Portfolios
+      href: Terminal_Panel_Portfolios.md
+    - name: Board editor
+      href: Terminal_Boards.md
+    - name: Risk management
+      href: Terminal_Risk_Rule.md
+    - name: Components
+      href: Terminal_Components.md
+      items:
+      - name: Instruments
+        href: Terminal_Securities.md
+      - name: Level 1
+        href: Terminal_level1.md
+      - name: Buy/Sell
+        href: Terminal_Buy_Sell.md
+      - name: Order book
+        href: Terminal_Depth_Panel2.md
+      - name: Chart
+        href: Terminal_Chart.md
+      - name: P&L chart
+        href: Terminal_chart_PU.md
+      - name: Trades
+        href: Terminal_Trades.md
+      - name: Orders
+        href: Terminal_Orders.md
+      - name: Conditional orders
+        href: Terminal_Orders_conditional.md
+      - name: Positions
+        href: Terminal_Chart_Position.md
+      - name: Trades feed
+        href: Terminal_Tape_Trades.md
+      - name: News
+        href: Terminal_news.md
+      - name: Positions (options)
+        href: Terminal_options_positions.md
+      - name: Option desk
+        href: Terminal_option_desk.md
+      - name: Smile volatility
+        href: Terminal_smile_of_volatility.md
+      - name: Order log
+        href: Terminal_orderlog.md
+  - name: Connection settings
+    href: Terminal_Connection_settings.md
+  - name: Market data storage
+    href: Terminal_Repository_of_market_data.md
+  - name: Indicators
+    href: Terminal_Indicators.md
+  - name: Team working
+    href: Terminal_Teamwork.md
+    items:
+    - name: Chat
+      href: Terminal_Chat.md
+    - name: Share images for charts and tables
+      href: Terminal_publish.md
+  - name: Notifications
+    href: Terminal_Notifications.md
+    items:
+    - name: Notification panel
+      href: Terminal_Notifications_Panel.md
+    - name: Notifications setup
+      href: Terminal_notification_Setting.md
+  - name: Settings
+    items:
+    - name: Launch settings
+      href: Terminal_Start_mode.md
+    - name: Reset settings
+      href: Terminal_Reset_language_settings.md
+    - name: Feedback forms
+      href: Terminal_contact_us.md
+- name: S#.Data
+  href: Hydra.md
+  items:
+  - name: Videos
+    items:
+    - name: First start
+      href: HydraFirstStartVideos.md
+    - name: Sources samples
+      href: HydraConnectingSetup.md
+      items:
+      - name: Oanda
+        href: HydraConnectingOanda.md
+      - name: Interactive Brokers
+        href: HydraConnectingIBTWS.md
+      - name: Bitmex
+        href: HydraConnectingBitmex.md
+      - name: Binance
+        href: HydraConnectingBinance.md
+    - name: Instruments downloading
+      href: HydraSecuritiesCongfigDowVideo.md
+    - name: Building candles
+      href: HydraBuildDifferentCandleType.md
+    - name: Building order books
+      href: HydraBuildMarkethDepthLogLevel.md
+    - name: Saving format
+      href: HydraDiffSaveFormat.md
+    - name: Indicators
+      href: HydraBuildIndicator.md
+    - name: Analytics
+      href: HydraAnalitich.md
+    - name: Import task
+      href: HydraImportVideos.md
+    - name: Export task
+      href: HydraExportAutoVideo.md
+    - name: Converter task
+      href: HydraConvectorVideo.md
+  - name: Installing S#.Data
+    href: HydraUsing.md
+  - name: Update to the new version
+    href: HydraUpdate.md
+  - name: First start
+    href: HydraFirstLaunch.md
+  - name: Data sources
+    href: HydraDataSource.md
+    items:
+    - name: Select source
+      href: HydraSourceSelection.md
+    - name: Common connection settings
+      href: HydraCommonConnectionSettings.md
+  - name: Prepare for download
+    items:
+    - name: Instruments list
+      href: HydraConfigurationSecuritiesDownload.md
+    - name: Custom candles
+      href: HydraCustomCandleType.md
+  - name: Working with data
+    href: HydraWorkingWithMarketData.md
+    items:
+    - name: View and export
+      href: HydraViewingMarketData.md
+      items:
+      - name: Ticks
+        href: HydraExportTrades.md
+      - name: Order books
+        href: HydraExportDepth.md
+      - name: Candles
+        href: HydraExportCandles.md
+      - name: Order log
+        href: HydraExportOrderLog.md
+      - name: 'Level 1 '
+        href: HydraExportSecurityChange.md
+      - name: News
+        href: HydraExportNews.md
+      - name: Transactions
+        href: HydraExportExecution.md
+      - name: Option desk
+        href: hydra_options.md
+      - name: Indicators
+        href: Hydra_export_indicator.md
+      - name: Positions
+        href: Hydra_export_position.md
+    - name: Candles generation
+      href: HydraCandles.md
+    - name: Export data
+      href: HydraExport.md
+      items:
+      - name: Export into MetaStock
+        href: Hydra_Export_TSLab_MetaStock.md
+    - name: Any market data types
+      href: HydraUsingDifferentTypesMarketData.md
+  - name: Indicators
+    href: Hydra_Indicators.md
+  - name: Importing
+    href: HydraImport.md
+    items:
+    - name: Candles
+      href: HydraImportCandles.md
+    - name: Instruments
+      href: HydraImportSecurities.md
+    - name: Ticks
+      href: HydraImportTrades.md
+    - name: Order books
+      href: HydraImportDepths.md
+    - name: Order log
+      href: HydraImportOrderlog.md
+    - name: Level 1
+      href: HydraImportLevel1.md
+    - name: News
+      href: HydraImportNews.md
+    - name: Transactions
+      href: HydraImportExecutions.md
+  - name: Server mode
+    items:
+    - name: Settings
+      href: HydraSettings.md
+    - name: Emulation setup
+      href: HydraEmulation.md
+    - name: Instruments mapping
+      href: HydraSymbolMappingVer5.md
+    - name: FIX/FAST connectivity
+      href: hydraAPIConnect.md
+  - name: Instruments and boards
+    items:
+    - name: Instruments list
+      href: HydraSettingsSecurity.md
+    - name: Create instrument
+      href: Hydra_Creation_tool.md
+    - name: Index
+      href: hydra_index.md
+    - name: Continuous futures
+      href: HydraGluingData.md
+    - name: Editing instruments
+      href: HydraSettingsSecurityEditor.md
+    - name: Extended instrument info
+      href: HydraExtensionInfo.md
+    - name: Matching instruments-connections
+      href: HydraSymbolMapping.md
+    - name: Boards
+      href: HydraBoards.md
+  - name: Create new souce
+    href: HydraPlugins.md
+  - name: Create new task
+    href: HydraCreatTask.md
+  - name: Tasks
+    href: HydraTasks.md
+    items:
+    - name: Converter
+      href: HydraTasksConverter.md
+    - name: Export (auto)
+      href: HydraTasksExport.md
+    - name: Import (auto)
+      href: HydraTasksImport.md
+    - name: Backup
+      href: HydraTasksBackup.md
+  - name: Analytics
+    href: HydraAnalytics.md
+    items:
+    - name: Working with scripts
+      href: HydraAnalyticsScripts.md
+    - name: Running and displaying results
+      href: HydraAnalyticsShow.md
+  - name: Misc
+    items:
+    - name: Settings reset
+      href: HydraResetSettings.md
+    - name: Delete data
+      href: HydraRemoveData.md
+    - name: Network settings
+      href: HydraNetworkSettings.md
+    - name: Database
+      href: StoragesDatabase.md
+    - name: Disaster recovery
+      href: HydraDisasterRecovery.md
+    - name: Synchronization
+      href: HydraSynchronizeData.md
+    - name: Backup
+      href: HydraBackup.md
+      items:
+      - name: Setup
+        href: HydraBackup_account.md
+      - name: S#.Data settings
+        href: HydraBackup_task.md
+      - name: Recovery
+        href: HydraBackup_recovery.md
+- name: S#.Shell
+  href: Shell.md
+  items:
+  - name: Installing S#.Shell
+    href: Shell_Installation.md
+  - name: Quick start
+    href: Shell_Quick_start.md
+  - name: User interface
+    items:
+    - name: Common
+      href: Shell_Common.md
+    - name: Real-time
+      href: Shell_RealTime.md
+    - name: Emulation
+      href: Shell_emulation.md
+    - name: RemoteManager
+      href: Shell_RemoteManager.md
+  - name: Connections settings
+    href: Shell_Connection_settings.md
+    items:
+    - name: Connector settings
+      href: Shell_Connectors_settings.md
+  - name: Create strategy
+    href: Shell_custom_strategy.md
+  - name: Create strategy panel
+    href: Shell_custom_strategy_panel.md
+  - name: Run strategies from S#.Designer
+    href: Shell_run_Designer_strategy.md
+- name: S#.MT4 and S#.MT5
+  href: MT.md
+- name: S#.MatLab
+  href: MatLab.md
+- name: S#.RemoteManager
+  href: API.RemoteManager.md

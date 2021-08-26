@@ -1,0 +1,75 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "*.csproj",
+            "src/**.dll"
+          ],
+          "cwd": ".",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "_site/**"
+          ]
+        }
+      ],
+      "dest": "obj/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml"
+        ],
+        "cwd": "obj"
+      },
+      {
+        "files": [
+          "api/*.md",
+          "topics/**.md",
+          "topics/**.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "favicon.ico"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "_appFooter": "<span>Copyright © StockSharp.</span>",
+      "_appFaviconPath": "favicon.ico"
+    },
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "../../docfx_test/_site/en",
+    "template": [
+      "default"
+    ]
+  }
+}

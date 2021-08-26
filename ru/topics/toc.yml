@@ -1,0 +1,1984 @@
+- name: О StockSharp
+  href: StockSharpTitle.md
+- name: Лицензирование StockSharp
+  href: License.md
+- name: Исходные коды
+  href: SourceCode.md
+- name: Справочные материалы
+  href: Materials.md
+- name: S#.Installer
+  href: SharpInstaller.md
+  items:
+  - name: Видео
+    items:
+    - name: Первый запуск
+      href: InstallerSetup.md
+    - name: Установка и удаление программ
+      href: InstallerSetupPrograms.md
+    - name: Обновление программ
+      href: InstallerUpdateProgramsVideo.md
+  - name: Первый запуск
+    href: Installer_Installation.md
+  - name: 'Установка и удаление программ '
+    href: Installer_installing_removing_programs.md
+  - name: Обновление программ
+    href: Installer_software_update.md
+- name: S#.API
+  href: StockSharpAbout.md
+  items:
+  - name: Архитектура S#.API
+    href: StockSharpArchitecture.md
+  - name: Установка S#.API
+    href: StockSharpInstall.md
+  - name: История изменений
+    href: WhatsNew.md
+  - name: Коннекторы
+    href: API_Connectors.md
+    items:
+    - name: Графическое конфигурирование
+      href: API_ConnectorsUIConfiguration.md
+    - name: Коннекторы (Россия)
+      items:
+      - name: QUIK
+        href: Quik.md
+        items:
+        - name: Настройка Quik Lua
+          href: QuikLua.md
+        - name: Графическое конфигурирование Quik LUA  Market data
+          href: API_GUI_Settings_Quik LUA  Market data.md
+        - name: Графическое конфигурирование Quik LUA Transactions
+          href: API_GUI_Settings_Quik LUA Transactions.md
+        - name: Инициализация адаптера Quik Lua
+          href: QuikLuaFirstStrategy.md
+        - name: Quik DDE (старое подключение)
+          href: QuikDDE.md
+          items:
+          - name: Настройка Quik
+            href: QuikSetup.md
+          - name: Verifier
+            href: QuikVerifier.md
+          - name: Создание первого робота
+            href: QuikFirstStrategy.md
+          - name: Портфели в Quik
+            href: QuikPortfolio.md
+          - name: Экспорт стакана
+            href: QuikQuotesByDde.md
+          - name: Экспорт дополнительных колонок
+            href: QuikExtendedInfoByDde.md
+          - name: Экспорт произвольных таблиц
+            href: QuikAnyTableByDde.md
+          - name: Экспорт микросекунд
+            href: QuikMksByDde.md
+          - name: Таблица Инструменты (изменения)
+            href: QuikSecuritiesChangesTable.md
+          - name: Управление окном Quik
+            href: QuikWindow.md
+          - name: Строка транзакции
+            href: QuikFormatTransaction.md
+          - name: Работа с несколькими Quik-ами
+            href: QuikFew.md
+          - name: РЕПО и РПС заявки
+            href: QuikRepoOrders.md
+          - name: Включение и выключение Quik
+            href: QuikProcess.md
+      - name: SmartCOM (ITI Capital)
+        href: Smart.md
+        items:
+        - name: Настройки коннектора SmartCOM
+          href: SmartCOMConnectorsSettings.md
+        - name: Графическое конфигурирование SmartCOM
+          href: API_GUI_Settings_SmartCOM (ITI Capital).md
+        - name: Инициализация адаптера SmartCOM
+          href: SmartFirstStrategy.md
+      - name: Plaza II (SPECTRA)
+        href: Plaza.md
+        items:
+        - name: Настройки коннектора Plaza II
+          href: PlazaConnectorsSettings.md
+        - name: Графическое конфигурирование Plaza II
+          href: API_GUI_Settings_Plaza 2.md
+        - name: Инициализация адаптера Plaza II
+          href: PlazaSample.md
+        - name: Метаданные
+          href: PlazaMetadata.md
+        - name: Стаканы агрегированных котировок
+          href: PlazaAggregatedOrders.md
+        - name: Произвольные таблицы
+          href: PlazaCustomTables.md
+        - name: Один логин - несколько роботов
+          href: PlazaSingleRouter.md
+        - name: Ордер Лог
+          href: PlazaOrdersLog.md
+        - name: Управление ревизиями
+          href: PlazaRevisionManager.md
+      - name: Micex (TEAP)
+        href: Micex.md
+        items:
+        - name: Настройки коннектора Micex (TEAP)
+          href: MicexConnectorsSettings.md
+        - name: Графическое конфигурирование Micex (TEAP)
+          href: API_GUI_Settings_MMWBTEAP.md
+        - name: Инициализация адаптера Micex (TEAP)
+          href: MicexSample.md
+      - name: MFD.ru
+        href: Mfd.md
+        items:
+        - name: Инициализация адаптера Mfd
+          href: MfdSample.md
+        - name: Графическое конфигурирование Mfd
+          href: API_GUI_Settings_MFD.md
+      - name: QUIK (FIX протокол)
+        href: QuikFix.md
+        items:
+        - name: Настройки коннектора Quik FIX
+          href: QuikFixConnectorsSettings.md
+      - name: SPB Exchange
+        href: SpbEx.md
+        items:
+        - name: Настройки коннектора SPB Exchange
+          href: SpbExConnectorsSettings.md
+        - name: Графическое конфигурирование SPB Exchange
+          href: API_GUI_Settings_SPB Exchange.md
+        - name: Инициализация адаптера SPB Exchange
+          href: SpbExSample.md
+      - name: Transaq
+        href: Transaq.md
+        items:
+        - name: Настройки коннектора Transaq
+          href: TransaqConnectorsSettings.md
+        - name: Графическое конфигурирование Transaq
+          href: API_GUI_Settings_Transaq.md
+        - name: Инициализация адаптера Transaq
+          href: TransaqSample.md
+      - name: TWIME
+        href: TWIME.md
+        items:
+        - name: Настройки коннектора Twime
+          href: TwimeConnectorsSettings.md
+        - name: Графическое конфигурирование Twime
+          href: API_GUI_Settings_TWIME.md
+        - name: Инициализация адаптера Twime
+          href: TwimeSample.md
+      - name: Финам
+        href: Finam.md
+        items:
+        - name: Графическое конфигурирование Finam
+          href: API_GUI_Settings_Finam.md
+        - name: Инициализация адаптера Finam
+          href: FinamSample.md
+      - name: UX (сайт)
+        href: UX.md
+        items:
+        - name: Графическое конфигурирование UX
+          href: API_GUI_Settings_UX .md
+        - name: Инициализация адаптера UX
+          href: UXSample.md
+      - name: Алор Трейд
+        href: AlorHistory.md
+        items:
+        - name: Графическое конфигурирование AlorHistory
+          href: API_GUI_Settings_AlorHistory.md
+        - name: Инициализация адаптера AlorHistory
+          href: AlorHistorySample.md
+      - name: Альфа-Директ
+        href: Alfa.md
+        items:
+        - name: Настройка терминала Альфа-Директ
+          href: AlfaConfiguration.md
+        - name: Графическое конфигурирование Альфа-Директ
+          href: API_GUI_Settings_AlfaDirect.md
+        - name: Инициализация адаптера Альфа-Директ
+          href: AlfaFirstStrategy.md
+      - name: ЛЧИ
+        href: LCI.md
+        items:
+        - name: Графическое конфигурирование ЛЧИ
+          href: API_GUI_Settings_LCI.md
+        - name: Инициализация адаптера ЛЧИ
+          href: LCISample.md
+      - name: ex РТС (FTP)
+        href: RTS.md
+        items:
+        - name: Настройки коннектора РТС
+          href: RTSConnectorsSettings.md
+        - name: Графическое конфигурирование РТС
+          href: API_GUI_Settings_RTS.md
+        - name: Инициализация адаптера РТС
+          href: RTSSample.md
+    - name: Коннекторы (Америка)
+      items:
+      - name: AlphaVantage
+        href: AlphaVantage.md
+        items:
+        - name: Настройки коннектора AlphaVantage
+          href: AlphaVantageConnectorsSettings.md
+        - name: Графическое конфигурирование AlphaVantage
+          href: API_GUI_Settings_AlphaVantage.md
+        - name: Инициализация адаптера AlphaVantage
+          href: AlphaVantageSample.md
+      - name: Bachart
+        href: BarChart.md
+        items:
+        - name: Настройки коннектора BarChart
+          href: BarChartConnectorsSettings.md
+        - name: Графическое конфигурирование BarChart
+          href: API_GUI_Settings_Barchart.md
+        - name: Инициализация адаптера BarChart
+          href: BarChartSample.md
+      - name: Blackwood (Fusion)
+        href: Blackwood.md
+        items:
+        - name: Настройки коннектора Blackwood (Fusion)
+          href: BlackwoodConnectorsSettings.md
+        - name: Графическое конфигурирование Blackwood (Fusion)
+          href: API_GUI_Settings_Fusion (Blackwood).md
+        - name: Инициализация адаптера Blackwood (Fusion)
+          href: BlackwoodSample.md
+      - name: CQG
+        href: CQG.md
+        items:
+        - name: Настройки коннектора CQG
+          href: CQGConnectorsSettings.md
+        - name: Графическое конфигурирование CQG COM
+          href: API_GUI_Settings_CQG COM.md
+        - name: Графическое конфигурирование CQG Continuum
+          href: API_GUI_Settings_CQG Continuum.md
+        - name: Инициализация адаптера CQG
+          href: CQGSample.md
+      - name: E*TRADE
+        href: ETrade.md
+        items:
+        - name: Настройки коннектора E*TRADE
+          href: ETradeConnectorsSettings.md
+        - name: Графическое конфигурирование E*TRADE
+          href: API_GUI_Settings_E_TRADE.md
+        - name: Инициализация адаптера E*TRADE
+          href: ETradeSample.md
+      - name: Google
+        href: Google.md
+        items:
+        - name: Графическое конфигурирование Google
+          href: API_GUI_Settings_Google.md
+        - name: Инициализация адаптера Google
+          href: GoogleSample.md
+      - name: IEX
+        href: IEX.md
+        items:
+        - name: Настройки коннектора IEX
+          href: IEXConnectorsSettings.md
+        - name: Графическое конфигурирование IEX
+          href: API_GUI_Settings_IEX.md
+        - name: Инициализация адаптера IEX
+          href: IEXSample.md
+      - name: Interactive Brokers
+        href: IB.md
+        items:
+        - name: Настройка TWS Interactive Brokers
+          href: IBSettings.md
+        - name: Графическое конфигурирование Interactive Brokers
+          href: API_GUI_Settings_Interactive Brokers.md
+        - name: Инициализация адаптера Interactive Brokers
+          href: IBSample.md
+      - name: IQFeed
+        href: IQFeed.md
+        items:
+        - name: Настройки коннектора IQFeed
+          href: IQFeedConnectorsSettings.md
+        - name: Подключение IQFeed
+          href: IQFeedConnect.md
+        - name: Графическое конфигурирование IQFeed
+          href: API_GUI_Settings_IQFeed.md
+        - name: Инициализация адаптера IQFeed
+          href: IQFeedSample.md
+      - name: ITCH
+        href: ITCH.md
+        items:
+        - name: Настройки коннектора ITCH
+          href: ITCHConnectorsSettings.md
+        - name: Графическое конфигурирование ITCH
+          href: API_GUI_Settings_ITCH.md
+        - name: Инициализация адаптера ITCH
+          href: ITCHSample.md
+      - name: OpenECry
+        href: OEC.md
+        items:
+        - name: Настройки коннектора OpenECry
+          href: OpenECryConnectorsSettings.md
+        - name: Графическое конфигурирование OpenECry
+          href: API_GUI_Settings_OpenECry_GainFutures.md
+        - name: Инициализация адаптера OpenECry
+          href: OECSampleWork.md
+        - name: Подключение нескольких роботов
+          href: OECRemoting.md
+        - name: Одновременная работа терминала и робота
+          href: OECSettings.md
+      - name: Quandl
+        href: Quandl.md
+        items:
+        - name: Настройки коннектора Quandl
+          href: QuandlConnectorsSettings.md
+        - name: Графическое конфигурирование Quandl
+          href: API_GUI_Settings_Quandl.md
+        - name: Инициализация адаптера Quandl
+          href: QuandlSample.md
+      - name: QuantFEED
+        href: QuantFeed.md
+        items:
+        - name: Настройки коннектора QuantFEED
+          href: QuantFEEDConnectorsSettings.md
+        - name: Графическое конфигурирование QuantFEED
+          href: API_GUI_Settings_QuantFEED.md
+        - name: Инициализация адаптера QuantFEED
+          href: QuantFeedSample.md
+      - name: Rithmic
+        href: Rithmic.md
+        items:
+        - name: Настройки коннектора Rithmic
+          href: RithmicConnectorsSettings.md
+        - name: Графическое конфигурирование Rithmic
+          href: API_GUI_Settings_Rithmic.md
+        - name: Инициализация адаптера Rithmic
+          href: RithmicSample.md
+      - name: Sterling
+        href: Sterling.md
+        items:
+        - name: Настройки коннектора Sterling
+          href: SterlingConnectorsSettings.md
+        - name: Графическое конфигурирование Sterling
+          href: API_GUI_Settings_Sterling.md
+        - name: Инициализация адаптера Sterling
+          href: SterlingSample.md
+      - name: Tradier
+        href: Tradier.md
+        items:
+        - name: Настройки коннектора Tradier
+          href: TradierConnectorsSettings.md
+        - name: Графическое конфигурирование Tradier
+          href: API_GUI_Settings_Tradier.md
+        - name: Инициализация адаптера Tradier
+          href: TradierSample.md
+      - name: Xignite
+        href: Xignite.md
+        items:
+        - name: Настройки коннектора Xignite
+          href: XigniteConnectorsSettings.md
+        - name: Графическое конфигурирование Xignite
+          href: API_GUI_Settings_Xignite.md
+        - name: Инициализация адаптера Xignite
+          href: XigniteCopySample.md
+      - name: Yahoo
+        href: Yahoo.md
+        items:
+        - name: Графическое конфигурирование Yahoo
+          href: API_GUI_Settings_Yahoo.md
+        - name: Инициализация адаптера Yahoo
+          href: YahooSample.md
+    - name: Коннекторы Forex
+      items:
+      - name: DukasCopy
+        href: DukasCopy.md
+        items:
+        - name: Графическое конфигурирование DukasCopy
+          href: API_GUI_Settings_Dukascopy.md
+        - name: Инициализация адаптера DukasCopy
+          href: DukasCopySample.md
+      - name: FinViz
+        href: FinViz.md
+        items:
+        - name: Графическое конфигурирование FinViz
+          href: API_GUI_Settings_FinViz.md
+        - name: Инициализация адаптера FinViz
+          href: FinVizSample.md
+      - name: FXCM
+        href: Fxcm.md
+        items:
+        - name: Настройки коннектора FXCM
+          href: FXCMConnectorsSettings.md
+        - name: Графическое конфигурирование FXCM
+          href: API_GUI_Settings_FXCM.md
+        - name: Инициализация адаптера FXCM
+          href: FxcmSample.md
+      - name: GAIN Capital
+        href: GAIN Capital.md
+        items:
+        - name: Графическое конфигурирование GAIN Capital
+          href: API_GUI_Settings_GAIN Capital.md
+        - name: Инициализация адаптера GAIN Capital
+          href: GAINCapitalSample.md
+      - name: LMAX
+        href: LMAX.md
+        items:
+        - name: Настройки коннектора LMAX
+          href: LMAXConnectorsSettings.md
+        - name: Графическое конфигурирование LMAX
+          href: API_GUI_Settings_LMAX.md
+        - name: Инициализация адаптера LMAX
+          href: LMaxSample.md
+      - name: MB Trading
+        href: MB Trading.md
+        items:
+        - name: Настройки коннектора MB Trading
+          href: MBTradingConnectorsSettings.md
+        - name: Графическое конфигурирование MB Trading
+          href: API_GUI_Settings_MB Trading.md
+        - name: Инициализация адаптера MB Trading
+          href: MBTradingSample.md
+      - name: Oanda
+        href: Oanda.md
+        items:
+        - name: Настройки коннектора Oanda
+          href: OandaConnectorsSettings.md
+        - name: Графическое конфигурирование Oanda
+          href: API_GUI_Settings_OANDA.md
+        - name: Инициализация адаптера Oanda
+          href: OandaSample.md
+      - name: TrueFX
+        href: TrueFX.md
+        items:
+        - name: Настройки коннектора TrueFX
+          href: TrueFXConnectorsSettings.md
+        - name: Графическое конфигурирование TrueFX
+          href: API_GUI_Settings_TrueFX.md
+        - name: Инициализация адаптера TrueFX
+          href: TrueFXSample.md
+    - name: Коннекторы Криптовалют
+      items:
+      - name: Bibox
+        href: Bibox.md
+        items:
+        - name: Настройки коннектора Bibox
+          href: BiboxConnectorsSettings.md
+        - name: Графическое конфигурирование Bibox
+          href: API_GUI_Settings_Bibox.md
+        - name: Инициализация адаптера Bibox
+          href: BiboxSample.md
+      - name: Binance
+        href: Binance.md
+        items:
+        - name: Настройки коннектора Binance
+          href: BinanceConnectorsSettings.md
+        - name: Графическое конфигурирование Binance
+          href: API_GUI_Settings_Binance.md
+        - name: Инициализация адаптера Binance
+          href: BinanceSample.md
+      - name: Bitalong
+        href: Bitalong.md
+        items:
+        - name: Настройки коннектора Bitalong
+          href: BitalongConnectorsSettings.md
+        - name: Графическое конфигурирование коннектора
+          href: API_GUI_Settings_Bitalong.md
+        - name: Инициализация адаптера Bitalong
+          href: BitalongSample.md
+      - name: Bitbank
+        href: Bitbank.md
+        items:
+        - name: Настройки коннектора Bitbank
+          href: BitbankConnectorsSettings.md
+        - name: Графическое конфигурирование Bitbank
+          href: API_GUI_Settings_Bitbank.md
+        - name: Инициализация адаптера Bitbank
+          href: BitbankSample.md
+      - name: Bitexbook
+        href: Bitexbook.md
+        items:
+        - name: Настройки коннектора Bitexbook
+          href: BitexbookConnectorsSettings.md
+        - name: Графическое конфигурирование Bitexbook
+          href: API_GUI_Settings_Bitexbook.md
+        - name: Инициализация адаптера Bitexbook
+          href: BitexbookSample.md
+      - name: Bitfinex
+        href: Bitfinex.md
+        items:
+        - name: Настройки коннектора Bitfinex
+          href: BitfinexConnectorsSettings.md
+        - name: Графическое конфигурирование Bitfinex
+          href: API_GUI_Settings_Bitfinex.md
+        - name: Инициализация адаптера Bitfinex
+          href: BitfinexSample.md
+      - name: Bithumb
+        href: Bithumb.md
+        items:
+        - name: Настройки коннектора Bithumb
+          href: BithumbConnectorsSettings.md
+        - name: Графическое конфигурирование Bithumb
+          href: API_GUI_Settings_Bithumb.md
+        - name: Инициализация адаптера Bithumb
+          href: BithumbSample.md
+      - name: BitMax
+        href: BitMax.md
+        items:
+        - name: Настройки коннектора BitMax
+          href: BitMaxConnectorsSettings.md
+        - name: Графическое конфигурирование BitMax
+          href: API_GUI_Settings_BitMax.md
+        - name: Инициализация адаптера BitMax
+          href: BitMaxSample.md
+      - name: BitMEX
+        href: Bitmex.md
+        items:
+        - name: Настройки коннектора BitMEX
+          href: BitMEXConnectorsSettings.md
+        - name: Графическое конфигурирование BitMEX
+          href: API_GUI_Settings_BitMEX.md
+        - name: Инициализация адаптера BitMEX
+          href: BitMEXSample.md
+      - name: BitStamp
+        href: BitStamp.md
+        items:
+        - name: Настройки коннектора BitStamp
+          href: BitStampConnectorsSettings.md
+        - name: Графическое конфигурирование BitStamp
+          href: API_GUI_Settings_Bitstamp.md
+        - name: Инициализация адаптера BitStamp
+          href: BitStampSample.md
+      - name: Bittrex
+        href: Bittrex.md
+        items:
+        - name: Настройки коннектора Bittrex
+          href: BittrexConnectorsSettings.md
+        - name: Графическое конфигурирование коннектора
+          href: API_GUI_Settings_Bittrex.md
+        - name: Инициализация адаптера Bittrex
+          href: BittrexSample.md
+      - name: BitZ
+        href: BitZ.md
+        items:
+        - name: Настройки коннектора BitZ
+          href: BitZConnectorsSettings.md
+        - name: Графическое конфигурирование BitZ
+          href: API_GUI_Settings_Bit-Z.md
+        - name: Инициализация адаптера BitZ
+          href: BitZSample.md
+      - name: BW
+        href: BW.md
+        items:
+        - name: Настройки коннектора BW
+          href: BWConnectorsSettings.md
+        - name: Графическое конфигурирование BW
+          href: API_GUI_Settings_BW.md
+        - name: Инициализация адаптера BW
+          href: BWSample.md
+      - name: CEX.IO
+        href: Cex.md
+        items:
+        - name: Настройки коннектора CEX.IO
+          href: CexConnectorsSettings.md
+        - name: Графическое конфигурирование CEX.IO
+          href: API_GUI_Settings_CEX.IO.md
+        - name: Инициализация адаптера CEX.IO
+          href: CEXSample.md
+      - name: Coinbase
+        href: Coinbase.md
+        items:
+        - name: Настройки коннектора Coinbase
+          href: CoinbaseConnectorsSettings.md
+        - name: Графическое конфигурирование Coinbase
+          href: API_GUI_Settings_Coinbase.md
+        - name: Инициализация адаптера Coinbase
+          href: CoinbaseSample.md
+      - name: CoinBene
+        href: CoinBene.md
+        items:
+        - name: Настройки коннектора CoinBene
+          href: CoinBeneConnectorsSettings.md
+        - name: Графическое конфигурирование CoinBene
+          href: API_GUI_Settings_CoinBene.md
+        - name: Инициализация адаптера CoinBene
+          href: CoinBeneSample.md
+      - name: CoinCap
+        href: CoinCap.md
+        items:
+        - name: 'Настройки коннектора CoinCap '
+          href: CoinCapConnectorsSettings.md
+        - name: Графическое конфигурирование CoinCap
+          href: API_GUI_Settings_CoinCap.md
+        - name: Инициализация адаптера CoinCap
+          href: CoinCapSample.md
+      - name: Coincheck
+        href: Coincheck.md
+        items:
+        - name: Настройки коннектора Coincheck
+          href: CoincheckConnectorsSettings.md
+        - name: Графическое конфигурирование Coincheck
+          href: API_GUI_Settings_Coincheck.md
+        - name: Инициализация адаптера Coincheck
+          href: CoincheckSample.md
+      - name: CoinEx
+        href: CoinEx.md
+        items:
+        - name: Настройки коннектора CoinEx
+          href: CoinExConnectorsSettings.md
+        - name: Графическое конфигурирование CoinEx
+          href: API_GUI_Settings_CoinEx.md
+        - name: Инициализация адаптера CoinEx
+          href: CoinExSample.md
+      - name: CoinExchange
+        href: CoinExchange.md
+        items:
+        - name: Настройки коннектора CoinExchange
+          href: CoinExchangeConnectorsSettings.md
+        - name: Графическое конфигурирование CoinExchange
+          href: API_GUI_Settings_CoinExchange.md
+        - name: Инициализация адаптера CoinExchange
+          href: CoinExchangeSample.md
+      - name: 'Coinigy '
+        href: Coinigy.md
+        items:
+        - name: 'Настройки коннектора Coinigy '
+          href: CoinigyConnectorsSettings.md
+        - name: 'Графическое конфигурирование Coinigy '
+          href: API_GUI_Settings_Coinigy.md
+        - name: 'Инициализация адаптера Coinigy '
+          href: CoinigySample.md
+      - name: CoinHub
+        href: CoinHub.md
+        items:
+        - name: Настройки коннектора CoinHub
+          href: CoinHubConnectorsSettings.md
+        - name: Графическое конфигурирование CoinHub
+          href: API_GUI_Settings_CoinHub.md
+        - name: Инициализация адаптера CoinHub
+          href: CoinHubSample.md
+      - name: Cryptopia
+        href: Cryptopia.md
+        items:
+        - name: Настройки коннектора Cryptopia
+          href: CryptopiaConnectorsSettings.md
+        - name: Графическое конфигурирование Cryptopia
+          href: API_GUI_Settings_Cryptopia.md
+        - name: Инициализация адаптера Cryptopia
+          href: CryptopiaSample.md
+      - name: Deribit
+        href: Deribit.md
+        items:
+        - name: Настройки коннектора Deribit
+          href: DeribitConnectorsSettings.md
+        - name: Графическое конфигурирование Deribit
+          href: API_GUI_Settings_Deribit.md
+        - name: Инициализация адаптера Deribit
+          href: DeribitSample.md
+      - name: DigiFinex
+        href: Digifinex.md
+        items:
+        - name: 'Настройки коннектора Digifinex '
+          href: DigifinexConnectorsSettings.md
+        - name: Графическое конфигурирование Digifinex
+          href: API_GUI_Settings_DigiFinex.md
+        - name: Инициализация адаптера Digifinex
+          href: DigifinexSample.md
+      - name: DigitexFutures
+        href: DigitexFutures.md
+        items:
+        - name: Настройки коннектора DigitexFutures
+          href: DigitexFuturesConnectorsSettings.md
+        - name: Графическое конфигурирование коннектора
+          href: API_GUI_Settings_DigitexFutures.md
+        - name: Инициализация адаптера DigitexFutures
+          href: DigitexFuturesSample.md
+      - name: EXMO
+        href: Exmo.md
+        items:
+        - name: Настройки коннектора EXMO
+          href: EXMOConnectorsSettings.md
+        - name: Графическое конфигурирование EXMO
+          href: API_GUI_Settings_EXMO.md
+        - name: Инициализация адаптера EXMO
+          href: EXMOSample.md
+      - name: FatBTC
+        href: FatBTC.md
+        items:
+        - name: Настройки коннектора FatBTC
+          href: FatBTCConnectorsSettings.md
+        - name: Графическое конфигурирование FatBTC
+          href: API_GUI_Settings_FatBTC.md
+        - name: Инициализация адаптера FatBTC
+          href: FatBTCSample.md
+      - name: GDAX
+        href: GDAX.md
+        items:
+        - name: Настройки коннектора GDAX
+          href: GDAXConnectorsSettings.md
+        - name: Графическое конфигурирование GDAX
+          href: API_GUI_Settings_GDAX.md
+        - name: Инициализация адаптера GDAX
+          href: GDAXSample.md
+      - name: GOPAX
+        href: Gopax.md
+        items:
+        - name: Настройки коннектора Gopax
+          href: GopaxConnectorsSettings.md
+        - name: Графическое конфигурирование Gopax
+          href: API_GUI_Settings_Gopax.md
+        - name: Инициализация адаптера Gopax
+          href: GopaxSample.md
+      - name: HitBTC
+        href: HitBTC.md
+        items:
+        - name: Настройки коннектора HitBTC
+          href: HitBTCConnectorsSettings.md
+        - name: Графическое конфигурирование HitBTC
+          href: API_GUI_Settings_HitBTC.md
+        - name: Инициализация адаптера HitBTC
+          href: HitBTCSample.md
+      - name: Hotbit
+        href: Hotbit.md
+        items:
+        - name: Настройки коннектора Hotbit
+          href: HotbitConnectorsSettings.md
+        - name: Графическое конфигурирование Hotbit
+          href: API_GUI_Settings_Hotbit.md
+        - name: Инициализация адаптера Hotbit
+          href: HotbitSample.md
+      - name: Huobi
+        href: Huobi.md
+        items:
+        - name: Настройки коннектора Huobi
+          href: HuobiConnectorsSettings.md
+        - name: Графическое конфигурирование Huobi
+          href: API_GUI_Settings_Huobi.md
+        - name: Инициализация адаптера Huobi
+          href: HuobiSample.md
+      - name: IDAX
+        href: Idax.md
+        items:
+        - name: 'Настройки коннектора Idax '
+          href: IdaxConnectorsSettings.md
+        - name: 'Графическое конфигурирование Idax '
+          href: API_GUI_Settings_IDAX.md
+        - name: Инициализация адаптера Idax
+          href: IdaxSample.md
+      - name: Kraken
+        href: Kraken.md
+        items:
+        - name: Настройки коннектора Kraken
+          href: KrakenConnectorsSettings.md
+        - name: Графическое конфигурирование Kraken
+          href: API_GUI_Settings_Kraken.md
+        - name: Инициализация адаптера Kraken
+          href: KrakenSample.md
+      - name: KuCoin
+        href: Kucoin.md
+        items:
+        - name: Настройки коннектора Kucoin
+          href: KucoinConnectorsSettings.md
+        - name: Графическое конфигурирование Kucoin
+          href: API_GUI_Settings_Kucoin.md
+        - name: Инициализация адаптера Kucoin
+          href: KucoinSample.md
+      - name: LATOKEN
+        href: Latoken.md
+        items:
+        - name: Настройки коннектора Latoken
+          href: LatokenConnectorsSettings.md
+        - name: Графическое конфигурирование Latoken
+          href: API_GUI_Settings_Latoken.md
+        - name: Инициализация адаптера Latoken
+          href: LatokenSample.md
+      - name: LBank
+        href: LBank.md
+        items:
+        - name: Настройки коннектора LBank
+          href: LBankConnectorsSettings.md
+        - name: Графическое конфигурирование LBank
+          href: API_GUI_Settings_LBank.md
+        - name: Инициализация адаптера LBank
+          href: LBankSample.md
+      - name: Liqui
+        href: Liqui.md
+        items:
+        - name: Настройки коннектора Liqui
+          href: LiquiConnectorsSettings.md
+        - name: Графическое конфигурирование Liqui
+          href: API_GUI_Settings_Liqui.md
+        - name: Инициализация адаптера Liqui
+          href: LiquiSample.md
+      - name: Livecoin
+        href: LiveCoin.md
+        items:
+        - name: Настройки коннектора Livecoin
+          href: LivecoinConnectorsSettings.md
+        - name: Графическое конфигурирование Livecoin
+          href: API_GUI_Settings_Livecoin.md
+        - name: Инициализация адаптера Livecoin
+          href: LivecoinSample.md
+      - name: OKCoin
+        href: OKCoin.md
+        items:
+        - name: Настройки коннектора OKCoin
+          href: OKCoinConnectorsSettings.md
+        - name: Графическое конфигурирование OKCoin
+          href: API_GUI_Settings_OKCoin.md
+        - name: Инициализация адаптера OKCoin
+          href: OKCoinSample.md
+      - name: OKEx
+        href: Okex.md
+        items:
+        - name: Настройки коннектора OKEx
+          href: OKExConnectorsSettings.md
+        - name: Графическое конфигурирование OKEx
+          href: API_GUI_Settings_OKEx.md
+        - name: Инициализация адаптера OKEx
+          href: OKexSample.md
+      - name: Poloniex
+        href: Poloniex.md
+        items:
+        - name: Настройки коннектора Poloniex
+          href: PoloniexConnectorsSettings.md
+        - name: Графическое конфигурирование Poloniex
+          href: API_GUI_Settings_Poloniex.md
+        - name: Инициализация адаптера Poloniex
+          href: PoloniexSample.md
+      - name: PrizmBit
+        href: PrizmBit.md
+        items:
+        - name: Настройки коннектора PrizmBit
+          href: PrizmBitConnectorsSettings.md
+        - name: Графическое конфигурирование коннектора
+          href: API_GUI_Settings_PrizmBit.md
+        - name: Инициализация адаптера PrizmBit
+          href: PrizmBitSample.md
+      - name: QuoineX
+        href: Quoinex.md
+        items:
+        - name: 'Настройки коннектора Quoinex '
+          href: QuoinexConnectorsSettings.md
+        - name: 'Графическое конфигурирование Quoinex '
+          href: API_GUI_Settings_QUOINEX.md
+        - name: Инициализация адаптера Quoinex
+          href: QuoinexSample.md
+      - name: TradeOgre
+        href: TradeOrge.md
+        items:
+        - name: 'Настройки коннектора TradeOrge '
+          href: TradeOrgeConnectorsSettings.md
+        - name: 'Графическое конфигурирование TradeOrge '
+          href: API_GUI_Settings_TradeOgre.md
+        - name: Инициализация адаптера TradeOgre
+          href: TradeOrgeSample.md
+      - name: Upbit
+        href: Upbit.md
+        items:
+        - name: Настройки коннектора Upbit
+          href: UpbitConnectorsSettings.md
+        - name: Графическое конфигурирование Upbit
+          href: API_GUI_Settings_Upbit.md
+        - name: Инициализация адаптера Upbit
+          href: UpbitSample.md
+      - name: WEX (BTC-e)
+        href: Btce.md
+        items:
+        - name: Настройки коннектора WEX (BTC-e)
+          href: BtceConnectorsSettings.md
+        - name: Графическое конфигурированиеWEX (BTC-e)
+          href: API_GUI_Settings_WEX (BTC-e).md
+        - name: Инициализация адаптера WEX (BTC-e)
+          href: BtceSample.md
+      - name: YoBit
+        href: Yobit.md
+        items:
+        - name: Настройки коннектора Yobit
+          href: YobitConnectorsSettings.md
+        - name: Графическое конфигурирование Yobit
+          href: API_GUI_Settings_Yobit.md
+        - name: Инициализация адаптера Yobit
+          href: YobitSample.md
+      - name: Zaif
+        href: Zaif.md
+        items:
+        - name: 'Настройки коннектора Zaif '
+          href: ZaifConnectorsSettings.md
+        - name: 'Графическое конфигурирование Zaif '
+          href: API_GUI_Settings_Zaif.md
+        - name: Инициализация адаптера Zaif
+          href: ZaifSample.md
+      - name: ZB
+        href: ZB.md
+        items:
+        - name: Настройки коннектора ZB
+          href: ZBConnectorsSettings.md
+        - name: Графическое конфигурирование ZB
+          href: API_GUI_Settings_ZB.COM.md
+        - name: Инициализация адаптера ZB
+          href: ZBSample.md
+      - name: Вывод средств
+        href: API_Connectors_Crypto_Withdraw.md
+    - name: Общие
+      items:
+      - name: CSV
+        href: Csv.md
+        items:
+        - name: Графическое конфигурирование CSV
+          href: API_GUI_Settings_CSV.md
+        - name: Инициализация адаптера CSV
+          href: CsvSample.md
+      - name: FIX протокол
+        href: Fix.md
+        items:
+        - name: Настройки коннекторов FIX
+          href: FIXConnectorsSettings.md
+        - name: Графическое конфигурирование FIX
+          href: API_GUI_Settings_FIX.md
+        - name: Инициализация адаптера FIX
+          href: FixSample.md
+      - name: FAST протокол
+        href: Fast.md
+        items:
+        - name: Графическое конфигурирование FAST
+          href: API_GUI_Settings_FAST.md
+        - name: Инициализация адаптера FAST
+          href: FastSample.md
+        - name: S#.UDP Dumper
+          href: UdpDumper.md
+        - name: Отладка в dump режиме
+          href: FastDump.md
+      - name: FIX Server
+        href: FixServer.md
+      - name: RSS
+        href: RSS.md
+        items:
+        - name: Графическое конфигурирование RSS
+          href: API_GUI_Settings_RSS.md
+        - name: Инициализация адаптера RSS
+          href: RssSample.md
+    - name: Подписки
+      href: API_ConnectorsSubscriptions.md
+    - name: Получение исторических данных
+      href: API_Getting_historical_data.md
+    - name: Получение новостных данных
+      href: API_Getting_news_data.md
+    - name: Создание собственного коннектора
+      href: ConnectorCreating.md
+    - name: Сохранение и загрузка настроек
+      href: API_Connectors_SaveConnectorSettings.md
+    - name: Настройки переподключения
+      href: Reconnect.md
+  - name: Заявки
+    href: Orders.md
+    items:
+    - name: Создать новую заявку
+      href: CreateNewOrder.md
+    - name: Создать новую стоп заявку
+      href: API_StopOrders.md
+    - name: Получение информации по заявкам
+      href: OrdersEvents.md
+    - name: Состояния заявок
+      href: OrderStates.md
+    - name: Снятие заявок
+      href: OrdersCancel.md
+    - name: Снятие группы заявок
+      href: OrdersCancelGroup.md
+    - name: Замена заявок
+      href: OrdersReRegister.md
+    - name: Номер транзакции
+      href: OrdersTransactionId.md
+  - name: Инструменты
+    href: Security.md
+    items:
+    - name: Идентификатор инструмента
+      href: SecurityId.md
+    - name: Идентификатор *@ALL
+      href: ALLBoard.md
+    - name: Непрерывный фьючерс
+      href: SecurityContinuous.md
+    - name: Индекс
+      href: SecurityIndex.md
+    - name: Поиск инструмента
+      href: SecurityLookup.md
+  - name: Хранение данных
+    href: Storages.md
+    items:
+    - name: API
+      href: StoragesApi.md
+    - name: Хранилище сообщений
+      href: MessageStorage.md
+  - name: Свечи
+    href: Candles.md
+    items:
+    - name: График
+      href: CandlesUI.md
+    - name: Паттерны
+      href: CandlesPatterns.md
+    - name: Собственный тип свечей
+      href: CandlesCandleFactory.md
+    - name: Склеивание свечей, история + реал-тайм
+      href: CandlesGluing.md
+    - name: Создание свечей по корзине инструментов
+      href: CandlesIndex.md
+  - name: Индикаторы
+    href: Indicators.md
+    items:
+    - name: Добавление индикатора на график
+      href: IndicatorsChart.md
+    - name: Список индикаторов
+      href: IndicatorsAll.md
+      items:
+      - name: '%R'
+        href: IndicatorWilliamsR.md
+      - name: A/C
+        href: IndicatorAcceleration.md
+      - name: ADX
+        href: IndicatorAverageDirectionalIndex.md
+      - name: Alligator
+        href: IndicatorAlligator.md
+      - name: AO
+        href: IndicatorAwesomeOscillator.md
+      - name: ATR
+        href: IndicatorAverageTrueRange.md
+      - name: Bollinger Bands
+        href: IndicatorBollingerBands.md
+      - name: CCI
+        href: IndicatorCommodityChannelIndex.md
+      - name: CHV
+        href: IndicatorChaikinVolatility.md
+      - name: CMO
+        href: IndicatorChandeMomentumOscillator.md
+      - name: DEMA
+        href: IndicatorDoubleExponentialMovingAverage.md
+      - name: DMI
+        href: IndicatorDirectionalIndex.md
+      - name: DPO
+        href: IndicatorDetrendedPriceOscillator.md
+      - name: EMA
+        href: IndicatorExponentialMovingAverage.md
+      - name: Envelope
+        href: IndicatorEnvelope.md
+      - name: Fractals
+        href: IndicatorFractals.md
+      - name: Gator Oscillator
+        href: IndicatorGatorOscillator.md
+      - name: 'Highest '
+        href: IndicatorHighest.md
+      - name: HMA
+        href: IndicatorHullMovingAverage.md
+      - name: Ichimoku
+        href: IndicatorIchimoku.md
+      - name: JMA
+        href: IndicatorJurikMovingAverage.md
+      - name: KAMA
+        href: IndicatorKaufmannAdaptiveMovingAverage.md
+      - name: Linear Regression R-Squared
+        href: IndicatorRSquared.md
+      - name: Linear Regression Slope
+        href: IndicatorLinearRegSlope.md
+      - name: 'Lowest '
+        href: IndicatorLowest.md
+      - name: LRC
+        href: IndicatorLinearReg.md
+      - name: MACD
+        href: IndicatorMovingAverageConvergenceDivergence.md
+      - name: MACD гистограмма
+        href: IndicatorMovingAverageConvergenceDivergenceHistogram.md
+      - name: MACD с сигнальной линией
+        href: IndicatorMovingAverageConvergenceDivergenceSignal.md
+      - name: Market Facilitation Index
+        href: IndicatorMarketFacilitationIndex.md
+      - name: Mean Deviation
+        href: IndicatorMeanDeviation.md
+      - name: Median Price
+        href: IndicatorMedianPrice.md
+      - name: Momentum
+        href: IndicatorMomentum.md
+      - name: Money Flow Index
+        href: IndicatorMoneyFlowIndex.md
+      - name: NRTR
+        href: IndicatorNickRypockTrailingReverse.md
+      - name: Optimal Tracking
+        href: IndicatorOptimalTrackingFilter.md
+      - name: Parabolic SAR
+        href: IndicatorParabolicSar.md
+      - name: Peak
+        href: IndicatorPeak.md
+      - name: PeakBar
+        href: IndicatorPeakBar.md
+      - name: QStick
+        href: IndicatorQStick.md
+      - name: RAVI
+        href: IndicatorRangeActionVerificationIndex.md
+      - name: RoC
+        href: IndicatorRateOfChange.md
+      - name: RSI
+        href: IndicatorRelativeStrengthIndex.md
+      - name: RVI
+        href: IndicatorRelativeVigorIndex.md
+      - name: SMA
+        href: IndicatorSimpleMovingAverage.md
+      - name: Smoothed MA
+        href: IndicatorSmoothedMovingAverage.md
+      - name: Standard Deviation
+        href: IndicatorStandardDeviation.md
+      - name: Standard Error
+        href: IndicatorStandardError.md
+      - name: Stochastic Oscillator
+        href: IndicatorStochasticOscillator.md
+      - name: Stochastic Oscillator K%
+        href: IndicatorStochasticK.md
+      - name: Sum N
+        href: IndicatorSum.md
+      - name: TEMA
+        href: IndicatorTripleExponentialMovingAverage.md
+      - name: TRIX
+        href: IndicatorTrix.md
+      - name: Trough
+        href: IndicatorTrough.md
+      - name: TroughBar
+        href: IndicatorTroughBar.md
+      - name: True Range
+        href: IndicatorTrueRange.md
+      - name: UO
+        href: IndicatorUltimateOscillator.md
+      - name: VHF
+        href: IndicatorVerticalHorizontalFilter.md
+      - name: VIDYA
+        href: IndicatorVidya.md
+      - name: Volume
+        href: IndicatorVolumeIndicator.md
+      - name: Volume Profile
+        href: IndicatorVolumeProfileIndicator.md
+      - name: Volume Weighted MA
+        href: IndicatorVolumeWeightedMovingAverage.md
+      - name: Weighted MA
+        href: IndicatorWeightedMovingAverage.md
+      - name: Wilder MA
+        href: IndicatorWilderMovingAverage.md
+      - name: ZigZag
+        href: IndicatorZigZag.md
+      - name: ZigZag (Metastock)
+        href: IndicatorZigZagEquis.md
+    - name: Собственный индикатор
+      href: IndicatorsCustom.md
+    - name: 'Графический рендерер индикаторов '
+      href: IndicatorPainter.md
+  - name: Логирование
+    href: Logging.md
+    items:
+    - name: Логирование Strategy
+      href: LoggingStrategy.md
+    - name: Логирование IConnector
+      href: LoggingITrader.md
+    - name: Другие источники логов
+      href: AppLogging.md
+    - name: Визуальный мониторинг
+      href: LoggingMonitorWindow.md
+    - name: Создание ILogListener
+      href: LoggingCustomListener.md
+  - name: Cтратегии
+    href: Strategy.md
+    items:
+    - name: Создание стратегии
+      href: StrategyAction.md
+    - name: Итерационная модель
+      href: StrategyCreate.md
+    - name: Дочерние стратегии
+      href: StrategyChilds.md
+    - name: Котирование
+      href: StrategyQuoting.md
+    - name: Тейк-профит и стоп-лосс
+      href: StrategyProtective.md
+    - name: Отчеты
+      href: StrategyReports.md
+    - name: Сохранение и загрузка настроек
+      href: StrategyStorage.md
+    - name: Загрузка заявок и сделок
+      href: StrategyOrdersLoad.md
+  - name: Событийная модель
+    href: EventModel.md
+    items:
+    - name: Правило
+      href: MarketRule.md
+    - name: Использование правил
+      href: MarketRuleUse.md
+    - name: Приостановка правил
+      href: MarketRuleSyncAndSuspend.md
+    - name: Взаимоисключающие правила
+      href: MarketRuleExclusive.md
+  - name: Торговые алгоритмы
+    href: StockSharpTradingAlgo.md
+    items:
+    - name: Проскальзывание
+      href: Slippage.md
+    - name: Прибыль-убыток
+      href: PnL.md
+    - name: Позиция
+      href: Position.md
+    - name: Задержка
+      href: Latency.md
+    - name: Комиссия
+      href: Commissions.md
+    - name: Основные алгоритмы
+      href: BasicAlgo.md
+    - name: 'Стакан: алгоритмы'
+      href: SparseDepth.md
+    - name: Кривая эквити
+      href: Equity.md
+  - name: Опционы
+    href: Options.md
+    items:
+    - name: Греки
+      href: OptionsGreeks.md
+    - name: Котирование по волатильности
+      href: OptionsQuoting.md
+    - name: Дельта-хеджирование
+      href: OptionsHedge.md
+    - name: Синтетика
+      href: OptionsSynthetic.md
+    - name: Графические компоненты для опционов
+      href: OptionsGUI.md
+  - name: Тестирование
+    href: StrategyTesting.md
+    items:
+    - name: На истории
+      href: StrategyTestingHistory.md
+      items:
+      - name: На истории с Финам
+        href: StrategyTestingFinam.md
+    - name: На истории (оптимизация)
+      href: StrategyTestingOptimization.md
+    - name: На случайных данных
+      href: StrategyTestingEmulation.md
+    - name: На рыночных данных
+      href: StrategyTestingRealTime.md
+    - name: Настройки тестирования
+      href: TestingSettings.md
+  - name: Пользовательский интерфейс (GUI)
+    href: UIMarshalling.md
+    items:
+    - name: Графики
+      href: GUICharting.md
+      items:
+      - name: Свечной график
+        href: Gui_Chart.md
+      - name: График-панель
+        href: Gui_ChartPanel.md
+      - name: График эквити
+        href: Gui_EquityCurveChart.md
+      - name: Графики box chart
+        href: Gui_BoxChart.md
+      - name: Кластеры
+        href: Gui_ClasterChart.md
+      - name: Выставление заявок с графика
+        href: API_GUI_Trading_From_Chart.md
+      - name: Аннотации
+        href: ChartAnnotations.md
+    - name: Логирование
+      href: GuiLogging.md
+      items:
+      - name: Панель логов
+        href: GUILogControl.md
+      - name: Расширенная панель логов
+        href: GUIMonitor.md
+    - name: Портфели
+      href: GuiPortfolios.md
+      items:
+      - name: Выпадающий список портфелей
+        href: GuiPortfolioComboBox.md
+      - name: Выбор портфеля
+        href: GuiPortfolioEditor.md
+      - name: Окно выбора портфелей
+        href: GuiPortfolioPickerWindow.md
+      - name: Таблица портфелей
+        href: GuiPortfolioGrid.md
+    - name: Инструменты
+      href: GUISecurities.md
+      items:
+      - name: Создание инструмента
+        href: GuiCreateSecurityWindow.md
+      - name: Инструменты
+        href: GuiSecurityGrid.md
+      - name: Выбор инструмента
+        href: GuiSecurityPicker.md
+      - name: Непрерывный фьючерс
+        href: GuiContinuousSecurityWindow.md
+      - name: Индекс
+        href: GuiIndexSecurityWindow.md
+    - name: Рыночные данные
+      href: GuiMarketData.md
+      items:
+      - name: Тиковые сделки
+        href: GuiTradeGrid.md
+      - name: Level1
+        href: GuiLevel1Grid.md
+      - name: Стакан
+        href: GuiMarketDepthControl.md
+      - name: Лог заявок
+        href: GuiOrderLogGrid.md
+      - name: Новости
+        href: GuiNewsGrid.md
+    - name: Торговля
+      href: GuiTrading.md
+      items:
+      - name: Заявки
+        href: GuiOrderGrid.md
+      - name: Собственные сделки
+        href: GuiMyTradeGrid.md
+      - name: Ввод новой заявки
+        href: GuiOrderWindow.md
+      - name: Ввод стоп-заявки
+        href: GuiOrderConditionalWindow.md
+      - name: Таблица доступных рыночных данных
+        href: API_GUI_MarketDataGrid.md
+      - name: Панель Купить/Продать
+        href: API_GUI_BuySellPanel.md
+    - name: Стратегии
+      href: GuiStrategies.md
+      items:
+      - name: Статистика
+        href: GuiStrategiesStatisticsPanel.md
+    - name: Опционы
+      href: GUIOptions.md
+      items:
+      - name: Доска опционов
+        href: OptionDesk.md
+      - name: График позиции
+        href: OptionPositionChart.md
+    - name: Таблица редактирования свойств объектов
+      href: GuiPropertyGridEx.md
+    - name: Окно настройки подключений
+      href: API_UI_ConnectorWindow.md
+    - name: Окно настройки рисков
+      href: API_GUI_RiskWindow.md
+    - name: Окно настройки комиссии
+      href: API_GUI_CommissionWindow.md
+    - name: Окно настройки оповещений
+      href: API_GUI_AlertsWindow.md
+    - name: Темы графических компонентов S#
+      href: API_GUI_Thems.md
+  - name: Сообщения
+    href: Messages.md
+    items:
+    - name: Описание
+      href: Messages_description.md
+    - name: Адаптеры
+      href: Messages_adapters.md
+      items:
+      - name: Стаканы (инкрементальные и обычные)
+        href: Messages_adapters_books.md
+      - name: Исторические данные
+        href: Messages_adapters_history.md
+      - name: Лог заявок
+        href: Messages_adapters_orderlog.md
+      - name: Вспомогательные адаптеры
+        href: Messages_adapters_chain.md
+      - name: Потоковая модель
+        href: Messages_adapters_threading.md
+    - name: Хранилище сообщений
+      href: Messages_storage.md
+    - name: Сетевое взаимодействие
+      href: Messages_networking.md
+  - name: Биржевое время
+    href: MarketTimeOffset.md
+  - name: Арифметические операции
+    href: Unit.md
+  - name: Конвертация валют
+    href: Currency.md
+  - name: Примеры
+    href: StockSharpSamples.md
+- name: S#.Designer
+  href: Designer.md
+  items:
+  - name: Установка S#.Designer
+    href: Designer_Installation.md
+  - name: Обновление на новую версию
+    href: Designer_Update_to_new_version.md
+  - name: Быстрый запуск
+    href: Designer_Quick_start.md
+  - name: Интерфейс программы
+    items:
+    - name: Панель быстрого доступа
+      href: Designer_Quick_access_toolbar.md
+    - name: Лента
+      href: Designer_Tape.md
+    - name: Рабочая область
+      href: Designer_Workspace.md
+    - name: Панель Схемы
+      href: Designer_Panel_Schemas.md
+    - name: Панель Логи
+      href: Designer_Panel_Logs.md
+    - name: Портфели
+      href: Designer_Panel_Portfolios.md
+    - name: Редактор площадок
+      href: Designer_Boards.md
+    - name: Риск-менеджмент
+      href: Designer_Risk_Rule.md
+    - name: Комиссии
+      href: Designer_Commission_Rule.md
+    - name: Компоненты
+      href: Designer_Components.md
+      items:
+      - name: График
+        href: Designer_Chart.md
+      - name: Заявки
+        href: Designer_Orders.md
+      - name: Условные заявки
+        href: Designer_Orders_conditional.md
+      - name: Сделки
+        href: Designer_Trades.md
+      - name: Стакан
+        href: Designer_Depth_Panel2.md
+      - name: Позиции
+        href: Designer_Chart_Position.md
+      - name: Статистика
+        href: Designer_Statistics.md
+      - name: График П/У
+        href: Designer_Panel_Market_depth.md
+      - name: Свойства тестирования
+        href: Designer_Properties_emulation.md
+      - name: Свойства Live торговли
+        href: Designer_Properties_Live.md
+      - name: Лента сделок
+        href: Designer_Tape_Trades.md
+  - name: Создание стратегии
+    href: Designer_Creation_strategy.md
+    items:
+    - name: Использование кубиков
+      href: Designer_Creating_strategy_out_of_blocks.md
+      items:
+      - name: Дизайнер стратегии
+        href: Designer_Designer_schemes_strategies_and_component_elements.md
+      - name: Описание кубиков
+        href: Designer_Description_of_elements.md
+        items:
+        - name: Общее
+          items:
+          - name: Панель графика
+            href: Designer_Panel_graphics.md
+          - name: Рабочее время
+            href: Designer_Working_time.md
+          - name: Сравнение
+            href: Designer_Comparison.md
+          - name: Индикатор
+            href: Designer_Indicator.md
+          - name: Логическое условие
+            href: Designer_Logical_condition.md
+          - name: Формула
+            href: Designer_Universal_formula.md
+          - name: Объединение
+            href: Designer_Association.md
+          - name: Позиция
+            href: Designer_Position.md
+          - name: Предыдущее значение
+            href: Designer_Previous_value.md
+          - name: Защита позиции
+            href: Designer_Protect_positions.md
+          - name: Исходный код
+            href: Designer_Source_code.md
+          - name: DLL стратегия
+            href: Designer_DLL_Strategy.md
+          - name: Изменение П/У
+            href: Designer_StrategyPnLDiagramElement.md
+          - name: Сделки стратегии
+            href: Designer_Trades_strategy.md
+          - name: Сделки по заявке
+            href: Designer_Deals_on_request.md
+          - name: Разрешена ли торговля
+            href: Designer_TradeAllowedDiagramElement.md
+        - name: Источники данных
+          items:
+          - name: Свечи
+            href: Designer_Candles.md
+          - name: Level 1
+            href: Designer_Level_1.md
+          - name: Индекс
+            href: Designer_Index.md
+          - name: Переменная
+            href: Designer_Variable.md
+        - name: Торговые
+          items:
+          - name: Регистрация заявки
+            href: Designer_Position_opening.md
+          - name: Отмена заявки
+            href: Designer_Cancellations.md
+          - name: Перемещение заявки
+            href: Designer_Orders_Moving.md
+          - name: Массовая отмена заявок
+            href: Designer_Mass_Cancellations.md
+        - name: Конвертеры
+          items:
+          - name: Индексатор
+            href: Designer_Indexer.md
+          - name: Конвертер
+            href: Designer_Converter.md
+        - name: Информирование
+          items:
+          - name: Уведомление
+            href: Designer_Notice.md
+        - name: Стаканы
+          items:
+          - name: Стакан
+            href: Designer_Depth.md
+          - name: Сгруппированный стакан
+            href: Designer_Depth_Grouped.md
+          - name: Панель стакана
+            href: Designer_Depth_panel.md
+          - name: Разреженный стакан
+            href: Designer_Depth_Spread.md
+          - name: Обрезанный стакан
+            href: Designer_MarketDepthTruncateDiagramElement.md
+        - name: Опционы
+          items:
+          - name: Стакан подразумеваемой волатильности
+            href: Designer_Depth_implied_volatility.md
+          - name: Доска опционов
+            href: Designer_Options_Board.md
+          - name: График позиций опционов
+            href: Designer_Graph_options_positions.md
+          - name: Блэк-Шоулз
+            href: Designer_Black_Scholes.md
+          - name: Хеджирование
+            href: Designer_Hedging.md
+          - name: Котирование
+            href: Designer_Quoting.md
+          - name: Деривативы
+            href: Designer_Derivatives.md
+        - name: Составные элементы
+          items:
+          - name: Пересечение
+            href: Designer_Crossing.md
+          - name: Условный оператор
+            href: Designer_Conditional_operator.md
+      - name: Линии
+        href: Designer_Line.md
+      - name: Событийная модель
+        href: Designer_Event_model.md
+      - name: Создание алгоритма из кубиков
+        href: Designer_Algorithm_creation_of_elements.md
+      - name: Создание составных элементов
+        href: Designer_Creating_composite_elements.md
+      - name: Примеры использования кубиков
+        items:
+        - name: Вывод свечей на график
+          href: Designer_Conclusion_of_candles_on_chart.md
+        - name: Получение лучшей цены для инструмента
+          href: Designer_Get_best_quote_for_instrument.md
+        - name: Определение объема позиции
+          href: Designer_Determination_of_volume_position.md
+        - name: Получение указанного уровня в стакане
+          href: Designer_Depth_Obtaining_Specified_level.md
+    - name: Использование C#
+      href: Designer_Creating_strategy_from_code.md
+      items:
+      - name: Интерфейс
+        href: Designer_Creation_element_containing_source_code.md
+      - name: Пример стратегии на C#
+        href: Designer_Creating_strategy_from_source_code.md
+      - name: Интеграция C# кода на общую схему
+        href: Designer_Integration_Source_code_in_scheme.md
+      - name: Внешние DLL
+        href: Designer_Add_Dll_Lib.md
+      - name: Комбинирование C# и стандартных кубиков
+        href: Designer_Combine_Source_code_and_standard_elements.md
+      - name: Создание индикатора на C#
+        href: Designer_Creating_indicator_from_source_code.md
+      - name: Написание кода в Visual Studio
+        items:
+        - name: Создание DLL кубика в Visual Studio
+          href: Designer_Creating_DLL_element_in_Visual_Studio.md
+        - name: Отладка DLL кубика с помощью Visual Studio
+          href: Designer_Debugging_DLL_using_Visual_Studio.md
+  - name: Индикаторы
+    href: Designer_Indicators.md
+  - name: Тестирование на истории
+    items:
+    - name: Интерфейс
+      href: Designer_Backtesting_Interface.md
+    - name: Отладка
+      href: Designer_Debug.md
+      items:
+      - name: Точки остановки
+        href: Designer_Debug_Break_Points.md
+      - name: Пошаговое исполнение
+        href: Designer_Step.md
+    - name: Пример тестирования на истории
+      href: Designer_Example_of_backtesting.md
+    - name: Оптимизация
+      href: Designer_Optimization.md
+    - name: Портфельное тестирование
+      href: Designer_Portfolio_Testing.md
+  - name: Хранилище маркет-данных
+    href: Designer_Repository_of_historical_data.md
+    items:
+    - name: Скачивание инструментов
+      href: Designer_Download_instruments.md
+    - name: Создание инструмента
+      href: Designer_Creation_tool.md
+    - name: Редактирование инструмента
+      href: Designer_Edit_tool.md
+    - name: Индекс
+      href: Designer_create_index.md
+    - name: Непрерывный фьючерс
+      href: Designer_GluingData.md
+    - name: Скачивание данных
+      href: Designer_Downloading_data.md
+    - name: Создание хранилища исторических данных
+      href: Designer_Creating_repository_of_historical_data.md
+    - name: Расширенная информация по инструменту
+      href: Designer_Security_ExtensionInfo.md
+    - name: Сопоставление инструменты-подключения
+      href: Designer_Security_mapping.md
+  - name: Live торговля
+    href: Designer_Live_trade.md
+    items:
+    - name: Добавление стратегии в Live торговлю
+      href: Designer_Add_strategy_Live_trade.md
+    - name: Интерфейс
+      href: Designer_Live_trade_interface.md
+    - name: Панель стратегий
+      href: Designer_Panel_strategies.md
+    - name: Пример Live торговли
+      href: Designer_Example_of_Live_trading.md
+    - name: Режим прогрева стратегии
+      href: Designer_Warm_Up_mode.md
+    - name: Исполнение стратегий на сервере
+      href: Designer_run_strategy_on_server.md
+  - name: Настройки подключения
+    href: Designer_Connection_settings.md
+    items:
+    - name: Настройки коннекторов
+      href: Connectors_setting.md
+    - name: Симулятор торгов
+      href: Designer_emulation_setting.md
+    - name: Привязка счета к подключению
+      href: Designer_connection_mapping.md
+    - name: Привязка маркет-данных к подключению
+      href: Designer_connector_security_mapping.md
+  - name: Галерея стратегий
+    href: Designer_Gallery_of_strategies.md
+    items:
+    - name: Публикация своей стратегии
+      href: Designer_Gallery_publish.md
+  - name: Совместная работа
+    href: Designer_Teamwork.md
+    items:
+    - name: Чат
+      href: Designer_Chat.md
+    - name: Экспорт стратегий
+      href: Designer_Export_strategies.md
+    - name: Экспорт стратегий с шифрованием
+      href: Designer_Encryption.md
+    - name: Импорт стратегий
+      href: Designer_Import_strategies.md
+    - name: Публикация графиков и таблиц
+      href: Designer_publish.md
+  - name: Опционные стратегии
+    href: Designer_Options.md
+  - name: Настройки
+    items:
+    - name: Настройки уведомлений
+      href: Designer_notification_Setting.md
+    - name: Режим запуска
+      href: Designer_Start_mode.md
+    - name: Сброс языка и настроек
+      href: Designer_Reset_language_settings.md
+    - name: Редактирование данных вручную
+      href: Designer_Directory_and_edit_data_manually.md
+    - name: Обратная связь
+      href: Designer_contact_us.md
+- name: S#.Terminal
+  href: Terminal.md
+  items:
+  - name: Установка S#.Terminal
+    href: Terminal_Installation.md
+  - name: Обновление на новую версию
+    href: Terminal_Update_to_new_version.md
+  - name: Быстрый запуск
+    href: Terminal_Quick_start.md
+  - name: Интерфейс программы
+    items:
+    - name: Панель быстрого доступа
+      href: Terminal_Quick_access_toolbar.md
+    - name: Лента
+      href: Terminal_Tape.md
+    - name: Рабочая область
+      href: Terminal_Workspace.md
+    - name: Панель Логи
+      href: Terminal_Panel_Logs.md
+    - name: Портфели
+      href: Terminal_Panel_Portfolios.md
+    - name: Редактор площадок
+      href: Terminal_Boards.md
+    - name: Риск-менеджмент
+      href: Terminal_Risk_Rule.md
+    - name: Компоненты
+      href: Terminal_Components.md
+      items:
+      - name: Инструменты
+        href: Terminal_Securities.md
+      - name: Level 1
+        href: Terminal_level1.md
+      - name: Купить/Продать
+        href: Terminal_Buy_Sell.md
+      - name: Стакан
+        href: Terminal_Depth_Panel2.md
+      - name: График
+        href: Terminal_Chart.md
+      - name: График П/У
+        href: Terminal_chart_PU.md
+      - name: Сделки
+        href: Terminal_Trades.md
+      - name: Заявки
+        href: Terminal_Orders.md
+      - name: Условные заявки
+        href: Terminal_Orders_conditional.md
+      - name: Позиции
+        href: Terminal_Chart_Position.md
+      - name: Лента сделок
+        href: Terminal_Tape_Trades.md
+      - name: Новости
+        href: Terminal_news.md
+      - name: Позиции (опционы)
+        href: Terminal_options_positions.md
+      - name: Доска опционов
+        href: Terminal_option_desk.md
+      - name: Улыбка волатильности
+        href: Terminal_smile_of_volatility.md
+      - name: Лог заявок
+        href: Terminal_orderlog.md
+  - name: Настройки подключения
+    href: Terminal_Connection_settings.md
+  - name: Хранилище маркет-данных
+    href: Terminal_Repository_of_market_data.md
+  - name: Индикаторы
+    href: Terminal_Indicators.md
+  - name: Совместная работа
+    href: Terminal_Teamwork.md
+    items:
+    - name: Чат
+      href: Terminal_Chat.md
+    - name: Публикация графиков и таблиц
+      href: Terminal_publish.md
+  - name: Уведомления
+    href: Terminal_Notifications.md
+    items:
+    - name: Панель уведомлений
+      href: Terminal_Notifications_Panel.md
+    - name: Настройки уведомлений
+      href: Terminal_notification_Setting.md
+  - name: Настройки
+    items:
+    - name: Режим запуска
+      href: Terminal_Start_mode.md
+    - name: Сброс языка и настроек
+      href: Terminal_Reset_language_settings.md
+    - name: Обратная связь
+      href: Terminal_contact_us.md
+- name: S#.Data (Hydra)
+  href: Hydra.md
+  items:
+  - name: Видео
+    items:
+    - name: Первый запуск
+      href: HydraFirstStartVideos.md
+    - name: Примеры настройки подключений
+      href: HydraConnectingSetup.md
+      items:
+      - name: Подключение к Финам
+        href: HydraConnectingFinam.md
+      - name: Подключение к Oanda
+        href: HydraConnectingOanda.md
+      - name: Подключение к Interactive Brokers
+        href: HydraConnectingIBTWS.md
+      - name: Подключение к Bitmex
+        href: HydraConnectingBitmex.md
+      - name: Подключение к Binance
+        href: HydraConnectingBinance.md
+    - name: Настройка инструментов для скачивания
+      href: HydraSecuritiesCongfigDowVideo.md
+    - name: Построение свечей различного типа
+      href: HydraBuildDifferentCandleType.md
+    - name: Получение Стакана из иного типа маркет-данных
+      href: HydraBuildMarkethDepthLogLevel.md
+    - name: Настройка формата сохранения
+      href: HydraDiffSaveFormat.md
+    - name: Построение индикатора
+      href: HydraBuildIndicator.md
+    - name: Функция Аналитика
+      href: HydraAnalitich.md
+    - name: Импорт данных
+      href: HydraImportVideos.md
+    - name: Экспорт данных
+      href: HydraExportAutoVideo.md
+    - name: Функция Конвертер
+      href: HydraConvectorVideo.md
+  - name: Установка S#.Data
+    href: HydraUsing.md
+  - name: Обновление на новую версию
+    href: HydraUpdate.md
+  - name: Первый запуск
+    href: HydraFirstLaunch.md
+  - name: Источники данных
+    href: HydraDataSource.md
+    items:
+    - name: Выбор источника данных
+      href: HydraSourceSelection.md
+    - name: Общие параметры подключения
+      href: HydraCommonConnectionSettings.md
+  - name: Настройки при скачивании маркет-данных
+    items:
+    - name: Настройка инструмента для скачивания
+      href: HydraConfigurationSecuritiesDownload.md
+    - name: Настройка пользовательских свечей
+      href: HydraCustomCandleType.md
+  - name: Работа с маркет-данными
+    href: HydraWorkingWithMarketData.md
+    items:
+    - name: Просмотр маркет-данных
+      href: HydraViewingMarketData.md
+      items:
+      - name: Сделки (Тики)
+        href: HydraExportTrades.md
+      - name: Стаканы
+        href: HydraExportDepth.md
+      - name: Свечи
+        href: HydraExportCandles.md
+      - name: Лог заявок
+        href: HydraExportOrderLog.md
+      - name: 'Level 1 '
+        href: HydraExportSecurityChange.md
+      - name: Новости
+        href: HydraExportNews.md
+      - name: Транзакции
+        href: HydraExportExecution.md
+      - name: Доска опционов
+        href: hydra_options.md
+      - name: Индикаторы
+        href: Hydra_export_indicator.md
+      - name: Позиции
+        href: Hydra_export_position.md
+    - name: Генерация свечек
+      href: HydraCandles.md
+    - name: Эспорт маркет-данных
+      href: HydraExport.md
+      items:
+      - name: Экспорт в форматы TSLab и MetaStock
+        href: Hydra_Export_TSLab_MetaStock.md
+    - name: Использование маркет данных различного типа
+      href: HydraUsingDifferentTypesMarketData.md
+  - name: Индикаторы
+    href: Hydra_Indicators.md
+  - name: Импорт данных
+    href: HydraImport.md
+    items:
+    - name: Свечи
+      href: HydraImportCandles.md
+    - name: Инструменты
+      href: HydraImportSecurities.md
+    - name: Сделки
+      href: HydraImportTrades.md
+    - name: Стаканы
+      href: HydraImportDepths.md
+    - name: Лог заявок
+      href: HydraImportOrderlog.md
+    - name: Level 1
+      href: HydraImportLevel1.md
+    - name: Новости
+      href: HydraImportNews.md
+    - name: Транзакции
+      href: HydraImportExecutions.md
+  - name: Серверный режим
+    items:
+    - name: Настройки
+      href: HydraSettings.md
+    - name: Настройки эмуляции
+      href: HydraEmulation.md
+    - name: Инструменты и подключения
+      href: HydraSymbolMappingVer5.md
+    - name: Подключение через FIX протокол
+      href: hydraAPIConnect.md
+  - name: Настройка инструментов и площадок
+    items:
+    - name: Инструменты
+      href: HydraSettingsSecurity.md
+    - name: Создание инструмента
+      href: Hydra_Creation_tool.md
+    - name: Индекс
+      href: hydra_index.md
+    - name: Непрерывный фьючерс
+      href: HydraGluingData.md
+    - name: Редактирование инструментов
+      href: HydraSettingsSecurityEditor.md
+    - name: Расширенная информация
+      href: HydraExtensionInfo.md
+    - name: Сопоставление инструменты-подключения
+      href: HydraSymbolMapping.md
+    - name: Площадки
+      href: HydraBoards.md
+  - name: Создание источника
+    href: HydraPlugins.md
+  - name: Создание утилит
+    href: HydraCreatTask.md
+  - name: Утилиты
+    href: HydraTasks.md
+    items:
+    - name: Конвертер
+      href: HydraTasksConverter.md
+    - name: Экспорт (авто)
+      href: HydraTasksExport.md
+    - name: Импорт (авто)
+      href: HydraTasksImport.md
+    - name: Бэкап данных
+      href: HydraTasksBackup.md
+  - name: Аналитика
+    href: HydraAnalytics.md
+    items:
+    - name: Работа со скриптами
+      href: HydraAnalyticsScripts.md
+    - name: Запуск и отображение результатов анализа
+      href: HydraAnalyticsShow.md
+  - name: Настройки
+    items:
+    - name: Сбросить настройки
+      href: HydraResetSettings.md
+    - name: 'Удалить данные '
+      href: HydraRemoveData.md
+    - name: Настройка сети
+      href: HydraNetworkSettings.md
+    - name: База данных
+      href: StoragesDatabase.md
+    - name: Аварийное восстановление
+      href: HydraDisasterRecovery.md
+    - name: Синхронизация данных
+      href: HydraSynchronizeData.md
+    - name: Бэкап данных
+      href: HydraBackup.md
+      items:
+      - name: Создание и настройка аккаунта
+        href: HydraBackup_account.md
+      - name: Создание и настройка задачи
+        href: HydraBackup_task.md
+      - name: Восстановление данных
+        href: HydraBackup_recovery.md
+- name: S#.Shell
+  href: Shell.md
+  items:
+  - name: Установка S#.Shell
+    href: Shell_Installation.md
+  - name: Быстрый запуск
+    href: Shell_Quick_start.md
+  - name: Интерфейс программы
+    items:
+    - name: Общее
+      href: Shell_Common.md
+    - name: Реал-тайм
+      href: Shell_RealTime.md
+    - name: Эмуляция
+      href: Shell_emulation.md
+    - name: RemoteManager
+      href: Shell_RemoteManager.md
+  - name: Настройки подключения
+    href: Shell_Connection_settings.md
+    items:
+    - name: Настройки коннекторов
+      href: Shell_Connectors_settings.md
+  - name: Создание собственной стратегии
+    href: Shell_custom_strategy.md
+  - name: Создание собственных панеле для стратегий
+    href: Shell_custom_strategy_panel.md
+  - name: Запуск стратегии созданной в S#.Designer
+    href: Shell_run_Designer_strategy.md
+- name: S#.MT4 и S#.MT5
+  href: MT.md
+- name: S#.MatLab
+  href: MatLab.md
+- name: S#.RemoteManager
+  href: API.RemoteManager.md
