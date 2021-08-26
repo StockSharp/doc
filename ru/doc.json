@@ -11,7 +11,6 @@
           "exclude": [
             "**/obj/**",
             "**/bin/**",
-            "_site/**"
           ]
         }
       ],
@@ -36,7 +35,6 @@
         ],
         "exclude": [
           "obj/**",
-          "_site/**"
         ]
       }
     ],
@@ -49,7 +47,6 @@
         ],
         "exclude": [
           "obj/**",
-          "_site/**"
         ]
       }
     ],
@@ -66,7 +63,6 @@
         ],
         "exclude": [
           "obj/**",
-          "_site/**"
         ]
       }
     ],
@@ -74,5 +70,59 @@
     "template": [
       "default"
     ]
+  },
+  "__pdf": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+        ],
+        "exclude": [
+          "**/toc.yml",
+          "**/toc.md"
+        ]
+      },
+      {
+        "files": [
+          "api/*.md",
+          "topics/**.md",
+          "topics/**.yml",
+          "pdf/*"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**"
+        ]
+      },
+      {
+        "files": "pdf/toc.yml"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**",
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**",
+        ]
+      }
+    ],
+    "wkhtmltopdf": {
+      "additionalArguments": "--enable-local-file-access"
+    },
+    "dest": "../../docfx_test/_site/ru"
   }
 }
