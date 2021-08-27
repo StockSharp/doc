@@ -1,5 +1,3 @@
-- name: About StockSharp
-  href: StockSharpTitle.md
 - name: Common
   items:
   - name: StockSharp Licensing
