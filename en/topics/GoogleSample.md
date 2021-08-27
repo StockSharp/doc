@@ -1,6 +1,6 @@
 # Adapter initialization Google
 
-The code below demonstrates how to initialize the [GoogleMessageAdapter](../api/StockSharp.Google.GoogleMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [GoogleMessageAdapter](xref:StockSharp.Google.GoogleMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new GoogleMessageAdapter(Connector.TransactionIdGenerator);

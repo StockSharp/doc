@@ -1,10 +1,10 @@
 # Buy\/Sell panel
 
-[BuySellPanel](../api/StockSharp.Xaml.BuySellPanel.html) \- A special panel enabling you to quickly register an order for the best prices. 
+[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) \- A special panel enabling you to quickly register an order for the best prices. 
 
 ![API GUI BuySell](../images/API_GUI_BuySell.png)
 
-Below is an example of the code for adding the [BuySellPanel](../api/StockSharp.Xaml.BuySellPanel.html). 
+Below is an example of the code for adding the [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel). 
 
 ```xaml
 <Window x:Class="MainWindow"

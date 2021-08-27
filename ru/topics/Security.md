@@ -1,8 +1,8 @@
 # Инструменты
 
-[Security](../api/StockSharp.BusinessEntities.Security.html) \- финансовый инструмент, которым ведется торговля. Инструментом может быть акция, фьючерс, опцион и т.д.
+[Security](xref:StockSharp.BusinessEntities.Security) \- финансовый инструмент, которым ведется торговля. Инструментом может быть акция, фьючерс, опцион и т.д.
 
-Также существуют классы корзин инструментов [IndexSecurity](../api/StockSharp.Algo.IndexSecurity.html), [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) и [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html).
+Также существуют классы корзин инструментов [IndexSecurity](xref:StockSharp.Algo.IndexSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) и [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity).
 
 ## См. также
 

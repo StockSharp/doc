@@ -1,12 +1,12 @@
 # Connectors
 
-To work with exchanges and data sources in [S\#](StockSharpAbout.md) it is recommended to use the base class [Connector](../api/StockSharp.Algo.Connector.html). 
+To work with exchanges and data sources in [S\#](StockSharpAbout.md) it is recommended to use the base class [Connector](xref:StockSharp.Algo.Connector). 
 
-Let's consider working with [Connector](../api/StockSharp.Algo.Connector.html). The example source codes are in the project Samples\/Common\/SampleConnection.
+Let's consider working with [Connector](xref:StockSharp.Algo.Connector). The example source codes are in the project Samples\/Common\/SampleConnection.
 
 ![multiconnection main](../images/multiconnection_main.png)
 
-We create an instance of the [Connector](../api/StockSharp.Algo.Connector.html) class:
+We create an instance of the [Connector](xref:StockSharp.Algo.Connector) class:
 
 ```cs
 ...
@@ -21,7 +21,7 @@ public MainWindow()
 		
 ```
 
-To configure [Connector](../api/StockSharp.Algo.Connector.html)**S\#.API** has a special graphical interface in which you can configure several connections at once. How to use it see [Graphical configuration](API_ConnectorsUIConfiguration.md). 
+To configure [Connector](xref:StockSharp.Algo.Connector)**S\#.API** has a special graphical interface in which you can configure several connections at once. How to use it see [Graphical configuration](API_ConnectorsUIConfiguration.md). 
 
 ```cs
 ...
@@ -39,16 +39,16 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
-Similarly, you can add connections directly from the code (without graphic windows) using the extension method [TraderHelper.AddAdapter\`\`1](../api/StockSharp.Algo.TraderHelper.AddAdapter``1.html):
+Similarly, you can add connections directly from the code (without graphic windows) using the extension method [TraderHelper.AddAdapter\`\`1](xref:StockSharp.Algo.TraderHelper.AddAdapter``1):
 
 ```cs
 ...
 connector.AddAdapter<BarChartMessageAdapter>(a => { });
 ```
 
-You can add an unlimited number of connections to a single [Connector](../api/StockSharp.Algo.Connector.html) object. Therefore, from the program you can simultaneously connect to several exchanges and brokers at once.
+You can add an unlimited number of connections to a single [Connector](xref:StockSharp.Algo.Connector) object. Therefore, from the program you can simultaneously connect to several exchanges and brokers at once.
 
-In the *InitConnector* method, we set the required [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) event handlers:
+In the *InitConnector* method, we set the required [IConnector](xref:StockSharp.BusinessEntities.IConnector) event handlers:
 
 ```cs
 private void InitConnector()
@@ -109,9 +109,9 @@ private void InitConnector()
 }
 ```
 
-To save and load [Connector](../api/StockSharp.Algo.Connector.html) settings to a file, see [Save and load settings](API_Connectors_SaveConnectorSettings.md).
+To save and load [Connector](xref:StockSharp.Algo.Connector) settings to a file, see [Save and load settings](API_Connectors_SaveConnectorSettings.md).
 
-To create your own [Connector](../api/StockSharp.Algo.Connector.html), see [Creating own connector](ConnectorCreating.md).
+To create your own [Connector](xref:StockSharp.Algo.Connector), see [Creating own connector](ConnectorCreating.md).
 
 For registering orders, see [Orders management](Orders.md), [Create new order](CreateNewOrder.md), [Create new stop order](API_StopOrders.md). 
 

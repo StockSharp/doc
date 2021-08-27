@@ -1,6 +1,6 @@
 # Adapter initialization CQG
 
-The code below demonstrates how to initialize the [CqgComMessageAdapter](../api/StockSharp.Cqg.Com.CqgComMessageAdapter.html) and [CqgContinuumMessageAdapter](../api/StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter.html) and and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) and [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter) and and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 1. **CQG COM**, connection by local **CQG Integrated Client**:
 

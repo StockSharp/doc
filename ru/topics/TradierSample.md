@@ -1,6 +1,6 @@
 # Инициализация адаптера Tradier
 
-Код ниже демонстрирует как инициализировать [TradierMessageAdapter](../api/StockSharp.Tradier.TradierMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [TradierMessageAdapter](xref:StockSharp.Tradier.TradierMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new TradierMessageAdapter(Connector.TransactionIdGenerator);

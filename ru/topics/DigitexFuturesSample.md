@@ -1,6 +1,6 @@
 # Инициализация адаптера DigitexFutures
 
-Код ниже демонстрирует как инициализировать [DigitexFuturesMessageAdapter](../api/StockSharp.DigitexFutures.DigitexFuturesMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [DigitexFuturesMessageAdapter](xref:StockSharp.DigitexFutures.DigitexFuturesMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -1,15 +1,15 @@
 # Кластеры
 
-ClusterChart \- специальный тип графика для отображения объемов в виде кластеров с гистограммами. Для использования этого типа графика необходимо задать специальный стиль [ChartCandleElement.DrawStyle](../api/StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle.html) \= [ChartCandleDrawStyles.ClusterProfile](../api/StockSharp.Xaml.Charting.ChartCandleDrawStyles.ClusterProfile.html). В качестве исходных данных этот график использует информацию из свойства [Candle.PriceLevels](../api/StockSharp.Algo.Candles.Candle.PriceLevels.html). 
+ClusterChart \- специальный тип графика для отображения объемов в виде кластеров с гистограммами. Для использования этого типа графика необходимо задать специальный стиль [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Xaml.Charting.ChartCandleDrawStyles.ClusterProfile). В качестве исходных данных этот график использует информацию из свойства [Candle.PriceLevels](xref:StockSharp.Algo.Candles.Candle.PriceLevels). 
 
 ![Gui ClasterChart](../images/Gui_ClasterChart.png)
 
 **Основные свойства**
 
-- [ClusterLineColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor.html) \- цвет базовой линии кластера. 
-- [ClusterTextColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor.html) \- цвет цифр объемов на графике. 
-- [ClusterColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor.html) \- основной цвет баров в гистограммах кластеров. 
-- [ClusterMaxColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor.html) \- цвет бара максимального объема в гисторграммах кластеров. 
+- [ClusterLineColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor) \- цвет базовой линии кластера. 
+- [ClusterTextColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor) \- цвет цифр объемов на графике. 
+- [ClusterColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor) \- основной цвет баров в гистограммах кластеров. 
+- [ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) \- цвет бара максимального объема в гисторграммах кластеров. 
 
 Пример использования этого типа графика расположен в Samples\/Common\/SampleChart. 
 

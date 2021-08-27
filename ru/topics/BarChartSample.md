@@ -1,6 +1,6 @@
 # Инициализация адаптера BarChart
 
-Код ниже демонстрирует как инициализировать [BarChartMessageAdapter](../api/StockSharp.BarChart.BarChartMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BarChartMessageAdapter](xref:StockSharp.BarChart.BarChartMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

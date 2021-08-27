@@ -1,6 +1,6 @@
 # Инициализация адаптера BW
 
-Код ниже демонстрирует как инициализировать [BWMessageAdapter](../api/StockSharp.BW.BWMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BWMessageAdapter](xref:StockSharp.BW.BWMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

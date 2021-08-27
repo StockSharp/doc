@@ -1,23 +1,23 @@
 # Patterns
 
-It is possible to make candles pattern recognition through the [CandleHelper](../api/StockSharp.Algo.Candles.CandleHelper.html) class by the following methods:
+It is possible to make candles pattern recognition through the [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) class by the following methods:
 
-- [IsWhiteOrBlack](../api/StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack.html)
+- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack)
 
    \- Is it white or black candle. 
-- [IsMarubozu](../api/StockSharp.Algo.Candles.CandleHelper.IsMarubozu.html)
+- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu)
 
    \- Is it a shadowless candle. 
-- [IsSpinningTop](../api/StockSharp.Algo.Candles.CandleHelper.IsSpinningTop.html)
+- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop)
 
    \- Is it a neutral candle by trades. 
-- [IsHammer](../api/StockSharp.Algo.Candles.CandleHelper.IsHammer.html)
+- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer)
 
    \- Is it a hammer candle. 
-- [IsDragonflyOrGravestone](../api/StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone.html)
+- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone)
 
    \- Is it a dragonfly or gravestone candle. 
-- [IsBullishOrBearish](../api/StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish.html)
+- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish)
 
    \- Is it a bull or bear candle. 
 
@@ -25,16 +25,16 @@ It is possible to make candles pattern recognition through the [CandleHelper](..
 
 Common methods of work with candles
 
-[CandleHelper](../api/StockSharp.Algo.Candles.CandleHelper.html) also provides a variety of algorithms for candles to simplify writing of code:
+[CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) also provides a variety of algorithms for candles to simplify writing of code:
 
-- The candle time range getting through the [GetCandleBounds](../api/Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds.html) method. For example, you want to find out exactly when the current 10.5\-minute candle ends:
+- The candle time range getting through the [GetCandleBounds](xref:Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds) method. For example, you want to find out exactly when the current 10.5\-minute candle ends:
 
   ```cs
   var candleTimeFrame = TimeSpan.FromMinutes(10.5);
   Console.WriteLine(candleTimeFrame.GetCandleBounds(DateTime.Now).Max);
   					
   ```
-- To get the candle length, its body, its shadows through [GetLength](../api/StockSharp.Algo.Candles.CandleHelper.GetLength.html), [GetBody](../api/StockSharp.Algo.Candles.CandleHelper.GetBody.html), [GetTopShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetTopShadow.html) and [GetBottomShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetBottomShadow.html):
+- To get the candle length, its body, its shadows through [GetLength](xref:StockSharp.Algo.Candles.CandleHelper.GetLength), [GetBody](xref:StockSharp.Algo.Candles.CandleHelper.GetBody), [GetTopShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetTopShadow) and [GetBottomShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetBottomShadow):
 
   ```cs
   // sample candle

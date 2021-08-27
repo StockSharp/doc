@@ -1,224 +1,224 @@
 # Rule
 
-For the [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) the [S\#](StockSharpAbout.md) already has a number of predefined conditions and actions for the most common scenarios. The [MarketRuleHelper](../api/StockSharp.Algo.MarketRuleHelper.html) class conditions lists grouped by trading objects are listed below: 
+For the [IMarketRule](xref:StockSharp.Algo.IMarketRule) the [S\#](StockSharpAbout.md) already has a number of predefined conditions and actions for the most common scenarios. The [MarketRuleHelper](xref:StockSharp.Algo.MarketRuleHelper) class conditions lists grouped by trading objects are listed below: 
 
-For the [Security](../api/StockSharp.BusinessEntities.Security.html)
+For the [Security](xref:StockSharp.BusinessEntities.Security)
 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- the instrument change event rule. 
-- [MarketRuleHelper.WhenNewTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewTrade.html)
+- [MarketRuleHelper.WhenNewTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewTrade)
 
    \- the rule when instrument has the new trade occurrence event. 
-- [MarketRuleHelper.WhenMarketDepthChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenMarketDepthChanged.html)
+- [MarketRuleHelper.WhenMarketDepthChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenMarketDepthChanged)
 
    \- the rule when instrument has the order book change event. 
-- [MarketRuleHelper.WhenBestBidPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore.html)
+- [MarketRuleHelper.WhenBestBidPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore)
 
    \- the rule for the event of the best bid increase above a specified level. 
-- [MarketRuleHelper.WhenBestBidPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess.html)
+- [MarketRuleHelper.WhenBestBidPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess)
 
    \- the rule for the event of the best bid decrease below a specified level. 
-- [MarketRuleHelper.WhenBestAskPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore.html)
+- [MarketRuleHelper.WhenBestAskPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore)
 
    \- the rule for the event of the best offer increase above a specified level. 
-- [MarketRuleHelper.WhenBestAskPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess.html)
+- [MarketRuleHelper.WhenBestAskPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess)
 
    \- the rule for the event of the best offer decrease below a specified level. 
-- [MarketRuleHelper.WhenLastTradePriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceMore.html)
+- [MarketRuleHelper.WhenLastTradePriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceMore)
 
    \- the rule for the event of the last trade price increase above a specified level. 
-- [MarketRuleHelper.WhenLastTradePriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceLess.html)
+- [MarketRuleHelper.WhenLastTradePriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceLess)
 
    \- the rule for the event of the last trade price decrease below a specified level. 
 
-For the [MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html)
+For the [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)
 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- the order book change event rule. 
-- [MarketRuleHelper.WhenSpreadMore](../api/StockSharp.Algo.MarketRuleHelper.WhenSpreadMore.html)
+- [MarketRuleHelper.WhenSpreadMore](xref:StockSharp.Algo.MarketRuleHelper.WhenSpreadMore)
 
    \- the rule for the event of the book order spread size more then specified value. 
-- [MarketRuleHelper.WhenSpreadLess](../api/StockSharp.Algo.MarketRuleHelper.WhenSpreadLess.html)
+- [MarketRuleHelper.WhenSpreadLess](xref:StockSharp.Algo.MarketRuleHelper.WhenSpreadLess)
 
    \- the rule for the event of the book order spread size less then specified value. 
-- [MarketRuleHelper.WhenBestBidPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore.html)
+- [MarketRuleHelper.WhenBestBidPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore)
 
    \- the rule for the event of the best bid increase above a specified level. 
-- [MarketRuleHelper.WhenBestBidPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess.html)
+- [MarketRuleHelper.WhenBestBidPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess)
 
    \- the rule for the event of the best bid decrease below a specified level. 
-- [MarketRuleHelper.WhenBestAskPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore.html)
+- [MarketRuleHelper.WhenBestAskPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore)
 
    \- the rule for the event of the best offer increase above a specified level. 
-- [MarketRuleHelper.WhenBestAskPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess.html)
+- [MarketRuleHelper.WhenBestAskPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess)
 
    \- the rule for the event of the best offer decrease below a specified level. 
 
-For the [Order](../api/StockSharp.BusinessEntities.Order.html)
+For the [Order](xref:StockSharp.BusinessEntities.Order)
 
-- [MarketRuleHelper.WhenRegistered](../api/StockSharp.Algo.MarketRuleHelper.WhenRegistered.html)
+- [MarketRuleHelper.WhenRegistered](xref:StockSharp.Algo.MarketRuleHelper.WhenRegistered)
 
    \- the rule for the event of the successful order registration on exchange. 
-- [MarketRuleHelper.WhenPartiallyMatched](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyMatched.html)
+- [MarketRuleHelper.WhenPartiallyMatched](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyMatched)
 
    \- the rule for the event of the partially matched order. 
-- [MarketRuleHelper.WhenRegisterFailed](../api/StockSharp.Algo.MarketRuleHelper.WhenRegisterFailed.html)
+- [MarketRuleHelper.WhenRegisterFailed](xref:StockSharp.Algo.MarketRuleHelper.WhenRegisterFailed)
 
    \- the rule for the event of the failed order registration on exchange. 
-- [MarketRuleHelper.WhenCancelFailed](../api/StockSharp.Algo.MarketRuleHelper.WhenCancelFailed.html)
+- [MarketRuleHelper.WhenCancelFailed](xref:StockSharp.Algo.MarketRuleHelper.WhenCancelFailed)
 
    \- the rule for the event of the failed order cancel on exchange. 
-- [MarketRuleHelper.WhenCanceled](../api/StockSharp.Algo.MarketRuleHelper.WhenCanceled.html)
+- [MarketRuleHelper.WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled)
 
    \- the rule for the event of the order cancel on exchange. 
-- [MarketRuleHelper.WhenMatched](../api/StockSharp.Algo.MarketRuleHelper.WhenMatched.html)
+- [MarketRuleHelper.WhenMatched](xref:StockSharp.Algo.MarketRuleHelper.WhenMatched)
 
    \- the rule for the event of the fully matched order on exchange. 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- the rule for the event of the order change. 
-- [MarketRuleHelper.WhenNewTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewTrade.html)
+- [MarketRuleHelper.WhenNewTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewTrade)
 
    \- the rule for the event of the trade occurrence by the order. 
 
-For the [Portfolio](../api/StockSharp.BusinessEntities.Portfolio.html)
+For the [Portfolio](xref:StockSharp.BusinessEntities.Portfolio)
 
-- [MarketRuleHelper.WhenMoneyLess](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyLess.html)
+- [MarketRuleHelper.WhenMoneyLess](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyLess)
 
    \- the rule for the event of the money decrease in the portfolio below a specified level. 
-- [MarketRuleHelper.WhenMoneyMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyMore.html)
+- [MarketRuleHelper.WhenMoneyMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyMore)
 
    \- the rule for the event of the money increase in the portfolio above a specified level. 
 
-For [Position](../api/StockSharp.BusinessEntities.Position.html)
+For [Position](xref:StockSharp.BusinessEntities.Position)
 
-- [MarketRuleHelper.WhenLess](../api/StockSharp.Algo.MarketRuleHelper.WhenLess.html)
+- [MarketRuleHelper.WhenLess](xref:StockSharp.Algo.MarketRuleHelper.WhenLess)
 
    \- the rule for the event of the position decrease below a specified level. 
-- [MarketRuleHelper.WhenMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMore.html)
+- [MarketRuleHelper.WhenMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMore)
 
    \- the rule for the event of the position increase above a specified level. 
-- [MarketRuleHelper.Changed](../api/StockSharp.Algo.MarketRuleHelper.Changed.html)
+- [MarketRuleHelper.Changed](xref:StockSharp.Algo.MarketRuleHelper.Changed)
 
    \- the rule for the event of the position change. 
 
-For the [IPnLManager](../api/StockSharp.Algo.PnL.IPnLManager.html)
+For the [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager)
 
-- [StrategyHelper.WhenPnLLess](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPnLLess.html)
+- [StrategyHelper.WhenPnLLess](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPnLLess)
 
    \- the rule for the event of the profit decrease below a specified level. 
-- [StrategyHelper.WhenPnLMore](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPnLMore.html)
+- [StrategyHelper.WhenPnLMore](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPnLMore)
 
    \- the rule for the event of the profit increase above a specified level. 
-- [StrategyHelper.WhenPositionChanged](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged.html)
+- [StrategyHelper.WhenPositionChanged](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged)
 
    \- the rule for the event of the profit change. 
 
-For the [Candle](../api/StockSharp.Algo.Candles.Candle.html)
+For the [Candle](xref:StockSharp.Algo.Candles.Candle)
 
-- [MarketRuleHelper.WhenClosePriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenClosePriceMore.html)
+- [MarketRuleHelper.WhenClosePriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenClosePriceMore)
 
    \- the rule for the event of the candle closing price increase above a specified level. 
-- [MarketRuleHelper.WhenClosePriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenClosePriceLess.html)
+- [MarketRuleHelper.WhenClosePriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenClosePriceLess)
 
    \- the rule for the event of the candle closing price decrease below a specified level. 
-- [MarketRuleHelper.WhenTotalVolumeMore](../api/StockSharp.Algo.MarketRuleHelper.WhenTotalVolumeMore.html)
+- [MarketRuleHelper.WhenTotalVolumeMore](xref:StockSharp.Algo.MarketRuleHelper.WhenTotalVolumeMore)
 
    \- the rule for the event of the candle total volume increase above a specified level. 
-- [MarketRuleHelper.WhenCurrentCandleTotalVolumeMore](../api/StockSharp.Algo.MarketRuleHelper.WhenCurrentCandleTotalVolumeMore.html)
+- [MarketRuleHelper.WhenCurrentCandleTotalVolumeMore](xref:StockSharp.Algo.MarketRuleHelper.WhenCurrentCandleTotalVolumeMore)
 
    \- the rule for the event of the current candle total volume increase above a specified level. 
-- [MarketRuleHelper.WhenCandlesStarted](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesStarted.html)
+- [MarketRuleHelper.WhenCandlesStarted](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesStarted)
 
    \- the rule for the event of the new candles occurrence. 
-- [MarketRuleHelper.WhenCandlesChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesChanged.html)
+- [MarketRuleHelper.WhenCandlesChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesChanged)
 
    \- the rule for the event of the candles change. 
-- [MarketRuleHelper.WhenCandlesFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesFinished.html)
+- [MarketRuleHelper.WhenCandlesFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesFinished)
 
    \- the rule for the event of the candles end. 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- the rule for the event of the candle change. 
-- [MarketRuleHelper.WhenFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenFinished.html)
+- [MarketRuleHelper.WhenFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenFinished)
 
    \- the rule for the event of the candle finish. 
-- [MarketRuleHelper.WhenPartiallyFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinished.html)
+- [MarketRuleHelper.WhenPartiallyFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinished)
 
    \- the rule for the event of the candle partial finish. 
-- [MarketRuleHelper.WhenPartiallyFinishedCandles](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinishedCandles.html)
+- [MarketRuleHelper.WhenPartiallyFinishedCandles](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinishedCandles)
 
    \- the rule for the event of the candles partial finish. 
 
-For the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html)
+For the [Strategy](xref:StockSharp.Algo.Strategies.Strategy)
 
-- [StrategyHelper.WhenNewMyTrade](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenNewMyTrade.html)
+- [StrategyHelper.WhenNewMyTrade](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenNewMyTrade)
 
    \- the rule for the event of the strategy new trades occurrence. 
-- [StrategyHelper.WhenPositionChanged](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged.html)
+- [StrategyHelper.WhenPositionChanged](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged)
 
    \- the rule for the event of the strategy position change. 
-- [StrategyHelper.WhenStarted](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStarted.html)
+- [StrategyHelper.WhenStarted](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStarted)
 
    \- the rule for the event of the strategy work start. 
-- [StrategyHelper.WhenStopping](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStopping.html)
+- [StrategyHelper.WhenStopping](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStopping)
 
    \- the rule for the event of the strategy work stopping. 
-- [StrategyHelper.WhenStopped](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStopped.html)
+- [StrategyHelper.WhenStopped](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStopped)
 
    \- the rule for the event of the strategy work stopped. 
-- [StrategyHelper.WhenError](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenError.html)
+- [StrategyHelper.WhenError](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenError)
 
    \- the rule for the event of the strategy error. 
-- [StrategyHelper.WhenWarning](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenWarning.html)
+- [StrategyHelper.WhenWarning](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenWarning)
 
    \- the rule for the event of the strategy warning. 
 
-For the [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+For the [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
-- [MarketRuleHelper.WhenIntervalElapsed](../api/StockSharp.Algo.MarketRuleHelper.WhenIntervalElapsed.html)
+- [MarketRuleHelper.WhenIntervalElapsed](xref:StockSharp.Algo.MarketRuleHelper.WhenIntervalElapsed)
 
    \- the rule for the event of the 
 
-  [IConnector.MarketTimeChanged](../api/StockSharp.BusinessEntities.IConnector.MarketTimeChanged.html)
+  [IConnector.MarketTimeChanged](xref:StockSharp.BusinessEntities.IConnector.MarketTimeChanged)
 
    change on value, which greater than or equal to the parameter. 
-- [MarketRuleHelper.WhenTimeCome](../api/StockSharp.Algo.MarketRuleHelper.WhenTimeCome.html)
+- [MarketRuleHelper.WhenTimeCome](xref:StockSharp.Algo.MarketRuleHelper.WhenTimeCome)
 
    \- a rule that is activated upon the exact time occurrence. 
-- [MarketRuleHelper.WhenNewMyTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewMyTrade.html)
+- [MarketRuleHelper.WhenNewMyTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewMyTrade)
 
    \- the rule for the event of the new trade occurrence. 
-- [MarketRuleHelper.WhenNewOrder](../api/StockSharp.Algo.MarketRuleHelper.WhenNewOrder.html)
+- [MarketRuleHelper.WhenNewOrder](xref:StockSharp.Algo.MarketRuleHelper.WhenNewOrder)
 
    \- the rule for the event of the new order occurrence. 
 
 Similarly to the conditions there are predefined actions: 
 
-- [StrategyHelper.Register](../api/StockSharp.Algo.Strategies.StrategyHelper.Register.html)
+- [StrategyHelper.Register](xref:StockSharp.Algo.Strategies.StrategyHelper.Register)
 
    \- the action which registers the order. 
-- [StrategyHelper.ReRegister](../api/StockSharp.Algo.Strategies.StrategyHelper.ReRegister.html)
+- [StrategyHelper.ReRegister](xref:StockSharp.Algo.Strategies.StrategyHelper.ReRegister)
 
    \- the action which reregisters the order. 
-- [StrategyHelper.Cancel](../api/StockSharp.Algo.Strategies.StrategyHelper.Cancel.html)
+- [StrategyHelper.Cancel](xref:StockSharp.Algo.Strategies.StrategyHelper.Cancel)
 
    \- the action which cancels the order. 
-- [Protect](../api/Overload:StockSharp.Algo.Strategies.Extensions.Protect.html)
+- [Protect](xref:Overload:StockSharp.Algo.Strategies.Extensions.Protect)
 
    \- the action which protects trades simultaneously with 
 
-  [TakeProfitStrategy](../api/StockSharp.Algo.Strategies.Protective.TakeProfitStrategy.html)
+  [TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy)
 
    and 
 
-  [StopLossStrategy](../api/StockSharp.Algo.Strategies.Protective.StopLossStrategy.html)
+  [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy)
 
    strategies. 
 
-If you need to create your own unique rule (on any event, which is not provided as standard), you must create the derived [MarketRule\`2](../api/StockSharp.Algo.MarketRule`2.html) class, which will work with a prerequisite. Below is the [WhenMoneyMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyMore.html) method implementation: 
+If you need to create your own unique rule (on any event, which is not provided as standard), you must create the derived [MarketRule\`2](xref:StockSharp.Algo.MarketRule`2) class, which will work with a prerequisite. Below is the [WhenMoneyMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyMore) method implementation: 
 
 ```cs
 		
@@ -265,4 +265,4 @@ public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio port
 		
 ```
 
-The *PortfolioRule* rule subscribes to the [IPortfolioProvider.PortfolioChanged](../api/StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged.html) event, and as soon as it is called, then the condition is checked to exceed the current level of money in the portfolio above a specified limit. If the condition returns **true**, then the rule is activated through the [MarketRule\`2.Activate](../api/StockSharp.Algo.MarketRule`2.Activate.html) method. 
+The *PortfolioRule* rule subscribes to the [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) event, and as soon as it is called, then the condition is checked to exceed the current level of money in the portfolio above a specified limit. If the condition returns **true**, then the rule is activated through the [MarketRule\`2.Activate](xref:StockSharp.Algo.MarketRule`2.Activate) method. 

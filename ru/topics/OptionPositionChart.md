@@ -1,6 +1,6 @@
 # График позиции
 
-Графический компонент [OptionPositionChart](../api/StockSharp.Xaml.Charting.OptionPositionChart.html) \- это график, показывающий позицию и греки опционов относительно базового актива. 
+Графический компонент [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) \- это график, показывающий позицию и греки опционов относительно базового актива. 
 
 Далее показан пример SampleOptionQuoting, в котором используется этот график. Исходные коды примера можно найти в папке *Samples\/Misc\/SampleOptionQuoting*. 
 
@@ -10,7 +10,7 @@
 
 Пример SampleOptionQuoting
 
-1. В коде XAML добавляем элемент [OptionPositionChart](../api/StockSharp.Xaml.Charting.OptionPositionChart.html) и присваиваем ему имя **PosChart**.
+1. В коде XAML добавляем элемент [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) и присваиваем ему имя **PosChart**.
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -97,12 +97,12 @@
 3. При подключении задаем первоначальные установки контрола:
    1. Обнуляем базовый актив 
 
-      [UnderlyingAsset](../api/StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset.html)
+      [UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset)
 
        контрола; 
    2. Перерисовываем график с начальными значениями 
 
-      [Refresh](../api/StockSharp.Xaml.Charting.OptionPositionChart.Refresh.html)
+      [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh)
 
       ; 
    3. Задаем провайдера сообщений для рыночных данных и инструментов.

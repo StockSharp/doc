@@ -1,14 +1,14 @@
 # На истории с Финам
 
-Для тестирования на истории в классе [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html), наряду с использованием хранилища данных [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html), предусмотрен альтернативный механизм работы с источниками данных. Этот механизм позволяет "напрямую" загружать данные с серверов поставщиков исторической информации, в частности с сервера Финам или же работать с собственными источниками данных. 
+Для тестирования на истории в классе [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), наряду с использованием хранилища данных [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), предусмотрен альтернативный механизм работы с источниками данных. Этот механизм позволяет "напрямую" загружать данные с серверов поставщиков исторической информации, в частности с сервера Финам или же работать с собственными источниками данных. 
 
-Рассмотрим работу этого механизма на примере получения данных с сервиса Финам. Для работы с Финам в [S\#](StockSharpAbout.md) существует специальный класс [FinamMessageAdapter](../api/StockSharp.Finam.FinamMessageAdapter.html), который позволяет получать свечи, тики и информацию об инструментах. 
+Рассмотрим работу этого механизма на примере получения данных с сервиса Финам. Для работы с Финам в [S\#](StockSharpAbout.md) существует специальный класс [FinamMessageAdapter](xref:StockSharp.Finam.FinamMessageAdapter), который позволяет получать свечи, тики и информацию об инструментах. 
 
 ### Тестирование с данными, загруженными с Финама
 
 Тестирование с данными, загруженными с Финама
 
-1. Сначала нужно получить информацию об инструментах с сервиса Финам. Для этого необходимо создать хранилище для инструментов (**FinamSecurityStorage**) \- класс, реализующий интерфейс [ISecurityStorage](../api/StockSharp.Algo.Storages.ISecurityStorage.html). Код такого класса есть в примере *Samples\/Testing\/SampleHistoryTesting*. 
+1. Сначала нужно получить информацию об инструментах с сервиса Финам. Для этого необходимо создать хранилище для инструментов (**FinamSecurityStorage**) \- класс, реализующий интерфейс [ISecurityStorage](xref:StockSharp.Algo.Storages.ISecurityStorage). Код такого класса есть в примере *Samples\/Testing\/SampleHistoryTesting*. 
    1. Создаем инструмент.
 
       ```none

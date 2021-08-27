@@ -1,6 +1,6 @@
 # Графический рендерер индикаторов 
 
-Некоторые индикаторы требуют особого стиля прорисовки как, например, для индикатора [BollingerBands](../api/StockSharp.Algo.Indicators.BollingerBands.html) это две линии. Или для индикатора [Fractals](../api/StockSharp.Algo.Indicators.Fractals.html) это точки. В этом случае необходимо явно указывать в [ChartIndicatorElement](../api/StockSharp.Xaml.Charting.ChartIndicatorElement.html) графический рендерер индикаторов.
+Некоторые индикаторы требуют особого стиля прорисовки как, например, для индикатора [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) это две линии. Или для индикатора [Fractals](xref:StockSharp.Algo.Indicators.Fractals) это точки. В этом случае необходимо явно указывать в [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) графический рендерер индикаторов.
 
 ```cs
 			var chartIndicatorElement = new ChartIndicatorElement()
@@ -10,9 +10,9 @@
 		
 ```
 
-Рассмотрим на примере индикатора [Fractals](../api/StockSharp.Algo.Indicators.Fractals.html) как создать собственный IndicatorPainter. 
+Рассмотрим на примере индикатора [Fractals](xref:StockSharp.Algo.Indicators.Fractals) как создать собственный IndicatorPainter. 
 
-Все IndicatorPainter должны быть унаследованны от базового класса [BaseChartIndicatorPainter\`1](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.html) или интерфейса [IChartIndicatorPainter](../api/StockSharp.Xaml.Charting.IChartIndicatorPainter.html):
+Все IndicatorPainter должны быть унаследованны от базового класса [BaseChartIndicatorPainter\`1](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) или интерфейса [IChartIndicatorPainter](xref:StockSharp.Xaml.Charting.IChartIndicatorPainter):
 
 ```cs
 	/// <summary>
@@ -26,7 +26,7 @@
 		
 ```
 
-Зададим элементы графика [ChartLineElement](../api/StockSharp.Xaml.Charting.ChartLineElement.html) которые будут представлять верхний и нижний фракталы:
+Зададим элементы графика [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement) которые будут представлять верхний и нижний фракталы:
 
 ```cs
 	/// <summary>
@@ -56,7 +56,7 @@
 		
 ```
 
-В конструкторе [FractalsPainter](../api/StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter.html) зададим им значения и основные свойства цвет, толщину и стиль прорисовки. После чего добавляем их как дочерний элемент графика:
+В конструкторе [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter) зададим им значения и основные свойства цвет, толщину и стиль прорисовки. После чего добавляем их как дочерний элемент графика:
 
 ```cs
 	...
@@ -76,7 +76,7 @@
 		
 ```
 
-Переопределяем метод [OnDraw](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw.html) в котором с помощью метода [DrawValues](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues.html) прорисовываем индикатор:
+Переопределяем метод [OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw) в котором с помощью метода [DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues) прорисовываем индикатор:
 
 ```cs
 	...
@@ -92,7 +92,7 @@
 		
 ```
 
-Полный код [FractalsPainter](../api/StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter.html):
+Полный код [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter):
 
 ```cs
 	/// <summary>

@@ -1,29 +1,29 @@
 # Object properties editing table
 
-[PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) \- the table for editing object properties. The component includes a set of additional editors for system types and [S\#](StockSharpAbout.md) types. 
+[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) \- the table for editing object properties. The component includes a set of additional editors for system types and [S\#](StockSharpAbout.md) types. 
 
 ![GUI PropertyDataGridEx](../images/GUI_PropertyDataGridEx.png)
 
-[PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) has its own editors for the following types: 
+[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) has its own editors for the following types: 
 
-- [StockSharp.Messages.Unit](../api/StockSharp.Messages.Unit.html). 
-- [StockSharp.BusinessEntities.Security](../api/StockSharp.BusinessEntities.Security.html). 
-- [StockSharp.BusinessEntities.Portfolio](../api/StockSharp.BusinessEntities.Portfolio.html). 
-- [StockSharp.BusinessEntities.ExchangeBoard](../api/StockSharp.BusinessEntities.ExchangeBoard.html). 
-- [StockSharp.BusinessEntities.Exchange](../api/StockSharp.BusinessEntities.Exchange.html). 
-- [StockSharp.Algo.Candles.CandleSeries](../api/StockSharp.Algo.Candles.CandleSeries.html). 
+- [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit). 
+- [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security). 
+- [StockSharp.BusinessEntities.Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
+- [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
+- [StockSharp.BusinessEntities.Exchange](xref:StockSharp.BusinessEntities.Exchange). 
+- [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
 - **ExtensionInfo** directory. 
-- [System.TimeSpan](../api/System.TimeSpan.html), [System.DateTime](../api/System.DateTime.html) and [System.DateTimeOffset](../api/System.DateTimeOffset.html). 
-- [System.Net.EndPoint](../api/System.Net.EndPoint.html) and [System.Net.IPAddress](../api/System.Net.IPAddress.html). 
-- [System.Security.SecureString](../api/System.Security.SecureString.html). 
-- [System.Text.Encoding](../api/System.Text.Encoding.html). 
-- [System.Enum](../api/System.Enum.html). 
+- [System.TimeSpan](xref:System.TimeSpan), [System.DateTime](xref:System.DateTime) and [System.DateTimeOffset](xref:System.DateTimeOffset). 
+- [System.Net.EndPoint](xref:System.Net.EndPoint) and [System.Net.IPAddress](xref:System.Net.IPAddress). 
+- [System.Security.SecureString](xref:System.Security.SecureString). 
+- [System.Text.Encoding](xref:System.Text.Encoding). 
+- [System.Enum](xref:System.Enum). 
 
 **Main properties**
 
-- [SecurityProvider](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider.html) \- the provider of information about instruments. 
-- [ExchangeInfoProvider](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider.html) \- the provider of site information. 
-- [Portfolios](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios.html) \- the list of available portfolios. 
+- [SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- the provider of information about instruments. 
+- [ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- the provider of site information. 
+- [Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- the list of available portfolios. 
 - **SelectedObject** \- the object whose properties will be displayed in the table. 
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Fix\/SampleFix*. 

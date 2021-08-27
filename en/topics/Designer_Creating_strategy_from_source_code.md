@@ -20,7 +20,7 @@ using StockSharp.Algo;
 
 Dll libraries are added by clicking the **References** button in the **Source code** tab.
 
-Then the class is declared. The class name can be any combination of Latin characters. The cube class must be inherited from the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class:
+Then the class is declared. The class name can be any combination of Latin characters. The cube class must be inherited from the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class:
 
 ```cs
 	public class NewStrategy : Strategy
@@ -51,7 +51,7 @@ Variables necessary for displaying graphic elements are also declared. They do n
  private readonly ChartArea _area = new ChartArea();
 ```
 
-The [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html) attribute is required to indicate the input and output cube parameters. If the attribute defines an event, it means it will be an output parameter, if the method \- it means the input parameter:
+The [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute) attribute is required to indicate the input and output cube parameters. If the attribute defines an event, it means it will be an output parameter, if the method \- it means the input parameter:
 
 ```cs
  [DiagramExternal]
@@ -113,7 +113,7 @@ public NewStrategy()
 }
 ```
 
-The [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class has methods that you can override. In the example, the [OnReseted](../api/StockSharp.Algo.Strategies.Strategy.OnReseted.html) method is overridden in order to \- when the trading algorithm is reinitialized, moving averages and graphical elements are also reinitialized:
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class has methods that you can override. In the example, the [OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) method is overridden in order to \- when the trading algorithm is reinitialized, moving averages and graphical elements are also reinitialized:
 
 ```cs
 protected override void OnReseted()
@@ -136,7 +136,7 @@ protected override void OnReseted()
 }
 ```
 
-The [OnStarted](../api/StockSharp.Algo.Strategies.Strategy.OnStarted.html) method is override in order to: 1) when the trading algorithm starts, the moving averages are reinitialized, 2) all graphic elements are added to the chart, 3) subscribe to the event of new trades occurrence, 4) subscribe to the event of new orders occurrence or change of old ones, start receiving new information by the instrument.
+The [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) method is override in order to: 1) when the trading algorithm starts, the moving averages are reinitialized, 2) all graphic elements are added to the chart, 3) subscribe to the event of new trades occurrence, 4) subscribe to the event of new orders occurrence or change of old ones, start receiving new information by the instrument.
 
 ```cs
 protected override void OnStarted()
@@ -172,7 +172,7 @@ protected override void OnStarted()
 }
 ```
 
-The [OnStopped](../api/StockSharp.Algo.Strategies.Strategy.OnStopped.html) method is overridden to stop receiving new information by the instrument:
+The [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method is overridden to stop receiving new information by the instrument:
 
 ```cs
 protected override void OnStopped()
@@ -185,7 +185,7 @@ protected override void OnStopped()
 
 The **this.AddInfoLog("OnStopped");** string displays the message OnStopped in the **Logs** window.
 
-The main strategy calculation is performed in the **ProcessCandle(Candle candle)** method. Since it is designated by the [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html) attribute, this means that it is the input cube parameter accepting the **Candles**.
+The main strategy calculation is performed in the **ProcessCandle(Candle candle)** method. Since it is designated by the [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute) attribute, this means that it is the input cube parameter accepting the **Candles**.
 
 ```cs
 [DiagramExternal]

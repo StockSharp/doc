@@ -1,6 +1,6 @@
 # Адаптеры
 
-Механизм сообщений позволяет создавать собственные подключения к любой внешней торговой системе. Для этого необходимо создать собственный класс *адаптера сообщений*, унаследованный от абстрактного класса [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html). 
+Механизм сообщений позволяет создавать собственные подключения к любой внешней торговой системе. Для этого необходимо создать собственный класс *адаптера сообщений*, унаследованный от абстрактного класса [MessageAdapter](xref:StockSharp.Messages.MessageAdapter). 
 
 При разработке собственного адаптера сообщений необходимо решить следующие задачи: 
 
@@ -9,9 +9,9 @@
 3. Выполнить преобразование кодированной информации внешней системы (коды инструментов и площадок, перечисления и т.п.) в типы [S\#](StockSharpAbout.md).
 4. Выполнить дополнительные настройки, связанные с особенностями внешней торговой системы.
 
-Прежде чем приступить к описанию разработки собственного адаптера, рассмотрим процесс создания и обработки входящих и исходящих сообщений в [S\#](StockSharpAbout.md) на примере сообщения [ConnectMessage](../api/StockSharp.Messages.ConnectMessage.html). Предположим, что в программе был вызван метод [Connect](../api/StockSharp.Algo.Connector.Connect.html), тогда в базовом классе [Connector](../api/StockSharp.Algo.Connector.html) будет происходить следующее: 
+Прежде чем приступить к описанию разработки собственного адаптера, рассмотрим процесс создания и обработки входящих и исходящих сообщений в [S\#](StockSharpAbout.md) на примере сообщения [ConnectMessage](xref:StockSharp.Messages.ConnectMessage). Предположим, что в программе был вызван метод [Connect](xref:StockSharp.Algo.Connector.Connect), тогда в базовом классе [Connector](xref:StockSharp.Algo.Connector) будет происходить следующее: 
 
-1. Вызывается защищенный метод [Connector.OnConnect](../api/StockSharp.Algo.Connector.OnConnect.html), в котором создается сообщение и передается в метод [Connector.SendInMessage](../api/StockSharp.Algo.Connector.SendInMessage.html).
+1. Вызывается защищенный метод [Connector.OnConnect](xref:StockSharp.Algo.Connector.OnConnect), в котором создается сообщение и передается в метод [Connector.SendInMessage](xref:StockSharp.Algo.Connector.SendInMessage).
 
    ```cs
    protected virtual void OnConnect()
@@ -20,7 +20,7 @@
    }
      				
    ```
-2. В методе [Connector.SendInMessage](../api/StockSharp.Algo.Connector.SendInMessage.html) сообщение передается в одноименный метод адаптера.
+2. В методе [Connector.SendInMessage](xref:StockSharp.Algo.Connector.SendInMessage) сообщение передается в одноименный метод адаптера.
 
    ```cs
    public void SendInMessage(Message message)
@@ -29,9 +29,9 @@
    }
      			
    ```
-3. В методе [MessageAdapter.SendInMessage](../api/StockSharp.Messages.MessageAdapter.SendInMessage.html) адаптера выполняются дополнительные проверки. Если все нормально, то сообщение передается в метод [MessageAdapter.OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html) (см.ниже). Если сгенерирована ошибка, то создается создается новое исходящее сообщение аналогичного типа, в свойство [Error](../api/StockSharp.Messages.BaseConnectionMessage.Error.html) сообщения передается объект исключения. Это новое сообщение передается в метод [SendOutMessage](../api/StockSharp.Messages.MessageAdapter.SendOutMessage.html), в котором будет сгенерировано событие появления нового исходящего сообщения [NewOutMessage](../api/StockSharp.Messages.MessageAdapter.NewOutMessage.html), сигнализирующего об ошибке. 
+3. В методе [MessageAdapter.SendInMessage](xref:StockSharp.Messages.MessageAdapter.SendInMessage) адаптера выполняются дополнительные проверки. Если все нормально, то сообщение передается в метод [MessageAdapter.OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage) (см.ниже). Если сгенерирована ошибка, то создается создается новое исходящее сообщение аналогичного типа, в свойство [Error](xref:StockSharp.Messages.BaseConnectionMessage.Error) сообщения передается объект исключения. Это новое сообщение передается в метод [SendOutMessage](xref:StockSharp.Messages.MessageAdapter.SendOutMessage), в котором будет сгенерировано событие появления нового исходящего сообщения [NewOutMessage](xref:StockSharp.Messages.MessageAdapter.NewOutMessage), сигнализирующего об ошибке. 
 
-Исходящие сообщения создаются при помощи метода [MessageAdapter.SendOutMessage](../api/StockSharp.Messages.MessageAdapter.SendOutMessage.html), в который передается объект сообщения. В этом методе генерируется событие нового исходящего сообщения [NewOutMessage](../api/StockSharp.Messages.MessageAdapter.NewOutMessage.html). Далее это событие обрабатывается в базовом классе коннектора в защищенном методе [Connector.OnProcessMessage](../api/StockSharp.Algo.Connector.OnProcessMessage.html), где в зависимости от ситуации сообщение преобразуется в соответствующий тип [S\#](StockSharpAbout.md) и генерируется событие коннектора, а также могут создаваться дополнительное входящие сообщения. 
+Исходящие сообщения создаются при помощи метода [MessageAdapter.SendOutMessage](xref:StockSharp.Messages.MessageAdapter.SendOutMessage), в который передается объект сообщения. В этом методе генерируется событие нового исходящего сообщения [NewOutMessage](xref:StockSharp.Messages.MessageAdapter.NewOutMessage). Далее это событие обрабатывается в базовом классе коннектора в защищенном методе [Connector.OnProcessMessage](xref:StockSharp.Algo.Connector.OnProcessMessage), где в зависимости от ситуации сообщение преобразуется в соответствующий тип [S\#](StockSharpAbout.md) и генерируется событие коннектора, а также могут создаваться дополнительное входящие сообщения. 
 
 Ниже описан процесс создания собственного адаптера для [BitStamp](BitStamp.md) (коннектор доступен с исходными кодами). 
 
@@ -41,7 +41,7 @@
 
 1. **Создание класса адаптера.**
 
-   Вначале создаем класс адаптера сообщений **BitStampMessageAdapter** унаследованный от абстрактного класса [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html): 
+   Вначале создаем класс адаптера сообщений **BitStampMessageAdapter** унаследованный от абстрактного класса [MessageAdapter](xref:StockSharp.Messages.MessageAdapter): 
 
    ```cs
    public class BitStampMessageAdapter : MessageAdapter 
@@ -51,7 +51,7 @@
    ```
 2. **Конструктор адаптера.**
    - В конструктор адаптера передается генератор идентификаторов транзакций, который будет использоваться для создания идентификаторов сообщений.
-   - При помощи метода [AddSupportedMessage](../api/StockSharp.Messages.Extensions.AddSupportedMessage.html) добавляем в массив [SupportedInMessages](../api/StockSharp.Messages.MessageAdapter.SupportedInMessages.html) типы сообщений, которые будет поддерживать адаптер. 
+   - При помощи метода [AddSupportedMessage](xref:StockSharp.Messages.Extensions.AddSupportedMessage) добавляем в массив [SupportedInMessages](xref:StockSharp.Messages.MessageAdapter.SupportedInMessages) типы сообщений, которые будет поддерживать адаптер. 
    ```cs
    public BitStampMessageAdapter(IdGenerator transactionIdGenerator)
    	: base(transactionIdGenerator)
@@ -77,13 +77,13 @@
    }
    						
    ```
-3. Метод [OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html). 
+3. Метод [OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage). 
 
-   Далее необходимо переопределить метод [OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html). Как говорилось выше, в этот метод передаются все входящие сообщения и для каждого типа сообщения нужно написать код, преобразующий сообщения в команды [BitStamp](BitStamp.md). 
+   Далее необходимо переопределить метод [OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage). Как говорилось выше, в этот метод передаются все входящие сообщения и для каждого типа сообщения нужно написать код, преобразующий сообщения в команды [BitStamp](BitStamp.md). 
 
-   При получении сообщения [MessageTypes.Reset](../api/StockSharp.Messages.MessageTypes.Reset.html) необходимо выполнить "обнуление" состояния и освободить ресурсы. По завершении этих операций нужно отправить исходящие сообщение [ResetMessage](../api/StockSharp.Messages.ResetMessage.html). 
+   При получении сообщения [MessageTypes.Reset](xref:StockSharp.Messages.MessageTypes.Reset) необходимо выполнить "обнуление" состояния и освободить ресурсы. По завершении этих операций нужно отправить исходящие сообщение [ResetMessage](xref:StockSharp.Messages.ResetMessage). 
 
-   При поступлении сообщения [MessageTypes.Connect](../api/StockSharp.Messages.MessageTypes.Connect.html) инициализируем переменные \_httpClient и \_pusherClient, подписываемся на события [BitStamp](BitStamp.md) и устанавливаем соединение при помощи метода **Connect** нативного API. В случае удачного соединения должно наступить событие **SessionOnPusherConnected**. 
+   При поступлении сообщения [MessageTypes.Connect](xref:StockSharp.Messages.MessageTypes.Connect) инициализируем переменные \_httpClient и \_pusherClient, подписываемся на события [BitStamp](BitStamp.md) и устанавливаем соединение при помощи метода **Connect** нативного API. В случае удачного соединения должно наступить событие **SessionOnPusherConnected**. 
 
    ```cs
    private void SubscribePusherClient()
@@ -222,12 +222,12 @@
    ```
 4. Событие **SessionOnPusherConnected**. 
 
-   В обработчике события соединения нативного API необходимо послать исходящее сообщение [ConnectMessage](../api/StockSharp.Messages.ConnectMessage.html). При обработке этого сообщения в коде класса [Connector](../api/StockSharp.Algo.Connector.html) будут проверены наличие в [SupportedInMessages](../api/StockSharp.Messages.MessageAdapter.SupportedInMessages.html) следующие типов сообщений: 
-   - [PortfolioLookup](../api/StockSharp.Messages.MessageTypes.PortfolioLookup.html) \- необходимо ли сообщение [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html) для получения портфелей и позиций. 
-   - [SecurityLookup](../api/StockSharp.Messages.MessageTypes.SecurityLookup.html) \- необходимо ли сообщение [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html) для получения инструментов. 
-   - [OrderStatus](../api/StockSharp.Messages.MessageTypes.OrderStatus.html) \- необходимо ли сообщение [OrderStatusMessage](../api/StockSharp.Messages.OrderStatusMessage.html) для получения заявок и собственных сделок. 
+   В обработчике события соединения нативного API необходимо послать исходящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage). При обработке этого сообщения в коде класса [Connector](xref:StockSharp.Algo.Connector) будут проверены наличие в [SupportedInMessages](xref:StockSharp.Messages.MessageAdapter.SupportedInMessages) следующие типов сообщений: 
+   - [PortfolioLookup](xref:StockSharp.Messages.MessageTypes.PortfolioLookup) \- необходимо ли сообщение [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) для получения портфелей и позиций. 
+   - [SecurityLookup](xref:StockSharp.Messages.MessageTypes.SecurityLookup) \- необходимо ли сообщение [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) для получения инструментов. 
+   - [OrderStatus](xref:StockSharp.Messages.MessageTypes.OrderStatus) \- необходимо ли сообщение [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) для получения заявок и собственных сделок. 
 
-   Если типы сообщения установлены у адаптера, то соответствующие сообщения будут посланы. В нашем примере (см. Конструктор адаптера.) в этот список были добавлены типы [MessageTypes.SecurityLookup](../api/StockSharp.Messages.MessageTypes.SecurityLookup.html) и [MessageTypes.PortfolioLookup](../api/StockSharp.Messages.MessageTypes.PortfolioLookup.html), поэтому следует ожидать получения входящих сообщений [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html) и [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html). 
+   Если типы сообщения установлены у адаптера, то соответствующие сообщения будут посланы. В нашем примере (см. Конструктор адаптера.) в этот список были добавлены типы [MessageTypes.SecurityLookup](xref:StockSharp.Messages.MessageTypes.SecurityLookup) и [MessageTypes.PortfolioLookup](xref:StockSharp.Messages.MessageTypes.PortfolioLookup), поэтому следует ожидать получения входящих сообщений [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) и [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage). 
 
    ```cs
    private void SessionOnPusherConnected()
@@ -236,9 +236,9 @@
    }
    						
    ```
-5. Входящие сообщения [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html) и [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html). 
+5. Входящие сообщения [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) и [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage). 
 
-   При получении этих сообщений необходимо вызвать функции [BitStamp](BitStamp.md), запрашивающие портфели и инструменты соответственно. А после получения всех данных необходимо послать сообщение [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html). Обратите внимание, как результирующему сообщению, так и сообщениям с данными, присваивается идентификатор подписки: 
+   При получении этих сообщений необходимо вызвать функции [BitStamp](BitStamp.md), запрашивающие портфели и инструменты соответственно. А после получения всех данных необходимо послать сообщение [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage). Обратите внимание, как результирующему сообщению, так и сообщениям с данными, присваивается идентификатор подписки: 
 
    ```cs
    // Запрашиваем список портфелей
@@ -313,7 +313,7 @@
    ```
 6. Изменение счета или позиции, получаемые от внешней системы. 
 
-   В обработчике события полученную информацию о портфеле необходимо преобразовать в исходящее сообщение [PositionChangeMessage](../api/StockSharp.Messages.PositionChangeMessage.html): 
+   В обработчике события полученную информацию о портфеле необходимо преобразовать в исходящее сообщение [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage): 
 
    ```cs
    		private void SessionOnAccountUpdated(AccountUpdate account)
@@ -365,11 +365,11 @@
    ```
 7. **Подписка на тиковые данные.**
 
-   При вызове методов [Connector.Subscribe](../api/StockSharp.Algo.Connector.Subscribe.html) или [Connector.UnSubscribe](../api/StockSharp.Algo.Connector.UnSubscribe.html) будет сформировано входящее сообщение [MarketDataMessage](../api/StockSharp.Messages.MarketDataMessage.html) . 
+   При вызове методов [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe) или [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe) будет сформировано входящее сообщение [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) . 
 
    При обработке этого сообщения необходимо вызвать методы [BitStamp](BitStamp.md) по подписке или отписке получения тиковых сделок. 
 
-   Так как сообщение используется для работы со всеми типами рыночных данных, то для вычленения конкретного типа нужно использовать свойство [DataType2](../api/StockSharp.Messages.MarketDataMessage.DataType2.html). Для сделок значение этого свойства равно [DataType.Ticks](../api/StockSharp.Messages.DataType.Ticks.html). 
+   Так как сообщение используется для работы со всеми типами рыночных данных, то для вычленения конкретного типа нужно использовать свойство [DataType2](xref:StockSharp.Messages.MarketDataMessage.DataType2). Для сделок значение этого свойства равно [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks). 
 
    После вызова метода **SubscribeTrades** сделки будут поступать в событии **SessionOnNewTrade**. 
 
@@ -448,7 +448,7 @@
    ```
 8. Событие **SessionOnNewTrade**. 
 
-   В обработчике события **SessionOnNewTrade** полученную информацию о сделке необходимо преобразовать во исходящее сообщение [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html). Обратите внимание, что сообщения [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html) используются как для сделок (собственных или анонимных), так и для заявок. Поэтому в сообщении уточняется, что оно относится к сделке \- [ExecutionType](../api/StockSharp.Messages.ExecutionMessage.ExecutionType.html) \= [ExecutionTypes.Tick](../api/StockSharp.Messages.ExecutionTypes.Tick.html). 
+   В обработчике события **SessionOnNewTrade** полученную информацию о сделке необходимо преобразовать во исходящее сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage). Обратите внимание, что сообщения [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) используются как для сделок (собственных или анонимных), так и для заявок. Поэтому в сообщении уточняется, что оно относится к сделке \- [ExecutionType](xref:StockSharp.Messages.ExecutionMessage.ExecutionType) \= [ExecutionTypes.Tick](xref:StockSharp.Messages.ExecutionTypes.Tick). 
 
    ```cs
    private void SessionOnNewTrade(string pair, Trade trade)

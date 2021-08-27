@@ -1,6 +1,6 @@
 # Candle chart panel
 
-[ChartPanel](../api/StockSharp.Xaml.Charting.ChartPanel.html) is an advanced component for creating stock charts, which has a toolbar and additional functionality. The charting technique with [ChartPanel](../api/StockSharp.Xaml.Charting.ChartPanel.html) does not differ significantly from that of [Chart](Gui_Chart.md). 
+[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) is an advanced component for creating stock charts, which has a toolbar and additional functionality. The charting technique with [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) does not differ significantly from that of [Chart](Gui_Chart.md). 
 
 The following figures show the appearance of the component, as well as the functions of the toolbar buttons. 
 

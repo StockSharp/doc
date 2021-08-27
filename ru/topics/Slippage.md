@@ -2,9 +2,9 @@
 
 В [S\#](StockSharpAbout.md) входит механизм подсчета проскальзывания, который позволяет оценить быстроту алгоритма (и его реализацию),путем мониторинга цены первоначальной заявки и последующих сделок.
 
-Учет проскальзывания ведется через специальный менеджер. Базовый интерфейс менеджера проскальзывания называется [ISlippageManager](../api/StockSharp.Algo.Slippage.ISlippageManager.html). Данный интерфейс имеет реализацию в виде [SlippageManager](../api/StockSharp.Algo.Slippage.SlippageManager.html). В классе подключений к торговым системам [Connector](../api/StockSharp.Algo.Connector.html) имеется свойство [Connector.SlippageManager](../api/StockSharp.Algo.Connector.SlippageManager.html), которое можно использовать для расчета проскальзывания. 
+Учет проскальзывания ведется через специальный менеджер. Базовый интерфейс менеджера проскальзывания называется [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager). Данный интерфейс имеет реализацию в виде [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). В классе подключений к торговым системам [Connector](xref:StockSharp.Algo.Connector) имеется свойство [Connector.SlippageManager](xref:StockSharp.Algo.Connector.SlippageManager), которое можно использовать для расчета проскальзывания. 
 
-В стратегиях [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) используется собственный механизм расчета проскальзывания. В этом случае величину проскальзывания можно получить через свойство [Strategy.Slippage](../api/StockSharp.Algo.Strategies.Strategy.Slippage.html).
+В стратегиях [Strategy](xref:StockSharp.Algo.Strategies.Strategy) используется собственный механизм расчета проскальзывания. В этом случае величину проскальзывания можно получить через свойство [Strategy.Slippage](xref:StockSharp.Algo.Strategies.Strategy.Slippage).
 
 ### Предварительные условия
 

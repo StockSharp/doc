@@ -1,6 +1,6 @@
 # Инициализация адаптера Mfd
 
-Код ниже демонстрирует как инициализировать [MfdMessageAdapter](../api/StockSharp.Mfd.MfdMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [MfdMessageAdapter](xref:StockSharp.Mfd.MfdMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new MfdMessageAdapter(Connector.TransactionIdGenerator);

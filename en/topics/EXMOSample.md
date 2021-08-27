@@ -1,6 +1,6 @@
 # Adapter initialization EXMO
 
-The code below demonstrates how to initialize the [ExmoMessageAdapter](../api/StockSharp.Exmo.ExmoMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [ExmoMessageAdapter](xref:StockSharp.Exmo.ExmoMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

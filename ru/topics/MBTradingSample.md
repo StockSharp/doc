@@ -1,6 +1,6 @@
 # Инициализация адаптера MB Trading
 
-Код ниже демонстрирует как инициализировать [MBTradingMessageAdapter](../api/StockSharp.MBTrading.MBTradingMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [MBTradingMessageAdapter](xref:StockSharp.MBTrading.MBTradingMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 ...	

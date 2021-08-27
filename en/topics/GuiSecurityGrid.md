@@ -1,21 +1,21 @@
 # Table
 
-The [SecurityGrid](../api/StockSharp.Xaml.SecurityGrid.html) component is designed to display financial information (level1 fields) and its changes relating to instruments in a tabular form. The component allows you to select one or more instruments. 
+The [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) component is designed to display financial information (level1 fields) and its changes relating to instruments in a tabular form. The component allows you to select one or more instruments. 
 
 ![GUI SecurityPicker2](../images/GUI_SecurityPicker2.png)
 
 **Main properties**
 
-- [Securities](../api/StockSharp.Xaml.SecurityGrid.Securities.html) \- the list of instruments.
-- [SelectedSecurity](../api/StockSharp.Xaml.SecurityGrid.SelectedSecurity.html) \- the selected instrument.
-- [SelectedSecurities](../api/StockSharp.Xaml.SecurityGrid.SelectedSecurities.html) \- the list of selected instruments.
-- [MarketDataProvider](../api/StockSharp.Xaml.SecurityGrid.MarketDataProvider.html) \- the provider of market data.
+- [Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- the list of instruments.
+- [SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- the selected instrument.
+- [SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- the list of selected instruments.
+- [MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- the provider of market data.
 
 Please note that for the display of changes in market information, you must specify a provider of market data. 
 
 Below is the code snippet with its use. 
 
-In the figure, the [SecurityGrid](../api/StockSharp.Xaml.SecurityGrid.html) component is shown in the [SecurityPicker](GuiSecurityPicker.md) graphical component. 
+In the figure, the [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) component is shown in the [SecurityPicker](GuiSecurityPicker.md) graphical component. 
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"

@@ -1,6 +1,6 @@
 # Собственный индикатор
 
-Для того, чтобы создать свой собственный индикатор, необходимо реализовать интерфейс [IIndicator](../api/StockSharp.Algo.Indicators.IIndicator.html). В качестве примера можно взять исходные коды других индикаторов, которые находятся в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). Вот как выглядит код реализации индикатора простой скользящей средней [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html): 
+Для того, чтобы создать свой собственный индикатор, необходимо реализовать интерфейс [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator). В качестве примера можно взять исходные коды других индикаторов, которые находятся в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). Вот как выглядит код реализации индикатора простой скользящей средней [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage): 
 
 ```cs
 /// <summary>
@@ -38,9 +38,9 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 }
 ```
 
-[SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) наследуется от класса [LengthIndicator\`1](../api/StockSharp.Algo.Indicators.LengthIndicator`1.html), от которого необходимо наследовать все индикаторы, имеющие в качестве параметра длину периода. 
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) наследуется от класса [LengthIndicator\`1](xref:StockSharp.Algo.Indicators.LengthIndicator`1), от которого необходимо наследовать все индикаторы, имеющие в качестве параметра длину периода. 
 
-Некоторые индикаторы являются составными, и используют в своих рассчетах другие индикаторы. Поэтому индикаторы можно переиспользовать друг из друга, как показано в качестве примера реализация индикатора волатильности Чайкина [ChaikinVolatility](../api/StockSharp.Algo.Indicators.ChaikinVolatility.html): 
+Некоторые индикаторы являются составными, и используют в своих рассчетах другие индикаторы. Поэтому индикаторы можно переиспользовать друг из друга, как показано в качестве примера реализация индикатора волатильности Чайкина [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility): 
 
 ```cs
 /// <summary>
@@ -103,7 +103,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 }
 ```
 
-Последний вид индикаторов \- это те, которые не просто состоят из других индикаторов, но так же графически отображаются несколькими состояниями одновременно (несколькими линиями). Например, [AverageDirectionalIndex](../api/StockSharp.Algo.Indicators.AverageDirectionalIndex.html): 
+Последний вид индикаторов \- это те, которые не просто состоят из других индикаторов, но так же графически отображаются несколькими состояниями одновременно (несколькими линиями). Например, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex): 
 
 ```cs
 /// <summary>
@@ -163,6 +163,6 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 }
 ```
 
-Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.html), и передавать в [BaseComplexIndicator.InnerIndicators](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators.html) составные части индикатора. [BaseComplexIndicator](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.html) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.Mode.html) установлено в [ComplexIndicatorModes.Sequence](../api/StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence.html), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](../api/StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel.html), то результаты вложенных индикаторов игнорируются. 
+Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются. 
 
 ## См. также

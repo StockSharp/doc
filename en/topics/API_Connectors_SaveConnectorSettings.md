@@ -1,6 +1,6 @@
 # Save and load settings
 
-[Save](../api/StockSharp.Algo.Connector.Save.html) and [Load](../api/StockSharp.Algo.Connector.Load.html) methods, respectively, are used to save and load [Connector](../api/StockSharp.Algo.Connector.html) settings. 
+[Save](xref:StockSharp.Algo.Connector.Save) and [Load](xref:StockSharp.Algo.Connector.Load) methods, respectively, are used to save and load [Connector](xref:StockSharp.Algo.Connector) settings. 
 
 To save and load settings from an external file, you can use the serialization and deserialization, respectively, implemented in [S\#](StockSharpAbout.md). 
 

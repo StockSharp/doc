@@ -1,6 +1,6 @@
 # Создание инструмента
 
-Компонент [SecurityCreateWindow](../api/StockSharp.Xaml.SecurityCreateWindow.html) \- это окно для создания и редактирования инструмента. Компонент состоит из двух основных элементов: специального текстового поля [SecurityIdTextBox](../api/StockSharp.Xaml.SecurityIdTextBox.html) и сетки редактирования свойств [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html). Получить доступ к созданному (отредактированному) инструменту можно при помощи свойства [Security](../api/StockSharp.Xaml.SecurityCreateWindow.Security.html). 
+Компонент [SecurityCreateWindow](xref:StockSharp.Xaml.SecurityCreateWindow) \- это окно для создания и редактирования инструмента. Компонент состоит из двух основных элементов: специального текстового поля [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) и сетки редактирования свойств [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx). Получить доступ к созданному (отредактированному) инструменту можно при помощи свойства [Security](xref:StockSharp.Xaml.SecurityCreateWindow.Security). 
 
 Ниже показан внешний вид компонента и фрагмент кода с его использованием. 
 

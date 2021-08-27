@@ -1,6 +1,6 @@
 # Логирование IConnector
 
-Объекты [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) аналогично [стратегиям](LoggingStrategy.md), также реализуют интерфейс [ILogSource](../api/StockSharp.Logging.ILogSource.html). Следовательно, от объекта [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) можно получать сообщения через [LogManager](../api/StockSharp.Logging.LogManager.html) всеми способами, что доступны стратегиям. 
+Объекты [IConnector](xref:StockSharp.BusinessEntities.IConnector) аналогично [стратегиям](LoggingStrategy.md), также реализуют интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource). Следовательно, от объекта [IConnector](xref:StockSharp.BusinessEntities.IConnector) можно получать сообщения через [LogManager](xref:StockSharp.Logging.LogManager) всеми способами, что доступны стратегиям. 
 
 ### Пример логирования IConnector
 
@@ -16,12 +16,12 @@
    				
    				
    ```
-2. Затем необходимо создать файловый логгер и добавить его в [LogManager.Listeners](../api/StockSharp.Logging.LogManager.Listeners.html): 
+2. Затем необходимо создать файловый логгер и добавить его в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
 
    ```cs
    _logManager.Listeners.Add(new FileLogListener());
    ```
-3. Заключительным этапом является добавление [Connector](../api/StockSharp.Algo.Connector.html) в [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html): 
+3. Заключительным этапом является добавление [Connector](xref:StockSharp.Algo.Connector) в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
 
    ```cs
    _logManager.Sources.Add(_connector);

@@ -6,7 +6,7 @@
 - Подписки имею состояния, позволяющие понять, идут ли в данный момент исторические данные или подписка перешла в online. 
 - Подписки имеют универсальный подход, и код их одинаков, не зависимо от запрашиваемых типов данных. 
 
-Для работа с подписками необходимо использовать класс [Subscription](../api/StockSharp.Algo.Subscription.html). Ниже показан пример подписки на свечи через новую модель:
+Для работа с подписками необходимо использовать класс [Subscription](xref:StockSharp.Algo.Subscription). Ниже показан пример подписки на свечи через новую модель:
 
 ```cs
 ...
@@ -44,18 +44,18 @@ _connector.Subscribe(subscription);
 
 Состояния подписок:
 
-- [Stopped](../api/StockSharp.Algo.SubscriptionStates.Stopped.html)
+- [Stopped](xref:StockSharp.Algo.SubscriptionStates.Stopped)
 
    \- подписка неактивна (остановлена или не запускалась). 
-- [Active](../api/StockSharp.Algo.SubscriptionStates.Active.html)
+- [Active](xref:StockSharp.Algo.SubscriptionStates.Active)
 
    \- подписка активна, и она может передавать исторические данные до тех пор, пока не перейдет в online или не будет завершена. 
-- [Error](../api/StockSharp.Algo.SubscriptionStates.Error.html)
+- [Error](xref:StockSharp.Algo.SubscriptionStates.Error)
 
    \- подписка неактивна и находится в состоянии ошибки. 
-- [Finished](../api/StockSharp.Algo.SubscriptionStates.Finished.html)
+- [Finished](xref:StockSharp.Algo.SubscriptionStates.Finished)
 
    \- подписка закончила свою работу (все данные получены). 
-- [Online](../api/StockSharp.Algo.SubscriptionStates.Online.html)
+- [Online](xref:StockSharp.Algo.SubscriptionStates.Online)
 
    \- подписка перешла в состояние online и передает только данные в реальном времени. 

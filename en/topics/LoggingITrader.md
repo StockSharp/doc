@@ -1,6 +1,6 @@
 # IConnector logging
 
-The [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) objects similar [strategies](LoggingStrategy.md) also implement the [ILogSource](../api/StockSharp.Logging.ILogSource.html) interface. Therefore, from the [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) object you can receive messages through the [LogManager](../api/StockSharp.Logging.LogManager.html) by all means that are available for strategies. 
+The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [strategies](LoggingStrategy.md) also implement the [ILogSource](xref:StockSharp.Logging.ILogSource) interface. Therefore, from the [IConnector](xref:StockSharp.BusinessEntities.IConnector) object you can receive messages through the [LogManager](xref:StockSharp.Logging.LogManager) by all means that are available for strategies. 
 
 ### IConnector logging example
 
@@ -16,12 +16,12 @@ IConnector logging example
    				
    				
    ```
-2. Then you need to create a file logger, and to add it to the [LogManager.Listeners](../api/StockSharp.Logging.LogManager.Listeners.html): 
+2. Then you need to create a file logger, and to add it to the [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
 
    ```cs
    _logManager.Listeners.Add(new FileLogListener());
    ```
-3. The final step is to add the [InteractiveBrokersTrader](../api/StockSharp.InteractiveBrokers.InteractiveBrokersTrader.html) in [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html): 
+3. The final step is to add the [InteractiveBrokersTrader](xref:StockSharp.InteractiveBrokers.InteractiveBrokersTrader) in [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
 
    ```cs
    _logManager.Sources.Add(_connector);

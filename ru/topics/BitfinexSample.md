@@ -1,6 +1,6 @@
 # Инициализация адаптера Bitfinex
 
-Код ниже демонстрирует как инициализировать [BitfinexMessageAdapter](../api/StockSharp.Bitfinex.BitfinexMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BitfinexMessageAdapter](xref:StockSharp.Bitfinex.BitfinexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

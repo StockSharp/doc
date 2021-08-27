@@ -1,6 +1,6 @@
 # Инициализация адаптера Blackwood (Fusion)
 
-Код ниже демонстрирует как инициализировать [BlackwoodMessageAdapter](../api/StockSharp.Blackwood.BlackwoodMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BlackwoodMessageAdapter](xref:StockSharp.Blackwood.BlackwoodMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

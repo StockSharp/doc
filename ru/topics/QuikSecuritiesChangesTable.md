@@ -25,6 +25,6 @@ _trader.UseSecuritiesChange = true;
 		
 ```
 
-Или, если используется экспорт конкретных таблиц, то добавить в список экспортируемых [SecuritiesChangeTable](../api/StockSharp.Quik.QuikTrader.SecuritiesChangeTable.html):
+Или, если используется экспорт конкретных таблиц, то добавить в список экспортируемых [SecuritiesChangeTable](xref:StockSharp.Quik.QuikTrader.SecuritiesChangeTable):
 
-Новые данные будут приходить через событие [QuikTrader.NewSecurityChanges](../api/StockSharp.Quik.QuikTrader.NewSecurityChanges.html).
+Новые данные будут приходить через событие [QuikTrader.NewSecurityChanges](xref:StockSharp.Quik.QuikTrader.NewSecurityChanges).

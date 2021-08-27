@@ -1,224 +1,224 @@
 # Правило
 
-В [S\#](StockSharpAbout.md) для [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) уже есть ряд предопределенных условий и действий для наиболее распространенных сценариев. Ниже представлены сгруппированные по торговым объектам списки условий класса [MarketRuleHelper](../api/StockSharp.Algo.MarketRuleHelper.html): 
+В [S\#](StockSharpAbout.md) для [IMarketRule](xref:StockSharp.Algo.IMarketRule) уже есть ряд предопределенных условий и действий для наиболее распространенных сценариев. Ниже представлены сгруппированные по торговым объектам списки условий класса [MarketRuleHelper](xref:StockSharp.Algo.MarketRuleHelper): 
 
-Для [Security](../api/StockSharp.BusinessEntities.Security.html)
+Для [Security](xref:StockSharp.BusinessEntities.Security)
 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- правило на событие изменения инструмента. 
-- [MarketRuleHelper.WhenNewTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewTrade.html)
+- [MarketRuleHelper.WhenNewTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewTrade)
 
    \- правило на событие появления у инструмента новой сделки. 
-- [MarketRuleHelper.WhenMarketDepthChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenMarketDepthChanged.html)
+- [MarketRuleHelper.WhenMarketDepthChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenMarketDepthChanged)
 
    \- правило на событие изменения стакана по инструменту. 
-- [MarketRuleHelper.WhenBestBidPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore.html)
+- [MarketRuleHelper.WhenBestBidPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore)
 
    \- правило на событие повышения лучшего бида выше определенного уровня. 
-- [MarketRuleHelper.WhenBestBidPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess.html)
+- [MarketRuleHelper.WhenBestBidPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess)
 
    \- правило на событие понижения лучшего бида ниже определенного уровня. 
-- [MarketRuleHelper.WhenBestAskPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore.html)
+- [MarketRuleHelper.WhenBestAskPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore)
 
    \- правило на событие повышения лучшего оффера выше определенного уровня. 
-- [MarketRuleHelper.WhenBestAskPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess.html)
+- [MarketRuleHelper.WhenBestAskPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess)
 
    \- правило на событие понижения лучшего оффера ниже определенного уровня. 
-- [MarketRuleHelper.WhenLastTradePriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceMore.html)
+- [MarketRuleHelper.WhenLastTradePriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceMore)
 
    \- правило на событие повышения цены последней сделки выше определенного уровня. 
-- [MarketRuleHelper.WhenLastTradePriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceLess.html)
+- [MarketRuleHelper.WhenLastTradePriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenLastTradePriceLess)
 
    \- правило на событие понижения цены последней сделки ниже определенного уровня. 
 
-Для [MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html)
+Для [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)
 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- правило на событие изменения стакана. 
-- [MarketRuleHelper.WhenSpreadMore](../api/StockSharp.Algo.MarketRuleHelper.WhenSpreadMore.html)
+- [MarketRuleHelper.WhenSpreadMore](xref:StockSharp.Algo.MarketRuleHelper.WhenSpreadMore)
 
    \- правило на событие повышения размера спреда стакана выше определенного уровня. 
-- [MarketRuleHelper.WhenSpreadLess](../api/StockSharp.Algo.MarketRuleHelper.WhenSpreadLess.html)
+- [MarketRuleHelper.WhenSpreadLess](xref:StockSharp.Algo.MarketRuleHelper.WhenSpreadLess)
 
    \- правило на событие понижения размера спреда стакана ниже определенного уровня. 
-- [MarketRuleHelper.WhenBestBidPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore.html)
+- [MarketRuleHelper.WhenBestBidPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceMore)
 
    \- правило на событие повышения лучшего бида выше определенного уровня. 
-- [MarketRuleHelper.WhenBestBidPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess.html)
+- [MarketRuleHelper.WhenBestBidPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestBidPriceLess)
 
    \- правило на событие понижения лучшего бида ниже определенного уровня. 
-- [MarketRuleHelper.WhenBestAskPriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore.html)
+- [MarketRuleHelper.WhenBestAskPriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceMore)
 
    \- правило на событие повышения лучшего оффера выше определенного уровня. 
-- [MarketRuleHelper.WhenBestAskPriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess.html)
+- [MarketRuleHelper.WhenBestAskPriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenBestAskPriceLess)
 
    \- правило на событие понижения лучшего оффера ниже определенного уровня. 
 
-Для [Order](../api/StockSharp.BusinessEntities.Order.html)
+Для [Order](xref:StockSharp.BusinessEntities.Order)
 
-- [MarketRuleHelper.WhenRegistered](../api/StockSharp.Algo.MarketRuleHelper.WhenRegistered.html)
+- [MarketRuleHelper.WhenRegistered](xref:StockSharp.Algo.MarketRuleHelper.WhenRegistered)
 
    \- правило на событие успешной регистрации заявки на бирже. 
-- [MarketRuleHelper.WhenPartiallyMatched](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyMatched.html)
+- [MarketRuleHelper.WhenPartiallyMatched](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyMatched)
 
    \- правило на событие частичного исполнения заявки. 
-- [MarketRuleHelper.WhenRegisterFailed](../api/StockSharp.Algo.MarketRuleHelper.WhenRegisterFailed.html)
+- [MarketRuleHelper.WhenRegisterFailed](xref:StockSharp.Algo.MarketRuleHelper.WhenRegisterFailed)
 
    \- правило на событие неудачной регистрации заявки на бирже. 
-- [MarketRuleHelper.WhenCancelFailed](../api/StockSharp.Algo.MarketRuleHelper.WhenCancelFailed.html)
+- [MarketRuleHelper.WhenCancelFailed](xref:StockSharp.Algo.MarketRuleHelper.WhenCancelFailed)
 
    \- правило на событие неудачного снятия заявки на бирже. 
-- [MarketRuleHelper.WhenCanceled](../api/StockSharp.Algo.MarketRuleHelper.WhenCanceled.html)
+- [MarketRuleHelper.WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled)
 
    \- правило на событие отмены заявки. 
-- [MarketRuleHelper.WhenMatched](../api/StockSharp.Algo.MarketRuleHelper.WhenMatched.html)
+- [MarketRuleHelper.WhenMatched](xref:StockSharp.Algo.MarketRuleHelper.WhenMatched)
 
    \- правило на событие полного исполнения заявки. 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- правило на событие изменения заявки. 
-- [MarketRuleHelper.WhenNewTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewTrade.html)
+- [MarketRuleHelper.WhenNewTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewTrade)
 
    \- правило на событие появления сделки по заявке. 
 
-Для [Portfolio](../api/StockSharp.BusinessEntities.Portfolio.html)
+Для [Portfolio](xref:StockSharp.BusinessEntities.Portfolio)
 
-- [MarketRuleHelper.WhenMoneyLess](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyLess.html)
+- [MarketRuleHelper.WhenMoneyLess](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyLess)
 
    \- правило на событие уменьшения денег в портфеле ниже определенного уровня. 
-- [MarketRuleHelper.WhenMoneyMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyMore.html)
+- [MarketRuleHelper.WhenMoneyMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyMore)
 
    \- правило на событие увеличения денег в портфеле выше определенного уровня. 
 
-Для [Position](../api/StockSharp.BusinessEntities.Position.html)
+Для [Position](xref:StockSharp.BusinessEntities.Position)
 
-- [MarketRuleHelper.WhenLess](../api/StockSharp.Algo.MarketRuleHelper.WhenLess.html)
+- [MarketRuleHelper.WhenLess](xref:StockSharp.Algo.MarketRuleHelper.WhenLess)
 
    \- правило на событие уменьшения позиции ниже определенного уровня. 
-- [MarketRuleHelper.WhenMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMore.html)
+- [MarketRuleHelper.WhenMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMore)
 
    \- правило на событие увеличения позиции выше определенного уровня. 
-- [MarketRuleHelper.Changed](../api/StockSharp.Algo.MarketRuleHelper.Changed.html)
+- [MarketRuleHelper.Changed](xref:StockSharp.Algo.MarketRuleHelper.Changed)
 
    \- правило на событие изменения позиции. 
 
-Для [IPnLManager](../api/StockSharp.Algo.PnL.IPnLManager.html)
+Для [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager)
 
-- [StrategyHelper.WhenPnLLess](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPnLLess.html)
+- [StrategyHelper.WhenPnLLess](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPnLLess)
 
    \- правило на событие уменьшения прибыли ниже определенного уровня. 
-- [StrategyHelper.WhenPnLMore](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPnLMore.html)
+- [StrategyHelper.WhenPnLMore](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPnLMore)
 
    \- правило на событие увеличения прибыли выше определенного уровня. 
-- [StrategyHelper.WhenPositionChanged](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged.html)
+- [StrategyHelper.WhenPositionChanged](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged)
 
    \- правило на событие изменения прибыли. 
 
-Для [Candle](../api/StockSharp.Algo.Candles.Candle.html)
+Для [Candle](xref:StockSharp.Algo.Candles.Candle)
 
-- [MarketRuleHelper.WhenClosePriceMore](../api/StockSharp.Algo.MarketRuleHelper.WhenClosePriceMore.html)
+- [MarketRuleHelper.WhenClosePriceMore](xref:StockSharp.Algo.MarketRuleHelper.WhenClosePriceMore)
 
    \- правило на событие повышения цены закрытия свечи выше определенного уровня. 
-- [MarketRuleHelper.WhenClosePriceLess](../api/StockSharp.Algo.MarketRuleHelper.WhenClosePriceLess.html)
+- [MarketRuleHelper.WhenClosePriceLess](xref:StockSharp.Algo.MarketRuleHelper.WhenClosePriceLess)
 
    \- правило на событие понижения цены закрытия свечи ниже определенного уровня. 
-- [MarketRuleHelper.WhenTotalVolumeMore](../api/StockSharp.Algo.MarketRuleHelper.WhenTotalVolumeMore.html)
+- [MarketRuleHelper.WhenTotalVolumeMore](xref:StockSharp.Algo.MarketRuleHelper.WhenTotalVolumeMore)
 
    \- правило на событие превышения общего объема свечи выше определенного уровня. 
-- [MarketRuleHelper.WhenCurrentCandleTotalVolumeMore](../api/StockSharp.Algo.MarketRuleHelper.WhenCurrentCandleTotalVolumeMore.html)
+- [MarketRuleHelper.WhenCurrentCandleTotalVolumeMore](xref:StockSharp.Algo.MarketRuleHelper.WhenCurrentCandleTotalVolumeMore)
 
    \- правило на событие превышения общего объема текущей свечи выше определенного уровня. 
-- [MarketRuleHelper.WhenCandlesStarted](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesStarted.html)
+- [MarketRuleHelper.WhenCandlesStarted](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesStarted)
 
    \- правило на событие появления новых свечей. 
-- [MarketRuleHelper.WhenCandlesChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesChanged.html)
+- [MarketRuleHelper.WhenCandlesChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesChanged)
 
    \- правило на событие изменения свечей. 
-- [MarketRuleHelper.WhenCandlesFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenCandlesFinished.html)
+- [MarketRuleHelper.WhenCandlesFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenCandlesFinished)
 
    \- правило на событие окончания свечей. 
-- [MarketRuleHelper.WhenChanged](../api/StockSharp.Algo.MarketRuleHelper.WhenChanged.html)
+- [MarketRuleHelper.WhenChanged](xref:StockSharp.Algo.MarketRuleHelper.WhenChanged)
 
    \- правило на событие изменения свечи. 
-- [MarketRuleHelper.WhenFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenFinished.html)
+- [MarketRuleHelper.WhenFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenFinished)
 
    \- правило на событие окончания свечи. 
-- [MarketRuleHelper.WhenPartiallyFinished](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinished.html)
+- [MarketRuleHelper.WhenPartiallyFinished](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinished)
 
    \- правило на событие частичного окончания свечи. 
-- [MarketRuleHelper.WhenPartiallyFinishedCandles](../api/StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinishedCandles.html)
+- [MarketRuleHelper.WhenPartiallyFinishedCandles](xref:StockSharp.Algo.MarketRuleHelper.WhenPartiallyFinishedCandles)
 
    \- правило на событие частичного окончания свечей. 
 
-Для [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html)
+Для [Strategy](xref:StockSharp.Algo.Strategies.Strategy)
 
-- [StrategyHelper.WhenNewMyTrade](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenNewMyTrade.html)
+- [StrategyHelper.WhenNewMyTrade](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenNewMyTrade)
 
    \- правило на событие появление новых сделок стратегии. 
-- [StrategyHelper.WhenPositionChanged](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged.html)
+- [StrategyHelper.WhenPositionChanged](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenPositionChanged)
 
    \- правило на событие изменения позиции у стратегии. 
-- [StrategyHelper.WhenStarted](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStarted.html)
+- [StrategyHelper.WhenStarted](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStarted)
 
    \- правило на событие начала работы стратегии. 
-- [StrategyHelper.WhenStopping](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStopping.html)
+- [StrategyHelper.WhenStopping](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStopping)
 
    \- правило на событие начала остановки работы стратегии. 
-- [StrategyHelper.WhenStopped](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenStopped.html)
+- [StrategyHelper.WhenStopped](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenStopped)
 
    \- правило на событие полной остановки работы стратегии. 
-- [StrategyHelper.WhenError](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenError.html)
+- [StrategyHelper.WhenError](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenError)
 
    \- правило на событие ошибки стратегии. 
-- [StrategyHelper.WhenWarning](../api/StockSharp.Algo.Strategies.StrategyHelper.WhenWarning.html)
+- [StrategyHelper.WhenWarning](xref:StockSharp.Algo.Strategies.StrategyHelper.WhenWarning)
 
    \- правило на событие предупреждения стратегии. 
 
-Для [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+Для [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
-- [MarketRuleHelper.WhenIntervalElapsed](../api/StockSharp.Algo.MarketRuleHelper.WhenIntervalElapsed.html)
+- [MarketRuleHelper.WhenIntervalElapsed](xref:StockSharp.Algo.MarketRuleHelper.WhenIntervalElapsed)
 
    \- правило на событие изменения 
 
-  [IConnector.MarketTimeChanged](../api/StockSharp.BusinessEntities.IConnector.MarketTimeChanged.html)
+  [IConnector.MarketTimeChanged](xref:StockSharp.BusinessEntities.IConnector.MarketTimeChanged)
 
    на значение, большее или равно параметру. 
-- [MarketRuleHelper.WhenTimeCome](../api/StockSharp.Algo.MarketRuleHelper.WhenTimeCome.html)
+- [MarketRuleHelper.WhenTimeCome](xref:StockSharp.Algo.MarketRuleHelper.WhenTimeCome)
 
    \- правило, которое активизируется при наступлении точного времени. 
-- [MarketRuleHelper.WhenNewMyTrade](../api/StockSharp.Algo.MarketRuleHelper.WhenNewMyTrade.html)
+- [MarketRuleHelper.WhenNewMyTrade](xref:StockSharp.Algo.MarketRuleHelper.WhenNewMyTrade)
 
    \- правило на событие появление новой сделки. 
-- [MarketRuleHelper.WhenNewOrder](../api/StockSharp.Algo.MarketRuleHelper.WhenNewOrder.html)
+- [MarketRuleHelper.WhenNewOrder](xref:StockSharp.Algo.MarketRuleHelper.WhenNewOrder)
 
    \- правило на событие появление новой заявки. 
 
 Аналогично условиям есть и предопределенные действия: 
 
-- [StrategyHelper.Register](../api/StockSharp.Algo.Strategies.StrategyHelper.Register.html)
+- [StrategyHelper.Register](xref:StockSharp.Algo.Strategies.StrategyHelper.Register)
 
    \- действие, регистрирующее заявку. 
-- [StrategyHelper.ReRegister](../api/StockSharp.Algo.Strategies.StrategyHelper.ReRegister.html)
+- [StrategyHelper.ReRegister](xref:StockSharp.Algo.Strategies.StrategyHelper.ReRegister)
 
    \- действие, перерегистрирующее заявку. 
-- [StrategyHelper.Cancel](../api/StockSharp.Algo.Strategies.StrategyHelper.Cancel.html)
+- [StrategyHelper.Cancel](xref:StockSharp.Algo.Strategies.StrategyHelper.Cancel)
 
    \- действие, отменяющее заявку. 
-- [Protect](../api/Overload:StockSharp.Algo.Strategies.Extensions.Protect.html)
+- [Protect](xref:Overload:StockSharp.Algo.Strategies.Extensions.Protect)
 
    \- действие, защищающее сделки одновременно стратегиями 
 
-  [TakeProfitStrategy](../api/StockSharp.Algo.Strategies.Protective.TakeProfitStrategy.html)
+  [TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy)
 
    и 
 
-  [StopLossStrategy](../api/StockSharp.Algo.Strategies.Protective.StopLossStrategy.html)
+  [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy)
 
   . 
 
-Если требуется создать свое уникальное правило (на какое\-то событие, которое не предусмотрено стандартно), необходимо создать свой класс\-наследник [MarketRule\`2](../api/StockSharp.Algo.MarketRule`2.html), который будет работать с необходимым условием. Ниже приведена реализация метода [WhenMoneyMore](../api/StockSharp.Algo.MarketRuleHelper.WhenMoneyMore.html): 
+Если требуется создать свое уникальное правило (на какое\-то событие, которое не предусмотрено стандартно), необходимо создать свой класс\-наследник [MarketRule\`2](xref:StockSharp.Algo.MarketRule`2), который будет работать с необходимым условием. Ниже приведена реализация метода [WhenMoneyMore](xref:StockSharp.Algo.MarketRuleHelper.WhenMoneyMore): 
 
 ```cs
 		
@@ -265,4 +265,4 @@ public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio port
 		
 ```
 
-Правило *PortfolioRule* подписывается на событие [IPortfolioProvider.PortfolioChanged](../api/StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged.html) и, как только оно вызывается, то проверяется условие на превышение текущего уровня денежных средств в портфеле выше определенного лимита. Если условие возвращает **true**, то активируется правило через метод [MarketRule\`2.Activate](../api/StockSharp.Algo.MarketRule`2.Activate.html). 
+Правило *PortfolioRule* подписывается на событие [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) и, как только оно вызывается, то проверяется условие на превышение текущего уровня денежных средств в портфеле выше определенного лимита. Если условие возвращает **true**, то активируется правило через метод [MarketRule\`2.Activate](xref:StockSharp.Algo.MarketRule`2.Activate). 

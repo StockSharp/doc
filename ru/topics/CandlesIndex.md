@@ -1,6 +1,6 @@
 # Создание свечей по корзине инструментов
 
-Для создания свечей [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html), [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) или [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) используется тот же механизм, что и при создании свечей [Security](../api/StockSharp.BusinessEntities.Security.html).
+Для создания свечей [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) или [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) используется тот же механизм, что и при создании свечей [Security](xref:StockSharp.BusinessEntities.Security).
 
 Например создадим 1мин. свечи для спреда GZM5 \- LKM5:
 
@@ -46,7 +46,7 @@ _connector.SubscribeCandles(_indexSeries, DateTime.Today.Subtract(TimeSpan.FromD
 		
 ```
 
-После этого в обработчик события [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) \- DrawCandles, будут поступать свечи, которые можно вывести на график:
+После этого в обработчик события [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) \- DrawCandles, будут поступать свечи, которые можно вывести на график:
 
 ```cs
 private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)

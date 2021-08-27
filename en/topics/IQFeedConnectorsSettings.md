@@ -6,7 +6,7 @@ The interaction mechanism is shown in this figure:
 
 To work with the **iQFeed** connector, you need to install the **IQ Feed Client** router on the computer, which can be installed on both the local computer and the remote one. Data exchange between the client application and the **IQ Feed Client**, as well as between the **IQ Feed Client** and the servers, is performed via the TCP\/IP protocol. 
 
-To download the **IQ Feed Client** from the [iQFeed](http://www.iqfeed.net/) site, you must first authorize using the password and login received from **iQFeed**.
+To download the **IQ Feed Client** from the [iQFeed](http://www.iqfeed.net) site, you must first authorize using the password and login received from **iQFeed**.
 
 After installing **IQ Feed Client**, it is recommended to restart the computer.
 

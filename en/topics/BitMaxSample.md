@@ -1,6 +1,6 @@
 # Adapter initialization Bithumb
 
-The code below demonstrates how to initialize the [BitMaxMessageAdapter](../api/StockSharp.BitMax.BitMaxMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [BitMaxMessageAdapter](xref:StockSharp.BitMax.BitMaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

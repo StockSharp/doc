@@ -1,6 +1,6 @@
 # Логирование Strategy
 
-Класс [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) реализует интерфейс [ILogSource](../api/StockSharp.Logging.ILogSource.html). Поэтому стратегии можно передавать в [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](../api/StockSharp.Logging.LogManager.Listeners.html). 
+Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) реализует интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource). Поэтому стратегии можно передавать в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners). 
 
 ### Предварительные условия
 
@@ -15,13 +15,13 @@
    ```cs
    var logManager = new LogManager();
    ```
-2. Затем необходимо создать файловый логгер, передав в него имя файла, и добавить его в [LogManager.Listeners](../api/StockSharp.Logging.LogManager.Listeners.html): 
+2. Затем необходимо создать файловый логгер, передав в него имя файла, и добавить его в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
 
    ```cs
    var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
    logManager.Listeners.Add(fileListener);
    ```
-3. Для логирования сообщений необходимо добавить стратегию в [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html): 
+3. Для логирования сообщений необходимо добавить стратегию в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
 
    ```cs
    logManager.Sources.Add(lkohSmaStrategy);
@@ -40,7 +40,7 @@
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Установка фильтра на проигрывание звука только при сообщениях типа [LogLevels.Error](../api/StockSharp.Logging.LogLevels.Error.html): 
+2. Установка фильтра на проигрывание звука только при сообщениях типа [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error): 
 
    ```cs
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -57,7 +57,7 @@
    logManager.Listeners.Add(emailListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Установка фильтра на отсылку сообщений типов [LogLevels.Error](../api/StockSharp.Logging.LogLevels.Error.html) и [LogLevels.Warning](../api/StockSharp.Logging.LogLevels.Warning.html): 
+2. Установка фильтра на отсылку сообщений типов [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error) и [LogLevels.Warning](xref:StockSharp.Logging.LogLevels.Warning): 
 
    ```cs
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -68,7 +68,7 @@
 
 Логирование в LogWindow
 
-1. Создание логгер [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html): 
+1. Создание логгер [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener): 
 
    ```cs
    // каждая стратегия будет иметь свое собственное окно

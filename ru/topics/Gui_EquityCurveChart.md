@@ -1,6 +1,6 @@
 # График эквити
 
-[EquityCurveChart](../api/StockSharp.Xaml.Charting.EquityCurveChart.html) \- графический компонет для отбражения кривой доходности. 
+[EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- графический компонет для отбражения кривой доходности. 
 
 Ниже приведен пример использования этого компонета. Полный код примера находится в Samples\/Testing\/SampleRandomEmulation. 
 
@@ -10,7 +10,7 @@
 
 Пример построения графика EquityCurveChart
 
-1. В XAML добавляем графический компонент [EquityCurveChart](../api/StockSharp.Xaml.Charting.EquityCurveChart.html). Присваиваем компоненту имя **Curve**. 
+1. В XAML добавляем графический компонент [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart). Присваиваем компоненту имя **Curve**. 
 
    ```xaml
    <Window x:Class="SampleRandomEmulation.MainWindow"
@@ -61,7 +61,7 @@
    </Window>
    	  				
    ```
-2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [CreateCurve](../api/Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve.html). 
+2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [CreateCurve](xref:Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve). 
 
    ```cs
    private readonly ICollection<EquityData> _curveItems;
@@ -75,7 +75,7 @@
    }
    	  				
    ```
-3. При изменении значения PnL стратегии добавляем данные в источник данных. При этом используем специальный класс [EquityData](../api/StockSharp.Xaml.Charting.EquityData.html). 
+3. При изменении значения PnL стратегии добавляем данные в источник данных. При этом используем специальный класс [EquityData](xref:StockSharp.Xaml.Charting.EquityData). 
 
    ```cs
    _strategy.PnLChanged += () =>

@@ -1,16 +1,16 @@
 # Index
 
-[IndexSecurity](../api/StockSharp.Algo.IndexSecurity.html) \- the index built from instruments. For example, to set a spread in arbitrage or pair trading. It has the following implementations.
+[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) \- the index built from instruments. For example, to set a spread in arbitrage or pair trading. It has the following implementations.
 
-1. [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) \- is the index built from a combination of several instruments through the [Formula](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula.html) mathematical formula.
+1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- is the index built from a combination of several instruments through the [Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula) mathematical formula.
 
-2. [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) \- is the index built from instruments using weighting factors [Weights](../api/StockSharp.Algo.WeightedIndexSecurity.Weights.html).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- is the index built from instruments using weighting factors [Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ### The ExpressionIndexSecurity creating
 
 The ExpressionIndexSecurity creating
 
-1. To declare the compound instruments that will be included in [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) and in the [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) itself:
+1. To declare the compound instruments that will be included in [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) and in the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) itself:
 
    ```cs
    ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
@@ -23,7 +23,7 @@ The ExpressionIndexSecurity creating
    private const string _secCode2 = "LKM5";
    							
    ```
-2. To create the [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html):
+2. To create the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
    _indexInstr = new ExpressionIndexSecurity
@@ -39,7 +39,7 @@ The ExpressionIndexSecurity creating
 
 The WeightedIndexSecurity creating
 
-1. To declare the compound instruments that will be included in [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) and in the [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) itself:
+1. To declare the compound instruments that will be included in [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) and in the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) itself:
 
    ```cs
    private Security _instr1;
@@ -49,7 +49,7 @@ The WeightedIndexSecurity creating
    private const string _secCode2 = "LKM5";
    							
    ```
-2. To create the [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html):
+2. To create the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
    _indexInstr = new WeightedIndexSecurity() { ExchangeBoard = ExchangeBoard.Nyse, Id = "IndexInstr" };

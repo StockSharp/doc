@@ -1,6 +1,6 @@
 # Инициализация адаптера Bitexbook
 
-Код ниже демонстрирует как инициализировать [BitexbookMessageAdapter](../api/StockSharp.Bitexbook.BitexbookMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BitexbookMessageAdapter](xref:StockSharp.Bitexbook.BitexbookMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

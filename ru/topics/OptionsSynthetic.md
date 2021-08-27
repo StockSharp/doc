@@ -1,8 +1,8 @@
 # Синтетика
 
-Для построения синтетических позиций по опционам (или, наоборот, опционных позиций по базовому инструменту) можно воспользоваться специальным классом [Synthetic](../api/StockSharp.Algo.Derivatives.Synthetic.html). Данный класс через методы [Synthetic.Buy](../api/StockSharp.Algo.Derivatives.Synthetic.Buy.html) и [Synthetic.Sell](../api/StockSharp.Algo.Derivatives.Synthetic.Sell.html) возвращает комбинацию из синтетических инструментов для определения их возможной позиции. 
+Для построения синтетических позиций по опционам (или, наоборот, опционных позиций по базовому инструменту) можно воспользоваться специальным классом [Synthetic](xref:StockSharp.Algo.Derivatives.Synthetic). Данный класс через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell) возвращает комбинацию из синтетических инструментов для определения их возможной позиции. 
 
-Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades](../api/Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades.html): 
+Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades](xref:Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades): 
 
 ```cs
 // получить стакан опциона
@@ -41,6 +41,6 @@ if (elapsedVolume > 0)
 }
 ```
 
-Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](../api/StockSharp.Algo.Derivatives.Synthetic.Buy.html) и [Synthetic.Sell](../api/StockSharp.Algo.Derivatives.Synthetic.Sell.html). 
+Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell). 
 
 ## См. также

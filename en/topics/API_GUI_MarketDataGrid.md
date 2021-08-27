@@ -1,10 +1,10 @@
 # Table of available market data
 
-[MarketDataGrid](../api/StockSharp.Xaml.MarketDataGrid.html) \- a table displaying market data, in this table you can view available market data. 
+[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) \- a table displaying market data, in this table you can view available market data. 
 
 ![API GUI MarketDataGrid](../images/API_GUI_MarketDataGrid.png)
 
-The following is an example of the code for adding a [MarketDataGrid](../api/StockSharp.Xaml.MarketDataGrid.html) table to the screen form. 
+The following is an example of the code for adding a [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) table to the screen form. 
 
 ```xaml
 <Window x:Class="MainWindow"

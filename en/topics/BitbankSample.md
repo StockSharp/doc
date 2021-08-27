@@ -1,6 +1,6 @@
 # Adapter initialization Bitbank
 
-The code below demonstrates how to initialize the [BitbankMessageAdapter](../api/StockSharp.Bitbank.BitbankMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [BitbankMessageAdapter](xref:StockSharp.Bitbank.BitbankMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -1,12 +1,12 @@
 # API
 
-All processes of the data saving and recovery in the [S\#](StockSharpAbout.md) run through a special API, located in the [Storages](../api/StockSharp.Algo.Storages.html) section. There is the [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html), interface in this section, which created to describe all the possible actions with the storage and contains such properties as [Securities](../api/StockSharp.Algo.Storages.IEntityRegistry.Securities.html), [Positions](../api/StockSharp.Algo.Storages.IEntityRegistry.Positions.html) etc. Through these properties, it is possible to get all the previously saved trading objects, for example, instruments. All processes run as with regular collection using the [IStorageEntityList\`1](../api/StockSharp.Algo.Storages.IStorageEntityList`1.html) interface. If you want to save the trading object in the storage (for example, a new order appeared or previously registered order updated), you should use the [IStorageEntityList\`1.Save](../api/StockSharp.Algo.Storages.IStorageEntityList`1.Save.html) method.
+All processes of the data saving and recovery in the [S\#](StockSharpAbout.md) run through a special API, located in the [Storages](xref:StockSharp.Algo.Storages) section. There is the [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), interface in this section, which created to describe all the possible actions with the storage and contains such properties as [Securities](xref:StockSharp.Algo.Storages.IEntityRegistry.Securities), [Positions](xref:StockSharp.Algo.Storages.IEntityRegistry.Positions) etc. Through these properties, it is possible to get all the previously saved trading objects, for example, instruments. All processes run as with regular collection using the [IStorageEntityList\`1](xref:StockSharp.Algo.Storages.IStorageEntityList`1) interface. If you want to save the trading object in the storage (for example, a new order appeared or previously registered order updated), you should use the [IStorageEntityList\`1.Save](xref:StockSharp.Algo.Storages.IStorageEntityList`1.Save) method.
 
-The default implementation of the [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html) interface is the [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) class. It interacts with the data through a low\-level system interface [IStorage](../api/Ecng.Serialization.IStorage.html). This interface provides a transparent work with [databases](StoragesDatabase.md), hiding details.
+The default implementation of the [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) interface is the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) class. It interacts with the data through a low\-level system interface [IStorage](xref:Ecng.Serialization.IStorage). This interface provides a transparent work with [databases](StoragesDatabase.md), hiding details.
 
-The work with market data, such as tick trades or order books, takes place through the certain interface [IMarketDataStorage\`1](../api/StockSharp.Algo.Storages.IMarketDataStorage`1.html), which is obtained based on the information about the instrument through [IStorageRegistry.GetTradeStorage](../api/StockSharp.Algo.Storages.IStorageRegistry.GetTradeStorage.html) mathod. [IStorageRegistry.GetMarketDepthStorage](../api/StockSharp.Algo.Storages.IStorageRegistry.GetMarketDepthStorage.html) for tick trades or order books accordingly.
+The work with market data, such as tick trades or order books, takes place through the certain interface [IMarketDataStorage\`1](xref:StockSharp.Algo.Storages.IMarketDataStorage`1), which is obtained based on the information about the instrument through [IStorageRegistry.GetTradeStorage](xref:StockSharp.Algo.Storages.IStorageRegistry.GetTradeStorage) mathod. [IStorageRegistry.GetMarketDepthStorage](xref:StockSharp.Algo.Storages.IStorageRegistry.GetMarketDepthStorage) for tick trades or order books accordingly.
 
-If the [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) used, the implementation of methods with market data does not depend on [StorageRegistry.DefaultDrive](../api/StockSharp.Algo.Storages.StorageRegistry.DefaultDrive.html), since the data is always stored in the file. This is the internal format of the [S\#](StockSharpAbout.md), and it is organized in such a way that the trades or order books takes a minimum of disk space. The path to the directory where the market data will be stored (or read) indicated by the [LocalMarketDataDrive.Path](../api/StockSharp.Algo.Storages.LocalMarketDataDrive.Path.html) property of the [IStorageRegistry.DefaultDrive](../api/StockSharp.Algo.Storages.IStorageRegistry.DefaultDrive.html) storage.
+If the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) used, the implementation of methods with market data does not depend on [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive), since the data is always stored in the file. This is the internal format of the [S\#](StockSharpAbout.md), and it is organized in such a way that the trades or order books takes a minimum of disk space. The path to the directory where the market data will be stored (or read) indicated by the [LocalMarketDataDrive.Path](xref:StockSharp.Algo.Storages.LocalMarketDataDrive.Path) property of the [IStorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.IStorageRegistry.DefaultDrive) storage.
 
 The folders with the names equal [instruments identifiers](SecurityId.md) (separate folder for each instrument) will be created at this path.
 
@@ -18,7 +18,7 @@ Files with the bin extension are inside each folder with dates. Trades are store
 
 Example of working with market data storage
 
-1. The SampleStorage example, located in the [S\#](StockSharpAbout.md) installation package, shows how to save and load the trades through the [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html)class. In the beginning an instrument created and its basic properties are initialized \- [Id](../api/StockSharp.BusinessEntities.Security.Id.html) (to determine location on disk), [StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html) and [Decimals](../api/StockSharp.BusinessEntities.Security.Decimals.html) (for decimal value compression in the **trades.bin** file):
+1. The SampleStorage example, located in the [S\#](StockSharpAbout.md) installation package, shows how to save and load the trades through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)class. In the beginning an instrument created and its basic properties are initialized \- [Id](xref:StockSharp.BusinessEntities.Security.Id) (to determine location on disk), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) and [Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (for decimal value compression in the **trades.bin** file):
 
    ```cs
    var security = new Security
@@ -52,13 +52,13 @@ Example of working with market data storage
    }
    					
    ```
-3. The [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) itself created on the next step:
+3. The [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) itself created on the next step:
 
    ```cs
    var storage = new StorageRegistry();
    					
    ```
-4. The market data storage obtained via the trade objects store. The tick trades storage, which is obtained via the [StorageRegistry.GetTradeStorage](../api/StockSharp.Algo.Storages.StorageRegistry.GetTradeStorage.html) method, used in example:
+4. The market data storage obtained via the trade objects store. The tick trades storage, which is obtained via the [StorageRegistry.GetTradeStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTradeStorage) method, used in example:
 
    ```cs
    var tradeStorage = storage.GetTradeStorage(security);

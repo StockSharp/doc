@@ -1,6 +1,6 @@
 # Инициализация адаптера ITCH
 
-Код ниже демонстрирует как инициализировать [ItchMessageAdapter](../api/StockSharp.ITCH.ItchMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [ItchMessageAdapter](xref:StockSharp.ITCH.ItchMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

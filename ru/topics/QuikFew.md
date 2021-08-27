@@ -7,7 +7,7 @@
 Пример работы с несколькими Quik\-ами
 
 1. В папку с программой необходимо поместить два файла *TRANS2QUIK.dll* (пример работает с 2\-мя [Quik](Quik.md)\-ами). Например, один будет иметь оригинальное название, а второй будет переименован *TRANS2QUIK\_2.dll*. Это обязательное требование работы с несколькими [Quik](Quik.md)\-ами из одной программы: один [Quik](Quik.md) \- одна dll. 
-2. После этого, идет создание нескольких [QuikTrader](../api/StockSharp.Quik.QuikTrader.html). Через свойство [QuikTrader.DdeServer](../api/StockSharp.Quik.QuikTrader.DdeServer.html) передается уникальное имя для [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) сервера, а через [QuikTrader.DllName](../api/StockSharp.Quik.QuikTrader.DllName.html) путь к *TRANS2QUIK.dll*: 
+2. После этого, идет создание нескольких [QuikTrader](xref:StockSharp.Quik.QuikTrader). Через свойство [QuikTrader.DdeServer](xref:StockSharp.Quik.QuikTrader.DdeServer) передается уникальное имя для [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) сервера, а через [QuikTrader.DllName](xref:StockSharp.Quik.QuikTrader.DllName) путь к *TRANS2QUIK.dll*: 
 
    ```cs
    var quikTrader1 = new QuikTrader { Path = path1, DdeServer = "quik1" };
@@ -16,7 +16,7 @@
    // если вторая dll находится в другой папке, то можно создать шлюз, указав путь к dll
    // var quikTrader2 = new QuikTrader { Path = path2, DdeServer = "quik2", DllName = @"Folder1\TRANS2QUIK_2.dll" };
    ```
-3. Когда [QuikTrader](../api/StockSharp.Quik.QuikTrader.html)\-ы созданы, идет обычная работа с каждом из них: 
+3. Когда [QuikTrader](xref:StockSharp.Quik.QuikTrader)\-ы созданы, идет обычная работа с каждом из них: 
 
    ```cs
    // подписываемся на событие ошибок обработки данных и разрыва соединения
@@ -91,7 +91,7 @@
 
    > [!CAUTION]
    > Номера счетов, которые в примере записаны в переменные **account1** и **account2**, это **не логины** в [Quik](Quik.md), а коды клиентов. Об особенности портфелей в Quik читайте в соответствующем [разделе](QuikPortfolio.md). 
-4. Для более удобной работы с несколькими [QuikTrader](../api/StockSharp.Quik.QuikTrader.html)\-ами [S\#](StockSharpAbout.md) предоставляет [Коннекторы](API_Connectors.md). 
+4. Для более удобной работы с несколькими [QuikTrader](xref:StockSharp.Quik.QuikTrader)\-ами [S\#](StockSharpAbout.md) предоставляет [Коннекторы](API_Connectors.md). 
 5. Исходные коды примера лежат в папке *SampleFewQuiks*. 
 
 ### Следующие шаги

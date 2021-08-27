@@ -1,6 +1,6 @@
 # Инициализация адаптера AlorHistory
 
-Код ниже демонстрирует как инициализировать [AlorHistoryMessageAdapter](../api/StockSharp.AlorHistory.AlorHistoryMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [AlorHistoryMessageAdapter](xref:StockSharp.AlorHistory.AlorHistoryMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new AlorHistoryMessageAdapter(Connector.TransactionIdGenerator);

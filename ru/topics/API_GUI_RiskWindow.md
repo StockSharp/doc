@@ -1,6 +1,6 @@
 # Окно настройки рисков
 
-[AlertSettingsWindow](../api/StockSharp.Alerts.AlertSettingsWindow.html) \- Специальное окно для настройки контроля рисков. 
+[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) \- Специальное окно для настройки контроля рисков. 
 
 ![API GUI RiskWindow](../images/API_GUI_RiskWindow.png)
 

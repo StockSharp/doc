@@ -1,6 +1,6 @@
 # Инициализация адаптера Transaq
 
-Код ниже демонстрирует как инициализировать [AlfaDirectMessageAdapter](../api/StockSharp.AlfaDirect.AlfaDirectMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

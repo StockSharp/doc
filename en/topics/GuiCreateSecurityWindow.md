@@ -1,6 +1,6 @@
 # Window
 
-The [SecurityCreateWindow](../api/StockSharp.Xaml.SecurityCreateWindow.html) component is a window for creating and editing an instrument. The component consists of two main elements: the special text field [SecurityIdTextBox](../api/StockSharp.Xaml.SecurityIdTextBox.html) the property editing grid [PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html). You can access the created (edited) instrument with the [Security](../api/StockSharp.Xaml.SecurityCreateWindow.Security.html) property. 
+The [SecurityCreateWindow](xref:StockSharp.Xaml.SecurityCreateWindow) component is a window for creating and editing an instrument. The component consists of two main elements: the special text field [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) the property editing grid [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx). You can access the created (edited) instrument with the [Security](xref:StockSharp.Xaml.SecurityCreateWindow.Security) property. 
 
 Below is the appearance of the component and the code snippet with its use. 
 

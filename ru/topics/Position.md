@@ -1,6 +1,6 @@
 # Позиция
 
-Для учета позиции необходимо использовать реализацию интерфейса [IPositionManager](../api/StockSharp.Algo.Positions.IPositionManager.html), в виде [PositionManager](../api/StockSharp.Algo.Positions.PositionManager.html).
+Для учета позиции необходимо использовать реализацию интерфейса [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager), в виде [PositionManager](xref:StockSharp.Algo.Positions.PositionManager).
 
 ### Предварительные условия
 

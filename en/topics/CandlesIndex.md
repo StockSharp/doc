@@ -1,6 +1,6 @@
 # Candle creation by the instruments basket
 
-To create [ContinuousSecurity](../api/StockSharp.Algo.ContinuousSecurity.html), [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) or [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) candles, the same procedure is used as in the creation of the [Security](../api/StockSharp.BusinessEntities.Security.html) candles.
+To create [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) or [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) candles, the same procedure is used as in the creation of the [Security](xref:StockSharp.BusinessEntities.Security) candles.
 
 For example, create 1 min candles for spread APM5 \- ESM5:
 
@@ -46,7 +46,7 @@ _connector.SubscribeCandles(_indexSeries, DateTime.Today.Subtract(TimeSpan.FromD
 		
 ```
 
-After that, the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) \- DrawCandles event handler will receive the candles, which can be displayed on the chart:
+After that, the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) \- DrawCandles event handler will receive the candles, which can be displayed on the chart:
 
 ```cs
 private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)

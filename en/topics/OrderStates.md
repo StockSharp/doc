@@ -4,75 +4,75 @@ The order during it’s life goes through the following states:
 
 ![OrderStates](../images/OrderStates.png)
 
-- [None](../api/StockSharp.Messages.OrderStates.None.html)
+- [None](xref:StockSharp.Messages.OrderStates.None)
 
    \- the order has been created in the algorithm and has not been sent to the registration. 
-- [Pending](../api/StockSharp.Messages.OrderStates.Pending.html)
+- [Pending](xref:StockSharp.Messages.OrderStates.Pending)
 
    \- the order has been sent to the registration (
 
-  [Connector.RegisterOrder](../api/StockSharp.Algo.Connector.RegisterOrder.html)
+  [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder)
 
   ) and the 
 
-  [ITransactionProvider.NewOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.NewOrder.html)
+  [ITransactionProvider.NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder)
 
    event for it has been called. The confirmation of the order acceptance from the exchange is expected. If successful, the 
 
-  [Connector.OrderChanged](../api/StockSharp.Algo.Connector.OrderChanged.html)
+  [Connector.OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged)
 
   , event will be called and the order will be changed to the 
 
-  [Active](../api/StockSharp.Messages.OrderStates.Active.html)
+  [Active](xref:StockSharp.Messages.OrderStates.Active)
 
    state. Also the 
 
-  [Order.Id](../api/StockSharp.BusinessEntities.Order.Id.html)
+  [Order.Id](xref:StockSharp.BusinessEntities.Order.Id)
 
    and 
 
-  [Order.Time](../api/StockSharp.BusinessEntities.Order.Time.html)
+  [Order.Time](xref:StockSharp.BusinessEntities.Order.Time)
 
    properties will be initialized. In the case of the order rejection the 
 
-  [Connector.OrderRegisterFailed](../api/StockSharp.Algo.Connector.OrderRegisterFailed.html)
+  [Connector.OrderRegisterFailed](xref:StockSharp.Algo.Connector.OrderRegisterFailed)
 
    event with the error description will be called and the order will be changed to the 
 
-  [Failed](../api/StockSharp.Messages.OrderStates.Failed.html)
+  [Failed](xref:StockSharp.Messages.OrderStates.Failed)
 
    state. 
-- [Active](../api/StockSharp.Messages.OrderStates.Active.html)
+- [Active](xref:StockSharp.Messages.OrderStates.Active)
 
    \- the order is active on exchange. Such order will be active as long as all of the order 
 
-  [Order.Volume](../api/StockSharp.BusinessEntities.Order.Volume.html)
+  [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume)
 
    volume is matched, or it will be forcibly cancelled through 
 
-  [ITransactionProvider.CancelOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.CancelOrder.html)
+  [ITransactionProvider.CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder)
 
   . If the order matched partially the 
 
-  [ITransactionProvider.NewMyTrade](../api/StockSharp.BusinessEntities.ITransactionProvider.NewMyTrade.html)
+  [ITransactionProvider.NewMyTrade](xref:StockSharp.BusinessEntities.ITransactionProvider.NewMyTrade)
 
    events about new trades on issued order have been called, as well as the 
 
-  [Connector.OrderChanged](../api/StockSharp.Algo.Connector.OrderChanged.html)
+  [Connector.OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged)
 
    event, which the 
 
-  [Order.Balance](../api/StockSharp.BusinessEntities.Order.Balance.html)
+  [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance)
 
    notification about the order balance change passed. The latest event will be arised in the case of the order cancellation. 
-- [Done](../api/StockSharp.Messages.OrderStates.Done.html)
+- [Done](xref:StockSharp.Messages.OrderStates.Done)
 
    \- the order is no longer active on the exchange (been fully matched or cancelled). 
-- [Failed](../api/StockSharp.Messages.OrderStates.Failed.html)
+- [Failed](xref:StockSharp.Messages.OrderStates.Failed)
 
    \- the order has not been accepted by the exchange (or intermediate system, such as the broker server) for any reason. 
 
-To find out the order trading state (what volume is matched, whether the order fully matched, and so on) the [IsCanceled](../api/StockSharp.Algo.TraderHelper.IsCanceled.html), [IsMatchedEmpty](../api/StockSharp.Algo.TraderHelper.IsMatchedEmpty.html), [IsMatchedPartially](../api/StockSharp.Algo.TraderHelper.IsMatchedPartially.html), [IsMatched](../api/StockSharp.Algo.TraderHelper.IsMatched.html) and [GetMatchedVolume](../api/StockSharp.Algo.TraderHelper.GetMatchedVolume.html) methods should be used: 
+To find out the order trading state (what volume is matched, whether the order fully matched, and so on) the [IsCanceled](xref:StockSharp.Algo.TraderHelper.IsCanceled), [IsMatchedEmpty](xref:StockSharp.Algo.TraderHelper.IsMatchedEmpty), [IsMatchedPartially](xref:StockSharp.Algo.TraderHelper.IsMatchedPartially), [IsMatched](xref:StockSharp.Algo.TraderHelper.IsMatched) and [GetMatchedVolume](xref:StockSharp.Algo.TraderHelper.GetMatchedVolume) methods should be used: 
 
 ```cs
 // any order

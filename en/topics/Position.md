@@ -1,6 +1,6 @@
 # Position
 
-For the position calculation it is necessary to use the [IPositionManager](../api/StockSharp.Algo.Positions.IPositionManager.html) interface implementation, by way of [PositionManager](../api/StockSharp.Algo.Positions.PositionManager.html).
+For the position calculation it is necessary to use the [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager) interface implementation, by way of [PositionManager](xref:StockSharp.Algo.Positions.PositionManager).
 
 ### Prerequisites
 

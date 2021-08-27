@@ -1,6 +1,6 @@
 # Доска опционов
 
-Графический компонент [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html) \- таблица для отображения доски опционов. Показывает "греки", вмененную волатильность, теоретическую цену, лучший оффер и бид для Put и Call опционов. 
+Графический компонент [OptionDesk](xref:StockSharp.Xaml.OptionDesk) \- таблица для отображения доски опционов. Показывает "греки", вмененную волатильность, теоретическую цену, лучший оффер и бид для Put и Call опционов. 
 
 Ниже показан пример OptionCalculator, в котором используется этот компонент. Исходные коды примера можно найти в папке *Samples\/Misc\/SampleOptionQuoting*. 
 
@@ -10,7 +10,7 @@
 
 Пример OptionCalculator
 
-1. В коде XAML добавляем элемент [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html) и присваиваем ему имя **Desk**.
+1. В коде XAML добавляем элемент [OptionDesk](xref:StockSharp.Xaml.OptionDesk) и присваиваем ему имя **Desk**.
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -130,12 +130,12 @@
    - Заполняем массив цепочкой опционов, где подлежащим активом выступает выбранный инструмент;
    - Присваиваем свойству 
 
-     [OptionDeskModel.Options](../api/StockSharp.Xaml.OptionDeskModel.Options.html)
+     [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options)
 
       этот массив;
    - Очищаем значения доски опционов при помощи метода 
 
-     [OptionDeskModel.Clear](../api/StockSharp.Xaml.OptionDeskModel.Clear.html)
+     [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear)
 
      .
    ```cs

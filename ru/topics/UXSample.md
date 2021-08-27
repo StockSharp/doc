@@ -1,6 +1,6 @@
 # Инициализация адаптера UX
 
-Код ниже демонстрирует как инициализировать [UkrExhMessageAdapter](../api/StockSharp.UkrExh.UkrExhMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [UkrExhMessageAdapter](xref:StockSharp.UkrExh.UkrExhMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

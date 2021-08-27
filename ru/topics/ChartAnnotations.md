@@ -4,7 +4,7 @@
 
 ![ChartAnnotations](../images/ChartAnnotations.png)
 
-Добавление аннотаций не отличается от добавления любой другой информации на график. Сначала необходимо создать [ChartAnnotation](../api/StockSharp.Xaml.Charting.ChartAnnotation.html) и добавить его на область графика:
+Добавление аннотаций не отличается от добавления любой другой информации на график. Сначала необходимо создать [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) и добавить его на область графика:
 
 ```cs
 var _annotation = new ChartAnnotation { Type = ChartAnnotationTypes.BoxAnnotation };
@@ -12,7 +12,7 @@ Chart.AddElement(chartArea, _annotation);
 		
 ```
 
-После чего необходимо инициализировать новый экземпляр класса [AnnotationData](../api/StockSharp.Xaml.Charting.ChartDrawData.AnnotationData.html), в котором описать аннотацию и передать его в метод [Chart.Draw](../api/StockSharp.Xaml.Charting.Chart.Draw.html) для прорисовки на графике:
+После чего необходимо инициализировать новый экземпляр класса [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), в котором описать аннотацию и передать его в метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw) для прорисовки на графике:
 
 ```cs
 var data = new ChartDrawData.AnnotationData

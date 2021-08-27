@@ -1,6 +1,6 @@
 # Инициализация адаптера FAST
 
-Код ниже демонстрирует как инициализировать [FastMessageAdapter](../api/StockSharp.Fix.FastMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [FastMessageAdapter](xref:StockSharp.Fix.FastMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

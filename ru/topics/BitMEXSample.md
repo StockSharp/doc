@@ -1,6 +1,6 @@
 # Инициализация адаптера BitMEX
 
-Код ниже демонстрирует как инициализировать [BitmexMessageAdapter](../api/StockSharp.Bitmex.BitmexMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BitmexMessageAdapter](xref:StockSharp.Bitmex.BitmexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

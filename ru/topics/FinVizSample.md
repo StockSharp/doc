@@ -1,6 +1,6 @@
 # Инициализация адаптера FinViz
 
-Код ниже демонстрирует как инициализировать [FinVizMessageAdapter](../api/StockSharp.FinViz.FinVizMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [FinVizMessageAdapter](xref:StockSharp.FinViz.FinVizMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new FinVizMessageAdapter(Connector.TransactionIdGenerator);

@@ -1,6 +1,6 @@
 # Лог заявок
 
-Если подключение поддерживает лог заявок, то адаптер может передавать его через сообщение [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html):
+Если подключение поддерживает лог заявок, то адаптер может передавать его через сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage):
 
 ```cs
 			SendOutMessage(new ExecutionMessage
@@ -19,7 +19,7 @@
 			});
 ```
 
-Если требуется поддержка генерации стаканов из приходящих данных, то будет использоваться адаптер [OrderLogMessageAdapter](../api/StockSharp.Algo.OrderLogMessageAdapter.html) (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) при подписке, требущих сбор стаканов из ОЛ данных. По умолчанию, будет использовать алгоритм [OrderLogMarketDepthBuilder](../api/StockSharp.Messages.OrderLogMarketDepthBuilder.html). Если поведение данного класса недостаточно, то необходимо создать собственный класс, реализующий интерфейс [IOrderLogMarketDepthBuilder](../api/StockSharp.Messages.IOrderLogMarketDepthBuilder.html) и переопределить метод [IMessageAdapter.CreateOrderLogMarketDepthBuilder](../api/StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder.html):
+Если требуется поддержка генерации стаканов из приходящих данных, то будет использоваться адаптер [OrderLogMessageAdapter](xref:StockSharp.Algo.OrderLogMessageAdapter) (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) при подписке, требущих сбор стаканов из ОЛ данных. По умолчанию, будет использовать алгоритм [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder). Если поведение данного класса недостаточно, то необходимо создать собственный класс, реализующий интерфейс [IOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IOrderLogMarketDepthBuilder) и переопределить метод [IMessageAdapter.CreateOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder):
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter

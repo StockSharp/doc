@@ -1,6 +1,6 @@
 # Инициализация адаптера Deribit
 
-Код ниже демонстрирует как инициализировать [DeribitMessageAdapter](../api/StockSharp.Deribit.DeribitMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [DeribitMessageAdapter](xref:StockSharp.Deribit.DeribitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

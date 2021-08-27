@@ -1,6 +1,6 @@
 # Adapter initialization BitMEX
 
-The code below demonstrates how to initialize the [BitmexMessageAdapter](../api/StockSharp.Bitmex.BitmexMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [BitmexMessageAdapter](xref:StockSharp.Bitmex.BitmexMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

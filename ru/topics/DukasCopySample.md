@@ -1,6 +1,6 @@
 # Инициализация адаптера DukasCopy
 
-Код ниже демонстрирует как инициализировать [DukasCopyMessageAdapter](../api/StockSharp.DukasCopy.DukasCopyMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator);

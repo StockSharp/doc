@@ -1,6 +1,6 @@
 # Окно настройки оповещений
 
-[AlertSettingsWindow](../api/StockSharp.Alerts.AlertSettingsWindow.html) \- окно настройки уведомлений определенных событий 
+[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) \- окно настройки уведомлений определенных событий 
 
 ![API GUI AlertWindow](../images/API_GUI_AlertWindow.png)
 

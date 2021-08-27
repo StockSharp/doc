@@ -1,6 +1,6 @@
 # Прибыль\-убыток
 
-Для учета общей прибыли\-убытка (P&L) в торговом роботе необходимо использовать реализацию интерфейса [IPnLManager](../api/StockSharp.Algo.PnL.IPnLManager.html), в виде [PnLManager](../api/StockSharp.Algo.PnL.PnLManager.html).
+Для учета общей прибыли\-убытка (P&L) в торговом роботе необходимо использовать реализацию интерфейса [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager), в виде [PnLManager](xref:StockSharp.Algo.PnL.PnLManager).
 
 ### Предварительные условия
 

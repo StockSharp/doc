@@ -1,6 +1,6 @@
 # Экспорт произвольных таблиц
 
-[QuikTrader](../api/StockSharp.Quik.QuikTrader.html) поддерживает экспорт не только стандартных таблиц, как Инструменты, Заявки и т.д., но и произвольных. Эта возможность необходима тем торговым алгоритмам, которые используют особый набор данных. Например, информацию, выводимую **QPILE** портфелем. 
+[QuikTrader](xref:StockSharp.Quik.QuikTrader) поддерживает экспорт не только стандартных таблиц, как Инструменты, Заявки и т.д., но и произвольных. Эта возможность необходима тем торговым алгоритмам, которые используют особый набор данных. Например, информацию, выводимую **QPILE** портфелем. 
 
 ### Предварительные условия
 
@@ -57,20 +57,20 @@
    }
    ```
 
-   DdeCustomTableAttribute Атрибутом [DdeCustomTableAttribute](../api/StockSharp.Quik.DdeCustomTableAttribute.html) задается название таблицы, из которой будут читаться данные. Дополнительно, через [StockSharp.Quik.DdeCustomColumnAttribute](../api/StockSharp.Quik.DdeCustomColumnAttribute.html) задаются название колонки в таблице и ее порядковый номер (нумерация идет с 0). 
+   DdeCustomTableAttribute Атрибутом [DdeCustomTableAttribute](xref:StockSharp.Quik.DdeCustomTableAttribute) задается название таблицы, из которой будут читаться данные. Дополнительно, через [StockSharp.Quik.DdeCustomColumnAttribute](xref:StockSharp.Quik.DdeCustomColumnAttribute) задаются название колонки в таблице и ее порядковый номер (нумерация идет с 0). 
 
-   Через специальный атрибут [Ecng.Serialization.IdentityAttribute](../api/Ecng.Serialization.IdentityAttribute.html) указывается идентификатор экспортируемой строки. Это позволит не создавать каждый раз объекты, а использовать уже ранее созданные. В случае с таблицей исторических свечей, идентификатор состоит их двух параметров: дата и время. Поэтому они были вынесены в отдельный класс *QuikCandleDateTime*. 
-3. Далее, с помощью типа *QuikCandle* создается [DdeCustomTable](../api/StockSharp.Quik.DdeCustomTable.html), описывающий формат таблицы в терминале [Quik](Quik.md): 
+   Через специальный атрибут [Ecng.Serialization.IdentityAttribute](xref:Ecng.Serialization.IdentityAttribute) указывается идентификатор экспортируемой строки. Это позволит не создавать каждый раз объекты, а использовать уже ранее созданные. В случае с таблицей исторических свечей, идентификатор состоит их двух параметров: дата и время. Поэтому они были вынесены в отдельный класс *QuikCandleDateTime*. 
+3. Далее, с помощью типа *QuikCandle* создается [DdeCustomTable](xref:StockSharp.Quik.DdeCustomTable), описывающий формат таблицы в терминале [Quik](Quik.md): 
 
    ```cs
    _table = new DdeCustomTable(typeof(QuikCandle));
    ```
-4. Созданная таблица добавляется через свойство [QuikTrader.CustomTables](../api/StockSharp.Quik.QuikTrader.CustomTables.html), чтобы [QuikTrader](../api/StockSharp.Quik.QuikTrader.html) смог начать обрабатывать неизвестный поток [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) данных 
+4. Созданная таблица добавляется через свойство [QuikTrader.CustomTables](xref:StockSharp.Quik.QuikTrader.CustomTables), чтобы [QuikTrader](xref:StockSharp.Quik.QuikTrader) смог начать обрабатывать неизвестный поток [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) данных 
 
    ```cs
    this.Trader.CustomTables.Add(_table);
    ```
-5. Подключение к событию [QuikTrader.NewCustomTables](../api/StockSharp.Quik.QuikTrader.NewCustomTables.html): 
+5. Подключение к событию [QuikTrader.NewCustomTables](xref:StockSharp.Quik.QuikTrader.NewCustomTables): 
 
    ```cs
    this.Trader.NewCustomTables += (type, objects) =>
@@ -81,7 +81,7 @@
    };
    ```
 
-   Если необходимо не только получать новые строчки таблицы, но так же знать, когда обновились полученные ранее строчки, то необходимо использовать событие [QuikTrader.CustomTablesChanged](../api/StockSharp.Quik.QuikTrader.CustomTablesChanged.html). В случае, если ни одно из полей не было помечено атрибутом [Ecng.Serialization.IdentityAttribute](../api/Ecng.Serialization.IdentityAttribute.html), то событие [QuikTrader.CustomTablesChanged](../api/StockSharp.Quik.QuikTrader.CustomTablesChanged.html) не будет никогда вызываться, и все изменения будут приходит как новые строчки через [QuikTrader.NewCustomTables](../api/StockSharp.Quik.QuikTrader.NewCustomTables.html). 
+   Если необходимо не только получать новые строчки таблицы, но так же знать, когда обновились полученные ранее строчки, то необходимо использовать событие [QuikTrader.CustomTablesChanged](xref:StockSharp.Quik.QuikTrader.CustomTablesChanged). В случае, если ни одно из полей не было помечено атрибутом [Ecng.Serialization.IdentityAttribute](xref:Ecng.Serialization.IdentityAttribute), то событие [QuikTrader.CustomTablesChanged](xref:StockSharp.Quik.QuikTrader.CustomTablesChanged) не будет никогда вызываться, и все изменения будут приходит как новые строчки через [QuikTrader.NewCustomTables](xref:StockSharp.Quik.QuikTrader.NewCustomTables). 
 6. В итоге должно получиться следующее: 
 
    ![samplecandleqpile](../images/sample_candle_qpile.png)

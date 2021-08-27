@@ -1,6 +1,6 @@
 # Инициализация адаптера FIX
 
-Код ниже демонстрирует как инициализировать [FixMessageAdapter](../api/StockSharp.Fix.FixMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [FixMessageAdapter](xref:StockSharp.Fix.FixMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

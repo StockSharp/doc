@@ -14,7 +14,7 @@
 
 Необходимые действия:
 
-1. В самом начале необходимо создать шлюз к торговой системе [Quik](Quik.md), используя класс [QuikTrader](../api/StockSharp.Quik.QuikTrader.html):
+1. В самом начале необходимо создать шлюз к торговой системе [Quik](Quik.md), используя класс [QuikTrader](xref:StockSharp.Quik.QuikTrader):
 
    ```cs
    					// создаем шлюз к Quik-у
@@ -26,7 +26,7 @@
    		     		trader.DdeTables = new[] { trader.SecuritiesTable, trader.MyTradesTable, trader.EquityPositionsTable, trader.EquityPortfoliosTable, trader.OrdersTable };
    		     
    ```
-3. После создания шлюза необходимо подключиться к торговой системе, используя метод [IConnector.Connect](../api/StockSharp.BusinessEntities.IConnector.Connect.html). Данный метод асинхронный, то есть результат его выполнения не гарантирует мгновенное установление соединения. Для точного определения, что соединение было установлено, необходимо использовать событие [IConnector.Connected](../api/StockSharp.BusinessEntities.IConnector.Connected.html): 
+3. После создания шлюза необходимо подключиться к торговой системе, используя метод [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect). Данный метод асинхронный, то есть результат его выполнения не гарантирует мгновенное установление соединения. Для точного определения, что соединение было установлено, необходимо использовать событие [IConnector.Connected](xref:StockSharp.BusinessEntities.IConnector.Connected): 
 
    ```cs
    // подписываемся на событие успешного подключения
@@ -97,14 +97,14 @@
    };
    ```
 
-   В обработчике [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html) запускается экспорт стакана для того, чтобы начали обновляться такие поля как [Security.BestBid](../api/StockSharp.BusinessEntities.Security.BestBid.html), [Security.BestAsk](../api/StockSharp.BusinessEntities.Security.BestAsk.html) и [Security.BestPair](../api/StockSharp.BusinessEntities.Security.BestPair.html). Подробнее, в разделе [Экспорт стакана](QuikQuotesByDde.md). 
+   В обработчике [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) запускается экспорт стакана для того, чтобы начали обновляться такие поля как [Security.BestBid](xref:StockSharp.BusinessEntities.Security.BestBid), [Security.BestAsk](xref:StockSharp.BusinessEntities.Security.BestAsk) и [Security.BestPair](xref:StockSharp.BusinessEntities.Security.BestPair). Подробнее, в разделе [Экспорт стакана](QuikQuotesByDde.md). 
 
    > [!CAUTION]
    > Номер счета, который в примере записан в переменную **account**, это **не логин** в [Quik](Quik.md), а код клиента. Об особенности портфелей в Quik читайте в соответствующем [разделе](QuikPortfolio.md). 
 
-   Когда данные начнут приходить в [QuikTrader](../api/StockSharp.Quik.QuikTrader.html), то будут вызываться события [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html), [Connector.NewOrder](../api/StockSharp.Algo.Connector.NewOrder.html) и т.д. Для тех данных, которые изменяются, вызывается другое событие. Например, для заявок, у которых изменяются значения Состояние, Остаток и т.д. будет вызвано событие [Connector.OrderChanged](../api/StockSharp.Algo.Connector.OrderChanged.html). 
+   Когда данные начнут приходить в [QuikTrader](xref:StockSharp.Quik.QuikTrader), то будут вызываться события [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity), [Connector.NewOrder](xref:StockSharp.Algo.Connector.NewOrder) и т.д. Для тех данных, которые изменяются, вызывается другое событие. Например, для заявок, у которых изменяются значения Состояние, Остаток и т.д. будет вызвано событие [Connector.OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged). 
 
-   Независимо от того, созданы ли данные программно, например, заявки, или же пользователь сам вручную зарегистрировал заявку, для новых данных в таблице Заявки будет вызвано событие [ITransactionProvider.NewOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.NewOrder.html). Это очень удобно в случае, когда пользователь отменяет выставленную заявку, и программа продолжает работать с актуальными данными. 
+   Независимо от того, созданы ли данные программно, например, заявки, или же пользователь сам вручную зарегистрировал заявку, для новых данных в таблице Заявки будет вызвано событие [ITransactionProvider.NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder). Это очень удобно в случае, когда пользователь отменяет выставленную заявку, и программа продолжает работать с актуальными данными. 
 5. Торговый алгоритм робота:
 
    ```cs

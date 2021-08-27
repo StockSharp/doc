@@ -1,6 +1,6 @@
 # Adapter initialization GAIN Capital
 
-The code below demonstrates how to initialize the [GainCapitalMessageAdapter](../api/StockSharp.GainCapital.GainCapitalMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [GainCapitalMessageAdapter](xref:StockSharp.GainCapital.GainCapitalMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new GainCapitalMessageAdapter(Connector.TransactionIdGenerator);

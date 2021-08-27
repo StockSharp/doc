@@ -1,6 +1,6 @@
 # Adapter initialization OpenECry
 
-The code below demonstrates how to initialize the [OpenECryMessageAdapter](../api/StockSharp.OpenECry.OpenECryMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

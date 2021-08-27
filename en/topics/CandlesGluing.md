@@ -1,8 +1,8 @@
 # Gluing candles, history + real\-time
 
-In order to glue historical candles with a real\-time, it is necessary to initialize the corresponding storage of trade objects [CsvEntityRegistry](../api/StockSharp.Algo.Storages.Csv.CsvEntityRegistry.html), storage of market data [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) and registry of snapshot storage [SnapshotRegistry](../api/StockSharp.Algo.Storages.SnapshotRegistry.html). 
+In order to glue historical candles with a real\-time, it is necessary to initialize the corresponding storage of trade objects [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), storage of market data [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) and registry of snapshot storage [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry). 
 
-Consider the following example of gluing [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) using the tick data saved with [S\#.Data](Hydra.md):
+Consider the following example of gluing [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) using the tick data saved with [S\#.Data](Hydra.md):
 
 ```cs
 private Connector _connector;
@@ -52,7 +52,7 @@ After that, candles will start to arrive to the CandleSeriesProcessing event han
 		
 ```
 
-If the [Connector](../api/StockSharp.Algo.Connector.html), is originally created, then no need to initialize StorageAdapter, enough to pass the storage of trade objects [CsvEntityRegistry](../api/StockSharp.Algo.Storages.Csv.CsvEntityRegistry.html), storage of market data [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) and registry of snapshot storage [SnapshotRegistry](../api/StockSharp.Algo.Storages.SnapshotRegistry.html) to the [Connector](../api/StockSharp.Algo.Connector.html) constructor:
+If the [Connector](xref:StockSharp.Algo.Connector), is originally created, then no need to initialize StorageAdapter, enough to pass the storage of trade objects [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), storage of market data [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) and registry of snapshot storage [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) to the [Connector](xref:StockSharp.Algo.Connector) constructor:
 
 ```cs
 ...

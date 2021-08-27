@@ -1,6 +1,6 @@
 # Adapter initialization Bitalong
 
-The code below demonstrates how to initialize the [BitalongMessageAdapter](../api/StockSharp.Bitalong.BitalongMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

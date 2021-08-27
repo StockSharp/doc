@@ -2,13 +2,13 @@
 
 ![GUI orderlog](../images/GUI_orderlog.png)
 
-[OrderLogGrid](../api/StockSharp.Xaml.OrderLogGrid.html) \- графический компонент для отображения лога заявок ( [OrderLogItem](../api/StockSharp.BusinessEntities.OrderLogItem.html)). 
+[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) \- графический компонент для отображения лога заявок ( [OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)). 
 
 **Основные свойства и методы**
 
-- [LogItems](../api/StockSharp.Xaml.OrderLogGrid.LogItems.html) \- список элементов лога заявок.
-- [SelectedLogItem](../api/StockSharp.Xaml.OrderLogGrid.SelectedLogItem.html) \- выбранный элемент лога заявок.
-- [SelectedLogItems](../api/StockSharp.Xaml.OrderLogGrid.SelectedLogItems.html) \- выбранные элементы лога заявок.
+- [LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- список элементов лога заявок.
+- [SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- выбранный элемент лога заявок.
+- [SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- выбранные элементы лога заявок.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

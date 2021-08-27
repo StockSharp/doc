@@ -1,6 +1,6 @@
 # Adapter initialization Hotbit
 
-The code below demonstrates how to initialize the [HotbitMessageAdapter](../api/StockSharp.Hotbit.HotbitMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [HotbitMessageAdapter](xref:StockSharp.Hotbit.HotbitMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

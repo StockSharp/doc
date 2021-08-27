@@ -1,17 +1,17 @@
 # Индекс
 
-[IndexEditor](../api/StockSharp.Xaml.IndexEditor.html) \- Графический контрол для редактирования [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html). 
+[IndexEditor](xref:StockSharp.Xaml.IndexEditor) \- Графический контрол для редактирования [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity). 
 
-[ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) \- специальный тип индексного инструмента, в основе которого лежит комбинирование нескольких инструментов при помощи математических формул. Этот тип имеет свойство [Expression](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression.html), в котором хранится формула в текстовом виде и список подлежащих инструментов [InnerSecurityIds](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds.html). 
+[ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- специальный тип индексного инструмента, в основе которого лежит комбинирование нескольких инструментов при помощи математических формул. Этот тип имеет свойство [Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression), в котором хранится формула в текстовом виде и список подлежащих инструментов [InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds). 
 
 ![GUI IndexSecurityWindow](../images/GUI_IndexSecurityWindow.png)
 
 **Основные свойства **
 
-- [Securities](../api/StockSharp.Xaml.IndexEditor.Securities.html) \- все доступные инструменты.
-- [Formula](../api/StockSharp.Xaml.IndexEditor.Formula.html) \- математическая формула индекса.
+- [Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- все доступные инструменты.
+- [Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- математическая формула индекса.
 
-Для использования [IndexEditor](../api/StockSharp.Xaml.IndexEditor.html) предварительно необходимо зарегистрировать специальную службу:
+Для использования [IndexEditor](xref:StockSharp.Xaml.IndexEditor) предварительно необходимо зарегистрировать специальную службу:
 
 ```cs
 ...
@@ -19,7 +19,7 @@ ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
 ```
 
-Далее в [IndexEditor](../api/StockSharp.Xaml.IndexEditor.html) следует передать инструменты необходимые для расчета индекса:
+Далее в [IndexEditor](xref:StockSharp.Xaml.IndexEditor) следует передать инструменты необходимые для расчета индекса:
 
 ```cs
 ...

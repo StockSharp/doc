@@ -1,6 +1,6 @@
 # Инициализация адаптера Quandl
 
-Код ниже демонстрирует как инициализировать [QuandlMessageAdapter](../api/StockSharp.Quandl.QuandlMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [QuandlMessageAdapter](xref:StockSharp.Quandl.QuandlMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new QuandlMessageAdapter(Connector.TransactionIdGenerator);

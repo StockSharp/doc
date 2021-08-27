@@ -6,17 +6,17 @@
 
 - FORTS\_FUTAGGR50\_REPL – стакан глубиной 50 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation50Future](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation50Future.html)
+  [PlazaStreamRegistry.Aggregation50Future](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation50Future)
 
   ) 
 - FORTS\_FUTAGGR20\_REPL – стакан глубиной 20 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation20Future](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation20Future.html)
+  [PlazaStreamRegistry.Aggregation20Future](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation20Future)
 
   ) 
 - FORTS\_FUTAGGR5\_REPL – стакан глубиной 5 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation5Future](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation5Future.html)
+  [PlazaStreamRegistry.Aggregation5Future](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation5Future)
 
   ) 
 
@@ -24,21 +24,21 @@
 
 - FORTS\_OPTAGGR50\_REPL – стакан глубиной 50 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation50Option](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation50Option.html)
+  [PlazaStreamRegistry.Aggregation50Option](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation50Option)
 
   ) 
 - FORTS\_OPTAGGR20\_REPL – стакан глубиной 20 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation20Option](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation20Option.html)
+  [PlazaStreamRegistry.Aggregation20Option](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation20Option)
 
   ) 
 - FORTS\_OPTAGGR5\_REPL – стакан глубиной 5 котировок (см. 
 
-  [PlazaStreamRegistry.Aggregation5Option](../api/StockSharp.Plaza.PlazaStreamRegistry.Aggregation5Option.html)
+  [PlazaStreamRegistry.Aggregation5Option](xref:StockSharp.Plaza.PlazaStreamRegistry.Aggregation5Option)
 
   ) 
 
-[DefaultFutureDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable.html) По умолчанию в шлюзе [PlazaMessageAdapter](../api/StockSharp.Plaza.PlazaMessageAdapter.html) используются стаканы глубиной в 5 котировок. Чтобы изменить глубину стакана, необходимо в шлюзе [PlazaMessageAdapter](../api/StockSharp.Plaza.PlazaMessageAdapter.html) свойству [DefaultFutureDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable.html) (для фьючерсов) или [DefaultOptionDepthTable](../api/StockSharp.Plaza.PlazaMessageAdapter.DefaultOptionDepthTable.html) (для опционов) присвоить новое значение: 
+[DefaultFutureDepthTable](xref:StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable) По умолчанию в шлюзе [PlazaMessageAdapter](xref:StockSharp.Plaza.PlazaMessageAdapter) используются стаканы глубиной в 5 котировок. Чтобы изменить глубину стакана, необходимо в шлюзе [PlazaMessageAdapter](xref:StockSharp.Plaza.PlazaMessageAdapter) свойству [DefaultFutureDepthTable](xref:StockSharp.Plaza.PlazaMessageAdapter.DefaultFutureDepthTable) (для фьючерсов) или [DefaultOptionDepthTable](xref:StockSharp.Plaza.PlazaMessageAdapter.DefaultOptionDepthTable) (для опционов) присвоить новое значение: 
 
 ```cs
 adapter.DefaultFutureDepthTable = adapter.TableRegistry.Aggregation20Future;

@@ -1,6 +1,6 @@
 # Custom indicator
 
-To create your own indicator, you must implement the [IIndicator](../api/StockSharp.Algo.Indicators.IIndicator.html) interface. As an example you can take the source code of other indicators that are in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. Here is the code for the simple moving average indicator implementation [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html): 
+To create your own indicator, you must implement the [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) interface. As an example you can take the source code of other indicators that are in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. Here is the code for the simple moving average indicator implementation [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage): 
 
 ```cs
 /// <summary>
@@ -43,9 +43,9 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 } 
 ```
 
-[SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) inherits from the [LengthIndicator\`1](../api/StockSharp.Algo.Indicators.LengthIndicator`1.html) class, from which it is necessary to inherit all of the indicators, having as parameter the length of the period. 
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) inherits from the [LengthIndicator\`1](xref:StockSharp.Algo.Indicators.LengthIndicator`1) class, from which it is necessary to inherit all of the indicators, having as parameter the length of the period. 
 
-Some indicators are composite and use other indicators in their calculations. Therefore, you can reuse the indicators from each other, as shown as an example of realization of the Chaikin Volatility indicator [ChaikinVolatility](../api/StockSharp.Algo.Indicators.ChaikinVolatility.html): 
+Some indicators are composite and use other indicators in their calculations. Therefore, you can reuse the indicators from each other, as shown as an example of realization of the Chaikin Volatility indicator [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility): 
 
 ```cs
 /// <summary>
@@ -124,7 +124,7 @@ public class ChaikinVolatility : BaseIndicator
 }
 ```
 
-The last types of indicators are those that do not just consist of other indicators, but also graphically displayed in several states at the same time (with a few lines). For example, [AverageDirectionalIndex](../api/StockSharp.Algo.Indicators.AverageDirectionalIndex.html): 
+The last types of indicators are those that do not just consist of other indicators, but also graphically displayed in several states at the same time (with a few lines). For example, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex): 
 
 ```cs
 /// <summary>
@@ -204,6 +204,6 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 }
 ```
 
-Such indicators should be inherited from the [BaseComplexIndicator](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.html) class, and pass indicator components to the [BaseComplexIndicator.InnerIndicators](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators.html)[BaseComplexIndicator](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.html) will process these parts, one after another. If the [BaseComplexIndicator.Mode](../api/StockSharp.Algo.Indicators.BaseComplexIndicator.Mode.html) set as the [ComplexIndicatorModes.Sequence](../api/StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence.html), the resulting value of the first indicator will be passed as input value to the second one, and so on until the end. If the [ComplexIndicatorModes.Parallel](../api/StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel.html), value set, the results of embedded indicators are ignored. 
+Such indicators should be inherited from the [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) class, and pass indicator components to the [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators)[BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) will process these parts, one after another. If the [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) set as the [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), the resulting value of the first indicator will be passed as input value to the second one, and so on until the end. If the [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), value set, the results of embedded indicators are ignored. 
 
 ## Recommended content

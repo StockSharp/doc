@@ -1,6 +1,6 @@
 # Инициализация адаптера BitMax
 
-Код ниже демонстрирует как инициализировать [BitMaxMessageAdapter](../api/StockSharp.BitMax.BitMaxMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BitMaxMessageAdapter](xref:StockSharp.BitMax.BitMaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

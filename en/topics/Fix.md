@@ -6,4 +6,4 @@
 
 [Adapter initialization FIX](FixSample.md)
 
-[Fix Trading Community](https://www.fixtrading.org/)
+[Fix Trading Community](https://www.fixtrading.org)

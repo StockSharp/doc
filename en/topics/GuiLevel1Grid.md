@@ -2,14 +2,14 @@
 
 ![GUI Leve1Grid](../images/GUI_Leve1Grid.png)
 
-[Level1Grid](../api/StockSharp.Xaml.Level1Grid.html) is the table for displaying the Level1 fields. This table uses the data as [Level1ChangeMessage](../api/StockSharp.Messages.Level1ChangeMessage.html) messages. 
+[Level1Grid](xref:StockSharp.Xaml.Level1Grid) is the table for displaying the Level1 fields. This table uses the data as [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) messages. 
 
 **Main properties**
 
-- [MaxCount](../api/StockSharp.Xaml.Level1Grid.MaxCount.html) \- the maximum number of messages to display.
-- [Messages](../api/StockSharp.Xaml.Level1Grid.Messages.html) \- the list of messages added to the table.
-- [SelectedMessage](../api/StockSharp.Xaml.Level1Grid.SelectedMessage.html) \- the selected message.
-- [SelectedMessages](../api/StockSharp.Xaml.Level1Grid.SelectedMessages.html) \- selected messages.
+- [MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- the maximum number of messages to display.
+- [Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- the list of messages added to the table.
+- [SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- the selected message.
+- [SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- selected messages.
 
 Below is the code snippet with its use. 
 

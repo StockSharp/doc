@@ -1,6 +1,6 @@
 # Инициализация адаптера Quik Lua
 
-Код ниже демонстрирует как инициализировать [LuaFixMarketDataMessageAdapter](../api/StockSharp.Quik.Lua.LuaFixMarketDataMessageAdapter.html) и [LuaFixTransactionMessageAdapter](../api/StockSharp.Quik.Lua.LuaFixTransactionMessageAdapter.html) и передать их в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [LuaFixMarketDataMessageAdapter](xref:StockSharp.Quik.Lua.LuaFixMarketDataMessageAdapter) и [LuaFixTransactionMessageAdapter](xref:StockSharp.Quik.Lua.LuaFixTransactionMessageAdapter) и передать их в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

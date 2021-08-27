@@ -15,7 +15,7 @@ xmlns:xamlRemote= "clr-namespace:StockSharp.RemoteManager;assembly=StockSharp.Re
 
 Модуль работает в двух режимах \- серверный и клиентский, или в двух одновременно.
 
-Для инициализации клиентского модуля необходимо вызвать метод **InitRemoteManagerClient** и передать в него [Connector](../api/StockSharp.Algo.Connector.html).
+Для инициализации клиентского модуля необходимо вызвать метод **InitRemoteManagerClient** и передать в него [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 	...

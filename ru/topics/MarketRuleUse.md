@@ -25,9 +25,9 @@
   	  	  		
   ```
 
-  Теперь, когда сработает событие (заявка будет зарегистрирована на бирже), указанное через метод [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) действие будет вызвано. 
+  Теперь, когда сработает событие (заявка будет зарегистрирована на бирже), указанное через метод [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) действие будет вызвано. 
 
-  В конце формирования правила вызывается метод [MarketRuleHelper.Apply](../api/StockSharp.Algo.MarketRuleHelper.Apply.html). До тех пор, пока метод не будет вызван для правила \- оно неактивно (обработчик в [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) не будет вызываться). 
+  В конце формирования правила вызывается метод [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply). До тех пор, пока метод не будет вызван для правила \- оно неактивно (обработчик в [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) не будет вызываться). 
 - **Создание правил внутри стратегии:**
 
   ```cs
@@ -54,7 +54,7 @@
   ```
 - **Удаление ненужных правил.**
 
-  У [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) есть [Token](../api/StockSharp.Algo.IMarketRule.Token.html) \- токен правила, с которым он ассоциирован. Например, для правила [WhenCanceled](../api/StockSharp.Algo.MarketRuleHelper.WhenCanceled.html) токеном будет являться заявка.
+  У [IMarketRule](xref:StockSharp.Algo.IMarketRule) есть [Token](xref:StockSharp.Algo.IMarketRule.Token) \- токен правила, с которым он ассоциирован. Например, для правила [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled) токеном будет являться заявка.
 
   Когда сработало правило успешной отмены заявки, то лучше удалить все остальные правила, связанные с этой заявкой:
 
@@ -89,7 +89,7 @@
   RegisterOrder(order);
   	  	  		
   ```
-- **Oбъединение правил по условию [Or](../api/StockSharp.Algo.MarketRuleHelper.Or.html) \/ [And](../api/StockSharp.Algo.MarketRuleHelper.And.html).**
+- **Oбъединение правил по условию [Or](xref:StockSharp.Algo.MarketRuleHelper.Or) \/ [And](xref:StockSharp.Algo.MarketRuleHelper.And).**
 
   Когда выйдет время **ИЛИ** закроется свеча:
 
@@ -131,8 +131,8 @@
   ```
 
   > [!TIP]
-  > Обработчик в [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) вызовется после того, как сработает последнее правило добавленное через [And](../api/StockSharp.Algo.MarketRuleHelper.And.html).
-- **Периодичность работы правила \- [Until](../api/StockSharp.Algo.IMarketRule.Until.html):**
+  > Обработчик в [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) вызовется после того, как сработает последнее правило добавленное через [And](xref:StockSharp.Algo.MarketRuleHelper.And).
+- **Периодичность работы правила \- [Until](xref:StockSharp.Algo.IMarketRule.Until):**
 
   ```cs
   bool flag = false;

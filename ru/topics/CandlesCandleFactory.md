@@ -6,7 +6,7 @@
 
 Реализация тиковых свечей
 
-1. В начале необходимо создать свой тип свечи. Тип должен наследоваться от класса [Candle](../api/StockSharp.Algo.Candles.Candle.html):
+1. В начале необходимо создать свой тип свечи. Тип должен наследоваться от класса [Candle](xref:StockSharp.Algo.Candles.Candle):
 
    > [!CAUTION]
    > Тиковые свечи поддерживаются [S\#](StockSharpAbout.md) стандартно и данный шаг представлен лишь в качестве примера.
@@ -37,7 +37,7 @@
        public int TradeCount { get; set; }
    }
    ```
-2. Дополнительно, необходимо создать свой тип сообщения свечи. Подробнее, о [сообщениях](Messages.md). Тип должен наследоваться от класса [CandleMessage](../api/StockSharp.Messages.CandleMessage.html):
+2. Дополнительно, необходимо создать свой тип сообщения свечи. Подробнее, о [сообщениях](Messages.md). Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
 
    ```cs
    /// <summary>
@@ -74,9 +74,9 @@
    	}
    }
    ```
-3. Далее требуется создать построителя свечей, для нового типа свечей. Для этого необходимо создать реализацию [CandleBuilder\`1](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.html). В метод [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) будет поступать значение типа [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html). В зависимости от настроек может содержать данные как о тиковой сделке [TickCandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilderValueTransform.html), так и о стакане [QuoteCandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.QuoteCandleBuilderValueTransform.html).
+3. Далее требуется создать построителя свечей, для нового типа свечей. Для этого необходимо создать реализацию [CandleBuilder\`1](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1). В метод [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) будет поступать значение типа [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). В зависимости от настроек может содержать данные как о тиковой сделке [TickCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilderValueTransform), так и о стакане [QuoteCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.QuoteCandleBuilderValueTransform).
 
-   Метод [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) должен возвратить или новую свечу (если новые данные привели к формированию свечи), или обновить переданную (если данных пока недостаточно для создания новой свечи). Если метод [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) возвращает новую свечу, то [CandleBuilder\`1](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.html) вызывает его еще раз, передав в метод то же самое значение [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html). Метод будет вызываться до тех пор, пока [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) не вернет переданную свечу. Это сделано для тех случаев, когда по одному входящему значению [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html) может быть сформировано несколько свечей: 
+   Метод [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) должен возвратить или новую свечу (если новые данные привели к формированию свечи), или обновить переданную (если данных пока недостаточно для создания новой свечи). Если метод [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) возвращает новую свечу, то [CandleBuilder\`1](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1) вызывает его еще раз, передав в метод то же самое значение [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). Метод будет вызываться до тех пор, пока [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) не вернет переданную свечу. Это сделано для тех случаев, когда по одному входящему значению [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) может быть сформировано несколько свечей: 
 
    ```cs
    /// <summary>
@@ -157,17 +157,17 @@
        }
    }
    ```
-4. Затем необходимо получить [CandleBuilderProvider](../api/StockSharp.Algo.Candles.Compression.CandleBuilderProvider.html) из подключения и добавить в него [TickCandleBuilder](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilder.html):
+4. Затем необходимо получить [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) из подключения и добавить в него [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder):
 
    > [!CAUTION]
-   > [TickCandleBuilder](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilder.html), как источник свечей, стандартно присутствует в [CandleBuilderProvider](../api/StockSharp.Algo.Candles.Compression.CandleBuilderProvider.html). Данный шаг представлен лишь в качестве примера.
+   > [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder), как источник свечей, стандартно присутствует в [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider). Данный шаг представлен лишь в качестве примера.
 
    ```cs
    private Connector _connector;
    ...
    _connector.Adapter.CandleBuilderProvider.Register(new TickCandleBuilder());
    ```
-5. Создать [CandleSeries](../api/StockSharp.Algo.Candles.CandleSeries.html) и запросить по ней данные:
+5. Создать [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) и запросить по ней данные:
 
    ```cs
    var series = new CandleSeries(typeof(TickCandle), _security, 1000);

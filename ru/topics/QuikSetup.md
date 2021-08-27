@@ -165,10 +165,10 @@
   6. Акт. продажа
 
   > [!CAUTION]
-  > Колонки должны идти строго в том порядке, в котором показаны на рисунках. Это сделано из\-за того, что [QuikTrader](../api/StockSharp.Quik.QuikTrader.html) в целях оптимизации не обрабатывает заголовки колонок в таблицах, а основывается только на порядковом номере. Описание того, как можно менять порядок колонок в таблицах, не нарушая механизм работы [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange), описан [Экспорт дополнительных колонок](QuikExtendedInfoByDde.md).
+  > Колонки должны идти строго в том порядке, в котором показаны на рисунках. Это сделано из\-за того, что [QuikTrader](xref:StockSharp.Quik.QuikTrader) в целях оптимизации не обрабатывает заголовки колонок в таблицах, а основывается только на порядковом номере. Описание того, как можно менять порядок колонок в таблицах, не нарушая механизм работы [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange), описан [Экспорт дополнительных колонок](QuikExtendedInfoByDde.md).
 
   > [!TIP]
-  > Если экспорт [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) не работает (данные не поступаю в программу), то рекомендуется для диагностирования ошибки подключится к событию [IConnector.Error](../api/StockSharp.BusinessEntities.IConnector.Error.html).
+  > Если экспорт [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) не работает (данные не поступаю в программу), то рекомендуется для диагностирования ошибки подключится к событию [IConnector.Error](xref:StockSharp.BusinessEntities.IConnector.Error).
 - Для увеличения скорости передачи данных по [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) для стакана рекомендуется прописать в файл *info.ini* следующие параметры: 
 
   ```cs

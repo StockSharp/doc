@@ -61,7 +61,7 @@ Example of moving averages strategy testing in several threads
    	BeginValue = 1000000,
    };
    ```
-4. Creating a unified connector [BatchEmulation](../api/StockSharp.Algo.Strategies.Testing.BatchEmulation.html), which will contain all created in the next step [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html): 
+4. Creating a unified connector [BatchEmulation](xref:StockSharp.Algo.Strategies.Testing.BatchEmulation), which will contain all created in the next step [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector): 
 
    ```cs
    // create backtesting connector

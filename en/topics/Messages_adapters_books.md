@@ -16,7 +16,7 @@ private void SessionOnOrderBook(string pair, OrderBook book)
 }
 ```
 
-If an external trading system sends incremental order books (only changes in price levels are sent, not the entire order book), the logic of both building an order book snapshot (if it is not sent) and returning order book changes should be written in the adapter. To do this, you need to use the [QuoteChangeMessage.State](../api/StockSharp.Messages.QuoteChangeMessage.State.html) property: 
+If an external trading system sends incremental order books (only changes in price levels are sent, not the entire order book), the logic of both building an order book snapshot (if it is not sent) and returning order book changes should be written in the adapter. To do this, you need to use the [QuoteChangeMessage.State](xref:StockSharp.Messages.QuoteChangeMessage.State) property: 
 
 ```cs
 // get a snapshot of the glass from the trading system
@@ -34,7 +34,7 @@ private void SessionOnOrderBookSnapshot(string pair, OrderBook book)
 }
 ```
 
-For sending incremental messages, the code is similar, but the order book change sign is set. If the [QuoteChange.Volume](../api/StockSharp.Messages.QuoteChange.Volume.html).Volume value is equal to 0, then this is a sign for removing the price level: 
+For sending incremental messages, the code is similar, but the order book change sign is set. If the [QuoteChange.Volume](xref:StockSharp.Messages.QuoteChange.Volume).Volume value is equal to 0, then this is a sign for removing the price level: 
 
 ```cs
 // we get the changes of the order book of the order book
@@ -51,7 +51,7 @@ private void SessionOnOrderBookIncrement(string pair, OrderBook book)
 }
 ```
 
-The last step is to override the [IMessageAdapter.IsSupportOrderBookIncrements](../api/StockSharp.Messages.IMessageAdapter.IsSupportOrderBookIncrements.html) property, which will indicate that the [OrderBookIncrementMessageAdapter](../api/StockSharp.Algo.OrderBookIncrementMessageAdapter.html) should be added to the adapter chain when connecting (see [Adapters chain](Messages_adapters_chain.md) for details): 
+The last step is to override the [IMessageAdapter.IsSupportOrderBookIncrements](xref:StockSharp.Messages.IMessageAdapter.IsSupportOrderBookIncrements) property, which will indicate that the [OrderBookIncrementMessageAdapter](xref:StockSharp.Algo.OrderBookIncrementMessageAdapter) should be added to the adapter chain when connecting (see [Adapters chain](Messages_adapters_chain.md) for details): 
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter

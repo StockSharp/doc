@@ -1,6 +1,6 @@
 # Инициализация адаптера Latoken
 
-Код ниже демонстрирует как инициализировать [LatokenMessageAdapter](../api/StockSharp.LATOKEN.LatokenMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [LatokenMessageAdapter](xref:StockSharp.LATOKEN.LatokenMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

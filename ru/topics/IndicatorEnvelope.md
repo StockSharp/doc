@@ -2,7 +2,7 @@
 
 **Envelope** индикатор, который является каналом, созданный путем смещения скользящей средней на определенное значение. 
 
-Для использования индикатора необходимо использовать класс [Envelope](../api/StockSharp.Algo.Indicators.Envelope.html). 
+Для использования индикатора необходимо использовать класс [Envelope](xref:StockSharp.Algo.Indicators.Envelope). 
 
 ![IndicatorEnvelope](../images/IndicatorEnvelope.png)
 

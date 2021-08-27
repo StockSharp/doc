@@ -1,6 +1,6 @@
 # Notification settings window
 
-[AlertSettingsWindow](../api/StockSharp.Alerts.AlertSettingsWindow.html) \- window for configuring notifications of certain events 
+[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) \- window for configuring notifications of certain events 
 
 ![API GUI AlertWindow](../images/API_GUI_AlertWindow.png)
 

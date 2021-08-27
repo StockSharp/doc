@@ -1,6 +1,6 @@
 # Инициализация адаптера SmartCOM
 
-Код ниже демонстрирует как инициализировать [SmartComMessageAdapter](../api/StockSharp.SmartCom.SmartComMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [SmartComMessageAdapter](xref:StockSharp.SmartCom.SmartComMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

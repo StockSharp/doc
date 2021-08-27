@@ -1,6 +1,6 @@
 # Equity curve chart
 
-[EquityCurveChart](../api/StockSharp.Xaml.Charting.EquityCurveChart.html) \- the graphical component for displaying the equity curve. 
+[EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- the graphical component for displaying the equity curve. 
 
 Below is an example of using this component. The full example code is in the Samples\/Testing\/SampleRandomEmulation. 
 
@@ -10,7 +10,7 @@ Below is an example of using this component. The full example code is in the Sam
 
 Example of the EquityCurveChart plotting
 
-1. We add the [EquityCurveChart](../api/StockSharp.Xaml.Charting.EquityCurveChart.html) graphical component to XAML. Assigning the **Curve** name to the component. 
+1. We add the [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) graphical component to XAML. Assigning the **Curve** name to the component. 
 
    ```xaml
    <Window x:Class="SampleRandomEmulation.MainWindow"
@@ -61,7 +61,7 @@ Example of the EquityCurveChart plotting
    </Window>
    	  				
    ```
-2. In the main window code we create a data source to draw the chart using the [CreateCurve](../api/Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve.html) method. 
+2. In the main window code we create a data source to draw the chart using the [CreateCurve](xref:Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve) method. 
 
    ```cs
    private readonly ICollection<EquityData> _curveItems;
@@ -75,7 +75,7 @@ Example of the EquityCurveChart plotting
    }
    	  				
    ```
-3. When the PnL value of the strategy is changed we add data to the data source. In this case we use the special [EquityData](../api/StockSharp.Xaml.Charting.EquityData.html) class. 
+3. When the PnL value of the strategy is changed we add data to the data source. In this case we use the special [EquityData](xref:StockSharp.Xaml.Charting.EquityData) class. 
 
    ```cs
    _strategy.PnLChanged += () =>

@@ -1,10 +1,10 @@
 # Панель Купить\/Продать
 
-[BuySellPanel](../api/StockSharp.Xaml.BuySellPanel.html) \- Специальная панель, дающая возможность быстро выставить заявку по лучшим ценам. 
+[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) \- Специальная панель, дающая возможность быстро выставить заявку по лучшим ценам. 
 
 ![API GUI BuySell](../images/API_GUI_BuySell.png)
 
-Ниже приведен пример кода добавления панели [BuySellPanel](../api/StockSharp.Xaml.BuySellPanel.html). 
+Ниже приведен пример кода добавления панели [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel). 
 
 ```xaml
 <Window x:Class="MainWindow"

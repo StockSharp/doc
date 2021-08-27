@@ -2,7 +2,7 @@
 
 Индикатор **Медианная цена (Median Price)** показывает медианную цену для свечи. 
 
-Для использования индикатора необходимо использовать класс [MedianPrice](../api/StockSharp.Algo.Indicators.MedianPrice.html). 
+Для использования индикатора необходимо использовать класс [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). 
 
 ![IndicatorMedianPrice](../images/IndicatorMedianPrice.png)
 

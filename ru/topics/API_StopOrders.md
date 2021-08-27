@@ -1,10 +1,10 @@
 # Создать новую стоп заявку
 
-Для создания новой стоп заявки необходимо создать объект [Order](../api/StockSharp.BusinessEntities.Order.html), который содержит информацию о заявке и зарегистрировать его на бирже.
+Для создания новой стоп заявки необходимо создать объект [Order](xref:StockSharp.BusinessEntities.Order), который содержит информацию о заявке и зарегистрировать его на бирже.
 
-В отличии от обычной заявки для стоп заявки необходимо указать свойство [Order.Type](../api/StockSharp.BusinessEntities.Order.Type.html) как [Conditional](../api/StockSharp.Messages.OrderTypes.Conditional.html) и задать свойство [Order.Condition](../api/StockSharp.BusinessEntities.Order.Condition.html) с необходимыми условиями заявки.
+В отличии от обычной заявки для стоп заявки необходимо указать свойство [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) как [Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) и задать свойство [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) с необходимыми условиями заявки.
 
-В дальнейшем, если требуется работа с заявкой (например, отменить ее или изменить), то необходимо использовать именно этот объект [Order](../api/StockSharp.BusinessEntities.Order.html). Для регистрации заявок на бирже предусмотрен метод [RegisterOrder](../api/StockSharp.Algo.Connector.RegisterOrder.html) который отправляет заявку на сервер.
+В дальнейшем, если требуется работа с заявкой (например, отменить ее или изменить), то необходимо использовать именно этот объект [Order](xref:StockSharp.BusinessEntities.Order). Для регистрации заявок на бирже предусмотрен метод [RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder) который отправляет заявку на сервер.
 
 ```cs
 Connector Connector = new Connector();		
@@ -31,7 +31,7 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 							
 ```
 
-Для каждого подключения есть собственная реализация класса [OrderCondition](../api/StockSharp.Messages.OrderCondition.html) так как каждое подключение имеет свои уникальные особенности. Например, для [QUIK](Quik.md) это [QuikOrderCondition](../api/StockSharp.Quik.QuikOrderCondition.html) , для [KuCoin](Kucoin.md) это [KucoinOrderCondition](../api/StockSharp.Kucoin.KucoinOrderCondition.html) и т. д. 
+Для каждого подключения есть собственная реализация класса [OrderCondition](xref:StockSharp.Messages.OrderCondition) так как каждое подключение имеет свои уникальные особенности. Например, для [QUIK](Quik.md) это [QuikOrderCondition](xref:StockSharp.Quik.QuikOrderCondition) , для [KuCoin](Kucoin.md) это [KucoinOrderCondition](xref:StockSharp.Kucoin.KucoinOrderCondition) и т. д. 
 
 ## См. также
 

@@ -1,16 +1,16 @@
 # Statistics
 
-[StrategiesStatisticsPanel](../api/StockSharp.Xaml.StrategiesStatisticsPanel.html) \- is the table to display parameters and statistics of the strategies. 
+[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- is the table to display parameters and statistics of the strategies. 
 
 ![GUI StrategiesStatisticsPanel](../images/GUI_StrategiesStatisticsPanel.png)
 
 **Main properties and methods**
 
-- [ExcludeParameters](../api/StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters.html) \- the list of parameters hidden from the visualization.
-- [SelectedStrategy](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy.html) \- the selected strategy.
-- [SelectedStrategies](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies.html) \- selected strategies.
-- [AddStrategies](../api/StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies.html) \- adds strategies to the table.
-- [SetColumnVisibility](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility.html) \- sets the visibility of the columns in the table.
+- [ExcludeParameters](xref:StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters) \- the list of parameters hidden from the visualization.
+- [SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- the selected strategy.
+- [SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- selected strategies.
+- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies) \- adds strategies to the table.
+- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility) \- sets the visibility of the columns in the table.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Testing\/SampleHistoryTestingParallel*. 
 

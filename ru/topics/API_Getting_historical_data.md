@@ -6,9 +6,9 @@
 
 Работа с историческими свечами через Connector
 
-1. Для получения свечей через [Connector](../api/StockSharp.Algo.Connector.html) необходимо создать [Connector](../api/StockSharp.Algo.Connector.html) и добавить в него соответствующий [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html). Как это сделать с помощью специального контрола описано в пункте [Окно настройки подключений](API_UI_ConnectorWindow.md).
+1. Для получения свечей через [Connector](xref:StockSharp.Algo.Connector) необходимо создать [Connector](xref:StockSharp.Algo.Connector) и добавить в него соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter). Как это сделать с помощью специального контрола описано в пункте [Окно настройки подключений](API_UI_ConnectorWindow.md).
 
-   Также добавить соответствующий [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) в [Connector](../api/StockSharp.Algo.Connector.html) можно через код. Например, инициализация адаптера для [Interactive Brokers](IB.md) описана в пункте [Инициализация адаптера Interactive Brokers](IBSample.md) и выглядит следующим образом:
+   Также добавить соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) в [Connector](xref:StockSharp.Algo.Connector) можно через код. Например, инициализация адаптера для [Interactive Brokers](IB.md) описана в пункте [Инициализация адаптера Interactive Brokers](IBSample.md) и выглядит следующим образом:
 
    ```cs
    Connector Connector = new Connector();				
@@ -23,7 +23,7 @@
    ...
    							
    ```
-2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [SubscribeCandles](../api/StockSharp.Algo.Connector.SubscribeCandles.html): 
+2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles): 
 
    ```cs
    ...
@@ -33,7 +33,7 @@
    ...
    			
    ```
-3. Исторические свечи передаются через событие [CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html): 
+3. Исторические свечи передаются через событие [CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing): 
 
    ```cs
    ...
@@ -47,7 +47,7 @@
 
 Работа с историческими свечами через MessageAdapter
 
-1. Для получения свечей через [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) необходимо созлать соответствующий [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html).
+1. Для получения свечей через [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) необходимо созлать соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 
    Например, инициализация адаптера для [Interactive Brokers](IB.md) описана в пункте [Инициализация адаптера Interactive Brokers](IBSample.md) и выглядит следующим образом:
 
@@ -61,7 +61,7 @@
    ...
    							
    ```
-2. Оборачиваем адаптер [Interactive Brokers](IB.md) в адаптер системных идентификатор инструментов [SecurityNativeIdMessageAdapter](../api/StockSharp.Algo.SecurityNativeIdMessageAdapter.html). Это необходимо в том случае, если торговая система работает с числовыми или любыми другими идентификаторами инструментов, отличных от обычного строкового представления.
+2. Оборачиваем адаптер [Interactive Brokers](IB.md) в адаптер системных идентификатор инструментов [SecurityNativeIdMessageAdapter](xref:StockSharp.Algo.SecurityNativeIdMessageAdapter). Это необходимо в том случае, если торговая система работает с числовыми или любыми другими идентификаторами инструментов, отличных от обычного строкового представления.
 
    ```cs
    	

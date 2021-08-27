@@ -1,19 +1,19 @@
 # Другие источники логов
 
-В предыдущих топиках источниками логов выступали объекты встроенных в [S\#](StockSharpAbout.md) классов. В [S\#](StockSharpAbout.md) предусмотрены возможности для случаев, когда источником логов должен служить Ваш собственный класс или же источник не должен быть связан с определенным классом, а обслуживать всё приложение. Для первого случая необходимо реализовать в Вашем классе интерфейс [ILogSource](../api/StockSharp.Logging.ILogSource.html) или наследовать его от [BaseLogReceiver](../api/StockSharp.Logging.BaseLogReceiver.html). Во второй ситуации можно использовать источник [TraceSource](../api/StockSharp.Logging.TraceSource.html), использующий систему трассировки .NET. Как это сделать показано в примере *Samples\/Misc\/SampleLogging*. 
+В предыдущих топиках источниками логов выступали объекты встроенных в [S\#](StockSharpAbout.md) классов. В [S\#](StockSharpAbout.md) предусмотрены возможности для случаев, когда источником логов должен служить Ваш собственный класс или же источник не должен быть связан с определенным классом, а обслуживать всё приложение. Для первого случая необходимо реализовать в Вашем классе интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource) или наследовать его от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver). Во второй ситуации можно использовать источник [TraceSource](xref:StockSharp.Logging.TraceSource), использующий систему трассировки .NET. Как это сделать показано в примере *Samples\/Misc\/SampleLogging*. 
 
 ### Пример SampleLogging
 
 Пример SampleLogging
 
-1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](../api/StockSharp.Logging.BaseLogReceiver.html).
+1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
 
    ```cs
    private class TestSource : BaseLogReceiver
    {
    }
    ```
-2. Создаем [LogManager](../api/StockSharp.Logging.LogManager.html) и декларируем переменную пользовательского класса.
+2. Создаем [LogManager](xref:StockSharp.Logging.LogManager) и декларируем переменную пользовательского класса.
 
    ```cs
    private readonly LogManager _logManager = new LogManager();

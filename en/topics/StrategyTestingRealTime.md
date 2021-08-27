@@ -2,13 +2,13 @@
 
 Testing on market data is trading with a real connection to the exchange ("live" quotes), but without actual orders registering on the exchange. All the registered orders are intercepted, and their execution is emulated based on market order books. Such testing can be useful, for example, if trading simulator is developed. Or it is necessary to check the trading algorithm at short period of time with the real quotes. 
 
-To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\`1](../api/StockSharp.Algo.Testing.RealTimeEmulationTrader`1.html), which acts as a "wrapper" of the specific trading system connector ([OpenECry](OEC.md), [Rithmic](Rithmic.md) etc.). Below is a description of an example of working with the emulator using the connection to [OpenECry](OEC.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
+To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" of the specific trading system connector ([OpenECry](OEC.md), [Rithmic](Rithmic.md) etc.). Below is a description of an example of working with the emulator using the connection to [OpenECry](OEC.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
 
 ### Work with the trading emulator on real data
 
 Work with the trading emulator on real data
 
-1. Creating the [RealTimeEmulationTrader\`1](../api/StockSharp.Algo.Testing.RealTimeEmulationTrader`1.html) instance and passing to its constructor the [OpenECryMessageAdapter](../api/StockSharp.OpenECry.OpenECryMessageAdapter.html) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
+1. Creating the [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
 
    ```cs
    					_connector = new RealTimeEmulationTrader<SmartComMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())

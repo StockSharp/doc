@@ -1,6 +1,6 @@
 # Adapter initialization TrueFX
 
-The code below demonstrates how to initialize the [TrueFXMessageAdapter](../api/StockSharp.TrueFX.TrueFXMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [TrueFXMessageAdapter](xref:StockSharp.TrueFX.TrueFXMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 ...	

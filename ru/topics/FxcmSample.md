@@ -1,6 +1,6 @@
 # Инициализация адаптера FXCM
 
-Код ниже демонстрирует как инициализировать [FxcmMessageAdapter](../api/StockSharp.Fxcm.FxcmMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [FxcmMessageAdapter](xref:StockSharp.Fxcm.FxcmMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

@@ -18,11 +18,11 @@ Candles generation
      As an example, we have selected candles with a Time Frame of 5 min.
    - Select an security (in our case it is SBER@TQBR) and click on the ![hydra find](../images/hydra_find.png) button. 
 
-   After that, candles will be generated based on the data found. For example, for candles of [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) type the following will be generated: 
+   After that, candles will be generated based on the data found. For example, for candles of [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) type the following will be generated: 
 
    ![hydra candles tf](../images/hydra_candles_tf.png)
 
-   If you need to build candles of a different type, for example [VolumeCandle](../api/StockSharp.Algo.Candles.VolumeCandle.html), you need to do the following:
+   If you need to build candles of a different type, for example [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), you need to do the following:
    - Select the candle type. 
 
      ![hydra candles volume 100](../images/hydra_candles_volume_100.png)

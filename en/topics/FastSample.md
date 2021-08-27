@@ -1,6 +1,6 @@
 # Adapter initialization FAST
 
-The code below demonstrates how to initialize the [FastMessageAdapter](../api/StockSharp.Fix.FastMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [FastMessageAdapter](xref:StockSharp.Fix.FastMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

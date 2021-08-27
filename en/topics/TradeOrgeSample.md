@@ -1,6 +1,6 @@
 # Adapter initialization TradeOrge
 
-The code below demonstrates how to initialize the [TradeOgreMessageAdapter](../api/StockSharp.TradeOgre.TradeOgreMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [TradeOgreMessageAdapter](xref:StockSharp.TradeOgre.TradeOgreMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

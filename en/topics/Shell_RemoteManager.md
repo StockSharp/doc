@@ -54,14 +54,14 @@ If the strategy has a command other than Start\/Stop, then to apply it you must 
 
 And click the send command button.
 
-To set your team in the strategy, you need to override the [Strategy.ApplyCommand](../api/StockSharp.Algo.Strategies.Strategy.ApplyCommand.html) method.
+To set your team in the strategy, you need to override the [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand) method.
 
 ```cs
 public virtual void ApplyCommand(StrategyStateMessage stateMsg)
 		
 ```
 
-The [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) base class only controls the strategy start and stop.
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) base class only controls the strategy start and stop.
 
 ## Recommended content
 

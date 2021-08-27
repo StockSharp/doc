@@ -7,7 +7,7 @@
 > [!TIP]
 > [ITCH](ITCH.md) используется только для получения биржевых данных, торговые транзакции не поддерживаются.
 
-В [S\#](StockSharpAbout.md) для работы с [ITCH](ITCH.md) необходимо использовать [ItchMessageAdapter](../api/StockSharp.ITCH.ItchMessageAdapter.html). 
+В [S\#](StockSharpAbout.md) для работы с [ITCH](ITCH.md) необходимо использовать [ItchMessageAdapter](xref:StockSharp.ITCH.ItchMessageAdapter). 
 
 ## См. также
 

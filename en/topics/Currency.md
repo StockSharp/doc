@@ -1,6 +1,6 @@
 # Currency converter
 
-To work with multi\-currency algorithms, it is necessary to use the [Currency](../api/StockSharp.Messages.Currency.html). The [S\#](StockSharpAbout.md) provides mechanism for currency conversion from one to another. In the SampleCurrency example in the distribution kit, calculator for conversion of any currencies is presented.
+To work with multi\-currency algorithms, it is necessary to use the [Currency](xref:StockSharp.Messages.Currency). The [S\#](StockSharpAbout.md) provides mechanism for currency conversion from one to another. In the SampleCurrency example in the distribution kit, calculator for conversion of any currencies is presented.
 
 ### Currency conversion example
 

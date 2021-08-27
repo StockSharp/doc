@@ -28,14 +28,14 @@
 
 The library is divided into the following main components:
 
-- [BusinessEntities](../api/StockSharp.BusinessEntities.html)
+- [BusinessEntities](xref:StockSharp.BusinessEntities)
 
    \- basic trading objects (instrument, order, trade, etc.), including the interface 
 
-  [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
    description. 
-- [Algo](../api/StockSharp.Algo.html)
+- [Algo](xref:StockSharp.Algo)
 
    \- combines a large number of modules that are directly related to trading strategies writing (for more details see 
 
@@ -47,36 +47,36 @@ The library is divided into the following main components:
 
   ) in this component. Also there is the base implementation of 
 
-  [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
    interface \- Connector class in this component. 
-  - [Strategies](../api/StockSharp.Algo.Strategies.html) \- the base classes for creating strategies.
-  - [Candles](../api/StockSharp.Algo.Candles.html) \- here is all the necessary functionality to work with candles and graphic patterns recognition collected (for more details see [Candles](Candles.md)).
-  - [Indicators](../api/StockSharp.Algo.Indicators.html) \- contains the base classes and interfaces for creating technical indicators, as well as built\-in indicators. See [Indicators](Indicators.md).
-  - [Derivatives](../api/StockSharp.Algo.Derivatives.html) \- classes for work with options. See [Options](Options.md).
-  - [Testing](../api/StockSharp.Algo.Testing.html) \- classes for different types of strategies testing: on random and historical data, on actual market data and also for optimization. See [Testing](StrategyTesting.md).
-  - [Storages](../api/StockSharp.Algo.Storages.html) \- classes for working with data storage. See [Market\-Data storage](Storages.md).
+  - [Strategies](xref:StockSharp.Algo.Strategies) \- the base classes for creating strategies.
+  - [Candles](xref:StockSharp.Algo.Candles) \- here is all the necessary functionality to work with candles and graphic patterns recognition collected (for more details see [Candles](Candles.md)).
+  - [Indicators](xref:StockSharp.Algo.Indicators) \- contains the base classes and interfaces for creating technical indicators, as well as built\-in indicators. See [Indicators](Indicators.md).
+  - [Derivatives](xref:StockSharp.Algo.Derivatives) \- classes for work with options. See [Options](Options.md).
+  - [Testing](xref:StockSharp.Algo.Testing) \- classes for different types of strategies testing: on random and historical data, on actual market data and also for optimization. See [Testing](StrategyTesting.md).
+  - [Storages](xref:StockSharp.Algo.Storages) \- classes for working with data storage. See [Market\-Data storage](Storages.md).
   - **Other modules** \- various additional modules associated with strategies development: commissions, slippages, profit\-loss, risk management, statistics, a number of auxiliary algorithms (order book cleaning from own orders, the calculation of the market price, rounding prices to the instrument tick price, etc.) and so on, that simplify the creation of trading algorithms.
-- [Messages](../api/StockSharp.Messages.html)
+- [Messages](xref:StockSharp.Messages)
 
    \- message classes, main enumerations, exchanges hours of operation, the Unit 
 
-  [Unit](../api/StockSharp.Messages.Unit.html)
+  [Unit](xref:StockSharp.Messages.Unit)
 
    class, etc. 
-- [Xaml](../api/StockSharp.Xaml.html)
+- [Xaml](xref:StockSharp.Xaml)
 
    \- graphical components for tabular information display (orders, trades, Level1, etc.), instruments search, portfolios, order book display, options board, strategies performance monitoring, logging (and others), including: 
-  - [Charting](../api/StockSharp.Xaml.Charting.html) \- tools for creating various diagrams: candles, indicators, profitability, etc.
-  - [Diagram](../api/StockSharp.Xaml.Diagram.html) \- graphical elements for strategies visual creation.
-- [Logging](../api/StockSharp.Logging.html)
+  - [Charting](xref:StockSharp.Xaml.Charting) \- tools for creating various diagrams: candles, indicators, profitability, etc.
+  - [Diagram](xref:StockSharp.Xaml.Diagram) \- graphical elements for strategies visual creation.
+- [Logging](xref:StockSharp.Logging)
 
    \- special tools to work with debug information. There are different ways to output debug messages: to the debug window, to a file, to the graphical component, send via email or sound beep in case of problems in the algorithm. 
 - **Connectors modules**
 
    \- include the connectors implementation to the trading systems with the same names (for example, 
 
-  [InteractiveBrokers](../api/StockSharp.InteractiveBrokers.html)
+  [InteractiveBrokers](xref:StockSharp.InteractiveBrokers)
 
    contains the connector implementation to 
 

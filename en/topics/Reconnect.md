@@ -30,37 +30,37 @@ All connectors provide the ability to configure reconnection in case of disconne
 
 Code reconnection settings
 
-The reconnection mechanism is configured through the [Connector.ReConnectionSettings](../api/StockSharp.Algo.Connector.ReConnectionSettings.html) property and allows you to monitor the following error scenarios: 
+The reconnection mechanism is configured through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property and allows you to monitor the following error scenarios: 
 
 - Unable to establish a connection (no communication, incorrect username\/password, etc.). The 
 
-  [ReConnectionSettings.AttemptCount](../api/StockSharp.Messages.ReConnectionSettings.AttemptCount.html)
+  [ReConnectionSettings.AttemptCount](xref:StockSharp.Messages.ReConnectionSettings.AttemptCount)
 
    property sets the number of attempts to establish a connection. By default, it is 0, which means that the mode is disabled. \-1 means an infinite number of attempts. 
 - The connection was broken during operation. The 
 
-  [ReConnectionSettings.ReAttemptCount](../api/StockSharp.Messages.ReConnectionSettings.ReAttemptCount.html)
+  [ReConnectionSettings.ReAttemptCount](xref:StockSharp.Messages.ReConnectionSettings.ReAttemptCount)
 
    property sets the number of attempts to reconnect the connection. By default, it is 100. \-1 means an infinite number of attempts. 0 \- mode is disabled. 
 - When connecting or disconnecting a connection, the corresponding 
 
-  [IConnector.Connected](../api/StockSharp.BusinessEntities.IConnector.Connected.html)
+  [IConnector.Connected](xref:StockSharp.BusinessEntities.IConnector.Connected)
 
    or 
 
-  [IConnector.Disconnected](../api/StockSharp.BusinessEntities.IConnector.Disconnected.html)
+  [IConnector.Disconnected](xref:StockSharp.BusinessEntities.IConnector.Disconnected)
 
    events may not be received for a long time. For such situations, you can use the 
 
-  [ReConnectionSettings.TimeOutInterval](../api/StockSharp.Messages.ReConnectionSettings.TimeOutInterval.html)
+  [ReConnectionSettings.TimeOutInterval](xref:StockSharp.Messages.ReConnectionSettings.TimeOutInterval)
 
    property to set the maximum acceptable timeout for a successful event. If, after this time, the desired event does not occur, the 
 
-  [IConnector.ConnectionError](../api/StockSharp.BusinessEntities.IConnector.ConnectionError.html)
+  [IConnector.ConnectionError](xref:StockSharp.BusinessEntities.IConnector.ConnectionError)
 
    event is raised with a timeout error. 
 
-1. When creating a gateway, you need to initialize the settings of the reconnection mechanism through the [Connector.ReConnectionSettings](../api/StockSharp.Algo.Connector.ReConnectionSettings.html) property: 
+1. When creating a gateway, you need to initialize the settings of the reconnection mechanism through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property: 
 
    ```cs
    // initialize the reconnection mechanism (it will automatically connect 
@@ -74,7 +74,7 @@ The reconnection mechanism is configured through the [Connector.ReConnectionSett
 3. Below is the program log, which shows that the application is initially in a connected state, and after turning off the Internet connection, the application tries to reconnect. After restoring the Internet connection, the application connection is restored: 
 
    ![API ReconnectionLog](../images/API_ReconnectionLog.png)
-4. Since several connections can be used in [Connector](../api/StockSharp.Algo.Connector.html), by default events related to reconnection, such as [Connector.Restored](../api/StockSharp.Algo.Connector.Restored.html) are not triggered, and connection adapters try to reconnect themselves. For the event to start being raised, you need to set the value of the adapter's [BasketMessageAdapter.SuppressReconnectingErrors](../api/StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors.html) property to **false**. 
+4. Since several connections can be used in [Connector](xref:StockSharp.Algo.Connector), by default events related to reconnection, such as [Connector.Restored](xref:StockSharp.Algo.Connector.Restored) are not triggered, and connection adapters try to reconnect themselves. For the event to start being raised, you need to set the value of the adapter's [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) property to **false**. 
 
    ```cs
    Connector.Adapter.SuppressReconnectingErrors = false;

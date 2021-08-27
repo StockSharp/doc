@@ -1,6 +1,6 @@
 # Adapter initialization PrizmBit
 
-The code below demonstrates how to initialize the [PrizmBitMessageAdapter](../api/StockSharp.PrizmBit.PrizmBitMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [PrizmBitMessageAdapter](xref:StockSharp.PrizmBit.PrizmBitMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

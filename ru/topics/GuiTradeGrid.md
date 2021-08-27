@@ -2,13 +2,13 @@
 
 ![GUI TradeGrid](../images/GUI_TradeGrid.png)
 
-[TradeGrid](../api/StockSharp.Xaml.TradeGrid.html) \- таблица сделок. 
+[TradeGrid](xref:StockSharp.Xaml.TradeGrid) \- таблица сделок. 
 
 **Основные свойства**
 
-- [Trades](../api/StockSharp.Xaml.TradeGrid.Trades.html) \- список сделок.
-- [SelectedTrade](../api/StockSharp.Xaml.TradeGrid.SelectedTrade.html) \- выбранная сделка.
-- [SelectedTrades](../api/StockSharp.Xaml.TradeGrid.SelectedTrades.html) \- выбранные сделки.
+- [Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- список сделок.
+- [SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- выбранная сделка.
+- [SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- выбранные сделки.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

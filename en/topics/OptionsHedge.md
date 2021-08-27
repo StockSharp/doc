@@ -1,13 +1,13 @@
 # Delta hedging
 
-If you want to protect positions by option strategies (for example, as [Volatility trading](OptionsQuoting.md)) you can use the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) hedging strategy by delta. 
+If you want to protect positions by option strategies (for example, as [Volatility trading](OptionsQuoting.md)) you can use the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) hedging strategy by delta. 
 
 ### Delta hedging
 
 Delta hedging
 
-1. As a demonstration of the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) work the SampleOptionQuoting example is modified (for details see [Volatility trading](OptionsQuoting.md)). 
-2. The [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) strategy does not start, but instead it is passed as a child, for the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) strategy. 
+1. As a demonstration of the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) work the SampleOptionQuoting example is modified (for details see [Volatility trading](OptionsQuoting.md)). 
+2. The [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy does not start, but instead it is passed as a child, for the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) strategy. 
 
    ```cs
    // create delta hedge strategy
@@ -33,7 +33,7 @@ Delta hedging
    hedge.Start();
    ```
 
-   The [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) takes strategies, working separately on their strike, as [child strategies](StrategyChilds.md). Thus, [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) controls the total position by all child option strategies. 
+   The [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) takes strategies, working separately on their strike, as [child strategies](StrategyChilds.md). Thus, [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) controls the total position by all child option strategies. 
 3. Completing the delta hedging: 
 
    ```none

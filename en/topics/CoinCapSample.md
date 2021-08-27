@@ -1,6 +1,6 @@
 # Adapter initialization CoinCap
 
-The code below demonstrates how to initialize the [CoinCapMessageAdapter](../api/StockSharp.CoinCap.CoinCapMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [CoinCapMessageAdapter](xref:StockSharp.CoinCap.CoinCapMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -1,10 +1,10 @@
 # Historical data
 
-If a history is requested, a subscription comes to the adapter with the initialized [MarketDataMessage.From](../api/StockSharp.Messages.MarketDataMessage.From.html) and [MarketDataMessage.To](../api/StockSharp.Messages.MarketDataMessage.To.html) values. The adapter should process the received request by returning the requested data. Sending the [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html) message is a sign of the request end. Thereby, the external code understands that all the requested data has been received. If there is no data (the connection does not support history or the requested period is not available), then the resulting [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html) value is also required. 
+If a history is requested, a subscription comes to the adapter with the initialized [MarketDataMessage.From](xref:StockSharp.Messages.MarketDataMessage.From) and [MarketDataMessage.To](xref:StockSharp.Messages.MarketDataMessage.To) values. The adapter should process the received request by returning the requested data. Sending the [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage) message is a sign of the request end. Thereby, the external code understands that all the requested data has been received. If there is no data (the connection does not support history or the requested period is not available), then the resulting [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage) value is also required. 
 
-Some messages that implement [ISubscriptionMessage](../api/StockSharp.Messages.ISubscriptionMessage.html) (for example, [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html)) always have [ISubscriptionMessage.From](../api/StockSharp.Messages.ISubscriptionMessage.From.html) and [ISubscriptionMessage.To](../api/StockSharp.Messages.ISubscriptionMessage.To.html) initialized. For such messages, a subscription to online data is impossible, and only historical data are sent via them (or a request for meta\-data is sent, such as instruments, boards, etc.).
+Some messages that implement [ISubscriptionMessage](xref:StockSharp.Messages.ISubscriptionMessage) (for example, [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage)) always have [ISubscriptionMessage.From](xref:StockSharp.Messages.ISubscriptionMessage.From) and [ISubscriptionMessage.To](xref:StockSharp.Messages.ISubscriptionMessage.To) initialized. For such messages, a subscription to online data is impossible, and only historical data are sent via them (or a request for meta\-data is sent, such as instruments, boards, etc.).
 
-When processing the history results, the [IOriginalTransactionIdMessage.OriginalTransactionId](../api/StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId.html) property should be initialized for historical messages. Thereby, the external code will understand that the data returned by the adapter is related to a specific historical subscription: 
+When processing the history results, the [IOriginalTransactionIdMessage.OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) property should be initialized for historical messages. Thereby, the external code will understand that the data returned by the adapter is related to a specific historical subscription: 
 
 ```cs
       		SendOutMessage(new TimeFrameCandleMessage
@@ -22,7 +22,7 @@ When processing the history results, the [IOriginalTransactionIdMessage.Original
       
 ```
 
-Special [PartialDownloadMessageAdapter](../api/StockSharp.Algo.PartialDownloadMessageAdapter.html) adapter splits subscriptions with a large range of data (see [Adapters chain](Messages_adapters_chain.md) for details) into many requests with small ranges. Each adapter can communicate the maximum time range it supports by the [IMessageAdapter.GetHistoryStepSize](../api/StockSharp.Messages.IMessageAdapter.GetHistoryStepSize.html) method restart: 
+Special [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) adapter splits subscriptions with a large range of data (see [Adapters chain](Messages_adapters_chain.md) for details) into many requests with small ranges. Each adapter can communicate the maximum time range it supports by the [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize) method restart: 
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
@@ -41,4 +41,4 @@ public partial class MyOwnMessageAdapter : MessageAdapter
 }
 ```
 
-For online data, no [IOriginalTransactionIdMessage.OriginalTransactionId](../api/StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId.html) filling is required because the [SubscriptionOnlineMessageAdapter](../api/StockSharp.Algo.SubscriptionOnlineMessageAdapter.html) passes only one online data subscription to the adapter. 
+For online data, no [IOriginalTransactionIdMessage.OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) filling is required because the [SubscriptionOnlineMessageAdapter](xref:StockSharp.Algo.SubscriptionOnlineMessageAdapter) passes only one online data subscription to the adapter. 

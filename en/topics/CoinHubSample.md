@@ -1,6 +1,6 @@
 # Adapter initialization CoinHub
 
-The code below demonstrates how to initialize the [CoinHubMessageAdapter](../api/StockSharp.CoinHub.CoinHubMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [CoinHubMessageAdapter](xref:StockSharp.CoinHub.CoinHubMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -6,7 +6,7 @@
 
 The implementation of tick candles
 
-1. First, you need to create your own candle type. The type must inherit from the [Candle](../api/StockSharp.Algo.Candles.Candle.html) class:
+1. First, you need to create your own candle type. The type must inherit from the [Candle](xref:StockSharp.Algo.Candles.Candle) class:
 
    > [!CAUTION]
    > Tick candles are supported by [S\#](StockSharpAbout.md) as standard and this step is presented only as an example.
@@ -37,7 +37,7 @@ The implementation of tick candles
        public int TradeCount { get; set; }
    }
    ```
-2. Additionally, you need to create your own candle message type. More about [Messages](Messages.md). The type must inherit from the [CandleMessage](../api/StockSharp.Messages.CandleMessage.html) class:
+2. Additionally, you need to create your own candle message type. More about [Messages](Messages.md). The type must inherit from the [CandleMessage](xref:StockSharp.Messages.CandleMessage) class:
 
    ```cs
    /// <summary>
@@ -74,9 +74,9 @@ The implementation of tick candles
    	}
    }
    ```
-3. 3. Next, you need to create a candle builder for a new candle type. To do this, you need to create the [CandleBuilder\`1](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.html). implementation. The [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) method will receive a value of the [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html). type. Depending on the settings, it can contain data about both the [TickCandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilderValueTransform.html), tick trade and the [QuoteCandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.QuoteCandleBuilderValueTransform.html).
+3. 3. Next, you need to create a candle builder for a new candle type. To do this, you need to create the [CandleBuilder\`1](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1). implementation. The [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) method will receive a value of the [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). type. Depending on the settings, it can contain data about both the [TickCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilderValueTransform), tick trade and the [QuoteCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.QuoteCandleBuilderValueTransform).
 
-   The [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) method shall return either a new candle (if new data led to the candle generation), or update the passed one (if the data is not enough to create a new candle). If the [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) method returns a new candle, [CandleBuilder\`1](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.html) calls it again, passing the same [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html). value to the method. The method will be called until [ProcessValue](../api/StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue.html) returns the passed candle. This is done for those cases when for one [ICandleBuilderValueTransform](../api/StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform.html) input value can be generated several candles: 
+   The [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) method shall return either a new candle (if new data led to the candle generation), or update the passed one (if the data is not enough to create a new candle). If the [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) method returns a new candle, [CandleBuilder\`1](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1) calls it again, passing the same [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). value to the method. The method will be called until [ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue) returns the passed candle. This is done for those cases when for one [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) input value can be generated several candles: 
 
    ```cs
    /// <summary>
@@ -157,17 +157,17 @@ The implementation of tick candles
        }
    }
    ```
-4. Then, you need to get the [CandleBuilderProvider](../api/StockSharp.Algo.Candles.Compression.CandleBuilderProvider.html) from the connection, and add to it: [TickCandleBuilder](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilder.html):
+4. Then, you need to get the [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) from the connection, and add to it: [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder):
 
    > [!CAUTION]
-   > [TickCandleBuilder](../api/StockSharp.Algo.Candles.Compression.TickCandleBuilder.html), as a candle source, is normally present in [CandleBuilderProvider](../api/StockSharp.Algo.Candles.Compression.CandleBuilderProvider.html). This step is presented only as an example.
+   > [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder), as a candle source, is normally present in [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider). This step is presented only as an example.
 
    ```cs
    private Connector _connector;
    ...
    _connector.Adapter.CandleBuilderProvider.Register(new TickCandleBuilder());
    ```
-5. Create a [CandleSeries](../api/StockSharp.Algo.Candles.CandleSeries.html) and request data on it:
+5. Create a [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) and request data on it:
 
    ```cs
    var series = new CandleSeries(typeof(TickCandle), _security, 1000);

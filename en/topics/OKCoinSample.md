@@ -1,6 +1,6 @@
 # Adapter initialization OKCoin
 
-The code below demonstrates how to initialize the [OkcoinMessageAdapter](../api/StockSharp.Okcoin.OkcoinMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [OkcoinMessageAdapter](xref:StockSharp.Okcoin.OkcoinMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -2,7 +2,7 @@
 
 Индикатор **Пик** показывает пиковое значение за период. 
 
-Для использования индикатора необходимо использовать класс [Peak](../api/StockSharp.Algo.Indicators.Peak.html). 
+Для использования индикатора необходимо использовать класс [Peak](xref:StockSharp.Algo.Indicators.Peak). 
 
 ![IndicatorPeak](../images/IndicatorPeak.png)
 

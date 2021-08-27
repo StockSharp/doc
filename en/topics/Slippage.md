@@ -2,9 +2,9 @@
 
 The [S\#](StockSharpAbout.md) includes the mechanism of the slippage calculation that allows to estimate the speed of the algorithm reaction (and its implementation) by monitoring the price of the initial order and following trades.
 
-The slippage tracking is carried out through a special manager. The basic interface of the slippage manager is the [ISlippageManager](../api/StockSharp.Algo.Slippage.ISlippageManager.html). This interface has the implementation in form of [SlippageManager](../api/StockSharp.Algo.Slippage.SlippageManager.html). The connections to the trading systems class [Connector](../api/StockSharp.Algo.Connector.html) has the [Connector.SlippageManager](../api/StockSharp.Algo.Connector.SlippageManager.html) property, which can be used to calculate the slippage. 
+The slippage tracking is carried out through a special manager. The basic interface of the slippage manager is the [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager). This interface has the implementation in form of [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). The connections to the trading systems class [Connector](xref:StockSharp.Algo.Connector) has the [Connector.SlippageManager](xref:StockSharp.Algo.Connector.SlippageManager) property, which can be used to calculate the slippage. 
 
-[Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) strategies use their own mechanism for slippage calculation. In this case, the value of slippage can be obtained through the [Strategy.Slippage](../api/StockSharp.Algo.Strategies.Strategy.Slippage.html) property.
+[Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategies use their own mechanism for slippage calculation. In this case, the value of slippage can be obtained through the [Strategy.Slippage](xref:StockSharp.Algo.Strategies.Strategy.Slippage) property.
 
 ### Prerequisites
 

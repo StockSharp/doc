@@ -1,6 +1,6 @@
 # Strategies
 
-The [S\#](StockSharpAbout.md) library contains a mechanism of multithreaded trading strategies writing described by the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class. The advantages of this approach are as follows:
+The [S\#](StockSharpAbout.md) library contains a mechanism of multithreaded trading strategies writing described by the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class. The advantages of this approach are as follows:
 
 1. The ability to use the event model, to handle in parallel tens (hundreds, depending on the computer performance and the complexity of the algorithm) instruments with different parameters: time frames, volumes, etc. For more details see the 
 

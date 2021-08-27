@@ -28,14 +28,14 @@
 
 Библиотека разделена на следующие основные блоки:
 
-- [BusinessEntities](../api/StockSharp.BusinessEntities.html)
+- [BusinessEntities](xref:StockSharp.BusinessEntities)
 
    \- объединяет основные торговые объекты (инструмент, заявка, сделка и т.д.). Также здесь находится описание интерфейса 
 
-  [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
   . 
-- [Algo](../api/StockSharp.Algo.html)
+- [Algo](xref:StockSharp.Algo)
 
    \- объединяет большое количество блоков, непосредственно связанных c написанием торговых стратегий (подробнее, 
 
@@ -47,40 +47,40 @@
 
   ). Также здесь расположена базовая реализация интерфейса 
 
-  [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
    \- класс 
 
-  [Connector](../api/StockSharp.Algo.Connector.html)
+  [Connector](xref:StockSharp.Algo.Connector)
 
   . 
-  - [Strategies](../api/StockSharp.Algo.Strategies.html) \- базовые классы для создания стратегии.
-  - [Candles](../api/StockSharp.Algo.Candles.html) \- здесь собран весь необходимый функционал для работы со свечами и распознавания графических паттернов (подробнее, [Свечи](Candles.md)).
-  - [Indicators](../api/StockSharp.Algo.Indicators.html) \- содержит базовые классы и интерфейсы для создания технических индикаторов, а также готовые индикаторы. См. [Индикаторы](Indicators.md).
-  - [Derivatives](../api/StockSharp.Algo.Derivatives.html) \- классы для работы с опционами. См. [Опционы](Options.md).
-  - [Testing](../api/StockSharp.Algo.Testing.html) \- классы для различных видов тестирования стратегий: на исторических и случайных данных, на реальных рыночных данных, а также для оптимизации. См. [Тестирование](StrategyTesting.md).
-  - [Storages](../api/StockSharp.Algo.Storages.html) \- классы для работы с хранилищем биржевых данных. См. [Хранение данных](Storages.md).
+  - [Strategies](xref:StockSharp.Algo.Strategies) \- базовые классы для создания стратегии.
+  - [Candles](xref:StockSharp.Algo.Candles) \- здесь собран весь необходимый функционал для работы со свечами и распознавания графических паттернов (подробнее, [Свечи](Candles.md)).
+  - [Indicators](xref:StockSharp.Algo.Indicators) \- содержит базовые классы и интерфейсы для создания технических индикаторов, а также готовые индикаторы. См. [Индикаторы](Indicators.md).
+  - [Derivatives](xref:StockSharp.Algo.Derivatives) \- классы для работы с опционами. См. [Опционы](Options.md).
+  - [Testing](xref:StockSharp.Algo.Testing) \- классы для различных видов тестирования стратегий: на исторических и случайных данных, на реальных рыночных данных, а также для оптимизации. См. [Тестирование](StrategyTesting.md).
+  - [Storages](xref:StockSharp.Algo.Storages) \- классы для работы с хранилищем биржевых данных. См. [Хранение данных](Storages.md).
   - **Другие блоки** \- различные дополнительные блоки, связанные с разработкой стратегий: комиссии, проскальзывания, прибыль\-убыток, управление рисками, статистика, ряд вспомогательных алгоритмов (очистка стакана от своих заявок, вычисление рыночной цены, округление цены до шага цены по инструменту и т.д.) и т.п, которые упрощают создание торговых роботов.
-- [Messages](../api/StockSharp.Messages.html)
+- [Messages](xref:StockSharp.Messages)
 
    \- классы сообщений, основные перечисления, режимы работы биржи, класс 
 
-  [Unit](../api/StockSharp.Messages.Unit.html)
+  [Unit](xref:StockSharp.Messages.Unit)
 
    и др. 
-- [Xaml](../api/StockSharp.Xaml.html)
+- [Xaml](xref:StockSharp.Xaml)
 
    \- графические компоненты для отображения табличной информации (заявки, сделки, Level1 и др.), поиска инструментов, портфелей, отображения стакана, доски опционов, мониторинга работы стратегий, логирования (и другие), в том числе: 
-  - [Charting](../api/StockSharp.Xaml.Charting.html) \- средства для построения различных графиков: свечки, индикаторы, доходность и др.
-  - [Diagram](../api/StockSharp.Xaml.Diagram.html) \- графические элементы для визуального создания стратегий.
-- [Logging](../api/StockSharp.Logging.html)
+  - [Charting](xref:StockSharp.Xaml.Charting) \- средства для построения различных графиков: свечки, индикаторы, доходность и др.
+  - [Diagram](xref:StockSharp.Xaml.Diagram) \- графические элементы для визуального создания стратегий.
+- [Logging](xref:StockSharp.Logging)
 
    \- специальный инструментарий для работы с отладочной информацией. Предлагаются различные способы вывода отладочных сообщений: в окно отладки, в файл, в окно графического компонента, а также в системы оповещения (email, звуковой сигнал) в случае возникновения проблем у робота. 
 - **Блоки коннекторов**
 
    \- содержат реализацию коннекторов к одноименным торговым системам (например, 
 
-  [Quik](../api/StockSharp.Quik.html)
+  [Quik](xref:StockSharp.Quik)
 
    содержит реализацию коннектора к 
 

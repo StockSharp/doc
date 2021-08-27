@@ -1,6 +1,6 @@
 # Adapter initialization AlphaVantage
 
-The code below demonstrates how to initialize the [AlphaVantageMessageAdapter](../api/StockSharp.AlphaVantage.AlphaVantageMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [AlphaVantageMessageAdapter](xref:StockSharp.AlphaVantage.AlphaVantageMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

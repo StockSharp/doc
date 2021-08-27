@@ -1,6 +1,6 @@
 # Graphic renderer of indicators
 
-Some indicators require a special drawing style, for example, two lines for the [BollingerBands](../api/StockSharp.Algo.Indicators.BollingerBands.html) indicator. Or points for the [Fractals](../api/StockSharp.Algo.Indicators.Fractals.html)indicator. In this case, a graphical indicator renderer must be explicitly specified in [ChartIndicatorElement](../api/StockSharp.Xaml.Charting.ChartIndicatorElement.html)
+Some indicators require a special drawing style, for example, two lines for the [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) indicator. Or points for the [Fractals](xref:StockSharp.Algo.Indicators.Fractals)indicator. In this case, a graphical indicator renderer must be explicitly specified in [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement)
 
 ```cs
 			var chartIndicatorElement = new ChartIndicatorElement()
@@ -10,9 +10,9 @@ Some indicators require a special drawing style, for example, two lines for the 
 		
 ```
 
-Consider how to create your own IndicatorPainter on the example of the [Fractals](../api/StockSharp.Algo.Indicators.Fractals.html) indicator.
+Consider how to create your own IndicatorPainter on the example of the [Fractals](xref:StockSharp.Algo.Indicators.Fractals) indicator.
 
-All IndicatorPainter must be inherited from the [BaseChartIndicatorPainter\`1](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.html) base class or the [IChartIndicatorPainter](../api/StockSharp.Xaml.Charting.IChartIndicatorPainter.html) interface:
+All IndicatorPainter must be inherited from the [BaseChartIndicatorPainter\`1](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) base class or the [IChartIndicatorPainter](xref:StockSharp.Xaml.Charting.IChartIndicatorPainter) interface:
 
 ```cs
 	/// <summary>
@@ -26,7 +26,7 @@ All IndicatorPainter must be inherited from the [BaseChartIndicatorPainter\`1](.
 		
 ```
 
-Set [ChartLineElement](../api/StockSharp.Xaml.Charting.ChartLineElement.html) chart elements that will represent upper and lower fractals:
+Set [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement) chart elements that will represent upper and lower fractals:
 
 ```cs
 	/// <summary>
@@ -56,7 +56,7 @@ Set [ChartLineElement](../api/StockSharp.Xaml.Charting.ChartLineElement.html) ch
 		
 ```
 
-In the [FractalsPainter](../api/StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter.html) designer, we set them the values and basic properties \- the color, thickness, and drawing style. Then add them as the chart child element:
+In the [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter) designer, we set them the values and basic properties \- the color, thickness, and drawing style. Then add them as the chart child element:
 
 ```cs
 	...
@@ -76,7 +76,7 @@ In the [FractalsPainter](../api/StockSharp.Xaml.Charting.IndicatorPainters.Fract
 		
 ```
 
-Override the [OnDraw](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw.html) method in which we draw the indicator using the [DrawValues](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues.html) method:
+Override the [OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw) method in which we draw the indicator using the [DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues) method:
 
 ```cs
 	...
@@ -92,7 +92,7 @@ Override the [OnDraw](../api/StockSharp.Xaml.Charting.IndicatorPainters.BaseChar
 		
 ```
 
-Full [FractalsPainter](../api/StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter.html) code:
+Full [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter) code:
 
 ```cs
 	/// <summary>

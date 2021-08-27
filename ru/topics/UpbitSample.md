@@ -1,6 +1,6 @@
 # Инициализация адаптера Upbit
 
-Код ниже демонстрирует как инициализировать [UpbitMessageAdapter](../api/StockSharp.Upbit.UpbitMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [UpbitMessageAdapter](xref:StockSharp.Upbit.UpbitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -1,6 +1,6 @@
 # Adapter initialization LMAX
 
-The code below demonstrates how to initialize the [LmaxMessageAdapter](../api/StockSharp.LMAX.LmaxMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [LmaxMessageAdapter](xref:StockSharp.LMAX.LmaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

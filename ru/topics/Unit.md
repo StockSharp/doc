@@ -1,12 +1,12 @@
 # Арифметические операции
 
-Для упрощения работы с арифметическими операциями над такими величинами как проценты, пункты или пипсы можно использовать тип данных [Unit](../api/StockSharp.Messages.Unit.html). Он позволяет прозрачно оперировать с операциями сложения, вычитания, умножения и деления. [Unit](../api/StockSharp.Messages.Unit.html) можно конвертировать в [Decimal](../api/System.Decimal.html) (невозможно только если величина является процентной, то есть тип [Unit.Type](../api/StockSharp.Messages.Unit.Type.html) установлен в [UnitTypes.Percent](../api/StockSharp.Messages.UnitTypes.Percent.html)) и обратно (в этом случае всегда создается величина с абсолютным значением, то есть тип [Unit.Type](../api/StockSharp.Messages.Unit.Type.html) установлен в [UnitTypes.Absolute](../api/StockSharp.Messages.UnitTypes.Absolute.html)). 
+Для упрощения работы с арифметическими операциями над такими величинами как проценты, пункты или пипсы можно использовать тип данных [Unit](xref:StockSharp.Messages.Unit). Он позволяет прозрачно оперировать с операциями сложения, вычитания, умножения и деления. [Unit](xref:StockSharp.Messages.Unit) можно конвертировать в [Decimal](xref:System.Decimal) (невозможно только если величина является процентной, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) и обратно (в этом случае всегда создается величина с абсолютным значением, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
 
 ### Использование Unit
 
 Использование Unit
 
-- Создавать [Unit](../api/StockSharp.Messages.Unit.html) можно через специальные конструкторы, или использовать более короткую запись с помощью [UnitHelper](../api/StockSharp.Messages.UnitHelper.html): 
+- Создавать [Unit](xref:StockSharp.Messages.Unit) можно через специальные конструкторы, или использовать более короткую запись с помощью [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
 
   ```cs
   // тестовый инструмент с шагом цены в 1 копейку и стоимостью в 10 рублей
@@ -23,7 +23,7 @@
   var pips = 30.0.Pips(security);
   var point = 30.0.Points(security);
   ```
-- [Unit](../api/StockSharp.Messages.Unit.html) имеет форматированный вывод. Поэтому приведение значений к строке в зависимости от типа [UnitTypes](../api/StockSharp.Messages.UnitTypes.html): 
+- [Unit](xref:StockSharp.Messages.Unit) имеет форматированный вывод. Поэтому приведение значений к строке в зависимости от типа [UnitTypes](xref:StockSharp.Messages.UnitTypes): 
 
   ```cs
   Console.WriteLine("absolute = " + absolute);
@@ -42,7 +42,7 @@
   ```
 
   Символ ш означает минимальный шаг цены (пипс), п \- стоимость шага цены (пункт).
-- Арифметические операции над [Unit](../api/StockSharp.Messages.Unit.html) осуществляются так же, как и над обычными числами: 
+- Арифметические операции над [Unit](xref:StockSharp.Messages.Unit) осуществляются так же, как и над обычными числами: 
 
   ```cs
   // сложение всех величин
@@ -70,7 +70,7 @@
   Console.WriteLine("testValue / point = " + (testValue / point));
   Console.WriteLine();
   ```
-- Результатом арифметических операций [Unit](../api/StockSharp.Messages.Unit.html) становится сам [Unit](../api/StockSharp.Messages.Unit.html), тип которого равен типу первого операнда. Например, если сложить пипсы и пункты, то результат будет в пипсах: 
+- Результатом арифметических операций [Unit](xref:StockSharp.Messages.Unit) становится сам [Unit](xref:StockSharp.Messages.Unit), тип которого равен типу первого операнда. Например, если сложить пипсы и пункты, то результат будет в пипсах: 
 
   ```cs
   // сложение пипсов и пунктов

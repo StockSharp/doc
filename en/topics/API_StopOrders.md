@@ -1,10 +1,10 @@
 # Create new stop order
 
-To create a new stop order, you need to create an [Order](../api/StockSharp.BusinessEntities.Order.html), object that contains information about the order and register it on the exchange.
+To create a new stop order, you need to create an [Order](xref:StockSharp.BusinessEntities.Order), object that contains information about the order and register it on the exchange.
 
-Unlike a regular order, for a stop order, you need to specify the [Order.Type](../api/StockSharp.BusinessEntities.Order.Type.html) property as [Conditional](../api/StockSharp.Messages.OrderTypes.Conditional.html) and set the [Order.Condition](../api/StockSharp.BusinessEntities.Order.Condition.html) property with the necessary order conditions.
+Unlike a regular order, for a stop order, you need to specify the [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) property as [Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) and set the [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) property with the necessary order conditions.
 
-Further, if you need to work with the order (for example, cancel it or change it), then this [Order](../api/StockSharp.BusinessEntities.Order.html). object shall be used. To register orders on the exchange, the [RegisterOrder](../api/StockSharp.Algo.Connector.RegisterOrder.html) method is provided, which sends an order to the server.
+Further, if you need to work with the order (for example, cancel it or change it), then this [Order](xref:StockSharp.BusinessEntities.Order). object shall be used. To register orders on the exchange, the [RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder) method is provided, which sends an order to the server.
 
 ```cs
 Connector Connector = new Connector();		
@@ -31,7 +31,7 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 							
 ```
 
-Each connection has its own implementation of the [OrderCondition](../api/StockSharp.Messages.OrderCondition.html) class, since each connection has its own unique features. For example, for [Kucoin](Kucoin.md) it is [KucoinOrderCondition](../api/StockSharp.Kucoin.KucoinOrderCondition.html), etc. 
+Each connection has its own implementation of the [OrderCondition](xref:StockSharp.Messages.OrderCondition) class, since each connection has its own unique features. For example, for [Kucoin](Kucoin.md) it is [KucoinOrderCondition](xref:StockSharp.Kucoin.KucoinOrderCondition), etc. 
 
 ## Recommended content
 

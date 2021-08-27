@@ -1,6 +1,6 @@
 # Adapter initialization CoinBene
 
-The code below demonstrates how to initialize the [CoinBeneMessageAdapter](../api/StockSharp.CoinBene.CoinBeneMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

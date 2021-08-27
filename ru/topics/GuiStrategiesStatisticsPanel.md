@@ -1,16 +1,16 @@
 # Статистика
 
-[StrategiesStatisticsPanel](../api/StockSharp.Xaml.StrategiesStatisticsPanel.html) \- таблица для отображения параметров и статистики работы стратегий. 
+[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- таблица для отображения параметров и статистики работы стратегий. 
 
 ![GUI StrategiesStatisticsPanel](../images/GUI_StrategiesStatisticsPanel.png)
 
 **Основные свойства и методы**
 
-- [ExcludeParameters](../api/StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters.html) \- список скрытых от визуализации параметров.
-- [SelectedStrategy](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy.html) \- выбранная стратегия.
-- [SelectedStrategies](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies.html) \- выбранные стратегии.
-- [AddStrategies](../api/StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies.html) \- добавляет стратегии в таблицу.
-- [SetColumnVisibility](../api/StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility.html) \- устанавливает видимость колонок в таблице.
+- [ExcludeParameters](xref:StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters) \- список скрытых от визуализации параметров.
+- [SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- выбранная стратегия.
+- [SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- выбранные стратегии.
+- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies) \- добавляет стратегии в таблицу.
+- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility) \- устанавливает видимость колонок в таблице.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Testing\/SampleHistoryTestingParallel*. 
 

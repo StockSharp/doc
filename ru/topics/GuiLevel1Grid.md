@@ -2,14 +2,14 @@
 
 ![GUI Leve1Grid](../images/GUI_Leve1Grid.png)
 
-[Level1Grid](../api/StockSharp.Xaml.Level1Grid.html) \- таблица для отображения полей Level1. Эта таблица использует данные в виде сообщений [Level1ChangeMessage](../api/StockSharp.Messages.Level1ChangeMessage.html). 
+[Level1Grid](xref:StockSharp.Xaml.Level1Grid) \- таблица для отображения полей Level1. Эта таблица использует данные в виде сообщений [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage). 
 
 **Основные свойства**
 
-- [MaxCount](../api/StockSharp.Xaml.Level1Grid.MaxCount.html) \- максимальное число сообщений для показа.
-- [Messages](../api/StockSharp.Xaml.Level1Grid.Messages.html) \- список сообщений, добавленных в таблицу.
-- [SelectedMessage](../api/StockSharp.Xaml.Level1Grid.SelectedMessage.html) \- выбранное сообщение.
-- [SelectedMessages](../api/StockSharp.Xaml.Level1Grid.SelectedMessages.html) \- выбранные сообщения.
+- [MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- максимальное число сообщений для показа.
+- [Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- список сообщений, добавленных в таблицу.
+- [SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- выбранное сообщение.
+- [SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- выбранные сообщения.
 
 Ниже показаны фрагменты кода с его использованием. 
 

@@ -1,6 +1,6 @@
 # Event model
 
-Event model in the [S\#](StockSharpAbout.md) built using the [IMarketRule](../api/StockSharp.Algo.IMarketRule.html). The [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) can be used both within [the strategy](Strategy.md), and outside it.
+Event model in the [S\#](StockSharpAbout.md) built using the [IMarketRule](xref:StockSharp.Algo.IMarketRule). The [IMarketRule](xref:StockSharp.Algo.IMarketRule) can be used both within [the strategy](Strategy.md), and outside it.
 
 - [Rule](MarketRule.md)
 - [Rule using](MarketRuleUse.md)

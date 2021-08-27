@@ -4,12 +4,12 @@ At the start of the strategy you may need to load the previously matched orders 
 
 1. To find those orders to be downloaded into the strategy, and to return them back from the method (for example, to download orders identifiers, if the strategy records every registration through the 
 
-   [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html)
+   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
 
     method from the file). 
 2. To combine the result with the base method 
 
-   [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html)
+   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
 
    . 
 3. Once orders are loaded in the strategy, all of their matched trades will be also loaded. This will be done automatically. 
@@ -20,7 +20,7 @@ The following example shows the loading of all trades in the strategy:
 
 Loading in the strategy previously matched orders and trades
 
-1. To load the previous state of the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html), you must override [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html). All [IConnector.Orders](../api/StockSharp.BusinessEntities.IConnector.Orders.html) and [IConnector.StopOrders](../api/StockSharp.BusinessEntities.IConnector.StopOrders.html) will be received by this method from the [Strategy.OnStarted](../api/StockSharp.Algo.Strategies.Strategy.OnStarted.html). And you should to filter them:
+1. To load the previous state of the [Strategy](xref:StockSharp.Algo.Strategies.Strategy), you must override [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders). All [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) and [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders) will be received by this method from the [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted). And you should to filter them:
 
    ```cs
    private bool _isOrdersLoaded;
@@ -34,7 +34,7 @@ Loading in the strategy previously matched orders and trades
    	return Filter(newOrders);
    }
    ```
-2. To implement orders filtering, you must determine the filter criterion. For example, if to save all registered during the strategy work orders in the file, you can create the filter by the transaction number [Order.TransactionId](../api/StockSharp.BusinessEntities.Order.TransactionId.html). If such number is in the file, so the order was registered through this strategy: 
+2. To implement orders filtering, you must determine the filter criterion. For example, if to save all registered during the strategy work orders in the file, you can create the filter by the transaction number [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId). If such number is in the file, so the order was registered through this strategy: 
 
    ```cs
    private IEnumerable<Order> Filter(IEnumerable<Order> orders)
@@ -46,7 +46,7 @@ Loading in the strategy previously matched orders and trades
    	return orders.Where(o => transactions.Contains(o.TransactionId));
    }
    ```
-3. A record of orders transaction numbers registering through the strategy can be accomplished by overriding the [Strategy.RegisterOrder](../api/StockSharp.Algo.Strategies.Strategy.RegisterOrder.html) method: 
+3. A record of orders transaction numbers registering through the strategy can be accomplished by overriding the [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder) method: 
 
    ```cs
    protected override void RegisterOrder(Order order)

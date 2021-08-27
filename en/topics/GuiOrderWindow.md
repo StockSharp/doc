@@ -1,6 +1,6 @@
 # New order creation
 
-[OrderWindow](../api/StockSharp.Xaml.OrderWindow.html) \- window for creating an order. 
+[OrderWindow](xref:StockSharp.Xaml.OrderWindow) \- window for creating an order. 
 
 ![GUI OrderWindow](../images/GUI_OrderWindow.png)
 
@@ -8,10 +8,10 @@ If the connection supports the registering a conditional order (stop\-loss, take
 
 **Basic properties**
 
-- [Portfolios](../api/StockSharp.Xaml.OrderWindow.Portfolios.html) \- list of portfolios.
-- [MarketDataProvider](../api/StockSharp.Xaml.OrderWindow.MarketDataProvider.html) \- market data provider.
-- [SecurityProvider](../api/StockSharp.Xaml.OrderWindow.SecurityProvider.html) \- security information provider.
-- [Order](../api/StockSharp.Xaml.OrderWindow.Order.html) \- created order.
+- [Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) \- list of portfolios.
+- [MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) \- market data provider.
+- [SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- security information provider.
+- [Order](xref:StockSharp.Xaml.OrderWindow.Order) \- created order.
 
 Code snippets using it are shown below. Sample code taken from *Samples\/Common\/SampleConnection*. 
 

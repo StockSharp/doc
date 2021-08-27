@@ -1,6 +1,6 @@
 # Экспорт дополнительных колонок
 
-[QuikTrader](../api/StockSharp.Quik.QuikTrader.html) в целях оптимизации экспортирует только минимальный набор данных из стандартных таблиц (Инструменты, Заявки и т.д.). Если для алгоритма необходимы данные из дополнительных колонок (или же требуется изменить порядок колонок, например, в таблице Инструменты размер лота идет сразу за название инструмента), то для этого существуют 2 варианта решения: 
+[QuikTrader](xref:StockSharp.Quik.QuikTrader) в целях оптимизации экспортирует только минимальный набор данных из стандартных таблиц (Инструменты, Заявки и т.д.). Если для алгоритма необходимы данные из дополнительных колонок (или же требуется изменить порядок колонок, например, в таблице Инструменты размер лота идет сразу за название инструмента), то для этого существуют 2 варианта решения: 
 
 1. Добавить отдельную таблицу в 
 
@@ -38,44 +38,44 @@
 
    > [!TIP]
    > Пример работает с инструментом Лукойл. Для использования других инструментов необходимо настроить окна со стаканами по аналогии. 
-4. Далее, необходимо изменить метаданные для инструментов и стаканов. Это делается через таблицу [DdeTable](../api/StockSharp.Quik.DdeTable.html). Для каждого типа торгового объекта существует своя отдельная таблица с метаданными, которые получаются через [QuikTrader](../api/StockSharp.Quik.QuikTrader.html): 
+4. Далее, необходимо изменить метаданные для инструментов и стаканов. Это делается через таблицу [DdeTable](xref:StockSharp.Quik.DdeTable). Для каждого типа торгового объекта существует своя отдельная таблица с метаданными, которые получаются через [QuikTrader](xref:StockSharp.Quik.QuikTrader): 
 
    | Название таблицы
         | Свойство с метаданными
-                                                                                   |
-   | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+                                                                            |
+   | ------------------------- | --------------------------------------------------------------------------------------------------- |
    | Инструменты
-             | [QuikTrader.SecuritiesTable](../api/StockSharp.Quik.QuikTrader.SecuritiesTable.html)
+             | [QuikTrader.SecuritiesTable](xref:StockSharp.Quik.QuikTrader.SecuritiesTable)
                      |
    | Мои сделки
-              | [QuikTrader.MyTradesTable](../api/StockSharp.Quik.QuikTrader.MyTradesTable.html)
+              | [QuikTrader.MyTradesTable](xref:StockSharp.Quik.QuikTrader.MyTradesTable)
                          |
    | Все сделки
-              | [QuikTrader.TradesTable](../api/StockSharp.Quik.QuikTrader.TradesTable.html)
+              | [QuikTrader.TradesTable](xref:StockSharp.Quik.QuikTrader.TradesTable)
                              |
    | Заявки
-                  | [QuikTrader.OrdersTable](../api/StockSharp.Quik.QuikTrader.OrdersTable.html)
+                  | [QuikTrader.OrdersTable](xref:StockSharp.Quik.QuikTrader.OrdersTable)
                              |
    | Стоп\-заявки
-            | [QuikTrader.StopOrdersTable](../api/StockSharp.Quik.QuikTrader.StopOrdersTable.html)
+            | [QuikTrader.StopOrdersTable](xref:StockSharp.Quik.QuikTrader.StopOrdersTable)
                      |
    | Портфель по бумагам
-     | [QuikTrader.EquityPortfoliosTable](../api/StockSharp.Quik.QuikTrader.EquityPortfoliosTable.html)
+     | [QuikTrader.EquityPortfoliosTable](xref:StockSharp.Quik.QuikTrader.EquityPortfoliosTable)
          |
    | Портфель по деривативам
- | [QuikTrader.DerivativePortfoliosTable](../api/StockSharp.Quik.QuikTrader.DerivativePortfoliosTable.html)
+ | [QuikTrader.DerivativePortfoliosTable](xref:StockSharp.Quik.QuikTrader.DerivativePortfoliosTable)
  |
    | Позиции по бумагам
-      | [QuikTrader.EquityPositionsTable](../api/StockSharp.Quik.QuikTrader.EquityPositionsTable.html)
+      | [QuikTrader.EquityPositionsTable](xref:StockSharp.Quik.QuikTrader.EquityPositionsTable)
            |
    | Позиции по деривативам
-  | [QuikTrader.DerivativePositionsTable](../api/StockSharp.Quik.QuikTrader.DerivativePositionsTable.html)
+  | [QuikTrader.DerivativePositionsTable](xref:StockSharp.Quik.QuikTrader.DerivativePositionsTable)
    |
    | Стакан
-                  | [QuikTrader.QuotesTable](../api/StockSharp.Quik.QuikTrader.QuotesTable.html)
+                  | [QuikTrader.QuotesTable](xref:StockSharp.Quik.QuikTrader.QuotesTable)
                              |
 
-   Через [QuikTrader.SecuritiesTable](../api/StockSharp.Quik.QuikTrader.SecuritiesTable.html) и [QuikTrader.QuotesTable](../api/StockSharp.Quik.QuikTrader.QuotesTable.html) добавляются требуемые колонки в том порядке, в которым они были добавлены в [Quik](Quik.md): 
+   Через [QuikTrader.SecuritiesTable](xref:StockSharp.Quik.QuikTrader.SecuritiesTable) и [QuikTrader.QuotesTable](xref:StockSharp.Quik.QuikTrader.QuotesTable) добавляются требуемые колонки в том порядке, в которым они были добавлены в [Quik](Quik.md): 
 
    ```cs
    // добавляем на экспорт необходимые колонки
@@ -95,7 +95,7 @@
    // все последующие колонки за волатильностью автоматически перестраивают свой порядковый номер
    this.Trader.SecuritiesTable.Columns.Insert(4, DdeSecurityColumns.Volatility);
    ```
-5. После этого, через события [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html) и [Connector.SecurityChanged](../api/StockSharp.Algo.Connector.SecurityChanged.html) будут приходить объекты [Security](../api/StockSharp.BusinessEntities.Security.html), содержащие расширенную информацию. Чтобы ее получить в коде, необходимо воспользоваться свойством [Security.ExtensionInfo](../api/StockSharp.BusinessEntities.Security.ExtensionInfo.html): 
+5. После этого, через события [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) и [Connector.SecurityChanged](xref:StockSharp.Algo.Connector.SecurityChanged) будут приходить объекты [Security](xref:StockSharp.BusinessEntities.Security), содержащие расширенную информацию. Чтобы ее получить в коде, необходимо воспользоваться свойством [Security.ExtensionInfo](xref:StockSharp.BusinessEntities.Security.ExtensionInfo): 
 
    ```cs
    Trader.NewSecurity += security => _securitiesWindow.SecurityPicker.Securities.Add(security);
@@ -103,7 +103,7 @@
    ```
 
    > [!TIP]
-   > [Security](../api/StockSharp.BusinessEntities.Security.html) имеет ряд свойств, которые упрощают доступ к расширенной информации. Это свойства [OpenPrice](../api/StockSharp.BusinessEntities.Security.OpenPrice.html), [ClosePrice](../api/StockSharp.BusinessEntities.Security.ClosePrice.html), [HighPrice](../api/StockSharp.BusinessEntities.Security.HighPrice.html), [LowPrice](../api/StockSharp.BusinessEntities.Security.LowPrice.html), [MaxPrice](../api/StockSharp.BusinessEntities.Security.MaxPrice.html), [MinPrice](../api/StockSharp.BusinessEntities.Security.MinPrice.html), [StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html), [MarginBuy](../api/StockSharp.BusinessEntities.Security.MarginBuy.html), [MarginSell](../api/StockSharp.BusinessEntities.Security.MarginSell.html), [ExpiryDate](../api/StockSharp.BusinessEntities.Security.ExpiryDate.html) и [SettlementDate](../api/StockSharp.BusinessEntities.Security.SettlementDate.html). Поэтому в примере Стоимость шага цены берется не через [Security.ExtensionInfo](../api/StockSharp.BusinessEntities.Security.ExtensionInfo.html), а через [Security.StepPrice](../api/StockSharp.BusinessEntities.Security.StepPrice.html)
+   > [Security](xref:StockSharp.BusinessEntities.Security) имеет ряд свойств, которые упрощают доступ к расширенной информации. Это свойства [OpenPrice](xref:StockSharp.BusinessEntities.Security.OpenPrice), [ClosePrice](xref:StockSharp.BusinessEntities.Security.ClosePrice), [HighPrice](xref:StockSharp.BusinessEntities.Security.HighPrice), [LowPrice](xref:StockSharp.BusinessEntities.Security.LowPrice), [MaxPrice](xref:StockSharp.BusinessEntities.Security.MaxPrice), [MinPrice](xref:StockSharp.BusinessEntities.Security.MinPrice), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice), [MarginBuy](xref:StockSharp.BusinessEntities.Security.MarginBuy), [MarginSell](xref:StockSharp.BusinessEntities.Security.MarginSell), [ExpiryDate](xref:StockSharp.BusinessEntities.Security.ExpiryDate) и [SettlementDate](xref:StockSharp.BusinessEntities.Security.SettlementDate). Поэтому в примере Стоимость шага цены берется не через [Security.ExtensionInfo](xref:StockSharp.BusinessEntities.Security.ExtensionInfo), а через [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice)
 6. Получения стакана:
 
    ```cs

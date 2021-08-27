@@ -1,10 +1,10 @@
 # На истории
 
-Тестирование на исторических данных позволяет проводить как анализ рынка для поиска закономерностей, так и [оптимизацию параметров стратегии](StrategyTestingOptimization.md). Вся работа при этом заключена в классе [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) (подробнее про [настройки тестирования](TestingSettings.md)), который получает сохраненные в локальном хранилище данные через специальный [API](StoragesApi.md). Тестирование идет по тиковым сделкам ([Trade](../api/StockSharp.BusinessEntities.Trade.html)) и стаканам ([MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html)). Если на период в истории нет сохраненных стаканов, то они генерируются на основе сделок с помощью [MarketDepthGenerator](../api/StockSharp.Algo.Testing.MarketDepthGenerator.html). 
+Тестирование на исторических данных позволяет проводить как анализ рынка для поиска закономерностей, так и [оптимизацию параметров стратегии](StrategyTestingOptimization.md). Вся работа при этом заключена в классе [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) (подробнее про [настройки тестирования](TestingSettings.md)), который получает сохраненные в локальном хранилище данные через специальный [API](StoragesApi.md). Тестирование идет по тиковым сделкам ([Trade](xref:StockSharp.BusinessEntities.Trade)) и стаканам ([MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)). Если на период в истории нет сохраненных стаканов, то они генерируются на основе сделок с помощью [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator). 
 
-Данные для тестирования на истории должны быть заранее скачаны и сохранены в специальном [S\#](StockSharpAbout.md) формате. Это можно сделать самостоятельно, используя [History](../api/StockSharp.Algo.History.html) и [API](StoragesApi.md), или настроить и запустить специальную программу [S\#.Data](Hydra.md). 
+Данные для тестирования на истории должны быть заранее скачаны и сохранены в специальном [S\#](StockSharpAbout.md) формате. Это можно сделать самостоятельно, используя [History](xref:StockSharp.Algo.History) и [API](StoragesApi.md), или настроить и запустить специальную программу [S\#.Data](Hydra.md). 
 
-В дистрибутиве [S\#](StockSharpAbout.md) находится пример SampleHistoryTesting (а также архив HistoryData.zip, где лежат исторические данные по тикам, стаканам и свечам, для примера), который тестирует стратегию [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя) на истории. Для сравнения скорости и качества, тестирование идет с различным набором маркет\-данных: 
+В дистрибутиве [S\#](StockSharpAbout.md) находится пример SampleHistoryTesting (а также архив HistoryData.zip, где лежат исторические данные по тикам, стаканам и свечам, для примера), который тестирует стратегию [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%B7%D1%8F%D1%89%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F) на истории. Для сравнения скорости и качества, тестирование идет с различным набором маркет\-данных: 
 
 ![samplehistorytest](../images/sample_history_test.png)
 
@@ -114,7 +114,7 @@
    };
    		
    ```
-2. Далее, создать объект [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html), через который [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) будет получать исторические данные: 
+2. Далее, создать объект [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), через который [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) будет получать исторические данные: 
 
    ```cs
    // хранилище, через которое будет производиться доступ к тиковой и котировочной базе
@@ -126,7 +126,7 @@
    ```
 
    > [!CAUTION]
-   > В конструктор [StockSharp.Algo.Storages.LocalMarketDataDrive](../api/StockSharp.Algo.Storages.LocalMarketDataDrive.html) передается путь к директории, где лежит история для **всех инструментов**, а не к директории с конкретным инструментом. Например, если архив HistoryData.zip был распакован в директорию *C:\\R\\RIZ2@FORTS\\*, то в [StockSharp.Algo.Storages.LocalMarketDataDrive](../api/StockSharp.Algo.Storages.LocalMarketDataDrive.html) необходимо передать путь *C:\\*. Подробнее, в разделе [API](StoragesApi.md). 
+   > В конструктор [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) передается путь к директории, где лежит история для **всех инструментов**, а не к директории с конкретным инструментом. Например, если архив HistoryData.zip был распакован в директорию *C:\\R\\RIZ2@FORTS\\*, то в [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) необходимо передать путь *C:\\*. Подробнее, в разделе [API](StoragesApi.md). 
 3. Далее в цикле создаются инструмент, портфель, стратегия, шлюз для тестирования и т.д. с соответствующими настройками, в зависимости от значений флагов, установленных в главном окне (Тики, Тики и стаканы, Свечи и пр.). Если значение флага False, то программа переходит к следующему набору настроек. 
 
    ```cs
@@ -156,7 +156,7 @@
    };
    				
    ```
-5. Создание самого [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html), куда передаются инструменты, портфели, интерфейс хранилища [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html), а также настройки тестирования: 
+5. Создание самого [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), куда передаются инструменты, портфели, интерфейс хранилища [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), а также настройки тестирования: 
 
    ```cs
    // создаем шлюз для эмуляции
@@ -286,8 +286,8 @@
    					
    ```
 
-   Для переданных в конструктор [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) инструментов и портфелей вызываются [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html) и [IPortfolioProvider.NewPortfolio](../api/StockSharp.BusinessEntities.IPortfolioProvider.NewPortfolio.html). 
-8. Создание самой стратегии [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя): 
+   Для переданных в конструктор [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) инструментов и портфелей вызываются [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) и [IPortfolioProvider.NewPortfolio](xref:StockSharp.BusinessEntities.IPortfolioProvider.NewPortfolio). 
+8. Создание самой стратегии [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%B7%D1%8F%D1%89%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F): 
 
    ```cs
    // создаем торговую стратегию, скользящие средние на 80 5-минуток и 10 5-минуток
@@ -303,7 +303,7 @@
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Подписка на событие [PnLChanged](../api/StockSharp.Algo.Strategies.Strategy.PnLChanged.html), для расчета кривой эквити (подробнее, в разделе [Кривая эквити](Equity.md)), а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
+9. Подписка на событие [PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged), для расчета кривой эквити (подробнее, в разделе [Кривая эквити](Equity.md)), а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
 
    ```cs
    // копируем параметры на визуальную панель

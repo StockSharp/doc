@@ -1,14 +1,14 @@
 # Chart
 
-For a candles graphic display, you can use the special [Chart](../api/StockSharp.Xaml.Charting.Chart.html) component, which draws candles as follows: (see [Chart components](GUICharting.md)):
+For a candles graphic display, you can use the special [Chart](xref:StockSharp.Xaml.Charting.Chart) component, which draws candles as follows: (see [Chart components](GUICharting.md)):
 
 ![sample candleschart](../images/sample_candleschart.png)
 
-The candles passed into the [ChartHelper.Draw](../api/StockSharp.Xaml.Charting.ChartHelper.Draw.html) method for displaying.
+The candles passed into the [ChartHelper.Draw](xref:StockSharp.Xaml.Charting.ChartHelper.Draw) method for displaying.
 
-The current candle changes will be displayed when the candle is passed from the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) event to draw on the graph.
+The current candle changes will be displayed when the candle is passed from the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event to draw on the graph.
 
-If you want to display the finished candles, check the [State](../api/StockSharp.Algo.Candles.Candle.State.html) property of candle that came:
+If you want to display the finished candles, check the [State](xref:StockSharp.Algo.Candles.Candle.State) property of candle that came:
 
 ```cs
 // _chart - StockSharp.Xaml.Chart

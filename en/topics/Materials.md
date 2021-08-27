@@ -22,7 +22,7 @@
 
 - Platform site \- 
 
-  [https:\/\/stocksharp.com](https://stocksharp.com/)
+  [https:\/\/stocksharp.com](https://stocksharp.com)
 
   . 
 - News, articles, forum for discussion \- 

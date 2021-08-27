@@ -61,7 +61,7 @@
    	BeginValue = 1000000,
    };
    ```
-4. Создание объединенного шлюза [BatchEmulation](../api/StockSharp.Algo.Strategies.Testing.BatchEmulation.html), который будет содержать все созданные на следующем шаге [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html): 
+4. Создание объединенного шлюза [BatchEmulation](xref:StockSharp.Algo.Strategies.Testing.BatchEmulation), который будет содержать все созданные на следующем шаге [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector): 
 
    ```cs
    // create backtesting connector

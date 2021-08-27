@@ -1,6 +1,6 @@
 # Инициализация адаптера Twime
 
-Код ниже демонстрирует как инициализировать [TwimeMessageAdapter](../api/StockSharp.Twime.TwimeMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [TwimeMessageAdapter](xref:StockSharp.Twime.TwimeMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

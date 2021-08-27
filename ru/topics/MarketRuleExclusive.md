@@ -1,6 +1,6 @@
 # Взаимоисключающие правила
 
-Взаимоисключающие правила, это правила которые удаляются по активации одного из этих правил. Для этого вызвается метод [MarketRuleHelper.Exclusive](../api/StockSharp.Algo.MarketRuleHelper.Exclusive.html) в который передается правило, которое будет удалено при активации данного правила.
+Взаимоисключающие правила, это правила которые удаляются по активации одного из этих правил. Для этого вызвается метод [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive) в который передается правило, которое будет удалено при активации данного правила.
 
 Например, регистрируется два правила, на успешную и неуспешную регистрацию заявки, одно из них нужно удалить в случае активации другого:
 
@@ -23,7 +23,7 @@ RegisterOrder(order);
 		
 ```
 
-Также взаимоисключающие правила можно создать через добавление в [ExclusiveRules](../api/StockSharp.Algo.IMarketRule.ExclusiveRules.html)
+Также взаимоисключающие правила можно создать через добавление в [ExclusiveRules](xref:StockSharp.Algo.IMarketRule.ExclusiveRules)
 
 ```cs
 var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);

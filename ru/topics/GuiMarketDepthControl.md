@@ -2,16 +2,16 @@
 
 ![GUI MarketDepthControl](../images/GUI_MarketDepthControl.png)
 
-[MarketDepthControl](../api/StockSharp.Xaml.MarketDepthControl.html) \- графический компонент для отображения стакана. Компонент позволяет отображать котировки и собственные заявки. 
+[MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) \- графический компонент для отображения стакана. Компонент позволяет отображать котировки и собственные заявки. 
 
 **Основные свойства и методы**
 
-- [MaxDepth](../api/StockSharp.Xaml.MarketDepthControl.MaxDepth.html) \- глубина стакана.
-- [IsBidsOnTop](../api/StockSharp.Xaml.MarketDepthControl.IsBidsOnTop.html) \- отображать покупки сверху.
-- [UpdateFormat](../api/StockSharp.Xaml.MarketDepthControl.UpdateFormat.html) \- обновить формат отображения цен и объёмов при помощи инструмента.
-- [ProcessOrder](../api/StockSharp.Xaml.MarketDepthControl.ProcessOrder.html) \- обработать заявку.
-- [UpdateDepth](../api/StockSharp.Xaml.MarketDepthControl.UpdateDepth.html) \- обновить стакан.
-- [UpdateDepth](../api/StockSharp.Xaml.MarketDepthControl.UpdateDepth.html) \- обновить стакан при помощи сообщения.
+- [MaxDepth](xref:StockSharp.Xaml.MarketDepthControl.MaxDepth) \- глубина стакана.
+- [IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) \- отображать покупки сверху.
+- [UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat) \- обновить формат отображения цен и объёмов при помощи инструмента.
+- [ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder) \- обработать заявку.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- обновить стакан.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- обновить стакан при помощи сообщения.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

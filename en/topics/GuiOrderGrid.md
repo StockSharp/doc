@@ -1,6 +1,6 @@
 # Orders
 
-[OrderGrid](../api/StockSharp.Xaml.OrderGrid.html) \- the table to display orders. In addition, the context menu of this table contains commands for operations with orders: registration, replacement and cancellation of orders. Selecting a menu item leads to the generation of events: [OrderGrid.OrderRegistering](../api/StockSharp.Xaml.OrderGrid.OrderRegistering.html), [OrderGrid.OrderReRegistering](../api/StockSharp.Xaml.OrderGrid.OrderReRegistering.html) or [OrderGrid.OrderCanceling](../api/StockSharp.Xaml.OrderGrid.OrderCanceling.html) respectively.
+[OrderGrid](xref:StockSharp.Xaml.OrderGrid) \- the table to display orders. In addition, the context menu of this table contains commands for operations with orders: registration, replacement and cancellation of orders. Selecting a menu item leads to the generation of events: [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) or [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) respectively.
 
 ![GUI OrderGrid](../images/GUI_OrderGrid.png)
 
@@ -9,13 +9,13 @@
 
 **Main members**
 
-- [Orders](../api/StockSharp.Xaml.OrderGrid.Orders.html) \- the list of orders.
-- [SelectedOrder](../api/StockSharp.Xaml.OrderGrid.SelectedOrder.html) \- the selected order.
-- [SelectedOrders](../api/StockSharp.Xaml.OrderGrid.SelectedOrders.html) \- \- selected orders.
-- [AddRegistrationFail](../api/StockSharp.Xaml.OrderGrid.AddRegistrationFail.html) \- the method that adds a message about order registration error in the comment field.
-- [OrderRegistering](../api/StockSharp.Xaml.OrderGrid.OrderRegistering.html) \- the order registration event (occurs after selecting the appropriate item in the context menu).
-- [OrderReRegistering](../api/StockSharp.Xaml.OrderGrid.OrderReRegistering.html) \- the order replacement event (occurs after selecting the appropriate item in the context menu).
-- [OrderCanceling](../api/StockSharp.Xaml.OrderGrid.OrderCanceling.html) \- the order cancellation (occurs after selecting the appropriate item in the context menu).
+- [Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- the list of orders.
+- [SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- the selected order.
+- [SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- \- selected orders.
+- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail) \- the method that adds a message about order registration error in the comment field.
+- [OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- the order registration event (occurs after selecting the appropriate item in the context menu).
+- [OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- the order replacement event (occurs after selecting the appropriate item in the context menu).
+- [OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- the order cancellation (occurs after selecting the appropriate item in the context menu).
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

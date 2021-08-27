@@ -1,6 +1,6 @@
 # Adapter initialization Cryptopia
 
-The code below demonstrates how to initialize the [CryptopiaMessageAdapter](../api/StockSharp.Cryptopia.CryptopiaMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [CryptopiaMessageAdapter](xref:StockSharp.Cryptopia.CryptopiaMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

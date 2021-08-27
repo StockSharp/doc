@@ -1,6 +1,6 @@
 # Order log
 
-If connection supports the request log, then the adapter can transmit it via the [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html) message:
+If connection supports the request log, then the adapter can transmit it via the [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message:
 
 ```cs
 			SendOutMessage(new ExecutionMessage
@@ -19,7 +19,7 @@ If connection supports the request log, then the adapter can transmit it via the
 			});
 ```
 
-If support for order book generation from incoming data is required, then the [OrderLogMessageAdapter](../api/StockSharp.Algo.OrderLogMessageAdapter.html) adapter (see [Adapters chain](Messages_adapters_chain.md) for details) will be used for subscriptions that require order book collection from order log data. By default, the [OrderLogMarketDepthBuilder](../api/StockSharp.Messages.OrderLogMarketDepthBuilder.html) algorithm will be used. If this class behavior is not enough, then you need to create your own class that implements the [IOrderLogMarketDepthBuilder](../api/StockSharp.Messages.IOrderLogMarketDepthBuilder.html) interface and override the [IMessageAdapter.CreateOrderLogMarketDepthBuilder](../api/StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder.html): method: 
+If support for order book generation from incoming data is required, then the [OrderLogMessageAdapter](xref:StockSharp.Algo.OrderLogMessageAdapter) adapter (see [Adapters chain](Messages_adapters_chain.md) for details) will be used for subscriptions that require order book collection from order log data. By default, the [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) algorithm will be used. If this class behavior is not enough, then you need to create your own class that implements the [IOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IOrderLogMarketDepthBuilder) interface and override the [IMessageAdapter.CreateOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder): method: 
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter

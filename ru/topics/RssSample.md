@@ -1,6 +1,6 @@
 # Инициализация адаптера RSS
 
-Код ниже демонстрирует как инициализировать [RssMessageAdapter](../api/StockSharp.Rss.RssMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [RssMessageAdapter](xref:StockSharp.Rss.RssMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new RssMessageAdapter(Connector.TransactionIdGenerator)

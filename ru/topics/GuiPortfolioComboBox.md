@@ -1,13 +1,13 @@
 # Выпадающий список портфелей
 
-[PortfolioComboBox](../api/StockSharp.Xaml.PortfolioComboBox.html) \- комбинированный список для выбора портфеля.
+[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) \- комбинированный список для выбора портфеля.
 
 ![Gui PortfolioComboBox](../images/Gui_PortfolioComboBox.png)
 
 **Основные свойства**
 
-- [Portfolios](../api/StockSharp.Xaml.PortfolioComboBox.Portfolios.html) \- список портфелей.
-- [SelectedPortfolio](../api/StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio.html) \- выбранный портфель.
+- [Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- список портфелей.
+- [SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- выбранный портфель.
 
 Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

@@ -15,7 +15,7 @@ xmlns:xamlRemote= "clr-namespace:StockSharp.RemoteManager;assembly=StockSharp.Re
 
 The module operates in two modes \- server and client, or in two modes simultaneously.
 
-To initialize the client module, the InitRemoteManagerClient method must be called and the [Connector](../api/StockSharp.Algo.Connector.html) passed to it.
+To initialize the client module, the InitRemoteManagerClient method must be called and the [Connector](xref:StockSharp.Algo.Connector) passed to it.
 
 ```cs
 	...

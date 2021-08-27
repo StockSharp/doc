@@ -1,10 +1,10 @@
 # Extended settings
 
-Extended settings of [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html).
+Extended settings of [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
 
-- [EmulationSettings.MarketTimeChangedInterval](../api/StockSharp.Algo.Strategies.Testing.EmulationSettings.MarketTimeChangedInterval.html) \- time change event input interval. If trades generators are used, then the trades will be generated with this periodicity. The default is 1 minute.
-- [MarketEmulatorSettings.Latency](../api/StockSharp.Algo.Testing.MarketEmulatorSettings.Latency.html) \- The minimum value of the registered orders latency. By default, it is equal to **TimeSpan.Zero**, which means instant acceptance of the registered orders by the exchange. 
-- [MarketEmulatorSettings.MatchOnTouch](../api/StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch.html) \- to execute the orders if the price "touches" the level (an assumption is sometimes too "optimistic" and the mode must be switched off for a realistic testing). If the mode is off, then limit orders will be executed if the price is "passed through them" at least in 1 step. The option is available in all modes except the order log. The default is off.
+- [EmulationSettings.MarketTimeChangedInterval](xref:StockSharp.Algo.Strategies.Testing.EmulationSettings.MarketTimeChangedInterval) \- time change event input interval. If trades generators are used, then the trades will be generated with this periodicity. The default is 1 minute.
+- [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) \- The minimum value of the registered orders latency. By default, it is equal to **TimeSpan.Zero**, which means instant acceptance of the registered orders by the exchange. 
+- [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) \- to execute the orders if the price "touches" the level (an assumption is sometimes too "optimistic" and the mode must be switched off for a realistic testing). If the mode is off, then limit orders will be executed if the price is "passed through them" at least in 1 step. The option is available in all modes except the order log. The default is off.
 
 Even if the strategy is tested on the candles, it is necessary to subscribe to the tick trades:
 
@@ -32,33 +32,33 @@ _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 		
 ```
 
-- The order book update interval [MarketDataGenerator.Interval](../api/StockSharp.Algo.Testing.MarketDataGenerator.Interval.html). The update can not be more often than tick trades come (because the order books are generated before each trade):
+- The order book update interval [MarketDataGenerator.Interval](xref:StockSharp.Algo.Testing.MarketDataGenerator.Interval). The update can not be more often than tick trades come (because the order books are generated before each trade):
 
   ```cs
   mdGenerator.Interval = TimeSpan.FromSeconds(1);
   				
   ```
-- The order books depth [MarketDepthGenerator.MaxBidsDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth.html) and [MarketDepthGenerator.MaxAsksDepth](../api/StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth.html). The more \- the slower testing:
+- The order books depth [MarketDepthGenerator.MaxBidsDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth) and [MarketDepthGenerator.MaxAsksDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth). The more \- the slower testing:
 
   ```cs
   mdGenerator.MaxAsksDepth = 1; 
   mdGenerator.MaxBidsDepth = 1;
   				
   ```
-- Volumes of [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) and [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) are taken from the volume of the trade on which there is generation. The [MarketDepthGenerator.UseTradeVolume](../api/StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume.html) option sets realistic volume level in the order book:
+- Volumes of [MarketDepth.BestBid](xref:StockSharp.BusinessEntities.MarketDepth.BestBid) and [MarketDepth.BestAsk](xref:StockSharp.BusinessEntities.MarketDepth.BestAsk) are taken from the volume of the trade on which there is generation. The [MarketDepthGenerator.UseTradeVolume](xref:StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume) option sets realistic volume level in the order book:
 
   ```cs
   mdGenerator.UseTradeVolume = true;
   				
   ```
-- The volume level [MarketDataGenerator.MinVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MinVolume.html) and [MarketDataGenerator.MaxVolume](../api/StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume.html):
+- The volume level [MarketDataGenerator.MinVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MinVolume) and [MarketDataGenerator.MaxVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume):
 
   ```cs
   mdGenerator.MinVolume = 1;
   mdGenerator.MaxVolume = 1;
   				
   ```
-- The minimum generated spread is equal to [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html). It should not generate spread between [MarketDepth.BestBid](../api/StockSharp.BusinessEntities.MarketDepth.BestBid.html) and [MarketDepth.BestAsk](../api/StockSharp.BusinessEntities.MarketDepth.BestAsk.html) more than 5 [Security.PriceStep](../api/StockSharp.BusinessEntities.Security.PriceStep.html) (so do not get too wide spread while the generation from candles is performed):
+- The minimum generated spread is equal to [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep). It should not generate spread between [MarketDepth.BestBid](xref:StockSharp.BusinessEntities.MarketDepth.BestBid) and [MarketDepth.BestAsk](xref:StockSharp.BusinessEntities.MarketDepth.BestAsk) more than 5 [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep) (so do not get too wide spread while the generation from candles is performed):
 
   ```cs
   mdGenerator.MinSpreadStepCount = 1;

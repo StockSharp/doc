@@ -6,9 +6,9 @@
 
 Working with historical candles through Connector
 
-1. To get candles through [Connector](../api/StockSharp.Algo.Connector.html) , you need to create [Connector](../api/StockSharp.Algo.Connector.html) and add the corresponding [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) to it. How to do this using a special control, see [Connection settings window](API_UI_ConnectorWindow.md).
+1. To get candles through [Connector](xref:StockSharp.Algo.Connector) , you need to create [Connector](xref:StockSharp.Algo.Connector) and add the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) to it. How to do this using a special control, see [Connection settings window](API_UI_ConnectorWindow.md).
 
-   You can also add the corresponding [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) to the [Connector](../api/StockSharp.Algo.Connector.html) through the code. For example, adapter initialization for [Interactive Brokers](IB.md) is described in [Adapter initialization Interactive Brokers](IBSample.md) and looks like this:
+   You can also add the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) to the [Connector](xref:StockSharp.Algo.Connector) through the code. For example, adapter initialization for [Interactive Brokers](IB.md) is described in [Adapter initialization Interactive Brokers](IBSample.md) and looks like this:
 
    ```cs
    Connector Connector = new Connector();				
@@ -23,7 +23,7 @@ Working with historical candles through Connector
    ...
    							
    ```
-2. In order to get historical candles, you need to call the [SubscribeCandles](../api/StockSharp.Algo.Connector.SubscribeCandles.html) method: 
+2. In order to get historical candles, you need to call the [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles) method: 
 
    ```cs
    ...
@@ -33,7 +33,7 @@ Working with historical candles through Connector
    ...
    			
    ```
-3. Historical candles are passed through the [CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) event: 
+3. Historical candles are passed through the [CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event: 
 
    ```cs
    ...
@@ -47,7 +47,7 @@ Working with historical candles through Connector
 
 Working with historical candles through MessageAdapter
 
-1. To get candles through the [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html), you need to create the corresponding [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html).
+1. To get candles through the [MessageAdapter](xref:StockSharp.Messages.MessageAdapter), you need to create the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 
    For example, adapter initialization for [Interactive Brokers](IB.md) is described in [Adapter initialization Interactive Brokers](IBSample.md) and looks like this:
 
@@ -61,7 +61,7 @@ Working with historical candles through MessageAdapter
    ...
    							
    ```
-2. We wrap the [Interactive Brokers](IB.md) adapter in the [SecurityNativeIdMessageAdapter](../api/StockSharp.Algo.SecurityNativeIdMessageAdapter.html). security system identifier adapter. This is necessary if the trading system works with numeric or any other security identifiers other than the usual string representation.
+2. We wrap the [Interactive Brokers](IB.md) adapter in the [SecurityNativeIdMessageAdapter](xref:StockSharp.Algo.SecurityNativeIdMessageAdapter). security system identifier adapter. This is necessary if the trading system works with numeric or any other security identifiers other than the usual string representation.
 
    ```cs
    	

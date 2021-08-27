@@ -4,7 +4,7 @@
 
 ![ChartAnnotations](../images/ChartAnnotations.png)
 
-Adding annotations is the same as adding any other information to the chart. First you need to create [ChartAnnotation](../api/StockSharp.Xaml.Charting.ChartAnnotation.html) and add it to the chart area:
+Adding annotations is the same as adding any other information to the chart. First you need to create [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) and add it to the chart area:
 
 ```cs
 var _annotation = new ChartAnnotation { Type = ChartAnnotationTypes.BoxAnnotation };
@@ -12,7 +12,7 @@ Chart.AddElement(chartArea, _annotation);
 		
 ```
 
-After that, you need to initialize a new instance of the [AnnotationData](../api/StockSharp.Xaml.Charting.ChartDrawData.AnnotationData.html), class, in which to describe the annotation and pass it to the [Chart.Draw](../api/StockSharp.Xaml.Charting.Chart.Draw.html) method for drawing on the chart:
+After that, you need to initialize a new instance of the [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), class, in which to describe the annotation and pass it to the [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw) method for drawing on the chart:
 
 ```cs
 var data = new ChartDrawData.AnnotationData

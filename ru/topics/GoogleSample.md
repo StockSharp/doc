@@ -1,6 +1,6 @@
 # Инициализация адаптера Google
 
-Код ниже демонстрирует как инициализировать [GoogleMessageAdapter](../api/StockSharp.Google.GoogleMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [GoogleMessageAdapter](xref:StockSharp.Google.GoogleMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new GoogleMessageAdapter(Connector.TransactionIdGenerator);

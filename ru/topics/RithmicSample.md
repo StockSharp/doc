@@ -1,6 +1,6 @@
 # Инициализация адаптера Rithmic
 
-Код ниже демонстрирует как инициализировать [RithmicMessageAdapter](../api/StockSharp.Rithmic.RithmicMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [RithmicMessageAdapter](xref:StockSharp.Rithmic.RithmicMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

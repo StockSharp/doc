@@ -2,7 +2,7 @@
 
 Для того, чтобы оценить скорость регистрации заявок, а также определить, какой брокер или технология быстрее, в [S\#](StockSharpAbout.md) входит механизм расчета разницы времени между созданием заявки в торговом роботе и регистрацией на бирже.
 
-Для учета задержки необходимо использовать реализацию интерфейса [ILatencyManager](../api/StockSharp.Algo.Latency.ILatencyManager.html), в виде [LatencyManager](../api/StockSharp.Algo.Latency.LatencyManager.html).
+Для учета задержки необходимо использовать реализацию интерфейса [ILatencyManager](xref:StockSharp.Algo.Latency.ILatencyManager), в виде [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager).
 
 ### Предварительные условия
 

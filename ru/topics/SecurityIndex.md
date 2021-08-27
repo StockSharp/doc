@@ -1,16 +1,16 @@
 # Индекс
 
-[IndexSecurity](../api/StockSharp.Algo.IndexSecurity.html) \- индекс, построенный из инструментов. Например, для задания спреда при арбитраже или парном трейдинге. Имеет следующие реализации.
+[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) \- индекс, построенный из инструментов. Например, для задания спреда при арбитраже или парном трейдинге. Имеет следующие реализации.
 
-1. [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html) \- индекс, построенный из комбинации нескольких инструментов через математическую формулу [Formula](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula.html).
+1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- индекс, построенный из комбинации нескольких инструментов через математическую формулу [Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula).
 
-2. [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) \- индекс, построенный из инструментов с применением весовых коэффициентов [Weights](../api/StockSharp.Algo.WeightedIndexSecurity.Weights.html).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- индекс, построенный из инструментов с применением весовых коэффициентов [Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ### Создание ExpressionIndexSecurity
 
 Создание ExpressionIndexSecurity
 
-1. Объявить составные инструменты, которые будут входить в [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html):
+1. Объявить составные инструменты, которые будут входить в [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
    // необходимо для компиляции формулы
@@ -24,7 +24,7 @@
    private const string _secCode2 = "LKM5";
    							
    ```
-2. Создать [ExpressionIndexSecurity](../api/StockSharp.Algo.Expressions.ExpressionIndexSecurity.html):
+2. Создать [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
    _indexInstr = new ExpressionIndexSecurity
@@ -40,7 +40,7 @@
 
 Создание WeightedIndexSecurity
 
-1. Объявить составные инструменты, которые будут входить в [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html) и сам [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html):
+1. Объявить составные инструменты, которые будут входить в [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) и сам [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
    private Security _instr1;
@@ -50,7 +50,7 @@
    private const string _secCode2 = "LKM5";
    							
    ```
-2. Создать [WeightedIndexSecurity](../api/StockSharp.Algo.WeightedIndexSecurity.html):
+2. Создать [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
    _indexInstr = new WeightedIndexSecurity() { ExchangeBoard = ExchangeBoard.Forts, Id = "IndexInstr" };

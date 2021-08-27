@@ -1,6 +1,6 @@
 # Инициализация адаптера РТС
 
-Код ниже демонстрирует как инициализировать [SpbExMessageAdapter](../api/StockSharp.SpbEx.SpbExMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [SpbExMessageAdapter](xref:StockSharp.SpbEx.SpbExMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

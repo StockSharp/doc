@@ -18,7 +18,7 @@
    	Type = OrderTypes.Rps
    };
    ```
-2. После этого инициализируем поле RpsInfo, заполняя необходимые для заявки поля (часть из полей [NtmOrderInfo](../api/StockSharp.Messages.NtmOrderInfo.html) являются необязательными): 
+2. После этого инициализируем поле RpsInfo, заполняя необходимые для заявки поля (часть из полей [NtmOrderInfo](xref:StockSharp.Messages.NtmOrderInfo) являются необязательными): 
 
    ```cs
    order.RpsInfo = new NtmOrderInfo

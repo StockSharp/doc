@@ -1,6 +1,6 @@
 # Registering of orders from the chart
 
-S\# allows to register orders from the chart, to activate this feature, you need to set the [OrderCreationMode](../api/StockSharp.Xaml.Charting.Chart.OrderCreationMode.html) property to **"True"**, it is disabled by default.
+S\# allows to register orders from the chart, to activate this feature, you need to set the [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) property to **"True"**, it is disabled by default.
 
 ![API GUI Trading from chart](../images/API_GUI_Trading_from_chart.png)
 
@@ -21,4 +21,4 @@ ChartPanel.CreateOrder += (chartArea,order) =>
 };
 ```
 
-Registered orders will be displayed as a special element for displaying orders [ChartActiveOrdersElement](../api/StockSharp.Xaml.Charting.ChartActiveOrdersElement.html).
+Registered orders will be displayed as a special element for displaying orders [ChartActiveOrdersElement](xref:StockSharp.Xaml.Charting.ChartActiveOrdersElement).

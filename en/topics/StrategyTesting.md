@@ -1,6 +1,6 @@
 # Backtesting\/Emulation
 
-Strategies written by using [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) can be tested in three modes: 
+Strategies written by using [Strategy](xref:StockSharp.Algo.Strategies.Strategy) can be tested in three modes: 
 
 1. [Historical data](StrategyTestingHistory.md)
 
@@ -16,6 +16,6 @@ Strategies written by using [Strategy](../api/StockSharp.Algo.Strategies.Strateg
 
    ), but without the actual orders registration (execution is emulated based on incoming order books). 
 
-When using all three modes the maximum emphasis is focused on the fact that the strategy code, written by using [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) is not changed when switching from real trading to testing and back. This is achieved through the implementation of the [IConnector](../api/StockSharp.BusinessEntities.IConnector.html) main interface, which is a gateway to the trading system. How the interface is used – this has been shown already in the [StockSharp Architecture](StockSharpArchitecture.md) section. In testing mode not real trading system, but the emulation will act as the trading system (depending on the selected mode). Therefore, the strategy code will never know about it \- whether it is trading with a real exchange, or it is the emulation. 
+When using all three modes the maximum emphasis is focused on the fact that the strategy code, written by using [Strategy](xref:StockSharp.Algo.Strategies.Strategy) is not changed when switching from real trading to testing and back. This is achieved through the implementation of the [IConnector](xref:StockSharp.BusinessEntities.IConnector) main interface, which is a gateway to the trading system. How the interface is used – this has been shown already in the [StockSharp Architecture](StockSharpArchitecture.md) section. In testing mode not real trading system, but the emulation will act as the trading system (depending on the selected mode). Therefore, the strategy code will never know about it \- whether it is trading with a real exchange, or it is the emulation. 
 
 ## Recommended content

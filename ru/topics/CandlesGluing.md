@@ -1,8 +1,8 @@
 # Склеивание свечей, история + реал\-тайм
 
-Для того, чтобы склеить исторические свечи с реал\-тайм, надо инициализировать соответствующие хранилище торговых объектов [CsvEntityRegistry](../api/StockSharp.Algo.Storages.Csv.CsvEntityRegistry.html), хранилище маркет\-данных [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) и реестр хранилищ\-снэпшотов [SnapshotRegistry](../api/StockSharp.Algo.Storages.SnapshotRegistry.html). 
+Для того, чтобы склеить исторические свечи с реал\-тайм, надо инициализировать соответствующие хранилище торговых объектов [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), хранилище маркет\-данных [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) и реестр хранилищ\-снэпшотов [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry). 
 
-Рассмотрим склеивание на примере [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) с использованием тиковых данных, сохраненных с помощью [S\#.Data](Hydra.md):
+Рассмотрим склеивание на примере [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) с использованием тиковых данных, сохраненных с помощью [S\#.Data](Hydra.md):
 
 ```cs
 private Connector _connector;
@@ -55,7 +55,7 @@ _connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.From
 		
 ```
 
-Если изначально создаётся [Connector](../api/StockSharp.Algo.Connector.html), то в инициализации StorageAdapter нет необходимости, достаточно передать хранилище торговых объектов [CsvEntityRegistry](../api/StockSharp.Algo.Storages.Csv.CsvEntityRegistry.html), хранилище маркет\-данных [StorageRegistry](../api/StockSharp.Algo.Storages.StorageRegistry.html) и реестр хранилищ\-снэпшотов [SnapshotRegistry](../api/StockSharp.Algo.Storages.SnapshotRegistry.html) в конструктор [Connector](../api/StockSharp.Algo.Connector.html)
+Если изначально создаётся [Connector](xref:StockSharp.Algo.Connector), то в инициализации StorageAdapter нет необходимости, достаточно передать хранилище торговых объектов [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), хранилище маркет\-данных [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) и реестр хранилищ\-снэпшотов [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) в конструктор [Connector](xref:StockSharp.Algo.Connector)
 
 ```cs
 ...

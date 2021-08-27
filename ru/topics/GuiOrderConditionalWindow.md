@@ -1,19 +1,19 @@
 # Ввод стоп\-заявки
 
 > [!TIP]
-> Данный контролл устарел, вместо него следует использовать [OrderWindow](../api/StockSharp.Xaml.OrderWindow.html). Как описано в пункте [Ввод новой заявки](GuiOrderWindow.md).
+> Данный контролл устарел, вместо него следует использовать [OrderWindow](xref:StockSharp.Xaml.OrderWindow). Как описано в пункте [Ввод новой заявки](GuiOrderWindow.md).
 
-[OrderConditionalWindow](../api/StockSharp.Xaml.OrderConditionalWindow.html) \- окно для создания условной заявки. 
+[OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) \- окно для создания условной заявки. 
 
 ![GUI OrderConditionalWindow](../images/GUI_OrderConditionalWindow.png)
 
 **Основные свойства**
 
-- [Portfolios](../api/StockSharp.Xaml.OrderConditionalWindow.Portfolios.html) \- список портфелей. 
-- [SecurityProvider](../api/StockSharp.Xaml.OrderConditionalWindow.SecurityProvider.html) \- поставщик информации об инструментах. 
-- [MarketDataProvider](../api/StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider.html) \- поставщик рыночных данных. 
-- [Adapter](../api/StockSharp.Xaml.OrderConditionalWindow.Adapter.html) \- адаптер сообщений. 
-- [Order](../api/StockSharp.Xaml.OrderConditionalWindow.Order.html) \- созданная заявка. 
+- [Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) \- список портфелей. 
+- [SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) \- поставщик информации об инструментах. 
+- [MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) \- поставщик рыночных данных. 
+- [Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- адаптер сообщений. 
+- [Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- созданная заявка. 
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

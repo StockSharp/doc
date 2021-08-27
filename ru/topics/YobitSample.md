@@ -1,6 +1,6 @@
 # Инициализация адаптера Yobit
 
-Код ниже демонстрирует как инициализировать [YobitMessageAdapter](../api/StockSharp.Yobit.YobitMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [YobitMessageAdapter](xref:StockSharp.Yobit.YobitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

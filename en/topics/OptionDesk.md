@@ -1,6 +1,6 @@
 # Option desk
 
-The [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html)\- graphic component is the table for option desk display. It shows “Greeks”, implied volatility, the theoretical price, the best offer and bid for Put and Call options. 
+The [OptionDesk](xref:StockSharp.Xaml.OptionDesk)\- graphic component is the table for option desk display. It shows “Greeks”, implied volatility, the theoretical price, the best offer and bid for Put and Call options. 
 
 Below is the **OptionCalculator** example, which uses this component. The source code of the example can be found in the *Samples\\Options\\SampleOptionQuoting* folder.
 
@@ -10,7 +10,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
 
 OptionCalculator example
 
-1. In the XAML code, adding the [OptionDesk](../api/StockSharp.Xaml.OptionDesk.html) element and assigning it the **Desk** name. 
+1. In the XAML code, adding the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) element and assigning it the **Desk** name. 
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -130,12 +130,12 @@ OptionCalculator example
    - Fill the array with a chain of options, where the selected instrument acts as the underlying asset;
    - Assign this array to the 
 
-     [OptionDeskModel.Options](../api/StockSharp.Xaml.OptionDeskModel.Options.html)
+     [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options)
 
       property;
    - • Clear the options board values using the 
 
-     [OptionDeskModel.Clear](../api/StockSharp.Xaml.OptionDeskModel.Clear.html)
+     [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear)
 
       method.
    ```cs

@@ -1,12 +1,12 @@
 # Коннекторы
 
-Для работы с биржами и источниками данных в [S\#](StockSharpAbout.md) рекомендуется работать через базовый класс [Connector](../api/StockSharp.Algo.Connector.html). 
+Для работы с биржами и источниками данных в [S\#](StockSharpAbout.md) рекомендуется работать через базовый класс [Connector](xref:StockSharp.Algo.Connector). 
 
-Рассмотрим работу с [Connector](../api/StockSharp.Algo.Connector.html). Исходные коды примера находятся в проекте Samples\/Common\/SampleConnection.
+Рассмотрим работу с [Connector](xref:StockSharp.Algo.Connector). Исходные коды примера находятся в проекте Samples\/Common\/SampleConnection.
 
 ![multiconnection main](../images/multiconnection_main.png)
 
-Создаём экземпляр класса [Connector](../api/StockSharp.Algo.Connector.html):
+Создаём экземпляр класса [Connector](xref:StockSharp.Algo.Connector):
 
 ```cs
 ...
@@ -21,7 +21,7 @@ public MainWindow()
 		
 ```
 
-Для конфигурирования [Connector](../api/StockSharp.Algo.Connector.html) у **S\#.API** есть специальный графический интерфейс, в котором можно настроить сразу несколько подключений одновременно. Как им воспользоваться описано в пункте [Графическое конфигурирование](API_ConnectorsUIConfiguration.md). 
+Для конфигурирования [Connector](xref:StockSharp.Algo.Connector) у **S\#.API** есть специальный графический интерфейс, в котором можно настроить сразу несколько подключений одновременно. Как им воспользоваться описано в пункте [Графическое конфигурирование](API_ConnectorsUIConfiguration.md). 
 
 ```cs
 ...
@@ -39,7 +39,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
-Аналогично можно добавлять подключения напрямую из кода (без графических окон), воспользовавшись методом расширением [TraderHelper.AddAdapter\`\`1](../api/StockSharp.Algo.TraderHelper.AddAdapter``1.html):
+Аналогично можно добавлять подключения напрямую из кода (без графических окон), воспользовавшись методом расширением [TraderHelper.AddAdapter\`\`1](xref:StockSharp.Algo.TraderHelper.AddAdapter``1):
 
 ```cs
 ...
@@ -49,9 +49,9 @@ connector.AddAdapter<LuaFixTransactionMessageAdapter>(a => { });
 	  				
 ```
 
-В один объект [Connector](../api/StockSharp.Algo.Connector.html) можно добавлять неограниченное количество подключений. Поэтому одновременно из программы можно подключаться сразу к нескольким биржам и брокерам.
+В один объект [Connector](xref:StockSharp.Algo.Connector) можно добавлять неограниченное количество подключений. Поэтому одновременно из программы можно подключаться сразу к нескольким биржам и брокерам.
 
-В методе *InitConnector* устанавливаем требуемые обработчики событий [IConnector](../api/StockSharp.BusinessEntities.IConnector.html):
+В методе *InitConnector* устанавливаем требуемые обработчики событий [IConnector](xref:StockSharp.BusinessEntities.IConnector):
 
 ```cs
 private void InitConnector()
@@ -112,9 +112,9 @@ private void InitConnector()
 }
 ```
 
-Как сохранять и загружать настройки [Connector](../api/StockSharp.Algo.Connector.html) в файл можно ознакомиться в пункте [Сохранение и загрузка настроек](API_Connectors_SaveConnectorSettings.md).
+Как сохранять и загружать настройки [Connector](xref:StockSharp.Algo.Connector) в файл можно ознакомиться в пункте [Сохранение и загрузка настроек](API_Connectors_SaveConnectorSettings.md).
 
-О создании собственного [Connector](../api/StockSharp.Algo.Connector.html) можно ознакомиться в пункте [Создание собственного коннектора](ConnectorCreating.md).
+О создании собственного [Connector](xref:StockSharp.Algo.Connector) можно ознакомиться в пункте [Создание собственного коннектора](ConnectorCreating.md).
 
 Выставление заявок описаны в пунктах [Заявки](Orders.md), [Создать новую заявку](CreateNewOrder.md), [Создать новую стоп заявку](API_StopOrders.md). 
 

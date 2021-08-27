@@ -1,6 +1,6 @@
 # Инициализация адаптера Coinigy 
 
-Код ниже демонстрирует как инициализировать [CoinigyMessageAdapter](../api/StockSharp.Coinigy.CoinigyMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [CoinigyMessageAdapter](xref:StockSharp.Coinigy.CoinigyMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

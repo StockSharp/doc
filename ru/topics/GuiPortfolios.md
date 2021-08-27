@@ -2,10 +2,10 @@
 
 Для работы с портфелями [S\#](StockSharpAbout.md) предлагает следующие графические компоненты:
 
-- Комбинированный список для выбора портфеля \- [PortfolioComboBox](../api/StockSharp.Xaml.PortfolioComboBox.html).
-- Комбинированный список с кнопкой, которая открывает окно со списком портфелей \- [PortfolioEditor](../api/StockSharp.Xaml.PropertyGrid.PortfolioEditor.html).
-- Окно со списком портфелей \- [PortfolioPickerWindow](../api/StockSharp.Xaml.PortfolioPickerWindow.html).
-- Таблица, отображающая информацию о портфелях и позициях \- [PortfolioGrid](../api/StockSharp.Xaml.PortfolioGrid.html).
+- Комбинированный список для выбора портфеля \- [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox).
+- Комбинированный список с кнопкой, которая открывает окно со списком портфелей \- [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
+- Окно со списком портфелей \- [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow).
+- Таблица, отображающая информацию о портфелях и позициях \- [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid).
 
 > [!TIP]
 > Обратите внимание, что во всех компонентах для списка портфелей (свойство **Portfolios**) используется класс **ThreadSafeObservableCollection\<TItem\>** (находится в Ecng.Xaml), который обеспечивает потоковую безопасность. 

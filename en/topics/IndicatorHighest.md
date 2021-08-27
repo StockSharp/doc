@@ -2,7 +2,7 @@
 
 The indicator indicates the **Maximum value for the period**. 
 
-To use the indicator, you must use the [Highest](../api/StockSharp.Algo.Indicators.Highest.html) class. 
+To use the indicator, you must use the [Highest](xref:StockSharp.Algo.Indicators.Highest) class. 
 
 ![IndicatorHighest](../images/IndicatorHighest.png)
 

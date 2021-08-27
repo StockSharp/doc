@@ -1,29 +1,29 @@
 # Таблица редактирования свойств объектов
 
-[PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) \- таблица для редактирования свойств объектов. В состав компонента входит набор дополнительных редакторов для системных типов и типов [S\#](StockSharpAbout.md). 
+[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) \- таблица для редактирования свойств объектов. В состав компонента входит набор дополнительных редакторов для системных типов и типов [S\#](StockSharpAbout.md). 
 
 ![GUI PropertyDataGridEx](../images/GUI_PropertyDataGridEx.png)
 
-[PropertyGridEx](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.html) имеет собственные редакторы для следующих типов: 
+[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) имеет собственные редакторы для следующих типов: 
 
-- [StockSharp.Messages.Unit](../api/StockSharp.Messages.Unit.html). 
-- [StockSharp.BusinessEntities.Security](../api/StockSharp.BusinessEntities.Security.html). 
-- [StockSharp.BusinessEntities.Portfolio](../api/StockSharp.BusinessEntities.Portfolio.html). 
-- [StockSharp.BusinessEntities.ExchangeBoard](../api/StockSharp.BusinessEntities.ExchangeBoard.html). 
-- [StockSharp.BusinessEntities.Exchange](../api/StockSharp.BusinessEntities.Exchange.html). 
-- [StockSharp.Algo.Candles.CandleSeries](../api/StockSharp.Algo.Candles.CandleSeries.html). 
+- [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit). 
+- [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security). 
+- [StockSharp.BusinessEntities.Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
+- [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
+- [StockSharp.BusinessEntities.Exchange](xref:StockSharp.BusinessEntities.Exchange). 
+- [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
 - Словарь **ExtensionInfo**. 
-- [System.TimeSpan](../api/System.TimeSpan.html), [System.DateTime](../api/System.DateTime.html) и [System.DateTimeOffset](../api/System.DateTimeOffset.html). 
-- [System.Net.EndPoint](../api/System.Net.EndPoint.html) и [System.Net.IPAddress](../api/System.Net.IPAddress.html). 
-- [System.Security.SecureString](../api/System.Security.SecureString.html). 
-- [System.Text.Encoding](../api/System.Text.Encoding.html). 
-- [System.Enum](../api/System.Enum.html). 
+- [System.TimeSpan](xref:System.TimeSpan), [System.DateTime](xref:System.DateTime) и [System.DateTimeOffset](xref:System.DateTimeOffset). 
+- [System.Net.EndPoint](xref:System.Net.EndPoint) и [System.Net.IPAddress](xref:System.Net.IPAddress). 
+- [System.Security.SecureString](xref:System.Security.SecureString). 
+- [System.Text.Encoding](xref:System.Text.Encoding). 
+- [System.Enum](xref:System.Enum). 
 
 **Основные свойства**
 
-- [SecurityProvider](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider.html) \- поставщик информации об инструментах. 
-- [ExchangeInfoProvider](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider.html) \- поставщик информации о площадках. 
-- [Portfolios](../api/StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios.html) \- список доступных портфелей. 
+- [SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- поставщик информации об инструментах. 
+- [ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- поставщик информации о площадках. 
+- [Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- список доступных портфелей. 
 - **SelectedObject** \- объект, чьи свойства будут отображены в таблице. 
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 

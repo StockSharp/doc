@@ -1,8 +1,8 @@
 # Historical data
 
-Testing on historical data allows to carry out both a market analysis to find patterns and the [strategy parameters optimization](StrategyTestingOptimization.md). At that all work is performed within the [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) class (for more details, see [Extended settings](TestingSettings.md)), which receives the data stored in the local storage through the special [API](StoragesApi.md). Testing is carried out on the [candles](Candles.md), the tick trades ([Trade](../api/StockSharp.BusinessEntities.Trade.html)) and the order books ([MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html)). If there are no saved order books within a period of history, they are generated based on trades by using [MarketDepthGenerator](../api/StockSharp.Algo.Testing.MarketDepthGenerator.html). 
+Testing on historical data allows to carry out both a market analysis to find patterns and the [strategy parameters optimization](StrategyTestingOptimization.md). At that all work is performed within the [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) class (for more details, see [Extended settings](TestingSettings.md)), which receives the data stored in the local storage through the special [API](StoragesApi.md). Testing is carried out on the [candles](Candles.md), the tick trades ([Trade](xref:StockSharp.BusinessEntities.Trade)) and the order books ([MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)). If there are no saved order books within a period of history, they are generated based on trades by using [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator). 
 
-The data for backtesting must be pre\-downloaded and stored in a special [S\#](StockSharpAbout.md) format. This can be done on one's own using [History](../api/StockSharp.Algo.History.html) and [API](StoragesApi.md), or to set up and run the special [S\#.Data](Hydra.md) app. 
+The data for backtesting must be pre\-downloaded and stored in a special [S\#](StockSharpAbout.md) format. This can be done on one's own using [History](xref:StockSharp.Algo.History) and [API](StoragesApi.md), or to set up and run the special [S\#.Data](Hydra.md) app. 
 
 The [S\#](StockSharpAbout.md) installation package contains an example of SampleHistoryTesting (as well as the HistoryData.zip archive, where are the historical data on ticks, order books and candles, for example) which tests the [Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) strategy on the history. Testing is carried out with a different sets of market data for a comparison of the speed and quality: 
 
@@ -102,7 +102,7 @@ Backtesting of moving averages strategy
    };
    		
    ```
-2. Next, to create the [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html) object, through which [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) will get historical data: 
+2. Next, to create the [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) object, through which [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) will get historical data: 
 
    ```cs
    // storage to historical data
@@ -114,7 +114,7 @@ Backtesting of moving averages strategy
    ```
 
    > [!CAUTION]
-   > The path to the directory with the history is passed to the [StockSharp.Algo.Storages.LocalMarketDataDrive](../api/StockSharp.Algo.Storages.LocalMarketDataDrive.html) constructor. This path is to the directory with the history for **all instruments**, and not to the directory with the specific instrument. For example, if the HistoryData.zip archive was unpacked to the *C:\\E\\ESZ2@NYSE\\* directory, then the path *C:\\* should be passed to [StockSharp.Algo.Storages.LocalMarketDataDrive](../api/StockSharp.Algo.Storages.LocalMarketDataDrive.html). For more details, see [API](StoragesApi.md). 
+   > The path to the directory with the history is passed to the [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) constructor. This path is to the directory with the history for **all instruments**, and not to the directory with the specific instrument. For example, if the HistoryData.zip archive was unpacked to the *C:\\E\\ESZ2@NYSE\\* directory, then the path *C:\\* should be passed to [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). For more details, see [API](StoragesApi.md). 
 3. Next, the instrument, the portfolio, the strategy, the gateway for testing, etc. are created in the cycle with the appropriate settings, depending on the flags values specified in the main window (Ticks, Ticks and Order Books, Candles, etc.). If the flag is set to False, the program proceeds to the next set of settings 
 
    ```cs
@@ -142,7 +142,7 @@ Backtesting of moving averages strategy
    };
    				
    ```
-5. Creation of [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) itself, to which instruments, portfolios. [IStorageRegistry](../api/StockSharp.Algo.Storages.IStorageRegistry.html) storage interface, and testing settings are passed: 
+5. Creation of [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) itself, to which instruments, portfolios. [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) storage interface, and testing settings are passed: 
 
    ```cs
    var connector = new HistoryEmulationConnector(
@@ -270,7 +270,7 @@ Backtesting of moving averages strategy
    					
    ```
 
-   [Connector.NewSecurity](../api/StockSharp.Algo.Connector.NewSecurity.html) and [IPortfolioProvider.NewPortfolio](../api/StockSharp.BusinessEntities.IPortfolioProvider.NewPortfolio.html) are called for instruments and portfolios passed to the [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) constructor. 
+   [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) and [IPortfolioProvider.NewPortfolio](xref:StockSharp.BusinessEntities.IPortfolioProvider.NewPortfolio) are called for instruments and portfolios passed to the [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) constructor. 
 8. Creation of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) strategy itself: 
 
    ```cs
@@ -287,7 +287,7 @@ Backtesting of moving averages strategy
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Subscription to the [PnLChanged](../api/StockSharp.Algo.Strategies.Strategy.PnLChanged.html) event, to calculate the equity curve (for more details, see [Equity curve](Equity.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
+9. Subscription to the [PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event, to calculate the equity curve (for more details, see [Equity curve](Equity.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
 
    ```cs
    // fill parameters panel

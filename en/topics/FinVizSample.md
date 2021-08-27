@@ -1,6 +1,6 @@
 # Adapter initialization DukasCopy
 
-The code below demonstrates how to initialize the [FinVizMessageAdapter](../api/StockSharp.FinViz.FinVizMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [FinVizMessageAdapter](xref:StockSharp.FinViz.FinVizMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new FinVizMessageAdapter(Connector.TransactionIdGenerator);

@@ -2,78 +2,78 @@
 
 Алгоритм котирования позволяет контролировать позицию выставленных заявок в стакане. Необходимость в такой функциональности возникает тогда, когда необходимо быстро открывать и закрывать позиции по выгодным ценам. Также, благодаря быстрому мониторингу стакана, котирование позволяет реализовывать скальперские приводы на сверх малых тайм\-фреймах. 
 
-Также, котирование позволяет эмулировать рыночные заявки на бирже [ФОРТС](https://moex.com/ru/derivatives/), где тип заявок [OrderTypes.Market](../api/StockSharp.Messages.OrderTypes.Market.html) не поддерживается. 
+Также, котирование позволяет эмулировать рыночные заявки на бирже [ФОРТС](https://moex.com/ru/derivatives/), где тип заявок [OrderTypes.Market](xref:StockSharp.Messages.OrderTypes.Market) не поддерживается. 
 
 ### Предварительные условия
 
 [Дочерние стратегии](StrategyChilds.md)
 
-Для реализации котирования в [S\#](StockSharpAbout.md) входит класс [QuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.QuotingStrategy.html). Это базовый абстрактный класс для всех производных алгоритмов: 
+Для реализации котирования в [S\#](StockSharpAbout.md) входит класс [QuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.QuotingStrategy). Это базовый абстрактный класс для всех производных алгоритмов: 
 
-- [MarketQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.html)
+- [MarketQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy)
 
    – данный алгоритм мониторит лучшую котировку (
 
-  [Security.BestBid](../api/StockSharp.BusinessEntities.Security.BestBid.html)
+  [Security.BestBid](xref:StockSharp.BusinessEntities.Security.BestBid)
 
    для покупки или 
 
-  [Security.BestAsk](../api/StockSharp.BusinessEntities.Security.BestAsk.html)
+  [Security.BestAsk](xref:StockSharp.BusinessEntities.Security.BestAsk)
 
    для продажи), выставляя свои заявки по этим же ценам, или чуть лучше, в зависимости от значения 
 
-  [MarketQuotingStrategy.PriceOffset](../api/StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.PriceOffset.html)
+  [MarketQuotingStrategy.PriceOffset](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.PriceOffset)
 
   . Дополнительно, в 
 
-  [MarketQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.html)
+  [MarketQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy)
 
    входит параметр 
 
-  [MarketQuotingStrategy.PriceType](../api/StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.PriceType.html)
+  [MarketQuotingStrategy.PriceType](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.PriceType)
 
   , который контролирует положение передвижения заявки в спреде: 
 
-  [MarketPriceTypes.Following](../api/StockSharp.Algo.MarketPriceTypes.Following.html)
+  [MarketPriceTypes.Following](xref:StockSharp.Algo.MarketPriceTypes.Following)
 
    – алгоритм смотрит лучшую котировку, 
 
-  [MarketPriceTypes.Opposite](../api/StockSharp.Algo.MarketPriceTypes.Opposite.html)
+  [MarketPriceTypes.Opposite](xref:StockSharp.Algo.MarketPriceTypes.Opposite)
 
    – лучшую противоположную котировку и 
 
-  [MarketPriceTypes.Middle](../api/StockSharp.Algo.MarketPriceTypes.Middle.html)
+  [MarketPriceTypes.Middle](xref:StockSharp.Algo.MarketPriceTypes.Middle)
 
    – алгоритм будет ставить заявку в середину спреда. Данный параметр влияет на то, как скоро будет удовлетворена заявка. 
-- [BestByVolumeQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingStrategy.html)
+- [BestByVolumeQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingStrategy)
 
    – смотрит, какой объем стоит перед котируемой заявкой, и если он превышает допустимую норму 
 
-  [VolumeExchange](../api/StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingStrategy.VolumeExchange.html)
+  [VolumeExchange](xref:StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingStrategy.VolumeExchange)
 
   , то заявка передвигается на край спреда. 
-- [BestByPriceQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingStrategy.html)
+- [BestByPriceQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingStrategy)
 
    – смотрит, насколько далеко котируемая заявка ушла от лучшей котировки. Если был превышен допустимый интервал 
 
-  [BestPriceOffset](../api/StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingStrategy.BestPriceOffset.html)
+  [BestPriceOffset](xref:StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingStrategy.BestPriceOffset)
 
   , то заявка передвигается на край спреда. 
-- [LastTradeQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.LastTradeQuotingStrategy.html)
+- [LastTradeQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LastTradeQuotingStrategy)
 
    – аналогичен 
 
-  [MarketQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy.html)
+  [MarketQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingStrategy)
 
    за исключением того, что мониторится не стакан, а последняя сделка 
 
-  [Security.LastTrade](../api/StockSharp.BusinessEntities.Security.LastTrade.html)
+  [Security.LastTrade](xref:StockSharp.BusinessEntities.Security.LastTrade)
 
   . 
-- [LevelQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.LevelQuotingStrategy.html)
+- [LevelQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingStrategy)
 
    – котирование по заданному уровню в стакане. 
-- [LimitQuotingStrategy](../api/StockSharp.Algo.Strategies.Quoting.LimitQuotingStrategy.html)
+- [LimitQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LimitQuotingStrategy)
 
    – котирование по лимитированной цене. 
 

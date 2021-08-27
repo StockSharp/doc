@@ -1,6 +1,6 @@
 # Volatility trading
 
-For the option quoting the special [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) strategy is realized, which provides the volume quoting by the specified range of volatility. 
+For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy is realized, which provides the volume quoting by the specified range of volatility. 
 
 ### Quoting by volatility
 
@@ -98,7 +98,7 @@ Quoting by volatility
    }            		
    	  				
    ```
-3. Set up the [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) strategy (filling the range of volatility, as well as the creation of the order, wherethrough the required volume and quoting direction are specified): 
+3. Set up the [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy (filling the range of volatility, as well as the creation of the order, wherethrough the required volume and quoting direction are specified): 
 
    ```none
    private void StartClick(object sender, RoutedEventArgs e)
@@ -142,7 +142,7 @@ Quoting by volatility
    ```cs
    hedge.Start();
    ```
-5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](../api/StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility.html) method: 
+5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility) method: 
 
    ```cs
    private void OnQuotesChanged()

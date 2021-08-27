@@ -1,8 +1,8 @@
 # Candle chart
 
-[Chart](../api/StockSharp.Xaml.Charting.Chart.html) \- the graphical component that allows to plot the stock charts: candles, indicators, and to display on the charts the markers of orders and trades. 
+[Chart](xref:StockSharp.Xaml.Charting.Chart) \- the graphical component that allows to plot the stock charts: candles, indicators, and to display on the charts the markers of orders and trades. 
 
-Below is an example of the chart plotting using the [Chart](../api/StockSharp.Xaml.Charting.Chart.html). The example from Samples\/Chart\/SampleChart is taken as a basis, in which some changes were made. 
+Below is an example of the chart plotting using the [Chart](xref:StockSharp.Xaml.Charting.Chart). The example from Samples\/Chart\/SampleChart is taken as a basis, in which some changes were made. 
 
 ![Gui ChartSample](../images/Gui_ChartSample.png)
 
@@ -10,7 +10,7 @@ Below is an example of the chart plotting using the [Chart](../api/StockSharp.Xa
 
 Example of chart plotting using Chart
 
-1. In XAML creating window and adding to it the graphical component [StockSharp.Xaml.Charting.Chart](../api/StockSharp.Xaml.Charting.Chart.html). Assigning the **Chart** name to the component. Note that when the window is being created it is necessary to add the *http:\/\/schemas.stocksharp.com\/xaml* namespace. 
+1. In XAML creating window and adding to it the graphical component [StockSharp.Xaml.Charting.Chart](xref:StockSharp.Xaml.Charting.Chart). Assigning the **Chart** name to the component. Note that when the window is being created it is necessary to add the *http:\/\/schemas.stocksharp.com\/xaml* namespace. 
 
    ```xaml
    <Window x:Class="SampleChart.MainWindow"
@@ -39,7 +39,7 @@ Example of chart plotting using Chart
                  		
    	  				
    ```
-3. 3. In the **Click** event handler of the **Connect** button, along with subscribing to connector events and calling the [Connect](../api/StockSharp.BusinessEntities.IConnector.Connect.html) method, we subscribe to the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) event. of this event, The chart plotting will be performed in the handler of this event when a new candle is received. 
+3. 3. In the **Click** event handler of the **Connect** button, along with subscribing to connector events and calling the [Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) method, we subscribe to the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event. of this event, The chart plotting will be performed in the handler of this event when a new candle is received. 
 
    ```cs
                  		
@@ -85,10 +85,10 @@ Example of chart plotting using Chart
    }
    	  				
    ```
-5. 5. In the [Connector.CandleSeriesProcessing](../api/StockSharp.Algo.Connector.CandleSeriesProcessing.html) event handler we draw the candle and the values of the indicators for each completed candle. For this, we: 
+5. 5. In the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event handler we draw the candle and the values of the indicators for each completed candle. For this, we: 
    1. Calculate the values of the indicators.
    2. Fill the **elements** directory with pairs "element object \- element value".
-   3. To draw a chart, we call the [Chart.Draw](../api/StockSharp.Xaml.Charting.Chart.Draw.html), method, to which we pass the time and the dictionary of elements.
+   3. To draw a chart, we call the [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw), method, to which we pass the time and the dictionary of elements.
 
    The result of the program is shown in the figure above. 
 

@@ -2,7 +2,7 @@
 
 **Parabolic SAR (SAR)** \- Трендовый индикатор, который указывает точки остановки и разворота цены, а также направление тренда. 
 
-Для использования индикатора необходимо использовать класс [ParabolicSar](../api/StockSharp.Algo.Indicators.ParabolicSar.html). 
+Для использования индикатора необходимо использовать класс [ParabolicSar](xref:StockSharp.Algo.Indicators.ParabolicSar). 
 
 ![IndicatorParabolicSar](../images/IndicatorParabolicSar.png)
 

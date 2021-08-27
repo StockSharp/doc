@@ -1,10 +1,10 @@
 # Logging
 
-[S\#](StockSharpAbout.md) offers several graphical components for displaying logs, which are based on [LogControl](../api/StockSharp.Xaml.LogControl.html). Other components: [LogWindow](../api/StockSharp.Xaml.LogWindow.html), [Monitor](../api/StockSharp.Xaml.Monitor.html) and [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html) only complement [LogControl](../api/StockSharp.Xaml.LogControl.html) functionality. 
+[S\#](StockSharpAbout.md) offers several graphical components for displaying logs, which are based on [LogControl](xref:StockSharp.Xaml.LogControl). Other components: [LogWindow](xref:StockSharp.Xaml.LogWindow), [Monitor](xref:StockSharp.Xaml.Monitor) and [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) only complement [LogControl](xref:StockSharp.Xaml.LogControl) functionality. 
 
-When using the logging visual components, you need to use the [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html)logger as a "listener". This logger provides streaming synchronization with the GUI when recording new [LogMessage](../api/StockSharp.Logging.LogMessage.html) messages.
+When using the logging visual components, you need to use the [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)logger as a "listener". This logger provides streaming synchronization with the GUI when recording new [LogMessage](xref:StockSharp.Logging.LogMessage) messages.
 
-In order to implement the logging possibility in your own class, you need to implement the [ILogReceiver](../api/StockSharp.Logging.ILogReceiver.html)interface. An easier way is to inherit from the [BaseLogReceiver](../api/StockSharp.Logging.BaseLogReceiver.html)class, as shown in the *Samples\\Misc\\SampleLoggingGitHub* example:
+In order to implement the logging possibility in your own class, you need to implement the [ILogReceiver](xref:StockSharp.Logging.ILogReceiver)interface. An easier way is to inherit from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver)class, as shown in the *Samples\\Misc\\SampleLoggingGitHub* example:
 
 ```cs
 private class TestSource : BaseLogReceiver

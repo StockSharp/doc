@@ -27,7 +27,7 @@
 
 Как видно данные успешно получены.
 
-Рассмотрим пример, когда нам необходимо получить [RangeCandle](../api/StockSharp.Algo.Candles.RangeCandle.html):
+Рассмотрим пример, когда нам необходимо получить [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle):
 
 1. Выбираем **Пользовательские** свечи.
 2. В настройках указываем свечи **Range** и объем 10.

@@ -1,6 +1,6 @@
 # Инициализация адаптера E\*TRADE
 
-Код ниже демонстрирует как инициализировать [ETradeMessageAdapter](../api/StockSharp.ETrade.ETradeMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

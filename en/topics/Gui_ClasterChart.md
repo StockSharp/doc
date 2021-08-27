@@ -1,15 +1,15 @@
 # Cluster chart
 
-ClusterChart \- is the special type of chart to display the volumes in the form of clusters with the bar charts. To use this type of the chart it is necessary to set the special style [ChartCandleElement.DrawStyle](../api/StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle.html) \= [ChartCandleDrawStyles.ClusterProfile](../api/StockSharp.Xaml.Charting.ChartCandleDrawStyles.ClusterProfile.html). This chart uses the information from the [Candle.PriceLevels](../api/StockSharp.Algo.Candles.Candle.PriceLevels.html) property as source data. 
+ClusterChart \- is the special type of chart to display the volumes in the form of clusters with the bar charts. To use this type of the chart it is necessary to set the special style [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Xaml.Charting.ChartCandleDrawStyles.ClusterProfile). This chart uses the information from the [Candle.PriceLevels](xref:StockSharp.Algo.Candles.Candle.PriceLevels) property as source data. 
 
 ![Gui ClasterChart](../images/Gui_ClasterChart.png)
 
 **Main properties**
 
-- [ClusterLineColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor.html) \- the basic cluster line color. 
-- [ClusterTextColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor.html) \- the volumes values color on the chart. 
-- [ClusterColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor.html) \- the main bars color in the clusters histograms. 
-- [ClusterMaxColor](../api/StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor.html) \- the maximum volume bar color in the clusters histograms. 
+- [ClusterLineColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor) \- the basic cluster line color. 
+- [ClusterTextColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor) \- the volumes values color on the chart. 
+- [ClusterColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor) \- the main bars color in the clusters histograms. 
+- [ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) \- the maximum volume bar color in the clusters histograms. 
 
 An example of using this type of chart is in *Samples\/Common\/SampleChart*. 
 

@@ -2,7 +2,7 @@
 
 Индикатор **Среднее отклонение (Mean Deviation)** показывает среднее отклонение за период. 
 
-Для использования индикатора необходимо использовать класс [MeanDeviation](../api/StockSharp.Algo.Indicators.MeanDeviation.html). 
+Для использования индикатора необходимо использовать класс [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation). 
 
 ![IndicatorMeanDeviation](../images/IndicatorMeanDeviation.png)
 

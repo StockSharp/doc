@@ -2,13 +2,13 @@
 
 ![GUI orderlog](../images/GUI_orderlog.png)
 
-[OrderLogGrid](../api/StockSharp.Xaml.OrderLogGrid.html) is a graphical component to display the order log ( [OrderLogItem](../api/StockSharp.BusinessEntities.OrderLogItem.html)). 
+[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) is a graphical component to display the order log ( [OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)). 
 
 **Main properties and methods**
 
-- [LogItems](../api/StockSharp.Xaml.OrderLogGrid.LogItems.html) \- list of items of the order log.
-- [SelectedLogItem](../api/StockSharp.Xaml.OrderLogGrid.SelectedLogItem.html) \- selected item of the order log.
-- [SelectedLogItems](../api/StockSharp.Xaml.OrderLogGrid.SelectedLogItems.html) \- selected items of the order log.
+- [LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- list of items of the order log.
+- [SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- selected item of the order log.
+- [SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- selected items of the order log.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/ITCH\/SampleITCH.*
 

@@ -1,6 +1,6 @@
 # Adapters
 
-The messaging allows you to create your own connections to any external trading system. To do this, you shall create your own **message adapter** class inherited from the abstract[MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) class. 
+The messaging allows you to create your own connections to any external trading system. To do this, you shall create your own **message adapter** class inherited from the abstract[MessageAdapter](xref:StockSharp.Messages.MessageAdapter) class. 
 
 When developing your own message adapter, you need to solve the following tasks: 
 
@@ -9,9 +9,9 @@ When developing your own message adapter, you need to solve the following tasks:
 3. Convert the encoded information of the external system (codes of instruments and boards, enumerations, etc.) to [S\#](StockSharpAbout.md) types. 
 4. Perform additional settings related to the features of the external trading system.
 
-Before we start describing how to develop your own adapter, let's look at how to create and process incoming and outgoing messages in [S\#](StockSharpAbout.md) using the [ConnectMessage](../api/StockSharp.Messages.ConnectMessage.html) as an example. Suppose that the [Connect](../api/StockSharp.Algo.Connector.Connect.html) method was called in the program, then the following will happen in the base [Connector](../api/StockSharp.Algo.Connector.html) class: 
+Before we start describing how to develop your own adapter, let's look at how to create and process incoming and outgoing messages in [S\#](StockSharpAbout.md) using the [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) as an example. Suppose that the [Connect](xref:StockSharp.Algo.Connector.Connect) method was called in the program, then the following will happen in the base [Connector](xref:StockSharp.Algo.Connector) class: 
 
-1. The protected [Connector.OnConnect](../api/StockSharp.Algo.Connector.OnConnect.html) method is called, in which a message is generated and passed to the [Connector.SendInMessage](../api/StockSharp.Algo.Connector.SendInMessage.html) method. 
+1. The protected [Connector.OnConnect](xref:StockSharp.Algo.Connector.OnConnect) method is called, in which a message is generated and passed to the [Connector.SendInMessage](xref:StockSharp.Algo.Connector.SendInMessage) method. 
 
    ```cs
    protected virtual void OnConnect()
@@ -20,7 +20,7 @@ Before we start describing how to develop your own adapter, let's look at how to
    }
      				
    ```
-2. In the [method M:StockSharp.Algo.Connector.Send In Message](../api/method M:StockSharp.Algo.Connector.Send In Message.html) the message is passed to the adapter method of the same name. 
+2. In the [method M:StockSharp.Algo.Connector.Send In Message](xref:method M:StockSharp.Algo.Connector.Send In Message) the message is passed to the adapter method of the same name. 
 
    ```cs
    public void SendInMessage(Message message)
@@ -29,9 +29,9 @@ Before we start describing how to develop your own adapter, let's look at how to
    }
      			
    ```
-3. Additional checks are performed in the adapter's [MessageAdapter.SendInMessage](../api/StockSharp.Messages.MessageAdapter.SendInMessage.html) method. If everything is fine, then the message is passed to the [MessageAdapter.OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html) method (see below). If an error is generated, a new outgoing message of the same type is created, the exception object is passed to the [Error](../api/StockSharp.Messages.BaseConnectionMessage.Error.html) property of the message. This new message is passed to the [SendOutMessage](../api/StockSharp.Messages.MessageAdapter.SendOutMessage.html) method, which will generate a new outgoing message event \- [NewOutMessage](../api/StockSharp.Messages.MessageAdapter.NewOutMessage.html), that signals an error. 
+3. Additional checks are performed in the adapter's [MessageAdapter.SendInMessage](xref:StockSharp.Messages.MessageAdapter.SendInMessage) method. If everything is fine, then the message is passed to the [MessageAdapter.OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage) method (see below). If an error is generated, a new outgoing message of the same type is created, the exception object is passed to the [Error](xref:StockSharp.Messages.BaseConnectionMessage.Error) property of the message. This new message is passed to the [SendOutMessage](xref:StockSharp.Messages.MessageAdapter.SendOutMessage) method, which will generate a new outgoing message event \- [NewOutMessage](xref:StockSharp.Messages.MessageAdapter.NewOutMessage), that signals an error. 
 
-Outgoing messages are created using the [MessageAdapter.SendOutMessage](../api/StockSharp.Messages.MessageAdapter.SendOutMessage.html) method, to which a message object is passed. This method generates a new outgoing message event \- [NewOutMessage](../api/StockSharp.Messages.MessageAdapter.NewOutMessage.html). This event is then handled in the connector base class in the protected [Connector.OnProcessMessage](../api/StockSharp.Algo.Connector.OnProcessMessage.html) method, where, depending on the situation, the message is converted to the appropriate [S\#](StockSharpAbout.md) type and a connector event is generated, and additional incoming messages can also be generated. 
+Outgoing messages are created using the [MessageAdapter.SendOutMessage](xref:StockSharp.Messages.MessageAdapter.SendOutMessage) method, to which a message object is passed. This method generates a new outgoing message event \- [NewOutMessage](xref:StockSharp.Messages.MessageAdapter.NewOutMessage). This event is then handled in the connector base class in the protected [Connector.OnProcessMessage](xref:StockSharp.Algo.Connector.OnProcessMessage) method, where, depending on the situation, the message is converted to the appropriate [S\#](StockSharpAbout.md) type and a connector event is generated, and additional incoming messages can also be generated. 
 
 The following describes the process for creating your own adapter for [BitStamp](BitStamp.md) (the connector is available with the source codes). 
 
@@ -41,7 +41,7 @@ Example of creating a BitStamp message adapter
 
 1. **Creating an adapter class.**
 
-   First, we create the **BitStampMessageAdapter** message adapter class inherited from the abstract [MessageAdapter](../api/StockSharp.Messages.MessageAdapter.html) class: 
+   First, we create the **BitStampMessageAdapter** message adapter class inherited from the abstract [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) class: 
 
    ```cs
    public class BitStampMessageAdapter : MessageAdapter 
@@ -51,7 +51,7 @@ Example of creating a BitStamp message adapter
    ```
 2. **Adapter constructor.**
    - A transaction ID generator is passed to the adapter constructor, which will be used to generate message IDs.
-   - Using the[AddSupportedMessage](../api/StockSharp.Messages.Extensions.AddSupportedMessage.html) method, we add the message types that the adapter will support to the [SupportedInMessages](../api/StockSharp.Messages.MessageAdapter.SupportedInMessages.html)array 
+   - Using the[AddSupportedMessage](xref:StockSharp.Messages.Extensions.AddSupportedMessage) method, we add the message types that the adapter will support to the [SupportedInMessages](xref:StockSharp.Messages.MessageAdapter.SupportedInMessages)array 
    ```cs
    public BitStampMessageAdapter(IdGenerator transactionIdGenerator)
    	: base(transactionIdGenerator)
@@ -77,13 +77,13 @@ Example of creating a BitStamp message adapter
    }
    						
    ```
-3. [OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html) method. 
+3. [OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage) method. 
 
-   Next, you need to override the [OnSendInMessage](../api/StockSharp.Messages.MessageAdapter.OnSendInMessage.html) method. As mentioned above, all incoming messages are passed to this method, and for each message type you need to write code that converts the messages into [BitStamp](BitStamp.md) commands. Далее необходимо переопределить метод Как говорилось выше, в этот метод передаются все входящие сообщения и для каждого типа сообщения нужно написать код, преобразующий сообщения в команды 
+   Next, you need to override the [OnSendInMessage](xref:StockSharp.Messages.MessageAdapter.OnSendInMessage) method. As mentioned above, all incoming messages are passed to this method, and for each message type you need to write code that converts the messages into [BitStamp](BitStamp.md) commands. Далее необходимо переопределить метод Как говорилось выше, в этот метод передаются все входящие сообщения и для каждого типа сообщения нужно написать код, преобразующий сообщения в команды 
 
-   When the [MessageTypes.Reset](../api/StockSharp.Messages.MessageTypes.Reset.html) message is received, it is required to reset the state and free up resources. When these operations are complete, it is required to send an outgoing [ResetMessage](../api/StockSharp.Messages.ResetMessage.html) message. 
+   When the [MessageTypes.Reset](xref:StockSharp.Messages.MessageTypes.Reset) message is received, it is required to reset the state and free up resources. When these operations are complete, it is required to send an outgoing [ResetMessage](xref:StockSharp.Messages.ResetMessage) message. 
 
-   When a [MessageTypes.Connect](../api/StockSharp.Messages.MessageTypes.Connect.html) message arrives, we initialize the \_httpClient and \_pusherClient variables, subscribe to [BitStamp](BitStamp.md) events, and establish a connection using the native API's **Connect** method. If the connection is successful, the **SessionOnPusherConnected** event should occur. 
+   When a [MessageTypes.Connect](xref:StockSharp.Messages.MessageTypes.Connect) message arrives, we initialize the \_httpClient and \_pusherClient variables, subscribe to [BitStamp](BitStamp.md) events, and establish a connection using the native API's **Connect** method. If the connection is successful, the **SessionOnPusherConnected** event should occur. 
 
    ```cs
    private void SubscribePusherClient()
@@ -222,12 +222,12 @@ Example of creating a BitStamp message adapter
    ```
 4. **SessionOnPusherConnected** event. 
 
-   It is required to send an outgoing [ConnectMessage](../api/StockSharp.Messages.ConnectMessage.html) message in the native API connection event handler. When processing this message in the [Connector](../api/StockSharp.Algo.Connector.html) class code, the following message types will be checked in [SupportedInMessages](../api/StockSharp.Messages.MessageAdapter.SupportedInMessages.html): 
-   - [PortfolioLookup](../api/StockSharp.Messages.MessageTypes.PortfolioLookup.html) \- whether [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html) message necessary for obtaining portfolios and positions. 
-   - [SecurityLookup](../api/StockSharp.Messages.MessageTypes.SecurityLookup.html) \- whether [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html) message necessary for obtaining instruments. 
-   - OrderStatus \- OrderStatusMessage [OrderStatus](../api/StockSharp.Messages.MessageTypes.OrderStatus.html) \- whether [OrderStatusMessage](../api/StockSharp.Messages.OrderStatusMessage.html) message necessary for obtaining orders and own trades. 
+   It is required to send an outgoing [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) message in the native API connection event handler. When processing this message in the [Connector](xref:StockSharp.Algo.Connector) class code, the following message types will be checked in [SupportedInMessages](xref:StockSharp.Messages.MessageAdapter.SupportedInMessages): 
+   - [PortfolioLookup](xref:StockSharp.Messages.MessageTypes.PortfolioLookup) \- whether [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) message necessary for obtaining portfolios and positions. 
+   - [SecurityLookup](xref:StockSharp.Messages.MessageTypes.SecurityLookup) \- whether [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) message necessary for obtaining instruments. 
+   - OrderStatus \- OrderStatusMessage [OrderStatus](xref:StockSharp.Messages.MessageTypes.OrderStatus) \- whether [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) message necessary for obtaining orders and own trades. 
 
-   If the message types are set on the adapter, then the corresponding messages will be sent. In our example (see Adapter Constructor), the [MessageTypes.SecurityLookup](../api/StockSharp.Messages.MessageTypes.SecurityLookup.html) and [MessageTypes.PortfolioLookup](../api/StockSharp.Messages.MessageTypes.PortfolioLookup.html) types have been added to this list, so you should expect to receive incoming [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html) and [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html). 
+   If the message types are set on the adapter, then the corresponding messages will be sent. In our example (see Adapter Constructor), the [MessageTypes.SecurityLookup](xref:StockSharp.Messages.MessageTypes.SecurityLookup) and [MessageTypes.PortfolioLookup](xref:StockSharp.Messages.MessageTypes.PortfolioLookup) types have been added to this list, so you should expect to receive incoming [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) and [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage). 
 
    ```cs
    private void SessionOnPusherConnected()
@@ -236,9 +236,9 @@ Example of creating a BitStamp message adapter
    }
    						
    ```
-5. [PortfolioLookupMessage](../api/StockSharp.Messages.PortfolioLookupMessage.html) and [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html) incoming messages. 
+5. [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) and [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) incoming messages. 
 
-   Upon receipt of these messages, it is necessary to call the [BitStamp](BitStamp.md) functions requesting portfolios and instruments, respectively. And after receiving all the data, you need to send the [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html) message. Note that the subscription ID is assigned to both the resulting message and the data messages: 
+   Upon receipt of these messages, it is necessary to call the [BitStamp](BitStamp.md) functions requesting portfolios and instruments, respectively. And after receiving all the data, you need to send the [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage) message. Note that the subscription ID is assigned to both the resulting message and the data messages: 
 
    ```cs
    // Requesting a list of portfolios
@@ -313,7 +313,7 @@ Example of creating a BitStamp message adapter
    ```
 6. Numeration or position changes received from an external system. 
 
-   In the event handler, the received portfolio information should be converted into the outgoing [PositionChangeMessage](../api/StockSharp.Messages.PositionChangeMessage.html) message: 
+   In the event handler, the received portfolio information should be converted into the outgoing [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) message: 
 
    ```cs
    		private void SessionOnAccountUpdated(AccountUpdate account)
@@ -365,11 +365,11 @@ Example of creating a BitStamp message adapter
    ```
 7. **Tick data subscription**
 
-   When the [Connector.Subscribe](../api/StockSharp.Algo.Connector.Subscribe.html) or [Connector.UnSubscribe](../api/StockSharp.Algo.Connector.UnSubscribe.html) methods are called the incoming [MarketDataMessage](../api/StockSharp.Messages.MarketDataMessage.html) message will be generated. 
+   When the [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe) or [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe) methods are called the incoming [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) message will be generated. 
 
    When processing this message, you should call the [BitStamp](BitStamp.md) methods by subscribing or unsubscribing from receiving tick trades. 
 
-   Since the message is used to work with all types of market data, the [DataType2](../api/StockSharp.Messages.MarketDataMessage.DataType2.html) property should be used to select a specific type. For trades, this property value is equal to [DataType.Ticks](../api/StockSharp.Messages.DataType.Ticks.html). 
+   Since the message is used to work with all types of market data, the [DataType2](xref:StockSharp.Messages.MarketDataMessage.DataType2) property should be used to select a specific type. For trades, this property value is equal to [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks). 
 
    After calling the **SubscribeTrades** method, trades will arrive in the **SessionOnNewTrade** event. 
 
@@ -448,7 +448,7 @@ Example of creating a BitStamp message adapter
    ```
 8. **SessionOnNewTrade** event. 
 
-   In the event handler **Session On New Trade** the received information about the transaction must be converted to an outgoing message [Execution Message](../api/StockSharp.Messages.Execution Message.html). Note that the [ExecutionMessage](../api/StockSharp.Messages.ExecutionMessage.html) is used both for transactions (private or anonymous) and for orders. Therefore, the message specifies that it relates to the transaction \- [ExecutionType](../api/StockSharp.Messages.ExecutionMessage.ExecutionType.html) \= [ExecutionTypes.Tick](../api/StockSharp.Messages.ExecutionTypes.Tick.html). 
+   In the event handler **Session On New Trade** the received information about the transaction must be converted to an outgoing message [Execution Message](xref:StockSharp.Messages.Execution Message). Note that the [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) is used both for transactions (private or anonymous) and for orders. Therefore, the message specifies that it relates to the transaction \- [ExecutionType](xref:StockSharp.Messages.ExecutionMessage.ExecutionType) \= [ExecutionTypes.Tick](xref:StockSharp.Messages.ExecutionTypes.Tick). 
 
    ```cs
    private void SessionOnNewTrade(string pair, Trade trade)

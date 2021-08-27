@@ -1,6 +1,6 @@
 # Инициализация адаптера Oanda
 
-Код ниже демонстрирует как инициализировать [OandaMessageAdapter](../api/StockSharp.Oanda.OandaMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [OandaMessageAdapter](xref:StockSharp.Oanda.OandaMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

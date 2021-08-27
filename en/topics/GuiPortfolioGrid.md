@@ -1,15 +1,15 @@
 # Table
 
-[PortfolioGrid](../api/StockSharp.Xaml.PortfolioGrid.html) is a component that displays the status of portfolios and positions. 
+[PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) is a component that displays the status of portfolios and positions. 
 
 ![GUI PortfolioGrid](../images/GUI_PortfolioGrid.png)
 
 **Main properties**
 
-- [Portfolios](../api/StockSharp.Xaml.PortfolioGrid.Portfolios.html) – the list of portfolios.
-- [Positions](../api/StockSharp.Xaml.PortfolioGrid.Positions.html) – the list of positions.
-- [SelectedPosition](../api/StockSharp.Xaml.PortfolioGrid.SelectedPosition.html) – the selected position.
-- [SelectedPositions](../api/StockSharp.Xaml.PortfolioGrid.SelectedPositions.html) \- selected positions.
+- [Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) – the list of portfolios.
+- [Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions.
+- [SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
+- [SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB.*
 

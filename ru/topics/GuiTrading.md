@@ -1,6 +1,6 @@
 # Торговля
 
-В этом разделе представлены компоненты, связанные с собственными торговыми транзакциями: заявками ([OrderGrid](../api/StockSharp.Xaml.OrderGrid.html), [OrderWindow](../api/StockSharp.Xaml.OrderWindow.html)), условными заявками ([OrderConditionalGrid](../api/StockSharp.Xaml.OrderConditionalGrid.html), [OrderConditionalWindow](../api/StockSharp.Xaml.OrderConditionalWindow.html)) и собственными сделками ([MyTradeGrid](../api/StockSharp.Xaml.MyTradeGrid.html)).
+В этом разделе представлены компоненты, связанные с собственными торговыми транзакциями: заявками ([OrderGrid](xref:StockSharp.Xaml.OrderGrid), [OrderWindow](xref:StockSharp.Xaml.OrderWindow)), условными заявками ([OrderConditionalGrid](xref:StockSharp.Xaml.OrderConditionalGrid), [OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow)) и собственными сделками ([MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid)).
 
 ## См. также
 

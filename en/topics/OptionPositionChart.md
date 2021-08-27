@@ -1,6 +1,6 @@
 # Position chart
 
-The graphic component [OptionPositionChart](../api/StockSharp.Xaml.Charting.OptionPositionChart.html) is the chart showing the position and the options “Greeks” relating to the underlying asset. 
+The graphic component [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) is the chart showing the position and the options “Greeks” relating to the underlying asset. 
 
 The following is the example SampleOptionQuoting, in which this chart is used. The source code of the example can be found in the *Samples\/Options\/SampleOptionQuoting* folder. 
 
@@ -10,7 +10,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
 
 SampleOptionQuoting example
 
-1. In the XAML code, add the [OptionPositionChart](../api/StockSharp.Xaml.Charting.OptionPositionChart.html) element and assign it the **PosChart**.
+1. In the XAML code, add the [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) element and assign it the **PosChart**.
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -97,12 +97,12 @@ SampleOptionQuoting example
 3. When connecting, set the initial control settings:
    1. Resetting the the underlying instrument of the 
 
-      [UnderlyingAsset](../api/StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset.html)
+      [UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset)
 
        control; 
    2. Redrawing the chart with the initial values 
 
-      [Refresh](../api/StockSharp.Xaml.Charting.OptionPositionChart.Refresh.html)
+      [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh)
 
       ; 
    3. Specifying message provider for market data and instruments.

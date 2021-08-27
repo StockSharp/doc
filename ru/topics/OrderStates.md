@@ -4,75 +4,75 @@
 
 ![OrderStates](../images/OrderStates.png)
 
-- [None](../api/StockSharp.Messages.OrderStates.None.html)
+- [None](xref:StockSharp.Messages.OrderStates.None)
 
    \- заявка была создана в роботе и еще не была отправлена на регистрацию. 
-- [Pending](../api/StockSharp.Messages.OrderStates.Pending.html)
+- [Pending](xref:StockSharp.Messages.OrderStates.Pending)
 
    \- заявка была отправлена на регистрацию (
 
-  [ITransactionProvider.RegisterOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder.html)
+  [ITransactionProvider.RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder)
 
   ) и для нее было вызвано событие 
 
-  [ITransactionProvider.NewOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.NewOrder.html)
+  [ITransactionProvider.NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder)
 
   . Для заявки ожидается подтверждение ее принятия от биржи. В случае успеха принятия будет вызвано событие 
 
-  [ITransactionProvider.OrderChanged](../api/StockSharp.BusinessEntities.ITransactionProvider.OrderChanged.html)
+  [ITransactionProvider.OrderChanged](xref:StockSharp.BusinessEntities.ITransactionProvider.OrderChanged)
 
   , и заявка будет переведена в состояние 
 
-  [Active](../api/StockSharp.Messages.OrderStates.Active.html)
+  [Active](xref:StockSharp.Messages.OrderStates.Active)
 
   . Также будут проинициализированы свойства 
 
-  [Order.Id](../api/StockSharp.BusinessEntities.Order.Id.html)
+  [Order.Id](xref:StockSharp.BusinessEntities.Order.Id)
 
    и 
 
-  [Order.Time](../api/StockSharp.BusinessEntities.Order.Time.html)
+  [Order.Time](xref:StockSharp.BusinessEntities.Order.Time)
 
   . В случае отвержения заявки будет вызвано событие 
 
-  [ITransactionProvider.OrderRegisterFailed](../api/StockSharp.BusinessEntities.ITransactionProvider.OrderRegisterFailed.html)
+  [ITransactionProvider.OrderRegisterFailed](xref:StockSharp.BusinessEntities.ITransactionProvider.OrderRegisterFailed)
 
    с описанием ошибки, и заявка будет переведена в состояние 
 
-  [Failed](../api/StockSharp.Messages.OrderStates.Failed.html)
+  [Failed](xref:StockSharp.Messages.OrderStates.Failed)
 
   . 
-- [Active](../api/StockSharp.Messages.OrderStates.Active.html)
+- [Active](xref:StockSharp.Messages.OrderStates.Active)
 
    \- заявка активна на бирже. Такая заявка будет активна до тех пор, пока не исполнится весь ее выставленный объем 
 
-  [Order.Volume](../api/StockSharp.BusinessEntities.Order.Volume.html)
+  [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume)
 
   , или она не будет снята принудительно через 
 
-  [ITransactionProvider.CancelOrder](../api/StockSharp.BusinessEntities.ITransactionProvider.CancelOrder.html)
+  [ITransactionProvider.CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder)
 
   . Если заявка исполняется частично, то вызываются события 
 
-  [ITransactionProvider.NewMyTrade](../api/StockSharp.BusinessEntities.ITransactionProvider.NewMyTrade.html)
+  [ITransactionProvider.NewMyTrade](xref:StockSharp.BusinessEntities.ITransactionProvider.NewMyTrade)
 
    о новых сделках по выставленной заявке, а так же событие 
 
-  [ITransactionProvider.OrderChanged](../api/StockSharp.BusinessEntities.ITransactionProvider.OrderChanged.html)
+  [ITransactionProvider.OrderChanged](xref:StockSharp.BusinessEntities.ITransactionProvider.OrderChanged)
 
   , где передается уведомление об изменении баланса по заявке 
 
-  [Order.Balance](../api/StockSharp.BusinessEntities.Order.Balance.html)
+  [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance)
 
   . Последнее событие будет выведено и в случае отмены заявки.
-- [Done](../api/StockSharp.Messages.OrderStates.Done.html)
+- [Done](xref:StockSharp.Messages.OrderStates.Done)
 
    \- заявка более не активна на бирже (была полностью исполнена или снята). 
-- [Failed](../api/StockSharp.Messages.OrderStates.Failed.html)
+- [Failed](xref:StockSharp.Messages.OrderStates.Failed)
 
    \- заявка не была принята биржей (или промежуточной системой, как, например, серверная часть торговой платформы) по какой\-либо причине. 
 
-Для того, чтобы узнать, в каком торговом состоянии находится заявка (какой объем реализован, была ли полностью удовлетворена заявка и т.д.) необходимо использовать методы [IsCanceled](../api/StockSharp.Algo.TraderHelper.IsCanceled.html), [IsMatchedEmpty](../api/StockSharp.Algo.TraderHelper.IsMatchedEmpty.html), [IsMatchedPartially](../api/StockSharp.Algo.TraderHelper.IsMatchedPartially.html), [IsMatched](../api/StockSharp.Algo.TraderHelper.IsMatched.html) и [GetMatchedVolume](../api/StockSharp.Algo.TraderHelper.GetMatchedVolume.html):
+Для того, чтобы узнать, в каком торговом состоянии находится заявка (какой объем реализован, была ли полностью удовлетворена заявка и т.д.) необходимо использовать методы [IsCanceled](xref:StockSharp.Algo.TraderHelper.IsCanceled), [IsMatchedEmpty](xref:StockSharp.Algo.TraderHelper.IsMatchedEmpty), [IsMatchedPartially](xref:StockSharp.Algo.TraderHelper.IsMatchedPartially), [IsMatched](xref:StockSharp.Algo.TraderHelper.IsMatched) и [GetMatchedVolume](xref:StockSharp.Algo.TraderHelper.GetMatchedVolume):
 
 ```cs
 // любая заявка

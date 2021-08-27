@@ -1,14 +1,14 @@
 # Own trades
 
-[MyTradeGrid](../api/StockSharp.Xaml.MyTradeGrid.html) \- a table to display own trades. 
+[MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) \- a table to display own trades. 
 
 ![GUI MytradeGrid](../images/GUI_MytradeGrid.png)
 
 **Main members**
 
-- [Trades](../api/StockSharp.Xaml.MyTradeGrid.Trades.html) \- \- list of trades.
-- [SelectedTrade](../api/StockSharp.Xaml.MyTradeGrid.SelectedTrade.html) \- the selected trade.
-- [SelectedTrades](../api/StockSharp.Xaml.MyTradeGrid.SelectedTrades.html) \- selected trades.
+- [Trades](xref:StockSharp.Xaml.MyTradeGrid.Trades) \- \- list of trades.
+- [SelectedTrade](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrade) \- the selected trade.
+- [SelectedTrades](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrades) \- selected trades.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB.*
 

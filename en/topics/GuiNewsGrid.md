@@ -1,13 +1,13 @@
 # News
 
-[NewsGrid](../api/StockSharp.Xaml.NewsGrid.html) \- the table to display news. 
+[NewsGrid](xref:StockSharp.Xaml.NewsGrid) \- the table to display news. 
 
 **Main properties**
 
-- [News](../api/StockSharp.Xaml.NewsGrid.News.html) \- the news list.
-- [FirstSelectedNews](../api/StockSharp.Xaml.NewsGrid.FirstSelectedNews.html) \- the selected news.
-- [SelectedNews](../api/StockSharp.Xaml.NewsGrid.SelectedNews.html) \- selected news.
-- [NewsProvider](../api/StockSharp.Xaml.NewsGrid.NewsProvider.html) \- news provider.
+- [News](xref:StockSharp.Xaml.NewsGrid.News) \- the news list.
+- [FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- the selected news.
+- [SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- selected news.
+- [NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- news provider.
 
 Below is the appearance of the component, as well as code snippets with its use. The code example is taken from Samples\/AlfaDirect\/SampleAlfa. 
 

@@ -2,13 +2,13 @@
 
 ![GUI TradeGrid](../images/GUI_TradeGrid.png)
 
-[TradeGrid](../api/StockSharp.Xaml.TradeGrid.html) \- trade table. 
+[TradeGrid](xref:StockSharp.Xaml.TradeGrid) \- trade table. 
 
 **Main properties**
 
-- [Trades](../api/StockSharp.Xaml.TradeGrid.Trades.html) \- the list of trades.
-- [SelectedTrade](../api/StockSharp.Xaml.TradeGrid.SelectedTrade.html) \- the selected trade.
-- [SelectedTrades](../api/StockSharp.Xaml.TradeGrid.SelectedTrades.html) \- selected trades.
+- [Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- the list of trades.
+- [SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- the selected trade.
+- [SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- selected trades.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

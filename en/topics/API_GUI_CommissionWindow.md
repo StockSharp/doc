@@ -1,6 +1,6 @@
 # Commission settings window
 
-[CommissionWindow](../api/StockSharp.Xaml.CommissionWindow.html) \- \- A special window for setting the rules for charging a commission. 
+[CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) \- \- A special window for setting the rules for charging a commission. 
 
 ![API ComissionWindow](../images/API_ComissionWindow.png)
 

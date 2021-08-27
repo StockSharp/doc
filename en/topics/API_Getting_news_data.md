@@ -1,8 +1,8 @@
 # Getting news data
 
-To start getting the news, you need to subscribe to the [NewNews](../api/StockSharp.Algo.Connector.NewNews.html) event and call the [SubscribeNews](../api/StockSharp.Algo.Connector.SubscribeNews.html) method.
+To start getting the news, you need to subscribe to the [NewNews](xref:StockSharp.Algo.Connector.NewNews) event and call the [SubscribeNews](xref:StockSharp.Algo.Connector.SubscribeNews) method.
 
-In the example shown in the previous sections, news arriving at the [NewNews](../api/StockSharp.Algo.Connector.NewNews.html), event is passed for display to the special [NewsPanel](../api/StockSharp.Xaml.NewsPanel.html) visual element.
+In the example shown in the previous sections, news arriving at the [NewNews](xref:StockSharp.Algo.Connector.NewNews), event is passed for display to the special [NewsPanel](xref:StockSharp.Xaml.NewsPanel) visual element.
 
 ```cs
 ...

@@ -2,11 +2,11 @@
 
 В [S\#](StockSharpAbout.md) имеются графические компоненты для отображения всех видов рыночных данных:
 
-- Таблица для отображения сделок \- [TradeGrid](../api/StockSharp.Xaml.TradeGrid.html).
-- Таблица для отображения Level1 \- [Level1Grid](../api/StockSharp.Xaml.Level1Grid.html).
-- Компонент для отображения стакана \- [MarketDepthControl](../api/StockSharp.Xaml.MarketDepthControl.html).
-- Таблица для отображения лога заявок \- [OrderLogGrid](../api/StockSharp.Xaml.OrderLogGrid.html).
-- Таблицы для отображения новостей \- [NewsGrid](../api/StockSharp.Xaml.NewsGrid.html), [NewsPanel](../api/StockSharp.Xaml.NewsPanel.html).
+- Таблица для отображения сделок \- [TradeGrid](xref:StockSharp.Xaml.TradeGrid).
+- Таблица для отображения Level1 \- [Level1Grid](xref:StockSharp.Xaml.Level1Grid).
+- Компонент для отображения стакана \- [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl).
+- Таблица для отображения лога заявок \- [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid).
+- Таблицы для отображения новостей \- [NewsGrid](xref:StockSharp.Xaml.NewsGrid), [NewsPanel](xref:StockSharp.Xaml.NewsPanel).
 
 ## См. также
 

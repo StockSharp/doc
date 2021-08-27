@@ -1,6 +1,6 @@
 # Configuration Interactive Brokers
 
-To work correctly with [InteractiveBrokersTrader](../api/StockSharp.InteractiveBrokers.InteractiveBrokersTrader.html) you should preset [TWS](https://interactivebrokers.com/en/index.php?f=1537) trading terminal. 
+To work correctly with [InteractiveBrokersTrader](xref:StockSharp.InteractiveBrokers.InteractiveBrokersTrader) you should preset [TWS](https://interactivebrokers.com/en/index.php?f=1537) trading terminal. 
 
 ### Trader Workstation terminal configuration
 

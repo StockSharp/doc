@@ -1,21 +1,21 @@
 # Инструменты
 
-Компонент [SecurityGrid](../api/StockSharp.Xaml.SecurityGrid.html) предназначен для отображения финансовой информации (поля level1) и ее изменения, относящейся к инструментам, в табличном виде. Компонент позволяет выбирать один или несколько инструментов. 
+Компонент [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) предназначен для отображения финансовой информации (поля level1) и ее изменения, относящейся к инструментам, в табличном виде. Компонент позволяет выбирать один или несколько инструментов. 
 
 ![GUI SecurityPicker2](../images/GUI_SecurityPicker2.png)
 
 **Основные свойства**
 
-- [Securities](../api/StockSharp.Xaml.SecurityGrid.Securities.html) \- список инструментов.
-- [SelectedSecurity](../api/StockSharp.Xaml.SecurityGrid.SelectedSecurity.html) \- выбранный инструмент.
-- [SelectedSecurities](../api/StockSharp.Xaml.SecurityGrid.SelectedSecurities.html) \- список выбранных инструментов.
-- [MarketDataProvider](../api/StockSharp.Xaml.SecurityGrid.MarketDataProvider.html) \- провайдер рыночных данных.
+- [Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- список инструментов.
+- [SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- выбранный инструмент.
+- [SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- список выбранных инструментов.
+- [MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- провайдер рыночных данных.
 
 Обратите внимание, что для отображения изменений рыночной информации необходимо задать провайдер рыночных данных. 
 
 Ниже показаны внешний вид компонента и фрагмент кода с его использованием. 
 
-На рисунке компонент [SecurityGrid](../api/StockSharp.Xaml.SecurityGrid.html) показан в составе графического компонента [SecurityPicker](GuiSecurityPicker.md). 
+На рисунке компонент [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) показан в составе графического компонента [SecurityPicker](GuiSecurityPicker.md). 
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"

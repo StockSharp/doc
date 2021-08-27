@@ -2,7 +2,7 @@
 
 The FAST connector is available in dump mode. In this case, the data does not come from a real network connection, but from the accumulated files of the app [S\#.UDP Dumper](UdpDumper.md).
 
-In order to enable dump mode, it is necessary to transfer files through the dump method [IFastDialect.Dump](../api/StockSharp.Fix.Dialects.IFastDialect.Dump.html) before process connecting:
+In order to enable dump mode, it is necessary to transfer files through the dump method [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump) before process connecting:
 
 ```cs
 // ... connector initialization

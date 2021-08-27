@@ -1,6 +1,6 @@
 # Инициализация адаптера WEX (BTC\-e)
 
-Код ниже демонстрирует как инициализировать [BtceMessageAdapter](../api/StockSharp.Btce.BtceMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [BtceMessageAdapter](xref:StockSharp.Btce.BtceMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

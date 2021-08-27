@@ -2,7 +2,7 @@
 
 Интерпретация индикатора **Linear Regression Slope** показывает значение наклона линий регрессии, которые включают текущий ценовой бар и предыдущий n\-1 ценовой бар (где n \= периоды регрессии). 
 
-Для использования индикатора необходимо использовать класс [LinearRegSlope](../api/StockSharp.Algo.Indicators.LinearRegSlope.html). 
+Для использования индикатора необходимо использовать класс [LinearRegSlope](xref:StockSharp.Algo.Indicators.LinearRegSlope). 
 
 ![IndicatorLinearRegSlope](../images/IndicatorLinearRegSlope.png)
 

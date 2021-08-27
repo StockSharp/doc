@@ -1,6 +1,6 @@
 # Adapter initialization Digifinex
 
-The code below demonstrates how to initialize the [DigiFinexMessageAdapter](../api/StockSharp.DigiFinex.DigiFinexMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [DigiFinexMessageAdapter](xref:StockSharp.DigiFinex.DigiFinexMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -4,12 +4,12 @@
 
 1. Найти те заявки, которые необходимо загрузить в стратегию, и вернуть их из метода (например, загрузить идентификаторы заявок, если стратегия записывает каждый раз при регистрации через метод 
 
-   [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html)
+   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
 
     из файла). 
 2. Объединить полученный результат с базовым методом 
 
-   [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html)
+   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
 
    . 
 3. После того, как заявки будут загружены в стратегию, загрузятся и все совершенные по ним сделки. Это будет сделано автоматически. 
@@ -20,7 +20,7 @@
 
 Загрузка в стратегию ранее совершенных заявок и сделок
 
-1. Для этого, чтобы [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](../api/StockSharp.Algo.Strategies.Strategy.ProcessNewOrders.html). На вход данному методу из [Strategy.OnStarted](../api/StockSharp.Algo.Strategies.Strategy.OnStarted.html) поступят все [IConnector.Orders](../api/StockSharp.BusinessEntities.IConnector.Orders.html) и [IConnector.StopOrders](../api/StockSharp.BusinessEntities.IConnector.StopOrders.html), и их необходимо отфильтровать:
+1. Для этого, чтобы [Strategy](xref:StockSharp.Algo.Strategies.Strategy) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders). На вход данному методу из [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) поступят все [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) и [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders), и их необходимо отфильтровать:
 
    ```cs
    private bool _isOrdersLoaded;
@@ -34,7 +34,7 @@
    	return Filter(newOrders);
    }
    ```
-2. Чтобы реализовать фильтрацию заявок, необходимо определить критерий отсеивания. Например, если в процессе работы стратегии сохранять все регистрируемые заявки в файл, то можно сделать фильтр по номеру транзакции [Order.TransactionId](../api/StockSharp.BusinessEntities.Order.TransactionId.html). Если такой номер присутствует в файле, значит заявка была зарегистрирована через данную стратегию: 
+2. Чтобы реализовать фильтрацию заявок, необходимо определить критерий отсеивания. Например, если в процессе работы стратегии сохранять все регистрируемые заявки в файл, то можно сделать фильтр по номеру транзакции [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId). Если такой номер присутствует в файле, значит заявка была зарегистрирована через данную стратегию: 
 
    ```cs
    private IEnumerable<Order> Filter(IEnumerable<Order> orders)
@@ -46,7 +46,7 @@
    	return orders.Where(o => transactions.Contains(o.TransactionId));
    }
    ```
-3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](../api/StockSharp.Algo.Strategies.Strategy.RegisterOrder.html): 
+3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder): 
 
    ```cs
    protected override void RegisterOrder(Order order)

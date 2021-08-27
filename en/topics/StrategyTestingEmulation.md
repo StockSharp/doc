@@ -6,16 +6,16 @@ As a rule, only a certain set of scenarios is used in the algorithm development.
 
 - The strategy works with the 
 
-  [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html)
+  [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle)
 
    candles and expects at each iteration, that there will always be a candle for the requested period of time. A period began when there was not a single trade, and a candle was not created. As a result, in the absence of proper handling, the 
 
-  [NullReferenceException](../api/System.NullReferenceException.html)
+  [NullReferenceException](xref:System.NullReferenceException)
 
    will be thrown and the strategy will stop. 
 - The strategy works with non\-liquid instrument and uses 
 
-  [MarketDepth](../api/StockSharp.BusinessEntities.MarketDepth.html)
+  [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)
 
   . The strategy expects that the order book is always filled. At some time, the order book is half filled (for example, there are bids, but no offers). If the strategy does not expect this situation, then either it will wrong register an order, or it will throw an exception and the strategy will stop. 
 - The strategy calculates the price levels. The code is written in such a way that the strategy awaits when levels set in advance will be broken through. If the levels are calculated and are set not correctly, then they will never be broken through, or always only one of them will be broken through. As a result, either the strategy will not perform any trades, or these trades will lose money. 
@@ -26,7 +26,7 @@ For these and for many other scenarios of the exchange work, which is impossible
 
 Testing on random data of moving averages strategy
 
-1. The SampleRandomEmulation example (*..Samples\/Testing\/SampleRandomEmulation*) is almost identical to the SampleHistoryTesting example (its description can be found in the [testing on historical data](StrategyTestingHistory.md) section) due the use of the unified [HistoryEmulationConnector](../api/StockSharp.Algo.Testing.HistoryEmulationConnector.html) class. But, unlike the [testing on historical data](StrategyTestingHistory.md), testing on random data the market data are not loaded and are generated "on the fly". Therefore, two random data generators are added to the example: for the order book and for the tick trades. In SampleHistoryTesting only one generator is used \- for the order book, as there is no history stored. 
+1. The SampleRandomEmulation example (*..Samples\/Testing\/SampleRandomEmulation*) is almost identical to the SampleHistoryTesting example (its description can be found in the [testing on historical data](StrategyTestingHistory.md) section) due the use of the unified [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) class. But, unlike the [testing on historical data](StrategyTestingHistory.md), testing on random data the market data are not loaded and are generated "on the fly". Therefore, two random data generators are added to the example: for the order book and for the tick trades. In SampleHistoryTesting only one generator is used \- for the order book, as there is no history stored. 
 
    ```cs
    _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage

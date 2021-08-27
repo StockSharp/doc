@@ -1,6 +1,6 @@
 # Инициализация адаптера Xignite
 
-Код ниже демонстрирует как инициализировать [XigniteMessageAdapter](../api/StockSharp.Xignite.XigniteMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [XigniteMessageAdapter](xref:StockSharp.Xignite.XigniteMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new XigniteMessageAdapter(Connector.TransactionIdGenerator);

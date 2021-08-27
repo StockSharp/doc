@@ -1,6 +1,6 @@
 # Adapter initialization FXCM
 
-The code below demonstrates how to initialize the [FxcmMessageAdapter](../api/StockSharp.Fxcm.FxcmMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [FxcmMessageAdapter](xref:StockSharp.Fxcm.FxcmMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

@@ -1,6 +1,6 @@
 # Инициализация адаптера PrizmBit
 
-Код ниже демонстрирует как инициализировать [PrizmBitMessageAdapter](../api/StockSharp.PrizmBit.PrizmBitMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [PrizmBitMessageAdapter](xref:StockSharp.PrizmBit.PrizmBitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

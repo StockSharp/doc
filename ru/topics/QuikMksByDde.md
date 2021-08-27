@@ -6,7 +6,7 @@
 2. Таблица сделок (значение мкс. для времени регистрации сделки).
 3. Таблица заявок (значение мкс. для времени регистрации и отмены сделки).
 
-Для получения информации по микросекундам через [S\#](StockSharpAbout.md) необходимо добавить соответствующие столбцы в таблицы [Quik](Quik.md) и добавить экспорт доп. столбцов в настройках коннектора [Quik](Quik.md). Данные по микросекундам будут экспортироваться через стандартные свойства объектов [S\#](StockSharpAbout.md), например, для тиковых данных в поле [Trade.Time](../api/StockSharp.BusinessEntities.Trade.Time.html).
+Для получения информации по микросекундам через [S\#](StockSharpAbout.md) необходимо добавить соответствующие столбцы в таблицы [Quik](Quik.md) и добавить экспорт доп. столбцов в настройках коннектора [Quik](Quik.md). Данные по микросекундам будут экспортироваться через стандартные свойства объектов [S\#](StockSharpAbout.md), например, для тиковых данных в поле [Trade.Time](xref:StockSharp.BusinessEntities.Trade.Time).
 
 **Таблица всех сделок:**
 
@@ -44,4 +44,4 @@
    ```
 
 > [!WARNING]
-> Через [QuikTrader.TradesTable](../api/StockSharp.Quik.QuikTrader.TradesTable.html), [QuikTrader.MyTradesTable](../api/StockSharp.Quik.QuikTrader.MyTradesTable.html), [QuikTrader.OrdersTable](../api/StockSharp.Quik.QuikTrader.OrdersTable.html) дополнительные столбцы добавляются в том порядке, в котором они были добавлены в таблицах в [Quik](Quik.md) (См. раздел [«Экспорт дополнительных колонок»](QuikExtendedInfoByDde.md)).
+> Через [QuikTrader.TradesTable](xref:StockSharp.Quik.QuikTrader.TradesTable), [QuikTrader.MyTradesTable](xref:StockSharp.Quik.QuikTrader.MyTradesTable), [QuikTrader.OrdersTable](xref:StockSharp.Quik.QuikTrader.OrdersTable) дополнительные столбцы добавляются в том порядке, в котором они были добавлены в таблицах в [Quik](Quik.md) (См. раздел [«Экспорт дополнительных колонок»](QuikExtendedInfoByDde.md)).

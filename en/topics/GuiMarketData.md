@@ -2,11 +2,11 @@
 
 There are graphical components to display all kinds of market data in [S\#](StockSharpAbout.md):
 
-- Table to display trades \- [TradeGrid](../api/StockSharp.Xaml.TradeGrid.html).
-- Table to display Level1 \- [Level1Grid](../api/StockSharp.Xaml.Level1Grid.html).
-- Component to display an order book \- [MarketDepthControl](../api/StockSharp.Xaml.MarketDepthControl.html).
-- Table to display an order log \- [OrderLogGrid](../api/StockSharp.Xaml.OrderLogGrid.html).
-- Tables to display news \- [NewsGrid](../api/StockSharp.Xaml.NewsGrid.html), [NewsPanel](../api/StockSharp.Xaml.NewsPanel.html).
+- Table to display trades \- [TradeGrid](xref:StockSharp.Xaml.TradeGrid).
+- Table to display Level1 \- [Level1Grid](xref:StockSharp.Xaml.Level1Grid).
+- Component to display an order book \- [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl).
+- Table to display an order log \- [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid).
+- Tables to display news \- [NewsGrid](xref:StockSharp.Xaml.NewsGrid), [NewsPanel](xref:StockSharp.Xaml.NewsPanel).
 
 ## Recommended content
 

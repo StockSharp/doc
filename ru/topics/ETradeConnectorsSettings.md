@@ -6,8 +6,8 @@
 
 ![ETrade](../images/ETrade.png)
 
-[E\*TRADE](ETrade.md) использует протокол авторизации OAuth 1.0a, требующий ввода логина и пароля на сайте [E\*TRADE](https://etrade.com/) через интернет\-браузер. Последовательность полной процедуры авторизации показана на следующем рисунке:
+[E\*TRADE](ETrade.md) использует протокол авторизации OAuth 1.0a, требующий ввода логина и пароля на сайте [E\*TRADE](https://etrade.com) через интернет\-браузер. Последовательность полной процедуры авторизации показана на следующем рисунке:
 
 ![etrade autoriazation](../images/etrade_autoriazation.png)
 
-Полную процедуру авторизации необходимо выполнять только 1 раз в сутки (в полночь по EST сервер [E\*TRADE](ETrade.md) сбрасывает выданные ранее AccessToken’ы). Если в текущий день по EST полная процедура авторизации уже проводилась, [ETradeMessageAdapter](../api/StockSharp.ETrade.ETradeMessageAdapter.html) автоматически загрузит AccessToken, сохраненный в подкаталоге [E\*TRADE](ETrade.md) робота.
+Полную процедуру авторизации необходимо выполнять только 1 раз в сутки (в полночь по EST сервер [E\*TRADE](ETrade.md) сбрасывает выданные ранее AccessToken’ы). Если в текущий день по EST полная процедура авторизации уже проводилась, [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) автоматически загрузит AccessToken, сохраненный в подкаталоге [E\*TRADE](ETrade.md) робота.

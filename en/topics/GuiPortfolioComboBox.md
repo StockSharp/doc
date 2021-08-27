@@ -1,13 +1,13 @@
 # Drop down list
 
-[PortfolioComboBox](../api/StockSharp.Xaml.PortfolioComboBox.html) is the combo box for portfolio selection.
+[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) is the combo box for portfolio selection.
 
 ![Gui PortfolioComboBox](../images/Gui_PortfolioComboBox.png)
 
 **Main properties**
 
-- [Portfolios](../api/StockSharp.Xaml.PortfolioComboBox.Portfolios.html) \- the list of portfolios.
-- [SelectedPortfolio](../api/StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio.html) \- the selected portfolio.
+- [Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- the list of portfolios.
+- [SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- the selected portfolio.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

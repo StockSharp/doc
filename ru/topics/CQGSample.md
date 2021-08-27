@@ -1,6 +1,6 @@
 # Инициализация адаптера CQG
 
-Код ниже демонстрирует как инициализировать [CqgComMessageAdapter](../api/StockSharp.Cqg.Com.CqgComMessageAdapter.html) и [CqgContinuumMessageAdapter](../api/StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter.html) и передать их в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) и [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter) и передать их в [Connector](xref:StockSharp.Algo.Connector).
 
 1. **CQG COM**, подключение через локальный **CQG Integrated Client**:
 

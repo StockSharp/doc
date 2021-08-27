@@ -1,23 +1,23 @@
 # Паттерны
 
-Через класс [CandleHelper](../api/StockSharp.Algo.Candles.CandleHelper.html) можно произвести распознавание паттернов свечей по следующим методам:
+Через класс [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) можно произвести распознавание паттернов свечей по следующим методам:
 
-- [IsWhiteOrBlack](../api/StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack.html)
+- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack)
 
    \- Является ли свеча белой или черной. 
-- [IsMarubozu](../api/StockSharp.Algo.Candles.CandleHelper.IsMarubozu.html)
+- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu)
 
    \- Является ли свеча бестеневой. 
-- [IsSpinningTop](../api/StockSharp.Algo.Candles.CandleHelper.IsSpinningTop.html)
+- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop)
 
    \- Является ли свеча нейтральной по сделкам. 
-- [IsHammer](../api/StockSharp.Algo.Candles.CandleHelper.IsHammer.html)
+- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer)
 
    \- Является ли свеча молотом. 
-- [IsDragonflyOrGravestone](../api/StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone.html)
+- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone)
 
    \- Является ли свеча стрекозой или надгробьем. 
-- [IsBullishOrBearish](../api/StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish.html)
+- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish)
 
    \- Является ли свеча бычьей или медвежьей. 
 
@@ -25,16 +25,16 @@
 
 Общие методы работы со свечами
 
-[CandleHelper](../api/StockSharp.Algo.Candles.CandleHelper.html) также предоставляет различные алгоритмы для свечей, упрощающие написание кода:
+[CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) также предоставляет различные алгоритмы для свечей, упрощающие написание кода:
 
-- Получение временных рамок свечи через метод [GetCandleBounds](../api/Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds.html). Например, необходимо точно узнать, когда закончится текущая 10.5\-минутная свеча:
+- Получение временных рамок свечи через метод [GetCandleBounds](xref:Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds). Например, необходимо точно узнать, когда закончится текущая 10.5\-минутная свеча:
 
   ```cs
   var candleTimeFrame = TimeSpan.FromMinutes(10.5);
   Console.WriteLine(candleTimeFrame.GetCandleBounds(DateTime.Now).Max);
   					
   ```
-- Получить длину свечи, ее тела, ее теней через методы [GetLength](../api/StockSharp.Algo.Candles.CandleHelper.GetLength.html), [GetBody](../api/StockSharp.Algo.Candles.CandleHelper.GetBody.html), [GetTopShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetTopShadow.html) и [GetBottomShadow](../api/StockSharp.Algo.Candles.CandleHelper.GetBottomShadow.html):
+- Получить длину свечи, ее тела, ее теней через методы [GetLength](xref:StockSharp.Algo.Candles.CandleHelper.GetLength), [GetBody](xref:StockSharp.Algo.Candles.CandleHelper.GetBody), [GetTopShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetTopShadow) и [GetBottomShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetBottomShadow):
 
   ```cs
   // любая свеча

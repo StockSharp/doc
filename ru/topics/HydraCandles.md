@@ -18,11 +18,11 @@
      Для примера нами выбраны свечи с Тайс Фреймом 5 мин.
    - Выбрать инструмент (в нашем случае это SBER@TQBR) и нажать на кнопку ![hydra find](../images/hydra_find.png)
 
-   После этого произойдет генерация свечей на основе найденных данных. Например, для свечей типа [TimeFrameCandle](../api/StockSharp.Algo.Candles.TimeFrameCandle.html) будет сформировано следующее:
+   После этого произойдет генерация свечей на основе найденных данных. Например, для свечей типа [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) будет сформировано следующее:
 
    ![hydra candles tf](../images/hydra_candles_tf.png)
 
-   Если есть потребность построить свечи другого типа, например [VolumeCandle](../api/StockSharp.Algo.Candles.VolumeCandle.html) нужно сделать следующее: 
+   Если есть потребность построить свечи другого типа, например [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) нужно сделать следующее: 
    - Выбрать тип свечи. 
 
      ![hydra candles volume 100](../images/hydra_candles_volume_100.png)

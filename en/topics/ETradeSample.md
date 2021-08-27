@@ -1,6 +1,6 @@
 # Adapter initialization E\*TRADE
 
-The code below demonstrates how to initialize the [ETradeMessageAdapter](../api/StockSharp.ETrade.ETradeMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

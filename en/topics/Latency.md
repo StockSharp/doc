@@ -2,7 +2,7 @@
 
 In order to estimate the speed of orders registration and to determine which broker or technology faster, the [S\#](StockSharpAbout.md) includes a mechanism of calculating the time difference between an order creation in the trading algorithm and its registration on the exchange (the same for cancelation).
 
-For the delay calculation it is necessary to use the [ILatencyManager](../api/StockSharp.Algo.Latency.ILatencyManager.html) implementation, by way of [LatencyManager](../api/StockSharp.Algo.Latency.LatencyManager.html).
+For the delay calculation it is necessary to use the [ILatencyManager](xref:StockSharp.Algo.Latency.ILatencyManager) implementation, by way of [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager).
 
 ### Prerequisites
 

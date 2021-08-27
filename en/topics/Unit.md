@@ -1,12 +1,12 @@
 # Arithmetic operations
 
-To simplify works with arithmetic operations on such values as percent, points or pips, the [Unit](../api/StockSharp.Messages.Unit.html) data type can be used. It allows transparently operate with operations of addition, subtraction, multiplication and division. [Unit](../api/StockSharp.Messages.Unit.html) may be converted into [Decimal](../api/System.Decimal.html) (not possible, of the value is percentage, i.e. the type [Unit.Type](../api/StockSharp.Messages.Unit.Type.html) is set to [UnitTypes.Percent](../api/StockSharp.Messages.UnitTypes.Percent.html)) and vice versa (in this case the created value is always of the absolute value, i.e. the [Unit.Type](../api/StockSharp.Messages.Unit.Type.html) is set to [UnitTypes.Absolute](../api/StockSharp.Messages.UnitTypes.Absolute.html)). 
+To simplify works with arithmetic operations on such values as percent, points or pips, the [Unit](xref:StockSharp.Messages.Unit) data type can be used. It allows transparently operate with operations of addition, subtraction, multiplication and division. [Unit](xref:StockSharp.Messages.Unit) may be converted into [Decimal](xref:System.Decimal) (not possible, of the value is percentage, i.e. the type [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) and vice versa (in this case the created value is always of the absolute value, i.e. the [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
 
 ### Usage of Unit
 
 Usage of Unit
 
-- The [Unit](../api/StockSharp.Messages.Unit.html) can be created using special design kits, or using shorter recording by [UnitHelper](../api/StockSharp.Messages.UnitHelper.html): 
+- The [Unit](xref:StockSharp.Messages.Unit) can be created using special design kits, or using shorter recording by [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
 
   ```cs
   // test instrument with pips = 1 cent and points = 10 usd
@@ -22,7 +22,7 @@ Usage of Unit
   var pips = 30.0.Pips(security);
   var point = 30.0.Points(security);
   ```
-- [Unit](../api/StockSharp.Messages.Unit.html) features formatted output. Therefore, reducing the values to a string depending on the [UnitTypes](../api/StockSharp.Messages.UnitTypes.html) type: 
+- [Unit](xref:StockSharp.Messages.Unit) features formatted output. Therefore, reducing the values to a string depending on the [UnitTypes](xref:StockSharp.Messages.UnitTypes) type: 
 
   ```cs
   Console.WriteLine("absolute = " + absolute);
@@ -41,7 +41,7 @@ Usage of Unit
   ```
 
   The s symbol means minimal price increment (pips), p \- cost of price increment (point).
-- Arithmetic operations with [Unit](../api/StockSharp.Messages.Unit.html) are performed in the same way, as with normal numbers: 
+- Arithmetic operations with [Unit](xref:StockSharp.Messages.Unit) are performed in the same way, as with normal numbers: 
 
   ```cs
   // addition of all values
@@ -69,7 +69,7 @@ Usage of Unit
   Console.WriteLine("testValue / point = " + (testValue / point));
   Console.WriteLine();
   ```
-- The result of arithmetic operations [Unit](../api/StockSharp.Messages.Unit.html) itself becomes [Unit](../api/StockSharp.Messages.Unit.html), type of each is equal to the first operand type. For example, when adding pips and points, the result will be in pips: 
+- The result of arithmetic operations [Unit](xref:StockSharp.Messages.Unit) itself becomes [Unit](xref:StockSharp.Messages.Unit), type of each is equal to the first operand type. For example, when adding pips and points, the result will be in pips: 
 
   ```cs
   // addition of pips and points

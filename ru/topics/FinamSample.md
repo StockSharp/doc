@@ -1,6 +1,6 @@
 # Инициализация адаптера Finam
 
-Код ниже демонстрирует как инициализировать [FinamMessageAdapter](../api/StockSharp.Finam.FinamMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [FinamMessageAdapter](xref:StockSharp.Finam.FinamMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new AlorHistoryMessageAdapter(Connector.TransactionIdGenerator);

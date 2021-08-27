@@ -1,20 +1,20 @@
 # Reports
 
-The [S\#](StockSharpAbout.md) provides a reports generating mechanism for strategies created on the basis of [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html). The report includes the instrument code ([Strategy.Security](../api/StockSharp.Algo.Strategies.Strategy.Security.html)), the total working time ([Strategy.TotalWorkingTime](../api/StockSharp.Algo.Strategies.Strategy.TotalWorkingTime.html)), slippage ([SlippageManager](../api/StockSharp.Algo.Connector.SlippageManager.html)), P&L ([Strategy.PnLManager](../api/StockSharp.Algo.Strategies.Strategy.PnLManager.html)) etc. Also, reports generation includes detailed statistics by all the orders ([Strategy.Orders](../api/StockSharp.Algo.Strategies.Strategy.Orders.html)) and trades ([Strategy.MyTrades](../api/StockSharp.Algo.Strategies.Strategy.MyTrades.html)), which have been registered during the strategy work. 
+The [S\#](StockSharpAbout.md) provides a reports generating mechanism for strategies created on the basis of [Strategy](xref:StockSharp.Algo.Strategies.Strategy). The report includes the instrument code ([Strategy.Security](xref:StockSharp.Algo.Strategies.Strategy.Security)), the total working time ([Strategy.TotalWorkingTime](xref:StockSharp.Algo.Strategies.Strategy.TotalWorkingTime)), slippage ([SlippageManager](xref:StockSharp.Algo.Connector.SlippageManager)), P&L ([Strategy.PnLManager](xref:StockSharp.Algo.Strategies.Strategy.PnLManager)) etc. Also, reports generation includes detailed statistics by all the orders ([Strategy.Orders](xref:StockSharp.Algo.Strategies.Strategy.Orders)) and trades ([Strategy.MyTrades](xref:StockSharp.Algo.Strategies.Strategy.MyTrades)), which have been registered during the strategy work. 
 
-The reports framework is based on the [StrategyReport](../api/StockSharp.Algo.Strategies.Reporting.StrategyReport.html) class that normally has the following implementations: 
+The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Strategies.Reporting.StrategyReport) class that normally has the following implementations: 
 
-- [ExcelStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.html) \- report generation in the [Excel](https://en.wikipedia.org/wiki/Excel) format. With this generation, you can use the template file ([Template](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template.html)) which already contains the necessary formulas and charts based on the generated data. Data from the template before generating copied to the output file whose name is passed through the constructor. 
+- [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) \- report generation in the [Excel](https://en.wikipedia.org/wiki/Excel) format. With this generation, you can use the template file ([Template](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template)) which already contains the necessary formulas and charts based on the generated data. Data from the template before generating copied to the output file whose name is passed through the constructor. 
 
-  By default, the [ExcelStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.html) uses an [Excel](https://en.wikipedia.org/wiki/Excel) worksheet called "report", where it records the data. If such a sheet in the template file is not present, it will be automatically created. 
-- [XmlStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.XmlStrategyReport.html)
+  By default, the [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) uses an [Excel](https://en.wikipedia.org/wiki/Excel) worksheet called "report", where it records the data. If such a sheet in the template file is not present, it will be automatically created. 
+- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport)
 
    \- report generation in the 
 
   [Xml](https://en.wikipedia.org/wiki/XML)
 
    format. This format is useful when you need to pass strategy parameters from trading algorithm to another program. 
-- [CsvStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.CsvStrategyReport.html)
+- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport)
 
    \- report generation in the 
 

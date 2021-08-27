@@ -1,20 +1,20 @@
 # Отчеты
 
-Для стратегий, построенных на базе [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html), [S\#](StockSharpAbout.md) предоставляет механизм генерации отчетов. Отчет включает в себя такие вещи, как код инструмента ([Strategy.Security](../api/StockSharp.Algo.Strategies.Strategy.Security.html)), общее время работы ([Strategy.TotalWorkingTime](../api/StockSharp.Algo.Strategies.Strategy.TotalWorkingTime.html)), проскальзывание ([SlippageManager](../api/StockSharp.Algo.Connector.SlippageManager.html)), P&L ([Strategy.PnLManager](../api/StockSharp.Algo.Strategies.Strategy.PnLManager.html)) и т.д. Также, генерация отчетов включает детальную статистику по всем заявкам ([Strategy.Orders](../api/StockSharp.Algo.Strategies.Strategy.Orders.html)) и сделкам ([Strategy.MyTrades](../api/StockSharp.Algo.Strategies.Strategy.MyTrades.html)), которые были совершены в рамках работы стратегии. 
+Для стратегий, построенных на базе [Strategy](xref:StockSharp.Algo.Strategies.Strategy), [S\#](StockSharpAbout.md) предоставляет механизм генерации отчетов. Отчет включает в себя такие вещи, как код инструмента ([Strategy.Security](xref:StockSharp.Algo.Strategies.Strategy.Security)), общее время работы ([Strategy.TotalWorkingTime](xref:StockSharp.Algo.Strategies.Strategy.TotalWorkingTime)), проскальзывание ([SlippageManager](xref:StockSharp.Algo.Connector.SlippageManager)), P&L ([Strategy.PnLManager](xref:StockSharp.Algo.Strategies.Strategy.PnLManager)) и т.д. Также, генерация отчетов включает детальную статистику по всем заявкам ([Strategy.Orders](xref:StockSharp.Algo.Strategies.Strategy.Orders)) и сделкам ([Strategy.MyTrades](xref:StockSharp.Algo.Strategies.Strategy.MyTrades)), которые были совершены в рамках работы стратегии. 
 
-Механизм отчетов построен на базе класса [StrategyReport](../api/StockSharp.Algo.Strategies.Reporting.StrategyReport.html), который стандартно имеет следующие реализации: 
+Механизм отчетов построен на базе класса [StrategyReport](xref:StockSharp.Algo.Strategies.Reporting.StrategyReport), который стандартно имеет следующие реализации: 
 
-- [ExcelStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.html) \- генерация отчета в формат [Excel](https://ru.wikipedia.org/wiki/Excel). При данной генерации можно использовать файл\-шаблон ([Template](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template.html)), который уже содержит необходимые формулы и графики, опирающиеся на генерируемые данные. Данные из шаблона перед генерацией копируются в результирующий файл, имя которого передается через конструктор. 
+- [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) \- генерация отчета в формат [Excel](https://ru.wikipedia.org/wiki/Excel). При данной генерации можно использовать файл\-шаблон ([Template](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template)), который уже содержит необходимые формулы и графики, опирающиеся на генерируемые данные. Данные из шаблона перед генерацией копируются в результирующий файл, имя которого передается через конструктор. 
 
-  По умолчанию, [ExcelStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.html) использует лист [Excel](https://ru.wikipedia.org/wiki/Excel) с названием "отчет", куда записывает данные. Если такого листа в файле\-шаблоне нет, то он будет автоматически создан. 
-- [XmlStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.XmlStrategyReport.html)
+  По умолчанию, [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) использует лист [Excel](https://ru.wikipedia.org/wiki/Excel) с названием "отчет", куда записывает данные. Если такого листа в файле\-шаблоне нет, то он будет автоматически создан. 
+- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport)
 
    \- генерация отчета в формат 
 
   [Xml](https://ru.wikipedia.org/wiki/Xml)
 
   . Данный формат удобен, когда необходимо передать параметры стратегии из торгового робота в другую программу. 
-- [CsvStrategyReport](../api/StockSharp.Algo.Strategies.Reporting.CsvStrategyReport.html)
+- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport)
 
    \- генерация отчета в формат 
 

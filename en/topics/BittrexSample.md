@@ -1,6 +1,6 @@
 # Adapter initialization Bittrex
 
-The code below demonstrates how to initialize the [BittrexMessageAdapter](../api/StockSharp.Bittrex.BittrexMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [BittrexMessageAdapter](xref:StockSharp.Bittrex.BittrexMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

@@ -1,28 +1,28 @@
 # Visual monitoring
 
-For simplifying the monitoring of the work, you can use the special [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html) window. See also [Visual logging components](GuiLogging.md). 
+For simplifying the monitoring of the work, you can use the special [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) window. See also [Visual logging components](GuiLogging.md). 
 
 ![GUI LogControl](../images/GUI_LogControl.png)
 
-This window allows you to display messages from all [ILogSource](../api/StockSharp.Logging.ILogSource.html): 
+This window allows you to display messages from all [ILogSource](xref:StockSharp.Logging.ILogSource): 
 
 - strategies (
 
-  [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html)
+  [Strategy](xref:StockSharp.Algo.Strategies.Strategy)
 
   );
 - connectors (
 
-  [IConnector](../api/StockSharp.BusinessEntities.IConnector.html)
+  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
 
   );
 - own 
 
-  [ILogSource](../api/StockSharp.Logging.ILogSource.html)
+  [ILogSource](xref:StockSharp.Logging.ILogSource)
 
    implementations (for example, the main window in the algorithm).
 
-The nesting of sources is showing in the form of a tree. Each parent node contains messages of all nested and so on, until the lowest level. For strategies such hierarchy allows you to see [child strategies](StrategyChilds.md). For connectors it is also useful in the case of [BasketTrader](API_Connectors.md). using. Similarly, the same nesting can be arranged for your own algorithm, implementing the [ILogSource.Parent](../api/StockSharp.Logging.ILogSource.Parent.html) property. 
+The nesting of sources is showing in the form of a tree. Each parent node contains messages of all nested and so on, until the lowest level. For strategies such hierarchy allows you to see [child strategies](StrategyChilds.md). For connectors it is also useful in the case of [BasketTrader](API_Connectors.md). using. Similarly, the same nesting can be arranged for your own algorithm, implementing the [ILogSource.Parent](xref:StockSharp.Logging.ILogSource.Parent) property. 
 
 ### MonitorWindow using
 
@@ -34,12 +34,12 @@ MonitorWindow using
    var monitor = new MonitorWindow();
    monitor.Show();
    ```
-2. Then, the created window must be added to your [LogManager](../api/StockSharp.Logging.LogManager.html) through the [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html):
+2. Then, the created window must be added to your [LogManager](xref:StockSharp.Logging.LogManager) through the [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener):
 
    ```cs
    _logManager.Listeners.Add(new GuiLogListener(monitor));
    ```
-3. Thereafter all sources [LogManager.Sources](../api/StockSharp.Logging.LogManager.Sources.html) (strategies, connectors, etc.) will send messages to the [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html).
+3. Thereafter all sources [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources) (strategies, connectors, etc.) will send messages to the [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow).
 
 ## Recommended content
 

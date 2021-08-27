@@ -20,7 +20,7 @@ using StockSharp.Algo;
 
 Dll библиотеки добавляются нажатием кнопки **Ссылки** вкладки **Исходный код**.
 
-Далее объявляется класс. Название класса может быть любым сочетанием латинских букв. Класс кубика должен быть унаследован от класса [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html):
+Далее объявляется класс. Название класса может быть любым сочетанием латинских букв. Класс кубика должен быть унаследован от класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy):
 
 ```cs
 	public class NewStrategy : Strategy
@@ -51,7 +51,7 @@ Dll библиотеки добавляются нажатием кнопки **
  private readonly ChartArea _area = new ChartArea();// Панель графиков
 ```
 
-Атрибут [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html) необходим для обозначения входных и выходных параметров кубика. Если атрибутом обозначено событие, то значит это будет выходной параметр, если метод — значит это входной параметр:
+Атрибут [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute) необходим для обозначения входных и выходных параметров кубика. Если атрибутом обозначено событие, то значит это будет выходной параметр, если метод — значит это входной параметр:
 
 ```cs
  [DiagramExternal]
@@ -113,7 +113,7 @@ public NewStrategy()
 }
 ```
 
-У класса [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) есть методы, которые можно переопределить. В примере переопределяется метод [OnReseted](../api/StockSharp.Algo.Strategies.Strategy.OnReseted.html) для того, чтобы при переинициализации торгового алгоритма переинициализировались скользящие средние и графические элементы:
+У класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy) есть методы, которые можно переопределить. В примере переопределяется метод [OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) для того, чтобы при переинициализации торгового алгоритма переинициализировались скользящие средние и графические элементы:
 
 ```cs
 protected override void OnReseted()
@@ -136,7 +136,7 @@ protected override void OnReseted()
 }
 ```
 
-Переопределяется метод [OnStarted](../api/StockSharp.Algo.Strategies.Strategy.OnStarted.html) для того, чтобы: 1) при старте торгового алгоритма переинициализировались скользящие средние, 2) на график добавились все графические элементы, 3) подписаться на появление новых сделок, 4) подписаться на появление новых заявок или изменение старых, начать получать новую информацию по инструменту.
+Переопределяется метод [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) для того, чтобы: 1) при старте торгового алгоритма переинициализировались скользящие средние, 2) на график добавились все графические элементы, 3) подписаться на появление новых сделок, 4) подписаться на появление новых заявок или изменение старых, начать получать новую информацию по инструменту.
 
 ```cs
 protected override void OnStarted()
@@ -172,7 +172,7 @@ protected override void OnStarted()
 }
 ```
 
-Переопределяется метод [OnStopped](../api/StockSharp.Algo.Strategies.Strategy.OnStopped.html), чтобы перестать получать новую информацию по инструменту:
+Переопределяется метод [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped), чтобы перестать получать новую информацию по инструменту:
 
 ```cs
 protected override void OnStopped()
@@ -185,7 +185,7 @@ protected override void OnStopped()
 
 Строка **this.AddInfoLog("OnStopped");** выводит сообщение "OnStopped" в окно **Логи**.
 
-В методе ProcessCandle(Candle candle) идет основной расчёт стратегии. Так как он обозначен атрибутом [DiagramExternalAttribute](../api/StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute.html), значит это входной параметр кубика, принимающий **Свечи**.
+В методе ProcessCandle(Candle candle) идет основной расчёт стратегии. Так как он обозначен атрибутом [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute), значит это входной параметр кубика, принимающий **Свечи**.
 
 ```cs
 [DiagramExternal]

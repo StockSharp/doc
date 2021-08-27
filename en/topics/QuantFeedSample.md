@@ -1,6 +1,6 @@
 # Adapter initialization QuantFEED
 
-The code below demonstrates how to initialize the [QuantFeedMessageAdapter](../api/StockSharp.QuantHouse.QuantFeedMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [QuantFeedMessageAdapter](xref:StockSharp.QuantHouse.QuantFeedMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

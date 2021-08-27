@@ -1,6 +1,6 @@
 # Settings saving and loading
 
-To save and load strategy settings the overrides of [Save](../api/StockSharp.Algo.Strategies.Strategy.Save.html) and [Load](../api/StockSharp.Algo.Strategies.Strategy.Load.html) methods used respectively. 
+To save and load strategy settings the overrides of [Save](xref:StockSharp.Algo.Strategies.Strategy.Save) and [Load](xref:StockSharp.Algo.Strategies.Strategy.Load) methods used respectively. 
 
 ```cs
 public override void Load(SettingsStorage settings)
@@ -39,7 +39,7 @@ if (File.Exists("marketProfile.xml"))
 }
 ```
 
-To save the settings to an external file, you must change the [Save](../api/StockSharp.Algo.Strategies.Strategy.Save.html), method, described earlier. 
+To save the settings to an external file, you must change the [Save](xref:StockSharp.Algo.Strategies.Strategy.Save), method, described earlier. 
 
 ```cs
 public override void Save(SettingsStorage settings)

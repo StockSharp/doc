@@ -1,6 +1,6 @@
 # Окно настройки комиссии
 
-[CommissionWindow](../api/StockSharp.Xaml.CommissionWindow.html) \- Специальное окно для настройки правил взимания комиссии. 
+[CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) \- Специальное окно для настройки правил взимания комиссии. 
 
 ![API ComissionWindow](../images/API_ComissionWindow.png)
 

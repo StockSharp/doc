@@ -1,14 +1,14 @@
 # Собственные сделки
 
-[MyTradeGrid](../api/StockSharp.Xaml.MyTradeGrid.html) \- таблица для отображения собственных сделок. 
+[MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) \- таблица для отображения собственных сделок. 
 
 ![GUI MytradeGrid](../images/GUI_MytradeGrid.png)
 
 **Основные члены**
 
-- [Trades](../api/StockSharp.Xaml.MyTradeGrid.Trades.html) \- список сделок.
-- [SelectedTrade](../api/StockSharp.Xaml.MyTradeGrid.SelectedTrade.html) \- выбранная сделка.
-- [SelectedTrades](../api/StockSharp.Xaml.MyTradeGrid.SelectedTrades.html) \- выбранные сделки.
+- [Trades](xref:StockSharp.Xaml.MyTradeGrid.Trades) \- список сделок.
+- [SelectedTrade](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrade) \- выбранная сделка.
+- [SelectedTrades](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrades) \- выбранные сделки.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

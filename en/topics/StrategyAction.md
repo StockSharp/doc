@@ -1,14 +1,14 @@
 # Creating strategies
 
-The basis of the creating strategies is the [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class, which includes the main trading options such as: portfolio, instrument, the current position, profit\-loss, etc. 
+The basis of the creating strategies is the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class, which includes the main trading options such as: portfolio, instrument, the current position, profit\-loss, etc. 
 
 It is recommended that the strategy code has been implemented without binding to specified instrument or portfolio. This approach allows you to use strategy with different instruments on different trading accounts simultaneously or in different time periods: 
 
 ![strategy](../images/strategy.png)
 
-The [Strategy](../api/StockSharp.Algo.Strategies.Strategy.html) class uses an approach [based on events](EventModel.md). Such code is compact and quickly reacts to market events due instant recall. If you use the [iteration model](StrategyCreate.md), the code is called only after the [TimeFrameStrategy.TimeFrame](../api/StockSharp.Algo.Strategies.TimeFrameStrategy.TimeFrame.html) timeframe end, and there is a chance to miss the necessary signals in the market. Therefore, it is recommended to use in the [S\#](StockSharpAbout.md) only events to create the logic of the strategies (all standard [S\#](StockSharpAbout.md) strategies implement this approach). 
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class uses an approach [based on events](EventModel.md). Such code is compact and quickly reacts to market events due instant recall. If you use the [iteration model](StrategyCreate.md), the code is called only after the [TimeFrameStrategy.TimeFrame](xref:StockSharp.Algo.Strategies.TimeFrameStrategy.TimeFrame) timeframe end, and there is a chance to miss the necessary signals in the market. Therefore, it is recommended to use in the [S\#](StockSharpAbout.md) only events to create the logic of the strategies (all standard [S\#](StockSharpAbout.md) strategies implement this approach). 
 
-To use event\-driven approach, you must use the [Strategy.Rules](../api/StockSharp.Algo.Strategies.Strategy.Rules.html) property. The list of rules set through this property. Each of the rules stores an event trigger condition and the action itself, which handles this event. Here is the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) strategy code, which uses the event model: 
+To use event\-driven approach, you must use the [Strategy.Rules](xref:StockSharp.Algo.Strategies.Strategy.Rules) property. The list of rules set through this property. Each of the rules stores an event trigger condition and the action itself, which handles this event. Here is the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) strategy code, which uses the event model: 
 
 ```cs
 /// <summary>
@@ -85,12 +85,12 @@ Security.WhenChanged(Connector).Do(ReHedge).Apply(this);
 		
 ```
 
-In the [DeltaHedgeStrategy](../api/StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.html) rules are added by calling the [MarketRuleHelper.Apply](../api/StockSharp.Algo.MarketRuleHelper.Apply.html) add\-in method, that implicitly adds new [Strategy.Rules](../api/StockSharp.Algo.Strategies.Strategy.Rules.html) objects to the [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) list. This reduces the code and make it more readable. As long as the rule is not added to the strategy \- it is inactive. 
+In the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) rules are added by calling the [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply) add\-in method, that implicitly adds new [Strategy.Rules](xref:StockSharp.Algo.Strategies.Strategy.Rules) objects to the [IMarketRule](xref:StockSharp.Algo.IMarketRule) list. This reduces the code and make it more readable. As long as the rule is not added to the strategy \- it is inactive. 
 
-By default the rule is recurring, i.e. it is called as many times, as an event occurs. It will continue as long as the strategy is working, to which a rule is added ([Strategy.ProcessState](../api/StockSharp.Algo.Strategies.Strategy.ProcessState.html) equals [ProcessStates.Started](../api/StockSharp.Algo.ProcessStates.Started.html)). If you want to create a rule that will be active from other condition (for example, a rule that closes the position when strategy stops **should not** depend on the [ProcessStates.Started](../api/StockSharp.Algo.ProcessStates.Started.html)) value), then you need to call the [Until](../api/StockSharp.Algo.MarketRule`2.Until.html) method. The criterion for the rule end is passed to this method 
+By default the rule is recurring, i.e. it is called as many times, as an event occurs. It will continue as long as the strategy is working, to which a rule is added ([Strategy.ProcessState](xref:StockSharp.Algo.Strategies.Strategy.ProcessState) equals [ProcessStates.Started](xref:StockSharp.Algo.ProcessStates.Started)). If you want to create a rule that will be active from other condition (for example, a rule that closes the position when strategy stops **should not** depend on the [ProcessStates.Started](xref:StockSharp.Algo.ProcessStates.Started)) value), then you need to call the [Until](xref:StockSharp.Algo.MarketRule`2.Until) method. The criterion for the rule end is passed to this method 
 
 > [!CAUTION]
-> If the strategy has been forcibly stopped through the [Strategy.Stop](../api/StockSharp.Algo.Strategies.Strategy.Stop.html) method (for example, when the user clicks on the program window), the strategy is not immediately stopped and goes into the [ProcessStates.Stopping](../api/StockSharp.Algo.ProcessStates.Stopping.html) state and will remain active as long as the list with the [Strategy.Rules](../api/StockSharp.Algo.Strategies.Strategy.Rules.html) rules is not empty (that means that some rules are still active). Therefore, you must be careful with the addition of a rule stopping criterion not to make a strategy unstoppable. 
+> If the strategy has been forcibly stopped through the [Strategy.Stop](xref:StockSharp.Algo.Strategies.Strategy.Stop) method (for example, when the user clicks on the program window), the strategy is not immediately stopped and goes into the [ProcessStates.Stopping](xref:StockSharp.Algo.ProcessStates.Stopping) state and will remain active as long as the list with the [Strategy.Rules](xref:StockSharp.Algo.Strategies.Strategy.Rules) rules is not empty (that means that some rules are still active). Therefore, you must be careful with the addition of a rule stopping criterion not to make a strategy unstoppable. 
 
 ### Next Steps
 

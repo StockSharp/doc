@@ -1,13 +1,13 @@
 # Новости
 
-[NewsGrid](../api/StockSharp.Xaml.NewsGrid.html) \- таблица для отображения новостей. 
+[NewsGrid](xref:StockSharp.Xaml.NewsGrid) \- таблица для отображения новостей. 
 
 **Основные свойства**
 
-- [News](../api/StockSharp.Xaml.NewsGrid.News.html) \- список новостей.
-- [FirstSelectedNews](../api/StockSharp.Xaml.NewsGrid.FirstSelectedNews.html) \- выбранная новость.
-- [SelectedNews](../api/StockSharp.Xaml.NewsGrid.SelectedNews.html) \- выбранные новости.
-- [NewsProvider](../api/StockSharp.Xaml.NewsGrid.NewsProvider.html) \- поставщик новостей.
+- [News](xref:StockSharp.Xaml.NewsGrid.News) \- список новостей.
+- [FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- выбранная новость.
+- [SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- выбранные новости.
+- [NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- поставщик новостей.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

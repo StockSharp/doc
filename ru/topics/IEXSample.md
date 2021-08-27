@@ -1,6 +1,6 @@
 # Инициализация адаптера IEX
 
-Код ниже демонстрирует как инициализировать [IEXMessageAdapter](../api/StockSharp.IEX.IEXMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

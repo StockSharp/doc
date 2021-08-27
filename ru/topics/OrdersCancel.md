@@ -1,6 +1,6 @@
 # Снятие заявок
 
-Снятие заявки необходимо в том случае, если ситуация на рынке изменилась не в пользу выставленной заявки. Для снятия заявок в [S\#](StockSharpAbout.md) предусмотрен метод [Connector.CancelOrder](../api/StockSharp.Algo.Connector.CancelOrder.html). 
+Снятие заявки необходимо в том случае, если ситуация на рынке изменилась не в пользу выставленной заявки. Для снятия заявок в [S\#](StockSharpAbout.md) предусмотрен метод [Connector.CancelOrder](xref:StockSharp.Algo.Connector.CancelOrder). 
 
 ```cs
 // registeredOrder - это ранее зарегистрированная заявка.

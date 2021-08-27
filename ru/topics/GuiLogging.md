@@ -1,10 +1,10 @@
 # Логирование
 
-[S\#](StockSharpAbout.md) предлагает несколько графических компонент для отображения логов, в основе которых лежит [LogControl](../api/StockSharp.Xaml.LogControl.html). Другие компоненты: [LogWindow](../api/StockSharp.Xaml.LogWindow.html), [Monitor](../api/StockSharp.Xaml.Monitor.html) и [MonitorWindow](../api/StockSharp.Xaml.MonitorWindow.html) только дополняют функциональность [LogControl](../api/StockSharp.Xaml.LogControl.html). 
+[S\#](StockSharpAbout.md) предлагает несколько графических компонент для отображения логов, в основе которых лежит [LogControl](xref:StockSharp.Xaml.LogControl). Другие компоненты: [LogWindow](xref:StockSharp.Xaml.LogWindow), [Monitor](xref:StockSharp.Xaml.Monitor) и [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) только дополняют функциональность [LogControl](xref:StockSharp.Xaml.LogControl). 
 
-При использовании визуальных компонентов логирования в качестве "слушателя" необходимо использовать логгер [GuiLogListener](../api/StockSharp.Xaml.GuiLogListener.html). Этот логгер обеспечивает потоковую синхронизацию с GUI при записи новых сообщений [LogMessage](../api/StockSharp.Logging.LogMessage.html).
+При использовании визуальных компонентов логирования в качестве "слушателя" необходимо использовать логгер [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener). Этот логгер обеспечивает потоковую синхронизацию с GUI при записи новых сообщений [LogMessage](xref:StockSharp.Logging.LogMessage).
 
-Чтобы в собственном классе реализовать возможность логирования необходимо реализовать интерфейс [ILogReceiver](../api/StockSharp.Logging.ILogReceiver.html). Более простой способ это унаследоваться от класса [BaseLogReceiver](../api/StockSharp.Logging.BaseLogReceiver.html), как это сделать продемонстрировано в примере *Samples\\Misc\\SampleLoggingGitHub*:
+Чтобы в собственном классе реализовать возможность логирования необходимо реализовать интерфейс [ILogReceiver](xref:StockSharp.Logging.ILogReceiver). Более простой способ это унаследоваться от класса [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver), как это сделать продемонстрировано в примере *Samples\\Misc\\SampleLoggingGitHub*:
 
 ```cs
 private class TestSource : BaseLogReceiver

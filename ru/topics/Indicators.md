@@ -1,6 +1,6 @@
 # Индикаторы
 
-[S\#](StockSharpAbout.md) стандартно предоставляет более 70 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые. Кроме того можно создавать собственные индикаторы, взяв за основу существующие, как показано в разделе [Собственный индикатор](IndicatorsCustom.md). Все базовые классы для работы с индикаторами, а также сами индикаторы находятся в пространстве имен [StockSharp.Algo.Indicators](../api/StockSharp.Algo.Indicators.html). 
+[S\#](StockSharpAbout.md) стандартно предоставляет более 70 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые. Кроме того можно создавать собственные индикаторы, взяв за основу существующие, как показано в разделе [Собственный индикатор](IndicatorsCustom.md). Все базовые классы для работы с индикаторами, а также сами индикаторы находятся в пространстве имен [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators). 
 
 ### Подключение индикатора в робот
 
@@ -18,9 +18,9 @@
    	longSma.Process(candle);
    ```
 
-   Индикатор принимает на вход [IIndicatorValue](../api/StockSharp.Algo.Indicators.IIndicatorValue.html). Некоторые из индикаторов оперируют простым числом, как, например, [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html). Другим требуются полностью свеча, как, например, [MedianPrice](../api/StockSharp.Algo.Indicators.MedianPrice.html). Поэтому входящие значения необходимо приводить или к [DecimalIndicatorValue](../api/StockSharp.Algo.Indicators.DecimalIndicatorValue.html) или к [CandleIndicatorValue](../api/StockSharp.Algo.Indicators.CandleIndicatorValue.html). Результирующее значение индикатора работает по тем же правилам, что и входящее значение. 
-3. Результирующее и входящее значение индикатора имеют свойство [IIndicatorValue.IsFinal](../api/StockSharp.Algo.Indicators.IIndicatorValue.IsFinal.html), которое говорит о том, что значение является окончательным и индикатор не будет изменяться в данной точке времени. Например, индикатор [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) формируется по цене закрытия свечи, но в текущий момент времени окончательная цена закрытия свечи неизвестна и меняется. В таком случае результирующее значение [IIndicatorValue.IsFinal](../api/StockSharp.Algo.Indicators.IIndicatorValue.IsFinal.html) будет false. Eсли в индикатор передать законченную свечу, то входящее и результирующее значения [IIndicatorValue.IsFinal](../api/StockSharp.Algo.Indicators.IIndicatorValue.IsFinal.html) будут true.
-4. Для того, чтобы получить текущее значение индикатора, используется метод [GetValue\`\`1](../api/StockSharp.Algo.Indicators.IIndicatorValue.GetValue``1.html):
+   Индикатор принимает на вход [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue). Некоторые из индикаторов оперируют простым числом, как, например, [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). Другим требуются полностью свеча, как, например, [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). Поэтому входящие значения необходимо приводить или к [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) или к [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue). Результирующее значение индикатора работает по тем же правилам, что и входящее значение. 
+3. Результирующее и входящее значение индикатора имеют свойство [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), которое говорит о том, что значение является окончательным и индикатор не будет изменяться в данной точке времени. Например, индикатор [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) формируется по цене закрытия свечи, но в текущий момент времени окончательная цена закрытия свечи неизвестна и меняется. В таком случае результирующее значение [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) будет false. Eсли в индикатор передать законченную свечу, то входящее и результирующее значения [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) будут true.
+4. Для того, чтобы получить текущее значение индикатора, используется метод [GetValue\`\`1](xref:StockSharp.Algo.Indicators.IIndicatorValue.GetValue``1):
 
    ```cs
    // вычисляем новое положение относительно друг друга
@@ -38,6 +38,6 @@
    	_isShortLessThenLong = isShortLessThenLong;
    }
    ```
-5. У всех индикаторов есть свойство [BaseIndicator.IsFormed](../api/StockSharp.Algo.Indicators.BaseIndicator.IsFormed.html), которое говорит о том готов ли индикатор к использованию. Например, индикатор [SimpleMovingAverage](../api/StockSharp.Algo.Indicators.SimpleMovingAverage.html) имеет период, и пока индикатор не обработает количество свечей, равное периоду индикатора, индикатор будет считаться не готовым к использованию. И свойство [BaseIndicator.IsFormed](../api/StockSharp.Algo.Indicators.BaseIndicator.IsFormed.html) будет false.
+5. У всех индикаторов есть свойство [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), которое говорит о том готов ли индикатор к использованию. Например, индикатор [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) имеет период, и пока индикатор не обработает количество свечей, равное периоду индикатора, индикатор будет считаться не готовым к использованию. И свойство [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) будет false.
 
 ## См. также

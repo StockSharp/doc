@@ -1,10 +1,10 @@
 # Исторические данные
 
-В случае запроса истории, в адаптер приходит подписка, с инициализированными значениями [MarketDataMessage.From](../api/StockSharp.Messages.MarketDataMessage.From.html) и [MarketDataMessage.To](../api/StockSharp.Messages.MarketDataMessage.To.html). Адаптер должен обработать полученный запрос, вернув запрашиваемые данные. Признаком окончания запроса служит отправка сообщения [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html). Таким образом, внешний код понимает, что все запрошенные данные были получены. Если данных нет (подключение не поддерживает историю или же запрашиваемый период недоступен), то так же требуется результирующее значение [SubscriptionFinishedMessage](../api/StockSharp.Messages.SubscriptionFinishedMessage.html). 
+В случае запроса истории, в адаптер приходит подписка, с инициализированными значениями [MarketDataMessage.From](xref:StockSharp.Messages.MarketDataMessage.From) и [MarketDataMessage.To](xref:StockSharp.Messages.MarketDataMessage.To). Адаптер должен обработать полученный запрос, вернув запрашиваемые данные. Признаком окончания запроса служит отправка сообщения [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage). Таким образом, внешний код понимает, что все запрошенные данные были получены. Если данных нет (подключение не поддерживает историю или же запрашиваемый период недоступен), то так же требуется результирующее значение [SubscriptionFinishedMessage](xref:StockSharp.Messages.SubscriptionFinishedMessage). 
 
-Некоторые сообщения, реализующие [ISubscriptionMessage](../api/StockSharp.Messages.ISubscriptionMessage.html) (например, [SecurityLookupMessage](../api/StockSharp.Messages.SecurityLookupMessage.html)), имеют всегда инициализированными [ISubscriptionMessage.From](../api/StockSharp.Messages.ISubscriptionMessage.From.html) и [ISubscriptionMessage.To](../api/StockSharp.Messages.ISubscriptionMessage.To.html). Для таких сообщение подписка на online данные невозможна, и по ним отправляются только исторические данные (или же идет запрос мета\-данных, как инструменты, площадки и т.д.). 
+Некоторые сообщения, реализующие [ISubscriptionMessage](xref:StockSharp.Messages.ISubscriptionMessage) (например, [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage)), имеют всегда инициализированными [ISubscriptionMessage.From](xref:StockSharp.Messages.ISubscriptionMessage.From) и [ISubscriptionMessage.To](xref:StockSharp.Messages.ISubscriptionMessage.To). Для таких сообщение подписка на online данные невозможна, и по ним отправляются только исторические данные (или же идет запрос мета\-данных, как инструменты, площадки и т.д.). 
 
-При обработке результатов истории, у исторические сообщений необходимо инициализировать свойство [IOriginalTransactionIdMessage.OriginalTransactionId](../api/StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId.html). Таким образом внешний код поймет, что возвращаемые адаптером данные относятся к конкретной исторический подписке:
+При обработке результатов истории, у исторические сообщений необходимо инициализировать свойство [IOriginalTransactionIdMessage.OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId). Таким образом внешний код поймет, что возвращаемые адаптером данные относятся к конкретной исторический подписке:
 
 ```cs
       		SendOutMessage(new TimeFrameCandleMessage
@@ -22,7 +22,7 @@
       
 ```
 
-Специальные адаптер [PartialDownloadMessageAdapter](../api/StockSharp.Algo.PartialDownloadMessageAdapter.html) дробит подписки с большим диапазоном данных (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) на множество запросов с мелкими диапазонами. Каждый адаптер может передать, какой диапазон времени максимально он поддерживает через перегрузку метода [IMessageAdapter.GetHistoryStepSize](../api/StockSharp.Messages.IMessageAdapter.GetHistoryStepSize.html):
+Специальные адаптер [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) дробит подписки с большим диапазоном данных (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) на множество запросов с мелкими диапазонами. Каждый адаптер может передать, какой диапазон времени максимально он поддерживает через перегрузку метода [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize):
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
@@ -41,4 +41,4 @@ public partial class MyOwnMessageAdapter : MessageAdapter
 }
 ```
 
-В случае online данных заполнение [IOriginalTransactionIdMessage.OriginalTransactionId](../api/StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId.html) не требуется, так как адаптер [SubscriptionOnlineMessageAdapter](../api/StockSharp.Algo.SubscriptionOnlineMessageAdapter.html) передает в адаптер только одну подписку с online данными.
+В случае online данных заполнение [IOriginalTransactionIdMessage.OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) не требуется, так как адаптер [SubscriptionOnlineMessageAdapter](xref:StockSharp.Algo.SubscriptionOnlineMessageAdapter) передает в адаптер только одну подписку с online данными.

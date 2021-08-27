@@ -22,7 +22,7 @@
 
 - Сайт платформы \- 
 
-  [https:\/\/stocksharp.ru](https://stocksharp.ru/)
+  [https:\/\/stocksharp.ru](https://stocksharp.ru)
 
   . 
 - Раздел со статьями, новостями, обсуждениями \- 

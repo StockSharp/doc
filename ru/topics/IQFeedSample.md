@@ -1,6 +1,6 @@
 # Инициализация адаптера IQFeed
 
-Код ниже демонстрирует как инициализировать [IQFeedMessageAdapter](../api/StockSharp.IQFeed.IQFeedMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [IQFeedMessageAdapter](xref:StockSharp.IQFeed.IQFeedMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

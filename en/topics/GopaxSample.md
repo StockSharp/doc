@@ -1,6 +1,6 @@
 # Adapter initialization Gopax
 
-The code below demonstrates how to initialize the [GopaxMessageAdapter](../api/StockSharp.Gopax.GopaxMessageAdapter.html) and send it to [Connector](../api/StockSharp.Algo.Connector.html).
+The code below demonstrates how to initialize the [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				

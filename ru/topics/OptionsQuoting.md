@@ -1,6 +1,6 @@
 # Котирование по волатильности
 
-Для котирования опционов реализована специальная стратегия [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html), которая предусматривает котирование объема по заданным границам волатильности. 
+Для котирования опционов реализована специальная стратегия [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy), которая предусматривает котирование объема по заданным границам волатильности. 
 
 ### Котирование по волатильности
 
@@ -98,7 +98,7 @@
    }            		
    	  				
    ```
-3. Настройка стратегии [VolatilityQuotingStrategy](../api/StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy.html) (заполнение границ волатильности, а также создание заявки, через которую указываются требуемый объем и направление котирования): 
+3. Настройка стратегии [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) (заполнение границ волатильности, а также создание заявки, через которую указываются требуемый объем и направление котирования): 
 
    ```none
    private void StartClick(object sender, RoutedEventArgs e)
@@ -142,7 +142,7 @@
    ```cs
    hedge.Start();
    ```
-5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](../api/StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility.html): 
+5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility): 
 
    ```cs
    private void OnQuotesChanged()

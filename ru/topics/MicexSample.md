@@ -1,6 +1,6 @@
 # Инициализация адаптера Micex (TEAP)
 
-Код ниже демонстрирует как инициализировать [MicexMessageAdapter](../api/StockSharp.Micex.MicexMessageAdapter.html) и передать его в [Connector](../api/StockSharp.Algo.Connector.html).
+Код ниже демонстрирует как инициализировать [MicexMessageAdapter](xref:StockSharp.Micex.MicexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

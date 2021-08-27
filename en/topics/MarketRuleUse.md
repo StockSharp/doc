@@ -25,9 +25,9 @@
   	  	  		
   ```
 
-  Now, when the event is triggered (the order will be registered on exchange), the action specified through the [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) method will be called. 
+  Now, when the event is triggered (the order will be registered on exchange), the action specified through the [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) method will be called. 
 
-  At the end of the rule creating the [MarketRuleHelper.Apply](../api/StockSharp.Algo.MarketRuleHelper.Apply.html) method is called. As long as the method is not called for the rule \- it is inactive (the handler in the [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) will not be called). 
+  At the end of the rule creating the [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply) method is called. As long as the method is not called for the rule \- it is inactive (the handler in the [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) will not be called). 
 - **Rules creating within the strategy:**
 
   ```cs
@@ -54,7 +54,7 @@
   ```
 - **Unnecessary rules removing:**
 
-  The [IMarketRule](../api/StockSharp.Algo.IMarketRule.html) has the [Token](../api/StockSharp.Algo.IMarketRule.Token.html) \- this token is associated with the rule. For example, for the [WhenCanceled](../api/StockSharp.Algo.MarketRuleHelper.WhenCanceled.html) rule the token will be the order.
+  The [IMarketRule](xref:StockSharp.Algo.IMarketRule) has the [Token](xref:StockSharp.Algo.IMarketRule.Token) \- this token is associated with the rule. For example, for the [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled) rule the token will be the order.
 
   When the rule of the successful order cancel has worked, then it is better to remove all of the other rules related to this order:
 
@@ -89,7 +89,7 @@
   RegisterOrder(order);
   	  	  		
   ```
-- **Rules combination by the condition [Or](../api/StockSharp.Algo.MarketRuleHelper.Or.html) \/ [And](../api/StockSharp.Algo.MarketRuleHelper.And.html).**
+- **Rules combination by the condition [Or](xref:StockSharp.Algo.MarketRuleHelper.Or) \/ [And](xref:StockSharp.Algo.MarketRuleHelper.And).**
 
   When time is over **OR** the candle is closed:
 
@@ -131,8 +131,8 @@
   ```
 
   > [!TIP]
-  > The handler in the [IMarketRule.Do](../api/StockSharp.Algo.IMarketRule.Do.html) will be called after the last rule added through the [And](../api/StockSharp.Algo.MarketRuleHelper.And.html) has worked.
-- **Periodicity of the rule \- [Until](../api/StockSharp.Algo.IMarketRule.Until.html):**
+  > The handler in the [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do) will be called after the last rule added through the [And](xref:StockSharp.Algo.MarketRuleHelper.And) has worked.
+- **Periodicity of the rule \- [Until](xref:StockSharp.Algo.IMarketRule.Until):**
 
   ```cs
   bool flag = false;
