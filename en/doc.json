@@ -50,6 +50,7 @@
         ]
       }
     ],
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
     "globalMetadata": {
       "_appFooter": "<span>Copyright © StockSharp.</span>",
       "_appFaviconPath": "favicon.ico",
