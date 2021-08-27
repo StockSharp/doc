@@ -1,11 +1,13 @@
 - name: About StockSharp
   href: StockSharpTitle.md
-- name: StockSharp Licensing
-  href: License.md
-- name: Source codes
-  href: SourceCode.md
-- name: Reference materials
-  href: Materials.md
+- name: Common
+  items:
+  - name: StockSharp Licensing
+    href: License.md
+  - name: Source codes
+    href: SourceCode.md
+  - name: Reference materials
+    href: Materials.md
 - name: S#.Installer
   href: SharpInstaller.md
   items:

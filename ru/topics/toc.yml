@@ -1,11 +1,11 @@
-- name: О StockSharp
-  href: StockSharpTitle.md
-- name: Лицензирование StockSharp
-  href: License.md
-- name: Исходные коды
-  href: SourceCode.md
-- name: Справочные материалы
-  href: Materials.md
+- name: Общее
+  items:
+  - name: Лицензирование StockSharp
+    href: License.md
+  - name: Исходные коды
+    href: SourceCode.md
+  - name: Справочные материалы
+    href: Materials.md
 - name: S#.Installer
   href: SharpInstaller.md
   items:
