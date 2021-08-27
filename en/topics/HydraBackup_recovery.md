@@ -6,4 +6,4 @@ You can restore the data from the storage in two ways:
 
   > [!TIP]
   > This method allows to download only one object (file) at a time.
-- To use the free application [S3 Browser](https://s3browser.com) for data downloading.
+- To use the free application [S3 Browser](https://s3browser.com/) for data downloading.

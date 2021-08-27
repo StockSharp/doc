@@ -8,7 +8,7 @@
 
 **Контактная информация:**
 
-- Сайт платформы \- [https:\/\/stocksharp.ru](https://stocksharp.ru). 
+- Сайт платформы \- [https:\/\/stocksharp.ru](https://stocksharp.ru/). 
 - Раздел со статьями, новостями, обсуждениями \- [Форум, Статьи, Новости](https://stocksharp.ru/community/). 
 - Канал на YouTube \- [StockSharp YouTube](https://youtube.com/user/StockSharp/). 
 - Группа ВК "StockSharp \- Трейдинг и Торговые роботы" \- [StockSharp VK](https://vk.com/stocksharp). 

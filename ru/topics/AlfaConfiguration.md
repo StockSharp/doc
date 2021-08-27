@@ -4,7 +4,7 @@
 
 ![AlfaTrader](../images/AlfaTrader.png)
 
-Как видно из рисунка, [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) взаимодействует с брокером через терминал [Альфа\-Директ](https://www.alfadirect.ru). Связь между [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) и [Альфа\-Директ](https://www.alfadirect.ru) осуществляется по технологии [COM](https://ru.wikipedia.org/wiki/Component_Object_Model) посредством открытого интерфейса терминала. [Открытый интерфейс терминала Альфа\-Директ](https://www.alfadirect.ru/mobile-app/terminal-alfa-direct) позволяет получать в режиме реального времени всю доступную в терминале табличную информацию и подавать торговые поручения. 
+Как видно из рисунка, [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) взаимодействует с брокером через терминал [Альфа\-Директ](https://www.alfadirect.ru/). Связь между [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) и [Альфа\-Директ](https://www.alfadirect.ru/) осуществляется по технологии [COM](https://ru.wikipedia.org/wiki/Component_Object_Model) посредством открытого интерфейса терминала. [Открытый интерфейс терминала Альфа\-Директ](https://www.alfadirect.ru/mobile-app/terminal-alfa-direct) позволяет получать в режиме реального времени всю доступную в терминале табличную информацию и подавать торговые поручения. 
 
 Для корректной работой с [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) необходимо предварительно настроить торговый терминал [Альфа\-Директ](Alfa.md). 
 

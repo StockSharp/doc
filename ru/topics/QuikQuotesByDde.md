@@ -20,7 +20,7 @@
 
    ![quotes](../images/quote_dde.png)
 
-   Заголовок окна должен содержать через @ код и класс инструмента, по которому в [QuikTrader](xref:StockSharp.Quik.QuikTrader) будет происходить сопоставление объекта [Security](xref:StockSharp.BusinessEntities.Security) и стакана. Например, для Лукойла заголовок будет **LKOH@TQBR**. Для инструментов [РТС](http://rts.ru) класс инструмента будет равен FORTS. Стакан для июньского фьючерса на индекс РТС, к примеру, будет иметь заголовок **RIM5@FORTS**. Подробнее, в разделе [Идентификатор инструмента](SecurityId.md). 
+   Заголовок окна должен содержать через @ код и класс инструмента, по которому в [QuikTrader](xref:StockSharp.Quik.QuikTrader) будет происходить сопоставление объекта [Security](xref:StockSharp.BusinessEntities.Security) и стакана. Например, для Лукойла заголовок будет **LKOH@TQBR**. Для инструментов [РТС](http://rts.ru/) класс инструмента будет равен FORTS. Стакан для июньского фьючерса на индекс РТС, к примеру, будет иметь заголовок **RIM5@FORTS**. Подробнее, в разделе [Идентификатор инструмента](SecurityId.md). 
 
    > [!CAUTION]
    > Если код инструмента содержит символ @, то рекомендуется поменять разделитель на другой символ через свойство [SecurityIdGenerator.Delimiter](xref:StockSharp.Algo.SecurityIdGenerator.Delimiter) у [Connector.SecurityIdGenerator](xref:StockSharp.Algo.Connector.SecurityIdGenerator). 

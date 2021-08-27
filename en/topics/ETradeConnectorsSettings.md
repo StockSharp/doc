@@ -6,7 +6,7 @@ The interaction mechanism is shown in this figure:
 
 ![ETrade](../images/ETrade.png)
 
-[E\*TRADE](ETrade.md) uses the OAuth 1.0a authorization protocol, which requires a login and password over the browser on the [E\*TRADE](https://etrade.com) site. The full authorization procedure sequence is shown in the following figure:
+[E\*TRADE](ETrade.md) uses the OAuth 1.0a authorization protocol, which requires a login and password over the browser on the [E\*TRADE](https://etrade.com/) site. The full authorization procedure sequence is shown in the following figure:
 
 ![etrade autoriazation](../images/etrade_autoriazation.png)
 

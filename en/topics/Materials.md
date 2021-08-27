@@ -8,7 +8,7 @@
 
 **Contacts:**
 
-- Platform site \- [https:\/\/stocksharp.com](https://stocksharp.com). 
+- Platform site \- [https:\/\/stocksharp.com](https://stocksharp.com/). 
 - News, articles, forum for discussion \- [StockSharp Forum, Articles, News](https://stocksharp.com/community/). 
 - YouTube channel \- [StockSharp YouTube](https://youtube.com/user/StockSharp/). 
 - Facebook \- [StockSharp Facebook](https://facebook.com/stocksharp). 

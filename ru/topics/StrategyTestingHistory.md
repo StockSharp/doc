@@ -4,7 +4,7 @@
 
 Данные для тестирования на истории должны быть заранее скачаны и сохранены в специальном [S\#](StockSharpAbout.md) формате. Это можно сделать самостоятельно, используя [History](xref:StockSharp.Algo.History) и [API](StoragesApi.md), или настроить и запустить специальную программу [S\#.Data](Hydra.md). 
 
-В дистрибутиве [S\#](StockSharpAbout.md) находится пример SampleHistoryTesting (а также архив HistoryData.zip, где лежат исторические данные по тикам, стаканам и свечам, для примера), который тестирует стратегию [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%B7%D1%8F%D1%89%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F) на истории. Для сравнения скорости и качества, тестирование идет с различным набором маркет\-данных: 
+В дистрибутиве [S\#](StockSharpAbout.md) находится пример SampleHistoryTesting (а также архив HistoryData.zip, где лежат исторические данные по тикам, стаканам и свечам, для примера), который тестирует стратегию [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя) на истории. Для сравнения скорости и качества, тестирование идет с различным набором маркет\-данных: 
 
 ![samplehistorytest](../images/sample_history_test.png)
 
@@ -287,7 +287,7 @@
    ```
 
    Для переданных в конструктор [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) инструментов и портфелей вызываются [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) и [IPortfolioProvider.NewPortfolio](xref:StockSharp.BusinessEntities.IPortfolioProvider.NewPortfolio). 
-8. Создание самой стратегии [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%B7%D1%8F%D1%89%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F): 
+8. Создание самой стратегии [Cкользящая Cредняя](https://ru.wikipedia.org/wiki/Скользящая_средняя): 
 
    ```cs
    // создаем торговую стратегию, скользящие средние на 80 5-минуток и 10 5-минуток
