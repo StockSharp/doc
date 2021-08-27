@@ -68,7 +68,8 @@
     ],
     "dest": "../../docfx_test/_site/ru",
     "template": [
-      "default"
+      "default",
+      "../darkfx"
     ]
   },
   "__pdf": {
