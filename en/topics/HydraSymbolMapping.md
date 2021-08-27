@@ -19,13 +19,9 @@ To match instruments and connections you need:
    - In the **Security** code and **Board code** columns, specify the instrument code and board code. In the columns **Security code in adapter** and **Board code in adapter** specify the instrument code and the board code as they are specified in the external trading system. Click **OK**![Designer Security mapping 01 01](../images/Designer_Security_mapping_01_01.png)
    - We repeat the steps for the **Transaq** and **CQG Continuum** connections in the same way. 
 
-   | **Transaq**
-                                                                       | **CQG Continuum**
-                                                                 |
-   | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-   | ![Designer Security mapping 01 02](../images/Designer_Security_mapping_01_02.png)
- | ![Designer Security mapping 01 03](../images/Designer_Security_mapping_01_03.png)
- |
+   | **Transaq**                                                                       | **CQG Continuum**                                                                 |
+   | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+   | ![Designer Security mapping 01 02](../images/Designer_Security_mapping_01_02.png) | ![Designer Security mapping 01 03](../images/Designer_Security_mapping_01_03.png) |
 4. Now all downloaded data, in our case for APPLE shares, will be saved in one place 
 
 ## Recommended content

@@ -24,40 +24,18 @@
    > Пример работает с инструментом Лукойл. Для использования других инструментов необходимо настроить окна со стаканами по аналогии. 
 4. Далее, необходимо изменить метаданные для инструментов и стаканов. Это делается через таблицу [DdeTable](xref:StockSharp.Quik.DdeTable). Для каждого типа торгового объекта существует своя отдельная таблица с метаданными, которые получаются через [QuikTrader](xref:StockSharp.Quik.QuikTrader): 
 
-   | Название таблицы
-        | Свойство с метаданными
-                                                                            |
-   | ------------------------- | --------------------------------------------------------------------------------------------------- |
-   | Инструменты
-             | [QuikTrader.SecuritiesTable](xref:StockSharp.Quik.QuikTrader.SecuritiesTable)
-                     |
-   | Мои сделки
-              | [QuikTrader.MyTradesTable](xref:StockSharp.Quik.QuikTrader.MyTradesTable)
-                         |
-   | Все сделки
-              | [QuikTrader.TradesTable](xref:StockSharp.Quik.QuikTrader.TradesTable)
-                             |
-   | Заявки
-                  | [QuikTrader.OrdersTable](xref:StockSharp.Quik.QuikTrader.OrdersTable)
-                             |
-   | Стоп\-заявки
-            | [QuikTrader.StopOrdersTable](xref:StockSharp.Quik.QuikTrader.StopOrdersTable)
-                     |
-   | Портфель по бумагам
-     | [QuikTrader.EquityPortfoliosTable](xref:StockSharp.Quik.QuikTrader.EquityPortfoliosTable)
-         |
-   | Портфель по деривативам
- | [QuikTrader.DerivativePortfoliosTable](xref:StockSharp.Quik.QuikTrader.DerivativePortfoliosTable)
- |
-   | Позиции по бумагам
-      | [QuikTrader.EquityPositionsTable](xref:StockSharp.Quik.QuikTrader.EquityPositionsTable)
-           |
-   | Позиции по деривативам
-  | [QuikTrader.DerivativePositionsTable](xref:StockSharp.Quik.QuikTrader.DerivativePositionsTable)
-   |
-   | Стакан
-                  | [QuikTrader.QuotesTable](xref:StockSharp.Quik.QuikTrader.QuotesTable)
-                             |
+   | Название таблицы        | Свойство с метаданными                                                                            |
+   | ----------------------- | ------------------------------------------------------------------------------------------------- |
+   | Инструменты             | [QuikTrader.SecuritiesTable](xref:StockSharp.Quik.QuikTrader.SecuritiesTable)                     |
+   | Мои сделки              | [QuikTrader.MyTradesTable](xref:StockSharp.Quik.QuikTrader.MyTradesTable)                         |
+   | Все сделки              | [QuikTrader.TradesTable](xref:StockSharp.Quik.QuikTrader.TradesTable)                             |
+   | Заявки                  | [QuikTrader.OrdersTable](xref:StockSharp.Quik.QuikTrader.OrdersTable)                             |
+   | Стоп\-заявки            | [QuikTrader.StopOrdersTable](xref:StockSharp.Quik.QuikTrader.StopOrdersTable)                     |
+   | Портфель по бумагам     | [QuikTrader.EquityPortfoliosTable](xref:StockSharp.Quik.QuikTrader.EquityPortfoliosTable)         |
+   | Портфель по деривативам | [QuikTrader.DerivativePortfoliosTable](xref:StockSharp.Quik.QuikTrader.DerivativePortfoliosTable) |
+   | Позиции по бумагам      | [QuikTrader.EquityPositionsTable](xref:StockSharp.Quik.QuikTrader.EquityPositionsTable)           |
+   | Позиции по деривативам  | [QuikTrader.DerivativePositionsTable](xref:StockSharp.Quik.QuikTrader.DerivativePositionsTable)   |
+   | Стакан                  | [QuikTrader.QuotesTable](xref:StockSharp.Quik.QuikTrader.QuotesTable)                             |
 
    Через [QuikTrader.SecuritiesTable](xref:StockSharp.Quik.QuikTrader.SecuritiesTable) и [QuikTrader.QuotesTable](xref:StockSharp.Quik.QuikTrader.QuotesTable) добавляются требуемые колонки в том порядке, в которым они были добавлены в [Quik](Quik.md): 
 
