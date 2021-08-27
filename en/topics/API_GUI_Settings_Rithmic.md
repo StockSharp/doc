@@ -4,73 +4,27 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings Rithmic](../images/API_GUI_Settings_Rithmic.png)
 
-- **Login**
-
-   \- Login.
-- **Password**
-
-   \- Password.
-- **Certificate**
-
-   \- Path to certificate file, necessary to connect to Rithmic system.
-- **File log**
-
-   \- Path to log file.
-- **Server type**
-
-   \- Server type.
-- **Point (admin)**
-
-   \- Connection point for administrative functions (initialization\/deinitialization).
-- **Point (data)**
-
-   \- Connection point to market data.
-- **Login (trans)**
-
-   \- Additional login. Used when transaction sending is carried out to a separate server.
-- **Point (transactions)**
-
-   \- Connection point to the transactions execution system.
-- **Password (trans)**
-
-   \- Additional password. Used when transaction sending is carried out to a separate server.
-- **Point (positions)**
-
-   \- Connection point for access to portfolios and positions information.
-- **Point (history)**
-
-   \- Connection point for access to history data.
-- **Domain (address)**
-
-   \- Domain address.
-- **Domain (name)**
-
-   \- Domain name.
-- **Licenses**
-
-   \- Licenses server address.
-- **Broker**
-
-   \- Broker address.
-- **Log (address)**
-
-   \- Logger address.
-- **User name (hist)**
-
-   \- Additional login. User id used for authentication with the history plant.
-- **Password (hist)**
-
-   \- Additional password. Password used for authentication with the history plant
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Login** \- Login.
+- **Password** \- Password.
+- **Certificate** \- Path to certificate file, necessary to connect to Rithmic system.
+- **File log** \- Path to log file.
+- **Server type** \- Server type.
+- **Point (admin)** \- Connection point for administrative functions (initialization\/deinitialization).
+- **Point (data)** \- Connection point to market data.
+- **Login (trans)** \- Additional login. Used when transaction sending is carried out to a separate server.
+- **Point (transactions)** \- Connection point to the transactions execution system.
+- **Password (trans)** \- Additional password. Used when transaction sending is carried out to a separate server.
+- **Point (positions)** \- Connection point for access to portfolios and positions information.
+- **Point (history)** \- Connection point for access to history data.
+- **Domain (address)** \- Domain address.
+- **Domain (name)** \- Domain name.
+- **Licenses** \- Licenses server address.
+- **Broker** \- Broker address.
+- **Log (address)** \- Logger address.
+- **User name (hist)** \- Additional login. User id used for authentication with the history plant.
+- **Password (hist)** \- Additional password. Password used for authentication with the history plant
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

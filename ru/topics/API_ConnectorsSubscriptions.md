@@ -44,18 +44,8 @@ _connector.Subscribe(subscription);
 
 Состояния подписок:
 
-- [Stopped](xref:StockSharp.Algo.SubscriptionStates.Stopped)
-
-   \- подписка неактивна (остановлена или не запускалась). 
-- [Active](xref:StockSharp.Algo.SubscriptionStates.Active)
-
-   \- подписка активна, и она может передавать исторические данные до тех пор, пока не перейдет в online или не будет завершена. 
-- [Error](xref:StockSharp.Algo.SubscriptionStates.Error)
-
-   \- подписка неактивна и находится в состоянии ошибки. 
-- [Finished](xref:StockSharp.Algo.SubscriptionStates.Finished)
-
-   \- подписка закончила свою работу (все данные получены). 
-- [Online](xref:StockSharp.Algo.SubscriptionStates.Online)
-
-   \- подписка перешла в состояние online и передает только данные в реальном времени. 
+- [Stopped](xref:StockSharp.Algo.SubscriptionStates.Stopped) \- подписка неактивна (остановлена или не запускалась). 
+- [Active](xref:StockSharp.Algo.SubscriptionStates.Active) \- подписка активна, и она может передавать исторические данные до тех пор, пока не перейдет в online или не будет завершена. 
+- [Error](xref:StockSharp.Algo.SubscriptionStates.Error) \- подписка неактивна и находится в состоянии ошибки. 
+- [Finished](xref:StockSharp.Algo.SubscriptionStates.Finished) \- подписка закончила свою работу (все данные получены). 
+- [Online](xref:StockSharp.Algo.SubscriptionStates.Online) \- подписка перешла в состояние online и передает только данные в реальном времени. 

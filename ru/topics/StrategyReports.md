@@ -7,24 +7,8 @@
 - [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) \- генерация отчета в формат [Excel](https://ru.wikipedia.org/wiki/Excel). При данной генерации можно использовать файл\-шаблон ([Template](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template)), который уже содержит необходимые формулы и графики, опирающиеся на генерируемые данные. Данные из шаблона перед генерацией копируются в результирующий файл, имя которого передается через конструктор. 
 
   По умолчанию, [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) использует лист [Excel](https://ru.wikipedia.org/wiki/Excel) с названием "отчет", куда записывает данные. Если такого листа в файле\-шаблоне нет, то он будет автоматически создан. 
-- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport)
-
-   \- генерация отчета в формат 
-
-  [Xml](https://ru.wikipedia.org/wiki/Xml)
-
-  . Данный формат удобен, когда необходимо передать параметры стратегии из торгового робота в другую программу. 
-- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport)
-
-   \- генерация отчета в формат 
-
-  [CSV](https://ru.wikipedia.org/wiki/CSV)
-
-  . Упрощенная версия 
-
-  [Excel](https://ru.wikipedia.org/wiki/Excel)
-
-   отчета, поддерживается большим количеством сторонних программ. 
+- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport) \- генерация отчета в формат [Xml](https://ru.wikipedia.org/wiki/Xml). Данный формат удобен, когда необходимо передать параметры стратегии из торгового робота в другую программу. 
+- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport) \- генерация отчета в формат [CSV](https://ru.wikipedia.org/wiki/CSV). Упрощенная версия [Excel](https://ru.wikipedia.org/wiki/Excel) отчета, поддерживается большим количеством сторонних программ. 
 
 ### Предварительные условия
 

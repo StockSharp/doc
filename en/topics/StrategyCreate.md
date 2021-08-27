@@ -16,9 +16,7 @@ The moving average algorithm:
 
    > [!TIP]
    > Before starting the program it is recommended to update the data by downloading them from the website. The correct data format can be viewed in the test file. 
-2. The simple moving average formula: 
-
-   *SMA \= (P<sub>m</sub>m + P<sub>m-1</sub>m\-1 + ... + P<sub>m-n</sub>m\-n) \/ n *
+2. The simple moving average formula: *SMA \= (P<sub>m</sub>m + P<sub>m-1</sub>m\-1 + ... + P<sub>m-n</sub>m\-n) \/ n *
 
    Indicators implemented in the [Indicators](xref:StockSharp.Algo.Indicators) namespace. For more details see [Indicators](Indicators.md). 
 3. The implementation code of the trading strategy for moving average: 

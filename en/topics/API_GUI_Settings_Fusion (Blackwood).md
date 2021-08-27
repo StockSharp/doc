@@ -4,37 +4,15 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings Fusion (Blackwood)](../images/API_GUI_Settings_Fusion (Blackwood).png)
 
-- **Login**
-
-   \- Login.
-- **Password**
-
-   \- Password.
-- **Market data**
-
-   \- Market data server address.
-- **History**
-
-   \- History data server address.
-- **Transactions**
-
-   \- Server address of transactions execution.
-- **Path to logs**
-
-   \- Path to directory, where BWOrders.Log file will be created.
-- **Override**
-
-   \- Override dll file from resources. Turned on by default.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Login** \- Login.
+- **Password** \- Password.
+- **Market data** \- Market data server address.
+- **History** \- History data server address.
+- **Transactions** \- Server address of transactions execution.
+- **Path to logs** \- Path to directory, where BWOrders.Log file will be created.
+- **Override** \- Override dll file from resources. Turned on by default.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

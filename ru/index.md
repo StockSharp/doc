@@ -1,5 +1,13 @@
 # О StockSharp
 
+@System.String
+@StockSharp.Messages
+@StockSharp.Messages.QuoteChangeMessage
+@StockSharp.Messages.QuoteChangeMessage.State
+[Состояние](xref:StockSharp.Messages.QuoteChangeMessage.State)
+[](xref:StockSharp.Messages.QuoteChangeMessage.State)
+<xref:StockSharp.Messages.QuoteChangeMessage.State>
+
 [StockSharp (кратко S\#)](https://stocksharp.ru/products/) \- **бесплатные** программы для торговли на всех площадках мира (российские, американские, азиатские, акции, фьючерсы, опционы, биткоины, форекс и т.д.). Вы сможете торговать в ручном режиме или с помощью торговых роботов (обычные или HFT). 
 
 **Доступно боле 70 подключений** различных бирж мира [Коннекторы](topics/API_Connectors.md).

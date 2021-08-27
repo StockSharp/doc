@@ -95,16 +95,8 @@ SampleOptionQuoting example
    ...
    ```
 3. When connecting, set the initial control settings:
-   1. Resetting the the underlying instrument of the 
-
-      [UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset)
-
-       control; 
-   2. Redrawing the chart with the initial values 
-
-      [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh)
-
-      ; 
+   1. Resetting the the underlying instrument of the [UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) control; 
+   2. Redrawing the chart with the initial values [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh); 
    3. Specifying message provider for market data and instruments.
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

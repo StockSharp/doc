@@ -6,21 +6,9 @@
 
 Данное окно позволяет выводить сообщения от всех [ILogSource](xref:StockSharp.Logging.ILogSource): 
 
-- стратегий (
-
-  [Strategy](xref:StockSharp.Algo.Strategies.Strategy)
-
-  );
-- подключений (
-
-  [IConnector](xref:StockSharp.BusinessEntities.IConnector)
-
-  );
-- собственных реализаций 
-
-  [ILogSource](xref:StockSharp.Logging.ILogSource)
-
-   (например, главное окно в роботе).
+- стратегий ([Strategy](xref:StockSharp.Algo.Strategies.Strategy));
+- подключений ([IConnector](xref:StockSharp.BusinessEntities.IConnector));
+- собственных реализаций [ILogSource](xref:StockSharp.Logging.ILogSource) (например, главное окно в роботе).
 
 В виде дерева показывается вложенность источников. Каждая родительская вершина содержит сообщения всех вложенных и так далее, до самого нижнего уровня. Для стратегий такая иерархия позволяет увидеть [дочерние стратегии](StrategyChilds.md). Для подключений это также полезно в случае использования [множественных подключений](API_Connectors.md). Аналогично, такую же вложенность можно организовать и для собственного робота, реализовав свойство [ILogSource.Parent](xref:StockSharp.Logging.ILogSource.Parent). 
 

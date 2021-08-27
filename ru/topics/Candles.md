@@ -2,28 +2,12 @@
 
 [S\#](StockSharpAbout.md) поддерживает следующие виды:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle)
-
-   \- свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle)
-
-   \- свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle)
-
-   \- свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle)
-
-   \- то же самое, что и 
-
-  [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle)
-
-  , только в качестве ограничения вместо объема берется количество сделок. 
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle)
-
-   \- свеча пункто\-цифрового графика (график крестики\-нолики). 
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle)
-
-   \- Рэнко свеча. 
+- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) \- свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
+- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) \- свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
+- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) \- свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
+- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) \- то же самое, что и [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), только в качестве ограничения вместо объема берется количество сделок. 
+- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) \- свеча пункто\-цифрового графика (график крестики\-нолики). 
+- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) \- Рэнко свеча. 
 
 Как работать со свечами, показано в примере SampleConnection, который расположен в папке *Samples\/Common\/SampleConnection*.
 
@@ -93,44 +77,8 @@
    ```
 5. Для [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) можно задать некоторые свойства:
    - [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) задает режим построения свечей. По умолчанию задан [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild), что говорит о том, что будут запрошены готовые данные, или построены из заданного в свойстве [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных. Также можно установить [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) для запроса только готовых данных. Или [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), для построения из заданного в свойстве [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных без запроса готовых данных. 
-   - При построении свечей необходимо задать свойство 
-
-     [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom)
-
-     , которое говорит о том, какой именно тип данных используется как источник (
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-     , 
-
-     [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth)
-
-     , 
-
-     [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades)
-
-      и тд. ). 
-   - Для некоторых типов данных необходимо дополнительно указать свойство 
-
-     [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField)
-
-     , из которого будут построены данные. Например, для 
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-      можно указать 
-
-     [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice)
-
-     , что говорт о том, что свечи будут строиться из свойства 
-
-     [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice)
-
-      данных 
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-     . 
+   - При построении свечей необходимо задать свойство [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), которое говорит о том, какой именно тип данных используется как источник ([Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) и тд. ). 
+   - Для некоторых типов данных необходимо дополнительно указать свойство [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), из которого будут построены данные. Например, для [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) можно указать [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), что говорт о том, что свечи будут строиться из свойства [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) данных [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1). 
 6. Рассмотрим несколько примеров построения разных типов свечей:
    - Так как большинство источников предоставляют свечи стандартных таймфреймом, то для получения таких свечей достаточно задать тип и таймфрейм: 
 

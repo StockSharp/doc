@@ -2,30 +2,14 @@
 
 The [IConnector](xref:StockSharp.BusinessEntities.IConnector) events related to orders listed below:
 
-- [NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder)
-
-   \- the new order received event. 
-- [OrderCancelFailed](xref:StockSharp.Algo.Connector.OrderCancelFailed)
-
-   \- the event on errors related to orders cancel. 
-- [OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged)
-
-   \- the order state change event (cancelled, matched). 
-- [OrderRegisterFailed](xref:StockSharp.Algo.Connector.OrderRegisterFailed)
-
-   \- the event on errors related to orders registration. 
-- [NewStopOrder](xref:StockSharp.Algo.Connector.NewStopOrder)
-
-   \- the new stop order received event. 
-- [StopOrderCancelFailed](xref:StockSharp.Algo.Connector.StopOrderCancelFailed)
-
-   \- the event on errors related to stop orders cancelling. 
-- [StopOrderChanged](xref:StockSharp.Algo.Connector.StopOrderChanged)
-
-   \- the stop orders state change event. 
-- [StopOrderRegisterFailed](xref:StockSharp.Algo.Connector.StopOrderRegisterFailed)
-
-   \- the event on errors related to stop orders registration. 
+- [NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder) \- the new order received event. 
+- [OrderCancelFailed](xref:StockSharp.Algo.Connector.OrderCancelFailed) \- the event on errors related to orders cancel. 
+- [OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged) \- the order state change event (cancelled, matched). 
+- [OrderRegisterFailed](xref:StockSharp.Algo.Connector.OrderRegisterFailed) \- the event on errors related to orders registration. 
+- [NewStopOrder](xref:StockSharp.Algo.Connector.NewStopOrder) \- the new stop order received event. 
+- [StopOrderCancelFailed](xref:StockSharp.Algo.Connector.StopOrderCancelFailed) \- the event on errors related to stop orders cancelling. 
+- [StopOrderChanged](xref:StockSharp.Algo.Connector.StopOrderChanged) \- the stop orders state change event. 
+- [StopOrderRegisterFailed](xref:StockSharp.Algo.Connector.StopOrderRegisterFailed) \- the event on errors related to stop orders registration. 
 
 Transactions (orders registration, replacement or cancelling) are sent in asynchronous mode. Asynchronous mode allows the trading program not to wait for transaction delivery confirmation by the exchange and continues to work further. That reduces program wait time and increases the speed of response to the market situation changes. 
 

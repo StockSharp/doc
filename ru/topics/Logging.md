@@ -4,36 +4,12 @@
 
 Стандартно в [S\#](StockSharpAbout.md) входят следующие реализации [ILogListener](xref:StockSharp.Logging.ILogListener), выбор которых влияет на то, куда будут переданы поступившие от стратегии сообщения: 
 
-1. [FileLogListener](xref:StockSharp.Logging.FileLogListener)
-
-    \- записывает сообщения в текстовый файл. Рекомендуется использовать для уже сделанного робота, и использовать логи в форс\-мажорных ситуациях. 
-2. [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener)
-
-    \- проигрывает звуковое сообщение когда приходит новое сообщение. Рекомендуется использовать, если за роботом нет постоянного внимания. 
-3. [ConsoleLogListener](xref:StockSharp.Logging.ConsoleLogListener)
-
-    \- записывает сообщения в консольное окно (если робот не имеет такое окно, то оно будет автоматически создано). Рекомендуется использовать для отладки и тестирования робота. 
-4. [DebugLogListener](xref:StockSharp.Logging.DebugLogListener)
-
-    \- записывает сообщения в отладочное окно. Такое окно можно просматривать через специальные программы, такие как 
-
-   [DebugView](https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx)
-
-   . Рекомендуется использовать для отладки и тестирования робота. 
-5. [EmailLogListener](xref:StockSharp.Logging.EmailLogListener)
-
-    \- отсылает сообщения на указанный email адрес. Рекомендуется использовать, если робот расположен на непостоянно контролируемом компьютере (на сервере у хостера). 
-6. [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)
-
-    \- отображает сообщения через специальное окно 
-
-   [LogWindow](xref:StockSharp.Xaml.LogWindow)
-
-   . Умеет работать в двух режимах: когда все сообщения пишутся в одно окно, и когда для каждого 
-
-   [ILogSource](xref:StockSharp.Logging.ILogSource)
-
-    создается отдельное окно. Рекомендуется использовать, если робот обладает графическим интерфейсом. 
+1. [FileLogListener](xref:StockSharp.Logging.FileLogListener) \- записывает сообщения в текстовый файл. Рекомендуется использовать для уже сделанного робота, и использовать логи в форс\-мажорных ситуациях. 
+2. [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener) \- проигрывает звуковое сообщение когда приходит новое сообщение. Рекомендуется использовать, если за роботом нет постоянного внимания. 
+3. [ConsoleLogListener](xref:StockSharp.Logging.ConsoleLogListener) \- записывает сообщения в консольное окно (если робот не имеет такое окно, то оно будет автоматически создано). Рекомендуется использовать для отладки и тестирования робота. 
+4. [DebugLogListener](xref:StockSharp.Logging.DebugLogListener) \- записывает сообщения в отладочное окно. Такое окно можно просматривать через специальные программы, такие как [DebugView](https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx). Рекомендуется использовать для отладки и тестирования робота. 
+5. [EmailLogListener](xref:StockSharp.Logging.EmailLogListener) \- отсылает сообщения на указанный email адрес. Рекомендуется использовать, если робот расположен на непостоянно контролируемом компьютере (на сервере у хостера). 
+6. [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) \- отображает сообщения через специальное окно [LogWindow](xref:StockSharp.Xaml.LogWindow). Умеет работать в двух режимах: когда все сообщения пишутся в одно окно, и когда для каждого [ILogSource](xref:StockSharp.Logging.ILogSource) создается отдельное окно. Рекомендуется использовать, если робот обладает графическим интерфейсом. 
 
 [LogListener](xref:StockSharp.Logging.LogListener) можно настроить на фильтрацию сообщений через свойство [Filters](xref:StockSharp.Logging.LogListener.Filters). Например, через фильтры можно задать, какой тип сообщений стоит обрабатывать. Это особенно полезно в случаях использования [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener) или [EmailLogListener](xref:StockSharp.Logging.EmailLogListener), чтобы, к примеру, посылать e\-mail только в критических ситуациях (ошибка алгоритма торговли), а не на каждое отладочное сообщение. 
 

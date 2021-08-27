@@ -10,12 +10,8 @@ If the source does not contain extended information on an instrument, then empty
 
 To select the required extended information, you need:
 
-1. in the Securities tab, click on the **Extended information** button
-
-   ![hydra Extension Info securities](../images/hydra_ExtensionInfo_securities.png)
-2. Then a window will appear in which you need to select the path to the required CSV file
-
-   ![hydra Extension Info window](../images/hydra_ExtensionInfo_window.png)
+1. in the Securities tab, click on the **Extended information** button![hydra Extension Info securities](../images/hydra_ExtensionInfo_securities.png)
+2. Then a window will appear in which you need to select the path to the required CSV file![hydra Extension Info window](../images/hydra_ExtensionInfo_window.png)
 
 Below is an example of **CSV** file of extended information opened in different editors **MS Excel** and **NotePad.**
 

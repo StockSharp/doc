@@ -10,21 +10,11 @@ All connectors provide the ability to configure reconnection in case of disconne
 
 **Reconnection properties**
 
-- **Interval **
-
-   \- The interval at which connection attempts will occur. 
-- **Initially **
-
-   \- The number of attempts to establish the initial connection if it was not established (timeout, network failure, etc.). 
-- **Reconnection **
-
-   \- The number of attempts to reconnect if the connection was disconnected during operation. 
-- **Timeout **
-
-   \- Timeout for successful connection\/disconnection. 
-- **Operating mode **
-
-   \- The operating mode during which it is necessary to make connections. 
+- **Interval ** \- The interval at which connection attempts will occur. 
+- **Initially ** \- The number of attempts to establish the initial connection if it was not established (timeout, network failure, etc.). 
+- **Reconnection ** \- The number of attempts to reconnect if the connection was disconnected during operation. 
+- **Timeout ** \- Timeout for successful connection\/disconnection. 
+- **Operating mode ** \- The operating mode during which it is necessary to make connections. 
 
 ### Code reconnection settings
 
@@ -32,33 +22,9 @@ Code reconnection settings
 
 The reconnection mechanism is configured through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property and allows you to monitor the following error scenarios: 
 
-- Unable to establish a connection (no communication, incorrect username\/password, etc.). The 
-
-  [ReConnectionSettings.AttemptCount](xref:StockSharp.Messages.ReConnectionSettings.AttemptCount)
-
-   property sets the number of attempts to establish a connection. By default, it is 0, which means that the mode is disabled. \-1 means an infinite number of attempts. 
-- The connection was broken during operation. The 
-
-  [ReConnectionSettings.ReAttemptCount](xref:StockSharp.Messages.ReConnectionSettings.ReAttemptCount)
-
-   property sets the number of attempts to reconnect the connection. By default, it is 100. \-1 means an infinite number of attempts. 0 \- mode is disabled. 
-- When connecting or disconnecting a connection, the corresponding 
-
-  [IConnector.Connected](xref:StockSharp.BusinessEntities.IConnector.Connected)
-
-   or 
-
-  [IConnector.Disconnected](xref:StockSharp.BusinessEntities.IConnector.Disconnected)
-
-   events may not be received for a long time. For such situations, you can use the 
-
-  [ReConnectionSettings.TimeOutInterval](xref:StockSharp.Messages.ReConnectionSettings.TimeOutInterval)
-
-   property to set the maximum acceptable timeout for a successful event. If, after this time, the desired event does not occur, the 
-
-  [IConnector.ConnectionError](xref:StockSharp.BusinessEntities.IConnector.ConnectionError)
-
-   event is raised with a timeout error. 
+- Unable to establish a connection (no communication, incorrect username\/password, etc.). The [ReConnectionSettings.AttemptCount](xref:StockSharp.Messages.ReConnectionSettings.AttemptCount) property sets the number of attempts to establish a connection. By default, it is 0, which means that the mode is disabled. \-1 means an infinite number of attempts. 
+- The connection was broken during operation. The [ReConnectionSettings.ReAttemptCount](xref:StockSharp.Messages.ReConnectionSettings.ReAttemptCount) property sets the number of attempts to reconnect the connection. By default, it is 100. \-1 means an infinite number of attempts. 0 \- mode is disabled. 
+- When connecting or disconnecting a connection, the corresponding [IConnector.Connected](xref:StockSharp.BusinessEntities.IConnector.Connected) or [IConnector.Disconnected](xref:StockSharp.BusinessEntities.IConnector.Disconnected) events may not be received for a long time. For such situations, you can use the [ReConnectionSettings.TimeOutInterval](xref:StockSharp.Messages.ReConnectionSettings.TimeOutInterval) property to set the maximum acceptable timeout for a successful event. If, after this time, the desired event does not occur, the [IConnector.ConnectionError](xref:StockSharp.BusinessEntities.IConnector.ConnectionError) event is raised with a timeout error. 
 
 1. When creating a gateway, you need to initialize the settings of the reconnection mechanism through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property: 
 

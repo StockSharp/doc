@@ -32,12 +32,8 @@ The import process securities.
    - For the {LastTradeTime} field, select the **Last trade time** field the **S\# field** window. We assign it the value 8.
    - For the {LastTradePrice} field, select the **Last trade price** field from the **S\# field** window. We assign it the value 9.
    - For the {LastTradeVolume} field, select the **Last trade volume** field from the **S\# field** window. We assign it the value 10.
-   - The field setting window will look like this:
-
-     ![hydra import prop level 1](../images/hydra_import_prop_level1.png)
+   - The field setting window will look like this:![hydra import prop level 1](../images/hydra_import_prop_level1.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
-3. 3.To preview the data, click the **Preview** button.
-
-   ![hydra import preview level 1](../images/hydra_import_preview_level1.png)
+3. 3.To preview the data, click the **Preview** button.![hydra import preview level 1](../images/hydra_import_preview_level1.png)
 4. Click the **Import** button..

@@ -7,24 +7,8 @@ The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Stra
 - [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) \- report generation in the [Excel](https://en.wikipedia.org/wiki/Excel) format. With this generation, you can use the template file ([Template](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport.Template)) which already contains the necessary formulas and charts based on the generated data. Data from the template before generating copied to the output file whose name is passed through the constructor. 
 
   By default, the [ExcelStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.ExcelStrategyReport) uses an [Excel](https://en.wikipedia.org/wiki/Excel) worksheet called "report", where it records the data. If such a sheet in the template file is not present, it will be automatically created. 
-- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport)
-
-   \- report generation in the 
-
-  [Xml](https://en.wikipedia.org/wiki/XML)
-
-   format. This format is useful when you need to pass strategy parameters from trading algorithm to another program. 
-- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport)
-
-   \- report generation in the 
-
-  [CSV](https://en.wikipedia.org/wiki/CSV)
-
-   format. A simplified version of the 
-
-  [Excel](https://en.wikipedia.org/wiki/Excel)
-
-   report, supported by a large number of third\-party programs. 
+- [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport) \- report generation in the [Xml](https://en.wikipedia.org/wiki/XML) format. This format is useful when you need to pass strategy parameters from trading algorithm to another program. 
+- [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport) \- report generation in the [CSV](https://en.wikipedia.org/wiki/CSV) format. A simplified version of the [Excel](https://en.wikipedia.org/wiki/Excel) report, supported by a large number of third\-party programs. 
 
 ### Prerequisites
 

@@ -9,21 +9,11 @@
 Advantages and features of S\#.Terminal:
 
 1. **Supports many sources: **[Connectors](API_Connectors.md).
-2. **Trade from the chart**
-
-   . 
-3. **Arbitrary time frames**
-
-   . 
-4. **Support for Volume, Tick, Range, PnF, Renko Candles**
-
-   . 
-5. **Clusters and box plots**
-
-   . 
-6. **Any markets:**
-
-    stocks, futures, Forex, bitcoins. 
+2. **Trade from the chart**. 
+3. **Arbitrary time frames**. 
+4. **Support for Volume, Tick, Range, PnF, Renko Candles**. 
+5. **Clusters and box plots**. 
+6. **Any markets:** stocks, futures, Forex, bitcoins. 
 
 ## Recommended content
 

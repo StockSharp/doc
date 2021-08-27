@@ -83,6 +83,4 @@ SampleLogging sample
    		throw new ArgumentOutOfRangeException();
    }
    ```
-7. The result of example work.
-
-   ![sample logging](../images/sample_logging.png)
+7. The result of example work.![sample logging](../images/sample_logging.png)

@@ -10,19 +10,11 @@
 
 Для построения нужно:
 
-1. Выбрать период и инструмент, для которого необходимо получить маркет\-данные.
+1. Выбрать период и инструмент, для которого необходимо получить маркет\-данные.![hydra LEVEL 1 build depth data](../images/hydra_LEVEL1_build_depth_data.png)
+2. Выбрать поле **Построить из** и выбрать нужный тип данных.![hydra type build data](../images/hydra_type_build_data.png)
 
-   ![hydra LEVEL 1 build depth data](../images/hydra_LEVEL1_build_depth_data.png)
-2. Выбрать поле **Построить из** и выбрать нужный тип данных.
-
-   ![hydra type build data](../images/hydra_type_build_data.png)
-
-   ВАЖНО\! Если для построения свечи в качестве источника выбираются **Стакан**, **Лог заявок**, **Level 1**, появляется возможность выбора дополнительных параметров.
-
-   ![hydra ext proper build data](../images/hydra_ext_proper_build_data.png)
-3. После настройки нужно нажать на кнопку ![hydra candles](../images/hydra_candles.png).
-
-   ![hydra LEVEL 1 build depth data result](../images/hydra_LEVEL1_build_depth_data_result.png)
+   ВАЖНО\! Если для построения свечи в качестве источника выбираются **Стакан**, **Лог заявок**, **Level 1**, появляется возможность выбора дополнительных параметров.![hydra ext proper build data](../images/hydra_ext_proper_build_data.png)
+3. После настройки нужно нажать на кнопку ![hydra candles](../images/hydra_candles.png).![hydra LEVEL 1 build depth data result](../images/hydra_LEVEL1_build_depth_data_result.png)
 
 Для построения **Свечей** так же доступен вариант построения свечей большего Тайм Фрейма из свечей меньшего Тайм Фрейма. 
 

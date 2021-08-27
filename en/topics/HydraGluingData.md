@@ -8,29 +8,17 @@ To do this, on the **Common** tab, select **Securities**, the**All securities** 
 
 As an example, we will consider gluing on an RTS index futures.
 
-1. To create a continuous futures, click the **Create security \=\> Continuous security** button on the **All securities** tab.
+1. To create a continuous futures, click the **Create security \=\> Continuous security** button on the **All securities** tab.![Hydra Gluing Check Data 00](../images/HydraGluingCheckData_00.png)
 
-   ![Hydra Gluing Check Data 00](../images/HydraGluingCheckData_00.png)
-
-   After that, the following window will appear:
-
-   ![HydraGluingWindow](../images/HydraGluingWindow.png)
+   After that, the following window will appear:![HydraGluingWindow](../images/HydraGluingWindow.png)
 2. 2.To create a continuous futures, you need to specify a name and add contracts.
 
    There are two ways to add contracts..
-   - Manually by clicking the ![hydra add](../images/hydra_add.png) button.
-
-     ![HydraGluingCSCustom](../images/HydraGluingCSCustom.png)
-   - If you set the first two letters of the contract as a name, for example, RI, and click the **Auto** button, then all the instruments found in the database will be added.
-
-     ![HydraGluingCSAuto](../images/HydraGluingCSAuto.png)
-3. We select the necessary contracts and set the transition dates. 
-
-   ![Hydra GluingCSAuto 00](../images/HydraGluingCSAuto_00.png)
+   - Manually by clicking the ![hydra add](../images/hydra_add.png) button.![HydraGluingCSCustom](../images/HydraGluingCSCustom.png)
+   - If you set the first two letters of the contract as a name, for example, RI, and click the **Auto** button, then all the instruments found in the database will be added.![HydraGluingCSAuto](../images/HydraGluingCSAuto.png)
+3. We select the necessary contracts and set the transition dates. ![Hydra GluingCSAuto 00](../images/HydraGluingCSAuto_00.png)
 4. Next, assign the instrument identifier **RI\_long9@FORTS** and click the **OK** button, after which a new instrument will be created
-5. Next, you need to click the [Candles](HydraExportCandles.md) button on the **Common** tab, select the resulting instrument, data period, set the **Composite element** value in the **Build from** field. Then click the ![hydra find](../images/hydra_find.png) button. 
-
-   ![HydraGluingTrades](../images/HydraGluingTrades.png)
+5. Next, you need to click the [Candles](HydraExportCandles.md) button on the **Common** tab, select the resulting instrument, data period, set the **Composite element** value in the **Build from** field. Then click the ![hydra find](../images/hydra_find.png) button. ![HydraGluingTrades](../images/HydraGluingTrades.png)
 
 The generated data can be exported to Excel, xml, Json or txt formats. The export is performed using the drop\-down list
 

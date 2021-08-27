@@ -2,16 +2,8 @@
 
 At the start of the strategy you may need to load the previously matched orders and trades (for example, when the algorithm has been restarted during the trading session or orders and trades transferred through the night). To do this: 
 
-1. To find those orders to be downloaded into the strategy, and to return them back from the method (for example, to download orders identifiers, if the strategy records every registration through the 
-
-   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
-
-    method from the file). 
-2. To combine the result with the base method 
-
-   [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders)
-
-   . 
+1. To find those orders to be downloaded into the strategy, and to return them back from the method (for example, to download orders identifiers, if the strategy records every registration through the [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders) method from the file). 
+2. To combine the result with the base method [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders). 
 3. Once orders are loaded in the strategy, all of their matched trades will be also loaded. This will be done automatically. 
 
 The following example shows the loading of all trades in the strategy: 

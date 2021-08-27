@@ -4,28 +4,12 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings CQG Continuum](../images/API_GUI_Settings_CQG Continuum.png)
 
-- **Login**
-
-   \- Login.
-- **Password**
-
-   \- Password.
-- **Address**
-
-   \- Server address.
-- **Software ID**
-
-   \- Unique software ID.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Login** \- Login.
+- **Password** \- Password.
+- **Address** \- Server address.
+- **Software ID** \- Unique software ID.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

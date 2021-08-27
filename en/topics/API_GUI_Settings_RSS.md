@@ -4,22 +4,10 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings RSS](../images/API_GUI_Settings_RSS.png)
 
-- **Address**
-
-   \- RSS feed address.
-- **Dates format**
-
-   \- Dates format Required to be filled if RSS stream format is different from ddd, dd MMM yyyy HH:mm:ss zzzz.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Address** \- RSS feed address.
+- **Dates format** \- Dates format Required to be filled if RSS stream format is different from ddd, dd MMM yyyy HH:mm:ss zzzz.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

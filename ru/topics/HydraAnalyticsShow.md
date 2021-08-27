@@ -11,22 +11,12 @@
 ![hydra analitics main 01](../images/hydra_analitics_main_01.png)
 
 1. Выбираем данные для анализа:
-   - В окне **Параметры** расположенной в правой части программы.
-
-     ![hydra analitics parameters](../images/hydra_analitics_parameters.png)
+   - В окне **Параметры** расположенной в правой части программы.![hydra analitics parameters](../images/hydra_analitics_parameters.png)
    - Устанавливаем инструмент, в нашем случае SBER@TQBR. Начальную и конечную дату, путь к данным и их формат.
 2. Запускаем скрипт при помощи кнопки ![hydra analitics run](../images/hydra_analitics_run.png).
-3. После чего отобразиться результат обработки.
-
-   ![hydra analitics table](../images/hydra_analitics_table.png)
-
-   . 
+3. После чего отобразиться результат обработки.![hydra analitics table](../images/hydra_analitics_table.png). 
 4. Просмотреть результаты:
 
-   По умолчанию результат формируется ввиде таблицы. Для просмотра полученных данныхв виде графиков, необходимо выбрать один из нескольких вариантов вывода данных.
+   По умолчанию результат формируется ввиде таблицы. Для просмотра полученных данныхв виде графиков, необходимо выбрать один из нескольких вариантов вывода данных.![hydra analitics main 01](../images/hydra_analitics_main_01.png)
 
-   ![hydra analitics main 01](../images/hydra_analitics_main_01.png)
-
-   После чего будет построен выбранный график по результатам процесса аналитики.
-
-   ![hydra analitics chart](../images/hydra_analitics_chart.png)
+   После чего будет построен выбранный график по результатам процесса аналитики.![hydra analitics chart](../images/hydra_analitics_chart.png)

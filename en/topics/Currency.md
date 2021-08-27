@@ -29,8 +29,6 @@ Currency conversion example
    // Euro into USD (prev day)
    var rate = CurrencyTypes.EUR.Convert(CurrencyTypes.USD, DateTime.Today - TimeSpan.FromDays(1));
    ```
-4. Here is an example of currency conversion: 
-
-   ![samplecurrency](../images/sample_currency.png)
+4. Here is an example of currency conversion: ![samplecurrency](../images/sample_currency.png)
 
 ## Recommended content

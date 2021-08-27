@@ -6,21 +6,11 @@
 
 Рассмотрим на примере скачивания инструментов с источника **Interactive Brokers**: 
 
-1. Выбираем скачать инструменты и нажимаем на кнопку **Расширенное условие**.
+1. Выбираем скачать инструменты и нажимаем на кнопку **Расширенное условие**.![hydra choose securitiy](../images/hydra_choose_securitiy.png)
+2. После этого раскроется список расширенных настроек для скачиваемого инструмента.![hydra choose securitiy 00](../images/hydra_choose_securitiy_00.png)
+3. Нужно скачать инструмент отвечающий следующим параметрам: Акция компании APPLE, валюта \- Доллар США. Для этого мы выставляем параметрыв инструмента как показано ниже и нажимаем **Ok**.![hydra choose securitiy 01](../images/hydra_choose_securitiy_01.png)
 
-   ![hydra choose securitiy](../images/hydra_choose_securitiy.png)
-2. После этого раскроется список расширенных настроек для скачиваемого инструмента.
-
-   ![hydra choose securitiy 00](../images/hydra_choose_securitiy_00.png)
-3. Нужно скачать инструмент отвечающий следующим параметрам: Акция компании APPLE, валюта \- Доллар США. Для этого мы выставляем параметрыв инструмента как показано ниже и нажимаем **Ok**.
-
-   ![hydra choose securitiy 01](../images/hydra_choose_securitiy_01.png)
-
-   После этого программа [S\#.Data](Hydra.md) скачает все инструменты отвечающие установленным параметрам. 
-
-   ![hydra choose securitiy 02](../images/hydra_choose_securitiy_02.png)
-
-   ![hydra choose securitiy 03](../images/hydra_choose_securitiy_03.png)
+   После этого программа [S\#.Data](Hydra.md) скачает все инструменты отвечающие установленным параметрам. ![hydra choose securitiy 02](../images/hydra_choose_securitiy_02.png)![hydra choose securitiy 03](../images/hydra_choose_securitiy_03.png)
 
 Настройка позволеяет пользователю выбрать различные параметры для загружаемого инструмента. 
 
@@ -28,11 +18,7 @@
 
 - **Шаг цены и объема**
 - **Минимальный и максимальный объемы**
-- **Внешний идентификатор**
-
-  ![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
-- Для опционов позволяет настроить **Базовый актив** и **Тип актива**(тип базового инструмента).
-
-  ![hydra choose securitiy 05](../images/hydra_choose_securitiy_05.png)
+- **Внешний идентификатор**![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
+- Для опционов позволяет настроить **Базовый актив** и **Тип актива**(тип базового инструмента).![hydra choose securitiy 05](../images/hydra_choose_securitiy_05.png)
 
 **Смотреть [видеоинструкцию](HydraSecuritiesCongfigDowVideo.md)**

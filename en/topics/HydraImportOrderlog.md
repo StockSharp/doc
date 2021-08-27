@@ -33,12 +33,8 @@ The import process securities.
    - For the {TimeInForce} field select the **Time** in force from the **S\# field** window \- a condition of limit order execution. We assign it the value 9.
    - For the {TradeId} field, select the **ID (trade)** field from the **S\# field** window \- the trade identifier. We assign it the value 10.
    - For the {TradePrice} field, select the **Price (trade)** field from the **S\# field** window \- the trade price. We assign it the value 11.
-   - The field setting window will look like this:
-
-     ![hydra import prop orderlog](../images/hydra_import_prop_orderlog.png)
+   - The field setting window will look like this:![hydra import prop orderlog](../images/hydra_import_prop_orderlog.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
-3. To preview the data, click the **Preview** button.
-
-   ![hydra import preview orderlog](../images/hydra_import_preview_orderlog.png)
+3. To preview the data, click the **Preview** button.![hydra import preview orderlog](../images/hydra_import_preview_orderlog.png)
 4. 5.Click the **Import** button.

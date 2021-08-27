@@ -2,24 +2,12 @@
 
 It is possible to make candles pattern recognition through the [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) class by the following methods:
 
-- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack)
-
-   \- Is it white or black candle. 
-- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu)
-
-   \- Is it a shadowless candle. 
-- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop)
-
-   \- Is it a neutral candle by trades. 
-- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer)
-
-   \- Is it a hammer candle. 
-- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone)
-
-   \- Is it a dragonfly or gravestone candle. 
-- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish)
-
-   \- Is it a bull or bear candle. 
+- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack) \- Is it white or black candle. 
+- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu) \- Is it a shadowless candle. 
+- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop) \- Is it a neutral candle by trades. 
+- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer) \- Is it a hammer candle. 
+- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone) \- Is it a dragonfly or gravestone candle. 
+- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish) \- Is it a bull or bear candle. 
 
 ### Common methods of work with candles
 

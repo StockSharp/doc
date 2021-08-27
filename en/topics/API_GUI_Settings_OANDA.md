@@ -4,18 +4,10 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings OANDA](../images/API_GUI_Settings_OANDA.png)
 
-- **Server**
-
-   \- Server
-- **Token**
-
-   \- Token
-- **Compression**
-
-   \- Compression.
-- **Transactions only**
-
-   \- Write log messages only for transaction stream.
+- **Server** \- Server
+- **Token** \- Token
+- **Compression** \- Compression.
+- **Transactions only** \- Write log messages only for transaction stream.
 
 ## Recommended content
 

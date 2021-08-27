@@ -10,9 +10,7 @@
 
 **Таблица всех сделок:**
 
-1. Добавить столбец «Время (мкс)» в таблицу в [Quik](Quik.md).
-
-   ![quik mks trades](../images/quik_mks_trades.jpg)
+1. Добавить столбец «Время (мкс)» в таблицу в [Quik](Quik.md).![quik mks trades](../images/quik_mks_trades.jpg)
 2. Добавить экспорт доп. столбца.
 
    ```cs
@@ -21,9 +19,7 @@
 
 **Таблица сделок:**
 
-1. Добавить столбец «Время (мкс)» в таблицу в [Quik](Quik.md).
-
-   ![quik mks mytrades](../images/quik_mks_mytrades.jpg)
+1. Добавить столбец «Время (мкс)» в таблицу в [Quik](Quik.md).![quik mks mytrades](../images/quik_mks_mytrades.jpg)
 2. Добавить экспорт доп. столбца.
 
    ```cs
@@ -32,9 +28,7 @@
 
 **Таблица заявок:**
 
-1. Добавить столбцы «Выставлена (мкс)» и «Снята (мкс)» в таблицу в [Quik](Quik.md).
-
-   ![quik mks orders](../images/quik_mks_orders.jpg)
+1. Добавить столбцы «Выставлена (мкс)» и «Снята (мкс)» в таблицу в [Quik](Quik.md).![quik mks orders](../images/quik_mks_orders.jpg)
 2. Добавить экспорт доп. столбцов.
 
    ```cs

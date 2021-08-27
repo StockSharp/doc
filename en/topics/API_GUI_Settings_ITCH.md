@@ -4,49 +4,19 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings ITCH](../images/API_GUI_Settings_ITCH.png)
 
-- **Main**
-
-   \- The main UDP group.
-- **Duplicate**
-
-   \- Duplicate UDP group.
-- **Recovery**
-
-   \- Recovery server.
-- **Replay**
-
-   \- Replay server.
-- **Login**
-
-   \- Login.
-- **Password**
-
-   \- Password.
-- **Securities**
-
-   \- File with securities.
-- **Delay**
-
-   \- Delay load instruments.
-- **Active**
-
-   \- Only active instruments.
-- **Group ID**
-
-   \- Group ID.
-- **Time zone**
-
-   \- Information about the time zone where the exchange is located.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Main** \- The main UDP group.
+- **Duplicate** \- Duplicate UDP group.
+- **Recovery** \- Recovery server.
+- **Replay** \- Replay server.
+- **Login** \- Login.
+- **Password** \- Password.
+- **Securities** \- File with securities.
+- **Delay** \- Delay load instruments.
+- **Active** \- Only active instruments.
+- **Group ID** \- Group ID.
+- **Time zone** \- Information about the time zone where the exchange is located.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

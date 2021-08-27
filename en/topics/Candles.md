@@ -2,28 +2,12 @@
 
 [S\#](StockSharpAbout.md) supports the following types:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle)
-
-   \- candle based on timeframe. You can set both popular intervals (minute, hour, day), and customized. For example, 21 seconds, 4.5 minutes, etc. 
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle)
-
-   \- price range candle. A new candle is created when a trade appears with a price that is out of range. An allowable range is formed each time based on the price of the first trade. 
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle)
-
-   \- a candle is created until the total volume of trades is exceeded. If the new trade exceeds the permissible volume, then it falls into the new candle already. 
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle)
-
-   \- is the same as 
-
-  [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle)
-
-  , only the number of trades is taken as a restriction instead of volume. 
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle)
-
-   \- a candle of the point\-and\-figure chart (tic\-tac\-toe chart). 
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle)
-
-   \- Renko candle. 
+- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) \- candle based on timeframe. You can set both popular intervals (minute, hour, day), and customized. For example, 21 seconds, 4.5 minutes, etc. 
+- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) \- price range candle. A new candle is created when a trade appears with a price that is out of range. An allowable range is formed each time based on the price of the first trade. 
+- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) \- a candle is created until the total volume of trades is exceeded. If the new trade exceeds the permissible volume, then it falls into the new candle already. 
+- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) \- is the same as [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), only the number of trades is taken as a restriction instead of volume. 
+- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) \- a candle of the point\-and\-figure chart (tic\-tac\-toe chart). 
+- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) \- Renko candle. 
 
 How to work with candles is shown in the SampleConnection example, which is located in the *Samples\/Common\/SampleConnection*.
 
@@ -93,44 +77,8 @@ Start getting data
    ```
 5. You can set some properties for [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries):
    - [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) sets the mode of building candles. By default, [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild) is specified, which means that finished data will be requested, or built from the data type specified in the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property. You can also set [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) to request only finished data. Or [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), for building from the data type specified in the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property without requesting the finished data. 
-   - When building candles, you need to set the 
-
-     [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom)
-
-     , property, which indicates which data type is used as a source (
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-     , 
-
-     [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth)
-
-     , 
-
-     [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades)
-
-      and etc. ). 
-   - For some data types, you need to additionally specify the 
-
-     [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField)
-
-     , property from which the data will be built. For example, for 
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-      , you can specify 
-
-     [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice)
-
-     , , which means that candles will be built from the 
-
-     [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice)
-
-      property of 
-
-     [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1)
-
-      data. 
+   - When building candles, you need to set the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), property, which indicates which data type is used as a source ([Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) and etc. ). 
+   - For some data types, you need to additionally specify the [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), property from which the data will be built. For example, for [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) , you can specify [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), , which means that candles will be built from the [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) property of [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) data. 
 6. Let's consider a few examples of building different candle types:
    - Since most sources provide candles with standard timeframes, it’s enough to set the type and timeframe to get such candles: 
 

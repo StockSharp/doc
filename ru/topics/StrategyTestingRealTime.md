@@ -72,8 +72,6 @@
    };
    					  
    ```
-3. На следующем рисунке показан результат работы примера. 
-
-   ![sample realtaime emulation](../images/sample_realtaime_emulation.png)
+3. На следующем рисунке показан результат работы примера. ![sample realtaime emulation](../images/sample_realtaime_emulation.png)
 
 ## См. также

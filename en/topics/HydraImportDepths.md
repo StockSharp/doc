@@ -28,12 +28,8 @@ The import process securities.
    - For the {Quote.Price} field, select the **Price** field from the **S\# field** window \- quote price. We assign it the value 4.
    - For the {Quote.Volume} field, select the **Volume** field from the **S\# field** window \- quote volume. We assign it the value 5
    - For the {Side} field, select the **Direction** field from the **S\# field** window \- the trade direction (Buy or Sell). We assign it the value 6.
-   - oThe field setting window will look like this:
-
-     ![hydra import prop depth](../images/hydra_import_prop_depth.png)
+   - oThe field setting window will look like this:![hydra import prop depth](../images/hydra_import_prop_depth.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
-3. To preview the data, click the **Preview** button.
-
-   ![hydra import preview depth](../images/hydra_import_preview_depth.png)
+3. To preview the data, click the **Preview** button.![hydra import preview depth](../images/hydra_import_preview_depth.png)
 4. Click the **Import** button.

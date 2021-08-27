@@ -35,9 +35,7 @@ Candle import process
      	  				
      ```
 
-     Then the following setting will correspond to it:
-
-     ![hydra import prop candles](../images/hydra_import_prop_candles.png)
+     Then the following setting will correspond to it:![hydra import prop candles](../images/hydra_import_prop_candles.png)
 
      Here:
 
@@ -51,7 +49,5 @@ Candle import process
    - **Zero** \- in some cases when saving data, some data properties may be saved as "0", which is an error. For example, the price value, for various reasons, can be equal to 0, which is not acceptable, and in the future will lead to an incorrect reading. This can lead to incorrect strategy operation that work with them and, as a consequence, an erroneous result. By checking the box, the user specifies that data in this section, if equal to 0, is written as empty, that is, it is absent. During further work, for example, testing, the user will see an error of no data, which will indicate an incorrect data import. In fact, this is the protection of user from "broken" data, for more correct work. 
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence.
-3. To preview the data, click the **Preview** button.
-
-   ![hydra import preview candles](../images/hydra_import_preview_candles.png)
+3. To preview the data, click the **Preview** button.![hydra import preview candles](../images/hydra_import_preview_candles.png)
 4. Click the **Import** button..

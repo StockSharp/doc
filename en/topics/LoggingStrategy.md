@@ -76,9 +76,7 @@ Logging in to the LogWindow
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Here is the log window when orders quoting strategy working ([Quoting](StrategyQuoting.md)): 
-
-   ![strategylogging](../images/strategy_logging.png)
+2. Here is the log window when orders quoting strategy working ([Quoting](StrategyQuoting.md)): ![strategylogging](../images/strategy_logging.png)
 
 ## Recommended content
 

@@ -4,20 +4,8 @@ Testing on random data is a special kind of testing. It is not intended to searc
 
 As a rule, only a certain set of scenarios is used in the algorithm development. Therefore, when there is a special situation, the algorithm may not react right or throw exceptions. For example, the following situations may occur: 
 
-- The strategy works with the 
-
-  [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle)
-
-   candles and expects at each iteration, that there will always be a candle for the requested period of time. A period began when there was not a single trade, and a candle was not created. As a result, in the absence of proper handling, the 
-
-  [NullReferenceException](xref:System.NullReferenceException)
-
-   will be thrown and the strategy will stop. 
-- The strategy works with non\-liquid instrument and uses 
-
-  [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)
-
-  . The strategy expects that the order book is always filled. At some time, the order book is half filled (for example, there are bids, but no offers). If the strategy does not expect this situation, then either it will wrong register an order, or it will throw an exception and the strategy will stop. 
+- The strategy works with the [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) candles and expects at each iteration, that there will always be a candle for the requested period of time. A period began when there was not a single trade, and a candle was not created. As a result, in the absence of proper handling, the [NullReferenceException](xref:System.NullReferenceException) will be thrown and the strategy will stop. 
+- The strategy works with non\-liquid instrument and uses [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth). The strategy expects that the order book is always filled. At some time, the order book is half filled (for example, there are bids, but no offers). If the strategy does not expect this situation, then either it will wrong register an order, or it will throw an exception and the strategy will stop. 
 - The strategy calculates the price levels. The code is written in such a way that the strategy awaits when levels set in advance will be broken through. If the levels are calculated and are set not correctly, then they will never be broken through, or always only one of them will be broken through. As a result, either the strategy will not perform any trades, or these trades will lose money. 
 
 For these and for many other scenarios of the exchange work, which is impossible to predict in advance, the [S\#](StockSharpAbout.md) provides testing on random data, which will be able to generate the maximum number of conditions at the short range due to its uniform uniqueness. 
@@ -44,6 +32,4 @@ Testing on random data of moving averages strategy
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. The result of the example work is as follows: 
-
-   ![sampleemulationtest](../images/sample_emulation_test.png)
+2. The result of the example work is as follows: ![sampleemulationtest](../images/sample_emulation_test.png)

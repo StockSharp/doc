@@ -128,16 +128,8 @@
    ```
 5. При выборе инструмента:
    - Заполняем массив цепочкой опционов, где подлежащим активом выступает выбранный инструмент;
-   - Присваиваем свойству 
-
-     [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options)
-
-      этот массив;
-   - Очищаем значения доски опционов при помощи метода 
-
-     [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear)
-
-     .
+   - Присваиваем свойству [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options) этот массив;
+   - Очищаем значения доски опционов при помощи метода [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear).
    ```cs
    private void Assets_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
    {

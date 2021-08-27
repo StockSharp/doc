@@ -9,9 +9,7 @@ To optimize the [backtesting](StrategyTestingHistory.md) process it is possible 
 
 Example of moving averages strategy testing in several threads
 
-1. The SampleHistoryTesting example, described in the [Historical data](StrategyTestingHistory.md) testing section, is taken as the basis. This example is a modified conventional testing for testing with optimization through fitting of the optimum value of the moving averages lengths: 
-
-   ![sample history test parallel](../images/sample_history_test_parallel.png)
+1. The SampleHistoryTesting example, described in the [Historical data](StrategyTestingHistory.md) testing section, is taken as the basis. This example is a modified conventional testing for testing with optimization through fitting of the optimum value of the moving averages lengths: ![sample history test parallel](../images/sample_history_test_parallel.png)
 2. Creating a few settings of the moving averages lengths (the first value is responsible for the length of the longest, the second for the length of the shortest, and the third for the [equity curve](Equity.md) color): 
 
    ```cs

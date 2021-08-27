@@ -128,16 +128,8 @@ OptionCalculator example
    ```
 5. When selecting an instrument:
    - Fill the array with a chain of options, where the selected instrument acts as the underlying asset;
-   - Assign this array to the 
-
-     [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options)
-
-      property;
-   - • Clear the options board values using the 
-
-     [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear)
-
-      method.
+   - Assign this array to the [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options) property;
+   - • Clear the options board values using the [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear) method.
    ```cs
    private void Assets_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
    {

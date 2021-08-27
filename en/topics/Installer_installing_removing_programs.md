@@ -6,16 +6,12 @@ The [S\#.Installer](SharpInstaller.md) program allows you to select the applicat
 
 To install the required application you need:
 
-1. Select an application, click **Install**, agree to the license agreement and click **Continue**.
-
-   ![download installer](../images/download_installer.png)
+1. Select an application, click **Install**, agree to the license agreement and click **Continue**.![download installer](../images/download_installer.png)
 2. After that, you need to select the installation path. 
 
    **IMPORTANT\!** The folder into which the program will be installed must be empty. 
 
-   Click **Continue**.
-
-   ![direction installer](../images/direction_installer.png)
+   Click **Continue**.![direction installer](../images/direction_installer.png)
 3. Select **Run** and wait for the installation to complete. 
 
 After the installation is complete, the program is ready to use. 

@@ -30,8 +30,6 @@
    // курс перевода Евро в Доллары США на вчерашний день
    var rate = CurrencyTypes.EUR.Convert(CurrencyTypes.USD, DateTime.Today - TimeSpan.FromDays(1));
    ```
-4. Пример конвертации валюты выглядит так: 
-
-   ![samplecurrency](../images/sample_currency.png)
+4. Пример конвертации валюты выглядит так: ![samplecurrency](../images/sample_currency.png)
 
 ## См. также

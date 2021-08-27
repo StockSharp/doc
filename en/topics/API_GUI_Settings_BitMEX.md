@@ -4,25 +4,11 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings BitMEX](../images/API_GUI_Settings_BitMEX.png)
 
-- **Key**
-
-   \- Key.
-- **Secret**
-
-   \- Secret.
-- **Demo**
-
-   \- Connect to demo trading instead of real trading server.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
+- **Key** \- Key.
+- **Secret** \- Secret.
+- **Demo** \- Connect to demo trading instead of real trading server.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
 
 ## Recommended content
 

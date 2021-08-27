@@ -4,28 +4,12 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 
 ![API GUI Settings Bitbank](../images/API_GUI_Settings_Bitbank.png)
 
-- **Key**
-
-   \- Key.
-- **Secret**
-
-   \- Secret.
-- **Balance**
-
-   \- Balance check interval. Required in case of deposit and withdraw actions.
-- **Heart beat**
-
-   \- Server check interval for track the connection alive. By default equal to 1 minute.
-- **Reconnection settings**
-
-   \- Mechanism for tracking connections with the trading system settings. (
-
-  [Reconnection settings](Reconnect.md)
-
-  )
-- **RequestWithdrawAccounts**
-
-   \- RequestWithdrawAccounts
+- **Key** \- Key.
+- **Secret** \- Secret.
+- **Balance** \- Balance check interval. Required in case of deposit and withdraw actions.
+- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](Reconnect.md))
+- **RequestWithdrawAccounts** \- RequestWithdrawAccounts
 
 ## Recommended content
 
