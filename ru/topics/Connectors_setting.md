@@ -2,56 +2,56 @@
 
 Некоторые коннекторы нуждаются в предварительной настройке, ниже приведены ссылки на страници с настройками коннекторов.
 
-| Коннектор                          | Настройки коннектора                                                      | Графическое конфигурирование                                                                |
-| ---------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [AlphaVantage](AlphaVantage.md)    | [Настройки коннектора AlphaVantage](AlphaVantageConnectorsSettings.md)    | [Графическое конфигурирование AlphaVantage](API_GUI_Settings_AlphaVantage.md)               |
-| [Bachart](BarChart.md)             | [Настройки коннектора BarChart](BarChartConnectorsSettings.md)            | [Графическое конфигурирование BarChart](API_GUI_Settings_Barchart.md)                       |
-| [Blackwood (Fusion)](Blackwood.md) | [Настройки коннектора Blackwood (Fusion)](BlackwoodConnectorsSettings.md) | [Графическое конфигурирование Blackwood (Fusion)](API_GUI_Settings_Fusion (Blackwood).md)   |
-| [CQG](CQG.md)                      | [Настройки коннектора CQG](CQGConnectorsSettings.md)                      | [Графическое конфигурирование CQG COM](API_GUI_Settings_CQG COM.md)                         |
-| [CQG](CQG.md)                      | [Настройки коннектора CQG](CQGConnectorsSettings.md)                      | [Графическое конфигурирование CQG Continuum](API_GUI_Settings_CQG Continuum.md)             |
-| [E\*TRADE](ETrade.md)              | [Настройки коннектора E\*TRADE](ETradeConnectorsSettings.md)              | [Графическое конфигурирование E\*TRADE](API_GUI_Settings_E_TRADE.md)                        |
-| [Google](Google.md)                | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-      | [Графическое конфигурирование Google](API_GUI_Settings_Google.md)                           |
-| [IEX](IEX.md)                      | [Настройки коннектора IEX](IEXConnectorsSettings.md)                      | [Графическое конфигурирование IEX](API_GUI_Settings_IEX.md)                                 |
-| [Interactive Brokers](IB.md)       | [Настройка TWS Interactive Brokers](IBSettings.md)                        | [Графическое конфигурирование Interactive Brokers](API_GUI_Settings_Interactive Brokers.md) |
-| [IQFeed](IQFeed.md)                | [Настройки коннектора IQFeed](IQFeedConnectorsSettings.md)                | [Графическое конфигурирование IQFeed](API_GUI_Settings_IQFeed.md)                           |
-| [ITCH](ITCH.md)                    | [Настройки коннектора ITCH](ITCHConnectorsSettings.md)                    | [Графическое конфигурирование ITCH](API_GUI_Settings_ITCH.md)                               |
-| [OpenECry](OEC.md)                 | [Настройки коннектора OpenECry](OpenECryConnectorsSettings.md)            | [Графическое конфигурирование OpenECry](API_GUI_Settings_OpenECry_GainFutures.md)           |
-| [Quandl](Quandl.md)                | [Настройки коннектора Quandl](QuandlConnectorsSettings.md)                | [Графическое конфигурирование Quandl](API_GUI_Settings_Quandl.md)                           |
-| [QuantFEED](QuantFeed.md)          | [Настройки коннектора QuantFEED](QuantFEEDConnectorsSettings.md)          | [Графическое конфигурирование QuantFEED](API_GUI_Settings_QuantFEED.md)                     |
-| [Rithmic](Rithmic.md)              | [Настройки коннектора Rithmic](RithmicConnectorsSettings.md)              | [Графическое конфигурирование Rithmic](API_GUI_Settings_Rithmic.md)                         |
-| [Sterling](Sterling.md)            | [Настройки коннектора Sterling](SterlingConnectorsSettings.md)            | [Графическое конфигурирование Sterling](API_GUI_Settings_Sterling.md)                       |
-| [Tradier](Tradier.md)              | [Настройки коннектора Tradier](TradierConnectorsSettings.md)              | [Графическое конфигурирование Tradier](API_GUI_Settings_Tradier.md)                         |
-| [Xignite](Xignite.md)              | [Настройки коннектора Xignite](XigniteConnectorsSettings.md)              | [Графическое конфигурирование Xignite](API_GUI_Settings_Xignite.md)                         |
-| [Yahoo](Yahoo.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-      | [Графическое конфигурирование Yahoo](API_GUI_Settings_Yahoo.md)                             |
+| Коннектор                          | Настройки коннектора                                                      | Графическое конфигурирование                                                                  |
+| ---------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [AlphaVantage](AlphaVantage.md)    | [Настройки коннектора AlphaVantage](AlphaVantageConnectorsSettings.md)    | [Графическое конфигурирование AlphaVantage](API_GUI_Settings_AlphaVantage.md)                 |
+| [Bachart](BarChart.md)             | [Настройки коннектора BarChart](BarChartConnectorsSettings.md)            | [Графическое конфигурирование BarChart](API_GUI_Settings_Barchart.md)                         |
+| [Blackwood (Fusion)](Blackwood.md) | [Настройки коннектора Blackwood (Fusion)](BlackwoodConnectorsSettings.md) | [Графическое конфигурирование Blackwood (Fusion)](API_GUI_Settings_Fusion%20(Blackwood).md)   |
+| [CQG](CQG.md)                      | [Настройки коннектора CQG](CQGConnectorsSettings.md)                      | [Графическое конфигурирование CQG COM](API_GUI_Settings_CQG%20COM.md)                         |
+| [CQG](CQG.md)                      | [Настройки коннектора CQG](CQGConnectorsSettings.md)                      | [Графическое конфигурирование CQG Continuum](API_GUI_Settings_CQG%20Continuum.md)             |
+| [E\*TRADE](ETrade.md)              | [Настройки коннектора E\*TRADE](ETradeConnectorsSettings.md)              | [Графическое конфигурирование E\*TRADE](API_GUI_Settings_E_TRADE.md)                          |
+| [Google](Google.md)                | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-      | [Графическое конфигурирование Google](API_GUI_Settings_Google.md)                             |
+| [IEX](IEX.md)                      | [Настройки коннектора IEX](IEXConnectorsSettings.md)                      | [Графическое конфигурирование IEX](API_GUI_Settings_IEX.md)                                   |
+| [Interactive Brokers](IB.md)       | [Настройка TWS Interactive Brokers](IBSettings.md)                        | [Графическое конфигурирование Interactive Brokers](API_GUI_Settings_Interactive%20Brokers.md) |
+| [IQFeed](IQFeed.md)                | [Настройки коннектора IQFeed](IQFeedConnectorsSettings.md)                | [Графическое конфигурирование IQFeed](API_GUI_Settings_IQFeed.md)                             |
+| [ITCH](ITCH.md)                    | [Настройки коннектора ITCH](ITCHConnectorsSettings.md)                    | [Графическое конфигурирование ITCH](API_GUI_Settings_ITCH.md)                                 |
+| [OpenECry](OEC.md)                 | [Настройки коннектора OpenECry](OpenECryConnectorsSettings.md)            | [Графическое конфигурирование OpenECry](API_GUI_Settings_OpenECry_GainFutures.md)             |
+| [Quandl](Quandl.md)                | [Настройки коннектора Quandl](QuandlConnectorsSettings.md)                | [Графическое конфигурирование Quandl](API_GUI_Settings_Quandl.md)                             |
+| [QuantFEED](QuantFeed.md)          | [Настройки коннектора QuantFEED](QuantFEEDConnectorsSettings.md)          | [Графическое конфигурирование QuantFEED](API_GUI_Settings_QuantFEED.md)                       |
+| [Rithmic](Rithmic.md)              | [Настройки коннектора Rithmic](RithmicConnectorsSettings.md)              | [Графическое конфигурирование Rithmic](API_GUI_Settings_Rithmic.md)                           |
+| [Sterling](Sterling.md)            | [Настройки коннектора Sterling](SterlingConnectorsSettings.md)            | [Графическое конфигурирование Sterling](API_GUI_Settings_Sterling.md)                         |
+| [Tradier](Tradier.md)              | [Настройки коннектора Tradier](TradierConnectorsSettings.md)              | [Графическое конфигурирование Tradier](API_GUI_Settings_Tradier.md)                           |
+| [Xignite](Xignite.md)              | [Настройки коннектора Xignite](XigniteConnectorsSettings.md)              | [Графическое конфигурирование Xignite](API_GUI_Settings_Xignite.md)                           |
+| [Yahoo](Yahoo.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-      | [Графическое конфигурирование Yahoo](API_GUI_Settings_Yahoo.md)                               |
 
-| Коннектор                          | Настройки коннектора                                                 | Графическое конфигурирование                                                                    |
-| ---------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [MFD.ru](Mfd.md)                   | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Mfd](API_GUI_Settings_MFD.md)                                     |
-| [Micex (TEAP)](Micex.md)           | [Настройки коннектора Micex (TEAP)](MicexConnectorsSettings.md)      | [Графическое конфигурирование Micex (TEAP)](API_GUI_Settings_MMWBTEAP.md)                       |
-| [Plaza II (SPECTRA)](Plaza.md)     | [Настройки коннектора Plaza II](PlazaConnectorsSettings.md)          | [Графическое конфигурирование Plaza II](API_GUI_Settings_Plaza 2.md)                            |
-| [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA  Market data](API_GUI_Settings_Quik LUA  Market data.md) |
-| [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA Transactions](API_GUI_Settings_Quik LUA Transactions.md) |
-| [SmartCOM (ITI Capital)](Smart.md) | [Настройки коннектора SmartCOM](SmartCOMConnectorsSettings.md)       | [Графическое конфигурирование SmartCOM](API_GUI_Settings_SmartCOM (ITI Capital).md)             |
-| [SPB Exchange](SpbEx.md)           | [Настройки коннектора SPB Exchange](SpbExConnectorsSettings.md)      | [Графическое конфигурирование SPB Exchange](API_GUI_Settings_SPB Exchange.md)                   |
-| [Transaq](Transaq.md)              | [Настройки коннектора Transaq](TransaqConnectorsSettings.md)         | [Графическое конфигурирование Transaq](API_GUI_Settings_Transaq.md)                             |
-| [TWIME](TWIME.md)                  | [Настройки коннектора Twime](TwimeConnectorsSettings.md)             | [Графическое конфигурирование Twime](API_GUI_Settings_TWIME.md)                                 |
-| [UX (сайт)](UX.md)                 | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование UX](API_GUI_Settings_UX .md)                                      |
-| [Алор Трейд](AlorHistory.md)       | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование AlorHistory](API_GUI_Settings_AlorHistory.md)                     |
-| [Альфа\-Директ](Alfa.md)           | [Настройка терминала Альфа\-Директ](AlfaConfiguration.md)            | [Графическое конфигурирование Альфа\-Директ](API_GUI_Settings_AlfaDirect.md)                    |
-| [ЛЧИ](LCI.md)                      | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование ЛЧИ](API_GUI_Settings_LCI.md)                                     |
-| [ex РТС (FTP)](RTS.md)             | [Настройки коннектора РТС](RTSConnectorsSettings.md)                 | [Графическое конфигурирование РТС](API_GUI_Settings_RTS.md)                                     |
-| [Финам](Finam.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Finam](API_GUI_Settings_Finam.md)                                 |
+| Коннектор                          | Настройки коннектора                                                 | Графическое конфигурирование                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [MFD.ru](Mfd.md)                   | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Mfd](API_GUI_Settings_MFD.md)                                             |
+| [Micex (TEAP)](Micex.md)           | [Настройки коннектора Micex (TEAP)](MicexConnectorsSettings.md)      | [Графическое конфигурирование Micex (TEAP)](API_GUI_Settings_MMWBTEAP.md)                               |
+| [Plaza II (SPECTRA)](Plaza.md)     | [Настройки коннектора Plaza II](PlazaConnectorsSettings.md)          | [Графическое конфигурирование Plaza II](API_GUI_Settings_Plaza%202.md)                                  |
+| [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA  Market data](API_GUI_Settings_Quik%20LUA%20%20Market%20data.md) |
+| [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA Transactions](API_GUI_Settings_Quik%20LUA%20Transactions.md)     |
+| [SmartCOM (ITI Capital)](Smart.md) | [Настройки коннектора SmartCOM](SmartCOMConnectorsSettings.md)       | [Графическое конфигурирование SmartCOM](API_GUI_Settings_SmartCOM%20(ITI%20Capital).md)                 |
+| [SPB Exchange](SpbEx.md)           | [Настройки коннектора SPB Exchange](SpbExConnectorsSettings.md)      | [Графическое конфигурирование SPB Exchange](API_GUI_Settings_SPB%20Exchange.md)                         |
+| [Transaq](Transaq.md)              | [Настройки коннектора Transaq](TransaqConnectorsSettings.md)         | [Графическое конфигурирование Transaq](API_GUI_Settings_Transaq.md)                                     |
+| [TWIME](TWIME.md)                  | [Настройки коннектора Twime](TwimeConnectorsSettings.md)             | [Графическое конфигурирование Twime](API_GUI_Settings_TWIME.md)                                         |
+| [UX (сайт)](UX.md)                 | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование UX](API_GUI_Settings_UX%20.md)                                            |
+| [Алор Трейд](AlorHistory.md)       | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование AlorHistory](API_GUI_Settings_AlorHistory.md)                             |
+| [Альфа\-Директ](Alfa.md)           | [Настройка терминала Альфа\-Директ](AlfaConfiguration.md)            | [Графическое конфигурирование Альфа\-Директ](API_GUI_Settings_AlfaDirect.md)                            |
+| [ЛЧИ](LCI.md)                      | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование ЛЧИ](API_GUI_Settings_LCI.md)                                             |
+| [ex РТС (FTP)](RTS.md)             | [Настройки коннектора РТС](RTSConnectorsSettings.md)                 | [Графическое конфигурирование РТС](API_GUI_Settings_RTS.md)                                             |
+| [Финам](Finam.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Finam](API_GUI_Settings_Finam.md)                                         |
 
-| Коннектор                       | Настройки коннектора                                                 | Графическое конфигурирование                                                  |
-| ------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [DukasCopy](DukasCopy.md)       | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование DukasCopy](API_GUI_Settings_Dukascopy.md)       |
-| [FinViz](FinViz.md)             | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование FinViz](API_GUI_Settings_FinViz.md)             |
-| [FXCM](Fxcm.md)                 | [Настройки коннектора FXCM](FXCMConnectorsSettings.md)               | [Графическое конфигурирование FXCM](API_GUI_Settings_FXCM.md)                 |
-| [GAIN Capital](GAIN Capital.md) | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование GAIN Capital](API_GUI_Settings_GAIN Capital.md) |
-| [LMAX](LMAX.md)                 | [Настройки коннектора LMAX](LMAXConnectorsSettings.md)               | [Графическое конфигурирование LMAX](API_GUI_Settings_LMAX.md)                 |
-| [MB Trading](MB Trading.md)     | [Настройки коннектора MB Trading](MBTradingConnectorsSettings.md)    | [Графическое конфигурирование MB Trading](API_GUI_Settings_MB Trading.md)     |
-| [Oanda](Oanda.md)               | [Настройки коннектора Oanda](OandaConnectorsSettings.md)             | [Графическое конфигурирование Oanda](API_GUI_Settings_OANDA.md)               |
-| [TrueFX](TrueFX.md)             | [Настройки коннектора TrueFX](TrueFXConnectorsSettings.md)           | [Графическое конфигурирование TrueFX](API_GUI_Settings_TrueFX.md)             |
+| Коннектор                         | Настройки коннектора                                                 | Графическое конфигурирование                                                    |
+| --------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [DukasCopy](DukasCopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование DukasCopy](API_GUI_Settings_Dukascopy.md)         |
+| [FinViz](FinViz.md)               | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование FinViz](API_GUI_Settings_FinViz.md)               |
+| [FXCM](Fxcm.md)                   | [Настройки коннектора FXCM](FXCMConnectorsSettings.md)               | [Графическое конфигурирование FXCM](API_GUI_Settings_FXCM.md)                   |
+| [GAIN Capital](GAIN%20Capital.md) | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование GAIN Capital](API_GUI_Settings_GAIN%20Capital.md) |
+| [LMAX](LMAX.md)                   | [Настройки коннектора LMAX](LMAXConnectorsSettings.md)               | [Графическое конфигурирование LMAX](API_GUI_Settings_LMAX.md)                   |
+| [MB Trading](MB%20Trading.md)     | [Настройки коннектора MB Trading](MBTradingConnectorsSettings.md)    | [Графическое конфигурирование MB Trading](API_GUI_Settings_MB%20Trading.md)     |
+| [Oanda](Oanda.md)                 | [Настройки коннектора Oanda](OandaConnectorsSettings.md)             | [Графическое конфигурирование Oanda](API_GUI_Settings_OANDA.md)                 |
+| [TrueFX](TrueFX.md)               | [Настройки коннектора TrueFX](TrueFXConnectorsSettings.md)           | [Графическое конфигурирование TrueFX](API_GUI_Settings_TrueFX.md)               |
 
 | Коннектор                       | Настройки коннектора                                                   | Графическое конфигурирование                                                  |
 | ------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@
 | [BitStamp](BitStamp.md)         | [Настройки коннектора BitStamp](BitStampConnectorsSettings.md)         | [Графическое конфигурирование BitStamp](API_GUI_Settings_Bitstamp.md)         |
 | [Bittrex](Bittrex.md)           | [Настройки коннектора Bittrex](BittrexConnectorsSettings.md)           | [Графическое конфигурирование коннектора](API_GUI_Settings_Bittrex.md)        |
 | [BitZ](BitZ.md)                 | [Настройки коннектора BitZ](BitZConnectorsSettings.md)                 | [Графическое конфигурирование BitZ](API_GUI_Settings_Bit-Z.md)                |
-| [WEX (BTC\-e)](Btce.md)         | [Настройки коннектора WEX (BTC\-e)](BtceConnectorsSettings.md)         | [Графическое конфигурированиеWEX (BTC\-e)](API_GUI_Settings_WEX (BTC-e).md)   |
+| [WEX (BTC\-e)](Btce.md)         | [Настройки коннектора WEX (BTC\-e)](BtceConnectorsSettings.md)         | [Графическое конфигурированиеWEX (BTC\-e)](API_GUI_Settings_WEX%20(BTC-e).md) |
 | [BW](BW.md)                     | [Настройки коннектора BW](BWConnectorsSettings.md)                     | [Графическое конфигурирование BW](API_GUI_Settings_BW.md)                     |
 | [CEX.IO](Cex.md)                | [Настройки коннектора CEX.IO](CexConnectorsSettings.md)                | [Графическое конфигурирование CEX.IO](API_GUI_Settings_CEX.IO.md)             |
 | [Coinbase](Coinbase.md)         | [Настройки коннектора Coinbase](CoinbaseConnectorsSettings.md)         | [Графическое конфигурирование Coinbase](API_GUI_Settings_Coinbase.md)         |
