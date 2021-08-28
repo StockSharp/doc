@@ -6,8 +6,6 @@
 
 ### Работа с эмулятором торговли на реальных данных
 
-Работа с эмулятором торговли на реальных данных
-
 1. Создаем шлюз [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) и передаем в его конструктор адаптер сообщений [SmartComMessageAdapter](xref:StockSharp.SmartCom.SmartComMessageAdapter). Для создания идентификаторов "виртуальных" транзакций используем генератор идентификаторов **MillisecondIncrementalIdGenerator**. 
 
    ```cs

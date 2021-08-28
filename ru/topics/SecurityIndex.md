@@ -8,8 +8,6 @@
 
 ### Создание ExpressionIndexSecurity
 
-Создание ExpressionIndexSecurity
-
 1. Объявить составные инструменты, которые будут входить в [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
@@ -37,8 +35,6 @@
    ```
 
 ### Создание WeightedIndexSecurity
-
-Создание WeightedIndexSecurity
 
 1. Объявить составные инструменты, которые будут входить в [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) и сам [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 

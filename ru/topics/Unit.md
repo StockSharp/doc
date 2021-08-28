@@ -4,8 +4,6 @@
 
 ### Использование Unit
 
-Использование Unit
-
 - Создавать [Unit](xref:StockSharp.Messages.Unit) можно через специальные конструкторы, или использовать более короткую запись с помощью [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
 
   ```cs

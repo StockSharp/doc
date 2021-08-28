@@ -37,8 +37,6 @@ The following describes the process for creating your own adapter for [BitStamp]
 
 ### Example of creating a BitStamp message adapter
 
-Example of creating a BitStamp message adapter
-
 1. **Creating an adapter class.**
 
    First, we create the **BitStampMessageAdapter** message adapter class inherited from the abstract [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) class: 

@@ -4,8 +4,6 @@
 
 ### LogControl
 
-LogControl
-
 ![GUI LogControl](../images/GUI_LogControl.png)
 
 Sample code

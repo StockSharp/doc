@@ -19,8 +19,6 @@ To implement the quoting the [S\#](StockSharpAbout.md) includes the [QuotingStra
 
 ### Quoting adding to the SampleSMA
 
-Quoting adding to the SampleSMA
-
 1. It is necessary to enable the export of the order book before starting work, so the moving average algorithm described in the [iteration model](StrategyCreate.md), section begin to work in association with the strategy:
 
    ```cs

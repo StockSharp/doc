@@ -4,8 +4,6 @@ To work with multi\-currency algorithms, it is necessary to use the [Currency](x
 
 ### Currency conversion example
 
-Currency conversion example
-
 1. Below see the partial code from SampleCurrency, converting from one currency to another: 
 
    ```cs

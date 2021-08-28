@@ -37,8 +37,6 @@
 
 ### Пример создания адаптера сообщений BitStamp
 
-Пример создания адаптера сообщений BitStamp
-
 1. **Создание класса адаптера.**
 
    Вначале создаем класс адаптера сообщений **BitStampMessageAdapter** унаследованный от абстрактного класса [MessageAdapter](xref:StockSharp.Messages.MessageAdapter): 

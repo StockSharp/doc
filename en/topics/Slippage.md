@@ -14,8 +14,6 @@ The slippage tracking is carried out through a special manager. The basic interf
 
 ### The slippage calculation adding to the SampleSMA
 
-The slippage calculation adding to the SampleSMA
-
 1. Since the SampleSMA uses the quoting mechanism, then the slippage must take into account in this algorithm.
 
    The text box for the slippage should be added to the information output window:

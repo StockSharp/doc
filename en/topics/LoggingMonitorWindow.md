@@ -14,8 +14,6 @@ The nesting of sources is showing in the form of a tree. Each parent node contai
 
 ### MonitorWindow using
 
-MonitorWindow using
-
 1. First, you need to create a window:
 
    ```cs

@@ -2,8 +2,6 @@
 
 ### Visual reconnection settings
 
-Visual reconnection settings
-
 All connectors provide the ability to configure reconnection in case of disconnection. In the [Connection settings window](API_UI_ConnectorWindow.md) graphic element, it looks like this: 
 
 ![API GUI ReconnectionSettings](../images/API_GUI_ReconnectionSettings.png)
@@ -17,8 +15,6 @@ All connectors provide the ability to configure reconnection in case of disconne
 - **Operating mode ** \- The operating mode during which it is necessary to make connections. 
 
 ### Code reconnection settings
-
-Code reconnection settings
 
 The reconnection mechanism is configured through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property and allows you to monitor the following error scenarios: 
 

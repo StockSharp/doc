@@ -4,8 +4,6 @@
 
 ### Пример SampleLogging
 
-Пример SampleLogging
-
 1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
 
    ```cs

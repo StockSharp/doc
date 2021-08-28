@@ -8,8 +8,6 @@
 
 ### Пример OptionCalculator
 
-Пример OptionCalculator
-
 1. В коде XAML добавляем элемент [OptionDesk](xref:StockSharp.Xaml.OptionDesk) и присваиваем ему имя **Desk**.
 
    ```xaml

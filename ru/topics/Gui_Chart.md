@@ -8,8 +8,6 @@
 
 ### Пример построения графика при помощи Chart
 
-Пример построения графика при помощи Chart
-
 1. В XAML создаем окно и добавляем в него графический компонент [StockSharp.Xaml.Charting.Chart](xref:StockSharp.Xaml.Charting.Chart). Присваиваем компоненту имя **Chart**. Обратите внимание, что при создании окна нужно добавить пространство имен *http:\/\/schemas.stocksharp.com\/xaml*. 
 
    ```xaml

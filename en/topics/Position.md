@@ -8,8 +8,6 @@ For the position calculation it is necessary to use the [IPositionManager](xref:
 
 ### The position calculation adding to the SampleSMA
 
-The position calculation adding to the SampleSMA
-
 1. You should add the text box for the current position display in the information output window:
 
    ```cs

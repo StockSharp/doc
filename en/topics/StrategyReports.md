@@ -16,8 +16,6 @@ The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Stra
 
 ### Excel report generation adding to the SampleSMA
 
-Excel report generation adding to the SampleSMA
-
 1. You need to add the report generate button on the form:
 
    ```none

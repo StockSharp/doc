@@ -4,8 +4,6 @@ To simplify works with arithmetic operations on such values as percent, points o
 
 ### Usage of Unit
 
-Usage of Unit
-
 - The [Unit](xref:StockSharp.Messages.Unit) can be created using special design kits, or using shorter recording by [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
 
   ```cs

@@ -10,8 +10,6 @@ With the [Strategy](xref:StockSharp.Algo.Strategies.Strategy), you can also crea
 
 ### Work with child strategies
 
-Work with child strategies
-
 To add a child strategy you should use the [Strategy.ChildStrategies](xref:StockSharp.Algo.Strategies.Strategy.ChildStrategies) property. It is possible not to set [Strategy.Connector](xref:StockSharp.Algo.Strategies.Strategy.Connector), [Strategy.Portfolio](xref:StockSharp.Algo.Strategies.Strategy.Portfolio) and [Strategy.Security](xref:StockSharp.Algo.Strategies.Strategy.Security) values for child strategies, and they are automatically filled when you add them to the parent strategy. 
 
 When adding a new child strategy, it automatically receives the state from the parent. For example, if the parent strategy is in operating state ([ProcessStates.Started](xref:StockSharp.Algo.ProcessStates.Started)), then the child is automatically set in the operating state (vice versa, in the case of the [ProcessStates.Stopped](xref:StockSharp.Algo.ProcessStates.Stopped)). 

@@ -6,8 +6,6 @@ To import the order log, select the **Import \=\> Order log** item from the main
 
 ### The import process securities.
 
-The import process securities.
-
 1. **Import settings.**.
 
    See [Candles](HydraImportCandles.md) import.

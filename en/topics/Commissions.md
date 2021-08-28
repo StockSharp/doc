@@ -6,8 +6,6 @@ The tariff plan is created by adding the relevant [CommissionRule](xref:StockSha
 
 ### The CommissionManager creating
 
-The CommissionManager creating
-
 1. To create the [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager):
 
    ```cs

@@ -15,8 +15,6 @@ The [S\#](StockSharpAbout.md) has a mechanism of automatic position protection t
 
 ### Take\-profit and stop\-loss
 
-Take\-profit and stop\-loss
-
 1. As an example, the order registration for the "at market" purchase and the following protection of the long position considered. To do this, the rule responsive to the order’s trades occurring (for details see the [Event model](StrategyAction.md)) created: 
 
    ```cs
@@ -52,8 +50,6 @@ Take\-profit and stop\-loss
    ```
 
 ### Automatic closing and position reverting
-
-Automatic closing and position reverting
 
 [TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy) and [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy) strategies do not track partial position closing or its reverting (for example, the position was closed by hands at the terminal and was opened in the opposite direction). To automatically track such situations in the algorithm, you must use [AutoProtectiveStrategy](xref:StockSharp.Algo.Strategies.Protective.AutoProtectiveStrategy). This strategy by trades incoming into it ([AutoProtectiveStrategy.ProcessNewMyTrade](xref:StockSharp.Algo.Strategies.Protective.AutoProtectiveStrategy.ProcessNewMyTrade)) decides what to do: to protect them (if there is a position opening or its increase) or to stop the protective strategies (if there is a position closing or its decrease). The strategy also automatically reverts protective strategies in case of position reverting (from long to short or from short to long). 
 

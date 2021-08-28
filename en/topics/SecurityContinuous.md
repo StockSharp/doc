@@ -8,8 +8,6 @@ For example, two futures of the ES index \- **ESM5** and **ESU5**. When the **ES
 
 ### ContinuousSecurity creating
 
-ContinuousSecurity creating
-
 1. To declare the compound instruments that will be included in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) and in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) itself:
 
    ```cs

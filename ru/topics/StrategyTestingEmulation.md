@@ -12,8 +12,6 @@
 
 ### Тестирование на случайных данных стратегии скользящих средних из примеров SampleSMA и SampleSmartSMA
 
-Тестирование на случайных данных стратегии скользящих средних из примеров SampleSMA и SampleSmartSMA
-
 1. Пример SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) практически идентичен примеру SampleHistoryTesting (его описание находится в разделе [тестирования на истории](StrategyTestingHistory.md)) за счет использования единого шлюза [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector). Но, в отличие от [тестирования на истории](StrategyTestingHistory.md), при тестировании на случайных данных маркет\-данные не подгружаются, а генерируются "на лету". Поэтому в пример добавляются два генератора случайных данных: для стакана и для тиковых сделок. В SampleHistoryTesting используется только один генератор \- для стакана, так как нет сохраненной истории. 
 
    ```cs

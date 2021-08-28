@@ -10,8 +10,6 @@ The [S\#](StockSharpAbout.md) installation package contains an example of Sample
 
 ### Backtesting of moving averages strategy
 
-Backtesting of moving averages strategy
-
 1. At the beginning it is necessary to create the settings for the testing: 
 
    ```cs

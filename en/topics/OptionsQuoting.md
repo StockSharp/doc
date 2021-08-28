@@ -4,8 +4,6 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
 
 ### Quoting by volatility
 
-Quoting by volatility
-
 1. The [S\#](StockSharpAbout.md) installation package includes the example SampleOptionQuoting, which quotes selected strike by the specified range of volatility. 
 2. Creating a connection to the [OpenECry](OEC.md) and export starting: 
 

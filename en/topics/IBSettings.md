@@ -4,8 +4,6 @@ To work correctly with [InteractiveBrokersTrader](xref:StockSharp.InteractiveBro
 
 ### Trader Workstation terminal configuration
 
-Trader Workstation terminal configuration
-
 1. You must allow connections from other programs (such as the trading algorithm on [S\#](StockSharpAbout.md)). To do this, open the settings menu "File \-\> Global configuration...". Select "Configuration \-\> API \-\> Settings" in the new window:
 
    ![ib settings](../images/ib_settings.png)

@@ -4,8 +4,6 @@
 
 ### Работа с историческими свечами через Connector
 
-Работа с историческими свечами через Connector
-
 1. Для получения свечей через [Connector](xref:StockSharp.Algo.Connector) необходимо создать [Connector](xref:StockSharp.Algo.Connector) и добавить в него соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter). Как это сделать с помощью специального контрола описано в пункте [Окно настройки подключений](API_UI_ConnectorWindow.md).
 
    Также добавить соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) в [Connector](xref:StockSharp.Algo.Connector) можно через код. Например, инициализация адаптера для [Interactive Brokers](IB.md) описана в пункте [Инициализация адаптера Interactive Brokers](IBSample.md) и выглядит следующим образом:
@@ -44,8 +42,6 @@
 4. Появившиеся свечи можно отрисовывать через [графический контрол](CandlesUI.md).
 
 ### Работа с историческими свечами через MessageAdapter
-
-Работа с историческими свечами через MessageAdapter
 
 1. Для получения свечей через [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) необходимо созлать соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 

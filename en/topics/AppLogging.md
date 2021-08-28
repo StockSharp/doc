@@ -4,8 +4,6 @@ In previous topics objects of embedded in the [S\#](StockSharpAbout.md) classes 
 
 ### SampleLogging sample
 
-SampleLogging sample
-
 1. Create a custom class that inherits from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
 
    ```cs

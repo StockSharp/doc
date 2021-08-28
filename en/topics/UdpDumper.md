@@ -6,8 +6,6 @@ To install need use [S\#.Installer](SharpInstaller.md).
 
 ### Setup and run
 
-Setup and run
-
 1. On first launch, the app shows the following:![Dumper 1](../images/Dumper_1.png)
 2. To add network feeds, you can add both manually and automatically load all feeds from the config files of exchanges. To do this, click on the button:![Dumper 2](../images/Dumper_2.png)
 3. In the window that appears, you need to find the desired config file from the exchange and open it:![Dumper 3](../images/Dumper_3.png)

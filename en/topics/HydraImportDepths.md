@@ -6,8 +6,6 @@ To import order books, select **Import \=\> Order books** item from the main app
 
 ### The import process securities.
 
-The import process securities.
-
 1. **Import settings.**.
 
    See [Candles](HydraImportCandles.md) import.

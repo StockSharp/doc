@@ -31,8 +31,6 @@ Parameters
 
 ### Conditional order settings
 
-Conditional order settings
-
 Conditional order is the order with additional conditions that determine the time of registration in the trading system depending on the current market situation.
 
 ![Designer Conditional Application](../images/Designer_Conditional_Application.png)

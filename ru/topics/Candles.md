@@ -19,8 +19,6 @@
 
 ### Запуск получения данных
 
-Запуск получения данных
-
 1. Создадим серию свечей [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries): 
 
    ```cs

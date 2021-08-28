@@ -10,8 +10,6 @@
 
 ### Работа с дочерними стратегиями
 
-Работа с дочерними стратегиями
-
 Чтобы добавить дочернюю стратегию необходимо использовать свойство [Strategy.ChildStrategies](xref:StockSharp.Algo.Strategies.Strategy.ChildStrategies). Значения [Strategy.Connector](xref:StockSharp.Algo.Strategies.Strategy.Connector), [Strategy.Portfolio](xref:StockSharp.Algo.Strategies.Strategy.Portfolio) и [Strategy.Security](xref:StockSharp.Algo.Strategies.Strategy.Security) для дочерних стратегий можно не устанавливать, и они автоматически заполнятся при добавлении в родительскую стратегию. 
 
 При добавлении новой дочерней стратегии она автоматически получает состояние из родительской. Например, если родительская стратегия находится в работающем состоянии ([ProcessStates.Started](xref:StockSharp.Algo.ProcessStates.Started)), то дочерняя автоматически будет установлена в работающее состояние (и, наоборот, в случае с [ProcessStates.Stopped](xref:StockSharp.Algo.ProcessStates.Stopped)). Поэтому вызывать метод [Strategy.Start](xref:StockSharp.Algo.Strategies.Strategy.Start) для дочерней стратегии не нужно. Он автоматически будет вызван, при запуске родительской стратегии. Таким образом, вызывать метод [Strategy.Start](xref:StockSharp.Algo.Strategies.Strategy.Start) можно только для тех стратегий, которые являются корневыми. 

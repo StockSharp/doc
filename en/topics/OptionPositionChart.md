@@ -8,8 +8,6 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
 
 ### SampleOptionQuoting example
 
-SampleOptionQuoting example
-
 1. In the XAML code, add the [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) element and assign it the **PosChart**.
 
    ```xaml

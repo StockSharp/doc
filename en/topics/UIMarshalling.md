@@ -22,8 +22,6 @@ _connector.NewSecurity += security => this.GuiSync(() => this.Security.ItemsSour
 
 ### Graphical components of S\#
 
-Graphical components of S\#
-
 [S\#](StockSharpAbout.md) includes a large number of its own graphical components, as well as a free library for Wpf [Xceed.Wpf.Toolkit](https://wpftoolkit.codeplex.com/). Its own graphical components are placed in the [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) and [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram) namespaces. Some specific components are in the connectors namespaces, for example the combined list [OpenECryAddressComboBox](xref:StockSharp.OpenECry.Xaml.OpenECryAddressComboBox) for the [OpenECry](OEC.md) server address selecting. 
 
 [S\#](StockSharpAbout.md) has a variety of controls for: 

@@ -4,8 +4,6 @@
 
 ### Пример работы с несколькими Quik\-ами
 
-Пример работы с несколькими Quik\-ами
-
 1. В папку с программой необходимо поместить два файла *TRANS2QUIK.dll* (пример работает с 2\-мя [Quik](Quik.md)\-ами). Например, один будет иметь оригинальное название, а второй будет переименован *TRANS2QUIK\_2.dll*. Это обязательное требование работы с несколькими [Quik](Quik.md)\-ами из одной программы: один [Quik](Quik.md) \- одна dll. 
 2. После этого, идет создание нескольких [QuikTrader](xref:StockSharp.Quik.QuikTrader). Через свойство [QuikTrader.DdeServer](xref:StockSharp.Quik.QuikTrader.DdeServer) передается уникальное имя для [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) сервера, а через [QuikTrader.DllName](xref:StockSharp.Quik.QuikTrader.DllName) путь к *TRANS2QUIK.dll*: 
 

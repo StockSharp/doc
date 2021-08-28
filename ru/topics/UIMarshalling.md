@@ -23,8 +23,6 @@ _connector.NewSecurity += security => this.GuiSync(() => this.Security.ItemsSour
 
 ### Графические компоненты S\#
 
-Графические компоненты S\#
-
 В состав [S\#](StockSharpAbout.md) входит большое количество собственных графических компонент, которые размещены в пространствах имен [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) и [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram). Некоторые специфические компоненты находятся в пространствах имен коннекторов, как например, комбинированный список [SmartComAddressComboBox](xref:StockSharp.SmartCom.Xaml.SmartComAddressComboBox) для выбора адреса сервера [SmartCOM](Smart.md). 
 
 [S\#](StockSharpAbout.md) имеет различные контролы для: 

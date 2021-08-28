@@ -4,8 +4,6 @@ To cancel several orders the [Connector.CancelOrders](xref:StockSharp.Algo.Conne
 
 ### Orders mass cancel examples
 
-Orders mass cancel examples
-
 To cancel all ordinary orders ([OrderTypes.Limit](xref:StockSharp.Messages.OrderTypes.Limit)) for the specified portfolio and instrument:
 
 ```cs

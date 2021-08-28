@@ -6,8 +6,6 @@ To import instruments, select the **Import \=\> Security** tab.
 
 ### The import process securities.
 
-The import process securities.
-
 1. **Import settings.**.
 
    See [Candles](HydraImportCandles.md) import.

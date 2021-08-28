@@ -6,8 +6,6 @@ To import Level 1 data, select **Import \=\> Level 1** from the main application
 
 ### The import process securities.
 
-The import process securities.
-
 1. **Import settings.**.
 
    See [Candles](HydraImportCandles.md) import.

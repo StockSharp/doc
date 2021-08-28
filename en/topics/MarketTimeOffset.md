@@ -6,8 +6,6 @@ To determine the stock exchange time in the [S\#](StockSharpAbout.md), standard 
 
 ### Example of getting the corrected time
 
-Example of getting the corrected time
-
 - ```cs
   					
   					// printing the current local time

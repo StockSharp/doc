@@ -8,8 +8,6 @@
 
 ### Пример SampleOptionQuoting
 
-Пример SampleOptionQuoting
-
 1. В коде XAML добавляем элемент [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) и присваиваем ему имя **PosChart**.
 
    ```xaml

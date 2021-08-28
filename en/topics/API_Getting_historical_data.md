@@ -4,8 +4,6 @@
 
 ### Working with historical candles through Connector
 
-Working with historical candles through Connector
-
 1. To get candles through [Connector](xref:StockSharp.Algo.Connector) , you need to create [Connector](xref:StockSharp.Algo.Connector) and add the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) to it. How to do this using a special control, see [Connection settings window](API_UI_ConnectorWindow.md).
 
    You can also add the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) to the [Connector](xref:StockSharp.Algo.Connector) through the code. For example, adapter initialization for [Interactive Brokers](IB.md) is described in [Adapter initialization Interactive Brokers](IBSample.md) and looks like this:
@@ -44,8 +42,6 @@ Working with historical candles through Connector
 4. Candles that appear can be rendered through the [Chart](CandlesUI.md).
 
 ### Working with historical candles through MessageAdapter
-
-Working with historical candles through MessageAdapter
 
 1. To get candles through the [MessageAdapter](xref:StockSharp.Messages.MessageAdapter), you need to create the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 

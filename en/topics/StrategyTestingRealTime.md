@@ -6,8 +6,6 @@ To emulate the trading on real data it is necessary to use [RealTimeEmulationTra
 
 ### Work with the trading emulator on real data
 
-Work with the trading emulator on real data
-
 1. Creating the [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
 
    ```cs

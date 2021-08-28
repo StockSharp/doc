@@ -6,8 +6,6 @@ To import trades, select the **Import \=\> Ticks** tab.
 
 ### The import process securities.
 
-The import process securities.
-
 1. **Import settings.**.
 
    See [Candles](HydraImportCandles.md) import.

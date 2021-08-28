@@ -6,8 +6,6 @@ To import candles, select **Import \=\> Candles** item from the main application
 
 ### Candle import process
 
-Candle import process
-
 1. **Common.**.
    - **Data type** \- type of imported data.
    - **Filename** \- full path to the CSV file.

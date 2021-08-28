@@ -4,8 +4,6 @@ The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [s
 
 ### IConnector logging example
 
-IConnector logging example
-
 1. First, you need to create a log manager: 
 
    ```cs

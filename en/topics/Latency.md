@@ -10,8 +10,6 @@ For the delay calculation it is necessary to use the [ILatencyManager](xref:Stoc
 
 ### The latency calculation adding to the SampleSMA
 
-The latency calculation adding to the SampleSMA
-
 1. You should add the text box for the total delay display in the information output window:
 
    ```cs

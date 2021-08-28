@@ -12,8 +12,6 @@ There are two ways to install [S\#](StockSharpAbout.md):
 
 ### Install from GitHub
 
-Install from GitHub
-
 1. Sign up on [GitHub](https://github.com/).
 2. Go to[github.com\/StockSharp\/StockSharp](https://github.com/StockSharp/StockSharp) page in StockSharp repository.
 3. Select the **releases** icon, as shown in the following figure.![stocksharp instalation1](../images/stocksharp_instalation1.png)
@@ -25,8 +23,6 @@ Install from GitHub
 5. Unlock and unzip the downloaded files.
 
 ### Install using the Nuget
-
-Install using the Nuget
 
 > [!TIP]
 > The only binary files of [S\#](StockSharpAbout.md) will be downloaded from Nuget. To get the Samples you should to visit GitHub.

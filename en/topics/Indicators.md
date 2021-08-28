@@ -4,8 +4,6 @@
 
 ### Connecting the indicator to the robot
 
-Connecting the indicator to the robot
-
 1. At the very beginning, you need to create an indicator. The indicator is created, just like a regular .NET object:
 
    ```cs

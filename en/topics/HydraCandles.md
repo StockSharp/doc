@@ -6,8 +6,6 @@ This allows you to subsequently use the data in any technical analysis programs 
 
 ### Candles generation
 
-Candles generation
-
 1. On the **Common** tab, click the **Candles** button, the following window will open:![hydra candles main](../images/hydra_candles_main.png)
 2. Further it is necessary: 
    - Select the required candle type from the drop\-down list (all [standard candles](Candles.md) are supported) 

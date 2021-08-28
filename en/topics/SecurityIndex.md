@@ -8,8 +8,6 @@
 
 ### The ExpressionIndexSecurity creating
 
-The ExpressionIndexSecurity creating
-
 1. To declare the compound instruments that will be included in [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) and in the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) itself:
 
    ```cs
@@ -36,8 +34,6 @@ The ExpressionIndexSecurity creating
    ```
 
 ### The WeightedIndexSecurity creating
-
-The WeightedIndexSecurity creating
 
 1. To declare the compound instruments that will be included in [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) and in the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) itself:
 

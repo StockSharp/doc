@@ -15,8 +15,6 @@ This mode is used when [testing strategies](Shell_emulation.md).
 
 ### Emulation settings.
 
-Emulation settings.
-
 ![hydra emulator prop](../images/hydra_emulator_prop.png)
 
 - **Match on touch** \- when emulating trade matching, match orders when the trade price is equal to the order price.

@@ -16,8 +16,6 @@
 
 ### Пример работы с хранилищем маркет\-данных
 
-Пример работы с хранилищем маркет\-данных
-
 1. Пример SampleStorage, находящийся в дистрибутиве [S\#](StockSharpAbout.md), показывает, как сохранить и загрузить сделки через класс [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry). В начале создается инструмент, у которого инициализируются основные свойства \- [Id](xref:StockSharp.BusinessEntities.Security.Id) (для определения месторасположения), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) и [Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (для сжатия цены в файле *trades.bin*):
 
    ```cs

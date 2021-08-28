@@ -4,8 +4,6 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 
 ### Order book modifications
 
-Order book modifications
-
 1. The creating of sparse order book from the normal one is carried out through the [Overload:StockSharp.Algo.TraderHelper.Sparse](xref:Overload:StockSharp.Algo.TraderHelper.Sparse) method: 
 
    ```cs
@@ -31,8 +29,6 @@ Order book modifications
    The result of the grouping will be the [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) order book, consisting of quotations of the [AggregatedQuote](xref:StockSharp.BusinessEntities.AggregatedQuote) type. Through the [AggregatedQuote.InnerQuotes](xref:StockSharp.BusinessEntities.AggregatedQuote.InnerQuotes) property the real order book quotations can get, on which the grouping by price level was done. 
 
 ### Data check
-
-Data check
 
 Sometimes you need to check the data in the order book to reveal data collisions. For example, the check of downloaded order books from external sources, or tracing the correctness of the exchange operation during the abnormal (the crisis, stop trading) period. To do this you can use the special [MarketDepth.Verify](xref:StockSharp.BusinessEntities.MarketDepth.Verify) method, which checks whether bids and offers are mixed among themselves. 
 

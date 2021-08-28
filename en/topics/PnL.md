@@ -8,8 +8,6 @@ For the total profit\-loss calculation (P&L) in a trading algorithm it is necess
 
 ### The profit\-loss calculation adding to the SampleSMA
 
-The profit\-loss calculation adding to the SampleSMA
-
 1. You should add the text box for the P&L in the information output window:
 
    ```cs

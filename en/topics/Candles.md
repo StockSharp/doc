@@ -19,8 +19,6 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
 
 ### Start getting data
 
-Start getting data
-
 1. 1. Create a series of [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) candles: 
 
    ```cs

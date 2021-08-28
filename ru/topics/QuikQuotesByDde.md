@@ -8,8 +8,6 @@
 
 ### Шаги настройки экспорта стакана
 
-Шаги настройки экспорта стакана
-
 1. Для того, чтобы метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth) работал и в классе [QuikTrader](xref:StockSharp.Quik.QuikTrader), необходимо в начале настроить экспорт стакана в [Quik](Quik.md)\-е, как показано на рисунке: 
 
    > [!TIP]

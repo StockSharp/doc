@@ -6,8 +6,6 @@
 
 ### Создание CommissionManager
 
-Создание CommissionManager
-
 1. Создать [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager):
 
    ```cs

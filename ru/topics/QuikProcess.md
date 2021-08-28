@@ -4,8 +4,6 @@
 
 ### Варианты использования:
 
-Варианты использования: 
-
 1. Включение [Quik](Quik.md) (с проверкой, запущен ли уже через свойство [QuikTerminal.GetTerminals](xref:StockSharp.Quik.QuikTerminal.GetTerminals)): 
 
    ```cs

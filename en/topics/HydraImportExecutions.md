@@ -6,8 +6,6 @@ To import your transactions, you need to select **Import \=\> Own Transactions**
 
 ### The process of importing your transactions
 
-The process of importing your transactions
-
 1. Execute **CSV Import Settings**.
 
    See [Candles](HydraImportCandles.md) import.

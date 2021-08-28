@@ -19,11 +19,7 @@ The following figure shows the basic elements of the graphical component.
 
 ### Chart's elements
 
-Chart's elements
-
 ### Chart
-
-Chart
 
 [Chart](xref:StockSharp.Xaml.Charting.Chart) is the parent container for other elements of the graphical control. It contains methods for adding and removing the "child" elements, properties to customize the appearance of the component and the chart plotting method, as well as the method of charts drawing themselves. *Chart* can contain several areas ([ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)) to plot charts (see Figure). [Chart](xref:StockSharp.Xaml.Charting.Chart) also contains the preview area **OverView** (see Figure). In this area, it is possible to select the chart viewing area using the sliders. In addition, it is possible to scroll and zoom in the chart by means of dragging the [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) field, X axis and using the mouse wheel. 
 
@@ -46,8 +42,6 @@ Chart
 
 ### ChartArea
 
-ChartArea
-
 [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) \- the plotting area, it is a container for the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) elements (indicators, candles, etc.), which are drawn on the chart and chart axes ([ChartAxis](xref:StockSharp.Xaml.Charting.ChartAxis)). 
 
 **The [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)** basic properties: 
@@ -57,8 +51,6 @@ ChartArea
 - [YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- the list of the vertical axes.
 
 ### IChartElement
-
-IChartElement
 
 All the elements that are displayed in the chart must implement the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) interface. [S\#](StockSharpAbout.md) has the following classes that implement this interface: 
 

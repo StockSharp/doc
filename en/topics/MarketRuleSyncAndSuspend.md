@@ -4,8 +4,6 @@ Sometimes you want to set multiple rules in suspension mode (prevent to trigger 
 
 ### Rules suspension using
 
-Rules suspension using
-
 - Out of the strategy:
 
   ```cs

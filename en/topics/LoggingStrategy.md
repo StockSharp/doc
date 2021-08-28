@@ -8,8 +8,6 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
 
 ### Logging in to test file
 
-Logging in to test file
-
 1. First, you need to create the special manager: 
 
    ```cs
@@ -30,8 +28,6 @@ Logging in to test file
 
 ### Sound playback
 
-Sound playback
-
 1. Creating a logger and passing the name of the sound file in it: 
 
    ```cs
@@ -48,8 +44,6 @@ Sound playback
 
 ### Email sending
 
-Email sending
-
 1. The logger creating and passing to it sent letters parameters: 
 
    ```cs
@@ -65,8 +59,6 @@ Email sending
    ```
 
 ### Logging in to the LogWindow
-
-Logging in to the LogWindow
 
 1. The [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) logger creating: 
 

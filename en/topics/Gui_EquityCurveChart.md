@@ -8,8 +8,6 @@ Below is an example of using this component. The full example code is in the Sam
 
 ### Example of the EquityCurveChart plotting
 
-Example of the EquityCurveChart plotting
-
 1. We add the [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) graphical component to XAML. Assigning the **Curve** name to the component. 
 
    ```xaml

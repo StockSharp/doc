@@ -8,8 +8,6 @@
 
 ### Создание ContinuousSecurity
 
-Создание ContinuousSecurity
-
 1. Объявить составные инструменты, которые будут входить в [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), а также сам [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity):
 
    ```cs

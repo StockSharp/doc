@@ -16,8 +16,6 @@ Files with the bin extension are inside each folder with dates. Trades are store
 
 ### Example of working with market data storage
 
-Example of working with market data storage
-
 1. The SampleStorage example, located in the [S\#](StockSharpAbout.md) installation package, shows how to save and load the trades through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)class. In the beginning an instrument created and its basic properties are initialized \- [Id](xref:StockSharp.BusinessEntities.Security.Id) (to determine location on disk), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) and [Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (for decimal value compression in the **trades.bin** file):
 
    ```cs

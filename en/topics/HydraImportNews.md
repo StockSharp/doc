@@ -6,8 +6,6 @@ To import news, select **Import \=\> News** from the main application menu.
 
 ### News import process
 
-News import process
-
 1. Execute **CSV Import Settings**.
 
    See [Candles](HydraImportCandles.md) import.

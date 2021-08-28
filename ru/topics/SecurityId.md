@@ -7,8 +7,6 @@
 
 ### Переопределение алгоритма генерации идентификаторов
 
-Переопределение алгоритма генерации идентификаторов
-
 1. Для того, чтобы начать генерировать идентификаторы инструментов по своему алгоритму, необходимо создать наследника класса [SecurityIdGenerator](xref:StockSharp.Algo.SecurityIdGenerator), и переопределить метод [SecurityIdGenerator.GenerateId](xref:StockSharp.Algo.SecurityIdGenerator.GenerateId): 
 
    ```cs

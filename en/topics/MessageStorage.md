@@ -28,8 +28,6 @@ It should pay attention to the relevance of using the message storage to store o
 
 ### Example of saving own trades
 
-Example of saving own trades
-
 1. 1. First, an instance of the connector is created, as well as a storage. In addition, we specify the identifier of the instrument with which we will work and declare a variable for the transaction storage. The transaction storage itself for the specified instrument will be received in the instrument getting event using the [IMessageStorageRegistry.GetTransactionStorage](xref:StockSharp.Algo.Storages.IMessageStorageRegistry.GetTransactionStorage) method. 
 
    ```cs
