@@ -7,5 +7,3 @@ At the bottom of the panel, you have to select the **Risk\-rule**, configure the
 ![Terminal Risk Rule](../images/Terminal_Risk_Rule.png)
 
 The list of risk rules and their description is available in the section [Risk management](Designer_Risk_Rule.md).
-
-## Recommended content

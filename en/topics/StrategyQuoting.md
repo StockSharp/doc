@@ -44,5 +44,3 @@ To implement the quoting the [S\#](StockSharpAbout.md) includes the [QuotingStra
 ### Next Steps
 
 [Take\-profit and stop\-loss](StrategyProtective.md)
-
-## Recommended content

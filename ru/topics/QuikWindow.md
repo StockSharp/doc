@@ -8,5 +8,3 @@
 - [RegisterTrades](xref:StockSharp.Quik.QuikTerminal.RegisterTrades) и [UnRegisterTrades](xref:StockSharp.Quik.QuikTerminal.UnRegisterTrades) настраивает фильтр в таблице Все Сделки (нужно включить режим [EnableFiltering](xref:StockSharp.Quik.QuikTerminal.EnableFiltering) ). 
 
 Если необходимо произвести какое\-то действие с окном [Quik](Quik.md), но его нет среди методов [QuikTerminal](xref:StockSharp.Quik.QuikTerminal), то можно воспользоваться свойством [QuikTerminal.MainWindow](xref:StockSharp.Quik.QuikTerminal.MainWindow). Оно возвращает системное описание окна, через которое можно посылать [Windows сообщения](https://msdn.microsoft.com/en-us/library/ms644927(VS.85).aspx). 
-
-## См. также

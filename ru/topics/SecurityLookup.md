@@ -9,5 +9,3 @@
 - Свойство [Security.Board](xref:StockSharp.BusinessEntities.Security.Board) задает, на какой площадке торгуется инструмент (например, [ExchangeBoard.Forts](xref:StockSharp.BusinessEntities.ExchangeBoard.Forts) или [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)).
 
 Найденные инструменты будут возвращены через событие [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity). 
-
-## См. также

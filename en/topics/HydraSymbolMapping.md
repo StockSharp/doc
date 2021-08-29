@@ -23,5 +23,3 @@ To match instruments and connections you need:
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
    | ![Designer Security mapping 01 02](../images/Designer_Security_mapping_01_02.png) | ![Designer Security mapping 01 03](../images/Designer_Security_mapping_01_03.png) |
 4. Now all downloaded data, in our case for APPLE shares, will be saved in one place 
-
-## Recommended content

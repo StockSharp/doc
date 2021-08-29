@@ -31,5 +31,3 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 ### Data check
 
 Sometimes you need to check the data in the order book to reveal data collisions. For example, the check of downloaded order books from external sources, or tracing the correctness of the exchange operation during the abnormal (the crisis, stop trading) period. To do this you can use the special [MarketDepth.Verify](xref:StockSharp.BusinessEntities.MarketDepth.Verify) method, which checks whether bids and offers are mixed among themselves. 
-
-## Recommended content

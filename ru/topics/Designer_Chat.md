@@ -19,5 +19,3 @@
 После регистрации окно примет вид:
 
 ![Designer Chat 00](../images/Designer_Chat_00.png)
-
-## См. также

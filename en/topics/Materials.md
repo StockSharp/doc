@@ -13,5 +13,3 @@
 - YouTube channel \- [StockSharp YouTube](https://youtube.com/user/StockSharp/). 
 - Facebook \- [StockSharp Facebook](https://facebook.com/stocksharp). 
 - Twitter \- [StockSharp Twitter](https://twitter.com/stocksharp). 
-
-## Recommended content

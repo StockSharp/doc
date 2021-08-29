@@ -41,5 +41,3 @@ public class EmailLogListener : LogListener
 	}
 }
 ```
-
-## См. также

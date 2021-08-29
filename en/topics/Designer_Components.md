@@ -19,5 +19,3 @@ During testing or trade there is a need to fully control the process. For comple
 - [Chart positions](Designer_Graph_options_positions.md) \- is a chart of options positions.
 - [Option desk](Designer_Options_Board.md) \- is an options table.
 - [Order book](Designer_Depth_Panel2.md) \- is a table of limit orders for purchase and sale.
-
-## Recommended content

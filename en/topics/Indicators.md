@@ -37,5 +37,3 @@
    }
    ```
 5. All indicators have a [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), property, which indicates whether the indicator is ready for use. For example, the [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) indicator has a period, and until the indicator processes the number of candles equal to the indicator period, the indicator will be considered not ready for use. And the [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) property will be 'false'.
-
-## Recommended content

@@ -7,5 +7,3 @@
 ![Terminal Risk Rule](../images/Terminal_Risk_Rule.png)
 
 Список риск\-правил и их описание доступно в разделе [Риск\-менеджмент](Designer_Risk_Rule.md).
-
-## См. также

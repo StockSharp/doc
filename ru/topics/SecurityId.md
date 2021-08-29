@@ -24,5 +24,3 @@
    ```cs
    var _connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
    ```
-
-## См. также

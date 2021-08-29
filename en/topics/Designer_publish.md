@@ -15,5 +15,3 @@ For the first time, you will have to fill in the login and password and confirm 
 For automatic publishing open the ![Designer Share link ico](../images/Designer_Share_link_ico.png), button and check the Auto\-publishing checkbox:
 
 ![Designer Share link 01](../images/Designer_Share_link_01.png)
-
-## Recommended content

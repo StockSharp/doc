@@ -15,5 +15,3 @@ Notifications can be of the following form:
 - **Speech** – message will be spoken by the computer generated voice.
 - **Log** – message will be sent to the Designer logs window.
 - **Off** – notification will not be shown.
-
-## Recommended content

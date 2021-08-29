@@ -244,5 +244,3 @@ The example of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average
 ### Next Steps
 
 [Child strategies](StrategyChilds.md)
-
-## Recommended content

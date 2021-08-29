@@ -156,5 +156,3 @@
    // start emulation
    batchEmulation.Start(strategies, periods.Length);
    ```
-
-## См. также

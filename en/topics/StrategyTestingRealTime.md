@@ -71,5 +71,3 @@ To emulate the trading on real data it is necessary to use [RealTimeEmulationTra
    					  
    ```
 3. The following figure shows the result of the example work. ![sample realtaime emulation](../images/sample_realtaime_emulation.png)
-
-## Recommended content

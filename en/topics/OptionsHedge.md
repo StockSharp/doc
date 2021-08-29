@@ -37,5 +37,3 @@ If you want to protect positions by option strategies (for example, as [Volatili
    ```none
    hedge.Stop();
    ```
-
-## Recommended content

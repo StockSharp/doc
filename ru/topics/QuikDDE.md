@@ -19,5 +19,3 @@
 - [Таблица Инструменты (изменения)](QuikSecuritiesChangesTable.md)
 - [Строка транзакции](QuikFormatTransaction.md)
 - [Работа с несколькими Quik\-ами](QuikFew.md)
-
-## См. также

@@ -36,5 +36,3 @@ The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Stra
 ### Next Steps
 
 [Logging](Logging.md)
-
-## Recommended content

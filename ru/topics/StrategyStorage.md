@@ -60,5 +60,3 @@ public override void Save(SettingsStorage settings)
 ### Следующие шаги
 
 [Загрузка заявок и сделок](StrategyOrdersLoad.md)
-
-## См. также

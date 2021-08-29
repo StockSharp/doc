@@ -21,5 +21,3 @@ List of Risk\-rules
 - **Trade (volume)** – the risk\-rule that monitors the trade volume.
 - **Trade (price)** – the risk\-rule that monitors the trade price.
 - **Trade (frequency)** – the risk\-rule that monitors the frequency of trades.
-
-## Recommended content

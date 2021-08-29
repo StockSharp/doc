@@ -152,5 +152,3 @@
 [Снятие заявок](OrdersCancel.md)
 
 [Замена заявок](OrdersReRegister.md)
-
-## См. также

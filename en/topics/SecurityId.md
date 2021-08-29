@@ -24,5 +24,3 @@ The instruments in the [S\#](StockSharpAbout.md) from different sources have the
    ```cs
    var _connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
    ```
-
-## Recommended content

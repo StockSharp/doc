@@ -22,5 +22,3 @@ Parameters
 
 - **Data type** \- the type of data to be input. The type of the input parameter depends on the selected value.
 - **Property** – the tree of selected type properties, which can be obtained at the output of the cube. The set of available properties depends on the selected data type and appears only after selecting the required data type.
-
-## Recommended content

@@ -9,5 +9,3 @@ The [S\#](StockSharpAbout.md) library contains, as well as the system modules, a
 - [Base algorithms](BasicAlgo.md) \- base algorithms, on which abovementioned trading algorithms are based. 
 - [Order book: sparse and grouped](SparseDepth.md) \- order book changing to sparse and, vice versa, the grouping by price levels. 
 - [Equity curve](Equity.md) \- the equity curve calculation by the [profit\-loss](PnL.md). 
-
-## Recommended content

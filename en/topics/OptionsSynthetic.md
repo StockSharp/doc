@@ -41,5 +41,3 @@ if (elapsedVolume > 0)
 ```
 
 Similarly to options, you can also get the option position for the base instrument through [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) and [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell) methods. 
-
-## Recommended content

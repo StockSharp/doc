@@ -24,5 +24,3 @@ public class EmailLogListener : LogListener
 	}
 }
 ```
-
-## Recommended content

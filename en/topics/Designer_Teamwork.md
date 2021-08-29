@@ -8,5 +8,3 @@
 - [Import](Designer_Import_strategies.md) \- to import received strategy with or without encryption.
 - [Strategy gallery](Designer_Gallery_of_strategies.md) \- to acquire ready strategies or to offer own strategies to other users.
 - [Share images for charts and tables](Designer_publish.md) \- to publish or auto\-publish the trading or testing results.
-
-## Recommended content

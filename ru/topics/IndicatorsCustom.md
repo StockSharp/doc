@@ -164,5 +164,3 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 ```
 
 Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются. 
-
-## См. также

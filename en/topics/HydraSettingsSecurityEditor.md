@@ -19,5 +19,3 @@ Then you can edit the group.
 ![hydra securities edit](../images/hydra_securities_edit.png)
 
 If the selected instrument group has the same values, this field will be filled with this value. If the values are different, then this field will be empty. For example, two instruments are selected with the Price Step value equal to 1, one instrument has a lot size of 10, the other \- 100. Accordingly, the Price Step field will be 1, and the Volume Step field will be empty. 
-
-## Recommended content

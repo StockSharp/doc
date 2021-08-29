@@ -19,5 +19,3 @@
 ### Следующие шаги
 
 [Verifier](QuikVerifier.md)
-
-## См. также

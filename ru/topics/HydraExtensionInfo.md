@@ -18,5 +18,3 @@
 ![hydra ExtensionInfo csv excel](../images/hydra_ExtensionInfo_csv_excel.png)
 
 ![hydra ExtensionInfo csv notepad](../images/hydra_ExtensionInfo_csv_notepad.png)
-
-## См. также

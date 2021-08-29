@@ -13,5 +13,3 @@
 - Канал на YouTube \- [StockSharp YouTube](https://youtube.com/user/StockSharp/). 
 - Группа ВК "StockSharp \- Трейдинг и Торговые роботы" \- [StockSharp VK](https://vk.com/stocksharp). 
 - Twitter \- [StockSharp Twitter](https://twitter.com/stocksharp). 
-
-## См. также

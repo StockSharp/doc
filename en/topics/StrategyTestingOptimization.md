@@ -156,5 +156,3 @@ To optimize the [backtesting](StrategyTestingHistory.md) process it is possible 
    // start emulation
    batchEmulation.Start(strategies, periods.Length);
    ```
-
-## Recommended content

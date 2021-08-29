@@ -12,5 +12,3 @@ var messageAdapter = new PlazaMessageAdapter(Connector.TransactionIdGenerator)
 };      
       
 ```
-
-## См. также

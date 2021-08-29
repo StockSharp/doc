@@ -37,5 +37,3 @@
    }
    ```
 5. У всех индикаторов есть свойство [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), которое говорит о том готов ли индикатор к использованию. Например, индикатор [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) имеет период, и пока индикатор не обработает количество свечей, равное периоду индикатора, индикатор будет считаться не готовым к использованию. И свойство [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) будет false.
-
-## См. также

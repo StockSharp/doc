@@ -11,5 +11,3 @@ In the opened window click the ![Designer Creation tool 00](../images/Designer_C
 In the **Connection** column select a connection form the drop\-down list. In the **Security code** and **Board code** columns specify the security and board codes, as they are specified in the **Designer**. In the **Adapter code** and **Adapter board** columns specify the security and board codes, as they are specified in the external trading system.
 
 ![Designer Security mapping 01](../images/Designer_Security_mapping_01.png)
-
-## Recommended content

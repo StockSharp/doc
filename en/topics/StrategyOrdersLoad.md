@@ -49,5 +49,3 @@ The following example shows the loading of all trades in the strategy:
    }
    ```
 4. Once orders are loaded in the strategy, all of their matched trades will be also loaded. This will be done automatically. 
-
-## Recommended content

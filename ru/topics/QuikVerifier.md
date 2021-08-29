@@ -38,5 +38,3 @@ if (this.SettingErrors.Count == 0)
 ### Следующие шаги
 
 [Создание первой стратегии](QuikFirstStrategy.md)
-
-## См. также

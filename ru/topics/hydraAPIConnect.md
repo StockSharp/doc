@@ -90,5 +90,3 @@ _connector.MarketDataSubscriptionFailed += (security, msg, error) =>
 _connector.Connect();
 ...
 ```
-
-## См. также

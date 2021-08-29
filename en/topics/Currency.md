@@ -28,5 +28,3 @@ To work with multi\-currency algorithms, it is necessary to use the [Currency](x
    var rate = CurrencyTypes.EUR.Convert(CurrencyTypes.USD, DateTime.Today - TimeSpan.FromDays(1));
    ```
 4. Here is an example of currency conversion: ![samplecurrency](../images/sample_currency.png)
-
-## Recommended content

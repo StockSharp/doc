@@ -15,5 +15,3 @@
 Для автоматической публикации необходимо раскрыть меню кнопки ![Designer Share link ico](../images/Designer_Share_link_ico.png), установить флаг автопубликация и выбрать период:
 
 ![Designer Share link 01](../images/Designer_Share_link_01.png)
-
-## См. также

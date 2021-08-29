@@ -23,5 +23,3 @@
 <TICKER>,<PER>,<DATE>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>
 	  				
 ```
-
-## См. также

@@ -24,5 +24,3 @@
 [Визуальный мониторинг](LoggingMonitorWindow.md)
 
 [Создание ILogListener](LoggingCustomListener.md)
-
-## См. также

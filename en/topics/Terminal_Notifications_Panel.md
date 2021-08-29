@@ -5,5 +5,3 @@ The **Notifications** panel is a table that displays information about all curre
 ![Terminal Notifications Panel](../images/Terminal_Notifications_Panel.png)
 
 In the **Notifications** panel, you can edit ![Designer Creating a repository of historical data 01](../images/Designer_Creating_repository_of_historical_data_01.png) an existing notification, delete ![Designer Creating a repository of historical data 02](../images/Designer_Creating_repository_of_historical_data_02.png) it, or set a new notification ![Designer Creating a repository of historical data 00](../images/Designer_Creating_repository_of_historical_data_00.png). 
-
-## Recommended content

@@ -29,5 +29,3 @@
    ```cs
    _connector.RegisterOrder(order);
    ```
-
-## См. также

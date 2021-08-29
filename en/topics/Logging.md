@@ -24,5 +24,3 @@ Normally the [S\#](StockSharpAbout.md) contains the following implementations of
 [Visual monitoring](LoggingMonitorWindow.md)
 
 [ILogListener creating](LoggingCustomListener.md)
-
-## Recommended content

@@ -28,5 +28,3 @@ By default, child strategies are not associated with each other, and are execute
 [Quoting](StrategyQuoting.md)
 
 [Take\-profit and stop\-loss](StrategyProtective.md)
-
-## Recommended content

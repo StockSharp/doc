@@ -18,5 +18,3 @@ Below is an example of **CSV** file of extended information opened in different 
 ![hydra ExtensionInfo csv excel](../images/hydra_ExtensionInfo_csv_excel.png)
 
 ![hydra ExtensionInfo csv notepad](../images/hydra_ExtensionInfo_csv_notepad.png)
-
-## Recommended content

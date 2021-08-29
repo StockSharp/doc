@@ -17,5 +17,3 @@ Notifications can be of the following form:
 To set a notification, you have to click the ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button in the notification panel ([Notification panel](Terminal_Notifications_Panel.md)) or click the ![Designer Alert Bell](../images/Designer_Alert_Bell.png) button directly in the panels that support notifications.
 
 For information on how to configure notifications, see [Notifications setup](Terminal_notification_Setting.md) section.
-
-## Recommended content

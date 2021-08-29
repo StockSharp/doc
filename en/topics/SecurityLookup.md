@@ -9,5 +9,3 @@ To find the instrument you need to call the [IConnector.LookupSecurities](xref:S
 - The [Security.Board](xref:StockSharp.BusinessEntities.Security.Board) property sets the board where the instrument trades (for example, [ExchangeBoard.Bats](xref:StockSharp.BusinessEntities.ExchangeBoard.Bats) or [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)).
 
 Found instruments will be returned through the [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) event. 
-
-## Recommended content

@@ -21,5 +21,3 @@ To cancel all long stop orders:
 ```cs
 _connector.CancelOrders(true, null, Sides.Buy, null, null);
 ```
-
-## Recommended content

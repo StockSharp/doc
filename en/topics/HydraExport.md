@@ -29,5 +29,3 @@ You can add a header indicating the name of properties. In this case, the record
 If you need to export in a format using colons, you should specify the default keyword as in the example above **{OpenTime:default:HH:mm:ss}**.
 
 **Watch [video tutorial](HydraDiffSaveFormat.md)**
-
-## Recommended content

@@ -21,5 +21,3 @@ During trade there is a need to fully control the process. For complete control 
 - [Option desk](Terminal_option_desk.md) \- is a table of the main parameters of the selected options for the underlying instrument.
 - [Smile volatility](Terminal_smile_of_volatility.md) \- is a graphic representation of the expected volatility level for options with the same underlying asset and different strikes.
 - [Order log](Terminal_orderlog.md) \- is a table with orders, which displays complete information about all orders for the selected instruments.
-
-## Recommended content

@@ -19,5 +19,3 @@ When you first open the **Chat**, an authorization page appears, where you need 
 After registration, the window will look like this:
 
 ![Designer Chat 00](../images/Designer_Chat_00.png)
-
-## Recommended content

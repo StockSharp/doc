@@ -23,5 +23,3 @@ Also, the first line (Header) should be set in the file:
 <TICKER>,<PER>,<DATE>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>
 	  				
 ```
-
-## Recommended content

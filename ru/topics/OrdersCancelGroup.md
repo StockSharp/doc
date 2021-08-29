@@ -21,5 +21,3 @@ _connector.CancelOrders(null, null, null, null, security);
 ```cs
 _connector.CancelOrders(true, null, Sides.Buy, null, null);
 ```
-
-## См. также

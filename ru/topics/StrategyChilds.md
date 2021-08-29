@@ -26,5 +26,3 @@
 [Котирование](StrategyQuoting.md)
 
 [Тейк\-профит и стоп\-лосс](StrategyProtective.md)
-
-## См. также
