@@ -6,6 +6,8 @@ The user is provided with free connectors, and he can also purchase paid ones, w
 
 At the moment, [S\#.Data](Hydra.md) supports the following sources:
 
+### Stock, Futures and Options
+
 | Connectors                         | Connector settings                                                   | Graphical configuration                                                                  |
 | ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | [AlphaVantage](AlphaVantage.md)    | [Configuration AlphaVantage](AlphaVantageConnectorsSettings.md)      | [Graphical configuration AlphaVantage](API_GUI_Settings_AlphaVantage.md)                 |
@@ -28,6 +30,8 @@ At the moment, [S\#.Data](Hydra.md) supports the following sources:
 | [Xignite](Xignite.md)              | [Configuration Xignite](XigniteConnectorsSettings.md)                | [Graphical configuration Xignite](API_GUI_Settings_Xignite.md)                           |
 | [Yahoo](Yahoo.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration Yahoo](API_GUI_Settings_Yahoo.md)                               |
 
+### Forex
+
 | Connectors                        | Connector settings                                                   | Graphical configuration                                                    |
 | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | [DukasCopy](DukasCopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](API_GUI_Settings_Dukascopy.md)         |
@@ -38,6 +42,8 @@ At the moment, [S\#.Data](Hydra.md) supports the following sources:
 | [MB Trading](MB%20Trading.md)     | [Configuration MB Trading](MBTradingConnectorsSettings.md)           | [Graphical configuration MB Trading](API_GUI_Settings_MB%20Trading.md)     |
 | [Oanda](Oanda.md)                 | [Configuration Oanda](OandaConnectorsSettings.md)                    | [Graphical configuration Oanda](API_GUI_Settings_OANDA.md)                 |
 | [TrueFX](TrueFX.md)               | [Configuration TrueFX](TrueFXConnectorsSettings.md)                  | [Graphical configuration TrueFX](API_GUI_Settings_TrueFX.md)               |
+
+### Cryptocurrencies
 
 | Connectors                      | Connector settings                                              | Graphical configuration                                                   |
 | ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -89,6 +95,8 @@ At the moment, [S\#.Data](Hydra.md) supports the following sources:
 | [Yobit](Yobit.md)               | [Configuration Yobit](YobitConnectorsSettings.md)               | [Graphical configuration Yobit](API_GUI_Settings_Yobit.md)                |
 | [Zaif](Zaif.md)                 | [Configuration Zaif](ZaifConnectorsSettings.md)                 | [Graphical configuration Zaif](API_GUI_Settings_Zaif.md)                  |
 | [ZB](ZB.md)                     | [Configuration ZB](ZBConnectorsSettings.md)                     | [Graphical configuration ZB](API_GUI_Settings_ZB.COM.md)                  |
+
+### Common
 
 | Connectors             | Connector settings                                                   | Graphical configuration                                  |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
