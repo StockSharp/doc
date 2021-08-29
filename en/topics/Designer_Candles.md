@@ -4,19 +4,19 @@
 
 The cube is used to build candles for a specified instrument. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** – the instrument for which it is necessary to build candles with specified parameters.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Candles** \- built candles.
 
-#### Parameters
+### Parameters
 
 Parameters
 

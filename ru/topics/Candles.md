@@ -17,7 +17,7 @@
 
 ![sample rangecandles](../images/sample_rangecandles.png)
 
-### Запуск получения данных
+## Запуск получения данных
 
 1. Создадим серию свечей [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries): 
 
@@ -182,7 +182,7 @@
      					
      ```
 
-### Следующие шаги
+## Следующие шаги
 
 [График](CandlesUI.md)
 

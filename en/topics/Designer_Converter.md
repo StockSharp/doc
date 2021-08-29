@@ -4,19 +4,19 @@
 
 The cube is used to convert complex objects into simple data types. For example, it allows to get the value of the price step for the instrument. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Any data** \- the certain type of complex objects that are received.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Any data** \- the value of the selected property for the received object.
 
-#### Parameters
+### Parameters
 
 Parameters
 

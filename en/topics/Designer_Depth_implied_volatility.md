@@ -4,13 +4,13 @@
 
 The cube is used to calculate an order book of implied volatility.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Order book** – the order book.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

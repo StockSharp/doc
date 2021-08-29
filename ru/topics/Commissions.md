@@ -4,7 +4,7 @@
 
 Тарифный план создается с помощью добавления соответствующих правил [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule), на основе которых в дальнейшем и будет вестись расчет комиссий.
 
-### Создание CommissionManager
+## Создание CommissionManager
 
 1. Создать [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager):
 

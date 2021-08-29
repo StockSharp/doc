@@ -2,7 +2,7 @@
 
 The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [strategies](LoggingStrategy.md) also implement the [ILogSource](xref:StockSharp.Logging.ILogSource) interface. Therefore, from the [IConnector](xref:StockSharp.BusinessEntities.IConnector) object you can receive messages through the [LogManager](xref:StockSharp.Logging.LogManager) by all means that are available for strategies. 
 
-### IConnector logging example
+## IConnector logging example
 
 1. First, you need to create a log manager: 
 

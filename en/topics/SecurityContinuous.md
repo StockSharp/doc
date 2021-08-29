@@ -6,7 +6,7 @@ For example, two futures of the ES index \- **ESM5** and **ESU5**. When the **ES
 
 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) can be traded in the same way as [Security](xref:StockSharp.BusinessEntities.Security). Prior to the **RIM5** expiration an algo will be carried with this instrument. After the expiration an algo will be carried with **RIU5**, etc.
 
-### ContinuousSecurity creating
+## ContinuousSecurity creating
 
 1. To declare the compound instruments that will be included in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) and in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) itself:
 

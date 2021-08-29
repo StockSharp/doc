@@ -4,7 +4,7 @@
 
 ![hydra import orderlog](../images/hydra_import_orderlog.png)
 
-### Процесс импорта сделок
+## Процесс импорта сделок
 
 1. **Настройки импорта**.
 

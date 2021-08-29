@@ -4,7 +4,7 @@
 
 The cube is used to import DLL libraries with strategies ([Create DLL in Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)).
 
-#### Parameters
+### Parameters
 
 Parameters
 

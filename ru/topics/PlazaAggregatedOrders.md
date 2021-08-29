@@ -20,6 +20,6 @@
 adapter.DefaultFutureDepthTable = adapter.TableRegistry.Aggregation20Future;
 ```
 
-### Следующие шаги
+## Следующие шаги
 
 [Получение произвольных таблиц](PlazaCustomTables.md)

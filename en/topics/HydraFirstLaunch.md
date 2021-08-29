@@ -1,6 +1,6 @@
 # First start
 
-### The first time you run it, the following window will be displayed:
+## The first time you run it, the following window will be displayed:
 
 ![hydra Quick start 00](../images/hydra_Quick_start_00.png)
 
@@ -18,7 +18,7 @@ After that, the sources will be added to the left panel of the main application 
 
 ![hydra Quick start 01](../images/hydra_Quick_start_01.png)
 
-### Downloading a tool for uploading market data:
+## Downloading a tool for uploading market data:
 
 Before you start downloading market data, you need to set up the securities for which you need to get market data.
 

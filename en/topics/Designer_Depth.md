@@ -4,13 +4,13 @@
 
 The cube is used to get the order book by the specified instrument.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** \- the instrument for which you need to get an order book.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

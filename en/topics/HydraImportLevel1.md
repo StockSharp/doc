@@ -4,7 +4,7 @@ To import Level 1 data, select **Import \=\> Level 1** from the main application
 
 ![hydra import level1](../images/hydra_import_level1.png)
 
-### The import process securities.
+## The import process securities.
 
 1. **Import settings.**.
 

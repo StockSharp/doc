@@ -4,20 +4,20 @@
 
 The element is used to track the position of two values relative to each other. For example, for the identification of the intersection of two lines (the moment when the previous value of the first line was less than the second one, and the current value of the first line is greater than the second one), or when the value crosses a certain level.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Comparison** \- values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 - **Comparison** \- values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Flag** \- the flag value (indicated the state and has two values: up (true) and down (false)).
 
-#### Parameters
+### Parameters
 
 Parameters
 

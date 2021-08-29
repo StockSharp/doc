@@ -4,7 +4,7 @@ To import instruments, select the **Import \=\> Security** tab.
 
 ![hydra import securities](../images/hydra_import_securities.png)
 
-### The import process securities.
+## The import process securities.
 
 1. **Import settings.**.
 

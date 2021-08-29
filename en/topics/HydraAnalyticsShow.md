@@ -2,7 +2,7 @@
 
 Below is a sequence of steps to perform data analysis.
 
-### Running the script and displaying the analysis results using the SBER@TQBR security as an example:
+## Running the script and displaying the analysis results using the SBER@TQBR security as an example:
 
 For example, we [select the template](HydraAnalyticsScripts.md)**Volume within a day**.
 

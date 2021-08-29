@@ -2,11 +2,11 @@
 
 For the total profit\-loss calculation (P&L) in a trading algorithm it is necessary to use the [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) interface implementation, by way of [PnLManager](xref:StockSharp.Algo.PnL.PnLManager).
 
-### Prerequisites
+## Prerequisites
 
 [Strategies](Strategy.md)
 
-### The profit\-loss calculation adding to the SampleSMA
+## The profit\-loss calculation adding to the SampleSMA
 
 1. You should add the text box for the P&L in the information output window:
 
@@ -27,6 +27,6 @@ For the total profit\-loss calculation (P&L) in a trading algorithm it is necess
    						
    ```
 
-### Next Steps
+## Next Steps
 
 [Position](Position.md)

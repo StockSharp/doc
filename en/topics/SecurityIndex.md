@@ -6,7 +6,7 @@
 
 2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- is the index built from instruments using weighting factors [Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
-### The ExpressionIndexSecurity creating
+## The ExpressionIndexSecurity creating
 
 1. To declare the compound instruments that will be included in [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) and in the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) itself:
 
@@ -33,7 +33,7 @@
    							
    ```
 
-### The WeightedIndexSecurity creating
+## The WeightedIndexSecurity creating
 
 1. To declare the compound instruments that will be included in [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) and in the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) itself:
 

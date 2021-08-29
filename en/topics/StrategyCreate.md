@@ -8,7 +8,7 @@ The example of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average
 
 ![samplesma](../images/sample_sma.png)
 
-### The moving average algorithm:
+## The moving average algorithm:
 
 1. Historical data are necessary for this algorithm, so, for example, the 5\-minutes were downloaded from the [IQFeed](IQFeed.md) site on the AAPL paper and saved to the AAPL\_history.txt file. 
 
@@ -241,6 +241,6 @@ The example of the [Moving Average](https://en.wikipedia.org/wiki/Moving_average
    }
    ```
 
-### Next Steps
+## Next Steps
 
 [Child strategies](StrategyChilds.md)

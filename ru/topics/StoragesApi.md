@@ -14,7 +14,7 @@
 
 Внутри каждой папки с датами находятся файлы, с расширением bin. Сделки хранятся в файле *trades.bin*, стаканы в *quotes.bin*. Также могут присутствовать файлы *candles\_XXX.bin*, где хранятся [свечи](Candles.md) разных типов (название файла указывает на тип и параметр свечей) и файлы *orderLog.bin*, в которых хранится ордер лог.
 
-### Пример работы с хранилищем маркет\-данных
+## Пример работы с хранилищем маркет\-данных
 
 1. Пример SampleStorage, находящийся в дистрибутиве [S\#](StockSharpAbout.md), показывает, как сохранить и загрузить сделки через класс [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry). В начале создается инструмент, у которого инициализируются основные свойства \- [Id](xref:StockSharp.BusinessEntities.Security.Id) (для определения месторасположения), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) и [Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (для сжатия цены в файле *trades.bin*):
 

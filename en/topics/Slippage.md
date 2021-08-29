@@ -6,13 +6,13 @@ The slippage tracking is carried out through a special manager. The basic interf
 
 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategies use their own mechanism for slippage calculation. In this case, the value of slippage can be obtained through the [Strategy.Slippage](xref:StockSharp.Algo.Strategies.Strategy.Slippage) property.
 
-### Prerequisites
+## Prerequisites
 
 [Strategies](Strategy.md)
 
 [Quoting](StrategyQuoting.md)
 
-### The slippage calculation adding to the SampleSMA
+## The slippage calculation adding to the SampleSMA
 
 1. Since the SampleSMA uses the quoting mechanism, then the slippage must take into account in this algorithm.
 
@@ -37,6 +37,6 @@ The slippage tracking is carried out through a special manager. The basic interf
    						
    ```
 
-### Next Steps
+## Next Steps
 
 [Profit\-loss](PnL.md)

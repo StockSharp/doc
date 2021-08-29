@@ -2,7 +2,7 @@
 
 In previous topics objects of embedded in the [S\#](StockSharpAbout.md) classes were sources of logs. The [S\#](StockSharpAbout.md) provides possibilities for the cases when the source of the logs is your own class, or source does not have to be associated with a particular class, but it serve the entire application. For the first case you must implement in your class the [ILogSource](xref:StockSharp.Logging.ILogSource) interface or inherit it from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver). In the second situation, you can use the [TraceSource](xref:StockSharp.Logging.TraceSource), that using the tracing system .NET. How to do this is shown in the *Samples\/Common\/SampleLogging* sample. 
 
-### SampleLogging sample
+## SampleLogging sample
 
 1. Create a custom class that inherits from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
 

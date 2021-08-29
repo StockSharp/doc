@@ -6,7 +6,7 @@
 
 ![Designer Risk Rule](../images/Designer_Risk_Rule.png)
 
-#### Список Риск\-правил
+### Список Риск\-правил
 
 Список Риск\-правил
 

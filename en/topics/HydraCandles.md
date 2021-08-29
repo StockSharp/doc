@@ -4,7 +4,7 @@
 
 This allows you to subsequently use the data in any technical analysis programs (WealthLab, AmiBroker, etc.).
 
-### Candles generation
+## Candles generation
 
 1. On the **Common** tab, click the **Candles** button, the following window will open:![hydra candles main](../images/hydra_candles_main.png)
 2. Further it is necessary: 

@@ -4,7 +4,7 @@
 
 The cube is used to protect the position on option strategies.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -13,13 +13,13 @@ Incoming sockets
 - **Position by underlying asset** – the position by the underlying asset.
 - **Flag** – the signal (flag) that initiates the hedging process.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Order** – the registered order that can be used to obtain trades on it by using the Trades element by the order and displaying it on the chart using the Chart panel cube
 
-#### Parameters
+### Parameters
 
 Parameters
 

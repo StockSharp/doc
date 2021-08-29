@@ -4,7 +4,7 @@ Testing on market data is trading with a real connection to the exchange ("live"
 
 To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" of the specific trading system connector ([OpenECry](OEC.md), [Rithmic](Rithmic.md) etc.). Below is a description of an example of working with the emulator using the connection to [OpenECry](OEC.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
 
-### Work with the trading emulator on real data
+## Work with the trading emulator on real data
 
 1. Creating the [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
 

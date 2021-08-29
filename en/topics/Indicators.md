@@ -2,7 +2,7 @@
 
 [S\#](StockSharpAbout.md) provides over 70 technical analysis indicators as standard. This allows not to create the necessary indicators from scratch, but to use finished ones. In addition, you can create your own indicators, taking existing ones as a basis, as shown in the [Custom indicator](IndicatorsCustom.md). section. All the base classes for working with indicators, as well as the indicators themselves, are located in the [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators) namespace. 
 
-### Connecting the indicator to the robot
+## Connecting the indicator to the robot
 
 1. At the very beginning, you need to create an indicator. The indicator is created, just like a regular .NET object:
 

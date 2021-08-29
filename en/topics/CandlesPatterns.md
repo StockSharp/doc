@@ -9,7 +9,7 @@ It is possible to make candles pattern recognition through the [CandleHelper](xr
 - [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone) \- Is it a dragonfly or gravestone candle. 
 - [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish) \- Is it a bull or bear candle. 
 
-### Common methods of work with candles
+## Common methods of work with candles
 
 [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) also provides a variety of algorithms for candles to simplify writing of code:
 

@@ -4,13 +4,13 @@
 
 The cube is used to notify the user when certain signals occur. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Flag** \- the signal (flag) that initiates the notification process.
 
-#### Parameters
+### Parameters
 
 Parameters
 

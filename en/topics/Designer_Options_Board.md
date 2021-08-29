@@ -6,7 +6,7 @@ The cube is used to display the option desk.
 
 To display the **Option desk**, you need to add the **Option desk** graphic component.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -14,7 +14,7 @@ Incoming sockets
 - **Options** \- the list of options from the **Derivatives** cube.
 - **Price of the underlying asset** \- the price of the underlying asset.
 
-#### Parameters
+### Parameters
 
 Parameters
 

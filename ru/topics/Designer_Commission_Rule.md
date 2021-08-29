@@ -6,7 +6,7 @@
 
 ![Designer Commission Rule](../images/Designer_Commission_Rule.png)
 
-#### Список типов комиссий
+### Список типов комиссий
 
 Список типов комиссий
 

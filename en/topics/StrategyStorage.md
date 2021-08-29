@@ -55,6 +55,6 @@ public override void Save(SettingsStorage settings)
 }
 ```
 
-### Next Steps
+## Next Steps
 
 [Orders and trades loading](StrategyOrdersLoad.md)

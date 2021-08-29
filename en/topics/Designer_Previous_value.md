@@ -4,19 +4,19 @@
 
 The cube is used to obtain the previous value passed to the input, with the specified offset.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Any data** \- the certain type of data received and passed.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Any data** \- the certain type of data received and passed, entered at the input with the offset specified in the parameters.
 
-#### Parameters
+### Parameters
 
 Parameters
 

@@ -4,11 +4,11 @@ With the [Strategy](xref:StockSharp.Algo.Strategies.Strategy), you can also crea
 
 ![strategychilds](../images/strategy_childs.png)
 
-### Prerequisites
+## Prerequisites
 
 [Creating strategies](StrategyCreate.md)
 
-### Work with child strategies
+## Work with child strategies
 
 To add a child strategy you should use the [Strategy.ChildStrategies](xref:StockSharp.Algo.Strategies.Strategy.ChildStrategies) property. It is possible not to set [Strategy.Connector](xref:StockSharp.Algo.Strategies.Strategy.Connector), [Strategy.Portfolio](xref:StockSharp.Algo.Strategies.Strategy.Portfolio) and [Strategy.Security](xref:StockSharp.Algo.Strategies.Strategy.Security) values for child strategies, and they are automatically filled when you add them to the parent strategy. 
 
@@ -23,7 +23,7 @@ The parent strategy and all its child strategies are executed in parallel. This 
 
 By default, child strategies are not associated with each other, and are executed independently. When you need to establish a dependency between the strategies, you must use the [BasketStrategy](xref:StockSharp.Algo.Strategies.BasketStrategy) class. This class allows you to specify conditions for the strategies terminations depending on each other through the [BasketStrategyFinishModes](xref:StockSharp.Algo.Strategies.BasketStrategyFinishModes) indicators. For example, through the [First](xref:StockSharp.Algo.Strategies.BasketStrategyFinishModes.First) value the condition set wherein all child strategies will be stopped, when at least one of them matched. The example of the [BasketStrategy](xref:StockSharp.Algo.Strategies.BasketStrategy) use is shown in the [Take\-profit and stop\-loss](StrategyProtective.md). 
 
-### Next Steps
+## Next Steps
 
 [Quoting](StrategyQuoting.md)
 

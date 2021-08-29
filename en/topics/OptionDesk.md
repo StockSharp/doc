@@ -6,7 +6,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
 
 ![option desk](../images/option_desk.png)
 
-### OptionCalculator example
+## OptionCalculator example
 
 1. In the XAML code, adding the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) element and assigning it the **Desk** name. 
 

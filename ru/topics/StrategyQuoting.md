@@ -4,7 +4,7 @@
 
 Также, котирование позволяет эмулировать рыночные заявки на бирже [ФОРТС](https://moex.com/ru/derivatives/), где тип заявок [OrderTypes.Market](xref:StockSharp.Messages.OrderTypes.Market) не поддерживается. 
 
-### Предварительные условия
+## Предварительные условия
 
 [Дочерние стратегии](StrategyChilds.md)
 
@@ -17,7 +17,7 @@
 - [LevelQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingStrategy) – котирование по заданному уровню в стакане. 
 - [LimitQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LimitQuotingStrategy) – котирование по лимитированной цене. 
 
-### Добавление в SampleSMA котирование
+## Добавление в SampleSMA котирование
 
 1. Для того, чтобы алгоритм скользящей средней, описанный в разделе [Итерационная модель](StrategyCreate.md), стал работать совместно с котировщиком, перед началом работы необходимо запустить экспорт стакана:
 
@@ -43,6 +43,6 @@
    ChildStrategies.Add(strategy);
    ```
 
-### Следующие шаги
+## Следующие шаги
 
 [Тейк\-профит и стоп\-лосс](StrategyProtective.md)

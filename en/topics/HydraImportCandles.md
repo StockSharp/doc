@@ -4,7 +4,7 @@ To import candles, select **Import \=\> Candles** item from the main application
 
 ![hydra import candles](../images/hydra_import_candles.png)
 
-### Candle import process
+## Candle import process
 
 1. **Common.**.
    - **Data type** \- type of imported data.

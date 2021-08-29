@@ -2,7 +2,7 @@
 
 Если требуется защитить позиции по опционным стратегиям (например, как [Котирование по волатильности](OptionsQuoting.md)) можно воспользоваться стратегией хеджирования по дельте [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy). 
 
-### Дельта хеджирование
+## Дельта хеджирование
 
 1. В качестве демонстрации работы [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) изменен пример SampleOptionQuoting (подробнее, [Котирование по волатильности](OptionsQuoting.md)). 
 2. Сама стратегия [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) не запускается, а вместо этого она передается в качестве дочерней, для стратегии [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy)

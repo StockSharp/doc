@@ -4,7 +4,7 @@
 
 ![hydra import depths](../images/hydra_import_depths.png)
 
-### Процесс импорта сделок
+## Процесс импорта сделок
 
 1. **Настройки импорта**.
 

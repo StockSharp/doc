@@ -8,7 +8,7 @@ The [S\#](StockSharpAbout.md) installation package contains an example of Sample
 
 ![samplehistorytest](../images/sample_history_test.png)
 
-### Backtesting of moving averages strategy
+## Backtesting of moving averages strategy
 
 1. At the beginning it is necessary to create the settings for the testing: 
 

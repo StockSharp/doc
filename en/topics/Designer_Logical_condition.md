@@ -4,20 +4,20 @@
 
 The element is used to calculate a logical formula with two arguments.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
 - **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
 
-#### Parameters
+### Parameters
 
 Parameters
 

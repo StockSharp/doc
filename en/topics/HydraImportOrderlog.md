@@ -4,7 +4,7 @@ To import the order log, select the **Import \=\> Order log** item from the main
 
 ![hydra import orderlog](../images/hydra_import_orderlog.png)
 
-### The import process securities.
+## The import process securities.
 
 1. **Import settings.**.
 

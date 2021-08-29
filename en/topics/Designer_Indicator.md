@@ -4,19 +4,19 @@
 
 The cube is used to calculate the indicator values.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Any data** – the specific data type on the basis of which the selected indicator should be calculated (depending on the indicator this can be a numerical value, a candle, etc.).
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Indicator** – the calculated indicator value that can be used to display on the chart panel or for further calculations.
 
-#### Parameters
+### Parameters
 
 Parameters
 

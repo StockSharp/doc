@@ -4,13 +4,13 @@
 
 The cube is used to obtain trades for the particular order.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Order** – the order for which you want to obtain trades. It can be obtained from the **Open positions** element.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

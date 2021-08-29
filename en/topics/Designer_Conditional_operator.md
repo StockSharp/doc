@@ -4,7 +4,7 @@
 
 The conditional statement element returns one of two values, depending on the equality of the two input parameters. The element contains four inputs, three of which can be specified as properties, and one output. In1 and In2 are used for comparison, OutEqual and OutNotEqual are used to specify the values that will be returned at the output of the element, depending on the equality of the input parameters. Values for OutEqual, OutNotEqual and In2 can be specified in the properties of the element, the value of In1 must necessarily be passed through the input parameter.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -13,13 +13,13 @@ Incoming sockets
 - **OutEqual** – the value that will be returned at the output of the element, depending on the equality of the input parameters.
 - **OutNotEqual ** – the value that will be returned at the output of the element, depending on the equality of the input parameters.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Result** \- the numeric value.
 
-#### Parameters
+### Parameters
 
 Parameters
 

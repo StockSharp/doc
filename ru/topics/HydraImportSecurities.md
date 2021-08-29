@@ -4,7 +4,7 @@
 
 ![hydra import securities](../images/hydra_import_securities.png)
 
-### Процесс импорта инструментов
+## Процесс импорта инструментов
 
 1. **Настройки импорта**.
 

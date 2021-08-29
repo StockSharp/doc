@@ -19,6 +19,6 @@ To change the path of the database saving, it is necessary to edit the following
 
 For example, to replace **%Documents%\\StockSharp\\Hydra\\StockSharp.db** with **C:\\StockSharp.db**, to save the database in the root of the drive C:\\.
 
-### Next Steps
+## Next Steps
 
 [Installing S\#.Data](HydraUsing.md)

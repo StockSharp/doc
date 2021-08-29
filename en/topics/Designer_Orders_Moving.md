@@ -4,7 +4,7 @@
 
 The cube is used to change the order by the instrument.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -12,7 +12,7 @@ Incoming sockets
 - **Price** \- the numerical value of the new price.
 - **Volume** \- the numerical value of the new volume.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

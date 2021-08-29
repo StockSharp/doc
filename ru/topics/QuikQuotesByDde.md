@@ -2,11 +2,11 @@
 
 Для стратегий, которым необходима информация о стакане по инструменту, в [S\#](StockSharpAbout.md) предусмотрен метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth). Данный метод возвращает [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth), который позволяет получить группировано по типу котировки (биды и оффера), а так же удобную работу с лучшими котировками и спредом. 
 
-### Предварительные условия
+## Предварительные условия
 
 [Настройка Quik](QuikSetup.md)
 
-### Шаги настройки экспорта стакана
+## Шаги настройки экспорта стакана
 
 1. Для того, чтобы метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth) работал и в классе [QuikTrader](xref:StockSharp.Quik.QuikTrader), необходимо в начале настроить экспорт стакана в [Quik](Quik.md)\-е, как показано на рисунке: 
 

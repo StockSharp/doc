@@ -4,19 +4,19 @@
 
 The cube is used to obtain a grouped order book. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Order book** \- the order book to be g rouped.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Order book** \- the grouped order book.
 
-#### Parameters
+### Parameters
 
 Parameters
 

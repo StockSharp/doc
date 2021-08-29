@@ -6,7 +6,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
 
 ![option volsmile](../images/option_volsmile.png)
 
-### SampleOptionQuoting example
+## SampleOptionQuoting example
 
 1. In the XAML code, add the [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) element and assign it the **PosChart**.
 

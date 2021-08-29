@@ -2,7 +2,7 @@
 
 [S\#.API](StockSharpAbout.md) provides an opportunity to receive historical candles, which can be used both for testing and for building [Indicators](Indicators.md). 
 
-### Working with historical candles through Connector
+## Working with historical candles through Connector
 
 1. To get candles through [Connector](xref:StockSharp.Algo.Connector) , you need to create [Connector](xref:StockSharp.Algo.Connector) and add the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) to it. How to do this using a special control, see [Connection settings window](API_UI_ConnectorWindow.md).
 
@@ -41,7 +41,7 @@
    ```
 4. Candles that appear can be rendered through the [Chart](CandlesUI.md).
 
-### Working with historical candles through MessageAdapter
+## Working with historical candles through MessageAdapter
 
 1. To get candles through the [MessageAdapter](xref:StockSharp.Messages.MessageAdapter), you need to create the corresponding [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 

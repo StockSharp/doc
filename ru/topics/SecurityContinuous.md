@@ -6,7 +6,7 @@
 
 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) можно торговать точно так же, как и [Security](xref:StockSharp.BusinessEntities.Security). До наступления экспирации для **RIM5** торговля будет вестись этим инструментом. После наступления экспирации, торговля будет вестись **RIU5**, и т.д..
 
-### Создание ContinuousSecurity
+## Создание ContinuousSecurity
 
 1. Объявить составные инструменты, которые будут входить в [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), а также сам [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity):
 

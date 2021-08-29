@@ -4,14 +4,14 @@
 
 The cube is used to determine the working time. For example, to determine when a particular instrument is trading.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** \- an instrument for which you need to determine whether a trading session is active.
 - **Trigger** \- is the signal used to determine when to check.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

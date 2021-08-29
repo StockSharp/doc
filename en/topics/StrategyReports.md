@@ -10,11 +10,11 @@ The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Stra
 - [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport) \- report generation in the [Xml](https://en.wikipedia.org/wiki/XML) format. This format is useful when you need to pass strategy parameters from trading algorithm to another program. 
 - [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport) \- report generation in the [CSV](https://en.wikipedia.org/wiki/CSV) format. A simplified version of the [Excel](https://en.wikipedia.org/wiki/Excel) report, supported by a large number of third\-party programs. 
 
-### Prerequisites
+## Prerequisites
 
 [Event model](StrategyAction.md)
 
-### Excel report generation adding to the SampleSMA
+## Excel report generation adding to the SampleSMA
 
 1. You need to add the report generate button on the form:
 
@@ -33,6 +33,6 @@ The reports framework is based on the [StrategyReport](xref:StockSharp.Algo.Stra
    ```
 3. As a result, the generated file will be located in the same folder as the SampleSMA.exe 
 
-### Next Steps
+## Next Steps
 
 [Logging](Logging.md)

@@ -4,7 +4,7 @@
 
 The cube is used to cancel all orders by the instrument.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 

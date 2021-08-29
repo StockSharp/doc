@@ -13,7 +13,7 @@ In emulation mode, the [S\#.Data](Hydra.md) program allows you to perform the fo
 
 This mode is used when [testing strategies](Shell_emulation.md).
 
-### Emulation settings.
+## Emulation settings.
 
 ![hydra emulator prop](../images/hydra_emulator_prop.png)
 

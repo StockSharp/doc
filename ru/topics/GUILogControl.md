@@ -2,7 +2,7 @@
 
 [LogControl](xref:StockSharp.Xaml.LogControl) \- таблица для отображения сообщений логов. Кнопки панели инструментов позволяют фильтровать сообщения с разным уровнем логирования.
 
-### LogControl
+## LogControl
 
 ![GUI LogControl](../images/GUI_LogControl.png)
 

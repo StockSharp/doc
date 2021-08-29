@@ -4,7 +4,7 @@
 
 Кубик используется для импорта Dll библиотек со стратегиями([Создание DLL кубика в Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)).
 
-#### Параметры
+### Параметры
 
 Параметры
 

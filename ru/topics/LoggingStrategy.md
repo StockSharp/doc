@@ -2,11 +2,11 @@
 
 Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) реализует интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource). Поэтому стратегии можно передавать в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners). 
 
-### Предварительные условия
+## Предварительные условия
 
 [Торговые стратегии](Strategy.md)
 
-### Логирование в тестовый файл
+## Логирование в тестовый файл
 
 1. В самом начале необходимо создать менеджер логирования: 
 
@@ -26,7 +26,7 @@
    ```
 4. После добавления стратегии в менеджер логирования все ее сообщения будут записаться в файл. 
 
-### Проигрывание звука
+## Проигрывание звука
 
 1. Создание логгера и передача в него имени звукового файла: 
 
@@ -42,7 +42,7 @@
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
    ```
 
-### Отсылка Email
+## Отсылка Email
 
 1. Создание логгера и передача в него параметров отсылаемых писем: 
 
@@ -58,7 +58,7 @@
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Warning);
    ```
 
-### Логирование в LogWindow
+## Логирование в LogWindow
 
 1. Создание логгер [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener): 
 

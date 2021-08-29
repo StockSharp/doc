@@ -13,7 +13,7 @@
 
 [LogListener](xref:StockSharp.Logging.LogListener) можно настроить на фильтрацию сообщений через свойство [Filters](xref:StockSharp.Logging.LogListener.Filters). Например, через фильтры можно задать, какой тип сообщений стоит обрабатывать. Это особенно полезно в случаях использования [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener) или [EmailLogListener](xref:StockSharp.Logging.EmailLogListener), чтобы, к примеру, посылать e\-mail только в критических ситуациях (ошибка алгоритма торговли), а не на каждое отладочное сообщение. 
 
-### Следующие шаги
+## Следующие шаги
 
 [Логирование Strategy](LoggingStrategy.md)
 

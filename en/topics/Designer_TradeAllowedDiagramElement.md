@@ -4,13 +4,13 @@
 
 The cube is used to check if trade is currently allowed 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Trigger** \- the signal that is used to determine when a check is to be performed.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

@@ -2,7 +2,7 @@
 
 В предыдущих топиках источниками логов выступали объекты встроенных в [S\#](StockSharpAbout.md) классов. В [S\#](StockSharpAbout.md) предусмотрены возможности для случаев, когда источником логов должен служить Ваш собственный класс или же источник не должен быть связан с определенным классом, а обслуживать всё приложение. Для первого случая необходимо реализовать в Вашем классе интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource) или наследовать его от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver). Во второй ситуации можно использовать источник [TraceSource](xref:StockSharp.Logging.TraceSource), использующий систему трассировки .NET. Как это сделать показано в примере *Samples\/Misc\/SampleLogging*. 
 
-### Пример SampleLogging
+## Пример SampleLogging
 
 1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
 

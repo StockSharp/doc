@@ -6,7 +6,7 @@ In the **Commissions** window, you should select the type of commission, set the
 
 ![Designer Commission Rule](../images/Designer_Commission_Rule.png)
 
-#### List of commission types
+### List of commission types
 
 List of commission types
 

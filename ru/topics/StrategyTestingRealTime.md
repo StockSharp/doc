@@ -4,7 +4,7 @@
 
 Для эмуляции торговли на реальных данных необходимо использовать [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), который выполняет роль "обертки" коннектора конкретной торговой системы ([Quik](Quik.md), [SmartCOM](Smart.md) и т.п.). Ниже приводится описание примера работы с эмулятором с использованием подключения к [SmartCOM](Smart.md). Сам пример находится в папке *Samples\/Testing\/SampleRealTimeEmulation*. 
 
-### Работа с эмулятором торговли на реальных данных
+## Работа с эмулятором торговли на реальных данных
 
 1. Создаем шлюз [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) и передаем в его конструктор адаптер сообщений [SmartComMessageAdapter](xref:StockSharp.SmartCom.SmartComMessageAdapter). Для создания идентификаторов "виртуальных" транзакций используем генератор идентификаторов **MillisecondIncrementalIdGenerator**. 
 

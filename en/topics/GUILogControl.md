@@ -2,7 +2,7 @@
 
 [LogControl](xref:StockSharp.Xaml.LogControl) \- the table to display the log messages. The toolbar buttons let to filter messages with different logging levels.
 
-### LogControl
+## LogControl
 
 ![GUI LogControl](../images/GUI_LogControl.png)
 

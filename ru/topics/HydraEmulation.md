@@ -13,7 +13,7 @@
 
 Этот режим используется при [тестировании стратегий](Shell_emulation.md).
 
-### Настройки эмуляции.
+## Настройки эмуляции.
 
 ![hydra emulator prop](../images/hydra_emulator_prop.png)
 

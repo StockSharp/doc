@@ -4,13 +4,13 @@
 
 The cube is used to obtain a sparse order book by the specified one.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - Order book \- the order book that needs to be sparsed.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

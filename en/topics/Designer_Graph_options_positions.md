@@ -6,7 +6,7 @@ The cube is used to display the **Chart of options positions**.
 
 To display the **Chart of options positions**, you need to add the **Chart of options positions** graphic component.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 

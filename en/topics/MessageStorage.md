@@ -26,7 +26,7 @@ Note that [S\#](StockSharpAbout.md) allows you to convert the trading object sto
 
 It should pay attention to the relevance of using the message storage to store own orders and trades. The matter is that for these trading objects there are no corresponding storages. In this case, you must use the IMarketDataStorage\<ExecutionMessage\> message storage. The following example shows how to store own trades in the storage. 
 
-### Example of saving own trades
+## Example of saving own trades
 
 1. 1. First, an instance of the connector is created, as well as a storage. In addition, we specify the identifier of the instrument with which we will work and declare a variable for the transaction storage. The transaction storage itself for the specified instrument will be received in the instrument getting event using the [IMessageStorageRegistry.GetTransactionStorage](xref:StockSharp.Algo.Storages.IMessageStorageRegistry.GetTransactionStorage) method. 
 

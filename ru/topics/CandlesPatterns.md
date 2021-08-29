@@ -9,7 +9,7 @@
 - [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone) \- Является ли свеча стрекозой или надгробьем. 
 - [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish) \- Является ли свеча бычьей или медвежьей. 
 
-### Общие методы работы со свечами
+## Общие методы работы со свечами
 
 [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) также предоставляет различные алгоритмы для свечей, упрощающие написание кода:
 

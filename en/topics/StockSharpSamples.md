@@ -2,7 +2,7 @@
 
 The [S\#](StockSharpAbout.md) distribution kit includes examples showing how to develop trading programs based on the library. 
 
-### Description of examples:
+## Description of examples:
 
 | Name                         | Description                                                            |
 | ---------------------------- | ---------------------------------------------------------------------- |

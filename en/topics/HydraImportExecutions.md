@@ -4,7 +4,7 @@ To import your transactions, you need to select **Import \=\> Own Transactions**
 
 ![hydra import executions](../images/hydra_import_executions.png)
 
-### The process of importing your transactions
+## The process of importing your transactions
 
 1. Execute **CSV Import Settings**.
 

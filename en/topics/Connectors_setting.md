@@ -2,7 +2,7 @@
 
 Some connectors must be pre\-configured. Below are links to pages with connectors settings.
 
-### Stock, Futures and Options
+## Stock, Futures and Options
 
 | Connectors                         | Connector settings                                                   | Graphical configuration                                                                  |
 | ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [Xignite](Xignite.md)              | [Configuration Xignite](XigniteConnectorsSettings.md)                | [Graphical configuration Xignite](API_GUI_Settings_Xignite.md)                           |
 | [Yahoo](Yahoo.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration Yahoo](API_GUI_Settings_Yahoo.md)                               |
 
-### Forex
+## Forex
 
 | Connectors                        | Connector settings                                                   | Graphical configuration                                                    |
 | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [Oanda](Oanda.md)                 | [Configuration Oanda](OandaConnectorsSettings.md)                    | [Graphical configuration Oanda](API_GUI_Settings_OANDA.md)                 |
 | [TrueFX](TrueFX.md)               | [Configuration TrueFX](TrueFXConnectorsSettings.md)                  | [Graphical configuration TrueFX](API_GUI_Settings_TrueFX.md)               |
 
-### Cryptocurrencies
+## Cryptocurrencies
 
 | Connectors                      | Connector settings                                              | Graphical configuration                                                   |
 | ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -92,7 +92,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [Zaif](Zaif.md)                 | [Configuration Zaif](ZaifConnectorsSettings.md)                 | [Graphical configuration Zaif](API_GUI_Settings_Zaif.md)                  |
 | [ZB](ZB.md)                     | [Configuration ZB](ZBConnectorsSettings.md)                     | [Graphical configuration ZB](API_GUI_Settings_ZB.COM.md)                  |
 
-### Common
+## Common
 
 | Connectors             | Connector settings                                                   | Graphical configuration                                  |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |

@@ -96,7 +96,7 @@ Security.WhenChanged(Connector).Do(ReHedge).Apply(this);
 > [!CAUTION]
 > Если стратегия была принудительно остановлена через метод [Strategy.Stop](xref:StockSharp.Algo.Strategies.Strategy.Stop) (например, при нажатии пользователем на окне программы), то стратегия не сразу останавливается, а переходит в состояние [ProcessStates.Stopping](xref:StockSharp.Algo.ProcessStates.Stopping) и будет продолжать оставаться активной до тех пор, пока список с правилами [Strategy.Rules](xref:StockSharp.Algo.Strategies.Strategy.Rules) не пустой (что означает, что какие\-то правила все еще активны). Поэтому необходимо быть внимательным с добавлением критерия остановки правила, чтобы не сделать стратегию неостанавливаемой. 
 
-### Следующие шаги
+## Следующие шаги
 
 [Дочерние стратегии](StrategyChilds.md)
 

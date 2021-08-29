@@ -4,19 +4,19 @@
 
 The element is used to get an element from a collection with the specified index. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Any data** – the collection of elements.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Any data** \- the element from the collection with the index specified in the parameters.
 
-#### Parameters
+### Parameters
 
 Parameters
 

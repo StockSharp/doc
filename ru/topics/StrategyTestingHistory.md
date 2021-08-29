@@ -8,7 +8,7 @@
 
 ![samplehistorytest](../images/sample_history_test.png)
 
-### Тестирование на истории стратегии скользящих средних из примеров SampleSMA и SampleSmartSMA
+## Тестирование на истории стратегии скользящих средних из примеров SampleSMA и SampleSmartSMA
 
 1. В начале необходимо создать настройки для тестирования: 
 

@@ -4,7 +4,7 @@
 
 Both connectors are used in the same way, so below I will describe the process of connecting to MT4:
 
-### MT connector setup
+## MT connector setup
 
 1. All MT files should be installed to the folder *C:\\Users\\%user\_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%a lot of letters and numbers%\\MQL4\\Experts\\* (in case of MT5 the path will contain MQL5). The structure eventually should look like this (root folder contains the MQL script and MT connector, StockSharp sub\-folder contains necessary S\#.API files:![MT 0](../images/MT_0.png)
 2. Start MT terminal and connect to trading.

@@ -35,7 +35,7 @@ Outgoing messages are created using the [MessageAdapter.SendOutMessage](xref:Sto
 
 The following describes the process for creating your own adapter for [BitStamp](BitStamp.md) (the connector is available with the source codes). 
 
-### Example of creating a BitStamp message adapter
+## Example of creating a BitStamp message adapter
 
 1. **Creating an adapter class.**
 

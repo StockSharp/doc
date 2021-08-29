@@ -4,7 +4,7 @@ To import order books, select **Import \=\> Order books** item from the main app
 
 ![hydra import depths](../images/hydra_import_depths.png)
 
-### The import process securities.
+## The import process securities.
 
 1. **Import settings.**.
 

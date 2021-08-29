@@ -8,7 +8,7 @@ At the start of the strategy you may need to load the previously matched orders 
 
 The following example shows the loading of all trades in the strategy: 
 
-### Loading in the strategy previously matched orders and trades
+## Loading in the strategy previously matched orders and trades
 
 1. To load the previous state of the [Strategy](xref:StockSharp.Algo.Strategies.Strategy), you must override [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders). All [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) and [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders) will be received by this method from the [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted). And you should to filter them:
 

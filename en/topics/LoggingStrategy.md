@@ -2,11 +2,11 @@
 
 The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [ILogSource](xref:StockSharp.Logging.ILogSource) interface. Therefore, the strategies can be passed to the [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources), and all of its messages will automatically get to the [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners). 
 
-### Prerequisites
+## Prerequisites
 
 [Trading strategies](Strategy.md)
 
-### Logging in to test file
+## Logging in to test file
 
 1. First, you need to create the special manager: 
 
@@ -26,7 +26,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    ```
 4. After adding strategy to the logging manager all of its messages will be recorded to file. 
 
-### Sound playback
+## Sound playback
 
 1. Creating a logger and passing the name of the sound file in it: 
 
@@ -42,7 +42,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
    ```
 
-### Email sending
+## Email sending
 
 1. The logger creating and passing to it sent letters parameters: 
 
@@ -58,7 +58,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Warning);
    ```
 
-### Logging in to the LogWindow
+## Logging in to the LogWindow
 
 1. The [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) logger creating: 
 

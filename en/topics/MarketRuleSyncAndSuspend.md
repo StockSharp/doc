@@ -2,7 +2,7 @@
 
 Sometimes you want to set multiple rules in suspension mode (prevent to trigger any of them until code initialization will be finished). To do this, the [MarketRuleHelper.SuspendRules](xref:StockSharp.Algo.MarketRuleHelper.SuspendRules) method is used. 
 
-### Rules suspension using
+## Rules suspension using
 
 - Out of the strategy:
 

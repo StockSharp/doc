@@ -12,7 +12,7 @@ All connectors provide the ability to configure reconnection in case of disconne
 - **Timeout ** \- Timeout for successful connection\/disconnection. 
 - **Operating mode ** \- The operating mode during which it is necessary to make connections. 
 
-### Code reconnection settings
+## Code reconnection settings
 
 The reconnection mechanism is configured through the [Connector.ReConnectionSettings](xref:StockSharp.Algo.Connector.ReConnectionSettings) property and allows you to monitor the following error scenarios: 
 

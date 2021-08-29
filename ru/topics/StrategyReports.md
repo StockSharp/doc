@@ -10,11 +10,11 @@
 - [XmlStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.XmlStrategyReport) \- генерация отчета в формат [Xml](https://ru.wikipedia.org/wiki/Xml). Данный формат удобен, когда необходимо передать параметры стратегии из торгового робота в другую программу. 
 - [CsvStrategyReport](xref:StockSharp.Algo.Strategies.Reporting.CsvStrategyReport) \- генерация отчета в формат [CSV](https://ru.wikipedia.org/wiki/CSV). Упрощенная версия [Excel](https://ru.wikipedia.org/wiki/Excel) отчета, поддерживается большим количеством сторонних программ. 
 
-### Предварительные условия
+## Предварительные условия
 
 [Событийная модель](StrategyAction.md)
 
-### Добавление в SampleSMA генерации Excel отчета
+## Добавление в SampleSMA генерации Excel отчета
 
 1. На форму необходимо добавить кнопку генерации отчета:
 
@@ -34,6 +34,6 @@
    ```
 3. В результате сгенерированный файл будет находится в папке рядом с SampleSMA.exe 
 
-### Следующие шаги
+## Следующие шаги
 
 [Логирование](Logging.md)

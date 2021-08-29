@@ -4,7 +4,7 @@
 
 The cube is used to add cubes created from the source code ([Using C\#](Designer_Creating_strategy_from_code.md)). 
 
-#### Parameters
+### Parameters
 
 Parameters
 

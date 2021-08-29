@@ -4,7 +4,7 @@
 
 Для определения биржевого времени в [S\#](StockSharpAbout.md) можно использовать стандартные методы [C\#](https://ru.wikipedia.org/wiki/C_Sharp): [DateTime.Now](xref:System.DateTime.Now) или [DateTimeOffset.Now](xref:System.DateTimeOffset.Now). Чтобы данные методы возвращали точное время, необходимо синхронизировать локальное время компьютера с атомными часами через вызов метода [TimeHelper.SyncMarketTime](xref:Ecng.Common.TimeHelper.SyncMarketTime). Разница во времени будет записана в [TimeHelper.NowOffset](xref:Ecng.Common.TimeHelper.NowOffset). После этого в [TimeHelper.Now](xref:Ecng.Common.TimeHelper.Now) будет хранится синхронизированное локальное время с учетом [TimeHelper.NowOffset](xref:Ecng.Common.TimeHelper.NowOffset). Класс **TimeHelper** находится в пространстве имен **Ecng.Common**. 
 
-### Пример получения скорректированного времени
+## Пример получения скорректированного времени
 
 - ```cs
   				

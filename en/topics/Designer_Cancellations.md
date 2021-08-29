@@ -4,13 +4,13 @@
 
 The cube is used to cancel the order by the instrument.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Order** – the order that should be canceled.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

@@ -4,7 +4,7 @@
 
 ![Terminal main 00](../images/Terminal_main_00.png)
 
-### Advantages and features of S\#.Terminal:
+## Advantages and features of S\#.Terminal:
 
 1. **Supports many sources: **[Connectors](API_Connectors.md).
 2. **Trade from the chart**. 

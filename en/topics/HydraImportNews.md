@@ -4,7 +4,7 @@ To import news, select **Import \=\> News** from the main application menu.
 
 ![hydra import news](../images/hydra_import_news.png)
 
-### News import process
+## News import process
 
 1. Execute **CSV Import Settings**.
 

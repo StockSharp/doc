@@ -4,7 +4,7 @@ To import trades, select the **Import \=\> Ticks** tab.
 
 ![hydra import trades](../images/hydra_import_trades.png)
 
-### The import process securities.
+## The import process securities.
 
 1. **Import settings.**.
 

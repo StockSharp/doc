@@ -4,7 +4,7 @@
 
 The cube is used to calculate the main Greeks: Delta, Gamma, Vega, Theta, Ro at the current time.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -12,13 +12,13 @@ Incoming sockets
 - **Options** \- the list of options from the **Derivative** cube.
 - **Maximum deviation** \- the maximum deviation.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Result** \- the result of calculating the main Greeks: Delta, Gamma, Vega, Theta, Po at the current time.
 
-#### Parameters
+### Parameters
 
 Parameters
 

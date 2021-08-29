@@ -6,7 +6,7 @@
 
 Как видно из рисунка, взаимодействует происходит через терминал [TWS](https://interactivebrokers.com/en/index.php?f=1537) или [IB Gate](https://interactivebrokers.com/en/index.php?f=1325), которые должны быть заранее установлены и настроены.
 
-### Настройка терминала Trader Workstation
+## Настройка терминала Trader Workstation
 
 1. Необходимо разрешить подключения от других программ (такие как торговый робот на [S\#](StockSharpAbout.md)). Для этого нужно открыть настройки через меню "File \-\> Global configuration...". В новом окне выбрать "Configuration \-\> API \-\> Settings":
 

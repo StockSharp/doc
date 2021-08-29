@@ -2,7 +2,7 @@
 
 Объекты [IConnector](xref:StockSharp.BusinessEntities.IConnector) аналогично [стратегиям](LoggingStrategy.md), также реализуют интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource). Следовательно, от объекта [IConnector](xref:StockSharp.BusinessEntities.IConnector) можно получать сообщения через [LogManager](xref:StockSharp.Logging.LogManager) всеми способами, что доступны стратегиям. 
 
-### Пример логирования IConnector
+## Пример логирования IConnector
 
 1. В самом начале необходимо создать менеджер логирования: 
 

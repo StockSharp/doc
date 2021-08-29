@@ -17,9 +17,9 @@
 
 ![Gui ChartElements](../images/Gui_ChartElements.png)
 
-### Элементы графического компонента
+## Элементы графического компонента
 
-### Chart
+## Chart
 
 [Chart](xref:StockSharp.Xaml.Charting.Chart) является родительским контейнером для других элементов графического контрола. Он содержит методы для добавления и удаления "дочерних" элементов, свойства для настройки внешнего вида компонента и способа отрисовки графиков, а также метод отрисовки самих графиков. *Chart* может содержать несколько областей ([ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)) для построения графиков (см. рисунок). [Chart](xref:StockSharp.Xaml.Charting.Chart) также содержит область предварительного просмотра **OverView** (см. рисунок). В этой области при помощи ползунков можно выбрать зону просмотра графика. Кроме того, можно скроллировать и зуммировать график при помощи перетаскивания области [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea), оси X и при помощи колесика мыши. 
 
@@ -40,7 +40,7 @@
 - [Draw](xref:StockSharp.Xaml.Charting.IChart.Draw) \- отрисовать значение на графике.
 - [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- Режим создания заявок, когда установлен позволяет создавать заявки из графика. По умолчанию выключено.
 
-### ChartArea
+## ChartArea
 
 [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) \- область построения графика, является контейнером для элементов [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) (индикаторы, свечи и т.п.), которые отрисовываются на графике, и осей ([ChartAxis](xref:StockSharp.Xaml.Charting.ChartAxis)) графика. 
 
@@ -50,7 +50,7 @@
 - [XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- список горизонтальных осей.
 - [YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- список вертикальных осей.
 
-### IChartElement
+## IChartElement
 
 Все элементы, которые отображаются на графике должны, реализовывать интерфейс [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement). В [S\#](StockSharpAbout.md) имеются следующие классы, реализующие этот интерфейс: 
 

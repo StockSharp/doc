@@ -2,11 +2,11 @@
 
 Для учета позиции необходимо использовать реализацию интерфейса [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager), в виде [PositionManager](xref:StockSharp.Algo.Positions.PositionManager).
 
-### Предварительные условия
+## Предварительные условия
 
 [Стратегии](Strategy.md)
 
-### Добавление в SampleSMA учет позиции
+## Добавление в SampleSMA учет позиции
 
 1. В окно вывода информации необходимо добавить текстовое поле для вывода текущей позиции:
 
@@ -28,6 +28,6 @@
    						
    ```
 
-### Следующие шаги
+## Следующие шаги
 
 [Задержка](Latency.md)

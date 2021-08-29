@@ -14,7 +14,7 @@ Subfolders, indicating the date of the market data will be created inside each o
 
 Files with the bin extension are inside each folder with dates. Trades are stored in the **trades.bin** file, order books in the **quotes.bin** file. Also the *candles\_XXX.bin* files may be present, which store various types of [candles](Candles.md) (filename indicates the type and parameter of candles) and the *orderLog.bin* files where the order log stored.
 
-### Example of working with market data storage
+## Example of working with market data storage
 
 1. The SampleStorage example, located in the [S\#](StockSharpAbout.md) installation package, shows how to save and load the trades through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)class. In the beginning an instrument created and its basic properties are initialized \- [Id](xref:StockSharp.BusinessEntities.Security.Id) (to determine location on disk), [StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) and [Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (for decimal value compression in the **trades.bin** file):
 

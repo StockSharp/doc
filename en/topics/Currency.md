@@ -2,7 +2,7 @@
 
 To work with multi\-currency algorithms, it is necessary to use the [Currency](xref:StockSharp.Messages.Currency). The [S\#](StockSharpAbout.md) provides mechanism for currency conversion from one to another. In the SampleCurrency example in the distribution kit, calculator for conversion of any currencies is presented.
 
-### Currency conversion example
+## Currency conversion example
 
 1. Below see the partial code from SampleCurrency, converting from one currency to another: 
 

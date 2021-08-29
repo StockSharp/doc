@@ -6,7 +6,7 @@ S\#.API is the basis of all our products. On the basis of the library, solutions
 
 S\#.API uses the [Messages](Messages.md) mechanism, which makes it possible to unify the development of adapters, and also allows you to create your [Adapters](Messages_adapters.md) to any external trading system. 
 
-### The benefits and capabilities of the library:
+## The benefits and capabilities of the library:
 
 1. **Portability** \- the algorithm does not depend on a broker or exchange API and can work with any connection. For example, it is easy to move from [OpenECry](OEC.md) to [Interactive Brokers](IB.md), or from **Forex** to the stock exchange. Details are in the [Architecture S\#.API](StockSharpArchitecture.md) section. 
 2. **Supports many sources: **[Connectors](API_Connectors.md).

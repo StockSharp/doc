@@ -4,19 +4,19 @@
 
 The cube is used to obtain a list of options by a specified filter.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** – the instrument, the underlying asset.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Options** \- the list of options by the underlying asset.
 
-#### Parameters
+### Parameters
 
 Parameters
 

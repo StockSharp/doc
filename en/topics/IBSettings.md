@@ -2,7 +2,7 @@
 
 To work correctly with [InteractiveBrokersTrader](xref:StockSharp.InteractiveBrokers.InteractiveBrokersTrader) you should preset [TWS](https://interactivebrokers.com/en/index.php?f=1537) trading terminal. 
 
-### Trader Workstation terminal configuration
+## Trader Workstation terminal configuration
 
 1. You must allow connections from other programs (such as the trading algorithm on [S\#](StockSharpAbout.md)). To do this, open the settings menu "File \-\> Global configuration...". Select "Configuration \-\> API \-\> Settings" in the new window:
 

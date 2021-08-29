@@ -6,7 +6,7 @@
 
 ![Gui EquityCurveChart](../images/Gui_EquityCurveChart.png)
 
-### Пример построения графика EquityCurveChart
+## Пример построения графика EquityCurveChart
 
 1. В XAML добавляем графический компонент [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart). Присваиваем компоненту имя **Curve**. 
 

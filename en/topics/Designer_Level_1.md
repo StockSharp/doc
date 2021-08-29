@@ -4,19 +4,19 @@
 
 The cube is used to get the **Level1** data by the instrument. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** \- the instrument for which you need to get Level1 data.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Change** \- **Level1** values of the monitored parameter.
 
-#### Parameters
+### Parameters
 
 Parameters
 

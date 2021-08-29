@@ -4,20 +4,20 @@
 
 An element is used to compare two input objects.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Comparison** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 - **Comparison** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **• Flag ** – the flag value (indicates the state and has two values: up (true) and down (false)).
 
-#### Parameters
+### Parameters
 
 Parameters
 

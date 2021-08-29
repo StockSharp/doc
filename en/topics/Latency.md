@@ -4,11 +4,11 @@ In order to estimate the speed of orders registration and to determine which bro
 
 For the delay calculation it is necessary to use the [ILatencyManager](xref:StockSharp.Algo.Latency.ILatencyManager) implementation, by way of [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager).
 
-### Prerequisites
+## Prerequisites
 
 [Strategies](Strategy.md)
 
-### The latency calculation adding to the SampleSMA
+## The latency calculation adding to the SampleSMA
 
 1. You should add the text box for the total delay display in the information output window:
 
@@ -31,6 +31,6 @@ For the delay calculation it is necessary to use the [ILatencyManager](xref:Stoc
    						
    ```
 
-### Next Steps
+## Next Steps
 
 [Commission](Commissions.md)

@@ -4,20 +4,20 @@
 
 The cube is used to quote options according to the specified parameters.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Options** \- the list of options from the **Derivative** cube.
 - **Volume** \- the volume of quoting.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Order** \- the registered order that can be used to obtain trades on it by using the **Trades** element by the order and displaying it on the chart using the **Chart panel** cube.
 
-#### Parameters
+### Parameters
 
 Parameters
 

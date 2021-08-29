@@ -6,7 +6,7 @@ In the Risk window, you should select the **Risk\-rule**, configure the trigger 
 
 ![Designer Risk Rule](../images/Designer_Risk_Rule.png)
 
-#### List of Risk\-rules
+### List of Risk\-rules
 
 List of Risk\-rules
 

@@ -4,7 +4,7 @@ The [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager) mana
 
 The tariff plan is created by adding the relevant [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) rules, based on which commissions will be calculated further.
 
-### The CommissionManager creating
+## The CommissionManager creating
 
 1. To create the [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager):
 

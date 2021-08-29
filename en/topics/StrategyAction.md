@@ -92,7 +92,7 @@ By default the rule is recurring, i.e. it is called as many times, as an event o
 > [!CAUTION]
 > If the strategy has been forcibly stopped through the [Strategy.Stop](xref:StockSharp.Algo.Strategies.Strategy.Stop) method (for example, when the user clicks on the program window), the strategy is not immediately stopped and goes into the [ProcessStates.Stopping](xref:StockSharp.Algo.ProcessStates.Stopping) state and will remain active as long as the list with the [Strategy.Rules](xref:StockSharp.Algo.Strategies.Strategy.Rules) rules is not empty (that means that some rules are still active). Therefore, you must be careful with the addition of a rule stopping criterion not to make a strategy unstoppable. 
 
-### Next Steps
+## Next Steps
 
 [Child strategies](StrategyChilds.md)
 

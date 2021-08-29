@@ -4,7 +4,7 @@ Quoting algorithm allows you to control the position of the registered orders in
 
 Also, the quoting can emulate market orders on a exchanges, where the [OrderTypes.Market](xref:StockSharp.Messages.OrderTypes.Market) type of orders is not supported. 
 
-### Prerequisites
+## Prerequisites
 
 [Child strategies](StrategyChilds.md)
 
@@ -17,7 +17,7 @@ To implement the quoting the [S\#](StockSharpAbout.md) includes the [QuotingStra
 - [LevelQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingStrategy) – quoting by the specified level in the order book. 
 - [LimitQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.LimitQuotingStrategy) – quoting by the limited price. 
 
-### Quoting adding to the SampleSMA
+## Quoting adding to the SampleSMA
 
 1. It is necessary to enable the export of the order book before starting work, so the moving average algorithm described in the [iteration model](StrategyCreate.md), section begin to work in association with the strategy:
 
@@ -41,6 +41,6 @@ To implement the quoting the [S\#](StockSharpAbout.md) includes the [QuotingStra
    ChildStrategies.Add(strategy);
    ```
 
-### Next Steps
+## Next Steps
 
 [Take\-profit and stop\-loss](StrategyProtective.md)

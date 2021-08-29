@@ -2,11 +2,11 @@
 
 For the position calculation it is necessary to use the [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager) interface implementation, by way of [PositionManager](xref:StockSharp.Algo.Positions.PositionManager).
 
-### Prerequisites
+## Prerequisites
 
 [Strategies](Strategy.md)
 
-### The position calculation adding to the SampleSMA
+## The position calculation adding to the SampleSMA
 
 1. You should add the text box for the current position display in the information output window:
 
@@ -28,6 +28,6 @@ For the position calculation it is necessary to use the [IPositionManager](xref:
    						
    ```
 
-### Next Steps
+## Next Steps
 
 [Latency](Latency.md)

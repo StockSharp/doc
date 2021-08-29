@@ -4,13 +4,13 @@
 
 The cube is used to obtain all the strategy trades. 
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
 - **Instrument** \- the instrument for which you need to obtain trades. If the instrument is not passed, then trades by all strategy instruments are transferred to the output.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 

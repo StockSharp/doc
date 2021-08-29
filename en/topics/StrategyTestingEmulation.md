@@ -10,7 +10,7 @@ As a rule, only a certain set of scenarios is used in the algorithm development.
 
 For these and for many other scenarios of the exchange work, which is impossible to predict in advance, the [S\#](StockSharpAbout.md) provides testing on random data, which will be able to generate the maximum number of conditions at the short range due to its uniform uniqueness. 
 
-### Testing on random data of moving averages strategy
+## Testing on random data of moving averages strategy
 
 1. The SampleRandomEmulation example (*..Samples\/Testing\/SampleRandomEmulation*) is almost identical to the SampleHistoryTesting example (its description can be found in the [testing on historical data](StrategyTestingHistory.md) section) due the use of the unified [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) class. But, unlike the [testing on historical data](StrategyTestingHistory.md), testing on random data the market data are not loaded and are generated "on the fly". Therefore, two random data generators are added to the example: for the order book and for the tick trades. In SampleHistoryTesting only one generator is used \- for the order book, as there is no history stored. 
 

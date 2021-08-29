@@ -6,7 +6,7 @@ Below is an example of the chart plotting using the [Chart](xref:StockSharp.Xaml
 
 ![Gui ChartSample](../images/Gui_ChartSample.png)
 
-### Example of chart plotting using Chart
+## Example of chart plotting using Chart
 
 1. In XAML creating window and adding to it the graphical component [StockSharp.Xaml.Charting.Chart](xref:StockSharp.Xaml.Charting.Chart). Assigning the **Chart** name to the component. Note that when the window is being created it is necessary to add the *http:\/\/schemas.stocksharp.com\/xaml* namespace. 
 

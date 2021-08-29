@@ -4,7 +4,7 @@
 
 ![hydra import executions](../images/hydra_import_executions.png)
 
-### Процесс импорта своих транзакций
+## Процесс импорта своих транзакций
 
 1. Выполнить **Настройки импорта из CSV**.
 

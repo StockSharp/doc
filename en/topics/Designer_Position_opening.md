@@ -4,7 +4,7 @@
 
 The cube is used to open a position on the instrument.
 
-#### Incoming sockets
+### Incoming sockets
 
 Incoming sockets
 
@@ -14,13 +14,13 @@ Incoming sockets
 - **Volume** – the numerical value of the volume.
 - **Portfolio** – the portfolio for which you need to register an order.
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Order** – the order that can be used to obtain trades on it by using the **Trades** element on the order and displaying it on the chart using the **Chart panel** cube.
 
-#### Parameters
+### Parameters
 
 Parameters
 
@@ -29,7 +29,7 @@ Parameters
 - **Broker** – the code of the brokerage firm, if the value is not specified and the **Parameters** option is checked, then the value is taken from the strategy.
 - **Conditional order** – to add a conditional order.
 
-### Conditional order settings
+## Conditional order settings
 
 Conditional order is the order with additional conditions that determine the time of registration in the trading system depending on the current market situation.
 

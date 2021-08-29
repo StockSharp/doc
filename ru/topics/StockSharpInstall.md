@@ -10,7 +10,7 @@
 1. Установка из репозитория [StockSharp Releases](https://github.com/StockSharp/StockSharp/releases/) с веб\-сервиса [GitHub](https://github.com/).
 2. Установка из Visual Studio при помощи сервиса Nuget.
 
-### Установка с GitHub
+## Установка с GitHub
 
 1. Зарегистрируйтесь на [GitHub](https://github.com/).
 2. Перейдите на страницу [github.com\/StockSharp\/StockSharp](https://github.com/StockSharp/StockSharp) в репозитории StockSharp.
@@ -22,7 +22,7 @@
    > ![stocksharp instalation2](../images/stocksharp_instalation2.png)
 5. Разблокируйте и разархивируйте скачанные архивы.
 
-### Установка при помощи Nuget
+## Установка при помощи Nuget
 
 > [!TIP]
 > При помощи Nuget можно установить только библиотеку [S\#](StockSharpAbout.md). Исходные коды и примеры устанавливаются с GitHub.

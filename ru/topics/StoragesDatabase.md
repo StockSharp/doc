@@ -19,6 +19,6 @@
 
 Например, заменить **%Documents%\\StockSharp\\Hydra\\StockSharp.db** на **С:\\StockSharp.db**, для сохранения БД в корень диска С:\\.
 
-### Следующие шаги
+## Следующие шаги
 
 [Установка S\#.Data](HydraUsing.md)

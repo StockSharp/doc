@@ -4,13 +4,13 @@
 
 The cube is used to create your own index. 
 
-#### Outgoing sockets
+### Outgoing sockets
 
 Outgoing sockets
 
 - **Security** \- the calculated index, represented as an **Security**.
 
-#### Parameters
+### Parameters
 
 Parameters
 

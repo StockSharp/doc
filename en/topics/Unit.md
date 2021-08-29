@@ -2,7 +2,7 @@
 
 To simplify works with arithmetic operations on such values as percent, points or pips, the [Unit](xref:StockSharp.Messages.Unit) data type can be used. It allows transparently operate with operations of addition, subtraction, multiplication and division. [Unit](xref:StockSharp.Messages.Unit) may be converted into [Decimal](xref:System.Decimal) (not possible, of the value is percentage, i.e. the type [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) and vice versa (in this case the created value is always of the absolute value, i.e. the [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
 
-### Usage of Unit
+## Usage of Unit
 
 - The [Unit](xref:StockSharp.Messages.Unit) can be created using special design kits, or using shorter recording by [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
 
@@ -103,6 +103,6 @@ To simplify works with arithmetic operations on such values as percent, points o
   (decimal)(pips + percent) = 0.39
   ```
 
-### Next Steps
+## Next Steps
 
 [Currency converter](Currency.md)
