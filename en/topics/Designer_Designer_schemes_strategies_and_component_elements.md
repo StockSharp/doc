@@ -22,10 +22,10 @@ The Properties panel displays the parameters of the cube selected in the **Desig
 
 All cubes contain a set of predefined properties:
 
-- **Name ** – the name of the element that is displayed in the designer.
-- **Logging level ** – the logging level for this element.
-- **Parameters ** – to display the element parameters in elements of a higher level.
-- **Sockets ** – to display the element sockets in elements of a higher level.
+- **Name** – the name of the element that is displayed in the designer.
+- **Logging level** – the logging level for this element.
+- **Parameters** – to display the element parameters in elements of a higher level.
+- **Sockets** – to display the element sockets in elements of a higher level.
 
 Details about the properties of each cube are described in the [Elements](Designer_Description_of_elements.md) section.
 

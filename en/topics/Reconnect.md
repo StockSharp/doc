@@ -6,11 +6,11 @@ All connectors provide the ability to configure reconnection in case of disconne
 
 **Reconnection properties**
 
-- **Interval ** \- The interval at which connection attempts will occur. 
-- **Initially ** \- The number of attempts to establish the initial connection if it was not established (timeout, network failure, etc.). 
-- **Reconnection ** \- The number of attempts to reconnect if the connection was disconnected during operation. 
-- **Timeout ** \- Timeout for successful connection\/disconnection. 
-- **Operating mode ** \- The operating mode during which it is necessary to make connections. 
+- **Interval** \- The interval at which connection attempts will occur. 
+- **Initially** \- The number of attempts to establish the initial connection if it was not established (timeout, network failure, etc.). 
+- **Reconnection** \- The number of attempts to reconnect if the connection was disconnected during operation. 
+- **Timeout** \- Timeout for successful connection\/disconnection. 
+- **Operating mode** \- The operating mode during which it is necessary to make connections. 
 
 ## Code reconnection settings
 

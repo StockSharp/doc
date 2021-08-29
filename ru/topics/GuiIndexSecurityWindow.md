@@ -6,7 +6,7 @@
 
 ![GUI IndexSecurityWindow](../images/GUI_IndexSecurityWindow.png)
 
-**Основные свойства **
+**Основные свойства**
 
 - [Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- все доступные инструменты.
 - [Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- математическая формула индекса.

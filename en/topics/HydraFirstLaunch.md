@@ -61,7 +61,7 @@ For example, download the SBER@TQBR securities (stock of Sber Bank) from the Ð¤Ð
    At the bottom of the source window is a panel with buttons for setting up the data and instruments to be received. ![hydra Quick start 02 00](../images/hydra_Quick_start_02_00.png)
 
    The following operations can be performed at this panel: 
-   - Configure the amount of information received using the buttons:**Trades, Order Books, Candles, Order Log, Level 1, Own Transactions**. Lists of available market data types vary for different sources. 
+   - Configure the amount of information received using the buttons: **Trades, Order Books, Candles, Order Log, Level 1, Own Transactions**. Lists of available market data types vary for different sources. 
    - Specify the required Time Frame for the loaded candles. Time Frame of the received candles is different for different sources.![hydra Quick start 02](../images/hydra_Quick_start_02.png)
    - oSet the required period for downloading market data. Also, the period can be configured directly in the market data window. To do this, you should select the beginning and end of the period. 
 

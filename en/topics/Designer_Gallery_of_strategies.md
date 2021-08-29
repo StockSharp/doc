@@ -10,7 +10,7 @@ You can open the **Strategy gallery** by clicking the **Strategy gallery** of th
 
 ![Designer The gallery of strategies 00](../images/Designer_gallery_of_strategies_00.png)
 
-The **Strategy gallery** tab displays the current balance, which can be used to acquire strategies. After clicking the **Fill up balance **[S\#.Designer](Designer.md) will redirect you to the page, where you can fill up the balance form a bank card of PayPal.
+The **Strategy gallery** tab displays the current balance, which can be used to acquire strategies. After clicking the **Fill up balance**[S\#.Designer](Designer.md) will redirect you to the page, where you can fill up the balance form a bank card of PayPal.
 
 For quick search on the **Strategy gallery** tab there are **All strategies**, **Subscribed strategies**, **Free strategies**, **Own strategies** filters. After clicking the filter button, strategies corresponding to the filter name will remain in the **Strategy galleries** panel.
 

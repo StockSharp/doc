@@ -9,7 +9,7 @@ S\#.API uses the [Messages](Messages.md) mechanism, which makes it possible to u
 ## The benefits and capabilities of the library:
 
 1. **Portability** \- the algorithm does not depend on a broker or exchange API and can work with any connection. For example, it is easy to move from [OpenECry](OEC.md) to [Interactive Brokers](IB.md), or from **Forex** to the stock exchange. Details are in the [Architecture S\#.API](StockSharpArchitecture.md) section. 
-2. **Supports many sources: **[Connectors](API_Connectors.md).
+2. **Supports many sources:**[Connectors](API_Connectors.md).
 3. **Versatility** \- focused on private algorithmic traders, small teams, investment companies, banks. 
 4. **Performance** \- the simultaneous execution of hundreds of strategies on any instruments. 
 5. **Speed** \- the orders processing in the S\#.API takes no more than a few microseconds. 

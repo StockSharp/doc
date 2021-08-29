@@ -9,7 +9,7 @@ For all [S\#](StockSharpAbout.md) products, graphical configuration of the conne
 - **Password** \- Password.
 - **Name** \- Source name (to distinguish in log files).
 - **Logging level** \- Logging level.
-- **MaxRestores ** \- MaxRestores
+- **MaxRestores** \- MaxRestores
 - **MaxRestoreError** \- MaxRestoreError
 - **MaxIncrementalWrongOrder** \- MaxIncrementalWrongOrder
 - **MaxRestoreCount** \- MaxRestoreCount

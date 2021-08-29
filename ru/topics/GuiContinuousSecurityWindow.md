@@ -12,7 +12,7 @@
 - Кнопка **Auto** \- позволяет автоматически создавать *непрерывный* инструмент. 
 - Кнопка **Ok** \- завершение создания *непрерывного* инструмента. 
 
-**Основные свойства **
+**Основные свойства**
 
 - [Security](xref:StockSharp.Xaml.ContinuousSecurityWindow.Security) \- непрерывный инструмент.
 - [SecurityStorage](xref:StockSharp.Xaml.ContinuousSecurityWindow.SecurityStorage) \- хранилище информации об инструментах. 

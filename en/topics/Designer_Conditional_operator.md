@@ -11,7 +11,7 @@ Incoming sockets
 - **In1** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 - **In2** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 - **OutEqual** – the value that will be returned at the output of the element, depending on the equality of the input parameters.
-- **OutNotEqual ** – the value that will be returned at the output of the element, depending on the equality of the input parameters.
+- **OutNotEqual** – the value that will be returned at the output of the element, depending on the equality of the input parameters.
 
 ### Outgoing sockets
 

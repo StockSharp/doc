@@ -12,7 +12,7 @@
 - **DbfDirectory** \- DbfDirectory
 - **TxtDirectory** \- TxtDirectory
 - **SaveRtsStdTrades** \- SaveRtsStdTrades
-- **SaveRtsStdCombinedOnly ** \- SaveRtsStdCombinedOnly 
+- **SaveRtsStdCombinedOnly** \- SaveRtsStdCombinedOnly 
 - **IsSystemOnly** \- IsSystemOnly
 - **LoadEveningSession** \- LoadEveningSession
 - **Настройки переподключения** \- Настройки механизма отслеживания подключения с торговой системой ([Настройки переподключения](Reconnect.md)). 

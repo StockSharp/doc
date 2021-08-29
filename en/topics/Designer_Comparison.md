@@ -15,7 +15,7 @@ Incoming sockets
 
 Outgoing sockets
 
-- **• Flag ** – the flag value (indicates the state and has two values: up (true) and down (false)).
+- **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
 
 ### Parameters
 

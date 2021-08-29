@@ -9,7 +9,7 @@ Documetation eng RemoteManager
 Outgoing sockets
 
 - **P\/L unrealized** – is the numerical value of the unrealized profit\/loss.
-- **P\/L realized ** – is the numerical value of the realized profit\/loss.
+- **P\/L realized** – is the numerical value of the realized profit\/loss.
 - **Commission fee** – is the numerical value of the commission fee.
 
 ## Recommended content
