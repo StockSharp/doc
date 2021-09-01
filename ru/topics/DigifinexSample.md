@@ -1,6 +1,6 @@
 # Инициализация адаптера Digifinex
 
-Код ниже демонстрирует как инициализировать [DigiFinexMessageAdapter](xref:StockSharp.DigiFinex.DigiFinexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует как инициализировать [DigifinexMessageAdapter](xref:StockSharp.Digifinex.DigifinexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
             Connector Connector = new Connector();				
