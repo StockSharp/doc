@@ -67,7 +67,7 @@
         ]
       }
     ],
-    "dest": "../../docfx_test/_site/en",
+    "dest": "C:/inetpub/wwwroot/doc2/en",
     "template": [
       "default",
       "../darkfx"
@@ -125,6 +125,6 @@
     "wkhtmltopdf": {
       "additionalArguments": "--enable-local-file-access"
     },
-    "dest": "../../docfx_test/_site/en"
+    "dest": "C:/inetpub/wwwroot/doc2/en"
   }
 }
