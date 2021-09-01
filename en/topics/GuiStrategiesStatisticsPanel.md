@@ -9,8 +9,8 @@
 - [ExcludeParameters](xref:StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters) \- the list of parameters hidden from the visualization.
 - [SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- the selected strategy.
 - [SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- selected strategies.
-- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies) \- adds strategies to the table.
-- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility) \- sets the visibility of the columns in the table.
+- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies(System.Collections.Generic.IEnumerable{StockSharp.Algo.Strategies.Strategy})) \- adds strategies to the table.
+- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility)) \- sets the visibility of the columns in the table.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Testing\/SampleHistoryTestingParallel*. 
 

@@ -1,6 +1,6 @@
 # Экспорт стакана
 
-Для стратегий, которым необходима информация о стакане по инструменту, в [S\#](StockSharpAbout.md) предусмотрен метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth). Данный метод возвращает [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth), который позволяет получить группировано по типу котировки (биды и оффера), а так же удобную работу с лучшими котировками и спредом. 
+Для стратегий, которым необходима информация о стакане по инструменту, в [S\#](StockSharpAbout.md) предусмотрен метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth(StockSharp.BusinessEntities.Security)). Данный метод возвращает [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth), который позволяет получить группировано по типу котировки (биды и оффера), а так же удобную работу с лучшими котировками и спредом. 
 
 ## Предварительные условия
 
@@ -8,13 +8,13 @@
 
 ## Шаги настройки экспорта стакана
 
-1. Для того, чтобы метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth) работал и в классе [QuikTrader](xref:StockSharp.Quik.QuikTrader), необходимо в начале настроить экспорт стакана в [Quik](Quik.md)\-е, как показано на рисунке: 
+1. Для того, чтобы метод [Connector.GetMarketDepth](xref:StockSharp.Algo.Connector.GetMarketDepth(StockSharp.BusinessEntities.Security)) работал и в классе [QuikTrader](xref:StockSharp.Quik.QuikTrader), необходимо в начале настроить экспорт стакана в [Quik](Quik.md)\-е, как показано на рисунке: 
 
    > [!TIP]
-   > Если стакан для необходимого инструмента еще ни разу не открывался в [Quik](Quik.md)\-е, то [QuikTrader](xref:StockSharp.Quik.QuikTrader) самостоятельно создаст окно в терминале и настроит его при вызове метода [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth) из кода программы. Или можно принудительно закрыть стакан в [Quik](Quik.md)\-е и он будет переоткрыт с уже корректными для [S\#](StockSharpAbout.md) настройками. 
+   > Если стакан для необходимого инструмента еще ни разу не открывался в [Quik](Quik.md)\-е, то [QuikTrader](xref:StockSharp.Quik.QuikTrader) самостоятельно создаст окно в терминале и настроит его при вызове метода [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth(StockSharp.BusinessEntities.Security,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},StockSharp.Messages.MarketDataBuildModes,System.Nullable{StockSharp.Messages.MarketDataTypes},System.Nullable{System.Int32},StockSharp.Messages.IMessageAdapter)) из кода программы. Или можно принудительно закрыть стакан в [Quik](Quik.md)\-е и он будет переоткрыт с уже корректными для [S\#](StockSharpAbout.md) настройками. 
 
    > [!CAUTION]
-   > Если в таблице "Инструменты" включена сортировка по одному из столбцов, то при автоматическом открытии стакана методом [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth), любая сортировка будет отменена. 
+   > Если в таблице "Инструменты" включена сортировка по одному из столбцов, то при автоматическом открытии стакана методом [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth(StockSharp.BusinessEntities.Security,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},StockSharp.Messages.MarketDataBuildModes,System.Nullable{StockSharp.Messages.MarketDataTypes},System.Nullable{System.Int32},StockSharp.Messages.IMessageAdapter)), любая сортировка будет отменена. 
 
    ![quotes](../images/quote_dde.png)
 
@@ -22,7 +22,7 @@
 
    > [!CAUTION]
    > Если код инструмента содержит символ @, то рекомендуется поменять разделитель на другой символ через свойство [SecurityIdGenerator.Delimiter](xref:StockSharp.Algo.SecurityIdGenerator.Delimiter) у [Connector.SecurityIdGenerator](xref:StockSharp.Algo.Connector.SecurityIdGenerator). 
-2. После настройки стакана, он будет доступен для экспорта. Для того, чтобы начать получать данные по [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) из стакана в программу необходимо вызвать метод [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth): 
+2. После настройки стакана, он будет доступен для экспорта. Для того, чтобы начать получать данные по [DDE](https://en.wikipedia.org/wiki/Dynamic_Data_Exchange) из стакана в программу необходимо вызвать метод [SubscribeMarketDepth](xref:StockSharp.Algo.Connector.SubscribeMarketDepth(StockSharp.BusinessEntities.Security,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},StockSharp.Messages.MarketDataBuildModes,System.Nullable{StockSharp.Messages.MarketDataTypes},System.Nullable{System.Int32},StockSharp.Messages.IMessageAdapter)): 
 
    ```cs
    trader.SubscribeMarketDepth(lkoh);

@@ -21,7 +21,7 @@
    ...
    							
    ```
-2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles): 
+2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles(StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter)): 
 
    ```cs
    ...

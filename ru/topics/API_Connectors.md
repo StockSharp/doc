@@ -39,7 +39,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ![API GUI ConnectorWindow](../images/API_GUI_ConnectorWindow.png)
 
-Аналогично можно добавлять подключения напрямую из кода (без графических окон), воспользовавшись методом расширением [TraderHelper.AddAdapter\`\`1](xref:StockSharp.Algo.TraderHelper.AddAdapter``1):
+Аналогично можно добавлять подключения напрямую из кода (без графических окон), воспользовавшись методом расширением [TraderHelper.AddAdapter\`\`1](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0})):
 
 ```cs
 ...

@@ -19,7 +19,7 @@
 			});
 ```
 
-Если требуется поддержка генерации стаканов из приходящих данных, то будет использоваться адаптер [OrderLogMessageAdapter](xref:StockSharp.Algo.OrderLogMessageAdapter) (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) при подписке, требущих сбор стаканов из ОЛ данных. По умолчанию, будет использовать алгоритм [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder). Если поведение данного класса недостаточно, то необходимо создать собственный класс, реализующий интерфейс [IOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IOrderLogMarketDepthBuilder) и переопределить метод [IMessageAdapter.CreateOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder):
+Если требуется поддержка генерации стаканов из приходящих данных, то будет использоваться адаптер [OrderLogMessageAdapter](xref:StockSharp.Algo.OrderLogMessageAdapter) (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) при подписке, требущих сбор стаканов из ОЛ данных. По умолчанию, будет использовать алгоритм [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder). Если поведение данного класса недостаточно, то необходимо создать собственный класс, реализующий интерфейс [IOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IOrderLogMarketDepthBuilder) и переопределить метод [IMessageAdapter.CreateOrderLogMarketDepthBuilder](xref:StockSharp.Messages.IMessageAdapter.CreateOrderLogMarketDepthBuilder(StockSharp.Messages.SecurityId)):
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter

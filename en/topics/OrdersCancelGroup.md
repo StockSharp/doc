@@ -1,6 +1,6 @@
 # Orders mass cancel
 
-To cancel several orders the [Connector.CancelOrders](xref:StockSharp.Algo.Connector.CancelOrders) method used, which cancel the active orders by the parameters mask passed. 
+To cancel several orders the [Connector.CancelOrders](xref:StockSharp.Algo.Connector.CancelOrders(System.Nullable{System.Boolean},StockSharp.BusinessEntities.Portfolio,System.Nullable{StockSharp.Messages.Sides},StockSharp.BusinessEntities.ExchangeBoard,StockSharp.BusinessEntities.Security,System.Nullable{StockSharp.Messages.SecurityTypes},System.Nullable{System.Int64})) method used, which cancel the active orders by the parameters mask passed. 
 
 ## Orders mass cancel examples
 

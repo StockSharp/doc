@@ -94,7 +94,7 @@
    ```
 3. При подключении задаем первоначальные установки контрола:
    1. Обнуляем базовый актив [UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) контрола; 
-   2. Перерисовываем график с начальными значениями [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh); 
+   2. Перерисовываем график с начальными значениями [Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})); 
    3. Задаем провайдера сообщений для рыночных данных и инструментов.
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

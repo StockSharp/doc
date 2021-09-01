@@ -8,10 +8,10 @@
 
 - [MaxDepth](xref:StockSharp.Xaml.MarketDepthControl.MaxDepth) \- глубина стакана.
 - [IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) \- отображать покупки сверху.
-- [UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat) \- обновить формат отображения цен и объёмов при помощи инструмента.
-- [ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder) \- обработать заявку.
-- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- обновить стакан.
-- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- обновить стакан при помощи сообщения.
+- [UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat(StockSharp.BusinessEntities.Security)) \- обновить формат отображения цен и объёмов при помощи инструмента.
+- [ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder(StockSharp.BusinessEntities.Order,System.Decimal,StockSharp.Messages.OrderStates)) \- обработать заявку.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.BusinessEntities.MarketDepth)) \- обновить стакан.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.Messages.QuoteChangeMessage)) \- обновить стакан при помощи сообщения.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

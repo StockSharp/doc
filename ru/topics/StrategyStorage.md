@@ -1,6 +1,6 @@
 # Сохранение и загрузка настроек
 
-Для сохранения и загрузки настроек стратегии используются переопределения методов [Save](xref:StockSharp.Algo.Strategies.Strategy.Save) и [Load](xref:StockSharp.Algo.Strategies.Strategy.Load) соответственно. 
+Для сохранения и загрузки настроек стратегии используются переопределения методов [Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) и [Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) соответственно. 
 
 ```cs
 public override void Load(SettingsStorage settings)
@@ -40,7 +40,7 @@ if (File.Exists("marketProfile.xml"))
 }
 ```
 
-Для сохранения настроек во внешний файл необходимо внести изменения в метод [Save](xref:StockSharp.Algo.Strategies.Strategy.Save), описанный ранее. 
+Для сохранения настроек во внешний файл необходимо внести изменения в метод [Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)), описанный ранее. 
 
 ```cs
 public override void Save(SettingsStorage settings)

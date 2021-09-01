@@ -1,6 +1,6 @@
 # Сохранение и загрузка настроек
 
-Для сохранения и загрузки настроек [Connector](xref:StockSharp.Algo.Connector) используются переопределения методов [Save](xref:StockSharp.Algo.Connector.Save) и [Load](xref:StockSharp.Algo.Connector.Load) соответственно. 
+Для сохранения и загрузки настроек [Connector](xref:StockSharp.Algo.Connector) используются переопределения методов [Save](xref:StockSharp.Algo.Connector.Save(Ecng.Serialization.SettingsStorage)) и [Load](xref:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage)) соответственно. 
 
 Для сохранения и загрузки настроек из внешнего файла можно воспользоваться соответственно сериализацией и десериализацией, реализованной в [S\#](StockSharpAbout.md). 
 

@@ -12,7 +12,7 @@
 - [Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- список заявок.
 - [SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- выбранная заявка.
 - [SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- выбранные заявки.
-- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail) \- метод, который добавляет сообщение об ошибке регистрации заявки в поле комментария.
+- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail)) \- метод, который добавляет сообщение об ошибке регистрации заявки в поле комментария.
 - [OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- событие регистрации заявки (возникает после выбора соответствующего пункта контекстного меню).
 - [OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- событие замены заявки (возникает после выбора соответствующего пункта контекстного меню).
 - [OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- событие отмены заявки (возникает после выбора соответствующего пункта контекстного меню).

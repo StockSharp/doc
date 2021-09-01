@@ -25,6 +25,6 @@ The tariff plan is created by adding the relevant [CommissionRule](xref:StockSha
    						
    ```
 
-The commission can be calculated both by the trades and by orders. To calculate the commission by the trade the [Process](xref:StockSharp.Algo.Commissions.CommissionManager.Process) method is called, in which as a parameter the [Message](xref:StockSharp.Messages.Message) \- a message containing information about the order or own transaction.
+The commission can be calculated both by the trades and by orders. To calculate the commission by the trade the [Process](xref:StockSharp.Algo.Commissions.CommissionManager.Process(StockSharp.Messages.Message)) method is called, in which as a parameter the [Message](xref:StockSharp.Messages.Message) \- a message containing information about the order or own transaction.
 
 The total value of the commission can be found through the [Commission](xref:StockSharp.Algo.Commissions.CommissionManager.Commission).

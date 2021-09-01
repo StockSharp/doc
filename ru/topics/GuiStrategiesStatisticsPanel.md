@@ -9,8 +9,8 @@
 - [ExcludeParameters](xref:StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters) \- список скрытых от визуализации параметров.
 - [SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- выбранная стратегия.
 - [SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- выбранные стратегии.
-- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies) \- добавляет стратегии в таблицу.
-- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility) \- устанавливает видимость колонок в таблице.
+- [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies(System.Collections.Generic.IEnumerable{StockSharp.Algo.Strategies.Strategy})) \- добавляет стратегии в таблицу.
+- [SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility)) \- устанавливает видимость колонок в таблице.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Testing\/SampleHistoryTestingParallel*. 
 

@@ -4,7 +4,7 @@
 
 ## Варианты использования:
 
-1. Включение [Quik](Quik.md) (с проверкой, запущен ли уже через свойство [QuikTerminal.GetTerminals](xref:StockSharp.Quik.QuikTerminal.GetTerminals)): 
+1. Включение [Quik](Quik.md) (с проверкой, запущен ли уже через свойство [QuikTerminal.GetTerminals](xref:StockSharp.Quik.QuikTerminal.GetTerminals(System.Boolean))): 
 
    ```cs
    Console.Write("Введите путь к директории с Quik: ");
@@ -19,7 +19,7 @@
    else
    	Console.WriteLine("Quik найден.");
    ```
-2. После включения [Quik](Quik.md) (запустится его процесс), можно производить авторизацию к серверу брокера через метод [Login](xref:StockSharp.Quik.QuikTerminal.Login): 
+2. После включения [Quik](Quik.md) (запустится его процесс), можно производить авторизацию к серверу брокера через метод [Login](xref:StockSharp.Quik.QuikTerminal.Login(System.String,System.String,System.Net.IPEndPoint)): 
 
    ```cs
    Console.Write("Введите логин: ");

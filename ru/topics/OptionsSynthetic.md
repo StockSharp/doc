@@ -41,4 +41,4 @@ if (elapsedVolume > 0)
 }
 ```
 
-Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell). 
+Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy(System.Decimal)) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell(System.Decimal)). 

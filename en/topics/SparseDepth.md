@@ -13,12 +13,12 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 
    All the [Quote](xref:StockSharp.BusinessEntities.Quote) quotations in the resulting order book will have zero volume, and they will created with the [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) step. 
 
-   To combine the sparse order book with the original one (to connect the real and sparse quotations), you must call the [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join) method: 
+   To combine the sparse order book with the original one (to connect the real and sparse quotations), you must call the [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth)) method: 
 
    ```cs
    var joinedDepth = sparseDepth.Join(depth);
    ```
-2. The grouping of the order book by price levels is carried out through the [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group) method: 
+2. The grouping of the order book by price levels is carried out through the [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)) method: 
 
    ```cs
    MarketDepth depth = ....;

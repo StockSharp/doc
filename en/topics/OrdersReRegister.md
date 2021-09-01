@@ -1,6 +1,6 @@
 # Orders replacement
 
-Orders replacement in the trading algorithms creating is more advanced way than the [Orders cancel](OrdersCancel.md) and the following registration. To replace the order you should call the [Connector.ReRegisterOrder](xref:StockSharp.Algo.Connector.ReRegisterOrder) method. 
+Orders replacement in the trading algorithms creating is more advanced way than the [Orders cancel](OrdersCancel.md) and the following registration. To replace the order you should call the [Connector.ReRegisterOrder](xref:StockSharp.Algo.Connector.ReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order)) method. 
 
 As the result or orders replacement the new [Order](xref:StockSharp.BusinessEntities.Order), object created, which contains old order information plus the changed part. Subsequently, if you want to work with the changed order (for example, to cancel or to change it again), you must use this new [Order](xref:StockSharp.BusinessEntities.Order) object. 
 

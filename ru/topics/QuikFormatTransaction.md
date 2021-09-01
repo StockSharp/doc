@@ -16,4 +16,4 @@
 
 ## История транзакций
 
-[QuikTrader](xref:StockSharp.Quik.QuikTrader) хранит в себе все транзакции, прошедшие через него в [Quik](Quik.md). Если в процессе тестирования необходимо получить данную информацию (например, для детального разбора ошибок), то можно использовать метод [GetTransaction](xref:StockSharp.Quik.QuikTrader.GetTransaction), возвращающий [Transaction](xref:StockSharp.Quik.Transaction) по номеру. 
+[QuikTrader](xref:StockSharp.Quik.QuikTrader) хранит в себе все транзакции, прошедшие через него в [Quik](Quik.md). Если в процессе тестирования необходимо получить данную информацию (например, для детального разбора ошибок), то можно использовать метод [GetTransaction](xref:StockSharp.Quik.QuikTrader.GetTransaction(System.Int64)), возвращающий [Transaction](xref:StockSharp.Quik.Transaction) по номеру. 

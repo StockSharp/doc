@@ -6,7 +6,7 @@
 
 Здесь представлено окно настройки подключений. Из раскрывающегося списка (открывается кнопкой '+') необходимо выбрать нужные адаптеры и настроить их свойства в окне свойств, расположенном справа. 
 
-Вызов данного окна следует выполнять через метод расширение [Configure](xref:StockSharp.Xaml.Extensions.Configure), в который передается [Connector](xref:StockSharp.Algo.Connector) и родительское окно. При удачной настройке метод расширение [Configure](xref:StockSharp.Xaml.Extensions.Configure) вернет значение "true". Ниже приведен код вызова окна настройки подключения коннектора и сохранения настроек в файл. 
+Вызов данного окна следует выполнять через метод расширение [Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window)), в который передается [Connector](xref:StockSharp.Algo.Connector) и родительское окно. При удачной настройке метод расширение [Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window)) вернет значение "true". Ниже приведен код вызова окна настройки подключения коннектора и сохранения настроек в файл. 
 
 ```cs
 		private void Setting_Click(object sender, RoutedEventArgs e)

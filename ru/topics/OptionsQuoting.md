@@ -140,7 +140,7 @@
    ```cs
    hedge.Start();
    ```
-5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility): 
+5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.Algo.Storages.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal)): 
 
    ```cs
    private void OnQuotesChanged()

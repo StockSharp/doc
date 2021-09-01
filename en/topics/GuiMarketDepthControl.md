@@ -8,10 +8,10 @@
 
 - [MaxDepth](xref:StockSharp.Xaml.MarketDepthControl.MaxDepth) \- the depth of an order book.
 - [IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) \- to display purchases on top.
-- [UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat) \- to update the format for displaying prices and volumes using the instrument.
-- [ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder) \- to process an order.
-- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- to refresh an order book.
-- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth) \- to refresh an order book with a message.
+- [UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat(StockSharp.BusinessEntities.Security)) \- to update the format for displaying prices and volumes using the instrument.
+- [ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder(StockSharp.BusinessEntities.Order,System.Decimal,StockSharp.Messages.OrderStates)) \- to process an order.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.BusinessEntities.MarketDepth)) \- to refresh an order book.
+- [UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.Messages.QuoteChangeMessage)) \- to refresh an order book with a message.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/BarChart\/SampleBarChart*. 
 

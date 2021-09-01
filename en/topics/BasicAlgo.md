@@ -2,7 +2,7 @@
 
 Along with [Quoting](StrategyQuoting.md), the [S\#](StockSharpAbout.md) contains the [TraderHelper](xref:StockSharp.Algo.TraderHelper) class, which includes a variety of simple trading algorithms methods:
 
-1. To clear the order book from its own orders through the [GetFilteredQuotes](xref:StockSharp.Algo.TraderHelper.GetFilteredQuotes) method (to register the orders in relation to other market players and to prevent own algorithms to fight each other):
+1. To clear the order book from its own orders through the [GetFilteredQuotes](xref:StockSharp.Algo.TraderHelper.GetFilteredQuotes(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Quote},System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order},System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order})) method (to register the orders in relation to other market players and to prevent own algorithms to fight each other):
 
    ```cs
    // the sample security
@@ -12,7 +12,7 @@ Along with [Quoting](StrategyQuoting.md), the [S\#](StockSharpAbout.md) contains
    // to get the best big price
    Console.WriteLine(_connector.GetMarketDepth(someSecurity).GetFilteredQuotes(Sides.Buy, someOrders, null).Max(q => q.Price));
    ```
-2. To adjust the price through the [ShrinkPrice](xref:StockSharp.Algo.TraderHelper.ShrinkPrice) method, so it become a multiple of price increment and trading system accepts the order:
+2. To adjust the price through the [ShrinkPrice](xref:StockSharp.Algo.TraderHelper.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal,StockSharp.Algo.ShrinkRules)) method, so it become a multiple of price increment and trading system accepts the order:
 
    ```cs
    // the sample security

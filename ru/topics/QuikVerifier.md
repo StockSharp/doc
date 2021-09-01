@@ -21,7 +21,7 @@
 
 ![verifiersuccess](../images/verifier_success.png)
 
-Иногда требуется модификация стандартных таблиц, как это показано в разделе [Экспорт дополнительных колонок](QuikExtendedInfoByDde.md). В этом случае для проверки правильности настроек необходимо вызывать напрямую из разрабатываемого приложения метод [QuikTerminal.GetTableSettings](xref:StockSharp.Quik.QuikTerminal.GetTableSettings): 
+Иногда требуется модификация стандартных таблиц, как это показано в разделе [Экспорт дополнительных колонок](QuikExtendedInfoByDde.md). В этом случае для проверки правильности настроек необходимо вызывать напрямую из разрабатываемого приложения метод [QuikTerminal.GetTableSettings](xref:StockSharp.Quik.QuikTerminal.GetTableSettings(StockSharp.Quik.DdeTable[])): 
 
 ```cs
 this.OkResult.SetVisibility(false);

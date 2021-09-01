@@ -12,7 +12,7 @@
 - [Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- the list of orders.
 - [SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- the selected order.
 - [SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- \- selected orders.
-- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail) \- the method that adds a message about order registration error in the comment field.
+- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail)) \- the method that adds a message about order registration error in the comment field.
 - [OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- the order registration event (occurs after selecting the appropriate item in the context menu).
 - [OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- the order replacement event (occurs after selecting the appropriate item in the context menu).
 - [OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- the order cancellation (occurs after selecting the appropriate item in the context menu).

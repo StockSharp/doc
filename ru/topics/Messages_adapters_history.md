@@ -22,7 +22,7 @@
       
 ```
 
-Специальные адаптер [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) дробит подписки с большим диапазоном данных (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) на множество запросов с мелкими диапазонами. Каждый адаптер может передать, какой диапазон времени максимально он поддерживает через перегрузку метода [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize):
+Специальные адаптер [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) дробит подписки с большим диапазоном данных (подробнее [Вспомогательные адаптеры](Messages_adapters_chain.md)) на множество запросов с мелкими диапазонами. Каждый адаптер может передать, какой диапазон времени максимально он поддерживает через перегрузку метода [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize(StockSharp.Messages.DataType,System.TimeSpan@)):
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter

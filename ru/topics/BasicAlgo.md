@@ -2,7 +2,7 @@
 
 Наравне с [Котирование](StrategyQuoting.md) в [S\#](StockSharpAbout.md) добавлен класс [TraderHelper](xref:StockSharp.Algo.TraderHelper), в который входят различные методы простых торговых алгоритмов:
 
-1. Очистить стакан от собственных заявок через метод [GetFilteredQuotes](xref:StockSharp.Algo.TraderHelper.GetFilteredQuotes) (чтобы выставлять заявки относительно других участников рынка, и предотвратить борьбу своих роботов друг с другом):
+1. Очистить стакан от собственных заявок через метод [GetFilteredQuotes](xref:StockSharp.Algo.TraderHelper.GetFilteredQuotes(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Quote},System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order},System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order})) (чтобы выставлять заявки относительно других участников рынка, и предотвратить борьбу своих роботов друг с другом):
 
    ```cs
    // любой инструмент
@@ -12,7 +12,7 @@
    // вычисляем истинно-лучшую цену на покупку
    Console.WriteLine(_connector.GetMarketDepth(someSecurity).GetFilteredQuotes(Sides.Buy, someOrders, null).Max(q => q.Price));
    ```
-2. Обрезать цену через метод [ShrinkPrice](xref:StockSharp.Algo.TraderHelper.ShrinkPrice), чтобы она стала кратной шагу цены, и торговая система приняла заявку:
+2. Обрезать цену через метод [ShrinkPrice](xref:StockSharp.Algo.TraderHelper.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal,StockSharp.Algo.ShrinkRules)), чтобы она стала кратной шагу цены, и торговая система приняла заявку:
 
    ```cs
    // любой инструмент

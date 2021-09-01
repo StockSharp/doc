@@ -140,7 +140,7 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    ```cs
    hedge.Start();
    ```
-5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility) method: 
+5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.Algo.Storages.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal)) method: 
 
    ```cs
    private void OnQuotesChanged()

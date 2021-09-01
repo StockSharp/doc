@@ -4,7 +4,7 @@
 
 ![sample candleschart](../images/sample_candleschart.png)
 
-Для отображения, поступающие свечи передаются в метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw).
+Для отображения, поступающие свечи передаются в метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData)).
 
 ```cs
 // CandlesChart - StockSharp.Xaml.Chart

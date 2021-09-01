@@ -1,6 +1,6 @@
 # Снятие группы заявок
 
-Для снятия сразу нескольких заявок можно использовать метод [Connector.CancelOrders](xref:StockSharp.Algo.Connector.CancelOrders), который по маске переданных параметров снимает активные заявки. 
+Для снятия сразу нескольких заявок можно использовать метод [Connector.CancelOrders](xref:StockSharp.Algo.Connector.CancelOrders(System.Nullable{System.Boolean},StockSharp.BusinessEntities.Portfolio,System.Nullable{StockSharp.Messages.Sides},StockSharp.BusinessEntities.ExchangeBoard,StockSharp.BusinessEntities.Security,System.Nullable{StockSharp.Messages.SecurityTypes},System.Nullable{System.Int64})), который по маске переданных параметров снимает активные заявки. 
 
 ## Примеры снятия группы заявок
 

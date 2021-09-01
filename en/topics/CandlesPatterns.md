@@ -2,12 +2,12 @@
 
 It is possible to make candles pattern recognition through the [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) class by the following methods:
 
-- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack) \- Is it white or black candle. 
-- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu) \- Is it a shadowless candle. 
-- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop) \- Is it a neutral candle by trades. 
-- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer) \- Is it a hammer candle. 
-- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone) \- Is it a dragonfly or gravestone candle. 
-- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish) \- Is it a bull or bear candle. 
+- [IsWhiteOrBlack](xref:StockSharp.Algo.Candles.CandleHelper.IsWhiteOrBlack(StockSharp.Algo.Candles.Candle)) \- Is it white or black candle. 
+- [IsMarubozu](xref:StockSharp.Algo.Candles.CandleHelper.IsMarubozu(StockSharp.Algo.Candles.Candle)) \- Is it a shadowless candle. 
+- [IsSpinningTop](xref:StockSharp.Algo.Candles.CandleHelper.IsSpinningTop(StockSharp.Algo.Candles.Candle)) \- Is it a neutral candle by trades. 
+- [IsHammer](xref:StockSharp.Algo.Candles.CandleHelper.IsHammer(StockSharp.Algo.Candles.Candle)) \- Is it a hammer candle. 
+- [IsDragonflyOrGravestone](xref:StockSharp.Algo.Candles.CandleHelper.IsDragonflyOrGravestone(StockSharp.Algo.Candles.Candle)) \- Is it a dragonfly or gravestone candle. 
+- [IsBullishOrBearish](xref:StockSharp.Algo.Candles.CandleHelper.IsBullishOrBearish(StockSharp.Algo.Candles.Candle)) \- Is it a bull or bear candle. 
 
 ## Common methods of work with candles
 
@@ -20,7 +20,7 @@ It is possible to make candles pattern recognition through the [CandleHelper](xr
   Console.WriteLine(candleTimeFrame.GetCandleBounds(DateTime.Now).Max);
   					
   ```
-- To get the candle length, its body, its shadows through [GetLength](xref:StockSharp.Algo.Candles.CandleHelper.GetLength), [GetBody](xref:StockSharp.Algo.Candles.CandleHelper.GetBody), [GetTopShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetTopShadow) and [GetBottomShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetBottomShadow):
+- To get the candle length, its body, its shadows through [GetLength](xref:StockSharp.Algo.Candles.CandleHelper.GetLength(StockSharp.Algo.Candles.Candle)), [GetBody](xref:StockSharp.Algo.Candles.CandleHelper.GetBody(StockSharp.Algo.Candles.Candle)), [GetTopShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetTopShadow(StockSharp.Algo.Candles.Candle)) and [GetBottomShadow](xref:StockSharp.Algo.Candles.CandleHelper.GetBottomShadow(StockSharp.Algo.Candles.Candle)):
 
   ```cs
   // sample candle

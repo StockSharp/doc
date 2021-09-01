@@ -13,12 +13,12 @@
 
    Все котировки [Quote](xref:StockSharp.BusinessEntities.Quote) в полученном стакане будут иметь нулевой объем, и они будут созданы с шагом [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice). 
 
-   Чтобы объединить разреженный стакан с первоначальным (соединить реальные котировки и разреженные), необходимо вызвать метод [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join): 
+   Чтобы объединить разреженный стакан с первоначальным (соединить реальные котировки и разреженные), необходимо вызвать метод [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth)): 
 
    ```cs
    var joinedDepth = sparseDepth.Join(depth);
    ```
-2. Группировка стакана по ценовым уровням осуществляется через метод [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group): 
+2. Группировка стакана по ценовым уровням осуществляется через метод [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)): 
 
    ```cs
    MarketDepth depth = ....;
