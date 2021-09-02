@@ -16,7 +16,6 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
            xmlns:xaml="http://schemas.stocksharp.com/xaml"
-           xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
            Title="{x:Static loc:LocalizedStrings.XamlStr396}" Height="400" Width="1030">
        <Grid Margin="5,5,5,5">
        

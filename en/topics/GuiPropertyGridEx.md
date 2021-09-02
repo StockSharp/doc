@@ -33,7 +33,6 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-		xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:propertyGrid="http://schemas.stocksharp.com/xaml"
         Title="{x:Static loc:LocalizedStrings.XamlStr540}" Height="110" Width="512">
 	<Grid>

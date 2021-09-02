@@ -27,7 +27,3 @@
    ```
 
    Результатом группировки будет стакан [MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth), состоящий из котировок типа [AggregatedQuote](xref:StockSharp.BusinessEntities.AggregatedQuote). Через свойство [AggregatedQuote.InnerQuotes](xref:StockSharp.BusinessEntities.AggregatedQuote.InnerQuotes) можно получить реальные котировки стакана, на основе которых произошла группировка по ценовому уровню. 
-
-## Проверка данных
-
-Иногда требуется проверять данные в стакане для обнаружения в них коллизий. Например, проверка загруженных стаканов из внешних источников, или отслеживание корректности работы биржи в период аномальной работы (кризис, стоп торги). Для этого можно использовать специальный метод [MarketDepth.Verify](xref:StockSharp.BusinessEntities.MarketDepth.Verify), который проверяет, не перемешаны ли между собой биды и оффера. 
