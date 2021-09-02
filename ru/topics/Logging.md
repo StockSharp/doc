@@ -10,7 +10,7 @@
 4. [EmailLogListener](xref:StockSharp.Logging.EmailLogListener) \- отсылает сообщения на указанный email адрес. Рекомендуется использовать, если робот расположен на непостоянно контролируемом компьютере (на сервере у хостера). 
 5. [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) \- отображает сообщения через специальное окно [LogControl](xref:StockSharp.Xaml.LogControl). Умеет работать в двух режимах: когда все сообщения пишутся в одно окно, и когда для каждого [ILogSource](xref:StockSharp.Logging.ILogSource) создается отдельное окно. Рекомендуется использовать, если робот обладает графическим интерфейсом. 
 
-[LogListener](xref:StockSharp.Logging.LogListener) можно настроить на фильтрацию сообщений через свойство [Filters](xref:StockSharp.Logging.LogListener.Filters). Например, через фильтры можно задать, какой тип сообщений стоит обрабатывать. Это особенно полезно в случаях использования [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener) или [EmailLogListener](xref:StockSharp.Logging.EmailLogListener), чтобы, к примеру, посылать e\-mail только в критических ситуациях (ошибка алгоритма торговли), а не на каждое отладочное сообщение. 
+[LogListener](xref:StockSharp.Logging.LogListener) можно настроить на фильтрацию сообщений через свойство [Filters](xref:StockSharp.Logging.LogListener.Filters). Например, через фильтры можно задать, какой тип сообщений стоит обрабатывать. Это особенно полезно в случаях использования [EmailLogListener](xref:StockSharp.Logging.EmailLogListener), чтобы, к примеру, посылать e\-mail только в критических ситуациях (ошибка алгоритма торговли), а не на каждое отладочное сообщение. 
 
 ## Следующие шаги
 

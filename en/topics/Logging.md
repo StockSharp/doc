@@ -10,7 +10,7 @@ Normally the [S\#](StockSharpAbout.md) contains the following implementations of
 4. [EmailLogListener](xref:StockSharp.Logging.EmailLogListener) \- sends messages to the specified email address. It is recommended to use if the algorithm is located at not controlled computer (at hoster’s server). 
 5. [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) \- displays messages through the special [LogControl](xref:StockSharp.Xaml.LogControl) window. Able to work in two modes: when all messages output in a single window, and when a separate window is created for each [ILogSource](xref:StockSharp.Logging.ILogSource). It is recommended to use if the algorithm has a graphical interface. 
 
-[LogListener](xref:StockSharp.Logging.LogListener) can be configured to filter messages through the [Filters](xref:StockSharp.Logging.LogListener.Filters) property. For example, through the filters you can specify what type of messages should be processed. This is particularly useful when the [SoundLogListener](xref:StockSharp.Xaml.SoundLogListener) or the [EmailLogListener](xref:StockSharp.Logging.EmailLogListener) is used, in order that, for example, to send e\-mail in emergency situations only (trade algorithm error) rather than on each debug message. 
+[LogListener](xref:StockSharp.Logging.LogListener) can be configured to filter messages through the [Filters](xref:StockSharp.Logging.LogListener.Filters) property. For example, through the filters you can specify what type of messages should be processed. This is particularly useful when the [EmailLogListener](xref:StockSharp.Logging.EmailLogListener) is used, in order that, for example, to send e\-mail in emergency situations only (trade algorithm error) rather than on each debug message. 
 
 ## Next Steps
 

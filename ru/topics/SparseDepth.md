@@ -4,7 +4,7 @@
 
 ## Модификации стакана
 
-1. Создание разреженного стакана из обычного осуществляется через метод [Overload:StockSharp.Algo.TraderHelper.Sparse](xref:Overload:StockSharp.Algo.TraderHelper.Sparse): 
+1. Создание разреженного стакана из обычного осуществляется через метод [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)): 
 
    ```cs
    MarketDepth depth = ....;

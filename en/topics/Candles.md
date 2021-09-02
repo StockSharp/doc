@@ -44,11 +44,11 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
 
    > [!TIP]
    > To display the candles, the [Chart](xref:StockSharp.Xaml.Charting.Chart) graphic component is used. 
-3. Next, pass the created candle series to the connector and start getting data through [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles(StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter)):
+3. Next, pass the created candle series to the connector and start getting data through [Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)):
 
    ```cs
    ...
-   _connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
+   _connector.Subscribe(_candleSeries);
    ...
    		
    					

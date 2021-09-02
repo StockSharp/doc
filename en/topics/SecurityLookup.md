@@ -2,10 +2,10 @@
 
 Some connectors (for example, [OpenECry](OEC.md), [Interactive Brokers](IB.md) or [Sterling](Sterling.md)) do not support the transfer of all the available on the server instruments to the client (usually this is done to reduce the load on the broker server) after the ([IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect)) establish connection. 
 
-To find the instrument you need to call the [IConnector.LookupSecurities](xref:StockSharp.BusinessEntities.IConnector.LookupSecurities(StockSharp.BusinessEntities.Security,StockSharp.Messages.IMessageAdapter,StockSharp.Messages.MessageOfflineModes)) method. The instrument passed to it used as a filter. The following search criteria (the exact number depends on the broker system) are available: 
+To find the instrument you need to call the [Connector.Subscribe](xref:StockSharp.BusinessEntities.Connector.Subscribe(StockSharp.Algo.Subscription)) method. Передаваемая в него подписка должна быть создана на основе [StockSharp.Messages.SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), поля которого используются в качестве фильтра. Например: The subscription passed to it should be based on [StockSharp.Messages.SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), and used as a filter. For example, search criterias: 
 
-- The [Security.Code](xref:StockSharp.BusinessEntities.Security.Code) property sets the instrument or description name mask (for example, «ES» or «e\-mini» or «gold») or the exact name (for example, «esh5»).
-- The [Security.Type](xref:StockSharp.BusinessEntities.Security.Type) property sets the instrument type.
-- The [Security.Board](xref:StockSharp.BusinessEntities.Security.Board) property sets the board where the instrument trades (for example, [ExchangeBoard.Bats](xref:StockSharp.BusinessEntities.ExchangeBoard.Bats) or [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)).
+- The [SecurityMessage.SecurityId](xref:StockSharp.Messages.SecurityMessage.SecurityId) with specified [SecurityId.SecurityCode](xref:StockSharp.Messages.SecurityId.SecurityCode) property sets the instrument or description name mask (for example, «ES» or «e\-mini» or «gold») or the exact name (for example, «esh5»).
+- The [SecurityMessage.SecurityType](xref:StockSharp.Messages.SecurityMessage.SecurityType) property sets the instrument type.
+- The [SecurityMessage.SecurityId](xref:StockSharp.Messages.SecurityMessage.SecurityId) with specified [SecurityId.BoardCode](xref:StockSharp.Messages.SecurityId.BoardCode) property sets the board where the instrument trades (for example, [ExchangeBoard.Bats](xref:StockSharp.BusinessEntities.ExchangeBoard.Bats) or [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)).
 
 Found instruments will be returned through the [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity) event. 

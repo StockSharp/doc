@@ -16,7 +16,7 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 messageAdapter.Tables = messageAdapter.Tables.Concat(new[] { messageAdapter.TableRegistry.MarketMakingFuture.Id });
 ```
 
-После добавления таблицы вся информация по ней будет приходить в обработчики событий [Inserted](xref:StockSharp.Plaza.Metadata.PlazaTable.Inserted) и [End](xref:StockSharp.Plaza.Metadata.PlazaTable.End).
+После добавления таблицы вся информация по ней будет приходить в обработчики событий [Inserted](xref:StockSharp.Plaza.PlazaStreamManager.Inserted) и [End](xref:StockSharp.Plaza.PlazaStreamManager.End).
 
 ```cs
 //Подписка на событие добавления информации по таблице

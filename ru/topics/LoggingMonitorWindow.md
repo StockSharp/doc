@@ -1,6 +1,6 @@
 # Визуальный мониторинг
 
-Для упрощения мониторинга работы можно использовать специальное окно [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow). См. также [Визуальные компоненты логирования](GuiLogging.md). 
+Для упрощения мониторинга работы можно использовать специальную компоненту [Monitor](xref:StockSharp.Xaml.Monitor). См. также [Визуальные компоненты логирования](GuiLogging.md). 
 
 ![GUI LogControl](../images/GUI_LogControl.png)
 

@@ -1,6 +1,6 @@
 # Visual monitoring
 
-For simplifying the monitoring of the work, you can use the special [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) window. See also [Visual logging components](GuiLogging.md). 
+For simplifying the monitoring of the work, you can use the special [Monitor](xref:StockSharp.Xaml.Monitor) component. See also [Visual logging components](GuiLogging.md). 
 
 ![GUI LogControl](../images/GUI_LogControl.png)
 

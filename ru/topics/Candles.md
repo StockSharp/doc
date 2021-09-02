@@ -44,11 +44,11 @@
 
    > [!TIP]
    > Для отображения свечей используется графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). 
-3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles(StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter)):
+3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)):
 
    ```cs
    ...
-   _connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);	
+   _connector.Subscribe(_candleSeries);
    ...
    		
    					

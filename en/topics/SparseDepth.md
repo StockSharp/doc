@@ -4,7 +4,7 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 
 ## Order book modifications
 
-1. The creating of sparse order book from the normal one is carried out through the [Overload:StockSharp.Algo.TraderHelper.Sparse](xref:Overload:StockSharp.Algo.TraderHelper.Sparse) method: 
+1. The creating of sparse order book from the normal one is carried out through the [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)) method: 
 
    ```cs
    MarketDepth depth = ....;

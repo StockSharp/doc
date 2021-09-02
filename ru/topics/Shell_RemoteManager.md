@@ -54,10 +54,10 @@
 
 И нажать кнопку отправки команды.
 
-Для задания своей команды в стратегии необходимо переопределить метод [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Algo.Strategies.Messages.StrategyStateMessage))
+Для задания своей команды в стратегии необходимо переопределить метод [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Messages.CommandMessage))
 
 ```cs
-public virtual void ApplyCommand(StrategyStateMessage stateMsg)
+public virtual void ApplyCommand(CommandMessage cmdMsg)
 		
 ```
 
