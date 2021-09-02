@@ -42,12 +42,14 @@
       {
         "files": [
           "images/**",
-          "favicon.ico",
-          "logo.png"
         ],
         "exclude": [
           "obj/**",
         ]
+      },
+      {
+        "files": ["favicon.ico","logo.png"],
+        "src": "../"
       }
     ],
     "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
