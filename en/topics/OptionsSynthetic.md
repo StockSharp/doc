@@ -2,7 +2,7 @@
 
 To create the synthetic positions by options (or, vice versa, option positions by the base instrument) you can use the special [Synthetic](xref:StockSharp.Algo.Derivatives.Synthetic) class. This class through [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) and [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell) methods returns a combination of synthetic instruments to determine their possible position. 
 
-The synthetic combination can be used together with the degree of liquidity by the option determination (when it is impossible to get the required position). To do this you can use the order book liquidity analysis methods [Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades](xref:Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades): 
+The synthetic combination can be used together with the degree of liquidity by the option determination (when it is impossible to get the required position). To do this you can use the order book liquidity analysis methods [TraderHelper.GetTheoreticalTrades](xref:StockSharp.Algo.TraderHelper.GetTheoreticalTrades(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Sides,System.Decimal)): 
 
 ```cs
 // order book of the option

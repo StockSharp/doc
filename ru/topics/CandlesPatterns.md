@@ -13,7 +13,7 @@
 
 [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) также предоставляет различные алгоритмы для свечей, упрощающие написание кода:
 
-- Получение временных рамок свечи через метод [GetCandleBounds](xref:Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds). Например, необходимо точно узнать, когда закончится текущая 10.5\-минутная свеча:
+- Получение временных рамок свечи через метод [GetCandleBounds](xref:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds(System.TimeSpan,System.DateTimeOffset)). Например, необходимо точно узнать, когда закончится текущая 10.5\-минутная свеча:
 
   ```cs
   var candleTimeFrame = TimeSpan.FromMinutes(10.5);

@@ -59,7 +59,7 @@
    </Window>
    	  				
    ```
-2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [CreateCurve](xref:Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve). 
+2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Xaml.Charting.LineChartStyles,System.Guid)). 
 
    ```cs
    private readonly ICollection<EquityData> _curveItems;

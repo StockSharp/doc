@@ -1,6 +1,6 @@
 # Logging
 
-[S\#](StockSharpAbout.md) offers several graphical components for displaying logs, which are based on [LogControl](xref:StockSharp.Xaml.LogControl). Other components: [LogWindow](xref:StockSharp.Xaml.LogWindow), [Monitor](xref:StockSharp.Xaml.Monitor) and [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) only complement [LogControl](xref:StockSharp.Xaml.LogControl) functionality. 
+[S\#](StockSharpAbout.md) offers several graphical components for displaying logs: [LogControl](xref:StockSharp.Xaml.LogControl) and [Monitor](xref:StockSharp.Xaml.Monitor). 
 
 When using the logging visual components, you need to use the [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)logger as a "listener". This logger provides streaming synchronization with the GUI when recording new [LogMessage](xref:StockSharp.Logging.LogMessage) messages.
 

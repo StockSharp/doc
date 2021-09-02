@@ -49,7 +49,7 @@
    };
     
    ```
-2. Сохранение собственных сделок будет выполняться в обработчике события [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) при помощи метода [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})). Перед сохранением список собственных сделок приводится к типу [System.Collections.Generic.IEnumerable](xref:System.Collections.Generic.IEnumerable)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. Сама процедура выставления заявок в этим примере опущена. 
+2. Сохранение собственных сделок будет выполняться в обработчике события [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) при помощи метода [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})). Перед сохранением список собственных сделок приводится к типу [System.Collections.Generic.IEnumerable\`1](xref:System.Collections.Generic.IEnumerable`1)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. Сама процедура выставления заявок в этим примере опущена. 
 
    ```cs
    // сохраняем сделки в хранилище

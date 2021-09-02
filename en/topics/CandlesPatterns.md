@@ -13,7 +13,7 @@ It is possible to make candles pattern recognition through the [CandleHelper](xr
 
 [CandleHelper](xref:StockSharp.Algo.Candles.CandleHelper) also provides a variety of algorithms for candles to simplify writing of code:
 
-- The candle time range getting through the [GetCandleBounds](xref:Overload:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds) method. For example, you want to find out exactly when the current 10.5\-minute candle ends:
+- The candle time range getting through the [GetCandleBounds](xref:StockSharp.Algo.Candles.CandleHelper.GetCandleBounds(System.TimeSpan,System.DateTimeOffset)) method. For example, you want to find out exactly when the current 10.5\-minute candle ends:
 
   ```cs
   var candleTimeFrame = TimeSpan.FromMinutes(10.5);

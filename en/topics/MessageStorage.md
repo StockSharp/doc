@@ -43,7 +43,7 @@ It should pay attention to the relevance of using the message storage to store o
    };
     
    ```
-2. Saving own trades will be performed in the [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) event handler using the [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})). method. Before saving, the list of own trades is converted to the [System.Collections.Generic.IEnumerable](xref:System.Collections.Generic.IEnumerable)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. type. The procedure for order registering itself in this example is omitted. 
+2. Saving own trades will be performed in the [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) event handler using the [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})). method. Before saving, the list of own trades is converted to the [System.Collections.Generic.IEnumerable\`1](xref:System.Collections.Generic.IEnumerable`1)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. type. The procedure for order registering itself in this example is omitted. 
 
    ```cs
    connector.NewMyTrade += trade =>

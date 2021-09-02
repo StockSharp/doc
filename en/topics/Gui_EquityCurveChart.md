@@ -59,7 +59,7 @@ Below is an example of using this component. The full example code is in the Sam
    </Window>
    	  				
    ```
-2. In the main window code we create a data source to draw the chart using the [CreateCurve](xref:Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve) method. 
+2. In the main window code we create a data source to draw the chart using the [CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Xaml.Charting.LineChartStyles,System.Guid)) method. 
 
    ```cs
    private readonly ICollection<EquityData> _curveItems;

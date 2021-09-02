@@ -21,7 +21,7 @@ _strategy.PnLChanged += () =>
 
 The statistics manager is obtained through the [Strategy.StatisticManager](xref:StockSharp.Algo.Strategies.Strategy.StatisticManager) property. 
 
-When the new data occur, the curve is drawn on the special [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) chart. To start drawing a curve on this chart, you must call the [Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve](xref:Overload:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve) method. The resulting collection is filled with data that is passed during processing the [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event. 
+When the new data occur, the curve is drawn on the special [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) chart. To start drawing a curve on this chart, you must call the [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Xaml.Charting.LineChartStyles,System.Guid)) method. The resulting collection is filled with data that is passed during processing the [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event. 
 
 The [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) chart allows to draw multiple curves to be able to compare their profitability with each other. An example of this approach is shown in the [optimization](StrategyTestingOptimization.md) section. 
 

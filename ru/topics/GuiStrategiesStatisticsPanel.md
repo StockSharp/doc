@@ -6,7 +6,6 @@
 
 **Основные свойства и методы**
 
-- [ExcludeParameters](xref:StockSharp.Xaml.StrategiesStatisticsPanel.ExcludeParameters) \- список скрытых от визуализации параметров.
 - [SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- выбранная стратегия.
 - [SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- выбранные стратегии.
 - [AddStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategies(System.Collections.Generic.IEnumerable{StockSharp.Algo.Strategies.Strategy})) \- добавляет стратегии в таблицу.

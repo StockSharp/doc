@@ -1,6 +1,6 @@
 # Логирование
 
-[S\#](StockSharpAbout.md) предлагает несколько графических компонент для отображения логов, в основе которых лежит [LogControl](xref:StockSharp.Xaml.LogControl). Другие компоненты: [LogWindow](xref:StockSharp.Xaml.LogWindow), [Monitor](xref:StockSharp.Xaml.Monitor) и [MonitorWindow](xref:StockSharp.Xaml.MonitorWindow) только дополняют функциональность [LogControl](xref:StockSharp.Xaml.LogControl). 
+[S\#](StockSharpAbout.md) предлагает несколько графических компонент для отображения логов: [LogControl](xref:StockSharp.Xaml.LogControl) и [Monitor](xref:StockSharp.Xaml.Monitor). 
 
 При использовании визуальных компонентов логирования в качестве "слушателя" необходимо использовать логгер [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener). Этот логгер обеспечивает потоковую синхронизацию с GUI при записи новых сообщений [LogMessage](xref:StockSharp.Logging.LogMessage).
 

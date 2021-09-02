@@ -35,7 +35,7 @@
 - [ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- включить\/выключить отображение легенды.
 - [ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- включить\/выключить отображение области предпросмотра *OverView*.
 - [AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea)) \- добавить [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [AddElement](xref:Overload:StockSharp.Xaml.Charting.IChart.AddElement) \- добавить элемент серии данных. Имеет несколько перегрузок.
+- [AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement)) \- добавить элемент серии данных. Имеет несколько перегрузок.
 - [Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement})) \- "сбросить" ранее отрисованные значения.
 - [Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData)) \- отрисовать значение на графике.
 - [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- Режим создания заявок, когда установлен позволяет создавать заявки из графика. По умолчанию выключено.

@@ -35,7 +35,7 @@ The following figure shows the basic elements of the graphical component.
 - [ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- to enable\/disable the legend display.
 - [ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- to enable\/disable the *OverView* preview area display.
 - [AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea)) \- to add [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [AddElement](xref:Overload:StockSharp.Xaml.Charting.IChart.AddElement) \- to add an item of the data series. It has several overloads.
+- [AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement)) \- to add an item of the data series. It has several overloads.
 - [Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement})) \- to “reset" the values drawn before.
 - [Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData)) \- to draw the value on the chart.
 - [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- The order creation mode, when set, allows you to create orders from the chart. Disabled by default.

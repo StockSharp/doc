@@ -2,7 +2,7 @@
 
 Для построения синтетических позиций по опционам (или, наоборот, опционных позиций по базовому инструменту) можно воспользоваться специальным классом [Synthetic](xref:StockSharp.Algo.Derivatives.Synthetic). Данный класс через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell) возвращает комбинацию из синтетических инструментов для определения их возможной позиции. 
 
-Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades](xref:Overload:StockSharp.Algo.TraderHelper.GetTheoreticalTrades): 
+Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [TraderHelper.GetTheoreticalTrades](xref:StockSharp.Algo.TraderHelper.GetTheoreticalTrades(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Sides,System.Decimal)): 
 
 ```cs
 // получить стакан опциона
