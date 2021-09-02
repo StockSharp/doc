@@ -1,6 +1,6 @@
 # Хранилище сообщений
 
-Наряду с использованием хранилищ торговых объектов, можно использовать хранилища сообщений. Работа с этими хранилищами также осуществляется через интерфейс [IMarketDataStorage\`1](xref:StockSharp.Algo.Storages.IMarketDataStorage`1). Например, для работы со свечами можно использовать хранилище типа IMarketDataStorage\<CandleMessage\>. [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) также содержит набор методов для получения нужных хранилищ сообщений. Так хранилище временных свечей можно получить, как показано в следующем фрагменте кода. 
+Наряду с использованием хранилищ торговых объектов, можно использовать хранилища сообщений. Работа с этими хранилищами также осуществляется через интерфейс [IMarketDataStorage\`1](xref:StockSharp.Algo.Storages.IMarketDataStorage`1). Например, для работы со свечами можно использовать хранилище типа [StockSharp.Algo.Storages.IMarketDataStorage](xref:StockSharp.Algo.Storages.IMarketDataStorage)\<[StockSharp.Messages.CandleMessage](xref:StockSharp.Messages.CandleMessage)\>. [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) также содержит набор методов для получения нужных хранилищ сообщений. Так хранилище временных свечей можно получить, как показано в следующем фрагменте кода. 
 
 ```cs
    var security = new Security() { Id = "RIM5@FORTS" };
@@ -8,9 +8,9 @@
 	
 ```
 
-Далее с хранилищем можно работать при помощи методов [IMarketDataStorage.Load](xref:StockSharp.Algo.Storages.IMarketDataStorage.Load(System.DateTime)) и\/или [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.IEnumerable)), как показано в примере в [предыдущем разделе](StoragesApi.md). 
+Далее с хранилищем можно работать при помощи методов [IMarketDataStorage.Load](xref:StockSharp.Algo.Storages.IMarketDataStorage.Load(System.DateTime)) и\/или [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})), как показано в примере в [предыдущем разделе](StoragesApi.md). 
 
-Обратите внимание, что [S\#](StockSharpAbout.md) позволяет приводить типы хранилища торговых объектов к соответствующим типам хранилищ сообщений и наоборот. Например, IMarketDataStorage\<MarketDepth\> можно привести к типу IMarketDataStorage\<QuoteChangeMessage\> и наоборот. 
+Обратите внимание, что [S\#](StockSharpAbout.md) позволяет приводить типы хранилища торговых объектов к соответствующим типам хранилищ сообщений и наоборот. Например, [StockSharp.Algo.Storages.IMarketDataStorage](xref:StockSharp.Algo.Storages.IMarketDataStorage)\<[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth)\> можно привести к типу [StockSharp.Algo.Storages.IMarketDataStorage](xref:StockSharp.Algo.Storages.IMarketDataStorage)\<[StockSharp.Messages.QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage)\> и наоборот. 
 
 ```cs
 	
@@ -24,7 +24,7 @@
 	
 ```
 
-Следует обратить внимание на актуальность использования хранилища сообщений для хранения собственных заявок и сделок. Дело в том, что для этих торговых объектов нет соответствующих хранилищ. В этом случае придется использовать хранилище сообщений IMarketDataStorage\<ExecutionMessage\>. В следующем примере показано, как сохранить в хранилище собственные сделки. 
+Следует обратить внимание на актуальность использования хранилища сообщений для хранения собственных заявок и сделок. Дело в том, что для этих торговых объектов нет соответствующих хранилищ. В этом случае придется использовать хранилище сообщений [StockSharp.Algo.Storages.IMarketDataStorage](xref:StockSharp.Algo.Storages.IMarketDataStorage)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. В следующем примере показано, как сохранить в хранилище собственные сделки. 
 
 ## Пример сохранения собственных сделок
 
@@ -49,7 +49,7 @@
    };
     
    ```
-2. Сохранение собственных сделок будет выполняться в обработчике события [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) при помощи метода [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.IEnumerable)). Перед сохранением список собственных сделок приводится к типу IEnumerable\<ExecutionMessage\>. Сама процедура выставления заявок в этим примере опущена. 
+2. Сохранение собственных сделок будет выполняться в обработчике события [Connector.NewMyTrade](xref:StockSharp.Algo.Connector.NewMyTrade) при помощи метода [IMarketDataStorage.Save](xref:StockSharp.Algo.Storages.IMarketDataStorage.Save(System.Collections.Generic.IEnumerable{StockSharp.Messages.Message})). Перед сохранением список собственных сделок приводится к типу [System.Collections.Generic.IEnumerable](xref:System.Collections.Generic.IEnumerable)\<[StockSharp.Messages.ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)\>. Сама процедура выставления заявок в этим примере опущена. 
 
    ```cs
    // сохраняем сделки в хранилище
