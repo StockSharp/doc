@@ -195,9 +195,6 @@
    		_connector.SubscribeCandles(_candleSeries, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
    ...
    ```
-
-   > [!CAUTION]
-   > Номер счета, который в примере записан в переменную **account**, это **не логин** в [Quik](Quik.md), а код клиента. Об особенности портфелей в Quik читайте в соответствующем [разделе](QuikPortfolio.md). 
 5. Запуск и остановка торговой стратегии происходит следующим образом: 
 
    ```cs

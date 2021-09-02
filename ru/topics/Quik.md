@@ -21,5 +21,3 @@
 [Создать новую стоп заявку](API_StopOrders.md)
 
 [Настройка Quik Lua](QuikLua.md)
-
-[Quik DDE (старое подключение)](QuikDDE.md)

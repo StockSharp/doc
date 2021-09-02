@@ -50,37 +50,6 @@
           href: API_GUI_Settings_Quik LUA Transactions.md
         - name: Инициализация адаптера Quik Lua
           href: QuikLuaFirstStrategy.md
-        - name: Quik DDE (старое подключение)
-          href: QuikDDE.md
-          items:
-          - name: Настройка Quik
-            href: QuikSetup.md
-          - name: Verifier
-            href: QuikVerifier.md
-          - name: Создание первого робота
-            href: QuikFirstStrategy.md
-          - name: Портфели в Quik
-            href: QuikPortfolio.md
-          - name: Экспорт стакана
-            href: QuikQuotesByDde.md
-          - name: Экспорт дополнительных колонок
-            href: QuikExtendedInfoByDde.md
-          - name: Экспорт произвольных таблиц
-            href: QuikAnyTableByDde.md
-          - name: Экспорт микросекунд
-            href: QuikMksByDde.md
-          - name: Таблица Инструменты (изменения)
-            href: QuikSecuritiesChangesTable.md
-          - name: Управление окном Quik
-            href: QuikWindow.md
-          - name: Строка транзакции
-            href: QuikFormatTransaction.md
-          - name: Работа с несколькими Quik-ами
-            href: QuikFew.md
-          - name: РЕПО и РПС заявки
-            href: QuikRepoOrders.md
-          - name: Включение и выключение Quik
-            href: QuikProcess.md
       - name: SmartCOM (ITI Capital)
         href: Smart.md
         items:
