@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Host: doc.stocksharp.com
+
+Sitemap: https://doc.stocksharp.com/sitemap.xml

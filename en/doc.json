@@ -73,7 +73,28 @@
     "template": [
       "default",
       "../darkfx"
-    ]
+    ],
+    "sitemap": {
+        "baseUrl": "https://doc.stocksharp.com",
+        "priority": 0.1,
+        "changefreq": "monthly",
+        "fileOptions": {
+            "**/api/**.yml": {
+                "priority": 0.3,
+                "lastmod": "2001-01-01",
+            },
+            "index.md": {
+                "baseUrl": "https://doc.stocksharp.com",
+                "priority": 0.8,
+                "changefreq": "monthly"
+            },
+            "topics/**.md": {
+                "baseUrl": "https://doc.stocksharp.com",
+                "priority": 0.8,
+                "changefreq": "monthly"
+            }
+        }
+    }
   },
   "__pdf": {
     "content": [
