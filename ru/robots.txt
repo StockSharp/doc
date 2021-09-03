@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Host: doc.stocksharp.ru
 
-Sitemap: https://doc.stocksharp.ru/sitemap.xml
+Sitemap: https://doc.stocksharp.ru/sitemap.xml.gz
