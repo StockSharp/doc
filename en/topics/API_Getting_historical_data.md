@@ -21,7 +21,7 @@
    ...
    							
    ```
-2. In order to get historical candles, you need to call the [SubscribeCandles](xref:StockSharp.Algo.Connector.SubscribeCandles(StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter)) method: 
+2. In order to get historical candles, you need to call the [SubscribeCandles](xref:StockSharp.Algo.TraderHelper.SubscribeCandles(StockSharp.Algo.ISubscriptionProvider,StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter,System.Nullable{System.Int64})) method: 
 
    ```cs
    ...

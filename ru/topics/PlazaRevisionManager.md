@@ -17,6 +17,6 @@ Adapter.RevisionTables = new[]
 		
 ```
 
-После переконнекта, данные начнут скачиваться с номера последней сохраненной ревизии. Интервал через который сохраняется номер последней ревизии доступен через [PlazaMessageAdapter.RevisionInterval](xref:StockSharp.Plaza.PlazaMessageAdapter.RevisionInterval). По умолчанию файл с номером последней ревизии по выбранной таблице сохраняется в папку *Revisions*, которая создается в папке из которой запускается торговый робот. Изменить путь сохранения можно через [PlazaMessageAdapter.RevisionPath](xref:StockSharp.Plaza.PlazaMessageAdapter.RevisionPath).
+После переконнекта, данные начнут скачиваться с номера последней сохраненной ревизии. Интервал через который сохраняется номер последней ревизии доступен через [PlazaMessageAdapter.RevisionSaveInterval](xref:StockSharp.Plaza.PlazaMessageAdapter.RevisionSaveInterval). По умолчанию файл с номером последней ревизии по выбранной таблице сохраняется в папку *Revisions*, которая создается в папке из которой запускается торговый робот. Изменить путь сохранения можно через [PlazaMessageAdapter.RevisionPath](xref:StockSharp.Plaza.PlazaMessageAdapter.RevisionPath).
 
 Для того чтобы перезакачать все данные, достаточно удалить файлы из папки *Revisions*.
