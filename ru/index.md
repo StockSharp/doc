@@ -30,8 +30,6 @@ S\#.Terminal
 
 ![Terminal main 00](images/Terminal_main_00.png)
 
-### Преимущества и возможности S\#.Terminal:
-
 Преимущества и возможности S\#.Terminal:
 
 1. **Поддержка боле 70 подключений** различных бирж мира [Коннекторы](topics/API_Connectors.md).
