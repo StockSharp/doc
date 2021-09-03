@@ -69,7 +69,7 @@
         ]
       }
     ],
-    "dest": "C:/inetpub/wwwroot/doc2/ru",
+    "dest": "C:/inetpub/wwwroot/doc/ru",
     "template": [
       "default",
       "../darkfx"
@@ -148,6 +148,6 @@
     "wkhtmltopdf": {
       "additionalArguments": "--enable-local-file-access"
     },
-    "dest": "C:/inetpub/wwwroot/doc2/ru"
+    "dest": "C:/inetpub/wwwroot/doc/ru"
   }
 }
