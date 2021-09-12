@@ -6,9 +6,9 @@
 
 **Main properties and methods**
 
-- [LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- list of items of the order log.
-- [SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- selected item of the order log.
-- [SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- selected items of the order log.
+- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- list of items of the order log.
+- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- selected item of the order log.
+- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- selected items of the order log.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/ITCH\/SampleITCH.*
 

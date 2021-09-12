@@ -12,18 +12,18 @@
 
 **Основные свойства**
 
-- [SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) \- режим выбора инструмента: одиночный, множественный.
-- [ShowCommonStatColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonStatColumns) \- отображать основные колонки.
-- [ShowCommonOptionColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonOptionColumns) \- отображать основные колонки для опционов.
-- [Title](xref:StockSharp.Xaml.SecurityPicker.Title) \- заголовок, который отображается в верхней части компонента.
-- [Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) \- список инструментов.
-- [SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) \- выбранный инструмент.
-- [SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) \- список выбранных инструментов.
-- [FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) \- список отфильтрованных инструментов.
-- [ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) \- список скрытых в списке инструментов.
-- [SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) \- выбранный тип инструмента.
-- [SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) \- провайдер информации об инструментах.
-- [MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) \- провайдер рыночных данных.
+- [SecurityPicker.SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) \- режим выбора инструмента: одиночный, множественный.
+- [SecurityPicker.ShowCommonStatColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonStatColumns) \- отображать основные колонки.
+- [SecurityPicker.ShowCommonOptionColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonOptionColumns) \- отображать основные колонки для опционов.
+- [SecurityPicker.Title](xref:StockSharp.Xaml.SecurityPicker.Title) \- заголовок, который отображается в верхней части компонента.
+- [SecurityPicker.Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) \- список инструментов.
+- [SecurityPicker.SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) \- выбранный инструмент.
+- [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) \- список выбранных инструментов.
+- [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) \- список отфильтрованных инструментов.
+- [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) \- список скрытых в списке инструментов.
+- [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) \- выбранный тип инструмента.
+- [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) \- провайдер информации об инструментах.
+- [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) \- провайдер рыночных данных.
 
 Ниже показан фрагмент кода с его использованием, взятый из примера *Samples\/Common\/SampleConnection*: 
 

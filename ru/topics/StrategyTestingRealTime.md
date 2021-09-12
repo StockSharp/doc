@@ -2,11 +2,11 @@
 
 Тестирование на рыночных данных представляет собой торговлю с реальным подключением к бирже ("живые" котировки), но без реального выставления заявок на биржу. Все регистрируемые заявки перехватываются, и их исполнение эмулируется на основе рыночных стаканов. Такое тестирование может быть полезно, например, если разрабатывается торговый тренажер. Или необходимо проверить торговый алгоритм на краткосрочном отрезке времени с реальными котировками. 
 
-Для эмуляции торговли на реальных данных необходимо использовать [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), который выполняет роль "обертки" коннектора конкретной торговой системы ([Quik](Quik.md), [SmartCOM](Smart.md) и т.п.). Ниже приводится описание примера работы с эмулятором с использованием подключения к [SmartCOM](Smart.md). Сам пример находится в папке *Samples\/Testing\/SampleRealTimeEmulation*. 
+Для эмуляции торговли на реальных данных необходимо использовать [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), который выполняет роль "обертки" коннектора конкретной торговой системы ([Quik](Quik.md), [SmartCOM](Smart.md) и т.п.). Ниже приводится описание примера работы с эмулятором с использованием подключения к [SmartCOM](Smart.md). Сам пример находится в папке *Samples\/Testing\/SampleRealTimeEmulation*. 
 
 ## Работа с эмулятором торговли на реальных данных
 
-1. Создаем шлюз [RealTimeEmulationTrader\`1](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) и передаем в его конструктор адаптер сообщений [SmartComMessageAdapter](xref:StockSharp.SmartCom.SmartComMessageAdapter). Для создания идентификаторов "виртуальных" транзакций используем генератор идентификаторов **MillisecondIncrementalIdGenerator**. 
+1. Создаем шлюз [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) и передаем в его конструктор адаптер сообщений [SmartComMessageAdapter](xref:StockSharp.SmartCom.SmartComMessageAdapter). Для создания идентификаторов "виртуальных" транзакций используем генератор идентификаторов **MillisecondIncrementalIdGenerator**. 
 
    ```cs
    					_connector = new RealTimeEmulationTrader<SmartComMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())

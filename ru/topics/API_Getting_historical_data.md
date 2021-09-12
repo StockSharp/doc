@@ -21,7 +21,7 @@
    ...
    							
    ```
-2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [SubscribeCandles](xref:StockSharp.Algo.TraderHelper.SubscribeCandles(StockSharp.Algo.ISubscriptionProvider,StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter,System.Nullable{System.Int64})): 
+2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [TraderHelper.SubscribeCandles](xref:StockSharp.Algo.TraderHelper.SubscribeCandles(StockSharp.Algo.ISubscriptionProvider,StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter,System.Nullable{System.Int64}))**(**[StockSharp.Algo.ISubscriptionProvider](xref:StockSharp.Algo.ISubscriptionProvider) provider, [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) series, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) from, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) to, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) count, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) transactionId, [StockSharp.Messages.IMessageAdapter](xref:StockSharp.Messages.IMessageAdapter) adapter, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) skip**)**: 
 
    ```cs
    ...
@@ -31,7 +31,7 @@
    ...
    			
    ```
-3. Исторические свечи передаются через событие [CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing): 
+3. Исторические свечи передаются через событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing): 
 
    ```cs
    ...

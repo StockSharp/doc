@@ -2,9 +2,9 @@
 
 To create a new stop order, you need to create an [Order](xref:StockSharp.BusinessEntities.Order), object that contains information about the order and register it on the exchange.
 
-Unlike a regular order, for a stop order, you need to specify the [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) property as [Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) and set the [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) property with the necessary order conditions.
+Unlike a regular order, for a stop order, you need to specify the [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) property as [OrderTypes.Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) and set the [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) property with the necessary order conditions.
 
-Further, if you need to work with the order (for example, cancel it or change it), then this [Order](xref:StockSharp.BusinessEntities.Order). object shall be used. To register orders on the exchange, the [RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order)) method is provided, which sends an order to the server.
+Further, if you need to work with the order (for example, cancel it or change it), then this [Order](xref:StockSharp.BusinessEntities.Order). object shall be used. To register orders on the exchange, the [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order**)** method is provided, which sends an order to the server.
 
 ```cs
 Connector Connector = new Connector();		

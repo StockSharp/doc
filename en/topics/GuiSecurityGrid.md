@@ -6,10 +6,10 @@ The [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) component is designed to d
 
 **Main properties**
 
-- [Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- the list of instruments.
-- [SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- the selected instrument.
-- [SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- the list of selected instruments.
-- [MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- the provider of market data.
+- [SecurityGrid.Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- the list of instruments.
+- [SecurityGrid.SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- the selected instrument.
+- [SecurityGrid.SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- the list of selected instruments.
+- [SecurityGrid.MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- the provider of market data.
 
 Please note that for the display of changes in market information, you must specify a provider of market data. 
 

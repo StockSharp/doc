@@ -6,10 +6,10 @@
 
 **Основные свойства**
 
-- [Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) \- список портфелей.
-- [Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) \- список позиций.
-- [SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) \- выбранная позиция.
-- [SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- выбранные позиции.
+- [PortfolioGrid.Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) \- список портфелей.
+- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) \- список позиций.
+- [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) \- выбранная позиция.
+- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- выбранные позиции.
 
 Ниже показан внеший вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

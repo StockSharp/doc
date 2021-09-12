@@ -6,8 +6,8 @@
 
 **Main properties**
 
-- [Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- the list of portfolios.
-- [SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- the selected portfolio.
+- [PortfolioComboBox.Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- the list of portfolios.
+- [PortfolioComboBox.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- the selected portfolio.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

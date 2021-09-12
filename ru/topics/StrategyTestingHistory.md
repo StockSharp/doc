@@ -124,7 +124,7 @@
    ```
 
    > [!CAUTION]
-   > В конструктор [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) передается путь к директории, где лежит история для **всех инструментов**, а не к директории с конкретным инструментом. Например, если архив HistoryData.zip был распакован в директорию *C:\\R\\RIZ2@FORTS\\*, то в [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) необходимо передать путь *C:\\*. Подробнее, в разделе [API](StoragesApi.md). 
+   > В конструктор [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) передается путь к директории, где лежит история для **всех инструментов**, а не к директории с конкретным инструментом. Например, если архив HistoryData.zip был распакован в директорию *C:\\R\\RIZ2@FORTS\\*, то в [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) необходимо передать путь *C:\\*. Подробнее, в разделе [API](StoragesApi.md). 
 3. Далее в цикле создаются инструмент, портфель, стратегия, шлюз для тестирования и т.д. с соответствующими настройками, в зависимости от значений флагов, установленных в главном окне (Тики, Тики и стаканы, Свечи и пр.). Если значение флага False, то программа переходит к следующему набору настроек. 
 
    ```cs
@@ -301,7 +301,7 @@
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Подписка на событие [PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged), для расчета кривой эквити (подробнее, в разделе [Кривая эквити](Equity.md)), а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
+9. Подписка на событие [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged), для расчета кривой эквити (подробнее, в разделе [Кривая эквити](Equity.md)), а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
 
    ```cs
    // копируем параметры на визуальную панель

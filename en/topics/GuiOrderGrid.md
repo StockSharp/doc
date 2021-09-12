@@ -9,13 +9,13 @@
 
 **Main members**
 
-- [Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- the list of orders.
-- [SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- the selected order.
-- [SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- \- selected orders.
-- [AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail)) \- the method that adds a message about order registration error in the comment field.
-- [OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- the order registration event (occurs after selecting the appropriate item in the context menu).
-- [OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- the order replacement event (occurs after selecting the appropriate item in the context menu).
-- [OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- the order cancellation (occurs after selecting the appropriate item in the context menu).
+- [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- the list of orders.
+- [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- the selected order.
+- [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- \- selected orders.
+- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail**)** \- the method that adds a message about order registration error in the comment field.
+- [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- the order registration event (occurs after selecting the appropriate item in the context menu).
+- [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- the order replacement event (occurs after selecting the appropriate item in the context menu).
+- [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- the order cancellation (occurs after selecting the appropriate item in the context menu).
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

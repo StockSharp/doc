@@ -2,7 +2,7 @@
 
 Для построения синтетических позиций по опционам (или, наоборот, опционных позиций по базовому инструменту) можно воспользоваться специальным классом [Synthetic](xref:StockSharp.Algo.Derivatives.Synthetic). Данный класс через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell) возвращает комбинацию из синтетических инструментов для определения их возможной позиции. 
 
-Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [TraderHelper.GetTheoreticalTrades](xref:StockSharp.Algo.TraderHelper.GetTheoreticalTrades(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Sides,System.Decimal)): 
+Синтетическую комбинацию можно использовать совместно с определением степени ликвидности по опциону (когда нет возможности реализовать необходимую позицию). Для этого можно воспользоваться методами анализа ликвидности стакана [TraderHelper.GetTheoreticalTrades](xref:StockSharp.Algo.TraderHelper.GetTheoreticalTrades(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Sides,System.Decimal))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.Messages.Sides](xref:StockSharp.Messages.Sides) orderDirection, [System.Decimal](xref:System.Decimal) volume**)**: 
 
 ```cs
 // получить стакан опциона
@@ -41,4 +41,4 @@ if (elapsedVolume > 0)
 }
 ```
 
-Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy(System.Decimal)) и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell(System.Decimal)). 
+Аналогично опционам также можно получить опционную позицию для базового инструмента через методы [Synthetic.Buy](xref:StockSharp.Algo.Derivatives.Synthetic.Buy(System.Decimal))**(**[System.Decimal](xref:System.Decimal) strike**)** и [Synthetic.Sell](xref:StockSharp.Algo.Derivatives.Synthetic.Sell(System.Decimal))**(**[System.Decimal](xref:System.Decimal) strike**)**. 

@@ -4,7 +4,7 @@
 
 Механизм сообщений включает три ключевых элемента. Это само сообщение [Message](xref:StockSharp.Messages.Message), адаптер сообщений [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) и транспортный канал [IMessageChannel](xref:StockSharp.Messages.IMessageChannel). 
 
-- **Сообщение** выполняет роль агента, передающего информацию. Сообщения имеют свой тип [MessageTypes](xref:StockSharp.Messages.MessageTypes). Каждому типу сообщения соответствует определенный класс. В свою очередь все классы сообщений наследуют от абстрактного класса [Message](xref:StockSharp.Messages.Message), который наделяет потомков такими свойствами, как тип сообщения [Type](xref:StockSharp.Messages.Message.Type) и [LocalTime](xref:StockSharp.Messages.Message.LocalTime) \- локальное время создания\/получения сообщения. 
+- **Сообщение** выполняет роль агента, передающего информацию. Сообщения имеют свой тип [MessageTypes](xref:StockSharp.Messages.MessageTypes). Каждому типу сообщения соответствует определенный класс. В свою очередь все классы сообщений наследуют от абстрактного класса [Message](xref:StockSharp.Messages.Message), который наделяет потомков такими свойствами, как тип сообщения [Message.Type](xref:StockSharp.Messages.Message.Type) и [Message.LocalTime](xref:StockSharp.Messages.Message.LocalTime) \- локальное время создания\/получения сообщения. 
 
   Сообщения могут быть *исходящими* и *входящими*. 
   - *Исходящие сообщения* \- сообщения, которые посылаются во внешнюю систему. Обычно это команды, которые генерирует программа, например, сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) \- команда, запрашивающая соединение с сервером. 

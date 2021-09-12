@@ -7,15 +7,15 @@
 Этот компонент включает: 
 
 - Специальное текстовое поле [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) \- генерирует *непрерывный* инструмент при помощи введенного Id \- \[Code\]@\[Board\]. 
-- Компонент [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) \- специальный DataGrid для работы с инструментами, входящими в состав *непрерывного* инструмента. Составляющие инструменты "обертываются" в класс [SecurityJump](xref:StockSharp.Xaml.SecurityJump), который имеет два свойства: [Security](xref:StockSharp.Xaml.SecurityJump.Security) и [Date](xref:StockSharp.Xaml.SecurityJump.Date) (дата роллирования). Добавленные инструменты хранятся в списке [Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps). Компонент имеет функцию [Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) для проверки корректности составляющих инструментов. 
+- Компонент [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) \- специальный DataGrid для работы с инструментами, входящими в состав *непрерывного* инструмента. Составляющие инструменты "обертываются" в класс [SecurityJump](xref:StockSharp.Xaml.SecurityJump), который имеет два свойства: [SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) и [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date) (дата роллирования). Добавленные инструменты хранятся в списке [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps). Компонент имеет функцию [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) для проверки корректности составляющих инструментов. 
 - Кнопки добавления\/удаления инструментов. 
 - Кнопка **Auto** \- позволяет автоматически создавать *непрерывный* инструмент. 
 - Кнопка **Ok** \- завершение создания *непрерывного* инструмента. 
 
 **Основные свойства**
 
-- [Security](xref:StockSharp.Xaml.ContinuousSecurityWindow.Security) \- непрерывный инструмент.
-- [SecurityStorage](xref:StockSharp.Xaml.ContinuousSecurityWindow.SecurityStorage) \- хранилище информации об инструментах. 
+- [ContinuousSecurityWindow.Security](xref:StockSharp.Xaml.ContinuousSecurityWindow.Security) \- непрерывный инструмент.
+- [ContinuousSecurityWindow.SecurityStorage](xref:StockSharp.Xaml.ContinuousSecurityWindow.SecurityStorage) \- хранилище информации об инструментах. 
 
 Ниже приведен фрагмент кода с его использованием. 
 

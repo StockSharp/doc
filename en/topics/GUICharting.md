@@ -25,20 +25,20 @@ The following figure shows the basic elements of the graphical component.
 
 **The [Chart](xref:StockSharp.Xaml.Charting.Chart) basic properties and methods:**
 
-- [Areas](xref:StockSharp.Xaml.Charting.Chart.Areas) \- the list of the [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [ChartTheme](xref:StockSharp.Xaml.Charting.Chart.ChartTheme) \- the component theme.
-- [IndicatorTypes](xref:StockSharp.Xaml.Charting.Chart.IndicatorTypes) \- the list of indicators that can be displayed on the chart.
-- [CrossHair](xref:StockSharp.Xaml.Charting.Chart.CrossHair) \- to enable\/disable the crosshair.
-- [CrossHairAxisLabels](xref:StockSharp.Xaml.Charting.Chart.CrossHairAxisLabels) \- to enable\/disable the crosshair marks on the axes.
-- [IsAutoRange](xref:StockSharp.Xaml.Charting.Chart.IsAutoRange) \- to enable\/disable the X axis automatic scaling.
-- [IsAutoScroll](xref:StockSharp.Xaml.Charting.Chart.IsAutoScroll) \- to enable\/disable the auto scroll on the X axis.
-- [ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- to enable\/disable the legend display.
-- [ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- to enable\/disable the *OverView* preview area display.
-- [AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea)) \- to add [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement)) \- to add an item of the data series. It has several overloads.
-- [Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement})) \- to “reset" the values drawn before.
-- [Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData)) \- to draw the value on the chart.
-- [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- The order creation mode, when set, allows you to create orders from the chart. Disabled by default.
+- [Chart.Areas](xref:StockSharp.Xaml.Charting.Chart.Areas) \- the list of the [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
+- [Chart.ChartTheme](xref:StockSharp.Xaml.Charting.Chart.ChartTheme) \- the component theme.
+- [Chart.IndicatorTypes](xref:StockSharp.Xaml.Charting.Chart.IndicatorTypes) \- the list of indicators that can be displayed on the chart.
+- [Chart.CrossHair](xref:StockSharp.Xaml.Charting.Chart.CrossHair) \- to enable\/disable the crosshair.
+- [Chart.CrossHairAxisLabels](xref:StockSharp.Xaml.Charting.Chart.CrossHairAxisLabels) \- to enable\/disable the crosshair marks on the axes.
+- [Chart.IsAutoRange](xref:StockSharp.Xaml.Charting.Chart.IsAutoRange) \- to enable\/disable the X axis automatic scaling.
+- [Chart.IsAutoScroll](xref:StockSharp.Xaml.Charting.Chart.IsAutoScroll) \- to enable\/disable the auto scroll on the X axis.
+- [Chart.ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- to enable\/disable the legend display.
+- [Chart.ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- to enable\/disable the *OverView* preview area display.
+- [IChart.AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area**)** \- to add [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
+- [IChart.AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area, [StockSharp.Xaml.Charting.IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) element**)** \- to add an item of the data series. It has several overloads.
+- [Chart.Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.Xaml.Charting.IChartElement\>](xref:System.Collections.Generic.IEnumerable`1) elements**)** \- to “reset" the values drawn before.
+- [IChart.Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data**)** \- to draw the value on the chart.
+- [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- The order creation mode, when set, allows you to create orders from the chart. Disabled by default.
 
 ## ChartArea
 
@@ -46,9 +46,9 @@ The following figure shows the basic elements of the graphical component.
 
 **The [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)** basic properties: 
 
-- [Elements](xref:StockSharp.Xaml.Charting.ChartArea.Elements) \- the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) elements list.
-- [XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- the list of the horizontal axes.
-- [YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- the list of the vertical axes.
+- [ChartArea.Elements](xref:StockSharp.Xaml.Charting.ChartArea.Elements) \- the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) elements list.
+- [ChartArea.XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- the list of the horizontal axes.
+- [ChartArea.YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- the list of the vertical axes.
 
 ## IChartElement
 

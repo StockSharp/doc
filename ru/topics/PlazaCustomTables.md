@@ -1,6 +1,6 @@
 # Произвольные таблицы
 
-Помимо стандартного набора таблиц шлюз [PlazaMessageAdapter](xref:StockSharp.Plaza.PlazaMessageAdapter) поддерживает дополнительные таблицы. Таблицы, по которым возможно получение данных, описаны в пространстве имен [Metadata](xref:StockSharp.Plaza.Metadata). Для получения информации по таблице необходимо добавить поток данных, соответствующий данной таблице, в [Tables](xref:StockSharp.Plaza.PlazaMessageAdapter.Tables). Все потоки данных описаны в классе [PlazaStreamRegistry](xref:StockSharp.Plaza.PlazaStreamRegistry). 
+Помимо стандартного набора таблиц шлюз [PlazaMessageAdapter](xref:StockSharp.Plaza.PlazaMessageAdapter) поддерживает дополнительные таблицы. Таблицы, по которым возможно получение данных, описаны в пространстве имен [StockSharp.Plaza.Metadata](xref:StockSharp.Plaza.Metadata). Для получения информации по таблице необходимо добавить поток данных, соответствующий данной таблице, в [PlazaMessageAdapter.Tables](xref:StockSharp.Plaza.PlazaMessageAdapter.Tables). Все потоки данных описаны в классе [PlazaStreamRegistry](xref:StockSharp.Plaza.PlazaStreamRegistry). 
 
 ```cs
 // Добавление таблицы об обязательствах маркетмейкера по фьючерсам
@@ -16,7 +16,7 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 messageAdapter.Tables = messageAdapter.Tables.Concat(new[] { messageAdapter.TableRegistry.MarketMakingFuture.Id });
 ```
 
-После добавления таблицы вся информация по ней будет приходить в обработчики событий [Inserted](xref:StockSharp.Plaza.IPlazaStreamManager.Inserted) и [End](xref:StockSharp.Plaza.IPlazaStreamManager.End).
+После добавления таблицы вся информация по ней будет приходить в обработчики событий [IPlazaStreamManager.Inserted](xref:StockSharp.Plaza.IPlazaStreamManager.Inserted) и [IPlazaStreamManager.End](xref:StockSharp.Plaza.IPlazaStreamManager.End).
 
 ```cs
 //Подписка на событие добавления информации по таблице

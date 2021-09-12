@@ -113,7 +113,7 @@ public NewStrategy()
 }
 ```
 
-The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class has methods that you can override. In the example, the [OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) method is overridden in order to \- when the trading algorithm is reinitialized, moving averages and graphical elements are also reinitialized:
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class has methods that you can override. In the example, the [Strategy.OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) method is overridden in order to \- when the trading algorithm is reinitialized, moving averages and graphical elements are also reinitialized:
 
 ```cs
 protected override void OnReseted()
@@ -136,7 +136,7 @@ protected override void OnReseted()
 }
 ```
 
-The [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) method is override in order to: 1) when the trading algorithm starts, the moving averages are reinitialized, 2) all graphic elements are added to the chart, 3) subscribe to the event of new trades occurrence, 4) subscribe to the event of new orders occurrence or change of old ones, start receiving new information by the instrument.
+The [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) method is override in order to: 1) when the trading algorithm starts, the moving averages are reinitialized, 2) all graphic elements are added to the chart, 3) subscribe to the event of new trades occurrence, 4) subscribe to the event of new orders occurrence or change of old ones, start receiving new information by the instrument.
 
 ```cs
 protected override void OnStarted()
@@ -172,7 +172,7 @@ protected override void OnStarted()
 }
 ```
 
-The [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method is overridden to stop receiving new information by the instrument:
+The [Strategy.OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method is overridden to stop receiving new information by the instrument:
 
 ```cs
 protected override void OnStopped()

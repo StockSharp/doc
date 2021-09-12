@@ -6,9 +6,9 @@
 
 **Основные свойства**
 
-- [Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- список сделок.
-- [SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- выбранная сделка.
-- [SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- выбранные сделки.
+- [TradeGrid.Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- список сделок.
+- [TradeGrid.SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- выбранная сделка.
+- [TradeGrid.SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- выбранные сделки.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

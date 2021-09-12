@@ -6,9 +6,9 @@
 
 **Основные свойства и методы**
 
-- [LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- список элементов лога заявок.
-- [SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- выбранный элемент лога заявок.
-- [SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- выбранные элементы лога заявок.
+- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) \- список элементов лога заявок.
+- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) \- выбранный элемент лога заявок.
+- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) \- выбранные элементы лога заявок.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

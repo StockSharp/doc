@@ -44,7 +44,7 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
 
    > [!TIP]
    > To display the candles, the [Chart](xref:StockSharp.Xaml.Charting.Chart) graphic component is used. 
-3. Next, pass the created candle series to the connector and start getting data through [Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)):
+3. Next, pass the created candle series to the connector and start getting data through [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription))**(**[StockSharp.Algo.Subscription](xref:StockSharp.Algo.Subscription) subscription**)**:
 
    ```cs
    ...
@@ -57,7 +57,7 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
    After this stage, the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event will be raised.
 4. The [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event is raised not only when a new candle appears, but also when the current one changes.
 
-   If you want to display only **"whole"** candles, then you need to check the [State](xref:StockSharp.Algo.Candles.Candle.State) property of the arrived candle:
+   If you want to display only **"whole"** candles, then you need to check the [Candle.State](xref:StockSharp.Algo.Candles.Candle.State) property of the arrived candle:
 
    ```cs
    ...
@@ -74,9 +74,9 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
    		
    ```
 5. You can set some properties for [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries):
-   - [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) sets the mode of building candles. By default, [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild) is specified, which means that finished data will be requested, or built from the data type specified in the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property. You can also set [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) to request only finished data. Or [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), for building from the data type specified in the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property without requesting the finished data. 
-   - When building candles, you need to set the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), property, which indicates which data type is used as a source ([Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) and etc. ). 
-   - For some data types, you need to additionally specify the [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), property from which the data will be built. For example, for [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) , you can specify [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), , which means that candles will be built from the [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) property of [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) data. 
+   - [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) sets the mode of building candles. By default, [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild) is specified, which means that finished data will be requested, or built from the data type specified in the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property. You can also set [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) to request only finished data. Or [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), for building from the data type specified in the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property without requesting the finished data. 
+   - When building candles, you need to set the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), property, which indicates which data type is used as a source ([MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDataTypes.MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) and etc. ). 
+   - For some data types, you need to additionally specify the [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), property from which the data will be built. For example, for [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) , you can specify [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), , which means that candles will be built from the [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) property of [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) data. 
 6. Let's consider a few examples of building different candle types:
    - Since most sources provide candles with standard timeframes, it’s enough to set the type and timeframe to get such candles: 
 
@@ -84,7 +84,7 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
      					
      ```
-   - If you just want to load the finished candles, then you need to set the [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property in [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
+   - If you just want to load the finished candles, then you need to set the [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property in [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
 
      ```cs
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
@@ -114,7 +114,7 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
      };	
      					
      ```
-   - Since there are no sources providing a ready **volume profile**, it also needs to be built from another data type. To draw a **volume profile**, you need to set the [IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) property to 'true', as well as [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) to [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). And specify the data type from which the **volume profile** will be built. In this case, it's [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
+   - Since there are no sources providing a ready **volume profile**, it also needs to be built from another data type. To draw a **volume profile**, you need to set the [CandleSeries.IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) property to 'true', as well as [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) to [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). And specify the data type from which the **volume profile** will be built. In this case, it's [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
 
      ```cs
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
@@ -125,7 +125,7 @@ The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFr
      };	
      					
      ```
-   - o Since most data sources do not provide finished candles, except for [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), , other candle types are built similarly to the **volume profile**. You need to set the [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property to [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) or [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). Also set the [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property and the [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) property, if necessary. 
+   - o Since most data sources do not provide finished candles, except for [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), , other candle types are built similarly to the **volume profile**. You need to set the [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property to [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) or [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). Also set the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property and the [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) property, if necessary. 
 
      The following code shows building a [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) with a volume of 1000 contracts. The middle of the market depth spread is used as the data source for building.
 

@@ -6,12 +6,12 @@
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) has its own editors for the following types: 
 
-- [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit). 
-- [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security). 
-- [StockSharp.BusinessEntities.Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
-- [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
-- [StockSharp.BusinessEntities.Exchange](xref:StockSharp.BusinessEntities.Exchange). 
-- [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
+- [Unit](xref:StockSharp.Messages.Unit). 
+- [Security](xref:StockSharp.BusinessEntities.Security). 
+- [Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
+- [ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
+- [Exchange](xref:StockSharp.BusinessEntities.Exchange). 
+- [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
 - **ExtensionInfo** directory. 
 - [System.TimeSpan](xref:System.TimeSpan), [System.DateTime](xref:System.DateTime) and [System.DateTimeOffset](xref:System.DateTimeOffset). 
 - [System.Net.EndPoint](xref:System.Net.EndPoint) and [System.Net.IPAddress](xref:System.Net.IPAddress). 
@@ -21,9 +21,9 @@
 
 **Main properties**
 
-- [SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- the provider of information about instruments. 
-- [ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- the provider of site information. 
-- [Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- the list of available portfolios. 
+- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- the provider of information about instruments. 
+- [PropertyGridEx.ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- the provider of site information. 
+- [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- the list of available portfolios. 
 - **SelectedObject** \- the object whose properties will be displayed in the table. 
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Fix\/SampleFix*. 

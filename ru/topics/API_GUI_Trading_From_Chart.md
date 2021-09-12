@@ -1,6 +1,6 @@
 # Выставление заявок с графика
 
-S\# позволяет выставлять заявки с графика, для активации этой возможности необходимо свойство [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) установить в True, по умолчанию оно отключено.
+S\# позволяет выставлять заявки с графика, для активации этой возможности необходимо свойство [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) установить в True, по умолчанию оно отключено.
 
 ![API GUI Trading from chart](../images/API_GUI_Trading_from_chart.png)
 

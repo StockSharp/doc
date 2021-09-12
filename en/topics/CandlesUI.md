@@ -4,11 +4,11 @@ For a candles graphic display, you can use the special [Chart](xref:StockSharp.X
 
 ![sample candleschart](../images/sample_candleschart.png)
 
-The candles passed into the [ChartHelper.Draw](xref:StockSharp.Xaml.Charting.ChartHelper.Draw(StockSharp.Xaml.Charting.IChart,StockSharp.Xaml.Charting.ChartCandleElement,StockSharp.Algo.Candles.Candle)) method for displaying.
+The candles passed into the [ChartHelper.Draw](xref:StockSharp.Xaml.Charting.ChartHelper.Draw(StockSharp.Xaml.Charting.IChart,StockSharp.Xaml.Charting.ChartCandleElement,StockSharp.Algo.Candles.Candle))**(**[StockSharp.Xaml.Charting.IChart](xref:StockSharp.Xaml.Charting.IChart) chart, [StockSharp.Xaml.Charting.ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) element, [StockSharp.Algo.Candles.Candle](xref:StockSharp.Algo.Candles.Candle) candle**)** method for displaying.
 
 The current candle changes will be displayed when the candle is passed from the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event to draw on the graph.
 
-If you want to display the finished candles, check the [State](xref:StockSharp.Algo.Candles.Candle.State) property of candle that came:
+If you want to display the finished candles, check the [Candle.State](xref:StockSharp.Algo.Candles.Candle.State) property of candle that came:
 
 ```cs
 // _chart - StockSharp.Xaml.Chart

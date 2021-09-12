@@ -6,10 +6,10 @@
 
 **Main properties**
 
-- [MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- the maximum number of messages to display.
-- [Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- the list of messages added to the table.
-- [SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- the selected message.
-- [SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- selected messages.
+- [Level1Grid.MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- the maximum number of messages to display.
+- [Level1Grid.Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- the list of messages added to the table.
+- [Level1Grid.SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- the selected message.
+- [Level1Grid.SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- selected messages.
 
 Below is the code snippet with its use. 
 

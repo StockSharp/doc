@@ -4,10 +4,10 @@
 
 **Main properties**
 
-- [News](xref:StockSharp.Xaml.NewsGrid.News) \- the news list.
-- [FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- the selected news.
-- [SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- selected news.
-- [NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- news provider.
+- [NewsGrid.News](xref:StockSharp.Xaml.NewsGrid.News) \- the news list.
+- [NewsGrid.FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- the selected news.
+- [NewsGrid.SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- selected news.
+- [NewsGrid.NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- news provider.
 
 Below is the appearance of the component, as well as code snippets with its use. The code example is taken from Samples\/AlfaDirect\/SampleAlfa. 
 

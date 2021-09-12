@@ -8,7 +8,7 @@
 
 ## Пример построения графика при помощи Chart
 
-1. В XAML создаем окно и добавляем в него графический компонент [StockSharp.Xaml.Charting.Chart](xref:StockSharp.Xaml.Charting.Chart). Присваиваем компоненту имя **Chart**. Обратите внимание, что при создании окна нужно добавить пространство имен *http:\/\/schemas.stocksharp.com\/xaml*. 
+1. В XAML создаем окно и добавляем в него графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). Присваиваем компоненту имя **Chart**. Обратите внимание, что при создании окна нужно добавить пространство имен *http:\/\/schemas.stocksharp.com\/xaml*. 
 
    ```xaml
    <Window x:Class="SampleCandles.ChartWindow"
@@ -37,7 +37,7 @@
                  		
    	  				
    ```
-3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing). В обработчике этого события при получении новой свечи будет выполнятся отрисовка графика. 
+3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing). В обработчике этого события при получении новой свечи будет выполнятся отрисовка графика. 
 
    ```cs
                  		
@@ -92,7 +92,7 @@
 5. В обработчике события [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) производим отрисовку свечи и значений индикаторов для каждой завершенной свечи. Для этого: 
    1. Вычисляем значения индикаторов.
    2. Заполняем словарь **elements** парами "объект элемента \- значение элемента"
-   3. Для отрисовки графика вызываем метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData)), в который передаем время и словарь элементов.
+   3. Для отрисовки графика вызываем метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data**)**, в который передаем время и словарь элементов.
 
    Результат работы программы представлен на рисунке выше. 
 

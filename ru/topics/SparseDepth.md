@@ -4,7 +4,7 @@
 
 ## Модификации стакана
 
-1. Создание разреженного стакана из обычного осуществляется через метод [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)): 
+1. Создание разреженного стакана из обычного осуществляется через метод [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit) priceStep**)**: 
 
    ```cs
    MarketDepth depth = ....;
@@ -13,12 +13,12 @@
 
    Все котировки [Quote](xref:StockSharp.BusinessEntities.Quote) в полученном стакане будут иметь нулевой объем, и они будут созданы с шагом [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice). 
 
-   Чтобы объединить разреженный стакан с первоначальным (соединить реальные котировки и разреженные), необходимо вызвать метод [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth)): 
+   Чтобы объединить разреженный стакан с первоначальным (соединить реальные котировки и разреженные), необходимо вызвать метод [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) original, [StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) rare**)**: 
 
    ```cs
    var joinedDepth = sparseDepth.Join(depth);
    ```
-2. Группировка стакана по ценовым уровням осуществляется через метод [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)): 
+2. Группировка стакана по ценовым уровням осуществляется через метод [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit) priceRange**)**: 
 
    ```cs
    MarketDepth depth = ....;

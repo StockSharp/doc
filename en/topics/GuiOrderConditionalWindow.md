@@ -6,11 +6,11 @@
 
 **Main properties**
 
-- [Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) \- the list of portfolios. 
-- [SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) \- provider of information about instruments. 
-- [MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) \- provider of market data. 
-- [Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- message adapter. 
-- [Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- the created order. 
+- [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) \- the list of portfolios. 
+- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) \- provider of information about instruments. 
+- [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) \- provider of market data. 
+- [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- message adapter. 
+- [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- the created order. 
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

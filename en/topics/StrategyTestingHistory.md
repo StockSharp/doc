@@ -112,7 +112,7 @@ The [S\#](StockSharpAbout.md) installation package contains an example of Sample
    ```
 
    > [!CAUTION]
-   > The path to the directory with the history is passed to the [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) constructor. This path is to the directory with the history for **all instruments**, and not to the directory with the specific instrument. For example, if the HistoryData.zip archive was unpacked to the *C:\\E\\ESZ2@NYSE\\* directory, then the path *C:\\* should be passed to [StockSharp.Algo.Storages.LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). For more details, see [API](StoragesApi.md). 
+   > The path to the directory with the history is passed to the [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) constructor. This path is to the directory with the history for **all instruments**, and not to the directory with the specific instrument. For example, if the HistoryData.zip archive was unpacked to the *C:\\E\\ESZ2@NYSE\\* directory, then the path *C:\\* should be passed to [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). For more details, see [API](StoragesApi.md). 
 3. Next, the instrument, the portfolio, the strategy, the gateway for testing, etc. are created in the cycle with the appropriate settings, depending on the flags values specified in the main window (Ticks, Ticks and Order Books, Candles, etc.). If the flag is set to False, the program proceeds to the next set of settings 
 
    ```cs
@@ -285,7 +285,7 @@ The [S\#](StockSharpAbout.md) installation package contains an example of Sample
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Subscription to the [PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event, to calculate the equity curve (for more details, see [Equity curve](Equity.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
+9. Subscription to the [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event, to calculate the equity curve (for more details, see [Equity curve](Equity.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
 
    ```cs
    // fill parameters panel

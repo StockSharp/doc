@@ -4,7 +4,7 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 
 ## Order book modifications
 
-1. The creating of sparse order book from the normal one is carried out through the [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)) method: 
+1. The creating of sparse order book from the normal one is carried out through the [TraderHelper.Sparse](xref:StockSharp.Algo.TraderHelper.Sparse(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit) priceStep**)** method: 
 
    ```cs
    MarketDepth depth = ....;
@@ -13,12 +13,12 @@ Order books in the [S\#](StockSharpAbout.md) are presented by the [MarketDepth](
 
    All the [Quote](xref:StockSharp.BusinessEntities.Quote) quotations in the resulting order book will have zero volume, and they will created with the [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) step. 
 
-   To combine the sparse order book with the original one (to connect the real and sparse quotations), you must call the [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth)) method: 
+   To combine the sparse order book with the original one (to connect the real and sparse quotations), you must call the [TraderHelper.Join](xref:StockSharp.Algo.TraderHelper.Join(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.MarketDepth))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) original, [StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) rare**)** method: 
 
    ```cs
    var joinedDepth = sparseDepth.Join(depth);
    ```
-2. The grouping of the order book by price levels is carried out through the [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit)) method: 
+2. The grouping of the order book by price levels is carried out through the [TraderHelper.Group](xref:StockSharp.Algo.TraderHelper.Group(StockSharp.BusinessEntities.MarketDepth,StockSharp.Messages.Unit))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit) priceRange**)** method: 
 
    ```cs
    MarketDepth depth = ....;

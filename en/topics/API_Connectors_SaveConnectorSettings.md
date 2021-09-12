@@ -1,6 +1,6 @@
 # Save and load settings
 
-[Save](xref:StockSharp.Algo.Connector.Save(Ecng.Serialization.SettingsStorage)) and [Load](xref:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage)) methods, respectively, are used to save and load [Connector](xref:StockSharp.Algo.Connector) settings. 
+[Connector.Save](xref:StockSharp.Algo.Connector.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage**)** and [Connector.Load](xref:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage**)** methods, respectively, are used to save and load [Connector](xref:StockSharp.Algo.Connector) settings. 
 
 To save and load settings from an external file, you can use the serialization and deserialization, respectively, implemented in [S\#](StockSharpAbout.md). 
 

@@ -6,12 +6,12 @@
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) имеет собственные редакторы для следующих типов: 
 
-- [StockSharp.Messages.Unit](xref:StockSharp.Messages.Unit). 
-- [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security). 
-- [StockSharp.BusinessEntities.Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
-- [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
-- [StockSharp.BusinessEntities.Exchange](xref:StockSharp.BusinessEntities.Exchange). 
-- [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
+- [Unit](xref:StockSharp.Messages.Unit). 
+- [Security](xref:StockSharp.BusinessEntities.Security). 
+- [Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
+- [ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
+- [Exchange](xref:StockSharp.BusinessEntities.Exchange). 
+- [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
 - Словарь **ExtensionInfo**. 
 - [System.TimeSpan](xref:System.TimeSpan), [System.DateTime](xref:System.DateTime) и [System.DateTimeOffset](xref:System.DateTimeOffset). 
 - [System.Net.EndPoint](xref:System.Net.EndPoint) и [System.Net.IPAddress](xref:System.Net.IPAddress). 
@@ -21,9 +21,9 @@
 
 **Основные свойства**
 
-- [SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- поставщик информации об инструментах. 
-- [ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- поставщик информации о площадках. 
-- [Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- список доступных портфелей. 
+- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- поставщик информации об инструментах. 
+- [PropertyGridEx.ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- поставщик информации о площадках. 
+- [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- список доступных портфелей. 
 - **SelectedObject** \- объект, чьи свойства будут отображены в таблице. 
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 

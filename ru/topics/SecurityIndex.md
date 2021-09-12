@@ -2,9 +2,9 @@
 
 [IndexSecurity](xref:StockSharp.Algo.IndexSecurity) \- индекс, построенный из инструментов. Например, для задания спреда при арбитраже или парном трейдинге. Имеет следующие реализации.
 
-1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- индекс, построенный из комбинации нескольких инструментов через математическую формулу [Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula).
+1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- индекс, построенный из комбинации нескольких инструментов через математическую формулу [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula).
 
-2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- индекс, построенный из инструментов с применением весовых коэффициентов [Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- индекс, построенный из инструментов с применением весовых коэффициентов [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ## Создание ExpressionIndexSecurity
 

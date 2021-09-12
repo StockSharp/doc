@@ -8,10 +8,10 @@ If the connection supports the registering a conditional order (stop\-loss, take
 
 **Basic properties**
 
-- [Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) \- list of portfolios.
-- [MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) \- market data provider.
-- [SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- security information provider.
-- [Order](xref:StockSharp.Xaml.OrderWindow.Order) \- created order.
+- [OrderWindow.Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) \- list of portfolios.
+- [OrderWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) \- market data provider.
+- [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- security information provider.
+- [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) \- created order.
 
 Code snippets using it are shown below. Sample code taken from *Samples\/Common\/SampleConnection*. 
 

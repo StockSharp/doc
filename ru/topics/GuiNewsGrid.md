@@ -4,10 +4,10 @@
 
 **Основные свойства**
 
-- [News](xref:StockSharp.Xaml.NewsGrid.News) \- список новостей.
-- [FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- выбранная новость.
-- [SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- выбранные новости.
-- [NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- поставщик новостей.
+- [NewsGrid.News](xref:StockSharp.Xaml.NewsGrid.News) \- список новостей.
+- [NewsGrid.FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) \- выбранная новость.
+- [NewsGrid.SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) \- выбранные новости.
+- [NewsGrid.NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) \- поставщик новостей.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

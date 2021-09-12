@@ -43,7 +43,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 } 
 ```
 
-[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) inherits from the [LengthIndicator\`1](xref:StockSharp.Algo.Indicators.LengthIndicator`1) class, from which it is necessary to inherit all of the indicators, having as parameter the length of the period. 
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) inherits from the [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1) class, from which it is necessary to inherit all of the indicators, having as parameter the length of the period. 
 
 Some indicators are composite and use other indicators in their calculations. Therefore, you can reuse the indicators from each other, as shown as an example of realization of the Chaikin Volatility indicator [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility): 
 

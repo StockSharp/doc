@@ -44,8 +44,8 @@ _connector.Subscribe(subscription);
 
 Subscription states:
 
-- [Stopped](xref:StockSharp.Algo.SubscriptionStates.Stopped) \- the subscription is inactive (stopped or did not start). 
-- [Active](xref:StockSharp.Algo.SubscriptionStates.Active) \- the subscription is active, and it can transfer historical data until it goes online or is completed. 
-- [Error](xref:StockSharp.Algo.SubscriptionStates.Error) \- the subscription is inactive and in an error state. 
-- [Finished](xref:StockSharp.Algo.SubscriptionStates.Finished) \- the subscription has finished its work (all data has been received). 
-- [Online](xref:StockSharp.Algo.SubscriptionStates.Online) \- the subscription has gone online and only transfers data in real time. 
+- [SubscriptionStates.Stopped](xref:StockSharp.Algo.SubscriptionStates.Stopped) \- the subscription is inactive (stopped or did not start). 
+- [SubscriptionStates.Active](xref:StockSharp.Algo.SubscriptionStates.Active) \- the subscription is active, and it can transfer historical data until it goes online or is completed. 
+- [SubscriptionStates.Error](xref:StockSharp.Algo.SubscriptionStates.Error) \- the subscription is inactive and in an error state. 
+- [SubscriptionStates.Finished](xref:StockSharp.Algo.SubscriptionStates.Finished) \- the subscription has finished its work (all data has been received). 
+- [SubscriptionStates.Online](xref:StockSharp.Algo.SubscriptionStates.Online) \- the subscription has gone online and only transfers data in real time. 

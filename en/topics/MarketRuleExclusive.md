@@ -1,6 +1,6 @@
 # Mutually exclusive rules
 
-Mutually exclusive rules are rules which are removed after the activation of one of these rules. To do this, the [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule)) method is called, and the rule is passed to it. This rule will be removed after its activation.
+Mutually exclusive rules are rules which are removed after the activation of one of these rules. To do this, the [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule1, [StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule2**)** method is called, and the rule is passed to it. This rule will be removed after its activation.
 
 For example, two rules are registered: one on the successful order registration and another on the unsuccessful order registration. One of them must be removed in case of activation of another:
 
@@ -23,7 +23,7 @@ RegisterOrder(order);
 		
 ```
 
-Also mutually exclusive rules can be created through the adding to [ExclusiveRules](xref:StockSharp.Algo.IMarketRule.ExclusiveRules):
+Also mutually exclusive rules can be created through the adding to [IMarketRule.ExclusiveRules](xref:StockSharp.Algo.IMarketRule.ExclusiveRules):
 
 ```cs
 var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);

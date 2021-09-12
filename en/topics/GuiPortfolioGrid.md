@@ -6,10 +6,10 @@
 
 **Main properties**
 
-- [Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) – the list of portfolios.
-- [Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions.
-- [SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
-- [SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
+- [PortfolioGrid.Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) – the list of portfolios.
+- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions.
+- [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
+- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB.*
 

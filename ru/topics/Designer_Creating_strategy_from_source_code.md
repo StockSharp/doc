@@ -113,7 +113,7 @@ public NewStrategy()
 }
 ```
 
-У класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy) есть методы, которые можно переопределить. В примере переопределяется метод [OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) для того, чтобы при переинициализации торгового алгоритма переинициализировались скользящие средние и графические элементы:
+У класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy) есть методы, которые можно переопределить. В примере переопределяется метод [Strategy.OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) для того, чтобы при переинициализации торгового алгоритма переинициализировались скользящие средние и графические элементы:
 
 ```cs
 protected override void OnReseted()
@@ -136,7 +136,7 @@ protected override void OnReseted()
 }
 ```
 
-Переопределяется метод [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) для того, чтобы: 1) при старте торгового алгоритма переинициализировались скользящие средние, 2) на график добавились все графические элементы, 3) подписаться на появление новых сделок, 4) подписаться на появление новых заявок или изменение старых, начать получать новую информацию по инструменту.
+Переопределяется метод [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) для того, чтобы: 1) при старте торгового алгоритма переинициализировались скользящие средние, 2) на график добавились все графические элементы, 3) подписаться на появление новых сделок, 4) подписаться на появление новых заявок или изменение старых, начать получать новую информацию по инструменту.
 
 ```cs
 protected override void OnStarted()
@@ -172,7 +172,7 @@ protected override void OnStarted()
 }
 ```
 
-Переопределяется метод [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped), чтобы перестать получать новую информацию по инструменту:
+Переопределяется метод [Strategy.OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped), чтобы перестать получать новую информацию по инструменту:
 
 ```cs
 protected override void OnStopped()

@@ -6,10 +6,10 @@
 
 **Основные свойства**
 
-- [Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- список инструментов.
-- [SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- выбранный инструмент.
-- [SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- список выбранных инструментов.
-- [MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- провайдер рыночных данных.
+- [SecurityGrid.Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) \- список инструментов.
+- [SecurityGrid.SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) \- выбранный инструмент.
+- [SecurityGrid.SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) \- список выбранных инструментов.
+- [SecurityGrid.MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) \- провайдер рыночных данных.
 
 Обратите внимание, что для отображения изменений рыночной информации необходимо задать провайдер рыночных данных. 
 

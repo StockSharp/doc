@@ -8,10 +8,10 @@
 
 **Основные свойства**
 
-- [Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) \- список портфелей.
-- [MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) \- поставщик рыночных данных.
-- [SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- поставщик информации об инструментах.
-- [Order](xref:StockSharp.Xaml.OrderWindow.Order) \- созданная заявка.
+- [OrderWindow.Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) \- список портфелей.
+- [OrderWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) \- поставщик рыночных данных.
+- [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- поставщик информации об инструментах.
+- [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) \- созданная заявка.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

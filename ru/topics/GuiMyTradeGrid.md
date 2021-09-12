@@ -6,9 +6,9 @@
 
 **Основные члены**
 
-- [Trades](xref:StockSharp.Xaml.MyTradeGrid.Trades) \- список сделок.
-- [SelectedTrade](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrade) \- выбранная сделка.
-- [SelectedTrades](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrades) \- выбранные сделки.
+- [MyTradeGrid.Trades](xref:StockSharp.Xaml.MyTradeGrid.Trades) \- список сделок.
+- [MyTradeGrid.SelectedTrade](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrade) \- выбранная сделка.
+- [MyTradeGrid.SelectedTrades](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrades) \- выбранные сделки.
 
 Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

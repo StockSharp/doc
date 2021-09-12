@@ -12,7 +12,7 @@
 
 Рассмотрим на примере индикатора [Fractals](xref:StockSharp.Algo.Indicators.Fractals) как создать собственный IndicatorPainter. 
 
-Все IndicatorPainter должны быть унаследованны от базового класса [BaseChartIndicatorPainter\`1](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) или интерфейса [IChartIndicatorPainter](xref:StockSharp.Xaml.Charting.IChartIndicatorPainter):
+Все IndicatorPainter должны быть унаследованны от базового класса [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) или интерфейса [IChartIndicatorPainter](xref:StockSharp.Xaml.Charting.IChartIndicatorPainter):
 
 ```cs
 	/// <summary>
@@ -76,7 +76,7 @@
 		
 ```
 
-Переопределяем метод [OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw(`0,System.Collections.Generic.IDictionary{StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData}})) в котором с помощью метода [DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues(System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData},StockSharp.Xaml.Charting.IChartElement,System.Func{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double})) прорисовываем индикатор:
+Переопределяем метод [BaseChartIndicatorPainter\<TIndicator\>.OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw(`0,System.Collections.Generic.IDictionary{StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData}}))**(**[TIndicator](xref:TIndicator) indicator, [System.Collections.Generic.IDictionary\<StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData\>\>](xref:System.Collections.Generic.IDictionary`2) data**)** в котором с помощью метода [BaseChartIndicatorPainter\<TIndicator\>.DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues(System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData},StockSharp.Xaml.Charting.IChartElement,System.Func{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double}))**(**[System.Collections.Generic.IList\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData\>](xref:System.Collections.Generic.IList`1) vals, [StockSharp.Xaml.Charting.IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) element, [System.Func\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double\>](xref:System.Func`2) getValue**)** прорисовываем индикатор:
 
 ```cs
 	...

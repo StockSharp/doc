@@ -2,14 +2,14 @@
 
 [IndexEditor](xref:StockSharp.Xaml.IndexEditor) \- Графический контрол для редактирования [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity). 
 
-[ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- специальный тип индексного инструмента, в основе которого лежит комбинирование нескольких инструментов при помощи математических формул. Этот тип имеет свойство [Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression), в котором хранится формула в текстовом виде и список подлежащих инструментов [InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds). 
+[ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- специальный тип индексного инструмента, в основе которого лежит комбинирование нескольких инструментов при помощи математических формул. Этот тип имеет свойство [ExpressionIndexSecurity.Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression), в котором хранится формула в текстовом виде и список подлежащих инструментов [ExpressionIndexSecurity.InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds). 
 
 ![GUI IndexSecurityWindow](../images/GUI_IndexSecurityWindow.png)
 
 **Основные свойства**
 
-- [Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- все доступные инструменты.
-- [Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- математическая формула индекса.
+- [IndexEditor.Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- все доступные инструменты.
+- [IndexEditor.Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- математическая формула индекса.
 
 Для использования [IndexEditor](xref:StockSharp.Xaml.IndexEditor) предварительно необходимо зарегистрировать специальную службу:
 

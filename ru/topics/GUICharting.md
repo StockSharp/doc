@@ -25,20 +25,20 @@
 
 **Основные свойства и методы [Chart](xref:StockSharp.Xaml.Charting.Chart)**
 
-- [Areas](xref:StockSharp.Xaml.Charting.Chart.Areas) \- список областей [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [ChartTheme](xref:StockSharp.Xaml.Charting.Chart.ChartTheme) \- тема компонента.
-- [IndicatorTypes](xref:StockSharp.Xaml.Charting.Chart.IndicatorTypes) \- список индикаторов, которые можно отображать на чарте.
-- [CrossHair](xref:StockSharp.Xaml.Charting.Chart.CrossHair) \- включить\/выключить отображение перекрестья.
-- [CrossHairAxisLabels](xref:StockSharp.Xaml.Charting.Chart.CrossHairAxisLabels) \- включить\/выключить отображение меток перекрестья на осях.
-- [IsAutoRange](xref:StockSharp.Xaml.Charting.Chart.IsAutoRange) \- включить\/выключить автоматическое масштабирование оси X.
-- [IsAutoScroll](xref:StockSharp.Xaml.Charting.Chart.IsAutoScroll) \- включить\/выключить автопрокрутку по оси X.
-- [ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- включить\/выключить отображение легенды.
-- [ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- включить\/выключить отображение области предпросмотра *OverView*.
-- [AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea)) \- добавить [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement)) \- добавить элемент серии данных. Имеет несколько перегрузок.
-- [Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement})) \- "сбросить" ранее отрисованные значения.
-- [Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData)) \- отрисовать значение на графике.
-- [OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- Режим создания заявок, когда установлен позволяет создавать заявки из графика. По умолчанию выключено.
+- [Chart.Areas](xref:StockSharp.Xaml.Charting.Chart.Areas) \- список областей [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
+- [Chart.ChartTheme](xref:StockSharp.Xaml.Charting.Chart.ChartTheme) \- тема компонента.
+- [Chart.IndicatorTypes](xref:StockSharp.Xaml.Charting.Chart.IndicatorTypes) \- список индикаторов, которые можно отображать на чарте.
+- [Chart.CrossHair](xref:StockSharp.Xaml.Charting.Chart.CrossHair) \- включить\/выключить отображение перекрестья.
+- [Chart.CrossHairAxisLabels](xref:StockSharp.Xaml.Charting.Chart.CrossHairAxisLabels) \- включить\/выключить отображение меток перекрестья на осях.
+- [Chart.IsAutoRange](xref:StockSharp.Xaml.Charting.Chart.IsAutoRange) \- включить\/выключить автоматическое масштабирование оси X.
+- [Chart.IsAutoScroll](xref:StockSharp.Xaml.Charting.Chart.IsAutoScroll) \- включить\/выключить автопрокрутку по оси X.
+- [Chart.ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- включить\/выключить отображение легенды.
+- [Chart.ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- включить\/выключить отображение области предпросмотра *OverView*.
+- [IChart.AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area**)** \- добавить [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
+- [IChart.AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area, [StockSharp.Xaml.Charting.IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) element**)** \- добавить элемент серии данных. Имеет несколько перегрузок.
+- [Chart.Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.Xaml.Charting.IChartElement\>](xref:System.Collections.Generic.IEnumerable`1) elements**)** \- "сбросить" ранее отрисованные значения.
+- [IChart.Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data**)** \- отрисовать значение на графике.
+- [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- Режим создания заявок, когда установлен позволяет создавать заявки из графика. По умолчанию выключено.
 
 ## ChartArea
 
@@ -46,9 +46,9 @@
 
 **Основные свойства [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)**
 
-- [Elements](xref:StockSharp.Xaml.Charting.ChartArea.Elements) \- список элементов [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement).
-- [XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- список горизонтальных осей.
-- [YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- список вертикальных осей.
+- [ChartArea.Elements](xref:StockSharp.Xaml.Charting.ChartArea.Elements) \- список элементов [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement).
+- [ChartArea.XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- список горизонтальных осей.
+- [ChartArea.YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- список вертикальных осей.
 
 ## IChartElement
 

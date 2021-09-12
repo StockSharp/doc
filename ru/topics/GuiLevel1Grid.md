@@ -6,10 +6,10 @@
 
 **Основные свойства**
 
-- [MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- максимальное число сообщений для показа.
-- [Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- список сообщений, добавленных в таблицу.
-- [SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- выбранное сообщение.
-- [SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- выбранные сообщения.
+- [Level1Grid.MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- максимальное число сообщений для показа.
+- [Level1Grid.Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- список сообщений, добавленных в таблицу.
+- [Level1Grid.SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- выбранное сообщение.
+- [Level1Grid.SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- выбранные сообщения.
 
 Ниже показаны фрагменты кода с его использованием. 
 

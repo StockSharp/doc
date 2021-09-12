@@ -6,8 +6,8 @@
 
 **Основные свойства**
 
-- [Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- список портфелей.
-- [SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- выбранный портфель.
+- [PortfolioComboBox.Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- список портфелей.
+- [PortfolioComboBox.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- выбранный портфель.
 
 Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
 

@@ -6,9 +6,9 @@
 
 **Main properties**
 
-- [Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- the list of trades.
-- [SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- the selected trade.
-- [SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- selected trades.
+- [TradeGrid.Trades](xref:StockSharp.Xaml.TradeGrid.Trades) \- the list of trades.
+- [TradeGrid.SelectedTrade](xref:StockSharp.Xaml.TradeGrid.SelectedTrade) \- the selected trade.
+- [TradeGrid.SelectedTrades](xref:StockSharp.Xaml.TradeGrid.SelectedTrades) \- selected trades.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

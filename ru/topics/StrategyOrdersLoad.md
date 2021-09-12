@@ -2,15 +2,15 @@
 
 При старте стратегии может возникнуть необходимость загрузки ранее совершённых заявок и сделок (например, когда робот был перезагружен в течении торговой сессии или сделки и заявки переносятся через ночь). Для этого нужно: 
 
-1. Найти те заявки, которые необходимо загрузить в стратегию, и вернуть их из метода (например, загрузить идентификаторы заявок, если стратегия записывает каждый раз при регистрации через метод [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order})) из файла). 
-2. Объединить полученный результат с базовым методом [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order})). 
+1. Найти те заявки, которые необходимо загрузить в стратегию, и вернуть их из метода (например, загрузить идентификаторы заявок, если стратегия записывает каждый раз при регистрации через метод [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders**)** из файла). 
+2. Объединить полученный результат с базовым методом [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders**)**. 
 3. После того, как заявки будут загружены в стратегию, загрузятся и все совершенные по ним сделки. Это будет сделано автоматически. 
 
 Следующий пример показывает загрузку всех сделок в стратегию: 
 
 ## Загрузка в стратегию ранее совершенных заявок и сделок
 
-1. Для этого, чтобы [Strategy](xref:StockSharp.Algo.Strategies.Strategy) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order})). На вход данному методу из [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) поступят все [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) и [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders), и их необходимо отфильтровать:
+1. Для этого, чтобы [Strategy](xref:StockSharp.Algo.Strategies.Strategy) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders**)**. На вход данному методу из [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) поступят все [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) и [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders), и их необходимо отфильтровать:
 
    ```cs
    private bool _isOrdersLoaded;
@@ -36,7 +36,7 @@
    	return orders.Where(o => transactions.Contains(o.TransactionId));
    }
    ```
-3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order)): 
+3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order**)**: 
 
    ```cs
    protected override void RegisterOrder(Order order)

@@ -6,8 +6,8 @@
 
 **Main properties**
 
-- [Portfolios](xref:StockSharp.Xaml.PortfolioPickerWindow.Portfolios) \- the list of portfolios.
-- [SelectedPortfolio](xref:StockSharp.Xaml.PortfolioPickerWindow.SelectedPortfolio) \- the selected portfolio.
+- [PortfolioPickerWindow.Portfolios](xref:StockSharp.Xaml.PortfolioPickerWindow.Portfolios) \- the list of portfolios.
+- [PortfolioPickerWindow.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioPickerWindow.SelectedPortfolio) \- the selected portfolio.
 
 Below is the code snippet with its use. 
 

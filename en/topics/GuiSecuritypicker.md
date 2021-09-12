@@ -12,18 +12,18 @@ The [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) component is designed 
 
 **Main properties**
 
-- [SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) \- instrument selection mode: single, multiple.
-- [ShowCommonStatColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonStatColumns) \- to display the main columns.
-- [ShowCommonOptionColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonOptionColumns) \- to display the main columns for options.
-- [Title](xref:StockSharp.Xaml.SecurityPicker.Title) \- the title that is displayed at the top of the component.
-- [Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) \- the list of instruments.
-- [SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) \- the selected instrument.
-- [SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) \- the list of selected instruments.
-- [FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) \- the list of filtered instruments.
-- [ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) \- the list of hidden instruments.
-- [SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) \- the selected instrument type.
-- [SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) \- the provider of information about instruments.
-- [MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) \- the provider of market data.
+- [SecurityPicker.SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) \- instrument selection mode: single, multiple.
+- [SecurityPicker.ShowCommonStatColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonStatColumns) \- to display the main columns.
+- [SecurityPicker.ShowCommonOptionColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonOptionColumns) \- to display the main columns for options.
+- [SecurityPicker.Title](xref:StockSharp.Xaml.SecurityPicker.Title) \- the title that is displayed at the top of the component.
+- [SecurityPicker.Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) \- the list of instruments.
+- [SecurityPicker.SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) \- the selected instrument.
+- [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) \- the list of selected instruments.
+- [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) \- the list of filtered instruments.
+- [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) \- the list of hidden instruments.
+- [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) \- the selected instrument type.
+- [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) \- the provider of information about instruments.
+- [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) \- the provider of market data.
 
 Below is the code snippet with its use, taken from example *Samples\/InteractiveBrokers\/SampleIB*. 
 

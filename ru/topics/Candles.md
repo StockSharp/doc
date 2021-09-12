@@ -44,7 +44,7 @@
 
    > [!TIP]
    > Для отображения свечей используется графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). 
-3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)):
+3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription))**(**[StockSharp.Algo.Subscription](xref:StockSharp.Algo.Subscription) subscription**)**:
 
    ```cs
    ...
@@ -57,7 +57,7 @@
    После этого этапа начнёт вызываться событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing).
 4. Событии [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) вызывается не только при появлении новой свечи, но и при изменении текущей.
 
-   Если же нужно отображать только **"целые"** свечи, то необходимо проверить свойство [State](xref:StockSharp.Algo.Candles.Candle.State) пришедшей свечи:
+   Если же нужно отображать только **"целые"** свечи, то необходимо проверить свойство [Candle.State](xref:StockSharp.Algo.Candles.Candle.State) пришедшей свечи:
 
    ```cs
    ...
@@ -74,9 +74,9 @@
    		
    ```
 5. Для [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) можно задать некоторые свойства:
-   - [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) задает режим построения свечей. По умолчанию задан [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild), что говорит о том, что будут запрошены готовые данные, или построены из заданного в свойстве [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных. Также можно установить [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) для запроса только готовых данных. Или [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), для построения из заданного в свойстве [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных без запроса готовых данных. 
-   - При построении свечей необходимо задать свойство [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), которое говорит о том, какой именно тип данных используется как источник ([Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) и тд. ). 
-   - Для некоторых типов данных необходимо дополнительно указать свойство [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), из которого будут построены данные. Например, для [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) можно указать [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), что говорт о том, что свечи будут строиться из свойства [BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) данных [Level1](xref:StockSharp.Messages.MarketDataTypes.Level1). 
+   - [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) задает режим построения свечей. По умолчанию задан [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild), что говорит о том, что будут запрошены готовые данные, или построены из заданного в свойстве [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных. Также можно установить [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) для запроса только готовых данных. Или [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), для построения из заданного в свойстве [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных без запроса готовых данных. 
+   - При построении свечей необходимо задать свойство [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), которое говорит о том, какой именно тип данных используется как источник ([MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDataTypes.MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) и тд. ). 
+   - Для некоторых типов данных необходимо дополнительно указать свойство [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), из которого будут построены данные. Например, для [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) можно указать [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), что говорт о том, что свечи будут строиться из свойства [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) данных [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1). 
 6. Рассмотрим несколько примеров построения разных типов свечей:
    - Так как большинство источников предоставляют свечи стандартных таймфреймом, то для получения таких свечей достаточно задать тип и таймфрейм: 
 
@@ -84,7 +84,7 @@
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
      					
      ```
-   - Если необходимо просто загрузить готовые свечи, то необходимо задать свойство [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
+   - Если необходимо просто загрузить готовые свечи, то необходимо задать свойство [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
 
      ```cs
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
@@ -114,7 +114,7 @@
      };	
      					
      ```
-   - Так как не существует источников, предоставляющих готового **профиля объема**, его тоже необходимо строить из другого типа данных. Для прорисовки **профиля объема** необходимо установить свойство [IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) в true, а также [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). И указать тип данных из которого будет построен **профиль объема**. В данном случае это [Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
+   - Так как не существует источников, предоставляющих готового **профиля объема**, его тоже необходимо строить из другого типа данных. Для прорисовки **профиля объема** необходимо установить свойство [CandleSeries.IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) в true, а также [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). И указать тип данных из которого будет построен **профиль объема**. В данном случае это [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
 
      ```cs
      _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
@@ -125,7 +125,7 @@
      };	
      					
      ```
-   - Так как большинство источников данных не предоставляют готовые свечей, кроме [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), то остальные типы свечей строятся аналогично **профилю объема**. Необходимо указать свойство [BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) или [LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). А также задать свойство [BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) и свойство [BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) если необходимо. 
+   - Так как большинство источников данных не предоставляют готовые свечей, кроме [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), то остальные типы свечей строятся аналогично **профилю объема**. Необходимо указать свойство [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) или [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). А также задать свойство [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) и свойство [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) если необходимо. 
 
      Следующий код демонстрирует построение [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) с объемом в 1000 контрактов. В качестве источника данных для построения используется середина спреда стакана.
 

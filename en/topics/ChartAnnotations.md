@@ -12,7 +12,7 @@ Chart.AddElement(chartArea, _annotation);
 		
 ```
 
-After that, you need to initialize a new instance of the [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), class, in which to describe the annotation and pass it to the [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData)) method for drawing on the chart:
+After that, you need to initialize a new instance of the [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), class, in which to describe the annotation and pass it to the [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data**)** method for drawing on the chart:
 
 ```cs
 var data = new ChartDrawData.AnnotationData

@@ -2,9 +2,9 @@
 
 [IndexSecurity](xref:StockSharp.Algo.IndexSecurity) \- the index built from instruments. For example, to set a spread in arbitrage or pair trading. It has the following implementations.
 
-1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- is the index built from a combination of several instruments through the [Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula) mathematical formula.
+1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- is the index built from a combination of several instruments through the [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula) mathematical formula.
 
-2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- is the index built from instruments using weighting factors [Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- is the index built from instruments using weighting factors [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ## The ExpressionIndexSecurity creating
 

@@ -22,7 +22,7 @@ When processing the history results, the [IOriginalTransactionIdMessage.Original
       
 ```
 
-Special [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) adapter splits subscriptions with a large range of data (see [Adapters chain](Messages_adapters_chain.md) for details) into many requests with small ranges. Each adapter can communicate the maximum time range it supports by the [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize(StockSharp.Messages.DataType,System.TimeSpan@)) method restart: 
+Special [PartialDownloadMessageAdapter](xref:StockSharp.Algo.PartialDownloadMessageAdapter) adapter splits subscriptions with a large range of data (see [Adapters chain](Messages_adapters_chain.md) for details) into many requests with small ranges. Each adapter can communicate the maximum time range it supports by the [IMessageAdapter.GetHistoryStepSize](xref:StockSharp.Messages.IMessageAdapter.GetHistoryStepSize(StockSharp.Messages.DataType,System.TimeSpan@))**(**[StockSharp.Messages.DataType](xref:StockSharp.Messages.DataType) dataType, **out** [System.TimeSpan](xref:System.TimeSpan) iterationInterval**)** method restart: 
 
 ```cs
 public partial class MyOwnMessageAdapter : MessageAdapter
