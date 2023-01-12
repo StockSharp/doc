@@ -890,9 +890,9 @@
         href: IndicatorJurikMovingAverage.md
       - name: KAMA
         href: IndicatorKaufmannAdaptiveMovingAverage.md
-      - name: Linear Regression R-Squared
-        href: IndicatorRSquared.md
-      - name: Linear Regression Slope
+      - name: LRR2
+        href: IndicatorLinearRegRSquared.md
+      - name: LRS
         href: IndicatorLinearRegSlope.md
       - name: 'Lowest '
         href: IndicatorLowest.md
