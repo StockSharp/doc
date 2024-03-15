@@ -2,7 +2,7 @@
 
 [S\#](StockSharpAbout.md) стандартно предоставляет более 70 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые.
 
-- [A\/C](IndicatorAcceleration.md)
+- [A\/D](IndicatorAcceleration.md)
 - [Alligator](IndicatorAlligator.md)
 - [ADX](IndicatorAverageDirectionalIndex.md)
 - [ATR](IndicatorAverageTrueRange.md)

@@ -4,6 +4,12 @@
 
 Для использования индикатора необходимо использовать класс [KaufmannAdaptiveMovingAverage](xref:StockSharp.Algo.Indicators.KaufmannAdaptiveMovingAverage). 
 
+##### Настройки индикатора.
+
+- Fast MA \- быстрая сглаживающая константа;
+- Slow MA \- медленная сглаживающая константа;
+- Периода \- период скользящей средней Кауфмана.
+
 ![IndicatorKaufmannAdaptiveMovingAverage](../images/IndicatorKaufmannAdaptiveMovingAverage.png)
 
 ## См. также

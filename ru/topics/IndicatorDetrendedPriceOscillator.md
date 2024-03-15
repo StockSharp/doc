@@ -4,6 +4,8 @@
 
 Для использования индикатора необходимо использовать класс [DetrendedPriceOscillator](xref:StockSharp.Algo.Indicators.DetrendedPriceOscillator). 
 
+Индикатор DeTrended Price Oscillator рассчитывается путем вычитания простого скользящего среднего (SMA) из текущего значения цены. Длина скользящего среднего определяется пользователем.
+
 ![IndicatorDetrendedPriceOscillator](../images/IndicatorDetrendedPriceOscillator.png)
 
 ## См. также

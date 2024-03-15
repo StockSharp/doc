@@ -4,6 +4,11 @@
 
 Для использования индикатора необходимо использовать класс [JurikMovingAverage](xref:StockSharp.Algo.Indicators.JurikMovingAverage). 
 
+##### Настройки индикатора.
+
+- Фаза \- определяет скорость с которой будет разворачиваться скользящая средняя;
+- Период \- определяет период скользящей средней.
+
 ![IndicatorJurikMovingAverage](../images/IndicatorJurikMovingAverage.png)
 
 ## См. также
