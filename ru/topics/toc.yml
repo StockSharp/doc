@@ -1,12 +1,4 @@
-- name: Общее
-  items:
-  - name: Лицензирование StockSharp
-    href: License.md
-  - name: Исходные коды
-    href: SourceCode.md
-  - name: Справочные материалы
-    href: Materials.md
-- name: S#.Installer
+- name: Installer
   href: SharpInstaller.md
   items:
   - name: Видео
@@ -23,12 +15,586 @@
     href: Installer_installing_removing_programs.md
   - name: Обновление программ
     href: Installer_software_update.md
-- name: S#.API
+- name: Designer
+  href: Designer.md
+  items:
+  - name: Установка Designer
+    href: Designer_Installation.md
+  - name: Обновление на новую версию
+    href: Designer_Update_to_new_version.md
+  - name: Быстрый запуск
+    href: Designer_Quick_start.md
+  - name: Интерфейс программы
+    items:
+    - name: Панель быстрого доступа
+      href: Designer_Quick_access_toolbar.md
+    - name: Лента
+      href: Designer_Tape.md
+    - name: Рабочая область
+      href: Designer_Workspace.md
+    - name: Панель Схемы
+      href: Designer_Panel_Schemas.md
+    - name: Панель Логи
+      href: Designer_Panel_Logs.md
+    - name: Портфели
+      href: Designer_Panel_Portfolios.md
+    - name: Редактор площадок
+      href: Designer_Boards.md
+    - name: Риск-менеджмент
+      href: Designer_Risk_Rule.md
+    - name: Комиссии
+      href: Designer_Commission_Rule.md
+    - name: Компоненты
+      href: Designer_Components.md
+      items:
+      - name: График
+        href: Designer_Chart.md
+      - name: Заявки
+        href: Designer_Orders.md
+      - name: Условные заявки
+        href: Designer_Orders_conditional.md
+      - name: Сделки
+        href: Designer_Trades.md
+      - name: Стакан
+        href: Designer_Depth_Panel2.md
+      - name: Позиции
+        href: Designer_Chart_Position.md
+      - name: Статистика
+        href: Designer_Statistics.md
+      - name: График П/У
+        href: Designer_Panel_Market_depth.md
+      - name: Свойства тестирования
+        href: Designer_Properties_emulation.md
+      - name: Свойства Live торговли
+        href: Designer_Properties_Live.md
+      - name: Лента сделок
+        href: Designer_Tape_Trades.md
+  - name: Создание стратегии
+    href: Designer_Creation_strategy.md
+    items:
+    - name: Использование кубиков
+      href: Designer_Creating_strategy_out_of_blocks.md
+      items:
+      - name: Дизайнер стратегии
+        href: Designer_Designer_schemes_strategies_and_component_elements.md
+      - name: Описание кубиков
+        href: Designer_Description_of_elements.md
+        items:
+        - name: Общее
+          items:
+          - name: Панель графика
+            href: Designer_Panel_graphics.md
+          - name: Рабочее время
+            href: Designer_Working_time.md
+          - name: Сравнение
+            href: Designer_Comparison.md
+          - name: Индикатор
+            href: Designer_Indicator.md
+          - name: Логическое условие
+            href: Designer_Logical_condition.md
+          - name: Формула
+            href: Designer_Universal_formula.md
+          - name: Объединение
+            href: Designer_Association.md
+          - name: Позиция
+            href: Designer_Position.md
+          - name: Предыдущее значение
+            href: Designer_Previous_value.md
+          - name: Защита позиции
+            href: Designer_Protect_positions.md
+          - name: Исходный код
+            href: Designer_Source_code.md
+          - name: DLL стратегия
+            href: Designer_DLL_Strategy.md
+          - name: Изменение П/У
+            href: Designer_StrategyPnLDiagramElement.md
+          - name: Сделки стратегии
+            href: Designer_Trades_strategy.md
+          - name: Сделки по заявке
+            href: Designer_Deals_on_request.md
+          - name: Разрешена ли торговля
+            href: Designer_TradeAllowedDiagramElement.md
+        - name: Источники данных
+          items:
+          - name: Свечи
+            href: Designer_Candles.md
+          - name: Level 1
+            href: Designer_Level_1.md
+          - name: Индекс
+            href: Designer_Index.md
+          - name: Переменная
+            href: Designer_Variable.md
+        - name: Торговые
+          items:
+          - name: Регистрация заявки
+            href: Designer_Position_opening.md
+          - name: Отмена заявки
+            href: Designer_Cancellations.md
+          - name: Перемещение заявки
+            href: Designer_Orders_Moving.md
+          - name: Массовая отмена заявок
+            href: Designer_Mass_Cancellations.md
+        - name: Конвертеры
+          items:
+          - name: Индексатор
+            href: Designer_Indexer.md
+          - name: Конвертер
+            href: Designer_Converter.md
+        - name: Информирование
+          items:
+          - name: Уведомление
+            href: Designer_Notice.md
+        - name: Стаканы
+          items:
+          - name: Стакан
+            href: Designer_Depth.md
+          - name: Сгруппированный стакан
+            href: Designer_Depth_Grouped.md
+          - name: Панель стакана
+            href: Designer_Depth_panel.md
+          - name: Разреженный стакан
+            href: Designer_Depth_Spread.md
+          - name: Обрезанный стакан
+            href: Designer_MarketDepthTruncateDiagramElement.md
+        - name: Опционы
+          items:
+          - name: Стакан подразумеваемой волатильности
+            href: Designer_Depth_implied_volatility.md
+          - name: Доска опционов
+            href: Designer_Options_Board.md
+          - name: График позиций опционов
+            href: Designer_Graph_options_positions.md
+          - name: Блэк-Шоулз
+            href: Designer_Black_Scholes.md
+          - name: Хеджирование
+            href: Designer_Hedging.md
+          - name: Котирование
+            href: Designer_Quoting.md
+          - name: Деривативы
+            href: Designer_Derivatives.md
+        - name: Составные элементы
+          items:
+          - name: Пересечение
+            href: Designer_Crossing.md
+          - name: Условный оператор
+            href: Designer_Conditional_operator.md
+      - name: Линии
+        href: Designer_Line.md
+      - name: Событийная модель
+        href: Designer_Event_model.md
+      - name: Создание алгоритма из кубиков
+        href: Designer_Algorithm_creation_of_elements.md
+      - name: Создание составных элементов
+        href: Designer_Creating_composite_elements.md
+      - name: Примеры использования кубиков
+        items:
+        - name: Вывод свечей на график
+          href: Designer_Conclusion_of_candles_on_chart.md
+        - name: Получение лучшей цены для инструмента
+          href: Designer_Get_best_quote_for_instrument.md
+        - name: Определение объема позиции
+          href: Designer_Determination_of_volume_position.md
+        - name: Получение указанного уровня в стакане
+          href: Designer_Depth_Obtaining_Specified_level.md
+    - name: Использование C#
+      href: Designer_Creating_strategy_from_code.md
+      items:
+      - name: Интерфейс
+        href: Designer_Creation_element_containing_source_code.md
+      - name: Пример стратегии на C#
+        href: Designer_Creating_strategy_from_source_code.md
+      - name: Интеграция C# кода на общую схему
+        href: Designer_Integration_Source_code_in_scheme.md
+      - name: Внешние DLL
+        href: Designer_Add_Dll_Lib.md
+      - name: Комбинирование C# и стандартных кубиков
+        href: Designer_Combine_Source_code_and_standard_elements.md
+      - name: Создание индикатора на C#
+        href: Designer_Creating_indicator_from_source_code.md
+      - name: Написание кода в Visual Studio
+        items:
+        - name: Создание DLL кубика в Visual Studio
+          href: Designer_Creating_DLL_element_in_Visual_Studio.md
+        - name: Отладка DLL кубика с помощью Visual Studio
+          href: Designer_Debugging_DLL_using_Visual_Studio.md
+  - name: Индикаторы
+    href: Designer_Indicators.md
+  - name: Тестирование на истории
+    items:
+    - name: Интерфейс
+      href: Designer_Backtesting_Interface.md
+    - name: Отладка
+      href: Designer_Debug.md
+      items:
+      - name: Точки остановки
+        href: Designer_Debug_Break_Points.md
+      - name: Пошаговое исполнение
+        href: Designer_Step.md
+    - name: Пример тестирования на истории
+      href: Designer_Example_of_backtesting.md
+    - name: Оптимизация
+      href: Designer_Optimization.md
+    - name: Портфельное тестирование
+      href: Designer_Portfolio_Testing.md
+  - name: Хранилище маркет-данных
+    href: Designer_Repository_of_historical_data.md
+    items:
+    - name: Скачивание инструментов
+      href: Designer_Download_instruments.md
+    - name: Создание инструмента
+      href: Designer_Creation_tool.md
+    - name: Редактирование инструмента
+      href: Designer_Edit_tool.md
+    - name: Индекс
+      href: Designer_create_index.md
+    - name: Непрерывный фьючерс
+      href: Designer_GluingData.md
+    - name: Скачивание данных
+      href: Designer_Downloading_data.md
+    - name: Создание хранилища исторических данных
+      href: Designer_Creating_repository_of_historical_data.md
+    - name: Расширенная информация по инструменту
+      href: Designer_Security_ExtensionInfo.md
+    - name: Сопоставление инструменты-подключения
+      href: Designer_Security_mapping.md
+  - name: Live торговля
+    href: Designer_Live_trade.md
+    items:
+    - name: Добавление стратегии в Live торговлю
+      href: Designer_Add_strategy_Live_trade.md
+    - name: Интерфейс
+      href: Designer_Live_trade_interface.md
+    - name: Панель стратегий
+      href: Designer_Panel_strategies.md
+    - name: Пример Live торговли
+      href: Designer_Example_of_Live_trading.md
+    - name: Режим прогрева стратегии
+      href: Designer_Warm_Up_mode.md
+    - name: Исполнение стратегий на сервере
+      href: Designer_run_strategy_on_server.md
+  - name: Настройки подключения
+    href: Designer_Connection_settings.md
+    items:
+    - name: Настройки коннекторов
+      href: Connectors_setting.md
+    - name: Симулятор торгов
+      href: Designer_emulation_setting.md
+    - name: Привязка счета к подключению
+      href: Designer_connection_mapping.md
+    - name: Привязка маркет-данных к подключению
+      href: Designer_connector_security_mapping.md
+  - name: Галерея стратегий
+    href: Designer_Gallery_of_strategies.md
+    items:
+    - name: Публикация своей стратегии
+      href: Designer_Gallery_publish.md
+  - name: Совместная работа
+    href: Designer_Teamwork.md
+    items:
+    - name: Чат
+      href: Designer_Chat.md
+    - name: Экспорт стратегий
+      href: Designer_Export_strategies.md
+    - name: Экспорт стратегий с шифрованием
+      href: Designer_Encryption.md
+    - name: Импорт стратегий
+      href: Designer_Import_strategies.md
+    - name: Публикация графиков и таблиц
+      href: Designer_publish.md
+  - name: Опционные стратегии
+    href: Designer_Options.md
+  - name: Настройки
+    items:
+    - name: Настройки уведомлений
+      href: Designer_notification_Setting.md
+    - name: Режим запуска
+      href: Designer_Start_mode.md
+    - name: Сброс языка и настроек
+      href: Designer_Reset_language_settings.md
+    - name: Редактирование данных вручную
+      href: Designer_Directory_and_edit_data_manually.md
+    - name: Обратная связь
+      href: Designer_contact_us.md
+- name: Terminal
+  href: Terminal.md
+  items:
+  - name: Установка Terminal
+    href: Terminal_Installation.md
+  - name: Обновление на новую версию
+    href: Terminal_Update_to_new_version.md
+  - name: Быстрый запуск
+    href: Terminal_Quick_start.md
+  - name: Интерфейс программы
+    items:
+    - name: Панель быстрого доступа
+      href: Terminal_Quick_access_toolbar.md
+    - name: Лента
+      href: Terminal_Tape.md
+    - name: Рабочая область
+      href: Terminal_Workspace.md
+    - name: Панель Логи
+      href: Terminal_Panel_Logs.md
+    - name: Портфели
+      href: Terminal_Panel_Portfolios.md
+    - name: Редактор площадок
+      href: Terminal_Boards.md
+    - name: Риск-менеджмент
+      href: Terminal_Risk_Rule.md
+    - name: Компоненты
+      href: Terminal_Components.md
+      items:
+      - name: Инструменты
+        href: Terminal_Securities.md
+      - name: Level 1
+        href: Terminal_level1.md
+      - name: Купить/Продать
+        href: Terminal_Buy_Sell.md
+      - name: Стакан
+        href: Terminal_Depth_Panel2.md
+      - name: График
+        href: Terminal_Chart.md
+      - name: График П/У
+        href: Terminal_chart_PU.md
+      - name: Сделки
+        href: Terminal_Trades.md
+      - name: Заявки
+        href: Terminal_Orders.md
+      - name: Условные заявки
+        href: Terminal_Orders_conditional.md
+      - name: Позиции
+        href: Terminal_Chart_Position.md
+      - name: Лента сделок
+        href: Terminal_Tape_Trades.md
+      - name: Новости
+        href: Terminal_news.md
+      - name: Позиции (опционы)
+        href: Terminal_options_positions.md
+      - name: Доска опционов
+        href: Terminal_option_desk.md
+      - name: Улыбка волатильности
+        href: Terminal_smile_of_volatility.md
+      - name: Лог заявок
+        href: Terminal_orderlog.md
+  - name: Настройки подключения
+    href: Terminal_Connection_settings.md
+  - name: Хранилище маркет-данных
+    href: Terminal_Repository_of_market_data.md
+  - name: Индикаторы
+    href: Terminal_Indicators.md
+  - name: Совместная работа
+    href: Terminal_Teamwork.md
+    items:
+    - name: Чат
+      href: Terminal_Chat.md
+    - name: Публикация графиков и таблиц
+      href: Terminal_publish.md
+  - name: Уведомления
+    href: Terminal_Notifications.md
+    items:
+    - name: Панель уведомлений
+      href: Terminal_Notifications_Panel.md
+    - name: Настройки уведомлений
+      href: Terminal_notification_Setting.md
+  - name: Настройки
+    items:
+    - name: Режим запуска
+      href: Terminal_Start_mode.md
+    - name: Сброс языка и настроек
+      href: Terminal_Reset_language_settings.md
+    - name: Обратная связь
+      href: Terminal_contact_us.md
+- name: Hydra
+  href: Hydra.md
+  items:
+  - name: Видео
+    items:
+    - name: Первый запуск
+      href: HydraFirstStartVideos.md
+    - name: Примеры настройки подключений
+      href: HydraConnectingSetup.md
+      items:
+      - name: Подключение к Финам
+        href: HydraConnectingFinam.md
+      - name: Подключение к Oanda
+        href: HydraConnectingOanda.md
+      - name: Подключение к Interactive Brokers
+        href: HydraConnectingIBTWS.md
+      - name: Подключение к Bitmex
+        href: HydraConnectingBitmex.md
+      - name: Подключение к Binance
+        href: HydraConnectingBinance.md
+    - name: Настройка инструментов для скачивания
+      href: HydraSecuritiesCongfigDowVideo.md
+    - name: Построение свечей различного типа
+      href: HydraBuildDifferentCandleType.md
+    - name: Получение Стакана из иного типа маркет-данных
+      href: HydraBuildMarkethDepthLogLevel.md
+    - name: Настройка формата сохранения
+      href: HydraDiffSaveFormat.md
+    - name: Построение индикатора
+      href: HydraBuildIndicator.md
+    - name: Функция Аналитика
+      href: HydraAnalitich.md
+    - name: Импорт данных
+      href: HydraImportVideos.md
+    - name: Экспорт данных
+      href: HydraExportAutoVideo.md
+    - name: Функция Конвертер
+      href: HydraConvectorVideo.md
+  - name: Установка Hydra
+    href: HydraUsing.md
+  - name: Обновление на новую версию
+    href: HydraUpdate.md
+  - name: Первый запуск
+    href: HydraFirstLaunch.md
+  - name: Источники данных
+    href: HydraDataSource.md
+    items:
+    - name: Выбор источника данных
+      href: HydraSourceSelection.md
+    - name: Общие параметры подключения
+      href: HydraCommonConnectionSettings.md
+  - name: Настройки при скачивании маркет-данных
+    items:
+    - name: Настройка инструмента для скачивания
+      href: HydraConfigurationSecuritiesDownload.md
+    - name: Настройка пользовательских свечей
+      href: HydraCustomCandleType.md
+  - name: Работа с маркет-данными
+    href: HydraWorkingWithMarketData.md
+    items:
+    - name: Просмотр маркет-данных
+      href: HydraViewingMarketData.md
+      items:
+      - name: Сделки (Тики)
+        href: HydraExportTrades.md
+      - name: Стаканы
+        href: HydraExportDepth.md
+      - name: Свечи
+        href: HydraExportCandles.md
+      - name: Лог заявок
+        href: HydraExportOrderLog.md
+      - name: 'Level 1 '
+        href: HydraExportSecurityChange.md
+      - name: Новости
+        href: HydraExportNews.md
+      - name: Транзакции
+        href: HydraExportExecution.md
+      - name: Доска опционов
+        href: hydra_options.md
+      - name: Индикаторы
+        href: Hydra_export_indicator.md
+      - name: Позиции
+        href: Hydra_export_position.md
+    - name: Генерация свечек
+      href: HydraCandles.md
+    - name: Эспорт маркет-данных
+      href: HydraExport.md
+      items:
+      - name: Экспорт в форматы TSLab и MetaStock
+        href: Hydra_Export_TSLab_MetaStock.md
+    - name: Использование маркет данных различного типа
+      href: HydraUsingDifferentTypesMarketData.md
+  - name: Индикаторы
+    href: Hydra_Indicators.md
+  - name: Импорт данных
+    href: HydraImport.md
+    items:
+    - name: Свечи
+      href: HydraImportCandles.md
+    - name: Инструменты
+      href: HydraImportSecurities.md
+    - name: Сделки
+      href: HydraImportTrades.md
+    - name: Стаканы
+      href: HydraImportDepths.md
+    - name: Лог заявок
+      href: HydraImportOrderlog.md
+    - name: Level 1
+      href: HydraImportLevel1.md
+    - name: Новости
+      href: HydraImportNews.md
+    - name: Транзакции
+      href: HydraImportExecutions.md
+  - name: Серверный режим
+    items:
+    - name: Настройки
+      href: HydraSettings.md
+    - name: Настройки эмуляции
+      href: HydraEmulation.md
+    - name: Инструменты и подключения
+      href: HydraSymbolMappingVer5.md
+    - name: Подключение через FIX протокол
+      href: hydraAPIConnect.md
+  - name: Настройка инструментов и площадок
+    items:
+    - name: Инструменты
+      href: HydraSettingsSecurity.md
+    - name: Создание инструмента
+      href: Hydra_Creation_tool.md
+    - name: Индекс
+      href: hydra_index.md
+    - name: Непрерывный фьючерс
+      href: HydraGluingData.md
+    - name: Редактирование инструментов
+      href: HydraSettingsSecurityEditor.md
+    - name: Расширенная информация
+      href: HydraExtensionInfo.md
+    - name: Сопоставление инструменты-подключения
+      href: HydraSymbolMapping.md
+    - name: Площадки
+      href: HydraBoards.md
+  - name: Создание источника
+    href: HydraPlugins.md
+  - name: Создание утилит
+    href: HydraCreatTask.md
+  - name: Утилиты
+    href: HydraTasks.md
+    items:
+    - name: Конвертер
+      href: HydraTasksConverter.md
+    - name: Экспорт (авто)
+      href: HydraTasksExport.md
+    - name: Импорт (авто)
+      href: HydraTasksImport.md
+    - name: Бэкап данных
+      href: HydraTasksBackup.md
+  - name: Аналитика
+    href: HydraAnalytics.md
+    items:
+    - name: Работа со скриптами
+      href: HydraAnalyticsScripts.md
+    - name: Запуск и отображение результатов анализа
+      href: HydraAnalyticsShow.md
+  - name: Настройки
+    items:
+    - name: Сбросить настройки
+      href: HydraResetSettings.md
+    - name: 'Удалить данные '
+      href: HydraRemoveData.md
+    - name: Настройка сети
+      href: HydraNetworkSettings.md
+    - name: База данных
+      href: StoragesDatabase.md
+    - name: Аварийное восстановление
+      href: HydraDisasterRecovery.md
+    - name: Синхронизация данных
+      href: HydraSynchronizeData.md
+    - name: Бэкап данных
+      href: HydraBackup.md
+      items:
+      - name: Создание и настройка аккаунта
+        href: HydraBackup_account.md
+      - name: Создание и настройка задачи
+        href: HydraBackup_task.md
+      - name: Восстановление данных
+        href: HydraBackup_recovery.md
+- name: API
   href: StockSharpAbout.md
   items:
-  - name: Архитектура S#.API
+  - name: Архитектура API
     href: StockSharpArchitecture.md
-  - name: Установка S#.API
+  - name: Установка API
     href: StockSharpInstall.md
   - name: История изменений
     href: WhatsNew.md
@@ -959,7 +1525,7 @@
           href: API_GUI_Settings_FAST.md
         - name: Инициализация адаптера FAST
           href: FastSample.md
-        - name: S#.UDP Dumper
+        - name: UDP Dumper
           href: UdpDumper.md
         - name: Отладка в dump режиме
           href: FastDump.md
@@ -1404,584 +1970,10 @@
     href: Currency.md
   - name: Примеры
     href: StockSharpSamples.md
-- name: S#.Designer
-  href: Designer.md
-  items:
-  - name: Установка S#.Designer
-    href: Designer_Installation.md
-  - name: Обновление на новую версию
-    href: Designer_Update_to_new_version.md
-  - name: Быстрый запуск
-    href: Designer_Quick_start.md
-  - name: Интерфейс программы
-    items:
-    - name: Панель быстрого доступа
-      href: Designer_Quick_access_toolbar.md
-    - name: Лента
-      href: Designer_Tape.md
-    - name: Рабочая область
-      href: Designer_Workspace.md
-    - name: Панель Схемы
-      href: Designer_Panel_Schemas.md
-    - name: Панель Логи
-      href: Designer_Panel_Logs.md
-    - name: Портфели
-      href: Designer_Panel_Portfolios.md
-    - name: Редактор площадок
-      href: Designer_Boards.md
-    - name: Риск-менеджмент
-      href: Designer_Risk_Rule.md
-    - name: Комиссии
-      href: Designer_Commission_Rule.md
-    - name: Компоненты
-      href: Designer_Components.md
-      items:
-      - name: График
-        href: Designer_Chart.md
-      - name: Заявки
-        href: Designer_Orders.md
-      - name: Условные заявки
-        href: Designer_Orders_conditional.md
-      - name: Сделки
-        href: Designer_Trades.md
-      - name: Стакан
-        href: Designer_Depth_Panel2.md
-      - name: Позиции
-        href: Designer_Chart_Position.md
-      - name: Статистика
-        href: Designer_Statistics.md
-      - name: График П/У
-        href: Designer_Panel_Market_depth.md
-      - name: Свойства тестирования
-        href: Designer_Properties_emulation.md
-      - name: Свойства Live торговли
-        href: Designer_Properties_Live.md
-      - name: Лента сделок
-        href: Designer_Tape_Trades.md
-  - name: Создание стратегии
-    href: Designer_Creation_strategy.md
-    items:
-    - name: Использование кубиков
-      href: Designer_Creating_strategy_out_of_blocks.md
-      items:
-      - name: Дизайнер стратегии
-        href: Designer_Designer_schemes_strategies_and_component_elements.md
-      - name: Описание кубиков
-        href: Designer_Description_of_elements.md
-        items:
-        - name: Общее
-          items:
-          - name: Панель графика
-            href: Designer_Panel_graphics.md
-          - name: Рабочее время
-            href: Designer_Working_time.md
-          - name: Сравнение
-            href: Designer_Comparison.md
-          - name: Индикатор
-            href: Designer_Indicator.md
-          - name: Логическое условие
-            href: Designer_Logical_condition.md
-          - name: Формула
-            href: Designer_Universal_formula.md
-          - name: Объединение
-            href: Designer_Association.md
-          - name: Позиция
-            href: Designer_Position.md
-          - name: Предыдущее значение
-            href: Designer_Previous_value.md
-          - name: Защита позиции
-            href: Designer_Protect_positions.md
-          - name: Исходный код
-            href: Designer_Source_code.md
-          - name: DLL стратегия
-            href: Designer_DLL_Strategy.md
-          - name: Изменение П/У
-            href: Designer_StrategyPnLDiagramElement.md
-          - name: Сделки стратегии
-            href: Designer_Trades_strategy.md
-          - name: Сделки по заявке
-            href: Designer_Deals_on_request.md
-          - name: Разрешена ли торговля
-            href: Designer_TradeAllowedDiagramElement.md
-        - name: Источники данных
-          items:
-          - name: Свечи
-            href: Designer_Candles.md
-          - name: Level 1
-            href: Designer_Level_1.md
-          - name: Индекс
-            href: Designer_Index.md
-          - name: Переменная
-            href: Designer_Variable.md
-        - name: Торговые
-          items:
-          - name: Регистрация заявки
-            href: Designer_Position_opening.md
-          - name: Отмена заявки
-            href: Designer_Cancellations.md
-          - name: Перемещение заявки
-            href: Designer_Orders_Moving.md
-          - name: Массовая отмена заявок
-            href: Designer_Mass_Cancellations.md
-        - name: Конвертеры
-          items:
-          - name: Индексатор
-            href: Designer_Indexer.md
-          - name: Конвертер
-            href: Designer_Converter.md
-        - name: Информирование
-          items:
-          - name: Уведомление
-            href: Designer_Notice.md
-        - name: Стаканы
-          items:
-          - name: Стакан
-            href: Designer_Depth.md
-          - name: Сгруппированный стакан
-            href: Designer_Depth_Grouped.md
-          - name: Панель стакана
-            href: Designer_Depth_panel.md
-          - name: Разреженный стакан
-            href: Designer_Depth_Spread.md
-          - name: Обрезанный стакан
-            href: Designer_MarketDepthTruncateDiagramElement.md
-        - name: Опционы
-          items:
-          - name: Стакан подразумеваемой волатильности
-            href: Designer_Depth_implied_volatility.md
-          - name: Доска опционов
-            href: Designer_Options_Board.md
-          - name: График позиций опционов
-            href: Designer_Graph_options_positions.md
-          - name: Блэк-Шоулз
-            href: Designer_Black_Scholes.md
-          - name: Хеджирование
-            href: Designer_Hedging.md
-          - name: Котирование
-            href: Designer_Quoting.md
-          - name: Деривативы
-            href: Designer_Derivatives.md
-        - name: Составные элементы
-          items:
-          - name: Пересечение
-            href: Designer_Crossing.md
-          - name: Условный оператор
-            href: Designer_Conditional_operator.md
-      - name: Линии
-        href: Designer_Line.md
-      - name: Событийная модель
-        href: Designer_Event_model.md
-      - name: Создание алгоритма из кубиков
-        href: Designer_Algorithm_creation_of_elements.md
-      - name: Создание составных элементов
-        href: Designer_Creating_composite_elements.md
-      - name: Примеры использования кубиков
-        items:
-        - name: Вывод свечей на график
-          href: Designer_Conclusion_of_candles_on_chart.md
-        - name: Получение лучшей цены для инструмента
-          href: Designer_Get_best_quote_for_instrument.md
-        - name: Определение объема позиции
-          href: Designer_Determination_of_volume_position.md
-        - name: Получение указанного уровня в стакане
-          href: Designer_Depth_Obtaining_Specified_level.md
-    - name: Использование C#
-      href: Designer_Creating_strategy_from_code.md
-      items:
-      - name: Интерфейс
-        href: Designer_Creation_element_containing_source_code.md
-      - name: Пример стратегии на C#
-        href: Designer_Creating_strategy_from_source_code.md
-      - name: Интеграция C# кода на общую схему
-        href: Designer_Integration_Source_code_in_scheme.md
-      - name: Внешние DLL
-        href: Designer_Add_Dll_Lib.md
-      - name: Комбинирование C# и стандартных кубиков
-        href: Designer_Combine_Source_code_and_standard_elements.md
-      - name: Создание индикатора на C#
-        href: Designer_Creating_indicator_from_source_code.md
-      - name: Написание кода в Visual Studio
-        items:
-        - name: Создание DLL кубика в Visual Studio
-          href: Designer_Creating_DLL_element_in_Visual_Studio.md
-        - name: Отладка DLL кубика с помощью Visual Studio
-          href: Designer_Debugging_DLL_using_Visual_Studio.md
-  - name: Индикаторы
-    href: Designer_Indicators.md
-  - name: Тестирование на истории
-    items:
-    - name: Интерфейс
-      href: Designer_Backtesting_Interface.md
-    - name: Отладка
-      href: Designer_Debug.md
-      items:
-      - name: Точки остановки
-        href: Designer_Debug_Break_Points.md
-      - name: Пошаговое исполнение
-        href: Designer_Step.md
-    - name: Пример тестирования на истории
-      href: Designer_Example_of_backtesting.md
-    - name: Оптимизация
-      href: Designer_Optimization.md
-    - name: Портфельное тестирование
-      href: Designer_Portfolio_Testing.md
-  - name: Хранилище маркет-данных
-    href: Designer_Repository_of_historical_data.md
-    items:
-    - name: Скачивание инструментов
-      href: Designer_Download_instruments.md
-    - name: Создание инструмента
-      href: Designer_Creation_tool.md
-    - name: Редактирование инструмента
-      href: Designer_Edit_tool.md
-    - name: Индекс
-      href: Designer_create_index.md
-    - name: Непрерывный фьючерс
-      href: Designer_GluingData.md
-    - name: Скачивание данных
-      href: Designer_Downloading_data.md
-    - name: Создание хранилища исторических данных
-      href: Designer_Creating_repository_of_historical_data.md
-    - name: Расширенная информация по инструменту
-      href: Designer_Security_ExtensionInfo.md
-    - name: Сопоставление инструменты-подключения
-      href: Designer_Security_mapping.md
-  - name: Live торговля
-    href: Designer_Live_trade.md
-    items:
-    - name: Добавление стратегии в Live торговлю
-      href: Designer_Add_strategy_Live_trade.md
-    - name: Интерфейс
-      href: Designer_Live_trade_interface.md
-    - name: Панель стратегий
-      href: Designer_Panel_strategies.md
-    - name: Пример Live торговли
-      href: Designer_Example_of_Live_trading.md
-    - name: Режим прогрева стратегии
-      href: Designer_Warm_Up_mode.md
-    - name: Исполнение стратегий на сервере
-      href: Designer_run_strategy_on_server.md
-  - name: Настройки подключения
-    href: Designer_Connection_settings.md
-    items:
-    - name: Настройки коннекторов
-      href: Connectors_setting.md
-    - name: Симулятор торгов
-      href: Designer_emulation_setting.md
-    - name: Привязка счета к подключению
-      href: Designer_connection_mapping.md
-    - name: Привязка маркет-данных к подключению
-      href: Designer_connector_security_mapping.md
-  - name: Галерея стратегий
-    href: Designer_Gallery_of_strategies.md
-    items:
-    - name: Публикация своей стратегии
-      href: Designer_Gallery_publish.md
-  - name: Совместная работа
-    href: Designer_Teamwork.md
-    items:
-    - name: Чат
-      href: Designer_Chat.md
-    - name: Экспорт стратегий
-      href: Designer_Export_strategies.md
-    - name: Экспорт стратегий с шифрованием
-      href: Designer_Encryption.md
-    - name: Импорт стратегий
-      href: Designer_Import_strategies.md
-    - name: Публикация графиков и таблиц
-      href: Designer_publish.md
-  - name: Опционные стратегии
-    href: Designer_Options.md
-  - name: Настройки
-    items:
-    - name: Настройки уведомлений
-      href: Designer_notification_Setting.md
-    - name: Режим запуска
-      href: Designer_Start_mode.md
-    - name: Сброс языка и настроек
-      href: Designer_Reset_language_settings.md
-    - name: Редактирование данных вручную
-      href: Designer_Directory_and_edit_data_manually.md
-    - name: Обратная связь
-      href: Designer_contact_us.md
-- name: S#.Terminal
-  href: Terminal.md
-  items:
-  - name: Установка S#.Terminal
-    href: Terminal_Installation.md
-  - name: Обновление на новую версию
-    href: Terminal_Update_to_new_version.md
-  - name: Быстрый запуск
-    href: Terminal_Quick_start.md
-  - name: Интерфейс программы
-    items:
-    - name: Панель быстрого доступа
-      href: Terminal_Quick_access_toolbar.md
-    - name: Лента
-      href: Terminal_Tape.md
-    - name: Рабочая область
-      href: Terminal_Workspace.md
-    - name: Панель Логи
-      href: Terminal_Panel_Logs.md
-    - name: Портфели
-      href: Terminal_Panel_Portfolios.md
-    - name: Редактор площадок
-      href: Terminal_Boards.md
-    - name: Риск-менеджмент
-      href: Terminal_Risk_Rule.md
-    - name: Компоненты
-      href: Terminal_Components.md
-      items:
-      - name: Инструменты
-        href: Terminal_Securities.md
-      - name: Level 1
-        href: Terminal_level1.md
-      - name: Купить/Продать
-        href: Terminal_Buy_Sell.md
-      - name: Стакан
-        href: Terminal_Depth_Panel2.md
-      - name: График
-        href: Terminal_Chart.md
-      - name: График П/У
-        href: Terminal_chart_PU.md
-      - name: Сделки
-        href: Terminal_Trades.md
-      - name: Заявки
-        href: Terminal_Orders.md
-      - name: Условные заявки
-        href: Terminal_Orders_conditional.md
-      - name: Позиции
-        href: Terminal_Chart_Position.md
-      - name: Лента сделок
-        href: Terminal_Tape_Trades.md
-      - name: Новости
-        href: Terminal_news.md
-      - name: Позиции (опционы)
-        href: Terminal_options_positions.md
-      - name: Доска опционов
-        href: Terminal_option_desk.md
-      - name: Улыбка волатильности
-        href: Terminal_smile_of_volatility.md
-      - name: Лог заявок
-        href: Terminal_orderlog.md
-  - name: Настройки подключения
-    href: Terminal_Connection_settings.md
-  - name: Хранилище маркет-данных
-    href: Terminal_Repository_of_market_data.md
-  - name: Индикаторы
-    href: Terminal_Indicators.md
-  - name: Совместная работа
-    href: Terminal_Teamwork.md
-    items:
-    - name: Чат
-      href: Terminal_Chat.md
-    - name: Публикация графиков и таблиц
-      href: Terminal_publish.md
-  - name: Уведомления
-    href: Terminal_Notifications.md
-    items:
-    - name: Панель уведомлений
-      href: Terminal_Notifications_Panel.md
-    - name: Настройки уведомлений
-      href: Terminal_notification_Setting.md
-  - name: Настройки
-    items:
-    - name: Режим запуска
-      href: Terminal_Start_mode.md
-    - name: Сброс языка и настроек
-      href: Terminal_Reset_language_settings.md
-    - name: Обратная связь
-      href: Terminal_contact_us.md
-- name: S#.Data (Hydra)
-  href: Hydra.md
-  items:
-  - name: Видео
-    items:
-    - name: Первый запуск
-      href: HydraFirstStartVideos.md
-    - name: Примеры настройки подключений
-      href: HydraConnectingSetup.md
-      items:
-      - name: Подключение к Финам
-        href: HydraConnectingFinam.md
-      - name: Подключение к Oanda
-        href: HydraConnectingOanda.md
-      - name: Подключение к Interactive Brokers
-        href: HydraConnectingIBTWS.md
-      - name: Подключение к Bitmex
-        href: HydraConnectingBitmex.md
-      - name: Подключение к Binance
-        href: HydraConnectingBinance.md
-    - name: Настройка инструментов для скачивания
-      href: HydraSecuritiesCongfigDowVideo.md
-    - name: Построение свечей различного типа
-      href: HydraBuildDifferentCandleType.md
-    - name: Получение Стакана из иного типа маркет-данных
-      href: HydraBuildMarkethDepthLogLevel.md
-    - name: Настройка формата сохранения
-      href: HydraDiffSaveFormat.md
-    - name: Построение индикатора
-      href: HydraBuildIndicator.md
-    - name: Функция Аналитика
-      href: HydraAnalitich.md
-    - name: Импорт данных
-      href: HydraImportVideos.md
-    - name: Экспорт данных
-      href: HydraExportAutoVideo.md
-    - name: Функция Конвертер
-      href: HydraConvectorVideo.md
-  - name: Установка S#.Data
-    href: HydraUsing.md
-  - name: Обновление на новую версию
-    href: HydraUpdate.md
-  - name: Первый запуск
-    href: HydraFirstLaunch.md
-  - name: Источники данных
-    href: HydraDataSource.md
-    items:
-    - name: Выбор источника данных
-      href: HydraSourceSelection.md
-    - name: Общие параметры подключения
-      href: HydraCommonConnectionSettings.md
-  - name: Настройки при скачивании маркет-данных
-    items:
-    - name: Настройка инструмента для скачивания
-      href: HydraConfigurationSecuritiesDownload.md
-    - name: Настройка пользовательских свечей
-      href: HydraCustomCandleType.md
-  - name: Работа с маркет-данными
-    href: HydraWorkingWithMarketData.md
-    items:
-    - name: Просмотр маркет-данных
-      href: HydraViewingMarketData.md
-      items:
-      - name: Сделки (Тики)
-        href: HydraExportTrades.md
-      - name: Стаканы
-        href: HydraExportDepth.md
-      - name: Свечи
-        href: HydraExportCandles.md
-      - name: Лог заявок
-        href: HydraExportOrderLog.md
-      - name: 'Level 1 '
-        href: HydraExportSecurityChange.md
-      - name: Новости
-        href: HydraExportNews.md
-      - name: Транзакции
-        href: HydraExportExecution.md
-      - name: Доска опционов
-        href: hydra_options.md
-      - name: Индикаторы
-        href: Hydra_export_indicator.md
-      - name: Позиции
-        href: Hydra_export_position.md
-    - name: Генерация свечек
-      href: HydraCandles.md
-    - name: Эспорт маркет-данных
-      href: HydraExport.md
-      items:
-      - name: Экспорт в форматы TSLab и MetaStock
-        href: Hydra_Export_TSLab_MetaStock.md
-    - name: Использование маркет данных различного типа
-      href: HydraUsingDifferentTypesMarketData.md
-  - name: Индикаторы
-    href: Hydra_Indicators.md
-  - name: Импорт данных
-    href: HydraImport.md
-    items:
-    - name: Свечи
-      href: HydraImportCandles.md
-    - name: Инструменты
-      href: HydraImportSecurities.md
-    - name: Сделки
-      href: HydraImportTrades.md
-    - name: Стаканы
-      href: HydraImportDepths.md
-    - name: Лог заявок
-      href: HydraImportOrderlog.md
-    - name: Level 1
-      href: HydraImportLevel1.md
-    - name: Новости
-      href: HydraImportNews.md
-    - name: Транзакции
-      href: HydraImportExecutions.md
-  - name: Серверный режим
-    items:
-    - name: Настройки
-      href: HydraSettings.md
-    - name: Настройки эмуляции
-      href: HydraEmulation.md
-    - name: Инструменты и подключения
-      href: HydraSymbolMappingVer5.md
-    - name: Подключение через FIX протокол
-      href: hydraAPIConnect.md
-  - name: Настройка инструментов и площадок
-    items:
-    - name: Инструменты
-      href: HydraSettingsSecurity.md
-    - name: Создание инструмента
-      href: Hydra_Creation_tool.md
-    - name: Индекс
-      href: hydra_index.md
-    - name: Непрерывный фьючерс
-      href: HydraGluingData.md
-    - name: Редактирование инструментов
-      href: HydraSettingsSecurityEditor.md
-    - name: Расширенная информация
-      href: HydraExtensionInfo.md
-    - name: Сопоставление инструменты-подключения
-      href: HydraSymbolMapping.md
-    - name: Площадки
-      href: HydraBoards.md
-  - name: Создание источника
-    href: HydraPlugins.md
-  - name: Создание утилит
-    href: HydraCreatTask.md
-  - name: Утилиты
-    href: HydraTasks.md
-    items:
-    - name: Конвертер
-      href: HydraTasksConverter.md
-    - name: Экспорт (авто)
-      href: HydraTasksExport.md
-    - name: Импорт (авто)
-      href: HydraTasksImport.md
-    - name: Бэкап данных
-      href: HydraTasksBackup.md
-  - name: Аналитика
-    href: HydraAnalytics.md
-    items:
-    - name: Работа со скриптами
-      href: HydraAnalyticsScripts.md
-    - name: Запуск и отображение результатов анализа
-      href: HydraAnalyticsShow.md
-  - name: Настройки
-    items:
-    - name: Сбросить настройки
-      href: HydraResetSettings.md
-    - name: 'Удалить данные '
-      href: HydraRemoveData.md
-    - name: Настройка сети
-      href: HydraNetworkSettings.md
-    - name: База данных
-      href: StoragesDatabase.md
-    - name: Аварийное восстановление
-      href: HydraDisasterRecovery.md
-    - name: Синхронизация данных
-      href: HydraSynchronizeData.md
-    - name: Бэкап данных
-      href: HydraBackup.md
-      items:
-      - name: Создание и настройка аккаунта
-        href: HydraBackup_account.md
-      - name: Создание и настройка задачи
-        href: HydraBackup_task.md
-      - name: Восстановление данных
-        href: HydraBackup_recovery.md
-- name: S#.Shell
+- name: Shell
   href: Shell.md
   items:
-  - name: Установка S#.Shell
+  - name: Установка Shell
     href: Shell_Installation.md
   - name: Быстрый запуск
     href: Shell_Quick_start.md
@@ -2004,11 +1996,15 @@
     href: Shell_custom_strategy.md
   - name: Создание собственных панеле для стратегий
     href: Shell_custom_strategy_panel.md
-  - name: Запуск стратегии созданной в S#.Designer
+  - name: Запуск стратегии созданной в Designer
     href: Shell_run_Designer_strategy.md
-- name: S#.MT4 и S#.MT5
+- name: MT4 и MT5
   href: MT.md
-- name: S#.MatLab
+- name: MatLab
   href: MatLab.md
-- name: S#.RemoteManager
-  href: API.RemoteManager.md
+- name: Общее
+  items:
+  - name: Исходные коды
+    href: SourceCode.md
+  - name: Справочные материалы
+    href: Materials.md

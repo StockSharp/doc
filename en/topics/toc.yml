@@ -1,12 +1,4 @@
-- name: Common
-  items:
-  - name: StockSharp Licensing
-    href: License.md
-  - name: Source codes
-    href: SourceCode.md
-  - name: Reference materials
-    href: Materials.md
-- name: S#.Installer
+- name: Installer
   href: SharpInstaller.md
   items:
   - name: Videos
@@ -23,10 +15,582 @@
     href: Installer_installing_removing_programs.md
   - name: Update apps
     href: Installer_software_update.md
-- name: S#.API
+- name: Designer
+  href: Designer.md
+  items:
+  - name: Installing Designer
+    href: Designer_Installation.md
+  - name: Update to the new version
+    href: Designer_Update_to_new_version.md
+  - name: Quick start
+    href: Designer_Quick_start.md
+  - name: User interface
+    items:
+    - name: Quick access panel
+      href: Designer_Quick_access_toolbar.md
+    - name: Ribbon
+      href: Designer_Tape.md
+    - name: Workspace
+      href: Designer_Workspace.md
+    - name: Schemas
+      href: Designer_Panel_Schemas.md
+    - name: Logs
+      href: Designer_Panel_Logs.md
+    - name: Portfolios
+      href: Designer_Panel_Portfolios.md
+    - name: Boards
+      href: Designer_Boards.md
+    - name: Risk management
+      href: Designer_Risk_Rule.md
+    - name: Commissions
+      href: Designer_Commission_Rule.md
+    - name: Components
+      href: Designer_Components.md
+      items:
+      - name: Chart
+        href: Designer_Chart.md
+      - name: Orders
+        href: Designer_Orders.md
+      - name: Conditional orders
+        href: Designer_Orders_conditional.md
+      - name: Trades
+        href: Designer_Trades.md
+      - name: Order book
+        href: Designer_Depth_Panel2.md
+      - name: Positions
+        href: Designer_Chart_Position.md
+      - name: Statistics
+        href: Designer_Statistics.md
+      - name: P&L equity
+        href: Designer_Panel_Market_depth.md
+      - name: Backtesting settings
+        href: Designer_Properties_emulation.md
+      - name: Live settings
+        href: Designer_Properties_Live.md
+      - name: Tick trades
+        href: Designer_Tape_Trades.md
+  - name: Strategies
+    href: Designer_Creation_strategy.md
+    items:
+    - name: Using visual designer
+      href: Designer_Creating_strategy_out_of_blocks.md
+      items:
+      - name: Diagram panel
+        href: Designer_Designer_schemes_strategies_and_component_elements.md
+      - name: Elements
+        href: Designer_Description_of_elements.md
+        items:
+        - name: Common
+          items:
+          - name: Chart
+            href: Designer_Panel_graphics.md
+          - name: Working time
+            href: Designer_Working_time.md
+          - name: Comparison
+            href: Designer_Comparison.md
+          - name: Indicator
+            href: Designer_Indicator.md
+          - name: Logical condition
+            href: Designer_Logical_condition.md
+          - name: Formula
+            href: Designer_Universal_formula.md
+          - name: Trades by order
+            href: Designer_Deals_on_request.md
+          - name: Trades by strategy
+            href: Designer_Trades_strategy.md
+          - name: Combination
+            href: Designer_Association.md
+          - name: Position
+            href: Designer_Position.md
+          - name: Prev value
+            href: Designer_Previous_value.md
+          - name: Protect position
+            href: Designer_Protect_positions.md
+          - name: Source code
+            href: Designer_Source_code.md
+          - name: DLL import
+            href: Designer_DLL_Strategy.md
+          - name: Is trade allowed
+            href: Designer_TradeAllowedDiagramElement.md
+          - name: P&L strategy
+            href: Designer_StrategyPnLDiagramElement.md
+        - name: Data sources
+          items:
+          - name: Candles
+            href: Designer_Candles.md
+          - name: Level 1
+            href: Designer_Level_1.md
+          - name: Index
+            href: Designer_Index.md
+          - name: Variable
+            href: Designer_Variable.md
+        - name: Trading
+          items:
+          - name: Register order
+            href: Designer_Position_opening.md
+          - name: Cancel order
+            href: Designer_Cancellations.md
+          - name: Modify order
+            href: Designer_Orders_Moving.md
+          - name: Mass cancel orders
+            href: Designer_Mass_Cancellations.md
+        - name: Converters
+          items:
+          - name: Indexer
+            href: Designer_Indexer.md
+          - name: Converter
+            href: Designer_Converter.md
+        - name: Notifying
+          items:
+          - name: Notification
+            href: Designer_Notice.md
+        - name: Market depths
+          items:
+          - name: Order book
+            href: Designer_Depth.md
+          - name: Grouped order book
+            href: Designer_Depth_Grouped.md
+          - name: Order book panel
+            href: Designer_Depth_panel.md
+          - name: Sparse order book
+            href: Designer_Depth_Spread.md
+          - name: Truncated order book
+            href: Designer_MarketDepthTruncateDiagramElement.md
+        - name: Options
+          items:
+          - name: IV book
+            href: Designer_Depth_implied_volatility.md
+          - name: Option desk
+            href: Designer_Options_Board.md
+          - name: Chart positions
+            href: Designer_Graph_options_positions.md
+          - name: Black Scholes
+            href: Designer_Black_Scholes.md
+          - name: Hedging
+            href: Designer_Hedging.md
+          - name: Options quoting
+            href: Designer_Quoting.md
+          - name: Derivatives
+            href: Designer_Derivatives.md
+        - name: Composite elements
+          items:
+          - name: Crossing
+            href: Designer_Crossing.md
+          - name: Conditional operator
+            href: Designer_Conditional_operator.md
+      - name: Lines
+        href: Designer_Line.md
+      - name: Event model
+        href: Designer_Event_model.md
+      - name: First strategy
+        href: Designer_Algorithm_creation_of_elements.md
+      - name: Composite elements
+        href: Designer_Creating_composite_elements.md
+      - name: Schema samples
+        items:
+        - name: Display candles on chart
+          href: Designer_Conclusion_of_candles_on_chart.md
+        - name: Get best price for instrument
+          href: Designer_Get_best_quote_for_instrument.md
+        - name: Get current position
+          href: Designer_Determination_of_volume_position.md
+        - name: Get order book price level
+          href: Designer_Depth_Obtaining_Specified_level.md
+    - name: Using C#
+      href: Designer_Creating_strategy_from_code.md
+      items:
+      - name: Getting started
+        href: Designer_Creation_element_containing_source_code.md
+      - name: First C# strategy
+        href: Designer_Creating_strategy_from_source_code.md
+      - name: Put C# code into schema
+        href: Designer_Integration_Source_code_in_scheme.md
+      - name: External DLL
+        href: Designer_Add_Dll_Lib.md
+      - name: Combine C# code and visual designer
+        href: Designer_Combine_Source_code_and_standard_elements.md
+      - name: Create own indicator using C#
+        href: Designer_Creating_indicator_from_source_code.md
+      - name: Write code in Visual Studio
+        items:
+        - name: Create DLL in Visual Studio
+          href: Designer_Creating_DLL_element_in_Visual_Studio.md
+        - name: Debug DLL in Visual Studio
+          href: Designer_Debugging_DLL_using_Visual_Studio.md
+  - name: Indicators
+    href: Designer_Indicators.md
+  - name: Backtesting
+    items:
+    - name: User interface
+      href: Designer_Backtesting_Interface.md
+    - name: Debugging
+      href: Designer_Debug.md
+      items:
+      - name: Break points
+        href: Designer_Debug_Break_Points.md
+      - name: Step by step execution
+        href: Designer_Step.md
+    - name: Getting started
+      href: Designer_Example_of_backtesting.md
+    - name: Optimization
+      href: Designer_Optimization.md
+    - name: Portfolio optimization
+      href: Designer_Portfolio_Testing.md
+  - name: Market data storage
+    href: Designer_Repository_of_historical_data.md
+    items:
+    - name: Download instruments
+      href: Designer_Download_instruments.md
+    - name: Create instrument
+      href: Designer_Creation_tool.md
+    - name: Edit instrument
+      href: Designer_Edit_tool.md
+    - name: Index
+      href: Designer_create_index.md
+    - name: Continuous futures
+      href: Designer_GluingData.md
+    - name: Download market-data
+      href: Designer_Downloading_data.md
+    - name: Getting started
+      href: Designer_Creating_repository_of_historical_data.md
+    - name: Instrument extended info
+      href: Designer_Security_ExtensionInfo.md
+    - name: Symbol mapping
+      href: Designer_Security_mapping.md
+  - name: Live execution
+    href: Designer_Live_trade.md
+    items:
+    - name: Getting started
+      href: Designer_Add_strategy_Live_trade.md
+    - name: User interface
+      href: Designer_Live_trade_interface.md
+    - name: Strategies dashboard
+      href: Designer_Panel_strategies.md
+    - name: Live execution sample
+      href: Designer_Example_of_Live_trading.md
+    - name: Strategy warm-up
+      href: Designer_Warm_Up_mode.md
+    - name: Run strategy on server
+      href: Designer_run_strategy_on_server.md
+  - name: Connections settings
+    href: Designer_Connection_settings.md
+    items:
+    - name: Connectors settings
+      href: Connectors_setting.md
+    - name: Simulator
+      href: Designer_emulation_setting.md
+    - name: Account and connection mapping
+      href: Designer_connection_mapping.md
+    - name: Binding market data to connection
+      href: Designer_connector_security_mapping.md
+  - name: Strategy gallery
+    href: Designer_Gallery_of_strategies.md
+    items:
+    - name: Publish own strategy
+      href: Designer_Gallery_publish.md
+  - name: Team working
+    href: Designer_Teamwork.md
+    items:
+    - name: Chat
+      href: Designer_Chat.md
+    - name: Export
+      href: Designer_Export_strategies.md
+    - name: Export with encryption
+      href: Designer_Encryption.md
+    - name: Import
+      href: Designer_Import_strategies.md
+    - name: Share images for charts and tables
+      href: Designer_publish.md
+  - name: Options strategies
+    href: Designer_Options.md
+  - name: Misc settings
+    items:
+    - name: Notification settings
+      href: Designer_notification_Setting.md
+    - name: Launch settings
+      href: Designer_Start_mode.md
+    - name: Reset settings
+      href: Designer_Reset_language_settings.md
+    - name: Settings directory
+      href: Designer_Directory_and_edit_data_manually.md
+    - name: Feedback forms
+      href: Designer_contact_us.md
+- name: Terminal
+  href: Terminal.md
+  items:
+  - name: Installing Terminal
+    href: Terminal_Installation.md
+  - name: Update to the new version
+    href: Terminal_Update_to_new_version.md
+  - name: Quick start
+    href: Terminal_Quick_start.md
+  - name: User interface
+    items:
+    - name: Quick access panel
+      href: Terminal_Quick_access_toolbar.md
+    - name: Ribbon
+      href: Terminal_Tape.md
+    - name: Workspace
+      href: Terminal_Workspace.md
+    - name: Logs
+      href: Terminal_Panel_Logs.md
+    - name: Portfolios
+      href: Terminal_Panel_Portfolios.md
+    - name: Board editor
+      href: Terminal_Boards.md
+    - name: Risk management
+      href: Terminal_Risk_Rule.md
+    - name: Components
+      href: Terminal_Components.md
+      items:
+      - name: Instruments
+        href: Terminal_Securities.md
+      - name: Level 1
+        href: Terminal_level1.md
+      - name: Buy/Sell
+        href: Terminal_Buy_Sell.md
+      - name: Order book
+        href: Terminal_Depth_Panel2.md
+      - name: Chart
+        href: Terminal_Chart.md
+      - name: P&L chart
+        href: Terminal_chart_PU.md
+      - name: Trades
+        href: Terminal_Trades.md
+      - name: Orders
+        href: Terminal_Orders.md
+      - name: Conditional orders
+        href: Terminal_Orders_conditional.md
+      - name: Positions
+        href: Terminal_Chart_Position.md
+      - name: Trades feed
+        href: Terminal_Tape_Trades.md
+      - name: News
+        href: Terminal_news.md
+      - name: Positions (options)
+        href: Terminal_options_positions.md
+      - name: Option desk
+        href: Terminal_option_desk.md
+      - name: Smile volatility
+        href: Terminal_smile_of_volatility.md
+      - name: Order log
+        href: Terminal_orderlog.md
+  - name: Connection settings
+    href: Terminal_Connection_settings.md
+  - name: Market data storage
+    href: Terminal_Repository_of_market_data.md
+  - name: Indicators
+    href: Terminal_Indicators.md
+  - name: Team working
+    href: Terminal_Teamwork.md
+    items:
+    - name: Chat
+      href: Terminal_Chat.md
+    - name: Share images for charts and tables
+      href: Terminal_publish.md
+  - name: Notifications
+    href: Terminal_Notifications.md
+    items:
+    - name: Notification panel
+      href: Terminal_Notifications_Panel.md
+    - name: Notifications setup
+      href: Terminal_notification_Setting.md
+  - name: Settings
+    items:
+    - name: Launch settings
+      href: Terminal_Start_mode.md
+    - name: Reset settings
+      href: Terminal_Reset_language_settings.md
+    - name: Feedback forms
+      href: Terminal_contact_us.md
+- name: Hydra
+  href: Hydra.md
+  items:
+  - name: Videos
+    items:
+    - name: First start
+      href: HydraFirstStartVideos.md
+    - name: Sources samples
+      href: HydraConnectingSetup.md
+      items:
+      - name: Oanda
+        href: HydraConnectingOanda.md
+      - name: Interactive Brokers
+        href: HydraConnectingIBTWS.md
+      - name: Bitmex
+        href: HydraConnectingBitmex.md
+      - name: Binance
+        href: HydraConnectingBinance.md
+    - name: Instruments downloading
+      href: HydraSecuritiesCongfigDowVideo.md
+    - name: Building candles
+      href: HydraBuildDifferentCandleType.md
+    - name: Building order books
+      href: HydraBuildMarkethDepthLogLevel.md
+    - name: Saving format
+      href: HydraDiffSaveFormat.md
+    - name: Indicators
+      href: HydraBuildIndicator.md
+    - name: Analytics
+      href: HydraAnalitich.md
+    - name: Import task
+      href: HydraImportVideos.md
+    - name: Export task
+      href: HydraExportAutoVideo.md
+    - name: Converter task
+      href: HydraConvectorVideo.md
+  - name: Installing Hydra
+    href: HydraUsing.md
+  - name: Update to the new version
+    href: HydraUpdate.md
+  - name: First start
+    href: HydraFirstLaunch.md
+  - name: Data sources
+    href: HydraDataSource.md
+    items:
+    - name: Select source
+      href: HydraSourceSelection.md
+    - name: Common connection settings
+      href: HydraCommonConnectionSettings.md
+  - name: Prepare for download
+    items:
+    - name: Instruments list
+      href: HydraConfigurationSecuritiesDownload.md
+    - name: Custom candles
+      href: HydraCustomCandleType.md
+  - name: Working with data
+    href: HydraWorkingWithMarketData.md
+    items:
+    - name: View and export
+      href: HydraViewingMarketData.md
+      items:
+      - name: Ticks
+        href: HydraExportTrades.md
+      - name: Order books
+        href: HydraExportDepth.md
+      - name: Candles
+        href: HydraExportCandles.md
+      - name: Order log
+        href: HydraExportOrderLog.md
+      - name: 'Level 1 '
+        href: HydraExportSecurityChange.md
+      - name: News
+        href: HydraExportNews.md
+      - name: Transactions
+        href: HydraExportExecution.md
+      - name: Option desk
+        href: hydra_options.md
+      - name: Indicators
+        href: Hydra_export_indicator.md
+      - name: Positions
+        href: Hydra_export_position.md
+    - name: Candles generation
+      href: HydraCandles.md
+    - name: Export data
+      href: HydraExport.md
+      items:
+      - name: Export into MetaStock
+        href: Hydra_Export_TSLab_MetaStock.md
+    - name: Any market data types
+      href: HydraUsingDifferentTypesMarketData.md
+  - name: Indicators
+    href: Hydra_Indicators.md
+  - name: Importing
+    href: HydraImport.md
+    items:
+    - name: Candles
+      href: HydraImportCandles.md
+    - name: Instruments
+      href: HydraImportSecurities.md
+    - name: Ticks
+      href: HydraImportTrades.md
+    - name: Order books
+      href: HydraImportDepths.md
+    - name: Order log
+      href: HydraImportOrderlog.md
+    - name: Level 1
+      href: HydraImportLevel1.md
+    - name: News
+      href: HydraImportNews.md
+    - name: Transactions
+      href: HydraImportExecutions.md
+  - name: Server mode
+    items:
+    - name: Settings
+      href: HydraSettings.md
+    - name: Emulation setup
+      href: HydraEmulation.md
+    - name: Instruments mapping
+      href: HydraSymbolMappingVer5.md
+    - name: FIX/FAST connectivity
+      href: hydraAPIConnect.md
+  - name: Instruments and boards
+    items:
+    - name: Instruments list
+      href: HydraSettingsSecurity.md
+    - name: Create instrument
+      href: Hydra_Creation_tool.md
+    - name: Index
+      href: hydra_index.md
+    - name: Continuous futures
+      href: HydraGluingData.md
+    - name: Editing instruments
+      href: HydraSettingsSecurityEditor.md
+    - name: Extended instrument info
+      href: HydraExtensionInfo.md
+    - name: Matching instruments-connections
+      href: HydraSymbolMapping.md
+    - name: Boards
+      href: HydraBoards.md
+  - name: Create new souce
+    href: HydraPlugins.md
+  - name: Create new task
+    href: HydraCreatTask.md
+  - name: Tasks
+    href: HydraTasks.md
+    items:
+    - name: Converter
+      href: HydraTasksConverter.md
+    - name: Export (auto)
+      href: HydraTasksExport.md
+    - name: Import (auto)
+      href: HydraTasksImport.md
+    - name: Backup
+      href: HydraTasksBackup.md
+  - name: Analytics
+    href: HydraAnalytics.md
+    items:
+    - name: Working with scripts
+      href: HydraAnalyticsScripts.md
+    - name: Running and displaying results
+      href: HydraAnalyticsShow.md
+  - name: Misc
+    items:
+    - name: Settings reset
+      href: HydraResetSettings.md
+    - name: Delete data
+      href: HydraRemoveData.md
+    - name: Network settings
+      href: HydraNetworkSettings.md
+    - name: Database
+      href: StoragesDatabase.md
+    - name: Disaster recovery
+      href: HydraDisasterRecovery.md
+    - name: Synchronization
+      href: HydraSynchronizeData.md
+    - name: Backup
+      href: HydraBackup.md
+      items:
+      - name: Setup
+        href: HydraBackup_account.md
+      - name: Hydra settings
+        href: HydraBackup_task.md
+      - name: Recovery
+        href: HydraBackup_recovery.md
+- name: API
   href: StockSharpAbout.md
   items:
-  - name: Architecture S#.API
+  - name: Architecture API
     href: StockSharpArchitecture.md
   - name: Installation instruction
     href: StockSharpInstall.md
@@ -797,7 +1361,7 @@
           href: API_GUI_Settings_FAST.md
         - name: Adapter initialization FAST
           href: FastSample.md
-        - name: S#.UDP Dumper
+        - name: UDP Dumper
           href: UdpDumper.md
         - name: Dump mode
           href: FastDump.md
@@ -1242,582 +1806,10 @@
     href: Currency.md
   - name: Examples
     href: StockSharpSamples.md
-- name: S#.Designer
-  href: Designer.md
-  items:
-  - name: Installing S#.Designer
-    href: Designer_Installation.md
-  - name: Update to the new version
-    href: Designer_Update_to_new_version.md
-  - name: Quick start
-    href: Designer_Quick_start.md
-  - name: User interface
-    items:
-    - name: Quick access panel
-      href: Designer_Quick_access_toolbar.md
-    - name: Ribbon
-      href: Designer_Tape.md
-    - name: Workspace
-      href: Designer_Workspace.md
-    - name: Schemas
-      href: Designer_Panel_Schemas.md
-    - name: Logs
-      href: Designer_Panel_Logs.md
-    - name: Portfolios
-      href: Designer_Panel_Portfolios.md
-    - name: Boards
-      href: Designer_Boards.md
-    - name: Risk management
-      href: Designer_Risk_Rule.md
-    - name: Commissions
-      href: Designer_Commission_Rule.md
-    - name: Components
-      href: Designer_Components.md
-      items:
-      - name: Chart
-        href: Designer_Chart.md
-      - name: Orders
-        href: Designer_Orders.md
-      - name: Conditional orders
-        href: Designer_Orders_conditional.md
-      - name: Trades
-        href: Designer_Trades.md
-      - name: Order book
-        href: Designer_Depth_Panel2.md
-      - name: Positions
-        href: Designer_Chart_Position.md
-      - name: Statistics
-        href: Designer_Statistics.md
-      - name: P&L equity
-        href: Designer_Panel_Market_depth.md
-      - name: Backtesting settings
-        href: Designer_Properties_emulation.md
-      - name: Live settings
-        href: Designer_Properties_Live.md
-      - name: Tick trades
-        href: Designer_Tape_Trades.md
-  - name: Strategies
-    href: Designer_Creation_strategy.md
-    items:
-    - name: Using visual designer
-      href: Designer_Creating_strategy_out_of_blocks.md
-      items:
-      - name: Diagram panel
-        href: Designer_Designer_schemes_strategies_and_component_elements.md
-      - name: Elements
-        href: Designer_Description_of_elements.md
-        items:
-        - name: Common
-          items:
-          - name: Chart
-            href: Designer_Panel_graphics.md
-          - name: Working time
-            href: Designer_Working_time.md
-          - name: Comparison
-            href: Designer_Comparison.md
-          - name: Indicator
-            href: Designer_Indicator.md
-          - name: Logical condition
-            href: Designer_Logical_condition.md
-          - name: Formula
-            href: Designer_Universal_formula.md
-          - name: Trades by order
-            href: Designer_Deals_on_request.md
-          - name: Trades by strategy
-            href: Designer_Trades_strategy.md
-          - name: Combination
-            href: Designer_Association.md
-          - name: Position
-            href: Designer_Position.md
-          - name: Prev value
-            href: Designer_Previous_value.md
-          - name: Protect position
-            href: Designer_Protect_positions.md
-          - name: Source code
-            href: Designer_Source_code.md
-          - name: DLL import
-            href: Designer_DLL_Strategy.md
-          - name: Is trade allowed
-            href: Designer_TradeAllowedDiagramElement.md
-          - name: P&L strategy
-            href: Designer_StrategyPnLDiagramElement.md
-        - name: Data sources
-          items:
-          - name: Candles
-            href: Designer_Candles.md
-          - name: Level 1
-            href: Designer_Level_1.md
-          - name: Index
-            href: Designer_Index.md
-          - name: Variable
-            href: Designer_Variable.md
-        - name: Trading
-          items:
-          - name: Register order
-            href: Designer_Position_opening.md
-          - name: Cancel order
-            href: Designer_Cancellations.md
-          - name: Modify order
-            href: Designer_Orders_Moving.md
-          - name: Mass cancel orders
-            href: Designer_Mass_Cancellations.md
-        - name: Converters
-          items:
-          - name: Indexer
-            href: Designer_Indexer.md
-          - name: Converter
-            href: Designer_Converter.md
-        - name: Notifying
-          items:
-          - name: Notification
-            href: Designer_Notice.md
-        - name: Market depths
-          items:
-          - name: Order book
-            href: Designer_Depth.md
-          - name: Grouped order book
-            href: Designer_Depth_Grouped.md
-          - name: Order book panel
-            href: Designer_Depth_panel.md
-          - name: Sparse order book
-            href: Designer_Depth_Spread.md
-          - name: Truncated order book
-            href: Designer_MarketDepthTruncateDiagramElement.md
-        - name: Options
-          items:
-          - name: IV book
-            href: Designer_Depth_implied_volatility.md
-          - name: Option desk
-            href: Designer_Options_Board.md
-          - name: Chart positions
-            href: Designer_Graph_options_positions.md
-          - name: Black Scholes
-            href: Designer_Black_Scholes.md
-          - name: Hedging
-            href: Designer_Hedging.md
-          - name: Options quoting
-            href: Designer_Quoting.md
-          - name: Derivatives
-            href: Designer_Derivatives.md
-        - name: Composite elements
-          items:
-          - name: Crossing
-            href: Designer_Crossing.md
-          - name: Conditional operator
-            href: Designer_Conditional_operator.md
-      - name: Lines
-        href: Designer_Line.md
-      - name: Event model
-        href: Designer_Event_model.md
-      - name: First strategy
-        href: Designer_Algorithm_creation_of_elements.md
-      - name: Composite elements
-        href: Designer_Creating_composite_elements.md
-      - name: Schema samples
-        items:
-        - name: Display candles on chart
-          href: Designer_Conclusion_of_candles_on_chart.md
-        - name: Get best price for instrument
-          href: Designer_Get_best_quote_for_instrument.md
-        - name: Get current position
-          href: Designer_Determination_of_volume_position.md
-        - name: Get order book price level
-          href: Designer_Depth_Obtaining_Specified_level.md
-    - name: Using C#
-      href: Designer_Creating_strategy_from_code.md
-      items:
-      - name: Getting started
-        href: Designer_Creation_element_containing_source_code.md
-      - name: First C# strategy
-        href: Designer_Creating_strategy_from_source_code.md
-      - name: Put C# code into schema
-        href: Designer_Integration_Source_code_in_scheme.md
-      - name: External DLL
-        href: Designer_Add_Dll_Lib.md
-      - name: Combine C# code and visual designer
-        href: Designer_Combine_Source_code_and_standard_elements.md
-      - name: Create own indicator using C#
-        href: Designer_Creating_indicator_from_source_code.md
-      - name: Write code in Visual Studio
-        items:
-        - name: Create DLL in Visual Studio
-          href: Designer_Creating_DLL_element_in_Visual_Studio.md
-        - name: Debug DLL in Visual Studio
-          href: Designer_Debugging_DLL_using_Visual_Studio.md
-  - name: Indicators
-    href: Designer_Indicators.md
-  - name: Backtesting
-    items:
-    - name: User interface
-      href: Designer_Backtesting_Interface.md
-    - name: Debugging
-      href: Designer_Debug.md
-      items:
-      - name: Break points
-        href: Designer_Debug_Break_Points.md
-      - name: Step by step execution
-        href: Designer_Step.md
-    - name: Getting started
-      href: Designer_Example_of_backtesting.md
-    - name: Optimization
-      href: Designer_Optimization.md
-    - name: Portfolio optimization
-      href: Designer_Portfolio_Testing.md
-  - name: Market data storage
-    href: Designer_Repository_of_historical_data.md
-    items:
-    - name: Download instruments
-      href: Designer_Download_instruments.md
-    - name: Create instrument
-      href: Designer_Creation_tool.md
-    - name: Edit instrument
-      href: Designer_Edit_tool.md
-    - name: Index
-      href: Designer_create_index.md
-    - name: Continuous futures
-      href: Designer_GluingData.md
-    - name: Download market-data
-      href: Designer_Downloading_data.md
-    - name: Getting started
-      href: Designer_Creating_repository_of_historical_data.md
-    - name: Instrument extended info
-      href: Designer_Security_ExtensionInfo.md
-    - name: Symbol mapping
-      href: Designer_Security_mapping.md
-  - name: Live execution
-    href: Designer_Live_trade.md
-    items:
-    - name: Getting started
-      href: Designer_Add_strategy_Live_trade.md
-    - name: User interface
-      href: Designer_Live_trade_interface.md
-    - name: Strategies dashboard
-      href: Designer_Panel_strategies.md
-    - name: Live execution sample
-      href: Designer_Example_of_Live_trading.md
-    - name: Strategy warm-up
-      href: Designer_Warm_Up_mode.md
-    - name: Run strategy on server
-      href: Designer_run_strategy_on_server.md
-  - name: Connections settings
-    href: Designer_Connection_settings.md
-    items:
-    - name: Connectors settings
-      href: Connectors_setting.md
-    - name: Simulator
-      href: Designer_emulation_setting.md
-    - name: Account and connection mapping
-      href: Designer_connection_mapping.md
-    - name: Binding market data to connection
-      href: Designer_connector_security_mapping.md
-  - name: Strategy gallery
-    href: Designer_Gallery_of_strategies.md
-    items:
-    - name: Publish own strategy
-      href: Designer_Gallery_publish.md
-  - name: Team working
-    href: Designer_Teamwork.md
-    items:
-    - name: Chat
-      href: Designer_Chat.md
-    - name: Export
-      href: Designer_Export_strategies.md
-    - name: Export with encryption
-      href: Designer_Encryption.md
-    - name: Import
-      href: Designer_Import_strategies.md
-    - name: Share images for charts and tables
-      href: Designer_publish.md
-  - name: Options strategies
-    href: Designer_Options.md
-  - name: Misc settings
-    items:
-    - name: Notification settings
-      href: Designer_notification_Setting.md
-    - name: Launch settings
-      href: Designer_Start_mode.md
-    - name: Reset settings
-      href: Designer_Reset_language_settings.md
-    - name: Settings directory
-      href: Designer_Directory_and_edit_data_manually.md
-    - name: Feedback forms
-      href: Designer_contact_us.md
-- name: S#.Terminal
-  href: Terminal.md
-  items:
-  - name: Installing S#.Terminal
-    href: Terminal_Installation.md
-  - name: Update to the new version
-    href: Terminal_Update_to_new_version.md
-  - name: Quick start
-    href: Terminal_Quick_start.md
-  - name: User interface
-    items:
-    - name: Quick access panel
-      href: Terminal_Quick_access_toolbar.md
-    - name: Ribbon
-      href: Terminal_Tape.md
-    - name: Workspace
-      href: Terminal_Workspace.md
-    - name: Logs
-      href: Terminal_Panel_Logs.md
-    - name: Portfolios
-      href: Terminal_Panel_Portfolios.md
-    - name: Board editor
-      href: Terminal_Boards.md
-    - name: Risk management
-      href: Terminal_Risk_Rule.md
-    - name: Components
-      href: Terminal_Components.md
-      items:
-      - name: Instruments
-        href: Terminal_Securities.md
-      - name: Level 1
-        href: Terminal_level1.md
-      - name: Buy/Sell
-        href: Terminal_Buy_Sell.md
-      - name: Order book
-        href: Terminal_Depth_Panel2.md
-      - name: Chart
-        href: Terminal_Chart.md
-      - name: P&L chart
-        href: Terminal_chart_PU.md
-      - name: Trades
-        href: Terminal_Trades.md
-      - name: Orders
-        href: Terminal_Orders.md
-      - name: Conditional orders
-        href: Terminal_Orders_conditional.md
-      - name: Positions
-        href: Terminal_Chart_Position.md
-      - name: Trades feed
-        href: Terminal_Tape_Trades.md
-      - name: News
-        href: Terminal_news.md
-      - name: Positions (options)
-        href: Terminal_options_positions.md
-      - name: Option desk
-        href: Terminal_option_desk.md
-      - name: Smile volatility
-        href: Terminal_smile_of_volatility.md
-      - name: Order log
-        href: Terminal_orderlog.md
-  - name: Connection settings
-    href: Terminal_Connection_settings.md
-  - name: Market data storage
-    href: Terminal_Repository_of_market_data.md
-  - name: Indicators
-    href: Terminal_Indicators.md
-  - name: Team working
-    href: Terminal_Teamwork.md
-    items:
-    - name: Chat
-      href: Terminal_Chat.md
-    - name: Share images for charts and tables
-      href: Terminal_publish.md
-  - name: Notifications
-    href: Terminal_Notifications.md
-    items:
-    - name: Notification panel
-      href: Terminal_Notifications_Panel.md
-    - name: Notifications setup
-      href: Terminal_notification_Setting.md
-  - name: Settings
-    items:
-    - name: Launch settings
-      href: Terminal_Start_mode.md
-    - name: Reset settings
-      href: Terminal_Reset_language_settings.md
-    - name: Feedback forms
-      href: Terminal_contact_us.md
-- name: S#.Data
-  href: Hydra.md
-  items:
-  - name: Videos
-    items:
-    - name: First start
-      href: HydraFirstStartVideos.md
-    - name: Sources samples
-      href: HydraConnectingSetup.md
-      items:
-      - name: Oanda
-        href: HydraConnectingOanda.md
-      - name: Interactive Brokers
-        href: HydraConnectingIBTWS.md
-      - name: Bitmex
-        href: HydraConnectingBitmex.md
-      - name: Binance
-        href: HydraConnectingBinance.md
-    - name: Instruments downloading
-      href: HydraSecuritiesCongfigDowVideo.md
-    - name: Building candles
-      href: HydraBuildDifferentCandleType.md
-    - name: Building order books
-      href: HydraBuildMarkethDepthLogLevel.md
-    - name: Saving format
-      href: HydraDiffSaveFormat.md
-    - name: Indicators
-      href: HydraBuildIndicator.md
-    - name: Analytics
-      href: HydraAnalitich.md
-    - name: Import task
-      href: HydraImportVideos.md
-    - name: Export task
-      href: HydraExportAutoVideo.md
-    - name: Converter task
-      href: HydraConvectorVideo.md
-  - name: Installing S#.Data
-    href: HydraUsing.md
-  - name: Update to the new version
-    href: HydraUpdate.md
-  - name: First start
-    href: HydraFirstLaunch.md
-  - name: Data sources
-    href: HydraDataSource.md
-    items:
-    - name: Select source
-      href: HydraSourceSelection.md
-    - name: Common connection settings
-      href: HydraCommonConnectionSettings.md
-  - name: Prepare for download
-    items:
-    - name: Instruments list
-      href: HydraConfigurationSecuritiesDownload.md
-    - name: Custom candles
-      href: HydraCustomCandleType.md
-  - name: Working with data
-    href: HydraWorkingWithMarketData.md
-    items:
-    - name: View and export
-      href: HydraViewingMarketData.md
-      items:
-      - name: Ticks
-        href: HydraExportTrades.md
-      - name: Order books
-        href: HydraExportDepth.md
-      - name: Candles
-        href: HydraExportCandles.md
-      - name: Order log
-        href: HydraExportOrderLog.md
-      - name: 'Level 1 '
-        href: HydraExportSecurityChange.md
-      - name: News
-        href: HydraExportNews.md
-      - name: Transactions
-        href: HydraExportExecution.md
-      - name: Option desk
-        href: hydra_options.md
-      - name: Indicators
-        href: Hydra_export_indicator.md
-      - name: Positions
-        href: Hydra_export_position.md
-    - name: Candles generation
-      href: HydraCandles.md
-    - name: Export data
-      href: HydraExport.md
-      items:
-      - name: Export into MetaStock
-        href: Hydra_Export_TSLab_MetaStock.md
-    - name: Any market data types
-      href: HydraUsingDifferentTypesMarketData.md
-  - name: Indicators
-    href: Hydra_Indicators.md
-  - name: Importing
-    href: HydraImport.md
-    items:
-    - name: Candles
-      href: HydraImportCandles.md
-    - name: Instruments
-      href: HydraImportSecurities.md
-    - name: Ticks
-      href: HydraImportTrades.md
-    - name: Order books
-      href: HydraImportDepths.md
-    - name: Order log
-      href: HydraImportOrderlog.md
-    - name: Level 1
-      href: HydraImportLevel1.md
-    - name: News
-      href: HydraImportNews.md
-    - name: Transactions
-      href: HydraImportExecutions.md
-  - name: Server mode
-    items:
-    - name: Settings
-      href: HydraSettings.md
-    - name: Emulation setup
-      href: HydraEmulation.md
-    - name: Instruments mapping
-      href: HydraSymbolMappingVer5.md
-    - name: FIX/FAST connectivity
-      href: hydraAPIConnect.md
-  - name: Instruments and boards
-    items:
-    - name: Instruments list
-      href: HydraSettingsSecurity.md
-    - name: Create instrument
-      href: Hydra_Creation_tool.md
-    - name: Index
-      href: hydra_index.md
-    - name: Continuous futures
-      href: HydraGluingData.md
-    - name: Editing instruments
-      href: HydraSettingsSecurityEditor.md
-    - name: Extended instrument info
-      href: HydraExtensionInfo.md
-    - name: Matching instruments-connections
-      href: HydraSymbolMapping.md
-    - name: Boards
-      href: HydraBoards.md
-  - name: Create new souce
-    href: HydraPlugins.md
-  - name: Create new task
-    href: HydraCreatTask.md
-  - name: Tasks
-    href: HydraTasks.md
-    items:
-    - name: Converter
-      href: HydraTasksConverter.md
-    - name: Export (auto)
-      href: HydraTasksExport.md
-    - name: Import (auto)
-      href: HydraTasksImport.md
-    - name: Backup
-      href: HydraTasksBackup.md
-  - name: Analytics
-    href: HydraAnalytics.md
-    items:
-    - name: Working with scripts
-      href: HydraAnalyticsScripts.md
-    - name: Running and displaying results
-      href: HydraAnalyticsShow.md
-  - name: Misc
-    items:
-    - name: Settings reset
-      href: HydraResetSettings.md
-    - name: Delete data
-      href: HydraRemoveData.md
-    - name: Network settings
-      href: HydraNetworkSettings.md
-    - name: Database
-      href: StoragesDatabase.md
-    - name: Disaster recovery
-      href: HydraDisasterRecovery.md
-    - name: Synchronization
-      href: HydraSynchronizeData.md
-    - name: Backup
-      href: HydraBackup.md
-      items:
-      - name: Setup
-        href: HydraBackup_account.md
-      - name: S#.Data settings
-        href: HydraBackup_task.md
-      - name: Recovery
-        href: HydraBackup_recovery.md
-- name: S#.Shell
+- name: Shell
   href: Shell.md
   items:
-  - name: Installing S#.Shell
+  - name: Installing Shell
     href: Shell_Installation.md
   - name: Quick start
     href: Shell_Quick_start.md
@@ -1840,11 +1832,15 @@
     href: Shell_custom_strategy.md
   - name: Create strategy panel
     href: Shell_custom_strategy_panel.md
-  - name: Run strategies from S#.Designer
+  - name: Run strategies from Designer
     href: Shell_run_Designer_strategy.md
-- name: S#.MT4 and S#.MT5
+- name: MT4 and MT5
   href: MT.md
-- name: S#.MatLab
+- name: MatLab
   href: MatLab.md
-- name: S#.RemoteManager
-  href: API.RemoteManager.md
+- name: Common
+  items:
+  - name: Source codes
+    href: SourceCode.md
+  - name: Reference materials
+    href: Materials.md

@@ -2,7 +2,7 @@
 
 [StockSharp (shortly S\#)](https://stocksharp.com/products/) \- are **free** programs for trading at any markets of the world (American, European, Asian, Russian, stocks, futures, options, Bitcoins, forex, etc.). You will be able to trade manually or automated trading (algorithmic trading robots, conventional or HFT). 
 
-**Supports many sources:** [Connectors](topics/API_Connectors.md).
+**Supports 90+ brokers, exchanges and data sources:** [Connectors](topics/API_Connectors.md).
 
 You can use S\# with any broker that supports our connection. 
 
