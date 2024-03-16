@@ -176,6 +176,15 @@
           href: RTSSample.md
     - name: Коннекторы (Америка)
       items:
+      - name: Alpaca
+        href: Alpaca.md
+        items:
+        - name: Настройки коннектора Alpaca
+          href: AlpacaConnectorsSettings.md
+        - name: Графическое конфигурирование Alpaca
+          href: API_GUI_Settings_Alpaca.md
+        - name: Инициализация адаптера Alpaca
+          href: AlpacaSample.md
       - name: AlphaVantage
         href: AlphaVantage.md
         items:
@@ -281,6 +290,15 @@
           href: OECRemoting.md
         - name: Одновременная работа терминала и робота
           href: OECSettings.md
+      - name: PolygonIO
+        href: PolygonIO.md
+        items:
+        - name: Настройки коннектора PolygonIO
+          href: PolygonIOConnectorsSettings.md
+        - name: Графическое конфигурирование PolygonIO
+          href: API_GUI_Settings_PolygonIO.md
+        - name: Инициализация адаптера PolygonIO
+          href: PolygonIOSample.md
       - name: Quandl
         href: Quandl.md
         items:
@@ -430,6 +448,15 @@
           href: API_GUI_Settings_Binance.md
         - name: Инициализация адаптера Binance
           href: BinanceSample.md
+      - name: Binance History
+        href: BinanceHistory.md
+        items:
+        - name: Настройки коннектора Binance History
+          href: BinanceHistoryConnectorsSettings.md
+        - name: Графическое конфигурирование Binance History
+          href: API_GUI_Settings_BinanceHistory.md
+        - name: Инициализация адаптера Binance History
+          href: BinanceHistorySample.md
       - name: Bitalong
         href: Bitalong.md
         items:
@@ -475,6 +502,15 @@
           href: API_GUI_Settings_Bithumb.md
         - name: Инициализация адаптера Bithumb
           href: BithumbSample.md
+      - name: Bitmart
+        href: Bitmart.md
+        items:
+        - name: Настройки коннектора Bitmart
+          href: BitmartConnectorsSettings.md
+        - name: Графическое конфигурирование Bitmart
+          href: API_GUI_Settings_Bitmart.md
+        - name: Инициализация адаптера Bitmart
+          href: BitmartSample.md
       - name: BitMax
         href: BitMax.md
         items:

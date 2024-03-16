@@ -6,6 +6,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 
 | Connectors                         | Connector settings                                                   | Graphical configuration                                                                  |
 | ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [Alpaca](Alpaca.md)                | [Configuration Alpaca](AlpacaConnectorsSettings.md)                  | [Graphical configuration Alpaca](API_GUI_Settings_Alpaca.md)                             |
 | [AlphaVantage](AlphaVantage.md)    | [Configuration AlphaVantage](AlphaVantageConnectorsSettings.md)      | [Graphical configuration AlphaVantage](API_GUI_Settings_AlphaVantage.md)                 |
 | [BarChart](BarChart.md)            | [Configuration BarChart](BarChartConnectorsSettings.md)              | [Graphical configuration BarChart](API_GUI_Settings_Barchart.md)                         |
 | [Blackwood (Fusion)](Blackwood.md) | [Configuration Blackwood (Fusion)](BlackwoodConnectorsSettings.md)   | [Graphical configuration Blackwood (Fusion)](API_GUI_Settings_Fusion%20(Blackwood).md)   |
@@ -18,6 +19,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [IQFeed](IQFeed.md)                | [Configuration IQFeed](IQFeedConnectorsSettings.md)                  | [Graphical configuration IQFeed](API_GUI_Settings_IQFeed.md)                             |
 | [ITCH](ITCH.md)                    | [Configuration ITCH](ITCHConnectorsSettings.md)                      | [Graphical configuration ITCH](API_GUI_Settings_ITCH.md)                                 |
 | [OpenECry](OEC.md)                 | [Configuration OpenECry](OpenECryConnectorsSettings.md)              | [Graphical configuration OpenECry](API_GUI_Settings_OpenECry_GainFutures.md)             |
+| [PolygonIO](PolygonIO.md)          | [Configuration PolygonIO](PolygonIOConnectorsSettings.md)            | [Graphical configuration PolygonIO](API_GUI_Settings_PolygonIO.md)                       |
 | [Quandl](Quandl.md)                | [Configuration Quandl](QuandlConnectorsSettings.md)                  | [Graphical configuration Quandl](API_GUI_Settings_Quandl.md)                             |
 | [QuantFEED](QuantFeed.md)          | [Configuration QuantFEED](QuantFEEDConnectorsSettings.md)            | [Graphical configuration QuantFEED](API_GUI_Settings_QuantFEED.md)                       |
 | [Rithmic](Rithmic.md)              | [Configuration Rithmic](RithmicConnectorsSettings.md)                | [Graphical configuration Rithmic](API_GUI_Settings_Rithmic.md)                           |
@@ -49,7 +51,8 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [Bitexbook](Bitexbook.md)       | [Configuration Bitexbook](BitexbookConnectorsSettings.md)       | [Graphical configuration Bitexbook](API_GUI_Settings_Bitexbook.md)        |
 | [Bitfinex](Bitfinex.md)         | [Configuration Bitfinex](BitfinexConnectorsSettings.md)         | [Graphical configuration Bitfinex](API_GUI_Settings_Bitfinex.md)          |
 | [Bithumb](Bithumb.md)           | [Configuration Bithumb](BithumbConnectorsSettings.md)           | [Graphical configuration Bithumb](API_GUI_Settings_Bithumb.md)            |
-| [BitMax](BitMax.md)             | [Configuration Bithumb](BitMaxConnectorsSettings.md)            | [Graphical configuration Bithumb](API_GUI_Settings_BitMax.md)             |
+| [Bitmart](Bitmart.md)           | [Configuration Bitmart](BitmartConnectorsSettings.md)           | [Graphical configuration Bitmart](API_GUI_Settings_Bitmart.md)            |
+| [BitMax](BitMax.md)             | [Configuration BitMax](BitMaxConnectorsSettings.md)             | [Graphical configuration BitMax](API_GUI_Settings_BitMax.md)              |
 | [BitMEX](Bitmex.md)             | [Configuration BitMEX](BitMEXConnectorsSettings.md)             | [Graphical configuration BitMEX](API_GUI_Settings_BitMEX.md)              |
 | [BitStamp](BitStamp.md)         | [Configuration BitStamp](BitStampConnectorsSettings.md)         | [Graphical configuration BitStamp](API_GUI_Settings_Bitstamp.md)          |
 | [Bittrex](Bittrex.md)           | [Configuration Bittrex](BittrexConnectorsSettings.md)           | [Graphical configuration Bittrex](API_GUI_Settings_Bittrex.md)            |

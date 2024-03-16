@@ -39,6 +39,15 @@
       href: API_ConnectorsUIConfiguration.md
     - name: Connectors (Stock, Futures and Options)
       items:
+      - name: Alpaca
+        href: Alpaca.md
+        items:
+        - name: Configuration Alpaca
+          href: AlpacaConnectorsSettings.md
+        - name: Graphical configuration Alpaca
+          href: API_GUI_Settings_Alpaca.md
+        - name: Adapter initialization Alpaca
+          href: AlpacaSample.md
       - name: AlphaVantage
         href: AlphaVantage.md
         items:
@@ -144,6 +153,15 @@
           href: OECRemoting.md
         - name: Simultaneous terminal and algorithm operation
           href: OECSettings.md
+      - name: PolygonIO
+        href: PolygonIO.md
+        items:
+        - name: Configuration PolygonIO
+          href: PolygonIOConnectorsSettings.md
+        - name: Graphical configuration PolygonIO
+          href: API_GUI_Settings_PolygonIO.md
+        - name: Adapter initialization PolygonIO
+          href: PolygonIOSample.md
       - name: Quandl
         href: Quandl.md
         items:
@@ -293,6 +311,15 @@
           href: API_GUI_Settings_Binance.md
         - name: Adapter initialization Binance
           href: BinanceSample.md
+      - name: Binance History
+        href: BinanceHistory.md
+        items:
+        - name: Configuration Binance History
+          href: BinanceHistoryConnectorsSettings.md
+        - name: Graphical configuration Binance History
+          href: API_GUI_Settings_BinanceHistory.md
+        - name: Adapter initialization Binance History
+          href: BinanceHistorySample.md
       - name: Bitalong
         href: Bitalong.md
         items:
@@ -338,14 +365,23 @@
           href: API_GUI_Settings_Bithumb.md
         - name: Adapter initialization Bithumb
           href: BithumbSample.md
+      - name: Bitmart
+        href: Bitmart.md
+        items:
+        - name: Configuration Bitmart
+          href: BitmartConnectorsSettings.md
+        - name: Graphical configuration Bitmart
+          href: API_GUI_Settings_Bitmart.md
+        - name: Adapter initialization Bitmart
+          href: BitmartSample.md
       - name: BitMax
         href: BitMax.md
         items:
-        - name: Configuration Bithumb
+        - name: Configuration BitMax
           href: BitMaxConnectorsSettings.md
-        - name: Graphical configuration Bithumb
+        - name: Graphical configuration BitMax
           href: API_GUI_Settings_BitMax.md
-        - name: Adapter initialization Bithumb
+        - name: Adapter initialization BitMax
           href: BitMaxSample.md
       - name: BitMEX
         href: Bitmex.md

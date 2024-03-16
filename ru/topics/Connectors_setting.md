@@ -6,6 +6,7 @@
 
 | Коннектор                          | Настройки коннектора                                                      | Графическое конфигурирование                                                                  |
 | ---------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [Alpaca](Alpaca.md)                | [Настройки коннектора Alpaca](AlpacaConnectorsSettings.md)                | [Графическое конфигурирование Alpaca](API_GUI_Settings_Alpaca.md)                             |
 | [AlphaVantage](AlphaVantage.md)    | [Настройки коннектора AlphaVantage](AlphaVantageConnectorsSettings.md)    | [Графическое конфигурирование AlphaVantage](API_GUI_Settings_AlphaVantage.md)                 |
 | [Bachart](BarChart.md)             | [Настройки коннектора BarChart](BarChartConnectorsSettings.md)            | [Графическое конфигурирование BarChart](API_GUI_Settings_Barchart.md)                         |
 | [Blackwood (Fusion)](Blackwood.md) | [Настройки коннектора Blackwood (Fusion)](BlackwoodConnectorsSettings.md) | [Графическое конфигурирование Blackwood (Fusion)](API_GUI_Settings_Fusion%20(Blackwood).md)   |
@@ -18,6 +19,7 @@
 | [IQFeed](IQFeed.md)                | [Настройки коннектора IQFeed](IQFeedConnectorsSettings.md)                | [Графическое конфигурирование IQFeed](API_GUI_Settings_IQFeed.md)                             |
 | [ITCH](ITCH.md)                    | [Настройки коннектора ITCH](ITCHConnectorsSettings.md)                    | [Графическое конфигурирование ITCH](API_GUI_Settings_ITCH.md)                                 |
 | [OpenECry](OEC.md)                 | [Настройки коннектора OpenECry](OpenECryConnectorsSettings.md)            | [Графическое конфигурирование OpenECry](API_GUI_Settings_OpenECry_GainFutures.md)             |
+| [PolygonIO](PolygonIO.md)          | [Настройки коннектора PolygonIO](PolygonIOConnectorsSettings.md)          | [Графическое конфигурирование PolygonIO](API_GUI_Settings_PolygonIO.md)                       |
 | [Quandl](Quandl.md)                | [Настройки коннектора Quandl](QuandlConnectorsSettings.md)                | [Графическое конфигурирование Quandl](API_GUI_Settings_Quandl.md)                             |
 | [QuantFEED](QuantFeed.md)          | [Настройки коннектора QuantFEED](QuantFEEDConnectorsSettings.md)          | [Графическое конфигурирование QuantFEED](API_GUI_Settings_QuantFEED.md)                       |
 | [Rithmic](Rithmic.md)              | [Настройки коннектора Rithmic](RithmicConnectorsSettings.md)              | [Графическое конфигурирование Rithmic](API_GUI_Settings_Rithmic.md)                           |
@@ -69,6 +71,7 @@
 | [Bitexbook](Bitexbook.md)       | [Настройки коннектора Bitexbook](BitexbookConnectorsSettings.md)       | [Графическое конфигурирование Bitexbook](API_GUI_Settings_Bitexbook.md)       |
 | [Bitfinex](Bitfinex.md)         | [Настройки коннектора Bitfinex](BitfinexConnectorsSettings.md)         | [Графическое конфигурирование Bitfinex](API_GUI_Settings_Bitfinex.md)         |
 | [Bithumb](Bithumb.md)           | [Настройки коннектора Bithumb](BithumbConnectorsSettings.md)           | [Графическое конфигурирование Bithumb](API_GUI_Settings_Bithumb.md)           |
+| [Bitmart](BitBitmartMax.md)     | [Настройки коннектора Bitmart](BitmartConnectorsSettings.md)           | [Графическое конфигурирование Bitmart](API_GUI_Settings_Bitmart.md)           |
 | [BitMax](BitMax.md)             | [Настройки коннектора BitMax](BitMaxConnectorsSettings.md)             | [Графическое конфигурирование BitMax](API_GUI_Settings_BitMax.md)             |
 | [BitMEX](Bitmex.md)             | [Настройки коннектора BitMEX](BitMEXConnectorsSettings.md)             | [Графическое конфигурирование BitMEX](API_GUI_Settings_BitMEX.md)             |
 | [BitStamp](BitStamp.md)         | [Настройки коннектора BitStamp](BitStampConnectorsSettings.md)         | [Графическое конфигурирование BitStamp](API_GUI_Settings_Bitstamp.md)         |
