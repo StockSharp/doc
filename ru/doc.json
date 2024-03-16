@@ -48,7 +48,7 @@
         ]
       },
       {
-        "files": ["favicon.ico","logo.png"],
+        "files": ["favicon.ico","logo.svg"],
         "src": "../"
       }
     ],
@@ -56,7 +56,7 @@
     "globalMetadata": {
       "_appFooter": "<span>Copyright © StockSharp.</span>",
       "_appFaviconPath": "favicon.ico",
-      "_appLogoPath": "logo.png",
+      "_appLogoPath": "logo.svg",
       "_enableNewTab": true
     },
     "overwrite": [
