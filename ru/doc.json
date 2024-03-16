@@ -72,7 +72,7 @@
     "dest": "C:/inetpub/wwwroot/doc/ru",
     "template": [
       "default",
-      "../darkfx"
+      "modern"
     ],
     "sitemap": {
         "baseUrl": "https://doc.stocksharp.ru",
