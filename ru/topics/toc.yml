@@ -50,15 +50,24 @@
           href: API_GUI_Settings_Quik LUA Transactions.md
         - name: Инициализация адаптера Quik Lua
           href: QuikLuaFirstStrategy.md
-      - name: SmartCOM (ITI Capital)
-        href: Smart.md
+      - name: Tinkoff
+        href: Tinkoff.md
         items:
-        - name: Настройки коннектора SmartCOM
-          href: SmartCOMConnectorsSettings.md
-        - name: Графическое конфигурирование SmartCOM
-          href: API_GUI_Settings_SmartCOM (ITI Capital).md
-        - name: Инициализация адаптера SmartCOM
-          href: SmartFirstStrategy.md
+        - name: Настройки коннектора Tinkoff
+          href: TinkoffConnectorsSettings.md
+        - name: Графическое конфигурирование Tinkoff
+          href: API_GUI_Settings_Tinkoff.md
+        - name: Инициализация адаптера Tinkoff
+          href: TinkoffSample.md
+      - name: Alor
+        href: Alor.md
+        items:
+        - name: Настройки коннектора Alor
+          href: AlorConnectorsSettings.md
+        - name: Графическое конфигурирование Alor
+          href: API_GUI_Settings_Alor.md
+        - name: Инициализация адаптера Alor
+          href: AlorSample.md
       - name: Plaza II (SPECTRA)
         href: Plaza.md
         items:
@@ -89,6 +98,13 @@
           href: API_GUI_Settings_MMWBTEAP.md
         - name: Инициализация адаптера Micex (TEAP)
           href: MicexSample.md
+      - name: MOEX ISS
+        href: MOEX ISS
+        items:
+        - name: Инициализация адаптера MOEX ISS
+          href: MoexISSSample.md
+        - name: Графическое конфигурирование MOEX ISS
+          href: API_GUI_Settings_MoexISS.md
       - name: MFD.ru
         href: Mfd.md
         items:
@@ -135,6 +151,15 @@
           href: API_GUI_Settings_Finam.md
         - name: Инициализация адаптера Finam
           href: FinamSample.md
+      - name: SmartCOM (ITI Capital)
+        href: Smart.md
+        items:
+        - name: Настройки коннектора SmartCOM
+          href: SmartCOMConnectorsSettings.md
+        - name: Графическое конфигурирование SmartCOM
+          href: API_GUI_Settings_SmartCOM (ITI Capital).md
+        - name: Инициализация адаптера SmartCOM
+          href: SmartFirstStrategy.md
       - name: UX (сайт)
         href: UX.md
         items:

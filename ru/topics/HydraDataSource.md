@@ -34,21 +34,24 @@
 
 | Коннектор                          | Настройки коннектора                                                 | Графическое конфигурирование                                                                            |
 | ---------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [MFD.ru](Mfd.md)                   | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Mfd](API_GUI_Settings_MFD.md)                                             |
-| [Micex (TEAP)](Micex.md)           | [Настройки коннектора Micex (TEAP)](MicexConnectorsSettings.md)      | [Графическое конфигурирование Micex (TEAP)](API_GUI_Settings_MMWBTEAP.md)                               |
-| [Plaza II (SPECTRA)](Plaza.md)     | [Настройки коннектора Plaza II](PlazaConnectorsSettings.md)          | [Графическое конфигурирование Plaza II](API_GUI_Settings_Plaza%202.md)                                  |
 | [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA  Market data](API_GUI_Settings_Quik%20LUA%20%20Market%20data.md) |
 | [QUIK](Quik.md)                    | [Настройка Quik Lua](QuikLua.md)                                     | [Графическое конфигурирование Quik LUA Transactions](API_GUI_Settings_Quik%20LUA%20Transactions.md)     |
+| [Tinkoff](Tinkoff.md)              | [Настройки коннектора Tinkoff](TinkoffConnectorsSettings.md)         | [Графическое конфигурирование Tinkoff](API_GUI_Settings_Tinkoff.md)                                     |
+| [Alor](Alor.md)                    | [Настройки коннектора Alor](AlorConnectorsSettings.md)               | [Графическое конфигурирование Alor](API_GUI_Settings_Alor.md)                                           |
+| [Transaq](Transaq.md)              | [Настройки коннектора Transaq](TransaqConnectorsSettings.md)         | [Графическое конфигурирование Transaq](API_GUI_Settings_Transaq.md)                                     |
+| [Финам](Finam.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Finam](API_GUI_Settings_Finam.md)                                         |
+| [MFD.ru](Mfd.md)                   | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Mfd](API_GUI_Settings_MFD.md)                                             |
+| [MoexISS](MOEX ISS)                | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование MOEX ISS](API_GUI_Settings_MoexISS.md)                                    |
+| [Micex (TEAP)](Micex.md)           | [Настройки коннектора Micex (TEAP)](MicexConnectorsSettings.md)      | [Графическое конфигурирование Micex (TEAP)](API_GUI_Settings_MMWBTEAP.md)                               |
+| [Plaza II (SPECTRA)](Plaza.md)     | [Настройки коннектора Plaza II](PlazaConnectorsSettings.md)          | [Графическое конфигурирование Plaza II](API_GUI_Settings_Plaza%202.md)                                  |
 | [SmartCOM (ITI Capital)](Smart.md) | [Настройки коннектора SmartCOM](SmartCOMConnectorsSettings.md)       | [Графическое конфигурирование SmartCOM](API_GUI_Settings_SmartCOM%20(ITI%20Capital).md)                 |
 | [SPB Exchange](SpbEx.md)           | [Настройки коннектора SPB Exchange](SpbExConnectorsSettings.md)      | [Графическое конфигурирование SPB Exchange](API_GUI_Settings_SPB%20Exchange.md)                         |
-| [Transaq](Transaq.md)              | [Настройки коннектора Transaq](TransaqConnectorsSettings.md)         | [Графическое конфигурирование Transaq](API_GUI_Settings_Transaq.md)                                     |
 | [TWIME](TWIME.md)                  | [Настройки коннектора Twime](TwimeConnectorsSettings.md)             | [Графическое конфигурирование Twime](API_GUI_Settings_TWIME.md)                                         |
 | [UX (сайт)](UX.md)                 | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование UX](API_GUI_Settings_UX%20.md)                                            |
 | [Алор Трейд](AlorHistory.md)       | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование AlorHistory](API_GUI_Settings_AlorHistory.md)                             |
 | [Альфа\-Директ](Alfa.md)           | [Настройка терминала Альфа\-Директ](AlfaConfiguration.md)            | [Графическое конфигурирование Альфа\-Директ](API_GUI_Settings_AlfaDirect.md)                            |
 | [ЛЧИ](LCI.md)                      | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование ЛЧИ](API_GUI_Settings_LCI.md)                                             |
 | [ex РТС (FTP)](RTS.md)             | [Настройки коннектора РТС](RTSConnectorsSettings.md)                 | [Графическое конфигурирование РТС](API_GUI_Settings_RTS.md)                                             |
-| [Финам](Finam.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование Finam](API_GUI_Settings_Finam.md)                                         |
 
 ## Коннекторы Forex
 
