@@ -1,6 +1,6 @@
 # Importing
 
-[S\#.Data](Hydra.md) allows you to import your own data saved in the .csv format. To import, open the **Import** tab, and select the type of exchange data that you want to import.
+[Hydra](Hydra.md) allows you to import your own data saved in the .csv format. To import, open the **Import** tab, and select the type of exchange data that you want to import.
 
 ![hydra import menu](../images/hydra_import_menu.png)
 

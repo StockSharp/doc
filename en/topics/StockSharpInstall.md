@@ -1,6 +1,6 @@
 # Installation instruction
 
-Starting from version 5.0, all installation is done through NuGet. More details, [S\#.API install](https://stocksharp.com/news/266/StockSharp-API-from-Nuget-Manual/)
+Starting from version 5.0, all installation is done through NuGet. More details, [API install](https://stocksharp.com/news/266/StockSharp-API-from-Nuget-Manual/)
 
 > [!CAUTION]
 > The information below is relevant only for versions 4.XXX
@@ -31,7 +31,7 @@ There are two ways to install [S\#](StockSharpAbout.md):
 
    > [!TIP]
    > Another way to open **TOOLS \=\> NuGet Package Manager \=\> Manage NuGet Packages for Solution...** item in the Studio’s main menu.
-2. Select the tab Online **Online** in the opened window and type StockSharp in the search bar. Click Install **Install** after the StockSharp API (S\#.API) installation package found.![stocksharp instalation4](../images/stocksharp_instalation4.png)
+2. Select the tab Online **Online** in the opened window and type StockSharp in the search bar. Click Install **Install** after the StockSharp API (API) installation package found.![stocksharp instalation4](../images/stocksharp_instalation4.png)
 3. “Packages” folder appears in the solution folder after the package installation and the StockSharp.\#.\#.\# folder with the latest [S\#](StockSharpAbout.md) version in it.![stocksharp instalation5](../images/stocksharp_instalation5.png)
 
 ## Recommended content

@@ -1,7 +1,7 @@
 # Setup
 
-1. To install [S\#.Installer](SharpInstaller.md) go to the Download page [Download](https://stocksharp.com/products/download/):![Installer installation](../images/Installer_installation.png)
-2. Download the [S\#.Installer](SharpInstaller.md) distribution package.
+1. To install [Installer](SharpInstaller.md) go to the Download page [Download](https://stocksharp.com/products/download/):![Installer installation](../images/Installer_installation.png)
+2. Download the [Installer](SharpInstaller.md) distribution package.
 3. Unblock (right click on the file, properties) **Installer.zip**.![Installerzip Properties](../images/Installerzip_Properties.png)
 4. Unpack the archive and, in the folder with the unpacked archive, find the **StockSharp.Installer.Console.bat** file. 
 

@@ -4,4 +4,4 @@
 
 ## Recommended content
 
-[Installing S\#.Terminal](Terminal_Installation.md)
+[Installing Terminal](Terminal_Installation.md)

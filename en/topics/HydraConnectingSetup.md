@@ -1,6 +1,6 @@
 # Sources samples
 
-Connection settings in [S\#.Designer](Designer.md), [S\#.Terminal](Terminal.md), [S\#.Data](Hydra.md). 
+Connection settings in [Designer](Designer.md), [Terminal](Terminal.md), [Hydra](Hydra.md). 
 
 You can find out more about connection settings via various connectors [here](API_ConnectorsUIConfiguration.md)
 

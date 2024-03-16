@@ -1,6 +1,6 @@
 # Create new task
 
-[S\#.Data](Hydra.md) is built with the ability to create custom extensions. To add your own extension, you need to copy the dll to the **Plugins** subfolder where [S\#.Data](Hydra.md). is installed. Below is the process of creating a utility for backing up existing data (it is included as standard and is presented as training material). 
+[Hydra](Hydra.md) is built with the ability to create custom extensions. To add your own extension, you need to copy the dll to the **Plugins** subfolder where [Hydra](Hydra.md). is installed. Below is the process of creating a utility for backing up existing data (it is included as standard and is presented as training material). 
 
 Each utility has to implement the [IHydraTask](xref:StockSharp.Hydra.Core.IHydraTask) interface (or inherit from the [BaseHydraTask](xref:StockSharp.Hydra.Core.BaseHydraTask) or [ConnectorHydraTask\`1](xref:StockSharp.Hydra.Core.ConnectorHydraTask`1) classes): 
 
@@ -124,7 +124,7 @@ Each utility has to implement the [IHydraTask](xref:StockSharp.Hydra.Core.IHydra
 		public override IEnumerable<DataType> SupportedDataTypes => Enumerable.Empty<DataType>();
 ```
 
-An important step in creating the utility is the implementation of the [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), method, which implements the utility logic. In the case of implementing data backup, all the logic is inside [S\#.API](StockSharpAbout.md): 
+An important step in creating the utility is the implementation of the [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), method, which implements the utility logic. In the case of implementing data backup, all the logic is inside [API](StockSharpAbout.md): 
 
 ```cs
 	[	

@@ -4,9 +4,9 @@ To run an example in **Live** you will need:
 
 1. Testing terminal **IB Trader Workstation (TWS) Demo** from [Interactive Brokers](IB.md), you can get it on the manufacturer's website.
 
-2. Set the IB TWS Demo terminal for work with [S\#.Designer](Designer.md). See the **IB TWS Setting demo** in the [Interactive Brokers](IB.md) section.
+2. Set the IB TWS Demo terminal for work with [Designer](Designer.md). See the **IB TWS Setting demo** in the [Interactive Brokers](IB.md) section.
 
-3. Set connection to the IB TWS Demo in [S\#.Designer](Designer.md) and connect.
+3. Set connection to the IB TWS Demo in [Designer](Designer.md) and connect.
 
 4. Download history for the required instrument. For example, the **AAPL@NASDAQ** instrument will be used. The strategy will use candles with a time frame of 5 seconds, and history will not be needed, but such a history will be sufficient to demonstrate the possibility.
 
@@ -34,7 +34,7 @@ After clicking the ![Designer Panel Circuits 02](../images/Designer_Panel_Circui
 
 After downloading the entire history from the [Market data storage](Designer_Repository_of_historical_data.md) and the Table of anonymous trades from the terminal, the strategy will start trading.
 
-The chart below shows the trades from [S\#.Designer](Designer.md).
+The chart below shows the trades from [Designer](Designer.md).
 
 ![Designer Example of Live trading 03](../images/Designer_Example_of_Live_trading_03.png)
 

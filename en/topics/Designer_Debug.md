@@ -1,6 +1,6 @@
 # Debugging
 
-In the process of strategies testing, it often becomes necessary to check what data enters the input of a given cube or passed at its output. To do that, the [S\#.Designer](Designer.md) features the **Debugger**.
+In the process of strategies testing, it often becomes necessary to check what data enters the input of a given cube or passed at its output. To do that, the [Designer](Designer.md) features the **Debugger**.
 
 ![Designer Debug 00](../images/Designer_Debug_00.png)
 

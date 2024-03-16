@@ -21,7 +21,7 @@ public MainWindow()
 		
 ```
 
-To configure [Connector](xref:StockSharp.Algo.Connector)**S\#.API** has a special graphical interface in which you can configure several connections at once. How to use it see [Graphical configuration](API_ConnectorsUIConfiguration.md). 
+To configure [Connector](xref:StockSharp.Algo.Connector)**API** has a special graphical interface in which you can configure several connections at once. How to use it see [Graphical configuration](API_ConnectorsUIConfiguration.md). 
 
 ```cs
 ...

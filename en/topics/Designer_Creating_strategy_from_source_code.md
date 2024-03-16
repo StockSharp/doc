@@ -1,6 +1,6 @@
 # First C\# strategy
 
-To create strategies from the source code, you need programming skills in C\#, as well as knowledge of the library for the professional development of trading algorithms in C\# [S\#.API](StockSharpAbout.md).
+To create strategies from the source code, you need programming skills in C\#, as well as knowledge of the library for the professional development of trading algorithms in C\# [API](StockSharpAbout.md).
 
 Creating a strategy from the source code will be discussed on the example of the SMA strategy \- a similar to SMA example\-strategy, compiled from the cubes in the [First strategy](Designer_Algorithm_creation_of_elements.md) section.
 
@@ -40,7 +40,7 @@ The strategy parameters are declared, the SMA indicators parameters will be stor
  private readonly StrategyParam<int> _shortParam;
 ```
 
-Variables necessary for displaying graphic elements are also declared. They do not have a useful information and are shown in the example as a demonstration of possibilities. To display graphic elements, it is better to use [S\#.Designer](Designer.md) standard cubes. How to do this is shown in the [Combine C\# code and visual designer](Designer_Combine_Source_code_and_standard_elements.md) section:
+Variables necessary for displaying graphic elements are also declared. They do not have a useful information and are shown in the example as a demonstration of possibilities. To display graphic elements, it is better to use [Designer](Designer.md) standard cubes. How to do this is shown in the [Combine C\# code and visual designer](Designer_Combine_Source_code_and_standard_elements.md) section:
 
 ```cs
  private readonly List<MyTrade> _myTrades = new List<MyTrade>();

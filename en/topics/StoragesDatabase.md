@@ -1,11 +1,11 @@
 # Database
 
-The work with a database is performed using SQLite. The database is created at first start of [S\#.Data](Hydra.md) and saved (by default) in the
+The work with a database is performed using SQLite. The database is created at first start of [Hydra](Hydra.md) and saved (by default) in the
 
 **My Documents\\StockSharp\\Hydra\\**
 
 > [!TIP]
-> All settings are in the **Hydra.exe.config** file that is in the folder from which [S\#.Data](Hydra.md) is started.
+> All settings are in the **Hydra.exe.config** file that is in the folder from which [Hydra](Hydra.md) is started.
 
 To change the path of the database saving, it is necessary to edit the following part of the **Hydra.exe.config** file:
 
@@ -21,4 +21,4 @@ For example, to replace **%Documents%\\StockSharp\\Hydra\\StockSharp.db** with *
 
 ## Next Steps
 
-[Installing S\#.Data](HydraUsing.md)
+[Installing Hydra](HydraUsing.md)

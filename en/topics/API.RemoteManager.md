@@ -41,8 +41,8 @@ To initialize the server module, the **InitRemoteManagerServer** method must be 
 		
 ```
 
-RemoteManagerControl is implemented in [S\#.Shell](Shell.md). For a detailed description of how to use it, see [RemoteManager](Shell_RemoteManager.md).
+RemoteManagerControl is implemented in [Shell](Shell.md). For a detailed description of how to use it, see [RemoteManager](Shell_RemoteManager.md).
 
 ## Recommended content
 
-[S\#.Shell](Shell.md)
+[Shell](Shell.md)

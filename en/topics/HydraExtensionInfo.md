@@ -1,6 +1,6 @@
 # Extended instrument info
 
-Sources of extended information on instruments are **CSV** files located in the "c:\\Users\\Users\\Documents\\StockSharp\\Hydra\\Extended info\\" folder, which are automatically loaded when [S\#.Data](Hydra.md) starts.
+Sources of extended information on instruments are **CSV** files located in the "c:\\Users\\Users\\Documents\\StockSharp\\Hydra\\Extended info\\" folder, which are automatically loaded when [Hydra](Hydra.md) starts.
 
 Extended information can be any necessary information on an instrument (for example, country, city, board, etc.). 
 

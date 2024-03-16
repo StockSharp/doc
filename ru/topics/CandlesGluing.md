@@ -2,7 +2,7 @@
 
 Для того, чтобы склеить исторические свечи с реал\-тайм, надо инициализировать соответствующие хранилище торговых объектов [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), хранилище маркет\-данных [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) и реестр хранилищ\-снэпшотов [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry). 
 
-Рассмотрим склеивание на примере [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) с использованием тиковых данных, сохраненных с помощью [S\#.Data](Hydra.md):
+Рассмотрим склеивание на примере [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) с использованием тиковых данных, сохраненных с помощью [Hydra](Hydra.md):
 
 ```cs
 private Connector _connector;

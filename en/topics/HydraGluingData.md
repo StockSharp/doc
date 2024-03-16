@@ -1,6 +1,6 @@
 # Continuous futures
 
-The [S\#.Data](Hydra.md) program allows the user to glue different types of market data on different contracts into one continuous instrument.
+The [Hydra](Hydra.md) program allows the user to glue different types of market data on different contracts into one continuous instrument.
 
 To do this, on the **Common** tab, select **Securities**, the **All securities** tab will appear. Before gluing the data, you need to check what market data is available. For this, the path is selected where the data is located and the instruments that are supposed to be glued are viewed in turn. If there are gaps, then you need to download the necessary market data (for example, from **Финам**).
 

@@ -28,7 +28,7 @@
 
 6. В Visual Studio в коде необходимо расставить точки останова. Если точки останова красные и заполненные красным ![Designer Debugging DLL cube using Visual Studio 03](../images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (и Студия в режиме отладки) то значит загрузилась именно та версия dll. А если точки останова красные и заполненные белым ![Designer Debugging DLL cube using Visual Studio 04](../images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (и Студия в режиме отладки), то значит загрузилась не та версия dll. 
 
-7. В примере точка останова стоит в первой строчке метода **public void ProcessCandle(Candle candle)**. При запуске стратегии в [S\#.Designer](Designer.md), как только в DLL кубик начнут передаваться значения свечей, в Visual Studio произойдет остановка в месте установки точки останова. Далее можно будет отследить ход выполнения кода:
+7. В примере точка останова стоит в первой строчке метода **public void ProcessCandle(Candle candle)**. При запуске стратегии в [Designer](Designer.md), как только в DLL кубик начнут передаваться значения свечей, в Visual Studio произойдет остановка в месте установки точки останова. Далее можно будет отследить ход выполнения кода:
 
 ![Designer Debugging DLL cube using Visual Studio 05](../images/Designer_Debugging_DLL_using_Visual_Studio_05.png)
 

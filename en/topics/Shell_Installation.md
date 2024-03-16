@@ -1,3 +1,3 @@
-# Installing S\#.Shell
+# Installing Shell
 
-[Install  and remove apps](Installer_installing_removing_programs.md)
+[Install and remove apps](Installer_installing_removing_programs.md)

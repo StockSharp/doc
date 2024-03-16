@@ -4,4 +4,4 @@
 
 ## Recommended content
 
-[Installing S\#.Designer](Designer_Installation.md)
+[Installing Designer](Designer_Installation.md)

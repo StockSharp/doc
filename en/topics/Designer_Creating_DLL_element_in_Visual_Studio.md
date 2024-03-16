@@ -4,7 +4,7 @@ To write code in Visual Studio, you should create a project in Visual Studio:
 
 ![Designer Creating a DLL cube in Visual Studio 00](../images/Designer_Creating_DLL_element_in_Visual_Studio_00.png)
 
-It is necessary to install [S\#.API](StockSharpAbout.md) in the created project. There are two ways to install [S\#.API](StockSharpAbout.md): Installing from the [StockSharp Releases](https://github.com/StockSharp/StockSharp/releases/) repository of the GitHub web service and installing from Visual Studio using the Nuget service. The installation of [S\#.API](StockSharpAbout.md) is described in the [Installation instruction](StockSharpInstall.md) section. 
+It is necessary to install [API](StockSharpAbout.md) in the created project. There are two ways to install [API](StockSharpAbout.md): Installing from the [StockSharp Releases](https://github.com/StockSharp/StockSharp/releases/) repository of the GitHub web service and installing from Visual Studio using the Nuget service. The installation of [API](StockSharpAbout.md) is described in the [Installation instruction](StockSharpInstall.md) section. 
 
 From now forward, the process of a strategy creating is the same as described in the [First C\# strategy](Designer_Creating_strategy_from_source_code.md) section. After creating the strategy, you need to compile the project by clicking **Build Solution** in the **Build** tab.
 

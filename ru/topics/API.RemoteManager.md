@@ -41,8 +41,8 @@ RemoteManagerControl.InitRemoteManagerClient(Connector);
 		
 ```
 
-RemoteManagerControl реализован в [S\#.Shell](Shell.md). Подробное описание как им пользоваться можно посмотреть в пункте [RemoteManager](Shell_RemoteManager.md).
+RemoteManagerControl реализован в [Shell](Shell.md). Подробное описание как им пользоваться можно посмотреть в пункте [RemoteManager](Shell_RemoteManager.md).
 
 ## См. также
 
-[S\#.Shell](Shell.md)
+[Shell](Shell.md)

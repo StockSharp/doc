@@ -2,7 +2,7 @@
 
 For team work, it's convenient to use the built\-in **Chat**, which is a popular **Telegram** messenger in the Web interface.
 
-Using the [S\#.Designer](Designer.md) chat on the basis of the **Telegram** messenger has the following advantages:
+Using the [Designer](Designer.md) chat on the basis of the **Telegram** messenger has the following advantages:
 
 - Protection against unauthorized reading is provided through the use of the MTProto communication protocol.
 - Secret chats provide end\-to\-end encryption, the history of which is not stored on any server, providing anonymity of correspondence.
@@ -12,7 +12,7 @@ Using the [S\#.Designer](Designer.md) chat on the basis of the **Telegram** mess
 - The Telegram messenger works on IPhone, Android, WindowsPhone. There are online and desktop versions. There is an ability of synchronization between devices.
 - Creation of large chats \- up to 5000 members.
 
-When you first open the **Chat**, an authorization page appears, where you need to enter your phone number and wait for the SMS with the activation code. After authorization, you get a full\-featured **Telegram** messenger directly in the [S\#.Designer](Designer.md).
+When you first open the **Chat**, an authorization page appears, where you need to enter your phone number and wait for the SMS with the activation code. After authorization, you get a full\-featured **Telegram** messenger directly in the [Designer](Designer.md).
 
 ![Designer Chat](../images/Designer_Chat.png)
 

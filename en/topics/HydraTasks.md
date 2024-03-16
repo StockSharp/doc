@@ -6,7 +6,7 @@ To view the list of tools, select the **Tools** item in the left pane. Work with
 
 ![hydra tasks](../images/hydra_tasks.png)
 
-Currently, there are four classes of tasks in [S\#.Data](Hydra.md)
+Currently, there are four classes of tasks in [Hydra](Hydra.md)
 
 - [Import (auto)](HydraTasksImport.md) \- the task is to import data from CSV format. 
 - [Converter](HydraTasksConverter.md) \- the task is to convert the exchange data to the ticks, candles or order books. 

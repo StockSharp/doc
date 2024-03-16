@@ -1,10 +1,10 @@
 # Data sources
 
-[S\#.Data](Hydra.md) has connections to various data sources. In addition to receiving historical data, the program can receive market data from brokers, while market data is received in real time. Connection to the sources is carried out using the connectors provided to the user. 
+[Hydra](Hydra.md) has connections to various data sources. In addition to receiving historical data, the program can receive market data from brokers, while market data is received in real time. Connection to the sources is carried out using the connectors provided to the user. 
 
 The user is provided with free connectors, and he can also purchase paid ones, which allow receiving market data from paid sources.
 
-At the moment, [S\#.Data](Hydra.md) supports the following sources:
+At the moment, [Hydra](Hydra.md) supports the following sources:
 
 ## Stock, Futures and Options
 

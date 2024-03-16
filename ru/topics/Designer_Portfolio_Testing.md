@@ -1,6 +1,6 @@
 # Портфельное тестирование
 
-В [S\#.Designer](Designer.md) есть возможность протестировать одну стратегию на разных инструментах одновременно. Для этого необходимо нажать кнопку [Оптимизация](Designer_Optimization.md).
+В [Designer](Designer.md) есть возможность протестировать одну стратегию на разных инструментах одновременно. Для этого необходимо нажать кнопку [Оптимизация](Designer_Optimization.md).
 
 ![Designer Portfolio testing](../images/Designer_Portfolio_testing.png)
 

@@ -1,6 +1,6 @@
 # Getting historical data
 
-[S\#.API](StockSharpAbout.md) provides an opportunity to receive historical candles, which can be used both for testing and for building [Indicators](Indicators.md). 
+[API](StockSharpAbout.md) provides an opportunity to receive historical candles, which can be used both for testing and for building [Indicators](Indicators.md). 
 
 ## Working with historical candles through Connector
 

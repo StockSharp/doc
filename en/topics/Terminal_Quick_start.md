@@ -1,6 +1,6 @@
 # Quick start
 
-When you start [S\#.Terminal](Terminal.md) for the first time, the following window will be displayed:
+When you start [Terminal](Terminal.md) for the first time, the following window will be displayed:
 
 ![Terminal Quick start 00](../images/Terminal_Quick_start_00.png)
 

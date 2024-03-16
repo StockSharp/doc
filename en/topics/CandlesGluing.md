@@ -2,7 +2,7 @@
 
 In order to glue historical candles with a real\-time, it is necessary to initialize the corresponding storage of trade objects [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), storage of market data [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) and registry of snapshot storage [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry). 
 
-Consider the following example of gluing [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) using the tick data saved with [S\#.Data](Hydra.md):
+Consider the following example of gluing [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) using the tick data saved with [Hydra](Hydra.md):
 
 ```cs
 private Connector _connector;

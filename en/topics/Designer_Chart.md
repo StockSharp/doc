@@ -20,7 +20,7 @@ There is a toolbar above the chart, where you can select auto scroll, auto\-zoom
 
 ![Designer Schedule 03](../images/Designer_Schedule_03.png)
 
-[S\#.Designer](Designer.md) provides the ability to publish, as well as automatically publish charts, as described in the [Share images for charts and tables](Designer_publish.md) section.
+[Designer](Designer.md) provides the ability to publish, as well as automatically publish charts, as described in the [Share images for charts and tables](Designer_publish.md) section.
 
 ## Recommended content
 

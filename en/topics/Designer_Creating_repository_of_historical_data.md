@@ -10,11 +10,11 @@ Local storage \- when all data is stored on local computer. To set the local sto
 
 Remote storage may be located on the remote computer. To set the remote storage you have to set the remote storage address, login and password, if necessary. 
 
-You can reproduce the remote storage on a local machine, using the [S\#.Data](Hydra.md) software (code name Hydra), designed for automatic loading of market data (instruments, candles, tick trades and order books etc.) from various source and for storing them in the local storage. To do that, switch [S\#.Data](Hydra.md) into a the server mode, such functionality is available in the extended license ([StockSharp Licensing](License.md)).
+You can reproduce the remote storage on a local machine, using the [Hydra](Hydra.md) software (code name Hydra), designed for automatic loading of market data (instruments, candles, tick trades and order books etc.) from various source and for storing them in the local storage. To do that, switch [Hydra](Hydra.md) into a the server mode, such functionality is available in the extended license ([StockSharp Licensing](License.md)).
 
 ![Designer Creating a repository of historical data 04](../images/Designer_Creating_repository_of_historical_data_04.png)
 
-After that, in [S\#.Designer](Designer.md), create new storage by clicking the ![Designer Creating a repository of historical data 00](../images/Designer_Creating_repository_of_historical_data_00.png) button. In the storage settings in the address field, specify "net.tcp:\/\/localhost:8000". Click OK. When using [S\#.Data](Hydra.md) as a remote storage, don't forget, that [S\#.Data](Hydra.md) shall be started up and configured accordingly.
+After that, in [Designer](Designer.md), create new storage by clicking the ![Designer Creating a repository of historical data 00](../images/Designer_Creating_repository_of_historical_data_00.png) button. In the storage settings in the address field, specify "net.tcp:\/\/localhost:8000". Click OK. When using [Hydra](Hydra.md) as a remote storage, don't forget, that [Hydra](Hydra.md) shall be started up and configured accordingly.
 
 ![Designer Creating a repository of historical data 05](../images/Designer_Creating_repository_of_historical_data_05.png)
 

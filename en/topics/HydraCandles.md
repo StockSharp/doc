@@ -1,6 +1,6 @@
 # Candles generation
 
-[S\#.Data](Hydra.md) allows you to generate candles based on downloaded trades, which can later be exported to [Excel](https://en.wikipedia.org/wiki/Excel), xml, sql, bin, Json or txt formats (see below). 
+[Hydra](Hydra.md) allows you to generate candles based on downloaded trades, which can later be exported to [Excel](https://en.wikipedia.org/wiki/Excel), xml, sql, bin, Json or txt formats (see below). 
 
 This allows you to subsequently use the data in any technical analysis programs (WealthLab, AmiBroker, etc.).
 

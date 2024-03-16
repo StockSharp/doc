@@ -19,7 +19,7 @@ The task converts exchange data. For example, from the Order Logs to ticks or fr
 - **Depth** \- maximum depth of order book generation. 
 - **Order log** \- how to build order books from the order log. 
 
-  Each exchange has its own **Order Log** format, the [S\#.Data](Hydra.md) program supports three formats:
+  Each exchange has its own **Order Log** format, the [Hydra](Hydra.md) program supports three formats:
   - **By default** \- is used in most cases.
   - **ITCH** \- is used for the ITCH protocol (exchanges: LSE and Nasdaq).
   - **Plaza** \- used for the Moscow Exchange.

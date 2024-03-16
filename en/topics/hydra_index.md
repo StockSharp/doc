@@ -1,6 +1,6 @@
 # Index
 
-With [S\#.Data](Hydra.md), you can create your own index.
+With [Hydra](Hydra.md), you can create your own index.
 
 To do this, on the **Common** tab, you need to select **Securities**, the **All Securities** tab will appear.
 

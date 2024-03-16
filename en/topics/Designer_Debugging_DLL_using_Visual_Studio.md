@@ -28,7 +28,7 @@ If the process is running from a different user account, you should select the *
 
 6. In Visual Studio, you need to set breakpoints in code. If the breakpoints are red and filled with red ![Designer Debugging DLL cube using Visual Studio 03](../images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (and the Studio is in debug mode) then it means that correct version of dll was loaded. And if the breakpoints are red and filled with white ![Designer Debugging DLL cube using Visual Studio 04](../images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (and Studio is in debug mode), then it means that wrong version of dll was loaded.
 
-7. In the example, the breakpoint is in the first line of the **public void ProcessCandle(Candle candle**) method. When you run the strategy in [S\#.Designer](Designer.md), as soon as the candle values start to be passed to the DLL cube, Visual Studio stops at the point where the breakpoint is set. Next, you can trace the code progress:
+7. In the example, the breakpoint is in the first line of the **public void ProcessCandle(Candle candle**) method. When you run the strategy in [Designer](Designer.md), as soon as the candle values start to be passed to the DLL cube, Visual Studio stops at the point where the breakpoint is set. Next, you can trace the code progress:
 
 ![Designer Debugging DLL cube using Visual Studio 05](../images/Designer_Debugging_DLL_using_Visual_Studio_05.png)
 

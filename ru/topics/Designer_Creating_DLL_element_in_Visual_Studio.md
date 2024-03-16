@@ -4,7 +4,7 @@
 
 ![Designer Creating a DLL cube in Visual Studio 00](../images/Designer_Creating_DLL_element_in_Visual_Studio_00.png)
 
-В созданный проект необходимо установить [S\#.API](StockSharpAbout.md). Существуют два способа установки [S\#.API](StockSharpAbout.md): Установка из репозитория GitHub\/StockSharp с веб\-сервиса GitHub [StockSharp Releases](https://github.com/StockSharp/StockSharp/releases/) и установка из Visual Studio при помощи сервиса Nuget. Об установке [S\#.API](StockSharpAbout.md) описано в пункте [Установка S\#.API](StockSharpInstall.md). 
+В созданный проект необходимо установить [API](StockSharpAbout.md). Существуют два способа установки [API](StockSharpAbout.md): Установка из репозитория GitHub\/StockSharp с веб\-сервиса GitHub [StockSharp Releases](https://github.com/StockSharp/StockSharp/releases/) и установка из Visual Studio при помощи сервиса Nuget. Об установке [API](StockSharpAbout.md) описано в пункте [Установка API](StockSharpInstall.md). 
 
 В дальнейшем процесс создания стратегии не отличается от описанного в пункте [Пример стратегии на C\#](Designer_Creating_strategy_from_source_code.md). После создания стратегии необходимо собрать проект, нажав **Собрать решение** во вкладке **Сборка**.
 

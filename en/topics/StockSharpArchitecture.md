@@ -1,9 +1,9 @@
-# Architecture S\#.API
+# Architecture API
 
-[S\#.API](StockSharpAbout.md) \- a free library for beginners and professionals in the field of algorithmic trading. [S\#.API](StockSharpAbout.md) is focused on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language programming. 
+[API](StockSharpAbout.md) \- a free library for beginners and professionals in the field of algorithmic trading. [API](StockSharpAbout.md) is focused on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language programming. 
 
 1. Quickly (a few hours) and reliably to move from one connection to another (for example, from [Interactive Brokers](IB.md) to [OpenECry](OEC.md)). 
-2. There is no need to rewrite the trading algorithm after the release of a new version of the gateway to the broker. [S\#.API](StockSharpAbout.md) updated regularly \- see [Releases History](https://github.com/stocksharp/stocksharp/blob/master/_ReleaseNotes/CHANGE_LOG_API.md). 
+2. There is no need to rewrite the trading algorithm after the release of a new version of the gateway to the broker. [API](StockSharpAbout.md) updated regularly \- see [Releases History](https://github.com/stocksharp/stocksharp/blob/master/_ReleaseNotes/CHANGE_LOG_API.md). 
 3. Algorithm code has a unified format (HFT or position trading). 
 4. Big community unites different algorithmic traders, regardless of board, broker or connection type. 
 5. The increase of customers for trading strategies developers. 

@@ -1,6 +1,6 @@
 # Эспорт маркет\-данных
 
-[S\#.Data](Hydra.md) позволяет экспортировать полученные маркет данные в различные форматы, в том числе в [форматы данных TSLab и MetaStock](Hydra_Export_TSLab_MetaStock.md).
+[Hydra](Hydra.md) позволяет экспортировать полученные маркет данные в различные форматы, в том числе в [форматы данных TSLab и MetaStock](Hydra_Export_TSLab_MetaStock.md).
 
 Для экспорта данных используются файлы форматов [Excel](https://ru.wikipedia.org/wiki/Excel), xml, bin, txt, Json или в таблицы SQL.
 

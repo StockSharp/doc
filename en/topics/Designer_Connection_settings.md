@@ -14,9 +14,9 @@ The Connection settings window is divided to 3 areas.
 
 The **Market data** and **Trades** display, whether the connector supports market data and work with orders.
 
-4. When the **Auto\-connect** check box is selected, the connection is automatically connected with the start of the [S\#.Designer](Designer.md).
+4. When the **Auto\-connect** check box is selected, the connection is automatically connected with the start of the [Designer](Designer.md).
 
-5. The area No. 2 displays the selected connector settings. When the ![Designer The connection settings 09](../images/Designer_connection_settings_09.png) is clicked, the program redirects to documentation ([S\#.API](StockSharpAbout.md)) on the selected connector adjustment.
+5. The area No. 2 displays the selected connector settings. When the ![Designer The connection settings 09](../images/Designer_connection_settings_09.png) is clicked, the program redirects to documentation ([API](StockSharpAbout.md)) on the selected connector adjustment.
 
 6. Clicking the **Check** button will check the current connector connection. If the check fails, a window with an error will appear, describing the reason for the unsuccessful connection. If the check is successful, a window will appear:
 

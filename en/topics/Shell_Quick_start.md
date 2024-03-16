@@ -1,14 +1,14 @@
 # Quick start
 
-[S\#.Shell](Shell.md) \- \- is focused on programming in [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
+[Shell](Shell.md) \- \- is focused on programming in [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
 
-When you start the [S\#.Shell](Shell.md) project, the solution explorer displays the Shell project:
+When you start the [Shell](Shell.md) project, the solution explorer displays the Shell project:
 
 ![Shell Quick start 00](../images/Shell_Quick_start_00.png)
 
-The **Strategies** folder contains three strategies included in [S\#.Shell](Shell.md), a shell for default strategies, as well as some auxiliary interfaces.
+The **Strategies** folder contains three strategies included in [Shell](Shell.md), a shell for default strategies, as well as some auxiliary interfaces.
 
-The project can be launched without preliminary preparation and see its operation on strategies that are already included in [S\#.Shell](Shell.md).
+The project can be launched without preliminary preparation and see its operation on strategies that are already included in [Shell](Shell.md).
 
 After launch, we will see a window like this:
 

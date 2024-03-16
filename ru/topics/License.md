@@ -6,10 +6,10 @@
 
 Предоставляется бесплатно и пожизненно всем желающим Для этого необходимо только [пройти регистрацию\!](https://stocksharp.ru/register/) Эта лицензия включает: 
 
-1. [S\#.Designer](Designer.md)
-2. [S\#.Data](Hydra.md)
-3. [S\#.Terminal](Terminal.md)
-4. [S\#.API](StockSharpAbout.md)
+1. [Designer](Designer.md)
+2. [Hydra](Hydra.md)
+3. [Terminal](Terminal.md)
+4. [API](StockSharpAbout.md)
 
 Cм. также [Установка StockSharp](StockSharpInstall.md).
 
@@ -22,8 +22,8 @@ Cм. также [Установка StockSharp](StockSharpInstall.md).
 1. Готовые торговые стратегии (хеджирование опционов, маркет\-мэйкинг, котирование, скользящие стоп и тейк защиты и т.д.).
 2. Подключение до 3 программ одновременно к одному терминалу QUIK.
 3. Order Log.
-4. S\#.Data server.
-5. [S\#.Shell](https://stocksharp.ru/products/shell/) исходные коды.
+4. Hydra server.
+5. [Shell](https://stocksharp.ru/products/shell/) исходные коды.
 6. Расширенные примеры.
 7. 40+ часов видео\-уроков.
 8. Техподдержка от StockSharp.
@@ -42,6 +42,6 @@ Cм. также [Установка StockSharp](StockSharpInstall.md).
 
 **Корпоративная плюс**
 
-Включает в себя исходные коды любого из наших готовых программных решений ([S\#.Data](Hydra.md), [S\#.Designer](Designer.md), [S\#.Shell](https://stocksharp.ru/products/shell/)), а также исходные коды самой платформы: [S\#.API](StockSharpAbout.md).
+Включает в себя исходные коды любого из наших готовых программных решений ([Hydra](Hydra.md), [Designer](Designer.md), [Shell](https://stocksharp.ru/products/shell/)), а также исходные коды самой платформы: [API](StockSharpAbout.md).
 
 Подробную информацию о лицензиях см. [StockSharp Стоимость](https://stocksharp.ru/products/pricing/). 

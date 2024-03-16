@@ -1,12 +1,12 @@
-# S\#.MT4 and S\#.MT5
+# MT4 and MT5
 
-[S\#](StockSharpAbout.md) provides ingtegration with MT4 and MT5 terminals via special connectors. To install connectors need use [S\#.Installer](SharpInstaller.md) (more [Install  and remove apps](Installer_installing_removing_programs.md)).
+[S\#](StockSharpAbout.md) provides ingtegration with MT4 and MT5 terminals via special connectors. To install connectors need use [Installer](SharpInstaller.md) (more [Install  and remove apps](Installer_installing_removing_programs.md)).
 
 Both connectors are used in the same way, so below I will describe the process of connecting to MT4:
 
 ## MT connector setup
 
-1. All MT files should be installed to the folder *C:\\Users\\%user\_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%a lot of letters and numbers%\\MQL4\\Experts\\* (in case of MT5 the path will contain MQL5). The structure eventually should look like this (root folder contains the MQL script and MT connector, StockSharp sub\-folder contains necessary S\#.API files:![MT 0](../images/MT_0.png)
+1. All MT files should be installed to the folder *C:\\Users\\%user\_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%a lot of letters and numbers%\\MQL4\\Experts\\* (in case of MT5 the path will contain MQL5). The structure eventually should look like this (root folder contains the MQL script and MT connector, StockSharp sub\-folder contains necessary API files:![MT 0](../images/MT_0.png)
 2. Start MT terminal and connect to trading.
 3. In menu Tools\-\>Options select **Experts Advisors** tab and make sure you have enabled permission for external dll trading (**Allow DLL imports**):![MT 1](../images/MT_1.png)
 4. If during the installation of the connector (пункт 2) the terminal was running, then you need to update the list of experts by right\-clicking on Experts and selecting in the **Refresh** menu item:![MT 2](../images/MT_2.png)
@@ -16,9 +16,9 @@ Both connectors are used in the same way, so below I will describe the process o
 
    And also in the expert logs window should appear information about the successful launch of the script.
 8. If MT4 or MT5 license is not valid, then the following line will appear in the log:![MT 5](../images/MT_5.png)
-9. Connection to the MT is made via the FIX protocol, us uses [FIX protocol](Fix.md) connector. The app [S\#.Terminal](Terminal.md) is used as a demonstration. Below are the settings for transactional and market data connections (in case of MT5 by default port is 23001 instead of 23000):![MT 6](../images/MT_6.png)![MT 7](../images/MT_7.png)
+9. Connection to the MT is made via the FIX protocol, us uses [FIX protocol](Fix.md) connector. The app [Terminal](Terminal.md) is used as a demonstration. Below are the settings for transactional and market data connections (in case of MT5 by default port is 23001 instead of 23000):![MT 6](../images/MT_6.png)![MT 7](../images/MT_7.png)
 
-   The same settings should be done in [S\#.Designer](Designer.md), [S\#.Data](Hydra.md) or any other apps uses S\#.API.
+   The same settings should be done in [Designer](Designer.md), [Hydra](Hydra.md) or any other apps uses API.
 
    Leave login and password are blank in case of anonymous access (prev step). In case of connection to MT by multiple applications, it is necessary to specify a unique login to identify different connections
 

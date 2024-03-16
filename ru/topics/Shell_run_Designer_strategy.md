@@ -1,8 +1,8 @@
-# Запуск стратегии созданной в S\#.Designer
+# Запуск стратегии созданной в Designer
 
-[S\#.Shell](Shell.md) может запускать стратегии созданные в [S\#.Designer](Designer.md).
+[Shell](Shell.md) может запускать стратегии созданные в [Designer](Designer.md).
 
-Для запуска стратегии, созданной в[S\#.Designer](Designer.md) необходимо выбрать ее на вкладке [Реал\-тайм](Shell_RealTime.md) выбрать кнопку добавить и нажать на кнопку **Add Designer strategy**. В появившемся окне выбрать файл стратегии, экспортированной из [S\#.Designer](Designer.md). 
+Для запуска стратегии, созданной в[Designer](Designer.md) необходимо выбрать ее на вкладке [Реал\-тайм](Shell_RealTime.md) выбрать кнопку добавить и нажать на кнопку **Add Designer strategy**. В появившемся окне выбрать файл стратегии, экспортированной из [Designer](Designer.md). 
 
 ![Shell run Designer strategy 00](../images/Shell_run_Designer_strategy_00.png)
 

@@ -1,10 +1,10 @@
 # Getting started
 
-You can create your own cube in [S\#.Designer](Designer.md) by clicking the right mouse button on the **Source code** folder in the **Schemas** panel. In the menu that appears, select **Add** in case of creating a new strategy or **Import** in case of importing an already completed strategy.
+You can create your own cube in [Designer](Designer.md) by clicking the right mouse button on the **Source code** folder in the **Schemas** panel. In the menu that appears, select **Add** in case of creating a new strategy or **Import** in case of importing an already completed strategy.
 
 ![Designer The creation of the cube containing the source code 00](../images/Designer_creation_of_element_containing_source_code_00.png)
 
-Also in [S\#.Designer](Designer.md), you can create your own cube in the **Common** tab by clicking the **Add** button, and choose **Source code** in the appeared menu:
+Also in [Designer](Designer.md), you can create your own cube in the **Common** tab by clicking the **Add** button, and choose **Source code** in the appeared menu:
 
 ![Designer The creation of the cube containing the source code 01](../images/Designer_creation_of_element_containing_source_code_01.png)
 

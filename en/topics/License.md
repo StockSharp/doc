@@ -6,10 +6,10 @@
 
 Free and for everyone. You do not need to generate and download license files\! Just [complete the registration\!](https://stocksharp.com/register/) It's include: 
 
-1. [S\#.Designer](Designer.md)
-2. [S\#.Data](Hydra.md)
-3. [S\#.Terminal](Terminal.md)
-4. [S\#.API](StockSharpAbout.md)
+1. [Designer](Designer.md)
+2. [Hydra](Hydra.md)
+3. [Terminal](Terminal.md)
+4. [API](StockSharpAbout.md)
 
 See also [StockSharp installation](StockSharpInstall.md).
 
@@ -21,8 +21,8 @@ See also [StockSharp installation](StockSharpInstall.md).
 
 1. Ready\-to\-use trading strategies (option hedging, market\-making, quoting, trailing stop and take\-profit, etc.).
 2. Order Log.
-3. S\#.Data server.
-4. [S\#.Shell](https://stocksharp.com/products/shell/) source code.
+3. Hydra server.
+4. [Shell](https://stocksharp.com/products/shell/) source code.
 5. Extended samples.
 6. 40+ hours video training.
 7. Premium support.
@@ -38,6 +38,6 @@ HFT connectors has perpetual license with one year upgrade subscription option.
 
 **Source codes**
 
-Includes any of our ready\-to\-use applications ([S\#.Data](Hydra.md), [S\#.Designer](Designer.md), [S\#.Shell](https://stocksharp.com/products/shell/)), and the whole [S\#.API](StockSharpAbout.md).
+Includes any of our ready\-to\-use applications ([Hydra](Hydra.md), [Designer](Designer.md), [Shell](https://stocksharp.com/products/shell/)), and the whole [API](StockSharpAbout.md).
 
 For more details please visit the [StockSharp Pricing](https://stocksharp.com/products/pricing/). 

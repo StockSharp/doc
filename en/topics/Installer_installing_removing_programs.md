@@ -1,6 +1,6 @@
 # Install  and remove apps
 
-The [S\#.Installer](SharpInstaller.md) program allows you to select the application type to find the product you need.
+The [Installer](SharpInstaller.md) program allows you to select the application type to find the product you need.
 
 ![choose installer](../images/choose_installer.png)
 

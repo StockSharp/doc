@@ -1,6 +1,6 @@
 # Portfolio optimization
 
-The [S\#.Designer](Designer.md) features ability to test one strategy on various securities at the same time. To do that, click the [Optimization](Designer_Optimization.md) button.
+The [Designer](Designer.md) features ability to test one strategy on various securities at the same time. To do that, click the [Optimization](Designer_Optimization.md) button.
 
 ![Designer Portfolio testing](../images/Designer_Portfolio_testing.png)
 

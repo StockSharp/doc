@@ -4,4 +4,4 @@
 
 ## См. также
 
-[Установка S\#.Designer](Designer_Installation.md)
+[Установка Designer](Designer_Installation.md)

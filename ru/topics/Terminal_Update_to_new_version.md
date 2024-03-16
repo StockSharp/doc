@@ -4,4 +4,4 @@
 
 ## См. также
 
-[Установка S\#.Terminal](Terminal_Installation.md)
+[Установка Terminal](Terminal_Installation.md)

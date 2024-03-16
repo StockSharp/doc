@@ -1,8 +1,8 @@
 # FIX\/FAST connectivity
 
-[S\#.Data](Hydra.md) can be used in server mode, in this mode it is possible remotely to connect to [S\#.Data](Hydra.md) and get the data available in the storage. The activation of the [S\#.Data](Hydra.md) server mode is described in the [Settings](HydraSettings.md) item.
+[Hydra](Hydra.md) can be used in server mode, in this mode it is possible remotely to connect to [Hydra](Hydra.md) and get the data available in the storage. The activation of the [Hydra](Hydra.md) server mode is described in the [Settings](HydraSettings.md) item.
 
-To connect via [FIX protocol](Fix.md) , you need to create and configure FixTrader ([Adapter initialization FIX](FixSample.md)).
+To connect via [FIX protocol](Fix.md) , you need to create and configure Fix connector ([Adapter initialization FIX](FixSample.md)).
 
 ```cs
 ...

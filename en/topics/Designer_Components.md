@@ -1,6 +1,6 @@
 # Components
 
-During testing or trade there is a need to fully control the process. For complete control and analysis, [S\#.Designer](Designer.md) provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
+During testing or trade there is a need to fully control the process. For complete control and analysis, [Designer](Designer.md) provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
 
 ![Designer Components](../images/Designer_Components.png)
 

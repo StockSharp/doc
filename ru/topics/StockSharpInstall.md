@@ -1,6 +1,6 @@
-# Установка S\#.API
+# Установка API
 
-Начиная с версии 5.0, вся установка производится через NuGet. Подробнее, [Установка S\#.API](https://stocksharp.ru/news/265/rukovodstvo-po-nuget/)
+Начиная с версии 5.0, вся установка производится через NuGet. Подробнее, [Установка API](https://stocksharp.ru/news/265/rukovodstvo-po-nuget/)
 
 > [!CAUTION]
 > Информация ниже актуальна только для версий 4.XXX
@@ -31,7 +31,7 @@
 
    > [!TIP]
    > Другой способ открыть NuGet Manage Packages \- выбрать пункт **TOOLS \=\> NuGet Package Manager \=\> Manage NuGet Packages for Solution...** из главного меню студии.
-2. В открывшемся окне выбрать закладку **Online** и набрать в строке поиска StockSharp. После того как будет найден пакет для установки StockSharp API (S\#.API) нажать кнопку **Install**.![stocksharp instalation4](../images/stocksharp_instalation4.png)
+2. В открывшемся окне выбрать закладку **Online** и набрать в строке поиска StockSharp. После того как будет найден пакет для установки StockSharp API (API) нажать кнопку **Install**.![stocksharp instalation4](../images/stocksharp_instalation4.png)
 3. После установки пакета в папке с решением появится папка packages, а в ней папка StockSharp.\#.\#.\# с последней версией [S\#](StockSharpAbout.md).![stocksharp instalation5](../images/stocksharp_instalation5.png)
 
 ## См. также

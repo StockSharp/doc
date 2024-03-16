@@ -4,7 +4,7 @@
 
 - C\# and S\# training \- [StockSharp Education](https://stocksharp.com/edu/). 
 - Source code of S\# core \- [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). 
-- Host application for trading algorithms with source code \- [S\#.Shell](https://stocksharp.com/products/shell/). 
+- Host application for trading algorithms with source code \- [Shell](https://stocksharp.com/products/shell/). 
 
 **Contacts:**
 

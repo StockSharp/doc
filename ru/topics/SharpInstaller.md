@@ -1,15 +1,15 @@
-# S\#.Installer
+# Installer
 
-**S\#.Installer** \- центр управления всеми программами и приложениями от **StockSharp**, позволяющее: 
+**Installer** \- центр управления всеми программами и приложениями от **StockSharp**, позволяющее: 
 
-- скачать и установить [S\#.Designer](Designer.md), [S\#.Terminal](Terminal.md), [S\#.Data (Hydra)](Hydra.md)
+- скачать и установить [Designer](Designer.md), [Terminal](Terminal.md), [Hydra](Hydra.md)
 - установить коннектор [QUIK](Quik.md)
-- купить и установить коннекторы [S\#.MT4 и S\#.MT5](MT.md), [S\#.MatLab](MatLab.md)
+- купить и установить коннекторы [MT4 и MT5](MT.md), [MatLab](MatLab.md)
 - купить и установить дополнительный софт
 - устанавливать программы вместе с купленными коннекторами
 - отслеживать процесс покупки новых программ
-- скачать библиотеку [S\#.API](StockSharpAbout.md) и автоматически отслеживает ее обновления
-- скачать купленные уроки обучения, программу [S\#.Shell](Shell.md).
+- скачать библиотеку [API](StockSharpAbout.md) и автоматически отслеживает ее обновления
+- скачать купленные уроки обучения, программу [Shell](Shell.md).
 
 ![first win installer](../images/first_win_installer.png)
 

@@ -1,6 +1,6 @@
 # Создание утилит
 
-Программа [S\#.Data](Hydra.md) построена с возможностью создания собственных расширений. Для добавления собственного расширения необходимо скопировать dll в подпапку **Plugins** где установлена [S\#.Data](Hydra.md). Ниже представлен процесс создания утилиты резервирования имеющихся данных (она входит стандартно и представлена в качестве обучающего материала). 
+Программа [Hydra](Hydra.md) построена с возможностью создания собственных расширений. Для добавления собственного расширения необходимо скопировать dll в подпапку **Plugins** где установлена [Hydra](Hydra.md). Ниже представлен процесс создания утилиты резервирования имеющихся данных (она входит стандартно и представлена в качестве обучающего материала). 
 
 Каждая утилита должна реализовать интерфейс [IHydraTask](xref:StockSharp.Hydra.Core.IHydraTask) (или наследоваться от классов [BaseHydraTask](xref:StockSharp.Hydra.Core.BaseHydraTask) или [ConnectorHydraTask\`1](xref:StockSharp.Hydra.Core.ConnectorHydraTask`1)): 
 
@@ -124,7 +124,7 @@
 		public override IEnumerable<DataType> SupportedDataTypes => Enumerable.Empty<DataType>();
 ```
 
-Важным этапом создания утилиты является реализация метода [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), в котором реализуется логика утилиты. В случае реализации резервирования, вся логика находится внутри [S\#.API](StockSharpAbout.md): 
+Важным этапом создания утилиты является реализация метода [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), в котором реализуется логика утилиты. В случае реализации резервирования, вся логика находится внутри [API](StockSharpAbout.md): 
 
 ```cs
 	[	

@@ -4,4 +4,4 @@
 
 ![Designer ExtensionInfo securities](../images/Designer_ExtensionInfo_securities.png)
 
-Более подробно о расширенной информации можно узнать в пункте [Расширенная информация](HydraExtensionInfo.md) документации по [S\#.Data (Hydra)](Hydra.md).
+Более подробно о расширенной информации можно узнать в пункте [Расширенная информация](HydraExtensionInfo.md) документации по [Hydra](Hydra.md).

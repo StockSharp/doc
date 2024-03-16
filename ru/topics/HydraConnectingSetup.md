@@ -1,6 +1,6 @@
 # Примеры настройки подключений
 
-Настройки подключений в программах [S\#.Designer](Designer.md), [S\#.Terminal](Terminal.md), [S\#.Data](Hydra.md). 
+Настройки подключений в программах [Designer](Designer.md), [Terminal](Terminal.md), [Hydra](Hydra.md). 
 
 Подробно настройки подключений по средством различных коннекторов можно узнать [здесь](API_ConnectorsUIConfiguration.md)
 

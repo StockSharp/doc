@@ -1,6 +1,6 @@
 # Any market data types
 
-[S\#.Data](Hydra.md) allows you to use another type of data to get a number of market data.
+[Hydra](Hydra.md) allows you to use another type of data to get a number of market data.
 
 This is necessary if the source does not allow downloading the required market data. So, for example, several types of market data can be used at once to build the **Order book**.
 

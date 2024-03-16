@@ -1,6 +1,6 @@
 # Share images for charts and tables
 
-[S\#.Designer](Designer.md) provides the ability to publish, as well as automatically publish charts and tables.
+[Designer](Designer.md) provides the ability to publish, as well as automatically publish charts and tables.
 
 To publish, click the ![Designer Share link ico](../images/Designer_Share_link_ico.png) button. 
 

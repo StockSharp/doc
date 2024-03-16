@@ -1,6 +1,6 @@
 # View and export
 
-The received [S\#.Data](Hydra.md) data can be viewed in special panels. 
+The received [Hydra](Hydra.md) data can be viewed in special panels. 
 
 To do this, on the Common tab, click on one of the following buttons: [Ticks](HydraExportTrades.md), [Order books](HydraExportDepth.md), [Candles generation](HydraCandles.md), [Order log](HydraExportOrderLog.md), [Level 1 ](HydraExportSecurityChange.md), [News](HydraExportNews.md), [Transactions](HydraExportExecution.md), [Option desk](hydra_options.md), [Indicators](Hydra_export_indicator.md), [Positions](Hydra_export_position.md). 
 

@@ -12,7 +12,7 @@ To open the **Schemas** panel, click the **Schemas** button in the **Common** ta
 
 4. The **Live** folder contains strategies that are added to run in the trade. With that, the strategies that are running are marked with the ![Designer Panel Circuits 02](../images/Designer_Panel_Circuits_02.png) icon, and which are stopped are marked with the ![Designer Panel Circuits 03](../images/Designer_Panel_Circuits_03.png) icon. How to add strategies to the **Live** folder and how to start them is described in the [Live execution](Designer_Live_trade.md) section.
 
-5. The **Source code** folder contains the strategies that are created using the library for the professional development of trading algorithms in C\# [S\#.API](StockSharpAbout.md). To add a new strategy to the **Source code** folder, click the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Common** tab and select **Source code**. Or, right\-click the Source code folder in the **Schemas** panel and click the ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the drop\-down menu.
+5. The **Source code** folder contains the strategies that are created using the library for the professional development of trading algorithms in C\# [API](StockSharpAbout.md). To add a new strategy to the **Source code** folder, click the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Common** tab and select **Source code**. Or, right\-click the Source code folder in the **Schemas** panel and click the ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the drop\-down menu.
 
 ## Recommended content
 

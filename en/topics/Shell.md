@@ -1,6 +1,6 @@
-# S\#.Shell
+# Shell
 
-**S\#.Shell** \- is a ready\-made graphical framework with the ability to change quickly to your needs and with a fully open source code in C\# language (enough basic knowledge). 
+**Shell** \- is a ready\-made graphical framework with the ability to change quickly to your needs and with a fully open source code in C\# language (enough basic knowledge). 
 
 You don't need to waste time creating a GUI (Graphical User Interface), a ready\-made robot is created faster without sacrificing application usability. Basic functionality for testing, trading, connecting to data sources, displaying charts, portfolios, positions, orders and trades is already in the box.
 
@@ -19,4 +19,4 @@ The main features of the trading robot shell:
 
 ## Recommended content
 
-[Installing S\#.Designer](Designer_Installation.md)
+[Installing Designer](Designer_Installation.md)

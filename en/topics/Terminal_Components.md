@@ -1,6 +1,6 @@
 # Components
 
-During trade there is a need to fully control the process. For complete control and analysis, **S\#.Terminal** provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
+During trade there is a need to fully control the process. For complete control and analysis, **Terminal** provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
 
 ![Designer Components](../images/Designer_Components.png)
 

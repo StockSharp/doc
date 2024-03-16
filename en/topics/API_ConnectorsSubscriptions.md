@@ -1,6 +1,6 @@
 # Subscriptions
 
-Starting with 5.0 version, [S\#.API](StockSharpAbout.md) offers a new data acquisition model (market and transactional data). The model is based on subscriptions and has advantages over regular subscription requests: 
+Starting with 5.0 version, [API](StockSharpAbout.md) offers a new data acquisition model (market and transactional data). The model is based on subscriptions and has advantages over regular subscription requests: 
 
 - Subscriptions are isolated from each other, so you can run an arbitrary number of subscriptions in parallel (with a history request or not). 
 - Subscriptions have states that make it possible to understand whether historical data is being received at the moment, or whether the subscription has gone online. 

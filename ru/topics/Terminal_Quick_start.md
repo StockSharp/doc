@@ -1,6 +1,6 @@
 # Быстрый запуск
 
-При первом запуске [S\#.Terminal](Terminal.md) будет показано следующее окно:
+При первом запуске [Terminal](Terminal.md) будет показано следующее окно:
 
 ![Terminal Quick start 00](../images/Terminal_Quick_start_00.png)
 

@@ -1,8 +1,8 @@
-# Run strategies from S\#.Designer
+# Run strategies from Designer
 
-[S\#.Shell](Shell.md) can run strategies created in [S\#.Designer](Designer.md).
+[Shell](Shell.md) can run strategies created in [Designer](Designer.md).
 
-To launch a strategy created in [S\#.Designer](Designer.md), you need to select it on the [Real\-time](Shell_RealTime.md) select tab and click the **Add Designer strategy** button. In the window that appears, select the strategy file exported from [S\#.Designer](Designer.md). 
+To launch a strategy created in [Designer](Designer.md), you need to select it on the [Real\-time](Shell_RealTime.md) select tab and click the **Add Designer strategy** button. In the window that appears, select the strategy file exported from [Designer](Designer.md). 
 
 ![Shell run Designer strategy 00](../images/Shell_run_Designer_strategy_00.png)
 

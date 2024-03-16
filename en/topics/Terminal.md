@@ -1,10 +1,10 @@
-# S\#.Terminal
+# Terminal
 
-**S\#.Terminal** is a free trading terminal. The main advantage of which is the simultaneous connection to a variety of trading boards, including those where there is no own terminal. 
+**Terminal** is a free trading terminal. The main advantage of which is the simultaneous connection to a variety of trading boards, including those where there is no own terminal. 
 
 ![Terminal main 00](../images/Terminal_main_00.png)
 
-## Advantages and features of S\#.Terminal:
+## Advantages and features of Terminal:
 
 1. **Supports many sources:**[Connectors](API_Connectors.md).
 2. **Trade from the chart**. 
@@ -15,4 +15,4 @@
 
 ## Recommended content
 
-[Installing S\#.Terminal](Terminal_Installation.md)
+[Installing Terminal](Terminal_Installation.md)

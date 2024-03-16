@@ -4,7 +4,7 @@
 
 - Обучение и консультации C\# и S\# \- [StockSharp Курсы](https://stocksharp.ru/edu/). 
 - Исходные коды ядра S\# \- [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). 
-- Каркас готового робота с исходниками \- [S\#.Shell](https://stocksharp.ru/products/shell/). 
+- Каркас готового робота с исходниками \- [Shell](https://stocksharp.ru/products/shell/). 
 
 **Контактная информация:**
 

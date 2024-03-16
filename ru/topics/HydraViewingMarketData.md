@@ -1,6 +1,6 @@
 # Просмотр маркет\-данных
 
-Полученные данные [S\#.Data](Hydra.md) можно просмотреть в специальных панелях. 
+Полученные данные [Hydra](Hydra.md) можно просмотреть в специальных панелях. 
 
 Для этого на вкладке **Общее** необходимо нажать на одну из следующих кнопок: [Тики](HydraExportTrades.md), [Стаканы](HydraExportDepth.md), [Свечи](HydraCandles.md), [Лог заявок](HydraExportOrderLog.md), [Level 1](HydraExportSecurityChange.md), [Новости](HydraExportNews.md), [Транзакции](HydraExportExecution.md), [Доска опционов](hydra_options.md), [Индикаторы](Hydra_export_indicator.md), [Позиции](Hydra_export_position.md). 
 

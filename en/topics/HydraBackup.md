@@ -8,6 +8,6 @@ For backup purposes, it is required to create and configure an account at AWS, a
 
 [Setup](HydraBackup_account.md)
 
-[S\#.Data settings](HydraBackup_task.md)
+[Hydra settings](HydraBackup_task.md)
 
 [Recovery](HydraBackup_recovery.md)

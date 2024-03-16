@@ -1,6 +1,6 @@
 # Create own indicator using C\#
 
-Creating your own indicator in [S\#.API](StockSharpAbout.md) is described in [Custom indicator](IndicatorsCustom.md) section.
+Creating your own indicator in [API](StockSharpAbout.md) is described in [Custom indicator](IndicatorsCustom.md) section.
 
 Below, using the SMA indicator as an example, you will see how to integrate the created indicator into a schema in the form of a cube. As an example, you can take the source codes of other indicators that are in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository.
 

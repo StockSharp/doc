@@ -1,4 +1,4 @@
-# S\#.Data settings
+# Hydra settings
 
 The following describes how to create and configure a backup task.
 

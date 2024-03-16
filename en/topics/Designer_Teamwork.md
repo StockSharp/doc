@@ -1,6 +1,6 @@
 # Team working
 
-[S\#.Designer](Designer.md) offers the following opportunities for team working:
+[Designer](Designer.md) offers the following opportunities for team working:
 
 - [Chat](Designer_Chat.md) \- for instant exchange of messages.
 - [Export](Designer_Export_strategies.md) \- to export, for further transfer of the strategy without encryption. For example, to pass the schema for further analysis by other users.
