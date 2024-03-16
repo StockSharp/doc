@@ -14,16 +14,13 @@
           ]
         }
       ],
-      "dest": "obj/api"
+      "dest": "api"
     }
   ],
   "build": {
     "content": [
       {
-        "files": [
-          "api/**.yml"
-        ],
-        "cwd": "obj"
+        "files": [ "api/*.yml" ]
       },
       {
         "files": [
@@ -52,7 +49,9 @@
         "src": "../"
       }
     ],
-    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+    "xref": [
+      "https://github.com/dotnet/docfx/raw/main/.xrefmap.json"
+    ],
     "globalMetadata": {
       "_appFooter": "<span>Copyright © StockSharp.</span>",
       "_appFaviconPath": "favicon.ico",
