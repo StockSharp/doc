@@ -789,6 +789,8 @@
           href: YahooSample.md
     - name: Connectors (Forex)
       items:
+      - name: MetaTrader
+        href: MT.md
       - name: DukasCopy
         href: DukasCopy.md
         items:
@@ -1832,8 +1834,6 @@
     href: Shell_custom_strategy_panel.md
   - name: Run strategies from Designer
     href: Shell_run_Designer_strategy.md
-- name: MT4 and MT5
-  href: MT.md
 - name: MatLab
   href: MatLab.md
 - name: Common

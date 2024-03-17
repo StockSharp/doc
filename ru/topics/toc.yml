@@ -953,6 +953,8 @@
           href: YahooSample.md
     - name: Коннекторы Forex
       items:
+      - name: MetaTrader
+        href: MT.md
       - name: DukasCopy
         href: DukasCopy.md
         items:
@@ -1996,8 +1998,6 @@
     href: Shell_custom_strategy_panel.md
   - name: Запуск стратегии созданной в Designer
     href: Shell_run_Designer_strategy.md
-- name: MT4 и MT5
-  href: MT.md
 - name: MatLab
   href: MatLab.md
 - name: Общее
