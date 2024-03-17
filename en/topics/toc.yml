@@ -636,7 +636,7 @@
         - name: Configuration Blackwood (Fusion)
           href: BlackwoodConnectorsSettings.md
         - name: Graphical configuration Blackwood (Fusion)
-          href: API_GUI_Settings_Fusion (Blackwood).md
+          href: API_GUI_Settings_Fusion.md
         - name: Adapter initialization Blackwood (Fusion)
           href: BlackwoodSample.md
       - name: CQG
@@ -645,9 +645,9 @@
         - name: Configuration CQG
           href: CQGConnectorsSettings.md
         - name: Graphical configuration CQG COM
-          href: API_GUI_Settings_CQG COM.md
+          href: API_GUI_Settings_CQG_COM.md
         - name: Graphical configuration CQG Continuum
-          href: API_GUI_Settings_CQG Continuum.md
+          href: API_GUI_Settings_CQG_Continuum.md
         - name: Adapter initialization CQG
           href: CQGSample.md
       - name: E*TRADE
@@ -681,7 +681,7 @@
         - name: Configuration Interactive Brokers
           href: IBSettings.md
         - name: Graphical configuration Interactive Brokers
-          href: API_GUI_Settings_Interactive Brokers.md
+          href: API_GUI_Settings_InteractiveBrokers.md
         - name: Adapter initialization Interactive Brokers
           href: IBSample.md
       - name: IQFeed
@@ -816,7 +816,7 @@
         href: GAINCapital.md
         items:
         - name: Graphical configuration GAIN Capital
-          href: API_GUI_Settings_GAIN Capital.md
+          href: API_GUI_Settings_GAIN_Capital.md
         - name: Adapter initialization GAIN Capital
           href: GAINCapitalSample.md
       - name: LMAX
@@ -834,7 +834,7 @@
         - name: Configuration MB Trading
           href: MBTradingConnectorsSettings.md
         - name: Graphical configuration MB Trading
-          href: API_GUI_Settings_MB Trading.md
+          href: API_GUI_Settings_MB_Trading.md
         - name: Adapter initialization MB Trading
           href: MBTradingSample.md
       - name: Oanda
@@ -1304,7 +1304,7 @@
         - name: Configuration WEX (BTC-e)
           href: BtceConnectorsSettings.md
         - name: Graphical configuration WEX (BTC-e)
-          href: API_GUI_Settings_WEX (BTC-e).md
+          href: API_GUI_Settings_WEX.md
         - name: Adapter initialization WEX (BTC-e)
           href: BtceSample.md
       - name: Yobit

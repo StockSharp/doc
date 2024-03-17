@@ -610,10 +610,10 @@
         items:
         - name: Настройка Quik Lua
           href: QuikLua.md
-        - name: Графическое конфигурирование Quik LUA  Market data
-          href: API_GUI_Settings_Quik LUA  Market data.md
+        - name: Графическое конфигурирование Quik LUA Market data
+          href: API_GUI_Settings_Quik_LUA_MarketData.md
         - name: Графическое конфигурирование Quik LUA Transactions
-          href: API_GUI_Settings_Quik LUA Transactions.md
+          href: API_GUI_Settings_Quik_LUA_Transactions.md
         - name: Инициализация адаптера Quik Lua
           href: QuikLuaFirstStrategy.md
       - name: Tinkoff
@@ -640,7 +640,7 @@
         - name: Настройки коннектора Plaza II
           href: PlazaConnectorsSettings.md
         - name: Графическое конфигурирование Plaza II
-          href: API_GUI_Settings_Plaza 2.md
+          href: API_GUI_Settings_Plaza2.md
         - name: Инициализация адаптера Plaza II
           href: PlazaSample.md
         - name: Метаданные
@@ -689,7 +689,7 @@
         - name: Настройки коннектора SPB Exchange
           href: SpbExConnectorsSettings.md
         - name: Графическое конфигурирование SPB Exchange
-          href: API_GUI_Settings_SPB Exchange.md
+          href: API_GUI_Settings_SPB_Exchange.md
         - name: Инициализация адаптера SPB Exchange
           href: SpbExSample.md
       - name: Transaq
@@ -723,7 +723,7 @@
         - name: Настройки коннектора SmartCOM
           href: SmartCOMConnectorsSettings.md
         - name: Графическое конфигурирование SmartCOM
-          href: API_GUI_Settings_SmartCOM (ITI Capital).md
+          href: API_GUI_Settings_SmartCOM.md
         - name: Инициализация адаптера SmartCOM
           href: SmartFirstStrategy.md
       - name: UX (сайт)
@@ -800,7 +800,7 @@
         - name: Настройки коннектора Blackwood (Fusion)
           href: BlackwoodConnectorsSettings.md
         - name: Графическое конфигурирование Blackwood (Fusion)
-          href: API_GUI_Settings_Fusion (Blackwood).md
+          href: API_GUI_Settings_Fusion.md
         - name: Инициализация адаптера Blackwood (Fusion)
           href: BlackwoodSample.md
       - name: CQG
@@ -809,9 +809,9 @@
         - name: Настройки коннектора CQG
           href: CQGConnectorsSettings.md
         - name: Графическое конфигурирование CQG COM
-          href: API_GUI_Settings_CQG COM.md
+          href: API_GUI_Settings_CQG_COM.md
         - name: Графическое конфигурирование CQG Continuum
-          href: API_GUI_Settings_CQG Continuum.md
+          href: API_GUI_Settings_CQG_Continuum.md
         - name: Инициализация адаптера CQG
           href: CQGSample.md
       - name: E*TRADE
@@ -845,7 +845,7 @@
         - name: Настройка TWS Interactive Brokers
           href: IBSettings.md
         - name: Графическое конфигурирование Interactive Brokers
-          href: API_GUI_Settings_Interactive Brokers.md
+          href: API_GUI_Settings_InteractiveBrokers.md
         - name: Инициализация адаптера Interactive Brokers
           href: IBSample.md
       - name: IQFeed
@@ -980,7 +980,7 @@
         href: GAINCapital.md
         items:
         - name: Графическое конфигурирование GAIN Capital
-          href: API_GUI_Settings_GAIN Capital.md
+          href: API_GUI_Settings_GAIN_Capital.md
         - name: Инициализация адаптера GAIN Capital
           href: GAINCapitalSample.md
       - name: LMAX
@@ -998,7 +998,7 @@
         - name: Настройки коннектора MB Trading
           href: MBTradingConnectorsSettings.md
         - name: Графическое конфигурирование MB Trading
-          href: API_GUI_Settings_MB Trading.md
+          href: API_GUI_Settings_MB_Trading.md
         - name: Инициализация адаптера MB Trading
           href: MBTradingSample.md
       - name: Oanda
@@ -1468,7 +1468,7 @@
         - name: Настройки коннектора WEX (BTC-e)
           href: BtceConnectorsSettings.md
         - name: Графическое конфигурированиеWEX (BTC-e)
-          href: API_GUI_Settings_WEX (BTC-e).md
+          href: API_GUI_Settings_WEX.md
         - name: Инициализация адаптера WEX (BTC-e)
           href: BtceSample.md
       - name: YoBit
