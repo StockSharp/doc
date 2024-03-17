@@ -6,6 +6,8 @@ Both connectors are used in the same way, so below is the description of the pro
 
 ## Setting Up the MT Connector
 
+> [!Video https://www.youtube.com/embed/qGnIa7YIS5Q]
+
 1. Select the MT connector in [Installer](SharpInstaller.md) and start the installation process.
 
    ![MT Install 1](../images/MT_Install_1.png)
@@ -27,14 +29,27 @@ Both connectors are used in the same way, so below is the description of the pro
 
 5. Complete the installation and wait for it to finish. At the end of the installation, [Installer](SharpInstaller.md) will warn that you now need to configure the terminal. To do this, launch the MT terminal and connect to trading.
 6. In the Tools->Options menu, select the **Experts Advisors** tab and make sure that permission for external DLL trading (**Allow DLL imports**) is enabled:![MT 1](../images/MT_1.png)
-7. If the terminal was running during the connector installation (step 2), you need to refresh the list of experts by right-clicking on Experts and selecting **Refresh** from the menu:![MT 2](../images/MT_2.png)
-8. Select the S\# expert, right-click and choose **Attach to a chart** from the menu:![MT 3](../images/MT_3.png)
+7. If the terminal was running during the connector installation (step 2), you need to refresh the list of experts by right-clicking on Experts and selecting **Refresh** from the menu:
+
+   ![MT 2](../images/MT_2.png)
+
+8. Select the S\# expert, right-click and choose **Attach to a chart** from the menu:
+
+   ![MT 3](../images/MT_3.png)
+
 9. A settings window will appear where you can set the login-password (anonymous authorization is enabled by default), as well as the connection address (if connecting to multiple terminals at once, the addresses must contain unique ports).
-10. A smiley icon should appear in the upper right corner of the chart (the first one encountered):![MT 4](../images/MT_4.png)
+10. A smiley icon should appear in the upper right corner of the chart (the first one encountered):
+
+    ![MT 4](../images/MT_4.png)
 
     Also, information about the successful script launch, the number of instruments, should appear in the expert's log window.
-11. If the MT4 or MT5 license is not obtained, a line similar to the following will appear in the log:![MT 5](../images/MT_5.png)
-12. Connection to MT goes through the FIX protocol, using the [FIX protocol](Fix.md) connector. The program [Terminal](Terminal.md) was used for demonstration. Below are settings for transactional connection and market data connection (for MT5, the default port is 23001 instead of 23000):![MT 6](../images/MT_6.png)![MT 7](../images/MT_7.png)
+11. If the MT4 or MT5 license is not obtained, a line similar to the following will appear in the log:
+
+    ![MT 5](../images/MT_5.png)
+
+12. Connection to MT goes through the FIX protocol, using the [FIX protocol](Fix.md) connector. The program [Terminal](Terminal.md) was used for demonstration. Below are settings for transactional connection and market data connection (for MT5, the default port is 23001 instead of 23000):
+
+    ![MT 6](../images/MT_6.png)![MT 7](../images/MT_7.png)
 
     Similar settings need to be made in [Designer](Designer.md), [Hydra](Hydra.md), or any API programs.
 
@@ -44,5 +59,10 @@ Both connectors are used in the same way, so below is the description of the pro
     > - The script must be launched before connecting StockSharp to MetaTrader and kept running as long as this connection is needed.  
     > - To see historical candles in StockSharp, they need to be downloaded from the MetaTrader server. How to do this, read in MetaTrader's documentation.
 
-    In case of a successful connection, the example should show a list of instruments and accounts:![MT 8](../images/MT_8.png)
-13. In case of errors, the connector logs are kept, which are available in the folder **Experts\\StockSharp\\Data\\Log**:![MT 9](../images/MT_9.png)
+    In case of a successful connection, the example should show a list of instruments and accounts:
+
+    ![MT 8](../images/MT_8.png)
+
+13. In case of errors, the connector logs are kept, which are available in the folder **Experts\\StockSharp\\Data\\Log**:
+
+    ![MT 9](../images/MT_9.png)
