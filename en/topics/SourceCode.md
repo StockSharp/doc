@@ -16,7 +16,7 @@ List of components available with source code:
 - Logging.
 - Import and export.
 
-The source codes of all closed components, as well as ready\-made programs, are available upon purchase. For more information about the cost of source codes, see [Source Code Cost](https://stocksharp.ru/products/pricing/#sources). 
+The source codes of all closed components, as well as ready\-made programs, are available upon purchase. For more information about the cost of source codes, see [Source Code Cost](https://stocksharp.com/store/?groups=22). 
 
 ## Recommended content
 
