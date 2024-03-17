@@ -6,13 +6,13 @@
 
 You can use S\# with any broker that supports our connection. 
 
-### S\#.Designer
+### Designer
 
-S\#.Designer
+Designer
 
 ![StockSharpTitle 0](images/StockSharpTitle_0.png)
 
-[S\#.Designer](topics/Designer.md) \- universal algorithmic strategies application for easy strategy creation: 
+[Designer](topics/Designer.md) \- universal algorithmic strategies application for easy strategy creation: 
 
 - Visual designer to create strategies by mouse clicking.
 - Embedded [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) editor.
@@ -24,13 +24,13 @@ S\#.Designer
 
 [More...](topics/Designer.md)
 
-### S\#.Data
+### Hydra
 
-S\#.Data
+Hydra
 
 ![StockSharpTitle 1](images/StockSharpTitle_1.png)
 
-[S\#.Data](topics/Hydra.md) \- the program for automatic download of historical and real\-time market data: 
+[Hydra](topics/Hydra.md) \- the program for automatic download of historical and real\-time market data: 
 
 - Supports many sources [Connectors](topics/API_Connectors.md).
 - High compression ratio (2 bytes per trade, 7 bytes per order book).
@@ -39,32 +39,32 @@ S\#.Data
 - Export to csv, excel, xml or database.
 - Import from csv.
 - Scheduled tasks.
-- Auto\-sync over the Internet between several running programs S\#.Data.
+- Auto\-sync over the Internet between several running programs Hydra.
 
 [More...](topics/Hydra.md)
 
-### S\#.Terminal
+### Terminal
 
-S\#.Terminal
+Terminal
 
 ![Terminal main 00](images/Terminal_main_00.png)
 
-[S\#.Terminal](topics/Terminal.md) \- trading charting application (trading terminal).
+[Terminal](topics/Terminal.md) \- trading charting application (trading terminal).
 
 - Trading from charts by clicking
 - Arbitrary timeframes
 - Volume, Tick, Range, Renko candles
 - Cluster and box charts
 
-### S\#.Shell
+### Shell
 
-S\#.Shell
+Shell
 
 The ready\-made graphical framework with the ability to quickly change to your needs and with fully open source code in C\#
 
 - Complete source code
 - Support for all StockSharp platform connections: FIX\/FAST, Crypto Exchange (+30 at the moment), etc.
-- Support for S\#.Designer schemas
+- Support for Designer schemas
 - Flexible user interface
 - Strategy testing (statistics, equity, reports)
 - Save and load strategy settings
@@ -72,22 +72,22 @@ The ready\-made graphical framework with the ability to quickly change to your n
 - Detailed information on strategy performance (orders, transactions, position, revenue, logs, etc.)
 - Launch strategies on schedule
 
-### S\#.API
+### API
 
-S\#.API
+API
 
-[S\#.API](topics/StockSharpAbout.md) \- library for the professional development of trading robots in C\#. For those who are programming in Visual Studio, and is a professional programmer in algotrading. 
+[API](topics/StockSharpAbout.md) \- library for the professional development of trading robots in C\#. For those who are programming in Visual Studio, and is a professional programmer in algotrading. 
 
 ### All our products:
 
 All our products:
 
-- [S\#.Designer](topics/Designer.md) \- universal algorithmic strategies designer.
-- [S\#.Data](topics/Hydra.md) \- program to download market data.
-- [S\#.API](topics/StockSharpAbout.md) \- library for writing trading robots on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
-- [S\#.Terminal](topics/Terminal.md) \- trading terminal.
-- [S\#.Shell](topics/Shell.md) \- ready\-made graphical framework for strategies with source codes.
-- [S\#.MatLab](topics/MatLab.md) \- MatLab integration with trading systems. Trade from MatLab scripts.
+- [Designer](topics/Designer.md) \- universal algorithmic strategies designer.
+- [Hydra](topics/Hydra.md) \- program to download market data.
+- [API](topics/StockSharpAbout.md) \- library for writing trading robots on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
+- [Terminal](topics/Terminal.md) \- trading terminal.
+- [Shell](topics/Shell.md) \- ready\-made graphical framework for strategies with source codes.
+- [MatLab](topics/MatLab.md) \- MatLab integration with trading systems. Trade from MatLab scripts.
 
 [Download](https://stocksharp.com/products/download/)
 
