@@ -2,7 +2,7 @@
 
 [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- the graphical component for displaying the equity curve. 
 
-Below is an example of using this component. The full example code is in the Samples\/Testing\/SampleRandomEmulation. 
+Below is an example of using this component. The full example code is in the Samples\/Testing\/SampleHistoryTesting. 
 
 ![Gui EquityCurveChart](../images/Gui_EquityCurveChart.png)
 

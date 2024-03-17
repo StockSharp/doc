@@ -1802,8 +1802,6 @@
     href: MarketTimeOffset.md
   - name: Arithmetic operations
     href: Unit.md
-  - name: Currency converter
-    href: Currency.md
   - name: Examples
     href: StockSharpSamples.md
 - name: Shell

@@ -1966,8 +1966,6 @@
     href: MarketTimeOffset.md
   - name: Арифметические операции
     href: Unit.md
-  - name: Конвертация валют
-    href: Currency.md
   - name: Примеры
     href: StockSharpSamples.md
 - name: Shell
