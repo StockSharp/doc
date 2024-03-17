@@ -813,7 +813,7 @@
         - name: Adapter initialization FXCM
           href: FxcmSample.md
       - name: GAIN Capital
-        href: GAIN Capital.md
+        href: GAINCapital.md
         items:
         - name: Graphical configuration GAIN Capital
           href: API_GUI_Settings_GAIN Capital.md
@@ -829,7 +829,7 @@
         - name: Adapter initialization LMAX
           href: LMaxSample.md
       - name: MB Trading
-        href: MB Trading.md
+        href: MBTrading.md
         items:
         - name: Configuration MB Trading
           href: MBTradingConnectorsSettings.md

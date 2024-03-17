@@ -2,7 +2,7 @@
 
 For all [S\#](StockSharpAbout.md) products, graphical configuration of the connection is performed on the [Connection settings window](API_UI_ConnectorWindow.md):
 
-![API GUI Settings Interactive Brokers](../images/API_GUI_Settings_Interactive Brokers.png)
+![API GUI Settings Interactive Brokers](../images/API_GUI_Settings_Interactive_Brokers.png)
 
 - **Address** \- TWS address.
 - **Identifier** \- Unique ID. Used when several clients are connected to one terminal or gateway.

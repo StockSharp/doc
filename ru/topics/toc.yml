@@ -730,7 +730,7 @@
         href: UX.md
         items:
         - name: Графическое конфигурирование UX
-          href: API_GUI_Settings_UX .md
+          href: API_GUI_Settings_UX.md
         - name: Инициализация адаптера UX
           href: UXSample.md
       - name: Алор Трейд
@@ -977,7 +977,7 @@
         - name: Инициализация адаптера FXCM
           href: FxcmSample.md
       - name: GAIN Capital
-        href: GAIN Capital.md
+        href: GAINCapital.md
         items:
         - name: Графическое конфигурирование GAIN Capital
           href: API_GUI_Settings_GAIN Capital.md
@@ -993,7 +993,7 @@
         - name: Инициализация адаптера LMAX
           href: LMaxSample.md
       - name: MB Trading
-        href: MB Trading.md
+        href: MBTrading.md
         items:
         - name: Настройки коннектора MB Trading
           href: MBTradingConnectorsSettings.md

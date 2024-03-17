@@ -1,8 +1,8 @@
-# Graphical configuration MB Trading
+# Graphical configuration CQG COM
 
 For all [S\#](StockSharpAbout.md) products, graphical configuration of the connection is performed on the [Connection settings window](API_UI_ConnectorWindow.md):
 
-![API GUI Settings MB Trading](../images/API_GUI_Settings_MB Trading.png)
+![API GUI Settings CQG COM](../images/API_GUI_Settings_CQG_COM.png)
 
 - **Login** \- Login.
 - **Password** \- Password.

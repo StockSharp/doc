@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](StockSharpAbout.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](API_UI_ConnectorWindow.md):
 
-![API GUI Settings Quik LUA Transactions](../images/API_GUI_Settings_Quik LUA Transactions.png)
+![API GUI Settings Quik LUA Transactions](../images/API_GUI_Settings_Quik_LUA_Transactions.png)
 
 - **Адрес** \- Адрес.
 - **Диалект** \- Диалект FIX протокола.
