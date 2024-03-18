@@ -1,4 +1,4 @@
-# S\#.RemoteManager
+# RemoteManager
 
 [S\#](StockSharpAbout.md) предоставляет возможность удаленного управления стратегиями, запущенных на удаленных серверах, с помощью модуля **RemoteManagerControl**.
 
