@@ -20,7 +20,7 @@ To install need use [Installer](SharpInstaller.md).
    The app **UDPDumper.Console** takes as a parameter the path to the file created by the UI version (exactly the UI version, and **not an exchange config**):
 
    ```cs
-   		StockSharp.UdpDumper.Console.exe settings.xml
+   		StockSharp.UdpDumper.Console.exe settings.json
    		
    ```
 8. To test on the accumulated data of the connector, you can use the dump mode. More details [Dump mode](FastDump.md).

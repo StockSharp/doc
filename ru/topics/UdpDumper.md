@@ -20,7 +20,7 @@
    Программа **UDPDumper.Console** принимает на вход ввиде параметра путь к файлу, созданный UI версией (именно UI версией, а **не конфиг биржи**):
 
    ```cs
-   		StockSharp.UdpDumper.Console.exe settings.xml
+   		StockSharp.UdpDumper.Console.exe settings.json
    		
    ```
 8. Для тестирование на накопленных данных коннектора можно использовать dump режим. Подробнее [Отладка в dump режиме](FastDump.md).
