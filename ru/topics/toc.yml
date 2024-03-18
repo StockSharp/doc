@@ -526,6 +526,8 @@
       href: HydraSymbolMappingVer5.md
     - name: Подключение через FIX протокол
       href: hydraAPIConnect.md
+    - name: Подключение Hydra-клиент
+      href: HydraTasksServer.md
   - name: Настройка инструментов и площадок
     items:
     - name: Инструменты

@@ -524,6 +524,8 @@
       href: HydraSymbolMappingVer5.md
     - name: FIX/FAST connectivity
       href: hydraAPIConnect.md
+    - name: Hydra-client connectivity
+      href: HydraTasksServer.md
   - name: Instruments and boards
     items:
     - name: Instruments list
