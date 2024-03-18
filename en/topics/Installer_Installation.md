@@ -1,16 +1,32 @@
-# Setup
+# First Run
 
-1. To install [Installer](SharpInstaller.md) go to the Download page [Download](https://stocksharp.com/products/download/):![Installer installation](../images/Installer_installation.png)
-2. Download the [Installer](SharpInstaller.md) distribution package.
-3. Unblock (right click on the file, properties) **Installer.zip**.![Installerzip Properties](../images/Installerzip_Properties.png)
-4. Unpack the archive and, in the folder with the unpacked archive, find the **StockSharp.Installer.Console.bat** file. 
+1. To install [Installer](SharpInstaller.md), go to the [Download](https://stocksharp.com/products/download/) page:
+   
+    ![Installer installation](../images/Installer_installation.png)
 
-   Run it.![Installer Stock Sharp Installer bat](../images/Installer_StockSharp_Installer_bat.png)
-5. Installation mode starts. You should wait for the complete installation. When installing for the first time, you should enter the **StockSharp** login and password.![log In installer](../images/logIn_installer.png)
-6. After installation, the program window will open.![first win installer](../images/first_win_installer.png)
+2. Download the [Installer](SharpInstaller.md) distribution.
+3. Run the installation file **stocksharp_setup.exe** and follow the installer instructions.
+4. Sometimes, Windows does not start the installation immediately and displays a warning:
 
-**Watch [video tutorial](InstallerSetup.md)**
+   ![Installerzip Properties](../images/Installer_Warn_1.png)
 
-## Recommended content
+5. In this case, click on the **More info** link in the warning window, after which the following window will appear:
 
-[Install  and remove apps](Installer_installing_removing_programs.md)
+    ![Installerzip Properties](../images/Installer_Warn_2.png)
+
+    By clicking the **Run anyway** button, you will start the installation of [Installer](SharpInstaller.md).
+
+6. The unpacking of [Installer](SharpInstaller.md) will start. You need to wait for the unpacking to complete.
+7. For the first installation, you need to enter the **StockSharp** login and password.
+
+    ![log In installer](../images/logIn_installer.png)
+
+    The login can be performed either through direct input of login and password or via authorization through a social network (in the case of registration on the StockSharp website in this way, there will be no password).
+
+8. After logging in, the program window will open. ![first win installer](../images/first_win_installer.png)
+
+**Watch the [video tutorial](InstallerSetup.md)**
+
+## See also
+
+[Installing and Removing Programs](Installer_installing_removing_programs.md)
