@@ -8,4 +8,4 @@
 
 Детальные настройки, скрипты и документация доступна клиентам, купившим [MatLab](MatLab.md). 
 
-[Купить](https://stocksharp.ru/products/pricing/#matlab)
+[Купить](https://stocksharp.ru/matlab/)

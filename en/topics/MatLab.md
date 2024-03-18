@@ -8,4 +8,4 @@ The integration connector [MatLab](MatLab.md) allows to connect to all brokers a
 
 Detailed settings, scripts, and documentation is available to customers who have purchased the [MatLab](MatLab.md). 
 
-[Buy MatLab](https://stocksharp.com/products/pricing/#matlab)
+[Buy MatLab](https://stocksharp.com/matlab/)
