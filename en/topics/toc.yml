@@ -589,6 +589,8 @@
         href: HydraBackup_task.md
       - name: Recovery
         href: HydraBackup_recovery.md
+- name: Hydra server
+  href: HydraServer.md
 - name: API
   href: StockSharpAbout.md
   items:
