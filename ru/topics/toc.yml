@@ -1529,8 +1529,6 @@
           href: API_GUI_Settings_FAST.md
         - name: Инициализация адаптера FAST
           href: FastSample.md
-        - name: UDP Dumper
-          href: UdpDumper.md
         - name: Отладка в dump режиме
           href: FastDump.md
       - name: FIX Server
@@ -2002,6 +2000,8 @@
     href: Shell_run_Designer_strategy.md
 - name: MatLab
   href: MatLab.md
+- name: UDP Dumper
+  href: UdpDumper.md
 - name: Общее
   items:
   - name: Исходные коды

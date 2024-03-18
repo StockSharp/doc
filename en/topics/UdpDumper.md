@@ -1,6 +1,6 @@
 # UDP Dumper
 
-The app **UDPDumper** is designed to accumulate UDP packets. Using this program, you can check the valid of the network settings made by a broker or exchange. And also, accumulate data for further tests of the connector.
+The app **UDPDumper** is designed to accumulate UDP packets. Using this program, you can check the valid of the network settings made by a broker or exchange. And also, accumulate data for further tests of a UDP connector (e.g., [FAST](Fast.md)).
 
 To install need use [Installer](SharpInstaller.md).
 
@@ -15,7 +15,7 @@ To install need use [Installer](SharpInstaller.md).
 
    > [!CAUTION]
    > If the settings are successful, the program will start receiving UDP datagrams and writing them to disk. The app will write the number of bytes received for each feed.
-7. The app **UDPDumper** is written with a graphical interface. If the program is launched without a graphical interface (as well as running under Linux operating systems, etc.) you can use the **S\#.UDPDumper.Console**, program, which is a console and cross\-platform version.
+7. The app **UDPDumper** is written with a graphical interface. If the program is launched without a graphical interface (as well as running under Linux operating systems, etc.) you can use the **UDPDumper.Console**, program, which is a console and cross\-platform version.
 
    The app **UDPDumper.Console** takes as a parameter the path to the file created by the UI version (exactly the UI version, and **not an exchange config**):
 
