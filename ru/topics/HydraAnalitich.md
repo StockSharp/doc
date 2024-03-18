@@ -1,3 +1,3 @@
 # Функция Аналитика
 
-> [!Video https://www.youtube.com/embed/GoQ9dw79WoY]
+> [!Video https://www.youtube.com/embed/vmYb4PsppPg]
