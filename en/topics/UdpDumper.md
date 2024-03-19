@@ -1,6 +1,6 @@
 # UDP Dumper
 
-The app **UDPDumper** is designed to accumulate UDP packets. Using this program, you can check the valid of the network settings made by a broker or exchange. And also, accumulate data for further tests of a UDP connector (e.g., [FAST](Fast.md)).
+The app **UDPDumper** is designed to accumulate UDP packets. Using this program, you can check the valid of the network settings made by a broker or exchange. And also, accumulate data for further tests of a UDP-based connectors (e.g., [FAST](Fast.md) or SBE).
 
 To install need use [Installer](SharpInstaller.md).
 
