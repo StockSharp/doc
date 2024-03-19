@@ -270,7 +270,7 @@
       href: Designer_Example_of_Live_trading.md
     - name: Режим прогрева стратегии
       href: Designer_Warm_Up_mode.md
-    - name: Исполнение стратегий на сервере
+    - name: Экспорт в Runner и Shell
       href: Designer_run_strategy_on_server.md
   - name: Настройки подключения
     href: Designer_Connection_settings.md
@@ -602,6 +602,17 @@
     href: TelegramAlerts.md
   - name: Панель управления
     href: TelegramControl.md
+- name: Runner
+  href: Runner.md
+  items:
+  - name: Экспорт из Дизайнера
+    href: RunnerDesignerExport.md
+  - name: Командная строка
+    href: RunnerCommandLine.md
+  - name: Настройка подключения
+    href: RunnerSetupConnector.md
+  - name: Интеграция с Visual Studio
+    href: RunnerVSIntegration.md
 - name: API
   href: StockSharpAbout.md
   items:
