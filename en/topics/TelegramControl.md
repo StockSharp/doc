@@ -6,7 +6,7 @@ For setup, go through the [bot authorization process](TelegramAuth.md) beforehan
 
 After that, the bot is ready for use. Next, for the bot to start seeing your strategies, you need to:
 
-- In the case of using the [Designer](Designer.md) program, enable the Remote mode on the main panel:
+- In the case of using the [Designer](Designer.md) program, enable the Remote mode on the Cloud panel:
 
   ![DesignerRibbon.png](../images/DesignerRibbon.png)
 
