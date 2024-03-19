@@ -1668,7 +1668,7 @@
       - name: KAMA
         href: IndicatorKaufmannAdaptiveMovingAverage.md
       - name: LRR2
-        href: IndicatorLinearRegRSquared.md
+        href: IndicatorRSquared.md
       - name: LRS
         href: IndicatorLinearRegSlope.md
       - name: 'Lowest '
