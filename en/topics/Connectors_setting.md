@@ -9,13 +9,13 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [Alpaca](Alpaca.md)                | [Configuration Alpaca](AlpacaConnectorsSettings.md)                  | [Graphical configuration Alpaca](API_GUI_Settings_Alpaca.md)                             |
 | [AlphaVantage](AlphaVantage.md)    | [Configuration AlphaVantage](AlphaVantageConnectorsSettings.md)      | [Graphical configuration AlphaVantage](API_GUI_Settings_AlphaVantage.md)                 |
 | [BarChart](BarChart.md)            | [Configuration BarChart](BarChartConnectorsSettings.md)              | [Graphical configuration BarChart](API_GUI_Settings_Barchart.md)                         |
-| [Blackwood (Fusion)](Blackwood.md) | [Configuration Blackwood (Fusion)](BlackwoodConnectorsSettings.md)   | [Graphical configuration Blackwood (Fusion)](API_GUI_Settings_Fusion%20(Blackwood).md)   |
-| [CQG](CQG.md)                      | [Configuration CQG](CQGConnectorsSettings.md)                        | [Graphical configuration CQG COM](API_GUI_Settings_CQG%20COM.md)                         |
-| [CQG](CQG.md)                      | [Configuration CQG](CQGConnectorsSettings.md)                        | [Graphical configuration CQG Continuum](API_GUI_Settings_CQG%20Continuum.md)             |
+| [Blackwood (Fusion)](Blackwood.md) | [Configuration Blackwood (Fusion)](BlackwoodConnectorsSettings.md)   | [Graphical configuration Blackwood (Fusion)](API_GUI_Settings_Fusion.md)                 |
+| [CQG](CQG.md)                      | [Configuration CQG](CQGConnectorsSettings.md)                        | [Graphical configuration CQG COM](API_GUI_Settings_CQG_COM.md)                           |
+| [CQG](CQG.md)                      | [Configuration CQG](CQGConnectorsSettings.md)                        | [Graphical configuration CQG Continuum](API_GUI_Settings_CQG_Continuum.md)               |
 | [E\*TRADE](ETrade.md)              | [Configuration E\*TRADE](ETradeConnectorsSettings.md)                | [Graphical configuration E\*TRADE](API_GUI_Settings_E_TRADE.md)                          |
 | [Google](Google.md)                | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration Google](API_GUI_Settings_Google.md)                             |
 | [IEX](IEX.md)                      | [Configuration IEX](IEXConnectorsSettings.md)                        | [Graphical configuration IEX](API_GUI_Settings_IEX.md)                                   |
-| [Interactive Brokers](IB.md)       | [Configuration Interactive Brokers](IBSettings.md)                   | [Graphical configuration Interactive Brokers](API_GUI_Settings_Interactive%20Brokers.md) |
+| [Interactive Brokers](IB.md)       | [Configuration Interactive Brokers](IBSettings.md)                   | [Graphical configuration Interactive Brokers](API_GUI_Settings_InteractiveBrokers.md)    |
 | [IQFeed](IQFeed.md)                | [Configuration IQFeed](IQFeedConnectorsSettings.md)                  | [Graphical configuration IQFeed](API_GUI_Settings_IQFeed.md)                             |
 | [ITCH](ITCH.md)                    | [Configuration ITCH](ITCHConnectorsSettings.md)                      | [Graphical configuration ITCH](API_GUI_Settings_ITCH.md)                                 |
 | [OpenECry](OEC.md)                 | [Configuration OpenECry](OpenECryConnectorsSettings.md)              | [Graphical configuration OpenECry](API_GUI_Settings_OpenECry_GainFutures.md)             |
@@ -35,9 +35,9 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [DukasCopy](DukasCopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](API_GUI_Settings_Dukascopy.md)         |
 | [FinViz](FinViz.md)               | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](API_GUI_Settings_FinViz.md)            |
 | [FXCM](Fxcm.md)                   | [Configuration FXCM](FXCMConnectorsSettings.md)                      | [Graphical configuration FXCM](API_GUI_Settings_FXCM.md)                   |
-| [GAIN Capital](GAIN%20Capital.md) | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration GAIN Capital](API_GUI_Settings_GAIN%20Capital.md) |
+| [GAIN Capital](GAINCapital.md)    | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration GAIN Capital](API_GUI_Settings_GAIN_Capital.md)   |
 | [LMAX](LMAX.md)                   | [Configuration LMAX](LMAXConnectorsSettings.md)                      | [Graphical configuration LMAX](API_GUI_Settings_LMAX.md)                   |
-| [MB Trading](MB%20Trading.md)     | [Configuration MB Trading](MBTradingConnectorsSettings.md)           | [Graphical configuration MB Trading](API_GUI_Settings_MB%20Trading.md)     |
+| [MB Trading](MBTrading.md)        | [Configuration MB Trading](MBTradingConnectorsSettings.md)           | [Graphical configuration MB Trading](API_GUI_Settings_MBTrading.md)        |
 | [Oanda](Oanda.md)                 | [Configuration Oanda](OandaConnectorsSettings.md)                    | [Graphical configuration Oanda](API_GUI_Settings_OANDA.md)                 |
 | [TrueFX](TrueFX.md)               | [Configuration TrueFX](TrueFXConnectorsSettings.md)                  | [Graphical configuration TrueFX](API_GUI_Settings_TrueFX.md)               |
 
@@ -57,7 +57,7 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | [BitStamp](BitStamp.md)         | [Configuration BitStamp](BitStampConnectorsSettings.md)         | [Graphical configuration BitStamp](API_GUI_Settings_Bitstamp.md)          |
 | [Bittrex](Bittrex.md)           | [Configuration Bittrex](BittrexConnectorsSettings.md)           | [Graphical configuration Bittrex](API_GUI_Settings_Bittrex.md)            |
 | [BitZ](BitZ.md)                 | [Configuration BitZ](BitZConnectorsSettings.md)                 | [Graphical configuration BitZ](API_GUI_Settings_Bit-Z.md)                 |
-| [WEX (BTC\-e)](Btce.md)         | [Configuration WEX (BTC\-e)](BtceConnectorsSettings.md)         | [Graphical configuration WEX (BTC\-e)](API_GUI_Settings_WEX%20(BTC-e).md) |
+| [WEX (BTC\-e)](Btce.md)         | [Configuration WEX (BTC\-e)](BtceConnectorsSettings.md)         | [Graphical configuration WEX (BTC\-e)](API_GUI_Settings_WEX.md)           |
 | [BW](BW.md)                     | [Configuration BW](BWConnectorsSettings.md)                     | [Graphical configuration BW](API_GUI_Settings_BW.md)                      |
 | [CEX.IO](Cex.md)                | [Configuration CEX.IO](CexConnectorsSettings.md)                | [Graphical configuration CEX.IO](API_GUI_Settings_CEX.IO.md)              |
 | [Coinbase](Coinbase.md)         | [Configuration Coinbase](CoinbaseConnectorsSettings.md)         | [Graphical configuration Coinbase](API_GUI_Settings_Coinbase.md)          |
