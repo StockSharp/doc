@@ -11,6 +11,18 @@
   ![DesignerRibbon.png](../images/DesignerRibbon.png)
 
   Все стратегии, которые запущены в режиме Live, автоматически будут переданы в телеграм бот, и вы сможете управлять ими с телефона.
+  
+  В боте [StockSharpBot](https://t.me/StockSharpBot) выбрав команду /apps можно увидеть список всех программ:
+
+  ![TelegramControlApps.png](../images/TelegramControlApps.png)
+
+  Выбран нужную программу можно увидеть стратегии и элементы управления ими:
+
+  ![TelegramControlApp.png](../images/TelegramControlApp.png)
+
+  ![TelegramControlStrategies.png](../images/TelegramControlStrategies.png)
+
+  ![TelegramControlStrategy.png](../images/TelegramControlStrategy.png)
 
 - В случае использования [Shell](Shell.md), вам необходимо перейти в панель **Remote Manager** и сделать настройки, аналогичные в [Designer](Designer.md).
 - В случае использования [Hydra](Hydra.md), все действия делаются аналогично [Designer](Designer.md). Интеграция с [Hydra](Hydra.md) позволяет управлять скачиванием маркет-данных, отслеживать количественную статистику.
