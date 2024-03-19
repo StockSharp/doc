@@ -669,7 +669,7 @@
         - name: Инициализация адаптера Micex (TEAP)
           href: MicexSample.md
       - name: MOEX ISS
-        href: MOEX ISS
+        href: MoexISS.md
         items:
         - name: Инициализация адаптера MOEX ISS
           href: MoexISSSample.md
