@@ -591,6 +591,15 @@
         href: HydraBackup_recovery.md
 - name: Hydra server
   href: HydraServer.md
+- name: Telegram services
+  href: Telegram.md
+  items:
+  - name: Authorization
+    href: TelegramAuth.md
+  - name: Alerts
+    href: TelegramAlerts.md
+  - name: Control panel
+    href: TelegramControl.md
 - name: API
   href: StockSharpAbout.md
   items:
@@ -840,7 +849,7 @@
         - name: Configuration MB Trading
           href: MBTradingConnectorsSettings.md
         - name: Graphical configuration MB Trading
-          href: API_GUI_Settings_MB_Trading.md
+          href: API_GUI_Settings_MBTrading.md
         - name: Adapter initialization MB Trading
           href: MBTradingSample.md
       - name: Oanda
