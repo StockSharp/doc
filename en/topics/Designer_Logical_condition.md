@@ -1,28 +1,28 @@
-# Logical condition
+# Logical Condition
 
 ![Designer The logical condition 00](../images/Designer_logical_condition_00.png)
 
-The element is used to calculate a logical formula with two arguments.
+This element is used to compute a logical formula with two arguments.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
-- **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
+- **Flag** – the flag value (characterizes the state and has two values: raised (true) and lowered (false)).
+- **Flag** – the flag value (characterizes the state and has two values: raised (true) and lowered (false)).
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Flag** – the flag value (indicates the state and has two values: up (true) and down (false)).
+- **Flag** – the flag value (characterizes the state and has two values: raised (true) and lowered (false)).
 
 ### Parameters
 
 Parameters
 
-- **Operator** \- the predefined set of logical formulas AND, OR, Exclusive OR.
+- **Operator** - a predefined set of logical formulas AND, OR, Exclusive OR.
 
-## Recommended content
+## See Also
 
-[Cancel order](Designer_Cancellations.md)
+[Formula](Designer_Universal_formula.md)

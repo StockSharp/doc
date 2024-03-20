@@ -1,37 +1,40 @@
-# Register order
+# Order Registration
 
 ![Designer Position opening 00](../images/Designer_Position_opening_00.png)
 
-The cube is used to open a position on the instrument.
+This block is used for placing an order for an instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Instrument** – the instrument for which you need to register an order.
-- **Direction** – the direction of the order (purchase or sale), it is the signal of the order registering.
-- **Price** – the numerical value of the price, if the not market order is registered.
-- **Volume** – the numerical value of the volume.
-- **Portfolio** – the portfolio for which you need to register an order.
+- **Security** – the instrument for which an order needs to be placed.
+- **Price** – the numerical price value if placing a non-market order.
+- **Trigger** - the signal that determines when to place an order.
+- **Volume** – the numerical volume value.
+- **Portfolio** – the portfolio for which an order needs to be placed.
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Order** – the order that can be used to obtain trades on it by using the **Trades** element on the order and displaying it on the chart using the **Chart panel** cube.
+- **Order** – the placed order, which can be used to obtain trades for it using the **Transactions by Order** element and for display on the chart using the **Chart Panel** block.
+- **Error** – an error in placing the order.
+- **Trade** – the trade for the placed order.
 
 ### Parameters
 
 Parameters
 
-- **Market** – the attribute of a market order.
-- **Client code** – the client code assigned by the broker, if the value is not specified and the **Parameters** option is checked, then the value is taken from the strategy.
-- **Broker** – the code of the brokerage firm, if the value is not specified and the **Parameters** option is checked, then the value is taken from the strategy.
-- **Conditional order** – to add a conditional order.
+- **Direction** – the direction of the order (buy or sell), acts as a signal for placing the order.
+- **Market** – indicates a market order.
+- **Position Condition** – an additional condition checking the possibility of placing an order. For example, under the condition **Close Position**, placing orders that increase the position is prohibited.
+- **Zero Price** – a zero price registers a market order.
+- **Lifetime** – the lifetime of a limit order.
 
-## Conditional order settings
+## Conditional Order Settings
 
-Conditional order is the order with additional conditions that determine the time of registration in the trading system depending on the current market situation.
+**Conditional Order** — an order with additional conditions that determine the moment of placement in the trading system depending on the current market situation.
 
 ![Designer Conditional Application](../images/Designer_Conditional_Application.png)
 
@@ -56,4 +59,4 @@ Conditional order is the order with additional conditions that determine the tim
 
 ## Recommended content
 
-[Modify order](Designer_Orders_Moving.md)
+[Order Movement](Designer_Orders_Moving.md)

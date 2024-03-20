@@ -1,21 +1,23 @@
-# Cancel order
+# Order Cancellation
 
 ![Designer Cancellations 00](../images/Designer_Cancellations_00.png)
 
-The cube is used to cancel the order by the instrument.
+This block is used to cancel an order for an instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Order** – the order that should be canceled.
+- **Trigger** – the event that triggers the order cancellation.
+- **Order** – the signal used to determine the moment when an order needs to be canceled.
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Order** – the canceled order, which can be used to obtain trades on it using the **Trades** element, as well as displaying it on the chart using the **Chart** panel cube.
+- **Order** – the canceled order, which can be used to retrieve transactions for it using the **Transactions** element, as well as to display it on the chart using the **Chart Panel** block.
+- **Error** – an error in cancelling the order (for example, the order has already been executed or canceled earlier).
 
-## Recommended content
+## See Also
 
-[Register order](Designer_Position_opening.md)
+[Order Registration](Designer_Position_opening.md)

@@ -1,23 +1,30 @@
-# Modify order
+# Order Movement
 
 ![Designer Moving applications 00](../images/Designer_Moving_applications_00.png)
 
-The cube is used to change the order by the instrument.
+This block is used for modifying an order for an instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Order** \- the order that will be changed.
-- **Price** \- the numerical value of the new price.
-- **Volume** \- the numerical value of the new volume.
+- **Trigger** - the signal that determines when to move an order.
+- **Order** – the order that will be modified.
+- **Price** – numerical value of the new price.
+- **Volume** – numerical value of the new volume.
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Order** \- the modified order that can be used to obtain trades on it by using the **Trades** element on the order and displaying it on the chart using the **Chart panel** cube.
+- **Order** – the modified order, which can be used to obtain transactions for it using the **Transactions by Order** element and for display on the chart using the **Chart Panel** block.
+- **Error** – an error in moving the order.
+- **Trade** – the trade for the placed order.
 
-## Recommended content
+Parameters
 
-[Trades by order](Designer_Deals_on_request.md)
+- **Zero Price** – a zero price registers a market order.
+
+## See Also
+
+[Transactions by Order](Designer_Deals_on_request.md)

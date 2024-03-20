@@ -23,4 +23,4 @@ The cube can be used to determine the moment when trades are conducted on severa
 
 ## Recommended content
 
-[Comparison](Designer_Comparison.md)
+[Is trading allowed](Designer_TradeAllowedDiagramElement.md)

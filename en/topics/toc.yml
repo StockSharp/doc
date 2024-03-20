@@ -84,8 +84,10 @@
           items:
           - name: Chart
             href: Designer_Panel_graphics.md
-          - name: Working time
-            href: Designer_Working_time.md
+          - name: Crossing
+            href: Designer_Crossing.md
+          - name: Delay value
+            href: Designer_Delay.md
           - name: Comparison
             href: Designer_Comparison.md
           - name: Indicator
@@ -106,10 +108,8 @@
             href: Designer_Previous_value.md
           - name: Protect position
             href: Designer_Protect_positions.md
-          - name: Source code
-            href: Designer_Source_code.md
-          - name: DLL import
-            href: Designer_DLL_Strategy.md
+          - name: Random
+            href: Designer_Random.md
           - name: Is trade allowed
             href: Designer_TradeAllowedDiagramElement.md
           - name: P&L strategy
@@ -120,10 +120,20 @@
             href: Designer_Candles.md
           - name: Level 1
             href: Designer_Level_1.md
+          - name: Ticks
+            href: Designer_Ticks.md
           - name: Index
             href: Designer_Index.md
           - name: Variable
             href: Designer_Variable.md
+        - name: Time
+          items:
+          - name: Working time
+            href: Designer_Working_time.md
+          - name: Trade allow
+            href: Designer_TradeAllowedDiagramElement.md
+          - name: Current time
+            href: Designer_Time.md
         - name: Trading
           items:
           - name: Register order
@@ -172,12 +182,6 @@
             href: Designer_Quoting.md
           - name: Derivatives
             href: Designer_Derivatives.md
-        - name: Composite elements
-          items:
-          - name: Crossing
-            href: Designer_Crossing.md
-          - name: Conditional operator
-            href: Designer_Conditional_operator.md
       - name: Lines
         href: Designer_Line.md
       - name: Event model

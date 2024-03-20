@@ -84,8 +84,10 @@
           items:
           - name: Панель графика
             href: Designer_Panel_graphics.md
-          - name: Рабочее время
-            href: Designer_Working_time.md
+          - name: Пересечение
+            href: Designer_Crossing.md
+          - name: Задержка значения
+            href: Designer_Delay.md
           - name: Сравнение
             href: Designer_Comparison.md
           - name: Индикатор
@@ -102,28 +104,34 @@
             href: Designer_Previous_value.md
           - name: Защита позиции
             href: Designer_Protect_positions.md
-          - name: Исходный код
-            href: Designer_Source_code.md
-          - name: DLL стратегия
-            href: Designer_DLL_Strategy.md
+          - name: Произвольно
+            href: Designer_Random.md
           - name: Изменение П/У
             href: Designer_StrategyPnLDiagramElement.md
           - name: Сделки стратегии
             href: Designer_Trades_strategy.md
           - name: Сделки по заявке
             href: Designer_Deals_on_request.md
-          - name: Разрешена ли торговля
-            href: Designer_TradeAllowedDiagramElement.md
         - name: Источники данных
           items:
           - name: Свечи
             href: Designer_Candles.md
           - name: Level 1
             href: Designer_Level_1.md
+          - name: Тики
+            href: Designer_Ticks.md
           - name: Индекс
             href: Designer_Index.md
           - name: Переменная
             href: Designer_Variable.md
+        - name: Время
+          items:
+          - name: Рабочее время
+            href: Designer_Working_time.md
+          - name: Разрешена ли торговля
+            href: Designer_TradeAllowedDiagramElement.md
+          - name: Текущее время
+            href: Designer_Time.md
         - name: Торговые
           items:
           - name: Регистрация заявки
@@ -172,12 +180,6 @@
             href: Designer_Quoting.md
           - name: Деривативы
             href: Designer_Derivatives.md
-        - name: Составные элементы
-          items:
-          - name: Пересечение
-            href: Designer_Crossing.md
-          - name: Условный оператор
-            href: Designer_Conditional_operator.md
       - name: Линии
         href: Designer_Line.md
       - name: Событийная модель

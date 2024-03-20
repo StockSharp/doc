@@ -1,21 +1,25 @@
-# Is trade allowed
+# Is Trading Allowed
 
 ![Designer TradeAllowedDiagramElement 00](../images/Designer_TradeAllowedDiagramElement_00.png)
 
-The cube is used to check if trade is currently allowed 
+This block is used to check if trading is currently allowed. The following conditions are checked:
 
-### Incoming sockets
+- All strategy subscriptions to market data must be in [Online](API_ConnectorsSubscriptions.md) state (receiving real-time data).
+- All indicators must be [formed](Indicators.md).
+- In the case of [live trading](Designer_Live_trade.md), the incoming trigger value must have a timestamp greater than the strategy's start time.
 
-Incoming sockets
+### Incoming Sockets
 
-- **Trigger** \- the signal that is used to determine when a check is to be performed.
+Incoming Sockets
 
-### Outgoing sockets
+- **Trigger** - the signal that determines the moment when the check should be performed.
 
-Outgoing sockets
+### Outgoing Sockets
 
-- **Flag** \- the flag that determines whether a trading session is active.
+Outgoing Sockets
 
-## Recommended content
+- **Flag** - a flag that determines whether the trading session is active.
 
-[Notification](Designer_Notice.md)
+## See Also
+
+[Current Time](Designer_Time.md)

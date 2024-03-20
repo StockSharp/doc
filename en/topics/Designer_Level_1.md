@@ -2,26 +2,27 @@
 
 ![Designer Level 1 00](../images/Designer_Level_1_00.png)
 
-The cube is used to get the **Level1** data by the instrument. 
+This block is used to receive **Level1** data for an instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Instrument** \- the instrument for which you need to get Level1 data.
+- **Instrument** – the instrument for which **Level1** data needs to be received.
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Change** \- **Level1** values of the monitored parameter.
+- **Change** – **Level1** values of the tracked parameter.
 
 ### Parameters
 
 Parameters
 
-- **Value** – the **Level1** parameter to be monitored.
+- **Value** – the **Level1** parameter that needs to be tracked.
+- **Subscribe on Signal** – subscribe to data only after a trigger arrives.
 
-## Recommended content
+## See Also
 
-[Index](Designer_Index.md)
+[Ticks](Designer_Ticks.md)

@@ -1,17 +1,29 @@
-# Mass cancel orders
+# Mass Order Cancellations
 
 ![Designer Mass Cancellations 00](../images/Designer_Mass_Cancellations_00.png)
 
-The cube is used to cancel all orders by the instrument.
+This block is used for canceling all orders for an instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Portfolio** \- the portfolio for which you need to cancel all orders.
-- **Instrument** \- the instrument for which you need to cancel all orders.
-- **Direction** – the direction of canceled orders (purchase or sale), it is a signal of order cancellation.
+- **Trigger** - the signal that determines the moment when it's necessary to cancel orders.
+- **Portfolio** – the portfolio for which all orders need to be canceled.
+- **Security** – the instrument for which all orders need to be canceled.
 
-## Recommended content
+### Outgoing Sockets
 
-[Register order](Designer_Position_opening.md)
+Outgoing Sockets
+
+- **Result** - a flag signaling the success of the operation.
+
+### Parameters
+
+Parameters
+
+- **Direction** – the direction of the orders being canceled (buy or sell), acts as a cancellation signal for the order.
+
+## See Also
+
+[Order Registration](Designer_Position_opening.md)

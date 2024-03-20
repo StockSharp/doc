@@ -2,28 +2,31 @@
 
 ![Designer Indicator 00](../images/Designer_Indicator_00.png)
 
-The cube is used to calculate the indicator values.
+This block is used for calculating indicator values.
 
-### Incoming sockets
+#### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Any data** – the specific data type on the basis of which the selected indicator should be calculated (depending on the indicator this can be a numerical value, a candle, etc.).
+- **Any Data** – a specific type of data based on which the selected indicator should be calculated (depending on the indicator, this could be a numerical value, candle, etc.).
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Indicator** – the calculated indicator value that can be used to display on the chart panel or for further calculations.
+- **Indicator** – the calculated indicator value, which can be used for display on the chart panel or further calculations.
 
 ### Parameters
 
 Parameters
 
-- **Indicator type** \- the parameter used to select the required indicator, and several additional parameters that correspond to the selected indicator type. The set of these parameters changes when the selected indicator type is changed.
+- **Indicator Type** - a parameter used to select the desired indicator, and several additional parameters that correspond to the selected indicator type. The set of these parameters changes when the selected indicator type changes.
+- **Final** - pass only [final values](Indicators.md) of the indicator.
+- **Formed** - pass only values when the indicator is fully [formed](Indicators.md).
 
 ![Designer Indicator 01](../images/Designer_Indicator_01.png)
 
-## Recommended content
+## See Also
 
-[Logical condition](Designer_Logical_condition.md)
+[List of Indicators](IndicatorsAll.md)
+[Logical Condition](Designer_Logical_condition.md)

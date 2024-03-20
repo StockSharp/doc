@@ -10,4 +10,4 @@ The [Chart](Designer_Chart.md) panel displays all the data received in the **Cha
 
 ## Recommended content
 
-[Working time](Designer_Working_time.md)
+[Crossing](Designer_Crossing.md)

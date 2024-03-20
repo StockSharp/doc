@@ -2,28 +2,29 @@
 
 ![Designer Candles 00](../images/Designer_Candles_00.png)
 
-The cube is used to build candles for a specified instrument. 
+This block is used to construct candles for a specified instrument.
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+Incoming Sockets
 
-- **Instrument** – the instrument for which it is necessary to build candles with specified parameters.
+- **Security** – the instrument for which the candles are to be built with given parameters.
 
-### Outgoing sockets
+### Outgoing Sockets
 
-Outgoing sockets
+Outgoing Sockets
 
-- **Candles** \- built candles.
+- **Candles** – the constructed candles.
 
 ### Parameters
 
 Parameters
 
-- **Series** – the type of candle series and parameters for the specified type.
-- **Only formed** \- to pass to the output only fully formed candles or any change.
-- **Volume profile** – to perform the building of the market profile (for cluster charts).
+- **Series** – the type of candle series and parameters for the specified type;
+- **Only Formed** – pass to the output only fully formed candles or any change;
+- **Smaller Timeframe** – construct candles from a smaller timeframe;
+- **Subscribe on Signal** – subscribe to data only after receiving a trigger.
 
-## Recommended content
+## See Also
 
 [Level 1](Designer_Level_1.md)
