@@ -20,6 +20,8 @@ After checking the **Parameter** check box in the required units and clicking th
 
 In the example, one optimization parameter is taken \- the length of short moving average, Short SMA, from 10 to 20 in increments of 1. As a result, we get 11 SMA strategies with different parameters.
 
+![Designer Optimization 03](../images/Designer_Optimization_03.png)
+
 ## Recommended content
 
 [Getting started](Designer_Example_of_backtesting.md)

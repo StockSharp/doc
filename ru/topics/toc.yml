@@ -225,6 +225,8 @@
     items:
     - name: Интерфейс
       href: Designer_Backtesting_Interface.md
+    - name: Пример тестирования на истории
+      href: Designer_Example_of_backtesting.md
     - name: Отладка
       href: Designer_Debug.md
       items:
@@ -232,12 +234,20 @@
         href: Designer_Debug_Break_Points.md
       - name: Пошаговое исполнение
         href: Designer_Step.md
-    - name: Пример тестирования на истории
-      href: Designer_Example_of_backtesting.md
-    - name: Оптимизация
+    - name: Тестирование в облаке
+      href: Designer_Backtesting_Cloud.md
+  - name: Оптимизация
+    items:
+    - name: Перебор (брут-форс)
       href: Designer_Optimization.md
+    - name: Генетическая
+      href: Designer_Genetic.md
+    - name: 3D отчет
+      href: Designer_Optimization_3D_Chart.md
     - name: Портфельное тестирование
       href: Designer_Portfolio_Testing.md
+    - name: Оптимизация в облаке
+      href: Designer_Optimization_Cloud.md
   - name: Хранилище маркет-данных
     href: Designer_Repository_of_historical_data.md
     items:

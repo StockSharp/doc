@@ -227,6 +227,8 @@
     items:
     - name: User interface
       href: Designer_Backtesting_Interface.md
+    - name: Getting started
+      href: Designer_Example_of_backtesting.md
     - name: Debugging
       href: Designer_Debug.md
       items:
@@ -234,12 +236,20 @@
         href: Designer_Debug_Break_Points.md
       - name: Step by step execution
         href: Designer_Step.md
-    - name: Getting started
-      href: Designer_Example_of_backtesting.md
-    - name: Optimization
+    - name: Cloyd backtesting
+      href: Designer_Backtesting_Cloud.md
+  - name: Optimization
+    items:
+    - name: Brute-Force
       href: Designer_Optimization.md
+    - name: Genetic
+      href: Designer_Genetic.md
+    - name: 3D chart
+      href: Designer_Optimization_3D_Chart.md
     - name: Portfolio optimization
       href: Designer_Portfolio_Testing.md
+    - name: Cloud optimization
+      href: Designer_Optimization_Cloud.md
   - name: Market data storage
     href: Designer_Repository_of_historical_data.md
     items:
