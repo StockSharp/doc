@@ -1,11 +1,11 @@
 # Mean Deviation
 
-**Mean Deviation**indicator shows the average deviation for the period. 
+The **Mean Deviation** indicator shows the average deviation of the price from its simple moving average (SMA) over a certain period.
 
-To use the indicator, you must use the [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation) class. 
+To use the indicator, the [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation) class should be used.
 
 ![IndicatorMeanDeviation](../images/IndicatorMeanDeviation.png)
 
-## Recommended content
+## See Also
 
 [Median Price](IndicatorMedianPrice.md)

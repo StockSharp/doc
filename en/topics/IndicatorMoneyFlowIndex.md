@@ -1,11 +1,12 @@
 # Money Flow Index
 
-**Money Flow Index (MFI)** is a technical oscillator that uses price and volume to determine overbought or oversold conditions in an asset. It can also be used to identify divergences that warn of changing the price trend. The oscillator moves between 0 and 100. 
+**Money Flow Index (MFI)** calculates the difference between incoming and outgoing money flows. If the base value of the asset is below the difference, it indicates an increase in incoming money mass, meaning the market is bullish. If the opposite is observed, it means investors are leaving the instrument, and the market is bearish.  
+The indicator is a technical oscillator for determining overbought or oversold conditions in an asset. It can also be used to identify divergences that warn of a trend change in price. The oscillator moves between 0 and 100.
 
-To use the indicator, you must use the [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) class. 
+To use the indicator, the [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) class should be used.
 
 ![IndicatorMoneyFlowIndex](../images/IndicatorMoneyFlowIndex.png)
 
-## Recommended content
+## See Also
 
 [MACD](IndicatorMovingAverageConvergenceDivergence.md)

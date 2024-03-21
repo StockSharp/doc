@@ -1,11 +1,12 @@
 # Envelope
 
-**Envelope** \- indicator which is a channel created by shifting the moving average by a certain value. 
+**Envelope** is an indicator that forms a channel created by offsetting a moving average by a specific value. The method of constructing the indicator exactly replicates the construction of Bollinger Bands, except for the calculation of the distance that the outer lines are from the average. If Bollinger Bands use standard deviation for this calculation, in **Envelope**, this distance is manually set in the settings.
+The parameters set are the period of the moving average and the size of the deviation.
 
-To use the indicator, you must use the [Envelope](xref:StockSharp.Algo.Indicators.Envelope) class. 
+To use the indicator, the [Envelope](xref:StockSharp.Algo.Indicators.Envelope) class should be used.
 
 ![IndicatorEnvelope](../images/IndicatorEnvelope.png)
 
-## Recommended content
+## See Also
 
 [EMA](IndicatorExponentialMovingAverage.md)

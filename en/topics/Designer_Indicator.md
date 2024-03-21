@@ -4,7 +4,7 @@
 
 This block is used for calculating indicator values.
 
-#### Incoming Sockets
+### Incoming Sockets
 
 Incoming Sockets
 

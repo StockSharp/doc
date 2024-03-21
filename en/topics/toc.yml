@@ -297,10 +297,6 @@
       href: Connectors_setting.md
     - name: Simulator
       href: Designer_emulation_setting.md
-    - name: Account and connection mapping
-      href: Designer_connection_mapping.md
-    - name: Binding market data to connection
-      href: Designer_connector_security_mapping.md
   - name: Strategy gallery
     href: Designer_Gallery_of_strategies.md
     items:
@@ -309,8 +305,6 @@
   - name: Team working
     href: Designer_Teamwork.md
     items:
-    - name: Chat
-      href: Designer_Chat.md
     - name: Export
       href: Designer_Export_strategies.md
     - name: Export with encryption
@@ -1484,7 +1478,7 @@
       items:
       - name: '%R'
         href: IndicatorWilliamsR.md
-      - name: A/C
+      - name: A/D
         href: IndicatorAcceleration.md
       - name: ADX
         href: IndicatorAverageDirectionalIndex.md
@@ -1502,6 +1496,10 @@
         href: IndicatorChaikinVolatility.md
       - name: CMO
         href: IndicatorChandeMomentumOscillator.md
+      - name: Correlation
+        href: IndicatorCorrelation.md
+      - name: Covariation
+        href: IndicatorCovariation.md
       - name: DEMA
         href: IndicatorDoubleExponentialMovingAverage.md
       - name: DMI
@@ -1516,7 +1514,7 @@
         href: IndicatorFractals.md
       - name: Gator Oscillator
         href: IndicatorGatorOscillator.md
-      - name: 'Highest '
+      - name: Highest
         href: IndicatorHighest.md
       - name: HMA
         href: IndicatorHullMovingAverage.md
@@ -1530,7 +1528,7 @@
         href: IndicatorRSquared.md
       - name: LRS
         href: IndicatorLinearRegSlope.md
-      - name: 'Lowest '
+      - name: Lowest
         href: IndicatorLowest.md
       - name: LRC
         href: IndicatorLinearReg.md
@@ -1560,6 +1558,14 @@
         href: IndicatorPeak.md
       - name: PeakBar
         href: IndicatorPeakBar.md
+      - name: Pattern
+        href: IndicatorPatternCommon.md
+      - name: Pattern 3OD3OU
+        href: IndicatorPattern3OD3OU.md
+      - name: Pattern 3ID3IU
+        href: IndicatorPattern3ID3IU.md
+      - name: Pattern 3BC3WS
+        href: IndicatorPattern3BC3WS.md
       - name: QStick
         href: IndicatorQStick.md
       - name: RAVI

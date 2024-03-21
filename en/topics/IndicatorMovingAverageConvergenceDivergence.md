@@ -1,11 +1,13 @@
 # MACD
 
-**Moving Averages Convergence\-Divergence (MACD)** is a momentum indicator that shows the relationship between two moving averages of a security price. 
+**Moving Averages Convergence-Divergence (MACD)** is a momentum indicator that shows the relationship between two moving averages of a security's price.
 
-To use the indicator, you must use the [MovingAverageConvergenceDivergence](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence) class. 
+The indicator is calculated as the difference between a short moving average and a long moving average. By default, the periods for these averages are set to 12 and 26, respectively.
+
+To use the indicator, the [MovingAverageConvergenceDivergence](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence) class should be used.
 
 ![IndicatorMovingAverageConvergenceDivergence](../images/IndicatorMovingAverageConvergenceDivergence.png)
 
-## Recommended content
+## See Also
 
-[MACD histogram](IndicatorMovingAverageConvergenceDivergenceHistogram.md)
+[MACD Histogram](IndicatorMovingAverageConvergenceDivergenceHistogram.md)
