@@ -1,6 +1,6 @@
-# Black-Scholes
+# Basket
 
-![Designer Black Sols 00](../images/Designer_Black_Scholes_00.png)
+![Designer Black Basket 00](../images/Designer_Black_Basket_00.png)
 
 This block is used to create an option pricing model.
 
@@ -8,7 +8,7 @@ This block is used to create an option pricing model.
 
 Incoming Sockets
 
-- **Option** – the strike for which the model needs to be created.
+- **Options** – the strikes for which the model needs to be created.
 
 ### Outgoing Sockets
 
@@ -22,6 +22,8 @@ Parameters
 
 - **Black Model** – a flag indicating whether to create a Black-Scholes model.
 
+![Designer Black Basket 01](../images/Designer_Black_Basket_01.png)
+
 ## See Also
 
-[Hedging](Designer_Hedging.md)
+[Black-Scholes](Designer_Black_Scholes.md)

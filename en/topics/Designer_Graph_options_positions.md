@@ -10,9 +10,8 @@ To display the **Chart of options positions**, you need to add the **Chart of op
 
 Incoming sockets
 
-- **Instrument** – the instrument, the basic asset.
+- **Model** – the calculation model (for example, Black-Scholes).
 - **Price of the underlying asset** \- the price of the underlying asset.
-- **Options** \- the list of options from the **Derivatives** cube.
 
 ![Designer Graph options positions 01](../images/Designer_Graph_options_positions_01.png)
 

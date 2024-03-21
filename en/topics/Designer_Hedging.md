@@ -2,12 +2,13 @@
 
 ![Designer Hedging 00](../images/Designer_Hedging_00.png)
 
-The cube is used to protect the position on option strategies.
+The cube is used to hedging the position on options.
 
 ### Incoming sockets
 
 Incoming sockets
 
+- **Model** – the calculation model (for example, Black-Scholes).
 - **Instrument** – the instrument, the underlying asset.
 - **Volume** \- the numerical value of the volume.
 - **Position by underlying asset** – the position by the underlying asset.

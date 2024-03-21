@@ -8,6 +8,7 @@ The cube is used to calculate an order book of implied volatility.
 
 Incoming sockets
 
+- **Model** – the calculation model (for example, Black-Scholes).
 - **Order book** – the order book.
 
 ### Outgoing sockets

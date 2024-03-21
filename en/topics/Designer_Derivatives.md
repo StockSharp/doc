@@ -1,4 +1,4 @@
-# Derivatives
+# Strikes
 
 ![Designer Derivatives 00](../images/Designer_Derivatives_00.png)
 

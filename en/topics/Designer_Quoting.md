@@ -2,13 +2,13 @@
 
 ![Designer Quoting 00](../images/Designer_Quoting_00.png)
 
-The cube is used to quote options according to the specified parameters.
+The cube is used to quote option according to the specified parameters.
 
 ### Incoming sockets
 
 Incoming sockets
 
-- **Options** \- the list of options from the **Derivative** cube.
+- **Model** – the calculation model (for example, Black-Scholes).
 - **Volume** \- the volume of quoting.
 
 ### Outgoing sockets

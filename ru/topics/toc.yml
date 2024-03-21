@@ -172,13 +172,17 @@
             href: Designer_Options_Board.md
           - name: График позиций опционов
             href: Designer_Graph_options_positions.md
+          - name: Греки
+            href: Designer_Greek.md
           - name: Блэк-Шоулз
             href: Designer_Black_Scholes.md
+          - name: Корзина
+            href: Designer_Black_Basket.md
           - name: Хеджирование
             href: Designer_Hedging.md
           - name: Котирование
             href: Designer_Quoting.md
-          - name: Деривативы
+          - name: Страйки
             href: Designer_Derivatives.md
       - name: Линии
         href: Designer_Line.md

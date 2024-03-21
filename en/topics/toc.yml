@@ -174,13 +174,17 @@
             href: Designer_Options_Board.md
           - name: Chart positions
             href: Designer_Graph_options_positions.md
+          - name: Greeks
+            href: Designer_Greek.md
           - name: Black Scholes
             href: Designer_Black_Scholes.md
+          - name: Basket
+            href: Designer_Black_Basket.md
           - name: Hedging
             href: Designer_Hedging.md
           - name: Options quoting
             href: Designer_Quoting.md
-          - name: Derivatives
+          - name: Strikes
             href: Designer_Derivatives.md
       - name: Lines
         href: Designer_Line.md

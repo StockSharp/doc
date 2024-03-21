@@ -1,6 +1,6 @@
-# Блэк\-Шоулз
+# Корзина
 
-![Designer Black Sols 00](../images/Designer_Black_Scholes_00.png)
+![Designer Black Basket 00](../images/Designer_Black_Basket_00.png)
 
 Кубик используется для создания модель расчет опционов.
 
@@ -8,7 +8,7 @@
 
 Входящие сокеты
 
-- **Опцион** – страйк, для которого необходимо создать модель.
+- **Опционы** – страйки, для которого необходимо создать модель.
 
 ### Исходящие сокеты
 
@@ -22,6 +22,8 @@
 
 - **Модель Блэка** – флаг, указывает создавать ли модель Блэка — Шоулза.
 
+![Designer Black Basket 01](../images/Designer_Black_Basket_01.png)
+
 ## См. также
 
-[Хеджирование](Designer_Hedging.md)
+[Блэк-Шоулз](Designer_Black_Scholes.md)

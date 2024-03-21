@@ -10,15 +10,7 @@ To display the **Option desk**, you need to add the **Option desk** graphic comp
 
 Incoming sockets
 
-- **Instrument** \- the instrument, the basic asset.
-- **Options** \- the list of options from the **Derivatives** cube.
-- **Price of the underlying asset** \- the price of the underlying asset.
-
-### Parameters
-
-Parameters
-
-- **Black’s model** \- the flag, indicating whether values will be calculated according to the Black\-Scholes model.
+- **Model** – the calculation model (for example, Black-Scholes).
 
 ![Designer Options Board 01](../images/Designer_Options_Board_01.png)
 
