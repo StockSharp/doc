@@ -317,20 +317,14 @@
       href: Designer_Import_strategies.md
     - name: Публикация графиков и таблиц
       href: Designer_publish.md
-  - name: Опционные стратегии
-    href: Designer_Options.md
   - name: Настройки
     items:
     - name: Настройки уведомлений
       href: Designer_notification_Setting.md
     - name: Режим запуска
-      href: Designer_Start_mode.md
-    - name: Сброс языка и настроек
       href: Designer_Reset_language_settings.md
     - name: Редактирование данных вручную
       href: Designer_Directory_and_edit_data_manually.md
-    - name: Обратная связь
-      href: Designer_contact_us.md
 - name: Terminal
   href: Terminal.md
   items:
