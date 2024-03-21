@@ -236,7 +236,7 @@
         href: Designer_Debug_Break_Points.md
       - name: Step by step execution
         href: Designer_Step.md
-    - name: Cloyd backtesting
+    - name: Cloud backtesting
       href: Designer_Backtesting_Cloud.md
   - name: Optimization
     items:
