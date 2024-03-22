@@ -1,11 +1,5 @@
 # Quick start
 
-When you start [Designer](Designer.md) for the first time, the following window will be displayed:
-
-![Designer Quick start 00](../images/Designer_Quick_start_00.png)
-
-You should select the startup mode and click **OK**.
-
 On first run [Designer](Designer.md) will prompt you to open the [Download market\-data](Designer_Downloading_data.md) window. Also, historical data can be downloaded by the [Hydra](Hydra.md) program (codenamed Hydra) designed for automatically downloading market data (instruments, candles, tick trades and order books, etc.) from various sources and storing them in a local storage. About downloading and storing historical data is described in detail in the [Market data storage](Designer_Repository_of_historical_data.md) section.
 
 When you click the **Download securities** button, the [Download instruments](Designer_Download_instruments.md) window appears. To download the instrument, you should enter the instrument code, instrument type, select the data source and click **OK**. [Designer](Designer.md) will query the data source for available instruments. All found instruments will appear in the **All securities** panel. By default, it is specified as a data source in [Designer](Designer.md). You can also use trading terminals as a data source. How to configure the connection to terminals is described in the [Connections settings](Designer_Connection_settings.md) section.

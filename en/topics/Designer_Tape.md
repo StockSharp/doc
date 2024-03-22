@@ -1,27 +1,23 @@
 # Ribbon
 
-The main element of the [Designer](Designer.md) user interface is a **Ribbon** that is located along the top of the application window. Using the ribbon, you can quickly find the necessary commands. The commands are arranged in logical groups, collected on tabs. To go to the required tab, just click its name. Each tab is associated with the type of action being performed.
+The main user interface element of [Designer](Designer.md) is the **Ribbon**, which runs along the top of the application window. The ribbon allows for quick access to necessary commands. Commands are organized into logical groups, collected on tabs. To navigate to the desired tab, simply click on its title (name). Each tab is associated with the type of action being performed.
 
-1. The **Common** tab, which is opened by default after startup, contains the elements that you might need at the beginning of the work. In the **Common** tab, you can open [Schemas](Designer_Panel_Schemas.md), [Logs](Designer_Panel_Logs.md), [Portfolios](Designer_Panel_Portfolios.md), [Getting started](Designer_Creating_repository_of_historical_data.md), [Strategy gallery](Designer_Gallery_of_strategies.md), [Strategies dashboard](Designer_Panel_strategies.md), [Optimization](Designer_Optimization.md). Also in the **Common** tab, you can select the Theme of [Designer](Designer.md).
+1. The **General** tab, which opens by default after starting, contains elements that may be needed at the initial stage of work. From the **General** tab, you can open [Connection Settings](Designer_Connection_settings.md), [Configure Startup Mode](Designer_Start_mode.md), [Schemes Panel](Designer_Panel_Schemas.md), [Logs Panel](Designer_Panel_Logs.md), [Portfolios](Designer_Panel_Portfolios.md), [Board Editor](Designer_Boards.md), [Create a Historical Data Repository](Designer_Creating_repository_of_historical_data.md). Also, on the **General** tab, you can add, open, delete, import, and export strategies. If you want to share your strategy with the community, you can do so by clicking the *Publish* button. The adjacent button - *Available Strategies*, opens algorithms published by you and other users. On the right, there are service buttons for calling help, as well as for contacting us. You can report a problem or write to us in Telegram chat.
 
-![Designer Tape 00](../images/Designer_Tape_00.png)
+![Designer Ribbon 00](../images/Designer_Ribbon_00.png)
 
-2. The **Backtesting** tab is automatically opened when you select a strategy in the [Schemas](Designer_Panel_Schemas.md) panel. The **Backtesting** tab contains the basic elements for creating a strategy, debugging, testing strategies. ([Strategies](Designer_Creation_strategy.md), [Getting started](Designer_Example_of_backtesting.md))
+2. The **Backtest** tab automatically opens when selecting a strategy on the [Schemes](Designer_Panel_Schemas.md) panel. The **Backtest** tab contains the main elements for creating, debugging, testing, and optimizing strategies ([Creating a Strategy](Designer_Creation_strategy.md), [Example of Backtesting](Designer_Example_of_backtesting.md)). Also, on this tab, the strategy is launched for real trading, and necessary components for your strategy are selected: chart, order book, trades, etc.
 
-![Designer Tape 01](../images/Designer_Tape_01.png)
+![Designer Ribbon 01](../images/Designer_Ribbon_01.png)
 
-3. The **Live** tab is designed directly for real trading. Details of the connection settings are described in the [Connections settings](Designer_Connection_settings.md) section. Real trading using [Designer](Designer.md) is described in the [Live execution](Designer_Live_trade.md) section.
+3. The **Trading** tab is intended specifically for real trading. Details on connection settings are written in [Connection Settings](Designer_Connection_settings.md). Real trading using [Designer](Designer.md) is described in [Live Trading](Designer_Live_trade.md).
 
-![Designer Tape 02](../images/Designer_Tape_02.png)
+![Designer Ribbon 02](../images/Designer_Ribbon_02.png)
 
-4. The **Strategies gallery** tab of [Designer](Designer.md) provides an opportunity not only to create strategies, but also to publish them. Also, it is possible to download ready\-made strategies published by other users. Details about the **Strategies gallery** are described in the [Strategy gallery](Designer_Gallery_of_strategies.md) section.
+4. The **Cloud** tab. [Designer](Designer.md) is designed to work with cloud services. It allows viewing completed *Cloud Tasks*, getting information on instruments available in the Cloud. Set up remote work with channels and robots.
 
-![Designer Tape 03](../images/Designer_Tape_03.png)
+![Designer Ribbon 03](../images/Designer_Ribbon_03.png)
 
-5. The **Source code** tab is automatically opened when selecting the contents of the **Source code** folder in the [Schemas](Designer_Panel_Schemas.md) panel. For details on creating strategies from the code, see the [Using C\#](Designer_Creating_strategy_from_code.md) section.
-
-![Designer Tape 04](../images/Designer_Tape_04.png)
-
-## Recommended content
+## See Also
 
 [Workspace](Designer_Workspace.md)

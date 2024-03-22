@@ -26,8 +26,6 @@
     href: Designer_Quick_start.md
   - name: User interface
     items:
-    - name: Quick access panel
-      href: Designer_Quick_access_toolbar.md
     - name: Ribbon
       href: Designer_Tape.md
     - name: Workspace

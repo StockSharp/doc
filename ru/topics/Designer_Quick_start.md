@@ -1,11 +1,5 @@
 # Быстрый запуск
 
-При первом запуске [Designer](Designer.md) будет показано следующее окно:
-
-![Designer Quick start 00](../images/Designer_Quick_start_00.png)
-
-Необходимо выбрать режим запуска и нажать кнопку **ОК**.
-
 При первом запуске [Designer](Designer.md) откроет предустановленную схему стратегии скользящей средней. 
 ![Designer Quick start 01](../images/Designer_Quick_start_01.png)
 

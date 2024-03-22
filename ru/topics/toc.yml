@@ -26,8 +26,6 @@
     href: Designer_Quick_start.md
   - name: Интерфейс программы
     items:
-    - name: Панель быстрого доступа
-      href: Designer_Quick_access_toolbar.md
     - name: Лента
       href: Designer_Tape.md
     - name: Рабочая область

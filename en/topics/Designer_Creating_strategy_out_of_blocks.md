@@ -1,15 +1,15 @@
-# Using visual designer
+# Using Blocks
 
-You can add a new strategy by clicking the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Common** tab and selecting **Strategy**. Or, by right\-clicking the **Strategies** folder of the **Schemas panel**, and click the ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the drop\-down menu:
+You can add a new strategy by pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the **General** tab and selecting **Strategy**. Or, by right-clicking on the **Strategies** folder in the **Scheme** panel, and pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the dropdown menu:
 
 ![Designer The creation of a strategy 00](../images/Designer_creation_of_strategy_00.png)
 
-After clicking the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Strategies** folder of the **Schemas panel**, a new strategy will appear. In the workspace, a new tab with a strategy appears, when you switch to the tab, the **Emulation** tab will automatically open in the ribbon. In the **Emulation** tab, you can change the name of the strategy and give it a brief description:
+After pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the **Strategies** folder of the **Scheme** panel, a new strategy will appear. A new tab with the strategy will appear in the workspace, and upon navigating to it, the **Backtest** tab will automatically open in the ribbon. On the **Scheme** panel, right-clicking on the strategy opens a menu that allows you to rename the strategy, among other actions.
 
 ![Designer The creation of a strategy 01](../images/Designer_creation_of_strategy_01.png)
 
-The strategy tab consists of the [Diagram panel](Designer_Designer_schemes_strategies_and_component_elements.md) and [Chart](Designer_Chart.md) panels. The **Chart** area is required to display the test results of the strategy created in the [Diagram panel](Designer_Designer_schemes_strategies_and_component_elements.md). For details on testing strategies, see [Getting started](Designer_Example_of_backtesting.md).
+The strategy tab consists of the **Scheme** panel ([Strategy Designer](Designer_Designer_schemes_strategies_and_component_elements.md)), as well as other tabs that represent the [graphical components](Designer_Components.md) of the strategy, necessary for displaying the results of testing the strategy created in the **Scheme** area. Detailed information about strategy testing is described in the section [Example of backtesting](Designer_Example_of_backtesting.md).
 
-## Recommended content
+## See Also
 
-[Diagram panel](Designer_Designer_schemes_strategies_and_component_elements.md)
+[Strategy Designer](Designer_Designer_schemes_strategies_and_component_elements.md)

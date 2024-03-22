@@ -1,26 +1,23 @@
-# Working time
+# Working Time
 
 ![Designer Working time 00](../images/Designer_Working_time_00.png)
 
-The cube is used to determine the working time. For example, to determine when a particular instrument is trading.
+This block is used to determine the working time for the strategy. For example, to define when trading is taking place for a specific instrument or when the strategy is allowed to trade.
+#### Incoming Sockets
 
-### Incoming sockets
+- **Any Data** - the block accepts any value but takes the timestamp from it, which is then compared to the block's parameters.
+#### Outgoing Sockets
 
-Incoming sockets
+- **Flag** - a flag that determines whether the timestamp meets the block's parameters (true) or not (false).
+#### Parameters
 
-- **Instrument** \- an instrument for which you need to determine whether a trading session is active.
-- **Trigger** \- is the signal used to determine when to check.
+- **Time From** - the start time of the working time.
+- **Time To** - the end time of the working time.
 
-### Outgoing sockets
-
-Outgoing sockets
-
-- **Flag** \- a flag that determines whether a trading session is active.
-
-The cube can be used to determine the moment when trades are conducted on several instruments from various trading platforms.
+The block can be used to determine when trading is conducted for multiple instruments from different trading platforms.
 
 ![Designer Working time 01](../images/Designer_Working_time_01.png)
 
-## Recommended content
+## See Also
 
-[Is trading allowed](Designer_TradeAllowedDiagramElement.md)
+[Is Trading Allowed](Designer_TradeAllowedDiagramElement.html)
