@@ -298,17 +298,12 @@
     items:
     - name: Публикация своей стратегии
       href: Designer_Gallery_publish.md
-  - name: Совместная работа
-    href: Designer_Teamwork.md
+  - name: Экспорт и импорт
     items:
-    - name: Экспорт стратегий
+    - name: Экспорт
       href: Designer_Export_strategies.md
-    - name: Экспорт стратегий с шифрованием
-      href: Designer_Encryption.md
-    - name: Импорт стратегий
+    - name: Импорт
       href: Designer_Import_strategies.md
-    - name: Публикация графиков и таблиц
-      href: Designer_publish.md
   - name: Настройки
     items:
     - name: Настройки уведомлений

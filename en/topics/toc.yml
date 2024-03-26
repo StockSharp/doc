@@ -300,17 +300,12 @@
     items:
     - name: Publish own strategy
       href: Designer_Gallery_publish.md
-  - name: Team working
-    href: Designer_Teamwork.md
+  - name: Export Import
     items:
     - name: Export
       href: Designer_Export_strategies.md
-    - name: Export with encryption
-      href: Designer_Encryption.md
     - name: Import
       href: Designer_Import_strategies.md
-    - name: Share images for charts and tables
-      href: Designer_publish.md
   - name: Misc settings
     items:
     - name: Notification settings

@@ -1,16 +1,32 @@
 # Export
 
-There are following ways to export a strategy:
+The Designer allows you to export any type of data: strategies, blocks, and indicators. There are several ways to export:
 
-- Right\-click the strategy on the **Schema** panel. Select **Export** in the appearing menu.
-- On the **Common** tab click the **Export** button:
+- In the **Schemes** panel, right-click on the strategy, block, or indicator. In the menu that appears, select **Export**.
+- On the **Common** tab, press the **Export** button:
 
 ![Designer Export strategies 00](../images/Designer_Export_strategies_00.png)
 
-Clicking the **Export** button opens the **Export scheme** window, where you should specify the file name for exporting the strategy:
+After pressing **Export**, depending on the content type, a window will appear:
 
-![Designer Export strategies 01](../images/Designer_Export_strategies_01.png)
+- for a [scheme](Designer_Creating_strategy_out_of_blocks.md):
 
-## Recommended content
+  ![Designer Export strategies 01](../images/Designer_Export_strategies_01.png)
 
-[Export with encryption](Designer_Encryption.md)
+  - scheme - export the scheme as is.
+  - code - convert the scheme into C# code.
+  - file (assembly) - compile the scheme into a DLL. Suitable if you need to keep the scheme confidential.
+
+- for [code](Designer_Creating_strategy_from_code.md):
+
+  ![Designer Export strategies 02](../images/Designer_Export_strategies_02.png)
+
+  - scheme - export the code as a JSON file, which will include both the code itself and the references needed for compiling this code.
+  - code - export the code as is.
+  - file (assembly) - compile the code into a DLL. Suitable if you need to keep the code confidential.
+
+- for a [dll](Designer_Creating_strategy_from_dll.md) a file selection window will appear.
+
+## See Also
+
+[Import](Designer_Import_strategies.md)

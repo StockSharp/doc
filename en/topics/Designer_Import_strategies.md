@@ -1,20 +1,16 @@
 # Import
 
-There following ways to import a strategy or composite element
+The Designer allows you to import any type of data: strategies, blocks, and indicators. There are several ways to import:
 
-- In the **Schema** panel, right\-click the strategy folder, and select **Import** from menu.
-- On the **Common** tab click the **Import** button and select **Composite element** or **Strategies** from the menu:
+- In the **Schemes** panel, right-click on the strategy folder, and in the menu that appears, select **Import**.
+- On the **Common** tab, press the **Import** button, and in the menu that appears, select **Strategy**, **Own element**, or **Indicator**:
 
 ![Designer Import strategies 00](../images/Designer_Import_strategies_00.png)
 
-If there is a strategy with the same, a window will appear with a suggestion to overwrite, add with a different name:
+If data of the same name already exists, a window will appear offering to overwrite or add with a different name:
 
 ![Designer Import strategies 01](../images/Designer_Import_strategies_01.png)
 
-When importing an encrypted file, you should enter the password that was entered when the file was encrypted:
+## See Also
 
-![Designer Import strategies 02](../images/Designer_Import_strategies_02.png)
-
-## Recommended content
-
-[User interface](Designer_Backtesting_Interface.md)
+[Interface](Designer_Backtesting_Interface.md)
