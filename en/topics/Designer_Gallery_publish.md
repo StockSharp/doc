@@ -1,15 +1,29 @@
-# Publish own strategy
+# Publishing Your Strategy
 
-You can publish your own strategy by left\-clicking the [Schemas](Designer_Panel_Schemas.md), panel and selecting Publish. Or, by switching to the strategy panel and clicking the **Publish** button on the **Backtesting** tab:
+You can publish your strategy by clicking on the strategy with the left mouse button on the [Schemes](Designer_Panel_Schemas.md) panel, and select **Publish**:
 
-![Designer The gallery of strategies 01](../images/Designer_gallery_of_strategies_01.png)
+![Designer_publish_00](../images/Designer_publish_00.png)
 
-Clicking the **Publish** button opens the **Publish** window with the publishing parameters:
+After clicking the **Publish** button, a window will open with the choice of export type. For more details, see the section [Exporting Strategies](Designer_Export_strategies.md).
 
-![Designer The gallery of strategies 02](../images/Designer_gallery_of_strategies_02.png)
+After choosing the export type, the [Installer](Installer.md) program is activated with the publishing parameters ([Installer](Installer.md) must be launched in advance):
 
-In the **Publish** window specify the strategy name, brief description, logo, price. Also, n the **Publish** window you can check the **Is encrypted** checkbox. After downloading the strategy published with the checked Is encrypted checkbox. The structure, code and used cubes will not be viewable. The **Designer** panel will display: **"Strategy has been encrypted and cannot be viewed"**. Also, see more on strategies encryption in the [Export with encryption](Designer_Encryption.md) section.
+![Designer_publish_01](../images/Designer_publish_01.png)
 
-![Designer The gallery of strategies 03](../images/Designer_gallery_of_strategies_03.png)
+Fields required to be filled:
 
-After clicking the **OK** button, the strategy will appear in the **Strategy gallery** panel. You can quickly find it by setting the **Own strategies** filter.
+- Name
+- Description
+- Nuget package identifier. This parameter is needed to set the link to the product in the store. For example, in the address https://stocksharp.com/store/runner/, the word **runner** is specified through this parameter.
+
+Access to the **Free** or **Paid** level is only granted after contacting via email [info@stocksharp.com](mailto:info@stocksharp.com). By default, the **Private** level is available, and it allows publishing strategies only in a private format (for selected users):
+
+After clicking the **Save** button, the strategy will be sent to the StockSharp server.
+
+When publishing updates, it is not required to enter all parameters again. Instead of entering product parameters, a window will appear for entering a note for the update:
+
+![Designer_publish_02](../images/Designer_publish_02.png)
+
+After clicking the **OK** button, a window will appear indicating a successful update:
+
+![Designer_publish_03](../images/Designer_publish_03.png)
