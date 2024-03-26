@@ -1,6 +1,6 @@
 # Strategy Gallery
 
-The **Strategy Gallery** provides the opportunity to download ready-made trading strategies to your computer. You can open the **Strategy Gallery** by clicking on the **Strategy Gallery** button in the **General** tab.
+The **Strategy Gallery** provides the opportunity to download ready-made trading strategies to your computer. You can open the **Strategy Gallery** by clicking on the **Strategy Gallery** button in the **Common** tab.
 
 To download a strategy to your computer, you need to:
 

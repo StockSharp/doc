@@ -1,6 +1,6 @@
 # Using Blocks
 
-You can add a new strategy by pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the **General** tab and selecting **Strategy**. Or, by right-clicking on the **Strategies** folder in the **Scheme** panel, and pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the dropdown menu:
+You can add a new strategy by pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the **Common** tab and selecting **Strategy**. Or, by right-clicking on the **Strategies** folder in the **Scheme** panel, and pressing the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01_button.png) button in the dropdown menu:
 
 ![Designer The creation of a strategy 00](../images/Designer_creation_of_strategy_00.png)
 

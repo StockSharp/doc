@@ -6,7 +6,7 @@
 
 You have to select the start mode and click **OK**. 
 
-Then the window for selecting data sources appears. You can also open this window in the **General** tab, you need to select **Add \=\> Sources**. 
+Then the window for selecting data sources appears. You can also open this window in the **Common** tab, you need to select **Add \=\> Sources**. 
 
 ![hydra source add](../images/hydra_source_add.png)
 
