@@ -18,7 +18,7 @@ So, for example the user can select:
 
 - **Price and volume step**
 - **Minimum and maximum volumes**
-- **External ID**![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
-- For options, it allows setting the **Underlying Asset** and **Asset Type** (type of the underlying security).![hydra choose securitiy 05](../images/hydra_choose_securitiy_05.png)
+- **External ID** ![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
+- For options, it allows setting the **Underlying Asset** and **Asset Type** (type of the underlying security). ![hydra choose securitiy 05](../images/hydra_choose_securitiy_05.png)
 
 **Watch [video tutorial](HydraSecuritiesCongfigDowVideo.md)**

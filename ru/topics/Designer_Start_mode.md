@@ -1,6 +1,6 @@
 # Режим запуска
 
-На **Панели быстрого доступа**, по умолчанию расположенной в верхней части окна программы, находится кнопка **Настройки**![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png). При нажатии на кнопку ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) появится возможность сменить режим запуска программы, язык интерфейса или полностью сбросить настройки.
+На **Панели быстрого доступа**, по умолчанию расположенной в верхней части окна программы, находится кнопка **Настройки** ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png). При нажатии на кнопку ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) появится возможность сменить режим запуска программы, язык интерфейса или полностью сбросить настройки.
 
 ![Designer Start mode 00](../images/Designer_Start_mode_00.png)
 

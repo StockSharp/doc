@@ -1,6 +1,6 @@
 # Панель стратегий
 
-При нажатии на вкладке **Общая** на кнопку **Торговля**![Designer Panel strategies 00](../images/Designer_Panel_strategies_00.png) откроется панель **Торговля**.
+При нажатии на вкладке **Общая** на кнопку **Торговля** ![Designer Panel strategies 00](../images/Designer_Panel_strategies_00.png) откроется панель **Торговля**.
 
 ![Designer Panel strategies 01](../images/Designer_Panel_strategies_01.png)
 

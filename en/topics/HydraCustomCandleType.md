@@ -12,7 +12,7 @@ The sequence of obtaining such candles:
 
 1. Select **Custom** candles
 2. In the settings, we specify **TF** candles and a period of 10 minutes
-3. In the source, we specify from what the candles will be built \- **Order Log**![hydra type candle 00 02](../images/hydra_type_candle_00_02.png)
+3. In the source, we specify from what the candles will be built \- **Order Log** ![hydra type candle 00 02](../images/hydra_type_candle_00_02.png)
 4. We set the period. As you can see, next to the candle name appeared the **Generated** indication..![hydra type candle 00 03](../images/hydra_type_candle_00_03.png)
 5. Click on start and the data starts downloading.![hydra type candle 00 04](../images/hydra_type_candle_00_04.png)
 6. Let's go to the candles section and [see the downloaded data](HydraViewingMarketData.md).![hydra type candle 00 06](../images/hydra_type_candle_00_06.png)

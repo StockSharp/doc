@@ -2,11 +2,11 @@
 
 To create schemas of strategies and composite elements, and to test the obtained strategies on historical data, you can use an example of the strategy of moving average (SMA). It allows you to go through a complete cycle from creating a strategy to its testing and debugging. The strategy of moving average (SMA) can be found in the **Strategies** folder of the **Schemas** panel.
 
-1. Creating a new strategy from the cubes as described in [Using C\#](Designer_Creating_strategy_from_code.md). To add a new strategy by click the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Common** tab and selecting **Strategy**. Or by right\-click the **Strategy** folder in the **Schemas** panel, and to click the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the drop\-down menu.
+1. Creating a new strategy from the cubes as described in [Using C\#](Designer_Creating_strategy_from_code.md). To add a new strategy by click the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Common** tab and selecting **Strategy**. Or by right\-click the **Strategy** folder in the **Schemas** panel, and to click the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the drop\-down menu.
 
 ![Designer The creation of a strategy 00](../images/Designer_creation_of_strategy_00.png)
 
-After clicking the **Add**![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Strategy** folder of the **Schemas** panel, a new strategy will appear. In the workspace, a new tab with a strategy appears, when you switch to it, the **Emulation** tab will automatically open in the ribbon. In the **Emulation** tab, you can change the name of the strategy and give it a brief description.
+After clicking the **Add** ![Designer Panel Circuits 01](../images/Designer_Panel_Circuits_01.png) button in the **Strategy** folder of the **Schemas** panel, a new strategy will appear. In the workspace, a new tab with a strategy appears, when you switch to it, the **Emulation** tab will automatically open in the ribbon. In the **Emulation** tab, you can change the name of the strategy and give it a brief description.
 
 ![Designer The creation of a strategy 01](../images/Designer_creation_of_strategy_01.png)
 

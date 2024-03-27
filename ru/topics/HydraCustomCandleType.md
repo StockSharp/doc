@@ -12,7 +12,7 @@
 
 1. Выбираем **Пользовательские** свечи.
 2. В настройках указываем свечи **ТФ** и период 10 мин.
-3. В источнике указываем из чего будут строяться свечи \- **Лог заявок**![hydra type candle 00 02](../images/hydra_type_candle_00_02.png)
+3. В источнике указываем из чего будут строяться свечи \- **Лог заявок** ![hydra type candle 00 02](../images/hydra_type_candle_00_02.png)
 4. Устанавливаем период. Как видно рядом с названием свечи появилось указание **Сгенерированные**.![hydra type candle 00 03](../images/hydra_type_candle_00_03.png)
 5. Нажимаем на запуск и данные начинают скачиваться.![hydra type candle 00 04](../images/hydra_type_candle_00_04.png)
 6. Перейдем в раздел свечи и [посмотрим скаченные данные](HydraViewingMarketData.md).![hydra type candle 00 06](../images/hydra_type_candle_00_06.png)
@@ -23,7 +23,7 @@
 
 1. Выбираем **Пользовательские** свечи.
 2. В настройках указываем свечи **Range** и объем 10.
-3. В источнике указываем из чего будут строяться свечи \- **Тики**![hydra type candle 00 07](../images/hydra_type_candle_00_07.png)
+3. В источнике указываем из чего будут строяться свечи \- **Тики** ![hydra type candle 00 07](../images/hydra_type_candle_00_07.png)
 4. Устанавливаем период.
 5. Нажимаем на запуск и данные начинают скачиваться.![hydra type candle 00 08](../images/hydra_type_candle_00_08.png)
 6. Перейдем в раздел свечи и [посмотрим скаченные данные](HydraViewingMarketData.md).![hydra type candle 00 09](../images/hydra_type_candle_00_09.png)

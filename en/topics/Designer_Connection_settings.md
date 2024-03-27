@@ -1,6 +1,6 @@
 # Connections settings
 
-1. When clicking the arrow next to the **Connect**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) button, the **Connection settings** button appears:
+1. When clicking the arrow next to the **Connect** ![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) button, the **Connection settings** button appears:
 
 ![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 

@@ -18,13 +18,13 @@
 
 Перейдем в настройки подключения и выберем необходимое подключение. Как настроить подключение описано в пункте [Настройки подключения](Shell_Connection_settings.md).
 
-Следующим шагом подключимся, нажав на кнопку **Подключиться**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png).
+Следующим шагом подключимся, нажав на кнопку **Подключиться** ![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png).
 
 После подключения на вкладке [Общее](Shell_Common.md) можно посмотреть портфели, инстументы, заявки и собственные сделки, которые были получены из подключения.
 
 ![Shell Quick start 02](../images/Shell_Quick_start_02.png)
 
-Перейдя на вкладку Реал\-тайм нажав на кнопку **Добавить**![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) добавим стратегию для запуска в торговлю.
+Перейдя на вкладку Реал\-тайм нажав на кнопку **Добавить** ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) добавим стратегию для запуска в торговлю.
 
 ![Shell Quick start 03](../images/Shell_Quick_start_03.png)
 

@@ -24,7 +24,7 @@ After connection, on the[Common](Shell_Common.md) tab, you can see the portfolio
 
 ![Shell Quick start 02](../images/Shell_Quick_start_02.png)
 
-Go to the Real\-time tab, click the **Add**![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button to add a strategy to start trading.
+Go to the Real\-time tab, click the **Add** ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button to add a strategy to start trading.
 
 ![Shell Quick start 03](../images/Shell_Quick_start_03.png)
 

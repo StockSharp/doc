@@ -35,7 +35,7 @@ For example, download the SBER@TQBR securities (stock of Sber Bank) from the Ð¤Ð
 
    At the first start, the program will offer to download all the securities at once for the selected source. Further, the user will download the securities himself. Initially, the security database in [Hydra](Hydra.md) is empty, there is only an auxiliary security **ALL@ALL**. When this security is selected, data will be downloaded for all available securities for this source. 
 
-   To add an security, click on the **Add**![hydra add](../images/hydra_add.png) button. Then a window for downloading security will open. ![hydra securities](../images/hydra_securities.png)
+   To add an security, click on the **Add** ![hydra add](../images/hydra_add.png) button. Then a window for downloading security will open. ![hydra securities](../images/hydra_securities.png)
 
    To download the securities, you have to click the corresponding **Download securities** button. 
 

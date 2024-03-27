@@ -16,7 +16,7 @@ To match instruments and connections you need:
 
    APPLE stock instrument.
    - Connection \- **Interactive Brokers**. Click on the ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button, after which a new line will be added. 
-   - In the **Security** code and **Board code** columns, specify the instrument code and board code. In the columns **Security code in adapter** and **Board code in adapter** specify the instrument code and the board code as they are specified in the external trading system. Click **OK**![Designer Security mapping 01 01](../images/Designer_Security_mapping_01_01.png)
+   - In the **Security** code and **Board code** columns, specify the instrument code and board code. In the columns **Security code in adapter** and **Board code in adapter** specify the instrument code and the board code as they are specified in the external trading system. Click **OK** ![Designer Security mapping 01 01](../images/Designer_Security_mapping_01_01.png)
    - We repeat the steps for the **Transaq** and **CQG Continuum** connections in the same way. 
 
    | **Transaq**                                                                       | **CQG Continuum**                                                                 |

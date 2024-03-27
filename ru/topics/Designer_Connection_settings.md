@@ -1,6 +1,6 @@
 # Настройки подключения
 
-1. При нажатии на стрелку возле кнопки **Подключиться**![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) появится кнопка **Настройки подключения**:
+1. При нажатии на стрелку возле кнопки **Подключиться** ![Designer The quick access toolbar 00](../images/Designer_quick_access_toolbar_00.png) появится кнопка **Настройки подключения**:
 
 ![Designer The connection settings 00](../images/Designer_connection_settings_00.png)
 

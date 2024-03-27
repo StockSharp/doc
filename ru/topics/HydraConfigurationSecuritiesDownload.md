@@ -18,7 +18,7 @@
 
 - **Шаг цены и объема**
 - **Минимальный и максимальный объемы**
-- **Внешний идентификатор**![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
+- **Внешний идентификатор** ![hydra choose securitiy 04](../images/hydra_choose_securitiy_04.png)
 - Для опционов позволяет настроить **Базовый актив** и **Тип актива**(тип базового инструмента).![hydra choose securitiy 05](../images/hydra_choose_securitiy_05.png)
 
 **Смотреть [видеоинструкцию](HydraSecuritiesCongfigDowVideo.md)**

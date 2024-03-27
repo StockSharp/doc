@@ -1,6 +1,6 @@
 # Launch settings
 
-On the **Quick access panel**, located by default at the top of the [Designer](Designer.md) window, there is a **Settings**![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) button. Clicking the ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) button allows changing the program launch mode, interface language or totally reset the [Designer](Designer.md) settings.
+On the **Quick access panel**, located by default at the top of the [Designer](Designer.md) window, there is a **Settings** ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) button. Clicking the ![Designer The quick access toolbar 02](../images/Designer_quick_access_toolbar_02.png) button allows changing the program launch mode, interface language or totally reset the [Designer](Designer.md) settings.
 
 ![Designer Start mode 00](../images/Designer_Start_mode_00.png)
 

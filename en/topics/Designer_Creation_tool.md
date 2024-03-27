@@ -1,6 +1,6 @@
 # Create instrument
 
-Clicking the **Create security**![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button opens the **Editing** window. To create a security, you should fill the security properties and click **OK** button:
+Clicking the **Create security** ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png) button opens the **Editing** window. To create a security, you should fill the security properties and click **OK** button:
 
 ![Designer Creation tool 01](../images/Designer_Creation_tool_01.png)
 
