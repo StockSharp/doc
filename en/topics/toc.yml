@@ -380,13 +380,6 @@
     href: Terminal_Repository_of_market_data.md
   - name: Indicators
     href: Terminal_Indicators.md
-  - name: Team working
-    href: Terminal_Teamwork.md
-    items:
-    - name: Chat
-      href: Terminal_Chat.md
-    - name: Share images for charts and tables
-      href: Terminal_publish.md
   - name: Notifications
     href: Terminal_Notifications.md
     items:
@@ -400,8 +393,6 @@
       href: Terminal_Start_mode.md
     - name: Reset settings
       href: Terminal_Reset_language_settings.md
-    - name: Feedback forms
-      href: Terminal_contact_us.md
 - name: Hydra
   href: Hydra.md
   items:

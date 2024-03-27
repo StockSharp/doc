@@ -1,5 +1,5 @@
-# Сброс языка и настроек
+# Сброс настроек
 
 См. 
 
-[Сброс языка и настроек](Designer_Reset_language_settings.md)
+[Сброс настроек](Designer_Reset_language_settings.md)

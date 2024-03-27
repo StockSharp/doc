@@ -308,7 +308,7 @@
     items:
     - name: Настройки уведомлений
       href: Designer_notification_Setting.md
-    - name: Режим запуска
+    - name: Сброс настроек
       href: Designer_Reset_language_settings.md
     - name: Редактирование данных вручную
       href: Designer_Directory_and_edit_data_manually.md
@@ -378,13 +378,6 @@
     href: Terminal_Repository_of_market_data.md
   - name: Индикаторы
     href: Terminal_Indicators.md
-  - name: Совместная работа
-    href: Terminal_Teamwork.md
-    items:
-    - name: Чат
-      href: Terminal_Chat.md
-    - name: Публикация графиков и таблиц
-      href: Terminal_publish.md
   - name: Уведомления
     href: Terminal_Notifications.md
     items:
@@ -396,10 +389,8 @@
     items:
     - name: Режим запуска
       href: Terminal_Start_mode.md
-    - name: Сброс языка и настроек
+    - name: Сброс настроек
       href: Terminal_Reset_language_settings.md
-    - name: Обратная связь
-      href: Terminal_contact_us.md
 - name: Hydra
   href: Hydra.md
   items:
