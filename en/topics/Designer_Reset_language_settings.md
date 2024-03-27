@@ -11,7 +11,7 @@ When the **Resetting** is selected, the confirmation window is opened.
 
 ![Designer Reset language settings 00](../images/Designer_Reset_language_settings_00.png)
 
-After clicking the **OK** button all [Designer](Designer.md) settings will be reset to default values. The directory with the [Designer](Designer.md) will be cleared completely, **all created strategies and downloaded instruments and other information stored in the settings directory will be DESTROYED.** After that, [Designer](Designer.md) will reboot and the window [Launch settings](Designer_Start_mode.md) window will be opened.
+After clicking the **OK** button all [Designer](Designer.md) settings will be reset to default values. The directory with the [Designer](Designer.md) will be cleared completely, **all created strategies and downloaded instruments and other information stored in the settings directory will be DESTROYED.**
 
 ## Recommended content
 
