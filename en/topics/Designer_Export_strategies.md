@@ -13,7 +13,7 @@ After pressing **Export**, depending on the content type, a window will appear:
 
   ![Designer Export strategies 01](../images/Designer_Export_strategies_01.png)
 
-  - scheme - export the scheme as is.
+  - scheme - export the scheme as is. The **Standalone** mode is required for schemes that use their own elements or indicators. In this case, all inner elements will be exported within the strategy diagram.
   - code - convert the scheme into C# code.
   - file (assembly) - compile the scheme into a DLL. Suitable if you need to keep the scheme confidential.
 
