@@ -1761,6 +1761,8 @@
         href: IndicatorZigZag.md
       - name: ZigZag (Metastock)
         href: IndicatorZigZagEquis.md
+      - name: Заглушка
+        href: IndicatorPassThrough.md
     - name: Собственный индикатор
       href: IndicatorsCustom.md
     - name: Графический рендерер индикаторов
