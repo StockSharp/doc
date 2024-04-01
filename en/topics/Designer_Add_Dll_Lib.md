@@ -1,7 +1,5 @@
-# External DLL
+# External DLLs
 
-When you create your own **Source code** cube, you can use other C\# libraries, including your own, along with the [API](StockSharpAbout.md) libraries.
-
-Clicking the **References** button of the **Source code** tab opens the **Extra references** window, where you can add or remove the Dll library.
+When creating content from **Source Code**, along with [API](StockSharpAbout.md) libraries, you can use other C# libraries, including your own. These libraries must be compatible with .NET 6.0. To add a reference to a library, you need to click on the **References** button in the **Backtest** tab. After that, the **Extra references** window will open, where you can add or remove the necessary libraries:
 
 ![Designer Add Dll Lib](../images/Designer_Add_Dll_Lib.png)
