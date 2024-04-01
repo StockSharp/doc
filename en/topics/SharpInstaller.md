@@ -2,13 +2,13 @@
 
 **Installer** \- is the control center for all programs and applications from **StockSharp**, allowing you to:
 
-- download and install [Designer](Designer.md), [Terminal](Terminal.md), [Hydra](Hydra.md)
-- buy and install [MT4 and MT5](MT.md), [MatLab](MatLab.md) connectors
-- buy and install additional software
-- install programs along with purchased connectors
-- monitor the process of purchasing new programs
-- download [API](StockSharpAbout.md) library and automatically monitor its updates
-- download purchased training lessons, [Shell](Shell.md) program.
+- Download and install [Designer](Designer.md), [Terminal](Terminal.md), [Hydra](Hydra.md)
+- Install [MetaTrader](MT.md) plugin-connectors
+- Purchase and install paid components such as [Shell](Shell.md), [MatLab](MatLab.md)
+- Purchase and unpack source codes for programs like [Designer](Designer.md).
+- Install programs together with purchased connectors
+- Monitor the program update process
+- Download the [API](StockSharpAbout.md) library and automatically track its updates
 
 ![first win installer](../images/first_win_installer.png)
 

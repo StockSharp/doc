@@ -4,7 +4,10 @@
 
 **Supports 90+ brokers, exchanges and data sources:** [Connectors](topics/API_Connectors.md).
 
-You can use S\# with any broker that supports our connection. 
+You can use S\# with any broker that supports our connection.
+
+> [!IMPORTANT]
+> The installation of **all** programs is performed uniformly through the [Installer](topics/SharpInstaller.md) utility.
 
 ### Designer
 
