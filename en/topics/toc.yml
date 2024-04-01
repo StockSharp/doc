@@ -274,7 +274,6 @@
     - name: Symbol mapping
       href: Designer_Security_mapping.md
   - name: Live execution
-    href: Designer_Live_trade.md
     items:
     - name: Getting started
       href: Designer_Add_strategy_Live_trade.md
@@ -284,8 +283,6 @@
       href: Designer_Panel_strategies.md
     - name: Live execution sample
       href: Designer_Example_of_Live_trading.md
-    - name: Strategy warm-up
-      href: Designer_Warm_Up_mode.md
     - name: Export into Runner or Shell
       href: Designer_run_strategy_on_server.md
   - name: Connections settings
@@ -306,10 +303,8 @@
       href: Designer_Export_strategies.md
     - name: Import
       href: Designer_Import_strategies.md
-  - name: Misc settings
+  - name: Settings
     items:
-    - name: Notification settings
-      href: Designer_notification_Setting.md
     - name: Reset settings
       href: Designer_Reset_language_settings.md
     - name: Settings directory

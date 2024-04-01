@@ -272,7 +272,6 @@
     - name: Сопоставление инструменты-подключения
       href: Designer_Security_mapping.md
   - name: Live торговля
-    href: Designer_Live_trade.md
     items:
     - name: Добавление стратегии в Live торговлю
       href: Designer_Add_strategy_Live_trade.md
@@ -282,8 +281,6 @@
       href: Designer_Panel_strategies.md
     - name: Пример Live торговли
       href: Designer_Example_of_Live_trading.md
-    - name: Режим прогрева стратегии
-      href: Designer_Warm_Up_mode.md
     - name: Экспорт в Runner и Shell
       href: Designer_run_strategy_on_server.md
   - name: Настройки подключения
@@ -306,8 +303,6 @@
       href: Designer_Import_strategies.md
   - name: Настройки
     items:
-    - name: Настройки уведомлений
-      href: Designer_notification_Setting.md
     - name: Сброс настроек
       href: Designer_Reset_language_settings.md
     - name: Редактирование данных вручную
