@@ -4,7 +4,7 @@
 
 ![Designer Live trade 01](../images/Designer_Live_trade_01.png)
 
-Также добавить стратегию в Live торговлю можно нажав на кнопку ![Designer Live trade 00](../images/Designer_Live_trade_00.png)**Торговля** на вкладке **Эмуляция**.
+Также добавить стратегию в Live торговлю можно нажав на кнопку ![Designer Live trade 00](../images/Designer_Live_trade_00.png) **Торговля** на вкладке **Бэктест**.
 
 ![Designer Live trade 02](../images/Designer_Live_trade_02.png)
 

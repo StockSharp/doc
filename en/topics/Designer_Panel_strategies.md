@@ -1,6 +1,6 @@
 # Strategies dashboard
 
-Clicking the ![Designer Panel strategies 00](../images/Designer_Panel_strategies_00.png) button on the **Common** tab opens the **Live** panel.
+Clicking the ![Designer Panel strategies 00](../images/Designer_Panel_strategies_00.png) button on the **Live** tab opens the **Live** panel.
 
 ![Designer Panel strategies 01](../images/Designer_Panel_strategies_01.png)
 
