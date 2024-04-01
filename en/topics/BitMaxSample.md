@@ -1,4 +1,4 @@
-# Adapter initialization Bithumb
+# Adapter initialization BitMax
 
 The code below demonstrates how to initialize the [BitMaxMessageAdapter](xref:StockSharp.BitMax.BitMaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 
