@@ -1,37 +1,40 @@
-# Debug DLL in Visual Studio
+# Debugging a DLL Cube with Visual Studio
 
-There is a mechanism to attach to running processes using the Visual Studio debugger in Visual Studio. The most detailed description of the Visual Studio debugger is in the [Attach to process](https://msdn.microsoft.com/en-US/library/3s68z0b3.aspx) documentation. Further, debugging will be considered using the example of a cube created in [Create DLL in Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md) section.
+Visual Studio provides a mechanism for attaching to running processes using the Visual Studio debugger. The Visual Studio debugger is described in more detail in the documentation [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022). The debugging process will be demonstrated using the example of a strategy added in the section [Using DLL](Designer_Creating_strategy_from_dll.md).
 
-1. In order to attach to the process and start debugging the DLL cube, it is necessary that it be loaded into memory. Loading the DLL into memory occurs after selecting the strategy name in the **Strategy type name** field. After loading the DLL into memory, it will be possible to attach it to the process.
+1. To attach to a process and start debugging a DLL strategy, it needs to be loaded into memory. The DLL is loaded into memory after [adding the strategy](Designer_Creating_strategy_from_dll.md). Once the DLL is loaded into memory, you can attach to the process.
 
-![Designer Creating a DLL cube in Visual Studio 03](../images/Designer_Creating_DLL_element_in_Visual_Studio_03.png)
+![Designer_Creation_Strategy_Dll_01](../images/Designer_Creation_Strategy_Dll_01.png)
 
-2. In Visual Studio, select **Debug \-\> Attach to Process** item.
+2. In Visual Studio, select **Debug -> Attach to Process**.
 
 ![Designer Debugging DLL cube using Visual Studio 00](../images/Designer_Debugging_DLL_using_Visual_Studio_00.png)
 
-3. Find the **Designer.exe** process that you want to attach in the **Available Processes** list of the **Attach to Process** dialog box.
+3. In the **Attach to Process** dialog box, find the **Designer.exe** process in the **Available processes** list that you want to attach to.
 
 ![Designer Debugging DLL cube using Visual Studio 01](../images/Designer_Debugging_DLL_using_Visual_Studio_01.png)
 
-If the process is running from a different user account, you should select the **Show processes for all users** check box.
+If the process is running under a different user account, you need to check the **Show processes from all users** checkbox.
 
-4. It is important that in the **Attach** window the code type that you need to debug was specified. The default setting **Auto** tries to determine the code type to be debugged, but does not always correctly determine the code type. To manually set the code type, you should do the following:
+4. It's important that the **Attach to** window specifies the code type that needs to be debugged. The default **Auto** parameter tries to determine the code type to be debugged, but it does not always correctly identify the code type. To manually set the code type, you need to do the following steps.
 
-- Click **Select** in the **Attach** field.
-- In the **Select code type** dialog box, click the **Debug these code** types option and select the types for debugging.
-- Click the **OK** button.
+- In the Attach to field, click **Select**.
+- In the **Select Code Type** dialog box, click the **Debug these code types** button and select the types for debugging.
+- Click OK.
 
 ![Designer Debugging DLL cube using Visual Studio 02](../images/Designer_Debugging_DLL_using_Visual_Studio_02.png)
 
-5. Click the **Attach** button.
+5. Click the Attach button.
 
-6. In Visual Studio, you need to set breakpoints in code. If the breakpoints are red and filled with red ![Designer Debugging DLL cube using Visual Studio 03](../images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (and the Studio is in debug mode) then it means that correct version of dll was loaded. And if the breakpoints are red and filled with white ![Designer Debugging DLL cube using Visual Studio 04](../images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (and Studio is in debug mode), then it means that wrong version of dll was loaded.
+6. In Visual Studio, set breakpoints in the code. If the breakpoints are red and filled with red ![Designer Debugging DLL cube using Visual Studio 03](../images/Designer_Debugging_DLL_using_Visual_Studio_03.png) (and Studio is in debugging mode), it means that the exact version of the DLL was loaded. If the breakpoints are red and filled with white ![Designer Debugging DLL cube using Visual Studio 04](../images/Designer_Debugging_DLL_using_Visual_Studio_04.png) (and Studio is in debugging mode), it means that the wrong version of the DLL was loaded.
 
-7. In the example, the breakpoint is in the first line of the **public void ProcessCandle(Candle candle**) method. When you run the strategy in [Designer](Designer.md), as soon as the candle values start to be passed to the DLL cube, Visual Studio stops at the point where the breakpoint is set. Next, you can trace the code progress:
+7. In the example, the breakpoint is set in the first line of the method **public void ProcessCandle(Candle candle)**. When the strategy runs in [Designer](Designer.md), as soon as candle values start being passed to the DLL, Visual Studio will stop at the breakpoint. From there, you can track the execution of the code:
 
 ![Designer Debugging DLL cube using Visual Studio 05](../images/Designer_Debugging_DLL_using_Visual_Studio_05.png)
 
-## Recommended content
+> [!WARNING] 
+> When the code is stopped under the debugger, all processes inside the **Designer** program are suspended. If the program is connected to real trading, then in the case of a long stop under the debugger, disconnections will occur.
 
-[Export](Designer_Export_strategies.md)
+## See Also
+
+[Exporting Strategies](Designer_Export_strategies.md)
