@@ -217,7 +217,7 @@
     - name: Using DLL
       href: Designer_Creating_strategy_from_dll.html
       items:
-      - name: Create DLL in Visual Studio
+      - name: Create element and indicator
         href: Designer_Creating_DLL_element_in_Visual_Studio.md
       - name: Debug DLL in Visual Studio
         href: Designer_Debugging_DLL_using_Visual_Studio.md

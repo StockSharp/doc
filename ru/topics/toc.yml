@@ -215,7 +215,7 @@
     - name: Использование DLL
       href: Designer_Creating_strategy_from_dll.html
       items:
-      - name: Создание DLL в Visual Studio
+      - name: Создание кубика и индикатора
         href: Designer_Creating_DLL_element_in_Visual_Studio.md
       - name: Отладка DLL с помощью Visual Studio
         href: Designer_Debugging_DLL_using_Visual_Studio.md
