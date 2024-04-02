@@ -7,3 +7,7 @@ en/src
 *.log
 
 doc.bat
+
+bin
+obj
+.vs
