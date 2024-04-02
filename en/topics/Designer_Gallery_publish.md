@@ -6,7 +6,7 @@ You can publish your strategy by clicking on the strategy with the left mouse bu
 
 After clicking the **Publish** button, a window will open with the choice of export type. For more details, see the section [Exporting Strategies](Designer_Export_strategies.md).
 
-After choosing the export type, the [Installer](Installer.md) program is activated with the publishing parameters ([Installer](Installer.md) must be launched in advance):
+After choosing the export type, the [Installer](SharpInstaller.md) program is activated with the publishing parameters ([Installer](SharpInstaller.md) must be launched in advance):
 
 ![Designer_publish_01](../images/Designer_publish_01.png)
 
