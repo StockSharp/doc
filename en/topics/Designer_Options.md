@@ -1,3 +1,0 @@
-# Options strategies
-
-TODO
