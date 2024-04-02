@@ -15,7 +15,7 @@ After pressing **Export**, depending on the content type, a window will appear:
 
   - scheme - export the scheme as is. The **Standalone** mode is required for schemes that use their own elements or indicators. In this case, all inner elements will be exported within the strategy diagram.
   - code - convert the scheme into C# code.
-  - file (assembly) - compile the scheme into a DLL. Suitable if you need to keep the scheme confidential.
+  - DLL - compile the scheme into a DLL. Suitable if you need to keep the code confidential.
 
 - for [code](Designer_Creating_strategy_from_code.md):
 
@@ -23,7 +23,7 @@ After pressing **Export**, depending on the content type, a window will appear:
 
   - scheme - export the code as a JSON file, which will include both the code itself and the references needed for compiling this code.
   - code - export the code as is.
-  - file (assembly) - compile the code into a DLL. Suitable if you need to keep the code confidential.
+  - DLL - compile the code into a DLL. Suitable if you need to keep the code confidential.
 
 - for a [dll](Designer_Creating_strategy_from_dll.md) a file selection window will appear.
 
