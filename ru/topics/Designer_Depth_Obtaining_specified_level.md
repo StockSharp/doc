@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Интерфейс](Designer_Creation_element_containing_source_code.md)
+[Галерея](Designer_Gallery_of_strategies.md)

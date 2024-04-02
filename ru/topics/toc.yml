@@ -386,8 +386,6 @@
       href: Terminal_notification_Setting.md
   - name: Настройки
     items:
-    - name: Режим запуска
-      href: Terminal_Start_mode.md
     - name: Сброс настроек
       href: Terminal_Reset_language_settings.md
 - name: Hydra

@@ -387,8 +387,6 @@
       href: Terminal_notification_Setting.md
   - name: Settings
     items:
-    - name: Launch settings
-      href: Terminal_Start_mode.md
     - name: Reset settings
       href: Terminal_Reset_language_settings.md
 - name: Hydra

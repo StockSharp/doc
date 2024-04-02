@@ -8,4 +8,4 @@ The **Instrument** data type is selected for the [Variable](Designer_Variable.md
 
 ## Recommended content
 
-[Getting started](Designer_Creation_element_containing_source_code.md)
+[Gallery](Designer_Gallery_of_strategies.md)
