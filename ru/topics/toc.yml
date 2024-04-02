@@ -210,6 +210,8 @@
         href: Designer_Combine_Source_code_and_standard_elements.md
       - name: Создание индикатора на C#
         href: Designer_Creating_indicator_from_source_code.md
+      - name: Отрисовка стакана
+        href: Designer_Source_Сode_OrderBook.md
       - name: Использование Visual Studio или Rider
         href: Designer_Creating_Code_Visual_Studio.md
     - name: Использование DLL
