@@ -1,7 +1,7 @@
-# Export to Runner and Shell
+# Running Strategies Outside of Designer
 
-Strategies created in Designer can be launched using the Runner or Shell programs.
+Strategies created in [Designer](Designer.md) can be run both in your own programs built on the [API](StockSharpAbout.md) and in the [Runner](Runner.md) or [Shell](Shell.md) applications.
 
-- Runner is faster and uses less memory than Designer, thus strategies will perform better. This approach is ideal for running strategies on a server. For more details, see [Export from Designer](RunnerDesignerExport.md).
+- [Runner](Runner.md) is faster and consumes less memory than [Designer](Designer.md), so strategies will perform better. This approach is ideal for running strategies on a server. More details can be found in [Export from Designer](RunnerDesignerExport.md).
 
-- Shell is provided as source code. This approach is ideal for distributing strategies with a unique interface, specifically designed for the strategies. For more details, see [Running a strategy created in Designer](Shell_run_Designer_strategy.md).
+- [Shell](Shell.md) is provided as source codes. This approach is ideal for distributing strategies with a unique interface specially created for the strategies. More details can be found in [Running a Strategy Created in Designer](Shell_run_Designer_strategy.md).

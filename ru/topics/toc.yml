@@ -281,7 +281,7 @@
       href: Designer_Panel_strategies.md
     - name: Пример Live торговли
       href: Designer_Example_of_Live_trading.md
-    - name: Экспорт в Runner и Shell
+    - name: Запуск стратегий вне Дизайнера
       href: Designer_run_strategy_on_server.md
   - name: Настройки подключения
     href: Designer_Connection_settings.md

@@ -283,7 +283,7 @@
       href: Designer_Panel_strategies.md
     - name: Live execution sample
       href: Designer_Example_of_Live_trading.md
-    - name: Export into Runner or Shell
+    - name: Running Strategies Outside of Designer
       href: Designer_run_strategy_on_server.md
   - name: Connections settings
     href: Designer_Connection_settings.md
