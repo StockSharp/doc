@@ -17,11 +17,15 @@ Using ready-made DLLs is familiar for those who want to work continuously in **V
 
 ![Designer Creating a DLL cube in Visual Studio 03](../images/Designer_Creating_DLL_element_in_Visual_Studio_03.png)
 
-2. After creating the strategy, you need to build the project by pressing **Build Solution** in the **Build** tab.
+3. To compile the code, it is necessary to include the NuGet package [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), where the base class for all strategies [Strategy](xref:StockSharp.Algo.Strategies.Strategy) is located:
+
+![Designer Creating a DLL cube in Visual Studio 04](../images/Designer_Creating_DLL_element_in_Visual_Studio_04.png)
+
+4. After creating the strategy, the project needs to be built by pressing **Build Solution** in the **Build** tab.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../images/Designer_Creating_DLL_element_in_Visual_Studio_01.png)
 
-3. In Visual Studio by default, the project is built into the …\\bin\\Debug\\net6.0 folder.
+5. In Visual Studio by default, the project is built into the …\\bin\\Debug\\net6.0 folder.
 
 ![Designer Creating a DLL cube in Visual Studio 02](../images/Designer_Creating_DLL_element_in_Visual_Studio_02.png)
 

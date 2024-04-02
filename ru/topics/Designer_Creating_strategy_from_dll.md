@@ -17,11 +17,15 @@
 
 ![Designer Creating a DLL cube in Visual Studio 03](../images/Designer_Creating_DLL_element_in_Visual_Studio_03.png)
 
-2. После создания стратегии необходимо собрать проект, нажав **Собрать решение** во вкладке **Сборка**.
+3. Для компилирования кода необходимо подключить NuGet пакет [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), где находится базовый класс для всех стратегий [Strategy](xref:StockSharp.Algo.Strategies.Strategy):
+
+![Designer Creating a DLL cube in Visual Studio 04](../images/Designer_Creating_DLL_element_in_Visual_Studio_04.png)
+
+4. После создания стратегии необходимо собрать проект, нажав **Собрать решение** во вкладке **Сборка**.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../images/Designer_Creating_DLL_element_in_Visual_Studio_01.png)
 
-3. В Visual Studio по умолчанию проект собирается в папку …\\bin\\Debug\\net6.0 .
+5. В Visual Studio по умолчанию проект собирается в папку …\\bin\\Debug\\net6.0 .
 
 ![Designer Creating a DLL cube in Visual Studio 02](../images/Designer_Creating_DLL_element_in_Visual_Studio_02.png)
 

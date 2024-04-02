@@ -6,7 +6,7 @@ To create a cube from code, it needs to be created in the **Own elements** folde
 
 ![Designer_Source_Code_Elem_00](../images/Designer_Source_Code_Elem_00.png)
 
-The code for an empty cube looks as follows:
+In the example provided below, the cube inherits from the [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) class, and looks as follows:
 
 ```cs
 /// <summary>
@@ -75,7 +75,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 }
 ```
 
-This code shows how to create a cube that has two incoming sockets and two outgoing. Incoming sockets are defined by applying the [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) attribute to the method:
+In this code, the cube has two incoming sockets and two outgoing sockets. Incoming sockets are defined by applying the [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) attribute to the method:
 
 ```cs
 [DiagramExternal]

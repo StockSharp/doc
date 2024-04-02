@@ -6,7 +6,7 @@
 
 ![Designer_Source_Code_Elem_00](../images/Designer_Source_Code_Elem_00.png)
 
-Код пустого кубика выглядит следующим образом:
+В ниже приведенном примере кубик наследуется от класса [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement), и выглядит следующим образом:
 
 ```cs
 /// <summary>
@@ -75,7 +75,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 }
 ```
 
-В данном коде показано как создать кубик, который имеет два входящих сокета и два исходящих. Входящие сокеты определяются путем применения атрибута [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) к методу:
+В данном коде кубик имеет два входящих сокета и два исходящих. Входящие сокеты определяются путем применения атрибута [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) к методу:
 
 ```cs
 [DiagramExternal]
