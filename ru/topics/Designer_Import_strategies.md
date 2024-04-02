@@ -10,7 +10,3 @@
 Если тип данных с этим именем есть, то появится окно с предложением перезаписать, добавить с другим названием:
 
 ![Designer Import strategies 01](../images/Designer_Import_strategies_01.png)
-
-## См. также
-
-[Интерфейс](Designer_Backtesting_Interface.md)

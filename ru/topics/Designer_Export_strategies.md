@@ -29,4 +29,4 @@
 
 ## См. также
 
-[Импорт](Designer_Import_strategies.md)
+[Запуск стратегий вне Дизайнера](Designer_run_strategy_on_server.md)

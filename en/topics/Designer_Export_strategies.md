@@ -29,4 +29,4 @@ After pressing **Export**, depending on the content type, a window will appear:
 
 ## See Also
 
-[Import](Designer_Import_strategies.md)
+[Running Strategies Outside of Designer](Designer_run_strategy_on_server.md)

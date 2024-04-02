@@ -10,7 +10,3 @@ The Designer allows you to import any type of data: strategies, blocks, and indi
 If data of the same name already exists, a window will appear offering to overwrite or add with a different name:
 
 ![Designer Import strategies 01](../images/Designer_Import_strategies_01.png)
-
-## See Also
-
-[Interface](Designer_Backtesting_Interface.md)
