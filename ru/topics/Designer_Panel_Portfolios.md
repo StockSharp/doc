@@ -8,7 +8,7 @@
 
 ![Designer Panel A Portfolios 01](../images/Designer_Panel_Portfolios_01.png)
 
-При нажатии кнопки ![Designer Alert Bell](../images/Designer_Alert_Bell.png) откроется окно [Настройки уведомлений](Designer_notification_Setting.md)
+При нажатии кнопки ![Designer Alert Bell](../images/Designer_Alert_Bell.png) откроется окно [Настройки уведомлений](Terminal_Notifications.md)
 
 ## См. также
 

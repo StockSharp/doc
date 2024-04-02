@@ -8,7 +8,7 @@ The **Portfolios** panel is a table that shows the basic data on the portfolio, 
 
 ![Designer Panel A Portfolios 01](../images/Designer_Panel_Portfolios_01.png)
 
-When you click the ![Designer Alert Bell](../images/Designer_Alert_Bell.png) button, the [Notification settings](Designer_notification_Setting.md) window opens.
+When you click the ![Designer Alert Bell](../images/Designer_Alert_Bell.png) button, the [Notification settings](Terminal_Notifications.md) window opens.
 
 ## Recommended content
 

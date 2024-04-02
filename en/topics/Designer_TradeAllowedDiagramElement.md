@@ -6,7 +6,7 @@ This block is used to check if trading is currently allowed. The following condi
 
 - All strategy subscriptions to market data must be in [Online](API_ConnectorsSubscriptions.md) state (receiving real-time data).
 - All indicators must be [formed](Indicators.md).
-- In the case of [live trading](Designer_Live_trade.md), the incoming trigger value must have a timestamp greater than the strategy's start time.
+- In the case of [live trading](Designer_Add_strategy_Live_trade.md), the incoming trigger value must have a timestamp greater than the strategy's start time.
 
 ### Incoming Sockets
 

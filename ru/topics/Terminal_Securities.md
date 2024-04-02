@@ -4,7 +4,7 @@
 
 Для добавления нового инструмента необходимо нажать на кнопку ![Designer Creation tool 00](../images/Designer_Creation_tool_00.png). 
 
-Также имеется возможность настроить уведомления по событиям выбранных инструментов [Настройки уведомлений](Designer_notification_Setting.md).
+Также имеется возможность настроить уведомления по событиям выбранных инструментов [Настройки уведомлений](Terminal_Notifications.md).
 
 ![Terminal securities 00](../images/Terminal_securities_00.png)
 

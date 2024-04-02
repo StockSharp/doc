@@ -44,4 +44,4 @@ The **P\/L** chart indicates that the strategy is unprofitable with such paramet
 
 ## Recommended content
 
-[Live execution](Designer_Live_trade.md)
+[Live execution](Designer_Add_strategy_Live_trade.md)

@@ -14,10 +14,10 @@ Incoming sockets
 
 Parameters
 
-- **Type** \- type of message (pop\-up window, e\-mail, sms, etc.). The types of notifications are described in the [Notification settings](Designer_notification_Setting.md) section.
+- **Type** \- type of message (pop\-up window, e\-mail, sms, etc.). The types of notifications are described in the [Notification settings](Terminal_Notifications.md) section.
 - **Header** \- the header of the message.
 - **Message** \- the text of the message.
 
 ## Recommended content
 
-[Notification settings](Designer_notification_Setting.md)
+[Notification settings](Terminal_Notifications.md)

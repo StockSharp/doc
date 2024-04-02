@@ -6,11 +6,11 @@ The main user interface element of [Designer](Designer.md) is the **Ribbon**, wh
 
 ![Designer Ribbon 00](../images/Designer_Ribbon_00.png)
 
-2. The **Backtest** tab automatically opens when selecting a strategy on the [Schemes](Designer_Panel_Schemas.md) panel. The **Backtest** tab contains the main elements for creating, debugging, testing, and optimizing strategies ([Creating a Strategy](Designer_Creation_strategy.md), [Example of Backtesting](Designer_Example_of_backtesting.md)). Also, on this tab, the strategy is launched for real trading, and necessary components for your strategy are selected: chart, order book, trades, etc.
+2. The **Backtest** tab automatically opens when selecting a strategy on the [Schemes](Designer_Panel_Schemas.md) panel. The **Backtest** tab contains the main elements for creating, debugging, testing, and optimizing strategies ([Creating a Strategy](Designer_Creating_strategy_out_of_blocks.md), [Example of Backtesting](Designer_Example_of_backtesting.md)). Also, on this tab, the strategy is launched for real trading, and necessary components for your strategy are selected: chart, order book, trades, etc.
 
 ![Designer Ribbon 01](../images/Designer_Ribbon_01.png)
 
-3. The **Trading** tab is intended specifically for real trading. Details on connection settings are written in [Connection Settings](Designer_Connection_settings.md). Real trading using [Designer](Designer.md) is described in [Live Trading](Designer_Live_trade.md).
+3. The **Live** tab is intended specifically for real trading. Details on connection settings are written in [Connection Settings](Designer_Connection_settings.md). Real trading using [Designer](Designer.md) is described in [Live Trading](Designer_Add_strategy_Live_trade.md).
 
 ![Designer Ribbon 02](../images/Designer_Ribbon_02.png)
 

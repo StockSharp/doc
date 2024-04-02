@@ -44,4 +44,4 @@
 
 ## См. также
 
-[Live торговля](Designer_Live_trade.md)
+[Live торговля](Designer_Add_strategy_Live_trade.md)

@@ -12,7 +12,7 @@ During trade there is a need to fully control the process. For complete control 
 - [P&L equity](Designer_Panel_Market_depth.md) \- is a chart of Profit\/Loss (unrealized), Profit\/Loss (realized) and commission.
 - [Trades](Designer_Trades.md) \- is a table with trades, that displays complete information about all trades of the strategy.
 - [Orders](Designer_Orders.md) \- is a table with orders, that displays complete information about all orders of the strategy.
-- [Conditional orders](Designer_Orders_conditional.md) \- is a table with conditional orders, that displays complete information about all conditional orders of the strategy.
+- [Conditional orders](Terminal_Orders_conditional.md) \- is a table with conditional orders, that displays complete information about all conditional orders of the strategy.
 - [Positions](Designer_Chart_Position.md) \- is a table of the current Position. 
 - [Tick trades](Designer_Tape_Trades.md) \- is a trade table that displays complete information about all trades for the selected instruments.
 - [Positions](Designer_Chart_Position.md) \- is a chart of the Position.

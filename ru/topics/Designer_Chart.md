@@ -20,8 +20,6 @@
 
 ![Designer Schedule 03](../images/Designer_Schedule_03.png)
 
-[Designer](Designer.md) предоставляет возможность публикации, а также автоматической публикации графиков, как это сделать описано в пункте [Публикация графиков и таблиц](Designer_publish.md). 
-
 ## См. также
 
 [Заявки](Designer_Orders.md)
