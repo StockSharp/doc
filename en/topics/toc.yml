@@ -49,8 +49,6 @@
         href: Designer_Chart.md
       - name: Orders
         href: Designer_Orders.md
-      - name: Conditional orders
-        href: Designer_Orders_conditional.md
       - name: Trades
         href: Designer_Trades.md
       - name: Order book
@@ -224,7 +222,7 @@
       - name: Debug DLL in Visual Studio
         href: Designer_Debugging_DLL_using_Visual_Studio.md
       - name: DLL panel
-        href: Designer_DLL_Panel.md
+        href: Designer_Panel_DLL.md
     items:
     - name: Indicators
       href: Designer_Indicators.md

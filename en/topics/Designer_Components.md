@@ -13,9 +13,9 @@ During testing or trading, there arises a need to fully control the process. For
 - [Trade Tape](Designer_Tape_Trades.md) - represents a table with trades, displaying complete information about all the trades for selected instruments.
 - [Position Chart](Designer_Chart_Position.md) - represents a Position chart.
 - Properties - represents a table of [Testing Properties](Designer_Properties_emulation.md) or a table of [Live Trading Properties](Designer_Properties_Live.md).
-- Scheme - represents the [Strategy Designer](Designer_Designer_schemes_strategies_and_component_elements.md).
-- [Source Code](Designer_Creation_element_containing_source_code.md) - represents a window for creating or editing strategies based on source code.
-- DLL - a window for viewing DLL metadata. In case of creating a strategy based on a ready DLL.
+- [Scheme](Designer_Designer_schemes_strategies_and_component_elements.md) - represents the schema designer.
+- [Source Code](Designer_Creating_strategy_from_code.md) - represents a window for creating or editing strategies based on source code.
+- [DLL](Designer_Panel_DLL.md) - a window for viewing DLL metadata. In case of creating a strategy based on a ready DLL.
 - [Options Position Chart](Designer_Graph_options_positions.md) - represents an options position chart.
 - [Options Board](Designer_Options_Board.md) - represents an options table.
 - [Depth](Designer_Depth_Panel2.md) - represents a table of limit orders for buying and selling.

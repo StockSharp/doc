@@ -49,8 +49,6 @@
         href: Designer_Chart.md
       - name: Заявки
         href: Designer_Orders.md
-      - name: Условные заявки
-        href: Designer_Orders_conditional.md
       - name: Сделки
         href: Designer_Trades.md
       - name: Стакан
@@ -222,7 +220,7 @@
       - name: Отладка DLL с помощью Visual Studio
         href: Designer_Debugging_DLL_using_Visual_Studio.md
       - name: Панель DLL
-        href: Designer_DLL_Panel.md
+        href: Designer_Panel_DLL.md
   - name: Индикаторы
     items:
     - name: Индикаторы
