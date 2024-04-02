@@ -322,8 +322,6 @@
     href: Terminal_Quick_start.md
   - name: Интерфейс программы
     items:
-    - name: Панель быстрого доступа
-      href: Terminal_Quick_access_toolbar.md
     - name: Лента
       href: Terminal_Tape.md
     - name: Рабочая область

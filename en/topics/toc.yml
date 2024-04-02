@@ -323,8 +323,6 @@
     href: Terminal_Quick_start.md
   - name: User interface
     items:
-    - name: Quick access panel
-      href: Terminal_Quick_access_toolbar.md
     - name: Ribbon
       href: Terminal_Tape.md
     - name: Workspace
