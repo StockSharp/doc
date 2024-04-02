@@ -1,4 +1,4 @@
-# Отладка DLL кубика с помощью Visual Studio
+# Отладка DLL с помощью Visual Studio
 
 В Visual Studio существует механизм присоединения к выполняемым процессам с использованием отладчика Visual Studio. Наиболее подробно об отладчике Visual Studio написано в документации [Присоединиться к процессам](https://learn.microsoft.com/ru-ru/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022). Далее отладка будет рассмотрена на примере стратегии, добавленной в пункте [Использование DLL](Designer_Creating_strategy_from_dll.md).
 

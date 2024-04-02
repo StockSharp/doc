@@ -1,4 +1,4 @@
-# Debugging a DLL Cube with Visual Studio
+# Debugging a DLL with Visual Studio
 
 Visual Studio provides a mechanism for attaching to running processes using the Visual Studio debugger. The Visual Studio debugger is described in more detail in the documentation [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022). The debugging process will be demonstrated using the example of a strategy added in the section [Using DLL](Designer_Creating_strategy_from_dll.md).
 
