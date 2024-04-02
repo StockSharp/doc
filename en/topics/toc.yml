@@ -223,6 +223,7 @@
         href: Designer_Debugging_DLL_using_Visual_Studio.md
       - name: DLL panel
         href: Designer_Panel_DLL.md
+  - name: Indicators
     items:
     - name: Indicators
       href: Designer_Indicators.md
