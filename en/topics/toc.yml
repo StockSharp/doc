@@ -215,7 +215,7 @@
       - name: Using Visual Studio or Rider
         href: Designer_Creating_Code_Visual_Studio.md
     - name: Using DLL
-      href: Designer_Creating_strategy_from_dll.html
+      href: Designer_Creating_strategy_from_dll.md
       items:
       - name: Create element and indicator
         href: Designer_Creating_DLL_element_in_Visual_Studio.md

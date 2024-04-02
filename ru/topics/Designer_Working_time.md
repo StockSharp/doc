@@ -20,4 +20,4 @@
 
 ## См. также
 
-[Разрешена ли торговля](Designer_TradeAllowedDiagramElement.html)
+[Разрешена ли торговля](Designer_TradeAllowedDiagramElement.md)

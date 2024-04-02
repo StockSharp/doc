@@ -10,4 +10,4 @@
 
 ## См. также
 
-[Регистрация заявки](Designer_Position_opening.html)
+[Регистрация заявки](Designer_Position_opening.md)

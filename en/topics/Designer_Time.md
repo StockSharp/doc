@@ -10,4 +10,4 @@ This block is used for obtaining the current time.
 
 ## See Also
 
-[Order Registration](Designer_Position_opening.html)
+[Order Registration](Designer_Position_opening.md)

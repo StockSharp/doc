@@ -33,7 +33,7 @@ Take and Stop Parameters
 ![Designer Protect positions 02](../images/Designer_Protect_positions_02.png)
 
 > [!WARNING]
-> Incoming transactions CANNOT be transactions of the entire strategy (the [Strategy Transactions](Designer_Trades_strategy.html) block) as this will lead to incorrect calculation of the current position because the protection transactions are also strategy transactions. Transactions from orders that change the position should be fed into the Position Protection block.
+> Incoming transactions CANNOT be transactions of the entire strategy (the [Strategy Transactions](Designer_Trades_strategy.md) block) as this will lead to incorrect calculation of the current position because the protection transactions are also strategy transactions. Transactions from orders that change the position should be fed into the Position Protection block.
 
 ## See Also
 

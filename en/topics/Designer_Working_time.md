@@ -20,4 +20,4 @@ The block can be used to determine when trading is conducted for multiple instru
 
 ## See Also
 
-[Is Trading Allowed](Designer_TradeAllowedDiagramElement.html)
+[Is Trading Allowed](Designer_TradeAllowedDiagramElement.md)

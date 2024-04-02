@@ -213,7 +213,7 @@
       - name: Использование Visual Studio или Rider
         href: Designer_Creating_Code_Visual_Studio.md
     - name: Использование DLL
-      href: Designer_Creating_strategy_from_dll.html
+      href: Designer_Creating_strategy_from_dll.md
       items:
       - name: Создание кубика и индикатора
         href: Designer_Creating_DLL_element_in_Visual_Studio.md
