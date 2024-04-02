@@ -1,54 +1,127 @@
-# Combine C\# code and visual designer
+# Creating Your Own Cube
 
-An example of writing the SMA strategy code, given in the [First C\# strategy](Designer_Creating_strategy_from_source_code.md) section, can be optimized by a competent combination of [Source code](Designer_Source_code.md) cubes and standard cubes. We take out from the code all actions of the strategy, which are easier to create from the standard [Indicator](Designer_Indicator.md), [Chart](Designer_Panel_graphics.md), [Trades by strategy](Designer_Trades_strategy.md) cubes.
+Similar to creating a [cube from a diagram](Designer_Creating_composite_elements.md), you can create your own cube based on C# code. Such a cube will be more functional than a cube from a diagram.
 
-Since the SMA Indicators were placed in separate cubes, you need to rewrite the ProcessCandle(Candle candle) method so that it takes two ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle) indicators in addition to (Candle candle) candles. And on the basis of these values, it calculates the strategy. And also, it is necessary to delete all superfluous in the code. The final version of the cube source code looks like this:
+To create a cube from code, it needs to be created in the **Own elements** folder:
+
+![Designer_Source_Code_Elem_00](../images/Designer_Source_Code_Elem_00.png)
+
+The code for an empty cube looks as follows:
 
 ```cs
-using Ecng.Common;
-using StockSharp.Messages;
-using StockSharp.Algo;
-using StockSharp.Algo.Candles;
-using StockSharp.Algo.Strategies;
-using StockSharp.Algo.Indicators;
-using StockSharp.Xaml.Diagram.Elements;
-public class NewStrategy : Strategy
+/// <summary>
+/// Sample diagram element demonstrates input and output sockets usage.
+/// 
+/// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
+/// </summary>
+public class EmptyDiagramElement : DiagramExternalElement
 {
-    private bool _isShortLessThenLong;
-    [DiagramExternal]
-    public void ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)
-    {
-        // strategy are stopping
-        if (ProcessState == ProcessStates.Stopping)
-        {
-            CancelActiveOrders();
-            return;
-        }
-        // calc new values for short and long
-        var isShortLessThenLong = ssma.Value < lsma.Value;
-        // crossing happened
-        if (_isShortLessThenLong != isShortLessThenLong)
-        {
-            // if short less than long, the sale, otherwise buy
-            var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-            // calc size for open position or revert
-            var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-            // calc order price as a close price + offset
-            var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
-            RegisterOrder(this.CreateOrder(direction, price, volume));
-            // store current values for short and long
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-    }
+	private readonly DiagramElementParam<int> _minValue;
+
+	public EmptyDiagramElement()
+	{
+		// example property to show how to make parameters
+	
+		_minValue = AddParam("MinValue", 10)
+			.SetBasic(true) // make parameter visible in basic mode
+			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+	}
+
+	// output sockets are events marked with DiagramExternal attribute
+
+	[DiagramExternal]
+	public event Action<Unit> Output1;
+
+	[DiagramExternal]
+	public event Action<Unit> Output2;
+
+	// input sockets are method parameters marked with DiagramExternal attribute
+
+	// uncomment to get Process method called every time when new arg received
+	// (no need wait when all input args received)
+	//public override bool WaitAllInput => false;
+
+	[DiagramExternal]
+	public void Process(CandleMessage candle, Unit diff)
+	{
+		var res = candle.ClosePrice + diff;
+
+		if (diff >= _minValue.Value)
+			Output1?.Invoke(res);
+		else
+			Output2?.Invoke(res);
+	}
+
+	public override void Start()
+	{
+		base.Start();
+
+		// add logic before start
+	}
+
+	public override void Stop()
+	{
+		base.Stop();
+
+		// add logic after stop
+	}
+
+	public override void Reset()
+	{
+		base.Reset();
+
+		// add logic for reset internal state
+	}
 }
 ```
 
-It is necessary to put [Variable](Designer_Variable.md) cubes with the Instrument Type, [Candles](Designer_Candles.md), 2 [Indicator](Designer_Indicator.md) SMA, [Chart](Designer_Panel_graphics.md), [Trades by strategy](Designer_Trades_strategy.md) on the common schema. How to do this is described in detail in the [First strategy](Designer_Algorithm_creation_of_elements.md) section. Also, it is necessary to put on the common schema the [Source code](Designer_Source_code.md) cube, having moved it to the **Designer** panel from the **Palette** panel. You should select the name of the strategy in the [Source code](Designer_Source_code.md) cube properties. Since the **ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)** method takes three parameters, then there will be three parameters at the cube input. The first two parameters are of the Indicator value type, and the third is of the **Candle** type. By connecting all the cubes with lines, we get the following schema:
+This code shows how to create a cube that has two incoming sockets and two outgoing. Incoming sockets are defined by applying the [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) attribute to the method:
 
-![Designer Combine cubes of Source code and standard cubes 00](../images/Designer_Combine_Source_code_and_standard_elements_00.png)
+```cs
+[DiagramExternal]
+public void Process(CandleMessage candle, Unit diff)
+```
 
-As a result, the strategy code has decreased from 213 lines to 43. But only 4 standard cubes were added. If you compare with the same strategy created from cubes in the [Using visual designer](Designer_Creating_strategy_out_of_blocks.md) section, the number of cubes decreased from 17 to 7. 
+Outgoing sockets are defined by applying the attribute to an event. In the example of the cube, there are two such events:
 
-## Recommended content
 
-[Create DLL in Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)
+```cs
+[DiagramExternal]
+public event Action<Unit> Output1;
+
+[DiagramExternal]
+public event Action<Unit> Output2;
+```
+
+Therefore, there will also be two outgoing sockets.
+
+Additionally, it shows how to make a property for the cube:
+
+```cs
+_minValue = AddParam("MinValue", 10)
+	.SetBasic(true) // make parameter visible in basic mode
+	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+```
+
+Using the [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) class automatically employs the approach to save and restore settings.
+
+The **MinValue** property is marked as basic, and it will be visible in the [Basic properties](Designer_Designer_schemes_strategies_and_component_elements.md) mode.
+
+The commented [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) property is responsible for the timing of the method call with incoming sockets:
+
+```cs
+//public override bool WaitAllInput => false;
+```
+
+If uncommented, the **Process** method will always be called as soon as at least one value arrives (in the example case, this is either a candle or a numerical value).
+
+To add the resulting cube to the diagram, you need to select the created cube in the palette in the **Own elements** section:
+
+![Designer_Source_Code_Elem_01](../images/Designer_Source_Code_Elem_01.png)
+
+> [!WARNING] 
+> Cubes from C# code cannot be used in strategies created in C# code. They can only be used in strategies created [from cubes](Designer_Creating_strategy_out_of_blocks.md).
+
+## See Also
+
+[Creating an Indicator in C#](Designer_Creating_indicator_from_source_code.md)

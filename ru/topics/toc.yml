@@ -68,7 +68,6 @@
       - name: Лента сделок
         href: Designer_Tape_Trades.md
   - name: Создание стратегии
-    href: Designer_Creation_strategy.md
     items:
     - name: Использование кубиков
       href: Designer_Creating_strategy_out_of_blocks.md
@@ -203,26 +202,31 @@
     - name: Использование C#
       href: Designer_Creating_strategy_from_code.md
       items:
-      - name: Интерфейс
-        href: Designer_Creation_element_containing_source_code.md
       - name: Пример стратегии на C#
         href: Designer_Creating_strategy_from_source_code.md
-      - name: Интеграция C# кода на общую схему
-        href: Designer_Integration_Source_code_in_scheme.md
-      - name: Внешние DLL
+      - name: Зависимости кода
         href: Designer_Add_Dll_Lib.md
-      - name: Комбинирование C# и стандартных кубиков
+      - name: Создание собственного кубика
         href: Designer_Combine_Source_code_and_standard_elements.md
       - name: Создание индикатора на C#
         href: Designer_Creating_indicator_from_source_code.md
-      - name: Написание кода в Visual Studio
-        items:
-        - name: Создание DLL кубика в Visual Studio
-          href: Designer_Creating_DLL_element_in_Visual_Studio.md
-        - name: Отладка DLL кубика с помощью Visual Studio
-          href: Designer_Debugging_DLL_using_Visual_Studio.md
+      - name: Использование Visual Studio или Rider
+        href: Designer_Creating_Code_Visual_Studio.md
+    - name: Использование DLL
+      href: Designer_Creating_strategy_from_dll.html
+      items:
+      - name: Создание DLL в Visual Studio
+        href: Designer_Creating_DLL_element_in_Visual_Studio.md
+      - name: Отладка DLL с помощью Visual Studio
+        href: Designer_Debugging_DLL_using_Visual_Studio.md
+      - name: Панель DLL
+        href: Designer_DLL_Panel.md
   - name: Индикаторы
-    href: Designer_Indicators.md
+    items:
+    - name: Индикаторы
+      href: Designer_Indicators.md
+    - name: Создание собственного индикатора
+      href: Designer_Indicators_Create.md
   - name: Тестирование на истории
     items:
     - name: Интерфейс

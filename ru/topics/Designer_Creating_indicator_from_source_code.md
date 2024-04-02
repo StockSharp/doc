@@ -1,167 +1,104 @@
 # Создание индикатора на C\#
 
-Создание собственного индикатора в [API](StockSharpAbout.md) описано в пункте [Собственный индикатор](IndicatorsCustom.md).
+Создание собственного индикатора в [API](StockSharpAbout.md) описано в пункте [Собственный индикатор](IndicatorsCustom.md). Такие индикаторы полностью совместимы с **Дизайнер**.
 
-Ниже, на примере индикатора SMA, будет показано, как созданный индикатор интегрировать на схему в виде кубика. В качестве примера можно взять исходные коды других индикаторов, которые находятся в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
+Чтобы создать индикатор, на панели **Схемы** необходимо выбрать папку **Индикаторы**, нажать правую кнопку мыши и в контекстном меню выбрать **Добавить**:
 
-Для начала необходимо создать кубик как описано в пункте [Интерфейс](Designer_Creation_element_containing_source_code.md).
+![Designer_Source_Code_Indicator_00](../images/Designer_Source_Code_Indicator_00.png)
 
-Опишем входные и выходные параметры кубика:
-
-```cs
-		[DiagramExternal]
-		public void ProcessCandle(Candle candle)
-		{
-            //...
-		}
-```
-```cs
-		[DiagramExternal]
-		public event Action<IIndicatorValue> NewIndicator;
-```
-
-Опишем индикатор как отдельный класс:
+Код индикатора будет выглядет так:
 
 ```cs
-    /// <summary>
-	/// Simple moving average.
-	/// </summary>
-	[DisplayName("SMA")]
-	public class NewSimpleMovingAverage : LengthIndicator<decimal>
-	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
-		/// </summary>
-		public NewSimpleMovingAverage()
-		{
-			Length = 32;
-		}
-		/// <summary>
-		/// To handle the input value.
-		/// </summary>
-		/// <param name="input">The input value.</param>
-		/// <returns>The resulting value.</returns>
-		protected override IIndicatorValue OnProcess(IIndicatorValue input)
-		{
-			var newValue = input.GetValue<decimal>();
-			if (input.IsFinal)
-			{
-				Buffer.Add(newValue);
-				if (Buffer.Count > Length) Buffer.RemoveAt(0);
-			}
-			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
-			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
-		}
-	}
-```
-
-Добавим индикатор в код кубика и инициализируем его в конструкторе класса кубика:
-
-```cs
-		private SimpleMovingAverage _NewSMA;
-		public NewSMA ()
-		{
-			_NewSMA = new SimpleMovingAverage();
-		}
-```
-
-Индикатор SMA имеет единственное свойство, длину периода. В коде кубика опишем это свойство:
-
-```cs
-		public int Length
-		{
-			get { return _NewSMA.Length; }
-			set { _NewSMA.Length = value;}
-		}
-```
-
-Допишем метод **ProcessCandle** так чтобы он рассчитывал значение индикатора и генерировал событие выходного параметра:
-
-```cs
-		[DiagramExternal]
-		public void ProcessCandle(Candle candle)
-		{
-			NewIndicator?.Invoke(_NewSMA.Process(candle));
-		}
-```
-
-Полный код кубика:
-
-```cs
-namespace StockSharp.Designer.Strategies
+/// <summary>
+/// Sample indicator demonstrating to save and load parameters.
+/// 
+/// Changes input price on +20% or -20%.
+/// 
+/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
+/// 
+/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// </summary>
+public class EmptyIndicator : BaseIndicator
 {
-	using System;
-	using System.Collections.Generic;
-	using System.ComponentModel;
-	using System.Linq;
-	using System.Windows.Media;
-	using System.Runtime.InteropServices;
-	using Ecng.Common;
-	using Ecng.ComponentModel;
-	using Ecng.Collections;
-	using MoreLinq;
-	using StockSharp.Messages;
-	using StockSharp.Algo;
-	using StockSharp.Algo.Candles;
-	using StockSharp.Algo.Strategies;
-	using StockSharp.Algo.Indicators;
-	using StockSharp.Logging;
-	using StockSharp.BusinessEntities;
-	using StockSharp.Localization;
-	using StockSharp.Xaml;
-	using StockSharp.Xaml.Charting;
-	using StockSharp.Xaml.Diagram.Elements;
-	[Guid("eea2da25-de12-4b6c-b43a-6a98e2fdb01c")]
-	public class NewSMA : Strategy
+	private int _change = 20;
+
+	public int Change
 	{
-		private SimpleMovingAverage _NewSMA;
-		public NewSMA ()
+		get => _change;
+		set
 		{
-			_NewSMA = new SimpleMovingAverage();
-		}
-		[DiagramExternal]
-		public event Action<IIndicatorValue> NewIndicator;
-		public int Length
-		{
-			get { return _NewSMA.Length; }
-			set { _NewSMA.Length = value;}
-		}
-		[DiagramExternal]
-		public void ProcessCandle(Candle candle)
-		{
-			NewIndicator?.Invoke(_NewSMA.Process(candle));
+			_change = value;
+			Reset();
 		}
 	}
-	
-	/// <summary>
-	/// Simple moving average.
-	/// </summary>
-	[DisplayName("SMA")]
-	public class NewSimpleMovingAverage : LengthIndicator<decimal>
+
+	private int _counter;
+	// formed indicator received all necessary inputs for be available for trading
+	private bool _isFormed;
+
+	protected override bool CalcIsFormed() => _isFormed;
+
+	public override void Reset()
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
-		/// </summary>
-		public NewSimpleMovingAverage()
-		{
-			Length = 32;
-		}
-		/// <summary>
-		/// To handle the input value.
-		/// </summary>
-		/// <param name="input">The input value.</param>
-		/// <returns>The resulting value.</returns>
-		protected override IIndicatorValue OnProcess(IIndicatorValue input)
-		{
-			var newValue = input.GetValue<decimal>();
-			if (input.IsFinal)
-			{
-				Buffer.Add(newValue);
-				if (Buffer.Count > Length) Buffer.RemoveAt(0);
-			}
-			if (input.IsFinal) return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
-			return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
-		}
+		base.Reset();
+
+		_isFormed = default;
+		_counter = default;
 	}
+
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		// every 10th call try return empty value
+		if (RandomGen.GetInt(0, 10) == 0)
+			return new DecimalIndicatorValue(this);
+
+		if (_counter++ == 5)
+		{
+			// for example, our indicator needs 5 inputs for become formed
+			_isFormed = true;
+		}
+
+		var value = input.GetValue<decimal>();
+
+		// random change on +20% or -20% current value
+
+		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
+
+		return new DecimalIndicatorValue(this, value)
+		{
+			// final value means that this value for the specified input
+			// is not changed anymore (for example, for candles that changes with last price)
+			IsFinal = RandomGen.GetBool()
+		};
+	}
+
+	// persist our properties to save for further the app restarts
+
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+		Change = storage.GetValue<int>(nameof(Change));
+	}
+
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+		storage.SetValue(nameof(Change), Change);
+	}
+
+	public override string ToString() => $"Change: {Change}";
 }
 ```
+
+Данный индикатор получает входящее значение и делает у него произвольное отклонение на заданный параметре **Change** значение.
+
+Описание методов индикатора доступно в разделе [Собственный индикатор](IndicatorsCustom.md).
+
+Чтобы добавить созданный индикатор на схему, необходимо использовать кубик [Индикатор](Designer_Indicator.md), и уже в нем задать необходимый индикатор:
+
+![Designer_Source_Code_Indicator_01](../images/Designer_Source_Code_Indicator_01.png)
+
+Параметр **Change**, ранее заданный в коде индикатора, показан в панели свойств.
+
+> [!WARNING] 
+> Индикаторы из C# кода невозможно использовать в стратегиях, созданных на C# коде. Их возможно использовать только в стратегиях, созданных [из кубиков](Designer_Creating_strategy_out_of_blocks.md).

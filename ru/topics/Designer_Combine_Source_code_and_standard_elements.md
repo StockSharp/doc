@@ -1,54 +1,126 @@
-# Комбинирование C\# и стандартных кубиков
+# Создание собственного кубика
 
-Пример написания кода стратегии SMA, приведенный в пункте [Пример стратегии на C\#](Designer_Creating_strategy_from_source_code.md), можно оптимизировать путем грамотного комбинирования кубиков [Исходный код](Designer_Source_code.md) и стандартных кубиков. Вынесем из кода все действия стратегии, которые проще создать из стандартных кубиков [Индикатор](Designer_Indicator.md), [Панель графика](Designer_Panel_graphics.md), [Сделки стратегии](Designer_Trades_strategy.md).
+Аналогично созданию [кубика из схемы](Designer_Creating_composite_elements.md) можно создать свой кубик на основе C# кода. Такой кубик будет более функциональным, чем кубик из схемы.
 
-Так как Индикаторы SMA были вынесены в отдельные кубики, необходимо переписать метод ProcessCandle(Candle candle) так чтобы он принимал кроме свечей (Candle candle) еще и два индикатора ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle). И на базе этих значений рассчитывал стратегию. А также необходимо удалить все лишнее в коде. Окончательный вариант исходного кода кубика выглядит следующим образом:
+Для создания кубика из кода, необходимо создать его в папке **Собственные кубики**:
+
+![Designer_Source_Code_Elem_00](../images/Designer_Source_Code_Elem_00.png)
+
+Код пустого кубика выглядит следующим образом:
 
 ```cs
-using Ecng.Common;
-using StockSharp.Messages;
-using StockSharp.Algo;
-using StockSharp.Algo.Candles;
-using StockSharp.Algo.Strategies;
-using StockSharp.Algo.Indicators;
-using StockSharp.Xaml.Diagram.Elements;
-public class NewStrategy : Strategy
+/// <summary>
+/// Sample diagram element demonstrates input and output sockets usage.
+/// 
+/// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
+/// </summary>
+public class EmptyDiagramElement : DiagramExternalElement
 {
-    private bool _isShortLessThenLong;
-    [DiagramExternal]
-    public void ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)
-    {
-        // strategy are stopping
-        if (ProcessState == ProcessStates.Stopping)
-        {
-            CancelActiveOrders();
-            return;
-        }
-        // calc new values for short and long
-        var isShortLessThenLong = ssma.Value < lsma.Value;
-        // crossing happened
-        if (_isShortLessThenLong != isShortLessThenLong)
-        {
-            // if short less than long, the sale, otherwise buy
-            var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-            // calc size for open position or revert
-            var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-            // calc order price as a close price + offset
-            var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
-            RegisterOrder(this.CreateOrder(direction, price, volume));
-            // store current values for short and long
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-    }
+	private readonly DiagramElementParam<int> _minValue;
+
+	public EmptyDiagramElement()
+	{
+		// example property to show how to make parameters
+	
+		_minValue = AddParam("MinValue", 10)
+			.SetBasic(true) // make parameter visible in basic mode
+			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+	}
+
+	// output sockets are events marked with DiagramExternal attribute
+
+	[DiagramExternal]
+	public event Action<Unit> Output1;
+
+	[DiagramExternal]
+	public event Action<Unit> Output2;
+
+	// input sockets are method parameters marked with DiagramExternal attribute
+
+	// uncomment to get Process method called every time when new arg received
+	// (no need wait when all input args received)
+	//public override bool WaitAllInput => false;
+
+	[DiagramExternal]
+	public void Process(CandleMessage candle, Unit diff)
+	{
+		var res = candle.ClosePrice + diff;
+
+		if (diff >= _minValue.Value)
+			Output1?.Invoke(res);
+		else
+			Output2?.Invoke(res);
+	}
+
+	public override void Start()
+	{
+		base.Start();
+
+		// add logic before start
+	}
+
+	public override void Stop()
+	{
+		base.Stop();
+
+		// add logic after stop
+	}
+
+	public override void Reset()
+	{
+		base.Reset();
+
+		// add logic for reset internal state
+	}
 }
 ```
 
-На общую схему необходимо вынести кубики [Переменная](Designer_Variable.md) с Типом **Инструмент**, [Свечи](Designer_Candles.md), 2 [Индикатор](Designer_Indicator.md) SMA, [Панель графика](Designer_Panel_graphics.md), [Сделки стратегии](Designer_Trades_strategy.md). Как это сделать подробно описано в пункте [Создание алгоритма из кубиков](Designer_Algorithm_creation_of_elements.md). Также на общую схему необходимо вынести кубик [Исходный код](Designer_Source_code.md), перенеся его в панель **Дизайнер** из панели **Палитра**. В свойствах кубика [Исходный код](Designer_Source_code.md) необходимо выбрать имя стратегии. Так как метод **ProcessCandle(DecimalIndicatorValue ssma, DecimalIndicatorValue lsma, Candle candle)** принимает три параметра, то и на входе кубика будет три параметра. Первые два параметра типа Значения индикатора, а третий типа Свеча. Соединив все кубики линиями, получается схема:
+В данном коде показано как создать кубик, который имеет два входящих сокета и два исходящих. Входящие сокеты определяются путем применения атрибута [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) к методу:
 
-![Designer Combine cubes of Source code and standard cubes 00](../images/Designer_Combine_Source_code_and_standard_elements_00.png)
+```cs
+[DiagramExternal]
+public void Process(CandleMessage candle, Unit diff)
+```
 
-В результате код стратегии уменьшился с 213 строк до 43. Но добавилось всего 4 стандартных кубика. Если сравнивать с такой же стратегией, созданной из кубиков в пункте [Использование кубиков](Designer_Creating_strategy_out_of_blocks.md), то количество кубиков уменьшилось с 17 до 7. 
+Исходящие сокеты определяются путем применения атрибута к событию. В примере кубика таких событий два:
+
+```cs
+[DiagramExternal]
+public event Action<Unit> Output1;
+
+[DiagramExternal]
+public event Action<Unit> Output2;
+```
+
+Поэтому исходящих сокета будет также два.
+
+Дополнительно показано как сделать свойство у кубика:
+
+```cs
+_minValue = AddParam("MinValue", 10)
+	.SetBasic(true) // make parameter visible in basic mode
+	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+```
+
+При использовании класса [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) автоматически используется подход сохранения и восстановления настроек.
+
+Свойство **MinValue** помечено как basic, и оно будет видно в режиме [Базовые свойства](Designer_Designer_schemes_strategies_and_component_elements.md).
+
+Закомментированное свойство [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) отвечает за время вызова метода со входящими сокетами:
+
+```cs
+//public override bool WaitAllInput => false;
+```
+
+Если раскомментировать свойство, то метод **Process** будет вызыватся всегда, как только придет хотя бы одно значение (в случае примера, это или свеча или числовое значение).
+
+Чтобы добавить получившийся кубик на схему, необходимо в палитре в разделе **Собственные кубики** выбрать созданный кубик:
+
+![Designer_Source_Code_Elem_01](../images/Designer_Source_Code_Elem_01.png)
+
+> [!WARNING] 
+> Кубики из C# кода невозможно использовать в стратегиях, созданных на C# коде. Их возможно использовать только в стратегиях, созданных [из кубиков](Designer_Creating_strategy_out_of_blocks.md).
 
 ## См. также
 
-[Создание DLL кубика в Visual Studio](Designer_Creating_DLL_element_in_Visual_Studio.md)
+[Создание индикатора на C#](Designer_Creating_indicator_from_source_code.md)

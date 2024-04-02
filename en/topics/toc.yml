@@ -68,7 +68,6 @@
       - name: Tick trades
         href: Designer_Tape_Trades.md
   - name: Strategies
-    href: Designer_Creation_strategy.md
     items:
     - name: Using visual designer
       href: Designer_Creating_strategy_out_of_blocks.md
@@ -205,26 +204,30 @@
     - name: Using C#
       href: Designer_Creating_strategy_from_code.md
       items:
-      - name: Getting started
-        href: Designer_Creation_element_containing_source_code.md
       - name: First C# strategy
         href: Designer_Creating_strategy_from_source_code.md
-      - name: Put C# code into schema
-        href: Designer_Integration_Source_code_in_scheme.md
-      - name: External DLL
+      - name: External DLLs
         href: Designer_Add_Dll_Lib.md
-      - name: Combine C# code and visual designer
+      - name: Creating Your Own Cube
         href: Designer_Combine_Source_code_and_standard_elements.md
       - name: Create own indicator using C#
         href: Designer_Creating_indicator_from_source_code.md
-      - name: Write code in Visual Studio
-        items:
-        - name: Create DLL in Visual Studio
-          href: Designer_Creating_DLL_element_in_Visual_Studio.md
-        - name: Debug DLL in Visual Studio
-          href: Designer_Debugging_DLL_using_Visual_Studio.md
-  - name: Indicators
-    href: Designer_Indicators.md
+      - name: Using Visual Studio or Rider
+        href: Designer_Creating_Code_Visual_Studio.md
+    - name: Using DLL
+      href: Designer_Creating_strategy_from_dll.html
+      items:
+      - name: Create DLL in Visual Studio
+        href: Designer_Creating_DLL_element_in_Visual_Studio.md
+      - name: Debug DLL in Visual Studio
+        href: Designer_Debugging_DLL_using_Visual_Studio.md
+      - name: DLL panel
+        href: Designer_DLL_Panel.md
+    items:
+    - name: Indicators
+      href: Designer_Indicators.md
+    - name: Creating Your Own Indicator
+      href: Designer_Indicators_Create.md
   - name: Backtesting
     items:
     - name: User interface

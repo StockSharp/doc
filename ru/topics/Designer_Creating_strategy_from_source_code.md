@@ -1,234 +1,95 @@
 # Пример стратегии на C\#
 
-Для создания стратегий из исходного кода необходимы навыки программирования на языке C\#, а также знания библиотеки для профессиональной разработки торговых роботов на языке C\# [API](StockSharpAbout.md).
-
 Создание стратегии из исходного кода будет рассмотрено на примере стратегии SMA \- аналогичный пример\-стратегии SMA, собранной из кубиков в пункте [Создание алгоритма из кубиков](Designer_Algorithm_creation_of_elements.md).
 
-Первой строкой идет наименование namespace. Может быть любым сочетанием латинских букв, по умолчанию StockSharp.Designer.Strategies
+Данный раздел не будет описывать конструкции C# языка (как и [Strategy](Strategy.md), на базе чего создаются стратегии), но будут упомянуты особенности для работы кода в **Дизайнере**.
 
-Далее идет перечисление Dll библиотек, необходимых для работы кода кубика:
+> [!TIP]
+> Стратегии, создающиеся в **Дизайнере** совместимы со стратегиями, создающиеся в [API](StockSharpAbout.md) за счет использования общего базового класса [Strategy](Strategy.md). Это делает возможность запуска таких стратегий вне **Дизайнера** значительно проще, чем [схем](Designer_run_strategy_on_server.md).
 
-```cs
-sing System.Windows.Media;
-using System.Runtime.InteropServices;
-using Ecng.Common;
-using Ecng.ComponentModel;
-using Ecng.Collections;
-using StockSharp.Messages;
-using StockSharp.Algo;
-```
-
-Dll библиотеки добавляются нажатием кнопки **Ссылки** вкладки **Исходный код**.
-
-Далее объявляется класс. Название класса может быть любым сочетанием латинских букв. Класс кубика должен быть унаследован от класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy):
+1. Параметры стратегии создаются через специальный подход:
 
 ```cs
-	public class NewStrategy : Strategy
-```
+_candleTypeParam = this.Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+_long = this.Param(nameof(Long), 80);
+_short = this.Param(nameof(Short), 20);
 
-Далее в примере идет объявление переменных. Для работы стратегии SMA необходимы две скользящие средние средние с разными периодами расчёта, длинная SMA и короткая SMA:
 
-```cs
- private readonly SimpleMovingAverage _long;
- private readonly SimpleMovingAverage _short;
-```
+private readonly StrategyParam<DataType> _candleTypeParam;
 
-Объявляются параметры стратегии, в них будут храниться параметры индикаторов SMA:
+public DataType CandleType
+{
+	get => _candleTypeParam.Value;
+	set => _candleTypeParam.Value = value;
+}
 
-```cs
- private readonly StrategyParam<int> _longParam;
- private readonly StrategyParam<int> _shortParam;
-```
+private readonly StrategyParam<int> _long;
 
-Так же объявляются переменные, необходимые для отображения графических элементов. Они не несут полезной нагрузки, и показаны в примере как демонстрация возможностей. Для отображения графических элементов лучше использовать стандартные кубики [Designer](Designer.md). Как это сделать показано в пункте [Комбинирование C\# и стандартных кубиков](Designer_Combine_Source_code_and_standard_elements.md):
-
-```cs
- private readonly List<MyTrade> _myTrades = new List<MyTrade>();
- private readonly ChartCandleElement _candlesElem;// Свечи
- private readonly ChartTradeElement _tradesElem;// Сделки
- private readonly ChartIndicatorElement _shortElem;// Индикатор
- private readonly ChartIndicatorElement _longElem; // Индикатор
- private readonly ChartArea _area = new ChartArea();// Панель графиков
-```
-
-Атрибут [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute) необходим для обозначения входных и выходных параметров кубика. Если атрибутом обозначено событие, то значит это будет выходной параметр, если метод — значит это входной параметр:
-
-```cs
- [DiagramExternal]
- public event Action<Order> NewMyOrder;
-```
-```cs
- [DiagramExternal]
- public void ProcessCandle(Candle candle)
-```
-
-После объявления переменных необходимо задать свойства кубика. Эти свойства будут отображаться в панели **Свойства** на общей схеме:
-
-![Designer Creating a strategy from the source code 00](../images/Designer_Creating_strategy_from_source_code_00.png)
-
-```cs
 public int Long
 {
-    get { return _longParam.Value; }
-    set
-    {
-        _longParam.Value = value;
-        _long.Length = value;
-    }
+	get => _long.Value;
+	set => _long.Value = value;
 }
+
+private readonly StrategyParam<int> _short;
+
 public int Short
 {
-    get { return _shortParam.Value; }
-    set
-    {
-        _shortParam.Value = value;
-        _short.Length = value;
-    }
+	get => _short.Value;
+	set => _short.Value = value;
 }
 ```
 
-Инициализация переменных происходит в конструкторе класса:
+При использовании класса [StrategyParam](xref:StockSharp.Algo.Strategies.StrategyParam`1) автоматически используется подход сохранения и восстановления настроек.
+
+2. При создании индикаторов необходимо добавлять их во внутренний список стратегии ([Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators)):
 
 ```cs
-public NewStrategy()
-{
-    _longParam = new StrategyParam<int>(this, nameof(Long), 80);
-    _shortParam = new StrategyParam<int>(this, nameof(Short), 20);
-    _long = new SimpleMovingAverage { Length = Long };
-    _short = new SimpleMovingAverage { Length = Short };
-    //Инициализация графических элементов
-    _candlesElem = new ChartCandleElement { ShowAxisMarker = false };
-    _tradesElem = new ChartTradeElement { FullTitle = LocalizedStrings.Str985 };
-    _shortElem = new ChartIndicatorElement
-    {
-        Color = Colors.Coral,
-        ShowAxisMarker = false,
-        FullTitle = _short.ToString()
-    };
-    _longElem = new ChartIndicatorElement
-    {
-        ShowAxisMarker = false,
-        FullTitle = _long.ToString()
-    };
-}
+_longSma = new SimpleMovingAverage { Length = Long };
+_shortSma = new SimpleMovingAverage { Length = Short };
+
+// !!! DO NOT FORGET add it in case use IsFormed property (see code below)
+Indicators.Add(_longSma);
+Indicators.Add(_shortSma);
 ```
 
-У класса [Strategy](xref:StockSharp.Algo.Strategies.Strategy) есть методы, которые можно переопределить. В примере переопределяется метод [Strategy.OnReseted](xref:StockSharp.Algo.Strategies.Strategy.OnReseted) для того, чтобы при переинициализации торгового алгоритма переинициализировались скользящие средние и графические элементы:
+Это делается для того, чтобы стратегия могла отслеживать все необходимые для ее логики работы индикаторы при переходе их в состояние [сформирован](Indicators.md).
+
+3. При работе с графиком необходимо учитывать, что в случае запуска стратегии [вне Дизайнера](Designer_run_strategy_on_server.md) объект графика может быть отсутствовать.
 
 ```cs
-protected override void OnReseted()
+_chart = this.GetChart();
+
+// chart can be NULL in case hosting strategy in custom app like Runner or Shell
+if (_chart != null)
 {
-    this.AddInfoLog("OnReseted");
-    _long.Reset();
-    _short.Reset();
-    var chart = this.GetChart();
-    if (chart != null)
-    {
-        foreach (var element in _area.Elements.ToArray())
-        {
-            if (_area.Elements.Contains(element))
-                chart.RemoveElement(_area, element);
-        }
-        if (chart.Areas.Contains(_area))
-            chart.RemoveArea(_area);
-    }
-    base.OnReseted();
+	var area = _chart.AddArea();
+
+	_chartCandlesElem = area.AddCandles();
+	_chartTradesElem = area.AddTrades();
+	_chartShortElem = area.AddIndicator(_shortSma);
+	_chartLongElem = area.AddIndicator(_longSma);
+
+	// you can apply custom color palette here
 }
 ```
 
-Переопределяется метод [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) для того, чтобы: 1) при старте торгового алгоритма переинициализировались скользящие средние, 2) на график добавились все графические элементы, 3) подписаться на появление новых сделок, 4) подписаться на появление новых заявок или изменение старых, начать получать новую информацию по инструменту.
+И далее в коде отрисовки данных на графике делать специальные проверки вида:
 
 ```cs
-protected override void OnStarted()
-{
-    this.AddInfoLog("OnStarted");
-    // переинициализация скользящих средних
-    _long.Reset();
-    _short.Reset();
-    // добавление на график графических элементов
-    var chart = this.GetChart();
-    if (!chart.Areas.Contains(_area))
-    {
-        chart.AddArea(_area);
-        chart.AddElement(_area, _candlesElem);
-        chart.AddElement(_area, _tradesElem);
-        chart.AddElement(_area, _shortElem);
-        chart.AddElement(_area, _longElem);
-    }
-    // подписка на появление новых сделок, необходимо для отображения сделок
-    this
-    .WhenNewMyTrades()
-    .Do(trades => _myTrades.AddRange(trades))
-    .Apply(this);
-    // подписка на изменения заявок
-    this
-    .WhenOrderRegistered()
-    .Or(this.WhenOrderChanged())
-    .Do(ord => NewMyOrder?.Invoke(ord))
-    .Apply(this);
-    // начать получать новую информацию
-    Connector.SubscribeLevel1(Security);
-    base.OnStarted();
-}
+if (_chart == null)
+	return;
+
+var data = _chart.CreateData();
 ```
 
-Переопределяется метод [Strategy.OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped), чтобы перестать получать новую информацию по инструменту:
+4. Чтобы удостоверится что стратегия полностью готова к работе, ее индикаторы сформированы историческими данными и все подписки перешли в [Онлайн](API_ConnectorsSubscriptions.md), можно использовать специальный метод:
 
 ```cs
-protected override void OnStopped()
+// some of indicators added in OnStarted not yet fully formed
+// or user turned off allow trading
+if (this.IsFormedAndOnlineAndAllowTrading())
 {
-    this.AddInfoLog("OnStopped");
-    Connector.UnSubscribeLevel1(Security);
-    base.OnStopped();
+	// TODO
 }
 ```
-
-Строка **this.AddInfoLog("OnStopped");** выводит сообщение "OnStopped" в окно **Логи**.
-
-В методе ProcessCandle(Candle candle) идет основной расчёт стратегии. Так как он обозначен атрибутом [DiagramExternalAttribute](xref:StockSharp.Xaml.Diagram.Elements.DiagramExternalAttribute), значит это входной параметр кубика, принимающий **Свечи**.
-
-```cs
-[DiagramExternal]
-public void ProcessCandle(Candle candle)
-{
-    // Запущена или остановлена стратегия
-    if (ProcessState == ProcessStates.Stopping)
-    {
-        CancelActiveOrders();
-        return;
-    }
-    this.AddInfoLog(LocalizedStrings.Str3634Params.Put(candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.Security));
-    // Расчет скользящих средних
-    var longValue = _long.Process(candle);
-    var shortValue = _short.Process(candle);
-    var isShortLessThenLong = _short.GetCurrentValue() < _long.GetCurrentValue();
-    // пересекла ли короткая SMA длинную SMA
-    if (_isShortLessThenLong != isShortLessThenLong)
-    {
-        // определение направление для заявки
-        var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-        // объёма для заявки
-        var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-        // расчет цены для заявки
-        var price = candle.ClosePrice + ((direction == Sides.Buy ? Security.PriceStep : -Security.PriceStep) ?? 1);
-        //выставление заявки
-        RegisterOrder(this.CreateOrder(direction, price, volume));
-        _isShortLessThenLong = isShortLessThenLong;
-    }
-    //отрисовка графических элементов
-    var trade = _myTrades.FirstOrDefault();
-    _myTrades.Clear();
-    var data = new ChartDrawData();
-    data
-      .Group(candle.OpenTime)
-        .Add(_candlesElem, candle)
-        .Add(_shortElem, shortValue)
-        .Add(_longElem, longValue)
-        .Add(_tradesElem, trade);
-    this.GetChart().Draw(data);
-}
-```
-
-## См. также
-
-[Интеграция C\# кода на общую схему](Designer_Integration_Source_code_in_scheme.md)
