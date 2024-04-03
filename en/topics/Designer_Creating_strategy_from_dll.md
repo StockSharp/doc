@@ -21,6 +21,8 @@ Using ready-made DLLs is familiar for those who want to work continuously in **V
 
 ![Designer Creating a DLL cube in Visual Studio 04](../images/Designer_Creating_DLL_element_in_Visual_Studio_04.png)
 
+If the strategy uses charting interfaces, it is necessary to include the NuGet package [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). These interfaces do not contain the logic of the actual chart and are only needed for compiling the code. In the case of launching the strategy in **Designer**, real data rendering on the chart will occur through these interfaces.
+
 4. After creating the strategy, the project needs to be built by pressing **Build Solution** in the **Build** tab.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../images/Designer_Creating_DLL_element_in_Visual_Studio_01.png)

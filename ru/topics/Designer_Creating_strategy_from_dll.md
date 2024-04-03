@@ -21,6 +21,8 @@
 
 ![Designer Creating a DLL cube in Visual Studio 04](../images/Designer_Creating_DLL_element_in_Visual_Studio_04.png)
 
+Если стратегия использует программные интерфейсы графика, то необходимо подключить и NuGet пакет [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). Данные интерфейсы не содержат логику реального графика, и необходимы только для компилирования кода. В случае запуска стратегии в **Дизайнере** через данные интерфейсы будет идти уже реальная отрисовка данных на графике.
+
 4. После создания стратегии необходимо собрать проект, нажав **Собрать решение** во вкладке **Сборка**.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../images/Designer_Creating_DLL_element_in_Visual_Studio_01.png)
