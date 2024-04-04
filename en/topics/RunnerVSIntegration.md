@@ -18,6 +18,12 @@ In the tab that appears, find the **Debug** item, select the **General** section
 
 ![runner_debug_02](../images/runner_debug_02.png)
 
+Command line arguments for the example:
+
+```cmd
+l -s "$(TargetPath)" -c "C:\StockSharp\Runner\Data\connection.json" --sec BTCUSDT_PERPETUAL@BNB --pf Binance_-298049655_Futures
+```
+
 $(TargetPath) - is a special **Visual Studio** macro that is automatically replaced with the path to the compiled DLL with the strategy during debugging launch.
 
 4. Close the project settings window, and start the project debugging (for example, through F5). The **Runner** program window will appear, displaying the trading connection process:

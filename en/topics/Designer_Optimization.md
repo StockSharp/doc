@@ -1,27 +1,20 @@
-# Optimization
+# Brute-force
 
-To switch to the strategy optimization mode, click the **Optimization** button on the **Emulation** tab.
+To switch to strategy optimization mode, click the **Optimization** button on the **Emulation** tab. The optimization example will be considered using the SMA strategy created [from cubes](Designer_Algorithm_creation_of_elements.md).
 
 ![Designer Optimization 00](../images/Designer_Optimization_00.png)
 
-A tab will open in the workspace with the name Optimization + Strategy Name. The Optimization tab is separated into three areas, **Properties**, **Parameters for optimization**, **Optimization result**: 
-
-- In the **Properties** area, you can change emulation settings, basic scheme parameters.
-- The **Optimization result** area is a table, were each line is a result of strategy testing with unique parameters. Also, in the **Optimization result** area there is a progress\-bar, showing optimization progress, elapsed time and calculated time to the end of optimization.
-- The **Parameters for optimization** consists of two tables. The upper table is a list of strategy parameters, which could be optimized. The lower table adjusts the optimization range and optimization increment for the parameter, selected from the upper table.
-
-Further, optimization will be considered using the SMA strategy as an example. If in the SMA strategy, without preliminary preparation, click the **Optimization** button, there will be only one optimization parameter \- Volume. In order to add the moving average periods as optimization parameters it is necessary in the SMA Indicator Cube check the **Parameter** check box:
-
-![Designer Optimization 01](../images/Designer_Optimization_01.png)
-
-After checking the **Parameter** check box in the required units and clicking the **Optimization** button, the **SMA Optimization** tab is opened:
+A tab named Optimization + “Strategy Name” will open in the workspace. The **Optimization** tab is divided into two areas, **Properties**, **Optimization Result**: 
 
 ![Designer Optimization 02](../images/Designer_Optimization_02.png)
 
-In the example, one optimization parameter is taken \- the length of short moving average, Short SMA, from 10 to 20 in increments of 1. As a result, we get 11 SMA strategies with different parameters.
+- The **Properties** area consists of tabs with several tables. The first is the strategy parameters, which are [iterated over](Designer_Optimization_Params.md). The second - settings for [genetics](Designer_Genetic.md). The third - system settings of the optimizer. For example, you can change the number of threads and cores involved in the optimization there.
+- The **Optimization Result** area is a table, each row of which is the result of testing the strategy with unique parameters. Also, in the **Optimization Result** area, there is a progress bar showing the optimization progress, elapsed time, and estimated time until the end of optimization. Additionally, there is a tab for displaying the results in the form of a [3D chart](Designer_Optimization_3D_Chart.md).
+
+Setting the parameters for iteration results in more than 1000 iterations. After starting the optimizer, the progress at the top above the results will show data on the planned number of iterations, how many have already been completed, and how much time is approximately needed until completion:
 
 ![Designer Optimization 03](../images/Designer_Optimization_03.png)
 
-## Recommended content
+## See also
 
-[Getting started](Designer_Example_of_backtesting.md)
+[Example of backtesting](Designer_Example_of_backtesting.md)

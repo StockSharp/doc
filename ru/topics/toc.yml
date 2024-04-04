@@ -246,6 +246,8 @@
     items:
     - name: Перебор (брут-форс)
       href: Designer_Optimization.md
+    - name: Параметры оптимизации
+      href: Designer_Optimization_Params.md
     - name: Генетическая
       href: Designer_Genetic.md
     - name: 3D отчет

@@ -248,6 +248,8 @@
     items:
     - name: Brute-Force
       href: Designer_Optimization.md
+    - name: Optimization Parameters
+      href: Designer_Optimization_Params.md
     - name: Genetic
       href: Designer_Genetic.md
     - name: 3D chart

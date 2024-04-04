@@ -17,3 +17,6 @@ To enable **Genetic** optimization, you need to:
   ![Designer_Optimization_Genetic_02](../images/Designer_Optimization_Genetic_02.png)
 
   For example, make calculations not only by **Profit** but also relative to its **Maximum Drawdown**. Available mathematical functions are similar to the [Formula](Designer_Universal_formula.md) block.
+
+> [!TIP]
+> Optimization through genetics is not deterministic. Therefore, determining the exact number of iterations and, consequently, the necessary total time is impossible, unlike [brute-force search](Designer_Optimization.md).
