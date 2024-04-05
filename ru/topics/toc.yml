@@ -605,8 +605,6 @@
     href: StockSharpArchitecture.md
   - name: Установка API
     href: StockSharpInstall.md
-  - name: История изменений
-    href: WhatsNew.md
   - name: Коннекторы
     href: API_Connectors.md
     items:
@@ -1985,8 +1983,6 @@
       href: Messages_storage.md
     - name: Сетевое взаимодействие
       href: Messages_networking.md
-  - name: Биржевое время
-    href: MarketTimeOffset.md
   - name: Арифметические операции
     href: Unit.md
   - name: Примеры

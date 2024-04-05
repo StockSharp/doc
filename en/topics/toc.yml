@@ -605,8 +605,6 @@
     href: StockSharpArchitecture.md
   - name: Installation instruction
     href: StockSharpInstall.md
-  - name: Releases history
-    href: WhatsNew.md
   - name: Connectors
     href: API_Connectors.md
     items:
@@ -1823,8 +1821,6 @@
       href: Messages_storage.md
     - name: Networking
       href: Messages_networking.md
-  - name: Exchange time
-    href: MarketTimeOffset.md
   - name: Arithmetic operations
     href: Unit.md
   - name: Examples
