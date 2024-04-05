@@ -13,7 +13,7 @@ This window should be called through the [Extensions.Configure](xref:StockSharp.
 		{
 			if (_connector.Configure(this))
 			{
-				new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
+				new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 		}
 	  				

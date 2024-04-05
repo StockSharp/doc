@@ -87,7 +87,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    try
    {
    	if (File.Exists(_settingsFile))
-   		Connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_settingsFile));
+   		Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
    }
    ...
    ```

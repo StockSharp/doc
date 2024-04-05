@@ -18,7 +18,7 @@ private ChartCandleElement _candlesElem;
 ...
 if (_connector.Configure(this))
 			{
-				new XmlSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
+				new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 			
 ...

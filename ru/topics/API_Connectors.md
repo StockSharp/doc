@@ -25,13 +25,13 @@ public MainWindow()
 
 ```cs
 ...
-private const string _connectorFile = "ConnectorFile";
+private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
 	if (Connector.Configure(this))
 	{
-		new XmlSerializer<SettingsStorage>().Serialize(Connector.Save(), _connectorFile);
+		new JsonSerializer<SettingsStorage>().Serialize(Connector.Save(), _connectorFile);
 	}
 }
 	  				
@@ -99,7 +99,7 @@ private void InitConnector()
 			var ctx = new ContinueOnExceptionContext();
 			ctx.Error += ex => ex.LogError();
 			using (new Scope<ContinueOnExceptionContext> (ctx))
-				Connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_settingsFile));
+				Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
 		}
 	}
 	catch

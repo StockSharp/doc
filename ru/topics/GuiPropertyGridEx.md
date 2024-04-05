@@ -89,7 +89,7 @@ public MainWindow()
 	_newsWindow.MakeHideable();
 	if (File.Exists(_settingsFile))
 	{
-		_connector_connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_settingsFile));
+		_connector_connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
 	}
 	MarketDataSessionSettings.SelectedObject = ((ChannelMessageAdapter)_connector.MarketDataAdapter).InnerAdapter;
 	TransactionSessionSettings.SelectedObject = ((ChannelMessageAdapter)_connector.TransactionAdapter).InnerAdapter;

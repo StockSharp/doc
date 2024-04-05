@@ -92,7 +92,7 @@
    try
    {
    	if (File.Exists(_settingsFile))
-   		Connector.Load(new XmlSerializer<SettingsStorage>().Deserialize(_settingsFile));
+   		Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
    }
    ...
    ```

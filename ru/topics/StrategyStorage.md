@@ -32,10 +32,10 @@ public override void Save(SettingsStorage settings)
 
 ```cs
 var newStrategy = new MarketProfileStrategy();
-if (File.Exists("marketProfile.xml"))
+if (File.Exists("marketProfile.json"))
 {
     //Загрузка настроек стратегии из существующего конфигурационного файла
-    var settingsStorage = new XmlSerializer<SettingsStorage>().Deserialize("marketProfile.xml");
+    var settingsStorage = new JsonSerializer<SettingsStorage>().Deserialize("marketProfile.json");
     newStrategy.Load(settingsStorage);
 }
 ```
@@ -53,7 +53,7 @@ public override void Save(SettingsStorage settings)
 	base.Save(settings);
 	
 	//Сохраняем настройки в файл
-	new XmlSerializer<SettingsStorage>().Serialize(settings, "marketProfile.xml");
+	new JsonSerializer<SettingsStorage>().Serialize(settings, "marketProfile.json");
 }
 ```
 

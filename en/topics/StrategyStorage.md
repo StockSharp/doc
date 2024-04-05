@@ -32,9 +32,9 @@ To save and load settings from an external file, you can use serialization and d
 
 ```cs
 var newStrategy = new MarketProfileStrategy();
-if (File.Exists("marketProfile.xml"))
+if (File.Exists("marketProfile.json"))
 {
-    var settingsStorage = new XmlSerializer<SettingsStorage>().Deserialize("marketProfile.xml");
+    var settingsStorage = new JsonSerializer<SettingsStorage>().Deserialize("marketProfile.json");
     newStrategy.Load(settingsStorage);
 }
 ```
@@ -51,7 +51,7 @@ public override void Save(SettingsStorage settings)
 	    
 	base.Save(settings);
 	
-	new XmlSerializer<PlazaTable>().Serialize(settings, "marketProfile.xml");
+	new JsonSerializer<PlazaTable>().Serialize(settings, "marketProfile.json");
 }
 ```
 
