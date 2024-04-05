@@ -19,4 +19,4 @@
 
 ## См. также
 
-[Установка Designer](Designer_Installation.md)
+[Установка Shell](Shell_Installation.md)

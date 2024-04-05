@@ -19,4 +19,4 @@ The main features of the trading robot shell:
 
 ## Recommended content
 
-[Installing Designer](Designer_Installation.md)
+[Installing Shell](Shell_Installation.md)
