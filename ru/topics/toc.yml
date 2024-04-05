@@ -2011,7 +2011,7 @@
       href: Shell_Connectors_settings.md
   - name: Создание собственной стратегии
     href: Shell_custom_strategy.md
-  - name: Создание собственных панеле для стратегий
+  - name: Создание собственных панелей для стратегий
     href: Shell_custom_strategy_panel.md
   - name: Запуск стратегии созданной в Designer
     href: Shell_run_Designer_strategy.md
