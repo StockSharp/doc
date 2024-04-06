@@ -96,6 +96,7 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    }            		
    	  				
    ```
+
 3. Set up the [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy (filling the range of volatility, as well as the creation of the order, wherethrough the required volume and quoting direction are specified): 
 
    ```none
@@ -135,12 +136,14 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    	wnd.Show();
    }
    ```
+
 4. The quoting start: 
 
    ```cs
    hedge.Start();
    ```
-5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.Algo.Storages.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [StockSharp.Algo.Storages.IExchangeInfoProvider](xref:StockSharp.Algo.Storages.IExchangeInfoProvider) exchangeInfoProvider, [System.DateTimeOffset](xref:System.DateTimeOffset) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend**)** method: 
+
+5. For a visual presentation of the volatility the example shows how you can convert the standard order book with quotations to the order book of volatility through the use of the [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.BusinessEntities.MarketDepth,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.Algo.Storages.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal))**(**[StockSharp.BusinessEntities.MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [StockSharp.Algo.Storages.IExchangeInfoProvider](xref:StockSharp.Algo.Storages.IExchangeInfoProvider) exchangeInfoProvider, [System.DateTimeOffset](xref:System.DateTimeOffset) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend **)** method: 
 
    ```cs
    private void OnQuotesChanged()
@@ -150,6 +153,7 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    ```
 
    ![sample quote iv](../images/sample_quote_iv.png)
+
 6. The quoting ending and the strategy stop: 
 
    ```none

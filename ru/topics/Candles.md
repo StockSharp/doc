@@ -44,7 +44,7 @@
 
    > [!TIP]
    > Для отображения свечей используется графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). 
-3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription))**(**[StockSharp.Algo.Subscription](xref:StockSharp.Algo.Subscription) subscription**)**:
+3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription))**(**[StockSharp.Algo.Subscription](xref:StockSharp.Algo.Subscription) subscription **)**:
 
    ```cs
    ...

@@ -93,7 +93,7 @@
    ```
 3. При подключении задаем первоначальные установки контрола:
    1. Обнуляем базовый актив [OptionPositionChart.UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) контрола; 
-   2. Перерисовываем график с начальными значениями [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate**)**; 
+   2. Перерисовываем график с начальными значениями [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**; 
    3. Задаем провайдера сообщений для рыночных данных и инструментов.
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

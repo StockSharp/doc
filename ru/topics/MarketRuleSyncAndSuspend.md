@@ -1,6 +1,6 @@
 # Приостановка правил
 
-Иногда требуется установить одновременно несколько правил, чтобы каждое из них было активно только тогда, когда завершено формирование всех этих правил. Для этого используется метод [MarketRuleHelper.SuspendRules](xref:StockSharp.Algo.MarketRuleHelper.SuspendRules(System.Action))**(**[System.Action](xref:System.Action) action**)**. 
+Иногда требуется установить одновременно несколько правил, чтобы каждое из них было активно только тогда, когда завершено формирование всех этих правил. Для этого используется метод [MarketRuleHelper.SuspendRules](xref:StockSharp.Algo.MarketRuleHelper.SuspendRules(System.Action))**(**[System.Action](xref:System.Action) action **)**. 
 
 ## Использование приостановки правил
 

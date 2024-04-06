@@ -7,7 +7,7 @@ The instruments in the [S\#](StockSharpAbout.md) from different sources have the
 
 ## Identifiers generation algorithm overriding
 
-1. To start the instrument identifiers generation on the own algorithm, you must create the descendant of the [SecurityIdGenerator](xref:StockSharp.Algo.SecurityIdGenerator) class, and override the [SecurityIdGenerator.GenerateId](xref:StockSharp.Algo.SecurityIdGenerator.GenerateId(System.String,StockSharp.BusinessEntities.ExchangeBoard))**(**[System.String](xref:System.String) secCode, [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard) board**)** method: 
+1. To start the instrument identifiers generation on the own algorithm, you must create the descendant of the [SecurityIdGenerator](xref:StockSharp.Algo.SecurityIdGenerator) class, and override the [SecurityIdGenerator.GenerateId](xref:StockSharp.Algo.SecurityIdGenerator.GenerateId(System.String,StockSharp.BusinessEntities.ExchangeBoard))**(**[System.String](xref:System.String) secCode, [StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard) board **)** method: 
 
    ```cs
    class CustomSecurityIdGenerator : SecurityIdGenerator

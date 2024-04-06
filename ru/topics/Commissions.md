@@ -25,6 +25,6 @@
    						
    ```
 
-Подсчет комиссии можно вести как по сделкам, так и по заявкам. Для подсчета комиссии по сделке вызывается метод [CommissionManager.Process](xref:StockSharp.Algo.Commissions.CommissionManager.Process(StockSharp.Messages.Message))**(**[StockSharp.Messages.Message](xref:StockSharp.Messages.Message) message**)**, в который в качестве параметра передается [Message](xref:StockSharp.Messages.Message) \- сообщение, содержащее информацию о заявке или собственной сделке.
+Подсчет комиссии можно вести как по сделкам, так и по заявкам. Для подсчета комиссии по сделке вызывается метод [CommissionManager.Process](xref:StockSharp.Algo.Commissions.CommissionManager.Process(StockSharp.Messages.Message))**(**[StockSharp.Messages.Message](xref:StockSharp.Messages.Message) message **)**, в который в качестве параметра передается [Message](xref:StockSharp.Messages.Message) \- сообщение, содержащее информацию о заявке или собственной сделке.
 
 Суммарное значение комиссии можно узнать через [CommissionManager.Commission](xref:StockSharp.Algo.Commissions.CommissionManager.Commission).

@@ -1,6 +1,6 @@
 # Сохранение и загрузка настроек
 
-Для сохранения и загрузки настроек стратегии используются переопределения методов [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage**)** и [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage**)** соответственно. 
+Для сохранения и загрузки настроек стратегии используются переопределения методов [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)** и [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)** соответственно. 
 
 ```cs
 public override void Load(SettingsStorage settings)
@@ -40,7 +40,7 @@ if (File.Exists("marketProfile.json"))
 }
 ```
 
-Для сохранения настроек во внешний файл необходимо внести изменения в метод [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage**)**, описанный ранее. 
+Для сохранения настроек во внешний файл необходимо внести изменения в метод [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)**, описанный ранее. 
 
 ```cs
 public override void Save(SettingsStorage settings)

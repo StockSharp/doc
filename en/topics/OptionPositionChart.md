@@ -93,7 +93,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    ```
 3. When connecting, set the initial control settings:
    1. Resetting the the underlying instrument of the [OptionPositionChart.UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) control; 
-   2. Redrawing the chart with the initial values [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate**)**; 
+   2. Redrawing the chart with the initial values [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**; 
    3. Specifying message provider for market data and instruments.
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

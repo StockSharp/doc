@@ -12,7 +12,7 @@
 - [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) \- список заявок.
 - [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) \- выбранная заявка.
 - [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) \- выбранные заявки.
-- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail**)** \- метод, который добавляет сообщение об ошибке регистрации заявки в поле комментария.
+- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail **)** \- метод, который добавляет сообщение об ошибке регистрации заявки в поле комментария.
 - [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) \- событие регистрации заявки (возникает после выбора соответствующего пункта контекстного меню).
 - [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) \- событие замены заявки (возникает после выбора соответствующего пункта контекстного меню).
 - [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) \- событие отмены заявки (возникает после выбора соответствующего пункта контекстного меню).
