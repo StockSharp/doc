@@ -531,10 +531,6 @@
       href: HydraSymbolMapping.md
     - name: Площадки
       href: HydraBoards.md
-  - name: Создание источника
-    href: HydraPlugins.md
-  - name: Создание утилит
-    href: HydraCreatTask.md
   - name: Утилиты
     href: HydraTasks.md
     items:
@@ -576,6 +572,10 @@
         href: HydraBackup_task.md
       - name: Восстановление данных
         href: HydraBackup_recovery.md
+  - name: Создание источника
+    href: HydraPlugins.md
+  - name: Создание утилит
+    href: HydraCreatTask.md
 - name: Hydra сервер
   href: HydraServer.md
 - name: Telegram сервисы
@@ -1774,9 +1774,11 @@
       href: OrderBook_Subscription.md
     - name: Примеры
       href: OrderBook_Prices.md
+    - name: Отфильтрованный стакан
+      href: OrderBook_Filtered.md
     - name: Разреженный стакан
       href: OrderBook_Sparse.md
-    - name: Сгруппированный стакана
+    - name: Сгруппированный стакан
       href: OrderBook_Group.md
     - name: Отображение
       href: OrderBook_Display.md

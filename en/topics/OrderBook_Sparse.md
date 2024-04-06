@@ -3,6 +3,7 @@
 A sparse order book is a presentation of the order book that displays all possible price levels, including those without any active orders at the moment. This approach allows traders to visually assess the "gaps" between orders, i.e., price levels where there are no buy or sell orders, giving an insight into potential resistance or support levels.
 
 ## Why Use a Sparse Order Book
+
 Using a sparse order book has several advantages:
 
 1. **Visualization of gaps:** It's easier to identify price levels with missing orders, which can indicate potential entry or exit points.

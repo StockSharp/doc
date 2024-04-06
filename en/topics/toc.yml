@@ -531,10 +531,6 @@
       href: HydraSymbolMapping.md
     - name: Boards
       href: HydraBoards.md
-  - name: Create new souce
-    href: HydraPlugins.md
-  - name: Create new task
-    href: HydraCreatTask.md
   - name: Tasks
     href: HydraTasks.md
     items:
@@ -576,6 +572,10 @@
         href: HydraBackup_task.md
       - name: Recovery
         href: HydraBackup_recovery.md
+  - name: Create new souce
+    href: HydraPlugins.md
+  - name: Create new task
+    href: HydraCreatTask.md
 - name: Hydra server
   href: HydraServer.md
 - name: Telegram services
@@ -1612,6 +1612,8 @@
       href: OrderBook_Subscription.md
     - name: Examples
       href: OrderBook_Prices.md
+    - name: Filtered order book
+      href: OrderBook_Filtered.md
     - name: Sparse
       href: OrderBook_Sparse.md
     - name: Grouped
