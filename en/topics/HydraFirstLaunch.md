@@ -1,12 +1,6 @@
 # First start
 
-## The first time you run it, the following window will be displayed:
-
-![hydra Quick start 00](../images/hydra_Quick_start_00.png)
-
-You have to select the start mode and click **OK**. 
-
-Then the window for selecting data sources appears. You can also open this window in the **Common** tab, you need to select **Add \=\> Sources**. 
+The first time you run it, the following window will be displayed for selecting data sources appears. You can also open this window in the **Common** tab, you need to select **Add \=\> Sources**. 
 
 ![hydra source add](../images/hydra_source_add.png)
 
