@@ -545,10 +545,26 @@
   - name: Аналитика
     href: HydraAnalytics.md
     items:
-    - name: Работа со скриптами
+    - name: Запуск скрипта
       href: HydraAnalyticsScripts.md
-    - name: Запуск и отображение результатов анализа
+    - name: Создание скрипта
       href: HydraAnalyticsShow.md
+    - name: Примеры
+      items:
+      - name: Объем внутри дня
+        href: HydraAnalyticsIntradayVolume.md
+      - name: Профиль объема
+        href: HydraAnalyticsVolumeProfile.md
+      - name: Индикаторы
+        href: HydraAnalyticsIndicator.md
+      - name: График 3D
+        href: HydraAnalyticsChart3D.md
+      - name: Нормализация
+        href: HydraAnalyticsNormalize.md
+      - name: Корреляция Пирсона
+        href: HydraAnalyticsPearsonCorrelation.md
+      - name: Крупнейшие свечи
+        href: HydraAnalyticsBigCandle.md
   - name: Настройки
     items:
     - name: Сбросить настройки

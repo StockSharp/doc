@@ -545,10 +545,26 @@
   - name: Analytics
     href: HydraAnalytics.md
     items:
-    - name: Working with scripts
+    - name: Running a Script
       href: HydraAnalyticsScripts.md
-    - name: Running and displaying results
+    - name: Create own script
       href: HydraAnalyticsShow.md
+    - name: Examples
+      items:
+      - name: Intraday volume
+        href: HydraAnalyticsIntradayVolume.md
+      - name: Volume profile
+        href: HydraAnalyticsVolumeProfile.md
+      - name: Indicators
+        href: HydraAnalyticsIndicator.md
+      - name: 3D Chart
+        href: HydraAnalyticsChart3D.md
+      - name: Normalization
+        href: HydraAnalyticsNormalize.md
+      - name: Pearson Correlation
+        href: HydraAnalyticsPearsonCorrelation.md
+      - name: Largest Candles
+        href: HydraAnalyticsBigCandle.md
   - name: Misc
     items:
     - name: Settings reset
