@@ -557,8 +557,6 @@
       href: HydraRemoveData.md
     - name: Network settings
       href: HydraNetworkSettings.md
-    - name: Database
-      href: StoragesDatabase.md
     - name: Disaster recovery
       href: HydraDisasterRecovery.md
     - name: Synchronization
