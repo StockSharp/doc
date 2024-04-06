@@ -573,8 +573,6 @@
       href: HydraRemoveData.md
     - name: Настройка сети
       href: HydraNetworkSettings.md
-    - name: Аварийное восстановление
-      href: HydraDisasterRecovery.md
     - name: Синхронизация данных
       href: HydraSynchronizeData.md
     - name: Бэкап данных
