@@ -1605,19 +1605,19 @@
       href: IndicatorsCustom.md
     - name: Graphic renderer of indicators
       href: IndicatorPainter.md
-  - name: Logging
-    href: Logging.md
+  - name: Order books
+    href: OrderBook.md
     items:
-    - name: Strategy logging
-      href: LoggingStrategy.md
-    - name: IConnector logging
-      href: LoggingITrader.md
-    - name: Other logs sources
-      href: AppLogging.md
-    - name: Visual monitoring
-      href: LoggingMonitorWindow.md
-    - name: Custom ILogListener
-      href: LoggingCustomListener.md
+    - name: Subscriptions
+      href: OrderBook_Subscription.md
+    - name: Examples
+      href: OrderBook_Prices.md
+    - name: Sparse
+      href: OrderBook_Sparse.md
+    - name: Grouped
+      href: OrderBook_Group.md
+    - name: Display
+      href: OrderBook_Display.md
   - name: Strategies
     href: Strategy.md
     items:
@@ -1648,6 +1648,19 @@
       href: MarketRuleSyncAndSuspend.md
     - name: Mutually exclusive rules
       href: MarketRuleExclusive.md
+  - name: Logging
+    href: Logging.md
+    items:
+    - name: Strategy logging
+      href: LoggingStrategy.md
+    - name: IConnector logging
+      href: LoggingITrader.md
+    - name: Other logs sources
+      href: AppLogging.md
+    - name: Visual monitoring
+      href: LoggingMonitorWindow.md
+    - name: Custom ILogListener
+      href: LoggingCustomListener.md
   - name: Trading algorithms
     href: StockSharpTradingAlgo.md
     items:
@@ -1663,8 +1676,6 @@
       href: Commissions.md
     - name: Base algorithms
       href: BasicAlgo.md
-    - name: 'Order book: algorithms'
-      href: SparseDepth.md
     - name: Equity curve
       href: Equity.md
   - name: Options

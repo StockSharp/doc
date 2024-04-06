@@ -1767,19 +1767,19 @@
       href: IndicatorsCustom.md
     - name: Графический рендерер индикаторов
       href: IndicatorPainter.md
-  - name: Логирование
-    href: Logging.md
+  - name: Стаканы
+    href: OrderBook.md
     items:
-    - name: Логирование Strategy
-      href: LoggingStrategy.md
-    - name: Логирование IConnector
-      href: LoggingITrader.md
-    - name: Другие источники логов
-      href: AppLogging.md
-    - name: Визуальный мониторинг
-      href: LoggingMonitorWindow.md
-    - name: Создание ILogListener
-      href: LoggingCustomListener.md
+    - name: Подписка
+      href: OrderBook_Subscription.md
+    - name: Примеры
+      href: OrderBook_Prices.md
+    - name: Разреженный стакан
+      href: OrderBook_Sparse.md
+    - name: Сгруппированный стакана
+      href: OrderBook_Group.md
+    - name: Отображение
+      href: OrderBook_Display.md
   - name: Cтратегии
     href: Strategy.md
     items:
@@ -1810,6 +1810,19 @@
       href: MarketRuleSyncAndSuspend.md
     - name: Взаимоисключающие правила
       href: MarketRuleExclusive.md
+  - name: Логирование
+    href: Logging.md
+    items:
+    - name: Логирование Strategy
+      href: LoggingStrategy.md
+    - name: Логирование IConnector
+      href: LoggingITrader.md
+    - name: Другие источники логов
+      href: AppLogging.md
+    - name: Визуальный мониторинг
+      href: LoggingMonitorWindow.md
+    - name: Создание ILogListener
+      href: LoggingCustomListener.md
   - name: Торговые алгоритмы
     href: StockSharpTradingAlgo.md
     items:
@@ -1825,8 +1838,6 @@
       href: Commissions.md
     - name: Основные алгоритмы
       href: BasicAlgo.md
-    - name: 'Стакан: алгоритмы'
-      href: SparseDepth.md
     - name: Кривая эквити
       href: Equity.md
   - name: Опционы
