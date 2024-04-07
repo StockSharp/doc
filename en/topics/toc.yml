@@ -613,9 +613,7 @@
 - name: API
   href: StockSharpAbout.md
   items:
-  - name: Architecture API
-    href: StockSharpArchitecture.md
-  - name: Installation instruction
+  - name: Setup
     href: StockSharpInstall.md
   - name: Connectors
     href: API_Connectors.md
@@ -1395,18 +1393,20 @@
           href: API_GUI_Settings_RSS.md
         - name: Adapter initialization RSS
           href: RssSample.md
-    - name: Subscriptions
-      href: API_ConnectorsSubscriptions.md
-    - name: Getting historical data
-      href: API_Getting_historical_data.md
-    - name: Getting news data
-      href: API_Getting_news_data.md
     - name: Creating own connector
       href: ConnectorCreating.md
     - name: Save and load settings
       href: API_Connectors_SaveConnectorSettings.md
     - name: Reconnection settings
       href: Reconnect.md
+  - name: Market data
+    items:
+    - name: Subscriptions
+      href: API_ConnectorsSubscriptions.md
+    - name: Getting historical data
+      href: API_Getting_historical_data.md
+    - name: Getting news data
+      href: API_Getting_news_data.md
   - name: Orders management
     href: Orders.md
     items:

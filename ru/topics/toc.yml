@@ -613,9 +613,7 @@
 - name: API
   href: StockSharpAbout.md
   items:
-  - name: Архитектура API
-    href: StockSharpArchitecture.md
-  - name: Установка API
+  - name: Установка
     href: StockSharpInstall.md
   - name: Коннекторы
     href: API_Connectors.md
@@ -1557,18 +1555,20 @@
           href: API_GUI_Settings_RSS.md
         - name: Инициализация адаптера RSS
           href: RssSample.md
-    - name: Подписки
-      href: API_ConnectorsSubscriptions.md
-    - name: Получение исторических данных
-      href: API_Getting_historical_data.md
-    - name: Получение новостных данных
-      href: API_Getting_news_data.md
     - name: Создание собственного коннектора
       href: ConnectorCreating.md
     - name: Сохранение и загрузка настроек
       href: API_Connectors_SaveConnectorSettings.md
     - name: Настройки переподключения
       href: Reconnect.md
+  - name: Маркет данные
+    items:
+    - name: Подписки
+      href: API_ConnectorsSubscriptions.md
+    - name: Получение исторических данных
+      href: API_Getting_historical_data.md
+    - name: Получение новостных данных
+      href: API_Getting_news_data.md
   - name: Заявки
     href: Orders.md
     items:
