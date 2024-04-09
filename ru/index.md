@@ -6,7 +6,7 @@
 
 Вы можете работать с [S\#](topics/StockSharpAbout.md) у любого брокера, который поддерживает наши подключения.
 
-> [!IMPORTANT] 
+> [!NOTE] 
 > Установка **всех** программ производится единообразно - через утилиту [Installer](topics/SharpInstaller.md).
 
 ### Designer

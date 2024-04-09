@@ -6,7 +6,7 @@
 
 You can use S\# with any broker that supports our connection.
 
-> [!IMPORTANT]
+> [!NOTE]
 > The installation of **all** programs is performed uniformly through the [Installer](topics/SharpInstaller.md) utility.
 
 ### Designer
