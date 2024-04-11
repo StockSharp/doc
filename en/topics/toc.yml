@@ -91,10 +91,6 @@
             href: Designer_Logical_condition.md
           - name: Formula
             href: Designer_Universal_formula.md
-          - name: Trades by order
-            href: Designer_Deals_on_request.md
-          - name: Trades by strategy
-            href: Designer_Trades_strategy.md
           - name: Combination
             href: Designer_Association.md
           - name: Position
@@ -105,10 +101,12 @@
             href: Designer_Protect_positions.md
           - name: Random
             href: Designer_Random.md
-          - name: Is trade allowed
-            href: Designer_TradeAllowedDiagramElement.md
           - name: P&L strategy
             href: Designer_StrategyPnLDiagramElement.md
+          - name: Trades by strategy
+            href: Designer_Trades_strategy.md
+          - name: Trades by order
+            href: Designer_Deals_on_request.md
         - name: Data sources
           items:
           - name: Candles
