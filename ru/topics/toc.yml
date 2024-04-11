@@ -620,7 +620,7 @@
     items:
     - name: Графическое конфигурирование
       href: API_ConnectorsUIConfiguration.md
-    - name: Коннекторы (Россия)
+    - name: Россия
       items:
       - name: QUIK
         href: Quik.md
@@ -782,7 +782,7 @@
           href: API_GUI_Settings_RTS.md
         - name: Инициализация адаптера РТС
           href: RTSSample.md
-    - name: Коннекторы (Америка)
+    - name: Америка
       items:
       - name: Alpaca
         href: Alpaca.md
@@ -968,7 +968,7 @@
           href: API_GUI_Settings_Yahoo.md
         - name: Инициализация адаптера Yahoo
           href: YahooSample.md
-    - name: Коннекторы Forex
+    - name: Forex
       items:
       - name: MetaTrader
         href: MT.md
@@ -1038,7 +1038,7 @@
           href: API_GUI_Settings_TrueFX.md
         - name: Инициализация адаптера TrueFX
           href: TrueFXSample.md
-    - name: Коннекторы Криптовалют
+    - name: Крипто биржи
       items:
       - name: Bibox
         href: Bibox.md
