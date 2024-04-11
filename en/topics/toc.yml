@@ -11,7 +11,7 @@
       href: InstallerUpdateProgramsVideo.md
   - name: Setup
     href: Installer_Installation.md
-  - name: Install  and remove apps
+  - name: Install and remove apps
     href: Installer_installing_removing_programs.md
   - name: Update apps
     href: Installer_software_update.md
