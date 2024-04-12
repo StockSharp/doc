@@ -1884,7 +1884,7 @@
       href: api/testing/simulator.md
     - name: Настройки тестирования
       href: api/testing/extended_settings.md
-  - name: Пользовательский интерфейс (GUI)
+  - name: Графические компоненты
     href: api/graphical_user_interface.md
     items:
     - name: Графики

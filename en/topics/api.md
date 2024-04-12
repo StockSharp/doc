@@ -1,22 +1,29 @@
-# API
+# API Documentation
 
-**API** \- a free library for beginners and professionals in the field of algorithmic trading. API is oriented to program on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) in the Visual Studio environment, allowing to create absolutely any strategies: from positional strategies with a long timeframe to the high\-frequency strategies (HFT) using direct access (DMA) to stock trading. 
+## Overview
 
-API is the basis of all our products. On the basis of the library, solutions such as [Designer](designer.md), [Hydra](hydra.md) etc., as well as our [MatLab](matlab.md) adapter are created. 
+StockSharp API, also known as S# API, is a comprehensive Software Development Kit (SDK) designed for creating trading applications similar to [Designer](designer.md), [Terminal](terminal.md), and others. This SDK serves as the architectural foundation for numerous significant projects within the trading community.
 
-API uses the [Messages](api/messages.md) mechanism, which makes it possible to unify the development of adapters, and also allows you to create your [Adapters](api/messages/adapters.md) to any external trading system. 
+## Features
 
-## The benefits and capabilities of the library:
+- **Strategy Scripting**: StockSharp API provides a robust scripting mechanism for writing and implementing trading strategies directly in [Designer](designer/strategies/using_csharp.md). Users can develop, test, and deploy trading algorithms using C#.
 
-1. **Portability** \- the algorithm does not depend on a broker or exchange API and can work with any connection. For example, it is easy to move from [OpenECry](api/connectors/stock_market/openecry.md) to [Interactive Brokers](api/connectors/stock_market/interactive_brokers.md), or from **Forex** to the stock exchange.
-2. **Supports many sources:**[Connectors](api/connectors.md).
-3. **Versatility** \- focused on private algorithmic traders, small teams, investment companies, banks. 
-4. **Performance** \- the simultaneous execution of hundreds of strategies on any instruments. 
-5. **Speed** \- the orders processing in the API takes no more than a few microseconds. 
-6. **Direct connection** – trading through a direct connection to exchanges, as well as support for the [FIX](api/connectors/common/fix_protocol.md) protocol. 
-7. **Realistic backtesting** \- the most accurate [Backtesting\/Emulation](api/testing.md) on ticks and order books, determination of the actual slippage. 
-8. **Popularity** \- widely used [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language, popular programming environment Visual Studio. 
+- **Analytical Tools**: The API is integrated with Hydra, a platform for detailed [market data analysis](hydra/analytics.md). It offers extensive support for data manipulation and storage, enabling complex analytical operations.
 
-## Recommended content
+- **Custom Application Development**: Besides scripting within existing applications, StockSharp API allows developers to create custom [independent trading solutions](api/examples.md). This feature is crucial for users who require tailor-made functionalities not typically available in standard trading applications.
 
-[Setup API](api/setup.md)
+- **Connectors and Graphical Controls**: The API includes a wide range of [connectors](api/connectors.md) for real-time market data integration from various exchanges. Additionally, it supports the development of customizable [graphical user interfaces](api/graphical_user_interface.md), making it versatile for creating professional trading platforms.
+
+## Architecture
+
+StockSharp API is built with a focus on modularity and [extensibility](api/connectors/creating_own_connector.md). It enables developers to extend its capabilities through plugins and additional modules without altering the core system. This modular architecture makes it an ideal choice for developers looking to build scalable and maintainable trading applications.
+
+## Open Source
+
+The core of the StockSharp API is developed under an open-source paradigm, allowing the community to contribute and ensuring transparency. The source code is available on GitHub, providing both novice and experienced developers with the opportunity to study, modify, and enhance the system according to their specific needs.
+
+## GitHub Repository
+
+The official StockSharp API source code can be found at the GitHub repository:
+
+[StockSharp GitHub Repository](https://github.com/stocksharp/stocksharp)
