@@ -2,6 +2,8 @@
 
 The "Largest Candles" script is designed to identify candles with the maximum volume and the greatest body length on the charts of selected financial instruments over a given period. This tool allows traders and analysts to identify significant market events and the reaction of market participants.
 
+![hydra_analitics_big_candle](../../../../images/hydra_analitics_big_candle.png)
+
 ## Key Features
 
 The script analyzes a set of specified instruments, searches among them for candles with the greatest volume and body length, and displays this data on two graphs:

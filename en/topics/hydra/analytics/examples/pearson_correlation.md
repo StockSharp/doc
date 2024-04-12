@@ -2,6 +2,8 @@
 
 The Pearson correlation is a statistical method used to measure the degree of linear relationship between two quantitative variables. Within financial analysis, this method is widely utilized to explore the relationships between different assets, such as stocks or currency pairs.
 
+![hydra_analitics_pearson_correlation](../../../../images/hydra_analitics_pearson_correlation.png)
+
 ## Method Description
 
 The Pearson correlation coefficient ranges from -1 to 1, where:
