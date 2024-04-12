@@ -9,7 +9,7 @@ You don't need to waste time creating a GUI (Graphical User Interface), a ready\
 The main features of the trading robot shell:
 
 1. Full source code. Ideal for custom robots, or for your solutions.
-2. **Support for more than 70 connections** to various exchanges of the world [Connectors](API_Connectors.md).
+2. **Support for more than 70 connections** to various exchanges of the world [Connectors](api/connectors.md).
 3. Flexible user interface.
 4. Testing strategies (statistics, equity, report).
 5. Save and restore strategy settings.
@@ -19,4 +19,4 @@ The main features of the trading robot shell:
 
 ## Recommended content
 
-[Installing Shell](Shell_Installation.md)
+[Installing Shell](shell/installing_shell.md)

@@ -6,7 +6,7 @@
 
 ## Advantages and features of Terminal:
 
-1. **Supports many sources:**[Connectors](API_Connectors.md).
+1. **Supports many sources:**[Connectors](api/connectors.md).
 2. **Trade from the chart**. 
 3. **Arbitrary time frames**. 
 4. **Support for Volume, Tick, Range, PnF, Renko Candles**. 
@@ -15,4 +15,4 @@
 
 ## Recommended content
 
-[Installing Terminal](Terminal_Installation.md)
+[Installing Terminal](terminal/installing_terminal.md)

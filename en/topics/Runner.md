@@ -4,10 +4,10 @@
 
 - Cross-platform - can be run on both Windows and Linux systems.
 
-- Integrated with [Telegram](Telegram.md), allowing remote control of trading activities.
+- Integrated with [Telegram](telegram_services.md), allowing remote control of trading activities.
 
 - Consumes minimal computer resources due to the absence of a heavy graphical interface.
 
-- Capable of launching strategies in the form of C# code, in the form of [Designer](Designer.md) schematics, and as ready-made DLL assemblies.
+- Capable of launching strategies in the form of C# code, in the form of [Designer](designer.md) schematics, and as ready-made DLL assemblies.
 
 - Allows strategies to be run in live trading mode, as well as for testing on history.
