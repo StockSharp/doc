@@ -1,0 +1,26 @@
+# ITCH
+
+**ITCH** \- Real\-time market data provider for stock quotes, Forex, news, futures contracts, etc..
+
+Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+
+> [!TIP]
+> Connector support only market\-data feed, transaction are not supported.
+
+## Recommended content
+
+[Connectors](../../connectors.md)
+
+[Graphical configuration](../graphical_configuration.md)
+
+[Save and load settings](../save_and_load_settings.md)
+
+[Creating own connector](../creating_own_connector.md)
+
+[Orders management](../../orders_management.md)
+
+[Create new order](../../orders_management/create_new_order.md)
+
+[Create new stop order](../../orders_management/create_new_stop_order.md)
+
+[Adapter initialization ITCH](itch/adapter_initialization_itch.md)
