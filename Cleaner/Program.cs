@@ -2,15 +2,19 @@
 using Ecng.Collections;
 
 using System.Text.RegularExpressions;
-using System.Linq;
 
 var rootDir = @"C:\StockSharp\doc\";
 var enOnlyNames = new Regex(@"^[a-zA-Z0-9\s\p{P}]*$", RegexOptions.Singleline | RegexOptions.Compiled);
 
-var enRedirs = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase)
+var enRedirs = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
+
+void addRussiaRedir(params string[] names)
 {
-	"Plaza.md", "Tinkoff.md", "Alor.md", "MoexISS.md", "Quik.md", "Transaq.md"
-};
+	foreach (var name in names)
+		enRedirs.Add($"topics/api/connectors/russia/{name}");
+}
+
+addRussiaRedir("plaza.md", "tinkoff.md", "alor.md", "moexiss.md", "quik.md", "transaq.md");
 
 foreach (var lang in new[] { "en", "ru" })
 {
@@ -24,12 +28,12 @@ foreach (var lang in new[] { "en", "ru" })
 
 	var mdfiles = Directory
 		.EnumerateFiles(topicsDir, "*.md", SearchOption.AllDirectories)
-		.Select(f => Path.GetFileName(f))
+		.Select(f => GetRelativePath(langDir, f))
 		.ToHashSet();
 
 	var imgfiles = Directory
 		.EnumerateFiles(imagesDir, "*.png", SearchOption.AllDirectories)
-		.Select(f => Path.GetFileName(f))
+		.Select(Path.GetFileName)
 		.ToHashSet();
 
 	if (lang == "en")
@@ -57,10 +61,10 @@ foreach (var lang in new[] { "en", "ru" })
 		if (!enOnlyNames.IsMatch(f))
 			Console.WriteLine(f);
 
-		await removeUsedImgs(Path.Combine(topicsDir, f));
+		await removeUsedImgs(Path.Combine(langDir, f.Replace('/', '\\')));
 	}
 
-	var unused = mdfiles.Where(f => !toc.ContainsIgnoreCase(f)).ToArray();
+	var unused = mdfiles.Where(f => !toc.ContainsIgnoreCase($"href: {f.Remove("topics/", true)}")).ToArray();
 
 	Console.WriteLine("Unused md:");
 
@@ -72,8 +76,16 @@ foreach (var lang in new[] { "en", "ru" })
 	foreach (var f in imgfiles)
 	{
 		Console.WriteLine(f);
-		File.Delete(Path.Combine(imagesDir, f));
+		//File.Delete(Path.Combine(imagesDir, f));
 	}
 
 	Console.WriteLine();
+}
+
+static string GetRelativePath(string basePath, string targetPath)
+{
+	var baseUri = new Uri(basePath);
+	var targetUri = new Uri(targetPath);
+
+	return baseUri.MakeRelativeUri(targetUri).ToString();
 }
