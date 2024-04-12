@@ -628,9 +628,9 @@
         - name: Настройка Quik Lua
           href: api/connectors/russia/quik/settings.md
         - name: Графическое конфигурирование Quik LUA Market data
-          href: api/connectors/russia/quik/ui_settingsmarketdata.md
+          href: api/connectors/russia/quik/ui_settings_marketdata.md
         - name: Графическое конфигурирование Quik LUA Transactions
-          href: api/connectors/russia/quik/ui_settingstransactions.md
+          href: api/connectors/russia/quik/ui_settings_transactions.md
         - name: Инициализация адаптера Quik Lua
           href: api/connectors/russia/quik/sample.md
       - name: Tinkoff
@@ -657,28 +657,28 @@
         - name: Настройки коннектора Plaza II
           href: api/connectors/russia/plaza/settings.md
         - name: Графическое конфигурирование Plaza II
-          href: api/connectors/russia/plaza/ui_settings2.md
+          href: api/connectors/russia/plaza/ui_settings.md
         - name: Инициализация адаптера Plaza II
           href: api/connectors/russia/plaza/sample.md
         - name: Метаданные
           href: api/connectors/russia/plaza/metadata.md
         - name: Стаканы агрегированных котировок
-          href: api/connectors/russia/plaza/aggregatedorders.md
+          href: api/connectors/russia/plaza/aggregated_orders.md
         - name: Произвольные таблицы
-          href: api/connectors/russia/plaza/customtables.md
+          href: api/connectors/russia/plaza/custom_tables.md
         - name: Один логин - несколько роботов
-          href: api/connectors/russia/plaza/singlerouter.md
+          href: api/connectors/russia/plaza/single_router.md
         - name: Ордер Лог
           href: api/connectors/russia/plaza/orderslog.md
         - name: Управление ревизиями
-          href: api/connectors/russia/plaza/revisionmanager.md
+          href: api/connectors/russia/plaza/revision_manager.md
       - name: Micex (TEAP)
         href: api/connectors/russia/micex.md
         items:
         - name: Настройки коннектора Micex (TEAP)
           href: api/connectors/russia/micex/settings.md
         - name: Графическое конфигурирование Micex (TEAP)
-          href: api/connectors/russia/micex/ui_settingsmmwbteap.md
+          href: api/connectors/russia/micex/ui_settings.md
         - name: Инициализация адаптера Micex (TEAP)
           href: api/connectors/russia/micex/sample.md
       - name: MOEX ISS
@@ -701,14 +701,14 @@
         - name: Настройки коннектора Quik FIX
           href: api/connectors/russia/quikfix/settings.md
       - name: SPB Exchange
-        href: api/connectors/russia/spbex.md
+        href: api/connectors/russia/spb_exchange.md
         items:
         - name: Настройки коннектора SPB Exchange
-          href: api/connectors/russia/spbex/settings.md
+          href: api/connectors/russia/spb_exchange/settings.md
         - name: Графическое конфигурирование SPB Exchange
-          href: api/connectors/russia/spbex/ui_settingsspb_exchange.md
+          href: api/connectors/russia/spb_exchange/ui_settings.md
         - name: Инициализация адаптера SPB Exchange
-          href: api/connectors/russia/spbex/sample.md
+          href: api/connectors/russia/spb_exchange/sample.md
       - name: Transaq
         href: api/connectors/russia/transaq.md
         items:
@@ -735,14 +735,14 @@
         - name: Инициализация адаптера Finam
           href: api/connectors/russia/finam/sample.md
       - name: SmartCOM (ITI Capital)
-        href: api/connectors/russia/smart.md
+        href: api/connectors/russia/smartcom.md
         items:
         - name: Настройки коннектора SmartCOM
-          href: api/connectors/russia/smart/comsettings.md
+          href: api/connectors/russia/smartcom/settings.md
         - name: Графическое конфигурирование SmartCOM
-          href: api/connectors/russia/smart/ui_settingscom.md
+          href: api/connectors/russia/smartcom/ui_settings.md
         - name: Инициализация адаптера SmartCOM
-          href: api/connectors/russia/smart/sample.md
+          href: api/connectors/russia/smartcom/sample.md
       - name: UX (сайт)
         href: api/connectors/russia/ux.md
         items:
@@ -758,14 +758,14 @@
         - name: Инициализация адаптера AlorHistory
           href: api/connectors/russia/alorhistory/sample.md
       - name: Альфа-Директ
-        href: api/connectors/russia/alfa.md
+        href: api/connectors/russia/alfadirect.md
         items:
         - name: Настройка терминала Альфа-Директ
-          href: api/connectors/russia/alfa/configuration.md
+          href: api/connectors/russia/alfadirect/configuration.md
         - name: Графическое конфигурирование Альфа-Директ
-          href: api/connectors/russia/alfa/ui_settings.md
+          href: api/connectors/russia/alfadirect/ui_settings.md
         - name: Инициализация адаптера Альфа-Директ
-          href: api/connectors/russia/alfa/sample.md
+          href: api/connectors/russia/alfadirect/sample.md
       - name: ЛЧИ
         href: api/connectors/russia/lci.md
         items:

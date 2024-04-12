@@ -37,4 +37,4 @@ void OnStreamInserted(PlazaStream stream, PlazaTable table, PlazaRecord record)
 
 ## Следующие шаги
 
-[Подключение нескольких роботов к одному роутеру](singlerouter.md)
+[Подключение нескольких роботов к одному роутеру](single_router.md)

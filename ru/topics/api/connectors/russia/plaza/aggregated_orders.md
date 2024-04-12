@@ -14,4 +14,4 @@ adapter.DefaultDepthTable = adapter.TableRegistry.Aggregation20;
 
 ## Следующие шаги
 
-[Получение произвольных таблиц](customtables.md)
+[Получение произвольных таблиц](custom_tables.md)

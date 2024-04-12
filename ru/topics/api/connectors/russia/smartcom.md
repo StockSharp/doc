@@ -20,4 +20,4 @@
 
 [Создать новую стоп заявку](../../orders_management/create_new_stop_order.md)
 
-[Инициализация адаптера SmartCOM](smart/sample.md)
+[Инициализация адаптера SmartCOM](smartcom/sample.md)

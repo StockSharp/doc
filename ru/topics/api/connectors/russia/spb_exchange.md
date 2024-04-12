@@ -20,4 +20,4 @@
 
 [Создать новую стоп заявку](../../orders_management/create_new_stop_order.md)
 
-[Инициализация адаптера SPB Exchange](spbex/sample.md)
+[Инициализация адаптера SPB Exchange](spb_exchange/sample.md)
