@@ -1629,7 +1629,7 @@
     - name: Список индикаторов
       href: api/indicators/list_of_indicators.md
       items:
-      - name: '%R'
+      - name: Williams %R
         href: api/indicators/list_of_indicators/williams_r.md
       - name: A/C
         href: api/indicators/list_of_indicators/a_d.md
@@ -1740,7 +1740,7 @@
       - name: Stochastic Oscillator
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
       - name: Stochastic Oscillator K%
-        href: api/indicators/list_of_indicators/stochastic_oscillator_k%.md
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
       - name: Sum N
         href: api/indicators/list_of_indicators/sum_n.md
       - name: TEMA
