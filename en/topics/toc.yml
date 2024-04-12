@@ -1466,7 +1466,7 @@
       href: api/indicators/list_of_indicators.md
       items:
       - name: '%R'
-        href: api/indicators/list_of_indicators/%r.md
+        href: api/indicators/list_of_indicators/williams_r.md
       - name: A/D
         href: api/indicators/list_of_indicators/a_d.md
       - name: ADX

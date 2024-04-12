@@ -56,7 +56,7 @@
 - [Volume Profile](list_of_indicators/volume_profile.md)
 - [Volume Weighted MA](list_of_indicators/volume_weighted_ma.md)
 - [Weighted MA](list_of_indicators/weighted_ma.md)
-- [%R](list_of_indicators/%25r.md)
+- [%R](list_of_indicators/williams_r.md)
 - [ZigZag](list_of_indicators/zigzag.md)
 - [ZigZag (Metastock)](list_of_indicators/zigzag_metastock.md)
 

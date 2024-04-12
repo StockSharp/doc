@@ -8,4 +8,4 @@ To use the indicator, you must use the [WeightedMovingAverage](xref:StockSharp.A
 
 ## Recommended content
 
-[%R](%25r.md)
+[%R](williams_r.md)
