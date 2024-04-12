@@ -1703,7 +1703,7 @@
       href: OptionsSynthetic.md
     - name: Graphic components
       href: OptionsGUI.md
-  - name: Backtesting/Emulation
+  - name: Testing
     href: StrategyTesting.md
     items:
     - name: Historical data
@@ -1820,7 +1820,7 @@
       href: API_GUI_CommissionWindow.md
     - name: Notification settings window
       href: API_GUI_AlertsWindow.md
-    - name: Themes of S# graphic components
+    - name: Themes (light and dark)
       href: API_GUI_Thems.md
   - name: Messages
     href: Messages.md

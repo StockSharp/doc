@@ -1984,7 +1984,7 @@
       href: API_GUI_CommissionWindow.md
     - name: Окно настройки оповещений
       href: API_GUI_AlertsWindow.md
-    - name: Темы графических компонентов S#
+    - name: Темы (светлая и темная)
       href: API_GUI_Thems.md
   - name: Сообщения
     href: Messages.md
