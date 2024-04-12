@@ -1,99 +1,86 @@
 # About StockSharp
 
-[StockSharp (shortly S\#)](https://stocksharp.com/store/) \- are **free** programs for trading at any markets of the world (American, European, Asian, Russian, stocks, futures, options, Bitcoins, forex, etc.). You will be able to trade manually or automated trading (algorithmic trading robots, conventional or HFT). 
+[StockSharp (S#)](https://stocksharp.com/store/) offers **free** trading programs for global markets (American, European, Asian, Russian, stocks, futures, options, Bitcoins, forex, etc.). Users can trade manually or through automated trading, including algorithmic trading robots, conventional or HFT (High-Frequency Trading).
 
-**Supports 90+ brokers, exchanges and data sources:** [Connectors](topics/api/connectors.md).
+**Supports 90+ brokers, exchanges, and data sources:** [Connectors](topics/api/connectors.md).
 
-You can use S\# with any broker that supports our connection.
+S# is compatible with any broker that supports our connections.
 
 > [!NOTE]
-> The installation of **all** programs is performed uniformly through the [Installer](topics/installer.md) utility.
+> The installation of **all** programs is uniformly performed through the [Installer](topics/installer.md) utility.
 
 ### Designer
 
-Designer
-
 ![StockSharpTitle 0](images/StockSharpTitle_0.png)
 
-[Designer](topics/designer.md) \- universal algorithmic strategies application for easy strategy creation: 
+[Designer](topics/designer.md) is a universal algorithmic strategies application that simplifies strategy creation:
 
-- Visual designer to create strategies by mouse clicking.
-- Embedded [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) editor.
-- Easy to create own indicators.
-- Build in debugger.
-- Connections to the multiple electronic boards and brokers.
-- All world platforms.
-- Schema sharing with own team.
+- Visual designer for strategy creation using mouse clicks.
+- Integrated [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) editor.
+- Simple creation of custom indicators.
+- Built-in debugger.
+- Connection capabilities to multiple electronic boards and brokers.
+- Compatibility with all world platforms.
+- Ability to share schemas with your team.
 
 [More...](topics/designer.md)
 
 ### Hydra
 
-Hydra
-
 ![StockSharpTitle 1](images/StockSharpTitle_1.png)
 
-[Hydra](topics/hydra.md) \- the program for automatic download of historical and real\-time market data: 
+[Hydra](topics/hydra.md) is an application for the automatic downloading of historical and real-time market data:
 
-- Supports many sources [Connectors](topics/api/connectors.md).
+- Supports numerous sources [Connectors](topics/api/connectors.md).
 - High compression ratio (2 bytes per trade, 7 bytes per order book).
-- Any data type (candles, ticks, order book, order\-log, options, news and other).
-- Program access to stored data via API.
-- Export to csv, excel, xml or database.
-- Import from csv.
-- Scheduled tasks.
-- Auto\-sync over the Internet between several running programs Hydra.
+- Handles any data type (candles, ticks, order books, order-logs, options, news, and more).
+- API access to stored data.
+- Export capabilities to CSV, Excel, XML, or databases.
+- CSV import functionality.
+- Scheduled tasks and auto-sync over the Internet between running Hydra instances.
 
 [More...](topics/hydra.md)
 
 ### Terminal
 
-Terminal
-
 ![Terminal main 00](images/Terminal_main_00.png)
 
-[Terminal](topics/terminal.md) \- trading charting application (trading terminal).
+[Terminal](topics/terminal.md) is a trading and charting application (trading terminal):
 
-- Trading from charts by clicking
-- Arbitrary timeframes
-- Volume, Tick, Range, Renko candles
-- Cluster and box charts
+- Enables trading directly from charts with a click.
+- Supports arbitrary timeframes.
+- Features various candle types: Volume, Tick, Range, Renko.
+- Includes cluster and box charts.
 
 ### Shell
 
-Shell
+The Shell provides a ready-made graphical framework that can be quickly customized to your needs and comes with fully open source code in C#:
 
-The ready\-made graphical framework with the ability to quickly change to your needs and with fully open source code in C\#
-
-- Complete source code
-- Support for all StockSharp platform connections: FIX\/FAST, Crypto Exchange (+30 at the moment), etc.
-- Support for Designer schemas
-- Flexible user interface
-- Strategy testing (statistics, equity, reports)
-- Save and load strategy settings
-- Launch strategies in parallel
-- Detailed information on strategy performance (orders, transactions, position, revenue, logs, etc.)
-- Launch strategies on schedule
+- Complete source code included.
+- Supports all StockSharp platform connections: FIX/FAST, Crypto Exchanges (+30 currently), etc.
+- Designer schema support.
+- Flexible user interface.
+- Strategy testing tools (statistics, equity, reports).
+- Save and load strategy settings.
+- Concurrent strategy execution.
+- Detailed strategy performance insights (orders, transactions, positions, revenue, logs, etc.).
+- Scheduled strategy launches.
 
 ### API
 
-API
+[API](topics/api.md) is a library for the professional development of trading robots in C#. It is designed for those who are programming in Visual Studio and are professional programmers in algorithmic trading.
 
-[API](topics/api.md) \- library for the professional development of trading robots in C\#. For those who are programming in Visual Studio, and is a professional programmer in algotrading. 
+### Our Products:
 
-### All our products:
-
-All our products:
-
-- [Designer](topics/designer.md) \- universal algorithmic strategies designer.
-- [Hydra](topics/hydra.md) \- program to download market data.
-- [API](topics/api.md) \- library for writing trading robots on [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
-- [Terminal](topics/terminal.md) \- trading terminal.
-- [Shell](topics/shell.md) \- ready\-made graphical framework for strategies with source codes.
-- [MatLab](topics/matlab.md) \- MatLab integration with trading systems. Trade from MatLab scripts.
+- [Designer](topics/designer.md) - Universal algorithmic strategy designer.
+- [Hydra](topics/hydra.md) - Market data downloading program.
+- [API](topics/api.md) - Library for developing trading robots in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
+- [Terminal](topics/terminal.md) - Trading terminal.
+- [Shell](topics/shell.md) - Ready-made graphical framework for strategies with source codes.
+- [MatLab](topics/matlab.md) - Integration of MatLab with trading systems. Trade from MatLab scripts.
 
 [Download](https://stocksharp.com/products/download/)
 
-## Recommended content
+## Recommended Content
 
-[Reference materials](topics/common/reference_materials.md)
+[Reference Materials](topics/common/reference_materials.md)
