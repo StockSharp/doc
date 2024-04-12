@@ -18,7 +18,7 @@ The upward version of the pattern is bullish, indicating that the downward price
 3. The second candle is a white (upward) candle with a small body, which opens and closes within the body of the first candle.
 4. The third candle is a white (upward) candle, which closes above the second candle's close.
 
-![IndicatorPattern3IU](../../../../images/indicatorpattern3iu.png)
+![IndicatorPattern3IU](../../../../../images/indicatorpattern3iu.png)
 
 ### 3 Inside Down
 
@@ -31,8 +31,8 @@ The downward version of the pattern is bearish. It shows that the upward price m
 
 These patterns are essentially harami patterns followed by a confirming candle, which many traders wait for in the case of haramis.
 
-![IndicatorPattern3ID](../../../../images/indicatorpattern3id.png)
+![IndicatorPattern3ID](../../../../../images/indicatorpattern3id.png)
 
 ## See Also
 
-[Pattern 3 Outside Down and 3 Outside Up](pattern_3od3ou.md)
+[Pattern 3 Outside Down and 3 Outside Up](3_outside_down_3_outside_up.md)

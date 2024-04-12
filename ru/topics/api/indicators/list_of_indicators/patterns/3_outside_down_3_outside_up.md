@@ -17,7 +17,7 @@
 3. Вторая свеча бычья с длинным телом и полностью включает первую свечу.
 4. Третья свеча бычья с более высоким закрытием, чем у второй свечи.
 
-![IndicatorPattern3OU](../../../../images/indicatorpattern3ou.png)
+![IndicatorPattern3OU](../../../../../images/indicatorpattern3ou.png)
 ### 3 Outside Down
 
 Эта вариация паттерна представляет собой медвежью свечную модель со следующими характеристиками:.
@@ -29,9 +29,9 @@
 
 Первая свеча знаменует начало конца преобладающего тренда, поскольку вторая свеча поглощает первую свечу. Затем третья свеча знаменует ускорение разворота.
 
-![IndicatorPattern3oD](../../../../images/indicatorpattern3od.png)
+![IndicatorPattern3oD](../../../../../images/indicatorpattern3od.png)
 
 ## См. также
 
-[Pattern 3 Inside Down and 3 Inside Up](pattern_3id3iu.md)
+[Pattern 3 Inside Down and 3 Inside Up](3_inside_down_3_side_up.md)
 

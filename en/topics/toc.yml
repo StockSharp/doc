@@ -1549,12 +1549,13 @@
         href: api/indicators/list_of_indicators/peakbar.md
       - name: Pattern
         href: api/indicators/list_of_indicators/pattern.md
-      - name: Pattern 3OD3OU
-        href: api/indicators/list_of_indicators/pattern_3od3ou.md
-      - name: Pattern 3ID3IU
-        href: api/indicators/list_of_indicators/pattern_3id3iu.md
-      - name: Pattern 3BC3WS
-        href: api/indicators/list_of_indicators/pattern_3bc3ws.md
+        items:
+        - name: '3 Outside Down 3 Outside Up'
+          href: api/indicators/list_of_indicators/patterns/3_outside_down_3_outside_up.md
+        - name: '3 Inside Down and 3 Inside Up'
+          href: api/indicators/list_of_indicators/patterns/3_inside_down_3_side_up.md
+        - name: '3 Black Crows and 3 White Soldiers'
+          href: api/indicators/list_of_indicators/patterns/3_black_crows_3_white_soldiers.md
       - name: QStick
         href: api/indicators/list_of_indicators/qstick.md
       - name: RAVI

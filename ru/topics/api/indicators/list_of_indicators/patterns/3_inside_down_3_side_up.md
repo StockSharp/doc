@@ -16,7 +16,7 @@
 3. Вторая свеча \- это белая (восходящая) свеча с маленьким телом, которая открывается и закрывается внутри тела первой свечи.
 4. Третья свеча \- это белая (восходящая) свеча, которая закрывается выше закрытия второй свечи.
 
-![IndicatorPattern3IU](../../../../images/indicatorpattern3iu.png)
+![IndicatorPattern3IU](../../../../../images/indicatorpattern3iu.png)
 ### 3 Inside Down
 
 Нисходящая версия паттерна является медвежьей. Она показывает, что движение цены вверх заканчивается и цена начинает двигаться вниз. Вот характеристики паттерна.
@@ -28,8 +28,8 @@
 
 Эти паттерны, по сути, паттерны харами, за которыми следует свеча окончательного подтверждения, которую многие трейдеры все равно ждут в случае с харами.
 
-![IndicatorPattern3ID](../../../../images/indicatorpattern3id.png)
+![IndicatorPattern3ID](../../../../../images/indicatorpattern3id.png)
 
 ## См. также
 
-[Pattern 3 Outside Down and 3 Outside Up](pattern_3od3ou.md)
+[Pattern 3 Outside Down and 3 Outside Up](3_outside_down_3_outside_up.md)

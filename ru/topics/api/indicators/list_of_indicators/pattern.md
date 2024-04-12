@@ -49,5 +49,3 @@
 ## См. также
 
 [Формула](../../../designer/strategies/using_visual_designer/elements/common/formula.md)
-
-
