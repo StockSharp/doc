@@ -1,6 +1,6 @@
 # IV book
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_glass_implied_volatility_00.png)
+![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 The cube is used to calculate an order book of implied volatility.
 

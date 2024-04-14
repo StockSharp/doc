@@ -1,24 +1,20 @@
 # Grouped order book
 
-![Designer Grouped glass 00](../../../../../../images/designer_grouped_glass_00.png)
+![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+
+![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 The cube is used to obtain a grouped order book. 
 
 ### Incoming sockets
 
-Incoming sockets
-
-- **Order book** \- the order book to be g rouped.
+- **Order book** \- the order book to be grouped.
 
 ### Outgoing sockets
-
-Outgoing sockets
 
 - **Order book** \- the grouped order book.
 
 ### Parameters
-
-Parameters
 
 - **Price range** \- the price range in which orders will be grouped.
 

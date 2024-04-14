@@ -1,6 +1,6 @@
 # Стакан подразумеваемой волатильности
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_glass_implied_volatility_00.png)
+![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 Кубик используется для расчета стакана подразумеваемой волатильности.
 

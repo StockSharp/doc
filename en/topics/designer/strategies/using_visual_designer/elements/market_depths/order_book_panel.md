@@ -1,17 +1,17 @@
-# Order book panel
+# Order Book Panel
 
-![Designer Glass Panel](../../../../../../images/designer_glass_panel.png)
+![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 
-The cube is designed to display an order book in a special graphic component [Order book](../../../../user_interface/components/order_book.md).
+The cube is designed to display the order book in a specialized graphical component [Order Book](../../../../user_interface/components/order_book.md).
 
-You need to add the [Order book](../../../../user_interface/components/order_book.md) component from the [Components](../../../../user_interface/components.md) group of the Emulation or Trade tabs. For more information on the [Order book](../../../../user_interface/components/order_book.md) component, see the [Order book](../../../../user_interface/components/order_book.md) clause.. 
+The [Order Book](../../../../user_interface/components/order_book.md) component should be added from the [Components](../../../../user_interface/components.md) group of the **Simulation** or **Trading** tabs. More details about the [Order Book](../../../../user_interface/components/order_book.md) component can be found in the section [Order Book](../../../../user_interface/components/order_book.md).
 
-### Incoming sockets
+### Incoming Sockets
 
-Incoming sockets
+- **Order Book** - the order book that needs to be displayed.
+- **Order** - an order, the volume of which needs to be displayed in the *Own Volume* column.
+- **Order Error** - an error in the registration or cancellation of an order, for which animation needs to be shown.
 
-- **Order book** – an order book to be displayed.
+## See Also
 
-## Recommended content
-
-[Grouped order book](grouped_order_book.md)
+[Grouped Order Book](grouped_order_book.md)
