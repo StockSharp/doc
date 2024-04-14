@@ -92,7 +92,7 @@
 5. В обработчике события [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) производим отрисовку свечи и значений индикаторов для каждой завершенной свечи. Для этого: 
    1. Вычисляем значения индикаторов.
    2. Заполняем словарь **elements** парами "объект элемента \- значение элемента"
-   3. Для отрисовки графика вызываем метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data **)**, в который передаем время и словарь элементов.
+   3. Для отрисовки графика вызываем метод [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData))**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) data **)**, в который передаем время и словарь элементов.
 
    Результат работы программы представлен на рисунке выше. 
 

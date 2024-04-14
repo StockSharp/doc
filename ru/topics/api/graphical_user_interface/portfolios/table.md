@@ -6,8 +6,7 @@
 
 **Основные свойства**
 
-- [PortfolioGrid.Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) \- список портфелей.
-- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) \- список позиций.
+- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) \- список портфелей и позиций.
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) \- выбранная позиция.
 - [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- выбранные позиции.
 
@@ -30,8 +29,7 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	.........................................................				
-	_connector.NewPortfolio += portfolio => _portfoliosWindow.PortfolioGrid.Portfolios.Add(portfolio);
-	_connector.NewPosition += position => _portfoliosWindow.PortfolioGrid.Positions.Add(position);
+	_connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 	.........................................................
 }
 	  				

@@ -12,7 +12,7 @@ Chart.AddElement(chartArea, _annotation);
 		
 ```
 
-После чего необходимо инициализировать новый экземпляр класса [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), в котором описать аннотацию и передать его в метод [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data **)** для прорисовки на графике:
+После чего необходимо инициализировать новый экземпляр класса [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData), в котором описать аннотацию и передать его в метод [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData))**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) data **)** для прорисовки на графике:
 
 ```cs
 var data = new ChartDrawData.AnnotationData

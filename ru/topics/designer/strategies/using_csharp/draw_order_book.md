@@ -27,14 +27,14 @@ bookSubscription
 	.Do(book =>
 	{
 		// drawing order book
-		Draw(bookSubscription, book, _bookSource);
+		DrawOrderBook(bookSubscription, _bookSource, book);
 	})
 	.Apply(this);
 			
 Subscribe(bookSubscription);
 ```
 
-В обработчике Do делается вызов метода [Draw](xref:StockSharp.Algo.Strategies.Strategy.Draw), который отправляет стакан на отрисовку.
+В обработчике Do делается вызов метода [DrawOrderBook](xref:StockSharp.Algo.Strategies.Strategy.DrawOrderBook(StockSharp.Algo.Subscription,StockSharp.Algo.Strategies.IOrderBookSource,StockSharp.Messages.IOrderBookMessage)), который отправляет стакан на отрисовку.
 
 4. Добавить панель [Стакана](../../user_interface/components/order_book.md) и выбрать созданный в коде источник:
 

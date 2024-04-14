@@ -6,8 +6,7 @@
 
 **Main properties**
 
-- [PortfolioGrid.Portfolios](xref:StockSharp.Xaml.PortfolioGrid.Portfolios) – the list of portfolios.
-- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions.
+- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions and portfolios.
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
 - [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
 
@@ -30,8 +29,7 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	.........................................................				
-	_connector.NewPortfolio += portfolio => _portfoliosWindow.PortfolioGrid.Portfolios.Add(portfolio);
-	_connector.NewPosition += position => _portfoliosWindow.PortfolioGrid.Positions.Add(position);
+	_connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 	.........................................................
 }
 	  				

@@ -9,7 +9,7 @@
 **Основные свойства**
 
 - [IndexEditor.Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- все доступные инструменты.
-- [IndexEditor.Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- математическая формула индекса.
+- [IndexEditor.Text](xref:StockSharp.Xaml.IndexEditor.Text) \- математическая формула индекса.
 
 Для использования [IndexEditor](xref:StockSharp.Xaml.IndexEditor) предварительно необходимо зарегистрировать специальную службу:
 

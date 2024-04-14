@@ -1,74 +1,70 @@
 # Charts
 
-[S\#](../../api.md) provides convenient components for charts plotting. These components are assembled in the [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) namespace. 
+[S#](../../api.md) provides convenient components for charting. These components are gathered in the namespace [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting).
 
-The key concept in the graphical library is a *chart*. *Chart* \- is a container for other elements, which are used in the chart plotting. There are several types of *charts* in [S\#](../../api.md). 
+The key concept in the graphics library is the notion of a *chart*. A *chart* is a container for other elements that are used in constructing charts. There are several types of *charts* in [S#](../../api.md):
 
-- [Chart](xref:StockSharp.Xaml.Charting.Chart) \- the graphical component for displaying the exchange charts.
-- [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) \- the advanced graphical component for displaying the exchange charts.
-- [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- the graphical component for displaying the equity curve.
-- [BoxChart](charts/box_chart.md) \- the chart showing the volumes in a grid of numbers.
-- [ClusterChart](charts/cluster_chart.md) \- the chart showing the volumes in the form of clusters with bar charts.
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) \- the graphical component showing the positions and the options Greeks with regard to the underlying instrument. See [OptionPositionChart](options/position_chart.md).
+- [Chart](xref:StockSharp.Xaml.Charting.Chart) - A graphical component for displaying stock charts.
+- [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) - An advanced graphical component for displaying stock charts.
+- [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) - A graphical component for displaying equity curves.
+- [BoxChart](charts/box_chart.md) - A chart representing volumes as a grid of numbers.
+- [ClusterChart](charts/cluster_chart.md) - A chart displaying volumes as clusters with histograms.
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - A graphical component showing option positions and "Greeks" relative to the underlying asset. See [OptionPositionChart](options/position_chart.md).
 
-Besides that, [S\#](../../api.md) includes two types of charts for the volumes analysis: [BoxChart](charts/box_chart.md) and [ClusterChart](charts/cluster_chart.md). 
+Additionally, [S#](../../api.md) includes two types of charts for volume analysis: [BoxChart](charts/box_chart.md) and [ClusterChart](charts/cluster_chart.md).
 
-The following figure shows the basic elements of the graphical component. 
+The following figure shows the main elements of the graphical component.
 
 ![Gui ChartElements](../../../images/gui_chartelements.png)
 
-## Chart's elements
+## Graphical Component Elements
 
-## Chart
+## IChart
 
-[Chart](xref:StockSharp.Xaml.Charting.Chart) is the parent container for other elements of the graphical control. It contains methods for adding and removing the "child" elements, properties to customize the appearance of the component and the chart plotting method, as well as the method of charts drawing themselves. *Chart* can contain several areas ([ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)) to plot charts (see Figure). [Chart](xref:StockSharp.Xaml.Charting.Chart) also contains the preview area **OverView** (see Figure). In this area, it is possible to select the chart viewing area using the sliders. In addition, it is possible to scroll and zoom in the chart by means of dragging the [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) field, X axis and using the mouse wheel. 
+[IChart](xref:StockSharp.Charting.IChart) is the basic interface for all types of charts. It includes methods for adding and removing "child" elements, properties to customize the appearance and drawing methods of the component, as well as a method to draw the charts themselves. A *chart* can contain several areas ([IChartArea](xref:StockSharp.Charting.IChartArea)) for plotting (see figure). [Chart](xref:StockSharp.Xaml.Charting.Chart) also includes an *OverView* preview area (see figure). In this area, you can select the chart viewing zone using sliders. Additionally, you can scroll and zoom the chart using the dragging of the [IChartArea](xref:StockSharp.Charting.IChartArea), the X-axis, and the mouse wheel.
 
-**The [Chart](xref:StockSharp.Xaml.Charting.Chart) basic properties and methods:**
+**Key Properties and Methods of [IChart](xref:StockSharp.Charting.IChart)**
 
-- [Chart.Areas](xref:StockSharp.Xaml.Charting.Chart.Areas) \- the list of the [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [Chart.ChartTheme](xref:StockSharp.Xaml.Charting.Chart.ChartTheme) \- the component theme.
-- [Chart.IndicatorTypes](xref:StockSharp.Xaml.Charting.Chart.IndicatorTypes) \- the list of indicators that can be displayed on the chart.
-- [Chart.CrossHair](xref:StockSharp.Xaml.Charting.Chart.CrossHair) \- to enable\/disable the crosshair.
-- [Chart.CrossHairAxisLabels](xref:StockSharp.Xaml.Charting.Chart.CrossHairAxisLabels) \- to enable\/disable the crosshair marks on the axes.
-- [Chart.IsAutoRange](xref:StockSharp.Xaml.Charting.Chart.IsAutoRange) \- to enable\/disable the X axis automatic scaling.
-- [Chart.IsAutoScroll](xref:StockSharp.Xaml.Charting.Chart.IsAutoScroll) \- to enable\/disable the auto scroll on the X axis.
-- [Chart.ShowLegend](xref:StockSharp.Xaml.Charting.Chart.ShowLegend) \- to enable\/disable the legend display.
-- [Chart.ShowOverview](xref:StockSharp.Xaml.Charting.Chart.ShowOverview) \- to enable\/disable the *OverView* preview area display.
-- [IChart.AddArea](xref:StockSharp.Xaml.Charting.IChart.AddArea(StockSharp.Xaml.Charting.ChartArea))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area **)** \- to add [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea).
-- [IChart.AddElement](xref:StockSharp.Xaml.Charting.IChart.AddElement(StockSharp.Xaml.Charting.ChartArea,StockSharp.Xaml.Charting.IChartElement))**(**[StockSharp.Xaml.Charting.ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) area, [StockSharp.Xaml.Charting.IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) element **)** \- to add an item of the data series. It has several overloads.
-- [Chart.Reset](xref:StockSharp.Xaml.Charting.Chart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Xaml.Charting.IChartElement}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.Xaml.Charting.IChartElement\>](xref:System.Collections.Generic.IEnumerable`1) elements **)** \- to “reset" the values drawn before.
-- [IChart.Draw](xref:StockSharp.Xaml.Charting.IChart.Draw(StockSharp.Xaml.Charting.ChartDrawData))**(**[StockSharp.Xaml.Charting.ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData) data **)** \- to draw the value on the chart.
-- [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) \- The order creation mode, when set, allows you to create orders from the chart. Disabled by default.
+- [IChart.Areas](xref:StockSharp.Charting.IChart.Areas) - List of [IChartArea](xref:StockSharp.Charting.IChartArea) areas.
+- [IThemeableChart.ChartTheme](xref:StockSharp.Charting.IThemeableChart.ChartTheme) - Theme of the component.
+- [IChart.IndicatorTypes](xref:StockSharp.Charting.IChart.IndicatorTypes) - List of indicators that can be displayed on the chart.
+- [IChart.CrossHair](xref:StockSharp.Charting.IChart.CrossHair) - Enable/disable the display of crosshairs.
+- [IChart.CrossHairAxisLabels](xref:StockSharp.Charting.IChart.CrossHairAxisLabels) - Enable/disable the display of axis labels at crosshairs.
+- [IChart.IsAutoRange](xref:StockSharp.Charting.IChart.IsAutoRange) - Enable/disable automatic X-axis scaling.
+- [IChart.IsAutoScroll](xref:StockSharp.Charting.IChart.IsAutoScroll) - Enable/disable auto-scrolling on the X-axis.
+- [IChart.ShowLegend](xref:StockSharp.Charting.IChart.ShowLegend) - Enable/disable the display of the legend.
+- [IChart.ShowOverview](xref:StockSharp.Charting.IChart.ShowOverview) - Enable/disable the display of the *OverView* preview area.
+- [IChart.AddArea](xref:StockSharp.Charting.IChart.AddArea(StockSharp.Charting.IChartArea)) - Add an [IChartArea](xref:StockSharp.Charting.IChartArea).
+- [IChart.AddElement](xref:StockSharp.Charting.IChart.AddElement(StockSharp.Charting.IChartArea, StockSharp.Charting.IChartElement)) - Add a data series element. Has several overloads.
+- [IChart.Reset](xref:StockSharp.Charting.IChart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Charting.IChartElement})) - "Reset" previously drawn values.
+- [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData)) - Draw a value on the chart.
+- [IChart.OrderCreationMode](xref:StockSharp.Charting.IChart.OrderCreationMode) - Order creation mode, when set allows creating orders from the chart. Default is off.
 
-## ChartArea
+## IChartArea
 
-[ChartArea](xref:StockSharp.Xaml.Charting.ChartArea) \- the plotting area, it is a container for the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) elements (indicators, candles, etc.), which are drawn on the chart and chart axes ([ChartAxis](xref:StockSharp.Xaml.Charting.ChartAxis)). 
+[IChartArea](xref:StockSharp.Charting.IChartArea) - A chart plotting area, acts as a container for [IChartElement](xref:StockSharp.Charting.IChartElement) (indicators, candles, etc.) that are rendered on the chart, and chart axes ([IChartAxis](xref:StockSharp.Charting.IChartAxis)).
 
-**The [ChartArea](xref:StockSharp.Xaml.Charting.ChartArea)** basic properties: 
+**Key Properties of [IChartArea](xref:StockSharp.Charting.IChartArea)**
 
-- [ChartArea.Elements](xref:StockSharp.Xaml.Charting.ChartArea.Elements) \- the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) elements list.
-- [ChartArea.XAxises](xref:StockSharp.Xaml.Charting.ChartArea.XAxises) \- the list of the horizontal axes.
-- [ChartArea.YAxises](xref:StockSharp.Xaml.Charting.ChartArea.YAxises) \- the list of the vertical axes.
+- [IChartArea.Elements](xref:StockSharp.Charting.IChartArea.Elements) - List of [IChartElement](xref:StockSharp.Charting.IChartElement).
+- [IChartArea.XAxises](xref:StockSharp.Charting.IChartArea.XAxises) - List of horizontal axes.
+- [IChartArea.YAxises](xref:StockSharp.Charting.IChartArea.YAxises) - List of vertical axes.
 
 ## IChartElement
 
-All the elements that are displayed in the chart must implement the [IChartElement](xref:StockSharp.Xaml.Charting.IChartElement) interface. [S\#](../../api.md) has the following classes that implement this interface: 
+All elements displayed on the chart must implement the [IChartElement](xref:StockSharp.Charting.IChartElement) interface. In [S#](../../api.md), the following classes implement this interface:
 
-- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) \- the element to display the candles.
-- [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) \- the element to display the indicators.
-- [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) \- the element to display the orders.
-- [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) \- the element to display the trades.
+- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - An element for displaying candles.
+- [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) - An element for displaying indicators.
+- [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - An element for displaying orders.
+- [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) - An element for displaying trades.
 
-The visual elements classes have several properties to customize the appearance of the chart. It is possible to set the color, the lines thickness and the elements style. For example, using the [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) property it is possible to change the appearance of the candle (candle or bar). With the [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle) property it is possible to set the indicator line style. So, to display the indicator as a histogram it is necessary to use the [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Xaml.Charting.ChartIndicatorDrawStyles.Histogram) value. Properties [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) and [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) allow to enable\/disable the markers display (see Figure) on the chart axes. 
+The classes of visual elements have several properties for adjusting the appearance of the chart. You can adjust colors, line thickness, and style of elements. For example, using the property [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle), you can change the appearance of the candle (candle or bar). Using the property [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle), you can set the style of the indicator line. To display the indicator as a histogram, use the value [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Xaml.Charting.ChartIndicatorDrawStyles.Histogram). The properties [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) and [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) allow turning on/off the display of markers (see figure) on the axes of the chart.
 
-## Recommended content
+## See also
 
-[Candle chart](charts/candle_chart.md)
-
-[Candle chart panel](charts/candle_chart_panel.md)
-
-[Equity curve chart](charts/equity_curve_chart.md)
-
-[Box chart](charts/box_chart.md)
-
-[Cluster chart](charts/cluster_chart.md)
+- [Candlestick chart](charts/candle_chart.md)
+- [Chart panel](charts/candle_chart_panel.md)
+- [Equity curve chart](charts/equity_curve_chart.md)
+- [Box charts](charts/box_chart.md)
+- [Clusters](charts/cluster_chart.md)

@@ -19,7 +19,7 @@ if (bestAsk != null)
 }
 ```
 
-Or use the ready-made extension methods [GetBestBid](xref:StockSharp.Messages.Extensions.GetBestBid) and [GetBestAsk](xref:StockSharp.Messages.Extensions.GetBestBid):
+Or use the ready-made extension methods [GetBestBid](xref:StockSharp.Messages.Extensions.GetBestBid(StockSharp.Messages.IOrderBookMessage)) and [GetBestAsk](xref:StockSharp.Messages.Extensions.GetBestAsk(StockSharp.Messages.IOrderBookMessage)):
 
 ```cs
 var bestBid = orderBook.GetBestBid();

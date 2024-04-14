@@ -9,7 +9,7 @@
 **Basic properties**
 
 - [IndexEditor.Securities](xref:StockSharp.Xaml.IndexEditor.Securities) \- all available securities.
-- [IndexEditor.Formula](xref:StockSharp.Xaml.IndexEditor.Formula) \- mathematical formula of the index.
+- [IndexEditor.Text](xref:StockSharp.Xaml.IndexEditor.Text) \- mathematical formula of the index.
 
 To use [IndexEditor](xref:StockSharp.Xaml.IndexEditor), first you need to register a special service:
 

@@ -9,7 +9,7 @@ Advantages of a grouped order book:
 
 ## Implementation of a grouped order book:
 
-To work with a grouped order book, it's necessary to first set up reception through [subscriptions](subscriptions.md), and then call the extension method [Group](xref:StockSharp.Messages.Extensions.Group):
+To work with a grouped order book, it's necessary to first set up reception through [subscriptions](subscriptions.md), and then call the extension method [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
 
 ```cs
 // Grouping order book data with a price aggregation step, for example, 0.5 units of price
@@ -19,4 +19,4 @@ var groupedDepth = orderBook.Group(0.5);
 // by price levels with the specified aggregation step.
 ```
 
-The [Group](xref:StockSharp.Messages.Extensions.Group) method allows for the aggregation of orders in the book over larger price levels, simplifying visual market analysis and helping to identify the main levels of demand and supply without the need to analyze every individual price change.
+The [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)) method allows for the aggregation of orders in the book over larger price levels, simplifying visual market analysis and helping to identify the main levels of demand and supply without the need to analyze every individual price change.

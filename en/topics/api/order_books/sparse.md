@@ -12,7 +12,7 @@ Using a sparse order book has several advantages:
 
 ## Creating a Sparse Order Book
 
-To work with a grouped order book, you first need to set up reception through [subscriptions](subscriptions.md), and then call the extension method [Sparse](xref:StockSharp.Messages.Extensions.Sparse). The method takes the following parameters:
+To work with a grouped order book, you first need to set up reception through [subscriptions](subscriptions.md), and then call the extension method [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal})). The method takes the following parameters:
 
 - `priceRange` - the price difference up to which levels need to be expanded.
 - `priceStep` - the trading instrument's price step. It is used in case `priceRange` has a lower precision on price levels than `priceStep`, and it is necessary to round the obtained prices to the instrument's price step.
@@ -25,4 +25,4 @@ var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 // where all possible price levels are considered, including those without any orders.
 ```
 
-In this example, [Sparse](xref:StockSharp.Messages.Extensions.Sparse) is used to create a sparse order book, which allows for displaying all price levels, even those without any active orders. This can be useful for analyzing potential "empty" levels that may serve as support or resistance levels.
+In this example, [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal})) is used to create a sparse order book, which allows for displaying all price levels, even those without any active orders. This can be useful for analyzing potential "empty" levels that may serve as support or resistance levels.

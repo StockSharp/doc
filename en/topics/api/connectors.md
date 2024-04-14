@@ -77,8 +77,8 @@ private void InitConnector()
 	Connector.NewStopOrder += _stopOrdersWindow.OrderGrid.Orders.Add;
 	Connector.NewMyTrade += _myTradesWindow.TradeGrid.Trades.Add;
 	
-	Connector.NewPortfolio += _portfoliosWindow.PortfolioGrid.Portfolios.Add;
-	Connector.NewPosition += _portfoliosWindow.PortfolioGrid.Positions.Add;
+	Connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(p);
+
 	// subscribe on error of order registration event
 	Connector.OrderRegisterFailed += _ordersWindow.OrderGrid.AddRegistrationFail;
 	// subscribe on error of order cancelling event

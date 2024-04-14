@@ -44,8 +44,7 @@ To emulate the trading on real data it is necessary to use [RealTimeEmulationTra
    });
    _connector.NewMarketDepth += OnDepth;
    _connector.MarketDepthChanged += OnDepth;
-   _connector.NewPortfolio += PortfolioGrid.Portfolios.Add;
-   _connector.NewPosition += PortfolioGrid.Positions.Add;
+   _connector.PositionReceived += (sub, p) => PortfolioGrid.Positions.TryAdd(p);
    _connector.NewOrder += OrderGrid.Orders.Add;
    _connector.NewMyTrade += TradeGrid.Trades.Add;
    // subscribe on error of order registration event

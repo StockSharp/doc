@@ -27,14 +27,14 @@ bookSubscription
 	.Do(book =>
 	{
 		// drawing order book
-		Draw(bookSubscription, book, _bookSource);
+		DrawOrderBook(bookSubscription, _bookSource, book);
 	})
 	.Apply(this);
 			
 Subscribe(bookSubscription);
 ```
 
-In the Do handler, a call is made to the [Draw](xref:StockSharp.Algo.Strategies.Strategy.Draw) method, which sends the order book for drawing.
+In the Do handler, a call is made to the [DrawOrderBook](xref:StockSharp.Algo.Strategies.Strategy.DrawOrderBook(StockSharp.Algo.Subscription,StockSharp.Algo.Strategies.IOrderBookSource,StockSharp.Messages.IOrderBookMessage)) method, which sends the order book for drawing.
 
 4. Add the [Order Book](../../user_interface/components/order_book.md) panel and select the source created in code:
 
