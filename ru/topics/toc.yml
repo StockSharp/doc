@@ -105,8 +105,6 @@
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
           - name: Сделки стратегии
             href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
-          - name: Сделки по заявке
-            href: designer/strategies/using_visual_designer/elements/common/trades_by_order.md
         - name: Источники данных
           items:
           - name: Свечи
