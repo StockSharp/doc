@@ -1,4 +1,4 @@
-# Gluing candles, history + real\-time
+# Merging candles, history + real\-time
 
 In order to glue historical candles with a real\-time, it is necessary to initialize the corresponding storage of trade objects [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), storage of market data [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) and registry of snapshot storage [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry). 
 

@@ -1451,7 +1451,7 @@
       href: api/candles/patterns.md
     - name: Custom type of candle
       href: api/candles/custom_type_of_candle.md
-    - name: Gluing candles, history + real-time
+    - name: Merging candles, history + real-time
       href: api/candles/gluing_candles_history_real_time.md
     - name: Candle creation by the instruments basket
       href: api/candles/candle_creation_by_the_instruments_basket.md
