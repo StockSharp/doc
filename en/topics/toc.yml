@@ -93,12 +93,8 @@
             href: designer/strategies/using_visual_designer/elements/common/formula.md
           - name: Combination
             href: designer/strategies/using_visual_designer/elements/common/combination.md
-          - name: Position
-            href: designer/strategies/using_visual_designer/elements/common/position.md
           - name: Prev value
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
-          - name: Protect position
-            href: designer/strategies/using_visual_designer/elements/common/protect_position.md
           - name: Random
             href: designer/strategies/using_visual_designer/elements/common/random.md
           - name: P&L strategy
@@ -125,16 +121,22 @@
             href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
           - name: Current time
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
-        - name: Trading
+        - name: Positions
+          items:
+          - name: Current position
+            href: designer/strategies/using_visual_designer/elements/positions/current.md
+          - name: Protect position
+            href: designer/strategies/using_visual_designer/elements/positions/protect.md
+        - name: Orders
           items:
           - name: Register order
-            href: designer/strategies/using_visual_designer/elements/trading/register_order.md
+            href: designer/strategies/using_visual_designer/elements/order/register.md
           - name: Cancel order
-            href: designer/strategies/using_visual_designer/elements/trading/cancel_order.md
+            href: designer/strategies/using_visual_designer/elements/order/cancel.md
           - name: Modify order
-            href: designer/strategies/using_visual_designer/elements/trading/modify_order.md
+            href: designer/strategies/using_visual_designer/elements/order/modify.md
           - name: Mass cancel orders
-            href: designer/strategies/using_visual_designer/elements/trading/mass_cancel_orders.md
+            href: designer/strategies/using_visual_designer/elements/order/mass_cancel.md
         - name: Converters
           items:
           - name: Indexer
