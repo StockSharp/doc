@@ -8,8 +8,8 @@ An element is used to compare two input objects.
 
 Incoming sockets
 
-- **Comparison** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
-- **Comparison** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
+- **Value 1** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
+- **Value 2** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
 
 ### Outgoing sockets
 
