@@ -1,4 +1,4 @@
-# Позиция
+# Текущая позиция
 
 ![Designer Position 00](../../../../../../images/designer_position_00.png)
 
@@ -25,4 +25,4 @@
 
 ## См. также
 
-[Предыдущее значение](prev_value.md)
+[Защита позиции](protect.md)

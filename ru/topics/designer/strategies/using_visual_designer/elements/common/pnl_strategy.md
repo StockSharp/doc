@@ -14,4 +14,4 @@
 
 ## См. также
 
-[Уведомление](../notifying/notification.md)
+[Предыдущее значение](prev_value.md)

@@ -33,8 +33,4 @@ Take and Stop Parameters
 ![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> Incoming transactions CANNOT be transactions of the entire strategy (the [Strategy Transactions](trades_by_strategy.md) block) as this will lead to incorrect calculation of the current position because the protection transactions are also strategy transactions. Transactions from orders that change the position should be fed into the Position Protection block.
-
-## See Also
-
-[Random Value](random.md)
+> Incoming transactions CANNOT be transactions of the entire strategy (the [Strategy Trades](../common/trades_by_strategy.md) block) as this will lead to incorrect calculation of the current position because the protection transactions are also strategy transactions. Transactions from orders that change the position should be fed into the Position Protection block.

@@ -45,4 +45,4 @@
 
 ## См. также
 
-[Стакан](../market_depths/order_book.md)
+[Индикатор](indicator.md)

@@ -25,4 +25,4 @@ Parameters
 
 ## Recommended content
 
-[Protect position](protect_position.md)
+[Random](random.md)

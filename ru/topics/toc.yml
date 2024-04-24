@@ -93,12 +93,8 @@
             href: designer/strategies/using_visual_designer/elements/common/formula.md
           - name: Объединение
             href: designer/strategies/using_visual_designer/elements/common/combination.md
-          - name: Позиция
-            href: designer/strategies/using_visual_designer/elements/common/position.md
           - name: Предыдущее значение
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
-          - name: Защита позиции
-            href: designer/strategies/using_visual_designer/elements/common/protect_position.md
           - name: Произвольно
             href: designer/strategies/using_visual_designer/elements/common/random.md
           - name: Изменение П/У
@@ -125,16 +121,22 @@
             href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
           - name: Текущее время
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
-        - name: Торговые
+        - name: Позиции
+          items:
+          - name: Текущая позиция
+            href: designer/strategies/using_visual_designer/elements/positions/current.md
+          - name: Защита позиции
+            href: designer/strategies/using_visual_designer/elements/positions/protect.md
+        - name: Заявки
           items:
           - name: Регистрация заявки
-            href: designer/strategies/using_visual_designer/elements/trading/register_order.md
+            href: designer/strategies/using_visual_designer/elements/orders/register.md
           - name: Отмена заявки
-            href: designer/strategies/using_visual_designer/elements/trading/cancel_order.md
+            href: designer/strategies/using_visual_designer/elements/orders/cancel.md
           - name: Перемещение заявки
-            href: designer/strategies/using_visual_designer/elements/trading/modify_order.md
+            href: designer/strategies/using_visual_designer/elements/orders/modify.md
           - name: Массовая отмена заявок
-            href: designer/strategies/using_visual_designer/elements/trading/mass_cancel_orders.md
+            href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
         - name: Конвертеры
           items:
           - name: Индексатор

@@ -45,4 +45,4 @@ Together with the standard mathematical operators, you can use the following fun
 
 ## Recommended content
 
-[Order book](../market_depths/order_book.md)
+[Indicator](indicator.md)

@@ -26,4 +26,4 @@ Parameters
 
 ## See Also
 
-[Order Registration](register_order.md)
+[Order Registration](register.md)

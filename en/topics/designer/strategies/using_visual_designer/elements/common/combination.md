@@ -24,4 +24,4 @@ Parameters
 
 ## Recommended content
 
-[Position](position.md)
+[Comparison](comparison.md)

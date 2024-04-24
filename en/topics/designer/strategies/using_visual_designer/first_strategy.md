@@ -51,7 +51,7 @@ If you need to use several instruments or portfolios in the strategy, then for e
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. To open a position, add two [Register order](elements/trading/register_order.md) cubes. The first cube is for the purchase by a market order. The following are passed to the input of this cube: the **Instrument**, the signal for opening a position from the Crossing Up intersection cube, the **Portfolio** and the volume of the order. The second cube is for sale by a market order. The following are passed to the input of this cube: the **Instrument**, the signal for opening a position from the Crossing Down intersection cube, the **Portfolio** and the volume of the order.
+10. To open a position, add two [Register order](elements/orders/register.md) cubes. The first cube is for the purchase by a market order. The following are passed to the input of this cube: the **Instrument**, the signal for opening a position from the Crossing Up intersection cube, the **Portfolio** and the volume of the order. The second cube is for sale by a market order. The following are passed to the input of this cube: the **Instrument**, the signal for opening a position from the Crossing Down intersection cube, the **Portfolio** and the volume of the order.
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
@@ -59,7 +59,7 @@ If you need to use several instruments or portfolios in the strategy, then for e
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-To control the position, you need to add the [Position](elements/common/position.md), cube to the input of which **Instrument** and **Portfolio** are passed.
+To control the position, you need to add the [Position](elements/positions/current.md), cube to the input of which **Instrument** and **Portfolio** are passed.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 
