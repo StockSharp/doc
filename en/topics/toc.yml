@@ -134,13 +134,13 @@
         - name: Orders
           items:
           - name: Register order
-            href: designer/strategies/using_visual_designer/elements/order/register.md
+            href: designer/strategies/using_visual_designer/elements/orders/register.md
           - name: Cancel order
-            href: designer/strategies/using_visual_designer/elements/order/cancel.md
+            href: designer/strategies/using_visual_designer/elements/orders/cancel.md
           - name: Modify order
-            href: designer/strategies/using_visual_designer/elements/order/modify.md
+            href: designer/strategies/using_visual_designer/elements/orders/modify.md
           - name: Mass cancel orders
-            href: designer/strategies/using_visual_designer/elements/order/mass_cancel.md
+            href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
         - name: Converters
           items:
           - name: Indexer
