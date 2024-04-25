@@ -8,14 +8,14 @@ The cube is used to store values, pass the previously stored value further along
 
 Incoming sockets
 
-- **Any data** \- the value of the selected type, which will be stored instead of the default value.
-- **Trigger** – the signal that determines the point at which it is necessary to pass the stored value through the output socket.
+- **Any data** – the value of the selected type, which will be stored instead of the default value.
+- **Trigger** – the signal (any value except `False`) that determines the point at which it is necessary to pass the stored value through the output socket.
 
 ### Outgoing sockets
 
 Outgoing sockets
 
-- **Any data** \- the value of the selected type of passed data.
+- **Any data** – the value of the selected type of passed data.
 
 ### Parameters
 

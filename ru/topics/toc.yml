@@ -97,6 +97,8 @@
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
           - name: Произвольно
             href: designer/strategies/using_visual_designer/elements/common/random.md
+          - name: Флаг
+            href: designer/strategies/using_visual_designer/elements/common/flag.md
           - name: Изменение П/У
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
           - name: Сделки стратегии
@@ -123,6 +125,8 @@
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
         - name: Позиции
           items:
+          - name: Изменить позицию
+            href: designer/strategies/using_visual_designer/elements/positions/modify.md
           - name: Текущая позиция
             href: designer/strategies/using_visual_designer/elements/positions/current.md
           - name: Защита позиции

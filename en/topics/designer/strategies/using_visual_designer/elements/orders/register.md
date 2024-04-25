@@ -2,61 +2,61 @@
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 
-This block is used for placing an order for an instrument.
+The "Order Registration" component is used for placing trading orders for a selected instrument.
 
-### Incoming Sockets
+## Input Sockets
 
-Incoming Sockets
+- **Instrument** – The selected instrument for the order.
+- **Price** – Specifies the price for a limit order.
+- **Trigger** – Activation signal for the order, accepts any value except `False`.
+- **Volume** – The quantity of instruments for the order.
+- **Portfolio** – The portfolio within which the order will be placed.
 
-- **Security** – the instrument for which an order needs to be placed.
-- **Price** – the numerical price value if placing a non-market order.
-- **Trigger** - the signal that determines when to place an order.
-- **Volume** – the numerical volume value.
-- **Portfolio** – the portfolio for which an order needs to be placed.
+## Output Sockets
 
-### Outgoing Sockets
+- **Order** – Information about the placed order.
+- **Error** – Information about any error during order registration.
+- **Transaction** – Information about the transaction made on the order.
+- **Cancellation** – Signal that the order has been cancelled.
+- **Executed** – Signal that the order has been fully executed.
+- **Completed** – Signal that combines events of error, cancellation, or full execution of the order.
 
-Outgoing Sockets
+## Parameters
 
-- **Order** – the placed order, which can be used to obtain trades for it using the **Transactions by Order** element and for display on the chart using the **Chart Panel** block.
-- **Error** – an error in placing the order.
-- **Trade** – the trade for the placed order.
+- **Direction** – Determines whether the order is for buying or selling.
+- **Market Order** – Indicates whether the order is a market order.
+- **Zero Price** – If the price is set to zero, the order is registered as a market order.
+- **Lifetime** – The duration for which a limit order remains active.
 
-### Parameters
+## Conditional Order Setup
 
-Parameters
-
-- **Direction** – the direction of the order (buy or sell), acts as a signal for placing the order.
-- **Market** – indicates a market order.
-- **Position Condition** – an additional condition checking the possibility of placing an order. For example, under the condition **Close Position**, placing orders that increase the position is prohibited.
-- **Zero Price** – a zero price registers a market order.
-- **Lifetime** – the lifetime of a limit order.
-
-## Conditional Order Settings
-
-**Conditional Order** — an order with additional conditions that determine the moment of placement in the trading system depending on the current market situation.
+**Conditional Order** – An order with additional conditions determining the timing of placement in the trading system based on the current market situation.
 
 ![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
 
-- **Connection** \- the connection where the order will be registered.
-- **Stop\-order type** \- the stop\-order type.
-- **Result** \- the result of the stop order execution.
-- **Security ID** \- the instrument ID for s stop\-orders with a condition for another instrument.
-- **Stop price condition** \- the stop\-price condition. Used for orders such as "Stop\-price for another security".
-- **Stop\-price** \- the stop\-price that sets the condition for the stop\-order to trigger.
-- **Stop\-limit price** \- the stop\-limit price. It is similar to the stop\-price, but it is used only for the order type "Take\-profit and Stop\-limit".
-- **Stop\-limit at market price** \- the attribute of execution of the "Stop\-limit" order at the market price.
-- **Conditions checking interval** \- time for order conditions checking only for a specified time period (if the value is null, then do not check). It is used for orders of the types "Take\-profit and stop\-limit" and "Take\-profit and stop\-limit on order".
-- **On execution conditional order ID** \- the ID of the conditional order on execution.
-- **On filled conditional order direction** \- the direction of the conditional order on execution.
-- **Activation in case of partial execution** \- a partial execution of the order is taken into account. The "on execution" order will be activated when the order\-condition is partially executed.
-- **Filled volume** \- to take the executed volume of the order as the amount of the registered stop\-order. As the number of securities in the "on execution" order the executed volume of the order\-condition is accepted.
-- **Price of linked order** \- the price of the linked limited order.
-- **Cancellation when partially filled** \- the attribute of the stop\-order cancellation in case of partial execution of the linked limited order.
-- **Offset from maximum** \- the amount of an offset from the maximum (minimum) of the last trade price.
-- **Protection spread** \- the amount of the protection spread.
-- **Take\-profit at market price** \- the attribute of execution of the "Take\-profit" order at the market price.
+- **Connection** – The connection where the order will be placed.
+- **Stop Order Type** – The type of stop order.
+- **Result** – The outcome of the executed stop order.
+- **Instrument Identifier** – The identifier for the instrument for stop orders with conditions related to another instrument.
+- **Stop Price Condition** – The stop price condition. Used for orders like "Stop price by another paper."
+- **Stop Price** – The stop price that sets the condition for triggering the stop order.
+- **Stop-Limit Price** – Similar to the Stop Price but used only for "Take-profit and stop-limit" type orders.
+- **Stop-Limit at Market Price** – Indicates if the "Stop-Limit" order executes at the market price.
+- **Condition Check Interval** – The time interval for checking the conditions of the order only within the specified period (if null, then no checks). Used for "Take-profit and stop-limit" and "Take-profit and stop-limit by order" types.
+- **Conditional Order Execution Identifier** – The identifier for the conditional order based on execution.
+- **Direction of Conditional Order by Execution** – The direction of the conditional order based on execution.
+- **Activation on Partial Execution** – Partial execution of the order is considered. An "on-execution" order will be activated upon partial execution of the condition order.
+- **Executed Volume** – Takes the executed volume of the order as the quantity for placing the stop order. The quantity of securities in an "on-execution" order is taken as the executed volume of the condition order.
+- **Price of Linked Order** – The price of the linked limit order.
+- **Withdrawal on Partial Execution** – Indicates the withdrawal of the stop order upon partial execution of the linked limit order.
+- **Offset from Maximum** – The amount of offset from the maximum (minimum) price of the last transaction.
+- **Protective Spread** – The size of the protective spread.
+- **Take-Profit at Market Price** – Indicates if the "Take-Profit" order executes at the market price.
 
-## Recommended content
+## Note
 
-[Order Movement](modify.md)
+Working with orders is a low-level method of managing positions. For higher-level management, it is recommended to use the "Modify Position" component, described in [Modify Position](../positions/modify.md).
+
+## See Also
+
+[Modify Position](../positions/modify.md)

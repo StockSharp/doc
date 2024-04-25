@@ -8,7 +8,7 @@ This block is used to generate a random value.
 
 Incoming Sockets
 
-- **Trigger** � the signal that determines the moment when it is necessary to pass a generated random value through the outgoing socket.
+- **Trigger** - the signal (any value except `False`) that determines the moment when it is necessary to pass a generated random value through the outgoing socket.
 
 ### Outgoing Sockets
 
