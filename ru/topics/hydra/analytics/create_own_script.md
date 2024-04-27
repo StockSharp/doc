@@ -57,11 +57,11 @@ namespace StockSharp.Algo.Analytics
 
 ## Интерфейс `IAnalyticsScript`
 
-Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run), который является необходимым для выполнения аналитических операций скрипта.
+Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)), который является необходимым для выполнения аналитических операций скрипта.
 
 ### Метод `Run`
 
-Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run) является точкой входа аналитического скрипта, где выполняются фактические обработка данных и аналитические операции.
+Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняются фактические обработка данных и аналитические операции.
 
 #### Параметры:
 
@@ -87,7 +87,7 @@ namespace StockSharp.Algo.Analytics
 ### Основные этапы обработки:
 
 1. Проверить наличие инструментов для обработки. Если их нет, залогировать предупреждение и завершить задачу.
-2. Создать линейный график и гистограмму, используя метод [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart).
+2. Создать линейный график и гистограмму, используя метод [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2).
 3. Итерировать по каждому ценному бумагу и проверять запросы на отмену.
 4. Получить хранилище свечей, используя метод `storage.GetTimeFrameCandleMessageStorage`.
 5. Загрузить данные свечей в указанном диапазоне дат.

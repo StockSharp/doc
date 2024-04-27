@@ -53,7 +53,7 @@ namespace StockSharp.Algo.Analytics
 
 ## Overview
 
-This script is designed to draw charts based on the price and volume data of financial instruments over a specific time period. It implements the [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface, which defines a contract for any analytical script that can be executed in the **Hydra** program.
+This script is designed to draw charts based on the price and volume data of financial instruments over a specific time period. It implements the [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) interface, which defines a contract for any analytical script that can be executed in the **Hydra** program.
 
 ## `IAnalyticsScript` Interface
 
@@ -61,7 +61,7 @@ The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interfac
 
 ### `Run` Method
 
-The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
+The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
 
 #### Parameters:
 
@@ -87,7 +87,7 @@ The `ChartDrawScript` class specifically processes market data for each provided
 ### Main Processing Stages:
 
 1. Check for the presence of instruments to process. If none are available, log a warning and complete the task.
-2. Create a line chart and a histogram using the [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart) method.
+2. Create a line chart and a histogram using the [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2) method.
 3. Iterate through each security and check for cancellation requests.
 4. Get the candle storage using the `storage.GetTimeFrameCandleMessageStorage` method.
 5. Load candle data within the specified date range.

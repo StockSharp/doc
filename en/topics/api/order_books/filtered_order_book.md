@@ -14,7 +14,7 @@ The approach to working with the filtered order book uses the same method as [su
 
 1. **Subscribing to the order book update event:** [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) to receive order book updates. This event is used for both the regular and the filtered order book.
 
-    When processing the event, check the [Subscription.DataType](xref:StockSharp.Algo.SubscriptionBase.DataType) in the `subscription` object associated with the event. If [Subscription.DataType](xref:StockSharp.Algo.Subscription.DataType) is [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), it indicates that the received order book is filtered:
+    When processing the event, check the [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase.DataType) in the `subscription` object associated with the event. If [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase.DataType) is [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), it indicates that the received order book is filtered:
 
     ```cs
     connector.OrderBookReceived += (sender, subscription, orderBook) =>

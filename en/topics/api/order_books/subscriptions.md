@@ -20,7 +20,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 
 It's important to subscribe to the [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) event **before** sending a subscription request for the order book. This ensures that you won't miss any data if order books start arriving very quickly after the subscription request is sent.
 
-2. Send a subscription request using the [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe) method:
+2. Send a subscription request using the [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)) method:
 
 ```cs
 var security = GetSecurity(); // Get the Security object you want to subscribe to
@@ -35,7 +35,7 @@ connector.Subscribe(subscription);
 
 ## Unsubscribing from the Order Book
 
-To unsubscribe from the order book, call the [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe) method:
+To unsubscribe from the order book, call the [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe(StockSharp.Algo.Subscription)) method:
 
 ```cs
 connector.UnSubscribe(subscription);
