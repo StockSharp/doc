@@ -33,13 +33,9 @@ Some connectors must be pre\-configured. Below are links to pages with connector
 | Connectors                        | Connector settings                                                   | Graphical configuration                                                    |
 | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | [DukasCopy](../../api/connectors/forex/dukascopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](../../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md)         |
-| [FinViz](../../api/connectors/forex/finviz.md)               | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](../../api/connectors/forex/finviz/graphical_configuration_dukascopy.md)            |
 | [FXCM](../../api/connectors/forex/fxcm.md)                   | [Configuration FXCM](../../api/connectors/forex/fxcm/configuration_fxcm.md)                      | [Graphical configuration FXCM](../../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
-| [GAIN Capital](../../api/connectors/forex/gain_capital.md)    | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration GAIN Capital](../../api/connectors/forex/gain_capital/graphical_configuration_gain_capital.md)   |
 | [LMAX](../../api/connectors/forex/lmax.md)                   | [Configuration LMAX](../../api/connectors/forex/lmax/configuration_lmax.md)                      | [Graphical configuration LMAX](../../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
-| [MB Trading](../../api/connectors/forex/mb_trading.md)        | [Configuration MB Trading](../../api/connectors/forex/mb_trading/configuration_mb_trading.md)           | [Graphical configuration MB Trading](../../api/connectors/forex/mb_trading/graphical_configuration_mb_trading.md)        |
 | [Oanda](../../api/connectors/forex/oanda.md)                 | [Configuration Oanda](../../api/connectors/forex/oanda/configuration_oanda.md)                    | [Graphical configuration Oanda](../../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
-| [TrueFX](../../api/connectors/forex/truefx.md)               | [Configuration TrueFX](../../api/connectors/forex/truefx/configuration_truefx.md)                  | [Graphical configuration TrueFX](../../api/connectors/forex/truefx/graphical_configuration_truefx.md)               |
 
 ## Cryptocurrencies
 

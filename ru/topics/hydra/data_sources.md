@@ -58,13 +58,9 @@
 | Коннектор                         | Настройки коннектора                                                 | Графическое конфигурирование                                                    |
 | --------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | [DukasCopy](../api/connectors/forex/dukascopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование DukasCopy](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md)         |
-| [FinViz](../api/connectors/forex/finviz.md)               | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование FinViz](../api/connectors/forex/finviz/graphical_configuration_dukascopy.md)               |
 | [FXCM](../api/connectors/forex/fxcm.md)                   | [Настройки коннектора FXCM](../api/connectors/forex/fxcm/configuration_fxcm.md)               | [Графическое конфигурирование FXCM](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
-| [GAIN Capital](../api/connectors/forex/gain_capital.md)    | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование GAIN Capital](../api/connectors/forex/gain_capital/graphical_configuration_gain_capital.md)   |
 | [LMAX](../api/connectors/forex/lmax.md)                   | [Настройки коннектора LMAX](../api/connectors/forex/lmax/configuration_lmax.md)               | [Графическое конфигурирование LMAX](../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
-| [MB Trading](../api/connectors/forex/mb_trading.md)        | [Настройки коннектора MB Trading](../api/connectors/forex/mb_trading/configuration_mb_trading.md)    | [Графическое конфигурирование MB Trading](../api/connectors/forex/mb_trading/graphical_configuration_mb_trading.md)        |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Настройки коннектора Oanda](../api/connectors/forex/oanda/configuration_oanda.md)             | [Графическое конфигурирование Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
-| [TrueFX](../api/connectors/forex/truefx.md)               | [Настройки коннектора TrueFX](../api/connectors/forex/truefx/configuration_truefx.md)           | [Графическое конфигурирование TrueFX](../api/connectors/forex/truefx/graphical_configuration_truefx.md)               |
 
 ## Коннекторы Криптовалют
 

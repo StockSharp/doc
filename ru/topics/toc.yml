@@ -1025,13 +1025,6 @@
           href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
         - name: Инициализация адаптера DukasCopy
           href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
-      - name: FinViz
-        href: api/connectors/forex/finviz.md
-        items:
-        - name: Графическое конфигурирование FinViz
-          href: api/connectors/forex/finviz/graphical_configuration_dukascopy.md
-        - name: Инициализация адаптера FinViz
-          href: api/connectors/forex/finviz/adapter_initialization_dukascopy.md
       - name: FXCM
         href: api/connectors/forex/fxcm.md
         items:
@@ -1041,13 +1034,6 @@
           href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
         - name: Инициализация адаптера FXCM
           href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
-      - name: GAIN Capital
-        href: api/connectors/forex/gain_capital.md
-        items:
-        - name: Графическое конфигурирование GAIN Capital
-          href: api/connectors/forex/gain_capital/graphical_configuration_gain_capital.md
-        - name: Инициализация адаптера GAIN Capital
-          href: api/connectors/forex/gain_capital/adapter_initialization_gain_capital.md
       - name: LMAX
         href: api/connectors/forex/lmax.md
         items:
@@ -1057,15 +1043,6 @@
           href: api/connectors/forex/lmax/graphical_configuration_lmax.md
         - name: Инициализация адаптера LMAX
           href: api/connectors/forex/lmax/adapter_initialization_lmax.md
-      - name: MB Trading
-        href: api/connectors/forex/mb_trading.md
-        items:
-        - name: Настройки коннектора MB Trading
-          href: api/connectors/forex/mb_trading/configuration_mb_trading.md
-        - name: Графическое конфигурирование MB Trading
-          href: api/connectors/forex/mb_trading/graphical_configuration_mb_trading.md
-        - name: Инициализация адаптера MB Trading
-          href: api/connectors/forex/mb_trading/adapter_initialization_mb_trading.md
       - name: Oanda
         href: api/connectors/forex/oanda.md
         items:
@@ -1075,15 +1052,6 @@
           href: api/connectors/forex/oanda/graphical_configuration_oanda.md
         - name: Инициализация адаптера Oanda
           href: api/connectors/forex/oanda/adapter_initialization_oanda.md
-      - name: TrueFX
-        href: api/connectors/forex/truefx.md
-        items:
-        - name: Настройки коннектора TrueFX
-          href: api/connectors/forex/truefx/configuration_truefx.md
-        - name: Графическое конфигурирование TrueFX
-          href: api/connectors/forex/truefx/graphical_configuration_truefx.md
-        - name: Инициализация адаптера TrueFX
-          href: api/connectors/forex/truefx/adapter_initialization_truefx.md
     - name: Крипто биржи
       items:
       - name: Bibox
