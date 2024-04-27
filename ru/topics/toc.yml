@@ -18,6 +18,48 @@
 - name: Designer
   href: designer.md
   items:
+  - name: Видео
+    items:
+    - name: Начало работы
+      href: designer/videos/beginning.md
+    - name: Конструктор торговых стратегий
+      href: designer/videos/constructor.md
+    - name: Переменная Логика Математика
+      href: designer/videos/variable_math.md
+    - name: Отладчик торговых стратегий
+      href: designer/videos/debugger.md
+    - name: Защита позиций
+      href: designer/videos/protect_position.md
+    - name: Индикаторы и формулы
+      href: designer/videos/indicators_formula.md
+    - name: Болинджер и MACD
+      href: designer/videos/bollinger_macd.md
+    - name: Мульти таймфрейм
+      href: designer/videos/multi_timeframes.md
+    - name: Время
+      href: designer/videos/time.md
+    - name: Подключение Дизайнера к Гидре
+      href: designer/videos/connect_hydra.md
+    - name: Оптимизация торговых стратегий
+      href: designer/videos/optimization.md
+    - name: Подключение к торгам
+      href: designer/videos/live_trading.md
+    - name: Составные кубики
+      href: designer/videos/complex_elements.md
+    - name: Компрессия свечей из тиков
+      href: designer/videos/candles_build_ticks.md
+    - name: Флаг
+      href: designer/videos/flag.md
+    - name: Стратегия максимального объема
+      href: designer/videos/strategy_max_volume.md
+    - name: Биржевые индексы
+      href: designer/videos/financial_index.md
+    - name: Парный трейдинг
+      href: designer/videos/pair_trading.md
+    - name: Индексы и парный трейдинг
+      href: designer/videos/index_pair_trading.md 
+  - name: Материалы
+    href: designer/materials.md
   - name: Установка Designer
     href: designer/installing_designer.md
   - name: Обновление на новую версию

@@ -18,6 +18,48 @@
 - name: Designer
   href: designer.md
   items:
+  - name: Videos
+    items:
+      - name: Getting Started
+        href: designer/videos/beginning.md
+      - name: Trading Strategy Constructor
+        href: designer/videos/constructor.md
+      - name: Variable Logic Mathematics
+        href: designer/videos/variable_math.md
+      - name: Trading Strategy Debugger
+        href: designer/videos/debugger.md
+      - name: Protecting Positions
+        href: designer/videos/protect_position.md
+      - name: Indicators and Formulas
+        href: designer/videos/indicators_formula.md
+      - name: Bollinger Bands and MACD
+        href: designer/videos/bollinger_macd.md
+      - name: Multi Timeframe
+        href: designer/videos/multi_timeframes.md
+      - name: Time
+        href: designer/videos/time.md
+      - name: Connecting Designer to Hydra
+        href: designer/videos/connect_hydra.md
+      - name: Optimization of Trading Strategies
+        href: designer/videos/optimization.md
+      - name: Live Trading
+        href: designer/videos/live_trading.md
+      - name: Composite Cubes
+        href: designer/videos/complex_elements.md
+      - name: Compressing Candles from Ticks
+        href: designer/videos/candles_build_ticks.md
+      - name: Flag
+        href: designer/videos/flag.md
+      - name: Maximum Volume Strategy
+        href: designer/videos/strategy_max_volume.md
+      - name: Financial Indices
+        href: designer/videos/financial_index.md
+      - name: Pair Trading
+        href: designer/videos/pair_trading.md
+      - name: Indices and Pair Trading
+        href: designer/videos/index_pair_trading.md
+  - name: Resources for Learning
+    href: designer/materials.md
   - name: Installing Designer
     href: designer/installing_designer.md
   - name: Update to the new version
