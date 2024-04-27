@@ -53,11 +53,11 @@ namespace StockSharp.Algo.Analytics
 
 ## Overview
 
-This script is designed to draw charts based on the price and volume data of financial instruments over a specific time period. It implements the [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) interface, which defines a contract for any analytical script that can be executed in the **Hydra** program.
+This script is designed to draw charts based on the price and volume data of financial instruments over a specific time period. It implements the [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface, which defines a contract for any analytical script that can be executed in the **Hydra** program.
 
 ## `IAnalyticsScript` Interface
 
-The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run) method, which is necessary for performing the script's analytical operations.
+The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method, which is necessary for performing the script's analytical operations.
 
 ### `Run` Method
 

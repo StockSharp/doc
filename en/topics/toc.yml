@@ -1723,9 +1723,6 @@
     items:
     - name: Historical data
       href: api/testing/historical_data.md
-      items:
-      - name: Google Finance
-        href: api/testing/historical_data/google_finance.md
     - name: Optimization
       href: api/testing/optimization.md
     - name: Random data

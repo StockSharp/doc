@@ -37,7 +37,7 @@ The following figure shows the main elements of the graphical component.
 - [IChart.AddArea](xref:StockSharp.Charting.IChart.AddArea(StockSharp.Charting.IChartArea)) - Add an [IChartArea](xref:StockSharp.Charting.IChartArea).
 - [IChart.AddElement](xref:StockSharp.Charting.IChart.AddElement(StockSharp.Charting.IChartArea, StockSharp.Charting.IChartElement)) - Add a data series element. Has several overloads.
 - [IChart.Reset](xref:StockSharp.Charting.IChart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Charting.IChartElement})) - "Reset" previously drawn values.
-- [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData)) - Draw a value on the chart.
+- [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) - Draw a value on the chart.
 - [IChart.OrderCreationMode](xref:StockSharp.Charting.IChart.OrderCreationMode) - Order creation mode, when set allows creating orders from the chart. Default is off.
 
 ## IChartArea
@@ -59,7 +59,7 @@ All elements displayed on the chart must implement the [IChartElement](xref:Stoc
 - [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - An element for displaying orders.
 - [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) - An element for displaying trades.
 
-The classes of visual elements have several properties for adjusting the appearance of the chart. You can adjust colors, line thickness, and style of elements. For example, using the property [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle), you can change the appearance of the candle (candle or bar). Using the property [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle), you can set the style of the indicator line. To display the indicator as a histogram, use the value [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Xaml.Charting.ChartIndicatorDrawStyles.Histogram). The properties [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) and [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) allow turning on/off the display of markers (see figure) on the axes of the chart.
+The classes of visual elements have several properties for adjusting the appearance of the chart. You can adjust colors, line thickness, and style of elements. For example, using the property [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle), you can change the appearance of the candle (candle or bar). Using the property [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle), you can set the style of the indicator line. To display the indicator as a histogram, use the value [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Charting.ChartIndicatorDrawStyles.Histogram). The properties [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) and [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) allow turning on/off the display of markers (see figure) on the axes of the chart.
 
 ## See also
 

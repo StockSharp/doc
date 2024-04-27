@@ -9,7 +9,7 @@
    var someSecurity = _connector.Securities.First();
    Console.WriteLine(someSecurity.ShrinkPrice(13453.65342));
    ```
-2. Проверить, является ли текущее время торгуемым (не закончилась ли сессия, не начался ли клиринг) через метод [TraderHelper.IsTradeTime](xref:StockSharp.Algo.TraderHelper.IsTradeTime(StockSharp.Messages.WorkingTime,System.DateTimeOffset,System.Nullable{System.Boolean}@,StockSharp.Messages.WorkingTimePeriod@))**(**[StockSharp.Messages.WorkingTime](xref:StockSharp.Messages.WorkingTime) workingTime, [System.DateTimeOffset](xref:System.DateTimeOffset) time, [System.Nullable\<System.Boolean\>@](xref:System.Nullable`1) isWorkingDay, **out** [StockSharp.Messages.WorkingTimePeriod](xref:StockSharp.Messages.WorkingTimePeriod) period **)**: 
+2. Проверить, является ли текущее время торгуемым (не закончилась ли сессия, не начался ли клиринг) через метод [TraderHelper.IsTradeTime](xref:StockSharp.Algo.TraderHelper.IsTradeTime(StockSharp.BusinessEntities.ExchangeBoard,System.DateTimeOffset,System.Nullable{System.Boolean}@,StockSharp.Messages.WorkingTimePeriod@))**(**[StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard) board, [System.DateTimeOffset](xref:System.DateTimeOffset) time, [System.Nullable\<System.Boolean\>@](xref:System.Nullable`1) isWorkingDay, **out** [StockSharp.Messages.WorkingTimePeriod](xref:StockSharp.Messages.WorkingTimePeriod) period **)**: 
 
    ```cs
    // любой инструмент

@@ -1887,9 +1887,6 @@
     items:
     - name: На истории
       href: api/testing/historical_data.md
-      items:
-      - name: На истории с Финам
-        href: api/testing/historical_data/google_finance.md
     - name: На истории (оптимизация)
       href: api/testing/optimization.md
     - name: На случайных данных

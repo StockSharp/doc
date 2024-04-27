@@ -2,19 +2,18 @@
 
 Testing on market data is trading with a real connection to the exchange ("live" quotes), but without actual orders registering on the exchange. All the registered orders are intercepted, and their execution is emulated based on market order books. Such testing can be useful, for example, if trading simulator is developed. Or it is necessary to check the trading algorithm at short period of time with the real quotes. 
 
-To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" of the specific trading system connector ([OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md) etc.). Below is a description of an example of working with the emulator using the connection to [OpenECry](../connectors/stock_market/openecry.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
+To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" of the specific trading system connector ([Binance](../connectors/crypto_exchanges/binance.md), [Alpaca](../connectors/stock_market/alpaca.md) etc.). Below is a description of an example of working with the emulator using the connection to [Binance](../connectors/crypto_exchanges/binance.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
 
 ## Work with the trading emulator on real data
 
-1. Creating the [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
+1. Creating the [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [BinanceMessageAdapter](xref:StockSharp.Binance.BinanceMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
 
    ```cs
-   					_connector = new RealTimeEmulationTrader<SmartComMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
-   					{
-   						Login = Login.Text,
-   						Password = Password.Password.To<SecureString>(),
-   						Address = Address.SelectedAddress
-   					});
+   _connector = new RealTimeEmulationTrader<BinanceMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
+   {
+   	Key = Login.Text,
+   	Secret = Password.Password.To<SecureString>(),
+   });
    					  
    ```
 2. The created connector is used as a usual connector. In our case, subscribing to events, passing an information to the graphical components and establishing the connection. 

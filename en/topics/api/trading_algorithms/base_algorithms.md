@@ -9,7 +9,7 @@ Along with [Quoting](../strategies/quoting.md), the [S\#](../../api.md) contains
    var someSecurity = _connector.Securities.First();
    Console.WriteLine(someSecurity.ShrinkPrice(13453.65342));
    ```
-2. To check whether the current time traded (is session closed? is clearing started?) through the [TraderHelper.IsTradeTime](xref:StockSharp.Algo.TraderHelper.IsTradeTime(StockSharp.Messages.WorkingTime,System.DateTimeOffset,System.Nullable{System.Boolean}@,StockSharp.Messages.WorkingTimePeriod@))**(**[StockSharp.Messages.WorkingTime](xref:StockSharp.Messages.WorkingTime) workingTime, [System.DateTimeOffset](xref:System.DateTimeOffset) time, [System.Nullable\<System.Boolean\>@](xref:System.Nullable`1) isWorkingDay, **out** [StockSharp.Messages.WorkingTimePeriod](xref:StockSharp.Messages.WorkingTimePeriod) period **)** method: 
+2. To check whether the current time traded (is session closed? is clearing started?) through the [TraderHelper.IsTradeTime](xref:StockSharp.Algo.TraderHelper.IsTradeTime(StockSharp.BusinessEntities.ExchangeBoard,System.DateTimeOffset,System.Nullable{System.Boolean}@,StockSharp.Messages.WorkingTimePeriod@))**(**[StockSharp.BusinessEntities.ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard) board, [System.DateTimeOffset](xref:System.DateTimeOffset) time, [System.Nullable\<System.Boolean\>@](xref:System.Nullable`1) isWorkingDay, **out** [StockSharp.Messages.WorkingTimePeriod](xref:StockSharp.Messages.WorkingTimePeriod) period **)** method: 
 
    ```cs
    // the sample security

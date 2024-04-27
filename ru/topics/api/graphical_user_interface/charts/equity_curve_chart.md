@@ -52,7 +52,7 @@
    					<ColumnDefinition Width="*"/>
    				</Grid.ColumnDefinitions>
    				<sx:StatisticParameterGrid Grid.Column="0" x:Name="ParameterGrid" />
-   				<charting:EquityCurveChart Grid.Column="1" x:Name="Curve" />
+   				<charting:EquityCurveChart Grid.Column="1" x:Name="EquityCurveChart" />
    			</Grid>
    		</Grid>
    	</Grid>
@@ -62,29 +62,36 @@
 2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Charting.ChartIndicatorDrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [StockSharp.Charting.ChartIndicatorDrawStyles](xref:StockSharp.Charting.ChartIndicatorDrawStyles) style, [System.Guid](xref:System.Guid) id **)**. 
 
    ```cs
-   private readonly ICollection<EquityData> _curveItems;
+   private ChartBandElement _pnl;
+   private ChartBandElement _unrealizedPnL;
+   private ChartBandElement _commissionCurve;
+
    .................................................
                  		
    public MainWindow()
    {
    	InitializeComponent();
+
    	_logManager.Listeners.Add(new FileLogListener("log.txt"));
-   	_curveItems = Curve.CreateCurve("Equity", Colors.DarkGreen, ChartIndicatorDrawStyles.Line);
+
+	_pnl = (ChartBandElement)EquityCurveChart.CreateCurve("PNL", Colors.Green, ChartIndicatorDrawStyles.Area);
+	_unrealizedPnL = (ChartBandElement)EquityCurveChart.CreateCurve("unrealizedPnL", Colors.Black, ChartIndicatorDrawStyles.Line);
+	_commissionCurve = (ChartBandElement)EquityCurveChart.CreateCurve("commissionCurve", Colors.Red, ChartIndicatorDrawStyles.Line);
    }
    	  				
    ```
-3. При изменении значения PnL стратегии добавляем данные в источник данных. При этом используем специальный класс [EquityData](xref:StockSharp.Xaml.Charting.EquityData). 
+3. При изменении значения PnL стратегии добавляем данные в источник данных. При этом используем специальный класс [ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData). 
 
    ```cs
    _strategy.PnLChanged += () =>
-   		{
-   			var data = new EquityData
-   			{
-   				Time = _strategy.CurrentTime,
-   				Value = _strategy.PnL,
-   			};
-   			
-   			this.GuiAsync(() => _curveItems.Add(data));
-   		};
+   {
+   	var data = new ChartDrawData();
+	data.Group(_strategy.CurrentTime)
+		.Add(_pnl, _strategy.PnL)
+		.Add(_unrealizedPnL, _strategy.PnLManager.UnrealizedPnL ?? 0)
+		.Add(_commissionCurve, _strategy.Commission ?? 0);
+	
+	EquityCurveChart.Draw(data);
+   };
    	  				
    ```
