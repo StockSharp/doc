@@ -10,4 +10,4 @@ The interaction mechanism is shown in this figure:
 
 ![etrade autoriazation](../../../../../images/etrade_autoriazation.png)
 
-A full authorization procedure should be performed only one time a day (the [E\*TRADE](../e_trade.md) server resets AccessTokens issued earlier at midnight by EST). If the full authorization procedure is already carried out on current day by EST, [ETradeTrader](xref:StockSharp.ETrade.ETradeTrader) automatically downloads AccessToken, stored in a subdirectory of [E\*TRADE](../e_trade.md) algorithm.
+A full authorization procedure should be performed only one time a day (the [E\*TRADE](../e_trade.md) server resets AccessTokens issued earlier at midnight by EST). If the full authorization procedure is already carried out on current day by EST, [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) automatically downloads AccessToken, stored in a subdirectory of [E\*TRADE](../e_trade.md) algorithm.
