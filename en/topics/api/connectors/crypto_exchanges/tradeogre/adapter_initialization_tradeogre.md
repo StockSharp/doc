@@ -1,4 +1,4 @@
-# Adapter initialization TradeOrge
+# Adapter initialization TradeOgre
 
 The code below demonstrates how to initialize the [TradeOgreMessageAdapter](xref:StockSharp.TradeOgre.TradeOgreMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 

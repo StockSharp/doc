@@ -1478,14 +1478,14 @@
         - name: Инициализация адаптера Quoinex
           href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
       - name: TradeOgre
-        href: api/connectors/crypto_exchanges/tradeorge.md
+        href: api/connectors/crypto_exchanges/tradeogre.md
         items:
-        - name: 'Настройки коннектора TradeOrge '
-          href: api/connectors/crypto_exchanges/tradeorge/configuration_tradeorge.md
-        - name: 'Графическое конфигурирование TradeOrge '
-          href: api/connectors/crypto_exchanges/tradeorge/graphical_configuration_tradeorge.md
+        - name: 'Настройки коннектора TradeOgre '
+          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+        - name: 'Графическое конфигурирование TradeOgre '
+          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
         - name: Инициализация адаптера TradeOgre
-          href: api/connectors/crypto_exchanges/tradeorge/adapter_initialization_tradeorge.md
+          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
       - name: Upbit
         href: api/connectors/crypto_exchanges/upbit.md
         items:

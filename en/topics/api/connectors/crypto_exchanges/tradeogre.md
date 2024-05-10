@@ -1,4 +1,4 @@
-# TradeOrge
+# TradeOgre
 
 **TradeOgre** \- cryptocurrency exchange.
 

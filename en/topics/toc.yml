@@ -1313,15 +1313,15 @@
           href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
         - name: Adapter initialization Quoinex
           href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
-      - name: TradeOrge
-        href: api/connectors/crypto_exchanges/tradeorge.md
+      - name: TradeOgre
+        href: api/connectors/crypto_exchanges/tradeogre.md
         items:
-        - name: Configuration TradeOrge
-          href: api/connectors/crypto_exchanges/tradeorge/configuration_tradeorge.md
-        - name: Graphical configuration TradeOrge
-          href: api/connectors/crypto_exchanges/tradeorge/graphical_configuration_tradeorge.md
-        - name: Adapter initialization TradeOrge
-          href: api/connectors/crypto_exchanges/tradeorge/adapter_initialization_tradeorge.md
+        - name: Configuration TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+        - name: Graphical configuration TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
+        - name: Adapter initialization TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
       - name: Upbit
         href: api/connectors/crypto_exchanges/upbit.md
         items:

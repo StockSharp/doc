@@ -1,4 +1,4 @@
-# Configuration TradeOrge
+# Configuration TradeOgre
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them at the connection settings.
 
