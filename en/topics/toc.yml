@@ -141,6 +141,8 @@
             href: designer/strategies/using_visual_designer/elements/common/random.md
           - name: Flag
             href: designer/strategies/using_visual_designer/elements/common/flag.md
+          - name: Sync
+            href: designer/strategies/using_visual_designer/elements/common/sync.md
           - name: P&L strategy
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
           - name: Trades by strategy
