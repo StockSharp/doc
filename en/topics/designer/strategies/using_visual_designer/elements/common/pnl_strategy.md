@@ -4,9 +4,7 @@
 
 Documetation eng RemoteManager 
 
-### Outgoing sockets
-
-Outgoing sockets
+## Outgoing sockets
 
 - **P\/L unrealized** – is the numerical value of the unrealized profit\/loss.
 - **P\/L realized** – is the numerical value of the realized profit\/loss.

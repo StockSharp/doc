@@ -6,16 +6,12 @@ This element is used for tracking the position of two values relative to each ot
 
 The comparison is made regarding the values on two sockets **Up** and **Down**.
 
-### Incoming Sockets
-
-Incoming Sockets
+## Incoming Sockets
 
 - **Up** – values that allow comparison (for example, a numerical value, indicator value, etc.).
 - **Down** – values that allow comparison (for example, a numerical value, indicator value, etc.).
 
-### Outgoing Sockets
-
-Outgoing Sockets
+## Outgoing Sockets
 
 - **Flag** – true if **Up** is greater than **Down**, otherwise false.
 
