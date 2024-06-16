@@ -1020,6 +1020,24 @@
       items:
       - name: MetaTrader
         href: api/connectors/forex/metatrader.md
+      - name: DXtrade
+        href: api/connectors/forex/dxtrade.md
+        items:
+        - name: Настройки коннектора DXtrade
+          href: api/connectors/forex/dxtrade/configuration_dxtrade.md
+        - name: Графическое конфигурирование DXtrade
+          href: api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md
+        - name: Инициализация адаптера DXtrade
+          href: api/connectors/forex/dxtrade/adapter_initialization_dxtrade.md
+      - name: cTrader
+        href: api/connectors/forex/ctrader.md
+        items:
+        - name: Настройки коннектора cTrader
+          href: api/connectors/forex/ctrader/configuration_ctrader.md
+        - name: Графическое конфигурирование cTrader
+          href: api/connectors/forex/ctrader/graphical_configuration_ctrader.md
+        - name: Инициализация адаптера cTrader
+          href: api/connectors/forex/ctrader/adapter_initialization_ctrader.md
       - name: DukasCopy
         href: api/connectors/forex/dukascopy.md
         items:
@@ -1182,6 +1200,15 @@
           href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
         - name: Инициализация адаптера BitZ
           href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
+      - name: ByBit
+        href: api/connectors/crypto_exchanges/bybit.md
+        items:
+        - name: Настройки коннектора ByBit
+          href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
+        - name: Графическое конфигурирование ByBit
+          href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
+        - name: Инициализация адаптера ByBit
+          href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
       - name: BW
         href: api/connectors/crypto_exchanges/bw.md
         items:
