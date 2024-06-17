@@ -1,6 +1,6 @@
 # Sterling
 
-**Rithmic** — trading platform for trading on the international exchanges.
+**Sterling** — trading platform for trading on the international exchanges.
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 
