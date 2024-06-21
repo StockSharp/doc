@@ -10,6 +10,6 @@
 
 ## См. также
 
-[API](market_data_storage/api.md)
+[Работа с API](market_data_storage/api.md)
 
-[Удаленное](market_data_storage/remote.md)
+[Работа с удаленным хранилищем](market_data_storage/remote.md)

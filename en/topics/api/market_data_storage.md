@@ -10,6 +10,6 @@
 
 ## Recommended content
 
-[API](market_data_storage/api.md)
+[Working with the API](market_data_storage/api.md)
 
-[Messages storage](market_data_storage/messages_storage.md)
+[Working with Remote Storage](market_data_storage/remote.md)

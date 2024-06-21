@@ -6,16 +6,16 @@
 
 > [!Video https://www.youtube.com/embed/uzViAqw3FQQ]
 
-1. Установить коннектор QUIK LUA в папку с помощью программы [Installer](../../../../installer.md).
+1. Установить коннектор QUIK LUA в папку с помощью программы [Installer](../../../installer.md).
 
-   ![QuikLua Install](../../../../../images/quiklua_install.png)
+   ![QuikLua Install](../../../../images/quiklua_install.png)
 
 2. Далее необходимо загрузить скрипт в терминале Quik:
    1. Открываем таблицу доступных скриптов (Сервисы \- Lua скрипты \- Доступные скрипты).
    2. Выбираем кнопку "Добавить".
    3. После добавления скрипта, его необходимо запустить.
 
-   ![QuikLua](../../../../../images/quiklua.png)
+   ![QuikLua](../../../../images/quiklua.png)
 
    Запуск скрипта выполняется один раз, при следующем запуске терминала скрипт будет запущен автоматически.
 
@@ -69,5 +69,3 @@
 [Создать новую заявку](../../orders_management/create_new_order.md)
 
 [Создать новую стоп заявку](../../orders_management/create_new_stop_order.md)
-
-[Настройка Quik Lua](quik/settings.md)
