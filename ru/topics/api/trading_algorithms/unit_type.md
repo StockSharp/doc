@@ -1,4 +1,4 @@
-# Арифметические операции
+# Тип Unit
 
 Для упрощения работы с арифметическими операциями над такими величинами как проценты, пункты или пипсы можно использовать тип данных [Unit](xref:StockSharp.Messages.Unit). Он позволяет прозрачно оперировать с операциями сложения, вычитания, умножения и деления. [Unit](xref:StockSharp.Messages.Unit) можно конвертировать в [Decimal](xref:System.Decimal) (невозможно только если величина является процентной, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) и обратно (в этом случае всегда создается величина с абсолютным значением, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
 
@@ -106,4 +106,4 @@
 
 ## Следующие шаги
 
-[Пользовательский интерфейс (GUI)](graphical_user_interface.md)
+[Пользовательский интерфейс (GUI)](../graphical_user_interface.md)

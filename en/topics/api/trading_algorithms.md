@@ -8,3 +8,4 @@ The [S\#](../api.md) library contains, as well as the system modules, already im
 - [Latency](trading_algorithms/latency.md) \- the monitoring of orders registration latency in algorithms. 
 - [Base algorithms](trading_algorithms/base_algorithms.md) \- base algorithms, on which abovementioned trading algorithms are based. 
 - [Equity curve](trading_algorithms/equity_curve.md) \- the equity curve calculation by the [profit\-loss](trading_algorithms/profit_loss.md). 
+- [Unit type](trading_algorithms/unit_type.md)

@@ -1,87 +1,122 @@
-# API
+# Working with the API
 
-All processes of the data saving and recovery in the [S\#](../../api.md) run through a special API, located in the [StockSharp.Algo.Storages](xref:StockSharp.Algo.Storages) section. There is the [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), interface in this section, which created to describe all the possible actions with the storage and contains such properties as [IEntityRegistry.Securities](xref:StockSharp.Algo.Storages.IEntityRegistry.Securities), [IEntityRegistry.Positions](xref:StockSharp.Algo.Storages.IEntityRegistry.Positions) etc. Through these properties, it is possible to get all the previously saved trading objects, for example, instruments. All processes run as with regular collection using the [IStorageEntityList\<T\>](xref:StockSharp.Algo.Storages.IStorageEntityList`1) interface. If you want to save the trading object in the storage (for example, a new order appeared or previously registered order updated), you should use the [IStorageEntityList\<T\>.Save](xref:StockSharp.Algo.Storages.IStorageEntityList`1.Save(`0))**(**[T](xref:T) entity **)** method.
+## Preparation
 
-The default implementation of the [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) interface is the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) class.
+For working with historical data in the examples, a NuGet package with historical data samples is used. It can be installed from the [NuGet Gallery](https://www.nuget.org/packages/StockSharp.Samples.HistoryData). This package provides a set of data that can be used to demonstrate working with the storage.
 
-The work with market data, such as tick trades or order books, takes place through the certain interface [IMarketDataStorage\<TMessage\>](xref:StockSharp.Algo.Storages.IMarketDataStorage`1), which is obtained based on the information about the instrument through [IStorageRegistry.GetTradeStorage](xref:StockSharp.Algo.Storages.IStorageRegistry.GetTradeStorage(StockSharp.BusinessEntities.Security,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats))**(**[StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security, [StockSharp.Algo.Storages.IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) drive, [StockSharp.Algo.Storages.StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) format **)** mathod. [IStorageRegistry.GetMarketDepthStorage](xref:StockSharp.Algo.Storages.IStorageRegistry.GetMarketDepthStorage(StockSharp.BusinessEntities.Security,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats))**(**[StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security, [StockSharp.Algo.Storages.IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) drive, [StockSharp.Algo.Storages.StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) format **)** for tick trades or order books accordingly.
+All codes are available in the [StockSharp repository](https://github.com/StockSharp/StockSharp/tree/master/Samples).
 
-If the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) used, the implementation of methods with market data does not depend on [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive), since the data is always stored in the file. This is the internal format of the [S\#](../../api.md), and it is organized in such a way that the trades or order books takes a minimum of disk space. The path to the directory where the market data will be stored (or read) indicated by the [LocalMarketDataDrive.Path](xref:StockSharp.Algo.Storages.LocalMarketDataDrive.Path) property of the [IStorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.IStorageRegistry.DefaultDrive) storage.
+## Creating a Storage Registry
 
-The folders with the names equal [instruments identifiers](../instruments/instrument_identifier.md) (separate folder for each instrument) will be created at this path.
+To work with market data storage in StockSharp, the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) class is used. When creating an object of this class, you can set the path to the default storage via the [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive) property or specify a specific folder for working with historical data using the [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive).
 
-Subfolders, indicating the date of the market data will be created inside each of these folders. For example, if you save the tick trades for a period of 3 days, then three separate folders with dates will be created. The format of the folder name is always fixed as yyyy\_MM\_dd.
+```cs
+// Creating StorageRegistry with default path
+var storageRegistry = new StorageRegistry();
+```
 
-Files with the bin extension are inside each folder with dates. Trades are stored in the **trades.bin** file, order books in the **quotes.bin** file. Also the *candles\_XXX.bin* files may be present, which store various types of [candles](../candles.md) (filename indicates the type and parameter of candles) and the *orderLog.bin* files where the order log stored.
+```cs
+// Creating StorageRegistry with the path to data from the NuGet package
+var pathHistory = Paths.HistoryDataPath; // path to data from the NuGet package
+var localDrive = new LocalMarketDataDrive(pathHistory);
+var storageRegistry = new StorageRegistry()
+{
+    DefaultDrive = localDrive,
+};
+```
 
-## Example of working with market data storage
+## Retrieving Data
 
-1. The SampleStorage example, located in the [S\#](../../api.md) installation package, shows how to save and load the trades through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)class. In the beginning an instrument created and its basic properties are initialized \- [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) (to determine location on disk), [Security.StepPrice](xref:StockSharp.BusinessEntities.Security.StepPrice) and [Security.Decimals](xref:StockSharp.BusinessEntities.Security.Decimals) (for decimal value compression in the **trades.bin** file):
+Through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), you can access various types of market data for the desired time range. The methods used for this are:
 
-   ```cs
-   var security = new Security
-   {
-   	Id = "TestId",
-   	MinStepSize = 0.1,
-   	Decimals = 1,
-   };
-   					
-   ```
-2. Further, as initial data, a list of the 1,000 undefined trades created (in a real application, it will be those trades that are get from external sources or trade application):
+- [StorageRegistry.GetTimeFrameCandleMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTimeFrameCandleMessageStorage(StockSharp.Messages.SecurityId,System.TimeSpan,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) for candles
+- [StorageRegistry.GetTickMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTickMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) for ticks
+- [StorageRegistry.GetQuoteMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetQuoteMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) for order books
 
-   ```cs
-   var trades = new List<Trade>();
-   // generating 1000 random ticks
-   //
-   var tradeGenerator = new RandomWalkTradeGenerator(security, 99)
-   {
-   	IdGenerator = new IdGenerator
-   	{
-   		Current = DateTime.Now.Ticks
-   	}
-   };
-   // generator initialization
-   tradeGenerator.Init();
-   for (var i = 0; i < 1000; i++)
-   {
-   	var t = tradeGenerator.Generate(DateTime.Today + TimeSpan.FromMinutes(i));
-   	t.Id = i + 1;
-   	trades.Add(t);
-   }
-   					
-   ```
-3. The [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) itself created on the next step:
+Each of these methods returns the corresponding storage, from which data can be loaded using the `Load` method, specifying the start and end dates.
 
-   ```cs
-   var storage = new StorageRegistry();
-   					
-   ```
-4. The market data storage obtained via the trade objects store. The tick trades storage, which is obtained via the [StorageRegistry.GetTradeStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTradeStorage(StockSharp.BusinessEntities.Security,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats))**(**[StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security, [StockSharp.Algo.Storages.IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) drive, [StockSharp.Algo.Storages.StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) format **)** method, used in example:
+```cs
+// Retrieving candles
+var securityId = "SBER@TQBR".ToSecurityId();
+var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
+var candles = candleStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
-   ```cs
-   var tradeStorage = storage.GetTradeStorage(security);
-   					
-   ```
-5. The saving of trades:
+foreach (var candle in candles)
+{
+    Console.WriteLine(candle);
+}
+```
 
-   ```cs
-   tradeStorage.Save(trades);
-   					
-   ```
-6. The loading of trades, which were saved in the previous step:
+```cs
+// Retrieving ticks
+var tradeStorage = storageRegistry.GetTickMessageStorage(securityId, StorageFormats.Binary);
+var trades = tradeStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
-   ```cs
-   var loadedTrades = tradeStorage.Load(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
-    	  
-   foreach (var trade in loadedTrades)
-   {
-   	Console.WriteLine("Tick № {0}: {1}", trade.Id, trade);
-   }
-   					
-   ```
-7. Since the trades are stored in the file, the next time you run the sample, they will be present there, and you will get 2000 trades instead of 1000. For correct work of example, it is necessary to remove the trades at the end of the work:
+foreach (var trade in trades)
+{
+    Console.WriteLine(trade);
+}
+```
 
-   ```cs
-   tradeStorage.Delete(DateTime.Today, DateTime.Today + TimeSpan.FromMinutes(1000));
-   					
-   ```
+```cs
+// Retrieving order books
+var marketDepthStorage = storageRegistry.GetQuoteMessageStorage(securityId, StorageFormats.Binary);
+var marketDepths = marketDepthStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+
+foreach (var marketDepth in marketDepths)
+{
+    Console.WriteLine(marketDepth);
+}
+```
+
+## Saving Data
+
+To save new data to the existing storage, use the `Save` method of the corresponding storage. This allows you to supplement historical data with new values.
+
+```cs
+// Saving new candles
+var newCandles = new List<CandleMessage>
+{
+    // New CandleMessage objects are created here
+};
+candleStorage.Save(newCandles);
+```
+
+```cs
+// Saving new ticks
+var newTrades = new List<ExecutionMessage>
+{
+    // New ExecutionMessage objects for ticks are created here
+};
+tradeStorage.Save(newTrades);
+```
+
+```cs
+// Saving new order books
+var newMarketDepths = new List<QuoteChangeMessage>
+{
+    // New QuoteChangeMessage objects for order books are created here
+};
+marketDepthStorage.Save(newMarketDepths);
+```
+
+## Deleting Data
+
+To delete data for a specific period, use the `Delete` method of the corresponding storage. Be careful when deleting data from the sample package.
+
+```cs
+// Deleting candles for the specified period
+candleStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+```
+
+```cs
+// Deleting ticks for the specified period
+tradeStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+```
+
+```cs
+// Deleting order books for the specified period
+marketDepthStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+```
+
+These operations allow you to effectively manage historical data, whether loaded through [Hydra](../../hydra.md), provided in the NuGet package, or created during the operation of your application.

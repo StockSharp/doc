@@ -8,3 +8,4 @@
 - [Задержка](trading_algorithms/latency.md) \- мониторинг задержки регистрации заявок в роботах. 
 - [Основные алгоритмы](trading_algorithms/base_algorithms.md) \- основные алгоритмы, на которых базируются вышеприведенные торговые алгоритмы. 
 - [Кривая эквити](trading_algorithms/equity_curve.md) \- расчет кривой эквити по [прибыли\-убытку](trading_algorithms/profit_loss.md). 
+- [Тип Unit](trading_algorithms/unit_type.md).

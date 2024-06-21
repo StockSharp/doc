@@ -10,6 +10,6 @@
 
 ## См. также
 
-[Api](market_data_storage/api.md)
+[API](market_data_storage/api.md)
 
-[Хранилище сообщений](market_data_storage/messages_storage.md)
+[Удаленное](market_data_storage/remote.md)

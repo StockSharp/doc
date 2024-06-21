@@ -663,6 +663,8 @@
   items:
   - name: Установка
     href: api/setup.md
+  - name: Примеры
+    href: api/examples.md
   - name: Коннекторы
     href: api/connectors.md
     items:
@@ -1667,10 +1669,10 @@
   - name: Хранение данных
     href: api/market_data_storage.md
     items:
-    - name: API
+    - name: Работа с API
       href: api/market_data_storage/api.md
-    - name: Хранилище сообщений
-      href: api/market_data_storage/messages_storage.md
+    - name: Работа с удаленным хранилищем
+      href: api/market_data_storage/remote.md
   - name: Свечи
     href: api/candles.md
     items:
@@ -1684,6 +1686,8 @@
       href: api/candles/gluing_candles_history_real_time.md
     - name: Создание свечей по корзине инструментов
       href: api/candles/candle_creation_by_the_instruments_basket.md
+    - name: Компрессия тиковых данных и спредов в свечи
+      href: api/candles/compression.md
   - name: Индикаторы
     href: api/indicators.md
     items:
@@ -1880,14 +1884,14 @@
   - name: Событийная модель
     href: api/event_model.md
     items:
-    - name: Правило
-      href: api/event_model/rule.md
     - name: Использование правил
       href: api/event_model/rules_using.md
     - name: Приостановка правил
       href: api/event_model/rules_suspension.md
     - name: Взаимоисключающие правила
-      href: api/event_model/mutually_exclusive_rules.md
+      href: api/event_model/rules_mutually_exclusive.md
+    - name: Собственное правило
+      href: api/event_model/rules_create.md
   - name: Логирование
     href: api/logging.md
     items:
@@ -1918,6 +1922,8 @@
       href: api/trading_algorithms/base_algorithms.md
     - name: Кривая эквити
       href: api/trading_algorithms/equity_curve.md
+    - name: Тип Unit
+      href: api/trading_algorithms/unit_type.md
   - name: Опционы
     href: api/options.md
     items:
@@ -2047,10 +2053,6 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Темы (светлая и темная)
       href: api/graphical_user_interface/themes_light_and_dark.md
-  - name: Арифметические операции
-    href: api/arithmetic_operations.md
-  - name: Примеры
-    href: api/examples.md
 - name: Shell
   href: shell.md
   items:

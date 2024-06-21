@@ -1,12 +1,14 @@
-# Event model
+# Event Model
 
-Event model in the [S\#](../api.md) built using the [IMarketRule](xref:StockSharp.Algo.IMarketRule). The [IMarketRule](xref:StockSharp.Algo.IMarketRule) can be used both within [the strategy](strategies.md), and outside it.
+The event model in [S#](../api.md) is built using [IMarketRule](xref:StockSharp.Algo.IMarketRule). [IMarketRule](xref:StockSharp.Algo.IMarketRule) can be used both within and outside [strategies](strategies.md).
 
-- [Rule](event_model/rule.md)
-- [Rule using](event_model/rules_using.md)
-- [Rules suspension](event_model/rules_suspension.md)
-- [Mutually exclusive rules](event_model/mutually_exclusive_rules.md)
+In [S#](../../api.md), there are several predefined conditions and actions for [IMarketRule](xref:StockSharp.Algo.IMarketRule) tailored for common scenarios. These are added as extension methods in [MarketRuleHelper](xref:StockSharp.Algo.MarketRuleHelper).
 
-## Recommended content
+- [Using rules](event_model/rules_using.md)
+- [Rule synchronization and suspension](event_model/rules_suspension.md)
+- [Mutually exclusive rules](event_model/rules_mutually_exclusive.md)
+- [Creating custom rules](event_model/rules_create.md)
 
-[Creating strategies](strategies/creating_strategies.md)
+## See Also
+
+[Creating a strategy](strategies/creating_strategies.md)

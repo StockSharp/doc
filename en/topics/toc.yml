@@ -661,6 +661,8 @@
   items:
   - name: Setup
     href: api/setup.md
+  - name: Examples
+    href: api/examples.md
   - name: Connectors
     href: api/connectors.md
     items:
@@ -1505,10 +1507,10 @@
   - name: Market-data storage
     href: api/market_data_storage.md
     items:
-    - name: API
+    - name: Working with the API
       href: api/market_data_storage/api.md
-    - name: Messages storage
-      href: api/market_data_storage/messages_storage.md
+    - name: Working with Remote Storage
+      href: api/market_data_storage/remote.md
   - name: Candles
     href: api/candles.md
     items:
@@ -1522,6 +1524,8 @@
       href: api/candles/gluing_candles_history_real_time.md
     - name: Candle creation by the instruments basket
       href: api/candles/candle_creation_by_the_instruments_basket.md
+    - name: Compression of Tick Data and Spreads into Candles
+      href: api/candles/compression.md
   - name: Indicators
     href: api/indicators.md
     items:
@@ -1718,14 +1722,14 @@
   - name: Event model
     href: api/event_model.md
     items:
-    - name: Rule
-      href: api/event_model/rule.md
     - name: Rules using
       href: api/event_model/rules_using.md
     - name: Rules suspension
       href: api/event_model/rules_suspension.md
     - name: Mutually exclusive rules
-      href: api/event_model/mutually_exclusive_rules.md
+      href: api/event_model/rules_mutually_exclusive.md
+    - name: Create own rule
+      href: api/event_model/rules_create.md
   - name: Logging
     href: api/logging.md
     items:
@@ -1756,6 +1760,8 @@
       href: api/trading_algorithms/base_algorithms.md
     - name: Equity curve
       href: api/trading_algorithms/equity_curve.md
+    - name: Unit type
+      href: api/trading_algorithms/unit_type.md
   - name: Options
     href: api/options.md
     items:
@@ -1885,10 +1891,6 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Themes (light and dark)
       href: api/graphical_user_interface/themes_light_and_dark.md
-  - name: Arithmetic operations
-    href: api/arithmetic_operations.md
-  - name: Examples
-    href: api/examples.md
 - name: Shell
   href: shell.md
   items:
