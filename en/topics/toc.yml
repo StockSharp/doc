@@ -1436,6 +1436,32 @@
           href: api/connectors/common/rss/adapter_initialization_rss.md
     - name: Creating own connector
       href: api/connectors/creating_own_connector.md
+      items:
+      - name: Instrument lookup
+        href: api/connectors/creating_own_connector/instrument_lookup.md
+      - name: Market data
+        href: api/connectors/creating_own_connector/market_data.md
+      - name: Positions and orders info
+        href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
+      - name: Trading operations
+        href: api/connectors/creating_own_connector/trading_operations.md
+      - name: Settings storage
+        href: api/connectors/creating_own_connector/settings.md
+      - name: Extended order condition
+        href: api/connectors/creating_own_connector/order_extended.md
+      - name: Message list
+        href: api/connectors/creating_own_connector/messages.md
+      - name: Best practices
+        href: api/connectors/creating_own_connector/best_practices/common.md
+        items:
+        - name: Authentication
+          href: api/connectors/creating_own_connector/best_practices/authentication.md
+        - name: REST client
+          href: api/connectors/creating_own_connector/best_practices/rest_client.md
+        - name: WebSocket client
+          href: api/connectors/creating_own_connector/best_practices/websocket_client.md
+        - name: Type conversion
+          href: api/connectors/creating_own_connector/best_practices/type_conversion.md
     - name: Save and load settings
       href: api/connectors/save_and_load_settings.md
     - name: Reconnection settings
@@ -1863,28 +1889,6 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Themes (light and dark)
       href: api/graphical_user_interface/themes_light_and_dark.md
-  - name: Messages
-    href: api/messages.md
-    items:
-    - name: Description
-      href: api/messages/description.md
-    - name: Adapters
-      href: api/messages/adapters.md
-      items:
-      - name: Order books (incremental and regular)
-        href: api/messages/adapters/order_books_incremental_and_regular.md
-      - name: Historical data
-        href: api/messages/adapters/historical_data.md
-      - name: Order log
-        href: api/messages/adapters/order_log.md
-      - name: Adapters chain
-        href: api/messages/adapters/adapters_chain.md
-      - name: Threading model
-        href: api/messages/adapters/threading_model.md
-    - name: Storage
-      href: api/messages/storage.md
-    - name: Networking
-      href: api/messages/networking.md
   - name: Arithmetic operations
     href: api/arithmetic_operations.md
   - name: Examples

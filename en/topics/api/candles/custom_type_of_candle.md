@@ -35,7 +35,7 @@
        public int TradeCount { get; set; }
    }
    ```
-2. Additionally, you need to create your own candle message type. More about [Messages](../messages.md). The type must inherit from the [CandleMessage](xref:StockSharp.Messages.CandleMessage) class:
+2. Additionally, you need to create your own candle message type. More about [Messages](../connectors/creating_own_connector/messages.md). The type must inherit from the [CandleMessage](xref:StockSharp.Messages.CandleMessage) class:
 
    ```cs
    /// <summary>

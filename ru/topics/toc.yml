@@ -1600,6 +1600,32 @@
           href: api/connectors/common/rss/adapter_initialization_rss.md
     - name: Создание собственного коннектора
       href: api/connectors/creating_own_connector.md
+      items:
+      - name: Поиск инструментов
+        href: api/connectors/creating_own_connector/instrument_lookup.md
+      - name: Маркет данные
+        href: api/connectors/creating_own_connector/market_data.md
+      - name: Информация о портфелях и заявках
+        href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
+      - name: Торговые операции
+        href: api/connectors/creating_own_connector/trading_operations.md
+      - name: Хранение настроек
+        href: api/connectors/creating_own_connector/settings.md
+      - name: Расширенные условия заявок
+        href: api/connectors/creating_own_connector/order_extended.md
+      - name: Список сообщений
+        href: api/connectors/creating_own_connector/messages.md
+      - name: Лучшие практики
+        href: api/connectors/creating_own_connector/best_practices/common.md
+        items:
+        - name: Аутентификация
+          href: api/connectors/creating_own_connector/best_practices/authentication.md
+        - name: REST клиент
+          href: api/connectors/creating_own_connector/best_practices/rest_client.md
+        - name: WebSocket клиент
+          href: api/connectors/creating_own_connector/best_practices/websocket_client.md
+        - name: Конвертация типов
+          href: api/connectors/creating_own_connector/best_practices/type_conversion.md
     - name: Сохранение и загрузка настроек
       href: api/connectors/save_and_load_settings.md
     - name: Настройки переподключения
@@ -2027,28 +2053,6 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Темы (светлая и темная)
       href: api/graphical_user_interface/themes_light_and_dark.md
-  - name: Сообщения
-    href: api/messages.md
-    items:
-    - name: Описание
-      href: api/messages/description.md
-    - name: Адаптеры
-      href: api/messages/adapters.md
-      items:
-      - name: Стаканы (инкрементальные и обычные)
-        href: api/messages/adapters/order_books_incremental_and_regular.md
-      - name: Исторические данные
-        href: api/messages/adapters/historical_data.md
-      - name: Лог заявок
-        href: api/messages/adapters/order_log.md
-      - name: Вспомогательные адаптеры
-        href: api/messages/adapters/adapters_chain.md
-      - name: Потоковая модель
-        href: api/messages/adapters/threading_model.md
-    - name: Хранилище сообщений
-      href: api/messages/storage.md
-    - name: Сетевое взаимодействие
-      href: api/messages/networking.md
   - name: Арифметические операции
     href: api/arithmetic_operations.md
   - name: Примеры

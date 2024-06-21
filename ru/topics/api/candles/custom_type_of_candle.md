@@ -35,7 +35,7 @@
        public int TradeCount { get; set; }
    }
    ```
-2. Дополнительно, необходимо создать свой тип сообщения свечи. Подробнее, о [сообщениях](../messages.md). Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
+2. Дополнительно, необходимо создать свой тип сообщения свечи. Подробнее, о [сообщениях](../connectors/creating_own_connector/messages.md). Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
 
    ```cs
    /// <summary>
