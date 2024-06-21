@@ -4,6 +4,15 @@
 
 До того, как приступить к написанию торговых роботов под текущую торговую платформу рекомендуется ознакомиться с ссылками приведенными в пункте [Коннекторы](../../connectors.md). 
 
+## Настройка TWS Interactive Brokers
+
+1. Необходимо разрешить подключения от других программ (такие как торговый робот на [S\#](../../../api.md)). Для этого нужно открыть настройки через меню "File \-\> Global configuration...". В новом окне выбрать "Configuration \-\> API \-\> Settings":
+
+   ![ib settings](../../../../images/ib_settings.png)
+
+2. Включить режим "Enable ActiveX and Socket Clients".
+3. Рекомендуется также добавить адрес компьютера, на котором будет запускаться робот (локальный адрес \- 127.0.0.1). Это позволит не подтверждать каждый раз при запуске робота разрешение на его подключение в терминале.
+
 ## См. также
 
 [Коннекторы](../../connectors.md)
@@ -19,7 +28,5 @@
 [Создать новую заявку](../../orders_management/create_new_order.md)
 
 [Создать новую стоп заявку](../../orders_management/create_new_stop_order.md)
-
-[Настройка TWS Interactive Brokers](interactive_brokers/configuration_interactive_brokers.md)
 
 [Инициализация адаптера Interactive Brokers](interactive_brokers/adapter_initialization_interactive_brokers.md)

@@ -673,8 +673,6 @@
       - name: QUIK
         href: api/connectors/russia/quik.md
         items:
-        - name: Настройка Quik Lua
-          href: api/connectors/russia/quik/settings.md
         - name: Графическое конфигурирование Quik LUA Market data
           href: api/connectors/russia/quik/ui_settings_marketdata.md
         - name: Графическое конфигурирование Quik LUA Transactions
@@ -907,8 +905,6 @@
       - name: Interactive Brokers
         href: api/connectors/stock_market/interactive_brokers.md
         items:
-        - name: Настройка TWS Interactive Brokers
-          href: api/connectors/stock_market/interactive_brokers/configuration_interactive_brokers.md
         - name: Графическое конфигурирование Interactive Brokers
           href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
         - name: Инициализация адаптера Interactive Brokers
@@ -916,8 +912,6 @@
       - name: IQFeed
         href: api/connectors/stock_market/iqfeed.md
         items:
-        - name: Настройки коннектора IQFeed
-          href: api/connectors/stock_market/iqfeed/configuration_iqfeed.md
         - name: Подключение IQFeed
           href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
         - name: Графическое конфигурирование IQFeed

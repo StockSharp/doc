@@ -743,8 +743,6 @@
       - name: Interactive Brokers
         href: api/connectors/stock_market/interactive_brokers.md
         items:
-        - name: Configuration Interactive Brokers
-          href: api/connectors/stock_market/interactive_brokers/configuration_interactive_brokers.md
         - name: Graphical configuration Interactive Brokers
           href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
         - name: Adapter initialization Interactive Brokers
@@ -752,8 +750,6 @@
       - name: IQFeed
         href: api/connectors/stock_market/iqfeed.md
         items:
-        - name: Configuration IQFeed
-          href: api/connectors/stock_market/iqfeed/configuration_iqfeed.md
         - name: Connection IQFeed
           href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
         - name: Graphical configuration IQFeed
