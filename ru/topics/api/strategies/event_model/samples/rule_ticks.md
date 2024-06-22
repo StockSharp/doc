@@ -6,10 +6,12 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class SimpleTradeRulesStrategy : Strategy
 {
 }
+```
 
 ## Метод OnStarted
 
@@ -18,6 +20,7 @@ public class SimpleTradeRulesStrategy : Strategy
 - Подписывается на сделки
 - Создает комбинированное правило для анализа цен сделок
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -38,6 +41,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Логика работы
 

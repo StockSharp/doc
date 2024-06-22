@@ -6,6 +6,7 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class StairsTrendStrategy : Strategy
 {
@@ -15,16 +16,19 @@ public class StairsTrendStrategy : Strategy
     private int _bullLength;
     private int _bearLength;
 }
+```
 
 ## Конструктор
 
 Конструктор принимает `CandleSeries` для инициализации стратегии.
 
+```cs
 // Конструктор
 public StairsTrendStrategy(CandleSeries candleSeries)
 {
     _candleSeries = candleSeries;
 }
+```
 
 ## Свойства
 
@@ -32,8 +36,10 @@ public StairsTrendStrategy(CandleSeries candleSeries)
 
 Определяет минимальное количество последовательных свечей одного направления для определения тренда.
 
+```cs
 // Свойство Length
 public int Length { get; set; } = 3;
+```
 
 ## Методы
 
@@ -44,6 +50,7 @@ public int Length { get; set; } = 3;
 - Подписывается на получение свечей
 - Инициализирует подписку на серию свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -52,6 +59,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### OnStopped
 
@@ -59,6 +67,7 @@ protected override void OnStarted(DateTimeOffset time)
 
 - Отменяет подписку на свечи
 
+```cs
 // Метод OnStopped
 protected override void OnStopped()
 {
@@ -70,6 +79,7 @@ protected override void OnStopped()
 
     base.OnStopped();
 }
+```
 
 ### OnCandleReceived
 
@@ -80,6 +90,7 @@ protected override void OnStopped()
 3. Обновляет счетчики последовательных бычьих и медвежьих свечей
 4. Принимает решение об открытии позиции на основе длины тренда
 
+```cs
 // Метод OnCandleReceived
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
@@ -108,6 +119,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
         RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
     }
 }
+```
 
 ## Логика торговли
 

@@ -6,6 +6,7 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 internal class SmaStrategyMartingaleStrategy : Strategy
 {
@@ -14,16 +15,19 @@ internal class SmaStrategyMartingaleStrategy : Strategy
     public SimpleMovingAverage LongSma { get; set; }
     public SimpleMovingAverage ShortSma { get; set; }
 }
+```
 
 ## Конструктор
 
 Конструктор принимает `CandleSeries` и инициализирует подписку на эту серию свечей.
 
+```cs
 // Конструктор
 public SmaStrategyMartingaleStrategy(CandleSeries series)
 {
     _subscription = new(series);
 }
+```
 
 ## Методы
 
@@ -34,11 +38,13 @@ public SmaStrategyMartingaleStrategy(CandleSeries series)
 - Проверяет, прошло ли менее 10 секунд с момента закрытия свечи до текущего времени
 - Используется для фильтрации устаревших данных в режиме реального времени
 
+```cs
 // Метод IsRealTime
 private bool IsRealTime(ICandleMessage candle)
 {
     return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
 }
+```
 
 ### OnStarted
 
@@ -48,6 +54,7 @@ private bool IsRealTime(ICandleMessage candle)
 - Привязывает обработку свечей к методу `ProcessCandle`
 - Запускает подписку на серию свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -55,6 +62,7 @@ protected override void OnStarted(DateTimeOffset time)
     Subscribe(_subscription);
     base.OnStarted(time);
 }
+```
 
 ### ProcessCandle
 
@@ -70,6 +78,7 @@ protected override void OnStarted(DateTimeOffset time)
    - Рассчитывает объем позиции с учетом текущей позиции (элемент мартингейла)
    - Регистрирует новый ордер
 
+```cs
 // Метод ProcessCandle
 private void ProcessCandle(ICandleMessage candle)
 {
@@ -94,6 +103,7 @@ private void ProcessCandle(ICandleMessage candle)
     var price = Security.ShrinkPrice(ShortSma.GetCurrentValue());
     RegisterOrder(this.CreateOrder(direction, price, volume));
 }
+```
 
 ## Логика торговли
 

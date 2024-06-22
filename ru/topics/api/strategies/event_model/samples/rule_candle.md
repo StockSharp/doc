@@ -6,11 +6,13 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class SimpleCandleRulesStrategy : Strategy
 {
     private Subscription _subscription;
 }
+```
 
 ## Метод OnStarted
 
@@ -19,6 +21,7 @@ public class SimpleCandleRulesStrategy : Strategy
 - Инициализирует подписку на 5-минутные свечи
 - Устанавливает правила для обработки свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -54,6 +57,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Логика работы
 

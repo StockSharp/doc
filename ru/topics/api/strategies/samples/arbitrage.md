@@ -6,6 +6,7 @@
 
 ## Основные компоненты и свойства
 
+```cs
 // Основные компоненты и свойства
 public class ArbitrageStrategy : Strategy
 {
@@ -24,6 +25,7 @@ public class ArbitrageStrategy : Strategy
 
     public decimal SpreadToGenerateSignal { get; set; }
 }
+```
 
 ## Методы
 
@@ -34,6 +36,7 @@ public class ArbitrageStrategy : Strategy
 - Инициализирует идентификаторы инструментов
 - Подписывается на данные стакана для обоих инструментов
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -47,6 +50,7 @@ protected override void OnStarted(DateTimeOffset time)
     subStock.WhenOrderBookReceived(this).Do(ProcessMarketDepth).Apply(this);
     base.OnStarted(time);
 }
+```
 
 ### ProcessMarketDepth
 
@@ -57,16 +61,19 @@ protected override void OnStarted(DateTimeOffset time)
 - Определяет тип арбитражной ситуации (контанго или бэквордация)
 - Принимает решения об открытии или закрытии позиций
 
+```cs
 // Метод ProcessMarketDepth
 private void ProcessMarketDepth(IOrderBookMessage depth)
 {
     // Код метода ProcessMarketDepth
 }
+```
 
 ### GenerateOrdersBackvardation и GenerateOrdersContango
 
 Методы для генерации ордеров при бэквордации и контанго:
 
+```cs
 // Методы GenerateOrdersBackvardation и GenerateOrdersContango
 private (Order buy, Order sell) GenerateOrdersBackvardation()
 {
@@ -77,16 +84,19 @@ private (Order sell, Order buy) GenerateOrdersContango()
 {
     // Код метода GenerateOrdersContango
 }
+```
 
 ### GetAveragePrice
 
 Вспомогательный метод для расчета средней цены по стакану:
 
+```cs
 // Метод GetAveragePrice
 private static decimal GetAveragePrice(IOrderBookMessage depth, Sides orderDirection, decimal volume)
 {
     // Код метода GetAveragePrice
 }
+```
 
 ## Логика работы
 

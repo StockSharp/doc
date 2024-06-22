@@ -6,10 +6,12 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class SimpleRulesStrategy : Strategy
 {
 }
+```
 
 ## Метод OnStarted
 
@@ -18,6 +20,7 @@ public class SimpleRulesStrategy : Strategy
 - Подписывается на сделки и стакан
 - Демонстрирует различные способы создания и применения правил
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -53,6 +56,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Логика работы
 

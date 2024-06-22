@@ -6,10 +6,12 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class SimpleRulesUntilStrategy : Strategy
 {
 }
+```
 
 ## Метод OnStarted
 
@@ -18,6 +20,7 @@ public class SimpleRulesUntilStrategy : Strategy
 - Подписывается на сделки и стакан
 - Создает правило, которое выполняется при получении данных стакана до достижения определенного условия
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -37,6 +40,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Логика работы
 

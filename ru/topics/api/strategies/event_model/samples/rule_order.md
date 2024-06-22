@@ -6,10 +6,12 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class SimpleOrderRulesStrategy : Strategy
 {
 }
+```
 
 ## Метод OnStarted
 
@@ -18,6 +20,7 @@ public class SimpleOrderRulesStrategy : Strategy
 - Подписывается на сделки
 - Создает два набора правил для обработки событий регистрации заявок
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -67,6 +70,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Логика работы
 

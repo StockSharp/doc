@@ -6,6 +6,7 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class StairsCountertrendStrategy : Strategy
 {
@@ -13,16 +14,19 @@ public class StairsCountertrendStrategy : Strategy
     private int _bullLength;
     private int _bearLength;
 }
+```
 
 ## Constructor
 
 The constructor takes a [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) to initialize the strategy.
 
+```cs
 // Constructor
 public StairsCountertrendStrategy(CandleSeries candleSeries)
 {
     _subscription = new(candleSeries);
 }
+```
 
 ## Properties
 
@@ -42,6 +46,7 @@ Called when the strategy starts:
 - Subscribes to candle completion
 - Initializes candle processing
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -56,6 +61,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### CandleManager_Processing
 
@@ -67,6 +73,7 @@ Main method for processing each completed candle:
 4. Makes a decision to open a position against the trend
 5. Creates and adds a child quoting strategy
 
+```cs
 // CandleManager_Processing method
 private void CandleManager_Processing(ICandleMessage candle)
 {
@@ -102,6 +109,7 @@ private void CandleManager_Processing(ICandleMessage candle)
         ChildStrategies.Add(strategy);
     }
 }
+```
 
 ## Trading Logic
 

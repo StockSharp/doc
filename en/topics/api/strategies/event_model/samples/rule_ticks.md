@@ -6,10 +6,12 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class SimpleTradeRulesStrategy : Strategy
 {
 }
+```
 
 ## OnStarted Method
 
@@ -18,6 +20,7 @@ Called when the strategy starts:
 - Subscribes to trades
 - Creates a combined rule for analyzing trade prices
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -38,6 +41,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Working Logic
 

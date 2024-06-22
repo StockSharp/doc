@@ -6,6 +6,7 @@
 
 ## Main Components
 
+```cs
 // Main components
 internal class SmaStrategyMartingaleStrategy : Strategy
 {
@@ -14,16 +15,19 @@ internal class SmaStrategyMartingaleStrategy : Strategy
     public SimpleMovingAverage LongSma { get; set; }
     public SimpleMovingAverage ShortSma { get; set; }
 }
+```
 
 ## Constructor
 
 The constructor takes a `CandleSeries` and initializes the subscription to this candle series.
 
+```cs
 // Constructor
 public SmaStrategyMartingaleStrategy(CandleSeries series)
 {
     _subscription = new(series);
 }
+```
 
 ## Methods
 
@@ -34,11 +38,13 @@ Determines if a candle is "real" (recently closed):
 - Checks if less than 10 seconds have passed since the candle's closing time to the current time
 - Used to filter out outdated data in real-time mode
 
+```cs
 // IsRealTime method
 private bool IsRealTime(ICandleMessage candle)
 {
     return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
 }
+```
 
 ### OnStarted
 
@@ -48,6 +54,7 @@ Called when the strategy starts:
 - Binds candle processing to the `ProcessCandle` method
 - Starts the subscription to the candle series
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -55,6 +62,7 @@ protected override void OnStarted(DateTimeOffset time)
     Subscribe(_subscription);
     base.OnStarted(time);
 }
+```
 
 ### ProcessCandle
 
@@ -70,6 +78,7 @@ Main method for processing each completed candle:
    - Calculates the position volume considering the current position (martingale element)
    - Registers a new order
 
+```cs
 // ProcessCandle method
 private void ProcessCandle(ICandleMessage candle)
 {
@@ -94,6 +103,7 @@ private void ProcessCandle(ICandleMessage candle)
     var price = Security.ShrinkPrice(ShortSma.GetCurrentValue());
     RegisterOrder(this.CreateOrder(direction, price, volume));
 }
+```
 
 ## Trading Logic
 

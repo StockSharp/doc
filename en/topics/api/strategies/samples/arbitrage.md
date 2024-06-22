@@ -6,6 +6,7 @@
 
 ## Main Components and Properties
 
+```cs
 // Main components and properties
 public class ArbitrageStrategy : Strategy
 {
@@ -24,6 +25,7 @@ public class ArbitrageStrategy : Strategy
 
     public decimal SpreadToGenerateSignal { get; set; }
 }
+```
 
 ## Methods
 
@@ -34,6 +36,7 @@ Called when the strategy starts:
 - Initializes instrument identifiers
 - Subscribes to order book data for both instruments
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -47,6 +50,7 @@ protected override void OnStarted(DateTimeOffset time)
     subStock.WhenOrderBookReceived(this).Do(ProcessMarketDepth).Apply(this);
     base.OnStarted(time);
 }
+```
 
 ### ProcessMarketDepth
 
@@ -57,16 +61,19 @@ Main method for processing order book data:
 - Determines the type of arbitrage situation (contango or backwardation)
 - Makes decisions about opening or closing positions
 
+```cs
 // ProcessMarketDepth method
 private void ProcessMarketDepth(IOrderBookMessage depth)
 {
     // ProcessMarketDepth method code
 }
+```
 
 ### GenerateOrdersBackwardation and GenerateOrdersContango
 
 Methods for generating orders during backwardation and contango:
 
+```cs
 // GenerateOrdersBackwardation and GenerateOrdersContango methods
 private (Order buy, Order sell) GenerateOrdersBackwardation()
 {
@@ -77,16 +84,19 @@ private (Order sell, Order buy) GenerateOrdersContango()
 {
     // GenerateOrdersContango method code
 }
+```
 
 ### GetAveragePrice
 
 Helper method for calculating the average price from the order book:
 
+```cs
 // GetAveragePrice method
 private static decimal GetAveragePrice(IOrderBookMessage depth, Sides orderDirection, decimal volume)
 {
     // GetAveragePrice method code
 }
+```
 
 ## Working Logic
 

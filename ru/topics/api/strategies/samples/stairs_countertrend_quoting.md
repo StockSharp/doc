@@ -6,6 +6,7 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class StairsCountertrendStrategy : Strategy
 {
@@ -13,16 +14,19 @@ public class StairsCountertrendStrategy : Strategy
     private int _bullLength;
     private int _bearLength;
 }
+```
 
 ## Конструктор
 
 Конструктор принимает [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) для инициализации стратегии.
 
+```cs
 // Конструктор
 public StairsCountertrendStrategy(CandleSeries candleSeries)
 {
     _subscription = new(candleSeries);
 }
+```
 
 ## Свойства
 
@@ -30,7 +34,9 @@ public StairsCountertrendStrategy(CandleSeries candleSeries)
 
 Определяет минимальное количество последовательных свечей одного направления для определения тренда.
 
+```cs
 public int Length { get; set; } = 3;
+```
 
 ## Методы
 
@@ -42,6 +48,7 @@ public int Length { get; set; } = 3;
 - Подписывается на завершение формирования свечей
 - Инициализирует обработку свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -56,6 +63,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### CandleManager_Processing
 
@@ -67,6 +75,7 @@ protected override void OnStarted(DateTimeOffset time)
 4. Принимает решение об открытии позиции против тренда
 5. Создает и добавляет дочернюю стратегию котирования
 
+```cs
 // Метод CandleManager_Processing
 private void CandleManager_Processing(ICandleMessage candle)
 {
@@ -102,6 +111,7 @@ private void CandleManager_Processing(ICandleMessage candle)
         ChildStrategies.Add(strategy);
     }
 }
+```
 
 ## Логика торговли
 

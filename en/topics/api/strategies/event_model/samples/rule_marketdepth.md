@@ -6,10 +6,12 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class SimpleRulesStrategy : Strategy
 {
 }
+```
 
 ## OnStarted Method
 
@@ -18,6 +20,7 @@ Called when the strategy starts:
 - Subscribes to trades and order book
 - Demonstrates various ways of creating and applying rules
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -53,6 +56,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Working Logic
 

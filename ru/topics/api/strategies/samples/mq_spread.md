@@ -6,12 +6,14 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class MqSpreadStrategy : Strategy
 {
     private MarketQuotingStrategy _strategyBuy;
     private MarketQuotingStrategy _strategySell;
 }
+```
 
 ## Методы
 
@@ -22,6 +24,7 @@ public class MqSpreadStrategy : Strategy
 - Подписывается на изменение рыночного времени
 - Инициализирует первоначальное создание стратегий котирования
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -29,6 +32,7 @@ protected override void OnStarted(DateTimeOffset time)
     Connector_MarketTimeChanged(new TimeSpan());
     base.OnStarted(time);
 }
+```
 
 ### Connector_MarketTimeChanged
 
@@ -37,6 +41,7 @@ protected override void OnStarted(DateTimeOffset time)
 - Проверяет текущую позицию и состояние существующих стратегий котирования
 - Создает новые стратегии котирования для покупки и продажи
 
+```cs
 // Метод Connector_MarketTimeChanged
 private void Connector_MarketTimeChanged(TimeSpan obj)
 {
@@ -62,6 +67,7 @@ private void Connector_MarketTimeChanged(TimeSpan obj)
     };
     ChildStrategies.Add(_strategySell);
 }
+```
 
 ## Логика работы
 

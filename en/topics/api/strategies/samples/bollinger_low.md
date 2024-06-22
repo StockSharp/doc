@@ -6,6 +6,7 @@
 
 ## Main Components
 
+```cs
 // Main components
 internal class BollingerStrategyLowBandStrategy : Strategy
 {
@@ -13,16 +14,19 @@ internal class BollingerStrategyLowBandStrategy : Strategy
 
    public BollingerBands BollingerBands { get; set; }
 }
+```
 
 ## Constructor
 
 The constructor takes a [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) to initialize the strategy.
 
+```cs
 // Constructor
 public BollingerStrategyLowBandStrategy(CandleSeries series)
 {
    _subscription = new(series);
 }
+```
 
 ## Methods
 
@@ -33,6 +37,7 @@ Called when the strategy starts:
 - Subscribes to candle completion
 - Initializes candle processing
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -45,16 +50,19 @@ protected override void OnStarted(DateTimeOffset time)
 
    base.OnStarted(time);
 }
+```
 
 ### IsRealTime
 
 Checks if the candle is "real" (recently closed):
 
+```cs
 // IsRealTime method
 private bool IsRealTime(ICandleMessage candle)
 {
    return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
 }
+```
 
 ### ProcessCandle
 
@@ -66,6 +74,7 @@ Main method for processing each completed candle:
 4. Makes a decision to open a short position when reaching the lower Bollinger Band
 5. Makes a decision to close the short position when reaching the middle Bollinger Band
 
+```cs
 // ProcessCandle method
 private void ProcessCandle(ICandleMessage candle)
 {
@@ -83,6 +92,7 @@ private void ProcessCandle(ICandleMessage candle)
        RegisterOrder(this.BuyAtMarket(Math.Abs(Position)));
    }
 }
+```
 
 ## Trading Logic
 

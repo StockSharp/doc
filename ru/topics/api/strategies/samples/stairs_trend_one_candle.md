@@ -6,22 +6,26 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 public class OneCandleTrendStrategy : Strategy
 {
     private readonly CandleSeries _candleSeries;
     private Subscription _subscription;
 }
+```
 
 ## Конструктор
 
 Конструктор принимает [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) для инициализации стратегии.
 
+```cs
 // Конструктор
 public OneCandleTrendStrategy(CandleSeries candleSeries)
 {
     _candleSeries = candleSeries;
 }
+```
 
 ## Методы
 
@@ -32,6 +36,7 @@ public OneCandleTrendStrategy(CandleSeries candleSeries)
 - Подписывается на получение свечей
 - Инициализирует подписку на серию свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -40,6 +45,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### OnStopped
 
@@ -47,6 +53,7 @@ protected override void OnStarted(DateTimeOffset time)
 
 - Отменяет подписку на свечи
 
+```cs
 // Метод OnStopped
 protected override void OnStopped()
 {
@@ -58,6 +65,7 @@ protected override void OnStopped()
 
     base.OnStopped();
 }
+```
 
 ### OnCandleReceived
 
@@ -67,6 +75,7 @@ protected override void OnStopped()
 2. Анализирует направление свечи (бычья или медвежья)
 3. Принимает решение об открытии позиции на основе текущей свечи и позиции
 
+```cs
 // Метод OnCandleReceived
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
@@ -84,6 +93,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
         RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
     }
 }
+```
 
 ## Логика торговли
 

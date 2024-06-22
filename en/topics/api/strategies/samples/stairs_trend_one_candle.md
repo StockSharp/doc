@@ -6,22 +6,26 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class OneCandleTrendStrategy : Strategy
 {
     private readonly CandleSeries _candleSeries;
     private Subscription _subscription;
 }
+```
 
 ## Constructor
 
 The constructor takes a [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) to initialize the strategy.
 
+```cs
 // Constructor
 public OneCandleTrendStrategy(CandleSeries candleSeries)
 {
     _candleSeries = candleSeries;
 }
+```
 
 ## Methods
 
@@ -32,6 +36,7 @@ Called when the strategy starts:
 - Subscribes to receive candles
 - Initializes subscription to the candle series
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -40,6 +45,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### OnStopped
 
@@ -47,6 +53,7 @@ Called when the strategy stops:
 
 - Cancels the subscription to candles
 
+```cs
 // OnStopped method
 protected override void OnStopped()
 {
@@ -58,6 +65,7 @@ protected override void OnStopped()
 
     base.OnStopped();
 }
+```
 
 ### OnCandleReceived
 
@@ -67,6 +75,7 @@ Main method for processing each completed candle:
 2. Analyzes the direction of the candle (bullish or bearish)
 3. Makes a decision to open a position based on the current candle and position
 
+```cs
 // OnCandleReceived method
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
@@ -84,6 +93,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
         RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
     }
 }
+```
 
 ## Trading Logic
 

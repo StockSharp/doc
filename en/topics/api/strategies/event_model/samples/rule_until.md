@@ -6,10 +6,12 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class SimpleRulesUntilStrategy : Strategy
 {
 }
+```
 
 ## OnStarted Method
 
@@ -18,6 +20,7 @@ Called when the strategy starts:
 - Subscribes to trades and order book
 - Creates a rule that executes when order book data is received until a certain condition is met
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -37,6 +40,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Working Logic
 

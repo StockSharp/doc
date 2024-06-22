@@ -6,6 +6,7 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class StairsTrendStrategy : Strategy
 {
@@ -15,16 +16,19 @@ public class StairsTrendStrategy : Strategy
     private int _bullLength;
     private int _bearLength;
 }
+```
 
 ## Constructor
 
 The constructor takes a `CandleSeries` to initialize the strategy.
 
+```cs
 // Constructor
 public StairsTrendStrategy(CandleSeries candleSeries)
 {
     _candleSeries = candleSeries;
 }
+```
 
 ## Properties
 
@@ -32,8 +36,10 @@ public StairsTrendStrategy(CandleSeries candleSeries)
 
 Defines the minimum number of consecutive candles in one direction to determine a trend.
 
+```cs
 // Length property
 public int Length { get; set; } = 3;
+```
 
 ## Methods
 
@@ -44,6 +50,7 @@ Called when the strategy starts:
 - Subscribes to receive candles
 - Initializes subscription to the candle series
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -52,6 +59,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### OnStopped
 
@@ -59,6 +67,7 @@ Called when the strategy stops:
 
 - Cancels the subscription to candles
 
+```cs
 // OnStopped method
 protected override void OnStopped()
 {
@@ -70,6 +79,7 @@ protected override void OnStopped()
 
     base.OnStopped();
 }
+```
 
 ### OnCandleReceived
 
@@ -80,6 +90,7 @@ Main method for processing each completed candle:
 3. Updates counters of consecutive bullish and bearish candles
 4. Makes a decision to open a position based on the trend length
 
+```cs
 // OnCandleReceived method
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
@@ -108,6 +119,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
         RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
     }
 }
+```
 
 ## Trading Logic
 

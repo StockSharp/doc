@@ -6,10 +6,12 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class SimpleOrderRulesStrategy : Strategy
 {
 }
+```
 
 ## OnStarted Method
 
@@ -18,6 +20,7 @@ Called when the strategy starts:
 - Subscribes to trades
 - Creates two sets of rules for processing order registration events
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -67,6 +70,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Working Logic
 

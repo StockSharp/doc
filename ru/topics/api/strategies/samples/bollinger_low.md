@@ -6,6 +6,7 @@
 
 ## Основные компоненты
 
+```cs
 // Основные компоненты
 internal class BollingerStrategyLowBandStrategy : Strategy
 {
@@ -13,16 +14,19 @@ internal class BollingerStrategyLowBandStrategy : Strategy
 
     public BollingerBands BollingerBands { get; set; }
 }
+```
 
 ## Конструктор
 
 Конструктор принимает [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) для инициализации стратегии.
 
+```cs
 // Конструктор
 public BollingerStrategyLowBandStrategy(CandleSeries series)
 {
     _subscription = new(series);
 }
+```
 
 ## Методы
 
@@ -33,6 +37,7 @@ public BollingerStrategyLowBandStrategy(CandleSeries series)
 - Подписывается на завершение формирования свечей
 - Инициализирует обработку свечей
 
+```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -45,16 +50,19 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ### IsRealTime
 
 Проверяет, является ли свеча "реальной" (недавно закрытой):
 
+```cs
 // Метод IsRealTime
 private bool IsRealTime(ICandleMessage candle)
 {
     return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
 }
+```
 
 ### ProcessCandle
 
@@ -66,6 +74,7 @@ private bool IsRealTime(ICandleMessage candle)
 4. Принимает решение об открытии короткой позиции при достижении нижней полосы Боллинджера
 5. Принимает решение о закрытии короткой позиции при достижении средней линии Боллинджера
 
+```cs
 // Метод ProcessCandle
 private void ProcessCandle(ICandleMessage candle)
 {
@@ -83,6 +92,7 @@ private void ProcessCandle(ICandleMessage candle)
         RegisterOrder(this.BuyAtMarket(Math.Abs(Position)));
     }
 }
+```
 
 ## Логика торговли
 

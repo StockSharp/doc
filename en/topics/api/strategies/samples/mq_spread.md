@@ -6,12 +6,14 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class MqSpreadStrategy : Strategy
 {
    private MarketQuotingStrategy _strategyBuy;
    private MarketQuotingStrategy _strategySell;
 }
+```
 
 ## Methods
 
@@ -22,6 +24,7 @@ Called when the strategy starts:
 - Subscribes to market time changes
 - Initializes the initial creation of quoting strategies
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -29,6 +32,7 @@ protected override void OnStarted(DateTimeOffset time)
    Connector_MarketTimeChanged(new TimeSpan());
    base.OnStarted(time);
 }
+```
 
 ### Connector_MarketTimeChanged
 
@@ -37,6 +41,7 @@ Method called when market time changes:
 - Checks the current position and state of existing quoting strategies
 - Creates new quoting strategies for buying and selling
 
+```cs
 // Connector_MarketTimeChanged method
 private void Connector_MarketTimeChanged(TimeSpan obj)
 {
@@ -62,6 +67,7 @@ private void Connector_MarketTimeChanged(TimeSpan obj)
    };
    ChildStrategies.Add(_strategySell);
 }
+```
 
 ## Working Logic
 

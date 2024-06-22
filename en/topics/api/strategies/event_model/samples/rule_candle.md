@@ -6,11 +6,13 @@
 
 ## Main Components
 
+```cs
 // Main components
 public class SimpleCandleRulesStrategy : Strategy
 {
     private Subscription _subscription;
 }
+```
 
 ## OnStarted Method
 
@@ -19,6 +21,7 @@ Called when the strategy starts:
 - Initializes subscription to 5-minute candles
 - Sets up rules for processing candles
 
+```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
@@ -54,6 +57,7 @@ protected override void OnStarted(DateTimeOffset time)
 
     base.OnStarted(time);
 }
+```
 
 ## Working Logic
 
