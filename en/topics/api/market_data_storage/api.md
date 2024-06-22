@@ -4,7 +4,7 @@
 
 For working with historical data in the examples, a NuGet package with historical data samples is used. It can be installed from the [NuGet Gallery](https://www.nuget.org/packages/StockSharp.Samples.HistoryData). This package provides a set of data that can be used to demonstrate working with the storage.
 
-All codes are available in the [StockSharp repository](https://github.com/StockSharp/StockSharp/tree/master/Samples).
+All codes are available in the [StockSharp repository](https://github.com/StockSharp/StockSharp/tree/master/Samples/03_Storage).
 
 ## Creating a Storage Registry
 

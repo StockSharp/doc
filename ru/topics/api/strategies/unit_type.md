@@ -103,7 +103,3 @@
   pips + percent = 39ш
   (decimal)(pips + percent) = 0,39
   ```
-
-## Следующие шаги
-
-[Пользовательский интерфейс (GUI)](../graphical_user_interface.md)

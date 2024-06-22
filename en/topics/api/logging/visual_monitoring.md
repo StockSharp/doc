@@ -10,7 +10,7 @@ This window allows you to display messages from all [ILogSource](xref:StockSharp
 - connectors ([IConnector](xref:StockSharp.BusinessEntities.IConnector));
 - own [ILogSource](xref:StockSharp.Logging.ILogSource) implementations (for example, the main window in the algorithm).
 
-The nesting of sources is showing in the form of a tree. Each parent node contains messages of all nested and so on, until the lowest level. For strategies such hierarchy allows you to see [child strategies](../strategies/child_strategies.md). For connectors it is also useful in the case of [BasketTrader](../connectors.md). using. Similarly, the same nesting can be arranged for your own algorithm, implementing the [ILogSource.Parent](xref:StockSharp.Logging.ILogSource.Parent) property. 
+The nesting of sources is showing in the form of a tree. Each parent node contains messages of all nested and so on, until the lowest level. For connectors it is also useful in the case of [BasketTrader](../connectors.md). using. Similarly, the same nesting can be arranged for your own algorithm, implementing the [ILogSource.Parent](xref:StockSharp.Logging.ILogSource.Parent) property. 
 
 ## Monitor using
 

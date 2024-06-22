@@ -68,7 +68,7 @@
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Вот как выглядит окно логов при работе стратегии котирования заявок ([Котирование](../strategies/quoting.md)): ![strategylogging](../../../images/strategy_logging.png)
+2. Вот как выглядит окно логов при работе стратегии: ![strategylogging](../../../images/strategy_logging.png)
 
 ## См. также
 

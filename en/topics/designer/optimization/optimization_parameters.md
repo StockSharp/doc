@@ -5,7 +5,7 @@ Optimization is performed on strategy parameters that have the following types:
 - Numerical (integer and fractional)
 - Time ([TimeSpan](xref:System.TimeSpan))
 - Boolean value (True-False)
-- [Unit](../../api/trading_algorithms/unit_type.md) value
+- [Unit](../../api/strategies/unit_type.md) value
 
 By default, all parameters with these types will be represented in the [optimizer parameters table](brute_force.md). If it is necessary to exclude some parameter from the optimization, then:
 

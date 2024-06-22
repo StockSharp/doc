@@ -1703,33 +1703,36 @@
   - name: Strategies
     href: api/strategies.md
     items:
-    - name: Creating strategies
-      href: api/strategies/creating_strategies.md
-    - name: Iteration model
-      href: api/strategies/iteration_model.md
-    - name: Child strategies
-      href: api/strategies/child_strategies.md
-    - name: Quoting
-      href: api/strategies/quoting.md
-    - name: Take-profit and stop-loss
+    - name: Positions protection
       href: api/strategies/take_profit_and_stop_loss.md
-    - name: Reports
-      href: api/strategies/reports.md
     - name: Settings saving and loading
       href: api/strategies/settings_saving_and_loading.md
     - name: Orders and trades loading
       href: api/strategies/orders_and_trades_loading.md
-  - name: Event model
-    href: api/event_model.md
-    items:
-    - name: Rules using
-      href: api/event_model/rules_using.md
-    - name: Rules suspension
-      href: api/event_model/rules_suspension.md
-    - name: Mutually exclusive rules
-      href: api/event_model/rules_mutually_exclusive.md
-    - name: Create own rule
-      href: api/event_model/rules_create.md
+    - name: Round price
+      href: api/strategies/shrink_price.md
+    - name: Unit type
+      href: api/strategies/unit_type.md
+    - name: Event model
+      href: api/strategies/event_model.md
+      items:
+      - name: Rules using
+        href: api/strategies/event_model/rules_using.md
+      - name: Rules suspension
+        href: api/strategies/event_model/rules_suspension.md
+      - name: Mutually exclusive rules
+        href: api/strategies/event_model/rules_mutually_exclusive.md
+      - name: Create own rule
+        href: api/strategies/event_model/rules_create.md
+    - name: Samples
+      href: api/strategies/samples.md
+      items:
+      - name: Classic Bollinger strategy
+        href: api/strategies/samples/bollinger_classic.md
+      - name: Bollinger low band
+        href: api/strategies/samples/bollinger_low.md
+      - name: Bollinger up band
+        href: api/strategies/samples/bollinger_up.md
   - name: Logging
     href: api/logging.md
     items:
@@ -1743,25 +1746,6 @@
       href: api/logging/visual_monitoring.md
     - name: Custom ILogListener
       href: api/logging/custom_iloglistener.md
-  - name: Trading algorithms
-    href: api/trading_algorithms.md
-    items:
-    - name: Slippage
-      href: api/trading_algorithms/slippage.md
-    - name: Profit-loss
-      href: api/trading_algorithms/profit_loss.md
-    - name: Position
-      href: api/trading_algorithms/position.md
-    - name: Latency
-      href: api/trading_algorithms/latency.md
-    - name: Commission
-      href: api/trading_algorithms/commission.md
-    - name: Base algorithms
-      href: api/trading_algorithms/base_algorithms.md
-    - name: Equity curve
-      href: api/trading_algorithms/equity_curve.md
-    - name: Unit type
-      href: api/trading_algorithms/unit_type.md
   - name: Options
     href: api/options.md
     items:

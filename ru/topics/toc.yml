@@ -1865,33 +1865,36 @@
   - name: Cтратегии
     href: api/strategies.md
     items:
-    - name: Создание стратегии
-      href: api/strategies/creating_strategies.md
-    - name: Итерационная модель
-      href: api/strategies/iteration_model.md
-    - name: Дочерние стратегии
-      href: api/strategies/child_strategies.md
-    - name: Котирование
-      href: api/strategies/quoting.md
-    - name: Тейк-профит и стоп-лосс
+    - name: Защита позиций
       href: api/strategies/take_profit_and_stop_loss.md
-    - name: Отчеты
-      href: api/strategies/reports.md
     - name: Сохранение и загрузка настроек
       href: api/strategies/settings_saving_and_loading.md
-    - name: Загрузка заявок и сделок
+    - name: Загрузка состояния
       href: api/strategies/orders_and_trades_loading.md
-  - name: Событийная модель
-    href: api/event_model.md
-    items:
-    - name: Использование правил
-      href: api/event_model/rules_using.md
-    - name: Приостановка правил
-      href: api/event_model/rules_suspension.md
-    - name: Взаимоисключающие правила
-      href: api/event_model/rules_mutually_exclusive.md
-    - name: Собственное правило
-      href: api/event_model/rules_create.md
+    - name: Округление цены
+      href: api/strategies/shrink_price.md
+    - name: Тип Unit
+      href: api/strategies/unit_type.md
+    - name: Событийная модель
+      href: api/strategies/event_model.md
+      items:
+      - name: Использование правил
+        href: api/strategies/event_model/rules_using.md
+      - name: Приостановка правил
+        href: api/strategies/event_model/rules_suspension.md
+      - name: Взаимоисключающие правила
+        href: api/strategies/event_model/rules_mutually_exclusive.md
+      - name: Собственное правило
+        href: api/strategies/event_model/rules_create.md
+    - name: Примеры стратегий
+      href: api/strategies/samples.md
+      items:
+      - name: Классическая стратегия Боллинджера
+        href: api/strategies/samples/bollinger_classic.md
+      - name: Стратегия Боллинджера с фокусом на нижней полосе
+        href: api/strategies/samples/bollinger_low.md
+      - name: Стратегия Боллинджера с фокусом на верхней полосе
+        href: api/strategies/samples/bollinger_up.md
   - name: Логирование
     href: api/logging.md
     items:
@@ -1905,25 +1908,6 @@
       href: api/logging/visual_monitoring.md
     - name: Создание ILogListener
       href: api/logging/custom_iloglistener.md
-  - name: Торговые алгоритмы
-    href: api/trading_algorithms.md
-    items:
-    - name: Проскальзывание
-      href: api/trading_algorithms/slippage.md
-    - name: Прибыль-убыток
-      href: api/trading_algorithms/profit_loss.md
-    - name: Позиция
-      href: api/trading_algorithms/position.md
-    - name: Задержка
-      href: api/trading_algorithms/latency.md
-    - name: Комиссия
-      href: api/trading_algorithms/commission.md
-    - name: Основные алгоритмы
-      href: api/trading_algorithms/base_algorithms.md
-    - name: Кривая эквити
-      href: api/trading_algorithms/equity_curve.md
-    - name: Тип Unit
-      href: api/trading_algorithms/unit_type.md
   - name: Опционы
     href: api/options.md
     items:

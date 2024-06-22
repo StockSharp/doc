@@ -301,7 +301,7 @@
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Подписка на событие [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged), для расчета кривой эквити (подробнее, в разделе [Кривая эквити](../trading_algorithms/equity_curve.md)), а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
+9. Подписка на событие [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged), для расчета кривой эквити, а также визуальное наблюдение за прогрессом тестирования (в примере используются элементы в виде полос прогресса): 
 
    ```cs
    // копируем параметры на визуальную панель

@@ -285,7 +285,7 @@ The [S\#](../../api.md) installation package contains an example of SampleHistor
    	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    };
    ```
-9. Subscription to the [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event, to calculate the equity curve (for more details, see [Equity curve](../trading_algorithms/equity_curve.md)), as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
+9. Subscription to the [Strategy.PnLChanged](xref:StockSharp.Algo.Strategies.Strategy.PnLChanged) event, to calculate the equity curve, as well as the visual observation over the testing progress (the elements in the form of progress bar are used in this example): 
 
    ```cs
    // fill parameters panel

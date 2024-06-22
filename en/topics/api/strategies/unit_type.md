@@ -102,7 +102,3 @@ To simplify works with arithmetic operations on such values as percent, points o
   pips + percent = 39s
   (decimal)(pips + percent) = 0.39
   ```
-
-## Next Steps
-
-[GUI marshalling](../graphical_user_interface.md)

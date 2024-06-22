@@ -4,7 +4,7 @@
 
 Для работы с историческими данными в примерах используется NuGet пакет с образцами исторических данных. Его можно установить из [NuGet Gallery](https://www.nuget.org/packages/StockSharp.Samples.HistoryData). Этот пакет предоставляет набор данных, которые можно использовать для демонстрации работы с хранилищем.
 
-Все коды доступны в [репозитории StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Samples).
+Все коды доступны в [репозитории StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Samples/03_Storage).
 
 ## Создание реестра хранилища
 

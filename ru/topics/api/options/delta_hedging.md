@@ -31,7 +31,8 @@
    hedge.Start();
    ```
 
-   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) принимает в качестве [дочерних стратегий](../strategies/child_strategies.md) стратегии, работающие отдельно по своему страйку. Таким образом [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) контролирует суммарную позицию по всем дочерним опционным стратегиям. 
+   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) принимает в качестве дочерних стратегий стратегии, работающие отдельно по своему страйку. Таким образом [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) контролирует суммарную позицию по всем дочерним опционным стратегиям. 
+
 3. Завершение работы дельта хеджирования: 
 
    ```none

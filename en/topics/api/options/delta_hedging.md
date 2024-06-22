@@ -31,7 +31,8 @@ If you want to protect positions by option strategies (for example, as [Volatili
    hedge.Start();
    ```
 
-   The [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) takes strategies, working separately on their strike, as [child strategies](../strategies/child_strategies.md). Thus, [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) controls the total position by all child option strategies. 
+   The [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) takes strategies, working separately on their strike, as child strategies. Thus, [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) controls the total position by all child option strategies. 
+
 3. Completing the delta hedging: 
 
    ```none

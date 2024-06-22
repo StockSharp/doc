@@ -68,7 +68,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Here is the log window when orders quoting strategy working ([Quoting](../strategies/quoting.md)): ![strategylogging](../../../images/strategy_logging.png)
+2. Here is the log window when strategy working: ![strategylogging](../../../images/strategy_logging.png)
 
 ## Recommended content
 
