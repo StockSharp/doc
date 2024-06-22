@@ -1886,15 +1886,45 @@
         href: api/strategies/event_model/rules_mutually_exclusive.md
       - name: Собственное правило
         href: api/strategies/event_model/rules_create.md
+      - name: Примеры
+        items:
+        - name: Правило одной свечи
+          href: api/strategies/event_model/samples/rule_candle.md
+        - name: Правила на тиковые сделки
+          href: api/strategies/event_model/samples/rule_ticks.md
+        - name: Правила на стаканы и сделки
+          href: api/strategies/event_model/samples/rule_marketdepth.md
+        - name: Правило на заявки
+          href: api/strategies/event_model/samples/rule_order.md
+        - name: Правило До
+          href: api/strategies/event_model/samples/rule_until.md
     - name: Примеры стратегий
       href: api/strategies/samples.md
       items:
+      - name: Стратегия арбитража
+        href: api/strategies/samples/arbitrage.md
       - name: Классическая стратегия Боллинджера
         href: api/strategies/samples/bollinger_classic.md
       - name: Стратегия Боллинджера с фокусом на нижней полосе
         href: api/strategies/samples/bollinger_low.md
       - name: Стратегия Боллинджера с фокусом на верхней полосе
         href: api/strategies/samples/bollinger_up.md
+      - name: Скользящие средние с мартингейлом
+        href: api/strategies/samples/sma_martingale.md
+      - name: Трендовая стратегия
+        href: api/strategies/samples/stairs_trend_one_candle.md
+      - name: Трендовая стратегия лестницей
+        href: api/strategies/samples/stairs_trend.md
+      - name: Контртрендовая стратегия
+        href: api/strategies/samples/stairs_countertrend_one_candle.md
+      - name: Контртрендовая стратегия лестницей
+        href: api/strategies/samples/stairs_countertrend.md
+      - name: Контртрендовая стратегия с котированием
+        href: api/strategies/samples/stairs_countertrend_quoting.md
+      - name: Стратегия котирования
+        href: api/strategies/samples/mq.md
+      - name: Стратегия котирования по спреду
+        href: api/strategies/samples/mq_spread.md
   - name: Логирование
     href: api/logging.md
     items:

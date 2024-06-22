@@ -1724,15 +1724,45 @@
         href: api/strategies/event_model/rules_mutually_exclusive.md
       - name: Create own rule
         href: api/strategies/event_model/rules_create.md
+      - name: Samples
+        items:
+        - name: Candle rule
+          href: api/strategies/event_model/samples/rule_candle.md
+        - name: Ticks rule
+          href: api/strategies/event_model/samples/rule_ticks.md
+        - name: Market depth and ticks rule
+          href: api/strategies/event_model/samples/rule_marketdepth.md
+        - name: Order rule
+          href: api/strategies/event_model/samples/rule_order.md
+        - name: Rule until
+          href: api/strategies/event_model/samples/rule_until.md
     - name: Samples
       href: api/strategies/samples.md
       items:
+      - name: Arbitrage Strategy
+        href: api/strategies/samples/arbitrage.md
       - name: Classic Bollinger strategy
         href: api/strategies/samples/bollinger_classic.md
       - name: Bollinger low band
         href: api/strategies/samples/bollinger_low.md
       - name: Bollinger up band
         href: api/strategies/samples/bollinger_up.md
+      - name: Moving Averages with Martingale
+        href: api/strategies/samples/sma_martingale.md
+      - name: Trend Strategy
+        href: api/strategies/samples/stairs_trend_one_candle.md
+      - name: Stairs Trend Strategy
+        href: api/strategies/samples/stairs_trend.md
+      - name: Countertrend Strategy
+        href: api/strategies/samples/stairs_countertrend_one_candle.md
+      - name: Stairs Countertrend Strategy
+        href: api/strategies/samples/stairs_countertrend.md
+      - name: Countertrend Strategy with Quoting
+        href: api/strategies/samples/stairs_countertrend_quoting.md
+      - name: Quoting Strategy
+        href: api/strategies/samples/mq.md
+      - name: Spread Quoting Strategy
+        href: api/strategies/samples/mq_spread.md
   - name: Logging
     href: api/logging.md
     items:
