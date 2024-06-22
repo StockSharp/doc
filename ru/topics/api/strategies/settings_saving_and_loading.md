@@ -5,8 +5,8 @@
 ```cs
 public override void Load(SettingsStorage settings)
 {
-	if (settings.Contains("UsedVolume"))
-	    Id = settings.GetValue<Guid>("UsedVolume");
+    if (settings.Contains("UsedVolume"))
+        Id = settings.GetValue<Guid>("UsedVolume");
 	
     if (settings.Contains("Ticks"))
         Name = settings.GetValue<string>("Ticks");
@@ -14,7 +14,7 @@ public override void Load(SettingsStorage settings)
     if (settings.Contains("SpreadVolume"))
         Volume = settings.GetValue<decimal>("SpreadVolume");
 	        
-	base.Load(settings);
+    base.Load(settings);
 }
 	
 public override void Save(SettingsStorage settings)
@@ -24,7 +24,7 @@ public override void Save(SettingsStorage settings)
     settings.SetValue("Volume", Volume);
     settings.SetValue("SpreadVolume", SpreadVolume);
 	    
-	base.Save(settings);
+    base.Save(settings);
 }
 ```
 
@@ -50,10 +50,10 @@ public override void Save(SettingsStorage settings)
     settings.SetValue("Volume", Volume);
     settings.SetValue("SpreadVolume", SpreadVolume);
 	    
-	base.Save(settings);
+    base.Save(settings);
 	
-	//Сохраняем настройки в файл
-	new JsonSerializer<SettingsStorage>().Serialize(settings, "marketProfile.json");
+    //Сохраняем настройки в файл
+    new JsonSerializer<SettingsStorage>().Serialize(settings, "marketProfile.json");
 }
 ```
 

@@ -5,8 +5,8 @@ To save and load strategy settings the overrides of [Strategy.Save](xref:StockSh
 ```cs
 public override void Load(SettingsStorage settings)
 {
-	if (settings.Contains("UsedVolume"))
-	    Id = settings.GetValue<Guid>("UsedVolume");
+    if (settings.Contains("UsedVolume"))
+      Id = settings.GetValue<Guid>("UsedVolume");
 	
     if (settings.Contains("Ticks"))
         Name = settings.GetValue<string>("Ticks");
@@ -14,7 +14,7 @@ public override void Load(SettingsStorage settings)
     if (settings.Contains("SpreadVolume"))
         Volume = settings.GetValue<decimal>("SpreadVolume");
 	        
-	base.Load(settings);
+    base.Load(settings);
 }
 	
 public override void Save(SettingsStorage settings)
@@ -24,7 +24,7 @@ public override void Save(SettingsStorage settings)
     settings.SetValue("Volume", Volume);
     settings.SetValue("SpreadVolume", SpreadVolume);
 	    
-	base.Save(settings);
+    base.Save(settings);
 }
 ```
 
@@ -49,9 +49,9 @@ public override void Save(SettingsStorage settings)
     settings.SetValue("Volume", Volume);
     settings.SetValue("SpreadVolume", SpreadVolume);
 	    
-	base.Save(settings);
+    base.Save(settings);
 	
-	new JsonSerializer<PlazaTable>().Serialize(settings, "marketProfile.json");
+    new JsonSerializer<PlazaTable>().Serialize(settings, "marketProfile.json");
 }
 ```
 

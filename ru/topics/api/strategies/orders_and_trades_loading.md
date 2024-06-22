@@ -12,7 +12,7 @@
 
 1. Для этого, чтобы [Strategy](xref:StockSharp.Algo.Strategies.Strategy) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)**. На вход данному методу из [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) поступят все [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) и [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders), и их необходимо отфильтровать:
 
-   ```cs
+```cs
    private bool _isOrdersLoaded;
    private bool _isStopOrdersLoaded;
    		  	
@@ -23,10 +23,11 @@
    		return base.ProcessNewOrders(newOrders, isStopOrders);
    	return Filter(newOrders);
    }
-   ```
+```
+
 2. Чтобы реализовать фильтрацию заявок, необходимо определить критерий отсеивания. Например, если в процессе работы стратегии сохранять все регистрируемые заявки в файл, то можно сделать фильтр по номеру транзакции [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId). Если такой номер присутствует в файле, значит заявка была зарегистрирована через данную стратегию: 
 
-   ```cs
+```cs
    private IEnumerable<Order> Filter(IEnumerable<Order> orders)
    {
    	// считываем номера транзакций из файла
@@ -35,10 +36,11 @@
    	// находим наши заявки по считанным номерам
    	return orders.Where(o => transactions.Contains(o.TransactionId));
    }
-   ```
+```
+
 3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**: 
 
-   ```cs
+```cs
    protected override void RegisterOrder(Order order)
    {
    	// отравляем заявку дальше на регистрацию
@@ -47,5 +49,6 @@
    	// добавляем новый номер транзакции
    	File.AppendAllLines("orders_{0}.txt".Put(Name), new[]{ order.TransactionId.ToString() });
    }
-   ```
+```
+
 4. После того, как заявки будут загружены в стратегию, загрузятся и все совершенные по ним сделки. Это будет сделано автоматически. 

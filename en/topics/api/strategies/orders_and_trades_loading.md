@@ -12,7 +12,7 @@ The following example shows the loading of all trades in the strategy:
 
 1. To load the previous state of the [Strategy](xref:StockSharp.Algo.Strategies.Strategy), you must override [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)**. All [IConnector.Orders](xref:StockSharp.BusinessEntities.IConnector.Orders) and [IConnector.StopOrders](xref:StockSharp.BusinessEntities.IConnector.StopOrders) will be received by this method from the [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted). And you should to filter them:
 
-   ```cs
+```cs
    private bool _isOrdersLoaded;
    private bool _isStopOrdersLoaded;
    		  	
@@ -23,10 +23,11 @@ The following example shows the loading of all trades in the strategy:
    		return base.ProcessNewOrders(newOrders, isStopOrders);
    	return Filter(newOrders);
    }
-   ```
+```
+
 2. To implement orders filtering, you must determine the filter criterion. For example, if to save all registered during the strategy work orders in the file, you can create the filter by the transaction number [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId). If such number is in the file, so the order was registered through this strategy: 
 
-   ```cs
+```cs
    private IEnumerable<Order> Filter(IEnumerable<Order> orders)
    {
    	// to get the identifiers from text file
@@ -35,10 +36,11 @@ The following example shows the loading of all trades in the strategy:
    	// finding our orders
    	return orders.Where(o => transactions.Contains(o.TransactionId));
    }
-   ```
+```
+
 3. A record of orders transaction numbers registering through the strategy can be accomplished by overriding the [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)** method: 
 
-   ```cs
+```cs
    protected override void RegisterOrder(Order order)
    {
    	// registering the order
@@ -47,5 +49,6 @@ The following example shows the loading of all trades in the strategy:
    	// and saving order's transaction id
    	File.AppendAllLines("orders_{0}.txt".Put(Name), new[]{ order.TransactionId.ToString() });
    }
-   ```
+```
+
 4. Once orders are loaded in the strategy, all of their matched trades will be also loaded. This will be done automatically. 
