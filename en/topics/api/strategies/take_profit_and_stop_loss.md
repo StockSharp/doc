@@ -1,58 +1,138 @@
-# Take\-profit and stop\-loss
+# Position Protection
 
-The [S\#](../../api.md) has a mechanism of automatic position protection through [TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy) and [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy) strategies using the [child strategies](child_strategies.md) approach and the [BasketStrategy](xref:StockSharp.Algo.Strategies.BasketStrategy). These strategies have a number of advantages over usual stop order: 
+## Introduction
 
-1. Protective strategies do not register orders as long as the condition occurs. The orders deposit size is not blocked by the broker.
-2. Strategies are platform\-independent, and hence will work through any broker regardless of its technology. And stop orders, which conditions set via [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition), emulated by the [Rithmic](../connectors/stock_market/rithmic.md), [OpenECry](../connectors/stock_market/openecry.md) etc. platforms by itself, and their logic is locked to the broker.
-3. Protective strategies can work with direct connection to exchanges.
-4. Automatic tracking of partial or complete closing of the protected position (with the following stops removal). And also the position reverting. For example, when the position was long, and then it was turned into a short. In this case stops should be also "reverted".
+This modification of the SMA strategy implements a mechanism for protecting open positions using a local protective controller. This approach allows for flexible risk management and automatic closing of positions when certain conditions are met.
 
-## Prerequisites
+## Key Components of Position Protection
 
-[Child strategies](child_strategies.md)
+### Protective Controller
 
-[Event model](creating_strategies.md)
+The strategy uses two key objects for position protection:
 
-## Take\-profit and stop\-loss
+```cs
+// Declaration of protective controllers
+private readonly ProtectiveController _protectiveController = new();
+private IProtectivePositionController _posController;
 
-1. As an example, the order registration for the "at market" purchase and the following protection of the long position considered. To do this, the rule responsive to the order’s trades occurring (for details see the [Event model](creating_strategies.md)) created: 
+// This code initializes the main protective controller and creates a placeholder for
+// a specific position controller. ProtectiveController manages all positions,
+// while IProtectivePositionController is responsible for a specific position.
+```
 
-   ```cs
-   public class MyStrategy : Strategy
-   {
-   	public void OpenPosition()
-   	{
-   		var longPos = this.BuyAtMarket();
-   		
-   		// applying rules to track the order's trades
-   		longPos
-   			.WhenNewTrade()
-   			.Do(OnNewOrderTrade)
-   			.Apply(this);
-   		
-   		RegisterOrder(longPos);
-   	}
-   }
-   					
-   ```
-2. In order to protect the position you should use [TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy) or [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy) strategies. If you need simultaneous protection from both sides, it is recommended to use the [TakeProfitStopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStopLossStrategy). This strategy automatically changes the one of strategies volume with partial activation (for example, at the touch of a stop\-loss level only part of the position has been closed, and then the market came back to break\-even zone): 
+- `_protectiveController`: The main controller managing protection for all positions.
+- `_posController`: Controller for a specific position.
 
-   ```cs
-   private void OnNewOrderTrade(MyTrade trade)
-   {
-       // take is 40 points
-       var takeProfit = new TakeProfitStrategy(trade, 40);
-       // stop is 20 points
-       var stopLoss = new StopLossStrategy(trade, 20);
-       var protectiveStrategies = new TakeProfitStopLossStrategy(takeProfit, stopLoss);
-       ChildStrategies.AddRange(protectiveStrategies);
-   }
-   ```
+### Protection Initialization
 
-## Automatic closing and position reverting
+When opening a new position or modifying an existing one, the protective controller is initialized:
 
-[TakeProfitStrategy](xref:StockSharp.Algo.Strategies.Protective.TakeProfitStrategy) and [StopLossStrategy](xref:StockSharp.Algo.Strategies.Protective.StopLossStrategy) strategies do not track partial position closing or its reverting (for example, the position was closed by hands at the terminal and was opened in the opposite direction). To automatically track such situations in the algorithm, you must use [AutoProtectiveStrategy](xref:StockSharp.Algo.Strategies.Protective.AutoProtectiveStrategy). This strategy by trades incoming into it ([AutoProtectiveStrategy.ProcessNewMyTrade](xref:StockSharp.Algo.Strategies.Protective.AutoProtectiveStrategy.ProcessNewMyTrade(StockSharp.BusinessEntities.MyTrade))**(**[StockSharp.BusinessEntities.MyTrade](xref:StockSharp.BusinessEntities.MyTrade) trade **)**) decides what to do: to protect them (if there is a position opening or its increase) or to stop the protective strategies (if there is a position closing or its decrease). The strategy also automatically reverts protective strategies in case of position reverting (from long to short or from short to long). 
+```cs
+// Initialization of the protective controller for a new position
+this.WhenNewMyTrade()
+    .Do(t =>
+    {
+        // ... (other code)
 
-## Next Steps
+        if (TakeValue.IsSet() || StopValue.IsSet())
+        {
+            _posController ??= _protectiveController.GetController(
+                security.ToSecurityId(),
+                portfolio.Name,
+                new LocalProtectiveBehaviourFactory(security.PriceStep, security.Decimals),
+                TakeValue, StopValue, true, default, default, true);
+        }
 
-[Reports](reports.md)
+        var info = _posController?.Update(t.Trade.Price, t.GetPosition());
+
+        if (info is not null)
+            ActiveProtection(info.Value);
+    })
+    .Apply(this);
+
+// This code creates and initializes a protective controller for a new position
+// upon receiving information about a new trade. It also updates the information
+// about the position in the controller and activates protection if necessary.
+```
+
+This creates a controller for a specific position with given take-profit and stop-loss parameters.
+
+### Updating Position Information
+
+```cs
+var info = _posController?.Update(t.Trade.Price, t.GetPosition());
+
+if (info is not null)
+   ActiveProtection(info.Value);
+```
+
+This allows the controller to track the current state of the position and adjust protective orders as necessary.
+
+### Checking Activation Conditions for Protection
+
+In the method processing new data (e.g., when receiving a new candle), the conditions for activating protective orders are checked:
+
+```cs
+// Checking protection activation conditions in the ProcessCandle method
+var info = _posController?.TryActivate(candle.ClosePrice, CurrentTime);
+
+if (info is not null)
+    ActiveProtection(info.Value);
+
+// This code checks if a protective order needs to be activated based on
+// the current price (in this case, the candle's closing price) and time.
+// If the conditions are met, the ActiveProtection method is called.
+```
+
+Here, the candle's closing price is used as the current price, but it can be any relevant price value (e.g., the price of the last trade or the current spread in the order book).
+
+### Activating a Protective Order
+
+If the conditions for activating a protective order are met, the corresponding logic is triggered:
+
+```cs
+// Method for activating a protective order
+private void ActiveProtection((bool isTake, Sides side, decimal price, decimal volume, OrderCondition condition) info)
+{
+    // sending a protective (position-closing) order as a regular order
+    RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
+}
+
+// This method creates and registers an order to close the position
+// based on the information received from the protective controller.
+```
+
+This method creates and registers an order to close the position according to the parameters returned by the protective controller.
+
+## Comparison with Server-Side Stop Orders
+
+### Advantages of Server-Side Stop Orders
+
+1. Stop orders (stop loss and take profit) are sent directly to the broker.
+2. The broker independently monitors the achievement of stop conditions.
+3. When a stop is triggered, the broker automatically places a market or limit order.
+
+### Advantages of the Local Approach
+
+1. **Flexibility**: Ability to implement complex protection logic unavailable in standard server-side stops.
+2. **Confidentiality**: Information about stop levels is not transmitted to the broker, which can be important in some markets.
+3. **Reaction Speed**: Potentially faster reaction to changing market conditions.
+4. **Adaptability**: Ability to dynamically adjust protection levels based on market data or strategy logic.
+5. **Independence from broker/exchange implementation**: The local approach works the same regardless of whether the broker or exchange supports all necessary types of protective orders.
+6. **Testing on historical data**: Ability to fully test the strategy with position protection on historical data, which is impossible with server-side stops.
+
+### Disadvantages of the Local Approach
+
+1. **Dependence on trading terminal functionality**: If the terminal is disconnected, the protection will not work.
+2. **System load**: Requires constant calculations on the client side.
+3. **Delays**: Possible delays in placing an order after protection conditions are triggered.
+
+### Disadvantages of Server-Side Stop Orders
+
+1. **Dependence on broker/exchange implementation**: Not all brokers or exchanges support all types of protective orders, which may limit strategy functionality.
+2. **Inability to fully test on historical data**: Server-side stops cannot be accurately modeled when testing on historical data, making it difficult to assess the real effectiveness of the strategy.
+3. **Limited flexibility**: Usually only basic types of stop orders are available, limiting the possibilities for implementing complex protective mechanisms.
+
+## Conclusion
+
+Using a local protective controller in the SMA strategy allows for effective risk management of open positions. This approach provides flexibility in setting protection parameters and quick reaction to changes in market situations, which is critical for successful trading.
