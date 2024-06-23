@@ -47,12 +47,12 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 1. Передать генератор идентификаторов транзакций, который будет использоваться для создания идентификаторов сообщений.
 
 2. Указать поддерживаемые типы сообщений с помощью методов:
-  - [IMessageAdapter.AddMarketDataSupport](xref:StockSharp.Messages.IMessageAdapter.AddMarketDataSupport(StockSharp.Messages.DataType[])) - поддержка сообщений для подписки на рыночные данные.
-  - [IMessageAdapter.AddTransactionalSupport](xref:StockSharp.Messages.IMessageAdapter.AddTransactionalSupport) - поддержка транзакционных сообщений.
+  - [AddMarketDataSupport](xref:StockSharp.Messages.Extensions.AddMarketDataSupport(StockSharp.Messages.MessageAdapter)) - поддержка сообщений для подписки на рыночные данные.
+  - [AddTransactionalSupport](xref:StockSharp.Messages.Extensions.AddTransactionalSupport(StockSharp.Messages.MessageAdapter)) - поддержка транзакционных сообщений.
 
-3. Указать конкретные типы рыночных данных, которые поддерживает адаптер, с помощью метода [IMessageAdapter.AddSupportedMarketDataType](xref:StockSharp.Messages.IMessageAdapter.AddSupportedMarketDataType(StockSharp.Messages.DataType)).
+3. Указать конкретные типы рыночных данных, которые поддерживает адаптер, с помощью метода [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)).
 
-4. Указать типы результирующих сообщений, которые будут поддерживаться адаптером, с помощью метода [IMessageAdapter.AddSupportedResultMessage](xref:StockSharp.Messages.IMessageAdapter.AddSupportedResultMessage(StockSharp.Messages.MessageTypes)). Такие типы сообщений как [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) и т.п. запрашивают информацию у коннектора и ожидают соответствующих ответных сообщений.
+4. Указать типы результирующих сообщений, которые будут поддерживаться адаптером, с помощью метода [AddSupportedResultMessage](xref:StockSharp.Messages.Extensions.AddSupportedResultMessage(StockSharp.Messages.MessageAdapter,StockSharp.Messages.MessageTypes)). Такие типы сообщений как [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) и т.п. запрашивают информацию у коннектора и ожидают соответствующих ответных сообщений.
 
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)

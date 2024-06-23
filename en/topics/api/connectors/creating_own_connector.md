@@ -47,12 +47,12 @@ In the adapter constructor, you need to perform the following actions:
 1. Pass the transaction ID generator that will be used to create message IDs.
 
 2. Specify the supported message types using the methods:
- - [IMessageAdapter.AddMarketDataSupport](xref:StockSharp.Messages.IMessageAdapter.AddMarketDataSupport(StockSharp.Messages.DataType[])) - support for messages to subscribe to market data.
- - [IMessageAdapter.AddTransactionalSupport](xref:StockSharp.Messages.IMessageAdapter.AddTransactionalSupport) - support for transactional messages.
+ - [AddMarketDataSupport](xref:StockSharp.Messages.Extensions.AddMarketDataSupport(StockSharp.Messages.MessageAdapter)) - support for messages to subscribe to market data.
+ - [AddTransactionalSupport](xref:StockSharp.Messages.Extensions.AddTransactionalSupport(StockSharp.Messages.MessageAdapter)) - support for transactional messages.
 
-3. Specify the specific types of market data supported by the adapter using the [IMessageAdapter.AddSupportedMarketDataType](xref:StockSharp.Messages.IMessageAdapter.AddSupportedMarketDataType(StockSharp.Messages.DataType)) method.
+3. Specify the specific types of market data supported by the adapter using the [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)) method.
 
-4. Specify the types of resulting messages that will be supported by the adapter using the [IMessageAdapter.AddSupportedResultMessage](xref:StockSharp.Messages.IMessageAdapter.AddSupportedResultMessage(StockSharp.Messages.MessageTypes)) method. Message types such as [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage), etc. request information from the connector and expect corresponding response messages.
+4. Specify the types of resulting messages that will be supported by the adapter using the [AddSupportedResultMessage](xref:StockSharp.Messages.Extensions.AddSupportedResultMessage(StockSharp.Messages.MessageAdapter,StockSharp.Messages.MessageTypes)) method. Message types such as [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage), etc. request information from the connector and expect corresponding response messages.
 
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)

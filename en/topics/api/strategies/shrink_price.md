@@ -2,17 +2,17 @@
 
 ## Introduction
 
-The [ShrinkPrice](xref:StockSharp.Messages.Extensions.ShrinkPrice(System.Decimal,StockSharp.Messages.SecurityMessage)) method in StockSharp is an essential tool for correctly rounding prices according to market requirements. This ensures that submitted orders comply with exchange or broker rules.
+The [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) method in StockSharp is an essential tool for correctly rounding prices according to market requirements. This ensures that submitted orders comply with exchange or broker rules.
 
 ## Purpose
 
-The primary goal of [ShrinkPrice](xref:StockSharp.Messages.Extensions.ShrinkPrice(System.Decimal,StockSharp.Messages.SecurityMessage)) is to round prices to allowable values, considering:
+The primary goal of [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) is to round prices to allowable values, considering:
 1. The instrument's price step ([Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep))
 2. The number of decimal places ([Security.Decimals](xref:StockSharp.BusinessEntities.Security.Decimals))
 
 ## Importance of Usage
 
-Using [ShrinkPrice](xref:StockSharp.Messages.Extensions.ShrinkPrice(System.Decimal,StockSharp.Messages.SecurityMessage)) is crucial for:
+Using [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) is crucial for:
 - Preventing order rejection by the exchange or broker due to incorrect prices
 - Ensuring accuracy in calculations and trading operations
 - Complying with the rules and restrictions of specific markets or instruments
@@ -68,8 +68,8 @@ Console.WriteLine($"Order price: {order.Price}");
 
 ## Application
 
-[ShrinkPrice](xref:StockSharp.Messages.Extensions.ShrinkPrice(System.Decimal,StockSharp.Messages.SecurityMessage)) should be used before submitting any orders or performing calculations that require precise price compliance with market conditions.
+[ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) should be used before submitting any orders or performing calculations that require precise price compliance with market conditions.
 
 ## Conclusion
 
-Proper use of [ShrinkPrice](xref:StockSharp.Messages.Extensions.ShrinkPrice(System.Decimal,StockSharp.Messages.SecurityMessage)) helps avoid errors when placing orders and ensures that trading algorithms operate correctly according to market requirements.
+Proper use of [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) helps avoid errors when placing orders and ensures that trading algorithms operate correctly according to market requirements.

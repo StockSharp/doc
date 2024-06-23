@@ -198,7 +198,7 @@ RegisterOrder(this.CreateOrder(direction, price, volume));
 // Creating and registering a new order
 ```
 
-Orders are registered using the [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.Messages.OrderRegisterMessage)) method.
+Orders are registered using the [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order)) method.
 
 ## Handling Own Trades
 

@@ -2,7 +2,7 @@
 
 Extended settings of [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
 
-- [EmulationSettings.MarketTimeChangedInterval](xref:StockSharp.Algo.Strategies.Testing.EmulationSettings.MarketTimeChangedInterval) \- time change event input interval. If trades generators are used, then the trades will be generated with this periodicity. The default is 1 minute.
+- [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) \- time change event input interval. If trades generators are used, then the trades will be generated with this periodicity. The default is 1 minute.
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) \- The minimum value of the registered orders latency. By default, it is equal to **TimeSpan.Zero**, which means instant acceptance of the registered orders by the exchange. 
 - [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) \- to execute the orders if the price "touches" the level (an assumption is sometimes too "optimistic" and the mode must be switched off for a realistic testing). If the mode is off, then limit orders will be executed if the price is "passed through them" at least in 1 step. The option is available in all modes except the order log. The default is off.
 

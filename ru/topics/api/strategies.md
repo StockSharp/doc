@@ -197,7 +197,7 @@ RegisterOrder(this.CreateOrder(direction, price, volume));
 // Создается и регистрируется новая заявка
 ```
 
-Созданные заявки регистрируются с помощью метода [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.Messages.OrderRegisterMessage)).
+Созданные заявки регистрируются с помощью метода [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order)).
 
 ## Работа с собственными сделками
 

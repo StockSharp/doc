@@ -62,13 +62,13 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 To request the orders state, the **OrderStatusAsync** method is implemented. This method usually performs the following actions:
 
-1. Sends a confirmation of receiving the request using [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)).
+1. Sends a confirmation of receiving the request using [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
 2. Checks whether the request is a subscription or unsubscription using the [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe) property.
 3. In case of a subscription:
   - Requests the list of current orders from the exchange.
   - For each order, creates and sends an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with information about the order.
   - If necessary, sets up a subscription to receive order updates in real time.
-4. Sends a message about the subscription result using [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Sends a message about the subscription result using [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)

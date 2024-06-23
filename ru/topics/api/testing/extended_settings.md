@@ -2,7 +2,7 @@
 
 Некоторые настройки [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
 
-- [EmulationSettings.MarketTimeChangedInterval](xref:StockSharp.Algo.Strategies.Testing.EmulationSettings.MarketTimeChangedInterval) \- интервал прихода события о смене времени. Если используются генераторы сделок, сделки будут генерироваться с этой периодичностью. По\-умолчанию равно 1 минуте.
+- [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) \- интервал прихода события о смене времени. Если используются генераторы сделок, сделки будут генерироваться с этой периодичностью. По\-умолчанию равно 1 минуте.
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) \- Минимальное значение задержки выставляемых заявок. По\-умолчанию равно TimeSpan.Zero, что означает мгновенное принятие биржей выставляемых заявок. 
 - [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) \- удовлетворять заявки, если цена “коснулась” уровня (допущение иногда слишком “оптимистично” и для реалистичного тестирования следует выключить режим). Если режим выключен, то лимитные заявки будут удовлетворяться, если цена “прошла сквозь них” хотя бы на 1 шаг. Опция работает во всех режимах кроме ордер лога. По\-умолчанию выключено.
 
