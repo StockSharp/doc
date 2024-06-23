@@ -4,11 +4,11 @@ When creating your own adapter for working with an exchange, you need to impleme
 
 Schematically, the algorithm for processing a subscription or unsubscription request looks like this:
 
-1. Sends a confirmation of receiving the subscription request using the [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)) method.
+1. Sends a confirmation of receiving the subscription request using the [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)) method.
 2. Checks whether the request is a subscription or unsubscription using the [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe) property.
 3. In case of a subscription, sets up a subscription to receive real-time data via WebSocket or another mechanism (specific to each exchange).
 4. In case of an unsubscription, cancels the corresponding subscription (specific to each exchange).
-5. Sends a message about the subscription result using the [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(long)) or [IMessageAdapter.SendSubscriptionFinished](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionFinished(long)) methods, depending on the subscription type and the operation result.
+5. Sends a message about the subscription result using the [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)) or [SendSubscriptionFinished](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinished(System.Int64,System.Nullable{System.DateTimeOffset})) methods, depending on the subscription type and the operation result.
 
 ## Candle Data
 
@@ -506,7 +506,7 @@ When implementing requests for historical data and processing live data in your 
 
 When sending historical data in response to a request:
 
-1. Setting [Message.OriginalTransactionId](xref:StockSharp.Messages.Message.OriginalTransactionId) is mandatory. This allows the system to associate the received data with the original request.
+1. Setting [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) is mandatory. This allows the system to associate the received data with the original request.
 
 2. Setting [SecurityId](xref:StockSharp.Messages.SecurityId) or [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame) (in the case of candles) is not required, but also not prohibited. The StockSharp core will automatically fill these fields with the necessary values from the original request.
 
@@ -514,6 +514,6 @@ When sending historical data in response to a request:
 
 When processing live data, for example, received via WebSocket:
 
-1. Setting [Message.OriginalTransactionId](xref:StockSharp.Messages.Message.OriginalTransactionId) is optional. If the transaction ID is not set, the system will distribute the data to all active subscriptions for the corresponding instrument and data type.
+1. Setting [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) is optional. If the transaction ID is not set, the system will distribute the data to all active subscriptions for the corresponding instrument and data type.
 
 2. Setting [SecurityId](xref:StockSharp.Messages.SecurityId) and other specific fields (for example, [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame) for candles) is mandatory, as this information is necessary for the correct routing of data in the system.

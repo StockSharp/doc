@@ -26,6 +26,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    </Window>
    				
    ```
+
 2. In the C\# code, creating a connection, and subscribing to the necessary events.
 
    ```cs
@@ -91,10 +92,13 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    }
    ...
    ```
+
 3. When connecting, set the initial control settings:
-   1. Resetting the the underlying instrument of the [OptionPositionChart.UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) control; 
+
+   1. Resetting the model of the [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model) control; 
    2. Redrawing the chart with the initial values [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**; 
    3. Specifying message provider for market data and instruments.
+
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
@@ -102,7 +106,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    	{
    		ConnectBtn.IsEnabled = false;
    ...
-   		PosChart.UnderlyingAsset = null;
+   		PosChart.Model = null;
    ...
    		PosChart.MarketDataProvider = Connector;
    		PosChart.SecurityProvider = Connector;
@@ -113,6 +117,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    		Connector.Disconnect();
    }
    ```
+
 4. When receiving instruments, we add the underlying assets to the list.
 
    ```cs
@@ -122,6 +127,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    		_assets.Add(security);
    };
    ```
+
 5. Upon changing the Level1 of the underlying instrument or options, as well as getting a new trade we set the \_isDirty flag. This allows to call the RefreshChart method (see below) in the timer event (the code is omitted) to redraw the chart. Thus we control the frequency of redrawing.
 
    ```cs
@@ -136,6 +142,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    		_isDirty = true;
    };
    ```
+
 6. In the new position occurrence event handler we call redraw the chart.
 
    ```cs
@@ -156,6 +163,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    		RefreshChart();
    });
    ```
+
 7. The method calls the redraw of the chart:
 
    ```cs

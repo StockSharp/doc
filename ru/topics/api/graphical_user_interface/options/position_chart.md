@@ -26,6 +26,7 @@
    </Window>
    				
    ```
+
 2. В коде C\# создаем подключение, и подписываемся на необходимые события.
 
    ```cs
@@ -92,9 +93,11 @@
    ...
    ```
 3. При подключении задаем первоначальные установки контрола:
-   1. Обнуляем базовый актив [OptionPositionChart.UnderlyingAsset](xref:StockSharp.Xaml.Charting.OptionPositionChart.UnderlyingAsset) контрола; 
+
+   1. Обнуляем модель [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model) контрола; 
    2. Перерисовываем график с начальными значениями [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**; 
    3. Задаем провайдера сообщений для рыночных данных и инструментов.
+
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
@@ -102,7 +105,7 @@
    	{
    		ConnectBtn.IsEnabled = false;
    ...
-   		PosChart.UnderlyingAsset = null;
+   		PosChart.Model = null;
    ...
    		PosChart.MarketDataProvider = Connector;
    		PosChart.SecurityProvider = Connector;
@@ -113,6 +116,7 @@
    		Connector.Disconnect();
    }
    ```
+
 4. При получении инструментов добавляем базовые активы в список.
 
    ```cs
@@ -122,6 +126,7 @@
    		_assets.Add(security);
    };
    ```
+
 5. При изменении Level1 базового инструмента или опционов, а также при получении новой сделки возводим флаг \_isDirty. Это позволяет в событии таймера (код, которого опущен) вызывать метод RefreshChart (см. ниже) для перерисовки графика. Таким образом мы контролируем частоту перерисовки.
 
    ```cs
@@ -137,6 +142,7 @@
    		_isDirty = true;
    };
    ```
+
 6. В обработчике события появления новой позиции обновляем вызываем перерисовку графика.
 
    ```cs
@@ -157,6 +163,7 @@
    		RefreshChart();
    });
    ```
+
 7. Метод вызывает перерисовку графика.
 
    ```cs

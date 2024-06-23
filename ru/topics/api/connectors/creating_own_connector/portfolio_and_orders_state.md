@@ -6,13 +6,13 @@
 
 Для запроса состояния портфеля реализуется метод **PortfolioLookupAsync**. Этот метод обычно выполняет следующие действия:
 
-1. Отправляет подтверждение о получении запроса с помощью [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)).
-2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [PortfolioLookupMessage.IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe).
+1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [IsSubscribe](xref:StockSharp.Messages.PortfolioMessage.IsSubscribe).
 3. В случае подписки:
   - Отправляет сообщение [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) с информацией о портфеле.
   - Запрашивает текущие балансы счетов у биржи.
   - Для каждого счета создает и отправляет сообщение [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) с информацией о позиции.
-4. Отправляет сообщение о результате подписки с помощью [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)

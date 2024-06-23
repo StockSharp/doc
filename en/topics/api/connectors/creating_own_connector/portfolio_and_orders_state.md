@@ -6,13 +6,13 @@ When creating your own adapter for working with an exchange, it is necessary to 
 
 To request the portfolio state, the **PortfolioLookupAsync** method is implemented. This method usually performs the following actions:
 
-1. Sends a confirmation of receiving the request using [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)).
-2. Checks whether the request is a subscription or unsubscription using the [PortfolioLookupMessage.IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe) property.
+1. Sends a confirmation of receiving the request using [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+2. Checks whether the request is a subscription or unsubscription using the [IsSubscribe](xref:StockSharp.Messages.PortfolioMessage.IsSubscribe) property.
 3. In case of a subscription:
   - Sends a [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) message with information about the portfolio.
   - Requests the current account balances from the exchange.
   - For each account, creates and sends a [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) message with information about the position.
-4. Sends a message about the subscription result using [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Sends a message about the subscription result using [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)

@@ -83,7 +83,7 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 
 ### 3. Connecting and Disconnecting the Adapter
 
-To connect the adapter to the trading system, the [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage)) method is called. It is passed the incoming [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) message. If the connection is successful, the adapter sends an outgoing [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) message.
+To connect the adapter to the trading system, the [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)) method is called. It is passed the incoming [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) message. If the connection is successful, the adapter sends an outgoing [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) message.
 
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
@@ -123,7 +123,7 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 }
 ```
 
-To disconnect the adapter from the trading system, the [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage)) method is called. If the disconnection is successful, the adapter sends an outgoing [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage) message.
+To disconnect the adapter from the trading system, the [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)) method is called. If the disconnection is successful, the adapter sends an outgoing [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage) message.
 
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
@@ -148,7 +148,7 @@ public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, Cance
 }
 ```
 
-In addition, the adapter provides the [AsyncMessageAdapter.ResetAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage)) method to reset the state, which closes the connection and returns the adapter to its initial state.
+In addition, the adapter provides the [AsyncMessageAdapter.ResetAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage,System.Threading.CancellationToken)) method to reset the state, which closes the connection and returns the adapter to its initial state.
 
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)

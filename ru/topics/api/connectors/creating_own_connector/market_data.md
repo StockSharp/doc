@@ -4,11 +4,11 @@
 
 Схематично алгоритм обработки запроса на подписку или отписку выглядит так:
 
-1. Отправляет подтверждение о получении запроса на подписку с помощью метода [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)).
+1. Отправляет подтверждение о получении запроса на подписку с помощью метода [SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe).
 3. В случае подписки устанавливает подписку на получение данных в реальном времени через WebSocket или другой механизм (специфично для каждой биржи).
 4. В случае отписки отменяет соответствующую подписку (специфично для каждой биржи).
-5. Отправляет сообщение о результате подписки с помощью методов [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(long)) или [IMessageAdapter.SendSubscriptionFinished](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionFinished(long)), в зависимости от типа подписки и результата операции.
+5. Отправляет сообщение о результате подписки с помощью методов [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)) или [SendSubscriptionFinished](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinished(System.Int64,System.Nullable{System.DateTimeOffset})), в зависимости от типа подписки и результата операции.
 
 ## Свечные данные
 
@@ -507,7 +507,7 @@ this.AddSupportedMarketDataType(DataType.OrderLog);
 
 При отправке исторических данных в ответ на запрос:
 
-1. Установка [Message.OriginalTransactionId](xref:StockSharp.Messages.Message.OriginalTransactionId) является обязательной. Это позволяет системе связать полученные данные с исходным запросом.
+1. Установка [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) является обязательной. Это позволяет системе связать полученные данные с исходным запросом.
 
 2. Установка [SecurityId](xref:StockSharp.Messages.SecurityId) или [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame) (в случае свечей) не требуется, но и не запрещена. Ядро StockSharp автоматически заполнит эти поля нужными значениями из исходного запроса.
 
@@ -515,6 +515,6 @@ this.AddSupportedMarketDataType(DataType.OrderLog);
 
 При обработке live данных, например, получаемых через WebSocket:
 
-1. Установка [Message.OriginalTransactionId](xref:StockSharp.Messages.Message.OriginalTransactionId) является опциональной. Если ID транзакции не установлен, система будет распространять данные на все активные подписки для соответствующего инструмента и типа данных.
+1. Установка [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) является опциональной. Если ID транзакции не установлен, система будет распространять данные на все активные подписки для соответствующего инструмента и типа данных.
 
 2. Установка [SecurityId](xref:StockSharp.Messages.SecurityId) и других специфичных полей (например, [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame) для свечей) обязательна, так как эта информация необходима для правильной маршрутизации данных в системе.

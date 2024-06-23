@@ -182,7 +182,7 @@ if (_chart != null)
 
 ### Создание и регистрация заявок
 
-Для создания заявок используется вспомогательный метод [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Decimal,System.String)).
+Для создания заявок используется вспомогательный метод [CreateOrder](xref:StockSharp.Algo.Strategies.StrategyHelper.CreateOrder(StockSharp.Algo.Strategies.Strategy,StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})).
 
 ```cs
 var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;

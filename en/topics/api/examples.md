@@ -1,25 +1,13 @@
-# Examples
+# S# Examples
 
-The [S\#](../api.md) distribution kit includes examples showing how to develop trading programs based on the library. 
+Examples of using the StockSharp API library can be found in our GitHub repository at the following path: [StockSharp Samples](https://github.com/StockSharp/StockSharp/tree/master/Samples/).
 
-## Description of examples:
+These examples provide ready-made solutions and demonstrations of various capabilities of the StockSharp API library. You will find useful code examples that will help you quickly familiarize yourself with using our platform.
 
-| Name                         | Description                                                            |
-| ---------------------------- | ---------------------------------------------------------------------- |
-| SampleChart                  | An example of working with a chart.                                    |
-| SampleChartActiveOrders      | An example of registering orders from the chart.                       |
-| SampleChartPerformance       | An example of high performance of chart.                               |
-| SampleConnection             | An example of connections to various connectors.                       |
-| SampleConnectionWithStorage  | An example of connections to various connectors using historical data. |
-| SampleLogging                | An example of working with logging.                                    |
-| SampleOptionQuoting          | An example of options quoting strategy.                                |
-| SampleStorage                | An example of working with a local data storage.                       |
-| SampleStrategies             | An example of creating a strategy.                                     |
-| SampleUnit                   | An example of working with the Unit class.                             |
-| SampleHistoryTesting         | An example of backtesting.                                             |
-| SampleHistoryTestingParallel | An example of optimization.                                            |
-| SampleRealTimeEmulation      | An example of testing on real data.                                    |
+## Documentation
 
-## Recommended content
+The code provided in the documentation is taken from these examples. You can explore them in more detail by following the link above. Use these examples as a basis for creating your own solutions and for understanding how to work with various aspects of the StockSharp API library.
 
-[Installation instruction](setup.md)
+We recommend carefully studying the examples and documentation to make the most effective use of our platform's capabilities.
+
+If you have any questions, you can always seek help in our [Telegram chat](https://t.me/stocksharpchat/361).

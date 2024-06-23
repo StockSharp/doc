@@ -83,7 +83,7 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 
 ### 3. Подключение и отключение адаптера
 
-Для подключения адаптера к торговой системе вызывается метод [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage)). В него передается входящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage), при успешном соединении адаптер отправляет исходящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage):
+Для подключения адаптера к торговой системе вызывается метод [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)). В него передается входящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage), при успешном соединении адаптер отправляет исходящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage):
 
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
@@ -123,7 +123,7 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 }
 ```
 
-Для отключения адаптера от торговой системы вызывается метод [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage)). При успешном отключении адаптер отправляет исходящее сообщение [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage):
+Для отключения адаптера от торговой системы вызывается метод [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)). При успешном отключении адаптер отправляет исходящее сообщение [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage):
 
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
@@ -148,7 +148,7 @@ public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, Cance
 }
 ```
 
-Дополнительно адаптер предоставляет метод [AsyncMessageAdapter.ResetAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage)) для сброса состояния, который закрывает соединение и возвращает адаптер в исходное состояние:
+Дополнительно адаптер предоставляет метод [AsyncMessageAdapter.ResetAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage,System.Threading.CancellationToken)) для сброса состояния, который закрывает соединение и возвращает адаптер в исходное состояние:
 
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)
