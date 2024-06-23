@@ -791,13 +791,6 @@
           href: api/connectors/russia/smartcom/ui_settings.md
         - name: Инициализация адаптера SmartCOM
           href: api/connectors/russia/smartcom/sample.md
-      - name: UX (сайт)
-        href: api/connectors/russia/ux.md
-        items:
-        - name: Графическое конфигурирование UX
-          href: api/connectors/russia/ux/ui_settings.md
-        - name: Инициализация адаптера UX
-          href: api/connectors/russia/ux/sample.md
       - name: Алор Трейд
         href: api/connectors/russia/alorhistory.md
         items:
@@ -888,13 +881,6 @@
           href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
         - name: Инициализация адаптера E*TRADE
           href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
-      - name: Google
-        href: api/connectors/stock_market/google.md
-        items:
-        - name: Графическое конфигурирование Google
-          href: api/connectors/stock_market/google/graphical_configuration_google.md
-        - name: Инициализация адаптера Google
-          href: api/connectors/stock_market/google/adapter_initialization_google.md
       - name: IEX
         href: api/connectors/stock_market/iex.md
         items:
