@@ -4,7 +4,7 @@ For a candles graphic display, you can use the special [Chart](xref:StockSharp.X
 
 ![sample candleschart](../../../images/sample_candleschart.png)
 
-The candles passed into the [ChartHelper.Draw](xref:StockSharp.Xaml.Charting.ChartHelper.Draw(StockSharp.Charting.IChart,StockSharp.Xaml.Charting.ChartCandleElement,StockSharp.Algo.Candles.Candle))**(**[StockSharp.Charting.IChart](xref:StockSharp.Charting.IChart) chart, [StockSharp.Xaml.Charting.ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) element, [StockSharp.Algo.Candles.Candle](xref:StockSharp.Algo.Candles.Candle) candle **)** method for displaying.
+The candles passed into the [Chart.Draw](xref:StockSharp.Xaml.Charting.Chart.Draw(StockSharp.Charting.IChartDrawData)) method for displaying.
 
 The current candle changes will be displayed when the candle is passed from the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event to draw on the graph.
 
