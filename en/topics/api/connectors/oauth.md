@@ -25,7 +25,7 @@ There are two implementation options for [ICredentialsProvider](xref:StockSharp.
 
 2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - passes the token directly from the code. No secret file is required on the machine. The token is obtained from [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 
-   ![Profile](../../images/profile.png)
+   ![Profile](../../../images/profile.png)
 
 There are two implementation options for [IOAuthProvider](xref:Ecng.Net.IOAuthProvider):
 
