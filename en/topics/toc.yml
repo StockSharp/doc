@@ -1457,6 +1457,8 @@
       href: api/connectors/save_and_load_settings.md
     - name: Reconnection settings
       href: api/connectors/reconnection_settings.md
+    - name: OAuth
+      href: api/connectors/oauth.md
   - name: Market data
     items:
     - name: Subscriptions
