@@ -782,16 +782,7 @@
           href: api/connectors/russia/finam/ui_settings.md
         - name: Инициализация адаптера Finam
           href: api/connectors/russia/finam/sample.md
-      - name: SmartCOM (ITI Capital)
-        href: api/connectors/russia/smartcom.md
-        items:
-        - name: Настройки коннектора SmartCOM
-          href: api/connectors/russia/smartcom/settings.md
-        - name: Графическое конфигурирование SmartCOM
-          href: api/connectors/russia/smartcom/ui_settings.md
-        - name: Инициализация адаптера SmartCOM
-          href: api/connectors/russia/smartcom/sample.md
-      - name: Алор Трейд
+      - name: Алор История
         href: api/connectors/russia/alorhistory.md
         items:
         - name: Графическое конфигурирование AlorHistory
@@ -814,15 +805,6 @@
           href: api/connectors/russia/lci/ui_settings.md
         - name: Инициализация адаптера ЛЧИ
           href: api/connectors/russia/lci/sample.md
-      - name: ex РТС (FTP)
-        href: api/connectors/russia/rts.md
-        items:
-        - name: Настройки коннектора РТС
-          href: api/connectors/russia/rts/settings.md
-        - name: Графическое конфигурирование РТС
-          href: api/connectors/russia/rts/ui_settings.md
-        - name: Инициализация адаптера РТС
-          href: api/connectors/russia/rts/sample.md
     - name: Америка
       items:
       - name: Alpaca
