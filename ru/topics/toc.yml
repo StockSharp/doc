@@ -1326,7 +1326,7 @@
           href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
         - name: Инициализация адаптера FatBTC
           href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
-      - name: Bitget
+      - name: Gate.io
         href: api/connectors/crypto_exchanges/gateio.md
         items:
         - name: Настройки коннектора Gate.io
