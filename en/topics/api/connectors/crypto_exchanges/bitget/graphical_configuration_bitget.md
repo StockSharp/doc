@@ -1,6 +1,6 @@
 # Graphical Configuration of Bitget
 
-For all [S\\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection Settings Window](../../../graphical_user_interface/connection_settings_window.md):
+For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection Settings Window](../../../graphical_user_interface/connection_settings_window.md):
 
 ![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
 

@@ -1,6 +1,6 @@
 # Graphical Configuration of ByBit
 
-For all [S\\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection Settings Window](../../../graphical_user_interface/connection_settings_window.md):
+For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection Settings Window](../../../graphical_user_interface/connection_settings_window.md):
 
 ![API GUI Settings ByBit](../../../../../images/api_gui_settings_bybit.png)
 
