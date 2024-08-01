@@ -1083,6 +1083,15 @@
           href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
         - name: Инициализация адаптера Bitbank
           href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/bitget.md
+        items:
+        - name: Настройки коннектора Bitget
+          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+        - name: Графическое конфигурирование Bitget
+          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+        - name: Инициализация адаптера Bitget
+          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
       - name: Bitexbook
         href: api/connectors/crypto_exchanges/bitexbook.md
         items:
@@ -1317,6 +1326,15 @@
           href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
         - name: Инициализация адаптера FatBTC
           href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/gateio.md
+        items:
+        - name: Настройки коннектора Gate.io
+          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+        - name: Графическое конфигурирование Gate.io
+          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+        - name: Инициализация адаптера Gate.io
+          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
       - name: GDAX
         href: api/connectors/crypto_exchanges/gdax.md
         items:

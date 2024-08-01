@@ -946,6 +946,15 @@
           href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
         - name: Adapter initialization Bitbank
           href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/bitget.md
+        items:
+        - name: Configuration Bitget
+          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+        - name: Graphical configuration Bitget
+          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+        - name: Adapter initialization Bitget
+          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
       - name: Bitexbook
         href: api/connectors/crypto_exchanges/bitexbook.md
         items:
@@ -1180,6 +1189,15 @@
           href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
         - name: Adapter initialization FatBTC
           href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+      - name: Gate.io
+        href: api/connectors/crypto_exchanges/gateio.md
+        items:
+        - name: Configuration Gate.io
+          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+        - name: Graphical configuration Gate.io
+          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+        - name: Adapter initialization Gate.io
+          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
       - name: GDAX
         href: api/connectors/crypto_exchanges/gdax.md
         items:
