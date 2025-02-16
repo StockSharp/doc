@@ -27,7 +27,7 @@ The approach to working with the filtered order book uses the same method as [su
     };
     ```
 
-2. **Sending the subscription:** Form a [Subscription](xref:StockSharp.Algo.Subscription) object and send it to the connector:
+2. **Sending the subscription:** Form a [Subscription](xref:StockSharp.BusinessEntities.Subscription) object and send it to the connector:
 
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);

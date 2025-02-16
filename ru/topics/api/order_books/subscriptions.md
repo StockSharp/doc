@@ -20,7 +20,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 
 Важно подписаться на событие [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) **до** отправки подписки на получение стакана заявок. Это обеспечивает, что вы не пропустите никаких данных, если стаканы начнут поступать очень быстро после отправки подписки.
 
-2. Отправить запрос на подписку через метод [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.Algo.Subscription)):
+2. Отправить запрос на подписку через метод [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)):
 
 ```cs
 var security = GetSecurity(); // Получите объект Security, на который хотите подписаться
@@ -35,7 +35,7 @@ connector.Subscribe(subscription);
 
 ## Отписка от стакана заявок
 
-Для отписки от стакана необходимо вызвать метод [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe(StockSharp.Algo.Subscription)):
+Для отписки от стакана необходимо вызвать метод [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe(StockSharp.BusinessEntities.Subscription)):
 
 ```cs
 connector.UnSubscribe(subscription);
