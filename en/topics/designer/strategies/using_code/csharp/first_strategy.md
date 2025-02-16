@@ -1,13 +1,13 @@
-# Example of a Strategy in C#
+# C# Strategy Example
 
-Creating a strategy from source code will be illustrated using the example of an SMA strategy - a similar SMA strategy example, assembled from cubes in the section [Creating an Algorithm from Cubes](../../using_visual_designer/first_strategy.md).
+Creating a strategy from source code will be demonstrated using the SMA strategy example - similar to the SMA strategy example assembled from cubes in the [Creating Algorithm from Cubes](../../using_visual_designer/first_strategy.md) section.
 
-This section will not describe the constructs of the C# language (as well as [Strategy](../../../../api/strategies.md), on the basis of which strategies are created), but features for the code to work in **Designer** will be mentioned.
+This section will not describe C# language constructs (or [Strategy](../../../../api/strategies.md), which is used as the base for creating strategies), but will mention specific features for working with code in the **Designer**.
 
 > [!TIP]
-> Strategies created in **Designer** are compatible with strategies created in [API](../../../../api.md) due to the use of a common base class [Strategy](../../../../api/strategies.md). This makes running such strategies outside of **Designer** significantly easier than [diagrams](../../../live_execution/running_strategies_outside_of_designer.md).
+> Strategies created in the **Designer** are compatible with strategies created in the [API](../../../../api.md) due to using the common base class [Strategy](../../../../api/strategies.md). This makes running such strategies outside the **Designer** significantly easier than running [schemes](../../../live_execution/running_strategies_outside_of_designer.md).
 
-1. Strategy parameters are created through a special approach:
+1. Strategy parameters are created using a special approach:
 
 ```cs
 _candleTypeParam = this.Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
@@ -40,56 +40,93 @@ public int Short
 }
 ```
 
-Using the [StrategyParam](xref:StockSharp.Algo.Strategies.StrategyParam`1) class automatically employs the approach to save and restore settings.
+When using the [StrategyParam](xref:StockSharp.Algo.Strategies.StrategyParam`1) class, the settings save and restore approach is automatically used.
 
-2. When creating indicators, it is necessary to add them to the internal strategy list ([Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators)):
+2. When creating indicators and subscribing to market data, you need to bind them so that incoming data from the subscription can update indicator values:
 
 ```cs
-_longSma = new SimpleMovingAverage { Length = Long };
-_shortSma = new SimpleMovingAverage { Length = Short };
+// ---------- create indicators -----------
 
-// !!! DO NOT FORGET add it in case use IsFormed property (see code below)
-Indicators.Add(_longSma);
-Indicators.Add(_shortSma);
+var longSma = new SMA { Length = Long };
+var shortSma = new SMA { Length = Short };
+
+// ----------------------------------------
+
+// --- bind candles set and indicators ----
+
+var subscription = SubscribeCandles(CandleType);
+
+subscription
+    // bind indicators to the candles
+    .Bind(longSma, shortSma, OnProcess)
+    // start processing
+    .Start();
 ```
 
-This is done so that the strategy can track all the indicators necessary for its logic when they become [formed](../../../../api/indicators.md).
-
-3. When working with the chart, it is necessary to consider that in the case of launching the strategy [outside Designer](../../../live_execution/running_strategies_outside_of_designer.md), the chart object may be absent.
+3. When working with charts, it's important to consider that when running the strategy [outside the Designer](../../../live_execution/running_strategies_outside_of_designer.md), the chart object might be absent.
 
 ```cs
-_chart = this.GetChart();
+var area = CreateChartArea();
 
-// chart can be NULL in case hosting strategy in custom app like Runner or Shell
-if (_chart != null)
+// area can be null in case of no GUI (strategy hosted in Runner or in own console app)
+if (area != null)
 {
-	var area = _chart.AddArea();
+    DrawCandles(area, subscription);
 
-	_chartCandlesElem = area.AddCandles();
-	_chartTradesElem = area.AddTrades();
-	_chartShortElem = area.AddIndicator(_shortSma);
-	_chartLongElem = area.AddIndicator(_longSma);
+    DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
+    DrawIndicator(area, longSma);
 
-	// you can apply custom color palette here
+    DrawOwnTrades(area);
 }
 ```
 
-And further in the code for drawing data on the chart, make special checks like:
+4. Start position protection through [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection) if required by the strategy logic:
 
 ```cs
-if (_chart == null)
-	return;
-
-var data = _chart.CreateData();
+// start protection by take profit and-or stop loss
+StartProtection(TakeValue, StopValue);
 ```
 
-4. To ensure that the strategy is fully ready to work, its indicators are formed with historical data and all subscriptions have transitioned to [Online](../../../../api/market_data/subscriptions.md), a special method can be used:
+5. The strategy logic itself, implemented in the OnProcess method. The method is called by the subscription created in step 1:
 
 ```cs
-// some of indicators added in OnStarted not yet fully formed
-// or user turned off allow trading
-if (this.IsFormedAndOnlineAndAllowTrading())
+private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-	// TODO
+    LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
+
+    // in case we subscribed on non finished only candles
+    if (candle.State != CandleStates.Finished)
+        return;
+
+    // calc new values for short and long
+    var isShortLessThenLong = shortValue < longValue;
+
+    if (_isShortLessThenLong == null)
+    {
+        _isShortLessThenLong = isShortLessThenLong;
+    }
+    else if (_isShortLessThenLong != isShortLessThenLong)
+    {
+        // crossing happened
+
+        // if short less than long, the sale, otherwise buy
+        var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+
+        // calc size for open position or revert
+        var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+
+        var priceStep = GetSecurity().PriceStep ?? 1;
+
+        // calc order price as a close price + offset
+        var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
+
+        if (direction == Sides.Buy)
+            BuyLimit(price, volume);
+        else
+            SellLimit(price, volume);
+
+        // store current values for short and long
+        _isShortLessThenLong = isShortLessThenLong;
+    }
 }
 ```

@@ -8,99 +8,99 @@ To create a cube from code, it needs to be created in the **Own elements** folde
 
 In the example provided below, the cube inherits from the [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) class, and looks as follows:
 
-```cs
+```fsharp
 /// <summary>
-/// Sample diagram element demonstrates input and output sockets usage.
-/// 
-/// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
+/// Sample diagram element demonstrating input and output sockets usage.
+///
+/// See more details:
+/// https://doc.stocksharp.com/topics/designer/strategies/using_code/fsharp/creating_your_own_cube.html
 /// </summary>
-public class EmptyDiagramElement : DiagramExternalElement
-{
-	private readonly DiagramElementParam<int> _minValue;
+type EmptyDiagramElement() as this =
+    inherit DiagramExternalElement()
 
-	public EmptyDiagramElement()
-	{
-		// example property to show how to make parameters
-	
-		_minValue = AddParam("MinValue", 10)
-			.SetBasic(true) // make parameter visible in basic mode
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
-	}
+    // Example property showing how to create parameters
+    let minValueParam =
+        this.AddParam<int>("MinValue", 10)
+            .SetBasic(true)  // make the parameter visible in basic mode
+            .SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 
-	// output sockets are events marked with DiagramExternal attribute
+    // Output sockets are events marked with DiagramExternal attribute
+    let output1Event = new Event<Unit>()
+    let output2Event = new Event<Unit>()
 
-	[DiagramExternal]
-	public event Action<Unit> Output1;
+    [<CLIEvent>]
+    [<DiagramExternal>]
+    member this.Output1 = output1Event.Publish
 
-	[DiagramExternal]
-	public event Action<Unit> Output2;
+    [<CLIEvent>]
+    [<DiagramExternal>]
+    member this.Output2 = output2Event.Publish
 
-	// input sockets are method parameters marked with DiagramExternal attribute
+    // Uncomment the following property if you want the Process method 
+    // to be called every time when a new argument is received
+    // (no need to wait for all input args to be received).
+    //
+    // override this.WaitAllInput 
+    //     with get () = false
 
-	// uncomment to get Process method called every time when new arg received
-	// (no need wait when all input args received)
-	//public override bool WaitAllInput => false;
+    // Input sockets are method parameters marked with DiagramExternal attribute
 
-	[DiagramExternal]
-	public void Process(CandleMessage candle, Unit diff)
-	{
-		var res = candle.ClosePrice + diff;
+    [<DiagramExternal>]
+    member this.Process(candle: CandleMessage, diff: Unit) =
+        let res = candle.ClosePrice + diff
 
-		if (diff >= _minValue.Value)
-			Output1?.Invoke(res);
-		else
-			Output2?.Invoke(res);
-	}
+        if diff >= minValueParam.Value then
+            // Trigger the first output event
+            output1Event.Trigger(res)
+        else
+            // Trigger the second output event
+            output2Event.Trigger(res)
 
-	public override void Start()
-	{
-		base.Start();
+    override this.Start() =
+        base.Start()
+        // Add logic before start if needed
 
-		// add logic before start
-	}
+    override this.Stop() =
+        base.Stop()
+        // Add logic after stop if needed
 
-	public override void Stop()
-	{
-		base.Stop();
-
-		// add logic after stop
-	}
-
-	public override void Reset()
-	{
-		base.Reset();
-
-		// add logic for reset internal state
-	}
-}
+    override this.Reset() =
+        base.Reset()
+        // Add logic for resetting internal state if needed
 ```
 
 In this code, the cube has two incoming sockets and two outgoing sockets. Incoming sockets are defined by applying the [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) attribute to the method:
 
-```cs
-[DiagramExternal]
-public void Process(CandleMessage candle, Unit diff)
+```fsharp
+[<DiagramExternal>]
+member this.Process(candle: CandleMessage, diff: Unit) =
 ```
 
 Outgoing sockets are defined by applying the attribute to an event. In the example of the cube, there are two such events:
 
 
-```cs
-[DiagramExternal]
-public event Action<Unit> Output1;
+```fsharp
+let output1Event = new Event<Unit>()
+let output2Event = new Event<Unit>()
 
-[DiagramExternal]
-public event Action<Unit> Output2;
+[<CLIEvent>]
+[<DiagramExternal>]
+member this.Output1 = output1Event.Publish
+
+[<CLIEvent>]
+[<DiagramExternal>]
+member this.Output2 = output2Event.Publish
 ```
 
 Therefore, there will also be two outgoing sockets.
 
 Additionally, it shows how to make a property for the cube:
 
-```cs
-_minValue = AddParam("MinValue", 10)
-	.SetBasic(true) // make parameter visible in basic mode
-	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+```fsharp
+let minValueParam =
+    this.AddParam<int>("MinValue", 10)
+        .SetBasic(true)  // make the parameter visible in basic mode
+        .SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 ```
 
 Using the [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) class automatically employs the approach to save and restore settings.
@@ -109,8 +109,9 @@ The **MinValue** property is marked as basic, and it will be visible in the [Bas
 
 The commented [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) property is responsible for the timing of the method call with incoming sockets:
 
-```cs
-//public override bool WaitAllInput => false;
+```fsharp
+// override this.WaitAllInput 
+//     with get () = false
 ```
 
 If uncommented, the **Process** method will always be called as soon as at least one value arrives (in the example case, this is either a candle or a numerical value).

@@ -8,86 +8,95 @@ To create an indicator, on the **Scheme** panel you need to select the **Indicat
 
 The indicator code will look like this:
 
-```cs
+```fsharp
 /// <summary>
-/// Sample indicator demonstrating to save and load parameters.
-/// 
-/// Changes input price on +20% or -20%.
-/// 
-/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
-/// 
-/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// Sample indicator demonstrating how to save and load parameters.
+/// Changes the input price by +20% or -20%.
+///
+/// See more examples:
+/// https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
+///
+/// Documentation:
+/// https://doc.stocksharp.com/topics/designer/strategies/using_code/fsharp/create_own_indicator.html
 /// </summary>
-public class EmptyIndicator : BaseIndicator
-{
-	private int _change = 20;
+type EmptyIndicator() as this =
+    inherit BaseIndicator()
 
-	public int Change
-	{
-		get => _change;
-		set
-		{
-			_change = value;
-			Reset();
-		}
-	}
+    // Internal fields
+    let mutable changeValue = 20
+    let mutable counter = 0
+    let mutable isFormedValue = false
 
-	private int _counter;
-	// formed indicator received all necessary inputs for be available for trading
-	private bool _isFormed;
+    /// <summary>
+    /// The percentage value (+/-) used to modify the input price.
+    /// </summary>
+    member this.Change
+        with get () = changeValue
+        and set value =
+            changeValue <- value
+            this.Reset()
 
-	protected override bool CalcIsFormed() => _isFormed;
+    /// <summary>
+    /// Defines if the indicator has formed (became ready for trading).
+    /// </summary>
+    override this.CalcIsFormed() = isFormedValue
 
-	public override void Reset()
-	{
-		base.Reset();
+    /// <summary>
+    /// Resets the indicator to its initial state.
+    /// </summary>
+    override this.Reset() =
+        base.Reset()
+        isFormedValue <- false
+        counter <- 0
 
-		_isFormed = default;
-		_counter = default;
-	}
+    /// <summary>
+    /// The main logic to process input values.
+    /// </summary>
+    override this.OnProcess(input: IIndicatorValue) : IIndicatorValue =
+        // every 10th call try to return an "empty" value
+        if RandomGen.GetInt(0, 10) = 0 then
+            // empty value still contains just time, no actual data
+            DecimalIndicatorValue(this, input.Time)
+        else
+            // increment counter on each call
+            counter <- counter + 1
 
-	protected override IIndicatorValue OnProcess(IIndicatorValue input)
-	{
-		// every 10th call try return empty value
-		if (RandomGen.GetInt(0, 10) == 0)
-			return new DecimalIndicatorValue(this);
+            // after 5 inputs, indicator is considered formed
+            if counter = 5 then
+                isFormedValue <- true
 
-		if (_counter++ == 5)
-		{
-			// for example, our indicator needs 5 inputs for become formed
-			_isFormed = true;
-		}
+            let mutable value = input.ToDecimal()
 
-		var value = input.GetValue<decimal>();
+            // random change by a factor of +/- Change%
+            let randomFactor = decimal (RandomGen.GetInt(-changeValue, changeValue)) / 100m
+            value <- value + (value * randomFactor)
 
-		// random change on +20% or -20% current value
+            // return final indicator value
+            let result = DecimalIndicatorValue(this, value, input.Time)
+            // randomly mark it as final or not
+            result.IsFinal <- RandomGen.GetBool()
+            result
 
-		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
+    /// <summary>
+    /// Load indicator settings from a given <see cref="SettingsStorage"/>.
+    /// </summary>
+    override this.Load(storage: SettingsStorage) =
+        base.Load(storage)
+        this.Change <- storage.GetValue<int>(nameof(this.Change))
 
-		return new DecimalIndicatorValue(this, value)
-		{
-			// final value means that this value for the specified input
-			// is not changed anymore (for example, for candles that changes with last price)
-			IsFinal = RandomGen.GetBool()
-		};
-	}
+    /// <summary>
+    /// Save indicator settings to a given <see cref="SettingsStorage"/>.
+    /// </summary>
+    override this.Save(storage: SettingsStorage) =
+        base.Save(storage)
+        storage.SetValue(nameof(this.Change), this.Change)
 
-	// persist our properties to save for further the app restarts
+    /// <summary>
+    /// A string representation that includes the current <see cref="Change"/> value.
+    /// </summary>
+    override this.ToString() =
+        sprintf "Change: %d" this.Change
 
-	public override void Load(SettingsStorage storage)
-	{
-		base.Load(storage);
-		Change = storage.GetValue<int>(nameof(Change));
-	}
-
-	public override void Save(SettingsStorage storage)
-	{
-		base.Save(storage);
-		storage.SetValue(nameof(Change), Change);
-	}
-
-	public override string ToString() => $"Change: {Change}";
-}
 ```
 
 This indicator receives an incoming value and makes an arbitrary deviation on the set parameter **Change** value.

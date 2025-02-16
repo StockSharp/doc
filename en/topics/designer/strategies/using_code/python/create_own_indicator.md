@@ -1,100 +1,112 @@
 # Creating an Indicator
 
-Creating your own indicator in [API](../../../../api.md) is described in the section [Custom Indicator](../../../../api/indicators/custom_indicator.md). Such indicators are fully compatible with **Designer**.
+Creating a custom indicator in [API](../../../../api.md) is described in the [Custom Indicator](../../../../api/indicators/custom_indicator.md) section. Such indicators are fully compatible with **Designer**.
 
-To create an indicator, on the **Scheme** panel you need to select the **Indicators** folder, right-click and in the context menu select **Add**:
+To create an indicator, you need to select the **Indicators** folder on the **Schemes** panel, right-click, and select **Add** from the context menu:
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 
 The indicator code will look like this:
 
-```cs
-/// <summary>
-/// Sample indicator demonstrating to save and load parameters.
-/// 
-/// Changes input price on +20% or -20%.
-/// 
-/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
-/// 
-/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
-/// </summary>
-public class EmptyIndicator : BaseIndicator
-{
-	private int _change = 20;
+```python
+import clr
+import random
 
-	public int Change
-	{
-		get => _change;
-		set
-		{
-			_change = value;
-			Reset();
-		}
-	}
+clr.AddReference("StockSharp.BusinessEntities")
+clr.AddReference("StockSharp.Algo")
 
-	private int _counter;
-	// formed indicator received all necessary inputs for be available for trading
-	private bool _isFormed;
+from StockSharp.Algo.Indicators import BaseIndicator, DecimalIndicatorValue
+from indicator_extensions import *
 
-	protected override bool CalcIsFormed() => _isFormed;
+class empty_indicator(BaseIndicator):
+    """
+    Sample indicator demonstrating saving and loading parameters.
 
-	public override void Reset()
-	{
-		base.Reset();
+    Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+    
+    Changes input price on +20% or -20%.
+    """
+    def __init__(self):
+        super(empty_indicator, self).__init__()
+        self._change = 20
+        self._counter = 0
+        self._isFormed = False
 
-		_isFormed = default;
-		_counter = default;
-	}
+    @property
+    def Change(self) -> int:
+        return self._change
 
-	protected override IIndicatorValue OnProcess(IIndicatorValue input)
-	{
-		// every 10th call try return empty value
-		if (RandomGen.GetInt(0, 10) == 0)
-			return new DecimalIndicatorValue(this);
+    @Change.setter
+    def Change(self, value):
+        self._change = value
+        self.Reset()
 
-		if (_counter++ == 5)
-		{
-			// for example, our indicator needs 5 inputs for become formed
-			_isFormed = true;
-		}
+    def CalcIsFormed(self):
+        """Determines if the indicator has received sufficient inputs to be considered formed."""
+        return self._isFormed
 
-		var value = input.GetValue<decimal>();
+    def Reset(self):
+        """Resets the indicator's state and internal counters."""
+        super(empty_indicator, self).Reset()
+        self._isFormed = False
+        self._counter = 0
 
-		// random change on +20% or -20% current value
+    def OnProcess(self, input):
+        """
+        Processes the incoming indicator value and applies a random change.
+        
+        :param input: The incoming indicator value.
+        :return: A new DecimalIndicatorValue after applying changes.
+        """
+        # Every 10th call, try to return an empty value
+        if random.randint(0, 10) == 0:
+            return DecimalIndicatorValue(self, input.Time)
 
-		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
+        if self._counter == 5:
+            # For example, our indicator needs 5 inputs to become formed
+            self._isFormed = True
+        self._counter += 1
 
-		return new DecimalIndicatorValue(this, value)
-		{
-			// final value means that this value for the specified input
-			// is not changed anymore (for example, for candles that changes with last price)
-			IsFinal = RandomGen.GetBool()
-		};
-	}
+        value = to_decimal(input)
 
-	// persist our properties to save for further the app restarts
+        # Apply random change of +/- _change percent to the current value
+        value += value * random.randint(-self._change, self._change) / 100.0
 
-	public override void Load(SettingsStorage storage)
-	{
-		base.Load(storage);
-		Change = storage.GetValue<int>(nameof(Change));
-	}
+        result = DecimalIndicatorValue(self, value, input.Time)
+        # Mark value as final based on a random decision
+        result.IsFinal = bool(random.getrandbits(1))
+        return result
 
-	public override void Save(SettingsStorage storage)
-	{
-		base.Save(storage);
-		storage.SetValue(nameof(Change), Change);
-	}
+    def Load(self, storage):
+        """
+        Loads the indicator parameters from persistent storage.
+        
+        :param storage: The settings storage to load from.
+        """
+        super(empty_indicator, self).Load(storage)
+        self.Change = storage.GetValue("Change", self.Change)
 
-	public override string ToString() => $"Change: {Change}";
-}
+    def Save(self, storage):
+        """
+        Saves the indicator parameters to persistent storage.
+        
+        :param storage: The settings storage to save to.
+        """
+        super(empty_indicator, self).Save(storage)
+        storage.SetValue("Change", self.Change)
+
+    def __str__(self):
+        return f"Change: {self.Change}"
+
+    def ToString(self):
+        return str(self)
 ```
 
-This indicator receives an incoming value and makes an arbitrary deviation on the set parameter **Change** value.
+This indicator receives an incoming value and makes a random deviation based on the specified **Change** parameter value.
 
-The description of the indicator methods is available in the section [Custom Indicator](../../../../api/indicators/custom_indicator.md).
+Description of indicator methods is available in the [Custom Indicator](../../../../api/indicators/custom_indicator.md) section.
 
-To add the created indicator to the diagram, you need to use the [Indicator](../../using_visual_designer/elements/common/indicator.md) cube, and in it, specify the necessary indicator:
+To add the created indicator to the scheme, you need to use the [Indicator](../../using_visual_designer/elements/common/indicator.md) cube, and then set the desired indicator within it:
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
