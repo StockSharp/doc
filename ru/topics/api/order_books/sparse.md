@@ -12,7 +12,7 @@
 
 ## Создание разреженного стакана
 
-Для работы со сгруппированным стаканом заявок необходимо сначала настроить получение через [подписки](subscriptions.md), а затем вызвать метод-расширение [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal})). Метод принимает следующие параметры:
+Для работы со сгруппированным стаканом заявок необходимо сначала настроить получение через [подписки](subscriptions.md), а затем вызвать метод-расширение [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). Метод принимает следующие параметры:
 
 - `priceRange` - это разница в цене, до которой нужно расширять уровни.
 - `priceStep` - это шаг цены у торгового инструмента. Он используется в том случае, если priceRange имеет меньшую точность по ценовым уровням, чем priceStep, и требуется округлить полученные цены до шага цены инструмента.
@@ -25,4 +25,4 @@ var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 // где учтены все возможные уровни цен, включая те, по которым отсутствуют заявки.
 ```
 
-В этом примере [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal})) используется для создания разреженного стакана заявок, что позволяет отображать все уровни цен, даже если по некоторым из них нет активных заявок. Это может быть полезно для анализа потенциальных "пустых" уровней, которые могут служить уровнями поддержки или сопротивления.
+В этом примере [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)) используется для создания разреженного стакана заявок, что позволяет отображать все уровни цен, даже если по некоторым из них нет активных заявок. Это может быть полезно для анализа потенциальных "пустых" уровней, которые могут служить уровнями поддержки или сопротивления.
