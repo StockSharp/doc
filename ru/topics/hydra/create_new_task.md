@@ -22,7 +22,7 @@
 	using StockSharp.Algo.Storages;
 	using StockSharp.Hydra.Core;
 	using StockSharp.Localization;
-	using StockSharp.Logging;
+	using Ecng.Logging;
 	using StockSharp.Messages;
 	using DataType = StockSharp.Algo.DataType;
 	enum BackupServices

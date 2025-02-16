@@ -1,6 +1,6 @@
 # Strategy logging
 
-The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [ILogSource](xref:StockSharp.Logging.ILogSource) interface. Therefore, the strategies can be passed to the [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources), and all of its messages will automatically get to the [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners). 
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [ILogSource](xref:Ecng.Logging.ILogSource) interface. Therefore, the strategies can be passed to the [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources), and all of its messages will automatically get to the [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). 
 
 ## Prerequisites
 
@@ -13,13 +13,13 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    ```cs
    var logManager = new LogManager();
    ```
-2. Then you need to create a file logger, passing to it the name of the file and to add it to the [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
+2. Then you need to create a file logger, passing to it the name of the file and to add it to the [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners): 
 
    ```cs
    var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
    logManager.Listeners.Add(fileListener);
    ```
-3. For logging messages, you need to add a strategy to the [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
+3. For logging messages, you need to add a strategy to the [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources): 
 
    ```cs
    logManager.Sources.Add(lkohSmaStrategy);
@@ -36,7 +36,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Setting the filter in the sound playback only when the type of messages is [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error): 
+2. Setting the filter in the sound playback only when the type of messages is [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error): 
 
    ```cs
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -51,7 +51,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    logManager.Listeners.Add(emailListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Setting the filter on the sending of messages of [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error) and [LogLevels.Warning](xref:StockSharp.Logging.LogLevels.Warning) types: 
+2. Setting the filter on the sending of messages of [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error) and [LogLevels.Warning](xref:Ecng.Logging.LogLevels.Warning) types: 
 
    ```cs
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);

@@ -23,7 +23,7 @@
 LogManager _logManager = new LogManager();
 // Добавляем источник логов. Используем систему трассировки .NET.
 // При работе со стратегиями, добавьте аналогичным образом объект стратегии
-_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+_logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // Добавляем "слушателя" логов - GuiLogListener, в конструктор которого передаем ссылку
 // на графический элемент.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));

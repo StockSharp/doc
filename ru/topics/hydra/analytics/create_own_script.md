@@ -57,15 +57,15 @@ namespace StockSharp.Algo.Analytics
 
 ## Интерфейс `IAnalyticsScript`
 
-Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)), который является необходимым для выполнения аналитических операций скрипта.
+Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)), который является необходимым для выполнения аналитических операций скрипта.
 
 ### Метод `Run`
 
-Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняются фактические обработка данных и аналитические операции.
+Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняются фактические обработка данных и аналитические операции.
 
 #### Параметры:
 
-- `logs`: Принимает экземпляр [ILogReceiver](xref:StockSharp.Logging.ILogReceiver) для ведения журнала в скрипте.
+- `logs`: Принимает экземпляр [ILogReceiver](xref:Ecng.Logging.ILogReceiver) для ведения журнала в скрипте.
 - `panel`: Предоставляет [IAnalyticsPanel](xref:StockSharp.Algo.Analytics.IAnalyticsPanel), который является элементом пользовательского интерфейса для построения графиков и вывода результатов.
 - `securities`: Массив [SecurityId](xref:StockSharp.Messages.SecurityId), идентифицирующий финансовые инструменты для анализа.
 - `from`: Дата начала диапазона данных для анализа.

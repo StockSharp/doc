@@ -1,6 +1,6 @@
 # IConnector logging
 
-The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [strategies](strategy_logging.md) also implement the [ILogSource](xref:StockSharp.Logging.ILogSource) interface. Therefore, from the [IConnector](xref:StockSharp.BusinessEntities.IConnector) object you can receive messages through the [LogManager](xref:StockSharp.Logging.LogManager) by all means that are available for strategies. 
+The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [strategies](strategy_logging.md) also implement the [ILogSource](xref:Ecng.Logging.ILogSource) interface. Therefore, from the [IConnector](xref:StockSharp.BusinessEntities.IConnector) object you can receive messages through the [LogManager](xref:Ecng.Logging.LogManager) by all means that are available for strategies. 
 
 ## IConnector logging example
 
@@ -14,12 +14,12 @@ The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [s
    				
    				
    ```
-2. Then you need to create a file logger, and to add it to the [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
+2. Then you need to create a file logger, and to add it to the [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners): 
 
    ```cs
    _logManager.Listeners.Add(new FileLogListener());
    ```
-3. The final step is to add the [Connector](xref:StockSharp.Algo.Connector) in [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
+3. The final step is to add the [Connector](xref:StockSharp.Algo.Connector) in [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources): 
 
    ```cs
    _logManager.Sources.Add(_connector);

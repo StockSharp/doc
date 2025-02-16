@@ -24,7 +24,7 @@ Sample code
 // creating a new instance of LogManager
 _logManager = new LogManager();
 // adding .NET traing as a logs source.
-_logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+_logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // adding LogControl as a logs listener.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  

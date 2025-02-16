@@ -57,15 +57,15 @@ This script is designed to draw charts based on the price and volume data of fin
 
 ## `IAnalyticsScript` Interface
 
-The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method, which is necessary for performing the script's analytical operations.
+The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method, which is necessary for performing the script's analytical operations.
 
 ### `Run` Method
 
-The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(StockSharp.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
+The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
 
 #### Parameters:
 
-- `logs`: Takes an instance of [ILogReceiver](xref:StockSharp.Logging.ILogReceiver) for logging within the script.
+- `logs`: Takes an instance of [ILogReceiver](xref:Ecng.Logging.ILogReceiver) for logging within the script.
 - `panel`: Provides [IAnalyticsPanel](xref:StockSharp.Algo.Analytics.IAnalyticsPanel), which is a user interface element for drawing charts and displaying results.
 - `securities`: An array of [SecurityId](xref:StockSharp.Messages.SecurityId) identifying the financial instruments for analysis.
 - `from`: The start date of the data range for analysis.

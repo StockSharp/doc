@@ -1,6 +1,6 @@
 # Логирование Strategy
 
-Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) реализует интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource). Поэтому стратегии можно передавать в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners). 
+Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) реализует интерфейс [ILogSource](xref:Ecng.Logging.ILogSource). Поэтому стратегии можно передавать в [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). 
 
 ## Предварительные условия
 
@@ -13,13 +13,13 @@
    ```cs
    var logManager = new LogManager();
    ```
-2. Затем необходимо создать файловый логгер, передав в него имя файла, и добавить его в [LogManager.Listeners](xref:StockSharp.Logging.LogManager.Listeners): 
+2. Затем необходимо создать файловый логгер, передав в него имя файла, и добавить его в [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners): 
 
    ```cs
    var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
    logManager.Listeners.Add(fileListener);
    ```
-3. Для логирования сообщений необходимо добавить стратегию в [LogManager.Sources](xref:StockSharp.Logging.LogManager.Sources): 
+3. Для логирования сообщений необходимо добавить стратегию в [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources): 
 
    ```cs
    logManager.Sources.Add(lkohSmaStrategy);
@@ -36,7 +36,7 @@
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Установка фильтра на проигрывание звука только при сообщениях типа [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error): 
+2. Установка фильтра на проигрывание звука только при сообщениях типа [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error): 
 
    ```cs
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -51,7 +51,7 @@
    logManager.Listeners.Add(emailListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Установка фильтра на отсылку сообщений типов [LogLevels.Error](xref:StockSharp.Logging.LogLevels.Error) и [LogLevels.Warning](xref:StockSharp.Logging.LogLevels.Warning): 
+2. Установка фильтра на отсылку сообщений типов [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error) и [LogLevels.Warning](xref:Ecng.Logging.LogLevels.Warning): 
 
    ```cs
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);

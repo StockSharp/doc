@@ -1,17 +1,17 @@
 # Other logs sources
 
-In previous topics objects of embedded in the [S\#](../../api.md) classes were sources of logs. The [S\#](../../api.md) provides possibilities for the cases when the source of the logs is your own class, or source does not have to be associated with a particular class, but it serve the entire application. For the first case you must implement in your class the [ILogSource](xref:StockSharp.Logging.ILogSource) interface or inherit it from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver). In the second situation, you can use the [TraceSource](xref:StockSharp.Logging.TraceSource), that using the tracing system .NET. How to do this is shown in the *Samples\/Common\/SampleLogging* sample. 
+In previous topics objects of embedded in the [S\#](../../api.md) classes were sources of logs. The [S\#](../../api.md) provides possibilities for the cases when the source of the logs is your own class, or source does not have to be associated with a particular class, but it serve the entire application. For the first case you must implement in your class the [ILogSource](xref:Ecng.Logging.ILogSource) interface or inherit it from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). In the second situation, you can use the [TraceSource](xref:Ecng.Logging.TraceSource), that using the tracing system .NET. How to do this is shown in the *Samples\/Common\/SampleLogging* sample. 
 
 ## SampleLogging sample
 
-1. Create a custom class that inherits from the [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
+1. Create a custom class that inherits from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver).
 
    ```cs
    private class TestSource : BaseLogReceiver
    {
    }
    ```
-2. Create the [LogManager](xref:StockSharp.Logging.LogManager) and declare a variable of the user class.
+2. Create the [LogManager](xref:Ecng.Logging.LogManager) and declare a variable of the user class.
 
    ```cs
    private readonly LogManager _logManager = new LogManager();
@@ -22,7 +22,7 @@ In previous topics objects of embedded in the [S\#](../../api.md) classes were s
 
    ```cs
    _logManager.Sources.Add(_testSource = new TestSource());
-   _logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+   _logManager.Sources.Add(new Ecng.Logging.TraceSource());
    				
    ```
 4. Add log listeners.

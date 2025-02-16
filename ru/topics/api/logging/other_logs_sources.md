@@ -1,17 +1,17 @@
 # Другие источники логов
 
-В предыдущих топиках источниками логов выступали объекты встроенных в [S\#](../../api.md) классов. В [S\#](../../api.md) предусмотрены возможности для случаев, когда источником логов должен служить Ваш собственный класс или же источник не должен быть связан с определенным классом, а обслуживать всё приложение. Для первого случая необходимо реализовать в Вашем классе интерфейс [ILogSource](xref:StockSharp.Logging.ILogSource) или наследовать его от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver). Во второй ситуации можно использовать источник [TraceSource](xref:StockSharp.Logging.TraceSource), использующий систему трассировки .NET. Как это сделать показано в примере *Samples\/Misc\/SampleLogging*. 
+В предыдущих топиках источниками логов выступали объекты встроенных в [S\#](../../api.md) классов. В [S\#](../../api.md) предусмотрены возможности для случаев, когда источником логов должен служить Ваш собственный класс или же источник не должен быть связан с определенным классом, а обслуживать всё приложение. Для первого случая необходимо реализовать в Вашем классе интерфейс [ILogSource](xref:Ecng.Logging.ILogSource) или наследовать его от [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). Во второй ситуации можно использовать источник [TraceSource](xref:Ecng.Logging.TraceSource), использующий систему трассировки .NET. Как это сделать показано в примере *Samples\/Misc\/SampleLogging*. 
 
 ## Пример SampleLogging
 
-1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](xref:StockSharp.Logging.BaseLogReceiver).
+1. Создаем пользовательский класс, наследующий от [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver).
 
    ```cs
    private class TestSource : BaseLogReceiver
    {
    }
    ```
-2. Создаем [LogManager](xref:StockSharp.Logging.LogManager) и декларируем переменную пользовательского класса.
+2. Создаем [LogManager](xref:Ecng.Logging.LogManager) и декларируем переменную пользовательского класса.
 
    ```cs
    private readonly LogManager _logManager = new LogManager();
@@ -24,7 +24,7 @@
    // пользовательский класс в качестве источника
    _logManager.Sources.Add(_testSource = new TestSource());
    // система трассировки .NET в качестве источника
-   _logManager.Sources.Add(new StockSharp.Logging.TraceSource());
+   _logManager.Sources.Add(new Ecng.Logging.TraceSource());
    				
    ```
 4. Добавляем "слушателей" логов.
