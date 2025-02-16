@@ -124,4 +124,4 @@ To add the resulting cube to the diagram, you need to select the created cube in
 
 ## See Also
 
-[Creating an Indicator in C#](create_own_indicator_using_csharp.md)
+[Creating an Indicator](create_own_indicator.md)

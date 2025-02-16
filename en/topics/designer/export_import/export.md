@@ -17,7 +17,7 @@ After pressing **Export**, depending on the content type, a window will appear:
   - code - convert the scheme into C# code.
   - DLL - compile the scheme into a DLL. Suitable if you need to keep the code confidential.
 
-- for [code](../strategies/using_csharp.md):
+- for [code](../strategies/using_code.md):
 
   ![Designer Export strategies 02](../../../images/designer_export_strategies_02.png)
 

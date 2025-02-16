@@ -1,10 +1,10 @@
 # Using DLL
 
-Using ready-made DLLs is familiar for those who want to work continuously in **Visual Studio** and **JetBrains Rider** environments. This approach offers several advantages over writing [code](using_csharp.md) inside **Designer**:
+Using ready-made DLLs is familiar for those who want to work continuously in **Visual Studio** and **JetBrains Rider** environments. This approach offers several advantages over writing [code](using_code.md) inside **Designer**:
 
 - Enhanced code editor compared to the built-in editor inside **Designer**.
 - Recompiling code automatically updates content inside **Designer**.
-- Possibility to split code into several files (in the case of the [code](using_csharp.md) approach, only OneFile-OneStrategy variant is possible).
+- Possibility to split code into several files (in the case of the [code](using_code.md) approach, only OneFile-OneStrategy variant is possible).
 - Using the [debugger](using_dll/debug_dll_in_visual_studio.md).
 
 ### Creating a Project in Visual Studio
@@ -13,7 +13,7 @@ Using ready-made DLLs is familiar for those who want to work continuously in **V
 
 ![Designer Creating a DLL cube in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
 
-2. Next, you need to write the strategy code. For a quick start, you can copy the SmaStrategy code, which is created as a template in [strategy from code](using_csharp/first_csharp_strategy.md):
+2. Next, you need to write the strategy code. For a quick start, you can copy the SmaStrategy code, which is created as a template in [strategy from code](using_code/csharp/first_strategy.md):
 
 ![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
@@ -33,7 +33,7 @@ If the strategy uses charting interfaces, it is necessary to include the NuGet p
 
 ### Adding DLL to Designer
 
-1. Adding a strategy from a DLL is similar to creating a strategy from [code](using_csharp.md). But at the content type definition stage, you need to choose **DLL**:
+1. Adding a strategy from a DLL is similar to creating a strategy from [code](using_code.md). But at the content type definition stage, you need to choose **DLL**:
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 

@@ -17,7 +17,7 @@
   - код - преобразовать схему в код C#.
   - DLL - скомпилировать схему в DLL. Подойдет в том случае, если необходимо сохранить код в секрете.
 
-- для [кода](../strategies/using_csharp.md):
+- для [кода](../strategies/using_code.md):
 
   ![Designer Export strategies 02](../../../images/designer_export_strategies_02.png)
 

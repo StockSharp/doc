@@ -14,7 +14,7 @@ During testing or trading, there arises a need to fully control the process. For
 - [Position Chart](components/positions.md) - represents a Position chart.
 - Properties - represents a table of [Testing Properties](components/backtesting_settings.md) or a table of [Live Trading Properties](components/live_settings.md).
 - [Scheme](../strategies/using_visual_designer/diagram_panel.md) - represents the schema designer.
-- [Source Code](../strategies/using_csharp.md) - represents a window for creating or editing strategies based on source code.
+- [Source Code](../strategies/using_code.md) - represents a window for creating or editing strategies based on source code.
 - [DLL](../strategies/using_dll/dll_panel.md) - a window for viewing DLL metadata. In case of creating a strategy based on a ready DLL.
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - represents an options position chart.
 - [Options Board](../strategies/using_visual_designer/elements/options/option_desk.md) - represents an options table.

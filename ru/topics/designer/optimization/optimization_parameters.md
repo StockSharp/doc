@@ -13,7 +13,7 @@
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 
-- в случае [кода](../strategies/using_csharp.md) необходимо прописать код при определении параметра, и изменить свойство [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize):
+- в случае [кода](../strategies/using_code.md) необходимо прописать код при определении параметра, и изменить свойство [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize):
 
 ```cs
 _long = this.Param(nameof(Long), 80);

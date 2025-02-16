@@ -6,7 +6,7 @@ StockSharp API, also known as S# API, is a comprehensive Software Development Ki
 
 ## Features
 
-- **Strategy Scripting**: StockSharp API provides a robust scripting mechanism for writing and implementing trading strategies directly in [Designer](designer/strategies/using_csharp.md). Users can develop, test, and deploy trading algorithms using C#.
+- **Strategy Scripting**: StockSharp API provides a robust scripting mechanism for writing and implementing trading strategies directly in [Designer](designer/strategies/using_code.md). Users can develop, test, and deploy trading algorithms using C#, F# or Python.
 
 - **Analytical Tools**: The API is integrated with Hydra, a platform for detailed [market data analysis](hydra/analytics.md). It offers extensive support for data manipulation and storage, enabling complex analytical operations.
 

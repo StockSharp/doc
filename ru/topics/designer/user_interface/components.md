@@ -14,7 +14,7 @@
 - График [Позиции](components/positions.md) \- представляет собой график Позиции.
 - Свойства \- представляет собой таблицу [Свойства тестирования](components/backtesting_settings.md) или таблицу [Свойства Live торговли](components/live_settings.md).
 - Схема \- представляет собой [Дизайнер стратегий](../strategies/using_visual_designer/diagram_panel.md).
-- [Исходный код](../strategies/using_csharp.md) \- представляет собой окно создания или редактирования стратегий, созданных на базе исходного кода.
+- [Исходный код](../strategies/using_code.md) \- представляет собой окно создания или редактирования стратегий, созданных на базе исходного кода.
 - [DLL](../strategies/using_dll/dll_panel.md) \- окно просмотра метаданных DLL. В случае создания стратегии на базе готовой DLL.
 - [График позиций опционов](../strategies/using_visual_designer/elements/options/chart_positions.md) \- представляет собой график позиций опционов.
 - [Доска опционов](../strategies/using_visual_designer/elements/options/option_desk.md) \- представляет собой таблицу опционов.

@@ -13,7 +13,7 @@ By default, all parameters with these types will be represented in the [optimize
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 
-- In the case of [code](../strategies/using_csharp.md), you need to write code when defining a parameter and change the [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize) property:
+- In the case of [code](../strategies/using_code.md), you need to write code when defining a parameter and change the [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize) property:
 
 ```cs
 _long = this.Param(nameof(Long), 80);
