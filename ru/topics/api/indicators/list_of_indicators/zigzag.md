@@ -5,7 +5,3 @@
 Для использования индикатора необходимо использовать класс [ZigZag](xref:StockSharp.Algo.Indicators.ZigZag). 
 
 ![IndicatorZigZag](../../../../images/indicatorzigzag.png)
-
-## См. также
-
-[ZigZag (Metastock)](zigzag_metastock.md)

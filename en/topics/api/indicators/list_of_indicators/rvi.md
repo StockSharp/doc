@@ -5,7 +5,3 @@
 To use the indicator, you must use the [RelativeVigorIndex](xref:StockSharp.Algo.Indicators.RelativeVigorIndex) class. 
 
 ![IndicatorRelativeVigorIndex](../../../../images/indicatorrelativevigorindex.png)
-
-## Recommended content
-
-[Linear Regression R\-Squared](lrr2.md)

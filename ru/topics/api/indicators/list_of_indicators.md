@@ -40,7 +40,6 @@
 - [RoC](list_of_indicators/roc.md)
 - [RSI](list_of_indicators/rsi.md)
 - [RVI](list_of_indicators/rvi.md)
-- [Linear Regression R\-Squared](list_of_indicators/lrr2.md)
 - [SMA](list_of_indicators/sma.md)
 - [Smoothed MA](list_of_indicators/smoothed_ma.md)
 - [Standard Deviation](list_of_indicators/standard_deviation.md)
@@ -58,7 +57,6 @@
 - [Weighted MA](list_of_indicators/weighted_ma.md)
 - [%R](list_of_indicators/williams_r.md)
 - [ZigZag](list_of_indicators/zigzag.md)
-- [ZigZag (Metastock)](list_of_indicators/zigzag_metastock.md)
 
 ## См. также
 
