@@ -59,7 +59,7 @@ Below is an example of using this component. The full example code is in the Sam
    </Window>
    	  				
    ```
-2. In the main window code we create a data source to draw the chart using the [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Charting.ChartIndicatorDrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [StockSharp.Charting.ChartIndicatorDrawStyles](xref:StockSharp.Charting.ChartIndicatorDrawStyles) style, [System.Guid](xref:System.Guid) id **)** method. 
+2. In the main window code we create a data source to draw the chart using the [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,Ecng.Drawing.DrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [Ecng.Drawing.DrawStyles](xref:Ecng.Drawing.DrawStyles) style, [System.Guid](xref:System.Guid) id **)** method. 
 
    ```cs
    private ChartBandElement _pnl;

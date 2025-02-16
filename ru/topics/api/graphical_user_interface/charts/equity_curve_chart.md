@@ -59,7 +59,7 @@
    </Window>
    	  				
    ```
-2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,StockSharp.Charting.ChartIndicatorDrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [StockSharp.Charting.ChartIndicatorDrawStyles](xref:StockSharp.Charting.ChartIndicatorDrawStyles) style, [System.Guid](xref:System.Guid) id **)**. 
+2. В коде главного окна создаем источник данных для отрисовки графика при помощи метода [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,Ecng.Drawing.DrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [Ecng.Drawing.DrawStyles](xref:Ecng.Drawing.DrawStyles) style, [System.Guid](xref:System.Guid) id **)**. 
 
    ```cs
    private ChartBandElement _pnl;
