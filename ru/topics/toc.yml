@@ -1753,8 +1753,6 @@
         href: api/indicators/list_of_indicators/jma.md
       - name: KAMA
         href: api/indicators/list_of_indicators/kama.md
-      - name: LRR2
-        href: api/indicators/list_of_indicators/lrr2.md
       - name: LRS
         href: api/indicators/list_of_indicators/lrs.md
       - name: Lowest
@@ -1785,8 +1783,6 @@
         href: api/indicators/list_of_indicators/parabolic_sar.md
       - name: Peak
         href: api/indicators/list_of_indicators/peak.md
-      - name: PeakBar
-        href: api/indicators/list_of_indicators/peakbar.md
       - name: Pattern
         href: api/indicators/list_of_indicators/pattern.md
         items:
@@ -1826,8 +1822,6 @@
         href: api/indicators/list_of_indicators/trix.md
       - name: Trough
         href: api/indicators/list_of_indicators/trough.md
-      - name: TroughBar
-        href: api/indicators/list_of_indicators/troughbar.md
       - name: True Range
         href: api/indicators/list_of_indicators/true_range.md
       - name: UO
@@ -1848,8 +1842,6 @@
         href: api/indicators/list_of_indicators/wilder_ma.md
       - name: ZigZag
         href: api/indicators/list_of_indicators/zigzag.md
-      - name: ZigZag (Metastock)
-        href: api/indicators/list_of_indicators/zigzag_metastock.md
       - name: Заглушка
         href: api/indicators/list_of_indicators/pass_through.md
     - name: Собственный индикатор
