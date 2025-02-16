@@ -1,10 +1,10 @@
 # Создание собственного кубика
 
-Аналогично созданию [кубика из схемы](../using_visual_designer/composite_elements.md) можно создать свой кубик на основе C# кода. Такой кубик будет более функциональным, чем кубик из схемы.
+Аналогично созданию [кубика из схемы](../../using_visual_designer/composite_elements.md) можно создать свой кубик на основе C# кода. Такой кубик будет более функциональным, чем кубик из схемы.
 
 Для создания кубика из кода, необходимо создать его в папке **Собственные кубики**:
 
-![Designer_Source_Code_Elem_00](../../../../images/designer_source_code_elem_00.png)
+![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
 В ниже приведенном примере кубик наследуется от класса [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement), и выглядит следующим образом:
 
@@ -35,11 +35,11 @@ public class EmptyDiagramElement : DiagramExternalElement
 	[DiagramExternal]
 	public event Action<Unit> Output2;
 
-	// input sockets are method parameters marked with DiagramExternal attribute
-
 	// uncomment to get Process method called every time when new arg received
 	// (no need wait when all input args received)
 	//public override bool WaitAllInput => false;
+
+	// input sockets are method parameters marked with DiagramExternal attribute
 
 	[DiagramExternal]
 	public void Process(CandleMessage candle, Unit diff)
@@ -104,7 +104,7 @@ _minValue = AddParam("MinValue", 10)
 
 При использовании класса [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) автоматически используется подход сохранения и восстановления настроек.
 
-Свойство **MinValue** помечено как basic, и оно будет видно в режиме [Базовые свойства](../using_visual_designer/diagram_panel.md).
+Свойство **MinValue** помечено как basic, и оно будет видно в режиме [Базовые свойства](../../using_visual_designer/diagram_panel.md).
 
 Закомментированное свойство [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) отвечает за время вызова метода со входящими сокетами:
 
@@ -116,11 +116,11 @@ _minValue = AddParam("MinValue", 10)
 
 Чтобы добавить получившийся кубик на схему, необходимо в палитре в разделе **Собственные кубики** выбрать созданный кубик:
 
-![Designer_Source_Code_Elem_01](../../../../images/designer_source_code_elem_01.png)
+![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING] 
-> Кубики из C# кода невозможно использовать в стратегиях, созданных на C# коде. Их возможно использовать только в стратегиях, созданных [из кубиков](../using_visual_designer.md).
+> Кубики из C# кода невозможно использовать в стратегиях, созданных на C# коде. Их возможно использовать только в стратегиях, созданных [из кубиков](../../using_visual_designer.md).
 
 ## См. также
 
-[Создание индикатора на C#](create_own_indicator_using_csharp.md)
+[Создание индикатора](create_own_indicator.md)

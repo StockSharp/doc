@@ -245,21 +245,42 @@
           href: designer/strategies/using_visual_designer/schema_samples/get_current_position.md
         - name: Get order book price level
           href: designer/strategies/using_visual_designer/schema_samples/get_order_book_price_level.md
-    - name: Using C#
-      href: designer/strategies/using_csharp.md
+    - name: Using code
+      href: designer/strategies/using_code.md
       items:
-      - name: First C# strategy
-        href: designer/strategies/using_csharp/first_csharp_strategy.md
-      - name: External DLLs
-        href: designer/strategies/using_csharp/external_dlls.md
-      - name: Creating Your Own Cube
-        href: designer/strategies/using_csharp/creating_your_own_cube.md
-      - name: Create own indicator using C#
-        href: designer/strategies/using_csharp/create_own_indicator_using_csharp.md
-      - name: Draw order book
-        href: designer/strategies/using_csharp/draw_order_book.md
-      - name: Using Visual Studio or Rider
-        href: designer/strategies/using_csharp/using_visual_studio_or_rider.md
+      - name: C#
+        href: designer/strategies/using_code/csharp.md
+        items:
+        - name: First strategy
+          href: designer/strategies/using_code/csharp/first_strategy.md
+        - name: External DLLs
+          href: designer/strategies/using_code/csharp/external_dlls.md
+        - name: Creating Your Own Cube
+          href: designer/strategies/using_code/csharp/creating_your_own_cube.md
+        - name: Create own indicator
+          href: designer/strategies/using_code/csharp/create_own_indicator.md
+        - name: Draw order book
+          href: designer/strategies/using_code/csharp/draw_order_book.md
+        - name: Using Visual Studio or Rider
+          href: designer/strategies/using_code/csharp/using_visual_studio_or_rider.md
+      - name: F#
+        href: designer/strategies/using_code/fsharp.md
+        items:
+        - name: First strategy
+          href: designer/strategies/using_code/fsharp/first_strategy.md
+        - name: Creating Your Own Cube
+          href: designer/strategies/using_code/fsharp/creating_your_own_cube.md
+        - name: Create own indicator
+          href: designer/strategies/using_code/fsharp/create_own_indicator.md
+      - name: Python
+        href: designer/strategies/using_code/python.md
+        items:
+        - name: First strategy
+          href: designer/strategies/using_code/python/first_strategy.md
+        - name: Creating Your Own Cube
+          href: designer/strategies/using_code/python/creating_your_own_cube.md
+        - name: Create own indicator
+          href: designer/strategies/using_code/python/create_own_indicator.md
     - name: Using DLL
       href: designer/strategies/using_dll.md
       items:

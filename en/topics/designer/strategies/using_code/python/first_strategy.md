@@ -1,11 +1,11 @@
-# Example of a Strategy in C#
+# Example of a Strategy in Python
 
-Creating a strategy from source code will be illustrated using the example of an SMA strategy - a similar SMA strategy example, assembled from cubes in the section [Creating an Algorithm from Cubes](../using_visual_designer/first_strategy.md).
+Creating a strategy from source code will be illustrated using the example of an SMA strategy - a similar SMA strategy example, assembled from cubes in the section [Creating an Algorithm from Cubes](../../using_visual_designer/first_strategy.md).
 
-This section will not describe the constructs of the C# language (as well as [Strategy](../../../api/strategies.md), on the basis of which strategies are created), but features for the code to work in **Designer** will be mentioned.
+This section will not describe the constructs of the Python language (as well as [Strategy](../../../../api/strategies.md), on the basis of which strategies are created), but features for the code to work in **Designer** will be mentioned.
 
 > [!TIP]
-> Strategies created in **Designer** are compatible with strategies created in [API](../../../api.md) due to the use of a common base class [Strategy](../../../api/strategies.md). This makes running such strategies outside of **Designer** significantly easier than [diagrams](../../live_execution/running_strategies_outside_of_designer.md).
+> Strategies created in **Designer** are compatible with strategies created in [API](../../../../api.md) due to the use of a common base class [Strategy](../../../../api/strategies.md). This makes running such strategies outside of **Designer** significantly easier than [diagrams](../../../live_execution/running_strategies_outside_of_designer.md).
 
 1. Strategy parameters are created through a special approach:
 
@@ -53,9 +53,9 @@ Indicators.Add(_longSma);
 Indicators.Add(_shortSma);
 ```
 
-This is done so that the strategy can track all the indicators necessary for its logic when they become [formed](../../../api/indicators.md).
+This is done so that the strategy can track all the indicators necessary for its logic when they become [formed](../../../../api/indicators.md).
 
-3. When working with the chart, it is necessary to consider that in the case of launching the strategy [outside Designer](../../live_execution/running_strategies_outside_of_designer.md), the chart object may be absent.
+3. When working with the chart, it is necessary to consider that in the case of launching the strategy [outside Designer](../../../live_execution/running_strategies_outside_of_designer.md), the chart object may be absent.
 
 ```cs
 _chart = this.GetChart();
@@ -83,7 +83,7 @@ if (_chart == null)
 var data = _chart.CreateData();
 ```
 
-4. To ensure that the strategy is fully ready to work, its indicators are formed with historical data and all subscriptions have transitioned to [Online](../../../api/market_data/subscriptions.md), a special method can be used:
+4. To ensure that the strategy is fully ready to work, its indicators are formed with historical data and all subscriptions have transitioned to [Online](../../../../api/market_data/subscriptions.md), a special method can be used:
 
 ```cs
 // some of indicators added in OnStarted not yet fully formed

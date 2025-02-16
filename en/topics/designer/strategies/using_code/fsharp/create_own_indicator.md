@@ -1,10 +1,10 @@
-# Creating an Indicator in C#
+# Creating an Indicator
 
-Creating your own indicator in [API](../../../api.md) is described in the section [Custom Indicator](../../../api/indicators/custom_indicator.md). Such indicators are fully compatible with **Designer**.
+Creating your own indicator in [API](../../../../api.md) is described in the section [Custom Indicator](../../../../api/indicators/custom_indicator.md). Such indicators are fully compatible with **Designer**.
 
 To create an indicator, on the **Scheme** panel you need to select the **Indicators** folder, right-click and in the context menu select **Add**:
 
-![Designer_Source_Code_Indicator_00](../../../../images/designer_source_code_indicator_00.png)
+![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 
 The indicator code will look like this:
 
@@ -92,13 +92,13 @@ public class EmptyIndicator : BaseIndicator
 
 This indicator receives an incoming value and makes an arbitrary deviation on the set parameter **Change** value.
 
-The description of the indicator methods is available in the section [Custom Indicator](../../../api/indicators/custom_indicator.md).
+The description of the indicator methods is available in the section [Custom Indicator](../../../../api/indicators/custom_indicator.md).
 
-To add the created indicator to the diagram, you need to use the [Indicator](../using_visual_designer/elements/common/indicator.md) cube, and in it, specify the necessary indicator:
+To add the created indicator to the diagram, you need to use the [Indicator](../../using_visual_designer/elements/common/indicator.md) cube, and in it, specify the necessary indicator:
 
-![Designer_Source_Code_Indicator_01](../../../../images/designer_source_code_indicator_01.png)
+![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
 The **Change** parameter, previously set in the indicator code, is shown in the properties panel.
 
 > [!WARNING] 
-> Indicators from C# code cannot be used in strategies created in C# code. They can only be used in strategies created [from cubes](../using_visual_designer.md).
+> Indicators from F# code cannot be used in strategies created in F# code. They can only be used in strategies created [from cubes](../../using_visual_designer.md).

@@ -1,10 +1,10 @@
 # Creating Your Own Cube
 
-Similar to creating a [cube from a diagram](../using_visual_designer/composite_elements.md), you can create your own cube based on C# code. Such a cube will be more functional than a cube from a diagram.
+Similar to creating a [cube from a diagram](../../using_visual_designer/composite_elements.md), you can create your own cube based on C# code. Such a cube will be more functional than a cube from a diagram.
 
 To create a cube from code, it needs to be created in the **Own elements** folder:
 
-![Designer_Source_Code_Elem_00](../../../../images/designer_source_code_elem_00.png)
+![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
 In the example provided below, the cube inherits from the [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) class, and looks as follows:
 
@@ -105,7 +105,7 @@ _minValue = AddParam("MinValue", 10)
 
 Using the [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) class automatically employs the approach to save and restore settings.
 
-The **MinValue** property is marked as basic, and it will be visible in the [Basic properties](../using_visual_designer/diagram_panel.md) mode.
+The **MinValue** property is marked as basic, and it will be visible in the [Basic properties](../../using_visual_designer/diagram_panel.md) mode.
 
 The commented [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) property is responsible for the timing of the method call with incoming sockets:
 
@@ -117,10 +117,10 @@ If uncommented, the **Process** method will always be called as soon as at least
 
 To add the resulting cube to the diagram, you need to select the created cube in the palette in the **Own elements** section:
 
-![Designer_Source_Code_Elem_01](../../../../images/designer_source_code_elem_01.png)
+![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING] 
-> Cubes from C# code cannot be used in strategies created in C# code. They can only be used in strategies created [from cubes](../using_visual_designer.md).
+> Cubes from C# code cannot be used in strategies created in C# code. They can only be used in strategies created [from cubes](../../using_visual_designer.md).
 
 ## See Also
 
