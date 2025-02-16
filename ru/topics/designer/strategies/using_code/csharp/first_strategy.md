@@ -80,7 +80,7 @@ if (area != null)
 }
 ```
 
-4. Запустить защиту позиций через [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection), если такое требует логика стратегии:
+4. Запустить защиту позиций через [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)), если такое требует логика стратегии:
 
 ```cs
 // start protection by take profit and-or stop loss

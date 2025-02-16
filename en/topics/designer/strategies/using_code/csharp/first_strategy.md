@@ -80,7 +80,7 @@ if (area != null)
 }
 ```
 
-4. Start position protection through [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection) if required by the strategy logic:
+4. Start position protection through [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) if required by the strategy logic:
 
 ```cs
 // start protection by take profit and-or stop loss

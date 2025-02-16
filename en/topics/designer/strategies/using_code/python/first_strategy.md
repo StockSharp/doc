@@ -114,7 +114,7 @@ if area is not None:
     self.DrawOwnTrades(area)
 ```
 
-5. Start position protection through [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection) if required by the strategy logic:
+5. Start position protection through [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) if required by the strategy logic:
 
 ```python
 self.StartProtection(self.TakeValue, self.StopValue)
@@ -164,7 +164,7 @@ def OnProcess(self, candle, longValue, shortValue):
         self._isShortLessThenLong = isShortLessThenLong
 ```
 
-7. A mandatory requirement for Python strategies is to override the virtual method [CreateClone](xref:StockSharp.Algo.Strategies.Strategy.CreateClone). This method is needed to create new strategy instances required by [Designer](../../../designer.md) when optimizing strategy parameters or during testing. Without overriding it, these operations will be impossible.
+7. A mandatory requirement for Python strategies is to override the virtual method [CreateClone](xref:StockSharp.Algo.Strategies.Strategy.CreateClone). This method is needed to create new strategy instances required by [Designer](../../../../designer.md) when optimizing strategy parameters or during testing. Without overriding it, these operations will be impossible.
 
 ```python
 def CreateClone(self):

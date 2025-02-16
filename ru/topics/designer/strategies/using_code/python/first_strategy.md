@@ -114,7 +114,7 @@ if area is not None:
     self.DrawOwnTrades(area)
 ```
 
-5. Запустить защиту позиций через [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection), если такое требует логика стратегии:
+5. Запустить защиту позиций через [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)), если такое требует логика стратегии:
 
 ```python
 self.StartProtection(self.TakeValue, self.StopValue)
@@ -164,7 +164,7 @@ def OnProcess(self, candle, longValue, shortValue):
         self._isShortLessThenLong = isShortLessThenLong
 ```
 
-7. Обязательным требованием для стратегий на Python является переопределение виртуального метода [CreateClone](xref:StockSharp.Algo.Strategies.Strategy.CreateClone). . Этот метод нужен для создания новых экземпляров стратегии, которые требуются для [Designer](../../../designer.md) при оптимизации параметров стратегии или при тестировании. Без его переопределения эти операции будут невозможны.
+7. Обязательным требованием для стратегий на Python является переопределение виртуального метода [CreateClone](xref:StockSharp.Algo.Strategies.Strategy.CreateClone). . Этот метод нужен для создания новых экземпляров стратегии, которые требуются для [Designer](../../../../designer.md) при оптимизации параметров стратегии или при тестировании. Без его переопределения эти операции будут невозможны.
 
 ```python
 def CreateClone(self):
