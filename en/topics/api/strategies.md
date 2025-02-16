@@ -183,7 +183,7 @@ if (_chart != null)
 
 ### Creating and Registering Orders
 
-To create orders, use the [CreateOrder](xref:StockSharp.Algo.Strategies.StrategyHelper.CreateOrder(StockSharp.Algo.Strategies.Strategy,StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})) helper method.
+To create orders, use the [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})) helper method.
 
 ```cs
 var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;

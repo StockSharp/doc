@@ -62,13 +62,13 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 Для запроса состояния заявок реализуется метод **OrderStatusAsync**. Этот метод обычно выполняет следующие действия:
 
-1. Отправляет подтверждение о получении запроса с помощью [IMessageAdapter.SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(long)).
+1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe).
 3. В случае подписки:
   - Запрашивает список текущих заявок у биржи.
   - Для каждой заявки создает и отправляет сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) с информацией о заявке.
   - Если требуется, устанавливает подписку на получение обновлений по заявкам в реальном времени.
-4. Отправляет сообщение о результате подписки с помощью [IMessageAdapter.SendSubscriptionResult](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)

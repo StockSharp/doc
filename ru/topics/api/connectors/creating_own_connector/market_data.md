@@ -4,7 +4,7 @@
 
 Схематично алгоритм обработки запроса на подписку или отписку выглядит так:
 
-1. Отправляет подтверждение о получении запроса на подписку с помощью метода [SendSubscriptionReply](xref:StockSharp.Messages.IMessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Отправляет подтверждение о получении запроса на подписку с помощью метода [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe).
 3. В случае подписки устанавливает подписку на получение данных в реальном времени через WebSocket или другой механизм (специфично для каждой биржи).
 4. В случае отписки отменяет соответствующую подписку (специфично для каждой биржи).
