@@ -37,7 +37,9 @@ Trading robot [examples](examples.md) are available on [GitHub](https://github.c
 
 Some components (like crypto-[connectors](connectors.md)) are only available through the private NuGet server for registered users.
 
-To connect:
+There are two ways to connect:
+
+### Method 1: Authentication via token in the address
 
 1. Register on the StockSharp website.
 
@@ -58,6 +60,25 @@ To connect:
 ![Package list](../../images/api_nuget_8.png)
 
 6. Select the desired package and click the **Install** button.
+
+### Method 2: Authentication via username and password
+
+1. Add a package source with the address `https://nuget.stocksharp.com/x/v3/index.json`.
+
+2. When you try to use this source, an authentication window will appear:
+
+![Authentication window](../../images/api_nuget_auth.png)
+
+3. Enter your StockSharp account username and password. You can save your credentials to avoid entering them each time.
+
+4. After successful authentication, you will have access to private packages.
+
+5. If you prefer token authentication, you can enter "x" in the username field and your token in the password field.
+
+If you need to reset saved credentials:
+1. Open "Credential Manager" in Windows (Control Panel → User Accounts → Credential Manager)
+2. Find VSCredentials related to nuget.stocksharp.com in the list
+3. Delete these credentials
 
 ## Package Updates
 
