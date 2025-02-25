@@ -1,6 +1,6 @@
 # Pattern
 
-A **Pattern** in technical analysis refers to stable, recurring combinations of price data, volume, or indicators. Pattern analysis is based on one of the axioms of technical analysis: "history repeats itself" � it's believed that recurring data combinations lead to similar outcomes.
+A **Pattern** in technical analysis refers to stable, recurring combinations of price data, volume, or indicators. Pattern analysis is based on one of the axioms of technical analysis: "history repeats itself" it's believed that recurring data combinations lead to similar outcomes.
 
 Patterns are also called "templates" or "figures" of technical analysis.
 
