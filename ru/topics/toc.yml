@@ -1705,84 +1705,196 @@
     - name: Список индикаторов
       href: api/indicators/list_of_indicators.md
       items:
-      - name: Williams %R
-        href: api/indicators/list_of_indicators/williams_r.md
-      - name: A/C
+      - name: Acceleration / Deceleration Indicator (A/D)
         href: api/indicators/list_of_indicators/a_d.md
-      - name: ADX
-        href: api/indicators/list_of_indicators/adx.md
+      - name: Accumulation/Distribution Line (ADL)
+        href: api/indicators/list_of_indicators/accumulation_distribution_line.md
+      - name: Adaptive Laguerre Filter (ALF)
+        href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
+      - name: Adaptive Price Zone (APZ)
+        href: api/indicators/list_of_indicators/adaptive_price_zone.md
       - name: Alligator
         href: api/indicators/list_of_indicators/alligator.md
-      - name: AO
-        href: api/indicators/list_of_indicators/ao.md
-      - name: ATR
+      - name: Approval Flow Index (AFI)
+        href: api/indicators/list_of_indicators/approval_flow_index.md
+      - name: Arnaud Legoux Moving Average (ALMA)
+        href: api/indicators/list_of_indicators/arnaud_legoux_moving_average.md
+      - name: Aroon Indicator (Aroon)
+        href: api/indicators/list_of_indicators/aroon.md
+      - name: Average Directional Index (ADX)
+        href: api/indicators/list_of_indicators/adx.md
+      - name: Average True Range (ATR)
         href: api/indicators/list_of_indicators/atr.md
-      - name: Bollinger Bands
+      - name: Awesome Oscillator (AO)
+        href: api/indicators/list_of_indicators/ao.md
+      - name: Balance of Market Power (BMP)
+        href: api/indicators/list_of_indicators/balance_of_market_power.md
+      - name: Balance of Power (BOP)
+        href: api/indicators/list_of_indicators/balance_of_power.md
+      - name: Balance Volume Indicator (BV)
+        href: api/indicators/list_of_indicators/balance_volume.md
+      - name: Bollinger Bands (Bollinger)
         href: api/indicators/list_of_indicators/bollinger_bands.md
-      - name: CCI
-        href: api/indicators/list_of_indicators/cci.md
-      - name: CHV
+      - name: Bollinger %b (BBP)
+        href: api/indicators/list_of_indicators/bollinger_percent_b.md
+      - name: Center of Gravity Oscillator (CGO)
+        href: api/indicators/list_of_indicators/center_of_gravity_oscillator.md
+      - name: Chaikin Money Flow (CMF)
+        href: api/indicators/list_of_indicators/chaikin_money_flow.md
+      - name: Chaikin Volatility (Chaikin's Volatility)
         href: api/indicators/list_of_indicators/chv.md
-      - name: CMO
+      - name: Chande Kroll Stop (CKS)
+        href: api/indicators/list_of_indicators/chande_kroll_stop.md
+      - name: Chande Momentum Oscillator (CMO)
         href: api/indicators/list_of_indicators/cmo.md
-      - name: Correlation
-        href: api/indicators/list_of_indicators/correlation.md
-      - name: Covariation
-        href: api/indicators/list_of_indicators/covariation.md
-      - name: DEMA
-        href: api/indicators/list_of_indicators/dema.md
-      - name: DMI
-        href: api/indicators/list_of_indicators/dmi.md
-      - name: DPO
+      - name: Choppiness Index (CHOP)
+        href: api/indicators/list_of_indicators/choppiness_index.md
+      - name: Commodity Channel Index (CCI)
+        href: api/indicators/list_of_indicators/cci.md
+      - name: Composite Momentum (CM)
+        href: api/indicators/list_of_indicators/composite_momentum.md
+      - name: Connors RSI (CRSI)
+        href: api/indicators/list_of_indicators/connors_rsi.md
+      - name: Constance Brown Composite Index (CBCI)
+        href: api/indicators/list_of_indicators/constance_brown_composite_index.md
+      - name: Demand Index (DI)
+        href: api/indicators/list_of_indicators/demand_index.md
+      - name: Detrended Price Oscillator (DPO)
         href: api/indicators/list_of_indicators/dpo.md
-      - name: EMA
-        href: api/indicators/list_of_indicators/ema.md
+      - name: Detrended Synthetic Price (DSP)
+        href: api/indicators/list_of_indicators/detrended_synthetic_price.md
+      - name: Directional Movement Index (DMI)
+        href: api/indicators/list_of_indicators/dmi.md
+      - name: Disparity Index (DPI)
+        href: api/indicators/list_of_indicators/disparity_index.md
+      - name: Donchian Channels (DC)
+        href: api/indicators/list_of_indicators/donchian_channels.md
+      - name: Double Exponential Moving Average (DEMA)
+        href: api/indicators/list_of_indicators/dema.md
+      - name: Dynamic Zones RSI (DZRSI)
+        href: api/indicators/list_of_indicators/dynamic_zones_rsi.md
+      - name: Ease of Movement (EMV)
+        href: api/indicators/list_of_indicators/ease_of_movement.md
+      - name: Ehlers Fisher Transform (EFT)
+        href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
+      - name: Elder Impulse System (EIS)
+        href: api/indicators/list_of_indicators/elder_impulse_system.md
+      - name: Elliot Wave Oscillator (EWO)
+        href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
+      - name: Endpoint Moving Average (EPMA)
+        href: api/indicators/list_of_indicators/endpoint_moving_average.md
       - name: Envelope
         href: api/indicators/list_of_indicators/envelope.md
+      - name: Exponential Moving Average (EMA)
+        href: api/indicators/list_of_indicators/ema.md
+      - name: Fibonacci Retracement (FR)
+        href: api/indicators/list_of_indicators/fibonacci_retracement.md
+      - name: Finite Volume Element (FVE)
+        href: api/indicators/list_of_indicators/finite_volume_element.md
+      - name: Force Index (FI)
+        href: api/indicators/list_of_indicators/force_index.md
+      - name: Forecast Oscillator (FOSC)
+        href: api/indicators/list_of_indicators/forecast_oscillator.md
+      - name: Fractal Adaptive Moving Average (FRAMA)
+        href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
       - name: Fractals
         href: api/indicators/list_of_indicators/fractals.md
-      - name: Gator Oscillator
+      - name: Gator Oscillator (Gator)
         href: api/indicators/list_of_indicators/gator_oscillator.md
-      - name: Highest
+      - name: Gopalakrishnan Range Index (GAPO)
+        href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
+      - name: Guppy Multiple Moving Average (GMMA)
+        href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
+      - name: Harmonic Oscillator (HO)
+        href: api/indicators/list_of_indicators/harmonic_oscillator.md
+      - name: Highest Value (Highest)
         href: api/indicators/list_of_indicators/highest.md
-      - name: HMA
+      - name: High Low Index (HLI)
+        href: api/indicators/list_of_indicators/high_low_index.md
+      - name: Historical Volatility Ratio (HVR)
+        href: api/indicators/list_of_indicators/historical_volatility_ratio.md
+      - name: Hull Moving Average (HMA)
         href: api/indicators/list_of_indicators/hma.md
       - name: Ichimoku
         href: api/indicators/list_of_indicators/ichimoku.md
-      - name: JMA
+      - name: Intraday Intensity Index (III)
+        href: api/indicators/list_of_indicators/intraday_intensity_index.md
+      - name: Intraday Momentum Index (IMI)
+        href: api/indicators/list_of_indicators/intraday_momentum_index.md
+      - name: Jurik Moving Average (JMA)
         href: api/indicators/list_of_indicators/jma.md
-      - name: KAMA
+      - name: Kase Peak Oscillator (KPO)
+        href: api/indicators/list_of_indicators/kase_peak_oscillator.md
+      - name: Kaufman Efficiency Ratio (KER)
+        href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
+      - name: Kaufman Adaptive Moving Average (KAMA)
         href: api/indicators/list_of_indicators/kama.md
-      - name: LRS
-        href: api/indicators/list_of_indicators/lrs.md
-      - name: Lowest
-        href: api/indicators/list_of_indicators/lowest.md
-      - name: LRC
+      - name: Keltner Channels (KC)
+        href: api/indicators/list_of_indicators/keltner_channels.md
+      - name: Klinger Volume Oscillator (KVO)
+        href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
+      - name: Know Sure Thing (KST)
+        href: api/indicators/list_of_indicators/kst.md
+      - name: Laguerre RSI (LRSI)
+        href: api/indicators/list_of_indicators/laguerre_rsi.md
+      - name: Linear Regression (LRC)
         href: api/indicators/list_of_indicators/lrc.md
-      - name: MACD
-        href: api/indicators/list_of_indicators/macd.md
-      - name: MACD гистограмма
-        href: api/indicators/list_of_indicators/macd_histogram.md
-      - name: MACD с сигнальной линией
-        href: api/indicators/list_of_indicators/macd_with_signal_line.md
-      - name: Market Facilitation Index
+      - name: Linear Regression Gradient (LRS)
+        href: api/indicators/list_of_indicators/lrs.md
+      - name: R-squared
+        href: api/indicators/list_of_indicators/linear_reg_rsquared.md
+      - name: Lowest Value (Lowest)
+        href: api/indicators/list_of_indicators/lowest.md
+      - name: Lunar Phase Indicator (LP)
+        href: api/indicators/list_of_indicators/lunar_phase.md
+      - name: Market Facilitation Index (MFI)
         href: api/indicators/list_of_indicators/market_facilitation_index.md
-      - name: Mean Deviation
+      - name: Market Meanness Index (MMI)
+        href: api/indicators/list_of_indicators/market_meanness_index.md
+      - name: Mass Index (MI)
+        href: api/indicators/list_of_indicators/mass_index.md
+      - name: McClellan Oscillator (MCO)
+        href: api/indicators/list_of_indicators/mcclellan_oscillator.md
+      - name: McGinley Dynamic (MGD)
+        href: api/indicators/list_of_indicators/mcginley_dynamic.md
+      - name: Mean Deviation (MeanDev)
         href: api/indicators/list_of_indicators/mean_deviation.md
-      - name: Median Price
+      - name: Median Price (MedPr)
         href: api/indicators/list_of_indicators/median_price.md
       - name: Momentum
         href: api/indicators/list_of_indicators/momentum.md
-      - name: Money Flow Index
+      - name: Momentum of Moving Average (MOMA)
+        href: api/indicators/list_of_indicators/momentum_of_moving_average.md
+      - name: Momentum Pinball (MP)
+        href: api/indicators/list_of_indicators/momentum_pinball.md
+      - name: Money Flow Index (MFI)
         href: api/indicators/list_of_indicators/money_flow_index.md
-      - name: NRTR
+      - name: Moving Average Convergence Divergence (MACD)
+        href: api/indicators/list_of_indicators/macd.md
+      - name: MACD Histogram
+        href: api/indicators/list_of_indicators/macd_histogram.md
+      - name: MACD Signal
+        href: api/indicators/list_of_indicators/macd_with_signal_line.md
+      - name: Moving Average Crossover (MAC)
+        href: api/indicators/list_of_indicators/moving_average_crossover.md
+      - name: Moving Average Ribbon (MAR)
+        href: api/indicators/list_of_indicators/moving_average_ribbon.md
+      - name: Negative Volume Index (NVI)
+        href: api/indicators/list_of_indicators/negative_volume_index.md
+      - name: Nick Rypock Trailing Reverse (NRTR)
         href: api/indicators/list_of_indicators/nrtr.md
-      - name: Optimal Tracking
+      - name: On-Balance Volume (OBV)
+        href: api/indicators/list_of_indicators/obv.md
+      - name: On Balance Volume Mean (OBVM)
+        href: api/indicators/list_of_indicators/on_balance_volume_mean.md
+      - name: Optimal Tracking Filter (OptimalTracking)
         href: api/indicators/list_of_indicators/optimal_tracking.md
+      - name: Oscillator of Moving Average (OMA)
+        href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
       - name: Parabolic SAR
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Peak
-        href: api/indicators/list_of_indicators/peak.md
+      - name: Stub (Pass Through)
+        href: api/indicators/list_of_indicators/pass_through.md
       - name: Pattern
         href: api/indicators/list_of_indicators/pattern.md
         items:
@@ -1792,58 +1904,94 @@
           href: api/indicators/list_of_indicators/patterns/3_inside_down_3_side_up.md
         - name: '3 Black Crows and 3 White Soldiers'
           href: api/indicators/list_of_indicators/patterns/3_black_crows_3_white_soldiers.md
+      - name: Peak
+        href: api/indicators/list_of_indicators/peak.md
+      - name: Percentage Price Oscillator (PPO)
+        href: api/indicators/list_of_indicators/percentage_price_oscillator.md
+      - name: Percentage Volume Oscillator (PVO)
+        href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
+      - name: Pivot Points (PP)
+        href: api/indicators/list_of_indicators/pivot_points.md
+      - name: Pretty Good Oscillator (PGO)
+        href: api/indicators/list_of_indicators/pretty_good_oscillator.md
+      - name: Psychological Line (PSY)
+        href: api/indicators/list_of_indicators/psychological_line.md
       - name: QStick
         href: api/indicators/list_of_indicators/qstick.md
-      - name: RAVI
+      - name: Rainbow Charts (RC)
+        href: api/indicators/list_of_indicators/rainbow_charts.md
+      - name: Range Action Verification Index (RAVI)
         href: api/indicators/list_of_indicators/ravi.md
-      - name: RoC
+      - name: Rate of Change (ROC)
         href: api/indicators/list_of_indicators/roc.md
-      - name: RSI
+      - name: Relative Momentum Index (RMI)
+        href: api/indicators/list_of_indicators/relative_momentum_index.md
+      - name: Relative Strength Index (RSI)
         href: api/indicators/list_of_indicators/rsi.md
-      - name: RVI
+      - name: Relative Vigor Index (RVI)
         href: api/indicators/list_of_indicators/rvi.md
-      - name: SMA
+      - name: Schaff Trend Cycle (STC)
+        href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: Simple Moving Average (SMA)
         href: api/indicators/list_of_indicators/sma.md
-      - name: Smoothed MA
+      - name: Sine Wave (SW)
+        href: api/indicators/list_of_indicators/sine_wave.md
+      - name: Smoothed Moving Average (SMMA)
         href: api/indicators/list_of_indicators/smoothed_ma.md
-      - name: Standard Deviation
+      - name: Standard Deviation (Std Dev)
         href: api/indicators/list_of_indicators/standard_deviation.md
-      - name: Standard Error
+      - name: Standard Error (Standard error)
         href: api/indicators/list_of_indicators/standard_error.md
+      - name: Stochastic %K (Stochastic %K)
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k%.md
       - name: Stochastic Oscillator
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
-      - name: Stochastic Oscillator K%
-        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
-      - name: Sum N
+      - name: Sum of N Last Values (Sum)
         href: api/indicators/list_of_indicators/sum_n.md
-      - name: TEMA
+      - name: T3 Moving Average (T3MA)
+        href: api/indicators/list_of_indicators/t3_moving_average.md
+      - name: Time Weighted Average Price (TWAP)
+        href: api/indicators/list_of_indicators/time_weighted_average_price.md
+      - name: Triple Exponential Moving Average (TEMA)
         href: api/indicators/list_of_indicators/tema.md
       - name: TRIX
         href: api/indicators/list_of_indicators/trix.md
       - name: Trough
         href: api/indicators/list_of_indicators/trough.md
-      - name: True Range
+      - name: True Range (TR)
         href: api/indicators/list_of_indicators/true_range.md
-      - name: UO
+      - name: Twiggs Money Flow (TMF)
+        href: api/indicators/list_of_indicators/twiggs_money_flow.md
+      - name: Ultimate Oscillator (UltimateOsc)
         href: api/indicators/list_of_indicators/uo.md
-      - name: VHF
+      - name: Vertical-Horizontal Filter (VHF)
         href: api/indicators/list_of_indicators/vhf.md
-      - name: VIDYA
+      - name: Variable Index Dynamic Average (VIDIA)
         href: api/indicators/list_of_indicators/vidya.md
       - name: Volume
         href: api/indicators/list_of_indicators/volume.md
       - name: Volume Profile
         href: api/indicators/list_of_indicators/volume_profile.md
-      - name: Volume Weighted MA
+      - name: Volume Weighted Moving Average (VMA)
         href: api/indicators/list_of_indicators/volume_weighted_ma.md
-      - name: Weighted MA
+      - name: Vortex Indicator (VI)
+        href: api/indicators/list_of_indicators/vortex_indicator.md
+      - name: Wave Trend Oscillator (WTO)
+        href: api/indicators/list_of_indicators/wave_trend_oscillator.md
+      - name: Weighted Moving Average (WMA)
         href: api/indicators/list_of_indicators/weighted_ma.md
-      - name: Wilder MA
+      - name: Welles Wilder Moving Average (Wilder MA)
         href: api/indicators/list_of_indicators/wilder_ma.md
+      - name: Williams Accumulation/Distribution (WAD)
+        href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
+      - name: Williams %R (%R)
+        href: api/indicators/list_of_indicators/williams_r.md
+      - name: Woodies CCI (WCCI)
+        href: api/indicators/list_of_indicators/woodies_cci.md
+      - name: Zero Lag Exponential Moving Average (ZLEMA)
+        href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
       - name: ZigZag
         href: api/indicators/list_of_indicators/zigzag.md
-      - name: Заглушка
-        href: api/indicators/list_of_indicators/pass_through.md
     - name: Собственный индикатор
       href: api/indicators/custom_indicator.md
     - name: Графический рендерер индикаторов

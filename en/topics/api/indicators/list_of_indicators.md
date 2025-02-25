@@ -1,63 +1,146 @@
-# List of indicators
+# List of Indicators
 
-[S\#](../../api.md) provides over 70 technical analysis indicators as standard. This allows not to create the necessary indicators from scratch, but to use ready\-made ones.
+[S\#](../../api.md) provides over 140 technical analysis indicators out of the box. This allows users to utilize ready-made indicators instead of creating them from scratch.
 
-- [A\/C](list_of_indicators/a_d.md)
-- [Alligator](list_of_indicators/alligator.md)
-- [ADX](list_of_indicators/adx.md)
-- [ATR](list_of_indicators/atr.md)
-- [AO](list_of_indicators/ao.md)
-- [Bollinger Bands](list_of_indicators/bollinger_bands.md)
-- [CHV](list_of_indicators/chv.md)
-- [CMO](list_of_indicators/cmo.md)
-- [CCI](list_of_indicators/cci.md)
-- [DPO](list_of_indicators/dpo.md)
-- [DMI](list_of_indicators/dmi.md)
-- [DEMA](list_of_indicators/dema.md)
-- [Envelope](list_of_indicators/envelope.md)
-- [EMA](list_of_indicators/ema.md)
-- [Fractals](list_of_indicators/fractals.md)
-- [Gator Oscillator](list_of_indicators/gator_oscillator.md)
-- [Highest ](list_of_indicators/highest.md)
-- [HMA](list_of_indicators/hma.md)
-- [Ichimoku](list_of_indicators/ichimoku.md)
-- [JMA](list_of_indicators/jma.md)
-- [KAMA](list_of_indicators/kama.md)
-- [Lowest ](list_of_indicators/lowest.md)
-- [Market Facilitation Index](list_of_indicators/market_facilitation_index.md)
-- [Mean Deviation](list_of_indicators/mean_deviation.md)
-- [Median Price](list_of_indicators/median_price.md)
-- [Momentum](list_of_indicators/momentum.md)
-- [Money Flow Index](list_of_indicators/money_flow_index.md)
-- [MACD](list_of_indicators/macd.md)
-- [MACD histogram](list_of_indicators/macd_histogram.md)
-- [MACD with signal line](list_of_indicators/macd_with_signal_line.md)
-- [NRTR](list_of_indicators/nrtr.md)
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md)
-- [Peak](list_of_indicators/peak.md)
-- [QStick](list_of_indicators/qstick.md)
-- [RAVI](list_of_indicators/ravi.md)
-- [RoC](list_of_indicators/roc.md)
-- [RSI](list_of_indicators/rsi.md)
-- [RVI](list_of_indicators/rvi.md)
-- [SMA](list_of_indicators/sma.md)
-- [Smoothed MA](list_of_indicators/smoothed_ma.md)
-- [Standard Deviation](list_of_indicators/standard_deviation.md)
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md)
-- [Sum N](list_of_indicators/sum_n.md)
-- [TEMA](list_of_indicators/tema.md)
-- [TRIX](list_of_indicators/trix.md)
-- [Trough](list_of_indicators/trough.md)
-- [True Range](list_of_indicators/true_range.md)
-- [UO](list_of_indicators/uo.md)
-- [VHF](list_of_indicators/vhf.md)
-- [Volume](list_of_indicators/volume.md)
-- [Volume Profile](list_of_indicators/volume_profile.md)
-- [Volume Weighted MA](list_of_indicators/volume_weighted_ma.md)
-- [Weighted MA](list_of_indicators/weighted_ma.md)
-- [%R](list_of_indicators/williams_r.md)
-- [ZigZag](list_of_indicators/zigzag.md)
+- [A/D](list_of_indicators/a_d.md) - Accumulation/Distribution Line
+- [Accumulation Distribution Line](accumulation_distribution_line.md) - Accumulation/Distribution Line
+- [Approval Flow Index](approval_flow_index.md) - Approval Flow Index
+- [Adaptive Laguerre Filter](adaptive_laguerre_filter.md) - Adaptive Laguerre Filter
+- [Arnaud Legoux Moving Average](arnaud_legoux_moving_average.md) - Arnaud Legoux Moving Average
+- [Adaptive Price Zone](adaptive_price_zone.md) - Adaptive Price Zone
+- [ADX](list_of_indicators/adx.md) - Average Directional Index, which shows the strength and direction of a trend, helping traders assess the power of current price movement
+- [ATR](list_of_indicators/atr.md) - Average True Range, a volatility indicator that measures the average price fluctuation over a specific period, helping to assess market variability
+- [AO](list_of_indicators/ao.md) - Awesome Oscillator, developed by Bill Williams, which compares the average value of the last 5 and 34 periods to determine short-term market dynamics
+- [Alligator](list_of_indicators/alligator.md) - Alligator Indicator using three moving averages to determine trend and its direction
+- [Aroon](aroon.md) - Aroon Indicator, which helps identify the beginning of a new trend and its strength
+- [Bollinger Bands](list_of_indicators/bollinger_bands.md) - Bollinger Bands showing volatility levels and potential price reversal points
+- [Bollinger Percent B](bollinger_percent_b.md) - Indicator measuring the current price position relative to Bollinger Bands
+- [Balance of Market Power](balance_of_market_power.md) - Indicator assessing the balance of forces between buyers and sellers
+- [Balance of Power](balance_of_power.md) - Oscillator showing the relative strength of buyers and sellers
+- [Balance Volume](balance_volume.md) - Volume indicator that helps evaluate price movement through the prism of trading volume
+- [Constance Brown Composite Index](constance_brown_composite_index.md) - Composite index combining various technical indicators
+- [Center of Gravity Oscillator](center_of_gravity_oscillator.md) - Oscillator determining the center of gravity of price movement
+- [Choppiness Index](choppiness_index.md) - Indicator assessing the degree of market turbulence
+- [Chande Kroll Stop](chande_kroll_stop.md) - Trend stop and reversal indicator
+- [Composite Momentum](composite_momentum.md) - Index measuring aggregate momentum
+- [Chaikin Money Flow](chaikin_money_flow.md) - Money flow indicator assessing buying power and pressure
+- [Connors RSI](connors_rsi.md) - Modified Relative Strength Index considering trend duration
+- [DPO](list_of_indicators/dpo.md) - Detrended Price Oscillator showing price deviation from moving average
+- [DMI](list_of_indicators/dmi.md) - Directional Movement Index determining trend direction and strength
+- [DEMA](list_of_indicators/dema.md) - Double Exponential Moving Average for smoothing price fluctuations
+- [Donchian Channels](donchian_channels.md) - Channels showing maximum and minimum values over a specific period
+- [Demand Index](demand_index.md) - Indicator assessing demand for an asset
+- [Disparity Index](disparity_index.md) - Index showing price deviation from moving average
+- [Detrended Synthetic Price](detrended_synthetic_price.md) - Indicator for analyzing price movement without trend consideration
+- [Envelope](list_of_indicators/envelope.md) - Moving average envelope for determining price range
+- [EMA](list_of_indicators/ema.md) - Exponential Moving Average with increased weight of recent values
+- [Dynamic Zones RSI](dynamic_zones_rsi.md) - RSI with dynamically changing overbought and oversold zones
+- [Ehlers Fisher Transform](ehlers_fisher_transform.md) - Price transformation for revealing cyclic components
+- [Elder Impulse System](elder_impulse_system.md) - Impulse system for determining trend direction
+- [Ease of Movement](ease_of_movement.md) - Indicator assessing the ease of price movement
+- [Endpoint Moving Average](endpoint_moving_average.md) - Moving average focused on extreme points
+- [Elliot Wave Oscillator](elliot_wave_oscillator.md) - Oscillator for Elliott Wave analysis
+- [Fractals](list_of_indicators/fractals.md) - Indicator for identifying extreme points on the chart
+- [Force Index](force_index.md) - Force index combining price change and volume
+- [Forecast Oscillator](forecast_oscillator.md) - Oscillator for price movement forecasting
+- [Fibonacci Retracement](fibonacci_retracement.md) - Correction levels based on Fibonacci sequence
+- [Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md) - Adaptive moving average considering fractal structure
+- [Finite Volume Element](finite_volume_element.md) - Volume indicator considering price movement
+- [Gator Oscillator](list_of_indicators/gator_oscillator.md) - Oscillator derived from Alligator indicator
+- [Gopalakrishnan Range Index](gopalakrishnan_range_index.md) - Range index for volatility assessment
+- [Guppy Multiple Moving Average](guppy_multiple_moving_average.md) - System of multiple moving averages
+- [Highest](list_of_indicators/highest.md) - Indicator for finding maximum values
+- [High Low Index](high_low_index.md) - Index comparing maximums and minimums
+- [Harmonic Oscillator](harmonic_oscillator.md) - Oscillator for analyzing harmonic patterns
+- [Historical Volatility Ratio](historical_volatility_ratio.md) - Historical volatility indicator
+- [HMA](list_of_indicators/hma.md) - Modified moving average with improved smoothing
+- [Intraday Intensity Index](intraday_intensity_index.md) - Intraday trading intensity index
+- [Intraday Momentum Index](intraday_momentum_index.md) - Intraday momentum index
+- [Ichimoku](list_of_indicators/ichimoku.md) - Comprehensive indicator for trend and support/resistance levels
+- [JMA](list_of_indicators/jma.md) - Adaptive moving average with minimal lag
+- [Keltner Channels](keltner_channels.md) - Channel indicator based on volatility
+- [Kaufman Efficiency Ratio](kaufman_efficiency_ratio.md) - Efficiency coefficient for trend assessment
+- [Kase Peak Oscillator](kase_peak_oscillator.md) - Oscillator for peak identification
+- [Know Sure Thing](kst.md) - Comprehensive oscillator for trend determination
+- [Klinger Volume Oscillator](klinger_volume_oscillator.md) - Volume oscillator considering trend
+- [KAMA](list_of_indicators/kama.md) - Kaufman Adaptive Moving Average
+- [Lunar Phase](lunar_phase.md) - Indicator considering lunar phases
+- [Laguerre RSI](laguerre_rsi.md) - RSI modification with Laguerre filter
+- [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared
+- [Lowest](list_of_indicators/lowest.md) - Indicator for finding minimum values
+- [Moving Average Crossover](moving_average_crossover.md) - Signal based on moving average crossover
+- [Moving Average Ribbon](moving_average_ribbon.md) - Moving average ribbon
+- [Market Facilitation Index](list_of_indicators/market_facilitation_index.md) - Market facilitation index
+- [McClellan Oscillator](mcclellan_oscillator.md) - Oscillator for market breadth analysis
+- [McGinley Dynamic](mcginley_dynamic.md) - Dynamic moving average
+- [Mass Index](mass_index.md) - Mass index for reversal identification
+- [Market Meanness Index](market_meanness_index.md) - Index assessing market character
+- [Mean Deviation](list_of_indicators/mean_deviation.md) - Mean deviation from average value
+- [Median Price](list_of_indicators/median_price.md) - Median price
+- [Momentum](list_of_indicators/momentum.md) - Momentum indicator for trend strength assessment
+- [Momentum of Moving Average](momentum_of_moving_average.md) - Moving average momentum
+- [Momentum Pinball](momentum_pinball.md) - Momentum oscillator
+- [Money Flow Index](list_of_indicators/money_flow_index.md) - Money flow index
+- [MACD](list_of_indicators/macd.md) - Moving Average Convergence Divergence
+- [MACD Histogram](list_of_indicators/macd_histogram.md) - MACD Histogram
+- [MACD with Signal Line](list_of_indicators/macd_with_signal_line.md) - MACD with Signal Line
+- [Negative Volume Index](negative_volume_index.md) - Negative Volume Index
+- [On Balance Volume](obv.md) - On Balance Volume
+- [On Balance Volume Mean](on_balance_volume_mean.md) - On Balance Volume Mean
+- [Oscillator of Moving Average](oscillator_of_moving_average.md) - Moving Average Oscillator
+- [NRTR](list_of_indicators/nrtr.md) - Trend-Stop Reversal Indicator
+- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic Stop and Reverse
+- [Peak](list_of_indicators/peak.md) - Peak Value Indicator
+- [Pretty Good Oscillator](pretty_good_oscillator.md) - Oscillator for trend assessment
+- [Pivot Points](pivot_points.md) - Pivot Levels
+- [Percentage Price Oscillator](percentage_price_oscillator.md) - Percentage Price Oscillator
+- [Psychological Line](psychological_line.md) - Market Psychological Line
+- [Percentage Volume Oscillator](percentage_volume_oscillator.md) - Percentage Volume Oscillator
+- [QStick](list_of_indicators/qstick.md) - Indicator for Open and Close Analysis
+- [Rainbow Charts](rainbow_charts.md) - Rainbow Charts with Multiple Moving Averages
+- [Relative Momentum Index](relative_momentum_index.md) - Relative Momentum Index
+- [RAVI](list_of_indicators/ravi.md) - Relative Rate of Change Indicator
+- [RoC](list_of_indicators/roc.md) - Rate of Change Index
+- [RSI](list_of_indicators/rsi.md) - Relative Strength Index
+- [RVI](list_of_indicators/rvi.md) - Relative Volatility Index
+- [Schaff Trend Cycle](schaff_trend_cycle.md) - Trend Cycle Oscillator
+- [Stochastic K%](stochastic_oscillator_k%.md) - Stochastic Oscillator %K
+- [Sine Wave](sine_wave.md) - Sine Wave Indicator
+- [SMA](list_of_indicators/sma.md) - Simple Moving Average
+- [Smoothed MA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average
+- [Standard Deviation](list_of_indicators/standard_deviation.md) - Standard Deviation
+- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator for identifying overbought and oversold conditions
+- [Sum N](list_of_indicators/sum_n.md) - Sum of Last N Values Indicator
+- [T3 Moving Average](t3_moving_average.md) - Advanced Moving Average with Triple Smoothing
+- [TEMA](list_of_indicators/tema.md) - Triple Exponential Moving Average
+- [TRIX](list_of_indicators/trix.md) - Triple Exponential Smoothing Oscillator
+- [Trough](list_of_indicators/trough.md) - Trough and Minimum Indicator
+- [True Range](list_of_indicators/true_range.md) - True Range for Volatility Measurement
+- [Twiggs Money Flow](twiggs_money_flow.md) - Modified Money Flow Indicator
+- [Time Weighted Average Price](time_weighted_average_price.md) - Time-Weighted Average Price
+- [UO](list_of_indicators/uo.md) - Ultimate Oscillator
+- [VHF](list_of_indicators/vhf.md) - Vertical Horizontal Filter
+- [Volume](list_of_indicators/volume.md) - Trading Volume Indicator
+- [Volume Profile](list_of_indicators/volume_profile.md) - Volume Profile with Trading Volume Distribution
+- [Volume Weighted MA](list_of_indicators/volume_weighted_ma.md) - Volume-Weighted Moving Average
+- [Vortex Indicator](vortex_indicator.md) - Vortex Movement Indicator
+- [Weighted MA](list_of_indicators/weighted_ma.md) - Weighted Moving Average
+- [Williams Accumulation Distribution](williams_accumulation_distribution.md) - Williams Accumulation/Distribution Indicator
+- [Woodies CCI](woodies_cci.md) - Modified Commodity Channel Index
+- [Wave Trend Oscillator](wave_trend_oscillator.md) - Wave Trend Oscillator
+- [%R](list_of_indicators/williams_r.md) - Williams Percent Range
+- [Zero Lag Exponential Moving Average](zero_lag_exponential_moving_average.md) - Exponential Moving Average with Minimal Lag
+- [ZigZag](list_of_indicators/zigzag.md) - Significant Price Movement Indicator
 
-## Recommended content
+## Notes
 
-[A\/C](list_of_indicators/a_d.md)
+This list contains technical analysis indicators from the StockSharp library. Each indicator is designed for various aspects of financial market analysis:
+
+- Trend determination
+- Volatility assessment
+- Reversal point identification
+- Momentum measurement
+- Trading volume analysis
+- Support and resistance level detection
+
+Indicators help traders make more informed decisions by analyzing historical price data and identifying patterns.
