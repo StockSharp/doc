@@ -70,5 +70,5 @@ This combined index can then be smoothed to reduce noise.
 
 [RSI](rsi.md)
 [StochasticOscillator](stochastic_oscillator.md)
-[StochasticK](stochastic_oscillator_k%.md)
+[StochasticK](stochastic_oscillator_k.md)
 [CCI](cci.md)

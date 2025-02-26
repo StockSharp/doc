@@ -1943,7 +1943,7 @@
       - name: Standard Error (Standard error)
         href: api/indicators/list_of_indicators/standard_error.md
       - name: Stochastic %K (Stochastic %K)
-        href: api/indicators/list_of_indicators/stochastic_oscillator_k%.md
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
       - name: Stochastic Oscillator
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
       - name: Sum of N Last Values (Sum)

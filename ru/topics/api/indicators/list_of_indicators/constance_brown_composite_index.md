@@ -70,5 +70,5 @@ CBCI разработан для:
 
 [RSI](rsi.md)
 [StochasticOscillator](stochastic_oscillator.md)
-[StochasticK](stochastic_oscillator_k%.md)
+[StochasticK](stochastic_oscillator_k.md)
 [CCI](cci.md)

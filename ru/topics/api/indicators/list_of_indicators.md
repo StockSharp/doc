@@ -117,7 +117,7 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, скользящая средняя с большим весом последних цен
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, измеряет разброс ценовых данных
 - [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression, измеряет точность прогнозов
-- [Stochastic %K](list_of_indicators/stochastic_oscillator_k%.md) - Stochastic %K, измеряет импульс на основе положения цены в диапазоне
+- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K, измеряет импульс на основе положения цены в диапазоне
 - [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator, определяет состояния перекупленности и перепроданности
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values, вычисляет сумму последних N цен
 - [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average, плавная и отзывчивая скользящая средняя

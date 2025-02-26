@@ -117,7 +117,7 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, a moving average giving more weight to recent prices
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, measures the dispersion of price data
 - [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression, measures forecast accuracy
-- [Stochastic %K](list_of_indicators/stochastic_oscillator_k%.md) - Stochastic %K, measures momentum based on price position within a range
+- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K, measures momentum based on price position within a range
 - [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator, identifies overbought and oversold conditions
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values, calculates the sum of the last N prices
 - [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average, a smooth and responsive moving average
