@@ -2,135 +2,146 @@
 
 [S\#](../../api.md) стандартно предоставляет более 140 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые.
 
-- [A/D](list_of_indicators/a_d.md) - Линия накопления/распределения (линия A/D)
-- [Accumulation Distribution Line](list_of_indicators/accumulation_distribution_line.md) - Линия накопления/распределения (линия A/D)
-- [Approval Flow Index](list_of_indicators/approval_flow_index.md) - Индекс потока утверждения
-- [Adaptive Laguerre Filter](list_of_indicators/adaptive_laguerre_filter.md) - Адаптивный фильтр Лагерра
-- [Arnaud Legoux Moving Average](list_of_indicators/arnaud_legoux_moving_average.md) - Скользящее среднее Арно Легу
-- [Adaptive Price Zone](list_of_indicators/adaptive_price_zone.md) - Адаптивная ценовая зона
-- [ADX](list_of_indicators/adx.md) - Индекс направленного движения (Average Directional Index), который показывает силу и направление тренда, помогая трейдерам оценить мощность текущего ценового движения
-- [ATR](list_of_indicators/atr.md) - Средний истинный диапазон (Average True Range), индикатор волатильности, который измеряет среднее колебание цены за определенный период, помогая оценить изменчивость рынка
-- [AO](list_of_indicators/ao.md) - Осциллятор Awesome (Awesome Oscillator), разработанный Биллом Вильямсом, который сравнивает среднее значение последних 5 и 34 периодов для определения краткосрочной динамики рынка
-- [Alligator](list_of_indicators/alligator.md) - Индикатор Аллигатор, использующий три скользящие средние для определения тренда и его направления
-- [Aroon](list_of_indicators/aroon.md) - Индикатор Aroon, который помогает определить начало нового тренда и его силу
-- [Bollinger Bands](list_of_indicators/bollinger_bands.md) - Полосы Боллинджера, показывающие уровни волатильности и потенциальные точки разворота цены
-- [Bollinger Percent B](list_of_indicators/bollinger_percent_b.md) - Индикатор, измеряющий положение текущей цены относительно полос Боллинджера
-- [Balance of Market Power](list_of_indicators/balance_of_market_power.md) - Индикатор, оценивающий баланс сил между покупателями и продавцами
-- [Balance of Power](list_of_indicators/balance_of_power.md) - Осциллятор, показывающий относительную силу покупателей и продавцов
-- [Balance Volume](list_of_indicators/balance_volume.md) - Индикатор объема, который помогает оценить движение цены через призму торгового объема
-- [Constance Brown Composite Index](list_of_indicators/constance_brown_composite_index.md) - Композитный индекс, комбинирующий различные технические индикаторы
-- [Center of Gravity Oscillator](list_of_indicators/center_of_gravity_oscillator.md) - Осциллятор, определяющий центр тяжести ценового движения
-- [Choppiness Index](list_of_indicators/choppiness_index.md) - Индикатор, оценивающий степень турбулентности рынка
-- [Chande Kroll Stop](list_of_indicators/chande_kroll_stop.md) - Индикатор остановки и разворота тренда
-- [Composite Momentum](list_of_indicators/composite_momentum.md) - Индекс, измеряющий совокупный моментум
-- [Chaikin Money Flow](list_of_indicators/chaikin_money_flow.md) - Индикатор денежного потока, оценивающий покупательную силу и давление
-- [Connors RSI](list_of_indicators/connors_rsi.md) - Модифицированный индекс относительной силы с учетом длительности тренда
-- [DPO](list_of_indicators/dpo.md) - Осциллятор смещения, показывающий отклонение цены от скользящей средней
-- [DMI](list_of_indicators/dmi.md) - Индекс направленного движения, определяющий направление и силу тренда
-- [DEMA](list_of_indicators/dema.md) - Двойное экспоненциальное скользящее среднее для сглаживания ценовых колебаний
-- [Donchian Channels](list_of_indicators/donchian_channels.md) - Каналы, показывающие максимумы и минимумы за определенный период
-- [Demand Index](list_of_indicators/demand_index.md) - Индикатор, оценивающий спрос на актив
-- [Disparity Index](list_of_indicators/disparity_index.md) - Индекс, показывающий отклонение цены от скользящей средней
-- [Detrended Synthetic Price](list_of_indicators/detrended_synthetic_price.md) - Индикатор для анализа ценового движения без учета тренда
-- [Envelope](list_of_indicators/envelope.md) - Огибающая скользящих средних для определения диапазона цен
-- [EMA](list_of_indicators/ema.md) - Экспоненциальное скользящее среднее с повышенным весом последних значений
-- [Dynamic Zones RSI](list_of_indicators/dynamic_zones_rsi.md) - RSI с динамически меняющимися зонами перекупленности и перепроданности
-- [Ehlers Fisher Transform](list_of_indicators/ehlers_fisher_transform.md) - Преобразование цены для выявления циклических компонент
-- [Elder Impulse System](list_of_indicators/elder_impulse_system.md) - Система импульсов для определения направления тренда
-- [Ease of Movement](list_of_indicators/ease_of_movement.md) - Индикатор, оценивающий легкость ценового движения
-- [Endpoint Moving Average](list_of_indicators/endpoint_moving_average.md) - Скользящая средняя с фокусом на крайних точках
-- [Elliot Wave Oscillator](list_of_indicators/elliot_wave_oscillator.md) - Осциллятор для анализа волн Эллиота
-- [Fractals](list_of_indicators/fractals.md) - Индикатор для выявления экстремальных точек на графике
-- [Force Index](list_of_indicators/force_index.md) - Индекс силы, комбинирующий изменение цены и объем
-- [Forecast Oscillator](list_of_indicators/forecast_oscillator.md) - Осциллятор прогнозирования ценового движения
-- [Fibonacci Retracement](list_of_indicators/fibonacci_retracement.md) - Уровни коррекции на основе последовательности Фибоначчи
-- [Fractal Adaptive Moving Average](list_of_indicators/fractal_adaptive_moving_average.md) - Адаптивная скользящая средняя с учетом фрактальной структуры
-- [Finite Volume Element](list_of_indicators/finite_volume_element.md) - Индикатор объема с учетом ценового движения
-- [Gator Oscillator](list_of_indicators/gator_oscillator.md) - Осциллятор, производный от индикатора Аллигатор
-- [Gopalakrishnan Range Index](list_of_indicators/gopalakrishnan_range_index.md) - Индекс диапазона для оценки волатильности
-- [Guppy Multiple Moving Average](list_of_indicators/guppy_multiple_moving_average.md) - Система из множества скользящих средних
-- [Highest](list_of_indicators/highest.md) - Индикатор для поиска максимальных значений
-- [High Low Index](list_of_indicators/high_low_index.md) - Индекс, сравнивающий максимумы и минимумы
-- [Harmonic Oscillator](list_of_indicators/harmonic_oscillator.md) - Осциллятор для анализа гармонических закономерностей
-- [Historical Volatility Ratio](list_of_indicators/historical_volatility_ratio.md) - Индикатор исторической волатильности
-- [HMA](list_of_indicators/hma.md) - Модифицированная скользящая средняя с улучшенным сглаживанием
-- [Intraday Intensity Index](list_of_indicators/intraday_intensity_index.md) - Индекс интенсивности внутридневной торговли
-- [Intraday Momentum Index](list_of_indicators/intraday_momentum_index.md) - Индекс внутридневного моментума
-- [Ichimoku](list_of_indicators/ichimoku.md) - Комплексный индикатор для определения тренда и уровней поддержки/сопротивления
-- [JMA](list_of_indicators/jma.md) - Адаптивная скользящая средняя с минимальным запаздыванием
-- [Keltner Channels](list_of_indicators/keltner_channels.md) - Канальный индикатор на основе волатильности
-- [Kaufman Efficiency Ratio](list_of_indicators/kaufman_efficiency_ratio.md) - Коэффициент эффективности для оценки тренда
-- [Kase Peak Oscillator](list_of_indicators/kase_peak_oscillator.md) - Осциллятор для идентификации пиков
-- [Know Sure Thing](list_of_indicators/kst.md) - Комплексный осциллятор для определения тренда
-- [Klinger Volume Oscillator](list_of_indicators/klinger_volume_oscillator.md) - Осциллятор объема с учетом тренда
-- [KAMA](list_of_indicators/kama.md) - Адаптивная скользящая средняя Кауфмана
-- [Lunar Phase](list_of_indicators/lunar_phase.md) - Индикатор, учитывающий фазы луны
-- [Laguerre RSI](list_of_indicators/laguerre_rsi.md) - Модификация RSI с фильтром Лагерра
-- [R-squared](list_of_indicators/linear_reg_rsquared.md) - R-квадрат в линейной регрессии
-- [Lowest](list_of_indicators/lowest.md) - Индикатор для поиска минимальных значений
-- [Moving Average Crossover](list_of_indicators/moving_average_crossover.md) - Сигнал на основе пересечения скользящих средних
-- [Moving Average Ribbon](list_of_indicators/moving_average_ribbon.md) - Лента скользящих средних
-- [Market Facilitation Index](list_of_indicators/market_facilitation_index.md) - Индекс облегчения торговли
-- [McClellan Oscillator](list_of_indicators/mcclellan_oscillator.md) - Осциллятор для анализа рыночного breadth
-- [McGinley Dynamic](list_of_indicators/mcginley_dynamic.md) - Динамическая скользящая средняя
-- [Mass Index](list_of_indicators/mass_index.md) - Индекс массы для выявления разворотов
-- [Market Meanness Index](list_of_indicators/market_meanness_index.md) - Индекс, оценивающий характер рынка
-- [Mean Deviation](list_of_indicators/mean_deviation.md) - Среднее отклонение от среднего значения
-- [Median Price](list_of_indicators/median_price.md) - Медианная цена
-- [Momentum](list_of_indicators/momentum.md) - Индикатор моментума для оценки силы тренда
-- [Momentum of Moving Average](list_of_indicators/momentum_of_moving_average.md) - Моментум скользящей средней
-- [Momentum Pinball](list_of_indicators/momentum_pinball.md) - Осциллятор моментума
-- [Money Flow Index](list_of_indicators/money_flow_index.md) - Индекс денежного потока
-- [MACD](list_of_indicators/macd.md) - Схождение/расхождение скользящих средних
-- [MACD гистограмма](list_of_indicators/macd_histogram.md) - Гистограмма MACD
-- [MACD с сигнальной линией](list_of_indicators/macd_with_signal_line.md) - MACD с сигнальной линией
-- [Negative Volume Index](list_of_indicators/negative_volume_index.md) - Индекс отрицательного объема
-- [On Balance Volume](list_of_indicators/obv.md) - Индикатор объема
-- [On Balance Volume Mean](list_of_indicators/on_balance_volume_mean.md) - Средний объем баланса
-- [Oscillator of Moving Average](list_of_indicators/oscillator_of_moving_average.md) - Осциллятор на основе скользящих средних
-- [NRTR](list_of_indicators/nrtr.md) - Индикатор разворота trend-stop
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Параболическая система Stop and Reverse
-- [Peak](list_of_indicators/peak.md) - Индикатор пиковых значений
-- [Pretty Good Oscillator](list_of_indicators/pretty_good_oscillator.md) - Осциллятор для оценки тренда
-- [Pivot Points](list_of_indicators/pivot_points.md) - Уровни пивота
-- [Percentage Price Oscillator](list_of_indicators/percentage_price_oscillator.md) - Процентный осциллятор цены
-- [Psychological Line](list_of_indicators/psychological_line.md) - Психологическая линия рынка
-- [Percentage Volume Oscillator](list_of_indicators/percentage_volume_oscillator.md) - Процентный осциллятор объема
-- [QStick](list_of_indicators/qstick.md) - Индикатор для анализа открытия и закрытия
-- [Rainbow Charts](list_of_indicators/rainbow_charts.md) - Радужные графики с множеством скользящих средних
-- [Relative Momentum Index](list_of_indicators/relative_momentum_index.md) - Относительный индекс моментума
-- [RAVI](list_of_indicators/ravi.md) - Индикатор относительной скорости изменения
-- [RoC](list_of_indicators/roc.md) - Индекс изменения курса
-- [RSI](list_of_indicators/rsi.md) - Индекс относительной силы
-- [RVI](list_of_indicators/rvi.md) - Индекс относительной волатильности
-- [Schaff Trend Cycle](list_of_indicators/schaff_trend_cycle.md) - Циклический осциллятор тренда
-- [Stochastic K%](list_of_indicators/stochastic_oscillator_k%.md) - Стохастический осциллятор %K
-- [Sine Wave](list_of_indicators/sine_wave.md) - Синусоидальный индикатор
-- [SMA](list_of_indicators/sma.md) - Простое скользящее среднее
-- [Smoothed MA](list_of_indicators/smoothed_ma.md) - Сглаженное скользящее среднее
-- [Standard Deviation](list_of_indicators/standard_deviation.md) - Стандартное отклонение
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Стохастический осциллятор для определения перекупленности и перепроданности
-- [Sum N](list_of_indicators/sum_n.md) - Индикатор суммы последних N значений
-- [T3 Moving Average](list_of_indicators/t3_moving_average.md) - Продвинутая скользящая средняя с тройным сглаживанием
-- [TEMA](list_of_indicators/tema.md) - Тройное экспоненциальное скользящее среднее
-- [TRIX](list_of_indicators/trix.md) - Осциллятор тройного экспоненциального сглаживания
-- [Trough](list_of_indicators/trough.md) - Индикатор впадин и минимумов
-- [True Range](list_of_indicators/true_range.md) - Истинный диапазон для измерения волатильности
-- [Twiggs Money Flow](list_of_indicators/twiggs_money_flow.md) - Модифицированный индикатор денежного потока
-- [Time Weighted Average Price](list_of_indicators/time_weighted_average_price.md) - Средневзвешенная по времени цена
-- [UO](list_of_indicators/uo.md) - Универсальный осциллятор
-- [VHF](list_of_indicators/vhf.md) - Индекс горизонтальности Вертис
-- [Volume](list_of_indicators/volume.md) - Индикатор торгового объема
-- [Volume Profile](list_of_indicators/volume_profile.md) - Профиль объема с распределением торговых объемов
-- [Volume Weighted MA](list_of_indicators/volume_weighted_ma.md) - Скользящая средняя, взвешенная по объему
-- [Vortex Indicator](list_of_indicators/vortex_indicator.md) - Индикатор вихревого движения
-- [Weighted MA](list_of_indicators/weighted_ma.md) - Взвешенное скользящее среднее
-- [Williams Accumulation Distribution](list_of_indicators/williams_accumulation_distribution.md) - Индикатор накопления/распределения Вильямса
-- [Woodies CCI](list_of_indicators/woodies_cci.md) - Модифицированный индекс товарного канала
-- [Wave Trend Oscillator](list_of_indicators/wave_trend_oscillator.md) - Осциллятор тренда волны
-- [%R](list_of_indicators/williams_r.md) - Процентный диапазон Вильямса
-- [Zero Lag Exponential Moving Average](list_of_indicators/zero_lag_exponential_moving_average.md) - Экспоненциальная скользящая средняя с минимальным запаздыванием
-- [ZigZag](list_of_indicators/zigzag.md) - Индикатор значимых ценовых движений
+- [A/D](list_of_indicators/a_d.md) - Acceleration / Deceleration Indicator, измеряет ускорение или замедление движения цены
+- [ADL](list_of_indicators/accumulation_distribution_line.md) - Accumulation/Distribution Line (A/D Line), отслеживает приток или отток денег в ценную бумагу
+- [ALF](list_of_indicators/adaptive_laguerre_filter.md) - Adaptive Laguerre Filter, фильтр, адаптирующийся к рыночным условиям для сглаживания данных о цене
+- [APZ](list_of_indicators/adaptive_price_zone.md) - Adaptive Price Zone, определяет потенциальные уровни поддержки и сопротивления на основе волатильности
+- [Alligator](list_of_indicators/alligator.md) - Alligator, индикатор следования за трендом, использующий три скользящие средние для определения рыночных тенденций
+- [AFI](list_of_indicators/approval_flow_index.md) - Approval Flow Index, измеряет силу тренда на основе цены и объёма
+- [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux Moving Average, скользящая средняя с уменьшенным лагом и шумом
+- [Aroon](list_of_indicators/aroon.md) - Aroon indicator, определяет силу и направление тренда
+- [ADX](list_of_indicators/adx.md) - Welles Wilder Average Directional Index, измеряет силу тренда
+- [ATR](list_of_indicators/atr.md) - Average True Range, измеряет волатильность рынка
+- [AO](list_of_indicators/ao.md) - Awesome Oscillator, измеряет импульс рынка
+- [BMP](list_of_indicators/balance_of_market_power.md) - Balance of Market Power, сравнивает давление покупателей и продавцов
+- [BOP](list_of_indicators/balance_of_power.md) - Balance of Power, показывает силу покупателей против продавцов
+- [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator, связывает объём с изменением цены
+- [Bollinger](list_of_indicators/bollinger_bands.md) - Bollinger Bands, измеряет волатильность и определяет состояния перекупленности или перепроданности
+- [BBP](list_of_indicators/bollinger_percent_b.md) - Bollinger %b, показывает положение цены относительно полос Боллинджера
+- [Pattern](list_of_indicators/pattern.md) - Pattern, распознаёт специфические ценовые модели на графиках
+- [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Center of Gravity Oscillator, определяет потенциальные точки разворота
+- [CMF](list_of_indicators/chaikin_money_flow.md) - Chaikin Money Flow, измеряет давление покупок и продаж на основе объёма
+- [Chaikin's Volatility](list_of_indicators/chv.md) - Chaikin volatility, измеряет скорость изменения торгового диапазона
+- [CKS](list_of_indicators/chande_kroll_stop.md) - Chande Kroll Stop, предоставляет уровни стоп-лосса на основе волатильности
+- [CMO](list_of_indicators/cmo.md) - Chande Momentum Oscillator, измеряет импульс изменения цены
+- [CHOP](list_of_indicators/choppiness_index.md) - Choppiness Index, определяет, находится ли рынок в тренде или в диапазоне
+- [CCI](list_of_indicators/cci.md) - Commodity Channel Index, определяет циклические тенденции на товарных рынках
+- [CM](list_of_indicators/composite_momentum.md) - Composite Momentum, комбинирует несколько индикаторов импульса
+- [CRSI](list_of_indicators/connors_rsi.md) - Connors RSI, составной индикатор для определения состояний перекупленности и перепроданности
+- [CBCI](list_of_indicators/constance_brown_composite_index.md) - Constance Brown Composite Index, измеряет импульс и силу тренда на рынке
+- [DI](list_of_indicators/demand_index.md) - Demand Index, сравнивает давление покупок и продаж
+- [DPO](list_of_indicators/dpo.md) - Price oscillator without trend, убирает трендовую составляющую для фокуса на циклах
+- [DSP](list_of_indicators/detrended_synthetic_price.md) - Detrended Synthetic Price, убирает тренды для анализа ценовых колебаний
+- [DMI](list_of_indicators/dmi.md) - Welles Wilder Directional Movement Index, определяет направление и силу тренда
+- [DPI](list_of_indicators/disparity_index.md) - Disparity Index, измеряет разницу между ценой и скользящей средней
+- [DC](list_of_indicators/donchian_channels.md) - Donchian Channels, определяет уровни прорыва на основе максимумов и минимумов
+- [DEMA](list_of_indicators/dema.md) - Double Exponential Moving Average, уменьшает лаг в расчётах скользящей средней
+- [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - Dynamic Zones RSI, адаптирует уровни RSI к рыночным условиям
+- [EMV](list_of_indicators/ease_of_movement.md) - Ease of Movement, связывает изменение цены с объёмом
+- [EFT](list_of_indicators/ehlers_fisher_transform.md) - Ehlers Fisher Transform, нормализует цены для выявления экстремальных значений
+- [EIS](list_of_indicators/elder_impulse_system.md) - Elder Impulse System, комбинирует тренд и импульс для поиска торговых возможностей
+- [EWO](list_of_indicators/elliot_wave_oscillator.md) - Elliot Wave Oscillator, определяет волновые модели в движении цены
+- [EPMA](list_of_indicators/endpoint_moving_average.md) - Endpoint Moving Average, скользящая средняя с уменьшенным лагом
+- [Envelope](list_of_indicators/envelope.md) - Envelope, создаёт полосы вокруг скользящей средней для определения перекупленности и перепроданности
+- [EMA](list_of_indicators/ema.md) - Exponential Moving Average, придаёт больший вес последним ценам
+- [FR](list_of_indicators/fibonacci_retracement.md) - Fibonacci Retracement, определяет потенциальные уровни разворота на основе коэффициентов Фибоначчи
+- [FVE](list_of_indicators/finite_volume_element.md) - Finite Volume Element, измеряет силу движения цены с учётом объёма
+- [FI](list_of_indicators/force_index.md) - Force Index, комбинирует цену и объём для измерения давления покупок и продаж
+- [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator, сравнивает фактические цены с прогнозируемыми
+- [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average, адаптируется к волатильности рынка
+- [Fractals](list_of_indicators/fractals.md) - Fractals, определяет потенциальные точки разворота на ценовых графиках
+- [Gator](list_of_indicators/gator_oscillator.md) - Gator oscillator, измеряет схождение и расхождение скользящих средних
+- [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Gopalakrishnan Range Index, измеряет вариативность движения цены
+- [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Guppy Multiple Moving Average, использует несколько скользящих средних для определения трендов
+- [HO](list_of_indicators/harmonic_oscillator.md) - Harmonic Oscillator, определяет гармонические модели в ценовых данных
+- [Highest](list_of_indicators/highest.md) - Maximum value for a period, определяет максимальную цену за заданный период
+- [HLI](list_of_indicators/high_low_index.md) - High Low Index, измеряет количество новых максимумов и минимумов
+- [HVR](list_of_indicators/historical_volatility_ratio.md) - Historical Volatility Ratio, сравнивает текущую волатильность с историческими уровнями
+- [HMA](list_of_indicators/hma.md) - Hull Moving Average, быстрая и плавная скользящая средняя
+- [Ichimoku](list_of_indicators/ichimoku.md) - Ichimoku, комплексный индикатор для определения трендов
+- [III](list_of_indicators/intraday_intensity_index.md) - Intraday Intensity Index, измеряет давление покупок и продаж в течение торгового дня
+- [IMI](list_of_indicators/intraday_momentum_index.md) - Intraday Momentum Index, определяет состояния перекупленности и перепроданности в течение дня
+- [JMA](list_of_indicators/jma.md) - Jurik Moving Average, плавная и отзывчивая скользящая средняя
+- [KPO](list_of_indicators/kase_peak_oscillator.md) - Kase Peak Oscillator, определяет потенциальные точки разворота
+- [KER](list_of_indicators/kaufman_efficiency_ratio.md) - Kaufman Efficiency Ratio, измеряет эффективность движения цены
+- [KAMA](list_of_indicators/kama.md) - Kaufman adaptive moving average, адаптируется к волатильности рынка
+- [KC](list_of_indicators/keltner_channels.md) - Keltner Channels indicator, определяет торговые диапазоны на основе волатильности
+- [KVO](list_of_indicators/klinger_volume_oscillator.md) - Klinger Volume Oscillator, измеряет тренды объёма
+- [KST](list_of_indicators/kst.md) - Know Sure Thing, осциллятор импульса
+- [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI, модифицированный RSI с уменьшенным лагом
+- [LRC](list_of_indicators/lrc.md) - Linear regression, прогнозирует будущие цены на основе прошлых трендов
+- [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared, измеряет силу линейной зависимости
+- [LRS](list_of_indicators/lrs.md) - Linear regression gradient, указывает наклон линии регрессии
+- [Lowest](list_of_indicators/lowest.md) - Minimum value for a period, определяет минимальную цену за заданный период
+- [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator, коррелирует движения рынка с лунными циклами
+- [MFI](list_of_indicators/market_facilitation_index.md) - Market Facilitation Index, измеряет эффективность движения цены
+- [MMI](list_of_indicators/market_meanness_index.md) - Market Meanness Index, определяет поведение возврата к среднему
+- [MI](list_of_indicators/mass_index.md) - Mass Index, определяет потенциальные развороты на основе расширения диапазона
+- [MCO](list_of_indicators/mcclellan_oscillator.md) - McClellan Oscillator, измеряет широту рынка
+- [MGD](list_of_indicators/mcginley_dynamic.md) - McGinley Dynamic, отзывчивая скользящая средняя
+- [MeanDev](list_of_indicators/mean_deviation.md) - Average deviation, измеряет среднее отклонение от среднего
+- [MedPr](list_of_indicators/median_price.md) - Median price, вычисляет середину торгового диапазона
+- [Momentum](list_of_indicators/momentum.md) - Momentum, измеряет скорость изменения цены
+- [MOMA](list_of_indicators/momentum_of_moving_average.md) - Momentum of Moving Average, измеряет импульс скользящей средней
+- [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator, определяет состояния перекупленности и перепроданности
+- [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index, измеряет давление покупок и продаж на основе цены и объёма
+- [MACD](list_of_indicators/macd.md) - Convergence/divergence of moving averages, определяет изменения в тренде
+- [MACD Histogram](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram, визуализирует разницу между MACD и сигнальной линией
+- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence of moving averages with signal line, предоставляет сигналы на покупку и продажу
+- [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, определяет развороты тренда с использованием двух скользящих средних
+- [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, использует несколько скользящих средних для визуализации трендов
+- [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index, отслеживает движение цены в дни с уменьшающимся объёмом
+- [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, индикатор trailing stop
+- [OBV](list_of_indicators/obv.md) - On-Balance Volume (OBV), связывает объём с изменением цены
+- [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, сглаженная версия OBV
+- [OptimalTracking](list_of_indicators/optimal_tracking.md) - Optimal Tracking Filter published by John Ehlers, фильтрует ценовые данные для уменьшения шума
+- [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average, измеряет разницу между скользящей средней и ценой
+- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR тренд, определяет потенциальные точки разворота
+- [Stub](list_of_indicators/pass_through.md) - Индикатор без логики. Используется для отрисовки линий, заглушка для пользовательских индикаторов
+- [Peak](list_of_indicators/peak.md) - Peak, определяет локальные максимумы в ценовых данных
+- [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, измеряет процентную разницу между двумя скользящими средними
+- [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, измеряет процентную разницу в трендах объёма
+- [PP](list_of_indicators/pivot_points.md) - Pivot Points, вычисляет уровни поддержки и сопротивления на основе прошлых движений цены
+- [PGO](list_of_indicators/pretty_good_oscillator.md) - Pretty Good Oscillator, определяет состояния перекупленности и перепроданности
+- [PSY](list_of_indicators/psychological_line.md) - Psychological Line, измеряет рыночные настроения на основе изменений цены
+- [QStick](list_of_indicators/qstick.md) - QStick, измеряет давление покупок и продаж
+- [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts, использует несколько скользящих средних для визуализации трендов
+- [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index, измеряет силу тренда
+- [ROC](list_of_indicators/roc.md) - Rate of change, измеряет процентное изменение цены
+- [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index, вариация RSI с учётом импульса
+- [RSI](list_of_indicators/rsi.md) - Relative Strength Index, измеряет скорость и изменение движения цены
+- [RVI](list_of_indicators/rvi.md) - Relative Vigor Index, измеряет уверенность тренда
+- [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle, определяет циклические тренды
+- [SMA](list_of_indicators/sma.md) - Simple moving average, вычисляет среднюю цену за период
+- [SW](list_of_indicators/sine_wave.md) - Sine Wave, определяет циклические модели в ценовых данных
+- [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, скользящая средняя с большим весом последних цен
+- [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, измеряет разброс ценовых данных
+- [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression, измеряет точность прогнозов
+- [Stochastic %K](list_of_indicators/stochastic_oscillator_k%.md) - Stochastic %K, измеряет импульс на основе положения цены в диапазоне
+- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator, определяет состояния перекупленности и перепроданности
+- [Sum](list_of_indicators/sum_n.md) - Sum of N last values, вычисляет сумму последних N цен
+- [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average, плавная и отзывчивая скользящая средняя
+- [TWAP](list_of_indicators/time_weighted_average_price.md) - Time Weighted Average Price, вычисляет среднюю цену с учётом времени
+- [TEMA](list_of_indicators/tema.md) - Triple Exponential Moving Average, уменьшает лаг в расчётах скользящей средней
+- [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average, определяет изменения в тренде
+- [Trough](list_of_indicators/trough.md) - Trough, определяет локальные минимумы в ценовых данных
+- [TR](list_of_indicators/true_range.md) - True range, измеряет фактический диапазон движения цены
+- [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs Money Flow, измеряет давление покупок и продаж
+- [UltimateOsc](list_of_indicators/uo.md) - Last oscillator, комбинирует несколько таймфреймов для измерения импульса
+- [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter, различает трендовые и диапазонные рынки
+- [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, адаптируется к волатильности рынка
+- [Volume](list_of_indicators/volume.md) - Candle volume, измеряет объём торгов за свечу
+- [Volume profile](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
+- [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, придаёт больший вес ценам с большим объёмом
+- [VI](list_of_indicators/vortex_indicator.md) - Vortex, определяет начало новых трендов
+- [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator, определяет развороты тренда
+- [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average, придаёт больший вес последним ценам
+- [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average, сглаженная скользящая средняя
+- [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution, измеряет давление покупок и продаж
+- [%R](list_of_indicators/williams_r.md) - Williams Percent Range, определяет состояния перекупленности и перепроданности
+- [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI, вариация CCI для определения трендов
+- [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - Zero Lag Exponential Moving Average, уменьшает лаг в расчётах EMA
+- [Zig Zag](list_of_indicators/zigzag.md) - ZigZag, отфильтровывает мелкие движения цены для отображения значимых трендов
 
 ## Примечания
 
