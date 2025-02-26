@@ -1747,7 +1747,7 @@
       - name: Nick Rypock Trailing Reverse (NRTR)
         href: api/indicators/list_of_indicators/nrtr.md
       - name: On-Balance Volume (OBV)
-        href: api/indicators/list_of_indicators/obv.md
+        href: api/indicators/list_of_indicators/on_balance_volume.md
       - name: On Balance Volume Mean (OBVM)
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
       - name: Optimal Tracking Filter (OptimalTracking)

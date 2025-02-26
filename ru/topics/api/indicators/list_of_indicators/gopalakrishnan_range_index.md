@@ -70,5 +70,4 @@ GAPO = log(N) * log(Highest High - Lowest Low)
 
 [ATR](atr.md)
 [ChoppinessIndex](choppiness_index.md)
-[HistoricalVolatility](historical_volatility.md)
 [TrueRange](true_range.md)

@@ -74,7 +74,7 @@ Using the Demand Index is most effective when combined with other indicators and
 
 ## See Also
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [BalanceOfPower](balance_of_power.md)

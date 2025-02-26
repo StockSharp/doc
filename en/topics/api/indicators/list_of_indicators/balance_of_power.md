@@ -49,4 +49,4 @@ BOP is often additionally smoothed using a moving average to reduce volatility a
 [BalanceOfMarketPower](balance_of_market_power.md)
 [ForceIndex](force_index.md)
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

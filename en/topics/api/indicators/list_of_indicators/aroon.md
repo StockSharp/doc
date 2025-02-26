@@ -60,5 +60,3 @@ Both Aroon lines oscillate between 0 and 100:
 
 [ADX](adx.md)
 [DMI](dmi.md)
-[TroughBar](troughbar.md)
-[PeakBar](peakbar.md)

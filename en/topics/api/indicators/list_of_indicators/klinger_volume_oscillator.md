@@ -93,7 +93,7 @@ The Klinger Volume Oscillator can be interpreted as follows:
 
 ## See Also
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ADL](accumulation_distribution_line.md)
 [ForceIndex](force_index.md)

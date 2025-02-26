@@ -92,7 +92,7 @@
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, использует несколько скользящих средних для визуализации трендов
 - [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index, отслеживает движение цены в дни с уменьшающимся объёмом
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, индикатор trailing stop
-- [OBV](list_of_indicators/obv.md) - On-Balance Volume (OBV), связывает объём с изменением цены
+- [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV), связывает объём с изменением цены
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, сглаженная версия OBV
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - Optimal Tracking Filter published by John Ehlers, фильтрует ценовые данные для уменьшения шума
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average, измеряет разницу между скользящей средней и ценой

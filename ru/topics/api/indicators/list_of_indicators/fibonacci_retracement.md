@@ -75,7 +75,4 @@
 
 ## См. также
 
-[FibonacciExtensions](fibonacci_extensions.md)
-[FibonacciFan](fibonacci_fan.md)
-[FibonacciTimeZones](fibonacci_time_zones.md)
 [PivotPoints](pivot_points.md)

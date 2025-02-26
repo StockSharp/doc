@@ -70,6 +70,4 @@
 ## См. также
 
 [SineWave](sine_wave.md)
-[CyclePeriod](cycle_period.md)
-[SeasonalAnalysis](seasonal_analysis.md)
 [HarmonicOscillator](harmonic_oscillator.md)

@@ -38,4 +38,4 @@ ADL = Предыдущее значение ADL + CLV * Volume
 
 ## См. также
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

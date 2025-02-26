@@ -68,5 +68,4 @@ Chande Kroll Stop calculation involves the following steps:
 
 [ATR](atr.md)
 [ParabolicSAR](parabolic_sar.md)
-[SuperTrend](supertrend.md)
 [DonchianChannels](donchian_channels.md)

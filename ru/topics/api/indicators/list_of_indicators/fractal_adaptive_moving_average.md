@@ -85,4 +85,3 @@ FRAMA может интерпретироваться аналогично др�
 [EMA](ema.md)
 [KAMA](kama.md)
 [VIDYA](vidya.md)
-[AMA](adaptive_moving_average.md)

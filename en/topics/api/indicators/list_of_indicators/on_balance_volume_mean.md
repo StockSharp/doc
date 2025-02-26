@@ -85,7 +85,7 @@ On Balance Volume Mean can be interpreted as follows:
 
 ## See Also
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ForceIndex](force_index.md)

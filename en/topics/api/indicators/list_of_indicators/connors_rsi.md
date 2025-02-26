@@ -70,6 +70,5 @@ Connors RSI works best on charts with timeframes from daily to weekly and in mea
 ## See Also
 
 [RSI](rsi.md)
-[StochasticRSI](stochastic_rsi.md)
 [RMI](relative_momentum_index.md)
 [LRSI](laguerre_rsi.md)

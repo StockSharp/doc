@@ -78,7 +78,4 @@ MCO основан на анализе соотношения между кол�
 
 ## См. также
 
-[AdvanceDeclineLine](advance_decline_line.md)
 [HighLowIndex](high_low_index.md)
-[TickerVolume](ticker_volume.md)
-[MarketBreadth](market_breadth.md)

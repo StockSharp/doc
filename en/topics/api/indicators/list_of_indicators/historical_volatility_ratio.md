@@ -81,7 +81,6 @@ The Historical Volatility Ratio can be interpreted as follows:
 
 ## See Also
 
-[HistoricalVolatility](historical_volatility.md)
 [ATR](atr.md)
 [StandardDeviation](standard_deviation.md)
 [ChoppinessIndex](choppiness_index.md)

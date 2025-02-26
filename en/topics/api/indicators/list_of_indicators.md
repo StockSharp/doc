@@ -92,7 +92,7 @@
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, uses multiple moving averages to visualize trends
 - [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index, tracks price movements on days with decreasing volume
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, a trailing stop indicator
-- [OBV](list_of_indicators/obv.md) - On-Balance Volume (OBV), links volume to price changes
+- [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV), links volume to price changes
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, a smoothed version of OBV
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - Optimal Tracking Filter published by John Ehlers, filters price data to reduce noise
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average, measures the difference between a moving average and price

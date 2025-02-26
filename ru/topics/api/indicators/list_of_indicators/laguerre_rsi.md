@@ -97,5 +97,4 @@ Laguerre RSI интерпретируется аналогично традиц�
 
 [RSI](rsi.md)
 [AdaptiveLaguerreFilter](adaptive_laguerre_filter.md)
-[StochasticRSI](stochastic_rsi.md)
 [ConnorsRSI](connors_rsi.md)

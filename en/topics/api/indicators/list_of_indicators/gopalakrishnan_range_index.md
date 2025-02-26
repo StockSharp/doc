@@ -70,5 +70,4 @@ The Gopalakrishnan Range Index can be interpreted as follows:
 
 [ATR](atr.md)
 [ChoppinessIndex](choppiness_index.md)
-[HistoricalVolatility](historical_volatility.md)
 [TrueRange](true_range.md)

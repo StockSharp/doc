@@ -73,6 +73,6 @@ CMF колеблется около нулевой линии и обычно н
 ## См. также
 
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ForceIndex](force_index.md)
 [MFI](money_flow_index.md)

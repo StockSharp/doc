@@ -70,6 +70,5 @@ Connors RSI лучше всего работает на графиках с та
 ## См. также
 
 [RSI](rsi.md)
-[StochasticRSI](stochastic_rsi.md)
 [RMI](relative_momentum_index.md)
 [LRSI](laguerre_rsi.md)

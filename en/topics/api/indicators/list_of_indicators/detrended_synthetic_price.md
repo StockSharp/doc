@@ -75,4 +75,3 @@ The DSP indicator oscillates around the zero line and can be interpreted as foll
 [DetrendedPriceOscillator](dpo.md)
 [CenterOfGravityOscillator](center_of_gravity_oscillator.md)
 [SineWave](sine_wave.md)
-[CyclePeriod](cycle_period.md)

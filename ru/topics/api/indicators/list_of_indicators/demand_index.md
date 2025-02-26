@@ -74,7 +74,7 @@ DI стремится выявить следующие рыночные сит�
 
 ## См. также
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [BalanceOfPower](balance_of_power.md)

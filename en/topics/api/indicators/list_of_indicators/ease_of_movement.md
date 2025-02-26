@@ -85,4 +85,4 @@ The EMV indicator can be interpreted as follows:
 [ForceIndex](force_index.md)
 [BalanceOfPower](balance_of_power.md)
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

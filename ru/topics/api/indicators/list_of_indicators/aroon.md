@@ -60,5 +60,3 @@ Aroon помогает определить:
 
 [ADX](adx.md)
 [DMI](dmi.md)
-[TroughBar](troughbar.md)
-[PeakBar](peakbar.md)

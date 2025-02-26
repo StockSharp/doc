@@ -68,5 +68,4 @@ CKS особенно полезен для:
 
 [ATR](atr.md)
 [ParabolicSAR](parabolic_sar.md)
-[SuperTrend](supertrend.md)
 [DonchianChannels](donchian_channels.md)

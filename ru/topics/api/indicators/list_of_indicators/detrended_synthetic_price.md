@@ -75,4 +75,3 @@ DSP полезен для:
 [DetrendedPriceOscillator](dpo.md)
 [CenterOfGravityOscillator](center_of_gravity_oscillator.md)
 [SineWave](sine_wave.md)
-[CyclePeriod](cycle_period.md)

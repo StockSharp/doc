@@ -70,6 +70,4 @@ It is important to note that there is insufficient scientific evidence of direct
 ## See Also
 
 [SineWave](sine_wave.md)
-[CyclePeriod](cycle_period.md)
-[SeasonalAnalysis](seasonal_analysis.md)
 [HarmonicOscillator](harmonic_oscillator.md)

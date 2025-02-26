@@ -35,4 +35,4 @@ Positive AFI values indicate a strong upward trend, while negative values sugges
 ## See Also
 
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

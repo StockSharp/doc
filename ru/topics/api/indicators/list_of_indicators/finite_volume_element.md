@@ -87,7 +87,7 @@ FVE особенно полезен для:
 
 ## См. также
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
 [ForceIndex](force_index.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)

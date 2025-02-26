@@ -35,4 +35,4 @@ AFI стремится определить, насколько объем то�
 ## См. также
 
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

@@ -81,7 +81,6 @@ HVR рассчитывается как отношение краткосроч�
 
 ## См. также
 
-[HistoricalVolatility](historical_volatility.md)
 [ATR](atr.md)
 [StandardDeviation](standard_deviation.md)
 [ChoppinessIndex](choppiness_index.md)

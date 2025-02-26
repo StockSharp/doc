@@ -85,4 +85,3 @@ FRAMA can be interpreted similarly to other moving averages, but with considerat
 [EMA](ema.md)
 [KAMA](kama.md)
 [VIDYA](vidya.md)
-[AMA](adaptive_moving_average.md)

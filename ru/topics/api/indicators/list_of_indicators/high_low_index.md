@@ -76,6 +76,3 @@ HLI особенно полезен для:
 ## См. также
 
 [McClellanOscillator](mcclellan_oscillator.md)
-[AdvanceDeclineLine](advance_decline_line.md)
-[TickerVolume](ticker_volume.md)
-[MarketBreadth](market_breadth.md)

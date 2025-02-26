@@ -78,7 +78,4 @@ The McClellan Oscillator can be interpreted as follows:
 
 ## See Also
 
-[AdvanceDeclineLine](advance_decline_line.md)
 [HighLowIndex](high_low_index.md)
-[TickerVolume](ticker_volume.md)
-[MarketBreadth](market_breadth.md)

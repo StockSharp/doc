@@ -75,7 +75,4 @@ Fibonacci Retracement levels are interpreted as follows:
 
 ## See Also
 
-[FibonacciExtensions](fibonacci_extensions.md)
-[FibonacciFan](fibonacci_fan.md)
-[FibonacciTimeZones](fibonacci_time_zones.md)
 [PivotPoints](pivot_points.md)

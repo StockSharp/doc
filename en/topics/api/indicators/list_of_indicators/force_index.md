@@ -75,6 +75,5 @@ The Force Index can be interpreted in various ways:
 ## See Also
 
 [EMA](ema.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
-[ElderRays](elder_rays.md)

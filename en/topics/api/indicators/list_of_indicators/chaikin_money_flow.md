@@ -73,6 +73,6 @@ CMF oscillates around the zero line and is typically within the range of -1 to +
 ## See Also
 
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ForceIndex](force_index.md)
 [MFI](money_flow_index.md)

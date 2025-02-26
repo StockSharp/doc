@@ -38,4 +38,4 @@ If (High - Low) is equal to zero, CLV is set to zero.
 
 ## See Also
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)

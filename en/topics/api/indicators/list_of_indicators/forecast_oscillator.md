@@ -72,6 +72,5 @@ The Forecast Oscillator is interpreted as follows:
 ## See Also
 
 [LinearRegression](lrc.md)
-[LRR2](lrr2.md)
 [StandardError](standard_error.md)
 [DisparityIndex](disparity_index.md)

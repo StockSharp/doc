@@ -93,7 +93,7 @@ KVO объединяет информацию о цене с объемом, и�
 
 ## См. также
 
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ADL](accumulation_distribution_line.md)
 [ForceIndex](force_index.md)

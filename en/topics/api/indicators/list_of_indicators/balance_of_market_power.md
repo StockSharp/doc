@@ -57,4 +57,4 @@ Where:
 [BalanceOfPower](balance_of_power.md)
 [ForceIndex](force_index.md)
 [ADL](accumulation_distribution_line.md)
-[OBV](obv.md)
+[OBV](on_balance_volume.md)
