@@ -1,226 +1,65 @@
-# Cтратегии
+# Стратегии в StockSharp
 
 ## Введение
 
-StockSharp предоставляет мощный инструментарий для создания торговых стратегий. В этом руководстве мы рассмотрим процесс создания стратегии на примере SMA (Simple Moving Average) стратегии.
+StockSharp предоставляет мощную инфраструктуру для создания, тестирования и запуска торговых стратегий. Основой для разработки алгоритмических торговых стратегий служит базовый класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy), который обеспечивает набор стандартных функций и абстракций для работы с рыночными данными, исполнения торговых операций и анализа результатов.
 
-## Основы создания стратегии
+## Навигация по разделам
 
-### Наследование от базового класса
+### Основы работы со стратегиями
 
-Для создания стратегии необходимо создать класс, наследующий от [Strategy](xref:StockSharp.Algo.Strategies.Strategy).
+- [Подписки на маркет-данные в стратегиях](strategies/subscriptions.md) - детальное руководство по использованию подписок на маркет-данные в стратегиях. Объясняет создание и настройку подписок, управление их жизненным циклом и мониторинг состояния.
 
-```cs
-public class SmaStrategy : Strategy
-{
-    // Объявление класса стратегии, наследующего от базового класса Strategy
-    // Это позволяет использовать все базовые функции стратегий StockSharp
-}
-```
+- [Индикаторы в стратегии](strategies/indicators.md) - информация о работе с индикаторами технического анализа в стратегиях. Рассматривает добавление индикаторов в стратегию, контроль их формирования и использование в торговой логике.
 
-### Параметры стратегии
+- [Торговые операции в стратегиях](strategies/trading_operations.md) - руководство по выполнению торговых операций в стратегиях. Описывает методы создания и отправки заявок, закрытия позиций и мониторинга их состояния.
 
-Параметры стратегии определяются с помощью [StrategyParam](xref:StockSharp.Algo.Strategies.StrategyParam`1). Это позволяет легко настраивать стратегию без изменения кода.
+- [Защита позиций](strategies/take_profit_and_stop_loss.md) - описание механизмов защиты открытых позиций с использованием Take Profit и Stop Loss. Рассматривает локальный и серверный подходы к защите позиций.
 
-```cs
-// Объявление параметров стратегии
-private readonly StrategyParam<DataType> _candleTypeParam;
-private readonly StrategyParam<int> _long;
-private readonly StrategyParam<int> _short;
+- [Параметры стратегий](strategies/parameters.md) - руководство по работе с параметрами стратегий через [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Описывает, как создавать настраиваемые параметры, устанавливать их отображение в GUI и использовать в оптимизации.
 
-public DataType CandleType
-{
-    get => _candleTypeParam.Value;
-    set => _candleTypeParam.Value = value;
-}
+- [Логирование в стратегии](strategies/logging.md) - руководство по использованию механизма логирования в стратегиях для отслеживания и отладки работы алгоритма.
 
-public int Long
-{
-    get => _long.Value;
-    set => _long.Value = value;
-}
+### Дополнительные возможности
 
-public int Short
-{
-    get => _short.Value;
-    set => _short.Value = value;
-}
+- [Совместимость стратегий с платформами](strategies/compatibility.md) - рекомендации по созданию стратегий, совместимых с различными платформами StockSharp: [Designer](../designer.md), [Shell](../shell.md), [Runner](../runner.md) и облачным тестированием.
 
-// Эти параметры позволяют легко настраивать стратегию без изменения кода
-// CandleType определяет тип используемых свечей
-// Long и Short задают длины для длинной и короткой SMA
-```
+- [Высокоуровневые API в стратегиях](strategies/high_level_api.md) - описание высокоуровневых методов для упрощения работы с подписками, индикаторами, графиками и защитой позиций. Объясняет, как писать более чистый код, концентрируясь на торговой логике.
 
-## Инициализация стратегии
+- [Работа с графиком в стратегии](strategies/chart.md) - руководство по визуализации данных стратегии на графике. Объясняет, как получить доступ к графику, создать области, добавить элементы и отрисовать данные.
 
-### Метод OnStarted
+- [Сохранение и загрузка настроек](strategies/settings_saving_and_loading.md) - описание механизма сохранения и загрузки настроек стратегий через методы [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) и [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)).
 
-Метод [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) вызывается при запуске стратегии и используется для инициализации.
+- [Загрузка состояния](strategies/orders_and_trades_loading.md) - руководство по загрузке ранее совершённых заявок и сделок в стратегию, например, при перезапуске стратегии в течение торговой сессии.
 
-```cs
-protected override void OnStarted(DateTimeOffset time)
-{
-    base.OnStarted(time);
+- [Округление цены](strategies/shrink_price.md) - руководство по корректному округлению цен в стратегиях с использованием метода [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)).
 
-    this.AddInfoLog(nameof(OnStarted));
+- [Тип Unit](strategies/unit_type.md) - описание типа данных [Unit](xref:StockSharp.Messages.Unit) для упрощения работы с арифметическими операциями над такими величинами как проценты, пункты или пипсы.
 
-    // Метод OnStarted вызывается при запуске стратегии
-    // Здесь происходит основная инициализация
-}
-```
+- [Событийная модель](strategies/event_model.md) - объяснение событийной модели стратегий на основе [IMarketRule](xref:StockSharp.Algo.IMarketRule). Рассматривается создание правил реакции на рыночные события, комбинирование условий и управление жизненным циклом правил.
 
-### Создание индикаторов
+## Начало работы с разработкой стратегий
 
-В этом методе создаются и настраиваются используемые индикаторы.
+Для начала разработки собственной стратегии рекомендуется:
 
-```cs
-// Создание индикаторов
-_longSma = new SimpleMovingAverage { Length = Long };
-_shortSma = new SimpleMovingAverage { Length = Short };
+1. Ознакомиться с основами работы со стратегиями для понимания общих принципов работы стратегий в StockSharp.
 
-Indicators.Add(_longSma);
-Indicators.Add(_shortSma);
+2. Изучить раздел [Подписки на маркет-данные в стратегиях](strategies/subscriptions.md) для понимания механизма получения и обработки рыночных данных.
 
-// Создаются два индикатора SMA с разными периодами
-// Важно добавить их в коллекцию Indicators для правильной работы
-```
+3. Ознакомиться с разделом [Индикаторы в стратегии](strategies/indicators.md) для понимания работы с индикаторами технического анализа.
 
-### Подписка на данные
+4. Изучить раздел [Торговые операции в стратегиях](strategies/trading_operations.md) для понимания механизмов выполнения торговых операций.
 
-Здесь же происходит подписка на необходимые рыночные данные.
+5. Рассмотреть раздел [Параметры стратегий](strategies/parameters.md) для изучения механизма настройки стратегий.
 
-```cs
-var subscription = new Subscription(CandleType, Security)
-{
-    MarketData =
-    {
-        IsFinishedOnly = true,
-    }
-};
+6. Познакомиться с разделом [Высокоуровневые API в стратегиях](strategies/high_level_api.md) для упрощения кода стратегии с помощью встроенных высокоуровневых функций.
 
-subscription
-    .WhenCandleReceived(this)
-    .Do(ProcessCandle)
-    .Apply(this);
+## Тестирование стратегий
 
-Subscribe(subscription);
+StockSharp предоставляет различные способы тестирования стратегий:
 
-// Создается подписка на свечи выбранного типа
-// IsFinishedOnly = true означает, что обрабатываются только завершенные свечи
-// WhenCandleReceived подписывается на получение новых свечей
-// ProcessCandle - метод, который будет вызываться для каждой новой свечи
-```
+- **Тестирование на исторических данных** - позволяет оценить эффективность стратегии на исторических данных.
+- **Оптимизация параметров** - позволяет найти оптимальные значения параметров стратегии.
+- **Тестирование на виртуальных счетах** - позволяет проверить работу стратегии в режиме реального времени без риска реальных средств.
 
-Для подписки создается [правило](strategies/event_model.md), активизирующееся каждый раз, как приходит свеча.
-
-## Обработка рыночных данных
-
-### Метод ProcessCandle
-
-Этот метод вызывается для каждой новой свечи и содержит основную логику стратегии.
-
-```cs
-private void ProcessCandle(ICandleMessage candle)
-{
-    // Метод ProcessCandle вызывается для каждой новой свечи
-    // Здесь реализуется основная логика стратегии
-}
-```
-
-### Торговая логика
-
-В этом методе реализуется основная торговая логика стратегии, включая анализ индикаторов и принятие решений о входе в позицию или выходе из нее.
-
-```cs
-// Торговая логика
-if (this.IsFormedAndOnlineAndAllowTrading())
-{
-    if (candle.State == CandleStates.Finished)
-    {
-        var isShortLessThenLong = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
-
-        if (_isShortLessThenLong == null)
-        {
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-        else if (_isShortLessThenLong != isShortLessThenLong)
-        {
-            // Здесь реализуется основная торговая логика
-            // Проверяется пересечение коротной и длинной SMA
-            // На основе этого принимается решение о покупке или продаже
-        }
-    }
-}
-
-// Этот код проверяет, сформированы ли индикаторы и разрешена ли торговля
-// Затем анализируется пересечение короткой и длинной SMA
-// При пересечении генерируется сигнал на покупку или продажу
-```
-
-## Визуализация
-
-StockSharp позволяет легко визуализировать работу стратегии с помощью графиков.
-
-```cs
-_chart = this.GetChart();
-
-if (_chart != null)
-{
-    var area = _chart.AddArea();
-
-    _chartCandlesElem = area.AddCandles();
-    _chartTradesElem = area.AddTrades();
-    _chartShortElem = area.AddIndicator(_shortSma);
-    _chartLongElem = area.AddIndicator(_longSma);
-}
-
-// Код для создания и настройки графика
-// Добавляются элементы для отображения свечей, сделок и индикаторов
-```
-
-## Управление позициями и заявками
-
-### Создание и регистрация заявок
-
-Для создания заявок используется вспомогательный метод [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})).
-
-```cs
-var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-var price = candle.ClosePrice + ((direction == Sides.Buy ? priceStep : -priceStep) ?? 1);
-
-RegisterOrder(this.CreateOrder(direction, price, volume));
-
-// Код создания и регистрации заявки
-// Определяется направление сделки (покупка или продажа)
-// Рассчитывается объем и цена заявки
-// Создается и регистрируется новая заявка
-```
-
-Созданные заявки регистрируются с помощью метода [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order)).
-
-## Работа с собственными сделками
-
-Стратегия может отслеживать собственные сделки для анализа эффективности.
-
-```cs
-this
-    .WhenNewMyTrade()
-    .Do(_myTrades.Add)
-    .Apply(this);
-
-// Код для обработки собственных сделок
-// При появлении новой сделки она добавляется в список _myTrades
-```
-
-## Логирование
-
-Для отладки и мониторинга работы стратегии важно использовать логирование.
-
-```cs
-this.AddInfoLog(nameof(OnStarted));
-this.AddInfoLog(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
-
-// Примеры использования логирования
-// Логируются важные события, такие как старт стратегии и получение новой свечи
-```
+Подробное описание методов тестирования и оценки производительности стратегий можно найти в разделе [Тестирование](../api/testing.md).

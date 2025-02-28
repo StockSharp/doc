@@ -1877,8 +1877,24 @@
   - name: Strategies
     href: api/strategies.md
     items:
-    - name: Positions protection
+    - name: Subscriptions
+      href: api/strategies/subscriptions.md
+    - name: Indicators
+      href: api/strategies/indicators.md
+    - name: Trading Operations
+      href: api/strategies/trading_operations.md
+    - name: Position Protection
       href: api/strategies/take_profit_and_stop_loss.md
+    - name: Parameters
+      href: api/strategies/parameters.md
+    - name: Logging
+      href: api/strategies/logging.md
+    - name: Platform Compatibility
+      href: api/strategies/compatibility.md
+    - name: High-Level APIs
+      href: api/strategies/high_level_api.md
+    - name: Working with Charts
+      href: api/strategies/chart.md
     - name: Settings saving and loading
       href: api/strategies/settings_saving_and_loading.md
     - name: Orders and trades loading

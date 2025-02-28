@@ -1,62 +1,85 @@
 # Сохранение и загрузка настроек
 
-Для сохранения и загрузки настроек стратегии используются переопределения методов [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)** и [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)** соответственно. 
+В StockSharp механизм сохранения и загрузки настроек стратегий реализован через методы [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) и [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)).
+
+## Автоматическая работа с параметрами
+
+Для большинства случаев **нет необходимости** в переопределении методов `Save` и `Load`, так как базовый класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) автоматически сохраняет и загружает параметры стратегии, созданные с использованием [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1).
+
+Рекомендуемый подход - использовать механизм параметров стратегии, подробно описанный в разделе [Параметры стратегии](parameters.md). При таком подходе все параметры автоматически сохраняются и загружаются:
 
 ```cs
+public class SmaStrategy : Strategy
+{
+    private readonly StrategyParam<int> _longSmaLength;
+
+    public int LongSmaLength
+    {
+        get => _longSmaLength.Value;
+        set => _longSmaLength.Value = value;
+    }
+
+    public SmaStrategy()
+    {
+        _longSmaLength = Param(nameof(LongSmaLength), 80)
+                          .SetDisplay("Long SMA length", string.Empty, "Base settings");
+    }
+}
+```
+
+## Переопределение для особых случаев
+
+Переопределение методов `Save` и `Load` требуется только в особых случаях, когда необходимо сохранить или загрузить данные, которые не входят в стандартный набор параметров стратегии. Например, для сохранения внутреннего состояния, нестандартных структур данных или кэшированных значений.
+
+Если вы переопределяете эти методы, **обязательно нужно вызывать методы базового класса**:
+
+```cs
+public override void Save(SettingsStorage settings)
+{
+    // Сначала вызываем базовый метод для сохранения стандартных параметров
+    base.Save(settings);
+    
+    // Затем добавляем свою специфичную логику сохранения
+    settings.SetValue("CustomState", _customState);
+}
+	
 public override void Load(SettingsStorage settings)
 {
-    if (settings.Contains("UsedVolume"))
-        Id = settings.GetValue<Guid>("UsedVolume");
-	
-    if (settings.Contains("Ticks"))
-        Name = settings.GetValue<string>("Ticks");
-	
-    if (settings.Contains("SpreadVolume"))
-        Volume = settings.GetValue<decimal>("SpreadVolume");
-	        
+    // Сначала вызываем базовый метод для загрузки стандартных параметров
     base.Load(settings);
-}
-	
-public override void Save(SettingsStorage settings)
-{
-    settings.SetValue("UsedVolume", UsedVolume);
-    settings.SetValue("Ticks", Ticks);
-    settings.SetValue("Volume", Volume);
-    settings.SetValue("SpreadVolume", SpreadVolume);
-	    
-    base.Save(settings);
+    
+    // Затем добавляем свою специфичную логику загрузки
+    if (settings.Contains("CustomState"))
+        _customState = settings.GetValue<string>("CustomState");
 }
 ```
 
-Для сохранения и загрузки настроек из внешнего файла можно воспользоваться соответственно сериализацией и десериализацией, реализованной в [S\#](../../api.md). 
+## Сохранение и загрузка из файла
+
+Для сохранения настроек в файл или загрузки из файла можно использовать сериализацию и десериализацию, реализованную в StockSharp:
 
 ```cs
-var newStrategy = new MarketProfileStrategy();
-if (File.Exists("marketProfile.json"))
+// Сохранение настроек в файл
+var settingsStorage = new SettingsStorage();
+strategy.Save(settingsStorage);
+new JsonSerializer<SettingsStorage>().Serialize(settingsStorage, "strategy.json");
+
+// Загрузка настроек из файла
+var newStrategy = new SmaStrategy();
+if (File.Exists("strategy.json"))
 {
-    //Загрузка настроек стратегии из существующего конфигурационного файла
-    var settingsStorage = new JsonSerializer<SettingsStorage>().Deserialize("marketProfile.json");
-    newStrategy.Load(settingsStorage);
+    var loadedSettings = new JsonSerializer<SettingsStorage>().Deserialize("strategy.json");
+    newStrategy.Load(loadedSettings);
 }
 ```
 
-Для сохранения настроек во внешний файл необходимо внести изменения в метод [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage))**(**[Ecng.Serialization.SettingsStorage](xref:Ecng.Serialization.SettingsStorage) storage **)**, описанный ранее. 
+## Рекомендации
 
-```cs
-public override void Save(SettingsStorage settings)
-{
-    settings.SetValue("UsedVolume", UsedVolume);
-    settings.SetValue("Ticks", Ticks);
-    settings.SetValue("Volume", Volume);
-    settings.SetValue("SpreadVolume", SpreadVolume);
-	    
-    base.Save(settings);
-	
-    //Сохраняем настройки в файл
-    new JsonSerializer<SettingsStorage>().Serialize(settings, "marketProfile.json");
-}
-```
+1. По возможности, используйте [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) для всех настраиваемых параметров стратегии.
+2. Переопределяйте методы `Save` и `Load` только при необходимости сохранить/загрузить нестандартные данные.
+3. Всегда вызывайте базовые методы `base.Save()` и `base.Load()` при переопределении.
+4. Для сохранения настроек в файл или загрузки из файла используйте стандартные средства сериализации StockSharp.
 
-## Следующие шаги
+## См. также
 
-[Загрузка заявок и сделок](orders_and_trades_loading.md)
+[Параметры стратегии](parameters.md)

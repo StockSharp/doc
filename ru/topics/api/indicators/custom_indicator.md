@@ -40,6 +40,73 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 
 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) наследуется от класса [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1), от которого необходимо наследовать все индикаторы, имеющие в качестве параметра длину периода. 
 
+## Важные свойства и методы индикаторов
+
+При создании собственного индикатора особое внимание следует уделить следующим свойствам и методам:
+
+### NumValuesToInitialize
+
+Свойство [NumValuesToInitialize](xref:StockSharp.Algo.Indicators.IIndicator.NumValuesToInitialize) указывает, сколько значений требуется индикатору для инициализации (формирования или "прогрева"). Это значение используется для определения, когда индикатор можно считать сформированным и готовым к использованию:
+
+```cs
+/// <inheritdoc />
+public override int NumValuesToInitialize => Length;
+```
+
+Для более сложных индикаторов, состоящих из нескольких компонентов, это значение обычно определяется как максимальное из всех составных частей:
+
+```cs
+/// <inheritdoc />
+public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+```
+
+### Measure
+
+Свойство [Measure](xref:StockSharp.Algo.Indicators.IIndicator.Measure) определяет тип измерения и размерность, которую предоставляет индикатор:
+
+```cs
+/// <inheritdoc />
+public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
+```
+
+Доступные типы измерений:
+- `IndicatorMeasures.Price` - индикатор измеряет цену (например, скользящие средние)
+- `IndicatorMeasures.Percent` - индикатор использует процентную шкалу от 0 до 100 (например, RSI)
+- `IndicatorMeasures.MinusOnePlusOne` - индикатор использует шкалу от -1 до +1
+- `IndicatorMeasures.Volume` - индикатор измеряет объем (например, OBV)
+
+Это свойство критически важно для правильного отображения индикаторов на графике. Когда на одну и ту же панель накладываются несколько индикаторов с разными размерностями, для индикаторов с отличающимся типом `Measure` создаются отдельные оси Y. Это позволяет визуально отображать все индикаторы в их естественном масштабе, даже если один из них имеет значения в тысячах (например, цена), а другой измеряется в долях единицы (например, осциллятор).
+
+### Save и Load
+
+Методы [Save](xref:StockSharp.Algo.Indicators.IIndicator.Save(Ecng.Serialization.SettingsStorage)) и [Load](xref:StockSharp.Algo.Indicators.IIndicator.Load(Ecng.Serialization.SettingsStorage)) необходимы для сохранения и загрузки настроек индикатора:
+
+```cs
+/// <inheritdoc />
+public override void Save(SettingsStorage storage)
+{
+    base.Save(storage);
+
+    storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+    storage.SetValue(nameof(LongPeriod), LongPeriod);
+}
+
+/// <inheritdoc />
+public override void Load(SettingsStorage storage)
+{
+    base.Load(storage);
+
+    ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+    LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+}
+```
+
+В этих методах необходимо сохранять и загружать все настраиваемые параметры индикатора. Это обеспечивает корректное сохранение и восстановление состояния индикатора при сохранении и загрузке стратегии. 
+
+Важно вызывать базовые методы `base.Save()` и `base.Load()` для обработки общих параметров индикатора, унаследованных от базового класса.
+
+## Составные индикаторы
+
 Некоторые индикаторы являются составными, и используют в своих рассчетах другие индикаторы. Поэтому индикаторы можно переиспользовать друг из друга, как показано в качестве примера реализация индикатора волатильности Чайкина [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility): 
 
 ```cs
@@ -103,6 +170,8 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 }
 ```
 
+## Индикаторы с несколькими линиями
+
 Последний вид индикаторов \- это те, которые не просто состоят из других индикаторов, но так же графически отображаются несколькими состояниями одновременно (несколькими линиями). Например, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex): 
 
 ```cs
@@ -163,4 +232,134 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 }
 ```
 
-Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются. 
+Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются.
+
+## Пример комплексного индикатора с реализацией SaveLoad
+
+Ниже приведен пример реализации индикатора Percentage Volume Oscillator (PVO), который демонстрирует реализацию свойств `NumValuesToInitialize`, `Measure`, а также методов `Save` и `Load`:
+
+```cs
+/// <summary>
+/// Percentage Volume Oscillator (PVO).
+/// </summary>
+[Display(
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.PVOKey,
+	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
+[IndicatorIn(typeof(CandleIndicatorValue))]
+[Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
+public class PercentageVolumeOscillator : BaseComplexIndicator
+{
+	private readonly ExponentialMovingAverage _shortEma;
+	private readonly ExponentialMovingAverage _longEma;
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	public PercentageVolumeOscillator()
+		: this(new(), new())
+	{
+		ShortPeriod = 12;
+		LongPeriod = 26;
+	}
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	/// <param name="shortEma">The short-term EMA.</param>
+	/// <param name="longEma">The long-term EMA.</param>
+	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
+		: base(shortEma, longEma)
+	{
+		_shortEma = shortEma;
+		_longEma = longEma;
+	}
+
+	/// <summary>
+	/// Short period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.ShortPeriodKey,
+		Description = LocalizedStrings.ShortMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int ShortPeriod
+	{
+		get => _shortEma.Length;
+		set => _shortEma.Length = value;
+	}
+
+	/// <summary>
+	/// Long period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.LongPeriodKey,
+		Description = LocalizedStrings.LongMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int LongPeriod
+	{
+		get => _longEma.Length;
+		set => _longEma.Length = value;
+	}
+
+	/// <inheritdoc />
+	public override IndicatorMeasures Measure => IndicatorMeasures.Volume;
+
+	/// <inheritdoc />
+	public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+
+	/// <inheritdoc />
+	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
+
+	/// <inheritdoc />
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var volume = input.ToCandle().TotalVolume;
+
+		var result = new ComplexIndicatorValue(this, input.Time);
+
+		var shortValue = _shortEma.Process(input, volume);
+		var longValue = _longEma.Process(input, volume);
+
+		result.Add(_shortEma, shortValue);
+		result.Add(_longEma, longValue);
+
+		if (_longEma.IsFormed)
+		{
+			var den = longValue.ToDecimal();
+			var pvo = den == 0 ? 0 : ((shortValue.ToDecimal() - den) / den) * 100;
+			result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time));
+		}
+
+		return result;
+	}
+
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+
+		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+		storage.SetValue(nameof(LongPeriod), LongPeriod);
+	}
+
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+
+		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	}
+
+	/// <inheritdoc />
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+}
+```
+
+Этот пример демонстрирует:
+1. Реализацию `NumValuesToInitialize` для комплексного индикатора
+2. Указание типа измерения через свойство `Measure`
+3. Корректные реализации методов `Save` и `Load` для сохранения и загрузки параметров
+4. Переопределение `ToString()` для удобного отображения конфигурации индикатора

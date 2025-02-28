@@ -2014,8 +2014,24 @@
   - name: Cтратегии
     href: api/strategies.md
     items:
+    - name: Подписки
+      href: api/strategies/subscriptions.md
+    - name: Индикаторы
+      href: api/strategies/indicators.md
+    - name: Торговые операции
+      href: api/strategies/trading_operations.md
     - name: Защита позиций
       href: api/strategies/take_profit_and_stop_loss.md
+    - name: Параметры
+      href: api/strategies/parameters.md
+    - name: Логирование
+      href: api/strategies/logging.md
+    - name: Совместимость с платформами
+      href: api/strategies/compatibility.md
+    - name: Высокоуровневые API
+      href: api/strategies/high_level_api.md
+    - name: Работа с графиком
+      href: api/strategies/chart.md
     - name: Сохранение и загрузка настроек
       href: api/strategies/settings_saving_and_loading.md
     - name: Загрузка состояния

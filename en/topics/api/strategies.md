@@ -1,227 +1,65 @@
-# Strategies
+# Strategies in StockSharp
 
 ## Introduction
 
-StockSharp provides a powerful toolkit for creating trading strategies. In this guide, we will explore the process of creating a strategy using the example of an SMA (Simple Moving Average) strategy.
+StockSharp provides a powerful infrastructure for creating, testing, and running trading strategies. The foundation for developing algorithmic trading strategies is the base class [Strategy](xref:StockSharp.Algo.Strategies.Strategy), which provides a set of standard functions and abstractions for working with market data, executing trading operations, and analyzing results.
 
-## Basics of Strategy Creation
+## Navigation
 
-### Inheriting from the Base Class
+### Strategy Basics
 
-To create a strategy, you need to create a class that inherits from [Strategy](xref:StockSharp.Algo.Strategies.Strategy).
+- [Market Data Subscriptions in Strategies](strategies/subscriptions.md) - Detailed guide on using market data subscriptions in strategies. Explains creating and configuring subscriptions, managing their lifecycle, and monitoring their state.
 
-```cs
-public class SmaStrategy : Strategy
-{
-    // Declaring a strategy class inheriting from the base Strategy class
-    // This allows using all basic functions of StockSharp strategies
-}
-```
+- [Indicators in Strategies](strategies/indicators.md) - Information about working with technical analysis indicators in strategies. Covers adding indicators to a strategy, controlling their formation, and using them in trading logic.
 
-### Strategy Parameters
+- [Trading Operations in Strategies](strategies/trading_operations.md) - Guide to performing trading operations in strategies. Describes methods for creating and sending orders, closing positions, and monitoring their status.
 
-Strategy parameters are defined using [StrategyParam](xref:StockSharp.Algo.Strategies.StrategyParam`1). This allows for easy configuration without changing the code.
+- [Position Protection](strategies/take_profit_and_stop_loss.md) - Description of mechanisms for protecting open positions using Take Profit and Stop Loss. Examines local and server approaches to position protection.
 
-```cs
-// Declaring strategy parameters
-private readonly StrategyParam<DataType> _candleTypeParam;
-private readonly StrategyParam<int> _long;
-private readonly StrategyParam<int> _short;
+- [Strategy Parameters](strategies/parameters.md) - Guide to working with strategy parameters through [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Describes how to create configurable parameters, set their display in GUI, and use them in optimization.
 
-public DataType CandleType
-{
-    get => _candleTypeParam.Value;
-    set => _candleTypeParam.Value = value;
-}
+- [Logging in Strategies](strategies/logging.md) - Guide to using the logging mechanism in strategies for tracking and debugging algorithm performance.
 
-public int Long
-{
-    get => _long.Value;
-    set => _long.Value = value;
-}
+### Advanced Features
 
-public int Short
-{
-    get => _short.Value;
-    set => _short.Value = value;
-}
+- [Strategy Platform Compatibility](strategies/compatibility.md) - Recommendations for creating strategies compatible with various StockSharp platforms: [Designer](../designer.md), [Shell](../shell.md), [Runner](../runner.md), and cloud testing.
 
-// These parameters allow easy configuration of the strategy without changing the code
-// CandleType defines the type of candles used
-// Long and Short set the lengths for the long and short SMAs
-```
+- [High-Level APIs in Strategies](strategies/high_level_api.md) - Description of high-level methods to simplify working with subscriptions, indicators, charts, and position protection. Explains how to write cleaner code by focusing on trading logic.
 
-## Strategy Initialization
+- [Working with Charts in Strategies](strategies/chart.md) - Guide to visualizing strategy data on a chart. Explains how to access the chart, create areas, add elements, and render data.
 
-### OnStarted Method
+- [Saving and Loading Settings](strategies/settings_saving_and_loading.md) - Description of the mechanism for saving and loading strategy settings through [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) and [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) methods.
 
-The [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method is called when the strategy starts and is used for initialization.
+- [State Loading](strategies/orders_and_trades_loading.md) - Guide to loading previously executed orders and trades into a strategy, for example, when restarting a strategy during a trading session.
 
-```cs
-protected override void OnStarted(DateTimeOffset time)
-{
-    base.OnStarted(time);
+- [Price Rounding](strategies/shrink_price.md) - Guide to correctly rounding prices in strategies using the [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) method.
 
-    this.AddInfoLog(nameof(OnStarted));
+- [Unit Type](strategies/unit_type.md) - Description of the [Unit](xref:StockSharp.Messages.Unit) data type to simplify arithmetic operations on quantities like percentages, points, or pips.
 
-    // The OnStarted method is called when the strategy starts
-    // The main initialization occurs here
-}
-```
+- [Event Model](strategies/event_model.md) - Explanation of the strategy event model based on [IMarketRule](xref:StockSharp.Algo.IMarketRule). Covers creating rules to react to market events, combining conditions, and managing rule lifecycles.
 
-### Creating Indicators
+## Getting Started with Strategy Development
 
-This method creates and configures the indicators used.
+To begin developing your own strategy, it is recommended to:
 
-```cs
-// Creating indicators
-_longSma = new SimpleMovingAverage { Length = Long };
-_shortSma = new SimpleMovingAverage { Length = Short };
+1. Familiarize yourself with the basics of working with strategies to understand the general principles of strategies in StockSharp.
 
-Indicators.Add(_longSma);
-Indicators.Add(_shortSma);
+2. Study the [Market Data Subscriptions in Strategies](strategies/subscriptions.md) section to understand the mechanism of receiving and processing market data.
 
-// Creating two SMA indicators with different periods
-// It is important to add them to the Indicators collection for proper operation
-```
+3. Review the [Indicators in Strategies](strategies/indicators.md) section to understand working with technical analysis indicators.
 
-### Subscribing to Data
+4. Explore the [Trading Operations in Strategies](strategies/trading_operations.md) section to understand trading operation mechanisms.
 
-Here, we subscribe to the necessary market data.
+5. Examine the [Strategy Parameters](strategies/parameters.md) section to learn about strategy configuration mechanisms.
 
-```cs
-// Subscribing to market data
-var subscription = new Subscription(CandleType, Security)
-{
-    MarketData =
-    {
-        IsFinishedOnly = true,
-    }
-};
+6. Get acquainted with the [High-Level APIs in Strategies](strategies/high_level_api.md) section to simplify strategy code using built-in high-level functions.
 
-subscription
-    .WhenCandleReceived(this)
-    .Do(ProcessCandle)
-    .Apply(this);
+## Strategy Testing
 
-Subscribe(subscription);
+StockSharp provides various methods for testing strategies:
 
-// Creating a subscription for candles of the selected type
-// IsFinishedOnly = true means only completed candles are processed
-// WhenCandleReceived subscribes to receiving new candles
-// ProcessCandle is the method that will be called for each new candle
-```
+- **Historical Data Testing** - Allows evaluating strategy effectiveness on historical data.
+- **Parameter Optimization** - Helps find optimal strategy parameter values.
+- **Virtual Account Testing** - Allows checking strategy performance in real-time mode without risking real funds.
 
-A [rule](strategies/event_model.md) is created for the subscription, activating each time a candle arrives.
-
-## Processing Market Data
-
-### ProcessCandle Method
-
-This method is called for each new candle and contains the main logic of the strategy.
-
-```cs
-private void ProcessCandle(ICandleMessage candle)
-{
-    // The ProcessCandle method is called for each new candle
-    // The main logic of the strategy is implemented here
-}
-```
-
-### Trading Logic
-
-This method implements the core trading logic, including indicator analysis and decision-making for entering or exiting a position.
-
-```cs
-// Trading logic
-if (this.IsFormedAndOnlineAndAllowTrading())
-{
-    if (candle.State == CandleStates.Finished)
-    {
-        var isShortLessThenLong = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
-
-        if (_isShortLessThenLong == null)
-        {
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-        else if (_isShortLessThenLong != isShortLessThenLong)
-        {
-            // Implementing the main trading logic here
-            // Checking the crossover of the short and long SMAs
-            // Based on this, a decision is made to buy or sell
-        }
-    }
-}
-
-// This code checks if the indicators are formed and trading is allowed
-// Then it analyzes the crossover of the short and long SMAs
-// A buy or sell signal is generated on crossover
-```
-
-## Visualization
-
-StockSharp allows easy visualization of the strategy's performance using charts.
-
-```cs
-_chart = this.GetChart();
-
-if (_chart != null)
-{
-    var area = _chart.AddArea();
-
-    _chartCandlesElem = area.AddCandles();
-    _chartTradesElem = area.AddTrades();
-    _chartShortElem = area.AddIndicator(_shortSma);
-    _chartLongElem = area.AddIndicator(_longSma);
-}
-
-// Code for creating and configuring a chart
-// Adding elements to display candles, trades, and indicators
-```
-
-## Managing Positions and Orders
-
-### Creating and Registering Orders
-
-To create orders, use the [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})) helper method.
-
-```cs
-var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-var price = candle.ClosePrice + ((direction == Sides.Buy ? priceStep : -priceStep) ?? 1);
-
-RegisterOrder(this.CreateOrder(direction, price, volume));
-
-// Code for creating and registering an order
-// Determining the trade direction (buy or sell)
-// Calculating the order volume and price
-// Creating and registering a new order
-```
-
-Orders are registered using the [RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order)) method.
-
-## Handling Own Trades
-
-The strategy can track its own trades for performance analysis.
-
-```cs
-this
-    .WhenNewMyTrade()
-    .Do(_myTrades.Add)
-    .Apply(this);
-
-// Code for handling own trades
-// When a new trade appears, it is added to the _myTrades list
-```
-
-## Logging
-
-Logging is essential for debugging and monitoring the strategy's performance.
-
-```cs
-this.AddInfoLog(nameof(OnStarted));
-this.AddInfoLog(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
-
-// Examples of logging
-// Important events such as strategy start and receiving a new candle are logged
-```
+Detailed descriptions of testing methods and strategy performance evaluation can be found in the [Testing](../api/testing.md) section.
