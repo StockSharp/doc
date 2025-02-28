@@ -40,7 +40,7 @@ In this example, a subscription is created for 5-minute candles using a convenie
 
 Using subscriptions in strategies has several advantages compared to direct subscription to [Strategy.Connector](xref:StockSharp.Algo.Strategies.Strategy.Connector) events:
 
-1. **Isolation** - each subscription works independently, allowing different types of data to be received for different instruments without mutual interference.
+1. **Isolation** - each subscription works independently, allowing different types of data to be received for different instruments without mutual interference. This also protects the strategy from receiving data intended for other strategies running in parallel. With direct subscription to connector events, you would have to additionally filter data to exclude information from other strategies.
 
 2. **State Management** - subscriptions have clear states ([SubscriptionStates](xref:StockSharp.Messages.SubscriptionStates)), which allow precise determination of whether historical data is currently being received or the subscription has already transitioned to online mode.
 
