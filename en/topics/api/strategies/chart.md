@@ -67,7 +67,7 @@ private void InitializeChart()
 }
 ```
 
-You can also use the [IChart.AddArea](xref:StockSharp.Charting.IChart.AddArea) method directly:
+You can also use the [IChart.AddArea](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddArea(StockSharp.Charting.IChart)) method directly:
 
 ```cs
 private void InitializeChart()
@@ -93,7 +93,7 @@ After creating chart areas, you can add various elements to display data. StockS
 
 ### Adding Candles
 
-To display candles, use the [AddCandles](xref:StockSharp.Charting.IChartArea.AddCandles) method of the chart area:
+To display candles, use the [AddCandles](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddCandles(StockSharp.Charting.IChartArea)) method of the chart area:
 
 ```cs
 private void ConfigureChartElements()
@@ -137,7 +137,7 @@ The [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) interfac
 
 ### Adding Indicators
 
-To display indicators, use the [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Drawing.Color,System.Drawing.Color)) method:
+To display indicators, use the [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) method:
 
 ```cs
 // Creating indicators
@@ -161,7 +161,7 @@ _bollingerMiddleElement = DrawIndicator(_mainArea, _bollinger, Color.Gray);
 
 The [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Drawing.Color,System.Drawing.Color)) method automatically creates an indicator element and adds it to the specified chart area. You can specify a color and additional color for display.
 
-You can also add an indicator element directly through the chart area's [AddIndicator](xref:StockSharp.Charting.IChartArea.AddIndicator(StockSharp.Algo.Indicators.IIndicator)) method:
+You can also add an indicator element directly through the chart area's [AddIndicator](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator)) method:
 
 ```cs
 // Adding SMA directly through the chart area
@@ -274,7 +274,7 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-The [IChart.CreateData](xref:StockSharp.Charting.IChartBuilder.CreateData) method creates an [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) object used to group and add data for different chart elements. Data grouping is done by timestamp using the [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)) method.
+The [IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) method creates an [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) object used to group and add data for different chart elements. Data grouping is done by timestamp using the [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)) method.
 
 For adding data of different types, various overloads of the [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) method of the [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem) object are used.
 

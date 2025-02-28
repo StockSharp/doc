@@ -141,7 +141,7 @@ public class SmaStrategy : Strategy
 
 ### Example Using IsFormedAndOnline
 
-To check if the strategy is ready for trading, the [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.Strategy,StockSharp.Algo.Strategies.StrategyTradingModes)) method is often used, which combines checking indicator formation, online status, and trading permission:
+To check if the strategy is ready for trading, the [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) method is often used, which combines checking indicator formation, online status, and trading permission:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -151,7 +151,7 @@ private void ProcessCandle(ICandleMessage candle)
     var shortValue = _shortSma.Process(candle);
     
     // Comprehensive check of strategy readiness
-    if (!this.IsFormedAndOnlineAndAllowTrading())
+    if (!IsFormedAndOnlineAndAllowTrading())
         return;
         
     // Trading logic

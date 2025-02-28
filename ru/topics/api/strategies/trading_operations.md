@@ -198,7 +198,7 @@ public SmaStrategy()
 
 - [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnline(StockSharp.Algo.Strategies.Strategy)) - проверяет, что стратегия находится в состоянии `IsFormed = true` и `IsOnline = true`
 
-- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.Strategy,StockSharp.Algo.Strategies.StrategyTradingModes)) - проверяет, что стратегия сформирована, находится в онлайн-режиме и имеет необходимые права на торговлю
+- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - проверяет, что стратегия сформирована, находится в онлайн-режиме и имеет необходимые права на торговлю
 
 Хорошей практикой является использование этих методов перед выполнением торговых операций:
 
@@ -207,7 +207,7 @@ private void ProcessCandle(ICandleMessage candle)
 {
     // Проверка, сформирована ли стратегия и в онлайн-режиме ли она,
     // и разрешена ли торговля
-    if (!this.IsFormedAndOnlineAndAllowTrading())
+    if (!IsFormedAndOnlineAndAllowTrading())
         return;
     
     // Торговая логика

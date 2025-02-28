@@ -67,7 +67,7 @@ private void InitializeChart()
 }
 ```
 
-Также можно использовать метод [IChart.AddArea](xref:StockSharp.Charting.IChart.AddArea) напрямую:
+Также можно использовать метод [IChart.AddArea](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddArea(StockSharp.Charting.IChart)) напрямую:
 
 ```cs
 private void InitializeChart()
@@ -93,7 +93,7 @@ private void InitializeChart()
 
 ### Добавление свечей
 
-Для отображения свечей используется метод [AddCandles](xref:StockSharp.Charting.IChartArea.AddCandles) области графика:
+Для отображения свечей используется метод [AddCandles](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddCandles(StockSharp.Charting.IChartArea)) области графика:
 
 ```cs
 private void ConfigureChartElements()
@@ -137,7 +137,7 @@ private void ConfigureChartElements()
 
 ### Добавление индикаторов
 
-Для отображения индикаторов используется метод [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Drawing.Color,System.Drawing.Color)):
+Для отображения индикаторов используется метод [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})):
 
 ```cs
 // Создание индикаторов
@@ -161,7 +161,7 @@ _bollingerMiddleElement = DrawIndicator(_mainArea, _bollinger, Color.Gray);
 
 Метод [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Drawing.Color,System.Drawing.Color)) автоматически создает элемент индикатора и добавляет его в указанную область графика. Можно указать цвет и дополнительный цвет для отображения.
 
-Также можно добавить элемент индикатора напрямую через метод [AddIndicator](xref:StockSharp.Charting.IChartArea.AddIndicator(StockSharp.Algo.Indicators.IIndicator)) области графика:
+Также можно добавить элемент индикатора напрямую через метод [AddIndicator](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator)) области графика:
 
 ```cs
 // Добавление SMA непосредственно через область графика
@@ -274,7 +274,7 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-Метод [IChart.CreateData](xref:StockSharp.Charting.IChartBuilder.CreateData) создает объект [IChartDrawData](xref:StockSharp.Charting.IChartDrawData), который используется для группировки и добавления данных для разных элементов графика. Группировка данных производится по временной метке с помощью метода [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)).
+Метод [IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) создает объект [IChartDrawData](xref:StockSharp.Charting.IChartDrawData), который используется для группировки и добавления данных для разных элементов графика. Группировка данных производится по временной метке с помощью метода [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)).
 
 Для добавления данных разного типа используются различные перегрузки метода [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) объекта [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem).
 

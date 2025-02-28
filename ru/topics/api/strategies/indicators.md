@@ -141,7 +141,7 @@ public class SmaStrategy : Strategy
 
 ### Пример с использованием IsFormedAndOnline
 
-Для проверки готовности стратегии к торговле часто используется метод [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.Strategy,StockSharp.Algo.Strategies.StrategyTradingModes)), который объединяет проверку формирования индикаторов, онлайн-статуса и разрешения на торговлю:
+Для проверки готовности стратегии к торговле часто используется метод [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)), который объединяет проверку формирования индикаторов, онлайн-статуса и разрешения на торговлю:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -151,7 +151,7 @@ private void ProcessCandle(ICandleMessage candle)
     var shortValue = _shortSma.Process(candle);
     
     // Комплексная проверка готовности стратегии
-    if (!this.IsFormedAndOnlineAndAllowTrading())
+    if (!IsFormedAndOnlineAndAllowTrading())
         return;
         
     // Торговая логика

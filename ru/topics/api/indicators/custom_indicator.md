@@ -79,7 +79,7 @@ public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 
 ### Save и Load
 
-Методы [Save](xref:StockSharp.Algo.Indicators.IIndicator.Save(Ecng.Serialization.SettingsStorage)) и [Load](xref:StockSharp.Algo.Indicators.IIndicator.Load(Ecng.Serialization.SettingsStorage)) необходимы для сохранения и загрузки настроек индикатора:
+Методы [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) и [Load](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) необходимы для сохранения и загрузки настроек индикатора:
 
 ```cs
 /// <inheritdoc />

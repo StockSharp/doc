@@ -110,7 +110,7 @@ catch (Exception ex)
 
 ## Configuring the Logging Level
 
-The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class contains a [LogLevel](xref:StockSharp.Logging.LogSource.LogLevel) property that determines which messages will be written to the log:
+The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class contains a [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) property that determines which messages will be written to the log:
 
 ```cs
 // Set the logging level for the strategy
@@ -200,7 +200,7 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 
 Messages written to the strategy log can be viewed:
 
-1. In the [Designer](xref:Designer) program on the "Logs" panel
+1. In the [Designer](../../designer.md) program on the "Logs" panel
 2. In log files, if [FileLogListener](xref:StockSharp.Logging.FileLogListener) is configured
 3. In the user interface through [LogControl](xref:StockSharp.Xaml.LogControl), if [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) is used
 

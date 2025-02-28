@@ -194,7 +194,7 @@ For convenient checking of a strategy's readiness for trading, StockSharp provid
 
 - [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnline(StockSharp.Algo.Strategies.Strategy)) - checks that the strategy is in the state `IsFormed = true` and `IsOnline = true`
 
-- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.Strategy,StockSharp.Algo.Strategies.StrategyTradingModes)) - checks that the strategy is formed, is in online mode, and has the necessary trading permissions
+- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - checks that the strategy is formed, is in online mode, and has the necessary trading permissions
 
 A good practice is to use these methods before performing trading operations:
 
@@ -203,7 +203,7 @@ private void ProcessCandle(ICandleMessage candle)
 {
     // Check if the strategy is formed and in online mode,
     // and if trading is allowed
-    if (!this.IsFormedAndOnlineAndAllowTrading())
+    if (!IsFormedAndOnlineAndAllowTrading())
         return;
     
     // Trading logic

@@ -45,7 +45,7 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 
 ### SetValidator
 
-The [StrategyParam\<T\>.SetValidator](xref:StockSharp.Algo.Strategies.StrategyParam`1.SetValidator(System.ComponentModel.DataAnnotations.ValidationAttribute)) method sets a validator to check the parameter value:
+The [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator`1(`0,System.ComponentModel.DataAnnotations.ValidationAttribute)) method sets a validator to check the parameter value:
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)

@@ -110,7 +110,7 @@ catch (Exception ex)
 
 ## Настройка уровня логирования
 
-Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) содержит свойство [LogLevel](xref:StockSharp.Logging.LogSource.LogLevel), которое определяет, какие сообщения будут записываться в лог:
+Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) содержит свойство [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel), которое определяет, какие сообщения будут записываться в лог:
 
 ```cs
 // Устанавливаем уровень логирования для стратегии
@@ -200,7 +200,7 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 
 Сообщения, записанные в лог стратегии, можно просматривать:
 
-1. В программе [Designer](xref:Designer) на панели "Логи"
+1. В программе [Designer](../../designer.md) на панели "Логи"
 2. В файлах лога, если настроен [FileLogListener](xref:StockSharp.Logging.FileLogListener)
 3. В пользовательском интерфейсе через [LogControl](xref:StockSharp.Xaml.LogControl), если используется [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)
 

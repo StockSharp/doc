@@ -82,7 +82,7 @@ This property is critically important for correctly displaying indicators on a c
 
 ### Save and Load
 
-The [Save](xref:StockSharp.Algo.Indicators.IIndicator.Save(Ecng.Serialization.SettingsStorage)) and [Load](xref:StockSharp.Algo.Indicators.IIndicator.Load(Ecng.Serialization.SettingsStorage)) methods are necessary for saving and loading indicator settings:
+The [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) and [Load](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) methods are necessary for saving and loading indicator settings:
 
 ```cs
 /// <inheritdoc />
