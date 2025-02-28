@@ -196,7 +196,7 @@ public SmaStrategy()
 
 Для удобной проверки готовности стратегии к торговле, StockSharp предоставляет вспомогательные методы:
 
-- [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.StrategyHelper.IsFormedAndOnline(StockSharp.Algo.Strategies.Strategy)) - проверяет, что стратегия находится в состоянии `IsFormed = true` и `IsOnline = true`
+- [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnline) - проверяет, что стратегия находится в состоянии `IsFormed = true` и `IsOnline = true`
 
 - [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - проверяет, что стратегия сформирована, находится в онлайн-режиме и имеет необходимые права на торговлю
 

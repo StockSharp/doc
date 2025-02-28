@@ -159,7 +159,7 @@ _bollingerLowerElement = DrawIndicator(_mainArea, _bollinger, Color.Purple);
 _bollingerMiddleElement = DrawIndicator(_mainArea, _bollinger, Color.Gray);
 ```
 
-The [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Drawing.Color,System.Drawing.Color)) method automatically creates an indicator element and adds it to the specified chart area. You can specify a color and additional color for display.
+The [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) method automatically creates an indicator element and adds it to the specified chart area. You can specify a color and additional color for display.
 
 You can also add an indicator element directly through the chart area's [AddIndicator](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator)) method:
 
