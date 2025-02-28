@@ -2040,6 +2040,8 @@
       href: api/strategies/shrink_price.md
     - name: Тип Unit
       href: api/strategies/unit_type.md
+    - name: Рабочие инструменты
+      href: api/strategies/working_securities.md
     - name: Событийная модель
       href: api/strategies/event_model.md
       items:
