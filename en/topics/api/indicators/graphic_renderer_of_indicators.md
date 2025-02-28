@@ -1,158 +1,155 @@
-# Graphic renderer of indicators
+# Graphic Renderer of Indicators
 
-Some indicators require a special drawing style, for example, two lines for the [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) indicator. Or points for the [Fractals](xref:StockSharp.Algo.Indicators.Fractals)indicator. In this case, a graphical indicator renderer must be explicitly specified in [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement)
+Some indicators require a special drawing style, such as two lines for the [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) indicator. Or points for the [Fractals](xref:StockSharp.Algo.Indicators.Fractals) indicator. In these cases, you need to explicitly specify the graphic renderer of indicators in [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement).
 
 ```cs
-			var chartIndicatorElement = new ChartIndicatorElement()
-			{
-				IndicatorPainter = new BollingerBandsPainter(),
-			};
-		
+var chartIndicatorElement = new ChartIndicatorElement()
+{
+	IndicatorPainter = new BollingerBandsPainter(),
+};
 ```
 
-Consider how to create your own IndicatorPainter on the example of the [Fractals](xref:StockSharp.Algo.Indicators.Fractals) indicator.
+Let's consider how to create a custom IndicatorPainter using the [Fractals](xref:StockSharp.Algo.Indicators.Fractals) indicator as an example.
 
-All IndicatorPainter must be inherited from the [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) base class or the [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter) interface:
+All IndicatorPainters must inherit from the base class [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) or implement the interface [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter):
 
 ```cs
+/// <summary>
+/// The chart element for <see cref="Fractals"/>.
+/// </summary>
+[Indicator(typeof(Fractals))]
+public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
+{
+	...
+}
+```
+
+Let's define the chart elements [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement) that will represent the upper and lower fractals:
+
+```cs
+/// <summary>
+/// The chart element for <see cref="Fractals"/>.
+/// </summary>
+[Indicator(typeof(Fractals))]
+public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
+{
 	/// <summary>
-	/// The chart element for <see cref="Fractals"/>.
+	/// <see cref="Fractals.Up"/> dots color.
 	/// </summary>
-	[Indicator(typeof(Fractals))]
-	public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
-	{
-	...
-	}
-		
-```
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.Str2035Key,
+		Description = LocalizedStrings.Str2036Key)]
+	public ChartLineElement Up { get; }
 
-Set [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement) chart elements that will represent upper and lower fractals:
-
-```cs
 	/// <summary>
-	/// The chart element for <see cref="Fractals"/>.
+	/// <see cref="Fractals.Down"/> dots color.
 	/// </summary>
-	[Indicator(typeof(Fractals))]
-	public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
-	{
-		/// <summary>
-		/// <see cref="Fractals.Up"/> dots color.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(LocalizedStrings),
-			Name = LocalizedStrings.Str2035Key,
-			Description = LocalizedStrings.Str2036Key)]
-		public ChartLineElement Up { get; }
-		/// <summary>
-		/// <see cref="Fractals.Down"/> dots color.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(LocalizedStrings),
-			Name = LocalizedStrings.Str2037Key,
-			Description = LocalizedStrings.Str2038Key)]
-		public ChartLineElement Down { get; }
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.Str2037Key,
+		Description = LocalizedStrings.Str2038Key)]
+	public ChartLineElement Down { get; }
 	...
-	}
-		
+}
 ```
 
-In the [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter) designer, we set them the values and basic properties \- the color, thickness, and drawing style. Then add them as the chart child element:
+In the constructor of [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter), we set their values and main properties such as color, thickness, and drawing style. After that, we add them as child elements of the chart:
 
 ```cs
-	...
-		/// <summary>
-		/// Create instance.
-		/// </summary>
-		public FractalsPainter()
-		{
-			Up = new ChartLineElement { Color = Colors.Green };
-			Down = new ChartLineElement { Color = Colors.Red };
-			Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
-			Up.StrokeThickness = Down.StrokeThickness = 4;
-			AddChildElement(Up);
-			AddChildElement(Down);
-		}
-	...
-		
+...
+
+/// <summary>
+/// Create instance.
+/// </summary>
+public FractalsPainter()
+{
+	Up = new ChartLineElement { Color = Colors.Green };
+	Down = new ChartLineElement { Color = Colors.Red };
+	Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
+	Up.StrokeThickness = Down.StrokeThickness = 4;
+	AddChildElement(Up);
+	AddChildElement(Down);
+}
+
+...
 ```
 
-Override the [BaseChartIndicatorPainter\<TIndicator\>.OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw(`0,System.Collections.Generic.IDictionary{StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData}}))**(**[TIndicator](xref:TIndicator) indicator, [System.Collections.Generic.IDictionary\<StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData\>\>](xref:System.Collections.Generic.IDictionary`2) data **)** method in which we draw the indicator using the [BaseChartIndicatorPainter\<TIndicator\>.DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues(System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData},StockSharp.Charting.IChartElement,System.Func{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double}))**(**[System.Collections.Generic.IList\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData\>](xref:System.Collections.Generic.IList`1) vals, [StockSharp.Charting.IChartElement](xref:StockSharp.Charting.IChartElement) element, [System.Func\<StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double\>](xref:System.Func`2) getValue **)** method:
+Override the [OnDraw](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.OnDraw(`0,System.Collections.Generic.IDictionary{StockSharp.Algo.Indicators.IIndicator,System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData}})) method, in which we draw the indicator using the [DrawValues](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1.DrawValues(System.Collections.Generic.IList{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData},StockSharp.Charting.IChartElement,System.Func{StockSharp.Xaml.Charting.ChartDrawData.IndicatorData,System.Double})) method:
 
 ```cs
-	...
-		/// <inheritdoc />
-		protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<ChartDrawData.IndicatorData>> data)
-		{
-			var result = false;
-			result |= DrawValues(data[ind.Down], Down);
-			result |= DrawValues(data[ind.Up], Up);
-			return result;
-		}
-	...
-		
+...
+/// <inheritdoc />
+protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<ChartDrawData.IndicatorData>> data)
+{
+	var result = false;
+	result |= DrawValues(data[ind.Down], Down);
+	result |= DrawValues(data[ind.Up], Up);
+	return result;
+}
+...
 ```
 
-Full [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter) code:
+Complete code of [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainters.FractalsPainter):
 
 ```cs
+/// <summary>
+/// The chart element for <see cref="Fractals"/>.
+/// </summary>
+[Indicator(typeof(Fractals))]
+public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
+{
 	/// <summary>
-	/// The chart element for <see cref="Fractals"/>.
+	/// <see cref="Fractals.Up"/> dots color.
 	/// </summary>
-	[Indicator(typeof(Fractals))]
-	public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.Str2035Key,
+		Description = LocalizedStrings.Str2036Key)]
+	public ChartLineElement Up { get; }
+	/// <summary>
+	/// <see cref="Fractals.Down"/> dots color.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.Str2037Key,
+		Description = LocalizedStrings.Str2038Key)]
+	public ChartLineElement Down { get; }
+	/// <summary>
+	/// Create instance.
+	/// </summary>
+	public FractalsPainter()
 	{
-		/// <summary>
-		/// <see cref="Fractals.Up"/> dots color.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(LocalizedStrings),
-			Name = LocalizedStrings.Str2035Key,
-			Description = LocalizedStrings.Str2036Key)]
-		public ChartLineElement Up { get; }
-		/// <summary>
-		/// <see cref="Fractals.Down"/> dots color.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(LocalizedStrings),
-			Name = LocalizedStrings.Str2037Key,
-			Description = LocalizedStrings.Str2038Key)]
-		public ChartLineElement Down { get; }
-		/// <summary>
-		/// Create instance.
-		/// </summary>
-		public FractalsPainter()
-		{
-			Up = new ChartLineElement { Color = Colors.Green };
-			Down = new ChartLineElement { Color = Colors.Red };
-			Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
-			Up.StrokeThickness = Down.StrokeThickness = 4;
-			AddChildElement(Up);
-			AddChildElement(Down);
-		}
-		/// <inheritdoc />
-		protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<ChartDrawData.IndicatorData>> data)
-		{
-			var result = false;
-			result |= DrawValues(data[ind.Down], Down);
-			result |= DrawValues(data[ind.Up], Up);
-			return result;
-		}
-		#region IPersistable
-		/// <inheritdoc />
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			Up.Load(storage.GetValue<SettingsStorage>(nameof(Up)));
-			Down.Load(storage.GetValue<SettingsStorage>(nameof(Down)));
-		}
-		/// <inheritdoc />
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Up), Up.Save());
-			storage.SetValue(nameof(Down), Down.Save());
-		}
-		#endregion
+		Up = new ChartLineElement { Color = Colors.Green };
+		Down = new ChartLineElement { Color = Colors.Red };
+		Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
+		Up.StrokeThickness = Down.StrokeThickness = 4;
+		AddChildElement(Up);
+		AddChildElement(Down);
 	}
-		
+	/// <inheritdoc />
+	protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<ChartDrawData.IndicatorData>> data)
+	{
+		var result = false;
+		result |= DrawValues(data[ind.Down], Down);
+		result |= DrawValues(data[ind.Up], Up);
+		return result;
+	}
+	#region IPersistable
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+		Up.Load(storage.GetValue<SettingsStorage>(nameof(Up)));
+		Down.Load(storage.GetValue<SettingsStorage>(nameof(Down)));
+	}
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+		storage.SetValue(nameof(Up), Up.Save());
+		storage.SetValue(nameof(Down), Down.Save());
+	}
+	#endregion
+}
 ```
