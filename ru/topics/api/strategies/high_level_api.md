@@ -8,14 +8,14 @@ StockSharp предоставляет набор высокоуровневых 
 
 ### Метод SubscribeCandles
 
-Вместо ручного создания подписки и настройки обработчиков событий, можно использовать метод `SubscribeCandles`:
+Вместо ручного создания подписки и настройки обработчиков событий, можно использовать метод [SubscribeCandles](xref:StockSharp.Algo.Strategies.Strategy.SubscribeCandles(System.TimeSpan,System.Boolean,StockSharp.BusinessEntities.Security)):
 
 ```cs
 // Создание и настройка подписки на свечи одной строкой
 var subscription = SubscribeCandles(CandleType);
 ```
 
-Этот метод возвращает объект типа `ISubscriptionHandler<ICandleMessage>`, который предоставляет удобный интерфейс для дальнейшей настройки подписки.
+Этот метод возвращает объект типа [ISubscriptionHandler\<ICandleMessage\>](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1), который предоставляет удобный интерфейс для дальнейшей настройки подписки.
 
 ### Автоматическое связывание индикаторов с подпиской
 
@@ -32,7 +32,100 @@ subscription
     .Start();
 ```
 
-Метод `Bind` устанавливает соединение между данными из подписки и индикаторами. При получении новой свечи:
+#### Автоматическое добавление индикаторов в коллекцию Strategy.Indicators
+
+Важно отметить, что при использовании метода [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IIndicator,StockSharp.Algo.Indicators.IIndicator,System.Action{`0,System.Decimal,System.Decimal})) для связывания индикаторов с подпиской, **не требуется** дополнительно добавлять эти индикаторы в коллекцию [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators), как это обычно делается в традиционном подходе (описанном в [документации по индикаторам](indicators.md)). Система автоматически:
+
+1. Добавляет индикаторы в коллекцию [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators)
+2. Отслеживает состояние формирования индикаторов
+3. Обновляет состояние [IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) стратегии
+
+Это значительно упрощает код и уменьшает вероятность ошибок.
+
+#### Использование BindEx для работы с сырыми значениями индикаторов
+
+Если индикатор возвращает нестандартные значения (не просто числа), можно использовать метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})), который предоставляет доступ к исходному объекту [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue):
+
+```cs
+subscription
+    .BindEx(indicator, OnProcessWithRawValue)
+    .Start();
+
+// Обработчик получает исходное значение IIndicatorValue
+private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
+{
+    // Доступ к свойствам IIndicatorValue
+    if (value.IsFinal)
+    {
+        // Для индикаторов, возвращающих булевы значения
+        var boolValue = value.GetValue<bool>();
+        
+        // Или другие типы данных, специфичные для конкретного индикатора
+        // ...
+    }
+}
+```
+
+Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) особенно полезен в следующих случаях:
+
+- Работа с индикаторами, возвращающими логические значения (например, [Fractals](xref:StockSharp.Algo.Indicators.Fractals))
+- Доступ к дополнительным свойствам типа индикатора (например, признак [IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal))
+- Работа с индикаторами, возвращающими структурированные данные
+
+#### Работа с комплексными индикаторами (IComplexIndicator)
+
+Для сложных индикаторов, которые содержат несколько внутренних индикаторов (например, [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)), API предоставляет специальные перегрузки методов `Bind` и `BindEx`:
+
+```cs
+// Создаем комплексный индикатор
+var bollinger = new BollingerBands 
+{ 
+    Length = 20, 
+    Deviation = 2 
+};
+
+// Связываем комплексный индикатор с подпиской
+subscription
+    .Bind(bollinger, OnProcessBollinger)
+    .Start();
+
+// Обработчик получает значения верхней и нижней полосы Боллинджера
+private void OnProcessBollinger(ICandleMessage candle, decimal middleBand, decimal upperBand)
+{
+    // Используем значения полос Боллинджера
+    // middleBand - средняя полоса
+    // upperBand - верхняя полоса
+}
+```
+
+Также доступны перегрузки для комплексных индикаторов с тремя значениями:
+
+```cs
+subscription.Bind(bollinger, (candle, middle, upper, lower) => 
+{
+    // Обработка данных с доступом ко всем трем полосам
+});
+```
+
+Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue[]})) с массивом значений:
+
+```cs
+subscription.BindEx(complexIndicator, (candle, values) => 
+{
+    // values содержит массив всех значений индикатора
+    // в порядке их добавления в индикатор
+});
+```
+
+Метод [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,System.Decimal,System.Decimal})) для комплексных индикаторов автоматически:
+
+1. Обрабатывает входные данные через комплексный индикатор
+2. Распаковывает значения внутренних индикаторов
+3. Передает эти значения в указанный обработчик
+
+Это позволяет работать с комплексными индикаторами более естественным образом, получая доступ к их составным частям напрямую.
+
+### Метод `Bind` устанавливает соединение между данными из подписки и индикаторами. При получении новой свечи:
 
 1. Свеча автоматически отправляется на обработку в индикаторы
 2. Результаты обработки передаются в указанный обработчик (в примере это метод `OnProcess`)
@@ -78,15 +171,112 @@ if (area != null)
     
     // Отрисовка собственных сделок
     DrawOwnTrades(area);
+    
+    // Отрисовка заявок
+    DrawOrders(area);
 }
 ```
 
-Метод `DrawCandles` автоматически связывает подписку на свечи с элементом отображения свечей на графике. Аналогично, методы `DrawIndicator` и `DrawOwnTrades` автоматически настраивают отображение индикаторов и сделок.
+#### Метод DrawCandles
 
-Преимущества такого подхода:
+Метод [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.Algo.Strategies.ISubscriptionHandler{StockSharp.Messages.ICandleMessage})) автоматически связывает подписку на свечи с элементом отображения свечей на графике:
+
+```cs
+// Создание элемента графика для отображения свечей
+IChartCandleElement candles = DrawCandles(area, subscription);
+
+// Можно настроить дополнительные параметры элемента
+candles.DrawOpenClose = true;  // Отображать линии открытия/закрытия
+candles.DrawHigh = true;       // Отображать максимумы
+candles.DrawLow = true;        // Отображать минимумы
+```
+
+Метод возвращает элемент графика [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement), который можно дополнительно настраивать.
+
+#### Метод DrawIndicator
+
+Метод [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) создает и настраивает элемент графика для отображения значений индикатора:
+
+```cs
+// Простое добавление индикатора на график с цветом по умолчанию
+IChartIndicatorElement smaElem = DrawIndicator(area, sma);
+
+// Добавление индикатора с указанием основного цвета
+IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.Red);
+
+// Добавление индикатора с указанием основного и дополнительного цветов
+IChartIndicatorElement bollingerElem = DrawIndicator(
+    area, 
+    bollinger, 
+    System.Drawing.Color.Blue,    // Основной цвет
+    System.Drawing.Color.Gray     // Дополнительный цвет (для второй линии)
+);
+
+// Дополнительная настройка элемента
+smaElem.DrawStyle = DrawStyles.Line;           // Стиль отрисовки: линия
+rsiFast.DrawStyle = DrawStyles.Dot;            // Стиль отрисовки: точки
+bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Стиль отрисовки: штрихпунктир
+```
+
+Метод возвращает элемент графика [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement), который можно настраивать. Для индикаторов с несколькими значениями (например, [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)) основной цвет применяется к первому значению, а дополнительный - ко второму.
+
+#### Метод DrawOwnTrades
+
+Метод [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) создает элемент для отображения собственных сделок на графике:
+
+```cs
+// Создание элемента для отображения сделок
+IChartTradeElement trades = DrawOwnTrades(area);
+
+// Настройка элемента
+trades.BuyColor = System.Drawing.Color.Green;   // Цвет для сделок на покупку
+trades.SellColor = System.Drawing.Color.Red;    // Цвет для сделок на продажу
+trades.FullTitle = "My Strategy Trades";        // Заголовок элемента
+```
+
+Данный метод автоматически настраивает отображение всех сделок, совершаемых стратегией. Сделки отображаются на графике в виде маркеров в местах их совершения, с учетом стороны сделки (покупка/продажа).
+
+#### Метод DrawOrders
+
+Метод [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)) создает элемент для отображения заявок на графике:
+
+```cs
+// Создание элемента для отображения заявок
+IChartOrderElement orders = DrawOrders(area);
+
+// Настройка элемента
+orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Цвет для активных заявок на покупку
+orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Цвет для активных заявок на продажу
+orders.BuyColor = System.Drawing.Color.Green;              // Цвет для исполненных заявок на покупку
+orders.SellColor = System.Drawing.Color.Red;               // Цвет для исполненных заявок на продажу
+orders.CancelColor = System.Drawing.Color.Gray;            // Цвет для отмененных заявок
+```
+
+Данный метод автоматически настраивает отображение всех заявок, выставляемых стратегией. Заявки отображаются в виде маркеров на уровнях их цен с различным цветовым кодированием для разных состояний заявок.
+
+#### Метод CreateChartArea
+
+Метод [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea()) создает новую область на графике стратегии:
+
+```cs
+// Создание первой области для свечей и индикаторов
+var mainArea = CreateChartArea();
+DrawCandles(mainArea, subscription);
+DrawIndicator(mainArea, sma);
+
+// Создание второй области для отдельных индикаторов (например, RSI)
+var secondArea = CreateChartArea();
+DrawIndicator(secondArea, rsi);
+```
+
+Разделение графика на области позволяет более наглядно отображать различные типы данных. Например, индикаторы, имеющие отличный от цены диапазон значений (RSI, стохастик и т.д.), лучше отображать в отдельных областях.
+
+Преимущества высокоуровневых методов визуализации:
 - Не требуется создавать объекты `ChartDrawData` вручную
 - Не нужно управлять группировкой данных по времени
 - Не нужно вызывать `chart.Draw()` для обновления графика
+- Автоматическая синхронизация данных между подписками и элементами графика
+- Упрощенное управление внешним видом графических элементов
 
 Система автоматически обновляет график при получении новых данных, что позволяет разработчику не отвлекаться на технические детали визуализации.
 
@@ -94,7 +284,7 @@ if (area != null)
 
 ### Метод StartProtection
 
-Для защиты открытых позиций StockSharp предоставляет высокоуровневый метод `StartProtection`:
+Для защиты открытых позиций StockSharp предоставляет высокоуровневый метод [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)):
 
 ```cs
 // Запуск защиты позиций с указанием Take Profit и Stop Loss
