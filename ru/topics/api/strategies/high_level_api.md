@@ -179,7 +179,7 @@ if (area != null)
 
 #### Метод DrawCandles
 
-Метод [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.Algo.Strategies.ISubscriptionHandler{StockSharp.Messages.ICandleMessage})) автоматически связывает подписку на свечи с элементом отображения свечей на графике:
+Метод [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) автоматически связывает подписку на свечи с элементом отображения свечей на графике:
 
 ```cs
 // Создание элемента графика для отображения свечей
@@ -256,7 +256,7 @@ orders.CancelColor = System.Drawing.Color.Gray;            // Цвет для о
 
 #### Метод CreateChartArea
 
-Метод [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea()) создает новую область на графике стратегии:
+Метод [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea) создает новую область на графике стратегии:
 
 ```cs
 // Создание первой области для свечей и индикаторов

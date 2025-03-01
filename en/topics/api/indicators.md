@@ -37,7 +37,7 @@
 
 3. Both the resulting and input values of the indicator have the [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) property, which indicates that the value is final and the indicator will not change at this point in time. For example, the [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) indicator is formed based on the candle's closing price, but at the current moment, the final closing price is unknown and changing. In this case, the resulting value of [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) will be false. If you pass a completed candle to the indicator, both the input and resulting values of [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) will be true.
 
-4. **Recommended approach**: directly use the values obtained from calling the [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) method, instead of subsequently calling [GetCurrentValue](xref:StockSharp.Algo.Indicators.IIndicator.GetCurrentValue):
+4. **Recommended approach**: directly use the values obtained from calling the [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) method, instead of subsequently calling [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator)):
 
    ```cs
    // Example of a strategy with two moving averages

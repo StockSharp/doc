@@ -229,7 +229,7 @@ _ordersElement.PointSize = 8;                // Размер точки
 
 ### Отрисовка свечей и индикаторов
 
-Наиболее эффективный способ отрисовки данных — использование метода [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData)) с объектом [IChartDrawData](xref:StockSharp.Charting.IChartDrawData):
+Наиболее эффективный способ отрисовки данных — использование метода [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) с объектом [IChartDrawData](xref:StockSharp.Charting.IChartDrawData):
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)

@@ -229,7 +229,7 @@ After configuring all chart elements, you can proceed to draw data. Different me
 
 ### Drawing Candles and Indicators
 
-The most efficient way to draw data is to use the [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartDrawData)) method with an [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) object:
+The most efficient way to draw data is to use the [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) method with an [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) object:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)

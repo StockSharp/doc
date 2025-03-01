@@ -37,7 +37,7 @@
 
 3. Результирующее и входящее значение индикатора имеют свойство [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), которое говорит о том, что значение является окончательным и индикатор не будет изменяться в данной точке времени. Например, индикатор [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) формируется по цене закрытия свечи, но в текущий момент времени окончательная цена закрытия свечи неизвестна и меняется. В таком случае результирующее значение [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) будет false. Eсли в индикатор передать законченную свечу, то входящее и результирующее значения [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) будут true.
 
-4. **Рекомендуемый подход**: непосредственно использовать значения, полученные в результате вызова метода [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)), вместо последующего обращения к [GetCurrentValue](xref:StockSharp.Algo.Indicators.IIndicator.GetCurrentValue): 
+4. **Рекомендуемый подход**: непосредственно использовать значения, полученные в результате вызова метода [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)), вместо последующего обращения к [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator)): 
 
    ```cs
    // Пример стратегии с двумя скользящими средними
