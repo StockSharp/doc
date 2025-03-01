@@ -1,49 +1,142 @@
-# High-Level APIs in Strategies
+# High-Level API in Strategies
 
-StockSharp provides a set of high-level APIs to simplify working with common tasks in trading strategies. These interfaces allow you to write cleaner code, focusing on trading logic rather than technical details.
+StockSharp provides a set of high-level APIs to simplify working with common tasks in trading strategies. These interfaces allow writing cleaner code that focuses on trading logic rather than technical details.
 
 ## Simplified Subscription Management
 
-High-level methods for working with subscriptions hide the complexities of managing subscription lifecycles and data processing.
+High-level methods for working with subscriptions hide the complexities of managing subscription lifecycle and data processing.
 
 ### SubscribeCandles Method
 
-Instead of manually creating a subscription and setting up event handlers, you can use the `SubscribeCandles` method:
+Instead of manually creating a subscription and setting up event handlers, you can use the [SubscribeCandles](xref:StockSharp.Algo.Strategies.Strategy.SubscribeCandles(System.TimeSpan,System.Boolean,StockSharp.BusinessEntities.Security)) method:
 
 ```cs
-// Creating and configuring a candle subscription in one line
+// Create and configure a candle subscription in a single line
 var subscription = SubscribeCandles(CandleType);
 ```
 
-This method returns an object of type `ISubscriptionHandler<ICandleMessage>`, which provides a convenient interface for further subscription configuration.
+This method returns an object of type [ISubscriptionHandler\<ICandleMessage\>](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1), which provides a convenient interface for further subscription configuration.
 
-### Automatic Binding of Indicators to Subscription
+### Automatic Binding of Indicators with Subscription
 
-The high-level API makes it easy to bind indicators to data subscriptions:
+The high-level API makes it easy to bind indicators to a data subscription:
 
 ```cs
 var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 subscription
-    // Bind indicators to the candle subscription
+    // Bind indicators to candle subscription
     .Bind(longSma, shortSma, OnProcess)
     // Start processing
     .Start();
 ```
 
-The `Bind` method establishes a connection between subscription data and indicators. When a new candle is received:
+#### Automatic Addition of Indicators to Strategy.Indicators Collection
+
+It's important to note that when using the [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IIndicator,StockSharp.Algo.Indicators.IIndicator,System.Action{`0,System.Decimal,System.Decimal})) method to link indicators with a subscription, you **do not need** to additionally add these indicators to the [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) collection, as is typically done in the traditional approach (described in the [indicators documentation](indicators.md)). The system automatically:
+
+1. Adds indicators to the [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) collection
+2. Tracks the formation state of indicators
+3. Updates the strategy's [IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) state
+
+This significantly simplifies code and reduces the likelihood of errors.
+
+#### Using BindEx to Work with Raw Indicator Values
+
+If an indicator returns non-standard values (not just numbers), you can use the [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method, which provides access to the original [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) object:
+
+```cs
+subscription
+    .BindEx(indicator, OnProcessWithRawValue)
+    .Start();
+
+// Handler receives the original IIndicatorValue
+private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
+{
+    // Access to IIndicatorValue properties
+    if (value.IsFinal)
+    {
+        // For indicators returning boolean values
+        var boolValue = value.GetValue<bool>();
+        
+        // Or other data types specific to a particular indicator
+        // ...
+    }
+}
+```
+
+The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method is particularly useful in the following cases:
+
+- Working with indicators that return boolean values (e.g., [Fractals](xref:StockSharp.Algo.Indicators.Fractals))
+- Accessing additional properties of the indicator value type (e.g., the [IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) flag)
+- Working with indicators that return structured data
+
+#### Working with Complex Indicators (IComplexIndicator)
+
+For complex indicators that contain multiple internal indicators (e.g., [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)), the API provides special overloads of the `Bind` and `BindEx` methods:
+
+```cs
+// Create a complex indicator
+var bollinger = new BollingerBands 
+{ 
+    Length = 20, 
+    Deviation = 2 
+};
+
+// Bind the complex indicator to a subscription
+subscription
+    .Bind(bollinger, OnProcessBollinger)
+    .Start();
+
+// Handler receives values of middle and upper Bollinger bands
+private void OnProcessBollinger(ICandleMessage candle, decimal middleBand, decimal upperBand)
+{
+    // Use Bollinger band values
+    // middleBand - middle band
+    // upperBand - upper band
+}
+```
+
+Overloads for complex indicators with three values are also available:
+
+```cs
+subscription.Bind(bollinger, (candle, middle, upper, lower) => 
+{
+    // Process data with access to all three bands
+});
+```
+
+For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue[]})) with an array of values:
+
+```cs
+subscription.BindEx(complexIndicator, (candle, values) => 
+{
+    // values contains an array of all indicator values
+    // in the order they were added to the indicator
+});
+```
+
+The [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,System.Decimal,System.Decimal})) method for complex indicators automatically:
+
+1. Processes input data through the complex indicator
+2. Unpacks the values of internal indicators
+3. Passes these values to the specified handler
+
+This allows working with complex indicators in a more natural way, with direct access to their component parts.
+
+### The `Bind` Method establishes a connection between subscription data and indicators. When a new candle is received:
 
 1. The candle is automatically sent for processing to the indicators
-2. The processing results are passed to the specified handler (in the example, the `OnProcess` method)
+2. Processing results are passed to the specified handler (in the example, the `OnProcess` method)
 3. All synchronization and state management code is hidden from the developer
 
-The handler receives ready-made values as simple `decimal` types:
+The handler receives ready-to-use values as simple `decimal` types:
 
 ```cs
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    // Work directly with ready indicator values
+    // Work directly with ready-made indicator values
     var isShortLessThenLong = shortValue < longValue;
     
     // Trading logic uses clean numeric values
@@ -52,9 +145,9 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 }
 ```
 
-This significantly simplifies the code and makes it more readable, as the developer doesn't need to:
-- Manually handle the candle receiving event
-- Pass data to indicators themselves
+This significantly simplifies code and makes it more readable, as the developer doesn't need to:
+- Manually handle the event of receiving a candle
+- Pass data to indicators manually
 - Extract values from indicator results
 
 ## Simplified Chart Management
@@ -66,51 +159,148 @@ The high-level API provides simple methods for binding subscriptions and indicat
 ```cs
 var area = CreateChartArea();
 
-// area might be null when running without GUI
+// area can be null when running without GUI
 if (area != null)
 {
-    // Automatic binding of candles to the chart area
+    // Automatic binding of candles to chart area
     DrawCandles(area, subscription);
 
-    // Drawing indicators with color configuration
+    // Drawing indicators with color customization
     DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
     DrawIndicator(area, longSma);
     
     // Drawing own trades
     DrawOwnTrades(area);
+    
+    // Drawing orders
+    DrawOrders(area);
 }
 ```
 
-The `DrawCandles` method automatically binds the candle subscription to the candle display element on the chart. Similarly, the `DrawIndicator` and `DrawOwnTrades` methods automatically configure the display of indicators and trades.
+#### DrawCandles Method
 
-Benefits of this approach:
+The [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) method automatically links a candle subscription to a chart candle display element:
+
+```cs
+// Create a chart element for displaying candles
+IChartCandleElement candles = DrawCandles(area, subscription);
+
+// Additional element parameters can be configured
+candles.DrawOpenClose = true;  // Display open/close lines
+candles.DrawHigh = true;       // Display highs
+candles.DrawLow = true;        // Display lows
+```
+
+The method returns a [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) chart element that can be further customized.
+
+#### DrawIndicator Method
+
+The [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) method creates and configures a chart element for displaying indicator values:
+
+```cs
+// Simple addition of an indicator to the chart with default color
+IChartIndicatorElement smaElem = DrawIndicator(area, sma);
+
+// Adding an indicator with a specified primary color
+IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.Red);
+
+// Adding an indicator with specified primary and secondary colors
+IChartIndicatorElement bollingerElem = DrawIndicator(
+    area, 
+    bollinger, 
+    System.Drawing.Color.Blue,    // Primary color
+    System.Drawing.Color.Gray     // Secondary color (for the second line)
+);
+
+// Additional element configuration
+smaElem.DrawStyle = DrawStyles.Line;           // Drawing style: line
+rsiFast.DrawStyle = DrawStyles.Dot;            // Drawing style: dots
+bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
+```
+
+The method returns a [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) chart element that can be customized. For indicators with multiple values (e.g., [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)), the primary color is applied to the first value, and the secondary color to the second.
+
+#### DrawOwnTrades Method
+
+The [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) method creates an element for displaying strategy's own trades on the chart:
+
+```cs
+// Create an element for displaying trades
+IChartTradeElement trades = DrawOwnTrades(area);
+
+// Element configuration
+trades.BuyColor = System.Drawing.Color.Green;   // Color for buy trades
+trades.SellColor = System.Drawing.Color.Red;    // Color for sell trades
+trades.FullTitle = "My Strategy Trades";        // Element title
+```
+
+This method automatically sets up the display of all trades executed by the strategy. Trades are displayed on the chart as markers at the points where they were executed, taking into account the trade side (buy/sell).
+
+#### DrawOrders Method
+
+The [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)) method creates an element for displaying orders on the chart:
+
+```cs
+// Create an element for displaying orders
+IChartOrderElement orders = DrawOrders(area);
+
+// Element configuration
+orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Color for active buy orders
+orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Color for active sell orders
+orders.BuyColor = System.Drawing.Color.Green;              // Color for executed buy orders
+orders.SellColor = System.Drawing.Color.Red;               // Color for executed sell orders
+orders.CancelColor = System.Drawing.Color.Gray;            // Color for canceled orders
+```
+
+This method automatically sets up the display of all orders placed by the strategy. Orders are displayed as markers at their price levels with different color coding for different order states.
+
+#### CreateChartArea Method
+
+The [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea) method creates a new area on the strategy chart:
+
+```cs
+// Create the first area for candles and indicators
+var mainArea = CreateChartArea();
+DrawCandles(mainArea, subscription);
+DrawIndicator(mainArea, sma);
+
+// Create a second area for separate indicators (e.g., RSI)
+var secondArea = CreateChartArea();
+DrawIndicator(secondArea, rsi);
+```
+
+Dividing the chart into areas allows for a more visual display of different data types. For example, indicators with a value range different from price (RSI, stochastic, etc.) are better displayed in separate areas.
+
+Advantages of high-level visualization methods:
 - No need to manually create `ChartDrawData` objects
 - No need to manage data grouping by time
 - No need to call `chart.Draw()` to update the chart
+- Automatic data synchronization between subscriptions and chart elements
+- Simplified management of graphical element appearance
 
-The system automatically updates the chart when new data is received, allowing the developer to focus on strategy logic rather than visualization details.
+The system automatically updates the chart when new data is received, allowing the developer to avoid focusing on technical visualization details.
 
 ## Position Protection
 
 ### StartProtection Method
 
-For protecting open positions, StockSharp provides the high-level `StartProtection` method:
+To protect open positions, StockSharp provides the high-level [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) method:
 
 ```cs
-// Starting position protection with Take Profit and Stop Loss
+// Start position protection with Take Profit and Stop Loss levels
 StartProtection(TakeValue, StopValue);
 ```
 
 This method automatically sets up protection for all open positions:
-- Monitors price changes
+- Tracks price changes
 - Automatically creates orders to close positions when Take Profit or Stop Loss levels are reached
-- Supports various unit types (absolute values, percentages, points)
-- Can use trailing stops for adaptive position protection
+- Supports various types of measurement units (absolute values, percentages, points)
+- Can use trailing stop for adaptive position protection
 
 Example with additional parameters:
 
 ```cs
-// Starting protection with trailing stop and market orders
+// Start protection with trailing stop and market orders
 StartProtection(
     takeProfit: new Unit(50, UnitTypes.Point),   // Take Profit in points
     stopLoss: new Unit(2, UnitTypes.Percent),    // Stop Loss in percentage
@@ -123,19 +313,19 @@ StartProtection(
 
 The high-level API in StockSharp strategies provides the following advantages:
 
-1. **Code Volume Reduction** - performing typical tasks requires fewer lines of code
+1. **Code Volume Reduction** - performing common tasks requires fewer lines of code
 
-2. **Separation of Concerns** - trading logic is separated from technical details of data processing and visualization
+2. **Separation of Responsibilities** - trading logic is separated from technical details of data processing and visualization
 
 3. **Improved Readability** - code becomes more understandable and expressive, focused on business logic
 
-4. **Reduced Probability of Errors** - many typical errors are eliminated through automation of routine tasks
+4. **Reduced Error Probability** - many typical errors are eliminated through automation of routine tasks
 
 5. **Working with Clean Data Types** - instead of working with complex objects, you can operate with simple data types (e.g., `decimal`)
 
-## Strategy Example Using High-Level API
+## Example Strategy Using High-Level API
 
-Below is a complete example of a strategy demonstrating the use of high-level API:
+Below is a complete example of a strategy demonstrating the use of the high-level API:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -194,7 +384,7 @@ public class SmaStrategy : Strategy
         var longSma = new SMA { Length = Long };
         var shortSma = new SMA { Length = Short };
 
-        // Create candle subscription and bind with indicators
+        // Create a candle subscription and bind to indicators
         var subscription = SubscribeCandles(CandleType);
         subscription
             .Bind(longSma, shortSma, OnProcess)
@@ -235,13 +425,13 @@ public class SmaStrategy : Strategy
             var priceStep = GetSecurity().PriceStep ?? 1;
             var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
-            // Place order
+            // Place an order
             if (direction == Sides.Buy)
                 BuyLimit(price, volume);
             else
                 SellLimit(price, volume);
 
-            // Save current indicator positions
+            // Save current indicator position
             _isShortLessThenLong = isShortLessThenLong;
         }
     }
@@ -250,6 +440,6 @@ public class SmaStrategy : Strategy
 
 ## Conclusion
 
-The high-level API in StockSharp significantly simplifies the development of trading strategies, allowing developers to focus on trading logic rather than technical details. It is especially useful for typical use cases when fine-tuning of data processing or visualization is not required.
+The high-level API in StockSharp significantly simplifies the development of trading strategies, allowing developers to focus on trading logic rather than technical details. It is especially useful for typical use cases where fine-tuning of data processing or visualization is not required.
 
 Combined with the strategy parameter system, event model, and position protection mechanisms, the high-level API makes StockSharp a powerful and convenient tool for algorithmic trading, suitable for both beginners and experienced developers.

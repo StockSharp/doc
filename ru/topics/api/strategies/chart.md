@@ -278,18 +278,6 @@ private void ProcessCandle(ICandleMessage candle)
 
 Для добавления данных разного типа используются различные перегрузки метода [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) объекта [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem).
 
-### Упрощенная отрисовка для одного элемента
-
-Если требуется отрисовать данные только для одного элемента, можно использовать упрощенный метод [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartElement,System.Object)):
-
-```cs
-// Отрисовка одной свечи
-_chart.Draw(_candleElement, candle);
-
-// Отрисовка значения индикатора
-_chart.Draw(_smaElement, smaValue);
-```
-
 ### Отрисовка сделок и заявок
 
 Для отрисовки сделок и заявок обычно используется автоматический механизм, который срабатывает при получении новых сделок или изменении заявок. Однако, если требуется отрисовать их вручную, можно использовать следующий код:

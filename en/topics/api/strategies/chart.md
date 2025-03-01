@@ -278,18 +278,6 @@ The [IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) met
 
 For adding data of different types, various overloads of the [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) method of the [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem) object are used.
 
-### Simplified Drawing for a Single Element
-
-If you need to draw data for only one element, you can use the simplified [IChart.Draw](xref:StockSharp.Charting.IChart.Draw(StockSharp.Charting.IChartElement,System.Object)) method:
-
-```cs
-// Drawing a single candle
-_chart.Draw(_candleElement, candle);
-
-// Drawing indicator value
-_chart.Draw(_smaElement, smaValue);
-```
-
 ### Drawing Trades and Orders
 
 For drawing trades and orders, an automatic mechanism is usually used that is triggered when new trades are received or orders change. However, if manual drawing is required, you can use the following code:
