@@ -334,18 +334,18 @@ public class SmaStrategy : Strategy
 
     public SmaStrategy()
     {
-        _candleTypeParam = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+        _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
         _long = Param(nameof(Long), 80);
         _short = Param(nameof(Short), 30);
         _takeValue = Param(nameof(TakeValue), new Unit(0, UnitTypes.Absolute));
         _stopValue = Param(nameof(StopValue), new Unit(2, UnitTypes.Percent));
     }
 
-    private readonly StrategyParam<DataType> _candleTypeParam;
+    private readonly StrategyParam<DataType> _candleType;
     public DataType CandleType
     {
-        get => _candleTypeParam.Value;
-        set => _candleTypeParam.Value = value;
+        get => _candleType.Value;
+        set => _candleType.Value = value;
     }
 
     private readonly StrategyParam<int> _long;

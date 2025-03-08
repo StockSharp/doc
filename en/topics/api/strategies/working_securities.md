@@ -42,17 +42,17 @@ If the `GetWorkingSecurities()` method is not overridden in your strategy:
 ```cs
 public class MySmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _candleTypeParam;
+    private readonly StrategyParam<DataType> _candleType;
     
     public DataType CandleType
     {
-        get => _candleTypeParam.Value;
-        set => _candleTypeParam.Value = value;
+        get => _candleType.Value;
+        set => _candleType.Value = value;
     }
     
     public MySmaStrategy()
     {
-        _candleTypeParam = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+        _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
     }
     
     // Override the method for correct work with the Designer
