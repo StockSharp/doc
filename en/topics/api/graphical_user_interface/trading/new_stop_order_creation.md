@@ -20,7 +20,7 @@ private readonly Connector _connector = new Connector();
 ...
 private void NewStopOrderClick(object sender, RoutedEventArgs e)
 {
-	var newOrder = new OrderConditionalWindow
+	var wnd = new OrderConditionalWindow
 	{
 		Order = new Order
 		{
@@ -33,8 +33,8 @@ private void NewStopOrderClick(object sender, RoutedEventArgs e)
 		Portfolios = new PortfolioDataSource(_connector),
 		Adapter = _connector.Adapter
 	};
-	if (newOrder.ShowModal(this))
-		_connector.RegisterOrder(newOrder.Order);
+	if (wnd.ShowModal(this))
+		_connector.RegisterOrder(wnd.Order);
 }
               		
 	  				
