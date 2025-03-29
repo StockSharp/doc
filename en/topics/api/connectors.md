@@ -1,12 +1,12 @@
 # Connectors
 
-To work with exchanges and data sources in [S\#](../api.md) it is recommended to use the base class [Connector](xref:StockSharp.Algo.Connector). 
+For working with exchanges and data sources in [S#](../api.md), it is recommended to use the base class [Connector](xref:StockSharp.Algo.Connector).
 
-Let's consider working with [Connector](xref:StockSharp.Algo.Connector). The example source codes are in the project Samples\/Common\/SampleConnection.
+Let's look at working with [Connector](xref:StockSharp.Algo.Connector). The source code of the example can be found in the Samples/Common/SampleConnection project.
 
 ![multiconnection main](../../images/multiconnection_main.png)
 
-We create an instance of the [Connector](xref:StockSharp.Algo.Connector) class:
+Create an instance of the [Connector](xref:StockSharp.Algo.Connector) class:
 
 ```cs
 ...
@@ -14,14 +14,14 @@ public Connector Connector;
 ...
 public MainWindow()
 {
-	InitializeComponent();
-	Connector = new Connector();
-	InitConnector();
+    InitializeComponent();
+    Connector = new Connector();
+    InitConnector();
 }
 		
 ```
 
-To configure [Connector](xref:StockSharp.Algo.Connector)**API** has a special graphical interface in which you can configure several connections at once. How to use it see [Graphical configuration](connectors/graphical_configuration.md). 
+For configuring [Connector](xref:StockSharp.Algo.Connector), the **API** has a special graphical interface that allows you to configure multiple connections simultaneously. How to use it is described in the section [Graphical Configuration](connectors/graphical_configuration.md).
 
 ```cs
 ...
@@ -29,92 +29,122 @@ private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-	if (Connector.Configure(this))
-	{
-		new JsonSerializer<SettingsStorage>().Serialize(Connector.Save(), _connectorFile);
-	}
+    if (Connector.Configure(this))
+    {
+        Connector.Save().Serialize(_connectorFile);
+    }
 }
 	  				
 ```
 
 ![API GUI ConnectorWindow](../../images/api_gui_connectorwindow.png)
 
-Similarly, you can add connections directly from the code (without graphic windows) using the extension method [TraderHelper.AddAdapter\<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Action\<TAdapter\>](xref:System.Action`1) init **)**:
+Similarly, you can add connections directly from code (without graphical windows) by using the extension method [TraderHelper.AddAdapter\<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Action\<TAdapter\>](xref:System.Action`1) init **)**:
 
 ```cs
 ...
-connector.AddAdapter<BarChartMessageAdapter>(a => { });
+// Add adapter for connecting to Binance
+connector.AddAdapter<BinanceMessageAdapter>(a => 
+{
+    a.Key = "<Your API Key>";
+    a.Secret = "<Your Secret Key>";
+});
+
+// Add RSS for news
+connector.AddAdapter<RssMessageAdapter>(a => 
+{
+    a.Address = "https://news-source.com/feed";
+    a.IsEnabled = true;
+});
+	  				
 ```
 
-You can add an unlimited number of connections to a single [Connector](xref:StockSharp.Algo.Connector) object. Therefore, from the program you can simultaneously connect to several exchanges and brokers at once.
+You can add an unlimited number of connections to a single [Connector](xref:StockSharp.Algo.Connector) object. Therefore, you can connect to multiple exchanges and brokers simultaneously from the program.
 
-In the *InitConnector* method, we set the required [IConnector](xref:StockSharp.BusinessEntities.IConnector) event handlers:
+In the *InitConnector* method, we set the required event handlers for [IConnector](xref:StockSharp.BusinessEntities.IConnector):
 
 ```cs
 private void InitConnector()
 {
-	// subscribe on connection successfully event
-	Connector.Connected += () =>
-	{
-		this.GuiAsync(() => ChangeConnectStatus(true));
-	};
-	// subscribe on connection error event
-	Connector.ConnectionError += error => this.GuiAsync(() =>
-	{
-		ChangeConnectStatus(false);
-		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
-	});
-	Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
-	// subscribe on error event
-	Connector.Error += error =>
-		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
-	// subscribe on error of market data subscription event
-	Connector.MarketDataSubscriptionFailed += (security, msg, error) =>
-		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2956Params.Put(msg.DataType, security)))
-	Connector.NewSecurity += _securitiesWindow.SecurityPicker.Securities.Add;
-	Connector.NewTrade += _tradesWindow.TradeGrid.Trades.Add;
-	Connector.NewOrder += _ordersWindow.OrderGrid.Orders.Add;
-	Connector.NewStopOrder += _stopOrdersWindow.OrderGrid.Orders.Add;
-	Connector.NewMyTrade += _myTradesWindow.TradeGrid.Trades.Add;
-	
-	Connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(p);
+    // Subscribe to successful connection event
+    Connector.Connected += () =>
+    {
+        this.GuiAsync(() => ChangeConnectStatus(true));
+    };
+    
+    // Subscribe to connection error event
+    Connector.ConnectionError += error => this.GuiAsync(() =>
+    {
+        ChangeConnectStatus(false);
+        MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+    });
+    
+    // Subscribe to disconnection event
+    Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
+    
+    // Subscribe to error event
+    Connector.Error += error =>
+        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
+    
+    // Subscribe to market data subscription failure event
+    Connector.SubscriptionFailed += (subscription, error) =>
+        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
+            LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
+    
+    // Subscriptions for data reception
+    
+    // Instruments
+    Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
+    
+    // Tick trades
+    Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
+    
+    // Orders
+    Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
+    
+    // Own trades
+    Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
+    
+    // Positions
+    Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
-	// subscribe on error of order registration event
-	Connector.OrderRegisterFailed += _ordersWindow.OrderGrid.AddRegistrationFail;
-	// subscribe on error of order cancelling event
-	Connector.OrderCancelFailed += OrderFailed;
-	// subscribe on error of stop-order registration event
-	Connector.OrderRegisterFailed += _stopOrdersWindow.OrderGrid.AddRegistrationFail;
-	// subscribe on error of stop-order cancelling event
-	Connector.StopOrderCancelFailed += OrderFailed;
-	// set market data provider
-	_securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
-	try
-	{
-		if (File.Exists(_settingsFile))
-		{
-			var ctx = new ContinueOnExceptionContext();
-			ctx.Error += ex => ex.LogError();
-			using (new Scope<ContinueOnExceptionContext> (ctx))
-				Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
-		}
-	}
-	catch
-	{
-	}
-	ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
-	
-	// needed for graphical settings
-	ConfigManager.RegisterService<IMessageAdapterProvider>(new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
+    // Order registration failures
+    Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
+    
+    // Order cancellation failures
+    Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
+    
+    // Set market data provider
+    _securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
+    
+    try
+    {
+        if (File.Exists(_connectorFile))
+        {
+            var ctx = new ContinueOnExceptionContext();
+            ctx.Error += ex => ex.LogError();
+            using (new Scope<ContinueOnExceptionContext>(ctx))
+                Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+        }
+    }
+    catch
+    {
+    }
+    
+    ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
+    
+    // Register adapter provider for graphical configuration
+    ConfigManager.RegisterService<IMessageAdapterProvider>(
+        new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }
 ```
 
-To save and load [Connector](xref:StockSharp.Algo.Connector) settings to a file, see [Save and load settings](connectors/save_and_load_settings.md).
+How to save and load settings for [Connector](xref:StockSharp.Algo.Connector) to a file can be found in the section [Saving and Loading Settings](connectors/save_and_load_settings.md).
 
-To create your own [Connector](xref:StockSharp.Algo.Connector), see [Creating own connector](connectors/creating_own_connector.md).
+Information about creating your own [Connector](xref:StockSharp.Algo.Connector) can be found in the section [Creating Your Own Connector](connectors/creating_own_connector.md).
 
-For registering orders, see [Orders management](orders_management.md), [Create new order](orders_management/create_new_order.md), [Create new stop order](orders_management/create_new_stop_order.md). 
+Order placement is described in the sections [Orders](orders_management.md), [Creating a New Order](orders_management/create_new_order.md), [Creating a New Stop Order](orders_management/create_new_stop_order.md).
 
-## Recommended content
+## See Also
 
-[Graphical configuration](connectors/graphical_configuration.md)
+[Graphical Configuration](connectors/graphical_configuration.md)

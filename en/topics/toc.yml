@@ -1513,8 +1513,6 @@
       href: api/orders_management/create_new_order.md
     - name: Create new stop order
       href: api/orders_management/create_new_stop_order.md
-    - name: Getting orders information
-      href: api/orders_management/getting_orders_information.md
     - name: Orders states
       href: api/orders_management/orders_states.md
     - name: Order cancel

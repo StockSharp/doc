@@ -1650,8 +1650,6 @@
       href: api/orders_management/create_new_order.md
     - name: Создать новую стоп заявку
       href: api/orders_management/create_new_stop_order.md
-    - name: Получение информации по заявкам
-      href: api/orders_management/getting_orders_information.md
     - name: Состояния заявок
       href: api/orders_management/orders_states.md
     - name: Снятие заявок

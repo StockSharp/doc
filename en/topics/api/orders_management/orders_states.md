@@ -1,28 +1,158 @@
 # Orders states
 
-The order during it’s life goes through the following states:
+StockSharp API provides the ability to receive information about orders through the built-in subscription mechanism. As with market data, transaction information uses a unified approach based on [Subscription](xref:StockSharp.BusinessEntities.Subscription).
 
-![OrderStates](../../../images/orderstates.png)
+## Order-related Events
 
-- [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) \- the order has been created in the algorithm and has not been sent to the registration. 
-- [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) \- the order has been sent to the registration ([Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**) and the [ITransactionProvider.NewOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.NewOrder) event for it has been called. The confirmation of the order acceptance from the exchange is expected. If successful, the [Connector.OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged), event will be called and the order will be changed to the [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) state. Also the [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) and [Order.Time](xref:StockSharp.BusinessEntities.Order.Time) properties will be initialized. In the case of the order rejection the [Connector.OrderRegisterFailed](xref:StockSharp.Algo.Connector.OrderRegisterFailed) event with the error description will be called and the order will be changed to the [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) state. 
-- [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) \- the order is active on exchange. Such order will be active as long as all of the order [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume) volume is matched, or it will be forcibly cancelled through [ITransactionProvider.CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**. If the order matched partially the [ITransactionProvider.NewMyTrade](xref:StockSharp.BusinessEntities.ITransactionProvider.NewMyTrade) events about new trades on issued order have been called, as well as the [Connector.OrderChanged](xref:StockSharp.Algo.Connector.OrderChanged) event, which the [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance) notification about the order balance change passed. The latest event will be arised in the case of the order cancellation. 
-- [OrderStates.Done](xref:StockSharp.Messages.OrderStates.Done) \- the order is no longer active on the exchange (been fully matched or cancelled). 
-- [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) \- the order has not been accepted by the exchange (or intermediate system, such as the broker server) for any reason. 
+[Connector](xref:StockSharp.Algo.Connector) provides the following events for processing order information:
 
-To find out the order trading state (what volume is matched, whether the order fully matched, and so on) the [Extensions.IsCanceled](xref:StockSharp.Messages.Extensions.IsCanceled(StockSharp.Messages.IOrderMessage))**(**[StockSharp.Messages.IOrderMessage](xref:StockSharp.Messages.IOrderMessage) order **)**, [Extensions.IsMatchedEmpty](xref:StockSharp.Messages.Extensions.IsMatchedEmpty(StockSharp.Messages.IOrderMessage))**(**[StockSharp.Messages.IOrderMessage](xref:StockSharp.Messages.IOrderMessage) order **)**, [Extensions.IsMatchedPartially](xref:StockSharp.Messages.Extensions.IsMatchedPartially(StockSharp.Messages.IOrderMessage))**(**[StockSharp.Messages.IOrderMessage](xref:StockSharp.Messages.IOrderMessage) order **)**, [Extensions.IsMatched](xref:StockSharp.Messages.Extensions.IsMatched(StockSharp.Messages.IOrderMessage))**(**[StockSharp.Messages.IOrderMessage](xref:StockSharp.Messages.IOrderMessage) order **)** and [Extensions.GetMatchedVolume](xref:StockSharp.Messages.Extensions.GetMatchedVolume(StockSharp.Messages.IOrderMessage))**(**[StockSharp.Messages.IOrderMessage](xref:StockSharp.Messages.IOrderMessage) order **)** methods should be used: 
+| Event | Description |
+|---------|----------|
+| [OrderReceived](xref:StockSharp.Algo.Connector.OrderReceived) | Event for receiving order information |
+| [OrderRegisterFailReceived](xref:StockSharp.Algo.Connector.OrderRegisterFailReceived) | Event for order registration failure |
+| [OrderCancelFailReceived](xref:StockSharp.Algo.Connector.OrderCancelFailReceived) | Event for order cancellation failure |
+| [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Event for order modification failure |
+| [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Event for receiving information about own trades |
+
+## Automatic Subscriptions
+
+By default, [Connector](xref:StockSharp.Algo.Connector) automatically creates subscriptions for transaction information when connecting ([SubscriptionsOnConnect](xref:StockSharp.Algo.Connector.SubscriptionsOnConnect)). This includes subscriptions to:
+
+- Order information
+- Trade information
+- Position information
+- Basic instrument lookup
+
+Example of handling an order reception event:
 
 ```cs
-// any order
-Order order = ....
-// is the order was cancelled
-Console.WriteLine(order.IsCanceled());
-// or fully matched
-Console.WriteLine(order.IsMatched());
-// or just partially
-Console.WriteLine(order.IsMatchedPartially());
-// or non of any contracts was matched 
-Console.WriteLine(order.IsMatchedEmpty());
-// so we are getting the realized (=matched) order size.
-Console.WriteLine(order.GetMatchedVolume());
+private void InitConnector()
+{
+    // Subscribe to order reception event
+    Connector.OrderReceived += OnOrderReceived;
+    
+    // Subscribe to own trade reception event
+    Connector.OwnTradeReceived += OnOwnTradeReceived;
+    
+    // Subscribe to order registration failure event
+    Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
+}
+
+private void OnOrderReceived(Subscription subscription, Order order)
+{
+    // Process the received order
+    _ordersWindow.OrderGrid.Orders.TryAdd(order);
+    
+    // Important! Check if the order belongs to the current subscription
+    // to avoid duplicate processing
+    if (subscription == _myOrdersSubscription)
+    {
+        // Additional processing for the specific subscription
+        Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+    }
+}
 ```
+
+## Manual Creation of Order Subscriptions
+
+In some cases, you may need to explicitly request information about orders. For this, you can create separate subscriptions:
+
+```cs
+// Create a subscription for orders of a specific portfolio
+var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
+{
+    TransactionId = Connector.TransactionIdGenerator.GetNextId(),
+};
+
+// Handler for receiving orders
+Connector.OrderReceived += (subscription, order) =>
+{
+    if (subscription == ordersSubscription)
+    {
+        Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+    }
+};
+
+// Start the subscription
+Connector.Subscribe(ordersSubscription);
+```
+
+## Checking Order Status
+
+Extension methods are used to determine the current state of an order:
+
+```cs
+// Check order status
+Order order = ...; // received order
+
+// Is the order canceled
+bool isCanceled = order.IsCanceled();
+
+// Is the order fully executed
+bool isMatched = order.IsMatched();
+
+// Is the order partially executed
+bool isPartiallyMatched = order.IsMatchedPartially();
+
+// Is at least part of the order executed
+bool isNotEmpty = order.IsMatchedEmpty();
+
+// Get the executed volume
+decimal matchedVolume = order.GetMatchedVolume();
+```
+
+## Advanced Approach: Working with Multiple Subscriptions
+
+In complex scenarios, you may need to work with multiple order subscriptions simultaneously. In this case, it's important to properly handle events to avoid duplication:
+
+```cs
+private Subscription _portfolio1OrdersSubscription;
+private Subscription _portfolio2OrdersSubscription;
+
+private void RequestOrdersForDifferentPortfolios()
+{
+    // Subscription for orders of the first portfolio
+    _portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
+    
+    // Subscription for orders of the second portfolio
+    _portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
+    
+    // Common handler for receiving orders
+    Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
+    
+    // Start subscriptions
+    Connector.Subscribe(_portfolio1OrdersSubscription);
+    Connector.Subscribe(_portfolio2OrdersSubscription);
+}
+
+private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
+{
+    // Determine which subscription the order belongs to
+    if (subscription == _portfolio1OrdersSubscription)
+    {
+        // Process orders of the first portfolio
+    }
+    else if (subscription == _portfolio2OrdersSubscription)
+    {
+        // Process orders of the second portfolio
+    }
+}
+```
+
+> [!NOTE]
+> Such an advanced approach with multiple subscriptions to orders should be used only in exceptional cases when the standard subscription mechanism is insufficient.
+
+## Asynchronous Nature of Transactions
+
+Transaction sending (registration, replacement, or cancellation of orders) is performed asynchronously. This allows the trading program not to wait for confirmation from the exchange, but to continue working, which speeds up the reaction to changes in the market situation.
+
+To track the status of an order, you need to subscribe to the corresponding events:
+- [OrderReceived](xref:StockSharp.Algo.Connector.OrderReceived) for receiving order status updates
+- [OrderRegisterFailReceived](xref:StockSharp.Algo.Connector.OrderRegisterFailReceived) for handling registration errors
+
+## See Also
+
+- [Subscriptions](subscriptions.md)
+- [Order States](orders_states.md)
+- [Creating a New Order](create_new_order.md)
+- [Canceling Orders](order_cancel.md)
