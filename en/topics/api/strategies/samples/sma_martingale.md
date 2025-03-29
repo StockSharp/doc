@@ -2,118 +2,133 @@
 
 ## Overview
 
-`SmaStrategyMartingaleStrategy` is a trading strategy based on the intersection of two simple moving averages (SMA) with martingale elements. The strategy uses long and short SMAs to determine market entry and exit signals, increasing the position size with each new trade.
+`SmaStrategyMartingaleStrategy` is a trading strategy based on the crossover of two simple moving averages ([SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)) with martingale elements. The strategy uses long and short SMAs to determine entry and exit signals, increasing position size with each new trade.
 
 ## Main Components
 
 ```cs
-// Main components
-internal class SmaStrategyMartingaleStrategy : Strategy
+public class SmaStrategyMartingaleStrategy : Strategy
 {
-    private readonly Subscription _subscription;
+    private readonly StrategyParam<int> _longSmaLength;
+    private readonly StrategyParam<int> _shortSmaLength;
+    private readonly StrategyParam<DataType> _candleType;
 
-    public SimpleMovingAverage LongSma { get; set; }
-    public SimpleMovingAverage ShortSma { get; set; }
+    // Variables to store previous indicator values
+    private decimal _prevLongValue;
+    private decimal _prevShortValue;
+    private bool _isFirstValue = true;
 }
 ```
 
-## Constructor
+## Strategy Parameters
 
-The constructor takes a `CandleSeries` and initializes the subscription to this candle series.
+The strategy allows customizing the following parameters:
 
-```cs
-// Constructor
-public SmaStrategyMartingaleStrategy(CandleSeries series)
-{
-    _subscription = new(series);
-}
-```
+- **LongSmaLength** - long moving average period (default 80)
+- **ShortSmaLength** - short moving average period (default 30)
+- **CandleType** - candle type to work with (default 5-minute)
 
-## Methods
+All parameters are available for optimization with specified value ranges.
 
-### IsRealTime
+## Strategy Initialization
 
-Determines if a candle is "real" (recently closed):
-
-- Checks if less than 10 seconds have passed since the candle's closing time to the current time
-- Used to filter out outdated data in real-time mode
+In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, SMA indicators are created, candle subscription is set up, and visualization is prepared:
 
 ```cs
-// IsRealTime method
-private bool IsRealTime(ICandleMessage candle)
-{
-    return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
-}
-```
-
-### OnStarted
-
-Called when the strategy starts:
-
-- Subscribes to candle completion
-- Binds candle processing to the `ProcessCandle` method
-- Starts the subscription to the candle series
-
-```cs
-// OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
-    this.WhenCandlesFinished(_subscription).Do(ProcessCandle).Apply(this);
-    Subscribe(_subscription);
     base.OnStarted(time);
+
+    // Create indicators
+    var longSma = new SimpleMovingAverage { Length = LongSmaLength };
+    var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+
+    // Add indicators to the strategy collection for automatic IsFormed tracking
+    Indicators.Add(longSma);
+    Indicators.Add(shortSma);
+
+    // Create subscription and bind indicators
+    var subscription = SubscribeCandles(CandleType);
+    subscription
+        .Bind(longSma, shortSma, ProcessCandle)
+        .Start();
+
+    // Set up visualization on the chart
+    var area = CreateChartArea();
+    if (area != null)
+    {
+        DrawCandles(area, subscription);
+        DrawIndicator(area, longSma, System.Drawing.Color.Blue);
+        DrawIndicator(area, shortSma, System.Drawing.Color.Red);
+        DrawOwnTrades(area);
+    }
 }
 ```
 
-### ProcessCandle
+## Processing Candles
 
-Main method for processing each completed candle:
-
-1. Updates the values of long and short SMAs
-2. Checks if the indicators are formed
-3. In real-time mode, checks the relevance of the candle
-4. Determines if an SMA intersection has occurred
-5. On intersection:
-   - Cancels active orders
-   - Determines the direction of the trade (buy or sell)
-   - Calculates the position volume considering the current position (martingale element)
-   - Registers a new order
+The `ProcessCandle` method is called for each completed candle and implements the trading logic:
 
 ```cs
-// ProcessCandle method
-private void ProcessCandle(ICandleMessage candle)
+private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    var longSmaIsFormedPrev = LongSma.IsFormed;
-    LongSma.Process(candle);
-    ShortSma.Process(candle);
+    // Skip incomplete candles
+    if (candle.State != CandleStates.Finished)
+        return;
 
-    if (!LongSma.IsFormed || !longSmaIsFormedPrev) return;
-    if (!IsBacktesting && !IsRealTime(candle)) return;
+    // Check if the strategy is ready for trading
+    if (!IsFormedAndOnlineAndAllowTrading())
+        return;
 
-    var isShortLessThenLongCurrent = ShortSma.GetCurrentValue() < LongSma.GetCurrentValue();
-    var isShortLessThenLongPrevios = ShortSma.GetValue(1) < LongSma.GetValue(1);
+    // For the first value, only save data without generating signals
+    if (_isFirstValue)
+    {
+        _prevLongValue = longValue;
+        _prevShortValue = shortValue;
+        _isFirstValue = false;
+        return;
+    }
 
-    if (isShortLessThenLongPrevios == isShortLessThenLongCurrent) return;
+    // Get current and previous comparison of indicator values
+    var isShortLessThenLongCurrent = shortValue < longValue;
+    var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
 
+    // Save current values as previous for the next candle
+    _prevLongValue = longValue;
+    _prevShortValue = shortValue;
+
+    // Check for crossover (signal)
+    if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
+        return;
+
+    // Cancel active orders before placing new ones
     CancelActiveOrders();
 
+    // Determine trade direction
     var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
+    // Calculate position size (increase position with each trade - martingale approach)
     var volume = Volume + Math.Abs(Position);
 
-    var price = Security.ShrinkPrice(ShortSma.GetCurrentValue());
-    RegisterOrder(this.CreateOrder(direction, price, volume));
+    // Create and register an order with the appropriate price
+    var price = Security.ShrinkPrice(shortValue);
+    RegisterOrder(CreateOrder(direction, price, volume));
 }
 ```
 
 ## Trading Logic
 
-- Buy signal: short SMA crosses long SMA from below
-- Sell signal: short SMA crosses long SMA from above
-- With each new trade, the volume increases by the current position size
-- The order price is set to the current value of the short SMA
+- **Buy signal**: short SMA crosses the long SMA from below
+- **Sell signal**: short SMA crosses the long SMA from above
+- Position size increases by the current position amount with each new trade (martingale element)
+- Order price is set to the current short SMA value, rounded to the instrument's tick size
 
 ## Features
 
-- The strategy works with both historical data and in real-time mode
-- Uses a candle subscription mechanism for data processing
-- Applies martingale elements, increasing the position size with each new trade
+- The strategy automatically determines instruments to work with via the `GetWorkingSecurities()` method
+- The strategy only works with completed candles
+- The strategy tracks indicator crossovers by comparing the current and previous relationship between SMAs
+- All active orders are canceled before placing new ones
+- Martingale principle is implemented - increasing position size with each new trade
+- Indicators and trades are visualized on the chart when a graphic area is available
+- Parameter optimization is supported to find optimal strategy settings

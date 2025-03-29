@@ -7,128 +7,110 @@
 ## Основные компоненты
 
 ```cs
-// Основные компоненты
 public class StairsCountertrendStrategy : Strategy
 {
-    private readonly CandleSeries _candleSeries;
-    private Subscription _subscription;
-
+    private readonly StrategyParam<int> _length;
+    private readonly StrategyParam<DataType> _candleType;
+    
     private int _bullLength;
     private int _bearLength;
 }
 ```
 
-## Конструктор
+## Параметры стратегии
 
-Конструктор принимает `CandleSeries` для инициализации стратегии.
+Стратегия позволяет настраивать следующие параметры:
 
-```cs
-// Конструктор
-public StairsCountertrendStrategy(CandleSeries candleSeries)
-{
-    _candleSeries = candleSeries;
-}
-```
+- **Length** - количество последовательных свечей одного направления для идентификации тренда (по умолчанию 3)
+- **CandleType** - тип свечей для работы (по умолчанию 5-минутные)
 
-## Свойства
+Параметр Length доступен для оптимизации в диапазоне от 2 до 10 с шагом 1.
 
-### Length
+## Инициализация стратегии
 
-Определяет минимальное количество последовательных свечей одного направления для определения тренда.
+В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) обнуляются счетчики, создается подписка на свечи и готовится визуализация:
 
 ```cs
-// Свойство Length
-private int Length { get; set; } = 3;
-```
-
-## Методы
-
-### OnStarted
-
-Вызывается при запуске стратегии:
-
-- Подписывается на получение свечей
-- Инициализирует подписку на серию свечей
-
-```cs
-// Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    CandleReceived += OnCandleReceived;
-    _subscription = this.SubscribeCandles(_candleSeries);
-
     base.OnStarted(time);
-}
-```
+    
+    // Сброс счетчиков
+    _bullLength = 0;
+    _bearLength = 0;
 
-### OnStopped
+    // Создание подписки
+    var subscription = SubscribeCandles(CandleType);
+    
+    subscription
+        .Bind(ProcessCandle)
+        .Start();
 
-Вызывается при остановке стратегии:
-
-- Отменяет подписку на свечи
-
-```cs
-// Метод OnStopped
-protected override void OnStopped()
-{
-    if (_subscription != null)
+    // Настройка визуализации на графике
+    var area = CreateChartArea();
+    if (area != null)
     {
-        UnSubscribe(_subscription);
-        _subscription = null;
+        DrawCandles(area, subscription);
+        DrawOwnTrades(area);
     }
-
-    base.OnStopped();
 }
 ```
 
-### OnCandleReceived
+## Обработка свечей
 
-Основной метод обработки каждой завершенной свечи:
-
-1. Проверяет, относится ли свеча к нужной подписке
-2. Анализирует направление свечи (бычья или медвежья)
-3. Обновляет счетчики последовательных бычьих и медвежьих свечей
-4. Принимает решение об открытии позиции против тренда
+Метод `ProcessCandle` вызывается для каждой завершенной свечи и реализует торговую логику:
 
 ```cs
-// Метод OnCandleReceived
-private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+private void ProcessCandle(ICandleMessage candle)
 {
-    if (subscription != _subscription)
+    // Проверяем, завершена ли свеча
+    if (candle.State != CandleStates.Finished)
         return;
 
-    if (candle.State != CandleStates.Finished) return;
+    // Проверяем готовность стратегии к торговле
+    if (!IsFormedAndOnlineAndAllowTrading())
+        return;
 
+    // Обновляем счетчики на основе направления свечи
     if (candle.OpenPrice < candle.ClosePrice)
     {
+        // Бычья свеча
         _bullLength++;
         _bearLength = 0;
     }
     else if (candle.OpenPrice > candle.ClosePrice)
     {
+        // Медвежья свеча
         _bullLength = 0;
         _bearLength++;
     }
 
+    // Контртрендовая стратегия: 
+    // Продажа после Length последовательных бычьих свечей
     if (_bullLength >= Length && Position >= 0)
     {
-        RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
+        SellMarket(Volume + Math.Abs(Position));
     }
+    // Покупка после Length последовательных медвежьих свечей
     else if (_bearLength >= Length && Position <= 0)
     {
-        RegisterOrder(this.BuyAtMarket(Volume + Math.Abs(Position)));
+        BuyMarket(Volume + Math.Abs(Position));
     }
 }
 ```
 
 ## Логика торговли
 
-- Сигнал на продажу: `Length` последовательных бычьих свечей при отсутствии короткой позиции
-- Сигнал на покупку: `Length` последовательных медвежьих свечей при отсутствии длинной позиции
+- **Сигнал на продажу**: `Length` последовательных бычьих свечей (цена закрытия выше цены открытия) при отсутствии короткой позиции
+- **Сигнал на покупку**: `Length` последовательных медвежьих свечей (цена закрытия ниже цены открытия) при отсутствии длинной позиции
 - Объем позиции увеличивается на величину текущей позиции при каждой новой сделке
 
 ## Особенности
 
-- Стратегия работает с завершенными свечами
-- Использует рыночные ордера для входа в позицию
-- Применяет контртрендовый подход, открывая позиции против установившегося тренда
+- Стратегия автоматически определяет инструменты для работы через метод `GetWorkingSecurities()`
+- Стратегия работает только с завершенными свечами
+- Стратегия использует рыночные ордера для входа в позицию
+- Стратегия применяет контртрендовый подход, открывая позиции против установившегося тренда
+- Счетчики свечей сбрасываются при появлении свечи противоположного направления
+- Свечи и сделки визуализируются на графике при наличии графической области
+- Поддерживается оптимизация длины последовательности для поиска оптимальных настроек стратегии

@@ -1,4 +1,4 @@
-# Candle Rule Strategy
+# Rule for a Single Candle
 
 ## Overview
 
@@ -10,7 +10,6 @@
 // Main components
 public class SimpleCandleRulesStrategy : Strategy
 {
-    private Subscription _subscription;
 }
 ```
 
@@ -18,14 +17,14 @@ public class SimpleCandleRulesStrategy : Strategy
 
 Called when the strategy starts:
 
-- Initializes subscription to 5-minute candles
-- Sets up rules for processing candles
+- Initializes a subscription to 5-minute candles
+- Establishes rules for processing candles
 
 ```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
-    _subscription = new(Security.TimeFrame(TimeSpan.FromMinutes(5)))
+    var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
     {
         // ready-to-use candles much faster than compression on fly mode
         // turn off compression to boost optimizer (!!! make sure you have candles)
@@ -36,22 +35,24 @@ protected override void OnStarted(DateTimeOffset time)
         //    BuildFrom = DataType.Ticks,
         //}
     };
-    Subscribe(_subscription);
+    Subscribe(subscription);
 
     var i = 0;
+    var diff = "10%".ToUnit();
 
-    this.WhenCandlesStarted(_subscription)
+    this.WhenCandlesStarted(subscription)
         .Do((candle) =>
         {
             i++;
 
             this
-                .WhenTotalVolumeMore(candle, new Unit(100000m))
+                .WhenTotalVolumeMore(candle, diff)
                 .Do((candle1) =>
                 {
-                    this.AddInfoLog($"The rule WhenPartiallyFinished and WhenTotalVolumeMore candle={candle1}");
-                    this.AddInfoLog($"The rule WhenPartiallyFinished and WhenTotalVolumeMore i={i}");
-                }).Apply(this);
+                    LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+                    LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+                })
+                .Once().Apply(this);
 
         }).Apply(this);
 
@@ -59,16 +60,18 @@ protected override void OnStarted(DateTimeOffset time)
 }
 ```
 
-## Working Logic
+## Logic
 
 - The strategy subscribes to 5-minute candles
-- A rule is set up at the start of each candle formation
-- The rule triggers when the total candle volume exceeds 100,000
-- When the rule triggers, information about the candle and counter is added to the log
+- When each candle begins forming, a rule is established
+- The rule triggers when the total volume of the candle exceeds 10% (using a percentage value)
+- When the rule is triggered, information about the candle and counter is added to the log
+- After the first trigger, the rule stops working thanks to the `Once()` method
 
 ## Features
 
-- Demonstrates the use of `WhenCandlesStarted` and `WhenTotalVolumeMore` rules
+- Demonstrates the use of the `WhenCandlesStarted` and `WhenTotalVolumeMore` rules
 - Uses the candle subscription mechanism
-- Shows an example of logging information in the strategy
-- Contains commented-out code for setting up candle building from ticks
+- Shows an example of creating a percentage value through `"10%".ToUnit()`
+- Shows an example of logging information in a strategy using the `LogInfo` method
+- Contains commented code for configuring candle building from ticks

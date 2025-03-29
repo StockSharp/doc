@@ -1,4 +1,4 @@
-# Tick Trade Rules Strategy
+# Rules for Tick Trades
 
 ## Overview
 
@@ -17,43 +17,48 @@ public class SimpleTradeRulesStrategy : Strategy
 
 Called when the strategy starts:
 
-- Subscribes to trades
+- Creates a subscription to ticks
 - Creates a combined rule for analyzing trade prices
 
 ```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
-    var sub = this.SubscribeTrades(Security);
+    var sub = new Subscription(DataType.Ticks, Security);
 
-    sub.WhenTickTradeReceived(this).Do(() =>
+    sub.WhenTickTradeReceived(this).Do(t =>
     {
-        new IMarketRule[] { Security.WhenLastTradePriceMore(this, 2), Security.WhenLastTradePriceLess(this, 2) }
-            .Or() // or conditions (WhenLastTradePriceMore or WhenLastTradePriceLess)
-            .Do(() =>
+        sub
+            .WhenLastTradePriceMore(this, t.Price + 2)
+            .Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
+            .Do(t =>
             {
-                this.AddInfoLog($"The rule WhenLastTradePriceMore Or WhenLastTradePriceLess candle={Security.LastTick}");
+                LogInfo($"The rule WhenLastTradePriceMore Or WhenLastTradePriceLess tick={t}");
             })
             .Apply(this);
     })
     .Once() // call this rule only once
     .Apply(this);
 
+    // Sending request for subscribe to market data.
+    Subscribe(sub);
+
     base.OnStarted(time);
 }
 ```
 
-## Working Logic
+## Logic
 
-- A combined rule is created when the first tick is received
-- The rule triggers when the last trade price becomes greater than 2 or less than 2
-- When the rule triggers, information about the last tick is added to the log
+- When the first tick is received, a combined rule is created
+- It is based on the price of the received tick: creates a rule that triggers when the price changes by +/- 2
+- The rule triggers when the price of the last trade becomes more than current + 2 or less than current - 2
+- When the rule triggers, information about the tick is added to the log
 - The outer rule triggers only once (`Once()`)
 
 ## Features
 
-- Demonstrates the creation of combined rules using `Or()`
+- Demonstrates creating combined rules using `Or()`
 - Uses `WhenLastTradePriceMore` and `WhenLastTradePriceLess` for price analysis
-- Shows an example of logging information about trades
+- Shows an example of logging information about trades using the `LogInfo` method
 - Illustrates the use of `Once()` to limit rule triggering
-- The rule is created only once when the first tick is received
+- Passes the tick parameter to the event handler (unlike the example in the documentation)

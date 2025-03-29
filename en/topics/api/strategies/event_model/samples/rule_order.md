@@ -1,8 +1,8 @@
-# Order Rule Strategy
+# Rule for Orders
 
 ## Overview
 
-`SimpleOrderRulesStrategy` is a strategy that demonstrates the use of rules for processing order-related events in StockSharp. It subscribes to trades and creates rules for handling order registration.
+`SimpleOrderRulesStrategy` is a strategy that demonstrates the use of rules for processing events related to orders in StockSharp. It subscribes to trades and creates rules for processing order registration events.
 
 ## Main Components
 
@@ -17,29 +17,30 @@ public class SimpleOrderRulesStrategy : Strategy
 
 Called when the strategy starts:
 
-- Subscribes to trades
+- Creates a subscription to ticks
 - Creates two sets of rules for processing order registration events
 
 ```cs
 // OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
-    var sub = this.SubscribeTrades(Security);
+    var sub = new Subscription(DataType.Ticks, Security);
 
     sub.WhenTickTradeReceived(this).Do(() =>
     {
-        var order = this.BuyAtMarket(1);
+        var order = CreateOrder(Sides.Buy, default, 1);
+
         var ruleReg = order.WhenRegistered(this);
         var ruleRegFailed = order.WhenRegisterFailed(this);
 
         ruleReg
-            .Do(() => this.AddInfoLog("Order №1 Registered"))
+            .Do(() => LogInfo("Order №1 Registered"))
             .Once()
             .Apply(this)
             .Exclusive(ruleRegFailed);
 
         ruleRegFailed
-            .Do(() => this.AddInfoLog("Order №1 RegisterFailed"))
+            .Do(() => LogInfo("Order №1 RegisterFailed"))
             .Once()
             .Apply(this)
             .Exclusive(ruleReg);
@@ -49,47 +50,52 @@ protected override void OnStarted(DateTimeOffset time)
 
     sub.WhenTickTradeReceived(this).Do(() =>
     {
-        var order = this.BuyAtMarket(10000000);
+        var order = CreateOrder(Sides.Buy, default, 10000000);
+
         var ruleReg = order.WhenRegistered(this);
         var ruleRegFailed = order.WhenRegisterFailed(this);
 
         ruleReg
-            .Do(() => this.AddInfoLog("Order №2 Registered"))
+            .Do(() => LogInfo("Order №2 Registered"))
             .Once()
             .Apply(this)
             .Exclusive(ruleRegFailed);
 
         ruleRegFailed
-            .Do(() => this.AddInfoLog("Order №2 RegisterFailed"))
+            .Do(() => LogInfo("Order №2 RegisterFailed"))
             .Once()
             .Apply(this)
             .Exclusive(ruleReg);
 
         RegisterOrder(order);
     }).Once().Apply(this);
+
+    // Sending request for subscribe to market data.
+    Subscribe(sub);
 
     base.OnStarted(time);
 }
 ```
 
-## Working Logic
+## Logic
 
 ### First Set of Rules
 
-- Creates a market buy order for 1 unit when a tick is received
-- Sets up rules for handling successful registration and registration failure
+- When a tick is received, creates an order to buy 1 unit
+- The order is created using the `CreateOrder` method, specifying direction, price (default = market), and volume
+- Sets rules for processing successful registration and registration errors
 - The rules are mutually exclusive and trigger only once
 
 ### Second Set of Rules
 
-- Creates a market buy order for 10,000,000 units when the next tick is received
-- Similarly sets up rules for handling successful registration and registration failure
+- When the next tick is received, creates an order to buy 10,000,000 units
+- Similarly sets rules for processing successful registration and registration errors
 - The rules are also mutually exclusive and trigger only once
 
 ## Features
 
-- Demonstrates the creation of rules for handling order registration events
+- Demonstrates creating rules for processing order registration events
 - Uses the mechanism of mutually exclusive rules (`Exclusive`)
-- Shows an example of logging information about order events
+- Shows an example of logging information about order events using the `LogInfo` method
 - Illustrates the use of `Once()` to limit rule triggering
-- Creates orders with different volumes to demonstrate various scenarios (successful registration and registration failure)
+- Creates orders with different volumes to demonstrate various scenarios (successful registration and registration error)

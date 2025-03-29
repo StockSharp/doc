@@ -2,100 +2,104 @@
 
 ## Overview
 
-`BollingerStrategyClassicStrategy` is a strategy based on the Bollinger Bands indicator. It opens positions when the price reaches the upper or lower Bollinger Bands.
+`BollingerStrategyClassicStrategy` is a strategy based on the [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) indicator. It opens positions when the price reaches the upper or lower boundary of the Bollinger Bands.
 
 ## Main Components
 
-```cs
-// Main components
-internal class BollingerStrategyClassicStrategy : Strategy
-{
-   private readonly Subscription _subscription;
+The strategy inherits from [Strategy](xref:StockSharp.Algo.Strategies.Strategy) and uses parameters for configuration:
 
-   public BollingerBands BollingerBands { get; set; }
+```cs
+public class BollingerStrategyClassicStrategy : Strategy
+{
+    private readonly StrategyParam<int> _bollingerLength;
+    private readonly StrategyParam<decimal> _bollingerDeviation;
+    private readonly StrategyParam<DataType> _candleType;
+
+    private BollingerBands _bollingerBands;
 }
 ```
 
-## Constructor
+## Strategy Parameters
 
-The constructor takes a [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) to initialize the strategy.
+The strategy allows customizing the following parameters:
 
-```cs
-// Constructor
-public BollingerStrategyClassicStrategy(CandleSeries series)
-{
-   _subscription = new(series);
-}
-```
+- **BollingerLength** - Bollinger Bands indicator period (default 20)
+- **BollingerDeviation** - standard deviation multiplier (default 2.0)
+- **CandleType** - candle type to work with (default 5-minute)
 
-## Methods
+All parameters are available for optimization with specified value ranges.
 
-### OnStarted
+## Strategy Initialization
 
-Called when the strategy starts:
-
-- Subscribes to candle completion
-- Initializes candle processing
+In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, the Bollinger Bands indicator is created, candle subscription is set up, and visualization is prepared:
 
 ```cs
-// OnStarted method
 protected override void OnStarted(DateTimeOffset time)
 {
-   this.WhenCandlesFinished(_subscription).Do(ProcessCandle).Apply(this);
-   Subscribe(_subscription);
-   base.OnStarted(time);
+    base.OnStarted(time);
+
+    // Create indicator
+    _bollingerBands = new BollingerBands
+    {
+        Length = BollingerLength,
+        Width = BollingerDeviation
+    };
+
+    // Create subscription and bind indicator
+    var subscription = SubscribeCandles(CandleType);
+    subscription
+        .Bind(_bollingerBands, ProcessCandle)
+        .Start();
+
+    // Set up visualization on the chart
+    var area = CreateChartArea();
+    if (area != null)
+    {
+        DrawCandles(area, subscription);
+        DrawIndicator(area, _bollingerBands, System.Drawing.Color.Purple);
+        DrawOwnTrades(area);
+    }
 }
 ```
 
-### IsRealTime
+## Processing Candles
 
-Checks if the candle is "real" (recently closed):
-
-```cs
-// IsRealTime method
-private bool IsRealTime(ICandleMessage candle)
-{
-   return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
-}
-```
-
-### ProcessCandle
-
-Main method for processing each completed candle:
-
-1. Processes the candle with the Bollinger Bands indicator
-2. Checks if the indicator is formed
-3. Checks the operating mode (backtesting or real-time)
-4. Makes a decision to open a position based on the closing price position relative to the Bollinger Bands
+The `ProcessCandle` method is called for each completed candle and implements the trading logic:
 
 ```cs
-// ProcessCandle method
-private void ProcessCandle(ICandleMessage candle)
+private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
 {
-   BollingerBands.Process(candle);
+    // Skip incomplete candles
+    if (candle.State != CandleStates.Finished)
+        return;
 
-   if (!BollingerBands.IsFormed) return;
-   if (!IsBacktesting && !IsRealTime(candle)) return;
+    // Check if the strategy is ready for trading
+    if (!IsFormedAndOnlineAndAllowTrading())
+        return;
 
-   if (candle.ClosePrice >= BollingerBands.UpBand.GetCurrentValue() && Position >= 0)
-   {
-       RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
-   }
-   else if (candle.ClosePrice <= BollingerBands.LowBand.GetCurrentValue() && Position <= 0)
-   {
-       RegisterOrder(this.BuyAtMarket(Volume + Math.Abs(Position)));
-   }
+    // Trading logic:
+    // Sell when price reaches or exceeds the upper band
+    if (candle.ClosePrice >= upperBand && Position >= 0)
+    {
+        SellMarket(Volume + Math.Abs(Position));
+    }
+    // Buy when price reaches or falls below the lower band
+    else if (candle.ClosePrice <= lowerBand && Position <= 0)
+    {
+        BuyMarket(Volume + Math.Abs(Position));
+    }
 }
 ```
 
 ## Trading Logic
 
-- Sell signal: candle closing price reaches or exceeds the upper Bollinger Band when there is no short position
-- Buy signal: candle closing price reaches or falls below the lower Bollinger Band when there is no long position
-- Position volume increases by the current position size with each new trade
+- **Sell signal**: candle close price reaches or exceeds the upper Bollinger Band when there is no short position
+- **Buy signal**: candle close price reaches or falls below the lower Bollinger Band when there is no long position
+- Position volume increases by the current position amount with each new trade
 
 ## Features
 
-- The strategy works with both historical data and in real-time mode
-- Uses the Bollinger Bands indicator to determine market entry points
-- Applies a "reality" check on the candle in real-time mode
+- The strategy automatically determines instruments to work with via the `GetWorkingSecurities()` method
+- The strategy only works with completed candles
+- The indicator and trades are visualized on a chart when a graphic area is available
+- Parameter optimization is supported to find optimal strategy settings

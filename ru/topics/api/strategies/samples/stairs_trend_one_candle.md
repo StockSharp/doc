@@ -7,102 +7,83 @@
 ## Основные компоненты
 
 ```cs
-// Основные компоненты
 public class OneCandleTrendStrategy : Strategy
 {
-    private readonly CandleSeries _candleSeries;
-    private Subscription _subscription;
+    private readonly StrategyParam<DataType> _candleType;
 }
 ```
 
-## Конструктор
+## Параметры стратегии
 
-Конструктор принимает [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) для инициализации стратегии.
+Стратегия позволяет настраивать следующие параметры:
 
-```cs
-// Конструктор
-public OneCandleTrendStrategy(CandleSeries candleSeries)
-{
-    _candleSeries = candleSeries;
-}
-```
+- **CandleType** - тип свечей для работы (по умолчанию 5-минутные)
 
-## Методы
+## Инициализация стратегии
 
-### OnStarted
-
-Вызывается при запуске стратегии:
-
-- Подписывается на получение свечей
-- Инициализирует подписку на серию свечей
+В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) создается подписка на свечи и готовится визуализация:
 
 ```cs
-// Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    CandleReceived += OnCandleReceived;
-    _subscription = this.SubscribeCandles(_candleSeries);
-
     base.OnStarted(time);
-}
-```
 
-### OnStopped
+    // Создание подписки
+    var subscription = SubscribeCandles(CandleType);
+    
+    subscription
+        .Bind(ProcessCandle)
+        .Start();
 
-Вызывается при остановке стратегии:
-
-- Отменяет подписку на свечи
-
-```cs
-// Метод OnStopped
-protected override void OnStopped()
-{
-    if (_subscription != null)
+    // Настройка визуализации на графике
+    var area = CreateChartArea();
+    if (area != null)
     {
-        UnSubscribe(_subscription);
-        _subscription = null;
+        DrawCandles(area, subscription);
+        DrawOwnTrades(area);
     }
-
-    base.OnStopped();
 }
 ```
 
-### OnCandleReceived
+## Обработка свечей
 
-Основной метод обработки каждой завершенной свечи:
-
-1. Проверяет, относится ли свеча к нужной подписке
-2. Анализирует направление свечи (бычья или медвежья)
-3. Принимает решение об открытии позиции на основе текущей свечи и позиции
+Метод `ProcessCandle` вызывается для каждой завершенной свечи и реализует торговую логику:
 
 ```cs
-// Метод OnCandleReceived
-private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+private void ProcessCandle(ICandleMessage candle)
 {
-    if (subscription != _subscription)
+    // Проверяем, завершена ли свеча
+    if (candle.State != CandleStates.Finished)
         return;
 
-    if (candle.State != CandleStates.Finished) return;
+    // Проверяем готовность стратегии к торговле
+    if (!IsFormedAndOnlineAndAllowTrading())
+        return;
 
+    // Трендовая стратегия: покупка на бычьей свече, продажа на медвежьей свече
     if (candle.OpenPrice < candle.ClosePrice && Position <= 0)
     {
-        RegisterOrder(this.BuyAtMarket(Volume + Math.Abs(Position)));
+        // Бычья свеча - покупка
+        BuyMarket(Volume + Math.Abs(Position));
     }
     else if (candle.OpenPrice > candle.ClosePrice && Position >= 0)
     {
-        RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
+        // Медвежья свеча - продажа
+        SellMarket(Volume + Math.Abs(Position));
     }
 }
 ```
 
 ## Логика торговли
 
-- Сигнал на покупку: бычья свеча (цена закрытия выше цены открытия) при отсутствии длинной позиции
-- Сигнал на продажу: медвежья свеча (цена закрытия ниже цены открытия) при отсутствии короткой позиции
+- **Сигнал на покупку**: бычья свеча (цена закрытия выше цены открытия) при отсутствии длинной позиции
+- **Сигнал на продажу**: медвежья свеча (цена закрытия ниже цены открытия) при отсутствии короткой позиции
 - Объем позиции увеличивается на величину текущей позиции при каждой новой сделке
 
 ## Особенности
 
-- Стратегия работает с завершенными свечами
-- Использует рыночные ордера для входа в позицию
-- Применяет простую логику определения тренда на основе одной свечи
+- Стратегия автоматически определяет инструменты для работы через метод `GetWorkingSecurities()`
+- Стратегия работает только с завершенными свечами
+- Стратегия использует рыночные ордера для входа в позицию
+- Стратегия применяет простую логику определения тренда на основе одной свечи
+- Свечи и сделки визуализируются на графике при наличии графической области

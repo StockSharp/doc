@@ -2,100 +2,104 @@
 
 ## Обзор
 
-`BollingerStrategyClassicStrategy` - это стратегия, основанная на индикаторе Bollinger Bands. Она открывает позиции при достижении ценой верхней или нижней границы полос Боллинджера.
+`BollingerStrategyClassicStrategy` - это стратегия, основанная на индикаторе [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands). Она открывает позиции при достижении ценой верхней или нижней границы полос Боллинджера.
 
 ## Основные компоненты
 
-```cs
-// Основные компоненты
-internal class BollingerStrategyClassicStrategy : Strategy
-{
-    private readonly Subscription _subscription;
+Стратегия наследуется от [Strategy](xref:StockSharp.Algo.Strategies.Strategy) и использует параметры для настройки:
 
-    public BollingerBands BollingerBands { get; set; }
+```cs
+public class BollingerStrategyClassicStrategy : Strategy
+{
+    private readonly StrategyParam<int> _bollingerLength;
+    private readonly StrategyParam<decimal> _bollingerDeviation;
+    private readonly StrategyParam<DataType> _candleType;
+
+    private BollingerBands _bollingerBands;
 }
 ```
 
-## Конструктор
+## Параметры стратегии
 
-Конструктор принимает [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) для инициализации стратегии.
+Стратегия позволяет настраивать следующие параметры:
 
-```cs
-// Конструктор
-public BollingerStrategyClassicStrategy(CandleSeries series)
-{
-    _subscription = new(series);
-}
-```
+- **BollingerLength** - период индикатора Bollinger Bands (по умолчанию 20)
+- **BollingerDeviation** - множитель стандартного отклонения (по умолчанию 2.0)
+- **CandleType** - тип свечей для работы (по умолчанию 5-минутные)
 
-## Методы
+Все параметры доступны для оптимизации с указанными диапазонами значений.
 
-### OnStarted
+## Инициализация стратегии
 
-Вызывается при запуске стратегии:
-
-- Подписывается на завершение формирования свечей
-- Инициализирует обработку свечей
+В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) создается индикатор Bollinger Bands, настраивается подписка на свечи и готовится визуализация на графике:
 
 ```cs
-// Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    this.WhenCandlesFinished(_subscription).Do(ProcessCandle).Apply(this);
-    Subscribe(_subscription);
     base.OnStarted(time);
-}
-```
 
-### IsRealTime
-
-Проверяет, является ли свеча "реальной" (недавно закрытой):
-
-```cs
-// Метод IsRealTime
-private bool IsRealTime(ICandleMessage candle)
-{
-    return (CurrentTime - candle.CloseTime).TotalSeconds < 10;
-}
-```
-
-### ProcessCandle
-
-Основной метод обработки каждой завершенной свечи:
-
-1. Обрабатывает свечу индикатором Bollinger Bands
-2. Проверяет, сформирован ли индикатор
-3. Проверяет режим работы (бэктестинг или реальное время)
-4. Принимает решение об открытии позиции на основе положения цены закрытия относительно полос Боллинджера
-
-```cs
-// Метод ProcessCandle
-private void ProcessCandle(ICandleMessage candle)
-{
-    BollingerBands.Process(candle);
-
-    if (!BollingerBands.IsFormed) return;
-    if (!IsBacktesting && !IsRealTime(candle)) return;
-
-    if (candle.ClosePrice >= BollingerBands.UpBand.GetCurrentValue() && Position >= 0)
+    // Создание индикатора
+    _bollingerBands = new BollingerBands
     {
-        RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
+        Length = BollingerLength,
+        Width = BollingerDeviation
+    };
+
+    // Создание подписки и привязка индикатора
+    var subscription = SubscribeCandles(CandleType);
+    subscription
+        .Bind(_bollingerBands, ProcessCandle)
+        .Start();
+
+    // Настройка визуализации на графике
+    var area = CreateChartArea();
+    if (area != null)
+    {
+        DrawCandles(area, subscription);
+        DrawIndicator(area, _bollingerBands, System.Drawing.Color.Purple);
+        DrawOwnTrades(area);
     }
-    else if (candle.ClosePrice <= BollingerBands.LowBand.GetCurrentValue() && Position <= 0)
+}
+```
+
+## Обработка свечей
+
+Метод `ProcessCandle` вызывается для каждой завершенной свечи и реализует торговую логику:
+
+```cs
+private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
+{
+    // Пропускаем незавершенные свечи
+    if (candle.State != CandleStates.Finished)
+        return;
+
+    // Проверяем готовность стратегии к торговле
+    if (!IsFormedAndOnlineAndAllowTrading())
+        return;
+
+    // Торговая логика:
+    // Продажа, когда цена достигает или превышает верхнюю полосу
+    if (candle.ClosePrice >= upperBand && Position >= 0)
     {
-        RegisterOrder(this.BuyAtMarket(Volume + Math.Abs(Position)));
+        SellMarket(Volume + Math.Abs(Position));
+    }
+    // Покупка, когда цена достигает или опускается ниже нижней полосы
+    else if (candle.ClosePrice <= lowerBand && Position <= 0)
+    {
+        BuyMarket(Volume + Math.Abs(Position));
     }
 }
 ```
 
 ## Логика торговли
 
-- Сигнал на продажу: цена закрытия свечи достигает или превышает верхнюю полосу Боллинджера при отсутствии короткой позиции
-- Сигнал на покупку: цена закрытия свечи достигает или опускается ниже нижней полосы Боллинджера при отсутствии длинной позиции
+- **Сигнал на продажу**: цена закрытия свечи достигает или превышает верхнюю полосу Боллинджера при отсутствии короткой позиции
+- **Сигнал на покупку**: цена закрытия свечи достигает или опускается ниже нижней полосы Боллинджера при отсутствии длинной позиции
 - Объем позиции увеличивается на величину текущей позиции при каждой новой сделке
 
 ## Особенности
 
-- Стратегия работает как с историческими данными, так и в режиме реального времени
-- Использует индикатор Bollinger Bands для определения моментов входа в рынок
-- Применяет проверку на "реальность" свечи в режиме реального времени
+- Стратегия автоматически определяет инструменты для работы через метод `GetWorkingSecurities()`
+- Стратегия работает только с завершенными свечами
+- Индикатор и сделки визуализируются на графике при наличии графической области
+- Поддерживается оптимизация параметров для поиска оптимальных настроек стратегии

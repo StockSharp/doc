@@ -17,26 +17,29 @@ public class SimpleRulesUntilStrategy : Strategy
 
 Вызывается при запуске стратегии:
 
-- Подписывается на сделки и стакан
+- Создает подписки на тики и стакан
 - Создает правило, которое выполняется при получении данных стакана до достижения определенного условия
 
 ```cs
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    var tickSub = this.SubscribeTrades(Security);
-
-    var mdSub = this.SubscribeMarketDepth(Security);
+    var tickSub = new Subscription(DataType.Ticks, Security);
+    var mdSub = new Subscription(DataType.MarketDepth, Security);
 
     var i = 0;
     mdSub.WhenOrderBookReceived(this).Do(depth =>
     {
         i++;
-        this.AddInfoLog($"The rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-        this.AddInfoLog($"The rule WhenOrderBookReceived i={i}");
+        LogInfo($"The rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+        LogInfo($"The rule WhenOrderBookReceived i={i}");
     })
     .Until(() => i >= 10)
     .Apply(this);
+
+    // Sending requests for subscribe to market data.
+    Subscribe(tickSub);
+    Subscribe(mdSub);
 
     base.OnStarted(time);
 }
@@ -44,17 +47,18 @@ protected override void OnStarted(DateTimeOffset time)
 
 ## Логика работы
 
-- При запуске стратегия подписывается на сделки и стакан
+- При запуске стратегия создает подписки на тики и стакан
 - Создается правило, которое срабатывает при каждом получении данных стакана
 - При срабатывании правила:
   - Увеличивается счетчик `i`
   - В лог добавляется информация о лучших ценах bid и ask
   - В лог добавляется текущее значение счетчика `i`
 - Правило выполняется до тех пор, пока значение счетчика `i` не достигнет или не превысит 10
+- После выполнения условия правило автоматически прекращает действовать
 
 ## Особенности
 
 - Демонстрирует использование метода `Until()` для ограничения выполнения правила
 - Использует подписку на сделки и стакан
-- Показывает пример логирования информации о стакане и состоянии счетчика
+- Показывает пример логирования информации о стакане и состоянии счетчика через метод `LogInfo`
 - Иллюстрирует, как можно ограничить количество выполнений правила на основе определенного условия
