@@ -14,7 +14,7 @@
 
 ```cs
 // Создаем подписку на тиковые сделки
-var tickSubscription = new [Subscription](xref:StockSharp.BusinessEntities.Subscription)([DataType](xref:StockSharp.Messages.DataType).[Ticks](xref:StockSharp.Messages.DataType.Ticks), security);
+var tickSubscription = new Subscription(DataType.Ticks, security);
 _connector.Subscribe(tickSubscription);
 ```
 
@@ -22,7 +22,7 @@ _connector.Subscribe(tickSubscription);
 
 ```cs
 // Создаем подписку на стаканы
-var depthSubscription = new [Subscription](xref:StockSharp.BusinessEntities.Subscription)([DataType](xref:StockSharp.Messages.DataType).[MarketDepth](xref:StockSharp.Messages.DataType.MarketDepth), security);
+var depthSubscription = new Subscription(DataType.MarketDepth, security);
 _connector.Subscribe(depthSubscription);
 ```
 
@@ -35,7 +35,7 @@ _connector.Subscribe(depthSubscription);
 var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId());
 
 // Отправляем сообщение о подписке на генератор
-_connector.[MarketDataAdapter](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketDataAdapter).SendInMessage(new [GeneratorMessage](xref:StockSharp.Messages.GeneratorMessage)
+_connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
     IsSubscribe = true,
     Generator = mdGenerator
@@ -57,7 +57,7 @@ mdGenerator.MaxAsksDepth = 1;
 mdGenerator.MaxBidsDepth = 1;
 ```
 
-- Для получения реалистичного объема уровня в стакане можно использовать опцию [MarketDepthGenerator.UseTradeVolume](xref:StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume), при этом объемы у [MarketDepth.BestBid](xref:StockSharp.BusinessEntities.MarketDepth.BestBid) и [MarketDepth.BestAsk](xref:StockSharp.BusinessEntities.MarketDepth.BestAsk) будут браться из объема сделки, по которой идет генерация:
+- Для получения реалистичного объема уровня в стакане можно использовать опцию [MarketDepthGenerator.UseTradeVolume](xref:StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume), при этом объемы у лучших котировок будут браться из объема сделки, по которой идет генерация:
 
 ```cs
 mdGenerator.UseTradeVolume = true;
@@ -70,7 +70,7 @@ mdGenerator.MinVolume = 1;
 mdGenerator.MaxVolume = 1;
 ```
 
-- Настройка спреда - минимальный генерируемый спред равен [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep). Рекомендуется не генерировать спред между [MarketDepth.BestBid](xref:StockSharp.BusinessEntities.MarketDepth.BestBid) и [MarketDepth.BestAsk](xref:StockSharp.BusinessEntities.MarketDepth.BestAsk) больше чем 5 шагов цены, чтобы при генерации из свечей не получалось слишком широкого спреда:
+- Настройка спреда - минимальный генерируемый спред равен [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep). Рекомендуется не генерировать спред между лучшими котировками больше чем 5 шагов цены, чтобы при генерации из свечей не получалось слишком широкого спреда:
 
 ```cs
 mdGenerator.MinSpreadStepCount = 1;
@@ -81,12 +81,12 @@ mdGenerator.MaxSpreadStepCount = 5;
 
 ```cs
 // Создаем историческое подключение
-var connector = new [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector)();
+var connector = new HistoryEmulationConnector();
 
 // Настраиваем основные параметры
 connector.MarketTimeChangedInterval = TimeSpan.FromSeconds(10);
-connector.[EmulationAdapter](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.EmulationAdapter).Emulator.Settings.Latency = TimeSpan.FromMilliseconds(100);
-connector.[EmulationAdapter](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.EmulationAdapter).Emulator.Settings.MatchOnTouch = false;
+connector.EmulationAdapter.Emulator.Settings.Latency = TimeSpan.FromMilliseconds(100);
+connector.EmulationAdapter.Emulator.Settings.MatchOnTouch = false;
 
 // Загружаем исторические данные
 var storage = new StorageRegistry();
@@ -111,16 +111,16 @@ var tickSubscription = new Subscription(DataType.Ticks, security);
 connector.Subscribe(tickSubscription);
 
 // Настраиваем генерацию стаканов
-var mdGenerator = new [TrendMarketDepthGenerator](xref:StockSharp.Algo.Testing.TrendMarketDepthGenerator)(security.ToSecurityId())
+var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId())
 {
-    [Interval](xref:StockSharp.Algo.Testing.MarketDataGenerator.Interval) = TimeSpan.FromSeconds(1),
-    [MaxAsksDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth) = 5,
-    [MaxBidsDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth) = 5,
-    [UseTradeVolume](xref:StockSharp.Algo.Testing.MarketDepthGenerator.UseTradeVolume) = true,
-    [MinVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MinVolume) = 1,
-    [MaxVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume) = 100,
-    [MinSpreadStepCount](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MinSpreadStepCount) = 1,
-    [MaxSpreadStepCount](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxSpreadStepCount) = 5
+    Interval = TimeSpan.FromSeconds(1),
+    MaxAsksDepth = 5,
+    MaxBidsDepth = 5,
+    UseTradeVolume = true,
+    MinVolume = 1,
+    MaxVolume = 100,
+    MinSpreadStepCount = 1,
+    MaxSpreadStepCount = 5
 };
 
 connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
@@ -130,32 +130,70 @@ connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 });
 
 // Подписываемся на получение данных
-connector.[CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) += OnCandleReceived;
-connector.[TickTradeReceived](xref:StockSharp.Algo.Connector.TickTradeReceived) += OnTickReceived;
-connector.[OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) += OnDepthReceived;
+connector.CandleReceived += OnCandleReceived;
+connector.TickTradeReceived += OnTickReceived;
+connector.OrderBookReceived += OnOrderBookReceived;
 
 // Запускаем тестирование
 connector.Connect();
 ```
 
-// Обработка событий
+## Обработка событий
 
 ```cs
-private void OnCandleReceived([Subscription](xref:StockSharp.BusinessEntities.Subscription) subscription, [ICandleMessage](xref:StockSharp.Messages.ICandleMessage) candle)
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
     // Обработка полученных свечей
     Console.WriteLine($"Свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
-private void OnTickReceived([Subscription](xref:StockSharp.BusinessEntities.Subscription) subscription, [ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage) tick)
+private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
     // Обработка полученных тиков
     Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
 }
 
-private void OnDepthReceived([Subscription](xref:StockSharp.BusinessEntities.Subscription) subscription, [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) depth)
+private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
+    // Используем методы расширения для IOrderBookMessage
+    var bestBid = orderBook.GetBestBid();
+    var bestAsk = orderBook.GetBestAsk();
+    var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
+    
     // Обработка полученных стаканов
-    Console.WriteLine($"Стакан: {depth.ServerTime}, Лучшая покупка: {depth.GetBestBid()?.Price}, Лучшая продажа: {depth.GetBestAsk()?.Price}");
+    Console.WriteLine($"Стакан: {orderBook.ServerTime}, Лучшая покупка: {bestBid?.Price}, Лучшая продажа: {bestAsk?.Price}, Середина спреда: {spreadMiddle}");
+    
+    // Получение цены по стороне заявки
+    var bidPrice = orderBook.GetPrice(Sides.Buy);
+    var askPrice = orderBook.GetPrice(Sides.Sell);
+    
+    Console.WriteLine($"Цена покупки: {bidPrice}, Цена продажи: {askPrice}");
 }
 ```
+
+## Работа с данными стакана
+
+При работе со стаканами в виде IOrderBookMessage можно использовать следующие методы расширения:
+
+```cs
+// Получение лучшей заявки на покупку
+var bestBid = orderBook.GetBestBid();
+
+// Получение лучшей заявки на продажу
+var bestAsk = orderBook.GetBestAsk();
+
+// Получение середины спреда
+var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
+
+// Получение цены по стороне заявки
+var price = orderBook.GetPrice(Sides.Buy); // или Sides.Sell, или null для середины спреда
+```
+
+При работе с данными Level1 также можно получить середину спреда:
+
+```cs
+// Получение середины спреда из сообщения Level1
+var spreadMiddle = level1.GetSpreadMiddle(Security.PriceStep);
+```
+
+Эти методы расширения упрощают доступ к данным стакана и позволяют писать более чистый и понятный код при работе с биржевыми котировками.

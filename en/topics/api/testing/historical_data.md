@@ -3,11 +3,11 @@
 Testing on historical data allows both market analysis to find patterns and [strategy parameter optimization](optimization.md). The main work is performed by the [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) class, which retrieves data stored in a local repository through a special [API](../market_data_storage/api.md). Additional parameters are described in the [testing settings](extended_settings.md) section.
 
 Testing can be performed using various types of market data:
-- Tick trades ([Trade](xref:StockSharp.BusinessEntities.Trade))
-- Order books ([MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth))
+- Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
+- Order books ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Candles of different timeframes
-- Order log
-- Level1 (best bid and ask prices)
+- [OderLog](xref:StockSharp.Messages.IOderLogMessage)
+- [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (best bid and ask prices)
 - Combinations of different data types
 
 If there are no saved order books for the testing period, they can be generated based on trades using [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) or reconstructed from the order log using [OrderLogMarketDepthBuilder](xref:StockSharp.Algo.Testing.OrderLogMarketDepthBuilder).

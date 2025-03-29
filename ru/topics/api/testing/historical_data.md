@@ -3,11 +3,11 @@
 Тестирование на исторических данных позволяет проводить как анализ рынка для поиска закономерностей, так и [оптимизацию параметров стратегии](optimization.md). Основную работу при этом выполняет класс [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), который получает сохраненные в локальном хранилище данные через специальный [API](../market_data_storage/api.md). Дополнительные параметры описаны в разделе [настройки тестирования](extended_settings.md).
 
 Тестирование может выполняться по различным типам маркет-данных:
-- Тиковые сделки ([Trade](xref:StockSharp.BusinessEntities.Trade))
-- Стаканы ([MarketDepth](xref:StockSharp.BusinessEntities.MarketDepth))
+- Тиковые сделки ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
+- Стаканы ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Свечи разных таймфреймов
-- Ордерлог (лог заявок)
-- Level1 (лучшие цены спроса и предложения)
+- [OderLog](xref:StockSharp.Messages.IOderLogMessage) (лог заявок)
+- [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (лучшие цены спроса и предложения)
 - Комбинации различных типов данных
 
 Если на период тестирования отсутствуют сохраненные стаканы, они могут быть сгенерированы на основе сделок с помощью [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) или восстановлены из ордерлога с помощью [OrderLogMarketDepthBuilder](xref:StockSharp.Algo.Testing.OrderLogMarketDepthBuilder).

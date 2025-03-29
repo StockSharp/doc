@@ -1975,8 +1975,6 @@
       href: api/options/volatility_trading.md
     - name: Delta hedging
       href: api/options/delta_hedging.md
-    - name: Synthetics
-      href: api/options/synthetics.md
     - name: Graphic components
       href: api/options/graphic_components.md
   - name: Testing

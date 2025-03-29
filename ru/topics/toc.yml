@@ -2112,8 +2112,6 @@
       href: api/options/volatility_trading.md
     - name: Дельта-хеджирование
       href: api/options/delta_hedging.md
-    - name: Синтетика
-      href: api/options/synthetics.md
     - name: Графические компоненты для опционов
       href: api/options/graphic_components.md
   - name: Тестирование
