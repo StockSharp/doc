@@ -2,190 +2,318 @@
 
 [S\#](../api.md) supports the following types:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) \- candle based on timeframe. You can set both popular intervals (minute, hour, day), and customized. For example, 21 seconds, 4.5 minutes, etc. 
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) \- price range candle. A new candle is created when a trade appears with a price that is out of range. An allowable range is formed each time based on the price of the first trade. 
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) \- a candle is created until the total volume of trades is exceeded. If the new trade exceeds the permissible volume, then it falls into the new candle already. 
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) \- is the same as [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), only the number of trades is taken as a restriction instead of volume. 
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) \- a candle of the point\-and\-figure chart (tic\-tac\-toe chart). 
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) \- Renko candle. 
+- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) - a candle based on a time interval, timeframe. You can set both popular intervals (minutes, hours, daily) and customized ones. For example, 21 seconds, 4.5 minutes, etc.
+- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) - a price range candle. A new candle is created when a trade appears with a price that exceeds the acceptable limits. The acceptable limit is formed each time based on the price of the first trade.
+- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) - a candle is formed until the total volume of trades exceeds a specified limit. If a new trade exceeds the allowable volume, it is included in a new candle.
+- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) - the same as [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), but the number of trades is used as a limitation instead of volume.
+- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) - a point-and-figure chart candle (X-O chart).
+- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) - Renko candle.
 
-How to work with candles is shown in the SampleConnection example, which is located in the *Samples\/Common\/SampleConnection*.
+How to work with candles is shown in the SampleConnection example, which is located in the *Samples\/Common\/SampleConnection* folder.
 
-The following figures show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) and [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) charts:
+The following images show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) and [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) charts:
 
 ![sample timeframecandles](../../images/sample_timeframecandles.png)
 
 ![sample rangecandles](../../images/sample_rangecandles.png)
 
-## Start getting data
+## Starting Data Retrieval
 
-1. 1. Create a series of [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) candles: 
+1. To get candles, create a subscription using the [Subscription](xref:StockSharp.BusinessEntities.Subscription) class:
 
-   ```cs
-   ...
-   _candleSeries = new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
-   ...		
-   					
-   ```
-2. All the necessary methods for getting candles are implemented in the [Connector](xref:StockSharp.Algo.Connector) class.
+```cs
+// Create a subscription to 5-minute candles
+var subscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Data type with timeframe specification
+    security)  // Instrument
+{
+    // Configure additional parameters through the MarketData property
+    MarketData = 
+    {
+        // Period for which we request historical data (last 30 days)
+        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+        To = DateTime.Now
+    }
+};
+```
 
-   To get candles, you need to subscribe to the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing), event, which signals the appearance of a new value for processing:
+2. To receive candles, subscribe to the [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) event, which signals the appearance of a new value for processing:
 
-   ```cs
-   _connector.CandleSeriesProcessing += Connector_CandleSeriesProcessing;
-   ...
-   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
-   {
-   	Chart.Draw(_candleElement, candle);
-   }
-   ...
-   					
-   ```
+```cs
+// Subscribe to the candle reception event
+_connector.CandleReceived += OnCandleReceived;
 
-   > [!TIP]
-   > To display the candles, the [Chart](xref:StockSharp.Xaml.Charting.Chart) graphic component is used. 
-3. Next, pass the created candle series to the connector and start getting data through [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription))**(**[StockSharp.BusinessEntities.Subscription](xref:StockSharp.BusinessEntities.Subscription) subscription **)**:
+// Candle reception event handler
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Here subscription is the subscription object we created
+    // candle - the received candle
+    
+    // Check if the candle belongs to our subscription
+    if (subscription == _candleSubscription)
+    {
+        // Draw the candle on the chart
+        Chart.Draw(_candleElement, candle);
+    }
+}
+```
 
-   ```cs
-   ...
-   _connector.Subscribe(_candleSeries);
-   ...
-   		
-   					
-   ```
+> [!TIP]
+> The [Chart](xref:StockSharp.Xaml.Charting.Chart) graphical component is used to display candles.
 
-   After this stage, the [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event will be raised.
-4. The [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) event is raised not only when a new candle appears, but also when the current one changes.
+3. Next, start the subscription through the [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)) method:
 
-   If you want to display only **"whole"** candles, then you need to check the [Candle.State](xref:StockSharp.Algo.Candles.Candle.State) property of the arrived candle:
+```cs
+// Start the subscription
+_connector.Subscribe(subscription);
+```
 
-   ```cs
-   ...
-   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
-   {
-       if (candle.State == CandleStates.Finished) 
-       {
-          var chartData = new ChartDrawData();
-          chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-          Chart.Draw(chartData);
-       }
-   }
-   ...
-   		
-   ```
-5. You can set some properties for [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries):
-   - [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) sets the mode of building candles. By default, [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild) is specified, which means that finished data will be requested, or built from the data type specified in the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property. You can also set [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) to request only finished data. Or [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), for building from the data type specified in the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property without requesting the finished data. 
-   - When building candles, you need to set the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), property, which indicates which data type is used as a source ([MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDataTypes.MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) and etc. ). 
-   - For some data types, you need to additionally specify the [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), property from which the data will be built. For example, for [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) , you can specify [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), , which means that candles will be built from the [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) property of [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) data. 
-6. Let's consider a few examples of building different candle types:
-   - Since most sources provide candles with standard timeframes, it’s enough to set the type and timeframe to get such candles: 
+After this, the [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) event will begin to be called.
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
-     					
-     ```
-   - If you just want to load the finished candles, then you need to set the [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property in [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
+4. The [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) event is called not only when a new candle appears but also when the current one changes.
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Load,
-     };	
-     					
-     ```
-   - If the source does not provide the necessary timeframe candles, then they can be built from other market data. Below is an example of building candles with a timeframe of 21 seconds from trades: 
+If you need to display only **"complete"** candles, you need to check the [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) property of the received candle:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };	
-     					
-     ```
-   - If the data source provides neither candles nor trades, candles can be built from the market depth spread: 
+```cs
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Check if the candle belongs to our subscription
+    if (subscription != _candleSubscription)
+        return;
+    
+    // Check if the candle is completed
+    if (candle.State == CandleStates.Finished) 
+    {
+        // Create data for drawing
+        var chartData = new ChartDrawData();
+        chartData.Group(candle.OpenTime).Add(_candleElement, candle);
+        
+        // Draw the candle on the chart
+        this.GuiAsync(() => Chart.Draw(chartData));
+    }
+}
+```
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
-     	BuildCandlesField = Level1Fields.SpreadMiddle,
-     };	
-     					
-     ```
-   - Since there are no sources providing a ready **volume profile**, it also needs to be built from another data type. To draw a **volume profile**, you need to set the [CandleSeries.IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) property to 'true', as well as [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) to [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). And specify the data type from which the **volume profile** will be built. In this case, it's [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
+5. Additional parameters can be configured for the subscription:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-         IsCalcVolumeProfile = true,
-     };	
-     					
-     ```
-   - o Since most data sources do not provide finished candles, except for [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), , other candle types are built similarly to the **volume profile**. You need to set the [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) property to [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) or [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). Also set the [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) property and the [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) property, if necessary. 
+- **Candle building mode** - determines whether ready-made data will be requested or built from another data type:
 
-     The following code shows building a [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) with a volume of 1000 contracts. The middle of the market depth spread is used as the data source for building.
+```cs
+// Request only ready-made data
+subscription.MarketData.BuildMode = MarketDataBuildModes.Load;
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(VolumeCandle), security, 1000m)
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
-     	BuildCandlesField = Level1Fields.SpreadMiddle,
-     };
-     					
-     ```
-   - The following code shows building a [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) of 1000 trades. Trades are used as a data source for building.
+// Only build from another data type
+subscription.MarketData.BuildMode = MarketDataBuildModes.Build;
 
-     ```cs
-     	   
-     _candleSeries = new CandleSeries(typeof(TickCandle), security, 1000)
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };
-     					
-     ```
-   - The following code shows building a [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) with a range of 0.1 c.u. The best buy of a market depth is used as a data source for building:
+// Request ready-made data, and if not available - build
+subscription.MarketData.BuildMode = MarketDataBuildModes.LoadAndBuild;
+```
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom = MarketDataTypes.MarketDepth,
-         BuildCandlesField = Level1Fields.BestBid,
-     };
-     					
-     ```
-   - The following code shows the building [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle). The price of the last trade from Level1 is used as a data source for building:
+- **Source for building candles** - indicates from which data type to build candles if they are not directly available:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom = MarketDataTypes.Level1,
-         BuildCandlesField = Level1Fields.LastTradePrice,
-     };
-     					
-     ```
-   - The following code shows the building [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle). Trades are used as a data source for building.
+```cs
+// Building candles from tick trades
+subscription.MarketData.BuildFrom = DataType.Ticks;
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize = 0.1m, ReversalAmount =1})
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };	
-     					
-     ```
+// Building candles from order books
+subscription.MarketData.BuildFrom = DataType.MarketDepth;
 
-## Recommended content
+// Building candles from Level1
+subscription.MarketData.BuildFrom = DataType.Level1;
+```
+
+- **Field for building candles** - must be specified for certain data types:
+
+```cs
+// Building candles from the best bid price in Level1
+subscription.MarketData.BuildField = Level1Fields.BestBidPrice;
+
+// Building candles from the best ask price in Level1
+subscription.MarketData.BuildField = Level1Fields.BestAskPrice;
+
+// Building candles from the middle of the spread in the order book
+subscription.MarketData.BuildField = Level1Fields.SpreadMiddle;
+```
+
+- **Volume profile** - calculation of volume profile for candles:
+
+```cs
+// Enable volume profile calculation
+subscription.MarketData.IsCalcVolumeProfile = true;
+```
+
+## Examples of Subscriptions to Different Candle Types
+
+### Candles with Standard Timeframe
+
+```cs
+// 5-minute candles
+var timeFrameSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security);
+_connector.Subscribe(timeFrameSubscription);
+```
+
+### Loading Only Historical Candles
+
+```cs
+// Loading only historical candles without transitioning to real-time
+var historicalSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security)
+{
+    MarketData =
+    {
+        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+        To = DateTime.Today,  // Specify end date
+        BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
+    }
+};
+_connector.Subscribe(historicalSubscription);
+```
+
+### Building Non-Standard Timeframe Candles from Ticks
+
+```cs
+// Candles with a 21-second timeframe, built from ticks
+var customTimeFrameSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromSeconds(21)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(customTimeFrameSubscription);
+```
+
+### Building Candles from Order Book Data
+
+```cs
+// Candles built from the middle of the spread in the order book
+var depthBasedSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.MarketDepth,
+        BuildField = Level1Fields.SpreadMiddle
+    }
+};
+_connector.Subscribe(depthBasedSubscription);
+```
+
+### Candles with Volume Profile
+
+```cs
+// 5-minute candles with volume profile calculation
+var volumeProfileSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.LoadAndBuild,
+        BuildFrom = DataType.Ticks,
+        IsCalcVolumeProfile = true
+    }
+};
+_connector.Subscribe(volumeProfileSubscription);
+```
+
+### Volume Candles
+
+```cs
+// Volume candles (each candle contains 1000 contracts in volume)
+var volumeCandleSubscription = new Subscription(
+    DataType.Volume(1000m),  // Specify candle type and volume
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(volumeCandleSubscription);
+```
+
+### Tick Count Candles
+
+```cs
+// Tick count candles (each candle contains 1000 trades)
+var tickCandleSubscription = new Subscription(
+    DataType.Tick(1000),  // Specify candle type and number of trades
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(tickCandleSubscription);
+```
+
+### Price Range Candles
+
+```cs
+// Price range candles with a range of 0.1 units
+var rangeCandleSubscription = new Subscription(
+    DataType.Range(0.1m),  // Specify candle type and price range
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(rangeCandleSubscription);
+```
+
+### Renko Candles
+
+```cs
+// Renko candles with a step of 0.1
+var renkoCandleSubscription = new Subscription(
+    DataType.Renko(0.1m),  // Specify candle type and block size
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(renkoCandleSubscription);
+```
+
+### Point and Figure Candles (P&F)
+
+```cs
+// Point and Figure candles
+var pnfCandleSubscription = new Subscription(
+    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify PnF parameters
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(pnfCandleSubscription);
+```
+
+## Next Steps
 
 [Chart](candles/chart.md)
 
 [Patterns](candles/patterns.md)
 
-[Custom type of candle](candles/custom_type_of_candle.md)
+[Custom Candle Type](candles/custom_type_of_candle.md)

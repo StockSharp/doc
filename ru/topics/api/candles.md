@@ -2,12 +2,12 @@
 
 [S\#](../api.md) поддерживает следующие виды:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) \- свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) \- свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) \- свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) \- то же самое, что и [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), только в качестве ограничения вместо объема берется количество сделок. 
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) \- свеча пункто\-цифрового графика (график крестики\-нолики). 
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) \- Рэнко свеча. 
+- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) - свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
+- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) - свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
+- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) - свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
+- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) - то же самое, что и [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), только в качестве ограничения вместо объема берется количество сделок. 
+- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) - свеча пункто-цифрового графика (график крестики-нолики). 
+- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) - Рэнко свеча. 
 
 Как работать со свечами, показано в примере SampleConnection, который расположен в папке *Samples\/Common\/SampleConnection*.
 
@@ -19,168 +19,296 @@
 
 ## Запуск получения данных
 
-1. Создадим серию свечей [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries): 
+1. Для получения свечей создаем подписку с использованием класса [Subscription](xref:StockSharp.BusinessEntities.Subscription): 
 
-   ```cs
-   ...
-   _candleSeries = new CandleSeries(CandleSettingsEditor.Settings.CandleType, security, CandleSettingsEditor.Settings.Arg);
-   ...		
-   					
-   ```
-2. Все необходимые методы для получения свечей реализованы в классе [Connector](xref:StockSharp.Algo.Connector).
+```cs
+// Создаем подписку на 5-минутные свечи
+var subscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Тип данных с указанием таймфрейма
+    security)  // Инструмент
+{
+    // Настраиваем дополнительные параметры через свойство MarketData
+    MarketData = 
+    {
+        // Период, за который запрашиваем исторические данные (за последние 30 дней)
+        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+        To = DateTime.Now
+    }
+};
+```
 
-   Для получения свечей необходимо подписаться на событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing), сигнализирующее о появлении нового значения для обработки:
+2. Для получения свечей необходимо подписаться на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived), сигнализирующее о появлении нового значения для обработки:
 
-   ```cs
-   _connector.CandleSeriesProcessing += Connector_CandleSeriesProcessing;
-   ...
-   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
-   {
-   	Chart.Draw(_candleElement, candle);
-   }
-   ...
-   					
-   ```
+```cs
+// Подписываемся на событие получения свечей
+_connector.CandleReceived += OnCandleReceived;
 
-   > [!TIP]
-   > Для отображения свечей используется графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). 
-3. Далее передаём в коннектор созданную серию свечей и запускаем получение данных через [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription))**(**[StockSharp.BusinessEntities.Subscription](xref:StockSharp.BusinessEntities.Subscription) subscription **)**:
+// Обработчик события получения свечи
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Здесь subscription - это объект подписки, которую мы создали
+    // candle - полученная свеча
+    
+    // Проверяем, относится ли свеча к нашей подписке
+    if (subscription == _candleSubscription)
+    {
+        // Отрисовываем свечу на графике
+        Chart.Draw(_candleElement, candle);
+    }
+}
+```
 
-   ```cs
-   ...
-   _connector.Subscribe(_candleSeries);
-   ...
-   		
-   					
-   ```
+> [!TIP]
+> Для отображения свечей используется графический компонент [Chart](xref:StockSharp.Xaml.Charting.Chart). 
 
-   После этого этапа начнёт вызываться событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing).
-4. Событии [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) вызывается не только при появлении новой свечи, но и при изменении текущей.
+3. Далее запускаем подписку через метод [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)):
 
-   Если же нужно отображать только **"целые"** свечи, то необходимо проверить свойство [Candle.State](xref:StockSharp.Algo.Candles.Candle.State) пришедшей свечи:
+```cs
+// Запускаем подписку
+_connector.Subscribe(subscription);
+```
 
-   ```cs
-   ...
-   private void Connector_CandleSeriesProcessing(CandleSeries candleSeries, Candle candle)
-   {
-       if (candle.State == CandleStates.Finished) 
-       {
-          var chartData = new ChartDrawData();
-          chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-          Chart.Draw(chartData);
-       }
-   }
-   ...
-   		
-   ```
-5. Для [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) можно задать некоторые свойства:
-   - [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) задает режим построения свечей. По умолчанию задан [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild), что говорит о том, что будут запрошены готовые данные, или построены из заданного в свойстве [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных. Также можно установить [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load) для запроса только готовых данных. Или [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build), для построения из заданного в свойстве [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) типа данных без запроса готовых данных. 
-   - При построении свечей необходимо задать свойство [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom), которое говорит о том, какой именно тип данных используется как источник ([MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1), [MarketDataTypes.MarketDepth](xref:StockSharp.Messages.MarketDataTypes.MarketDepth), [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades) и тд. ). 
-   - Для некоторых типов данных необходимо дополнительно указать свойство [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField), из которого будут построены данные. Например, для [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1) можно указать [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice), что говорт о том, что свечи будут строиться из свойства [Level1Fields.BestAskPrice](xref:StockSharp.Messages.Level1Fields.BestAskPrice) данных [MarketDataTypes.Level1](xref:StockSharp.Messages.MarketDataTypes.Level1). 
-6. Рассмотрим несколько примеров построения разных типов свечей:
-   - Так как большинство источников предоставляют свечи стандартных таймфреймом, то для получения таких свечей достаточно задать тип и таймфрейм: 
+После этого начнет вызываться событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived).
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5));
-     					
-     ```
-   - Если необходимо просто загрузить готовые свечи, то необходимо задать свойство [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Load](xref:StockSharp.Messages.MarketDataBuildModes.Load): 
+4. Событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) вызывается не только при появлении новой свечи, но и при изменении текущей.
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Load,
-     };	
-     					
-     ```
-   - Если источник не предоставляет свечей необходимого таймфрейма, то их можно построить из других маркет данных. Ниже приведен приме построения свечей с таймфреймом 21 секунда из сделок: 
+Если нужно отображать только **"целые"** свечи, то необходимо проверить свойство [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) пришедшей свечи:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };	
-     					
-     ```
-   - Если источник данных не предоставляет ни свечей, ни сделок свечи можно построить из спреда стакана: 
+```cs
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Проверяем, относится ли свеча к нашей подписке
+    if (subscription != _candleSubscription)
+        return;
+    
+    // Проверяем, завершена ли свеча
+    if (candle.State == CandleStates.Finished) 
+    {
+        // Создаем данные для отрисовки
+        var chartData = new ChartDrawData();
+        chartData.Group(candle.OpenTime).Add(_candleElement, candle);
+        
+        // Отрисовываем свечу на графике
+        this.GuiAsync(() => Chart.Draw(chartData));
+    }
+}
+```
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromSeconds(21))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
-     	BuildCandlesField = Level1Fields.SpreadMiddle,
-     };	
-     					
-     ```
-   - Так как не существует источников, предоставляющих готового **профиля объема**, его тоже необходимо строить из другого типа данных. Для прорисовки **профиля объема** необходимо установить свойство [CandleSeries.IsCalcVolumeProfile](xref:StockSharp.Algo.Candles.CandleSeries.IsCalcVolumeProfile) в true, а также [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build). И указать тип данных из которого будет построен **профиль объема**. В данном случае это [MarketDataTypes.Trades](xref:StockSharp.Messages.MarketDataTypes.Trades): 
+5. Для подписки можно настроить дополнительные параметры:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(TimeFrameCandle), security, TimeSpan.FromMinutes(5))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-         IsCalcVolumeProfile = true,
-     };	
-     					
-     ```
-   - Так как большинство источников данных не предоставляют готовые свечей, кроме [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle), то остальные типы свечей строятся аналогично **профилю объема**. Необходимо указать свойство [CandleSeries.BuildCandlesMode](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesMode) в [MarketDataBuildModes.Build](xref:StockSharp.Messages.MarketDataBuildModes.Build) или [MarketDataBuildModes.LoadAndBuild](xref:StockSharp.Messages.MarketDataBuildModes.LoadAndBuild). А также задать свойство [CandleSeries.BuildCandlesFrom](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesFrom) и свойство [CandleSeries.BuildCandlesField](xref:StockSharp.Algo.Candles.CandleSeries.BuildCandlesField) если необходимо. 
+- **Режим построения свечей** - определяет, будут ли запрашиваться готовые данные или строиться из другого типа данных:
 
-     Следующий код демонстрирует построение [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) с объемом в 1000 контрактов. В качестве источника данных для построения используется середина спреда стакана.
+```cs
+// Запрос только готовых данных
+subscription.MarketData.BuildMode = MarketDataBuildModes.Load;
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(VolumeCandle), security, 1000m)
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-     	BuildCandlesFrom = MarketDataTypes.MarketDepth,
-     	BuildCandlesField = Level1Fields.SpreadMiddle,
-     };
-     					
-     ```
-   - Следующий код демонстрирует построение [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) в 1000 сделок. В качестве источника данных для построения используются сделки.
+// Только построение из другого типа данных
+subscription.MarketData.BuildMode = MarketDataBuildModes.Build;
 
-     ```cs
-     	   
-     _candleSeries = new CandleSeries(typeof(TickCandle), security, 1000)
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };
-     					
-     ```
-   - Следующий код демонстрирует построение [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) с диапазоном в 0.1 у.е. В качестве источника данных для построения используется лучшая покупка стакана:
+// Запрос готовых данных, а если их нет - построение
+subscription.MarketData.BuildMode = MarketDataBuildModes.LoadAndBuild;
+```
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(RangeCandle), security, new Unit(0.1m))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom = MarketDataTypes.MarketDepth,
-         BuildCandlesField = Level1Fields.BestBid,
-     };
-     					
-     ```
-   - Следующий код демонстрирует построение [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle). В качестве источника данных для построения используется цена последней сделки из Level1:
+- **Источник для построения свечей** - указывает, из какого типа данных строить свечи, если они не доступны напрямую:
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(RenkoCandle), security, new Unit(0.1m))
-     {
-     	BuildCandlesMode = MarketDataBuildModes.LoadAndBuild,
-         BuildCandlesFrom = MarketDataTypes.Level1,
-         BuildCandlesField = Level1Fields.LastTradePrice,
-     };
-     					
-     ```
-   - Следующий код демонстрирует построение [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle). В качестве источника данных для построения используются сделки.
+```cs
+// Построение свечей из тиковых сделок
+subscription.MarketData.BuildFrom = DataType.Ticks;
 
-     ```cs
-     _candleSeries = new CandleSeries(typeof(PnFCandle), security, new PnFArg() { BoxSize = 0.1m, ReversalAmount =1})
-     {
-     	BuildCandlesMode = MarketDataBuildModes.Build,
-     	BuildCandlesFrom = MarketDataTypes.Trades,
-     };	
-     					
-     ```
+// Построение свечей из стаканов
+subscription.MarketData.BuildFrom = DataType.MarketDepth;
+
+// Построение свечей из Level1
+subscription.MarketData.BuildFrom = DataType.Level1;
+```
+
+- **Поле для построения свечей** - необходимо указать для некоторых типов данных:
+
+```cs
+// Построение свечей из лучшей цены покупки в Level1
+subscription.MarketData.BuildField = Level1Fields.BestBidPrice;
+
+// Построение свечей из лучшей цены продажи в Level1
+subscription.MarketData.BuildField = Level1Fields.BestAskPrice;
+
+// Построение свечей из середины спреда в стакане
+subscription.MarketData.BuildField = Level1Fields.SpreadMiddle;
+```
+
+- **Профиль объема** - расчет профиля объема для свечей:
+
+```cs
+// Включение расчета профиля объема
+subscription.MarketData.IsCalcVolumeProfile = true;
+```
+
+## Примеры подписок на различные типы свечей
+
+### Свечи с обычным таймфреймом
+
+```cs
+// 5-минутные свечи
+var timeFrameSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security);
+_connector.Subscribe(timeFrameSubscription);
+```
+
+### Загрузка только исторических свечей
+
+```cs
+// Загрузка только исторических свечей без перехода в реальное время
+var historicalSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security)
+{
+    MarketData =
+    {
+        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+        To = DateTime.Today,  // Указываем конечную дату
+        BuildMode = MarketDataBuildModes.Load  // Только загрузка готовых данных
+    }
+};
+_connector.Subscribe(historicalSubscription);
+```
+
+### Построение свечей нестандартного таймфрейма из тиков
+
+```cs
+// Свечи с таймфреймом 21 секунда, построенные из тиков
+var customTimeFrameSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromSeconds(21)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(customTimeFrameSubscription);
+```
+
+### Построение свечей из данных стакана
+
+```cs
+// Свечи, построенные из середины спреда стакана
+var depthBasedSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.MarketDepth,
+        BuildField = Level1Fields.SpreadMiddle
+    }
+};
+_connector.Subscribe(depthBasedSubscription);
+```
+
+### Свечи с профилем объема
+
+```cs
+// 5-минутные свечи с расчетом профиля объема
+var volumeProfileSubscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.LoadAndBuild,
+        BuildFrom = DataType.Ticks,
+        IsCalcVolumeProfile = true
+    }
+};
+_connector.Subscribe(volumeProfileSubscription);
+```
+
+### Свечи по объему
+
+```cs
+// Свечи по объему (каждая свеча содержит объем в 1000 контрактов)
+var volumeCandleSubscription = new Subscription(
+    DataType.Volume(1000m),  // Указываем тип свечи и объем
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(volumeCandleSubscription);
+```
+
+### Свечи по количеству сделок
+
+```cs
+// Свечи по количеству сделок (каждая свеча содержит 1000 сделок)
+var tickCandleSubscription = new Subscription(
+    DataType.Tick(1000),  // Указываем тип свечи и количество сделок
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(tickCandleSubscription);
+```
+
+### Свечи с ценовым диапазоном
+
+```cs
+// Свечи с ценовым диапазоном в 0.1 ед.
+var rangeCandleSubscription = new Subscription(
+    DataType.Range(0.1m),  // Указываем тип свечи и диапазон цен
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(rangeCandleSubscription);
+```
+
+### Рэнко свечи
+
+```cs
+// Рэнко свечи с шагом 0.1
+var renkoCandleSubscription = new Subscription(
+    DataType.Renko(0.1m),  // Указываем тип свечи и размер блока
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(renkoCandleSubscription);
+```
+
+### Пункто-цифровые свечи (P&F)
+
+```cs
+// Пункто-цифровые свечи
+var pnfCandleSubscription = new Subscription(
+    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Указываем параметры PnF
+    security)
+{
+    MarketData =
+    {
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks
+    }
+};
+_connector.Subscribe(pnfCandleSubscription);
+```
 
 ## Следующие шаги
 
