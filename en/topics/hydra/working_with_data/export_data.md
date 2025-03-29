@@ -1,6 +1,6 @@
 # Export data
 
-[Hydra](../../hydra.md) allows you to export the received market data in various formats, including [TSLab and MetaStock data formats](export_data/export_into_metastock.md).
+[Hydra](../../hydra.md) allows you to export the received market data in various formats, including [MetaStock data formats](export_data/export_into_metastock.md).
 
 To export data, files in [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin, txt, Json formats or SQL tables are used.
 

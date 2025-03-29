@@ -6,7 +6,7 @@ To export data to MetaStock format files, select the Txt format from the drop\-d
 
 When exporting to text format (Txt) files, a window appears: 
 
-![hydra export TSLab Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
+![hydra export Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
 
 In which you need to specify the export template, where the curly brackets indicate the properties that need to be exported, and their order: 
 
