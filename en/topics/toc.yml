@@ -1526,6 +1526,8 @@
   - name: Instruments
     href: api/instruments.md
     items:
+    - name: Instrument search
+      href: api/instruments/instrument_search.md
     - name: Instrument identifier
       href: api/instruments/instrument_identifier.md
     - name: Identifier *@ALL
@@ -1534,8 +1536,6 @@
       href: api/instruments/continuous_futures.md
     - name: Index
       href: api/instruments/index.md
-    - name: Instrument search
-      href: api/instruments/instrument_search.md
   - name: Market-data storage
     href: api/market_data_storage.md
     items:

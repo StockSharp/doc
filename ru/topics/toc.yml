@@ -1663,6 +1663,8 @@
   - name: Инструменты
     href: api/instruments.md
     items:
+    - name: Поиск инструмента
+      href: api/instruments/instrument_search.md
     - name: Идентификатор инструмента
       href: api/instruments/instrument_identifier.md
     - name: Идентификатор *@ALL
@@ -1671,8 +1673,6 @@
       href: api/instruments/continuous_futures.md
     - name: Индекс
       href: api/instruments/index.md
-    - name: Поиск инструмента
-      href: api/instruments/instrument_search.md
   - name: Хранение данных
     href: api/market_data_storage.md
     items:

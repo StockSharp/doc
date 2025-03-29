@@ -12,15 +12,16 @@
    ```cs
    class CustomSecurityIdGenerator : SecurityIdGenerator
    {
-   	public override string GenerateId(string secCode, ExchangeBoard board)
-   	{
-   		// генерация идентификатора вида CODE--BOARD
-   		return secCode + "--" + board.Code;
-   	}
+      public override string GenerateId(string secCode, ExchangeBoard board)
+      {
+         // генерация идентификатора вида CODE--BOARD
+         return secCode + "--" + board.Code;
+      }
    }
    ```
+
 2. Далее, созданный генератор нужно передать в шлюз: 
 
    ```cs
-   var _connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
+   connector.SecurityIdGenerator = new CustomSecurityIdGenerator();
    ```
