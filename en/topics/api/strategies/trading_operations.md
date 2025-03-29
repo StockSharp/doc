@@ -1,8 +1,8 @@
 # Trading Operations in Strategies
 
-In StockSharp, the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class provides various ways to work with orders for maximum convenience when implementing trading strategies.
+In StockSharp, the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class provides various methods for working with orders, making it convenient to implement trading strategies.
 
-## Methods for Placing Orders
+## Order Placement Methods
 
 There are several ways to place orders in StockSharp strategies:
 
@@ -23,7 +23,7 @@ BuyLimit(price, volume);
 // Sell at limit price
 SellLimit(price, volume);
 
-// Close current position at market price
+// Close the current position at market price
 ClosePosition();
 ```
 
@@ -40,15 +40,15 @@ A more flexible approach is to separate the creation and registration of orders:
 // Create an order object
 var order = CreateOrder(Sides.Buy, price, volume);
 
-// Additional order configuration
+// Additional order settings
 order.Comment = "My special order";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
-// Order registration
+// Register the order
 RegisterOrder(order);
 ```
 
-The [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})) method creates an initialized order object that can be further configured before registration.
+The [CreateOrder](xref:StockSharp.Algo.Strategies.Strategy.CreateOrder(StockSharp.Messages.Sides,System.Decimal,System.Nullable{System.Decimal})) method creates an initialized order object that can be further customized before registration.
 
 ### 3. Direct Creation and Registration of an Order
 
@@ -67,15 +67,15 @@ var order = new Order
     Comment = "Custom order"
 };
 
-// Order registration
+// Register the order
 RegisterOrder(order);
 ```
 
-For more information about working with orders, see the [Orders](../orders_management.md) section.
+For more details on working with orders, see the [Orders](../orders_management.md) section.
 
 ## Handling Order Events
 
-After registering an order, it's important to track its state. To do this in a strategy, you can:
+After registering an order, it's important to track its status. In a strategy, you can:
 
 ### 1. Use Event Handlers
 
@@ -83,14 +83,14 @@ After registering an order, it's important to track its state. To do this in a s
 // Subscribe to the order change event
 OrderChanged += OnOrderChanged;
 
-// Subscribe to the order registration failed event
+// Subscribe to the order registration failure event
 OrderRegisterFailed += OnOrderRegisterFailed;
 
 private void OnOrderChanged(Order order)
 {
     if (order.State == OrderStates.Done)
     {
-        // Order completed - execute corresponding logic
+        // Order executed - perform corresponding logic
     }
 }
 
@@ -131,7 +131,7 @@ order
     .Apply(this);
 ```
 
-Detailed examples of using rules with orders can be found in the [Examples of rules for orders](event_model/samples/rule_order.md) section.
+Detailed examples of using rules with orders can be found in the [Order Rule Examples](event_model/samples/rule_order.md) section.
 
 ## Position Management
 
@@ -144,7 +144,7 @@ decimal currentPosition = Position;
 // Close current position
 ClosePosition();
 
-// Position protection using stop-loss and take-profit
+// Protect position with stop-loss and take-profit
 StartProtection(
     takeProfit: new Unit(50, UnitTypes.Absolute),   // take-profit
     stopLoss: new Unit(20, UnitTypes.Absolute),     // stop-loss
@@ -155,7 +155,7 @@ StartProtection(
 
 ## Strategy State Before Trading
 
-Before performing trading operations, it's important to ensure that the strategy is in a correct state. StockSharp provides several properties and methods to check the readiness of a strategy:
+Before executing trading operations, it's important to ensure that the strategy is in the correct state. StockSharp provides several properties and methods to check the readiness of the strategy:
 
 ### IsFormed Property
 
@@ -165,18 +165,18 @@ More about working with indicators in a strategy can be found in the [Indicators
 
 ### IsOnline Property
 
-The [IsOnline](xref:StockSharp.Algo.Strategies.Strategy.IsOnline) property shows whether the strategy is in real-time mode. It becomes `true` only when the strategy is running and all its market data subscriptions have transitioned to the [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) state.
+The [IsOnline](xref:StockSharp.Algo.Strategies.Strategy.IsOnline) property shows whether the strategy is in real-time mode. It becomes `true` only when the strategy is started and all its market data subscriptions have transitioned to the [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) state.
 
 More details about market data subscriptions in strategies can be found in the [Market Data Subscriptions in Strategies](subscriptions.md) section.
 
 ### TradingMode Property
 
-The [TradingMode](xref:StockSharp.Algo.Strategies.Strategy.TradingMode) property determines the trading mode for the strategy. Possible values:
+The [TradingMode](xref:StockSharp.Algo.Strategies.Strategy.TradingMode) property defines the trading mode for the strategy. Possible values:
 
 - [StrategyTradingModes.Full](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Full) - all trading operations are allowed (default mode)
 - [StrategyTradingModes.Disabled](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Disabled) - trading is completely disabled
 - [StrategyTradingModes.CancelOrdersOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.CancelOrdersOnly) - only order cancellation is allowed
-- [StrategyTradingModes.ReducePositionOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.ReducePositionOnly) - only operations to reduce position are allowed
+- [StrategyTradingModes.ReducePositionOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.ReducePositionOnly) - only position reduction operations are allowed
 
 This property can be configured through strategy parameters:
 
@@ -190,13 +190,52 @@ public SmaStrategy()
 
 ### Helper Methods for State Checking
 
-For convenient checking of a strategy's readiness for trading, StockSharp provides helper methods:
+For convenient checking of the strategy's readiness to trade, StockSharp provides helper methods:
 
 - [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnline) - checks that the strategy is in the state `IsFormed = true` and `IsOnline = true`
 
-- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - checks that the strategy is formed, is in online mode, and has the necessary trading permissions
+- [IsFormedAndOnlineAndAllowTrading(StrategyTradingModes)](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - checks that the strategy is formed, is in online mode, and has the necessary trading permissions
 
-A good practice is to use these methods before performing trading operations:
+The `IsFormedAndOnlineAndAllowTrading` method accepts an optional parameter `required` of type [StrategyTradingModes](xref:StockSharp.Algo.Strategies.StrategyTradingModes):
+
+```cs
+public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = StrategyTradingModes.Full)
+```
+
+This parameter allows you to specify the minimum level of trading permissions required for a specific operation:
+
+1. **StrategyTradingModes.Full** (default value) - returns `true` only if the strategy is in full trading mode (`TradingMode = StrategyTradingModes.Full`). Used for operations that can increase a position.
+
+2. **StrategyTradingModes.ReducePositionOnly** - returns `true` if the strategy is in full trading mode or in position reduction mode only. Used for position closing or partial closing operations.
+
+3. **StrategyTradingModes.CancelOrdersOnly** - returns `true` with any active trading mode (except `Disabled`). Used for order cancellation operations.
+
+This allows you to selectively permit or prohibit various trading operations depending on the current trading mode:
+
+```cs
+// For placing a new order that increases a position, full trading mode is required
+if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
+{
+    // We can place any orders
+    RegisterOrder(CreateOrder(Sides.Buy, price, volume));
+}
+// For closing a position, the position reduction mode is sufficient
+else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly) && Position != 0)
+{
+    // We can only close the position
+    ClosePosition();
+}
+// For cancelling active orders, the order cancellation mode is sufficient
+else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
+{
+    // We can only cancel orders
+    CancelActiveOrders();
+}
+```
+
+Thus, this method allows you to implement a secure access control mechanism for trading functions, where more critical operations (such as opening new positions) require a higher level of permissions, and less critical ones (cancelling orders) are performed even in a limited trading mode.
+
+It's good practice to use these methods before performing trading operations:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -211,9 +250,9 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-## Example of Using Trading Operations in a Strategy
+## Trading Operations Example
 
-Below is an example demonstrating various ways to place orders in a strategy and handle their execution:
+Below is an example demonstrating different ways of placing orders in a strategy and handling their execution:
 
 ```cs
 protected override void OnStarted(DateTimeOffset time)
@@ -236,11 +275,11 @@ protected override void OnStarted(DateTimeOffset time)
 
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Check strategy readiness for trading
+    // Check if the strategy is ready to trade
     if (!this.IsFormedAndOnlineAndAllowTrading())
         return;
     
-    // Example of trading logic based on closing price
+    // Example trading logic based on closing price
     if (candle.ClosePrice > _previousClose * 1.01)
     {
         // Option 1: Using a high-level method
@@ -264,7 +303,7 @@ private void ProcessCandle(ICandleMessage candle)
         var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
         RegisterOrder(order);
         
-        // Alternative way to handle through an event
+        // Alternative way of handling through the event
         OrderChanged += (o) => {
             if (o == order && o.State == OrderStates.Done)
             {
@@ -277,7 +316,7 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-## See also
+## See Also
 
 - [Orders](../orders_management.md)
 - [Order Rules](event_model/samples/rule_order.md)

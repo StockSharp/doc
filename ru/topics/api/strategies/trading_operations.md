@@ -6,8 +6,6 @@
 
 Существует несколько способов выставления заявок в стратегиях StockSharp:
 
-Существует несколько способов выставления заявок в стратегиях StockSharp:
-
 ### 1. Использование высокоуровневых методов
 
 Самый простой способ — использование встроенных методов, которые создают и регистрируют заявку за один вызов:
@@ -198,7 +196,46 @@ public SmaStrategy()
 
 - [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnline) - проверяет, что стратегия находится в состоянии `IsFormed = true` и `IsOnline = true`
 
-- [IsFormedAndOnlineAndAllowTrading()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - проверяет, что стратегия сформирована, находится в онлайн-режиме и имеет необходимые права на торговлю
+- [IsFormedAndOnlineAndAllowTrading(StrategyTradingModes)](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - проверяет, что стратегия сформирована, находится в онлайн-режиме и имеет необходимые права на торговлю
+
+Метод `IsFormedAndOnlineAndAllowTrading` принимает опциональный параметр `required` типа [StrategyTradingModes](xref:StockSharp.Algo.Strategies.StrategyTradingModes):
+
+```cs
+public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = StrategyTradingModes.Full)
+```
+
+Этот параметр позволяет указать минимальный уровень прав на торговлю, необходимый для конкретной операции:
+
+1. **StrategyTradingModes.Full** (значение по умолчанию) - возвращает `true`, только если стратегия находится в режиме полной торговли (`TradingMode = StrategyTradingModes.Full`). Используется для операций, которые могут увеличивать позицию.
+
+2. **StrategyTradingModes.ReducePositionOnly** - возвращает `true`, если стратегия находится в режиме полной торговли или в режиме только уменьшения позиции. Используется для операций закрытия или частичного закрытия позиции.
+
+3. **StrategyTradingModes.CancelOrdersOnly** - возвращает `true` при любом активном режиме торговли (кроме `Disabled`). Используется для операций отмены заявок.
+
+Это позволяет избирательно разрешать или запрещать различные торговые операции в зависимости от текущего режима торговли:
+
+```cs
+// Для выставления новой заявки, увеличивающей позицию, требуется полный режим торговли
+if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
+{
+    // Можем выставлять любые заявки
+    RegisterOrder(CreateOrder(Sides.Buy, price, volume));
+}
+// Для закрытия позиции достаточно режима уменьшения позиции
+else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly) && Position != 0)
+{
+    // Можем только закрывать позицию
+    ClosePosition();
+}
+// Для снятия активных заявок достаточно режима снятия заявок
+else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
+{
+    // Можем только снимать заявки
+    CancelActiveOrders();
+}
+```
+
+Таким образом, данный метод позволяет реализовать безопасный механизм контроля доступа к торговым функциям, при котором более критичные операции (например, открытие новых позиций) требуют более высокого уровня прав, а менее критичные (снятие заявок) выполняются даже при ограниченном режиме торговли.
 
 Хорошей практикой является использование этих методов перед выполнением торговых операций:
 
