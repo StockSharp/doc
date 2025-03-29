@@ -255,17 +255,17 @@ public class DeltaCandleStrategy : Strategy
         // Strategy parameters
         _deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
             .SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
-            .SetValidator(new DecimalGreaterThanZeroAttribute())
+            .SetGreaterThanZero()
             .SetCanOptimize(true)
             .SetOptimize(500m, 2000m, 100m);
 
         _volume = Param(nameof(Volume), 1m)
             .SetDisplay("Order Volume", "Volume for trading operations", "Main Settings")
-            .SetValidator(new DecimalGreaterThanZeroAttribute());
+            .SetGreaterThanZero();
 
         _signalDelta = Param(nameof(SignalDelta), 500m)
             .SetDisplay("Minimum Delta for Signal", "Minimum delta value for signal generation", "Main Settings")
-            .SetValidator(new DecimalGreaterThanZeroAttribute())
+            .SetGreaterThanZero()
             .SetCanOptimize(true);
 
         Name = "DeltaCandleStrategy";

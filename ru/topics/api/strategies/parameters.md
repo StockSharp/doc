@@ -22,7 +22,7 @@ public class SmaStrategy : Strategy
     public SmaStrategy()
     {
         _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Long SMA length", string.Empty, "Base settings");
     }
 }
@@ -45,11 +45,64 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 
 ### SetValidator
 
-Метод [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) устанавливает валидатор для проверки значения параметра:
+Метод [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) устанавливает валидатор для проверки значения параметра. StockSharp предоставляет ряд предопределенных валидаторов, которые можно использовать для наиболее распространенных задач:
 
 ```cs
+// Проверка, что число больше нуля
 _longSmaLength = Param(nameof(LongSmaLength), 80)
                   .SetValidator(new IntGreaterThanZeroAttribute());
+
+// Проверка, что число не отрицательное
+_volume = Param(nameof(Volume), 1)
+           .SetValidator(new DecimalNotNegativeAttribute());
+
+// Проверка на диапазон значений
+_percentage = Param(nameof(Percentage), 50)
+               .SetValidator(new RangeAttribute(0, 100));
+
+// Проверка на обязательное значение
+_security = Param<Security>(nameof(Security))
+             .SetValidator(new RequiredAttribute());
+```
+
+Для удобства в [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) есть встроенные методы для наиболее распространенных валидаторов:
+
+```cs
+// Проверка, что число больше нуля
+_longSmaLength = Param(nameof(LongSmaLength), 80).SetGreaterThanZero();
+
+// Проверка, что число не отрицательное
+_volume = Param(nameof(Volume), 1).SetNotNegative();
+
+// Проверка, что значение NULL или не отрицательное
+_interval = Param<TimeSpan?>(nameof(Interval)).SetNullOrNotNegative();
+
+// Установка диапазона значений
+_percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
+```
+
+Если встроенных валидаторов недостаточно, вы можете создать свой собственный, унаследовав его от [ValidationAttribute](https://docs.microsoft.com/ru-ru/dotnet/api/system.componentmodel.dataannotations.validationattribute):
+
+```cs
+public class EvenNumberAttribute : ValidationAttribute
+{
+    public EvenNumberAttribute()
+        : base("Значение должно быть четным числом.")
+    {
+    }
+
+    public override bool IsValid(object value)
+    {
+        if (value is int intValue)
+            return intValue % 2 == 0;
+        
+        return false;
+    }
+}
+
+// Использование пользовательского валидатора
+_barCount = Param(nameof(BarCount), 10)
+             .SetValidator(new EvenNumberAttribute());
 ```
 
 ### SetHidden
@@ -164,13 +217,13 @@ public class SmaStrategy : Strategy
 
         Param("TypeId", GetType().GetTypeName(false)).SetHidden();
         _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Long SMA length", string.Empty, "Base settings")
                           .SetCanOptimize(true)
                           .SetOptimize(20, 200, 10);
         
         _shortSmaLength = Param(nameof(ShortSmaLength), 30)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Short SMA length", string.Empty, "Base settings")
                           .SetCanOptimize(true)
                           .SetOptimize(5, 50, 5);

@@ -1,8 +1,8 @@
 # Strategy Parameters
 
-For strategy configuration and optimization, StockSharp provides a special class [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Strategy parameters allow you to change trading algorithm settings without modifying the program code, which is especially convenient when switching between testing and live trading modes. Additionally, these parameters are used during optimization to automatically iterate through values and find optimal strategy settings.
+For strategy configuration and optimization, StockSharp provides a special class [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Strategy parameters allow you to modify trading algorithm settings without changing the code, which is particularly convenient when switching between testing and live trading modes. Additionally, these parameters are used during optimization to automatically iterate through values and find optimal strategy settings.
 
-Unlike regular C# properties, parameters created using this class are automatically displayed in visual settings (for example, in Designer) and can be used when optimizing strategies.
+Unlike regular C# properties, parameters created with this class are automatically displayed in visual settings (for example, in Designer) and can be used for strategy optimization.
 
 ## Creating Strategy Parameters
 
@@ -22,13 +22,13 @@ public class SmaStrategy : Strategy
     public SmaStrategy()
     {
         _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Long SMA length", string.Empty, "Base settings");
     }
 }
 ```
 
-In this example, a parameter `LongSmaLength` is created with an initial value of 80, a validator is set to check that the value will be greater than zero, and display settings are set in the user interface.
+In this example, a parameter `LongSmaLength` is created with an initial value of 80, a validator is set to ensure the value is greater than zero, and display settings are configured for the user interface.
 
 ## Parameter Configuration Methods
 
@@ -40,16 +40,69 @@ The [StrategyParam\<T\>.SetDisplay](xref:StockSharp.Algo.Strategies.StrategyPara
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetDisplay("Long SMA length", "Period of the long moving average", "Basic settings");
+                  .SetDisplay("Long SMA length", "Period of the long moving average", "Base settings");
 ```
 
 ### SetValidator
 
-The [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) method sets a validator to check the parameter value:
+The [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) method sets a validator to check the parameter value. StockSharp provides a range of predefined validators that can be used for the most common tasks:
 
 ```cs
+// Check that the number is greater than zero
 _longSmaLength = Param(nameof(LongSmaLength), 80)
                   .SetValidator(new IntGreaterThanZeroAttribute());
+
+// Check that the number is not negative
+_volume = Param(nameof(Volume), 1)
+           .SetValidator(new DecimalNotNegativeAttribute());
+
+// Check for value range
+_percentage = Param(nameof(Percentage), 50)
+               .SetValidator(new RangeAttribute(0, 100));
+
+// Check for required value
+_security = Param<Security>(nameof(Security))
+             .SetValidator(new RequiredAttribute());
+```
+
+For convenience, [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) has built-in methods for the most common validators:
+
+```cs
+// Check that the number is greater than zero
+_longSmaLength = Param(nameof(LongSmaLength), 80).SetGreaterThanZero();
+
+// Check that the number is not negative
+_volume = Param(nameof(Volume), 1).SetNotNegative();
+
+// Check that the value is NULL or not negative
+_interval = Param<TimeSpan?>(nameof(Interval)).SetNullOrNotNegative();
+
+// Set value range
+_percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
+```
+
+If the built-in validators are not sufficient, you can create your own by inheriting from [ValidationAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute):
+
+```cs
+public class EvenNumberAttribute : ValidationAttribute
+{
+    public EvenNumberAttribute()
+        : base("Value must be an even number.")
+    {
+    }
+
+    public override bool IsValid(object value)
+    {
+        if (value is int intValue)
+            return intValue % 2 == 0;
+        
+        return false;
+    }
+}
+
+// Using custom validator
+_barCount = Param(nameof(BarCount), 10)
+             .SetValidator(new EvenNumberAttribute());
 ```
 
 ### SetHidden
@@ -83,7 +136,7 @@ _calculatedParam = Param(nameof(CalculatedParam), 0)
 
 ### SetCanOptimize and SetOptimize
 
-The [StrategyParam\<T\>.SetCanOptimize](xref:StockSharp.Algo.Strategies.StrategyParam`1.SetCanOptimize(System.Boolean)) and [StrategyParam\<T\>.SetOptimize](xref:StockSharp.Algo.Strategies.StrategyParam`1.SetOptimize(`0,`0,`0)) methods indicate whether the parameter can be used for optimization and set the range of values for optimization:
+The methods [StrategyParam\<T\>.SetCanOptimize](xref:StockSharp.Algo.Strategies.StrategyParam`1.SetCanOptimize(System.Boolean)) and [StrategyParam\<T\>.SetOptimize](xref:StockSharp.Algo.Strategies.StrategyParam`1.SetOptimize(`0,`0,`0)) specify whether the parameter can be used for optimization, and set the range of values for optimization:
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
@@ -93,9 +146,9 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 
 In the example above, the parameter will be optimized in the range from 10 to 200 with a step of 10.
 
-## Using Parameters in a Strategy
+## Using Parameters in Strategy
 
-Strategy parameters are used just like regular properties:
+Strategy parameters are used like regular properties:
 
 ```cs
 protected override void OnStarted(DateTimeOffset time)
@@ -118,14 +171,14 @@ public override void Save(SettingsStorage settings)
 {
     base.Save(settings);
     
-    // Additional save logic...
+    // Additional saving logic...
 }
 
 public override void Load(SettingsStorage settings)
 {
     base.Load(settings);
     
-    // Additional load logic...
+    // Additional loading logic...
 }
 ```
 
@@ -164,13 +217,13 @@ public class SmaStrategy : Strategy
 
         Param("TypeId", GetType().GetTypeName(false)).SetHidden();
         _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Long SMA length", string.Empty, "Base settings")
                           .SetCanOptimize(true)
                           .SetOptimize(20, 200, 10);
         
         _shortSmaLength = Param(nameof(ShortSmaLength), 30)
-                          .SetValidator(new IntGreaterThanZeroAttribute())
+                          .SetGreaterThanZero()
                           .SetDisplay("Short SMA length", string.Empty, "Base settings")
                           .SetCanOptimize(true)
                           .SetOptimize(5, 50, 5);
@@ -183,13 +236,13 @@ public class SmaStrategy : Strategy
 }
 ```
 
-In this example, we created a strategy based on the crossing of two moving averages with three configurable parameters:
+In this example, we created a strategy based on crossing two moving averages with three configurable parameters:
 - `Series` - data type and timeframe
 - `LongSmaLength` - period of the long moving average
 - `ShortSmaLength` - period of the short moving average
 
-For the two numerical parameters, we set up optimization capabilities with specified ranges.
+For the two numeric parameters, we configured optimization capabilities with specified ranges.
 
-## See also
+## See Also
 
 [Saving and Loading Settings](settings_saving_and_loading.md)
