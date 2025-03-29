@@ -1,17 +1,17 @@
 # Candles
 
-[S\#](../api.md) supports the following types:
+[S\#](../api.md) supports the following types of candles:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) - a candle based on a time interval, timeframe. You can set both popular intervals (minutes, hours, daily) and customized ones. For example, 21 seconds, 4.5 minutes, etc.
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) - a price range candle. A new candle is created when a trade appears with a price that exceeds the acceptable limits. The acceptable limit is formed each time based on the price of the first trade.
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) - a candle is formed until the total volume of trades exceeds a specified limit. If a new trade exceeds the allowable volume, it is included in a new candle.
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) - the same as [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), but the number of trades is used as a limitation instead of volume.
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) - a point-and-figure chart candle (X-O chart).
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) - Renko candle.
+- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - a candle based on a time interval, timeframe. You can set both popular intervals (minutes, hours, daily) and customized ones. For example, 21 seconds, 4.5 minutes, etc.
+- [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - a price range candle. A new candle is created when a trade appears with a price that exceeds the acceptable limits. The acceptable limit is formed each time based on the price of the first trade.
+- [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - a candle is formed until the total volume of trades exceeds a specified limit. If a new trade exceeds the allowable volume, it is included in a new candle.
+- [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - the same as [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), but the number of trades is used as a limitation instead of volume.
+- [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - a point-and-figure chart candle (X-O chart).
+- [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - Renko candle.
 
 How to work with candles is shown in the SampleConnection example, which is located in the *Samples\/Common\/SampleConnection* folder.
 
-The following images show [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) and [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) charts:
+The following images show [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) and [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) charts:
 
 ![sample timeframecandles](../../images/sample_timeframecandles.png)
 
@@ -298,7 +298,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Point and Figure candles
 var pnfCandleSubscription = new Subscription(
-    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify PnF parameters
+    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
     security)
 {
     MarketData =

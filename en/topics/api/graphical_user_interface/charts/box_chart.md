@@ -1,6 +1,6 @@
 # Box chart
 
-BoxChart \- is the special type of chart for displaying the volumes in the form of a numbers grid. To use this chart type, it is necessary to set the special style [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume) This chart uses the information from the [Candle.PriceLevels](xref:StockSharp.Algo.Candles.Candle.PriceLevels) property as source data. 
+BoxChart \- is the special type of chart for displaying the volumes in the form of a numbers grid. To use this chart type, it is necessary to set the special style [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume) This chart uses the information from the [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) property as source data. 
 
 ![Gui BoxChart](../../../../images/gui_boxchart.png)
 

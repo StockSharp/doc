@@ -4,7 +4,7 @@
 
 ## The implementation of tick candles
 
-1. First, you need to create your own candle type. The type must inherit from the [Candle](xref:StockSharp.Algo.Candles.Candle) class:
+1. First, you need to create your own candle type. The type must inherit from the [CandleMessage](xref:StockSharp.Messages.CandleMessage) class:
 
    > [!CAUTION]
    > Tick candles are supported by [S\#](../../api.md) as standard and this step is presented only as an example.

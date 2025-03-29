@@ -1,17 +1,17 @@
 # Свечи
 
-[S\#](../api.md) поддерживает следующие виды:
+[S\#](../api.md) поддерживает следующие виды свечей:
 
-- [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) - свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
-- [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle) - свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
-- [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle) - свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
-- [TickCandle](xref:StockSharp.Algo.Candles.TickCandle) - то же самое, что и [VolumeCandle](xref:StockSharp.Algo.Candles.VolumeCandle), только в качестве ограничения вместо объема берется количество сделок. 
-- [PnFCandle](xref:StockSharp.Algo.Candles.PnFCandle) - свеча пункто-цифрового графика (график крестики-нолики). 
-- [RenkoCandle](xref:StockSharp.Algo.Candles.RenkoCandle) - Рэнко свеча. 
+- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - свеча на основе временного отрезка, таймфрейма. Можно задавать как популярные отрезки (минутки, часовики, дневные), так и кастомизированные. Например, 21 секунда, 4.5 минуты и т.д. 
+- [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - свеча ценового разброса. Новая свеча создается, когда появляется сделка с ценой, выходящей за допустимые пределы. Допустимый предел формируется каждый раз на основе цены первой сделки. 
+- [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
+- [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - то же самое, что и [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), только в качестве ограничения вместо объема берется количество сделок. 
+- [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - свеча пункто-цифрового графика (график крестики-нолики). 
+- [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - Рэнко свеча. 
 
 Как работать со свечами, показано в примере SampleConnection, который расположен в папке *Samples\/Common\/SampleConnection*.
 
-На следующих рисунках представлены графики [TimeFrameCandle](xref:StockSharp.Algo.Candles.TimeFrameCandle) и [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle):
+На следующих рисунках представлены графики [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) и [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
 ![sample timeframecandles](../../images/sample_timeframecandles.png)
 
