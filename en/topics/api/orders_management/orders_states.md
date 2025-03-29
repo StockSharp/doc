@@ -14,6 +14,18 @@ StockSharp API provides the ability to receive information about orders through 
 | [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Event for order modification failure |
 | [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Event for receiving information about own trades |
 
+## OrderStates enum
+
+During its lifetime, an order goes through the following states:
+
+![OrderStates](../../../images/orderstates.png)
+
+- [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - the order has been created in the trading algorithm but has not yet been sent for registration.
+- [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - the order has been sent for registration ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). The system is waiting for confirmation of its acceptance from the exchange. If the acceptance is successful, the [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) event will be triggered, and the order will be transferred to the [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) state. The [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) and [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime) properties will also be initialized. If the order is rejected, the [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) event will be triggered with an error description, and the order will be transferred to the [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) state.
+- [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) - the order is active on the exchange. Such an order will remain active until its entire volume [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume) is executed, or it is forcibly canceled through [CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order). If the order is partially executed, the [OwnTradeReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OwnTradeReceived) events about new trades for the placed order are triggered, as well as the [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) event, which passes a notification about the change in the order balance [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance). The latter event will also be triggered in case of order cancellation.
+- [OrderStates.Done](xref:StockSharp.Messages.OrderStates.Done) - the order is no longer active on the exchange (it was fully executed or canceled).
+- [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) - the order was not accepted by the exchange (or an intermediate system, such as the server part of the trading platform) for some reason.
+
 ## Automatic Subscriptions
 
 By default, [Connector](xref:StockSharp.Algo.Connector) automatically creates subscriptions for transaction information when connecting ([SubscriptionsOnConnect](xref:StockSharp.Algo.Connector.SubscriptionsOnConnect)). This includes subscriptions to:
