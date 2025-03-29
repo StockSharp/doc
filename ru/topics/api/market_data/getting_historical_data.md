@@ -98,55 +98,6 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 }
 ```
 
-## Получение исторических данных напрямую через MessageAdapter
-
-В некоторых случаях может потребоваться получить исторические данные напрямую через MessageAdapter:
-
-```cs
-// Создаем и настраиваем адаптер для Binance
-var messageAdapter = new BinanceMessageAdapter(new IncrementalIdGenerator())
-{
-    Key = "<Your API Key>",
-    Secret = "<Your Secret Key>",
-};
-
-// Если требуется, оборачиваем адаптер в SecurityNativeIdMessageAdapter
-var securityAdapter = new SecurityNativeIdMessageAdapter(messageAdapter, new InMemoryNativeIdStorage());
-
-// Получаем список инструментов (криптовалютных пар) с Binance
-var securities = securityAdapter.GetSecurities(new SecurityLookupMessage
-{
-    SecurityId = new SecurityId
-    {
-        SecurityCode = "BTCUSDT"
-    }
-});
-
-// Находим нужный инструмент
-SecurityMessage btcusdt = null;
-foreach (var security in securities)
-{
-    if (security.SecurityId.SecurityCode.CompareIgnoreCase("BTCUSDT"))
-        btcusdt = security;
-}
-
-// Получаем исторические свечи для найденного инструмента
-if (btcusdt != null)
-{
-    // Получаем часовые свечи за последние 30 дней
-    var candles = securityAdapter.GetCandles(
-        btcusdt.SecurityId, 
-        TimeSpan.FromHours(1), 
-        DateTimeOffset.Now.AddDays(-30), 
-        DateTimeOffset.Now);
-        
-    foreach (var candle in candles)
-    {
-        Console.WriteLine($"{candle.OpenTime}: O={candle.OpenPrice}, H={candle.HighPrice}, L={candle.LowPrice}, C={candle.ClosePrice}, V={candle.TotalVolume}");
-    }
-}
-```
-
 ## Получение других типов исторических данных
 
 Аналогичным образом можно получать и другие типы исторических данных:

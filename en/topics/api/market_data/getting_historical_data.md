@@ -98,55 +98,6 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 }
 ```
 
-## Getting Historical Data Directly via MessageAdapter
-
-In some cases, you may need to get historical data directly through MessageAdapter:
-
-```cs
-// Create and configure adapter for Binance
-var messageAdapter = new BinanceMessageAdapter(new IncrementalIdGenerator())
-{
-    Key = "<Your API Key>",
-    Secret = "<Your Secret Key>",
-};
-
-// If required, wrap the adapter in SecurityNativeIdMessageAdapter
-var securityAdapter = new SecurityNativeIdMessageAdapter(messageAdapter, new InMemoryNativeIdStorage());
-
-// Get a list of instruments (cryptocurrency pairs) from Binance
-var securities = securityAdapter.GetSecurities(new SecurityLookupMessage
-{
-    SecurityId = new SecurityId
-    {
-        SecurityCode = "BTCUSDT"
-    }
-});
-
-// Find the desired instrument
-SecurityMessage btcusdt = null;
-foreach (var security in securities)
-{
-    if (security.SecurityId.SecurityCode.CompareIgnoreCase("BTCUSDT"))
-        btcusdt = security;
-}
-
-// Get historical candles for the found instrument
-if (btcusdt != null)
-{
-    // Get hourly candles for the last 30 days
-    var candles = securityAdapter.GetCandles(
-        btcusdt.SecurityId, 
-        TimeSpan.FromHours(1), 
-        DateTimeOffset.Now.AddDays(-30), 
-        DateTimeOffset.Now);
-        
-    foreach (var candle in candles)
-    {
-        Console.WriteLine($"{candle.OpenTime}: O={candle.OpenPrice}, H={candle.HighPrice}, L={candle.LowPrice}, C={candle.ClosePrice}, V={candle.TotalVolume}");
-    }
-}
-```
-
 ## Getting Other Types of Historical Data
 
 Similarly, you can get other types of historical data:
