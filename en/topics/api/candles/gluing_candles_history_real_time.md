@@ -74,7 +74,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
     SecurityPicker.SecurityProvider = _connector;
     
     // Subscribe to candle reception event
-    _connector.CandleReceived += Connector_CandleSeriesProcessing;
+    _connector.CandleReceived += Connector_CandleReceived;
     
     // Connect
     _connector.Connect();
@@ -85,7 +85,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 
 ```cs
 // Handler for candle reception event
-private void Connector_CandleSeriesProcessing(Subscription subscription, ICandleMessage candle)
+private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
 {
     // Draw candle on chart
     Chart.Draw(_candleElement, candle);
@@ -211,11 +211,11 @@ public partial class MainWindow
     private void Connect_Click(object sender, RoutedEventArgs e)
     {
         SecurityPicker.SecurityProvider = _connector;
-        _connector.CandleReceived += Connector_CandleSeriesProcessing;
+        _connector.CandleReceived += Connector_CandleReceived;
         _connector.Connect();
     }
 
-    private void Connector_CandleSeriesProcessing(Subscription subscription, ICandleMessage candle)
+    private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
     {
         Chart.Draw(_candleElement, candle);
     }
@@ -256,7 +256,7 @@ public partial class MainWindow
    - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) is created for working with snapshots
 
 2. **Creating Subscription**:
-   - New subscription format [Subscription](xref:StockSharp.BusinessEntities.Subscription) is used instead of the deprecated CandleSeries
+   - The class [Subscription](xref:StockSharp.BusinessEntities.Subscription) is used
    - The From parameter in MarketData specifies the initial date for loading history
    - BuildMode = MarketDataBuildModes.LoadAndBuild is set for automatic combination of history and real-time
 

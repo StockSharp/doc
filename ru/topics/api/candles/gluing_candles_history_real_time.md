@@ -74,7 +74,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
     SecurityPicker.SecurityProvider = _connector;
     
     // Подписываемся на событие получения свечей
-    _connector.CandleReceived += Connector_CandleSeriesProcessing;
+    _connector.CandleReceived += Connector_CandleReceived;
     
     // Подключаемся
     _connector.Connect();
@@ -85,7 +85,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 
 ```cs
 // Обработчик события получения свечи
-private void Connector_CandleSeriesProcessing(Subscription subscription, ICandleMessage candle)
+private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
 {
     // Отрисовываем свечу на графике
     Chart.Draw(_candleElement, candle);
@@ -211,11 +211,11 @@ public partial class MainWindow
     private void Connect_Click(object sender, RoutedEventArgs e)
     {
         SecurityPicker.SecurityProvider = _connector;
-        _connector.CandleReceived += Connector_CandleSeriesProcessing;
+        _connector.CandleReceived += Connector_CandleReceived;
         _connector.Connect();
     }
 
-    private void Connector_CandleSeriesProcessing(Subscription subscription, ICandleMessage candle)
+    private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
     {
         Chart.Draw(_candleElement, candle);
     }
@@ -256,7 +256,7 @@ public partial class MainWindow
    - Создается [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) для работы со снэпшотами
 
 2. **Создание подписки**:
-   - Используется новый формат подписки [Subscription](xref:StockSharp.BusinessEntities.Subscription) вместо устаревшего CandleSeries
+   - Используется класс [Subscription](xref:StockSharp.BusinessEntities.Subscription)
    - В параметрах MarketData указывается From для определения начальной даты загрузки истории
    - Устанавливается режим BuildMode = MarketDataBuildModes.LoadAndBuild для автоматического склеивания истории и реал-тайма
 
