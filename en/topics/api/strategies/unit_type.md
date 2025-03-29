@@ -1,104 +1,94 @@
-# Unit type
+# Unit Type
 
-To simplify works with arithmetic operations on such values as percent, points or pips, the [Unit](xref:StockSharp.Messages.Unit) data type can be used. It allows transparently operate with operations of addition, subtraction, multiplication and division. [Unit](xref:StockSharp.Messages.Unit) may be converted into [Decimal](xref:System.Decimal) (not possible, of the value is percentage, i.e. the type [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) and vice versa (in this case the created value is always of the absolute value, i.e. the [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
+To simplify working with arithmetic operations on values such as percentages and absolute values, you can use the [Unit](xref:StockSharp.Messages.Unit) data type. It allows transparent operations with addition, subtraction, multiplication, and division. [Unit](xref:StockSharp.Messages.Unit) can be converted to [Decimal](xref:System.Decimal) (except when the value is a percentage, i.e., the type [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) and back (in this case, a value with an absolute value is always created, i.e., the type [Unit.Type](xref:StockSharp.Messages.Unit.Type) is set to [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)).
 
-## Usage of Unit
+## Using Unit
 
-- The [Unit](xref:StockSharp.Messages.Unit) can be created using special design kits, or using shorter recording by [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
+- You can create a [Unit](xref:StockSharp.Messages.Unit) using special constructors or use a shorter notation with the help of [UnitHelper](xref:StockSharp.Messages.UnitHelper):
 
-  ```cs
-  // test instrument with pips = 1 cent and points = 10 usd
-  var security = new Security
-  {
-  	Id = "AAPL@NASDAQ",
-  	StepPrice = 10,
-  	PriceStep = 0.01m,
-  };
-  			
+  ```csharp
+  // creating an absolute value
   var absolute = new Unit(30);
+  
+  // creating a percentage value
   var percent = 30.0.Percents();
-  var pips = 30.0.Pips(security);
-  var point = 30.0.Points(security);
   ```
-- [Unit](xref:StockSharp.Messages.Unit) features formatted output. Therefore, reducing the values to a string depending on the [UnitTypes](xref:StockSharp.Messages.UnitTypes) type: 
 
-  ```cs
+- [Unit](xref:StockSharp.Messages.Unit) has formatted output. Therefore, converting values to a string depending on the type [UnitTypes](xref:StockSharp.Messages.UnitTypes):
+
+  ```csharp
   Console.WriteLine("absolute = " + absolute);
   Console.WriteLine("percent = " + percent);
-  Console.WriteLine("pips = " + pips);
-  Console.WriteLine("point = " + point);
   ```
 
-  will output the following strings:
+  will output the following lines:
 
   ```none
   absolute = 30
   percent = 30%
-  pips = 30s
-  point = 30p
   ```
 
-  The s symbol means minimal price increment (pips), p \- cost of price increment (point).
-- Arithmetic operations with [Unit](xref:StockSharp.Messages.Unit) are performed in the same way, as with normal numbers: 
+- Arithmetic operations on [Unit](xref:StockSharp.Messages.Unit) are performed in the same way as on regular numbers:
 
-  ```cs
-  // addition of all values
-  Console.WriteLine("testValue + absolute = " + (testValue + absolute));
-  Console.WriteLine("testValue + percent = " + (testValue + percent));
-  Console.WriteLine("testValue + pips = " + (testValue + pips));
-  Console.WriteLine("testValue + point = " + (testValue + point));
-  Console.WriteLine();
-  // multiplication of all values
-  Console.WriteLine("testValue * absolute = " + (testValue * absolute));
-  Console.WriteLine("testValue * percent = " + (testValue * percent));
-  Console.WriteLine("testValue * pips = " + (testValue * pips));
-  Console.WriteLine("testValue * point = " + (testValue * point));
-  Console.WriteLine();
+  ```csharp
+  // addition of values
+  Console.WriteLine("absolute + percent = " + (absolute + percent));
+  
+  // multiplication of values
+  Console.WriteLine("absolute * percent = " + (absolute * percent));
+  
   // subtraction of values
-  Console.WriteLine("testValue - absolute = " + (testValue - absolute));
-  Console.WriteLine("testValue - percent = " + (testValue - percent));
-  Console.WriteLine("testValue - pips = " + (testValue - pips));
-  Console.WriteLine("testValue - point = " + (testValue - point));
-  Console.WriteLine();
-  // division of all values
-  Console.WriteLine("testValue / absolute = " + (testValue / absolute));
-  Console.WriteLine("testValue / percent = " + (testValue / percent));
-  Console.WriteLine("testValue / pips = " + (testValue / pips));
-  Console.WriteLine("testValue / point = " + (testValue / point));
-  Console.WriteLine();
-  ```
-- The result of arithmetic operations [Unit](xref:StockSharp.Messages.Unit) itself becomes [Unit](xref:StockSharp.Messages.Unit), type of each is equal to the first operand type. For example, when adding pips and points, the result will be in pips: 
-
-  ```cs
-  // addition of pips and points
-  var resultPipsPoint = pips + point;
-  // and casting to decimal
-  var resultPipsPointDecimal = (decimal)resultPipsPoint;
-  Console.WriteLine("pips + point = " + resultPipsPoint);
-  Console.WriteLine("(decimal)(pips + point) = " + resultPipsPointDecimal);
+  Console.WriteLine("absolute - percent = " + (absolute - percent));
+  
+  // division of values
+  Console.WriteLine("absolute / percent = " + (absolute / percent));
   ```
 
-  Output of such operation will be as follows:
+- The result of arithmetic operations on [Unit](xref:StockSharp.Messages.Unit) becomes a [Unit](xref:StockSharp.Messages.Unit) itself, the type of which equals the type of the first operand. For example, if you add an absolute value and a percentage, the result will be in an absolute value:
+
+  ```csharp
+  // addition of absolute value and percentage
+  var resultAbsolutePercents = absolute + percent;
+  // and converting from absolute value to decimal
+  var resultAbsolutePercentsDecimal = (decimal)resultAbsolutePercents;
+  Console.WriteLine("absolute + percent = " + resultAbsolutePercents);
+  Console.WriteLine("(decimal)(absolute + percent) = " + resultAbsolutePercentsDecimal);
+  ```
+
+  The output of such operations will be as follows:
 
   ```none
-  pips + point = 30030s
-  (decimal)(pips + point) = 300.3
+  absolute + percent = 39
+  (decimal)(absolute + percent) = 39
   ```
 
-  Or, when adding pips and percent: 
+- You can also use familiar comparison operators to compare values:
 
-  ```cs
-  // addition of pips and percents
-  var resultPipsPercents = pips + percent;
-  // and casting to decimal
-  var resultPipsPercentsDecimal = (decimal)resultPipsPercents;
-  Console.WriteLine("pips + percent = " + resultPipsPercents);
-  Console.WriteLine("(decimal)(pips + percent) = " + resultPipsPercentsDecimal);
+  ```csharp
+  if (absolute > percent)
+      Console.WriteLine("Absolute value is greater than percentage");
+      
+  if (absolute == percent)
+      Console.WriteLine("Values are equal");
   ```
 
-  The output will be as follows:
+- To make a value positive, you can use the `Abs()` method:
 
-  ```none
-  pips + percent = 39s
-  (decimal)(pips + percent) = 0.39
+  ```csharp
+  var negative = new Unit(-10);
+  var positive = negative.Abs(); // 10
   ```
+
+- To multiply a value by a specific factor, you can use the `Times()` method:
+
+  ```csharp
+  var multiplied = absolute.Times(5); // 150
+  ```
+
+## Limitations
+
+- Values of type [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent) cannot be converted to other types
+- Values of type [UnitTypes.Limit](xref:StockSharp.Messages.UnitTypes.Limit) cannot be used in arithmetic operations
+- Comparison between values of different types is not always possible
+
+The [Unit](xref:StockSharp.Messages.Unit) type provides a consistent way to work with various kinds of values in trading applications, making it easier to express calculations related to price and volume.

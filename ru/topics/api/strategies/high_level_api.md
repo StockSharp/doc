@@ -302,7 +302,7 @@ StartProtection(TakeValue, StopValue);
 ```cs
 // Запуск защиты с трейлинг-стопом и рыночными заявками
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Point),   // Take Profit в пунктах
+    takeProfit: new Unit(50, UnitTypes.Absolute),// Take Profit
     stopLoss: new Unit(2, UnitTypes.Percent),    // Stop Loss в процентах
     isStopTrailing: true,                        // Включение трейлинг-стопа
     useMarketOrders: true                        // Использование рыночных заявок
@@ -337,7 +337,7 @@ public class SmaStrategy : Strategy
         _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
         _long = Param(nameof(Long), 80);
         _short = Param(nameof(Short), 30);
-        _takeValue = Param(nameof(TakeValue), new Unit(0, UnitTypes.Absolute));
+        _takeValue = Param(nameof(TakeValue), new Unit(50, UnitTypes.Absolute));
         _stopValue = Param(nameof(StopValue), new Unit(2, UnitTypes.Percent));
     }
 

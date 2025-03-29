@@ -302,10 +302,10 @@ Example with additional parameters:
 ```cs
 // Start protection with trailing stop and market orders
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Point),   // Take Profit in points
-    stopLoss: new Unit(2, UnitTypes.Percent),    // Stop Loss in percentage
-    isStopTrailing: true,                        // Enable trailing stop
-    useMarketOrders: true                        // Use market orders
+    takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
+    stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
+    isStopTrailing: true,                         // Enable trailing stop
+    useMarketOrders: true                         // Use market orders
 );
 ```
 
@@ -337,7 +337,7 @@ public class SmaStrategy : Strategy
         _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
         _long = Param(nameof(Long), 80);
         _short = Param(nameof(Short), 30);
-        _takeValue = Param(nameof(TakeValue), new Unit(0, UnitTypes.Absolute));
+        _takeValue = Param(nameof(TakeValue), new Unit(50, UnitTypes.Absolute));
         _stopValue = Param(nameof(StopValue), new Unit(2, UnitTypes.Percent));
     }
 

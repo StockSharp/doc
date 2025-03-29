@@ -146,8 +146,8 @@ ClosePosition();
 
 // Position protection using stop-loss and take-profit
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Point),   // take-profit
-    stopLoss: new Unit(20, UnitTypes.Point),     // stop-loss
+    takeProfit: new Unit(50, UnitTypes.Absolute),   // take-profit
+    stopLoss: new Unit(20, UnitTypes.Absolute),     // stop-loss
     isStopTrailing: true,                        // trailing stop
     useMarketOrders: true                        // use market orders
 );
@@ -252,8 +252,8 @@ private void ProcessCandle(ICandleMessage candle)
             .Do(() => {
                 // When the order is executed, set stop-loss and take-profit
                 StartProtection(
-                    takeProfit: new Unit(50, UnitTypes.Point),
-                    stopLoss: new Unit(20, UnitTypes.Point)
+                    takeProfit: new Unit(50, UnitTypes.Absolute),
+                    stopLoss: new Unit(20, UnitTypes.Absolute)
                 );
             })
             .Apply(this);

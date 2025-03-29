@@ -1,33 +1,24 @@
 # Тип Unit
 
-Для упрощения работы с арифметическими операциями над такими величинами как проценты, пункты или пипсы можно использовать тип данных [Unit](xref:StockSharp.Messages.Unit). Он позволяет прозрачно оперировать с операциями сложения, вычитания, умножения и деления. [Unit](xref:StockSharp.Messages.Unit) можно конвертировать в [Decimal](xref:System.Decimal) (невозможно только если величина является процентной, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) и обратно (в этом случае всегда создается величина с абсолютным значением, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)). 
+Для упрощения работы с арифметическими операциями над такими величинами как проценты и абсолютные значения можно использовать тип данных [Unit](xref:StockSharp.Messages.Unit). Он позволяет прозрачно оперировать с операциями сложения, вычитания, умножения и деления. [Unit](xref:StockSharp.Messages.Unit) можно конвертировать в [Decimal](xref:System.Decimal) (невозможно только если величина является процентной, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)) и обратно (в этом случае всегда создается величина с абсолютным значением, то есть тип [Unit.Type](xref:StockSharp.Messages.Unit.Type) установлен в [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)).
 
 ## Использование Unit
 
-- Создавать [Unit](xref:StockSharp.Messages.Unit) можно через специальные конструкторы, или использовать более короткую запись с помощью [UnitHelper](xref:StockSharp.Messages.UnitHelper): 
+- Создавать [Unit](xref:StockSharp.Messages.Unit) можно через специальные конструкторы или использовать более короткую запись с помощью [UnitHelper](xref:StockSharp.Messages.UnitHelper):
 
-  ```cs
-  // тестовый инструмент с шагом цены в 1 копейку и стоимостью в 10 рублей
-  // (в реальном приложении информацию необходимо получать через Connector.NewSecurity)
-  var security = new Security
-  {
-  	Name = "Тестовый инструмент",
-  	StepPrice = 10,
-  	PriceStep = 0.01m,
-  };
-  			
+  ```csharp
+  // создание абсолютного значения
   var absolute = new Unit(30);
+  
+  // создание процентного значения
   var percent = 30.0.Percents();
-  var pips = 30.0.Pips(security);
-  var point = 30.0.Points(security);
   ```
-- [Unit](xref:StockSharp.Messages.Unit) имеет форматированный вывод. Поэтому приведение значений к строке в зависимости от типа [UnitTypes](xref:StockSharp.Messages.UnitTypes): 
 
-  ```cs
+- [Unit](xref:StockSharp.Messages.Unit) имеет форматированный вывод. Поэтому приведение значений к строке в зависимости от типа [UnitTypes](xref:StockSharp.Messages.UnitTypes):
+
+  ```csharp
   Console.WriteLine("absolute = " + absolute);
   Console.WriteLine("percent = " + percent);
-  Console.WriteLine("pips = " + pips);
-  Console.WriteLine("point = " + point);
   ```
 
   будет выводить следующие строчки:
@@ -35,71 +26,69 @@
   ```none
   absolute = 30
   percent = 30%
-  pips = 30ш
-  point = 30п
   ```
 
-  Символ ш означает минимальный шаг цены (пипс), п \- стоимость шага цены (пункт).
-- Арифметические операции над [Unit](xref:StockSharp.Messages.Unit) осуществляются так же, как и над обычными числами: 
+- Арифметические операции над [Unit](xref:StockSharp.Messages.Unit) осуществляются так же, как и над обычными числами:
 
-  ```cs
-  // сложение всех величин
-  Console.WriteLine("testValue + absolute = " + (testValue + absolute));
-  Console.WriteLine("testValue + percent = " + (testValue + percent));
-  Console.WriteLine("testValue + pips = " + (testValue + pips));
-  Console.WriteLine("testValue + point = " + (testValue + point));
-  Console.WriteLine();
-  // умножение всех величин
-  Console.WriteLine("testValue * absolute = " + (testValue * absolute));
-  Console.WriteLine("testValue * percent = " + (testValue * percent));
-  Console.WriteLine("testValue * pips = " + (testValue * pips));
-  Console.WriteLine("testValue * point = " + (testValue * point));
-  Console.WriteLine();
-  // вычитание всех величин
-  Console.WriteLine("testValue - absolute = " + (testValue - absolute));
-  Console.WriteLine("testValue - percent = " + (testValue - percent));
-  Console.WriteLine("testValue - pips = " + (testValue - pips));
-  Console.WriteLine("testValue - point = " + (testValue - point));
-  Console.WriteLine();
-  // деление всех величин
-  Console.WriteLine("testValue / absolute = " + (testValue / absolute));
-  Console.WriteLine("testValue / percent = " + (testValue / percent));
-  Console.WriteLine("testValue / pips = " + (testValue / pips));
-  Console.WriteLine("testValue / point = " + (testValue / point));
-  Console.WriteLine();
-  ```
-- Результатом арифметических операций [Unit](xref:StockSharp.Messages.Unit) становится сам [Unit](xref:StockSharp.Messages.Unit), тип которого равен типу первого операнда. Например, если сложить пипсы и пункты, то результат будет в пипсах: 
-
-  ```cs
-  // сложение пипсов и пунктов
-  var resultPipsPoint = pips + point;
-  // и приведением из пипсов в decimal
-  var resultPipsPointDecimal = (decimal)resultPipsPoint;
-  Console.WriteLine("pips + point = " + resultPipsPoint);
-  Console.WriteLine("(decimal)(pips + point) = " + resultPipsPointDecimal);
+  ```csharp
+  // сложение величин
+  Console.WriteLine("absolute + percent = " + (absolute + percent));
+  
+  // умножение величин
+  Console.WriteLine("absolute * percent = " + (absolute * percent));
+  
+  // вычитание величин
+  Console.WriteLine("absolute - percent = " + (absolute - percent));
+  
+  // деление величин
+  Console.WriteLine("absolute / percent = " + (absolute / percent));
   ```
 
-  Вывод такой операции будет следующим:
+- Результатом арифметических операций [Unit](xref:StockSharp.Messages.Unit) становится сам [Unit](xref:StockSharp.Messages.Unit), тип которого равен типу первого операнда. Например, если сложить абсолютное значение и проценты, то результат будет в абсолютном значении:
+
+  ```csharp
+  // сложение абсолютного значения и процентов
+  var resultAbsolutePercents = absolute + percent;
+  // и приведением из абсолютного значения в decimal
+  var resultAbsolutePercentsDecimal = (decimal)resultAbsolutePercents;
+  Console.WriteLine("absolute + percent = " + resultAbsolutePercents);
+  Console.WriteLine("(decimal)(absolute + percent) = " + resultAbsolutePercentsDecimal);
+  ```
+
+  Вывод таких операций будет следующим:
 
   ```none
-  pips + point = 30030ш
-  (decimal)(pips + point) = 300,3
+  absolute + percent = 39
+  (decimal)(absolute + percent) = 39
   ```
 
-  Или, если сложить пипсы и проценты: 
+- Для сравнения значений также можно использовать привычные операторы сравнения:
 
-  ```cs
-  // сложение пипсов и процентов
-  var resultPipsPercents = pips + percent;
-  // и приведением из пипсов в decimal
-  var resultPipsPercentsDecimal = (decimal)resultPipsPercents;
-  Console.WriteLine("pips + percent = " + resultPipsPercents);
-  Console.WriteLine("(decimal)(pips + percent) = " + resultPipsPercentsDecimal);
+  ```csharp
+  if (absolute > percent)
+      Console.WriteLine("Абсолютное значение больше процентного");
+      
+  if (absolute == percent)
+      Console.WriteLine("Значения равны");
   ```
 
-  Вывод будет следующим:
+- Чтобы сделать значение положительным, можно использовать метод `Abs()`:
 
-  ```none
-  pips + percent = 39ш
-  (decimal)(pips + percent) = 0,39
+  ```csharp
+  var negative = new Unit(-10);
+  var positive = negative.Abs(); // 10
   ```
+
+- Для умножения значения на определенный коэффициент можно использовать метод `Times()`:
+
+  ```csharp
+  var multiplied = absolute.Times(5); // 150
+  ```
+
+## Ограничения
+
+- Значения типа [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent) нельзя преобразовать в другие типы
+- Значения типа [UnitTypes.Limit](xref:StockSharp.Messages.UnitTypes.Limit) нельзя использовать в арифметических операциях
+- Сравнение между значениями разных типов не всегда возможно
+
+Тип [Unit](xref:StockSharp.Messages.Unit) предоставляет последовательный способ работы с различными видами значений в торговых приложениях, что упрощает выражение расчетов, связанных с ценой и объемом.

@@ -148,8 +148,8 @@ ClosePosition();
 
 // Защита позиции через стоп-лосс и тейк-профит
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Point),   // тейк-профит
-    stopLoss: new Unit(20, UnitTypes.Point),     // стоп-лосс
+    takeProfit: new Unit(50, UnitTypes.Absolute),   // тейк-профит
+    stopLoss: new Unit(20, UnitTypes.Absolute),     // стоп-лосс
     isStopTrailing: true,                        // трейлинг стоп
     useMarketOrders: true                        // использовать рыночные заявки
 );
@@ -254,8 +254,8 @@ private void ProcessCandle(ICandleMessage candle)
             .Do(() => {
                 // При исполнении заявки выставляем стоп-лосс и тейк-профит
                 StartProtection(
-                    takeProfit: new Unit(50, UnitTypes.Point),
-                    stopLoss: new Unit(20, UnitTypes.Point)
+                    takeProfit: new Unit(50, UnitTypes.Absolute),
+                    stopLoss: new Unit(20, UnitTypes.Absolute)
                 );
             })
             .Apply(this);
