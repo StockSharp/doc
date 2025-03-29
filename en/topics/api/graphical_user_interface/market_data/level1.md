@@ -86,13 +86,8 @@ public void SubscribeToLevel1(IEnumerable<Security> securities)
 // Handler for Level1 data reception event
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-    // Get the instrument corresponding to the received message
-    var security = _connector.LookupById(level1Message.SecurityId);
-    if (security == null)
-        return;
-        
     // Check if we need to process this particular message
-    if (IsSecurityNeeded(security))
+    if (IsLevel1Needed(subscription))
     {
         // Update GUI in the user interface thread
         this.GuiAsync(() => 

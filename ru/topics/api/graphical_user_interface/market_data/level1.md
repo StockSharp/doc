@@ -86,13 +86,8 @@ public void SubscribeToLevel1(IEnumerable<Security> securities)
 // Обработчик события получения данных Level1
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-    // Получаем инструмент, соответствующий полученному сообщению
-    var security = _connector.LookupById(level1Message.SecurityId);
-    if (security == null)
-        return;
-        
     // Проверяем, нужно ли обрабатывать именно это сообщение
-    if (IsSecurityNeeded(security))
+    if (IsLevel1Needed(subscription))
     {
         // Обновляем GUI в потоке пользовательского интерфейса
         this.GuiAsync(() => 
