@@ -11,7 +11,6 @@
 - [Portfolio](xref:StockSharp.BusinessEntities.Portfolio). 
 - [ExchangeBoard](xref:StockSharp.BusinessEntities.ExchangeBoard). 
 - [Exchange](xref:StockSharp.BusinessEntities.Exchange). 
-- [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries). 
 - **ExtensionInfo** directory. 
 - [System.TimeSpan](xref:System.TimeSpan), [System.DateTime](xref:System.DateTime) and [System.DateTimeOffset](xref:System.DateTimeOffset). 
 - [System.Net.EndPoint](xref:System.Net.EndPoint) and [System.Net.IPAddress](xref:System.Net.IPAddress). 
