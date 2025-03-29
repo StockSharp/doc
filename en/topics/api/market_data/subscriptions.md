@@ -1,51 +1,167 @@
 # Subscriptions
 
-Starting with 5.0 version, [API](../../api.md) offers a new data acquisition model (market and transactional data). The model is based on subscriptions and has advantages over regular subscription requests: 
+**StockSharp API** offers a data acquisition model based on subscriptions. This is a universal mechanism for receiving both market data and transaction information. This approach has significant advantages:
 
-- Subscriptions are isolated from each other, so you can run an arbitrary number of subscriptions in parallel (with a history request or not). 
-- Subscriptions have states that make it possible to understand whether historical data is being received at the moment, or whether the subscription has gone online. 
-- Subscriptions have a universal approach, and their code is the same regardless of the requested data types. 
+- **Subscription isolation** — each subscription works independently, allowing any number of subscriptions with different parameters to be run in parallel (with or without history request).
+- **State tracking** — subscriptions have specific states that allow you to control whether historical data is currently flowing or the subscription has switched to real-time mode.
+- **Universality** — the code for working with subscriptions is the same regardless of the types of data requested, making development more efficient.
 
-To work with subscriptions, you should use the [Subscription](xref:StockSharp.BusinessEntities.Subscription) class. Below is an example of subscribing to candles via the new model:
+To work with subscriptions, you need to use the [Subscription](xref:StockSharp.BusinessEntities.Subscription) class. Let's look at examples of using subscriptions to obtain various types of data.
+
+## Example of Candle Subscription
 
 ```cs
-...
-var subscription = new Subscription(new MarketDataMessage
+// Create a subscription for 5-minute candles
+var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
-	DataType2 = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-	From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
-	// null means make subscriptions goes online after historical data
-	To = null,
-}, (SecurityMessage)sec);
-// subscribe to events
+    // Configure subscription parameters via the MarketData property
+    MarketData =
+    {
+        // Request data for the last 30 days
+        From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
+        // null means the subscription will switch to real-time mode after receiving history
+        To = null
+    }
+};
+
+// Processing received candles
 _connector.CandleReceived += (sub, candle) =>
 {
-	if (sub != subscription)
-		return;
-	Console.WriteLine(candle);
+    if (sub != subscription)
+        return;
+        
+    // Process the candle
+    Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
+
+// Handling the subscription's transition to online mode
 _connector.SubscriptionOnline += (sub) =>
 {
-	if (sub != subscription)
-		return;
-	Console.WriteLine("Online");
+    if (sub != subscription)
+        return;
+        
+    Console.WriteLine("Subscription switched to real-time mode");
 };
+
+// Handling subscription errors
 _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
-	if (sub != subscription)
-		return;
-	Console.WriteLine(error);
+    if (sub != subscription)
+        return;
+        
+    Console.WriteLine($"Subscription error: {error}");
 };
-// start subscription
+
+// Starting the subscription
 _connector.Subscribe(subscription);
-...
-			
 ```
 
-Subscription states:
+## Example of Order Book Subscription
 
-- [SubscriptionStates.Stopped](xref:StockSharp.Messages.SubscriptionStates.Stopped) \- the subscription is inactive (stopped or did not start). 
-- [SubscriptionStates.Active](xref:StockSharp.Messages.SubscriptionStates.Active) \- the subscription is active, and it can transfer historical data until it goes online or is completed. 
-- [SubscriptionStates.Error](xref:StockSharp.Messages.SubscriptionStates.Error) \- the subscription is inactive and in an error state. 
-- [SubscriptionStates.Finished](xref:StockSharp.Messages.SubscriptionStates.Finished) \- the subscription has finished its work (all data has been received). 
-- [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) \- the subscription has gone online and only transfers data in real time. 
+```cs
+// Create a subscription to the order book for the selected instrument
+var depthSubscription = new Subscription(DataType.MarketDepth, security);
+
+// Processing received order books
+_connector.OrderBookReceived += (sub, depth) =>
+{
+    if (sub != depthSubscription)
+        return;
+        
+    // Process the order book
+    Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
+    Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
+};
+
+// Starting the subscription
+_connector.Subscribe(depthSubscription);
+```
+
+## Example of Tick Trades Subscription
+
+```cs
+// Create a subscription to tick trades for the selected instrument
+var tickSubscription = new Subscription(DataType.Ticks, security);
+
+// Processing received ticks
+_connector.TickTradeReceived += (sub, tick) =>
+{
+    if (sub != tickSubscription)
+        return;
+        
+    // Process the tick
+    Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+};
+
+// Starting the subscription
+_connector.Subscribe(tickSubscription);
+```
+
+## Example of Subscription with Candle Building Mode Configuration
+
+```cs
+// Subscription to 5-minute candles that will be built from ticks
+var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
+{
+    MarketData =
+    {
+        // Specify the building mode and data source
+        BuildMode = MarketDataBuildModes.Build,
+        BuildFrom = DataType.Ticks,
+        // You can also enable volume profile building
+        IsCalcVolumeProfile = true,
+    }
+};
+
+_connector.Subscribe(candleSubscription);
+```
+
+## Example of Level1 Subscription (Basic Instrument Information)
+
+```cs
+// Creating a subscription for basic instrument information
+var level1Subscription = new Subscription(DataType.Level1, security);
+
+// Processing received Level1 data
+_connector.Level1Received += (sub, level1) =>
+{
+    if (sub != level1Subscription)
+        return;
+    
+    Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
+    
+    // Output Level1 field values
+    foreach (var pair in level1.Changes)
+    {
+        Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
+    }
+};
+
+// Starting the subscription
+_connector.Subscribe(level1Subscription);
+```
+
+## Unsubscribing from Data
+
+To stop receiving data, use the `UnSubscribe` method:
+
+```cs
+// Unsubscribe from a specific subscription
+_connector.UnSubscribe(subscription);
+
+// Or you can unsubscribe from all subscriptions
+foreach (var sub in _connector.Subscriptions)
+{
+    _connector.UnSubscribe(sub);
+}
+```
+
+## Subscription States
+
+Subscriptions can be in the following states:
+
+- [SubscriptionStates.Stopped](xref:StockSharp.Messages.SubscriptionStates.Stopped) — the subscription is inactive (stopped or not started).
+- [SubscriptionStates.Active](xref:StockSharp.Messages.SubscriptionStates.Active) — the subscription is active and may transmit historical data until switching to real-time mode or completion.
+- [SubscriptionStates.Error](xref:StockSharp.Messages.SubscriptionStates.Error) — the subscription is inactive and in an error state.
+- [SubscriptionStates.Finished](xref:StockSharp.Messages.SubscriptionStates.Finished) — the subscription has completed its work (all data received).
+- [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) — the subscription has switched to real-time mode and only transmits current data.

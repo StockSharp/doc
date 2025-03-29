@@ -1,108 +1,200 @@
 # Получение исторических данных
 
-[API](../../api.md) предоставляет возможность получать исторические свечи, которые можно использовать как для тестирования, так и для построения [индикаторов](../indicators.md). 
+StockSharp API предоставляет удобные механизмы для получения исторических данных, которые можно использовать как для тестирования торговых стратегий, так и для построения [индикаторов](../indicators.md).
 
-## Работа с историческими свечами через Connector
+## Получение исторических данных через Connector
 
-1. Для получения свечей через [Connector](xref:StockSharp.Algo.Connector) необходимо создать [Connector](xref:StockSharp.Algo.Connector) и добавить в него соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter). Как это сделать с помощью специального контрола описано в пункте [Окно настройки подключений](../graphical_user_interface/connection_settings_window.md).
+### Настройка подключения
 
-   Также добавить соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) в [Connector](xref:StockSharp.Algo.Connector) можно через код. Например, инициализация адаптера для [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) описана в пункте [Инициализация адаптера Interactive Brokers](../connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md) и выглядит следующим образом:
+Для получения исторических данных необходимо сначала настроить подключение к торговой системе:
 
 ```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
+// Создаем экземпляр Connector
+var connector = new Connector();
+
+// Добавляем адаптер для подключения к Binance
+var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Address = "<Your Address>".To<EndPoint>(),
+    Key = "<Your API Key>",
+    Secret = "<Your Secret Key>",
 };
-Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-Connector.Connect();
-...
-   							
+connector.Adapter.InnerAdapters.Add(messageAdapter);
+
+// Выполняем подключение
+connector.Connect();
 ```
 
-2. Для того, чтобы получить исторические свечи, необходимо вызвать метод [TraderHelper.SubscribeCandles](xref:StockSharp.Algo.TraderHelper.SubscribeCandles(StockSharp.Algo.ISubscriptionProvider,StockSharp.Algo.Candles.CandleSeries,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int64},System.Nullable{System.Int64},StockSharp.Messages.IMessageAdapter,System.Nullable{System.Int64},System.Nullable{StockSharp.Messages.FillGapsDays}))**(**[StockSharp.Algo.ISubscriptionProvider](xref:StockSharp.Algo.ISubscriptionProvider) provider, [StockSharp.Algo.Candles.CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) series, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) from, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) to, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) count, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) transactionId, [StockSharp.Messages.IMessageAdapter](xref:StockSharp.Messages.IMessageAdapter) adapter, [System.Nullable\<System.Int64\>](xref:System.Nullable`1) skip, [System.Nullable\<StockSharp.Messages.FillGapsDays\>](xref:System.Nullable`1) fillGaps **)**: 
+Подключение также можно настроить с помощью графического интерфейса, как описано в разделе [Окно настройки подключений](../graphical_user_interface/connection_settings_window.md).
+
+### Подписка на исторические свечи
+
+Для получения исторических свечей необходимо создать подписку и указать параметры запрашиваемых данных:
 
 ```cs
-...
-var tf = (TimeSpan)CandlesPeriods.SelectedItem;
-var series = new CandleSeries(typeof(TimeFrameCandle), SelectedSecurity, tf);
-Connector.SubscribeCandles(SelectedSecurity, DateTime.Now.Subtract(TimeSpan.FromTicks(tf.Ticks * 100)), DateTime.Now);
-...
-   			
-```
-
-3. Исторические свечи передаются через событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing): 
-
-```cs
-...
-Connector.CandleSeriesProcessing += ProcessCandle;
-...
-   			
-```
-
-4. Появившиеся свечи можно отрисовывать через [графический контрол](../candles/chart.md).
-
-## Работа с историческими свечами через MessageAdapter
-
-1. Для получения свечей через [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) необходимо созлать соответствующий [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
-
-   Например, инициализация адаптера для [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) описана в пункте [Инициализация адаптера Interactive Brokers](../connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md) и выглядит следующим образом:
-
-```cs
-   		
-...         
-var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
+// Создаем подписку на 5-минутные свечи для выбранного инструмента
+var subscription = new Subscription(
+    DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
+    security)
 {
-	Address = "<Your Address>".To<EndPoint>(),
+    MarketData =
+    {
+        // Указываем период, за который нужно получить исторические данные
+        From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
+        To = DateTime.Now,
+        // Устанавливаем флаг для получения только завершенных свечей
+        IsFinishedOnly = true
+    }
 };
-...
-   							
+
+// Подписываемся на событие получения свечей
+connector.CandleReceived += OnCandleReceived;
+
+// Запускаем подписку
+connector.Subscribe(subscription);
+
+// Обработчик события получения свечей
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Проверяем, что свеча относится к нашей подписке
+    if (subscription != _subscription)
+        return;
+        
+    // Обрабатываем полученную свечу
+    Console.WriteLine($"Получена свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+    
+    // Для отображения на графике можно использовать:
+    // Chart.Draw(_candleElement, candle);
+}
 ```
 
-2. Оборачиваем адаптер [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) в адаптер системных идентификатор инструментов [SecurityNativeIdMessageAdapter](xref:StockSharp.Algo.SecurityNativeIdMessageAdapter). Это необходимо в том случае, если торговая система работает с числовыми или любыми другими идентификаторами инструментов, отличных от обычного строкового представления.
+### Использование свечей для графика
+
+Полученные свечи можно отображать на графике с помощью встроенных графических компонентов StockSharp:
 
 ```cs
-   	
-...
-SecurityNativeIdMessageAdapter _securityAdapter;
+// Создаем и настраиваем элементы графика
+var chart = new Chart();
+var area = new ChartArea();
+var candleElement = new ChartCandleElement();
 
-if (adapter.IsNativeIdentifiers)
-	_securityAdapter = new SecurityNativeIdMessageAdapter(adapter, new InMemoryNativeIdStorage());
+// Добавляем область и элемент на график
+chart.AddArea(area);
+chart.AddElement(area, candleElement, subscription);
 
-var securities = _securityAdapter.GetSecurities(new SecurityLookupMessage
+// В обработчике события CandleReceived отрисовываем свечи
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	SecurityId = new SecurityId
-	{
-		SecurityCode = "EUR"
-	}
+    // Проверяем, что свеча относится к нашей подписке
+    if (subscription != _subscription)
+        return;
+        
+    // Если нужно отображать только завершенные свечи
+    if (candle.State == CandleStates.Finished)
+    {
+        var chartData = new ChartDrawData();
+        chartData.Group(candle.OpenTime).Add(candleElement, candle);
+        chart.Draw(chartData);
+    }
+}
+```
+
+## Получение исторических данных напрямую через MessageAdapter
+
+В некоторых случаях может потребоваться получить исторические данные напрямую через MessageAdapter:
+
+```cs
+// Создаем и настраиваем адаптер для Binance
+var messageAdapter = new BinanceMessageAdapter(new IncrementalIdGenerator())
+{
+    Key = "<Your API Key>",
+    Secret = "<Your Secret Key>",
+};
+
+// Если требуется, оборачиваем адаптер в SecurityNativeIdMessageAdapter
+var securityAdapter = new SecurityNativeIdMessageAdapter(messageAdapter, new InMemoryNativeIdStorage());
+
+// Получаем список инструментов (криптовалютных пар) с Binance
+var securities = securityAdapter.GetSecurities(new SecurityLookupMessage
+{
+    SecurityId = new SecurityId
+    {
+        SecurityCode = "BTCUSDT"
+    }
 });
 
-SecurityMessage eurUsd = null;
-
+// Находим нужный инструмент
+SecurityMessage btcusdt = null;
 foreach (var security in securities)
 {
-	if (security.SecurityId.SecurityCode.CompareIgnoreCase("EURUSD"))
-		eurUsd = security;
+    if (security.SecurityId.SecurityCode.CompareIgnoreCase("BTCUSDT"))
+        btcusdt = security;
 }
-...
-   							
+
+// Получаем исторические свечи для найденного инструмента
+if (btcusdt != null)
+{
+    // Получаем часовые свечи за последние 30 дней
+    var candles = securityAdapter.GetCandles(
+        btcusdt.SecurityId, 
+        TimeSpan.FromHours(1), 
+        DateTimeOffset.Now.AddDays(-30), 
+        DateTimeOffset.Now);
+        
+    foreach (var candle in candles)
+    {
+        Console.WriteLine($"{candle.OpenTime}: O={candle.OpenPrice}, H={candle.HighPrice}, L={candle.LowPrice}, C={candle.ClosePrice}, V={candle.TotalVolume}");
+    }
+}
 ```
 
-3. Теперь по полученному идентификатору инструмента получаем свечи из адаптера: 
+## Получение других типов исторических данных
+
+Аналогичным образом можно получать и другие типы исторических данных:
+
+### Получение исторических тиков
 
 ```cs
-...
-var candles = adapter.GetCandles(eurUsd.SecurityId, TimeSpan.FromDays(1), DateTimeOffset.Now.AddDays(-100), DateTimeOffset.Now);
-foreach (var candle in candles)
+var tickSubscription = new Subscription(DataType.Ticks, security)
 {
-	Console.WriteLine(candle);
-}
-...
-   			
+    MarketData =
+    {
+        From = DateTime.Now.Subtract(TimeSpan.FromDays(1)),
+        To = DateTime.Now
+    }
+};
+
+connector.TickTradeReceived += (subscription, tick) =>
+{
+    if (subscription == tickSubscription)
+        Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
+};
+
+connector.Subscribe(tickSubscription);
+```
+
+### Получение исторических стаканов
+
+```cs
+var depthSubscription = new Subscription(DataType.MarketDepth, security)
+{
+    MarketData =
+    {
+        From = DateTime.Now.Subtract(TimeSpan.FromHours(1)),
+        To = DateTime.Now
+    }
+};
+
+connector.OrderBookReceived += (subscription, depth) =>
+{
+    if (subscription == depthSubscription)
+        Console.WriteLine($"Стакан: {depth.ServerTime}, Лучшая покупка: {depth.GetBestBid()?.Price}, Лучшая продажа: {depth.GetBestAsk()?.Price}");
+};
+
+connector.Subscribe(depthSubscription);
 ```
 
 ## См. также
 
-[Свечи](../candles.md)
+- [Свечи](../candles.md)
+- [Подписки](subscriptions.md)
+- [Индикаторы](../indicators.md)
