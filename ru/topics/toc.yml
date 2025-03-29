@@ -2038,6 +2038,8 @@
       href: api/strategies/shrink_price.md
     - name: Тип Unit
       href: api/strategies/unit_type.md
+    - name: Алгоритм Котирования
+      href: api/strategies/quoting.md
     - name: Рабочие инструменты
       href: api/strategies/working_securities.md
     - name: Событийная модель

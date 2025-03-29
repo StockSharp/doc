@@ -1901,6 +1901,8 @@
       href: api/strategies/shrink_price.md
     - name: Unit type
       href: api/strategies/unit_type.md
+    - name: Quoting algorithm
+      href: api/strategies/quoting.md
     - name: Working securities
       href: api/strategies/working_securities.md
     - name: Event model
