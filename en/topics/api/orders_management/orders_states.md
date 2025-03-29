@@ -164,7 +164,7 @@ To track the status of an order, you need to subscribe to the corresponding even
 
 ## See Also
 
-- [Subscriptions](subscriptions.md)
+- [Subscriptions](../market_data/subscriptions.md)
 - [Order States](orders_states.md)
 - [Creating a New Order](create_new_order.md)
 - [Canceling Orders](order_cancel.md)

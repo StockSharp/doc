@@ -164,7 +164,7 @@ private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Orde
 
 ## См. также
 
-- [Подписки](subscriptions.md)
+- [Подписки](../market_data/subscriptions.md)
 - [Состояния заявок](orders_states.md)
 - [Создание новой заявки](create_new_order.md)
 - [Снятие заявок](order_cancel.md)

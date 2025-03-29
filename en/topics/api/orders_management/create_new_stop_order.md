@@ -35,4 +35,4 @@ Each connection has its own implementation of the [OrderCondition](xref:StockSha
 
 ## Recommended content
 
-[Getting orders information](getting_orders_information.md)
+[Orders states](orders_states.md)

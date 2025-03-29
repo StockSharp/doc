@@ -35,4 +35,4 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 
 ## См. также
 
-[Получение информации по заявкам](getting_orders_information.md)
+[Состояния заявок](orders_states.md)
