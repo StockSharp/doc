@@ -10,7 +10,6 @@
 // Основные компоненты
 public class SimpleCandleRulesStrategy : Strategy
 {
-    private Subscription _subscription;
 }
 ```
 
@@ -25,7 +24,7 @@ public class SimpleCandleRulesStrategy : Strategy
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    _subscription = new(Security.TimeFrame(TimeSpan.FromMinutes(5)))
+    var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
     {
         // ready-to-use candles much faster than compression on fly mode
         // turn off compression to boost optimizer (!!! make sure you have candles)
@@ -36,22 +35,24 @@ protected override void OnStarted(DateTimeOffset time)
         //    BuildFrom = DataType.Ticks,
         //}
     };
-    Subscribe(_subscription);
+    Subscribe(subscription);
 
     var i = 0;
+    var diff = "10%".ToUnit();
 
-    this.WhenCandlesStarted(_subscription)
+    this.WhenCandlesStarted(subscription)
         .Do((candle) =>
         {
             i++;
 
             this
-                .WhenTotalVolumeMore(candle, new Unit(100000m))
+                .WhenTotalVolumeMore(candle, diff)
                 .Do((candle1) =>
                 {
-                    this.AddInfoLog($"The rule WhenPartiallyFinished and WhenTotalVolumeMore candle={candle1}");
-                    this.AddInfoLog($"The rule WhenPartiallyFinished and WhenTotalVolumeMore i={i}");
-                }).Apply(this);
+                    LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+                    LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+                })
+                .Once().Apply(this);
 
         }).Apply(this);
 
@@ -63,12 +64,14 @@ protected override void OnStarted(DateTimeOffset time)
 
 - Стратегия подписывается на 5-минутные свечи
 - При начале формирования каждой свечи устанавливается правило
-- Правило срабатывает, когда общий объем свечи превышает 100,000
+- Правило срабатывает, когда общий объем свечи превышает 10% (используется процентное значение)
 - При срабатывании правила в лог добавляется информация о свече и счетчике
+- После первого срабатывания правило перестает действовать благодаря методу `Once()`
 
 ## Особенности
 
 - Демонстрирует использование правил `WhenCandlesStarted` и `WhenTotalVolumeMore`
 - Использует механизм подписки на свечи
-- Показывает пример логирования информации в стратегии
+- Показывает пример создания процентного значения через `"10%".ToUnit()`
+- Показывает пример логирования информации в стратегии через метод `LogInfo`
 - Содержит закомментированный код для настройки построения свечей из тиков
