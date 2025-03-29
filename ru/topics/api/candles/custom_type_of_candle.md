@@ -1,174 +1,372 @@
 # Собственный тип свечей
 
-[S\#](../../api.md) позволяет расширить возможности построения свечей, давая возможность работать с произвольными типами свечей. Это полезно в тех случаях, когда требуется работать со свечами, не поддерживаемыми в данный момент [S\#](../../api.md). Ниже описан план действия по добавлению тиковых свечей (свечи, которые формируются по количеству сделок).
+[S\#](../../api.md) позволяет расширить возможности построения свечей, давая возможность работать с произвольными типами свечей. Это полезно в тех случаях, когда требуется работать со свечами, не поддерживаемыми в данный момент [S\#](../../api.md). Ниже описан процесс создания собственного типа свечей на примере Delta-свечей (свечи, формирующиеся на основе разницы между объемом покупок и продаж).
 
-## Реализация тиковых свечей
+## Реализация Delta-свечей
 
-1. В начале необходимо создать свой тип свечи. Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
-
-   > [!CAUTION]
-   > Тиковые свечи поддерживаются [S\#](../../api.md) стандартно и данный шаг представлен лишь в качестве примера.
+1. Сначала необходимо создать свой тип сообщения свечи. Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
 
    ```cs
    /// <summary>
-   /// Свеча, группируемая по количеству сделок.
+   /// Свеча, формирующаяся на основе дельты объемов покупок и продаж.
    /// </summary>
-   public class TickCandle : Candle
+   public class DeltaCandleMessage : CandleMessage
    {
+       // Идентификатор типа сообщения берем из хелпера
+       // чтобы использовать одно и то же значение и в RegisterCandleType
+       
+       /// <summary>
+       /// Инициализировать новый экземпляр <see cref="DeltaCandleMessage"/>.
+       /// </summary>
+       public DeltaCandleMessage()
+           : base(DeltaCandleHelper.DeltaCandleType)
+       {
+       }
+       
+       /// <summary>
+       /// Пороговое значение дельты для формирования свечи.
+       /// </summary>
+       public decimal DeltaThreshold { get; set; }
+       
+       /// <summary>
+       /// Текущее значение дельты.
+       /// </summary>
+       public decimal CurrentDelta { get; set; }
+       
+       /// <summary>
+       /// Создать копию <see cref="DeltaCandleMessage"/>.
+       /// </summary>
+       /// <returns>Копия.</returns>
+       public override Message Clone()
+       {
+           return CopyTo(new DeltaCandleMessage
+           {
+               DeltaThreshold = DeltaThreshold,
+               CurrentDelta = CurrentDelta
+           });
+       }
+       
        /// <summary>
        /// Параметр свечи.
        /// </summary>
        public override object Arg
        {
-           get
-           {
-               return this.TradeCount;
-           }
-           set
-           {
-               this.TradeCount = (int) value;
-           }
+           get => DeltaThreshold;
+           set => DeltaThreshold = (decimal)value;
        }
+       
        /// <summary>
-       /// Максимальное количество сделок, которое может содержать свеча.
+       /// Тип аргумента свечи.
        /// </summary>
-       public int TradeCount { get; set; }
+       public override Type ArgType => typeof(decimal);
    }
    ```
-2. Дополнительно, необходимо создать свой тип сообщения свечи. Подробнее, о [сообщениях](../connectors/creating_own_connector/messages.md). Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
+
+2. Затем необходимо создать собственный тип данных в классе [DataType](xref:StockSharp.Messages.DataType):
+
+   ```cs
+   public static class DeltaCandleHelper
+   {
+       /// <summary>
+       /// Определяем уникальный MessageType для дельта-свечей.
+       /// </summary>
+       public const MessageTypes DeltaCandleType = (MessageTypes)10001;
+       
+       /// <summary>
+       /// <see cref="DeltaCandleMessage"/> тип данных.
+       /// </summary>
+       public static readonly DataType CandleDelta = 
+           DataType.Create(typeof(DeltaCandleMessage)).Immutable();
+       
+       /// <summary>
+       /// Создать тип данных для дельта-свечей.
+       /// </summary>
+       /// <param name="threshold">Пороговое значение дельты.</param>
+       /// <returns>Тип данных.</returns>
+       public static DataType Delta(this decimal threshold)
+       {
+           return DataType.Create(typeof(DeltaCandleMessage), threshold);
+       }
+       
+       /// <summary>
+       /// Регистрация типа дельта-свечей в системе.
+       /// </summary>
+       public static void RegisterDeltaCandleType()
+       {
+           // Регистрируем новый тип свечей в StockSharp
+           Extensions.RegisterCandleType<decimal>(
+               typeof(DeltaCandleMessage),      // Тип сообщения свечи
+               DeltaCandleType,                // Тип сообщения
+               "delta",                        // Имя файла для хранения
+               str => str.To<decimal>(),       // Конвертер из строки в параметр
+               arg => arg.ToString(),          // Конвертер из параметра в строку
+               a => a > 0,                     // Валидатор параметра
+               false                           // Можно ли получать такие свечи из источника (не только строить)
+           );
+       }
+   }
+   ```
+
+3. Далее требуется создать построителя свечей для нового типа. Для этого создаем реализацию [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
 
    ```cs
    /// <summary>
-   /// Свеча, группируемая по количеству сделок.
+   /// Построитель свечей типа <see cref="DeltaCandleMessage"/>.
    /// </summary>
-   public class TickCandleMessage : CandleMessage
-   {
-   	public TickCandleMessage()
-   		: base(MessageTypes.CandleTick)
-   	{
-   	}
-   	/// <summary>
-   	/// Максимальное количество сделок, которое может содержать свеча.
-   	/// </summary>
-   	public int MaxTradeCount { get; set; }
-   	/// <summary>
-   	/// Создать копию <see cref="TickCandleMessage"/>.
-   	/// </summary>
-   	/// <returns>Копия.</returns>
-   	public override Message Clone()
-   	{
-   		return CopyTo(new TickCandleMessage
-   		{
-   			MaxTradeCount = MaxTradeCount
-   		});
-   	}
-   	/// <summary>
-   	/// Параметр свечи.
-   	/// </summary>
-   	public override object Arg
-   	{
-   		get => MaxTradeCount;
-   		set => MaxTradeCount = (int)value;
-   	}
-   }
-   ```
-3. Далее требуется создать построителя свечей, для нового типа свечей. Для этого необходимо создать реализацию [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1). В метод [CandleBuilder\<TCandleMessage\>.ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue(StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription,StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform))**(**[StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription) subscription, [StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) transform **)** будет поступать значение типа [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). В зависимости от настроек может содержать данные как о тиковой сделке [TickCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilderValueTransform), так и о стакане [QuoteCandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.QuoteCandleBuilderValueTransform).
-
-   Метод [CandleBuilder\<TCandleMessage\>.ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue(StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription,StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform))**(**[StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription) subscription, [StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) transform **)** должен возвратить или новую свечу (если новые данные привели к формированию свечи), или обновить переданную (если данных пока недостаточно для создания новой свечи). Если метод [CandleBuilder\<TCandleMessage\>.ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue(StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription,StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform))**(**[StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription) subscription, [StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) transform **)** возвращает новую свечу, то [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1) вызывает его еще раз, передав в метод то же самое значение [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform). Метод будет вызываться до тех пор, пока [CandleBuilder\<TCandleMessage\>.ProcessValue](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1.ProcessValue(StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription,StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform))**(**[StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderSubscription) subscription, [StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) transform **)** не вернет переданную свечу. Это сделано для тех случаев, когда по одному входящему значению [ICandleBuilderValueTransform](xref:StockSharp.Algo.Candles.Compression.ICandleBuilderValueTransform) может быть сформировано несколько свечей: 
-
-   ```cs
-   /// <summary>
-   /// Построитель свечей типа <see cref="T:StockSharp.Algo.Candles.TickCandle" />.
-   /// </summary>
-   public class TickCandleBuilder : CandleBuilder<TickCandleMessage>
+   public class DeltaCandleBuilder : CandleBuilder<DeltaCandleMessage>
    {
        /// <summary>
-       /// Создать <see cref="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" />.
+       /// Инициализирует новый экземпляр <see cref="DeltaCandleBuilder"/>.
        /// </summary>
-       public TickCandleBuilder()
+       /// <param name="exchangeInfoProvider">Провайдер информации о биржах.</param>
+       public DeltaCandleBuilder(IExchangeInfoProvider exchangeInfoProvider)
+           : base(exchangeInfoProvider)
        {
        }
-       /// <summary>
-       /// Создать <see cref="T:StockSharp.Algo.Candles.Compression.TickCandleBuilder" />.
-       /// </summary>
-       public TickCandleBuilder()
+       
+       /// <inheritdoc />
+       protected override DeltaCandleMessage CreateCandle(ICandleBuilderSubscription subscription, ICandleBuilderValueTransform transform)
        {
-       }
-       /// <summary>
-       /// Создать новую свечу.
-       /// </summary>
-       /// <param name="series">Серия свечей.</param>
-       /// <param name="transform">Данные, с помощью которых необходимо создать новую свечу.</param>
-       /// <returns>Созданная свеча.</returns>
-       protected override TickCandle CreateCandle(CandleSeries series, ICandleBuilderValueTransform transform)
-       {
-           var candle = new TickCandleMessage
+           var time = transform.Time;
+           
+           return FirstInitCandle(subscription, new DeltaCandleMessage
            {
-               TradeCount = (int)series.Arg,
-               OpenTime = transform.Time,
-               CloseTime = transform.Time
-           };
-           return this.FirstInitCandle(series, candle, transform);
+               DeltaThreshold = subscription.Message.GetArg<decimal>(),
+               OpenTime = time,
+               CloseTime = time,
+               HighTime = time,
+               LowTime = time,
+               CurrentDelta = 0
+           }, transform);
        }
-       /// <summary>
-       /// Получить временные диапазоны, для которых у данного источника для передаваемой серии свечей есть данные.
-       /// </summary>
-       /// <param name="series">Серия свечей.</param>
-       /// <returns>Временные диапазоны.</returns>
-       public override IEnumerable<Range<DateTime>> GetSupportedRanges(CandleSeries series)
+       
+       /// <inheritdoc />
+       protected override bool IsCandleFinishedBeforeChange(ICandleBuilderSubscription subscription, DeltaCandleMessage candle, ICandleBuilderValueTransform transform)
        {
-           IEnumerable<Range<DateTime>> supportedRanges = base.GetSupportedRanges(series);
-           if (!supportedRanges.IsEmpty<Range<DateTime>>())
-           {
-               if (!(series.Arg is int))
-               {
-                   throw new ArgumentException();
-               }
-               if (((int) series.Arg) <= 0)
-               {
-                   throw new ArgumentOutOfRangeException();
-               }
-           }
-           return supportedRanges;
+           // Свеча закрывается, когда абсолютное значение дельты превышает порог
+           return Math.Abs(candle.CurrentDelta) >= candle.DeltaThreshold;
        }
-       /// <summary>
-       /// Сформирована ли свеча до добавления данных.
-       /// </summary>
-       /// <param name="series">Серия свечей.</param>
-       /// <param name="candle">Свеча.</param>
-       /// <param name="transform">Данные, с помощью которых принимается решение о необходимости окончания формирования текущей свечи.</param>
-       /// <returns>True, если свечу необходимо закончить. Иначе, false.</returns>
-       protected override bool IsCandleFinishedBeforeChange(CandleSeries series, TickCandleMessage candle, ICandleBuilderValueTransform transform)
+       
+       /// <inheritdoc />
+       protected override void UpdateCandle(ICandleBuilderSubscription subscription, DeltaCandleMessage candle, ICandleBuilderValueTransform transform)
        {
-           return candle.TotalTicks != null && candle.TotalTicks.Value >= candle.MaxTradeCount;
-       }
-       /// <summary>
-       /// Обновить свечу данными.
-       /// </summary>
-       /// <param name="series">Серия свечей.</param>
-       /// <param name="candle">Свеча.</param>
-       /// <param name="transform">Данные.</param>
-       protected override void UpdateCandle(CandleSeries series, TickCandleMessage candle, ICandleBuilderValueTransform transform)
-       {
-   		base.UpdateCandle(series, candle, transform);
-   		candle.TotalTicks++;
+           base.UpdateCandle(subscription, candle, transform);
+           
+           // Обновляем дельту в зависимости от стороны сделки
+           if (transform.Side == Sides.Buy)
+               candle.CurrentDelta += transform.Volume ?? 0;
+           else if (transform.Side == Sides.Sell)
+               candle.CurrentDelta -= transform.Volume ?? 0;
        }
    }
    ```
-4. Затем необходимо получить [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) из подключения и добавить в него [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder):
 
-   > [!CAUTION]
-   > [TickCandleBuilder](xref:StockSharp.Algo.Candles.Compression.TickCandleBuilder), как источник свечей, стандартно присутствует в [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider). Данный шаг представлен лишь в качестве примера.
+4. Затем необходимо зарегистрировать построитель свечей в [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider):
 
    ```cs
    private Connector _connector;
    ...
-   _connector.Adapter.CandleBuilderProvider.Register(new TickCandleBuilder());
+   // Регистрируем тип дельта-свечей в системе
+   DeltaCandleHelper.RegisterDeltaCandleType();
+   
+   // Регистрируем построитель дельта-свечей
+   _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
-5. Создать [CandleSeries](xref:StockSharp.Algo.Candles.CandleSeries) и запросить по ней данные:
+
+5. Создаем подписку на свечи типа `DeltaCandleMessage` и запрашиваем по ней данные:
 
    ```cs
-   var series = new CandleSeries(typeof(TickCandle), _security, 1000);
-   ...
-   _connector.SubscribeCandles(series);
+   // Пороговое значение дельты
+   decimal deltaThreshold = 1000m;
+   
+   // Создаем подписку на дельта-свечи
+   var subscription = new Subscription(
+       // Используем наш расширяющий метод для создания типа данных
+       deltaThreshold.Delta(), 
+       security)
+   {
+       MarketData =
+       {
+           // Указываем, что свечи будут строиться из тиков
+           BuildMode = MarketDataBuildModes.Build,
+           BuildFrom = DataType.Ticks
+       }
+   };
+   
+   // Подписываемся на событие получения свечей
+   _connector.CandleReceived += (sub, candle) =>
+   {
+       if (sub != subscription)
+           return;
+       
+       var deltaCandle = (DeltaCandleMessage)candle;
+       
+       // Обработка дельта-свечи
+       Console.WriteLine($"Дельта-свеча {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+                        $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
+   };
+   
+   // Подписываемся на переход в онлайн-режим
+   _connector.SubscriptionOnline += sub => 
+   {
+       if (sub == subscription)
+           Console.WriteLine("Подписка на дельта-свечи перешла в онлайн режим");
+   };
+   
+   // Запускаем подписку
+   _connector.Subscribe(subscription);
    ```
+
+## Использование дельта-свечей в торговых стратегиях
+
+Пример простой стратегии, использующей дельта-свечи:
+
+```cs
+public class DeltaCandleStrategy : Strategy
+{
+    private readonly StrategyParam<decimal> _deltaThreshold;
+    private readonly StrategyParam<decimal> _volume;
+    private readonly StrategyParam<decimal> _signalDelta;
+
+    private IChart _chart;
+    private IChartCandleElement _chartCandleElement;
+    private IChartIndicatorElement _deltaIndicatorElement;
+
+    public decimal DeltaThreshold
+    {
+        get => _deltaThreshold.Value;
+        set => _deltaThreshold.Value = value;
+    }
+
+    public decimal Volume
+    {
+        get => _volume.Value;
+        set => _volume.Value = value;
+    }
+
+    public decimal SignalDelta
+    {
+        get => _signalDelta.Value;
+        set => _signalDelta.Value = value;
+    }
+
+    public DeltaCandleStrategy()
+    {
+        // Параметры стратегии
+        _deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
+            .SetDisplay("Пороговое значение дельты", "Значение дельты объема для формирования свечи", "Основные настройки")
+            .SetValidator(new DecimalGreaterThanZeroAttribute())
+            .SetCanOptimize(true)
+            .SetOptimize(500m, 2000m, 100m);
+
+        _volume = Param(nameof(Volume), 1m)
+            .SetDisplay("Объем заявки", "Объем для торговых операций", "Основные настройки")
+            .SetValidator(new DecimalGreaterThanZeroAttribute());
+
+        _signalDelta = Param(nameof(SignalDelta), 500m)
+            .SetDisplay("Минимальная дельта для сигнала", "Минимальное значение дельты для генерации сигнала", "Основные настройки")
+            .SetValidator(new DecimalGreaterThanZeroAttribute())
+            .SetCanOptimize(true);
+
+        Name = "DeltaCandleStrategy";
+    }
+
+    protected override void OnStarted(DateTimeOffset time)
+    {
+        base.OnStarted(time);
+
+        // Инициализация графика, если он доступен
+        _chart = GetChart();
+        if (_chart != null)
+        {
+            var area = _chart.AddArea();
+            _chartCandleElement = area.AddCandles();
+            _deltaIndicatorElement = area.AddIndicator();
+            _deltaIndicatorElement.DrawStyle = DrawStyles.Histogram;
+            _deltaIndicatorElement.Color = System.Drawing.Color.Purple;
+        }
+
+        // Создаем подписку на дельта-свечи
+        var subscription = new Subscription(DeltaThreshold.Delta(), Security)
+        {
+            MarketData =
+            {
+                BuildMode = MarketDataBuildModes.Build,
+                BuildFrom = DataType.Ticks
+            }
+        };
+
+        // Создаем правило для обработки дельта-свечей
+        this
+            .WhenCandleReceived(subscription)
+            .Do(ProcessDeltaCandle)
+            .Apply(this);
+
+        // Запускаем подписку
+        Subscribe(subscription);
+    }
+
+    private void ProcessDeltaCandle(ICandleMessage candle)
+    {
+        // Отрисовка на графике, если он доступен
+        if (_chart != null)
+        {
+            var deltaCandle = (DeltaCandleMessage)candle;
+            
+            var data = _chart.CreateData();
+            data.Group(candle.OpenTime)
+                .Add(_chartCandleElement, candle)
+                .Add(_deltaIndicatorElement, deltaCandle.CurrentDelta);
+                
+            _chart.Draw(data);
+        }
+
+        // Обрабатываем только завершенные свечи
+        if (candle.State != CandleStates.Finished)
+            return;
+            
+        var deltaCandle = (DeltaCandleMessage)candle;
+        
+        // Проверяем, достаточно ли дельта для сигнала
+        if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
+        {
+            this.AddInfoLog($"Дельта {deltaCandle.CurrentDelta} меньше порогового значения {SignalDelta}. Сигнал не генерируется.");
+            return;
+        }
+
+        // Направление операции зависит от знака дельты
+        var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
+        
+        this.AddInfoLog($"Дельта-свеча завершена. Дельта: {deltaCandle.CurrentDelta}. Направление: {direction}");
+        
+        // Для определения цены используем цену закрытия свечи
+        var price = deltaCandle.ClosePrice;
+        var volume = Volume;
+        
+        // Если у нас уже есть позиция в противоположном направлении, 
+        // увеличиваем объем для закрытия существующей позиции
+        if ((Position < 0 && direction == Sides.Buy) || 
+            (Position > 0 && direction == Sides.Sell))
+        {
+            volume = Math.Max(volume, Math.Abs(Position) + volume);
+        }
+        
+        // Регистрируем заявку
+        RegisterOrder(this.CreateOrder(direction, price, volume));
+    }
+}
+```
+
+## Важные моменты при создании собственных типов свечей
+
+1. **Уникальность MessageTypes** — убедитесь, что выбранный вами идентификатор `MessageTypes` не конфликтует с существующими типами в StockSharp. Рекомендуется использовать значения больше 10000 для пользовательских типов.
+
+2. **Регистрация типа свечей** — регистрация через `Extensions.RegisterCandleType` необходима для правильной интеграции с графическими контролами StockSharp и хранилищем данных. Без регистрации тип свечей будет работать только в коде, но не будет доступен в пользовательском интерфейсе.
+
+3. **Параметр свечи** — реализуйте свойство `ArgType`, которое возвращает тип аргумента свечи. Это используется для корректного отображения параметров в графическом интерфейсе.
+
+4. **Файловая система** — параметр `fileName` в методе `RegisterCandleType` используется для сохранения свечей в файловой системе, когда вы используете хранилище данных StockSharp.
+
+5. **Валидация параметров** — метод валидации параметров используется в StockSharp для проверки корректности значений перед созданием подписки.
+
+Таким образом, мы создали полностью собственный тип свечей, который правильно интегрируется со всей экосистемой StockSharp (включая пользовательский интерфейс и хранилище данных) и может использоваться для построения торговых стратегий, основанных на анализе дельты объемов.
