@@ -114,7 +114,7 @@ connector.NewSecurity += s =>
     // подписываемся на нужные данные в зависимости от настроек тестирования
     if (emulationInfo.UseMarketDepth)
     {
-        connector.SubscribeMarketDepth(security);
+        connector.Subscribe(new(DataType.MarketDepth, security));
         
         // если нужно генерировать стаканы
         if (generateDepths || emulationInfo.UseCandle != null)
@@ -139,17 +139,17 @@ connector.NewSecurity += s =>
     
     if (emulationInfo.UseOrderLog)
     {
-        connector.SubscribeOrderLog(security);
+        connector.Subscribe(new(DataType.OrderLog, security));
     }
     
     if (emulationInfo.UseTicks)
     {
-        connector.SubscribeTrades(security);
+        connector.Subscribe(new(DataType.Ticks, security));
     }
     
     if (emulationInfo.UseLevel1)
     {
-        connector.SubscribeLevel1(security);
+        connector.Subscribe(new(DataType.Level1, security));
     }
     
     // start strategy before emulation started

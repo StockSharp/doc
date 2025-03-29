@@ -2,16 +2,16 @@
 
 ![GUI Leve1Grid](../../../../images/gui_leve1grid.png)
 
-[Level1Grid](xref:StockSharp.Xaml.Level1Grid) is the table for displaying the Level1 fields. This table uses the data as [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) messages. 
+[Level1Grid](xref:StockSharp.Xaml.Level1Grid) - a table for displaying Level1 fields. This table uses data in the form of [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) messages.
 
 **Main properties**
 
-- [Level1Grid.MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) \- the maximum number of messages to display.
-- [Level1Grid.Messages](xref:StockSharp.Xaml.Level1Grid.Messages) \- the list of messages added to the table.
-- [Level1Grid.SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) \- the selected message.
-- [Level1Grid.SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) \- selected messages.
+- [Level1Grid.MaxCount](xref:StockSharp.Xaml.Level1Grid.MaxCount) - maximum number of messages to display.
+- [Level1Grid.Messages](xref:StockSharp.Xaml.Level1Grid.Messages) - list of messages added to the table.
+- [Level1Grid.SelectedMessage](xref:StockSharp.Xaml.Level1Grid.SelectedMessage) - selected message.
+- [Level1Grid.SelectedMessages](xref:StockSharp.Xaml.Level1Grid.SelectedMessages) - selected messages.
 
-Below is the code snippet with its use. 
+Below are code fragments demonstrating its usage:
 
 ```xaml
 <Window x:Class="Membrane02.Level1Window"
@@ -27,27 +27,104 @@ Below is the code snippet with its use.
         <sx:Level1Grid x:Name="Level1Grid" />
     </Grid>
 </Window>
-	  				
 ```
+
 ```cs
 public Level1Window()
 {
     InitializeComponent();
     _connector = MainWindow.This.Connector;
-    _connector.NewMessage += OnNewMessage;
-    if (!_connector.RegisteredSecurities.Contains(MainWindow.This.SelectedSecurity))
-                _connector.SubscribeLevel1(MainWindow.This.SelectedSecurity);
-}
-private void OnNewMessage(Message message)
-{
-    if (message.Type == MessageTypes.Level1Change)
+    
+    // Subscribe to Level1 data reception event
+    _connector.Level1Received += OnLevel1Received;
+    
+    // Create a subscription to Level1 data if not already subscribed
+    var security = MainWindow.This.SelectedSecurity;
+    if (!_connector.Subscriptions.Any(s => 
+            s.DataType == DataType.Level1 && 
+            s.SecurityId == security.ToSecurityId()))
     {
-        var level1Mes = (Level1ChangeMessage)message;
-        if (level1Mes.SecurityId != MainWindow.This.SelectedSecurity.ToSecurityId())
-            return;
-        Level1Grid.Messages.Add(level1Mes);
+        var subscription = new Subscription(DataType.Level1, security);
+        _connector.Subscribe(subscription);
     }
 }
-              		
-	  				
+
+private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
+{
+    // Check if the message belongs to the selected instrument
+    if (level1Message.SecurityId != MainWindow.This.SelectedSecurity.ToSecurityId())
+        return;
+        
+    // Add the message to Level1Grid
+    this.GuiAsync(() => Level1Grid.Messages.Add(level1Message));
+}
+
+private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+{
+    // Unsubscribe from events when the window is closing
+    if (_connector != null)
+        _connector.Level1Received -= OnLevel1Received;
+}
+```
+
+### Recommended way to process Level1 data
+
+```cs
+// Creating a subscription to Level1 using multiple instruments
+public void SubscribeToLevel1(IEnumerable<Security> securities)
+{
+    foreach (var security in securities)
+    {
+        var subscription = new Subscription(DataType.Level1, security);
+        _connector.Subscribe(subscription);
+    }
+    
+    // Subscribe to Level1 data reception event
+    _connector.Level1Received += OnLevel1Received;
+}
+
+// Handler for Level1 data reception event
+private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
+{
+    // Get the instrument corresponding to the received message
+    var security = _connector.LookupById(level1Message.SecurityId);
+    if (security == null)
+        return;
+        
+    // Check if we need to process this particular message
+    if (IsSecurityNeeded(security))
+    {
+        // Update GUI in the user interface thread
+        this.GuiAsync(() => 
+        {
+            // Add the message to Level1Grid
+            Level1Grid.Messages.Add(level1Message);
+            
+            // Process changes in Level1 fields
+            foreach (var change in level1Message.Changes)
+            {
+                switch (change.Key)
+                {
+                    case Level1Fields.LastTradePrice:
+                        // Process last trade price change
+                        var lastPrice = (decimal)change.Value;
+                        Console.WriteLine($"Last price {security.Code}: {lastPrice}");
+                        break;
+                        
+                    case Level1Fields.BestBidPrice:
+                        // Process best bid price change
+                        var bestBid = (decimal)change.Value;
+                        Console.WriteLine($"Best bid {security.Code}: {bestBid}");
+                        break;
+                        
+                    case Level1Fields.BestAskPrice:
+                        // Process best ask price change
+                        var bestAsk = (decimal)change.Value;
+                        Console.WriteLine($"Best ask {security.Code}: {bestAsk}");
+                        break;
+                }
+            }
+        });
+    }
+}
 ```
