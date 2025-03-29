@@ -1,6 +1,6 @@
 # Свечной график
 
-[Chart](xref:StockSharp.Xaml.Charting.Chart) \- графический компонет, который позволяет строить биржевые графики: свечи, индикаторы, и отображать на графиках маркеры заявок и сделок. 
+[Chart](xref:StockSharp.Xaml.Charting.Chart) - графический компонет, который позволяет строить биржевые графики: свечи, индикаторы, и отображать на графиках маркеры заявок и сделок. 
 
 Ниже приведен пример построения графика при помощи компонета [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/Common\/SampleConnection, в который внесены некоторые изменения. 
 
@@ -18,13 +18,12 @@
            Title="ChartWindow" Height="300" Width="300">
       <charting:Chart x:Name="Chart" x:FieldModifier="public" />
    </Window>
-   	  				
    ```
-2. В коде главного окна декларируем переменные для областей графика, элементов графика и индикаторов. 
+
+2. В коде главного окна декларируем переменные для областей графика, элементов графика, индикаторов и подписок. 
 
    ```cs
-                 		
-   private readonly Dictionary<CandleSeries, ChartWindow> _chartWindows = new Dictionary<CandleSeries, ChartWindow>();
+   private readonly Dictionary<Subscription, ChartWindow> _chartWindows = new Dictionary<Subscription, ChartWindow>();
    private readonly Connector _connector = new Connector();
    private readonly LogManager _logManager;
    private ChartArea _candlesArea;
@@ -34,86 +33,234 @@
    private ChartCandleElement _candlesElem;
    private SimpleMovingAverage _sma;
    private MovingAverageConvergenceDivergence _macd;
-                 		
-   	  				
    ```
 
-3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing). В обработчике этого события при получении новой свечи будет выполнятся отрисовка графика. 
+3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). В обработчике этого события при получении новой свечи будет выполнятся отрисовка графика. 
 
    ```cs
-                 		
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
-   		_connector.CandleSeriesProcessing += DrawCandle;
+       _connector.CandleReceived += OnCandleReceived;
+       
+       // Подписываемся на другие необходимые события
+       _connector.Connected += () => this.GuiAsync(() => { /* Обработка подключения */ });
+       _connector.Disconnected += () => this.GuiAsync(() => { /* Обработка отключения */ });
+       
+       // Подключаемся к торговой системе
+       _connector.Connect();
    }
-   	  				
    ```
 
-4. В обработчике кнопки **ShowChart** создаем объекты индикаторов, областей и элементов графика. Добавляем элементы к областям, а области к чарту. Открываем окно графика и запускаем работу кандлменеджера. 
+4. В обработчике кнопки **ShowChart** создаем объекты индикаторов, областей и элементов графика. Добавляем элементы к областям, а области к чарту. Открываем окно графика и запускаем подписку на свечи. 
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)
    {
-   	var security = SelectedSecurity;
-   	var series = new CandleSeries(CandlesSettings.Settings.CandleType, security, CandlesSettings.Settings.Arg);
-   	_chartWindows.SafeAdd(series, key =>
-   	{
-   		var wnd = new ChartWindow
-   		{
-   			Title = "{0} {1} {2}".Put(security.Code, series.CandleType.Name, series.Arg)
-   		};
-   		wnd.MakeHideable();
-   		// инициализируем индикаторы
+       var security = SelectedSecurity;
+       
+       // Создаем подписку на свечи
+       var subscription = new Subscription(
+           DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+           security)
+       {
+           MarketData = 
+           {
+               // Запрашиваем исторические данные за 30 дней
+               From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+               To = DateTime.Now,
+               // Получаем только завершенные свечи
+               IsFinishedOnly = true
+           }
+       };
+       
+       // Создаем окно графика
+       _chartWindows.SafeAdd(subscription, key =>
+       {
+           var wnd = new ChartWindow
+           {
+               Title = $"{security.Code} {TimeSpan.FromMinutes(5)}"
+           };
+           wnd.MakeHideable();
+           
+           // Инициализируем индикаторы
            _sma = new SimpleMovingAverage() { Length = 11 };
            _macd = new MovingAverageConvergenceDivergence();
-   		// инициализируем элементы графика
+           
+           // Инициализируем элементы графика
            _smaChartElement = new ChartIndicatorElement();
            _macdChartElement = new ChartIndicatorElement();
            _candlesElem = new ChartCandleElement();
-   		// устанавливаем стиль отображения MACD в виде гистограммы
+           
+           // Устанавливаем стиль отображения MACD в виде гистограммы
            _macdChartElement.DrawStyle = ChartIndicatorDrawStyles.Histogram;
-   		// инициализируем области графика
+           
+           // Инициализируем области графика
            _candlesArea = new ChartArea();
            _indicatorsArea = new ChartArea();
-   		// добавляем области к чарту
+           
+           // Добавляем области к чарту
            wnd.Chart.Areas.Add(_candlesArea);
            wnd.Chart.Areas.Add(_indicatorsArea);
-   		// добавляем элементы к областям
+           
+           // Добавляем элементы к областям
            _candlesArea.Elements.Add(_candlesElem);
            _candlesArea.Elements.Add(_smaChartElement);
            _indicatorsArea.Elements.Add(_macdChartElement);
+           
+           // Привязываем элементы графика к подписке для автоматической отрисовки
+           wnd.Chart.AddElement(_candlesArea, _candlesElem, subscription);
+           wnd.Chart.AddElement(_candlesArea, _smaChartElement, subscription);
+           wnd.Chart.AddElement(_indicatorsArea, _macdChartElement, subscription);
+           
            return wnd;
-   	}).Show();
-   	_connector.SubscribeCandles(series, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
+       }).Show();
+       
+       // Запускаем подписку на свечи
+       _connector.Subscribe(subscription);
    }
-   	  				
    ```
 
-5. В обработчике события [Connector.CandleSeriesProcessing](xref:StockSharp.Algo.Connector.CandleSeriesProcessing) производим отрисовку свечи и значений индикаторов для каждой завершенной свечи. Для этого: 
-   1. Вычисляем значения индикаторов.
-   2. Заполняем словарь **elements** парами "объект элемента \- значение элемента"
-   3. Для отрисовки графика вызываем метод [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData))**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) data **)**, в который передаем время и словарь элементов.
-
-   Результат работы программы представлен на рисунке выше. 
+5. В обработчике события [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) производим отрисовку свечи и значений индикаторов для каждой завершенной свечи. 
 
    ```cs
-   private void DrawCandle(CandleSeries series, Candle candle)
+   private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
    {
-   	var wnd = _chartWindows.TryGetValue(series);
-   	if (wnd != null)
-   	{
-   		if (candle.State != CandleStates.Finished)
-   			return;
-   		var smaValue = _sma.Process(candle);
-   		var macdValue = _macd.Process(candle);
-   		var data = new ChartDrawData();
-   		data
-   		  .Group(candle.OpenTime)
-   		    .Add(_candlesElem, candle)
-   		    .Add(_smaChartElement, smaValue)
-   		    .Add(_macdChartElement, macdValue);
-           	wnd.Chart.Draw(data);
-                  
-   	}
+       var wnd = _chartWindows.TryGetValue(subscription);
+       if (wnd == null)
+           return;
+       
+       // Обрабатываем только завершенные свечи
+       if (candle.State != CandleStates.Finished)
+           return;
+       
+       // Вычисляем значения индикаторов
+       var smaValue = _sma.Process(candle);
+       var macdValue = _macd.Process(candle);
+       
+       // Создаем данные для отрисовки
+       var data = new ChartDrawData();
+       data
+           .Group(candle.OpenTime)
+               .Add(_candlesElem, candle)
+               .Add(_smaChartElement, smaValue)
+               .Add(_macdChartElement, macdValue);
+       
+       // Отрисовываем данные на графике в потоке пользовательского интерфейса
+       this.GuiAsync(() => wnd.Chart.Draw(data));
    }
    ```
+
+## Пример с автоматической отрисовкой графика
+
+Начиная с последних версий StockSharp, имеется возможность настроить автоматическую отрисовку графика без необходимости явного вызова метода Draw. Для этого при настройке Chart используется метод AddElement, который связывает элемент графика с подпиской:
+
+```cs
+private void SetupAutoDrawingChart()
+{
+    var security = SelectedSecurity;
+    
+    // Создаем элементы графика
+    var candleElement = new ChartCandleElement();
+    var smaElement = new ChartIndicatorElement { Title = "SMA" };
+    
+    // Создаем области графика
+    var area = new ChartArea();
+    
+    // Добавляем область к графику
+    Chart.Areas.Add(area);
+    
+    // Создаем подписку на свечи
+    var subscription = new Subscription(
+        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+        security)
+    {
+        MarketData = 
+        {
+            From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+            To = DateTime.Now
+        }
+    };
+    
+    // Привязываем элементы к области графика и подписке
+    Chart.AddElement(area, candleElement, subscription);
+    Chart.AddElement(area, smaElement, subscription);
+    
+    // Создаем индикатор
+    var sma = new SimpleMovingAverage { Length = 14 };
+    
+    // Подписываемся на событие получения свечей для обработки индикатором
+    _connector.CandleReceived += (sub, candle) => 
+    {
+        if (sub == subscription && candle.State == CandleStates.Finished)
+        {
+            // Обрабатываем свечу индикатором и получаем значение
+            var smaValue = sma.Process(candle);
+            
+            // Отрисовываем значение индикатора
+            var data = new ChartDrawData();
+            data
+                .Group(candle.OpenTime)
+                    .Add(smaElement, smaValue);
+            
+            this.GuiAsync(() => Chart.Draw(data));
+        }
+    };
+    
+    // Запускаем подписку
+    _connector.Subscribe(subscription);
+}
+```
+
+## Отображение заявок и сделок на графике
+
+Можно отображать маркеры заявок и сделок непосредственно на графике:
+
+```cs
+// Создаем элементы для отображения заявок и сделок
+var orderElement = new ChartOrderElement();
+var tradeElement = new ChartTradeElement();
+
+// Добавляем элементы на область графика
+_candlesArea.Elements.Add(orderElement);
+_candlesArea.Elements.Add(tradeElement);
+
+// Подписываемся на события получения заявок и сделок
+_connector.OrderReceived += (sub, order) => 
+{
+    if (order.Security != _security)
+        return;
+    
+    // Отрисовываем заявку на графике
+    var data = new ChartDrawData();
+    data.Group(order.Time).Add(orderElement, order);
+    
+    this.GuiAsync(() => Chart.Draw(data));
+};
+
+_connector.OwnTradeReceived += (sub, trade) => 
+{
+    if (trade.Order.Security != _security)
+        return;
+    
+    // Отрисовываем сделку на графике
+    var data = new ChartDrawData();
+    data.Group(trade.Time).Add(tradeElement, trade);
+    
+    this.GuiAsync(() => Chart.Draw(data));
+};
+```
+
+## Очистка графика
+
+Для очистки графика можно использовать метод Reset:
+
+```cs
+// Очистка всего графика
+Chart.Reset();
+
+// Очистка конкретной области
+_candlesArea.Reset();
+
+// Очистка конкретного элемента
+_candlesElem.Reset();
+```
