@@ -28,9 +28,6 @@ var security = GetSecurity(); // Получите объект Security, на к
 // подписаться на стакан
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);
-
-// или так
-//var subscription = connector.SubscribeMarketDepth(security);
 ```
 
 ## Отписка от стакана заявок

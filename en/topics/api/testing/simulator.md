@@ -1,71 +1,155 @@
-# Simulator
+# Real-Time Market Data Testing
 
-Testing on market data is trading with a real connection to the exchange ("live" quotes), but without actual orders registering on the exchange. All the registered orders are intercepted, and their execution is emulated based on market order books. Such testing can be useful, for example, if trading simulator is developed. Or it is necessary to check the trading algorithm at short period of time with the real quotes. 
+Real-time market data testing involves trading with an actual connection to the exchange ("live" quotes), but without placing real orders on the exchange. All registered orders are intercepted, and their execution is emulated based on market order books. Such testing can be useful, for example, when developing a trading simulator, or when checking a trading algorithm over a short period with real quotes.
 
-To emulate the trading on real data it is necessary to use [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" of the specific trading system connector ([Binance](../connectors/crypto_exchanges/binance.md), [Alpaca](../connectors/stock_market/alpaca.md) etc.). Below is a description of an example of working with the emulator using the connection to [Binance](../connectors/crypto_exchanges/binance.md). The example itself is in the *Samples\/Testing\/SampleRealTimeEmulation* folder. 
+To emulate trading with real data, you need to use [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" for a specific trading system connector ([Binance](../connectors/crypto_exchanges/binance.md), [Tinkoff](../connectors/russia/tinkoff.md), etc.).
 
-## Work with the trading emulator on real data
+## Creating an Emulation Connector
 
-1. Creating the [RealTimeEmulationTrader\<TUnderlyingMarketDataAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1) instance and passing to its constructor the [BinanceMessageAdapter](xref:StockSharp.Binance.BinanceMessageAdapter) adapter. To create identifiers of the "virtual" transactions using the **MillisecondIncrementalIdGenerator** identifier generator. 
+To create an emulation connector, first create a regular connector to receive market data, and then create an emulation connector based on it:
 
-   ```cs
-   _connector = new RealTimeEmulationTrader<BinanceMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
-   {
-   	Key = Login.Text,
-   	Secret = Password.Password.To<SecureString>(),
-   });
-   					  
-   ```
-2. The created connector is used as a usual connector. In our case, subscribing to events, passing an information to the graphical components and establishing the connection. 
+```csharp
+// Create a regular connector for receiving market data
+private readonly Connector _realConnector = new();
 
-   ```cs
-   SecurityPicker.SecurityProvider = new FilterableSecurityProvider(_connector);
-   SecurityPicker.MarketDataProvider = _connector;
-   _logManager.Sources.Add(_connector);
-   					
-   _connector.Connected += () =>
-   {
-   	// update gui labels
-   	this.GuiAsync(() => { ChangeConnectStatus(true); });
-   };
-   // subscribe on disconnection event
-   _connector.Disconnected += () =>
-   {
-   	// update gui labels
-   	this.GuiAsync(() => { ChangeConnectStatus(false); });
-   };
-   // subscribe on connection error event
-   _connector.ConnectionError += error => this.GuiAsync(() =>
-   {
-   	// update gui labels
-   	ChangeConnectStatus(false);
-   	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
-   });
-   _connector.NewMarketDepth += OnDepth;
-   _connector.MarketDepthChanged += OnDepth;
-   _connector.PositionReceived += (sub, p) => PortfolioGrid.Positions.TryAdd(p);
-   _connector.NewOrder += OrderGrid.Orders.Add;
-   _connector.NewMyTrade += TradeGrid.Trades.Add;
-   // subscribe on error of order registration event
-   _connector.OrderRegisterFailed += OrderGrid.AddRegistrationFail;
-   _connector.CandleSeriesProcessing += (s, candle) =>
-   {
-   	if (candle.State == CandleStates.Finished)
-   		_buffer.Add(candle);
-   };
-   _connector.SubscribeCandles(series, DateTime.Today.Subtract(TimeSpan.FromDays(5)), DateTime.Now);	
-   _connector.MassOrderCancelFailed += (transId, error) =>
-   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str716));
-   // subscribe on error event
-   _connector.Error += error =>
-   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
-   // subscribe on error of market data subscription event
-   _connector.MarketDataSubscriptionFailed += (security, msg, error) =>
-   {
-   	if (error == null)
-   		return;
-   	this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2956Params.Put(msg.DataType, security)));
-   };
-   					  
-   ```
-3. The following figure shows the result of the example work. ![sample realtaime emulation](../../../images/sample_realtaime_emulation.png)
+// Create an emulation connector
+_emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, false);
+
+// Configure emulation parameters
+var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
+settings.TimeZone = TimeHelper.Est;
+settings.ConvertTime = true;
+```
+
+For trade emulation, you need to use a special portfolio:
+
+```csharp
+private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
+```
+
+## Subscribing to Events
+
+Like a regular connector, the emulation connector generates events when receiving market data and executing transactions:
+
+```csharp
+// Subscribe to connector events
+_emuConnector.Connected += () =>
+{
+    // update gui labels
+    this.GuiAsync(() => { ChangeConnectStatus(true); });
+};
+
+_emuConnector.Disconnected += () =>
+{
+    // update gui labels
+    this.GuiAsync(() => { ChangeConnectStatus(false); });
+};
+
+_emuConnector.ConnectionError += error => this.GuiAsync(() =>
+{
+    // update gui labels
+    ChangeConnectStatus(false);
+    MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+});
+
+_emuConnector.OrderBookReceived += OnDepth;
+_emuConnector.PositionReceived += (sub, p) => PortfolioGrid.Positions.TryAdd(p);
+_emuConnector.OwnTradeReceived += (s, t) => TradeGrid.Trades.TryAdd(t);
+_emuConnector.OrderReceived += (s, o) =>
+{
+    if (!_fistTimeOrders.Add(o))
+        return;
+
+    _bufferOrders.Add(o);
+    OrderGrid.Orders.Add(o);
+};
+
+// Subscribe to order registration errors
+_emuConnector.OrderRegisterFailReceived += (s, f) => OrderGrid.AddRegistrationFail(f);
+
+_emuConnector.CandleReceived += (s, candle) =>
+{
+    if (s == _candlesSubscription)
+        _buffer.Add(candle);
+};
+```
+
+## Subscribing to Market Data
+
+To work with market data, you need to subscribe to the appropriate data types:
+
+```csharp
+// Subscribe to order books, ticks, and Level1 for the emulation connector
+_emuConnector.Subscribe(new(DataType.MarketDepth, security));
+_emuConnector.Subscribe(new(DataType.Ticks, security));
+_emuConnector.Subscribe(new(DataType.Level1, security));
+
+// Subscribe to order books for the real connector (needed for emulation)
+_realConnector.Subscribe(new(DataType.MarketDepth, security));
+
+// Subscribe to candles
+_candlesSubscription = new(CandleDataTypeEdit.DataType, security)
+{
+    From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
+};
+_emuConnector.Subscribe(_candlesSubscription);
+```
+
+## Order Registration and Management
+
+Orders are registered through the emulation connector similar to a regular connector:
+
+```csharp
+// Order registration
+_emuConnector.RegisterOrder(order);
+
+// Order cancellation
+_emuConnector.CancelOrder(order);
+
+// Order replacement
+_emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
+```
+
+## Configuring Emulation Parameters
+
+You can use the [MarketEmulatorSettings](xref:StockSharp.Algo.Testing.MarketEmulatorSettings) property to configure emulation parameters:
+
+```csharp
+var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
+
+// Set timezone
+settings.TimeZone = TimeHelper.Est;
+
+// Convert time
+settings.ConvertTime = true;
+
+// Match orders on price touch
+settings.MatchOnTouch = false;
+
+// Emulate order execution latency
+settings.Latency = TimeSpan.FromMilliseconds(100);
+```
+
+## Interface Example
+
+The SampleRealTimeEmulation example demonstrates the ability to simultaneously display data from both the real connector and the emulation connector:
+
+![sample realtime emulation](../../../images/sample_realtime_emulation.png)
+
+The application interface contains the following elements:
+- Charts for displaying candles and orders
+- Order and own trade tables
+- Real market and emulation order books
+- Controls for creating and canceling orders
+
+## Advantages and Limitations
+
+Real-time market data testing has the following advantages:
+- Using real market data without financial risks
+- Testing algorithms in conditions very close to real trading
+- Ability to compare results with the real market in real time
+
+Limitations:
+- Testing speed is limited by the rate of real data
+- Inability to test on historical periods
+- Dependence on the quality and completeness of the received market data

@@ -28,9 +28,6 @@ var security = GetSecurity(); // Get the Security object you want to subscribe t
 // subscribe to the order book
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);
-
-// or like this
-//var subscription = connector.SubscribeMarketDepth(security);
 ```
 
 ## Unsubscribing from the Order Book

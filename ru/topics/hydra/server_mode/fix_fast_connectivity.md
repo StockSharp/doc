@@ -5,10 +5,11 @@
 Для подключения через [FIX протокол](../../api/connectors/common/fix_protocol.md) необходимо создать и настроить Fix подключение ([Инициализация адаптера FIX](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
 
 ```cs
-...
+// Создаем экземпляр коннектора
 private readonly Connector _connector = new Connector();
-...
-var marketDataAdapter = new FixMessageAdapter(Connector.TransactionIdGenerator)
+
+// Настраиваем адаптер для рыночных данных по FIX протоколу
+var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
     Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
     SenderCompId = "hydra_user",
@@ -17,7 +18,9 @@ var marketDataAdapter = new FixMessageAdapter(Connector.TransactionIdGenerator)
     Password = "qwerty".To<SecureString>(),
 };
 _connector.Adapter.InnerAdapters.Add(marketDataAdapter);
-var transactionDataAdapter = new FixMessageAdapter(Connector.TransactionIdGenerator)
+
+// Настраиваем адаптер для транзакционных данных
+var transactionDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
     Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
     SenderCompId = "hydra_user",
@@ -26,67 +29,152 @@ var transactionDataAdapter = new FixMessageAdapter(Connector.TransactionIdGenera
     Password = "qwerty".To<SecureString>(),
 };
 _connector.Adapter.InnerAdapters.Add(transactionDataAdapter);
-...
 ```
 
-Подписаться на события получения данных и подключиться
+Подписываемся на события и настраиваем обработчики данных:
 
 ```cs
-...
+// Событие успешного подключения
 _connector.Connected += () =>
 {
-    Console.WriteLine("_connector.Connected");
-    _connector.LookupSecurities(new Security ());
+    Console.WriteLine("Соединение установлено");
     
-    
+    // Создаем подписку на поиск инструментов
+    var lookupSubscription = new Subscription(DataType.Securities);
+    _connector.Subscribe(lookupSubscription);
 };
+
+// Событие разрыва соединения
 _connector.Disconnected += () =>
 {
-    Console.WriteLine("_connector.Disconnected");
+    Console.WriteLine("Соединение разорвано");
 };
-_connector.NewSecurity += security =>
+
+// Событие получения инструмента
+_connector.SecurityReceived += (subscription, security) =>
 {
-    Console.Write("_connector.NewSecurity: ");
-    Console.WriteLine(security);
-    BuffeSecurity.Add(security);
-    if (security.Id == seid)
+    Console.WriteLine($"Получен инструмент: {security.Code}, {security.Id}");
+    BufferSecurity.Add(security);
+    
+    // Если это искомый инструмент, подписываемся на его данные
+    if (security.Id == targetSecurityId)
     {
-        _connector.SubscribeMarketDepth(security);
-        _connector.SubscribeTrades(security);
-        series.CandleType = typeof (TimeFrameCandle);
-        series.Security = security;
-        series.Arg = TimeSpan.FromMinutes(5);
-        _connector.SubscribeCandles(series, DateTime.Today.Subtract(TimeSpan.FromDays(30)), DateTime.Now);
+        // Подписка на стакан
+        var depthSubscription = new Subscription(DataType.MarketDepth, security);
+        _connector.Subscribe(depthSubscription);
+        
+        // Подписка на тиковые сделки
+        var tradesSubscription = new Subscription(DataType.Ticks, security);
+        _connector.Subscribe(tradesSubscription);
+        
+        // Подписка на свечи
+        var candleSubscription = new Subscription(
+            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+            security)
+        {
+            MarketData =
+            {
+                From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+                To = DateTime.Now
+            }
+        };
+        _connector.Subscribe(candleSubscription);
     }
 };
-_connector.NewTrade += trade =>
+
+// Событие получения тиковой сделки
+_connector.TickTradeReceived += (subscription, trade) =>
 {
-    Console.WriteLine("_connector.NewTrade");
-    Console.WriteLine(trade);
+    Console.WriteLine($"Получена сделка: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
-_connector.MarketDepthChanged+= depth =>
+
+// Событие изменения стакана
+_connector.OrderBookReceived += (subscription, depth) =>
 {
-    Console.WriteLine("_connector.MarketDepthChanged");
-    Console.WriteLine(depth);
+    Console.WriteLine($"Получен стакан: {depth.SecurityId}, Покупка: {depth.BestBid()?.Price}, Продажа: {depth.BestAsk()?.Price}");
 };
+
+// Событие получения свечи
+_connector.CandleReceived += (subscription, candle) =>
+{
+    Console.WriteLine($"Получена свеча: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+};
+
+// Событие ошибки подключения
 _connector.ConnectionError += error =>
 {
-    Console.WriteLine("_connector.ConnectionError");
-    Console.WriteLine(error.Message);
+    Console.WriteLine($"Ошибка подключения: {error.Message}");
 };
+
+// Событие общей ошибки
 _connector.Error += error =>
 {
-    Console.WriteLine("_connector.Error");
-    Console.WriteLine(error.Message);
+    Console.WriteLine($"Ошибка: {error.Message}");
 };
-_connector.MarketDataSubscriptionFailed += (security, msg, error) =>
+
+// Событие ошибки подписки на рыночные данные
+_connector.SubscriptionFailed += (subscription, error) =>
 {
-    Console.WriteLine("_connector.MarketDataSubscriptionFailed");
-    Console.WriteLine(security);
-    Console.WriteLine(msg);
-    Console.WriteLine(error);
+    Console.WriteLine($"Ошибка подписки {subscription.DataType} для {subscription.SecurityId}: {error}");
 };
-...
+
+// Подключаемся к серверу
 _connector.Connect();
-...
+```
+
+## Использование сервисов Hydra
+
+Hydra в режиме сервера предоставляет доступ к различным типам данных. Рассмотрим примеры получения исторических данных:
+
+```cs
+// Получение исторических свечей
+private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
+{
+    // Создаем подписку на исторические свечи
+    var candleSubscription = new Subscription(
+        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+        security)
+    {
+        MarketData =
+        {
+            From = from,
+            To = to
+        }
+    };
+    
+    // Подписываемся на обработку полученных свечей
+    _connector.CandleReceived += OnCandleReceived;
+    
+    // Запускаем подписку
+    _connector.Subscribe(candleSubscription);
+}
+
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+    // Проверяем, что свеча относится к нашей подписке
+    if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
+        return;
+        
+    Console.WriteLine($"Историческая свеча: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+    
+    // Обрабатываем полученные свечи, например, сохраняем в локальное хранилище
+    // или используем для анализа/визуализации
+}
+```
+
+## Отключение от сервера Hydra
+
+```cs
+// Корректное закрытие соединения
+private void DisconnectFromServer()
+{
+    // Отписываемся от всех подписок
+    foreach (var subscription in _connector.Subscriptions.ToArray())
+    {
+        _connector.UnSubscribe(subscription);
+    }
+    
+    // Отключаемся от сервера
+    _connector.Disconnect();
+}
 ```
