@@ -19,7 +19,7 @@
 
 Как видно данные успешно получены.
 
-Рассмотрим пример, когда нам необходимо получить [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle):
+Рассмотрим пример, когда нам необходимо получить [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
 1. Выбираем **Пользовательские** свечи.
 2. В настройках указываем свечи **Range** и объем 10.

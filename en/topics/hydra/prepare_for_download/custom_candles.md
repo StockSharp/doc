@@ -19,7 +19,7 @@ The sequence of obtaining such candles:
 
 As you can see, the data has been successfully received.
 
-Consider an example when we need to get a [RangeCandle](xref:StockSharp.Algo.Candles.RangeCandle):
+Consider an example when we need to get a [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
 1. Select **Custom** candles.
 2. In the settings, specify the Range candles and the volume 10.
