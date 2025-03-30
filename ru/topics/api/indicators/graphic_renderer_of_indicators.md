@@ -69,7 +69,7 @@ public FractalsPainter()
 {
 	Up = new ChartLineElement { Color = Colors.Green };
 	Down = new ChartLineElement { Color = Colors.Red };
-	Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
+	Up.Style = Down.Style = DrawStyles.Dot;
 	Up.StrokeThickness = Down.StrokeThickness = 4;
 	AddChildElement(Up);
 	AddChildElement(Down);
@@ -127,7 +127,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 	{
 		Up = new ChartLineElement { Color = Colors.Green };
 		Down = new ChartLineElement { Color = Colors.Red };
-		Up.Style = Down.Style = ChartIndicatorDrawStyles.Dot;
+		Up.Style = Down.Style = DrawStyles.Dot;
 		Up.StrokeThickness = Down.StrokeThickness = 4;
 		AddChildElement(Up);
 		AddChildElement(Down);

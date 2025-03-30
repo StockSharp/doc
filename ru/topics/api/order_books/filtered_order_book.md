@@ -14,7 +14,7 @@
 
 1. **Подписка на событие обновления стакана:** [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) для получения обновлений стакана заявок. Это событие используется как для обычного, так и для отфильтрованного стакана.
 
-    При обработке события, проверьте тип данных [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase.DataType) в объекте `subscription`, связанном с событием. Если [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase.DataType) равно [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), это указывает на то, что полученный стакан является отфильтрованным:
+    При обработке события, проверьте тип данных [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) в объекте `subscription`, связанном с событием. Если [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase.DataType) равно [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), это указывает на то, что полученный стакан является отфильтрованным:
 
     ```cs
     connector.OrderBookReceived += (sender, subscription, orderBook) =>

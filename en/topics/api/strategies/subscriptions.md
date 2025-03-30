@@ -134,7 +134,7 @@ When creating a subscription, the strategy automatically sets the `From` paramet
 
 ## Canceling Subscriptions
 
-Subscriptions can be manually canceled by calling the [UnSubscribe](xref:StockSharp.Algo.ISubscriptionProvider.UnSubscribe(StockSharp.BusinessEntities.Subscription)) method:
+Subscriptions can be manually canceled by calling the [UnSubscribe](xref:StockSharp.BusinessEntities.ISubscriptionProvider.UnSubscribe(StockSharp.BusinessEntities.Subscription)) method:
 
 ```cs
 // Cancel subscription

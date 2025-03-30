@@ -92,7 +92,7 @@ Below is an example of building a chart using the [Chart](xref:StockSharp.Xaml.C
            _candlesElem = new ChartCandleElement();
            
            // Set MACD display style as histogram
-           _macdChartElement.DrawStyle = ChartIndicatorDrawStyles.Histogram;
+           _macdChartElement.DrawStyle = DrawStyles.Histogram;
            
            // Initialize chart areas
            _candlesArea = new ChartArea();

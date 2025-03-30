@@ -201,7 +201,7 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 Сообщения, записанные в лог стратегии, можно просматривать:
 
 1. В программе [Designer](../../designer.md) на панели "Логи"
-2. В файлах лога, если настроен [FileLogListener](xref:StockSharp.Logging.FileLogListener)
+2. В файлах лога, если настроен [FileLogListener](xref:Ecng.Logging.FileLogListener)
 3. В пользовательском интерфейсе через [LogControl](xref:StockSharp.Xaml.LogControl), если используется [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)
 
 ## См. также

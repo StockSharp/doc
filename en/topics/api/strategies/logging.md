@@ -201,7 +201,7 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 Messages written to the strategy log can be viewed:
 
 1. In the [Designer](../../designer.md) program on the "Logs" panel
-2. In log files, if [FileLogListener](xref:StockSharp.Logging.FileLogListener) is configured
+2. In log files, if [FileLogListener](xref:Ecng.Logging.FileLogListener) is configured
 3. In the user interface through [LogControl](xref:StockSharp.Xaml.LogControl), if [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) is used
 
 ## See also

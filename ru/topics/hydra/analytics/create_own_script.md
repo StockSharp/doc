@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// draw series on chart as line and histogram
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, ChartIndicatorDrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, ChartIndicatorDrawStyles.Histogram);
+				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;
@@ -94,7 +94,7 @@ namespace StockSharp.Algo.Analytics
 6. Заполнить словари серий данными времени открытия, соответствующими ценами закрытия и общими объемами.
 7. Нарисовать данные серий на графиках, используя методы `lineChart.Append` и `histogramChart.Append`.
 
-Скрипт использует стили, такие как [ChartIndicatorDrawStyles.DashedLine](xref:StockSharp.Charting.ChartIndicatorDrawStyles.DashedLine) для линейного графика и [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Charting.ChartIndicatorDrawStyles.Histogram) для гистограммы, чтобы визуально различать разные представления данных.
+Скрипт использует стили, такие как [DrawStyles.DashedLine](xref:Ecng.Drawing.DrawStyles.DashedLine) для линейного графика и [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) для гистограммы, чтобы визуально различать разные представления данных.
 
 Реализуя [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), класс `ChartDrawScript` позволяет интегрировать подход к выполнению настраиваемых аналитических скриптов, делая его универсальным инструментом для трейдеров и аналитиков, использующих платформу StockSharp.
 

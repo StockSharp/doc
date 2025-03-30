@@ -92,7 +92,7 @@
            _candlesElem = new ChartCandleElement();
            
            // Устанавливаем стиль отображения MACD в виде гистограммы
-           _macdChartElement.DrawStyle = ChartIndicatorDrawStyles.Histogram;
+           _macdChartElement.DrawStyle = DrawStyles.Histogram;
            
            // Инициализируем области графика
            _candlesArea = new ChartArea();

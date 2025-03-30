@@ -136,7 +136,7 @@ To optimize the [backtesting](historical_data.md) process it is possible to use 
    			UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
    		};
    		...
-       var curveItems = Curve.CreateCurve(LocalizedStrings.Str3026Params.Put(period.Item1, period.Item2), period.Item3, ChartIndicatorDrawStyles.Line);
+       var curveItems = Curve.CreateCurve(LocalizedStrings.Str3026Params.Put(period.Item1, period.Item2), period.Item3, DrawStyles.Line);
    		strategy.PnLChanged += () =>
    		{
    			var data = new EquityData

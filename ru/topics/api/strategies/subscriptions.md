@@ -134,7 +134,7 @@ strategy.HistorySize = TimeSpan.FromDays(30);
 
 ## Отмена подписок
 
-Подписки можно отменить вручную, вызвав метод [UnSubscribe](xref:StockSharp.Algo.ISubscriptionProvider.UnSubscribe(StockSharp.BusinessEntities.Subscription)):
+Подписки можно отменить вручную, вызвав метод [UnSubscribe](xref:StockSharp.BusinessEntities.ISubscriptionProvider.UnSubscribe(StockSharp.BusinessEntities.Subscription)):
 
 ```cs
 // Отмена подписки

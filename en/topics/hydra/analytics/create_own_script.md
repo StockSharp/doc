@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// draw series on chart as line and histogram
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, ChartIndicatorDrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, ChartIndicatorDrawStyles.Histogram);
+				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;
@@ -94,7 +94,7 @@ The `ChartDrawScript` class specifically processes market data for each provided
 6. Fill dictionaries with open time series data, corresponding closing prices, and total volumes.
 7. Draw series data on charts using `lineChart.Append` and `histogramChart.Append` methods.
 
-The script utilizes styles, such as [ChartIndicatorDrawStyles.DashedLine](xref:StockSharp.Charting.ChartIndicatorDrawStyles.DashedLine) for the line chart and [ChartIndicatorDrawStyles.Histogram](xref:StockSharp.Charting.ChartIndicatorDrawStyles.Histogram) for the histogram, to visually distinguish different data presentations.
+The script utilizes styles, such as [DrawStyles.DashedLine](xref:Ecng.Drawing.DrawStyles.DashedLine) for the line chart and [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) for the histogram, to visually distinguish different data presentations.
 
 By implementing [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), the `ChartDrawScript` class enables integrating an approach to executing customizable analytical scripts, making it a versatile tool for traders and analysts using the StockSharp platform.
 
