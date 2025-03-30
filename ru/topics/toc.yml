@@ -2030,6 +2030,8 @@
       href: api/strategies/high_level_api.md
     - name: Работа с графиком
       href: api/strategies/chart.md
+    - name: Статистика
+      href: api/strategies/statistics.md
     - name: Сохранение и загрузка настроек
       href: api/strategies/settings_saving_and_loading.md
     - name: Загрузка состояния

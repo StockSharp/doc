@@ -1893,6 +1893,8 @@
       href: api/strategies/high_level_api.md
     - name: Working with Charts
       href: api/strategies/chart.md
+    - name: Statistics
+      href: api/strategies/statistics.md
     - name: Settings saving and loading
       href: api/strategies/settings_saving_and_loading.md
     - name: Orders and trades loading
