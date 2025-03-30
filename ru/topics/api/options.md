@@ -10,6 +10,4 @@
 
 [Дельта\-хеджирование](options/delta_hedging.md)
 
-[Синтетика](options/synthetics.md)
-
 [Графические компоненты для опционов](options/graphic_components.md)

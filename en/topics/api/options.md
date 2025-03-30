@@ -10,6 +10,4 @@ To work with the options [S\#](../api.md) provides special methods for calculati
 
 [Delta hedging](options/delta_hedging.md)
 
-[Synthetics](options/synthetics.md)
-
 [Graphic components](options/graphic_components.md)
