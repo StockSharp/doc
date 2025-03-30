@@ -66,7 +66,7 @@
   
 - **Removing unnecessary rules.**
 
-  [IMarketRule](xref:StockSharp.Algo.IMarketRule) has [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) - a token of the rule with which it is associated. For example, for the rule [MarketRuleHelper.WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ITransactionProvider))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order, [StockSharp.BusinessEntities.ITransactionProvider](xref:StockSharp.BusinessEntities.ITransactionProvider) provider **)**, the token will be the order.
+  [IMarketRule](xref:StockSharp.Algo.IMarketRule) has [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) - a token of the rule with which it is associated. For example, for the rule [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider), the token will be the order.
 
   When a rule for successful order cancellation has been triggered, it's better to remove all other rules related to this order:
 

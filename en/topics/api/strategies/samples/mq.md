@@ -113,7 +113,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 
 ## Resource Release
 
-In the [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped()) method, the strategy releases resources:
+In the [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method, the strategy releases resources:
 
 ```cs
 protected override void OnStopped()

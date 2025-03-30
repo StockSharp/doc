@@ -1,26 +1,5 @@
 # Пользовательский интерфейс (GUI)
 
-Данный топик предназначен для трейдеров, которые разрабатывают графические торговые программы с помощью [S\#](../api.md), но недостаточно знакомы с азами программирования графического интерфейса под [.NET](https://ru.wikipedia.org/wiki/.NET_Framework).
-
-В [.NET](https://ru.wikipedia.org/wiki/.NET_Framework) существует специальная технология для построения графического интерфейса – [WPF](https://ru.wikipedia.org/wiki/Windows_Presentation_Foundation) (до этого была технология [WinForms](https://ru.wikipedia.org/wiki/WinForms), которая значительно уступает по графическим возможностям). В этой технологии для создания графических элементов используется специальный декларативный язык [XAML](https://msdn.microsoft.com/ru-ru/library/hh700354.aspx).
-
-Основное ограничение визуального API под Windows состоит в том, что нельзя обращаться из другого потока к элементам окна. Это связанно с ограничениями архитектуры Windows (подробнее описано здесь [https:\/\/msdn.microsoft.com\/ru\-ru\/library\/ms741870.aspx](https://msdn.microsoft.com/ru-ru/library/ms741870.aspx)). Реализации шлюза [IConnector](xref:StockSharp.BusinessEntities.IConnector) в целях повышения производительности работают в многопоточном режиме. Поэтому, подписываясь на событие, например, [Connector.NewSecurity](xref:StockSharp.Algo.Connector.NewSecurity), нельзя напрямую выводить полученные данные в окно пользователя. Для этого нужно провести операцию синхронизации при помощи специального объекта [Dispatcher](https://msdn.microsoft.com/ru-ru/library/system.windows.threading.dispatcher(v=vs.110).aspx), который управляет очередью рабочих элементов потока. 
-
-Вот простой пример, как это делается:
-
-```cs
-// обязательно нужно вызвать метод BeginInvoke,
-// и уже в его обработчике можно обратиться к элементу окна 'Security' (это выпадающий список)
-_connector.NewSecurity += security => this.Dispatcher.BeginInvoke((Action)(() => this.Security.ItemsSource = _connector.Securities));
-```
-
-[S\#](../api.md) уже содержит специальные методы, которые скрывают использование Dispatcher и упрощают написание кода: 
-
-```cs
-// обязательно нужно вызвать метод GuiSync, прежде чем обратиться к элементу окна 'Security' (это выпадающий список)
-_connector.NewSecurity += security => this.GuiSync(() => this.Security.ItemsSource = _connector.Securities);
-```
-
 ## Графические компоненты S\#
 
 В состав [S\#](../api.md) входит большое количество собственных графических компонент, которые размещены в пространствах имен [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) и [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram). 

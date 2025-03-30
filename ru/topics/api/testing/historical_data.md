@@ -6,11 +6,11 @@
 - Тиковые сделки ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Стаканы ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Свечи разных таймфреймов
-- [OderLog](xref:StockSharp.Messages.IOderLogMessage) (лог заявок)
+- [OderLog](xref:StockSharp.Messages.IOrderLogMessage) (лог заявок)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (лучшие цены спроса и предложения)
 - Комбинации различных типов данных
 
-Если на период тестирования отсутствуют сохраненные стаканы, они могут быть сгенерированы на основе сделок с помощью [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) или восстановлены из ордерлога с помощью [OrderLogMarketDepthBuilder](xref:StockSharp.Algo.Testing.OrderLogMarketDepthBuilder).
+Если на период тестирования отсутствуют сохраненные стаканы, они могут быть сгенерированы на основе сделок с помощью [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) или восстановлены из ордерлога с помощью [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
 Данные для тестирования на истории должны быть заранее скачаны и сохранены в специальном [S#](../../api.md) формате. Это можно сделать самостоятельно, используя [Коннекторы](../connectors.md) и [Storage API](../market_data_storage/api.md), или настроить и запустить специальную программу [Hydra](../../hydra.md).
 

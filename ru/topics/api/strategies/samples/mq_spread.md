@@ -165,7 +165,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 
 ## Освобождение ресурсов
 
-В методе [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped()) стратегия освобождает ресурсы:
+В методе [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) стратегия освобождает ресурсы:
 
 ```cs
 protected override void OnStopped()

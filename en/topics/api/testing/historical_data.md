@@ -6,11 +6,11 @@ Testing can be performed using various types of market data:
 - Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Order books ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Candles of different timeframes
-- [OderLog](xref:StockSharp.Messages.IOderLogMessage)
+- [OderLog](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (best bid and ask prices)
 - Combinations of different data types
 
-If there are no saved order books for the testing period, they can be generated based on trades using [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) or reconstructed from the order log using [OrderLogMarketDepthBuilder](xref:StockSharp.Algo.Testing.OrderLogMarketDepthBuilder).
+If there are no saved order books for the testing period, they can be generated based on trades using [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) or reconstructed from the order log using [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
 Data for historical testing must be downloaded and saved in a special [S#](../../api.md) format in advance. This can be done manually using [Connectors](../connectors.md) and [Storage API](../market_data_storage/api.md), or by configuring and running the special [Hydra](../../hydra.md) application.
 

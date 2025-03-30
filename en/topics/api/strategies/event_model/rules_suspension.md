@@ -16,7 +16,7 @@ Sometimes you want to set multiple rules in suspension mode (prevent to trigger 
   		.Apply(this);
   	
   	order
-  		.WhenCancelled(Connector)
+  		.WhenCanceled(Connector)
   		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
   		.Once()
   		.Apply(this);

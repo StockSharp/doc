@@ -66,7 +66,7 @@
   
 - **Удаление ненужных правил.**
 
-  У [IMarketRule](xref:StockSharp.Algo.IMarketRule) есть [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) - токен правила, с которым он ассоциирован. Например, для правила [MarketRuleHelper.WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ITransactionProvider))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order, [StockSharp.BusinessEntities.ITransactionProvider](xref:StockSharp.BusinessEntities.ITransactionProvider) provider **)** токеном будет являться заявка.
+  У [IMarketRule](xref:StockSharp.Algo.IMarketRule) есть [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) - токен правила, с которым он ассоциирован. Например, для правила [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider) токеном будет являться заявка.
 
   Когда сработало правило успешной отмены заявки, то лучше удалить все остальные правила, связанные с этой заявкой:
 

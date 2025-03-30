@@ -2,16 +2,16 @@
 
 Полный журнал заявок – сервис биржи ММВБ\-РТС, который позволяет получать список всех торговых транзакций, принятых торговой системой в текущую торговую сессию с указанием текущего статуса заявок (поставлена\/удалена) и изменений параметров транзакции (частичных исполнений, передвижений заявки). Также в журнале отображается запись о сделке с указанием номера сведенной в данную сделку заявки.
 
-Для того чтобы начать получать данные по ордер лог, надо подписаться на событие [Connector.NewOrderLogItem](xref:StockSharp.Algo.Connector.NewOrderLogItem):
+Для того чтобы начать получать данные по ордер лог, надо подписаться на событие [OrderLogReceived](xref:StockSharp.Algo.ISubscriptionProvider.OrderLogReceived):
 
 ```cs
 private Connector _connector;
 ...
-_connector.NewOrderLogItem += NewOrderLog;
+_connector.OrderLogReceived += OnOrderLogReceived;
 ...
-private void NewOrderLog(OrderLogItem orderLogItems)
+private void OnOrderLogReceived(Subscription subscription, IOrderLogMessage ol)
 {
-		Console.WriteLine(orderLogItem);                
+	Console.WriteLine(ol);                
 }
 		
 ```
