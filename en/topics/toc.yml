@@ -1548,8 +1548,6 @@
     items:
     - name: Chart
       href: api/candles/chart.md
-    - name: Patterns
-      href: api/candles/patterns.md
     - name: Custom type of candle
       href: api/candles/custom_type_of_candle.md
     - name: Merging candles, history + real-time
@@ -1756,15 +1754,6 @@
         href: api/indicators/list_of_indicators/parabolic_sar.md
       - name: Stub (Pass Through)
         href: api/indicators/list_of_indicators/pass_through.md
-      - name: Pattern
-        href: api/indicators/list_of_indicators/pattern.md
-        items:
-        - name: '3 Outside Down 3 Outside Up'
-          href: api/indicators/list_of_indicators/patterns/3_outside_down_3_outside_up.md
-        - name: '3 Inside Down and 3 Inside Up'
-          href: api/indicators/list_of_indicators/patterns/3_inside_down_3_side_up.md
-        - name: '3 Black Crows and 3 White Soldiers'
-          href: api/indicators/list_of_indicators/patterns/3_black_crows_3_white_soldiers.md
       - name: Peak
         href: api/indicators/list_of_indicators/peak.md
       - name: Percentage Price Oscillator (PPO)
@@ -1857,6 +1846,15 @@
       href: api/indicators/custom_indicator.md
     - name: Graphic renderer of indicators
       href: api/indicators/graphic_renderer_of_indicators.md
+  - name: Patterns
+    href: api/patterns.md
+    items:
+    - name: '3 Outside Down 3 Outside Up'
+      href: api/patterns/3_outside_down_3_outside_up.md
+    - name: '3 Inside Down and 3 Inside Up'
+      href: api/patterns/3_inside_down_3_side_up.md
+    - name: '3 Black Crows and 3 White Soldiers'
+      href: api/patterns/3_black_crows_3_white_soldiers.md
   - name: Order books
     href: api/order_books.md
     items:

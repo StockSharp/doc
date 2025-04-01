@@ -18,7 +18,7 @@
 - [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator, связывает объём с изменением цены
 - [Bollinger](list_of_indicators/bollinger_bands.md) - Bollinger Bands, измеряет волатильность и определяет состояния перекупленности или перепроданности
 - [BBP](list_of_indicators/bollinger_percent_b.md) - Bollinger %b, показывает положение цены относительно полос Боллинджера
-- [Pattern](list_of_indicators/pattern.md) - Pattern, распознаёт специфические ценовые модели на графиках
+- [Pattern](../patterns.md) - Pattern, распознаёт специфические ценовые модели на графиках
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Center of Gravity Oscillator, определяет потенциальные точки разворота
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Chaikin Money Flow, измеряет давление покупок и продаж на основе объёма
 - [Chaikin's Volatility](list_of_indicators/chv.md) - Chaikin volatility, измеряет скорость изменения торгового диапазона

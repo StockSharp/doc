@@ -17,7 +17,7 @@ This bullish candlestick pattern has the following characteristics:
 3. The second candle is bullish with a long body and completely encompasses the first candle.
 4. The third candle is bullish with a higher close than the second candle.
 
-![IndicatorPattern3OU](../../../../../images/indicatorpattern3ou.png)
+![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
 
 ### 3 Outside Down
 
@@ -30,7 +30,7 @@ This pattern variation is a bearish candlestick model with the following charact
 
 The first candle signifies the beginning of the end of the prevailing trend as the second candle engulfs the first candle. The third candle then signifies an acceleration of the reversal.
 
-![IndicatorPattern3oD](../../../../../images/indicatorpattern3od.png)
+![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
 
 ## See Also
 

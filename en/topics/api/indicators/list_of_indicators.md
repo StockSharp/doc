@@ -18,7 +18,7 @@
 - [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator, links volume to price changes
 - [Bollinger](list_of_indicators/bollinger_bands.md) - Bollinger Bands, measures volatility and identifies overbought or oversold conditions
 - [BBP](list_of_indicators/bollinger_percent_b.md) - Bollinger %b, shows the price position relative to Bollinger Bands
-- [Pattern](list_of_indicators/pattern.md) - Pattern, recognizes specific price patterns on charts
+- [Pattern](../patterns.md) - Pattern, recognizes specific price patterns on charts
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Center of Gravity Oscillator, identifies potential reversal points
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Chaikin Money Flow, measures buying and selling pressure based on volume
 - [Chaikin's Volatility](list_of_indicators/chv.md) - Chaikin volatility, measures the rate of change in the trading range

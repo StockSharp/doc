@@ -314,6 +314,4 @@ _connector.Subscribe(pnfCandleSubscription);
 
 [График](candles/chart.md)
 
-[Паттерны](candles/patterns.md)
-
 [Собственный тип свечей](candles/custom_type_of_candle.md)

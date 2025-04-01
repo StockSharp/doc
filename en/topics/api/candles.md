@@ -314,6 +314,4 @@ _connector.Subscribe(pnfCandleSubscription);
 
 [Chart](candles/chart.md)
 
-[Patterns](candles/patterns.md)
-
 [Custom Candle Type](candles/custom_type_of_candle.md)

@@ -10,15 +10,15 @@
 - Паттерны продолжения текущего тренда. 
 - Паттерны смены существующего тренда.
 
-В [Designer](../../../designer.md) встроены предустановленные свечные паттерны, которые можно использовать в вашей торговой стратегии. Паттерны вызываются через кубик [индикатор](../../../designer/strategies/using_visual_designer/elements/common/indicator.md) с последующим выбором соответствующего значения. Сам паттерн выбирается из выпадающего списка в окне справа. 
+В [Designer](../designer.md) встроены предустановленные свечные паттерны, которые можно использовать в вашей торговой стратегии. Паттерны вызываются через кубик [индикатор](../designer/strategies/using_visual_designer/elements/common/indicator.md) с последующим выбором соответствующего значения. Сам паттерн выбирается из выпадающего списка в окне справа. 
 
-![IndicatorPatternCommon](../../../../images/indicatorpatterncommon00.png)
+![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
 
-Также возможно редактирование существующих и добавление собственных пользовательских паттернов. Для этого, нужно нажать на кнопку ![Designer edit button](../../../../images/designer_creating_repository_of_historical_data_01.png) после чего будет показано окно редактирования паттернов.
+Также возможно редактирование существующих и добавление собственных пользовательских паттернов. Для этого, нужно нажать на кнопку ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png) после чего будет показано окно редактирования паттернов.
 
-![IndicatorPatternCommon01](../../../../images/indicatorpatterncommon01.png)
+![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-Для того, чтобы создать собственный паттерн необходимо нажать кнопку ![DesignerPlusButton](../../../../images/designer_panel_circuits_01_button.png) в верхней части окна. Нажатие кнопки ![DesignerDeleteButton](../../../../images/designer_delete_button.png) удаляет паттерн.
+Для того, чтобы создать собственный паттерн необходимо нажать кнопку ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) в верхней части окна. Нажатие кнопки ![DesignerDeleteButton](../../images/designer_delete_button.png) удаляет паттерн.
 Редактирование паттерна осуществляется в левом окне (выделенная область на рисунке). Каждая строка представляет собой отдельную свечу. Самая верхняя строка \- это текущая свеча, соответственно вторая строка \- одна свеча назад, третья и последующие строки соответственно минус 2 и более свечей.
 
 В редакторе используются следующие параметры:
@@ -43,9 +43,6 @@
 
 Для дополнительной проверки параметров во взаимосвязи используется выражение && представляющее собой логическое И.
 
-При описании паттерна также возможно использование следующих функций: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Подробнее об использовании функций рассказывается при описании кубика [формула](../../../designer/strategies/using_visual_designer/elements/common/formula.md).
+При описании паттерна также возможно использование следующих функций: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Подробнее об использовании функций рассказывается при описании кубика [формула](../designer/strategies/using_visual_designer/elements/common/formula.md).
 
-Нижняя часть окна предназначена для быстрого создания паттернов на базе существующих. При нажатии кнопки ![DesignerPlusButton](../../../../images/designer_panel_circuits_01_button.png) в нижней части окна добавляет в окно редактирования логику паттерна выбранного из выпадающего списка напротив. Кнопка ![DesignerDeleteButton](../../../../images/designer_delete_button.png) в нижней части окна удаляет выделенную строку в окне редактирования.
-## См. также
-
-[Формула](../../../designer/strategies/using_visual_designer/elements/common/formula.md)
+Нижняя часть окна предназначена для быстрого создания паттернов на базе существующих. При нажатии кнопки ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) в нижней части окна добавляет в окно редактирования логику паттерна выбранного из выпадающего списка напротив. Кнопка ![DesignerDeleteButton](../../images/designer_delete_button.png) в нижней части окна удаляет выделенную строку в окне редактирования.

@@ -13,7 +13,7 @@ The 3 Black Crows pattern consists of three consecutive candles that opened with
 - The pattern's candle size and shadows can indicate the risk of reversal to pullback.
 - The opposite pattern to Three Black Crows is Three White Soldiers, indicating a downward trend reversal.
 
-![IndicatorPattern3BC](../../../../../images/indicatorpattern3bc.png)
+![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
 
 ### 3 White Soldiers
 
@@ -25,4 +25,4 @@ Three White Soldiers is a bullish candlestick pattern used to forecast the rever
 - The size of candles and the length of shadows are used to assess whether there is a risk of pullback.
 - The opposite pattern to Three White Soldiers is Three Black Crows, indicating an upward trend reversal.
 
-![IndicatorPattern3WS](../../../../../images/indicatorpattern3ws.png)
+![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
