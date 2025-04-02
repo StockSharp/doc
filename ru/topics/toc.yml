@@ -1986,12 +1986,68 @@
   - name: Паттерны
     href: api/patterns.md
     items:
-    - name: '3 Outside Down 3 Outside Up'
+    - name: '3 Outside Down 3 Outside Up (3 Внешний Вниз 3 Внешний Вверх)'
       href: api/patterns/3_outside_down_3_outside_up.md
-    - name: '3 Inside Down and 3 Inside Up'
+    - name: '3 Inside Down and 3 Inside Up (3 Внутренний Вниз и 3 Внутренний Вверх)'
       href: api/patterns/3_inside_down_3_side_up.md
-    - name: '3 Black Crows and 3 White Soldiers'
+    - name: '3 Black Crows and 3 White Soldiers (3 Черных Вороны и 3 Белых Солдата)'
       href: api/patterns/3_black_crows_3_white_soldiers.md
+    - name: 'Three White Soldiers (Три Белых Солдата)'
+      href: api/patterns/three_white_soldiers.md
+    - name: 'Three Black Crows (Три Черных Вороны)'
+      href: api/patterns/three_black_crows.md
+    - name: 'On-Neck (На Шее)'
+      href: api/patterns/on_neck.md
+    - name: 'Piercing (Пробивающий)'
+      href: api/patterns/piercing.md
+    - name: 'Bearish (Медвежья Свеча)'
+      href: api/patterns/bearish.md
+    - name: 'Bearish Engulfing (Медвежье Поглощение)'
+      href: api/patterns/bearish_engulfing.md
+    - name: 'Bearish Harami (Медвежий Харами)'
+      href: api/patterns/bearish_harami.md
+    - name: 'Black Candle (Черная Свеча)'
+      href: api/patterns/black_candle.md
+    - name: 'Black Marubozu (Черный Марубозу)'
+      href: api/patterns/black_marubozu.md
+    - name: 'Bullish (Бычья Свеча)'
+      href: api/patterns/bullish.md
+    - name: 'Bullish Engulfing (Бычье Поглощение)'
+      href: api/patterns/bullish_engulfing.md
+    - name: 'Bullish Harami (Бычий Харами)'
+      href: api/patterns/bullish_harami.md
+    - name: 'Dragonfly (Стрекоза)'
+      href: api/patterns/dragonfly.md
+    - name: 'Evening Star (Вечерняя Звезда)'
+      href: api/patterns/evening_star.md
+    - name: 'Falling Three Methods (Падающие Три Метода)'
+      href: api/patterns/falling_three_methods.md
+    - name: 'Flat Candle (Плоская Свеча)'
+      href: api/patterns/flat_candle.md
+    - name: 'Gravestone (Надгробие)'
+      href: api/patterns/gravestone.md
+    - name: 'Hammer (Молот)'
+      href: api/patterns/hammer.md
+    - name: 'Hanging Man (Повешенный)'
+      href: api/patterns/hanging_man.md
+    - name: 'Inverted Hammer (Перевернутый Молот)'
+      href: api/patterns/inverted_hammer.md
+    - name: 'Morning Star (Утренняя Звезда)'
+      href: api/patterns/morning_star.md
+    - name: 'Rising Three Methods (Восходящие Три Метода)'
+      href: api/patterns/rising_three_methods.md
+    - name: 'Shooting Star (Падающая Звезда)'
+      href: api/patterns/shooting_star.md
+    - name: 'Spinning Top (Волчок)'
+      href: api/patterns/spinning_top.md
+    - name: 'Tweezer Bottom (Дно Пинцета)'
+      href: api/patterns/tweezer_bottom.md
+    - name: 'Tweezer Top (Вершина Пинцета)'
+      href: api/patterns/tweezer_top.md
+    - name: 'White Candle (Белая Свеча)'
+      href: api/patterns/white_candle.md
+    - name: 'White Marubozu (Белый Марубозу)'
+      href: api/patterns/white_marubozu.md
   - name: Стаканы
     href: api/order_books.md
     items:
