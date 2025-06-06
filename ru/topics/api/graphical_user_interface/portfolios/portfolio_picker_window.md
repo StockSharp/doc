@@ -9,7 +9,7 @@
 - [PortfolioPickerWindow.Portfolios](xref:StockSharp.Xaml.PortfolioPickerWindow.Portfolios) \- список портфелей.
 - [PortfolioPickerWindow.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioPickerWindow.SelectedPortfolio) \- выбранный портфель.
 
-Ниже показан внеший вид компонента, а также фрагмент кода с его использованием. 
+Ниже показан внешний вид компонента, а также фрагмент кода с его использованием.
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)

@@ -57,7 +57,7 @@
 - [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) \- элемент для отображения свечей.
 - [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) \- элемент для отображения индикаторов.
 - [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) \- элемент для отображения заявок.
-- [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) \- элемент для оторбажения сделок.
+- [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) \- элемент для отображения сделок.
 
 Классы визуальных элементов имеют ряд свойств для настройки внешнего вида графика. Можно настроить цвета, толщину линий и стиль элементов. Например, при помощи свойства [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) можно изменять внешний вид свечи (свеча или бар). При помощи свойства [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle) можно установить стиль линии индикатора. Так чтобы отображать индикатор в виде гистограммы нужно использовать значение [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram). Свойства [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) и [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) позволяют включать\/выключать отображения маркёров (см. рисунок) на осях графика. 
 

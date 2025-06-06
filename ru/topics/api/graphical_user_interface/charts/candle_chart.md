@@ -1,8 +1,8 @@
 # Свечной график
 
-[Chart](xref:StockSharp.Xaml.Charting.Chart) - графический компонет, который позволяет строить биржевые графики: свечи, индикаторы, и отображать на графиках маркеры заявок и сделок. 
+[Chart](xref:StockSharp.Xaml.Charting.Chart) - графический компонент, который позволяет строить биржевые графики: свечи, индикаторы и отображать на графиках маркеры заявок и сделок.
 
-Ниже приведен пример построения графика при помощи компонета [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/Common\/SampleConnection, в который внесены некоторые изменения. 
+Ниже приведен пример построения графика при помощи компонента [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/Common\/SampleConnection, в который внесены некоторые изменения.
 
 ![Gui ChartSample](../../../../images/gui_chartsample.png)
 
