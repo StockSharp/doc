@@ -1,7 +1,7 @@
 # Boards
 
-**Common** tab, **Boards** button.
+On the **Common** tab, click the **Boards** button.
 
-Here it is possible to view basic information about the trading boards, as well as set the time zone and the schedule of their work.
+Here you can view basic information about trading boards and set their time zone and working schedule.
 
 ![hydra boards](../../../images/hydra_boards.png)

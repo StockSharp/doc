@@ -1,6 +1,6 @@
 # Settings
 
-[Hydra](../../hydra.md) can be used in server mode, in this mode you can remotely connect to [Hydra](../../hydra.md) and get the existing data in the storage. You can connect to [Hydra](../../hydra.md) running in server mode from [Designer](../../designer.md) (see [Getting started](../../designer/market_data_storage/getting_started.md) in the [Designer](../../designer.md) documentation for how to do this). You can also connect to [Hydra](../../hydra.md) via [API](../../api.md) (how to do this is described in the [FIX\/FAST connectivity](fix_fast_connectivity.md) items).
+[Hydra](../../hydra.md) can be used in server mode, in this mode you can remotely connect to [Hydra](../../hydra.md) and get the existing data in the storage. You can connect to [Hydra](../../hydra.md) running in server mode from [Designer](../../designer.md) (see [Getting started](../../designer/market_data_storage/getting_started.md) in the [Designer](../../designer.md) documentation for how to do this). You can also connect to [Hydra](../../hydra.md) via the [API](../../api.md) (see the [FIX/FAST connectivity](fix_fast_connectivity.md) section for details).
 
 In server mode, the [Hydra](../../hydra.md) program allows the user to work using one connection, with several programs at once. By setting the access key in the program settings, the user can simultaneously work with one source under one account.
 
@@ -18,13 +18,13 @@ After that, click on the **Settings** button to open the server mode settings wi
 
 - **FIX server** \- switch [Hydra](../../hydra.md) to server mode, distributing live trading and historical data via the FIX protocol. 
 
-  In this settings section, the user configures the connection for working with sources: 
+  In this section, you configure the connection for working with sources: 
   1. **ConvertToLatin** \- convert Cyrillic to Latin 
   2. **QuotesInterval** \- quotes update period 
   3. **TransactionSession** \- setting of a trading session. Setting up for trading via the [Hydra](../../hydra.md) program. 
 
-     The setting allows to set up: Dialect of the FIX protocol, Sender and Recipient, Data format and other settings. See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details.
-  4. **MarketDataSession** \- settings for transfer of market data received using [Hydra](../../hydra.md). See Подробнее см. [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details. 
+     This setting allows you to configure Dialect of the FIX protocol, Sender and Recipient, Data format and other settings. See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details.
+  4. **MarketDataSession** \- settings for transfer of market data received using [Hydra](../../hydra.md). See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details. 
   5. **KeepSubscriptionsOnDisconnect** \- keeping subscriptions when disconnected from the source. 
   6. **DeadSessionCleanupInterval** \- after what time interval the information will be cleared if the connection is disconnected.
 - **Authorization** \- authorization to gain access to the Hydra server 

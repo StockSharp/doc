@@ -4,7 +4,7 @@ If you click the **Instruments** button on the General tab, the **Instruments** 
 
 ![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
 
-At the bottom of the **Instruments** panel are buttons that allow to:
+At the bottom of the **Instruments** panel are buttons that allow you to:
 
 - Add a new instrument, as described in the clause [Create instrument](create_instrument.md).
 - Add a new index, as described in the clause [Index](index.md).

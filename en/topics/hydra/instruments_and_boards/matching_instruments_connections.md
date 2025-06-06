@@ -8,9 +8,9 @@ This is also useful when trading the same instrument on different trading boards
 
 To match instruments and connections you need:
 
-1. Go to the **Securities** tab and click the **Securities and connections button**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. Go to the **Securities** tab and click the **Securities and Connections** button.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. In the list of connections, select the required connection.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
-3. We fill in all the columns.
+3. Fill in all the columns.
 
    For example:
 
@@ -22,4 +22,4 @@ To match instruments and connections you need:
    | **Transaq**                                                                       | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
    | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
-4. Now all downloaded data, in our case for APPLE shares, will be saved in one place 
+4. Now all downloaded data, in our case for APPLE shares, will be saved in one place.

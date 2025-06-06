@@ -2,15 +2,15 @@
 
 With [Hydra](../../hydra.md), you can create your own index.
 
-To do this, on the **Common** tab, you need to select **Securities**, the **All Securities** tab will appear.
+On the **Common** tab select **Securities** so that the **All Securities** tab appears.
 
-Before creating the **Index**, you need to check which market data is available. To do this, select the path where the data stored and in turn view the instruments that are supposed to participate in the calculation of the index. If there are omissions, then you need to download the necessary market data (for example, from Finam).
+Before creating the **Index**, check which market data is available. Select the path where the data is stored and sequentially view the instruments that should participate in the calculation of the index. If there are gaps, download the necessary market data (for example, from Finam).
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
-As an example, the instrument ratio index AAPL@NYSE\/GOOG@NYSE will be considered.
+As an example, we will consider the instrument ratio index AAPL@NYSE\/GOOG@NYSE.
 
-The first step is the creation of the **Index**. To do this, click on the **All Securities** tab, the **Create security\=\>Index** button, after that, the following window will appear:
+The first step is to create the **Index**. Click the **Create security\=\>Index** button on the **All Securities** tab, after which the following window will appear:
 
 ![hydra index sec](../../../images/hydra_index_sec.png)
 
@@ -35,10 +35,10 @@ To create the **Index** instrument, you must specify a name and add the mathemat
 - **tan(a)** \- Returns the tangent of the specified angle.
 - **truncate(a)** \- Calculates the integer part of the specified number.
 
-Next, you need to click the [Candles](../working_with_data/view_and_export/candles.md) button on the **Common** tab, select the obtained **Index** instrument, the data period, in the **Create From:** field set the **Composite Element** value. Then press the button ![hydra find](../../../images/hydra_find.png).
+Next, click the [Candles](../working_with_data/view_and_export/candles.md) button on the **Common** tab, select the created **Index** instrument and the data period, set **Composite Element** in the **Create From:** field, and then press the ![hydra find](../../../images/hydra_find.png) button.
 
 ![hydra index candle](../../../images/hydra_index_candle.png)
 
-The generated data can be exported to Excel, xml or txt formats. Export is done using the drop\-down list:
+The generated data can be exported to Excel, XML or TXT formats. Export is done using the drop-down list.
 
 ![hydra export](../../../images/hydra_export.png)
