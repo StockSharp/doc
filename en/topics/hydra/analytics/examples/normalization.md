@@ -2,7 +2,7 @@
 
 The "Closing Price Normalization" script is designed to standardize the closing prices of financial instruments, enabling comparison and analysis of different assets on a unified scale. This is particularly useful when comparing instruments with varying costs and volatility.
 
-![hydra_analitics_normalize](../../../../images/hydra_analitics_normalize.png)
+![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
 
 ## Script Operation Description
 

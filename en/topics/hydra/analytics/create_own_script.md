@@ -100,4 +100,4 @@ By implementing [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScri
 
 ## Execution Result
 
-![hydra_analitics_chart](../../../images/hydra_analitics_chart.png)
+![hydra_analytics_chart](../../../images/hydra_analytics_chart.png)

@@ -2,7 +2,7 @@
 
 The "Intraday Volume" script is a tool for analyzing the distribution of trading volume of securities by hours within a single trading session. Designed for use within the StockSharp platform, it targets traders and quantitative analysts aiming for an in-depth study of market behavior and trading strategy optimization.
 
-![hydra_analitics_intraday_volume](../../../../images/hydra_analitics_intraday_volume.png)
+![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## Functional Description
 

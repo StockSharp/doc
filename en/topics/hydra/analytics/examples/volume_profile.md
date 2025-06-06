@@ -2,7 +2,7 @@
 
 The "Volume Profile" script serves as a tool for analyzing the distribution of trading volume across price levels over a selected period. It enables traders and quantitative analysts to visualize and examine where the main trading activity was concentrated in terms of price levels.
 
-![hydra_analitics_volume_profile](../../../../images/hydra_analitics_volume_profile.png)
+![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
 
 ## Functionality Description
 

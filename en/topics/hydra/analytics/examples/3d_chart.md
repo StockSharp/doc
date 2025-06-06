@@ -2,7 +2,7 @@
 
 The `Chart3DScript` script demonstrates the creation of a 3D chart to visualize the distribution of trading volumes by hour for various financial instruments. This visualization method allows for a clear representation of trading dynamics and identification of market activity peaks.
 
-![hydra_analitics_chart3d](../../../../images/hydra_analitics_chart3d.png)
+![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
 
 ## Script Operation Description
 
