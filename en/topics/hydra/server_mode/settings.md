@@ -35,7 +35,7 @@ After that, click on the **Settings** button to open the server mode settings wi
 - **OL (days)** \- the maximum number of days available to download the OL data history 
 - **Transactions (days)** \- the maximum number of days available to download the transaction history 
 - **Simulator** \- turn on simulator mode 
-- **Security maping** \- enable the transfer mode of only specified instruments. 
+- **Security mapping** \- enable the transfer mode of only specified instruments. 
 
 If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab, after clicking on which the **Users** window appears
 

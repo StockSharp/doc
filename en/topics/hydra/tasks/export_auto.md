@@ -56,7 +56,7 @@ The task exports exchange data into various formats: Excel, xml, sql, bin, Json 
 **Logging**
 
 - **Identifier** \- the identifier. 
-- **Logging level** \- the logging leve. 
+- **Logging level** \- the logging level. 
 
 Let's consider an example of automatic export:
 

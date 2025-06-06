@@ -10,7 +10,7 @@ If updates are available for the program, [Installer](../installer.md) will noti
 
 Then you need to click the button.
 
-![updat installer](../../images/updat_installer.png)
+![update installer](../../images/updat_installer.png)
 
 [Installer](../installer.md) is not closed by clicking on the **"X"** in the program window, but is closed using the toolbar.
 
