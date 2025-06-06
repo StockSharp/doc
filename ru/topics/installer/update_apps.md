@@ -6,11 +6,11 @@
 
 ![force update installer](../../images/force_update_installer.png)
 
-Если для программы доступны обновления, то [Installer](../installer.md) выдаст соответсвующее уведомление.
+Если для программы доступны обновления, то [Installer](../installer.md) выдаст соответствующее уведомление.
 
 После чего нужно нажать на кнопку.
 
-![updat installer](../../images/updat_installer.png)
+![update installer](../../images/updat_installer.png)
 
 [Installer](../installer.md) не закрывается нажатием на **"Х"** в окне программы, а закрывается через панель инструментов.
 

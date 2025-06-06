@@ -99,7 +99,7 @@ namespace StockSharp.Algo.Analytics
 			// calculating correlation
 			var matrix = Correlation.PearsonMatrix(closes);
 
-			// displaing result into heatmap
+                        // displaying result into heatmap
 			var ids = securities.Select(s => s.ToStringId());
 			panel.DrawHeatmap(ids, ids, matrix.ToArray());
 
