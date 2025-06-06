@@ -8,7 +8,7 @@ You must select the start mode and click **OK**.
 
 After selecting the start mode, the terminal window opens with the default set of components.
 
-Let's go to the connection settings and select the required connection. How to setup the connection is described in the [Connection settings](connection_settings.md) section.
+Let's go to the connection settings and select the required connection. How to set up the connection is described in the [Connection settings](connection_settings.md) section.
 
 ![Terminal Quick start 011](../../images/terminal_quick_start_011.png)
 
@@ -18,15 +18,15 @@ Clicking the **Add** ![Designer Creation tool 00](../../images/designer_creation
 
 ![Terminal Quick start 01](../../images/terminal_quick_start_01.png)
 
-Clicking the **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) button on the Instrument panel, we add the instruments we want to watch. Here, the best price data will be displayed. For more information on how to work with the Instrument panel, see the [Instruments](user_interface/components/instruments.md) section.
+Clicking the **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) button on the Instrument panel adds the instruments you want to watch. The best price data will be displayed here. For more information on how to work with the Instrument panel, see the [Instruments](user_interface/components/instruments.md) section.
 
 ![Terminal Quick start 02](../../images/terminal_quick_start_02.png)
 
-In the order book, after clicking the **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) button, a panel appears, in which we will indicate the **Instrument** and the **Portfolio** by which the trades will take place. Also adjust the order book depth. For more information on how to work with an order book, see the [Order book](user_interface/components/order_book.md) section.
+In the order book, after clicking the **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) button, a panel appears where you can specify the **Instrument** and the **Portfolio** for the trades. Here you can also adjust the order book depth. For more information on how to work with an order book, see the [Order book](user_interface/components/order_book.md) section.
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-Let’s register the first few orders. Orders can be registered either by clicking the **Buy\/Sell** buttons or by clicking the cell of the **Bid\/Offer** columns in the order book itself. The order panel will display all our orders. When you right click with the mouse button on the order, you will see a panel with which you can register submit a new order, cancel or change the selected order. For more information on how to work with the order panel, see the [Orders](user_interface/components/orders.md) section.
+Let’s register the first few orders. Orders can be registered either by clicking the **Buy/Sell** buttons or by clicking the cells in the **Bid/Offer** columns of the order book itself. The order panel displays all your orders. When you right-click an order, you will see a panel that lets you submit a new order, cancel, or change the selected order. For more information on how to work with the order panel, see the [Orders](user_interface/components/orders.md) section.
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 
