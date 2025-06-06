@@ -1,6 +1,6 @@
 # Common
 
-The [Common]() tab allows you to view general information on portfolios, orders, trades, securities. Also here you can set the theme of the [Shell](../../shell.md) interface.
+The [Common]() tab allows you to view general information on portfolios, orders, trades, and securities. You can also set the theme of the [Shell](../../shell.md) interface here.
 
 ![Shell Common 00](../../../images/shell_common_00.png)
 

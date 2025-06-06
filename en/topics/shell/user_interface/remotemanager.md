@@ -14,15 +14,15 @@ Then you need to enable the **server mode**.
 
 You can now connect to Shell from another Shell.
 
-To do this, you need to run **another Shell**. In it go to the connection settings.
+To do this, you need to run **another Shell**. In it, go to the connection settings.
 
 ![Shell RemoteManager 03](../../../images/shell_remotemanager_03.png)
 
-In the window that opens, set up Fix connection
+In the window that opens, set up the FIX connection
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-Then press the connection button
+Then press the Connect button
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
@@ -34,7 +34,7 @@ By clicking the Add button, you can add another strategy to trade.
 
 ![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
 
-Because Shell client supports multiple servers. So when choosing to add a strategy, you must select the server on the left, and on the right there will be all strategies available on the server.
+Because the Shell client supports multiple servers, when adding a strategy you must select the server on the left. All strategies available on the server will appear on the right.
 
 ![Shell RemoteManager 08](../../../images/shell_remotemanager_08.png)
 
@@ -54,7 +54,7 @@ If the strategy has a command other than Start\/Stop, then to apply it you must 
 
 And click the send command button.
 
-To set your team in the strategy, you need to override the [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Messages.CommandMessage))**(**[StockSharp.Messages.CommandMessage](xref:StockSharp.Messages.CommandMessage) cmdMsg **)** method.
+To set your command in the strategy, you need to override the [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Messages.CommandMessage))**(**[StockSharp.Messages.CommandMessage](xref:StockSharp.Messages.CommandMessage) cmdMsg **)** method.
 
 ```cs
 public virtual void ApplyCommand(CommandMessage cmdMsg)
