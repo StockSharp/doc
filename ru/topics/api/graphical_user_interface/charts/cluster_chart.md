@@ -9,7 +9,7 @@ ClusterChart \- специальный тип графика для отобра
 - [ChartCandleElement.ClusterLineColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor) \- цвет базовой линии кластера. 
 - [ChartCandleElement.ClusterTextColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor) \- цвет цифр объемов на графике. 
 - [ChartCandleElement.ClusterColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor) \- основной цвет баров в гистограммах кластеров. 
-- [ChartCandleElement.ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) \- цвет бара максимального объема в гисторграммах кластеров. 
+- [ChartCandleElement.ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) \- цвет бара максимального объема в гистограммах кластеров.
 
 Пример использования этого типа графика расположен в Samples\/Common\/SampleChart. 
 

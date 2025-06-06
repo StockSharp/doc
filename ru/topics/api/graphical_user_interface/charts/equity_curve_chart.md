@@ -1,8 +1,8 @@
 # График эквити
 
-[EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- графический компонет для отбражения кривой доходности. 
+[EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- графический компонент для отображения кривой доходности.
 
-Ниже приведен пример использования этого компонета. Полный код примера находится в Samples\/Testing\/SampleHistoryTesting. 
+Ниже приведен пример использования этого компонента. Полный код примера находится в Samples\/Testing\/SampleHistoryTesting.
 
 ![Gui EquityCurveChart](../../../../images/gui_equitycurvechart.png)
 
