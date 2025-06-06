@@ -4,7 +4,7 @@
 
 Для этого на вкладке **Общее** необходимо нажать на одну из следующих кнопок: [Тики](view_and_export/ticks.md), [Стаканы](view_and_export/order_books.md), [Свечи](candles_generation.md), [Лог заявок](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Новости](view_and_export/news.md), [Транзакции](view_and_export/transactions.md), [Доска опционов](view_and_export/option_desk.md), [Индикаторы](view_and_export/indicators.md), [Позиции](view_and_export/positions.md). 
 
-Или нажать правой кнопкой мыши на необходимом типе данных, как показано на рисунке, а так же два раза щелкнув на необходимом типе данных.
+Или нажать правой кнопкой мыши на необходимом типе данных, как показано на рисунке, а также два раза щелкнув на необходимом типе данных.
 
 ![hydra view export](../../../images/hydra_view_export.png)
 

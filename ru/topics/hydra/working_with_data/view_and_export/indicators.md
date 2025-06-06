@@ -4,8 +4,8 @@
 
 ![hydra export indicator](../../../../images/hydra_export_indicator.png)
 
-Для просмотра графика значений дстаточно нажать на кнопку ![hydra candles](../../../../images/hydra_candles.png).
+Для просмотра графика значений достаточно нажать на кнопку ![hydra candles](../../../../images/hydra_candles.png).
 
 ![hydra export indicator view](../../../../images/hydra_export_indicator_view.png)
 
-Полученые значения индикатора можно [экспортировать в нужный формат](../export_data.md).
+Полученные значения индикатора можно [экспортировать в нужный формат](../export_data.md).
