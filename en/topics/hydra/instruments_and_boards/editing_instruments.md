@@ -1,21 +1,21 @@
 # Editing instruments
 
-To edit an instrument (for example, when the instrument was not filled with all the necessary data), double click the instrument or click the ![hydra edit](../../../images/hydra_edit.png) button to open the window in which to perform the necessary settings: 
+To edit an instrument (for example, if it was created without all required data), double-click the instrument or click the ![hydra edit](../../../images/hydra_edit.png) button to open the window where you can make the necessary changes:
 
 Go to the **Securities** window.
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 
-Then a window for editing will open.
+The editing window will open.
 
 ![hydra security edit](../../../images/hydra_security_edit.png)
 
-If necessary, you can edit the instrument group. To do this, select an instrument group and click on the ![hydra edit](../../../images/hydra_edit.png) button. 
+If necessary, you can edit the instrument group. Select an instrument group and click the ![hydra edit](../../../images/hydra_edit.png) button.
 
 ![hydra securities edit 00](../../../images/hydra_securities_edit_00.png)
 
-Then you can edit the group.
+Then edit the group as needed.
 
 ![hydra securities edit](../../../images/hydra_securities_edit.png)
 
-If the selected instrument group has the same values, this field will be filled with this value. If the values are different, then this field will be empty. For example, two instruments are selected with the Price Step value equal to 1, one instrument has a lot size of 10, the other \- 100. Accordingly, the Price Step field will be 1, and the Volume Step field will be empty. 
+If all selected instruments have the same value in a field, that value will be displayed. If the values differ, the field will be empty. For example, if two instruments have a Price Step of 1 but one has a lot size of 10 and the other 100, the Price Step field will show 1, and the Volume Step field will be empty.

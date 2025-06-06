@@ -22,7 +22,7 @@ This mode is used when [testing strategies](../../shell/user_interface/emulation
 - **Percentage of errors** \- the percentage of errors in registering new orders (from 0 to 100).
 - **Latency** \- the minimum latency of registered orders.
 - **Re\-registration** \- whether re\-registration of orders will be supported as a single transaction.
-- **Buffering period** \- a parameter that is responsible for the period of sending whole packets in order to emulate network latency and buffering the work of the exchange core
+- **Buffering period** \- a parameter that is responsible for the period of sending whole packets in order to emulate network latency and buffer the work of the exchange core.
 - **Order ID** \- the number with which the emulator will generate identifiers for orders.
 - **Trade identifier** \- the number with which the emulator will generate identifiers for trades.
 - **Transaction** \- the number with which the emulator will generate identifiers for order transactions.
