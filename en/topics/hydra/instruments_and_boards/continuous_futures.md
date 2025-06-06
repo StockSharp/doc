@@ -11,9 +11,9 @@ As an example, we will consider gluing on an RTS index futures.
 1. To create a continuous futures, click the **Create security \=\> Continuous security** button on the **All securities** tab.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
 
    After that, the following window will appear:![HydraGluingWindow](../../../images/hydragluingwindow.png)
-2. 2.To create a continuous futures, you need to specify a name and add contracts.
+2. To create a continuous futures, you need to specify a name and add contracts.
 
-   There are two ways to add contracts..
+   There are two ways to add contracts.
    - Manually by clicking the ![hydra add](../../../images/hydra_add.png) button.![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - If you set the first two letters of the contract as a name, for example, RI, and click the **Auto** button, then all the instruments found in the database will be added.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. We select the necessary contracts and set the transition dates. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)

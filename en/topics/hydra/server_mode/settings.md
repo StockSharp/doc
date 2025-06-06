@@ -6,7 +6,7 @@ In server mode, the [Hydra](../../hydra.md) program allows the user to work usin
 
 Actually, the connection to the source occurs via [Hydra](../../hydra.md), to which, for example, [Designer](../../designer.md), [Terminal](../../terminal.md) are simultaneously connected. This method allows you to avoid reconnection between programs, purchase of an additional connection. With such work, conflicts are excluded, the occurrence of which is due to the orders registering or trades from different programs. [Hydra](../../hydra.md) receives the signal and passes the result back to the program from which it was received, while the sequence of other work is not disturbed. 
 
-To enable [Hydra](../../hydra.md) server mode, select the **Server mode** tab in the top menu of program.
+To enable [Hydra](../../hydra.md) server mode, select the **Server mode** tab in the top menu of the program.
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
@@ -37,8 +37,8 @@ After that, click on the **Settings** button to open the server mode settings wi
 - **Simulator** \- turn on simulator mode 
 - **Security mapping** \- enable the transfer mode of only specified instruments. 
 
-If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab, after clicking on which the **Users** window appears
+If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab. After clicking it, the **Users** window appears.
 
 ![hydra users](../../../images/hydra_users.png)
 
-On the left side of window, you can add a new user, and on the right, set access rights for him. 
+On the left side of the window, you can add a new user, and on the right, set access rights for them.

@@ -17,7 +17,7 @@ Each panel contains a general interface of the settings as follows:
 - If, when building a table with data, the amount of downloaded data exceeds the set limit, then a window will appear on the screen:![hydra tick limit](../../../images/hydra_tick_limit.png)
 
   It is necessary to increase the limit of downloaded data.
-- If the data was received from sources whose time zone does not match the current time zone, then you can adjust the time zone. Then, after building, the received data will have the time of zone selected by the user. ![hydra TZ](../../../images/hydra_tz.png)
+- If the data was received from sources whose time zone does not match the current time zone, you can adjust the time zone. After building, the data will be shown in the zone selected by the user. ![hydra TZ](../../../images/hydra_tz.png)
 - Since a number of sources do not provide a possibility to download some data, the program provides the [Build from](any_market_data_types.md) field. Using this field, the user can build market data from another type of market data. The same function can be used to build market data without additional download, using already existing data as a basis. 
 - After the above parameters are selected, you should click on the ![hydra find](../../../images/hydra_find.png) button.![hydra candles tf](../../../images/hydra_candles_tf.png)
 
