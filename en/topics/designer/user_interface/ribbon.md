@@ -14,7 +14,7 @@ The main user interface element of [Designer](../../designer.md) is the **Ribbon
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 
-4. The **Cloud** tab. [Designer](../../designer.md) is designed to work with cloud services. It allows viewing completed *Cloud Tasks*, getting information on instruments available in the Cloud. Set up remote work with channels and robots.
+4. The **Cloud** tab. [Designer](../../designer.md) is designed to work with cloud services. It allows viewing completed *Cloud Tasks*, getting information on instruments available in the Cloud, and setting up remote work with channels and robots.
 
 ![Designer Tape 03](../../../images/designer_tape_03.png)
 

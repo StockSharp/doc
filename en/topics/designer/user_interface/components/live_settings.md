@@ -11,7 +11,7 @@ The **Properties** panel is minimized on the right side of the strategy tab by d
 **Initialization**
 
 - **Data type** \- the data type.
-- **Time frame** \- to use candles with the specified time\-frame.
+- **Time frame** \- to use candles with the specified time frame.
 - **Days of history data** \- the number of days of history data to initialize the strategy.
 
 **Settings**
