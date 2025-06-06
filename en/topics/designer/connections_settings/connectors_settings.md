@@ -1,6 +1,6 @@
 # Connectors settings
 
-Some connectors must be pre\-configured. Below are links to pages with connectors settings.
+Some connectors require pre-configuration. Below are links to pages with their settings.
 
 ## Stock, Futures and Options
 

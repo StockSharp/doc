@@ -4,7 +4,7 @@ On the [Testing Properties](components/backtesting_settings.md) and [Live Tradin
 
 In the Risks window, it's necessary to select a **Risk Rule**, configure the triggering condition for the **Risk Rule**, and the action (Close positions, Stop trading, Cancel orders) that will be executed when the condition for the **Risk Rule** occurs.
 
-It is possible to use multiple risk rules of the same type with different actions. For example, in the screenshot below, if the order volume is 20, then the actions to cancel orders and stop trading should be taken.
+It is possible to use multiple risk rules of the same type with different actions. For example, in the screenshot below, if the order volume is 20, then the actions to cancel orders and stop trading are executed.
 
 ![Designer Risk Rule](../../../images/designer_risk_rule.png)
 
