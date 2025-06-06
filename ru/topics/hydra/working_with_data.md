@@ -6,4 +6,4 @@
 
 - [Просмотр маркет\-данных](working_with_data/view_and_export.md)
 - [Генерация свечек](working_with_data/candles_generation.md)
-- [Эспорт маркет\-данных](working_with_data/export_data.md)
+- [Экспорт маркет\-данных](working_with_data/export_data.md)
