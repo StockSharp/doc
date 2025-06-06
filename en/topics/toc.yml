@@ -651,7 +651,7 @@
         href: hydra/misc/backup/hydra_settings.md
       - name: Recovery
         href: hydra/misc/backup/recovery.md
-  - name: Create new souce
+  - name: Create new source
     href: hydra/create_new_souce.md
   - name: Create new task
     href: hydra/create_new_task.md
