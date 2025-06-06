@@ -654,7 +654,7 @@
       - name: Восстановление данных
         href: hydra/misc/backup/recovery.md
   - name: Создание источника
-    href: hydra/create_new_souce.md
+    href: hydra/create_new_source.md
   - name: Создание утилит
     href: hydra/create_new_task.md
 - name: Hydra сервер
@@ -2316,7 +2316,7 @@
     href: shell/create_strategy_panel.md
   - name: Запуск стратегии созданной в Designer
     href: shell/run_strategies_from_designer.md
-- name: MatLab
+- name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md

@@ -652,7 +652,7 @@
       - name: Recovery
         href: hydra/misc/backup/recovery.md
   - name: Create new source
-    href: hydra/create_new_souce.md
+    href: hydra/create_new_source.md
   - name: Create new task
     href: hydra/create_new_task.md
 - name: Hydra server
@@ -2179,7 +2179,7 @@
     href: shell/create_strategy_panel.md
   - name: Run strategies from Designer
     href: shell/run_strategies_from_designer.md
-- name: MatLab
+- name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
