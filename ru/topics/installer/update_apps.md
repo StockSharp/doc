@@ -10,7 +10,7 @@
 
 После чего нужно нажать на кнопку.
 
-![updat installer](../../images/updat_installer.png)
+![update installer](../../images/updat_installer.png)
 
 [Installer](../installer.md) не закрывается нажатием на **"Х"** в окне программы, а закрывается через панель инструментов.
 

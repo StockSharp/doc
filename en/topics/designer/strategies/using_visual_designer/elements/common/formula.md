@@ -35,7 +35,7 @@ Together with the standard mathematical operators, you can use the following fun
 - **sin(a)** \- returns the sine of the specified angle.
 - **sqrt(a)** \- returns the square root of the specified number.
 - **tan(a)** \- returns the tangent of the specified angle.
-- **truncat(a)** \- calculates the integer part of the specified number.
+- **truncate(a)** \- calculates the integer part of the specified number.
 
 ## Recommended content
 
