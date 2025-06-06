@@ -6,4 +6,4 @@ The [Hydra]() program is intended for automatic downloading of market data (inst
 
 At the same time, [Hydra]() can use both historical and real-time data sources (for example, connecting to [OpenECry](api/connectors/stock_market/openecry.md) or [Rithmic](api/connectors/stock_market/rithmic.md) to obtain order books). This is possible through the extensible plug-in source model.
 
-The plug-in model lets you develop your own sources. For details on creating and installing custom sources in [Hydra](), see the [Creating source](hydra/create_new_souce.md) section.
+The plug-in model lets you develop your own sources. For details on creating and installing custom sources in [Hydra](), see the [Creating source](hydra/create_new_source.md) section.

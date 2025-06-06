@@ -77,7 +77,7 @@ The Shell provides a ready-made graphical framework that can be quickly customiz
 - [API](topics/api.md) - Library for developing trading robots in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
 - [Terminal](topics/terminal.md) - Trading terminal.
 - [Shell](topics/shell.md) - Ready-made graphical framework for strategies with source codes.
-- [MatLab](topics/matlab.md) - Integration of MatLab with trading systems. Trade from MatLab scripts.
+- [MATLAB](topics/matlab.md) - Integration of MATLAB with trading systems. Trade from MATLAB scripts.
 
 [Download](https://stocksharp.com/products/download/)
 

@@ -4,7 +4,7 @@
 
 - скачать и установить [Designer](designer.md), [Terminal](terminal.md), [Hydra](hydra.md)
 - установить плагин-коннекторы [QUIK](api/connectors/russia/quik.md) [MetaTrader](api/connectors/forex/metatrader.md)
-- купить и установить платные компоненты как [Shell](shell.md), [MatLab](matlab.md)
+- купить и установить платные компоненты как [Shell](shell.md), [MATLAB](matlab.md)
 - купить и распаковать исходные коды таких программ как [Designer](designer.md).
 - устанавливать программы вместе с приобретенными коннекторами
 - отслеживать процесс обновления программ

@@ -68,7 +68,7 @@
 - [API](topics/api.md) \- библиотека для написания торговых роботов на языке [C\#](https://ru.wikipedia.org/wiki/C_Sharp) в Visual Studio.
 - [Terminal](topics/terminal.md) \- торговый терминал.
 - [Shell](topics/shell.md) \- готовый графический каркас с исходными кодами.
-- [MatLab](topics/matLab.md) \- интеграция MatLab с торговыми системами. Торговля из скриптов MatLab.
+- [MATLAB](topics/matlab.md) \- интеграция MATLAB с торговыми системами. Торговля из скриптов MATLAB.
 - [ЛЧИ Viewer](https://stocksharp.ru/products/lci/) \- графики конкурса ЛЧИ со сделками участников.
 
 ***[Скачать](https://stocksharp.ru/products/download/)***
