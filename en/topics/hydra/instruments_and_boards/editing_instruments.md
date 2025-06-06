@@ -6,7 +6,7 @@ Go to the **Securities** window.
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 
-Then a window for editing will open..
+Then a window for editing will open.
 
 ![hydra security edit](../../../images/hydra_security_edit.png)
 

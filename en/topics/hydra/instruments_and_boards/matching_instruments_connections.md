@@ -2,9 +2,9 @@
 
 The same instrument in different trading systems can be called differently. It is possible to match the instrument and the connections via which this instrument will be traded, and specify how it is identified in the external trading system.
 
-This allows you to organize the received data and simplify storage. Actually, all incoming data from various sources will be consolidated in one place and not by the source name, but by the instrument name..
+This allows you to organize the received data and simplify storage. Actually, all incoming data from various sources will be consolidated in one place and not by the source name, but by the instrument name.
 
-This is also useful when trading the same instrument on different trading boards or via different connections (or brokers). Also, it allows to get data from one connection, and make trades via another connection..
+This is also useful when trading the same instrument on different trading boards or via different connections (or brokers). Also, it allows getting data from one connection and making trades via another connection.
 
 To match instruments and connections you need:
 

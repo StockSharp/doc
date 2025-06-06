@@ -7,7 +7,7 @@ In server mode, the program allows you to enable emulation mode.
 In emulation mode, the [Hydra](../../hydra.md) program allows you to perform the following functions:
 
 - The program allows you to configure the keys for connecting to the source and simultaneously work with one connection in different programs ([Designer](../../designer.md), [Terminal](../../terminal.md)). 
-- If the market data source allows you to download historical data, then they can be used simultaneously for testing..
+- If the market data source allows you to download historical data, then they can be used simultaneously for testing.
 - If the source allows you to receive data in real time, then the emulation mode allows you to emulate the trading mode. In this mode, data on user actions (orders registering, trades) are transferred directly to Hydra, while actions are recorded separately for each program. For example, when registering an order in Terminal, changes to it will be visible only for it, and in Designer they will not be recorded. This avoids conflicts between two programs running over the same connection. 
 - IMPORTANT\! Trades conducted in emulation mode, trading and operations on them are emulated in real time, when the mode is off, actions will be performed on real trading.
 

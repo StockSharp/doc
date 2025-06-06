@@ -21,9 +21,9 @@ Sample code
 ```cs
 // creating a new instance of LogManager
 _logManager = new LogManager();
-// adding .NET traing as a logs source.
+// adding .NET tracing as a log source.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// adding Monitor as a logs listener.
+// adding Monitor as a log listener.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));
                   
 ```
