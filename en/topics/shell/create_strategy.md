@@ -4,7 +4,7 @@ To create your own strategy, create a folder for your strategy in the Strategies
 
 ![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
 
-Using the example of SmaStrategy, you need to create the strategy itself.
+Using SmaStrategy as an example, create the strategy itself.
 
 If you need to add your own testing or monitoring panel for a strategy, then the strategy must implement the IHaveTestControl and IHaveMonitoringControl interfaces, respectively.
 
@@ -13,7 +13,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 	{
 	...
 		#region MonitoringControl
-		public BaseStudioControl AddMonitorigPanel()
+                public BaseStudioControl AddMonitoringPanel()
 		{
 			var usercontrol = new SmaMonitoringControl();
 			usercontrol.Init(this);
@@ -33,7 +33,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 		
 ```
 
-And you also need to create the panels themselves. How to build your own testing or monitoring panel is described in [Create strategy panel](create_strategy_panel.md).
+You also need to create the panels themselves. How to build your own testing or monitoring panel is described in [Create strategy panel](create_strategy_panel.md).
 
 > [!TIP]
 > If there are enough testing or monitoring panels for the strategy, which are used for default strategies, then you do not need to implement the IHaveTestControl and IHaveMonitoringControl interfaces. Shell will run the default testing or monitoring panels by itself. 
@@ -73,7 +73,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 		
 ```
 
-To save additional fields, you must override the **Load** and **Save** methods
+To save additional fields, you must override the **Load** and **Save** methods.
 
 ```cs
 public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
