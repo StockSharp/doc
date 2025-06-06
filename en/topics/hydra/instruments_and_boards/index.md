@@ -33,7 +33,7 @@ To create the **Index** instrument, you must specify a name and add the mathemat
 - **sin(a)** \- Returns the sine of the specified angle.
 - **sqrt (a)** \- Returns the square root of the specified number.
 - **tan(a)** \- Returns the tangent of the specified angle.
-- **truncat(a)** \- Calculates the integer part of the specified number.
+- **truncate(a)** \- Calculates the integer part of the specified number.
 
 Next, you need to click the [Candles](../working_with_data/view_and_export/candles.md) button on the **Common** tab, select the obtained **Index** instrument, the data period, in the **Create From:** field set the **Composite Element** value. Then press the button ![hydra find](../../../images/hydra_find.png).
 

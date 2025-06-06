@@ -14,16 +14,17 @@
 
     ![Installerzip Properties](../../images/installer_warn_2.png)
 
-    By clicking the **Run anyway** button, you will start the installation of [Installer](../installer.md).
+    Clicking the **Run anyway** button starts the installation of [Installer](../installer.md).
 
-6. The unpacking of [Installer](../installer.md) will start. You need to wait for the unpacking to complete.
-7. For the first installation, you need to enter the **StockSharp** login and password.
+6. [Installer](../installer.md) will then unpack. Wait for the process to complete.
+7. During the first launch you need to enter your **StockSharp** login and password.
 
     ![log In installer](../../images/login_installer.png)
 
-    The login can be performed either through direct input of login and password or via authorization through a social network (in the case of registration on the StockSharp website in this way, there will be no password).
+    You can sign in either by entering your credentials directly or via social network authorization. If you registered on the StockSharp website through a social network, you will not have a password.
 
-8. After logging in, the program window will open. ![first win installer](../../images/first_win_installer.png)
+8. After logging in, the program window will open:
+![first win installer](../../images/first_win_installer.png)
 
 **Watch the [video tutorial](videos/setup.md)**
 
