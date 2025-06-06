@@ -33,7 +33,7 @@
      	  				
      ```
 
-    То ему будет соответствовать следующая настройка:![hydra import prop candles](../../../images/hydra_import_prop_candles.png)
+     То ему будет соответсвовать следющая настройка:![hydra import prop candles](../../../images/hydra_import_prop_candles.png)
 
      Здесь:
 
