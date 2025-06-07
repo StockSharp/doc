@@ -52,8 +52,6 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 
 3. Указать конкретные типы рыночных данных, которые поддерживает адаптер, с помощью метода [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)).
 
-4. Указать типы результирующих сообщений, которые будут поддерживаться адаптером, с помощью метода [AddSupportedResultMessage](xref:StockSharp.Messages.Extensions.AddSupportedResultMessage(StockSharp.Messages.MessageAdapter,StockSharp.Messages.MessageTypes)). Такие типы сообщений как [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) и т.п. запрашивают информацию у коннектора и ожидают соответствующих ответных сообщений.
-
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
     : base(transactionIdGenerator)
@@ -73,11 +71,6 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
     this.AddSupportedMarketDataType(DataType.MarketDepth);
     this.AddSupportedMarketDataType(DataType.Level1);
     this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
-
-    // Добавление поддерживаемых результирующих сообщений
-    this.AddSupportedResultMessage(MessageTypes.SecurityLookup);
-    this.AddSupportedResultMessage(MessageTypes.PortfolioLookup);
-    this.AddSupportedResultMessage(MessageTypes.OrderStatus);
 }
 ```
 

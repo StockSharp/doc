@@ -52,8 +52,6 @@ In the adapter constructor, you need to perform the following actions:
 
 3. Specify the specific types of market data supported by the adapter using the [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)) method.
 
-4. Specify the types of resulting messages that will be supported by the adapter using the [AddSupportedResultMessage](xref:StockSharp.Messages.Extensions.AddSupportedResultMessage(StockSharp.Messages.MessageAdapter,StockSharp.Messages.MessageTypes)) method. Message types such as [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage), [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage), etc. request information from the connector and expect corresponding response messages.
-
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
     : base(transactionIdGenerator)
@@ -73,11 +71,6 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
     this.AddSupportedMarketDataType(DataType.MarketDepth);
     this.AddSupportedMarketDataType(DataType.Level1);
     this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
-
-    // Add supported resulting messages
-    this.AddSupportedResultMessage(MessageTypes.SecurityLookup);
-    this.AddSupportedResultMessage(MessageTypes.PortfolioLookup);
-    this.AddSupportedResultMessage(MessageTypes.OrderStatus);
 }
 ```
 
