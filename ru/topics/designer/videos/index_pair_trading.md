@@ -1,3 +1,3 @@
 # Индексы и парный трейдинг
 
-> [!Video https://vkvideo.ru/video-38045320_456239179]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239179]

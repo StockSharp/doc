@@ -1,3 +1,3 @@
 # Подключение к Binance
 
-> [!Video https://vkvideo.ru/video-38045320_456239112]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239112]

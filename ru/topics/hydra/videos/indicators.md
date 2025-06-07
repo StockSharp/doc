@@ -1,3 +1,3 @@
 # Построение индикатора
 
-> [!Video https://vkvideo.ru/video-38045320_456239100]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239100]

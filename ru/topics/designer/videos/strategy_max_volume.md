@@ -1,3 +1,3 @@
 # Стратегия максимального объема
 
-> [!Video https://vkvideo.ru/video-38045320_456239176]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239176]
