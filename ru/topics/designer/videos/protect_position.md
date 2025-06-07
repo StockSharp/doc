@@ -1,3 +1,3 @@
 # Защита позиций
 
-> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239165&t=1s]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239165]
