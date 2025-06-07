@@ -1,3 +1,3 @@
 # Начало работы
 
-> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239161
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239161]
