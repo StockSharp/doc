@@ -1,3 +1,3 @@
 # Настройка формата сохранения
 
-> [!Video https://vkvideo.ru/video-38045320_456239103]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239103]

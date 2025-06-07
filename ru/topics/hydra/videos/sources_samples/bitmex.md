@@ -1,3 +1,3 @@
 # Подключение к Bitmex
 
-> [!Video https://vkvideo.ru/video-38045320_456239113]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239113]

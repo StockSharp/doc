@@ -1,3 +1,3 @@
 # Подключение к Interactive Brokers
 
-> [!Video https://vkvideo.ru/video-38045320_456239089]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239089]

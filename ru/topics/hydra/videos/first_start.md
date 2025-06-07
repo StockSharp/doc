@@ -1,3 +1,3 @@
 # Первый запуск
 
-> [!Video https://vkvideo.ru/video-38045320_456239149?t=2m12s]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239149&t=2m12s]

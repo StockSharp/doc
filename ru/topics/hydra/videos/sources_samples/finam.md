@@ -1,3 +1,3 @@
 # Подключение к Финам
 
-> [!Video https://vkvideo.ru/video-38045320_456239090]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239090]

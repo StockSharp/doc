@@ -1,3 +1,3 @@
 # Настройка инструментов для скачивания
 
-> [!Video https://vkvideo.ru/video-38045320_456239108]
+> [!Video https://vkvideo.ru/video_ext.php?oid=-38045320&id=456239108]
