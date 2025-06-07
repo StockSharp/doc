@@ -1,3 +1,3 @@
 # Составные кубики
 
-> [!Video https://www.youtube.com/embed/qQ2kVkU_8Iw]
+> [!Video https://vkvideo.ru/video-38045320_456239173?t=1s]

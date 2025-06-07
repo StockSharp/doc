@@ -1,3 +1,3 @@
 # Построение свечей различного типа
 
-> [!Video https://www.youtube.com/embed/pOEzq_YN2TU]
+> [!Video https://vkvideo.ru/video-38045320_456239150]

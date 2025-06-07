@@ -1,3 +1,3 @@
 # Стратегия максимального объема
 
-> [!Video https://www.youtube.com/embed/VRJ7hLldh-A]
+> [!Video https://vkvideo.ru/video-38045320_456239176]

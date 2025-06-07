@@ -1,3 +1,3 @@
 # Подключение к Interactive Brokers
 
-> [!Video https://www.youtube.com/embed/4taQoNnGtnc]
+> [!Video https://vkvideo.ru/video-38045320_456239089]

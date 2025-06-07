@@ -1,3 +1,3 @@
 # Мульти таймфрейм
 
-> [!Video https://www.youtube.com/embed/ad7WHQr5_hM]
+> [!Video https://vkvideo.ru/video-38045320_456239168]

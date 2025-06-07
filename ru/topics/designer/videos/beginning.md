@@ -1,3 +1,3 @@
 # Начало работы
 
-> [!Video https://www.youtube.com/embed/5yGpH9XMs8I]
+> [!Video https://vkvideo.ru/video-38045320_456239161?t=1m27s]

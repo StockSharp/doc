@@ -1,3 +1,3 @@
 # Конструктор торговых стратегий
 
-> [!Video https://www.youtube.com/embed/Y6jzIIXglI0]
+> [!Video https://vkvideo.ru/video-38045320_456239162]

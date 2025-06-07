@@ -1,3 +1,3 @@
 # Подключение Дизайнера к Гидре
 
-> [!Video https://www.youtube.com/embed/RkvYMqHe7Bk]
+> [!Video https://vkvideo.ru/video-38045320_456239170?t=1s]

@@ -1,3 +1,3 @@
 # Парный трейдинг
 
-> [!Video https://www.youtube.com/embed/6K_dz93uRfQ]
+> [!Video https://vkvideo.ru/video-38045320_456239178?t=1s]

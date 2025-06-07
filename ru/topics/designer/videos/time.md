@@ -1,3 +1,3 @@
 # Время
 
-> [!Video https://www.youtube.com/embed/szA-wloYD2Y]
+> [!Video https://vkvideo.ru/video-38045320_456239169]

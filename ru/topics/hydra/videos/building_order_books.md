@@ -1,3 +1,3 @@
 # Получение Стакана из иного типа маркет\-данных
 
-> [!Video https://www.youtube.com/embed/D9niWLrNNT0]
+> [!Video https://vkvideo.ru/video-38045320_456239151]

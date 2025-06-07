@@ -1,3 +1,3 @@
 # Импорт данных
 
-> [!Video https://www.youtube.com/embed/mUPA3kV_pIQ]
+> [!Video https://vkvideo.ru/video-38045320_456239152]

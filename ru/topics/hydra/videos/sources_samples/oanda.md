@@ -1,3 +1,3 @@
 # Подключение к Oanda
 
-> [!Video https://www.youtube.com/embed/SV81FXhxp_Y]
+> [!Video https://vkvideo.ru/video-38045320_456239109]

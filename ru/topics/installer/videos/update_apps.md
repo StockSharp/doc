@@ -1,3 +1,3 @@
 # Обновление программ
 
-> [!Video https://www.youtube.com/embed/p1KB3ouN2C4]
+> [!Video https://vkvideo.ru/video-38045320_456239155]

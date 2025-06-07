@@ -1,3 +1,3 @@
 # Функция Аналитика
 
-> [!Video https://www.youtube.com/embed/vmYb4PsppPg]
+> [!Video https://vkvideo.ru/video-38045320_456239159?t=1s]

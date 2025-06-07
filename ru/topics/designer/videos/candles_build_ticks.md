@@ -1,3 +1,3 @@
 # Компрессия свечей из тиков
 
-> [!Video https://www.youtube.com/embed/TLmw-98ImZk]
+> [!Video https://vkvideo.ru/video-38045320_456239174]

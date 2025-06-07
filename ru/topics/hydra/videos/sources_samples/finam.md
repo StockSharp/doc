@@ -1,3 +1,3 @@
 # Подключение к Финам
 
-> [!Video https://www.youtube.com/embed/gUeC2KZSOVc]
+> [!Video https://vkvideo.ru/video-38045320_456239090]

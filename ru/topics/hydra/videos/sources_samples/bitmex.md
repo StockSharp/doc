@@ -1,3 +1,3 @@
 # Подключение к Bitmex
 
-> [!Video https://www.youtube.com/embed/2E1DL9iNka4]
+> [!Video https://vkvideo.ru/video-38045320_456239113]

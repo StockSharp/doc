@@ -4,7 +4,7 @@
 
 ## Процесс установки и настройки
 
-> [!Video https://www.youtube.com/embed/uzViAqw3FQQ]
+> [!Video https://vkvideo.ru/video-38045320_456239157]
 
 1. Установить коннектор QUIK LUA в папку с помощью программы [Installer](../../../installer.md).
 

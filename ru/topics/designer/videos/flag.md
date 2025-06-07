@@ -1,3 +1,3 @@
 # Флаг
 
-> [!Video https://www.youtube.com/embed/6-1zTCAn0zc]
+> [!Video https://vkvideo.ru/video-38045320_456239175]

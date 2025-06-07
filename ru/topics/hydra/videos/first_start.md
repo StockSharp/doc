@@ -1,3 +1,3 @@
 # Первый запуск
 
-> [!Video https://www.youtube.com/embed/vv-k1OiUwSM]
+> [!Video https://vkvideo.ru/video-38045320_456239149?t=2m12s]

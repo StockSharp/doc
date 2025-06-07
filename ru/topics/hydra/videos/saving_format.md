@@ -1,3 +1,3 @@
 # Настройка формата сохранения
 
-> [!Video https://www.youtube.com/embed/hCyxYdLxx8c]
+> [!Video https://vkvideo.ru/video-38045320_456239103]

@@ -1,3 +1,3 @@
 # Оптимизация торговых стратегий
 
-> [!Video https://www.youtube.com/embed/PNzDtlYwlxk]
+> [!Video https://vkvideo.ru/video-38045320_456239171]

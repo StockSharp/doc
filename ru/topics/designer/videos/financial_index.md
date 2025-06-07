@@ -1,3 +1,3 @@
 # Биржевые индексы
 
-> [!Video https://www.youtube.com/embed/NkWA41FiO44]
+> [!Video https://vkvideo.ru/video-38045320_456239177]

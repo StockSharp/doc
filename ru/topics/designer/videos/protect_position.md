@@ -1,3 +1,3 @@
 # Защита позиций
 
-> [!Video https://www.youtube.com/embed/QZPfs2TsrA0]
+> [!Video https://vkvideo.ru/video-38045320_456239165?t=1s]

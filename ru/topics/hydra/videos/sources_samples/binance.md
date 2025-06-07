@@ -1,3 +1,3 @@
 # Подключение к Binance
 
-> [!Video https://www.youtube.com/embed/AuYHFMTVGy8]
+> [!Video https://vkvideo.ru/video-38045320_456239112]

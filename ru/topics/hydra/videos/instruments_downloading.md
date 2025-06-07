@@ -1,3 +1,3 @@
 # Настройка инструментов для скачивания
 
-> [!Video https://www.youtube.com/embed/4WKFqJscS_E]
+> [!Video https://vkvideo.ru/video-38045320_456239108]
