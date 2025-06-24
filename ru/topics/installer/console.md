@@ -26,7 +26,7 @@
 - `Installed` – вывести список установленных программ.
 - `Sign` – подписать DLL файл.
 
-Необязательный параметр `[продукт]` — это ID продукта из [магазина](https://stocksharp.com/store/). Найти его можно на странице товара, например на странице [Hydra сервера](https://stocksharp.ru/store/hydra-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80/), либо командой `StockSharp.Installer.Console.exe Products -s hydra`. `[путь]` указывает каталог установки.
+Необязательный параметр `[продукт]` — это ID продукта из [магазина](https://stocksharp.ru/store/). Найти его можно на странице товара, например на странице [Hydra сервера](https://stocksharp.ru/store/hydra-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80/), либо командой `StockSharp.Installer.Console.exe Products -s hydra`. `[путь]` указывает каталог установки.
 
 ## Опции
 
