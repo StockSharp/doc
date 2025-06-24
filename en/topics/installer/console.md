@@ -52,3 +52,17 @@ dotnet StockSharp.Installer.Console.dll Install 1269 /home/user/stocksharp -p -r
 ```
 
 This installs product **1269** (used here just as an example) into the specified directory, allows pre-release builds and launches `StockSharp.Hydra.Server.exe` after completion.
+
+## Signing
+
+The `Sign` command digitally signs a robot DLL. Use it when distributing your own API‑based robot so that all recipients, even on the [free plan](https://stocksharp.com/pricing/), can run it.
+
+Compile the robot beforehand and add the `[assembly: ProductId(9)]` attribute from the `StockSharp.Configuration` namespace. Sign the DLL (for example, `MyRobot.dll`) rather than the `.exe` file.
+
+Example:
+
+```bash
+StockSharp.Installer.Console.exe Sign -i "MyRobot.dll"
+```
+
+Rebuilding the project removes the signature, so sign the assembly at the end of development when no further compilation is expected.
