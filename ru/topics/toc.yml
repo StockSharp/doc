@@ -796,6 +796,15 @@
           href: api/connectors/russia/twime/ui_settings.md
         - name: Инициализация адаптера Twime
           href: api/connectors/russia/twime/sample.md
+      - name: Simba
+        href: api/connectors/russia/simba.md
+        items:
+        - name: Настройки коннектора Simba
+          href: api/connectors/russia/simba/settings.md
+        - name: Графическое конфигурирование Simba
+          href: api/connectors/russia/simba/ui_settings.md
+        - name: Инициализация адаптера Simba
+          href: api/connectors/russia/simba/sample.md
       - name: Финам
         href: api/connectors/russia/finam.md
         items:
