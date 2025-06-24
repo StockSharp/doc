@@ -15,6 +15,8 @@
     href: installer/install_and_remove_apps.md
   - name: Update apps
     href: installer/update_apps.md
+  - name: Console
+    href: installer/console.md
 - name: Designer
   href: designer.md
   items:
