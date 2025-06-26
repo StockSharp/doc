@@ -24,7 +24,7 @@ SuperTrend is built using the average price and the ATR value. The indicator lin
 3. SuperTrend initially equals one of the bands depending on the current trend.
 4. If the closing price crosses the SuperTrend line, the trend direction changes and the line moves to the opposite side.
 
-![IndicatorSuperTrend](../../../../images/indicatorsupertrend.png)
+![IndicatorSuperTrend](../../../../images/indicator_supertrend.png)
 
 ## See Also
 

@@ -24,7 +24,7 @@ SuperTrend строится по средней цене и значению ATR
 3. SuperTrend первоначально равен одной из границ в зависимости от текущего тренда.
 4. Если цена закрытия пересекает линию SuperTrend, направление тренда меняется, и линия переносится на противоположную сторону.
 
-![IndicatorSuperTrend](../../../../images/indicatorsupertrend.png)
+![IndicatorSuperTrend](../../../../images/indicator_supertrend.png)
 
 ## См. также
 
