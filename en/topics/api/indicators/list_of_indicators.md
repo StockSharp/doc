@@ -112,6 +112,7 @@
 - [RSI](list_of_indicators/rsi.md) - Relative Strength Index, measures the speed and change of price movements
 - [RVI](list_of_indicators/rvi.md) - Relative Vigor Index, measures trend confidence
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle, identifies trend cycles
+- [SuperTrend](list_of_indicators/supertrend.md) - SuperTrend indicator based on ATR
 - [SMA](list_of_indicators/sma.md) - Simple moving average, calculates the average price over a period
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, identifies cyclical patterns in price data
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, a moving average giving more weight to recent prices

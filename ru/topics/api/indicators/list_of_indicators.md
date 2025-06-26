@@ -112,6 +112,7 @@
 - [RSI](list_of_indicators/rsi.md) - Relative Strength Index, измеряет скорость и изменение движения цены
 - [RVI](list_of_indicators/rvi.md) - Relative Vigor Index, измеряет уверенность тренда
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle, определяет циклические тренды
+- [SuperTrend](list_of_indicators/supertrend.md) - SuperTrend, отображает направление тренда на основе ATR
 - [SMA](list_of_indicators/sma.md) - Simple moving average, вычисляет среднюю цену за период
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, скользящая средняя с большим весом последних цен
