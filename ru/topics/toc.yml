@@ -1820,6 +1820,8 @@
         href: api/indicators/list_of_indicators/high_low_index.md
       - name: Historical Volatility Ratio (HVR)
         href: api/indicators/list_of_indicators/historical_volatility_ratio.md
+      - name: Hurst Exponent (H)
+        href: api/indicators/list_of_indicators/hurst_exponent.md
       - name: Hull Moving Average (HMA)
         href: api/indicators/list_of_indicators/hma.md
       - name: Ichimoku
@@ -1836,6 +1838,8 @@
         href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
       - name: Kaufman Adaptive Moving Average (KAMA)
         href: api/indicators/list_of_indicators/kama.md
+      - name: Kalman Filter (KF)
+        href: api/indicators/list_of_indicators/kalman_filter.md
       - name: Keltner Channels (KC)
         href: api/indicators/list_of_indicators/keltner_channels.md
       - name: Klinger Volume Oscillator (KVO)
