@@ -1930,6 +1930,8 @@
         href: api/indicators/list_of_indicators/rvi.md
       - name: Schaff Trend Cycle (STC)
         href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: SuperTrend
+        href: api/indicators/list_of_indicators/supertrend.md
       - name: Simple Moving Average (SMA)
         href: api/indicators/list_of_indicators/sma.md
       - name: Sine Wave (SW)
