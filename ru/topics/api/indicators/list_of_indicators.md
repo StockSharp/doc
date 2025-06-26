@@ -57,6 +57,7 @@
 - [Highest](list_of_indicators/highest.md) - Maximum value for a period, определяет максимальную цену за заданный период
 - [HLI](list_of_indicators/high_low_index.md) - High Low Index, измеряет количество новых максимумов и минимумов
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - Historical Volatility Ratio, сравнивает текущую волатильность с историческими уровнями
+- [H](list_of_indicators/hurst_exponent.md) - Hurst Exponent, измеряет долгосрочную память временного ряда
 - [HMA](list_of_indicators/hma.md) - Hull Moving Average, быстрая и плавная скользящая средняя
 - [Ichimoku](list_of_indicators/ichimoku.md) - Ichimoku, комплексный индикатор для определения трендов
 - [III](list_of_indicators/intraday_intensity_index.md) - Intraday Intensity Index, измеряет давление покупок и продаж в течение торгового дня
@@ -65,6 +66,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - Kase Peak Oscillator, определяет потенциальные точки разворота
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - Kaufman Efficiency Ratio, измеряет эффективность движения цены
 - [KAMA](list_of_indicators/kama.md) - Kaufman adaptive moving average, адаптируется к волатильности рынка
+- [Kalman Filter](list_of_indicators/kalman_filter.md) - Адаптивный фильтр для отслеживания трендов в зашумленных данных
 - [KC](list_of_indicators/keltner_channels.md) - Keltner Channels indicator, определяет торговые диапазоны на основе волатильности
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - Klinger Volume Oscillator, измеряет тренды объёма
 - [KST](list_of_indicators/kst.md) - Know Sure Thing, осциллятор импульса

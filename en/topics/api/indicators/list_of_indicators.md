@@ -57,6 +57,7 @@
 - [Highest](list_of_indicators/highest.md) - Maximum value for a period, determines the highest price over a specified period
 - [HLI](list_of_indicators/high_low_index.md) - High Low Index, measures the number of new highs and lows
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - Historical Volatility Ratio, compares current volatility to historical levels
+- [H](list_of_indicators/hurst_exponent.md) - Hurst Exponent, measures the long-term memory of a series
 - [HMA](list_of_indicators/hma.md) - Hull Moving Average, a fast and smooth moving average
 - [Ichimoku](list_of_indicators/ichimoku.md) - Ichimoku, a comprehensive indicator for trend identification
 - [III](list_of_indicators/intraday_intensity_index.md) - Intraday Intensity Index, measures buying and selling pressure during the trading day
@@ -65,6 +66,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - Kase Peak Oscillator, identifies potential reversal points
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - Kaufman Efficiency Ratio, measures the efficiency of price movement
 - [KAMA](list_of_indicators/kama.md) - Kaufman adaptive moving average, adapts to market volatility
+- [Kalman Filter](list_of_indicators/kalman_filter.md) - Adaptive filter for tracking trends in noisy data
 - [KC](list_of_indicators/keltner_channels.md) - Keltner Channels indicator, defines trading ranges based on volatility
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - Klinger Volume Oscillator, measures volume trends
 - [KST](list_of_indicators/kst.md) - Know Sure Thing, a momentum oscillator
