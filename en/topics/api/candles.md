@@ -24,16 +24,16 @@ The following images show [TimeFrameCandleMessage](xref:StockSharp.Messages.Time
 ```cs
 // Create a subscription to 5-minute candles
 var subscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Data type with timeframe specification
-    security)  // Instrument
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Data type with timeframe specification
+	security)  // Instrument
 {
-    // Configure additional parameters through the MarketData property
-    MarketData = 
-    {
-        // Period for which we request historical data (last 30 days)
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Now
-    }
+	// Configure additional parameters through the MarketData property
+	MarketData = 
+	{
+		// Period for which we request historical data (last 30 days)
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Now
+	}
 };
 ```
 
@@ -46,15 +46,15 @@ _connector.CandleReceived += OnCandleReceived;
 // Candle reception event handler
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Here subscription is the subscription object we created
-    // candle - the received candle
-    
-    // Check if the candle belongs to our subscription
-    if (subscription == _candleSubscription)
-    {
-        // Draw the candle on the chart
-        Chart.Draw(_candleElement, candle);
-    }
+	// Here subscription is the subscription object we created
+	// candle - the received candle
+	
+	// Check if the candle belongs to our subscription
+	if (subscription == _candleSubscription)
+	{
+		// Draw the candle on the chart
+		Chart.Draw(_candleElement, candle);
+	}
 }
 ```
 
@@ -77,20 +77,20 @@ If you need to display only **"complete"** candles, you need to check the [ICand
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Check if the candle belongs to our subscription
-    if (subscription != _candleSubscription)
-        return;
-    
-    // Check if the candle is completed
-    if (candle.State == CandleStates.Finished) 
-    {
-        // Create data for drawing
-        var chartData = new ChartDrawData();
-        chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-        
-        // Draw the candle on the chart
-        this.GuiAsync(() => Chart.Draw(chartData));
-    }
+	// Check if the candle belongs to our subscription
+	if (subscription != _candleSubscription)
+		return;
+	
+	// Check if the candle is completed
+	if (candle.State == CandleStates.Finished) 
+	{
+		// Create data for drawing
+		var chartData = new ChartDrawData();
+		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
+		
+		// Draw the candle on the chart
+		this.GuiAsync(() => Chart.Draw(chartData));
+	}
 }
 ```
 
@@ -149,8 +149,8 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 ```cs
 // 5-minute candles
 var timeFrameSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security);
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security);
 _connector.Subscribe(timeFrameSubscription);
 ```
 
@@ -159,15 +159,15 @@ _connector.Subscribe(timeFrameSubscription);
 ```cs
 // Loading only historical candles without transitioning to real-time
 var historicalSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Today,  // Specify end date
-        BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
-    }
+	MarketData =
+	{
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Today,  // Specify end date
+		BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
+	}
 };
 _connector.Subscribe(historicalSubscription);
 ```
@@ -177,14 +177,14 @@ _connector.Subscribe(historicalSubscription);
 ```cs
 // Candles with a 21-second timeframe, built from ticks
 var customTimeFrameSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromSeconds(21)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(customTimeFrameSubscription);
 ```
@@ -194,15 +194,15 @@ _connector.Subscribe(customTimeFrameSubscription);
 ```cs
 // Candles built from the middle of the spread in the order book
 var depthBasedSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.MarketDepth,
-        BuildField = Level1Fields.SpreadMiddle
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.MarketDepth,
+		BuildField = Level1Fields.SpreadMiddle
+	}
 };
 _connector.Subscribe(depthBasedSubscription);
 ```
@@ -212,15 +212,15 @@ _connector.Subscribe(depthBasedSubscription);
 ```cs
 // 5-minute candles with volume profile calculation
 var volumeProfileSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.LoadAndBuild,
-        BuildFrom = DataType.Ticks,
-        IsCalcVolumeProfile = true
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.LoadAndBuild,
+		BuildFrom = DataType.Ticks,
+		IsCalcVolumeProfile = true
+	}
 };
 _connector.Subscribe(volumeProfileSubscription);
 ```
@@ -230,14 +230,14 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // Volume candles (each candle contains 1000 contracts in volume)
 var volumeCandleSubscription = new Subscription(
-    DataType.Volume(1000m),  // Specify candle type and volume
-    security)
+	DataType.Volume(1000m),  // Specify candle type and volume
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(volumeCandleSubscription);
 ```
@@ -247,14 +247,14 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // Tick count candles (each candle contains 1000 trades)
 var tickCandleSubscription = new Subscription(
-    DataType.Tick(1000),  // Specify candle type and number of trades
-    security)
+	DataType.Tick(1000),  // Specify candle type and number of trades
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(tickCandleSubscription);
 ```
@@ -264,14 +264,14 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // Price range candles with a range of 0.1 units
 var rangeCandleSubscription = new Subscription(
-    DataType.Range(0.1m),  // Specify candle type and price range
-    security)
+	DataType.Range(0.1m),  // Specify candle type and price range
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(rangeCandleSubscription);
 ```
@@ -281,14 +281,14 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // Renko candles with a step of 0.1
 var renkoCandleSubscription = new Subscription(
-    DataType.Renko(0.1m),  // Specify candle type and block size
-    security)
+	DataType.Renko(0.1m),  // Specify candle type and block size
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(renkoCandleSubscription);
 ```
@@ -298,14 +298,14 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Point and Figure candles
 var pnfCandleSubscription = new Subscription(
-    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
-    security)
+	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(pnfCandleSubscription);
 ```

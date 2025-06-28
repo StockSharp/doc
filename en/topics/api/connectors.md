@@ -14,9 +14,9 @@ public Connector Connector;
 ...
 public MainWindow()
 {
-    InitializeComponent();
-    Connector = new Connector();
-    InitConnector();
+	InitializeComponent();
+	Connector = new Connector();
+	InitConnector();
 }
 		
 ```
@@ -29,10 +29,10 @@ private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-    if (Connector.Configure(this))
-    {
-        Connector.Save().Serialize(_connectorFile);
-    }
+	if (Connector.Configure(this))
+	{
+		Connector.Save().Serialize(_connectorFile);
+	}
 }
 	  				
 ```
@@ -46,15 +46,15 @@ Similarly, you can add connections directly from code (without graphical windows
 // Add adapter for connecting to Binance
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
-    a.Key = "<Your API Key>";
-    a.Secret = "<Your Secret Key>";
+	a.Key = "<Your API Key>";
+	a.Secret = "<Your Secret Key>";
 });
 
 // Add RSS for news
 connector.AddAdapter<RssMessageAdapter>(a => 
 {
-    a.Address = "https://news-source.com/feed";
-    a.IsEnabled = true;
+	a.Address = "https://news-source.com/feed";
+	a.IsEnabled = true;
 });
 	  				
 ```
@@ -66,76 +66,76 @@ In the *InitConnector* method, we set the required event handlers for [IConnecto
 ```cs
 private void InitConnector()
 {
-    // Subscribe to successful connection event
-    Connector.Connected += () =>
-    {
-        this.GuiAsync(() => ChangeConnectStatus(true));
-    };
-    
-    // Subscribe to connection error event
-    Connector.ConnectionError += error => this.GuiAsync(() =>
-    {
-        ChangeConnectStatus(false);
-        MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
-    });
-    
-    // Subscribe to disconnection event
-    Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
-    
-    // Subscribe to error event
-    Connector.Error += error =>
-        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
-    
-    // Subscribe to market data subscription failure event
-    Connector.SubscriptionFailed += (subscription, error) =>
-        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
-            LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
-    
-    // Subscriptions for data reception
-    
-    // Instruments
-    Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
-    
-    // Tick trades
-    Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
-    
-    // Orders
-    Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
-    
-    // Own trades
-    Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
-    
-    // Positions
-    Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
+	// Subscribe to successful connection event
+	Connector.Connected += () =>
+	{
+		this.GuiAsync(() => ChangeConnectStatus(true));
+	};
+	
+	// Subscribe to connection error event
+	Connector.ConnectionError += error => this.GuiAsync(() =>
+	{
+		ChangeConnectStatus(false);
+		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+	});
+	
+	// Subscribe to disconnection event
+	Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
+	
+	// Subscribe to error event
+	Connector.Error += error =>
+		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
+	
+	// Subscribe to market data subscription failure event
+	Connector.SubscriptionFailed += (subscription, error) =>
+		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
+			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
+	
+	// Subscriptions for data reception
+	
+	// Instruments
+	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
+	
+	// Tick trades
+	Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
+	
+	// Orders
+	Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
+	
+	// Own trades
+	Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
+	
+	// Positions
+	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
-    // Order registration failures
-    Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
-    
-    // Order cancellation failures
-    Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
-    
-    // Set market data provider
-    _securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
-    
-    try
-    {
-        if (File.Exists(_connectorFile))
-        {
-            var ctx = new ContinueOnExceptionContext();
-            ctx.Error += ex => ex.LogError();
-            using (new Scope<ContinueOnExceptionContext>(ctx))
-                Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
-        }
-    }
-    catch
-    {
-    }
-    
-    ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
-    
-    // Register adapter provider for graphical configuration
-    ConfigManager.RegisterService<IMessageAdapterProvider>(
-        new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
+	// Order registration failures
+	Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
+	
+	// Order cancellation failures
+	Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
+	
+	// Set market data provider
+	_securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
+	
+	try
+	{
+		if (File.Exists(_connectorFile))
+		{
+			var ctx = new ContinueOnExceptionContext();
+			ctx.Error += ex => ex.LogError();
+			using (new Scope<ContinueOnExceptionContext>(ctx))
+				Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+		}
+	}
+	catch
+	{
+	}
+	
+	ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
+	
+	// Register adapter provider for graphical configuration
+	ConfigManager.RegisterService<IMessageAdapterProvider>(
+		new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }
 ```
 

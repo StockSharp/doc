@@ -18,11 +18,11 @@ StockSharp provides a flexible system for working with such extended order condi
 ```cs
 public class MyOrderCondition : OrderCondition
 {
-    public decimal? SpecialPrice
-    {
-        get => (decimal?)Parameters[nameof(SpecialPrice)];
-        set => Parameters[nameof(SpecialPrice)] = value;
-    }
+	public decimal? SpecialPrice
+	{
+		get => (decimal?)Parameters[nameof(SpecialPrice)];
+		set => Parameters[nameof(SpecialPrice)] = value;
+	}
 }
 ```
 
@@ -43,11 +43,11 @@ StockSharp defines several interfaces for specific types of order conditions:
 ```cs
 public class MyWithdrawCondition : BaseWithdrawOrderCondition
 {
-    public string DestinationAddress
-    {
-        get => (string)Parameters[nameof(DestinationAddress)];
-        set => Parameters[nameof(DestinationAddress)] = value;
-    }
+	public string DestinationAddress
+	{
+		get => (string)Parameters[nameof(DestinationAddress)];
+		set => Parameters[nameof(DestinationAddress)] = value;
+	}
 }
 ```
 

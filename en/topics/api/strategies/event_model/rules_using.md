@@ -199,22 +199,22 @@ var diff = "10%".ToUnit();
 
 // Rule that activates when a new candle starts
 this.WhenCandlesStarted(subscription)
-    .Do((candle) =>
-    {
-        i++;
+	.Do((candle) =>
+	{
+		i++;
 
-        // Nested rule: check when total volume exceeds threshold
-        this
-            .WhenTotalVolumeMore(candle, diff)
-            .Do((candle1) =>
-            {
-                LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-                LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
-            })
-            .Once().Apply(this);
+		// Nested rule: check when total volume exceeds threshold
+		this
+			.WhenTotalVolumeMore(candle, diff)
+			.Do((candle1) =>
+			{
+				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+			})
+			.Once().Apply(this);
 
-    }).Apply(this);
-    
+	}).Apply(this);
+	
 // Send subscription request
 Subscribe(subscription);
 ```
@@ -228,7 +228,7 @@ var mdSub = new Subscription(DataType.MarketDepth, Security);
 // Method 1: Creating a rule in a chain
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-    LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Method 2: First create a rule variable
@@ -236,19 +236,19 @@ var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
 {
-    LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Rule within a rule
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-    LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-    // Rule without specifying Once()
-    mdSub.WhenOrderBookReceived(this).Do((depth1) =>
-    {
-        LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
-    }).Apply(this);
+	// Rule without specifying Once()
+	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
+	{
+		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+	}).Apply(this);
 }).Once().Apply(this);
 
 // Send subscription request
@@ -267,9 +267,9 @@ var i = 0;
 // Create a rule that processes order books until i reaches 10
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
-    i++;
-    LogInfo($"Rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-    LogInfo($"Rule WhenOrderBookReceived i={i}");
+	i++;
+	LogInfo($"Rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Rule WhenOrderBookReceived i={i}");
 })
 .Until(() => i >= 10)
 .Apply(this);
@@ -287,24 +287,24 @@ var sub = new Subscription(DataType.Ticks, Security);
 // When we receive the first tick, we'll create an order
 sub.WhenTickTradeReceived(this).Do(() =>
 {
-    var order = CreateOrder(Sides.Buy, default, 1);
+	var order = CreateOrder(Sides.Buy, default, 1);
 
-    var ruleReg = order.WhenRegistered(this);
-    var ruleRegFailed = order.WhenRegisterFailed(this);
+	var ruleReg = order.WhenRegistered(this);
+	var ruleRegFailed = order.WhenRegisterFailed(this);
 
-    ruleReg
-        .Do(() => LogInfo("Order #1 registered"))
-        .Once()
-        .Apply(this)
-        .Exclusive(ruleRegFailed);  // Rules are mutually exclusive
+	ruleReg
+		.Do(() => LogInfo("Order #1 registered"))
+		.Once()
+		.Apply(this)
+		.Exclusive(ruleRegFailed);  // Rules are mutually exclusive
 
-    ruleRegFailed
-        .Do(() => LogInfo("Order #1 not registered"))
-        .Once()
-        .Apply(this)
-        .Exclusive(ruleReg);  // Rules are mutually exclusive
+	ruleRegFailed
+		.Do(() => LogInfo("Order #1 not registered"))
+		.Once()
+		.Apply(this)
+		.Exclusive(ruleReg);  // Rules are mutually exclusive
 
-    RegisterOrder(order);
+	RegisterOrder(order);
 }).Once().Apply(this);
 
 // Send subscription request
@@ -320,15 +320,15 @@ var sub = new Subscription(DataType.Ticks, Security);
 // Rule activates on the first tick and creates another rule
 sub.WhenTickTradeReceived(this).Do(t =>
 {
-    // Create a rule that activates when the price moves 2 points in any direction
-    sub
-        .WhenLastTradePriceMore(this, t.Price + 2)
-        .Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
-        .Do(t =>
-        {
-            LogInfo($"Rule WhenLastTradePriceMore or WhenLastTradePriceLess triggered: tick={t}");
-        })
-        .Apply(this);
+	// Create a rule that activates when the price moves 2 points in any direction
+	sub
+		.WhenLastTradePriceMore(this, t.Price + 2)
+		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
+		.Do(t =>
+		{
+			LogInfo($"Rule WhenLastTradePriceMore or WhenLastTradePriceLess triggered: tick={t}");
+		})
+		.Apply(this);
 })
 .Once() // call this rule only once
 .Apply(this);

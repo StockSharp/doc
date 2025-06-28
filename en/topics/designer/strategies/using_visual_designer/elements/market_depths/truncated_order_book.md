@@ -14,7 +14,7 @@ The cube is used to obtain an order book truncated to a specified depth.
 
 ### Parameters
 
-- **Depth** – The maximum depth of the order book.
+- **Depth**  The maximum depth of the order book.
 
 ## Recommended content
 

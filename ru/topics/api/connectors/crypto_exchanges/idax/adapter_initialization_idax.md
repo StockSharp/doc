@@ -3,15 +3,15 @@
 Код ниже демонстрирует как инициализировать [IdaxMessageAdapter](xref:StockSharp.Idax.IdaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-            Connector Connector = new Connector();				
-            ...				
-            var messageAdapter = new IdaxMessageAdapter(Connector.TransactionIdGenerator)
-            {
-                Key = "<Your API Key>".To<SecureString>(),
-                Secret = "<Your API Secret>".To<SecureString>(),
-            };
-            Connector.Adapter.InnerAdapters.Add(messageAdapter);
-            ...	
+			Connector Connector = new Connector();				
+			...				
+			var messageAdapter = new IdaxMessageAdapter(Connector.TransactionIdGenerator)
+			{
+				Key = "<Your API Key>".To<SecureString>(),
+				Secret = "<Your API Secret>".To<SecureString>(),
+			};
+			Connector.Adapter.InnerAdapters.Add(messageAdapter);
+			...	
 							
 ```
 

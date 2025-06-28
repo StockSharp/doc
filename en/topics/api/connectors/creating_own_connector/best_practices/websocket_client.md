@@ -34,54 +34,54 @@ When developing a connector for a number of exchanges, an important component is
 ```cs
 class SocketClient : BaseLogReceiver
 {
-    private readonly WebSocketClient _client;
-    private readonly Authenticator _authenticator;
+	private readonly WebSocketClient _client;
+	private readonly Authenticator _authenticator;
 
-    // Events for different types of data
-    public event Action<Heartbeat> HeartbeatReceived;
-    public event Action<Ticker> TickerReceived;
-    public event Action<Trade> TradeReceived;
-    public event Action<string, string, IEnumerable<OrderBookChange>> OrderBookReceived;
-    public event Action<Order> OrderReceived;
-    public event Action<Exception> Error;
-    public event Action Connected;
-    public event Action<bool> Disconnected;
+	// Events for different types of data
+	public event Action<Heartbeat> HeartbeatReceived;
+	public event Action<Ticker> TickerReceived;
+	public event Action<Trade> TradeReceived;
+	public event Action<string, string, IEnumerable<OrderBookChange>> OrderBookReceived;
+	public event Action<Order> OrderReceived;
+	public event Action<Exception> Error;
+	public event Action Connected;
+	public event Action<bool> Disconnected;
 
-    public SocketClient(Authenticator authenticator, int reconnectAttempts)
-    {
-        _authenticator = authenticator;
-        _client = new WebSocketClient(/* parameters */);
-        _client.ReconnectAttempts = reconnectAttempts;
-    }
+	public SocketClient(Authenticator authenticator, int reconnectAttempts)
+	{
+		_authenticator = authenticator;
+		_client = new WebSocketClient(/* parameters */);
+		_client.ReconnectAttempts = reconnectAttempts;
+	}
 
-    public ValueTask Connect(CancellationToken cancellationToken)
-    {
-        // Connection logic
-    }
+	public ValueTask Connect(CancellationToken cancellationToken)
+	{
+		// Connection logic
+	}
 
-    public void Disconnect()
-    {
-        // Disconnection logic
-    }
+	public void Disconnect()
+	{
+		// Disconnection logic
+	}
 
-    public ValueTask SubscribeTicker(string symbol, CancellationToken cancellationToken)
-    {
-        // Ticker subscription logic
-    }
+	public ValueTask SubscribeTicker(string symbol, CancellationToken cancellationToken)
+	{
+		// Ticker subscription logic
+	}
 
-    public ValueTask UnSubscribeTicker(string symbol, CancellationToken cancellationToken)
-    {
-        // Ticker unsubscription logic
-    }
+	public ValueTask UnSubscribeTicker(string symbol, CancellationToken cancellationToken)
+	{
+		// Ticker unsubscription logic
+	}
 
-    // Similar methods for other types of subscriptions (trades, order book, etc.)
+	// Similar methods for other types of subscriptions (trades, order book, etc.)
 
-    private void OnProcess(dynamic obj)
-    {
-        // Processing incoming messages
-    }
+	private void OnProcess(dynamic obj)
+	{
+		// Processing incoming messages
+	}
 
-    // Helper methods
+	// Helper methods
 }
 ```
 

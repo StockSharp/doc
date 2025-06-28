@@ -32,11 +32,11 @@
 ```cs
 public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 {
-    private Authenticator _authenticator;
-    private HttpClient _restClient;
-    private SocketClient _socketClient;
+	private Authenticator _authenticator;
+	private HttpClient _restClient;
+	private SocketClient _socketClient;
 
-    // Другие поля и свойства адаптера
+	// Другие поля и свойства адаптера
 }
 ```
 
@@ -54,23 +54,23 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
-    : base(transactionIdGenerator)
+	: base(transactionIdGenerator)
 {
-    HeartbeatInterval = TimeSpan.FromSeconds(5);
+	HeartbeatInterval = TimeSpan.FromSeconds(5);
 
-    // Добавление поддержки рыночных данных и транзакций
-    this.AddMarketDataSupport();
-    this.AddTransactionalSupport();
+	// Добавление поддержки рыночных данных и транзакций
+	this.AddMarketDataSupport();
+	this.AddTransactionalSupport();
 
-    // Удаление неподдерживаемых типов сообщений
-    this.RemoveSupportedMessage(MessageTypes.Portfolio);
-    this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
+	// Удаление неподдерживаемых типов сообщений
+	this.RemoveSupportedMessage(MessageTypes.Portfolio);
+	this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
 
-    // Добавление поддерживаемых типов рыночных данных
-    this.AddSupportedMarketDataType(DataType.Ticks);
-    this.AddSupportedMarketDataType(DataType.MarketDepth);
-    this.AddSupportedMarketDataType(DataType.Level1);
-    this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
+	// Добавление поддерживаемых типов рыночных данных
+	this.AddSupportedMarketDataType(DataType.Ticks);
+	this.AddSupportedMarketDataType(DataType.MarketDepth);
+	this.AddSupportedMarketDataType(DataType.Level1);
+	this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
 }
 ```
 
@@ -81,38 +81,38 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
 {
-    // Проверка наличия ключей для транзакционного режима
-    if (this.IsTransactional())
-    {
-        if (Key.IsEmpty())
-            throw new InvalidOperationException(LocalizedStrings.KeyNotSpecified);
+	// Проверка наличия ключей для транзакционного режима
+	if (this.IsTransactional())
+	{
+		if (Key.IsEmpty())
+			throw new InvalidOperationException(LocalizedStrings.KeyNotSpecified);
 
-        if (Secret.IsEmpty())
-            throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
-    }
+		if (Secret.IsEmpty())
+			throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
+	}
 
-    // Инициализация аутентификатора
-    _authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
+	// Инициализация аутентификатора
+	_authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
 
-    // Проверка, что клиенты еще не созданы
-    if (_restClient != null)
-        throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
+	// Проверка, что клиенты еще не созданы
+	if (_restClient != null)
+		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-    if (_socketClient != null)
-        throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
+	if (_socketClient != null)
+		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-    // Создание REST клиента
-    _restClient = new(_authenticator) { Parent = this };
+	// Создание REST клиента
+	_restClient = new(_authenticator) { Parent = this };
 
-    // Создание и настройка WebSocket клиента
-    _socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
-    SubscribePusherClient();
+	// Создание и настройка WebSocket клиента
+	_socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
+	SubscribePusherClient();
 
-    // Подключение WebSocket клиента
-    await _socketClient.Connect(cancellationToken);
+	// Подключение WebSocket клиента
+	await _socketClient.Connect(cancellationToken);
 
-    // Отправка сообщения об успешном подключении
-    SendOutMessage(new ConnectMessage());
+	// Отправка сообщения об успешном подключении
+	SendOutMessage(new ConnectMessage());
 }
 ```
 
@@ -121,23 +121,23 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
 {
-    // Проверка, что клиенты созданы
-    if (_restClient == null)
-        throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
+	// Проверка, что клиенты созданы
+	if (_restClient == null)
+		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-    if (_socketClient == null)
-        throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
+	if (_socketClient == null)
+		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-    // Освобождение ресурсов REST клиента
-    _restClient.Dispose();
-    _restClient = null;
+	// Освобождение ресурсов REST клиента
+	_restClient.Dispose();
+	_restClient = null;
 
-    // Отключение WebSocket клиента
-    _socketClient.Disconnect();
+	// Отключение WebSocket клиента
+	_socketClient.Disconnect();
 
-    // Отправка сообщения об отключении
-    SendOutDisconnectMessage(true);
-    return default;
+	// Отправка сообщения об отключении
+	SendOutDisconnectMessage(true);
+	return default;
 }
 ```
 
@@ -146,58 +146,58 @@ public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, Cance
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)
 {
-    // Освобождение ресурсов REST клиента
-    if (_restClient != null)
-    {
-        try
-        {
-            _restClient.Dispose();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Освобождение ресурсов REST клиента
+	if (_restClient != null)
+	{
+		try
+		{
+			_restClient.Dispose();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _restClient = null;
-    }
+		_restClient = null;
+	}
 
-    // Отключение и очистка WebSocket клиента
-    if (_socketClient != null)
-    {
-        try
-        {
-            UnsubscribePusherClient();
-            _socketClient.Disconnect();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Отключение и очистка WebSocket клиента
+	if (_socketClient != null)
+	{
+		try
+		{
+			UnsubscribePusherClient();
+			_socketClient.Disconnect();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _socketClient = null;
-    }
+		_socketClient = null;
+	}
 
-    // Освобождение ресурсов аутентификатора
-    if (_authenticator != null)
-    {
-        try
-        {
-            _authenticator.Dispose();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Освобождение ресурсов аутентификатора
+	if (_authenticator != null)
+	{
+		try
+		{
+			_authenticator.Dispose();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _authenticator = null;
-    }
+		_authenticator = null;
+	}
 
-    // Очистка дополнительных данных
-    _candlesTransIds.Clear();
+	// Очистка дополнительных данных
+	_candlesTransIds.Clear();
 
-    // Отправка сообщения о сбросе
-    SendOutMessage(new ResetMessage());
-    return default;
+	// Отправка сообщения о сбросе
+	SendOutMessage(new ResetMessage());
+	return default;
 }
 ```
 

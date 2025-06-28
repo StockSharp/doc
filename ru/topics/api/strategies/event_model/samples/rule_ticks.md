@@ -24,26 +24,26 @@ public class SimpleTradeRulesStrategy : Strategy
 // Метод OnStarted
 protected override void OnStarted(DateTimeOffset time)
 {
-    var sub = new Subscription(DataType.Ticks, Security);
+	var sub = new Subscription(DataType.Ticks, Security);
 
-    sub.WhenTickTradeReceived(this).Do(t =>
-    {
-        sub
-            .WhenLastTradePriceMore(this, t.Price + 2)
-            .Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
-            .Do(t =>
-            {
-                LogInfo($"The rule WhenLastTradePriceMore Or WhenLastTradePriceLess tick={t}");
-            })
-            .Apply(this);
-    })
-    .Once() // call this rule only once
-    .Apply(this);
+	sub.WhenTickTradeReceived(this).Do(t =>
+	{
+		sub
+			.WhenLastTradePriceMore(this, t.Price + 2)
+			.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
+			.Do(t =>
+			{
+				LogInfo($"The rule WhenLastTradePriceMore Or WhenLastTradePriceLess tick={t}");
+			})
+			.Apply(this);
+	})
+	.Once() // call this rule only once
+	.Apply(this);
 
-    // Sending request for subscribe to market data.
-    Subscribe(sub);
+	// Sending request for subscribe to market data.
+	Subscribe(sub);
 
-    base.OnStarted(time);
+	base.OnStarted(time);
 }
 ```
 

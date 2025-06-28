@@ -22,11 +22,11 @@ The Balance Volume indicator calculation is based on comparing the closing price
 
 ```
 If Close > Previous Close:
-    BV = Previous BV + Volume
+	BV = Previous BV + Volume
 If Close < Previous Close:
-    BV = Previous BV - Volume
+	BV = Previous BV - Volume
 If Close = Previous Close:
-    BV = Previous BV
+	BV = Previous BV
 ```
 
 Where:

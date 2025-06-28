@@ -21,7 +21,7 @@ var pathHistory = Paths.HistoryDataPath; // путь к данным из NuGet 
 var localDrive = new LocalMarketDataDrive(pathHistory);
 var storageRegistry = new StorageRegistry()
 {
-    DefaultDrive = localDrive,
+	DefaultDrive = localDrive,
 };
 ```
 
@@ -43,7 +43,7 @@ var candles = candleStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4,
 
 foreach (var candle in candles)
 {
-    Console.WriteLine(candle);
+	Console.WriteLine(candle);
 }
 ```
 
@@ -54,7 +54,7 @@ var trades = tradeStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2
 
 foreach (var trade in trades)
 {
-    Console.WriteLine(trade);
+	Console.WriteLine(trade);
 }
 ```
 
@@ -65,7 +65,7 @@ var marketDepths = marketDepthStorage.Load(new DateTime(2020, 4, 1), new DateTim
 
 foreach (var marketDepth in marketDepths)
 {
-    Console.WriteLine(marketDepth);
+	Console.WriteLine(marketDepth);
 }
 ```
 
@@ -77,7 +77,7 @@ foreach (var marketDepth in marketDepths)
 // Сохранение новых свечей
 var newCandles = new List<CandleMessage>
 {
-    // Здесь создаются новые объекты CandleMessage
+	// Здесь создаются новые объекты CandleMessage
 };
 candleStorage.Save(newCandles);
 ```
@@ -86,7 +86,7 @@ candleStorage.Save(newCandles);
 // Сохранение новых тиков
 var newTrades = new List<ExecutionMessage>
 {
-    // Здесь создаются новые объекты ExecutionMessage для тиков
+	// Здесь создаются новые объекты ExecutionMessage для тиков
 };
 tradeStorage.Save(newTrades);
 ```
@@ -95,7 +95,7 @@ tradeStorage.Save(newTrades);
 // Сохранение новых стаканов
 var newMarketDepths = new List<QuoteChangeMessage>
 {
-    // Здесь создаются новые объекты QuoteChangeMessage для стаканов
+	// Здесь создаются новые объекты QuoteChangeMessage для стаканов
 };
 marketDepthStorage.Save(newMarketDepths);
 ```

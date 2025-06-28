@@ -13,10 +13,10 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	/// <summary>
 	/// Создать <see cref="SimpleMovingAverage"/>.
 	/// </summary>
-    public SimpleMovingAverage()
-    {
-    	Length = 32;
-    }
+	public SimpleMovingAverage()
+	{
+		Length = 32;
+	}
 	/// <summary>
 	/// Обработать входное значение.
 	/// </summary>
@@ -85,19 +85,19 @@ public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 /// <inheritdoc />
 public override void Save(SettingsStorage storage)
 {
-    base.Save(storage);
+	base.Save(storage);
 
-    storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-    storage.SetValue(nameof(LongPeriod), LongPeriod);
+	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+	storage.SetValue(nameof(LongPeriod), LongPeriod);
 }
 
 /// <inheritdoc />
 public override void Load(SettingsStorage storage)
 {
-    base.Load(storage);
+	base.Load(storage);
 
-    ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-    LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 }
 ```
 

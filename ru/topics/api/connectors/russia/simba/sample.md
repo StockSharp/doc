@@ -7,7 +7,7 @@ var connector = new Connector();
 ...
 var messageAdapter = new SimbaMessageAdapter(connector.TransactionIdGenerator)
 {
-    DialectType = DialectTypes.Spectra,
+	DialectType = DialectTypes.Spectra,
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...

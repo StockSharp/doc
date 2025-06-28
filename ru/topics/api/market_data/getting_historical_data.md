@@ -15,8 +15,8 @@ var connector = new Connector();
 // Добавляем адаптер для подключения к Binance
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-    Key = "<Your API Key>",
-    Secret = "<Your Secret Key>",
+	Key = "<Your API Key>",
+	Secret = "<Your Secret Key>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 
@@ -33,17 +33,17 @@ connector.Connect();
 ```cs
 // Создаем подписку на 5-минутные свечи для выбранного инструмента
 var subscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
+	security)
 {
-    MarketData =
-    {
-        // Указываем период, за который нужно получить исторические данные
-        From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Now,
-        // Устанавливаем флаг для получения только завершенных свечей
-        IsFinishedOnly = true
-    }
+	MarketData =
+	{
+		// Указываем период, за который нужно получить исторические данные
+		From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Now,
+		// Устанавливаем флаг для получения только завершенных свечей
+		IsFinishedOnly = true
+	}
 };
 
 // Подписываемся на событие получения свечей
@@ -55,15 +55,15 @@ connector.Subscribe(subscription);
 // Обработчик события получения свечей
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Проверяем, что свеча относится к нашей подписке
-    if (subscription != _subscription)
-        return;
-        
-    // Обрабатываем полученную свечу
-    Console.WriteLine($"Получена свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
-    
-    // Для отображения на графике можно использовать:
-    // Chart.Draw(_candleElement, candle);
+	// Проверяем, что свеча относится к нашей подписке
+	if (subscription != _subscription)
+		return;
+		
+	// Обрабатываем полученную свечу
+	Console.WriteLine($"Получена свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	
+	// Для отображения на графике можно использовать:
+	// Chart.Draw(_candleElement, candle);
 }
 ```
 
@@ -84,17 +84,17 @@ chart.AddElement(area, candleElement, subscription);
 // В обработчике события CandleReceived отрисовываем свечи
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Проверяем, что свеча относится к нашей подписке
-    if (subscription != _subscription)
-        return;
-        
-    // Если нужно отображать только завершенные свечи
-    if (candle.State == CandleStates.Finished)
-    {
-        var chartData = new ChartDrawData();
-        chartData.Group(candle.OpenTime).Add(candleElement, candle);
-        chart.Draw(chartData);
-    }
+	// Проверяем, что свеча относится к нашей подписке
+	if (subscription != _subscription)
+		return;
+		
+	// Если нужно отображать только завершенные свечи
+	if (candle.State == CandleStates.Finished)
+	{
+		var chartData = new ChartDrawData();
+		chartData.Group(candle.OpenTime).Add(candleElement, candle);
+		chart.Draw(chartData);
+	}
 }
 ```
 
@@ -107,17 +107,17 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 ```cs
 var tickSubscription = new Subscription(DataType.Ticks, security)
 {
-    MarketData =
-    {
-        From = DateTime.Now.Subtract(TimeSpan.FromDays(1)),
-        To = DateTime.Now
-    }
+	MarketData =
+	{
+		From = DateTime.Now.Subtract(TimeSpan.FromDays(1)),
+		To = DateTime.Now
+	}
 };
 
 connector.TickTradeReceived += (subscription, tick) =>
 {
-    if (subscription == tickSubscription)
-        Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
+	if (subscription == tickSubscription)
+		Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
 };
 
 connector.Subscribe(tickSubscription);
@@ -128,17 +128,17 @@ connector.Subscribe(tickSubscription);
 ```cs
 var depthSubscription = new Subscription(DataType.MarketDepth, security)
 {
-    MarketData =
-    {
-        From = DateTime.Now.Subtract(TimeSpan.FromHours(1)),
-        To = DateTime.Now
-    }
+	MarketData =
+	{
+		From = DateTime.Now.Subtract(TimeSpan.FromHours(1)),
+		To = DateTime.Now
+	}
 };
 
 connector.OrderBookReceived += (subscription, depth) =>
 {
-    if (subscription == depthSubscription)
-        Console.WriteLine($"Стакан: {depth.ServerTime}, Лучшая покупка: {depth.GetBestBid()?.Price}, Лучшая продажа: {depth.GetBestAsk()?.Price}");
+	if (subscription == depthSubscription)
+		Console.WriteLine($"Стакан: {depth.ServerTime}, Лучшая покупка: {depth.GetBestBid()?.Price}, Лучшая продажа: {depth.GetBestAsk()?.Price}");
 };
 
 connector.Subscribe(depthSubscription);

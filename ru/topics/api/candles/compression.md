@@ -53,27 +53,27 @@ var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderPr
 ```cs
 private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, DateTime? from, DateTime? to)
 {
-    // ... (код инициализации)
+	// ... (код инициализации)
 
-    switch (type)
-    {
-        case BuildTypes.Ticks:
-            return StorageRegistry
-                    .GetTickMessageStorage(securityId, Drive, StorageFormat)
-                    .Load(from, to)
-                    .ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
+	switch (type)
+	{
+		case BuildTypes.Ticks:
+			return StorageRegistry
+					.GetTickMessageStorage(securityId, Drive, StorageFormat)
+					.Load(from, to)
+					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
-        case BuildTypes.OrderLog:
-            // ... (код для построения свечей из лога заявок)
+		case BuildTypes.OrderLog:
+			// ... (код для построения свечей из лога заявок)
 
-        case BuildTypes.Depths:
-            return StorageRegistry
-                    .GetQuoteMessageStorage(securityId, Drive, StorageFormat)
-                    .Load(from, to)
-                    .ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
+		case BuildTypes.Depths:
+			return StorageRegistry
+					.GetQuoteMessageStorage(securityId, Drive, StorageFormat)
+					.Load(from, to)
+					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
-        // ... (другие случаи)
-    }
+		// ... (другие случаи)
+	}
 }
 
 // Этот метод демонстрирует различные способы построения свечей в зависимости от типа исходных данных.
@@ -90,24 +90,24 @@ API позволяет строить свечи не только из тико
 // Пример построения свечей из различных источников
 switch (type)
 {
-    case BuildTypes.Ticks:
-        // ... (код для тиков)
+	case BuildTypes.Ticks:
+		// ... (код для тиков)
 
-    case BuildTypes.OrderLog:
-        // ... (код для лога заявок)
+	case BuildTypes.OrderLog:
+		// ... (код для лога заявок)
 
-    case BuildTypes.Depths:
-        // ... (код для стаканов)
+	case BuildTypes.Depths:
+		// ... (код для стаканов)
 
-    case BuildTypes.Level1:
-        // ... (код для Level1)
+	case BuildTypes.Level1:
+		// ... (код для Level1)
 
-    case BuildTypes.SmallerTimeFrame:
-        return candleBuilderProvider
-                .GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
-                .Load(from, to);
+	case BuildTypes.SmallerTimeFrame:
+		return candleBuilderProvider
+				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
+				.Load(from, to);
 
-    // ... (другие случаи)
+	// ... (другие случаи)
 }
 
 // Этот код показывает, как можно строить свечи из различных источников данных:

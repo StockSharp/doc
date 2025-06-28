@@ -42,20 +42,20 @@ o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR 
 
 ```json
 [
-  {
-    "Name": "SMA_80",
-    "Value": "200,201"
-  },
-  {
-    "Name": "SMA_30",
-    "From": "40",
-    "To": "50",
-    "Step": "1"
-  },
-  {
-    "Name": "Security",
-    "Value": "SBER@TQBR,GAZP@TQBR"
-  }
+	{
+	"Name": "SMA_80",
+	"Value": "200,201"
+	},
+	{
+	"Name": "SMA_30",
+	"From": "40",
+	"To": "50",
+	"Step": "1"
+	},
+	{
+	"Name": "Security",
+	"Value": "SBER@TQBR,GAZP@TQBR"
+	}
 ]
 ```
 

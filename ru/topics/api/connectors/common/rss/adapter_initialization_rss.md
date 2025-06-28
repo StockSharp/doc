@@ -5,8 +5,8 @@
 ```cs
 var messageAdapter = new RssMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Address = new Uri("http://energy.rss"),
-    CustomDateFormat = "ddd, dd MMM yyyy HH:mm:ss zzzz"
+	Address = new Uri("http://energy.rss"),
+	CustomDateFormat = "ddd, dd MMM yyyy HH:mm:ss zzzz"
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

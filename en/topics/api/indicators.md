@@ -102,101 +102,101 @@ Below is an example of a strategy that correctly uses indicators, processing can
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _series;
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _series;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
 
-    private SimpleMovingAverage _longSma;
-    private SimpleMovingAverage _shortSma;
+	private SimpleMovingAverage _longSma;
+	private SimpleMovingAverage _shortSma;
 
-    private IChartIndicatorElement _longSmaIndicatorElement;
-    private IChartIndicatorElement _shortSmaIndicatorElement;
-    private IChartCandleElement _chartCandleElement;
-    private IChartTradeElement _tradesElem;
-    private IChart _chart;
+	private IChartIndicatorElement _longSmaIndicatorElement;
+	private IChartIndicatorElement _shortSmaIndicatorElement;
+	private IChartCandleElement _chartCandleElement;
+	private IChartTradeElement _tradesElem;
+	private IChart _chart;
 
-    public SmaStrategy()
-    {
-        base.Name = "SMA strategy";
+	public SmaStrategy()
+	{
+		base.Name = "SMA strategy";
 
-        // Initialize strategy parameters
-        _longSmaLength = Param(nameof(LongSmaLength), 80);
-        _shortSmaLength = Param(nameof(ShortSmaLength), 30);
-        _series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
-    }
+		// Initialize strategy parameters
+		_longSmaLength = Param(nameof(LongSmaLength), 80);
+		_shortSmaLength = Param(nameof(ShortSmaLength), 30);
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
+	}
 
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
 
-        // Create indicators
-        _shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
-        _longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
+		// Create indicators
+		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
+		_longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
 
-        // Add indicators to the strategy collection
-        Indicators.Add(_shortSma);
-        Indicators.Add(_longSma);
+		// Add indicators to the strategy collection
+		Indicators.Add(_shortSma);
+		Indicators.Add(_longSma);
 
-        // Initialize chart
-        _chart = GetChart();
-        if (_chart != null)
-        {
-            InitChart();
-        }
-        
-        // Subscribe to candles
-        var subscription = new Subscription(_series.Value, Security);
+		// Initialize chart
+		_chart = GetChart();
+		if (_chart != null)
+		{
+			InitChart();
+		}
+		
+		// Subscribe to candles
+		var subscription = new Subscription(_series.Value, Security);
 
-        Connector
-            .WhenCandlesFinished(subscription)
-            .Do(ProcessCandle)
-            .Apply(this);
+		Connector
+			.WhenCandlesFinished(subscription)
+			.Do(ProcessCandle)
+			.Apply(this);
 
-        Connector.Subscribe(subscription);
-    }
+		Connector.Subscribe(subscription);
+	}
 
-    private void ProcessCandle(ICandleMessage candle)
-    {
-        // Process the candle with indicators and save the results
-        var longValue = _longSma.Process(candle);
-        var shortValue = _shortSma.Process(candle);
-        
-        // Draw on the chart
-        DrawCandlesAndIndicators(candle, longValue, shortValue);
-        
-        // Check conditions for trading
-        if (!IsFormedAndOnlineAndAllowTrading()) 
-            return;
+	private void ProcessCandle(ICandleMessage candle)
+	{
+		// Process the candle with indicators and save the results
+		var longValue = _longSma.Process(candle);
+		var shortValue = _shortSma.Process(candle);
+		
+		// Draw on the chart
+		DrawCandlesAndIndicators(candle, longValue, shortValue);
+		
+		// Check conditions for trading
+		if (!IsFormedAndOnlineAndAllowTrading()) 
+			return;
 
-        // Compare current and previous indicator values
-        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
-        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
+		// Compare current and previous indicator values
+		var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
+		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
-        // Check for crossover
-        if (isShortLessCurrent == isShortLessPrev) 
-            return;
+		// Check for crossover
+		if (isShortLessCurrent == isShortLessPrev) 
+			return;
 
-        var volume = Volume + Math.Abs(Position);
+		var volume = Volume + Math.Abs(Position);
 
-        // Trading actions based on the signal
-        if (isShortLessCurrent)
-            SellMarket(volume);
-        else
-            BuyMarket(volume);
-    }
+		// Trading actions based on the signal
+		if (isShortLessCurrent)
+			SellMarket(volume);
+		else
+			BuyMarket(volume);
+	}
 
-    private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
-    {
-        if (_chart == null) return;
-        var data = _chart.CreateData();
-        data.Group(candle.OpenTime)
-            .Add(_chartCandleElement, candle)
-            .Add(_longSmaIndicatorElement, longSma)
-            .Add(_shortSmaIndicatorElement, shortSma);
-        _chart.Draw(data);
-    }
+	private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
+	{
+		if (_chart == null) return;
+		var data = _chart.CreateData();
+		data.Group(candle.OpenTime)
+			.Add(_chartCandleElement, candle)
+			.Add(_longSmaIndicatorElement, longSma)
+			.Add(_shortSmaIndicatorElement, shortSma);
+		_chart.Draw(data);
+	}
 
-    // Other chart initialization methods omitted for brevity
+	// Other chart initialization methods omitted for brevity
 }
 ```
 

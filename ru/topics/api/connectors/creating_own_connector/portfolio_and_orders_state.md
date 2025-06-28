@@ -17,44 +17,44 @@
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-    var transId = lookupMsg.TransactionId;
+	var transId = lookupMsg.TransactionId;
 
-    // Отправляем подтверждение о получении запроса
-    SendSubscriptionReply(transId);
+	// Отправляем подтверждение о получении запроса
+	SendSubscriptionReply(transId);
 
-    if (!lookupMsg.IsSubscribe)
-        return;
+	if (!lookupMsg.IsSubscribe)
+		return;
 
-    // Отправляем сообщение с информацией о портфеле
-    SendOutMessage(new PortfolioMessage
-    {
-        PortfolioName = PortfolioName,
-        BoardCode = BoardCodes.Coinbase,
-        OriginalTransactionId = transId,
-    });
+	// Отправляем сообщение с информацией о портфеле
+	SendOutMessage(new PortfolioMessage
+	{
+		PortfolioName = PortfolioName,
+		BoardCode = BoardCodes.Coinbase,
+		OriginalTransactionId = transId,
+	});
 
-    // Запрашиваем текущие балансы счетов
-    var accounts = await _restClient.GetAccounts(cancellationToken);
+	// Запрашиваем текущие балансы счетов
+	var accounts = await _restClient.GetAccounts(cancellationToken);
 
-    foreach (var account in accounts)
-    {
-        // Для каждого счета создаем и отправляем сообщение с информацией о позиции
-        SendOutMessage(new PositionChangeMessage
-        {
-            PortfolioName = PortfolioName,
-            SecurityId = new SecurityId
-            {
-                SecurityCode = account.Currency,
-                BoardCode = BoardCodes.Coinbase,
-            },
-            ServerTime = CurrentTime.ConvertToUtc(),
-        }
-        .TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
-        .TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
-    }
+	foreach (var account in accounts)
+	{
+		// Для каждого счета создаем и отправляем сообщение с информацией о позиции
+		SendOutMessage(new PositionChangeMessage
+		{
+			PortfolioName = PortfolioName,
+			SecurityId = new SecurityId
+			{
+				SecurityCode = account.Currency,
+				BoardCode = BoardCodes.Coinbase,
+			},
+			ServerTime = CurrentTime.ConvertToUtc(),
+		}
+		.TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
+		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
+	}
 
-    // Отправляем сообщение об успешном завершении подписки
-    SendSubscriptionResult(lookupMsg);
+	// Отправляем сообщение об успешном завершении подписки
+	SendSubscriptionResult(lookupMsg);
 }
 ```
 
@@ -73,54 +73,54 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса
-    SendSubscriptionReply(statusMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса
+	SendSubscriptionReply(statusMsg.TransactionId);
 
-    if (!statusMsg.IsSubscribe)
-        return;
+	if (!statusMsg.IsSubscribe)
+		return;
 
-    // Запрашиваем список текущих заявок
-    var orders = await _restClient.GetOrders(cancellationToken);
+	// Запрашиваем список текущих заявок
+	var orders = await _restClient.GetOrders(cancellationToken);
 
-    foreach (var order in orders)
-        ProcessOrder(order, statusMsg.TransactionId);
+	foreach (var order in orders)
+		ProcessOrder(order, statusMsg.TransactionId);
 
-    if (!statusMsg.IsHistoryOnly())
-    {
-        // Устанавливаем подписку на получение обновлений по заявкам в реальном времени
-        await _socketClient.SubscribeOrders(cancellationToken);
-    }
+	if (!statusMsg.IsHistoryOnly())
+	{
+		// Устанавливаем подписку на получение обновлений по заявкам в реальном времени
+		await _socketClient.SubscribeOrders(cancellationToken);
+	}
 
-    // Отправляем сообщение об успешном завершении подписки
-    SendSubscriptionResult(statusMsg);
+	// Отправляем сообщение об успешном завершении подписки
+	SendSubscriptionResult(statusMsg);
 }
 
 private void ProcessOrder(Order order, long originTransId)
 {
-    if (!long.TryParse(order.ClientOrderId, out var transId))
-        return;
+	if (!long.TryParse(order.ClientOrderId, out var transId))
+		return;
 
-    var state = order.Status.ToOrderState();
+	var state = order.Status.ToOrderState();
 
-    // Создаем и отправляем сообщение с информацией о заявке
-    SendOutMessage(new ExecutionMessage
-    {
-        ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
-        DataTypeEx = DataType.Transactions,
-        SecurityId = order.Product.ToStockSharp(),
-        TransactionId = originTransId == 0 ? 0 : transId,
-        OriginalTransactionId = originTransId,
-        OrderState = state,
-        Error = state == OrderStates.Failed ? new InvalidOperationException() : null,
-        OrderType = order.Type.ToOrderType(),
-        Side = order.Side.ToSide(),
-        OrderStringId = order.Id,
-        OrderPrice = order.Price?.ToDecimal() ?? 0,
-        OrderVolume = order.Size?.ToDecimal(),
-        TimeInForce = order.TimeInForce.ToTimeInForce(),
-        Balance = (decimal?)order.LeavesQuantity,
-        HasOrderInfo = true,
-    });
+	// Создаем и отправляем сообщение с информацией о заявке
+	SendOutMessage(new ExecutionMessage
+	{
+		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
+		DataTypeEx = DataType.Transactions,
+		SecurityId = order.Product.ToStockSharp(),
+		TransactionId = originTransId == 0 ? 0 : transId,
+		OriginalTransactionId = originTransId,
+		OrderState = state,
+		Error = state == OrderStates.Failed ? new InvalidOperationException() : null,
+		OrderType = order.Type.ToOrderType(),
+		Side = order.Side.ToSide(),
+		OrderStringId = order.Id,
+		OrderPrice = order.Price?.ToDecimal() ?? 0,
+		OrderVolume = order.Size?.ToDecimal(),
+		TimeInForce = order.TimeInForce.ToTimeInForce(),
+		Balance = (decimal?)order.LeavesQuantity,
+		HasOrderInfo = true,
+	});
 }
 ```
 
@@ -131,8 +131,8 @@ private void ProcessOrder(Order order, long originTransId)
 ```cs
 private void SessionOnOrderReceived(Order order)
 {
-    // Обрабатываем полученное обновление по заявке
-    // OriginTransId = 0, так как это обновление в реальном времени, а не ответ на конкретный запрос
-    ProcessOrder(order, 0);
+	// Обрабатываем полученное обновление по заявке
+	// OriginTransId = 0, так как это обновление в реальном времени, а не ответ на конкретный запрос
+	ProcessOrder(order, 0);
 }
 ```

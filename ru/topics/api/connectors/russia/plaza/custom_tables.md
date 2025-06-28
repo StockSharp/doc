@@ -27,11 +27,11 @@ void OnStreamInserted(PlazaStream stream, PlazaTable table, PlazaRecord record)
 	if (table != messageAdapter.TableRegistry.MarketMakingFuture)
 		return;
 		
-    //Метадата для колонок таблицы обязательств ММ по фьючерсам
-    var metadata = messageAdapter.TableRegistry.ColumnRegistry.MarketMakingFutureParams;
-    //Получение текущего процента выполнения обязательств
-    var percentTime = record.Get<decimal>(metadata.PercentTime);
-    Console.WriteLine("Текущий процент выполнения обязательств: {0}".Put(percentTime));
+	//Метадата для колонок таблицы обязательств ММ по фьючерсам
+	var metadata = messageAdapter.TableRegistry.ColumnRegistry.MarketMakingFutureParams;
+	//Получение текущего процента выполнения обязательств
+	var percentTime = record.Get<decimal>(metadata.PercentTime);
+	Console.WriteLine("Текущий процент выполнения обязательств: {0}".Put(percentTime));
 }
 ```
 

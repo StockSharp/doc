@@ -49,27 +49,27 @@ When compressing data, the following parameters can be specified:
 ```cs
 private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, DateTime? from, DateTime? to)
 {
-    // ... (initialization code)
+	// ... (initialization code)
 
-    switch (type)
-    {
-        case BuildTypes.Ticks:
-            return StorageRegistry
-                    .GetTickMessageStorage(securityId, Drive, StorageFormat)
-                    .Load(from, to)
-                    .ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
+	switch (type)
+	{
+		case BuildTypes.Ticks:
+			return StorageRegistry
+					.GetTickMessageStorage(securityId, Drive, StorageFormat)
+					.Load(from, to)
+					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
-        case BuildTypes.OrderLog:
-            // ... (code for building candles from order log)
+		case BuildTypes.OrderLog:
+			// ... (code for building candles from order log)
 
-        case BuildTypes.Depths:
-            return StorageRegistry
-                    .GetQuoteMessageStorage(securityId, Drive, StorageFormat)
-                    .Load(from, to)
-                    .ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
+		case BuildTypes.Depths:
+			return StorageRegistry
+					.GetQuoteMessageStorage(securityId, Drive, StorageFormat)
+					.Load(from, to)
+					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
-        // ... (other cases)
-    }
+		// ... (other cases)
+	}
 }
 
 // This method demonstrates various ways to build candles depending on the type of source data.
@@ -86,24 +86,24 @@ The API allows building candles not only from ticks and spreads but also from ot
 // Example of building candles from various sources
 switch (type)
 {
-    case BuildTypes.Ticks:
-        // ... (code for ticks)
+	case BuildTypes.Ticks:
+		// ... (code for ticks)
 
-    case BuildTypes.OrderLog:
-        // ... (code for order log)
+	case BuildTypes.OrderLog:
+		// ... (code for order log)
 
-    case BuildTypes.Depths:
-        // ... (code for spreads)
+	case BuildTypes.Depths:
+		// ... (code for spreads)
 
-    case BuildTypes.Level1:
-        // ... (code for Level1)
+	case BuildTypes.Level1:
+		// ... (code for Level1)
 
-    case BuildTypes.SmallerTimeFrame:
-        return candleBuilderProvider
-                .GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
-                .Load(from, to);
+	case BuildTypes.SmallerTimeFrame:
+		return candleBuilderProvider
+				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
+				.Load(from, to);
 
-    // ... (other cases)
+	// ... (other cases)
 }
 
 // This code shows how to build candles from different data sources: ticks, order log, spreads, Level1 data, and even from smaller time frame candles.

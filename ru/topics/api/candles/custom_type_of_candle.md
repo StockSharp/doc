@@ -224,136 +224,136 @@
 ```cs
 public class DeltaCandleStrategy : Strategy
 {
-    private readonly StrategyParam<decimal> _deltaThreshold;
-    private readonly StrategyParam<decimal> _volume;
-    private readonly StrategyParam<decimal> _signalDelta;
+	private readonly StrategyParam<decimal> _deltaThreshold;
+	private readonly StrategyParam<decimal> _volume;
+	private readonly StrategyParam<decimal> _signalDelta;
 
-    private IChart _chart;
-    private IChartCandleElement _chartCandleElement;
-    private IChartIndicatorElement _deltaIndicatorElement;
+	private IChart _chart;
+	private IChartCandleElement _chartCandleElement;
+	private IChartIndicatorElement _deltaIndicatorElement;
 
-    public decimal DeltaThreshold
-    {
-        get => _deltaThreshold.Value;
-        set => _deltaThreshold.Value = value;
-    }
+	public decimal DeltaThreshold
+	{
+		get => _deltaThreshold.Value;
+		set => _deltaThreshold.Value = value;
+	}
 
-    public decimal Volume
-    {
-        get => _volume.Value;
-        set => _volume.Value = value;
-    }
+	public decimal Volume
+	{
+		get => _volume.Value;
+		set => _volume.Value = value;
+	}
 
-    public decimal SignalDelta
-    {
-        get => _signalDelta.Value;
-        set => _signalDelta.Value = value;
-    }
+	public decimal SignalDelta
+	{
+		get => _signalDelta.Value;
+		set => _signalDelta.Value = value;
+	}
 
-    public DeltaCandleStrategy()
-    {
-        // Параметры стратегии
-        _deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
-            .SetDisplay("Пороговое значение дельты", "Значение дельты объема для формирования свечи", "Основные настройки")
-            .SetGreaterThanZero()
-            .SetCanOptimize(true)
-            .SetOptimize(500m, 2000m, 100m);
+	public DeltaCandleStrategy()
+	{
+		// Параметры стратегии
+		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
+			.SetDisplay("Пороговое значение дельты", "Значение дельты объема для формирования свечи", "Основные настройки")
+			.SetGreaterThanZero()
+			.SetCanOptimize(true)
+			.SetOptimize(500m, 2000m, 100m);
 
-        _volume = Param(nameof(Volume), 1m)
-            .SetDisplay("Объем заявки", "Объем для торговых операций", "Основные настройки")
-            .SetGreaterThanZero();
+		_volume = Param(nameof(Volume), 1m)
+			.SetDisplay("Объем заявки", "Объем для торговых операций", "Основные настройки")
+			.SetGreaterThanZero();
 
-        _signalDelta = Param(nameof(SignalDelta), 500m)
-            .SetDisplay("Минимальная дельта для сигнала", "Минимальное значение дельты для генерации сигнала", "Основные настройки")
-            .SetGreaterThanZero()
-            .SetCanOptimize(true);
+		_signalDelta = Param(nameof(SignalDelta), 500m)
+			.SetDisplay("Минимальная дельта для сигнала", "Минимальное значение дельты для генерации сигнала", "Основные настройки")
+			.SetGreaterThanZero()
+			.SetCanOptimize(true);
 
-        Name = "DeltaCandleStrategy";
-    }
+		Name = "DeltaCandleStrategy";
+	}
 
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
 
-        // Инициализация графика, если он доступен
-        _chart = GetChart();
-        if (_chart != null)
-        {
-            var area = _chart.AddArea();
-            _chartCandleElement = area.AddCandles();
-            _deltaIndicatorElement = area.AddIndicator();
-            _deltaIndicatorElement.DrawStyle = DrawStyles.Histogram;
-            _deltaIndicatorElement.Color = System.Drawing.Color.Purple;
-        }
+		// Инициализация графика, если он доступен
+		_chart = GetChart();
+		if (_chart != null)
+		{
+			var area = _chart.AddArea();
+			_chartCandleElement = area.AddCandles();
+			_deltaIndicatorElement = area.AddIndicator();
+			_deltaIndicatorElement.DrawStyle = DrawStyles.Histogram;
+			_deltaIndicatorElement.Color = System.Drawing.Color.Purple;
+		}
 
-        // Создаем подписку на дельта-свечи
-        var subscription = new Subscription(DeltaThreshold.Delta(), Security)
-        {
-            MarketData =
-            {
-                BuildMode = MarketDataBuildModes.Build,
-                BuildFrom = DataType.Ticks
-            }
-        };
+		// Создаем подписку на дельта-свечи
+		var subscription = new Subscription(DeltaThreshold.Delta(), Security)
+		{
+			MarketData =
+			{
+				BuildMode = MarketDataBuildModes.Build,
+				BuildFrom = DataType.Ticks
+			}
+		};
 
-        // Создаем правило для обработки дельта-свечей
-        this
-            .WhenCandleReceived(subscription)
-            .Do(ProcessDeltaCandle)
-            .Apply(this);
+		// Создаем правило для обработки дельта-свечей
+		this
+			.WhenCandleReceived(subscription)
+			.Do(ProcessDeltaCandle)
+			.Apply(this);
 
-        // Запускаем подписку
-        Subscribe(subscription);
-    }
+		// Запускаем подписку
+		Subscribe(subscription);
+	}
 
-    private void ProcessDeltaCandle(ICandleMessage candle)
-    {
-        // Отрисовка на графике, если он доступен
-        if (_chart != null)
-        {
-            var deltaCandle = (DeltaCandleMessage)candle;
-            
-            var data = _chart.CreateData();
-            data.Group(candle.OpenTime)
-                .Add(_chartCandleElement, candle)
-                .Add(_deltaIndicatorElement, deltaCandle.CurrentDelta);
-                
-            _chart.Draw(data);
-        }
+	private void ProcessDeltaCandle(ICandleMessage candle)
+	{
+		// Отрисовка на графике, если он доступен
+		if (_chart != null)
+		{
+			var deltaCandle = (DeltaCandleMessage)candle;
+			
+			var data = _chart.CreateData();
+			data.Group(candle.OpenTime)
+				.Add(_chartCandleElement, candle)
+				.Add(_deltaIndicatorElement, deltaCandle.CurrentDelta);
+				
+			_chart.Draw(data);
+		}
 
-        // Обрабатываем только завершенные свечи
-        if (candle.State != CandleStates.Finished)
-            return;
-            
-        var deltaCandle = (DeltaCandleMessage)candle;
-        
-        // Проверяем, достаточно ли дельта для сигнала
-        if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
-        {
-            this.AddInfoLog($"Дельта {deltaCandle.CurrentDelta} меньше порогового значения {SignalDelta}. Сигнал не генерируется.");
-            return;
-        }
+		// Обрабатываем только завершенные свечи
+		if (candle.State != CandleStates.Finished)
+			return;
+			
+		var deltaCandle = (DeltaCandleMessage)candle;
+		
+		// Проверяем, достаточно ли дельта для сигнала
+		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
+		{
+			this.AddInfoLog($"Дельта {deltaCandle.CurrentDelta} меньше порогового значения {SignalDelta}. Сигнал не генерируется.");
+			return;
+		}
 
-        // Направление операции зависит от знака дельты
-        var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
-        
-        this.AddInfoLog($"Дельта-свеча завершена. Дельта: {deltaCandle.CurrentDelta}. Направление: {direction}");
-        
-        // Для определения цены используем цену закрытия свечи
-        var price = deltaCandle.ClosePrice;
-        var volume = Volume;
-        
-        // Если у нас уже есть позиция в противоположном направлении, 
-        // увеличиваем объем для закрытия существующей позиции
-        if ((Position < 0 && direction == Sides.Buy) || 
-            (Position > 0 && direction == Sides.Sell))
-        {
-            volume = Math.Max(volume, Math.Abs(Position) + volume);
-        }
-        
-        // Регистрируем заявку
-        RegisterOrder(this.CreateOrder(direction, price, volume));
-    }
+		// Направление операции зависит от знака дельты
+		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
+		
+		this.AddInfoLog($"Дельта-свеча завершена. Дельта: {deltaCandle.CurrentDelta}. Направление: {direction}");
+		
+		// Для определения цены используем цену закрытия свечи
+		var price = deltaCandle.ClosePrice;
+		var volume = Volume;
+		
+		// Если у нас уже есть позиция в противоположном направлении, 
+		// увеличиваем объем для закрытия существующей позиции
+		if ((Position < 0 && direction == Sides.Buy) || 
+			(Position > 0 && direction == Sides.Sell))
+		{
+			volume = Math.Max(volume, Math.Abs(Position) + volume);
+		}
+		
+		// Регистрируем заявку
+		RegisterOrder(this.CreateOrder(direction, price, volume));
+	}
 }
 ```
 

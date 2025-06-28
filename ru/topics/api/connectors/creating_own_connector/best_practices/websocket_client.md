@@ -34,54 +34,54 @@
 ```cs
 class SocketClient : BaseLogReceiver
 {
-    private readonly WebSocketClient _client;
-    private readonly Authenticator _authenticator;
+	private readonly WebSocketClient _client;
+	private readonly Authenticator _authenticator;
 
-    // События для различных типов данных
-    public event Action<Heartbeat> HeartbeatReceived;
-    public event Action<Ticker> TickerReceived;
-    public event Action<Trade> TradeReceived;
-    public event Action<string, string, IEnumerable<OrderBookChange>> OrderBookReceived;
-    public event Action<Order> OrderReceived;
-    public event Action<Exception> Error;
-    public event Action Connected;
-    public event Action<bool> Disconnected;
+	// События для различных типов данных
+	public event Action<Heartbeat> HeartbeatReceived;
+	public event Action<Ticker> TickerReceived;
+	public event Action<Trade> TradeReceived;
+	public event Action<string, string, IEnumerable<OrderBookChange>> OrderBookReceived;
+	public event Action<Order> OrderReceived;
+	public event Action<Exception> Error;
+	public event Action Connected;
+	public event Action<bool> Disconnected;
 
-    public SocketClient(Authenticator authenticator, int reconnectAttempts)
-    {
-        _authenticator = authenticator;
-        _client = new WebSocketClient(/* параметры */);
-        _client.ReconnectAttempts = reconnectAttempts;
-    }
+	public SocketClient(Authenticator authenticator, int reconnectAttempts)
+	{
+		_authenticator = authenticator;
+		_client = new WebSocketClient(/* параметры */);
+		_client.ReconnectAttempts = reconnectAttempts;
+	}
 
-    public ValueTask Connect(CancellationToken cancellationToken)
-    {
-        // Логика подключения
-    }
+	public ValueTask Connect(CancellationToken cancellationToken)
+	{
+		// Логика подключения
+	}
 
-    public void Disconnect()
-    {
-        // Логика отключения
-    }
+	public void Disconnect()
+	{
+		// Логика отключения
+	}
 
-    public ValueTask SubscribeTicker(string symbol, CancellationToken cancellationToken)
-    {
-        // Логика подписки на тикеры
-    }
+	public ValueTask SubscribeTicker(string symbol, CancellationToken cancellationToken)
+	{
+		// Логика подписки на тикеры
+	}
 
-    public ValueTask UnSubscribeTicker(string symbol, CancellationToken cancellationToken)
-    {
-        // Логика отписки от тикеров
-    }
+	public ValueTask UnSubscribeTicker(string symbol, CancellationToken cancellationToken)
+	{
+		// Логика отписки от тикеров
+	}
 
-    // Аналогичные методы для других типов подписок (сделки, стакан и т.д.)
+	// Аналогичные методы для других типов подписок (сделки, стакан и т.д.)
 
-    private void OnProcess(dynamic obj)
-    {
-        // Обработка входящих сообщений
-    }
+	private void OnProcess(dynamic obj)
+	{
+		// Обработка входящих сообщений
+	}
 
-    // Вспомогательные методы
+	// Вспомогательные методы
 }
 ```
 

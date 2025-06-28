@@ -30,25 +30,25 @@ When opening a new position or modifying an existing one, the protective control
 ```cs
 // Initialization of the protective controller for a new position
 this.WhenNewMyTrade()
-    .Do(t =>
-    {
-        // ... (other code)
+	.Do(t =>
+	{
+		// ... (other code)
 
-        if (TakeValue.IsSet() || StopValue.IsSet())
-        {
-            _posController ??= _protectiveController.GetController(
-                security.ToSecurityId(),
-                portfolio.Name,
-                new LocalProtectiveBehaviourFactory(security.PriceStep, security.Decimals),
-                TakeValue, StopValue, true, default, default, true);
-        }
+		if (TakeValue.IsSet() || StopValue.IsSet())
+		{
+			_posController ??= _protectiveController.GetController(
+				security.ToSecurityId(),
+				portfolio.Name,
+				new LocalProtectiveBehaviourFactory(security.PriceStep, security.Decimals),
+				TakeValue, StopValue, true, default, default, true);
+		}
 
-        var info = _posController?.Update(t.Trade.Price, t.GetPosition());
+		var info = _posController?.Update(t.Trade.Price, t.GetPosition());
 
-        if (info is not null)
-            ActiveProtection(info.Value);
-    })
-    .Apply(this);
+		if (info is not null)
+			ActiveProtection(info.Value);
+	})
+	.Apply(this);
 
 // This code creates and initializes a protective controller for a new position
 // upon receiving information about a new trade. It also updates the information
@@ -63,7 +63,7 @@ This creates a controller for a specific position with given take-profit and sto
 var info = _posController?.Update(t.Trade.Price, t.GetPosition());
 
 if (info is not null)
-   ActiveProtection(info.Value);
+	ActiveProtection(info.Value);
 ```
 
 This allows the controller to track the current state of the position and adjust protective orders as necessary.
@@ -77,7 +77,7 @@ In the method processing new data (e.g., when receiving a new candle), the condi
 var info = _posController?.TryActivate(candle.ClosePrice, CurrentTime);
 
 if (info is not null)
-    ActiveProtection(info.Value);
+	ActiveProtection(info.Value);
 
 // This code checks if a protective order needs to be activated based on
 // the current price (in this case, the candle's closing price) and time.
@@ -94,8 +94,8 @@ If the conditions for activating a protective order are met, the corresponding l
 // Method for activating a protective order
 private void ActiveProtection((bool isTake, Sides side, decimal price, decimal volume, OrderCondition condition) info)
 {
-    // sending a protective (position-closing) order as a regular order
-    RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
+	// sending a protective (position-closing) order as a regular order
+	RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
 }
 
 // This method creates and registers an order to close the position

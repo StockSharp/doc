@@ -157,57 +157,57 @@
 ```cs
 private void SetupAutoDrawingChart()
 {
-    var security = SelectedSecurity;
-    
-    // Создаем элементы графика
-    var candleElement = new ChartCandleElement();
-    var smaElement = new ChartIndicatorElement { Title = "SMA" };
-    
-    // Создаем области графика
-    var area = new ChartArea();
-    
-    // Добавляем область к графику
-    Chart.Areas.Add(area);
-    
-    // Создаем подписку на свечи
-    var subscription = new Subscription(
-        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-        security)
-    {
-        MarketData = 
-        {
-            From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-            To = DateTime.Now
-        }
-    };
-    
-    // Привязываем элементы к области графика и подписке
-    Chart.AddElement(area, candleElement, subscription);
-    Chart.AddElement(area, smaElement, subscription);
-    
-    // Создаем индикатор
-    var sma = new SimpleMovingAverage { Length = 14 };
-    
-    // Подписываемся на событие получения свечей для обработки индикатором
-    _connector.CandleReceived += (sub, candle) => 
-    {
-        if (sub == subscription && candle.State == CandleStates.Finished)
-        {
-            // Обрабатываем свечу индикатором и получаем значение
-            var smaValue = sma.Process(candle);
-            
-            // Отрисовываем значение индикатора
-            var data = new ChartDrawData();
-            data
-                .Group(candle.OpenTime)
-                    .Add(smaElement, smaValue);
-            
-            this.GuiAsync(() => Chart.Draw(data));
-        }
-    };
-    
-    // Запускаем подписку
-    _connector.Subscribe(subscription);
+	var security = SelectedSecurity;
+	
+	// Создаем элементы графика
+	var candleElement = new ChartCandleElement();
+	var smaElement = new ChartIndicatorElement { Title = "SMA" };
+	
+	// Создаем области графика
+	var area = new ChartArea();
+	
+	// Добавляем область к графику
+	Chart.Areas.Add(area);
+	
+	// Создаем подписку на свечи
+	var subscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		security)
+	{
+		MarketData = 
+		{
+			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+			To = DateTime.Now
+		}
+	};
+	
+	// Привязываем элементы к области графика и подписке
+	Chart.AddElement(area, candleElement, subscription);
+	Chart.AddElement(area, smaElement, subscription);
+	
+	// Создаем индикатор
+	var sma = new SimpleMovingAverage { Length = 14 };
+	
+	// Подписываемся на событие получения свечей для обработки индикатором
+	_connector.CandleReceived += (sub, candle) => 
+	{
+		if (sub == subscription && candle.State == CandleStates.Finished)
+		{
+			// Обрабатываем свечу индикатором и получаем значение
+			var smaValue = sma.Process(candle);
+			
+			// Отрисовываем значение индикатора
+			var data = new ChartDrawData();
+			data
+				.Group(candle.OpenTime)
+					.Add(smaElement, smaValue);
+			
+			this.GuiAsync(() => Chart.Draw(data));
+		}
+	};
+	
+	// Запускаем подписку
+	_connector.Subscribe(subscription);
 }
 ```
 
@@ -227,26 +227,26 @@ _candlesArea.Elements.Add(tradeElement);
 // Подписываемся на события получения заявок и сделок
 _connector.OrderReceived += (sub, order) => 
 {
-    if (order.Security != _security)
-        return;
-    
-    // Отрисовываем заявку на графике
-    var data = new ChartDrawData();
-    data.Group(order.Time).Add(orderElement, order);
-    
-    this.GuiAsync(() => Chart.Draw(data));
+	if (order.Security != _security)
+		return;
+	
+	// Отрисовываем заявку на графике
+	var data = new ChartDrawData();
+	data.Group(order.Time).Add(orderElement, order);
+	
+	this.GuiAsync(() => Chart.Draw(data));
 };
 
 _connector.OwnTradeReceived += (sub, trade) => 
 {
-    if (trade.Order.Security != _security)
-        return;
-    
-    // Отрисовываем сделку на графике
-    var data = new ChartDrawData();
-    data.Group(trade.Time).Add(tradeElement, trade);
-    
-    this.GuiAsync(() => Chart.Draw(data));
+	if (trade.Order.Security != _security)
+		return;
+	
+	// Отрисовываем сделку на графике
+	var data = new ChartDrawData();
+	data.Group(trade.Time).Add(tradeElement, trade);
+	
+	this.GuiAsync(() => Chart.Draw(data));
 };
 ```
 

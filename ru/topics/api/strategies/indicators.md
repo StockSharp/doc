@@ -29,17 +29,17 @@ public virtual bool IsFormed => _indicators.AllFormed;
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Создание индикаторов
-    _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-    _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    
-    // Добавление индикаторов в коллекцию
-    Indicators.Add(_shortSma);
-    Indicators.Add(_longSma);
-    
-    // ...
+	// Создание индикаторов
+	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	
+	// Добавление индикаторов в коллекцию
+	Indicators.Add(_shortSma);
+	Indicators.Add(_longSma);
+	
+	// ...
 }
 ```
 
@@ -104,38 +104,38 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 public class SmaStrategy : Strategy
 {
-    private SimpleMovingAverage _longSma;
-    private SimpleMovingAverage _shortSma;
-    
-    // ...
-    
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
-        
-        _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-        _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-        
-        // Добавляем индикаторы в коллекцию для отслеживания их состояния
-        Indicators.Add(_longSma);
-        Indicators.Add(_shortSma);
-        
-        // ...
-    }
-    
-    private void ProcessCandle(ICandleMessage candle)
-    {
-        // Обрабатываем индикаторы
-        var longValue = _longSma.Process(candle);
-        var shortValue = _shortSma.Process(candle);
-        
-        // Проверяем готовность стратегии перед выполнением торговой логики
-        if (!IsFormed)
-            return;
-            
-        // Торговая логика
-        // ...
-    }
+	private SimpleMovingAverage _longSma;
+	private SimpleMovingAverage _shortSma;
+	
+	// ...
+	
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
+		
+		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+		
+		// Добавляем индикаторы в коллекцию для отслеживания их состояния
+		Indicators.Add(_longSma);
+		Indicators.Add(_shortSma);
+		
+		// ...
+	}
+	
+	private void ProcessCandle(ICandleMessage candle)
+	{
+		// Обрабатываем индикаторы
+		var longValue = _longSma.Process(candle);
+		var shortValue = _shortSma.Process(candle);
+		
+		// Проверяем готовность стратегии перед выполнением торговой логики
+		if (!IsFormed)
+			return;
+			
+		// Торговая логика
+		// ...
+	}
 }
 ```
 
@@ -146,16 +146,16 @@ public class SmaStrategy : Strategy
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Обработка индикаторов
-    var longValue = _longSma.Process(candle);
-    var shortValue = _shortSma.Process(candle);
-    
-    // Комплексная проверка готовности стратегии
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
-        
-    // Торговая логика
-    // ...
+	// Обработка индикаторов
+	var longValue = _longSma.Process(candle);
+	var shortValue = _shortSma.Process(candle);
+	
+	// Комплексная проверка готовности стратегии
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
+		
+	// Торговая логика
+	// ...
 }
 ```
 
@@ -166,35 +166,35 @@ private void ProcessCandle(ICandleMessage candle)
 ```cs
 public class ComplexStrategy : Strategy
 {
-    private SimpleMovingAverage _sma;
-    private RelativeStrengthIndex _rsi;
-    private BollingerBands _bollinger;
-    private StandardDeviation _stdev;
-    
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
-        
-        // Создаем индикаторы
-        _sma = new SimpleMovingAverage { Length = 20 };
-        _rsi = new RelativeStrengthIndex { Length = 14 };
-        
-        _stdev = new StandardDeviation { Length = 20 };
-        _bollinger = new BollingerBands 
-        { 
-            SmaIndicator = _sma,
-            DeviationIndicator = _stdev 
-        };
-        
-        // Добавляем только независимые индикаторы
-        Indicators.Add(_sma);
-        Indicators.Add(_rsi);
-        // Не добавляем _stdev и _bollinger, так как они зависят от _sma
-        
-        // ...
-    }
-    
-    // ...
+	private SimpleMovingAverage _sma;
+	private RelativeStrengthIndex _rsi;
+	private BollingerBands _bollinger;
+	private StandardDeviation _stdev;
+	
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
+		
+		// Создаем индикаторы
+		_sma = new SimpleMovingAverage { Length = 20 };
+		_rsi = new RelativeStrengthIndex { Length = 14 };
+		
+		_stdev = new StandardDeviation { Length = 20 };
+		_bollinger = new BollingerBands 
+		{ 
+			SmaIndicator = _sma,
+			DeviationIndicator = _stdev 
+		};
+		
+		// Добавляем только независимые индикаторы
+		Indicators.Add(_sma);
+		Indicators.Add(_rsi);
+		// Не добавляем _stdev и _bollinger, так как они зависят от _sma
+		
+		// ...
+	}
+	
+	// ...
 }
 ```
 
@@ -205,15 +205,15 @@ public class ComplexStrategy : Strategy
 ```cs
 public override bool IsFormed
 {
-    get
-    {
-        // Стандартная проверка индикаторов
-        if (!base.IsFormed)
-            return false;
-            
-        // Дополнительные условия готовности стратегии
-        return _customCondition && _additionalCheck;
-    }
+	get
+	{
+		// Стандартная проверка индикаторов
+		if (!base.IsFormed)
+			return false;
+			
+		// Дополнительные условия готовности стратегии
+		return _customCondition && _additionalCheck;
+	}
 }
 ```
 

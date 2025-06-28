@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-    Console.WriteLine($"Лучшая цена покупки: {bestBid.Price}");
+	Console.WriteLine($"Лучшая цена покупки: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-    Console.WriteLine($"Лучшая цена продажи: {bestAsk.Price}");
+	Console.WriteLine($"Лучшая цена продажи: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-    Console.WriteLine($"Лучшая цена покупки: {bestBid.Price}, объем: {bestBid.Volume}");
+	Console.WriteLine($"Лучшая цена покупки: {bestBid.Price}, объем: {bestBid.Volume}");
 }
 else
 {
-    Console.WriteLine("Лучшие заявки на покупку отсутствуют.");
+	Console.WriteLine("Лучшие заявки на покупку отсутствуют.");
 }
 
 if (bestAsk != null)
 {
-    Console.WriteLine($"Лучшая цена продажи: {bestAsk.Price}, объем: {bestAsk.Volume}");
+	Console.WriteLine($"Лучшая цена продажи: {bestAsk.Price}, объем: {bestAsk.Volume}");
 }
 else
 {
-    Console.WriteLine("Лучшие заявки на продажу отсутствуют.");
+	Console.WriteLine("Лучшие заявки на продажу отсутствуют.");
 }
 ```
 
@@ -51,12 +51,12 @@ else
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-    Console.WriteLine($"Цена покупки: {bid.Price}, объем: {bid.Volume}");
+	Console.WriteLine($"Цена покупки: {bid.Price}, объем: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-    Console.WriteLine($"Цена продажи: {ask.Price}, объем: {ask.Volume}");
+	Console.WriteLine($"Цена продажи: {ask.Price}, объем: {ask.Volume}");
 }
 ```
 
@@ -77,18 +77,18 @@ Console.WriteLine("Значительные объемы в стакане за�
 
 foreach (var bid in orderBook.Bids)
 {
-    if (bid.Volume >= significantVolumeThreshold)
-    {
-        Console.WriteLine($"Покупка: Цена {bid.Price}, объем {bid.Volume}");
-    }
+	if (bid.Volume >= significantVolumeThreshold)
+	{
+		Console.WriteLine($"Покупка: Цена {bid.Price}, объем {bid.Volume}");
+	}
 }
 
 foreach (var ask in orderBook.Asks)
 {
-    if (ask.Volume >= significantVolumeThreshold)
-    {
-        Console.WriteLine($"Продажа: Цена {ask.Price}, объем {ask.Volume}");
-    }
+	if (ask.Volume >= significantVolumeThreshold)
+	{
+		Console.WriteLine($"Продажа: Цена {ask.Price}, объем {ask.Volume}");
+	}
 }
 ```
 

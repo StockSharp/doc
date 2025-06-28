@@ -19,13 +19,13 @@ In the figure, the [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) component i
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <sx:SecurityGrid x:Name="SecurityGrid"/>
-    </Grid>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+		Title="MainWindow" Height="350" Width="525">
+	<Grid>
+		<sx:SecurityGrid x:Name="SecurityGrid"/>
+	</Grid>
 </Window>
 	  				
 ```
@@ -47,5 +47,5 @@ private void ColumnsFilter()
 		column.Visibility = columns.Contains(column.SortMemberPath) ? Visibility.Visible : Visibility.Collapsed;
 	}
 }
-              
+				
 ```

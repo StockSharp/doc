@@ -9,47 +9,47 @@
 ```cs
 public partial class MainWindow
 {
-    private readonly Connector _connector;
-    private const string _connectorFile = "ConnectorFile.json";
-    
-    // Путь к данным истории
-    private readonly string _pathHistory = Paths.HistoryDataPath;
-    
-    private Subscription _subscription;
-    private ChartCandleElement _candleElement;
-    
-    public MainWindow()
-    {
-        InitializeComponent();
-        
-        // Инициализируем хранилища
-        var entityRegistry = new CsvEntityRegistry(_pathHistory);
-        var storageRegistry = new StorageRegistry
-        {
-            DefaultDrive = new LocalMarketDataDrive(_pathHistory)
-        };
-        
-        // Создаем коннектор с настроенными хранилищами
-        _connector = new Connector(
-            entityRegistry.Securities, 
-            entityRegistry.PositionStorage, 
-            new InMemoryExchangeInfoProvider(), 
-            storageRegistry, 
-            new SnapshotRegistry("SnapshotRegistry"));
-        
-        // Регистрируем провайдер адаптеров сообщений
-        ConfigManager.RegisterService<IMessageAdapterProvider>(
-            new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
-        
-        // Загружаем настройки коннектора, если файл существует
-        if (File.Exists(_connectorFile))
-        {
-            _connector.Load(_connectorFile.Deserialize<SettingsStorage>());
-        }
-        
-        // Устанавливаем тип данных свечей по умолчанию (5-минутки)
-        CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
-    }
+	private readonly Connector _connector;
+	private const string _connectorFile = "ConnectorFile.json";
+	
+	// Путь к данным истории
+	private readonly string _pathHistory = Paths.HistoryDataPath;
+	
+	private Subscription _subscription;
+	private ChartCandleElement _candleElement;
+	
+	public MainWindow()
+	{
+		InitializeComponent();
+		
+		// Инициализируем хранилища
+		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+		var storageRegistry = new StorageRegistry
+		{
+			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+		};
+		
+		// Создаем коннектор с настроенными хранилищами
+		_connector = new Connector(
+			entityRegistry.Securities, 
+			entityRegistry.PositionStorage, 
+			new InMemoryExchangeInfoProvider(), 
+			storageRegistry, 
+			new SnapshotRegistry("SnapshotRegistry"));
+		
+		// Регистрируем провайдер адаптеров сообщений
+		ConfigManager.RegisterService<IMessageAdapterProvider>(
+			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
+		
+		// Загружаем настройки коннектора, если файл существует
+		if (File.Exists(_connectorFile))
+		{
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+		}
+		
+		// Устанавливаем тип данных свечей по умолчанию (5-минутки)
+		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
+	}
 }
 ```
 
@@ -59,25 +59,25 @@ public partial class MainWindow
 // Метод для настройки параметров подключения
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-    // Вызываем окно настройки коннектора
-    if (_connector.Configure(this))
-    {
-        // Сохраняем настройки в файл
-        _connector.Save().Serialize(_connectorFile);
-    }
+	// Вызываем окно настройки коннектора
+	if (_connector.Configure(this))
+	{
+		// Сохраняем настройки в файл
+		_connector.Save().Serialize(_connectorFile);
+	}
 }
 
 // Метод для подключения к торговой системе
 private void Connect_Click(object sender, RoutedEventArgs e)
 {
-    // Устанавливаем коннектор как источник данных для выбора инструментов
-    SecurityPicker.SecurityProvider = _connector;
-    
-    // Подписываемся на событие получения свечей
-    _connector.CandleReceived += Connector_CandleReceived;
-    
-    // Подключаемся
-    _connector.Connect();
+	// Устанавливаем коннектор как источник данных для выбора инструментов
+	SecurityPicker.SecurityProvider = _connector;
+	
+	// Подписываемся на событие получения свечей
+	_connector.CandleReceived += Connector_CandleReceived;
+	
+	// Подключаемся
+	_connector.Connect();
 }
 ```
 
@@ -87,8 +87,8 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 // Обработчик события получения свечи
 private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Отрисовываем свечу на графике
-    Chart.Draw(_candleElement, candle);
+	// Отрисовываем свечу на графике
+	Chart.Draw(_candleElement, candle);
 }
 ```
 
@@ -98,42 +98,42 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 // Метод, вызываемый при выборе инструмента
 private void SecurityPicker_SecuritySelected(Security security)
 {
-    // Проверяем, выбран ли инструмент
-    if (security == null) 
-        return;
-    
-    // Отписываемся от предыдущей подписки, если она существует
-    if (_subscription != null) 
-        _connector.UnSubscribe(_subscription);
-    
-    // Создаем новую подписку на выбранный инструмент
-    _subscription = new(CandleDataTypeEdit.DataType, security)
-    {
-        MarketData =
-        {
-            // Запрашиваем исторические данные за последние 720 дней
-            From = DateTime.Today.AddDays(-720),
-            
-            // Режим работы: загрузка исторических данных и построение в реальном времени
-            BuildMode = MarketDataBuildModes.LoadAndBuild,
-        }
-    };
-    
-    // Настраиваем график
-    Chart.ClearAreas();
-    
-    // Создаем область графика и элемент для отображения свечей
-    var area = new ChartArea();
-    _candleElement = new ChartCandleElement();
-    
-    // Добавляем область и элемент на график
-    Chart.AddArea(area);
-    
-    // Связываем элемент графика с подпиской для автоматической отрисовки
-    Chart.AddElement(area, _candleElement, _subscription);
-    
-    // Запускаем подписку
-    _connector.Subscribe(_subscription);
+	// Проверяем, выбран ли инструмент
+	if (security == null) 
+		return;
+	
+	// Отписываемся от предыдущей подписки, если она существует
+	if (_subscription != null) 
+		_connector.UnSubscribe(_subscription);
+	
+	// Создаем новую подписку на выбранный инструмент
+	_subscription = new(CandleDataTypeEdit.DataType, security)
+	{
+		MarketData =
+		{
+			// Запрашиваем исторические данные за последние 720 дней
+			From = DateTime.Today.AddDays(-720),
+			
+			// Режим работы: загрузка исторических данных и построение в реальном времени
+			BuildMode = MarketDataBuildModes.LoadAndBuild,
+		}
+	};
+	
+	// Настраиваем график
+	Chart.ClearAreas();
+	
+	// Создаем область графика и элемент для отображения свечей
+	var area = new ChartArea();
+	_candleElement = new ChartCandleElement();
+	
+	// Добавляем область и элемент на график
+	Chart.AddArea(area);
+	
+	// Связываем элемент графика с подпиской для автоматической отрисовки
+	Chart.AddElement(area, _candleElement, _subscription);
+	
+	// Запускаем подписку
+	_connector.Subscribe(_subscription);
 }
 ```
 
@@ -165,86 +165,86 @@ using StockSharp.Charting;
 /// </summary>
 public partial class MainWindow
 {
-    private readonly Connector _connector;
-    private const string _connectorFile = "ConnectorFile.json";
+	private readonly Connector _connector;
+	private const string _connectorFile = "ConnectorFile.json";
 
-    private readonly string _pathHistory = Paths.HistoryDataPath;
+	private readonly string _pathHistory = Paths.HistoryDataPath;
 
-    private Subscription _subscription;
-    private ChartCandleElement _candleElement;
-    
-    public MainWindow()
-    {
-        InitializeComponent();
-        var entityRegistry = new CsvEntityRegistry(_pathHistory);
-        var storageRegistry = new StorageRegistry
-        {
-            DefaultDrive = new LocalMarketDataDrive(_pathHistory)
-        };
-        _connector = new Connector(
-            entityRegistry.Securities, 
-            entityRegistry.PositionStorage, 
-            new InMemoryExchangeInfoProvider(), 
-            storageRegistry, 
-            new SnapshotRegistry("SnapshotRegistry"));
+	private Subscription _subscription;
+	private ChartCandleElement _candleElement;
+	
+	public MainWindow()
+	{
+		InitializeComponent();
+		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+		var storageRegistry = new StorageRegistry
+		{
+			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+		};
+		_connector = new Connector(
+			entityRegistry.Securities, 
+			entityRegistry.PositionStorage, 
+			new InMemoryExchangeInfoProvider(), 
+			storageRegistry, 
+			new SnapshotRegistry("SnapshotRegistry"));
 
-        // registering all connectors
-        ConfigManager.RegisterService<IMessageAdapterProvider>(
-            new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
+		// registering all connectors
+		ConfigManager.RegisterService<IMessageAdapterProvider>(
+			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-        if (File.Exists(_connectorFile))
-        {
-            _connector.Load(_connectorFile.Deserialize<SettingsStorage>());
-        }
+		if (File.Exists(_connectorFile))
+		{
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+		}
 
-        CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
-    }
+		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
+	}
 
-    private void Setting_Click(object sender, RoutedEventArgs e)
-    {
-        if (_connector.Configure(this))
-        {
-            _connector.Save().Serialize(_connectorFile);
-        }
-    }
+	private void Setting_Click(object sender, RoutedEventArgs e)
+	{
+		if (_connector.Configure(this))
+		{
+			_connector.Save().Serialize(_connectorFile);
+		}
+	}
 
-    private void Connect_Click(object sender, RoutedEventArgs e)
-    {
-        SecurityPicker.SecurityProvider = _connector;
-        _connector.CandleReceived += Connector_CandleReceived;
-        _connector.Connect();
-    }
+	private void Connect_Click(object sender, RoutedEventArgs e)
+	{
+		SecurityPicker.SecurityProvider = _connector;
+		_connector.CandleReceived += Connector_CandleReceived;
+		_connector.Connect();
+	}
 
-    private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
-    {
-        Chart.Draw(_candleElement, candle);
-    }
+	private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
+	{
+		Chart.Draw(_candleElement, candle);
+	}
 
-    private void SecurityPicker_SecuritySelected(Security security)
-    {
-        if (security == null) return;
-        if (_subscription != null) _connector.UnSubscribe(_subscription);
+	private void SecurityPicker_SecuritySelected(Security security)
+	{
+		if (security == null) return;
+		if (_subscription != null) _connector.UnSubscribe(_subscription);
 
-        _subscription = new(CandleDataTypeEdit.DataType, security)
-        {
-            MarketData =
-            {
-                From = DateTime.Today.AddDays(-720),
-                BuildMode = MarketDataBuildModes.LoadAndBuild,
-            }
-        };
+		_subscription = new(CandleDataTypeEdit.DataType, security)
+		{
+			MarketData =
+			{
+				From = DateTime.Today.AddDays(-720),
+				BuildMode = MarketDataBuildModes.LoadAndBuild,
+			}
+		};
 
-        //-----------------Chart--------------------------------
-        Chart.ClearAreas();
+		//-----------------Chart--------------------------------
+		Chart.ClearAreas();
 
-        var area = new ChartArea();
-        _candleElement = new ChartCandleElement();
+		var area = new ChartArea();
+		_candleElement = new ChartCandleElement();
 
-        Chart.AddArea(area);
-        Chart.AddElement(area, _candleElement, _subscription);
+		Chart.AddArea(area);
+		Chart.AddElement(area, _candleElement, _subscription);
 
-        _connector.Subscribe(_subscription);
-    }
+		_connector.Subscribe(_subscription);
+	}
 }
 ```
 
@@ -281,10 +281,10 @@ _connector.SubscriptionOnline += OnSubscriptionOnline;
 // Обработчик события
 private void OnSubscriptionOnline(Subscription subscription)
 {
-    if (subscription == _subscription)
-    {
-        this.GuiAsync(() => StatusLabel.Content = "Онлайн режим");
-    }
+	if (subscription == _subscription)
+	{
+		this.GuiAsync(() => StatusLabel.Content = "Онлайн режим");
+	}
 }
 ```
 
@@ -294,14 +294,14 @@ private void OnSubscriptionOnline(Subscription subscription)
 // Установка периода загрузки истории
 private void SetHistoryPeriod(int days)
 {
-    if (_subscription != null)
-    {
-        _connector.UnSubscribe(_subscription);
-        
-        _subscription.MarketData.From = DateTime.Today.AddDays(-days);
-        
-        _connector.Subscribe(_subscription);
-    }
+	if (_subscription != null)
+	{
+		_connector.UnSubscribe(_subscription);
+		
+		_subscription.MarketData.From = DateTime.Today.AddDays(-days);
+		
+		_connector.Subscribe(_subscription);
+	}
 }
 ```
 
@@ -311,11 +311,11 @@ private void SetHistoryPeriod(int days)
 // Метод для сохранения полученных данных
 private void SaveReceivedData()
 {
-    if (_connector.StorageAdapter != null)
-    {
-        // Принудительно сохраняем кэшированные данные на диск
-        _connector.StorageAdapter.Flush();
-    }
+	if (_connector.StorageAdapter != null)
+	{
+		// Принудительно сохраняем кэшированные данные на диск
+		_connector.StorageAdapter.Flush();
+	}
 }
 ```
 
@@ -325,14 +325,14 @@ private void SaveReceivedData()
 // Расширенная обработка свечей с выводом информации
 private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage candle)
 {
-    // Отрисовываем свечу на графике
-    Chart.Draw(_candleElement, candle);
-    
-    // Выводим информацию о свече в логи
-    this.GuiAsync(() => 
-    {
-        var status = subscription.State == SubscriptionStates.Online ? "Реал-тайм" : "История";
-        LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
-    });
+	// Отрисовываем свечу на графике
+	Chart.Draw(_candleElement, candle);
+	
+	// Выводим информацию о свече в логи
+	this.GuiAsync(() => 
+	{
+		var status = subscription.State == SubscriptionStates.Online ? "Реал-тайм" : "История";
+		LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
+	});
 }
 ```

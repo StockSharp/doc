@@ -13,24 +13,24 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Creating a subscription for 5-minute candles directly through DataType
-    var subscription = new Subscription(
-        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-        Security);
-    
-    // If additional parameters are required, you can configure the subscription
-    subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
-    
-    // Creating a rule to process incoming candles
-    Connector
-        .WhenCandlesFinished(subscription)
-        .Do(ProcessCandle)
-        .Apply(this);
-    
-    // Starting the subscription
-    Connector.Subscribe(subscription);
+	base.OnStarted(time);
+	
+	// Creating a subscription for 5-minute candles directly through DataType
+	var subscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		Security);
+	
+	// If additional parameters are required, you can configure the subscription
+	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
+	
+	// Creating a rule to process incoming candles
+	Connector
+		.WhenCandlesFinished(subscription)
+		.Do(ProcessCandle)
+		.Apply(this);
+	
+	// Starting the subscription
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -61,15 +61,15 @@ The strategy automatically tracks the state of all subscriptions to control its 
 ```cs
 private void CheckRefreshOnlineState()
 {
-    bool nowOnline = ProcessState == ProcessStates.Started;
+	bool nowOnline = ProcessState == ProcessStates.Started;
 
-    if (nowOnline)
-        nowOnline = _subscriptions.CachedKeys
-            .Where(s => !s.SubscriptionMessage.IsHistoryOnly())
-            .All(s => s.State == SubscriptionStates.Online);
-    
-    // Update strategy's IsOnline state
-    IsOnline = nowOnline;
+	if (nowOnline)
+		nowOnline = _subscriptions.CachedKeys
+			.Where(s => !s.SubscriptionMessage.IsHistoryOnly())
+			.All(s => s.State == SubscriptionStates.Online);
+	
+	// Update strategy's IsOnline state
+	IsOnline = nowOnline;
 }
 ```
 
@@ -82,23 +82,23 @@ In strategies, you can use subscriptions to various types of market data:
 ```cs
 // Subscription to candles
 var candleSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
-    Security);
+	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	Security);
 
 // Subscription to market depth
 var depthSubscription = new Subscription(
-    DataType.MarketDepth,
-    Security);
+	DataType.MarketDepth,
+	Security);
 
 // Subscription to tick trades
 var tickSubscription = new Subscription(
-    DataType.Ticks,
-    Security);
+	DataType.Ticks,
+	Security);
 
 // Subscription to Level1 (best bid/ask and other basic information)
 var level1Subscription = new Subscription(
-    DataType.Level1,
-    Security);
+	DataType.Level1,
+	Security);
 ```
 
 ## Processing Subscription Data Through Rules
@@ -111,9 +111,9 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 
 // Creating a rule for processing incoming candles
 Connector
-    .WhenCandlesFinished(subscription)  // Rule activation when a completed candle is received
-    .Do(ProcessCandle)                   // Call processing method
-    .Apply(this);                        // Apply rule to strategy
+	.WhenCandlesFinished(subscription)  // Rule activation when a completed candle is received
+	.Do(ProcessCandle)                   // Call processing method
+	.Apply(this);                        // Apply rule to strategy
 
 // Start subscription
 Connector.Subscribe(subscription);

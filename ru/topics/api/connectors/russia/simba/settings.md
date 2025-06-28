@@ -5,7 +5,7 @@
 ```cs
 var messageAdapter = new SimbaMessageAdapter(Connector.TransactionIdGenerator)
 {
-    DialectType = DialectTypes.Spectra, // или DialectTypes.Asts
+	DialectType = DialectTypes.Spectra, // или DialectTypes.Asts
 };
 ```
 

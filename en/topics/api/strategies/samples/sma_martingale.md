@@ -9,14 +9,14 @@
 ```cs
 public class SmaStrategyMartingaleStrategy : Strategy
 {
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
-    private readonly StrategyParam<DataType> _candleType;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _candleType;
 
-    // Variables to store previous indicator values
-    private decimal _prevLongValue;
-    private decimal _prevShortValue;
-    private bool _isFirstValue = true;
+	// Variables to store previous indicator values
+	private decimal _prevLongValue;
+	private decimal _prevShortValue;
+	private bool _isFirstValue = true;
 }
 ```
 
@@ -37,31 +37,31 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Create indicators
-    var longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	// Create indicators
+	var longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 
-    // Add indicators to the strategy collection for automatic IsFormed tracking
-    Indicators.Add(longSma);
-    Indicators.Add(shortSma);
+	// Add indicators to the strategy collection for automatic IsFormed tracking
+	Indicators.Add(longSma);
+	Indicators.Add(shortSma);
 
-    // Create subscription and bind indicators
-    var subscription = SubscribeCandles(CandleType);
-    subscription
-        .Bind(longSma, shortSma, ProcessCandle)
-        .Start();
+	// Create subscription and bind indicators
+	var subscription = SubscribeCandles(CandleType);
+	subscription
+		.Bind(longSma, shortSma, ProcessCandle)
+		.Start();
 
-    // Set up visualization on the chart
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawIndicator(area, longSma, System.Drawing.Color.Blue);
-        DrawIndicator(area, shortSma, System.Drawing.Color.Red);
-        DrawOwnTrades(area);
-    }
+	// Set up visualization on the chart
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawIndicator(area, longSma, System.Drawing.Color.Blue);
+		DrawIndicator(area, shortSma, System.Drawing.Color.Red);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -72,47 +72,47 @@ The `ProcessCandle` method is called for each completed candle and implements th
 ```cs
 private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    // Skip incomplete candles
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Skip incomplete candles
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Check if the strategy is ready for trading
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Check if the strategy is ready for trading
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // For the first value, only save data without generating signals
-    if (_isFirstValue)
-    {
-        _prevLongValue = longValue;
-        _prevShortValue = shortValue;
-        _isFirstValue = false;
-        return;
-    }
+	// For the first value, only save data without generating signals
+	if (_isFirstValue)
+	{
+		_prevLongValue = longValue;
+		_prevShortValue = shortValue;
+		_isFirstValue = false;
+		return;
+	}
 
-    // Get current and previous comparison of indicator values
-    var isShortLessThenLongCurrent = shortValue < longValue;
-    var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
+	// Get current and previous comparison of indicator values
+	var isShortLessThenLongCurrent = shortValue < longValue;
+	var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
 
-    // Save current values as previous for the next candle
-    _prevLongValue = longValue;
-    _prevShortValue = shortValue;
+	// Save current values as previous for the next candle
+	_prevLongValue = longValue;
+	_prevShortValue = shortValue;
 
-    // Check for crossover (signal)
-    if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
-        return;
+	// Check for crossover (signal)
+	if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
+		return;
 
-    // Cancel active orders before placing new ones
-    CancelActiveOrders();
+	// Cancel active orders before placing new ones
+	CancelActiveOrders();
 
-    // Determine trade direction
-    var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
+	// Determine trade direction
+	var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
-    // Calculate position size (increase position with each trade - martingale approach)
-    var volume = Volume + Math.Abs(Position);
+	// Calculate position size (increase position with each trade - martingale approach)
+	var volume = Volume + Math.Abs(Position);
 
-    // Create and register an order with the appropriate price
-    var price = Security.ShrinkPrice(shortValue);
-    RegisterOrder(CreateOrder(direction, price, volume));
+	// Create and register an order with the appropriate price
+	var price = Security.ShrinkPrice(shortValue);
+	RegisterOrder(CreateOrder(direction, price, volume));
 }
 ```
 

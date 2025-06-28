@@ -22,11 +22,11 @@
 
 ```
 Если Close > Close(предыдущий):
-    BV = BV(предыдущий) + Volume
+	BV = BV(предыдущий) + Volume
 Если Close < Close(предыдущий):
-    BV = BV(предыдущий) - Volume
+	BV = BV(предыдущий) - Volume
 Если Close = Close(предыдущий):
-    BV = BV(предыдущий)
+	BV = BV(предыдущий)
 ```
 
 где:

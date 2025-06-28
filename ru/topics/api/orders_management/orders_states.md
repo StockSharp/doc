@@ -40,28 +40,28 @@ StockSharp API предоставляет возможность получат�
 ```cs
 private void InitConnector()
 {
-    // Подписка на событие получения заявки
-    Connector.OrderReceived += OnOrderReceived;
-    
-    // Подписка на событие получения собственной сделки
-    Connector.OwnTradeReceived += OnOwnTradeReceived;
-    
-    // Подписка на событие ошибки регистрации заявки
-    Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
+	// Подписка на событие получения заявки
+	Connector.OrderReceived += OnOrderReceived;
+	
+	// Подписка на событие получения собственной сделки
+	Connector.OwnTradeReceived += OnOwnTradeReceived;
+	
+	// Подписка на событие ошибки регистрации заявки
+	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
 
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-    // Обработка полученной заявки
-    _ordersWindow.OrderGrid.Orders.TryAdd(order);
-    
-    // Важно! Проверяем, относится ли заявка к текущей подписке
-    // чтобы избежать дублирования обработки
-    if (subscription == _myOrdersSubscription)
-    {
-        // Дополнительная обработка для конкретной подписки
-        Console.WriteLine($"Заявка: {order.TransactionId}, Состояние: {order.State}");
-    }
+	// Обработка полученной заявки
+	_ordersWindow.OrderGrid.Orders.TryAdd(order);
+	
+	// Важно! Проверяем, относится ли заявка к текущей подписке
+	// чтобы избежать дублирования обработки
+	if (subscription == _myOrdersSubscription)
+	{
+		// Дополнительная обработка для конкретной подписки
+		Console.WriteLine($"Заявка: {order.TransactionId}, Состояние: {order.State}");
+	}
 }
 ```
 
@@ -73,16 +73,16 @@ private void OnOrderReceived(Subscription subscription, Order order)
 // Создаем подписку на заявки по конкретному портфелю
 var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
 {
-    TransactionId = Connector.TransactionIdGenerator.GetNextId(),
+	TransactionId = Connector.TransactionIdGenerator.GetNextId(),
 };
 
 // Обработчик получения заявок
 Connector.OrderReceived += (subscription, order) =>
 {
-    if (subscription == ordersSubscription)
-    {
-        Console.WriteLine($"Заявка: {order.TransactionId}, Состояние: {order.State}, Портфель: {order.Portfolio.Name}");
-    }
+	if (subscription == ordersSubscription)
+	{
+		Console.WriteLine($"Заявка: {order.TransactionId}, Состояние: {order.State}, Портфель: {order.Portfolio.Name}");
+	}
 };
 
 // Запускаем подписку
@@ -123,31 +123,31 @@ private Subscription _portfolio2OrdersSubscription;
 
 private void RequestOrdersForDifferentPortfolios()
 {
-    // Подписка на заявки по первому портфелю
-    _portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
-    
-    // Подписка на заявки по второму портфелю
-    _portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
-    
-    // Общий обработчик получения заявок
-    Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
-    
-    // Запускаем подписки
-    Connector.Subscribe(_portfolio1OrdersSubscription);
-    Connector.Subscribe(_portfolio2OrdersSubscription);
+	// Подписка на заявки по первому портфелю
+	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
+	
+	// Подписка на заявки по второму портфелю
+	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
+	
+	// Общий обработчик получения заявок
+	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
+	
+	// Запускаем подписки
+	Connector.Subscribe(_portfolio1OrdersSubscription);
+	Connector.Subscribe(_portfolio2OrdersSubscription);
 }
 
 private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
 {
-    // Определяем, к какой подписке относится заявка
-    if (subscription == _portfolio1OrdersSubscription)
-    {
-        // Обработка заявок первого портфеля
-    }
-    else if (subscription == _portfolio2OrdersSubscription)
-    {
-        // Обработка заявок второго портфеля
-    }
+	// Определяем, к какой подписке относится заявка
+	if (subscription == _portfolio1OrdersSubscription)
+	{
+		// Обработка заявок первого портфеля
+	}
+	else if (subscription == _portfolio2OrdersSubscription)
+	{
+		// Обработка заявок второго портфеля
+	}
 }
 ```
 

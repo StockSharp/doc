@@ -11,20 +11,20 @@
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _longSmaLength;
 
-    public int LongSmaLength
-    {
-        get => _longSmaLength.Value;
-        set => _longSmaLength.Value = value;
-    }
+	public int LongSmaLength
+	{
+		get => _longSmaLength.Value;
+		set => _longSmaLength.Value = value;
+	}
 
-    public SmaStrategy()
-    {
-        _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings");
-    }
+	public SmaStrategy()
+	{
+		_longSmaLength = Param(nameof(LongSmaLength), 80)
+							.SetGreaterThanZero()
+							.SetDisplay("Long SMA length", string.Empty, "Base settings");
+	}
 }
 ```
 
@@ -40,7 +40,7 @@ public class SmaStrategy : Strategy
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetDisplay("Long SMA length", "Период длинной скользящей средней", "Основные настройки");
+					.SetDisplay("Long SMA length", "Период длинной скользящей средней", "Основные настройки");
 ```
 
 ### SetValidator
@@ -50,19 +50,19 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 ```cs
 // Проверка, что число больше нуля
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetValidator(new IntGreaterThanZeroAttribute());
+					.SetValidator(new IntGreaterThanZeroAttribute());
 
 // Проверка, что число не отрицательное
 _volume = Param(nameof(Volume), 1)
-           .SetValidator(new DecimalNotNegativeAttribute());
+			.SetValidator(new DecimalNotNegativeAttribute());
 
 // Проверка на диапазон значений
 _percentage = Param(nameof(Percentage), 50)
-               .SetValidator(new RangeAttribute(0, 100));
+				.SetValidator(new RangeAttribute(0, 100));
 
 // Проверка на обязательное значение
 _security = Param<Security>(nameof(Security))
-             .SetValidator(new RequiredAttribute());
+				.SetValidator(new RequiredAttribute());
 ```
 
 Для удобства в [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) есть встроенные методы для наиболее распространенных валидаторов:
@@ -86,23 +86,23 @@ _percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
 ```cs
 public class EvenNumberAttribute : ValidationAttribute
 {
-    public EvenNumberAttribute()
-        : base("Значение должно быть четным числом.")
-    {
-    }
+	public EvenNumberAttribute()
+		: base("Значение должно быть четным числом.")
+	{
+	}
 
-    public override bool IsValid(object value)
-    {
-        if (value is int intValue)
-            return intValue % 2 == 0;
-        
-        return false;
-    }
+	public override bool IsValid(object value)
+	{
+		if (value is int intValue)
+			return intValue % 2 == 0;
+		
+		return false;
+	}
 }
 
 // Использование пользовательского валидатора
 _barCount = Param(nameof(BarCount), 10)
-             .SetValidator(new EvenNumberAttribute());
+				.SetValidator(new EvenNumberAttribute());
 ```
 
 ### SetHidden
@@ -111,7 +111,7 @@ _barCount = Param(nameof(BarCount), 10)
 
 ```cs
 _systemParam = Param(nameof(SystemParam), "value")
-                .SetHidden(true);
+				.SetHidden(true);
 ```
 
 ### SetBasic
@@ -120,7 +120,7 @@ _systemParam = Param(nameof(SystemParam), "value")
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetBasic(true);
+					.SetBasic(true);
 ```
 
 ![strategy parameters basic advanced](../../../images/strategy_parameters_basic_advanced.png)
@@ -131,7 +131,7 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 
 ```cs
 _calculatedParam = Param(nameof(CalculatedParam), 0)
-                    .SetReadOnly(true);
+					.SetReadOnly(true);
 ```
 
 ### SetCanOptimize и SetOptimize
@@ -140,8 +140,8 @@ _calculatedParam = Param(nameof(CalculatedParam), 0)
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetCanOptimize(true)
-                  .SetOptimize(10, 200, 10);
+					.SetCanOptimize(true)
+					.SetOptimize(10, 200, 10);
 ```
 
 В примере выше параметр будет оптимизироваться в диапазоне от 10 до 200 с шагом 10.
@@ -153,12 +153,12 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-    _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    
-    // ...
+	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	
+	// ...
 }
 ```
 
@@ -169,16 +169,16 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 public override void Save(SettingsStorage settings)
 {
-    base.Save(settings);
-    
-    // Дополнительная логика сохранения...
+	base.Save(settings);
+	
+	// Дополнительная логика сохранения...
 }
 
 public override void Load(SettingsStorage settings)
 {
-    base.Load(settings);
-    
-    // Дополнительная логика загрузки...
+	base.Load(settings);
+	
+	// Дополнительная логика загрузки...
 }
 ```
 
@@ -189,50 +189,50 @@ public override void Load(SettingsStorage settings)
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _series;
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _series;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
 
-    public DataType Series
-    {
-        get => _series.Value;
-        set => _series.Value = value;
-    }
+	public DataType Series
+	{
+		get => _series.Value;
+		set => _series.Value = value;
+	}
 
-    public int LongSmaLength
-    {
-        get => _longSmaLength.Value;
-        set => _longSmaLength.Value = value;
-    }
+	public int LongSmaLength
+	{
+		get => _longSmaLength.Value;
+		set => _longSmaLength.Value = value;
+	}
 
-    public int ShortSmaLength
-    {
-        get => _shortSmaLength.Value;
-        set => _shortSmaLength.Value = value;
-    }
+	public int ShortSmaLength
+	{
+		get => _shortSmaLength.Value;
+		set => _shortSmaLength.Value = value;
+	}
 
-    public SmaStrategy()
-    {
-        base.Name = "SMA strategy";
+	public SmaStrategy()
+	{
+		base.Name = "SMA strategy";
 
-        Param("TypeId", GetType().GetTypeName(false)).SetHidden();
-        _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings")
-                          .SetCanOptimize(true)
-                          .SetOptimize(20, 200, 10);
-        
-        _shortSmaLength = Param(nameof(ShortSmaLength), 30)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Short SMA length", string.Empty, "Base settings")
-                          .SetCanOptimize(true)
-                          .SetOptimize(5, 50, 5);
-        
-        _series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-                 .SetDisplay("Series", string.Empty, "Base settings");
-    }
+		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
+		_longSmaLength = Param(nameof(LongSmaLength), 80)
+							.SetGreaterThanZero()
+							.SetDisplay("Long SMA length", string.Empty, "Base settings")
+							.SetCanOptimize(true)
+							.SetOptimize(20, 200, 10);
+		
+		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
+							.SetGreaterThanZero()
+							.SetDisplay("Short SMA length", string.Empty, "Base settings")
+							.SetCanOptimize(true)
+							.SetOptimize(5, 50, 5);
+		
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+					.SetDisplay("Series", string.Empty, "Base settings");
+	}
 
-    // ...
+	// ...
 }
 ```
 

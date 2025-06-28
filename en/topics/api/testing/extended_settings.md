@@ -37,8 +37,8 @@ var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId());
 // Send a subscription message to the generator
 _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe = true,
-    Generator = mdGenerator
+	IsSubscribe = true,
+	Generator = mdGenerator
 });
 ```
 
@@ -94,15 +94,15 @@ var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
 // Create a subscription to candles
 var candleSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Today,
-        BuildMode = MarketDataBuildModes.Load
-    }
+	MarketData =
+	{
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Today,
+		BuildMode = MarketDataBuildModes.Load
+	}
 };
 connector.Subscribe(candleSubscription);
 
@@ -113,20 +113,20 @@ connector.Subscribe(tickSubscription);
 // Configure order book generation
 var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId())
 {
-    Interval = TimeSpan.FromSeconds(1),
-    MaxAsksDepth = 5,
-    MaxBidsDepth = 5,
-    UseTradeVolume = true,
-    MinVolume = 1,
-    MaxVolume = 100,
-    MinSpreadStepCount = 1,
-    MaxSpreadStepCount = 5
+	Interval = TimeSpan.FromSeconds(1),
+	MaxAsksDepth = 5,
+	MaxBidsDepth = 5,
+	UseTradeVolume = true,
+	MinVolume = 1,
+	MaxVolume = 100,
+	MinSpreadStepCount = 1,
+	MaxSpreadStepCount = 5
 };
 
 connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe = true,
-    Generator = mdGenerator
+	IsSubscribe = true,
+	Generator = mdGenerator
 });
 
 // Subscribe to data reception
@@ -143,31 +143,31 @@ connector.Connect();
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Processing received candles
-    Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	// Processing received candles
+	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-    // Processing received ticks
-    Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	// Processing received ticks
+	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-    // Using extension methods for IOrderBookMessage
-    var bestBid = orderBook.GetBestBid();
-    var bestAsk = orderBook.GetBestAsk();
-    var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
-    
-    // Processing received order books
-    Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
-    
-    // Getting price by order side
-    var bidPrice = orderBook.GetPrice(Sides.Buy);
-    var askPrice = orderBook.GetPrice(Sides.Sell);
-    
-    Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	// Using extension methods for IOrderBookMessage
+	var bestBid = orderBook.GetBestBid();
+	var bestAsk = orderBook.GetBestAsk();
+	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
+	
+	// Processing received order books
+	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	
+	// Getting price by order side
+	var bidPrice = orderBook.GetPrice(Sides.Buy);
+	var askPrice = orderBook.GetPrice(Sides.Sell);
+	
+	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
 }
 ```
 

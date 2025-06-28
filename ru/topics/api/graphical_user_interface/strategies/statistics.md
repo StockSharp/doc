@@ -15,12 +15,12 @@
 
 ```xaml
 <Window x:Class="SampleHistoryTestingParallel.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-        xmlns:charting="http://schemas.stocksharp.com/xaml"
-        Title="{x:Static loc:LocalizedStrings.XamlStr563}" Height="430" Width="525">
-    
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+		xmlns:charting="http://schemas.stocksharp.com/xaml"
+		Title="{x:Static loc:LocalizedStrings.XamlStr563}" Height="430" Width="525">
+	
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="100" />
@@ -39,14 +39,14 @@
 		<Button x:Name="FindPath" Grid.Column="2" Grid.Row="0" Content="..." Width="25" HorizontalAlignment="Left" Click="FindPathClick" />
 		<Button x:Name="StartBtn" Content="{x:Static loc:LocalizedStrings.Str2421}" Grid.Row="2" Grid.Column="0" Click="StartBtnClick" />
 		<ProgressBar x:Name="TestingProcess" Grid.Column="1" Grid.Row="2" />
-        <TabControl Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="0" >
-            <TabItem Header="{x:Static loc:LocalizedStrings.Equity}">
-                <charting:EquityCurveChart x:Name="Curve" />
-            </TabItem>
-            <TabItem Header="{x:Static loc:LocalizedStrings.Str436}">
-                <charting:StrategiesStatisticsPanel x:Name="Stat" ShowProgress="False"/>
-            </TabItem>
-        </TabControl>
+		<TabControl Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="0" >
+			<TabItem Header="{x:Static loc:LocalizedStrings.Equity}">
+				<charting:EquityCurveChart x:Name="Curve" />
+			</TabItem>
+			<TabItem Header="{x:Static loc:LocalizedStrings.Str436}">
+				<charting:StrategiesStatisticsPanel x:Name="Stat" ShowProgress="False"/>
+			</TabItem>
+		</TabControl>
 	</Grid>
 </Window>
 	  				
@@ -82,6 +82,6 @@ var strategies = periods
 			return strategy;
 		})
 		.ToEx(periods.Length);
-              		
+						
 	  				
 ```

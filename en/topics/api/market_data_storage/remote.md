@@ -12,7 +12,7 @@ To work with remote storage, use the [RemoteMarketDataDrive](xref:StockSharp.Alg
 // Creating RemoteMarketDataDrive
 var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress, new FixMessageAdapter(new IncrementalIdGenerator()))
 {
-    Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
+	Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
 };
 
 // This code creates an instance of RemoteMarketDataDrive to connect to remote storage.
@@ -28,8 +28,8 @@ Before loading market data, you need to get information about available instrume
 // Loading instrument information
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
-    s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-    (c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
+	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 
@@ -45,10 +45,10 @@ After obtaining instrument information, you can proceed to load market data.
 // Loading market data
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-    var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
-    var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
+	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
+	var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
 
-    // ... (data loading code)
+	// ... (data loading code)
 }
 
 // This loop iterates through all available data types for the specified instrument.
@@ -63,15 +63,15 @@ Loaded data can be saved locally for further use.
 // Saving data locally
 foreach (var dateTime in dates)
 {
-    using (var stream = remoteStorage.LoadStream(dateTime))
-    {
-        if (stream == Stream.Null)
-            continue;
+	using (var stream = remoteStorage.LoadStream(dateTime))
+	{
+		if (stream == Stream.Null)
+			continue;
 
-        localStorage.Drive.SaveStream(dateTime, stream);
-    }
+		localStorage.Drive.SaveStream(dateTime, stream);
+	}
 
-    // ... (data output code)
+	// ... (data output code)
 }
 
 // This code loads data for each date from the remote storage and saves it to local storage.
@@ -92,11 +92,11 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 // Working with various data types
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-    // ... (data processing code)
+	// ... (data processing code)
 
-    // Error handling and logging
-    Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
-    Console.WriteLine($"{dataType}={dateTime}");
+	// Error handling and logging
+	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
+	Console.WriteLine($"{dataType}={dateTime}");
 }
 ```
 

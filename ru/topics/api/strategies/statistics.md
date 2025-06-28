@@ -79,13 +79,13 @@ StockSharp предоставляет специальный графическ�
 // Создаем стратегию
 var strategy = new SmaStrategy
 {
-    // Настраиваем параметры стратегии
-    Security = security,
-    Portfolio = portfolio,
-    Volume = 1,
-    // Задаем параметры SMA
-    LongSma = 200,
-    ShortSma = 50,
+	// Настраиваем параметры стратегии
+	Security = security,
+	Portfolio = portfolio,
+	Volume = 1,
+	// Задаем параметры SMA
+	LongSma = 200,
+	ShortSma = 50,
 };
 
 // Подключаем стратегию к графику для визуализации
@@ -106,23 +106,23 @@ strategy.Start();
 // Когда вам нужно реагировать на изменения статистики
 strategy.PnLChanged += () =>
 {
-    Console.WriteLine($"Текущий PnL: {strategy.PnL}");
-    
-    // Вы также можете получить доступ к отдельным статистическим параметрам
-    var netProfit = statisticManager.Parameters
-        .OfType<NetProfitParameter>()
-        .FirstOrDefault();
-        
-    if (netProfit != null)
-    {
-        Console.WriteLine($"Чистая прибыль: {netProfit.Value}");
-    }
+	Console.WriteLine($"Текущий PnL: {strategy.PnL}");
+	
+	// Вы также можете получить доступ к отдельным статистическим параметрам
+	var netProfit = statisticManager.Parameters
+		.OfType<NetProfitParameter>()
+		.FirstOrDefault();
+		
+	if (netProfit != null)
+	{
+		Console.WriteLine($"Чистая прибыль: {netProfit.Value}");
+	}
 };
 
 // Для отслеживания статистики позиций
 strategy.PositionChanged += () =>
 {
-    Console.WriteLine($"Текущая позиция: {strategy.Position}");
+	Console.WriteLine($"Текущая позиция: {strategy.Position}");
 };
 ```
 
@@ -140,24 +140,24 @@ strategy.PositionChanged += () =>
 
 ```csharp
 [Display(
-    ResourceType = typeof(LocalizedStrings),
-    Name = "Мой пользовательский показатель",
-    Description = "Описание моего пользовательского показателя",
-    GroupName = "Пользовательские параметры",
-    Order = 1000
+	ResourceType = typeof(LocalizedStrings),
+	Name = "Мой пользовательский показатель",
+	Description = "Описание моего пользовательского показателя",
+	GroupName = "Пользовательские параметры",
+	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>
 {
-    public MyCustomParameter()
-        : base(StatisticParameterTypes.Custom)
-    {
-    }
+	public MyCustomParameter()
+		: base(StatisticParameterTypes.Custom)
+	{
+	}
 
-    public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
-    {
-        // Логика пользовательского расчета
-        Value = /* ваш пользовательский расчет */;
-    }
+	public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
+	{
+		// Логика пользовательского расчета
+		Value = /* ваш пользовательский расчет */;
+	}
 }
 
 // Затем добавляем его в StatisticManager вашей стратегии

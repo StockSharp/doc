@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new AlphaVantageMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Token = "<Your Token>".To<SecureString>(),
+	Token = "<Your Token>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

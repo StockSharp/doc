@@ -9,11 +9,11 @@
 ```cs
 public class MqStrategy : Strategy
 {
-    private readonly StrategyParam<MarketPriceTypes> _priceType;
-    private readonly StrategyParam<Unit> _priceOffset;
-    private readonly StrategyParam<Unit> _bestPriceOffset;
+	private readonly StrategyParam<MarketPriceTypes> _priceType;
+	private readonly StrategyParam<Unit> _priceOffset;
+	private readonly StrategyParam<Unit> _bestPriceOffset;
 
-    private QuotingProcessor _quotingProcessor;
+	private QuotingProcessor _quotingProcessor;
 }
 ```
 
@@ -32,11 +32,11 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Subscribe to market time changes for quote updates
-    Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
-    Connector_CurrentTimeChanged(default);
+	// Subscribe to market time changes for quote updates
+	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
+	Connector_CurrentTimeChanged(default);
 }
 ```
 
@@ -47,67 +47,67 @@ The `Connector_CurrentTimeChanged` method is called when the market time changes
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-    // Create a new processor only if the current one is stopped or doesn't exist
-    if (_quotingProcessor != null && _quotingProcessor.LeftVolume > 0)
-        return;
+	// Create a new processor only if the current one is stopped or doesn't exist
+	if (_quotingProcessor != null && _quotingProcessor.LeftVolume > 0)
+		return;
 
-    // Release resources of the old processor if it exists
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	// Release resources of the old processor if it exists
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 
-    // Determine quoting side based on current position
-    var side = Position <= 0 ? Sides.Buy : Sides.Sell;
+	// Determine quoting side based on current position
+	var side = Position <= 0 ? Sides.Buy : Sides.Sell;
 
-    // Create new quoting behavior
-    var behavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	// Create new quoting behavior
+	var behavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    // Calculate quoting volume
-    var quotingVolume = Volume + Math.Abs(Position);
+	// Calculate quoting volume
+	var quotingVolume = Volume + Math.Abs(Position);
 
-    // Create and initialize the processor
-    _quotingProcessor = new QuotingProcessor(
-        behavior,
-        Security,
-        Portfolio,
-        side,
-        quotingVolume,
-        Volume, // Maximum order volume
-        TimeSpan.Zero, // No timeout
-        this, // Strategy implements ISubscriptionProvider
-        this, // Strategy implements IMarketRuleContainer
-        this, // Strategy implements ITransactionProvider
-        this, // Strategy implements ITimeProvider
-        this, // Strategy implements IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Check trading permission
-        true, // Use order book prices
-        true  // Use last trade price if the order book is empty
-    )
-    {
-        Parent = this
-    };
+	// Create and initialize the processor
+	_quotingProcessor = new QuotingProcessor(
+		behavior,
+		Security,
+		Portfolio,
+		side,
+		quotingVolume,
+		Volume, // Maximum order volume
+		TimeSpan.Zero, // No timeout
+		this, // Strategy implements ISubscriptionProvider
+		this, // Strategy implements IMarketRuleContainer
+		this, // Strategy implements ITransactionProvider
+		this, // Strategy implements ITimeProvider
+		this, // Strategy implements IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Check trading permission
+		true, // Use order book prices
+		true  // Use last trade price if the order book is empty
+	)
+	{
+		Parent = this
+	};
 
-    // Subscribe to processor events for logging
-    _quotingProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	// Subscribe to processor events for logging
+	_quotingProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
-    _quotingProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	_quotingProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Order failed: {fail.Error.Message}");
 
-    _quotingProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_quotingProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _quotingProcessor.Finished += isOk => {
-        this.AddInfoLog($"Quoting finished with success: {isOk}");
-        _quotingProcessor?.Dispose();
-        _quotingProcessor = null;
-    };
+	_quotingProcessor.Finished += isOk => {
+		this.AddInfoLog($"Quoting finished with success: {isOk}");
+		_quotingProcessor?.Dispose();
+		_quotingProcessor = null;
+	};
 
-    // Start the processor
-    _quotingProcessor.Start();
+	// Start the processor
+	_quotingProcessor.Start();
 }
 ```
 
@@ -118,14 +118,14 @@ In the [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method, t
 ```cs
 protected override void OnStopped()
 {
-    // Unsubscribe to prevent memory leaks
-    Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
+	// Unsubscribe to prevent memory leaks
+	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-    // Release resources of the current processor if it exists
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	// Release resources of the current processor if it exists
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 
-    base.OnStopped();
+	base.OnStopped();
 }
 ```
 

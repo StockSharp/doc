@@ -17,19 +17,19 @@ Chart.AddElement(chartArea, _annotation);
 ```cs
 var data = new ChartDrawData.AnnotationData
 {
-    X1 = new DateTimeOffset(2017, 10, 02, 8, 30, 0, TimeSpan.FromHours(1)),
-    X2 = new DateTimeOffset(2017, 10, 02, 10, 30, 0, TimeSpan.FromHours(1)),
-    Y1 = 193.5m,
-    Y2 = 194m,
-    IsVisible = true,
-    Stroke = new SolidColorBrush(Color.FromRgb(0, 0, 255)),
-    Thickness = new Thickness(3),
-    Text = "New annotation",
-    HorizontalAlignment = HorizontalAlignment.Stretch,
-    VerticalAlignment = VerticalAlignment.Stretch,
-    LabelPlacement = LabelPlacement.Axis,
-    ShowLabel = true,
-    CoordinateMode = AnnotationCoordinateMode.Absolute,
+	X1 = new DateTimeOffset(2017, 10, 02, 8, 30, 0, TimeSpan.FromHours(1)),
+	X2 = new DateTimeOffset(2017, 10, 02, 10, 30, 0, TimeSpan.FromHours(1)),
+	Y1 = 193.5m,
+	Y2 = 194m,
+	IsVisible = true,
+	Stroke = new SolidColorBrush(Color.FromRgb(0, 0, 255)),
+	Thickness = new Thickness(3),
+	Text = "New annotation",
+	HorizontalAlignment = HorizontalAlignment.Stretch,
+	VerticalAlignment = VerticalAlignment.Stretch,
+	LabelPlacement = LabelPlacement.Axis,
+	ShowLabel = true,
+	CoordinateMode = AnnotationCoordinateMode.Absolute,
 };
 var drawData = new ChartDrawData();
 drawData.Add(_annotation, data);

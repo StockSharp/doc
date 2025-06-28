@@ -16,65 +16,65 @@
 ```cs
 public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, CancellationToken cancellationToken)
 {
-    var condition = (CoinbaseOrderCondition)regMsg.Condition;
+	var condition = (CoinbaseOrderCondition)regMsg.Condition;
 
-    switch (regMsg.OrderType)
-    {
-        case null:
-        case OrderTypes.Limit:
-        case OrderTypes.Market:
-            break;
-        case OrderTypes.Conditional:
-        {
-            // Обработка условных заявок, например, вывод средств
-            if (!condition.IsWithdraw)
-                break;
+	switch (regMsg.OrderType)
+	{
+		case null:
+		case OrderTypes.Limit:
+		case OrderTypes.Market:
+			break;
+		case OrderTypes.Conditional:
+		{
+			// Обработка условных заявок, например, вывод средств
+			if (!condition.IsWithdraw)
+				break;
 
-            var withdrawId = await _restClient.Withdraw(regMsg.SecurityId.SecurityCode, regMsg.Volume, condition.WithdrawInfo, cancellationToken);
+			var withdrawId = await _restClient.Withdraw(regMsg.SecurityId.SecurityCode, regMsg.Volume, condition.WithdrawInfo, cancellationToken);
 
-            SendOutMessage(new ExecutionMessage
-            {
-                DataTypeEx = DataType.Transactions,
-                OrderStringId = withdrawId,
-                ServerTime = CurrentTime.ConvertToUtc(),
-                OriginalTransactionId = regMsg.TransactionId,
-                OrderState = OrderStates.Done,
-                HasOrderInfo = true,
-            });
+			SendOutMessage(new ExecutionMessage
+			{
+				DataTypeEx = DataType.Transactions,
+				OrderStringId = withdrawId,
+				ServerTime = CurrentTime.ConvertToUtc(),
+				OriginalTransactionId = regMsg.TransactionId,
+				OrderState = OrderStates.Done,
+				HasOrderInfo = true,
+			});
 
-            await PortfolioLookupAsync(null, cancellationToken);
-            return;
-        }
-        default:
-            throw new NotSupportedException(LocalizedStrings.OrderUnsupportedType.Put(regMsg.OrderType, regMsg.TransactionId));
-    }
+			await PortfolioLookupAsync(null, cancellationToken);
+			return;
+		}
+		default:
+			throw new NotSupportedException(LocalizedStrings.OrderUnsupportedType.Put(regMsg.OrderType, regMsg.TransactionId));
+	}
 
-    // Определение типа заявки (рыночная или лимитная)
-    var isMarket = regMsg.OrderType == OrderTypes.Market;
-    var price = isMarket ? (decimal?)null : regMsg.Price;
-    
-    // Отправка заявки на биржу
-    var result = await _restClient.RegisterOrder(
-        regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
-        regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
-        condition?.StopPrice, regMsg.Volume, regMsg.TimeInForce,
-        regMsg.TillDate.EnsureToday(), regMsg.Leverage, cancellationToken);
+	// Определение типа заявки (рыночная или лимитная)
+	var isMarket = regMsg.OrderType == OrderTypes.Market;
+	var price = isMarket ? (decimal?)null : regMsg.Price;
+	
+	// Отправка заявки на биржу
+	var result = await _restClient.RegisterOrder(
+		regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
+		regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
+		condition?.StopPrice, regMsg.Volume, regMsg.TimeInForce,
+		regMsg.TillDate.EnsureToday(), regMsg.Leverage, cancellationToken);
 
-    var orderState = result.Status.ToOrderState();
+	var orderState = result.Status.ToOrderState();
 
-    // Обработка результата регистрации заявки
-    if (orderState == OrderStates.Failed)
-    {
-        SendOutMessage(new ExecutionMessage
-        {
-            DataTypeEx = DataType.Transactions,
-            ServerTime = result.CreationTime,
-            OriginalTransactionId = regMsg.TransactionId,
-            OrderState = OrderStates.Failed,
-            Error = new InvalidOperationException(),
-            HasOrderInfo = true,
-        });
-    }
+	// Обработка результата регистрации заявки
+	if (orderState == OrderStates.Failed)
+	{
+		SendOutMessage(new ExecutionMessage
+		{
+			DataTypeEx = DataType.Transactions,
+			ServerTime = result.CreationTime,
+			OriginalTransactionId = regMsg.TransactionId,
+			OrderState = OrderStates.Failed,
+			Error = new InvalidOperationException(),
+			HasOrderInfo = true,
+		});
+	}
 }
 ```
 
@@ -91,15 +91,15 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 ```cs
 public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg, CancellationToken cancellationToken)
 {
-    // Отправка запроса на замену заявки
-    await _restClient.EditOrder(
-        replaceMsg.OldOrderId.To<string>(), 
-        replaceMsg.Price, 
-        replaceMsg.Volume, 
-        cancellationToken);
-    
-    // Примечание: Обработка результата замены заявки обычно происходит
-    // в отдельном методе, который вызывается при получении обновления от биржи
+	// Отправка запроса на замену заявки
+	await _restClient.EditOrder(
+		replaceMsg.OldOrderId.To<string>(), 
+		replaceMsg.Price, 
+		replaceMsg.Volume, 
+		cancellationToken);
+	
+	// Примечание: Обработка результата замены заявки обычно происходит
+	// в отдельном методе, который вызывается при получении обновления от биржи
 }
 ```
 
@@ -128,15 +128,15 @@ public override bool IsReplaceCommandEditCurrent => true;
 ```cs
 public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-    // Проверка наличия идентификатора заявки
-    if (cancelMsg.OrderStringId.IsEmpty())
-        throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
+	// Проверка наличия идентификатора заявки
+	if (cancelMsg.OrderStringId.IsEmpty())
+		throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
 
-    // Отправка запроса на отмену заявки
-    await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
+	// Отправка запроса на отмену заявки
+	await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
 
-    // Примечание: Обработка результата отмены заявки обычно происходит
-    // в отдельном методе, который вызывается при получении обновления от биржи
+	// Примечание: Обработка результата отмены заявки обычно происходит
+	// в отдельном методе, который вызывается при получении обновления от биржи
 }
 ```
 
@@ -153,7 +153,7 @@ public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, C
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-    await _httpClient.CancelAllOrders(cancellationToken);
+	await _httpClient.CancelAllOrders(cancellationToken);
 }
 ```
 

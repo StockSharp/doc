@@ -9,14 +9,14 @@
 ```cs
 public class SmaStrategyMartingaleStrategy : Strategy
 {
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
-    private readonly StrategyParam<DataType> _candleType;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _candleType;
 
-    // Переменные для хранения предыдущих значений индикаторов
-    private decimal _prevLongValue;
-    private decimal _prevShortValue;
-    private bool _isFirstValue = true;
+	// Переменные для хранения предыдущих значений индикаторов
+	private decimal _prevLongValue;
+	private decimal _prevShortValue;
+	private bool _isFirstValue = true;
 }
 ```
 
@@ -37,31 +37,31 @@ public class SmaStrategyMartingaleStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Создание индикаторов
-    var longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	// Создание индикаторов
+	var longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 
-    // Добавление индикаторов в коллекцию стратегии для автоматического отслеживания IsFormed
-    Indicators.Add(longSma);
-    Indicators.Add(shortSma);
+	// Добавление индикаторов в коллекцию стратегии для автоматического отслеживания IsFormed
+	Indicators.Add(longSma);
+	Indicators.Add(shortSma);
 
-    // Создание подписки и привязка индикаторов
-    var subscription = SubscribeCandles(CandleType);
-    subscription
-        .Bind(longSma, shortSma, ProcessCandle)
-        .Start();
+	// Создание подписки и привязка индикаторов
+	var subscription = SubscribeCandles(CandleType);
+	subscription
+		.Bind(longSma, shortSma, ProcessCandle)
+		.Start();
 
-    // Настройка визуализации на графике
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawIndicator(area, longSma, System.Drawing.Color.Blue);
-        DrawIndicator(area, shortSma, System.Drawing.Color.Red);
-        DrawOwnTrades(area);
-    }
+	// Настройка визуализации на графике
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawIndicator(area, longSma, System.Drawing.Color.Blue);
+		DrawIndicator(area, shortSma, System.Drawing.Color.Red);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -72,47 +72,47 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    // Пропускаем незавершенные свечи
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Пропускаем незавершенные свечи
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Проверяем готовность стратегии к торговле
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Проверяем готовность стратегии к торговле
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Для первого значения только сохраняем данные без генерации сигналов
-    if (_isFirstValue)
-    {
-        _prevLongValue = longValue;
-        _prevShortValue = shortValue;
-        _isFirstValue = false;
-        return;
-    }
+	// Для первого значения только сохраняем данные без генерации сигналов
+	if (_isFirstValue)
+	{
+		_prevLongValue = longValue;
+		_prevShortValue = shortValue;
+		_isFirstValue = false;
+		return;
+	}
 
-    // Получаем текущее и предыдущее сравнение значений индикаторов
-    var isShortLessThenLongCurrent = shortValue < longValue;
-    var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
+	// Получаем текущее и предыдущее сравнение значений индикаторов
+	var isShortLessThenLongCurrent = shortValue < longValue;
+	var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
 
-    // Сохраняем текущие значения как предыдущие для следующей свечи
-    _prevLongValue = longValue;
-    _prevShortValue = shortValue;
+	// Сохраняем текущие значения как предыдущие для следующей свечи
+	_prevLongValue = longValue;
+	_prevShortValue = shortValue;
 
-    // Проверяем пересечение (сигнал)
-    if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
-        return;
+	// Проверяем пересечение (сигнал)
+	if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
+		return;
 
-    // Отменяем активные ордера перед выставлением новых
-    CancelActiveOrders();
+	// Отменяем активные ордера перед выставлением новых
+	CancelActiveOrders();
 
-    // Определяем направление сделки
-    var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
+	// Определяем направление сделки
+	var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
-    // Рассчитываем размер позиции (увеличиваем позицию с каждой сделкой - подход мартингейла)
-    var volume = Volume + Math.Abs(Position);
+	// Рассчитываем размер позиции (увеличиваем позицию с каждой сделкой - подход мартингейла)
+	var volume = Volume + Math.Abs(Position);
 
-    // Создаем и регистрируем ордер с соответствующей ценой
-    var price = Security.ShrinkPrice(shortValue);
-    RegisterOrder(CreateOrder(direction, price, volume));
+	// Создаем и регистрируем ордер с соответствующей ценой
+	var price = Security.ShrinkPrice(shortValue);
+	RegisterOrder(CreateOrder(direction, price, volume));
 }
 ```
 

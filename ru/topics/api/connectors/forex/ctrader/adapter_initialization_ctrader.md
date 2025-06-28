@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new cTraderMessageAdapter(Connector.TransactionIdGenerator)
 {
-    IsDemo = true, // Demo
+	IsDemo = true, // Demo
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

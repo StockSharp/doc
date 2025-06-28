@@ -58,13 +58,13 @@ RegisterOrder(order);
 // Создаем объект заявки напрямую
 var order = new Order
 {
-    Security = Security,
-    Portfolio = Portfolio,
-    Side = Sides.Buy,
-    Type = OrderTypes.Limit,
-    Price = price,
-    Volume = volume,
-    Comment = "Custom order"
+	Security = Security,
+	Portfolio = Portfolio,
+	Side = Sides.Buy,
+	Type = OrderTypes.Limit,
+	Price = price,
+	Volume = volume,
+	Comment = "Custom order"
 };
 
 // Регистрация заявки
@@ -88,16 +88,16 @@ OrderRegisterFailed += OnOrderRegisterFailed;
 
 private void OnOrderChanged(Order order)
 {
-    if (order.State == OrderStates.Done)
-    {
-        // Заявка исполнена - выполняем соответствующую логику
-    }
+	if (order.State == OrderStates.Done)
+	{
+		// Заявка исполнена - выполняем соответствующую логику
+	}
 }
 
 private void OnOrderRegisterFailed(OrderFail fail)
 {
-    // Обработка ошибки регистрации заявки
-    LogError($"Ошибка регистрации заявки: {fail.Error}");
+	// Обработка ошибки регистрации заявки
+	LogError($"Ошибка регистрации заявки: {fail.Error}");
 }
 ```
 
@@ -111,24 +111,24 @@ var order = BuyLimit(price, volume);
 
 // Создаем правило, которое сработает при исполнении заявки
 order
-    .WhenMatched(this)
-    .Do(() => {
-        // Действия после исполнения заявки
-        LogInfo($"Заявка {order.TransactionId} исполнена");
-        
-        // Например, выставляем стоп-заявку
-        var stopOrder = SellLimit(price * 0.95, volume);
-    })
-    .Apply(this);
+	.WhenMatched(this)
+	.Do(() => {
+		// Действия после исполнения заявки
+		LogInfo($"Заявка {order.TransactionId} исполнена");
+		
+		// Например, выставляем стоп-заявку
+		var stopOrder = SellLimit(price * 0.95, volume);
+	})
+	.Apply(this);
 
 // Правило для обработки ошибки регистрации
 order
-    .WhenRegisterFailed(this)
-    .Do(fail => {
-        LogError($"Ошибка регистрации заявки: {fail.Error}");
-        // Возможно, повторная попытка с другими параметрами
-    })
-    .Apply(this);
+	.WhenRegisterFailed(this)
+	.Do(fail => {
+		LogError($"Ошибка регистрации заявки: {fail.Error}");
+		// Возможно, повторная попытка с другими параметрами
+	})
+	.Apply(this);
 ```
 
 Подробные примеры использования правил с заявками можно найти в разделе [Примеры правил на заявки](event_model/samples/rule_order.md).
@@ -146,10 +146,10 @@ ClosePosition();
 
 // Защита позиции через стоп-лосс и тейк-профит
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Absolute),   // тейк-профит
-    stopLoss: new Unit(20, UnitTypes.Absolute),     // стоп-лосс
-    isStopTrailing: true,                        // трейлинг стоп
-    useMarketOrders: true                        // использовать рыночные заявки
+	takeProfit: new Unit(50, UnitTypes.Absolute),   // тейк-профит
+	stopLoss: new Unit(20, UnitTypes.Absolute),     // стоп-лосс
+	isStopTrailing: true,                        // трейлинг стоп
+	useMarketOrders: true                        // использовать рыночные заявки
 );
 ```
 
@@ -185,8 +185,8 @@ StartProtection(
 ```cs
 public SmaStrategy()
 {
-    _tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
-                   .SetDisplay("Режим торговли", "Разрешенные торговые операции", "Основные настройки");
+	_tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
+					.SetDisplay("Режим торговли", "Разрешенные торговые операции", "Основные настройки");
 }
 ```
 
@@ -218,20 +218,20 @@ public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = Str
 // Для выставления новой заявки, увеличивающей позицию, требуется полный режим торговли
 if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
 {
-    // Можем выставлять любые заявки
-    RegisterOrder(CreateOrder(Sides.Buy, price, volume));
+	// Можем выставлять любые заявки
+	RegisterOrder(CreateOrder(Sides.Buy, price, volume));
 }
 // Для закрытия позиции достаточно режима уменьшения позиции
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly) && Position != 0)
 {
-    // Можем только закрывать позицию
-    ClosePosition();
+	// Можем только закрывать позицию
+	ClosePosition();
 }
 // Для снятия активных заявок достаточно режима снятия заявок
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
 {
-    // Можем только снимать заявки
-    CancelActiveOrders();
+	// Можем только снимать заявки
+	CancelActiveOrders();
 }
 ```
 
@@ -242,13 +242,13 @@ else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Проверка, сформирована ли стратегия и в онлайн-режиме ли она,
-    // и разрешена ли торговля
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
-    
-    // Торговая логика
-    // ...
+	// Проверка, сформирована ли стратегия и в онлайн-режиме ли она,
+	// и разрешена ли торговля
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
+	
+	// Торговая логика
+	// ...
 }
 ```
 
@@ -257,62 +257,62 @@ private void ProcessCandle(ICandleMessage candle)
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Подписка на свечи
-    var subscription = new Subscription(
-        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-        Security);
-    
-    // Создание правила для обработки свечей
-    Connector
-        .WhenCandlesFinished(subscription)
-        .Do(ProcessCandle)
-        .Apply(this);
-    
-    Connector.Subscribe(subscription);
+	base.OnStarted(time);
+	
+	// Подписка на свечи
+	var subscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		Security);
+	
+	// Создание правила для обработки свечей
+	Connector
+		.WhenCandlesFinished(subscription)
+		.Do(ProcessCandle)
+		.Apply(this);
+	
+	Connector.Subscribe(subscription);
 }
 
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Проверка готовности стратегии к торговле
-    if (!this.IsFormedAndOnlineAndAllowTrading())
-        return;
-    
-    // Пример торговой логики на основе цены закрытия
-    if (candle.ClosePrice > _previousClose * 1.01)
-    {
-        // Вариант 1: Использование высокоуровневого метода
-        var order = BuyLimit(candle.ClosePrice, Volume);
-        
-        // Создаем правило для обработки исполнения заявки
-        order
-            .WhenMatched(this)
-            .Do(() => {
-                // При исполнении заявки выставляем стоп-лосс и тейк-профит
-                StartProtection(
-                    takeProfit: new Unit(50, UnitTypes.Absolute),
-                    stopLoss: new Unit(20, UnitTypes.Absolute)
-                );
-            })
-            .Apply(this);
-    }
-    else if (candle.ClosePrice < _previousClose * 0.99)
-    {
-        // Вариант 2: Раздельное создание и регистрация
-        var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
-        RegisterOrder(order);
-        
-        // Альтернативный способ обработки через событие
-        OrderChanged += (o) => {
-            if (o == order && o.State == OrderStates.Done)
-            {
-                // Действия после исполнения
-            }
-        };
-    }
-    
-    _previousClose = candle.ClosePrice;
+	// Проверка готовности стратегии к торговле
+	if (!this.IsFormedAndOnlineAndAllowTrading())
+		return;
+	
+	// Пример торговой логики на основе цены закрытия
+	if (candle.ClosePrice > _previousClose * 1.01)
+	{
+		// Вариант 1: Использование высокоуровневого метода
+		var order = BuyLimit(candle.ClosePrice, Volume);
+		
+		// Создаем правило для обработки исполнения заявки
+		order
+			.WhenMatched(this)
+			.Do(() => {
+				// При исполнении заявки выставляем стоп-лосс и тейк-профит
+				StartProtection(
+					takeProfit: new Unit(50, UnitTypes.Absolute),
+					stopLoss: new Unit(20, UnitTypes.Absolute)
+				);
+			})
+			.Apply(this);
+	}
+	else if (candle.ClosePrice < _previousClose * 0.99)
+	{
+		// Вариант 2: Раздельное создание и регистрация
+		var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
+		RegisterOrder(order);
+		
+		// Альтернативный способ обработки через событие
+		OrderChanged += (o) => {
+			if (o == order && o.State == OrderStates.Done)
+			{
+				// Действия после исполнения
+			}
+		};
+	}
+	
+	_previousClose = candle.ClosePrice;
 }
 ```
 

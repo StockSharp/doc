@@ -11,20 +11,20 @@ Parameters are created in the strategy constructor using the [Strategy.Param](xr
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _longSmaLength;
 
-    public int LongSmaLength
-    {
-        get => _longSmaLength.Value;
-        set => _longSmaLength.Value = value;
-    }
+	public int LongSmaLength
+	{
+		get => _longSmaLength.Value;
+		set => _longSmaLength.Value = value;
+	}
 
-    public SmaStrategy()
-    {
-        _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings");
-    }
+	public SmaStrategy()
+	{
+		_longSmaLength = Param(nameof(LongSmaLength), 80)
+							.SetGreaterThanZero()
+							.SetDisplay("Long SMA length", string.Empty, "Base settings");
+	}
 }
 ```
 
@@ -40,7 +40,7 @@ The [StrategyParam\<T\>.SetDisplay](xref:StockSharp.Algo.Strategies.StrategyPara
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetDisplay("Long SMA length", "Period of the long moving average", "Base settings");
+					.SetDisplay("Long SMA length", "Period of the long moving average", "Base settings");
 ```
 
 ### SetValidator
@@ -50,19 +50,19 @@ The [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetVal
 ```cs
 // Check that the number is greater than zero
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetValidator(new IntGreaterThanZeroAttribute());
+					.SetValidator(new IntGreaterThanZeroAttribute());
 
 // Check that the number is not negative
 _volume = Param(nameof(Volume), 1)
-           .SetValidator(new DecimalNotNegativeAttribute());
+			.SetValidator(new DecimalNotNegativeAttribute());
 
 // Check for value range
 _percentage = Param(nameof(Percentage), 50)
-               .SetValidator(new RangeAttribute(0, 100));
+				.SetValidator(new RangeAttribute(0, 100));
 
 // Check for required value
 _security = Param<Security>(nameof(Security))
-             .SetValidator(new RequiredAttribute());
+				.SetValidator(new RequiredAttribute());
 ```
 
 For convenience, [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) has built-in methods for the most common validators:
@@ -86,23 +86,23 @@ If the built-in validators are not sufficient, you can create your own by inheri
 ```cs
 public class EvenNumberAttribute : ValidationAttribute
 {
-    public EvenNumberAttribute()
-        : base("Value must be an even number.")
-    {
-    }
+	public EvenNumberAttribute()
+		: base("Value must be an even number.")
+	{
+	}
 
-    public override bool IsValid(object value)
-    {
-        if (value is int intValue)
-            return intValue % 2 == 0;
-        
-        return false;
-    }
+	public override bool IsValid(object value)
+	{
+		if (value is int intValue)
+			return intValue % 2 == 0;
+		
+		return false;
+	}
 }
 
 // Using custom validator
 _barCount = Param(nameof(BarCount), 10)
-             .SetValidator(new EvenNumberAttribute());
+				.SetValidator(new EvenNumberAttribute());
 ```
 
 ### SetHidden
@@ -111,7 +111,7 @@ The [StrategyParam\<T\>.SetHidden](xref:StockSharp.Algo.Strategies.StrategyParam
 
 ```cs
 _systemParam = Param(nameof(SystemParam), "value")
-                .SetHidden(true);
+				.SetHidden(true);
 ```
 
 ### SetBasic
@@ -120,7 +120,7 @@ The [StrategyParam\<T\>.SetBasic](xref:StockSharp.Algo.Strategies.StrategyParam`
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetBasic(true);
+					.SetBasic(true);
 ```
 
 ![strategy parameters basic advanced](../../../images/strategy_parameters_basic_advanced.png)
@@ -131,7 +131,7 @@ The [StrategyParam\<T\>.SetReadOnly](xref:StockSharp.Algo.Strategies.StrategyPar
 
 ```cs
 _calculatedParam = Param(nameof(CalculatedParam), 0)
-                    .SetReadOnly(true);
+					.SetReadOnly(true);
 ```
 
 ### SetCanOptimize and SetOptimize
@@ -140,8 +140,8 @@ The methods [StrategyParam\<T\>.SetCanOptimize](xref:StockSharp.Algo.Strategies.
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-                  .SetCanOptimize(true)
-                  .SetOptimize(10, 200, 10);
+					.SetCanOptimize(true)
+					.SetOptimize(10, 200, 10);
 ```
 
 In the example above, the parameter will be optimized in the range from 10 to 200 with a step of 10.
@@ -153,12 +153,12 @@ Strategy parameters are used like regular properties:
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-    _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    
-    // ...
+	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	
+	// ...
 }
 ```
 
@@ -169,16 +169,16 @@ Parameter values are automatically saved and loaded in the base [Strategy](xref:
 ```cs
 public override void Save(SettingsStorage settings)
 {
-    base.Save(settings);
-    
-    // Additional saving logic...
+	base.Save(settings);
+	
+	// Additional saving logic...
 }
 
 public override void Load(SettingsStorage settings)
 {
-    base.Load(settings);
-    
-    // Additional loading logic...
+	base.Load(settings);
+	
+	// Additional loading logic...
 }
 ```
 
@@ -189,50 +189,50 @@ Below is an example of a strategy with multiple parameters:
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _series;
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _series;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
 
-    public DataType Series
-    {
-        get => _series.Value;
-        set => _series.Value = value;
-    }
+	public DataType Series
+	{
+		get => _series.Value;
+		set => _series.Value = value;
+	}
 
-    public int LongSmaLength
-    {
-        get => _longSmaLength.Value;
-        set => _longSmaLength.Value = value;
-    }
+	public int LongSmaLength
+	{
+		get => _longSmaLength.Value;
+		set => _longSmaLength.Value = value;
+	}
 
-    public int ShortSmaLength
-    {
-        get => _shortSmaLength.Value;
-        set => _shortSmaLength.Value = value;
-    }
+	public int ShortSmaLength
+	{
+		get => _shortSmaLength.Value;
+		set => _shortSmaLength.Value = value;
+	}
 
-    public SmaStrategy()
-    {
-        base.Name = "SMA strategy";
+	public SmaStrategy()
+	{
+		base.Name = "SMA strategy";
 
-        Param("TypeId", GetType().GetTypeName(false)).SetHidden();
-        _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings")
-                          .SetCanOptimize(true)
-                          .SetOptimize(20, 200, 10);
-        
-        _shortSmaLength = Param(nameof(ShortSmaLength), 30)
-                          .SetGreaterThanZero()
-                          .SetDisplay("Short SMA length", string.Empty, "Base settings")
-                          .SetCanOptimize(true)
-                          .SetOptimize(5, 50, 5);
-        
-        _series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-                 .SetDisplay("Series", string.Empty, "Base settings");
-    }
+		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
+		_longSmaLength = Param(nameof(LongSmaLength), 80)
+							.SetGreaterThanZero()
+							.SetDisplay("Long SMA length", string.Empty, "Base settings")
+							.SetCanOptimize(true)
+							.SetOptimize(20, 200, 10);
+		
+		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
+							.SetGreaterThanZero()
+							.SetDisplay("Short SMA length", string.Empty, "Base settings")
+							.SetCanOptimize(true)
+							.SetOptimize(5, 50, 5);
+		
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+					.SetDisplay("Series", string.Empty, "Base settings");
+	}
 
-    // ...
+	// ...
 }
 ```
 

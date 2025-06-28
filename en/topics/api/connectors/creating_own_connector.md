@@ -32,11 +32,11 @@ First, we create the **CoinbaseMessageAdapter** message adapter class, inherited
 ```cs
 public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 {
-    private Authenticator _authenticator;
-    private HttpClient _restClient;
-    private SocketClient _socketClient;
+	private Authenticator _authenticator;
+	private HttpClient _restClient;
+	private SocketClient _socketClient;
 
-    // Other adapter fields and properties
+	// Other adapter fields and properties
 }
 ```
 
@@ -54,23 +54,23 @@ In the adapter constructor, you need to perform the following actions:
 
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
-    : base(transactionIdGenerator)
+	: base(transactionIdGenerator)
 {
-    HeartbeatInterval = TimeSpan.FromSeconds(5);
+	HeartbeatInterval = TimeSpan.FromSeconds(5);
 
-    // Add support for market data and transactions
-    this.AddMarketDataSupport();
-    this.AddTransactionalSupport();
+	// Add support for market data and transactions
+	this.AddMarketDataSupport();
+	this.AddTransactionalSupport();
 
-    // Remove unsupported message types
-    this.RemoveSupportedMessage(MessageTypes.Portfolio);
-    this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
+	// Remove unsupported message types
+	this.RemoveSupportedMessage(MessageTypes.Portfolio);
+	this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
 
-    // Add supported market data types
-    this.AddSupportedMarketDataType(DataType.Ticks);
-    this.AddSupportedMarketDataType(DataType.MarketDepth);
-    this.AddSupportedMarketDataType(DataType.Level1);
-    this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
+	// Add supported market data types
+	this.AddSupportedMarketDataType(DataType.Ticks);
+	this.AddSupportedMarketDataType(DataType.MarketDepth);
+	this.AddSupportedMarketDataType(DataType.Level1);
+	this.AddSupportedMarketDataType(DataType.CandleTimeFrame);
 }
 ```
 
@@ -81,38 +81,38 @@ To connect the adapter to the trading system, the [AsyncMessageAdapter.ConnectAs
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
 {
-    // Check the presence of keys for transactional mode
-    if (this.IsTransactional())
-    {
-        if (Key.IsEmpty())
-            throw new InvalidOperationException(LocalizedStrings.KeyNotSpecified);
+	// Check the presence of keys for transactional mode
+	if (this.IsTransactional())
+	{
+		if (Key.IsEmpty())
+			throw new InvalidOperationException(LocalizedStrings.KeyNotSpecified);
 
-        if (Secret.IsEmpty())
-            throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
-    }
+		if (Secret.IsEmpty())
+			throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
+	}
 
-    // Initialize the authenticator
-    _authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
+	// Initialize the authenticator
+	_authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
 
-    // Check that clients are not yet created
-    if (_restClient != null)
-        throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
+	// Check that clients are not yet created
+	if (_restClient != null)
+		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-    if (_socketClient != null)
-        throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
+	if (_socketClient != null)
+		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-    // Create REST client
-    _restClient = new(_authenticator) { Parent = this };
+	// Create REST client
+	_restClient = new(_authenticator) { Parent = this };
 
-    // Create and configure WebSocket client
-    _socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
-    SubscribePusherClient();
+	// Create and configure WebSocket client
+	_socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
+	SubscribePusherClient();
 
-    // Connect WebSocket client
-    await _socketClient.Connect(cancellationToken);
+	// Connect WebSocket client
+	await _socketClient.Connect(cancellationToken);
 
-    // Send successful connection message
-    SendOutMessage(new ConnectMessage());
+	// Send successful connection message
+	SendOutMessage(new ConnectMessage());
 }
 ```
 
@@ -121,23 +121,23 @@ To disconnect the adapter from the trading system, the [AsyncMessageAdapter.Disc
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
 {
-    // Check that clients are created
-    if (_restClient == null)
-        throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
+	// Check that clients are created
+	if (_restClient == null)
+		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-    if (_socketClient == null)
-        throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
+	if (_socketClient == null)
+		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-    // Free REST client resources
-    _restClient.Dispose();
-    _restClient = null;
+	// Free REST client resources
+	_restClient.Dispose();
+	_restClient = null;
 
-    // Disconnect WebSocket client
-    _socketClient.Disconnect();
+	// Disconnect WebSocket client
+	_socketClient.Disconnect();
 
-    // Send disconnection message
-    SendOutDisconnectMessage(true);
-    return default;
+	// Send disconnection message
+	SendOutDisconnectMessage(true);
+	return default;
 }
 ```
 
@@ -146,58 +146,58 @@ In addition, the adapter provides the [AsyncMessageAdapter.ResetAsync](xref:Stoc
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)
 {
-    // Free REST client resources
-    if (_restClient != null)
-    {
-        try
-        {
-            _restClient.Dispose();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Free REST client resources
+	if (_restClient != null)
+	{
+		try
+		{
+			_restClient.Dispose();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _restClient = null;
-    }
+		_restClient = null;
+	}
 
-    // Disconnect and clear WebSocket client
-    if (_socketClient != null)
-    {
-        try
-        {
-            UnsubscribePusherClient();
-            _socketClient.Disconnect();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Disconnect and clear WebSocket client
+	if (_socketClient != null)
+	{
+		try
+		{
+			UnsubscribePusherClient();
+			_socketClient.Disconnect();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _socketClient = null;
-    }
+		_socketClient = null;
+	}
 
-    // Free authenticator resources
-    if (_authenticator != null)
-    {
-        try
-        {
-            _authenticator.Dispose();
-        }
-        catch (Exception ex)
-        {
-            SendOutError(ex);
-        }
+	// Free authenticator resources
+	if (_authenticator != null)
+	{
+		try
+		{
+			_authenticator.Dispose();
+		}
+		catch (Exception ex)
+		{
+			SendOutError(ex);
+		}
 
-        _authenticator = null;
-    }
+		_authenticator = null;
+	}
 
-    // Clear additional data
-    _candlesTransIds.Clear();
+	// Clear additional data
+	_candlesTransIds.Clear();
 
-    // Send reset message
-    SendOutMessage(new ResetMessage());
-    return default;
+	// Send reset message
+	SendOutMessage(new ResetMessage());
+	return default;
 }
 ```
 

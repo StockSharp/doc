@@ -36,12 +36,12 @@ When using [S#](../api.md) (or when creating [strategies from code](../designer/
 // Creating a pattern indicator
 var patternIndicator = new CandlePatternIndicator
 {
-    // Setting the desired pattern
-    Pattern = new ExpressionCandlePattern("My pattern", new[]
-    {
-        new CandleExpressionCondition("C > O"), // Current candle is rising
-        new CandleExpressionCondition("pC < pO") // Previous candle is falling
-    })
+	// Setting the desired pattern
+	Pattern = new ExpressionCandlePattern("My pattern", new[]
+	{
+		new CandleExpressionCondition("C > O"), // Current candle is rising
+		new CandleExpressionCondition("pC < pO") // Previous candle is falling
+	})
 };
 
 // Adding the indicator to the collection
@@ -53,7 +53,7 @@ var result = patternIndicator.Process(candle);
 // Checking the result
 if (result.GetValue<bool>())
 {
-    // Pattern detected, perform necessary actions
+	// Pattern detected, perform necessary actions
 }
 ```
 

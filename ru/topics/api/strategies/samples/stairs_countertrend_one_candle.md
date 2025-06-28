@@ -9,7 +9,7 @@
 ```cs
 public class OneCandleCountertrendStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _candleType;
+	private readonly StrategyParam<DataType> _candleType;
 }
 ```
 
@@ -26,22 +26,22 @@ public class OneCandleCountertrendStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Создание подписки
-    var subscription = SubscribeCandles(CandleType);
-    
-    subscription
-        .Bind(ProcessCandle)
-        .Start();
+	// Создание подписки
+	var subscription = SubscribeCandles(CandleType);
+	
+	subscription
+		.Bind(ProcessCandle)
+		.Start();
 
-    // Настройка визуализации на графике
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawOwnTrades(area);
-    }
+	// Настройка визуализации на графике
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -52,25 +52,25 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Проверяем, завершена ли свеча
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Проверяем, завершена ли свеча
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Проверяем готовность стратегии к торговле
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Проверяем готовность стратегии к торговле
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Контртрендовая стратегия: покупка на медвежьей свече, продажа на бычьей свече
-    if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
-    {
-        // Бычья свеча - продажа
-        SellMarket(Volume + Math.Abs(Position));
-    }
-    else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
-    {
-        // Медвежья свеча - покупка
-        BuyMarket(Volume + Math.Abs(Position));
-    }
+	// Контртрендовая стратегия: покупка на медвежьей свече, продажа на бычьей свече
+	if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
+	{
+		// Бычья свеча - продажа
+		SellMarket(Volume + Math.Abs(Position));
+	}
+	else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
+	{
+		// Медвежья свеча - покупка
+		BuyMarket(Volume + Math.Abs(Position));
+	}
 }
 ```
 

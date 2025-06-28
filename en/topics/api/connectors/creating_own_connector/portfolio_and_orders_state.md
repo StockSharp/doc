@@ -17,44 +17,44 @@ To request the portfolio state, the **PortfolioLookupAsync** method is implement
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-    var transId = lookupMsg.TransactionId;
+	var transId = lookupMsg.TransactionId;
 
-    // Send confirmation of receiving the request
-    SendSubscriptionReply(transId);
+	// Send confirmation of receiving the request
+	SendSubscriptionReply(transId);
 
-    if (!lookupMsg.IsSubscribe)
-        return;
+	if (!lookupMsg.IsSubscribe)
+		return;
 
-    // Send a message with information about the portfolio
-    SendOutMessage(new PortfolioMessage
-    {
-        PortfolioName = PortfolioName,
-        BoardCode = BoardCodes.Coinbase,
-        OriginalTransactionId = transId,
-    });
+	// Send a message with information about the portfolio
+	SendOutMessage(new PortfolioMessage
+	{
+		PortfolioName = PortfolioName,
+		BoardCode = BoardCodes.Coinbase,
+		OriginalTransactionId = transId,
+	});
 
-    // Request current account balances
-    var accounts = await _restClient.GetAccounts(cancellationToken);
+	// Request current account balances
+	var accounts = await _restClient.GetAccounts(cancellationToken);
 
-    foreach (var account in accounts)
-    {
-        // For each account, create and send a message with information about the position
-        SendOutMessage(new PositionChangeMessage
-        {
-            PortfolioName = PortfolioName,
-            SecurityId = new SecurityId
-            {
-                SecurityCode = account.Currency,
-                BoardCode = BoardCodes.Coinbase,
-            },
-            ServerTime = CurrentTime.ConvertToUtc(),
-        }
-        .TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
-        .TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
-    }
+	foreach (var account in accounts)
+	{
+		// For each account, create and send a message with information about the position
+		SendOutMessage(new PositionChangeMessage
+		{
+			PortfolioName = PortfolioName,
+			SecurityId = new SecurityId
+			{
+				SecurityCode = account.Currency,
+				BoardCode = BoardCodes.Coinbase,
+			},
+			ServerTime = CurrentTime.ConvertToUtc(),
+		}
+		.TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
+		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
+	}
 
-    // Send a message about successful completion of the subscription
-    SendSubscriptionResult(lookupMsg);
+	// Send a message about successful completion of the subscription
+	SendSubscriptionResult(lookupMsg);
 }
 ```
 
@@ -73,54 +73,54 @@ To request the orders state, the **OrderStatusAsync** method is implemented. Thi
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the request
-    SendSubscriptionReply(statusMsg.TransactionId);
+	// Send confirmation of receiving the request
+	SendSubscriptionReply(statusMsg.TransactionId);
 
-    if (!statusMsg.IsSubscribe)
-        return;
+	if (!statusMsg.IsSubscribe)
+		return;
 
-    // Request the list of current orders
-    var orders = await _restClient.GetOrders(cancellationToken);
+	// Request the list of current orders
+	var orders = await _restClient.GetOrders(cancellationToken);
 
-    foreach (var order in orders)
-        ProcessOrder(order, statusMsg.TransactionId);
+	foreach (var order in orders)
+		ProcessOrder(order, statusMsg.TransactionId);
 
-    if (!statusMsg.IsHistoryOnly())
-    {
-        // Set up a subscription to receive order updates in real time
-        await _socketClient.SubscribeOrders(cancellationToken);
-    }
+	if (!statusMsg.IsHistoryOnly())
+	{
+		// Set up a subscription to receive order updates in real time
+		await _socketClient.SubscribeOrders(cancellationToken);
+	}
 
-    // Send a message about successful completion of the subscription
-    SendSubscriptionResult(statusMsg);
+	// Send a message about successful completion of the subscription
+	SendSubscriptionResult(statusMsg);
 }
 
 private void ProcessOrder(Order order, long originTransId)
 {
-    if (!long.TryParse(order.ClientOrderId, out var transId))
-        return;
+	if (!long.TryParse(order.ClientOrderId, out var transId))
+		return;
 
-    var state = order.Status.ToOrderState();
+	var state = order.Status.ToOrderState();
 
-    // Create and send a message with information about the order
-    SendOutMessage(new ExecutionMessage
-    {
-        ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
-        DataTypeEx = DataType.Transactions,
-        SecurityId = order.Product.ToStockSharp(),
-        TransactionId = originTransId == 0 ? 0 : transId,
-        OriginalTransactionId = originTransId,
-        OrderState = state,
-        Error = state == OrderStates.Failed ? new InvalidOperationException() : null,
-        OrderType = order.Type.ToOrderType(),
-        Side = order.Side.ToSide(),
-        OrderStringId = order.Id,
-        OrderPrice = order.Price?.ToDecimal() ?? 0,
-        OrderVolume = order.Size?.ToDecimal(),
-        TimeInForce = order.TimeInForce.ToTimeInForce(),
-        Balance = (decimal?)order.LeavesQuantity,
-        HasOrderInfo = true,
-    });
+	// Create and send a message with information about the order
+	SendOutMessage(new ExecutionMessage
+	{
+		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
+		DataTypeEx = DataType.Transactions,
+		SecurityId = order.Product.ToStockSharp(),
+		TransactionId = originTransId == 0 ? 0 : transId,
+		OriginalTransactionId = originTransId,
+		OrderState = state,
+		Error = state == OrderStates.Failed ? new InvalidOperationException() : null,
+		OrderType = order.Type.ToOrderType(),
+		Side = order.Side.ToSide(),
+		OrderStringId = order.Id,
+		OrderPrice = order.Price?.ToDecimal() ?? 0,
+		OrderVolume = order.Size?.ToDecimal(),
+		TimeInForce = order.TimeInForce.ToTimeInForce(),
+		Balance = (decimal?)order.LeavesQuantity,
+		HasOrderInfo = true,
+	});
 }
 ```
 
@@ -131,8 +131,8 @@ To process real-time order state updates, a separate method is usually implement
 ```cs
 private void SessionOnOrderReceived(Order order)
 {
-    // Process the received order update
-    // OriginTransId = 0, since this is a real-time update, not a response to a specific request
-    ProcessOrder(order, 0);
+	// Process the received order update
+	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
+	ProcessOrder(order, 0);
 }
 ```

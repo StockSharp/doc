@@ -29,17 +29,17 @@ To correctly determine when the strategy is ready, you need to add the indicator
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Creating indicators
-    _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-    _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-    
-    // Adding indicators to the collection
-    Indicators.Add(_shortSma);
-    Indicators.Add(_longSma);
-    
-    // ...
+	// Creating indicators
+	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	
+	// Adding indicators to the collection
+	Indicators.Add(_shortSma);
+	Indicators.Add(_longSma);
+	
+	// ...
 }
 ```
 
@@ -104,38 +104,38 @@ You should only add **independent indicators** to the [Indicators](xref:StockSha
 ```cs
 public class SmaStrategy : Strategy
 {
-    private SimpleMovingAverage _longSma;
-    private SimpleMovingAverage _shortSma;
-    
-    // ...
-    
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
-        
-        _longSma = new SimpleMovingAverage { Length = LongSmaLength };
-        _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-        
-        // Add indicators to the collection to track their state
-        Indicators.Add(_longSma);
-        Indicators.Add(_shortSma);
-        
-        // ...
-    }
-    
-    private void ProcessCandle(ICandleMessage candle)
-    {
-        // Process indicators
-        var longValue = _longSma.Process(candle);
-        var shortValue = _shortSma.Process(candle);
-        
-        // Check if the strategy is ready before executing trading logic
-        if (!IsFormed)
-            return;
-            
-        // Trading logic
-        // ...
-    }
+	private SimpleMovingAverage _longSma;
+	private SimpleMovingAverage _shortSma;
+	
+	// ...
+	
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
+		
+		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
+		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+		
+		// Add indicators to the collection to track their state
+		Indicators.Add(_longSma);
+		Indicators.Add(_shortSma);
+		
+		// ...
+	}
+	
+	private void ProcessCandle(ICandleMessage candle)
+	{
+		// Process indicators
+		var longValue = _longSma.Process(candle);
+		var shortValue = _shortSma.Process(candle);
+		
+		// Check if the strategy is ready before executing trading logic
+		if (!IsFormed)
+			return;
+			
+		// Trading logic
+		// ...
+	}
 }
 ```
 
@@ -146,16 +146,16 @@ To check if the strategy is ready for trading, the [IsFormedAndOnlineAndAllowTra
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Process indicators
-    var longValue = _longSma.Process(candle);
-    var shortValue = _shortSma.Process(candle);
-    
-    // Comprehensive check of strategy readiness
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
-        
-    // Trading logic
-    // ...
+	// Process indicators
+	var longValue = _longSma.Process(candle);
+	var shortValue = _shortSma.Process(candle);
+	
+	// Comprehensive check of strategy readiness
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
+		
+	// Trading logic
+	// ...
 }
 ```
 
@@ -166,35 +166,35 @@ In more complex strategies, it's important to properly organize work with indica
 ```cs
 public class ComplexStrategy : Strategy
 {
-    private SimpleMovingAverage _sma;
-    private RelativeStrengthIndex _rsi;
-    private BollingerBands _bollinger;
-    private StandardDeviation _stdev;
-    
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
-        
-        // Create indicators
-        _sma = new SimpleMovingAverage { Length = 20 };
-        _rsi = new RelativeStrengthIndex { Length = 14 };
-        
-        _stdev = new StandardDeviation { Length = 20 };
-        _bollinger = new BollingerBands 
-        { 
-            SmaIndicator = _sma,
-            DeviationIndicator = _stdev 
-        };
-        
-        // Add only independent indicators
-        Indicators.Add(_sma);
-        Indicators.Add(_rsi);
-        // Do not add _stdev and _bollinger as they depend on _sma
-        
-        // ...
-    }
-    
-    // ...
+	private SimpleMovingAverage _sma;
+	private RelativeStrengthIndex _rsi;
+	private BollingerBands _bollinger;
+	private StandardDeviation _stdev;
+	
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
+		
+		// Create indicators
+		_sma = new SimpleMovingAverage { Length = 20 };
+		_rsi = new RelativeStrengthIndex { Length = 14 };
+		
+		_stdev = new StandardDeviation { Length = 20 };
+		_bollinger = new BollingerBands 
+		{ 
+			SmaIndicator = _sma,
+			DeviationIndicator = _stdev 
+		};
+		
+		// Add only independent indicators
+		Indicators.Add(_sma);
+		Indicators.Add(_rsi);
+		// Do not add _stdev and _bollinger as they depend on _sma
+		
+		// ...
+	}
+	
+	// ...
 }
 ```
 
@@ -205,15 +205,15 @@ You can override the [IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsForme
 ```cs
 public override bool IsFormed
 {
-    get
-    {
-        // Standard indicator check
-        if (!base.IsFormed)
-            return false;
-            
-        // Additional strategy readiness conditions
-        return _customCondition && _additionalCheck;
-    }
+	get
+	{
+		// Standard indicator check
+		if (!base.IsFormed)
+			return false;
+			
+		// Additional strategy readiness conditions
+		return _customCondition && _additionalCheck;
+	}
 }
 ```
 

@@ -24,8 +24,8 @@ The first step is to create an [IStorageRegistry](xref:StockSharp.Algo.Storages.
 // storage for accessing historical data
 var storageRegistry = new StorageRegistry
 {
-    // set path to directory with historical data
-    DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
+	// set path to directory with historical data
+	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
 };
 ```
 
@@ -38,16 +38,16 @@ var storageRegistry = new StorageRegistry
 // create test instrument for testing
 var security = new Security
 {
-    Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
-    Code = secCode,
-    Board = board,
+	Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
+	Code = secCode,
+	Board = board,
 };
 
 // test portfolio
 var portfolio = new Portfolio
 {
-    Name = "test account",
-    BeginValue = 1000000,
+	Name = "test account",
+	BeginValue = 1000000,
 };
 ```
 
@@ -56,49 +56,49 @@ var portfolio = new Portfolio
 ```csharp
 // create connector for emulation
 var connector = new HistoryEmulationConnector(
-    new[] { security },
-    new[] { portfolio })
+	new[] { security },
+	new[] { portfolio })
 {
-    EmulationAdapter =
-    {
-        Emulator =
-        {
-            Settings =
-            {
-                // match order if historical price touched our limit order price
-                // By default it's turned off, price should go through the limit order price
-                // (more strict testing mode)
-                MatchOnTouch = false,
-                
-                // commission for trades
-                CommissionRules = new ICommissionRule[]
-                {
-                    new CommissionPerTradeRule { Value = 0.01m },
-                }
-            }
-        }
-    },
-    UseExternalCandleSource = emulationInfo.UseCandle != null,
-    CreateDepthFromOrdersLog = emulationInfo.UseOrderLog,
-    CreateTradesFromOrdersLog = emulationInfo.UseOrderLog,
-    HistoryMessageAdapter =
-    {
-        StorageRegistry = storageRegistry,
-        // set testing range
-        StartDate = startTime,
-        StopDate = stopTime,
-        OrderLogMarketDepthBuilders =
-        {
-            {
-                secId,
-                LocalizedStrings.ActiveLanguage == Languages.Russian
-                    ? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
-                    : new ItchOrderLogMarketDepthBuilder(secId)
-            }
-        }
-    },
-    // set market time update interval
-    MarketTimeChangedInterval = timeFrame,
+	EmulationAdapter =
+	{
+		Emulator =
+		{
+			Settings =
+			{
+				// match order if historical price touched our limit order price
+				// By default it's turned off, price should go through the limit order price
+				// (more strict testing mode)
+				MatchOnTouch = false,
+				
+				// commission for trades
+				CommissionRules = new ICommissionRule[]
+				{
+					new CommissionPerTradeRule { Value = 0.01m },
+				}
+			}
+		}
+	},
+	UseExternalCandleSource = emulationInfo.UseCandle != null,
+	CreateDepthFromOrdersLog = emulationInfo.UseOrderLog,
+	CreateTradesFromOrdersLog = emulationInfo.UseOrderLog,
+	HistoryMessageAdapter =
+	{
+		StorageRegistry = storageRegistry,
+		// set testing range
+		StartDate = startTime,
+		StopDate = stopTime,
+		OrderLogMarketDepthBuilders =
+		{
+			{
+				secId,
+				LocalizedStrings.ActiveLanguage == Languages.Russian
+					? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
+					: new ItchOrderLogMarketDepthBuilder(secId)
+			}
+		}
+	},
+	// set market time update interval
+	MarketTimeChangedInterval = timeFrame,
 };
 ```
 
@@ -109,56 +109,56 @@ When connecting, we set up receiving the necessary data depending on the testing
 ```csharp
 connector.SecurityReceived += (subscr, s) =>
 {
-    if (s != security)
-        return;
-        
-    // fill Level1 values
-    connector.EmulationAdapter.SendInMessage(level1Info);
-    
-    // subscribe to necessary data depending on testing settings
-    if (emulationInfo.UseMarketDepth)
-    {
-        connector.Subscribe(new(DataType.MarketDepth, security));
-        
-        // if we need to generate order books
-        if (generateDepths || emulationInfo.UseCandle != null)
-        {
-            // if no historical order book data is available but required by the strategy,
-            // use generator based on last prices
-            connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
-            {
-                Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
-                MaxAsksDepth = maxDepth,
-                MaxBidsDepth = maxDepth,
-                UseTradeVolume = true,
-                MaxVolume = maxVolume,
-                MinSpreadStepCount = 2,
-                MaxSpreadStepCount = 5,
-                MaxPriceStepCount = 3
-            });
-        }
-    }
-    
-    if (emulationInfo.UseOrderLog)
-    {
-        connector.Subscribe(new(DataType.OrderLog, security));
-    }
-    
-    if (emulationInfo.UseTicks)
-    {
-        connector.Subscribe(new(DataType.Ticks, security));
-    }
-    
-    if (emulationInfo.UseLevel1)
-    {
-        connector.Subscribe(new(DataType.Level1, security));
-    }
-    
-    // start strategy before emulation begins
-    strategy.Start();
-    
-    // start loading historical data
-    connector.Start();
+	if (s != security)
+		return;
+		
+	// fill Level1 values
+	connector.EmulationAdapter.SendInMessage(level1Info);
+	
+	// subscribe to necessary data depending on testing settings
+	if (emulationInfo.UseMarketDepth)
+	{
+		connector.Subscribe(new(DataType.MarketDepth, security));
+		
+		// if we need to generate order books
+		if (generateDepths || emulationInfo.UseCandle != null)
+		{
+			// if no historical order book data is available but required by the strategy,
+			// use generator based on last prices
+			connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
+			{
+				Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
+				MaxAsksDepth = maxDepth,
+				MaxBidsDepth = maxDepth,
+				UseTradeVolume = true,
+				MaxVolume = maxVolume,
+				MinSpreadStepCount = 2,
+				MaxSpreadStepCount = 5,
+				MaxPriceStepCount = 3
+			});
+		}
+	}
+	
+	if (emulationInfo.UseOrderLog)
+	{
+		connector.Subscribe(new(DataType.OrderLog, security));
+	}
+	
+	if (emulationInfo.UseTicks)
+	{
+		connector.Subscribe(new(DataType.Ticks, security));
+	}
+	
+	if (emulationInfo.UseLevel1)
+	{
+		connector.Subscribe(new(DataType.Level1, security));
+	}
+	
+	// start strategy before emulation begins
+	strategy.Start();
+	
+	// start loading historical data
+	connector.Start();
 };
 ```
 
@@ -168,38 +168,38 @@ connector.SecurityReceived += (subscr, s) =>
 // create trading strategy based on moving averages with periods 80 and 10
 var strategy = new SmaStrategy
 {
-    LongSma = 80,
-    ShortSma = 10,
-    Volume = 1,
-    Portfolio = portfolio,
-    Security = security,
-    Connector = connector,
-    LogLevel = DebugLogCheckBox.IsChecked == true ? LogLevels.Debug : LogLevels.Info,
-    // default interval is 1 min, which is excessive for a range of several months
-    UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
+	LongSma = 80,
+	ShortSma = 10,
+	Volume = 1,
+	Portfolio = portfolio,
+	Security = security,
+	Connector = connector,
+	LogLevel = DebugLogCheckBox.IsChecked == true ? LogLevels.Debug : LogLevels.Info,
+	// default interval is 1 min, which is excessive for a range of several months
+	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 };
 
 // configure the type of data used to build candles
 if (emulationInfo.UseCandle != null)
 {
-    strategy.CandleType = emulationInfo.UseCandle;
-    
-    if (strategy.CandleType != TimeSpan.FromMinutes(1).TimeFrame())
-    {
-        strategy.BuildFrom = TimeSpan.FromMinutes(1).TimeFrame();
-    }
+	strategy.CandleType = emulationInfo.UseCandle;
+	
+	if (strategy.CandleType != TimeSpan.FromMinutes(1).TimeFrame())
+	{
+		strategy.BuildFrom = TimeSpan.FromMinutes(1).TimeFrame();
+	}
 }
 else if (emulationInfo.UseTicks)
-    strategy.BuildFrom = DataType.Ticks;
+	strategy.BuildFrom = DataType.Ticks;
 else if (emulationInfo.UseLevel1)
 {
-    strategy.BuildFrom = DataType.Level1;
-    strategy.BuildField = emulationInfo.BuildField;
+	strategy.BuildFrom = DataType.Level1;
+	strategy.BuildField = emulationInfo.BuildField;
 }
 else if (emulationInfo.UseOrderLog)
-    strategy.BuildFrom = DataType.OrderLog;
+	strategy.BuildFrom = DataType.OrderLog;
 else if (emulationInfo.UseMarketDepth)
-    strategy.BuildFrom = DataType.MarketDepth;
+	strategy.BuildFrom = DataType.MarketDepth;
 ```
 
 ### 6. Visualizing results
@@ -214,29 +214,29 @@ var commissionCurve = equity.CreateCurve(LocalizedStrings.Commission + " " + emu
 
 strategy.PnLReceived2 += (s, pf, t, r, u, c) =>
 {
-    var data = equity.CreateData();
+	var data = equity.CreateData();
 
-    data
-        .Group(t)
-        .Add(pnlCurve, r - (c ?? 0))
-        .Add(realizedPnLCurve, r)
-        .Add(unrealizedPnLCurve, u ?? 0)
-        .Add(commissionCurve, c ?? 0);
+	data
+		.Group(t)
+		.Add(pnlCurve, r - (c ?? 0))
+		.Add(realizedPnLCurve, r)
+		.Add(unrealizedPnLCurve, u ?? 0)
+		.Add(commissionCurve, c ?? 0);
 
-    equity.Draw(data);
+	equity.Draw(data);
 };
 
 var posItems = pos.CreateCurve(emulationInfo.StrategyName, emulationInfo.CurveColor, DrawStyles.Line);
 
 strategy.PositionReceived += (s, p) =>
 {
-    var data = pos.CreateData();
+	var data = pos.CreateData();
 
-    data
-        .Group(p.LocalTime)
-        .Add(posItems, p.CurrentValue);
+	data
+		.Group(p.LocalTime)
+		.Add(posItems, p.CurrentValue);
 
-    pos.Draw(data);
+	pos.Draw(data);
 };
 
 // subscribe to progress updates
@@ -267,40 +267,40 @@ A separate tab with charts and statistics is created for each data type:
 // create testing modes
 _settings = new[]
 {
-    (
-        TicksCheckBox,
-        TicksProgress,
-        TicksParameterGrid,
-        // ticks
-        new EmulationInfo
-        {
-            UseTicks = true,
-            CurveColor = Colors.DarkGreen,
-            StrategyName = LocalizedStrings.Ticks
-        },
-        TicksChart,
-        TicksEquity,
-        TicksPosition
-    ),
+	(
+		TicksCheckBox,
+		TicksProgress,
+		TicksParameterGrid,
+		// ticks
+		new EmulationInfo
+		{
+			UseTicks = true,
+			CurveColor = Colors.DarkGreen,
+			StrategyName = LocalizedStrings.Ticks
+		},
+		TicksChart,
+		TicksEquity,
+		TicksPosition
+	),
 
-    (
-        TicksAndDepthsCheckBox,
-        TicksAndDepthsProgress,
-        TicksAndDepthsParameterGrid,
-        // ticks + order books
-        new EmulationInfo
-        {
-            UseTicks = true,
-            UseMarketDepth = true,
-            CurveColor = Colors.Red,
-            StrategyName = LocalizedStrings.TicksAndDepths
-        },
-        TicksAndDepthsChart,
-        TicksAndDepthsEquity,
-        TicksAndDepthsPosition
-    ),
-    
-    // other combinations of data types
+	(
+		TicksAndDepthsCheckBox,
+		TicksAndDepthsProgress,
+		TicksAndDepthsParameterGrid,
+		// ticks + order books
+		new EmulationInfo
+		{
+			UseTicks = true,
+			UseMarketDepth = true,
+			CurveColor = Colors.Red,
+			StrategyName = LocalizedStrings.TicksAndDepths
+		},
+		TicksAndDepthsChart,
+		TicksAndDepthsEquity,
+		TicksAndDepthsPosition
+	),
+	
+	// other combinations of data types
 };
 ```
 
@@ -313,46 +313,46 @@ The Moving Average (SMA) strategy has been redesigned and now uses a more modern
 ```csharp
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // create subscription to candles of the required type
-    var dt = CandleTimeFrame is null
-        ? CandleType
-        : DataType.Create(CandleType.MessageType, CandleTimeFrame);
+	// create subscription to candles of the required type
+	var dt = CandleTimeFrame is null
+		? CandleType
+		: DataType.Create(CandleType.MessageType, CandleTimeFrame);
 
-    var subscription = new Subscription(dt, Security)
-    {
-        MarketData =
-        {
-            IsFinishedOnly = true,
-            BuildFrom = BuildFrom,
-            BuildMode = BuildFrom is null ? MarketDataBuildModes.LoadAndBuild : MarketDataBuildModes.Build,
-            BuildField = BuildField,
-        }
-    };
+	var subscription = new Subscription(dt, Security)
+	{
+		MarketData =
+		{
+			IsFinishedOnly = true,
+			BuildFrom = BuildFrom,
+			BuildMode = BuildFrom is null ? MarketDataBuildModes.LoadAndBuild : MarketDataBuildModes.Build,
+			BuildField = BuildField,
+		}
+	};
 
-    // create indicators
-    var longSma = new SMA { Length = LongSma };
-    var shortSma = new SMA { Length = ShortSma };
+	// create indicators
+	var longSma = new SMA { Length = LongSma };
+	var shortSma = new SMA { Length = ShortSma };
 
-    // subscribe to candles and bind them to indicators
-    SubscribeCandles(subscription)
-        .Bind(longSma, shortSma, OnProcess)
-        .Start();
+	// subscribe to candles and bind them to indicators
+	SubscribeCandles(subscription)
+		.Bind(longSma, shortSma, OnProcess)
+		.Start();
 
-    // configure display on the chart
-    var area = CreateChartArea();
+	// configure display on the chart
+	var area = CreateChartArea();
 
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
-        DrawIndicator(area, longSma);
-        DrawOwnTrades(area);
-    }
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
+		DrawIndicator(area, longSma);
+		DrawOwnTrades(area);
+	}
 
-    // configure position protection
-    StartProtection(TakeValue, StopValue);
+	// configure position protection
+	StartProtection(TakeValue, StopValue);
 }
 ```
 
@@ -361,37 +361,37 @@ Candle processing and trading decisions are now separated into a dedicated metho
 ```csharp
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
+	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-    // check if the candle is completed
-    if (candle.State != CandleStates.Finished)
-        return;
+	// check if the candle is completed
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // analyze indicator crossover
-    var isShortLessThenLong = shortValue < longValue;
+	// analyze indicator crossover
+	var isShortLessThenLong = shortValue < longValue;
 
-    if (_isShortLessThenLong == null)
-    {
-        _isShortLessThenLong = isShortLessThenLong;
-    }
-    else if (_isShortLessThenLong != isShortLessThenLong) // crossover occurred
-    {
-        // if short is less than long - sell, otherwise buy
-        var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+	if (_isShortLessThenLong == null)
+	{
+		_isShortLessThenLong = isShortLessThenLong;
+	}
+	else if (_isShortLessThenLong != isShortLessThenLong) // crossover occurred
+	{
+		// if short is less than long - sell, otherwise buy
+		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-        // calculate volume for opening position or reversal
-        var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+		// calculate volume for opening position or reversal
+		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-        // use the candle's close price
-        var price = candle.ClosePrice;
+		// use the candle's close price
+		var price = candle.ClosePrice;
 
-        if (direction == Sides.Buy)
-            BuyLimit(price, volume);
-        else
-            SellLimit(price, volume);
+		if (direction == Sides.Buy)
+			BuyLimit(price, volume);
+		else
+			SellLimit(price, volume);
 
-        _isShortLessThenLong = isShortLessThenLong;
-    }
+		_isShortLessThenLong = isShortLessThenLong;
+	}
 }
 ```
 

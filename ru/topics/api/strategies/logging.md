@@ -23,11 +23,11 @@
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    LogVerbose("Стратегия запущена с параметрами: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-    
-    // ...
+	base.OnStarted(time);
+	
+	LogVerbose("Стратегия запущена с параметрами: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
+	
+	// ...
 }
 ```
 
@@ -38,10 +38,10 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    LogDebug("Обработка свечи: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
-        candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-    
-    // ...
+	LogDebug("Обработка свечи: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
+	
+	// ...
 }
 ```
 
@@ -52,12 +52,12 @@ private void ProcessCandle(ICandleMessage candle)
 ```cs
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
-    bool isShortGreaterThanLong = shortSma > longSma;
-    
-    LogInfo("Сигнал: {0}, Short SMA={1}, Long SMA={2}", 
-        isShortGreaterThanLong ? "Покупка" : "Продажа", shortSma, longSma);
-    
-    // ...
+	bool isShortGreaterThanLong = shortSma > longSma;
+	
+	LogInfo("Сигнал: {0}, Short SMA={1}, Long SMA={2}", 
+		isShortGreaterThanLong ? "Покупка" : "Продажа", shortSma, longSma);
+	
+	// ...
 }
 ```
 
@@ -68,13 +68,13 @@ private void CalculateSignal(decimal shortSma, decimal longSma)
 ```cs
 public void RegisterOrder(Order order)
 {
-    if (order.Volume <= 0)
-    {
-        LogWarning("Попытка зарегистрировать заявку с некорректным объемом: {0}", order.Volume);
-        return;
-    }
-    
-    // ...
+	if (order.Volume <= 0)
+	{
+		LogWarning("Попытка зарегистрировать заявку с некорректным объемом: {0}", order.Volume);
+		return;
+	}
+	
+	// ...
 }
 ```
 
@@ -85,12 +85,12 @@ public void RegisterOrder(Order order)
 ```cs
 try
 {
-    // Какие-то действия
+	// Какие-то действия
 }
 catch (Exception ex)
 {
-    LogError("Ошибка при выполнении операции: {0}", ex.Message);
-    Stop();
+	LogError("Ошибка при выполнении операции: {0}", ex.Message);
+	Stop();
 }
 ```
 
@@ -99,12 +99,12 @@ catch (Exception ex)
 ```cs
 try
 {
-    // Какие-то действия
+	// Какие-то действия
 }
 catch (Exception ex)
 {
-    LogError(ex);
-    Stop();
+	LogError(ex);
+	Stop();
 }
 ```
 
@@ -126,21 +126,21 @@ strategy.LogLevel = LogLevels.Info;
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<LogLevels> _logLevel;
-    
-    public SmaStrategy()
-    {
-        _logLevel = Param(nameof(LogLevel), LogLevels.Info)
-                    .SetDisplay("Уровень логирования", "Уровень детализации сообщений в логе", "Настройки логирования");
-    }
-    
-    public override LogLevels LogLevel
-    {
-        get => _logLevel.Value;
-        set => _logLevel.Value = value;
-    }
-    
-    // ...
+	private readonly StrategyParam<LogLevels> _logLevel;
+	
+	public SmaStrategy()
+	{
+		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
+					.SetDisplay("Уровень логирования", "Уровень детализации сообщений в логе", "Настройки логирования");
+	}
+	
+	public override LogLevels LogLevel
+	{
+		get => _logLevel.Value;
+		set => _logLevel.Value = value;
+	}
+	
+	// ...
 }
 ```
 
@@ -151,20 +151,20 @@ public class SmaStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    LogInfo("Стратегия {0} запущена в {1}. Инструмент: {2}, Портфель: {3}", 
-        Name, time, Security?.Code, Portfolio?.Name);
-    
-    // ...
+	base.OnStarted(time);
+	
+	LogInfo("Стратегия {0} запущена в {1}. Инструмент: {2}, Портфель: {3}", 
+		Name, time, Security?.Code, Portfolio?.Name);
+	
+	// ...
 }
 
 protected override void OnStopped()
 {
-    LogInfo("Стратегия {0} остановлена. Позиция: {1}, P&L: {2}", 
-        Name, Position, PnL);
-    
-    base.OnStopped();
+	LogInfo("Стратегия {0} остановлена. Позиция: {1}, P&L: {2}", 
+		Name, Position, PnL);
+	
+	base.OnStopped();
 }
 ```
 
@@ -173,14 +173,14 @@ protected override void OnStopped()
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
-    LogInfo("{0} {1} {2} по цене {3}. Объем: {4}", 
-        trade.Order.Direction == Sides.Buy ? "Куплено" : "Продано",
-        trade.Order.Security.Code,
-        trade.Order.Type,
-        trade.Trade.Price,
-        trade.Trade.Volume);
-    
-    base.OnNewMyTrade(trade);
+	LogInfo("{0} {1} {2} по цене {3}. Объем: {4}", 
+		trade.Order.Direction == Sides.Buy ? "Куплено" : "Продано",
+		trade.Order.Security.Code,
+		trade.Order.Type,
+		trade.Trade.Price,
+		trade.Trade.Volume);
+	
+	base.OnNewMyTrade(trade);
 }
 ```
 
@@ -189,10 +189,10 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-    LogError("Ошибка регистрации заявки {0}: {1}", 
-        fail.Order.TransactionId, fail.Error.Message);
-    
-    base.OnOrderRegisterFailed(fail, calcRisk);
+	LogError("Ошибка регистрации заявки {0}: {1}", 
+		fail.Order.TransactionId, fail.Error.Message);
+	
+	base.OnOrderRegisterFailed(fail, calcRisk);
 }
 ```
 

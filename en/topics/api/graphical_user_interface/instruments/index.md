@@ -27,7 +27,7 @@ IndexEditor.Securities.AddRange(SecurityProvider.LookupAll());
 SecurityProvider.Added += OnAdded;
 ...
 private void OnAdded(IEnumerable<Security> securities)
-     {
-         IndexEditor.Securities.AddRange(securities);
-     }
+		{
+			IndexEditor.Securities.AddRange(securities);
+		}
 ```

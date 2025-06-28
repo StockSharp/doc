@@ -12,7 +12,7 @@
 // Создание RemoteMarketDataDrive
 var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress, new FixMessageAdapter(new IncrementalIdGenerator()))
 {
-    Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
+	Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
 };
 
 // Этот код создает экземпляр RemoteMarketDataDrive для подключения к удаленному хранилищу.
@@ -28,8 +28,8 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 // Загрузка информации о инструментах
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
-    s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-    (c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
+	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 
@@ -45,10 +45,10 @@ var securities = securityStorage.LookupAll();
 // Загрузка маркет-данных
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-    var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
-    var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
+	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
+	var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
 
-    // ... (код загрузки данных)
+	// ... (код загрузки данных)
 }
 
 // Этот цикл перебирает все доступные типы данных для указанного инструмента.
@@ -63,15 +63,15 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 // Сохранение данных локально
 foreach (var dateTime in dates)
 {
-    using (var stream = remoteStorage.LoadStream(dateTime))
-    {
-        if (stream == Stream.Null)
-            continue;
+	using (var stream = remoteStorage.LoadStream(dateTime))
+	{
+		if (stream == Stream.Null)
+			continue;
 
-        localStorage.Drive.SaveStream(dateTime, stream);
-    }
+		localStorage.Drive.SaveStream(dateTime, stream);
+	}
 
-    // ... (код вывода данных)
+	// ... (код вывода данных)
 }
 
 // Этот код загружает данные за каждую дату из удаленного хранилища и сохраняет их в локальное хранилище.
@@ -91,11 +91,11 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 // Работа с различными типами данных
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-    // ... (код обработки каждого типа данных)
+	// ... (код обработки каждого типа данных)
 
-    // Обработка ошибок и логирование
-    Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
-    Console.WriteLine($"{dataType}={dateTime}");
+	// Обработка ошибок и логирование
+	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
+	Console.WriteLine($"{dataType}={dateTime}");
 }
 ```
 
