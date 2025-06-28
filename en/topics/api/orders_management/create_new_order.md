@@ -6,16 +6,16 @@ The example below shows the creation of an order and its registration on the exc
 
 ```cs
 	var order = new Order
-    {
-        Type = OrderTypes.Limit,
-        Portfolio = Portfolio.SelectedPortfolio,
-        Volume = Volume.Text.To<decimal>(),
-        Price = Price.Text.To<decimal>(),
-        Security = Security,
-        Direction = Sides.Buy,
-    };
-    _connector.RegisterOrder(order);
-    
+	{
+		Type = OrderTypes.Limit,
+		Portfolio = Portfolio.SelectedPortfolio,
+		Volume = Volume.Text.To<decimal>(),
+		Price = Price.Text.To<decimal>(),
+		Security = Security,
+		Direction = Sides.Buy,
+	};
+	_connector.RegisterOrder(order);
+	
 ```
 
 ## Recommended content

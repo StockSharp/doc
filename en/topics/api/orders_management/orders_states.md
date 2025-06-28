@@ -40,28 +40,28 @@ Example of handling an order reception event:
 ```cs
 private void InitConnector()
 {
-    // Subscribe to order reception event
-    Connector.OrderReceived += OnOrderReceived;
-    
-    // Subscribe to own trade reception event
-    Connector.OwnTradeReceived += OnOwnTradeReceived;
-    
-    // Subscribe to order registration failure event
-    Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
+	// Subscribe to order reception event
+	Connector.OrderReceived += OnOrderReceived;
+	
+	// Subscribe to own trade reception event
+	Connector.OwnTradeReceived += OnOwnTradeReceived;
+	
+	// Subscribe to order registration failure event
+	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
 
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-    // Process the received order
-    _ordersWindow.OrderGrid.Orders.TryAdd(order);
-    
-    // Important! Check if the order belongs to the current subscription
-    // to avoid duplicate processing
-    if (subscription == _myOrdersSubscription)
-    {
-        // Additional processing for the specific subscription
-        Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
-    }
+	// Process the received order
+	_ordersWindow.OrderGrid.Orders.TryAdd(order);
+	
+	// Important! Check if the order belongs to the current subscription
+	// to avoid duplicate processing
+	if (subscription == _myOrdersSubscription)
+	{
+		// Additional processing for the specific subscription
+		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+	}
 }
 ```
 
@@ -73,16 +73,16 @@ In some cases, you may need to explicitly request information about orders. For 
 // Create a subscription for orders of a specific portfolio
 var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
 {
-    TransactionId = Connector.TransactionIdGenerator.GetNextId(),
+	TransactionId = Connector.TransactionIdGenerator.GetNextId(),
 };
 
 // Handler for receiving orders
 Connector.OrderReceived += (subscription, order) =>
 {
-    if (subscription == ordersSubscription)
-    {
-        Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
-    }
+	if (subscription == ordersSubscription)
+	{
+		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+	}
 };
 
 // Start the subscription
@@ -123,31 +123,31 @@ private Subscription _portfolio2OrdersSubscription;
 
 private void RequestOrdersForDifferentPortfolios()
 {
-    // Subscription for orders of the first portfolio
-    _portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
-    
-    // Subscription for orders of the second portfolio
-    _portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
-    
-    // Common handler for receiving orders
-    Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
-    
-    // Start subscriptions
-    Connector.Subscribe(_portfolio1OrdersSubscription);
-    Connector.Subscribe(_portfolio2OrdersSubscription);
+	// Subscription for orders of the first portfolio
+	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
+	
+	// Subscription for orders of the second portfolio
+	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
+	
+	// Common handler for receiving orders
+	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
+	
+	// Start subscriptions
+	Connector.Subscribe(_portfolio1OrdersSubscription);
+	Connector.Subscribe(_portfolio2OrdersSubscription);
 }
 
 private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
 {
-    // Determine which subscription the order belongs to
-    if (subscription == _portfolio1OrdersSubscription)
-    {
-        // Process orders of the first portfolio
-    }
-    else if (subscription == _portfolio2OrdersSubscription)
-    {
-        // Process orders of the second portfolio
-    }
+	// Determine which subscription the order belongs to
+	if (subscription == _portfolio1OrdersSubscription)
+	{
+		// Process orders of the first portfolio
+	}
+	else if (subscription == _portfolio2OrdersSubscription)
+	{
+		// Process orders of the second portfolio
+	}
 }
 ```
 

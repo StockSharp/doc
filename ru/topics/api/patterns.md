@@ -36,12 +36,12 @@
 // Создание индикатора паттерна
 var patternIndicator = new CandlePatternIndicator
 {
-    // Установка нужного паттерна
-    Pattern = new ExpressionCandlePattern("Мой паттерн", new[]
-    {
-        new CandleExpressionCondition("C > O"), // Текущая свеча - растущая
-        new CandleExpressionCondition("pC < pO") // Предыдущая свеча - падающая
-    })
+	// Установка нужного паттерна
+	Pattern = new ExpressionCandlePattern("Мой паттерн", new[]
+	{
+		new CandleExpressionCondition("C > O"), // Текущая свеча - растущая
+		new CandleExpressionCondition("pC < pO") // Предыдущая свеча - падающая
+	})
 };
 
 // Добавляем индикатор в коллекцию
@@ -53,7 +53,7 @@ var result = patternIndicator.Process(candle);
 // Проверка результата
 if (result.GetValue<bool>())
 {
-    // Паттерн обнаружен, выполняем нужные действия
+	// Паттерн обнаружен, выполняем нужные действия
 }
 ```
 

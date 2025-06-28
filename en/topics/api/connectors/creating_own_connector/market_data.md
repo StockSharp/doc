@@ -31,9 +31,9 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
-    // Coinbase only supports 5-minute candles for updating via websockets
-    // Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
-    return subscription.DataType2 == _tf5min;
+	// Coinbase only supports 5-minute candles for updating via websockets
+	// Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
+	return subscription.DataType2 == _tf5min;
 }
 ```
 
@@ -46,99 +46,99 @@ To subscribe to candle data, the **OnTFCandlesSubscriptionAsync** method is impl
 ```cs
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the subscription request
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Send confirmation of receiving the subscription request
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        var tf = mdMsg.GetTimeFrame();
+	if (mdMsg.IsSubscribe)
+	{
+		var tf = mdMsg.GetTimeFrame();
 
-        // If historical data is requested
-        if (mdMsg.From is not null)
-        {
-            var from = (long)mdMsg.From.Value.ToUnix();
-            var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix();
-            var left = mdMsg.Count ?? long.MaxValue;
-            var step = (long)tf.Multiply(200).TotalSeconds;
-            var granularity = mdMsg.GetTimeFrame().ToNative();
+		// If historical data is requested
+		if (mdMsg.From is not null)
+		{
+			var from = (long)mdMsg.From.Value.ToUnix();
+			var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix();
+			var left = mdMsg.Count ?? long.MaxValue;
+			var step = (long)tf.Multiply(200).TotalSeconds;
+			var granularity = mdMsg.GetTimeFrame().ToNative();
 
-            while (from < to)
-            {
-                // Request historical candles
-                var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
-                var needBreak = true;
-                var last = from;
+			while (from < to)
+			{
+				// Request historical candles
+				var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
+				var needBreak = true;
+				var last = from;
 
-                foreach (var candle in candles.OrderBy(t => t.Time))
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
+				foreach (var candle in candles.OrderBy(t => t.Time))
+				{
+					cancellationToken.ThrowIfCancellationRequested();
 
-                    var time = (long)candle.Time.ToUnix();
+					var time = (long)candle.Time.ToUnix();
 
-                    if (time < from)
-                        continue;
+					if (time < from)
+						continue;
 
-                    if (time > to)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (time > to)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    // Send information about each historical candle
-                    SendOutMessage(new TimeFrameCandleMessage
-                    {
-                        OpenPrice = (decimal)candle.Open,
-                        ClosePrice = (decimal)candle.Close,
-                        HighPrice = (decimal)candle.High,
-                        LowPrice = (decimal)candle.Low,
-                        TotalVolume = (decimal)candle.Volume,
-                        OpenTime = candle.Time,
-                        State = CandleStates.Finished,
+					// Send information about each historical candle
+					SendOutMessage(new TimeFrameCandleMessage
+					{
+						OpenPrice = (decimal)candle.Open,
+						ClosePrice = (decimal)candle.Close,
+						HighPrice = (decimal)candle.High,
+						LowPrice = (decimal)candle.Low,
+						TotalVolume = (decimal)candle.Volume,
+						OpenTime = candle.Time,
+						State = CandleStates.Finished,
 
-                        // In case of identifying data by subscription, filling instrument information is not required
-                        OriginalTransactionId = mdMsg.TransactionId,
-                    });
+						// In case of identifying data by subscription, filling instrument information is not required
+						OriginalTransactionId = mdMsg.TransactionId,
+					});
 
-                    if (--left <= 0)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (--left <= 0)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    last = time;
-                    needBreak = false;
-                }
+					last = time;
+					needBreak = false;
+				}
 
-                if (needBreak)
-                    break;
+				if (needBreak)
+					break;
 
-                from = last;
-            }
-        }
+				from = last;
+			}
+		}
 
-        if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
-        {
-            // Subscribe to receive new candles in real time
-            _candlesTransIds[symbol] = mdMsg.TransactionId;
-            await _socketClient.SubscribeCandles(symbol, cancellationToken);
-  
-            // Notify that the subscription has transitioned to online status
-            SendSubscriptionResult(mdMsg);
-        }
-        else
-        {
-            // Send a response that the subscription is finished (not online)
-            SendSubscriptionFinished(mdMsg.TransactionId);
-        }
-    }
-    else
-    {
-        // Unsubscribe from receiving candles
-        _candlesTransIds.Remove(symbol);
-        await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
-    }
+		if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
+		{
+			// Subscribe to receive new candles in real time
+			_candlesTransIds[symbol] = mdMsg.TransactionId;
+			await _socketClient.SubscribeCandles(symbol, cancellationToken);
+	
+			// Notify that the subscription has transitioned to online status
+			SendSubscriptionResult(mdMsg);
+		}
+		else
+		{
+			// Send a response that the subscription is finished (not online)
+			SendSubscriptionFinished(mdMsg.TransactionId);
+		}
+	}
+	else
+	{
+		// Unsubscribe from receiving candles
+		_candlesTransIds.Remove(symbol);
+		await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -149,24 +149,24 @@ To process candle data received from the exchange in real time, a method with co
 ```cs
 private void SessionOnCandleReceived(Ohlc candle)
 {
-    // Check if there is an active subscription to candles for this instrument
-    if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
-        return;
+	// Check if there is an active subscription to candles for this instrument
+	if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
+		return;
 
-    // Create and send a message about a new candle
-    SendOutMessage(new TimeFrameCandleMessage
-    {
-        OpenPrice = (decimal)candle.Open,
-        ClosePrice = (decimal)candle.Close,
-        HighPrice = (decimal)candle.High,
-        LowPrice = (decimal)candle.Low,
-        TotalVolume = (decimal)candle.Volume,
-        OpenTime = candle.Time,
-        State = CandleStates.Active,  // The candle is considered active as it may still change
+	// Create and send a message about a new candle
+	SendOutMessage(new TimeFrameCandleMessage
+	{
+		OpenPrice = (decimal)candle.Open,
+		ClosePrice = (decimal)candle.Close,
+		HighPrice = (decimal)candle.High,
+		LowPrice = (decimal)candle.Low,
+		TotalVolume = (decimal)candle.Volume,
+		OpenTime = candle.Time,
+		State = CandleStates.Active,  // The candle is considered active as it may still change
 
-        // In case of identifying data by subscription, filling instrument information is not required
-        OriginalTransactionId = transId,
-    });
+		// In case of identifying data by subscription, filling instrument information is not required
+		OriginalTransactionId = transId,
+	});
 }
 ```
 
@@ -179,29 +179,29 @@ To subscribe to Level 1 changes, the **OnLevel1SubscriptionAsync** method is imp
 ```cs
 protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the subscription request
-    // This informs the system that the request has been received and is being processed
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Send confirmation of receiving the subscription request
+	// This informs the system that the request has been received and is being processed
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Convert the instrument identifier to a symbol understood by the exchange
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	// Convert the instrument identifier to a symbol understood by the exchange
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // If this is a subscription request
-        // Subscribe to receive Level 1 data via WebSocket
-        await _socketClient.SubscribeTicker(symbol, cancellationToken);
+	if (mdMsg.IsSubscribe)
+	{
+		// If this is a subscription request
+		// Subscribe to receive Level 1 data via WebSocket
+		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
-        // Send a message about successful subscription
-        // This informs the system that the subscription is set up and data will be received
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // If this is an unsubscription request
-        // Cancel the subscription to receive Level 1 data
-        await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
-    }
+		// Send a message about successful subscription
+		// This informs the system that the subscription is set up and data will be received
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// If this is an unsubscription request
+		// Cancel the subscription to receive Level 1 data
+		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -212,28 +212,28 @@ To process Level 1 data received from the exchange in real time, a method with c
 ```cs
 private void SessionOnTickerChanged(Ticker ticker)
 {
-    // Create a message with Level 1 data changes
-    SendOutMessage(new Level1ChangeMessage
-    {
-        // Specify the instrument identifier
-        SecurityId = ticker.Product.ToStockSharp(),
-        // Set the time of receiving data
-        ServerTime = CurrentTime.ConvertToUtc(),
-    }
-    // Add various Level 1 fields if they are present in the data from the exchange
-    .TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
-    .TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
-    .TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
-    .TryAdd(Level1Fields.LastTradeOrigin, ticker.LastTradeSide?.ToSide())
-    .TryAdd(Level1Fields.HighPrice, ticker.High?.ToDecimal())
-    .TryAdd(Level1Fields.LowPrice, ticker.Low?.ToDecimal())
-    .TryAdd(Level1Fields.Volume, ticker.Volume?.ToDecimal())
-    .TryAdd(Level1Fields.Change, ticker.Change?.ToDecimal())
-    .TryAdd(Level1Fields.BestBidPrice, ticker.Bid?.ToDecimal())
-    .TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
-    .TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
-    .TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
-    );
+	// Create a message with Level 1 data changes
+	SendOutMessage(new Level1ChangeMessage
+	{
+		// Specify the instrument identifier
+		SecurityId = ticker.Product.ToStockSharp(),
+		// Set the time of receiving data
+		ServerTime = CurrentTime.ConvertToUtc(),
+	}
+	// Add various Level 1 fields if they are present in the data from the exchange
+	.TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
+	.TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
+	.TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
+	.TryAdd(Level1Fields.LastTradeOrigin, ticker.LastTradeSide?.ToSide())
+	.TryAdd(Level1Fields.HighPrice, ticker.High?.ToDecimal())
+	.TryAdd(Level1Fields.LowPrice, ticker.Low?.ToDecimal())
+	.TryAdd(Level1Fields.Volume, ticker.Volume?.ToDecimal())
+	.TryAdd(Level1Fields.Change, ticker.Change?.ToDecimal())
+	.TryAdd(Level1Fields.BestBidPrice, ticker.Bid?.ToDecimal())
+	.TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
+	.TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
+	.TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
+	);
 }
 ```
 
@@ -258,27 +258,27 @@ To subscribe to order book changes, the **OnMarketDepthSubscriptionAsync** metho
 ```cs
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the subscription request
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Send confirmation of receiving the subscription request
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Convert the instrument identifier to a symbol understood by the exchange
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	// Convert the instrument identifier to a symbol understood by the exchange
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // If this is a subscription request
-        // Subscribe to receive order book data via WebSocket
-        await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
+	if (mdMsg.IsSubscribe)
+	{
+		// If this is a subscription request
+		// Subscribe to receive order book data via WebSocket
+		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
-        // Send a message about successful subscription
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // If this is an unsubscription request
-        // Cancel the subscription to receive order book data
-        await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
-    }
+		// Send a message about successful subscription
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// If this is an unsubscription request
+		// Cancel the subscription to receive order book data
+		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -289,30 +289,30 @@ To process order book data received from the exchange in real time, a method wit
 ```cs
 private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes)
 {
-    var bids = new List<QuoteChange>();
-    var asks = new List<QuoteChange>();
+	var bids = new List<QuoteChange>();
+	var asks = new List<QuoteChange>();
 
-    // Distribute changes by bids and asks
-    foreach (var change in changes)
-    {
-        var side = change.Side.ToSide();
-        var quotes = side == Sides.Buy ? bids : asks;
-        quotes.Add(new((decimal)change.Price, (decimal)change.Size));
-    }
+	// Distribute changes by bids and asks
+	foreach (var change in changes)
+	{
+		var side = change.Side.ToSide();
+		var quotes = side == Sides.Buy ? bids : asks;
+		quotes.Add(new((decimal)change.Price, (decimal)change.Size));
+	}
 
-    // Create and send a message with changes in the order book
-    SendOutMessage(new QuoteChangeMessage
-    {
-        SecurityId = symbol.ToStockSharp(),
-        Bids = bids.ToArray(),
-        Asks = asks.ToArray(),
-        ServerTime = CurrentTime.ConvertToUtc(),
+	// Create and send a message with changes in the order book
+	SendOutMessage(new QuoteChangeMessage
+	{
+		SecurityId = symbol.ToStockSharp(),
+		Bids = bids.ToArray(),
+		Asks = asks.ToArray(),
+		ServerTime = CurrentTime.ConvertToUtc(),
 
-        // Determine if this is a full order book snapshot or an incremental update.
-        // If the exchange always sends only full order books and does not support incrementality,
-        // then setting this property is not required at all
-        State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
-    });
+		// Determine if this is a full order book snapshot or an incremental update.
+		// If the exchange always sends only full order books and does not support incrementality,
+		// then setting this property is not required at all
+		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
+	});
 }
 ```
 
@@ -325,92 +325,92 @@ To subscribe to tick data, the **OnTicksSubscriptionAsync** method is implemente
 ```cs
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the subscription request
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Send confirmation of receiving the subscription request
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // If historical data is requested
-        if (mdMsg.From is not null)
-        {
-            var from = (long)mdMsg.From.Value.ToUnix(false);
-            var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix(false);
-            var left = mdMsg.Count ?? long.MaxValue;
+	if (mdMsg.IsSubscribe)
+	{
+		// If historical data is requested
+		if (mdMsg.From is not null)
+		{
+			var from = (long)mdMsg.From.Value.ToUnix(false);
+			var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix(false);
+			var left = mdMsg.Count ?? long.MaxValue;
 
-            while (from < to)
-            {
-                // Request historical trades
-                var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
-                var needBreak = true;
-                var last = from;
+			while (from < to)
+			{
+				// Request historical trades
+				var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
+				var needBreak = true;
+				var last = from;
 
-                foreach (var trade in trades.OrderBy(t => t.Time))
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
+				foreach (var trade in trades.OrderBy(t => t.Time))
+				{
+					cancellationToken.ThrowIfCancellationRequested();
 
-                    var time = (long)trade.Time.ToUnix();
+					var time = (long)trade.Time.ToUnix();
 
-                    if (time < from)
-                        continue;
+					if (time < from)
+						continue;
 
-                    if (time > to)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (time > to)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    // Send information about each historical trade
-                    SendOutMessage(new ExecutionMessage
-                    {
-                        // Set that the message carries information about a tick trade
-                        // (not a transaction like an order or own trade)
-                        DataTypeEx = DataType.Ticks,
+					// Send information about each historical trade
+					SendOutMessage(new ExecutionMessage
+					{
+						// Set that the message carries information about a tick trade
+						// (not a transaction like an order or own trade)
+						DataTypeEx = DataType.Ticks,
 
-                        TradeId = trade.TradeId,
-                        TradePrice = trade.Price?.ToDecimal(),
-                        TradeVolume = trade.Size?.ToDecimal(),
-                        ServerTime = trade.Time,
-                        OriginSide = trade.Side.ToSide(),
+						TradeId = trade.TradeId,
+						TradePrice = trade.Price?.ToDecimal(),
+						TradeVolume = trade.Size?.ToDecimal(),
+						ServerTime = trade.Time,
+						OriginSide = trade.Side.ToSide(),
 
-                        // For history, always set the subscription identifier,
-                        // so that the external code can understand which subscription the data was received for.
-                        // In case of identifying data by subscription, filling instrument information is not required
-                        OriginalTransactionId = mdMsg.TransactionId,
-                    });
+						// For history, always set the subscription identifier,
+						// so that the external code can understand which subscription the data was received for.
+						// In case of identifying data by subscription, filling instrument information is not required
+						OriginalTransactionId = mdMsg.TransactionId,
+					});
 
-                    if (--left <= 0)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (--left <= 0)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    last = time;
-                    needBreak = false;
-                }
+					last = time;
+					needBreak = false;
+				}
 
-                if (needBreak)
-                    break;
+				if (needBreak)
+					break;
 
-                from = last;
-            }
-        }
-        
-        if (!mdMsg.IsHistoryOnly())
-        {
-            // Subscribe to receive new trades in real time
-            await _socketClient.SubscribeTrades(symbol, cancellationToken);
-        }
+				from = last;
+			}
+		}
+		
+		if (!mdMsg.IsHistoryOnly())
+		{
+			// Subscribe to receive new trades in real time
+			await _socketClient.SubscribeTrades(symbol, cancellationToken);
+		}
 
-        // Send a message about successful subscription
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // Unsubscribe from receiving trades in real time
-        await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
-    }
+		// Send a message about successful subscription
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// Unsubscribe from receiving trades in real time
+		await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -421,20 +421,20 @@ To process tick data received from the exchange in real time, a method with code
 ```cs
 private void SessionOnTradeReceived(Trade trade)
 {
-    // Create and send a message about a new trade
-    SendOutMessage(new ExecutionMessage
-    {
-        // Set that the message carries information about a tick trade
-        // (not a transaction like an order or own trade)
-        DataTypeEx = DataType.Ticks,
+	// Create and send a message about a new trade
+	SendOutMessage(new ExecutionMessage
+	{
+		// Set that the message carries information about a tick trade
+		// (not a transaction like an order or own trade)
+		DataTypeEx = DataType.Ticks,
 
-        SecurityId = trade.ProductId.ToStockSharp(),
-        TradeId = trade.TradeId,
-        TradePrice = (decimal)trade.Price,
-        TradeVolume = (decimal)trade.Size,
-        ServerTime = trade.Time,
-        OriginSide = trade.Side.ToSide(),
-    });
+		SecurityId = trade.ProductId.ToStockSharp(),
+		TradeId = trade.TradeId,
+		TradePrice = (decimal)trade.Price,
+		TradeVolume = (decimal)trade.Size,
+		ServerTime = trade.Time,
+		OriginSide = trade.Side.ToSide(),
+	});
 }
 ```
 
@@ -449,26 +449,26 @@ Below is an example implementation of this method taken from the [BitStamp](http
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Send confirmation of receiving the subscription request
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Send confirmation of receiving the subscription request
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Convert the instrument identifier to a currency pair
-    var symbol = mdMsg.SecurityId.ToCurrency();
+	// Convert the instrument identifier to a currency pair
+	var symbol = mdMsg.SecurityId.ToCurrency();
 
-    if (mdMsg.IsSubscribe)
-    {
-        if (!mdMsg.IsHistoryOnly())
-        {
-            // Subscribe to receive order log in real time
-            await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
-        }
+	if (mdMsg.IsSubscribe)
+	{
+		if (!mdMsg.IsHistoryOnly())
+		{
+			// Subscribe to receive order log in real time
+			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
+		}
 
-        // Send a message about successful subscription
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-        // Unsubscribe from receiving order log
-        await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
+		// Send a message about successful subscription
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+		// Unsubscribe from receiving order log
+		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
 
@@ -477,18 +477,18 @@ When processing order log data received from the exchange, a separate method is 
 ```cs
 private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
 {
-    // Create and send a message with information about a new entry in the order log
-    SendOutMessage(new ExecutionMessage
-    {
-        DataTypeEx = DataType.OrderLog,
-        SecurityId = symbol.ToStockSharp(),
-        ServerTime = order.Time,
-        OrderVolume = (decimal)order.Amount,
-        OrderPrice = (decimal)order.Price,
-        OrderId = order.Id,
-        Side = order.Type.ToSide(),
-        OrderState = state,
-    });
+	// Create and send a message with information about a new entry in the order log
+	SendOutMessage(new ExecutionMessage
+	{
+		DataTypeEx = DataType.OrderLog,
+		SecurityId = symbol.ToStockSharp(),
+		ServerTime = order.Time,
+		OrderVolume = (decimal)order.Amount,
+		OrderPrice = (decimal)order.Price,
+		OrderId = order.Id,
+		Side = order.Type.ToSide(),
+		OrderState = state,
+	});
 }
 ```
 

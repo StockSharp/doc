@@ -9,12 +9,12 @@
 ```cs
 public class MqSpreadStrategy : Strategy
 {
-    private readonly StrategyParam<MarketPriceTypes> _priceType;
-    private readonly StrategyParam<Unit> _priceOffset;
-    private readonly StrategyParam<Unit> _bestPriceOffset;
+	private readonly StrategyParam<MarketPriceTypes> _priceType;
+	private readonly StrategyParam<Unit> _priceOffset;
+	private readonly StrategyParam<Unit> _bestPriceOffset;
 
-    private QuotingProcessor _buyProcessor;
-    private QuotingProcessor _sellProcessor;
+	private QuotingProcessor _buyProcessor;
+	private QuotingProcessor _sellProcessor;
 }
 ```
 
@@ -33,11 +33,11 @@ public class MqSpreadStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Подписка на изменения рыночного времени для обновления котировок
-    Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
-    Connector_CurrentTimeChanged(new TimeSpan());
+	// Подписка на изменения рыночного времени для обновления котировок
+	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
+	Connector_CurrentTimeChanged(new TimeSpan());
 }
 ```
 
@@ -48,118 +48,118 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-    // Создаем новые процессоры только при нулевой позиции и если текущие остановлены
-    if (Position != 0)
-        return;
+	// Создаем новые процессоры только при нулевой позиции и если текущие остановлены
+	if (Position != 0)
+		return;
 
-    if (_buyProcessor != null && _buyProcessor.LeftVolume > 0)
-        return;
+	if (_buyProcessor != null && _buyProcessor.LeftVolume > 0)
+		return;
 
-    if (_sellProcessor != null && _sellProcessor.LeftVolume > 0)
-        return;
+	if (_sellProcessor != null && _sellProcessor.LeftVolume > 0)
+		return;
 
-    // Освобождаем ресурсы существующих процессоров
-    _buyProcessor?.Dispose();
-    _buyProcessor = null;
+	// Освобождаем ресурсы существующих процессоров
+	_buyProcessor?.Dispose();
+	_buyProcessor = null;
 
-    _sellProcessor?.Dispose();
-    _sellProcessor = null;
+	_sellProcessor?.Dispose();
+	_sellProcessor = null;
 
-    // Создаем поведения для рыночного котирования
-    var buyBehavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	// Создаем поведения для рыночного котирования
+	var buyBehavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    var sellBehavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	var sellBehavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    // Создаем процессор для покупки
-    _buyProcessor = new QuotingProcessor(
-        buyBehavior,
-        Security,
-        Portfolio,
-        Sides.Buy,
-        Volume,
-        Volume, // Максимальный объем заявки
-        TimeSpan.Zero, // Без таймаута
-        this, // Стратегия реализует ISubscriptionProvider
-        this, // Стратегия реализует IMarketRuleContainer
-        this, // Стратегия реализует ITransactionProvider
-        this, // Стратегия реализует ITimeProvider
-        this, // Стратегия реализует IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
-        true, // Использовать цены стакана
-        true  // Использовать цену последней сделки, если стакан пуст
-    )
-    {
-        Parent = this
-    };
+	// Создаем процессор для покупки
+	_buyProcessor = new QuotingProcessor(
+		buyBehavior,
+		Security,
+		Portfolio,
+		Sides.Buy,
+		Volume,
+		Volume, // Максимальный объем заявки
+		TimeSpan.Zero, // Без таймаута
+		this, // Стратегия реализует ISubscriptionProvider
+		this, // Стратегия реализует IMarketRuleContainer
+		this, // Стратегия реализует ITransactionProvider
+		this, // Стратегия реализует ITimeProvider
+		this, // Стратегия реализует IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
+		true, // Использовать цены стакана
+		true  // Использовать цену последней сделки, если стакан пуст
+	)
+	{
+		Parent = this
+	};
 
-    // Создаем процессор для продажи
-    _sellProcessor = new QuotingProcessor(
-        sellBehavior,
-        Security,
-        Portfolio,
-        Sides.Sell,
-        Volume,
-        Volume, // Максимальный объем заявки
-        TimeSpan.Zero, // Без таймаута
-        this, // Стратегия реализует ISubscriptionProvider
-        this, // Стратегия реализует IMarketRuleContainer
-        this, // Стратегия реализует ITransactionProvider
-        this, // Стратегия реализует ITimeProvider
-        this, // Стратегия реализует IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
-        true, // Использовать цены стакана
-        true  // Использовать цену последней сделки, если стакан пуст
-    )
-    {
-        Parent = this
-    };
+	// Создаем процессор для продажи
+	_sellProcessor = new QuotingProcessor(
+		sellBehavior,
+		Security,
+		Portfolio,
+		Sides.Sell,
+		Volume,
+		Volume, // Максимальный объем заявки
+		TimeSpan.Zero, // Без таймаута
+		this, // Стратегия реализует ISubscriptionProvider
+		this, // Стратегия реализует IMarketRuleContainer
+		this, // Стратегия реализует ITransactionProvider
+		this, // Стратегия реализует ITimeProvider
+		this, // Стратегия реализует IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
+		true, // Использовать цены стакана
+		true  // Использовать цену последней сделки, если стакан пуст
+	)
+	{
+		Parent = this
+	};
 
-    // Логируем создание новых процессоров котирования
-    this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	// Логируем создание новых процессоров котирования
+	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
 
-    // Подписываемся на события процессора покупки для логирования
-    _buyProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+	// Подписываемся на события процессора покупки для логирования
+	_buyProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
 
-    _buyProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+	_buyProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
 
-    _buyProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_buyProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _buyProcessor.Finished += isOk => {
-        this.AddInfoLog($"Buy quoting finished with success: {isOk}");
-        _buyProcessor?.Dispose();
-        _buyProcessor = null;
-    };
+	_buyProcessor.Finished += isOk => {
+		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		_buyProcessor?.Dispose();
+		_buyProcessor = null;
+	};
 
-    // Подписываемся на события процессора продажи для логирования
-    _sellProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+	// Подписываемся на события процессора продажи для логирования
+	_sellProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
 
-    _sellProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+	_sellProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
 
-    _sellProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_sellProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _sellProcessor.Finished += isOk => {
-        this.AddInfoLog($"Sell quoting finished with success: {isOk}");
-        _sellProcessor?.Dispose();
-        _sellProcessor = null;
-    };
+	_sellProcessor.Finished += isOk => {
+		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		_sellProcessor?.Dispose();
+		_sellProcessor = null;
+	};
 
-    // Запускаем оба процессора
-    _buyProcessor.Start();
-    _sellProcessor.Start();
+	// Запускаем оба процессора
+	_buyProcessor.Start();
+	_sellProcessor.Start();
 }
 ```
 
@@ -170,17 +170,17 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 ```cs
 protected override void OnStopped()
 {
-    // Отписываемся для предотвращения утечек памяти
-    Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
+	// Отписываемся для предотвращения утечек памяти
+	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-    // Освобождаем ресурсы процессоров
-    _buyProcessor?.Dispose();
-    _buyProcessor = null;
+	// Освобождаем ресурсы процессоров
+	_buyProcessor?.Dispose();
+	_buyProcessor = null;
 
-    _sellProcessor?.Dispose();
-    _sellProcessor = null;
+	_sellProcessor?.Dispose();
+	_sellProcessor = null;
 
-    base.OnStopped();
+	base.OnStopped();
 }
 ```
 

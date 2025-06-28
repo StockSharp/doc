@@ -14,18 +14,18 @@ To search for instruments, you need to create an instance of the [Subscription](
 // Create a filter object for search
 var lookupMessage = new SecurityLookupMessage
 {
-    // Set search criteria
-    SecurityId = new SecurityId
-    {
-        // Search by instrument code (you can use a mask like "AAPL*")
-        SecurityCode = "AAPL",
-        // Optionally, you can specify the board code
-        BoardCode = "NASDAQ"
-    },
-    // You can specify the instrument type
-    SecurityType = SecurityTypes.Stock,
-    // Set transaction ID
-    TransactionId = Connector.TransactionIdGenerator.GetNextId()
+	// Set search criteria
+	SecurityId = new SecurityId
+	{
+		// Search by instrument code (you can use a mask like "AAPL*")
+		SecurityCode = "AAPL",
+		// Optionally, you can specify the board code
+		BoardCode = "NASDAQ"
+	},
+	// You can specify the instrument type
+	SecurityType = SecurityTypes.Stock,
+	// Set transaction ID
+	TransactionId = Connector.TransactionIdGenerator.GetNextId()
 };
 
 // Create a subscription for instrument search
@@ -56,31 +56,31 @@ After creating the subscription, you need to subscribe to events for receiving i
 // Handler for instrument receiving event
 private void OnSecurityReceived(Subscription subscription, Security security)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
-    
-    // Here you can add the instrument to a collection or perform other actions
-    Securities.Add(security);
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
+	
+	// Here you can add the instrument to a collection or perform other actions
+	Securities.Add(security);
 }
 
 // Handler for search completion event
 private void OnSubscriptionFinished(Subscription subscription)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
 }
 
 // Subscription error handler
 private void OnSubscriptionFailed(Subscription subscription, Exception error, bool isSubscribe)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Instrument search error: {error.Message}");
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Instrument search error: {error.Message}");
 }
 
 // Subscribe to events
@@ -99,77 +99,77 @@ Below is a complete example of a method for searching instruments:
 ```csharp
 public void FindSecurities(string searchCode, SecurityTypes? securityType = null)
 {
-    // Create an object for instrument search
-    var lookupMessage = new SecurityLookupMessage
-    {
-        SecurityId = new SecurityId
-        {
-            SecurityCode = searchCode,
-            // If you need to search on a specific board
-            // BoardCode = ExchangeBoard.Nyse.Code,
-        },
-        SecurityType = securityType,
-        TransactionId = Connector.TransactionIdGenerator.GetNextId()
-    };
-    
-    // Create a subscription
-    var subscription = new Subscription(lookupMessage);
-    
-    // Clear the collection for search results
-    _searchResults.Clear();
-    
-    // Temporary collection for accumulating results
-    var foundSecurities = new List<Security>();
-    
-    // Subscription for receiving instruments
-    void OnSecurityReceived(Subscription sub, Security security)
-    {
-        if (sub != subscription)
-            return;
-            
-        // Add the found instrument to the collection
-        foundSecurities.Add(security);
-        Console.WriteLine($"Found: {security.Id}, {security.Name}");
-    }
-    
-    // Subscription for search completion
-    void OnSubscriptionFinished(Subscription sub)
-    {
-        if (sub != subscription)
-            return;
-            
-        // Copy results to the main collection
-        _searchResults.AddRange(foundSecurities);
-        
-        Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
-        
-        // Unsubscribe from events
-        Connector.SecurityReceived -= OnSecurityReceived;
-        Connector.SubscriptionFinished -= OnSubscriptionFinished;
-        Connector.SubscriptionFailed -= OnSubscriptionFailed;
-    }
-    
-    // Handling subscription errors
-    void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
-    {
-        if (sub != subscription)
-            return;
-            
-        Console.WriteLine($"Instrument search error: {error.Message}");
-        
-        // Unsubscribe from events
-        Connector.SecurityReceived -= OnSecurityReceived;
-        Connector.SubscriptionFinished -= OnSubscriptionFinished;
-        Connector.SubscriptionFailed -= OnSubscriptionFailed;
-    }
-    
-    // Subscribe to events
-    Connector.SecurityReceived += OnSecurityReceived;
-    Connector.SubscriptionFinished += OnSubscriptionFinished;
-    Connector.SubscriptionFailed += OnSubscriptionFailed;
-    
-    // Send the search request
-    Connector.Subscribe(subscription);
+	// Create an object for instrument search
+	var lookupMessage = new SecurityLookupMessage
+	{
+		SecurityId = new SecurityId
+		{
+			SecurityCode = searchCode,
+			// If you need to search on a specific board
+			// BoardCode = ExchangeBoard.Nyse.Code,
+		},
+		SecurityType = securityType,
+		TransactionId = Connector.TransactionIdGenerator.GetNextId()
+	};
+	
+	// Create a subscription
+	var subscription = new Subscription(lookupMessage);
+	
+	// Clear the collection for search results
+	_searchResults.Clear();
+	
+	// Temporary collection for accumulating results
+	var foundSecurities = new List<Security>();
+	
+	// Subscription for receiving instruments
+	void OnSecurityReceived(Subscription sub, Security security)
+	{
+		if (sub != subscription)
+			return;
+			
+		// Add the found instrument to the collection
+		foundSecurities.Add(security);
+		Console.WriteLine($"Found: {security.Id}, {security.Name}");
+	}
+	
+	// Subscription for search completion
+	void OnSubscriptionFinished(Subscription sub)
+	{
+		if (sub != subscription)
+			return;
+			
+		// Copy results to the main collection
+		_searchResults.AddRange(foundSecurities);
+		
+		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
+		
+		// Unsubscribe from events
+		Connector.SecurityReceived -= OnSecurityReceived;
+		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionFailed -= OnSubscriptionFailed;
+	}
+	
+	// Handling subscription errors
+	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
+	{
+		if (sub != subscription)
+			return;
+			
+		Console.WriteLine($"Instrument search error: {error.Message}");
+		
+		// Unsubscribe from events
+		Connector.SecurityReceived -= OnSecurityReceived;
+		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionFailed -= OnSubscriptionFailed;
+	}
+	
+	// Subscribe to events
+	Connector.SecurityReceived += OnSecurityReceived;
+	Connector.SubscriptionFinished += OnSubscriptionFinished;
+	Connector.SubscriptionFailed += OnSubscriptionFailed;
+	
+	// Send the search request
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -180,30 +180,30 @@ In a graphical application, instrument search is often called from a button clic
 ```csharp
 private void FindButton_Click(object sender, RoutedEventArgs e)
 {
-    // Get search criteria from the text field
-    var searchText = SearchTextBox.Text;
-    
-    if (string.IsNullOrWhiteSpace(searchText))
-    {
-        MessageBox.Show("Enter a search criterion");
-        return;
-    }
-    
-    // Create and send a search subscription
-    var lookupMessage = new SecurityLookupMessage
-    {
-        SecurityId = new SecurityId { SecurityCode = searchText },
-        // If a type is selected in the interface
-        SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
-    };
-    
-    var subscription = new Subscription(lookupMessage);
-    
-    // Here you can show a loading indicator
-    LoadingIndicator.Visibility = Visibility.Visible;
-    
-    // Send the request
-    Connector.Subscribe(subscription);
+	// Get search criteria from the text field
+	var searchText = SearchTextBox.Text;
+	
+	if (string.IsNullOrWhiteSpace(searchText))
+	{
+		MessageBox.Show("Enter a search criterion");
+		return;
+	}
+	
+	// Create and send a search subscription
+	var lookupMessage = new SecurityLookupMessage
+	{
+		SecurityId = new SecurityId { SecurityCode = searchText },
+		// If a type is selected in the interface
+		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
+	};
+	
+	var subscription = new Subscription(lookupMessage);
+	
+	// Here you can show a loading indicator
+	LoadingIndicator.Visibility = Visibility.Visible;
+	
+	// Send the request
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -214,26 +214,26 @@ StockSharp also provides a ready-made dialog for instrument search — [Security
 ```csharp
 private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 {
-    var lookupWindow = new SecurityLookupWindow
-    {
-        // Specify the ability to search for all instruments
-        // (if the connector supports this function)
-        ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
-        
-        // Set initial search criteria
-        CriteriaMessage = new SecurityLookupMessage
-        {
-            SecurityId = new SecurityId { SecurityCode = "AAPL" },
-            SecurityType = SecurityTypes.Stock
-        }
-    };
-    
-    // Show the window as a modal dialog
-    if (lookupWindow.ShowModal(this))
-    {
-        // If the user confirmed the selection, send the request
-        Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
-    }
+	var lookupWindow = new SecurityLookupWindow
+	{
+		// Specify the ability to search for all instruments
+		// (if the connector supports this function)
+		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
+		
+		// Set initial search criteria
+		CriteriaMessage = new SecurityLookupMessage
+		{
+			SecurityId = new SecurityId { SecurityCode = "AAPL" },
+			SecurityType = SecurityTypes.Stock
+		}
+	};
+	
+	// Show the window as a modal dialog
+	if (lookupWindow.ShowModal(this))
+	{
+		// If the user confirmed the selection, send the request
+		Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
+	}
 }
 ```
 

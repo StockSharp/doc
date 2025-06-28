@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new FixMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login = "<Your Login>",
-    Password = "<Your Password>".To<SecureString>(),
+	Login = "<Your Login>",
+	Password = "<Your Password>".To<SecureString>(),
 	Address = "<Address>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

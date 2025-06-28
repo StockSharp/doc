@@ -12,7 +12,7 @@ var messageAdapter = new PolygonIOMessageAdapter(Connector.TransactionIdGenerato
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
-          
+			
 ```
 
 ## Recommended content

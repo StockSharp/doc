@@ -30,25 +30,25 @@ private IProtectivePositionController _posController;
 ```cs
 // Инициализация защитного контроллера для новой позиции
 this.WhenNewMyTrade()
-    .Do(t =>
-    {
-        // ... (другой код)
+	.Do(t =>
+	{
+		// ... (другой код)
 
-        if (TakeValue.IsSet() || StopValue.IsSet())
-        {
-            _posController ??= _protectiveController.GetController(
-                security.ToSecurityId(),
-                portfolio.Name,
-                new LocalProtectiveBehaviourFactory(security.PriceStep, security.Decimals),
-                TakeValue, StopValue, true, default, default, true);
-        }
+		if (TakeValue.IsSet() || StopValue.IsSet())
+		{
+			_posController ??= _protectiveController.GetController(
+				security.ToSecurityId(),
+				portfolio.Name,
+				new LocalProtectiveBehaviourFactory(security.PriceStep, security.Decimals),
+				TakeValue, StopValue, true, default, default, true);
+		}
 
-        var info = _posController?.Update(t.Trade.Price, t.GetPosition());
+		var info = _posController?.Update(t.Trade.Price, t.GetPosition());
 
-        if (info is not null)
-            ActiveProtection(info.Value);
-    })
-    .Apply(this);
+		if (info is not null)
+			ActiveProtection(info.Value);
+	})
+	.Apply(this);
 
 // Этот код создает и инициализирует защитный контроллер для новой позиции
 // при получении информации о новой сделке. Он также обновляет информацию
@@ -63,7 +63,7 @@ this.WhenNewMyTrade()
 var info = _posController?.Update(t.Trade.Price, t.GetPosition());
 
 if (info is not null)
-   ActiveProtection(info.Value);
+	ActiveProtection(info.Value);
 ```
 
 Это позволяет контроллеру отслеживать текущее состояние позиции и корректировать защитные заявки при необходимости.
@@ -77,7 +77,7 @@ if (info is not null)
 var info = _posController?.TryActivate(candle.ClosePrice, CurrentTime);
 
 if (info is not null)
-    ActiveProtection(info.Value);
+	ActiveProtection(info.Value);
 
 // Этот код проверяет, нужно ли активировать защитная заявка на основе
 // текущей цены (в данном случае, цены закрытия свечи) и времени.
@@ -94,8 +94,8 @@ if (info is not null)
 // Метод активации защитной заявки
 private void ActiveProtection((bool isTake, Sides side, decimal price, decimal volume, OrderCondition condition) info)
 {
-    // отправка защитной (закрывающего позицию) заявки как обычной заявки
-    RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
+	// отправка защитной (закрывающего позицию) заявки как обычной заявки
+	RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
 }
 
 // Этот метод создает и регистрирует заявку на закрытие позиции

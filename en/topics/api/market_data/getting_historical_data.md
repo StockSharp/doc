@@ -15,8 +15,8 @@ var connector = new Connector();
 // Add an adapter for connecting to Binance
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-    Key = "<Your API Key>",
-    Secret = "<Your Secret Key>",
+	Key = "<Your API Key>",
+	Secret = "<Your Secret Key>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 
@@ -33,17 +33,17 @@ To receive historical candles, you need to create a subscription and specify the
 ```cs
 // Create a subscription for 5-minute candles for the selected instrument
 var subscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
+	security)
 {
-    MarketData =
-    {
-        // Specify the period for which to get historical data
-        From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Now,
-        // Set the flag to receive only completed candles
-        IsFinishedOnly = true
-    }
+	MarketData =
+	{
+		// Specify the period for which to get historical data
+		From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Now,
+		// Set the flag to receive only completed candles
+		IsFinishedOnly = true
+	}
 };
 
 // Subscribe to the candle received event
@@ -55,15 +55,15 @@ connector.Subscribe(subscription);
 // Event handler for receiving candles
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Check that the candle belongs to our subscription
-    if (subscription != _subscription)
-        return;
-        
-    // Process the received candle
-    Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
-    
-    // For display on the chart, you can use:
-    // Chart.Draw(_candleElement, candle);
+	// Check that the candle belongs to our subscription
+	if (subscription != _subscription)
+		return;
+		
+	// Process the received candle
+	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	
+	// For display on the chart, you can use:
+	// Chart.Draw(_candleElement, candle);
 }
 ```
 
@@ -84,17 +84,17 @@ chart.AddElement(area, candleElement, subscription);
 // In the CandleReceived event handler, draw candles
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Check that the candle belongs to our subscription
-    if (subscription != _subscription)
-        return;
-        
-    // If you need to display only completed candles
-    if (candle.State == CandleStates.Finished)
-    {
-        var chartData = new ChartDrawData();
-        chartData.Group(candle.OpenTime).Add(candleElement, candle);
-        chart.Draw(chartData);
-    }
+	// Check that the candle belongs to our subscription
+	if (subscription != _subscription)
+		return;
+		
+	// If you need to display only completed candles
+	if (candle.State == CandleStates.Finished)
+	{
+		var chartData = new ChartDrawData();
+		chartData.Group(candle.OpenTime).Add(candleElement, candle);
+		chart.Draw(chartData);
+	}
 }
 ```
 
@@ -107,17 +107,17 @@ Similarly, you can get other types of historical data:
 ```cs
 var tickSubscription = new Subscription(DataType.Ticks, security)
 {
-    MarketData =
-    {
-        From = DateTime.Now.Subtract(TimeSpan.FromDays(1)),
-        To = DateTime.Now
-    }
+	MarketData =
+	{
+		From = DateTime.Now.Subtract(TimeSpan.FromDays(1)),
+		To = DateTime.Now
+	}
 };
 
 connector.TickTradeReceived += (subscription, tick) =>
 {
-    if (subscription == tickSubscription)
-        Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	if (subscription == tickSubscription)
+		Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 };
 
 connector.Subscribe(tickSubscription);
@@ -128,17 +128,17 @@ connector.Subscribe(tickSubscription);
 ```cs
 var depthSubscription = new Subscription(DataType.MarketDepth, security)
 {
-    MarketData =
-    {
-        From = DateTime.Now.Subtract(TimeSpan.FromHours(1)),
-        To = DateTime.Now
-    }
+	MarketData =
+	{
+		From = DateTime.Now.Subtract(TimeSpan.FromHours(1)),
+		To = DateTime.Now
+	}
 };
 
 connector.OrderBookReceived += (subscription, depth) =>
 {
-    if (subscription == depthSubscription)
-        Console.WriteLine($"Order book: {depth.ServerTime}, Best bid: {depth.GetBestBid()?.Price}, Best ask: {depth.GetBestAsk()?.Price}");
+	if (subscription == depthSubscription)
+		Console.WriteLine($"Order book: {depth.ServerTime}, Best bid: {depth.GetBestBid()?.Price}, Best ask: {depth.GetBestAsk()?.Price}");
 };
 
 connector.Subscribe(depthSubscription);

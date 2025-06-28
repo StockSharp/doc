@@ -31,6 +31,6 @@ private void NewOrderClick(object sender, RoutedEventArgs e)
 	if (wnd.ShowModal(this))
 		_connector.RegisterOrder(wnd.Order);
 }
-              		
+						
 	  				
 ```

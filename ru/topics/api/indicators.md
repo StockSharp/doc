@@ -102,101 +102,101 @@
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _series;
-    private readonly StrategyParam<int> _longSmaLength;
-    private readonly StrategyParam<int> _shortSmaLength;
+	private readonly StrategyParam<DataType> _series;
+	private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _shortSmaLength;
 
-    private SimpleMovingAverage _longSma;
-    private SimpleMovingAverage _shortSma;
+	private SimpleMovingAverage _longSma;
+	private SimpleMovingAverage _shortSma;
 
-    private IChartIndicatorElement _longSmaIndicatorElement;
-    private IChartIndicatorElement _shortSmaIndicatorElement;
-    private IChartCandleElement _chartCandleElement;
-    private IChartTradeElement _tradesElem;
-    private IChart _chart;
+	private IChartIndicatorElement _longSmaIndicatorElement;
+	private IChartIndicatorElement _shortSmaIndicatorElement;
+	private IChartCandleElement _chartCandleElement;
+	private IChartTradeElement _tradesElem;
+	private IChart _chart;
 
-    public SmaStrategy()
-    {
-        base.Name = "SMA strategy";
+	public SmaStrategy()
+	{
+		base.Name = "SMA strategy";
 
-        // Инициализация параметров стратегии
-        _longSmaLength = Param(nameof(LongSmaLength), 80);
-        _shortSmaLength = Param(nameof(ShortSmaLength), 30);
-        _series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
-    }
+		// Инициализация параметров стратегии
+		_longSmaLength = Param(nameof(LongSmaLength), 80);
+		_shortSmaLength = Param(nameof(ShortSmaLength), 30);
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
+	}
 
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
 
-        // Создание индикаторов
-        _shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
-        _longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
+		// Создание индикаторов
+		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
+		_longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
 
-        // Добавление индикаторов в коллекцию стратегии
-        Indicators.Add(_shortSma);
-        Indicators.Add(_longSma);
+		// Добавление индикаторов в коллекцию стратегии
+		Indicators.Add(_shortSma);
+		Indicators.Add(_longSma);
 
-        // Инициализация графика
-        _chart = GetChart();
-        if (_chart != null)
-        {
-            InitChart();
-        }
-        
-        // Подписка на свечи
-        var subscription = new Subscription(_series.Value, Security);
+		// Инициализация графика
+		_chart = GetChart();
+		if (_chart != null)
+		{
+			InitChart();
+		}
+		
+		// Подписка на свечи
+		var subscription = new Subscription(_series.Value, Security);
 
-        Connector
-            .WhenCandlesFinished(subscription)
-            .Do(ProcessCandle)
-            .Apply(this);
+		Connector
+			.WhenCandlesFinished(subscription)
+			.Do(ProcessCandle)
+			.Apply(this);
 
-        Connector.Subscribe(subscription);
-    }
+		Connector.Subscribe(subscription);
+	}
 
-    private void ProcessCandle(ICandleMessage candle)
-    {
-        // Обработка свечи индикаторами и сохранение результатов
-        var longValue = _longSma.Process(candle);
-        var shortValue = _shortSma.Process(candle);
-        
-        // Отрисовка на графике
-        DrawCandlesAndIndicators(candle, longValue, shortValue);
-        
-        // Проверка условий для торговли
-        if (!IsFormedAndOnlineAndAllowTrading()) 
-            return;
+	private void ProcessCandle(ICandleMessage candle)
+	{
+		// Обработка свечи индикаторами и сохранение результатов
+		var longValue = _longSma.Process(candle);
+		var shortValue = _shortSma.Process(candle);
+		
+		// Отрисовка на графике
+		DrawCandlesAndIndicators(candle, longValue, shortValue);
+		
+		// Проверка условий для торговли
+		if (!IsFormedAndOnlineAndAllowTrading()) 
+			return;
 
-        // Сравнение текущих и предыдущих значений индикаторов
-        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
-        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
+		// Сравнение текущих и предыдущих значений индикаторов
+		var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
+		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
-        // Проверка на пересечение
-        if (isShortLessCurrent == isShortLessPrev) 
-            return;
+		// Проверка на пересечение
+		if (isShortLessCurrent == isShortLessPrev) 
+			return;
 
-        var volume = Volume + Math.Abs(Position);
+		var volume = Volume + Math.Abs(Position);
 
-        // Торговые действия на основе сигнала
-        if (isShortLessCurrent)
-            SellMarket(volume);
-        else
-            BuyMarket(volume);
-    }
+		// Торговые действия на основе сигнала
+		if (isShortLessCurrent)
+			SellMarket(volume);
+		else
+			BuyMarket(volume);
+	}
 
-    private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
-    {
-        if (_chart == null) return;
-        var data = _chart.CreateData();
-        data.Group(candle.OpenTime)
-            .Add(_chartCandleElement, candle)
-            .Add(_longSmaIndicatorElement, longSma)
-            .Add(_shortSmaIndicatorElement, shortSma);
-        _chart.Draw(data);
-    }
+	private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
+	{
+		if (_chart == null) return;
+		var data = _chart.CreateData();
+		data.Group(candle.OpenTime)
+			.Add(_chartCandleElement, candle)
+			.Add(_longSmaIndicatorElement, longSma)
+			.Add(_shortSmaIndicatorElement, shortSma);
+		_chart.Draw(data);
+	}
 
-    // Другие методы инициализации графика опущены для краткости
+	// Другие методы инициализации графика опущены для краткости
 }
 ```
 

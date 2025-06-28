@@ -14,42 +14,42 @@
 // Создаем подписку на 5-минутные свечи
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
-    // Настраиваем параметры подписки через свойство MarketData
-    MarketData =
-    {
-        // Запрашиваем данные за последние 30 дней
-        From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
-        // null означает, что подписка после получения истории перейдет в режим реального времени
-        To = null
-    }
+	// Настраиваем параметры подписки через свойство MarketData
+	MarketData =
+	{
+		// Запрашиваем данные за последние 30 дней
+		From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
+		// null означает, что подписка после получения истории перейдет в режим реального времени
+		To = null
+	}
 };
 
 // Обработка полученных свечей
 _connector.CandleReceived += (sub, candle) =>
 {
-    if (sub != subscription)
-        return;
-        
-    // Обработка свечи
-    Console.WriteLine($"Свеча: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
+	if (sub != subscription)
+		return;
+		
+	// Обработка свечи
+	Console.WriteLine($"Свеча: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
 // Обработка перехода подписки в онлайн-режим
 _connector.SubscriptionOnline += (sub) =>
 {
-    if (sub != subscription)
-        return;
-        
-    Console.WriteLine("Подписка перешла в режим реального времени");
+	if (sub != subscription)
+		return;
+		
+	Console.WriteLine("Подписка перешла в режим реального времени");
 };
 
 // Обработка ошибок подписки
 _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
-    if (sub != subscription)
-        return;
-        
-    Console.WriteLine($"Ошибка подписки: {error}");
+	if (sub != subscription)
+		return;
+		
+	Console.WriteLine($"Ошибка подписки: {error}");
 };
 
 // Запуск подписки
@@ -65,12 +65,12 @@ var depthSubscription = new Subscription(DataType.MarketDepth, security);
 // Обработка полученных стаканов
 _connector.OrderBookReceived += (sub, depth) =>
 {
-    if (sub != depthSubscription)
-        return;
-        
-    // Обработка стакана
-    Console.WriteLine($"Стакан: {depth.SecurityId}, Время: {depth.ServerTime}");
-    Console.WriteLine($"Покупки (Bids): {depth.Bids.Count}, Продажи (Asks): {depth.Asks.Count}");
+	if (sub != depthSubscription)
+		return;
+		
+	// Обработка стакана
+	Console.WriteLine($"Стакан: {depth.SecurityId}, Время: {depth.ServerTime}");
+	Console.WriteLine($"Покупки (Bids): {depth.Bids.Count}, Продажи (Asks): {depth.Asks.Count}");
 };
 
 // Запуск подписки
@@ -86,11 +86,11 @@ var tickSubscription = new Subscription(DataType.Ticks, security);
 // Обработка полученных тиков
 _connector.TickTradeReceived += (sub, tick) =>
 {
-    if (sub != tickSubscription)
-        return;
-        
-    // Обработка тика
-    Console.WriteLine($"Тик: {tick.SecurityId}, Время: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
+	if (sub != tickSubscription)
+		return;
+		
+	// Обработка тика
+	Console.WriteLine($"Тик: {tick.SecurityId}, Время: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
 };
 
 // Запуск подписки
@@ -103,14 +103,14 @@ _connector.Subscribe(tickSubscription);
 // Подписка на 5-минутные свечи, которые будут построены из тиков
 var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
-    MarketData =
-    {
-        // Указываем режим построения и источник данных
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks,
-        // Также можно включить построение профиля объема
-        IsCalcVolumeProfile = true,
-    }
+	MarketData =
+	{
+		// Указываем режим построения и источник данных
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks,
+		// Также можно включить построение профиля объема
+		IsCalcVolumeProfile = true,
+	}
 };
 
 _connector.Subscribe(candleSubscription);
@@ -125,16 +125,16 @@ var level1Subscription = new Subscription(DataType.Level1, security);
 // Обработка полученных данных Level1
 _connector.Level1Received += (sub, level1) =>
 {
-    if (sub != level1Subscription)
-        return;
-    
-    Console.WriteLine($"Level1: {level1.SecurityId}, Время: {level1.ServerTime}");
-    
-    // Вывод значений полей Level1
-    foreach (var pair in level1.Changes)
-    {
-        Console.WriteLine($"Поле: {pair.Key}, Значение: {pair.Value}");
-    }
+	if (sub != level1Subscription)
+		return;
+	
+	Console.WriteLine($"Level1: {level1.SecurityId}, Время: {level1.ServerTime}");
+	
+	// Вывод значений полей Level1
+	foreach (var pair in level1.Changes)
+	{
+		Console.WriteLine($"Поле: {pair.Key}, Значение: {pair.Value}");
+	}
 };
 
 // Запуск подписки
@@ -152,7 +152,7 @@ _connector.UnSubscribe(subscription);
 // Или можно отписаться от всех подписок
 foreach (var sub in _connector.Subscriptions)
 {
-    _connector.UnSubscribe(sub);
+	_connector.UnSubscribe(sub);
 }
 ```
 

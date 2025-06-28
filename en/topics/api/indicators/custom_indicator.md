@@ -10,34 +10,34 @@ To create your own indicator, you need to implement the [IIndicator](xref:StockS
 [Description("Simple Moving Average.")]
 public class SimpleMovingAverage : LengthIndicator<decimal>
 {
-    /// <summary>
-    /// Create <see cref="SimpleMovingAverage"/>.
-    /// </summary>
-    public SimpleMovingAverage()
-    {
-        Length = 32;
-    }
+	/// <summary>
+	/// Create <see cref="SimpleMovingAverage"/>.
+	/// </summary>
+	public SimpleMovingAverage()
+	{
+		Length = 32;
+	}
 
-    /// <summary>
-    /// Process input value.
-    /// </summary>
-    /// <param name="input">Input value.</param>
-    /// <returns>Resulting value.</returns>
-    protected override IIndicatorValue OnProcess(IIndicatorValue input)
-    {
-        var newValue = input.GetValue<decimal>();
-        if (input.IsFinal)
-        {
-            Buffer.Add(newValue);
-            if (Buffer.Count > Length)
-                Buffer.RemoveAt(0);
-        }
-        
-        if (input.IsFinal)
-            return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
-        
-        return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
-    }
+	/// <summary>
+	/// Process input value.
+	/// </summary>
+	/// <param name="input">Input value.</param>
+	/// <returns>Resulting value.</returns>
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var newValue = input.GetValue<decimal>();
+		if (input.IsFinal)
+		{
+			Buffer.Add(newValue);
+			if (Buffer.Count > Length)
+				Buffer.RemoveAt(0);
+		}
+		
+		if (input.IsFinal)
+			return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
+		
+		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
+	}
 }
 ```
 
@@ -88,19 +88,19 @@ The [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization
 /// <inheritdoc />
 public override void Save(SettingsStorage storage)
 {
-    base.Save(storage);
+	base.Save(storage);
 
-    storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-    storage.SetValue(nameof(LongPeriod), LongPeriod);
+	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+	storage.SetValue(nameof(LongPeriod), LongPeriod);
 }
 
 /// <inheritdoc />
 public override void Load(SettingsStorage storage)
 {
-    base.Load(storage);
+	base.Load(storage);
 
-    ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-    LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 }
 ```
 
@@ -116,58 +116,58 @@ Some indicators are composite and use other indicators in their calculations. Th
 [Description("Chaikin Volatility.")]
 public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
-    /// <summary>
-    /// Create <see cref="ChaikinVolatility"/>.
-    /// </summary>
-    public ChaikinVolatility()
-    {
-        Ema = new ExponentialMovingAverage();
-        Roc = new RateOfChange();
-    }
+	/// <summary>
+	/// Create <see cref="ChaikinVolatility"/>.
+	/// </summary>
+	public ChaikinVolatility()
+	{
+		Ema = new ExponentialMovingAverage();
+		Roc = new RateOfChange();
+	}
 
-    /// <summary>
-    /// Moving Average.
-    /// </summary>
-    [ExpandableObject]
-    [DisplayName("MA")]
-    [Description("Moving Average.")]
-    [Category("Main")]
-    public ExponentialMovingAverage Ema { get; private set; }
+	/// <summary>
+	/// Moving Average.
+	/// </summary>
+	[ExpandableObject]
+	[DisplayName("MA")]
+	[Description("Moving Average.")]
+	[Category("Main")]
+	public ExponentialMovingAverage Ema { get; private set; }
 
-    /// <summary>
-    /// Rate of Change.
-    /// </summary>
-    [ExpandableObject]
-    [DisplayName("ROC")]
-    [Description("Rate of Change.")]
-    [Category("Main")]
-    public RateOfChange Roc { get; private set; }
+	/// <summary>
+	/// Rate of Change.
+	/// </summary>
+	[ExpandableObject]
+	[DisplayName("ROC")]
+	[Description("Rate of Change.")]
+	[Category("Main")]
+	public RateOfChange Roc { get; private set; }
 
-    /// <summary>
-    /// Is the indicator formed.
-    /// </summary>
-    public override bool IsFormed
-    {
-        get { return Roc.IsFormed; }
-    }
+	/// <summary>
+	/// Is the indicator formed.
+	/// </summary>
+	public override bool IsFormed
+	{
+		get { return Roc.IsFormed; }
+	}
 
-    /// <summary>
-    /// Process input value.
-    /// </summary>
-    /// <param name="input">Input value.</param>
-    /// <returns>Resulting value.</returns>
-    protected override IIndicatorValue OnProcess(IIndicatorValue input)
-    {
-        var candle = input.GetValue<Candle>();
-        var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
-        
-        if (Ema.IsFormed)
-        {
-            return Roc.Process(emaValue);
-        }
-        
-        return input;
-    }
+	/// <summary>
+	/// Process input value.
+	/// </summary>
+	/// <param name="input">Input value.</param>
+	/// <returns>Resulting value.</returns>
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var candle = input.GetValue<Candle>();
+		var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
+		
+		if (Ema.IsFormed)
+		{
+			return Roc.Process(emaValue);
+		}
+		
+		return input;
+	}
 }
 ```
 
@@ -183,58 +183,58 @@ The last type of indicators are those that not only consist of other indicators 
 [Description("Welles Wilder's Average Directional Index.")]
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
-    /// <summary>
-    /// Create <see cref="AverageDirectionalIndex"/>.
-    /// </summary>
-    public AverageDirectionalIndex()
-        : this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
-    {
-    }
+	/// <summary>
+	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// </summary>
+	public AverageDirectionalIndex()
+		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
+	{
+	}
 
-    /// <summary>
-    /// Create <see cref="AverageDirectionalIndex"/>.
-    /// </summary>
-    /// <param name="dx">Welles Wilder's Directional Movement Index.</param>
-    /// <param name="movingAverage">Moving Average.</param>
-    public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
-    {
-        if (dx == null)
-            throw new ArgumentNullException(nameof(dx));
-        if (movingAverage == null)
-            throw new ArgumentNullException(nameof(movingAverage));
-        
-        InnerIndicators.Add(Dx = dx);
-        InnerIndicators.Add(MovingAverage = movingAverage);
-        Mode = ComplexIndicatorModes.Sequence;
-    }
+	/// <summary>
+	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// </summary>
+	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
+	/// <param name="movingAverage">Moving Average.</param>
+	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
+	{
+		if (dx == null)
+			throw new ArgumentNullException(nameof(dx));
+		if (movingAverage == null)
+			throw new ArgumentNullException(nameof(movingAverage));
+		
+		InnerIndicators.Add(Dx = dx);
+		InnerIndicators.Add(MovingAverage = movingAverage);
+		Mode = ComplexIndicatorModes.Sequence;
+	}
 
-    /// <summary>
-    /// Welles Wilder's Directional Movement Index.
-    /// </summary>
-    [Browsable(false)]
-    public DirectionalIndex Dx { get; private set; }
+	/// <summary>
+	/// Welles Wilder's Directional Movement Index.
+	/// </summary>
+	[Browsable(false)]
+	public DirectionalIndex Dx { get; private set; }
 
-    /// <summary>
-    /// Moving Average.
-    /// </summary>
-    [Browsable(false)]
-    public LengthIndicator<decimal> MovingAverage { get; private set; }
+	/// <summary>
+	/// Moving Average.
+	/// </summary>
+	[Browsable(false)]
+	public LengthIndicator<decimal> MovingAverage { get; private set; }
 
-    /// <summary>
-    /// Period length.
-    /// </summary>
-    [DisplayName("Period")]
-    [Description("Indicator period.")]
-    [Category("Main")]
-    public virtual int Length
-    {
-        get { return MovingAverage.Length; }
-        set
-        {
-            MovingAverage.Length = Dx.Length = value;
-            Reset();
-        }
-    }
+	/// <summary>
+	/// Period length.
+	/// </summary>
+	[DisplayName("Period")]
+	[Description("Indicator period.")]
+	[Category("Main")]
+	public virtual int Length
+	{
+		get { return MovingAverage.Length; }
+		set
+		{
+			MovingAverage.Length = Dx.Length = value;
+			Reset();
+		}
+	}
 }
 ```
 
@@ -249,118 +249,118 @@ Below is an example of implementing the Percentage Volume Oscillator (PVO), whic
 /// Percentage Volume Oscillator (PVO).
 /// </summary>
 [Display(
-    ResourceType = typeof(LocalizedStrings),
-    Name = LocalizedStrings.PVOKey,
-    Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.PVOKey,
+	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
 [IndicatorIn(typeof(CandleIndicatorValue))]
 [Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
 public class PercentageVolumeOscillator : BaseComplexIndicator
 {
-    private readonly ExponentialMovingAverage _shortEma;
-    private readonly ExponentialMovingAverage _longEma;
+	private readonly ExponentialMovingAverage _shortEma;
+	private readonly ExponentialMovingAverage _longEma;
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
-    /// </summary>
-    public PercentageVolumeOscillator()
-        : this(new(), new())
-    {
-        ShortPeriod = 12;
-        LongPeriod = 26;
-    }
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	public PercentageVolumeOscillator()
+		: this(new(), new())
+	{
+		ShortPeriod = 12;
+		LongPeriod = 26;
+	}
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
-    /// </summary>
-    /// <param name="shortEma">The short-term EMA.</param>
-    /// <param name="longEma">The long-term EMA.</param>
-    public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
-        : base(shortEma, longEma)
-    {
-        _shortEma = shortEma;
-        _longEma = longEma;
-    }
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	/// <param name="shortEma">The short-term EMA.</param>
+	/// <param name="longEma">The long-term EMA.</param>
+	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
+		: base(shortEma, longEma)
+	{
+		_shortEma = shortEma;
+		_longEma = longEma;
+	}
 
-    /// <summary>
-    /// Short period.
-    /// </summary>
-    [Display(
-        ResourceType = typeof(LocalizedStrings),
-        Name = LocalizedStrings.ShortPeriodKey,
-        Description = LocalizedStrings.ShortMaDescKey,
-        GroupName = LocalizedStrings.GeneralKey)]
-    public int ShortPeriod
-    {
-        get => _shortEma.Length;
-        set => _shortEma.Length = value;
-    }
+	/// <summary>
+	/// Short period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.ShortPeriodKey,
+		Description = LocalizedStrings.ShortMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int ShortPeriod
+	{
+		get => _shortEma.Length;
+		set => _shortEma.Length = value;
+	}
 
-    /// <summary>
-    /// Long period.
-    /// </summary>
-    [Display(
-        ResourceType = typeof(LocalizedStrings),
-        Name = LocalizedStrings.LongPeriodKey,
-        Description = LocalizedStrings.LongMaDescKey,
-        GroupName = LocalizedStrings.GeneralKey)]
-    public int LongPeriod
-    {
-        get => _longEma.Length;
-        set => _longEma.Length = value;
-    }
+	/// <summary>
+	/// Long period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.LongPeriodKey,
+		Description = LocalizedStrings.LongMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int LongPeriod
+	{
+		get => _longEma.Length;
+		set => _longEma.Length = value;
+	}
 
-    /// <inheritdoc />
-    public override IndicatorMeasures Measure => IndicatorMeasures.Volume;
+	/// <inheritdoc />
+	public override IndicatorMeasures Measure => IndicatorMeasures.Volume;
 
-    /// <inheritdoc />
-    public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+	/// <inheritdoc />
+	public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
 
-    /// <inheritdoc />
-    protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
+	/// <inheritdoc />
+	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
 
-    /// <inheritdoc />
-    protected override IIndicatorValue OnProcess(IIndicatorValue input)
-    {
-        var volume = input.ToCandle().TotalVolume;
+	/// <inheritdoc />
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var volume = input.ToCandle().TotalVolume;
 
-        var result = new ComplexIndicatorValue(this, input.Time);
+		var result = new ComplexIndicatorValue(this, input.Time);
 
-        var shortValue = _shortEma.Process(input, volume);
-        var longValue = _longEma.Process(input, volume);
+		var shortValue = _shortEma.Process(input, volume);
+		var longValue = _longEma.Process(input, volume);
 
-        result.Add(_shortEma, shortValue);
-        result.Add(_longEma, longValue);
+		result.Add(_shortEma, shortValue);
+		result.Add(_longEma, longValue);
 
-        if (_longEma.IsFormed)
-        {
-            var den = longValue.ToDecimal();
-            var pvo = den == 0 ? 0 : ((shortValue.ToDecimal() - den) / den) * 100;
-            result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time));
-        }
+		if (_longEma.IsFormed)
+		{
+			var den = longValue.ToDecimal();
+			var pvo = den == 0 ? 0 : ((shortValue.ToDecimal() - den) / den) * 100;
+			result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time));
+		}
 
-        return result;
-    }
+		return result;
+	}
 
-    /// <inheritdoc />
-    public override void Save(SettingsStorage storage)
-    {
-        base.Save(storage);
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
 
-        storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-        storage.SetValue(nameof(LongPeriod), LongPeriod);
-    }
+		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+		storage.SetValue(nameof(LongPeriod), LongPeriod);
+	}
 
-    /// <inheritdoc />
-    public override void Load(SettingsStorage storage)
-    {
-        base.Load(storage);
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
 
-        ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-        LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
-    }
+		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	}
 
-    /// <inheritdoc />
-    public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+	/// <inheritdoc />
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 }
 ```
 

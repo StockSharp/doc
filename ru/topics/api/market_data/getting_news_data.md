@@ -22,23 +22,23 @@ _connector.Subscribe(newsSubscription);
 // Обработчик события получения новостей
 private void OnNewsReceived(Subscription subscription, News news)
 {
-    if (subscription != newsSubscription)
-        return;
-        
-    // Обрабатываем полученную новость
-    Console.WriteLine($"Новость: {news.Id}");
-    Console.WriteLine($"Заголовок: {news.Headline}");
-    Console.WriteLine($"Источник: {news.Source}");
-    Console.WriteLine($"Время: {news.ServerTime}");
-    Console.WriteLine($"Ссылка: {news.Url}");
-    
-    // Если есть текст новости
-    if (!string.IsNullOrEmpty(news.Story))
-        Console.WriteLine($"Текст: {news.Story}");
-    
-    // Если новость связана с конкретными инструментами
-    if (news.SecurityId != null)
-        Console.WriteLine($"Инструмент: {news.SecurityId}");
+	if (subscription != newsSubscription)
+		return;
+		
+	// Обрабатываем полученную новость
+	Console.WriteLine($"Новость: {news.Id}");
+	Console.WriteLine($"Заголовок: {news.Headline}");
+	Console.WriteLine($"Источник: {news.Source}");
+	Console.WriteLine($"Время: {news.ServerTime}");
+	Console.WriteLine($"Ссылка: {news.Url}");
+	
+	// Если есть текст новости
+	if (!string.IsNullOrEmpty(news.Story))
+		Console.WriteLine($"Текст: {news.Story}");
+	
+	// Если новость связана с конкретными инструментами
+	if (news.SecurityId != null)
+		Console.WriteLine($"Инструмент: {news.SecurityId}");
 }
 ```
 
@@ -50,15 +50,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 // Создаем подписку на новости с фильтрацией
 var filteredNewsSubscription = new Subscription(DataType.News)
 {
-    MarketData = 
-    {
-        // Указываем период, за который нужно получить новости
-        From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
-        
-        // Можно указать конкретный источник новостей
-        // Для примера используем RSS источник
-        NewsSource = "CryptoNews"
-    }
+	MarketData = 
+	{
+		// Указываем период, за который нужно получить новости
+		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
+		
+		// Можно указать конкретный источник новостей
+		// Для примера используем RSS источник
+		NewsSource = "CryptoNews"
+	}
 };
 
 _connector.Subscribe(filteredNewsSubscription);
@@ -75,9 +75,9 @@ var newsPanel = new NewsPanel();
 // Подписываемся на событие получения новостей и добавляем их в панель
 _connector.NewsReceived += (subscription, news) => 
 {
-    // Для обновления элементов пользовательского интерфейса 
-    // нужно использовать метод GuiAsync или GuiSync
-    this.GuiAsync(() => newsPanel.NewsGrid.News.Add(news));
+	// Для обновления элементов пользовательского интерфейса 
+	// нужно использовать метод GuiAsync или GuiSync
+	this.GuiAsync(() => newsPanel.NewsGrid.News.Add(news));
 };
 ```
 
@@ -95,12 +95,12 @@ _connector.NewsReceived += (subscription, news) =>
 // Создаем подписку на исторические новости
 var historicalNewsSubscription = new Subscription(DataType.News)
 {
-    MarketData = 
-    {
-        // Указываем период, за который нужно получить новости
-        From = DateTime.Now.Subtract(TimeSpan.FromDays(7)),
-        To = DateTime.Now
-    }
+	MarketData = 
+	{
+		// Указываем период, за который нужно получить новости
+		From = DateTime.Now.Subtract(TimeSpan.FromDays(7)),
+		To = DateTime.Now
+	}
 };
 
 _connector.Subscribe(historicalNewsSubscription);
@@ -117,16 +117,16 @@ var connector = new Connector();
 // Добавляем основной адаптер для подключения к Binance
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-    Key = "<Your API Key>",
-    Secret = "<Your Secret Key>",
+	Key = "<Your API Key>",
+	Secret = "<Your Secret Key>",
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 
 // Добавляем адаптер для получения новостей через RSS
 var rssAdapter = new RssMessageAdapter(connector.TransactionIdGenerator)
 {
-    Address = "https://news-source.com/feed",
-    IsEnabled = true
+	Address = "https://news-source.com/feed",
+	IsEnabled = true
 };
 connector.Adapter.InnerAdapters.Add(rssAdapter);
 

@@ -9,8 +9,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new CqgComMessageAdapter(Connector.TransactionIdGenerator)
 {
-    UserName = "<Your Login>",
-    Password = "<Your Password>".To<SecureString>(),
+	UserName = "<Your Login>",
+	Password = "<Your Password>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
@@ -24,9 +24,9 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
 {
-    UserName = "<Your Login>",
-    Password = "<Your Password>".To<SecureString>(),
-    Address = "<Address>".To<IPAddress>(),
+	UserName = "<Your Login>",
+	Password = "<Your Password>".To<SecureString>(),
+	Address = "<Address>".To<IPAddress>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

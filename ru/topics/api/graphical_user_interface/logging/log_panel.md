@@ -10,13 +10,13 @@
 
 ```xaml
 <Window x:Class="LoggingControls.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <sx:LogControl x:Name="LogControl"/>
-    </Grid>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+		Title="MainWindow" Height="350" Width="525">
+	<Grid>
+		<sx:LogControl x:Name="LogControl"/>
+	</Grid>
 </Window>
 	  				
 ```
@@ -33,5 +33,5 @@ _logManager.Listeners.Add(new GuiLogListener(LogControl));
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
 Trace.TraceError("Error test message");
-                  
+					
 ```

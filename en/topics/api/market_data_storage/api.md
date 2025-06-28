@@ -21,7 +21,7 @@ var pathHistory = Paths.HistoryDataPath; // path to data from the NuGet package
 var localDrive = new LocalMarketDataDrive(pathHistory);
 var storageRegistry = new StorageRegistry()
 {
-    DefaultDrive = localDrive,
+	DefaultDrive = localDrive,
 };
 ```
 
@@ -43,7 +43,7 @@ var candles = candleStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4,
 
 foreach (var candle in candles)
 {
-    Console.WriteLine(candle);
+	Console.WriteLine(candle);
 }
 ```
 
@@ -54,7 +54,7 @@ var trades = tradeStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2
 
 foreach (var trade in trades)
 {
-    Console.WriteLine(trade);
+	Console.WriteLine(trade);
 }
 ```
 
@@ -65,7 +65,7 @@ var marketDepths = marketDepthStorage.Load(new DateTime(2020, 4, 1), new DateTim
 
 foreach (var marketDepth in marketDepths)
 {
-    Console.WriteLine(marketDepth);
+	Console.WriteLine(marketDepth);
 }
 ```
 
@@ -77,7 +77,7 @@ To save new data to the existing storage, use the `Save` method of the correspon
 // Saving new candles
 var newCandles = new List<CandleMessage>
 {
-    // New CandleMessage objects are created here
+	// New CandleMessage objects are created here
 };
 candleStorage.Save(newCandles);
 ```
@@ -86,7 +86,7 @@ candleStorage.Save(newCandles);
 // Saving new ticks
 var newTrades = new List<ExecutionMessage>
 {
-    // New ExecutionMessage objects for ticks are created here
+	// New ExecutionMessage objects for ticks are created here
 };
 tradeStorage.Save(newTrades);
 ```
@@ -95,7 +95,7 @@ tradeStorage.Save(newTrades);
 // Saving new order books
 var newMarketDepths = new List<QuoteChangeMessage>
 {
-    // New QuoteChangeMessage objects for order books are created here
+	// New QuoteChangeMessage objects for order books are created here
 };
 marketDepthStorage.Save(newMarketDepths);
 ```

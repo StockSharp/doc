@@ -16,65 +16,65 @@ The main steps when registering an order:
 ```cs
 public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, CancellationToken cancellationToken)
 {
-    var condition = (CoinbaseOrderCondition)regMsg.Condition;
+	var condition = (CoinbaseOrderCondition)regMsg.Condition;
 
-    switch (regMsg.OrderType)
-    {
-        case null:
-        case OrderTypes.Limit:
-        case OrderTypes.Market:
-            break;
-        case OrderTypes.Conditional:
-        {
-            // Handling conditional orders, for example, withdrawal of funds
-            if (!condition.IsWithdraw)
-                break;
+	switch (regMsg.OrderType)
+	{
+		case null:
+		case OrderTypes.Limit:
+		case OrderTypes.Market:
+			break;
+		case OrderTypes.Conditional:
+		{
+			// Handling conditional orders, for example, withdrawal of funds
+			if (!condition.IsWithdraw)
+				break;
 
-            var withdrawId = await _restClient.Withdraw(regMsg.SecurityId.SecurityCode, regMsg.Volume, condition.WithdrawInfo, cancellationToken);
+			var withdrawId = await _restClient.Withdraw(regMsg.SecurityId.SecurityCode, regMsg.Volume, condition.WithdrawInfo, cancellationToken);
 
-            SendOutMessage(new ExecutionMessage
-            {
-                DataTypeEx = DataType.Transactions,
-                OrderStringId = withdrawId,
-                ServerTime = CurrentTime.ConvertToUtc(),
-                OriginalTransactionId = regMsg.TransactionId,
-                OrderState = OrderStates.Done,
-                HasOrderInfo = true,
-            });
+			SendOutMessage(new ExecutionMessage
+			{
+				DataTypeEx = DataType.Transactions,
+				OrderStringId = withdrawId,
+				ServerTime = CurrentTime.ConvertToUtc(),
+				OriginalTransactionId = regMsg.TransactionId,
+				OrderState = OrderStates.Done,
+				HasOrderInfo = true,
+			});
 
-            await PortfolioLookupAsync(null, cancellationToken);
-            return;
-        }
-        default:
-            throw new NotSupportedException(LocalizedStrings.OrderUnsupportedType.Put(regMsg.OrderType, regMsg.TransactionId));
-    }
+			await PortfolioLookupAsync(null, cancellationToken);
+			return;
+		}
+		default:
+			throw new NotSupportedException(LocalizedStrings.OrderUnsupportedType.Put(regMsg.OrderType, regMsg.TransactionId));
+	}
 
-    // Determining the order type (market or limit)
-    var isMarket = regMsg.OrderType == OrderTypes.Market;
-    var price = isMarket ? (decimal?)null : regMsg.Price;
-    
-    // Sending the order to the exchange
-    var result = await _restClient.RegisterOrder(
-        regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
-        regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
-        condition?.StopPrice, regMsg.Volume, regMsg.TimeInForce,
-        regMsg.TillDate.EnsureToday(), regMsg.Leverage, cancellationToken);
+	// Determining the order type (market or limit)
+	var isMarket = regMsg.OrderType == OrderTypes.Market;
+	var price = isMarket ? (decimal?)null : regMsg.Price;
+	
+	// Sending the order to the exchange
+	var result = await _restClient.RegisterOrder(
+		regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
+		regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
+		condition?.StopPrice, regMsg.Volume, regMsg.TimeInForce,
+		regMsg.TillDate.EnsureToday(), regMsg.Leverage, cancellationToken);
 
-    var orderState = result.Status.ToOrderState();
+	var orderState = result.Status.ToOrderState();
 
-    // Processing the order registration result
-    if (orderState == OrderStates.Failed)
-    {
-        SendOutMessage(new ExecutionMessage
-        {
-            DataTypeEx = DataType.Transactions,
-            ServerTime = result.CreationTime,
-            OriginalTransactionId = regMsg.TransactionId,
-            OrderState = OrderStates.Failed,
-            Error = new InvalidOperationException(),
-            HasOrderInfo = true,
-        });
-    }
+	// Processing the order registration result
+	if (orderState == OrderStates.Failed)
+	{
+		SendOutMessage(new ExecutionMessage
+		{
+			DataTypeEx = DataType.Transactions,
+			ServerTime = result.CreationTime,
+			OriginalTransactionId = regMsg.TransactionId,
+			OrderState = OrderStates.Failed,
+			Error = new InvalidOperationException(),
+			HasOrderInfo = true,
+		});
+	}
 }
 ```
 
@@ -91,15 +91,15 @@ The main steps when replacing an order:
 ```cs
 public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg, CancellationToken cancellationToken)
 {
-    // Sending a request to replace the order
-    await _restClient.EditOrder(
-        replaceMsg.OldOrderId.To<string>(), 
-        replaceMsg.Price, 
-        replaceMsg.Volume, 
-        cancellationToken);
-    
-    // Note: Processing the order replacement result usually occurs
-    // in a separate method that is called when receiving an update from the exchange
+	// Sending a request to replace the order
+	await _restClient.EditOrder(
+		replaceMsg.OldOrderId.To<string>(), 
+		replaceMsg.Price, 
+		replaceMsg.Volume, 
+		cancellationToken);
+	
+	// Note: Processing the order replacement result usually occurs
+	// in a separate method that is called when receiving an update from the exchange
 }
 ```
 
@@ -126,15 +126,15 @@ The main steps when canceling an order:
 ```cs
 public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-    // Checking the presence of the order identifier
-    if (cancelMsg.OrderStringId.IsEmpty())
-        throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
+	// Checking the presence of the order identifier
+	if (cancelMsg.OrderStringId.IsEmpty())
+		throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
 
-    // Sending a request to cancel the order
-    await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
+	// Sending a request to cancel the order
+	await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
 
-    // Note: Processing the order cancellation result usually occurs
-    // in a separate method that is called when receiving an update from the exchange
+	// Note: Processing the order cancellation result usually occurs
+	// in a separate method that is called when receiving an update from the exchange
 }
 ```
 
@@ -151,7 +151,7 @@ Below is an example of the implementation of the mass order cancellation method,
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-    await _httpClient.CancelAllOrders(cancellationToken);
+	await _httpClient.CancelAllOrders(cancellationToken);
 }
 ```
 

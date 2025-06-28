@@ -35,21 +35,21 @@ private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
 // Подписываемся на события коннектора
 _emuConnector.Connected += () =>
 {
-    // update gui labels
-    this.GuiAsync(() => { ChangeConnectStatus(true); });
+	// update gui labels
+	this.GuiAsync(() => { ChangeConnectStatus(true); });
 };
 
 _emuConnector.Disconnected += () =>
 {
-    // update gui labels
-    this.GuiAsync(() => { ChangeConnectStatus(false); });
+	// update gui labels
+	this.GuiAsync(() => { ChangeConnectStatus(false); });
 };
 
 _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
-    // update gui labels
-    ChangeConnectStatus(false);
-    MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+	// update gui labels
+	ChangeConnectStatus(false);
+	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
 });
 
 _emuConnector.OrderBookReceived += OnDepth;
@@ -57,11 +57,11 @@ _emuConnector.PositionReceived += (sub, p) => PortfolioGrid.Positions.TryAdd(p);
 _emuConnector.OwnTradeReceived += (s, t) => TradeGrid.Trades.TryAdd(t);
 _emuConnector.OrderReceived += (s, o) =>
 {
-    if (!_fistTimeOrders.Add(o))
-        return;
+	if (!_fistTimeOrders.Add(o))
+		return;
 
-    _bufferOrders.Add(o);
-    OrderGrid.Orders.Add(o);
+	_bufferOrders.Add(o);
+	OrderGrid.Orders.Add(o);
 };
 
 // Подписываемся на ошибки регистрации заявок
@@ -69,8 +69,8 @@ _emuConnector.OrderRegisterFailReceived += (s, f) => OrderGrid.AddRegistrationFa
 
 _emuConnector.CandleReceived += (s, candle) =>
 {
-    if (s == _candlesSubscription)
-        _buffer.Add(candle);
+	if (s == _candlesSubscription)
+		_buffer.Add(candle);
 };
 ```
 
@@ -90,7 +90,7 @@ _realConnector.Subscribe(new(DataType.MarketDepth, security));
 // Подписываемся на свечи
 _candlesSubscription = new(CandleDataTypeEdit.DataType, security)
 {
-    From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
+	From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
 };
 _emuConnector.Subscribe(_candlesSubscription);
 ```

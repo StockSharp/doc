@@ -16,66 +16,66 @@
 ```cs
 static class Extensions
 {
-    // Конвертация направления заявки StockSharp в строковое представление биржи
-    public static string ToNative(this Sides side)
-    {
-        return side switch
-        {
-            Sides.Buy => "buy",
-            Sides.Sell => "sell",
-            _ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
-        };
-    }
+	// Конвертация направления заявки StockSharp в строковое представление биржи
+	public static string ToNative(this Sides side)
+	{
+		return side switch
+		{
+			Sides.Buy => "buy",
+			Sides.Sell => "sell",
+			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
+		};
+	}
 
-    // Конвертация строкового представления направления заявки биржи в тип StockSharp
-    public static Sides ToSide(this string side)
-        => side?.ToLowerInvariant() switch
-        {
-            "buy" or "bid" => Sides.Buy,
-            "sell" or "ask" or "offer" => Sides.Sell,
-            _ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
-        };
+	// Конвертация строкового представления направления заявки биржи в тип StockSharp
+	public static Sides ToSide(this string side)
+		=> side?.ToLowerInvariant() switch
+		{
+			"buy" or "bid" => Sides.Buy,
+			"sell" or "ask" or "offer" => Sides.Sell,
+			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
+		};
 
-    // Конвертация типа заявки StockSharp в строковое представление биржи
-    public static string ToNative(this OrderTypes? type)
-    {
-        return type switch
-        {
-            null => null,
-            OrderTypes.Limit => "limit",
-            OrderTypes.Market => "market",
-            OrderTypes.Conditional => "stop",
-            _ => throw new ArgumentOutOfRangeException(nameof(type), type, LocalizedStrings.InvalidValue),
-        };
-    }
+	// Конвертация типа заявки StockSharp в строковое представление биржи
+	public static string ToNative(this OrderTypes? type)
+	{
+		return type switch
+		{
+			null => null,
+			OrderTypes.Limit => "limit",
+			OrderTypes.Market => "market",
+			OrderTypes.Conditional => "stop",
+			_ => throw new ArgumentOutOfRangeException(nameof(type), type, LocalizedStrings.InvalidValue),
+		};
+	}
 
-    // Конвертация строкового представления типа заявки биржи в тип StockSharp
-    public static OrderTypes ToOrderType(this string type)
-        => type?.ToLowerInvariant() switch
-        {
-            "limit" => OrderTypes.Limit,
-            "market" => OrderTypes.Market,
-            "stop" or "stop limit" => OrderTypes.Conditional,
-            _ => throw new ArgumentOutOfRangeException(nameof(type), type, LocalizedStrings.InvalidValue),
-        };
+	// Конвертация строкового представления типа заявки биржи в тип StockSharp
+	public static OrderTypes ToOrderType(this string type)
+		=> type?.ToLowerInvariant() switch
+		{
+			"limit" => OrderTypes.Limit,
+			"market" => OrderTypes.Market,
+			"stop" or "stop limit" => OrderTypes.Conditional,
+			_ => throw new ArgumentOutOfRangeException(nameof(type), type, LocalizedStrings.InvalidValue),
+		};
 
-    // Другие методы конвертации...
+	// Другие методы конвертации...
 
-    // Словарь для сопоставления таймфреймов StockSharp и строковых представлений биржи
-    public static readonly PairSet<TimeSpan, string> TimeFrames = new()
-    {
-        { TimeSpan.FromMinutes(1), "ONE_MINUTE" },
-        { TimeSpan.FromMinutes(5), "FIVE_MINUTE" },
-        // Другие таймфреймы...
-    };
+	// Словарь для сопоставления таймфреймов StockSharp и строковых представлений биржи
+	public static readonly PairSet<TimeSpan, string> TimeFrames = new()
+	{
+		{ TimeSpan.FromMinutes(1), "ONE_MINUTE" },
+		{ TimeSpan.FromMinutes(5), "FIVE_MINUTE" },
+		// Другие таймфреймы...
+	};
 
-    // Конвертация таймфрейма StockSharp в строковое представление биржи
-    public static string ToNative(this TimeSpan timeFrame)
-        => TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
+	// Конвертация таймфрейма StockSharp в строковое представление биржи
+	public static string ToNative(this TimeSpan timeFrame)
+		=> TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
 
-    // Конвертация строкового представления таймфрейма биржи в TimeSpan
-    public static TimeSpan ToTimeFrame(this string name)
-        => TimeFrames.TryGetKey2(name) ?? throw new ArgumentOutOfRangeException(nameof(name), name, LocalizedStrings.InvalidValue);
+	// Конвертация строкового представления таймфрейма биржи в TimeSpan
+	public static TimeSpan ToTimeFrame(this string name)
+		=> TimeFrames.TryGetKey2(name) ?? throw new ArgumentOutOfRangeException(nameof(name), name, LocalizedStrings.InvalidValue);
 }
 ```
 

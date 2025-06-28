@@ -18,60 +18,60 @@ Below is an example of the implementation of the SecurityLookupAsync method base
 ```cs
 public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-    // Get the list of instrument types to find
-    var secTypes = lookupMsg.GetSecurityTypes();
-    
-    // Determine the maximum number of instruments to search for
-    var left = lookupMsg.Count ?? long.MaxValue;
+	// Get the list of instrument types to find
+	var secTypes = lookupMsg.GetSecurityTypes();
+	
+	// Determine the maximum number of instruments to search for
+	var left = lookupMsg.Count ?? long.MaxValue;
 
-    // Iterate over the instrument types supported by the exchange
-    foreach (var type in new[] { "SPOT", "FUTURE" })
-    {
-        // Request the list of instruments from the exchange
-        var products = await _restClient.GetProducts(type, cancellationToken);
+	// Iterate over the instrument types supported by the exchange
+	foreach (var type in new[] { "SPOT", "FUTURE" })
+	{
+		// Request the list of instruments from the exchange
+		var products = await _restClient.GetProducts(type, cancellationToken);
 
-        foreach (var product in products)
-        {
-            // Create the instrument identifier
-            var secId = product.ProductId.ToStockSharp();
+		foreach (var product in products)
+		{
+			// Create the instrument identifier
+			var secId = product.ProductId.ToStockSharp();
 
-            // Create a message with instrument information
-            var secMsg = new SecurityMessage
-            {
-                SecurityType = product.ProductType.ToSecurityType(),
-                SecurityId = secId,
-                Name = product.DisplayName,
-                PriceStep = product.QuoteIncrement?.ToDecimal(),
-                VolumeStep = product.BaseIncrement?.ToDecimal(),
-                MinVolume = product.BaseMinSize?.ToDecimal(),
-                MaxVolume = product.BaseMaxSize?.ToDecimal(),
-                ExpiryDate = product.FutureProductDetails?.ContractExpiry,
-                Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
+			// Create a message with instrument information
+			var secMsg = new SecurityMessage
+			{
+				SecurityType = product.ProductType.ToSecurityType(),
+				SecurityId = secId,
+				Name = product.DisplayName,
+				PriceStep = product.QuoteIncrement?.ToDecimal(),
+				VolumeStep = product.BaseIncrement?.ToDecimal(),
+				MinVolume = product.BaseMinSize?.ToDecimal(),
+				MaxVolume = product.BaseMaxSize?.ToDecimal(),
+				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
+				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-                // It is necessary to fill in the subscription identifier
-                // so that the external code can understand which subscription the data was received for
-                OriginalTransactionId = lookupMsg.TransactionId,
-            }
-            .TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
+				// It is necessary to fill in the subscription identifier
+				// so that the external code can understand which subscription the data was received for
+				OriginalTransactionId = lookupMsg.TransactionId,
+			}
+			.TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
 
-            // Check if the instrument matches the search criteria
-            if (!secMsg.IsMatch(lookupMsg, secTypes))
-                continue;
+			// Check if the instrument matches the search criteria
+			if (!secMsg.IsMatch(lookupMsg, secTypes))
+				continue;
 
-            // Send a message with instrument information
-            SendOutMessage(secMsg);
+			// Send a message with instrument information
+			SendOutMessage(secMsg);
 
-            // Decrease the counter of remaining instruments
-            if (--left <= 0)
-                break;
-        }
+			// Decrease the counter of remaining instruments
+			if (--left <= 0)
+				break;
+		}
 
-        if (left <= 0)
-            break;
-    }
+		if (left <= 0)
+			break;
+	}
 
-    // Send a message about the completion of the search
-    SendSubscriptionResult(lookupMsg);
+	// Send a message about the completion of the search
+	SendSubscriptionResult(lookupMsg);
 }
 ```
 

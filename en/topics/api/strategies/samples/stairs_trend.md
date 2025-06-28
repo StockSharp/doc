@@ -9,11 +9,11 @@
 ```cs
 public class StairsTrendStrategy : Strategy
 {
-    private readonly StrategyParam<int> _lengthParam;
-    private readonly StrategyParam<DataType> _candleType;
-    
-    private int _bullLength;
-    private int _bearLength;
+	private readonly StrategyParam<int> _lengthParam;
+	private readonly StrategyParam<DataType> _candleType;
+	
+	private int _bullLength;
+	private int _bearLength;
 }
 ```
 
@@ -33,26 +33,26 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Reset counters
-    _bullLength = 0;
-    _bearLength = 0;
+	base.OnStarted(time);
+	
+	// Reset counters
+	_bullLength = 0;
+	_bearLength = 0;
 
-    // Create subscription
-    var subscription = SubscribeCandles(CandleType);
-    
-    subscription
-        .Bind(ProcessCandle)
-        .Start();
+	// Create subscription
+	var subscription = SubscribeCandles(CandleType);
+	
+	subscription
+		.Bind(ProcessCandle)
+		.Start();
 
-    // Set up visualization on the chart
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawOwnTrades(area);
-    }
+	// Set up visualization on the chart
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -63,39 +63,39 @@ The `ProcessCandle` method is called for each completed candle and implements th
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Check if the candle is finished
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Check if the candle is finished
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Check if the strategy is ready for trading
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Check if the strategy is ready for trading
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Update counters based on candle direction
-    if (candle.OpenPrice < candle.ClosePrice)
-    {
-        // Bullish candle
-        _bullLength++;
-        _bearLength = 0;
-    }
-    else if (candle.OpenPrice > candle.ClosePrice)
-    {
-        // Bearish candle
-        _bullLength = 0;
-        _bearLength++;
-    }
+	// Update counters based on candle direction
+	if (candle.OpenPrice < candle.ClosePrice)
+	{
+		// Bullish candle
+		_bullLength++;
+		_bearLength = 0;
+	}
+	else if (candle.OpenPrice > candle.ClosePrice)
+	{
+		// Bearish candle
+		_bullLength = 0;
+		_bearLength++;
+	}
 
-    // Trend strategy: 
-    // Buy after Length consecutive bullish candles
-    if (_bullLength >= Length && Position <= 0)
-    {
-        BuyMarket(Volume + Math.Abs(Position));
-    }
-    // Sell after Length consecutive bearish candles
-    else if (_bearLength >= Length && Position >= 0)
-    {
-        SellMarket(Volume + Math.Abs(Position));
-    }
+	// Trend strategy: 
+	// Buy after Length consecutive bullish candles
+	if (_bullLength >= Length && Position <= 0)
+	{
+		BuyMarket(Volume + Math.Abs(Position));
+	}
+	// Sell after Length consecutive bearish candles
+	else if (_bearLength >= Length && Position >= 0)
+	{
+		SellMarket(Volume + Math.Abs(Position));
+	}
 }
 ```
 

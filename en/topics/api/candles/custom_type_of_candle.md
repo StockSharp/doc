@@ -224,136 +224,136 @@ Example of a simple strategy using delta-candles:
 ```cs
 public class DeltaCandleStrategy : Strategy
 {
-    private readonly StrategyParam<decimal> _deltaThreshold;
-    private readonly StrategyParam<decimal> _volume;
-    private readonly StrategyParam<decimal> _signalDelta;
+	private readonly StrategyParam<decimal> _deltaThreshold;
+	private readonly StrategyParam<decimal> _volume;
+	private readonly StrategyParam<decimal> _signalDelta;
 
-    private IChart _chart;
-    private IChartCandleElement _chartCandleElement;
-    private IChartIndicatorElement _deltaIndicatorElement;
+	private IChart _chart;
+	private IChartCandleElement _chartCandleElement;
+	private IChartIndicatorElement _deltaIndicatorElement;
 
-    public decimal DeltaThreshold
-    {
-        get => _deltaThreshold.Value;
-        set => _deltaThreshold.Value = value;
-    }
+	public decimal DeltaThreshold
+	{
+		get => _deltaThreshold.Value;
+		set => _deltaThreshold.Value = value;
+	}
 
-    public decimal Volume
-    {
-        get => _volume.Value;
-        set => _volume.Value = value;
-    }
+	public decimal Volume
+	{
+		get => _volume.Value;
+		set => _volume.Value = value;
+	}
 
-    public decimal SignalDelta
-    {
-        get => _signalDelta.Value;
-        set => _signalDelta.Value = value;
-    }
+	public decimal SignalDelta
+	{
+		get => _signalDelta.Value;
+		set => _signalDelta.Value = value;
+	}
 
-    public DeltaCandleStrategy()
-    {
-        // Strategy parameters
-        _deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
-            .SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
-            .SetGreaterThanZero()
-            .SetCanOptimize(true)
-            .SetOptimize(500m, 2000m, 100m);
+	public DeltaCandleStrategy()
+	{
+		// Strategy parameters
+		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
+			.SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
+			.SetGreaterThanZero()
+			.SetCanOptimize(true)
+			.SetOptimize(500m, 2000m, 100m);
 
-        _volume = Param(nameof(Volume), 1m)
-            .SetDisplay("Order Volume", "Volume for trading operations", "Main Settings")
-            .SetGreaterThanZero();
+		_volume = Param(nameof(Volume), 1m)
+			.SetDisplay("Order Volume", "Volume for trading operations", "Main Settings")
+			.SetGreaterThanZero();
 
-        _signalDelta = Param(nameof(SignalDelta), 500m)
-            .SetDisplay("Minimum Delta for Signal", "Minimum delta value for signal generation", "Main Settings")
-            .SetGreaterThanZero()
-            .SetCanOptimize(true);
+		_signalDelta = Param(nameof(SignalDelta), 500m)
+			.SetDisplay("Minimum Delta for Signal", "Minimum delta value for signal generation", "Main Settings")
+			.SetGreaterThanZero()
+			.SetCanOptimize(true);
 
-        Name = "DeltaCandleStrategy";
-    }
+		Name = "DeltaCandleStrategy";
+	}
 
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
 
-        // Chart initialization, if available
-        _chart = GetChart();
-        if (_chart != null)
-        {
-            var area = _chart.AddArea();
-            _chartCandleElement = area.AddCandles();
-            _deltaIndicatorElement = area.AddIndicator();
-            _deltaIndicatorElement.DrawStyle = DrawStyles.Histogram;
-            _deltaIndicatorElement.Color = System.Drawing.Color.Purple;
-        }
+		// Chart initialization, if available
+		_chart = GetChart();
+		if (_chart != null)
+		{
+			var area = _chart.AddArea();
+			_chartCandleElement = area.AddCandles();
+			_deltaIndicatorElement = area.AddIndicator();
+			_deltaIndicatorElement.DrawStyle = DrawStyles.Histogram;
+			_deltaIndicatorElement.Color = System.Drawing.Color.Purple;
+		}
 
-        // Create a subscription for delta-candles
-        var subscription = new Subscription(DeltaThreshold.Delta(), Security)
-        {
-            MarketData =
-            {
-                BuildMode = MarketDataBuildModes.Build,
-                BuildFrom = DataType.Ticks
-            }
-        };
+		// Create a subscription for delta-candles
+		var subscription = new Subscription(DeltaThreshold.Delta(), Security)
+		{
+			MarketData =
+			{
+				BuildMode = MarketDataBuildModes.Build,
+				BuildFrom = DataType.Ticks
+			}
+		};
 
-        // Create a rule for processing delta-candles
-        this
-            .WhenCandleReceived(subscription)
-            .Do(ProcessDeltaCandle)
-            .Apply(this);
+		// Create a rule for processing delta-candles
+		this
+			.WhenCandleReceived(subscription)
+			.Do(ProcessDeltaCandle)
+			.Apply(this);
 
-        // Start the subscription
-        Subscribe(subscription);
-    }
+		// Start the subscription
+		Subscribe(subscription);
+	}
 
-    private void ProcessDeltaCandle(ICandleMessage candle)
-    {
-        // Draw on the chart, if available
-        if (_chart != null)
-        {
-            var deltaCandle = (DeltaCandleMessage)candle;
-            
-            var data = _chart.CreateData();
-            data.Group(candle.OpenTime)
-                .Add(_chartCandleElement, candle)
-                .Add(_deltaIndicatorElement, deltaCandle.CurrentDelta);
-                
-            _chart.Draw(data);
-        }
+	private void ProcessDeltaCandle(ICandleMessage candle)
+	{
+		// Draw on the chart, if available
+		if (_chart != null)
+		{
+			var deltaCandle = (DeltaCandleMessage)candle;
+			
+			var data = _chart.CreateData();
+			data.Group(candle.OpenTime)
+				.Add(_chartCandleElement, candle)
+				.Add(_deltaIndicatorElement, deltaCandle.CurrentDelta);
+				
+			_chart.Draw(data);
+		}
 
-        // Process only finished candles
-        if (candle.State != CandleStates.Finished)
-            return;
-            
-        var deltaCandle = (DeltaCandleMessage)candle;
-        
-        // Check if delta is sufficient for a signal
-        if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
-        {
-            this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
-            return;
-        }
+		// Process only finished candles
+		if (candle.State != CandleStates.Finished)
+			return;
+			
+		var deltaCandle = (DeltaCandleMessage)candle;
+		
+		// Check if delta is sufficient for a signal
+		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
+		{
+			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
+			return;
+		}
 
-        // Operation direction depends on the delta sign
-        var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
-        
-        this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
-        
-        // Use the candle's close price to determine the price
-        var price = deltaCandle.ClosePrice;
-        var volume = Volume;
-        
-        // If we already have a position in the opposite direction, 
-        // increase the volume to close the existing position
-        if ((Position < 0 && direction == Sides.Buy) || 
-            (Position > 0 && direction == Sides.Sell))
-        {
-            volume = Math.Max(volume, Math.Abs(Position) + volume);
-        }
-        
-        // Register an order
-        RegisterOrder(this.CreateOrder(direction, price, volume));
-    }
+		// Operation direction depends on the delta sign
+		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
+		
+		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
+		
+		// Use the candle's close price to determine the price
+		var price = deltaCandle.ClosePrice;
+		var volume = Volume;
+		
+		// If we already have a position in the opposite direction, 
+		// increase the volume to close the existing position
+		if ((Position < 0 && direction == Sides.Buy) || 
+			(Position > 0 && direction == Sides.Sell))
+		{
+			volume = Math.Max(volume, Math.Abs(Position) + volume);
+		}
+		
+		// Register an order
+		RegisterOrder(this.CreateOrder(direction, price, volume));
+	}
 }
 ```
 

@@ -3,15 +3,15 @@
 Код ниже демонстрирует как инициализировать [BitfinexMessageAdapter](xref:StockSharp.Bitfinex.BitfinexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-            Connector Connector = new Connector();				
-            ...				
-            var messageAdapter = new BitfinexMessageAdapter(Connector.TransactionIdGenerator)
-            {
-                Key = "<Your API Key>".To<SecureString>(),
-                Secret = "<Your API Secret>".To<SecureString>(),
-            };
-            Connector.Adapter.InnerAdapters.Add(messageAdapter);
-            ...	
+			Connector Connector = new Connector();				
+			...				
+			var messageAdapter = new BitfinexMessageAdapter(Connector.TransactionIdGenerator)
+			{
+				Key = "<Your API Key>".To<SecureString>(),
+				Secret = "<Your API Secret>".To<SecureString>(),
+			};
+			Connector.Adapter.InnerAdapters.Add(messageAdapter);
+			...	
 							
 ```
 

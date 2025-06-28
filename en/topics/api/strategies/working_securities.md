@@ -19,12 +19,12 @@ In the base class `Strategy`, the method returns an empty collection. For correc
 ```cs
 public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 {
-    // Return a list of pairs (instrument, data type) used by the strategy
-    return new[] 
-    { 
-        (Security, CandleType),
-        // Other instrument-data type pairs if the strategy uses multiple
-    };
+	// Return a list of pairs (instrument, data type) used by the strategy
+	return new[] 
+	{ 
+		(Security, CandleType),
+		// Other instrument-data type pairs if the strategy uses multiple
+	};
 }
 ```
 
@@ -42,26 +42,26 @@ If the `GetWorkingSecurities()` method is not overridden in your strategy:
 ```cs
 public class MySmaStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _candleType;
-    
-    public DataType CandleType
-    {
-        get => _candleType.Value;
-        set => _candleType.Value = value;
-    }
-    
-    public MySmaStrategy()
-    {
-        _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
-    }
-    
-    // Override the method for correct work with the Designer
-    public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
-    {
-        return new[] { (Security, CandleType) };
-    }
-    
-    // The rest of the strategy code...
+	private readonly StrategyParam<DataType> _candleType;
+	
+	public DataType CandleType
+	{
+		get => _candleType.Value;
+		set => _candleType.Value = value;
+	}
+	
+	public MySmaStrategy()
+	{
+		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+	}
+	
+	// Override the method for correct work with the Designer
+	public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
+	{
+		return new[] { (Security, CandleType) };
+	}
+	
+	// The rest of the strategy code...
 }
 ```
 

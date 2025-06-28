@@ -7,9 +7,9 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new MicexMessageAdapter(Connector.TransactionIdGenerator)
 {
-    Login = "<Your Login>",
-    Password = "<Your Password>".To<SecureString>(),
-    Addresses = new[] { "<Address>".To<EndPoint>() },
+	Login = "<Your Login>",
+	Password = "<Your Password>".To<SecureString>(),
+	Addresses = new[] { "<Address>".To<EndPoint>() },
 	Server = "<Server>",
 	CompressionLevel = CompressionLevels.None,
 	Interface = MicexInterfaces.Stock18,

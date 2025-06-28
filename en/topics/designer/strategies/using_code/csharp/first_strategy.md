@@ -57,10 +57,10 @@ var shortSma = new SMA { Length = Short };
 var subscription = SubscribeCandles(CandleType);
 
 subscription
-    // bind indicators to the candles
-    .Bind(longSma, shortSma, OnProcess)
-    // start processing
-    .Start();
+	// bind indicators to the candles
+	.Bind(longSma, shortSma, OnProcess)
+	// start processing
+	.Start();
 ```
 
 3. When working with charts, it's important to consider that when running the strategy [outside the Designer](../../../live_execution/running_strategies_outside_of_designer.md), the chart object might be absent.
@@ -71,12 +71,12 @@ var area = CreateChartArea();
 // area can be null in case of no GUI (strategy hosted in Runner or in own console app)
 if (area != null)
 {
-    DrawCandles(area, subscription);
+	DrawCandles(area, subscription);
 
-    DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
-    DrawIndicator(area, longSma);
+	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
+	DrawIndicator(area, longSma);
 
-    DrawOwnTrades(area);
+	DrawOwnTrades(area);
 }
 ```
 
@@ -92,41 +92,41 @@ StartProtection(TakeValue, StopValue);
 ```cs
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
+	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-    // in case we subscribed on non finished only candles
-    if (candle.State != CandleStates.Finished)
-        return;
+	// in case we subscribed on non finished only candles
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // calc new values for short and long
-    var isShortLessThenLong = shortValue < longValue;
+	// calc new values for short and long
+	var isShortLessThenLong = shortValue < longValue;
 
-    if (_isShortLessThenLong == null)
-    {
-        _isShortLessThenLong = isShortLessThenLong;
-    }
-    else if (_isShortLessThenLong != isShortLessThenLong)
-    {
-        // crossing happened
+	if (_isShortLessThenLong == null)
+	{
+		_isShortLessThenLong = isShortLessThenLong;
+	}
+	else if (_isShortLessThenLong != isShortLessThenLong)
+	{
+		// crossing happened
 
-        // if short less than long, the sale, otherwise buy
-        var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+		// if short less than long, the sale, otherwise buy
+		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-        // calc size for open position or revert
-        var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+		// calc size for open position or revert
+		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-        var priceStep = GetSecurity().PriceStep ?? 1;
+		var priceStep = GetSecurity().PriceStep ?? 1;
 
-        // calc order price as a close price + offset
-        var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
+		// calc order price as a close price + offset
+		var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
-        if (direction == Sides.Buy)
-            BuyLimit(price, volume);
-        else
-            SellLimit(price, volume);
+		if (direction == Sides.Buy)
+			BuyLimit(price, volume);
+		else
+			SellLimit(price, volume);
 
-        // store current values for short and long
-        _isShortLessThenLong = isShortLessThenLong;
-    }
+		// store current values for short and long
+		_isShortLessThenLong = isShortLessThenLong;
+	}
 }
 ```

@@ -11,19 +11,19 @@ The recommended approach is to use the strategy parameter mechanism described in
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<int> _longSmaLength;
+	private readonly StrategyParam<int> _longSmaLength;
 
-    public int LongSmaLength
-    {
-        get => _longSmaLength.Value;
-        set => _longSmaLength.Value = value;
-    }
+	public int LongSmaLength
+	{
+		get => _longSmaLength.Value;
+		set => _longSmaLength.Value = value;
+	}
 
-    public SmaStrategy()
-    {
-        _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings");
-    }
+	public SmaStrategy()
+	{
+		_longSmaLength = Param(nameof(LongSmaLength), 80)
+							.SetDisplay("Long SMA length", string.Empty, "Base settings");
+	}
 }
 ```
 
@@ -36,21 +36,21 @@ If you override these methods, **you must call the base class methods**:
 ```cs
 public override void Save(SettingsStorage settings)
 {
-    // First call the base method to save standard parameters
-    base.Save(settings);
-    
-    // Then add your specific saving logic
-    settings.SetValue("CustomState", _customState);
+	// First call the base method to save standard parameters
+	base.Save(settings);
+	
+	// Then add your specific saving logic
+	settings.SetValue("CustomState", _customState);
 }
 	
 public override void Load(SettingsStorage settings)
 {
-    // First call the base method to load standard parameters
-    base.Load(settings);
-    
-    // Then add your specific loading logic
-    if (settings.Contains("CustomState"))
-        _customState = settings.GetValue<string>("CustomState");
+	// First call the base method to load standard parameters
+	base.Load(settings);
+	
+	// Then add your specific loading logic
+	if (settings.Contains("CustomState"))
+		_customState = settings.GetValue<string>("CustomState");
 }
 ```
 
@@ -68,8 +68,8 @@ new JsonSerializer<SettingsStorage>().Serialize(settingsStorage, "strategy.json"
 var newStrategy = new SmaStrategy();
 if (File.Exists("strategy.json"))
 {
-    var loadedSettings = new JsonSerializer<SettingsStorage>().Deserialize("strategy.json");
-    newStrategy.Load(loadedSettings);
+	var loadedSettings = new JsonSerializer<SettingsStorage>().Deserialize("strategy.json");
+	newStrategy.Load(loadedSettings);
 }
 ```
 

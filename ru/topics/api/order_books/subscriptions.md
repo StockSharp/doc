@@ -10,8 +10,8 @@
 // обработчик события
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-    // Здесь вы можете обработать данные стакана, например, вывести их на экран или использовать в своей торговой стратегии
-    Console.WriteLine($"Получен стакан для {orderBook.SecurityId}. Лучшая цена покупки: {orderBook.GetBestBid()?.Price}, Лучшая цена продажи: {orderBook.GetBestBid()?.Price}");
+	// Здесь вы можете обработать данные стакана, например, вывести их на экран или использовать в своей торговой стратегии
+	Console.WriteLine($"Получен стакан для {orderBook.SecurityId}. Лучшая цена покупки: {orderBook.GetBestBid()?.Price}, Лучшая цена продажи: {orderBook.GetBestBid()?.Price}");
 }
 
 // подписка на событие

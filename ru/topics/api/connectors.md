@@ -14,9 +14,9 @@ public Connector Connector;
 ...
 public MainWindow()
 {
-    InitializeComponent();
-    Connector = new Connector();
-    InitConnector();
+	InitializeComponent();
+	Connector = new Connector();
+	InitConnector();
 }
 		
 ```
@@ -29,10 +29,10 @@ private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-    if (Connector.Configure(this))
-    {
-        Connector.Save().Serialize(_connectorFile);
-    }
+	if (Connector.Configure(this))
+	{
+		Connector.Save().Serialize(_connectorFile);
+	}
 }
 	  				
 ```
@@ -46,15 +46,15 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 // Добавляем адаптер для подключения к Binance
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
-    a.Key = "<Your API Key>";
-    a.Secret = "<Your Secret Key>";
+	a.Key = "<Your API Key>";
+	a.Secret = "<Your Secret Key>";
 });
 
 // Добавляем RSS для новостей
 connector.AddAdapter<RssMessageAdapter>(a => 
 {
-    a.Address = "https://news-source.com/feed";
-    a.IsEnabled = true;
+	a.Address = "https://news-source.com/feed";
+	a.IsEnabled = true;
 });
 	  				
 ```
@@ -66,76 +66,76 @@ connector.AddAdapter<RssMessageAdapter>(a =>
 ```cs
 private void InitConnector()
 {
-    // Подписка на событие успешного подключения
-    Connector.Connected += () =>
-    {
-        this.GuiAsync(() => ChangeConnectStatus(true));
-    };
-    
-    // Подписка на событие ошибки подключения
-    Connector.ConnectionError += error => this.GuiAsync(() =>
-    {
-        ChangeConnectStatus(false);
-        MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
-    });
-    
-    // Подписка на событие отключения
-    Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
-    
-    // Подписка на событие ошибки
-    Connector.Error += error =>
-        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
-    
-    // Подписка на событие ошибки подписки на рыночные данные
-    Connector.SubscriptionFailed += (subscription, error) =>
-        this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
-            LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
-    
-    // Подписки на получение данных
-    
-    // Инструменты
-    Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
-    
-    // Тиковые сделки
-    Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
-    
-    // Заявки
-    Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
-    
-    // Собственные сделки
-    Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
-    
-    // Позиции
-    Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
+	// Подписка на событие успешного подключения
+	Connector.Connected += () =>
+	{
+		this.GuiAsync(() => ChangeConnectStatus(true));
+	};
+	
+	// Подписка на событие ошибки подключения
+	Connector.ConnectionError += error => this.GuiAsync(() =>
+	{
+		ChangeConnectStatus(false);
+		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+	});
+	
+	// Подписка на событие отключения
+	Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
+	
+	// Подписка на событие ошибки
+	Connector.Error += error =>
+		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
+	
+	// Подписка на событие ошибки подписки на рыночные данные
+	Connector.SubscriptionFailed += (subscription, error) =>
+		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
+			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
+	
+	// Подписки на получение данных
+	
+	// Инструменты
+	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
+	
+	// Тиковые сделки
+	Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
+	
+	// Заявки
+	Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
+	
+	// Собственные сделки
+	Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
+	
+	// Позиции
+	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
-    // Ошибки регистрации заявок
-    Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
-    
-    // Ошибки снятия заявок
-    Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
-    
-    // Установка поставщика рыночных данных
-    _securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
-    
-    try
-    {
-        if (File.Exists(_connectorFile))
-        {
-            var ctx = new ContinueOnExceptionContext();
-            ctx.Error += ex => ex.LogError();
-            using (new Scope<ContinueOnExceptionContext>(ctx))
-                Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
-        }
-    }
-    catch
-    {
-    }
-    
-    ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
-    
-    // Регистрация провайдера адаптеров для графического конфигурирования
-    ConfigManager.RegisterService<IMessageAdapterProvider>(
-        new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
+	// Ошибки регистрации заявок
+	Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
+	
+	// Ошибки снятия заявок
+	Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
+	
+	// Установка поставщика рыночных данных
+	_securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
+	
+	try
+	{
+		if (File.Exists(_connectorFile))
+		{
+			var ctx = new ContinueOnExceptionContext();
+			ctx.Error += ex => ex.LogError();
+			using (new Scope<ContinueOnExceptionContext>(ctx))
+				Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+		}
+	}
+	catch
+	{
+	}
+	
+	ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
+	
+	// Регистрация провайдера адаптеров для графического конфигурирования
+	ConfigManager.RegisterService<IMessageAdapterProvider>(
+		new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }
 ```
 

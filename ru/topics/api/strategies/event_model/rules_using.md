@@ -199,22 +199,22 @@ var diff = "10%".ToUnit();
 
 // Правило, которое активируется при начале новой свечи
 this.WhenCandlesStarted(subscription)
-    .Do((candle) =>
-    {
-        i++;
+	.Do((candle) =>
+	{
+		i++;
 
-        // Вложенное правило: проверка, когда общий объем превышает порог
-        this
-            .WhenTotalVolumeMore(candle, diff)
-            .Do((candle1) =>
-            {
-                LogInfo($"Правило WhenCandlesStarted и WhenTotalVolumeMore candle={candle1}");
-                LogInfo($"Правило WhenCandlesStarted и WhenTotalVolumeMore i={i}");
-            })
-            .Once().Apply(this);
+		// Вложенное правило: проверка, когда общий объем превышает порог
+		this
+			.WhenTotalVolumeMore(candle, diff)
+			.Do((candle1) =>
+			{
+				LogInfo($"Правило WhenCandlesStarted и WhenTotalVolumeMore candle={candle1}");
+				LogInfo($"Правило WhenCandlesStarted и WhenTotalVolumeMore i={i}");
+			})
+			.Once().Apply(this);
 
-    }).Apply(this);
-    
+	}).Apply(this);
+	
 // Отправляем запрос на подписку
 Subscribe(subscription);
 ```
@@ -228,7 +228,7 @@ var mdSub = new Subscription(DataType.MarketDepth, Security);
 // Метод 1: Создание правила в цепочке
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-    LogInfo($"Правило WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Правило WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Метод 2: Сначала создаем переменную правила
@@ -236,19 +236,19 @@ var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
 {
-    LogInfo($"Правило WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Правило WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Правило внутри правила
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-    LogInfo($"Правило WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Правило WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-    // Правило без указания Once()
-    mdSub.WhenOrderBookReceived(this).Do((depth1) =>
-    {
-        LogInfo($"Правило WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
-    }).Apply(this);
+	// Правило без указания Once()
+	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
+	{
+		LogInfo($"Правило WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+	}).Apply(this);
 }).Once().Apply(this);
 
 // Отправляем запрос на подписку
@@ -267,9 +267,9 @@ var i = 0;
 // Создаем правило, которое обрабатывает стаканы до тех пор, пока i не достигнет 10
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
-    i++;
-    LogInfo($"Правило WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-    LogInfo($"Правило WhenOrderBookReceived i={i}");
+	i++;
+	LogInfo($"Правило WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Правило WhenOrderBookReceived i={i}");
 })
 .Until(() => i >= 10)
 .Apply(this);
@@ -287,24 +287,24 @@ var sub = new Subscription(DataType.Ticks, Security);
 // Когда получим первый тик, создадим заявку
 sub.WhenTickTradeReceived(this).Do(() =>
 {
-    var order = CreateOrder(Sides.Buy, default, 1);
+	var order = CreateOrder(Sides.Buy, default, 1);
 
-    var ruleReg = order.WhenRegistered(this);
-    var ruleRegFailed = order.WhenRegisterFailed(this);
+	var ruleReg = order.WhenRegistered(this);
+	var ruleRegFailed = order.WhenRegisterFailed(this);
 
-    ruleReg
-        .Do(() => LogInfo("Заявка №1 зарегистрирована"))
-        .Once()
-        .Apply(this)
-        .Exclusive(ruleRegFailed);  // Правила взаимоисключающие
+	ruleReg
+		.Do(() => LogInfo("Заявка №1 зарегистрирована"))
+		.Once()
+		.Apply(this)
+		.Exclusive(ruleRegFailed);  // Правила взаимоисключающие
 
-    ruleRegFailed
-        .Do(() => LogInfo("Заявка №1 не зарегистрирована"))
-        .Once()
-        .Apply(this)
-        .Exclusive(ruleReg);  // Правила взаимоисключающие
+	ruleRegFailed
+		.Do(() => LogInfo("Заявка №1 не зарегистрирована"))
+		.Once()
+		.Apply(this)
+		.Exclusive(ruleReg);  // Правила взаимоисключающие
 
-    RegisterOrder(order);
+	RegisterOrder(order);
 }).Once().Apply(this);
 
 // Отправляем запрос на подписку
@@ -320,15 +320,15 @@ var sub = new Subscription(DataType.Ticks, Security);
 // Правило активируется при первом тике и создает другое правило
 sub.WhenTickTradeReceived(this).Do(t =>
 {
-    // Создаем правило, которое активируется при движении цены на 2 пункта в любом направлении
-    sub
-        .WhenLastTradePriceMore(this, t.Price + 2)
-        .Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
-        .Do(t =>
-        {
-            LogInfo($"Сработало правило WhenLastTradePriceMore или WhenLastTradePriceLess: tick={t}");
-        })
-        .Apply(this);
+	// Создаем правило, которое активируется при движении цены на 2 пункта в любом направлении
+	sub
+		.WhenLastTradePriceMore(this, t.Price + 2)
+		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
+		.Do(t =>
+		{
+			LogInfo($"Сработало правило WhenLastTradePriceMore или WhenLastTradePriceLess: tick={t}");
+		})
+		.Apply(this);
 })
 .Once() // вызвать это правило только один раз
 .Apply(this);

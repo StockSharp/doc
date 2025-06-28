@@ -18,12 +18,12 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 		Price = decimal.Parse(TextBoxPrice.Text),
 		Volume = decimal.Parse(TextBoxVolumePrice.Text),
 		Direction = Sides.Buy,
-        Type = OrderTypes.Conditional,
-        Condition = new QuikOrderCondition()
-        {
-            Type = QuikOrderConditionTypes.StopLimit,
-            StopLimitPrice = decimal.Parse(TextBoxStopLimitPrice.Text),
-        }
+		Type = OrderTypes.Conditional,
+		Condition = new QuikOrderCondition()
+		{
+			Type = QuikOrderConditionTypes.StopLimit,
+			StopLimitPrice = decimal.Parse(TextBoxStopLimitPrice.Text),
+		}
 	};
 	Connector.RegisterOrder(order);
 }

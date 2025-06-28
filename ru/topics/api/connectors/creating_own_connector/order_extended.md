@@ -18,11 +18,11 @@ StockSharp предоставляет гибкую систему для раб�
 ```cs
 public class MyOrderCondition : OrderCondition
 {
-    public decimal? SpecialPrice
-    {
-        get => (decimal?)Parameters[nameof(SpecialPrice)];
-        set => Parameters[nameof(SpecialPrice)] = value;
-    }
+	public decimal? SpecialPrice
+	{
+		get => (decimal?)Parameters[nameof(SpecialPrice)];
+		set => Parameters[nameof(SpecialPrice)] = value;
+	}
 }
 ```
 
@@ -43,11 +43,11 @@ StockSharp определяет несколько интерфейсов для
 ```cs
 public class MyWithdrawCondition : BaseWithdrawOrderCondition
 {
-    public string DestinationAddress
-    {
-        get => (string)Parameters[nameof(DestinationAddress)];
-        set => Parameters[nameof(DestinationAddress)] = value;
-    }
+	public string DestinationAddress
+	{
+		get => (string)Parameters[nameof(DestinationAddress)];
+		set => Parameters[nameof(DestinationAddress)] = value;
+	}
 }
 ```
 

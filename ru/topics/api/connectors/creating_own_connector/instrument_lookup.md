@@ -18,60 +18,60 @@
 ```cs
 public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-    // Получаем список типов инструментов, которые нужно найти
-    var secTypes = lookupMsg.GetSecurityTypes();
-    
-    // Определяем максимальное количество инструментов для поиска
-    var left = lookupMsg.Count ?? long.MaxValue;
+	// Получаем список типов инструментов, которые нужно найти
+	var secTypes = lookupMsg.GetSecurityTypes();
+	
+	// Определяем максимальное количество инструментов для поиска
+	var left = lookupMsg.Count ?? long.MaxValue;
 
-    // Перебираем типы инструментов, поддерживаемые биржей
-    foreach (var type in new[] { "SPOT", "FUTURE" })
-    {
-        // Запрашиваем список инструментов у биржи
-        var products = await _restClient.GetProducts(type, cancellationToken);
+	// Перебираем типы инструментов, поддерживаемые биржей
+	foreach (var type in new[] { "SPOT", "FUTURE" })
+	{
+		// Запрашиваем список инструментов у биржи
+		var products = await _restClient.GetProducts(type, cancellationToken);
 
-        foreach (var product in products)
-        {
-            // Создаем идентификатор инструмента
-            var secId = product.ProductId.ToStockSharp();
+		foreach (var product in products)
+		{
+			// Создаем идентификатор инструмента
+			var secId = product.ProductId.ToStockSharp();
 
-            // Создаем сообщение с информацией об инструменте
-            var secMsg = new SecurityMessage
-            {
-                SecurityType = product.ProductType.ToSecurityType(),
-                SecurityId = secId,
-                Name = product.DisplayName,
-                PriceStep = product.QuoteIncrement?.ToDecimal(),
-                VolumeStep = product.BaseIncrement?.ToDecimal(),
-                MinVolume = product.BaseMinSize?.ToDecimal(),
-                MaxVolume = product.BaseMaxSize?.ToDecimal(),
-                ExpiryDate = product.FutureProductDetails?.ContractExpiry,
-                Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
+			// Создаем сообщение с информацией об инструменте
+			var secMsg = new SecurityMessage
+			{
+				SecurityType = product.ProductType.ToSecurityType(),
+				SecurityId = secId,
+				Name = product.DisplayName,
+				PriceStep = product.QuoteIncrement?.ToDecimal(),
+				VolumeStep = product.BaseIncrement?.ToDecimal(),
+				MinVolume = product.BaseMinSize?.ToDecimal(),
+				MaxVolume = product.BaseMaxSize?.ToDecimal(),
+				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
+				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-                // обязательно заполняем идентификатор подписки,
-                // чтобы внешний код смог понять, к какой подписке были получены данные
-                OriginalTransactionId = lookupMsg.TransactionId,
-            }
-            .TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
+				// обязательно заполняем идентификатор подписки,
+				// чтобы внешний код смог понять, к какой подписке были получены данные
+				OriginalTransactionId = lookupMsg.TransactionId,
+			}
+			.TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
 
-            // Проверяем, соответствует ли инструмент критериям поиска
-            if (!secMsg.IsMatch(lookupMsg, secTypes))
-                continue;
+			// Проверяем, соответствует ли инструмент критериям поиска
+			if (!secMsg.IsMatch(lookupMsg, secTypes))
+				continue;
 
-            // Отправляем сообщение с информацией об инструменте
-            SendOutMessage(secMsg);
+			// Отправляем сообщение с информацией об инструменте
+			SendOutMessage(secMsg);
 
-            // Уменьшаем счетчик оставшихся инструментов
-            if (--left <= 0)
-                break;
-        }
+			// Уменьшаем счетчик оставшихся инструментов
+			if (--left <= 0)
+				break;
+		}
 
-        if (left <= 0)
-            break;
-    }
+		if (left <= 0)
+			break;
+	}
 
-    // Отправляем сообщение о завершении поиска
-    SendSubscriptionResult(lookupMsg);
+	// Отправляем сообщение о завершении поиска
+	SendSubscriptionResult(lookupMsg);
 }
 ```
 

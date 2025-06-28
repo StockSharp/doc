@@ -12,19 +12,19 @@
 // Правильно: конструктор без параметров
 public class SmaStrategy : Strategy
 {
-    public SmaStrategy()
-    {
-        // Инициализация параметров
-    }
+	public SmaStrategy()
+	{
+		// Инициализация параметров
+	}
 }
 
 // Неправильно: конструктор с параметрами
 public class SmaStrategy : Strategy
 {
-    public SmaStrategy(int longLength, int shortLength) // Не используйте такой подход
-    {
-        // ...
-    }
+	public SmaStrategy(int longLength, int shortLength) // Не используйте такой подход
+	{
+		// ...
+	}
 }
 ```
 
@@ -42,14 +42,14 @@ private readonly StrategyParam<int> _longSmaLength;
 
 public int LongSmaLength
 {
-    get => _longSmaLength.Value;
-    set => _longSmaLength.Value = value;
+	get => _longSmaLength.Value;
+	set => _longSmaLength.Value = value;
 }
 
 public SmaStrategy()
 {
-    _longSmaLength = Param(nameof(LongSmaLength), 80)
-                      .SetDisplay("Long SMA length", string.Empty, "Base settings");
+	_longSmaLength = Param(nameof(LongSmaLength), 80)
+						.SetDisplay("Long SMA length", string.Empty, "Base settings");
 }
 
 // Неправильно: использование обычных свойств
@@ -57,8 +57,8 @@ private int _longSmaLength = 80; // Не используйте такой по�
 
 public int LongSmaLength
 {
-    get => _longSmaLength;
-    set => _longSmaLength = value;
+	get => _longSmaLength;
+	set => _longSmaLength = value;
 }
 ```
 
@@ -78,30 +78,30 @@ public int LongSmaLength
 // Правильный подход: использование IChart
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Получаем график, предоставленный средой выполнения
-    _chart = GetChart();
-    
-    if (_chart != null)
-    {
-        // График доступен (например, в Designer или Shell)
-        InitChart();
-    }
-    else
-    {
-        // График недоступен (например, в Runner или облачном тестировании)
-        // Стратегия продолжает работу без визуализации
-    }
+	base.OnStarted(time);
+	
+	// Получаем график, предоставленный средой выполнения
+	_chart = GetChart();
+	
+	if (_chart != null)
+	{
+		// График доступен (например, в Designer или Shell)
+		InitChart();
+	}
+	else
+	{
+		// График недоступен (например, в Runner или облачном тестировании)
+		// Стратегия продолжает работу без визуализации
+	}
 }
 
 private void InitChart()
 {
-    // Настройка графика через абстрактный интерфейс
-    _chart.ClearAreas();
-    var area = _chart.AddArea();
-    _chartCandleElement = area.AddCandles();
-    // ...
+	// Настройка графика через абстрактный интерфейс
+	_chart.ClearAreas();
+	var area = _chart.AddArea();
+	_chartCandleElement = area.AddCandles();
+	// ...
 }
 ```
 
@@ -121,14 +121,14 @@ private void InitChart()
 ```cs
 private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
 {
-    if (_chart == null) return; // Важная проверка
-    
-    var data = _chart.CreateData();
-    data.Group(candle.OpenTime)
-        .Add(_chartCandleElement, candle)
-        .Add(_longSmaIndicatorElement, longSma)
-        .Add(_shortSmaIndicatorElement, shortSma);
-    _chart.Draw(data);
+	if (_chart == null) return; // Важная проверка
+	
+	var data = _chart.CreateData();
+	data.Group(candle.OpenTime)
+		.Add(_chartCandleElement, candle)
+		.Add(_longSmaIndicatorElement, longSma)
+		.Add(_shortSmaIndicatorElement, shortSma);
+	_chart.Draw(data);
 }
 ```
 
@@ -142,22 +142,22 @@ private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue lon
 // Правильно: использование стандартных обработчиков событий
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Обработка свечи в основном потоке
-    var longSmaIsFormedPrev = _longSma.IsFormed;
-    var ls = _longSma.Process(candle);
-    var ss = _shortSma.Process(candle);
-    
-    // ...
+	// Обработка свечи в основном потоке
+	var longSmaIsFormedPrev = _longSma.IsFormed;
+	var ls = _longSma.Process(candle);
+	var ss = _shortSma.Process(candle);
+	
+	// ...
 }
 
 // Неправильно: создание дополнительных потоков
 private void ProcessCandle(ICandleMessage candle)
 {
-    // НЕ делайте так
-    Task.Run(() => {
-        var longSmaIsFormedPrev = _longSma.IsFormed;
-        // ...
-    });
+	// НЕ делайте так
+	Task.Run(() => {
+		var longSmaIsFormedPrev = _longSma.IsFormed;
+		// ...
+	});
 }
 ```
 
@@ -169,9 +169,9 @@ private void ProcessCandle(ICandleMessage candle)
 // Правильно: обычная обработка без синхронизации
 private void ProcessCandle(ICandleMessage candle)
 {
-    var ls = _longSma.Process(candle);
-    var ss = _shortSma.Process(candle);
-    // ...
+	var ls = _longSma.Process(candle);
+	var ss = _shortSma.Process(candle);
+	// ...
 }
 
 // Неправильно: излишняя синхронизация
@@ -179,11 +179,11 @@ private readonly object _syncLock = new object(); // Не нужно
 
 private void ProcessCandle(ICandleMessage candle)
 {
-    lock (_syncLock) // Не нужно
-    {
-        var ls = _longSma.Process(candle);
-        // ...
-    }
+	lock (_syncLock) // Не нужно
+	{
+		var ls = _longSma.Process(candle);
+		// ...
+	}
 }
 ```
 
@@ -197,23 +197,23 @@ private void ProcessCandle(ICandleMessage candle)
 // Правильно: использование встроенных механизмов для сохранения данных
 protected override void OnStopped()
 {
-    // Данные сохраняются автоматически через параметры стратегии
-    base.OnStopped();
+	// Данные сохраняются автоматически через параметры стратегии
+	base.OnStopped();
 }
 
 // Неправильно: прямое обращение к внешним ресурсам
 protected override void OnStopped()
 {
-    // НЕ делайте так
-    File.WriteAllText("results.txt", $"PnL: {PnL}");
-    
-    // или так
-    using (var connection = new SqlConnection("..."))
-    {
-        // ...
-    }
-    
-    base.OnStopped();
+	// НЕ делайте так
+	File.WriteAllText("results.txt", $"PnL: {PnL}");
+	
+	// или так
+	using (var connection = new SqlConnection("..."))
+	{
+		// ...
+	}
+	
+	base.OnStopped();
 }
 ```
 
@@ -232,23 +232,23 @@ protected override void OnStopped()
 ```cs
 public override void Save(SettingsStorage settings)
 {
-    base.Save(settings); // Сначала сохраняем параметры стратегии
-    
-    // Затем сохраняем собственные данные
-    settings.SetValue("CustomState", _customState);
-    settings.SetValue("LastSignalTime", _lastSignalTime);
+	base.Save(settings); // Сначала сохраняем параметры стратегии
+	
+	// Затем сохраняем собственные данные
+	settings.SetValue("CustomState", _customState);
+	settings.SetValue("LastSignalTime", _lastSignalTime);
 }
 
 public override void Load(SettingsStorage settings)
 {
-    base.Load(settings); // Сначала загружаем параметры стратегии
-    
-    // Затем загружаем собственные данные
-    if (settings.Contains("CustomState"))
-        _customState = settings.GetValue<string>("CustomState");
-    
-    if (settings.Contains("LastSignalTime"))
-        _lastSignalTime = settings.GetValue<DateTimeOffset>("LastSignalTime");
+	base.Load(settings); // Сначала загружаем параметры стратегии
+	
+	// Затем загружаем собственные данные
+	if (settings.Contains("CustomState"))
+		_customState = settings.GetValue<string>("CustomState");
+	
+	if (settings.Contains("LastSignalTime"))
+		_lastSignalTime = settings.GetValue<DateTimeOffset>("LastSignalTime");
 }
 ```
 
@@ -263,23 +263,23 @@ public override void Load(SettingsStorage settings)
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-    _longSma = new SimpleMovingAverage { Length = LongSmaLength };
+	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
+	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 
-    Indicators.Add(_shortSma);
-    Indicators.Add(_longSma);
-    
-    var subscription = new Subscription(Series, Security);
+	Indicators.Add(_shortSma);
+	Indicators.Add(_longSma);
+	
+	var subscription = new Subscription(Series, Security);
 
-    // Правильно: использование правил для обработки данных
-    Connector
-        .WhenCandlesFinished(subscription)
-        .Do(ProcessCandle)
-        .Apply(this);
+	// Правильно: использование правил для обработки данных
+	Connector
+		.WhenCandlesFinished(subscription)
+		.Do(ProcessCandle)
+		.Apply(this);
 
-    Connector.Subscribe(subscription);
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -294,13 +294,13 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 // Пример комбинирования правил
 Security
-    .WhenNewTrade()
-    .And(Portfolio.WhenMoneyChanged())
-    .Do(() => {
-        // Код, который выполнится только когда будет новая сделка 
-        // И изменится баланс портфеля
-    })
-    .Apply(this);
+	.WhenNewTrade()
+	.And(Portfolio.WhenMoneyChanged())
+	.Do(() => {
+		// Код, который выполнится только когда будет новая сделка 
+		// И изменится баланс портфеля
+	})
+	.Apply(this);
 ```
 
 4. **Управление жизненным циклом** - правила можно делать одноразовыми (`Once()`), устанавливать условия отмены (`Until()`), добавлять отложенные действия и т.д.

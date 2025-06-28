@@ -11,11 +11,11 @@
 ```cs
 public class BollingerStrategyUpBandStrategy : Strategy
 {
-    private readonly StrategyParam<int> _bollingerLength;
-    private readonly StrategyParam<decimal> _bollingerDeviation;
-    private readonly StrategyParam<DataType> _candleType;
+	private readonly StrategyParam<int> _bollingerLength;
+	private readonly StrategyParam<decimal> _bollingerDeviation;
+	private readonly StrategyParam<DataType> _candleType;
 
-    private BollingerBands _bollingerBands;
+	private BollingerBands _bollingerBands;
 }
 ```
 
@@ -36,29 +36,29 @@ public class BollingerStrategyUpBandStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Создание индикатора
-    _bollingerBands = new BollingerBands
-    {
-        Length = BollingerLength,
-        Width = BollingerDeviation
-    };
+	// Создание индикатора
+	_bollingerBands = new BollingerBands
+	{
+		Length = BollingerLength,
+		Width = BollingerDeviation
+	};
 
-    // Создание подписки и привязка индикатора
-    var subscription = SubscribeCandles(CandleType);
-    subscription
-        .Bind(_bollingerBands, ProcessCandle)
-        .Start();
+	// Создание подписки и привязка индикатора
+	var subscription = SubscribeCandles(CandleType);
+	subscription
+		.Bind(_bollingerBands, ProcessCandle)
+		.Start();
 
-    // Настройка визуализации на графике
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawIndicator(area, _bollingerBands, System.Drawing.Color.Purple);
-        DrawOwnTrades(area);
-    }
+	// Настройка визуализации на графике
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawIndicator(area, _bollingerBands, System.Drawing.Color.Purple);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -69,25 +69,25 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
 {
-    // Пропускаем незавершенные свечи
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Пропускаем незавершенные свечи
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Проверяем готовность стратегии к торговле
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Проверяем готовность стратегии к торговле
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Торговая логика:
-    // Покупка, когда цена касается верхней полосы (только при отсутствии позиции)
-    if (candle.ClosePrice >= upperBand && Position == 0)
-    {
-        BuyMarket(Volume);
-    }
-    // Продажа для закрытия позиции, когда цена достигает средней линии (только при наличии длинной позиции)
-    else if (candle.ClosePrice <= middleBand && Position > 0)
-    {
-        SellMarket(Math.Abs(Position));
-    }
+	// Торговая логика:
+	// Покупка, когда цена касается верхней полосы (только при отсутствии позиции)
+	if (candle.ClosePrice >= upperBand && Position == 0)
+	{
+		BuyMarket(Volume);
+	}
+	// Продажа для закрытия позиции, когда цена достигает средней линии (только при наличии длинной позиции)
+	else if (candle.ClosePrice <= middleBand && Position > 0)
+	{
+		SellMarket(Math.Abs(Position));
+	}
 }
 ```
 

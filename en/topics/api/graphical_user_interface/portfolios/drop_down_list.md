@@ -13,11 +13,11 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 
 ```xaml
 <Window x:Class="SampleAsyncTransactions.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-    xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
-    Title="{x:Static loc:LocalizedStrings.XamlStr567}" Height="116" Width="347">
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+	xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+	Title="{x:Static loc:LocalizedStrings.XamlStr567}" Height="116" Width="347">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			..............................
@@ -31,7 +31,7 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 		<TextBlock Grid.Column="0" Grid.Row="1">
 			<Run Text="{x:Static loc:LocalizedStrings.Account}"/><Run Text=":"/>
 		</TextBlock>
-        <sx:PortfolioComboBox x:Name="Portfolios" Grid.Column="1" Grid.Row="1" />
+		<sx:PortfolioComboBox x:Name="Portfolios" Grid.Column="1" Grid.Row="1" />
 		<Button x:Name="ConnectBtn" Grid.Column="0" Grid.Row="2" Content="{x:Static loc:LocalizedStrings.Connect}" Click="ConnectClick" />
 		<Button x:Name="ShowSecurities" Grid.Column="1" Grid.Row="2" IsEnabled="False" Content="{x:Static loc:LocalizedStrings.Securities}" Click="ShowSecuritiesClick" />
 	</Grid>
@@ -39,9 +39,9 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 	  				
 ```
 ```cs
- .............................................
- private readonly Connector _connector = new Connector();
- .............................................
+	.............................................
+	private readonly Connector _connector = new Connector();
+	.............................................
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	.............................................

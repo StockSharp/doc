@@ -79,13 +79,13 @@ Here's an example of working with strategy statistics in your code:
 // Create a strategy
 var strategy = new SmaStrategy
 {
-    // Configure strategy parameters
-    Security = security,
-    Portfolio = portfolio,
-    Volume = 1,
-    // Set SMA parameters
-    LongSma = 200,
-    ShortSma = 50,
+	// Configure strategy parameters
+	Security = security,
+	Portfolio = portfolio,
+	Volume = 1,
+	// Set SMA parameters
+	LongSma = 200,
+	ShortSma = 50,
 };
 
 // Connect the strategy to a chart for visualization
@@ -106,23 +106,23 @@ strategy.Start();
 // When you need to react to changes in statistics
 strategy.PnLChanged += () =>
 {
-    Console.WriteLine($"Current PnL: {strategy.PnL}");
-    
-    // You can also access individual statistical parameters
-    var netProfit = statisticManager.Parameters
-        .OfType<NetProfitParameter>()
-        .FirstOrDefault();
-        
-    if (netProfit != null)
-    {
-        Console.WriteLine($"Net Profit: {netProfit.Value}");
-    }
+	Console.WriteLine($"Current PnL: {strategy.PnL}");
+	
+	// You can also access individual statistical parameters
+	var netProfit = statisticManager.Parameters
+		.OfType<NetProfitParameter>()
+		.FirstOrDefault();
+		
+	if (netProfit != null)
+	{
+		Console.WriteLine($"Net Profit: {netProfit.Value}");
+	}
 };
 
 // For tracking position statistics
 strategy.PositionChanged += () =>
 {
-    Console.WriteLine($"Current Position: {strategy.Position}");
+	Console.WriteLine($"Current Position: {strategy.Position}");
 };
 ```
 
@@ -140,24 +140,24 @@ Here's a simple example of a custom statistical parameter:
 
 ```csharp
 [Display(
-    ResourceType = typeof(LocalizedStrings),
-    Name = "My Custom Indicator",
-    Description = "Description of my custom indicator",
-    GroupName = "Custom Parameters",
-    Order = 1000
+	ResourceType = typeof(LocalizedStrings),
+	Name = "My Custom Indicator",
+	Description = "Description of my custom indicator",
+	GroupName = "Custom Parameters",
+	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>
 {
-    public MyCustomParameter()
-        : base(StatisticParameterTypes.Custom)
-    {
-    }
+	public MyCustomParameter()
+		: base(StatisticParameterTypes.Custom)
+	{
+	}
 
-    public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
-    {
-        // Custom calculation logic
-        Value = /* your custom calculation */;
-    }
+	public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
+	{
+		// Custom calculation logic
+		Value = /* your custom calculation */;
+	}
 }
 
 // Then add it to your strategy's StatisticManager

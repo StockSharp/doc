@@ -29,11 +29,11 @@
 
 ```xaml
 <Window x:Class="Sample.SecuritiesWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-    xmlns:xaml="http://schemas.stocksharp.com/xaml"
-    Title="{x:Static loc:LocalizedStrings.Securities}" Height="415" Width="1081">
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+	xmlns:xaml="http://schemas.stocksharp.com/xaml"
+	Title="{x:Static loc:LocalizedStrings.Securities}" Height="415" Width="1081">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*" />
@@ -47,7 +47,7 @@
 ```cs
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-    ......................................
+	......................................
 	_connector.NewSecurity += security => _securitiesWindow.SecurityPicker.Securities.Add(security);
 	// устанавливаем поставщик маркет-данных
 	_securitiesWindow.SecurityPicker.MarketDataProvider = _connector;

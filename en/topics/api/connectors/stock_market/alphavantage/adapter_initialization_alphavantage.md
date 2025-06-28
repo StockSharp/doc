@@ -11,7 +11,7 @@ var messageAdapter = new AlphaVantageMessageAdapter(Connector.TransactionIdGener
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
-          
+			
 ```
 
 ## Recommended content

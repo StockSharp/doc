@@ -24,7 +24,7 @@ It's important to subscribe to the [Connector.OrderBookReceived](xref:StockSharp
 
 ```cs
 var security = GetSecurity(); // Get the Security object you want to subscribe to
-                
+				
 // subscribe to the order book
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);

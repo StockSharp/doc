@@ -42,9 +42,9 @@ StockSharp поддерживает различные поведения кот
 ```csharp
 // Создаем поведение для рыночного котирования
 var behavior = new MarketQuotingBehavior(
-    new Unit(0.01m), // Смещение цены от лучшей котировки
-    new Unit(0.1m, UnitTypes.Percent), // Минимальное отклонение для обновления котировки
-    MarketPriceTypes.Following // Тип рыночной цены для котирования
+	new Unit(0.01m), // Смещение цены от лучшей котировки
+	new Unit(0.1m, UnitTypes.Percent), // Минимальное отклонение для обновления котировки
+	MarketPriceTypes.Following // Тип рыночной цены для котирования
 );
 ```
 
@@ -53,24 +53,24 @@ var behavior = new MarketQuotingBehavior(
 ```csharp
 // Создаем процессор котирования
 _quotingProcessor = new QuotingProcessor(
-    behavior,
-    Security, // Инструмент
-    Portfolio, // Портфель
-    Sides.Buy, // Направление котирования
-    Volume, // Объем котирования
-    Volume, // Максимальный объем заявки
-    TimeSpan.Zero, // Без таймаута
-    this, // Стратегия реализует ISubscriptionProvider
-    this, // Стратегия реализует IMarketRuleContainer
-    this, // Стратегия реализует ITransactionProvider
-    this, // Стратегия реализует ITimeProvider
-    this, // Стратегия реализует IMarketDataProvider
-    IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
-    true, // Использовать цены стакана
-    true  // Использовать цену последней сделки, если стакан пуст
+	behavior,
+	Security, // Инструмент
+	Portfolio, // Портфель
+	Sides.Buy, // Направление котирования
+	Volume, // Объем котирования
+	Volume, // Максимальный объем заявки
+	TimeSpan.Zero, // Без таймаута
+	this, // Стратегия реализует ISubscriptionProvider
+	this, // Стратегия реализует IMarketRuleContainer
+	this, // Стратегия реализует ITransactionProvider
+	this, // Стратегия реализует ITimeProvider
+	this, // Стратегия реализует IMarketDataProvider
+	IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
+	true, // Использовать цены стакана
+	true  // Использовать цену последней сделки, если стакан пуст
 )
 {
-    Parent = this
+	Parent = this
 };
 ```
 
@@ -79,18 +79,18 @@ _quotingProcessor = new QuotingProcessor(
 ```csharp
 // Подписываемся на события процессора для логирования и обработки
 _quotingProcessor.OrderRegistered += order =>
-    this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
 _quotingProcessor.OrderFailed += fail =>
-    this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	this.AddInfoLog($"Order failed: {fail.Error.Message}");
 
 _quotingProcessor.OwnTrade += trade =>
-    this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 _quotingProcessor.Finished += isOk => {
-    this.AddInfoLog($"Quoting finished with success: {isOk}");
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	this.AddInfoLog($"Quoting finished with success: {isOk}");
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 };
 ```
 
@@ -108,11 +108,11 @@ _quotingProcessor.Start();
 ```csharp
 protected override void OnStopped()
 {
-    // Освобождаем ресурсы текущего процессора
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
-    
-    base.OnStopped();
+	// Освобождаем ресурсы текущего процессора
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
+	
+	base.OnStopped();
 }
 ```
 

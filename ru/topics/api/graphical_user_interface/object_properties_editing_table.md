@@ -32,8 +32,8 @@
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-        xmlns:propertyGrid="http://schemas.stocksharp.com/xaml"
-        Title="{x:Static loc:LocalizedStrings.XamlStr540}" Height="110" Width="512">
+		xmlns:propertyGrid="http://schemas.stocksharp.com/xaml"
+		Title="{x:Static loc:LocalizedStrings.XamlStr540}" Height="110" Width="512">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition />

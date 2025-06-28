@@ -9,11 +9,11 @@
 ```cs
 public class MqStrategy : Strategy
 {
-    private readonly StrategyParam<MarketPriceTypes> _priceType;
-    private readonly StrategyParam<Unit> _priceOffset;
-    private readonly StrategyParam<Unit> _bestPriceOffset;
+	private readonly StrategyParam<MarketPriceTypes> _priceType;
+	private readonly StrategyParam<Unit> _priceOffset;
+	private readonly StrategyParam<Unit> _bestPriceOffset;
 
-    private QuotingProcessor _quotingProcessor;
+	private QuotingProcessor _quotingProcessor;
 }
 ```
 
@@ -32,11 +32,11 @@ public class MqStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Подписка на изменения рыночного времени для обновления котировок
-    Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
-    Connector_CurrentTimeChanged(default);
+	// Подписка на изменения рыночного времени для обновления котировок
+	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
+	Connector_CurrentTimeChanged(default);
 }
 ```
 
@@ -47,67 +47,67 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-    // Создаем новый процессор только если текущий остановлен или не существует
-    if (_quotingProcessor != null && _quotingProcessor.LeftVolume > 0)
-        return;
+	// Создаем новый процессор только если текущий остановлен или не существует
+	if (_quotingProcessor != null && _quotingProcessor.LeftVolume > 0)
+		return;
 
-    // Освобождаем ресурсы старого процессора, если он существует
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	// Освобождаем ресурсы старого процессора, если он существует
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 
-    // Определяем сторону котирования на основе текущей позиции
-    var side = Position <= 0 ? Sides.Buy : Sides.Sell;
+	// Определяем сторону котирования на основе текущей позиции
+	var side = Position <= 0 ? Sides.Buy : Sides.Sell;
 
-    // Создаем новое поведение котирования
-    var behavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	// Создаем новое поведение котирования
+	var behavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    // Рассчитываем объем котирования
-    var quotingVolume = Volume + Math.Abs(Position);
+	// Рассчитываем объем котирования
+	var quotingVolume = Volume + Math.Abs(Position);
 
-    // Создаем и инициализируем процессор
-    _quotingProcessor = new QuotingProcessor(
-        behavior,
-        Security,
-        Portfolio,
-        side,
-        quotingVolume,
-        Volume, // Максимальный объем заявки
-        TimeSpan.Zero, // Без таймаута
-        this, // Стратегия реализует ISubscriptionProvider
-        this, // Стратегия реализует IMarketRuleContainer
-        this, // Стратегия реализует ITransactionProvider
-        this, // Стратегия реализует ITimeProvider
-        this, // Стратегия реализует IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
-        true, // Использовать цены стакана
-        true  // Использовать цену последней сделки, если стакан пуст
-    )
-    {
-        Parent = this
-    };
+	// Создаем и инициализируем процессор
+	_quotingProcessor = new QuotingProcessor(
+		behavior,
+		Security,
+		Portfolio,
+		side,
+		quotingVolume,
+		Volume, // Максимальный объем заявки
+		TimeSpan.Zero, // Без таймаута
+		this, // Стратегия реализует ISubscriptionProvider
+		this, // Стратегия реализует IMarketRuleContainer
+		this, // Стратегия реализует ITransactionProvider
+		this, // Стратегия реализует ITimeProvider
+		this, // Стратегия реализует IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Проверка разрешения торговли
+		true, // Использовать цены стакана
+		true  // Использовать цену последней сделки, если стакан пуст
+	)
+	{
+		Parent = this
+	};
 
-    // Подписываемся на события процессора для логирования
-    _quotingProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	// Подписываемся на события процессора для логирования
+	_quotingProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
-    _quotingProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	_quotingProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Order failed: {fail.Error.Message}");
 
-    _quotingProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_quotingProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _quotingProcessor.Finished += isOk => {
-        this.AddInfoLog($"Quoting finished with success: {isOk}");
-        _quotingProcessor?.Dispose();
-        _quotingProcessor = null;
-    };
+	_quotingProcessor.Finished += isOk => {
+		this.AddInfoLog($"Quoting finished with success: {isOk}");
+		_quotingProcessor?.Dispose();
+		_quotingProcessor = null;
+	};
 
-    // Запускаем процессор
-    _quotingProcessor.Start();
+	// Запускаем процессор
+	_quotingProcessor.Start();
 }
 ```
 
@@ -118,14 +118,14 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 ```cs
 protected override void OnStopped()
 {
-    // Отписываемся для предотвращения утечек памяти
-    Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
+	// Отписываемся для предотвращения утечек памяти
+	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-    // Освобождаем ресурсы текущего процессора, если он существует
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	// Освобождаем ресурсы текущего процессора, если он существует
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 
-    base.OnStopped();
+	base.OnStopped();
 }
 ```
 

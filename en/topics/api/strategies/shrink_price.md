@@ -32,8 +32,8 @@ Using [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPr
 // Create a Security object with specified parameters
 var security = new Security
 {
-    PriceStep = 0.01m,  // Price step of 0.01
-    Decimals = 2        // Two decimal places
+	PriceStep = 0.01m,  // Price step of 0.01
+	Decimals = 2        // Two decimal places
 };
 
 // Examples of using ShrinkPrice
@@ -59,8 +59,8 @@ Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}"
 // Example 4: Using ShrinkPrice when creating an order
 var order = new Order
 {
-    Security = security,
-    Price = 10.237m.ShrinkPrice(security)  // Round the price before creating the order
+	Security = security,
+	Price = 10.237m.ShrinkPrice(security)  // Round the price before creating the order
 };
 Console.WriteLine($"Order price: {order.Price}");
 // Output: Order price: 10.24

@@ -8,14 +8,14 @@ Connector Connector = new Connector();
 var luaFixMarketDataMessageAdapter = new LuaFixMarketDataMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "localhost:5001".To<EndPoint>(),
-    Login = "quik",
-    Password = "quik".To<SecureString>(),
+	Login = "quik",
+	Password = "quik".To<SecureString>(),
 };
 var luaFixTransactionMessageAdapter  = new LuaFixTransactionMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "localhost:5001".To<EndPoint>(),
-    Login = "quik",
-    Password = "quik".To<SecureString>(),
+	Login = "quik",
+	Password = "quik".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(luaFixMarketDataMessageAdapter);
 Connector.Adapter.InnerAdapters.Add(luaFixTransactionMessageAdapter);

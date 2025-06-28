@@ -32,8 +32,8 @@
 // Создаем объект Security с заданными параметрами
 var security = new Security
 {
-    PriceStep = 0.01m,  // Шаг цены 0.01
-    Decimals = 2        // Два знака после запятой
+	PriceStep = 0.01m,  // Шаг цены 0.01
+	Decimals = 2        // Два знака после запятой
 };
 
 // Примеры использования ShrinkPrice
@@ -59,8 +59,8 @@ Console.WriteLine($"Исходная цена: {price3}, После ShrinkPrice:
 // Пример 4: Использование ShrinkPrice при создании ордера
 var order = new Order
 {
-    Security = security,
-    Price = 10.237m.ShrinkPrice(security)  // Округляем цену перед созданием ордера
+	Security = security,
+	Price = 10.237m.ShrinkPrice(security)  // Округляем цену перед созданием ордера
 };
 Console.WriteLine($"Цена ордера: {order.Price}");
 // Выведет: Цена ордера: 10.24

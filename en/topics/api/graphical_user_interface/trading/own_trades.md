@@ -14,11 +14,11 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 
 ```xaml
 <Window x:Class="Sample.MyTradesWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
-    xmlns:xaml="http://schemas.stocksharp.com/xaml"
-    Title="{x:Static loc:LocalizedStrings.MyTrades}" Height="284" Width="644">
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
+	xmlns:xaml="http://schemas.stocksharp.com/xaml"
+	Title="{x:Static loc:LocalizedStrings.MyTrades}" Height="284" Width="644">
 	<xaml:MyTradeGrid x:Name="TradeGrid" x:FieldModifier="public" />
 </Window>
 	  				
@@ -27,7 +27,7 @@ Below is the code snippet with its use. The code example is taken from *Samples\
 private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-        ...............................................
+		...............................................
 		_connector.NewMyTrade += trade => _myTradesWindow.TradeGrid.Trades.Add(trade);
 			
 		...............................................

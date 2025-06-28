@@ -14,18 +14,18 @@
 // Создаем объект фильтра для поиска
 var lookupMessage = new SecurityLookupMessage
 {
-    // Установка критериев поиска
-    SecurityId = new SecurityId
-    {
-        // Поиск по коду инструмента (можно использовать маску "AAPL*")
-        SecurityCode = "AAPL",
-        // Опционально можно указать код площадки
-        BoardCode = "NASDAQ"
-    },
-    // Можно указать тип инструмента
-    SecurityType = SecurityTypes.Stock,
-    // Установка идентификатора транзакции
-    TransactionId = Connector.TransactionIdGenerator.GetNextId()
+	// Установка критериев поиска
+	SecurityId = new SecurityId
+	{
+		// Поиск по коду инструмента (можно использовать маску "AAPL*")
+		SecurityCode = "AAPL",
+		// Опционально можно указать код площадки
+		BoardCode = "NASDAQ"
+	},
+	// Можно указать тип инструмента
+	SecurityType = SecurityTypes.Stock,
+	// Установка идентификатора транзакции
+	TransactionId = Connector.TransactionIdGenerator.GetNextId()
 };
 
 // Создаем подписку на поиск инструментов
@@ -56,31 +56,31 @@ var subscription = new Subscription(lookupMessage);
 // Обработчик события получения инструмента
 private void OnSecurityReceived(Subscription subscription, Security security)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Найден инструмент: {security.Id} - {security.Name}, Тип: {security.Type}");
-    
-    // Здесь можно добавить инструмент в коллекцию или выполнить другие действия
-    Securities.Add(security);
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Найден инструмент: {security.Id} - {security.Name}, Тип: {security.Type}");
+	
+	// Здесь можно добавить инструмент в коллекцию или выполнить другие действия
+	Securities.Add(security);
 }
 
 // Обработчик события окончания поиска
 private void OnSubscriptionFinished(Subscription subscription)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Поиск завершен. Найдено инструментов: {Securities.Count}");
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Поиск завершен. Найдено инструментов: {Securities.Count}");
 }
 
 // Обработчик ошибок подписки
 private void OnSubscriptionFailed(Subscription subscription, Exception error, bool isSubscribe)
 {
-    if (subscription.SubscriptionMessage is not SecurityLookupMessage)
-        return;
-        
-    Console.WriteLine($"Ошибка поиска инструментов: {error.Message}");
+	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
+		return;
+		
+	Console.WriteLine($"Ошибка поиска инструментов: {error.Message}");
 }
 
 // Подписываемся на события
@@ -99,77 +99,77 @@ Connector.Subscribe(subscription);
 ```csharp
 public void FindSecurities(string searchCode, SecurityTypes? securityType = null)
 {
-    // Создаем объект для поиска инструментов
-    var lookupMessage = new SecurityLookupMessage
-    {
-        SecurityId = new SecurityId
-        {
-            SecurityCode = searchCode,
-            // Если требуется искать на конкретной площадке
-            // BoardCode = ExchangeBoard.Nyse.Code,
-        },
-        SecurityType = securityType,
-        TransactionId = Connector.TransactionIdGenerator.GetNextId()
-    };
-    
-    // Создаем подписку
-    var subscription = new Subscription(lookupMessage);
-    
-    // Очищаем коллекцию для результатов поиска
-    _searchResults.Clear();
-    
-    // Временная коллекция для накопления результатов
-    var foundSecurities = new List<Security>();
-    
-    // Подписка на получение инструментов
-    void OnSecurityReceived(Subscription sub, Security security)
-    {
-        if (sub != subscription)
-            return;
-            
-        // Добавляем найденный инструмент в коллекцию
-        foundSecurities.Add(security);
-        Console.WriteLine($"Найден: {security.Id}, {security.Name}");
-    }
-    
-    // Подписка на окончание поиска
-    void OnSubscriptionFinished(Subscription sub)
-    {
-        if (sub != subscription)
-            return;
-            
-        // Копируем результаты в основную коллекцию
-        _searchResults.AddRange(foundSecurities);
-        
-        Console.WriteLine($"Поиск завершен. Найдено инструментов: {foundSecurities.Count}");
-        
-        // Отписываемся от событий
-        Connector.SecurityReceived -= OnSecurityReceived;
-        Connector.SubscriptionFinished -= OnSubscriptionFinished;
-        Connector.SubscriptionFailed -= OnSubscriptionFailed;
-    }
-    
-    // Обработка ошибок подписки
-    void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
-    {
-        if (sub != subscription)
-            return;
-            
-        Console.WriteLine($"Ошибка поиска инструментов: {error.Message}");
-        
-        // Отписываемся от событий
-        Connector.SecurityReceived -= OnSecurityReceived;
-        Connector.SubscriptionFinished -= OnSubscriptionFinished;
-        Connector.SubscriptionFailed -= OnSubscriptionFailed;
-    }
-    
-    // Подписываемся на события
-    Connector.SecurityReceived += OnSecurityReceived;
-    Connector.SubscriptionFinished += OnSubscriptionFinished;
-    Connector.SubscriptionFailed += OnSubscriptionFailed;
-    
-    // Отправляем запрос на поиск
-    Connector.Subscribe(subscription);
+	// Создаем объект для поиска инструментов
+	var lookupMessage = new SecurityLookupMessage
+	{
+		SecurityId = new SecurityId
+		{
+			SecurityCode = searchCode,
+			// Если требуется искать на конкретной площадке
+			// BoardCode = ExchangeBoard.Nyse.Code,
+		},
+		SecurityType = securityType,
+		TransactionId = Connector.TransactionIdGenerator.GetNextId()
+	};
+	
+	// Создаем подписку
+	var subscription = new Subscription(lookupMessage);
+	
+	// Очищаем коллекцию для результатов поиска
+	_searchResults.Clear();
+	
+	// Временная коллекция для накопления результатов
+	var foundSecurities = new List<Security>();
+	
+	// Подписка на получение инструментов
+	void OnSecurityReceived(Subscription sub, Security security)
+	{
+		if (sub != subscription)
+			return;
+			
+		// Добавляем найденный инструмент в коллекцию
+		foundSecurities.Add(security);
+		Console.WriteLine($"Найден: {security.Id}, {security.Name}");
+	}
+	
+	// Подписка на окончание поиска
+	void OnSubscriptionFinished(Subscription sub)
+	{
+		if (sub != subscription)
+			return;
+			
+		// Копируем результаты в основную коллекцию
+		_searchResults.AddRange(foundSecurities);
+		
+		Console.WriteLine($"Поиск завершен. Найдено инструментов: {foundSecurities.Count}");
+		
+		// Отписываемся от событий
+		Connector.SecurityReceived -= OnSecurityReceived;
+		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionFailed -= OnSubscriptionFailed;
+	}
+	
+	// Обработка ошибок подписки
+	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
+	{
+		if (sub != subscription)
+			return;
+			
+		Console.WriteLine($"Ошибка поиска инструментов: {error.Message}");
+		
+		// Отписываемся от событий
+		Connector.SecurityReceived -= OnSecurityReceived;
+		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionFailed -= OnSubscriptionFailed;
+	}
+	
+	// Подписываемся на события
+	Connector.SecurityReceived += OnSecurityReceived;
+	Connector.SubscriptionFinished += OnSubscriptionFinished;
+	Connector.SubscriptionFailed += OnSubscriptionFailed;
+	
+	// Отправляем запрос на поиск
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -180,30 +180,30 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 ```csharp
 private void FindButton_Click(object sender, RoutedEventArgs e)
 {
-    // Получаем критерии поиска из текстового поля
-    var searchText = SearchTextBox.Text;
-    
-    if (string.IsNullOrWhiteSpace(searchText))
-    {
-        MessageBox.Show("Введите критерий поиска");
-        return;
-    }
-    
-    // Создаем и отправляем подписку на поиск
-    var lookupMessage = new SecurityLookupMessage
-    {
-        SecurityId = new SecurityId { SecurityCode = searchText },
-        // Если выбран тип в интерфейсе
-        SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
-    };
-    
-    var subscription = new Subscription(lookupMessage);
-    
-    // Здесь можно показать индикатор загрузки
-    LoadingIndicator.Visibility = Visibility.Visible;
-    
-    // Отправляем запрос
-    Connector.Subscribe(subscription);
+	// Получаем критерии поиска из текстового поля
+	var searchText = SearchTextBox.Text;
+	
+	if (string.IsNullOrWhiteSpace(searchText))
+	{
+		MessageBox.Show("Введите критерий поиска");
+		return;
+	}
+	
+	// Создаем и отправляем подписку на поиск
+	var lookupMessage = new SecurityLookupMessage
+	{
+		SecurityId = new SecurityId { SecurityCode = searchText },
+		// Если выбран тип в интерфейсе
+		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
+	};
+	
+	var subscription = new Subscription(lookupMessage);
+	
+	// Здесь можно показать индикатор загрузки
+	LoadingIndicator.Visibility = Visibility.Visible;
+	
+	// Отправляем запрос
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -214,26 +214,26 @@ StockSharp также предоставляет готовый диалог д�
 ```csharp
 private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 {
-    var lookupWindow = new SecurityLookupWindow
-    {
-        // Указываем возможность поиска всех инструментов 
-        // (если коннектор поддерживает эту функцию)
-        ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
-        
-        // Задаем начальные критерии поиска
-        CriteriaMessage = new SecurityLookupMessage
-        {
-            SecurityId = new SecurityId { SecurityCode = "AAPL" },
-            SecurityType = SecurityTypes.Stock
-        }
-    };
-    
-    // Показываем окно как модальный диалог
-    if (lookupWindow.ShowModal(this))
-    {
-        // Если пользователь подтвердил выбор, отправляем запрос
-        Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
-    }
+	var lookupWindow = new SecurityLookupWindow
+	{
+		// Указываем возможность поиска всех инструментов 
+		// (если коннектор поддерживает эту функцию)
+		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
+		
+		// Задаем начальные критерии поиска
+		CriteriaMessage = new SecurityLookupMessage
+		{
+			SecurityId = new SecurityId { SecurityCode = "AAPL" },
+			SecurityType = SecurityTypes.Stock
+		}
+	};
+	
+	// Показываем окно как модальный диалог
+	if (lookupWindow.ShowModal(this))
+	{
+		// Если пользователь подтвердил выбор, отправляем запрос
+		Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
+	}
 }
 ```
 

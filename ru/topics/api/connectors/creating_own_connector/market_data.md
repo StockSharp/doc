@@ -46,99 +46,99 @@ public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 ```cs
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса на подписку
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса на подписку
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        var tf = mdMsg.GetTimeFrame();
+	if (mdMsg.IsSubscribe)
+	{
+		var tf = mdMsg.GetTimeFrame();
 
-        // Если запрошены исторические данные
-        if (mdMsg.From is not null)
-        {
-            var from = (long)mdMsg.From.Value.ToUnix();
-            var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix();
-            var left = mdMsg.Count ?? long.MaxValue;
-            var step = (long)tf.Multiply(200).TotalSeconds;
-            var granularity = mdMsg.GetTimeFrame().ToNative();
+		// Если запрошены исторические данные
+		if (mdMsg.From is not null)
+		{
+			var from = (long)mdMsg.From.Value.ToUnix();
+			var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix();
+			var left = mdMsg.Count ?? long.MaxValue;
+			var step = (long)tf.Multiply(200).TotalSeconds;
+			var granularity = mdMsg.GetTimeFrame().ToNative();
 
-            while (from < to)
-            {
-                // Запрашиваем исторические свечи
-                var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
-                var needBreak = true;
-                var last = from;
+			while (from < to)
+			{
+				// Запрашиваем исторические свечи
+				var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
+				var needBreak = true;
+				var last = from;
 
-                foreach (var candle in candles.OrderBy(t => t.Time))
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
+				foreach (var candle in candles.OrderBy(t => t.Time))
+				{
+					cancellationToken.ThrowIfCancellationRequested();
 
-                    var time = (long)candle.Time.ToUnix();
+					var time = (long)candle.Time.ToUnix();
 
-                    if (time < from)
-                        continue;
+					if (time < from)
+						continue;
 
-                    if (time > to)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (time > to)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    // Отправляем информацию о каждой исторической свече
-                    SendOutMessage(new TimeFrameCandleMessage
-                    {
-                        OpenPrice = (decimal)candle.Open,
-                        ClosePrice = (decimal)candle.Close,
-                        HighPrice = (decimal)candle.High,
-                        LowPrice = (decimal)candle.Low,
-                        TotalVolume = (decimal)candle.Volume,
-                        OpenTime = candle.Time,
-                        State = CandleStates.Finished,
+					// Отправляем информацию о каждой исторической свече
+					SendOutMessage(new TimeFrameCandleMessage
+					{
+						OpenPrice = (decimal)candle.Open,
+						ClosePrice = (decimal)candle.Close,
+						HighPrice = (decimal)candle.High,
+						LowPrice = (decimal)candle.Low,
+						TotalVolume = (decimal)candle.Volume,
+						OpenTime = candle.Time,
+						State = CandleStates.Finished,
 
-                        // в случае идентификации данных по подписке заполнение информации об инструменте не требуется
-                        OriginalTransactionId = mdMsg.TransactionId,
-                    });
+						// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
+						OriginalTransactionId = mdMsg.TransactionId,
+					});
 
-                    if (--left <= 0)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (--left <= 0)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    last = time;
-                    needBreak = false;
-                }
+					last = time;
+					needBreak = false;
+				}
 
-                if (needBreak)
-                    break;
+				if (needBreak)
+					break;
 
-                from = last;
-            }
-        }
+				from = last;
+			}
+		}
 
-        if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
-        {
-            // Подписываемся на получение новых свечей в реальном времени
-            _candlesTransIds[symbol] = mdMsg.TransactionId;
-            await _socketClient.SubscribeCandles(symbol, cancellationToken);
-  
-            // извещаем что подписка перешла в статус online
-            SendSubscriptionResult(mdMsg);
-        }
-        else
-        {
-            // отправляем ответ что подписка завершена (не онлайн)
-            SendSubscriptionFinished(mdMsg.TransactionId);
-        }
-    }
-    else
-    {
-        // Отписываемся от получения свечей
-        _candlesTransIds.Remove(symbol);
-        await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
-    }
+		if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
+		{
+			// Подписываемся на получение новых свечей в реальном времени
+			_candlesTransIds[symbol] = mdMsg.TransactionId;
+			await _socketClient.SubscribeCandles(symbol, cancellationToken);
+	
+			// извещаем что подписка перешла в статус online
+			SendSubscriptionResult(mdMsg);
+		}
+		else
+		{
+			// отправляем ответ что подписка завершена (не онлайн)
+			SendSubscriptionFinished(mdMsg.TransactionId);
+		}
+	}
+	else
+	{
+		// Отписываемся от получения свечей
+		_candlesTransIds.Remove(symbol);
+		await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -149,24 +149,24 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 ```cs
 private void SessionOnCandleReceived(Ohlc candle)
 {
-    // Проверяем, есть ли активная подписка на свечи для данного инструмента
-    if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
-        return;
+	// Проверяем, есть ли активная подписка на свечи для данного инструмента
+	if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
+		return;
 
-    // Создаем и отправляем сообщение о новой свече
-    SendOutMessage(new TimeFrameCandleMessage
-    {
-        OpenPrice = (decimal)candle.Open,
-        ClosePrice = (decimal)candle.Close,
-        HighPrice = (decimal)candle.High,
-        LowPrice = (decimal)candle.Low,
-        TotalVolume = (decimal)candle.Volume,
-        OpenTime = candle.Time,
-        State = CandleStates.Active,  // Свеча считается активной, так как она может еще измениться
+	// Создаем и отправляем сообщение о новой свече
+	SendOutMessage(new TimeFrameCandleMessage
+	{
+		OpenPrice = (decimal)candle.Open,
+		ClosePrice = (decimal)candle.Close,
+		HighPrice = (decimal)candle.High,
+		LowPrice = (decimal)candle.Low,
+		TotalVolume = (decimal)candle.Volume,
+		OpenTime = candle.Time,
+		State = CandleStates.Active,  // Свеча считается активной, так как она может еще измениться
 
-        // в случае идентификации данных по подписке заполнение информации об инструменте не требуется
-        OriginalTransactionId = transId,
-    });
+		// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
+		OriginalTransactionId = transId,
+	});
 }
 ```
 
@@ -180,29 +180,29 @@ private void SessionOnCandleReceived(Ohlc candle)
 ```cs
 protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса на подписку
-    // Это информирует систему о том, что запрос получен и обрабатывается
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса на подписку
+	// Это информирует систему о том, что запрос получен и обрабатывается
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Преобразуем идентификатор инструмента в символ, понятный бирже
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	// Преобразуем идентификатор инструмента в символ, понятный бирже
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // Если это запрос на подписку
-        // Подписываемся на получение данных Level 1 через WebSocket
-        await _socketClient.SubscribeTicker(symbol, cancellationToken);
+	if (mdMsg.IsSubscribe)
+	{
+		// Если это запрос на подписку
+		// Подписываемся на получение данных Level 1 через WebSocket
+		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
-        // Отправляем сообщение об успешной подписке
-        // Это информирует систему о том, что подписка установлена и данные будут поступать
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // Если это запрос на отписку
-        // Отменяем подписку на получение данных Level 1
-        await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
-    }
+		// Отправляем сообщение об успешной подписке
+		// Это информирует систему о том, что подписка установлена и данные будут поступать
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// Если это запрос на отписку
+		// Отменяем подписку на получение данных Level 1
+		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -213,28 +213,28 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 ```cs
 private void SessionOnTickerChanged(Ticker ticker)
 {
-    // Создаем сообщение с изменениями данных Level 1
-    SendOutMessage(new Level1ChangeMessage
-    {
-        // Указываем идентификатор инструмента
-        SecurityId = ticker.Product.ToStockSharp(),
-        // Устанавливаем время получения данных
-        ServerTime = CurrentTime.ConvertToUtc(),
-    }
-    // Добавляем различные поля Level 1, если они присутствуют в данных от биржи
-    .TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
-    .TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
-    .TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
-    .TryAdd(Level1Fields.LastTradeOrigin, ticker.LastTradeSide?.ToSide())
-    .TryAdd(Level1Fields.HighPrice, ticker.High?.ToDecimal())
-    .TryAdd(Level1Fields.LowPrice, ticker.Low?.ToDecimal())
-    .TryAdd(Level1Fields.Volume, ticker.Volume?.ToDecimal())
-    .TryAdd(Level1Fields.Change, ticker.Change?.ToDecimal())
-    .TryAdd(Level1Fields.BestBidPrice, ticker.Bid?.ToDecimal())
-    .TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
-    .TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
-    .TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
-    );
+	// Создаем сообщение с изменениями данных Level 1
+	SendOutMessage(new Level1ChangeMessage
+	{
+		// Указываем идентификатор инструмента
+		SecurityId = ticker.Product.ToStockSharp(),
+		// Устанавливаем время получения данных
+		ServerTime = CurrentTime.ConvertToUtc(),
+	}
+	// Добавляем различные поля Level 1, если они присутствуют в данных от биржи
+	.TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
+	.TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
+	.TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
+	.TryAdd(Level1Fields.LastTradeOrigin, ticker.LastTradeSide?.ToSide())
+	.TryAdd(Level1Fields.HighPrice, ticker.High?.ToDecimal())
+	.TryAdd(Level1Fields.LowPrice, ticker.Low?.ToDecimal())
+	.TryAdd(Level1Fields.Volume, ticker.Volume?.ToDecimal())
+	.TryAdd(Level1Fields.Change, ticker.Change?.ToDecimal())
+	.TryAdd(Level1Fields.BestBidPrice, ticker.Bid?.ToDecimal())
+	.TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
+	.TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
+	.TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
+	);
 }
 ```
 
@@ -259,27 +259,27 @@ public override bool IsSupportOrderBookIncrements => true;
 ```cs
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса на подписку
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса на подписку
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Преобразуем идентификатор инструмента в символ, понятный бирже
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	// Преобразуем идентификатор инструмента в символ, понятный бирже
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // Если это запрос на подписку
-        // Подписываемся на получение данных стакана через WebSocket
-        await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
+	if (mdMsg.IsSubscribe)
+	{
+		// Если это запрос на подписку
+		// Подписываемся на получение данных стакана через WebSocket
+		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
-        // Отправляем сообщение об успешной подписке
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // Если это запрос на отписку
-        // Отменяем подписку на получение данных стакана
-        await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
-    }
+		// Отправляем сообщение об успешной подписке
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// Если это запрос на отписку
+		// Отменяем подписку на получение данных стакана
+		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -290,30 +290,30 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 ```cs
 private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes)
 {
-    var bids = new List<QuoteChange>();
-    var asks = new List<QuoteChange>();
+	var bids = new List<QuoteChange>();
+	var asks = new List<QuoteChange>();
 
-    // Распределяем изменения по спросу и предложению
-    foreach (var change in changes)
-    {
-        var side = change.Side.ToSide();
-        var quotes = side == Sides.Buy ? bids : asks;
-        quotes.Add(new((decimal)change.Price, (decimal)change.Size));
-    }
+	// Распределяем изменения по спросу и предложению
+	foreach (var change in changes)
+	{
+		var side = change.Side.ToSide();
+		var quotes = side == Sides.Buy ? bids : asks;
+		quotes.Add(new((decimal)change.Price, (decimal)change.Size));
+	}
 
-    // Создаем и отправляем сообщение с изменениями в стакане
-    SendOutMessage(new QuoteChangeMessage
-    {
-        SecurityId = symbol.ToStockSharp(),
-        Bids = bids.ToArray(),
-        Asks = asks.ToArray(),
-        ServerTime = CurrentTime.ConvertToUtc(),
+	// Создаем и отправляем сообщение с изменениями в стакане
+	SendOutMessage(new QuoteChangeMessage
+	{
+		SecurityId = symbol.ToStockSharp(),
+		Bids = bids.ToArray(),
+		Asks = asks.ToArray(),
+		ServerTime = CurrentTime.ConvertToUtc(),
 
-        // Определяем, является ли это полным снимком стакана или инкрементальным обновлением.
-        // Если же бирже передает всегда только целые стаканы и не поддерживает инкрементальность,
-        // то установка этого свойства не требуется вообще
-        State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
-    });
+		// Определяем, является ли это полным снимком стакана или инкрементальным обновлением.
+		// Если же бирже передает всегда только целые стаканы и не поддерживает инкрементальность,
+		// то установка этого свойства не требуется вообще
+		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
+	});
 }
 ```
 
@@ -326,92 +326,92 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 ```cs
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса на подписку
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса на подписку
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    var symbol = mdMsg.SecurityId.ToSymbol();
+	var symbol = mdMsg.SecurityId.ToSymbol();
 
-    if (mdMsg.IsSubscribe)
-    {
-        // Если запрошены исторические данные
-        if (mdMsg.From is not null)
-        {
-            var from = (long)mdMsg.From.Value.ToUnix(false);
-            var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix(false);
-            var left = mdMsg.Count ?? long.MaxValue;
+	if (mdMsg.IsSubscribe)
+	{
+		// Если запрошены исторические данные
+		if (mdMsg.From is not null)
+		{
+			var from = (long)mdMsg.From.Value.ToUnix(false);
+			var to = (long)(mdMsg.To ?? DateTimeOffset.UtcNow).ToUnix(false);
+			var left = mdMsg.Count ?? long.MaxValue;
 
-            while (from < to)
-            {
-                // Запрашиваем исторические сделки
-                var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
-                var needBreak = true;
-                var last = from;
+			while (from < to)
+			{
+				// Запрашиваем исторические сделки
+				var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
+				var needBreak = true;
+				var last = from;
 
-                foreach (var trade in trades.OrderBy(t => t.Time))
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
+				foreach (var trade in trades.OrderBy(t => t.Time))
+				{
+					cancellationToken.ThrowIfCancellationRequested();
 
-                    var time = (long)trade.Time.ToUnix();
+					var time = (long)trade.Time.ToUnix();
 
-                    if (time < from)
-                        continue;
+					if (time < from)
+						continue;
 
-                    if (time > to)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (time > to)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    // Отправляем информацию о каждой исторической сделке
-                    SendOutMessage(new ExecutionMessage
-                    {
-                        // устанавливаем что сообщение несет информацию о тиковой сделке
-                        // (а не о транзакции как заявка или собственная сделка)
-                        DataTypeEx = DataType.Ticks,
+					// Отправляем информацию о каждой исторической сделке
+					SendOutMessage(new ExecutionMessage
+					{
+						// устанавливаем что сообщение несет информацию о тиковой сделке
+						// (а не о транзакции как заявка или собственная сделка)
+						DataTypeEx = DataType.Ticks,
 
-                        TradeId = trade.TradeId,
-                        TradePrice = trade.Price?.ToDecimal(),
-                        TradeVolume = trade.Size?.ToDecimal(),
-                        ServerTime = trade.Time,
-                        OriginSide = trade.Side.ToSide(),
+						TradeId = trade.TradeId,
+						TradePrice = trade.Price?.ToDecimal(),
+						TradeVolume = trade.Size?.ToDecimal(),
+						ServerTime = trade.Time,
+						OriginSide = trade.Side.ToSide(),
 
-                        // для истории всегда устанавливает идентификатор подписки,
-                        // чтобы внешний код смог понять, к какой подписке были получены данные.
-                        // в случае идентификации данных по подписке заполнение информации об инструменте не требуется
-                        OriginalTransactionId = mdMsg.TransactionId,
-                    });
+						// для истории всегда устанавливает идентификатор подписки,
+						// чтобы внешний код смог понять, к какой подписке были получены данные.
+						// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
+						OriginalTransactionId = mdMsg.TransactionId,
+					});
 
-                    if (--left <= 0)
-                    {
-                        needBreak = true;
-                        break;
-                    }
+					if (--left <= 0)
+					{
+						needBreak = true;
+						break;
+					}
 
-                    last = time;
-                    needBreak = false;
-                }
+					last = time;
+					needBreak = false;
+				}
 
-                if (needBreak)
-                    break;
+				if (needBreak)
+					break;
 
-                from = last;
-            }
-        }
-        
-        if (!mdMsg.IsHistoryOnly())
-        {
-            // Подписываемся на получение новых сделок в реальном времени
-            await _socketClient.SubscribeTrades(symbol, cancellationToken);
-        }
+				from = last;
+			}
+		}
+		
+		if (!mdMsg.IsHistoryOnly())
+		{
+			// Подписываемся на получение новых сделок в реальном времени
+			await _socketClient.SubscribeTrades(symbol, cancellationToken);
+		}
 
-        // Отправляем сообщение об успешной подписке
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-    {
-        // Отписываемся от получения сделок в реальном времени
-        await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
-    }
+		// Отправляем сообщение об успешной подписке
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+	{
+		// Отписываемся от получения сделок в реальном времени
+		await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
+	}
 }
 ```
 
@@ -422,20 +422,20 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 ```cs
 private void SessionOnTradeReceived(Trade trade)
 {
-    // Создаем и отправляем сообщение о новой сделке
-    SendOutMessage(new ExecutionMessage
-    {
-        // устанавливаем что сообщение несет информацию о тиковой сделке
-        // (а не о транзакции как заявка или собственная сделка)
-        DataTypeEx = DataType.Ticks,
+	// Создаем и отправляем сообщение о новой сделке
+	SendOutMessage(new ExecutionMessage
+	{
+		// устанавливаем что сообщение несет информацию о тиковой сделке
+		// (а не о транзакции как заявка или собственная сделка)
+		DataTypeEx = DataType.Ticks,
 
-        SecurityId = trade.ProductId.ToStockSharp(),
-        TradeId = trade.TradeId,
-        TradePrice = (decimal)trade.Price,
-        TradeVolume = (decimal)trade.Size,
-        ServerTime = trade.Time,
-        OriginSide = trade.Side.ToSide(),
-    });
+		SecurityId = trade.ProductId.ToStockSharp(),
+		TradeId = trade.TradeId,
+		TradePrice = (decimal)trade.Price,
+		TradeVolume = (decimal)trade.Size,
+		ServerTime = trade.Time,
+		OriginSide = trade.Side.ToSide(),
+	});
 }
 ```
 
@@ -450,26 +450,26 @@ private void SessionOnTradeReceived(Trade trade)
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-    // Отправляем подтверждение о получении запроса на подписку
-    SendSubscriptionReply(mdMsg.TransactionId);
+	// Отправляем подтверждение о получении запроса на подписку
+	SendSubscriptionReply(mdMsg.TransactionId);
 
-    // Преобразуем идентификатор инструмента в валютную пару
-    var symbol = mdMsg.SecurityId.ToCurrency();
+	// Преобразуем идентификатор инструмента в валютную пару
+	var symbol = mdMsg.SecurityId.ToCurrency();
 
-    if (mdMsg.IsSubscribe)
-    {
-        if (!mdMsg.IsHistoryOnly())
-        {
-            // Подписываемся на получение лога заявок в реальном времени
-            await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
-        }
+	if (mdMsg.IsSubscribe)
+	{
+		if (!mdMsg.IsHistoryOnly())
+		{
+			// Подписываемся на получение лога заявок в реальном времени
+			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
+		}
 
-        // Отправляем сообщение об успешной подписке
-        SendSubscriptionResult(mdMsg);
-    }
-    else
-        // Отписываемся от получения лога заявок
-        await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
+		// Отправляем сообщение об успешной подписке
+		SendSubscriptionResult(mdMsg);
+	}
+	else
+		// Отписываемся от получения лога заявок
+		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
 
@@ -478,18 +478,18 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 ```cs
 private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
 {
-    // Создаем и отправляем сообщение с информацией о новой записи в логе заявок
-    SendOutMessage(new ExecutionMessage
-    {
-        DataTypeEx = DataType.OrderLog,
-        SecurityId = symbol.ToStockSharp(),
-        ServerTime = order.Time,
-        OrderVolume = (decimal)order.Amount,
-        OrderPrice = (decimal)order.Price,
-        OrderId = order.Id,
-        Side = order.Type.ToSide(),
-        OrderState = state,
-    });
+	// Создаем и отправляем сообщение с информацией о новой записи в логе заявок
+	SendOutMessage(new ExecutionMessage
+	{
+		DataTypeEx = DataType.OrderLog,
+		SecurityId = symbol.ToStockSharp(),
+		ServerTime = order.Time,
+		OrderVolume = (decimal)order.Amount,
+		OrderPrice = (decimal)order.Price,
+		OrderId = order.Id,
+		Side = order.Type.ToSide(),
+		OrderState = state,
+	});
 }
 ```
 

@@ -9,11 +9,11 @@
 ```cs
 public class StairsTrendStrategy : Strategy
 {
-    private readonly StrategyParam<int> _lengthParam;
-    private readonly StrategyParam<DataType> _candleType;
-    
-    private int _bullLength;
-    private int _bearLength;
+	private readonly StrategyParam<int> _lengthParam;
+	private readonly StrategyParam<DataType> _candleType;
+	
+	private int _bullLength;
+	private int _bearLength;
 }
 ```
 
@@ -33,26 +33,26 @@ public class StairsTrendStrategy : Strategy
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Сброс счетчиков
-    _bullLength = 0;
-    _bearLength = 0;
+	base.OnStarted(time);
+	
+	// Сброс счетчиков
+	_bullLength = 0;
+	_bearLength = 0;
 
-    // Создание подписки
-    var subscription = SubscribeCandles(CandleType);
-    
-    subscription
-        .Bind(ProcessCandle)
-        .Start();
+	// Создание подписки
+	var subscription = SubscribeCandles(CandleType);
+	
+	subscription
+		.Bind(ProcessCandle)
+		.Start();
 
-    // Настройка визуализации на графике
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawOwnTrades(area);
-    }
+	// Настройка визуализации на графике
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -63,39 +63,39 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Проверяем, завершена ли свеча
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Проверяем, завершена ли свеча
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Проверяем готовность стратегии к торговле
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Проверяем готовность стратегии к торговле
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Обновляем счетчики на основе направления свечи
-    if (candle.OpenPrice < candle.ClosePrice)
-    {
-        // Бычья свеча
-        _bullLength++;
-        _bearLength = 0;
-    }
-    else if (candle.OpenPrice > candle.ClosePrice)
-    {
-        // Медвежья свеча
-        _bullLength = 0;
-        _bearLength++;
-    }
+	// Обновляем счетчики на основе направления свечи
+	if (candle.OpenPrice < candle.ClosePrice)
+	{
+		// Бычья свеча
+		_bullLength++;
+		_bearLength = 0;
+	}
+	else if (candle.OpenPrice > candle.ClosePrice)
+	{
+		// Медвежья свеча
+		_bullLength = 0;
+		_bearLength++;
+	}
 
-    // Трендовая стратегия: 
-    // Покупка после Length последовательных бычьих свечей
-    if (_bullLength >= Length && Position <= 0)
-    {
-        BuyMarket(Volume + Math.Abs(Position));
-    }
-    // Продажа после Length последовательных медвежьих свечей
-    else if (_bearLength >= Length && Position >= 0)
-    {
-        SellMarket(Volume + Math.Abs(Position));
-    }
+	// Трендовая стратегия: 
+	// Покупка после Length последовательных бычьих свечей
+	if (_bullLength >= Length && Position <= 0)
+	{
+		BuyMarket(Volume + Math.Abs(Position));
+	}
+	// Продажа после Length последовательных медвежьих свечей
+	else if (_bearLength >= Length && Position >= 0)
+	{
+		SellMarket(Volume + Math.Abs(Position));
+	}
 }
 ```
 

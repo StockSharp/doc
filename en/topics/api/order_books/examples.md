@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-    Console.WriteLine($"Best buy price: {bestBid.Price}");
+	Console.WriteLine($"Best buy price: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-    Console.WriteLine($"Best sell price: {bestAsk.Price}");
+	Console.WriteLine($"Best sell price: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-    Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
 }
 else
 {
-    Console.WriteLine("No best buy orders.");
+	Console.WriteLine("No best buy orders.");
 }
 
 if (bestAsk != null)
 {
-    Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
 }
 else
 {
-    Console.WriteLine("No best sell orders.");
+	Console.WriteLine("No best sell orders.");
 }
 ```
 
@@ -51,12 +51,12 @@ To analyze the depth of the order book, you can iterate through the items in the
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-    Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
+	Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-    Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
+	Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
 }
 ```
 
@@ -77,18 +77,18 @@ Console.WriteLine("Significant volumes in the order book:");
 
 foreach (var bid in orderBook.Bids)
 {
-    if (bid.Volume >= significantVolumeThreshold)
-    {
-        Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
-    }
+	if (bid.Volume >= significantVolumeThreshold)
+	{
+		Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
+	}
 }
 
 foreach (var ask in orderBook.Asks)
 {
-    if (ask.Volume >= significantVolumeThreshold)
-    {
-        Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
-    }
+	if (ask.Volume >= significantVolumeThreshold)
+	{
+		Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
+	}
 }
 ```
 

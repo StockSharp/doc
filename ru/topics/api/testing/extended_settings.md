@@ -37,8 +37,8 @@ var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId());
 // Отправляем сообщение о подписке на генератор
 _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe = true,
-    Generator = mdGenerator
+	IsSubscribe = true,
+	Generator = mdGenerator
 });
 ```
 
@@ -94,15 +94,15 @@ var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
 // Создаем подписку на свечи
 var candleSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Today,
-        BuildMode = MarketDataBuildModes.Load
-    }
+	MarketData =
+	{
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Today,
+		BuildMode = MarketDataBuildModes.Load
+	}
 };
 connector.Subscribe(candleSubscription);
 
@@ -113,20 +113,20 @@ connector.Subscribe(tickSubscription);
 // Настраиваем генерацию стаканов
 var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId())
 {
-    Interval = TimeSpan.FromSeconds(1),
-    MaxAsksDepth = 5,
-    MaxBidsDepth = 5,
-    UseTradeVolume = true,
-    MinVolume = 1,
-    MaxVolume = 100,
-    MinSpreadStepCount = 1,
-    MaxSpreadStepCount = 5
+	Interval = TimeSpan.FromSeconds(1),
+	MaxAsksDepth = 5,
+	MaxBidsDepth = 5,
+	UseTradeVolume = true,
+	MinVolume = 1,
+	MaxVolume = 100,
+	MinSpreadStepCount = 1,
+	MaxSpreadStepCount = 5
 };
 
 connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
-    IsSubscribe = true,
-    Generator = mdGenerator
+	IsSubscribe = true,
+	Generator = mdGenerator
 });
 
 // Подписываемся на получение данных
@@ -143,31 +143,31 @@ connector.Connect();
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Обработка полученных свечей
-    Console.WriteLine($"Свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	// Обработка полученных свечей
+	Console.WriteLine($"Свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-    // Обработка полученных тиков
-    Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
+	// Обработка полученных тиков
+	Console.WriteLine($"Тик: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-    // Используем методы расширения для IOrderBookMessage
-    var bestBid = orderBook.GetBestBid();
-    var bestAsk = orderBook.GetBestAsk();
-    var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
-    
-    // Обработка полученных стаканов
-    Console.WriteLine($"Стакан: {orderBook.ServerTime}, Лучшая покупка: {bestBid?.Price}, Лучшая продажа: {bestAsk?.Price}, Середина спреда: {spreadMiddle}");
-    
-    // Получение цены по стороне заявки
-    var bidPrice = orderBook.GetPrice(Sides.Buy);
-    var askPrice = orderBook.GetPrice(Sides.Sell);
-    
-    Console.WriteLine($"Цена покупки: {bidPrice}, Цена продажи: {askPrice}");
+	// Используем методы расширения для IOrderBookMessage
+	var bestBid = orderBook.GetBestBid();
+	var bestAsk = orderBook.GetBestAsk();
+	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
+	
+	// Обработка полученных стаканов
+	Console.WriteLine($"Стакан: {orderBook.ServerTime}, Лучшая покупка: {bestBid?.Price}, Лучшая продажа: {bestAsk?.Price}, Середина спреда: {spreadMiddle}");
+	
+	// Получение цены по стороне заявки
+	var bidPrice = orderBook.GetPrice(Sides.Buy);
+	var askPrice = orderBook.GetPrice(Sides.Sell);
+	
+	Console.WriteLine($"Цена покупки: {bidPrice}, Цена продажи: {askPrice}");
 }
 ```
 

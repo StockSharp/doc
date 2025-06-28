@@ -9,12 +9,12 @@
 ```cs
 public class MqSpreadStrategy : Strategy
 {
-    private readonly StrategyParam<MarketPriceTypes> _priceType;
-    private readonly StrategyParam<Unit> _priceOffset;
-    private readonly StrategyParam<Unit> _bestPriceOffset;
+	private readonly StrategyParam<MarketPriceTypes> _priceType;
+	private readonly StrategyParam<Unit> _priceOffset;
+	private readonly StrategyParam<Unit> _bestPriceOffset;
 
-    private QuotingProcessor _buyProcessor;
-    private QuotingProcessor _sellProcessor;
+	private QuotingProcessor _buyProcessor;
+	private QuotingProcessor _sellProcessor;
 }
 ```
 
@@ -33,11 +33,11 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Subscribe to market time changes for quote updates
-    Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
-    Connector_CurrentTimeChanged(new TimeSpan());
+	// Subscribe to market time changes for quote updates
+	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
+	Connector_CurrentTimeChanged(new TimeSpan());
 }
 ```
 
@@ -48,118 +48,118 @@ The `Connector_CurrentTimeChanged` method is called when the market time changes
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-    // Create new processors only with zero position and if current ones are stopped
-    if (Position != 0)
-        return;
+	// Create new processors only with zero position and if current ones are stopped
+	if (Position != 0)
+		return;
 
-    if (_buyProcessor != null && _buyProcessor.LeftVolume > 0)
-        return;
+	if (_buyProcessor != null && _buyProcessor.LeftVolume > 0)
+		return;
 
-    if (_sellProcessor != null && _sellProcessor.LeftVolume > 0)
-        return;
+	if (_sellProcessor != null && _sellProcessor.LeftVolume > 0)
+		return;
 
-    // Release resources of existing processors
-    _buyProcessor?.Dispose();
-    _buyProcessor = null;
+	// Release resources of existing processors
+	_buyProcessor?.Dispose();
+	_buyProcessor = null;
 
-    _sellProcessor?.Dispose();
-    _sellProcessor = null;
+	_sellProcessor?.Dispose();
+	_sellProcessor = null;
 
-    // Create behaviors for market quoting
-    var buyBehavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	// Create behaviors for market quoting
+	var buyBehavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    var sellBehavior = new MarketQuotingBehavior(
-        PriceOffset,
-        BestPriceOffset,
-        PriceType
-    );
+	var sellBehavior = new MarketQuotingBehavior(
+		PriceOffset,
+		BestPriceOffset,
+		PriceType
+	);
 
-    // Create processor for buying
-    _buyProcessor = new QuotingProcessor(
-        buyBehavior,
-        Security,
-        Portfolio,
-        Sides.Buy,
-        Volume,
-        Volume, // Maximum order volume
-        TimeSpan.Zero, // No timeout
-        this, // Strategy implements ISubscriptionProvider
-        this, // Strategy implements IMarketRuleContainer
-        this, // Strategy implements ITransactionProvider
-        this, // Strategy implements ITimeProvider
-        this, // Strategy implements IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Check trading permission
-        true, // Use order book prices
-        true  // Use last trade price if the order book is empty
-    )
-    {
-        Parent = this
-    };
+	// Create processor for buying
+	_buyProcessor = new QuotingProcessor(
+		buyBehavior,
+		Security,
+		Portfolio,
+		Sides.Buy,
+		Volume,
+		Volume, // Maximum order volume
+		TimeSpan.Zero, // No timeout
+		this, // Strategy implements ISubscriptionProvider
+		this, // Strategy implements IMarketRuleContainer
+		this, // Strategy implements ITransactionProvider
+		this, // Strategy implements ITimeProvider
+		this, // Strategy implements IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Check trading permission
+		true, // Use order book prices
+		true  // Use last trade price if the order book is empty
+	)
+	{
+		Parent = this
+	};
 
-    // Create processor for selling
-    _sellProcessor = new QuotingProcessor(
-        sellBehavior,
-        Security,
-        Portfolio,
-        Sides.Sell,
-        Volume,
-        Volume, // Maximum order volume
-        TimeSpan.Zero, // No timeout
-        this, // Strategy implements ISubscriptionProvider
-        this, // Strategy implements IMarketRuleContainer
-        this, // Strategy implements ITransactionProvider
-        this, // Strategy implements ITimeProvider
-        this, // Strategy implements IMarketDataProvider
-        IsFormedAndOnlineAndAllowTrading, // Check trading permission
-        true, // Use order book prices
-        true  // Use last trade price if the order book is empty
-    )
-    {
-        Parent = this
-    };
+	// Create processor for selling
+	_sellProcessor = new QuotingProcessor(
+		sellBehavior,
+		Security,
+		Portfolio,
+		Sides.Sell,
+		Volume,
+		Volume, // Maximum order volume
+		TimeSpan.Zero, // No timeout
+		this, // Strategy implements ISubscriptionProvider
+		this, // Strategy implements IMarketRuleContainer
+		this, // Strategy implements ITransactionProvider
+		this, // Strategy implements ITimeProvider
+		this, // Strategy implements IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // Check trading permission
+		true, // Use order book prices
+		true  // Use last trade price if the order book is empty
+	)
+	{
+		Parent = this
+	};
 
-    // Log creation of new quoting processors
-    this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	// Log creation of new quoting processors
+	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
 
-    // Subscribe to buy processor events for logging
-    _buyProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+	// Subscribe to buy processor events for logging
+	_buyProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
 
-    _buyProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+	_buyProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
 
-    _buyProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_buyProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _buyProcessor.Finished += isOk => {
-        this.AddInfoLog($"Buy quoting finished with success: {isOk}");
-        _buyProcessor?.Dispose();
-        _buyProcessor = null;
-    };
+	_buyProcessor.Finished += isOk => {
+		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		_buyProcessor?.Dispose();
+		_buyProcessor = null;
+	};
 
-    // Subscribe to sell processor events for logging
-    _sellProcessor.OrderRegistered += order =>
-        this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+	// Subscribe to sell processor events for logging
+	_sellProcessor.OrderRegistered += order =>
+		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
 
-    _sellProcessor.OrderFailed += fail =>
-        this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+	_sellProcessor.OrderFailed += fail =>
+		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
 
-    _sellProcessor.OwnTrade += trade =>
-        this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	_sellProcessor.OwnTrade += trade =>
+		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
-    _sellProcessor.Finished += isOk => {
-        this.AddInfoLog($"Sell quoting finished with success: {isOk}");
-        _sellProcessor?.Dispose();
-        _sellProcessor = null;
-    };
+	_sellProcessor.Finished += isOk => {
+		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		_sellProcessor?.Dispose();
+		_sellProcessor = null;
+	};
 
-    // Start both processors
-    _buyProcessor.Start();
-    _sellProcessor.Start();
+	// Start both processors
+	_buyProcessor.Start();
+	_sellProcessor.Start();
 }
 ```
 
@@ -170,17 +170,17 @@ In the [OnStopped](xref:StockSharp.Algo.Strategies.Strategy.OnStopped) method, t
 ```cs
 protected override void OnStopped()
 {
-    // Unsubscribe to prevent memory leaks
-    Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
+	// Unsubscribe to prevent memory leaks
+	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-    // Release processor resources
-    _buyProcessor?.Dispose();
-    _buyProcessor = null;
+	// Release processor resources
+	_buyProcessor?.Dispose();
+	_buyProcessor = null;
 
-    _sellProcessor?.Dispose();
-    _sellProcessor = null;
+	_sellProcessor?.Dispose();
+	_sellProcessor = null;
 
-    base.OnStopped();
+	base.OnStopped();
 }
 ```
 

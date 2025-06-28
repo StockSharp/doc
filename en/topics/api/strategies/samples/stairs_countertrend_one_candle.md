@@ -9,7 +9,7 @@
 ```cs
 public class OneCandleCountertrendStrategy : Strategy
 {
-    private readonly StrategyParam<DataType> _candleType;
+	private readonly StrategyParam<DataType> _candleType;
 }
 ```
 
@@ -26,22 +26,22 @@ In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.Dat
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
+	base.OnStarted(time);
 
-    // Create subscription
-    var subscription = SubscribeCandles(CandleType);
-    
-    subscription
-        .Bind(ProcessCandle)
-        .Start();
+	// Create subscription
+	var subscription = SubscribeCandles(CandleType);
+	
+	subscription
+		.Bind(ProcessCandle)
+		.Start();
 
-    // Set up visualization on the chart
-    var area = CreateChartArea();
-    if (area != null)
-    {
-        DrawCandles(area, subscription);
-        DrawOwnTrades(area);
-    }
+	// Set up visualization on the chart
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawOwnTrades(area);
+	}
 }
 ```
 
@@ -52,25 +52,25 @@ The `ProcessCandle` method is called for each completed candle and implements th
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Check if the candle is finished
-    if (candle.State != CandleStates.Finished)
-        return;
+	// Check if the candle is finished
+	if (candle.State != CandleStates.Finished)
+		return;
 
-    // Check if the strategy is ready for trading
-    if (!IsFormedAndOnlineAndAllowTrading())
-        return;
+	// Check if the strategy is ready for trading
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
 
-    // Countertrend strategy: buy on bearish candle, sell on bullish candle
-    if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
-    {
-        // Bullish candle - sell
-        SellMarket(Volume + Math.Abs(Position));
-    }
-    else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
-    {
-        // Bearish candle - buy
-        BuyMarket(Volume + Math.Abs(Position));
-    }
+	// Countertrend strategy: buy on bearish candle, sell on bullish candle
+	if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
+	{
+		// Bullish candle - sell
+		SellMarket(Volume + Math.Abs(Position));
+	}
+	else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
+	{
+		// Bearish candle - buy
+		BuyMarket(Volume + Math.Abs(Position));
+	}
 }
 ```
 

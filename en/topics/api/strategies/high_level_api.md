@@ -26,10 +26,10 @@ var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 subscription
-    // Bind indicators to candle subscription
-    .Bind(longSma, shortSma, OnProcess)
-    // Start processing
-    .Start();
+	// Bind indicators to candle subscription
+	.Bind(longSma, shortSma, OnProcess)
+	// Start processing
+	.Start();
 ```
 
 #### Automatic Addition of Indicators to Strategy.Indicators Collection
@@ -48,21 +48,21 @@ If an indicator returns non-standard values (not just numbers), you can use the 
 
 ```cs
 subscription
-    .BindEx(indicator, OnProcessWithRawValue)
-    .Start();
+	.BindEx(indicator, OnProcessWithRawValue)
+	.Start();
 
 // Handler receives the original IIndicatorValue
 private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 {
-    // Access to IIndicatorValue properties
-    if (value.IsFinal)
-    {
-        // For indicators returning boolean values
-        var boolValue = value.GetValue<bool>();
-        
-        // Or other data types specific to a particular indicator
-        // ...
-    }
+	// Access to IIndicatorValue properties
+	if (value.IsFinal)
+	{
+		// For indicators returning boolean values
+		var boolValue = value.GetValue<bool>();
+		
+		// Or other data types specific to a particular indicator
+		// ...
+	}
 }
 ```
 
@@ -80,21 +80,21 @@ For complex indicators that contain multiple internal indicators (e.g., [Bolling
 // Create a complex indicator
 var bollinger = new BollingerBands 
 { 
-    Length = 20, 
-    Deviation = 2 
+	Length = 20, 
+	Deviation = 2 
 };
 
 // Bind the complex indicator to a subscription
 subscription
-    .Bind(bollinger, OnProcessBollinger)
-    .Start();
+	.Bind(bollinger, OnProcessBollinger)
+	.Start();
 
 // Handler receives values of middle and upper Bollinger bands
 private void OnProcessBollinger(ICandleMessage candle, decimal middleBand, decimal upperBand)
 {
-    // Use Bollinger band values
-    // middleBand - middle band
-    // upperBand - upper band
+	// Use Bollinger band values
+	// middleBand - middle band
+	// upperBand - upper band
 }
 ```
 
@@ -103,7 +103,7 @@ Overloads for complex indicators with three values are also available:
 ```cs
 subscription.Bind(bollinger, (candle, middle, upper, lower) => 
 {
-    // Process data with access to all three bands
+	// Process data with access to all three bands
 });
 ```
 
@@ -112,8 +112,8 @@ For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISu
 ```cs
 subscription.BindEx(complexIndicator, (candle, values) => 
 {
-    // values contains an array of all indicator values
-    // in the order they were added to the indicator
+	// values contains an array of all indicator values
+	// in the order they were added to the indicator
 });
 ```
 
@@ -136,12 +136,12 @@ The handler receives ready-to-use values as simple `decimal` types:
 ```cs
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-    // Work directly with ready-made indicator values
-    var isShortLessThenLong = shortValue < longValue;
-    
-    // Trading logic uses clean numeric values
-    // without the need to extract them from IIndicatorValue
-    // ...
+	// Work directly with ready-made indicator values
+	var isShortLessThenLong = shortValue < longValue;
+	
+	// Trading logic uses clean numeric values
+	// without the need to extract them from IIndicatorValue
+	// ...
 }
 ```
 
@@ -162,18 +162,18 @@ var area = CreateChartArea();
 // area can be null when running without GUI
 if (area != null)
 {
-    // Automatic binding of candles to chart area
-    DrawCandles(area, subscription);
+	// Automatic binding of candles to chart area
+	DrawCandles(area, subscription);
 
-    // Drawing indicators with color customization
-    DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
-    DrawIndicator(area, longSma);
-    
-    // Drawing own trades
-    DrawOwnTrades(area);
-    
-    // Drawing orders
-    DrawOrders(area);
+	// Drawing indicators with color customization
+	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
+	DrawIndicator(area, longSma);
+	
+	// Drawing own trades
+	DrawOwnTrades(area);
+	
+	// Drawing orders
+	DrawOrders(area);
 }
 ```
 
@@ -206,10 +206,10 @@ IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.R
 
 // Adding an indicator with specified primary and secondary colors
 IChartIndicatorElement bollingerElem = DrawIndicator(
-    area, 
-    bollinger, 
-    System.Drawing.Color.Blue,    // Primary color
-    System.Drawing.Color.Gray     // Secondary color (for the second line)
+	area, 
+	bollinger, 
+	System.Drawing.Color.Blue,    // Primary color
+	System.Drawing.Color.Gray     // Secondary color (for the second line)
 );
 
 // Additional element configuration
@@ -302,10 +302,10 @@ Example with additional parameters:
 ```cs
 // Start protection with trailing stop and market orders
 StartProtection(
-    takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
-    stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
-    isStopTrailing: true,                         // Enable trailing stop
-    useMarketOrders: true                         // Use market orders
+	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
+	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
+	isStopTrailing: true,                         // Enable trailing stop
+	useMarketOrders: true                         // Use market orders
 );
 ```
 
@@ -330,111 +330,111 @@ Below is a complete example of a strategy demonstrating the use of the high-leve
 ```cs
 public class SmaStrategy : Strategy
 {
-    private bool? _isShortLessThenLong;
+	private bool? _isShortLessThenLong;
 
-    public SmaStrategy()
-    {
-        _candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
-        _long = Param(nameof(Long), 80);
-        _short = Param(nameof(Short), 30);
-        _takeValue = Param(nameof(TakeValue), new Unit(50, UnitTypes.Absolute));
-        _stopValue = Param(nameof(StopValue), new Unit(2, UnitTypes.Percent));
-    }
+	public SmaStrategy()
+	{
+		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+		_long = Param(nameof(Long), 80);
+		_short = Param(nameof(Short), 30);
+		_takeValue = Param(nameof(TakeValue), new Unit(50, UnitTypes.Absolute));
+		_stopValue = Param(nameof(StopValue), new Unit(2, UnitTypes.Percent));
+	}
 
-    private readonly StrategyParam<DataType> _candleType;
-    public DataType CandleType
-    {
-        get => _candleType.Value;
-        set => _candleType.Value = value;
-    }
+	private readonly StrategyParam<DataType> _candleType;
+	public DataType CandleType
+	{
+		get => _candleType.Value;
+		set => _candleType.Value = value;
+	}
 
-    private readonly StrategyParam<int> _long;
-    public int Long
-    {
-        get => _long.Value;
-        set => _long.Value = value;
-    }
+	private readonly StrategyParam<int> _long;
+	public int Long
+	{
+		get => _long.Value;
+		set => _long.Value = value;
+	}
 
-    private readonly StrategyParam<int> _short;
-    public int Short
-    {
-        get => _short.Value;
-        set => _short.Value = value;
-    }
+	private readonly StrategyParam<int> _short;
+	public int Short
+	{
+		get => _short.Value;
+		set => _short.Value = value;
+	}
 
-    private readonly StrategyParam<Unit> _takeValue;
-    public Unit TakeValue
-    {
-        get => _takeValue.Value;
-        set => _takeValue.Value = value;
-    }
+	private readonly StrategyParam<Unit> _takeValue;
+	public Unit TakeValue
+	{
+		get => _takeValue.Value;
+		set => _takeValue.Value = value;
+	}
 
-    private readonly StrategyParam<Unit> _stopValue;
-    public Unit StopValue
-    {
-        get => _stopValue.Value;
-        set => _stopValue.Value = value;
-    }
+	private readonly StrategyParam<Unit> _stopValue;
+	public Unit StopValue
+	{
+		get => _stopValue.Value;
+		set => _stopValue.Value = value;
+	}
 
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
 
-        // Create indicators
-        var longSma = new SMA { Length = Long };
-        var shortSma = new SMA { Length = Short };
+		// Create indicators
+		var longSma = new SMA { Length = Long };
+		var shortSma = new SMA { Length = Short };
 
-        // Create a candle subscription and bind to indicators
-        var subscription = SubscribeCandles(CandleType);
-        subscription
-            .Bind(longSma, shortSma, OnProcess)
-            .Start();
+		// Create a candle subscription and bind to indicators
+		var subscription = SubscribeCandles(CandleType);
+		subscription
+			.Bind(longSma, shortSma, OnProcess)
+			.Start();
 
-        // Configure visualization
-        var area = CreateChartArea();
-        if (area != null)
-        {
-            DrawCandles(area, subscription);
-            DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
-            DrawIndicator(area, longSma);
-            DrawOwnTrades(area);
-        }
+		// Configure visualization
+		var area = CreateChartArea();
+		if (area != null)
+		{
+			DrawCandles(area, subscription);
+			DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
+			DrawIndicator(area, longSma);
+			DrawOwnTrades(area);
+		}
 
-        // Start position protection
-        StartProtection(TakeValue, StopValue);
-    }
+		// Start position protection
+		StartProtection(TakeValue, StopValue);
+	}
 
-    private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
-    {
-        // Process only finished candles
-        if (candle.State != CandleStates.Finished)
-            return;
+	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+	{
+		// Process only finished candles
+		if (candle.State != CandleStates.Finished)
+			return;
 
-        // Trading logic based on indicator crossover
-        var isShortLessThenLong = shortValue < longValue;
+		// Trading logic based on indicator crossover
+		var isShortLessThenLong = shortValue < longValue;
 
-        if (_isShortLessThenLong == null)
-        {
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-        else if (_isShortLessThenLong != isShortLessThenLong)
-        {
-            // Crossover occurred
-            var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
-            var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
-            var priceStep = GetSecurity().PriceStep ?? 1;
-            var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
+		if (_isShortLessThenLong == null)
+		{
+			_isShortLessThenLong = isShortLessThenLong;
+		}
+		else if (_isShortLessThenLong != isShortLessThenLong)
+		{
+			// Crossover occurred
+			var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+			var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+			var priceStep = GetSecurity().PriceStep ?? 1;
+			var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
-            // Place an order
-            if (direction == Sides.Buy)
-                BuyLimit(price, volume);
-            else
-                SellLimit(price, volume);
+			// Place an order
+			if (direction == Sides.Buy)
+				BuyLimit(price, volume);
+			else
+				SellLimit(price, volume);
 
-            // Save current indicator position
-            _isShortLessThenLong = isShortLessThenLong;
-        }
-    }
+			// Save current indicator position
+			_isShortLessThenLong = isShortLessThenLong;
+		}
+	}
 }
 ```
 

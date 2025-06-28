@@ -8,13 +8,13 @@
 
 ```xaml
 <Window x:Class="LoggingControls.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <sx:Monitor x:Name="Monitor" />
-    </Grid>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+		Title="MainWindow" Height="350" Width="525">
+	<Grid>
+		<sx:Monitor x:Name="Monitor" />
+	</Grid>
 </Window>
 				
 ```
@@ -27,5 +27,5 @@ _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // Добавляем "слушателя" логов - GuiLogListener, в конструктор которого передаем ссылку
 // на графический элемент.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));
-                  
+					
 ```

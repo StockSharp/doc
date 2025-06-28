@@ -13,24 +13,24 @@
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Создание подписки на 5-минутные свечи напрямую через DataType
-    var subscription = new Subscription(
-        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-        Security);
-    
-    // Если требуется указать дополнительные параметры, можно настроить подписку
-    subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
-    
-    // Создание правила для обработки поступающих свечей
-    Connector
-        .WhenCandlesFinished(subscription)
-        .Do(ProcessCandle)
-        .Apply(this);
-    
-    // Запуск подписки
-    Connector.Subscribe(subscription);
+	base.OnStarted(time);
+	
+	// Создание подписки на 5-минутные свечи напрямую через DataType
+	var subscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		Security);
+	
+	// Если требуется указать дополнительные параметры, можно настроить подписку
+	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
+	
+	// Создание правила для обработки поступающих свечей
+	Connector
+		.WhenCandlesFinished(subscription)
+		.Do(ProcessCandle)
+		.Apply(this);
+	
+	// Запуск подписки
+	Connector.Subscribe(subscription);
 }
 ```
 
@@ -61,15 +61,15 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void CheckRefreshOnlineState()
 {
-    bool nowOnline = ProcessState == ProcessStates.Started;
+	bool nowOnline = ProcessState == ProcessStates.Started;
 
-    if (nowOnline)
-        nowOnline = _subscriptions.CachedKeys
-            .Where(s => !s.SubscriptionMessage.IsHistoryOnly())
-            .All(s => s.State == SubscriptionStates.Online);
-    
-    // Обновляем состояние IsOnline стратегии
-    IsOnline = nowOnline;
+	if (nowOnline)
+		nowOnline = _subscriptions.CachedKeys
+			.Where(s => !s.SubscriptionMessage.IsHistoryOnly())
+			.All(s => s.State == SubscriptionStates.Online);
+	
+	// Обновляем состояние IsOnline стратегии
+	IsOnline = nowOnline;
 }
 ```
 
@@ -82,23 +82,23 @@ private void CheckRefreshOnlineState()
 ```cs
 // Подписка на свечи
 var candleSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
-    Security);
+	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	Security);
 
 // Подписка на стакан
 var depthSubscription = new Subscription(
-    DataType.MarketDepth,
-    Security);
+	DataType.MarketDepth,
+	Security);
 
 // Подписка на тиковые сделки
 var tickSubscription = new Subscription(
-    DataType.Ticks,
-    Security);
+	DataType.Ticks,
+	Security);
 
 // Подписка на Level1 (лучший бид/аск и другую базовую информацию)
 var level1Subscription = new Subscription(
-    DataType.Level1,
-    Security);
+	DataType.Level1,
+	Security);
 ```
 
 ## Обработка данных подписки через правила
@@ -111,9 +111,9 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 
 // Создание правила для обработки поступающих свечей
 Connector
-    .WhenCandlesFinished(subscription)  // Активация правила при получении завершенной свечи
-    .Do(ProcessCandle)                   // Вызов метода обработки
-    .Apply(this);                        // Применение правила к стратегии
+	.WhenCandlesFinished(subscription)  // Активация правила при получении завершенной свечи
+	.Do(ProcessCandle)                   // Вызов метода обработки
+	.Apply(this);                        // Применение правила к стратегии
 
 // Запуск подписки
 Connector.Subscribe(subscription);

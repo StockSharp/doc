@@ -157,57 +157,57 @@ Starting with the latest versions of StockSharp, it is possible to set up automa
 ```cs
 private void SetupAutoDrawingChart()
 {
-    var security = SelectedSecurity;
-    
-    // Create chart elements
-    var candleElement = new ChartCandleElement();
-    var smaElement = new ChartIndicatorElement { Title = "SMA" };
-    
-    // Create chart areas
-    var area = new ChartArea();
-    
-    // Add area to the chart
-    Chart.Areas.Add(area);
-    
-    // Create a subscription to candles
-    var subscription = new Subscription(
-        DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-        security)
-    {
-        MarketData = 
-        {
-            From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-            To = DateTime.Now
-        }
-    };
-    
-    // Bind elements to the chart area and subscription
-    Chart.AddElement(area, candleElement, subscription);
-    Chart.AddElement(area, smaElement, subscription);
-    
-    // Create an indicator
-    var sma = new SimpleMovingAverage { Length = 14 };
-    
-    // Subscribe to the candle receiving event for indicator processing
-    _connector.CandleReceived += (sub, candle) => 
-    {
-        if (sub == subscription && candle.State == CandleStates.Finished)
-        {
-            // Process the candle with the indicator and get the value
-            var smaValue = sma.Process(candle);
-            
-            // Draw the indicator value
-            var data = new ChartDrawData();
-            data
-                .Group(candle.OpenTime)
-                    .Add(smaElement, smaValue);
-            
-            this.GuiAsync(() => Chart.Draw(data));
-        }
-    };
-    
-    // Start subscription
-    _connector.Subscribe(subscription);
+	var security = SelectedSecurity;
+	
+	// Create chart elements
+	var candleElement = new ChartCandleElement();
+	var smaElement = new ChartIndicatorElement { Title = "SMA" };
+	
+	// Create chart areas
+	var area = new ChartArea();
+	
+	// Add area to the chart
+	Chart.Areas.Add(area);
+	
+	// Create a subscription to candles
+	var subscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		security)
+	{
+		MarketData = 
+		{
+			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+			To = DateTime.Now
+		}
+	};
+	
+	// Bind elements to the chart area and subscription
+	Chart.AddElement(area, candleElement, subscription);
+	Chart.AddElement(area, smaElement, subscription);
+	
+	// Create an indicator
+	var sma = new SimpleMovingAverage { Length = 14 };
+	
+	// Subscribe to the candle receiving event for indicator processing
+	_connector.CandleReceived += (sub, candle) => 
+	{
+		if (sub == subscription && candle.State == CandleStates.Finished)
+		{
+			// Process the candle with the indicator and get the value
+			var smaValue = sma.Process(candle);
+			
+			// Draw the indicator value
+			var data = new ChartDrawData();
+			data
+				.Group(candle.OpenTime)
+					.Add(smaElement, smaValue);
+			
+			this.GuiAsync(() => Chart.Draw(data));
+		}
+	};
+	
+	// Start subscription
+	_connector.Subscribe(subscription);
 }
 ```
 
@@ -227,26 +227,26 @@ _candlesArea.Elements.Add(tradeElement);
 // Subscribe to order and trade receiving events
 _connector.OrderReceived += (sub, order) => 
 {
-    if (order.Security != _security)
-        return;
-    
-    // Draw the order on the chart
-    var data = new ChartDrawData();
-    data.Group(order.Time).Add(orderElement, order);
-    
-    this.GuiAsync(() => Chart.Draw(data));
+	if (order.Security != _security)
+		return;
+	
+	// Draw the order on the chart
+	var data = new ChartDrawData();
+	data.Group(order.Time).Add(orderElement, order);
+	
+	this.GuiAsync(() => Chart.Draw(data));
 };
 
 _connector.OwnTradeReceived += (sub, trade) => 
 {
-    if (trade.Order.Security != _security)
-        return;
-    
-    // Draw the trade on the chart
-    var data = new ChartDrawData();
-    data.Group(trade.Time).Add(tradeElement, trade);
-    
-    this.GuiAsync(() => Chart.Draw(data));
+	if (trade.Order.Security != _security)
+		return;
+	
+	// Draw the trade on the chart
+	var data = new ChartDrawData();
+	data.Group(trade.Time).Add(tradeElement, trade);
+	
+	this.GuiAsync(() => Chart.Draw(data));
 };
 ```
 

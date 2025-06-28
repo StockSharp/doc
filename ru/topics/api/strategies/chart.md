@@ -11,22 +11,22 @@
 ```cs
 protected override void OnStarted(DateTimeOffset time)
 {
-    base.OnStarted(time);
-    
-    // Получение графика
-    _chart = GetChart();
-    
-    // Проверка доступности графика
-    if (_chart != null)
-    {
-        // Инициализация графика
-        InitializeChart();
-    }
-    else
-    {
-        // График недоступен, например, при запуске в консольном режиме
-        LogInfo("График недоступен. Визуализация отключена.");
-    }
+	base.OnStarted(time);
+	
+	// Получение графика
+	_chart = GetChart();
+	
+	// Проверка доступности графика
+	if (_chart != null)
+	{
+		// Инициализация графика
+		InitializeChart();
+	}
+	else
+	{
+		// График недоступен, например, при запуске в консольном режиме
+		LogInfo("График недоступен. Визуализация отключена.");
+	}
 }
 ```
 
@@ -40,12 +40,12 @@ protected override void OnStarted(DateTimeOffset time)
 // Установка графика из внешнего источника
 public void ConfigureVisualization(IChart chart)
 {
-    SetChart(chart);
-    
-    if (chart != null)
-    {
-        InitializeChart();
-    }
+	SetChart(chart);
+	
+	if (chart != null)
+	{
+		InitializeChart();
+	}
 }
 ```
 
@@ -56,14 +56,14 @@ public void ConfigureVisualization(IChart chart)
 ```cs
 private void InitializeChart()
 {
-    // Создание основной области для свечей и индикаторов
-    _mainArea = CreateChartArea();
-    
-    // Создание дополнительной области для объема
-    _volumeArea = CreateChartArea();
-    
-    // Настройка областей и добавление элементов
-    ConfigureChartElements();
+	// Создание основной области для свечей и индикаторов
+	_mainArea = CreateChartArea();
+	
+	// Создание дополнительной области для объема
+	_volumeArea = CreateChartArea();
+	
+	// Настройка областей и добавление элементов
+	ConfigureChartElements();
 }
 ```
 
@@ -72,18 +72,18 @@ private void InitializeChart()
 ```cs
 private void InitializeChart()
 {
-    // Очистка существующих областей, если необходимо
-    foreach (var area in _chart.Areas.ToArray())
-        _chart.RemoveArea(area);
-    
-    // Создание основной области для свечей и индикаторов
-    _mainArea = _chart.AddArea();
-    
-    // Создание дополнительной области для объема
-    _volumeArea = _chart.AddArea();
-    
-    // Настройка областей и добавление элементов
-    ConfigureChartElements();
+	// Очистка существующих областей, если необходимо
+	foreach (var area in _chart.Areas.ToArray())
+		_chart.RemoveArea(area);
+	
+	// Создание основной области для свечей и индикаторов
+	_mainArea = _chart.AddArea();
+	
+	// Создание дополнительной области для объема
+	_volumeArea = _chart.AddArea();
+	
+	// Настройка областей и добавление элементов
+	ConfigureChartElements();
 }
 ```
 
@@ -98,18 +98,18 @@ private void InitializeChart()
 ```cs
 private void ConfigureChartElements()
 {
-    // Добавление элемента для отображения свечей в основной области
-    _candleElement = _mainArea.AddCandles();
-    
-    // Настройка отображения свечей
-    _candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Японские свечи
-    _candleElement.AntiAliasing = true; // Сглаживание
-    _candleElement.UpFillColor = Color.Green; // Цвет тела растущей свечи
-    _candleElement.DownFillColor = Color.Red; // Цвет тела падающей свечи
-    _candleElement.UpBorderColor = Color.DarkGreen; // Цвет границы растущей свечи
-    _candleElement.DownBorderColor = Color.DarkRed; // Цвет границы падающей свечи
-    _candleElement.StrokeThickness = 1; // Толщина линии
-    _candleElement.ShowAxisMarker = true; // Показывать маркер на оси Y
+	// Добавление элемента для отображения свечей в основной области
+	_candleElement = _mainArea.AddCandles();
+	
+	// Настройка отображения свечей
+	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Японские свечи
+	_candleElement.AntiAliasing = true; // Сглаживание
+	_candleElement.UpFillColor = Color.Green; // Цвет тела растущей свечи
+	_candleElement.DownFillColor = Color.Red; // Цвет тела падающей свечи
+	_candleElement.UpBorderColor = Color.DarkGreen; // Цвет границы растущей свечи
+	_candleElement.DownBorderColor = Color.DarkRed; // Цвет границы падающей свечи
+	_candleElement.StrokeThickness = 1; // Толщина линии
+	_candleElement.ShowAxisMarker = true; // Показывать маркер на оси Y
 }
 ```
 
@@ -144,8 +144,8 @@ private void ConfigureChartElements()
 _sma = new SimpleMovingAverage { Length = SmaLength };
 _bollinger = new BollingerBands
 {
-    Length = BollingerLength,
-    Deviation = BollingerDeviation
+	Length = BollingerLength,
+	Deviation = BollingerDeviation
 };
 
 // Добавление индикаторов в коллекцию стратегии
@@ -234,43 +234,43 @@ _ordersElement.PointSize = 8;                // Размер точки
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-    // Обработка свечи в индикаторах
-    var smaValue = _sma.Process(candle);
-    var bollingerValue = _bollinger.Process(candle);
-    
-    // Если график недоступен, пропускаем отрисовку
-    if (_chart == null)
-        return;
-    
-    // Создаем данные для отрисовки
-    var drawData = _chart.CreateData();
-    
-    // Группируем данные по времени свечи
-    var group = drawData.Group(candle.OpenTime);
-    
-    // Добавляем свечу
-    group.Add(_candleElement, 
-        candle.DataType, 
-        candle.SecurityId, 
-        candle.OpenPrice, 
-        candle.HighPrice, 
-        candle.LowPrice, 
-        candle.ClosePrice, 
-        candle.PriceLevels, 
-        candle.State);
-    
-    // Добавляем значения индикаторов
-    group.Add(_smaElement, smaValue);
-    
-    if (bollingerValue != null)
-    {
-        group.Add(_bollingerUpperElement, bollingerValue);
-        group.Add(_bollingerMiddleElement, bollingerValue);
-        group.Add(_bollingerLowerElement, bollingerValue);
-    }
-    
-    // Отрисовываем данные на графике
-    _chart.Draw(drawData);
+	// Обработка свечи в индикаторах
+	var smaValue = _sma.Process(candle);
+	var bollingerValue = _bollinger.Process(candle);
+	
+	// Если график недоступен, пропускаем отрисовку
+	if (_chart == null)
+		return;
+	
+	// Создаем данные для отрисовки
+	var drawData = _chart.CreateData();
+	
+	// Группируем данные по времени свечи
+	var group = drawData.Group(candle.OpenTime);
+	
+	// Добавляем свечу
+	group.Add(_candleElement, 
+		candle.DataType, 
+		candle.SecurityId, 
+		candle.OpenPrice, 
+		candle.HighPrice, 
+		candle.LowPrice, 
+		candle.ClosePrice, 
+		candle.PriceLevels, 
+		candle.State);
+	
+	// Добавляем значения индикаторов
+	group.Add(_smaElement, smaValue);
+	
+	if (bollingerValue != null)
+	{
+		group.Add(_bollingerUpperElement, bollingerValue);
+		group.Add(_bollingerMiddleElement, bollingerValue);
+		group.Add(_bollingerLowerElement, bollingerValue);
+	}
+	
+	// Отрисовываем данные на графике
+	_chart.Draw(drawData);
 }
 ```
 
@@ -303,183 +303,183 @@ _chart.Draw(orderDrawData);
 ```cs
 public class SmaStrategy : Strategy
 {
-    private readonly StrategyParam<int> _smaLength;
-    private readonly StrategyParam<int> _bollingerLength;
-    private readonly StrategyParam<decimal> _bollingerDeviation;
-    
-    private SimpleMovingAverage _sma;
-    private BollingerBands _bollinger;
-    
-    private IChart _chart;
-    private IChartArea _mainArea;
-    private IChartArea _volumeArea;
-    
-    private IChartCandleElement _candleElement;
-    private IChartIndicatorElement _smaElement;
-    private IChartIndicatorElement _bollingerUpperElement;
-    private IChartIndicatorElement _bollingerMiddleElement;
-    private IChartIndicatorElement _bollingerLowerElement;
-    private IChartOrderElement _ordersElement;
-    private IChartTradeElement _tradesElement;
-    
-    public SmaStrategy()
-    {
-        _smaLength = Param(nameof(SmaLength), 20);
-        _bollingerLength = Param(nameof(BollingerLength), 20);
-        _bollingerDeviation = Param(nameof(BollingerDeviation), 2m);
-    }
-    
-    public int SmaLength
-    {
-        get => _smaLength.Value;
-        set => _smaLength.Value = value;
-    }
-    
-    public int BollingerLength
-    {
-        get => _bollingerLength.Value;
-        set => _bollingerLength.Value = value;
-    }
-    
-    public decimal BollingerDeviation
-    {
-        get => _bollingerDeviation.Value;
-        set => _bollingerDeviation.Value = value;
-    }
-    
-    protected override void OnStarted(DateTimeOffset time)
-    {
-        base.OnStarted(time);
-        
-        // Создание индикаторов
-        _sma = new SimpleMovingAverage { Length = SmaLength };
-        _bollinger = new BollingerBands
-        {
-            Length = BollingerLength,
-            Deviation = BollingerDeviation
-        };
-        
-        // Добавление индикаторов в коллекцию стратегии
-        Indicators.Add(_sma);
-        Indicators.Add(_bollinger);
-        
-        // Получение графика
-        _chart = GetChart();
-        
-        // Инициализация графика, если он доступен
-        if (_chart != null)
-        {
-            InitializeChart();
-        }
-        
-        // Подписка на свечи
-        var subscription = new Subscription(
-            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-            Security);
-        
-        subscription
-            .WhenCandlesFinished(this)
-            .Do(ProcessCandle)
-            .Apply(this);
-        
-        Subscribe(subscription);
-    }
-    
-    private void InitializeChart()
-    {
-        // Очистка существующих областей
-        foreach (var area in _chart.Areas.ToArray())
-            _chart.RemoveArea(area);
-        
-        // Создание основной области для свечей и индикаторов
-        _mainArea = _chart.AddArea();
-        
-        // Создание дополнительной области для объема
-        _volumeArea = _chart.AddArea();
-        
-        // Настройка элементов графика
-        ConfigureChartElements();
-    }
-    
-    private void ConfigureChartElements()
-    {
-        // Добавление элемента для отображения свечей
-        _candleElement = _mainArea.AddCandles();
-        _candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
-        _candleElement.AntiAliasing = true;
-        _candleElement.UpFillColor = Color.Green;
-        _candleElement.DownFillColor = Color.Red;
-        _candleElement.UpBorderColor = Color.DarkGreen;
-        _candleElement.DownBorderColor = Color.DarkRed;
-        _candleElement.StrokeThickness = 1;
-        _candleElement.ShowAxisMarker = true;
-        
-        // Добавление элементов для индикаторов
-        _smaElement = _mainArea.AddIndicator(_sma);
-        _smaElement.Color = Color.Blue;
-        _smaElement.StrokeThickness = 2;
-        
-        _bollingerUpperElement = _mainArea.AddIndicator(_bollinger);
-        _bollingerUpperElement.Color = Color.Purple;
-        _bollingerUpperElement.StrokeThickness = 1;
-        
-        _bollingerMiddleElement = _mainArea.AddIndicator(_bollinger);
-        _bollingerMiddleElement.Color = Color.Gray;
-        _bollingerMiddleElement.StrokeThickness = 1;
-        
-        _bollingerLowerElement = _mainArea.AddIndicator(_bollinger);
-        _bollingerLowerElement.Color = Color.Purple;
-        _bollingerLowerElement.StrokeThickness = 1;
-        
-        // Добавление элементов для заявок и сделок
-        _ordersElement = DrawOrders(_mainArea);
-        _tradesElement = DrawOwnTrades(_mainArea);
-    }
-    
-    private void ProcessCandle(ICandleMessage candle)
-    {
-        // Обработка свечи индикаторами
-        var smaValue = _sma.Process(candle);
-        var bollingerValue = _bollinger.Process(candle);
-        
-        // Если график недоступен, пропускаем отрисовку
-        if (_chart == null)
-            return;
-        
-        // Отрисовка данных на графике
-        var drawData = _chart.CreateData();
-        var group = drawData.Group(candle.OpenTime);
-        
-        // Добавление свечи
-        group.Add(_candleElement, 
-            candle.DataType, 
-            candle.SecurityId, 
-            candle.OpenPrice, 
-            candle.HighPrice, 
-            candle.LowPrice, 
-            candle.ClosePrice, 
-            candle.PriceLevels, 
-            candle.State);
-        
-        // Добавление значений индикаторов
-        group.Add(_smaElement, smaValue);
-        
-        if (bollingerValue != null)
-        {
-            group.Add(_bollingerUpperElement, bollingerValue);
-            group.Add(_bollingerMiddleElement, bollingerValue);
-            group.Add(_bollingerLowerElement, bollingerValue);
-        }
-        
-        // Отрисовка данных на графике
-        _chart.Draw(drawData);
-        
-        // Торговая логика
-        if (!IsFormed)
-            return;
-            
-        // ... реализация торговой логики ...
-    }
+	private readonly StrategyParam<int> _smaLength;
+	private readonly StrategyParam<int> _bollingerLength;
+	private readonly StrategyParam<decimal> _bollingerDeviation;
+	
+	private SimpleMovingAverage _sma;
+	private BollingerBands _bollinger;
+	
+	private IChart _chart;
+	private IChartArea _mainArea;
+	private IChartArea _volumeArea;
+	
+	private IChartCandleElement _candleElement;
+	private IChartIndicatorElement _smaElement;
+	private IChartIndicatorElement _bollingerUpperElement;
+	private IChartIndicatorElement _bollingerMiddleElement;
+	private IChartIndicatorElement _bollingerLowerElement;
+	private IChartOrderElement _ordersElement;
+	private IChartTradeElement _tradesElement;
+	
+	public SmaStrategy()
+	{
+		_smaLength = Param(nameof(SmaLength), 20);
+		_bollingerLength = Param(nameof(BollingerLength), 20);
+		_bollingerDeviation = Param(nameof(BollingerDeviation), 2m);
+	}
+	
+	public int SmaLength
+	{
+		get => _smaLength.Value;
+		set => _smaLength.Value = value;
+	}
+	
+	public int BollingerLength
+	{
+		get => _bollingerLength.Value;
+		set => _bollingerLength.Value = value;
+	}
+	
+	public decimal BollingerDeviation
+	{
+		get => _bollingerDeviation.Value;
+		set => _bollingerDeviation.Value = value;
+	}
+	
+	protected override void OnStarted(DateTimeOffset time)
+	{
+		base.OnStarted(time);
+		
+		// Создание индикаторов
+		_sma = new SimpleMovingAverage { Length = SmaLength };
+		_bollinger = new BollingerBands
+		{
+			Length = BollingerLength,
+			Deviation = BollingerDeviation
+		};
+		
+		// Добавление индикаторов в коллекцию стратегии
+		Indicators.Add(_sma);
+		Indicators.Add(_bollinger);
+		
+		// Получение графика
+		_chart = GetChart();
+		
+		// Инициализация графика, если он доступен
+		if (_chart != null)
+		{
+			InitializeChart();
+		}
+		
+		// Подписка на свечи
+		var subscription = new Subscription(
+			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+			Security);
+		
+		subscription
+			.WhenCandlesFinished(this)
+			.Do(ProcessCandle)
+			.Apply(this);
+		
+		Subscribe(subscription);
+	}
+	
+	private void InitializeChart()
+	{
+		// Очистка существующих областей
+		foreach (var area in _chart.Areas.ToArray())
+			_chart.RemoveArea(area);
+		
+		// Создание основной области для свечей и индикаторов
+		_mainArea = _chart.AddArea();
+		
+		// Создание дополнительной области для объема
+		_volumeArea = _chart.AddArea();
+		
+		// Настройка элементов графика
+		ConfigureChartElements();
+	}
+	
+	private void ConfigureChartElements()
+	{
+		// Добавление элемента для отображения свечей
+		_candleElement = _mainArea.AddCandles();
+		_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
+		_candleElement.AntiAliasing = true;
+		_candleElement.UpFillColor = Color.Green;
+		_candleElement.DownFillColor = Color.Red;
+		_candleElement.UpBorderColor = Color.DarkGreen;
+		_candleElement.DownBorderColor = Color.DarkRed;
+		_candleElement.StrokeThickness = 1;
+		_candleElement.ShowAxisMarker = true;
+		
+		// Добавление элементов для индикаторов
+		_smaElement = _mainArea.AddIndicator(_sma);
+		_smaElement.Color = Color.Blue;
+		_smaElement.StrokeThickness = 2;
+		
+		_bollingerUpperElement = _mainArea.AddIndicator(_bollinger);
+		_bollingerUpperElement.Color = Color.Purple;
+		_bollingerUpperElement.StrokeThickness = 1;
+		
+		_bollingerMiddleElement = _mainArea.AddIndicator(_bollinger);
+		_bollingerMiddleElement.Color = Color.Gray;
+		_bollingerMiddleElement.StrokeThickness = 1;
+		
+		_bollingerLowerElement = _mainArea.AddIndicator(_bollinger);
+		_bollingerLowerElement.Color = Color.Purple;
+		_bollingerLowerElement.StrokeThickness = 1;
+		
+		// Добавление элементов для заявок и сделок
+		_ordersElement = DrawOrders(_mainArea);
+		_tradesElement = DrawOwnTrades(_mainArea);
+	}
+	
+	private void ProcessCandle(ICandleMessage candle)
+	{
+		// Обработка свечи индикаторами
+		var smaValue = _sma.Process(candle);
+		var bollingerValue = _bollinger.Process(candle);
+		
+		// Если график недоступен, пропускаем отрисовку
+		if (_chart == null)
+			return;
+		
+		// Отрисовка данных на графике
+		var drawData = _chart.CreateData();
+		var group = drawData.Group(candle.OpenTime);
+		
+		// Добавление свечи
+		group.Add(_candleElement, 
+			candle.DataType, 
+			candle.SecurityId, 
+			candle.OpenPrice, 
+			candle.HighPrice, 
+			candle.LowPrice, 
+			candle.ClosePrice, 
+			candle.PriceLevels, 
+			candle.State);
+		
+		// Добавление значений индикаторов
+		group.Add(_smaElement, smaValue);
+		
+		if (bollingerValue != null)
+		{
+			group.Add(_bollingerUpperElement, bollingerValue);
+			group.Add(_bollingerMiddleElement, bollingerValue);
+			group.Add(_bollingerLowerElement, bollingerValue);
+		}
+		
+		// Отрисовка данных на графике
+		_chart.Draw(drawData);
+		
+		// Торговая логика
+		if (!IsFormed)
+			return;
+			
+		// ... реализация торговой логики ...
+	}
 }
 ```
 

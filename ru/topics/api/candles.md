@@ -24,16 +24,16 @@
 ```cs
 // Создаем подписку на 5-минутные свечи
 var subscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Тип данных с указанием таймфрейма
-    security)  // Инструмент
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Тип данных с указанием таймфрейма
+	security)  // Инструмент
 {
-    // Настраиваем дополнительные параметры через свойство MarketData
-    MarketData = 
-    {
-        // Период, за который запрашиваем исторические данные (за последние 30 дней)
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Now
-    }
+	// Настраиваем дополнительные параметры через свойство MarketData
+	MarketData = 
+	{
+		// Период, за который запрашиваем исторические данные (за последние 30 дней)
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Now
+	}
 };
 ```
 
@@ -46,15 +46,15 @@ _connector.CandleReceived += OnCandleReceived;
 // Обработчик события получения свечи
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Здесь subscription - это объект подписки, которую мы создали
-    // candle - полученная свеча
-    
-    // Проверяем, относится ли свеча к нашей подписке
-    if (subscription == _candleSubscription)
-    {
-        // Отрисовываем свечу на графике
-        Chart.Draw(_candleElement, candle);
-    }
+	// Здесь subscription - это объект подписки, которую мы создали
+	// candle - полученная свеча
+	
+	// Проверяем, относится ли свеча к нашей подписке
+	if (subscription == _candleSubscription)
+	{
+		// Отрисовываем свечу на графике
+		Chart.Draw(_candleElement, candle);
+	}
 }
 ```
 
@@ -77,20 +77,20 @@ _connector.Subscribe(subscription);
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-    // Проверяем, относится ли свеча к нашей подписке
-    if (subscription != _candleSubscription)
-        return;
-    
-    // Проверяем, завершена ли свеча
-    if (candle.State == CandleStates.Finished) 
-    {
-        // Создаем данные для отрисовки
-        var chartData = new ChartDrawData();
-        chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-        
-        // Отрисовываем свечу на графике
-        this.GuiAsync(() => Chart.Draw(chartData));
-    }
+	// Проверяем, относится ли свеча к нашей подписке
+	if (subscription != _candleSubscription)
+		return;
+	
+	// Проверяем, завершена ли свеча
+	if (candle.State == CandleStates.Finished) 
+	{
+		// Создаем данные для отрисовки
+		var chartData = new ChartDrawData();
+		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
+		
+		// Отрисовываем свечу на графике
+		this.GuiAsync(() => Chart.Draw(chartData));
+	}
 }
 ```
 
@@ -149,8 +149,8 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 ```cs
 // 5-минутные свечи
 var timeFrameSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security);
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security);
 _connector.Subscribe(timeFrameSubscription);
 ```
 
@@ -159,15 +159,15 @@ _connector.Subscribe(timeFrameSubscription);
 ```cs
 // Загрузка только исторических свечей без перехода в реальное время
 var historicalSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-        To = DateTime.Today,  // Указываем конечную дату
-        BuildMode = MarketDataBuildModes.Load  // Только загрузка готовых данных
-    }
+	MarketData =
+	{
+		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+		To = DateTime.Today,  // Указываем конечную дату
+		BuildMode = MarketDataBuildModes.Load  // Только загрузка готовых данных
+	}
 };
 _connector.Subscribe(historicalSubscription);
 ```
@@ -177,14 +177,14 @@ _connector.Subscribe(historicalSubscription);
 ```cs
 // Свечи с таймфреймом 21 секунда, построенные из тиков
 var customTimeFrameSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromSeconds(21)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(customTimeFrameSubscription);
 ```
@@ -194,15 +194,15 @@ _connector.Subscribe(customTimeFrameSubscription);
 ```cs
 // Свечи, построенные из середины спреда стакана
 var depthBasedSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(1)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.MarketDepth,
-        BuildField = Level1Fields.SpreadMiddle
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.MarketDepth,
+		BuildField = Level1Fields.SpreadMiddle
+	}
 };
 _connector.Subscribe(depthBasedSubscription);
 ```
@@ -212,15 +212,15 @@ _connector.Subscribe(depthBasedSubscription);
 ```cs
 // 5-минутные свечи с расчетом профиля объема
 var volumeProfileSubscription = new Subscription(
-    DataType.TimeFrame(TimeSpan.FromMinutes(5)),
-    security)
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.LoadAndBuild,
-        BuildFrom = DataType.Ticks,
-        IsCalcVolumeProfile = true
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.LoadAndBuild,
+		BuildFrom = DataType.Ticks,
+		IsCalcVolumeProfile = true
+	}
 };
 _connector.Subscribe(volumeProfileSubscription);
 ```
@@ -230,14 +230,14 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // Свечи по объему (каждая свеча содержит объем в 1000 контрактов)
 var volumeCandleSubscription = new Subscription(
-    DataType.Volume(1000m),  // Указываем тип свечи и объем
-    security)
+	DataType.Volume(1000m),  // Указываем тип свечи и объем
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(volumeCandleSubscription);
 ```
@@ -247,14 +247,14 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // Свечи по количеству сделок (каждая свеча содержит 1000 сделок)
 var tickCandleSubscription = new Subscription(
-    DataType.Tick(1000),  // Указываем тип свечи и количество сделок
-    security)
+	DataType.Tick(1000),  // Указываем тип свечи и количество сделок
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(tickCandleSubscription);
 ```
@@ -264,14 +264,14 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // Свечи с ценовым диапазоном в 0.1 ед.
 var rangeCandleSubscription = new Subscription(
-    DataType.Range(0.1m),  // Указываем тип свечи и диапазон цен
-    security)
+	DataType.Range(0.1m),  // Указываем тип свечи и диапазон цен
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(rangeCandleSubscription);
 ```
@@ -281,14 +281,14 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // Рэнко свечи с шагом 0.1
 var renkoCandleSubscription = new Subscription(
-    DataType.Renko(0.1m),  // Указываем тип свечи и размер блока
-    security)
+	DataType.Renko(0.1m),  // Указываем тип свечи и размер блока
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(renkoCandleSubscription);
 ```
@@ -298,14 +298,14 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Пункто-цифровые свечи
 var pnfCandleSubscription = new Subscription(
-    DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Указываем параметры PnF
-    security)
+	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Указываем параметры PnF
+	security)
 {
-    MarketData =
-    {
-        BuildMode = MarketDataBuildModes.Build,
-        BuildFrom = DataType.Ticks
-    }
+	MarketData =
+	{
+		BuildMode = MarketDataBuildModes.Build,
+		BuildFrom = DataType.Ticks
+	}
 };
 _connector.Subscribe(pnfCandleSubscription);
 ```

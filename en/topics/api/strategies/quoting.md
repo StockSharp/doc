@@ -42,9 +42,9 @@ StockSharp supports various quoting behaviors:
 ```csharp
 // Create a behavior for market quoting
 var behavior = new MarketQuotingBehavior(
-    new Unit(0.01m), // Price offset from the best quote
-    new Unit(0.1m, UnitTypes.Percent), // Minimum deviation for quote update
-    MarketPriceTypes.Following // Market price type for quoting
+	new Unit(0.01m), // Price offset from the best quote
+	new Unit(0.1m, UnitTypes.Percent), // Minimum deviation for quote update
+	MarketPriceTypes.Following // Market price type for quoting
 );
 ```
 
@@ -53,24 +53,24 @@ var behavior = new MarketQuotingBehavior(
 ```csharp
 // Create a quoting processor
 _quotingProcessor = new QuotingProcessor(
-    behavior,
-    Security, // Instrument
-    Portfolio, // Portfolio
-    Sides.Buy, // Quoting direction
-    Volume, // Quoting volume
-    Volume, // Maximum order volume
-    TimeSpan.Zero, // No timeout
-    this, // Strategy implements ISubscriptionProvider
-    this, // Strategy implements IMarketRuleContainer
-    this, // Strategy implements ITransactionProvider
-    this, // Strategy implements ITimeProvider
-    this, // Strategy implements IMarketDataProvider
-    IsFormedAndOnlineAndAllowTrading, // Check trading permission
-    true, // Use order book prices
-    true  // Use last trade price if order book is empty
+	behavior,
+	Security, // Instrument
+	Portfolio, // Portfolio
+	Sides.Buy, // Quoting direction
+	Volume, // Quoting volume
+	Volume, // Maximum order volume
+	TimeSpan.Zero, // No timeout
+	this, // Strategy implements ISubscriptionProvider
+	this, // Strategy implements IMarketRuleContainer
+	this, // Strategy implements ITransactionProvider
+	this, // Strategy implements ITimeProvider
+	this, // Strategy implements IMarketDataProvider
+	IsFormedAndOnlineAndAllowTrading, // Check trading permission
+	true, // Use order book prices
+	true  // Use last trade price if order book is empty
 )
 {
-    Parent = this
+	Parent = this
 };
 ```
 
@@ -79,18 +79,18 @@ _quotingProcessor = new QuotingProcessor(
 ```csharp
 // Subscribe to processor events for logging and handling
 _quotingProcessor.OrderRegistered += order =>
-    this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
 _quotingProcessor.OrderFailed += fail =>
-    this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	this.AddInfoLog($"Order failed: {fail.Error.Message}");
 
 _quotingProcessor.OwnTrade += trade =>
-    this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 _quotingProcessor.Finished += isOk => {
-    this.AddInfoLog($"Quoting finished with success: {isOk}");
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
+	this.AddInfoLog($"Quoting finished with success: {isOk}");
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
 };
 ```
 
@@ -108,11 +108,11 @@ Don't forget to clean up processor resources when stopping the strategy:
 ```csharp
 protected override void OnStopped()
 {
-    // Release resources of the current processor
-    _quotingProcessor?.Dispose();
-    _quotingProcessor = null;
-    
-    base.OnStopped();
+	// Release resources of the current processor
+	_quotingProcessor?.Dispose();
+	_quotingProcessor = null;
+	
+	base.OnStopped();
 }
 ```
 

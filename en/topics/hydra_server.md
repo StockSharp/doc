@@ -15,19 +15,19 @@ The program has a configuration file `appsettings.json`:
 
 ```json
 {
-    "Logging": {
-        "LogLevel": {
-            "Default": "Information",
-            "Microsoft.Hosting.Lifetime": "Information"
-        }
-    },
-    "Server": {
-        "WebApiAddress": "api.stocksharp.com/v1/",
-        "LogLevel": "Inherit",
-        "AutoDownload": false,
-        "CompanyPath": "",
-        "AppDataPath": ""
-    }
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft.Hosting.Lifetime": "Information"
+		}
+	},
+	"Server": {
+		"WebApiAddress": "api.stocksharp.com/v1/",
+		"LogLevel": "Inherit",
+		"AutoDownload": false,
+		"CompanyPath": "",
+		"AppDataPath": ""
+	}
 }
 
 ```
