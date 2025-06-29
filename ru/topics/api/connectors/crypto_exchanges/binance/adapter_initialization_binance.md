@@ -1,6 +1,6 @@
 # Инициализация адаптера Binance
 
-Код ниже демонстрирует как инициализировать [BinanceMessageAdapter](xref:StockSharp.Binance.BinanceMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [BinanceMessageAdapter](xref:StockSharp.Binance.BinanceMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
