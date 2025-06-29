@@ -10,8 +10,8 @@ Momentum is defined as the ratio of today's price to the price n periods ago:
 MOMENTUM = CLOSE(i) / CLOSE(i - n) * 100  
 
 where:  
-CLOSE(i) � the closing price of the current bar;  
-CLOSE(i - n) � the closing price of n bars back.  
+CLOSE(i) — the closing price of the current bar;  
+CLOSE(i - n) — the closing price of n bars back.  
 
 
 ![IndicatorMomentum](../../../../images/indicatormomentum.png)
