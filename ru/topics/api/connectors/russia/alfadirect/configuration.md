@@ -6,7 +6,7 @@
 
 Как видно из рисунка, [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) взаимодействует с брокером через терминал [Альфа\-Директ](https://www.alfadirect.ru/). Связь между [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) и [Альфа\-Директ](https://www.alfadirect.ru/) осуществляется по технологии [COM](https://ru.wikipedia.org/wiki/Component_Object_Model) посредством открытого интерфейса терминала. [Открытый интерфейс терминала Альфа\-Директ](https://www.alfadirect.ru/mobile-app/terminal-alfa-direct) позволяет получать в режиме реального времени всю доступную в терминале табличную информацию и подавать торговые поручения. 
 
-Для корректной работой с [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) необходимо предварительно настроить торговый терминал [Альфа\-Директ](../alfadirect.md). 
+Для корректной работы с [AlfaDirectMessageAdapter](xref:StockSharp.AlfaDirect.AlfaDirectMessageAdapter) необходимо предварительно настроить торговый терминал [Альфа\-Директ](../alfadirect.md). 
 
 ## Настройка терминала Альфа\-Директ
 
@@ -25,7 +25,7 @@
 4. Для более частого пересчета баланса портфелей измените следующие настройки \- меню "Сервис \-\> Параметры" \-\> вкладка "Система" \-\> выставить значение "Шаг цены для пересчета балансов" равным 0,01%. 
 
    ![AlfaCfgUpdateBalance](../../../../../images/alfacfgupdatebalance.png)
-5. Для увеличения скорости передачи данных включите опцию "Максимальная скорость обновления, максимальный трафик" \- меню "Сервис \-\> Параметры" \-\> вкладка "Система. 
+5. Для увеличения скорости передачи данных включите опцию "Максимальная скорость обновления, максимальный трафик" \- меню "Сервис \-\> Параметры" \-\> вкладка "Система". 
 
    ![AlfaCfgMaxSpeed](../../../../../images/alfacfgmaxspeed.png)
 
