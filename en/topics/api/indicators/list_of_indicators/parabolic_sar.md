@@ -7,14 +7,14 @@ To use the indicator, the [ParabolicSar](xref:StockSharp.Algo.Indicators.Parabol
   
 The price of the indicator point (SAR) for the next period (candle) is calculated using the following formulas:
   
-SAR(n+1) = SAR(n) + a * (high � SAR(n)), for an uptrend;  
-SAR(n+1) = SAR(n) + a * (low � SAR(n)), for a downtrend, where:
+SAR(n+1) = SAR(n) + a * (high — SAR(n)), for an uptrend;  
+SAR(n+1) = SAR(n) + a * (low — SAR(n)), for a downtrend, where:
 
-SAR(n+1) � price for the period n+1;  
-SAR(n) � price for the period n;  
-high and low � new maximum and minimum respectively (extremes). They are considered for the time interval between the activation of the previous indicator signal and the current moment;
+SAR(n+1) — price for the period n+1;  
+SAR(n) — price for the period n;  
+high and low — new maximum and minimum respectively (extremes). They are considered for the time interval between the activation of the previous indicator signal and the current moment;
   
-a � acceleration factor.
+a — acceleration factor.
   
 The acceleration factor is a floating coefficient, characterized by minimum, maximum values, and a step of change.
   
