@@ -2,7 +2,7 @@
 
 Для создания новой стоп заявки необходимо создать объект [Order](xref:StockSharp.BusinessEntities.Order), который содержит информацию о заявке и зарегистрировать его на бирже.
 
-В отличии от обычной заявки для стоп заявки необходимо указать свойство [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) как [OrderTypes.Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) и задать свойство [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) с необходимыми условиями заявки.
+В отличие от обычной заявки для стоп заявки необходимо указать свойство [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) как [OrderTypes.Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) и задать свойство [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) с необходимыми условиями заявки.
 
 В дальнейшем, если требуется работа с заявкой (например, отменить ее или изменить), то необходимо использовать именно этот объект [Order](xref:StockSharp.BusinessEntities.Order). Для регистрации заявок на бирже предусмотрен метод [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)** который отправляет заявку на сервер.
 
