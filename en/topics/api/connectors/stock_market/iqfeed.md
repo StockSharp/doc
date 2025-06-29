@@ -36,7 +36,7 @@ To receive data, the client application uses four connections through different 
 The port numbers that are used by default for connection to the **IQ Feed Client** are specified in brackets. For client connections, the port numbers can be changed in the registry, for example, for Level1 on the following path: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Port numbers for connecting to IQ servers can not be changed. 
 
 > [!CAUTION]
-> Connector support only market\-data feed, transaction are not supported. 
+> Connector supports only market-data feed, transactions are not supported. 
 
 ## Recommended content
 
