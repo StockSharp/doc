@@ -6,7 +6,7 @@ For each selected market data type, the template is configured in the [Importing
 
 ![hydra tasks import](../../../images/hydra_tasks_import.png)
 
-At the bottom of panel, you can select the instruments by which data will be imported, as well as the data type to import.
+At the bottom of the panel, you can select the instruments by which data will be imported, as well as the data type to import.
 
 For each instrument, you can specify the following data import properties:
 
@@ -25,7 +25,7 @@ For each instrument, you can specify the following data import properties:
 - **Indent from the beginning** \- the number of lines to skip from the beginning of file (if they contain meta information). 
 - **Time zone** \- time zone. 
 - **Interval** \- the frequency of data updates. 
-- **Extended information** \- save extended imported fields in the extended information storage 
+- **Extended information** \- save extended imported fields in the extended information storage.
 - **Duplicates** \- whether duplicate instruments need to be updated if they already exist. 
 - **Ignore without ID** \- ignore instruments without an identifier. 
 
