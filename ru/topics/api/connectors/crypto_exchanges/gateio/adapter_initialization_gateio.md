@@ -1,6 +1,6 @@
 # Инициализация адаптера Gate.io
 
-Код ниже демонстрирует как инициализировать [GateIOMessageAdapter](xref:StockSharp.GateIO.GateIOMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [GateIOMessageAdapter](xref:StockSharp.GateIO.GateIOMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

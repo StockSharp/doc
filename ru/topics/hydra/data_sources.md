@@ -1,8 +1,8 @@
 # Источники данных
 
-Программа [Hydra](../hydra.md) имеет подключение к различным источникам данных. Помимо получения исторических данных, программа имеет возможность получать маркет данные от бокеров, при этом маркет данные поступают в реальном времени. Подключение к источникам осуществляется посредством коннекторов, предоставляемых пользователю. 
+Программа [Hydra](../hydra.md) имеет подключение к различным источникам данных. Помимо получения исторических данных, программа имеет возможность получать маркет данные от брокеров, при этом маркет данные поступают в реальном времени. Подключение к источникам осуществляется посредством коннекторов, предоставляемых пользователю.
 
-Пользователю предосталяются бесплатные коннекторы, а так же он может приобрести платные, которые позволяют получать ему маркет данные с платных источников.
+Пользователю предоставляются бесплатные коннекторы, а также он может приобрести платные, которые позволяют получать ему маркет данные с платных источников.
 
 ## Коннекторы Америка
 
@@ -68,6 +68,7 @@
 | ------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | [Bibox](../api/connectors/crypto_exchanges/bibox.md)               | [Настройки коннектора Bibox](../api/connectors/crypto_exchanges/bibox/configuration_bibox.md)               | [Графическое конфигурирование Bibox](../api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md)               |
 | [Binance](../api/connectors/crypto_exchanges/binance.md)           | [Настройки коннектора Binance](../api/connectors/crypto_exchanges/binance/configuration_binance.md)           | [Графическое конфигурирование Binance](../api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md)           |
+| [BingX](../api/connectors/crypto_exchanges/bingx.md)           | [Настройки коннектора BingX](../api/connectors/crypto_exchanges/bingx/configuration_bingx.md)           | [Графическое конфигурирование BingX](../api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md)           |
 | [Bitbank](../api/connectors/crypto_exchanges/bitbank.md)           | [Настройки коннектора Bitbank](../api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md)           | [Графическое конфигурирование Bitbank](../api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md)           |
 | [Bitget](../api/connectors/crypto_exchanges/bitget.md)               | [Настройки коннектора Bitget](../api/connectors/crypto_exchanges/bitget/configuration_bitget.md)               | [Графическое конфигурирование Bitget](../api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md)               |
 | [Bitexbook](../api/connectors/crypto_exchanges/bitexbook.md)       | [Настройки коннектора Bitexbook](../api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md)       | [Графическое конфигурирование Bitexbook](../api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md)       |
@@ -109,6 +110,7 @@
 | [LBank](../api/connectors/crypto_exchanges/lbank.md)               | [Настройки коннектора LBank](../api/connectors/crypto_exchanges/lbank/configuration_lbank.md)               | [Графическое конфигурирование LBank](../api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md)               |
 | [Liqui](../api/connectors/crypto_exchanges/liqui.md)               | [Настройки коннектора Liqui](../api/connectors/crypto_exchanges/liqui/configuration_liqui.md)               | [Графическое конфигурирование Liqui](../api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md)               |
 | [Livecoin](../api/connectors/crypto_exchanges/livecoin.md)         | [Настройки коннектора Livecoin](../api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md)         | [Графическое конфигурирование Livecoin](../api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md)         |
+| [MEXC](../api/connectors/crypto_exchanges/mexc.md)             | [Настройки коннектора MEXC](../api/connectors/crypto_exchanges/mexc/configuration_mexc.md)             | [Графическое конфигурирование MEXC](../api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md)             |
 | [OKCoin](../api/connectors/crypto_exchanges/okcoin.md)             | [Настройки коннектора OKCoin](../api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md)             | [Графическое конфигурирование OKCoin](../api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md)             |
 | [OKEx](../api/connectors/crypto_exchanges/okex.md)                 | [Настройки коннектора OKEx](../api/connectors/crypto_exchanges/okex/configuration_okex.md)                 | [Графическое конфигурирование OKEx](../api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md)                 |
 | [Poloniex](../api/connectors/crypto_exchanges/poloniex.md)         | [Настройки коннектора Poloniex](../api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md)         | [Графическое конфигурирование Poloniex](../api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md)         |

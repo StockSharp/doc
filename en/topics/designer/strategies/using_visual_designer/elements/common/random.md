@@ -10,7 +10,7 @@ This block is used to generate a random value.
 
 ## Outgoing Sockets
 
-- **Value** � a random value.
+- **Value** - a random value.
 
 ## Parameters
 

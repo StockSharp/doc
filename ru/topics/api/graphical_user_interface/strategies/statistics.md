@@ -11,7 +11,7 @@
 - [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategy **)** \- добавляет стратегии в таблицу.
 - [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) name, [System.Windows.Visibility](xref:System.Windows.Visibility) visibility **)** \- устанавливает видимость колонок в таблице.
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Testing\/SampleHistoryTestingParallel*. 
+Ниже показаны фрагменты кода с её использованием. Пример кода взят из *Samples\/Testing\/SampleHistoryTestingParallel*. 
 
 ```xaml
 <Window x:Class="SampleHistoryTestingParallel.MainWindow"

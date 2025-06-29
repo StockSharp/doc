@@ -1,6 +1,6 @@
 # Инициализация адаптера Hotbit
 
-Код ниже демонстрирует как инициализировать [HotbitMessageAdapter](xref:StockSharp.Hotbit.HotbitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [HotbitMessageAdapter](xref:StockSharp.Hotbit.HotbitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

@@ -19,7 +19,7 @@ ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
 ```
 
-Далее в [IndexEditor](xref:StockSharp.Xaml.IndexEditor) следует передать инструменты необходимые для расчета индекса:
+Далее в [IndexEditor](xref:StockSharp.Xaml.IndexEditor) следует передать инструменты, необходимые для расчета индекса:
 
 ```cs
 ...

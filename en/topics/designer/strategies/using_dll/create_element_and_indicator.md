@@ -1,6 +1,6 @@
 # Creating a Cube and Indicator
 
-The algorithm for creating a cube or indicator from a DLL assembly is similar to the process from code (see the creation of a [cube](../using_code/csharp/creating_your_own_cube.md) and [indicator](../using_code/csharp/create_own_indicator.md)) except for the content selection stage. Similarly, when adding a [strategy from DLL](../using_dll.md), you can choose both the type of cube and indicators if they are created in the connected DLL:
+The algorithm for creating a cube or indicator from a DLL assembly is similar to the process from code (see the creation of a [cube](../using_code/csharp/creating_your_own_cube.md) and [indicator](../using_code/csharp/create_own_indicator.md)) except for the content selection stage. Similarly, when adding a [strategy from DLL](../using_dll.md), you can choose both the cube type and the indicator type if they are created in the connected DLL:
 
 ![Designer_Import_Element_00](../../../../images/designer_import_element_00.png)
 

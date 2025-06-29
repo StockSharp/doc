@@ -1,6 +1,6 @@
 # Statistics
 
-[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- is the table to display parameters and statistics of the strategies. 
+[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- is a table to display parameters and statistics of the strategies.
 
 ![GUI StrategiesStatisticsPanel](../../../../images/gui_strategiesstatisticspanel.png)
 

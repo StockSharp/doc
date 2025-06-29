@@ -1,6 +1,6 @@
 # Инициализация адаптера OKCoin
 
-Код ниже демонстрирует как инициализировать [OkcoinMessageAdapter](xref:StockSharp.Okcoin.OkcoinMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [OkcoinMessageAdapter](xref:StockSharp.Okcoin.OkcoinMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

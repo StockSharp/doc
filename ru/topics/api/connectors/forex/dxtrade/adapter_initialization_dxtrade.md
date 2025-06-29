@@ -1,6 +1,6 @@
 # Инициализация адаптера DXtrade
 
-Код ниже демонстрирует как инициализировать [DXtradeMessageAdapter](xref:StockSharp.DXtrade.DXtradeMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [DXtradeMessageAdapter](xref:StockSharp.DXtrade.DXtradeMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

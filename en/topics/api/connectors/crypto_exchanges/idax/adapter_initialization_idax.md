@@ -1,6 +1,6 @@
-# Adapter initialization Idax
+# Idax adapter initialization
 
-The code below demonstrates how to initialize the [IdaxMessageAdapter](xref:StockSharp.Idax.IdaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize the [IdaxMessageAdapter](xref:StockSharp.Idax.IdaxMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

@@ -2,7 +2,7 @@
 
 ![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
 
-The cube is used to hedging the position on options.
+The cube is used to hedge positions on options.
 
 ### Incoming sockets
 
@@ -24,7 +24,7 @@ Outgoing sockets
 
 Parameters
 
-- **Hedging type** \- the hedging type, it can take the values of Delta, Gamma, Vega, Theta, Po.
+- **Hedging type** \- the hedging type, it can take the values Delta, Gamma, Vega, Theta, or Rho.
 
 ## Recommended content
 

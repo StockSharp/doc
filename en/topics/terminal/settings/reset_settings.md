@@ -1,5 +1,3 @@
 # Reset settings
 
-See 
-
-[Reset settings](../../designer/settings/reset_settings.md)
+See [Reset settings](../../designer/settings/reset_settings.md).

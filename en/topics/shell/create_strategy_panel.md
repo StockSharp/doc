@@ -17,7 +17,7 @@ Replace `UserControl` with `controls:BaseStudioControl`.
 	  				
 ```
 
-Then implement your own panel logic by analogy with the existing strategy panels.
+Then implement your own panel logic similar to the existing strategy panels.
 
 In order for the [Real\-time](user_interface/real_time.md) panel to see the strategy in your panel, your strategy must be set as a property:
 

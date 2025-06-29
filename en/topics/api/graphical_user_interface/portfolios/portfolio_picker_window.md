@@ -1,6 +1,6 @@
 # Portfolio picker window
 
-[PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) is the window for selecting a portfolio. The window displays a list of portfolios and information about the cash positions of portfolios.
+[PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) is a window for selecting a portfolio. The window displays a list of portfolios and information about the cash positions of portfolios.
 
 ![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
 

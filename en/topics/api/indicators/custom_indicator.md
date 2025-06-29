@@ -173,7 +173,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 
 ## Indicators with Multiple Lines
 
-The last type of indicators are those that not only consist of other indicators but are also graphically displayed with multiple states simultaneously (multiple lines). For example, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex):
+The last type of indicators is those that not only consist of other indicators but are also graphically displayed with multiple states simultaneously (multiple lines). For example, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex):
 
 ```cs
 /// <summary>

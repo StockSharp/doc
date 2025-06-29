@@ -1,6 +1,6 @@
-# Adapter initialization Liqui
+# Liqui adapter initialization
 
-The code below demonstrates how to initialize the [LiquiMessageAdapter](xref:StockSharp.Liqui.LiquiMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize the [LiquiMessageAdapter](xref:StockSharp.Liqui.LiquiMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

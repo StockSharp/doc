@@ -1,10 +1,10 @@
 # Instruments
 
-To import instruments, select the **Import \=\> Security** tab.
+To import instruments, select the **Import \=\> Instruments** tab.
 
 ![hydra import securities](../../../images/hydra_import_securities.png)
 
-## The import process securities.
+## Import process.
 
 1. **Import settings.**.
 
@@ -28,5 +28,5 @@ To import instruments, select the **Import \=\> Security** tab.
    - The field setting window will look like this:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence.
-3. To preview the data, click the **Preview** button..![hydra import preview securitiy](../../../images/hydra_import_preview_securitiy.png)
+3. To preview the data, click the **Preview** button.![hydra import preview securitiy](../../../images/hydra_import_preview_securitiy.png)
 4. Click the **Import** button.

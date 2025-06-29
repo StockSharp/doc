@@ -4,7 +4,7 @@
 
 ![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
 
-Воспользовавшись примером стратегии SmaStrategy необходимо создать саму стратегию.
+Воспользовавшись примером стратегии SmaStrategy, необходимо создать саму стратегию.
 
 Если для стратегии необходимо добавить собственную панель тестирования или мониторинга, то стратегия должна реализовать интерфейсы IHaveTestControl и IHaveMonitoringControl соответственно. 
 
@@ -40,7 +40,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 
 ![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
 
-Чтобы созданная стратегия была доступна в окне выбора стратегий ее необходимо добавить в словарь **DictionaryStrategies** главного окна 
+Чтобы созданная стратегия была доступна в окне выбора стратегий, ее необходимо добавить в словарь **DictionaryStrategies** главного окна 
 
 ```cs
 	...
@@ -56,7 +56,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 		
 ```
 
-Для того чтобы стратегия сохранялась и после этого загружалась, в конструкторе стратегии необходимо установить параметр стратегии
+Для того чтобы стратегия сохранялась и после этого загружалась, в конструкторе стратегии необходимо установить параметр стратегии.
 
 ```cs
 public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl

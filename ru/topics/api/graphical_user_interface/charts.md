@@ -52,7 +52,7 @@
 
 ## IChartElement
 
-Все элементы, которые отображаются на графике должны, реализовывать интерфейс [IChartElement](xref:StockSharp.Charting.IChartElement). В [S\#](../../api.md) имеются следующие классы, реализующие этот интерфейс: 
+Все элементы, которые отображаются на графике, должны реализовывать интерфейс [IChartElement](xref:StockSharp.Charting.IChartElement). В [S\#](../../api.md) имеются следующие классы, реализующие этот интерфейс:
 
 - [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) \- элемент для отображения свечей.
 - [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) \- элемент для отображения индикаторов.

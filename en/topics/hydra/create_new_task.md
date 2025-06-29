@@ -1,6 +1,6 @@
 # Create new task
 
-[Hydra](../hydra.md) is built with the ability to create custom extensions. To add your own extension, you need to copy the dll to the **Plugins** subfolder where [Hydra](../hydra.md). is installed. Below is the process of creating a utility for backing up existing data (it is included as standard and is presented as training material). 
+[Hydra](../hydra.md) is built with the ability to create custom extensions. To add your own extension, you need to copy the dll to the **Plugins** subfolder where [Hydra](../hydra.md) is installed. Below is the process of creating a utility for backing up existing data (it is included as standard and is presented as training material).
 
 Each utility has to implement the [IHydraTask](xref:StockSharp.Hydra.Core.IHydraTask) interface (or inherit from the [BaseHydraTask](xref:StockSharp.Hydra.Core.BaseHydraTask) or [ConnectorHydraTask\`1](xref:StockSharp.Hydra.Core.ConnectorHydraTask`1) classes): 
 

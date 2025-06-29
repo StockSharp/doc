@@ -4,11 +4,11 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 
 ![API GUI Settings FAST](../../../../../images/api_gui_settings_fast.png)
 
-- **Dialect** \- Dialect FAST protocol. Must be set as a first parameter. After select, the next param (**FAST settings**) will contains specified dialect IP addresses.
-- **FAST settings** \- Dialect's (selected in prev param) IP addresses and ports. Can use the next option for quick settings load.
+- **Dialect** \- Dialect FAST protocol. Must be set as a first parameter. After selecting, the next parameter (**FAST settings**) will contain the specified dialect IP addresses.
+- **FAST settings** \- Dialect's (selected in prev param) IP addresses and ports. You can use the following option for quick settings load.
 - **Settings file** \- Quick option to load dialect settings from an exchange config file.
-- **Login** \- Login (use for TCP recovery services).
-- **Password** \- Password (use for TCP recovery services).
+- **Login** \- Login (used for TCP recovery services).
+- **Password** \- Password (used for TCP recovery services).
 
 ## Recommended content
 

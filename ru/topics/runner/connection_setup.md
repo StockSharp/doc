@@ -10,7 +10,7 @@ stocksharp.studio.runner setup
 
 ![runner_setup_1](../../images/runner_setup_1.png)
 
-Выбрав пункт Подключения программа перейдет в режим настройки коннектора:
+Выбрав пункт Подключения, программа перейдет в режим настройки коннектора:
 
 ![runner_setup_2](../../images/runner_setup_2.png)
 
@@ -38,7 +38,7 @@ stocksharp.studio.runner setup
 
 ![runner_setup_9](../../images/runner_setup_9.png)
 
-В случае успеха будет показано соообщение:
+В случае успеха будет показано сообщение:
 
 ![runner_setup_10](../../images/runner_setup_10.png)
 

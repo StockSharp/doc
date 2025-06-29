@@ -143,7 +143,7 @@ private void InitConnector()
 
 О создании собственного [Connector](xref:StockSharp.Algo.Connector) можно ознакомиться в пункте [Создание собственного коннектора](connectors/creating_own_connector.md).
 
-Выставление заявок описаны в пунктах [Заявки](orders_management.md), [Создать новую заявку](orders_management/create_new_order.md), [Создать новую стоп заявку](orders_management/create_new_stop_order.md). 
+Выставление заявок описано в пунктах [Заявки](orders_management.md), [Создать новую заявку](orders_management/create_new_order.md), [Создать новую стоп заявку](orders_management/create_new_stop_order.md).
 
 ## См. также
 

@@ -7,8 +7,8 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 - **Key** \- Key.
 - **Secret** \- Secret.
 - **Client** \- Client ID.
-- **Balance** \- Balance check interval. Required in case of deposit and withdraw actions.
-- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Balance** \- Balance check interval. Required in case of deposit and withdrawal actions.
+- **Heart beat** \- Server check interval to track that the connection is alive. By default equal to 1 minute.
 - **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
 - **AuthV2** \- AuthV2
 

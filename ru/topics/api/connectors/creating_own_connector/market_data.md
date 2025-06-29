@@ -31,8 +31,8 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
-	// Coinbase поддерживает только 5ти минутки для обновления через веб сокеты
-	// Поэтому другие ТФ будут строится из тиков (автоматически ядром StockSharp)
+        // Coinbase поддерживает только 5-минутки для обновления через веб сокеты
+        // Поэтому другие ТФ будут строиться из тиков (автоматически ядром StockSharp)
 	return subscription.DataType2 == _tf5min;
 }
 ```

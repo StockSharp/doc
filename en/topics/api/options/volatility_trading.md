@@ -1,11 +1,11 @@
 # Volatility trading
 
-For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy is realized, which provides the volume quoting by the specified range of volatility. 
+For option quoting, a special [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy is implemented, which provides volume quoting within the specified range of volatility.
 
 ## Quoting by volatility
 
-1. The [S\#](../../api.md) installation package includes the example SampleOptionQuoting, which quotes selected strike by the specified range of volatility. 
-2. Creating a connection to the [OpenECry](../connectors/stock_market/openecry.md) and export starting: 
+1. The [S\#](../../api.md) installation package includes the example SampleOptionQuoting, which quotes the selected strike within the specified range of volatility.
+2. Creating a connection to the [OpenECry](../connectors/stock_market/openecry.md) and starting the export:
 
    ```cs
    private void InitConnector()
@@ -123,9 +123,9 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// link quoting and hending
+        // link quoting and hedging
    	hedge.ChildStrategies.Add(quoting);
-   	// start henging
+        // start hedging
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
@@ -137,7 +137,7 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
    }
    ```
 
-4. The quoting start: 
+4. Starting quoting:
 
    ```cs
    hedge.Start();
@@ -154,7 +154,7 @@ For the option quoting the special [VolatilityQuotingStrategy](xref:StockSharp.A
 
    ![sample quote iv](../../../images/sample_quote_iv.png)
 
-6. The quoting ending and the strategy stop: 
+6. Ending quoting and stopping the strategy:
 
    ```none
    hedge.Stop();

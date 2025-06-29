@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). В обработчике этого события при получении новой свечи будет выполнятся отрисовка графика. 
+3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). В обработчике этого события при получении новой свечи будет выполняться отрисовка графика. 
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

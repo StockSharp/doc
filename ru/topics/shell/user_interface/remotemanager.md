@@ -4,7 +4,7 @@
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-В появившемся окне задать **логин** и **пароль**
+В появившемся окне задать **логин** и **пароль**.
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
@@ -18,15 +18,15 @@
 
 ![Shell RemoteManager 03](../../../images/shell_remotemanager_03.png)
 
-В открывшемся окне настроить Fix подключение
+В открывшемся окне настроить FIX‐подключение.
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-После чего нажать кнопку подключения
+После чего нажать кнопку подключения.
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
-При подключении все имевшиеся стратегии в Shell сервере будут доступны в Shell клиенте
+При подключении все имевшиеся стратегии в Shell‐сервере будут доступны в Shell‐клиенте.
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 
@@ -48,7 +48,7 @@
 
 ![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
 
-Если в стратегии есть команда отличная от Start\/Stop то для ее применения ее необходимо задать в следующем поле
+Если в стратегии есть команда отличная от Start/Stop, то для ее применения ее необходимо задать в следующем поле.
 
 ![Shell RemoteManager 11](../../../images/shell_remotemanager_11.png)
 

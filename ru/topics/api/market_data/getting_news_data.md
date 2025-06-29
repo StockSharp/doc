@@ -24,18 +24,18 @@ private void OnNewsReceived(Subscription subscription, News news)
 {
 	if (subscription != newsSubscription)
 		return;
-		
+
 	// Обрабатываем полученную новость
 	Console.WriteLine($"Новость: {news.Id}");
 	Console.WriteLine($"Заголовок: {news.Headline}");
 	Console.WriteLine($"Источник: {news.Source}");
 	Console.WriteLine($"Время: {news.ServerTime}");
 	Console.WriteLine($"Ссылка: {news.Url}");
-	
+
 	// Если есть текст новости
 	if (!string.IsNullOrEmpty(news.Story))
 		Console.WriteLine($"Текст: {news.Story}");
-	
+
 	// Если новость связана с конкретными инструментами
 	if (news.SecurityId != null)
 		Console.WriteLine($"Инструмент: {news.SecurityId}");
@@ -50,11 +50,11 @@ private void OnNewsReceived(Subscription subscription, News news)
 // Создаем подписку на новости с фильтрацией
 var filteredNewsSubscription = new Subscription(DataType.News)
 {
-	MarketData = 
+	MarketData =
 	{
 		// Указываем период, за который нужно получить новости
 		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
-		
+
 		// Можно указать конкретный источник новостей
 		// Для примера используем RSS источник
 		NewsSource = "CryptoNews"
@@ -73,9 +73,9 @@ StockSharp предоставляет специальный визуальны�
 var newsPanel = new NewsPanel();
 
 // Подписываемся на событие получения новостей и добавляем их в панель
-_connector.NewsReceived += (subscription, news) => 
+_connector.NewsReceived += (subscription, news) =>
 {
-	// Для обновления элементов пользовательского интерфейса 
+	// Для обновления элементов пользовательского интерфейса
 	// нужно использовать метод GuiAsync или GuiSync
 	this.GuiAsync(() => newsPanel.NewsGrid.News.Add(news));
 };
@@ -95,7 +95,7 @@ _connector.NewsReceived += (subscription, news) =>
 // Создаем подписку на исторические новости
 var historicalNewsSubscription = new Subscription(DataType.News)
 {
-	MarketData = 
+	MarketData =
 	{
 		// Указываем период, за который нужно получить новости
 		From = DateTime.Now.Subtract(TimeSpan.FromDays(7)),

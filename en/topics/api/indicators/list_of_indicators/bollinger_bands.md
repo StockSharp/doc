@@ -6,8 +6,8 @@ To use the indicator, the [BollingerBands](xref:StockSharp.Algo.Indicators.Bolli
 ##### Calculation
   
 The following parameters with corresponding settings are used to calculate Bollinger Bands:  
-- type of standard deviation � usually double;  
-- period of Moving Average � at the trader's discretion.  
+- type of standard deviation — usually double;  
+- period of Moving Average — at the trader's discretion.  
 
 Thus, the indicator is formed by three lines: central, upper, and lower, each with its formula:  
   

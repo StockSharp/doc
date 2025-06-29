@@ -2,7 +2,7 @@
 
 **Coinigy** \- cryptocurrency exchange.
 
-Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+Before you start writing trading robots for this trading platform, we recommend reading the links in the [Connectors](../../connectors.md) section. 
 
 ## Recommended content
 
