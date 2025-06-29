@@ -10,7 +10,7 @@
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
 - [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
 
-Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB.*
+The following code snippet demonstrates its usage. The code example is taken from *Samples/InteractiveBrokers/SampleIB*.
 
 ```xaml
 <Window x:Class="Sample.PortfoliosWindow"
