@@ -7,7 +7,7 @@ On the **Quick access panel**, located by default at the top of the [Designer](.
 
 ![Designer Reset language settings 00](../../../images/designer_reset_language_settings_00.png)
 
-When the **Resetting** is selected, the confirmation window is opened.
+When **Reset settings** is selected, the confirmation window opens.
 
 ![Designer Reset language settings 01](../../../images/designer_reset_language_settings_01.png)
 
