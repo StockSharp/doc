@@ -6,13 +6,13 @@ BoxChart \- специальный тип графика, предназначе
 
 **Основные свойства**
 
-- [ChartCandleElement.Timeframe2Multiplier](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2Multiplier) \- множитель, который применяется к основному таймфрейму, заданному в конструкторе, чтобы получить второй таймфрейм. Отображаемые свечи объединяются в группы размером, соответствующим второму таймфрему. Группы рисуются на графике сеткой и рамкой соответствующих цветов. 
+- [ChartCandleElement.Timeframe2Multiplier](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2Multiplier) \- множитель, который применяется к основному таймфрейму, заданному в конструкторе, чтобы получить второй таймфрейм. Отображаемые свечи объединяются в группы размером, соответствующим второму таймфрейму. Группы рисуются на графике сеткой и рамкой соответствующих цветов. 
 - [ChartCandleElement.Timeframe3Multiplier](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe3Multiplier) \- аналогично [ChartCandleElement.Timeframe2Multiplier](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2Multiplier), но для третьего таймфрейма. На графике 3\-й таймфрейм рисуется сеткой соответствующего цвета. 
 - [ChartCandleElement.FontColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.FontColor) \- цвет цифр объемов на графике. 
 - [ChartCandleElement.MaxVolumeColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.MaxVolumeColor) \- цвет цифр объемов на графике для максимального объема в данной свече. 
 - [ChartCandleElement.Timeframe2Color](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2Color) \- цвет сетки 2\-го таймфрейма. 
-- [ChartCandleElement.Timeframe2FrameColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2FrameColor) \- цвет рамки 2го таймфрейма. 
-- [ChartCandleElement.Timeframe3Color](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe3Color) \- цвет сетки 3го таймфрейма. 
+- [ChartCandleElement.Timeframe2FrameColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe2FrameColor) \- цвет рамки 2-го таймфрейма. 
+- [ChartCandleElement.Timeframe3Color](xref:StockSharp.Xaml.Charting.ChartCandleElement.Timeframe3Color) \- цвет сетки 3-го таймфрейма. 
 
 Пример использования этого типа графика расположен в Samples\/Common\/SampleChart. 
 
