@@ -4,7 +4,7 @@ To switch to strategy optimization mode, click the **Optimization** button on th
 
 ![Designer Optimization 00](../../../images/designer_optimization_00.png)
 
-A tab named Optimization + �Strategy Name� will open in the workspace. The **Optimization** tab is divided into two areas, **Properties**, **Optimization Result**: 
+A tab named Optimization + 'Strategy Name' will open in the workspace. The **Optimization** tab is divided into two areas, **Properties**, **Optimization Result**: 
 
 ![Designer Optimization 02](../../../images/designer_optimization_02.png)
 
