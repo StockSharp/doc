@@ -6,7 +6,7 @@ For example, two futures of the ES index \- **ESM5** and **ESU5**. When the **ES
 
 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) can be traded in the same way as [Security](xref:StockSharp.BusinessEntities.Security). Prior to the **RIM5** expiration an algo will be carried with this instrument. After the expiration an algo will be carried with **RIU5**, etc.
 
-## ContinuousSecurity creating
+## Creating ContinuousSecurity
 
 1. To declare the compound instruments that will be included in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) and in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) itself:
 
@@ -22,7 +22,7 @@ For example, two futures of the ES index \- **ESM5** and **ESU5**. When the **ES
    _es = new ContinuousSecurity { ExchangeBoard = ExchangeBoard.Nyse, Id = "ES" };
    							
    ```
-3. To add the compound instruments to it, specified the date and time of expiration for each added instrument:
+3. To add the compound instruments to it, specify the date and time of expiration for each added instrument:
 
    ```cs
    _es.ExpirationJumps.Add(_esm5, new DateTime(2015, 6, 15, 18, 45, 00));
