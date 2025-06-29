@@ -15,12 +15,12 @@ The analytics script is formatted as a class inherited from [IAnalyticsScript](x
 
 When setting parameters:
 
-- **Instrument** can be set from 1 to several instruments depending on the script's logic.
+- **Instrument** can be set from one to several instruments depending on the script's logic.
 
 ![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
 
-- Date range.
-- The storage from which to fetch data.
-- The working timeframe of the script if it uses one.
+- The date range.
+- The storage from which to retrieve data.
+- The script's working time frame, if it uses one.
 
 Clicking the **Start** button ![hydra analytics compile](../../../images/hydra_analytics_compile.png) will open a new tab displaying the results of the script's execution.
