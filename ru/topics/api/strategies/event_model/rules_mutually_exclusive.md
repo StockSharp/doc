@@ -1,8 +1,8 @@
 # Взаимоисключающие правила
 
-Взаимоисключающие правила, это правила которые удаляются по активации одного из этих правил. Для этого вызвается метод [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule1, [StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule2 **)** в который передается правило, которое будет удалено при активации данного правила.
+Взаимоисключающие правила, это правила которые удаляются по активации одного из этих правил. Для этого вызывается метод [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule1, [StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule2 **)** в который передается правило, которое будет удалено при активации данного правила.
 
-Например, регистрируется два правила, на успешную и неуспешную регистрацию заявки, одно из них нужно удалить в случае активации другого:
+Например, регистрируются два правила, на успешную и неуспешную регистрацию заявки, одно из них нужно удалить в случае активации другого:
 
 ```cs
 var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);
@@ -18,7 +18,7 @@ ruleRegFailed
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleReg);
-// регистрирация заявки
+// регистрация заявки
 RegisterOrder(order);
 		
 ```
@@ -39,7 +39,7 @@ ruleRegFailed
 	.Do(() => this.AddInfoLog("Заявка не принята биржей"))
 	.Once()
 	.Apply(this);
-// регистрирация заявки
+// регистрация заявки
 RegisterOrder(order);
 		
 ```

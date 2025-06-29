@@ -97,7 +97,7 @@
       .Do(() => this.AddInfoLog("Заявка полностью исполнена"))
       .Once()
       .Apply(this);
-  // регистрирация заявки
+  // регистрация заявки
   RegisterOrder(order);
   ```
   
