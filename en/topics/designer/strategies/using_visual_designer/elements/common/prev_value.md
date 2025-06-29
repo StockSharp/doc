@@ -6,11 +6,11 @@ The cube is used to obtain the previous value passed to the input, with the spec
 
 ## Incoming sockets
 
-- **Any data** \- the certain type of data received and passed.
+- **Any data** \- a certain type of data received and passed.
 
 ## Outgoing sockets
 
-- **Any data** \- the certain type of data received and passed, entered at the input with the offset specified in the parameters.
+- **Any data** \- a certain type of data received and passed, entered at the input with the offset specified in the parameters.
 
 ## Parameters
 
