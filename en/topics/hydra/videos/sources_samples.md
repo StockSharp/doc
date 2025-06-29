@@ -1,4 +1,4 @@
-# Sources samples
+# Source samples
 
 Connection settings in [Designer](../../designer.md), [Terminal](../../terminal.md), [Hydra](../../hydra.md). 
 
