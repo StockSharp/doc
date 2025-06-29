@@ -12,7 +12,7 @@ The selected strategy tab contains the following panels by default:
 
 - The **Scheme** panel, in which the main working process on the strategy and its components design is performed, by combining cubes and connecting lines. The Scheme is described in detail in the [Diagram panel](../strategies/using_visual_designer/diagram_panel.md) section.
 - Panel of information elements, containing the **Chart**, **Orders**, **Trades**, **Statistics** and other components. You can add required component, selecting it on the **Emulation** tab in the **Components** group.
-- The **Properties** panel by default is fold up on the right side in the strategy tab. On the **Properties** panel, you can arrange the **Emulation** general settings. For example, the **Market\-data storage format** can be set to **BIN** or **CSV**, depending on the file format of the selected storage. Data type Ticks or Candles. If Ticks is selected, candles will be formed from the [Backtesting settings](../user_interface/components/backtesting_settings.md) ticks.
+- The **Properties** panel is collapsed by default on the right side of the strategy tab. On the **Properties** panel, you can arrange the **Emulation** general settings. For example, the **Market-data storage format** can be set to **BIN** or **CSV**, depending on the file format of the selected storage. The data type can be Ticks or Candles. If Ticks is selected, candles will be formed from the ticks specified in the [Backtesting settings](../user_interface/components/backtesting_settings.md).
 
 ## Recommended content
 
