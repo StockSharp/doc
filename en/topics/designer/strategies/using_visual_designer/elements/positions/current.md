@@ -15,7 +15,7 @@ Incoming sockets
 
 Outgoing sockets
 
-- **Position** \- the numeric value of the position on the instrument or the current amount of available funds on the account, it is generated when they are changed and after the strategy is started.
+- **Position** \- the numeric value of the position on the instrument or the current amount of available funds on the account. This value is generated when either the position or the funds change and after the strategy is started.
 
 ### Parameters
 
