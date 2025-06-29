@@ -16,7 +16,7 @@ To create a strategy from C# code, you need to select the second tab. You can al
 
 After pressing **OK**, a new strategy will appear in the **Strategies** folder of the **Scheme** panel, similarly to when creating a strategy from [diagrams](../using_visual_designer.md). And similar actions for deleting or renaming the strategy.
 
-But instead of a diagram, C# code editor will be displayed:
+But instead of a diagram, a C# code editor will be displayed:
 
 ![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_creation_of_element_containing_source_code_01.png)
 
