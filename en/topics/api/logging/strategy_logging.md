@@ -6,7 +6,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
 
 [Trading strategies](../strategies.md)
 
-## Logging in to test file
+## Logging to a test file
 
 1. First, you need to create the special manager: 
 
@@ -28,7 +28,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
 
 ## Sound playback
 
-1. Creating a logger and passing the name of the sound file in it: 
+1. Creating a logger and passing the name of the sound file to it:
 
    ```cs
    var soundListener = new SoundLogListener("error.mp3");
@@ -36,7 +36,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Setting the filter in the sound playback only when the type of messages is [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error): 
+2. Setting the filter so sound plays only when the message type is [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error):
 
    ```cs
    soundListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -44,7 +44,7 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
 
 ## Email sending
 
-1. The logger creating and passing to it sent letters parameters: 
+1. Create the logger and pass it the parameters for the sent letters:
 
    ```cs
    var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
@@ -60,15 +60,15 @@ The [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class implements the [I
 
 ## Logging in to the LogWindow
 
-1. The [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) logger creating: 
+1. Creating the [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) logger:
 
    ```cs
-   // each strategy will have they own windows
+    // each strategy will have their own windows
    var guiListener = new GuiLogListener();
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Here is the log window when strategy working: ![strategylogging](../../../images/strategy_logging.png)
+2. Here is the log window when the strategy is working: ![strategylogging](../../../images/strategy_logging.png)
 
 ## Recommended content
 

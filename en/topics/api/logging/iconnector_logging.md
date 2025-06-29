@@ -19,7 +19,7 @@ The [IConnector](xref:StockSharp.BusinessEntities.IConnector) objects similar [s
    ```cs
    _logManager.Listeners.Add(new FileLogListener());
    ```
-3. The final step is to add the [Connector](xref:StockSharp.Algo.Connector) in [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources): 
+3. The final step is to add the [Connector](xref:StockSharp.Algo.Connector) to [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources):
 
    ```cs
    _logManager.Sources.Add(_connector);
