@@ -1,6 +1,6 @@
-# Adapter initialization Kucoin
+# Kucoin adapter initialization
 
-The code below demonstrates how to initialize the [KucoinMessageAdapter](xref:StockSharp.Kucoin.KucoinMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize the [KucoinMessageAdapter](xref:StockSharp.Kucoin.KucoinMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
