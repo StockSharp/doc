@@ -1,6 +1,6 @@
 # Инициализация адаптера LMAX
 
-Код ниже демонстрирует как инициализировать [LmaxMessageAdapter](xref:StockSharp.LMAX.LmaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [LmaxMessageAdapter](xref:StockSharp.LMAX.LmaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				
