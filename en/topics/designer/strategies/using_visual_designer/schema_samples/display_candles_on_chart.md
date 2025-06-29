@@ -8,7 +8,7 @@ For the [Variable](../elements/data_sources/variable.md) cube, the **Instrument*
 
 For the [Chart](../elements/common/chart.md) cube, one graphic element with a candle type was added, for which the input parameter was automatically added.
 
-After adding the necessary graphic elements to the chart panel, the connection of the [Candles](../elements/data_sources/candles.md) and [Chart](../elements/common/chart.md), elements is added, through which the built candles will be passed for output to the chart.
+After adding the necessary graphic elements to the chart panel, the connection of the [Candles](../elements/data_sources/candles.md) and [Chart](../elements/common/chart.md) elements is added, through which the built candles will be passed for output to the chart.
 
 ## Recommended content
 
