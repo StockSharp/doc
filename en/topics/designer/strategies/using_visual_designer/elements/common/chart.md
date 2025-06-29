@@ -6,7 +6,7 @@ The cube is designed to display data on the chart in the [Chart](../../../../use
 
 ![Designer Panel graphics 04](../../../../../../images/designer_panel_graphics_04.png)
 
-The [Chart](../../../../user_interface/components/chart.md) panel displays all the data received in the **Chart panel** cubes. For different series of candles, it is necessary to take different **Chart panel** cubes. At that, the charts will be placed one above the other, but only the corresponding graphic elements (candle series, indicator, trades, etc.) will be displayed on each one. The example shows that the top chart displays candles, 2 indicators and trades, that corresponds to 4 input parameters of the top cube. Only candles are shown on the bottom chart. For more information about the [Chart](../../../../user_interface/components/chart.md) panel, see [Chart](../../../../user_interface/components/chart.md) section.
+The [Chart](../../../../user_interface/components/chart.md) panel displays all the data received in the **Chart panel** cubes. For different series of candles, it is necessary to take different **Chart panel** cubes. At that, the charts will be placed one above the other, but only the corresponding graphic elements (candle series, indicator, trades, etc.) will be displayed on each one. The example shows that the top chart displays candles, two indicators and trades, which correspond to four input parameters of the top cube. Only candles are shown on the bottom chart. For more information about the [Chart](../../../../user_interface/components/chart.md) panel, see [Chart](../../../../user_interface/components/chart.md) section.
 
 ## Recommended content
 
