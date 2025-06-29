@@ -26,6 +26,6 @@ Source settings can be changed in the **Properties** panel on the right side.
 
 Common settings for all sources can be found in the [Common connection settings](common_connection_settings.md) item.
 
-Each connection has its own characteristics, the link [List of connectors](../data_sources.md) provides a list of connectors and their settings.
+Each connection has its own characteristics. The link [List of connectors](../data_sources.md) provides a list of connectors and their settings.
 
 **Watch [video tutorial](../videos/sources_samples.md)**
