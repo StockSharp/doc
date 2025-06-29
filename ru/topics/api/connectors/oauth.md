@@ -21,7 +21,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 Для [ICredentialsProvider](xref:StockSharp.Configuration.ICredentialsProvider) существует два варианта реализации:
 
-1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - загруждает данные учетной записи StockSharp из локального файла. Требуется предварительная авторизация. Например, через Installer.
+1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - загружает данные учетной записи StockSharp из локального файла. Требуется предварительная авторизация. Например, через Installer.
 
 2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - передача токена напрямую из кода. Наличие файла с секретами не требуется на машине. Токен получается из [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 

@@ -1,6 +1,6 @@
 # Инициализация адаптера CoinEx
 
-Код ниже демонстрирует как инициализировать [CoinExMessageAdapter](xref:StockSharp.CoinEx.CoinExMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [CoinExMessageAdapter](xref:StockSharp.CoinEx.CoinExMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

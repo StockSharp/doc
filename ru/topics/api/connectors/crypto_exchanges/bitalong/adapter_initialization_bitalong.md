@@ -1,6 +1,6 @@
 # Инициализация адаптера Bitalong
 
-Код ниже демонстрирует как инициализировать [BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

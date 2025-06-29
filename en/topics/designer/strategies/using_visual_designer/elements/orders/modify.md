@@ -23,7 +23,7 @@ Outgoing Sockets
 
 Parameters
 
-- **Zero Price** � a zero price registers a market order.
+- **Zero Price** – a zero price registers a market order.
 
 ## See Also
 

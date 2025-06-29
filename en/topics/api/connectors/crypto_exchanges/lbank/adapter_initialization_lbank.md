@@ -1,6 +1,6 @@
-# Adapter initialization LBank
+# LBank adapter initialization
 
-The code below demonstrates how to initialize the [LBankMessageAdapter](xref:StockSharp.LBank.LBankMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize the [LBankMessageAdapter](xref:StockSharp.LBank.LBankMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

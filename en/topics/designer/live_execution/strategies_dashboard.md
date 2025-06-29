@@ -4,7 +4,7 @@ Clicking the ![Designer Panel strategies 00](../../../images/designer_panel_stra
 
 ![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
 
-The **Live** panel is a table, displaying all strategies, added to the **Live**. On the **Live** panel, you can view the strategy current state, and run or stop the strategy using the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) buttons.
+The **Live** panel is a table, displaying all strategies added to the **Live**. On the **Live** panel, you can view the current state of the strategy, and run or stop the strategy using the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) buttons.
 
 ![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
 

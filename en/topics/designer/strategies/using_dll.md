@@ -1,6 +1,6 @@
 # Using DLL
 
-Using ready-made DLLs is familiar for those who want to work continuously in **Visual Studio** and **JetBrains Rider** environments. This approach offers several advantages over writing [code](using_code.md) inside **Designer**:
+Using ready-made DLLs is familiar to those who want to work continuously in **Visual Studio** and **JetBrains Rider** environments. This approach offers several advantages over writing [code](using_code.md) inside **Designer**:
 
 - Enhanced code editor compared to the built-in editor inside **Designer**.
 - Recompiling code automatically updates content inside **Designer**.

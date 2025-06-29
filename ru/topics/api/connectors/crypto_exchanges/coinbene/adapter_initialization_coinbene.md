@@ -1,6 +1,6 @@
 # Инициализация адаптера CoinBene
 
-Код ниже демонстрирует как инициализировать [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

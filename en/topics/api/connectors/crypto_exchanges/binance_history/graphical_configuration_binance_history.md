@@ -4,4 +4,4 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 
 ![API GUI Settings Binance History](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Check dates** \- Validate requested dates before send downloading requests.
+- **Check dates** \- Validate requested dates before sending download requests.

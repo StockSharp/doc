@@ -38,7 +38,7 @@ The "Order Registration" component is used for placing trading orders for a sele
 - **Stop Order Type** – The type of stop order.
 - **Result** – The outcome of the executed stop order.
 - **Instrument Identifier** – The identifier for the instrument for stop orders with conditions related to another instrument.
-- **Stop Price Condition** – The stop price condition. Used for orders like "Stop price by another paper."
+- **Stop Price Condition** – The stop price condition. Used for orders like "Stop price for another instrument."
 - **Stop Price** – The stop price that sets the condition for triggering the stop order.
 - **Stop-Limit Price** – Similar to the Stop Price but used only for "Take-profit and stop-limit" type orders.
 - **Stop-Limit at Market Price** – Indicates if the "Stop-Limit" order executes at the market price.

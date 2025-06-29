@@ -1,6 +1,6 @@
 # Publishing Your Strategy
 
-You can publish your strategy by clicking on the strategy with the left mouse button on the [Schemes](../user_interface/schemas.md) panel, and select **Publish**:
+You can publish your strategy by clicking on the strategy with the left mouse button on the [Schemes](../user_interface/schemas.md) panel and selecting **Publish**:
 
 ![Designer_publish_00](../../../images/designer_publish_00.png)
 
@@ -10,7 +10,7 @@ After choosing the export type, the [Installer](../../installer.md) program is a
 
 ![Designer_publish_01](../../../images/designer_publish_01.png)
 
-Fields required to be filled:
+Fields that must be filled in:
 
 - Name
 - Description

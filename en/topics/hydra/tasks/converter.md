@@ -43,7 +43,7 @@ The task converts exchange data. For example, from the Order Logs to ticks or fr
 
 Let's consider an example of data conversion.
 
-1. Go to the **Converter** task.. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. Go to the **Converter** task. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
 2. Select the instrument and in the window that appears, set the data type that we should receive during conversion, as well as the data type from which we should convert. For example, you need to convert Ticks into candles with a Time Frame of 15 minutes.
 
    > [!TIP]

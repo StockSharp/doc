@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-This indicator receives an incoming value and makes an arbitrary deviation on the set parameter **Change** value.
+This indicator receives an incoming value and makes an arbitrary deviation based on the **Change** parameter value.
 
 The description of the indicator methods is available in the section [Custom Indicator](../../../../api/indicators/custom_indicator.md).
 

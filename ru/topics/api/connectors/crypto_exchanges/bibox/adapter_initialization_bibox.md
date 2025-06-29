@@ -1,6 +1,6 @@
 # Инициализация адаптера Bibox
 
-Код ниже демонстрирует как инициализировать [BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

@@ -29,7 +29,7 @@ _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // на графический элемент.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
-// При использовании в качестве источника TraceSource, отладочные сообщения можно добавлять следующим образом:
+// При использовании в качестве источника TraceSource отладочные сообщения можно добавлять следующим образом:
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
 Trace.TraceError("Error test message");

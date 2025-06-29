@@ -2,7 +2,7 @@
 
 In the window that appears, select the desired time range, choose the underlying asset, add options for it, and click the ![hydra find](../../../../images/hydra_find.png) button:
 
-If there is no history, but there is data on the spread, you can calculate the main Greeks (Delta, Gamma, Vega, Theta, Ro, Volatility (implicit)), to do this you need to select them in the **Calculate Greeks** field. 
+If there is no history, but there is data on the spread, you can calculate the main Greeks (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)), to do this you need to select them in the **Calculate Greeks** field. 
 
 ![hydra option desk](../../../../images/hydra_option_desk.png)
 

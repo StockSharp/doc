@@ -4,7 +4,7 @@ The [RemoteManager]() tab allows you to enable remote control mode. To enable th
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-In the window that appears, set your **login** and **password**
+In the window that appears, set your **login** and **password**.
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
@@ -18,15 +18,15 @@ To do this, you need to run **another Shell**. In it, go to the connection setti
 
 ![Shell RemoteManager 03](../../../images/shell_remotemanager_03.png)
 
-In the window that opens, set up the FIX connection
+In the window that opens, set up the FIX connection.
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-Then press the Connect button
+Then press the Connect button.
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
-When connected, all existing strategies in the Shell server will be available in the Shell client
+When connected, all existing strategies in the Shell server will be available in the Shell client.
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 

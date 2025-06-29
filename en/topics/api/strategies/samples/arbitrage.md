@@ -14,7 +14,7 @@ public class ArbitrageStrategy : Strategy
 	private enum ArbitrageState
 	{
 		Contango,        // Futures price is higher than the underlying asset
-		Backvordation,   // Underlying asset price is higher than the futures
+		Backwardation,   // Underlying asset price is higher than the futures
 		None,            // No position
 		OrderRegistration // In the process of registering orders
 	}
@@ -118,16 +118,16 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 
 	// Calculate spreads
 	var contangoSpread = _futBid - _stAsk;        // Futures price > underlying asset price
-	var backvordationSpread = _stBid - _futAck;   // Underlying asset price > futures price
+	var backwardationSpread = _stBid - _futAck;   // Underlying asset price > futures price
 
 	decimal spread;
 	ArbitrageState arbitrageSignal;
 
 	// Determine the best arbitrage opportunity
-	if (backvordationSpread > contangoSpread)
+	if (backwardationSpread > contangoSpread)
 	{
-		arbitrageSignal = ArbitrageState.Backvordation;
-		spread = backvordationSpread;
+		arbitrageSignal = ArbitrageState.Backwardation;
+		spread = backwardationSpread;
 	}
 	else
 	{
@@ -137,7 +137,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 
 	// Log current state and spreads
 	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
-	LogInfo($"{ArbitrageState.Backvordation} spread = {backvordationSpread}");
+	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
 	LogInfo($"Entry from spread:{SpreadToGenerateSignal}. Exit from profit:{ProfitToExit}");
 
@@ -165,20 +165,20 @@ private void ProcessSignals(ArbitrageState arbitrageSignal, decimal spread)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
 
-		if (arbitrageSignal == ArbitrageState.Backvordation)
+		if (arbitrageSignal == ArbitrageState.Backwardation)
 		{
-			ExecuteBackvardation();
+			ExecuteBackwardation();
 		}
 		else
 		{
 			ExecuteContango();
 		}
 	}
-	// Exit from Backvordation position when profit threshold is reached
-	else if (_currentState == ArbitrageState.Backvordation && _profit >= ProfitToExit)
+	// Exit from Backwardation position when profit threshold is reached
+	else if (_currentState == ArbitrageState.Backwardation && _profit >= ProfitToExit)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
-		CloseBackvardationPosition();
+		CloseBackwardationPosition();
 	}
 	// Exit from Contango position when profit threshold is reached
 	else if (_currentState == ArbitrageState.Contango && _profit >= ProfitToExit)
@@ -198,7 +198,7 @@ private void CalculateProfit()
 {
 	switch (_currentState)
 	{
-		case ArbitrageState.Backvordation:
+		case ArbitrageState.Backwardation:
 			// Buy futures, sell underlying asset - profit when futures price rises and underlying asset price falls
 			_profit = (_stockExitPrice * StockMultiplicator - _stAsk) + (_futBid - _futureBuyPrice);
 			break;
@@ -220,7 +220,7 @@ private void CalculateProfit()
 For executing arbitrage strategies, methods for generating orders are used:
 
 ```cs
-private (Order buy, Order sell) GenerateOrdersBackvardation()
+private (Order buy, Order sell) GenerateOrdersBackwardation()
 {
 	var futureBuy = CreateOrder(Sides.Buy, FutureVolume);
 	futureBuy.Portfolio = FuturePortfolio;

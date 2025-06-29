@@ -1,6 +1,6 @@
 # Option desk
 
-The [OptionDesk](xref:StockSharp.Xaml.OptionDesk)\- graphic component is the table for option desk display. It shows “Greeks”, implied volatility, the theoretical price, the best offer and bid for Put and Call options. 
+The [OptionDesk](xref:StockSharp.Xaml.OptionDesk) graphical component is a table for displaying the option desk. It shows “Greeks”, implied volatility, the theoretical price, the best offer and bid for Put and Call options. 
 
 Below is the **OptionCalculator** example, which uses this component. The source code of the example can be found in the *Samples\\Options\\SampleOptionQuoting* folder.
 
@@ -8,7 +8,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
 
 ## OptionCalculator example
 
-1. In the XAML code, adding the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) element and assigning it the **Desk** name. 
+1. In the XAML code, add the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) element and assign it the **Desk** name. 
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -27,7 +27,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
    </Window>
    	  				
    ```
-2. In the C\# code, creating a connection and subscribing to the necessary events. 
+2. In the C\# code, create a connection and subscribe to the necessary events. 
 
    ```cs
    ...                 
@@ -126,7 +126,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
 5. When selecting an instrument:
    - Fill the array with a chain of options, where the selected instrument acts as the underlying asset;
    - Assign this array to the [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options) property;
-   - • Clear the options board values using the [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear) method.
+   - Clear the options board values using the [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear) method.
    ```cs
    private void Assets_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
    {

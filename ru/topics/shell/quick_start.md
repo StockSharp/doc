@@ -24,14 +24,14 @@
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
-Перейдя на вкладку Реал\-тайм нажав на кнопку **Добавить** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) добавим стратегию для запуска в торговлю.
+Перейдя на вкладку Реал\-тайм, нажав на кнопку **Добавить** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) добавим стратегию для запуска в торговлю.
 
 ![Shell Quick start 03](../../images/shell_quick_start_03.png)
 
-После того как стратегия будет добавлена необходимо заполнить ее основные параметры такие как **Инструмент**, **Портфель** и др. Для запуска необходимо нажать на кнопку **Start strategy**.
+После того как стратегия будет добавлена, необходимо заполнить ее основные параметры, такие как **Инструмент**, **Портфель** и др. Для запуска необходимо нажать на кнопку **Start strategy**.
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-Аналогично вкладке [Реал\-тайм](user_interface/real_time.md) на вкладке [Эмуляция](user_interface/emulation.md) можно запустить тестирование стратегии на исторических данных
+Аналогично вкладке [Реал\-тайм](user_interface/real_time.md) на вкладке [Эмуляция](user_interface/emulation.md) можно запустить тестирование стратегии на исторических данных.
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

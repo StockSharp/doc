@@ -1,6 +1,6 @@
-# Adapter initialization Kraken
+# Kraken adapter initialization
 
-The code below demonstrates how to initialize the [KrakenMessageAdapter](xref:StockSharp.Kraken.KrakenMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize the [KrakenMessageAdapter](xref:StockSharp.Kraken.KrakenMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

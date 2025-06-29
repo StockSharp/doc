@@ -15,4 +15,4 @@ decimal rho = bs.Rho(currentTime);
 decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium is premium of the option contract
 ```
 
-In addition the installation package includes the OptionCalculator example, in which all the “Greeks” are calculated and visualized using the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) graphical component. See [Graphic components](graphic_components.md). 
+In addition, the installation package includes the OptionCalculator example, in which all the “Greeks” are calculated and visualized using the [OptionDesk](xref:StockSharp.Xaml.OptionDesk) graphical component. See [Graphic components](graphic_components.md).

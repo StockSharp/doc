@@ -1,6 +1,6 @@
 # Инициализация адаптера CEX.IO
 
-Код ниже демонстрирует как инициализировать [CexMessageAdapter](xref:StockSharp.Cex.CexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [CexMessageAdapter](xref:StockSharp.Cex.CexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

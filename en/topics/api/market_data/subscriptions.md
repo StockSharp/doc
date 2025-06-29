@@ -29,7 +29,7 @@ _connector.CandleReceived += (sub, candle) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	// Process the candle
 	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
@@ -39,7 +39,7 @@ _connector.SubscriptionOnline += (sub) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	Console.WriteLine("Subscription switched to real-time mode");
 };
 
@@ -48,7 +48,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	Console.WriteLine($"Subscription error: {error}");
 };
 
@@ -67,7 +67,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 {
 	if (sub != depthSubscription)
 		return;
-		
+
 	// Process the order book
 	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
@@ -88,7 +88,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 {
 	if (sub != tickSubscription)
 		return;
-		
+
 	// Process the tick
 	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 };
@@ -127,9 +127,9 @@ _connector.Level1Received += (sub, level1) =>
 {
 	if (sub != level1Subscription)
 		return;
-	
+
 	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
-	
+
 	// Output Level1 field values
 	foreach (var pair in level1.Changes)
 	{

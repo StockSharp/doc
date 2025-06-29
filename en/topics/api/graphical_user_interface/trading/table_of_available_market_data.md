@@ -1,6 +1,6 @@
 # Table of available market data
 
-[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) \- a table displaying market data, in this table you can view available market data. 
+[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) \- a table displaying available market data. 
 
 ![API GUI MarketDataGrid](../../../../images/api_gui_marketdatagrid.png)
 

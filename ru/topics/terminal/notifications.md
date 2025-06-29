@@ -16,4 +16,4 @@
 
 Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](notifications/notification_panel.md)) нажать на кнопку ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](../../images/designer_alert_bell.png) непосредственно на панелях, поддерживающих уведомления.
 
-О том как настраивать уведомления описано в пункте [Настройки уведомлений](notifications/notifications_setup.md).
+О том, как настраивать уведомления, описано в пункте [Настройки уведомлений](notifications/notifications_setup.md).

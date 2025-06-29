@@ -2,7 +2,7 @@
 
 ![Designer Quoting 00](../../../../../../images/designer_quoting_00.png)
 
-The cube is used to quote option according to the specified parameters.
+The cube is used to quote options according to the specified parameters.
 
 ### Incoming sockets
 
@@ -21,7 +21,7 @@ Outgoing sockets
 
 Parameters
 
-- **Quoting** \- by what parameter the quoting will be conducted, can volatility take values (the volume quoting will be conducted by the specified limits of volatility) and the theoretical price (the volume quoting will be conducted by the specified limits of the theoretical price).
+- **Quoting** \- the parameter by which quoting will be performed. It can take the values **Volatility** (the quoting volume will follow the specified volatility limits) or **Theoretical price** (the quoting volume will follow the specified limits of the theoretical price).
 - **Direction** \- the direction of quoting can take the values of Purchase and Sell.
 - **Minimum** – the minimum value of volatility or theoretical price.
 - **Maximum** \- the maximum value of volatility or theoretical price.

@@ -1,6 +1,6 @@
 # Connection IQFeed
 
-The connection to the IQ servers is established using the IQConnect application, which can be installed both on the local computer and on the remote one. The communication between the client application and the IQConnect, as well as between IQConnect and servers is carried out by the TCP\/IP protocol. 
+The connection to the IQ servers is established using the IQConnect application, which can be installed on either the local or a remote computer. The communication between the client application and the IQConnect, as well as between IQConnect and servers is carried out by the TCP\/IP protocol. 
 
 To get the data the client application uses four connections through various ports: 
 

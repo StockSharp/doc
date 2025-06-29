@@ -1,6 +1,6 @@
 # Инициализация адаптера GDAX
 
-Код ниже демонстрирует как инициализировать [GdaxMessageAdapter](xref:StockSharp.Gdax.GdaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [GdaxMessageAdapter](xref:StockSharp.Gdax.GdaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
