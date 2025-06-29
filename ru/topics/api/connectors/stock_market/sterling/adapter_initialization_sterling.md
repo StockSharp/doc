@@ -1,6 +1,6 @@
 # Инициализация адаптера Sterling
 
-Код ниже демонстрирует как инициализировать [SterlingMessageAdapter](xref:StockSharp.Sterling.SterlingMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [SterlingMessageAdapter](xref:StockSharp.Sterling.SterlingMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

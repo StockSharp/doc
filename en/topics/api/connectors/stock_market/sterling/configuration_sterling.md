@@ -4,7 +4,7 @@ To work with the **Sterling** connector, you need to use the local **Sterling Tr
 
 ![Sterling login](../../../../../images/sterling_login.png)
 
-**Sterling Trader Pro, Login, Password** and server address are provided by the broker. To get the API access it is recommended to contact the broker. 
+**Sterling Trader Pro, Login, Password** and server address are provided by the broker. To get API access it is recommended to contact the broker.
 
 > [!TIP]
 > For the Sterling API to work correctly, you need to run Visual Studio as an administrator.
