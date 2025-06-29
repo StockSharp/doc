@@ -7,7 +7,7 @@
 - [NewsGrid.News](xref:StockSharp.Xaml.NewsGrid.News) - список новостей.
 - [NewsGrid.FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) - выбранная новость.
 - [NewsGrid.SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) - выбранные новости.
-- [NewsGrid.NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) - поставщик новостей.
+- [NewsGrid.SubscriptionProvider](xref:StockSharp.Xaml.NewsGrid.SubscriptionProvider) - поставщик новостей.
 
 Ниже показаны фрагменты кода с его использованием:
 
@@ -29,7 +29,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 	// Другие действия при подключении
 	
 	// Устанавливаем поставщика новостей
-	_newsWindow.NewsPanel.NewsProvider = _connector;
+	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
 	
 	// Подписываемся на событие получения новостей
 	_connector.NewsReceived += OnNewsReceived;

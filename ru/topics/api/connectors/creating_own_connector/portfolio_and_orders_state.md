@@ -7,7 +7,7 @@
 Для запроса состояния портфеля реализуется метод **PortfolioLookupAsync**. Этот метод обычно выполняет следующие действия:
 
 1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
-2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [IsSubscribe](xref:StockSharp.Messages.PortfolioMessage.IsSubscribe).
+2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe).
 3. В случае подписки:
   - Отправляет сообщение [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) с информацией о портфеле.
   - Запрашивает текущие балансы счетов у биржи.

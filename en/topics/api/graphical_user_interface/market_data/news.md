@@ -7,7 +7,7 @@
 - [NewsGrid.News](xref:StockSharp.Xaml.NewsGrid.News) - list of news.
 - [NewsGrid.FirstSelectedNews](xref:StockSharp.Xaml.NewsGrid.FirstSelectedNews) - selected news item.
 - [NewsGrid.SelectedNews](xref:StockSharp.Xaml.NewsGrid.SelectedNews) - selected news items.
-- [NewsGrid.NewsProvider](xref:StockSharp.Xaml.NewsGrid.NewsProvider) - news provider.
+- [NewsGrid.SubscriptionProvider](xref:StockSharp.Xaml.NewsGrid.SubscriptionProvider) - news provider.
 
 Below are code fragments demonstrating its usage:
 
@@ -29,7 +29,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 	// Other connection actions
 	
 	// Set news provider
-	_newsWindow.NewsPanel.NewsProvider = _connector;
+	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
 	
 	// Subscribe to news reception event
 	_connector.NewsReceived += OnNewsReceived;
