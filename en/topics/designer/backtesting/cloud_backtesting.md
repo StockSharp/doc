@@ -4,7 +4,7 @@ To test strategies in the cloud, it's necessary to first find all the instrument
 
 ![Designer_Backtest_Cloud_01](../../../images/designer_backtest_cloud_01.png)
 
-By entering the name of the instrument in the test field and clicking on **Search** (or **Enter**), the StockSharp server will return suitable search results. The date ranges of historical data will also be indicated to the right of the instrument names.
+When you enter the instrument name in the search field and click **Search** (or press **Enter**), the StockSharp server returns suitable search results. The date ranges of historical data will also be indicated to the right of the instrument names.
 
 This procedure needs to be done only once for each new instrument. After that, the found instruments will be saved locally on the disk, and upon restarting the **Designer**, they will already be loaded from the local storage. This step is necessary because specifying the instrument is required when launching the strategy (as well as when specifying instruments directly in the [Variable](../strategies/using_visual_designer/elements/data_sources/variable.md) block).
 
