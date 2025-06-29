@@ -4,7 +4,7 @@
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
-If the connection supports the registering a conditional order (stop\-loss, take\-profit), then in this window you can register a conditional order with advanced conditions by setting the **Advanced conditions** flag.
+If the connection supports registering a conditional order (stop\-loss, take\-profit), then in this window you can register a conditional order with advanced conditions by setting the **Advanced conditions** flag.
 
 **Basic properties**
 

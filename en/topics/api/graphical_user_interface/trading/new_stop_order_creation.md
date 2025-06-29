@@ -12,7 +12,7 @@
 - [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- message adapter. 
 - [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- the created order. 
 
-Below is the code snippet with its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
+Below is a code snippet showing its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 
 ```cs
 ...
