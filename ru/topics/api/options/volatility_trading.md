@@ -122,9 +122,9 @@
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// link quoting and hending
+        // link quoting and hedging
    	hedge.ChildStrategies.Add(quoting);
-   	// start henging
+        // start hedging
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
