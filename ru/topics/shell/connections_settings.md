@@ -1,5 +1,3 @@
 # Настройки подключения
 
-См. 
-
-[Настройки подключения](../designer/connections_settings.md)
+См. [Настройки подключения](../designer/connections_settings.md)
