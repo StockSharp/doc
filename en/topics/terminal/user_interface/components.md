@@ -1,12 +1,12 @@
 # Components
 
-During trade there is a need to fully control the process. For complete control and analysis, **Terminal** provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
+During trading, you may need to fully control the process. For complete control and analysis, **Terminal** provides graphical components that you can add by selecting them in the **Components** group of the **Ribbon**:
 
 ![Designer Components](../../../images/designer_components.png)
 
 - [Instruments](components/instruments.md) \- is a table with instruments that displays information about all selected instruments.
 - [Level 1](components/level_1.md) \- is a table with a history of changing Level 1 for the selected instruments.
-- [Buy\/Sell](components/buy_sell.md) \- is a panel group that displays the best price information for the selected instruments, as well as you can buy or sell the required volume for the selected instruments.
+- [Buy\/Sell](components/buy_sell.md) \- is a panel group that displays the best price information for the selected instruments, and it allows you to buy or sell the required volume for the selected instruments.
 - [Order book](components/order_book.md) \- is a table of limit orders for purchase and sale. 
 - [Chart](components/chart.md) \- allows you to draw candles and indicators for the selected instrument. 
 - [P&L equity](../../designer/user_interface/components/pnl_equity.md) \- is a chart of Profit\/Loss (unrealized), Profit\/Loss (realized) and commission.
