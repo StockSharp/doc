@@ -1,6 +1,6 @@
 # Загрузка заявок и сделок
 
-При старте стратегии может возникнуть необходимость загрузки ранее совершённых заявок и сделок (например, когда робот был перезагружен в течении торговой сессии или сделки и заявки переносятся через ночь). Для этого нужно: 
+При старте стратегии может возникнуть необходимость загрузки ранее совершённых заявок и сделок (например, когда робот был перезагружен в течение торговой сессии или сделки и заявки переносятся через ночь). Для этого нужно: 
 
 1. Найти те заявки, которые необходимо загрузить в стратегию, и вернуть их из метода (например, загрузить идентификаторы заявок, если стратегия записывает каждый раз при регистрации через метод [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)** из файла). 
 2. Объединить полученный результат с базовым методом [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)**. 
