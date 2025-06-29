@@ -4,8 +4,8 @@ If you want to protect positions by option strategies (for example, as [Volatili
 
 ## Delta hedging
 
-1. As a demonstration of the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) work the SampleOptionQuoting example is modified (for details see [Volatility trading](volatility_trading.md)). 
-2. The [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy does not start, but instead it is passed as a child, for the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) strategy. 
+1. As a demonstration of how the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) works, the SampleOptionQuoting example is modified (for details see [Volatility trading](volatility_trading.md)).
+2. The [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) strategy does not start, but instead it is passed as a child strategy to the [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy).
 
    ```cs
    // create delta hedge strategy
@@ -25,9 +25,9 @@ If you want to protect positions by option strategies (for example, as [Volatili
    	Portfolio = Portfolio.SelectedPortfolio,
    	Connector = Connector,
    };
-   // link quoting and hending
+   // link quoting and hedging
    hedge.ChildStrategies.Add(quoting);
-   // start henging
+   // start hedging
    hedge.Start();
    ```
 
