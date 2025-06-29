@@ -2,7 +2,7 @@
 
 ![Designer Variable 00](../../../../../../images/designer_variable_00.png)
 
-The cube is used to store values, pass the previously stored value further along the chain of elements.
+The cube is used to store values and pass the previously stored value further along the chain of elements.
 
 ### Incoming sockets
 
