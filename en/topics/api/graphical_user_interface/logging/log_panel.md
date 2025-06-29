@@ -1,6 +1,6 @@
 # Log panel
 
-[LogControl](xref:StockSharp.Xaml.LogControl) \- the table to display the log messages. The toolbar buttons let to filter messages with different logging levels.
+[LogControl](xref:StockSharp.Xaml.LogControl) \- the table to display the log messages. The toolbar buttons let you filter messages with different logging levels.
 
 ## LogControl
 
