@@ -1,6 +1,6 @@
 # Инициализация адаптера Gopax
 
-Код ниже демонстрирует как инициализировать [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

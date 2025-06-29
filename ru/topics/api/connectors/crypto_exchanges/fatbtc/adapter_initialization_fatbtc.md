@@ -1,6 +1,6 @@
 # Инициализация адаптера FatBTC
 
-Код ниже демонстрирует как инициализировать [FatBtcMessageAdapter](xref:StockSharp.FatBTC.FatBtcMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [FatBtcMessageAdapter](xref:StockSharp.FatBTC.FatBtcMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

@@ -1,6 +1,6 @@
 # Инициализация адаптера HitBTC
 
-Код ниже демонстрирует как инициализировать [HitBtcMessageAdapter](xref:StockSharp.HitBtc.HitBtcMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [HitBtcMessageAdapter](xref:StockSharp.HitBtc.HitBtcMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
