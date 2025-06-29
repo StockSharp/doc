@@ -1,10 +1,10 @@
-# Install  and remove apps
+# Install and remove apps
 
 The [Installer](../installer.md) program allows you to select the application type to find the product you need.
 
 ![choose installer](../../images/choose_installer.png)
 
-To install the required application you need:
+To install the required application, you need:
 
 1. Select an application, click **Install**, agree to the license agreement and click **Continue**.![download installer](../../images/download_installer.png)
 2. After that, you need to select the installation path. 

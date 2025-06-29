@@ -1,6 +1,6 @@
 # Инициализация адаптера Yahoo
 
-Код ниже демонстрирует как инициализировать [YahooMessageAdapter](xref:StockSharp.Yahoo.YahooMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [YahooMessageAdapter](xref:StockSharp.Yahoo.YahooMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 var messageAdapter = new YahooMessageAdapter(Connector.TransactionIdGenerator);

@@ -5,7 +5,7 @@
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 
 > [!CAUTION]
-> Connector support only market\-data feed, transaction are not supported. 
+> Connector supports only market-data feed, transactions are not supported. 
 
 ## Recommended content
 

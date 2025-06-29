@@ -2,7 +2,7 @@
 
 Настройки подключений в программах [Designer](../../designer.md), [Terminal](../../terminal.md), [Hydra](../../hydra.md). 
 
-Подробно настройки подключений по средством различных коннекторов можно узнать [здесь](../../api/connectors/graphical_configuration.md)
+Подробно настройки подключений посредством различных коннекторов можно узнать [здесь](../../api/connectors/graphical_configuration.md)
 
 - [Подключение к Финам](sources_samples/finam.md)
 - [Подключение к Oanda](sources_samples/oanda.md)

@@ -19,7 +19,7 @@ ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 ...
 ```
 
-Next, the securities necessary for index calculating should be passed to [IndexEditor](xref:StockSharp.Xaml.IndexEditor):
+Next, the securities necessary for index calculation should be passed to [IndexEditor](xref:StockSharp.Xaml.IndexEditor):
 
 ```cs
 ...

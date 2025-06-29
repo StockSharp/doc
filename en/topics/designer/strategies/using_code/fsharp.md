@@ -16,7 +16,7 @@ To create a strategy from F# code, you need to select the second tab. You can al
 
 After pressing **OK**, a new strategy will appear in the **Strategies** folder of the **Scheme** panel, similarly to when creating a strategy from [diagrams](../using_visual_designer.md). And similar actions for deleting or renaming the strategy.
 
-But instead of a diagram, F# code editor will be displayed:
+But instead of a diagram, an F# code editor will be displayed:
 
 ![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_fsharp_create_strategy_01.png)
 

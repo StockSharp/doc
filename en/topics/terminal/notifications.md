@@ -4,7 +4,7 @@ Notifications are a system for alerting a user about a pre\-specified event that
 
 Notifications can be specified for a wide range of trading events for the following objects: portfolio, position, Level 1, news. For example, exceeding the weighted average position price of a certain value or the appearance of news with a specific title.
 
-Notifications can be of the following form:
+Notifications can be of the following forms:
 
 - **Window** \- a small pop\-up window with a message will appear in the corner of the screen.
 - **Music** \- the music will be played.

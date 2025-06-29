@@ -61,7 +61,7 @@ The task exports exchange data into various formats: Excel, xml, sql, bin, Json 
 Let's consider an example of automatic export:
 
 1. Select security.
-2. Set up the market data that needs to be exported..![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
+2. Set up the market data that needs to be exported.![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
 3. Set the export period. If the download of market data in real time is configured, then you can omit the end date of period. In this case, the data will be exported in real time, according to the work interval (data update). ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
 4. Setting up directories. Operation interval. Data type. Data format.
 5. We start exporting.![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)

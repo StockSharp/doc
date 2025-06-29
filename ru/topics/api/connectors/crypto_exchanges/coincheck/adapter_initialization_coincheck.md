@@ -1,6 +1,6 @@
 # Инициализация адаптера Coincheck
 
-Код ниже демонстрирует как инициализировать [CoincheckMessageAdapter](xref:StockSharp.Coincheck.CoincheckMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [CoincheckMessageAdapter](xref:StockSharp.Coincheck.CoincheckMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

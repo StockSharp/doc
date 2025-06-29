@@ -14,7 +14,7 @@ To work correctly with `Interactive Brokers` you should preset [TWS](https://int
 
    ![ib settings](../../../../images/ib_settings.png)
 2. Turn on "Enable ActiveX and Socket Clients" mode.
-3. Also it is recommended to add the address of the computer that will run the algorithm (the local address \- 127.0.0.1). It allows not confirming the terminal connection permission each time you start the algorithm.
+3. Also it is recommended to add the address of the computer that will run the algorithm (the local address \- 127.0.0.1). This eliminates the need to confirm the terminal connection permission each time you start the algorithm.
 
 ## Recommended content
 

@@ -1,6 +1,6 @@
 # Панель DLL
 
-Панель DLL показывать мета-информацию .NET сборки:
+Панель DLL показывает мета-информацию .NET сборки:
 
 ![Designer_Panel_DLL](../../../../images/designer_panel_dll_00.png)
 

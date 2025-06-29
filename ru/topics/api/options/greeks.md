@@ -15,4 +15,4 @@ decimal rho = bs.Rho(currentTime);
 decimal iv = bs.ImpliedVolatility(currentTime, premium);  // где premium - премия по опциону
 ```
 
-Кроме того в дистрибутив входит пример OptionCalculator, в котором рассчитываются и визуализируются все "греки" при помощи графического компонента [OptionDesk](xref:StockSharp.Xaml.OptionDesk). См. [Графические компоненты для опционов](graphic_components.md). 
+Кроме того, в дистрибутив входит пример OptionCalculator, в котором рассчитываются и визуализируются все "греки" при помощи графического компонента [OptionDesk](xref:StockSharp.Xaml.OptionDesk). См. [Графические компоненты для опционов](graphic_components.md).

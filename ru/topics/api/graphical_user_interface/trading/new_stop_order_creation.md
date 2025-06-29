@@ -1,7 +1,7 @@
 # Ввод стоп\-заявки
 
 > [!TIP]
-> Данный контролл устарел, вместо него следует использовать [OrderWindow](xref:StockSharp.Xaml.OrderWindow). Как описано в пункте [Ввод новой заявки](new_order_creation.md).
+> Данный контрол устарел, вместо него следует использовать [OrderWindow](xref:StockSharp.Xaml.OrderWindow). Как описано в пункте [Ввод новой заявки](new_order_creation.md).
 
 [OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) \- окно для создания условной заявки. 
 

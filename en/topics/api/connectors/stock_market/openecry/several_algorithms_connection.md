@@ -2,7 +2,7 @@
 
 Depending on the particular user\/application the OEC server may not support simultaneous connection of multiple applications. In this case, other connections can be interrupted. For circumvention of these limitations this [OpenECryTrader](xref:StockSharp.OpenECry.OpenECryTrader) implementation supports simultaneous operation of multiple applications through a single connection to the OEC server – [OECRemoting](https://gainfutures.com/gainfuturesapi).
 
-The following modes of [OpenECryRemoting](xref:StockSharp.OpenECry.OpenECryRemoting) supported:
+The following modes of [OpenECryRemoting](xref:StockSharp.OpenECry.OpenECryRemoting) are supported:
 
 - [None](xref:StockSharp.OpenECry.OpenECryRemoting.None) \- [OpenECryRemoting](xref:StockSharp.OpenECry.OpenECryRemoting) disconnected. The application creates its own connection to the OEC server. The application can not serve as the [Primary](xref:StockSharp.OpenECry.OpenECryRemoting.Primary) for other applications.
 - [Primary](xref:StockSharp.OpenECry.OpenECryRemoting.Primary) – the application creates its own connection to the OEC server.

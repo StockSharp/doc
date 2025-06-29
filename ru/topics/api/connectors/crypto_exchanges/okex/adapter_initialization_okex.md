@@ -1,6 +1,6 @@
 # Инициализация адаптера OKEx
 
-Код ниже демонстрирует как инициализировать [OkexMessageAdapter](xref:StockSharp.Okex.OkexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [OkexMessageAdapter](xref:StockSharp.Okex.OkexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

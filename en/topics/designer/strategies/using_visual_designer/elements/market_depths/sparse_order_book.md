@@ -4,11 +4,11 @@
 
 ![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
-The cube is used to obtain a sparse order book by the specified one.
+The cube is used to obtain a sparse order book for the specified instrument.
 
 ### Incoming sockets
 
-- Order book \- the order book that needs to be sparsed.
+- Order book \- the order book that needs to be thinned.
 
 ### Outgoing sockets
 

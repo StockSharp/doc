@@ -33,7 +33,7 @@ connector.Connect();
 ```cs
 // Создаем подписку на 5-минутные свечи для выбранного инструмента
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
 {
 	MarketData =
@@ -58,10 +58,10 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Проверяем, что свеча относится к нашей подписке
 	if (subscription != _subscription)
 		return;
-		
+
 	// Обрабатываем полученную свечу
 	Console.WriteLine($"Получена свеча: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
-	
+
 	// Для отображения на графике можно использовать:
 	// Chart.Draw(_candleElement, candle);
 }
@@ -87,7 +87,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Проверяем, что свеча относится к нашей подписке
 	if (subscription != _subscription)
 		return;
-		
+
 	// Если нужно отображать только завершенные свечи
 	if (candle.State == CandleStates.Finished)
 	{

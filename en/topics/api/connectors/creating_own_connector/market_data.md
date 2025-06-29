@@ -1,6 +1,6 @@
 # Market Data
 
-When creating your own adapter for working with an exchange, you need to implement methods for subscribing to various types of market data. These methods are called when a [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) message is received and provide receiving and processing data from the exchange.
+When creating your own adapter for working with an exchange, you need to implement methods for subscribing to various types of market data. These methods are called when a [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) message is received and provide **for** receiving and processing data from the exchange.
 
 Schematically, the algorithm for processing a subscription or unsubscription request looks like this:
 

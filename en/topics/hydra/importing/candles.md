@@ -6,10 +6,10 @@ To import candles, select **Import \=\> Candles** item from the main application
 
 ## Candle import process
 
-1. **Common.**.
+1. **Common.**
    - **Data type** \- type of imported data.
    - **Filename** \- full path to the CSV file.
-   - **Data directory** \- folder where the final [S\#](../../api.md) files will be saved .
+   - **Data directory** \- folder where the final [S\#](../../api.md) files will be saved.
    - **File mask** \- file mask that is used when scanning the directory. For example, candle \_\*.csv.
    - **Column separator** \- column separator. Tabulation is denoted by TAB.
    - **Indent from the beginning** \- number of lines from the beginning of file to be skipped (if they contain meta information).
@@ -48,4 +48,4 @@ To import candles, select **Import \=\> Candles** item from the main application
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence.
 3. To preview the data, click the **Preview** button.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
-4. Click the **Import** button..
+4. Click the **Import** button.

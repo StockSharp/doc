@@ -1,6 +1,6 @@
 # Инициализация адаптера cTrader
 
-Код ниже демонстрирует как инициализировать [cTraderMessageAdapter](xref:StockSharp.cTrader.cTraderMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [cTraderMessageAdapter](xref:StockSharp.cTrader.cTraderMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				

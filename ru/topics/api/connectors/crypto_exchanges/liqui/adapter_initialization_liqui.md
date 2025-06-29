@@ -1,6 +1,6 @@
 # Инициализация адаптера Liqui
 
-Код ниже демонстрирует как инициализировать [LiquiMessageAdapter](xref:StockSharp.Liqui.LiquiMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [LiquiMessageAdapter](xref:StockSharp.Liqui.LiquiMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				

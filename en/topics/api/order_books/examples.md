@@ -67,7 +67,7 @@ An algorithm for searching for significant volumes in the order book helps ident
 Algorithm:
 
 1. Determine a volume threshold that will be considered significant.
-2. Iterate through the orders in the [Bids](xref:StockSharp.Messages.IOrderBookMessage.Bids) and [Asks](xref:StockSharp.Messages.IOrderBookMessage.Asks) list, comparing the volume of each order against the threshold value.
+2. Iterate through the orders in the [Bids](xref:StockSharp.Messages.IOrderBookMessage.Bids) and [Asks](xref:StockSharp.Messages.IOrderBookMessage.Asks) lists, comparing the volume of each order against the threshold value.
 3. Record the price levels where orders with volume above the threshold were found.
 
 ```cs

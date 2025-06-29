@@ -1,10 +1,10 @@
 # Непрерывный фьючерс
 
-[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) \- непрерывный инструмент (как правило, фьючерс), содержащий в себе инструменты, подверженные экспирации (окончание обращения действия).
+[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) \- непрерывный инструмент (как правило, фьючерс), содержащий в себе инструменты, подверженные экспирации (окончание срока действия).
 
 Например, два фьючерса индекса RTS \- **RIM5** и **RIU5**. При наступлении экспирации **RIM5** происходит автоматический переход на следующий инструмент \- **RIU5**.
 
-[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) можно торговать точно так же, как и [Security](xref:StockSharp.BusinessEntities.Security). До наступления экспирации для **RIM5** торговля будет вестись этим инструментом. После наступления экспирации, торговля будет вестись **RIU5**, и т.д..
+[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) можно торговать точно так же, как и [Security](xref:StockSharp.BusinessEntities.Security). До наступления экспирации для **RIM5** торговля будет вестись этим инструментом. После наступления экспирации, торговля будет вестись **RIU5**, и т.д.
 
 ## Создание ContinuousSecurity
 

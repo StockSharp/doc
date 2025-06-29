@@ -33,7 +33,7 @@ To configure:
 
 The channel you've created is now available for your strategies and trading robots:
 
-- When using [Designer](../designer.md), press on the channel list at the top panel:
+  - When using [Designer](../designer.md), click the channel list on the top panel:
 
   ![Designer Ribbon Channels](../../images/designerribbonchannels.png)
 
@@ -47,7 +47,7 @@ The channel you've created is now available for your strategies and trading robo
 
   *In the free tariff, a line mentioning the StockSharp site is added. In paid tariffs, this line is removed.*
 
-If you have several output channels in Telegram and you want to direct different strategies to different channels, you can specify specific channels for each strategy in the settings:
+If you have several output channels in Telegram and want to direct different strategies to separate channels, you can specify the channels for each strategy in the settings:
 
 ![Remote Settings in Designer](../../images/designerremotesettings.png)
 

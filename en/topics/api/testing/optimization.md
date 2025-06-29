@@ -1,6 +1,6 @@
 # Optimization
 
-To optimize the [backtesting](historical_data.md) process it is possible to use parallel computation based on multiple threads. On computers with multiple cores or processors this will reduce the overall testing time due concurrent execution of multiple operations. 
+To optimize the [backtesting](historical_data.md) process it is possible to use parallel computation based on multiple threads. On computers with multiple cores or processors this will reduce the overall testing time due to concurrent execution of multiple operations. 
 
 > [!CAUTION]
 > Using multiple threads increases the memory consumption (approximately as many times as threads created, if each thread uses its time range in the history). Therefore, the use of parallel testing without sufficient memory, will not allow a significant increase in performance, and even reduce it. 

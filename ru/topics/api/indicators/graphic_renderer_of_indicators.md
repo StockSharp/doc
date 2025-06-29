@@ -12,7 +12,7 @@ var chartIndicatorElement = new ChartIndicatorElement()
 
 Рассмотрим на примере индикатора [Fractals](xref:StockSharp.Algo.Indicators.Fractals) как создать собственный IndicatorPainter. 
 
-Все IndicatorPainter должны быть унаследованны от базового класса [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) или интерфейса [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter):
+Все IndicatorPainter должны быть унаследованы от базового класса [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) или интерфейса [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter):
 
 ```cs
 /// <summary>
@@ -26,7 +26,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 		
 ```
 
-Зададим элементы графика [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement) которые будут представлять верхний и нижний фракталы:
+Зададим элементы графика [ChartLineElement](xref:StockSharp.Xaml.Charting.ChartLineElement), которые будут представлять верхний и нижний фракталы:
 
 ```cs
 /// <summary>

@@ -15,7 +15,7 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 - **Active** \- Only active instruments.
 - **Group ID** \- Group ID.
 - **Time zone** \- Information about the time zone where the exchange is located.
-- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Heart beat** \- Server check interval for tracking the connection alive. By default equal to 1 minute.
 - **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
 
 ## Recommended content

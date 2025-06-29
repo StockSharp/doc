@@ -1,6 +1,6 @@
 # Source codes
 
-Currently, the [S\#](../api.md) core is being developed as part of the Open Source community, available as source code, and hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. 
+Currently, the [S\#](../api.md) core is being developed as part of the Open Source community, is available as source code, and is hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. 
 
 [Instructions for using GitHub](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
 
@@ -12,7 +12,7 @@ List of components available with source code:
 - History simulator (backtester).
 - Indicators (more than 70) of technical analysis.
 - Algorithms for calculating profit\-loss, slippage, delay.
-- Algorithms for building candles of any time frame, as well as candles, other than the time (tick, range, etc.).
+- Algorithms for building candles of any time frame, as well as non-time-based candles (tick, range, etc.).
 - Logging.
 - Import and export.
 

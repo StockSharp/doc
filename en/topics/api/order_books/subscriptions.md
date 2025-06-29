@@ -14,7 +14,7 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
 }
 
-// subscribing on the event
+// subscribing to the event
 connector.OrderBookReceived += OnOrderBookReceived;
 ```
 

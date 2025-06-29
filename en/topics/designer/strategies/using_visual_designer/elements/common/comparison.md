@@ -15,9 +15,9 @@ An element is used to compare two input objects.
 
 ## Parameters
 
-- **Left** – the parameter which value will be used on the left side of the comparison.
+- **Left** – the parameter whose value will be used on the left side of the comparison.
 - **Operator** – the condition by which you need to compare the passed values.
-- **Right** – the parameter which value will be used on the right side of the comparison.
+- **Right** – the parameter whose value will be used on the right side of the comparison.
 
 When you change the operator, the cube name automatically changes to the operator name.
 

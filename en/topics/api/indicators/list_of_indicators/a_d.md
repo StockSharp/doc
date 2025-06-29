@@ -13,11 +13,11 @@ A/D = AO - SMA (AO, 5)
   
 where:  
   
-MEDIAN PRICE � median price;  
-HIGH � the highest price of the bar;  
-LOW � the lowest price of the bar;  
-SMA � simple moving average;  
-AO � [Awesome Oscillator](ao.md) indicator.  
+MEDIAN PRICE — median price;  
+HIGH — the highest price of the bar;  
+LOW — the lowest price of the bar;  
+SMA — simple moving average;  
+AO — [Awesome Oscillator](ao.md) indicator.  
 
 The parameters are set as the SMA periods values.
 
