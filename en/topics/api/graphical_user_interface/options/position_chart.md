@@ -1,14 +1,14 @@
 # Position chart
 
-The graphic component [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) is the chart showing the position and the options “Greeks” relating to the underlying asset. 
+The [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) graphical component is a chart showing the position and the options “Greeks” related to the underlying asset.
 
-The following is the example SampleOptionQuoting, in which this chart is used. The source code of the example can be found in the *Samples\/Options\/SampleOptionQuoting* folder. 
+The following is the SampleOptionQuoting example, in which this chart is used. The source code of the example can be found in the *Samples/Options/SampleOptionQuoting* folder.
 
 ![option volsmile](../../../../images/option_volsmile.png)
 
 ## SampleOptionQuoting example
 
-1. In the XAML code, add the [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) element and assign it the **PosChart**.
+1. In the XAML code, add the [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) element and assign it the **PosChart** name.
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -27,7 +27,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    				
    ```
 
-2. In the C\# code, creating a connection, and subscribing to the necessary events.
+2. In the C\# code, create a connection and subscribe to the necessary events.
 
    ```cs
    ...                 
@@ -143,7 +143,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    };
    ```
 
-6. In the new position occurrence event handler we call redraw the chart.
+6. In the new position occurrence event handler, we call `RefreshChart` to redraw the chart.
 
    ```cs
    Connector.NewPosition += position => this.GuiAsync(() =>
@@ -164,7 +164,7 @@ The following is the example SampleOptionQuoting, in which this chart is used. T
    });
    ```
 
-7. The method calls the redraw of the chart:
+7. This method redraws the chart:
 
    ```cs
    private void RefreshChart()
