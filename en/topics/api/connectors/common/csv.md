@@ -2,10 +2,10 @@
 
 **CSV** \- importing data from a text format.
 
-Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+Before you start writing trading robots for the current trading platform, it is recommended to review the links in the [Connectors](../../connectors.md) section.
 
 > [!CAUTION]
-> Connector support only market\-data feed, transaction are not supported. 
+> The connector supports only market-data feeds; transactions are not supported.
 
 ## Recommended content
 
