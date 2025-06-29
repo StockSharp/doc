@@ -8,7 +8,7 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 - **Secret** \- Secret.
 - **Demo** \- Connect to demo trading instead of real trading server.
 - **Verification code** \- Verification code, received by user in browser, after confirming program's permission to work.
-- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Heart beat** \- Server check interval for tracking the connection alive. By default equal to 1 minute.
 - **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
 
 ## Recommended content

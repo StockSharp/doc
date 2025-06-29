@@ -1,6 +1,6 @@
 # Инициализация адаптера OpenECry
 
-Код ниже демонстрирует как инициализировать [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 Connector Connector = new Connector();				
