@@ -2,13 +2,13 @@
 
 ![Designer Converter 00](../../../../../../images/designer_converter_00.png)
 
-The cube is used to convert complex objects into simple data types. For example, it allows to get the value of the price step for the instrument. 
+The cube is used to convert complex objects into simple data types. For example, it allows you to get the value of the price step for the instrument.
 
 ### Incoming sockets
 
 Incoming sockets
 
-- **Any data** \- the certain type of complex objects that are received.
+- **Any data** \- a certain type of complex objects that are received.
 
 ### Outgoing sockets
 
