@@ -951,6 +951,15 @@
           href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
         - name: Adapter initialization Binance History
           href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+      - name: BingX
+        href: api/connectors/crypto_exchanges/bingx.md
+        items:
+        - name: Configuration BingX
+          href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
+        - name: Graphical configuration BingX
+          href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
+        - name: Adapter initialization BingX
+          href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
       - name: Bitalong
         href: api/connectors/crypto_exchanges/bitalong.md
         items:
@@ -1329,6 +1338,15 @@
           href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
         - name: Adapter initialization Livecoin
           href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
+      - name: MEXC
+        href: api/connectors/crypto_exchanges/mexc.md
+        items:
+        - name: Configuration MEXC
+          href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
+        - name: Graphical configuration MEXC
+          href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
+        - name: Adapter initialization MEXC
+          href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
       - name: OKCoin
         href: api/connectors/crypto_exchanges/okcoin.md
         items:
