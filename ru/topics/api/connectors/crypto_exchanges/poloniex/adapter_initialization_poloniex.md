@@ -1,6 +1,6 @@
 # Инициализация адаптера Poloniex
 
-Код ниже демонстрирует как инициализировать [PoloniexMessageAdapter](xref:StockSharp.Poloniex.PoloniexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [PoloniexMessageAdapter](xref:StockSharp.Poloniex.PoloniexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
