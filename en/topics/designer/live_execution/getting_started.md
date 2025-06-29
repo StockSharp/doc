@@ -8,7 +8,7 @@ Also, you can add a strategy to Live trade by clicking the ![Designer Live trade
 
 ![Designer Live trade 02](../../../images/designer_live_trade_02.png)
 
-The Trade folder contains the strategies, added for running in Live\-trade. At that, the running strategies are marked with the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), sign, and the stopped strategies \- with the ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) sign.
+The Trade folder contains the strategies, added for running in Live\-trade. The running strategies are marked with the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), sign, and the stopped strategies \- with the ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) sign.
 
 ## Recommended content
 
