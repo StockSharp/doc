@@ -4,7 +4,7 @@ To import the order log, select the **Import \=\> Order log** item from the main
 
 ![hydra import orderlog](../../../images/hydra_import_orderlog.png)
 
-## The import process securities.
+## Import process.
 
 1. **Import settings.**.
 
@@ -35,4 +35,4 @@ To import the order log, select the **Import \=\> Order log** item from the main
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 
 3. To preview the data, click the **Preview** button.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
-4. 5.Click the **Import** button.
+4. Click the **Import** button.
