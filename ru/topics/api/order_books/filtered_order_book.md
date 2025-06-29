@@ -27,7 +27,7 @@
     };
     ```
 
-2. **Отправка подписки:** Формируем объект [Subscription](xref:StockSharp.BusinessEntities.Subscription) и отправляем их в коннектор:
+2. **Отправка подписки:** Формируем объект [Subscription](xref:StockSharp.BusinessEntities.Subscription) и отправляем его в коннектор:
 
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
