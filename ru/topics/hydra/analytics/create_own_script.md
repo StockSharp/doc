@@ -1,12 +1,12 @@
 # Создание скрипта
 
-**Аналитика** позволяет создавать свои собственные скрипты. Для примера рассмотрим готовый скрипт **ChartDrawScript** демонстрирующего возможности построения графиков:
+**Аналитика** позволяет создавать свои собственные скрипты. Для примера рассмотрим готовый скрипт **ChartDrawScript**, демонстрирующий возможности построения графиков:
 
 ```cs
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, shows chart drawing possibilities.
+	/// The analytic script shows chart drawing capabilities.
 	/// </summary>
 	public class ChartDrawScript : IAnalyticsScript
 	{
@@ -61,7 +61,7 @@ namespace StockSharp.Algo.Analytics
 
 ### Метод `Run`
 
-Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняются фактические обработка данных и аналитические операции.
+Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняется фактическая обработка данных и аналитические операции.
 
 #### Параметры:
 
