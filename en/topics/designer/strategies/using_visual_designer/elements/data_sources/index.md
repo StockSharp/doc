@@ -8,7 +8,7 @@ The cube is used to create your own index.
 
 Outgoing sockets
 
-- **Security** \- the calculated index, represented as an **Security**.
+- **Security** \- the calculated index, represented as a **Security**.
 
 ### Parameters
 
