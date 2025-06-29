@@ -1,3 +1,3 @@
 # Transaq
 
-This connector available for MOEX only and description can found in [russian version](https://doc.stocksharp.ru/topics/api/connectors/russia/transaq.html).
+This connector is available for MOEX only, and the description can be found in [Russian version](https://doc.stocksharp.ru/topics/api/connectors/russia/transaq.html).

@@ -3,7 +3,7 @@
 Код ниже демонстрирует как инициализировать [FinamMessageAdapter](xref:StockSharp.Finam.FinamMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-var messageAdapter = new AlorHistoryMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new FinamMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
 							
