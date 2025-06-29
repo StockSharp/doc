@@ -1,6 +1,6 @@
 # Инициализация адаптера Huobi
 
-Код ниже демонстрирует как инициализировать [HuobiMessageAdapter](xref:StockSharp.Huobi.HuobiMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
+Код ниже демонстрирует, как инициализировать [HuobiMessageAdapter](xref:StockSharp.Huobi.HuobiMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
