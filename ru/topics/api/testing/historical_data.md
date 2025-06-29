@@ -6,7 +6,7 @@
 - Тиковые сделки ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Стаканы ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Свечи разных таймфреймов
-- [OderLog](xref:StockSharp.Messages.IOrderLogMessage) (лог заявок)
+- [OrderLog](xref:StockSharp.Messages.IOrderLogMessage) (лог заявок)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (лучшие цены спроса и предложения)
 - Комбинации различных типов данных
 
