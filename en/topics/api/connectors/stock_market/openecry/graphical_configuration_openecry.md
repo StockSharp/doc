@@ -10,7 +10,7 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 - **Work schedule** \- Required mode of connection to the terminal.
 - **Reconnection** \- Use «native» reconnection mechanism.
 - **Logging level** \- Use OpenECry API logging.
-- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Heart beat** \- Server check interval for tracking the connection alive. By default equal to 1 minute.
 - **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
 
 ## Recommended content
