@@ -5,8 +5,8 @@ For all [S\#](../../../../api.md) products, graphical configuration of the conne
 ![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
 
 - **Address** \- RSS feed address.
-- **Dates format** \- Dates format Required to be filled if RSS stream format is different from ddd, dd MMM yyyy HH:mm:ss zzzz.
-- **Heart beat** \- Server check interval for track the connection alive. By default equal to 1 minute.
+- **Dates format** \- Dates format. Required if the RSS stream format is different from `ddd, dd MMM yyyy HH:mm:ss zzzz`.
+- **Heart beat** \- Server check interval to track that the connection is alive. By default equal to 1 minute.
 - **Reconnection settings** \- Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
 
 ## Recommended content
