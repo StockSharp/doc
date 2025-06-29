@@ -24,18 +24,18 @@ private void OnNewsReceived(Subscription subscription, News news)
 {
 	if (subscription != newsSubscription)
 		return;
-		
+
 	// Process the received news
 	Console.WriteLine($"News: {news.Id}");
 	Console.WriteLine($"Headline: {news.Headline}");
 	Console.WriteLine($"Source: {news.Source}");
 	Console.WriteLine($"Time: {news.ServerTime}");
 	Console.WriteLine($"URL: {news.Url}");
-	
+
 	// If there is news text
 	if (!string.IsNullOrEmpty(news.Story))
 		Console.WriteLine($"Story: {news.Story}");
-	
+
 	// If the news is related to specific instruments
 	if (news.SecurityId != null)
 		Console.WriteLine($"Instrument: {news.SecurityId}");
@@ -50,11 +50,11 @@ When subscribing to news, you can specify filtering parameters to receive only t
 // Create a subscription to news with filtering
 var filteredNewsSubscription = new Subscription(DataType.News)
 {
-	MarketData = 
+	MarketData =
 	{
 		// Specify the period for which to get news
 		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
-		
+
 		// You can specify a specific news source
 		// For example, we use an RSS source
 		NewsSource = "CryptoNews"
@@ -73,7 +73,7 @@ StockSharp provides a special visual component [NewsPanel](xref:StockSharp.Xaml.
 var newsPanel = new NewsPanel();
 
 // Subscribe to the news received event and add news to the panel
-_connector.NewsReceived += (subscription, news) => 
+_connector.NewsReceived += (subscription, news) =>
 {
 	// To update UI elements
 	// you need to use the GuiAsync or GuiSync method
@@ -95,7 +95,7 @@ To get historical news for a specific period, you can use the same subscription 
 // Create a subscription to historical news
 var historicalNewsSubscription = new Subscription(DataType.News)
 {
-	MarketData = 
+	MarketData =
 	{
 		// Specify the period for which to get news
 		From = DateTime.Now.Subtract(TimeSpan.FromDays(7)),

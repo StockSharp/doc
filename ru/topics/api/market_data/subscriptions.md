@@ -29,7 +29,7 @@ _connector.CandleReceived += (sub, candle) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	// Обработка свечи
 	Console.WriteLine($"Свеча: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
@@ -39,7 +39,7 @@ _connector.SubscriptionOnline += (sub) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	Console.WriteLine("Подписка перешла в режим реального времени");
 };
 
@@ -48,7 +48,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
 	if (sub != subscription)
 		return;
-		
+
 	Console.WriteLine($"Ошибка подписки: {error}");
 };
 
@@ -67,7 +67,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 {
 	if (sub != depthSubscription)
 		return;
-		
+
 	// Обработка стакана
 	Console.WriteLine($"Стакан: {depth.SecurityId}, Время: {depth.ServerTime}");
 	Console.WriteLine($"Покупки (Bids): {depth.Bids.Count}, Продажи (Asks): {depth.Asks.Count}");
@@ -88,7 +88,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 {
 	if (sub != tickSubscription)
 		return;
-		
+
 	// Обработка тика
 	Console.WriteLine($"Тик: {tick.SecurityId}, Время: {tick.ServerTime}, Цена: {tick.Price}, Объем: {tick.Volume}");
 };
@@ -127,9 +127,9 @@ _connector.Level1Received += (sub, level1) =>
 {
 	if (sub != level1Subscription)
 		return;
-	
+
 	Console.WriteLine($"Level1: {level1.SecurityId}, Время: {level1.ServerTime}");
-	
+
 	// Вывод значений полей Level1
 	foreach (var pair in level1.Changes)
 	{

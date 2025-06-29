@@ -33,7 +33,7 @@ To receive historical candles, you need to create a subscription and specify the
 ```cs
 // Create a subscription for 5-minute candles for the selected instrument
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)), 
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
 {
 	MarketData =
@@ -58,10 +58,10 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Check that the candle belongs to our subscription
 	if (subscription != _subscription)
 		return;
-		
+
 	// Process the received candle
 	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
-	
+
 	// For display on the chart, you can use:
 	// Chart.Draw(_candleElement, candle);
 }
@@ -87,7 +87,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Check that the candle belongs to our subscription
 	if (subscription != _subscription)
 		return;
-		
+
 	// If you need to display only completed candles
 	if (candle.State == CandleStates.Finished)
 	{
