@@ -1,6 +1,6 @@
 # Drop down list
 
-[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) is the combo box for portfolio selection.
+[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) is a combo box for portfolio selection.
 
 ![Gui PortfolioComboBox](../../../../images/gui_portfoliocombobox.png)
 
