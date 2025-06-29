@@ -10,7 +10,7 @@ To obtain historical data on the instrument, you should select the necessary ins
 
 ![Designer Quick start 02](../../images/designer_quick_start_02.png)
 
-After obtaining the historical data, choose one of the demonstration strategies. Double\-click the [Schemas](user_interface/schemas.md) panel in the **Strategy** folder selects the **SMA** strategy example, after that the Sma tab appears in the workspace. After switching to the strategy, in the bar the **Emulation** tab will automatically open, which contains the main elements for strategy creation, debugging, strategy testing ([Strategies](strategies/using_visual_designer.md), [Getting started](backtesting/getting_started.md))
+After obtaining the historical data, choose one of the demonstration strategies. Double\-click the [Schemas](user_interface/schemas.md) panel in the **Strategy** folder selects the **SMA** strategy example, after that the Sma tab appears in the workspace. After switching to the strategy, in the bar, the **Emulation** tab will automatically open, which contains the main elements for strategy creation, debugging, and testing ([Strategies](strategies/using_visual_designer.md), [Getting started](backtesting/getting_started.md))
 
 ![Designer Quick start 03](../../images/designer_quick_start_03.png)
 
