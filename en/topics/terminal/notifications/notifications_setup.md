@@ -6,7 +6,7 @@ To set a notification, you have to click the ![Designer Creation tool 00](../../
 
 Notifications can be configured for changes in the following data types: Portfolio, Customer code, Broker, Depository, Server time, Trade, Data type, Cancellation, Order ID, Order ID (string), Order ID (board), Derivative, Derivative (string), Price, Volume (order), Volume (trade), Visible volume, Direction, Remainder, Order type, Status, Comment, Message to order, System order, Order expiration time, Execution condition, Order ID, Order ID (string), Price, Trade initiator, Open interest, Error, Condition, Uptrend, Commission, Delay, Slippage, ID (user), Currency, P\/L, Position, Market Maker.
 
-Notifications can be of the following form:
+Notifications can be of the following forms:
 
 - **Window** – a small pop\-up window with a message will appear in the corner of the screen.
 - **Melody** – a melody will be played.
