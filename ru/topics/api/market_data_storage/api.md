@@ -2,7 +2,7 @@
 
 ## Подготовка
 
-Для работы с историческими данными в примерах используется NuGet пакет с образцами исторических данных. Его можно установить из [NuGet Gallery](https://www.nuget.org/packages/StockSharp.Samples.HistoryData). Этот пакет предоставляет набор данных, которые можно использовать для демонстрации работы с хранилищем.
+Для работы с историческими данными в примерах используется NuGet-пакет с образцами исторических данных. Его можно установить из [NuGet Gallery](https://www.nuget.org/packages/StockSharp.Samples.HistoryData). Этот пакет предоставляет набор данных, которые можно использовать для демонстрации работы с хранилищем.
 
 Все коды доступны в [репозитории StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Samples/03_Storage).
 
@@ -16,7 +16,7 @@ var storageRegistry = new StorageRegistry();
 ```
 
 ```cs
-// Создание StorageRegistry с указанием пути к данным из NuGet пакета
+// Создание StorageRegistry с указанием пути к данным из NuGet-пакета
 var pathHistory = Paths.HistoryDataPath; // путь к данным из NuGet пакета
 var localDrive = new LocalMarketDataDrive(pathHistory);
 var storageRegistry = new StorageRegistry()
@@ -119,4 +119,4 @@ tradeStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 marketDepthStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
-Эти операции позволяют эффективно управлять историческими данными, как загруженными через [Hydra](../../hydra.md) или предоставленными в NuGet пакете, так и созданными в процессе работы вашего приложения.
+Эти операции позволяют эффективно управлять историческими данными, как загруженными через [Hydra](../../hydra.md) или предоставленными в NuGet-пакете, так и созданными в процессе работы вашего приложения.
