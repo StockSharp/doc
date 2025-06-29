@@ -6,7 +6,7 @@ Testing can be performed using various types of market data:
 - Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Order books ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Candles of different timeframes
-- [OderLog](xref:StockSharp.Messages.IOrderLogMessage)
+- [OrderLog](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (best bid and ask prices)
 - Combinations of different data types
 
