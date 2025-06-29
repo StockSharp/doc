@@ -10,13 +10,11 @@ This block is used to check if trading is currently allowed. The following condi
 
 ### Incoming Sockets
 
-Incoming Sockets
 
 - **Trigger** - the signal that determines the moment when the check should be performed.
 
 ### Outgoing Sockets
 
-Outgoing Sockets
 
 - **Flag** - a flag that determines whether the trading session is active.
 
