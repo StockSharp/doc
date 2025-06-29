@@ -2,7 +2,7 @@
 
 FAST коннектор доступен в режиме dump. В этом случае данные идут не из реального сетевого подключения, а из накопленных файлов программой [UDP Dumper](../../../../udp_dumper.md).
 
-Для того, чтобы включить dump режим, необходимо перед подключение в коннектор передать через метод [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** dump файлы:
+Для того, чтобы включить dump режим, необходимо перед подключением в коннектор передать через метод [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** dump файлы:
 
 ```cs
 // ... инициализация коннектора
