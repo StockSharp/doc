@@ -1,4 +1,4 @@
-# Паттерн 3 Black Crows and 3 White Soldiers (3 Черный Ворона и 3 Белых Солдата)
+# Паттерн 3 Black Crows and 3 White Soldiers (Три чёрные вороны и три белых солдата)
 
 ### 3 Black Crows
 
