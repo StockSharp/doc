@@ -1,6 +1,6 @@
 # Quick start
 
-[Shell](../shell.md) \- \- is focused on programming in [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
+[Shell](../shell.md) - is focused on programming in [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
 
 When you start the [Shell](../shell.md) project, the Solution Explorer displays the Shell project:
 
