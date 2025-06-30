@@ -10,7 +10,7 @@ Local storage \- when all data is stored on local computer. To set the local sto
 
 Remote storage may be located on a remote computer. To set the remote storage you have to set the remote storage address, login and password, if necessary. 
 
-You can reproduce the remote storage on a local machine, using the [Hydra](../../hydra.md) software (code name Hydra), designed for automatic loading of market data (instruments, candles, tick trades and order books etc.) from various sources and for storing them in the local storage. To do that, switch [Hydra](../../hydra.md) into the server mode, such functionality is available in the [extended license](https://stocksharp.com/pricing/).
+You can reproduce the remote storage on a local machine, using the [Hydra](../../hydra.md) software (code name Hydra), designed for automatic loading of market data (instruments, candles, tick trades and order books etc.) from various sources and for storing them in the local storage. To do that, switch [Hydra](../../hydra.md) into the server mode.
 
 ![Designer Creating a repository of historical data 04](../../../images/designer_creating_repository_of_historical_data_04.png)
 
