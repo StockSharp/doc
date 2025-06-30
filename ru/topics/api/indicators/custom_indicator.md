@@ -232,7 +232,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 }
 ```
 
-Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются.
+Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. Дополнительно каждый составной индикатор обязан реализовать собственный класс значения, производный от `ComplexIndicatorValue`. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются.
 
 ## Пример комплексного индикатора с реализацией SaveLoad
 
@@ -248,7 +248,8 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
 [IndicatorIn(typeof(CandleIndicatorValue))]
 [Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
-public class PercentageVolumeOscillator : BaseComplexIndicator
+[IndicatorOut(typeof(PercentageVolumeOscillatorValue))]
+public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeOscillatorValue>
 {
 	private readonly ExponentialMovingAverage _shortEma;
 	private readonly ExponentialMovingAverage _longEma;
@@ -313,11 +314,11 @@ public class PercentageVolumeOscillator : BaseComplexIndicator
 	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
 
 	/// <inheritdoc />
-	protected override IIndicatorValue OnProcess(IIndicatorValue input)
-	{
-		var volume = input.ToCandle().TotalVolume;
+		protected override IIndicatorValue OnProcess(IIndicatorValue input)
+		{
+				var volume = input.ToCandle().TotalVolume;
 
-		var result = new ComplexIndicatorValue(this, input.Time);
+				var result = new PercentageVolumeOscillatorValue(this, input.Time);
 
 		var shortValue = _shortEma.Process(input, volume);
 		var longValue = _longEma.Process(input, volume);
@@ -354,12 +355,35 @@ public class PercentageVolumeOscillator : BaseComplexIndicator
 	}
 
 	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+		public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+
+		/// <inheritdoc />
+protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
+				=> new(this, time);
+}
+```
+
+```cs
+/// <summary>
+/// Значение индикатора <see cref="PercentageVolumeOscillator"/>.
+/// </summary>
+public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
+{
+		/// <summary>
+		/// Создать <see cref="PercentageVolumeOscillatorValue"/>.
+		/// </summary>
+		/// <param name="indicator">Индикатор.</param>
+		/// <param name="time">Время значения.</param>
+		public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
+				: base(indicator, time)
+		{
+		}
 }
 ```
 
 Этот пример демонстрирует:
 1. Реализацию `NumValuesToInitialize` для комплексного индикатора
 2. Указание типа измерения через свойство `Measure`
-3. Корректные реализации методов `Save` и `Load` для сохранения и загрузки параметров
-4. Переопределение `ToString()` для удобного отображения конфигурации индикатора
+3. Реализацию собственного класса значения для комплексного индикатора
+4. Корректные реализации методов `Save` и `Load` для сохранения и загрузки параметров
+5. Переопределение `ToString()` для удобного отображения конфигурации индикатора

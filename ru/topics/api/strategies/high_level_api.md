@@ -86,44 +86,42 @@ var bollinger = new BollingerBands
 
 // Связываем комплексный индикатор с подпиской
 subscription
-	.Bind(bollinger, OnProcessBollinger)
-	.Start();
+				.BindEx(bollinger, OnProcessBollinger)
+				.Start();
 
-// Обработчик получает значения верхней и нижней полосы Боллинджера
-private void OnProcessBollinger(ICandleMessage candle, decimal middleBand, decimal upperBand)
+// Обработчик получает экземпляр BollingerBandsValue
+private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
-	// Используем значения полос Боллинджера
-	// middleBand - средняя полоса
-	// upperBand - верхняя полоса
+		var typed = (BollingerBandsValue)value;
+
+		// Используем значения полос Боллинджера
+		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+				SellMarket(Volume + Math.Abs(Position));
+		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+				BuyMarket(Volume + Math.Abs(Position));
 }
 ```
 
-Также доступны перегрузки для комплексных индикаторов с тремя значениями:
+Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для прямого доступа к значению комплексного индикатора:
 
 ```cs
-subscription.Bind(bollinger, (candle, middle, upper, lower) => 
+subscription.BindEx(bollinger, (candle, indicatorValue) =>
 {
-	// Обработка данных с доступом ко всем трем полосам
+		var typed = (BollingerBandsValue)indicatorValue;
+
+		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+				SellMarket(Volume + Math.Abs(Position));
+		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+				BuyMarket(Volume + Math.Abs(Position));
 });
 ```
 
-Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue[]})) с массивом значений:
-
-```cs
-subscription.BindEx(complexIndicator, (candle, values) => 
-{
-	// values содержит массив всех значений индикатора
-	// в порядке их добавления в индикатор
-});
-```
-
-Метод [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,System.Decimal,System.Decimal})) для комплексных индикаторов автоматически:
+Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для комплексных индикаторов автоматически:
 
 1. Обрабатывает входные данные через комплексный индикатор
-2. Распаковывает значения внутренних индикаторов
-3. Передает эти значения в указанный обработчик
+2. Передает полученное значение `IIndicatorValue` в указанный обработчик
 
-Это позволяет работать с комплексными индикаторами более естественным образом, получая доступ к их составным частям напрямую.
+Приведите значение к собственному типу **значения индикатора**, чтобы работать с его отдельными полями.
 
 ### Метод `Bind` устанавливает соединение между данными из подписки и индикаторами. При получении новой свечи:
 
