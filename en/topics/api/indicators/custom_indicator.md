@@ -41,6 +41,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 }
 ```
 
+
 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) inherits from the [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1), from which all indicators with a period length parameter must inherit.
 
 ## Important Indicator Properties and Methods
@@ -238,7 +239,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 }
 ```
 
-Such indicators should inherit from the [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) class and pass the indicator's components to [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators).
+Such indicators should inherit from the [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) class and pass the indicator's components to [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators). In addition, each complex indicator must declare its own value type derived from `ComplexIndicatorValue`.
 
 ## Example of a Complex Indicator with SaveLoad Implementation
 
@@ -254,7 +255,8 @@ Below is an example of implementing the Percentage Volume Oscillator (PVO), whic
 	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
 [IndicatorIn(typeof(CandleIndicatorValue))]
 [Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
-public class PercentageVolumeOscillator : BaseComplexIndicator
+[IndicatorOut(typeof(PercentageVolumeOscillatorValue))]
+public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeOscillatorValue>
 {
 	private readonly ExponentialMovingAverage _shortEma;
 	private readonly ExponentialMovingAverage _longEma;
@@ -323,7 +325,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator
 	{
 		var volume = input.ToCandle().TotalVolume;
 
-		var result = new ComplexIndicatorValue(this, input.Time);
+				var result = new PercentageVolumeOscillatorValue(this, input.Time);
 
 		var shortValue = _shortEma.Process(input, volume);
 		var longValue = _longEma.Process(input, volume);
@@ -359,13 +361,36 @@ public class PercentageVolumeOscillator : BaseComplexIndicator
 		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 	}
 
-	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+		/// <inheritdoc />
+		public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+
+		/// <inheritdoc />
+		protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
+				=> new(this, time);
+}
+```
+
+```cs
+/// <summary>
+/// <see cref="PercentageVolumeOscillator"/> indicator value.
+/// </summary>
+public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
+{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
+		/// </summary>
+		/// <param name="indicator">Indicator.</param>
+		/// <param name="time">Value time.</param>
+		public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
+				: base(indicator, time)
+		{
+		}
 }
 ```
 
 This example demonstrates:
 1. Implementation of `NumValuesToInitialize` for a complex indicator
 2. Specifying measurement type through the `Measure` property
-3. Correct implementations of `Save` and `Load` methods for saving and loading parameters
-4. Overriding `ToString()` for convenient display of indicator configuration
+3. Implementation of a dedicated value type for the complex indicator
+4. Correct implementations of `Save` and `Load` methods for saving and loading parameters
+5. Overriding `ToString()` for convenient display of indicator configuration
