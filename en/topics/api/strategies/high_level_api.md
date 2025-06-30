@@ -86,37 +86,37 @@ var bollinger = new BollingerBands
 
 // Bind the complex indicator to a subscription
 subscription
-				.BindEx(bollinger, OnProcessBollinger)
-				.Start();
+	.BindEx(bollinger, OnProcessBollinger)
+	.Start();
 
 // Handler receives the BollingerBandsValue instance
 private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
-		var typed = (BollingerBandsValue)value;
+	var typed = (BollingerBandsValue)value;
 
-		// Use Bollinger band values
-		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
-				SellMarket(Volume + Math.Abs(Position));
-		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
-				BuyMarket(Volume + Math.Abs(Position));
+	// Use Bollinger band values
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+		SellMarket(Volume + Math.Abs(Position));
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+		BuyMarket(Volume + Math.Abs(Position));
 }
 ```
 
-For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) with direct access to the complex indicator value:
+For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) with direct access to the complex indicator value:
 
 ```cs
 subscription.BindEx(bollinger, (candle, indicatorValue) =>
 {
-		var typed = (BollingerBandsValue)indicatorValue;
+	var typed = (BollingerBandsValue)indicatorValue;
 
-		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
-				SellMarket(Volume + Math.Abs(Position));
-		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
-				BuyMarket(Volume + Math.Abs(Position));
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+		SellMarket(Volume + Math.Abs(Position));
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+		BuyMarket(Volume + Math.Abs(Position));
 });
 ```
 
-The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method for complex indicators automatically:
+The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method for complex indicators automatically:
 
 1. Processes input data through the complex indicator
 2. Passes the resulting `IIndicatorValue` to the specified handler

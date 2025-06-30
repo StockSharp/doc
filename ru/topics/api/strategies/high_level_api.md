@@ -86,37 +86,37 @@ var bollinger = new BollingerBands
 
 // Связываем комплексный индикатор с подпиской
 subscription
-				.BindEx(bollinger, OnProcessBollinger)
-				.Start();
+	.BindEx(bollinger, OnProcessBollinger)
+	.Start();
 
 // Обработчик получает экземпляр BollingerBandsValue
 private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
-		var typed = (BollingerBandsValue)value;
+	var typed = (BollingerBandsValue)value;
 
-		// Используем значения полос Боллинджера
-		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
-				SellMarket(Volume + Math.Abs(Position));
-		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
-				BuyMarket(Volume + Math.Abs(Position));
+	// Используем значения полос Боллинджера
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+		SellMarket(Volume + Math.Abs(Position));
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+		BuyMarket(Volume + Math.Abs(Position));
 }
 ```
 
-Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для прямого доступа к значению комплексного индикатора:
+Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для прямого доступа к значению комплексного индикатора:
 
 ```cs
 subscription.BindEx(bollinger, (candle, indicatorValue) =>
 {
-		var typed = (BollingerBandsValue)indicatorValue;
+	var typed = (BollingerBandsValue)indicatorValue;
 
-		if (candle.ClosePrice >= typed.UpBand && Position >= 0)
-				SellMarket(Volume + Math.Abs(Position));
-		else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
-				BuyMarket(Volume + Math.Abs(Position));
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
+		SellMarket(Volume + Math.Abs(Position));
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
+		BuyMarket(Volume + Math.Abs(Position));
 });
 ```
 
-Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IComplexIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для комплексных индикаторов автоматически:
+Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для комплексных индикаторов автоматически:
 
 1. Обрабатывает входные данные через комплексный индикатор
 2. Передает полученное значение `IIndicatorValue` в указанный обработчик

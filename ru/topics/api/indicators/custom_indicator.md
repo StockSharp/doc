@@ -314,11 +314,11 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
 
 	/// <inheritdoc />
-		protected override IIndicatorValue OnProcess(IIndicatorValue input)
-		{
-				var volume = input.ToCandle().TotalVolume;
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var volume = input.ToCandle().TotalVolume;
 
-				var result = new PercentageVolumeOscillatorValue(this, input.Time);
+		var result = new PercentageVolumeOscillatorValue(this, input.Time);
 
 		var shortValue = _shortEma.Process(input, volume);
 		var longValue = _longEma.Process(input, volume);
@@ -355,11 +355,11 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <inheritdoc />
-		public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 
-		/// <inheritdoc />
-protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
-				=> new(this, time);
+	/// <inheritdoc />
+	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
+		=> new(this, time);
 }
 ```
 
@@ -369,15 +369,15 @@ protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset ti
 /// </summary>
 public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
 {
-		/// <summary>
-		/// Создать <see cref="PercentageVolumeOscillatorValue"/>.
-		/// </summary>
-		/// <param name="indicator">Индикатор.</param>
-		/// <param name="time">Время значения.</param>
-		public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
-				: base(indicator, time)
-		{
-		}
+	/// <summary>
+	/// Создать <see cref="PercentageVolumeOscillatorValue"/>.
+	/// </summary>
+	/// <param name="indicator">Индикатор.</param>
+	/// <param name="time">Время значения.</param>
+	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
+			: base(indicator, time)
+	{
+	}
 }
 ```
 

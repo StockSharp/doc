@@ -325,7 +325,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		var volume = input.ToCandle().TotalVolume;
 
-				var result = new PercentageVolumeOscillatorValue(this, input.Time);
+		var result = new PercentageVolumeOscillatorValue(this, input.Time);
 
 		var shortValue = _shortEma.Process(input, volume);
 		var longValue = _longEma.Process(input, volume);
@@ -361,12 +361,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 	}
 
-		/// <inheritdoc />
-		public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+	/// <inheritdoc />
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 
-		/// <inheritdoc />
-		protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
-				=> new(this, time);
+	/// <inheritdoc />
+	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
+		=> new(this, time);
 }
 ```
 
@@ -376,15 +376,15 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 /// </summary>
 public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
 {
-		/// <summary>
-		/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
-		/// </summary>
-		/// <param name="indicator">Indicator.</param>
-		/// <param name="time">Value time.</param>
-		public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
-				: base(indicator, time)
-		{
-		}
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
+	/// </summary>
+	/// <param name="indicator">Indicator.</param>
+	/// <param name="time">Value time.</param>
+	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
+			: base(indicator, time)
+	{
+	}
 }
 ```
 
