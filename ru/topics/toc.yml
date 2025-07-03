@@ -1824,6 +1824,8 @@
         href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
       - name: Fractals
         href: api/indicators/list_of_indicators/fractals.md
+      - name: Fractal Dimension Index (FDI)
+        href: api/indicators/list_of_indicators/fractal_dimension.md
       - name: Gator Oscillator (Gator)
         href: api/indicators/list_of_indicators/gator_oscillator.md
       - name: Gopalakrishnan Range Index (GAPO)

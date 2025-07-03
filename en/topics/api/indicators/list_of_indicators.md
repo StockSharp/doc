@@ -50,6 +50,7 @@
 - [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator, compares actual prices to forecasted ones
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average, adapts to market volatility
 - [Fractals](list_of_indicators/fractals.md) - Fractals, identifies potential reversal points on price charts
+- [FDI](list_of_indicators/fractal_dimension.md) - Fractal Dimension Index, measures market roughness
 - [Gator](list_of_indicators/gator_oscillator.md) - Gator oscillator, measures convergence and divergence of moving averages
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Gopalakrishnan Range Index, measures the variability of price movements
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Guppy Multiple Moving Average, uses multiple moving averages to identify trends

@@ -50,6 +50,7 @@
 - [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator, сравнивает фактические цены с прогнозируемыми
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average, адаптируется к волатильности рынка
 - [Fractals](list_of_indicators/fractals.md) - Fractals, определяет потенциальные точки разворота на ценовых графиках
+- [FDI](list_of_indicators/fractal_dimension.md) - Fractal Dimension Index, измеряет хаотичность рынка
 - [Gator](list_of_indicators/gator_oscillator.md) - Gator oscillator, измеряет схождение и расхождение скользящих средних
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Gopalakrishnan Range Index, измеряет вариативность движения цены
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Guppy Multiple Moving Average, использует несколько скользящих средних для определения трендов
