@@ -129,10 +129,10 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 2. Результаты обработки передаются в указанный обработчик (в примере это метод `OnProcess`)
 3. Весь код синхронизации и управления состоянием скрыт от разработчика
 
-Обработчик получает уже готовые значения в виде простых типов `decimal`:
+Обработчик получает уже готовые значения в виде простых типов `decimal?` (null означает, что индикатор вернул пустое значение):
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 {
 	// Работаем напрямую с готовыми значениями индикаторов
 	var isShortLessThenLong = shortValue < longValue;
@@ -319,7 +319,7 @@ StartProtection(
 
 4. **Уменьшение вероятности ошибок** - многие типичные ошибки исключаются благодаря автоматизации рутинных задач
 
-5. **Работа с чистыми типами данных** - вместо работы со сложными объектами, можно оперировать простыми типами данных (например, `decimal`)
+5. **Работа с чистыми типами данных** - вместо работы со сложными объектами, можно оперировать простыми типами данных (например, `decimal?`)
 
 ## Пример стратегии с использованием высокоуровневого API
 
@@ -402,7 +402,7 @@ public class SmaStrategy : Strategy
 		StartProtection(TakeValue, StopValue);
 	}
 
-	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+	private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 	{
 		// Обрабатываем только завершенные свечи
 		if (candle.State != CandleStates.Finished)

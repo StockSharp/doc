@@ -129,10 +129,10 @@ Cast the value to the indicator's dedicated **value type** to work with its indi
 2. Processing results are passed to the specified handler (in the example, the `OnProcess` method)
 3. All synchronization and state management code is hidden from the developer
 
-The handler receives ready-to-use values as simple `decimal` types:
+The handler receives ready-to-use values as simple `decimal?` types (null means the indicator returned an empty value):
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 {
 	// Work directly with ready-made indicator values
 	var isShortLessThenLong = shortValue < longValue;
@@ -319,7 +319,7 @@ The high-level API in StockSharp strategies provides the following advantages:
 
 4. **Reduced Error Probability** - many typical errors are eliminated through automation of routine tasks
 
-5. **Working with Clean Data Types** - instead of working with complex objects, you can operate with simple data types (e.g., `decimal`)
+5. **Working with Clean Data Types** - instead of working with complex objects, you can operate with simple data types (e.g., `decimal?`)
 
 ## Example Strategy Using High-Level API
 
@@ -402,7 +402,7 @@ public class SmaStrategy : Strategy
 		StartProtection(TakeValue, StopValue);
 	}
 
-	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+	private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 	{
 		// Process only finished candles
 		if (candle.State != CandleStates.Finished)

@@ -70,7 +70,7 @@ protected override void OnStarted(DateTimeOffset time)
 Метод `ProcessCandle` вызывается для каждой завершенной свечи и реализует торговую логику:
 
 ```cs
-private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
+private void ProcessCandle(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 {
 	// Пропускаем незавершенные свечи
 	if (candle.State != CandleStates.Finished)
