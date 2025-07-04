@@ -94,6 +94,7 @@
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, identifies trend reversals using two moving averages
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, uses multiple moving averages to visualize trends
 - [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index, tracks price movements on days with decreasing volume
+- [PVI](list_of_indicators/positive_volume_index.md) - Positive Volume Index, tracks price movements on days with increasing volume
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, a trailing stop indicator
 - [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV), links volume to price changes
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, a smoothed version of OBV

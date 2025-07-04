@@ -1912,6 +1912,8 @@
         href: api/indicators/list_of_indicators/moving_average_ribbon.md
       - name: Negative Volume Index (NVI)
         href: api/indicators/list_of_indicators/negative_volume_index.md
+      - name: Positive Volume Index (PVI)
+        href: api/indicators/list_of_indicators/positive_volume_index.md
       - name: Nick Rypock Trailing Reverse (NRTR)
         href: api/indicators/list_of_indicators/nrtr.md
       - name: On-Balance Volume (OBV)
