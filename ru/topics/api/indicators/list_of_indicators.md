@@ -94,6 +94,7 @@
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, определяет развороты тренда с использованием двух скользящих средних
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, использует несколько скользящих средних для визуализации трендов
 - [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index, отслеживает движение цены в дни с уменьшающимся объёмом
+- [PVI](list_of_indicators/positive_volume_index.md) - Positive Volume Index, отслеживает движение цены в дни с растущим объёмом
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, индикатор trailing stop
 - [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV), связывает объём с изменением цены
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, сглаженная версия OBV
