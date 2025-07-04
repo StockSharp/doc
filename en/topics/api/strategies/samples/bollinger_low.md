@@ -67,7 +67,7 @@ protected override void OnStarted(DateTimeOffset time)
 The `ProcessCandle` method is called for each completed candle and implements the trading logic:
 
 ```cs
-private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
+private void ProcessCandle(ICandleMessage candle, decimal? middleBand, decimal? upperBand, decimal? lowerBand)
 {
 	// Skip incomplete candles
 	if (candle.State != CandleStates.Finished)

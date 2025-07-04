@@ -90,7 +90,7 @@ StartProtection(TakeValue, StopValue);
 5. The strategy logic itself, implemented in the OnProcess method. The method is called by the subscription created in step 1:
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
