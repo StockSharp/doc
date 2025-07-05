@@ -1658,6 +1658,8 @@
         href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
       - name: Elder Impulse System (EIS)
         href: api/indicators/list_of_indicators/elder_impulse_system.md
+      - name: Elder's Force Index (EFI)
+        href: api/indicators/list_of_indicators/elder_force_index.md
       - name: Elliot Wave Oscillator (EWO)
         href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
       - name: Endpoint Moving Average (EPMA)
@@ -1726,6 +1728,8 @@
         href: api/indicators/list_of_indicators/lrc.md
       - name: Linear Regression Gradient (LRS)
         href: api/indicators/list_of_indicators/lrs.md
+      - name: Linear Regression Forecast (LRF)
+        href: api/indicators/list_of_indicators/linear_regression_forecast.md
       - name: R-squared
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
       - name: Lowest Value (Lowest)
@@ -1790,6 +1794,10 @@
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
       - name: Pivot Points (PP)
         href: api/indicators/list_of_indicators/pivot_points.md
+      - name: Price Channels (PC)
+        href: api/indicators/list_of_indicators/price_channels.md
+      - name: Price Volume Trend (PVT)
+        href: api/indicators/list_of_indicators/price_volume_trend.md
       - name: Pretty Good Oscillator (PGO)
         href: api/indicators/list_of_indicators/pretty_good_oscillator.md
       - name: Psychological Line (PSY)
@@ -1832,6 +1840,8 @@
         href: api/indicators/list_of_indicators/t3_moving_average.md
       - name: Time Weighted Average Price (TWAP)
         href: api/indicators/list_of_indicators/time_weighted_average_price.md
+      - name: Typical Price (TP)
+        href: api/indicators/list_of_indicators/typical_price.md
       - name: Triple Exponential Moving Average (TEMA)
         href: api/indicators/list_of_indicators/tema.md
       - name: TRIX
@@ -1848,16 +1858,22 @@
         href: api/indicators/list_of_indicators/vhf.md
       - name: Variable Index Dynamic Average (VIDIA)
         href: api/indicators/list_of_indicators/vidya.md
+      - name: Variable Moving Average (VMA)
+        href: api/indicators/list_of_indicators/variable_moving_average.md
       - name: Volume
         href: api/indicators/list_of_indicators/volume.md
       - name: Volume Profile
         href: api/indicators/list_of_indicators/volume_profile.md
+      - name: Volume Weighted Average Price (VWAP)
+        href: api/indicators/list_of_indicators/volume_weighted_average_price.md
       - name: Volume Weighted Moving Average (VMA)
         href: api/indicators/list_of_indicators/volume_weighted_ma.md
       - name: Vortex Indicator (VI)
         href: api/indicators/list_of_indicators/vortex_indicator.md
       - name: Wave Trend Oscillator (WTO)
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
+      - name: Weighted Close Price (WCP)
+        href: api/indicators/list_of_indicators/weighted_close_price.md
       - name: Weighted Moving Average (WMA)
         href: api/indicators/list_of_indicators/weighted_ma.md
       - name: Welles Wilder Moving Average (Wilder MA)

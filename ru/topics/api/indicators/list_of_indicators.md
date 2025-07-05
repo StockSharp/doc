@@ -47,6 +47,7 @@
 - [FR](list_of_indicators/fibonacci_retracement.md) - Fibonacci Retracement, определяет потенциальные уровни разворота на основе коэффициентов Фибоначчи
 - [FVE](list_of_indicators/finite_volume_element.md) - Finite Volume Element, измеряет силу движения цены с учётом объёма
 - [FI](list_of_indicators/force_index.md) - Force Index, комбинирует цену и объём для измерения давления покупок и продаж
+- [EFI](list_of_indicators/elder_force_index.md) - Elder's Force Index, измеряет давление покупателей и продавцов
 - [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator, сравнивает фактические цены с прогнозируемыми
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average, адаптируется к волатильности рынка
 - [Fractals](list_of_indicators/fractals.md) - Fractals, определяет потенциальные точки разворота на ценовых графиках
@@ -73,6 +74,7 @@
 - [KST](list_of_indicators/kst.md) - Know Sure Thing, осциллятор импульса
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI, модифицированный RSI с уменьшенным лагом
 - [LRC](list_of_indicators/lrc.md) - Linear regression, прогнозирует будущие цены на основе прошлых трендов
+- [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast, строит прогноз цены
 - [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared, измеряет силу линейной зависимости
 - [LRS](list_of_indicators/lrs.md) - Linear regression gradient, указывает наклон линии регрессии
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period, определяет минимальную цену за заданный период
@@ -106,6 +108,8 @@
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, измеряет процентную разницу между двумя скользящими средними
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, измеряет процентную разницу в трендах объёма
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points, вычисляет уровни поддержки и сопротивления на основе прошлых движений цены
+- [PC](list_of_indicators/price_channels.md) - Price Channels, показывают верхнюю и нижнюю границы цены
+- [PVT](list_of_indicators/price_volume_trend.md) - Price Volume Trend, умножает изменение цены на объём
 - [PGO](list_of_indicators/pretty_good_oscillator.md) - Pretty Good Oscillator, определяет состояния перекупленности и перепроданности
 - [PSY](list_of_indicators/psychological_line.md) - Psychological Line, измеряет рыночные настроения на основе изменений цены
 - [QStick](list_of_indicators/qstick.md) - QStick, измеряет давление покупок и продаж
@@ -127,6 +131,7 @@
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values, вычисляет сумму последних N цен
 - [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average, плавная и отзывчивая скользящая средняя
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - Time Weighted Average Price, вычисляет среднюю цену с учётом времени
+- [TP](list_of_indicators/typical_price.md) - Typical Price, среднее значение High, Low и Close
 - [TEMA](list_of_indicators/tema.md) - Triple Exponential Moving Average, уменьшает лаг в расчётах скользящей средней
 - [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average, определяет изменения в тренде
 - [Trough](list_of_indicators/trough.md) - Trough, определяет локальные минимумы в ценовых данных
@@ -135,12 +140,15 @@
 - [UltimateOsc](list_of_indicators/uo.md) - Last oscillator, комбинирует несколько таймфреймов для измерения импульса
 - [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter, различает трендовые и диапазонные рынки
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, адаптируется к волатильности рынка
+- [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, адаптирует период сглаживания
 - [Volume](list_of_indicators/volume.md) - Candle volume, измеряет объём торгов за свечу
 - [Volume profile](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, придаёт больший вес ценам с большим объёмом
+- [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, средняя цена с учётом объёма
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, определяет начало новых трендов
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator, определяет развороты тренда
 - [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average, придаёт больший вес последним ценам
+- [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price, (High + Low + 2 × Close) / 4
 - [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average, сглаженная скользящая средняя
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution, измеряет давление покупок и продаж
 - [%R](list_of_indicators/williams_r.md) - Williams Percent Range, определяет состояния перекупленности и перепроданности
