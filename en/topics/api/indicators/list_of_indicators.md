@@ -47,6 +47,7 @@
 - [FR](list_of_indicators/fibonacci_retracement.md) - Fibonacci Retracement, determines potential reversal levels based on Fibonacci ratios
 - [FVE](list_of_indicators/finite_volume_element.md) - Finite Volume Element, measures the strength of price movements considering volume
 - [FI](list_of_indicators/force_index.md) - Force Index, combines price and volume to measure buying and selling pressure
+- [EFI](list_of_indicators/elder_force_index.md) - Elder's Force Index, measures buying and selling pressure
 - [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator, compares actual prices to forecasted ones
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average, adapts to market volatility
 - [Fractals](list_of_indicators/fractals.md) - Fractals, identifies potential reversal points on price charts
@@ -73,6 +74,7 @@
 - [KST](list_of_indicators/kst.md) - Know Sure Thing, a momentum oscillator
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI, a modified RSI with reduced lag
 - [LRC](list_of_indicators/lrc.md) - Linear regression, forecasts future prices based on past trends
+- [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast, predicts future prices
 - [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared, measures the strength of a linear relationship
 - [LRS](list_of_indicators/lrs.md) - Linear regression gradient, indicates the slope of the regression line
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period, determines the lowest price over a specified period
@@ -106,6 +108,8 @@
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, measures the percentage difference between two moving averages
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, measures the percentage difference in volume trends
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points, calculates support and resistance levels based on past price movements
+- [PC](list_of_indicators/price_channels.md) - Price Channels, show upper and lower price boundaries
+- [PVT](list_of_indicators/price_volume_trend.md) - Price Volume Trend, multiplies price change by volume
 - [PGO](list_of_indicators/pretty_good_oscillator.md) - Pretty Good Oscillator, identifies overbought and oversold conditions
 - [PSY](list_of_indicators/psychological_line.md) - Psychological Line, measures market sentiment based on price changes
 - [QStick](list_of_indicators/qstick.md) - QStick, measures buying and selling pressure
@@ -127,6 +131,7 @@
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values, calculates the sum of the last N prices
 - [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average, a smooth and responsive moving average
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - Time Weighted Average Price, calculates the average price weighted by time
+- [TP](list_of_indicators/typical_price.md) - Typical Price, average of High, Low, and Close
 - [TEMA](list_of_indicators/tema.md) - Triple Exponential Moving Average, reduces lag in moving average calculations
 - [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average, identifies trend changes
 - [Trough](list_of_indicators/trough.md) - Trough, identifies local lows in price data
@@ -135,12 +140,15 @@
 - [UltimateOsc](list_of_indicators/uo.md) - Last oscillator, combines multiple timeframes to measure momentum
 - [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter, distinguishes trending from ranging markets
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, adapts to market volatility
+- [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, adjusts to volatility
 - [Volume](list_of_indicators/volume.md) - Candle volume, measures trading volume per candle
 - [Volume profile](list_of_indicators/volume_profile.md) - Volume profile, shows trading activity at different price levels
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, gives more weight to prices with higher volume
+- [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, average price weighted by traded volume
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifies the start of new trends
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator, identifies trend reversals
 - [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average, gives more weight to recent prices
+- [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price, (High + Low + 2 × Close) / 4
 - [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average, a smoothed moving average
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution, measures buying and selling pressure
 - [%R](list_of_indicators/williams_r.md) - Williams Percent Range, identifies overbought and oversold conditions
