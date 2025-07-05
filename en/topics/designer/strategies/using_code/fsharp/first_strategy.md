@@ -117,8 +117,8 @@ this.StartProtection(this.TakeValue, this.StopValue)
 member private this.OnProcess
 	(
 		candle: ICandleMessage,
-		longValue: System.Nullable<decimal>,
-		shortValue: System.Nullable<decimal>
+		longValue: decimal,
+		shortValue: decimal
 	) =
 	// Log candle information
 	this.LogInfo(

@@ -90,7 +90,7 @@ StartProtection(TakeValue, StopValue);
 5. Сама логика стратегии, реализованная в методе OnProcess. Метод вызывается подпиской, созданной на этапе 1:
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 

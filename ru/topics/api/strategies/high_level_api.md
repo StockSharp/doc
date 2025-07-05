@@ -42,6 +42,12 @@ subscription
 
 Это значительно упрощает код и уменьшает вероятность ошибок.
 
+Если требуется получать значения индикаторов даже в тех случаях, когда по
+некоторым из них еще нет данных (`IIndicatorValue.IsEmpty == true`), используйте
+метод `BindWithEmpty`. В таком случае обработчик должен принимать параметры типа
+`decimal?`. Также можно воспользоваться `BindEx`, чтобы работать с объектами
+`IIndicatorValue` напрямую.
+
 #### Использование BindEx для работы с сырыми значениями индикаторов
 
 Если индикатор возвращает нестандартные значения (не просто числа), можно использовать метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})), который предоставляет доступ к исходному объекту [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue):
@@ -129,10 +135,10 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 2. Результаты обработки передаются в указанный обработчик (в примере это метод `OnProcess`)
 3. Весь код синхронизации и управления состоянием скрыт от разработчика
 
-Обработчик получает уже готовые значения в виде простых типов `decimal?` (null означает, что индикатор вернул пустое значение):
+Обработчик получает готовые значения в виде простых типов `decimal`. Метод вызывается только после того, как все привязанные индикаторы получили данные:
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
 	// Работаем напрямую с готовыми значениями индикаторов
 	var isShortLessThenLong = shortValue < longValue;
@@ -319,7 +325,7 @@ StartProtection(
 
 4. **Уменьшение вероятности ошибок** - многие типичные ошибки исключаются благодаря автоматизации рутинных задач
 
-5. **Работа с чистыми типами данных** - вместо работы со сложными объектами, можно оперировать простыми типами данных (например, `decimal?`)
+5. **Работа с чистыми типами данных** - вместо работы со сложными объектами, можно оперировать простыми типами данных (например, `decimal`)
 
 ## Пример стратегии с использованием высокоуровневого API
 
@@ -402,7 +408,7 @@ public class SmaStrategy : Strategy
 		StartProtection(TakeValue, StopValue);
 	}
 
-	private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 	{
 		// Обрабатываем только завершенные свечи
 		if (candle.State != CandleStates.Finished)
