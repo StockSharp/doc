@@ -128,8 +128,8 @@ def OnProcess(self, candle, longValue, shortValue):
 	Processes each finished candle, logs information, and executes trading logic on SMA crossing.
 	
 	:param candle: The processed candle message.
-		:param longValue: The current value of the long SMA, or None if no value is available.
-		:param shortValue: The current value of the short SMA, or None if no value is available.
+		:param longValue: The current value of the long SMA.
+		:param shortValue: The current value of the short SMA.
 	"""
 	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 

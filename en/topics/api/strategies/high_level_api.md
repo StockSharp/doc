@@ -42,6 +42,12 @@ It's important to note that when using the [Bind](xref:StockSharp.Algo.Strategie
 
 This significantly simplifies code and reduces the likelihood of errors.
 
+If it is necessary to receive indicator values even when some of them have no
+data yet (`IIndicatorValue.IsEmpty` is `true`), use the
+`BindWithEmpty` method. In this case the handler arguments must be of type
+`decimal?`. You can also use `BindEx` to inspect the raw
+`IIndicatorValue` objects directly.
+
 #### Using BindEx to Work with Raw Indicator Values
 
 If an indicator returns non-standard values (not just numbers), you can use the [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method, which provides access to the original [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) object:
@@ -129,10 +135,10 @@ Cast the value to the indicator's dedicated **value type** to work with its indi
 2. Processing results are passed to the specified handler (in the example, the `OnProcess` method)
 3. All synchronization and state management code is hidden from the developer
 
-The handler receives ready-to-use values as simple `decimal?` types (null means the indicator returned an empty value):
+The handler receives ready-to-use values as simple `decimal` types. The method is called only when all bound indicators return data:
 
 ```cs
-private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
 	// Work directly with ready-made indicator values
 	var isShortLessThenLong = shortValue < longValue;
@@ -319,7 +325,7 @@ The high-level API in StockSharp strategies provides the following advantages:
 
 4. **Reduced Error Probability** - many typical errors are eliminated through automation of routine tasks
 
-5. **Working with Clean Data Types** - instead of working with complex objects, you can operate with simple data types (e.g., `decimal?`)
+5. **Working with Clean Data Types** - instead of working with complex objects, you can operate with simple data types (e.g., `decimal`)
 
 ## Example Strategy Using High-Level API
 
@@ -402,7 +408,7 @@ public class SmaStrategy : Strategy
 		StartProtection(TakeValue, StopValue);
 	}
 
-	private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 	{
 		// Process only finished candles
 		if (candle.State != CandleStates.Finished)

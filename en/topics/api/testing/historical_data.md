@@ -359,7 +359,7 @@ protected override void OnStarted(DateTimeOffset time)
 Candle processing and trading decisions are now separated into a dedicated method:
 
 ```csharp
-private void OnProcess(ICandleMessage candle, decimal? longValue, decimal? shortValue)
+private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
