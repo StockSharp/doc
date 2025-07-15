@@ -1,5 +1,5 @@
 # Другие примеры стратегий
 
-Все примеры стратегий находятся в папке [Samples](https://github.com/StockSharp/StockSharp/tree/master/Samples/06_Strategies), а также в папке [Algo/Strategies](https://github.com/StockSharp/StockSharp/tree/master/Algo/Strategies).
+Сотни примеров стратегий на C# и Python размещены в [папке API](https://github.com/StockSharp/AlgoTrading/tree/main/API) репозитория [AlgoTrading](https://github.com/StockSharp/AlgoTrading). Эта ссылка указана первой на странице. Все они совместимы с [Дизайнером](../../designer.md).
 
-Основной репозиторий для постоянного обновления стратегий — это [AlgoTrading](https://github.com/StockSharp/AlgoTrading). В этом репозитории периодически выкладываются стратегии, совместимые с [Дизайнером](../../designer.md).
+Дополнительные примеры находятся в папке [Samples](https://github.com/StockSharp/StockSharp/tree/master/Samples/06_Strategies).

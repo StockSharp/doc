@@ -6,6 +6,8 @@
 - [F#](using_code/fsharp.md) 
 - [Python](using_code/python.md)
 
+Extensive strategy samples in C# and Python are available in the [AlgoTrading API folder](https://github.com/StockSharp/AlgoTrading/tree/main/API). All of them work with the [Designer](../../designer.md).
+
 ## C#
 
 C# is the main language for developing trading strategies. All components, examples and core code are written in C#. C# provides full access to the entire [S#](../../api.md) platform architecture.
