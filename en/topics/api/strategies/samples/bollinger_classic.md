@@ -48,7 +48,7 @@ protected override void OnStarted(DateTimeOffset time)
 	// Create subscription and bind indicator
 	var subscription = SubscribeCandles(CandleType);
 	subscription
-		.Bind(_bollingerBands, ProcessCandle)
+		.BindEx(_bollingerBands, ProcessCandle)
 		.Start();
 
 	// Set up visualization on the chart
@@ -67,7 +67,7 @@ protected override void OnStarted(DateTimeOffset time)
 The `ProcessCandle` method is called for each completed candle and implements the trading logic:
 
 ```cs
-private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
+private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
 {
 	// Skip incomplete candles
 	if (candle.State != CandleStates.Finished)
@@ -77,14 +77,16 @@ private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal up
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
+	var typed = (BollingerBandsValue)bollingerValue;
+
 	// Trading logic:
 	// Sell when price reaches or exceeds the upper band
-	if (candle.ClosePrice >= upperBand && Position >= 0)
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
 	}
 	// Buy when price reaches or falls below the lower band
-	else if (candle.ClosePrice <= lowerBand && Position <= 0)
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}

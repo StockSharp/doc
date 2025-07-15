@@ -48,7 +48,7 @@ protected override void OnStarted(DateTimeOffset time)
 	// Создание подписки и привязка индикатора
 	var subscription = SubscribeCandles(CandleType);
 	subscription
-		.Bind(_bollingerBands, ProcessCandle)
+		.BindEx(_bollingerBands, ProcessCandle)
 		.Start();
 
 	// Настройка визуализации на графике
@@ -67,7 +67,7 @@ protected override void OnStarted(DateTimeOffset time)
 Метод `ProcessCandle` вызывается для каждой завершенной свечи и реализует торговую логику:
 
 ```cs
-private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal upperBand, decimal lowerBand)
+private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
 {
 	// Пропускаем незавершенные свечи
 	if (candle.State != CandleStates.Finished)
@@ -77,14 +77,16 @@ private void ProcessCandle(ICandleMessage candle, decimal middleBand, decimal up
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
+	var typed = (BollingerBandsValue)bollingerValue;
+
 	// Торговая логика:
 	// Продажа, когда цена достигает или превышает верхнюю полосу
-	if (candle.ClosePrice >= upperBand && Position >= 0)
+	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
 	}
 	// Покупка, когда цена достигает или опускается ниже нижней полосы
-	else if (candle.ClosePrice <= lowerBand && Position <= 0)
+	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}
