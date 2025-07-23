@@ -18,17 +18,17 @@ private HashSet<long> _transactions;
 
 protected override void OnStarted(DateTimeOffset time)
 {
-		base.OnStarted(time);
+	base.OnStarted(time);
 
-		_transactions = File.Exists($"orders_{Name}.txt")
-				? File.ReadAllLines($"orders_{Name}.txt").Select(l => l.To<long>()).ToHashSet()
-				: new HashSet<long>();
+	_transactions = File.Exists($"orders_{Name}.txt")
+			? File.ReadAllLines($"orders_{Name}.txt").Select(l => l.To<long>()).ToHashSet()
+			: new HashSet<long>();
 
-		OrderReceived += order =>
-		{
-				File.AppendAllLines($"orders_{Name}.txt", new[] { order.TransactionId.ToString() });
-				_transactions.Add(order.TransactionId);
-		};
+	OrderReceived += order =>
+	{
+			File.AppendAllLines($"orders_{Name}.txt", new[] { order.TransactionId.ToString() });
+			_transactions.Add(order.TransactionId);
+	};
 }
 ```
 
@@ -37,7 +37,7 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 protected override bool CanAttach(Order order)
 {
-		return _transactions.Contains(order.TransactionId);
+	return _transactions.Contains(order.TransactionId);
 }
 ```
 
