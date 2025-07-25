@@ -2,53 +2,43 @@
 
 При старте стратегии может возникнуть необходимость загрузки ранее совершённых заявок и сделок (например, когда робот был перезагружен в течение торговой сессии или сделки и заявки переносятся через ночь). Для этого нужно: 
 
-1. Найти те заявки, которые необходимо загрузить в стратегию, и вернуть их из метода (например, загрузить идентификаторы заявок, если стратегия записывает каждый раз при регистрации через метод [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)** из файла). 
-2. Объединить полученный результат с базовым методом [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)**. 
-3. После того, как заявки будут загружены в стратегию, загрузятся и все совершенные по ним сделки. Это будет сделано автоматически. 
+1. Загрузить номера транзакций заявок, которые ранее сохранила стратегия (например, из файла).
+2. Подписаться на событие `OrderReceived` и сохранять новые номера транзакций для последующих запусков.
+3. Переопределить метод `CanAttach`, чтобы после перезапуска стратегия смогла распознать свои заявки.
+4. После присоединения заявок к стратегии все совершённые по ним сделки загрузятся автоматически.
 
 Следующий пример показывает загрузку всех сделок в стратегию: 
 
 ## Загрузка в стратегию ранее совершенных заявок и сделок
 
-1. Для этого, чтобы [Strategy](xref:StockSharp.Algo.Strategies.Strategy) загрузила свое предыдущее состояние, необходимо переопределить [Strategy.ProcessNewOrders](xref:StockSharp.Algo.Strategies.Strategy.ProcessNewOrders(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Order}))**(**[System.Collections.Generic.IEnumerable\<StockSharp.BusinessEntities.Order\>](xref:System.Collections.Generic.IEnumerable`1) newOrders **)**. На вход данному методу из [Strategy.OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) поступят все заявки из коннектора, и их необходимо отфильтровать:
+1. При старте стратегии загрузите сохранённые номера транзакций и подпишитесь на `OrderReceived`, чтобы сохранять новые номера:
 
 ```cs
-	private bool _isOrdersLoaded;
-	private bool _isStopOrdersLoaded;
-			  	
-	protected override IEnumerable<Order> ProcessNewOrders(IEnumerable<Order> newOrders, bool isStopOrders)
+private HashSet<long> _transactions;
+
+protected override void OnStarted(DateTimeOffset time)
+{
+	base.OnStarted(time);
+
+	_transactions = File.Exists($"orders_{Name}.txt")
+			? File.ReadAllLines($"orders_{Name}.txt").Select(l => l.To<long>()).ToHashSet()
+			: new HashSet<long>();
+
+	OrderReceived += order =>
 	{
-		// если заявки уже были ранее загружены
-		if ((!isStopOrders && _isOrdersLoaded) || (isStopOrders && _isStopOrdersLoaded))
-			return base.ProcessNewOrders(newOrders, isStopOrders);
-		return Filter(newOrders);
-	}
+			File.AppendAllLines($"orders_{Name}.txt", new[] { order.TransactionId.ToString() });
+			_transactions.Add(order.TransactionId);
+	};
+}
 ```
 
-2. Чтобы реализовать фильтрацию заявок, необходимо определить критерий отсеивания. Например, если в процессе работы стратегии сохранять все регистрируемые заявки в файл, то можно сделать фильтр по номеру транзакции [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId). Если такой номер присутствует в файле, значит заявка была зарегистрирована через данную стратегию: 
+2. Переопределите `CanAttach`, чтобы после перезапуска стратегия могла определить свои заявки:
 
 ```cs
-	private IEnumerable<Order> Filter(IEnumerable<Order> orders)
-	{
-		// считываем номера транзакций из файла
-		var transactions = File.ReadAllLines("orders_{0}.txt".Put(Name)).Select(l => l.To<long>()).ToArray();
-		
-		// находим наши заявки по считанным номерам
-		return orders.Where(o => transactions.Contains(o.TransactionId));
-	}
+protected override bool CanAttach(Order order)
+{
+	return _transactions.Contains(order.TransactionId);
+}
 ```
 
-3. Запись номеров транзакций заявок, регистрируемых через стратегию, можно осуществить, переопределив метод [Strategy.RegisterOrder](xref:StockSharp.Algo.Strategies.Strategy.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**: 
-
-```cs
-	protected override void RegisterOrder(Order order)
-	{
-		// отравляем заявку дальше на регистрацию
-		base.RegisterOrder(order);
-		
-		// добавляем новый номер транзакции
-		File.AppendAllLines("orders_{0}.txt".Put(Name), new[]{ order.TransactionId.ToString() });
-	}
-```
-
-4. После того, как заявки будут загружены в стратегию, загрузятся и все совершенные по ним сделки. Это будет сделано автоматически. 
+3. После того, как заявки будут загружены в стратегию, загрузятся и все совершённые по ним сделки автоматически.
