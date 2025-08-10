@@ -197,6 +197,10 @@
           items:
           - name: Notification
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
+          - name: String concat
+            href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
+          - name: String format
+            href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
         - name: Market depths
           items:
           - name: Order book

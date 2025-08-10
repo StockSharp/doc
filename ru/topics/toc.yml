@@ -197,6 +197,10 @@
           items:
           - name: Уведомление
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
+          - name: Конкатенация строк
+            href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
+          - name: Формат строки
+            href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
         - name: Стаканы
           items:
           - name: Стакан
