@@ -12,6 +12,3 @@ The cube is used to obtain all the strategy trades.
 
 - **Trades** \- trades arising from the passed instrument. They can be used both for displaying on the chart using the **Chart panel** element, and for position protection using the **Position protection** element.
 
-## Recommended content
-
-[Notification](../notifying/notification.md)
