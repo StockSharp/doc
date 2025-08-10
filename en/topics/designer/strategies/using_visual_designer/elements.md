@@ -13,21 +13,34 @@ Parameters are needed to fill the cube with information while the strategy is ru
 The color denotes the type of data that is passed in the parameters. Different parameters in different cubes can receive and pass different and incompatible data types. The description of each parameter is indicated in the tooltip. To exclude a lot of errors when connecting parameters of different types, each parameter has its own data type, which differs in color. The following color set is used to indicate the parameters:
 
 - **Black** – any type of data, usually used as a signal to perform certain actions within the element.
-- **Darkgreen** – the instrument.
-- **Darkturquoise** – the order book.
-- **Turquoise** – the quote (a pair of price and volume).
-- **Red\-orange** – candles.
-- **Darkgold** – the indicator value.
+- **Dark green** – the instrument.
+- **Dark cyan** – the order book.
+- **Cyan** – the quote (a pair of price and volume).
+- **Orange red** – candles and candle state.
+- **Dark goldenrod** – the indicator value.
 - **Olive** – the order.
-- **Olivegreen** – own trade.
-- **Blue** – the flag value (indicates the state and has two values: up (true) and down (false)).
-- **Aquamarine** – a numerical value, can be set as a number or percentage.
-- **Greenforest** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
+- **Pale violet red** – order error.
+- **Dark olive green** – own trade.
+- **Dodger blue** – the flag value (indicates the state and has two values: up (true) and down (false)).
+- **Medium sea green** – a numerical value, can be set as a number or percentage.
+- **Dark slate blue** – values that can be compared (for example, a numeric value, a string, an indicator value, etc.).
+- **Brown** – the portfolio.
+- **Deep pink** – options.
+- **Beige** – the side.
+- **Dark khaki** – the trade.
+- **Dark blue** – the strategy.
+- **Chocolate** – the date.
+- **Coral** – the time.
+- **Saddle brown** – the position.
+- **Chartreuse** – the order state.
+- **Gainsboro** – the Black-Scholes model.
+- **Tan** – the basket Black-Scholes model.
+- **Purple** – the text string.
 
 Thus, you can connect the parameters of the same colors (the same data types), except for the following types of parameters:
 
-1. 1. The **black** parameter can accept any data. Most often such parameters are used to pass signals for any actions inside the cube. For example, the[Variable](elements/data_sources/variable.md) cube stores a certain value and sends it to the output when it receives a signal.
-2. 2. The **green** parameter can receive on the input various comparable data types. For example, numeric, indicator values, strings, etc.
+1. The **black** parameter can accept any data. Most often such parameters are used to pass signals for any actions inside the cube. For example, the [Variable](elements/data_sources/variable.md) cube stores a certain value and sends it to the output when it receives a signal.
+2. The **dark slate blue** parameter can receive on the input various comparable data types. For example, numeric, indicator values, strings, etc.
 
 It should be noted that the parameter types can depend on the cube properties. For example, for the [Converter](elements/converters/converter.md) cube, the input parameter type is automatically determined by the data source cube data type for [Converter](elements/converters/converter.md). When you create a link, the color of the square on the element automatically changes.
 
