@@ -50,7 +50,7 @@ data yet (`IIndicatorValue.IsEmpty` is `true`), use the
 
 #### Using BindEx to Work with Raw Indicator Values
 
-If an indicator returns non-standard values (not just numbers), you can use the [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method, which provides access to the original [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) object:
+If an indicator returns non-standard values (not just numbers), you can use the [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) method, which provides access to the original [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) object:
 
 ```cs
 subscription
@@ -72,7 +72,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 }
 ```
 
-The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method is particularly useful in the following cases:
+The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) method is particularly useful in the following cases:
 
 - Working with indicators that return boolean values (e.g., [Fractals](xref:StockSharp.Algo.Indicators.Fractals))
 - Accessing additional properties of the indicator value type (e.g., the [IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) flag)
@@ -108,7 +108,7 @@ private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 }
 ```
 
-For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) with direct access to the complex indicator value:
+For more flexible work, you can use [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) with direct access to the complex indicator value:
 
 ```cs
 subscription.BindEx(bollinger, (candle, indicatorValue) =>
@@ -122,7 +122,7 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 });
 ```
 
-The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) method for complex indicators automatically:
+The [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) method for complex indicators automatically:
 
 1. Processes input data through the complex indicator
 2. Passes the resulting `IIndicatorValue` to the specified handler

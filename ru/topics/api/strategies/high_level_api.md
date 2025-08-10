@@ -50,7 +50,7 @@ subscription
 
 #### Использование BindEx для работы с сырыми значениями индикаторов
 
-Если индикатор возвращает нестандартные значения (не просто числа), можно использовать метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})), который предоставляет доступ к исходному объекту [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue):
+Если индикатор возвращает нестандартные значения (не просто числа), можно использовать метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)), который предоставляет доступ к исходному объекту [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue):
 
 ```cs
 subscription
@@ -72,7 +72,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 }
 ```
 
-Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) особенно полезен в следующих случаях:
+Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) особенно полезен в следующих случаях:
 
 - Работа с индикаторами, возвращающими логические значения (например, [Fractals](xref:StockSharp.Algo.Indicators.Fractals))
 - Доступ к дополнительным свойствам типа индикатора (например, признак [IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal))
@@ -108,7 +108,7 @@ private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 }
 ```
 
-Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для прямого доступа к значению комплексного индикатора:
+Для более гибкой работы можно использовать [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) для прямого доступа к значению комплексного индикатора:
 
 ```cs
 subscription.BindEx(bollinger, (candle, indicatorValue) =>
@@ -122,7 +122,7 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 });
 ```
 
-Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue})) для комплексных индикаторов автоматически:
+Метод [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) для комплексных индикаторов автоматически:
 
 1. Обрабатывает входные данные через комплексный индикатор
 2. Передает полученное значение `IIndicatorValue` в указанный обработчик
