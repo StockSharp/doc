@@ -201,6 +201,18 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 }
 ```
 
+### After Finishing Development
+
+Once the connector is implemented, there are two options for using it:
+
+1. Publish it to the [StockSharp Store](https://stocksharp.com/store) as either a paid or free product. In this case, users install the connector automatically through the [Installer](../../installer/setup.md).
+2. For personal use, copy the built connector *.dll* file to the folder of your application (or any StockSharp product). At startup, the application scans the current directory for adapters using the following criteria:
+
+   - Only files with the **.dll** extension whose names begin with `StockSharp.` are considered.
+   - Each remaining file is checked to ensure it is a valid .NET assembly.
+   - The assembly is loaded, and all types implementing `IMessageAdapter` are collected.
+   - Any errors encountered during scanning or loading are written to the log and do not stop the search. If loading fails, open the application's log window or log file to view the error details.
+
 This document describes the general principles of the adapter's operation, its creation, and management of the connection with the trading system. The following documents will be devoted to the implementation of the adapter's functionality:
 
 - [Instrument Lookup](creating_own_connector/instrument_lookup.md)
