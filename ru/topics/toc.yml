@@ -2379,6 +2379,8 @@
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
+- name: Store
+  href: store.md
 - name: Общее
   items:
   - name: Исходные коды
