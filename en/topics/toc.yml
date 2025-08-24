@@ -1369,6 +1369,15 @@
           href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
         - name: Adapter initialization OKEx
           href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
+      - name: OKEx History
+        href: api/connectors/crypto_exchanges/okex_history.md
+        items:
+        - name: Configuration OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
+        - name: Graphical configuration OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
+        - name: Adapter initialization OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
       - name: Poloniex
         href: api/connectors/crypto_exchanges/poloniex.md
         items:
