@@ -708,6 +708,8 @@
           href: api/connectors/russia/quik/ui_settings_transactions.md
         - name: Инициализация адаптера Quik Lua
           href: api/connectors/russia/quik/sample.md
+        - name: Логирование коннектора QUIK
+          href: api/connectors/russia/quik/logging.md
       - name: Tinkoff
         href: api/connectors/russia/tinkoff.md
         items:
