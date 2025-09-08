@@ -2238,12 +2238,12 @@
     href: shell/create_strategy_panel.md
   - name: Run strategies from Designer
     href: shell/run_strategies_from_designer.md
+- name: Store
+  href: store.md
 - name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
-- name: Store
-  href: store.md
 - name: Common
   items:
   - name: Source codes

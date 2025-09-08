@@ -2,6 +2,10 @@
 
 The **Store** is our marketplace and showcase for products created by the company and the community. It helps developers promote their work and makes it easy for users to discover, download, and update extensions for the platform.
 
+### Why publish
+
+Sharing your work in the Store lets developers reach a wider audience, gather feedback, and monetize their ideas. It also grows the overall ecosystem and provides other traders with ready-to-use tools.
+
 ### Uploading content
 
 Anyone can publish their own robot, trading strategy, or indicator. Publication is performed through the [Installer](installer.md):
@@ -15,4 +19,4 @@ After submission the material is reviewed by our team. Once approved it becomes 
 
 ### Monetization and commission
 
-Authors can distribute their work for free or sell it. Payments are processed by the company, which retains a commission from each sale. To learn the current commission rate and payout terms, please contact us at info@stocksharp.com.
+Authors can distribute their work for free or sell it. Payments are processed by the company, which retains a commission from each sale. To learn the current commission rate and payout terms, please contact us at [info@stocksharp.com](mailto:info@stocksharp.com).
