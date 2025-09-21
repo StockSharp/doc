@@ -1103,6 +1103,15 @@
           href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
         - name: Инициализация адаптера Binance History
           href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+      - name: Bybit History
+        href: api/connectors/crypto_exchanges/bybit_history.md
+        items:
+        - name: Настройки коннектора Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+        - name: Графическое конфигурирование Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+        - name: Инициализация адаптера Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
       - name: BingX
         href: api/connectors/crypto_exchanges/bingx.md
         items:

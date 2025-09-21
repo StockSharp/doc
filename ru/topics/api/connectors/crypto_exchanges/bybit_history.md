@@ -1,6 +1,6 @@
-# Binance History
+# Bybit History
 
-**Binance History** - сервис истории торгов от биржи Binance.
+**Bybit History** - сервис истории торгов от биржи Bybit.
 
 > [!CAUTION]
 > Коннектор поддерживает только поток рыночных данных, транзакции не поддерживаются.
