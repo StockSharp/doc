@@ -10,9 +10,12 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - Approval Flow Index, measures trend strength based on price and volume
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux Moving Average, a moving average with reduced lag and noise
 - [Aroon](list_of_indicators/aroon.md) - Aroon indicator, determines the strength and direction of a trend
+- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - Aroon Oscillator, shows the spread between Aroon Up and Aroon Down
 - [ADX](list_of_indicators/adx.md) - Welles Wilder Average Directional Index, measures trend strength
 - [ATR](list_of_indicators/atr.md) - Average True Range, measures market volatility
 - [AO](list_of_indicators/ao.md) - Awesome Oscillator, measures market momentum
+- [Bear Power](list_of_indicators/bear_power.md) - Bear Power, measures bearish pressure relative to EMA
+- [Bull Power](list_of_indicators/bull_power.md) - Bull Power, measures bullish pressure relative to EMA
 - [BMP](list_of_indicators/balance_of_market_power.md) - Balance of Market Power, compares buying and selling pressure
 - [BOP](list_of_indicators/balance_of_power.md) - Balance of Power, shows the strength of buyers versus sellers
 - [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator, links volume to price changes
@@ -36,10 +39,12 @@
 - [DPI](list_of_indicators/disparity_index.md) - Disparity Index, measures the difference between price and a moving average
 - [DC](list_of_indicators/donchian_channels.md) - Donchian Channels, identifies breakout levels based on highs and lows
 - [DEMA](list_of_indicators/dema.md) - Double Exponential Moving Average, reduces lag in moving average calculations
+- [DeMarker](list_of_indicators/demarker.md) - DeMarker, compares consecutive highs and lows to gauge demand
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - Dynamic Zones RSI, adapts RSI levels to market conditions
 - [EMV](list_of_indicators/ease_of_movement.md) - Ease of Movement, links price changes to volume
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - Ehlers Fisher Transform, normalizes prices to highlight extreme values
 - [EIS](list_of_indicators/elder_impulse_system.md) - Elder Impulse System, combines trend and momentum to find trading opportunities
+- [Elder Ray](list_of_indicators/elder_ray.md) - Elder Ray Index, evaluates the balance between bulls and bears using EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - Elliot Wave Oscillator, identifies wave patterns in price movement
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - Endpoint Moving Average, a moving average with reduced lag
 - [Envelope](list_of_indicators/envelope.md) - Envelope, creates bands around a moving average to identify overbought and oversold levels
@@ -85,6 +90,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - McClellan Oscillator, measures market breadth
 - [MGD](list_of_indicators/mcginley_dynamic.md) - McGinley Dynamic, a responsive moving average
 - [MeanDev](list_of_indicators/mean_deviation.md) - Average deviation, measures the average deviation from the mean
+- [Moving Median](list_of_indicators/median.md) - Moving Median, smooths data using the median of the window
 - [MedPr](list_of_indicators/median_price.md) - Median price, calculates the midpoint of the trading range
 - [Momentum](list_of_indicators/momentum.md) - Momentum, measures the speed of price change
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Momentum of Moving Average, measures the momentum of a moving average
@@ -114,6 +120,7 @@
 - [PSY](list_of_indicators/psychological_line.md) - Psychological Line, measures market sentiment based on price changes
 - [QStick](list_of_indicators/qstick.md) - QStick, measures buying and selling pressure
 - [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts, uses multiple moving averages to visualize trends
+- [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index, measures trend using Spearman's rank correlation
 - [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index, measures trend strength
 - [ROC](list_of_indicators/roc.md) - Rate of change, measures the percentage change in price
 - [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index, a variation of RSI incorporating momentum
@@ -122,6 +129,7 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle, identifies trend cycles
 - [SuperTrend](list_of_indicators/supertrend.md) - SuperTrend indicator based on ATR
 - [SMA](list_of_indicators/sma.md) - Simple moving average, calculates the average price over a period
+- [Shift](list_of_indicators/shift.md) - Shift, offsets the data stream by a chosen number of periods
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, identifies cyclical patterns in price data
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, a moving average giving more weight to recent prices
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, measures the dispersion of price data
@@ -136,6 +144,7 @@
 - [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average, identifies trend changes
 - [Trough](list_of_indicators/trough.md) - Trough, identifies local lows in price data
 - [TR](list_of_indicators/true_range.md) - True range, measures the actual range of price movement
+- [TSI](list_of_indicators/true_strength_index.md) - True Strength Index, applies double-smoothed momentum analysis
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs Money Flow, measures buying and selling pressure
 - [UltimateOsc](list_of_indicators/uo.md) - Last oscillator, combines multiple timeframes to measure momentum
 - [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter, distinguishes trending from ranging markets
