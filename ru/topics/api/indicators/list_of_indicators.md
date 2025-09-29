@@ -10,9 +10,12 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - Approval Flow Index, измеряет силу тренда на основе цены и объёма
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux Moving Average, скользящая средняя с уменьшенным лагом и шумом
 - [Aroon](list_of_indicators/aroon.md) - Aroon indicator, определяет силу и направление тренда
+- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - Aroon Oscillator, отображает разницу между линиями Aroon Up и Aroon Down
 - [ADX](list_of_indicators/adx.md) - Welles Wilder Average Directional Index, измеряет силу тренда
 - [ATR](list_of_indicators/atr.md) - Average True Range, измеряет волатильность рынка
 - [AO](list_of_indicators/ao.md) - Awesome Oscillator, измеряет импульс рынка
+- [Bear Power](list_of_indicators/bear_power.md) - Bear Power, показывает силу продавцов относительно EMA
+- [Bull Power](list_of_indicators/bull_power.md) - Bull Power, показывает силу покупателей относительно EMA
 - [BMP](list_of_indicators/balance_of_market_power.md) - Balance of Market Power, сравнивает давление покупателей и продавцов
 - [BOP](list_of_indicators/balance_of_power.md) - Balance of Power, показывает силу покупателей против продавцов
 - [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator, связывает объём с изменением цены
@@ -36,10 +39,12 @@
 - [DPI](list_of_indicators/disparity_index.md) - Disparity Index, измеряет разницу между ценой и скользящей средней
 - [DC](list_of_indicators/donchian_channels.md) - Donchian Channels, определяет уровни прорыва на основе максимумов и минимумов
 - [DEMA](list_of_indicators/dema.md) - Double Exponential Moving Average, уменьшает лаг в расчётах скользящей средней
+- [DeMarker](list_of_indicators/demarker.md) - DeMarker, оценивает покупательское и продавцовое давление по экстремумам
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - Dynamic Zones RSI, адаптирует уровни RSI к рыночным условиям
 - [EMV](list_of_indicators/ease_of_movement.md) - Ease of Movement, связывает изменение цены с объёмом
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - Ehlers Fisher Transform, нормализует цены для выявления экстремальных значений
 - [EIS](list_of_indicators/elder_impulse_system.md) - Elder Impulse System, комбинирует тренд и импульс для поиска торговых возможностей
+- [Elder Ray](list_of_indicators/elder_ray.md) - Elder Ray Index, оценивает баланс быков и медведей на основе EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - Elliot Wave Oscillator, определяет волновые модели в движении цены
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - Endpoint Moving Average, скользящая средняя с уменьшенным лагом
 - [Envelope](list_of_indicators/envelope.md) - Envelope, создаёт полосы вокруг скользящей средней для определения перекупленности и перепроданности
@@ -85,6 +90,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - McClellan Oscillator, измеряет широту рынка
 - [MGD](list_of_indicators/mcginley_dynamic.md) - McGinley Dynamic, отзывчивая скользящая средняя
 - [MeanDev](list_of_indicators/mean_deviation.md) - Average deviation, измеряет среднее отклонение от среднего
+- [Moving Median](list_of_indicators/median.md) - Moving Median, сглаживает данные с помощью медианы окна
 - [MedPr](list_of_indicators/median_price.md) - Median price, вычисляет середину торгового диапазона
 - [Momentum](list_of_indicators/momentum.md) - Momentum, измеряет скорость изменения цены
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Momentum of Moving Average, измеряет импульс скользящей средней
@@ -114,6 +120,7 @@
 - [PSY](list_of_indicators/psychological_line.md) - Psychological Line, измеряет рыночные настроения на основе изменений цены
 - [QStick](list_of_indicators/qstick.md) - QStick, измеряет давление покупок и продаж
 - [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts, использует несколько скользящих средних для визуализации трендов
+- [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index, измеряет тренд с помощью ранговой корреляции Спирмена
 - [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index, измеряет силу тренда
 - [ROC](list_of_indicators/roc.md) - Rate of change, измеряет процентное изменение цены
 - [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index, вариация RSI с учётом импульса
@@ -122,6 +129,7 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle, определяет циклические тренды
 - [SuperTrend](list_of_indicators/supertrend.md) - SuperTrend, отображает направление тренда на основе ATR
 - [SMA](list_of_indicators/sma.md) - Simple moving average, вычисляет среднюю цену за период
+- [Shift](list_of_indicators/shift.md) - Shift, сдвигает поток данных на заданное количество периодов
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, скользящая средняя с большим весом последних цен
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, измеряет разброс ценовых данных
@@ -136,6 +144,7 @@
 - [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average, определяет изменения в тренде
 - [Trough](list_of_indicators/trough.md) - Trough, определяет локальные минимумы в ценовых данных
 - [TR](list_of_indicators/true_range.md) - True range, измеряет фактический диапазон движения цены
+- [TSI](list_of_indicators/true_strength_index.md) - True Strength Index, двойное сглаживание импульса цены закрытия
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs Money Flow, измеряет давление покупок и продаж
 - [UltimateOsc](list_of_indicators/uo.md) - Last oscillator, комбинирует несколько таймфреймов для измерения импульса
 - [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter, различает трендовые и диапазонные рынки

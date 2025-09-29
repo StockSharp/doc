@@ -1782,6 +1782,10 @@
         href: api/indicators/list_of_indicators/balance_of_power.md
       - name: Balance Volume Indicator (BV)
         href: api/indicators/list_of_indicators/balance_volume.md
+      - name: Bear Power
+        href: api/indicators/list_of_indicators/bear_power.md
+      - name: Bull Power
+        href: api/indicators/list_of_indicators/bull_power.md
       - name: Bollinger Bands (Bollinger)
         href: api/indicators/list_of_indicators/bollinger_bands.md
       - name: Bollinger %b (BBP)
@@ -1806,6 +1810,8 @@
         href: api/indicators/list_of_indicators/connors_rsi.md
       - name: Constance Brown Composite Index (CBCI)
         href: api/indicators/list_of_indicators/constance_brown_composite_index.md
+      - name: DeMarker
+        href: api/indicators/list_of_indicators/demarker.md
       - name: Demand Index (DI)
         href: api/indicators/list_of_indicators/demand_index.md
       - name: Detrended Price Oscillator (DPO)
@@ -1836,6 +1842,8 @@
         href: api/indicators/list_of_indicators/endpoint_moving_average.md
       - name: Envelope
         href: api/indicators/list_of_indicators/envelope.md
+      - name: Elder Ray Index
+        href: api/indicators/list_of_indicators/elder_ray.md
       - name: Exponential Moving Average (EMA)
         href: api/indicators/list_of_indicators/ema.md
       - name: Fibonacci Retracement (FR)
@@ -1918,6 +1926,8 @@
         href: api/indicators/list_of_indicators/mcginley_dynamic.md
       - name: Mean Deviation (MeanDev)
         href: api/indicators/list_of_indicators/mean_deviation.md
+      - name: Median
+        href: api/indicators/list_of_indicators/median.md
       - name: Median Price (MedPr)
         href: api/indicators/list_of_indicators/median_price.md
       - name: Momentum
@@ -1978,6 +1988,8 @@
         href: api/indicators/list_of_indicators/rainbow_charts.md
       - name: Range Action Verification Index (RAVI)
         href: api/indicators/list_of_indicators/ravi.md
+      - name: Rank Correlation Index (RCI)
+        href: api/indicators/list_of_indicators/rank_correlation_index.md
       - name: Rate of Change (ROC)
         href: api/indicators/list_of_indicators/roc.md
       - name: Relative Momentum Index (RMI)
@@ -1988,6 +2000,8 @@
         href: api/indicators/list_of_indicators/rvi.md
       - name: Schaff Trend Cycle (STC)
         href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: Shift
+        href: api/indicators/list_of_indicators/shift.md
       - name: SuperTrend
         href: api/indicators/list_of_indicators/supertrend.md
       - name: Simple Moving Average (SMA)
@@ -2020,6 +2034,8 @@
         href: api/indicators/list_of_indicators/trough.md
       - name: True Range (TR)
         href: api/indicators/list_of_indicators/true_range.md
+      - name: True Strength Index (TSI)
+        href: api/indicators/list_of_indicators/true_strength_index.md
       - name: Twiggs Money Flow (TMF)
         href: api/indicators/list_of_indicators/twiggs_money_flow.md
       - name: Ultimate Oscillator (UltimateOsc)
