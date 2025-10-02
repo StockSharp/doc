@@ -1970,6 +1970,10 @@
         href: api/indicators/list_of_indicators/peak.md
       - name: Percentage Price Oscillator (PPO)
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
+      - name: Percentage Price Oscillator Signal
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
+      - name: Percentage Price Oscillator Histogram
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
       - name: Percentage Volume Oscillator (PVO)
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
       - name: Pivot Points (PP)

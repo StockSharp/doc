@@ -112,6 +112,8 @@
 - [Stub](list_of_indicators/pass_through.md) - An indicator without logic. Used to draw lines, a placeholder for custom indicators
 - [Peak](list_of_indicators/peak.md) - Peak, identifies local highs in price data
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, measures the percentage difference between two moving averages
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator with signal line, smooths PPO with an EMA
+- [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Percentage Price Oscillator histogram, plots the difference between PPO and its signal line
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, measures the percentage difference in volume trends
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points, calculates support and resistance levels based on past price movements
 - [PC](list_of_indicators/price_channels.md) - Price Channels, show upper and lower price boundaries
