@@ -112,6 +112,8 @@
 - [Stub](list_of_indicators/pass_through.md) - Индикатор без логики. Используется для отрисовки линий, заглушка для пользовательских индикаторов
 - [Peak](list_of_indicators/peak.md) - Peak, определяет локальные максимумы в ценовых данных
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, измеряет процентную разницу между двумя скользящими средними
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator с сигнальной линией, сглаживает PPO с помощью EMA
+- [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Percentage Price Oscillator гистограмма, показывает разницу между PPO и сигнальной линией
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, измеряет процентную разницу в трендах объёма
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points, вычисляет уровни поддержки и сопротивления на основе прошлых движений цены
 - [PC](list_of_indicators/price_channels.md) - Price Channels, показывают верхнюю и нижнюю границы цены

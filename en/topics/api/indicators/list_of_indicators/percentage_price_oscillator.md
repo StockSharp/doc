@@ -91,5 +91,7 @@ The Percentage Price Oscillator can be interpreted as follows:
 
 [MACD](macd.md)
 [EMA](ema.md)
+[Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
+[Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
 [PercentageVolumeOscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)
