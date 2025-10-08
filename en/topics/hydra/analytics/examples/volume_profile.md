@@ -41,11 +41,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class PriceVolumeScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -53,14 +53,14 @@ namespace StockSharp.Algo.Analytics
 			var security = securities.First();
 
 			// get candle storage
-			var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 			// get available dates for the specified period
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
 			{
-				logs.AddWarningLog("no data");
+				logs.LogWarning("no data");
 				return Task.CompletedTask;
 			}
 
@@ -77,6 +77,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Script Code on Python
@@ -90,7 +91,6 @@ clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
 
 from Ecng.Drawing import DrawStyles
-from System import TimeSpan
 from System.Threading.Tasks import Task
 from StockSharp.Algo.Analytics import IAnalyticsScript
 from storage_extensions import *
@@ -110,7 +110,7 @@ class price_volume_script(IAnalyticsScript):
 		storage,
 		drive,
 		format,
-		time_frame,
+		data_type,
 		cancellation_token
 	):
 		# Check if there are no instruments
@@ -121,8 +121,14 @@ class price_volume_script(IAnalyticsScript):
 		# Script can process only 1 instrument
 		security = securities[0]
 
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
 		# Get candle storage
-		candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
+		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# Get available dates for the specified period
 		dates = get_dates(candle_storage, from_date, to_date)
@@ -132,7 +138,7 @@ class price_volume_script(IAnalyticsScript):
 			return Task.CompletedTask
 
 		# Grouping candles by middle price and summing their volumes
-		candles = load_tf_candles(candle_storage, from_date, to_date)
+		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows_dict = {}
 		for candle in candles:
 			# Calculate middle price of the candle
@@ -145,4 +151,5 @@ class price_volume_script(IAnalyticsScript):
 		chart.Append(to_string_id(security), list(rows_dict.keys()), list(rows_dict.values()), DrawStyles.Histogram)
 
 		return Task.CompletedTask
+
 ```

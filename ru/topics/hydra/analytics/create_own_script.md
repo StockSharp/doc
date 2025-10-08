@@ -6,15 +6,15 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script shows chart drawing capabilities.
+	/// The analytic script, shows chart drawing possibilities.
 	/// </summary>
 	public class ChartDrawScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -31,7 +31,7 @@ namespace StockSharp.Algo.Analytics
 				var volsSeries = new Dictionary<DateTimeOffset, decimal>();
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
@@ -49,6 +49,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Обзор
@@ -57,11 +58,11 @@ namespace StockSharp.Algo.Analytics
 
 ## Интерфейс `IAnalyticsScript`
 
-Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)), который является необходимым для выполнения аналитических операций скрипта.
+Интерфейс [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) гарантирует, что любой реализующий аналитический скрипт будет иметь метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,StockSharp.Messages.DataType,System.Threading.CancellationToken)), который является необходимым для выполнения аналитических операций скрипта.
 
 ### Метод `Run`
 
-Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняется фактическая обработка данных и аналитические операции.
+Метод [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,StockSharp.Messages.DataType,System.Threading.CancellationToken)) является точкой входа аналитического скрипта, где выполняется фактическая обработка данных и аналитические операции.
 
 #### Параметры:
 
@@ -73,7 +74,7 @@ namespace StockSharp.Algo.Analytics
 - `storage`: Экземпляр [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), позволяющий доступ к хранилищу рыночных данных.
 - `drive`: Представляет [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) для указания местоположения хранения рыночных данных.
 - `format`: Значение [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats), указывающее формат рыночных данных.
-- `timeFrame`: [TimeSpan](xref:System.TimeSpan), указывающий временной промежуток для рыночных данных, например, 1 час или 1 день.
+- `dataType`: [DataType](xref:StockSharp.Messages.DataType), описывающий тип запрашиваемых рыночных данных и дополнительные параметры (например, тайм-фрейм свечей).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken), наблюдающий за запросами отмены.
 
 #### Возвращает:
@@ -89,7 +90,7 @@ namespace StockSharp.Algo.Analytics
 1. Проверить наличие инструментов для обработки. Если их нет, залогировать предупреждение и завершить задачу.
 2. Создать линейный график и гистограмму, используя метод [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2).
 3. Итерировать по каждой ценной бумаге и проверять запросы на отмену.
-4. Получить хранилище свечей, используя метод `storage.GetTimeFrameCandleMessageStorage`.
+4. Получить хранилище свечей, используя метод `storage.GetCandleMessageStorage`.
 5. Загрузить данные свечей в указанном диапазоне дат.
 6. Заполнить словари серий данными времени открытия, соответствующими ценами закрытия и общими объемами.
 7. Нарисовать данные серий на графиках, используя методы `lineChart.Append` и `histogramChart.Append`.

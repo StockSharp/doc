@@ -42,11 +42,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class NormalizePriceScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -61,7 +61,7 @@ namespace StockSharp.Algo.Analytics
 				var series = new Dictionary<DateTimeOffset, decimal>();
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				decimal? firstClose = null;
 
@@ -81,6 +81,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Код скрипта на Python
@@ -94,7 +95,6 @@ clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
 
 from Ecng.Drawing import DrawStyles
-from System import TimeSpan
 from System.Threading.Tasks import Task
 from StockSharp.Algo.Analytics import IAnalyticsScript
 from storage_extensions import *
@@ -104,12 +104,18 @@ from indicator_extensions import *
 
 # The analytic script, normalize securities close prices and shows on same chart.
 class normalize_price_script(IAnalyticsScript):
-	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, time_frame, cancellation_token):
+	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)
+
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
 
 		for security in securities:
 			# stop calculation if user cancel script execution
@@ -119,11 +125,11 @@ class normalize_price_script(IAnalyticsScript):
 			series = {}
 
 			# get candle storage
-			candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
+			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			first_close = None
 
-			for candle in load_tf_candles(candle_storage, from_date, to_date):
+			for candle in load_range(candle_storage, message_type, from_date, to_date):
 				if first_close is None:
 					first_close = candle.ClosePrice
 
@@ -134,4 +140,5 @@ class normalize_price_script(IAnalyticsScript):
 			chart.Append(to_string_id(security), list(series.keys()), list(series.values()))
 
 		return Task.CompletedTask
+
 ```

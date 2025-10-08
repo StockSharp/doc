@@ -36,11 +36,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class TimeVolumeScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -48,14 +48,14 @@ namespace StockSharp.Algo.Analytics
 			var security = securities.First();
 
 			// get candle storage
-			var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 			// get available dates for the specified period
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
 			{
-				logs.AddWarningLog("no data");
+				logs.LogWarning("no data");
 				return Task.CompletedTask;
 			}
 
@@ -77,6 +77,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Код скрипта на Python
@@ -110,7 +111,7 @@ class time_volume_script(IAnalyticsScript):
 		storage,
 		drive,
 		format,
-		time_frame,
+		data_type,
 		cancellation_token
 	):
 		# Check if there are no instruments
@@ -121,8 +122,14 @@ class time_volume_script(IAnalyticsScript):
 		# Script can process only 1 instrument
 		security = securities[0]
 
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
 		# Get candle storage
-		candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
+		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# Get available dates for the specified period
 		dates = get_dates(candle_storage, from_date, to_date)
@@ -132,13 +139,11 @@ class time_volume_script(IAnalyticsScript):
 			return Task.CompletedTask
 
 		# Grouping candles by opening time (hourly truncation) and summing their volumes
-		candles = load_tf_candles(candle_storage, from_date, to_date)
+		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows = {}
 		for candle in candles:
-			# Truncate TimeOfDay to the nearest hour
 			time_of_day = candle.OpenTime.TimeOfDay
 			truncated = TimeSpan.FromHours(int(time_of_day.TotalHours))
-			# Sum volumes for each truncated hour
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# Put our calculations into grid
@@ -151,4 +156,5 @@ class time_volume_script(IAnalyticsScript):
 		grid.SetSort("Volume", False)
 
 		return Task.CompletedTask
+
 ```
