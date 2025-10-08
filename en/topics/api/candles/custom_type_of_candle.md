@@ -12,8 +12,8 @@
    /// </summary>
    public class DeltaCandleMessage : CandleMessage
    {
-      // We get the message type identifier from the helper
-      // to use the same value in RegisterCandleMessageType
+       // We get the message type identifier from the helper
+       // to use the same value in RegisterCandleType
        
        /// <summary>
        /// Initialize a new instance of <see cref="DeltaCandleMessage"/>.
@@ -94,7 +94,15 @@
        public static void RegisterDeltaCandleType()
        {
            // Register new candle type in StockSharp
-           Extensions.RegisterCandleMessageType(typeof(DeltaCandleMessage));
+           Extensions.RegisterCandleType<decimal>(
+               typeof(DeltaCandleMessage),      // Candle message type
+               DeltaCandleType,                // Message type
+               "delta",                        // File name for storage
+               str => str.To<decimal>(),       // Converter from string to parameter
+               arg => arg.ToString(),          // Converter from parameter to string
+               a => a > 0,                     // Parameter validator
+               false                           // Whether such candles can be obtained from the source (not only built)
+           );
        }
    }
    ```
@@ -353,8 +361,12 @@ public class DeltaCandleStrategy : Strategy
 
 1. **Uniqueness of MessageTypes** — make sure that the `MessageTypes` identifier you choose does not conflict with existing types in StockSharp. It is recommended to use values greater than 10000 for custom types.
 
-2. **Registration of the Candle Type** — registration through `Extensions.RegisterCandleMessageType` is necessary for proper integration with StockSharp graphical controls and data storage. Without registration, the candle type will only work in code but will not be available in the user interface.
+2. **Registration of the Candle Type** — registration through `Extensions.RegisterCandleType` is necessary for proper integration with StockSharp graphical controls and data storage. Without registration, the candle type will only work in code but will not be available in the user interface.
 
 3. **Candle Parameter** — implement the `ArgType` property that returns the type of the candle argument. This is used for correct display of parameters in the graphical interface.
+
+4. **File System** — the `fileName` parameter in the `RegisterCandleType` method is used to save candles in the file system when you use StockSharp data storage.
+
+5. **Parameter Validation** — the parameter validation method is used in StockSharp to check the correctness of values before creating a subscription.
 
 Thus, we have created a completely custom candle type that properly integrates with the entire StockSharp ecosystem (including the user interface and data storage) and can be used to build trading strategies based on volume delta analysis.
