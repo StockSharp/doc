@@ -47,11 +47,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class Chart3DScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -76,14 +76,14 @@ namespace StockSharp.Algo.Analytics
 				x.Add(security.ToStringId());
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				// get available dates for the specified period
 				var dates = candleStorage.GetDates(from, to).ToArray();
 
 				if (dates.Length == 0)
 				{
-					logs.AddWarningLog("no data");
+					logs.LogWarning("no data");
 					return Task.CompletedTask;
 				}
 
@@ -103,6 +103,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Код скрипта на Python
@@ -116,7 +117,6 @@ clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
 
 from Ecng.Drawing import DrawStyles
-from System import TimeSpan
 from System.Threading.Tasks import Task
 from StockSharp.Algo.Analytics import IAnalyticsScript
 from storage_extensions import *
@@ -136,7 +136,7 @@ class chart3d_script(IAnalyticsScript):
 		storage,
 		drive,
 		format,
-		time_frame,
+		data_type,
 		cancellation_token
 	):
 		# Check if there are no instruments
@@ -154,18 +154,22 @@ class chart3d_script(IAnalyticsScript):
 		# Create a 2D array for Z values with dimensions: (number of securities) x (number of hours)
 		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
 
-		for i in range(securities.Length):
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
+		for i, security in enumerate(securities):
 			# Stop calculation if user cancels script execution
 			if cancellation_token.IsCancellationRequested:
 				break
-
-			security = securities[i]
 
 			# Fill X labels with security identifiers
 			x.append(to_string_id(security))
 
 			# Get candle storage for current security
-			candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
+			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# Get available dates for the specified period
 			dates = get_dates(candle_storage, from_date, to_date)
@@ -175,26 +179,20 @@ class chart3d_script(IAnalyticsScript):
 				return Task.CompletedTask
 
 			# Grouping candles by opening time (truncated to the nearest hour) and summing volumes
-			candles = load_tf_candles(candle_storage, from_date, to_date)
+			candles = load_range(candle_storage, message_type, from_date, to_date)
 			by_hours = {}
 			for candle in candles:
-				# Truncate TimeOfDay to the nearest hour
-				tod = candle.OpenTime.TimeOfDay
-				truncated = TimeSpan.FromHours(int(tod.TotalHours))
-				hour = truncated.Hours
-				# Sum volumes for the hour
+				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
 				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
 
 			# Fill Z values for current security
 			for hour, volume in by_hours.items():
-				# Set volume at position [i, hour] in the 2D array
-				# Ensure hour is within the range of y labels
-				
 				if hour < len(y):
 					z[i][hour] = float(volume)
-					
+
 		# Draw the 3D chart using panel
 		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
 
 		return Task.CompletedTask
+
 ```

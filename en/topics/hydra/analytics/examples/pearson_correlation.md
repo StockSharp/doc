@@ -54,11 +54,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class PearsonCorrelationScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -71,14 +71,14 @@ namespace StockSharp.Algo.Analytics
 					break;
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				// get closing prices
 				var prices = candleStorage.Load(from, to).Select(c => (double)c.ClosePrice).ToArray();
 
 				if (prices.Length == 0)
 				{
-					logs.AddWarningLog("No data for {0}", security);
+					logs.LogWarning("No data for {0}", security);
 					return Task.CompletedTask;
 				}
 
@@ -107,6 +107,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Script Code on Python
@@ -120,7 +121,6 @@ clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
 
 from Ecng.Drawing import DrawStyles
-from System import TimeSpan
 from System.Threading.Tasks import Task
 from StockSharp.Algo.Analytics import IAnalyticsScript
 from storage_extensions import *
@@ -144,7 +144,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		storage,
 		drive,
 		format,
-		time_frame,
+		data_type,
 		cancellation_token
 	):
 		if not securities:
@@ -153,16 +153,22 @@ class pearson_correlation_script(IAnalyticsScript):
 
 		closes = []
 
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
 		for security in securities:
 			# stop calculation if user cancel script execution
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			# get candle storage
-			candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
+			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# get closing prices
-			prices = [float(c.ClosePrice) for c in load_tf_candles(candle_storage, from_date, to_date)]
+			prices = [float(c.ClosePrice) for c in load_range(candle_storage, message_type, from_date, to_date)]
 
 			if len(prices) == 0:
 				logs.LogWarning("No data for {0}", security)
@@ -173,10 +179,10 @@ class pearson_correlation_script(IAnalyticsScript):
 		# all arrays must be the same length, so truncate longer ones
 		min_length = min(len(arr) for arr in closes)
 		closes = [arr[:min_length] for arr in closes]
-		
+
 		# convert list or array into 2D array
 		array2d = nx.to2darray(closes)
-		
+
 		# calculating correlation using NumSharp
 		np_array = np.array(array2d)
 		matrix = np.corrcoef(np_array)
@@ -186,4 +192,5 @@ class pearson_correlation_script(IAnalyticsScript):
 		panel.DrawHeatmap(ids, ids, nx.tosystemarray(matrix))
 
 		return Task.CompletedTask
+
 ```

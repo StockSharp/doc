@@ -33,11 +33,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -54,7 +54,7 @@ namespace StockSharp.Algo.Analytics
 					break;
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				var allCandles = candleStorage.Load(from, to).ToArray();
 
@@ -77,6 +77,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Код скрипта на Python
@@ -90,7 +91,6 @@ clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
 
 from Ecng.Drawing import DrawStyles
-from System import TimeSpan
 from System.Threading.Tasks import Task
 from StockSharp.Algo.Analytics import IAnalyticsScript
 from storage_extensions import *
@@ -100,7 +100,7 @@ from indicator_extensions import *
 
 # The analytic script, shows biggest candle (by volume and by length) for specified securities.
 class biggest_candle_script(IAnalyticsScript):
-	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, time_frame, cancellation_token):
+	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
@@ -111,14 +111,20 @@ class biggest_candle_script(IAnalyticsScript):
 		big_price_candles = []
 		big_vol_candles = []
 
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
 		for security in securities:
 			# stop calculation if user cancel script execution
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			# get candle storage
-			candle_storage = get_tf_candle_storage(storage, security, time_frame, drive, format)
-			all_candles = load_tf_candles(candle_storage, from_date, to_date)
+			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
+			all_candles = load_range(candle_storage, message_type, from_date, to_date)
 
 			if len(all_candles) > 0:
 				# first orders by volume desc will be our biggest candle
@@ -147,4 +153,5 @@ class biggest_candle_script(IAnalyticsScript):
 		)
 
 		return Task.CompletedTask
+
 ```

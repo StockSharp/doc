@@ -10,11 +10,11 @@ namespace StockSharp.Algo.Analytics
 	/// </summary>
 	public class ChartDrawScript : IAnalyticsScript
 	{
-		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, TimeSpan timeFrame, CancellationToken cancellationToken)
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
 		{
 			if (securities.Length == 0)
 			{
-				logs.AddWarningLog("No instruments.");
+				logs.LogWarning("No instruments.");
 				return Task.CompletedTask;
 			}
 
@@ -31,7 +31,7 @@ namespace StockSharp.Algo.Analytics
 				var volsSeries = new Dictionary<DateTimeOffset, decimal>();
 
 				// get candle storage
-				var candleStorage = storage.GetTimeFrameCandleMessageStorage(security, timeFrame, drive, format);
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
@@ -49,6 +49,7 @@ namespace StockSharp.Algo.Analytics
 		}
 	}
 }
+
 ```
 
 ## Overview
@@ -57,11 +58,11 @@ This script is designed to draw charts based on the price and volume data of fin
 
 ## `IAnalyticsScript` Interface
 
-The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method, which is necessary for performing the script's analytical operations.
+The [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) interface ensures that any implementing analytical script will have the [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,StockSharp.Messages.DataType,System.Threading.CancellationToken)) method, which is necessary for performing the script's analytical operations.
 
 ### `Run` Method
 
-The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.TimeSpan,System.Threading.CancellationToken)) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
+The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogReceiver,StockSharp.Algo.Analytics.IAnalyticsPanel,StockSharp.Messages.SecurityId[],System.DateTime,System.DateTime,StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,StockSharp.Messages.DataType,System.Threading.CancellationToken)) method is the entry point of an analytical script, where actual data processing and analytical operations are performed.
 
 #### Parameters:
 
@@ -73,7 +74,7 @@ The [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging.ILogR
 - `storage`: An instance of [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) allowing access to the market data storage.
 - `drive`: Represents [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) to specify the location of market data storage.
 - `format`: A [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) value indicating the market data format.
-- `timeFrame`: [TimeSpan](xref:System.TimeSpan) indicating the timeframe for the market data, such as 1 hour or 1 day.
+- `dataType`: [DataType](xref:StockSharp.Messages.DataType) describing the requested market data type and its parameters (for example, the candle time-frame).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken) monitoring for cancellation requests.
 
 #### Returns:
@@ -89,7 +90,7 @@ The `ChartDrawScript` class specifically processes market data for each provided
 1. Check for the presence of instruments to process. If none are available, log a warning and complete the task.
 2. Create a line chart and a histogram using the [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2) method.
 3. Iterate through each security and check for cancellation requests.
-4. Get the candle storage using the `storage.GetTimeFrameCandleMessageStorage` method.
+4. Get the candle storage using the `storage.GetCandleMessageStorage` method.
 5. Load candle data within the specified date range.
 6. Fill dictionaries with open time series data, corresponding closing prices, and total volumes.
 7. Draw series data on charts using `lineChart.Append` and `histogramChart.Append` methods.
