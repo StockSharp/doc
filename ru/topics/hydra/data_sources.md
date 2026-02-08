@@ -124,6 +124,16 @@
 | [Zaif](../api/connectors/crypto_exchanges/zaif.md)                 | [Настройки коннектора Zaif ](../api/connectors/crypto_exchanges/zaif/configuration_zaif.md)                | [Графическое конфигурирование Zaif ](../api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md)                |
 | [ZB](../api/connectors/crypto_exchanges/zb.md)                     | [Настройки коннектора ZB](../api/connectors/crypto_exchanges/zb/configuration_zb.md)                     | [Графическое конфигурирование ZB](../api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md)                 |
 
+## DEX
+
+| Коннектор                       | Настройки коннектора                                                   | Графическое конфигурирование                                                  |
+| ------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Aster](../api/connectors/crypto_exchanges/aster.md)                     | [Настройки коннектора Aster](../api/connectors/crypto_exchanges/aster/configuration_aster.md)                     | [Графическое конфигурирование Aster](../api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md)                     |
+| [edgeX](../api/connectors/crypto_exchanges/edgex.md)                     | [Настройки коннектора edgeX](../api/connectors/crypto_exchanges/edgex/configuration_edgex.md)                     | [Графическое конфигурирование edgeX](../api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md)                     |
+| [Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid.md)                     | [Настройки коннектора Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md)                     | [Графическое конфигурирование Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md)                     |
+| [Ligther](../api/connectors/crypto_exchanges/ligther.md)                     | [Настройки коннектора Ligther](../api/connectors/crypto_exchanges/ligther/configuration_ligther.md)                     | [Графическое конфигурирование Ligther](../api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md)                     |
+| [Paradex](../api/connectors/crypto_exchanges/paradex.md)                     | [Настройки коннектора Paradex](../api/connectors/crypto_exchanges/paradex/configuration_paradex.md)                     | [Графическое конфигурирование Paradex](../api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md)                     |
+
 ## Общие
 
 | Коннектор              | Настройки коннектора                                                 | Графическое конфигурирование                                  |

@@ -105,6 +105,16 @@ At the moment, [Hydra](../hydra.md) supports the following sources:
 | [Zaif](../api/connectors/crypto_exchanges/zaif.md)                 | [Configuration Zaif](../api/connectors/crypto_exchanges/zaif/configuration_zaif.md)                 | [Graphical configuration Zaif](../api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md)                  |
 | [ZB](../api/connectors/crypto_exchanges/zb.md)                     | [Configuration ZB](../api/connectors/crypto_exchanges/zb/configuration_zb.md)                     | [Graphical configuration ZB](../api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md)                  |
 
+## DEX
+
+| Connectors                      | Connector settings                                              | Graphical configuration                                                   |
+| ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| [Aster](../api/connectors/crypto_exchanges/aster.md)           | [Configuration Aster](../api/connectors/crypto_exchanges/aster/configuration_aster.md)           | [Graphical configuration Aster](../api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md)            |
+| [edgeX](../api/connectors/crypto_exchanges/edgex.md)       | [Configuration edgeX](../api/connectors/crypto_exchanges/edgex/configuration_edgex.md)       | [Graphical configuration edgeX](../api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md)        |
+| [Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid.md)             | [Configuration Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md)             | [Graphical configuration Hyperliquid](../api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md)              |
+| [Ligther](../api/connectors/crypto_exchanges/ligther.md)               | [Configuration Ligther](../api/connectors/crypto_exchanges/ligther/configuration_ligther.md)               | [Graphical configuration Ligther](../api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md)                |
+| [Paradex](../api/connectors/crypto_exchanges/paradex.md)                 | [Configuration Paradex](../api/connectors/crypto_exchanges/paradex/configuration_paradex.md)                 | [Graphical configuration Paradex](../api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md)                  |
+
 ## Common
 
 | Connectors             | Connector settings                                                   | Graphical configuration                                  |

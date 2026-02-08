@@ -1618,6 +1618,53 @@
           href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
       - name: Вывод средств
         href: api/connectors/crypto_exchanges/withdraw.md
+    - name: DEX
+      items:
+      - name: Aster
+        href: api/connectors/crypto_exchanges/aster.md
+        items:
+        - name: Настройки коннектора Aster
+          href: api/connectors/crypto_exchanges/aster/configuration_aster.md
+        - name: Графическое конфигурирование Aster
+          href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
+        - name: Инициализация адаптера Aster
+          href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: edgeX
+        href: api/connectors/crypto_exchanges/edgex.md
+        items:
+        - name: Настройки коннектора edgeX
+          href: api/connectors/crypto_exchanges/edgex/configuration_edgex.md
+        - name: Графическое конфигурирование edgeX
+          href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
+        - name: Инициализация адаптера edgeX
+          href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Hyperliquid
+        href: api/connectors/crypto_exchanges/hyperliquid.md
+        items:
+        - name: Настройки коннектора Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md
+        - name: Графическое конфигурирование Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
+        - name: Инициализация адаптера Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Ligther
+        href: api/connectors/crypto_exchanges/ligther.md
+        items:
+        - name: Настройки коннектора Ligther
+          href: api/connectors/crypto_exchanges/ligther/configuration_ligther.md
+        - name: Графическое конфигурирование Ligther
+          href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
+        - name: Инициализация адаптера Ligther
+          href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: Настройки коннектора Paradex
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: Графическое конфигурирование Paradex
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: Инициализация адаптера Paradex
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
     - name: Общие
       items:
       - name: CSV

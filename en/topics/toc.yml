@@ -1470,6 +1470,53 @@
           href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
       - name: Withdraw
         href: api/connectors/crypto_exchanges/withdraw.md
+    - name: DEX
+      items:
+      - name: Aster
+        href: api/connectors/crypto_exchanges/aster.md
+        items:
+        - name: Configuration Aster
+          href: api/connectors/crypto_exchanges/aster/configuration_aster.md
+        - name: Graphical configuration Aster
+          href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
+        - name: Adapter initialization Aster
+          href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: edgeX
+        href: api/connectors/crypto_exchanges/edgex.md
+        items:
+        - name: Configuration edgeX
+          href: api/connectors/crypto_exchanges/edgex/configuration_edgex.md
+        - name: Graphical configuration edgeX
+          href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
+        - name: Adapter initialization edgeX
+          href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Hyperliquid
+        href: api/connectors/crypto_exchanges/hyperliquid.md
+        items:
+        - name: Configuration Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md
+        - name: Graphical configuration Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
+        - name: Adapter initialization Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Ligther
+        href: api/connectors/crypto_exchanges/ligther.md
+        items:
+        - name: Configuration Ligther
+          href: api/connectors/crypto_exchanges/ligther/configuration_ligther.md
+        - name: Graphical configuration Ligther
+          href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
+        - name: Adapter initialization Ligther
+          href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: Configuration Paradex
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: Graphical configuration Paradex
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: Adapter initialization Paradex
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
     - name: Common
       items:
       - name: CSV
