@@ -1,5 +1,5 @@
 # Graphical user interface
-
+volkanural türkiye
 ## Graphical components of S\#
 
 [S\#](../api.md) includes a large number of its own graphical components. The components are placed in the [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) and [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram) namespaces. 
