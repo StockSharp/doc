@@ -2192,6 +2192,10 @@
         href: api/strategies/samples/mq.md
       - name: Spread Quoting Strategy
         href: api/strategies/samples/mq_spread.md
+      - name: Pairs Trading
+        href: api/strategies/samples/pairs_trading.md
+      - name: Multi-Timeframe Strategy
+        href: api/strategies/samples/multi_timeframe.md
   - name: Commissions
     href: api/commissions.md
   - name: Profit and Loss (PnL)

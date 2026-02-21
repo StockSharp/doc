@@ -10,7 +10,7 @@
 2. Запрашивает список инструментов у биржи через API.
 3. Для каждого полученного инструмента создает сообщение [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), заполняя его данными об инструменте.
 4. Проверяет, соответствует ли инструмент критериям поиска.
-5. Отправляет созданное сообщение [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) через метод **SendOutMessage**.
+5. Отправляет созданное сообщение [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) через метод **SendOutMessageAsync**.
 6. После обработки всех инструментов отправляет сообщение о завершении поиска.
 
 Ниже приведен пример реализации метода SecurityLookupAsync на основе адаптера для биржи Coinbase. При создании собственного адаптера необходимо адаптировать этот код под API используемой биржи.
@@ -59,7 +59,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				continue;
 
 			// Отправляем сообщение с информацией об инструменте
-			SendOutMessage(secMsg);
+			await SendOutMessageAsync(secMsg, cancellationToken);
 
 			// Уменьшаем счетчик оставшихся инструментов
 			if (--left <= 0)
@@ -71,7 +71,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 	}
 
 	// Отправляем сообщение о завершении поиска
-	SendSubscriptionResult(lookupMsg);
+	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
 

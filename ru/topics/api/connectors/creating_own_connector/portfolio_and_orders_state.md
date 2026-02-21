@@ -6,13 +6,13 @@
 
 Для запроса состояния портфеля реализуется метод **PortfolioLookupAsync**. Этот метод обычно выполняет следующие действия:
 
-1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Threading.CancellationToken,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe).
 3. В случае подписки:
   - Отправляет сообщение [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) с информацией о портфеле.
   - Запрашивает текущие балансы счетов у биржи.
   - Для каждого счета создает и отправляет сообщение [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) с информацией о позиции.
-4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage,System.Threading.CancellationToken)).
 
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)
@@ -20,18 +20,18 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 	var transId = lookupMsg.TransactionId;
 
 	// Отправляем подтверждение о получении запроса
-	SendSubscriptionReply(transId);
+	await SendSubscriptionReplyAsync(transId, cancellationToken);
 
 	if (!lookupMsg.IsSubscribe)
 		return;
 
 	// Отправляем сообщение с информацией о портфеле
-	SendOutMessage(new PortfolioMessage
+	await SendOutMessageAsync(new PortfolioMessage
 	{
 		PortfolioName = PortfolioName,
 		BoardCode = BoardCodes.Coinbase,
 		OriginalTransactionId = transId,
-	});
+	}, cancellationToken);
 
 	// Запрашиваем текущие балансы счетов
 	var accounts = await _restClient.GetAccounts(cancellationToken);
@@ -39,7 +39,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 	foreach (var account in accounts)
 	{
 		// Для каждого счета создаем и отправляем сообщение с информацией о позиции
-		SendOutMessage(new PositionChangeMessage
+		await SendOutMessageAsync(new PositionChangeMessage
 		{
 			PortfolioName = PortfolioName,
 			SecurityId = new SecurityId
@@ -50,11 +50,11 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 			ServerTime = CurrentTime.ConvertToUtc(),
 		}
 		.TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
-		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
+		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true), cancellationToken);
 	}
 
 	// Отправляем сообщение об успешном завершении подписки
-	SendSubscriptionResult(lookupMsg);
+	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
 
@@ -62,19 +62,19 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 Для запроса состояния заявок реализуется метод **OrderStatusAsync**. Этот метод обычно выполняет следующие действия:
 
-1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Отправляет подтверждение о получении запроса с помощью [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Threading.CancellationToken,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe).
 3. В случае подписки:
   - Запрашивает список текущих заявок у биржи.
   - Для каждой заявки создает и отправляет сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) с информацией о заявке.
   - Если требуется, устанавливает подписку на получение обновлений по заявкам в реальном времени.
-4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Отправляет сообщение о результате подписки с помощью [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage,System.Threading.CancellationToken)).
 
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
 	// Отправляем подтверждение о получении запроса
-	SendSubscriptionReply(statusMsg.TransactionId);
+	await SendSubscriptionReplyAsync(statusMsg.TransactionId, cancellationToken);
 
 	if (!statusMsg.IsSubscribe)
 		return;
@@ -92,7 +92,7 @@ public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, C
 	}
 
 	// Отправляем сообщение об успешном завершении подписки
-	SendSubscriptionResult(statusMsg);
+	await SendSubscriptionResultAsync(statusMsg, cancellationToken);
 }
 
 private void ProcessOrder(Order order, long originTransId)
@@ -103,7 +103,7 @@ private void ProcessOrder(Order order, long originTransId)
 	var state = order.Status.ToOrderState();
 
 	// Создаем и отправляем сообщение с информацией о заявке
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
 		DataTypeEx = DataType.Transactions,
@@ -120,7 +120,7 @@ private void ProcessOrder(Order order, long originTransId)
 		TimeInForce = order.TimeInForce.ToTimeInForce(),
 		Balance = (decimal?)order.LeavesQuantity,
 		HasOrderInfo = true,
-	});
+	}, cancellationToken);
 }
 ```
 

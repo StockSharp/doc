@@ -4,11 +4,11 @@ When creating your own adapter for working with an exchange, you need to impleme
 
 Schematically, the algorithm for processing a subscription or unsubscription request looks like this:
 
-1. Sends a confirmation of receiving the subscription request using the [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)) method.
+1. Sends a confirmation of receiving the subscription request using the [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)) method.
 2. Checks whether the request is a subscription or unsubscription using the [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe) property.
 3. In case of a subscription, sets up a subscription to receive real-time data via WebSocket or another mechanism (specific to each exchange).
 4. In case of an unsubscription, cancels the corresponding subscription (specific to each exchange).
-5. Sends a message about the subscription result using the [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)) or [SendSubscriptionFinished](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinished(System.Int64,System.Nullable{System.DateTimeOffset})) methods, depending on the subscription type and the operation result.
+5. Sends a message about the subscription result using the [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) or [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Nullable{System.DateTimeOffset})) methods, depending on the subscription type and the operation result.
 
 ## Candle Data
 
@@ -47,7 +47,7 @@ To subscribe to candle data, the **OnTFCandlesSubscriptionAsync** method is impl
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Send confirmation of receiving the subscription request
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
@@ -87,7 +87,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 					}
 
 					// Send information about each historical candle
-					SendOutMessage(new TimeFrameCandleMessage
+					await SendOutMessageAsync(new TimeFrameCandleMessage
 					{
 						OpenPrice = (decimal)candle.Open,
 						ClosePrice = (decimal)candle.Close,
@@ -99,7 +99,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 						// In case of identifying data by subscription, filling instrument information is not required
 						OriginalTransactionId = mdMsg.TransactionId,
-					});
+					}, cancellationToken);
 
 					if (--left <= 0)
 					{
@@ -123,14 +123,14 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 			// Subscribe to receive new candles in real time
 			_candlesTransIds[symbol] = mdMsg.TransactionId;
 			await _socketClient.SubscribeCandles(symbol, cancellationToken);
-	
+
 			// Notify that the subscription has transitioned to online status
-			SendSubscriptionResult(mdMsg);
+			await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 		}
 		else
 		{
 			// Send a response that the subscription is finished (not online)
-			SendSubscriptionFinished(mdMsg.TransactionId);
+			await SendSubscriptionFinishedAsync(mdMsg.TransactionId, cancellationToken);
 		}
 	}
 	else
@@ -144,17 +144,17 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 ### Processing Candle Data
 
-To process candle data received from the exchange in real time, a method with code like in the **SessionOnCandleReceived** method is usually implemented. This method converts the received data into a [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) message and sends it using the SendOutMessage method.
+To process candle data received from the exchange in real time, a method with code like in the **SessionOnCandleReceived** method is usually implemented. This method converts the received data into a [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) message and sends it using the SendOutMessageAsync method.
 
 ```cs
-private void SessionOnCandleReceived(Ohlc candle)
+private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken cancellationToken)
 {
 	// Check if there is an active subscription to candles for this instrument
 	if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
 		return;
 
 	// Create and send a message about a new candle
-	SendOutMessage(new TimeFrameCandleMessage
+	await SendOutMessageAsync(new TimeFrameCandleMessage
 	{
 		OpenPrice = (decimal)candle.Open,
 		ClosePrice = (decimal)candle.Close,
@@ -166,7 +166,7 @@ private void SessionOnCandleReceived(Ohlc candle)
 
 		// In case of identifying data by subscription, filling instrument information is not required
 		OriginalTransactionId = transId,
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -181,7 +181,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 {
 	// Send confirmation of receiving the subscription request
 	// This informs the system that the request has been received and is being processed
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Convert the instrument identifier to a symbol understood by the exchange
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -194,7 +194,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 		// Send a message about successful subscription
 		// This informs the system that the subscription is set up and data will be received
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -207,13 +207,13 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 ### Processing Level 1 Data
 
-To process Level 1 data received from the exchange in real time, a method with code like in the **SessionOnTickerChanged** example is usually implemented. This method converts the received data into a [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) message and sends it using the SendOutMessage method.
+To process Level 1 data received from the exchange in real time, a method with code like in the **SessionOnTickerChanged** example is usually implemented. This method converts the received data into a [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) message and sends it using the SendOutMessageAsync method.
 
 ```cs
-private void SessionOnTickerChanged(Ticker ticker)
+private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken cancellationToken)
 {
 	// Create a message with Level 1 data changes
-	SendOutMessage(new Level1ChangeMessage
+	await SendOutMessageAsync(new Level1ChangeMessage
 	{
 		// Specify the instrument identifier
 		SecurityId = ticker.Product.ToStockSharp(),
@@ -233,7 +233,7 @@ private void SessionOnTickerChanged(Ticker ticker)
 	.TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
 	.TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
 	.TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
-	);
+	, cancellationToken);
 }
 ```
 
@@ -259,7 +259,7 @@ To subscribe to order book changes, the **OnMarketDepthSubscriptionAsync** metho
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Send confirmation of receiving the subscription request
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Convert the instrument identifier to a symbol understood by the exchange
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -271,7 +271,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
 		// Send a message about successful subscription
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -284,10 +284,10 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 ### Processing Order Book Data
 
-To process order book data received from the exchange in real time, a method with code like in the **SessionOnOrderBookReceived** method is usually implemented. This method converts the received data into a [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) message and sends it using the SendOutMessage method.
+To process order book data received from the exchange in real time, a method with code like in the **SessionOnOrderBookReceived** method is usually implemented. This method converts the received data into a [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) message and sends it using the SendOutMessageAsync method.
 
 ```cs
-private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes)
+private async ValueTask SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes, CancellationToken cancellationToken)
 {
 	var bids = new List<QuoteChange>();
 	var asks = new List<QuoteChange>();
@@ -301,7 +301,7 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 	}
 
 	// Create and send a message with changes in the order book
-	SendOutMessage(new QuoteChangeMessage
+	await SendOutMessageAsync(new QuoteChangeMessage
 	{
 		SecurityId = symbol.ToStockSharp(),
 		Bids = bids.ToArray(),
@@ -312,7 +312,7 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 		// If the exchange always sends only full order books and does not support incrementality,
 		// then setting this property is not required at all
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -326,7 +326,7 @@ To subscribe to tick data, the **OnTicksSubscriptionAsync** method is implemente
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Send confirmation of receiving the subscription request
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
@@ -362,7 +362,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 					}
 
 					// Send information about each historical trade
-					SendOutMessage(new ExecutionMessage
+					await SendOutMessageAsync(new ExecutionMessage
 					{
 						// Set that the message carries information about a tick trade
 						// (not a transaction like an order or own trade)
@@ -378,7 +378,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						// so that the external code can understand which subscription the data was received for.
 						// In case of identifying data by subscription, filling instrument information is not required
 						OriginalTransactionId = mdMsg.TransactionId,
-					});
+					}, cancellationToken);
 
 					if (--left <= 0)
 					{
@@ -396,7 +396,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 				from = last;
 			}
 		}
-		
+
 		if (!mdMsg.IsHistoryOnly())
 		{
 			// Subscribe to receive new trades in real time
@@ -404,7 +404,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 		}
 
 		// Send a message about successful subscription
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -416,13 +416,13 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 ### Processing Tick Data
 
-To process tick data received from the exchange in real time, a method with code like in the **SessionOnTradeReceived** method is usually implemented. This method converts the received data into an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with the [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) type and sends it using the SendOutMessage method.
+To process tick data received from the exchange in real time, a method with code like in the **SessionOnTradeReceived** method is usually implemented. This method converts the received data into an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with the [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) type and sends it using the SendOutMessageAsync method.
 
 ```cs
-private void SessionOnTradeReceived(Trade trade)
+private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
 {
 	// Create and send a message about a new trade
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		// Set that the message carries information about a tick trade
 		// (not a transaction like an order or own trade)
@@ -434,7 +434,7 @@ private void SessionOnTradeReceived(Trade trade)
 		TradeVolume = (decimal)trade.Size,
 		ServerTime = trade.Time,
 		OriginSide = trade.Side.ToSide(),
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -450,7 +450,7 @@ Below is an example implementation of this method taken from the [BitStamp](http
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Send confirmation of receiving the subscription request
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Convert the instrument identifier to a currency pair
 	var symbol = mdMsg.SecurityId.ToCurrency();
@@ -464,7 +464,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 		}
 
 		// Send a message about successful subscription
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 		// Unsubscribe from receiving order log
@@ -475,10 +475,10 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 When processing order log data received from the exchange, a separate method is usually used, which converts the received data into [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) messages with the [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) type:
 
 ```cs
-private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
+private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
 {
 	// Create and send a message with information about a new entry in the order log
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,
 		SecurityId = symbol.ToStockSharp(),
@@ -488,7 +488,7 @@ private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
 		OrderId = order.Id,
 		Side = order.Type.ToSide(),
 		OrderState = state,
-	});
+	}, cancellationToken);
 }
 ```
 

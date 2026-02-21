@@ -89,7 +89,7 @@ To improve the user experience when working with adapter settings, it is recomme
 	GroupName = LocalizedStrings.CryptocurrencyKey)]
 [MessageAdapterCategory(MessageAdapterCategories.Crypto | MessageAdapterCategories.RealTime | MessageAdapterCategories.OrderLog |
 	MessageAdapterCategories.Free | MessageAdapterCategories.Level1 | MessageAdapterCategories.Transactions)]
-public partial class CoinbaseMessageAdapter : AsyncMessageAdapter, IKeySecretAdapter, IPassphraseAdapter
+public partial class CoinbaseMessageAdapter : MessageAdapter, IKeySecretAdapter, IPassphraseAdapter
 ```
 
 Correct implementation of settings storage and the use of basic interfaces allows creating a more user-friendly and understandable adapter that is easily integrated into the StockSharp ecosystem.

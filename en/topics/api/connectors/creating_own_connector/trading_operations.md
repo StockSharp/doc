@@ -32,7 +32,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 
 			var withdrawId = await _restClient.Withdraw(regMsg.SecurityId.SecurityCode, regMsg.Volume, condition.WithdrawInfo, cancellationToken);
 
-			SendOutMessage(new ExecutionMessage
+			await SendOutMessageAsync(new ExecutionMessage
 			{
 				DataTypeEx = DataType.Transactions,
 				OrderStringId = withdrawId,
@@ -40,7 +40,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 				OriginalTransactionId = regMsg.TransactionId,
 				OrderState = OrderStates.Done,
 				HasOrderInfo = true,
-			});
+			}, cancellationToken);
 
 			await PortfolioLookupAsync(null, cancellationToken);
 			return;
@@ -65,7 +65,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 	// Processing the order registration result
 	if (orderState == OrderStates.Failed)
 	{
-		SendOutMessage(new ExecutionMessage
+		await SendOutMessageAsync(new ExecutionMessage
 		{
 			DataTypeEx = DataType.Transactions,
 			ServerTime = result.CreationTime,
@@ -73,7 +73,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 			OrderState = OrderStates.Failed,
 			Error = new InvalidOperationException(),
 			HasOrderInfo = true,
-		});
+		}, cancellationToken);
 	}
 }
 ```

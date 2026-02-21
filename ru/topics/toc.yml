@@ -2340,6 +2340,10 @@
         href: api/strategies/samples/mq.md
       - name: Стратегия котирования по спреду
         href: api/strategies/samples/mq_spread.md
+      - name: Парный трейдинг
+        href: api/strategies/samples/pairs_trading.md
+      - name: Мульти-таймфрейм стратегия
+        href: api/strategies/samples/multi_timeframe.md
   - name: Комиссии
     href: api/commissions.md
   - name: Прибыль и убытки (PnL)

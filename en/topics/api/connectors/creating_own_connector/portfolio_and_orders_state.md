@@ -6,13 +6,13 @@ When creating your own adapter for working with an exchange, it is necessary to 
 
 To request the portfolio state, the **PortfolioLookupAsync** method is implemented. This method usually performs the following actions:
 
-1. Sends a confirmation of receiving the request using [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Sends a confirmation of receiving the request using [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)).
 2. Checks whether the request is a subscription or unsubscription using the [IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe) property.
 3. In case of a subscription:
   - Sends a [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) message with information about the portfolio.
   - Requests the current account balances from the exchange.
   - For each account, creates and sends a [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) message with information about the position.
-4. Sends a message about the subscription result using [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Sends a message about the subscription result using [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)
@@ -20,18 +20,18 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 	var transId = lookupMsg.TransactionId;
 
 	// Send confirmation of receiving the request
-	SendSubscriptionReply(transId);
+	await SendSubscriptionReplyAsync(transId, cancellationToken);
 
 	if (!lookupMsg.IsSubscribe)
 		return;
 
 	// Send a message with information about the portfolio
-	SendOutMessage(new PortfolioMessage
+	await SendOutMessageAsync(new PortfolioMessage
 	{
 		PortfolioName = PortfolioName,
 		BoardCode = BoardCodes.Coinbase,
 		OriginalTransactionId = transId,
-	});
+	}, cancellationToken);
 
 	// Request current account balances
 	var accounts = await _restClient.GetAccounts(cancellationToken);
@@ -39,7 +39,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 	foreach (var account in accounts)
 	{
 		// For each account, create and send a message with information about the position
-		SendOutMessage(new PositionChangeMessage
+		await SendOutMessageAsync(new PositionChangeMessage
 		{
 			PortfolioName = PortfolioName,
 			SecurityId = new SecurityId
@@ -50,11 +50,11 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 			ServerTime = CurrentTime.ConvertToUtc(),
 		}
 		.TryAdd(PositionChangeTypes.CurrentValue, (decimal)account.Available, true)
-		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true));
+		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true), cancellationToken);
 	}
 
 	// Send a message about successful completion of the subscription
-	SendSubscriptionResult(lookupMsg);
+	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
 
@@ -62,19 +62,19 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 To request the orders state, the **OrderStatusAsync** method is implemented. This method usually performs the following actions:
 
-1. Sends a confirmation of receiving the request using [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Sends a confirmation of receiving the request using [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)).
 2. Checks whether the request is a subscription or unsubscription using the [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe) property.
 3. In case of a subscription:
   - Requests the list of current orders from the exchange.
   - For each order, creates and sends an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with information about the order.
   - If necessary, sets up a subscription to receive order updates in real time.
-4. Sends a message about the subscription result using [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)).
+4. Sends a message about the subscription result using [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)).
 
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
 	// Send confirmation of receiving the request
-	SendSubscriptionReply(statusMsg.TransactionId);
+	await SendSubscriptionReplyAsync(statusMsg.TransactionId, cancellationToken);
 
 	if (!statusMsg.IsSubscribe)
 		return;
@@ -83,7 +83,7 @@ public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, C
 	var orders = await _restClient.GetOrders(cancellationToken);
 
 	foreach (var order in orders)
-		ProcessOrder(order, statusMsg.TransactionId);
+		await ProcessOrder(order, statusMsg.TransactionId, cancellationToken);
 
 	if (!statusMsg.IsHistoryOnly())
 	{
@@ -92,10 +92,10 @@ public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, C
 	}
 
 	// Send a message about successful completion of the subscription
-	SendSubscriptionResult(statusMsg);
+	await SendSubscriptionResultAsync(statusMsg, cancellationToken);
 }
 
-private void ProcessOrder(Order order, long originTransId)
+private async ValueTask ProcessOrder(Order order, long originTransId, CancellationToken cancellationToken)
 {
 	if (!long.TryParse(order.ClientOrderId, out var transId))
 		return;
@@ -103,7 +103,7 @@ private void ProcessOrder(Order order, long originTransId)
 	var state = order.Status.ToOrderState();
 
 	// Create and send a message with information about the order
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
 		DataTypeEx = DataType.Transactions,
@@ -120,7 +120,7 @@ private void ProcessOrder(Order order, long originTransId)
 		TimeInForce = order.TimeInForce.ToTimeInForce(),
 		Balance = (decimal?)order.LeavesQuantity,
 		HasOrderInfo = true,
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -129,10 +129,10 @@ private void ProcessOrder(Order order, long originTransId)
 To process real-time order state updates, a separate method is usually implemented, which is called when receiving corresponding events from the WebSocket client:
 
 ```cs
-private void SessionOnOrderReceived(Order order)
+private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
 	// Process the received order update
 	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
-	ProcessOrder(order, 0);
+	await ProcessOrder(order, 0, cancellationToken);
 }
 ```

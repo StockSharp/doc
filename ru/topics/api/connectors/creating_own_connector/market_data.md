@@ -4,11 +4,11 @@
 
 Схематично алгоритм обработки запроса на подписку или отписку выглядит так:
 
-1. Отправляет подтверждение о получении запроса на подписку с помощью метода [SendSubscriptionReply](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReply(System.Int64,System.Exception)).
+1. Отправляет подтверждение о получении запроса на подписку с помощью метода [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Threading.CancellationToken,System.Exception)).
 2. Проверяет, является ли запрос подпиской или отпиской, используя свойство [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe).
 3. В случае подписки устанавливает подписку на получение данных в реальном времени через WebSocket или другой механизм (специфично для каждой биржи).
 4. В случае отписки отменяет соответствующую подписку (специфично для каждой биржи).
-5. Отправляет сообщение о результате подписки с помощью методов [SendSubscriptionResult](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResult(StockSharp.Messages.ISubscriptionMessage)) или [SendSubscriptionFinished](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinished(System.Int64,System.Nullable{System.DateTimeOffset})), в зависимости от типа подписки и результата операции.
+5. Отправляет сообщение о результате подписки с помощью методов [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage,System.Threading.CancellationToken)) или [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Threading.CancellationToken,System.Nullable{System.DateTime})), в зависимости от типа подписки и результата операции.
 
 ## Свечные данные
 
@@ -47,7 +47,7 @@ public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Отправляем подтверждение о получении запроса на подписку
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
@@ -87,7 +87,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 					}
 
 					// Отправляем информацию о каждой исторической свече
-					SendOutMessage(new TimeFrameCandleMessage
+					await SendOutMessageAsync(new TimeFrameCandleMessage
 					{
 						OpenPrice = (decimal)candle.Open,
 						ClosePrice = (decimal)candle.Close,
@@ -99,7 +99,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 						// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
 						OriginalTransactionId = mdMsg.TransactionId,
-					});
+					}, cancellationToken);
 
 					if (--left <= 0)
 					{
@@ -123,14 +123,14 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 			// Подписываемся на получение новых свечей в реальном времени
 			_candlesTransIds[symbol] = mdMsg.TransactionId;
 			await _socketClient.SubscribeCandles(symbol, cancellationToken);
-	
+
 			// извещаем что подписка перешла в статус online
-			SendSubscriptionResult(mdMsg);
+			await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 		}
 		else
 		{
 			// отправляем ответ что подписка завершена (не онлайн)
-			SendSubscriptionFinished(mdMsg.TransactionId);
+			await SendSubscriptionFinishedAsync(mdMsg.TransactionId, cancellationToken);
 		}
 	}
 	else
@@ -144,7 +144,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 ### Обработка свечных данных
 
-Для обработки свечных данных, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnCandleReceived**. Этот метод преобразует полученные данные в сообщение [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) и отправляет его с помощью метода SendOutMessage.
+Для обработки свечных данных, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnCandleReceived**. Этот метод преобразует полученные данные в сообщение [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) и отправляет его с помощью метода SendOutMessageAsync.
 
 ```cs
 private void SessionOnCandleReceived(Ohlc candle)
@@ -154,7 +154,7 @@ private void SessionOnCandleReceived(Ohlc candle)
 		return;
 
 	// Создаем и отправляем сообщение о новой свече
-	SendOutMessage(new TimeFrameCandleMessage
+	await SendOutMessageAsync(new TimeFrameCandleMessage
 	{
 		OpenPrice = (decimal)candle.Open,
 		ClosePrice = (decimal)candle.Close,
@@ -166,7 +166,7 @@ private void SessionOnCandleReceived(Ohlc candle)
 
 		// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
 		OriginalTransactionId = transId,
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -182,7 +182,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 {
 	// Отправляем подтверждение о получении запроса на подписку
 	// Это информирует систему о том, что запрос получен и обрабатывается
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Преобразуем идентификатор инструмента в символ, понятный бирже
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -195,7 +195,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 		// Отправляем сообщение об успешной подписке
 		// Это информирует систему о том, что подписка установлена и данные будут поступать
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -208,13 +208,13 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 ### Обработка данных Level 1
 
-Для обработки данных Level 1, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом, как в примере **SessionOnTickerChanged**. Этот метод преобразует полученные данные в сообщение [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) и отправляет его с помощью метода SendOutMessage.
+Для обработки данных Level 1, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом, как в примере **SessionOnTickerChanged**. Этот метод преобразует полученные данные в сообщение [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) и отправляет его с помощью метода SendOutMessageAsync.
 
 ```cs
 private void SessionOnTickerChanged(Ticker ticker)
 {
 	// Создаем сообщение с изменениями данных Level 1
-	SendOutMessage(new Level1ChangeMessage
+	await SendOutMessageAsync(new Level1ChangeMessage
 	{
 		// Указываем идентификатор инструмента
 		SecurityId = ticker.Product.ToStockSharp(),
@@ -234,7 +234,7 @@ private void SessionOnTickerChanged(Ticker ticker)
 	.TryAdd(Level1Fields.BestAskPrice, ticker.Ask?.ToDecimal())
 	.TryAdd(Level1Fields.BestBidVolume, ticker.BidSize?.ToDecimal())
 	.TryAdd(Level1Fields.BestAskVolume, ticker.AskSize?.ToDecimal())
-	);
+	, cancellationToken);
 }
 ```
 
@@ -260,7 +260,7 @@ public override bool IsSupportOrderBookIncrements => true;
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Отправляем подтверждение о получении запроса на подписку
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Преобразуем идентификатор инструмента в символ, понятный бирже
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -272,7 +272,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
 		// Отправляем сообщение об успешной подписке
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -285,7 +285,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 ### Обработка данных стакана
 
-Для обработки данных стакана, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnOrderBookReceived**. Этот метод преобразует полученные данные в сообщение [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) и отправляет его с помощью метода SendOutMessage.
+Для обработки данных стакана, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnOrderBookReceived**. Этот метод преобразует полученные данные в сообщение [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) и отправляет его с помощью метода SendOutMessageAsync.
 
 ```cs
 private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes)
@@ -302,7 +302,7 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 	}
 
 	// Создаем и отправляем сообщение с изменениями в стакане
-	SendOutMessage(new QuoteChangeMessage
+	await SendOutMessageAsync(new QuoteChangeMessage
 	{
 		SecurityId = symbol.ToStockSharp(),
 		Bids = bids.ToArray(),
@@ -313,7 +313,7 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 		// Если же бирже передает всегда только целые стаканы и не поддерживает инкрементальность,
 		// то установка этого свойства не требуется вообще
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -327,7 +327,7 @@ private void SessionOnOrderBookReceived(string type, string symbol, IEnumerable<
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Отправляем подтверждение о получении запроса на подписку
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
@@ -363,7 +363,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 					}
 
 					// Отправляем информацию о каждой исторической сделке
-					SendOutMessage(new ExecutionMessage
+					await SendOutMessageAsync(new ExecutionMessage
 					{
 						// устанавливаем что сообщение несет информацию о тиковой сделке
 						// (а не о транзакции как заявка или собственная сделка)
@@ -379,7 +379,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						// чтобы внешний код смог понять, к какой подписке были получены данные.
 						// в случае идентификации данных по подписке заполнение информации об инструменте не требуется
 						OriginalTransactionId = mdMsg.TransactionId,
-					});
+					}, cancellationToken);
 
 					if (--left <= 0)
 					{
@@ -397,7 +397,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 				from = last;
 			}
 		}
-		
+
 		if (!mdMsg.IsHistoryOnly())
 		{
 			// Подписываемся на получение новых сделок в реальном времени
@@ -405,7 +405,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 		}
 
 		// Отправляем сообщение об успешной подписке
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
@@ -417,13 +417,13 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 ### Обработка тиковых данных
 
-Для обработки тиковых данных, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnTradeReceived**. Этот метод преобразует полученные данные в сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) с типом [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) и отправляет его с помощью метода SendOutMessage.
+Для обработки тиковых данных, полученных от биржи в режиме реального времени, обычно реализуется метод с кодом как в методе **SessionOnTradeReceived**. Этот метод преобразует полученные данные в сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) с типом [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) и отправляет его с помощью метода SendOutMessageAsync.
 
 ```cs
 private void SessionOnTradeReceived(Trade trade)
 {
 	// Создаем и отправляем сообщение о новой сделке
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		// устанавливаем что сообщение несет информацию о тиковой сделке
 		// (а не о транзакции как заявка или собственная сделка)
@@ -435,7 +435,7 @@ private void SessionOnTradeReceived(Trade trade)
 		TradeVolume = (decimal)trade.Size,
 		ServerTime = trade.Time,
 		OriginSide = trade.Side.ToSide(),
-	});
+	}, cancellationToken);
 }
 ```
 
@@ -451,7 +451,7 @@ private void SessionOnTradeReceived(Trade trade)
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
 	// Отправляем подтверждение о получении запроса на подписку
-	SendSubscriptionReply(mdMsg.TransactionId);
+	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	// Преобразуем идентификатор инструмента в валютную пару
 	var symbol = mdMsg.SecurityId.ToCurrency();
@@ -465,7 +465,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 		}
 
 		// Отправляем сообщение об успешной подписке
-		SendSubscriptionResult(mdMsg);
+		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 		// Отписываемся от получения лога заявок
@@ -479,7 +479,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
 {
 	// Создаем и отправляем сообщение с информацией о новой записи в логе заявок
-	SendOutMessage(new ExecutionMessage
+	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,
 		SecurityId = symbol.ToStockSharp(),
@@ -489,7 +489,7 @@ private void SessionOnNewOrderLog(string symbol, OrderStates state, Order order)
 		OrderId = order.Id,
 		Side = order.Type.ToSide(),
 		OrderState = state,
-	});
+	}, cancellationToken);
 }
 ```
 

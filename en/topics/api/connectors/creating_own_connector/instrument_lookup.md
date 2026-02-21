@@ -10,7 +10,7 @@ The **SecurityLookupAsync** method usually performs the following actions:
 2. Requests the list of instruments from the exchange via API.
 3. For each received instrument, creates a [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) message, filling it with instrument data.
 4. Checks if the instrument matches the search criteria.
-5. Sends the created [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) message via the **SendOutMessage** method.
+5. Sends the created [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) message via the **SendOutMessageAsync** method.
 6. After processing all instruments, sends a message about the completion of the search.
 
 Below is an example of the implementation of the SecurityLookupAsync method based on the adapter for the Coinbase exchange. When creating your own adapter, you need to adapt this code to the API of the exchange being used.
@@ -59,7 +59,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				continue;
 
 			// Send a message with instrument information
-			SendOutMessage(secMsg);
+			await SendOutMessageAsync(secMsg, cancellationToken);
 
 			// Decrease the counter of remaining instruments
 			if (--left <= 0)
@@ -71,7 +71,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 	}
 
 	// Send a message about the completion of the search
-	SendSubscriptionResult(lookupMsg);
+	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
 
