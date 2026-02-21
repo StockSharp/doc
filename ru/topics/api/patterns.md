@@ -39,8 +39,8 @@ var patternIndicator = new CandlePatternIndicator
 	// Установка нужного паттерна
 	Pattern = new ExpressionCandlePattern("Мой паттерн", new[]
 	{
-		new CandleExpressionCondition("C > O"), // Текущая свеча - растущая
-		new CandleExpressionCondition("pC < pO") // Предыдущая свеча - падающая
+		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Текущая свеча - растущая
+		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Предыдущая свеча - падающая
 	})
 };
 
@@ -90,3 +90,8 @@ if (result.GetValue<bool>())
 ## Стандартные паттерны
 
 Для быстрого создания паттернов на базе существующих можно использовать раздел в нижней части окна редактора паттернов. При нажатии кнопки ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) в нижней части окна добавляет в окно редактирования логику паттерна выбранного из выпадающего списка напротив. Кнопка ![DesignerDeleteButton](../../images/designer_delete_button.png) в нижней части окна удаляет выделенную строку в окне редактирования.
+
+## Расширенные возможности
+
+- [ComplexCandlePattern](xref:StockSharp.Algo.Candles.Patterns.ComplexCandlePattern) — позволяет объединять несколько паттернов в один составной паттерн для более сложного анализа.
+- [ICandlePatternProvider](xref:StockSharp.Algo.Candles.Patterns.ICandlePatternProvider) — интерфейс поставщика паттернов, позволяющий загружать и сохранять пользовательские паттерны.

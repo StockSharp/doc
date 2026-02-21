@@ -7,42 +7,44 @@ private sealed class PortfolioRule : MarketRule<Portfolio, Portfolio>
 {
 	private readonly Func<Portfolio, bool> _changed;
 	private readonly Portfolio _portfolio;
-	private readonly IConnector _connector;
-	public PortfolioRule(Portfolio portfolio, IConnector connector, Func<Portfolio, bool> changed) : base(portfolio)
+	private readonly IPortfolioProvider _provider;
+
+	public PortfolioRule(Portfolio portfolio, IPortfolioProvider provider, Func<Portfolio, bool> changed)
+		: base(portfolio)
 	{
-		if (portfolio == null)
-			throw new ArgumentNullException("portfolio");
-		if (changed == null)
-			throw new ArgumentNullException("changed");
-		_changed = changed;
-		_portfolio = portfolio;
-		_connector = connector;
-		_connector.PortfolioChanged += OnPortfolioChanged;
+		_changed = changed ?? throw new ArgumentNullException(nameof(changed));
+		_portfolio = portfolio ?? throw new ArgumentNullException(nameof(portfolio));
+		_provider = provider ?? throw new ArgumentNullException(nameof(provider));
+		_provider.PortfolioChanged += OnPortfolioChanged;
 	}
+
 	private void OnPortfolioChanged(Portfolio portfolio)
 	{
-		if ((portfolio==_portfolio) && _changed(_portfolio))
+		if (portfolio == _portfolio && _changed(_portfolio))
 			Activate(_portfolio);
 	}
+
 	protected override void DisposeManaged()
 	{
-		_connector.PortfolioChanged -= OnPortfolioChanged;
+		_provider.PortfolioChanged -= OnPortfolioChanged;
 		base.DisposeManaged();
 	}
 }
-		
-public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio portfolio, Unit money)
+
+public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio portfolio, IPortfolioProvider provider, Unit money)
 {
 	if (portfolio == null)
-		throw new ArgumentNullException("portfolio");
+		throw new ArgumentNullException(nameof(portfolio));
 	if (money == null)
-		throw new ArgumentNullException("money");
-	var finishMoney = money.Type == UnitTypes.Limit ? money : portfolio.CurrentValue + money;
-	return new PortfolioRule(portfolio, pf => pf.CurrentValue > finishMoney)
+		throw new ArgumentNullException(nameof(money));
+
+	var finishMoney = money.Type == UnitTypes.Percent ? portfolio.CurrentValue + money : money;
+
+	return new PortfolioRule(portfolio, provider, pf => pf.CurrentValue > finishMoney)
 	{
-		Name = "Увеличение денег портфеля {0} выше {1}".Put(portfolio, finishMoney)
+		Name = $"PF {portfolio.Name} > {finishMoney}"
 	};
-}		
+}
 ```
 
-Правило *PortfolioRule* подписывается на событие [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) и, как только оно вызывается, то проверяется условие на превышение текущего уровня денежных средств в портфеле выше определенного лимита. Если условие возвращает **true**, то активируется правило через метод [MarketRule\<TToken,TArg\>.Activate](xref:StockSharp.Algo.MarketRule`2.Activate).
+Правило *PortfolioRule* подписывается на событие [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) через интерфейс [IPortfolioProvider](xref:StockSharp.BusinessEntities.IPortfolioProvider) и, как только оно вызывается, то проверяется условие на превышение текущего уровня денежных средств в портфеле выше определенного лимита. Если условие возвращает **true**, то активируется правило через метод [MarketRule\<TToken,TArg\>.Activate](xref:StockSharp.Algo.MarketRule`2.Activate).

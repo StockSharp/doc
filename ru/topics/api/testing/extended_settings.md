@@ -6,7 +6,23 @@
 
 - [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) - интервал прихода события о смене времени. Если используются генераторы сделок, сделки будут генерироваться с этой периодичностью. По-умолчанию равно 1 минуте.
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) - минимальное значение задержки выставляемых заявок. По-умолчанию равно TimeSpan.Zero, что означает мгновенное принятие биржей выставляемых заявок. 
-- [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - удовлетворять заявки, если цена "коснулась" уровня (допущение иногда слишком "оптимистично" и для реалистичного тестирования следует выключить режим). Если режим выключен, то лимитные заявки будут удовлетворяться, если цена "прошла сквозь них" хотя бы на 1 шаг. Опция работает во всех режимах кроме ордер лога. По-умолчанию выключено.
+- [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - удовлетворять заявки, если цена "коснулась" уровня (допущение иногда слишком "оптимистично" и для реалистичного тестирования следует выключить режим). Если режим выключен, то лимитные заявки будут удовлетворяться, если цена "прошла сквозь них" хотя бы на 1 шаг. Опция работает во всех режимах кроме ордер лога. По-умолчанию включено.
+- [MarketEmulatorSettings.CandlePrice](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CandlePrice) - цена свечи для исполнения заявок (Middle, Open, High, Low, Close). По-умолчанию Middle.
+- [MarketEmulatorSettings.Failing](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Failing) - процент ошибок регистрации новых заявок. Значение от 0 (нет ошибок) до 100. По-умолчанию выключено (0).
+- [MarketEmulatorSettings.InitialOrderId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialOrderId) - начальный номер, с которого эмулятор будет генерировать идентификаторы заявок.
+- [MarketEmulatorSettings.InitialTradeId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialTradeId) - начальный номер, с которого эмулятор будет генерировать идентификаторы сделок.
+- [MarketEmulatorSettings.SpreadSize](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.SpreadSize) - размер спреда в шагах цены. Используется при генерации стакана из тиковых сделок. По-умолчанию равно 2.
+- [MarketEmulatorSettings.MaxDepth](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MaxDepth) - максимальная глубина стакана, генерируемого из тиков. По-умолчанию равно 5.
+- [MarketEmulatorSettings.PortfolioRecalcInterval](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PortfolioRecalcInterval) - интервал пересчета данных портфеля. Если равен TimeSpan.Zero, пересчет не выполняется.
+- [MarketEmulatorSettings.ConvertTime](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.ConvertTime) - конвертировать время заявок и сделок в биржевое время. По-умолчанию выключено.
+- [MarketEmulatorSettings.TimeZone](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.TimeZone) - информация о часовом поясе биржи.
+- [MarketEmulatorSettings.PriceLimitOffset](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PriceLimitOffset) - сдвиг цены от предыдущей сделки, определяющий границы максимальных и минимальных цен для следующей сессии. По-умолчанию 40%.
+- [MarketEmulatorSettings.IncreaseDepthVolume](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.IncreaseDepthVolume) - добавлять дополнительный объем в стакан при регистрации заявок с большим объемом. По-умолчанию включено.
+- [MarketEmulatorSettings.CheckTradingState](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradingState) - проверять состояние торговой сессии. По-умолчанию выключено.
+- [MarketEmulatorSettings.CheckMoney](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckMoney) - проверять баланс денежных средств. По-умолчанию выключено.
+- [MarketEmulatorSettings.CheckShortable](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckShortable) - проверять возможность коротких позиций. По-умолчанию выключено.
+- [MarketEmulatorSettings.CheckTradableDates](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradableDates) - проверять, являются ли загружаемые даты торговыми. По-умолчанию выключено.
+- [MarketEmulatorSettings.CommissionRules](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CommissionRules) - правила расчета комиссий.
 
 ## Подписки на рыночные данные
 
@@ -94,7 +110,7 @@ var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
 // Создаем подписку на свечи
 var candleSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
 {
 	MarketData =

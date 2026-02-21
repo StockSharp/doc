@@ -1,13 +1,11 @@
 # Pattern Bullish Candle
 
-Bullish Candle is a candlestick pattern characterized by a closing price higher than the opening price, and a lower shadow equal to or exceeding the size of the candle body. This pattern shows a bullish market sentiment with strong support at lower levels.
+Bullish Candle is a candlestick pattern characterized by a closing price higher than the opening price. This pattern shows a bullish market sentiment.
 
 ##### Key Features:
 
 - Opening price is lower than closing price (O < C).
-- Lower shadow is equal to or larger than the body (BS >= B).
-- Upper shadow can be of varying length.
-- Indicates strong bullish pressure after testing lower levels.
+- Indicates bullish pressure in the market.
 
 ![Bullish Candle Pattern](../../../images/bullishcandlepattern.png)
 

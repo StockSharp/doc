@@ -66,7 +66,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 }
 
 // Обработчик события окончания поиска
-private void OnSubscriptionFinished(Subscription subscription)
+private void OnSubscriptionStopped(Subscription subscription)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
@@ -85,7 +85,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 
 // Подписываемся на события
 Connector.SecurityReceived += OnSecurityReceived;
-Connector.SubscriptionFinished += OnSubscriptionFinished;
+Connector.SubscriptionStopped += OnSubscriptionStopped;
 Connector.SubscriptionFailed += OnSubscriptionFailed;
 
 // Отправляем запрос на поиск инструментов
@@ -133,7 +133,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 	}
 	
 	// Подписка на окончание поиска
-	void OnSubscriptionFinished(Subscription sub)
+	void OnSubscriptionStopped(Subscription sub)
 	{
 		if (sub != subscription)
 			return;
@@ -145,10 +145,10 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		
 		// Отписываемся от событий
 		Connector.SecurityReceived -= OnSecurityReceived;
-		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionStopped -= OnSubscriptionStopped;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Обработка ошибок подписки
 	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
 	{
@@ -159,13 +159,13 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		
 		// Отписываемся от событий
 		Connector.SecurityReceived -= OnSecurityReceived;
-		Connector.SubscriptionFinished -= OnSubscriptionFinished;
+		Connector.SubscriptionStopped -= OnSubscriptionStopped;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Подписываемся на события
 	Connector.SecurityReceived += OnSecurityReceived;
-	Connector.SubscriptionFinished += OnSubscriptionFinished;
+	Connector.SubscriptionStopped += OnSubscriptionStopped;
 	Connector.SubscriptionFailed += OnSubscriptionFailed;
 	
 	// Отправляем запрос на поиск

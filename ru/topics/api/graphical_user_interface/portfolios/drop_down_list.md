@@ -9,7 +9,7 @@
 - [PortfolioComboBox.Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) \- список портфелей.
 - [PortfolioComboBox.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) \- выбранный портфель.
 
-Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments*.
 
 ```xaml
 <Window x:Class="SampleAsyncTransactions.MainWindow"

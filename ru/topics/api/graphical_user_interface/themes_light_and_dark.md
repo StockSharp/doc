@@ -9,8 +9,8 @@
 Для установки темы приложения достаточно написать одну строчку. Например, для установки темной темы VisualStudio 2017 необходимо задать строчку:
 
 ```cs
-...                 
-ApplicationThemeHelper.ApplicationThemeName = Theme.VS2017DarkName;
+...
+ThemeExtensions.ApplyDefaultTheme();
 ...
 ```
 

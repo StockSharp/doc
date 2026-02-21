@@ -1,10 +1,10 @@
 # Создание ILogListener
 
-Если необходимо создать свою реализацию [ILogListener](xref:Ecng.Logging.ILogListener) (например, когда требуется сохранять сообщения в базе данных), то можно или унаследоваться от класса [LogListener](xref:Ecng.Logging.LogListener) или напрямую реализовать интерфейс [ILogListener](xref:Ecng.Logging.ILogListener). Через метод [ILogListener.WriteMessages](xref:Ecng.Logging.ILogListener.WriteMessages(System.Collections.Generic.IEnumerable{Ecng.Logging.LogMessage}))**(**[System.Collections.Generic.IEnumerable\<Ecng.Logging.LogMessage\>](xref:System.Collections.Generic.IEnumerable`1) messages **)** передается объект класса [LogMessage](xref:Ecng.Logging.LogMessage). Данный класс содержит информацию об источнике сообщения [LogMessage.Source](xref:Ecng.Logging.LogMessage.Source) (например, стратегия, которая сгенерировала сообщение), тип сообщения [LogMessage.Level](xref:Ecng.Logging.LogMessage.Level) (информация, предупреждение или ошибка), а также сам текст [LogMessage.Message](xref:Ecng.Logging.LogMessage.Message). Ниже в качестве примера приведен код класса [EmailLogListener](xref:Ecng.Logging.EmailLogListener): 
+Если необходимо создать свою реализацию [ILogListener](xref:Ecng.Logging.ILogListener) (например, когда требуется сохранять сообщения в базе данных), то можно или унаследоваться от класса [LogListener](xref:Ecng.Logging.LogListener) или напрямую реализовать интерфейс [ILogListener](xref:Ecng.Logging.ILogListener). Через метод [ILogListener.WriteMessages](xref:Ecng.Logging.ILogListener.WriteMessages(System.Collections.Generic.IEnumerable{Ecng.Logging.LogMessage}))**(**[System.Collections.Generic.IEnumerable\<Ecng.Logging.LogMessage\>](xref:System.Collections.Generic.IEnumerable`1) messages **)** передается коллекция объектов класса [LogMessage](xref:Ecng.Logging.LogMessage). Данный класс содержит информацию об источнике сообщения [LogMessage.Source](xref:Ecng.Logging.LogMessage.Source) (например, стратегия, которая сгенерировала сообщение), тип сообщения [LogMessage.Level](xref:Ecng.Logging.LogMessage.Level) (информация, предупреждение или ошибка), а также сам текст [LogMessage.Message](xref:Ecng.Logging.LogMessage.Message). Ниже в качестве примера приведен код класса [EmailLogListener](xref:Ecng.Logging.EmailLogListener):
 
 ```cs
 /// <summary>
-/// Логгер, отсылающий данные на email. 
+/// Логгер, отсылающий данные на email.
 /// </summary>
 public class EmailLogListener : LogListener
 {
@@ -31,13 +31,16 @@ public class EmailLogListener : LogListener
 	/// </summary>
 	public string To { get; private set; }
 	/// <summary>
-	/// Записать сообщение.
+	/// Записать сообщения.
 	/// </summary>
-	/// <param name="message">Отладочное сообщение.</param>
-	protected override void OnWriteMessage(LogMessage message)
+	/// <param name="messages">Отладочные сообщения.</param>
+	protected override void WriteMessages(IEnumerable<LogMessage> messages)
 	{
-		var email = new SmtpClient();
-		email.Send(new MailMessage(From, To, message.Source.Name + " " + message.Level, message.Message));
+		foreach (var message in messages)
+		{
+			var email = new SmtpClient();
+			email.Send(new MailMessage(From, To, message.Source.Name + " " + message.Level, message.Message));
+		}
 	}
 }
 ```

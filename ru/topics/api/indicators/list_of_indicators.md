@@ -1,6 +1,6 @@
 # Список индикаторов
 
-[S\#](../../api.md) стандартно предоставляет более 140 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые.
+[S\#](../../api.md) стандартно предоставляет более 160 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые.
 
 - [A/D](list_of_indicators/a_d.md) - Acceleration / Deceleration Indicator, измеряет ускорение или замедление движения цены
 - [ADL](list_of_indicators/accumulation_distribution_line.md) - Accumulation/Distribution Line (A/D Line), отслеживает приток или отток денег в ценную бумагу
@@ -32,6 +32,8 @@
 - [CM](list_of_indicators/composite_momentum.md) - Composite Momentum, комбинирует несколько индикаторов импульса
 - [CRSI](list_of_indicators/connors_rsi.md) - Connors RSI, составной индикатор для определения состояний перекупленности и перепроданности
 - [CBCI](list_of_indicators/constance_brown_composite_index.md) - Constance Brown Composite Index, измеряет импульс и силу тренда на рынке
+- [COR](list_of_indicators/correlation.md) - Correlation, измеряет силу и направление линейной связи между двумя величинами
+- [COV](list_of_indicators/covariation.md) - Covariance, измеряет совместную изменчивость двух случайных величин
 - [DI](list_of_indicators/demand_index.md) - Demand Index, сравнивает давление покупок и продаж
 - [DPO](list_of_indicators/dpo.md) - Price oscillator without trend, убирает трендовую составляющую для фокуса на циклах
 - [DSP](list_of_indicators/detrended_synthetic_price.md) - Detrended Synthetic Price, убирает тренды для анализа ценовых колебаний
@@ -162,6 +164,7 @@
 - [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price, (High + Low + 2 × Close) / 4
 - [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average, сглаженная скользящая средняя
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution, измеряет давление покупок и продаж
+- [WVAD](list_of_indicators/williams_variable_accumulation_distribution.md) - Williams Variable Accumulation Distribution, кумулятивный индикатор объёма на основе соотношения цен и объёма
 - [%R](list_of_indicators/williams_r.md) - Williams Percent Range, определяет состояния перекупленности и перепроданности
 - [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI, вариация CCI для определения трендов
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - Zero Lag Exponential Moving Average, уменьшает лаг в расчётах EMA

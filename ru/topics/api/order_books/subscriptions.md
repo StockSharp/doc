@@ -11,7 +11,7 @@
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
 	// Здесь вы можете обработать данные стакана, например, вывести их на экран или использовать в своей торговой стратегии
-	Console.WriteLine($"Получен стакан для {orderBook.SecurityId}. Лучшая цена покупки: {orderBook.GetBestBid()?.Price}, Лучшая цена продажи: {orderBook.GetBestBid()?.Price}");
+	Console.WriteLine($"Получен стакан для {orderBook.SecurityId}. Лучшая цена покупки: {orderBook.GetBestBid()?.Price}, Лучшая цена продажи: {orderBook.GetBestAsk()?.Price}");
 }
 
 // подписка на событие
@@ -48,7 +48,7 @@ connector.UnSubscribe(subscription);
 
 ## Пример использования
 
-Примеры использования стакана заявок доступны в проекте `SampleConnection` на [GitHub](https://github.com/StockSharp/StockSharp/) или в архиве StockSharp API, получаемом через [Installer](../../installer.md). Эти примеры предоставляют практические иллюстрации подключения к торговой системе, подписки на отфильтрованный стакан и обработки получаемых данных, что может служить хорошим стартовым пунктом для разработки собственных торговых стратегий.
+Примеры использования стакана заявок доступны в проекте *Samples\/01\_Basic\/02\_MarketDepths* на [GitHub](https://github.com/StockSharp/StockSharp/) или в архиве StockSharp API, получаемом через [Installer](../../installer.md). Эти примеры предоставляют практические иллюстрации подключения к торговой системе, подписки на отфильтрованный стакан и обработки получаемых данных, что может служить хорошим стартовым пунктом для разработки собственных торговых стратегий.
 
 ## См. также
 

@@ -35,7 +35,7 @@
   ```cs
   class FirstStrategy : Strategy
   {
-      protected override void OnStarted(DateTimeOffset time)
+      protected override void OnStarted2(DateTime time)
       {
           // Подписка на свечи
           var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
@@ -43,19 +43,19 @@
               .WhenCandlesStarted(candleSubscription)
               .Do(ProcessCandle)
               .Apply(this);
-              
+
           // Подписка на тиковые сделки
           var tickSubscription = new Subscription(DataType.Ticks, Security);
           tickSubscription
               .WhenTickTradeReceived(this)
               .Do(ProcessTick)
               .Apply(this);
-              
+
           // Отправляем запросы на подписку
           Subscribe(candleSubscription);
           Subscribe(tickSubscription);
-              
-          base.OnStarted(time);
+
+          base.OnStarted2(time);
       }
       
       // Методы для обработки событий

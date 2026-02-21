@@ -10,7 +10,7 @@
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) \- выбранная позиция.
 - [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- выбранные позиции.
 
-Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*.
+Ниже показан внешний вид компонента, а также фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments*.
 
 ```xaml
 <Window x:Class="Sample.PortfoliosWindow"

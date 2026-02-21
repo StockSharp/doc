@@ -12,7 +12,7 @@
 
 ```cs
 // Создаем подписку на 5-минутные свечи
-var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
+var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), security)
 {
 	// Настраиваем параметры подписки через свойство MarketData
 	MarketData =
@@ -70,7 +70,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 
 	// Обработка стакана
 	Console.WriteLine($"Стакан: {depth.SecurityId}, Время: {depth.ServerTime}");
-	Console.WriteLine($"Покупки (Bids): {depth.Bids.Count}, Продажи (Asks): {depth.Asks.Count}");
+	Console.WriteLine($"Покупки (Bids): {depth.Bids.Length}, Продажи (Asks): {depth.Asks.Length}");
 };
 
 // Запуск подписки
@@ -101,7 +101,7 @@ _connector.Subscribe(tickSubscription);
 
 ```cs
 // Подписка на 5-минутные свечи, которые будут построены из тиков
-var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
+var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), security)
 {
 	MarketData =
 	{

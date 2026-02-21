@@ -5,8 +5,8 @@ Evening Star is a bearish reversal candlestick pattern consisting of three candl
 ##### Key Features:
 
 - First candle is white (bullish) with opening price lower than closing price (O < C).
-- Second candle has a small body (can be either bullish or bearish) and forms a gap up from the first candle. The body length is significantly smaller than the first ((O > C) && (LEN > B * 3)).
-- Third candle is black (bearish) with opening price higher than closing price ((O > C) && (LEN > pLEN * 3)), which closes deep inside the body of the first candle.
+- Second candle has a small body (can be either bullish or bearish) and forms a gap up from the first candle. The body is significantly smaller than the first candle's body (B < pB * 0.5m).
+- Third candle is black (bearish) with opening price higher than closing price and a large body ((O > C) && (B > pB * 2)), which closes deep inside the body of the first candle.
 - Forms in an uptrend.
 
 ![Evening Star Pattern](../../../images/eveningstarpattern.png)

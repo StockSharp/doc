@@ -27,14 +27,16 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 ```cs
 // Загрузка информации об инструментах
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
-remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
-	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+var securities = new List<SecurityMessage>();
 
-var securities = securityStorage.LookupAll();
+await foreach (var s in remoteDrive.LookupSecuritiesAsync(Extensions.LookupAllCriteriaMessage, securityProvider))
+{
+	securities.Add(s);
+	Console.WriteLine($"Downloaded: {s.SecurityId}");
+}
 
 // Этот код загружает информацию о всех доступных инструментах с удаленного хранилища.
-// Загруженные инструменты сохраняются в локальное хранилище и выводятся в консоль.
+// Загруженные инструменты сохраняются в локальную коллекцию и выводятся в консоль.
 ```
 
 ## Загрузка маркет-данных
@@ -43,7 +45,7 @@ var securities = securityStorage.LookupAll();
 
 ```cs
 // Загрузка маркет-данных
-foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
+await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, format))
 {
 	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
 	var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
@@ -63,12 +65,12 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 // Сохранение данных локально
 foreach (var dateTime in dates)
 {
-	using (var stream = remoteStorage.LoadStream(dateTime))
+	using (var stream = await remoteStorage.LoadStreamAsync(dateTime))
 	{
 		if (stream == Stream.Null)
 			continue;
 
-		localStorage.Drive.SaveStream(dateTime, stream);
+		await localStorage.Drive.SaveStreamAsync(dateTime, stream);
 	}
 
 	// ... (код вывода данных)
@@ -89,7 +91,7 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 
 ```cs
 // Работа с различными типами данных
-foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
+await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, format))
 {
 	// ... (код обработки каждого типа данных)
 

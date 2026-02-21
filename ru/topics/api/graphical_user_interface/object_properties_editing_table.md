@@ -25,7 +25,7 @@
 - [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- список доступных портфелей. 
 - **SelectedObject** \- объект, чьи свойства будут отображены в таблице. 
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments*.
 
 ```xaml
 <Window x:Class="SampleFix.MainWindow"

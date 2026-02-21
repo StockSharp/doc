@@ -12,10 +12,10 @@
    ```cs
    class CustomSecurityIdGenerator : SecurityIdGenerator
    {
-      public override string GenerateId(string secCode, ExchangeBoard board)
+      public override string GenerateId(string secCode, string boardCode)
       {
          // генерация идентификатора вида CODE--BOARD
-         return secCode + "--" + board.Code;
+         return secCode + "--" + boardCode;
       }
    }
    ```

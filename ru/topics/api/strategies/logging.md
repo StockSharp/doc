@@ -21,12 +21,12 @@
 Метод [LogVerbose](xref:Ecng.Logging.BaseLogReceiver.LogVerbose(System.String,System.Object[])) предназначен для записи подробных сообщений при трассировке:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
-	
+	base.OnStarted2(time);
+
 	LogVerbose("Стратегия запущена с параметрами: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-	
+
 	// ...
 }
 ```
@@ -38,9 +38,9 @@ protected override void OnStarted(DateTimeOffset time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Обработка свечи: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+	LogDebug("Обработка свечи: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-	
+
 	// ...
 }
 ```
@@ -53,10 +53,10 @@ private void ProcessCandle(ICandleMessage candle)
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
-	
-	LogInfo("Сигнал: {0}, Short SMA={1}, Long SMA={2}", 
+
+	LogInfo("Сигнал: {0}, Short SMA={1}, Long SMA={2}",
 		isShortGreaterThanLong ? "Покупка" : "Продажа", shortSma, longSma);
-	
+
 	// ...
 }
 ```
@@ -73,7 +73,7 @@ public void RegisterOrder(Order order)
 		LogWarning("Попытка зарегистрировать заявку с некорректным объемом: {0}", order.Volume);
 		return;
 	}
-	
+
 	// ...
 }
 ```
@@ -127,19 +127,19 @@ strategy.LogLevel = LogLevels.Info;
 public class SmaStrategy : Strategy
 {
 	private readonly StrategyParam<LogLevels> _logLevel;
-	
+
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
 					.SetDisplay("Уровень логирования", "Уровень детализации сообщений в логе", "Настройки логирования");
 	}
-	
+
 	public override LogLevels LogLevel
 	{
 		get => _logLevel.Value;
 		set => _logLevel.Value = value;
 	}
-	
+
 	// ...
 }
 ```
@@ -149,21 +149,21 @@ public class SmaStrategy : Strategy
 ### Логирование запуска и остановки стратегии
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
-	
-	LogInfo("Стратегия {0} запущена в {1}. Инструмент: {2}, Портфель: {3}", 
+	base.OnStarted2(time);
+
+	LogInfo("Стратегия {0} запущена в {1}. Инструмент: {2}, Портфель: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
-	
+
 	// ...
 }
 
 protected override void OnStopped()
 {
-	LogInfo("Стратегия {0} остановлена. Позиция: {1}, P&L: {2}", 
+	LogInfo("Стратегия {0} остановлена. Позиция: {1}, P&L: {2}",
 		Name, Position, PnL);
-	
+
 	base.OnStopped();
 }
 ```
@@ -173,13 +173,13 @@ protected override void OnStopped()
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} по цене {3}. Объем: {4}", 
+	LogInfo("{0} {1} {2} по цене {3}. Объем: {4}",
 		trade.Order.Direction == Sides.Buy ? "Куплено" : "Продано",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,
 		trade.Trade.Volume);
-	
+
 	base.OnNewMyTrade(trade);
 }
 ```
@@ -189,11 +189,31 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Ошибка регистрации заявки {0}: {1}", 
+	LogError("Ошибка регистрации заявки {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
-	
+
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
+```
+
+## Подключение слушателей логов
+
+Для получения сообщений от стратегии необходимо подключить слушатели через [LogManager](xref:Ecng.Logging.LogManager):
+
+```cs
+var logManager = new LogManager();
+
+// Запись в файл
+var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
+logManager.Listeners.Add(fileListener);
+
+// Отсылка Email
+var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
+emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
+logManager.Listeners.Add(emailListener);
+
+// Добавить стратегию как источник логов
+logManager.Sources.Add(strategy);
 ```
 
 ## Просмотр логов

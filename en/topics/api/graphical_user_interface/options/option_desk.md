@@ -2,7 +2,7 @@
 
 The [OptionDesk](xref:StockSharp.Xaml.OptionDesk) graphical component is a table for displaying the option desk. It shows “Greeks”, implied volatility, the theoretical price, the best offer and bid for Put and Call options. 
 
-Below is the **OptionCalculator** example, which uses this component. The source code of the example can be found in the *Samples\\Options\\SampleOptionQuoting* folder.
+Below is the **OptionCalculator** example, which uses this component. The source code of the example can be found in the *Samples\/06\_Strategies\/09\_LiveOptionsQuoting* folder.
 
 ![option desk](../../../../images/option_desk.png)
 
@@ -50,7 +50,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
    {
    	// update gui labels
    	ChangeConnectStatus(false);
-   	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+   	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
    // fill underlying asset's list
    Connector.NewSecurity += security =>

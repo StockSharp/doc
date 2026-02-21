@@ -15,7 +15,7 @@
 - [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- адаптер сообщений. 
 - [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- созданная заявка. 
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/03\_Orders*.
 
 ```cs
 ...

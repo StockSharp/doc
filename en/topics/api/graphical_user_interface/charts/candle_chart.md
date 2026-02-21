@@ -2,7 +2,7 @@
 
 [Chart](xref:StockSharp.Xaml.Charting.Chart) is a graphical component that allows building stock charts: candles, indicators, and displaying order and trade markers on charts.
 
-Below is an example of building a chart using the [Chart](xref:StockSharp.Xaml.Charting.Chart) component. The example is based on Samples\/Common\/SampleConnection, with some modifications.
+Below is an example of building a chart using the [Chart](xref:StockSharp.Xaml.Charting.Chart) component. The example is based on Samples\/02\_Candles\/01\_Realtime, with some modifications.
 
 ![Gui ChartSample](../../../../images/gui_chartsample.png)
 

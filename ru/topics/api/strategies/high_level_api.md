@@ -338,7 +338,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+		_candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(1).TimeFrame());
 		_long = Param(nameof(Long), 80);
 		_short = Param(nameof(Short), 30);
 		_takeValue = Param(nameof(TakeValue), new Unit(50, UnitTypes.Absolute));
@@ -380,9 +380,9 @@ public class SmaStrategy : Strategy
 		set => _stopValue.Value = value;
 	}
 
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 
 		// Создаем индикаторы
 		var longSma = new SMA { Length = Long };

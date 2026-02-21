@@ -7,12 +7,19 @@
 В примере ниже показан способ "движения" заявки по лучшей цене:
 
 ```cs
-if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk != null)
+// registeredOrder - это ранее зарегистрированная заявка.
+var newOrder = registeredOrder.Clone();
+
+// Получаем лучшие цены из Level1 данных.
+// Примечание: свойства Security.BestBid / Security.BestAsk являются устаревшими (obsolete).
+// Рекомендуется использовать подписку на Level1 и получать лучшие цены из событий Level1Received.
+var bestBidPrice = _connector.GetSecurityValue(registeredOrder.Security.Id, Level1Fields.BestBidPrice);
+var bestAskPrice = _connector.GetSecurityValue(registeredOrder.Security.Id, Level1Fields.BestAskPrice);
+
+if (bestBidPrice != null && bestAskPrice != null)
 {
-	// registeredOrder - это ранее зарегистрированная заявка.
-	var newOrder = registeredOrder.Clone();
 	// изменяем цену на лучшую
-	newOrder.Price = (registeredOrder.Direction == Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
+	newOrder.Price = registeredOrder.Side == Sides.Buy ? (decimal)bestBidPrice : (decimal)bestAskPrice;
 	// заменяем заявку на бирже
 	_connector.ReRegisterOrder(registeredOrder, newOrder);
 }

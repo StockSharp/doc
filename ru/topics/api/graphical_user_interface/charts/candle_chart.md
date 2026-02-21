@@ -2,7 +2,7 @@
 
 [Chart](xref:StockSharp.Xaml.Charting.Chart) - графический компонент, который позволяет строить биржевые графики: свечи, индикаторы и отображать на графиках маркеры заявок и сделок.
 
-Ниже приведен пример построения графика при помощи компонента [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/Common\/SampleConnection, в который внесены некоторые изменения.
+Ниже приведен пример построения графика при помощи компонента [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/02\_Candles\/01\_Realtime, в который внесены некоторые изменения.
 
 ![Gui ChartSample](../../../../images/gui_chartsample.png)
 
@@ -60,7 +60,7 @@
        
        // Создаем подписку на свечи
        var subscription = new Subscription(
-           DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+           TimeSpan.FromMinutes(5).TimeFrame(),
            security)
        {
            MarketData = 
@@ -171,7 +171,7 @@ private void SetupAutoDrawingChart()
 	
 	// Создаем подписку на свечи
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		security)
 	{
 		MarketData = 

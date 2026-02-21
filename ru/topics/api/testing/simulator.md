@@ -13,7 +13,8 @@
 private readonly Connector _realConnector = new();
 
 // Создаем эмуляционный коннектор
-_emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, false);
+// Конструктор: RealTimeEmulationTrader(adapter, securityProvider, portfolio, ownAdapter)
+_emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, ownAdapter: false);
 
 // Настраиваем параметры эмуляции
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
@@ -49,7 +50,7 @@ _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
 	// update gui labels
 	ChangeConnectStatus(false);
-	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 });
 
 _emuConnector.OrderBookReceived += OnDepth;

@@ -9,20 +9,20 @@
 Для отображения свечей на графике можно использовать два подхода. Первый подход - ручная отрисовка свечей при получении данных:
 
 ```cs
-// CandlesChart - StockSharp.Xaml.Chart
-private ChartArea _areaComb;
-private ChartCandleElement _candleElement;
+private IChartArea _areaComb;
+private IChartCandleElement _candleElement;
 
 // Инициализация графика
 private void InitializeChart()
 {
 	// Создаем область графика
-	_areaComb = new ChartArea();
-	_chart.Areas.Add(_areaComb);
-	
+	_areaComb = _chart.CreateArea();
+	_chart.AddArea(_areaComb);
+
 	// Создаем элемент для отображения свечей
-	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
-	_areaComb.Elements.Add(_candleElement);
+	_candleElement = _chart.CreateCandleElement();
+	_candleElement.FullTitle = "Candles";
+	_chart.AddElement(_areaComb, _candleElement);
 	
 	// Подписываемся на событие получения свечей
 	_connector.CandleReceived += OnCandleReceived;
@@ -32,7 +32,7 @@ private void InitializeChart()
 private void SubscribeToCandles()
 {
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		_security)
 	{
 		MarketData = 
@@ -54,9 +54,9 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (candle.State == CandleStates.Finished) 
 	{
 		// Создаем данные для отрисовки
-		var chartData = new ChartDrawData();
+		var chartData = _chart.CreateData();
 		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-		
+
 		// Отрисовываем на графике в потоке UI
 		this.GuiAsync(() => _chart.Draw(chartData));
 	}
@@ -72,15 +72,15 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 private void InitializeChartWithAutoBinding()
 {
 	// Создаем область графика
-	var area = new ChartArea();
-	_chart.Areas.Add(area);
-	
+	var area = _chart.CreateArea();
+	_chart.AddArea(area);
+
 	// Создаем элемент для отображения свечей
-	var candleElement = new ChartCandleElement();
+	var candleElement = _chart.CreateCandleElement();
 	
 	// Создаем подписку на свечи
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		_security)
 	{
 		MarketData = 
@@ -107,14 +107,11 @@ private void InitializeChartWithAutoBinding()
 private void AddIndicatorToChart()
 {
 	// Создаем элемент для индикатора
-	var smaElement = new ChartIndicatorElement
-	{
-		Title = "SMA (14)",
-		Color = Colors.Red
-	};
-	
+	var smaElement = _chart.CreateIndicatorElement();
+	smaElement.FullTitle = "SMA (14)";
+
 	// Добавляем элемент на ту же область, что и свечи
-	_areaComb.Elements.Add(smaElement);
+	_chart.AddElement(_areaComb, smaElement);
 	
 	// Создаем индикатор
 	var sma = new SimpleMovingAverage { Length = 14 };
@@ -126,9 +123,9 @@ private void AddIndicatorToChart()
 		var indicatorValue = sma.Process(candle);
 		
 		// Отрисовываем значение на графике
-		var chartData = new ChartDrawData();
+		var chartData = _chart.CreateData();
 		chartData.Group(candle.OpenTime).Add(smaElement, indicatorValue);
-		
+
 		this.GuiAsync(() => _chart.Draw(chartData));
 	};
 }
@@ -143,24 +140,26 @@ private void AddIndicatorToChart()
 private void AddIndicatorsToSeparateAreas()
 {
 	// Основная область для свечей
-	var candleArea = new ChartArea();
-	_chart.Areas.Add(candleArea);
-	
+	var candleArea = _chart.CreateArea();
+	_chart.AddArea(candleArea);
+
 	// Элемент для свечей
-	var candleElement = new ChartCandleElement();
-	candleArea.Elements.Add(candleElement);
-	
+	var candleElement = _chart.CreateCandleElement();
+	_chart.AddElement(candleArea, candleElement);
+
 	// Элемент для SMA на той же области
-	var smaElement = new ChartIndicatorElement { Title = "SMA (14)" };
-	candleArea.Elements.Add(smaElement);
-	
+	var smaElement = _chart.CreateIndicatorElement();
+	smaElement.FullTitle = "SMA (14)";
+	_chart.AddElement(candleArea, smaElement);
+
 	// Отдельная область для RSI
-	var rsiArea = new ChartArea();
-	_chart.Areas.Add(rsiArea);
-	
+	var rsiArea = _chart.CreateArea();
+	_chart.AddArea(rsiArea);
+
 	// Элемент для RSI
-	var rsiElement = new ChartIndicatorElement { Title = "RSI (14)" };
-	rsiArea.Elements.Add(rsiElement);
+	var rsiElement = _chart.CreateIndicatorElement();
+	rsiElement.FullTitle = "RSI (14)";
+	_chart.AddElement(rsiArea, rsiElement);
 	
 	// Создаем индикаторы
 	var sma = new SimpleMovingAverage { Length = 14 };
@@ -168,7 +167,7 @@ private void AddIndicatorsToSeparateAreas()
 	
 	// Подписка на свечи
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		_security);
 	
 	// Привязываем элемент свечей к подписке
@@ -187,12 +186,12 @@ private void AddIndicatorsToSeparateAreas()
 		var rsiValue = rsi.Process(candle);
 		
 		// Отрисовываем значения на графике
-		var chartData = new ChartDrawData();
+		var chartData = _chart.CreateData();
 		chartData
 			.Group(candle.OpenTime)
 				.Add(smaElement, smaValue)
 				.Add(rsiElement, rsiValue);
-		
+
 		this.GuiAsync(() => _chart.Draw(chartData));
 	};
 }
@@ -207,12 +206,12 @@ private void AddIndicatorsToSeparateAreas()
 private void AddOrdersAndTradesToChart()
 {
 	// Создаем элементы для отображения заявок и сделок
-	var orderElement = new ChartOrderElement();
-	var tradeElement = new ChartTradeElement();
-	
+	var orderElement = _chart.CreateOrderElement();
+	var tradeElement = _chart.CreateTradeElement();
+
 	// Добавляем элементы на область графика
-	_areaComb.Elements.Add(orderElement);
-	_areaComb.Elements.Add(tradeElement);
+	_chart.AddElement(_areaComb, orderElement);
+	_chart.AddElement(_areaComb, tradeElement);
 	
 	// Подписываемся на события получения заявок и сделок
 	_connector.OrderReceived += (subscription, order) =>
@@ -221,9 +220,9 @@ private void AddOrdersAndTradesToChart()
 			return;
 		
 		// Отрисовываем заявку на графике
-		var chartData = new ChartDrawData();
+		var chartData = _chart.CreateData();
 		chartData.Group(order.Time).Add(orderElement, order);
-		
+
 		this.GuiAsync(() => _chart.Draw(chartData));
 	};
 	
@@ -233,9 +232,9 @@ private void AddOrdersAndTradesToChart()
 			return;
 		
 		// Отрисовываем сделку на графике
-		var chartData = new ChartDrawData();
+		var chartData = _chart.CreateData();
 		chartData.Group(trade.Time).Add(tradeElement, trade);
-		
+
 		this.GuiAsync(() => _chart.Draw(chartData));
 	};
 }
@@ -251,47 +250,31 @@ private void ConfigureChartAppearance()
 {
 	// Настройка области графика
 	_areaComb.Height = 300;
-	_areaComb.BackgroundMajorGridColor = Colors.Gray;
-	_areaComb.BackgroundMinorGridColor = Colors.LightGray;
-	
+
 	// Настройка элемента свечей
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
-	_candleElement.UpBrush = Brushes.Green;
-	_candleElement.DownBrush = Brushes.Red;
+	_candleElement.UpFillColor = Colors.Green;
+	_candleElement.DownFillColor = Colors.Red;
 	_candleElement.StrokeThickness = 1;
-	
+
 	// Настройка всего графика
 	_chart.IsAutoRange = true;            // Автоматический масштаб
-	_chart.IsManualVerticalValues = false; // Автоматический расчет вертикальных значений
-	_chart.BidEnabled = false;            // Отключаем отображение лучшей цены покупки
-	_chart.AskEnabled = false;            // Отключаем отображение лучшей цены продажи
 }
 ```
 
 ## Масштабирование и прокрутка графика
 
-Управление масштабом и прокруткой графика:
+Управление масштабом и прокруткой графика осуществляется через свойства [IChart](xref:StockSharp.Charting.IChart):
 
 ```cs
 // Настройка масштабирования и прокрутки
 private void ConfigureChartZoomAndScroll()
 {
-	// Установка начальных и конечных дат для отображения
-	_chart.SetXRange(DateTime.Today.AddDays(-10), DateTime.Today);
-	
-	// Установка диапазона по оси Y
-	_chart.SetYRange(100, 150);
-	
-	// Кнопки для управления масштабом
-	zoomInButton.Click += (s, e) => _chart.ZoomIn();
-	zoomOutButton.Click += (s, e) => _chart.ZoomOut();
-	
-	// Кнопки для прокрутки
-	scrollLeftButton.Click += (s, e) => _chart.ScrollLeft();
-	scrollRightButton.Click += (s, e) => _chart.ScrollRight();
-	
+	// Включаем автоматическую прокрутку при поступлении новых данных
+	_chart.IsAutoScroll = true;
+
 	// Сброс масштаба к автоматическому
-	resetZoomButton.Click += (s, e) => _chart.IsAutoRange = true;
+	_chart.IsAutoRange = true;
 }
 ```
 
@@ -355,14 +338,11 @@ private void ExportChartToImage()
 // Очистка графика или его элементов
 private void ClearChart()
 {
-	// Очистка всего графика
-	_chart.Reset();
-	
-	// Очистка конкретной области
-	_areaComb.Reset();
-	
-	// Очистка конкретного элемента
-	_candleElement.Reset();
+	// Очистка всех элементов графика
+	_chart.Reset(_chart.GetElements());
+
+	// Удаление всех областей с графика
+	_chart.ClearAreas();
 }
 ```
 

@@ -34,10 +34,13 @@
 
 Сообщение [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) является универсальным сообщением, которое позволяет передавать различную биржевую информацию, связанную с заявками и сделками: тиковые сделки, ордерлоги, собственные заявки и сделки.
 
-Тип информации в сообщении определяется значением свойства [ExecutionMessage.ExecutionType](xref:StockSharp.Messages.ExecutionMessage.ExecutionType): 
+Тип информации в сообщении определяется значением свойства [ExecutionMessage.DataTypeEx](xref:StockSharp.Messages.ExecutionMessage.DataTypeEx):
 
-- [ExecutionTypes.Tick](xref:StockSharp.Messages.ExecutionTypes.Tick) \- тиковая сделка.
-- [ExecutionTypes.Transaction](xref:StockSharp.Messages.ExecutionTypes.Transaction) \- транзакция (информация о собственной сделке или заявке).
-- [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) \- лог заявок.
+- `DataTypeEx = DataType.Ticks` \- тиковая сделка.
+- `DataTypeEx = DataType.Transactions` \- транзакция (информация о собственной сделке или заявке).
+- `DataTypeEx = DataType.OrderLog` \- лог заявок.
 
-Если используется тип [ExecutionTypes.Transaction](xref:StockSharp.Messages.ExecutionTypes.Transaction), то речь идет о собственных заявках или сделках. При этом, если сообщение содержит информацию о заявке, то свойство [ExecutionMessage.HasOrderInfo](xref:StockSharp.Messages.ExecutionMessage.HasOrderInfo) \= true, если есть информация о сделке, то свойство [ExecutionMessage.HasTradeInfo](xref:StockSharp.Messages.ExecutionMessage.HasTradeInfo) \= true. Обратите внимание, что *собственная сделка* содержит информацию как о самой сделке, так и о заявке, связанной с этой сделкой. Поэтому в этом случае вышеприведенные свойства имеют значение true. Эти свойства позволяют дифференцировать сообщения с собственными сделками и заявками.
+> [!WARNING]
+> Свойство `ExecutionMessage.ExecutionType` и перечисление `ExecutionTypes` помечены как `[Obsolete]`. Используйте свойство `DataTypeEx` с соответствующими значениями `DataType`.
+
+Если используется тип `DataType.Transactions`, то речь идет о собственных заявках или сделках. При этом, если сообщение содержит информацию о заявке, то свойство [ExecutionMessage.HasOrderInfo](xref:StockSharp.Messages.ExecutionMessage.HasOrderInfo) \= true, если есть информация о сделке, то свойство [ExecutionMessage.HasTradeInfo](xref:StockSharp.Messages.ExecutionMessage.HasTradeInfo) \= true. Обратите внимание, что *собственная сделка* содержит информацию как о самой сделке, так и о заявке, связанной с этой сделкой. Поэтому в этом случае вышеприведенные свойства имеют значение true. Эти свойства позволяют дифференцировать сообщения с собственными сделками и заявками.

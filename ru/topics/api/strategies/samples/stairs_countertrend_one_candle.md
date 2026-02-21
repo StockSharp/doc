@@ -21,12 +21,12 @@ public class OneCandleCountertrendStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) создается подписка на свечи и готовится визуализация:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) создается подписка на свечи и готовится визуализация:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Создание подписки
 	var subscription = SubscribeCandles(CandleType);

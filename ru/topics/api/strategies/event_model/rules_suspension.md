@@ -28,20 +28,26 @@
   class FirstStrategy : Strategy
   {
   	...
-  	
+
+         var candleSub = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
+         var tickSub = new Subscription(DataType.Ticks, Security);
+
          this.SuspendRules(() =>
          {
-  		_connector
-                 .WhenCandlesFinished(_series)
+             Connector
+                 .WhenCandlesFinished(candleSub)
                  .Do(FinishCandle)
                  .Apply(this);
-             Security
-                 .WhenNewTrade(Connector)
+             tickSub
+                 .WhenTickTradeReceived(this)
                  .Do(NewTrade)
                  .Apply(this);
          });
+
+         Subscribe(candleSub);
+         Subscribe(tickSub);
      }
       ...
   }
-  							
+
   ```

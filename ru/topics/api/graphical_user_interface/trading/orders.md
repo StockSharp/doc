@@ -17,7 +17,7 @@
 - [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - событие замены заявки (возникает после выбора соответствующего пункта контекстного меню).
 - [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) - событие отмены заявки (возникает после выбора соответствующего пункта контекстного меню).
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/03\_Orders*.
 
 ```xaml
 <Window x:Class="Sample.OrdersWindow"

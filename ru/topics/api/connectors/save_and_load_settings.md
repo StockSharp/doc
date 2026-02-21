@@ -7,25 +7,29 @@
 ```cs
 ...
 private readonly Connector _connector = new Connector();
+private readonly IFileSystem _fileSystem = Paths.FileSystem;
 private const string _connectorFile = "ConnectorFile.json";
 ...
 public void Load()
 {
-	if (File.Exists(_connectorFile))
+	if (_fileSystem.FileExists(_connectorFile))
 	{
 		//Загрузка настроек коннектора из существующего конфигурационного файла
-		_connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_connectorFile));
+		_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 	}
 }
 ...
 public void Save()
 {
 	//Сохранение настроек коннектора в конфигурационный файл
-	new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
+	_connector.Save().Serialize(_fileSystem, _connectorFile);
 }
 ...
-		
+
 ```
+
+> [!NOTE]
+> Методы `Serialize` и `Deserialize` без параметра `IFileSystem` помечены как `[Obsolete]`. Используйте перегрузки с `IFileSystem` (например, `Paths.FileSystem`).
 
 ## См. также
 

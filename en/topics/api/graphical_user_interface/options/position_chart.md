@@ -2,7 +2,7 @@
 
 The [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) graphical component is a chart showing the position and the options “Greeks” related to the underlying asset.
 
-The following is the SampleOptionQuoting example, in which this chart is used. The source code of the example can be found in the *Samples/Options/SampleOptionQuoting* folder.
+The following is the SampleOptionQuoting example, in which this chart is used. The source code of the example can be found in the *Samples\/06\_Strategies\/09\_LiveOptionsQuoting* folder.
 
 ![option volsmile](../../../../images/option_volsmile.png)
 
@@ -50,7 +50,7 @@ The following is the SampleOptionQuoting example, in which this chart is used. T
    {
    	// update gui labels
    	ChangeConnectStatus(false);
-   	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+   	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
    // fill underlying asset's list
    Connector.NewSecurity += security =>

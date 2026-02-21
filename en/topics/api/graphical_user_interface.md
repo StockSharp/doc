@@ -19,7 +19,6 @@ To access the [S\#](../api.md) graphical controls in the XAML code it is necessa
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
 		xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
-		xmlns:ss="clr-namespace:StockSharp.SmartCom.Xaml;assembly=StockSharp.SmartCom"
 		xmlns:charting="http://schemas.stocksharp.com/xaml"
 		Title="{x:Static loc:LocalizedStrings.XamlStr570}" Height="700" Width="900">
 	

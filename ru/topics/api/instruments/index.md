@@ -11,10 +11,6 @@
 1. Объявить составные инструменты, которые будут входить в [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
-   // необходимо для компиляции формулы
-   ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
-   // или стандартный .NET компилятор, если нет последних обновлений
-   //ConfigManager.RegisterService<ICompilerService>(new Fw40CompilerService(Directory.GetCurrentDirectory(), Directory.GetCurrentDirectory()));
    private Security _instr1;
    private Security _instr2;
    private ExpressionIndexSecurity _indexInstr;
@@ -49,13 +45,13 @@
 2. Создать [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
-   _indexInstr = new WeightedIndexSecurity() { ExchangeBoard = ExchangeBoard.Forts, Id = "IndexInstr" };
+   _indexInstr = new WeightedIndexSecurity() { Board = ExchangeBoard.Forts, Id = "IndexInstr" };
    							
    ```
 3. Добавить в него составные инструменты:
 
    ```cs
-   _indexInstr.Weights.Add(_instr1, 1);
-   _indexInstr.Weights.Add(_instr2, -1);
+   _indexInstr.Weights.Add(_instr1.ToSecurityId(), 1);
+   _indexInstr.Weights.Add(_instr2.ToSecurityId(), -1);
    							
    ```

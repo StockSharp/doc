@@ -17,7 +17,7 @@
 - [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - order replacement event (occurs after selecting the corresponding context menu item).
 - [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) - order cancellation event (occurs after selecting the corresponding context menu item).
 
-Below are code fragments showing its use. The code example is taken from *Samples/Common/SampleConnection*.
+Below are code fragments showing its use. The code example is taken from *Samples\/01\_Basic\/03\_Orders*.
 
 ```xaml
 <Window x:Class="Sample.OrdersWindow"

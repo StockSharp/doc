@@ -5,7 +5,7 @@
 Выделяются два основных класса:
 
 - [Message](xref:StockSharp.Messages.Message) - сообщение, несущее в себе информацию.
-- [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter) - адаптер (=преобразователь) сообщений.
+- [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) - адаптер (=преобразователь) сообщений.
 
 **Сообщение** выполняет роль агента, передающего информацию. Сообщения имеют свой тип [MessageTypes](xref:StockSharp.Messages.MessageTypes). Каждому типу сообщения соответствует определенный класс. В свою очередь все классы сообщений наследуют от абстрактного класса [Message](xref:StockSharp.Messages.Message), который наделяет потомков такими свойствами, как тип сообщения [Message.Type](xref:StockSharp.Messages.Message.Type) и [Message.LocalTime](xref:StockSharp.Messages.Message.LocalTime) - локальное время создания/получения сообщения.
 
@@ -14,7 +14,10 @@
 - *Входящие* сообщения - сообщения, которые посылаются во внешнюю систему. Обычно это команды, которые генерирует программа, например, сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) - команда, запрашивающая соединение с сервером.
 - *Исходящие* сообщения - сообщения, поступающие из внешней системы. Это сообщения, передающие информацию о рыночных данных, транзакциях, портфелях, событиях соединения и т.п. Например, сообщение [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) - передает информацию об изменении стакана.
 
-**Адаптер сообщений** играет роль посредника между торговой системой и программой. Для каждого типа коннектора имеется свой класс адаптера, который наследуется от абстрактного класса [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter). 
+**Адаптер сообщений** играет роль посредника между торговой системой и программой. Для каждого типа коннектора имеется свой класс адаптера, который наследуется от абстрактного класса [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
+
+> [!NOTE]
+> [MessageAdapter](xref:StockSharp.Messages.MessageAdapter) является базовым классом для создания пользовательских адаптеров. Он предоставляет асинхронные виртуальные методы (`ConnectAsync`, `DisconnectAsync`, `ResetAsync` и др.), которые необходимо переопределить в наследнике.
 
 Адаптер выполняет две основные функции:
 
@@ -27,10 +30,10 @@
 
 ### 1. Создание класса адаптера
 
-Вначале создаем класс адаптера сообщений **CoinbaseMessageAdapter**, унаследованный от абстрактного класса [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter).
+Вначале создаем класс адаптера сообщений **CoinbaseMessageAdapter**, унаследованный от абстрактного класса [MessageAdapter](xref:StockSharp.Messages.MessageAdapter).
 
 ```cs
-public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
+public partial class CoinbaseMessageAdapter : MessageAdapter
 {
 	private Authenticator _authenticator;
 	private HttpClient _restClient;
@@ -76,7 +79,7 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 
 ### 3. Подключение и отключение адаптера
 
-Для подключения адаптера к торговой системе вызывается метод [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)). В него передается входящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage), при успешном соединении адаптер отправляет исходящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage):
+Для подключения адаптера к торговой системе вызывается метод [MessageAdapter.ConnectAsync](xref:StockSharp.Messages.MessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)). В него передается входящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage), при успешном соединении адаптер отправляет исходящее сообщение [ConnectMessage](xref:StockSharp.Messages.ConnectMessage):
 
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
@@ -116,7 +119,7 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 }
 ```
 
-Для отключения адаптера от торговой системы вызывается метод [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)). При успешном отключении адаптер отправляет исходящее сообщение [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage):
+Для отключения адаптера от торговой системы вызывается метод [MessageAdapter.DisconnectAsync](xref:StockSharp.Messages.MessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)). При успешном отключении адаптер отправляет исходящее сообщение [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage):
 
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
@@ -141,7 +144,7 @@ public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, Cance
 }
 ```
 
-Дополнительно адаптер предоставляет метод [AsyncMessageAdapter.ResetAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage,System.Threading.CancellationToken)) для сброса состояния, который закрывает соединение и возвращает адаптер в исходное состояние:
+Дополнительно адаптер предоставляет метод [MessageAdapter.ResetAsync](xref:StockSharp.Messages.MessageAdapter.ResetAsync(StockSharp.Messages.ResetMessage,System.Threading.CancellationToken)) для сброса состояния, который закрывает соединение и возвращает адаптер в исходное состояние:
 
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)

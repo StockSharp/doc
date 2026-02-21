@@ -2,7 +2,7 @@
 
 For working with exchanges and data sources in [S#](../api.md), it is recommended to use the base class [Connector](xref:StockSharp.Algo.Connector).
 
-Let's look at working with [Connector](xref:StockSharp.Algo.Connector). The source code of the example can be found in the Samples/Common/SampleConnection project.
+Let's look at working with [Connector](xref:StockSharp.Algo.Connector). The source code of the example can be found in the Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments project.
 
 ![multiconnection main](../../images/multiconnection_main.png)
 
@@ -76,7 +76,7 @@ private void InitConnector()
 	Connector.ConnectionError += error => this.GuiAsync(() =>
 	{
 		ChangeConnectStatus(false);
-		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 	});
 	
 	// Subscribe to disconnection event

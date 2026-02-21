@@ -76,10 +76,10 @@ public int LongSmaLength
 
 ```cs
 // Правильный подход: использование IChart
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
-	
+	base.OnStarted2(time);
+
 	// Получаем график, предоставленный средой выполнения
 	_chart = GetChart();
 	
@@ -261,16 +261,16 @@ public override void Load(SettingsStorage settings)
 Для обработки маркет-данных рекомендуется использовать [Событийную модель](event_model.md) и правила:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	var subscription = new Subscription(Series, Security);
 
 	// Правильно: использование правил для обработки данных
@@ -279,7 +279,7 @@ protected override void OnStarted(DateTimeOffset time)
 		.Do(ProcessCandle)
 		.Apply(this);
 
-	Connector.Subscribe(subscription);
+	Subscribe(subscription);
 }
 ```
 
@@ -293,14 +293,18 @@ protected override void OnStarted(DateTimeOffset time)
 
 ```cs
 // Пример комбинирования правил
-Security
-	.WhenNewTrade()
-	.And(Portfolio.WhenMoneyChanged())
+var tickSub = new Subscription(DataType.Ticks, Security);
+
+tickSub
+	.WhenTickTradeReceived(this)
+	.And(Portfolio.WhenChanged(Connector))
 	.Do(() => {
-		// Код, который выполнится только когда будет новая сделка 
+		// Код, который выполнится только когда будет новая сделка
 		// И изменится баланс портфеля
 	})
 	.Apply(this);
+
+Subscribe(tickSub);
 ```
 
 4. **Управление жизненным циклом** - правила можно делать одноразовыми (`Once()`), устанавливать условия отмены (`Until()`), добавлять отложенные действия и т.д.
@@ -352,25 +356,25 @@ public class SmaStrategy : Strategy
                           .SetDisplay("Short SMA length", string.Empty, "Base settings")
                           .SetCanOptimize(true);
                           
-        _series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+        _series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
                  .SetDisplay("Series", string.Empty, "Base settings");
     }
 
-    protected override void OnStarted(DateTimeOffset time)
+    protected override void OnStarted2(DateTime time)
     {
-        base.OnStarted(time);
+        base.OnStarted2(time);
 
         _longSma = new SimpleMovingAverage { Length = LongSmaLength };
         _shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 
         Indicators.Add(_shortSma);
         Indicators.Add(_longSma);
-        
+
         // Инициализация графика, если он доступен
         _chart = GetChart();
         if (_chart != null)
             InitChart();
-        
+
         var subscription = new Subscription(Series, Security);
 
         Connector
@@ -378,7 +382,7 @@ public class SmaStrategy : Strategy
             .Do(ProcessCandle)
             .Apply(this);
 
-        Connector.Subscribe(subscription);
+        Subscribe(subscription);
     }
 
     private void InitChart()

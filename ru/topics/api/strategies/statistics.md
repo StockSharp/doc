@@ -119,8 +119,8 @@ strategy.PnLChanged += () =>
 	}
 };
 
-// Для отслеживания статистики позиций
-strategy.PositionChanged += () =>
+// Для отслеживания статистики позиций (IPositionProvider.PositionChanged)
+((IPositionProvider)strategy).PositionChanged += () =>
 {
 	Console.WriteLine($"Текущая позиция: {strategy.Position}");
 };

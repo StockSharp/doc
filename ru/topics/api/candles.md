@@ -7,9 +7,10 @@
 - [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - свеча формируется до тех пор, пока суммарно по сделкам не будет превышен объем. Если новая сделка превышает допустимый объем, то она попадает уже в новую свечу. 
 - [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - то же самое, что и [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), только в качестве ограничения вместо объема берется количество сделок. 
 - [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - свеча пункто-цифрового графика (график крестики-нолики). 
-- [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - Рэнко свеча. 
+- [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - Рэнко свеча.
+- [HeikinAshiCandleMessage](xref:StockSharp.Messages.HeikinAshiCandleMessage) - свеча Хейкин Аши. Является разновидностью таймфрейм-свечи с модифицированными ценами OHLC для сглаживания тренда.
 
-Как работать со свечами, показано в примере SampleConnection, который расположен в папке *Samples\/Common\/SampleConnection*.
+Как работать со свечами, показано в примере, который расположен в папке *Samples\/02\_Candles\/01\_Realtime*.
 
 На следующих рисунках представлены графики [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) и [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
@@ -24,7 +25,7 @@
 ```cs
 // Создаем подписку на 5-минутные свечи
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Тип данных с указанием таймфрейма
+	TimeSpan.FromMinutes(5).TimeFrame(),  // Тип данных с указанием таймфрейма
 	security)  // Инструмент
 {
 	// Настраиваем дополнительные параметры через свойство MarketData
@@ -149,7 +150,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 ```cs
 // 5-минутные свечи
 var timeFrameSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security);
 _connector.Subscribe(timeFrameSubscription);
 ```
@@ -159,7 +160,7 @@ _connector.Subscribe(timeFrameSubscription);
 ```cs
 // Загрузка только исторических свечей без перехода в реальное время
 var historicalSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
 {
 	MarketData =
@@ -177,7 +178,7 @@ _connector.Subscribe(historicalSubscription);
 ```cs
 // Свечи с таймфреймом 21 секунда, построенные из тиков
 var customTimeFrameSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
+	TimeSpan.FromSeconds(21).TimeFrame(),
 	security)
 {
 	MarketData =
@@ -194,7 +195,7 @@ _connector.Subscribe(customTimeFrameSubscription);
 ```cs
 // Свечи, построенные из середины спреда стакана
 var depthBasedSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	TimeSpan.FromMinutes(1).TimeFrame(),
 	security)
 {
 	MarketData =
@@ -212,7 +213,7 @@ _connector.Subscribe(depthBasedSubscription);
 ```cs
 // 5-минутные свечи с расчетом профиля объема
 var volumeProfileSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
 {
 	MarketData =
@@ -230,7 +231,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // Свечи по объему (каждая свеча содержит объем в 1000 контрактов)
 var volumeCandleSubscription = new Subscription(
-	DataType.Volume(1000m),  // Указываем тип свечи и объем
+	1000m.Volume(),  // Указываем тип свечи и объем
 	security)
 {
 	MarketData =
@@ -247,7 +248,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // Свечи по количеству сделок (каждая свеча содержит 1000 сделок)
 var tickCandleSubscription = new Subscription(
-	DataType.Tick(1000),  // Указываем тип свечи и количество сделок
+	1000.Tick(),  // Указываем тип свечи и количество сделок
 	security)
 {
 	MarketData =
@@ -264,7 +265,7 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // Свечи с ценовым диапазоном в 0.1 ед.
 var rangeCandleSubscription = new Subscription(
-	DataType.Range(0.1m),  // Указываем тип свечи и диапазон цен
+	0.1m.Range(),  // Указываем тип свечи и диапазон цен
 	security)
 {
 	MarketData =
@@ -281,7 +282,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // Рэнко свечи с шагом 0.1
 var renkoCandleSubscription = new Subscription(
-	DataType.Renko(0.1m),  // Указываем тип свечи и размер блока
+	0.1m.Renko(),  // Указываем тип свечи и размер блока
 	security)
 {
 	MarketData =
@@ -298,7 +299,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Пункто-цифровые свечи
 var pnfCandleSubscription = new Subscription(
-	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Указываем параметры PnF
+	new PnFArg { BoxSize = 0.1m, ReversalAmount = 1 }.PnF(),  // Указываем параметры PnF
 	security)
 {
 	MarketData =

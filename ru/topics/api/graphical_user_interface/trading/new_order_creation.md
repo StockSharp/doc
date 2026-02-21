@@ -13,7 +13,7 @@
 - [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) \- поставщик информации об инструментах.
 - [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) \- созданная заявка.
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/03\_Orders*.
 
 ```cs
 ...

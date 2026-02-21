@@ -9,10 +9,10 @@
 Для получения доступа к графику из стратегии используется метод [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart):
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
-	
+	base.OnStarted2(time);
+
 	// Получение графика
 	_chart = GetChart();
 	
@@ -347,10 +347,10 @@ public class SmaStrategy : Strategy
 		set => _bollingerDeviation.Value = value;
 	}
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
-		
+		base.OnStarted2(time);
+
 		// Создание индикаторов
 		_sma = new SimpleMovingAverage { Length = SmaLength };
 		_bollinger = new BollingerBands
@@ -374,7 +374,7 @@ public class SmaStrategy : Strategy
 		
 		// Подписка на свечи
 		var subscription = new Subscription(
-			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+			TimeSpan.FromMinutes(5).TimeFrame(),
 			Security);
 		
 		subscription

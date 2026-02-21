@@ -64,7 +64,10 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
-			// ... (код для построения свечей из лога заявок)
+			return StorageRegistry
+					.GetOrderLogMessageStorage(securityId, Drive, StorageFormat)
+					.Load(from, to)
+					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.Depths:
 			return StorageRegistry
@@ -91,21 +94,34 @@ API позволяет строить свечи не только из тико
 switch (type)
 {
 	case BuildTypes.Ticks:
-		// ... (код для тиков)
+		return StorageRegistry
+				.GetTickMessageStorage(securityId, Drive, StorageFormat)
+				.Load(from, to)
+				.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 	case BuildTypes.OrderLog:
-		// ... (код для лога заявок)
+		return StorageRegistry
+				.GetOrderLogMessageStorage(securityId, Drive, StorageFormat)
+				.Load(from, to)
+				.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 	case BuildTypes.Depths:
-		// ... (код для стаканов)
+		return StorageRegistry
+				.GetQuoteMessageStorage(securityId, Drive, StorageFormat)
+				.Load(from, to)
+				.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
 	case BuildTypes.Level1:
-		// ... (код для Level1)
+		return StorageRegistry
+				.GetLevel1MessageStorage(securityId, Drive, StorageFormat)
+				.Load(from, to)
+				.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
 	case BuildTypes.SmallerTimeFrame:
-		return candleBuilderProvider
-				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
-				.Load(from, to);
+		// Примечание: GetCandleMessageBuildableStorage является асинхронным методом (возвращает ValueTask)
+		var storage = await candleBuilderProvider
+				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat);
+		return storage.Load(from, to);
 
 	// ... (другие случаи)
 }

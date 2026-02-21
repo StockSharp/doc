@@ -33,7 +33,7 @@ connector.Connect();
 ```cs
 // Создаем подписку на 5-минутные свечи для выбранного инструмента
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
 {
 	MarketData =

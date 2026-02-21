@@ -48,7 +48,7 @@ This significantly simplifies the development of trading strategies and market a
 
 ## Usage Example
 
-Examples of using the order book are available in the `SampleConnection` project on [GitHub](https://github.com/StockSharp/StockSharp/) or in the StockSharp API archive, which can be obtained through the [Installer](../../installer.md). These examples provide practical illustrations of connecting to a trading system, subscribing to a filtered order book, and processing the received data, which can serve as a good starting point for developing your own trading strategies.
+Examples of using the order book are available in the *Samples\/01\_Basic\/02\_MarketDepths* project on [GitHub](https://github.com/StockSharp/StockSharp/) or in the StockSharp API archive, which can be obtained through the [Installer](../../installer.md). These examples provide practical illustrations of connecting to a trading system, subscribing to a filtered order book, and processing the received data, which can serve as a good starting point for developing your own trading strategies.
 
 ## See Also
 

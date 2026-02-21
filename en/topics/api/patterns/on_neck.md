@@ -5,7 +5,7 @@ On-Neck is a bearish trend continuation candlestick pattern consisting of two ca
 ##### Key Features:
 
 - First candle is black (bearish) with opening price higher than closing price (O > C) and a relatively long body.
-- Second candle is white (bullish) with opening price lower than closing price ((C > O) && (pL == H)).
+- Second candle is white (bullish) with opening price lower than closing price ((C > O) && (ABS(pL - C) <= 1)).
 - Closing price of the second candle is around (or at the level of) the low of the first candle.
 - Forms in a downtrend.
 

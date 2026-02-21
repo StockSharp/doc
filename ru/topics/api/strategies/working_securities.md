@@ -52,7 +52,7 @@ public class MySmaStrategy : Strategy
 	
 	public MySmaStrategy()
 	{
-		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
+		_candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(1).TimeFrame());
 	}
 	
 	// Переопределяем метод для корректной работы с Дизайнером

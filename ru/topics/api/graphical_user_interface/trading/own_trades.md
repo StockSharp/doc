@@ -10,7 +10,7 @@
 - [MyTradeGrid.SelectedTrade](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrade) \- выбранная сделка.
 - [MyTradeGrid.SelectedTrades](xref:StockSharp.Xaml.MyTradeGrid.SelectedTrades) \- выбранные сделки.
 
-Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/Common\/SampleConnection*. 
+Ниже показаны фрагменты кода с его использованием. Пример кода взят из *Samples\/01\_Basic\/03\_Orders*.
 
 ```xaml
 <Window x:Class="Sample.MyTradesWindow"

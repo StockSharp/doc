@@ -22,7 +22,7 @@ public class SimpleOrderRulesStrategy : Strategy
 
 ```cs
 // Метод OnStarted
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
 	var sub = new Subscription(DataType.Ticks, Security);
 
@@ -73,7 +73,7 @@ protected override void OnStarted(DateTimeOffset time)
 	// Sending request for subscribe to market data.
 	Subscribe(sub);
 
-	base.OnStarted(time);
+	base.OnStarted2(time);
 }
 ```
 

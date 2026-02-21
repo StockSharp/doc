@@ -2,7 +2,7 @@
 
 Графический компонент [OptionDesk](xref:StockSharp.Xaml.OptionDesk) \- таблица для отображения доски опционов. Показывает "греки", вмененную волатильность, теоретическую цену, лучший оффер и бид для Put и Call опционов. 
 
-Ниже показан пример OptionCalculator, в котором используется этот компонент. Исходные коды примера можно найти в папке *Samples\/Misc\/SampleOptionQuoting*. 
+Ниже показан пример OptionCalculator, в котором используется этот компонент. Исходные коды примера можно найти в папке *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
 ![option desk](../../../../images/option_desk.png)
 
@@ -50,26 +50,24 @@
    {
    	// update gui labels
    	ChangeConnectStatus(false);
-   	MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+   	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
    // fill underlying asset's list
-   Connector.NewSecurity += security =>
+   Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
-   		_assets.Add(security);
-   };
-   Connector.SecurityChanged += security =>
-   {
+   		this.GuiAsync(() => _assets.TryAdd(security));
+
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
    // subscribing on tick prices and updating asset price
-   Connector.NewTrade += trade =>
+   Connector.TickTradeReceived += (sub, trade) =>
    {
-   	if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
+   	if (_model.UnderlyingAssetId == trade.SecurityId)
    		_isDirty = true;
    };
-   Connector.NewPosition += position => this.GuiAsync(() =>
+   Connector.PositionReceived += (sub, position) => this.GuiAsync(() =>
    {
    	var asset = SelectedAsset;
    	if (asset == null)
@@ -78,21 +76,14 @@
    	var newPos = position.Security.UnderlyingSecurityId == asset.Id;
    	if (!assetPos && !newPos)
    		return;
-   	if (assetPos)
-   		PosChart.AssetPosition = position;
-   	if (newPos)
-   		PosChart.Positions.Add(position);
-   	RefreshChart();
-   });
-   Connector.PositionChanged += position => this.GuiAsync(() =>
-   {
-   	if ((PosChart.AssetPosition != null && PosChart.AssetPosition == position) || PosChart.Positions.Cache.Contains(position))
+   	if ((PosChart.Model != null && PosChart.Model.UnderlyingAsset == position.Security)
+   		|| PosChart.Model.InnerModels.Any(m => m.Option == position.Security))
    		RefreshChart();
    });
    try
    {
-   	if (File.Exists(_settingsFile))
-   		Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
+   	if (_settingsFile.IsConfigExists(_fileSystem))
+   		Connector.LoadIfNotNull(_settingsFile.Deserialize<SettingsStorage>(_fileSystem));
    }
    ...
    ```
@@ -117,10 +108,10 @@
 
    ```cs
    // fill underlying asset's list
-   Connector.NewSecurity += security =>
+   Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
-   		_assets.Add(security);
+   		this.GuiAsync(() => _assets.TryAdd(security));
    };
    ```
 5. При выборе инструмента:

@@ -13,8 +13,8 @@ private Subscription _indexSubscription;
 private const string _secCode1 = "GZM5";
 private const string _secCode2 = "LKM5";
 readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
-private ChartArea _area;
-private ChartCandleElement _candleElement;
+private IChartArea _area;
+private IChartCandleElement _candleElement;
 
 // Настройка подключения и конфигурация коннектора
 private void ConfigureConnector()
@@ -28,10 +28,10 @@ private void ConfigureConnector()
 // Настройка графика
 private void SetupChart()
 {
-	_area = new ChartArea();
-	_chart.Areas.Add(_area);
-	_candleElement = new ChartCandleElement();
-	_area.Elements.Add(_candleElement);
+	_area = _chart.CreateArea();
+	_chart.AddArea(_area);
+	_candleElement = _chart.CreateCandleElement();
+	_chart.AddElement(_area, _candleElement);
 	
 	// Подписываемся на событие получения свечей
 	_connector.CandleReceived += OnCandleReceived;
@@ -41,7 +41,6 @@ private void SetupChart()
 private void RegisterServices()
 {
 	ConfigManager.RegisterService<ISecurityProvider>(_connector);
-	ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 }
 
 // Создание индексного инструмента и подписка на свечи
@@ -60,7 +59,7 @@ private void CreateIndexAndSubscribe()
 	
 	// Создаем подписку на свечи индексного инструмента
 	_indexSubscription = new Subscription(
-		DataType.TimeFrame(_timeFrame),  // 1-минутные свечи
+		_timeFrame.TimeFrame(),  // 1-минутные свечи
 		_indexInstr)  // Наш индексный инструмент
 	{
 		MarketData = 
@@ -94,9 +93,9 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		return;
 	
 	// Отрисовываем свечу на графике
-	var chartData = new ChartDrawData();
+	var chartData = _chart.CreateData();
 	chartData.Group(candle.OpenTime).Add(_candleElement, candle);
-	
+
 	this.GuiAsync(() => _chart.Draw(chartData));
 }
 
@@ -119,14 +118,14 @@ private void Unsubscribe()
 ```cs
 // Создаем подписку для построения свечей индекса из свечей компонентов
 var indexFromCandlesSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	_indexInstr)
 {
 	MarketData = 
 	{
 		// Настраиваем подписку для построения из свечей компонентов
 		BuildMode = MarketDataBuildModes.Build,
-		BuildFrom = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		BuildFrom = TimeSpan.FromMinutes(5).TimeFrame(),
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 		To = DateTime.Now
 	}
@@ -141,7 +140,7 @@ _connector.Subscribe(indexFromCandlesSubscription);
 ```cs
 // Создаем подписку для построения свечей индекса из стаканов
 var indexFromDepthSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	TimeSpan.FromMinutes(1).TimeFrame(),
 	_indexInstr)
 {
 	MarketData = 
@@ -163,19 +162,19 @@ _connector.Subscribe(indexFromDepthSubscription);
 
 ```cs
 // Создаем индекс волатильности на основе экспрессии
+// InnerSecurityIds заполняется автоматически из переменных в Expression
 var volatilityIndex = new ExpressionIndexSecurity
 {
 	Board = ExchangeBoard.Nyse,
 	Id = "VOLX",
-	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Формула вычисления волатильности
+	// Переменные в выражении (например, AAPL@NYSE) автоматически
+	// добавляются в InnerSecurityIds при установке Expression
+	Expression = "StdDev(AAPL@NYSE, 20) / SMA(AAPL@NYSE, 20) * 100",
 };
-
-// Добавляем основной инструмент в индекс
-volatilityIndex.InnerSecurityIds.Add(_instr1.ToSecurityId());
 
 // Создаем подписку на свечи индекса волатильности
 var volatilitySubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	volatilityIndex)
 {
 	MarketData = 

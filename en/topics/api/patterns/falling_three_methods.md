@@ -5,9 +5,9 @@ Falling Three Methods is a bearish trend continuation pattern consisting of five
 ##### Key Features:
 
 - First candle is black (bearish) with opening price higher than closing price (O > C) and a long body.
-- The next three candles are white (bullish) with opening price lower than closing price (O < C), with small bodies (B * 3 < pB), (B == pB), (B == pB).
+- The next three candles are white (bullish) with opening price lower than closing price (O < C), with small bodies: (B < pB * 0.5m), (B < ppB * 0.5m), (B < pppB * 0.5m).
 - The bodies of the three middle candles do not extend beyond the range of the first candle.
-- Fifth candle is black (bearish) with opening price higher than closing price (O > C) and a long body (B > pB * 3).
+- Fifth candle is black (bearish) with opening price higher than closing price (O > C) and a long body (B > pB * 2).
 - The fifth candle breaks through the low of the first candle and closes lower.
 - Forms in a downtrend.
 

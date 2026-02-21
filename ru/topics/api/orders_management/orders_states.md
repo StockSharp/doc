@@ -106,8 +106,8 @@ bool isMatched = order.IsMatched();
 // Исполнена ли заявка частично
 bool isPartiallyMatched = order.IsMatchedPartially();
 
-// Исполнена ли хотя бы часть заявки
-bool isNotEmpty = order.IsMatchedEmpty();
+// Не имеет ли заявка исполненного объёма (исполненный объём равен нулю)
+bool isEmpty = order.IsMatchedEmpty();
 
 // Получить исполненный объем
 decimal matchedVolume = order.GetMatchedVolume();

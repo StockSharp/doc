@@ -17,7 +17,7 @@
     При обработке события, проверьте тип данных [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) в объекте `subscription`, связанном с событием. Если [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) равно [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), это указывает на то, что полученный стакан является отфильтрованным:
 
     ```cs
-    connector.OrderBookReceived += (sender, subscription, orderBook) =>
+    connector.OrderBookReceived += (subscription, orderBook) =>
     {
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
@@ -32,9 +32,6 @@
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
-    
-    // или так
-    //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```
 
 ## Заключение

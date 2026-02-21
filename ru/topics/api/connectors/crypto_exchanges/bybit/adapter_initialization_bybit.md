@@ -15,6 +15,18 @@
 							
 ```
 
+Альтернативный, более удобный способ -- использование метода расширения `AddAdapter<T>()`:
+
+```cs
+Connector Connector = new Connector();
+...
+Connector.AddAdapter<ByBitMessageAdapter>(a =>
+{
+	a.Key = "<Your API Key>".To<SecureString>();
+	a.Secret = "<Your API Secret>".To<SecureString>();
+});
+```
+
 ## См. также
 
 [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md)

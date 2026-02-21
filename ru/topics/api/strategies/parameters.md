@@ -151,13 +151,13 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 Параметры стратегии используются так же, как обычные свойства:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// ...
 }
 ```
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Series", string.Empty, "Base settings");
 	}
 

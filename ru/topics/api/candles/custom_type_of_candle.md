@@ -4,35 +4,39 @@
 
 ## Реализация Delta-свечей
 
-1. Сначала необходимо создать свой тип сообщения свечи. Тип должен наследоваться от класса [CandleMessage](xref:StockSharp.Messages.CandleMessage):
+1. Сначала необходимо создать свой тип сообщения свечи. Тип должен наследоваться от класса [TypedCandleMessage\<TArg\>](xref:StockSharp.Messages.TypedCandleMessage`1), который предоставляет типизированный параметр свечи через свойство `TypedArg`:
 
    ```cs
    /// <summary>
    /// Свеча, формирующаяся на основе дельты объемов покупок и продаж.
    /// </summary>
-   public class DeltaCandleMessage : CandleMessage
+   public class DeltaCandleMessage : TypedCandleMessage<decimal>
    {
        // Идентификатор типа сообщения берем из хелпера
        // чтобы использовать одно и то же значение и в RegisterCandleType
-       
+
        /// <summary>
        /// Инициализировать новый экземпляр <see cref="DeltaCandleMessage"/>.
        /// </summary>
        public DeltaCandleMessage()
-           : base(DeltaCandleHelper.DeltaCandleType)
+           : base(DeltaCandleHelper.DeltaCandleType, default)
        {
        }
-       
+
        /// <summary>
        /// Пороговое значение дельты для формирования свечи.
        /// </summary>
-       public decimal DeltaThreshold { get; set; }
-       
+       public decimal DeltaThreshold
+       {
+           get => TypedArg;
+           set => TypedArg = value;
+       }
+
        /// <summary>
        /// Текущее значение дельты.
        /// </summary>
        public decimal CurrentDelta { get; set; }
-       
+
        /// <summary>
        /// Создать копию <see cref="DeltaCandleMessage"/>.
        /// </summary>
@@ -45,20 +49,6 @@
                CurrentDelta = CurrentDelta
            });
        }
-       
-       /// <summary>
-       /// Параметр свечи.
-       /// </summary>
-       public override object Arg
-       {
-           get => DeltaThreshold;
-           set => DeltaThreshold = (decimal)value;
-       }
-       
-       /// <summary>
-       /// Тип аргумента свечи.
-       /// </summary>
-       public override Type ArgType => typeof(decimal);
    }
    ```
 
@@ -170,7 +160,7 @@
    DeltaCandleHelper.RegisterDeltaCandleType();
    
    // Регистрируем построитель дельта-свечей
-   _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
+   _connector.Adapter.StorageProcessor.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
 5. Создаем подписку на свечи типа `DeltaCandleMessage` и запрашиваем по ней данные:
@@ -271,9 +261,9 @@ public class DeltaCandleStrategy : Strategy
 		Name = "DeltaCandleStrategy";
 	}
 
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 
 		// Инициализация графика, если он доступен
 		_chart = GetChart();
@@ -297,8 +287,8 @@ public class DeltaCandleStrategy : Strategy
 		};
 
 		// Создаем правило для обработки дельта-свечей
-		this
-			.WhenCandleReceived(subscription)
+		subscription
+			.WhenCandleReceived(this)
 			.Do(ProcessDeltaCandle)
 			.Apply(this);
 

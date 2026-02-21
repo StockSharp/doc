@@ -5,7 +5,7 @@ Morning Star is a bullish reversal candlestick pattern consisting of three candl
 ##### Key Features:
 
 - First candle is black (bearish) with opening price higher than closing price (O > C).
-- Second candle has a small body (can be either bullish or bearish) and forms a gap down from the first candle. The candle length is significantly smaller than the first ((O < C) && (LEN > B * 3)).
+- Second candle has a small body (can be either bullish or bearish) and forms a gap down from the first candle. The body is significantly smaller than the first candle's body (B < pB * 0.5m).
 - Third candle is white (bullish) with opening price lower than closing price (O < C), which closes deep inside the body of the first candle.
 - Forms in a downtrend.
 

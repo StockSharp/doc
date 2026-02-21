@@ -18,7 +18,7 @@
 		// устанавливается инструмент
 		Security = Security,
 		// устанавливается направление заявки, в данном примере покупка
-		Direction = Sides.Buy,
+		Side = Sides.Buy,
 	};
 	//Метод RegisterOrder отправляет заявку на сервер
 	_connector.RegisterOrder(order);

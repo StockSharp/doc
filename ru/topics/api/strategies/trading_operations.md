@@ -81,10 +81,10 @@ RegisterOrder(order);
 
 ```cs
 // Подписка на событие изменения заявки
-OrderChanged += OnOrderChanged;
+OrderReceived += OnOrderChanged;
 
-// Подписка на событие исполнения заявки
-OrderRegisterFailed += OnOrderRegisterFailed;
+// Подписка на событие ошибки регистрации заявки
+OrderRegisterFailReceived += OnOrderRegisterFailed;
 
 private void OnOrderChanged(Order order)
 {
@@ -255,22 +255,22 @@ private void ProcessCandle(ICandleMessage candle)
 Ниже приведен пример, демонстрирующий различные способы выставления заявок в стратегии и обработку их исполнения:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
-	
+	base.OnStarted2(time);
+
 	// Подписка на свечи
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		Security);
-	
+
 	// Создание правила для обработки свечей
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
-	
-	Connector.Subscribe(subscription);
+
+	Subscribe(subscription);
 }
 
 private void ProcessCandle(ICandleMessage candle)
@@ -304,7 +304,7 @@ private void ProcessCandle(ICandleMessage candle)
 		RegisterOrder(order);
 		
 		// Альтернативный способ обработки через событие
-		OrderChanged += (o) => {
+		OrderReceived += (o) => {
 			if (o == order && o.State == OrderStates.Done)
 			{
 				// Действия после исполнения

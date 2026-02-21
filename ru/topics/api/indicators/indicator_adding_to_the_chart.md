@@ -43,7 +43,7 @@ private void SubscribeToCandles()
 {
 	// Создаем подписку на свечи с указанным таймфреймом
 	_candleSubscription = new Subscription(
-		DataType.TimeFrame(_timeFrame),
+		_timeFrame.TimeFrame(),
 		_security)
 	{
 		MarketData = 
@@ -153,7 +153,7 @@ private void InitializeChartWithMultipleIndicators()
 	
 	// Создаем подписку на свечи
 	_candleSubscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		_security)
 	{
 		MarketData = 

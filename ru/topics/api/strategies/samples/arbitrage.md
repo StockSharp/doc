@@ -48,12 +48,12 @@ public class ArbitrageStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) проверяются параметры, создаются подписки на стаканы и собственные сделки:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) проверяются параметры, создаются подписки на стаканы и собственные сделки:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	if (FutureSecurity == null)
 		throw new InvalidOperationException("Future security is not specified.");

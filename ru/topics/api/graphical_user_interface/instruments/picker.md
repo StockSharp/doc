@@ -25,7 +25,7 @@
 - [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) \- провайдер информации об инструментах.
 - [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) \- провайдер рыночных данных.
 
-Ниже показан фрагмент кода с его использованием, взятый из примера *Samples\/Common\/SampleConnection*: 
+Ниже показан фрагмент кода с его использованием, взятый из примера *Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments*:
 
 ```xaml
 <Window x:Class="Sample.SecuritiesWindow"

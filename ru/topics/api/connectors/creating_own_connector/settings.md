@@ -89,7 +89,7 @@ public SecureString Passphrase { get; set; }
 	GroupName = LocalizedStrings.CryptocurrencyKey)]
 [MessageAdapterCategory(MessageAdapterCategories.Crypto | MessageAdapterCategories.RealTime | MessageAdapterCategories.OrderLog |
 	MessageAdapterCategories.Free | MessageAdapterCategories.Level1 | MessageAdapterCategories.Transactions)]
-public partial class CoinbaseMessageAdapter : AsyncMessageAdapter, IKeySecretAdapter, IPassphraseAdapter
+public partial class CoinbaseMessageAdapter : MessageAdapter, IKeySecretAdapter, IPassphraseAdapter
 ```
 
 Корректная реализация хранения настроек и использование базовых интерфейсов позволяет создать более удобный и понятный для пользователя адаптер, который легко интегрируется в экосистему StockSharp.

@@ -27,7 +27,7 @@ protected override IEnumerable<TimeSpan> TimeFrames { get; } = Extensions.TimeFr
 Метод `IsSupportCandlesUpdates` определяет, поддерживает ли адаптер обновления свечей в реальном времени для конкретного запроса подписки. В случае с Coinbase, поддерживаются только обновления для 5-минутных свечей.
 
 ```cs
-private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinutes(5));
+private static readonly DataType _tf5min = TimeSpan.FromMinutes(5).TimeFrame();
 
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {

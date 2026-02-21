@@ -54,10 +54,6 @@ var filteredNewsSubscription = new Subscription(DataType.News)
 	{
 		// Указываем период, за который нужно получить новости
 		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
-
-		// Можно указать конкретный источник новостей
-		// Для примера используем RSS источник
-		NewsSource = "CryptoNews"
 	}
 };
 

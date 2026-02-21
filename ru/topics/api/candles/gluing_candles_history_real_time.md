@@ -15,36 +15,42 @@ public partial class MainWindow
 	// Путь к данным истории
 	private readonly string _pathHistory = Paths.HistoryDataPath;
 	
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
+
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
-	
+
+	private readonly ChannelExecutor _executor;
+
 	public MainWindow()
 	{
 		InitializeComponent();
-		
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
+
 		// Инициализируем хранилища
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
-		
+
 		// Создаем коннектор с настроенными хранилищами
 		_connector = new Connector(
-			entityRegistry.Securities, 
-			entityRegistry.PositionStorage, 
-			new InMemoryExchangeInfoProvider(), 
-			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			entityRegistry.Securities,
+			entityRegistry.PositionStorage,
+			new InMemoryExchangeInfoProvider(),
+			storageRegistry,
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 		
 		// Регистрируем провайдер адаптеров сообщений
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 		
 		// Загружаем настройки коннектора, если файл существует
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 		
 		// Устанавливаем тип данных свечей по умолчанию (5-минутки)
@@ -63,7 +69,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 	if (_connector.Configure(this))
 	{
 		// Сохраняем настройки в файл
-		_connector.Save().Serialize(_connectorFile);
+		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
@@ -144,11 +150,13 @@ namespace StockSharp.Samples.Candles.CombineHistoryRealtime;
 
 using System;
 using System.Windows;
-using System.IO;
 
 using Ecng.Common;
 using Ecng.Serialization;
 using Ecng.Configuration;
+using Ecng.ComponentModel;
+using Ecng.Logging;
+using Ecng.IO;
 
 using StockSharp.Configuration;
 using StockSharp.Algo;
@@ -169,42 +177,55 @@ public partial class MainWindow
 	private const string _connectorFile = "ConnectorFile.json";
 
 	private readonly string _pathHistory = Paths.HistoryDataPath;
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
 
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
-	
+
+	private readonly ChannelExecutor _executor;
+
 	public MainWindow()
 	{
 		InitializeComponent();
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
+
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		_connector = new Connector(
-			entityRegistry.Securities, 
-			entityRegistry.PositionStorage, 
-			new InMemoryExchangeInfoProvider(), 
-			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			entityRegistry.Securities,
+			entityRegistry.PositionStorage,
+			new InMemoryExchangeInfoProvider(),
+			storageRegistry,
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
 		// registering all connectors
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
+	}
+
+	protected override void OnClosed(EventArgs e)
+	{
+		AsyncHelper.Run(_executor.DisposeAsync);
+
+		base.OnClosed(e);
 	}
 
 	private void Setting_Click(object sender, RoutedEventArgs e)
 	{
 		if (_connector.Configure(this))
 		{
-			_connector.Save().Serialize(_connectorFile);
+			_connector.Save().Serialize(_fileSystem, _connectorFile);
 		}
 	}
 
@@ -250,10 +271,13 @@ public partial class MainWindow
 
 ## Особенности примера
 
+> [!IMPORTANT]
+> Все классы, работающие с файловой системой ([CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive), [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)), требуют передачи объекта `IFileSystem` в конструктор. Используйте `Paths.FileSystem` для получения стандартной реализации. Также `CsvEntityRegistry` требует `ChannelExecutor` для синхронизации доступа к диску. Методы сериализации (`Serialize`, `Deserialize`) также принимают `IFileSystem` в качестве параметра.
+
 1. **Создание хранилищ**:
-   - Используется [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) для хранения сущностей
+   - Используется [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) для хранения сущностей (требует `IFileSystem` и `ChannelExecutor`)
    - Настраивается [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) с указанием пути к хранилищу
-   - Создается [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) для работы со снэпшотами
+   - Создается [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) для работы со снэпшотами (требует `IFileSystem`)
 
 2. **Создание подписки**:
    - Используется класс [Subscription](xref:StockSharp.BusinessEntities.Subscription)
@@ -301,20 +325,6 @@ private void SetHistoryPeriod(int days)
 		_subscription.MarketData.From = DateTime.Today.AddDays(-days);
 		
 		_connector.Subscribe(_subscription);
-	}
-}
-```
-
-### Сохранение полученных данных
-
-```cs
-// Метод для сохранения полученных данных
-private void SaveReceivedData()
-{
-	if (_connector.StorageAdapter != null)
-	{
-		// Принудительно сохраняем кэшированные данные на диск
-		_connector.StorageAdapter.Flush();
 	}
 }
 ```

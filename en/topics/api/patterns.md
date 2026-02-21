@@ -39,8 +39,8 @@ var patternIndicator = new CandlePatternIndicator
 	// Setting the desired pattern
 	Pattern = new ExpressionCandlePattern("My pattern", new[]
 	{
-		new CandleExpressionCondition("C > O"), // Current candle is rising
-		new CandleExpressionCondition("pC < pO") // Previous candle is falling
+		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Current candle is rising
+		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Previous candle is falling
 	})
 };
 
@@ -90,3 +90,8 @@ When using [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.Expre
 ## Standard Patterns
 
 For quick creation of patterns based on existing ones, you can use the section at the bottom of the pattern editor window. Clicking the ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) button at the bottom of the window adds the logic of the pattern selected from the drop-down list opposite to the editing window. The ![DesignerDeleteButton](../../images/designer_delete_button.png) button at the bottom of the window deletes the selected line in the editing window.
+
+## Advanced Features
+
+- [ComplexCandlePattern](xref:StockSharp.Algo.Candles.Patterns.ComplexCandlePattern) — allows combining multiple patterns into a single composite pattern for more complex analysis.
+- [ICandlePatternProvider](xref:StockSharp.Algo.Candles.Patterns.ICandlePatternProvider) — pattern provider interface that allows loading and saving custom patterns.

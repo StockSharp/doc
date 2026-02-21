@@ -31,12 +31,12 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) создается индикатор Bollinger Bands, настраивается подписка на свечи и готовится визуализация на графике:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) создается индикатор Bollinger Bands, настраивается подписка на свечи и готовится визуализация на графике:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Создание индикатора
 	_bollingerBands = new BollingerBands

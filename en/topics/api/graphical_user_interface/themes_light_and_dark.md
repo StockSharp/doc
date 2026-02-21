@@ -9,8 +9,8 @@ For all S\# graphic elements, there are several different themes. Below are the 
 To install the application theme, just write one line. For example, to set the VisualStudio 2017 dark theme, you have to specify the line:
 
 ```cs
-...                 
-ApplicationThemeHelper.ApplicationThemeName = Theme.VS2017DarkName;
+...
+ThemeExtensions.ApplyDefaultTheme();
 ...
 ```
 

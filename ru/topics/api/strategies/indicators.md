@@ -27,18 +27,18 @@ public virtual bool IsFormed => _indicators.AllFormed;
 Для правильного определения момента готовности стратегии необходимо добавлять используемые индикаторы в коллекцию [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators):
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Создание индикаторов
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// Добавление индикаторов в коллекцию
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	// ...
 }
 ```
@@ -109,17 +109,17 @@ public class SmaStrategy : Strategy
 	
 	// ...
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
-		
+		base.OnStarted2(time);
+
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-		
+
 		// Добавляем индикаторы в коллекцию для отслеживания их состояния
 		Indicators.Add(_longSma);
 		Indicators.Add(_shortSma);
-		
+
 		// ...
 	}
 	
@@ -171,10 +171,10 @@ public class ComplexStrategy : Strategy
 	private BollingerBands _bollinger;
 	private StandardDeviation _stdev;
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
-		
+		base.OnStarted2(time);
+
 		// Создаем индикаторы
 		_sma = new SimpleMovingAverage { Length = 20 };
 		_rsi = new RelativeStrengthIndex { Length = 14 };

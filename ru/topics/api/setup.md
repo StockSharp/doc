@@ -1,98 +1,103 @@
-# Установка API
+# Настройка окружения
 
-NuGet - система управления пакетами, интегрированная в Visual Studio. Она позволяет легко устанавливать и обновлять пакеты, включая [S#](../api.md).
+## Требования
 
-Все пакеты [S#](../api.md) скомпилированы под .NET 6. Это кросс-платформенная версия (коннекторы, [бэктестинг](testing.md), [хранилище](market_data_storage.md) и т.д. доступны в любой ОС), но [графические компоненты](graphical_user_interface.md) поддерживаются только под Windows.
+Для работы со StockSharp необходимы:
 
-## Публичный NuGet сервер
+- **.NET 10** (SDK и Runtime)
+- **Visual Studio 2022+** (рекомендуется последняя версия) или **JetBrains Rider**
+- **NuGet** -- менеджер пакетов (встроен в Visual Studio)
 
-1. Нажмите правой кнопкой мыши на проекте и выберите **Manage NuGet Packages...** в контекстном меню:
+## Установка .NET 10
 
-![Контекстное меню](../../images/api_nuget_1.png)
+Скачайте и установите .NET 10 SDK с официального сайта Microsoft:
 
-2. Появится окно как на картинке:
+```
+https://dotnet.microsoft.com/download/dotnet/10.0
+```
 
-![Окно NuGet](../../images/api_nuget_2.png)
+Убедитесь, что SDK установлен корректно:
 
-3. В правом верхнем углу в поле Search (в русской версии Поиск) необходимо написать StockSharp:
+```bash
+dotnet --version
+```
 
-![Поиск StockSharp](../../images/api_nuget_3.png)
+## Создание проекта
 
-4. [S#](../api.md) разделен на несколько NuGet пакетов:
-  - [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) - базовые алгоритмы и [тестирование](testing.md)
-  - [StockSharp.Binance](https://www.nuget.org/packages/StockSharp.Binance/) - [коннекторы](connectors.md) к брокерам
-  - [StockSharp.Xaml.Charting](https://www.nuget.org/packages/StockSharp.Xaml.Charting/) - [графические компоненты](graphical_user_interface.md) для отображения графиков свечей и [индикаторов](indicators.md)
+### Через Visual Studio 2022+
 
-При выборе пакета все зависимости будут установлены автоматически.
+1. Откройте Visual Studio 2022 (или новее)
+2. Создайте новый проект: **File -> New -> Project**
+3. Выберите шаблон **Console App** или **WPF Application**
+4. Убедитесь, что выбран целевой фреймворк **.NET 10**
 
-5. Выберите нужный пакет и нажмите **Install**:
+### Через командную строку
 
-![Установка пакета](../../images/api_nuget_4.png)
+```bash
+dotnet new console -n MyTradingApp --framework net10.0
+cd MyTradingApp
+```
 
-6. После установки файлы [S#](../api.md) будут добавлены в папку packages и подключены как ссылки в проекте.
+## Подключение NuGet-пакетов
 
-[Примеры](examples.md) торговых роботов доступны на [GitHub](https://github.com/stocksharp/stocksharp/tree/master/Samples).
+StockSharp распространяется через NuGet. Добавьте необходимые пакеты в проект:
 
-## Закрытый NuGet сервер 
+```bash
+# Основной пакет с алгоритмами
+dotnet add package StockSharp.Algo
 
-Некоторые компоненты (например, крипто-[коннекторы](connectors.md)) доступны только через закрытый NuGet сервер для зарегистрированных пользователей.
+# Коннектор (пример -- Binance)
+dotnet add package StockSharp.Binance
 
-Для подключения доступны два способа:
+# Для хранения рыночных данных
+dotnet add package StockSharp.Algo.Storages
+```
 
-### Способ 1: Авторизация через токен в адресе
+Или через **Package Manager Console** в Visual Studio:
 
-1. Зарегистрируйтесь на сайте StockSharp.
+```powershell
+Install-Package StockSharp.Algo
+Install-Package StockSharp.Binance
+```
 
-2. Скопируйте токен из [личного кабинета](https://stocksharp.ru/profile/):
+## Структура проекта
 
-![Личный кабинет](../../images/api_nuget_5.png)
+Минимальный файл проекта (`.csproj`) для работы со StockSharp:
 
-3. Проделайте шаги 1 и 2 из раздела **Публичный NuGet сервер** и откройте окно настроек доступных фидов:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
 
-![Настройки фидов](../../images/api_nuget_6.png)
+  <ItemGroup>
+    <PackageReference Include="StockSharp.Algo" Version="*" />
+    <PackageReference Include="StockSharp.Binance" Version="*" />
+  </ItemGroup>
+</Project>
+```
 
-4. В появившемся окне добавьте новый фид, указав адрес как `https://nuget.stocksharp.com/{token}/v3/index.json`. Например, `https://nuget.stocksharp.com/AAHBWDNOINXWNJNWD/v3/index.json`:
+## Проверка установки
 
-![Добавление фида](../../images/api_nuget_7.png)
+Создайте минимальное приложение для проверки того, что все настроено корректно:
 
-5. Нажмите **ОК** и выберите в фидах созданный. В случае наличия доступа к тем или иным закрытым компонентам появится список доступных NuGet пакетов:
+```csharp
+using StockSharp.Algo;
+using StockSharp.BusinessEntities;
 
-![Список пакетов](../../images/api_nuget_8.png)
+Console.WriteLine("StockSharp successfully configured!");
 
-6. Выберите нужный и нажмите кнопку **Install**.
+var connector = new Connector();
+Console.WriteLine($"Connector created: {connector}");
+```
 
-### Способ 2: Авторизация через логин и пароль
+Скомпилируйте и запустите:
 
-1. Добавьте источник пакетов с адресом `https://nuget.stocksharp.com/x/v3/index.json`.
+```bash
+dotnet run
+```
 
-2. После добавления источника, при попытке его использования, появится окно авторизации:
+## Примеры
 
-![Окно авторизации](../../images/api_nuget_auth.png)
-
-3. Введите свой логин и пароль от аккаунта StockSharp. Можно сохранить учетные данные, чтобы не вводить их каждый раз.
-
-4. После успешной авторизации вы получите доступ к закрытым пакетам.
-
-5. Если вы предпочитаете авторизацию по токену, можно ввести в поле логина значение "x", а в поле пароля — ваш токен.
-
-Если вам нужно сбросить сохраненные учетные данные:
-1. Откройте "Credential Manager" в Windows (Панель управления → Учетные данные пользователей → Диспетчер учетных данных)
-2. Найдите в списке VSCredentials, связанные с nuget.stocksharp.com
-3. Удалите эти учетные данные
-
-## Обновление пакетов
-
-Для проверки обновлений:
-
-1. Откройте **Manage NuGet Packages...**
-2. Перейдите на вкладку **Updates**
-3. Выберите пакеты для обновления и нажмите **Update**
-
-![Обновление пакетов](../../images/api_nuget_9.png)
-
-> [!WARNING]
-> Для проверки обновлений на публичном и закрытом серверах необходимо переключать источник пакетов, так как VS 2019 не отслеживает несколько источников одновременно.
-
-## Installer
-
-[Installer](../installer.md) - специальное приложение для упрощенной установки всех продуктов StockSharp.
+Готовые примеры использования StockSharp доступны в каталоге `Samples/` репозитория. Они охватывают подключение к биржам, подписку на данные, построение свечей, индикаторы, стратегии и тестирование.

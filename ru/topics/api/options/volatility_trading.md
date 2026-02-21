@@ -1,6 +1,9 @@
 # Котирование по волатильности
 
-Для котирования опционов реализована специальная стратегия [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy), которая предусматривает котирование объема по заданным границам волатильности. 
+Для котирования опционов реализована специальная стратегия [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.VolatilityQuotingStrategy), которая предусматривает котирование объема по заданным границам волатильности.
+
+> [!WARNING]
+> Класс [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.VolatilityQuotingStrategy) помечен как `[Obsolete]`. Рекомендуется использовать [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) вместо него.
 
 ## Котирование по волатильности
 
@@ -27,26 +30,24 @@
    	{
    		// update gui labels
    		ChangeConnectStatus(false);
-   		MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
+   		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    	});
    	// fill underlying asset's list
-   	Connector.NewSecurity += security =>
+   	Connector.SecurityReceived += (sub, security) =>
    	{
    		if (security.Type == SecurityTypes.Future)
-   			_assets.Add(security);
-   	};
-   	Connector.SecurityChanged += security =>
-   	{
+   			this.GuiAsync(() => _assets.TryAdd(security));
+
    		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    			_isDirty = true;
    	};
    	// subscribing on tick prices and updating asset price
-   	Connector.NewTrade += trade =>
+   	Connector.TickTradeReceived += (sub, trade) =>
    	{
-   		if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
+   		if (_model.UnderlyingAssetId == trade.SecurityId)
    			_isDirty = true;
    	};
-   	Connector.NewPosition += position => this.GuiAsync(() =>
+   	Connector.PositionReceived += (sub, position) => this.GuiAsync(() =>
    	{
    		var asset = SelectedAsset;
    		if (asset == null)
@@ -55,21 +56,14 @@
    		var newPos = position.Security.UnderlyingSecurityId == asset.Id;
    		if (!assetPos && !newPos)
    			return;
-   		if (assetPos)
-   			PosChart.AssetPosition = position;
-   		if (newPos)
-   			PosChart.Positions.Add(position);
-   		RefreshChart();
-   	});
-   	Connector.PositionChanged += position => this.GuiAsync(() =>
-   	{
-   		if ((PosChart.AssetPosition != null && PosChart.AssetPosition == position) || PosChart.Positions.Cache.Contains(position))
+   		if ((PosChart.Model != null && PosChart.Model.UnderlyingAsset == position.Security)
+   			|| PosChart.Model.InnerModels.Any(m => m.Option == position.Security))
    			RefreshChart();
    	});
    	try
    	{
-   		if (File.Exists(_settingsFile))
-   			Connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_settingsFile));
+   		if (_settingsFile.IsConfigExists(_fileSystem))
+   			Connector.LoadIfNotNull(_settingsFile.Deserialize<SettingsStorage>(_fileSystem));
    	}
    	catch
    	{
@@ -83,12 +77,9 @@
    		_model.Clear();
    		_model.MarketDataProvider = Connector;
    		ClearSmiles();
-   		PosChart.Positions.Clear();
-   		PosChart.AssetPosition = null;
-   		PosChart.Refresh(1, 1, default(DateTimeOffset), default(DateTimeOffset));
+   		PosChart.Model = null;
    		Portfolio.Portfolios = new PortfolioDataSource(Connector);
-   		PosChart.MarketDataProvider = Connector;
-   		PosChart.SecurityProvider = Connector;
+   		PosChart.Model = new BasketBlackScholes(Connector, Connector);
    		Connector.Connect();
    	}
    	else
@@ -96,35 +87,36 @@
    }            		
    	  				
    ```
-3. Настройка стратегии [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) (заполнение границ волатильности, а также создание заявки, через которую указываются требуемый объем и направление котирования): 
+3. Настройка стратегии [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.VolatilityQuotingStrategy) (заполнение границ волатильности, а также создание заявки, через которую указываются требуемый объем и направление котирования):
 
-   ```none
+   ```cs
    private void StartClick(object sender, RoutedEventArgs e)
    {
    	var option = SelectedOption;
    	// create DOM window
    	var wnd = new QuotesWindow { Title = option.Name };
-   	wnd.Init(option);
-   	// create delta hedge strategy
-   	var hedge = new DeltaHedgeStrategy
+   	// create delta hedge strategy (requires BasketBlackScholes model)
+   	var hedge = new DeltaHedgeStrategy(PosChart.Model)
    	{
    		Security = option.GetUnderlyingAsset(Connector),
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
    	// create option quoting for 20 contracts
-   	var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
-   			new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
+   	var quoting = new VolatilityQuotingStrategy
    	{
+   		QuotingSide = Sides.Buy,
+   		QuotingVolume = 20,
+   		IVRange = new Range<decimal>((decimal?)ImpliedVolatilityMin.EditValue ?? 0, (decimal?)ImpliedVolatilityMax.EditValue ?? 100),
    		// working size is 1 contract
    		Volume = 1,
    		Security = option,
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-        // link quoting and hedging
+   	// link quoting and hedging
    	hedge.ChildStrategies.Add(quoting);
-        // start hedging
+   	// start hedging
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
@@ -140,12 +132,12 @@
    ```cs
    hedge.Start();
    ```
-5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.BusinessEntities.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [StockSharp.BusinessEntities.IExchangeInfoProvider](xref:StockSharp.BusinessEntities.IExchangeInfoProvider) exchangeInfoProvider, [System.DateTimeOffset](xref:System.DateTimeOffset) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend **)**: 
+5. Для визуального представления волатильности пример показывает, как можно перевести стандартный стакан с котировками в стакан волатильности за счет использования метода [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,System.DateTime,System.Decimal,System.Decimal))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [System.DateTime](xref:System.DateTime) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend **)**:
 
    ```cs
-   private void OnQuotesChanged()
+   private void TryUpdateDepth(Subscription subscription, IOrderBookMessage depth)
    {
-   	DepthCtrl.UpdateDepth(_depth.ImpliedVolatility(Connector, Connector, Connector.CurrentTime));
+   	wnd.Update(depth.ImpliedVolatility(Connector, Connector, depth.ServerTime));
    }
    ```
 

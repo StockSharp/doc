@@ -4,41 +4,42 @@
 
 ```cs
 /// <summary>
-/// Простая скользящая средняя.
+/// Simple moving average.
 /// </summary>
-[DisplayName("SMA")]
-[Description("Простая скользящая средняя.")]
-public class SimpleMovingAverage : LengthIndicator<decimal>
+[Display(
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.SMAKey,
+	Description = LocalizedStrings.SimpleMovingAverageKey)]
+[Doc("topics/api/indicators/list_of_indicators/sma.html")]
+public class SimpleMovingAverage : DecimalLengthIndicator
 {
 	/// <summary>
-	/// Создать <see cref="SimpleMovingAverage"/>.
+	/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
 	/// </summary>
 	public SimpleMovingAverage()
 	{
 		Length = 32;
+
+		Buffer.Stats = CircularBufferStats.Sum;
 	}
-	/// <summary>
-	/// Обработать входное значение.
-	/// </summary>
-	/// <param name="input">Входное значение.</param>
-	/// <returns>Результирующее значение.</returns>
-	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+
+	/// <inheritdoc />
+	protected override decimal? OnProcessDecimal(IIndicatorValue input)
 	{
-		var newValue = input.GetValue<decimal>();
+		var newValue = input.ToDecimal(Source);
+
 		if (input.IsFinal)
 		{
-			Buffer.Add(newValue);
-			if (Buffer.Count > Length)
-			Buffer.RemoveAt(0);
+			Buffer.PushBack(newValue);
+			return Buffer.Sum / Length;
 		}
-		if (input.IsFinal)
-			return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
-		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
+
+		return (Buffer.SumNoFirst + newValue) / Length;
 	}
 }
 ```
 
-[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) наследуется от класса [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1), от которого необходимо наследовать все индикаторы, имеющие в качестве параметра длину периода. 
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) наследуется от класса [DecimalLengthIndicator](xref:StockSharp.Algo.Indicators.DecimalLengthIndicator), от которого необходимо наследовать все индикаторы, имеющие в качестве параметра длину периода и работающие с числовыми значениями типа `decimal`. Метод `OnProcessDecimal` возвращает `decimal?` \- если вернуть `null`, будет создано пустое значение индикатора. Буфер `Buffer` является циклическим (`CircularBuffer`), а метод `PushBack` автоматически удаляет самый старый элемент при превышении вместимости.
 
 ## Важные свойства и методы индикаторов
 
@@ -57,7 +58,7 @@ public override int NumValuesToInitialize => Length;
 
 ```cs
 /// <inheritdoc />
-public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+public override int NumValuesToInitialize => ShortEma.NumValuesToInitialize.Max(LongEma.NumValuesToInitialize);
 ```
 
 ### Measure
@@ -111,61 +112,94 @@ public override void Load(SettingsStorage storage)
 
 ```cs
 /// <summary>
-/// Волатильность Чайкина.
+/// Chaikin volatility.
 /// </summary>
 /// <remarks>
-/// http://www2.wealth-lab.com/WL5Wiki/Volatility.ashx
-/// http://www.incrediblecharts.com/indicators/chaikin_volatility.php
+/// https://doc.stocksharp.com/topics/api/indicators/list_of_indicators/chv.html
 /// </remarks>
-[DisplayName("Волатильность")]
-[Description("Волатильность Чайкина.")]
-public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
+[Display(
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.ChaikinVolatilityKey,
+	Description = LocalizedStrings.ChaikinVolatilityIndicatorKey)]
+[IndicatorIn(typeof(CandleIndicatorValue))]
+[Doc("topics/api/indicators/list_of_indicators/chv.html")]
+public class ChaikinVolatility : BaseIndicator
 {
 	/// <summary>
-	/// Создать <see cref="ChaikinVolatility"/>.
+	/// Initializes a new instance of the <see cref="ChaikinVolatility"/>.
 	/// </summary>
 	public ChaikinVolatility()
 	{
-		Ema = new ExponentialMovingAverage();
-		Roc = new RateOfChange();
+		Ema = new();
+		Roc = new();
+
+		AddResetTracking(Ema);
+		AddResetTracking(Roc);
 	}
+
 	/// <summary>
-	/// Скользящая средняя.
+	/// Moving Average.
 	/// </summary>
-	[ExpandableObject]
-	[DisplayName("MA")]
-	[Description("Скользящая средняя.")]
-	[Category("Основное")]
-	public ExponentialMovingAverage Ema { get; private set; }
+	[TypeConverter(typeof(ExpandableObjectConverter))]
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.MAKey,
+		Description = LocalizedStrings.MovingAverageKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public ExponentialMovingAverage Ema { get; }
+
 	/// <summary>
-	/// Скорость изменения.
+	/// Rate of change.
 	/// </summary>
-	[ExpandableObject]
-	[DisplayName("ROC")]
-	[Description("Скорость изменения.")]
-	[Category("Основное")]
-	public RateOfChange Roc { get; private set; }
-	/// <summary>
-	/// Сформирован ли индикатор.
-	/// </summary>
-	public override bool IsFormed
-	{
-		get { return Roc.IsFormed; }
-	}
-	/// <summary>
-	/// Обработать входное значение.
-	/// </summary>
-	/// <param name="input">Входное значение.</param>
-	/// <returns>Результирующее значение.</returns>
+	[TypeConverter(typeof(ExpandableObjectConverter))]
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.ROCKey,
+		Description = LocalizedStrings.RateOfChangeKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public RateOfChange Roc { get; }
+
+	/// <inheritdoc />
+	protected override bool CalcIsFormed() => Roc.IsFormed;
+
+	/// <inheritdoc />
+	public override int NumValuesToInitialize => Ema.NumValuesToInitialize + Roc.NumValuesToInitialize - 1;
+
+	/// <inheritdoc />
+	public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
+
+	/// <inheritdoc />
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
-		var candle = input.GetValue<Candle>();
-		var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
+		var candle = input.ToCandle();
+
+		var emaValue = Ema.Process(input, candle.GetLength());
+
 		if (Ema.IsFormed)
 		{
-			return Roc.Process(emaValue);
+			var val = Roc.Process(emaValue);
+			return new DecimalIndicatorValue(this, val.ToDecimal(Source), input.Time);
 		}
-		return input;				
+
+		return new DecimalIndicatorValue(this, input.Time);
+	}
+
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+
+		Ema.LoadIfNotNull(storage, nameof(Ema));
+		Roc.LoadIfNotNull(storage, nameof(Roc));
+	}
+
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+
+		storage.SetValue(nameof(Ema), Ema.Save());
+		storage.SetValue(nameof(Roc), Roc.Save());
 	}
 }
 ```
@@ -176,63 +210,129 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 
 ```cs
 /// <summary>
-/// Индекс среднего направления движения Welles Wilder.
+/// Welles Wilder Average Directional Index.
 /// </summary>
-[DisplayName("ADX")]
-[Description("Индекс среднего направления движения Welles Wilder.")]
-public class AverageDirectionalIndex : BaseComplexIndicator
+[Display(
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.AdxKey,
+	Description = LocalizedStrings.AverageDirectionalIndexKey)]
+[Doc("topics/api/indicators/list_of_indicators/adx.html")]
+[IndicatorOut(typeof(IAverageDirectionalIndexValue))]
+public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalIndexValue>
 {
 	/// <summary>
-	/// Создать <see cref="AverageDirectionalIndex"/>.
+	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
 	public AverageDirectionalIndex()
 		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
 	{
 	}
+
 	/// <summary>
-	/// Создать <see cref="AverageDirectionalIndex"/>.
+	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
-	/// <param name="dx">Индекса направленного движения Welles Wilder.</param>
-	/// <param name="movingAverage">Скользящая средняя.</param>
-	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
+	/// <param name="dx">Welles Wilder Directional Movement Index.</param>
+	/// <param name="movingAverage">Moving Average.</param>
+	public AverageDirectionalIndex(DirectionalIndex dx, DecimalLengthIndicator movingAverage)
+		: base(dx, movingAverage)
 	{
-		if (dx == null)
-			throw new ArgumentNullException(nameof(dx));
-		if (movingAverage == null)
-			throw new ArgumentNullException(nameof(movingAverage));
-		InnerIndicators.Add(Dx = dx);
-		InnerIndicators.Add(MovingAverage = movingAverage);
+		Dx = dx;
+		MovingAverage = movingAverage;
 		Mode = ComplexIndicatorModes.Sequence;
 	}
+
+	/// <inheritdoc />
+	public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
+
 	/// <summary>
-	/// Индекса направленного движения Welles Wilder.
+	/// Welles Wilder Directional Movement Index.
 	/// </summary>
 	[Browsable(false)]
-	public DirectionalIndex Dx { get; private set; }
+	public DirectionalIndex Dx { get; }
+
 	/// <summary>
-	/// Скользящая средняя.
+	/// Moving Average.
 	/// </summary>
 	[Browsable(false)]
-	public LengthIndicator<decimal> MovingAverage { get; private set; }
+	public DecimalLengthIndicator MovingAverage { get; }
+
 	/// <summary>
-	/// Длина периода.
+	/// Period length.
 	/// </summary>
-	[DisplayName("Период")]
-	[Description("Период индикатора.")]
-	[Category("Основные")]
-	public virtual int Length
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.PeriodKey,
+		Description = LocalizedStrings.IndicatorPeriodKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int Length
 	{
-		get { return MovingAverage.Length; }
+		get => MovingAverage.Length;
 		set
 		{
 			MovingAverage.Length = Dx.Length = value;
 			Reset();
 		}
 	}
+
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+		Length = storage.GetValue<int>(nameof(Length));
+	}
+
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+		storage.SetValue(nameof(Length), Length);
+	}
+
+	/// <inheritdoc />
+	protected override IAverageDirectionalIndexValue CreateValue(DateTime time)
+		=> new AverageDirectionalIndexValue(this, time);
+}
+
+/// <summary>
+/// <see cref="AverageDirectionalIndex"/> indicator value.
+/// </summary>
+public interface IAverageDirectionalIndexValue : IComplexIndicatorValue
+{
+	/// <summary>
+	/// Gets the <see cref="AverageDirectionalIndex.Dx"/> value.
+	/// </summary>
+	IDirectionalIndexValue Dx { get; }
+
+	/// <summary>
+	/// Gets the <see cref="AverageDirectionalIndex.MovingAverage"/> value.
+	/// </summary>
+	IIndicatorValue MovingAverageValue { get; }
+
+	/// <summary>
+	/// Gets the <see cref="AverageDirectionalIndex.MovingAverage"/> value.
+	/// </summary>
+	[Browsable(false)]
+	decimal? MovingAverage { get; }
+}
+
+/// <summary>
+/// AverageDirectionalIndex indicator value implementation.
+/// </summary>
+public class AverageDirectionalIndexValue(AverageDirectionalIndex indicator, DateTime time)
+	: ComplexIndicatorValue<AverageDirectionalIndex>(indicator, time), IAverageDirectionalIndexValue
+{
+	/// <inheritdoc />
+	public IDirectionalIndexValue Dx => (IDirectionalIndexValue)this[TypedIndicator.Dx];
+
+	/// <inheritdoc />
+	public IIndicatorValue MovingAverageValue => this[TypedIndicator.MovingAverage];
+
+	/// <inheritdoc />
+	public decimal? MovingAverage => MovingAverageValue.ToNullableDecimal(TypedIndicator.Source);
 }
 ```
 
-Такие индикаторы должны наследоваться от класса [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator), и передавать в [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators) составные части индикатора. Дополнительно каждый составной индикатор обязан реализовать собственный класс значения, производный от `ComplexIndicatorValue`. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются.
+Такие индикаторы должны наследоваться от класса [BaseComplexIndicator\<TValue\>](xref:StockSharp.Algo.Indicators.BaseComplexIndicator`1), где `TValue` \- интерфейс значения, реализующий `IComplexIndicatorValue`. Составные части индикатора передаются через конструктор в `base(...)`. Каждый составной индикатор обязан реализовать собственный интерфейс значения и класс, производный от `ComplexIndicatorValue<T>`, а также переопределить метод `CreateValue(DateTime)`. Атрибут `[IndicatorOut]` указывает на интерфейс значения. [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator`1) будет обрабатывать данные части один за другим. Если [BaseComplexIndicator.Mode](xref:StockSharp.Algo.Indicators.BaseComplexIndicator`1.Mode) установлено в [ComplexIndicatorModes.Sequence](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Sequence), то результирующее значение первого индикатора будет передано в качестве входного значения второму, и так далее до конца. Если же установлено значение [ComplexIndicatorModes.Parallel](xref:StockSharp.Algo.Indicators.ComplexIndicatorModes.Parallel), то результаты вложенных индикаторов игнорируются.
 
 ## Пример комплексного индикатора с реализацией SaveLoad
 
@@ -248,11 +348,20 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
 [IndicatorIn(typeof(CandleIndicatorValue))]
 [Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
-[IndicatorOut(typeof(PercentageVolumeOscillatorValue))]
-public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeOscillatorValue>
+[IndicatorOut(typeof(IPercentageVolumeOscillatorValue))]
+public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolumeOscillatorValue>
 {
-	private readonly ExponentialMovingAverage _shortEma;
-	private readonly ExponentialMovingAverage _longEma;
+	/// <summary>
+	/// Short EMA.
+	/// </summary>
+	[Browsable(false)]
+	public ExponentialMovingAverage ShortEma { get; }
+
+	/// <summary>
+	/// Long EMA.
+	/// </summary>
+	[Browsable(false)]
+	public ExponentialMovingAverage LongEma { get; }
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
@@ -272,8 +381,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
 		: base(shortEma, longEma)
 	{
-		_shortEma = shortEma;
-		_longEma = longEma;
+		ShortEma = shortEma;
+		LongEma = longEma;
 	}
 
 	/// <summary>
@@ -286,8 +395,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 		GroupName = LocalizedStrings.GeneralKey)]
 	public int ShortPeriod
 	{
-		get => _shortEma.Length;
-		set => _shortEma.Length = value;
+		get => ShortEma.Length;
+		set => ShortEma.Length = value;
 	}
 
 	/// <summary>
@@ -300,18 +409,18 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 		GroupName = LocalizedStrings.GeneralKey)]
 	public int LongPeriod
 	{
-		get => _longEma.Length;
-		set => _longEma.Length = value;
+		get => LongEma.Length;
+		set => LongEma.Length = value;
 	}
 
 	/// <inheritdoc />
 	public override IndicatorMeasures Measure => IndicatorMeasures.Volume;
 
 	/// <inheritdoc />
-	public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+	public override int NumValuesToInitialize => ShortEma.NumValuesToInitialize.Max(LongEma.NumValuesToInitialize);
 
 	/// <inheritdoc />
-	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
+	protected override bool CalcIsFormed() => ShortEma.IsFormed && LongEma.IsFormed;
 
 	/// <inheritdoc />
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
@@ -320,17 +429,17 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 
 		var result = new PercentageVolumeOscillatorValue(this, input.Time);
 
-		var shortValue = _shortEma.Process(input, volume);
-		var longValue = _longEma.Process(input, volume);
+		var shortValue = ShortEma.Process(input, volume);
+		var longValue = LongEma.Process(input, volume);
 
-		result.Add(_shortEma, shortValue);
-		result.Add(_longEma, longValue);
+		result.Add(ShortEma, shortValue);
+		result.Add(LongEma, longValue);
 
-		if (_longEma.IsFormed)
+		if (LongEma.IsFormed)
 		{
-			var den = longValue.ToDecimal();
-			var pvo = den == 0 ? 0 : ((shortValue.ToDecimal() - den) / den) * 100;
-			result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time));
+			var den = longValue.ToDecimal(Source);
+			var pvo = den == 0 ? 0 : ((shortValue.ToDecimal(Source) - den) / den) * 100;
+			result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time) { IsFinal = input.IsFinal });
 		}
 
 		return result;
@@ -358,32 +467,62 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 
 	/// <inheritdoc />
-	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
-		=> new(this, time);
+	protected override IPercentageVolumeOscillatorValue CreateValue(DateTime time)
+		=> new PercentageVolumeOscillatorValue(this, time);
 }
 ```
 
 ```cs
 /// <summary>
-/// Значение индикатора <see cref="PercentageVolumeOscillator"/>.
+/// <see cref="PercentageVolumeOscillator"/> indicator value.
 /// </summary>
-public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
+public interface IPercentageVolumeOscillatorValue : IComplexIndicatorValue
 {
 	/// <summary>
-	/// Создать <see cref="PercentageVolumeOscillatorValue"/>.
+	/// Gets the short EMA value.
 	/// </summary>
-	/// <param name="indicator">Индикатор.</param>
-	/// <param name="time">Время значения.</param>
-	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
-			: base(indicator, time)
-	{
-	}
+	IIndicatorValue ShortEmaValue { get; }
+
+	/// <summary>
+	/// Gets the short EMA value.
+	/// </summary>
+	[Browsable(false)]
+	decimal? ShortEma { get; }
+
+	/// <summary>
+	/// Gets the long EMA value.
+	/// </summary>
+	IIndicatorValue LongEmaValue { get; }
+
+	/// <summary>
+	/// Gets the long EMA value.
+	/// </summary>
+	[Browsable(false)]
+	decimal? LongEma { get; }
+}
+
+/// <summary>
+/// Percentage Volume Oscillator indicator value implementation.
+/// </summary>
+public class PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTime time)
+	: ComplexIndicatorValue<PercentageVolumeOscillator>(indicator, time), IPercentageVolumeOscillatorValue
+{
+	/// <inheritdoc />
+	public IIndicatorValue ShortEmaValue => this[TypedIndicator.ShortEma];
+	/// <inheritdoc />
+	public decimal? ShortEma => ShortEmaValue.ToNullableDecimal(TypedIndicator.Source);
+
+	/// <inheritdoc />
+	public IIndicatorValue LongEmaValue => this[TypedIndicator.LongEma];
+	/// <inheritdoc />
+	public decimal? LongEma => LongEmaValue.ToNullableDecimal(TypedIndicator.Source);
 }
 ```
 
 Этот пример демонстрирует:
 1. Реализацию `NumValuesToInitialize` для комплексного индикатора
 2. Указание типа измерения через свойство `Measure`
-3. Реализацию собственного класса значения для комплексного индикатора
-4. Корректные реализации методов `Save` и `Load` для сохранения и загрузки параметров
-5. Переопределение `ToString()` для удобного отображения конфигурации индикатора
+3. Реализацию интерфейса значения `IPercentageVolumeOscillatorValue` и класса `PercentageVolumeOscillatorValue` с primary constructor синтаксисом
+4. Использование `[IndicatorOut(typeof(IPercentageVolumeOscillatorValue))]` с интерфейсом (не конкретным классом)
+5. Корректные реализации методов `Save` и `Load` для сохранения и загрузки параметров
+6. Переопределение `CreateValue(DateTime)` для создания экземпляра значения индикатора

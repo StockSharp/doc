@@ -8,16 +8,16 @@
 
 ## Создание подписки в стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) стратегии вы можете создать и запустить подписку на необходимые данные:
+В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) стратегии вы можете создать и запустить подписку на необходимые данные:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	// Создание подписки на 5-минутные свечи напрямую через DataType
 	var subscription = new Subscription(
-		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		TimeSpan.FromMinutes(5).TimeFrame(),
 		Security);
 	
 	// Если требуется указать дополнительные параметры, можно настроить подписку
@@ -30,7 +30,7 @@ protected override void OnStarted(DateTimeOffset time)
 		.Apply(this);
 	
 	// Запуск подписки
-	Connector.Subscribe(subscription);
+	Subscribe(subscription);
 }
 ```
 
@@ -82,7 +82,7 @@ private void CheckRefreshOnlineState()
 ```cs
 // Подписка на свечи
 var candleSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
+	TimeSpan.FromMinutes(1).TimeFrame(),
 	Security);
 
 // Подписка на стакан
@@ -107,7 +107,7 @@ var level1Subscription = new Subscription(
 
 ```cs
 // Подписка на свечи
-var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), Security);
+var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
 
 // Создание правила для обработки поступающих свечей
 Connector
@@ -116,7 +116,7 @@ Connector
 	.Apply(this);                        // Применение правила к стратегии
 
 // Запуск подписки
-Connector.Subscribe(subscription);
+Subscribe(subscription);
 ```
 
 В примере выше создается правило, которое будет вызывать метод `ProcessCandle` при поступлении каждой завершенной свечи.

@@ -25,7 +25,7 @@
 var storageRegistry = new StorageRegistry
 {
 	// устанавливаем путь к директории с историческими данными
-	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
+	DefaultDrive = new LocalMarketDataDrive(Paths.FileSystem, HistoryPath.Folder)
 };
 ```
 
@@ -66,21 +66,18 @@ var connector = new HistoryEmulationConnector(
 			Settings =
 			{
 				// исполнение заявки, если историческая цена коснулась цены заявки
-				// По умолчанию выключено, цена должна пройти сквозь цену заявки
-				// (более строгий режим проверки)
+				// По умолчанию включено (оптимистичный сценарий)
+				// Для более строгого тестирования можно выключить
 				MatchOnTouch = false,
-				
+
 				// комиссия для сделок
 				CommissionRules = new ICommissionRule[]
 				{
-					new CommissionPerTradeRule { Value = 0.01m },
+					new CommissionTradeRule { Value = 0.01m },
 				}
 			}
 		}
 	},
-	UseExternalCandleSource = emulationInfo.UseCandle != null,
-	CreateDepthFromOrdersLog = emulationInfo.UseOrderLog,
-	CreateTradesFromOrdersLog = emulationInfo.UseOrderLog,
 	HistoryMessageAdapter =
 	{
 		StorageRegistry = storageRegistry,
@@ -91,9 +88,7 @@ var connector = new HistoryEmulationConnector(
 		{
 			{
 				secId,
-				LocalizedStrings.ActiveLanguage == Languages.Russian
-					? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
-					: new ItchOrderLogMarketDepthBuilder(secId)
+				new OrderLogMarketDepthBuilder(secId)
 			}
 		}
 	},
@@ -113,7 +108,7 @@ connector.SecurityReceived += (subscr, s) =>
 		return;
 		
 	// заполняем значения Level1
-	connector.EmulationAdapter.SendInMessage(level1Info);
+	await connector.EmulationAdapter.SendInMessageAsync(level1Info);
 	
 	// подписываемся на нужные данные в зависимости от настроек тестирования
 	if (emulationInfo.UseMarketDepth)
@@ -158,7 +153,7 @@ connector.SecurityReceived += (subscr, s) =>
 	strategy.Start();
 	
 	// запускаем загрузку исторических данных
-	connector.Start();
+	await connector.StartAsync();
 };
 ```
 
@@ -311,9 +306,9 @@ _settings = new[]
 Стратегия скользящего среднего (SMA) была переработана и теперь использует более современный подход к подписке на данные и обработке свечей:
 
 ```csharp
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// создаем подписку на свечи нужного типа
 	var dt = CandleTimeFrame is null

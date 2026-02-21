@@ -19,6 +19,20 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 							
 ```
 
+Альтернативный, более удобный способ -- использование метода расширения `AddAdapter<T>()`:
+
+```cs
+Connector Connector = new Connector();
+...
+Connector.AddAdapter<RithmicMessageAdapter>(a =>
+{
+	a.UserName = "<Your Login>";
+	a.Password = "<Your Password>".To<SecureString>();
+	a.CertFile = "<Path to certificate file>";
+	a.Server = RithmicServers.Real;
+});
+```
+
 ## См. также
 
 [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md)

@@ -29,10 +29,10 @@ public class StairsCountertrendStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) обнуляются счетчики, создается подписка на свечи и готовится визуализация:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) обнуляются счетчики, создается подписка на свечи и готовится визуализация:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
 	// Сброс счетчиков на старте
 	_bullLength = 0;
@@ -53,7 +53,7 @@ protected override void OnStarted(DateTimeOffset time)
 		DrawOwnTrades(area);
 	}
 
-	base.OnStarted(time);
+	base.OnStarted2(time);
 }
 ```
 

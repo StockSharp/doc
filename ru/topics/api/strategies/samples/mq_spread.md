@@ -28,12 +28,12 @@ public class MqSpreadStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) стратегия подписывается на изменения рыночного времени:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) стратегия подписывается на изменения рыночного времени:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Подписка на изменения рыночного времени для обновления котировок
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;

@@ -122,12 +122,12 @@ public class SmaStrategy : Strategy
 		// Инициализация параметров стратегии
 		_longSmaLength = Param(nameof(LongSmaLength), 80);
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30);
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame());
 	}
 
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 
 		// Создание индикаторов
 		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };

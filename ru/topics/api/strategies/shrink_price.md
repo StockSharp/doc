@@ -40,19 +40,19 @@ var security = new Security
 
 // Пример 1: Округление до шага цены
 decimal price1 = 10.234m;
-decimal shrunkPrice1 = price1.ShrinkPrice(security);
+decimal shrunkPrice1 = security.ShrinkPrice(price1);
 Console.WriteLine($"Исходная цена: {price1}, После ShrinkPrice: {shrunkPrice1}");
 // Выведет: Исходная цена: 10.234, После ShrinkPrice: 10.23
 
 // Пример 2: Округление цены, которая уже соответствует шагу
 decimal price2 = 10.22m;
-decimal shrunkPrice2 = price2.ShrinkPrice(security);
+decimal shrunkPrice2 = security.ShrinkPrice(price2);
 Console.WriteLine($"Исходная цена: {price2}, После ShrinkPrice: {shrunkPrice2}");
 // Выведет: Исходная цена: 10.22, После ShrinkPrice: 10.22
 
 // Пример 3: Округление цены с большим количеством знаков после запятой
 decimal price3 = 10.2345678m;
-decimal shrunkPrice3 = price3.ShrinkPrice(security);
+decimal shrunkPrice3 = security.ShrinkPrice(price3);
 Console.WriteLine($"Исходная цена: {price3}, После ShrinkPrice: {shrunkPrice3}");
 // Выведет: Исходная цена: 10.2345678, После ShrinkPrice: 10.23
 
@@ -60,7 +60,7 @@ Console.WriteLine($"Исходная цена: {price3}, После ShrinkPrice:
 var order = new Order
 {
 	Security = security,
-	Price = 10.237m.ShrinkPrice(security)  // Округляем цену перед созданием ордера
+	Price = security.ShrinkPrice(10.237m)  // Округляем цену перед созданием ордера
 };
 Console.WriteLine($"Цена ордера: {order.Price}");
 // Выведет: Цена ордера: 10.24

@@ -17,7 +17,7 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 		Portfolio = PortfolioEditor.SelectedPortfolio,
 		Price = decimal.Parse(TextBoxPrice.Text),
 		Volume = decimal.Parse(TextBoxVolumePrice.Text),
-		Direction = Sides.Buy,
+		Side = Sides.Buy,
 		Type = OrderTypes.Conditional,
 		Condition = new QuikOrderCondition()
 		{

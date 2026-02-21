@@ -9,7 +9,7 @@
 - [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - a point-and-figure chart candle (X-O chart).
 - [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - Renko candle.
 
-How to work with candles is shown in the SampleConnection example, which is located in the *Samples\/Common\/SampleConnection* folder.
+How to work with candles is shown in the example located in the *Samples\/02\_Candles\/01\_Realtime* folder.
 
 The following images show [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) and [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) charts:
 

@@ -18,7 +18,7 @@ var storageRegistry = new StorageRegistry();
 ```cs
 // Создание StorageRegistry с указанием пути к данным из NuGet-пакета
 var pathHistory = Paths.HistoryDataPath; // путь к данным из NuGet пакета
-var localDrive = new LocalMarketDataDrive(pathHistory);
+var localDrive = new LocalMarketDataDrive(Paths.FileSystem, pathHistory);
 var storageRegistry = new StorageRegistry()
 {
 	DefaultDrive = localDrive,
@@ -33,13 +33,14 @@ var storageRegistry = new StorageRegistry()
 - [StorageRegistry.GetTickMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTickMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) для тиков
 - [StorageRegistry.GetQuoteMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetQuoteMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.Boolean)) для стаканов
 
-Каждый из этих методов возвращает соответствующее хранилище, из которого можно загрузить данные методом `Load`, указав начальную и конечную даты.
+Каждый из этих методов возвращает соответствующее хранилище, из которого можно загрузить данные методом `LoadAsync`, указав начальную и конечную даты.
 
 ```cs
 // Получение свечей
 var securityId = "SBER@TQBR".ToSecurityId();
+// Формат хранения может быть StorageFormats.Binary или StorageFormats.Csv
 var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
-var candles = candleStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var candles = await candleStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2)).ToArrayAsync();
 
 foreach (var candle in candles)
 {
@@ -50,7 +51,7 @@ foreach (var candle in candles)
 ```cs
 // Получение тиков
 var tradeStorage = storageRegistry.GetTickMessageStorage(securityId, StorageFormats.Binary);
-var trades = tradeStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var trades = await tradeStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2)).ToArrayAsync();
 
 foreach (var trade in trades)
 {
@@ -61,7 +62,7 @@ foreach (var trade in trades)
 ```cs
 // Получение стаканов
 var marketDepthStorage = storageRegistry.GetQuoteMessageStorage(securityId, StorageFormats.Binary);
-var marketDepths = marketDepthStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var marketDepths = await marketDepthStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2)).ToArrayAsync();
 
 foreach (var marketDepth in marketDepths)
 {
@@ -71,7 +72,7 @@ foreach (var marketDepth in marketDepths)
 
 ## Сохранение данных
 
-Для сохранения новых данных в существующее хранилище используется метод `Save` соответствующего хранилища. Это позволяет дополнить исторические данные новыми значениями.
+Для сохранения новых данных в существующее хранилище используется метод `SaveAsync` соответствующего хранилища. Это позволяет дополнить исторические данные новыми значениями.
 
 ```cs
 // Сохранение новых свечей
@@ -79,7 +80,7 @@ var newCandles = new List<CandleMessage>
 {
 	// Здесь создаются новые объекты CandleMessage
 };
-candleStorage.Save(newCandles);
+await candleStorage.SaveAsync(newCandles);
 ```
 
 ```cs
@@ -88,7 +89,7 @@ var newTrades = new List<ExecutionMessage>
 {
 	// Здесь создаются новые объекты ExecutionMessage для тиков
 };
-tradeStorage.Save(newTrades);
+await tradeStorage.SaveAsync(newTrades);
 ```
 
 ```cs
@@ -97,26 +98,26 @@ var newMarketDepths = new List<QuoteChangeMessage>
 {
 	// Здесь создаются новые объекты QuoteChangeMessage для стаканов
 };
-marketDepthStorage.Save(newMarketDepths);
+await marketDepthStorage.SaveAsync(newMarketDepths);
 ```
 
 ## Удаление данных
 
-Для удаления данных за определенный период используется метод `Delete` соответствующего хранилища. Будьте осторожны при удалении данных из пакета с образцами.
+Для удаления данных за определенный период используется метод `DeleteAsync` соответствующего хранилища. Будьте осторожны при удалении данных из пакета с образцами.
 
 ```cs
 // Удаление свечей за указанный период
-candleStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await candleStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
 // Удаление тиков за указанный период
-tradeStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await tradeStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
 // Удаление стаканов за указанный период
-marketDepthStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await marketDepthStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 Эти операции позволяют эффективно управлять историческими данными, как загруженными через [Hydra](../../hydra.md) или предоставленными в NuGet-пакете, так и созданными в процессе работы вашего приложения.

@@ -1,8 +1,8 @@
 # Other logs sources
 
-In previous topics, objects embedded in the [S\#](../../api.md) classes were sources of logs. The [S\#](../../api.md) provides possibilities for cases when the source of the logs is your own class, or when the source does not have to be associated with a particular class but serves the entire application. For the first case you must implement in your class the [ILogSource](xref:Ecng.Logging.ILogSource) interface or inherit from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). In the second situation, you can use the [TraceSource](xref:Ecng.Logging.TraceSource), which uses the .NET tracing system. How to do this is shown in the *Samples\/Common\/SampleLogging* sample. 
+In previous topics, objects embedded in the [S\#](../../api.md) classes were sources of logs. The [S\#](../../api.md) provides possibilities for cases when the source of the logs is your own class, or when the source does not have to be associated with a particular class but serves the entire application. For the first case you must implement in your class the [ILogSource](xref:Ecng.Logging.ILogSource) interface or inherit from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). In the second situation, you can use the [TraceSource](xref:Ecng.Logging.TraceSource), which uses the .NET tracing system. How to do this is shown in the *Samples\/08\_Misc\/01\_Logging* sample.
 
-## SampleLogging sample
+## Logging sample
 
 1. Create a custom class that inherits from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver).
 

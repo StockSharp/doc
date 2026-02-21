@@ -1,13 +1,11 @@
 # Pattern Bearish Candle
 
-Bearish Candle is a candlestick pattern characterized by a closing price lower than the opening price, and an upper shadow equal to or exceeding the size of the candle body. This pattern shows a bearish market sentiment with strong pressure at upper levels.
+Bearish Candle is a candlestick pattern characterized by a closing price lower than the opening price. This pattern shows a bearish market sentiment.
 
 ##### Key Features:
 
 - Opening price is higher than closing price (O > C).
-- Upper shadow is equal to or larger than the body (TS >= B).
-- Lower shadow can be of varying length.
-- Indicates strong bearish pressure after testing upper levels.
+- Indicates bearish pressure in the market.
 
 ![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
 
