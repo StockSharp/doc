@@ -690,6 +690,13 @@
   items:
   - name: Установка
     href: api/setup.md
+  - name: Разработка с ИИ
+    href: api/ai_development.md
+    items:
+    - name: Написание стратегии
+      href: api/ai_development/strategy_with_ai.md
+    - name: Написание коннектора
+      href: api/ai_development/connector_with_ai.md
   - name: Примеры
     href: api/examples.md
   - name: Коннекторы

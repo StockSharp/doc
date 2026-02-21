@@ -688,6 +688,13 @@
   items:
   - name: Setup
     href: api/setup.md
+  - name: AI-Assisted Development
+    href: api/ai_development.md
+    items:
+    - name: Writing Strategies
+      href: api/ai_development/strategy_with_ai.md
+    - name: Writing Connectors
+      href: api/ai_development/connector_with_ai.md
   - name: Examples
     href: api/examples.md
   - name: Connectors
