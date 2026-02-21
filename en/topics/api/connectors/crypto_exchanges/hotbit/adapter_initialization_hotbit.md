@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (May 2023 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization Hotbit
 
 The code below demonstrates how to initialize the [HotbitMessageAdapter](xref:StockSharp.Hotbit.HotbitMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

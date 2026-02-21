@@ -33,7 +33,7 @@ In the figure, the [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) component i
 private readonly Connector _connector = new Connector();
 SecurityGrid.MarketDataProvider = _connector;
 ..........................
-_connector.NewSecurity += security =>
+_connector.SecurityReceived += (sub, security) =>
 {
 	SecurityGrid.Securities.Add(security);
 };

@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (May 2019 — hacked and liquidated). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Cryptopia
 
 **Cryptopia** \- cryptocurrency exchange.

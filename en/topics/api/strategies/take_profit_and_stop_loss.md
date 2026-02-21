@@ -29,7 +29,7 @@ When opening a new position or modifying an existing one, the protective control
 
 ```cs
 // Initialization of the protective controller for a new position
-this.WhenNewMyTrade()
+this.WhenOwnTradeReceived()
 	.Do(t =>
 	{
 		// ... (other code)

@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (~2022 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization DigitexFutures
 
 The code below demonstrates how to initialize the [DigitexFuturesMessageAdapter](xref:StockSharp.DigitexFutures.DigitexFuturesMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

@@ -96,7 +96,7 @@ To optimize the [backtesting](historical_data.md) process it is possible to use 
    // get emulation connector
    var connector = batchEmulation.EmulationConnector;
    logManager.Sources.Add(connector);
-   connector.NewSecurity += s =>
+   connector.SecurityReceived += (sub, s) =>
    {
    	if (s != security)
    		return;

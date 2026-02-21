@@ -21,9 +21,9 @@ The strategy provides the following methods for writing messages to the log:
 The [LogVerbose](xref:Ecng.Logging.BaseLogReceiver.LogVerbose(System.String,System.Object[])) method is designed to record detailed messages for tracing:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
 	
@@ -149,9 +149,9 @@ public class SmaStrategy : Strategy
 ### Logging Strategy Start and Stop
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
 		Name, time, Security?.Code, Portfolio?.Name);
@@ -171,16 +171,16 @@ protected override void OnStopped()
 ### Logging Trades
 
 ```cs
-protected override void OnNewMyTrade(MyTrade trade)
+protected override void OnOwnTradeReceived(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} at price {3}. Volume: {4}", 
+	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
 		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,
 		trade.Trade.Volume);
-	
-	base.OnNewMyTrade(trade);
+
+	base.OnOwnTradeReceived(trade);
 }
 ```
 

@@ -1735,6 +1735,12 @@
       href: api/connectors/reconnection_settings.md
     - name: OAuth
       href: api/connectors/oauth.md
+    - name: Асинхронный API
+      href: api/connectors/async_api.md
+    - name: IFileSystem и пути
+      href: api/connectors/ifile_system_and_paths.md
+    - name: Жизненный цикл подписок
+      href: api/connectors/subscription_lifecycle.md
   - name: Маркет данные
     items:
     - name: Подписки
@@ -1773,6 +1779,8 @@
       href: api/instruments/continuous_futures.md
     - name: Индекс
       href: api/instruments/index.md
+    - name: Объемный непрерывный фьючерс
+      href: api/instruments/volume_continuous_security.md
   - name: Хранение данных
     href: api/market_data_storage.md
     items:
@@ -1780,6 +1788,12 @@
       href: api/market_data_storage/api.md
     - name: Работа с удаленным хранилищем
       href: api/market_data_storage/remote.md
+    - name: Форматы хранения
+      href: api/market_data_storage/formats.md
+    - name: Драйверы хранения
+      href: api/market_data_storage/drives.md
+    - name: Система снапшотов
+      href: api/market_data_storage/snapshots.md
   - name: Свечи
     href: api/candles.md
     items:
@@ -2125,6 +2139,8 @@
         href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
       - name: ZigZag
         href: api/indicators/list_of_indicators/zigzag.md
+      - name: Williams Variable Accumulation Distribution (WVAD)
+        href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
     - name: Собственный индикатор
       href: api/indicators/custom_indicator.md
     - name: Графический рендерер индикаторов
@@ -2194,6 +2210,8 @@
       href: api/patterns/white_candle.md
     - name: 'White Marubozu (Белый Марубозу)'
       href: api/patterns/white_marubozu.md
+    - name: Составные паттерны
+      href: api/patterns/complex_patterns.md
   - name: Стаканы
     href: api/order_books.md
     items:
@@ -2209,6 +2227,10 @@
       href: api/order_books/grouped.md
     - name: Отображение
       href: api/order_books/display.md
+  - name: Управление позициями
+    href: api/positions.md
+  - name: Маршрутизация адаптеров
+    href: api/basket_routing.md
   - name: Cтратегии
     href: api/strategies.md
     items:
@@ -2232,6 +2254,10 @@
       href: api/strategies/chart.md
     - name: Статистика
       href: api/strategies/statistics.md
+    - name: Справочник статистик
+      href: api/strategies/statistics_reference.md
+    - name: Продвинутая оптимизация
+      href: api/strategies/optimization_advanced.md
     - name: Сохранение и загрузка настроек
       href: api/strategies/settings_saving_and_loading.md
     - name: Загрузка состояния
@@ -2242,8 +2268,28 @@
       href: api/strategies/unit_type.md
     - name: Алгоритм Котирования
       href: api/strategies/quoting.md
+    - name: Справочник котирования
+      href: api/strategies/quoting_reference.md
     - name: Рабочие инструменты
       href: api/strategies/working_securities.md
+    - name: Обзор стратегий
+      href: api/strategies/strategies.md
+    - name: Управление целевой позицией
+      href: api/strategies/target_position_management.md
+    - name: Система оповещений
+      href: api/strategies/alert_system.md
+    - name: Система таймеров
+      href: api/strategies/timer_system.md
+    - name: Высокоуровневые подписки
+      href: api/strategies/high_level_subscriptions.md
+    - name: Управление рисками
+      href: api/strategies/risk_management.md
+    - name: Отчетность
+      href: api/strategies/reporting.md
+    - name: Режимы торговли
+      href: api/strategies/trading_modes.md
+    - name: Расширенные возможности
+      href: api/strategies/advanced_features.md
     - name: Событийная модель
       href: api/strategies/event_model.md
       items:
@@ -2294,6 +2340,14 @@
         href: api/strategies/samples/mq.md
       - name: Стратегия котирования по спреду
         href: api/strategies/samples/mq_spread.md
+  - name: Комиссии
+    href: api/commissions.md
+  - name: Прибыль и убытки (PnL)
+    href: api/pnl.md
+  - name: Проскальзывание
+    href: api/slippage.md
+  - name: Задержка (Latency)
+    href: api/latency.md
   - name: Логирование
     href: api/logging.md
     items:
@@ -2331,6 +2385,12 @@
       href: api/testing/simulator.md
     - name: Настройки тестирования
       href: api/testing/extended_settings.md
+  - name: Экспорт данных
+    href: api/export.md
+  - name: Импорт данных
+    href: api/import.md
+  - name: Аналитические скрипты
+    href: api/analytics.md
   - name: Графические компоненты
     href: api/graphical_user_interface.md
     items:

@@ -1,3 +1,6 @@
+> [!NOTE]
+> QUOINEX была переименована в Liquid, которая прекратила работу в 2022. Данная документация сохранена для справки.
+
 # Инициализация адаптера Quoinex
 
 Код ниже демонстрирует, как инициализировать [QuoinexMessageAdapter](xref:StockSharp.Quoinex.QuoinexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

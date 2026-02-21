@@ -1,3 +1,6 @@
+> [!NOTE]
+> QUOINEX has been renamed to Liquid, which shut down in 2022. This documentation is preserved for historical reference.
+
 # Graphical configuration Quoinex
 
 For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

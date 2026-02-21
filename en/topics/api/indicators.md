@@ -125,9 +125,9 @@ public class SmaStrategy : Strategy
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
 	}
 
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 
 		// Create indicators
 		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };

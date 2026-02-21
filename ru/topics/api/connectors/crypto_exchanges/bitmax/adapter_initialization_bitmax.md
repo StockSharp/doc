@@ -1,3 +1,6 @@
+> [!NOTE]
+> BitMax была переименована в AscendEX. Данная документация сохранена для справки.
+
 # Инициализация адаптера BitMax
 
 Код ниже демонстрирует как инициализировать [BitMaxMessageAdapter](xref:StockSharp.BitMax.BitMaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

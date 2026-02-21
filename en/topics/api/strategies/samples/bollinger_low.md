@@ -31,12 +31,12 @@ All parameters are available for optimization with specified value ranges.
 
 ## Strategy Initialization
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, the Bollinger Bands indicator is created, candle subscription is set up, and visualization is prepared:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method, the Bollinger Bands indicator is created, candle subscription is set up, and visualization is prepared:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Create indicator
 	_bollingerBands = new BollingerBands

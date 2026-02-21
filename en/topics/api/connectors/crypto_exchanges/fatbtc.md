@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (~2022 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # FatBTC
 
 **FatBTC** \- cryptocurrency exchange.

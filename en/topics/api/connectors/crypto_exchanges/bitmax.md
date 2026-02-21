@@ -1,3 +1,6 @@
+> [!NOTE]
+> BitMax has been renamed to AscendEX. This documentation is preserved for historical reference.
+
 # BitMax
 
 **BitMax** \- cryptocurrency exchange.

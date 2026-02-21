@@ -80,13 +80,13 @@ After registering an order, it's important to track its status. In a strategy, y
 ### 1. Use Event Handlers
 
 ```cs
-// Subscribe to the order change event
-OrderChanged += OnOrderChanged;
+// Subscribe to the order received event
+OrderReceived += OnOrderReceived;
 
 // Subscribe to the order registration failure event
 OrderRegisterFailed += OnOrderRegisterFailed;
 
-private void OnOrderChanged(Order order)
+private void OnOrderReceived(Order order)
 {
 	if (order.State == OrderStates.Done)
 	{
@@ -255,9 +255,9 @@ private void ProcessCandle(ICandleMessage candle)
 Below is an example demonstrating different ways of placing orders in a strategy and handling their execution:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	// Subscribe to candles
 	var subscription = new Subscription(
@@ -304,7 +304,7 @@ private void ProcessCandle(ICandleMessage candle)
 		RegisterOrder(order);
 		
 		// Alternative way of handling through the event
-		OrderChanged += (o) => {
+		OrderReceived += (o) => {
 			if (o == order && o.State == OrderStates.Done)
 			{
 				// Actions after execution

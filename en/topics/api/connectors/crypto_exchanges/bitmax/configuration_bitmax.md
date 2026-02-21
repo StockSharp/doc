@@ -1,3 +1,6 @@
+> [!NOTE]
+> BitMax has been renamed to AscendEX. This documentation is preserved for historical reference.
+
 # Configuration BitMax
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.

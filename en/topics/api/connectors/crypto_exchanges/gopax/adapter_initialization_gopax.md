@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (~2023 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization Gopax
 
 The code below demonstrates how to initialize the [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

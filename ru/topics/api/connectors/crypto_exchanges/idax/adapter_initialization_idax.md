@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (ноябрь 2019 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера Idax
 
 Код ниже демонстрирует, как инициализировать [IdaxMessageAdapter](xref:StockSharp.Idax.IdaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

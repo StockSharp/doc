@@ -53,18 +53,18 @@ The following is the SampleOptionQuoting example, in which this chart is used. T
    	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
    // fill underlying asset's list
-   Connector.NewSecurity += security =>
+   Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
    		_assets.Add(security);
    };
-   Connector.SecurityChanged += security =>
+   Connector.Level1Received += (sub, security) =>
    {
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
    // subscribing on tick prices and updating asset price
-   Connector.NewTrade += trade =>
+   Connector.TickTradeReceived += (sub, trade) =>
    {
    	if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
    		_isDirty = true;
@@ -121,7 +121,7 @@ The following is the SampleOptionQuoting example, in which this chart is used. T
 4. When receiving instruments, we add the underlying assets to the list.
 
    ```cs
-   Connector.NewSecurity += security =>
+   Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
    		_assets.Add(security);
@@ -131,12 +131,12 @@ The following is the SampleOptionQuoting example, in which this chart is used. T
 5. Upon changing the Level1 of the underlying instrument or options, as well as getting a new trade we set the \_isDirty flag. This allows to call the RefreshChart method (see below) in the timer event (the code is omitted) to redraw the chart. Thus we control the frequency of redrawing.
 
    ```cs
-   Connector.SecurityChanged += security =>
+   Connector.Level1Received += (sub, security) =>
    {
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
-   Connector.NewTrade += trade =>
+   Connector.TickTradeReceived += (sub, trade) =>
    {
    	if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
    		_isDirty = true;

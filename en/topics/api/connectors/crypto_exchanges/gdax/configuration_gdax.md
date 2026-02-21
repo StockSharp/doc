@@ -1,3 +1,6 @@
+> [!NOTE]
+> GDAX has been renamed to Coinbase Pro, and later to Coinbase Advanced Trade. This documentation is preserved for historical reference.
+
 # Configuration GDAX
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them at the connection settings.

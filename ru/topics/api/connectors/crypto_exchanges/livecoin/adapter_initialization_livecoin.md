@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (декабрь 2020 — взлом и закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера Livecoin
 
 Код ниже демонстрирует, как инициализировать [LiveCoinMessageAdapter](xref:StockSharp.LiveCoin.LiveCoinMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

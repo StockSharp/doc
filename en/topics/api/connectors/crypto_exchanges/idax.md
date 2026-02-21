@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (November 2019 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Idax
 
 **IDAX** \- cryptocurrency exchange.

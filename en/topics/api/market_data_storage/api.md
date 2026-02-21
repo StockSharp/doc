@@ -33,15 +33,15 @@ Through the [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), yo
 - [StorageRegistry.GetTickMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTickMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) for ticks
 - [StorageRegistry.GetQuoteMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetQuoteMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.Boolean)) for order books
 
-Each of these methods returns the corresponding storage, from which data can be loaded using the `Load` method, specifying the start and end dates.
+Each of these methods returns the corresponding storage, from which data can be loaded using the `LoadAsync` method, specifying the start and end dates.
 
 ```cs
 // Retrieving candles
 var securityId = "SBER@TQBR".ToSecurityId();
 var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
-var candles = candleStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var candles = candleStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
-foreach (var candle in candles)
+await foreach (var candle in candles)
 {
 	Console.WriteLine(candle);
 }
@@ -50,9 +50,9 @@ foreach (var candle in candles)
 ```cs
 // Retrieving ticks
 var tradeStorage = storageRegistry.GetTickMessageStorage(securityId, StorageFormats.Binary);
-var trades = tradeStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var trades = tradeStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
-foreach (var trade in trades)
+await foreach (var trade in trades)
 {
 	Console.WriteLine(trade);
 }
@@ -61,9 +61,9 @@ foreach (var trade in trades)
 ```cs
 // Retrieving order books
 var marketDepthStorage = storageRegistry.GetQuoteMessageStorage(securityId, StorageFormats.Binary);
-var marketDepths = marketDepthStorage.Load(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+var marketDepths = marketDepthStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
-foreach (var marketDepth in marketDepths)
+await foreach (var marketDepth in marketDepths)
 {
 	Console.WriteLine(marketDepth);
 }
@@ -71,7 +71,7 @@ foreach (var marketDepth in marketDepths)
 
 ## Saving Data
 
-To save new data to the existing storage, use the `Save` method of the corresponding storage. This allows you to supplement historical data with new values.
+To save new data to the existing storage, use the `SaveAsync` method of the corresponding storage. This allows you to supplement historical data with new values.
 
 ```cs
 // Saving new candles
@@ -79,7 +79,7 @@ var newCandles = new List<CandleMessage>
 {
 	// New CandleMessage objects are created here
 };
-candleStorage.Save(newCandles);
+await candleStorage.SaveAsync(newCandles);
 ```
 
 ```cs
@@ -88,7 +88,7 @@ var newTrades = new List<ExecutionMessage>
 {
 	// New ExecutionMessage objects for ticks are created here
 };
-tradeStorage.Save(newTrades);
+await tradeStorage.SaveAsync(newTrades);
 ```
 
 ```cs
@@ -97,26 +97,26 @@ var newMarketDepths = new List<QuoteChangeMessage>
 {
 	// New QuoteChangeMessage objects for order books are created here
 };
-marketDepthStorage.Save(newMarketDepths);
+await marketDepthStorage.SaveAsync(newMarketDepths);
 ```
 
 ## Deleting Data
 
-To delete data for a specific period, use the `Delete` method of the corresponding storage. Be careful when deleting data from the sample package.
+To delete data for a specific period, use the `DeleteAsync` method of the corresponding storage. Be careful when deleting data from the sample package.
 
 ```cs
 // Deleting candles for the specified period
-candleStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await candleStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
 // Deleting ticks for the specified period
-tradeStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await tradeStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
 // Deleting order books for the specified period
-marketDepthStorage.Delete(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
+await marketDepthStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 These operations allow you to effectively manage historical data, whether loaded through [Hydra](../../hydra.md), provided in the NuGet package, or created during the operation of your application.

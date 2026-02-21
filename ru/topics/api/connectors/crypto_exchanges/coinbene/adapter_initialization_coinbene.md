@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (~2021 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера CoinBene
 
 Код ниже демонстрирует, как инициализировать [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

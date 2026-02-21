@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (May 2019 — hacked and liquidated). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization Cryptopia
 
 The code below demonstrates how to initialize the [CryptopiaMessageAdapter](xref:StockSharp.Cryptopia.CryptopiaMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

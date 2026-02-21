@@ -1,3 +1,6 @@
+> [!NOTE]
+> QUOINEX has been renamed to Liquid, which shut down in 2022. This documentation is preserved for historical reference.
+
 # Adapter initialization Quoinex
 
 The code below demonstrates how to initialize the [QuoinexMessageAdapter](xref:StockSharp.Quoinex.QuoinexMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

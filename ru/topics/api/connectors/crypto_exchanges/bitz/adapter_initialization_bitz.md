@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (~2021 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера BitZ
 
 Код ниже демонстрирует, как инициализировать [BitZMessageAdapter](xref:StockSharp.BitZ.BitZMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

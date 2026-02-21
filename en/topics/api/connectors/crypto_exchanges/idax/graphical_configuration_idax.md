@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (November 2019 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Idax graphical configuration
 
 For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

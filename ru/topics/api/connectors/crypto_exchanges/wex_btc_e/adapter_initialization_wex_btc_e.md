@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (июль 2017 — конфискация). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера WEX (BTC\-e)
 
 Код ниже демонстрирует, как инициализировать [BtceMessageAdapter](xref:StockSharp.Btce.BtceMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

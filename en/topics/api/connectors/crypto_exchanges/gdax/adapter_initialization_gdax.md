@@ -1,3 +1,6 @@
+> [!NOTE]
+> GDAX has been renamed to Coinbase Pro, and later to Coinbase Advanced Trade. This documentation is preserved for historical reference.
+
 # Adapter initialization GDAX
 
 The code below demonstrates how to initialize the [GdaxMessageAdapter](xref:StockSharp.Gdax.GdaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

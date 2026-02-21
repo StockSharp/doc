@@ -1,3 +1,6 @@
+> [!NOTE]
+> GDAX has been renamed to Coinbase Pro, and later to Coinbase Advanced Trade. This documentation is preserved for historical reference.
+
 # GDAX
 
 **GDAX** \- cryptocurrency exchange.

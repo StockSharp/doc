@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (~2022 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера FatBTC
 
 Код ниже демонстрирует, как инициализировать [FatBtcMessageAdapter](xref:StockSharp.FatBTC.FatBtcMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

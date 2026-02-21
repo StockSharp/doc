@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (November 2019 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Idax adapter initialization
 
 The code below demonstrates how to initialize the [IdaxMessageAdapter](xref:StockSharp.Idax.IdaxMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).

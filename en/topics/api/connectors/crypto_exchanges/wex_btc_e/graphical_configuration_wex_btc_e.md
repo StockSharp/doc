@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (July 2017 — seized). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Graphical configuration WEX (BTC\-e)
 
 For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

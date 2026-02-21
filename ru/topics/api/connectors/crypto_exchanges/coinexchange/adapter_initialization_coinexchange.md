@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (октябрь 2019 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера CoinExchange
 
 Код ниже демонстрирует, как инициализировать [CoinExchangeMessageAdapter](xref:StockSharp.CoinExchange.CoinExchangeMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

@@ -29,10 +29,10 @@ The Length parameter is available for optimization in the range from 2 to 10 wit
 
 ## Strategy Initialization
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, counters are reset, candle subscription is created, and visualization is prepared:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method, counters are reset, candle subscription is created, and visualization is prepared:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
 	// Reset counters at start
 	_bullLength = 0;
@@ -53,7 +53,7 @@ protected override void OnStarted(DateTimeOffset time)
 		DrawOwnTrades(area);
 	}
 
-	base.OnStarted(time);
+	base.OnStarted2(time);
 }
 ```
 

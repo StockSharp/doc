@@ -8,12 +8,12 @@ Subscriptions in strategies are based on the general [StockSharp subscription me
 
 ## Creating a Subscription in a Strategy
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method of the strategy, you can create and start a subscription for the required data:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method of the strategy, you can create and start a subscription for the required data:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	// Creating a subscription for 5-minute candles directly through DataType
 	var subscription = new Subscription(

@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (December 2020 — hacked and shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Livecoin adapter initialization
 
 The code below demonstrates how to initialize the [LiveCoinMessageAdapter](xref:StockSharp.LiveCoin.LiveCoinMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).

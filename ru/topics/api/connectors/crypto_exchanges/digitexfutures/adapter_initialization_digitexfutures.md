@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (~2022 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера DigitexFutures
 
 Код ниже демонстрирует, как инициализировать [DigitexFuturesMessageAdapter](xref:StockSharp.DigitexFutures.DigitexFuturesMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

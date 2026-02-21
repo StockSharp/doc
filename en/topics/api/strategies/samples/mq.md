@@ -27,12 +27,12 @@ The strategy allows customizing the following parameters:
 
 ## Strategy Initialization
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, the strategy subscribes to market time changes:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method, the strategy subscribes to market time changes:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Subscribe to market time changes for quote updates
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;

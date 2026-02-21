@@ -21,12 +21,12 @@ The strategy allows customizing the following parameters:
 
 ## Strategy Initialization
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, candle subscription is created and visualization is prepared:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method, candle subscription is created and visualization is prepared:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Create subscription
 	var subscription = SubscribeCandles(CandleType);

@@ -9,9 +9,9 @@ In StockSharp, the [Strategy](xref:StockSharp.Algo.Strategies.Strategy) class pr
 To access the chart from a strategy, use the [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) method:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	// Obtaining the chart
 	_chart = GetChart();
@@ -347,9 +347,9 @@ public class SmaStrategy : Strategy
 		set => _bollingerDeviation.Value = value;
 	}
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 		
 		// Creating indicators
 		_sma = new SimpleMovingAverage { Length = SmaLength };

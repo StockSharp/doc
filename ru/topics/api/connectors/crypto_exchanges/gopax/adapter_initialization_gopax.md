@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (~2023 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера Gopax
 
 Код ниже демонстрирует, как инициализировать [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

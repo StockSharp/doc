@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (December 2020 — hacked and shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Livecoin
 
 **Livecoin** \- cryptocurrency exchange.

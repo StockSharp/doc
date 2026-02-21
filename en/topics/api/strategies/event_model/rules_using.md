@@ -35,7 +35,7 @@
   ```cs
   class FirstStrategy : Strategy
   {
-      protected override void OnStarted(DateTimeOffset time)
+      protected override void OnStarted2(DateTime time)
       {
           // Subscription to candles
           var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
@@ -55,7 +55,7 @@
           Subscribe(candleSubscription);
           Subscribe(tickSubscription);
               
-          base.OnStarted(time);
+          base.OnStarted2(time);
       }
       
       // Methods for event processing

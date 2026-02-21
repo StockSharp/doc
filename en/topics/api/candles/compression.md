@@ -15,7 +15,7 @@ It is recommended to review this file for a complete understanding of all availa
 ```cs
 // Example usage of ToCandles for ticks
 var tickStorage = storageRegistry.GetTickMessageStorage(securityId, Drive, StorageFormat);
-var trades = tickStorage.Load(from, to);
+var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 // This code loads tick data from storage and converts it into candles.
@@ -28,7 +28,7 @@ var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvid
 ```cs
 // Example usage of ToCandles for spread data
 var depthStorage = storageRegistry.GetQuoteMessageStorage(securityId, Drive, StorageFormat);
-var depths = depthStorage.Load(from, to);
+var depths = depthStorage.LoadAsync(from, to);
 var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderProvider: candleBuilderProvider);
 
 // Here we load spread data and convert it into candles.
@@ -56,7 +56,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 		case BuildTypes.Ticks:
 			return StorageRegistry
 					.GetTickMessageStorage(securityId, Drive, StorageFormat)
-					.Load(from, to)
+					.LoadAsync(from, to)
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
@@ -65,7 +65,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 		case BuildTypes.Depths:
 			return StorageRegistry
 					.GetQuoteMessageStorage(securityId, Drive, StorageFormat)
-					.Load(from, to)
+					.LoadAsync(from, to)
 					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
 		// ... (other cases)
@@ -101,7 +101,7 @@ switch (type)
 	case BuildTypes.SmallerTimeFrame:
 		return candleBuilderProvider
 				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
-				.Load(from, to);
+				.LoadAsync(from, to);
 
 	// ... (other cases)
 }

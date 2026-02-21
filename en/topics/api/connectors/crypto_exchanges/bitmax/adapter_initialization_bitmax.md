@@ -1,3 +1,6 @@
+> [!NOTE]
+> BitMax has been renamed to AscendEX. This documentation is preserved for historical reference.
+
 # Adapter initialization BitMax
 
 The code below demonstrates how to initialize the [BitMaxMessageAdapter](xref:StockSharp.BitMax.BitMaxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (январь 2019 — закрытие). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера Liqui
 
 Код ниже демонстрирует, как инициализировать [LiquiMessageAdapter](xref:StockSharp.Liqui.LiquiMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

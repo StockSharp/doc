@@ -30,18 +30,18 @@ For option quoting, a special [VolatilityQuotingStrategy](xref:StockSharp.Algo.S
    		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    	});
    	// fill underlying asset's list
-   	Connector.NewSecurity += security =>
+   	Connector.SecurityReceived += (sub, security) =>
    	{
    		if (security.Type == SecurityTypes.Future)
    			_assets.Add(security);
    	};
-   	Connector.SecurityChanged += security =>
+   	Connector.Level1Received += (sub, security) =>
    	{
    		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    			_isDirty = true;
    	};
    	// subscribing on tick prices and updating asset price
-   	Connector.NewTrade += trade =>
+   	Connector.TickTradeReceived += (sub, trade) =>
    	{
    		if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
    			_isDirty = true;

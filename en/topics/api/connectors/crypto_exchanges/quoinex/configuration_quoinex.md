@@ -1,3 +1,6 @@
+> [!NOTE]
+> QUOINEX has been renamed to Liquid, which shut down in 2022. This documentation is preserved for historical reference.
+
 # Configuration Quoinex
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.

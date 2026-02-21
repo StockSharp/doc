@@ -16,9 +16,9 @@ The following example shows how to load all trades into a strategy:
 ```cs
 private HashSet<long> _transactions;
 
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	_transactions = File.Exists($"orders_{Name}.txt")
 			? File.ReadAllLines($"orders_{Name}.txt").Select(l => l.To<long>()).ToHashSet()

@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (October 2019 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # CoinExchange
 
 **CoinExchange** \- Market data provider of Real\-time data on crypto currencies.

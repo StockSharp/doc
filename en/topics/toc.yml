@@ -1587,6 +1587,12 @@
       href: api/connectors/reconnection_settings.md
     - name: OAuth
       href: api/connectors/oauth.md
+    - name: Async API
+      href: api/connectors/async_api.md
+    - name: IFileSystem and Paths
+      href: api/connectors/ifile_system_and_paths.md
+    - name: Subscription Lifecycle
+      href: api/connectors/subscription_lifecycle.md
   - name: Market data
     items:
     - name: Subscriptions
@@ -1625,6 +1631,8 @@
       href: api/instruments/continuous_futures.md
     - name: Index
       href: api/instruments/index.md
+    - name: Volume Continuous Security
+      href: api/instruments/volume_continuous_security.md
   - name: Market-data storage
     href: api/market_data_storage.md
     items:
@@ -1632,6 +1640,12 @@
       href: api/market_data_storage/api.md
     - name: Working with Remote Storage
       href: api/market_data_storage/remote.md
+    - name: Storage Formats
+      href: api/market_data_storage/formats.md
+    - name: Storage Drives
+      href: api/market_data_storage/drives.md
+    - name: Snapshot System
+      href: api/market_data_storage/snapshots.md
   - name: Candles
     href: api/candles.md
     items:
@@ -1977,6 +1991,8 @@
         href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
       - name: ZigZag
         href: api/indicators/list_of_indicators/zigzag.md
+      - name: Williams Variable Accumulation Distribution (WVAD)
+        href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
     - name: Custom indicator
       href: api/indicators/custom_indicator.md
     - name: Graphic renderer of indicators
@@ -2046,6 +2062,12 @@
       href: api/patterns/white_candle.md
     - name: 'White Marubozu'
       href: api/patterns/white_marubozu.md
+    - name: Complex Patterns
+      href: api/patterns/complex_patterns.md
+  - name: Position Management
+    href: api/positions.md
+  - name: Adapter Routing
+    href: api/basket_routing.md
   - name: Order books
     href: api/order_books.md
     items:
@@ -2096,6 +2118,30 @@
       href: api/strategies/quoting.md
     - name: Working securities
       href: api/strategies/working_securities.md
+    - name: Strategy Overview
+      href: api/strategies/strategies.md
+    - name: Target Position Management
+      href: api/strategies/target_position_management.md
+    - name: Alert System
+      href: api/strategies/alert_system.md
+    - name: Timer System
+      href: api/strategies/timer_system.md
+    - name: High-Level Subscriptions
+      href: api/strategies/high_level_subscriptions.md
+    - name: Risk Management
+      href: api/strategies/risk_management.md
+    - name: Reporting
+      href: api/strategies/reporting.md
+    - name: Trading Modes
+      href: api/strategies/trading_modes.md
+    - name: Advanced Features
+      href: api/strategies/advanced_features.md
+    - name: Statistics Reference
+      href: api/strategies/statistics_reference.md
+    - name: Advanced Optimization
+      href: api/strategies/optimization_advanced.md
+    - name: Quoting Reference
+      href: api/strategies/quoting_reference.md
     - name: Event model
       href: api/strategies/event_model.md
       items:
@@ -2146,6 +2192,14 @@
         href: api/strategies/samples/mq.md
       - name: Spread Quoting Strategy
         href: api/strategies/samples/mq_spread.md
+  - name: Commissions
+    href: api/commissions.md
+  - name: Profit and Loss (PnL)
+    href: api/pnl.md
+  - name: Slippage
+    href: api/slippage.md
+  - name: Latency
+    href: api/latency.md
   - name: Logging
     href: api/logging.md
     items:
@@ -2183,6 +2237,12 @@
       href: api/testing/simulator.md
     - name: Extended settings
       href: api/testing/extended_settings.md
+  - name: Data Export
+    href: api/export.md
+  - name: Data Import
+    href: api/import.md
+  - name: Analytics Scripts
+    href: api/analytics.md
   - name: Graphical controls
     href: api/graphical_user_interface.md
     items:

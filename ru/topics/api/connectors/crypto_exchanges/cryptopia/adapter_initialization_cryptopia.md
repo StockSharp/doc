@@ -1,3 +1,6 @@
+> [!WARNING]
+> Данная биржа прекратила работу (май 2019 — взлом и ликвидация). Коннектор более не функционирует. Документация сохранена для справки.
+
 # Инициализация адаптера Cryptopia
 
 Код ниже демонстрирует, как инициализировать [CryptopiaMessageAdapter](xref:StockSharp.Cryptopia.CryptopiaMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

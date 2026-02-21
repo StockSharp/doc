@@ -76,9 +76,9 @@ Instead of directly accessing user interface elements, use the abstractions prov
 
 ```cs
 // Correct approach: using IChart
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 	
 	// Get the chart provided by the runtime environment
 	_chart = GetChart();
@@ -261,9 +261,9 @@ However, the main configurable parameters should still be implemented through [S
 For market data processing, it's recommended to use the [Event Model](event_model.md) and rules:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
@@ -355,9 +355,9 @@ public class SmaStrategy : Strategy
 					.SetDisplay("Series", string.Empty, "Base settings");
 	}
 
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };

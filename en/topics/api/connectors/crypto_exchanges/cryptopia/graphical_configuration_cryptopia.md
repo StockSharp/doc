@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (May 2019 — hacked and liquidated). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Graphical configuration Cryptopia
 
 For all [S\#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

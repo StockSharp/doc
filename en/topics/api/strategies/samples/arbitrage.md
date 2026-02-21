@@ -48,12 +48,12 @@ The strategy allows customizing the following parameters:
 
 ## Strategy Initialization
 
-In the [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted(System.DateTimeOffset)) method, parameters are validated, subscriptions to order books and own trades are created:
+In the [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) method, parameters are validated, subscriptions to order books and own trades are created:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	if (FutureSecurity == null)
 		throw new InvalidOperationException("Future security is not specified.");
@@ -80,7 +80,7 @@ protected override void OnStarted(DateTimeOffset time)
 	// Subscription to own trades to track execution prices
 	this
 		.WhenOwnTradeReceived()
-		.Do(OnNewMyTrade)
+		.Do(OnOwnTradeReceived)
 		.Apply(this);
 
 	// Sending requests for market data subscription

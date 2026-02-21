@@ -27,9 +27,9 @@ A strategy is considered "warmed up" and ready to work when all indicators in th
 To correctly determine when the strategy is ready, you need to add the indicators you use to the [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) collection:
 
 ```cs
-protected override void OnStarted(DateTimeOffset time)
+protected override void OnStarted2(DateTime time)
 {
-	base.OnStarted(time);
+	base.OnStarted2(time);
 
 	// Creating indicators
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
@@ -109,9 +109,9 @@ public class SmaStrategy : Strategy
 	
 	// ...
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 		
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
@@ -171,9 +171,9 @@ public class ComplexStrategy : Strategy
 	private BollingerBands _bollinger;
 	private StandardDeviation _stdev;
 	
-	protected override void OnStarted(DateTimeOffset time)
+	protected override void OnStarted2(DateTime time)
 	{
-		base.OnStarted(time);
+		base.OnStarted2(time);
 		
 		// Create indicators
 		_sma = new SimpleMovingAverage { Length = 20 };

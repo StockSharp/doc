@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (~2021 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization BitZ
 
 The code below demonstrates how to initialize the [BitZMessageAdapter](xref:StockSharp.BitZ.BitZMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

@@ -1,3 +1,6 @@
+> [!WARNING]
+> This exchange has permanently shut down (~2021 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+
 # Adapter initialization BW
 
 The code below demonstrates how to initialize the [BWMessageAdapter](xref:StockSharp.BW.BWMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
