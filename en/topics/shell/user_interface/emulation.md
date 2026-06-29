@@ -1,6 +1,6 @@
 # Emulation
 
-The [Emulation]() tab allows you to test strategies on historical data.
+The **Emulation** tab allows you to test strategies on historical data.
 
 ![Shell emulation 00](../../../images/shell_emulation_00.png)
 

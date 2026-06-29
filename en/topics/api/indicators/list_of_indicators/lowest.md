@@ -6,6 +6,3 @@ To use the indicator, you must use the [Lowest](xref:StockSharp.Algo.Indicators.
 
 ![IndicatorLowest](../../../../images/indicatorlowest.png)
 
-## Recommended content
-
-[Lowest ]()

@@ -1,6 +1,6 @@
 # RemoteManager
 
-The [RemoteManager]() tab allows you to enable remote control mode. To enable this mode, you must go to the user configuration menu.
+The **RemoteManager** tab allows you to enable remote control mode. To enable this mode, you must go to the user configuration menu.
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 

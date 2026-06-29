@@ -6,6 +6,3 @@
 
 ![IndicatorLowest](../../../../images/indicatorlowest.png)
 
-## См. также
-
-[Lowest ]()

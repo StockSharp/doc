@@ -1,6 +1,6 @@
 # FIX protocol
 
-[FIX]() allows you to create trading robots that use standard international protocols for access to electronic markets \- [FIX](https://en.wikipedia.org/wiki/Financial_Information_eXchange). 
+The **FIX** protocol allows you to create trading robots that use the standard international protocol for access to electronic markets: [FIX](https://en.wikipedia.org/wiki/Financial_Information_eXchange). 
 
 ## Recommended content
 

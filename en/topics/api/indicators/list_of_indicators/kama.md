@@ -12,6 +12,3 @@ To use the indicator, the [KaufmanAdaptiveMovingAverage](xref:StockSharp.Algo.In
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
 
-## See Also
-
-[KAMA]()

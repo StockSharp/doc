@@ -12,6 +12,3 @@
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
 
-## См. также
-
-[KAMA]()
