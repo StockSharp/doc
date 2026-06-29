@@ -1,0 +1,18 @@
+# 图形配置 PolygonIO
+
+对于所有[S\#](../../../../api.md) 产品，连接的图形配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+
+![API GUI 设置 PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
+
+- **代币** - 代币。
+- **连接类型** - 连接到历史记录 (REST) 或实时 (WebSockets)。
+
+## 推荐内容
+
+[连接器](../../../connectors.md)
+
+[图形配置](../../graphical_configuration.md)
+
+[创建自己的连接器](../../creating_own_connector.md)
+
+[保存和加载设置](../../save_and_load_settings.md)

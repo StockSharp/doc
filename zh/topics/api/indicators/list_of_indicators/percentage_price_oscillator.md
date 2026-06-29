@@ -1,0 +1,97 @@
+# 首选提供者组织
+
+**价格百分比振荡器（PPO）** 是一种技术指标，类似于 MACD，但将两个指数移动平均线之间的差异表示为百分比，而不是绝对值。
+
+要使用该指标，您需要使用 [PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator) 类。
+
+## 描述
+
+百分比价格振荡器（PPO）是更为知名的 MACD（指数平滑移动平均线收敛/发散）指标的一种变体。主要区别在于，PPO 将两条指数移动平均线之间的差异以百分比形式表示，而不是以绝对单位表示。这使得 PPO 在比较不同价格水平的不同工具时，或在分析某单一工具在价格发生显著变化的长期期间表现时特别有用。
+
+PPO 由三个组成部分构成：
+1. **PPO线** - 快速和慢速EMA之间的差异，以百分比表示
+2. **信号线** - PPO线的指数移动平均
+3. **直方图** - PPO线与信号线之间的差异
+
+PPO 指标围绕零线波动，正值表示看涨的市场情绪，负值表示看跌的情绪。与零的偏离幅度反映了当前趋势的强弱。
+
+## 参数
+
+该指标具有以下参数：
+- **短期** - 用于计算短期EMA的周期（默认值：12）
+- **LongPeriod** - 用于计算长EMA的周期（默认值：26）
+
+## 计算
+
+百分比价格振荡器的计算涉及以下步骤：
+
+1. 计算短期和长期指数移动平均线：
+   ```
+   Short EMA = EMA(Price, ShortPeriod)
+   Long EMA = EMA(Price, LongPeriod)
+   ```
+
+2. 将PPO线计算为短期EMA和长期EMA之间的百分比差异：
+   ```
+   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   ```
+
+3. 计算信号线（通常为PPO线的9周期EMA）：
+   ```
+   Signal Line = EMA(PPO Line, 9)
+   ```
+
+4. 计算直方图：
+   ```
+   Histogram = PPO Line - Signal Line
+   ```
+
+地点：
+- 价格 - 价格（通常指收盘价）
+- EMA - 指数移动平均
+- ShortPeriod - 短期EMA的周期
+- LongPeriod - 长期EMA的周期
+
+## 解释
+
+百分比价格振荡器可以解释如下：
+
+1. **零线交叉**：
+   - PPO线从下向上穿过零线可以被视为看涨信号
+   - PPO线从上向下穿过零线可以被视为看跌信号
+
+2. **信号线交叉**：
+   - PPO线从下向上穿过信号线可以被视为看涨信号
+   - PPO线从上向下穿过信号线可以被视为看跌信号
+
+3. **分歧**：
+   - 看涨背离：价格创出新低，而PPO形成更高的低点
+   - 看跌背离：价格创出新高，而PPO形成较低的新高
+
+4. **超买/超卖**:
+   - 极高的正PPO值可能表明市场超买状况
+   - 极低的负 PPO 值可能表明市场超卖状态
+
+5. **直方图分析**：
+   - 直方图扩展表示当前趋势的增强
+   - 直方图收缩表示当前趋势的减弱
+   - 直方图颜色（或符号）的变化表示短期动量的变化
+
+6. **仪器比较**：
+   - 与MACD不同，PPO可以用于直接比较不同的工具
+   - 与另一种工具相比，一种工具的PPO值更高可能表明其相对动能更强
+
+7. **信号过滤**：
+   - 当PPO与主趋势一致时，信号线交叉信号更可靠
+   - 例如，当PPO为正时，看涨信号更可靠；当PPO为负时，看跌信号更可靠
+
+![指标_百分比价格振荡器](../../../../images/indicator_percentage_price_oscillator.png)
+
+## 另请参阅
+
+[MACD](macd.md)
+[EMA](ema.md)
+[百分价格振荡信号](percentage_price_oscillator_signal.md)
+[百分价格振荡直方图](percentage_price_oscillator_histogram.md)
+[百分量振荡器](percentage_volume_oscillator.md)
+[TRIX](trix.md)

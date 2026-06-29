@@ -1,0 +1,29 @@
+# 批量撤销订单
+
+![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+
+该模块用于撤销指定证券的全部订单。
+
+### 输入端口
+
+输入端口
+
+- **Trigger** - 用于确定何时撤销订单的信号。
+- **Portfolio** – 要撤销其全部订单的投资组合。
+- **Security** – 要撤销其全部订单的证券。
+
+### 输出端口
+
+输出端口
+
+- **Result** - 表示操作成功的标志。
+
+### 参数
+
+参数
+
+- **Direction** – 要撤销订单的方向（买入或卖出），作为订单的撤销条件。
+
+## 另请参阅
+
+[Order Registration](register.md)

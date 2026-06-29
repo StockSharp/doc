@@ -1,0 +1,25 @@
+# 配置星
+
+要使用连接器，请在交易所账户中生成 **API 密钥** 和 **Secret**，并在连接设置中指定它们。
+
+主要设置：
+
+- **密钥** 和 **秘密**。
+- **部分**：`Spot` 或 `Derivatives`。
+- **衍生品模式**：`Legacy` 或 `V3 Agent`。
+- **现货 REST / 现货 WS** 端点。
+- **衍生品 REST / 衍生品 WS** 端点。
+- **演示** 模式。
+
+官方 API 文档：
+
+- [Spot API 概览](https://asterdex.github.io/aster-api-website/spot/spot-api-overview/)
+- [现货账户和交易API](https://asterdex.github.io/aster-api-website/spot/spot-account-and-trading-api/)
+- [现货 websocket 市场数据](https://asterdex.github.io/aster-api-website/spot/websocket-market-data/)
+- [现货 websocket 账户信息](https://asterdex.github.io/aster-api-website/spot/websocket-account-info/)
+- [期货 v3 一般信息](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
+- [期货用户数据流](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
+- [Aster 代码端点](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
+
+> [!TIP]
+> Aster 衍生品有两个协议系列。在启用交易之前请选择正确的 **衍生品模式**。

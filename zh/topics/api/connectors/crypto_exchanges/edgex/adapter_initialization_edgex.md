@@ -1,0 +1,23 @@
+# 适配器初始化 edgeX
+
+下面的代码演示了如何初始化 [EdgeXMessageAdapter](xref:StockSharp.EdgeX.EdgeXMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
+
+```cs
+Connector Connector = new Connector();
+...
+var messageAdapter = new EdgeXMessageAdapter(Connector.TransactionIdGenerator)
+{
+	Key = "<Your API Key>".To<SecureString>(),
+	Secret = "<Your API Secret>".To<SecureString>(),
+	ClearingAccount = "<Your Clearing Account>",
+	Passphrase = "<Your Passphrase>".To<SecureString>(),
+	Section = EdgeXSections.Derivatives,
+	EnableSpotSection = false,
+};
+Connector.Adapter.InnerAdapters.Add(messageAdapter);
+...
+```
+
+## 推荐内容
+
+[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)

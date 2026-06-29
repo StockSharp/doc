@@ -1,0 +1,116 @@
+# 阶梯反趋势策略
+
+## 概览
+
+`StairsCountertrendStrategy` 是一种逆势交易策略，用于在特定长度的已建立趋势上开仓。
+
+## 主要组件
+
+```cs
+public class StairsCountertrendStrategy : Strategy
+{
+	private readonly StrategyParam<int> _length;
+	private readonly StrategyParam<DataType> _candleType;
+	
+	private int _bullLength;
+	private int _bearLength;
+}
+```
+
+## 策略参数
+
+该策略允许自定义以下参数：
+
+- **长度** - 用于识别趋势的连续同向蜡烛数量（默认值 3）
+- **蜡烛类型** - 要使用的蜡烛类型（默认5分钟）
+
+Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
+
+## 策略初始化
+
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，计数器被重置，蜡烛订阅被创建，并且可视化被准备好：
+
+```cs
+protected override void OnStarted2(DateTime time)
+{
+	base.OnStarted2(time);
+	
+	// Reset counters
+	_bullLength = 0;
+	_bearLength = 0;
+
+	// Create subscription
+	var subscription = SubscribeCandles(CandleType);
+	
+	subscription
+		.Bind(ProcessCandle)
+		.Start();
+
+	// Set up visualization on the chart
+	var area = CreateChartArea();
+	if (area != null)
+	{
+		DrawCandles(area, subscription);
+		DrawOwnTrades(area);
+	}
+}
+```
+
+## 加工蜡烛
+
+`ProcessCandle` 方法在每个完成的蜡烛图上被调用，并实现交易逻辑：
+
+```cs
+private void ProcessCandle(ICandleMessage candle)
+{
+	// Check if the candle is finished
+	if (candle.State != CandleStates.Finished)
+		return;
+
+	// Check if the strategy is ready for trading
+	if (!IsFormedAndOnlineAndAllowTrading())
+		return;
+
+	// Update counters based on candle direction
+	if (candle.OpenPrice < candle.ClosePrice)
+	{
+		// Bullish candle
+		_bullLength++;
+		_bearLength = 0;
+	}
+	else if (candle.OpenPrice > candle.ClosePrice)
+	{
+		// Bearish candle
+		_bullLength = 0;
+		_bearLength++;
+	}
+
+	// Countertrend strategy: 
+	// Sell after Length consecutive bullish candles
+	if (_bullLength >= Length && Position >= 0)
+	{
+		SellMarket(Volume + Math.Abs(Position));
+	}
+	// Buy after Length consecutive bearish candles
+	else if (_bearLength >= Length && Position <= 0)
+	{
+		BuyMarket(Volume + Math.Abs(Position));
+	}
+}
+```
+
+## 交易逻辑
+
+- **卖出信号**：`Length` 连续看涨蜡烛（收盘价高于开盘价），且没有空头头寸时
+- **买入信号**：`Length` 连续的看跌K线（收盘价低于开盘价），且当前没有多头仓位
+- 每次新交易时，持仓量按当前持仓数量增加
+
+## 特征
+
+- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
+- 该策略仅适用于已完成的蜡烛
+- 该策略使用市价单进行建仓
+- 该策略采用逆势方法，开仓与已建立的趋势相反的方向
+- 当出现反方向的蜡烛时，蜡烛计数器会被重置
+- 当图形区域可用时，蜡烛和交易将在图表上显示
+- 支持序列长度优化以找到最佳策略设置

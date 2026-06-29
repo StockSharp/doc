@@ -1,0 +1,9 @@
+# 统计
+
+**Statistics** 组件以表格形式显示按盈亏、成交、持仓和订单分类的统计数据。统计数据有助于评估策略是否正确以及策略的运行效果。例如，SMA 示例策略的持仓数量不应超过 1。还可以通过最大回撤、相对回撤和恢复因子等其他质量指标来评估策略绩效。
+
+![Designer Statistics 00](../../../../images/designer_statistics_00.png)
+
+## 另请参阅
+
+[Debugging](../../backtesting/debugging.md)

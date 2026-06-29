@@ -1,0 +1,93 @@
+# FVE
+
+**有限体积元素（FVE）** 是一个技术指标，用于分析价格与成交量之间的关系，帮助评估市场中的买卖压力。
+
+要使用该指标，您需要使用 [FiniteVolumeElement](xref:StockSharp.Algo.Indicators.FiniteVolumeElement) 类。
+
+## 描述
+
+有限体积元素（FVE）分析价格变动与交易量之间的关系，以确定价格走势的潜在强度。它基于这样一个假设：当价格变动得到相应交易量的确认时，其变化最为显著。
+
+FVE 指标将按交易量加权的价格变动转换为振荡器，帮助判断市场中买卖双方的相对平衡。正的 FVE 值表示买方占主导，负的值表示卖方占主导。
+
+FVE 在以下方面特别有用：
+- 评估当前趋势的强度和可持续性
+- 识别潜在的反转点
+- 确定价格与成交量之间的背离
+- 确认其他指标的信号
+
+## 参数
+
+该指标具有以下参数：
+- **长度** - 平滑周期（默认值：22）
+
+## 计算
+
+FVE 指标的计算涉及几个步骤：
+
+1. 计算当前和前一时期的典型价格：
+   ```
+   Typical Price = (High + Low + Close) / 3
+   ```
+
+2. 计算典型价格变化：
+   ```
+   Price Change = Typical Price[current] - Typical Price[previous]
+   ```
+
+3. 计算成交量加权价格变化：
+   ```
+   Volume-Weighted Price Change = Price Change * Volume[current]
+   ```
+
+4. 进行归一化以考虑市场规模：
+   ```
+   Normalized Value = Volume-Weighted Price Change / (Average Volume over period * Price Volatility)
+   ```
+
+5. 累计求和与平滑：
+   ```
+   FVE = SMA(Cumulative Sum of Normalized Values, Length)
+   ```
+
+地点：
+- 高、低、收盘 - 最高价、最低价和收盘价
+- 成交量 - 交易量
+- SMA - 简单移动平均
+- 长度 - 平滑期
+
+## 解释
+
+FVE指标可以解释如下：
+
+1. **零线交叉**：
+   - 从负值转向正值表明买方压力增加，可以被视为看涨信号
+   - 从正值转为负值表明卖方压力增加，可以被视为看跌信号
+
+2. **极端值**：
+   - 高正值（高于 +3）可能表明市场处于超买状态
+   - 高负值（低于 -3）可能表示市场超卖状况
+
+3. **分歧**：
+   - 看涨背离（价格形成新低，而FVE形成更高低点）可能预示着潜在的向上反转
+   - 看跌背离（价格形成新高，而FVE形成较低高点）可能预示着潜在的下行反转
+
+4. **趋势确认**:
+   - 持续为正的 FVE 值证实了上升趋势的强劲
+   - 持续为负的 FVE 值证实了下行趋势的强度
+
+5. **FVE 变化率**：
+   - FVE 值的快速增加或减少可能表明价格走势动能强劲
+   - FVE 值变化的减缓可能预示潜在的动量减速
+
+6. **支撑和阻力位**：
+   - FVE 图上的历史反转点可以作为未来反转的参考
+
+![有限体积元指示器](../../../../images/indicator_finite_volume_element.png)
+
+## 另请参阅
+
+[OBV](on_balance_volume.md)
+[ADL](accumulation_distribution_line.md)
+[ForceIndex](force_index.md)
+[ChaikinMoneyFlow](chaikin_money_flow.md)

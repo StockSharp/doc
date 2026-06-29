@@ -1,0 +1,104 @@
+# 在 C# 中创建指标
+
+有关在 [API](../../../../api.md) 中创建自定义指标的方法，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。此类指标与 **Designer** 完全兼容。
+
+要创建指标，请在 **Scheme** 面板中选择 **Indicators** 文件夹，右键单击该文件夹，然后在上下文菜单中选择 **Add**：
+
+![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+
+指标代码如下：
+
+```cs
+/// <summary>
+/// Sample indicator demonstrating to save and load parameters.
+/// 
+/// Changes input price on +20% or -20%.
+/// 
+/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
+/// 
+/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// </summary>
+public class EmptyIndicator : BaseIndicator
+{
+	private int _change = 20;
+
+	public int Change
+	{
+		get => _change;
+		set
+		{
+			_change = value;
+			Reset();
+		}
+	}
+
+	private int _counter;
+	// formed indicator received all necessary inputs for be available for trading
+	private bool _isFormed;
+
+	protected override bool CalcIsFormed() => _isFormed;
+
+	public override void Reset()
+	{
+		base.Reset();
+
+		_isFormed = default;
+		_counter = default;
+	}
+
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		// every 10th call try return empty value
+		if (RandomGen.GetInt(0, 10) == 0)
+			return new DecimalIndicatorValue(this);
+
+		if (_counter++ == 5)
+		{
+			// for example, our indicator needs 5 inputs for become formed
+			_isFormed = true;
+		}
+
+		var value = input.GetValue<decimal>();
+
+		// random change on +20% or -20% current value
+
+		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
+
+		return new DecimalIndicatorValue(this, value)
+		{
+			// final value means that this value for the specified input
+			// is not changed anymore (for example, for candles that changes with last price)
+			IsFinal = RandomGen.GetBool()
+		};
+	}
+
+	// persist our properties to save for further the app restarts
+
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+		Change = storage.GetValue<int>(nameof(Change));
+	}
+
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+		storage.SetValue(nameof(Change), Change);
+	}
+
+	public override string ToString() => $"Change: {Change}";
+}
+```
+
+该指标接收输入值，并根据 **Change** 参数对该值进行随机偏移。
+
+有关指标方法的说明，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。
+
+要将创建的指标添加到策略图，请使用 [Indicator](../../using_visual_designer/elements/common/indicator.md) 模块，并在其中选择所需指标：
+
+![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+
+属性面板会显示此前在指标代码中定义的 **Change** 参数。
+
+> [!WARNING]
+> 使用 C# 代码创建的指标不能用于同样使用 C# 代码创建的策略，只能用于通过[模块](../../using_visual_designer.md)创建的策略。

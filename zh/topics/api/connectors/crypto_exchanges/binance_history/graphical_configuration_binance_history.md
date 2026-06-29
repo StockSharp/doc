@@ -1,0 +1,7 @@
+# 图形配置币安历史
+
+对于所有[S\#](../../../../api.md) 产品，连接的图形配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+
+![API GUI 设置 Binance 历史](../../../../../images/api_gui_settings_binancehistory.png)
+
+- **检查日期** - 在发送下载请求前验证所请求的日期。

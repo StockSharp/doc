@@ -1,0 +1,84 @@
+# 冰
+
+**老年冲动系统（EIS）** 是由亚历山大·埃尔德博士开发的技术指标，它结合了趋势指标和动量振荡器，以确定市场走势的方向和强度。
+
+使用该指标时，需要使用 [ElderImpulseSystem](xref:StockSharp.Algo.Indicators.ElderImpulseSystem) 类。
+
+## 描述
+
+高阶冲动系统（Elder Impulse System，EIS）是一种简单而强大的市场动量可视化工具。它结合了两个指标：
+1. **指数移动平均线 (EMA)** - 用于确定趋势方向
+2. **MACD柱状图** - 用于衡量价格走势的强度和动能
+
+EIS 将价格图表上的每根蜡烛分类为三类之一（通常用不同的颜色表示）：
+- **绿色（强烈的看涨冲动）** - 当两个指标都在上升时
+- **红色（强烈的空头冲击）** - 当两个指标都在下降时
+- **蓝色或中性（没有明显冲动）** - 当指标朝相反方向移动时
+
+EIS 尤其适用于：
+- 快速直观地确定趋势方向和强度
+- 识别主趋势方向的入场点和出场点
+- 识别潜在的反转点
+- 过滤错误信号
+
+## 计算
+
+老年冲动系统计算包括以下步骤：
+
+1. 计算13周期指数移动平均线（EMA）：
+   ```
+   EMA = EMA(Close, 13)
+   ```
+
+2. 计算MACD柱状图（标准值：12, 26, 9）：
+   ```
+   MACD Line = EMA(Close, 12) - EMA(Close, 26)
+   Signal Line = EMA(MACD Line, 9)
+   MACD Histogram = MACD Line - Signal Line
+   ```
+
+3. 确定当前蜡烛的颜色分类：
+   ```
+   If EMA[current] > EMA[previous] AND MACD Histogram[current] > MACD Histogram[previous], then Green (Bullish Impulse)
+   If EMA[current] < EMA[previous] AND MACD Histogram[current] < MACD Histogram[previous], then Red (Bearish Impulse)
+   Otherwise Blue (No Impulse)
+   ```
+
+## 解释
+
+长老冲动系统的解释如下：
+
+1. **绿色蜡烛（强烈的看涨冲动）**：
+   - 显示强劲的上升势头
+   - 买入或持有多头仓位的最佳时机
+   - 一系列绿色蜡烛显示出强劲的上升趋势
+
+2. **红色蜡烛（强烈的看跌冲动）**：
+   - 显示强烈的下行动能
+   - 卖出或持有空头仓位的最佳时机
+   - 一系列红色蜡烛表明强烈的下跌趋势
+
+3. **蓝色蜡烛（没有明显的冲动）**：
+   - 表示不确定或巩固
+   - 发出可能放缓或趋势反转的信号
+   - 通常出现在盘整期或趋势变化之前
+
+4. **交易策略**：
+   - 当蜡烛颜色从蓝色变为绿色时买入
+   - 当蜡烛颜色从蓝色变为红色时卖出
+   - 当蜡烛从绿色变为其他颜色时，平掉多头仓位
+   - 当蜡烛从红色变为其他颜色时，平掉空头仓位
+
+5. **趋势确认**:
+   - 一连串绿色蜡烛确认了上升趋势
+   - 一连串红色蜡烛确认了下跌趋势
+   - 颜色交替表示横向趋势或不确定性
+
+![指示器_老年冲动系统](../../../../images/indicator_elder_impulse_system.png)
+
+## 另请参阅
+
+[EMA](ema.md)
+[MACD](macd.md)
+[MACD柱状图](macd_histogram.md)
+[强力指数](force_index.md)

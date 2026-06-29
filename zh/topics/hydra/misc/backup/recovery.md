@@ -1,0 +1,9 @@
+# 恢复
+
+可以通过以下两种方式从存储中恢复数据：
+
+- 从 AWS 控制台下载已存储的对象。为此，右键单击对象，然后在上下文菜单中选择 **Download**。![Aws3 download](../../../../images/aws3_download.png)
+
+  > [!TIP]
+  > 使用此方法每次只能下载一个对象（文件）。
+- 使用免费应用程序 [S3 Browser](https://s3browser.com/) 下载数据。

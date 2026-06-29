@@ -1,0 +1,23 @@
+# 工作时间
+
+![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
+
+该模块用于确定策略的工作时间。例如，可以用它指定某个证券的交易时段，或策略允许进行交易的时间。
+#### 输入端口
+
+- **Any Data** - 模块可以接收任意值，但只提取其中的时间戳，并将其与模块参数进行比较。
+#### 输出端口
+
+- **Flag** - 表示时间戳是否符合模块参数的标志：符合时为 true，否则为 false。
+#### 参数
+
+- **Time From** - 工作时间的开始时刻。
+- **Time To** - 工作时间的结束时刻。
+
+该模块可用于确定来自不同交易平台的多个证券分别在哪些时间进行交易。
+
+![Designer Working time 01](../../../../../../images/designer_working_time_01.png)
+
+## 另请参阅
+
+[Is Trading Allowed](trade_allow.md)

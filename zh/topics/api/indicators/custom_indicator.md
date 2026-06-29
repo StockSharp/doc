@@ -1,0 +1,396 @@
+# 自定义指标
+
+要创建您自己的指标，您需要实现 [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) 接口。作为示例，您可以查看位于 [GitHub/StockSharp](https://github.com/StockSharp/StockSharp) 仓库中的其他指标源代码。下面是简单移动平均 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 的实现示例：
+
+```cs
+/// <summary>
+/// Simple Moving Average.
+/// </summary>
+[DisplayName("SMA")]
+[Description("Simple Moving Average.")]
+public class SimpleMovingAverage : LengthIndicator<decimal>
+{
+	/// <summary>
+	/// Create <see cref="SimpleMovingAverage"/>.
+	/// </summary>
+	public SimpleMovingAverage()
+	{
+		Length = 32;
+	}
+
+	/// <summary>
+	/// Process input value.
+	/// </summary>
+	/// <param name="input">Input value.</param>
+	/// <returns>Resulting value.</returns>
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var newValue = input.GetValue<decimal>();
+		if (input.IsFinal)
+		{
+			Buffer.Add(newValue);
+			if (Buffer.Count > Length)
+				Buffer.RemoveAt(0);
+		}
+		
+		if (input.IsFinal)
+			return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
+		
+		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
+	}
+}
+```
+
+
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 继承自 [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1)，所有具有周期长度参数的指标都必须继承自它。
+
+## 重要指标属性和方法
+
+在创建自定义指标时，应该特别注意以下属性和方法：
+
+### 要初始化的值数量
+
+[NumValuesToInitialize](xref:StockSharp.Algo.Indicators.IIndicator.NumValuesToInitialize) 属性表示指标初始化（形成或“预热”）所需的值数量。该值用于确定何时可以认为指标已形成并可以使用：
+
+```cs
+/// <inheritdoc />
+public override int NumValuesToInitialize => Length;
+```
+
+对于由多个组成部分构成的更复杂的指标，该值通常确定为所有组成部分的最大值：
+
+```cs
+/// <inheritdoc />
+public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+```
+
+### 测量
+
+[Measure](xref:StockSharp.Algo.Indicators.IIndicator.Measure) 属性定义了指标提供的测量类型和维度：
+
+```cs
+/// <inheritdoc />
+public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
+```
+
+可用的测量类型：
+- `IndicatorMeasures.Price` - 指标衡量价格（e.g., 移动平均线）
+- `IndicatorMeasures.Percent` - 指标使用从 0 到 100 的百分比刻度 (e.g., RSI)
+- `IndicatorMeasures.MinusOnePlusOne` - 指标使用从 -1 到 +1 的刻度
+- `IndicatorMeasures.Volume` - 指标用于测量交易量 (e.g., OBV)
+
+该属性对于在图表上正确显示指标至关重要。当在同一面板上叠加具有不同维度的多个指标时，会为具有不同 `Measure` 类型的指标创建独立的 Y 轴。这可以让所有指标以其自然的比例进行可视化显示，即使一个指标的数值以千为单位（e.g，价格），而另一个指标以单位的小数部分为单位（e.g，振荡器）。
+
+### 保存与加载
+
+[保存](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) 和 [加载](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) 方法对于保存和加载指标设置是必要的：
+
+```cs
+/// <inheritdoc />
+public override void Save(SettingsStorage storage)
+{
+	base.Save(storage);
+
+	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+	storage.SetValue(nameof(LongPeriod), LongPeriod);
+}
+
+/// <inheritdoc />
+public override void Load(SettingsStorage storage)
+{
+	base.Load(storage);
+
+	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+}
+```
+
+## 综合指标
+
+有些指标是复合指标，并在其计算中使用其他指标。因此，指标可以相互重用，如Chaikin波动率指标 [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility) 的示例实现中所示：
+
+```cs
+/// <summary>
+/// Chaikin Volatility.
+/// </summary>
+[DisplayName("Volatility")]
+[Description("Chaikin Volatility.")]
+public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
+{
+	/// <summary>
+	/// Create <see cref="ChaikinVolatility"/>.
+	/// </summary>
+	public ChaikinVolatility()
+	{
+		Ema = new ExponentialMovingAverage();
+		Roc = new RateOfChange();
+	}
+
+	/// <summary>
+	/// Moving Average.
+	/// </summary>
+	[ExpandableObject]
+	[DisplayName("MA")]
+	[Description("Moving Average.")]
+	[Category("Main")]
+	public ExponentialMovingAverage Ema { get; private set; }
+
+	/// <summary>
+	/// Rate of Change.
+	/// </summary>
+	[ExpandableObject]
+	[DisplayName("ROC")]
+	[Description("Rate of Change.")]
+	[Category("Main")]
+	public RateOfChange Roc { get; private set; }
+
+	/// <summary>
+	/// Is the indicator formed.
+	/// </summary>
+	public override bool IsFormed
+	{
+		get { return Roc.IsFormed; }
+	}
+
+	/// <summary>
+	/// Process input value.
+	/// </summary>
+	/// <param name="input">Input value.</param>
+	/// <returns>Resulting value.</returns>
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var candle = input.GetValue<Candle>();
+		var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
+		
+		if (Ema.IsFormed)
+		{
+			return Roc.Process(emaValue);
+		}
+		
+		return input;
+	}
+}
+```
+
+## 多线指标
+
+最后一种指标是那些不仅由其他指标组成，而且还可以同时以多种状态（多条线）图形显示的指标。例如，[平均趋向指数](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex)：
+
+```cs
+/// <summary>
+/// Welles Wilder's Average Directional Index.
+/// </summary>
+[DisplayName("ADX")]
+[Description("Welles Wilder's Average Directional Index.")]
+public class AverageDirectionalIndex : BaseComplexIndicator
+{
+	/// <summary>
+	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// </summary>
+	public AverageDirectionalIndex()
+		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
+	{
+	}
+
+	/// <summary>
+	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// </summary>
+	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
+	/// <param name="movingAverage">Moving Average.</param>
+	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
+	{
+		if (dx == null)
+			throw new ArgumentNullException(nameof(dx));
+		if (movingAverage == null)
+			throw new ArgumentNullException(nameof(movingAverage));
+		
+		InnerIndicators.Add(Dx = dx);
+		InnerIndicators.Add(MovingAverage = movingAverage);
+		Mode = ComplexIndicatorModes.Sequence;
+	}
+
+	/// <summary>
+	/// Welles Wilder's Directional Movement Index.
+	/// </summary>
+	[Browsable(false)]
+	public DirectionalIndex Dx { get; private set; }
+
+	/// <summary>
+	/// Moving Average.
+	/// </summary>
+	[Browsable(false)]
+	public LengthIndicator<decimal> MovingAverage { get; private set; }
+
+	/// <summary>
+	/// Period length.
+	/// </summary>
+	[DisplayName("Period")]
+	[Description("Indicator period.")]
+	[Category("Main")]
+	public virtual int Length
+	{
+		get { return MovingAverage.Length; }
+		set
+		{
+			MovingAverage.Length = Dx.Length = value;
+			Reset();
+		}
+	}
+}
+```
+
+此类指标应继承自 [BaseComplexIndicator](xref:StockSharp.Algo.Indicators.BaseComplexIndicator) 类，并将指标的组件传递给 [BaseComplexIndicator.InnerIndicators](xref:StockSharp.Algo.Indicators.BaseComplexIndicator.InnerIndicators)。此外，每个复杂指标必须声明其自己派生自 `ComplexIndicatorValue` 的值类型。
+
+## 具有保存加载实现的复杂指标示例
+
+以下是实现百分比成交量振荡器（PVO）的示例，演示了 `NumValuesToInitialize`、`Measure`、`Save` 和 `Load` 方法的实现：
+
+```cs
+/// <summary>
+/// Percentage Volume Oscillator (PVO).
+/// </summary>
+[Display(
+	ResourceType = typeof(LocalizedStrings),
+	Name = LocalizedStrings.PVOKey,
+	Description = LocalizedStrings.PercentageVolumeOscillatorKey)]
+[IndicatorIn(typeof(CandleIndicatorValue))]
+[Doc("topics/api/indicators/list_of_indicators/percentage_volume_oscillator.html")]
+[IndicatorOut(typeof(PercentageVolumeOscillatorValue))]
+public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeOscillatorValue>
+{
+	private readonly ExponentialMovingAverage _shortEma;
+	private readonly ExponentialMovingAverage _longEma;
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	public PercentageVolumeOscillator()
+		: this(new(), new())
+	{
+		ShortPeriod = 12;
+		LongPeriod = 26;
+	}
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// </summary>
+	/// <param name="shortEma">The short-term EMA.</param>
+	/// <param name="longEma">The long-term EMA.</param>
+	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
+		: base(shortEma, longEma)
+	{
+		_shortEma = shortEma;
+		_longEma = longEma;
+	}
+
+	/// <summary>
+	/// Short period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.ShortPeriodKey,
+		Description = LocalizedStrings.ShortMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int ShortPeriod
+	{
+		get => _shortEma.Length;
+		set => _shortEma.Length = value;
+	}
+
+	/// <summary>
+	/// Long period.
+	/// </summary>
+	[Display(
+		ResourceType = typeof(LocalizedStrings),
+		Name = LocalizedStrings.LongPeriodKey,
+		Description = LocalizedStrings.LongMaDescKey,
+		GroupName = LocalizedStrings.GeneralKey)]
+	public int LongPeriod
+	{
+		get => _longEma.Length;
+		set => _longEma.Length = value;
+	}
+
+	/// <inheritdoc />
+	public override IndicatorMeasures Measure => IndicatorMeasures.Volume;
+
+	/// <inheritdoc />
+	public override int NumValuesToInitialize => _shortEma.NumValuesToInitialize.Max(_longEma.NumValuesToInitialize);
+
+	/// <inheritdoc />
+	protected override bool CalcIsFormed() => _shortEma.IsFormed && _longEma.IsFormed;
+
+	/// <inheritdoc />
+	protected override IIndicatorValue OnProcess(IIndicatorValue input)
+	{
+		var volume = input.ToCandle().TotalVolume;
+
+		var result = new PercentageVolumeOscillatorValue(this, input.Time);
+
+		var shortValue = _shortEma.Process(input, volume);
+		var longValue = _longEma.Process(input, volume);
+
+		result.Add(_shortEma, shortValue);
+		result.Add(_longEma, longValue);
+
+		if (_longEma.IsFormed)
+		{
+			var den = longValue.ToDecimal();
+			var pvo = den == 0 ? 0 : ((shortValue.ToDecimal() - den) / den) * 100;
+			result.Add(this, new DecimalIndicatorValue(this, pvo, input.Time));
+		}
+
+		return result;
+	}
+
+	/// <inheritdoc />
+	public override void Save(SettingsStorage storage)
+	{
+		base.Save(storage);
+
+		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+		storage.SetValue(nameof(LongPeriod), LongPeriod);
+	}
+
+	/// <inheritdoc />
+	public override void Load(SettingsStorage storage)
+	{
+		base.Load(storage);
+
+		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	}
+
+	/// <inheritdoc />
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+
+	/// <inheritdoc />
+	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)
+		=> new(this, time);
+}
+```
+
+```cs
+/// <summary>
+/// <see cref="PercentageVolumeOscillator"/> indicator value.
+/// </summary>
+public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
+{
+	/// <summary>
+	/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
+	/// </summary>
+	/// <param name="indicator">Indicator.</param>
+	/// <param name="time">Value time.</param>
+	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
+			: base(indicator, time)
+	{
+	}
+}
+```
+
+这个例子演示了：
+1. 复杂指标的 `NumValuesToInitialize` 实施
+2. 通过 `Measure` 属性指定测量类型
+3. 为复合指标实现专用值类型
+4. `Save` 和 `Load` 方法用于保存和加载参数的正确实现
+5. 覆盖 `ToString()` 以便于指示器配置的显示

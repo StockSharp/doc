@@ -1,0 +1,2399 @@
+- name: 安装程序
+  href: installer.md
+  items:
+  - name: 视频
+    items:
+    - name: 设置
+      href: installer/videos/setup.md
+    - name: 安装和删除应用程序
+      href: installer/videos/install_and_remove_apps.md
+    - name: 更新应用程序
+      href: installer/videos/update_apps.md
+  - name: 设置
+    href: installer/setup.md
+  - name: 安装和删除应用程序
+    href: installer/install_and_remove_apps.md
+  - name: 更新应用程序
+    href: installer/update_apps.md
+  - name: 控制台
+    href: installer/console.md
+- name: Designer
+  href: designer.md
+  items:
+  - name: 视频
+    items:
+      - name: 入门指南
+        href: designer/videos/beginning.md
+      - name: 交易策略构建器
+        href: designer/videos/constructor.md
+      - name: 变量逻辑数学
+        href: designer/videos/variable_math.md
+      - name: 交易策略调试器
+        href: designer/videos/debugger.md
+      - name: 保护头寸
+        href: designer/videos/protect_position.md
+      - name: 指标和公式
+        href: designer/videos/indicators_formula.md
+      - name: 布林带和MACD
+        href: designer/videos/bollinger_macd.md
+      - name: 多时间框架
+        href: designer/videos/multi_timeframes.md
+      - name: 时间
+        href: designer/videos/time.md
+      - name: 将Designer连接到Hydra
+        href: designer/videos/connect_hydra.md
+      - name: 交易策略优化
+        href: designer/videos/optimization.md
+      - name: 实时交易
+        href: designer/videos/live_trading.md
+      - name: 复合立方体
+        href: designer/videos/complex_elements.md
+      - name: 从逐笔数据压缩K线
+        href: designer/videos/candles_build_ticks.md
+      - name: 标志
+        href: designer/videos/flag.md
+      - name: 最大成交量策略
+        href: designer/videos/strategy_max_volume.md
+      - name: 金融指数
+        href: designer/videos/financial_index.md
+      - name: 配对交易
+        href: designer/videos/pair_trading.md
+      - name: 指数和配对交易
+        href: designer/videos/index_pair_trading.md
+  - name: 学习资源
+    href: designer/materials.md
+  - name: 安装Designer
+    href: designer/installing_designer.md
+  - name: 更新到新版本
+    href: designer/update_to_the_new_version.md
+  - name: 快速开始
+    href: designer/quick_start.md
+  - name: 用户界面
+    items:
+    - name: 功能区
+      href: designer/user_interface/ribbon.md
+    - name: 工作区
+      href: designer/user_interface/workspace.md
+    - name: 方案
+      href: designer/user_interface/schemas.md
+    - name: 日志
+      href: designer/user_interface/logs.md
+    - name: 投资组合
+      href: designer/user_interface/portfolios.md
+    - name: 看板
+      href: designer/user_interface/boards.md
+    - name: 风险管理
+      href: designer/user_interface/risk_management.md
+    - name: 佣金
+      href: designer/user_interface/commissions.md
+    - name: 组件
+      href: designer/user_interface/components.md
+      items:
+      - name: 图表
+        href: designer/user_interface/components/chart.md
+      - name: 订单
+        href: designer/user_interface/components/orders.md
+      - name: 交易
+        href: designer/user_interface/components/trades.md
+      - name: 订单簿
+        href: designer/user_interface/components/order_book.md
+      - name: 头寸
+        href: designer/user_interface/components/positions.md
+      - name: 统计数据
+        href: designer/user_interface/components/statistics.md
+      - name: 盈亏权益
+        href: designer/user_interface/components/pnl_equity.md
+      - name: 回测设置
+        href: designer/user_interface/components/backtesting_settings.md
+      - name: 实时设置
+        href: designer/user_interface/components/live_settings.md
+      - name: 逐笔交易
+        href: designer/user_interface/components/tick_trades.md
+  - name: 策略
+    items:
+    - name: 使用可视化设计器
+      href: designer/strategies/using_visual_designer.md
+      items:
+      - name: 图表面板
+        href: designer/strategies/using_visual_designer/diagram_panel.md
+      - name: 元素
+        href: designer/strategies/using_visual_designer/elements.md
+        items:
+        - name: 通用
+          items:
+          - name: 图表
+            href: designer/strategies/using_visual_designer/elements/common/chart.md
+          - name: 交叉
+            href: designer/strategies/using_visual_designer/elements/common/crossing.md
+          - name: 延迟值
+            href: designer/strategies/using_visual_designer/elements/common/delay_value.md
+          - name: 比较
+            href: designer/strategies/using_visual_designer/elements/common/comparison.md
+          - name: 指标
+            href: designer/strategies/using_visual_designer/elements/common/indicator.md
+          - name: 逻辑条件
+            href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
+          - name: 公式
+            href: designer/strategies/using_visual_designer/elements/common/formula.md
+          - name: 组合
+            href: designer/strategies/using_visual_designer/elements/common/combination.md
+          - name: 前值
+            href: designer/strategies/using_visual_designer/elements/common/prev_value.md
+          - name: 随机
+            href: designer/strategies/using_visual_designer/elements/common/random.md
+          - name: 标志
+            href: designer/strategies/using_visual_designer/elements/common/flag.md
+          - name: 同步
+            href: designer/strategies/using_visual_designer/elements/common/sync.md
+          - name: 盈亏策略
+            href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
+          - name: 策略交易
+            href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
+        - name: 数据来源
+          items:
+          - name: K线
+            href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
+          - name: 一级行情
+            href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
+          - name: 逐笔成交
+            href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
+          - name: 指数
+            href: designer/strategies/using_visual_designer/elements/data_sources/index.md
+          - name: 变量
+            href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
+        - name: 时间
+          items:
+          - name: 工作时间
+            href: designer/strategies/using_visual_designer/elements/time/working_time.md
+          - name: 允许交易
+            href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
+          - name: 当前时间
+            href: designer/strategies/using_visual_designer/elements/time/current_time.md
+        - name: 持仓
+          items:
+          - name: 修改持仓
+            href: designer/strategies/using_visual_designer/elements/positions/modify.md
+          - name: 当前持仓
+            href: designer/strategies/using_visual_designer/elements/positions/current.md
+          - name: 保护持仓
+            href: designer/strategies/using_visual_designer/elements/positions/protect.md
+        - name: 订单
+          items:
+          - name: 注册订单
+            href: designer/strategies/using_visual_designer/elements/orders/register.md
+          - name: 撤销订单
+            href: designer/strategies/using_visual_designer/elements/orders/cancel.md
+          - name: 修改订单
+            href: designer/strategies/using_visual_designer/elements/orders/modify.md
+          - name: 批量撤单
+            href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
+        - name: 转换器
+          items:
+          - name: 索引器
+            href: designer/strategies/using_visual_designer/elements/converters/indexer.md
+          - name: 转换器
+            href: designer/strategies/using_visual_designer/elements/converters/converter.md
+        - name: 通知中
+          items:
+          - name: 通知
+            href: designer/strategies/using_visual_designer/elements/notifying/notification.md
+          - name: 字符串连接
+            href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
+          - name: 字符串格式化
+            href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
+        - name: 市场深度
+          items:
+          - name: 订单簿
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
+          - name: 分组订单簿
+            href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
+          - name: 订单簿面板
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
+          - name: 稀疏订单簿
+            href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
+          - name: 截断订单簿
+            href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
+        - name: 期权
+          items:
+          - name: 隐含波动率簿
+            href: designer/strategies/using_visual_designer/elements/options/iv_book.md
+          - name: 期权交易台
+            href: designer/strategies/using_visual_designer/elements/options/option_desk.md
+          - name: 图表持仓
+            href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
+          - name: 希腊字母
+            href: designer/strategies/using_visual_designer/elements/options/greeks.md
+          - name: 布莱克-斯科尔斯
+            href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
+          - name: 篮子
+            href: designer/strategies/using_visual_designer/elements/options/basket.md
+          - name: 对冲
+            href: designer/strategies/using_visual_designer/elements/options/hedging.md
+          - name: 期权报价
+            href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
+          - name: 执行价格
+            href: designer/strategies/using_visual_designer/elements/options/strikes.md
+      - name: 线条
+        href: designer/strategies/using_visual_designer/lines.md
+      - name: 事件模型
+        href: designer/strategies/using_visual_designer/event_model.md
+      - name: 首个策略
+        href: designer/strategies/using_visual_designer/first_strategy.md
+      - name: 复合元素
+        href: designer/strategies/using_visual_designer/composite_elements.md
+      - name: 示例架构
+        items:
+        - name: 在图表上显示K线
+          href: designer/strategies/using_visual_designer/schema_samples/display_candles_on_chart.md
+        - name: 获取合约最优价格
+          href: designer/strategies/using_visual_designer/schema_samples/get_best_price_for_instrument.md
+        - name: 获取当前持仓
+          href: designer/strategies/using_visual_designer/schema_samples/get_current_position.md
+        - name: 获取订单簿价位
+          href: designer/strategies/using_visual_designer/schema_samples/get_order_book_price_level.md
+    - name: 使用代码
+      href: designer/strategies/using_code.md
+      items:
+      - name: C#
+        href: designer/strategies/using_code/csharp.md
+        items:
+        - name: 首个策略
+          href: designer/strategies/using_code/csharp/first_strategy.md
+        - name: 外部DLL
+          href: designer/strategies/using_code/csharp/external_dlls.md
+        - name: 创建您自己的立方体
+          href: designer/strategies/using_code/csharp/creating_your_own_cube.md
+        - name: 创建自定义指标
+          href: designer/strategies/using_code/csharp/create_own_indicator.md
+        - name: 绘制订单簿
+          href: designer/strategies/using_code/csharp/draw_order_book.md
+        - name: 使用 Visual Studio 或 Rider
+          href: designer/strategies/using_code/csharp/using_visual_studio_or_rider.md
+      - name: F#
+        href: designer/strategies/using_code/fsharp.md
+        items:
+        - name: 第一策略
+          href: designer/strategies/using_code/fsharp/first_strategy.md
+        - name: 创建你自己的立方体
+          href: designer/strategies/using_code/fsharp/creating_your_own_cube.md
+        - name: 创建自定义指标
+          href: designer/strategies/using_code/fsharp/create_own_indicator.md
+      - name: Python
+        href: designer/strategies/using_code/python.md
+        items:
+        - name: 第一策略
+          href: designer/strategies/using_code/python/first_strategy.md
+        - name: 创建你自己的立方体
+          href: designer/strategies/using_code/python/creating_your_own_cube.md
+        - name: 创建自定义指标
+          href: designer/strategies/using_code/python/create_own_indicator.md
+    - name: 使用 DLL
+      href: designer/strategies/using_dll.md
+      items:
+      - name: 创建元素和指标
+        href: designer/strategies/using_dll/create_element_and_indicator.md
+      - name: 在 Visual Studio 中调试 DLL
+        href: designer/strategies/using_dll/debug_dll_in_visual_studio.md
+      - name: DLL 面板
+        href: designer/strategies/using_dll/dll_panel.md
+  - name: 指标
+    items:
+    - name: 指标
+      href: designer/indicators/indicators.md
+    - name: 创建你自己的指标
+      href: designer/indicators/creating_your_own_indicator.md
+  - name: 回测
+    items:
+    - name: 用户界面
+      href: designer/backtesting/user_interface.md
+    - name: 入门
+      href: designer/backtesting/getting_started.md
+    - name: 调试
+      href: designer/backtesting/debugging.md
+      items:
+      - name: 断点
+        href: designer/backtesting/debugging/break_points.md
+      - name: 逐步执行
+        href: designer/backtesting/debugging/step_by_step_execution.md
+    - name: 云回测
+      href: designer/backtesting/cloud_backtesting.md
+  - name: 优化
+    items:
+    - name: 暴力法
+      href: designer/optimization/brute_force.md
+    - name: 优化参数
+      href: designer/optimization/optimization_parameters.md
+    - name: 遗传算法
+      href: designer/optimization/genetic.md
+    - name: 三维图表
+      href: designer/optimization/3d_chart.md
+    - name: 组合优化
+      href: designer/optimization/portfolio_optimization.md
+    - name: 云优化
+      href: designer/optimization/cloud_optimization.md
+  - name: 市场数据存储
+    href: designer/market_data_storage.md
+    items:
+    - name: 下载合约
+      href: designer/market_data_storage/download_instruments.md
+    - name: 创建合约
+      href: designer/market_data_storage/create_instrument.md
+    - name: 编辑合约
+      href: designer/market_data_storage/edit_instrument.md
+    - name: 指数
+      href: designer/market_data_storage/index.md
+    - name: 连续期货
+      href: designer/market_data_storage/continuous_futures.md
+    - name: 下载市场数据
+      href: designer/market_data_storage/download_market_data.md
+    - name: 入门
+      href: designer/market_data_storage/getting_started.md
+    - name: 合约扩展信息
+      href: designer/market_data_storage/instrument_extended_info.md
+    - name: 符号映射
+      href: designer/market_data_storage/symbol_mapping.md
+  - name: 实盘执行
+    items:
+    - name: 入门
+      href: designer/live_execution/getting_started.md
+    - name: 用户界面
+      href: designer/live_execution/user_interface.md
+    - name: 策略面板
+      href: designer/live_execution/strategies_dashboard.md
+    - name: 实盘执行示例
+      href: designer/live_execution/live_execution_sample.md
+    - name: 在 Designer 外运行策略
+      href: designer/live_execution/running_strategies_outside_of_designer.md
+  - name: 连接设置
+    href: designer/connections_settings.md
+    items:
+    - name: 连接器设置
+      href: designer/connections_settings/connectors_settings.md
+    - name: 模拟器
+      href: designer/connections_settings/simulator.md
+  - name: 策略库
+    href: designer/strategy_gallery.md
+    items:
+    - name: 发布自己的策略
+      href: designer/strategy_gallery/publish_own_strategy.md
+  - name: 进出口
+    items:
+    - name: 出口
+      href: designer/export_import/export.md
+    - name: 进口
+      href: designer/export_import/import.md
+  - name: 设置
+    items:
+    - name: 重置设置
+      href: designer/settings/reset_settings.md
+    - name: 设置目录
+      href: designer/settings/settings_directory.md
+- name: Terminal
+  href: terminal.md
+  items:
+  - name: 安装 Terminal
+    href: terminal/installing_terminal.md
+  - name: 更新到新版本
+    href: terminal/update_to_the_new_version.md
+  - name: 快速开始
+    href: terminal/quick_start.md
+  - name: 用户界面
+    items:
+    - name: 功能区
+      href: terminal/user_interface/ribbon.md
+    - name: 工作区
+      href: terminal/user_interface/workspace.md
+    - name: 日志
+      href: terminal/user_interface/logs.md
+    - name: 投资组合
+      href: terminal/user_interface/portfolios.md
+    - name: 董事会编辑器
+      href: terminal/user_interface/board_editor.md
+    - name: 风险管理
+      href: terminal/user_interface/risk_management.md
+    - name: 组件
+      href: terminal/user_interface/components.md
+      items:
+      - name: 工具
+        href: terminal/user_interface/components/instruments.md
+      - name: 一级
+        href: terminal/user_interface/components/level_1.md
+      - name: 买入/卖出
+        href: terminal/user_interface/components/buy_sell.md
+      - name: 订单簿
+        href: terminal/user_interface/components/order_book.md
+      - name: 图表
+        href: terminal/user_interface/components/chart.md
+      - name: 盈亏图表
+        href: terminal/user_interface/components/pnl_chart.md
+      - name: 交易
+        href: terminal/user_interface/components/trades.md
+      - name: 订单
+        href: terminal/user_interface/components/orders.md
+      - name: 条件订单
+        href: terminal/user_interface/components/conditional_orders.md
+      - name: 持仓
+        href: terminal/user_interface/components/positions.md
+      - name: 交易信息流
+        href: terminal/user_interface/components/trades_feed.md
+      - name: 新闻
+        href: terminal/user_interface/components/news.md
+      - name: 期权持仓
+        href: terminal/user_interface/components/positions_options.md
+      - name: 期权交易台
+        href: terminal/user_interface/components/option_desk.md
+      - name: 微笑波动率
+        href: terminal/user_interface/components/smile_volatility.md
+      - name: 订单日志
+        href: terminal/user_interface/components/order_log.md
+  - name: 连接设置
+    href: terminal/connection_settings.md
+  - name: 市场数据存储
+    href: terminal/market_data_storage.md
+  - name: 指标
+    href: terminal/indicators.md
+  - name: 通知
+    href: terminal/notifications.md
+    items:
+    - name: 通知面板
+      href: terminal/notifications/notification_panel.md
+    - name: 通知设置
+      href: terminal/notifications/notifications_setup.md
+  - name: 设置
+    items:
+    - name: 重置设置
+      href: terminal/settings/reset_settings.md
+- name: Hydra
+  href: hydra.md
+  items:
+  - name: 视频
+    items:
+    - name: 首次启动
+      href: hydra/videos/first_start.md
+    - name: 示例来源
+      href: hydra/videos/sources_samples.md
+      items:
+      - name: Oanda
+        href: hydra/videos/sources_samples/oanda.md
+      - name: 盈透证券
+        href: hydra/videos/sources_samples/interactive_brokers.md
+      - name: Bitmex
+        href: hydra/videos/sources_samples/bitmex.md
+      - name: 币安
+        href: hydra/videos/sources_samples/binance.md
+    - name: 下载工具
+      href: hydra/videos/instruments_downloading.md
+    - name: 构建K线图
+      href: hydra/videos/building_candles.md
+    - name: 构建订单簿
+      href: hydra/videos/building_order_books.md
+    - name: 保存格式
+      href: hydra/videos/saving_format.md
+    - name: 指标
+      href: hydra/videos/indicators.md
+    - name: 分析
+      href: hydra/videos/analytics.md
+    - name: 导入任务
+      href: hydra/videos/import_task.md
+    - name: 导出任务
+      href: hydra/videos/export_task.md
+    - name: 转换器任务
+      href: hydra/videos/converter_task.md
+  - name: 安装 Hydra
+    href: hydra/installing_hydra.md
+  - name: 更新到新版本
+    href: hydra/update_to_the_new_version.md
+  - name: 首次启动
+    href: hydra/first_start.md
+  - name: 数据来源
+    href: hydra/data_sources.md
+    items:
+    - name: 选择来源
+      href: hydra/data_sources/select_source.md
+    - name: 通用连接设置
+      href: hydra/data_sources/common_connection_settings.md
+  - name: 准备下载
+    items:
+    - name: 工具列表
+      href: hydra/prepare_for_download/instruments_list.md
+    - name: 自定义蜡烛图
+      href: hydra/prepare_for_download/custom_candles.md
+  - name: 数据处理
+    href: hydra/working_with_data.md
+    items:
+    - name: 查看与导出
+      href: hydra/working_with_data/view_and_export.md
+      items:
+      - name: 逐笔数据
+        href: hydra/working_with_data/view_and_export/ticks.md
+      - name: 订单簿
+        href: hydra/working_with_data/view_and_export/order_books.md
+      - name: 蜡烛图
+        href: hydra/working_with_data/view_and_export/candles.md
+      - name: 订单日志
+        href: hydra/working_with_data/view_and_export/order_log.md
+      - name: '一级'
+        href: hydra/working_with_data/view_and_export/level_1_.md
+      - name: 新闻
+        href: hydra/working_with_data/view_and_export/news.md
+      - name: 交易
+        href: hydra/working_with_data/view_and_export/transactions.md
+      - name: 期权台
+        href: hydra/working_with_data/view_and_export/option_desk.md
+      - name: 指标
+        href: hydra/working_with_data/view_and_export/indicators.md
+      - name: 持仓
+        href: hydra/working_with_data/view_and_export/positions.md
+    - name: 蜡烛图生成
+      href: hydra/working_with_data/candles_generation.md
+    - name: 导出数据
+      href: hydra/working_with_data/export_data.md
+      items:
+      - name: 导出到MetaStock
+        href: hydra/working_with_data/export_data/export_into_metastock.md
+    - name: 任意市场数据类型
+      href: hydra/working_with_data/any_market_data_types.md
+  - name: 指标
+    href: hydra/indicators.md
+  - name: 导入
+    href: hydra/importing.md
+    items:
+    - name: 蜡烛图
+      href: hydra/importing/candles.md
+    - name: 工具
+      href: hydra/importing/instruments.md
+    - name: 逐笔数据
+      href: hydra/importing/ticks.md
+    - name: 订单簿
+      href: hydra/importing/order_books.md
+    - name: 订单日志
+      href: hydra/importing/order_log.md
+    - name: 一级
+      href: hydra/importing/level_1.md
+    - name: 新闻
+      href: hydra/importing/news.md
+    - name: 交易
+      href: hydra/importing/transactions.md
+  - name: 服务器模式
+    items:
+    - name: 设置
+      href: hydra/server_mode/settings.md
+    - name: 模拟设置
+      href: hydra/server_mode/emulation_setup.md
+    - name: 工具映射
+      href: hydra/server_mode/instruments_mapping.md
+    - name: FIX/FAST 连接
+      href: hydra/server_mode/fix_fast_connectivity.md
+    - name: Hydra-客户端连接
+      href: hydra/server_mode/hydra_client_connectivity.md
+  - name: 工具与交易板
+    items:
+    - name: 工具列表
+      href: hydra/instruments_and_boards/instruments_list.md
+    - name: 创建工具
+      href: hydra/instruments_and_boards/create_instrument.md
+    - name: 指数
+      href: hydra/instruments_and_boards/index.md
+    - name: 连续期货
+      href: hydra/instruments_and_boards/continuous_futures.md
+    - name: 编辑工具
+      href: hydra/instruments_and_boards/editing_instruments.md
+    - name: 扩展工具信息
+      href: hydra/instruments_and_boards/extended_instrument_info.md
+    - name: 匹配工具-连接
+      href: hydra/instruments_and_boards/matching_instruments_connections.md
+    - name: 交易板
+      href: hydra/instruments_and_boards/boards.md
+  - name: 任务
+    href: hydra/tasks.md
+    items:
+    - name: 转换器
+      href: hydra/tasks/converter.md
+    - name: 导出（自动）
+      href: hydra/tasks/export_auto.md
+    - name: 导入（自动）
+      href: hydra/tasks/import_auto.md
+    - name: 备份
+      href: hydra/tasks/backup.md
+  - name: 分析
+    href: hydra/analytics.md
+    items:
+    - name: 运行脚本
+      href: hydra/analytics/running_a_script.md
+    - name: 创建自定义脚本
+      href: hydra/analytics/create_own_script.md
+    - name: 示例
+      items:
+      - name: 日内成交量
+        href: hydra/analytics/examples/intraday_volume.md
+      - name: 成交量分布
+        href: hydra/analytics/examples/volume_profile.md
+      - name: 指标
+        href: hydra/analytics/examples/indicators.md
+      - name: 3D 图表
+        href: hydra/analytics/examples/3d_chart.md
+      - name: 归一化
+        href: hydra/analytics/examples/normalization.md
+      - name: 皮尔森相关
+        href: hydra/analytics/examples/pearson_correlation.md
+      - name: 最大蜡烛图
+        href: hydra/analytics/examples/largest_candles.md
+  - name: 杂项
+    items:
+    - name: 重置设置
+      href: hydra/misc/settings_reset.md
+    - name: 删除数据
+      href: hydra/misc/delete_data.md
+    - name: 网络设置
+      href: hydra/misc/network_settings.md
+    - name: 同步
+      href: hydra/misc/synchronization.md
+    - name: 备份
+      href: hydra/misc/backup.md
+      items:
+      - name: 设置
+        href: hydra/misc/backup/setup.md
+      - name: Hydra 设置
+        href: hydra/misc/backup/hydra_settings.md
+      - name: 恢复
+        href: hydra/misc/backup/recovery.md
+  - name: 创建新源
+    href: hydra/create_new_source.md
+  - name: 创建新任务
+    href: hydra/create_new_task.md
+- name: Hydra 服务器
+  href: hydra_server.md
+- name: Telegram 服务
+  href: telegram_services.md
+  items:
+  - name: 授权
+    href: telegram_services/authorization.md
+  - name: 警报
+    href: telegram_services/alerts.md
+  - name: 控制面板
+    href: telegram_services/control_panel.md
+- name: 运行器
+  href: runner.md
+  items:
+  - name: 从 Designer 导出
+    href: runner/export_from_designer.md
+  - name: 命令行
+    href: runner/command_line.md
+  - name: 连接设置
+    href: runner/connection_setup.md
+  - name: 与 Visual Studio 集成
+    href: runner/integration_with_visual_studio.md
+- name: API
+  href: api.md
+  items:
+  - name: 设置
+    href: api/setup.md
+  - name: AI 辅助开发
+    href: api/ai_development.md
+    items:
+    - name: 写作策略
+      href: api/ai_development/strategy_with_ai.md
+    - name: 写作连接器
+      href: api/ai_development/connector_with_ai.md
+  - name: 示例
+    href: api/examples.md
+  - name: 连接器
+    href: api/connectors.md
+    items:
+    - name: 图形配置
+      href: api/connectors/graphical_configuration.md
+    - name: 股票市场
+      items:
+      - name: Alpaca
+        href: api/connectors/stock_market/alpaca.md
+        items:
+        - name: Alpaca 配置
+          href: api/connectors/stock_market/alpaca/configuration_alpaca.md
+        - name: Alpaca 图形配置
+          href: api/connectors/stock_market/alpaca/graphical_configuration_alpaca.md
+        - name: Alpaca 适配器初始化
+          href: api/connectors/stock_market/alpaca/adapter_initialization_alpaca.md
+      - name: AlphaVantage
+        href: api/connectors/stock_market/alphavantage.md
+        items:
+        - name: AlphaVantage 配置
+          href: api/connectors/stock_market/alphavantage/configuration_alphavantage.md
+        - name: AlphaVantage 图形配置
+          href: api/connectors/stock_market/alphavantage/graphical_configuration_alphavantage.md
+        - name: AlphaVantage 适配器初始化
+          href: api/connectors/stock_market/alphavantage/adapter_initialization_alphavantage.md
+      - name: BarChart
+        href: api/connectors/stock_market/barchart.md
+        items:
+        - name: BarChart 配置
+          href: api/connectors/stock_market/barchart/configuration_barchart.md
+        - name: BarChart 图形配置
+          href: api/connectors/stock_market/barchart/graphical_configuration_barchart.md
+        - name: BarChart 适配器初始化
+          href: api/connectors/stock_market/barchart/adapter_initialization_barchart.md
+      - name: Blackwood (Fusion)
+        href: api/connectors/stock_market/blackwood_fusion.md
+        items:
+        - name: Blackwood (Fusion) 配置
+          href: api/connectors/stock_market/blackwood_fusion/configuration_blackwood_fusion.md
+        - name: Blackwood (Fusion) 图形配置
+          href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
+        - name: Blackwood (Fusion) 适配器初始化
+          href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
+      - name: CQG
+        href: api/connectors/stock_market/cqg.md
+        items:
+        - name: CQG 配置
+          href: api/connectors/stock_market/cqg/configuration_cqg.md
+        - name: CQG COM 图形配置
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
+        - name: CQG Continuum 图形配置
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+        - name: CQG 适配器初始化
+          href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
+      - name: E*TRADE
+        href: api/connectors/stock_market/e_trade.md
+        items:
+        - name: E*TRADE 配置
+          href: api/connectors/stock_market/e_trade/configuration_e_trade.md
+        - name: E*TRADE 图形配置
+          href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
+        - name: E*TRADE 适配器初始化
+          href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
+      - name: IEX
+        href: api/connectors/stock_market/iex.md
+        items:
+        - name: IEX 配置
+          href: api/connectors/stock_market/iex/configuration_iex.md
+        - name: IEX 图形配置
+          href: api/connectors/stock_market/iex/graphical_configuration_iex.md
+        - name: IEX 适配器初始化
+          href: api/connectors/stock_market/iex/adapter_initialization_iex.md
+      - name: Interactive Brokers
+        href: api/connectors/stock_market/interactive_brokers.md
+        items:
+        - name: Interactive Brokers 图形配置
+          href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
+        - name: Interactive Brokers 适配器初始化
+          href: api/connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md
+      - name: IQFeed
+        href: api/connectors/stock_market/iqfeed.md
+        items:
+        - name: IQFeed 连接
+          href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
+        - name: IQFeed 图形配置
+          href: api/connectors/stock_market/iqfeed/graphical_configuration_iqfeed.md
+        - name: IQFeed 适配器初始化
+          href: api/connectors/stock_market/iqfeed/adapter_initialization_iqfeed.md
+      - name: ITCH
+        href: api/connectors/stock_market/itch.md
+        items:
+        - name: ITCH 配置
+          href: api/connectors/stock_market/itch/configuration_itch.md
+        - name: ITCH 图形配置
+          href: api/connectors/stock_market/itch/graphical_configuration_itch.md
+        - name: ITCH 适配器初始化
+          href: api/connectors/stock_market/itch/adapter_initialization_itch.md
+      - name: OpenECry
+        href: api/connectors/stock_market/openecry.md
+        items:
+        - name: OpenECry 配置
+          href: api/connectors/stock_market/openecry/configuration_openecry.md
+        - name: OpenECry 图形配置
+          href: api/connectors/stock_market/openecry/graphical_configuration_openecry.md
+        - name: OpenECry 适配器初始化
+          href: api/connectors/stock_market/openecry/adapter_initialization_openecry.md
+        - name: 多个算法连接
+          href: api/connectors/stock_market/openecry/several_algorithms_connection.md
+        - name: 终端和算法同时运行
+          href: api/connectors/stock_market/openecry/simultaneous_terminal_and_algorithm_operation.md
+      - name: PolygonIO
+        href: api/connectors/stock_market/polygonio.md
+        items:
+        - name: PolygonIO 配置
+          href: api/connectors/stock_market/polygonio/configuration_polygonio.md
+        - name: PolygonIO 图形配置
+          href: api/connectors/stock_market/polygonio/graphical_configuration_polygonio.md
+        - name: PolygonIO 适配器初始化
+          href: api/connectors/stock_market/polygonio/adapter_initialization_polygonio.md
+      - name: Quandl
+        href: api/connectors/stock_market/quandl.md
+        items:
+        - name: Quandl 配置
+          href: api/connectors/stock_market/quandl/configuration_quandl.md
+        - name: Quandl 图形配置
+          href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
+        - name: Quandl 适配器初始化
+          href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
+      - name: QuantFEED
+        href: api/connectors/stock_market/quantfeed.md
+        items:
+        - name: QuantFEED 配置
+          href: api/connectors/stock_market/quantfeed/configuration_quantfeed.md
+        - name: QuantFEED 图形配置
+          href: api/connectors/stock_market/quantfeed/graphical_configuration_quantfeed.md
+        - name: 适配器初始化 QuantFEED
+          href: api/connectors/stock_market/quantfeed/adapter_initialization_quantfeed.md
+      - name: Rithmic
+        href: api/connectors/stock_market/rithmic.md
+        items:
+        - name: 配置 Rithmic
+          href: api/connectors/stock_market/rithmic/configuration_rithmic.md
+        - name: 图形配置 Rithmic
+          href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
+        - name: 适配器初始化 Rithmic
+          href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
+      - name: Sterling
+        href: api/connectors/stock_market/sterling.md
+        items:
+        - name: 配置 Sterling
+          href: api/connectors/stock_market/sterling/configuration_sterling.md
+        - name: 图形配置 Sterling
+          href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
+        - name: 适配器初始化 Sterling
+          href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: Tradier
+        href: api/connectors/stock_market/tradier.md
+        items:
+        - name: 配置 Tradier
+          href: api/connectors/stock_market/tradier/configuration_tradier.md
+        - name: 图形配置 Tradier
+          href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
+        - name: 适配器初始化 Tradier
+          href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Xignite
+        href: api/connectors/stock_market/xignite.md
+        items:
+        - name: 配置 Xignite
+          href: api/connectors/stock_market/xignite/configuration_xignite.md
+        - name: 图形配置 Xignite
+          href: api/connectors/stock_market/xignite/graphical_configuration_xignite.md
+        - name: 适配器初始化 Xignite
+          href: api/connectors/stock_market/xignite/adapter_initialization_xignite.md
+      - name: Yahoo
+        href: api/connectors/stock_market/yahoo.md
+        items:
+        - name: 图形配置 Yahoo
+          href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
+        - name: 适配器初始化 Yahoo
+          href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+    - name: 外汇
+      items:
+      - name: MetaTrader
+        href: api/connectors/forex/metatrader.md
+      - name: DXtrade
+        href: api/connectors/forex/dxtrade.md
+        items:
+        - name: 配置 DXtrade
+          href: api/connectors/forex/dxtrade/configuration_dxtrade.md
+        - name: 图形配置 DXtrade
+          href: api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md
+        - name: 适配器初始化 DXtrade
+          href: api/connectors/forex/dxtrade/adapter_initialization_dxtrade.md
+      - name: cTrader
+        href: api/connectors/forex/ctrader.md
+        items:
+        - name: 配置 cTrader
+          href: api/connectors/forex/ctrader/configuration_ctrader.md
+        - name: 图形配置 cTrader
+          href: api/connectors/forex/ctrader/graphical_configuration_ctrader.md
+        - name: 适配器初始化 cTrader
+          href: api/connectors/forex/ctrader/adapter_initialization_ctrader.md
+      - name: DukasCopy
+        href: api/connectors/forex/dukascopy.md
+        items:
+        - name: 图形配置 DukasCopy
+          href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
+        - name: 适配器初始化 DukasCopy
+          href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
+      - name: FXCM
+        href: api/connectors/forex/fxcm.md
+        items:
+        - name: 配置 FXCM
+          href: api/connectors/forex/fxcm/configuration_fxcm.md
+        - name: 图形配置 FXCM
+          href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
+        - name: 适配器初始化 FXCM
+          href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
+      - name: LMAX
+        href: api/connectors/forex/lmax.md
+        items:
+        - name: 配置 LMAX
+          href: api/connectors/forex/lmax/configuration_lmax.md
+        - name: 图形配置 LMAX
+          href: api/connectors/forex/lmax/graphical_configuration_lmax.md
+        - name: 适配器初始化 LMAX
+          href: api/connectors/forex/lmax/adapter_initialization_lmax.md
+      - name: Oanda
+        href: api/connectors/forex/oanda.md
+        items:
+        - name: 配置 Oanda
+          href: api/connectors/forex/oanda/configuration_oanda.md
+        - name: 图形配置 Oanda
+          href: api/connectors/forex/oanda/graphical_configuration_oanda.md
+        - name: 适配器初始化 Oanda
+          href: api/connectors/forex/oanda/adapter_initialization_oanda.md
+    - name: 加密货币交易所
+      items:
+      - name: Bibox
+        href: api/connectors/crypto_exchanges/bibox.md
+        items:
+        - name: 配置 Bibox
+          href: api/connectors/crypto_exchanges/bibox/configuration_bibox.md
+        - name: 图形配置 Bibox
+          href: api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md
+        - name: 适配器初始化 Bibox
+          href: api/connectors/crypto_exchanges/bibox/adapter_initialization_bibox.md
+      - name: Binance
+        href: api/connectors/crypto_exchanges/binance.md
+        items:
+        - name: 配置 Binance
+          href: api/connectors/crypto_exchanges/binance/configuration_binance.md
+        - name: 图形配置 Binance
+          href: api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md
+        - name: 适配器初始化 Binance
+          href: api/connectors/crypto_exchanges/binance/adapter_initialization_binance.md
+      - name: Binance 历史
+        href: api/connectors/crypto_exchanges/binance_history.md
+        items:
+        - name: 配置 Binance 历史
+          href: api/connectors/crypto_exchanges/binance_history/configuration_binance_history.md
+        - name: 图形配置 Binance 历史
+          href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
+        - name: 适配器初始化 Binance 历史
+          href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+      - name: Bybit 历史
+        href: api/connectors/crypto_exchanges/bybit_history.md
+        items:
+        - name: 配置 Bybit 历史
+          href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+        - name: 图形配置 Bybit 历史
+          href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+        - name: 适配器初始化 Bybit 历史
+          href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
+      - name: BingX
+        href: api/connectors/crypto_exchanges/bingx.md
+        items:
+        - name: 配置 BingX
+          href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
+        - name: 图形配置 BingX
+          href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
+        - name: 适配器初始化 BingX
+          href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
+      - name: Bitalong
+        href: api/connectors/crypto_exchanges/bitalong.md
+        items:
+        - name: 配置 Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/configuration_bitalong.md
+        - name: 图形配置 Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/graphical_configuration_bitalong.md
+        - name: 适配器初始化 Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/adapter_initialization_bitalong.md
+      - name: Bitbank
+        href: api/connectors/crypto_exchanges/bitbank.md
+        items:
+        - name: 配置 Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md
+        - name: 图形配置 Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
+        - name: 适配器初始化 Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/bitget.md
+        items:
+        - name: 配置 Bitget
+          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+        - name: 图形配置 Bitget
+          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+        - name: 适配器初始化 Bitget
+          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
+      - name: Bitexbook
+        href: api/connectors/crypto_exchanges/bitexbook.md
+        items:
+        - name: 配置 Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md
+        - name: 图形配置 Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md
+        - name: 适配器初始化 Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/adapter_initialization_bitexbook.md
+      - name: Bitfinex
+        href: api/connectors/crypto_exchanges/bitfinex.md
+        items:
+        - name: 配置 Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/configuration_bitfinex.md
+        - name: 图形配置 Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
+        - name: 适配器初始化 Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
+      - name: Bithumb
+        href: api/connectors/crypto_exchanges/bithumb.md
+        items:
+        - name: 配置 Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/configuration_bithumb.md
+        - name: 图形配置 Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/graphical_configuration_bithumb.md
+        - name: 适配器初始化 Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/adapter_initialization_bithumb.md
+      - name: Bitmart
+        href: api/connectors/crypto_exchanges/bitmart.md
+        items:
+        - name: 配置 Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/configuration_bitmart.md
+        - name: 图形配置 Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/graphical_configuration_bitmart.md
+        - name: 适配器初始化 Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/adapter_initialization_bitmart.md
+      - name: BitMax
+        href: api/connectors/crypto_exchanges/bitmax.md
+        items:
+        - name: 配置 BitMax
+          href: api/connectors/crypto_exchanges/bitmax/configuration_bitmax.md
+        - name: 图形配置 BitMax
+          href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
+        - name: 适配器初始化 BitMax
+          href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
+      - name: BitMEX
+        href: api/connectors/crypto_exchanges/bitmex.md
+        items:
+        - name: 配置 BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
+        - name: 图形配置 BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
+        - name: 适配器初始化 BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
+      - name: BitStamp
+        href: api/connectors/crypto_exchanges/bitstamp.md
+        items:
+        - name: 配置 BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md
+        - name: 图形配置 BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md
+        - name: 适配器初始化 BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/adapter_initialization_bitstamp.md
+      - name: Bittrex
+        href: api/connectors/crypto_exchanges/bittrex.md
+        items:
+        - name: 配置 Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md
+        - name: 图形配置 Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md
+        - name: 适配器初始化 Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/adapter_initialization_bittrex.md
+      - name: BitZ
+        href: api/connectors/crypto_exchanges/bitz.md
+        items:
+        - name: 配置 BitZ
+          href: api/connectors/crypto_exchanges/bitz/configuration_bitz.md
+        - name: 图形配置 BitZ
+          href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
+        - name: 适配器初始化 BitZ
+          href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
+      - name: ByBit
+        href: api/connectors/crypto_exchanges/bybit.md
+        items:
+        - name: 配置 ByBit
+          href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
+        - name: 图形配置 ByBit
+          href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
+        - name: 适配器初始化 ByBit
+          href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+      - name: BW
+        href: api/connectors/crypto_exchanges/bw.md
+        items:
+        - name: 配置 BW
+          href: api/connectors/crypto_exchanges/bw/configuration_bw.md
+        - name: 图形配置 BW
+          href: api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md
+        - name: 适配器初始化 BW
+          href: api/connectors/crypto_exchanges/bw/adapter_initialization_bw.md
+      - name: CEX.IO
+        href: api/connectors/crypto_exchanges/cex.io.md
+        items:
+        - name: 配置 CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/configuration_cex.io.md
+        - name: 图形配置 CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/graphical_configuration_cex.io.md
+        - name: 适配器初始化 CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/adapter_initialization_cex.io.md
+      - name: Coinbase
+        href: api/connectors/crypto_exchanges/coinbase.md
+        items:
+        - name: 配置 Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/configuration_coinbase.md
+        - name: 图形配置 Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/graphical_configuration_coinbase.md
+        - name: 适配器初始化 Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/adapter_initialization_coinbase.md
+      - name: CoinBene
+        href: api/connectors/crypto_exchanges/coinbene.md
+        items:
+        - name: 配置 CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/configuration_coinbene.md
+        - name: 图形配置 CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/graphical_configuration_coinbene.md
+        - name: 适配器初始化 CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/adapter_initialization_coinbene.md
+      - name: CoinCap
+        href: api/connectors/crypto_exchanges/coincap.md
+        items:
+        - name: 配置 CoinCap
+          href: api/connectors/crypto_exchanges/coincap/configuration_coincap.md
+        - name: 图形配置 CoinCap
+          href: api/connectors/crypto_exchanges/coincap/graphical_configuration_coincap.md
+        - name: 适配器初始化 CoinCap
+          href: api/connectors/crypto_exchanges/coincap/adapter_initialization_coincap.md
+      - name: Coincheck
+        href: api/connectors/crypto_exchanges/coincheck.md
+        items:
+        - name: 配置 Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/configuration_coincheck.md
+        - name: 图形配置 Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/graphical_configuration_coincheck.md
+        - name: 适配器初始化 Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/adapter_initialization_coincheck.md
+      - name: CoinEx
+        href: api/connectors/crypto_exchanges/coinex.md
+        items:
+        - name: 配置 CoinEx
+          href: api/connectors/crypto_exchanges/coinex/configuration_coinex.md
+        - name: 图形配置 CoinEx
+          href: api/connectors/crypto_exchanges/coinex/graphical_configuration_coinex.md
+        - name: 适配器初始化 CoinEx
+          href: api/connectors/crypto_exchanges/coinex/adapter_initialization_coinex.md
+      - name: CoinExchange
+        href: api/connectors/crypto_exchanges/coinexchange.md
+        items:
+        - name: 配置 CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/configuration_coinexchange.md
+        - name: 图形配置 CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/graphical_configuration_coinexchange.md
+        - name: 适配器初始化 CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/adapter_initialization_coinexchange.md
+      - name: Coinigy
+        href: api/connectors/crypto_exchanges/coinigy.md
+        items:
+        - name: 配置 Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/configuration_coinigy.md
+        - name: 图形配置 Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/graphical_configuration_coinigy.md
+        - name: 适配器初始化 Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/adapter_initialization_coinigy.md
+      - name: CoinHub
+        href: api/connectors/crypto_exchanges/coinhub.md
+        items:
+        - name: 配置 CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
+        - name: 图形配置 CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
+        - name: 适配器初始化 CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
+      - name: Cryptopia
+        href: api/connectors/crypto_exchanges/cryptopia.md
+        items:
+        - name: 配置 Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md
+        - name: 图形配置 Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md
+        - name: 适配器初始化 Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/adapter_initialization_cryptopia.md
+      - name: Deribit
+        href: api/connectors/crypto_exchanges/deribit.md
+        items:
+        - name: 配置 Deribit
+          href: api/connectors/crypto_exchanges/deribit/configuration_deribit.md
+        - name: 图形配置 Deribit
+          href: api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md
+        - name: 适配器初始化 Deribit
+          href: api/connectors/crypto_exchanges/deribit/adapter_initialization_deribit.md
+      - name: Digifinex
+        href: api/connectors/crypto_exchanges/digifinex.md
+        items:
+        - name: 配置 Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md
+        - name: 图形配置 Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md
+        - name: 适配器初始化 Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/adapter_initialization_digifinex.md
+      - name: DigitexFutures
+        href: api/connectors/crypto_exchanges/digitexfutures.md
+        items:
+        - name: 配置 DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/configuration_digitexfutures.md
+        - name: 图形配置 DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/graphical_configuration_digitexfutures.md
+        - name: 适配器初始化 DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/adapter_initialization_digitexfutures.md
+      - name: EXMO
+        href: api/connectors/crypto_exchanges/exmo.md
+        items:
+        - name: 配置 EXMO
+          href: api/connectors/crypto_exchanges/exmo/configuration_exmo.md
+        - name: 图形配置 EXMO
+          href: api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md
+        - name: 适配器初始化 EXMO
+          href: api/connectors/crypto_exchanges/exmo/adapter_initialization_exmo.md
+      - name: FatBTC
+        href: api/connectors/crypto_exchanges/fatbtc.md
+        items:
+        - name: 配置 FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md
+        - name: 图形配置 FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
+        - name: 适配器初始化 FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+      - name: Gate.io
+        href: api/connectors/crypto_exchanges/gateio.md
+        items:
+        - name: 配置 Gate.io
+          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+        - name: 图形配置 Gate.io
+          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+        - name: 适配器初始化 Gate.io
+          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
+      - name: GDAX
+        href: api/connectors/crypto_exchanges/gdax.md
+        items:
+        - name: 配置 GDAX
+          href: api/connectors/crypto_exchanges/gdax/configuration_gdax.md
+        - name: 图形配置 GDAX
+          href: api/connectors/crypto_exchanges/gdax/graphical_configuration_gdax.md
+        - name: 适配器初始化 GDAX
+          href: api/connectors/crypto_exchanges/gdax/adapter_initialization_gdax.md
+      - name: Gopax
+        href: api/connectors/crypto_exchanges/gopax.md
+        items:
+        - name: Gopax 配置
+          href: api/connectors/crypto_exchanges/gopax/configuration_gopax.md
+        - name: Gopax 图形配置
+          href: api/connectors/crypto_exchanges/gopax/graphical_configuration_gopax.md
+        - name: Gopax 适配器初始化
+          href: api/connectors/crypto_exchanges/gopax/adapter_initialization_gopax.md
+      - name: HitBTC
+        href: api/connectors/crypto_exchanges/hitbtc.md
+        items:
+        - name: HitBTC 配置
+          href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
+        - name: HitBTC 图形配置
+          href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
+        - name: HitBTC 适配器初始化
+          href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
+      - name: Hotbit
+        href: api/connectors/crypto_exchanges/hotbit.md
+        items:
+        - name: Hotbit 配置
+          href: api/connectors/crypto_exchanges/hotbit/configuration_hotbit.md
+        - name: Hotbit 图形配置
+          href: api/connectors/crypto_exchanges/hotbit/graphical_configuration_hotbit.md
+        - name: Hotbit 适配器初始化
+          href: api/connectors/crypto_exchanges/hotbit/adapter_initialization_hotbit.md
+      - name: Huobi
+        href: api/connectors/crypto_exchanges/huobi.md
+        items:
+        - name: Huobi 配置
+          href: api/connectors/crypto_exchanges/huobi/configuration_huobi.md
+        - name: Huobi 图形配置
+          href: api/connectors/crypto_exchanges/huobi/graphical_configuration_huobi.md
+        - name: Huobi 适配器初始化
+          href: api/connectors/crypto_exchanges/huobi/adapter_initialization_huobi.md
+      - name: Idax
+        href: api/connectors/crypto_exchanges/idax.md
+        items:
+        - name: Idax 配置
+          href: api/connectors/crypto_exchanges/idax/configuration_idax.md
+        - name: Idax 图形配置
+          href: api/connectors/crypto_exchanges/idax/graphical_configuration_idax.md
+        - name: Idax 适配器初始化
+          href: api/connectors/crypto_exchanges/idax/adapter_initialization_idax.md
+      - name: Kraken
+        href: api/connectors/crypto_exchanges/kraken.md
+        items:
+        - name: Kraken 配置
+          href: api/connectors/crypto_exchanges/kraken/configuration_kraken.md
+        - name: Kraken 图形配置
+          href: api/connectors/crypto_exchanges/kraken/graphical_configuration_kraken.md
+        - name: Kraken 适配器初始化
+          href: api/connectors/crypto_exchanges/kraken/adapter_initialization_kraken.md
+      - name: Kucoin
+        href: api/connectors/crypto_exchanges/kucoin.md
+        items:
+        - name: Kucoin 配置
+          href: api/connectors/crypto_exchanges/kucoin/configuration_kucoin.md
+        - name: Kucoin 图形配置
+          href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
+        - name: Kucoin 适配器初始化
+          href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+      - name: Latoken
+        href: api/connectors/crypto_exchanges/latoken.md
+        items:
+        - name: Latoken 配置
+          href: api/connectors/crypto_exchanges/latoken/configuration_latoken.md
+        - name: Latoken 图形配置
+          href: api/connectors/crypto_exchanges/latoken/graphical_configuration_latoken.md
+        - name: Latoken 适配器初始化
+          href: api/connectors/crypto_exchanges/latoken/adapter_initialization_latoken.md
+      - name: LBank
+        href: api/connectors/crypto_exchanges/lbank.md
+        items:
+        - name: LBank 配置
+          href: api/connectors/crypto_exchanges/lbank/configuration_lbank.md
+        - name: LBank 图形配置
+          href: api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md
+        - name: LBank 适配器初始化
+          href: api/connectors/crypto_exchanges/lbank/adapter_initialization_lbank.md
+      - name: Liqui
+        href: api/connectors/crypto_exchanges/liqui.md
+        items:
+        - name: Liqui 配置
+          href: api/connectors/crypto_exchanges/liqui/configuration_liqui.md
+        - name: Liqui 图形配置
+          href: api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md
+        - name: Liqui 适配器初始化
+          href: api/connectors/crypto_exchanges/liqui/adapter_initialization_liqui.md
+      - name: Livecoin
+        href: api/connectors/crypto_exchanges/livecoin.md
+        items:
+        - name: Livecoin 配置
+          href: api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md
+        - name: 图形配置 Livecoin
+          href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
+        - name: 适配器初始化 Livecoin
+          href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
+      - name: MEXC
+        href: api/connectors/crypto_exchanges/mexc.md
+        items:
+        - name: 配置 MEXC
+          href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
+        - name: 图形配置 MEXC
+          href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
+        - name: 适配器初始化 MEXC
+          href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
+      - name: OKCoin
+        href: api/connectors/crypto_exchanges/okcoin.md
+        items:
+        - name: 配置 OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md
+        - name: 图形配置 OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md
+        - name: 适配器初始化 OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/adapter_initialization_okcoin.md
+      - name: OKEx
+        href: api/connectors/crypto_exchanges/okex.md
+        items:
+        - name: 配置 OKEx
+          href: api/connectors/crypto_exchanges/okex/configuration_okex.md
+        - name: 图形配置 OKEx
+          href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
+        - name: 适配器初始化 OKEx
+          href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
+      - name: OKEx 历史
+        href: api/connectors/crypto_exchanges/okex_history.md
+        items:
+        - name: 配置 OKEx 历史
+          href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
+        - name: 图形配置 OKEx 历史
+          href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
+        - name: 适配器初始化 OKEx 历史
+          href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
+      - name: Poloniex
+        href: api/connectors/crypto_exchanges/poloniex.md
+        items:
+        - name: 配置 Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md
+        - name: 图形配置 Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md
+        - name: 适配器初始化 Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/adapter_initialization_poloniex.md
+      - name: PrizmBit
+        href: api/connectors/crypto_exchanges/prizmbit.md
+        items:
+        - name: 配置 PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
+        - name: 图形配置 PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
+        - name: 适配器初始化 PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
+      - name: Quoinex
+        href: api/connectors/crypto_exchanges/quoinex.md
+        items:
+        - name: 配置 Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/configuration_quoinex.md
+        - name: 图形配置 Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
+        - name: 适配器初始化 Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
+      - name: TradeOgre
+        href: api/connectors/crypto_exchanges/tradeogre.md
+        items:
+        - name: 配置 TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+        - name: 图形配置 TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
+        - name: 适配器初始化 TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
+      - name: Upbit
+        href: api/connectors/crypto_exchanges/upbit.md
+        items:
+        - name: 配置 Upbit
+          href: api/connectors/crypto_exchanges/upbit/configuration_upbit.md
+        - name: 图形配置 Upbit
+          href: api/connectors/crypto_exchanges/upbit/graphical_configuration_upbit.md
+        - name: 适配器初始化 Upbit
+          href: api/connectors/crypto_exchanges/upbit/adapter_initialization_upbit.md
+      - name: WEX (BTC-e)
+        href: api/connectors/crypto_exchanges/wex_btc_e.md
+        items:
+        - name: 配置 WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md
+        - name: 图形配置 WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md
+        - name: 适配器初始化 WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/adapter_initialization_wex_btc_e.md
+      - name: Yobit
+        href: api/connectors/crypto_exchanges/yobit.md
+        items:
+        - name: 配置 Yobit
+          href: api/connectors/crypto_exchanges/yobit/configuration_yobit.md
+        - name: 图形配置 Yobit
+          href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
+        - name: 适配器初始化 Yobit
+          href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
+      - name: Zaif
+        href: api/connectors/crypto_exchanges/zaif.md
+        items:
+        - name: 配置 Zaif
+          href: api/connectors/crypto_exchanges/zaif/configuration_zaif.md
+        - name: 图形配置 Zaif
+          href: api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md
+        - name: 适配器初始化 Zaif
+          href: api/connectors/crypto_exchanges/zaif/adapter_initialization_zaif.md
+      - name: ZB
+        href: api/connectors/crypto_exchanges/zb.md
+        items:
+        - name: 配置 ZB
+          href: api/connectors/crypto_exchanges/zb/configuration_zb.md
+        - name: 图形配置 ZB
+          href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
+        - name: 适配器初始化 ZB
+          href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
+      - name: 提款
+        href: api/connectors/crypto_exchanges/withdraw.md
+    - name: DEX
+      items:
+      - name: Aster
+        href: api/connectors/crypto_exchanges/aster.md
+        items:
+        - name: 配置 Aster
+          href: api/connectors/crypto_exchanges/aster/configuration_aster.md
+        - name: 图形配置 Aster
+          href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
+        - name: 适配器初始化 Aster
+          href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: edgeX
+        href: api/connectors/crypto_exchanges/edgex.md
+        items:
+        - name: 配置 edgeX
+          href: api/connectors/crypto_exchanges/edgex/configuration_edgex.md
+        - name: 图形配置 edgeX
+          href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
+        - name: 适配器初始化 edgeX
+          href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Hyperliquid
+        href: api/connectors/crypto_exchanges/hyperliquid.md
+        items:
+        - name: 配置 Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md
+        - name: 图形配置 Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
+        - name: 适配器初始化 Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Ligther
+        href: api/connectors/crypto_exchanges/ligther.md
+        items:
+        - name: 配置 Ligther
+          href: api/connectors/crypto_exchanges/ligther/configuration_ligther.md
+        - name: 图形配置 Ligther
+          href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
+        - name: 适配器初始化 Ligther
+          href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: 配置 Paradex
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: 图形配置 Paradex
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: 适配器初始化 Paradex
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+    - name: 通用
+      items:
+      - name: CSV
+        href: api/connectors/common/csv.md
+        items:
+        - name: 图形配置 CSV
+          href: api/connectors/common/csv/graphical_configuration_csv.md
+        - name: 适配器初始化 CSV
+          href: api/connectors/common/csv/adapter_initialization_csv.md
+      - name: FIX 协议
+        href: api/connectors/common/fix_protocol.md
+        items:
+        - name: 配置 FIX
+          href: api/connectors/common/fix_protocol/configuration_fix.md
+        - name: 图形配置 FIX
+          href: api/connectors/common/fix_protocol/graphical_configuration_fix.md
+        - name: 适配器初始化 FIX
+          href: api/connectors/common/fix_protocol/adapter_initialization_fix.md
+      - name: FAST 协议
+        href: api/connectors/common/fast_protocol.md
+        items:
+        - name: 图形配置 FAST
+          href: api/connectors/common/fast_protocol/graphical_configuration_fast.md
+        - name: 适配器初始化 FAST
+          href: api/connectors/common/fast_protocol/adapter_initialization_fast.md
+        - name: 转储模式
+          href: api/connectors/common/fast_protocol/dump_mode.md
+      - name: FIX 服务器
+        href: api/connectors/common/fix_server.md
+      - name: RSS
+        href: api/connectors/common/rss.md
+        items:
+        - name: 图形配置 RSS
+          href: api/connectors/common/rss/graphical_configuration_rss.md
+        - name: 适配器初始化 RSS
+          href: api/connectors/common/rss/adapter_initialization_rss.md
+    - name: 创建自己的连接器
+      href: api/connectors/creating_own_connector.md
+      items:
+      - name: 工具查找
+        href: api/connectors/creating_own_connector/instrument_lookup.md
+      - name: 市场数据
+        href: api/connectors/creating_own_connector/market_data.md
+      - name: 持仓和订单信息
+        href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
+      - name: 交易操作
+        href: api/connectors/creating_own_connector/trading_operations.md
+      - name: 设置存储
+        href: api/connectors/creating_own_connector/settings.md
+      - name: 扩展订单条件
+        href: api/connectors/creating_own_connector/order_extended.md
+      - name: 消息列表
+        href: api/connectors/creating_own_connector/messages.md
+      - name: 最佳实践
+        href: api/connectors/creating_own_connector/best_practices/common.md
+        items:
+        - name: 身份验证
+          href: api/connectors/creating_own_connector/best_practices/authentication.md
+        - name: REST 客户端
+          href: api/connectors/creating_own_connector/best_practices/rest_client.md
+        - name: WebSocket 客户端
+          href: api/connectors/creating_own_connector/best_practices/websocket_client.md
+        - name: 类型转换
+          href: api/connectors/creating_own_connector/best_practices/type_conversion.md
+    - name: 保存和加载设置
+      href: api/connectors/save_and_load_settings.md
+    - name: 重连设置
+      href: api/connectors/reconnection_settings.md
+    - name: OAuth
+      href: api/connectors/oauth.md
+    - name: 异步 API
+      href: api/connectors/async_api.md
+    - name: 文件系统和路径
+      href: api/connectors/ifile_system_and_paths.md
+    - name: 订阅生命周期
+      href: api/connectors/subscription_lifecycle.md
+  - name: 市场数据
+    items:
+    - name: 订阅
+      href: api/market_data/subscriptions.md
+    - name: 获取历史数据
+      href: api/market_data/getting_historical_data.md
+    - name: 获取新闻数据
+      href: api/market_data/getting_news_data.md
+  - name: 订单管理
+    href: api/orders_management.md
+    items:
+    - name: 创建新订单
+      href: api/orders_management/create_new_order.md
+    - name: 创建新止损订单
+      href: api/orders_management/create_new_stop_order.md
+    - name: 订单状态
+      href: api/orders_management/orders_states.md
+    - name: 订单取消
+      href: api/orders_management/order_cancel.md
+    - name: 批量订单取消
+      href: api/orders_management/orders_mass_cancel.md
+    - name: 订单替换
+      href: api/orders_management/orders_replacement.md
+    - name: 交易编号
+      href: api/orders_management/transaction_number.md
+  - name: 工具
+    href: api/instruments.md
+    items:
+    - name: 工具搜索
+      href: api/instruments/instrument_search.md
+    - name: 工具标识符
+      href: api/instruments/instrument_identifier.md
+    - name: 标识符 *@ALL
+      href: api/instruments/identifier_@all.md
+    - name: 连续期货
+      href: api/instruments/continuous_futures.md
+    - name: 目录
+      href: api/instruments/index.md
+    - name: 交易品种连续合约
+      href: api/instruments/volume_continuous_security.md
+  - name: 市场数据存储
+    href: api/market_data_storage.md
+    items:
+    - name: 使用 API
+      href: api/market_data_storage/api.md
+    - name: 使用远程存储
+      href: api/market_data_storage/remote.md
+    - name: 存储格式
+      href: api/market_data_storage/formats.md
+    - name: 存储驱动器
+      href: api/market_data_storage/drives.md
+    - name: 快照系统
+      href: api/market_data_storage/snapshots.md
+  - name: K 线
+    href: api/candles.md
+    items:
+    - name: 图表
+      href: api/candles/chart.md
+    - name: 自定义类型的 K 线
+      href: api/candles/custom_type_of_candle.md
+    - name: 合并 K 线，历史+实时
+      href: api/candles/gluing_candles_history_real_time.md
+    - name: 通过工具篮创建 K 线
+      href: api/candles/candle_creation_by_the_instruments_basket.md
+    - name: 将逐笔数据和点差压缩成 K 线
+      href: api/candles/compression.md
+  - name: 指标
+    href: api/indicators.md
+    items:
+    - name: 将指标添加到图表
+      href: api/indicators/indicator_adding_to_the_chart.md
+    - name: 指标列表
+      href: api/indicators/list_of_indicators.md
+      items:
+      - name: 加速/减速指标 (A/D)
+        href: api/indicators/list_of_indicators/a_d.md
+      - name: 累积/派发线 (ADL)
+        href: api/indicators/list_of_indicators/accumulation_distribution_line.md
+      - name: 自适应拉格朗日滤波器 (ALF)
+        href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
+      - name: 自适应价格区间 (APZ)
+        href: api/indicators/list_of_indicators/adaptive_price_zone.md
+      - name: 鳄鱼指标
+        href: api/indicators/list_of_indicators/alligator.md
+      - name: 审批流指数 (AFI)
+        href: api/indicators/list_of_indicators/approval_flow_index.md
+      - name: 阿尔诺·勒古移动平均线 (ALMA)
+        href: api/indicators/list_of_indicators/arnaud_legoux_moving_average.md
+      - name: 阿隆指标 (Aroon)
+        href: api/indicators/list_of_indicators/aroon.md
+      - name: 平均方向指数 (ADX)
+        href: api/indicators/list_of_indicators/adx.md
+      - name: 平均真实波动幅度 (ATR)
+        href: api/indicators/list_of_indicators/atr.md
+      - name: 卓越振荡器 (AO)
+        href: api/indicators/list_of_indicators/ao.md
+      - name: 市场权力平衡 (BMP)
+        href: api/indicators/list_of_indicators/balance_of_market_power.md
+      - name: 权力平衡 (BOP)
+        href: api/indicators/list_of_indicators/balance_of_power.md
+      - name: 成交量平衡指标 (BV)
+        href: api/indicators/list_of_indicators/balance_volume.md
+      - name: 空头力道
+        href: api/indicators/list_of_indicators/bear_power.md
+      - name: 多头力道
+        href: api/indicators/list_of_indicators/bull_power.md
+      - name: 布林带 (Bollinger)
+        href: api/indicators/list_of_indicators/bollinger_bands.md
+      - name: 布林 %b (BBP)
+        href: api/indicators/list_of_indicators/bollinger_percent_b.md
+      - name: 重心振荡器 (CGO)
+        href: api/indicators/list_of_indicators/center_of_gravity_oscillator.md
+      - name: 柴金资金流量 (CMF)
+        href: api/indicators/list_of_indicators/chaikin_money_flow.md
+      - name: 柴金波动率 (Chaikin的波动率)
+        href: api/indicators/list_of_indicators/chv.md
+      - name: 昌德-克罗尔止损 (CKS)
+        href: api/indicators/list_of_indicators/chande_kroll_stop.md
+      - name: 昌德动量振荡器 (CMO)
+        href: api/indicators/list_of_indicators/cmo.md
+      - name: 波动指数 (CHOP)
+        href: api/indicators/list_of_indicators/choppiness_index.md
+      - name: 商品通道指数 (CCI)
+        href: api/indicators/list_of_indicators/cci.md
+      - name: 综合动量 (CM)
+        href: api/indicators/list_of_indicators/composite_momentum.md
+      - name: 康纳RSI (CRSI)
+        href: api/indicators/list_of_indicators/connors_rsi.md
+      - name: 康斯坦斯·布朗综合指数 (CBCI)
+        href: api/indicators/list_of_indicators/constance_brown_composite_index.md
+      - name: DeMarker指标
+        href: api/indicators/list_of_indicators/demarker.md
+      - name: 需求指数 (DI)
+        href: api/indicators/list_of_indicators/demand_index.md
+      - name: 去趋势价格振荡器 (DPO)
+        href: api/indicators/list_of_indicators/dpo.md
+      - name: 去趋势合成价格 (DSP)
+        href: api/indicators/list_of_indicators/detrended_synthetic_price.md
+      - name: 方向移动指数 (DMI)
+        href: api/indicators/list_of_indicators/dmi.md
+      - name: 差异指数 (DPI)
+        href: api/indicators/list_of_indicators/disparity_index.md
+      - name: 唐奇安通道 (DC)
+        href: api/indicators/list_of_indicators/donchian_channels.md
+      - name: 双指数移动平均线 (DEMA)
+        href: api/indicators/list_of_indicators/dema.md
+      - name: 动态区间RSI (DZRSI)
+        href: api/indicators/list_of_indicators/dynamic_zones_rsi.md
+      - name: 轻松移动指标 (EMV)
+        href: api/indicators/list_of_indicators/ease_of_movement.md
+      - name: 埃勒斯费舍尔变换 (EFT)
+        href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
+      - name: 老牌冲动系统 (EIS)
+        href: api/indicators/list_of_indicators/elder_impulse_system.md
+      - name: 老牌力量指数 (EFI)
+        href: api/indicators/list_of_indicators/elder_force_index.md
+      - name: 艾略特波振荡器 (EWO)
+        href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
+      - name: 端点移动平均线 (EPMA)
+        href: api/indicators/list_of_indicators/endpoint_moving_average.md
+      - name: 信封指标
+        href: api/indicators/list_of_indicators/envelope.md
+      - name: 埃lder雷指数
+        href: api/indicators/list_of_indicators/elder_ray.md
+      - name: 指数移动平均线 (EMA)
+        href: api/indicators/list_of_indicators/ema.md
+      - name: 斐波那契回撤 (FR)
+        href: api/indicators/list_of_indicators/fibonacci_retracement.md
+      - name: 有限体积元素 (FVE)
+        href: api/indicators/list_of_indicators/finite_volume_element.md
+      - name: 力量指数 (FI)
+        href: api/indicators/list_of_indicators/force_index.md
+      - name: 预测振荡器 (FOSC)
+        href: api/indicators/list_of_indicators/forecast_oscillator.md
+      - name: 分形自适应移动平均线 (FRAMA)
+        href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
+      - name: 分形指标
+        href: api/indicators/list_of_indicators/fractals.md
+      - name: 分形维度指数 (FDI)
+        href: api/indicators/list_of_indicators/fractal_dimension.md
+      - name: 鳄鱼振荡器 (Gator)
+        href: api/indicators/list_of_indicators/gator_oscillator.md
+      - name: 戈帕拉克里希南区间指数 (GAPO)
+        href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
+      - name: 古比多重移动平均线 (GMMA)
+        href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
+      - name: 谐波振荡器 (HO)
+        href: api/indicators/list_of_indicators/harmonic_oscillator.md
+      - name: 最高值 (Highest)
+        href: api/indicators/list_of_indicators/highest.md
+      - name: 高低指数 (HLI)
+        href: api/indicators/list_of_indicators/high_low_index.md
+      - name: 历史波动率比率 (HVR)
+        href: api/indicators/list_of_indicators/historical_volatility_ratio.md
+      - name: 赫斯特指数 (H)
+        href: api/indicators/list_of_indicators/hurst_exponent.md
+      - name: 赫尔移动平均线 (HMA)
+        href: api/indicators/list_of_indicators/hma.md
+      - name: 一目均衡表 (Ichimoku)
+        href: api/indicators/list_of_indicators/ichimoku.md
+      - name: 日内强度指数 (III)
+        href: api/indicators/list_of_indicators/intraday_intensity_index.md
+      - name: 日内动量指数 (IMI)
+        href: api/indicators/list_of_indicators/intraday_momentum_index.md
+      - name: 朱里克移动平均线 (JMA)
+        href: api/indicators/list_of_indicators/jma.md
+      - name: 凯斯峰值振荡器 (KPO)
+        href: api/indicators/list_of_indicators/kase_peak_oscillator.md
+      - name: 考夫曼效率比率 (KER)
+        href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
+      - name: 考夫曼自适应移动平均线 (KAMA)
+        href: api/indicators/list_of_indicators/kama.md
+      - name: 卡尔曼滤波器 (KF)
+        href: api/indicators/list_of_indicators/kalman_filter.md
+      - name: 凯特纳通道 (KC)
+        href: api/indicators/list_of_indicators/keltner_channels.md
+      - name: 克林格交易量振荡器 (KVO)
+        href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
+      - name: 确定信号 (KST)
+        href: api/indicators/list_of_indicators/kst.md
+      - name: 拉格朗日 RSI (LRSI)
+        href: api/indicators/list_of_indicators/laguerre_rsi.md
+      - name: 线性回归 (LRC)
+        href: api/indicators/list_of_indicators/lrc.md
+      - name: 线性回归梯度 (LRS)
+        href: api/indicators/list_of_indicators/lrs.md
+      - name: 线性回归预测 (LRF)
+        href: api/indicators/list_of_indicators/linear_regression_forecast.md
+      - name: 决定系数 (R-squared)
+        href: api/indicators/list_of_indicators/linear_reg_rsquared.md
+      - name: 最低值 (Lowest)
+        href: api/indicators/list_of_indicators/lowest.md
+      - name: 月相指标 (LP)
+        href: api/indicators/list_of_indicators/lunar_phase.md
+      - name: 市场便利指数 (MFI)
+        href: api/indicators/list_of_indicators/market_facilitation_index.md
+      - name: 市场平均性指数 (MMI)
+        href: api/indicators/list_of_indicators/market_meanness_index.md
+      - name: 质量指数 (MI)
+        href: api/indicators/list_of_indicators/mass_index.md
+      - name: 麦克莱伦振荡器 (MCO)
+        href: api/indicators/list_of_indicators/mcclellan_oscillator.md
+      - name: 麦金利动态 (MGD)
+        href: api/indicators/list_of_indicators/mcginley_dynamic.md
+      - name: 平均偏差 (MeanDev)
+        href: api/indicators/list_of_indicators/mean_deviation.md
+      - name: 中位数 (Median)
+        href: api/indicators/list_of_indicators/median.md
+      - name: 中位价格 (MedPr)
+        href: api/indicators/list_of_indicators/median_price.md
+      - name: 动量 (Momentum)
+        href: api/indicators/list_of_indicators/momentum.md
+      - name: 移动平均动量 (MOMA)  
+        href: api/indicators/list_of_indicators/momentum_of_moving_average.md
+      - name: 动量弹球 (MP)  
+        href: api/indicators/list_of_indicators/momentum_pinball.md
+      - name: 资金流量指数 (MFI)  
+        href: api/indicators/list_of_indicators/money_flow_index.md
+      - name: 移动平均收敛发散指标 (MACD)  
+        href: api/indicators/list_of_indicators/macd.md
+      - name: MACD 柱状图  
+        href: api/indicators/list_of_indicators/macd_histogram.md
+      - name: MACD 信号  
+        href: api/indicators/list_of_indicators/macd_with_signal_line.md
+      - name: 移动平均交叉 (MAC)  
+        href: api/indicators/list_of_indicators/moving_average_crossover.md
+      - name: 移动平均带 (MAR)  
+        href: api/indicators/list_of_indicators/moving_average_ribbon.md
+      - name: 负成交量指数 (NVI)  
+        href: api/indicators/list_of_indicators/negative_volume_index.md
+      - name: 正成交量指数 (PVI)  
+        href: api/indicators/list_of_indicators/positive_volume_index.md
+      - name: Nick Rypock 追踪反转 (NRTR)  
+        href: api/indicators/list_of_indicators/nrtr.md
+      - name: 能量潮 (OBV)  
+        href: api/indicators/list_of_indicators/on_balance_volume.md
+      - name: 能量潮均值 (OBVM)  
+        href: api/indicators/list_of_indicators/on_balance_volume_mean.md
+      - name: 最优追踪滤波器 (OptimalTracking)  
+        href: api/indicators/list_of_indicators/optimal_tracking.md
+      - name: 移动平均振荡器 (OMA)  
+        href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
+      - name: 抛物线转向指标 (Parabolic SAR)  
+        href: api/indicators/list_of_indicators/parabolic_sar.md
+      - name: Stub（透传）  
+        href: api/indicators/list_of_indicators/pass_through.md
+      - name: 峰值  
+        href: api/indicators/list_of_indicators/peak.md
+      - name: 价格振荡百分比 (PPO)  
+        href: api/indicators/list_of_indicators/percentage_price_oscillator.md
+      - name: 价格振荡百分比信号  
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
+      - name: 价格振荡百分比柱状图  
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
+      - name: 成交量振荡百分比 (PVO)  
+        href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
+      - name: 枢轴点 (PP)  
+        href: api/indicators/list_of_indicators/pivot_points.md
+      - name: 价格通道 (PC)  
+        href: api/indicators/list_of_indicators/price_channels.md
+      - name: 价格成交量趋势 (PVT)  
+        href: api/indicators/list_of_indicators/price_volume_trend.md
+      - name: 相当好的振荡器 (PGO)  
+        href: api/indicators/list_of_indicators/pretty_good_oscillator.md
+      - name: 心理线 (PSY)  
+        href: api/indicators/list_of_indicators/psychological_line.md
+      - name: QStick  
+        href: api/indicators/list_of_indicators/qstick.md
+      - name: 彩虹图 (RC)  
+        href: api/indicators/list_of_indicators/rainbow_charts.md
+      - name: 区间动作验证指数 (RAVI)  
+        href: api/indicators/list_of_indicators/ravi.md
+      - name: 等级相关指数 (RCI)  
+        href: api/indicators/list_of_indicators/rank_correlation_index.md
+      - name: 变动率 (ROC)  
+        href: api/indicators/list_of_indicators/roc.md
+      - name: 相对动量指数 (RMI)
+        href: api/indicators/list_of_indicators/relative_momentum_index.md
+      - name: 相对强弱指数 (RSI)
+        href: api/indicators/list_of_indicators/rsi.md
+      - name: 相对活力指数 (RVI)
+        href: api/indicators/list_of_indicators/rvi.md
+      - name: 沙夫趋势周期 (STC)
+        href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: 移位
+        href: api/indicators/list_of_indicators/shift.md
+      - name: 超级趋势
+        href: api/indicators/list_of_indicators/supertrend.md
+      - name: 简单移动平均 (SMA)
+        href: api/indicators/list_of_indicators/sma.md
+      - name: 正弦波 (SW)
+        href: api/indicators/list_of_indicators/sine_wave.md
+      - name: 平滑移动平均 (SMMA)
+        href: api/indicators/list_of_indicators/smoothed_ma.md
+      - name: 标准差 (Std Dev)
+        href: api/indicators/list_of_indicators/standard_deviation.md
+      - name: 标准误差 (Standard error)
+        href: api/indicators/list_of_indicators/standard_error.md
+      - name: 随机指标 %K (Stochastic %K)
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
+      - name: 随机振荡器
+        href: api/indicators/list_of_indicators/stochastic_oscillator.md
+      - name: 最近 N 个值的和 (Sum)
+        href: api/indicators/list_of_indicators/sum_n.md
+      - name: T3 移动平均 (T3MA)
+        href: api/indicators/list_of_indicators/t3_moving_average.md
+      - name: 加权平均价格 (TWAP)
+        href: api/indicators/list_of_indicators/time_weighted_average_price.md
+      - name: 典型价格 (TP)
+        href: api/indicators/list_of_indicators/typical_price.md
+      - name: 三重指数移动平均 (TEMA)
+        href: api/indicators/list_of_indicators/tema.md
+      - name: TRIX 指标
+        href: api/indicators/list_of_indicators/trix.md
+      - name: 波谷
+        href: api/indicators/list_of_indicators/trough.md
+      - name: 真实波动区间 (TR)
+        href: api/indicators/list_of_indicators/true_range.md
+      - name: 真实强弱指数 (TSI)
+        href: api/indicators/list_of_indicators/true_strength_index.md
+      - name: Twiggs 资金流 (TMF)
+        href: api/indicators/list_of_indicators/twiggs_money_flow.md
+      - name: 终极振荡器 (UltimateOsc)
+        href: api/indicators/list_of_indicators/uo.md
+      - name: 垂直-水平滤波器 (VHF)
+        href: api/indicators/list_of_indicators/vhf.md
+      - name: 可变指数动态平均 (VIDIA)
+        href: api/indicators/list_of_indicators/vidya.md
+      - name: 可变移动平均 (VMA)
+        href: api/indicators/list_of_indicators/variable_moving_average.md
+      - name: 成交量
+        href: api/indicators/list_of_indicators/volume.md
+      - name: 成交量分布
+        href: api/indicators/list_of_indicators/volume_profile.md
+      - name: 成交量加权平均价 (VWAP)
+        href: api/indicators/list_of_indicators/volume_weighted_average_price.md
+      - name: 成交量加权移动平均 (VMA)
+        href: api/indicators/list_of_indicators/volume_weighted_ma.md
+      - name: 涡旋指标 (VI)
+        href: api/indicators/list_of_indicators/vortex_indicator.md
+      - name: 波浪趋势振荡器 (WTO)
+        href: api/indicators/list_of_indicators/wave_trend_oscillator.md
+      - name: 加权收盘价 (WCP)
+        href: api/indicators/list_of_indicators/weighted_close_price.md
+      - name: 加权移动平均 (WMA)
+        href: api/indicators/list_of_indicators/weighted_ma.md
+      - name: 韦勒斯·怀尔德移动平均 (Wilder MA)
+        href: api/indicators/list_of_indicators/wilder_ma.md
+      - name: 威廉累积/分配 (WAD)
+        href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
+      - name: 威廉 %R (%R)
+        href: api/indicators/list_of_indicators/williams_r.md
+      - name: Woodies CCI (WCCI)
+        href: api/indicators/list_of_indicators/woodies_cci.md
+      - name: 零滞后指数移动平均 (ZLEMA)
+        href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
+      - name: 之字形 (ZigZag)
+        href: api/indicators/list_of_indicators/zigzag.md
+      - name: 威廉可变累积分配 (WVAD)
+        href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
+    - name: 自定义指标
+      href: api/indicators/custom_indicator.md
+    - name: 指标图形渲染器
+      href: api/indicators/graphic_renderer_of_indicators.md
+  - name: 模式
+    href: api/patterns.md
+    items:
+    - name: '三外下三外上'
+      href: api/patterns/3_outside_down_3_outside_up.md
+    - name: '三内下和三内上'
+      href: api/patterns/3_inside_down_3_side_up.md
+    - name: '三只乌鸦和三只白兵'
+      href: api/patterns/3_black_crows_3_white_soldiers.md
+    - name: '三只白兵'
+      href: api/patterns/three_white_soldiers.md
+    - name: '三只乌鸦'
+      href: api/patterns/three_black_crows.md
+    - name: '颈线'
+      href: api/patterns/on_neck.md
+    - name: '刺透'
+      href: api/patterns/piercing.md
+    - name: '看跌'
+      href: api/patterns/bearish.md
+    - name: '看跌吞没'
+      href: api/patterns/bearish_engulfing.md
+    - name: '看跌孕线'
+      href: api/patterns/bearish_harami.md
+    - name: '黑色蜡烛'
+      href: api/patterns/black_candle.md
+    - name: '黑色光头阳线'
+      href: api/patterns/black_marubozu.md
+    - name: '看涨'
+      href: api/patterns/bullish.md
+    - name: '看涨吞没'
+      href: api/patterns/bullish_engulfing.md
+    - name: '看涨孕线'
+      href: api/patterns/bullish_harami.md
+    - name: '蜻蜓'
+      href: api/patterns/dragonfly.md
+    - name: '黄昏之星'
+      href: api/patterns/evening_star.md
+    - name: '下跌三法'
+      href: api/patterns/falling_three_methods.md
+    - name: '平线蜡烛'
+      href: api/patterns/flat_candle.md
+    - name: '墓碑'
+      href: api/patterns/gravestone.md
+    - name: '锤子'
+      href: api/patterns/hammer.md
+    - name: '吊人'
+      href: api/patterns/hanging_man.md
+    - name: '倒锤子'
+      href: api/patterns/inverted_hammer.md
+    - name: '晨星'
+      href: api/patterns/morning_star.md
+    - name: '上涨三法'
+      href: api/patterns/rising_three_methods.md
+    - name: '流星'
+      href: api/patterns/shooting_star.md
+    - name: '纺锤'
+      href: api/patterns/spinning_top.md
+    - name: '镊子底'
+      href: api/patterns/tweezer_bottom.md
+    - name: '镊子顶'
+      href: api/patterns/tweezer_top.md
+    - name: '白色蜡烛'
+      href: api/patterns/white_candle.md
+    - name: '白色光头阳线'
+      href: api/patterns/white_marubozu.md
+    - name: 复杂模式
+      href: api/patterns/complex_patterns.md
+  - name: 仓位管理
+    href: api/positions.md
+  - name: 适配器路由
+    href: api/basket_routing.md
+  - name: 订单簿
+    href: api/order_books.md
+    items:
+    - name: 订阅
+      href: api/order_books/subscriptions.md
+    - name: 示例
+      href: api/order_books/examples.md
+    - name: 过滤的订单簿
+      href: api/order_books/filtered_order_book.md
+    - name: 稀疏
+      href: api/order_books/sparse.md
+    - name: 分组
+      href: api/order_books/grouped.md
+    - name: 显示
+      href: api/order_books/display.md
+  - name: 策略
+    href: api/strategies.md
+    items:
+    - name: 订阅
+      href: api/strategies/subscriptions.md
+    - name: 指标
+      href: api/strategies/indicators.md
+    - name: 交易操作
+      href: api/strategies/trading_operations.md
+    - name: 持仓保护
+      href: api/strategies/take_profit_and_stop_loss.md
+    - name: 参数
+      href: api/strategies/parameters.md
+    - name: 日志记录
+      href: api/strategies/logging.md
+    - name: 平台兼容性
+      href: api/strategies/compatibility.md
+    - name: 高级API
+      href: api/strategies/high_level_api.md
+    - name: 图表操作
+      href: api/strategies/chart.md
+    - name: 统计
+      href: api/strategies/statistics.md
+    - name: 设置保存与加载
+      href: api/strategies/settings_saving_and_loading.md
+    - name: 订单和交易加载
+      href: api/strategies/orders_and_trades_loading.md
+    - name: 四舍五入价格
+      href: api/strategies/shrink_price.md
+    - name: 单位类型
+      href: api/strategies/unit_type.md
+    - name: 报价算法
+      href: api/strategies/quoting.md
+    - name: 操作证券
+      href: api/strategies/working_securities.md
+    - name: 策略概览
+      href: api/strategies/strategies.md
+    - name: 目标仓位管理
+      href: api/strategies/target_position_management.md
+    - name: 警报系统
+      href: api/strategies/alert_system.md
+    - name: 定时系统
+      href: api/strategies/timer_system.md
+    - name: 高级订阅
+      href: api/strategies/high_level_subscriptions.md
+    - name: 风险管理
+      href: api/strategies/risk_management.md
+    - name: 报告
+      href: api/strategies/reporting.md
+    - name: 交易模式
+      href: api/strategies/trading_modes.md
+    - name: 高级功能
+      href: api/strategies/advanced_features.md
+    - name: 统计参考
+      href: api/strategies/statistics_reference.md
+    - name: 高级优化
+      href: api/strategies/optimization_advanced.md
+    - name: 报价参考
+      href: api/strategies/quoting_reference.md
+    - name: 事件模型
+      href: api/strategies/event_model.md
+      items:
+      - name: 规则使用
+        href: api/strategies/event_model/rules_using.md
+      - name: 规则暂停
+        href: api/strategies/event_model/rules_suspension.md
+      - name: 互斥规则
+        href: api/strategies/event_model/rules_mutually_exclusive.md
+      - name: 创建自定义规则
+        href: api/strategies/event_model/rules_create.md
+      - name: 示例
+        items:
+        - name: K线规则
+          href: api/strategies/event_model/samples/rule_candle.md
+        - name: Ticks规则
+          href: api/strategies/event_model/samples/rule_ticks.md
+        - name: 市场深度与Ticks规则
+          href: api/strategies/event_model/samples/rule_marketdepth.md
+        - name: 订单规则
+          href: api/strategies/event_model/samples/rule_order.md
+        - name: 规则持续时间
+          href: api/strategies/event_model/samples/rule_until.md
+    - name: 示例
+      href: api/strategies/samples.md
+      items:
+      - name: 套利策略
+        href: api/strategies/samples/arbitrage.md
+      - name: 经典布林策略
+        href: api/strategies/samples/bollinger_classic.md
+      - name: 布林下轨
+        href: api/strategies/samples/bollinger_low.md
+      - name: 布林上轨
+        href: api/strategies/samples/bollinger_up.md
+      - name: 均线马丁策略
+        href: api/strategies/samples/sma_martingale.md
+      - name: 趋势策略
+        href: api/strategies/samples/stairs_trend_one_candle.md
+      - name: 阶梯趋势策略
+        href: api/strategies/samples/stairs_trend.md
+      - name: 反趋势策略
+        href: api/strategies/samples/stairs_countertrend_one_candle.md
+      - name: 阶梯反趋势策略
+        href: api/strategies/samples/stairs_countertrend.md
+      - name: 逆势策略与报价
+        href: api/strategies/samples/stairs_countertrend_quoting.md
+      - name: 报价策略
+        href: api/strategies/samples/mq.md
+      - name: 价差报价策略
+        href: api/strategies/samples/mq_spread.md
+      - name: 对冲交易
+        href: api/strategies/samples/pairs_trading.md
+      - name: 多时间框架策略
+        href: api/strategies/samples/multi_timeframe.md
+  - name: 佣金
+    href: api/commissions.md
+  - name: 利润与亏损（PnL）
+    href: api/pnl.md
+  - name: 滑点
+    href: api/slippage.md
+  - name: 延迟
+    href: api/latency.md
+  - name: 日志记录
+    href: api/logging.md
+    items:
+    - name: 策略日志记录
+      href: api/logging/strategy_logging.md
+    - name: IConnector日志记录
+      href: api/logging/iconnector_logging.md
+    - name: 其他日志来源
+      href: api/logging/other_logs_sources.md
+    - name: 可视化监控
+      href: api/logging/visual_monitoring.md
+    - name: 自定义ILogListener
+      href: api/logging/custom_iloglistener.md
+  - name: 选项
+    href: api/options.md
+    items:
+    - name: 希腊字母
+      href: api/options/greeks.md
+    - name: 波动率交易
+      href: api/options/volatility_trading.md
+    - name: Delta对冲
+      href: api/options/delta_hedging.md
+    - name: 图形组件
+      href: api/options/graphic_components.md
+  - name: 测试
+    href: api/testing.md
+    items:
+    - name: 历史数据
+      href: api/testing/historical_data.md
+    - name: 优化
+      href: api/testing/optimization.md
+    - name: 随机数据
+      href: api/testing/random_data.md
+    - name: 模拟器
+      href: api/testing/simulator.md
+    - name: 扩展设置
+      href: api/testing/extended_settings.md
+  - name: 数据导出
+    href: api/export.md
+  - name: 数据导入
+    href: api/import.md
+  - name: 分析脚本
+    href: api/analytics.md
+  - name: 图形控件
+    href: api/graphical_user_interface.md
+    items:
+    - name: 图表
+      href: api/graphical_user_interface/charts.md
+      items:
+      - name: K线图
+        href: api/graphical_user_interface/charts/candle_chart.md
+      - name: K线图面板
+        href: api/graphical_user_interface/charts/candle_chart_panel.md
+      - name: 权益曲线图
+        href: api/graphical_user_interface/charts/equity_curve_chart.md
+      - name: 箱形图
+        href: api/graphical_user_interface/charts/box_chart.md
+      - name: 聚类图
+        href: api/graphical_user_interface/charts/cluster_chart.md
+      - name: 从图表注册订单
+        href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
+      - name: 注释
+        href: api/graphical_user_interface/charts/annotations.md
+    - name: 日志记录
+      href: api/graphical_user_interface/logging.md
+      items:
+      - name: 日志面板
+        href: api/graphical_user_interface/logging/log_panel.md
+      - name: 扩展日志面板
+        href: api/graphical_user_interface/logging/extended_log_panel.md
+    - name: 投资组合
+      href: api/graphical_user_interface/portfolios.md
+      items:
+      - name: 下拉列表
+        href: api/graphical_user_interface/portfolios/drop_down_list.md
+      - name: 选择器
+        href: api/graphical_user_interface/portfolios/picker.md
+      - name: 投资组合选择窗口
+        href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
+      - name: 表格
+        href: api/graphical_user_interface/portfolios/table.md
+    - name: 交易工具
+      href: api/graphical_user_interface/instruments.md
+      items:
+      - name: 窗口
+        href: api/graphical_user_interface/instruments/window.md
+      - name: 表格
+        href: api/graphical_user_interface/instruments/table.md
+      - name: 选择器
+        href: api/graphical_user_interface/instruments/picker.md
+      - name: 连续期货
+        href: api/graphical_user_interface/instruments/continuous_futures.md
+      - name: 指数
+        href: api/graphical_user_interface/instruments/index.md
+    - name: 市场数据
+      href: api/graphical_user_interface/market_data.md
+      items:
+      - name: 逐笔记录
+        href: api/graphical_user_interface/market_data/ticks.md
+      - name: Level1
+        href: api/graphical_user_interface/market_data/level1.md
+      - name: 订单簿
+        href: api/graphical_user_interface/market_data/order_book.md
+      - name: 订单日志
+        href: api/graphical_user_interface/market_data/order_log.md
+      - name: 新闻
+        href: api/graphical_user_interface/market_data/news.md
+    - name: 交易
+      href: api/graphical_user_interface/trading.md
+      items:
+      - name: 订单
+        href: api/graphical_user_interface/trading/orders.md
+      - name: 自身交易
+        href: api/graphical_user_interface/trading/own_trades.md
+      - name: 创建新订单
+        href: api/graphical_user_interface/trading/new_order_creation.md
+      - name: 创建新止损订单
+        href: api/graphical_user_interface/trading/new_stop_order_creation.md
+      - name: 可用市场数据表
+        href: api/graphical_user_interface/trading/table_of_available_market_data.md
+      - name: 买/卖面板
+        href: api/graphical_user_interface/trading/buy_sell_panel.md
+    - name: 策略
+      href: api/graphical_user_interface/strategies.md
+      items:
+      - name: 统计
+        href: api/graphical_user_interface/strategies/statistics.md
+    - name: 期权
+      href: api/graphical_user_interface/options.md
+      items:
+      - name: 期权台
+        href: api/graphical_user_interface/options/option_desk.md
+      - name: 仓位图
+        href: api/graphical_user_interface/options/position_chart.md
+    - name: 对象属性编辑表
+      href: api/graphical_user_interface/object_properties_editing_table.md
+    - name: 连接设置窗口
+      href: api/graphical_user_interface/connection_settings_window.md
+    - name: 风险设置窗口
+      href: api/graphical_user_interface/risk_settings_window.md
+    - name: 佣金设置窗口
+      href: api/graphical_user_interface/commission_settings_window.md
+    - name: 通知设置窗口
+      href: api/graphical_user_interface/notification_settings_window.md
+    - name: 主题（亮色和暗色）
+      href: api/graphical_user_interface/themes_light_and_dark.md
+- name: Shell
+  href: shell.md
+  items:
+  - name: 安装 Shell
+    href: shell/installing_shell.md
+  - name: 快速开始
+    href: shell/quick_start.md
+  - name: 用户界面
+    items:
+    - name: 通用
+      href: shell/user_interface/common.md
+    - name: 实时
+      href: shell/user_interface/real_time.md
+    - name: 模拟
+      href: shell/user_interface/emulation.md
+    - name: 远程管理器
+      href: shell/user_interface/remotemanager.md
+  - name: 连接设置
+    href: shell/connections_settings.md
+    items:
+    - name: 连接器设置
+      href: shell/connections_settings/connector_settings.md
+  - name: 创建策略
+    href: shell/create_strategy.md
+  - name: 创建策略面板
+    href: shell/create_strategy_panel.md
+  - name: 从 Designer 运行策略
+    href: shell/run_strategies_from_designer.md
+- name: 商店
+  href: store.md
+- name: MATLAB
+  href: matlab.md
+- name: UDP 转储工具
+  href: udp_dumper.md
+- name: 通用
+  items:
+  - name: 源代码
+    href: common/source_codes.md
+  - name: 参考资料
+    href: common/reference_materials.md

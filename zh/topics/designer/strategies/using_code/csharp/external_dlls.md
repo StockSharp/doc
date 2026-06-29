@@ -1,0 +1,5 @@
+# 外部 DLL
+
+通过 **Source Code** 创建内容时，除 [API](../../../../api.md) 库外，还可以使用其他 C# 库，包括自定义库。这些库必须与 .NET 6.0 兼容。要添加库引用，请在 **Backtest** 选项卡中单击 **References** 按钮。随后会打开 **Extra references** 窗口，可在其中添加或删除所需的库：
+
+![Designer Add Dll Lib](../../../../../images/designer_add_dll_lib.png)

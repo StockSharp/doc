@@ -1,0 +1,44 @@
+# 指数
+
+使用 [Hydra](../../hydra.md)，可以创建自定义指数。
+
+在 **Common** 选项卡中选择 **Securities**，此时会显示 **All Securities** 选项卡。
+
+创建**指数**前，请先检查可用的市场数据。选择数据的存储路径，然后依次查看应参与指数计算的证券。如果数据存在缺口，请下载所需的市场数据（例如，从 Finam 下载）。
+
+![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+
+下面以证券比值指数 AAPL@NYSE\/GOOG@NYSE 为例。
+
+第一步是创建**指数**。在 **All Securities** 选项卡中单击 **Create security\=\>Index** 按钮，随后将显示以下窗口：
+
+![hydra index sec](../../../images/hydra_index_sec.png)
+
+创建**指数**证券时，需要指定名称，并添加由多个证券组成的数学公式。除标准数学运算符外，还可以使用以下函数：
+
+- **abs(a)** \- 返回数字的绝对值。
+- **acos(a)** \- 返回余弦值等于指定数字的角度。
+- **asin(a)** \- 返回正弦值等于指定数字的角度。
+- **atan(a)** \- 返回正切值等于指定数字的角度。
+- **ceiling(a)** \- 返回大于或等于指定数字的最小整数。
+- **cos(a)** \- 返回指定角度的余弦值。
+- **exp(a)** \- 返回 e 的指定次幂。
+- **floor(a)** \- 返回小于或等于指定数字的最大整数。
+- **log(a)** \- 返回指定数字的自然对数（以 e 为底）。
+- **log10(a)** \- 返回指定数字以 10 为底的对数。
+- **max (a, b)** \- 返回两个小数中较大的一个。
+- **min(a, b)** \- 返回两个小数中较小的一个。
+- **pow(a, b)** \- 返回指定数字的指定次幂。
+- **sign(a)** \- 返回一个表示指定数字符号的整数。
+- **sin(a)** \- 返回指定角度的正弦值。
+- **sqrt (a)** \- 返回指定数字的平方根。
+- **tan(a)** \- 返回指定角度的正切值。
+- **truncate(a)** \- 计算指定数字的整数部分。
+
+接下来，在 **Common** 选项卡中单击 [Candles](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**证券和数据时间段，在 **Create From:** 字段中选择 **Composite Element**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
+
+![hydra index candle](../../../images/hydra_index_candle.png)
+
+生成的数据可以导出为 Excel、XML 或 TXT 格式。通过下拉列表选择导出格式。
+
+![hydra export](../../../images/hydra_export.png)

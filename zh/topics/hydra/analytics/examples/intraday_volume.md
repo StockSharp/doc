@@ -1,0 +1,160 @@
+# 日内成交量
+
+`Intraday Volume` 脚本用于分析单个交易时段内证券成交量的逐小时分布。该脚本面向使用 StockSharp 平台的交易者和量化分析人员，可帮助他们深入研究市场行为并优化交易策略。
+
+![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
+
+## 功能描述
+
+脚本收集所选时间段内的交易数据，并以图表形式显示，使用户能够直观看到每小时成交量的变化，由此判断一天中哪些时段的交易活动较强或较弱。
+
+## 实际意义
+
+- **交易方面**：了解高峰和低谷时段有助于确定市场最活跃的时间，从而为入场和出场决策提供依据。
+- **量化分析方面**：量化分析人员可以利用日内成交量数据建立数学模型和算法，根据成交量指标预测市场行为。
+
+## 每小时分布
+
+逐小时成交量分布可以揭示市场动态，并突出主要交易活动集中的时间区间。这些信息可能反映趋势变化、支撑位和阻力位，以及流动性可能增加或不足的时点。
+
+## 数据应用
+
+`Intraday Volume` 脚本可以集成到更完整的市场分析系统中，提供可用于以下方面的数据：
+
+- **策略调整**：根据市场活跃程度调整交易算法的参数。
+- **风险评估**：根据一天中的不同时间计算价格大幅波动的概率。
+
+在 StockSharp 交易平台中使用 `Intraday Volume` 脚本，交易者和分析人员可以依据具体的市场活跃度数据作出决策，并调整策略，使其更好地适应当前交易环境。
+
+## C# 脚本代码
+
+```cs
+namespace StockSharp.Algo.Analytics
+{
+	/// <summary>
+	/// The analytic script, calculating distribution of the biggest volume by hours.
+	/// </summary>
+	public class TimeVolumeScript : IAnalyticsScript
+	{
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
+		{
+			if (securities.Length == 0)
+			{
+				logs.LogWarning("No instruments.");
+				return Task.CompletedTask;
+			}
+
+			// script can process only 1 instrument
+			var security = securities.First();
+
+			// get candle storage
+			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
+
+			// get available dates for the specified period
+			var dates = candleStorage.GetDates(from, to).ToArray();
+
+			if (dates.Length == 0)
+			{
+				logs.LogWarning("no data");
+				return Task.CompletedTask;
+			}
+
+			// grouping candles by opening time (time part only) with 1 hour truncating
+			var rows = candleStorage.Load(from, to)
+				.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
+				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
+
+			// put our calculations into grid
+			var grid = panel.CreateGrid("Time", "Volume");
+
+			foreach (var row in rows)
+				grid.SetRow(row.Key, row.Value);
+
+			// sorting by volume column (descending)
+			grid.SetSort("Volume", false);
+
+			return Task.CompletedTask;
+		}
+	}
+}
+
+```
+
+## Python 脚本代码
+
+```python
+import clr
+
+# Add .NET references
+clr.AddReference("StockSharp.Algo.Analytics")
+clr.AddReference("StockSharp.Messages")
+clr.AddReference("Ecng.Drawing")
+
+from Ecng.Drawing import DrawStyles
+from System import TimeSpan
+from System.Threading.Tasks import Task
+from StockSharp.Algo.Analytics import IAnalyticsScript
+from storage_extensions import *
+from candle_extensions import *
+from chart_extensions import *
+from indicator_extensions import *
+
+# The analytic script, calculating distribution of the biggest volume by hours.
+class time_volume_script(IAnalyticsScript):
+	def Run(
+		self,
+		logs,
+		panel,
+		securities,
+		from_date,
+		to_date,
+		storage,
+		drive,
+		format,
+		data_type,
+		cancellation_token
+	):
+		# Check if there are no instruments
+		if not securities:
+			logs.LogWarning("No instruments.")
+			return Task.CompletedTask
+
+		# Script can process only 1 instrument
+		security = securities[0]
+
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
+		# Get candle storage
+		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
+
+		# Get available dates for the specified period
+		dates = get_dates(candle_storage, from_date, to_date)
+
+		if len(dates) == 0:
+			logs.LogWarning("no data")
+			return Task.CompletedTask
+
+		# Grouping candles by opening time (hourly truncation) and summing their volumes
+		candles = load_range(candle_storage, message_type, from_date, to_date)
+		rows = {}
+		for candle in candles:
+			time_of_day = candle.OpenTime.TimeOfDay
+			truncated = TimeSpan.FromHours(int(time_of_day.TotalHours))
+			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
+
+		# Put our calculations into grid
+		grid = panel.CreateGrid("Time", "Volume")
+
+		for key, value in rows.items():
+			grid.SetRow(key, value)
+
+		# Sorting by Volume column in descending order
+		grid.SetSort("Volume", False)
+
+		return Task.CompletedTask
+
+```

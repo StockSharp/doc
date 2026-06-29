@@ -1,0 +1,15 @@
+# 在图表上显示蜡烛
+
+可以使用以下策略图，将指定证券的蜡烛输出到图表：
+
+![Designer The conclusion of the candles on the chart 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
+
+在 [Variable](../elements/data_sources/variable.md) 模块中选择 **Instrument** 数据类型。如果未指定证券，但已设置 **Common** 属性组中的 **Parameters** 标志，则会从策略中获取证券并将其传递给 [Candles](../elements/data_sources/candles.md) 模块。[Candles](../elements/data_sources/candles.md) 模块设置为构建 5 分钟蜡烛，并且仅传递已完全形成的蜡烛。
+
+在 [Chart](../elements/common/chart.md) 模块中添加一个蜡烛类型的图形元素，模块会自动为其添加输入参数。
+
+向图表面板添加所需的图形元素后，在 [Candles](../elements/data_sources/candles.md) 与 [Chart](../elements/common/chart.md) 元素之间创建连接。构建完成的蜡烛会通过该连接传递到图表中显示。
+
+## 推荐内容
+
+[Get best price for instrument](get_best_price_for_instrument.md)

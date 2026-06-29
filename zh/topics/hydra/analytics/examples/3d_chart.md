@@ -1,0 +1,198 @@
+# 3D 图表
+
+`Chart3DScript` 脚本演示如何创建 3D 图表，以可视化不同证券按小时统计的成交量分布。这种可视化方式可以清楚地呈现交易动态，并识别市场活跃度的高峰。
+
+![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
+
+## 脚本运行说明
+
+脚本分析指定时间段内的蜡烛数据，按小时分组，并计算每小时的总成交量。结果以 3D 图表显示，各坐标轴分别表示：
+
+- **X 轴**：证券。
+- **Y 轴**：交易时段中的小时（0 至 23）。
+- **Z 轴**：成交量。
+
+## 3D 图表的用途
+
+### 市场活动分析
+
+3D 图表可以评估多个证券在什么时段同时最为活跃。这有助于确定最佳交易时段，或研究全球事件对市场的影响。
+
+### 证券比较
+
+通过在三维空间中按小时显示成交量，交易者可以比较各证券的活跃程度和主要交易时段。这有助于选择特定时段内流动性最高的证券，或寻找活跃模式相似的证券，以实现投资组合多元化。
+
+### 策略优化
+
+分析成交量分布可以为优化交易策略提供依据，使策略适应市场最活跃的时段。这对算法交易和高频交易尤其重要。
+
+## 脚本实现
+
+脚本执行以下操作：
+
+1. 检查是否存在用于分析的证券。
+2. 生成 X 轴（证券）和 Y 轴（小时）的标签。
+3. 加载蜡烛数据并进行分组。
+4. 按小时计算总成交量，并填充 Z 轴数据。
+5. 使用 `panel.Draw3D` 方法绘制 3D 图表。
+
+## C# 脚本代码
+
+```cs
+namespace StockSharp.Algo.Analytics
+{
+	/// <summary>
+	/// The analytic script, calculating distribution of the biggest volume by hours
+	/// and shows its in 3D chart.
+	/// </summary>
+	public class Chart3DScript : IAnalyticsScript
+	{
+		Task IAnalyticsScript.Run(ILogReceiver logs, IAnalyticsPanel panel, SecurityId[] securities, DateTime from, DateTime to, IStorageRegistry storage, IMarketDataDrive drive, StorageFormats format, DataType dataType, CancellationToken cancellationToken)
+		{
+			if (securities.Length == 0)
+			{
+				logs.LogWarning("No instruments.");
+				return Task.CompletedTask;
+			}
+
+			var x = new List<string>();
+			var y = new List<string>();
+
+			// fill Y labels
+			for (var h = 0; h < 24; h++)
+				y.Add(h.ToString());
+
+			var z = new double[securities.Length, y.Count];
+
+			for (var i = 0; i < securities.Length; i++)
+			{
+				// stop calculation if user cancel script execution
+				if (cancellationToken.IsCancellationRequested)
+					break;
+
+				var security = securities[i];
+
+				// fill X labels
+				x.Add(security.ToStringId());
+
+				// get candle storage
+				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
+
+				// get available dates for the specified period
+				var dates = candleStorage.GetDates(from, to).ToArray();
+
+				if (dates.Length == 0)
+				{
+					logs.LogWarning("no data");
+					return Task.CompletedTask;
+				}
+
+				// grouping candles by opening time (time part only) with 1 hour truncating
+				var byHours = candleStorage.Load(from, to)
+					.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
+					.ToDictionary(g => g.Key.Hours, g => g.Sum(c => c.TotalVolume));
+
+				// fill Z values
+				foreach (var pair in byHours)
+					z[i, pair.Key] = (double)pair.Value;
+			}
+
+			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+
+			return Task.CompletedTask;
+		}
+	}
+}
+
+```
+
+## Python 脚本代码
+
+```python
+import clr
+
+# Add .NET references
+clr.AddReference("StockSharp.Messages")
+clr.AddReference("StockSharp.Algo.Analytics")
+clr.AddReference("Ecng.Drawing")
+
+from Ecng.Drawing import DrawStyles
+from System.Threading.Tasks import Task
+from StockSharp.Algo.Analytics import IAnalyticsScript
+from storage_extensions import *
+from candle_extensions import *
+from chart_extensions import *
+from numpy_extensions import nx
+
+# The analytic script, calculating distribution of the biggest volume by hours and shows its in 3D chart.
+class chart3d_script(IAnalyticsScript):
+	def Run(
+		self,
+		logs,
+		panel,
+		securities,
+		from_date,
+		to_date,
+		storage,
+		drive,
+		format,
+		data_type,
+		cancellation_token
+	):
+		# Check if there are no instruments
+		if not securities:
+			logs.LogWarning("No instruments.")
+			return Task.CompletedTask
+
+		x = []  # X labels for instruments
+		y = []  # Y labels for hours
+
+		# Fill Y labels with hours 0 to 23
+		for h in range(24):
+			y.append(str(h))
+
+		# Create a 2D array for Z values with dimensions: (number of securities) x (number of hours)
+		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
+
+		if data_type is None:
+			logs.LogWarning(f"Unsupported data type {data_type}.")
+			return Task.CompletedTask
+
+		message_type = data_type.MessageType
+
+		for i, security in enumerate(securities):
+			# Stop calculation if user cancels script execution
+			if cancellation_token.IsCancellationRequested:
+				break
+
+			# Fill X labels with security identifiers
+			x.append(to_string_id(security))
+
+			# Get candle storage for current security
+			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
+
+			# Get available dates for the specified period
+			dates = get_dates(candle_storage, from_date, to_date)
+
+			if len(dates) == 0:
+				logs.LogWarning("no data")
+				return Task.CompletedTask
+
+			# Grouping candles by opening time (truncated to the nearest hour) and summing volumes
+			candles = load_range(candle_storage, message_type, from_date, to_date)
+			by_hours = {}
+			for candle in candles:
+				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
+				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
+
+			# Fill Z values for current security
+			for hour, volume in by_hours.items():
+				if hour < len(y):
+					z[i][hour] = float(volume)
+
+		# Draw the 3D chart using panel
+		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+
+		return Task.CompletedTask
+
+```

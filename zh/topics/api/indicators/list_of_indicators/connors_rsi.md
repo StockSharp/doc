@@ -1,0 +1,74 @@
+# CRSI
+
+**康纳斯RSI (CRSI)** 是由拉里·康纳斯开发的综合技术指标，它结合了三个组成部分来衡量市场的超买和超卖状况。
+
+要使用该指标，您需要使用 [ConnorsRSI](xref:StockSharp.Algo.Indicators.ConnorsRSI) 类。
+
+## 描述
+
+Connors RSI 是传统相对强弱指数 (RSI) 的高级版本，它增加了两个额外的组成部分，以提供更准确的超买和超卖信号。
+
+与只考虑价格变化的标准 RSI 不同，Connors RSI 还考虑了连续涨跌（单方向连续价格变动系列）和变化率 (ROC)，使其对短期变化更加敏感，并且在识别极端市场状况时更可靠。
+
+CRSI 尤其适用于：
+- 识别短期进出机会
+- 确定极端超买和超卖水平
+- 基于均值回归的交易系统创建
+- 从其他指标中过滤信号
+
+## 参数
+
+该指标具有以下参数：
+- **RSIPeriod** - 用于计算 RSI 组件的周期（默认值：3）
+- **StreakRSIPeriod** - 用于计算连涨/连跌 RSI 组件的周期（默认值：2）
+- **ROCRSIPeriod** - 用于计算变化率RSI组件的周期（默认值：100）
+
+## 计算
+
+康纳斯 RSI 的计算涉及三个部分，然后将它们平均以获得最终值：
+
+1. **价格 RSI 组件** - 在短期内（通常为 3 天）计算的标准 RSI：
+   ```
+   RSI = 100 - (100 / (1 + RS))
+   where RS = Average Positive Change / Average Negative Change
+   ```
+
+2. **连续上涨/下跌RSI组件**：
+   - 首先，计算连涨或连跌天数
+   - 然后使用 StreakRSIPeriod 将 RSI 应用到这个连胜/连败上
+
+3. **变动率相对强弱指数组件（ROC RSI）**：
+   - 计算当前ROC在ROCRSIPeriod中的百分位排名
+   - 将百分位排名缩放到0到100
+
+4. **康纳斯最终RSI值**：
+   ```
+   CRSI = (RSI + StreakRSI + ROCRSI) / 3
+   ```
+
+## 解释
+
+康诺尔RSI在0到100之间振荡，类似于标准RSI：
+
+- **极高的数值（超过90）**表示强烈的超买状态。这可能是卖出或进行空头操作的信号。
+
+- **极低值（低于10）** 表明市场严重超卖。这可能是买入或平掉空头头寸的信号。
+
+- **标准等级**：
+  - 70-80以上：超买
+  - 低于20-30：超卖
+  - 40-60：中性区
+
+- **分歧**：
+  - 看涨背离：价格形成新低，而CRSI形成更高的低点
+  - 看跌背离：价格形成新高，而CRSI形成较低的高点
+
+Connors RSI 在日线到周线的时间周期图表上以及以均值回归为导向的交易策略中效果最佳。
+
+![indicator_connors_rsi](../../../../images/indicator_connors_rsi.png)
+
+## 另请参阅
+
+[RSI](rsi.md)
+[RMI](relative_momentum_index.md)
+[LRSI](laguerre_rsi.md)

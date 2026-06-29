@@ -1,0 +1,44 @@
+# 阿隆振荡器
+
+**阿隆震荡指标**衡量阿隆上升线和阿隆下降线之间的差异。它突出显示市场
+的哪一方占主导地位以及当前趋势的强弱。
+
+使用 [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) 类来使用此指标。
+
+## 描述
+
+振荡器在 −100 和 +100 之间振荡：
+
+- 正值表明Aroon上方高于Aroon下方，市场由买方主导；
+- 负值表示Aroon下行领先，空方处于控制状态；
+- 接近零的读数反映平衡或整合。
+
+数值离零越远，方向性的移动就越强。
+
+## 参数
+
+- **周期** — 用于基础Aroon计算的周期。较大的数值提供更平滑的读数，但反应较慢。
+
+## 计算
+
+1. 使用选定的 `Length` 计算 Aroon 上升和 Aroon 下降序列。
+2. 将这两行相减：
+`Aroon Oscillator = Aroon Up − Aroon Down`。
+
+## 解释
+
+- **阿隆振荡器 > 0** — 多头占优。
+- **Aroon 振荡器 < 0** — 空头占优。
+- **零线穿越** — 潜在的主要趋势变化。
+- **极值** — 强烈的方向性趋势，通常用作方向性过滤器。
+
+振荡器通常与基础 [Aroon](aroon.md) 指标一起分析，以观察绝对水平及其
+差异。
+
+![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
+
+## 另请参阅
+
+[Aroon](aroon.md)
+[ADX](adx.md)
+[DMI](dmi.md)

@@ -1,0 +1,37 @@
+# 字符串拼接
+
+![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
+
+该模块按照包含花括号占位符的模板，将多个传入值拼接成一个文本字符串。每个占位符名称都会添加一个同名输入端口。可以使用点号引用嵌套属性，并在冒号后指定格式。
+
+### 输入端口
+
+输入端口
+
+- 根据占位符名称动态创建。每个端口都可以接收任意类型的数据。
+
+### 输出端口
+
+输出端口
+
+- **Text** – 拼接并格式化后的字符串。
+
+### 参数
+
+参数
+
+- **Template** – 字符串拼接和格式化模板。编辑模板会更新输入端口列表。
+
+### 示例
+
+- 模板 `Price: {price:0.00}, Qty: {qty}`，其中 `price = 10.5`、`qty = 2`，
+  生成 `Price: 10.50, Qty: 2`。
+- 模板 `{time:HH:mm:ss} - {trade.Price}`，端口为 `time` 和 `trade`
+  （`trade.Price = 100`），生成 `09:15:00 - 100`。
+- 模板 `{side} {volume} @ {trade.Price}`，端口值为 `side = Buy`、
+  `volume = 1`、`trade.Price = 100`，生成 `Buy 1 @ 100`。
+
+## 推荐内容
+
+[String format](string_format.md)
+[Notification](notification.md)

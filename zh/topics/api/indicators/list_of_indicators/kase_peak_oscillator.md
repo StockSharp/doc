@@ -1,0 +1,93 @@
+# 知识流程外包
+
+**Kase峰振荡器（KPO）** 是由Celia Kase开发的技术指标，它结合了动量和波动性来识别潜在的市场高点和低点。
+
+要使用该指标，你需要使用 [KasePeakOscillator](xref:StockSharp.Algo.Indicators.KasePeakOscillator) 类。
+
+## 描述
+
+Kase峰振荡器（KPO）是一种用来确定市场超买和超卖状况，以及识别潜在反转点的工具。它由交易员兼工程师Celia Kase开发，是她交易方法的一部分。
+
+KPO 的概念是，当价格走势的动能开始枯竭时，市场的高峰和低谷会形成。该振荡器使用动能和波动性指标的组合来识别这些关键的转折点。
+
+该指标是一个无量纲振荡器，围绕零线波动。正值表示上行动能，而负值表示下行动能。极端振荡器数值通常与价格图表上的高点和低点相符。
+
+## 参数
+
+该指标具有以下参数：
+- **短周期** - 用于动量计算的短周期（默认值：10）
+- **LongPeriod** - 用于动量计算的长周期（默认值：30）
+
+## 计算
+
+Kase 峰值振荡器的计算涉及几个步骤：
+
+1. 根据短期计算短期动量：
+   ```
+   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   ```
+
+2. 根据长期周期计算长期动量：
+   ```
+   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   ```
+
+3. 计算当前波动率：
+   ```
+   Volatility = ATR(ShortPeriod)
+   ```
+
+4. 将动量标准化相对于波动性：
+   ```
+   Normalized Short Momentum = Short Momentum / Volatility
+   Normalized Long Momentum = Long Momentum / Volatility
+   ```
+
+5. 最终KPO计算：
+   ```
+   KPO = Normalized Short Momentum - Normalized Long Momentum
+   ```
+
+地点：
+- 价格 - 通常为收盘价
+- EMA - 指数移动平均
+- ATR - 平均真实波幅
+- 短期 - 短计算周期
+- 长周期 - 长计算周期
+
+## 解释
+
+Kase峰振荡器可以解释如下：
+
+1. **零线交叉**：
+   - 从下向上穿越可以被视为看涨信号
+   - 从上到下的穿越可以被视为看跌信号
+
+2. **极端值**：
+   - 高正值可能表明市场超买状况以及潜在的向下回调
+   - 高负值可能表明市场超卖状态以及潜在的向上反转
+
+3. **分歧**：
+   - 看涨背离（价格形成新低，而KPO形成更高的低点）可能预示即将出现向上反转
+   - 看跌背离（价格形成新高，而KPO形成较低的高点）可能预示即将出现向下反转
+
+4. **组件交叉**：
+   - 当短期动量从下向上穿过长期动量时，可以视为看涨信号
+   - 当短期动量从上向下穿过长期动量时，可以视为看跌信号
+
+5. **加速与减速**：
+   - KPO 斜率增加表示动量加速
+   - KPO斜率下降表明动量减缓，这可能预示反转
+
+6. **与其他指标结合**：
+   - KPO 常与其他技术指标一起使用以确认信号
+   - 结合趋势指标和支撑/阻力位时特别有效
+
+![凯斯峰值振荡器指标](../../../../images/indicator_kase_peak_oscillator.png)
+
+## 另请参阅
+
+[动量振荡器](momentum.md)
+[MACD](macd.md)
+[漂亮振荡器](pretty_good_oscillator.md)
+[平均真实波动范围](atr.md)

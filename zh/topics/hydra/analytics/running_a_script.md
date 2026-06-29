@@ -1,0 +1,26 @@
+# 运行脚本
+
+要创建新的分析脚本，请在主窗口的数据源面板中选择 **Analytics** 选项卡，然后从下拉菜单中选择所需模板，以便快速开始：
+
+![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+
+截图展示了该功能的主界面，其中包含以下主要组件：
+
+- **导航树**：用于快速访问各种分析功能和已创建的分析脚本，例如日内成交量分析、成交量分布、图表、指标以及其他分析工具。
+- **代码窗口**：显示所选分析脚本的源代码。用户可以直接编辑代码，以自定义或创建分析计算和策略。
+- **参数面板**：位于界面右侧，用于设置分析脚本的参数，包括选择证券、分析时间段、数据路径及其他设置。
+- **错误列表**：位于界面底部，列出编译或执行分析脚本时检测到的错误。
+
+分析脚本采用继承自 [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) 的类形式。
+
+设置参数时，需要指定：
+
+- **Instrument**：根据脚本逻辑，可以选择一个或多个证券。
+
+![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+
+- 日期范围。
+- 用于获取数据的存储。
+- 脚本使用的工作时间周期（如果脚本需要）。
+
+单击 **Start** 按钮 ![hydra analytics compile](../../../images/hydra_analytics_compile.png)，将打开一个新选项卡并显示脚本执行结果。

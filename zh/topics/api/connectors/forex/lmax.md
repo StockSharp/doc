@@ -1,0 +1,21 @@
+# LMAX
+
+**LMAX Global** - LMAX Global 是一家受 FCA 监管的外汇经纪商。LMAX Global 为经纪商和专业交易者提供在 LMAX 交易所中心限价订单簿上交易的能力，提供来自顶级银行和自营交易公司的固定流动性流的更紧的点差。
+
+在开始为当前交易平台编写交易机器人之前，建议阅读[连接器](../../connectors.md)中的链接。
+
+## 推荐内容
+
+[连接器](../../connectors.md)
+
+[图形配置](../graphical_configuration.md)
+
+[保存和加载设置](../save_and_load_settings.md)
+
+[创建自定义连接器](../creating_own_connector.md)
+
+[订单管理](../../orders_management.md)
+
+[创建新订单](../../orders_management/create_new_order.md)
+
+[创建新止损单](../../orders_management/create_new_stop_order.md)
