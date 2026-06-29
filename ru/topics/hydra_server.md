@@ -9,7 +9,7 @@
 
 **Hydra-сервер** использует те же настройки, что и [Hydra](hydra.md). Поэтому для первичной настройки необходимо запустить программу [Hydra](hydra.md), и далее использовать созданные настройки программой **Hydra-сервер**.
 
-![Hydra сервер](../images/HydraServer_console.png)
+![Hydra сервер](../images/hydraserver_console.png)
 
 Программа имеет конфигурационный файл appsettings.json:
 

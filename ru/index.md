@@ -11,7 +11,7 @@
 
 ### Designer
 
-![StockSharpTitle 0](images/StockSharpTitle_0.png)
+![StockSharpTitle 0](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) \- универсальная программа для создания торговых роботов и стратегий: 
 
@@ -27,7 +27,7 @@
 
 [Terminal](topics/terminal.md) \- бесплатный торговый терминал. Основным преимуществом которого является одновременное подключение ко множеству торговых площадок, включая те, где нет собственного терминала. 
 
-![Terminal main 00](images/Terminal_main_00.png)
+![Terminal main 00](images/terminal_main_00.png)
 
 Преимущества и возможности Terminal:
 
@@ -42,7 +42,7 @@
 
 ### Hydra
 
-![StockSharpTitle 1](images/StockSharpTitle_1.png)
+![StockSharpTitle 1](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) \- программа для автоматического скачивания исторических и реал\-тайм маркет\-данных: 
 

@@ -11,7 +11,7 @@ S# is compatible with any broker that supports our connections.
 
 ### Designer
 
-![StockSharpTitle 0](images/StockSharpTitle_0.png)
+![StockSharpTitle 0](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) is a universal algorithmic strategies application that simplifies strategy creation:
 
@@ -27,7 +27,7 @@ S# is compatible with any broker that supports our connections.
 
 ### Hydra
 
-![StockSharpTitle 1](images/StockSharpTitle_1.png)
+![StockSharpTitle 1](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) is an application for the automatic downloading of historical and real-time market data:
 
@@ -43,7 +43,7 @@ S# is compatible with any broker that supports our connections.
 
 ### Terminal
 
-![Terminal main 00](images/Terminal_main_00.png)
+![Terminal main 00](images/terminal_main_00.png)
 
 [Terminal](topics/terminal.md) is a trading and charting application (trading terminal):
 

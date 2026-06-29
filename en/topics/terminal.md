@@ -2,7 +2,7 @@
 
 **Terminal** is a free trading terminal. Its main advantage is the simultaneous connection to a variety of trading boards, including those where there is no own terminal. 
 
-![Terminal main 00](../images/Terminal_main_00.png)
+![Terminal main 00](../images/terminal_main_00.png)
 
 ## Advantages and features of Terminal:
 
