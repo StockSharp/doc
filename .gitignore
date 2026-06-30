@@ -1,13 +1,1 @@
-ru/api
-en/api
-
-ru/src
-en/src
-
 *.log
-
-doc.bat
-
-bin
-obj
-.vs
