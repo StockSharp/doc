@@ -1,6 +1,6 @@
-# Buy\/Sell panel
+﻿# Buy\/Sell panel
 
-[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) \- A special panel enabling you to quickly register an order at the best prices. 
+[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - A special panel enabling you to quickly register an order at the best prices. 
 
 ![API GUI BuySell](../../../../images/api_gui_buysell.png)
 
@@ -33,7 +33,7 @@ Below is an example of the code for adding the [BuySellPanel](xref:StockSharp.Xa
 	  				
 ```
 
-To fill the panel with data, you have to specify the market data source and the instrument source.
+To fill the panel with data, you need to specify the market data source and the instrument source.
 
 ```cs
 		private void Connect_Click(object sender, RoutedEventArgs e)

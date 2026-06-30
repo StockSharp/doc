@@ -1,7 +1,7 @@
 > [!WARNING]
 > This exchange has permanently shut down (July 2017 — seized). This connector is no longer operational. Documentation is preserved for historical reference.
 
-# Adapter initialization WEX (BTC\-e)
+# Adapter initialization WEX (BTC-e)
 
 The code below demonstrates how to initialize the [BtceMessageAdapter](xref:StockSharp.Btce.BtceMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
 

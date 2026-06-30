@@ -1,10 +1,10 @@
 # Data Import
 
-[S\#](../api.md) implements a market data import subsystem from CSV files. The main classes are located in the `StockSharp.Algo.Import` namespace.
+[S#](../api.md) implements a market data import subsystem from CSV files. The main classes are located in the `StockSharp.Algo.Import` namespace.
 
 ## CsvParser — Base Parser
 
-The [CsvParser](xref:StockSharp.Algo.Import.CsvParser) class performs CSV file parsing and converts rows into [S\#](../api.md) messages.
+The [CsvParser](xref:StockSharp.Algo.Import.CsvParser) class performs CSV file parsing and converts rows into [S#](../api.md) messages.
 
 - **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
 - **ColumnSeparator** — column separator (default `","`).

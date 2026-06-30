@@ -1,6 +1,6 @@
 # AlphaVantage
 
-**Alpha Vantage** \- Market data provider of realtime and historical data on stocks, forex (FX), and digital\/crypto currencies. 
+**Alpha Vantage** - Market data provider of realtime and historical data on stocks, forex (FX), and digital\/crypto currencies. 
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

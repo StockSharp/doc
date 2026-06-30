@@ -55,10 +55,10 @@ Data on disk is organized according to the following path structure:
 
 Where the extension is `.bin` for binary format or `.csv` for text format. This hierarchical organization ensures fast data lookup by instrument and date.
 
-For example, 5-minute candles for the SBER@TQBR instrument on April 1, 2024 in binary format would be located at a path like:
+For example, 5-minute candles for the AAPL@NASDAQ instrument on April 1, 2024 in binary format would be located at a path like:
 
 ```
-Storage/S/SBER@TQBR/2024_04_01/candles_5m.bin
+Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
 ```
 
 ## Converting Between Formats

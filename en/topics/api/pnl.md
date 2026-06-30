@@ -1,6 +1,6 @@
 # Profit and Loss Management
 
-[S\#](../api.md) implements profit and loss (PnL) calculation through the [PnLManager](xref:StockSharp.Algo.PnL.PnLManager). The manager processes a stream of messages (trades, market data) and computes realized and unrealized profit.
+[S#](../api.md) implements profit and loss (PnL) calculation through the [PnLManager](xref:StockSharp.Algo.PnL.PnLManager). The manager processes a stream of messages (trades, market data) and computes realized and unrealized profit.
 
 ## IPnLManager Interface
 

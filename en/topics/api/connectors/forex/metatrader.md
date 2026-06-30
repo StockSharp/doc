@@ -33,7 +33,7 @@ Both connectors are used in the same way, so below is the description of the pro
 
    ![MT 2](../../../../images/mt_2.png)
 
-8. Select the S\# expert, right-click and choose **Attach to a chart** from the menu:
+8. Select the S# expert, right-click and choose **Attach to a chart** from the menu:
 
    ![MT 3](../../../../images/mt_3.png)
 

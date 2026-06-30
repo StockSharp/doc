@@ -1,6 +1,6 @@
 # Options
 
-To work with the options [S\#](../api.md) provides special methods for calculation of “greeks”, synthetic positions, options quoting strategies for a given volatility and delta hedging. 
+To work with the options [S#](../api.md) provides special methods for calculation of “greeks”, synthetic positions, options quoting strategies for a given volatility and delta hedging. 
 
 ## Recommended content
 

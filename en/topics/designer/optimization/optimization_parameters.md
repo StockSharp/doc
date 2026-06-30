@@ -7,9 +7,9 @@ Optimization is performed on strategy parameters that have the following types:
 - Boolean value (True-False)
 - [Unit](../../api/strategies/unit_type.md) value
 
-By default, all parameters with these types will be represented in the [optimizer parameters table](brute_force.md). If it is necessary to exclude some parameter from the optimization, then:
+By default, all parameters with these types appear in the [optimizer parameters table](brute_force.md). To exclude a parameter from optimization:
 
-- In the case of a [diagram](../strategies/using_visual_designer.md), it is necessary to select the required cube, open its property, switch to **Advanced settings** and turn off the **Parameter** checkbox:
+- For a [diagram](../strategies/using_visual_designer.md), select the required cube, open its properties, switch to **Advanced settings**, and turn off the **Parameter** checkbox:
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 
@@ -23,4 +23,4 @@ _short = this.Param(nameof(Short), 20);
 _long.CanOptimize = false;
 ```
 
-After changing the available optimization parameters, it is necessary to reopen the [optimization panel](brute_force.md).
+After changing the available optimization parameters, reopen the [optimization panel](brute_force.md).

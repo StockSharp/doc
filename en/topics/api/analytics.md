@@ -1,6 +1,6 @@
 # Analytics Scripts
 
-[S\#](../api.md) implements an analytics scripts subsystem that allows you to perform arbitrary analysis of market data with result visualization. The classes are located in the `StockSharp.Algo.Analytics` namespace.
+[S#](../api.md) implements an analytics scripts subsystem that allows you to perform arbitrary analysis of market data with result visualization. The classes are located in the `StockSharp.Algo.Analytics` namespace.
 
 ## IAnalyticsScript — Main Interface
 

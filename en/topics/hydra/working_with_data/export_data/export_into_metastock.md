@@ -1,6 +1,6 @@
 # Export into MetaStock
 
-To export data to MetaStock format files, select the Txt format from the drop\-down list:
+To export data to MetaStock format files, select the Txt format from the drop-down list:
 
 ![hydra export](../../../../images/hydra_export.png)
 

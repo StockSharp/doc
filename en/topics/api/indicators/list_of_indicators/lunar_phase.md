@@ -1,4 +1,4 @@
-# LP
+﻿# LP
 
 **Lunar Phase (LP)** is an unconventional technical indicator based on astronomical data about moon phases to analyze the potential influence of lunar cycles on financial markets.
 
@@ -63,7 +63,7 @@ Lunar Phase indicator interpretation can vary, as it is an unconventional techni
    - LP is typically not used as a standalone tool for making trading decisions
    - It is recommended to combine it with traditional technical indicators to confirm signals
 
-It is important to note that there is insufficient scientific evidence of direct lunar phase influence on financial markets, and many professional traders approach such tools skeptically. However, some market participants find value in including LP in their analytical arsenal.
+Note that there is insufficient scientific evidence of direct lunar phase influence on financial markets, and many professional traders approach such tools skeptically. However, some market participants find value in including LP in their analytical arsenal.
 
 ![indicator_lunar_phase](../../../../images/indicator_lunar_phase.png)
 

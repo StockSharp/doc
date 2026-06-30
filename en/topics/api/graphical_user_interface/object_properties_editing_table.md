@@ -1,6 +1,6 @@
 # Object properties editing table
 
-[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) \- the table for editing object properties. The component includes a set of additional editors for system types and [S\#](../../api.md) types. 
+[PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) - the table for editing object properties. The component includes a set of additional editors for system types and [S#](../../api.md) types. 
 
 ![GUI PropertyDataGridEx](../../../images/gui_propertydatagridex.png)
 
@@ -20,10 +20,10 @@
 
 **Main properties**
 
-- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) \- the provider of information about instruments. 
-- [PropertyGridEx.ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) \- the provider of site information. 
-- [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) \- the list of available portfolios. 
-- **SelectedObject** \- the object whose properties will be displayed in the table. 
+- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) - the provider of information about instruments. 
+- [PropertyGridEx.ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) - the provider of site information. 
+- [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) - the list of available portfolios. 
+- **SelectedObject** - the object whose properties will be displayed in the table. 
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Fix\/SampleFix*. 
 

@@ -6,15 +6,15 @@ The cube is used to combine the same type of data coming from different cubes in
 
 ## Incoming sockets
 
-- **Any data** \- specifies the type of data received and passed.
+- **Any data** - specifies the type of data received and passed.
 
 ## Outgoing sockets
 
-- **Any data** \- specifies the type of data received and passed.
+- **Any data** - specifies the type of data received and passed.
 
 ## Parameters
 
-- **Type** \- specifies the type of data received and passed.
+- **Type** - specifies the type of data received and passed.
 
 ## Recommended content
 

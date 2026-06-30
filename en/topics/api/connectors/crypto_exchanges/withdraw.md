@@ -1,6 +1,6 @@
-# Withdraw
+﻿# Withdraw
 
-To withdraw funds from the cryptocurrency exchange, it is necessary to create an order for withdrawal and register it in the connector as a regular order. For example, for the [Binance](binance.md) exchange, the withdrawal request code will look like this:
+To withdraw funds from the cryptocurrency exchange, you need to create an order for withdrawal and register it in the connector as a regular order. For example, for the [Binance](binance.md) exchange, the withdrawal request code will look like this:
 
 ```cs
 Connector Connector = new Connector();		

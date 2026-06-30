@@ -27,7 +27,7 @@ The following is the SampleOptionQuoting example, in which this chart is used. T
    				
    ```
 
-2. In the C\# code, create a connection and subscribe to the necessary events.
+2. In the C# code, create a connection and subscribe to the necessary events.
 
    ```cs
    ...                 

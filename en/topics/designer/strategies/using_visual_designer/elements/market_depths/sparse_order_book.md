@@ -8,11 +8,11 @@ The cube is used to obtain a sparse order book for the specified instrument.
 
 ### Incoming sockets
 
-- Order book \- the order book that needs to be thinned.
+- Order book - the order book that needs to be thinned.
 
 ### Outgoing sockets
 
-- Order book \- the sparse order book.
+- Order book - the sparse order book.
 
 ### Parameters
 

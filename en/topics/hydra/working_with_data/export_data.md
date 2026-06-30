@@ -1,14 +1,14 @@
-# Export data
+﻿# Export data
 
 [Hydra](../../hydra.md) allows you to export the received market data in various formats, including [MetaStock data formats](export_data/export_into_metastock.md).
 
 To export data, files in [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin, txt, Json formats or SQL tables are used.
 
-For export, you should select the required file format from the drop\-down list:
+For export, you should select the required file format from the drop-down list:
 
 ![hydra export](../../../images/hydra_export.png)
 
-Then you have to select a folder and change the file name if necessary.
+Then you need to select a folder and change the file name if necessary.
 
 When exporting to text files (txt), a window appears in which you can specify the export template of the form: 
 

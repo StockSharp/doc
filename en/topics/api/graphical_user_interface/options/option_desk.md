@@ -27,7 +27,7 @@ Below is the **OptionCalculator** example, which uses this component. The source
    </Window>
    	  				
    ```
-2. In the C\# code, create a connection and subscribe to the necessary events. 
+2. In the C# code, create a connection and subscribe to the necessary events. 
 
    ```cs
    ...                 

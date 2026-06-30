@@ -9,7 +9,7 @@ To import news, select **Import \=\> News** from the main application menu.
 1. Execute **CSV Import Settings**.
 
    See [Candles](candles.md) import.
-2. Configure import parameters for [S\#](../../api.md) fields.
+2. Configure import parameters for [S#](../../api.md) fields.
 
    See [Candles](candles.md) import.
 3. To preview the data, click the **Preview** button

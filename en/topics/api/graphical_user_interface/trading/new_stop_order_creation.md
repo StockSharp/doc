@@ -1,16 +1,16 @@
 # New stop order creation
 
-[OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) \- the window for creating a conditional order. 
+[OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - the window for creating a conditional order. 
 
 ![GUI OrderConditionalWindow](../../../../images/gui_orderconditionalwindow.png)
 
 **Main properties**
 
-- [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) \- the list of portfolios. 
-- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) \- provider of information about instruments. 
-- [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) \- provider of market data. 
-- [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) \- message adapter. 
-- [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) \- the created order. 
+- [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) - the list of portfolios. 
+- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) - provider of information about instruments. 
+- [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) - provider of market data. 
+- [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) - message adapter. 
+- [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) - the created order. 
 
 Below is a code snippet showing its use. The code example is taken from *Samples\/InteractiveBrokers\/SampleIB*. 
 

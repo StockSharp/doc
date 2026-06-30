@@ -8,10 +8,10 @@ You can configure notifications about changing the following data types: Portfol
 
 Notifications can be of the following form:
 
-- **Window** \- a small pop\-up window with a message will appear in the corner of the screen.
-- **Melody** \- the melody will play.
-- **SMS** \- a message will be sent by SMS.
-- **Email** \- a message will be sent by email.
-- **Speech** \- a message will be spoken by the computer\-generated voice.
-- **Log** \- a message will be sent to the Designer Logs window.
-- **Disabled** \- a notification will not be displayed.
+- **Window** - a small pop-up window with a message will appear in the corner of the screen.
+- **Melody** - the melody will play.
+- **SMS** - a message will be sent by SMS.
+- **Email** - a message will be sent by email.
+- **Speech** - a message will be spoken by the computer-generated voice.
+- **Log** - a message will be sent to the Designer Logs window.
+- **Disabled** - a notification will not be displayed.

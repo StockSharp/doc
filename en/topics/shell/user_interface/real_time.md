@@ -1,6 +1,6 @@
-# Real\-time
+# Real-time
 
-The **Real\-time** tab allows you to manage strategies launched in trading.
+The **Real-time** tab allows you to manage strategies launched in trading.
 
 ![Shell realtime 00](../../../images/shell_realtime_00.png)
 

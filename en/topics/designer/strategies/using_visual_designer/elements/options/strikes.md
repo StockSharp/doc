@@ -14,14 +14,14 @@ Incoming sockets
 
 Outgoing sockets
 
-- **Options** \- the list of options by the underlying asset.
+- **Options** - the list of options by the underlying asset.
 
 ### Parameters
 
 Parameters
 
 - **Option type** – the option type can be Call option or Put option.
-- **Expiry date** \- expiry date of option.
+- **Expiry date** - expiry date of option.
 - **Strike (less)** – the shift left (less) from the central strike. If the price is not set, then all strikes with a lower central value will be used. Shift is calculated in the strike steps, for example, if the strike step is 500 c.u., then the shift equal to 3 will be 1,500 c.u.
 - **Strike (more)** – the shift to the right (more) from the central strike. If the price is not set, then all strikes with a larger central value will be used. Shift is calculated in the strike steps, for example, if the strike step is 500 c.u., then the shift equal to 3 will be 1,500 c.u.
 

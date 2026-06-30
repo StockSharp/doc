@@ -1,6 +1,6 @@
 # IQFeed
 
-**DTN IQFeed** \- Real\-time market data provider for stock quotes, Forex, news, futures contracts, etc..
+**DTN IQFeed** - Real-time market data provider for stock quotes, Forex, news, futures contracts, etc..
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 
@@ -24,11 +24,11 @@ In the **IQLink Launcher** window that opens, click **Start IQLink**.
 
 ![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
 
-In the opened **IQ Connect Login** window it is necessary to enter the **Login** and **Password** (or PIN) received from the **iQFeed** service, in this case the Login and Password are not the Login and Password from the **iQFeed** site. After filling in Login and Password, you have to click **Connect** to connect.
+In the opened **IQ Connect Login** window, enter the **Login** and **Password** (or PIN) received from the **iQFeed** service. These credentials are not the same as the Login and Password from the **iQFeed** website. After entering the credentials, click **Connect**.
 
 To receive data, the client application uses four connections through different ports: 
 
-1. Level1 (port 5009) is used to get real\-time data on instruments (ticks, opening and closing prices, volatility, etc.) and news.
+1. Level1 (port 5009) is used to get real-time data on instruments (ticks, opening and closing prices, volatility, etc.) and news.
 2. Level2 (port 9200) is used to get extended quotes for instruments, for each ECN you can get the best pair of quotes.
 3. Lookup (port 9100) is used to search for instruments, retrieve historical data, get advanced information on news.
 4. Admin (port 9300) is used to get general information about connection and changing settings.

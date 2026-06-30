@@ -1,6 +1,6 @@
 # Trading Operations
 
-When creating your own adapter for working with an exchange, it is necessary to implement methods for performing trading operations, such as registering, replacing, and canceling orders. These methods are called when receiving the corresponding messages from the StockSharp core.
+When creating your own adapter for an exchange, implement the methods that perform trading operations: registering, replacing, and canceling orders. These methods are called when the adapter receives the corresponding messages from the StockSharp core.
 
 ## Order Registration
 
@@ -105,11 +105,13 @@ public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg
 
 ### Specifics of Order Replacement
 
-When implementing the order replacement method, it is important to consider the specifics of the exchange protocol. For this, StockSharp provides the [MessageAdapter.IsReplaceCommandEditCurrent](xref:StockSharp.Messages.MessageAdapter.IsReplaceCommandEditCurrent) property.
+When implementing order replacement, take the exchange protocol into account. StockSharp provides the [MessageAdapter.IsReplaceCommandEditCurrent](xref:StockSharp.Messages.MessageAdapter.IsReplaceCommandEditCurrent) property for this.
 
-If the exchange protocol assumes changing an order while retaining its old identifier, it is necessary to override this property and return `true`. This indicates to StockSharp that when replacing an order, it is not necessary to expect a new identifier from the exchange.
+If the exchange protocol modifies an order while keeping the old identifier, override this property and return `true`. This tells StockSharp that replacing an order should not wait for a new identifier from the exchange.
 
+```cs
 public override bool IsReplaceCommandEditCurrent => true;
+```
 
 If, when changing an order, the old one is canceled and a new one is registered with a new exchange identifier, then this property does not need to be overridden. By default, it returns `false`, which corresponds to the behavior of most exchanges.
 
@@ -144,7 +146,7 @@ Some exchanges support the mass order cancellation function, which allows cancel
 
 To implement mass order cancellation in the adapter, the **CancelOrderGroupAsync** method is usually used. This method is called when receiving the [OrderGroupCancelMessage](xref:StockSharp.Messages.OrderGroupCancelMessage) message.
 
-It is worth noting that not all exchanges support this function. For example, Coinbase does not provide an API for mass order cancellation. In such cases, it may be necessary to implement sequential cancellation of individual orders.
+Not all exchanges support this function. For example, Coinbase does not provide an API for mass order cancellation. In such cases, implement sequential cancellation of individual orders if needed.
 
 Below is an example of the implementation of the mass order cancellation method, taken from the [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) connector, which supports this function:
 
@@ -155,7 +157,7 @@ public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage ca
 }
 ```
 
-It is important not to forget to remove the deletion of support for this command type from the adapter constructor:
+Do not remove support for this command type in the adapter constructor:
 
 ```cs
 //this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
@@ -167,15 +169,15 @@ In the case of Coinbase, as well as some other modern exchanges, order state upd
 
 Processing these updates occurs in a method similar to `SessionOnOrderReceived`, which was discussed in the section on [requesting the current state of the portfolio and orders](portfolio_and_orders_state.md). This method is called every time the exchange sends an update about the order state, regardless of whether this update was triggered by user actions or changes on the exchange itself.
 
-This approach allows for more efficient tracking of order states, reduces the load on the exchange API, and ensures receiving updates in real time. However, when implementing your own adapter, it is necessary to carefully study the API documentation of the exchange being used in order to properly configure and handle these WebSocket updates.
+This approach tracks order states more efficiently, reduces load on the exchange API, and provides real-time updates. When implementing your own adapter, study the exchange API documentation carefully so that these WebSocket updates are configured and handled correctly.
 
 ## Error Handling
 
-When performing trading operations, it is important to correctly handle possible errors and exceptions. In case of an error, it is necessary to send an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with the [Error](xref:StockSharp.Messages.ExecutionMessage.Error) property set.
+When performing trading operations, handle possible errors and exceptions correctly. If an error occurs, send an [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) message with the [Error](xref:StockSharp.Messages.ExecutionMessage.Error) property set.
 
 ## Implementation Specifics
 
-When implementing methods for working with trading operations, it is necessary to take into account the specifics of a particular exchange:
+When implementing trading operation methods, take the specifics of a particular exchange into account:
 
 - Supported order types (market, limit, stop orders, etc.).
 - Format of order identifiers.

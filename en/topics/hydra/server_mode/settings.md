@@ -16,26 +16,26 @@ After that, click on the **Settings** button to open the server mode settings wi
 
 **Hydra Server**
 
-- **FIX server** \- switch [Hydra](../../hydra.md) to server mode, distributing live trading and historical data via the FIX protocol. 
+- **FIX server** - switch [Hydra](../../hydra.md) to server mode, distributing live trading and historical data via the FIX protocol. 
 
   In this section, you configure the connection for working with sources: 
-  1. **ConvertToLatin** \- convert Cyrillic to Latin 
-  2. **QuotesInterval** \- quotes update period 
-  3. **TransactionSession** \- setting of a trading session. Setting up for trading via the [Hydra](../../hydra.md) program. 
+  1. **ConvertToLatin** - convert Cyrillic to Latin 
+  2. **QuotesInterval** - quotes update period 
+  3. **TransactionSession** - setting of a trading session. Setting up for trading via the [Hydra](../../hydra.md) program. 
 
      This setting allows you to configure Dialect of the FIX protocol, Sender and Recipient, Data format and other settings. See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details.
-  4. **MarketDataSession** \- settings for transfer of market data received using [Hydra](../../hydra.md). See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details. 
-  5. **KeepSubscriptionsOnDisconnect** \- keeping subscriptions when disconnected from the source. 
-  6. **DeadSessionCleanupInterval** \- after what time interval the information will be cleared if the connection is disconnected.
-- **Authorization** \- authorization to gain access to the Hydra server 
-- **Number of securities** \- the maximum number of instruments that can be requested from the server 
-- **Candles (days)** \- the maximum number of days available to download candle history 
-- **Ticks (days)** \- the maximum number of days available to download the tick data history 
-- **Order books (days)** \- the maximum number of days available to download order book history 
-- **OL (days)** \- the maximum number of days available to download the OL data history 
-- **Transactions (days)** \- the maximum number of days available to download the transaction history 
-- **Simulator** \- turn on simulator mode 
-- **Security mapping** \- enable the transfer mode of only specified instruments. 
+  4. **MarketDataSession** - settings for transfer of market data received using [Hydra](../../hydra.md). See [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) for details. 
+  5. **KeepSubscriptionsOnDisconnect** - keeping subscriptions when disconnected from the source. 
+  6. **DeadSessionCleanupInterval** - after what time interval the information will be cleared if the connection is disconnected.
+- **Authorization** - authorization to gain access to the Hydra server 
+- **Number of securities** - the maximum number of instruments that can be requested from the server 
+- **Candles (days)** - the maximum number of days available to download candle history 
+- **Ticks (days)** - the maximum number of days available to download the tick data history 
+- **Order books (days)** - the maximum number of days available to download order book history 
+- **OL (days)** - the maximum number of days available to download the OL data history 
+- **Transactions (days)** - the maximum number of days available to download the transaction history 
+- **Simulator** - turn on simulator mode 
+- **Security mapping** - enable the transfer mode of only specified instruments. 
 
 If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab. After clicking it, the **Users** window appears.
 

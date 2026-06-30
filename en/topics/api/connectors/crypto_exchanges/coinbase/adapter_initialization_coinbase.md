@@ -1,11 +1,11 @@
-# Adapter initialization Coinbase
+# Coinbase Adapter Initialization
 
-The code below demonstrates how to initialize the [CoinbaseMessageAdapter](xref:StockSharp.Coinbase.CoinbaseMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The code below demonstrates how to initialize [CoinbaseMessageAdapter](xref:StockSharp.Coinbase.CoinbaseMessageAdapter) and pass it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
 			Connector Connector = new Connector();				
 			...				
-			var messageAdapter = new  CoinbaseMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CoinbaseMessageAdapter(Connector.TransactionIdGenerator)
 			{
 				Key = "<Your API Key>".To<SecureString>(),
 				Secret = "<Your API Secret>".To<SecureString>(),
@@ -15,6 +15,18 @@ The code below demonstrates how to initialize the [CoinbaseMessageAdapter](xref:
 							
 ```
 
-## Recommended content
+An alternative and more convenient way is to use the `AddAdapter<T>()` extension method:
+
+```cs
+Connector Connector = new Connector();
+...
+Connector.AddAdapter<CoinbaseMessageAdapter>(a =>
+{
+	a.Key = "<Your API Key>".To<SecureString>();
+	a.Secret = "<Your API Secret>".To<SecureString>();
+});
+```
+
+## See also
 
 [Connection settings window](../../../graphical_user_interface/connection_settings_window.md)

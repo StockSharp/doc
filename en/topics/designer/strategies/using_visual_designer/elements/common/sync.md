@@ -1,4 +1,4 @@
-## Synchronization
+﻿## Synchronization
 
 ![Designer Sync 00](../../../../../../images/designer_sync_00.png)
 
@@ -15,7 +15,7 @@ The Synchronization block is designed to accumulate and synchronize data from va
 
 ## Usage Examples
 
-1. Creating a custom index for multiple stocks, where it is necessary to consider different time series from various data sources.
+1. Creating a custom index for multiple stocks, where you need to consider different time series from various data sources.
 2. Arbitrage between different markets using synchronized time data to identify temporal price differences.
 
 ![Designer Sync 01](../../../../../../images/designer_sync_01.png)

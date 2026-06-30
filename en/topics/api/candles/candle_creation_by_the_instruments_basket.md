@@ -2,7 +2,7 @@
 
 To create candles for [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity), or [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity), the same subscription mechanism is used as for regular [Security](xref:StockSharp.BusinessEntities.Security) instruments.
 
-Below is an example of creating 1-minute candles for the GZM5 - LKM5 spread:
+Below is an example of creating 1-minute candles for the AAPL - MSFT spread:
 
 ```cs
 private Connector _connector;
@@ -10,8 +10,8 @@ private Security _instr1;
 private Security _instr2;
 private WeightedIndexSecurity _indexInstr;
 private Subscription _indexSubscription;
-private const string _secCode1 = "GZM5";
-private const string _secCode2 = "LKM5";
+private const string _secCode1 = "AAPL";
+private const string _secCode2 = "MSFT";
 readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
 private ChartArea _area;
 private ChartCandleElement _candleElement;

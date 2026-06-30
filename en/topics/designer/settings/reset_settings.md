@@ -1,18 +1,14 @@
 # Reset settings
 
 > [!CAUTION]
-> **CAUTION\!\!\! Prior to resetting please read this paragraph through\!**
+> **Before resetting settings, read this section carefully.**
 
-On the **Quick access panel**, located by default at the top of the [Designer](../../designer.md), window, there is a **Settings** ![Designer The quick access toolbar 02](../../../images/designer_quick_access_toolbar_02.png) button. Clicking the ![Designer The quick access toolbar 02](../../../images/designer_quick_access_toolbar_02.png) button allows changing the program launch mode, interface language or totally reset the [Designer](../../designer.md) settings.
+The **Quick access panel** is located at the top of the program window by default and contains the settings button ![Designer The quick access toolbar 02](../../../images/designer_quick_access_toolbar_02.png). When you click ![Designer The quick access toolbar 02](../../../images/designer_quick_access_toolbar_02.png), you can change the startup mode, change the interface language, or reset all settings.
 
 ![Designer Reset language settings 00](../../../images/designer_reset_language_settings_00.png)
 
-When **Reset settings** is selected, the confirmation window opens.
+When you select **Reset settings**, a confirmation window opens.
 
 ![Designer Reset language settings 01](../../../images/designer_reset_language_settings_01.png)
 
-After clicking the **OK** button all [Designer](../../designer.md) settings will be reset to default values. The directory with the [Designer](../../designer.md) will be cleared completely, **all created strategies and downloaded instruments and other information stored in the settings directory will be DESTROYED.**
-
-## Recommended content
-
-[Settings directory](settings_directory.md)
+After you click **OK**, all settings are reset to their default values. The program settings directory is cleared completely. **All created strategies, downloaded instruments, and other information stored in the settings directory will be deleted.**

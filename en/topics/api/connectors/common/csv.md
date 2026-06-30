@@ -1,6 +1,6 @@
 # CSV
 
-**CSV** \- importing data from a text format.
+**CSV** - importing data from a text format.
 
 Before you start writing trading robots for the current trading platform, it is recommended to review the links in the [Connectors](../../connectors.md) section.
 

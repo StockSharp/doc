@@ -1,11 +1,11 @@
 # CoinCap
 
-**CoinCap** \- Market data provider of Real\-time data on digital\/crypto currencies.
+**CoinCap** - Market data provider of Real-time data on digital\/crypto currencies.
 
 Before you start writing trading robots for this trading platform, we recommend reading the links in the [Connectors](../../connectors.md) section. 
 
 > [!CAUTION]
-> Connector support only market\-data feed, transaction are not supported. 
+> Connector support only market-data feed, transaction are not supported. 
 
 ## Recommended content
 

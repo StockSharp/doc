@@ -1,6 +1,6 @@
 # Risk settings window
 
-[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) \- A special window for configuring risk control. 
+[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - A special window for configuring risk control. 
 
 ![API GUI RiskWindow](../../../images/api_gui_riskwindow.png)
 

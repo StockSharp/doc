@@ -10,7 +10,7 @@ Incoming sockets
 
 - **Model** – the calculation model (for example, Black-Scholes).
 - **Instrument** – the instrument, the underlying asset.
-- **Volume** \- the numerical value of the volume.
+- **Volume** - the numerical value of the volume.
 - **Position by underlying asset** – the position by the underlying asset.
 - **Flag** – the signal (flag) that initiates the hedging process.
 
@@ -24,7 +24,7 @@ Outgoing sockets
 
 Parameters
 
-- **Hedging type** \- the hedging type, it can take the values Delta, Gamma, Vega, Theta, or Rho.
+- **Hedging type** - the hedging type, it can take the values Delta, Gamma, Vega, Theta, or Rho.
 
 ## Recommended content
 

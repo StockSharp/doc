@@ -1,17 +1,17 @@
 # Terminal
 
-**Terminal** is a free trading terminal. Its main advantage is the simultaneous connection to a variety of trading boards, including those where there is no own terminal. 
+**Terminal** is a free trading terminal. Its main advantage is the ability to connect to multiple exchanges, brokers, and data sources at the same time, including venues that do not provide their own terminal.
 
 ![Terminal main 00](../images/terminal_main_00.png)
 
 ## Advantages and features of Terminal:
 
-1. **Supports many sources:** [Connectors](api/connectors.md).
-2. **Trade from the chart**. 
-3. **Arbitrary time frames**. 
-4. **Support for Volume, Tick, Range, PnF, Renko Candles**. 
-5. **Clusters and box plots**. 
-6. **Any markets:** stocks, futures, Forex, bitcoins. 
+1. **Supports many data sources:** [Connectors](api/connectors.md).
+2. **Trading from charts**. 
+3. **Custom timeframes**. 
+4. **Volume, Tick, Range, PnF, and Renko candles**. 
+5. **Cluster and box charts**. 
+6. **Multiple markets:** stocks, futures, Forex, and cryptocurrencies. 
 
 ## Recommended content
 

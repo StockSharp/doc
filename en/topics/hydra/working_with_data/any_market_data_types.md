@@ -1,4 +1,4 @@
-# Any market data types
+﻿# Any market data types
 
 [Hydra](../../hydra.md) allows you to use alternative data types to obtain various kinds of market data.
 
@@ -6,7 +6,7 @@ This is necessary if the source does not allow downloading the required market d
 
 IMPORTANT\! **Order book** can be built from the **Order Log** or **Level 1**, provided that these data types contain the best prices.
 
-It is worth remembering that **Level 1** values can be downloaded from any source that provides real\-time market data. **Level 1** can also be received by [converting](../tasks/converter.md) from the **Order book**. 
+Remember that **Level 1** values can be downloaded from any source that provides real-time market data. **Level 1** can also be received by [converting](../tasks/converter.md) from the **Order book**.
 
 To build it, you need to:
 

@@ -4,11 +4,11 @@ The algorithm for creating a cube or indicator from a DLL assembly is similar to
 
 ![Designer_Import_Element_00](../../../../images/designer_import_element_00.png)
 
-When creating an indicator, to compile the code it is necessary to include the NuGet package [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), where the base class for all indicators [Strategy](xref:StockSharp.Algo.Indicators.BaseIndicator) is located.
+When creating an indicator, include the NuGet package [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo) to compile the code. It contains the base class for all indicators: [BaseIndicator](xref:StockSharp.Algo.Indicators.BaseIndicator).
 
 ![Designer_Import_Indicator_00](../../../../images/designer_import_indicator_00.png)
 
-When creating a cube, to compile the code it is necessary to include the NuGet package [StockSharp.Diagram.Core](https://www.nuget.org/packages/stockSharp.diagram.core), where the base class for all cubes [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) is located.
+When creating a cube, include the NuGet package [StockSharp.Diagram.Core](https://www.nuget.org/packages/stockSharp.diagram.core) to compile the code. It contains the base class for all cubes: [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement).
 
 When adding connected cubes or indicators to the diagram, you need to follow the steps described in the sections for a [cube](../using_code/csharp/creating_your_own_cube.md) or [indicator](../using_code/csharp/create_own_indicator.md).
 

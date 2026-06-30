@@ -1,6 +1,6 @@
 # BarChart
 
-**Barchart** \- Real\-time market data provider for stock quotes, Forex, news, etc.
+**Barchart** - Real-time market data provider for stock quotes, Forex, news, etc.
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

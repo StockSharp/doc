@@ -10,4 +10,4 @@ On the **Securities** tab, you can upload securities from the local storage and 
 
 ## Recommended content
 
-[Real\-time](real_time.md)
+[Real-time](real_time.md)

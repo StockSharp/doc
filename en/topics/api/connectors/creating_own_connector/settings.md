@@ -1,6 +1,6 @@
-# Storing Settings
+﻿# Storing Settings
 
-When creating your own adapter, it is important to provide the ability to save and load settings. For this, StockSharp uses the `Save` and `Load` methods, which work with the `SettingsStorage` object.
+When creating your own adapter, make sure to provide the ability to save and load settings. For this, StockSharp uses the `Save` and `Load` methods, which work with the `SettingsStorage` object.
 
 To save settings, you need to override the `Save` method:
 

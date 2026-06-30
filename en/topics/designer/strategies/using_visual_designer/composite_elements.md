@@ -6,7 +6,7 @@ A composite element is a usual schema that is saved\/loaded\/edited as any strat
 
 When you add a composite element to a schema, all unconnected parameters of all inner cubes are automatically added to it. Unconnected parameters at the input of cubes are added as input, unconnected parameters at the output as output. Each added parameter is named in the same way as the source element and its parameter. In addition, for this element, the properties of all elements for which the **Parameters** property was specified are added.
 
-We will consider the use of composite elements in the example of the moving average intersection strategy, which illustrates the use of the [Crossing](elements/common/crossing.md) composite element several times. The strategy can open a long position when the short moving average crosses the long one bottom\-up, and a short position when the short moving average crosses the long one top\-down. The schema of the part of the moving averages intersection strategy, where the moment of moving averages intersection is determined, is shown in the figure below:
+We will consider the use of composite elements in the example of the moving average intersection strategy, which illustrates the use of the [Crossing](elements/common/crossing.md) composite element several times. The strategy can open a long position when the short moving average crosses the long one bottom-up, and a short position when the short moving average crosses the long one top-down. The schema of the part of the moving averages intersection strategy, where the moment of moving averages intersection is determined, is shown in the figure below:
 
 ![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
 

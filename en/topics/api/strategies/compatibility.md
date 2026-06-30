@@ -279,7 +279,7 @@ protected override void OnStarted2(DateTime time)
 		.Do(ProcessCandle)
 		.Apply(this);
 
-	Connector.Subscribe(subscription);
+	Subscribe(subscription);
 }
 ```
 
@@ -293,14 +293,18 @@ Rules have several important advantages over regular event handlers:
 
 ```cs
 // Example of combining rules
-Security
-	.WhenNewTrade()
-	.And(Portfolio.WhenMoneyChanged())
+var tickSub = new Subscription(DataType.Ticks, Security);
+
+tickSub
+	.WhenTickTradeReceived(this)
+	.And(Portfolio.WhenChanged(Connector))
 	.Do(() => {
-		// Code that executes only when there's a new trade
-		// AND the portfolio balance changes
+		// Code that executes only when there is a new trade
+		// and the portfolio balance changes
 	})
 	.Apply(this);
+
+Subscribe(tickSub);
 ```
 
 4. **Lifecycle management** - rules can be made one-time (`Once()`), have cancellation conditions set (`Until()`), add delayed actions, etc.
@@ -351,7 +355,7 @@ public class SmaStrategy : Strategy
 							.SetDisplay("Short SMA length", string.Empty, "Base settings")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Series", string.Empty, "Base settings");
 	}
 
@@ -377,7 +381,7 @@ public class SmaStrategy : Strategy
 			.Do(ProcessCandle)
 			.Apply(this);
 
-		Connector.Subscribe(subscription);
+		Subscribe(subscription);
 	}
 
 	private void InitChart()

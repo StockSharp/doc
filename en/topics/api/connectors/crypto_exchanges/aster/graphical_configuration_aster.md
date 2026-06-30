@@ -1,6 +1,6 @@
 # Graphical configuration Aster
 
-For all [S\#](../../../../api.md) products, graphical configuration is performed in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md).
+For all [S#](../../../../api.md) products, graphical configuration is performed in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md).
 
 Main fields:
 

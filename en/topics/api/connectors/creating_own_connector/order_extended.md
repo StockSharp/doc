@@ -1,9 +1,9 @@
-# Extended Order Conditions
+﻿# Extended Order Conditions
 
 When working with some exchanges or trading systems, standard fields for registering an order may not be enough. For example, when it is required:
 
 1. When registering [stop orders](../../orders_management/create_new_stop_order.md).
-2. When it is necessary to specify additional properties to set custom order rules.
+2. When you need to specify additional properties to set custom order rules.
 
 StockSharp provides a flexible system for working with such extended order conditions.
 

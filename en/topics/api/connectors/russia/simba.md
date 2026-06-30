@@ -1,3 +1,3 @@
-# Simba (SBE)
+﻿# Russian-Specific Connector Topic
 
-This connector is available for MOEX only. The description is provided in the [Russian version](https://doc.stocksharp.ru/topics/api/connectors/russia/simba.html).
+This topic is available only in the Russian version because it is specific to the Russian market.

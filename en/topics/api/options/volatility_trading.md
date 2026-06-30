@@ -4,7 +4,7 @@ For option quoting, a special [VolatilityQuotingStrategy](xref:StockSharp.Algo.S
 
 ## Quoting by volatility
 
-1. The [S\#](../../api.md) installation package includes the example SampleOptionQuoting, which quotes the selected strike within the specified range of volatility.
+1. The [S#](../../api.md) installation package includes the example SampleOptionQuoting, which quotes the selected strike within the specified range of volatility.
 2. Creating a connection to the [OpenECry](../connectors/stock_market/openecry.md) and starting the export:
 
    ```cs

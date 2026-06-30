@@ -1,6 +1,6 @@
-# Configuration Sterling
+﻿# Configuration Sterling
 
-To work with the **Sterling** connector, you need to use the local **Sterling Trader Pro** terminal, which is installed directly on the computer from which the connection will be made. To connect to **Sterling Trader Pro**, you have to specify the **Login** and **Password**. 
+To work with the **Sterling** connector, you need to use the local **Sterling Trader Pro** terminal, which is installed directly on the computer from which the connection will be made. To connect to **Sterling Trader Pro**, you need to specify the **Login** and **Password**.
 
 ![Sterling login](../../../../../images/sterling_login.png)
 

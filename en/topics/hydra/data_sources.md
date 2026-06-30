@@ -1,4 +1,4 @@
-# Data sources
+﻿# Data sources
 
 [Hydra](../hydra.md) has connections to various data sources. In addition to receiving historical data, the program can receive market data from brokers, while market data is received in real time. Connection to the sources is carried out using the connectors provided to the user. 
 
@@ -29,16 +29,16 @@ At the moment, [Hydra](../hydra.md) supports the following sources:
 | [Sterling](../api/connectors/stock_market/sterling.md)            | [Configuration Sterling](../api/connectors/stock_market/sterling/configuration_sterling.md)              | [Graphical configuration Sterling](../api/connectors/stock_market/sterling/graphical_configuration_sterling.md)                         |
 | [Tradier](../api/connectors/stock_market/tradier.md)              | [Configuration Tradier](../api/connectors/stock_market/tradier/configuration_tradier.md)                | [Graphical configuration Tradier](../api/connectors/stock_market/tradier/graphical_configuration_tradier.md)                           |
 | [Xignite](../api/connectors/stock_market/xignite.md)              | [Configuration Xignite](../api/connectors/stock_market/xignite/configuration_xignite.md)                | [Graphical configuration Xignite](../api/connectors/stock_market/xignite/graphical_configuration_xignite.md)                           |
-| [Yahoo](../api/connectors/stock_market/yahoo.md)                  | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration Yahoo](../api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md)                               |
+| [Yahoo](../api/connectors/stock_market/yahoo.md)                  | ---------------------------------- | [Graphical configuration Yahoo](../api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md)                               |
 
 ## Forex
 
 | Connectors                        | Connector settings                                                   | Graphical configuration                                                    |
 | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [MetaTrader](../api/connectors/forex/metatrader.md)       | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-         |
+| [MetaTrader](../api/connectors/forex/metatrader.md)       | ---------------------------------- | ----------------------------------         |
 | [DXtrade](../api/connectors/forex/dxtrade.md)                 | [Configuration DXtrade](../api/connectors/forex/dxtrade/configuration_dxtrade.md)             | [Graphical configuration DXtrade](../api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md)                 |
 | [cTrader](../api/connectors/forex/ctrader.md)                 | [Configuration cTrader](../api/connectors/forex/ctrader/configuration_ctrader.md)             | [Graphical configuration cTrader](../api/connectors/forex/ctrader/graphical_configuration_ctrader.md)                 |
-| [DukasCopy](../api/connectors/forex/dukascopy.md)         | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration DukasCopy](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md)         |
+| [DukasCopy](../api/connectors/forex/dukascopy.md)         | ---------------------------------- | [Graphical configuration DukasCopy](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md)         |
 | [FXCM](../api/connectors/forex/fxcm.md)                   | [Configuration FXCM](../api/connectors/forex/fxcm/configuration_fxcm.md)                      | [Graphical configuration FXCM](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
 | [LMAX](../api/connectors/forex/lmax.md)                   | [Configuration LMAX](../api/connectors/forex/lmax/configuration_lmax.md)                      | [Graphical configuration LMAX](../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Configuration Oanda](../api/connectors/forex/oanda/configuration_oanda.md)                    | [Graphical configuration Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
@@ -62,7 +62,7 @@ At the moment, [Hydra](../hydra.md) supports the following sources:
 | [BitStamp](../api/connectors/crypto_exchanges/bitstamp.md)         | [Configuration BitStamp](../api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md)         | [Graphical configuration BitStamp](../api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md)          |
 | [Bittrex](../api/connectors/crypto_exchanges/bittrex.md)           | [Configuration Bittrex](../api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md)           | [Graphical configuration Bittrex](../api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md)            |
 | [BitZ](../api/connectors/crypto_exchanges/bitz.md)                 | [Configuration BitZ](../api/connectors/crypto_exchanges/bitz/configuration_bitz.md)                 | [Graphical configuration BitZ](../api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md)                 |
-| [WEX (BTC\-e)](../api/connectors/crypto_exchanges/wex_btc_e.md)         | [Configuration WEX (BTC\-e)](../api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md)         | [Graphical configuration WEX (BTC\-e)](../api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md)           |
+| [WEX (BTC-e)](../api/connectors/crypto_exchanges/wex_btc_e.md)         | [Configuration WEX (BTC-e)](../api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md)         | [Graphical configuration WEX (BTC-e)](../api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md)           |
 | [ByBit](../api/connectors/crypto_exchanges/bybit.md)                     | [Configuration ByBit](../api/connectors/crypto_exchanges/bybit/configuration_bybit.md)                     | [Graphical configuration ByBit](../api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md)                     |
 | [Bybit History](../api/connectors/crypto_exchanges/bybit_history.md)                     | [Configuration Bybit History](../api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md)                     | [Graphical configuration Bybit History](../api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md)                     |
 | [BW](../api/connectors/crypto_exchanges/bw.md)                     | [Configuration BW](../api/connectors/crypto_exchanges/bw/configuration_bw.md)                     | [Graphical configuration BW](../api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md)                      |
@@ -119,7 +119,7 @@ At the moment, [Hydra](../hydra.md) supports the following sources:
 
 | Connectors             | Connector settings                                                   | Graphical configuration                                  |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
-| [CSV](../api/connectors/common/csv.md)          | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration CSV](../api/connectors/common/csv/graphical_configuration_csv.md)   |
+| [CSV](../api/connectors/common/csv.md)          | ---------------------------------- | [Graphical configuration CSV](../api/connectors/common/csv/graphical_configuration_csv.md)   |
 | [FIX protocol](../api/connectors/common/fix_protocol.md) | [Configuration FIX](../api/connectors/common/fix_protocol/configuration_fix.md)                        | [Graphical configuration FIX](../api/connectors/common/fix_protocol/graphical_configuration_fix.md)   |
 | [FAST protocol](../api/connectors/common/fast_protocol.md) | [Configuration FAST](../api/connectors/common/fast_protocol/adapter_initialization_fast.md)                        | [Graphical configuration FAST](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
-| [RSS](../api/connectors/common/rss.md)          | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Graphical configuration RSS](../api/connectors/common/rss/graphical_configuration_rss.md)   |
+| [RSS](../api/connectors/common/rss.md)          | ---------------------------------- | [Graphical configuration RSS](../api/connectors/common/rss/graphical_configuration_rss.md)   |

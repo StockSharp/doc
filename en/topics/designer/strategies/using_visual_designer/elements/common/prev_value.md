@@ -6,16 +6,16 @@ The cube is used to obtain the previous value passed to the input, with the spec
 
 ## Incoming sockets
 
-- **Any data** \- a certain type of data received and passed.
+- **Any data** - a certain type of data received and passed.
 
 ## Outgoing sockets
 
-- **Any data** \- a certain type of data received and passed, entered at the input with the offset specified in the parameters.
+- **Any data** - a certain type of data received and passed, entered at the input with the offset specified in the parameters.
 
 ## Parameters
 
-- **Data type** \- the data type that can be entered through the input socket. If you change this parameter, the data type for the parameters is automatically changed.
-- **Offset** \- the size of the offset, the output value for how many changes will lag behind the input one.
+- **Data type** - the data type that can be entered through the input socket. If you change this parameter, the data type for the parameters is automatically changed.
+- **Offset** - the size of the offset, the output value for how many changes will lag behind the input one.
 
 ## Recommended content
 

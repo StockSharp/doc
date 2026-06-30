@@ -1,6 +1,6 @@
 # Blackwood (Fusion)
 
-**Fusion (Blackwood)** \- platforms for trading stocks on exchanges NYSE, NASDAQ, AMEX, etc.
+**Fusion (Blackwood)** - platforms for trading stocks on exchanges NYSE, NASDAQ, AMEX, etc.
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

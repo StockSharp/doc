@@ -1,4 +1,4 @@
-# Instrument Lookup
+﻿# Instrument Lookup
 
 When creating your own adapter for working with an exchange, you need to implement the instrument lookup method. This method is called when sending a [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) message and returns information about instruments through [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) messages.
 
@@ -48,7 +48,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
 				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-				// It is necessary to fill in the subscription identifier
+				// you need to fill in the subscription identifier
 				// so that the external code can understand which subscription the data was received for
 				OriginalTransactionId = lookupMsg.TransactionId,
 			}

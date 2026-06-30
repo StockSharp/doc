@@ -17,11 +17,11 @@ Using ready-made DLLs is familiar to those who want to work continuously in **Vi
 
 ![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
-3. To compile the code, it is necessary to include the NuGet package [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), where the base class for all strategies [Strategy](xref:StockSharp.Algo.Strategies.Strategy) is located:
+3. To compile the code, include the NuGet package [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), which contains the base class for all strategies: [Strategy](xref:StockSharp.Algo.Strategies.Strategy).
 
 ![Designer Creating a DLL cube in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
 
-If the strategy uses charting interfaces, it is necessary to include the NuGet package [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). These interfaces do not contain the logic of the actual chart and are only needed for compiling the code. In the case of launching the strategy in **Designer**, real data rendering on the chart will occur through these interfaces.
+If the strategy uses charting interfaces, include the NuGet package [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). These interfaces do not contain the actual chart logic and are needed only to compile the code. When the strategy runs in **Designer**, real chart rendering happens through these interfaces.
 
 4. After creating the strategy, the project needs to be built by pressing **Build Solution** in the **Build** tab.
 

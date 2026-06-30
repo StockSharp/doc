@@ -1,6 +1,6 @@
 # Runner
 
-**Runner** is a special program for launching strategies written on the StockSharp platform. Features of the program include:
+**Runner** is an application for launching strategies written for the StockSharp platform. It provides:
 
 - Cross-platform - can be run on both Windows and Linux systems.
 
@@ -8,6 +8,6 @@
 
 - Consumes minimal computer resources due to the absence of a heavy graphical interface.
 
-- Capable of launching strategies in the form of C# code, in the form of [Designer](designer.md) schematics, and as ready-made DLL assemblies.
+- Launching strategies from C# code, [Designer](designer.md) schemas, or ready-made DLL assemblies.
 
-- Allows strategies to be run in live trading mode, as well as for testing on history.
+- Running strategies in live trading mode or in backtesting on historical data.

@@ -1,26 +1,28 @@
 # Instrument identifier
 
-The instruments in the [S\#](../../api.md) from different sources have the [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) uniform identifier. This is done so that the trading algorithm code does not depend on the type of connection ([OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) etc.). For the instrument identifier the following syntax is used \- **\[instrument code\]@\[board code\]**. For example, for the Apple inc shares identifier will be **AAPL@NASDAQ**. For the derivatives market instruments board will be **NYSE** (or other board name where **AAPL** futures trade). For example, for the June futures on the ES index the identifier will be **ESM5@NYSE**. 
+In [S#](../../api.md), instruments from different sources use a unified [Security.Id](xref:StockSharp.BusinessEntities.Security.Id). This keeps trading algorithm code independent of the connection type, such as [OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md), or [Interactive Brokers](../connectors/stock_market/interactive_brokers.md).
+
+Instrument identifiers use the following syntax: **\[instrument code\]@\[board code\]**. For Apple Inc. shares, the identifier is **AAPL@NASDAQ**. For derivatives, the board code is the board on which the contract is traded. For example, the June futures contract on the ES index can be identified as **ESM5@NYSE**.
 
 > [!TIP]
-> The [Hydra](../../hydra.md) application for market data download enumerates folders with a history based on the same mechanism. 
+> [Hydra](../../hydra.md) uses the same mechanism to name folders with historical market data.
 
-## Identifiers generation algorithm overriding
+## Overriding the identifier generation algorithm
 
-1. To start the instrument identifiers generation on the own algorithm, you must create the descendant of the [SecurityIdGenerator](xref:StockSharp.Messages.SecurityIdGenerator) class, and override the [SecurityIdGenerator.GenerateId](xref:StockSharp.Messages.SecurityIdGenerator.GenerateId(System.String,System.String))**(**[System.String](xref:System.String) secCode, [System.String](xref:System.String) boardCode **)** method: 
+1. To generate instrument identifiers with your own algorithm, create a descendant of the [SecurityIdGenerator](xref:StockSharp.Messages.SecurityIdGenerator) class and override the [SecurityIdGenerator.GenerateId](xref:StockSharp.Messages.SecurityIdGenerator.GenerateId(System.String,System.String))**(**[System.String](xref:System.String) secCode, [System.String](xref:System.String) boardCode **)** method:
 
    ```cs
    class CustomSecurityIdGenerator : SecurityIdGenerator
    {
-      public override string GenerateId(string secCode, ExchangeBoard board)
+      public override string GenerateId(string secCode, string boardCode)
       {
-         // will be generate in CODE--BOARD form
-         return secCode + "--" + board.Code;
+         // generate identifiers in CODE--BOARD format
+         return secCode + "--" + boardCode;
       }
    }
    ```
 
-2. Then, the created generator must be passed to the connector: 
+2. Pass the created generator to the connector:
 
    ```cs
    connector.SecurityIdGenerator = new CustomSecurityIdGenerator();

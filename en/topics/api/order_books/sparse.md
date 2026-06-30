@@ -1,4 +1,4 @@
-# Sparse Order Book
+﻿# Sparse Order Book
 
 A sparse order book is a presentation of the order book that displays all possible price levels, including those without any active orders at the moment. This approach allows traders to visually assess the "gaps" between orders, i.e., price levels where there are no buy or sell orders, giving an insight into potential resistance or support levels.
 
@@ -15,7 +15,7 @@ Using a sparse order book has several advantages:
 To work with a grouped order book, you first need to set up reception through [subscriptions](subscriptions.md), and then call the extension method [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). The method takes the following parameters:
 
 - `priceRange` - the price difference up to which levels need to be expanded.
-- `priceStep` - the trading instrument's price step. It is used in case `priceRange` has a lower precision on price levels than `priceStep`, and it is necessary to round the obtained prices to the instrument's price step.
+- `priceStep` - the trading instrument's price step. It is used in case `priceRange` has a lower precision on price levels than `priceStep`, and you need to round the obtained prices to the instrument's price step.
 
 ```cs
 // It is assumed that orderBook is an IOrderBookMessage object obtained from StockSharp

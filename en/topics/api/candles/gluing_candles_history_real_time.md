@@ -2,7 +2,7 @@
 
 To combine historical candles with real-time data, you need to initialize the appropriate storages: storage for trading objects [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), storage for market data [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), and snapshot storage registry [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
-Let's look at an example from the Samples/Candles/CombineHistoryRealtime project:
+The `Samples/Candles/CombineHistoryRealtime` project shows this setup in practice:
 
 ## Setting Up Storages and Connector
 
@@ -14,19 +14,25 @@ public partial class MainWindow
 	
 	// Path to historical data
 	private readonly string _pathHistory = Paths.HistoryDataPath;
+
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
 	
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
+
+	private readonly ChannelExecutor _executor;
 	
 	public MainWindow()
 	{
 		InitializeComponent();
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
 		
 		// Initialize storages
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		
 		// Create connector with configured storages
@@ -35,16 +41,16 @@ public partial class MainWindow
 			entityRegistry.PositionStorage, 
 			new InMemoryExchangeInfoProvider(), 
 			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 		
 		// Register message adapter provider
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 		
 		// Load connector settings if file exists
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 		
 		// Set default candle data type (5-minute)
@@ -63,7 +69,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 	if (_connector.Configure(this))
 	{
 		// Save settings to file
-		_connector.Save().Serialize(_connectorFile);
+		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
@@ -144,11 +150,13 @@ namespace StockSharp.Samples.Candles.CombineHistoryRealtime;
 
 using System;
 using System.Windows;
-using System.IO;
 
 using Ecng.Common;
 using Ecng.Serialization;
 using Ecng.Configuration;
+using Ecng.ComponentModel;
+using Ecng.Logging;
+using Ecng.IO;
 
 using StockSharp.Configuration;
 using StockSharp.Algo;
@@ -169,42 +177,55 @@ public partial class MainWindow
 	private const string _connectorFile = "ConnectorFile.json";
 
 	private readonly string _pathHistory = Paths.HistoryDataPath;
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
 
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
+
+	private readonly ChannelExecutor _executor;
 	
 	public MainWindow()
 	{
 		InitializeComponent();
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
+
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		_connector = new Connector(
 			entityRegistry.Securities, 
 			entityRegistry.PositionStorage, 
 			new InMemoryExchangeInfoProvider(), 
 			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
 		// registering all connectors
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
+	}
+
+	protected override void OnClosed(EventArgs e)
+	{
+		AsyncHelper.Run(_executor.DisposeAsync);
+
+		base.OnClosed(e);
 	}
 
 	private void Setting_Click(object sender, RoutedEventArgs e)
 	{
 		if (_connector.Configure(this))
 		{
-			_connector.Save().Serialize(_connectorFile);
+			_connector.Save().Serialize(_fileSystem, _connectorFile);
 		}
 	}
 
@@ -250,10 +271,13 @@ public partial class MainWindow
 
 ## Example Features
 
+> [!IMPORTANT]
+> All classes that work with the file system ([CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive), [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)) require an `IFileSystem` instance in the constructor. Use `Paths.FileSystem` for the standard implementation. `CsvEntityRegistry` also requires `ChannelExecutor` to synchronize disk access. Serialization methods (`Serialize`, `Deserialize`) also accept `IFileSystem` as a parameter.
+
 1. **Creating Storages**:
-   - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) is used for storing entities
+   - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) is used for storing entities and requires `IFileSystem` and `ChannelExecutor`
    - [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) is configured with path to storage
-   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) is created for working with snapshots
+   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) is created for working with snapshots and requires `IFileSystem`
 
 2. **Creating Subscription**:
    - The class [Subscription](xref:StockSharp.BusinessEntities.Subscription) is used
@@ -270,7 +294,7 @@ public partial class MainWindow
 
 ## Extended Capabilities
 
-This example can be extended by adding the following functions:
+You can extend this sample with the following functions:
 
 ### Tracking Transition to Real-Time Mode
 
@@ -301,20 +325,6 @@ private void SetHistoryPeriod(int days)
 		_subscription.MarketData.From = DateTime.Today.AddDays(-days);
 		
 		_connector.Subscribe(_subscription);
-	}
-}
-```
-
-### Saving Received Data
-
-```cs
-// Method for saving received data
-private void SaveReceivedData()
-{
-	if (_connector.StorageAdapter != null)
-	{
-		// Force save cached data to disk
-		_connector.StorageAdapter.Flush();
 	}
 }
 ```

@@ -14,13 +14,13 @@ Incoming sockets
 
 Outgoing sockets
 
-- **Any data** \- the element from the collection with the index specified in the parameters.
+- **Any data** - the element from the collection with the index specified in the parameters.
 
 ### Parameters
 
 Parameters
 
-- **Index** \- the index of the required element.
+- **Index** - the index of the required element.
 
 ## Recommended content
 

@@ -1,15 +1,15 @@
 # Statistics
 
-[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- is a table to display parameters and statistics of the strategies.
+[StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) - is a table to display parameters and statistics of the strategies.
 
 ![GUI StrategiesStatisticsPanel](../../../../images/gui_strategiesstatisticspanel.png)
 
 **Main properties and methods**
 
-- [StrategiesStatisticsPanel.SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) \- the selected strategy.
-- [StrategiesStatisticsPanel.SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) \- selected strategies.
-- [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategy **)** \- adds strategies to the table.
-- [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) name, [System.Windows.Visibility](xref:System.Windows.Visibility) visibility **)** \- sets the visibility of the columns in the table.
+- [StrategiesStatisticsPanel.SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) - the selected strategy.
+- [StrategiesStatisticsPanel.SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) - selected strategies.
+- [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategy **)** - adds strategies to the table.
+- [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) name, [System.Windows.Visibility](xref:System.Windows.Visibility) visibility **)** - sets the visibility of the columns in the table.
 
 Below is the code snippet with its use. The code example is taken from *Samples\/Testing\/SampleHistoryTestingParallel*. 
 

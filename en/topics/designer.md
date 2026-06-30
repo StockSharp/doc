@@ -1,9 +1,9 @@
 # Designer
 
-**Designer** is a program that allows you to create trading strategies, test them on history and manage strategies for real trading. Designer offers the following ways of creating strategies: 
+**Designer** is an application for creating trading strategies, backtesting them on historical data, and managing strategies in live trading. Designer supports two ways to create strategies:
 
-1. [Using visual designer](designer/strategies/using_visual_designer.md), it does not require programming skills. The process of creating a strategy is accomplished by combining cubes and connections (lines). At the same time, the whole process of work is visually represented.
-2. [Using code](designer/strategies/using_code.md), it is for experienced programmers who prefer to work with the code. Strategies written in **C#**, **F#** or **Python** work much faster than strategies written in a visual designer. Also, such strategies are not limited in capabilities during creation, and it is possible to write any algorithm, unlike cubes. The process of creating the strategy runs directly in **Designer** or the development environment in C\# (the most popular of the development environments is **Microsoft Visual Studio**), using the library for professional development of trading algorithms in **C\#** and [API](api.md).
+1. [Visual Designer](designer/strategies/using_visual_designer.md) does not require programming skills. Strategies are built by combining blocks and connecting them with lines, so the full workflow is shown visually.
+2. [Code-based strategies](designer/strategies/using_code.md) are intended for experienced programmers. Strategies written in **C#**, **F#**, or **Python** usually run faster than visual strategies and are not limited by the available visual blocks. You can write strategies directly in **Designer** or in a C# development environment such as **Microsoft Visual Studio**, using the [API](api.md) library for professional trading algorithm development.
 
 ![StockSharpTitle 0](../images/stocksharptitle_0.png)
 

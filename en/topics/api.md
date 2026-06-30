@@ -2,28 +2,28 @@
 
 ## Overview
 
-StockSharp API, also known as S# API, is a comprehensive Software Development Kit (SDK) designed for creating trading applications similar to [Designer](designer.md), [Terminal](terminal.md), and others. This SDK serves as the architectural foundation for numerous significant projects within the trading community.
+StockSharp API, also known as S# API, is a software development kit (SDK) for building trading applications such as [Designer](designer.md), [Terminal](terminal.md), and other custom trading tools. It provides the core infrastructure for market data, order routing, strategy execution, testing, and trading UI components.
 
 ## Features
 
-- **Strategy Scripting**: StockSharp API provides a robust scripting mechanism for writing and implementing trading strategies directly in [Designer](designer/strategies/using_code.md). Users can develop, test, and deploy trading algorithms using C#, F# or Python.
+- **Strategy scripting**: StockSharp API lets users write and run trading strategies directly in [Designer](designer/strategies/using_code.md). Strategies can be developed, tested, and deployed using C#, F#, or Python.
 
-- **Analytical Tools**: The API is integrated with Hydra, a platform for detailed [market data analysis](hydra/analytics.md). It offers extensive support for data manipulation and storage, enabling complex analytical operations.
+- **Analytics tools**: The API integrates with Hydra for detailed [market data analysis](hydra/analytics.md). It supports data processing, storage, and custom analytical workflows.
 
-- **Custom Application Development**: Besides scripting within existing applications, StockSharp API allows developers to create custom [independent trading solutions](api/examples.md). This feature is crucial for users who require tailor-made functionalities not typically available in standard trading applications.
+- **Custom application development**: Developers can use StockSharp API to build standalone [trading solutions](api/examples.md) instead of relying only on built-in application scripting.
 
-- **Connectors and Graphical Controls**: The API includes a wide range of [connectors](api/connectors.md) for real-time market data integration from various exchanges. Additionally, it supports the development of customizable [graphical user interfaces](api/graphical_user_interface.md), making it versatile for creating professional trading platforms.
+- **Connectors and graphical controls**: The API includes many [connectors](api/connectors.md) for real-time market data and trading access. It also provides customizable [graphical user interface](api/graphical_user_interface.md) components for building professional trading platforms.
 
 ## Architecture
 
-StockSharp API is built with a focus on modularity and [extensibility](api/connectors/creating_own_connector.md). It enables developers to extend its capabilities through plugins and additional modules without altering the core system. This modular architecture makes it an ideal choice for developers looking to build scalable and maintainable trading applications.
+StockSharp API is built around modularity and [extensibility](api/connectors/creating_own_connector.md). Developers can extend it with plugins and additional modules without changing the core system. This architecture helps build scalable and maintainable trading applications.
 
 ## Open Source
 
-The core of the StockSharp API is developed under an open-source paradigm, allowing the community to contribute and ensuring transparency. The source code is available on GitHub, providing both novice and experienced developers with the opportunity to study, modify, and enhance the system according to their specific needs.
+The core of StockSharp API is open source. The source code is available on GitHub, so developers can study it, modify it, and contribute improvements.
 
 ## GitHub Repository
 
-The official StockSharp API source code can be found at the GitHub repository:
+The official StockSharp API source code is available in the GitHub repository:
 
 [StockSharp GitHub Repository](https://github.com/stocksharp/stocksharp)

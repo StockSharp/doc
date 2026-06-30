@@ -1,12 +1,12 @@
-# Themes of S\# graphic components
+﻿# Themes of S# graphic components
 
-For all S\# graphic elements, there are several different themes. Below are the two most popular themes.
+For all S# graphic elements, there are several different themes. Below are the two most popular themes.
 
 ![API GUI Thems 01](../../../images/api_gui_thems_01.png)
 
 ![API GUI Thems 02](../../../images/api_gui_thems_02.png)
 
-To install the application theme, just write one line. For example, to set the VisualStudio 2017 dark theme, you have to specify the line:
+To install the application theme, just write one line. For example, to set the VisualStudio 2017 dark theme, you need to specify the line:
 
 ```cs
 ...
@@ -14,4 +14,4 @@ ThemeExtensions.ApplyDefaultTheme();
 ...
 ```
 
-Since all S\# graphics elements are based on **DevExpress** graphic elements, you need to add the appropriate **DevExpress** libraries (**DevExpress.Xpf.Core**, **DevExpress.Xpf.Themes.VS2017Dark**, etc.)
+Since all S# graphics elements are based on **DevExpress** graphic elements, you need to add the appropriate **DevExpress** libraries (**DevExpress.Xpf.Core**, **DevExpress.Xpf.Themes.VS2017Dark**, etc.)

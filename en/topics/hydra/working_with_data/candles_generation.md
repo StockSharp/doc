@@ -26,11 +26,11 @@ This allows you to use the generated data in any technical analysis programs (We
 
 ### Example of Timeframe Candle Generation
 
-To generate 5-minute candles for the SBER@TQBR instrument:
+To generate 5-minute candles for the AAPL@NASDAQ instrument:
 
 1. Select the candle type [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)
 2. Set **Timeframe** = 5 min
-3. Select the SBER@TQBR instrument
+3. Select the AAPL@NASDAQ instrument
 4. Click the search button
 
 After data generation, you will see the result:

@@ -1,13 +1,13 @@
 # Hydra Server
 
-**Hydra Server** is a special service that can broadcast data over the network for connecting external programs (for example, [Designer](designer.md)).
+**Hydra Server** is a service that broadcasts data over the network so external programs, such as [Designer](designer.md), can connect to it.
 
 Unlike [server mode](hydra/server_mode/settings.md), **Hydra Server** is a separate cross-platform program made as a console application and can be run on Windows or Linux servers.
 
 > [!TIP]
-> Under Windows, the program can be registered as a Windows Service and launched at computer startup. For more details about [services](https://en.wikipedia.org/wiki/Windows_service).
+> On Windows, Hydra Server can be registered as a Windows Service and launched automatically at system startup. For more information, see [Windows service](https://en.wikipedia.org/wiki/Windows_service).
 
-**Hydra Server** uses the same settings as [Hydra](hydra.md). Therefore, for initial setup, it is necessary to run the [Hydra](hydra.md) program and then use the settings created by the **Hydra Server** program.
+**Hydra Server** uses the same settings as [Hydra](hydra.md). For initial setup, run [Hydra](hydra.md) first and then use the settings created by Hydra Server.
 
 ![Hydra server](../images/hydraserver_console.png)
 

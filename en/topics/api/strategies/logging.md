@@ -171,7 +171,7 @@ protected override void OnStopped()
 ### Logging Trades
 
 ```cs
-protected override void OnOwnTradeReceived(MyTrade trade)
+protected override void OnNewMyTrade(MyTrade trade)
 {
 	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
 		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
@@ -180,7 +180,7 @@ protected override void OnOwnTradeReceived(MyTrade trade)
 		trade.Trade.Price,
 		trade.Trade.Volume);
 
-	base.OnOwnTradeReceived(trade);
+	base.OnNewMyTrade(trade);
 }
 ```
 
@@ -194,6 +194,26 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 	
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
+```
+
+## Connecting Log Listeners
+
+To receive messages from a strategy, connect listeners through [LogManager](xref:Ecng.Logging.LogManager):
+
+```cs
+var logManager = new LogManager();
+
+// Write to file
+var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
+logManager.Listeners.Add(fileListener);
+
+// Send email
+var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
+emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
+logManager.Listeners.Add(emailListener);
+
+// Add strategy as a log source
+logManager.Sources.Add(strategy);
 ```
 
 ## Viewing Logs

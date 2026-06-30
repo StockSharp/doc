@@ -8,17 +8,17 @@ The cube is used to convert complex objects into simple data types. For example,
 
 Incoming sockets
 
-- **Any data** \- a certain type of complex objects that are received.
+- **Any data** - a certain type of complex objects that are received.
 
 ### Outgoing sockets
 
 Outgoing sockets
 
-- **Any data** \- the value of the selected property for the received object.
+- **Any data** - the value of the selected property for the received object.
 
 ### Parameters
 
 Parameters
 
-- **Data type** \- the type of data to be input. The type of the input parameter depends on the selected value.
+- **Data type** - the type of data to be input. The type of the input parameter depends on the selected value.
 - **Property** – the tree of selected type properties, which can be obtained at the output of the cube. The set of available properties depends on the selected data type and appears only after selecting the required data type.

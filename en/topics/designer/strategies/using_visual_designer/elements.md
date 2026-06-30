@@ -1,6 +1,6 @@
 # Elements
 
-Inside each cube, an icon is displayed that characterizes it, as well as a name that can be changed to a user\-defined one in the **Properties** panel. A tooltip for the cube shows a description of what this cube is for. When you select a cube with a mouse, you can view its properties in the **Properties** panel and, if necessary, change some parameters.
+Inside each cube, an icon is displayed that characterizes it, as well as a name that can be changed to a user-defined one in the **Properties** panel. A tooltip for the cube shows a description of what this cube is for. When you select a cube with a mouse, you can view its properties in the **Properties** panel and, if necessary, change some parameters.
 
 ![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
 

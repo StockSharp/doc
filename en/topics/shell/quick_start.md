@@ -1,6 +1,6 @@
 # Quick start
 
-[Shell](../shell.md) - is focused on programming in [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
+[Shell](../shell.md) - is focused on programming in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
 
 When you start the [Shell](../shell.md) project, the Solution Explorer displays the Shell project:
 
@@ -24,7 +24,7 @@ After connecting, on the [Common](user_interface/common.md) tab, you can see the
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
-Go to the Real\-time tab and click the **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) button to add a strategy for trading.
+Go to the Real-time tab and click the **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) button to add a strategy for trading.
 
 ![Shell Quick start 03](../../images/shell_quick_start_03.png)
 
@@ -32,6 +32,6 @@ Once the strategy is added, fill in its basic parameters such as **Security**, *
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-Similar to the [Real\-time](user_interface/real_time.md) tab, you can run a strategy test on historical data on the [Emulation](user_interface/emulation.md) tab.
+Similar to the [Real-time](user_interface/real_time.md) tab, you can run a strategy test on historical data on the [Emulation](user_interface/emulation.md) tab.
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

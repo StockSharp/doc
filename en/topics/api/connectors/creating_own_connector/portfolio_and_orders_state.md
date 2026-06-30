@@ -1,6 +1,6 @@
-# Information about Portfolios and Orders
+﻿# Information about Portfolios and Orders
 
-When creating your own adapter for working with an exchange, it is necessary to implement methods for requesting the current state of the portfolio and orders. These methods are called when receiving [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) and [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) messages respectively.
+When creating your own adapter for working with an exchange, you need to implement methods for requesting the current state of the portfolio and orders. These methods are called when receiving [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) and [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) messages respectively.
 
 ## Requesting Portfolio State
 

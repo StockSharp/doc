@@ -25,16 +25,17 @@ For configuring [Connector](xref:StockSharp.Algo.Connector), the **API** has a s
 
 ```cs
 ...
+private readonly IFileSystem _fileSystem = Paths.FileSystem;
 private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
 	if (Connector.Configure(this))
 	{
-		Connector.Save().Serialize(_connectorFile);
+		Connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
-	  				
+
 ```
 
 ![API GUI ConnectorWindow](../../images/api_gui_connectorwindow.png)
@@ -54,7 +55,6 @@ connector.AddAdapter<BinanceMessageAdapter>(a =>
 connector.AddAdapter<RssMessageAdapter>(a => 
 {
 	a.Address = "https://news-source.com/feed";
-	a.IsEnabled = true;
 });
 	  				
 ```
@@ -87,7 +87,7 @@ private void InitConnector()
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
 	
 	// Subscribe to market data subscription failure event
-	Connector.SubscriptionFailed += (subscription, error) =>
+	Connector.SubscriptionFailed += (subscription, error, isSubscribe) =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
 			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
 	
@@ -124,7 +124,7 @@ private void InitConnector()
 			var ctx = new ContinueOnExceptionContext();
 			ctx.Error += ex => ex.LogError();
 			using (new Scope<ContinueOnExceptionContext>(ctx))
-				Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+				Connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 	}
 	catch
@@ -135,7 +135,7 @@ private void InitConnector()
 	
 	// Register adapter provider for graphical configuration
 	ConfigManager.RegisterService<IMessageAdapterProvider>(
-		new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
+		new InMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }
 ```
 
@@ -145,6 +145,45 @@ Information about creating your own [Connector](xref:StockSharp.Algo.Connector) 
 
 Order placement is described in the sections [Orders](orders_management.md), [Creating a New Order](orders_management/create_new_order.md), [Creating a New Stop Order](orders_management/create_new_stop_order.md).
 
-## See Also
+## Additional features
+
+### IFileSystem and Paths.FileSystem
+
+Use `IFileSystem` for file operations such as serializing and deserializing settings. The default instance is available through `Paths.FileSystem`:
+
+```cs
+private readonly IFileSystem _fileSystem = Paths.FileSystem;
+```
+
+`Serialize` and `Deserialize` methods without the `IFileSystem` parameter are marked as `[Obsolete]`.
+
+### Asynchronous order methods
+
+The following asynchronous methods are available for working with orders:
+
+- `RegisterOrderAsync` - asynchronously registers an order.
+- `CancelOrderAsync` - asynchronously cancels an order.
+- `EditOrderAsync` - asynchronously edits an order.
+
+### SubscriptionsOnConnect
+
+The `SubscriptionsOnConnect` property controls subscriptions that are automatically performed on connection. By default, it includes subscriptions to instruments, portfolios, and orders.
+
+### Adapter events
+
+The following events are available for tracking events of specific adapters:
+
+- `ConnectedEx` - a specific adapter has connected.
+- `DisconnectedEx` - a specific adapter has disconnected.
+- `ConnectionErrorEx` - a connection error occurred for a specific adapter.
+
+### Subscription lifecycle
+
+- `SubscriptionStarted` - the subscription has started.
+- `SubscriptionOnline` - the subscription has switched to online state: historical data has been received and real-time data transmission has started.
+- `SubscriptionFailed` - subscription error. The third parameter, `isSubscribe`, indicates whether the error occurred during subscription or unsubscription.
+- `SubscriptionStopped` - the subscription has stopped.
+
+## See also
 
 [Graphical Configuration](connectors/graphical_configuration.md)

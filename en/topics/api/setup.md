@@ -100,11 +100,9 @@ Each connector is a separate NuGet package. Main connectors:
 | `StockSharp.Binance` | Binance |
 | `StockSharp.InteractiveBrokers` | Interactive Brokers |
 | `StockSharp.Fix` | FIX protocol (universal) |
-| `StockSharp.Connectors.Tinkoff` | Tinkoff Invest |
 | `StockSharp.Connectors.Coinbase` | Coinbase |
 | `StockSharp.Connectors.BitStamp` | Bitstamp |
 | `StockSharp.Connectors.Bittrex` | Bittrex |
-| `StockSharp.Finam` | Finam |
 
 > [!NOTE]
 > For the full list of connectors, see the [Connectors](connectors.md) section. Some connectors are only available through the [private NuGet server](#private-nuget-server).

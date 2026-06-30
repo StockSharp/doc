@@ -8,13 +8,13 @@
 Launching **Runner** for historical data testing:
 
 ```cmd
-b -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR -r json
+b -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec AAPL@NASDAQ -r json
 ```
 
 Available parameters:
 
 - -s - path to the strategy file (with cs, json, or dll extension).
-- -t - (optional) if a dll file is selected, and the assembly contains more than one strategy class, it is necessary to specify the required type through this parameter.
+- -t - (optional) if a dll file is selected, and the assembly contains more than one strategy class, you need to specify the required type through this parameter.
 - -h - path to the directory with historical data. Can be a network address in case of using server mode [server](../hydra_server.md).
 - --hl - (optional) login, used in server mode [server](../hydra_server.md).
 - --hp - (optional) password, used in server mode [server](../hydra_server.md).
@@ -31,7 +31,7 @@ Available parameters:
 Launching **Runner** for optimization:
 
 ```cmd
-o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR -r json -p sma_optimization.json
+o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec AAPL@NASDAQ -r json -p sma_optimization.json
 ```
 All parameters from the historical testing mode, plus additional ones:
 
@@ -55,7 +55,7 @@ Parameters file format:
 	},
 	{
 	"Name": "Security",
-	"Value": "SBER@TQBR,GAZP@TQBR"
+	"Value": "AAPL@NASDAQ,MSFT@NASDAQ"
 	}
 ]
 ```

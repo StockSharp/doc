@@ -1,6 +1,6 @@
 # Bitalong
 
-**Bitalong** \- cryptocurrency exchange.
+**Bitalong** - cryptocurrency exchange.
 
 Before you start writing trading robots for this trading platform, we recommend reading the links in the [Connectors](../../connectors.md) section. 
 

@@ -4,11 +4,11 @@ The **Orders** component is a table with orders, which displays complete informa
 
 ![Terminal Quick start 04](../../../../images/terminal_quick_start_04.png)
 
-When you click the **Order Registration** button, a window appears. To register a new order, you have to fill it out and click the **Send** button.
+When you click the **Order Registration** button, a window appears. To register a new order, fill it out and click **Send**.
 
 ![Terminal OrderPanel 01](../../../../images/terminal_orderpanel_01.png)
 
-When you click the **Change Order** button, a window appears. To change the order, you have to make the required changes and click the **Send** button.
+When you click the **Change Order** button, a window appears. To change the order, make the required changes and click **Send**.
 
 ![Terminal OrderPanel 02](../../../../images/terminal_orderpanel_02.png)
 

@@ -1,10 +1,10 @@
-# First start
+﻿# First start
 
 The first time you run it, the following window for selecting data sources appears. You can also open this window in the **Common** tab by selecting **Add \=\> Sources**.
 
 ![hydra source add](../../images/hydra_source_add.png)
 
-In the window, mark the required sources. You can use filters by region, board, data type, payment, real\-time or not. When the selection is complete, click **OK**. Then the program will offer to enable the utilities. For more details on working with the utilities, see the [Utilities](tasks.md) section. Click **OK**.
+In the window, mark the required sources. You can use filters by region, board, data type, payment, real-time or not. When the selection is complete, click **OK**. Then the program will offer to enable the utilities. For more details on working with the utilities, see the [Utilities](tasks.md) section. Click **OK**.
 
 ![hydra first started utilities 00](../../images/hydra_first_started_utilities00.png)
 
@@ -18,7 +18,7 @@ Before you start downloading market data, you need to set up the securities for 
 
 After adding market data sources, panels of added sources will be opened in the central part, where a list of securities is displayed. If the panel is closed, then to open it, double click the source logo in the list on the left side of the program.
 
-For example, download the SBER@TQBR securities (stock of Sber Bank) from the ФИНАМ source. 
+For example, download the AAPL@NASDAQ security from a supported data source.
 
 ![hydra choose market data](../../images/hydra_choose_market_data.png)
 
@@ -31,7 +31,7 @@ For example, download the SBER@TQBR securities (stock of Sber Bank) from the Ф�
 
    To add a security, click on the **Add** ![hydra add](../../images/hydra_add.png) button. Then a window for downloading the security will open. ![hydra securities](../../images/hydra_securities.png)
 
-   To download the securities, you have to click the corresponding **Download securities** button. 
+   To download the securities, you need to click the corresponding **Download securities** button.
 
    After that, a menu will appear on the screen, in which the user can select **Download all securities**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
 
@@ -41,11 +41,11 @@ For example, download the SBER@TQBR securities (stock of Sber Bank) from the Ф�
 
    It will list all the securities available for adding. For a quick search, you can enter its name in the appropriate field. 
 
-   To select a security, double\-click on it and it will move to the right side of the list.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+   To select a security, double-click on it and it will move to the right side of the list.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
 
    Then it will move to the right side of the table.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
 
-   The selected instruments will be displayed in the **Securities** table, which is a tree\-structured table. The main element of which is the security, the additional one is the market data types that will be received for this security.
+   The selected instruments will be displayed in the **Securities** table, which is a tree-structured table. The main element of which is the security, the additional one is the market data types that will be received for this security.
 2. For each selected security, you should select the market data types required for downloading.
 
    If all the necessary security parameters are not set, the icon ![hydra zero](../../images/hydra_zero.png) will appear in the left column of the security line. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)

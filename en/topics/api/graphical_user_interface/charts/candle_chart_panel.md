@@ -6,54 +6,54 @@ The following figures show the appearance of the component, as well as the funct
 
 ![Gui ChartPanel](../../../../images/gui_chartpanel.png)
 
-1 \- Horizontal line;
+1 - Horizontal line;
 
-2 \- Vertical line;
+2 - Vertical line;
 
-3 \- Prompt;
+3 - Prompt;
 
-4 \- Trend line;
+4 - Trend line;
 
-5 \- Area;
+5 - Area;
 
-6 \- This is a text.
+6 - This is a text.
 
 **Toolbar functionality**
 
 ![Gui ChartPanelTools](../../../../images/gui_chartpaneltools.png)
 
-1 \- Add panel;
+1 - Add panel;
 
-2 \- Enable autoscrolling;
+2 - Enable autoscrolling;
 
-3 \- Enable autoscaling;
+3 - Enable autoscaling;
 
-4 \- Enable legend;
+4 - Enable legend;
 
-5 \- Enable preview area;
+5 - Enable preview area;
 
-6 \- Enable crosshair;
+6 - Enable crosshair;
 
-7 \- Enable prompt for bar;
+7 - Enable prompt for bar;
 
-8 \- Show values on axis;
+8 - Show values on axis;
 
-9 \- Draw trend line;
+9 - Draw trend line;
 
-10 \- Draw pointer;
+10 - Draw pointer;
 
-11 \- Draw vertical line;
+11 - Draw vertical line;
 
-12 \- Draw horizontal line;
+12 - Draw horizontal line;
 
-13 \- Select area;
+13 - Select area;
 
-14 \- Text label;
+14 - Text label;
 
-15 \- Show FPS stats;
+15 - Show FPS stats;
 
-16 \- Orders registering;
+16 - Orders registering;
 
-17 \- Save data;
+17 - Save data;
 
-18 \- Publishing;
+18 - Publishing;

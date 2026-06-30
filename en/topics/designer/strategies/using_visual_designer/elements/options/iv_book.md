@@ -15,7 +15,7 @@ Incoming sockets
 
 Outgoing sockets
 
-- **Order book** \- the values of the order book of implied volatility.
+- **Order book** - the values of the order book of implied volatility.
 
 ## Recommended content
 

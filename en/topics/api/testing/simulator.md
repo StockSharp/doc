@@ -2,7 +2,7 @@
 
 Real-time market data testing involves trading with an actual connection to the exchange ("live" quotes), but without placing real orders on the exchange. All registered orders are intercepted, and their execution is emulated based on market order books. Such testing can be useful, for example, when developing a trading simulator, or when checking a trading algorithm over a short period with real quotes.
 
-To emulate trading with real data, you need to use [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" for a specific trading system connector ([Binance](../connectors/crypto_exchanges/binance.md), [Tinkoff](../connectors/russia/tinkoff.md), etc.).
+To emulate trading with real data, you need to use [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), which acts as a "wrapper" for a specific trading system connector ([Binance](../connectors/crypto_exchanges/binance.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md), etc.).
 
 ## Creating an Emulation Connector
 

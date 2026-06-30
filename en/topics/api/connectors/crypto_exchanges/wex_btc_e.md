@@ -1,9 +1,9 @@
 > [!WARNING]
 > This exchange has permanently shut down (July 2017 — seized). This connector is no longer operational. Documentation is preserved for historical reference.
 
-# WEX (BTC\-e)
+# WEX (BTC-e)
 
-**BTC\-E** \- cryptocurrency exchange.
+**BTC-E** - cryptocurrency exchange.
 
 Before you start writing trading robots for this trading platform, we recommend reading the links in the [Connectors](../../connectors.md) section. 
 

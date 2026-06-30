@@ -1,6 +1,6 @@
 # IEX
 
-**Investors Exchange (IEX)** \- Real\-time market data provider for stock quotes, Forex, news, futures contracts, etc..
+**Investors Exchange (IEX)** - Real-time market data provider for stock quotes, Forex, news, futures contracts, etc..
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

@@ -8,15 +8,15 @@ The cube is used to obtain a grouped order book.
 
 ### Incoming sockets
 
-- **Order book** \- the order book to be grouped.
+- **Order book** - the order book to be grouped.
 
 ### Outgoing sockets
 
-- **Order book** \- the grouped order book.
+- **Order book** - the grouped order book.
 
 ### Parameters
 
-- **Price range** \- the price range in which orders will be grouped.
+- **Price range** - the price range in which orders will be grouped.
 
 ## Recommended content
 

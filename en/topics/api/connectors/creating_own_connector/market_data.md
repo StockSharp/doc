@@ -12,7 +12,7 @@ Schematically, the algorithm for processing a subscription or unsubscription req
 
 ## Candle Data
 
-When implementing a subscription to candle data in your own adapter, it is important to consider the specifics of how a particular exchange works with this type of data. In the case of Coinbase, the following methods and properties were overridden:
+When implementing a subscription to candle data in your own adapter, account for how the exchange works with this data type. In Coinbase, the following methods and properties were overridden:
 
 ### Supported Timeframes
 
@@ -241,7 +241,7 @@ private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken 
 
 ### Support for Incremental Order Book Updates
 
-When implementing order book functionality in your own adapter, it is important to consider whether the exchange supports incremental order book updates. For this, the `IsSupportOrderBookIncrements` property was overridden in the Coinbase adapter:
+When implementing order book functionality in your own adapter, check whether the exchange supports incremental order book updates. The Coinbase adapter overrides the `IsSupportOrderBookIncrements` property for this:
 
 ```cs
 public override bool IsSupportOrderBookIncrements => true;
@@ -492,7 +492,7 @@ private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, O
 }
 ```
 
-It is important not to forget to add support for this data type in the adapter constructor:
+Add support for this data type in the adapter constructor:
 
 ```cs
 this.AddSupportedMarketDataType(DataType.OrderLog);
@@ -500,7 +500,7 @@ this.AddSupportedMarketDataType(DataType.OrderLog);
 
 ## Specifics of Processing Historical and Live Data
 
-When implementing requests for historical data and processing live data in your own adapter, it is important to consider the following points:
+When implementing historical data requests and live data processing in your own adapter, keep the following points in mind:
 
 ### Historical Data
 

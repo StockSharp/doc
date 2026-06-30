@@ -1,6 +1,6 @@
 # Slippage Measurement
 
-[S\#](../api.md) calculates slippage through the [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). Slippage is the difference between the expected execution price of an order and the actual trade price.
+[S#](../api.md) calculates slippage through the [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). Slippage is the difference between the expected execution price of an order and the actual trade price.
 
 ## ISlippageManager Interface
 

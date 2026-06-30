@@ -1,6 +1,6 @@
 # Candles
 
-[S\#](../api.md) supports the following types of candles:
+[S#](../api.md) supports the following types of candles:
 
 - [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - a candle based on a time interval, timeframe. You can set both popular intervals (minutes, hours, daily) and customized ones. For example, 21 seconds, 4.5 minutes, etc.
 - [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - a price range candle. A new candle is created when a trade appears with a price that exceeds the acceptable limits. The acceptable limit is formed each time based on the price of the first trade.

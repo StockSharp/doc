@@ -47,8 +47,8 @@ The **Properties** panel is minimized on the right side of the strategy tab by d
 
 **Diagram parameters**
 
-- **Security** \- the security.
-- **Portfolio** \- the portfolio.
+- **Security** - the security.
+- **Portfolio** - the portfolio.
 
 If you do not fill in the **Diagram parameters**, when emulating, the instrument will be used from the **Instrument** field of the **Emulation** tab, and as a portfolio, the test portfolio will be used by default.
 

@@ -7,6 +7,22 @@ This section describes the main settings of [HistoryEmulationConnector](xref:Sto
 - [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) - interval for time change event arrival. If trade generators are used, trades will be generated with this frequency. The default is 1 minute.
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) - minimum delay value for submitted orders. The default is TimeSpan.Zero, which means instant acceptance of submitted orders by the exchange.
 - [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - satisfy orders if the price "touches" the level (this assumption is sometimes too "optimistic" and should be turned off for realistic testing). If disabled, limit orders will be fulfilled only if the price "passes through them" by at least 1 step. This option works in all modes except order log mode. It's disabled by default.
+- [MarketEmulatorSettings.CandlePrice](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CandlePrice) - candle price used for order execution: Middle, Open, High, Low, or Close. The default is Middle.
+- [MarketEmulatorSettings.Failing](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Failing) - percentage of new order registration failures. Values range from 0 (no failures) to 100. The default is disabled (0).
+- [MarketEmulatorSettings.InitialOrderId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialOrderId) - initial number from which the emulator starts generating order identifiers.
+- [MarketEmulatorSettings.InitialTradeId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialTradeId) - initial number from which the emulator starts generating trade identifiers.
+- [MarketEmulatorSettings.SpreadSize](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.SpreadSize) - spread size in price steps. Used when generating an order book from tick trades. The default is 2.
+- [MarketEmulatorSettings.MaxDepth](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MaxDepth) - maximum depth of the order book generated from ticks. The default is 5.
+- [MarketEmulatorSettings.PortfolioRecalcInterval](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PortfolioRecalcInterval) - portfolio data recalculation interval. If it equals TimeSpan.Zero, recalculation is not performed.
+- [MarketEmulatorSettings.ConvertTime](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.ConvertTime) - convert order and trade timestamps to exchange time. The default is disabled.
+- [MarketEmulatorSettings.TimeZone](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.TimeZone) - exchange time zone information.
+- [MarketEmulatorSettings.PriceLimitOffset](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PriceLimitOffset) - price offset from the previous trade that defines the maximum and minimum price limits for the next session. The default is 40%.
+- [MarketEmulatorSettings.IncreaseDepthVolume](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.IncreaseDepthVolume) - add extra volume to the order book when registering large-volume orders. The default is enabled.
+- [MarketEmulatorSettings.CheckTradingState](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradingState) - check the trading session state. The default is disabled.
+- [MarketEmulatorSettings.CheckMoney](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckMoney) - check cash balance. The default is disabled.
+- [MarketEmulatorSettings.CheckShortable](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckShortable) - check whether short positions are allowed. The default is disabled.
+- [MarketEmulatorSettings.CheckTradableDates](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradableDates) - check whether loaded dates are trading dates. The default is disabled.
+- [MarketEmulatorSettings.CommissionRules](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CommissionRules) - commission calculation rules.
 
 ## Market Data Subscriptions
 
@@ -94,7 +110,7 @@ var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
 // Create a subscription to candles
 var candleSubscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
 {
 	MarketData =

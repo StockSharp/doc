@@ -8,7 +8,7 @@
 
 - [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – the list of positions and portfolios.
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – the selected position.
-- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) \- selected positions.
+- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) - selected positions.
 
 The following code snippet demonstrates its usage. The code example is taken from *Samples/InteractiveBrokers/SampleIB*.
 

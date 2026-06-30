@@ -1,6 +1,6 @@
 # Annotations
 
-[S\#](../../../api.md) provides the ability to add annotations to the chart in the form of text, lines, etc.
+[S#](../../../api.md) provides the ability to add annotations to the chart in the form of text, lines, etc.
 
 ![ChartAnnotations](../../../../images/chartannotations.png)
 

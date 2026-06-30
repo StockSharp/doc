@@ -1,6 +1,6 @@
 # Data Export
 
-[S\#](../api.md) implements a market data export subsystem supporting various formats. All exporters inherit from the base class [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) and support a unified asynchronous interface.
+[S#](../api.md) implements a market data export subsystem supporting various formats. All exporters inherit from the base class [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) and support a unified asynchronous interface.
 
 ## BaseExporter
 

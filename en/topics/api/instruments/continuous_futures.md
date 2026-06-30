@@ -1,31 +1,35 @@
-# Continuous futures
+# Continuous Futures
 
-[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) \- continuous instrument (typically futures), containing the instruments affected by expiration (expiry of period of activity).
+[ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity) is a continuous instrument, usually a futures contract, that contains instruments subject to expiration.
 
-For example, two futures of the ES index \- **ESM5** and **ESU5**. When the **ESM5** expired it automatically switches to the next instrument \- **ESU5**.
+For example, consider two E-mini S&P 500 futures: **ESM5** and **ESU5**. When **ESM5** expires, the continuous instrument automatically switches to the next contract, **ESU5**.
 
-[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) can be traded in the same way as [Security](xref:StockSharp.BusinessEntities.Security). Prior to the **RIM5** expiration an algo will be carried with this instrument. After the expiration an algo will be carried with **RIU5**, etc.
+[ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity) can be traded in the same way as [Security](xref:StockSharp.BusinessEntities.Security). Before **ESM5** expires, trading is performed through that instrument. After expiration, trading is performed through **ESU5**, and so on.
 
-## Creating ContinuousSecurity
+## Creating ExpirationContinuousSecurity
 
-1. To declare the compound instruments that will be included in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) and in the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) itself:
+1. Declare the component instruments that will be included in [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity), and declare the [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity) itself:
 
    ```cs
    private Security _esm5;
    private Security _esu5;
-   private ContinuousSecurity _es;
+   private ExpirationContinuousSecurity _es;
    							
    ```
-2. To create the [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity):
+2. Create the [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity):
 
    ```cs
-   _es = new ContinuousSecurity { ExchangeBoard = ExchangeBoard.Nyse, Id = "ES" };
+   _es = new ExpirationContinuousSecurity { Board = ExchangeBoard.Cme, Id = "ES" };
    							
    ```
-3. To add the compound instruments to it, specify the date and time of expiration for each added instrument:
+3. Add component instruments and specify the expiration date and time for each one:
 
    ```cs
-   _es.ExpirationJumps.Add(_esm5, new DateTime(2015, 6, 15, 18, 45, 00));
-   _es.ExpirationJumps.Add(_esu5, new DateTime(2015, 9, 15, 18, 45, 00));
-   							
+   _es.ExpirationJumps.Add(_esm5.ToSecurityId(), new DateTime(2015, 6, 15, 18, 45, 00));
+   _es.ExpirationJumps.Add(_esu5.ToSecurityId(), new DateTime(2015, 9, 15, 18, 45, 00));
+
    ```
+
+## VolumeContinuousSecurity
+
+In addition to [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity), StockSharp also provides [VolumeContinuousSecurity](xref:StockSharp.Algo.VolumeContinuousSecurity). This type of continuous instrument switches between contracts based on trading volume instead of expiration date. The transition to the next contract happens when the new contract's trading volume exceeds the current contract's volume.

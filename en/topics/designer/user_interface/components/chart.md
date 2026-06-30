@@ -16,7 +16,7 @@ For a box chart candles can be additionally grouped, the grouping order is set i
 
 ![Designer Schedule 05](../../../../images/designer_schedule_05.png)
 
-There is a toolbar above the chart, where you can select auto scroll, auto\-zoom, legend modes and other general chart settings. You can also select the elements to draw on the chart: lines, levels, pointers, rectangle, text.
+There is a toolbar above the chart, where you can select auto scroll, auto-zoom, legend modes and other general chart settings. You can also select the elements to draw on the chart: lines, levels, pointers, rectangle, text.
 
 ![Designer Schedule 03](../../../../images/designer_schedule_03.png)
 

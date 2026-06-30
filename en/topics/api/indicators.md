@@ -1,6 +1,6 @@
 # Indicators
 
-[S\#](../api.md) provides more than 140 standard technical analysis indicators. This allows you to use ready-made indicators rather than creating them from scratch. You can also create your own indicators based on existing ones, as shown in the [Custom Indicator](indicators/custom_indicator.md) section. All base classes for working with indicators, as well as the indicators themselves, are located in the [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators) namespace.
+[S#](../api.md) provides more than 140 standard technical analysis indicators. This allows you to use ready-made indicators rather than creating them from scratch. You can also create your own indicators based on existing ones, as shown in the [Custom Indicator](indicators/custom_indicator.md) section. All base classes for working with indicators, as well as the indicators themselves, are located in the [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators) namespace.
 
 ## Integrating Indicators into a Trading Algorithm
 

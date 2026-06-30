@@ -1,6 +1,6 @@
 # Oanda
 
-**Oanda** \- Forex trading platform.
+**Oanda** - Forex trading platform.
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

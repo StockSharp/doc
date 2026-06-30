@@ -2,7 +2,7 @@
 
 ![Designer Notice 00](../../../../../../images/designer_notice_00.png)
 
-The cube sends a notification when data arrives on its input socket. The incoming value is converted to text via `ToString`. You can connect a [Variable](../common/variable.md) to send fixed text, attach trade or candle streams to see their details, or use [String format](string_format.md) and [String concat](string_concat.md) cubes to prepare a custom message.
+The cube sends a notification when data arrives on its input socket. The incoming value is converted to text via `ToString`. You can connect a [Variable](../data_sources/variable.md) to send fixed text, attach trade or candle streams to see their details, or use [String format](string_format.md) and [String concat](string_concat.md) cubes to prepare a custom message.
 
 ### Incoming sockets
 

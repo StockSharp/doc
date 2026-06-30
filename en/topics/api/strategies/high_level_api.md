@@ -1,4 +1,4 @@
-# High-Level API in Strategies
+﻿# High-Level API in Strategies
 
 StockSharp provides a set of high-level APIs to simplify working with common tasks in trading strategies. These interfaces allow writing cleaner code that focuses on trading logic rather than technical details.
 
@@ -42,7 +42,7 @@ It's important to note that when using the [Bind](xref:StockSharp.Algo.Strategie
 
 This significantly simplifies code and reduces the likelihood of errors.
 
-If it is necessary to receive indicator values even when some of them have no
+If you need to receive indicator values even when some of them have no
 data yet (`IIndicatorValue.IsEmpty` is `true`), use the
 `BindWithEmpty` method. In this case the handler arguments must be of type
 `decimal?`. You can also use `BindEx` to inspect the raw

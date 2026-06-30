@@ -1,6 +1,6 @@
 # E\*TRADE
 
-**E\-Trade Financial Corporation (E\*TRADE)** \- trading platform to trade financial assets including common stocks, preferred stocks, exchange\-traded funds, futures contracts, options, mutual funds, and fixed income investments. 
+**E-Trade Financial Corporation (E\*TRADE)** - trading platform to trade financial assets including common stocks, preferred stocks, exchange-traded funds, futures contracts, options, mutual funds, and fixed income investments. 
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

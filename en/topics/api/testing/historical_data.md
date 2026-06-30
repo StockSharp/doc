@@ -30,7 +30,7 @@ var storageRegistry = new StorageRegistry
 ```
 
 > [!CAUTION]
-> The [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) constructor takes the path to the root directory where history for **all instruments** is stored, not to a directory with a specific instrument. For example, if the HistoryData.zip archive was unpacked into the *C:\\R\\RIZ2@FORTS\\* directory, then you need to pass the path *C:\\* to [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). More details in the [API](../market_data_storage/api.md) section.
+> The [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) constructor takes the path to the root directory where history for **all instruments** is stored, not to a directory with a specific instrument. For example, if the HistoryData.zip archive was unpacked into the *C:\\MarketData\\AAPL@NASDAQ\\* directory, then you need to pass the path *C:\\MarketData\\* to [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). More details in the [API](../market_data_storage/api.md) section.
 
 ### 2. Creating instruments and portfolios
 
@@ -89,12 +89,7 @@ var connector = new HistoryEmulationConnector(
 		StopDate = stopTime,
 		OrderLogMarketDepthBuilders =
 		{
-			{
-				secId,
-				LocalizedStrings.ActiveLanguage == Languages.Russian
-					? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
-					: new ItchOrderLogMarketDepthBuilder(secId)
-			}
+			{ secId, new ItchOrderLogMarketDepthBuilder(secId) }
 		}
 	},
 	// set market time update interval

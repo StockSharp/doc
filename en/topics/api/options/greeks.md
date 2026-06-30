@@ -1,6 +1,6 @@
 # Greeks
 
-The formula of [Black–Scholes model](https://en.wikipedia.org/wiki/Black–Scholes_model) is realized in the [S\#](../../api.md) to calculate the basic “Greeks”: delta, gamma, vega, theta and rho. The [volatility trading](volatility_trading.md) and [Delta\-hedging](delta_hedging.md) strategies are realized on the basis of this formula. Also [S\#](../../api.md) allows you to calculate the option premium and [IV](https://en.wikipedia.org/wiki/Implied_volatility). 
+The formula of [Black–Scholes model](https://en.wikipedia.org/wiki/Black–Scholes_model) is realized in the [S#](../../api.md) to calculate the basic “Greeks”: delta, gamma, vega, theta and rho. The [volatility trading](volatility_trading.md) and [Delta-hedging](delta_hedging.md) strategies are realized on the basis of this formula. Also [S#](../../api.md) allows you to calculate the option premium and [IV](https://en.wikipedia.org/wiki/Implied_volatility). 
 
 The following code shows the [BlackScholes](xref:StockSharp.Algo.Derivatives.BlackScholes) class methods to calculate the “Greeks”.
 

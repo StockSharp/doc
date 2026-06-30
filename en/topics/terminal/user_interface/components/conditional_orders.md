@@ -4,11 +4,11 @@ The **Conditional** orders component is a table with orders, which displays comp
 
 ![Terminal Orders conditional panel 01](../../../../images/terminal_orders_conditional_panel_01.png)
 
-When you click the **Order Registration** button, a window appears. To register a new conditional order, you have to fill it out and click the **Send** button.
+When you click the **Order Registration** button, a window appears. To register a new conditional order, fill it out and click **Send**.
 
 ![Terminal Orders conditional panel 02](../../../../images/terminal_orders_conditional_panel_02.png)
 
-When you click the **Change Order** button, a window appears. To change the conditional order, you have to make the required changes and click the **Send** button.
+When you click the **Change Order** button, a window appears. To change the conditional order, make the required changes and click **Send**.
 
 ![Terminal Orders conditional panel 03](../../../../images/terminal_orders_conditional_panel_03.png)
 

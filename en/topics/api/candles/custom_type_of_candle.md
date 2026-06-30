@@ -1,6 +1,6 @@
 # Custom Type of Candle
 
-[S\#](../../api.md) allows you to extend candle building capabilities by providing the ability to work with custom candle types. This is useful in cases where you need to work with candles that are not currently supported by [S\#](../../api.md). Below is the process of creating your own candle type using the example of Delta-candles (candles formed based on the difference between buy and sell volumes).
+[S#](../../api.md) allows you to extend candle building capabilities by providing the ability to work with custom candle types. This is useful in cases where you need to work with candles that are not currently supported by [S#](../../api.md). Below is the process of creating your own candle type using the example of Delta-candles (candles formed based on the difference between buy and sell volumes).
 
 ## Implementing Delta-candles
 

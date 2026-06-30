@@ -1,6 +1,6 @@
 # Create strategy panel
 
-Custom panels are special controls created by S\# to facilitate working with DevExpress elements.
+Custom panels are special controls created by S# to facilitate working with DevExpress elements.
 
 First, you need to create a simple UserControl in the XAML folder of your strategy.
 
@@ -19,7 +19,7 @@ Replace `UserControl` with `controls:BaseStudioControl`.
 
 Then implement your own panel logic similar to the existing strategy panels.
 
-In order for the [Real\-time](user_interface/real_time.md) panel to see the strategy in your panel, your strategy must be set as a property:
+In order for the [Real-time](user_interface/real_time.md) panel to see the strategy in your panel, your strategy must be set as a property:
 
 ```cs
 	public partial class SmaMonitoringControl

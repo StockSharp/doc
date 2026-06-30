@@ -1,6 +1,6 @@
 # Commission System
 
-[S\#](../api.md) implements a flexible commission calculation system through the [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager). The manager accepts order and trade messages and calculates commissions based on configured rules.
+[S#](../api.md) implements a flexible commission calculation system through the [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager). The manager accepts order and trade messages and calculates commissions based on configured rules.
 
 ## ICommissionManager Interface
 

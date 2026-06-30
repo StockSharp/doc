@@ -1,60 +1,57 @@
 # Index
 
-[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) \- the index built from instruments. For example, to set a spread in arbitrage or pair trading. It has the following implementations.
+[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) is an index built from instruments. For example, it can be used to define a spread for arbitrage or pairs trading. It has the following implementations:
 
-1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) \- is the index built from a combination of several instruments through the [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula) mathematical formula.
+1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) is an index built from a combination of several instruments using the mathematical formula in [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula).
 
-2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) \- is the index built from instruments using weighting factors [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) is an index built from instruments using weighting factors from [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ## Creating ExpressionIndexSecurity
 
-1. To declare the compound instruments that will be included in [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) and in the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) itself:
+1. Declare the component instruments that will be included in [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity), and declare the index instrument itself:
 
    ```cs
-   ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
-   // Or
-   //ConfigManager.RegisterService<ICompilerService>(new Fw40CompilerService(Directory.GetCurrentDirectory(), Directory.GetCurrentDirectory()));
    private Security _instr1;
    private Security _instr2;
    private ExpressionIndexSecurity _indexInstr;
-   private const string _secCode1 = "GZM5";
-   private const string _secCode2 = "LKM5";
+   private const string _secCode1 = "AAPL";
+   private const string _secCode2 = "MSFT";
    							
    ```
-2. To create the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
+2. Create the [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
    ```cs
    _indexInstr = new ExpressionIndexSecurity
    {
-       Id = "IndexInstr@NYSE",
-       Expression = "ESM5@NYSE/APM5@NYSE",
-       Board = ExchangeBoard.Nyse,
+       Id = "IndexInstr@NASDAQ",
+       Expression = "AAPL@NASDAQ/MSFT@NASDAQ",
+       Board = ExchangeBoard.Nasdaq,
    };
    							
    ```
 
 ## Creating WeightedIndexSecurity
 
-1. To declare the compound instruments that will be included in [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) and in the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) itself:
+1. Declare the component instruments that will be included in [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity), and declare the index instrument itself:
 
    ```cs
    private Security _instr1;
    private Security _instr2;
    private WeightedIndexSecurity _indexInstr;
-   private const string _secCode1 = "GZM5";
-   private const string _secCode2 = "LKM5";
+   private const string _secCode1 = "AAPL";
+   private const string _secCode2 = "MSFT";
    							
    ```
-2. To create the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
+2. Create the [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
-   _indexInstr = new WeightedIndexSecurity() { ExchangeBoard = ExchangeBoard.Nyse, Id = "IndexInstr" };
+   _indexInstr = new WeightedIndexSecurity() { Board = ExchangeBoard.Nasdaq, Id = "IndexInstr" };
    							
    ```
-3. To add the compound instruments to it:
+3. Add the component instruments:
 
    ```cs
-   _indexInstr.Weights.Add(_instr1, 1);
-   _indexInstr.Weights.Add(_instr2, -1);
+   _indexInstr.Weights.Add(_instr1.ToSecurityId(), 1);
+   _indexInstr.Weights.Add(_instr2.ToSecurityId(), -1);
    							
    ```

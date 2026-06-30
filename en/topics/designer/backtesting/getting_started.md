@@ -4,21 +4,21 @@ For instance, the SMA strategy example will be considered.
 
 To run the test on the history, you shall select a strategy, the scheme of which will be tested on the history. The strategy is selected on the [Schemas](../user_interface/schemas.md) panel in the strategy folder, by double clicking on the strategy of interest.
 
-Prior to testing, it is necessary to load market data (instruments, candles, tic trades and\/or order books). The way to do that is described in the [Market data storage](../market_data_storage.md) section.
+Before testing, load market data (instruments, candles, tick trades and\/or order books). This is described in [Market data storage](../market_data_storage.md).
 
-When switching to the tab with a strategy, the **Emulation** tab automatically opens in the **Ribbon**. It is necessary to set the testing period on this tab. In the market\-data field specify the required storage ([Market data storage](../market_data_storage.md)), in the instrument field specify the required instrument.
+When switching to the tab with a strategy, the **Emulation** tab automatically opens in the **Ribbon**. Set the testing period on this tab. In the market-data field, specify the required storage ([Market data storage](../market_data_storage.md)); in the instrument field, specify the required instrument.
 
 The following parameters will be used in the example with the SMA strategy.
 
 1. AAPL@NASDAQ instrument
 2. Standard storage \\Documents\\StockSharp\\Designer\\Storage
-3. Storage format \- CSV
-4. Type of data, taken from the storage \- Ticks
-5. Order book \- generated
-6. Order book depth \- 5
-7. Spread size \- 2
-8. Candles with time\-frame of 30 s
-9. Volume \- 100
+3. Storage format - CSV
+4. Type of data, taken from the storage - Ticks
+5. Order book - generated
+6. Order book depth - 5
+7. Spread size - 2
+8. Candles with time-frame of 30 s
+9. Volume - 100
 
 It is required to set the selected parameters up:
 

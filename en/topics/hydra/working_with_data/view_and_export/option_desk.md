@@ -10,10 +10,4 @@ To view the **Volatility Smile**, you need to go to the **Volatility Smile** tab
 
 ![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
 
-Using the context menu, you can configure the parameters of your own transactions table: grouping of rows, available columns, display format, etc.
-
-![hydra export context](../../../../images/hydra_export_context.png)
-
-The found transactions can be exported to the [Excel](https://en.wikipedia.org/wiki/Excel), xml, sql, bin or txt formats. This is done using the drop\-down list:
-
-![hydra export](../../../../images/hydra_export.png)
+The calculated values can be [exported to the required format](../export_data.md).

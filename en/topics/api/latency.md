@@ -1,6 +1,6 @@
 # Latency Measurement
 
-[S\#](../api.md) measures order registration and cancellation latency through the [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager). The manager determines how much time passes between sending an order and receiving confirmation from the exchange.
+[S#](../api.md) measures order registration and cancellation latency through the [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager). The manager determines how much time passes between sending an order and receiving confirmation from the exchange.
 
 ## ILatencyManager Interface
 

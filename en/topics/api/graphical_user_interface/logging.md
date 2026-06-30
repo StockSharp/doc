@@ -1,10 +1,10 @@
-# Logging
+﻿# Logging
 
-[S\#](../../api.md) offers several graphical components for displaying logs: [LogControl](xref:StockSharp.Xaml.LogControl) and [Monitor](xref:StockSharp.Xaml.Monitor). 
+[S#](../../api.md) offers several graphical components for displaying logs: [LogControl](xref:StockSharp.Xaml.LogControl) and [Monitor](xref:StockSharp.Xaml.Monitor). 
 
 When using the logging visual components, you need to use the [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)logger as a "listener". This logger provides streaming synchronization with the GUI when recording new [LogMessage](xref:Ecng.Logging.LogMessage) messages.
 
-In order to implement the logging possibility in your own class, you need to implement the [ILogReceiver](xref:Ecng.Logging.ILogReceiver)interface. An easier way is to inherit from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver)class, as shown in the *Samples\/08\_Misc\/01\_Logging* example:
+to implement the logging possibility in your own class, you need to implement the [ILogReceiver](xref:Ecng.Logging.ILogReceiver)interface. An easier way is to inherit from the [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver)class, as shown in the *Samples\/08\_Misc\/01\_Logging* example:
 
 ```cs
 private class TestSource : BaseLogReceiver

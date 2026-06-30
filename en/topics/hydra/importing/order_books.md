@@ -9,7 +9,7 @@ To import order books, select **Import \=\> Order books** item from the main app
 1. **Import settings.**.
 
    See [Candles](candles.md) import.
-2. Configure import parameters for [S\#](../../api.md) fields.
+2. Configure import parameters for [S#](../../api.md) fields.
 
    See [Candles](candles.md) import.
 
@@ -22,10 +22,10 @@ To import order books, select **Import \=\> Order books** item from the main app
      ```
 
      Here the values of {SecurityId.SecurityCode} and {SecurityId.BoardCode} correspond to the values of **Security** and **Board**, respectively. Therefore, in the **Field order** field we assign the values 0 and 1, respectively.
-   - For the {ServerTime:default:yyyyMMdd} and {ServerTime:default:HH:mm:ss.ffffff} fields, select the **Date** and **Time** fields from the **S\# field** window, respectively. We assign the values 2 and 3.
-   - For the {Quote.Price} field, select the **Price** field from the **S\# field** window \- quote price. We assign it the value 4.
-   - For the {Quote.Volume} field, select the **Volume** field from the **S\# field** window \- quote volume. We assign it the value 5
-   - For the {Side} field, select the **Direction** field from the **S\# field** window \- the trade direction (Buy or Sell). We assign it the value 6.
+   - For the {ServerTime:default:yyyyMMdd} and {ServerTime:default:HH:mm:ss.ffffff} fields, select the **Date** and **Time** fields from the **S# field** window, respectively. We assign the values 2 and 3.
+   - For the {Quote.Price} field, select the **Price** field from the **S# field** window - quote price. We assign it the value 4.
+   - For the {Quote.Volume} field, select the **Volume** field from the **S# field** window - quote volume. We assign it the value 5
+   - For the {Side} field, select the **Direction** field from the **S# field** window - the trade direction (Buy or Sell). We assign it the value 6.
    - The field setting window will look like this:![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
 
    The user can configure a large number of properties for the downloaded data. Based on the imported file template, you need to specify the property and assign it the required number in the sequence. 

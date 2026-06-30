@@ -1,4 +1,4 @@
-# Matching instruments\-connections
+# Matching instruments-connections
 
 The same instrument in different trading systems can be called differently. It is possible to match the instrument and the connections via which this instrument will be traded, and specify how it is identified in the external trading system.
 
@@ -15,11 +15,11 @@ To match instruments and connections you need:
    For example:
 
    APPLE stock instrument.
-   - Connection \- **Interactive Brokers**. Click on the ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) button, after which a new line will be added. 
+   - Connection - **Interactive Brokers**. Click on the ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) button, after which a new line will be added. 
    - In the **Security** code and **Board code** columns, specify the instrument code and board code. In the columns **Security code in adapter** and **Board code in adapter** specify the instrument code and the board code as they are specified in the external trading system. Click **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
-   - We repeat the steps for the **Transaq** and **CQG Continuum** connections in the same way. 
+   - We repeat the steps for the **Interactive Brokers** and **CQG Continuum** connections in the same way.
 
-   | **Transaq**                                                                       | **CQG Continuum**                                                                 |
+   | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
    | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
 4. Now all downloaded data, in our case for APPLE shares, will be saved in one place.

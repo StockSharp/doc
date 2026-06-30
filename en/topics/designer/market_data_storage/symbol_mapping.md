@@ -8,6 +8,6 @@ To match securities and connections, click the **Securities and connections** bu
 
 In the opened window, click the ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) button to add a new line.
 
-In the **Connection** column select a connection from the drop\-down list. In the **Security code** and **Board code** columns specify the security and board codes, as they are specified in the **Designer**. In the **Adapter code** and **Adapter board** columns specify the security and board codes, as they are specified in the external trading system.
+In the **Connection** column select a connection from the drop-down list. In the **Security code** and **Board code** columns specify the security and board codes, as they are specified in the **Designer**. In the **Adapter code** and **Adapter board** columns specify the security and board codes, as they are specified in the external trading system.
 
 ![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)

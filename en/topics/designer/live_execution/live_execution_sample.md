@@ -18,15 +18,15 @@ The following parameters will be used in the example with the SMA strategy.
 
 - **AAPL@NASDAQ** instrument
 - Standard storage **\\Documents\\StockSharp\\Designer\\Storage**
-- Storage format \- **CSV**
-- Type of data, taken from the storage \- **Ticks**
-- Candles with time\-frame of 5 s
-- Volume \- 100
-- History days \- 2
+- Storage format - **CSV**
+- Type of data, taken from the storage - **Ticks**
+- Candles with time-frame of 5 s
+- Volume - 100
+- History days - 2
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
-After setting up all the required parameters, start up the strategy testing by clicking the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start button.
+After setting up all the required parameters, start live trading for the strategy by clicking the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start button.
 
 After clicking the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start button, the chart will start displaying the entire downloaded history for 2 days:
 
@@ -34,10 +34,16 @@ After clicking the ![Designer Panel Circuits 02](../../../images/designer_panel_
 
 After downloading the entire history from the [Market data storage](../market_data_storage.md) and the Table of anonymous trades from the terminal, the strategy will start trading.
 
-The chart below shows the trades from [Designer](../../designer.md).
+Below are charts from [Designer](../../designer.md) and the trading terminal for the same time period.
 
 ![Designer Example of Live trading 03](../../../images/designer_example_of_live_trading_03.png)
 
-## Recommended content
+Chart from [Designer](../../designer.md):
+
+![Designer Example of Live trading 04](../../../images/designer_example_of_live_trading_04.png)
+
+Chart from the trading terminal:
+
+## See also
 
 [Market data storage](../market_data_storage.md)

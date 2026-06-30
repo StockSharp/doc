@@ -1,6 +1,6 @@
 # Alpaca
 
-**Alpaca** \- financial broker.
+**Alpaca** - financial broker.
 
 Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
 

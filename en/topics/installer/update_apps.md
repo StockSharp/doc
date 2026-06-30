@@ -14,7 +14,7 @@ Then you need to click the button.
 
 [Installer](../installer.md) is not closed by clicking on the **"X"** in the program window, but is closed using the toolbar.
 
-To do this, go to the menu by right\-clicking and click **Close**.
+To do this, go to the menu by right-clicking and click **Close**.
 
 **Watch [video tutorial](videos/update_apps.md)**.
 

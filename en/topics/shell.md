@@ -1,21 +1,21 @@
 # Shell
 
-**Shell** is a ready\-made graphical framework with the ability to change quickly to your needs and with fully open source code in the C# language (enough basic knowledge). 
+**Shell** is a ready-made graphical framework for trading robots. It can be customized for your needs and includes full C# source code.
 
-You don't need to waste time creating a GUI (Graphical User Interface). A ready\-made robot is created faster without sacrificing application usability. Basic functionality for testing, trading, connecting to data sources, displaying charts, portfolios, positions, orders and trades is already in the box.
+You do not need to build a GUI (Graphical User Interface) from scratch. Shell includes the basic functionality required for testing, trading, connecting to data sources, and displaying charts, portfolios, positions, orders, and trades.
 
 ![Shell Title 00](../images/shell_title_00.png)
 
 The main features of the trading robot shell:
 
-1. Full source code. Ideal for custom robots, or for your solutions.
-2. **Support for more than 70 connections** to various exchanges of the world [Connectors](api/connectors.md).
+1. Full source code, suitable for custom trading robots and custom solutions.
+2. **Support for more than 70 connections** to exchanges and brokers through [Connectors](api/connectors.md).
 3. Flexible user interface.
-4. Testing strategies (statistics, equity, report).
+4. Strategy testing tools: statistics, equity, and reports.
 5. Save and restore strategy settings.
-6. Simultaneous launch of strategies.
-7. Detailed information about the strategy operation (orders, trades, position, profit, logs, etc.). Everything is clear and simple.
-8. Running strategies on schedule.
+6. Concurrent strategy execution.
+7. Detailed strategy status: orders, trades, positions, profit, logs, and more.
+8. Scheduled strategy launches.
 
 ## Recommended content
 
