@@ -30,7 +30,7 @@ var storageRegistry = new StorageRegistry
 ```
 
 > [!CAUTION]
-> [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) 构造函数接收存储**所有品种**历史数据的根目录路径，而不是某个特定品种的目录。例如，如果 HistoryData.zip 压缩包解压到了 *C:\R\RIZ2@FORTS\* 目录下，那么你需要将路径 *C:\* 传递给 [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive)。更多详情请参见 [API](../market_data_storage/api.md) 部分。
+> [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) 构造函数接收存储**所有品种**历史数据的根目录路径，而不是某个特定品种的目录。例如，如果 HistoryData.zip 压缩包解压到了 *C:\MarketData\AAPL@NASDAQ\* 目录下，那么你需要将路径 *C:\MarketData\* 传递给 [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive)。更多详情请参见 [API](../market_data_storage/api.md) 部分。
 
 ### 2. 创建工具和投资组合
 
@@ -89,12 +89,7 @@ var connector = new HistoryEmulationConnector(
 		StopDate = stopTime,
 		OrderLogMarketDepthBuilders =
 		{
-			{
-				secId,
-				LocalizedStrings.ActiveLanguage == Languages.Russian
-					? (IOrderLogMarketDepthBuilder)new PlazaOrderLogMarketDepthBuilder(secId)
-					: new ItchOrderLogMarketDepthBuilder(secId)
-			}
+			{ secId, new ItchOrderLogMarketDepthBuilder(secId) }
 		}
 	},
 	// set market time update interval

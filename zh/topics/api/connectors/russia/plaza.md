@@ -1,3 +1,3 @@
-# 广场 II (SPECTRA) CGATE
+# 俄罗斯市场专用连接器主题
 
-此连接器仅适用于MOEX。描述可以在[俄文版本](https://doc.stocksharp.ru/topics/api/connectors/russia/plaza.html)中找到。
+此主题仅在俄语版本中提供，因为它专属于俄罗斯市场。

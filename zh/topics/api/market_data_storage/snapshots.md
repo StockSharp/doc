@@ -77,7 +77,7 @@ var level1Snapshots = snapshotRegistry.GetSnapshotStorage(
 // Save a snapshot
 var level1Msg = new Level1ChangeMessage
 {
-    SecurityId = "SBER@TQBR".ToSecurityId(),
+    SecurityId = "AAPL@NASDAQ".ToSecurityId(),
     ServerTime = DateTimeOffset.Now,
 };
 level1Msg.TryAdd(Level1Fields.LastTradePrice, 260.5m);
@@ -91,7 +91,7 @@ level1Snapshots.Update(level1Msg);
 
 ```cs
 // Get the latest snapshot for an instrument
-var secId = "SBER@TQBR".ToSecurityId();
+var secId = "AAPL@NASDAQ".ToSecurityId();
 var snapshot = level1Snapshots.Get(secId);
 
 if (snapshot != null)

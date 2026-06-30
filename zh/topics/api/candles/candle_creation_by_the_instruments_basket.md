@@ -2,7 +2,7 @@
 
 为 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)、[WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) 或 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) 创建蜡烛时，使用的订阅机制与普通 [Security](xref:StockSharp.BusinessEntities.Security) 证券相同。
 
-以下示例为 GZM5 - LKM5 价差创建 1 分钟蜡烛：
+以下示例为 AAPL - MSFT 价差创建 1 分钟蜡烛：
 
 ```cs
 private Connector _connector;
@@ -10,8 +10,8 @@ private Security _instr1;
 private Security _instr2;
 private WeightedIndexSecurity _indexInstr;
 private Subscription _indexSubscription;
-private const string _secCode1 = "GZM5";
-private const string _secCode2 = "LKM5";
+private const string _secCode1 = "AAPL";
+private const string _secCode2 = "MSFT";
 readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
 private ChartArea _area;
 private ChartCandleElement _candleElement;

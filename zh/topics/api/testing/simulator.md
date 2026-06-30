@@ -2,7 +2,7 @@
 
 实时市场数据测试涉及与交易所的实际连接进行交易（“实时”报价），但不在交易所下真实订单。所有注册订单都会被拦截，并根据市场订单簿模拟其执行。这种测试可以在开发交易模拟器时使用，或者在用真实报价短期检查交易算法时使用。
 
-要模拟使用真实数据进行交易，您需要使用 [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1)，它作为特定交易系统连接器（[Binance](../connectors/crypto_exchanges/binance.md), [Tinkoff](../connectors/russia/tinkoff.md) 等）的“包装器”。
+要模拟使用真实数据进行交易，您需要使用 [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1)，它作为特定交易系统连接器（[Binance](../connectors/crypto_exchanges/binance.md)、[Interactive Brokers](../connectors/stock_market/interactive_brokers.md) 等）的“包装器”。
 
 ## 创建仿真连接器
 

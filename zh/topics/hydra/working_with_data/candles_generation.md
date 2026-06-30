@@ -26,11 +26,11 @@
 
 ### 生成时间周期蜡烛图的示例
 
-要为 SBER@TQBR 交易品种生成 5 分钟蜡烛图：
+要为 AAPL@NASDAQ 交易品种生成 5 分钟蜡烛图：
 
 1. 选择蜡烛图类型 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)。
 2. 将 **Timeframe** 设置为 5 分钟。
-3. 选择 SBER@TQBR 交易品种。
+3. 选择 AAPL@NASDAQ 交易品种。
 4. 单击搜索按钮。
 
 数据生成后会显示以下结果：

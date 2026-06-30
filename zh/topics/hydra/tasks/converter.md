@@ -22,9 +22,6 @@
   每个交易所都有自己的 **Order Log** 格式，[Hydra](../../hydra.md) 支持以下三种格式：
   - **By default** — 适用于大多数情况。
   - **ITCH** — 用于 ITCH 协议，例如 LSE 和 Nasdaq 交易所。
-  - **Plaza** — 用于莫斯科交易所。
-
-  ![hydra choose ITCH Plaza 00](../../../images/hydra_choose_itch_plaza_00.png)
 
 **General**
 

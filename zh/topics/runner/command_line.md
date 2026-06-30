@@ -7,7 +7,7 @@
 使用 **Runner** 对历史数据进行测试：
 
 ```cmd
-b -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR -r json
+b -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec AAPL@NASDAQ -r json
 ```
 
 可用参数：
@@ -30,7 +30,7 @@ b -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR 
 使用 **Runner** 进行优化：
 
 ```cmd
-o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR -r json -p sma_optimization.json
+o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec AAPL@NASDAQ -r json -p sma_optimization.json
 ```
 
 除历史测试模式的全部参数外，还支持以下参数：
@@ -55,7 +55,7 @@ o -s SmaStrategy.cs -h "C:\Storage" --hf 20200401 --ht 20200430 --sec SBER@TQBR 
 	},
 	{
 	"Name": "Security",
-	"Value": "SBER@TQBR,GAZP@TQBR"
+	"Value": "AAPL@NASDAQ,MSFT@NASDAQ"
 	}
 ]
 ```

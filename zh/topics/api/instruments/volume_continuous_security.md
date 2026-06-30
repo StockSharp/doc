@@ -44,16 +44,16 @@ using StockSharp.Messages;
 // Create a volume-based continuous futures
 var continuous = new VolumeContinuousSecurity
 {
-    Id = "RTS-CONT@FORTS",
-    Board = ExchangeBoard.Forts,
+    Id = "ES-CONT@CME",
+    Board = ExchangeBoard.Cme,
 };
 
 // Add contracts in rollover order
 continuous.InnerSecurities.AddRange(new[]
 {
-    "RTS-3.26@FORTS".ToSecurityId(),
-    "RTS-6.26@FORTS".ToSecurityId(),
-    "RTS-9.26@FORTS".ToSecurityId(),
+    "ES-3.26@CME".ToSecurityId(),
+    "ES-6.26@CME".ToSecurityId(),
+    "ES-9.26@CME".ToSecurityId(),
 });
 
 // Set volume threshold for switching
@@ -73,17 +73,17 @@ using StockSharp.Messages;
 // Expiration-based continuous futures
 var expContinuous = new ExpirationContinuousSecurity
 {
-    Id = "RTS-CONT-EXP@FORTS",
-    Board = ExchangeBoard.Forts,
+    Id = "ES-CONT-EXP@CME",
+    Board = ExchangeBoard.Cme,
 };
 
 // Specify exact transition dates for each contract
 expContinuous.ExpirationJumps.Add(
-    "RTS-3.26@FORTS".ToSecurityId(),
+    "ES-3.26@CME".ToSecurityId(),
     new DateTime(2026, 3, 15)
 );
 expContinuous.ExpirationJumps.Add(
-    "RTS-6.26@FORTS".ToSecurityId(),
+    "ES-6.26@CME".ToSecurityId(),
     new DateTime(2026, 6, 15)
 );
 ```

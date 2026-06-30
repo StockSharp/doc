@@ -100,11 +100,9 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 | `StockSharp.Binance` | 币安 |
 | `StockSharp.InteractiveBrokers` | 互动经纪商 |
 | `StockSharp.Fix` | FIX 协议（通用） |
-| `StockSharp.Connectors.Tinkoff` | Tinkoff 投资 |
 | `StockSharp.Connectors.Coinbase` | Coinbase |
 | `StockSharp.Connectors.BitStamp` | 比特斯坦普 |
 | `StockSharp.Connectors.Bittrex` | Bittrex |
-| `StockSharp.Finam` | Finam |
 
 > [!NOTE]
 > 有关连接器的完整列表，请参见 [连接器](connectors.md) 部分。某些连接器仅通过 [私有 NuGet 服务器](#private-nuget-server) 提供。

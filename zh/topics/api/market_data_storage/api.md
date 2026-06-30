@@ -37,7 +37,7 @@ var storageRegistry = new StorageRegistry()
 
 ```cs
 // Retrieving candles
-var securityId = "SBER@TQBR".ToSecurityId();
+var securityId = "AAPL@NASDAQ".ToSecurityId();
 var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
 var candles = candleStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 

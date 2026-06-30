@@ -4,7 +4,7 @@
 
 例如，两个 ES 指数期货 - **ESM5** 和 **ESU5**。当 **ESM5** 到期时，它会自动切换到下一个合约 - **ESU5**。
 
-[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) 可以像 [Security](xref:StockSharp.BusinessEntities.Security) 一样进行交易。在 **RIM5** 到期之前，算法将与该合约一起执行，到期后算法将与 **RIU5** 一起执行，依此类推。
+[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) 可以像 [Security](xref:StockSharp.BusinessEntities.Security) 一样进行交易。在 **ESM5** 到期之前，算法将与该合约一起执行，到期后算法将与 **ESU5** 一起执行，依此类推。
 
 ## 创建连续安全
 

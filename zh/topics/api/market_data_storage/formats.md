@@ -53,12 +53,12 @@ CSV 文件的扩展名是 `.csv`。
 {root_folder}/{first_letter}/{instrument_identifier}/{yyyy_MM_dd}/{file_name}.{extension}
 ```
 
-扩展名为二进制格式时是 `.bin`，文本格式时是 `.csv`。这种分层组织确保按工具和日期快速查找数据。例如，SBER@TQBR 工具在 2024 年 4 月 1 日的 5 分钟 K 线数据的二进制格式将位于如下路径：
+扩展名为二进制格式时是 `.bin`，文本格式时是 `.csv`。这种分层组织确保按工具和日期快速查找数据。例如，AAPL@NASDAQ 工具在 2024 年 4 月 1 日的 5 分钟 K 线数据的二进制格式将位于如下路径：
 
 
 
 ```
-Storage/S/SBER@TQBR/2024_04_01/candles_5m.bin
+Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
 ```
 
 ## 格式转换

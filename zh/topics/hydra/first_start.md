@@ -18,7 +18,7 @@
 
 添加市场数据源后，中央区域会打开相应的数据源面板，其中显示交易品种列表。如果面板已关闭，可以双击程序左侧列表中的数据源徽标重新打开。
 
-例如，从 ФИНАМ 数据源下载 SBER@TQBR 交易品种（俄罗斯联邦储蓄银行股票）。
+例如，从支持的数据源下载 AAPL@NASDAQ 证券。
 
 ![hydra choose market data](../../images/hydra_choose_market_data.png)
 

@@ -26,9 +26,9 @@
    // initialize the reconnection mechanism (it will automatically connect 
    // every 10 seconds if the gateway loses connection with the server)
    Connector.Adapter.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
-   // reconnection will work only during the operation of the RTS exchange
+   // reconnection will work only during the selected board working hours
    // (to disable reconnection when there is no trading normally, for example, at night)
-   Connector.Adapter.ReConnectionSettings.WorkingTime = Exchange.Rts.WorkingTime;
+   Connector.Adapter.ReConnectionSettings.WorkingTime = ExchangeBoard.Nasdaq.WorkingTime;
    ```
 2. 要检查连接控制机制的工作原理，您可以关闭互联网连接：
 3. 以下是程序日志，显示应用程序最初处于已连接状态，在关闭互联网连接后，应用程序尝试重新连接。在恢复互联网连接后，应用程序连接得以恢复：

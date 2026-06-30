@@ -1,3 +1,3 @@
-# 辛巴（SBE）
+# 俄罗斯市场专用连接器主题
 
-此连接器仅适用于 MOEX。说明在[俄文版](https://doc.stocksharp.ru/topics/api/connectors/russia/simba.html)中提供。
+此主题仅在俄语版本中提供，因为它专属于俄罗斯市场。

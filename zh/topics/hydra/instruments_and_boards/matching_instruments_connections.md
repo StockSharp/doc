@@ -17,9 +17,9 @@
    以 APPLE 股票证券为例。
    - 连接选择 **Interactive Brokers**。单击 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮，随后将添加一行。
    - 在 **Security code** 和 **Board code** 列中指定证券代码和交易板块代码。在 **Security code in adapter** 和 **Board code in adapter** 列中，按照外部交易系统中的定义填写证券代码和交易板块代码。单击 **OK**。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
-   - 以相同方式为 **Transaq** 和 **CQG Continuum** 连接重复上述步骤。
+   - 以相同方式为 **Interactive Brokers** 和 **CQG Continuum** 连接重复上述步骤。
 
-   | **Transaq**                                                                       | **CQG Continuum**                                                                 |
+   | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
    | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
 4. 现在，所有下载的数据（本例中为 APPLE 股票的数据）都会保存到同一位置。

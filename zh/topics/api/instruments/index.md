@@ -17,8 +17,8 @@
    private Security _instr1;
    private Security _instr2;
    private ExpressionIndexSecurity _indexInstr;
-   private const string _secCode1 = "GZM5";
-   private const string _secCode2 = "LKM5";
+   private const string _secCode1 = "AAPL";
+   private const string _secCode2 = "MSFT";
    							
    ```
 2. 要创建 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity)：
@@ -41,8 +41,8 @@
    private Security _instr1;
    private Security _instr2;
    private WeightedIndexSecurity _indexInstr;
-   private const string _secCode1 = "GZM5";
-   private const string _secCode2 = "LKM5";
+   private const string _secCode1 = "AAPL";
+   private const string _secCode2 = "MSFT";
    							
    ```
 2. 要创建 [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity)：

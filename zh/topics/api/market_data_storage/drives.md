@@ -67,7 +67,7 @@ var remoteDrive = new RemoteMarketDataDrive
 };
 
 // Retrieve available data types for an instrument
-var secId = "SBER@TQBR".ToSecurityId();
+var secId = "AAPL@NASDAQ".ToSecurityId();
 await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, StorageFormats.Binary))
 {
     Console.WriteLine(dataType);
