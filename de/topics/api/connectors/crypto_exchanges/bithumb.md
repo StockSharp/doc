@@ -1,6 +1,6 @@
 # Bithumb
 
-**Bibox** - Kryptowährungsbörse.
+**Bithumb** - Kryptowährungsbörse.
 
 Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir Ihnen, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen.
 

@@ -1,6 +1,6 @@
 # Bithumb
 
-**Bibox** - bolsa de criptomoedas.
+**Bithumb** - bolsa de criptomoedas.
 
 Antes de começar a escrever robôs de negociação para esta plataforma de negociação, recomendamos ler os links na seção [Conectores](../../connectors.md).
 
