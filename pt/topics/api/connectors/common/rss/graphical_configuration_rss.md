@@ -1,0 +1,20 @@
+# Configuração gráfica RSS
+
+Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
+
+![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
+
+- **Address** - Endereço do feed RSS.
+- **Dates format** - Formato de datas. Necessário se o formato do stream RSS for diferente de `ddd, dd MMM yyyy HH:mm:ss zzzz`.
+- **Heart beat** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, é igual a 1 minuto.
+- **Reconnection settings** - Mecanismo para rastrear as configurações de conexão com o sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
+
+## Conteúdo recomendado
+
+[Conectores](../../../connectors.md)
+
+[Configuração gráfica](../../graphical_configuration.md)
+
+[Criando seu próprio conector](../../creating_own_connector.md)
+
+[Salvar e carregar configurações](../../save_and_load_settings.md)
