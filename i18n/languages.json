@@ -1,0 +1,38 @@
+[
+  {
+    "code": "en",
+    "name": "English",
+    "flag": "en.svg",
+    "default": true
+  },
+  {
+    "code": "ru",
+    "name": "Русский",
+    "flag": "ru.svg"
+  },
+  {
+    "code": "zh",
+    "name": "中文",
+    "flag": "zh.svg"
+  },
+  {
+    "code": "de",
+    "name": "Deutsch",
+    "flag": "de.svg"
+  },
+  {
+    "code": "es",
+    "name": "Español",
+    "flag": "es.svg"
+  },
+  {
+    "code": "ja",
+    "name": "日本語",
+    "flag": "ja.svg"
+  },
+  {
+    "code": "pt",
+    "name": "Português",
+    "flag": "pt.svg"
+  }
+]
