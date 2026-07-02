@@ -1,8 +1,8 @@
-# CSV适配器初始化
+# CSV 适配器初始化
 
-适配器使用[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)进行初始化。
+该适配器通过 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 进行初始化。
 
-适配器设置在主题[导入](../../../../hydra/importing.md)中有描述。
+适配器设置在 [导入](../../../../hydra/importing.md) 主题中有详细描述。
 
 ## 推荐内容
 

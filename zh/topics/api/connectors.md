@@ -1,8 +1,8 @@
 # 连接器
 
-在 [S#](../api.md) 中处理交易所和数据源时，建议使用基类 [Connector](xref:StockSharp.Algo.Connector)。
+要在 [S#](../api.md) 中处理交易所和数据源，建议使用基类 [Connector](xref:StockSharp.Algo.Connector)。
 
-让我们来看一下使用 [Connector](xref:StockSharp.Algo.Connector) 的方法。示例的源代码可以在 Samples/01_Basic/01_ConnectAndDownloadInstruments 项目中找到。
+让我们看看如何使用 [Connector](xref:StockSharp.Algo.Connector)。示例的源代码位于 Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments 项目中。
 
 ![multiconnection main](../../images/multiconnection_main.png)
 
@@ -21,25 +21,26 @@ public MainWindow()
 		
 ```
 
-要配置 [Connector](xref:StockSharp.Algo.Connector)，**API** 提供了一个特殊的图形界面，允许您同时配置多个连接。如何使用它在 [Graphical Configuration](connectors/graphical_configuration.md) 一节中有说明。
+为了配置 [Connector](xref:StockSharp.Algo.Connector)，**API** 提供了一个专门的图形界面，可以让你同时配置多个连接。有关如何使用它的说明，请参见 [图形化配置](connectors/graphical_configuration.md) 一节。
 
 ```cs
 ...
+private readonly IFileSystem _fileSystem = Paths.FileSystem;
 private const string _connectorFile = "ConnectorFile.json";
 ...
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
 	if (Connector.Configure(this))
 	{
-		Connector.Save().Serialize(_connectorFile);
+		Connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
-	  				
+
 ```
 
-![API 图形界面连接窗口](../../images/api_gui_connectorwindow.png)
+![API GUI ConnectorWindow](../../images/api_gui_connectorwindow.png)
 
-同样，你可以通过使用扩展方法直接从代码（无需图形窗口）添加连接[TraderHelper.AddAdapter"<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.算法.连接器](xref:StockSharp.Algo.Connector)连接器，[System.Action<TAdapter\>](xref:System.Action`1)初始化 **)**:
+同样，你也可以直接从代码中添加连接（不使用图形窗口），方法是使用扩展方法 [TraderHelper.AddAdapter\<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Action\<TAdapter\>](xref:System.Action`1) init **)**：
 
 ```cs
 ...
@@ -54,14 +55,13 @@ connector.AddAdapter<BinanceMessageAdapter>(a =>
 connector.AddAdapter<RssMessageAdapter>(a => 
 {
 	a.Address = "https://news-source.com/feed";
-	a.IsEnabled = true;
 });
 	  				
 ```
 
-您可以向单个 [Connector](xref:StockSharp.Algo.Connector) 对象添加无限数量的连接。因此，您可以从程序同时连接到多个交易所和经纪商。
+你可以向单个 [Connector](xref:StockSharp.Algo.Connector) 对象添加无限数量的连接。因此，你可以从程序中同时连接到多个交易所和经纪商。
 
-在 *InitConnector* 方法中，我们为 [IConnector](xref:StockSharp.BusinessEntities.IConnector) 设置了所需的事件处理程序:
+在 *InitConnector* 方法中，我们为 [IConnector](xref:StockSharp.BusinessEntities.IConnector) 设置所需的事件处理程序：
 
 ```cs
 private void InitConnector()
@@ -87,7 +87,7 @@ private void InitConnector()
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
 	
 	// Subscribe to market data subscription failure event
-	Connector.SubscriptionFailed += (subscription, error) =>
+	Connector.SubscriptionFailed += (subscription, error, isSubscribe) =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
 			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
 	
@@ -124,7 +124,7 @@ private void InitConnector()
 			var ctx = new ContinueOnExceptionContext();
 			ctx.Error += ex => ex.LogError();
 			using (new Scope<ContinueOnExceptionContext>(ctx))
-				Connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+				Connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 	}
 	catch
@@ -135,16 +135,55 @@ private void InitConnector()
 	
 	// Register adapter provider for graphical configuration
 	ConfigManager.RegisterService<IMessageAdapterProvider>(
-		new FullInMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
+		new InMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }
 ```
 
-有关如何将 [Connector](xref:StockSharp.Algo.Connector) 的设置保存到文件和从文件加载的内容，请参见 [Saving and Loading Settings](connectors/save_and_load_settings.md) 部分。
+如何将 [Connector](xref:StockSharp.Algo.Connector) 的设置保存到文件并从文件中加载，请参见 [保存和加载设置](connectors/save_and_load_settings.md) 一节。
 
-有关创建您自己的 [Connector](xref:StockSharp.Algo.Connector) 的信息，请参见 [Creating Your Own Connector](connectors/creating_own_connector.md) 部分。
+有关如何创建自己的 [Connector](xref:StockSharp.Algo.Connector) 的信息，请参见 [创建自己的连接器](connectors/creating_own_connector.md) 一节。
 
-下单操作描述如下部分：[Orders](orders_management.md)、[Creating a New Order](orders_management/create_new_order.md)、[Creating a New Stop Order](orders_management/create_new_stop_order.md)。
+下单相关内容请参见 [订单](orders_management.md)、[创建新订单](orders_management/create_new_order.md)、[创建新止损订单](orders_management/create_new_stop_order.md) 各节。
+
+## 附加功能
+
+### IFileSystem 和 Paths.FileSystem
+
+使用 `IFileSystem` 进行文件操作，例如序列化和反序列化设置。默认实例可以通过 `Paths.FileSystem` 获取：
+
+```cs
+private readonly IFileSystem _fileSystem = Paths.FileSystem;
+```
+
+不带 `IFileSystem` 参数的 `Serialize` 和 `Deserialize` 方法已标记为 `[Obsolete]`。
+
+### 异步订单方法
+
+以下是处理订单可用的异步方法：
+
+- `RegisterOrderAsync` - 异步注册订单。
+- `CancelOrderAsync` - 异步取消订单。
+- `EditOrderAsync` - 异步编辑订单。
+
+### SubscriptionsOnConnect
+
+`SubscriptionsOnConnect` 属性控制在连接时自动执行的订阅。默认情况下，它包括对金融工具、投资组合和订单的订阅。
+
+### 适配器事件
+
+以下事件可用于跟踪特定适配器的事件：
+
+- `ConnectedEx` - 特定适配器已连接。
+- `DisconnectedEx` - 特定适配器已断开连接。
+- `ConnectionErrorEx` - 特定适配器发生连接错误。
+
+### 订阅生命周期
+
+- `SubscriptionStarted` - 订阅已启动。
+- `SubscriptionOnline` - 订阅已切换到在线状态：已接收历史数据，并已开始实时数据传输。
+- `SubscriptionFailed` - 订阅错误。第三个参数 `isSubscribe` 表示错误发生在订阅还是取消订阅期间。
+- `SubscriptionStopped` - 订阅已停止。
 
 ## 另请参阅
 
-[图形配置](connectors/graphical_configuration.md)
+[图形化配置](connectors/graphical_configuration.md)

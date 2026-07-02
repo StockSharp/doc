@@ -1,8 +1,8 @@
 # 转储模式
 
-FAST 连接器可以在转储模式下使用。在这种情况下，数据不是来自真实的网络连接，而是来自应用程序 [UDP Dumper](../../../../udp_dumper.md) 的累积文件。
+FAST 连接器支持在转储模式下工作。在这种情况下，数据不是来自真实的网络连接，而是来自应用程序 [UDP Dumper](../../../../udp_dumper.md) 的累积文件。
 
-为了启用转储模式，有必要通过转储方法 [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** 传输文件，然后再进行连接:
+要启用转储模式，需要在连接之前，通过转储方法 [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** 传入文件：
 
 ```cs
 // ... connector initialization
@@ -30,4 +30,4 @@ fastAdapter.DialectSettings.Dump(dict);
 connector.Connect();
 ```
 
-之后，连接器的工作照常进行，就好像它正在从网络接收数据一样。
+之后，连接器的工作方式和平常一样，就好像它是在从网络接收数据一样。

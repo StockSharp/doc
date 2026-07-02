@@ -1,19 +1,19 @@
-# 乐器查找
+# 金融工具查询
 
-在为交易所创建您自己的适配器时，您需要实现工具查询方法。发送 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息时会调用此方法，并通过 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息返回有关工具的信息。
+在为交易所创建自己的适配器时，需要实现金融工具查询方法。发送 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息时会调用此方法，并通过 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息返回有关金融工具的信息。
 
 ## 实现 SecurityLookupAsync 方法
 
 **SecurityLookupAsync** 方法通常执行以下操作：
 
-1. 从传入消息中检索支持的乐器类型列表。
-2. 通过 API 向交易所请求工具列表。
-3. 对于每个接收到的工具，创建一个 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息，并用工具数据填充它。
-4. 检查仪器是否符合搜索条件。
-5. 通过 **SendOutMessageAsync** 方法发送创建的 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息。
-6. 处理完所有仪器后，发送关于搜索完成的消息。
+1. 从传入消息中获取支持的金融工具类型列表。
+2. 通过 API 向交易所请求金融工具列表。
+3. 为每个接收到的金融工具创建一个 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息，并填充相应的工具数据。
+4. 检查该金融工具是否符合搜索条件。
+5. 通过 **SendOutMessageAsync** 方法发送创建好的 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息。
+6. 处理完所有金融工具后，发送搜索完成的消息。
 
-下面是一个基于Coinbase交易所适配器的SecurityLookupAsync方法实现示例。在创建你自己的适配器时，你需要将此代码适配到所使用交易所的API。
+下面是基于 Coinbase 交易所适配器的 SecurityLookupAsync 方法实现示例。在创建自己的适配器时，需要将此代码适配到所使用交易所的 API。
 
 ```cs
 public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookupMsg, CancellationToken cancellationToken)
@@ -48,7 +48,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
 				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-				// It is necessary to fill in the subscription identifier
+				// you need to fill in the subscription identifier
 				// so that the external code can understand which subscription the data was received for
 				OriginalTransactionId = lookupMsg.TransactionId,
 			}
@@ -75,4 +75,4 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 }
 ```
 
-此方法允许您获取有关交易所可用工具的信息，包括其主要特征，例如工具类型、最小交易量、价格步长等。
+此方法可以获取交易所可用金融工具的相关信息，包括工具类型、最小交易量、价格步长等主要特征。

@@ -1,35 +1,35 @@
 # WebSocket 客户端
 
-在为多个交易所开发连接器时，一个重要的组成部分是 WebSocket 客户端，它提供实时数据检索。在 StockSharp 中，为了这个目的，在开发连接器时通常会创建一个 `SocketClient` 类，该类是基于 `WebSocketClient` 构建的。
+在为多个交易所开发连接器时，另一个重要组成部分是 WebSocket 客户端，它负责实时数据的获取。在 StockSharp 中，为此目的，开发连接器时通常会创建一个基于 `WebSocketClient` 构建的 `SocketClient` 类。
 
-## WebSocket客户端功能
+## WebSocketClient 功能
 
 `WebSocketClient` 是一个系统类，用于在 WebSocket 连接丢失时自动重新连接。其源代码可在 [Ecng 仓库](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/WebSocketClient.cs) 中获取。
 
 ## SocketClient 结构
 
-`SocketClient` 通常包括以下关键要素：
+`SocketClient` 通常包含以下关键要素：
 
 1. **构造函数**
-  - 初始化基础 `WebSocketClient`
+  - 初始化基础的 `WebSocketClient`
   - 设置事件处理程序
 
 2. **连接和断开方法**
   - `Connect` / `ConnectAsync`
   - `Disconnect`
 
-3. **不同类型数据的订阅方式**
-  - 例如，`SubscribeTrades`，`SubscribeOrderBook`
+3. **不同类型数据的订阅方法**
+  - 例如 `SubscribeTrades`、`SubscribeOrderBook`
 
-4. **数据退订方法**
-  - 每种订阅类型对应的退订方式
+4. **数据取消订阅方法**
+  - 与每种订阅类型对应的取消订阅方法
 
 5. **事件处理程序**
   - 用于处理不同类型的传入消息
 
 6. **辅助方法**
-  - 用于形成订阅/退订消息
-  - 用于处理接收的数据
+  - 用于构造订阅/取消订阅消息
+  - 用于处理接收到的数据
 
 ```cs
 class SocketClient : BaseLogReceiver
@@ -85,11 +85,11 @@ class SocketClient : BaseLogReceiver
 }
 ```
 
-## 实施建议
+## 实现建议
 
-- 根据特定交易所的情况调整`SocketClient`结构，同时考虑其API的具体特点。
-- 使用异步方法高效处理 WebSocket。
+- 根据特定交易所的情况调整 `SocketClient` 的结构，同时考虑其 API 的具体特点。
+- 使用异步方法以高效处理 WebSocket。
 - 实现对来自交易所的不同类型消息的处理。
-- 确保在连接丢失时进行适当的错误处理和重新连接。
+- 确保在连接丢失时进行妥善的错误处理和重新连接。
 
-请记住，具体实现可能会根据特定交易所 API 的要求和细节有所不同。
+请注意，具体实现可能会因特定交易所 API 的要求和细节而有所不同。

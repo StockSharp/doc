@@ -1,17 +1,17 @@
 # 类型转换
 
-类型转换组件在确保 StockSharp 中使用的数据类型与特定交易所的格式兼容方面起着重要作用。
+类型转换组件在确保 StockSharp 中使用的数据类型与特定交易所格式相互兼容方面起着重要作用。
 
 ## 主要功能
 
-1. 将 StockSharp 类型（e.g.、[Sides](xref:StockSharp.Messages.Sides)、[OrderTypes](xref:StockSharp.Messages.OrderTypes)、[TimeInForce](xref:StockSharp.Messages.TimeInForce)）转换为交易所使用的字符串表示。
-2. 将从交易所接收的数据逆向转换为 StockSharp 类型。
-3. 在 StockSharp 和交易所格式之间转换工具标识符。
-4. 转换时间格式和时间段。
+1. 将 StockSharp 类型（例如 [Sides](xref:StockSharp.Messages.Sides)、[OrderTypes](xref:StockSharp.Messages.OrderTypes)、[TimeInForce](xref:StockSharp.Messages.TimeInForce)）转换为交易所使用的字符串表示形式。
+2. 将从交易所接收的数据反向转换为 StockSharp 类型。
+3. 在 StockSharp 和交易所格式之间转换金融工具标识符。
+4. 转换时间格式和时间周期。
 
 ## 实现示例
 
-下面是一个带有类型转换扩展方法的类的示例：
+下面是一个包含类型转换扩展方法的类示例：
 
 ```cs
 static class Extensions
@@ -79,12 +79,12 @@ static class Extensions
 }
 ```
 
-## 推荐
+## 建议
 
-- 使用扩展方法方便地使用转换函数。
+- 使用扩展方法，方便地调用转换函数。
 - 处理所有可能的枚举值，包括 `null` 和未知值。
-- 使用 `switch` 表达式（C# 8.0+）以获得更简洁、更可读的代码。
+- 使用 `switch` 表达式（C# 8.0 及以上）编写更简洁、更易读的代码。
 - 添加对无效值的检查，并抛出带有清晰错误信息的异常。
-- 考虑使用字典来映射值，特别是对于复杂或经常变化的映射（e.g.，用于时间框架）。
+- 考虑使用字典来映射数值，尤其是对于复杂或经常变化的映射（例如时间周期）。
 
-正确实现类型转换可以显著简化在连接器其他部分处理数据的工作，并减少与格式不匹配相关的错误的可能性。
+正确实现类型转换可以显著简化连接器其他部分处理数据的工作，并降低因格式不匹配而产生错误的可能性。

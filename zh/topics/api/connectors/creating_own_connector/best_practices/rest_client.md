@@ -1,27 +1,27 @@
 # REST 客户端
 
-在为多个交易所开发连接器时，一个重要的组成部分是HTTP客户端，它提供与交易所的REST API的交互。在StockSharp中，为此目的，在开发连接器时通常会创建一个`HttpClient`类，该类基于RestSharp库构建。
+在为多个交易所开发连接器时，一个重要的组成部分是 HTTP 客户端，它负责与交易所的 REST API 进行交互。在 StockSharp 中，为此目的，开发连接器时通常会创建一个基于 RestSharp 库构建的 `HttpClient` 类。
 
 ## RestSharp 功能
 
-[RestSharp](https://www.nuget.org/packages/RestSharp) 是一个用于处理 REST API 的流行 .NET 库。为了简化在 StockSharp 框架中使用 RestSharp，已经开发了扩展方法，这些方法可以在 [Ecng 仓库](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/RestSharpHelper.cs) 中获取。
+[RestSharp](https://www.nuget.org/packages/RestSharp) 是一个用于处理 REST API 的流行 .NET 库。为了简化在 StockSharp 框架内使用 RestSharp，已经开发了一系列扩展方法，这些方法可以在 [Ecng 仓库](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/RestSharpHelper.cs) 中找到。
 
 ## HttpClient 结构
 
-`HttpClient` 通常包括以下关键要素：
+`HttpClient` 通常包含以下关键要素：
 
 1. **构造函数**
   - 初始化 RestClient
-  - 配置基础 URL 和头信息
+  - 配置基础 URL 和请求头
 
 2. **不同类型请求的方法**
-  - 例如，`GetProducts`，`GetCandles`，`GetTrades`
+  - 例如 `GetProducts`、`GetCandles`、`GetTrades`
 
-3. **交易操作方法**
-  - 例如，`GetOrders`，`RegisterOrder`，`CancelOrder`
+3. **交易操作相关方法**
+  - 例如 `GetOrders`、`RegisterOrder`、`CancelOrder`
 
 4. **辅助方法**
-  - 用于提出请求
+  - 用于构造请求
   - 用于处理响应
 
 ```cs
@@ -104,11 +104,11 @@ class HttpClient : BaseLogReceiver
 }
 ```
 
-## 实施建议
+## 实现建议
 
-- 使用异步方法以提高网络操作效率。
-- 为不稳定的连接实现错误处理和重试机制。
+- 使用异步方法以提高网络操作的效率。
+- 针对不稳定的连接实现错误处理和重试机制。
 - 考虑特定交易所的 API 速率限制。
 - 使用 RestSharp 扩展方法简化请求和响应的处理。
 
-请记住，具体实现可能会根据特定交易所 API 的要求和细节有所不同。
+请注意，具体实现可能会因特定交易所 API 的要求和细节而有所不同。

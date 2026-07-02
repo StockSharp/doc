@@ -2,16 +2,16 @@
 
 **CSV** - 从文本格式导入数据。
 
-在开始为当前交易平台编写交易机器人之前，建议先查看 [Connectors](../../connectors.md) 部分的链接。
+在开始为当前交易平台编写交易机器人之前，建议先查看 [连接器](../../connectors.md) 一节中的链接。
 
 > [!CAUTION]
-> 该连接器仅支持市场数据流；交易不被支持。
+> 该连接器仅支持行情数据流；不支持交易操作。
 
 ## 推荐内容
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 

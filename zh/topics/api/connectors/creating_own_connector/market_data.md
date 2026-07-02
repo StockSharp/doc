@@ -1,30 +1,30 @@
 # 市场数据
 
-当为交易所创建自己的适配器时，您需要实现用于订阅各种类型市场数据的方法。这些方法在收到 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息时被调用，并提供从交易所接收和处理数据的功能。
+在为交易所创建自己的适配器时，需要实现用于订阅各种类型市场数据的方法。当收到 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息时会调用这些方法，用于**接收和处理**来自交易所的数据。
 
-在示意上，处理订阅或取消订阅请求的算法如下所示：
+处理订阅或取消订阅请求的算法示意如下：
 
-1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception) 方法发送接收订阅请求的确认。
-2. 使用 [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe) 属性检查请求是订阅还是退订。
-3. 在订阅的情况下，设置订阅以通过 WebSocket 或其他机制（每个交易所特有）接收实时数据。
-4. 在取消订阅的情况下，取消相应的订阅（针对每个交易所具体）。
-5. 根据订阅类型和操作结果，使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage) 或 [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Nullable{System.DateTimeOffset}) 方法发送有关订阅结果的消息。
+1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)) 方法发送已收到订阅请求的确认。
+2. 使用 [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe) 属性检查该请求是订阅还是取消订阅。
+3. 如果是订阅，则设置通过 WebSocket 或其他机制（因交易所而异）接收实时数据的订阅。
+4. 如果是取消订阅，则取消相应的订阅（因交易所而异）。
+5. 根据订阅类型和操作结果，使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) 或 [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Nullable{System.DateTimeOffset})) 方法发送订阅结果消息。
 
-## 蜡烛数据
+## K线数据
 
-在自己的适配器中实现对蜡烛数据的订阅时，重要的是要考虑特定交易所如何处理此类数据的具体细节。在 Coinbase 的情况下，重写了以下方法和属性：
+在自己的适配器中实现对K线数据的订阅时，需要考虑交易所处理该数据类型的方式。在 Coinbase 中，重写了以下方法和属性：
 
-### 支持的时间范围
+### 支持的时间框架
 
-`TimeFrames` 属性定义了适配器支持的蜡烛时间框架列表。这使得 StockSharp 能够知道可以通过此适配器请求哪些时间框架。
+`TimeFrames` 属性定义了适配器为K线支持的时间框架列表。这使 StockSharp 能够知道可以通过该适配器请求哪些时间框架。
 
 ```cs
 protected override IEnumerable<TimeSpan> TimeFrames { get; } = Extensions.TimeFrames.Keys.ToArray();
 ```
 
-### 支持蜡烛更新
+### 支持K线更新
 
-`IsSupportCandlesUpdates` 方法用于确定适配器是否支持特定订阅请求的实时K线更新。在 Coinbase 的情况下，只支持5分钟K线的更新。
+`IsSupportCandlesUpdates` 方法确定适配器是否支持针对特定订阅请求的实时K线更新。对于 Coinbase，只支持5分钟K线的更新。
 
 ```cs
 private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinutes(5));
@@ -37,11 +37,11 @@ public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 }
 ```
 
-重写这些方法和属性允许适配器正确处理订阅蜡烛数据的请求，同时考虑到 Coinbase API 的具体特性。例如，如果请求的时间框架不是 5 分钟，StockSharp 将知道它需要使用逐笔数据来构建其他时间框架的蜡烛图。
+重写这些方法和属性使适配器能够在考虑 Coinbase API 具体特性的情况下正确处理K线数据订阅请求。例如，如果请求了非5分钟的时间框架，StockSharp 将知道需要使用逐笔成交数据来构建其他时间框架的K线。
 
 ### 订阅K线数据
 
-要订阅蜡烛数据，实现了 **OnTFCandlesSubscriptionAsync** 方法。这个方法类似于订阅逐笔数据的方法，可以请求历史数据，也可以设置订阅以实时接收新的蜡烛数据。
+要订阅K线数据，需要实现 **OnTFCandlesSubscriptionAsync** 方法。该方法与逐笔成交数据订阅方法类似，可以请求历史数据，也可以设置实时接收新K线的订阅。
 
 ```cs
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -142,9 +142,9 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 }
 ```
 
-### 处理蜡烛数据
+### 处理K线数据
 
-为了实时处理从交易所接收到的蜡烛数据，通常会实现一个类似**SessionOnCandleReceived**方法中的代码的方法。该方法将接收到的数据转换为[TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)消息，并使用SendOutMessageAsync方法发送它。
+为了处理从交易所实时接收的K线数据，通常会实现类似 **SessionOnCandleReceived** 方法的代码。该方法将接收到的数据转换为 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) 消息，并使用 SendOutMessageAsync 方法发送。
 
 ```cs
 private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken cancellationToken)
@@ -170,11 +170,11 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 }
 ```
 
-## 一级（最佳买卖价，最新价格）
+## Level 1（最优买卖价、最新成交价）
 
-### 订阅一级数据
+### 订阅 Level 1 数据
 
-要订阅一级变动，实现了 **OnLevel1SubscriptionAsync** 方法。此方法通常执行以下操作：
+要订阅 Level 1 变化，需要实现 **OnLevel1SubscriptionAsync** 方法。该方法通常执行以下操作：
 
 ```cs
 protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -205,9 +205,9 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 }
 ```
 
-### 处理一级数据
+### 处理 Level 1 数据
 
-为了实时处理从交易所接收到的一级数据，通常会实现类似 **SessionOnTickerChanged** 示例中的代码的方法。该方法将接收到的数据转换为 [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) 消息，并使用 SendOutMessageAsync 方法发送。
+为了处理从交易所实时接收的 Level 1 数据，通常会实现类似 **SessionOnTickerChanged** 示例的代码。该方法将接收到的数据转换为 [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) 消息，并使用 SendOutMessageAsync 方法发送。
 
 ```cs
 private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken cancellationToken)
@@ -241,19 +241,19 @@ private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken 
 
 ### 支持增量订单簿更新
 
-在自己的适配器中实现订单簿功能时，重要的是要考虑交易所是否支持增量订单簿更新。为此，在 Coinbase 适配器中重写了 `IsSupportOrderBookIncrements` 属性：
+在自己的适配器中实现订单簿功能时，需要检查交易所是否支持增量订单簿更新。Coinbase 适配器为此重写了 `IsSupportOrderBookIncrements` 属性：
 
 ```cs
 public override bool IsSupportOrderBookIncrements => true;
 ```
 
-`IsSupportOrderBookIncrements` 属性指示适配器是否支持增量订单簿更新。将此属性设置为 `true` 表示交易所可以发送部分订单簿更新，而不是每次变动都发送完整快照。
+`IsSupportOrderBookIncrements` 属性指示适配器是否支持增量订单簿更新。将该属性设置为 `true` 意味着交易所可以发送部分订单簿更新，而不是每次变化都发送完整快照。
 
-覆盖此属性可使 StockSharp 优化订单簿数据的处理。如果属性设置为 `true`，系统将会预期并正确处理增量更新。
+重写此属性使 StockSharp 能够优化订单簿数据的处理。如果该属性设置为 `true`，系统将预期并正确处理增量更新。
 
 ### 订阅订单簿数据
 
-要订阅订单簿的变化，实施了 **OnMarketDepthSubscriptionAsync** 方法。该方法执行的操作类似于 OnLevel1SubscriptionAsync 方法，但针对的是订单簿数据。
+要订阅订单簿变化，需要实现 **OnMarketDepthSubscriptionAsync** 方法。该方法执行的操作与 OnLevel1SubscriptionAsync 方法类似，但针对的是订单簿数据。
 
 ```cs
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -284,7 +284,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 ### 处理订单簿数据
 
-为了实时处理从交易所接收到的订单簿数据，通常会实现一个类似于 **SessionOnOrderBookReceived** 方法的代码方法。该方法将接收到的数据转换为 [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 消息，并使用 SendOutMessageAsync 方法发送它。
+为了处理从交易所实时接收的订单簿数据，通常会实现类似 **SessionOnOrderBookReceived** 方法的代码。该方法将接收到的数据转换为 [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 消息，并使用 SendOutMessageAsync 方法发送。
 
 ```cs
 private async ValueTask SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes, CancellationToken cancellationToken)
@@ -316,11 +316,11 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 }
 ```
 
-## 逐笔数据（交易）
+## 逐笔成交数据（Ticks）
 
-### 订阅 Tick 数据
+### 订阅逐笔成交数据
 
-要订阅行情数据，实现了 **OnTicksSubscriptionAsync** 方法。该方法除了执行与前面订阅方法类似的操作外，如果在请求中指定，还可以请求历史数据。
+要订阅逐笔成交数据，需要实现 **OnTicksSubscriptionAsync** 方法。除了执行与前面订阅方法类似的操作外，如果请求中指定了历史数据，该方法还可以请求历史数据。
 
 ```cs
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -414,9 +414,9 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 }
 ```
 
-### 处理逐笔数据
+### 处理逐笔成交数据
 
-要实时处理从交易所接收的行情数据，通常会实现一个类似 **SessionOnTradeReceived** 方法的代码。该方法将接收到的数据转换为具有 [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) 类型的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，并使用 SendOutMessageAsync 方法发送。
+为了处理从交易所实时接收的逐笔成交数据，通常会实现类似 **SessionOnTradeReceived** 方法的代码。该方法将接收到的数据转换为类型为 [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) 的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，并使用 SendOutMessageAsync 方法发送。
 
 ```cs
 private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
@@ -440,11 +440,11 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 
 ## 订阅订单日志
 
-订单日志是有关订单簿中所有变化的详细信息，包括订单的添加、修改和删除。此数据是特定的，并非所有数据源都提供。例如，Coinbase 不支持提供订单日志。
+订单日志是关于订单簿所有变化的详细信息，包括订单的添加、修改和删除。此数据具有特殊性，并非所有数据源都提供。例如，Coinbase 不支持提供订单日志。
 
-要在适配器中实现对订单日志的订阅，使用 **OnOrderLogSubscriptionAsync** 方法。当收到包含 [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) 数据类型的 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息时，将调用此方法。
+要在适配器中实现对订单日志的订阅，使用 **OnOrderLogSubscriptionAsync** 方法。当收到数据类型为 [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) 的 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息时会调用该方法。
 
-下方是从支持订单日志的 [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) 连接器中提取的该方法实现示例：
+以下是从支持订单日志的 [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) 连接器中提取的该方法实现示例：
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -472,7 +472,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 }
 ```
 
-在处理从交易所接收的订单日志数据时，通常使用一个单独的方法，该方法将接收到的数据转换为具有 [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) 类型的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息：
+在处理从交易所接收的订单日志数据时，通常使用一个单独的方法，将接收到的数据转换为类型为 [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) 的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息：
 
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
@@ -492,28 +492,28 @@ private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, O
 }
 ```
 
-重要的是不要忘记在适配器构造函数中添加对这种数据类型的支持：
+在适配器构造函数中添加对该数据类型的支持：
 
 ```cs
 this.AddSupportedMarketDataType(DataType.OrderLog);
 ```
 
-## 处理历史数据和实时数据的具体细节
+## 处理历史数据和实时数据的特点
 
-在自己的适配器中实现历史数据请求和处理实时数据时，重要的是要考虑以下几点：
+在自己的适配器中实现历史数据请求和实时数据处理时，请注意以下几点：
 
 ### 历史数据
 
-在响应请求时发送历史数据：
+在响应请求发送历史数据时：
 
-1. 设置 [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) 是必需的。这允许系统将接收到的数据与原始请求关联起来。
+1. 设置 [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) 是必须的。这使系统能够将接收到的数据与原始请求关联起来。
 
-2. 设置 [SecurityId](xref:StockSharp.Messages.SecurityId) 或 [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame)（在蜡烛的情况下）不是必需的，但也不禁止。StockSharp 核心将自动使用原始请求中的必要值填充这些字段。
+2. 设置 [SecurityId](xref:StockSharp.Messages.SecurityId) 或 [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame)（对于K线而言）不是必须的，但也不被禁止。StockSharp 核心会自动用原始请求中所需的值填充这些字段。
 
 ### 实时数据
 
-在处理实时数据时，例如，通过 WebSocket 接收的数据：
+在处理实时数据（例如通过 WebSocket 接收的数据）时：
 
-1. 设置 [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) 是可选的。如果未设置交易ID，系统将会把数据分发到对应工具和数据类型的所有活跃订阅中。
+1. 设置 [OriginalTransactionId](xref:StockSharp.Messages.IOriginalTransactionIdMessage.OriginalTransactionId) 是可选的。如果未设置事务ID，系统会将数据分发给该品种和数据类型的所有活跃订阅。
 
-2. 设置 [SecurityId](xref:StockSharp.Messages.SecurityId) 和其他特定字段（例如，用于蜡烛图的 [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame)）是强制性的，因为这些信息对于系统中数据的正确路由是必要的。
+2. 设置 [SecurityId](xref:StockSharp.Messages.SecurityId) 及其他特定字段（例如K线的 [TimeFrameCandleMessage.TimeFrame](xref:StockSharp.Messages.TimeFrameCandleMessage.TimeFrame)）是必须的，因为该信息对于系统中数据的正确路由是必要的。
