@@ -1,0 +1,11 @@
+# HMA
+
+**Hull Moving Average (HMA)** - el indicador muestra la dirección de la tendencia del mercado y representa una media móvil mejorada. 
+
+Para utilizar el indicador, debe utilizar la clase [HullMovingAverage](xref:StockSharp.Algo.Indicators.HullMovingAverage). 
+
+![IndicatorHullMovingAverage](../../../../images/indicatorhullmovingaverage.png)
+
+## Contenido recomendado
+
+[Ichimoku](ichimoku.md)

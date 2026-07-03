@@ -1,0 +1,25 @@
+# Asociación de instrumentos y conexiones
+
+El mismo instrumento puede llamarse de forma diferente en distintos sistemas de negociación. Es posible asociar el instrumento con las conexiones a través de las cuales se negociará y especificar cómo se identifica en el sistema de negociación externo.
+
+Esto permite organizar los datos recibidos y simplificar el almacenamiento. En la práctica, todos los datos entrantes de distintas fuentes se consolidarán en un solo lugar, no por el nombre de la fuente, sino por el nombre del instrumento.
+
+Esto también es útil al negociar el mismo instrumento en distintos mercados o a través de distintas conexiones (o brokers). Además, permite obtener datos desde una conexión y realizar operaciones a través de otra.
+
+Para asociar instrumentos y conexiones, debe:
+
+1. Ir a la pestaña **Securities** y hacer clic en el botón **Securities and Connections**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+2. En la lista de conexiones, seleccionar la conexión necesaria.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+3. Rellenar todas las columnas.
+
+   Por ejemplo:
+
+   Instrumento de acciones APPLE.
+   - Conexión - **Interactive Brokers**. Haga clic en el botón ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), después de lo cual se añadirá una nueva línea.
+   - En las columnas **Security** code y **Board code**, especifique el código del instrumento y el código del mercado. En las columnas **Security code in adapter** y **Board code in adapter**, especifique el código del instrumento y el código del mercado tal como están especificados en el sistema de negociación externo. Haga clic en **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Repita los pasos para las conexiones **Interactive Brokers** y **CQG Continuum** de la misma forma.
+
+   | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
+   | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+   | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
+4. Ahora todos los datos descargados, en nuestro caso para las acciones APPLE, se guardarán en un solo lugar.

@@ -1,0 +1,96 @@
+# PVO
+
+**Percentage Volume Oscillator (PVO)** es un indicador técnico similar a MACD, pero se aplica al volumen de operaciones en lugar del precio, expresando la diferencia entre promedios móviles exponenciales rápidos y lentos de volumen como porcentaje.
+
+Para utilizar el indicador, debe utilizar la clase [PercentageVolumeOscillator](xref:StockSharp.Algo.Indicators.PercentageVolumeOscillator).
+
+## Descripción
+
+El Percentage Volume Oscillator (PVO) es una modificación del indicador MACD (Moving Average Convergence divergencia), que se aplica al volumen de operaciones en lugar del precio. Similar a PPO (Percentage Price Oscillator), PVO expresa la diferencia entre promedios móviles exponenciales rápidos y lentos como un porcentaje, en lugar de en unidades absolutas. Esto hace que PVO sea particularmente útil al comparar diferentes instrumentos con diferentes niveles de volumen o al analizar un solo instrumento durante un período prolongado.
+
+PVO consta de tres componentes:
+1. **XQX000Línea XQX** - diferencia porcentual entre volumen rápido y lento EMA
+2. **Línea de señal** - EMA de la línea PVO
+3. **Histogram** - diferencia entre la línea PVO y la línea de señal
+
+El indicador PVO ayuda a identificar anomalías de volumen que pueden preceder a movimientos significativos de precios. También es útil para confirmar tendencias de precios e identificar posibles puntos de reversión.
+
+## Parámetros
+
+El indicador tiene los siguientes parámetros:
+- **ShortPeriod** - período para calcular el volumen corto EMA (valor predeterminado: 12)
+- **LongPeriod** - período para calcular el volumen largo EMA (valor predeterminado: 26)
+
+## Cálculo
+
+El cálculo de Percentage Volume Oscillator implica los siguientes pasos:
+
+1. Calcule las medias móviles exponenciales cortas y largas de volumen:
+   ```
+   Short EMA = EMA(Volume, ShortPeriod)
+   Long EMA = EMA(Volume, LongPeriod)
+   ```
+
+2. Calcule la línea PVO como diferencia porcentual entre EMA corto y largo:
+   ```
+   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   ```
+
+3. Calcule la línea de señal (normalmente EMA de 9 períodos de la línea PVO):
+   ```
+   Signal Line = EMA(PVO Line, 9)
+   ```
+
+4. Calcular histograma:
+   ```
+   Histogram = PVO Line - Signal Line
+   ```
+
+donde:
+- Volume - volumen de operaciones
+- EMA - media móvil exponencial
+- ShortPeriod - período corto EMA
+- LongPeriod - período largo EMA
+
+## Interpretación
+
+El Percentage Volume Oscillator se puede interpretar de la siguiente manera:
+
+1. **Cruces de línea cero**:
+   - La línea PVO que cruza la línea cero de abajo hacia arriba indica una aceleración del volumen por encima del promedio, lo que puede presagiar un movimiento alcista.
+   - La línea PVO que cruza la línea cero de arriba a abajo indica una desaceleración del volumen por debajo del promedio, lo que puede presagiar un movimiento bajista.
+
+2. **Cruces de línea de señal**:
+   - La línea PVO que cruza la línea de señal de abajo hacia arriba puede verse como una señal alcista
+   - La línea PVO que cruza la línea de señal de arriba a abajo puede verse como una señal bajista
+
+3. **Divergencias**:
+   - Divergencia alcista: el precio forma un nuevo mínimo, mientras que PVO forma un mínimo más alto
+   - Divergencia bajista: el precio forma un nuevo máximo, mientras que PVO forma un máximo más bajo
+
+4. **Valores extremos**:
+   - Los valores muy altos de PVO pueden indicar un volumen excesivo, que a menudo ocurre durante los picos del mercado o durante el pánico.
+   - Los valores muy bajos de PVO pueden indicar un volumen insuficiente, lo que a menudo ocurre durante las pausas del mercado.
+
+5. **XQX000XQAnálisis de xistograma**:
+   - El aumento del histograma positivo indica un fortalecimiento del impulso del volumen alcista
+   - El aumento del histograma negativo indica un fortalecimiento del impulso del volumen bajista
+   - La contracción Histogram indica un debilitamiento del impulso del volumen actual
+
+6. **Confirmación de tendencia de precios**:
+   - Rising PVO confirma una tendencia alcista de precios
+   - La caída del PVO confirma una tendencia a la baja del precio
+   - Divergencia entre la dirección PVO y el precio puede indicar una posible reversión
+
+7. **XQX000Picos XQX**:
+   - Los saltos bruscos de PVO indican cambios de volumen significativos, que a menudo acompañan a eventos importantes del mercado
+   - Estos picos pueden preceder o acompañar a las rupturas de niveles de precios clave.
+
+![indicator_percentage_volume_oscillator](../../../../images/indicator_percentage_volume_oscillator.png)
+
+## Véase también
+
+[PPO](percentage_price_oscillator.md)
+[OBV](on_balance_volume.md)
+[MACD](macd.md)
+[ChaikinMoneyFlow](chaikin_money_flow.md)

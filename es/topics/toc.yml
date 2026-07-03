@@ -1,0 +1,2399 @@
+- name: Installer
+  href: installer.md
+  items:
+  - name: Vídeos
+    items:
+    - name: Configuración
+      href: installer/videos/setup.md
+    - name: Instalar y eliminar aplicaciones
+      href: installer/videos/install_and_remove_apps.md
+    - name: Actualizar aplicaciones
+      href: installer/videos/update_apps.md
+  - name: Primer inicio
+    href: installer/setup.md
+  - name: Instalar y eliminar aplicaciones
+    href: installer/install_and_remove_apps.md
+  - name: Actualizar aplicaciones
+    href: installer/update_apps.md
+  - name: Instalador de consola
+    href: installer/console.md
+- name: Designer
+  href: designer.md
+  items:
+  - name: Vídeos
+    items:
+      - name: Primeros pasos
+        href: designer/videos/beginning.md
+      - name: Constructor de estrategias de trading
+        href: designer/videos/constructor.md
+      - name: Matemáticas de lógica de variables
+        href: designer/videos/variable_math.md
+      - name: Depurador de estrategias de trading
+        href: designer/videos/debugger.md
+      - name: Protección de posiciones
+        href: designer/videos/protect_position.md
+      - name: Indicadores y fórmulas
+        href: designer/videos/indicators_formula.md
+      - name: Bandas de Bollinger y MACD
+        href: designer/videos/bollinger_macd.md
+      - name: Multitimeframe
+        href: designer/videos/multi_timeframes.md
+      - name: Tiempo
+        href: designer/videos/time.md
+      - name: Conexión de Designer a Hydra
+        href: designer/videos/connect_hydra.md
+      - name: Optimización de estrategias de trading
+        href: designer/videos/optimization.md
+      - name: Trading en vivo
+        href: designer/videos/live_trading.md
+      - name: Cubos compuestos
+        href: designer/videos/complex_elements.md
+      - name: Compresión de velas desde ticks
+        href: designer/videos/candles_build_ticks.md
+      - name: Bandera
+        href: designer/videos/flag.md
+      - name: Estrategia de volumen máximo
+        href: designer/videos/strategy_max_volume.md
+      - name: Índices financieros
+        href: designer/videos/financial_index.md
+      - name: Pair trading
+        href: designer/videos/pair_trading.md
+      - name: Índices y pair trading
+        href: designer/videos/index_pair_trading.md
+  - name: Recursos para el aprendizaje
+    href: designer/materials.md
+  - name: Instalación de Designer
+    href: designer/installing_designer.md
+  - name: Actualizar a la nueva versión
+    href: designer/update_to_the_new_version.md
+  - name: Inicio rápido
+    href: designer/quick_start.md
+  - name: Interfaz de usuario
+    items:
+    - name: Ribbon
+      href: designer/user_interface/ribbon.md
+    - name: Espacio de trabajo
+      href: designer/user_interface/workspace.md
+    - name: Panel Schemes
+      href: designer/user_interface/schemas.md
+    - name: Panel de logs
+      href: designer/user_interface/logs.md
+    - name: Carteras
+      href: designer/user_interface/portfolios.md
+    - name: Boards
+      href: designer/user_interface/boards.md
+    - name: Gestión de riesgos
+      href: designer/user_interface/risk_management.md
+    - name: Comisiones
+      href: designer/user_interface/commissions.md
+    - name: Componentes
+      href: designer/user_interface/components.md
+      items:
+      - name: Gráfico
+        href: designer/user_interface/components/chart.md
+      - name: Órdenes
+        href: designer/user_interface/components/orders.md
+      - name: Operaciones
+        href: designer/user_interface/components/trades.md
+      - name: Libro de órdenes
+        href: designer/user_interface/components/order_book.md
+      - name: Posiciones
+        href: designer/user_interface/components/positions.md
+      - name: Estadísticas
+        href: designer/user_interface/components/statistics.md
+      - name: "Equity P&L"
+        href: designer/user_interface/components/pnl_equity.md
+      - name: Configuración de backtesting
+        href: designer/user_interface/components/backtesting_settings.md
+      - name: Configuración live
+        href: designer/user_interface/components/live_settings.md
+      - name: Operaciones tick
+        href: designer/user_interface/components/tick_trades.md
+  - name: Estrategias
+    items:
+    - name: Uso de bloques
+      href: designer/strategies/using_visual_designer.md
+      items:
+      - name: Diseñador de estrategias
+        href: designer/strategies/using_visual_designer/diagram_panel.md
+      - name: Elementos
+        href: designer/strategies/using_visual_designer/elements.md
+        items:
+        - name: Común
+          items:
+          - name: Gráfico
+            href: designer/strategies/using_visual_designer/elements/common/chart.md
+          - name: Crossing
+            href: designer/strategies/using_visual_designer/elements/common/crossing.md
+          - name: Retraso de valor
+            href: designer/strategies/using_visual_designer/elements/common/delay_value.md
+          - name: Comparación
+            href: designer/strategies/using_visual_designer/elements/common/comparison.md
+          - name: Indicador
+            href: designer/strategies/using_visual_designer/elements/common/indicator.md
+          - name: Condición lógica
+            href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
+          - name: Fórmula
+            href: designer/strategies/using_visual_designer/elements/common/formula.md
+          - name: Combinación
+            href: designer/strategies/using_visual_designer/elements/common/combination.md
+          - name: Valor anterior
+            href: designer/strategies/using_visual_designer/elements/common/prev_value.md
+          - name: Valor aleatorio
+            href: designer/strategies/using_visual_designer/elements/common/random.md
+          - name: Bandera
+            href: designer/strategies/using_visual_designer/elements/common/flag.md
+          - name: Sincronización
+            href: designer/strategies/using_visual_designer/elements/common/sync.md
+          - name: "Estrategia P&L"
+            href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
+          - name: Operaciones por estrategia
+            href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
+        - name: Fuentes de datos
+          items:
+          - name: Velas
+            href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
+          - name: Level 1
+            href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
+          - name: Ticks
+            href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
+          - name: Índice
+            href: designer/strategies/using_visual_designer/elements/data_sources/index.md
+          - name: Variable
+            href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
+        - name: Tiempo
+          items:
+          - name: Horario de trabajo
+            href: designer/strategies/using_visual_designer/elements/time/working_time.md
+          - name: Trading permitido
+            href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
+          - name: Hora actual
+            href: designer/strategies/using_visual_designer/elements/time/current_time.md
+        - name: Posiciones
+          items:
+          - name: Modificar posición
+            href: designer/strategies/using_visual_designer/elements/positions/modify.md
+          - name: Posición
+            href: designer/strategies/using_visual_designer/elements/positions/current.md
+          - name: Protección de posición
+            href: designer/strategies/using_visual_designer/elements/positions/protect.md
+        - name: Órdenes
+          items:
+          - name: Registro de orden
+            href: designer/strategies/using_visual_designer/elements/orders/register.md
+          - name: Cancelación de orden
+            href: designer/strategies/using_visual_designer/elements/orders/cancel.md
+          - name: Movimiento de orden
+            href: designer/strategies/using_visual_designer/elements/orders/modify.md
+          - name: Cancelaciones masivas de órdenes
+            href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
+        - name: Convertidores
+          items:
+          - name: Indexador
+            href: designer/strategies/using_visual_designer/elements/converters/indexer.md
+          - name: Convertidor
+            href: designer/strategies/using_visual_designer/elements/converters/converter.md
+        - name: Notificaciones
+          items:
+          - name: Notificación
+            href: designer/strategies/using_visual_designer/elements/notifying/notification.md
+          - name: Concatenación de cadenas
+            href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
+          - name: Formato de cadena
+            href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
+        - name: Libros de órdenes
+          items:
+          - name: Libro de órdenes
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
+          - name: Libro de órdenes agrupado
+            href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
+          - name: Panel de libro de órdenes
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
+          - name: Libro de órdenes disperso
+            href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
+          - name: Libro de órdenes truncado
+            href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
+        - name: Opciones
+          items:
+          - name: Libro IV
+            href: designer/strategies/using_visual_designer/elements/options/iv_book.md
+          - name: Option desk
+            href: designer/strategies/using_visual_designer/elements/options/option_desk.md
+          - name: Gráfico de posiciones
+            href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
+          - name: Griegas
+            href: designer/strategies/using_visual_designer/elements/options/greeks.md
+          - name: Black-Scholes
+            href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
+          - name: Cesta
+            href: designer/strategies/using_visual_designer/elements/options/basket.md
+          - name: Cobertura
+            href: designer/strategies/using_visual_designer/elements/options/hedging.md
+          - name: Cotización de opciones
+            href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
+          - name: Strikes
+            href: designer/strategies/using_visual_designer/elements/options/strikes.md
+      - name: Líneas
+        href: designer/strategies/using_visual_designer/lines.md
+      - name: Modelo de eventos
+        href: designer/strategies/using_visual_designer/event_model.md
+      - name: Primera estrategia
+        href: designer/strategies/using_visual_designer/first_strategy.md
+      - name: Elementos compuestos
+        href: designer/strategies/using_visual_designer/composite_elements.md
+      - name: Ejemplos de esquemas
+        items:
+        - name: Mostrar velas en el gráfico
+          href: designer/strategies/using_visual_designer/schema_samples/display_candles_on_chart.md
+        - name: Obtener el mejor precio para un instrumento
+          href: designer/strategies/using_visual_designer/schema_samples/get_best_price_for_instrument.md
+        - name: Obtener posición actual
+          href: designer/strategies/using_visual_designer/schema_samples/get_current_position.md
+        - name: Obtener nivel de precio del libro de órdenes
+          href: designer/strategies/using_visual_designer/schema_samples/get_order_book_price_level.md
+    - name: Lenguajes de programación
+      href: designer/strategies/using_code.md
+      items:
+      - name: "Uso de C#"
+        href: designer/strategies/using_code/csharp.md
+        items:
+        - name: "Ejemplo de estrategia C#"
+          href: designer/strategies/using_code/csharp/first_strategy.md
+        - name: DLL externas
+          href: designer/strategies/using_code/csharp/external_dlls.md
+        - name: Crear su propio cubo
+          href: designer/strategies/using_code/csharp/creating_your_own_cube.md
+        - name: "Creación de un indicador en C#"
+          href: designer/strategies/using_code/csharp/create_own_indicator.md
+        - name: Dibujo del libro de órdenes
+          href: designer/strategies/using_code/csharp/draw_order_book.md
+        - name: Uso de Visual Studio o Rider
+          href: designer/strategies/using_code/csharp/using_visual_studio_or_rider.md
+      - name: "Uso de F#"
+        href: designer/strategies/using_code/fsharp.md
+        items:
+        - name: "Ejemplo de estrategia F#"
+          href: designer/strategies/using_code/fsharp/first_strategy.md
+        - name: Crear su propio cubo
+          href: designer/strategies/using_code/fsharp/creating_your_own_cube.md
+        - name: Creación de un indicador
+          href: designer/strategies/using_code/fsharp/create_own_indicator.md
+      - name: Uso de Python
+        href: designer/strategies/using_code/python.md
+        items:
+        - name: Ejemplo de estrategia Python
+          href: designer/strategies/using_code/python/first_strategy.md
+        - name: Crear su propio cubo
+          href: designer/strategies/using_code/python/creating_your_own_cube.md
+        - name: Creación de un indicador
+          href: designer/strategies/using_code/python/create_own_indicator.md
+    - name: Uso de DLL
+      href: designer/strategies/using_dll.md
+      items:
+      - name: Crear un cubo e indicador
+        href: designer/strategies/using_dll/create_element_and_indicator.md
+      - name: Depuración de una DLL con Visual Studio
+        href: designer/strategies/using_dll/debug_dll_in_visual_studio.md
+      - name: Panel DLL
+        href: designer/strategies/using_dll/dll_panel.md
+  - name: Indicadores
+    items:
+    - name: Indicadores
+      href: designer/indicators/indicators.md
+    - name: Crear su propio indicador
+      href: designer/indicators/creating_your_own_indicator.md
+  - name: Backtesting
+    items:
+    - name: Interfaz de usuario
+      href: designer/backtesting/user_interface.md
+    - name: Primeros pasos
+      href: designer/backtesting/getting_started.md
+    - name: Depuración
+      href: designer/backtesting/debugging.md
+      items:
+      - name: Puntos de interrupción
+        href: designer/backtesting/debugging/break_points.md
+      - name: Ejecución paso a paso
+        href: designer/backtesting/debugging/step_by_step_execution.md
+    - name: Pruebas en la nube
+      href: designer/backtesting/cloud_backtesting.md
+  - name: Optimización
+    items:
+    - name: Fuerza bruta
+      href: designer/optimization/brute_force.md
+    - name: Parámetros de optimización
+      href: designer/optimization/optimization_parameters.md
+    - name: Genética
+      href: designer/optimization/genetic.md
+    - name: Informe 3D
+      href: designer/optimization/3d_chart.md
+    - name: Optimización de cartera
+      href: designer/optimization/portfolio_optimization.md
+    - name: Optimización en la nube
+      href: designer/optimization/cloud_optimization.md
+  - name: Almacenamiento de datos de mercado
+    href: designer/market_data_storage.md
+    items:
+    - name: Descargar instrumentos
+      href: designer/market_data_storage/download_instruments.md
+    - name: Crear instrumento
+      href: designer/market_data_storage/create_instrument.md
+    - name: Editar instrumento
+      href: designer/market_data_storage/edit_instrument.md
+    - name: Índice
+      href: designer/market_data_storage/index.md
+    - name: Futuros continuos
+      href: designer/market_data_storage/continuous_futures.md
+    - name: Descargar datos de mercado
+      href: designer/market_data_storage/download_market_data.md
+    - name: Primeros pasos
+      href: designer/market_data_storage/getting_started.md
+    - name: Información extendida del instrumento
+      href: designer/market_data_storage/instrument_extended_info.md
+    - name: Mapeo de símbolos
+      href: designer/market_data_storage/symbol_mapping.md
+  - name: Ejecución en vivo
+    items:
+    - name: Primeros pasos
+      href: designer/live_execution/getting_started.md
+    - name: Interfaz
+      href: designer/live_execution/user_interface.md
+    - name: Panel de estrategias
+      href: designer/live_execution/strategies_dashboard.md
+    - name: Ejemplo de ejecución en vivo
+      href: designer/live_execution/live_execution_sample.md
+    - name: Ejecución de estrategias fuera de Designer
+      href: designer/live_execution/running_strategies_outside_of_designer.md
+  - name: Configuración de conexiones
+    href: designer/connections_settings.md
+    items:
+    - name: Configuración de conectores
+      href: designer/connections_settings/connectors_settings.md
+    - name: Simulador
+      href: designer/connections_settings/simulator.md
+  - name: Galería de estrategias
+    href: designer/strategy_gallery.md
+    items:
+    - name: Publicación de su estrategia
+      href: designer/strategy_gallery/publish_own_strategy.md
+  - name: Exportar e importar
+    items:
+    - name: Exportar
+      href: designer/export_import/export.md
+    - name: Importar
+      href: designer/export_import/import.md
+  - name: Configuración
+    items:
+    - name: Restablecer configuración
+      href: designer/settings/reset_settings.md
+    - name: Directorio de configuración
+      href: designer/settings/settings_directory.md
+- name: Terminal
+  href: terminal.md
+  items:
+  - name: Instalación de Terminal
+    href: terminal/installing_terminal.md
+  - name: Actualización a la nueva versión
+    href: terminal/update_to_the_new_version.md
+  - name: Inicio rápido
+    href: terminal/quick_start.md
+  - name: Interfaz de usuario
+    items:
+    - name: Ribbon
+      href: terminal/user_interface/ribbon.md
+    - name: Workspace
+      href: terminal/user_interface/workspace.md
+    - name: Logs
+      href: terminal/user_interface/logs.md
+    - name: Carteras
+      href: terminal/user_interface/portfolios.md
+    - name: Editor de mercados
+      href: terminal/user_interface/board_editor.md
+    - name: Gestión de riesgos
+      href: terminal/user_interface/risk_management.md
+    - name: Componentes
+      href: terminal/user_interface/components.md
+      items:
+      - name: Instrumentos
+        href: terminal/user_interface/components/instruments.md
+      - name: Level 1
+        href: terminal/user_interface/components/level_1.md
+      - name: Buy\/Sell
+        href: terminal/user_interface/components/buy_sell.md
+      - name: Libro de órdenes
+        href: terminal/user_interface/components/order_book.md
+      - name: Gráfico
+        href: terminal/user_interface/components/chart.md
+      - name: "Gráfico P&L"
+        href: terminal/user_interface/components/pnl_chart.md
+      - name: Operaciones
+        href: terminal/user_interface/components/trades.md
+      - name: Órdenes
+        href: terminal/user_interface/components/orders.md
+      - name: Órdenes condicionales
+        href: terminal/user_interface/components/conditional_orders.md
+      - name: Posiciones
+        href: terminal/user_interface/components/positions.md
+      - name: Feed de operaciones
+        href: terminal/user_interface/components/trades_feed.md
+      - name: Noticias
+        href: terminal/user_interface/components/news.md
+      - name: Posiciones (opciones)
+        href: terminal/user_interface/components/positions_options.md
+      - name: Option desk
+        href: terminal/user_interface/components/option_desk.md
+      - name: Smile volatility
+        href: terminal/user_interface/components/smile_volatility.md
+      - name: Registro de órdenes
+        href: terminal/user_interface/components/order_log.md
+  - name: Configuración de conexión
+    href: terminal/connection_settings.md
+  - name: Almacenamiento de datos de mercado
+    href: terminal/market_data_storage.md
+  - name: Indicadores
+    href: terminal/indicators.md
+  - name: Notificaciones
+    href: terminal/notifications.md
+    items:
+    - name: Panel de notificaciones
+      href: terminal/notifications/notification_panel.md
+    - name: Configuración de notificaciones
+      href: terminal/notifications/notifications_setup.md
+  - name: Configuración
+    items:
+    - name: Restablecer configuración
+      href: terminal/settings/reset_settings.md
+- name: Hydra
+  href: hydra.md
+  items:
+  - name: Vídeos
+    items:
+    - name: Primer inicio
+      href: hydra/videos/first_start.md
+    - name: Ejemplos de fuentes
+      href: hydra/videos/sources_samples.md
+      items:
+      - name: Oanda
+        href: hydra/videos/sources_samples/oanda.md
+      - name: Interactive Brokers
+        href: hydra/videos/sources_samples/interactive_brokers.md
+      - name: Bitmex
+        href: hydra/videos/sources_samples/bitmex.md
+      - name: Binance
+        href: hydra/videos/sources_samples/binance.md
+    - name: Descarga de instrumentos
+      href: hydra/videos/instruments_downloading.md
+    - name: Construcción de velas
+      href: hydra/videos/building_candles.md
+    - name: Construcción de libros de órdenes
+      href: hydra/videos/building_order_books.md
+    - name: Formato de guardado
+      href: hydra/videos/saving_format.md
+    - name: Indicadores
+      href: hydra/videos/indicators.md
+    - name: Analítica
+      href: hydra/videos/analytics.md
+    - name: Tarea Import
+      href: hydra/videos/import_task.md
+    - name: Tarea Export
+      href: hydra/videos/export_task.md
+    - name: Tarea Converter
+      href: hydra/videos/converter_task.md
+  - name: Instalación de Hydra
+    href: hydra/installing_hydra.md
+  - name: Actualización a la nueva versión
+    href: hydra/update_to_the_new_version.md
+  - name: Primer inicio
+    href: hydra/first_start.md
+  - name: Fuentes de datos
+    href: hydra/data_sources.md
+    items:
+    - name: Seleccionar fuente
+      href: hydra/data_sources/select_source.md
+    - name: Configuración común de conexión
+      href: hydra/data_sources/common_connection_settings.md
+  - name: Preparación para la descarga
+    items:
+    - name: Lista de instrumentos
+      href: hydra/prepare_for_download/instruments_list.md
+    - name: Velas personalizadas
+      href: hydra/prepare_for_download/custom_candles.md
+  - name: Trabajo con datos
+    href: hydra/working_with_data.md
+    items:
+    - name: Ver y exportar
+      href: hydra/working_with_data/view_and_export.md
+      items:
+      - name: Ticks
+        href: hydra/working_with_data/view_and_export/ticks.md
+      - name: Libros de órdenes
+        href: hydra/working_with_data/view_and_export/order_books.md
+      - name: Velas
+        href: hydra/working_with_data/view_and_export/candles.md
+      - name: Registro de órdenes
+        href: hydra/working_with_data/view_and_export/order_log.md
+      - name: Level 1
+        href: hydra/working_with_data/view_and_export/level_1_.md
+      - name: Noticias
+        href: hydra/working_with_data/view_and_export/news.md
+      - name: Transacciones
+        href: hydra/working_with_data/view_and_export/transactions.md
+      - name: Option desk
+        href: hydra/working_with_data/view_and_export/option_desk.md
+      - name: Indicadores
+        href: hydra/working_with_data/view_and_export/indicators.md
+      - name: Posiciones
+        href: hydra/working_with_data/view_and_export/positions.md
+    - name: Generación de velas
+      href: hydra/working_with_data/candles_generation.md
+    - name: Exportar datos
+      href: hydra/working_with_data/export_data.md
+      items:
+      - name: Exportación a MetaStock
+        href: hydra/working_with_data/export_data/export_into_metastock.md
+    - name: Cualquier tipo de dato de mercado
+      href: hydra/working_with_data/any_market_data_types.md
+  - name: Indicadores
+    href: hydra/indicators.md
+  - name: Importación
+    href: hydra/importing.md
+    items:
+    - name: Velas
+      href: hydra/importing/candles.md
+    - name: Instrumentos
+      href: hydra/importing/instruments.md
+    - name: Ticks
+      href: hydra/importing/ticks.md
+    - name: Libros de órdenes
+      href: hydra/importing/order_books.md
+    - name: Registro de órdenes
+      href: hydra/importing/order_log.md
+    - name: Level 1
+      href: hydra/importing/level_1.md
+    - name: Noticias
+      href: hydra/importing/news.md
+    - name: Transacciones
+      href: hydra/importing/transactions.md
+  - name: Modo servidor
+    items:
+    - name: Configuración
+      href: hydra/server_mode/settings.md
+    - name: Configuración de emulación
+      href: hydra/server_mode/emulation_setup.md
+    - name: Mapeo de instrumentos
+      href: hydra/server_mode/instruments_mapping.md
+    - name: Conexión mediante el protocolo FIX
+      href: hydra/server_mode/fix_fast_connectivity.md
+    - name: Conexión de un cliente Hydra
+      href: hydra/server_mode/hydra_client_connectivity.md
+  - name: Instrumentos y mercados
+    items:
+    - name: Lista de instrumentos
+      href: hydra/instruments_and_boards/instruments_list.md
+    - name: Crear instrumento
+      href: hydra/instruments_and_boards/create_instrument.md
+    - name: Índice
+      href: hydra/instruments_and_boards/index.md
+    - name: Futuros continuos
+      href: hydra/instruments_and_boards/continuous_futures.md
+    - name: Edición de instrumentos
+      href: hydra/instruments_and_boards/editing_instruments.md
+    - name: Información extendida del instrumento
+      href: hydra/instruments_and_boards/extended_instrument_info.md
+    - name: Asociación de instrumentos y conexiones
+      href: hydra/instruments_and_boards/matching_instruments_connections.md
+    - name: Mercados
+      href: hydra/instruments_and_boards/boards.md
+  - name: Tareas
+    href: hydra/tasks.md
+    items:
+    - name: Convertidor
+      href: hydra/tasks/converter.md
+    - name: Exportación automática
+      href: hydra/tasks/export_auto.md
+    - name: Importación automática
+      href: hydra/tasks/import_auto.md
+    - name: Copia de seguridad
+      href: hydra/tasks/backup.md
+  - name: Analítica
+    href: hydra/analytics.md
+    items:
+    - name: Ejecución de un script
+      href: hydra/analytics/running_a_script.md
+    - name: Creación de un script
+      href: hydra/analytics/create_own_script.md
+    - name: Ejemplos
+      items:
+      - name: Volumen intradía
+        href: hydra/analytics/examples/intraday_volume.md
+      - name: Perfil de volumen
+        href: hydra/analytics/examples/volume_profile.md
+      - name: Indicadores
+        href: hydra/analytics/examples/indicators.md
+      - name: Gráfico 3D
+        href: hydra/analytics/examples/3d_chart.md
+      - name: Normalización del precio de cierre
+        href: hydra/analytics/examples/normalization.md
+      - name: Correlación de Pearson
+        href: hydra/analytics/examples/pearson_correlation.md
+      - name: Velas más grandes
+        href: hydra/analytics/examples/largest_candles.md
+  - name: Varios
+    items:
+    - name: Restablecimiento de configuración
+      href: hydra/misc/settings_reset.md
+    - name: Eliminar datos
+      href: hydra/misc/delete_data.md
+    - name: Configuración de red
+      href: hydra/misc/network_settings.md
+    - name: Sincronización
+      href: hydra/misc/synchronization.md
+    - name: Copia de seguridad
+      href: hydra/misc/backup.md
+      items:
+      - name: Configuración
+        href: hydra/misc/backup/setup.md
+      - name: Configuración de Hydra
+        href: hydra/misc/backup/hydra_settings.md
+      - name: Recuperación
+        href: hydra/misc/backup/recovery.md
+  - name: Crear nueva fuente
+    href: hydra/create_new_source.md
+  - name: Crear nueva tarea
+    href: hydra/create_new_task.md
+- name: Hydra Server
+  href: hydra_server.md
+- name: Servicios de Telegram
+  href: telegram_services.md
+  items:
+  - name: Autorización
+    href: telegram_services/authorization.md
+  - name: Alertas
+    href: telegram_services/alerts.md
+  - name: Panel de control
+    href: telegram_services/control_panel.md
+- name: Runner
+  href: runner.md
+  items:
+  - name: Exportación desde Designer
+    href: runner/export_from_designer.md
+  - name: Línea de comandos
+    href: runner/command_line.md
+  - name: Configuración de conexión
+    href: runner/connection_setup.md
+  - name: Integración con Visual Studio
+    href: runner/integration_with_visual_studio.md
+- name: Documentación de la API
+  href: api.md
+  items:
+  - name: Configuración del entorno
+    href: api/setup.md
+  - name: Desarrollo asistido por IA
+    href: api/ai_development.md
+    items:
+    - name: Escribir una estrategia con IA
+      href: api/ai_development/strategy_with_ai.md
+    - name: Escribir un conector con IA
+      href: api/ai_development/connector_with_ai.md
+  - name: "Ejemplos de S#"
+    href: api/examples.md
+  - name: Conectores
+    href: api/connectors.md
+    items:
+    - name: Configuración gráfica
+      href: api/connectors/graphical_configuration.md
+    - name: Mercado de acciones
+      items:
+      - name: Alpaca
+        href: api/connectors/stock_market/alpaca.md
+        items:
+        - name: Configuración Alpaca
+          href: api/connectors/stock_market/alpaca/configuration_alpaca.md
+        - name: Configuración gráfica Alpaca
+          href: api/connectors/stock_market/alpaca/graphical_configuration_alpaca.md
+        - name: Inicialización del adaptador Alpaca
+          href: api/connectors/stock_market/alpaca/adapter_initialization_alpaca.md
+      - name: AlphaVantage
+        href: api/connectors/stock_market/alphavantage.md
+        items:
+        - name: Configuración AlphaVantage
+          href: api/connectors/stock_market/alphavantage/configuration_alphavantage.md
+        - name: Configuración gráfica AlphaVantage
+          href: api/connectors/stock_market/alphavantage/graphical_configuration_alphavantage.md
+        - name: Inicialización del adaptador AlphaVantage
+          href: api/connectors/stock_market/alphavantage/adapter_initialization_alphavantage.md
+      - name: BarChart
+        href: api/connectors/stock_market/barchart.md
+        items:
+        - name: Configuración BarChart
+          href: api/connectors/stock_market/barchart/configuration_barchart.md
+        - name: Configuración gráfica BarChart
+          href: api/connectors/stock_market/barchart/graphical_configuration_barchart.md
+        - name: Inicialización del adaptador BarChart
+          href: api/connectors/stock_market/barchart/adapter_initialization_barchart.md
+      - name: Blackwood (Fusion)
+        href: api/connectors/stock_market/blackwood_fusion.md
+        items:
+        - name: Configuración Blackwood (Fusion)
+          href: api/connectors/stock_market/blackwood_fusion/configuration_blackwood_fusion.md
+        - name: Configuración gráfica Blackwood (Fusion)
+          href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
+        - name: Inicialización del adaptador Blackwood (Fusion)
+          href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
+      - name: CQG
+        href: api/connectors/stock_market/cqg.md
+        items:
+        - name: Configuración CQG
+          href: api/connectors/stock_market/cqg/configuration_cqg.md
+        - name: Configuración gráfica CQG COM
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
+        - name: Configuración gráfica CQG Continuum
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+        - name: Inicialización del adaptador CQG
+          href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
+      - name: "E\\*TRADE"
+        href: api/connectors/stock_market/e_trade.md
+        items:
+        - name: "Configuración E\\*TRADE"
+          href: api/connectors/stock_market/e_trade/configuration_e_trade.md
+        - name: "Configuración gráfica E\\*TRADE"
+          href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
+        - name: "Inicialización del adaptador E\\*TRADE"
+          href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
+      - name: IEX
+        href: api/connectors/stock_market/iex.md
+        items:
+        - name: Configuración IEX
+          href: api/connectors/stock_market/iex/configuration_iex.md
+        - name: Configuración gráfica IEX
+          href: api/connectors/stock_market/iex/graphical_configuration_iex.md
+        - name: Inicialización del adaptador IEX
+          href: api/connectors/stock_market/iex/adapter_initialization_iex.md
+      - name: Interactive Brokers
+        href: api/connectors/stock_market/interactive_brokers.md
+        items:
+        - name: Configuración gráfica Interactive Brokers
+          href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
+        - name: Inicialización del adaptador Interactive Brokers
+          href: api/connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md
+      - name: IQFeed
+        href: api/connectors/stock_market/iqfeed.md
+        items:
+        - name: Conexión IQFeed
+          href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
+        - name: Configuración gráfica IQFeed
+          href: api/connectors/stock_market/iqfeed/graphical_configuration_iqfeed.md
+        - name: Inicialización del adaptador IQFeed
+          href: api/connectors/stock_market/iqfeed/adapter_initialization_iqfeed.md
+      - name: ITCH
+        href: api/connectors/stock_market/itch.md
+        items:
+        - name: Configuración ITCH
+          href: api/connectors/stock_market/itch/configuration_itch.md
+        - name: Configuración gráfica ITCH
+          href: api/connectors/stock_market/itch/graphical_configuration_itch.md
+        - name: Inicialización del adaptador ITCH
+          href: api/connectors/stock_market/itch/adapter_initialization_itch.md
+      - name: OpenECry
+        href: api/connectors/stock_market/openecry.md
+        items:
+        - name: Configuración OpenECry
+          href: api/connectors/stock_market/openecry/configuration_openecry.md
+        - name: Configuración gráfica OpenECry
+          href: api/connectors/stock_market/openecry/graphical_configuration_openecry.md
+        - name: Inicialización del adaptador OpenECry
+          href: api/connectors/stock_market/openecry/adapter_initialization_openecry.md
+        - name: Conexión de varios algoritmos
+          href: api/connectors/stock_market/openecry/several_algorithms_connection.md
+        - name: Operación simultánea del terminal y el algoritmo
+          href: api/connectors/stock_market/openecry/simultaneous_terminal_and_algorithm_operation.md
+      - name: PolygonIO
+        href: api/connectors/stock_market/polygonio.md
+        items:
+        - name: Configuración PolygonIO
+          href: api/connectors/stock_market/polygonio/configuration_polygonio.md
+        - name: Configuración gráfica PolygonIO
+          href: api/connectors/stock_market/polygonio/graphical_configuration_polygonio.md
+        - name: Inicialización del adaptador PolygonIO
+          href: api/connectors/stock_market/polygonio/adapter_initialization_polygonio.md
+      - name: Quandl
+        href: api/connectors/stock_market/quandl.md
+        items:
+        - name: Configuración Quandl
+          href: api/connectors/stock_market/quandl/configuration_quandl.md
+        - name: Configuración gráfica Quandl
+          href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
+        - name: Inicialización del adaptador Quandl
+          href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
+      - name: QuantFEED
+        href: api/connectors/stock_market/quantfeed.md
+        items:
+        - name: Configuración QuantFEED
+          href: api/connectors/stock_market/quantfeed/configuration_quantfeed.md
+        - name: Configuración gráfica QuantFEED
+          href: api/connectors/stock_market/quantfeed/graphical_configuration_quantfeed.md
+        - name: Inicialización del adaptador QuantFEED
+          href: api/connectors/stock_market/quantfeed/adapter_initialization_quantfeed.md
+      - name: Rithmic
+        href: api/connectors/stock_market/rithmic.md
+        items:
+        - name: Configuración Rithmic
+          href: api/connectors/stock_market/rithmic/configuration_rithmic.md
+        - name: Configuración gráfica Rithmic
+          href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
+        - name: Inicialización del adaptador Rithmic
+          href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
+      - name: Sterling
+        href: api/connectors/stock_market/sterling.md
+        items:
+        - name: Configuración Sterling
+          href: api/connectors/stock_market/sterling/configuration_sterling.md
+        - name: Configuración gráfica Sterling
+          href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
+        - name: Inicialización del adaptador Sterling
+          href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: Tradier
+        href: api/connectors/stock_market/tradier.md
+        items:
+        - name: Configuración Tradier
+          href: api/connectors/stock_market/tradier/configuration_tradier.md
+        - name: Configuración gráfica de Tradier
+          href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
+        - name: Inicialización del adaptador Tradier
+          href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Xignite
+        href: api/connectors/stock_market/xignite.md
+        items:
+        - name: Configuración Xignite
+          href: api/connectors/stock_market/xignite/configuration_xignite.md
+        - name: Configuración gráfica Xignite
+          href: api/connectors/stock_market/xignite/graphical_configuration_xignite.md
+        - name: Inicialización del adaptador Xignite
+          href: api/connectors/stock_market/xignite/adapter_initialization_xignite.md
+      - name: Yahoo
+        href: api/connectors/stock_market/yahoo.md
+        items:
+        - name: Configuración gráfica Yahoo
+          href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
+        - name: Inicialización del adaptador Yahoo
+          href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+    - name: Forex
+      items:
+      - name: MetaTrader
+        href: api/connectors/forex/metatrader.md
+      - name: DXtrade
+        href: api/connectors/forex/dxtrade.md
+        items:
+        - name: Configuración del conector DXtrade
+          href: api/connectors/forex/dxtrade/configuration_dxtrade.md
+        - name: Configuración gráfica de DXtrade
+          href: api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md
+        - name: Inicialización del adaptador DXtrade
+          href: api/connectors/forex/dxtrade/adapter_initialization_dxtrade.md
+      - name: cTrader
+        href: api/connectors/forex/ctrader.md
+        items:
+        - name: Configuración del conector cTrader
+          href: api/connectors/forex/ctrader/configuration_ctrader.md
+        - name: Configuración gráfica de cTrader
+          href: api/connectors/forex/ctrader/graphical_configuration_ctrader.md
+        - name: Inicialización del adaptador cTrader
+          href: api/connectors/forex/ctrader/adapter_initialization_ctrader.md
+      - name: DukasCopy
+        href: api/connectors/forex/dukascopy.md
+        items:
+        - name: Configuración gráfica DukasCopy
+          href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
+        - name: Inicialización del adaptador DukasCopy
+          href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
+      - name: FXCM
+        href: api/connectors/forex/fxcm.md
+        items:
+        - name: Configuración FXCM
+          href: api/connectors/forex/fxcm/configuration_fxcm.md
+        - name: Configuración gráfica FXCM
+          href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
+        - name: Inicialización del adaptador FXCM
+          href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
+      - name: LMAX
+        href: api/connectors/forex/lmax.md
+        items:
+        - name: Configuración LMAX
+          href: api/connectors/forex/lmax/configuration_lmax.md
+        - name: Configuración gráfica LMAX
+          href: api/connectors/forex/lmax/graphical_configuration_lmax.md
+        - name: Inicialización del adaptador LMAX
+          href: api/connectors/forex/lmax/adapter_initialization_lmax.md
+      - name: Oanda
+        href: api/connectors/forex/oanda.md
+        items:
+        - name: Configuración Oanda
+          href: api/connectors/forex/oanda/configuration_oanda.md
+        - name: Configuración gráfica Oanda
+          href: api/connectors/forex/oanda/graphical_configuration_oanda.md
+        - name: Inicialización del adaptador Oanda
+          href: api/connectors/forex/oanda/adapter_initialization_oanda.md
+    - name: Exchanges de criptomonedas
+      items:
+      - name: Bibox
+        href: api/connectors/crypto_exchanges/bibox.md
+        items:
+        - name: Configuración Bibox
+          href: api/connectors/crypto_exchanges/bibox/configuration_bibox.md
+        - name: Configuración gráfica Bibox
+          href: api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md
+        - name: Inicialización del adaptador Bibox
+          href: api/connectors/crypto_exchanges/bibox/adapter_initialization_bibox.md
+      - name: Binance
+        href: api/connectors/crypto_exchanges/binance.md
+        items:
+        - name: Configuración Binance
+          href: api/connectors/crypto_exchanges/binance/configuration_binance.md
+        - name: Configuración gráfica Binance
+          href: api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md
+        - name: Inicialización del adaptador Binance
+          href: api/connectors/crypto_exchanges/binance/adapter_initialization_binance.md
+      - name: Binance History
+        href: api/connectors/crypto_exchanges/binance_history.md
+        items:
+        - name: Configuración Binance History
+          href: api/connectors/crypto_exchanges/binance_history/configuration_binance_history.md
+        - name: Configuración gráfica Binance History
+          href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
+        - name: Inicialización del adaptador Binance History
+          href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+      - name: Bybit History
+        href: api/connectors/crypto_exchanges/bybit_history.md
+        items:
+        - name: Configuración Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+        - name: Configuración gráfica Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+        - name: Inicialización del adaptador Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
+      - name: BingX
+        href: api/connectors/crypto_exchanges/bingx.md
+        items:
+        - name: Configuración BingX
+          href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
+        - name: Configuración gráfica de BingX
+          href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
+        - name: Inicialización del adaptador BingX
+          href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
+      - name: Bitalong
+        href: api/connectors/crypto_exchanges/bitalong.md
+        items:
+        - name: Configuración Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/configuration_bitalong.md
+        - name: Configuración gráfica Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/graphical_configuration_bitalong.md
+        - name: Inicialización del adaptador Bitalong
+          href: api/connectors/crypto_exchanges/bitalong/adapter_initialization_bitalong.md
+      - name: Bitbank
+        href: api/connectors/crypto_exchanges/bitbank.md
+        items:
+        - name: Configuración Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md
+        - name: Configuración gráfica Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
+        - name: Inicialización del adaptador Bitbank
+          href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/bitget.md
+        items:
+        - name: Configuración del conector Bitget
+          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+        - name: Configuración gráfica de Bitget
+          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+        - name: Inicialización del adaptador Bitget
+          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
+      - name: Bitexbook
+        href: api/connectors/crypto_exchanges/bitexbook.md
+        items:
+        - name: Configuración Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md
+        - name: Configuración gráfica Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md
+        - name: Inicialización del adaptador Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook/adapter_initialization_bitexbook.md
+      - name: Bitfinex
+        href: api/connectors/crypto_exchanges/bitfinex.md
+        items:
+        - name: Configuración Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/configuration_bitfinex.md
+        - name: Configuración gráfica Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
+        - name: Inicialización del adaptador Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
+      - name: Bithumb
+        href: api/connectors/crypto_exchanges/bithumb.md
+        items:
+        - name: Configuración Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/configuration_bithumb.md
+        - name: Configuración gráfica Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/graphical_configuration_bithumb.md
+        - name: Inicialización del adaptador Bithumb
+          href: api/connectors/crypto_exchanges/bithumb/adapter_initialization_bithumb.md
+      - name: Bitmart
+        href: api/connectors/crypto_exchanges/bitmart.md
+        items:
+        - name: Configuración de Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/configuration_bitmart.md
+        - name: Configuración gráfica de Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/graphical_configuration_bitmart.md
+        - name: Inicialización del adaptador Bitmart
+          href: api/connectors/crypto_exchanges/bitmart/adapter_initialization_bitmart.md
+      - name: BitMax
+        href: api/connectors/crypto_exchanges/bitmax.md
+        items:
+        - name: Configuración de BitMax
+          href: api/connectors/crypto_exchanges/bitmax/configuration_bitmax.md
+        - name: Configuración gráfica de BitMax
+          href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
+        - name: Inicialización del adaptador BitMax
+          href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
+      - name: BitMEX
+        href: api/connectors/crypto_exchanges/bitmex.md
+        items:
+        - name: Configuración de BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
+        - name: Configuración gráfica de BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
+        - name: Inicialización del adaptador BitMEX
+          href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
+      - name: BitStamp
+        href: api/connectors/crypto_exchanges/bitstamp.md
+        items:
+        - name: Configuración de BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md
+        - name: Configuración gráfica de BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md
+        - name: Inicialización del adaptador BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp/adapter_initialization_bitstamp.md
+      - name: Bittrex
+        href: api/connectors/crypto_exchanges/bittrex.md
+        items:
+        - name: Configuración de Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md
+        - name: Configuración gráfica de Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md
+        - name: Inicialización del adaptador Bittrex
+          href: api/connectors/crypto_exchanges/bittrex/adapter_initialization_bittrex.md
+      - name: BitZ
+        href: api/connectors/crypto_exchanges/bitz.md
+        items:
+        - name: Configuración de BitZ
+          href: api/connectors/crypto_exchanges/bitz/configuration_bitz.md
+        - name: Configuración gráfica de BitZ
+          href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
+        - name: Inicialización del adaptador BitZ
+          href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
+      - name: ByBit
+        href: api/connectors/crypto_exchanges/bybit.md
+        items:
+        - name: Configuración del conector ByBit
+          href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
+        - name: Configuración gráfica de ByBit
+          href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
+        - name: Inicialización del adaptador ByBit
+          href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+      - name: BW
+        href: api/connectors/crypto_exchanges/bw.md
+        items:
+        - name: Configuración BW
+          href: api/connectors/crypto_exchanges/bw/configuration_bw.md
+        - name: Configuración gráfica BW
+          href: api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md
+        - name: Inicialización del adaptador BW
+          href: api/connectors/crypto_exchanges/bw/adapter_initialization_bw.md
+      - name: CEX.IO
+        href: api/connectors/crypto_exchanges/cex.io.md
+        items:
+        - name: Configuración CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/configuration_cex.io.md
+        - name: Configuración gráfica CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/graphical_configuration_cex.io.md
+        - name: Inicialización del adaptador CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io/adapter_initialization_cex.io.md
+      - name: Coinbase
+        href: api/connectors/crypto_exchanges/coinbase.md
+        items:
+        - name: Configuración Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/configuration_coinbase.md
+        - name: Configuración gráfica Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/graphical_configuration_coinbase.md
+        - name: Inicialización del adaptador Coinbase
+          href: api/connectors/crypto_exchanges/coinbase/adapter_initialization_coinbase.md
+      - name: CoinBene
+        href: api/connectors/crypto_exchanges/coinbene.md
+        items:
+        - name: Configuración CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/configuration_coinbene.md
+        - name: Configuración gráfica CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/graphical_configuration_coinbene.md
+        - name: Inicialización del adaptador CoinBene
+          href: api/connectors/crypto_exchanges/coinbene/adapter_initialization_coinbene.md
+      - name: CoinCap
+        href: api/connectors/crypto_exchanges/coincap.md
+        items:
+        - name: Configuración CoinCap
+          href: api/connectors/crypto_exchanges/coincap/configuration_coincap.md
+        - name: Configuración gráfica CoinCap
+          href: api/connectors/crypto_exchanges/coincap/graphical_configuration_coincap.md
+        - name: Inicialización del adaptador CoinCap
+          href: api/connectors/crypto_exchanges/coincap/adapter_initialization_coincap.md
+      - name: Coincheck
+        href: api/connectors/crypto_exchanges/coincheck.md
+        items:
+        - name: Configuración Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/configuration_coincheck.md
+        - name: Configuración gráfica Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/graphical_configuration_coincheck.md
+        - name: Inicialización del adaptador Coincheck
+          href: api/connectors/crypto_exchanges/coincheck/adapter_initialization_coincheck.md
+      - name: CoinEx
+        href: api/connectors/crypto_exchanges/coinex.md
+        items:
+        - name: Configuración CoinEx
+          href: api/connectors/crypto_exchanges/coinex/configuration_coinex.md
+        - name: Configuración gráfica CoinEx
+          href: api/connectors/crypto_exchanges/coinex/graphical_configuration_coinex.md
+        - name: Inicialización del adaptador CoinEx
+          href: api/connectors/crypto_exchanges/coinex/adapter_initialization_coinex.md
+      - name: CoinExchange
+        href: api/connectors/crypto_exchanges/coinexchange.md
+        items:
+        - name: Configuración CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/configuration_coinexchange.md
+        - name: Configuración gráfica CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/graphical_configuration_coinexchange.md
+        - name: Inicialización del adaptador CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange/adapter_initialization_coinexchange.md
+      - name: Coinigy
+        href: api/connectors/crypto_exchanges/coinigy.md
+        items:
+        - name: Configuración Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/configuration_coinigy.md
+        - name: Configuración gráfica Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/graphical_configuration_coinigy.md
+        - name: Inicialización del adaptador Coinigy
+          href: api/connectors/crypto_exchanges/coinigy/adapter_initialization_coinigy.md
+      - name: CoinHub
+        href: api/connectors/crypto_exchanges/coinhub.md
+        items:
+        - name: Configuración CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
+        - name: Configuración gráfica CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
+        - name: Inicialización del adaptador CoinHub
+          href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
+      - name: Cryptopia
+        href: api/connectors/crypto_exchanges/cryptopia.md
+        items:
+        - name: Configuración Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md
+        - name: Configuración gráfica Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md
+        - name: Inicialización del adaptador Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia/adapter_initialization_cryptopia.md
+      - name: Deribit
+        href: api/connectors/crypto_exchanges/deribit.md
+        items:
+        - name: Configuración Deribit
+          href: api/connectors/crypto_exchanges/deribit/configuration_deribit.md
+        - name: Configuración gráfica Deribit
+          href: api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md
+        - name: Inicialización del adaptador Deribit
+          href: api/connectors/crypto_exchanges/deribit/adapter_initialization_deribit.md
+      - name: Digifinex
+        href: api/connectors/crypto_exchanges/digifinex.md
+        items:
+        - name: Configuración Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md
+        - name: Configuración gráfica Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md
+        - name: Inicialización del adaptador Digifinex
+          href: api/connectors/crypto_exchanges/digifinex/adapter_initialization_digifinex.md
+      - name: DigitexFutures
+        href: api/connectors/crypto_exchanges/digitexfutures.md
+        items:
+        - name: Configuración DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/configuration_digitexfutures.md
+        - name: Configuración gráfica DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/graphical_configuration_digitexfutures.md
+        - name: Inicialización del adaptador DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures/adapter_initialization_digitexfutures.md
+      - name: EXMO
+        href: api/connectors/crypto_exchanges/exmo.md
+        items:
+        - name: Configuración EXMO
+          href: api/connectors/crypto_exchanges/exmo/configuration_exmo.md
+        - name: Configuración gráfica EXMO
+          href: api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md
+        - name: Inicialización del adaptador EXMO
+          href: api/connectors/crypto_exchanges/exmo/adapter_initialization_exmo.md
+      - name: FatBTC
+        href: api/connectors/crypto_exchanges/fatbtc.md
+        items:
+        - name: Configuración FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md
+        - name: Configuración gráfica FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
+        - name: Inicialización del adaptador FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+      - name: Gate.io
+        href: api/connectors/crypto_exchanges/gateio.md
+        items:
+        - name: Configuración del conector Gate.io
+          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+        - name: Configuración gráfica de Gate.io
+          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+        - name: Inicialización del adaptador Gate.io
+          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
+      - name: GDAX
+        href: api/connectors/crypto_exchanges/gdax.md
+        items:
+        - name: Configuración GDAX
+          href: api/connectors/crypto_exchanges/gdax/configuration_gdax.md
+        - name: Configuración gráfica GDAX
+          href: api/connectors/crypto_exchanges/gdax/graphical_configuration_gdax.md
+        - name: Inicialización del adaptador GDAX
+          href: api/connectors/crypto_exchanges/gdax/adapter_initialization_gdax.md
+      - name: Gopax
+        href: api/connectors/crypto_exchanges/gopax.md
+        items:
+        - name: Configuración Gopax
+          href: api/connectors/crypto_exchanges/gopax/configuration_gopax.md
+        - name: Configuración gráfica Gopax
+          href: api/connectors/crypto_exchanges/gopax/graphical_configuration_gopax.md
+        - name: Inicialización del adaptador Gopax
+          href: api/connectors/crypto_exchanges/gopax/adapter_initialization_gopax.md
+      - name: HitBTC
+        href: api/connectors/crypto_exchanges/hitbtc.md
+        items:
+        - name: Configuración HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
+        - name: Configuración gráfica HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
+        - name: Inicialización del adaptador HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
+      - name: Hotbit
+        href: api/connectors/crypto_exchanges/hotbit.md
+        items:
+        - name: Configuración Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/configuration_hotbit.md
+        - name: Configuración gráfica Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/graphical_configuration_hotbit.md
+        - name: Inicialización del adaptador Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/adapter_initialization_hotbit.md
+      - name: Huobi
+        href: api/connectors/crypto_exchanges/huobi.md
+        items:
+        - name: Configuración Huobi
+          href: api/connectors/crypto_exchanges/huobi/configuration_huobi.md
+        - name: Configuración gráfica Huobi
+          href: api/connectors/crypto_exchanges/huobi/graphical_configuration_huobi.md
+        - name: Inicialización del adaptador Huobi
+          href: api/connectors/crypto_exchanges/huobi/adapter_initialization_huobi.md
+      - name: Idax
+        href: api/connectors/crypto_exchanges/idax.md
+        items:
+        - name: Configuración Idax
+          href: api/connectors/crypto_exchanges/idax/configuration_idax.md
+        - name: Configuración gráfica Idax
+          href: api/connectors/crypto_exchanges/idax/graphical_configuration_idax.md
+        - name: Inicialización del adaptador Idax
+          href: api/connectors/crypto_exchanges/idax/adapter_initialization_idax.md
+      - name: Kraken
+        href: api/connectors/crypto_exchanges/kraken.md
+        items:
+        - name: Configuración Kraken
+          href: api/connectors/crypto_exchanges/kraken/configuration_kraken.md
+        - name: Configuración gráfica Kraken
+          href: api/connectors/crypto_exchanges/kraken/graphical_configuration_kraken.md
+        - name: Inicialización del adaptador Kraken
+          href: api/connectors/crypto_exchanges/kraken/adapter_initialization_kraken.md
+      - name: Kucoin
+        href: api/connectors/crypto_exchanges/kucoin.md
+        items:
+        - name: Configuración Kucoin
+          href: api/connectors/crypto_exchanges/kucoin/configuration_kucoin.md
+        - name: Configuración gráfica Kucoin
+          href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
+        - name: Inicialización del adaptador Kucoin
+          href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+      - name: Latoken
+        href: api/connectors/crypto_exchanges/latoken.md
+        items:
+        - name: Configuración Latoken
+          href: api/connectors/crypto_exchanges/latoken/configuration_latoken.md
+        - name: Configuración gráfica Latoken
+          href: api/connectors/crypto_exchanges/latoken/graphical_configuration_latoken.md
+        - name: Inicialización del adaptador Latoken
+          href: api/connectors/crypto_exchanges/latoken/adapter_initialization_latoken.md
+      - name: LBank
+        href: api/connectors/crypto_exchanges/lbank.md
+        items:
+        - name: Configuración LBank
+          href: api/connectors/crypto_exchanges/lbank/configuration_lbank.md
+        - name: Configuración gráfica LBank
+          href: api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md
+        - name: Inicialización del adaptador LBank
+          href: api/connectors/crypto_exchanges/lbank/adapter_initialization_lbank.md
+      - name: Liqui
+        href: api/connectors/crypto_exchanges/liqui.md
+        items:
+        - name: Configuración Liqui
+          href: api/connectors/crypto_exchanges/liqui/configuration_liqui.md
+        - name: Configuración gráfica Liqui
+          href: api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md
+        - name: Inicialización del adaptador Liqui
+          href: api/connectors/crypto_exchanges/liqui/adapter_initialization_liqui.md
+      - name: Livecoin
+        href: api/connectors/crypto_exchanges/livecoin.md
+        items:
+        - name: Configuración Livecoin
+          href: api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md
+        - name: Configuración gráfica Livecoin
+          href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
+        - name: Inicialización del adaptador Livecoin
+          href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
+      - name: MEXC
+        href: api/connectors/crypto_exchanges/mexc.md
+        items:
+        - name: Configuración MEXC
+          href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
+        - name: Configuración gráfica de MEXC
+          href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
+        - name: Inicialización del adaptador MEXC
+          href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
+      - name: OKCoin
+        href: api/connectors/crypto_exchanges/okcoin.md
+        items:
+        - name: Configuración OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md
+        - name: Configuración gráfica OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md
+        - name: Inicialización del adaptador OKCoin
+          href: api/connectors/crypto_exchanges/okcoin/adapter_initialization_okcoin.md
+      - name: OKEx
+        href: api/connectors/crypto_exchanges/okex.md
+        items:
+        - name: Configuración OKEx
+          href: api/connectors/crypto_exchanges/okex/configuration_okex.md
+        - name: Configuración gráfica OKEx
+          href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
+        - name: Inicialización del adaptador OKEx
+          href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
+      - name: OKEx History
+        href: api/connectors/crypto_exchanges/okex_history.md
+        items:
+        - name: Configuración OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
+        - name: Configuración gráfica OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
+        - name: Inicialización del adaptador OKEx History
+          href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
+      - name: Poloniex
+        href: api/connectors/crypto_exchanges/poloniex.md
+        items:
+        - name: Configuración Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md
+        - name: Configuración gráfica Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md
+        - name: Inicialización del adaptador Poloniex
+          href: api/connectors/crypto_exchanges/poloniex/adapter_initialization_poloniex.md
+      - name: PrizmBit
+        href: api/connectors/crypto_exchanges/prizmbit.md
+        items:
+        - name: Configuración PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
+        - name: Configuración gráfica PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
+        - name: Inicialización del adaptador PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
+      - name: Quoinex
+        href: api/connectors/crypto_exchanges/quoinex.md
+        items:
+        - name: Configuración Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/configuration_quoinex.md
+        - name: Configuración gráfica Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
+        - name: Inicialización del adaptador Quoinex
+          href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
+      - name: TradeOgre
+        href: api/connectors/crypto_exchanges/tradeogre.md
+        items:
+        - name: Configuración TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+        - name: Configuración gráfica TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
+        - name: Inicialización del adaptador TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
+      - name: Upbit
+        href: api/connectors/crypto_exchanges/upbit.md
+        items:
+        - name: Configuración Upbit
+          href: api/connectors/crypto_exchanges/upbit/configuration_upbit.md
+        - name: Configuración gráfica Upbit
+          href: api/connectors/crypto_exchanges/upbit/graphical_configuration_upbit.md
+        - name: Inicialización del adaptador Upbit
+          href: api/connectors/crypto_exchanges/upbit/adapter_initialization_upbit.md
+      - name: WEX (BTC-e)
+        href: api/connectors/crypto_exchanges/wex_btc_e.md
+        items:
+        - name: Configuración WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md
+        - name: Configuración gráfica WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md
+        - name: Inicialización del adaptador WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e/adapter_initialization_wex_btc_e.md
+      - name: Yobit
+        href: api/connectors/crypto_exchanges/yobit.md
+        items:
+        - name: Configuración Yobit
+          href: api/connectors/crypto_exchanges/yobit/configuration_yobit.md
+        - name: Configuración gráfica Yobit
+          href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
+        - name: Inicialización del adaptador Yobit
+          href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
+      - name: Zaif
+        href: api/connectors/crypto_exchanges/zaif.md
+        items:
+        - name: Configuración Zaif
+          href: api/connectors/crypto_exchanges/zaif/configuration_zaif.md
+        - name: Configuración gráfica Zaif
+          href: api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md
+        - name: Inicialización del adaptador Zaif
+          href: api/connectors/crypto_exchanges/zaif/adapter_initialization_zaif.md
+      - name: ZB
+        href: api/connectors/crypto_exchanges/zb.md
+        items:
+        - name: Configuración ZB
+          href: api/connectors/crypto_exchanges/zb/configuration_zb.md
+        - name: Configuración gráfica ZB
+          href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
+        - name: Inicialización del adaptador ZB
+          href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
+      - name: Retiro
+        href: api/connectors/crypto_exchanges/withdraw.md
+    - name: DEX
+      items:
+      - name: Aster
+        href: api/connectors/crypto_exchanges/aster.md
+        items:
+        - name: Configuración Aster
+          href: api/connectors/crypto_exchanges/aster/configuration_aster.md
+        - name: Configuración gráfica Aster
+          href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
+        - name: Inicialización del adaptador Aster
+          href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: edgeX
+        href: api/connectors/crypto_exchanges/edgex.md
+        items:
+        - name: Configuración edgeX
+          href: api/connectors/crypto_exchanges/edgex/configuration_edgex.md
+        - name: Configuración gráfica edgeX
+          href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
+        - name: Inicialización del adaptador edgeX
+          href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Hyperliquid
+        href: api/connectors/crypto_exchanges/hyperliquid.md
+        items:
+        - name: Configuración Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md
+        - name: Configuración gráfica Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
+        - name: Inicialización del adaptador Hyperliquid
+          href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Ligther
+        href: api/connectors/crypto_exchanges/ligther.md
+        items:
+        - name: Configuración Ligther
+          href: api/connectors/crypto_exchanges/ligther/configuration_ligther.md
+        - name: Configuración gráfica Ligther
+          href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
+        - name: Inicialización del adaptador Ligther
+          href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: Configuración Paradex
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: Configuración gráfica Paradex
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: Inicialización del adaptador Paradex
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+    - name: Común
+      items:
+      - name: CSV
+        href: api/connectors/common/csv.md
+        items:
+        - name: Configuración gráfica de CSV
+          href: api/connectors/common/csv/graphical_configuration_csv.md
+        - name: Inicialización del adaptador CSV
+          href: api/connectors/common/csv/adapter_initialization_csv.md
+      - name: Protocolo FIX
+        href: api/connectors/common/fix_protocol.md
+        items:
+        - name: Configuración FIX
+          href: api/connectors/common/fix_protocol/configuration_fix.md
+        - name: Configuración gráfica FIX
+          href: api/connectors/common/fix_protocol/graphical_configuration_fix.md
+        - name: Inicialización del adaptador FIX
+          href: api/connectors/common/fix_protocol/adapter_initialization_fix.md
+      - name: Protocolo FAST
+        href: api/connectors/common/fast_protocol.md
+        items:
+        - name: Configuración gráfica FAST
+          href: api/connectors/common/fast_protocol/graphical_configuration_fast.md
+        - name: Inicialización del adaptador FAST
+          href: api/connectors/common/fast_protocol/adapter_initialization_fast.md
+        - name: Modo de volcado
+          href: api/connectors/common/fast_protocol/dump_mode.md
+      - name: Servidor FIX
+        href: api/connectors/common/fix_server.md
+      - name: RSS
+        href: api/connectors/common/rss.md
+        items:
+        - name: Configuración gráfica RSS
+          href: api/connectors/common/rss/graphical_configuration_rss.md
+        - name: Inicialización del adaptador RSS
+          href: api/connectors/common/rss/adapter_initialization_rss.md
+    - name: Creación de su Propio Conector
+      href: api/connectors/creating_own_connector.md
+      items:
+      - name: Búsqueda de Instrumentos
+        href: api/connectors/creating_own_connector/instrument_lookup.md
+      - name: Datos de Mercado
+        href: api/connectors/creating_own_connector/market_data.md
+      - name: Información sobre carteras y órdenes
+        href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
+      - name: Operaciones de trading
+        href: api/connectors/creating_own_connector/trading_operations.md
+      - name: Almacenamiento de configuraciones
+        href: api/connectors/creating_own_connector/settings.md
+      - name: Condiciones de orden extendidas
+        href: api/connectors/creating_own_connector/order_extended.md
+      - name: Lista de mensajes
+        href: api/connectors/creating_own_connector/messages.md
+      - name: Mejores Prácticas
+        href: api/connectors/creating_own_connector/best_practices/common.md
+        items:
+        - name: Autenticación
+          href: api/connectors/creating_own_connector/best_practices/authentication.md
+        - name: Cliente REST
+          href: api/connectors/creating_own_connector/best_practices/rest_client.md
+        - name: Cliente WebSocket
+          href: api/connectors/creating_own_connector/best_practices/websocket_client.md
+        - name: Conversión de Tipos
+          href: api/connectors/creating_own_connector/best_practices/type_conversion.md
+    - name: Guardar y cargar la configuración
+      href: api/connectors/save_and_load_settings.md
+    - name: Configuración de reconexión
+      href: api/connectors/reconnection_settings.md
+    - name: Autorización OAuth
+      href: api/connectors/oauth.md
+    - name: Operaciones asíncronas con órdenes
+      href: api/connectors/async_api.md
+    - name: IFileSystem y Paths.FileSystem
+      href: api/connectors/ifile_system_and_paths.md
+    - name: Ciclo de vida de la suscripción
+      href: api/connectors/subscription_lifecycle.md
+  - name: Datos de mercado
+    items:
+    - name: Suscripciones
+      href: api/market_data/subscriptions.md
+    - name: Obtención de datos históricos
+      href: api/market_data/getting_historical_data.md
+    - name: Obtención de datos de noticias
+      href: api/market_data/getting_news_data.md
+  - name: Gestión de órdenes
+    href: api/orders_management.md
+    items:
+    - name: Crear nueva orden
+      href: api/orders_management/create_new_order.md
+    - name: Crear nueva orden stop
+      href: api/orders_management/create_new_stop_order.md
+    - name: Estados de órdenes
+      href: api/orders_management/orders_states.md
+    - name: Cancelación de orden
+      href: api/orders_management/order_cancel.md
+    - name: Cancelación masiva de órdenes
+      href: api/orders_management/orders_mass_cancel.md
+    - name: Reemplazo de órdenes
+      href: api/orders_management/orders_replacement.md
+    - name: Número de transacción
+      href: api/orders_management/transaction_number.md
+  - name: Instrumentos
+    href: api/instruments.md
+    items:
+    - name: Búsqueda de instrumentos
+      href: api/instruments/instrument_search.md
+    - name: Identificador de instrumento
+      href: api/instruments/instrument_identifier.md
+    - name: "Identificador \\*@ALL"
+      href: api/instruments/identifier_@all.md
+    - name: Futuros continuos
+      href: api/instruments/continuous_futures.md
+    - name: Índice
+      href: api/instruments/index.md
+    - name: Futuros continuos por volumen (VolumeContinuousSecurity)
+      href: api/instruments/volume_continuous_security.md
+  - name: Almacenamiento de datos de mercado
+    href: api/market_data_storage.md
+    items:
+    - name: Trabajo con la API
+      href: api/market_data_storage/api.md
+    - name: Trabajo con almacenamiento remoto
+      href: api/market_data_storage/remote.md
+    - name: Formatos de almacenamiento
+      href: api/market_data_storage/formats.md
+    - name: Unidades de almacenamiento
+      href: api/market_data_storage/drives.md
+    - name: Sistema de snapshots
+      href: api/market_data_storage/snapshots.md
+  - name: Velas
+    href: api/candles.md
+    items:
+    - name: Gráfico
+      href: api/candles/chart.md
+    - name: Tipo de vela personalizado
+      href: api/candles/custom_type_of_candle.md
+    - name: "Combinación de velas: historial + tiempo real"
+      href: api/candles/gluing_candles_history_real_time.md
+    - name: Creación de velas mediante una cesta de instrumentos
+      href: api/candles/candle_creation_by_the_instruments_basket.md
+    - name: Compresión de datos de ticks y spreads en velas
+      href: api/candles/compression.md
+  - name: Indicadores
+    href: api/indicators.md
+    items:
+    - name: Agregar un indicador al gráfico
+      href: api/indicators/indicator_adding_to_the_chart.md
+    - name: Lista de indicadores
+      href: api/indicators/list_of_indicators.md
+      items:
+      - name: A/D
+        href: api/indicators/list_of_indicators/a_d.md
+      - name: ADL
+        href: api/indicators/list_of_indicators/accumulation_distribution_line.md
+      - name: ALF
+        href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
+      - name: APZ
+        href: api/indicators/list_of_indicators/adaptive_price_zone.md
+      - name: Alligator
+        href: api/indicators/list_of_indicators/alligator.md
+      - name: AFI
+        href: api/indicators/list_of_indicators/approval_flow_index.md
+      - name: ALMA
+        href: api/indicators/list_of_indicators/arnaud_legoux_moving_average.md
+      - name: Aroon
+        href: api/indicators/list_of_indicators/aroon.md
+      - name: ADX
+        href: api/indicators/list_of_indicators/adx.md
+      - name: ATR
+        href: api/indicators/list_of_indicators/atr.md
+      - name: AO
+        href: api/indicators/list_of_indicators/ao.md
+      - name: BMP
+        href: api/indicators/list_of_indicators/balance_of_market_power.md
+      - name: BOP
+        href: api/indicators/list_of_indicators/balance_of_power.md
+      - name: BV
+        href: api/indicators/list_of_indicators/balance_volume.md
+      - name: Bear Power
+        href: api/indicators/list_of_indicators/bear_power.md
+      - name: Bull Power
+        href: api/indicators/list_of_indicators/bull_power.md
+      - name: Bollinger Bands
+        href: api/indicators/list_of_indicators/bollinger_bands.md
+      - name: BBP
+        href: api/indicators/list_of_indicators/bollinger_percent_b.md
+      - name: CGO
+        href: api/indicators/list_of_indicators/center_of_gravity_oscillator.md
+      - name: CMF
+        href: api/indicators/list_of_indicators/chaikin_money_flow.md
+      - name: CHV
+        href: api/indicators/list_of_indicators/chv.md
+      - name: CKS
+        href: api/indicators/list_of_indicators/chande_kroll_stop.md
+      - name: CMO
+        href: api/indicators/list_of_indicators/cmo.md
+      - name: CHOP
+        href: api/indicators/list_of_indicators/choppiness_index.md
+      - name: CCI
+        href: api/indicators/list_of_indicators/cci.md
+      - name: CM
+        href: api/indicators/list_of_indicators/composite_momentum.md
+      - name: CRSI
+        href: api/indicators/list_of_indicators/connors_rsi.md
+      - name: CBCI
+        href: api/indicators/list_of_indicators/constance_brown_composite_index.md
+      - name: DeMarker
+        href: api/indicators/list_of_indicators/demarker.md
+      - name: DI
+        href: api/indicators/list_of_indicators/demand_index.md
+      - name: DPO
+        href: api/indicators/list_of_indicators/dpo.md
+      - name: DSP
+        href: api/indicators/list_of_indicators/detrended_synthetic_price.md
+      - name: DMI
+        href: api/indicators/list_of_indicators/dmi.md
+      - name: DPI
+        href: api/indicators/list_of_indicators/disparity_index.md
+      - name: DC
+        href: api/indicators/list_of_indicators/donchian_channels.md
+      - name: DEMA
+        href: api/indicators/list_of_indicators/dema.md
+      - name: DZRSI
+        href: api/indicators/list_of_indicators/dynamic_zones_rsi.md
+      - name: EMV
+        href: api/indicators/list_of_indicators/ease_of_movement.md
+      - name: EFT
+        href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
+      - name: EIS
+        href: api/indicators/list_of_indicators/elder_impulse_system.md
+      - name: "Elder's Force Index"
+        href: api/indicators/list_of_indicators/elder_force_index.md
+      - name: EWO
+        href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
+      - name: EPMA
+        href: api/indicators/list_of_indicators/endpoint_moving_average.md
+      - name: Envelope
+        href: api/indicators/list_of_indicators/envelope.md
+      - name: Elder Ray
+        href: api/indicators/list_of_indicators/elder_ray.md
+      - name: EMA
+        href: api/indicators/list_of_indicators/ema.md
+      - name: FR
+        href: api/indicators/list_of_indicators/fibonacci_retracement.md
+      - name: FVE
+        href: api/indicators/list_of_indicators/finite_volume_element.md
+      - name: FI
+        href: api/indicators/list_of_indicators/force_index.md
+      - name: FOSC
+        href: api/indicators/list_of_indicators/forecast_oscillator.md
+      - name: FRAMA
+        href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
+      - name: Fractals
+        href: api/indicators/list_of_indicators/fractals.md
+      - name: FDI
+        href: api/indicators/list_of_indicators/fractal_dimension.md
+      - name: Gator Oscillator
+        href: api/indicators/list_of_indicators/gator_oscillator.md
+      - name: GAPO
+        href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
+      - name: GMMA
+        href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
+      - name: HO
+        href: api/indicators/list_of_indicators/harmonic_oscillator.md
+      - name: Highest
+        href: api/indicators/list_of_indicators/highest.md
+      - name: HLI
+        href: api/indicators/list_of_indicators/high_low_index.md
+      - name: HVR
+        href: api/indicators/list_of_indicators/historical_volatility_ratio.md
+      - name: HurstExponent
+        href: api/indicators/list_of_indicators/hurst_exponent.md
+      - name: HMA
+        href: api/indicators/list_of_indicators/hma.md
+      - name: Ichimoku
+        href: api/indicators/list_of_indicators/ichimoku.md
+      - name: III
+        href: api/indicators/list_of_indicators/intraday_intensity_index.md
+      - name: IMI
+        href: api/indicators/list_of_indicators/intraday_momentum_index.md
+      - name: JMA
+        href: api/indicators/list_of_indicators/jma.md
+      - name: KPO
+        href: api/indicators/list_of_indicators/kase_peak_oscillator.md
+      - name: KER
+        href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
+      - name: KAMA
+        href: api/indicators/list_of_indicators/kama.md
+      - name: KalmanFilter
+        href: api/indicators/list_of_indicators/kalman_filter.md
+      - name: KC
+        href: api/indicators/list_of_indicators/keltner_channels.md
+      - name: KVO
+        href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
+      - name: KST
+        href: api/indicators/list_of_indicators/kst.md
+      - name: LRSI
+        href: api/indicators/list_of_indicators/laguerre_rsi.md
+      - name: LRC
+        href: api/indicators/list_of_indicators/lrc.md
+      - name: Linear Regression Slope
+        href: api/indicators/list_of_indicators/lrs.md
+      - name: Linear Regression Forecast
+        href: api/indicators/list_of_indicators/linear_regression_forecast.md
+      - name: R-Squared
+        href: api/indicators/list_of_indicators/linear_reg_rsquared.md
+      - name: Lowest
+        href: api/indicators/list_of_indicators/lowest.md
+      - name: LP
+        href: api/indicators/list_of_indicators/lunar_phase.md
+      - name: Market Facilitation Index
+        href: api/indicators/list_of_indicators/market_facilitation_index.md
+      - name: MMI
+        href: api/indicators/list_of_indicators/market_meanness_index.md
+      - name: MI
+        href: api/indicators/list_of_indicators/mass_index.md
+      - name: MCO
+        href: api/indicators/list_of_indicators/mcclellan_oscillator.md
+      - name: MGD
+        href: api/indicators/list_of_indicators/mcginley_dynamic.md
+      - name: Mean Deviation
+        href: api/indicators/list_of_indicators/mean_deviation.md
+      - name: Moving Median
+        href: api/indicators/list_of_indicators/median.md
+      - name: Median Price
+        href: api/indicators/list_of_indicators/median_price.md
+      - name: Momentum
+        href: api/indicators/list_of_indicators/momentum.md
+      - name: MOMA
+        href: api/indicators/list_of_indicators/momentum_of_moving_average.md
+      - name: MP
+        href: api/indicators/list_of_indicators/momentum_pinball.md
+      - name: Money Flow Index
+        href: api/indicators/list_of_indicators/money_flow_index.md
+      - name: MACD
+        href: api/indicators/list_of_indicators/macd.md
+      - name: MACD Histogram
+        href: api/indicators/list_of_indicators/macd_histogram.md
+      - name: MACD with Signal Line
+        href: api/indicators/list_of_indicators/macd_with_signal_line.md
+      - name: MAC
+        href: api/indicators/list_of_indicators/moving_average_crossover.md
+      - name: MAR
+        href: api/indicators/list_of_indicators/moving_average_ribbon.md
+      - name: NVI
+        href: api/indicators/list_of_indicators/negative_volume_index.md
+      - name: PVI
+        href: api/indicators/list_of_indicators/positive_volume_index.md
+      - name: NRTR
+        href: api/indicators/list_of_indicators/nrtr.md
+      - name: OBV
+        href: api/indicators/list_of_indicators/on_balance_volume.md
+      - name: OBVM
+        href: api/indicators/list_of_indicators/on_balance_volume_mean.md
+      - name: Optimal Tracking
+        href: api/indicators/list_of_indicators/optimal_tracking.md
+      - name: OMA
+        href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
+      - name: Parabolic SAR
+        href: api/indicators/list_of_indicators/parabolic_sar.md
+      - name: Pass-Through
+        href: api/indicators/list_of_indicators/pass_through.md
+      - name: Peak
+        href: api/indicators/list_of_indicators/peak.md
+      - name: PPO
+        href: api/indicators/list_of_indicators/percentage_price_oscillator.md
+      - name: Percentage Price Oscillator Signal
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
+      - name: Percentage Price Oscillator Histogram
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
+      - name: PVO
+        href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
+      - name: PP
+        href: api/indicators/list_of_indicators/pivot_points.md
+      - name: Price Channels
+        href: api/indicators/list_of_indicators/price_channels.md
+      - name: PVT
+        href: api/indicators/list_of_indicators/price_volume_trend.md
+      - name: PGO
+        href: api/indicators/list_of_indicators/pretty_good_oscillator.md
+      - name: PSY
+        href: api/indicators/list_of_indicators/psychological_line.md
+      - name: QStick
+        href: api/indicators/list_of_indicators/qstick.md
+      - name: RC
+        href: api/indicators/list_of_indicators/rainbow_charts.md
+      - name: RAVI
+        href: api/indicators/list_of_indicators/ravi.md
+      - name: Rank Correlation Index
+        href: api/indicators/list_of_indicators/rank_correlation_index.md
+      - name: RoC
+        href: api/indicators/list_of_indicators/roc.md
+      - name: RMI
+        href: api/indicators/list_of_indicators/relative_momentum_index.md
+      - name: RSI
+        href: api/indicators/list_of_indicators/rsi.md
+      - name: RVI
+        href: api/indicators/list_of_indicators/rvi.md
+      - name: STC
+        href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: Shift
+        href: api/indicators/list_of_indicators/shift.md
+      - name: SuperTrend
+        href: api/indicators/list_of_indicators/supertrend.md
+      - name: SMA
+        href: api/indicators/list_of_indicators/sma.md
+      - name: SW
+        href: api/indicators/list_of_indicators/sine_wave.md
+      - name: Smoothed MA
+        href: api/indicators/list_of_indicators/smoothed_ma.md
+      - name: Standard Deviation
+        href: api/indicators/list_of_indicators/standard_deviation.md
+      - name: Standard Error
+        href: api/indicators/list_of_indicators/standard_error.md
+      - name: "Stochastic Oscillator %K"
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
+      - name: Stochastic Oscillator
+        href: api/indicators/list_of_indicators/stochastic_oscillator.md
+      - name: Sum N
+        href: api/indicators/list_of_indicators/sum_n.md
+      - name: T3MA
+        href: api/indicators/list_of_indicators/t3_moving_average.md
+      - name: TWAP
+        href: api/indicators/list_of_indicators/time_weighted_average_price.md
+      - name: Typical Price
+        href: api/indicators/list_of_indicators/typical_price.md
+      - name: TEMA
+        href: api/indicators/list_of_indicators/tema.md
+      - name: TRIX
+        href: api/indicators/list_of_indicators/trix.md
+      - name: Trough
+        href: api/indicators/list_of_indicators/trough.md
+      - name: True Range
+        href: api/indicators/list_of_indicators/true_range.md
+      - name: True Strength Index
+        href: api/indicators/list_of_indicators/true_strength_index.md
+      - name: TMF
+        href: api/indicators/list_of_indicators/twiggs_money_flow.md
+      - name: UO
+        href: api/indicators/list_of_indicators/uo.md
+      - name: VHF
+        href: api/indicators/list_of_indicators/vhf.md
+      - name: VIDYA
+        href: api/indicators/list_of_indicators/vidya.md
+      - name: Variable MA
+        href: api/indicators/list_of_indicators/variable_moving_average.md
+      - name: Volume
+        href: api/indicators/list_of_indicators/volume.md
+      - name: Volume Profile
+        href: api/indicators/list_of_indicators/volume_profile.md
+      - name: VWAP
+        href: api/indicators/list_of_indicators/volume_weighted_average_price.md
+      - name: Volume Weighted MA
+        href: api/indicators/list_of_indicators/volume_weighted_ma.md
+      - name: VI
+        href: api/indicators/list_of_indicators/vortex_indicator.md
+      - name: WTO
+        href: api/indicators/list_of_indicators/wave_trend_oscillator.md
+      - name: Weighted Close Price
+        href: api/indicators/list_of_indicators/weighted_close_price.md
+      - name: Weighted MA
+        href: api/indicators/list_of_indicators/weighted_ma.md
+      - name: Wilder MA
+        href: api/indicators/list_of_indicators/wilder_ma.md
+      - name: WAD
+        href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
+      - name: "%R"
+        href: api/indicators/list_of_indicators/williams_r.md
+      - name: WCCI
+        href: api/indicators/list_of_indicators/woodies_cci.md
+      - name: ZLEMA
+        href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
+      - name: ZigZag
+        href: api/indicators/list_of_indicators/zigzag.md
+      - name: WVAD
+        href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
+    - name: Indicador personalizado
+      href: api/indicators/custom_indicator.md
+    - name: Renderizador gráfico de indicadores
+      href: api/indicators/graphic_renderer_of_indicators.md
+  - name: Patrones
+    href: api/patterns.md
+    items:
+    - name: Patrón 3 Outside Down y 3 Outside Up
+      href: api/patterns/3_outside_down_3_outside_up.md
+    - name: Patrón 3 Inside Down y 3 Inside Up
+      href: api/patterns/3_inside_down_3_side_up.md
+    - name: Patrón 3 Black Crows y 3 White Soldiers
+      href: api/patterns/3_black_crows_3_white_soldiers.md
+    - name: Patrón Three White Soldiers
+      href: api/patterns/three_white_soldiers.md
+    - name: Patrón Three Black Crows
+      href: api/patterns/three_black_crows.md
+    - name: Patrón On-Neck
+      href: api/patterns/on_neck.md
+    - name: Patrón Piercing
+      href: api/patterns/piercing.md
+    - name: Patrón Bearish Candle
+      href: api/patterns/bearish.md
+    - name: Patrón Bearish Engulfing
+      href: api/patterns/bearish_engulfing.md
+    - name: Patrón Bearish Harami
+      href: api/patterns/bearish_harami.md
+    - name: Patrón Black Candle
+      href: api/patterns/black_candle.md
+    - name: Patrón Black Marubozu
+      href: api/patterns/black_marubozu.md
+    - name: Patrón Bullish Candle
+      href: api/patterns/bullish.md
+    - name: Patrón Bullish Engulfing
+      href: api/patterns/bullish_engulfing.md
+    - name: Patrón Bullish Harami
+      href: api/patterns/bullish_harami.md
+    - name: Patrón Dragonfly
+      href: api/patterns/dragonfly.md
+    - name: Patrón Evening Star
+      href: api/patterns/evening_star.md
+    - name: Patrón Falling Three Methods
+      href: api/patterns/falling_three_methods.md
+    - name: Patrón Flat (Neutral) Candle
+      href: api/patterns/flat_candle.md
+    - name: Patrón Gravestone
+      href: api/patterns/gravestone.md
+    - name: Patrón Hammer
+      href: api/patterns/hammer.md
+    - name: Patrón Hanging Man
+      href: api/patterns/hanging_man.md
+    - name: Patrón Inverted Hammer
+      href: api/patterns/inverted_hammer.md
+    - name: Patrón Morning Star
+      href: api/patterns/morning_star.md
+    - name: Patrón Rising Three Methods
+      href: api/patterns/rising_three_methods.md
+    - name: Patrón Shooting Star
+      href: api/patterns/shooting_star.md
+    - name: Patrón Spinning Top
+      href: api/patterns/spinning_top.md
+    - name: Patrón Tweezer Bottom
+      href: api/patterns/tweezer_bottom.md
+    - name: Patrón Tweezer Top
+      href: api/patterns/tweezer_top.md
+    - name: Patrón White Candle
+      href: api/patterns/white_candle.md
+    - name: Patrón White Marubozu
+      href: api/patterns/white_marubozu.md
+    - name: Patrones de velas complejos
+      href: api/patterns/complex_patterns.md
+  - name: Gestión de posiciones
+    href: api/positions.md
+  - name: Enrutamiento de adaptadores
+    href: api/basket_routing.md
+  - name: Libro de órdenes
+    href: api/order_books.md
+    items:
+    - name: Suscripciones
+      href: api/order_books/subscriptions.md
+    - name: Ejemplos con el libro de órdenes
+      href: api/order_books/examples.md
+    - name: Libro de órdenes filtrado
+      href: api/order_books/filtered_order_book.md
+    - name: Libro de órdenes disperso
+      href: api/order_books/sparse.md
+    - name: Libro de órdenes agrupado
+      href: api/order_books/grouped.md
+    - name: Visualización
+      href: api/order_books/display.md
+  - name: Estrategias en StockSharp
+    href: api/strategies.md
+    items:
+    - name: Suscripciones a datos de mercado en estrategias
+      href: api/strategies/subscriptions.md
+    - name: Indicadores en estrategias
+      href: api/strategies/indicators.md
+    - name: Operaciones de trading en estrategias
+      href: api/strategies/trading_operations.md
+    - name: Protección de posiciones
+      href: api/strategies/take_profit_and_stop_loss.md
+    - name: Parámetros de estrategia
+      href: api/strategies/parameters.md
+    - name: Logging en estrategias
+      href: api/strategies/logging.md
+    - name: Compatibilidad de estrategias con plataformas StockSharp
+      href: api/strategies/compatibility.md
+    - name: API de alto nivel en estrategias
+      href: api/strategies/high_level_api.md
+    - name: Trabajo con gráficos en estrategias
+      href: api/strategies/chart.md
+    - name: Estadísticas de estrategia
+      href: api/strategies/statistics.md
+    - name: Guardado y carga de ajustes
+      href: api/strategies/settings_saving_and_loading.md
+    - name: Carga de órdenes y operaciones
+      href: api/strategies/orders_and_trades_loading.md
+    - name: Redondeo de precios
+      href: api/strategies/shrink_price.md
+    - name: Tipo Unit
+      href: api/strategies/unit_type.md
+    - name: Algoritmo de quoting
+      href: api/strategies/quoting.md
+    - name: Instrumentos de trabajo
+      href: api/strategies/working_securities.md
+    - name: Estrategias
+      href: api/strategies/strategies.md
+    - name: Gestión de posición objetivo
+      href: api/strategies/target_position_management.md
+    - name: Sistema de alertas
+      href: api/strategies/alert_system.md
+    - name: Sistema de temporizadores
+      href: api/strategies/timer_system.md
+    - name: Suscripciones de alto nivel
+      href: api/strategies/high_level_subscriptions.md
+    - name: Gestión de riesgos
+      href: api/strategies/risk_management.md
+    - name: Informes de estrategia
+      href: api/strategies/reporting.md
+    - name: Modos de trading de estrategias
+      href: api/strategies/trading_modes.md
+    - name: Funciones avanzadas de estrategia
+      href: api/strategies/advanced_features.md
+    - name: Referencia de estadísticas
+      href: api/strategies/statistics_reference.md
+    - name: Optimización avanzada
+      href: api/strategies/optimization_advanced.md
+    - name: Referencia de quoting
+      href: api/strategies/quoting_reference.md
+    - name: Modelo de eventos
+      href: api/strategies/event_model.md
+      items:
+      - name: Uso de reglas
+        href: api/strategies/event_model/rules_using.md
+      - name: Suspensión de reglas
+        href: api/strategies/event_model/rules_suspension.md
+      - name: Reglas mutuamente excluyentes
+        href: api/strategies/event_model/rules_mutually_exclusive.md
+      - name: Crear una regla propia
+        href: api/strategies/event_model/rules_create.md
+      - name: Ejemplos
+        items:
+        - name: Regla para una sola vela
+          href: api/strategies/event_model/samples/rule_candle.md
+        - name: Reglas para operaciones tick
+          href: api/strategies/event_model/samples/rule_ticks.md
+        - name: Reglas para libros de órdenes y operaciones
+          href: api/strategies/event_model/samples/rule_marketdepth.md
+        - name: Regla para órdenes
+          href: api/strategies/event_model/samples/rule_order.md
+        - name: Regla Until
+          href: api/strategies/event_model/samples/rule_until.md
+    - name: Otros ejemplos de estrategias
+      href: api/strategies/samples.md
+      items:
+      - name: Estrategia de arbitraje
+        href: api/strategies/samples/arbitrage.md
+      - name: Estrategia Bollinger clásica
+        href: api/strategies/samples/bollinger_classic.md
+      - name: Estrategia Bollinger con foco en la banda inferior
+        href: api/strategies/samples/bollinger_low.md
+      - name: Estrategia Bollinger con foco en la banda superior
+        href: api/strategies/samples/bollinger_up.md
+      - name: Medias móviles con Martingale
+        href: api/strategies/samples/sma_martingale.md
+      - name: Estrategia de tendencia de una vela
+        href: api/strategies/samples/stairs_trend_one_candle.md
+      - name: Estrategia Stairs de tendencia
+        href: api/strategies/samples/stairs_trend.md
+      - name: Estrategia de contratendencia de una vela
+        href: api/strategies/samples/stairs_countertrend_one_candle.md
+      - name: Estrategia Stairs de contratendencia
+        href: api/strategies/samples/stairs_countertrend.md
+      - name: Estrategia de contratendencia con quoting
+        href: api/strategies/samples/stairs_countertrend_quoting.md
+      - name: Estrategia de quoting
+        href: api/strategies/samples/mq.md
+      - name: Estrategia de quoting de spread
+        href: api/strategies/samples/mq_spread.md
+      - name: Estrategia de pairs trading
+        href: api/strategies/samples/pairs_trading.md
+      - name: Estrategia multi-timeframe
+        href: api/strategies/samples/multi_timeframe.md
+  - name: Sistema de comisiones
+    href: api/commissions.md
+  - name: Gestión de pérdidas y ganancias
+    href: api/pnl.md
+  - name: Medición de slippage
+    href: api/slippage.md
+  - name: Medición de latencia
+    href: api/latency.md
+  - name: Logging
+    href: api/logging.md
+    items:
+    - name: Logging de estrategias
+      href: api/logging/strategy_logging.md
+    - name: Logging de IConnector
+      href: api/logging/iconnector_logging.md
+    - name: Otras fuentes de logs
+      href: api/logging/other_logs_sources.md
+    - name: Monitorización visual
+      href: api/logging/visual_monitoring.md
+    - name: ILogListener personalizado
+      href: api/logging/custom_iloglistener.md
+  - name: Opciones
+    href: api/options.md
+    items:
+    - name: Griegas
+      href: api/options/greeks.md
+    - name: Trading de volatilidad
+      href: api/options/volatility_trading.md
+    - name: Cobertura delta
+      href: api/options/delta_hedging.md
+    - name: Componentes gráficos
+      href: api/options/graphic_components.md
+  - name: Backtesting\/Emulación
+    href: api/testing.md
+    items:
+    - name: Datos históricos
+      href: api/testing/historical_data.md
+    - name: Optimización de estrategias
+      href: api/testing/optimization.md
+    - name: Datos aleatorios
+      href: api/testing/random_data.md
+    - name: Pruebas con datos de mercado en tiempo real
+      href: api/testing/simulator.md
+    - name: Configuración de pruebas
+      href: api/testing/extended_settings.md
+  - name: Exportación de datos
+    href: api/export.md
+  - name: Importación de datos
+    href: api/import.md
+  - name: Scripts de análisis
+    href: api/analytics.md
+  - name: Interfaz gráfica de usuario
+    href: api/graphical_user_interface.md
+    items:
+    - name: Gráficos
+      href: api/graphical_user_interface/charts.md
+      items:
+      - name: Gráfico de velas
+        href: api/graphical_user_interface/charts/candle_chart.md
+      - name: Panel de gráfico de velas
+        href: api/graphical_user_interface/charts/candle_chart_panel.md
+      - name: Gráfico de curva de patrimonio
+        href: api/graphical_user_interface/charts/equity_curve_chart.md
+      - name: Gráfico Box
+        href: api/graphical_user_interface/charts/box_chart.md
+      - name: Gráfico de clústeres
+        href: api/graphical_user_interface/charts/cluster_chart.md
+      - name: Registro de órdenes desde el gráfico
+        href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
+      - name: Anotaciones
+        href: api/graphical_user_interface/charts/annotations.md
+    - name: Logging
+      href: api/graphical_user_interface/logging.md
+      items:
+      - name: Panel de logs
+        href: api/graphical_user_interface/logging/log_panel.md
+      - name: Panel de logs extendido
+        href: api/graphical_user_interface/logging/extended_log_panel.md
+    - name: Portafolios
+      href: api/graphical_user_interface/portfolios.md
+      items:
+      - name: Lista desplegable
+        href: api/graphical_user_interface/portfolios/drop_down_list.md
+      - name: Selector
+        href: api/graphical_user_interface/portfolios/picker.md
+      - name: Ventana de selección de portafolios
+        href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
+      - name: Tabla
+        href: api/graphical_user_interface/portfolios/table.md
+    - name: Instrumentos
+      href: api/graphical_user_interface/instruments.md
+      items:
+      - name: Ventana
+        href: api/graphical_user_interface/instruments/window.md
+      - name: Tabla
+        href: api/graphical_user_interface/instruments/table.md
+      - name: Selector
+        href: api/graphical_user_interface/instruments/picker.md
+      - name: Futuros continuos
+        href: api/graphical_user_interface/instruments/continuous_futures.md
+      - name: Índice
+        href: api/graphical_user_interface/instruments/index.md
+    - name: Datos de mercado
+      href: api/graphical_user_interface/market_data.md
+      items:
+      - name: Operaciones tick
+        href: api/graphical_user_interface/market_data/ticks.md
+      - name: Level1
+        href: api/graphical_user_interface/market_data/level1.md
+      - name: Libro de órdenes
+        href: api/graphical_user_interface/market_data/order_book.md
+      - name: Log de órdenes
+        href: api/graphical_user_interface/market_data/order_log.md
+      - name: Noticias
+        href: api/graphical_user_interface/market_data/news.md
+    - name: Trading
+      href: api/graphical_user_interface/trading.md
+      items:
+      - name: Órdenes
+        href: api/graphical_user_interface/trading/orders.md
+      - name: Operaciones propias
+        href: api/graphical_user_interface/trading/own_trades.md
+      - name: Creación de una nueva orden
+        href: api/graphical_user_interface/trading/new_order_creation.md
+      - name: Creación de una nueva orden stop
+        href: api/graphical_user_interface/trading/new_stop_order_creation.md
+      - name: Tabla de datos de mercado disponibles
+        href: api/graphical_user_interface/trading/table_of_available_market_data.md
+      - name: Panel Buy\/Sell
+        href: api/graphical_user_interface/trading/buy_sell_panel.md
+    - name: Estrategias
+      href: api/graphical_user_interface/strategies.md
+      items:
+      - name: Estadísticas
+        href: api/graphical_user_interface/strategies/statistics.md
+    - name: Opciones
+      href: api/graphical_user_interface/options.md
+      items:
+      - name: Tablero de opciones
+        href: api/graphical_user_interface/options/option_desk.md
+      - name: Gráfico de posición
+        href: api/graphical_user_interface/options/position_chart.md
+    - name: Tabla de edición de propiedades de objetos
+      href: api/graphical_user_interface/object_properties_editing_table.md
+    - name: Ventana de configuración de conexión
+      href: api/graphical_user_interface/connection_settings_window.md
+    - name: Ventana de configuración de riesgo
+      href: api/graphical_user_interface/risk_settings_window.md
+    - name: Ventana de configuración de comisiones
+      href: api/graphical_user_interface/commission_settings_window.md
+    - name: Ventana de configuración de notificaciones
+      href: api/graphical_user_interface/notification_settings_window.md
+    - name: "Temas de los componentes gráficos de S#"
+      href: api/graphical_user_interface/themes_light_and_dark.md
+- name: Shell
+  href: shell.md
+  items:
+  - name: Instalación de Shell
+    href: shell/installing_shell.md
+  - name: Inicio rápido
+    href: shell/quick_start.md
+  - name: Interfaz de usuario
+    items:
+    - name: Common
+      href: shell/user_interface/common.md
+    - name: Real-time
+      href: shell/user_interface/real_time.md
+    - name: Emulación
+      href: shell/user_interface/emulation.md
+    - name: RemoteManager
+      href: shell/user_interface/remotemanager.md
+  - name: Configuración de conexiones
+    href: shell/connections_settings.md
+    items:
+    - name: Configuración del conector
+      href: shell/connections_settings/connector_settings.md
+  - name: Crear estrategia
+    href: shell/create_strategy.md
+  - name: Crear panel de estrategia
+    href: shell/create_strategy_panel.md
+  - name: Ejecutar estrategias desde Designer
+    href: shell/run_strategies_from_designer.md
+- name: Store
+  href: store.md
+- name: MATLAB
+  href: matlab.md
+- name: UDP Dumper
+  href: udp_dumper.md
+- name: Común
+  items:
+  - name: Códigos fuente
+    href: common/source_codes.md
+  - name: Materiales de referencia
+    href: common/reference_materials.md

@@ -1,0 +1,29 @@
+# Cancelaciones masivas de órdenes
+
+![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+
+Este bloque se usa para cancelar todas las órdenes de un instrumento.
+
+### Sockets de entrada
+
+Sockets de entrada
+
+- **Trigger** - señal que determina el momento en que es necesario cancelar órdenes.
+- **Portfolio** – cartera para la que deben cancelarse todas las órdenes.
+- **Security** – instrumento para el que deben cancelarse todas las órdenes.
+
+### Sockets de salida
+
+Sockets de salida
+
+- **Result** - bandera que señala el éxito de la operación.
+
+### Parámetros
+
+Parámetros
+
+- **Direction** – dirección de las órdenes que se cancelan (compra o venta), actúa como señal de cancelación para la orden.
+
+## Véase también
+
+[Registro de orden](register.md)

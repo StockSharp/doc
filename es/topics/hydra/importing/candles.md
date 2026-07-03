@@ -1,0 +1,51 @@
+# Velas
+
+Para importar velas, seleccione **Import \=\> Candles** en el menú principal de la aplicación.
+
+![hydra import candles](../../../images/hydra_import_candles.png)
+
+## Proceso de importación de velas
+
+1. **Common.**
+   - **Data type** - tipo de datos importados.
+   - **Filename** - ruta completa al archivo CSV.
+   - **Data directory** - carpeta donde se guardarán los archivos finales de [S#](../../api.md).
+   - **File mask** - máscara de archivo que se usa al escanear el directorio. Por ejemplo, candle \_\*.csv.
+   - **Column separator** - separador de columnas. La tabulación se indica como TAB.
+   - **Indent from the beginning** - número de líneas desde el inicio del archivo que se omitirán (si contienen metainformación).
+   - **Time zone** - zona horaria.
+   - **Interval** - frecuencia de actualización de datos.
+
+   **Instruments**
+   - **Extended information** - guardar los campos importados extendidos en el almacenamiento de información extendida.
+   - **Duplicates** - indica si los instrumentos duplicados se actualizarán si ya existen.
+2. Configure los parámetros de importación para los campos de [S#](../../api.md).
+   - **S# field** - valor del campo S# (**Security, Board**, etc.).
+   - **Associations** - asociar el valor de columna del archivo con el tipo de StockSharp (si es necesario).
+   - **Format** - formato de datos. Normalmente se usa al importar valores de fecha y hora (consulte [Operaciones](ticks.md)).
+   - **Use** - indica si se deben usar los datos durante la importación.
+   - **Field order** - secuencia en la que se organizan las columnas de propiedades del elemento importado.
+
+     Por ejemplo, si el archivo importado tiene el siguiente tipo de plantilla:
+
+     ```none
+     {SecurityId.SecurityCode},{SecurityId.BoardCode},{OpenTime:yyyyMMdd},{OpenTime:default:HH:mm:ss},{OpenPrice},{HighPrice},{LowPrice},{ClosePrice},{TotalVolume}
+     	  				
+     ```
+
+     Entonces le corresponderá la siguiente configuración:![hydra import prop candles](../../../images/hydra_import_prop_candles.png)
+
+     Aquí:
+
+     El valor **Security** corresponde a **{SecurityId.SecurityCode}** con el número de orden **0**.
+
+     > [!TIP]
+     > En programación, el número ordinal del primer elemento siempre es 0.
+
+     El valor **Board** corresponde a **{SecurityId.BoardCode}** con el número de orden **1**. Y así sucesivamente.
+   - **By default** - valor predeterminado del campo. Por ejemplo, puede usarse para valores repetidos de campos (Security, **o Board** al importar operaciones, libros de órdenes, etc.; consulte [Operaciones](ticks.md)), si la información correspondiente no está en el archivo de datos.
+   - **Zero** - en algunos casos, al guardar datos, ciertas propiedades pueden guardarse como "0", lo que es un error. Por ejemplo, por distintas razones el precio puede ser igual a 0; esto no es aceptable y en el futuro provocará una lectura incorrecta. Esto puede causar un funcionamiento incorrecto de las estrategias que trabajan con esos datos y, como consecuencia, un resultado erróneo. Al marcar esta casilla, el usuario especifica que los datos de esta sección, si son iguales a 0, se escriban como vacíos, es decir, como ausentes. En el trabajo posterior, por ejemplo durante las pruebas, el usuario verá un error de ausencia de datos, lo que indicará una importación incorrecta. En realidad, esto protege al usuario frente a datos "rotos" y permite trabajar de forma más correcta.
+
+   El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
+3. Para previsualizar los datos, haga clic en el botón **Preview**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
+4. Haga clic en el botón **Import**.

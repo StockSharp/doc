@@ -1,0 +1,68 @@
+# RemoteManager
+
+La pestaña **RemoteManager** permite habilitar el modo de control remoto. Para habilitar este modo, debe ir al menú de configuración de usuario.
+
+![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
+
+En la ventana que aparece, establezca su **login** y **password**.
+
+![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
+
+Después debe habilitar el **server mode**.
+
+![Shell RemoteManager 02](../../../images/shell_remotemanager_02.png)
+
+Ahora puede conectarse a Shell desde otro Shell.
+
+Para ello, debe ejecutar **otro Shell**. En él, vaya a la configuración de conexión.
+
+![Shell RemoteManager 03](../../../images/shell_remotemanager_03.png)
+
+En la ventana que se abre, configure la conexión FIX.
+
+![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
+
+Después pulse el botón Connect.
+
+![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
+
+Al conectarse, todas las estrategias existentes en el servidor Shell estarán disponibles en el cliente Shell.
+
+![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
+
+Al hacer clic en el botón Add, puede añadir otra estrategia para trading.
+
+![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
+
+Como el cliente Shell admite múltiples servidores, al añadir una estrategia debe seleccionar el servidor a la izquierda. Todas las estrategias disponibles en el servidor aparecerán a la derecha.
+
+![Shell RemoteManager 08](../../../images/shell_remotemanager_08.png)
+
+Después de añadir una estrategia, aparecerá en la lista de estrategias.
+
+![Shell RemoteManager 09](../../../images/shell_remotemanager_09.png)
+
+Al seleccionar una estrategia, habrá pestañas a la derecha con la configuración de la estrategia, así como sus estadísticas.
+
+Después de cambiar la configuración de la estrategia, asegúrese de hacer clic en el botón Apply changes; de lo contrario, los cambios no se aplicarán a la estrategia.
+
+![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
+
+Si la estrategia tiene un comando distinto de Start\/Stop, para aplicarlo debe establecerlo en el siguiente campo.
+
+![Shell RemoteManager 11](../../../images/shell_remotemanager_11.png)
+
+Y haga clic en el botón de enviar comando.
+
+Para establecer su comando en la estrategia, debe sobrescribir el método [Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Messages.CommandMessage))**(**[StockSharp.Messages.CommandMessage](xref:StockSharp.Messages.CommandMessage) cmdMsg **)**.
+
+```cs
+public virtual void ApplyCommand(CommandMessage cmdMsg)
+		
+```
+
+La clase base [Strategy](xref:StockSharp.Algo.Strategies.Strategy) solo controla el inicio y la detención de la estrategia.
+
+## Contenido recomendado
+
+[Configuración de conexiones](../connections_settings.md)
