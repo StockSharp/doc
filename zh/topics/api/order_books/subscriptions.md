@@ -20,7 +20,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 
 在发送订单簿订阅请求之前，**订阅** [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) 事件非常重要。这可以确保如果订单簿在订阅请求发送后很快开始到达，你不会错过任何数据。
 
-2. 使用 [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription) 方法发送订阅请求：
+2. 使用 [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)) 方法发送订阅请求：
 
 ```cs
 var security = GetSecurity(); // Get the Security object you want to subscribe to

@@ -1,6 +1,6 @@
 # OpenECry
 
-**OpenECry（GAIN Futures）** — 用于在国际交易所交易的交易平台。
+**OpenECry (GAIN Futures)** — 用于在国际交易所交易的交易平台。
 
 在开始为当前交易平台编写交易机器人之前，建议阅读[连接器](../../connectors.md)中的链接。
 

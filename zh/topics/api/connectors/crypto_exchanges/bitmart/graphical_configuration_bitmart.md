@@ -4,9 +4,9 @@
 
 ![API GUI 设置 Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **板块** - 连接的部分（现货，期货）。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **交易板** - 要连接的板块（现货、期货）。
 - **口令** - 管理员密码。
 
 ## 推荐内容

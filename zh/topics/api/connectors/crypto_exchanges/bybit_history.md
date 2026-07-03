@@ -1,6 +1,6 @@
 # Bybit History
 
-**Bybit 历史** - Bybit 交易所的历史服务。
+**Bybit History** - Bybit 交易所的历史数据服务。
 
 在开始为该交易平台编写交易机器人之前，建议先阅读[连接器](../../connectors.md)章节中的链接。
 

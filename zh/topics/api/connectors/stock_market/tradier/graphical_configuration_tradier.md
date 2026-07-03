@@ -5,7 +5,7 @@
 ![API GUI 设置 Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **令牌** - 授权令牌。
-- **演示** - 演示模式。
+- **模拟模式** - 演示模式。
 
 OAuth 授权：
 

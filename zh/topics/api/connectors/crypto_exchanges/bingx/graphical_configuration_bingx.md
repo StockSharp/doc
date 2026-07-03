@@ -4,7 +4,7 @@
 
 ![API GUI 设置 BingX](../../../../../images/api_gui_settings_bingx.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **Demo** - 演示模式。
-- **Reconnection settings** - 与交易系统的重连机制参数。([重连设置](../../reconnection_settings.md))
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **模拟模式** - 演示模式。
+- **重新连接设置** - 与交易系统的重连机制参数。([重连设置](../../reconnection_settings.md))

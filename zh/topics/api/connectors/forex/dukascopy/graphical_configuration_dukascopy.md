@@ -5,7 +5,7 @@
 ![API GUI 设置 Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
 
 - **心跳** - 服务器检查间隔，用于追踪连接是否处于活动状态。默认值为 1 分钟。
-- **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))
+- **重新连接设置** - 跟踪与交易系统连接状态的机制。([重新连接设置](../../reconnection_settings.md))
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 ![API GUI 设置 cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
-- **演示** - 连接到模拟交易。
+- **模拟模式** - 连接到模拟交易。
 
 OAuth 授权：
 

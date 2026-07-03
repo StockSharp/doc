@@ -7,7 +7,7 @@
 
 ## 标识符生成算法重写
 
-1. 要在自己的算法上启动工具标识符生成，您必须创建 [SecurityIdGenerator](xref:StockSharp.Messages.SecurityIdGenerator) 类的子类，并重写 [SecurityIdGenerator.GenerateId](xref:StockSharp.Messages.SecurityIdGenerator.GenerateId(System.String,System.String)**(**[System.String](xref:System.String) secCode, [System.String](xref:System.String) boardCode **)** 方法：
+1. 要在自己的算法中生成交易品种标识符，您必须创建 [SecurityIdGenerator](xref:StockSharp.Messages.SecurityIdGenerator) 类的子类，并重写 [SecurityIdGenerator.GenerateId](xref:StockSharp.Messages.SecurityIdGenerator.GenerateId(System.String,System.String))**(**[System.String](xref:System.String) secCode, [System.String](xref:System.String) boardCode **)** 方法：
 
    ```cs
    class CustomSecurityIdGenerator : SecurityIdGenerator

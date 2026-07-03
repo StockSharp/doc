@@ -4,7 +4,7 @@
 
 ![API GUI 设置 PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
 
-- **代币** - 代币。
+- **令牌** - 代币。
 - **连接类型** - 连接到历史记录 (REST) 或实时 (WebSockets)。
 
 ## 推荐内容

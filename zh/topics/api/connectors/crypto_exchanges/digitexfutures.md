@@ -1,7 +1,7 @@
 > [!WARNING]
 > 该交易所已永久关闭（约 2022 年 — 已关闭）。此连接器已不再可用。文档已保留以供历史参考。
 
-# Digitex期货
+# DigitexFutures
 
 **DigitexFutures** - 加密货币交易所。
 

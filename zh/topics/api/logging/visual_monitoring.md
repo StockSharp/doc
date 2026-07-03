@@ -15,7 +15,7 @@
 ## 使用显示器
 
 1. 首先，您需要创建一个窗口并添加组件。
-2. 然后，创建的窗口必须通过 [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) 添加到你的 [LogManager](xref:Ecng.Logging.LogManager) 中：
+2. 然后，创建的窗口必须添加到你的 [LogManager](xref:Ecng.Logging.LogManager) 中，并通过 [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) 输出日志：
 
    ```cs
    _logManager.Listeners.Add(new GuiLogListener(monitor));

@@ -4,13 +4,13 @@
 
 ![API GUI 设置 OANDA](../../../../../images/api_gui_settings_oanda.png)
 
-- **Server** - 服务器。
-- **Token** - Token。
-- **Compression** - 压缩。
-- **Transactions only** - 仅为交易流写入日志消息。
-- **Reconnection settings** - 跟踪与交易系统连接状态的机制设置。([重新连接设置](../../reconnection_settings.md))
-- **Heartbeat interval** - 通知服务器连接仍处于活动状态的间隔。默认值为 1 分钟。
-- **Unified board code** - 统一交易品种的交易板代码。
+- **服务器** - 服务器。
+- **令牌** - 令牌。
+- **压缩** - 压缩。
+- **仅事务** - 仅为事务流写入日志消息。
+- **重新连接设置** - 跟踪与交易系统连接状态的机制设置。([重新连接设置](../../reconnection_settings.md))
+- **心跳间隔** - 通知服务器连接仍然存活的间隔。默认值为 1 分钟。
+- **统一交易板代码** - 统一交易品种的交易板代码。
 
 ## 推荐内容
 

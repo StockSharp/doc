@@ -32,7 +32,7 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 ## 策略初始化
 
-在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime) 方法中，创建了 SMA 指标，设置了K线订阅，并准备了可视化：
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，创建了 SMA 指标，设置了K线订阅，并准备了可视化：
 
 ```cs
 protected override void OnStarted2(DateTime time)

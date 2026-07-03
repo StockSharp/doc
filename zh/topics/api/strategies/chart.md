@@ -67,7 +67,7 @@ private void InitializeChart()
 }
 ```
 
-你也可以直接使用 [IChart.AddArea](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddArea(StockSharp.Charting.IChart) 方法：
+你也可以直接使用 [IChart.AddArea](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddArea(StockSharp.Charting.IChart)) 方法：
 
 ```cs
 private void InitializeChart()
@@ -186,7 +186,7 @@ smaElement.AutoAssignYAxis = true; // Automatically assign Y-axis
 
 ### 添加交易
 
-要显示交易，请使用 [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea) 方法：
+要显示交易，请使用 [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) 方法：
 
 ```cs
 // Adding an element to display trades
@@ -229,7 +229,7 @@ _ordersElement.PointSize = 8;                // Point size
 
 ### 绘制K线和指标
 
-绘制数据的最高效方法是使用 [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData) 方法配合 [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 对象：
+绘制数据的最高效方法是使用 [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) 方法配合 [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 对象：
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -274,9 +274,9 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-[IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) 方法创建一个 [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 对象，用于分组和添加不同图表元素的数据。数据分组是通过时间戳使用 [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset) 方法完成的。
+[IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) 方法创建一个 [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 对象，用于分组和添加不同图表元素的数据。数据分组是通过时间戳使用 [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)) 方法完成的。
 
-对于添加不同类型的数据，使用 [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem) 对象的 [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates) 方法的各种重载。
+对于添加不同类型的数据，使用 [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) 方法的各种重载，该方法属于 [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem) 对象。
 
 ### 绘制交易和订单
 

@@ -173,7 +173,7 @@ public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage ca
 
 ## 错误处理
 
-执行交易操作时，必须正确处理可能出现的错误和异常。如果发生错误，需要发送设置了 [Error](xref:StockSharp.Messages.ExecutionMessage.Error) 属性的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息。
+执行交易操作时，必须正确处理可能出现的错误和异常。如果发生错误，需要发送 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，并设置 [Error](xref:StockSharp.Messages.ExecutionMessage.Error) 属性。
 
 ## 实现细节
 

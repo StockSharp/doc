@@ -4,9 +4,9 @@
 
 ![API GUI 设置 Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **演示** - 沙盒模式。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **模拟模式** - 沙盒模式。
 
 ## 推荐内容
 

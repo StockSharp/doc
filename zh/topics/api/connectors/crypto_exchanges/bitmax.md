@@ -1,7 +1,7 @@
 > [!NOTE]
 > BitMax 已更名为 AscendEX。本文件保留用于历史参考。
 
-# 比特马克斯
+# BitMax
 
 **BitMax** - 加密货币交易所。
 

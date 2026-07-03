@@ -28,11 +28,11 @@ StockSharp 提供了一个强大的基础设施，用于创建、测试和运行
 
 - [在策略中使用图表](strategies/chart.md) - 策略数据可视化图表指南。解释如何访问图表、创建区域、添加元素以及呈现数据。
 
-- [保存和加载设置](strategies/settings_saving_and_loading.md) - 通过 [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage) 和 [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage) 方法保存和加载策略设置的机制说明。
+- [保存和加载设置](strategies/settings_saving_and_loading.md) - 通过 [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) 和 [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) 方法保存和加载策略设置的机制说明。
 
 - [状态加载](strategies/orders_and_trades_loading.md) - 指导如何将先前执行的订单和交易加载到策略中，例如，在交易会话中重新启动策略时。
 
-- [价格四舍五入](strategies/shrink_price.md) - 使用[ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)方法在策略中正确四舍五入价格的指南。
+- [价格四舍五入](strategies/shrink_price.md) - 使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 方法在策略中正确四舍五入价格的指南。
 
 - [单位类型](strategies/unit_type.md) - [单位](xref:StockSharp.Messages.Unit) 数据类型的描述，用于简化对百分比、点数或基点等数量的算术运算。
 

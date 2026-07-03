@@ -4,7 +4,7 @@
 
 与普通订单不同，对于止损订单，您需要将[Order.Type](xref:StockSharp.BusinessEntities.Order.Type)属性指定为[OrderTypes.Conditional](xref:StockSharp.Messages.OrderTypes.Conditional)，并设置[Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition)属性以包含必要的订单条件。
 
-此外，如果您需要处理该订单（例如，取消或更改它），则应使用此 [Order](xref:StockSharp.BusinessEntities.Order) 对象。为了在交易所注册订单，提供了 [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order)**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) 订单 **)** 方法，该方法将订单发送到服务器。
+此外，如果您需要处理该订单（例如，取消或更改它），则应使用此 [Order](xref:StockSharp.BusinessEntities.Order) 对象。为了在交易所注册订单，提供了 [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)** 方法，该方法将订单发送到服务器。
 
 ```cs
 Connector Connector = new Connector();		

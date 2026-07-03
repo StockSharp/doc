@@ -2,17 +2,17 @@
 
 ## 介绍
 
-StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal) 方法是根据市场要求正确四舍五入价格的基本工具。这确保了提交的订单符合交易所或经纪商的规则。
+StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 方法是根据市场要求正确四舍五入价格的基本工具。这确保了提交的订单符合交易所或经纪商的规则。
 
 ## 目的
 
-[ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal) 的主要目标是将价格四舍五入到允许的值，考虑到：
+[ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 的主要目标是将价格四舍五入到允许的值，考虑到：
 1. 该工具的价格步长 ([Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep))
 2. 小数位数 ([Security.Decimals](xref:StockSharp.BusinessEntities.Security.Decimals))
 
 ## 使用的重要性
 
-使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal) 对于以下方面至关重要：
+使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 对于以下方面至关重要：
 - 防止因价格错误而被交易所或经纪商拒绝订单
 - 确保计算和交易操作的准确性
 - 遵守特定市场或工具的规则和限制
@@ -72,4 +72,4 @@ Console.WriteLine($"Order price: {order.Price}");
 
 ## 结论
 
-正确使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal) 有助于在下单时避免错误，并确保交易算法根据市场要求正确运行。
+正确使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 有助于在下单时避免错误，并确保交易算法根据市场要求正确运行。

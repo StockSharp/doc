@@ -8,7 +8,7 @@
 
 ## 在策略中创建订阅
 
-在策略的 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime) 方法中，您可以为所需的数据创建并启动订阅：
+在策略的 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，您可以为所需的数据创建并启动订阅：
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -73,7 +73,7 @@ private void CheckRefreshOnlineState()
 }
 ```
 
-只有当所有策略订阅都已转为[SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online)状态时，[Strategy.IsOnline](xref:StockSharp.Algo.Strategies.Strategy.IsOnline)属性才会是`true`。这使策略能够理解它在使用当前市场数据时的时刻。
+[Strategy.IsOnline](xref:StockSharp.Algo.Strategies.Strategy.IsOnline) 属性只有在所有策略订阅都已转为 [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) 状态时才会是 `true`。这使策略能够判断自己何时正在使用当前市场数据。
 
 ## 订阅类型
 

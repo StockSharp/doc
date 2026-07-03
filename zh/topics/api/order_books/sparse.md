@@ -12,7 +12,7 @@
 
 ## 创建稀疏订单簿
 
-要使用分组订单簿，您首先需要通过[订阅](subscriptions.md)进行设置接收，然后调用扩展方法[Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)。该方法接受以下参数：
+要使用分组订单簿，您首先需要通过[订阅](subscriptions.md)配置接收，然后调用扩展方法 [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32))。该方法接受以下参数：
 
 - `priceRange` - 价格差异需要扩展到的水平。
 - `priceStep` - 交易品种的价格步长。当 `priceRange` 在价格水平上的精度低于 `priceStep` 且需要将获得的价格四舍五入到工具的价格步长时使用。

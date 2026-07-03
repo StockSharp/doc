@@ -4,10 +4,10 @@
 
 ![API GUI 设置 Coinigy](../../../../../images/api_gui_settings_coinigy.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **Password** - 管理员密码。
-- **Websocket** - Websocket ID。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **密码** - 管理员密码。
+- **WebSocket** - Websocket ID。
 - **余额** - 余额检查间隔。在存款和取款操作中需要。
 - **心跳** - 服务器检查间隔，用于跟踪连接是否活跃。默认值为1分钟。
 - **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))

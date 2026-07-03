@@ -4,8 +4,8 @@
 
 ![API GUI 设置 Coinbase](../../../../../images/api_gui_settings_coinbase.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
 - **口令** - 口令。
 - **余额** - 余额检查间隔。在存款和取款操作中需要。
 - **心跳** - 用于跟踪连接是否存活的服务器检查间隔。默认值为1分钟。

@@ -1,6 +1,6 @@
 # 记录
 
-对于用 [S#](../api.md) 编写的交易算法的监控，你可以使用专用的 [LogManager](xref:Ecng.Logging.LogManager) 类。该类通过 [ILogSource.Log](xref:Ecng.Logging.ILogSource.Log) 事件从 [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources) 接收 [LogMessage](xref:Ecng.Logging.LogMessage) 消息，并将它们传递给 [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) 监听器。因此，算法代码将能够传递调试信息（例如，操作过程中发生的错误，或关于数学计算的额外信息），而 [LogManager](xref:Ecng.Logging.LogManager) 将决定如何向操作者显示这些信息。
+对于用 [S#](../api.md) 编写的交易算法的监控，你可以使用专用的 [LogManager](xref:Ecng.Logging.LogManager) 类。该类接收 [LogMessage](xref:Ecng.Logging.LogMessage) 消息，这些消息由 [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources) 通过 [ILogSource.Log](xref:Ecng.Logging.ILogSource.Log) 事件发出，并将它们传递给 [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) 监听器。因此，算法代码将能够传递调试信息（例如，操作过程中发生的错误，或关于数学计算的额外信息），而 [LogManager](xref:Ecng.Logging.LogManager) 将决定如何向操作者显示这些信息。
 
 通常，[S#](../api.md) 包含以下 [ILogListener](xref:Ecng.Logging.ILogListener) 的实现，其选择会影响从策略接收到的消息将被传递到的位置：
 

@@ -4,13 +4,13 @@
 
 主要字段：
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **Section** - 交易分区（`Spot` 或 `Derivatives`）。
-- **Derivatives mode** - derivatives 协议系列。
-- **Demo** - 演示环境模式。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **交易分区** - 交易分区（`现货` 或 `衍生品`）。
+- **衍生品模式** - 衍生品协议系列。
+- **模拟模式** - 演示环境模式。
 - **现货 REST / 衍生品 REST** - REST 端点。
-- **现货 WS / 衍生品 WS** - websocket 端点。
+- **现货 WS / 衍生品 WS** - WebSocket 端点。
 
 ## 推荐内容
 

@@ -193,7 +193,7 @@
             href: designer/strategies/using_visual_designer/elements/converters/indexer.md
           - name: 转换器
             href: designer/strategies/using_visual_designer/elements/converters/converter.md
-        - name: 通知中
+        - name: 通知
           items:
           - name: 通知
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
@@ -376,7 +376,7 @@
     items:
     - name: 发布自己的策略
       href: designer/strategy_gallery/publish_own_strategy.md
-  - name: 进出口
+  - name: 导入导出
     items:
     - name: 出口
       href: designer/export_import/export.md
@@ -586,7 +586,7 @@
       href: hydra/server_mode/fix_fast_connectivity.md
     - name: Hydra-客户端连接
       href: hydra/server_mode/hydra_client_connectivity.md
-  - name: 工具与交易板
+  - name: 交易品种和交易板
     items:
     - name: 工具列表
       href: hydra/instruments_and_boards/instruments_list.md
@@ -1852,69 +1852,69 @@
         href: api/indicators/list_of_indicators/median_price.md
       - name: 动量 (Momentum)
         href: api/indicators/list_of_indicators/momentum.md
-      - name: 移动平均动量 (MOMA)  
+      - name: 移动平均动量 (MOMA)
         href: api/indicators/list_of_indicators/momentum_of_moving_average.md
-      - name: 动量弹球 (MP)  
+      - name: 动量弹球 (MP)
         href: api/indicators/list_of_indicators/momentum_pinball.md
-      - name: 资金流量指数 (MFI)  
+      - name: 资金流量指数 (MFI)
         href: api/indicators/list_of_indicators/money_flow_index.md
-      - name: 移动平均收敛发散指标 (MACD)  
+      - name: 移动平均收敛发散指标 (MACD)
         href: api/indicators/list_of_indicators/macd.md
-      - name: MACD 柱状图  
+      - name: MACD 柱状图
         href: api/indicators/list_of_indicators/macd_histogram.md
-      - name: MACD 信号  
+      - name: MACD 信号
         href: api/indicators/list_of_indicators/macd_with_signal_line.md
-      - name: 移动平均交叉 (MAC)  
+      - name: 移动平均交叉 (MAC)
         href: api/indicators/list_of_indicators/moving_average_crossover.md
-      - name: 移动平均带 (MAR)  
+      - name: 移动平均带 (MAR)
         href: api/indicators/list_of_indicators/moving_average_ribbon.md
-      - name: 负成交量指数 (NVI)  
+      - name: 负成交量指数 (NVI)
         href: api/indicators/list_of_indicators/negative_volume_index.md
-      - name: 正成交量指数 (PVI)  
+      - name: 正成交量指数 (PVI)
         href: api/indicators/list_of_indicators/positive_volume_index.md
-      - name: Nick Rypock 追踪反转 (NRTR)  
+      - name: Nick Rypock 追踪反转 (NRTR)
         href: api/indicators/list_of_indicators/nrtr.md
-      - name: 能量潮 (OBV)  
+      - name: 能量潮 (OBV)
         href: api/indicators/list_of_indicators/on_balance_volume.md
-      - name: 能量潮均值 (OBVM)  
+      - name: 能量潮均值 (OBVM)
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
-      - name: 最优追踪滤波器 (OptimalTracking)  
+      - name: 最优追踪滤波器 (OptimalTracking)
         href: api/indicators/list_of_indicators/optimal_tracking.md
-      - name: 移动平均振荡器 (OMA)  
+      - name: 移动平均振荡器 (OMA)
         href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
-      - name: 抛物线转向指标 (Parabolic SAR)  
+      - name: 抛物线转向指标 (Parabolic SAR)
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Stub（透传）  
+      - name: Stub（透传）
         href: api/indicators/list_of_indicators/pass_through.md
-      - name: 峰值  
+      - name: 峰值
         href: api/indicators/list_of_indicators/peak.md
-      - name: 价格振荡百分比 (PPO)  
+      - name: 价格振荡百分比 (PPO)
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
-      - name: 价格振荡百分比信号  
+      - name: 价格振荡百分比信号
         href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
-      - name: 价格振荡百分比柱状图  
+      - name: 价格振荡百分比柱状图
         href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
-      - name: 成交量振荡百分比 (PVO)  
+      - name: 成交量振荡百分比 (PVO)
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
-      - name: 枢轴点 (PP)  
+      - name: 枢轴点 (PP)
         href: api/indicators/list_of_indicators/pivot_points.md
-      - name: 价格通道 (PC)  
+      - name: 价格通道 (PC)
         href: api/indicators/list_of_indicators/price_channels.md
-      - name: 价格成交量趋势 (PVT)  
+      - name: 价格成交量趋势 (PVT)
         href: api/indicators/list_of_indicators/price_volume_trend.md
-      - name: 相当好的振荡器 (PGO)  
+      - name: 相当好的振荡器 (PGO)
         href: api/indicators/list_of_indicators/pretty_good_oscillator.md
-      - name: 心理线 (PSY)  
+      - name: 心理线 (PSY)
         href: api/indicators/list_of_indicators/psychological_line.md
-      - name: QStick  
+      - name: QStick
         href: api/indicators/list_of_indicators/qstick.md
-      - name: 彩虹图 (RC)  
+      - name: 彩虹图 (RC)
         href: api/indicators/list_of_indicators/rainbow_charts.md
-      - name: 区间动作验证指数 (RAVI)  
+      - name: 区间动作验证指数 (RAVI)
         href: api/indicators/list_of_indicators/ravi.md
-      - name: 等级相关指数 (RCI)  
+      - name: 等级相关指数 (RCI)
         href: api/indicators/list_of_indicators/rank_correlation_index.md
-      - name: 变动率 (ROC)  
+      - name: 变动率 (ROC)
         href: api/indicators/list_of_indicators/roc.md
       - name: 相对动量指数 (RMI)
         href: api/indicators/list_of_indicators/relative_momentum_index.md

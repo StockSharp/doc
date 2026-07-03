@@ -4,4 +4,4 @@
 
 ![API GUI 设置 Binance 历史](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Check Dates** - 发送下载请求前验证请求日期。
+- **检查日期** - 发送下载请求前验证请求日期。

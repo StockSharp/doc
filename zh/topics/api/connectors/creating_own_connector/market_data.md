@@ -416,7 +416,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 ### 处理逐笔成交数据
 
-为了处理从交易所实时接收的逐笔成交数据，通常会实现类似 **SessionOnTradeReceived** 方法的代码。该方法将接收到的数据转换为类型为 [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) 的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，并使用 SendOutMessageAsync 方法发送。
+为了处理从交易所实时接收的逐笔成交数据，通常会实现类似 **SessionOnTradeReceived** 方法的代码。该方法将接收到的数据转换为 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，其类型为 [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks)，并使用 SendOutMessageAsync 方法发送。
 
 ```cs
 private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
@@ -442,7 +442,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 
 订单日志是关于订单簿所有变化的详细信息，包括订单的添加、修改和删除。此数据具有特殊性，并非所有数据源都提供。例如，Coinbase 不支持提供订单日志。
 
-要在适配器中实现对订单日志的订阅，使用 **OnOrderLogSubscriptionAsync** 方法。当收到数据类型为 [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) 的 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息时会调用该方法。
+要在适配器中实现对订单日志的订阅，使用 **OnOrderLogSubscriptionAsync** 方法。当收到 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息且其数据类型为 [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) 时会调用该方法。
 
 以下是从支持订单日志的 [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) 连接器中提取的该方法实现示例：
 
@@ -472,7 +472,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 }
 ```
 
-在处理从交易所接收的订单日志数据时，通常使用一个单独的方法，将接收到的数据转换为类型为 [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) 的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息：
+在处理从交易所接收的订单日志数据时，通常使用一个单独的方法，将接收到的数据转换为 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息，其类型为 [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog)：
 
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)

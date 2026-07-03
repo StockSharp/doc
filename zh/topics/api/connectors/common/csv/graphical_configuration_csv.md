@@ -4,9 +4,9 @@
 
 ![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
 
-- **Settings** - 导入设置
-- **Reconnection settings** - 用于跟踪与交易系统连接状态的机制。（[重新连接设置](../../reconnection_settings.md)）
-- **Heartbeat** - 服务器检查间隔，用于跟踪连接是否保持存活。默认值为 1 分钟。
+- **设置** - 导入设置
+- **重新连接设置** - 用于跟踪与交易系统连接状态的机制。（[重新连接设置](../../reconnection_settings.md)）
+- **心跳** - 服务器检查间隔，用于跟踪连接是否保持存活。默认值为 1 分钟。
 
 ## 推荐内容
 

@@ -7,8 +7,8 @@
 
 ![API GUI 设置 GDAX](../../../../../images/api_gui_settings_gdax.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
 - **口令** - 口令。
 - **余额** - 余额检查间隔。在存款和取款操作中需要。
 - **心跳** - 用于检查服务器连接是否存活的间隔时间。默认值为1分钟。

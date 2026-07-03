@@ -42,7 +42,7 @@
 
     ![MT 4](../../../../images/mt_4.png)
 
-    Also, information about the successful script launch, the number of instruments, should appear in the expert's log window.
+    此外，专家日志窗口中应显示脚本成功启动的信息以及交易品种数量。
 11. 如果未获取 MT4 或 MT5 许可证，日志中将出现类似以下的行：
 
     ![MT 5](../../../../images/mt_5.png)
@@ -51,18 +51,18 @@
 
     ![MT 6](../../../../images/mt_6.png)![MT 7](../../../../images/mt_7.png)
 
-    Similar settings need to be made in [Designer](../../../designer.md), [Hydra](../../../hydra.md), or any API programs.
+    在 [Designer](../../../designer.md)、[Hydra](../../../hydra.md) 或任何 API 程序中也需要进行类似设置。
 
-    Login and password are left empty in case of anonymous authorization (previous item). If connecting to MT with multiple robots, a unique login must be provided for different connections identification.
+    如果使用匿名授权（上一项），登录名和密码留空。如果多个机器人同时连接 MT，则必须为不同连接指定唯一的登录名，以便区分这些连接。
 
     > [!TIP]
-    > - The script must be launched before connecting StockSharp to MetaTrader and kept running as long as this connection is needed.  
-    > - To see historical candles in StockSharp, they need to be downloaded from the MetaTrader server. How to do this, read in MetaTrader's documentation.
+    > - 在将 StockSharp 连接到 MetaTrader 之前，必须先启动脚本，并在需要该连接期间保持脚本运行。
+    > - 要在 StockSharp 中查看历史K线，需要先从 MetaTrader 服务器下载它们。具体操作请参阅 MetaTrader 文档。
 
-    In case of a successful connection, the example should show a list of instruments and accounts:
+    如果连接成功，示例应显示交易品种和账户列表：
 
     ![MT 8](../../../../images/mt_8.png)
 
-13. 如果发生错误，连接器日志将被保留，可在文件夹 **Experts\StockSharp\Data\Log** 中找到：
+13. 如果发生错误，连接器日志将被保留，可在文件夹 **Experts\\StockSharp\\Data\\Log** 中找到：
 
     ![MT 9](../../../../images/mt_9.png)

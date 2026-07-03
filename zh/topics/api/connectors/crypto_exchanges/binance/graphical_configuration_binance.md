@@ -4,11 +4,11 @@
 
 ![API GUI 设置 Binance](../../../../../images/api_gui_settings_binance.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **Password** - 管理员密码。
-- **Heart beat** - 服务器检查间隔，用于跟踪连接是否处于活动状态。默认值为 1 分钟。
-- **Reconnection settings** - 跟踪与交易系统连接状态的机制。([重新连接设置](../../reconnection_settings.md))
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **密码** - 管理员密码。
+- **心跳** - 服务器检查间隔，用于跟踪连接是否处于活动状态。默认值为 1 分钟。
+- **重新连接设置** - 跟踪与交易系统连接状态的机制。([重新连接设置](../../reconnection_settings.md))
 
 ## 推荐内容
 

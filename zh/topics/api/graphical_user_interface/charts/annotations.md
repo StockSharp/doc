@@ -12,7 +12,7 @@ Chart.AddElement(chartArea, _annotation);
 		
 ```
 
-之后，您需要初始化一个新的 [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData) 类实例，在其中描述注释，并将其传递给 [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 数据 **)** 方法以在图表上绘制:
+之后，您需要初始化一个新的 [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData) 类实例，在其中描述注释，并将其传递给 [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData))**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) data **)** 方法以在图表上绘制:
 
 ```cs
 var data = new ChartDrawData.AnnotationData

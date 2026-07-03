@@ -4,8 +4,8 @@
 
 ![API GUI 设置 Zaif](../../../../../images/api_gui_settings_zaif.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
 - **余额** - 余额检查间隔。在存款和取款操作中需要。
 - **心跳** - 服务器检查间隔，用于跟踪连接是否处于活动状态。默认值为 1 分钟。
 - **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))

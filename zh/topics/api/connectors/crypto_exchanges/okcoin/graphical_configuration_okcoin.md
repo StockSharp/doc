@@ -4,9 +4,9 @@
 
 ![API GUI 设置 OKCoin](../../../../../images/api_gui_settings_okcoin.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **Password** - 管理员密码。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **密码** - 管理员密码。
 - **心跳** - 服务器检查间隔，用于跟踪连接是否活跃。默认值为1分钟。
 - **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))
 

@@ -4,8 +4,8 @@
 
 ![API GUI 设置 CEX.IO](../../../../../images/api_gui_settings_cex.io.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
 - **心跳** - 用于服务器检查连接是否存活的间隔时间。默认值为1分钟。
 - **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))
 

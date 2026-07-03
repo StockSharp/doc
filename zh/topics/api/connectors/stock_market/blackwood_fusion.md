@@ -1,6 +1,6 @@
 # Blackwood (Fusion)
 
-**Blackwood (Fusion)** - 用于在纽约证券交易所（NYSE）、纳斯达克（NASDAQ）、美国证券交易所（AMEX）等交易所交易股票的平台。
+**Fusion (Blackwood)** - 用于在纽约证券交易所（NYSE）、纳斯达克（NASDAQ）、美国证券交易所（AMEX）等交易所交易股票的平台。
 
 在开始为当前交易平台编写交易机器人之前，建议阅读[连接器](../../connectors.md)中的链接。
 

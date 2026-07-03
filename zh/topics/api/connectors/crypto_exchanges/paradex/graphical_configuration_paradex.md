@@ -4,15 +4,15 @@
 
 主要字段：
 
-- **Key** - API key。
-- **Secret** - API secret。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
 - **Starknet 账户** - Starknet 账户头部值。
 - **Starknet 密钥** - Starknet 私钥材料。
-- **部分** - 交易部分 (`Spot` 或 `Derivatives`)。
+- **交易分区** - 交易部分 (`现货` 或 `衍生品`)。
 - **启用现货** - 启用现货部分。
-- **演示** - 演示环境模式。
+- **模拟模式** - 演示环境模式。
 - **现货 REST / 衍生品 REST** - REST 端点。
-- **现货 WS / 衍生品 WS** - websocket 端点。
+- **现货 WS / 衍生品 WS** - WebSocket 端点。
 - **认证路径** - 认证端点路径。
 
 ## 推荐内容

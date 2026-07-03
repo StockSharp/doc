@@ -8,7 +8,7 @@
 
 ### 为乐器搜索创建订阅
 
-要搜索工具，您需要基于包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例：
+要搜索工具，您需要创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例，并以包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息为基础：
 
 ```csharp
 // Create a filter object for search

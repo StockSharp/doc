@@ -4,10 +4,10 @@
 
 ![API GUI 设置 Gate.io](../../../../../images/api_gui_settings_gateio.png)
 
-- **Key** - API key。
-- **Secret** - API secret。
-- **部分** - 交易部分。
-- **演示** - 连接到模拟交易。
+- **访问密钥** - API 密钥。
+- **密钥** - API 私钥。
+- **交易分区** - 交易部分。
+- **模拟模式** - 连接到模拟交易。
 
 ## 另请参阅
 

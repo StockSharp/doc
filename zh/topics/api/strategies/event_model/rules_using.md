@@ -66,7 +66,7 @@
   
 - **移除不必要的规则。**
 
-[IMarketRule](xref:StockSharp.Algo.IMarketRule) 有 [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) —— 一个与该规则相关的规则标记。例如，对于规则 [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider))，标记将是订单。
+  [IMarketRule](xref:StockSharp.Algo.IMarketRule) 有 [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) —— 一个与该规则相关的规则标记。例如，对于规则 [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider))，标记将是订单。
 
 当成功取消订单的规则被触发时，最好删除与该订单相关的所有其他规则：
 
