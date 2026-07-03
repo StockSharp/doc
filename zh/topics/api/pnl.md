@@ -10,7 +10,7 @@
 - **未实现盈亏** — 未实现的利润/亏损（小数）。根据当前市场价格重新计算。
 - **Reset()** — 重置管理器的状态。
 - **UpdateSecurity(Level1ChangeMessage)** — 更新工具参数（价格步长、步进价格、手数倍数）。
-- **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — 处理一条消息；当一个头寸被关闭时返回 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo)，否则返回 `null`。
+- **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — 处理一条消息；当一个持仓被关闭时返回 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo)，否则返回 `null`。
 
 ## 建筑学
 
@@ -48,7 +48,7 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) 类包含平仓结果：
 
 - **服务器时间** — 交易时间。
-- **已平仓量** — 已平仓头寸的交易量。
+- **已平仓量** — 已平仓持仓的交易量。
 - **PnL** — 来自此交易的已实现利润。
 
 例如，如果持仓是+2，而来了一个-5合约的交易，那么`ClosedVolume = 2`（持仓中的2个合约被平仓）。

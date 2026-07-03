@@ -1,7 +1,7 @@
 > [!WARNING]
 > 该交易所已永久关闭（约 2021 年 — 已关闭）。此连接器已不再可用。文档已保留以供历史参考。
 
-# 适配器初始化带宽
+# BW 适配器初始化
 
 下面的代码演示如何初始化 [BWMessageAdapter](xref:StockSharp.BW.BWMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 

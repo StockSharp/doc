@@ -4,8 +4,8 @@
 
 主要字段：
 
-- **密钥** - API 密钥。
-- **密钥** - API 密钥。
+- **Key** - API key。
+- **Secret** - API secret。
 - **账户索引** - 账户索引。
 - **API 密钥索引** - API 密钥索引。
 - **部分** - 交易部分 (`Spot` 或 `Derivatives`)。

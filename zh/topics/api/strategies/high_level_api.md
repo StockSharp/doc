@@ -288,14 +288,14 @@ DrawIndicator(secondArea, rsi);
 
 ### 启动保护方法
 
-为了保护未平仓头寸，StockSharp 提供了高级 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 方法：
+为了保护未平仓持仓，StockSharp 提供了高级 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 方法：
 
 ```cs
 // Start position protection with Take Profit and Stop Loss levels
 StartProtection(TakeValue, StopValue);
 ```
 
-此方法会自动为所有未平仓头寸设置保护：
+此方法会自动为所有未平仓持仓设置保护：
 - 跟踪价格变化
 - 当达到止盈或止损水平时，自动创建平仓订单
 - 支持多种类型的测量单位（绝对值、百分比、点）

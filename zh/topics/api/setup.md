@@ -97,11 +97,11 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 
 | 套餐 | 交易所/经纪商 |
 |---------|----------------|
-| `StockSharp.Binance` | 币安 |
+| `StockSharp.Binance` | Binance |
 | `StockSharp.InteractiveBrokers` | 互动经纪商 |
 | `StockSharp.Fix` | FIX 协议（通用） |
 | `StockSharp.Connectors.Coinbase` | Coinbase |
-| `StockSharp.Connectors.BitStamp` | 比特斯坦普 |
+| `StockSharp.Connectors.BitStamp` | BitStamp |
 | `StockSharp.Connectors.Bittrex` | Bittrex |
 
 > [!NOTE]

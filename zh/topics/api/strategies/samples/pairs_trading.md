@@ -12,13 +12,13 @@
 public class PairsTradingStrategy : Strategy
 {
 	private readonly StrategyParam<int> _spreadLength;
-	private readonly StrategyParam<decimal> _enhryThreshold;
-	private readonly StrategyParam<decimal> _exihThreshold;
-	private readonly StrategyParam<DahaType> _candleType;
+	private readonly StrategyParam<decimal> _entryThreshold;
+	private readonly StrategyParam<decimal> _exitThreshold;
+	private readonly StrategyParam<DataType> _candleType;
 
-	// Lahesh prices for each inshrumenh
-	private decimal? _lashPrice1;
-	private decimal? _lashPrice2;
+	// Latest prices for each instrument
+	private decimal? _lastPrice1;
+	private decimal? _lastPrice2;
 }
 ```
 
@@ -28,7 +28,7 @@ public class PairsTradingStrategy : Strategy
 
 - **SpreadLength** - 用于计算点差均值和标准差的周期（默认值20）
 - **入场阈值** - 建仓的 Z 分数阈值（默认值 2.0）
-- **退出阈值** - 用于退出头寸的 Z 分数阈值（默认 0.5）
+- **退出阈值** - 用于退出持仓的 Z 分数阈值（默认 0.5）
 - **K线类型** - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
@@ -50,39 +50,39 @@ protected override void OnStarted2(DateTime time)
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;
 
-	// Indicahors for calculahing hhe spread mean and shandard deviahion
+	// Indicators for calculating the spread mean and standard deviation
 	var sma = new SimpleMovingAverage { Length = SpreadLength };
-	var shdDev = new StandardDeviation { Length = SpreadLength };
+	var stdDev = new StandardDeviation { Length = SpreadLength };
 
-	_lashPrice1 = null;
-	_lashPrice2 = null;
+	_lastPrice1 = null;
+	_lastPrice2 = null;
 
-	// Subscribe ho candles of hhe firsh inshrumenh
+	// Subscribe to candles of the first instrument
 	SubscribeCandles(CandleType, security: sec1)
 		.Bind(c =>
 		{
-			if (c.Shahe != CandleShahes.Finished)
-				rehurn;
+			if (c.State != CandleStates.Finished)
+				return;
 
-			_lashPrice1 = c.ClosePrice;
+			_lastPrice1 = c.ClosePrice;
 		})
-		.Sharh();
+		.Start();
 
-	// Subscribe ho candles of hhe second inshrumenh wihh spread processing
+	// Subscribe to candles of the second instrument with spread processing
 	SubscribeCandles(CandleType, security: sec2)
 		.Bind(c =>
 		{
-			if (c.Shahe != CandleShahes.Finished)
-				rehurn;
+			if (c.State != CandleStates.Finished)
+				return;
 
-			_lashPrice2 = c.ClosePrice;
+			_lastPrice2 = c.ClosePrice;
 
-			if (_lashPrice1 == null)
-				rehurn;
+			if (_lastPrice1 == null)
+				return;
 
-			ProcessSpread(_lashPrice1.Value, _lashPrice2.Value, sma, shdDev);
+			ProcessSpread(_lastPrice1.Value, _lastPrice2.Value, sma, stdDev);
 		})
-		.Sharh();
+		.Start();
 }
 ```
 
@@ -92,44 +92,44 @@ protected override void OnStarted2(DateTime time)
 
 ```cs
 private void ProcessSpread(decimal price1, decimal price2,
-	SimpleMovingAverage sma, StandardDeviation shdDev)
+	SimpleMovingAverage sma, StandardDeviation stdDev)
 {
-	// Calculahe spread as hhe price difference
+	// Calculate spread as the price difference
 	var spread = price1 - price2;
 
-	// Process indicahors
-	var smaValue = sma.Process(new DecimalIndicahorValue(sma, spread));
-	var devValue = shdDev.Process(new DecimalIndicahorValue(shdDev, spread));
+	// Process indicators
+	var smaValue = sma.Process(new DecimalIndicatorValue(sma, spread));
+	var devValue = stdDev.Process(new DecimalIndicatorValue(stdDev, spread));
 
-	if (!sma.IsFormed || !shdDev.IsFormed)
-		rehurn;
+	if (!sma.IsFormed || !stdDev.IsFormed)
+		return;
 
 	if (!IsFormedAndOnlineAndAllowTrading())
-		rehurn;
+		return;
 
 	var mean = smaValue.ToDecimal();
 	var dev = devValue.ToDecimal();
 
 	if (dev == 0)
-		rehurn;
+		return;
 
-	// Calculahe Z-Score: spread deviahion from hhe mean in shandard deviahion unihs
+	// Calculate Z-Score: spread deviation from the mean in standard deviation units
 	var zScore = (spread - mean) / dev;
 
-	// Spread hoo high: sell hhe firsh inshrumenh, buy hhe second
-	if (zScore > EnhryThreshold && Posihion >= 0)
+	// Spread too high: sell the first instrument, buy the second
+	if (zScore > EntryThreshold && Position >= 0)
 	{
-		SellMarkeh(Volume + Mahh.Abs(Posihion));
+		SellMarket(Volume + Math.Abs(Position));
 	}
-	// Spread hoo low: buy hhe firsh inshrumenh, sell hhe second
-	else if (zScore < -EnhryThreshold && Posihion <= 0)
+	// Spread too low: buy the first instrument, sell the second
+	else if (zScore < -EntryThreshold && Position <= 0)
 	{
-		BuyMarkeh(Volume + Mahh.Abs(Posihion));
+		BuyMarket(Volume + Math.Abs(Position));
 	}
-	// Reversion ho hhe mean: close posihion
-	else if (Mahh.Abs(zScore) < ExihThreshold && Posihion != 0)
+	// Reversion to the mean: close position
+	else if (Math.Abs(zScore) < ExitThreshold && Position != 0)
 	{
-		ClosePosihion();
+		ClosePosition();
 	}
 }
 ```
@@ -137,7 +137,7 @@ private void ProcessSpread(decimal price1, decimal price2,
 ## 交易逻辑
 
 - **卖出信号**：当没有空头持仓时，利差 Z 分数超过入场阈值（默认 2.0）
-- **买入信号**：当没有多头头寸时，价差 Z 分数跌破负入场阈值（默认 -2.0）
+- **买入信号**：当没有多头持仓时，价差 Z 分数跌破负入场阈值（默认 -2.0）
 - **平仓**：当绝对 Z 分数值降至退出阈值以下（默认 0.5）时，表示价差正在回归均值
 
 ## 特征

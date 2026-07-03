@@ -4,8 +4,8 @@
 
 主要字段：
 
-- **密钥** - API 密钥。
-- **密钥** - API 密钥。
+- **Key** - API key。
+- **Secret** - API secret。
 - **Starknet 账户** - Starknet 账户头部值。
 - **Starknet 密钥** - Starknet 私钥材料。
 - **部分** - 交易部分 (`Spot` 或 `Derivatives`)。

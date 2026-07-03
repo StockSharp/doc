@@ -78,7 +78,7 @@ source.AggregateTrades(TimeSpan.FromHours(1));
 
 ## 持仓生命周期追踪器
 
-`PositionLifecycleTracker` 跟踪头寸的生命周期并生成往返记录——头寸开仓和平仓的记录。当发生以下情况时，会记录一次往返：
+`PositionLifecycleTracker` 跟踪持仓的生命周期并生成往返记录——持仓开仓和平仓的记录。当发生以下情况时，会记录一次往返：
 
 
 - 一个持仓已完全平仓（价值变为零）

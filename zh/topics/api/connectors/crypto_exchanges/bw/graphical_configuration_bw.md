@@ -1,7 +1,7 @@
 > [!WARNING]
 > 该交易所已永久关闭（约 2021 年 — 已关闭）。此连接器已不再可用。文档已保留以供历史参考。
 
-# 图形化配置带宽
+# BW 图形化配置
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中完成：
 

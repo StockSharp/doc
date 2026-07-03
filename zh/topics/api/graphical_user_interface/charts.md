@@ -9,7 +9,7 @@
 - [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) - 一个用于显示权益曲线的图形组件。
 - [BoxChart](charts/box_chart.md) - 一种将数量表示为数字网格的图表。
 - [ClusterChart](charts/cluster_chart.md) - 一种以集群和直方图显示数量的图表。
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 一个图形组件，显示相对于标的资产的期权头寸和“希腊字母”。参见 [OptionPositionChart](options/position_chart.md)。
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 一个图形组件，显示相对于标的资产的期权持仓和“希腊字母”。参见 [OptionPositionChart](options/position_chart.md)。
 
 此外，[S#](../../api.md) 包含两种用于成交量分析的图表类型：[BoxChart](charts/box_chart.md) 和 [ClusterChart](charts/cluster_chart.md)。
 

@@ -1,6 +1,6 @@
 # Delta对冲
 
-如果你想通过期权策略（例如，[波动率交易](volatility_trading.md)）来保护头寸，你可以使用按Delta进行的[Delta对冲策略](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy)进行对冲。
+如果你想通过期权策略（例如，[波动率交易](volatility_trading.md)）来保护持仓，你可以使用按Delta进行的[Delta对冲策略](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy)进行对冲。
 
 ## Delta对冲
 
@@ -31,7 +31,7 @@
    hedge.Start();
    ```
 
-   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) 将策略作为子策略分别按其行权价进行操作。因此，[DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) 通过所有子期权策略控制总头寸。
+   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) 将策略作为子策略分别按其行权价进行操作。因此，[DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) 通过所有子期权策略控制总持仓。
 
 3. 完成德尔塔对冲：
 

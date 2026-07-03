@@ -1,12 +1,12 @@
-# 头寸管理
+# 持仓管理
 
 StockSharp 提供了一个灵活的持仓管理系统，允许您跟踪持仓的当前状态，基于订单或交易进行计算，并维护持仓的生命周期历史（开仓、平仓、反转）。
 
-## 头寸管理器
+## 持仓管理器
 
-[PositionManager](xref:StockSharp.Algo.Positions.PositionManager) 类实现了 [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager) 接口，并作为根据传入消息计算当前头寸的主要组件。
+[PositionManager](xref:StockSharp.Algo.Positions.PositionManager) 类实现了 [IPositionManager](xref:StockSharp.Algo.Positions.IPositionManager) 接口，并作为根据传入消息计算当前持仓的主要组件。
 
-### 创建经理
+### 创建管理器
 
 构造函数接受两个参数：
 
@@ -16,11 +16,11 @@ var manager = new PositionManager(byOrders: false, state);
 ```
 
 - `byOrders = true` —— 该持仓是基于订单余额变化计算的。适用于交易系统接收订单状态更新但未接收单笔交易的情况。
-- `byOrders = false` -- 该位置基于交易量计算（推荐模式）。提供对已执行操作的更精确的核算。
+- `byOrders = false` -- 该持仓基于交易量计算（推荐模式）。提供对已执行操作的更精确的核算。
 
-### 处理中消息
+### 处理传入消息
 
-`ProcessMessage` 方法接收一个传入消息 ([Message](xref:StockSharp.Messages.Message))，并在位置发生变化时返回 [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage)，如果位置未发生变化则返回 `null`：
+`ProcessMessage` 方法接收一个传入消息 ([Message](xref:StockSharp.Messages.Message))，并在持仓发生变化时返回 [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage)，如果持仓未发生变化则返回 `null`：
 
 ```cs
 var posChange = manager.ProcessMessage(executionMsg);
@@ -74,11 +74,11 @@ state.Clear();
 
 ## 持仓生命周期追踪器
 
-[PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) 类跟踪头寸的完整生命周期——从开仓到平仓（往返）。这对于分析单个交易、计算每个头寸的利润以及生成报告非常有用。
+[PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) 类跟踪持仓的完整生命周期——从开仓到平仓（往返）。这对于分析单个交易、计算每个持仓的利润以及生成报告非常有用。
 
 ### 主要特点
 
-- **历史**：`History` 属性（`IReadOnlyList<ReportPosition>`）包含所有已完成的往返头寸。
+- **历史**：`History` 属性（`IReadOnlyList<ReportPosition>`）包含所有已完成的往返持仓。
 - **`RoundTripClosed` 事件**：当一个持仓被平仓（数值变为零）或反转（持仓符号改变）时触发。
 - **`ProcessPosition` 方法**：接受一个 [Position](xref:StockSharp.BusinessEntities.Position) 对象并更新内部状态。
 
@@ -112,9 +112,9 @@ foreach (var report in tracker.History)
 }
 ```
 
-## 位置消息适配器
+## 持仓消息适配器
 
-[PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) 类是一个围绕消息适配器的封装，它可以从消息流自动计算头寸。它在内部连接器基础设施中使用。
+[PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) 类是一个围绕消息适配器的封装，它可以从消息流自动计算持仓。它在内部连接器基础设施中使用。
 
 ### 运作方式
 
@@ -128,7 +128,7 @@ var posAdapter = new PositionMessageAdapter(innerAdapter, posManager);
 
 ## 策略中的持仓
 
-在 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类中，可以通过 `Position` 属性访问当前位置：
+在 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类中，可以通过 `Position` 属性访问当前持仓：
 
 ```cs
 // Current position for the primary instrument

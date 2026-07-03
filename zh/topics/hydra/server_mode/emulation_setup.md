@@ -36,5 +36,5 @@
 - **Add additional volume** \- 注册大额订单时，向订单簿中添加额外数量。
 - **Trading session state** \- 检查交易时段状态。
 - **Money** \- 检查资金余额。
-- **Short** \- 是否允许开立空头头寸。
+- **Short** \- 是否允许开立空头持仓。
 - **Storage** \- 存储。

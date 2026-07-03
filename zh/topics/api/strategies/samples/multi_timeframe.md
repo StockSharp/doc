@@ -122,7 +122,7 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 - **趋势检测**：小时图上快速SMA位于慢速SMA之上表示上升趋势，位于之下表示下降趋势
 - **买入信号**：当没有多头持仓时，小时图呈上升趋势且5分钟图RSI < 30
 - **卖出信号**：当没有空头持仓时，小时图呈下降趋势且5分钟图RSI > 70
-- **头寸保护**：通过 `StartProtection` 自动止盈和止损
+- **持仓保护**：通过 `StartProtection` 自动止盈和止损
 
 ## 特征
 

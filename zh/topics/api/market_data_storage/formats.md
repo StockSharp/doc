@@ -102,7 +102,7 @@ var to = new DateTime(2024, 1, 31);
 var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 ```
 
-在处理行情数据和订单簿时，也可以指定存储格式：
+在处理市场数据和订单簿时，也可以指定存储格式：
 
 ```cs
 // Ticks in binary format

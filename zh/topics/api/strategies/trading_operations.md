@@ -133,9 +133,9 @@ order
 
 关于在订单中使用规则的详细示例可以在 [订单规则示例](event_model/samples/rule_order.md) 部分找到。
 
-## 头寸管理
+## 持仓管理
 
-该策略还提供了头寸管理的方法：
+该策略还提供了持仓管理的方法：
 
 ```cs
 // Get current position

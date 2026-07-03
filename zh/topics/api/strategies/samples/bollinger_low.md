@@ -95,7 +95,7 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 
 ## 交易逻辑
 
-- **卖出信号**：当没有未平仓头寸时，K线收盘价达到或跌破下轨布林带
+- **卖出信号**：当没有未平仓持仓时，K线收盘价达到或跌破下轨布林带
 - **买入信号**（平空仓）：当有空头持仓时，K线收盘价达到或超过布林带中轨线
 - 开仓时持仓固定，平仓时等于当前持仓的全部
 

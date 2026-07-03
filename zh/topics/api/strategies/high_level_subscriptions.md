@@ -48,7 +48,7 @@ ISubscriptionHandler<ITickTradeMessage> SubscribeTicks(Subscription subscription
 
 ### 订阅等级1
 
-订阅一级行情数据（最佳买/卖价、最近成交以及其他字段）:
+订阅一级市场数据（最佳买/卖价、最近成交以及其他字段）:
 
 ```csharp
 ISubscriptionHandler<Level1ChangeMessage> SubscribeLevel1(Security security = null);

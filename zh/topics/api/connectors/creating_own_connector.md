@@ -12,14 +12,14 @@
 消息可以分为 *传入* 和 *传出* 两种：
 
 - *传入* 消息 - 发送给外部系统的消息。通常是由程序生成的命令，例如 [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) 消息——请求连接到服务器的命令。
-- *传出* 消息 - 来自外部系统的消息。这些消息传递有关行情数据、交易、投资组合、连接事件等的信息。例如，[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 消息传递订单簿变化的信息。
+- *传出* 消息 - 来自外部系统的消息。这些消息传递有关市场数据、交易、投资组合、连接事件等的信息。例如，[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 消息传递订单簿变化的信息。
 
 **消息适配器** 在交易系统和程序之间充当中介的角色。每种类型的连接器都有一个单独的适配器类，该类继承自抽象类 [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter)。
 
 适配器执行两个主要功能：
 
 1. 将传入消息转换为特定交易系统的命令。
-2. 将从交易系统接收到的信息（连接、行情数据、交易等）转换为传出消息。
+2. 将从交易系统接收到的信息（连接、市场数据、交易等）转换为传出消息。
 
 下面描述了为 [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) 创建自己适配器的过程（所有带源代码的连接器都可以在 [StockSharp 仓库](https://github.com/StockSharp/StockSharp/tree/master/Connectors) 中找到，并作为教程提供）。
 
@@ -47,10 +47,10 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 1. 传入用于创建消息 ID 的交易 ID 生成器。
 
 2. 使用以下方法指定支持的消息类型：
- - [AddMarketDataSupport](xref:StockSharp.Messages.Extensions.AddMarketDataSupport(StockSharp.Messages.MessageAdapter)) - 支持订阅行情数据的消息。
+ - [AddMarketDataSupport](xref:StockSharp.Messages.Extensions.AddMarketDataSupport(StockSharp.Messages.MessageAdapter)) - 支持订阅市场数据的消息。
  - [AddTransactionalSupport](xref:StockSharp.Messages.Extensions.AddTransactionalSupport(StockSharp.Messages.MessageAdapter)) - 支持事务性消息。
 
-3. 使用 [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)) 方法指定适配器支持的具体行情数据类型。
+3. 使用 [AddSupportedMarketDataType](xref:StockSharp.Messages.Extensions.AddSupportedMarketDataType(StockSharp.Messages.MessageAdapter,StockSharp.Messages.DataType)) 方法指定适配器支持的具体市场数据类型。
 
 ```cs
 public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
@@ -216,7 +216,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 本文档描述了适配器工作的一般原理、其创建方式以及与交易系统连接的管理方式。以下文档将专门介绍适配器功能的具体实现：
 
 - [金融工具查询](creating_own_connector/instrument_lookup.md)
-- [使用行情数据](creating_own_connector/market_data.md)
+- [使用市场数据](creating_own_connector/market_data.md)
 - [请求投资组合和订单的当前状态](creating_own_connector/portfolio_and_orders_state.md)
 - [处理交易操作](creating_own_connector/trading_operations.md)
 - [存储设置](creating_own_connector/settings.md)

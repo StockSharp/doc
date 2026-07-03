@@ -24,7 +24,7 @@
 
 ### 引用行为算法
 
-[QuotingBehaviorAlgo](xref:StockSharp.Algo.Strategies.Quoting.QuotingBehaviorAlgo) -- `IPositionModifyAlgo` 接口在算法头寸管理中的实现。
+[QuotingBehaviorAlgo](xref:StockSharp.Algo.Strategies.Quoting.QuotingBehaviorAlgo) -- `IPositionModifyAlgo` 接口在算法持仓管理中的实现。
 
 主要方法：
 
@@ -65,7 +65,7 @@ StockSharp 提供 10 种报价行为，每种都实现了 [IQuotingBehavior](xre
 | 5 | [波动率报价行为](xref:StockSharp.Algo.Strategies.Quoting.VolatilityQuotingBehavior) | 期权波动率（布莱克-斯科尔斯） | IV范围，模型 |
 | 6 | [理论价格报价行为](xref:StockSharp.Algo.Strategies.Quoting.TheorPriceQuotingBehavior) | 期权理论价格 | 理论价格偏移 |
 | 7 | [按成交量最佳报价行为](xref:StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingBehavior) | 订单簿中的累计成交量 | VolumeExchange |
-| 8 | [LevelQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingBehavior) | 委托簿深度级别 | 级别（范围\<int\>），自身级别 |
+| 8 | [LevelQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingBehavior) | 订单簿深度级别 | 级别（范围\<int\>），自身级别 |
 | 9 | [VWAP报价行为](xref:StockSharp.Algo.Strategies.Quoting.VWAPQuotingBehavior) | VWAP -- 成交量加权平均价 | 最佳价格偏移 |
 | 10 | [TWAP报价行为](xref:StockSharp.Algo.Strategies.Quoting.TWAPQuotingBehavior) | TWAP -- 时间加权平均 | 时间间隔，价格缓冲大小（默认 10） |
 

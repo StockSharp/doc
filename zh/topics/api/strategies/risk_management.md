@@ -39,7 +39,7 @@ strategy.RiskRules = new IRiskRule[]
 
 | 动作 | 描述 |
 |--------|-------------|
-| `ClosePositions` | 使用市价单关闭所有未平仓头寸 |
+| `ClosePositions` | 使用市价单关闭所有未平仓持仓 |
 | `StopTrading` | 阻止策略交易 |
 | `CancelOrders` | 取消所有活动订单 |
 
@@ -60,7 +60,7 @@ new RiskPnLRule
 }
 ```
 
-### 风险头寸规模规则 -- 持仓规模控制
+### 风险持仓规模规则 -- 持仓规模控制
 
 当达到指定的持仓规模时触发：
 
