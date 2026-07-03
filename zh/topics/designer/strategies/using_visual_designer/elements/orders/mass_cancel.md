@@ -2,7 +2,7 @@
 
 ![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
 
-该模块用于撤销指定证券的全部订单。
+该模块用于撤销指定交易品种的全部订单。
 
 ### 输入端口
 
@@ -10,7 +10,7 @@
 
 - **Trigger** - 用于确定何时撤销订单的信号。
 - **Portfolio** – 要撤销其全部订单的投资组合。
-- **Security** – 要撤销其全部订单的证券。
+- **Security** – 要撤销其全部订单的交易品种。
 
 ### 输出端口
 

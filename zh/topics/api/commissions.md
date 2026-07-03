@@ -1,6 +1,6 @@
 # 佣金系统
 
-[S\#](../api.md) 通过 [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager) 提供灵活的佣金计算系统。管理器接收订单和成交消息，并按照已配置的规则计算佣金。
+[S#](../api.md) 通过 [CommissionManager](xref:StockSharp.Algo.Commissions.CommissionManager) 提供灵活的佣金计算系统。管理器接收订单和成交消息，并按照已配置的规则计算佣金。
 
 ## ICommissionManager 接口
 
@@ -48,9 +48,9 @@
 
 | 类 | 说明 |
 |-------|-------------|
-| [CommissionSecurityIdRule](xref:StockSharp.Algo.Commissions.CommissionSecurityIdRule) | 仅对特定证券收取佣金，由 `Security` 属性指定。 |
+| [CommissionSecurityIdRule](xref:StockSharp.Algo.Commissions.CommissionSecurityIdRule) | 仅对特定交易品种收取佣金，由 `Security` 属性指定。 |
 | [CommissionBoardCodeRule](xref:StockSharp.Algo.Commissions.CommissionBoardCodeRule) | 仅对特定交易板收取佣金，由 `Board` 属性指定。 |
-| [CommissionSecurityTypeRule](xref:StockSharp.Algo.Commissions.CommissionSecurityTypeRule) | 仅对特定证券类型收取佣金，由 `SecurityType` 属性指定。 |
+| [CommissionSecurityTypeRule](xref:StockSharp.Algo.Commissions.CommissionSecurityTypeRule) | 仅对特定交易品种类型收取佣金，由 `SecurityType` 属性指定。 |
 
 ## 通过适配器进行集成
 

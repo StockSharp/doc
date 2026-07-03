@@ -1,10 +1,10 @@
-# 配置 Paradex
+# Paradex 配置
 
 要使用连接器，请指定您的 API 凭据和 Starknet 身份验证设置。
 
 主要设置：
 
-- **密钥** 和 **秘密**。
+- **Key** 和 **Secret**。
 - **Starknet 账户** 和 **Starknet 密钥**。
 - **部分**：`Spot` 或 `Derivatives`。
 - **启用现货**：当 API 支持可用时启用现货部分。

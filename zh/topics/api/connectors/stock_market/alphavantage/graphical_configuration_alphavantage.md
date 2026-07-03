@@ -1,6 +1,6 @@
-# 图形配置 AlphaVantage
+# AlphaVantage 图形化配置
 
-对于所有 [S\#](../../../../api.md) 产品，连接的图形配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有 [S#](../../../../api.md) 产品，连接的图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
 
 ![API GUI 设置 AlphaVantage](../../../../../images/api_gui_settings_alphavantage.png)
 
@@ -12,7 +12,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

@@ -1,18 +1,18 @@
-# 关于投资组合和订单的信息
+# 投资组合和订单信息
 
-在为交易所创建自己的适配器时，有必要实现用于请求当前投资组合和订单状态的方法。这些方法分别在接收到 [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) 和 [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) 消息时被调用。
+为交易所创建自己的适配器时，需要实现用于请求当前投资组合状态和订单状态的方法。收到 [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) 和 [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) 消息时，会分别调用这些方法。
 
-## 请求组合状态
+## 请求投资组合状态
 
-要请求投资组合状态，实现了 **PortfolioLookupAsync** 方法。该方法通常执行以下操作：
+要请求投资组合状态，需要实现 **PortfolioLookupAsync** 方法。该方法通常执行以下操作：
 
-1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception) 发送收到请求的确认。
+1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)) 发送已收到请求的确认。
 2. 使用 [IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe) 属性检查请求是订阅还是取消订阅。
-3. 在订阅的情况下：
-  - 发送包含投资组合信息的[PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage)消息。
-  - 请求从交易所获取当前账户余额。
-  - 对于每个账户，创建并发送包含头寸信息的 [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) 消息。
-4. 使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage) 发送关于订阅结果的消息。
+3. 如果是订阅：
+  - 发送包含投资组合信息的 [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) 消息。
+  - 从交易所请求当前账户余额。
+  - 对每个账户，创建并发送包含持仓信息的 [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) 消息。
+4. 使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) 发送订阅结果消息。
 
 ```cs
 public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage lookupMsg, CancellationToken cancellationToken)
@@ -60,15 +60,15 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 ## 请求订单状态
 
-要请求订单状态，实现了 **OrderStatusAsync** 方法。此方法通常执行以下操作：
+要请求订单状态，需要实现 **OrderStatusAsync** 方法。此方法通常执行以下操作：
 
-1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception) 发送收到请求的确认。
-2. 使用 [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe) 属性检查请求是订阅还是退订。
-3. 在订阅的情况下：
-  - 请求交易所当前订单的列表。
-  - 对于每个订单，创建并发送包含订单信息的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息。
-  - 如有必要，建立订阅以实时接收订单更新。
-4. 使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage) 发送关于订阅结果的消息。
+1. 使用 [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)) 发送已收到请求的确认。
+2. 使用 [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe) 属性检查请求是订阅还是取消订阅。
+3. 如果是订阅：
+  - 从交易所请求当前订单列表。
+  - 对每个订单，创建并发送包含订单信息的 [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) 消息。
+  - 如有必要，建立实时接收订单更新的订阅。
+4. 使用 [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) 发送订阅结果消息。
 
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
@@ -126,7 +126,7 @@ private async ValueTask ProcessOrder(Order order, long originTransId, Cancellati
 
 ## 处理实时更新
 
-为了处理实时订单状态更新，通常会实现一个单独的方法，当从 WebSocket 客户端接收到相应事件时会调用该方法：
+为了处理实时订单状态更新，通常会实现一个单独的方法，在 WebSocket 客户端收到相应事件时调用：
 
 ```cs
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)

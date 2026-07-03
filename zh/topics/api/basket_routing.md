@@ -18,7 +18,7 @@ StockSharp 支持同时连接多个交易所和经纪商。路由系统（篮子
 | `GetSubscriptionAdaptersAsync` | 异步确定用于市场数据订阅的适配器 |
 | `GetPortfolioAdapter` | 返回与特定投资组合绑定的适配器 |
 | `TryGetOrderAdapter` | 查找注册指定订单时使用的适配器 |
-| `SetSecurityAdapter` | 将证券绑定到特定适配器 |
+| `SetSecurityAdapter` | 将交易品种绑定到特定适配器 |
 | `SetPortfolioAdapter` | 将投资组合绑定到特定适配器 |
 
 ### 路由优先级
@@ -26,7 +26,7 @@ StockSharp 支持同时连接多个交易所和经纪商。路由系统（篮子
 系统按照以下优先级确定目标适配器：
 
 1. **显式指定** -- 如果消息通过 `message.Adapter` 属性指定了适配器，则使用该适配器。
-2. **证券绑定** -- 使用 `SetSecurityAdapter` 设置的映射。
+2. **交易品种绑定** -- 使用 `SetSecurityAdapter` 设置的映射。
 3. **数据类型绑定** -- 为特定消息类型注册的适配器。
 4. **支持类型筛选** -- 选择支持指定消息类型的适配器。
 

@@ -113,7 +113,7 @@ _minValue = AddParam("MinValue", 10)
 //public override bool WaitAllInput => false;
 ```
 
-取消注释后，只要至少有一个值到达，**Process** 方法就会立即被调用。在本例中，该值可以是蜡烛或数值。
+取消注释后，只要至少有一个值到达，**Process** 方法就会立即被调用。在本例中，该值可以是K线或数值。
 
 要将创建的模块添加到策略图，请在组件面板的 **Own elements** 部分选择该模块：
 

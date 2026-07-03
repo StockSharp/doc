@@ -13,11 +13,11 @@
 1. 选择要获取市场数据的时间范围和交易品种。![hydra LEVEL 1 build depth data](../../../images/hydra_level1_build_depth_data.png)
 2. 打开 **Build from** 字段并选择所需的数据类型。![hydra type build data](../../../images/hydra_type_build_data.png)
 
-   **重要！**如果选择 **Order Book、Order Log、Level 1** 作为蜡烛图的数据源，还会出现其他参数供选择。![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
+   **重要！**如果选择 **Order Book、Order Log、Level 1** 作为K线的数据源，还会出现其他参数供选择。![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
 3. 设置参数后，单击 ![hydra candles](../../../images/hydra_candles.png) 按钮。![hydra LEVEL 1 build depth data result](../../../images/hydra_level1_build_depth_data_result.png)
 
-对于**蜡烛图**，还可以使用较小时间周期的蜡烛图构建较大时间周期的蜡烛图。
+对于**K线**，还可以使用较小时间周期的K线构建较大时间周期的K线。
 
-例如，如果已有 1 分钟蜡烛图，可以在 **Build from** 中选择相应类型，使用它们构建 5 分钟蜡烛图。
+例如，如果已有 1 分钟K线，可以在 **Build from** 中选择相应类型，使用它们构建 5 分钟K线。
 
 **观看[视频教程](../videos/building_order_books.md)**

@@ -1,5 +1,47 @@
-# 随机振荡器 K%
+# Stochastic Oscillator %K
 
-**随机振荡器 K%** — [随机振荡器](stochastic_oscillator.md) 的 K% 线。
+**Stochastic Oscillator %K** 是随机振荡器的一部分，用于显示当前收盘价相对于所选周期价格区间的位置。该指标由 George Lane 于 20 世纪 50 年代末提出。
+
+要使用该指标，请使用 [StochasticK](xref:StockSharp.Algo.Indicators.StochasticK) 类。
+
+## 描述
+
+Stochastic Oscillator %K 基于这样一个观察：在上升趋势中，收盘价通常更接近价格区间的上边界；在下降趋势中，收盘价通常更接近下边界。
+
+%K 是随机振荡器的“快线”，也是计算 %D 线的主要组成部分。%D 线是 %K 的移动平均。
+
+振荡器取值范围为 0 到 100：
+
+- 高于 80 的值通常表示市场处于超买状态。
+- 低于 20 的值表示市场处于超卖状态。
+- %K 和 %D 线的交叉可用作入场或出场信号。
+
+## 参数
+
+- **Length** - 用于计算价格区间（最高价和最低价）的周期。常见默认值为 14。
+
+## 计算
+
+%K 的计算公式：
+
+```
+%K = 100 * ((Close - Low(Length)) / (High(Length) - Low(Length)))
+```
+
+其中：
+
+- Close - 当前收盘价。
+- Low(Length) - Length 周期内的最低价。
+- High(Length) - Length 周期内的最高价。
+
+在完整的随机振荡器中，%D 线通常按指定周期（通常为 3）对 %K 做简单移动平均计算：
+
+```
+%D = SMA(%K, 3)
+```
 
 ![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+
+## 另请参阅
+
+[Stochastic Oscillator](stochastic_oscillator.md)

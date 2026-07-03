@@ -30,6 +30,6 @@ $(TargetPath) 是一个特殊的 **Visual Studio** 宏。开始调试时，它�
 
 ![runner_debug_03](../../images/runner_debug_03.png)
 
-5. 设置断点后，程序执行到断点位置时会暂停。例如，可以在新蜡烛图出现时调试交易逻辑：
+5. 设置断点后，程序执行到断点位置时会暂停。例如，可以在新K线出现时调试交易逻辑：
 
 ![runner_debug_04](../../images/runner_debug_04.png)

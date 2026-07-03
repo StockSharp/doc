@@ -18,9 +18,9 @@ StockSharp 提供了一个用于策略交易结果的报表生成系统。该系
 | `Name` | `string` | 策略名称 |
 | `TotalWorkingTime` | `TimeSpan` | 总工作时间 |
 | `Commission` | `decimal?` | 总佣金 |
-| `Position` | `decimal` | 当前职位 |
+| `Position` | `decimal` | 当前持仓 |
 | `PnL` | `decimal` | 总利润/亏损 |
-| `Slippage` | `decimal?` | 总滑移 |
+| `Slippage` | `decimal?` | 总滑点 |
 | `Latency` | `TimeSpan?` | 总延迟 |
 | `Parameters` | `IEnumerable<(string, object)>` | 策略参数 |
 | `StatisticParameters` | `IEnumerable<(string, object)>` | 统计参数 |
@@ -74,14 +74,14 @@ source.AggregateOrders(TimeSpan.FromHours(1));
 source.AggregateTrades(TimeSpan.FromHours(1));
 ```
 
-在汇总过程中，订单和交易按时间间隔、证券和方向进行分组。交易量进行求和，价格按加权平均计算。
+在汇总过程中，订单和交易按时间间隔、交易品种和方向进行分组。交易量进行求和，价格按加权平均计算。
 
-## 职位生命周期追踪器
+## 持仓生命周期追踪器
 
 `PositionLifecycleTracker` 跟踪头寸的生命周期并生成往返记录——头寸开仓和平仓的记录。当发生以下情况时，会记录一次往返：
 
 
-- 一个仓位已完全平仓（价值变为零）
+- 一个持仓已完全平仓（价值变为零）
 - 位置反转发生（符号变化）
 
 在 `Strategy` 类中，跟踪器是自动集成的：完成的往返行程通过 `RoundTripClosed` 事件被添加到 `ReportSource`。
@@ -206,4 +206,4 @@ public class ReportingStrategy : Strategy
 }
 ```
 
-在这个例子中，该策略在停止时会自动创建一个 CSV 报告。报告包含策略参数、统计数据、订单、交易和仓位来回交易信息。
+在这个例子中，该策略在停止时会自动创建一个 CSV 报告。报告包含策略参数、统计数据、订单、交易和持仓来回交易信息。

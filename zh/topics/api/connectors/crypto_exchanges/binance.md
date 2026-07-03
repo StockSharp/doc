@@ -1,14 +1,14 @@
-# 币安
+# Binance
 
 **Binance** - 加密货币交易所。
 
-在您开始为这个交易平台编写交易机器人之前，我们建议先阅读以下链接中的内容[连接器](../../connectors.md)部分
+在开始为该交易平台编写交易机器人之前，建议先阅读[连接器](../../connectors.md)章节中的链接。
 
 ## 推荐内容
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 
@@ -18,4 +18,4 @@
 
 [创建新订单](../../orders_management/create_new_order.md)
 
-[创建新的止损订单](../../orders_management/create_new_stop_order.md)
+[创建新止损单](../../orders_management/create_new_stop_order.md)

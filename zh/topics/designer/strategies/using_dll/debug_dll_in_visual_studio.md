@@ -28,7 +28,7 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 6. 在 Visual Studio 代码中设置断点。如果 Studio 已进入调试模式，且断点显示为红色实心图标 ![Designer Debugging DLL cube using Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png)，表示已加载正确版本的 DLL。如果断点显示为红色空心图标 ![Designer Debugging DLL cube using Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png)，则表示加载了错误版本的 DLL。
 
-7. 本例在 **public void ProcessCandle(Candle candle)** 方法的第一行设置断点。当策略在 [Designer](../../../designer.md) 中运行，并开始向 DLL 传递蜡烛值时，Visual Studio 会在断点处停止。此后即可跟踪代码执行过程：
+7. 本例在 **public void ProcessCandle(Candle candle)** 方法的第一行设置断点。当策略在 [Designer](../../../designer.md) 中运行，并开始向 DLL 传递K线值时，Visual Studio 会在断点处停止。此后即可跟踪代码执行过程：
 
 ![Designer Debugging DLL cube using Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 

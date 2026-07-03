@@ -8,7 +8,7 @@
 
 ## 与 ExpirationContinuousSecurity 的差异
 
-| 特征 | 持续到期安全性 | 持续量安全性 |
+| 特征 | 持续到期交易品种 | 持续成交量交易品种 |
 |---|---|---|
 | 展期条件 | 到期日（固定） | 成交量或未平仓合约数量阈值 |
 | 配置 | `SecurityId -> DateTime` 字典 | `SecurityId` 列表 + `VolumeLevel` |
@@ -64,7 +64,7 @@ continuous.IsOpenInterest = true;
 continuous.VolumeLevel = new Unit(50000);
 ```
 
-## 用于比较的到期连续证券示例
+## 用于比较的到期连续交易品种示例
 
 ```csharp
 using StockSharp.Algo;

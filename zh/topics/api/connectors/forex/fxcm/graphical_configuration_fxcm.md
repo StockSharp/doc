@@ -1,19 +1,19 @@
-# 图形配置 FXCM
+# FXCM 图形化配置
 
-对于所有[S\#](../../../../api.md) 产品，连接的图形配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有[S#](../../../../api.md) 产品，连接的图形化配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
 
 ![API GUI 设置 FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **代币** - 代币。
 - **演示** - 连接到模拟交易而不是真实交易服务器。
-- **心跳** - 服务器检查间隔，用于追踪连接是否仍然活着。默认值为 1 分钟。
+- **心跳** - 服务器检查间隔，用于追踪连接是否处于活动状态。默认值为 1 分钟。
 - **重新连接设置** - 用于跟踪与交易系统设置连接的机制。([重新连接设置](../../reconnection_settings.md))
 
 ## 推荐内容
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

@@ -1,6 +1,6 @@
 # MACD柱状图
 
-**移动平均收敛发散指标 (MACD)** 是一种动量指标，用于显示证券价格的两个移动平均线之间的关系，以直方图的形式呈现。
+**移动平均收敛发散指标 (MACD)** 是一种动量指标，用于显示交易品种价格的两个移动平均线之间的关系，以直方图的形式呈现。
 
 要使用该指标，应使用 [MovingAverageConvergenceDivergenceHistogram](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceHistogram) 类。
 

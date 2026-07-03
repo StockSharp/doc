@@ -1,10 +1,10 @@
-# 自定义蜡烛类型
+# 自定义K线类型
 
-[S\#](../../api.md) 支持通过自定义蜡烛类型扩展蜡烛构建功能。当需要使用 [S\#](../../api.md) 尚未内置支持的蜡烛时，此功能非常有用。下面以 Delta 蜡烛（根据买入量与卖出量之差形成的蜡烛）为例，介绍创建自定义蜡烛类型的完整过程。
+[S#](../../api.md) 支持通过自定义K线类型扩展K线构建功能。当需要使用 [S#](../../api.md) 尚未内置支持的K线时，此功能非常有用。下面以 Delta K线（根据买入量与卖出量之差形成的K线）为例，介绍创建自定义K线类型的完整过程。
 
-## 实现 Delta 蜡烛
+## 实现 Delta K线
 
-1. 首先创建自定义蜡烛消息类型。该类型必须继承 [CandleMessage](xref:StockSharp.Messages.CandleMessage)：
+1. 首先创建自定义K线消息类型。该类型必须继承 [CandleMessage](xref:StockSharp.Messages.CandleMessage)：
 
    ```cs
    /// <summary>
@@ -107,7 +107,7 @@
    }
    ```
 
-3. 接下来为新类型创建蜡烛构建器，即实现 [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1)：
+3. 接下来为新类型创建K线构建器，即实现 [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1)：
 
    ```cs
    /// <summary>
@@ -161,7 +161,7 @@
    }
    ```
 
-4. 在 [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) 中注册蜡烛构建器：
+4. 在 [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) 中注册K线构建器：
 
    ```cs
    private Connector _connector;
@@ -173,7 +173,7 @@
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
-5. 为 `DeltaCandleMessage` 类型的蜡烛创建订阅并请求数据：
+5. 为 `DeltaCandleMessage` 类型的K线创建订阅并请求数据：
 
    ```cs
    // Delta threshold value
@@ -217,9 +217,9 @@
    _connector.Subscribe(subscription);
    ```
 
-## 在交易策略中使用 Delta 蜡烛
+## 在交易策略中使用 Delta K线
 
-以下是使用 Delta 蜡烛的简单策略示例：
+以下是使用 Delta K线的简单策略示例：
 
 ```cs
 public class DeltaCandleStrategy : Strategy
@@ -357,16 +357,16 @@ public class DeltaCandleStrategy : Strategy
 }
 ```
 
-## 创建自定义蜡烛类型时的注意事项
+## 创建自定义K线类型时的注意事项
 
 1. **MessageTypes 的唯一性** — 确保所选 `MessageTypes` 标识符不与 StockSharp 中的现有类型冲突。建议自定义类型使用大于 10000 的值。
 
-2. **注册蜡烛类型** — 必须通过 `Extensions.RegisterCandleType` 注册，才能正确集成 StockSharp 图形控件和数据存储。未注册的蜡烛类型只能在代码中使用，不会出现在用户界面中。
+2. **注册K线类型** — 必须通过 `Extensions.RegisterCandleType` 注册，才能正确集成 StockSharp 图形控件和数据存储。未注册的K线类型只能在代码中使用，不会出现在用户界面中。
 
-3. **蜡烛参数** — 实现返回蜡烛参数类型的 `ArgType` 属性，以便在图形界面中正确显示参数。
+3. **K线参数** — 实现返回K线参数类型的 `ArgType` 属性，以便在图形界面中正确显示参数。
 
-4. **文件系统** — 使用 StockSharp 数据存储时，`RegisterCandleType` 方法的 `fileName` 参数用于在文件系统中保存蜡烛。
+4. **文件系统** — 使用 StockSharp 数据存储时，`RegisterCandleType` 方法的 `fileName` 参数用于在文件系统中保存K线。
 
 5. **参数验证** — StockSharp 会在创建订阅前调用参数验证方法，检查参数值是否有效。
 
-至此，自定义蜡烛类型已经创建完成。它能够与整个 StockSharp 生态系统（包括用户界面和数据存储）集成，并可用于构建基于成交量 Delta 分析的交易策略。
+至此，自定义K线类型已经创建完成。它能够与整个 StockSharp 生态系统（包括用户界面和数据存储）集成，并可用于构建基于成交量 Delta 分析的交易策略。

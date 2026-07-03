@@ -1,9 +1,9 @@
 > [!WARNING]
 > 该交易所已永久关闭（约 2021 年 — 已关闭）。此连接器已不再可用。文档已保留以供历史参考。
 
-# 适配器初始化 CoinBene
+# CoinBene 适配器初始化
 
-下面的代码演示了如何初始化 [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [CoinBeneMessageAdapter](xref:StockSharp.CoinBene.CoinBeneMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 			Connector Connector = new Connector();				

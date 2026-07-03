@@ -19,6 +19,6 @@
 - **价格步长和数量步长**
 - **最小和最大数量**
 - **外部 ID** ![hydra choose securitiy 04](../../../images/hydra_choose_securitiy_04.png)
-- 对于期权，可以设置**标的资产**和**资产类型**（标的证券类型）。![hydra choose securitiy 05](../../../images/hydra_choose_securitiy_05.png)
+- 对于期权，可以设置**标的资产**和**资产类型**（标的资产类型）。![hydra choose securitiy 05](../../../images/hydra_choose_securitiy_05.png)
 
 **观看[视频教程](../videos/instruments_downloading.md)**

@@ -1,6 +1,6 @@
 # 精神病
 
-**心理线 (PSY)** 是一个技术指标，用于衡量在指定时间间隔内上涨周期（蜡烛、K线）占总周期数的比例。
+**心理线 (PSY)** 是一个技术指标，用于衡量在指定时间间隔内上涨周期（K线、K线）占总周期数的比例。
 
 要使用该指标，您需要使用 [PsychologicalLine](xref:StockSharp.Algo.Indicators.PsychologicalLine) 类。
 

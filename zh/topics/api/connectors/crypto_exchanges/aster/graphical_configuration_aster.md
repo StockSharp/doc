@@ -1,14 +1,14 @@
-# 图形配置 Aster
+# Aster 图形化配置
 
-对于所有 [S#](../../../../api.md) 产品，图形配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行。
+对于所有 [S#](../../../../api.md) 产品，图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行。
 
 主要字段：
 
-- **密钥** - API 密钥。
-- **密钥** - API 密钥。
-- **部分** - 交易部分 (`Spot` 或 `Derivatives`)。
-- **衍生品模式** - 衍生品协议家族。
-- **演示** - 演示环境模式。
+- **Key** - API key。
+- **Secret** - API secret。
+- **Section** - 交易分区（`Spot` 或 `Derivatives`）。
+- **Derivatives mode** - derivatives 协议系列。
+- **Demo** - 演示环境模式。
 - **现货 REST / 衍生品 REST** - REST 端点。
 - **现货 WS / 衍生品 WS** - websocket 端点。
 
@@ -16,7 +16,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

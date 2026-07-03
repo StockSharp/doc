@@ -1,4 +1,4 @@
-# E\*贸易
+# E\*TRADE
 
 **E-Trade金融公司(E*TRADE)** - 一个用于交易金融资产的平台，包括普通股、优先股、交易所交易基金、期货合约、期权、共同基金和固定收益投资。
 
@@ -8,7 +8,7 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 

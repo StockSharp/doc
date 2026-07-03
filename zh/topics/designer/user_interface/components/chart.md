@@ -8,11 +8,11 @@
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
-在图形元素设置中，可以选择所需的图表样式，例如日本蜡烛、柱状图、箱形图和聚类分布图等。
+在图形元素设置中，可以选择所需的图表样式，例如日本K线、柱状图、箱形图和聚类分布图等。
 
 ![Designer Schedule 04](../../../../images/designer_schedule_04.png)
 
-对于箱形图，还可以对蜡烛进行额外分组。分组顺序通过以下字段设置：第二时间周期倍数和第三时间周期倍数。
+对于箱形图，还可以对K线进行额外分组。分组顺序通过以下字段设置：第二时间周期倍数和第三时间周期倍数。
 
 ![Designer Schedule 05](../../../../images/designer_schedule_05.png)
 

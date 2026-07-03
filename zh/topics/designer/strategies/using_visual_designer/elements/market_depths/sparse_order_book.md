@@ -4,7 +4,7 @@
 
 ![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
-该模块用于获取指定证券的稀疏市场深度。
+该模块用于获取指定交易品种的稀疏市场深度。
 
 ### 输入端口
 

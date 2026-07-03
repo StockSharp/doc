@@ -1,6 +1,6 @@
 # 数据导出
 
-[S\#](../api.md) 实现了一个支持多种格式的市场数据导出子系统。所有导出器都继承自基类 [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter)，并支持统一的异步接口。
+[S#](../api.md) 实现了一个支持多种格式的市场数据导出子系统。所有导出器都继承自基类 [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter)，并支持统一的异步接口。
 
 ## 基础导出器
 
@@ -110,7 +110,7 @@ await exporter.Export(tickMessages, token);
 
 - **TemplateTxtTick** — 针对逐笔数据的模板。
 - **TemplateTxtDepth** — 订单簿模板。
-- **TemplateTxtCandle** — 蜡烛模板。
+- **TemplateTxtCandle** — K线模板。
 - **TemplateTxtLevel1** — Level1 数据的模板。
 - **TemplateTxtOrderLog** — 订单日志模板。
 - **TemplateTxtTransaction** — 交易模板。

@@ -1,6 +1,6 @@
-# 图形配置 ITCH
+# ITCH 图形化配置
 
-对于所有[S\#](../../../../api.md) 产品，连接的图形配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有[S#](../../../../api.md) 产品，连接的图形化配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
 
 ![API GUI 设置 ITCH](../../../../../images/api_gui_settings_itch.png)
 
@@ -10,7 +10,7 @@
 - **重放** - 重放服务器。
 - **登录** \- 登录。
 - **密码** \- 密码。
-- **证券** - 归档证券。
+- **交易品种** - 归档交易品种。
 - **延迟** - 延迟加载乐器。
 - **主动** - 仅限主动乐器。
 - **组ID** - 组ID。
@@ -22,7 +22,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

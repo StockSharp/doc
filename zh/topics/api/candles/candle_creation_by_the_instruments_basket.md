@@ -1,8 +1,8 @@
-# 为证券篮子创建蜡烛
+# 为交易品种篮子创建K线
 
-为 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)、[WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) 或 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) 创建蜡烛时，使用的订阅机制与普通 [Security](xref:StockSharp.BusinessEntities.Security) 证券相同。
+为 [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)、[WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) 或 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) 创建K线时，使用的订阅机制与普通 [Security](xref:StockSharp.BusinessEntities.Security) 交易品种相同。
 
-以下示例为 AAPL - MSFT 价差创建 1 分钟蜡烛：
+以下示例为 AAPL - MSFT 价差创建 1 分钟K线：
 
 ```cs
 private Connector _connector;
@@ -114,7 +114,7 @@ private void Unsubscribe()
 
 ## 指数订阅的其他使用场景
 
-### 使用成分证券蜡烛创建指数蜡烛订阅
+### 使用成分交易品种K线创建指数K线订阅
 
 ```cs
 // Create subscription to build index candles from component candles
@@ -136,7 +136,7 @@ var indexFromCandlesSubscription = new Subscription(
 _connector.Subscribe(indexFromCandlesSubscription);
 ```
 
-### 使用市场深度创建指数蜡烛订阅
+### 使用市场深度创建指数K线订阅
 
 ```cs
 // Create subscription to build index candles from order books

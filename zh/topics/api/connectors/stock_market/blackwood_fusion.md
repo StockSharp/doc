@@ -1,6 +1,6 @@
-# 布莱克伍德（融合）
+# Blackwood (Fusion)
 
-**融合（布莱克伍德）** - 在纽约证券交易所（NYSE）、纳斯达克（NASDAQ）、美国证券交易所（AMEX）等交易所交易股票的平台。
+**Blackwood (Fusion)** - 用于在纽约证券交易所（NYSE）、纳斯达克（NASDAQ）、美国证券交易所（AMEX）等交易所交易股票的平台。
 
 在开始为当前交易平台编写交易机器人之前，建议阅读[连接器](../../connectors.md)中的链接。
 
@@ -8,11 +8,11 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 
-[创建自定义连接器](../creating_own_connector.md)
+[创建自己的连接器](../creating_own_connector.md)
 
 [订单管理](../../orders_management.md)
 

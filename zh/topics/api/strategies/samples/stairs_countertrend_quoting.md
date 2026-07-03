@@ -22,14 +22,14 @@ public class StairsCountertrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **CandleDataType** - 要使用的蜡烛类型（默认1分钟）
-- **长度** - 用于识别趋势的连续同向蜡烛数量（默认值 5）
+- **CandleDataType** - 要使用的K线类型（默认1分钟）
+- **长度** - 用于识别趋势的连续同向K线数量（默认值 5）
 
 Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
 
 ## 策略初始化
 
-在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，计数器被重置，蜡烛订阅被创建，并且可视化被准备好：
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，计数器被重置，K线订阅被创建，并且可视化被准备好：
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -57,9 +57,9 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-## 加工蜡烛
+## 处理 K线
 
-`ProcessCandle` 方法会在每根完成的蜡烛上调用，并实现趋势检测和报价处理器管理的逻辑：
+`ProcessCandle` 方法会在每根完成的K线上调用，并实现趋势检测和报价处理器管理的逻辑：
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -181,17 +181,17 @@ private void CreateQuotingProcessor(Sides side)
 
 ## 交易逻辑
 
-- **卖出信号**：`Length` 连续看涨蜡烛（收盘价高于开盘价），且没有空头头寸时
-- **买入信号**：`Length` 连续的看跌K线（收盘价低于开盘价），且当前没有多头仓位
+- **卖出信号**：`Length` 连续看涨K线（收盘价高于开盘价），且没有空头头寸时
+- **买入信号**：`Length` 连续的看跌K线（收盘价低于开盘价），且当前没有多头持仓
 - 报价处理器用于市场进入，跟随市场价格
 
 ## 特征
 
 - 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
-- 该策略仅适用于已完成的蜡烛
+- 该策略仅适用于已完成的K线
 - 为了更高效地进入市场，使用报价而不是市价单
 - 该策略采用逆势方法，开仓与已建立的趋势相反的方向
 - 已实现主要事件的详细日志记录以进行调试
 - 当趋势方向发生变化或达到目标时，引用处理器会自动清除
-- 图表支持蜡烛图和交易可视化
+- 图表支持K线和交易可视化
 - 序列长度参数优化已用于策略配置

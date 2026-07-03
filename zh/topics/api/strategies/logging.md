@@ -1,4 +1,4 @@
-# 登录策略
+# 策略日志记录
 
 在 StockSharp 中，[Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类继承自 [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver)，这允许您使用内置工具记录交易策略运行期间发生的所有操作和事件。
 
@@ -31,9 +31,9 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-### 日志调试
+### LogDebug
 
-[LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,System.Object[]) 方法用于调试信息：
+[LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,System.Object[])) 方法用于调试消息：
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -45,9 +45,9 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-### 日志信息
+### LogInfo
 
-[LogInfo](xref:Ecng.Logging.BaseLogReceiver.LogInfo(System.String,System.Object[]) 方法用于常规信息性消息：
+[LogInfo](xref:Ecng.Logging.BaseLogReceiver.LogInfo(System.String,System.Object[])) 方法用于常规信息消息：
 
 ```cs
 private void CalculateSignal(decimal shortSma, decimal longSma)
@@ -61,9 +61,9 @@ private void CalculateSignal(decimal shortSma, decimal longSma)
 }
 ```
 
-### 记录警告
+### LogWarning
 
-[LogWarning](xref:Ecng.Logging.BaseLogReceiver.LogWarning(System.String,System.Object[]) 方法用于记录警告：
+[LogWarning](xref:Ecng.Logging.BaseLogReceiver.LogWarning(System.String,System.Object[])) 方法用于记录警告：
 
 ```cs
 public void RegisterOrder(Order order)
@@ -78,9 +78,9 @@ public void RegisterOrder(Order order)
 }
 ```
 
-### 记录错误
+### LogError
 
-[LogError](xref:Ecng.Logging.BaseLogReceiver.LogError(System.String,System.Object[]) 方法用于记录错误消息：
+[LogError](xref:Ecng.Logging.BaseLogReceiver.LogError(System.String,System.Object[])) 方法用于记录错误消息：
 
 ```cs
 try
@@ -194,6 +194,21 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 	
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
+```
+
+## 连接日志监听器
+
+要接收策略发出的消息，需要通过 [LogManager](xref:Ecng.Logging.LogManager) 连接监听器：
+
+```cs
+// Create log manager
+var logManager = new LogManager();
+
+// Add log listener to console
+logManager.Listeners.Add(new ConsoleLogListener());
+
+// Add strategy to log sources
+logManager.Sources.Add(strategy);
 ```
 
 ## 查看日志

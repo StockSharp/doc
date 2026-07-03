@@ -1,6 +1,6 @@
 # 源代码
 
-目前，[S\#](../api.md) 核心由开源社区共同开发，其源代码公开并托管在 [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) 仓库中。
+目前，[S#](../api.md) 核心由开源社区共同开发，其源代码公开并托管在 [GitHub/StockSharp](https://github.com/StockSharp/StockSharp) 仓库中。
 
 [GitHub 使用说明](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
 
@@ -12,7 +12,7 @@
 - 历史数据仿真器（回测器）。
 - 技术分析指标（超过 70 种）。
 - 盈亏、滑点和延迟计算算法。
-- 用于构建任意时间周期蜡烛以及非时间型蜡烛（逐笔、范围等）的算法。
+- 用于构建任意时间周期K线以及非时间型K线（逐笔、范围等）的算法。
 - 日志记录。
 - 导入和导出。
 

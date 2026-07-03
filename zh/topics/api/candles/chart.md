@@ -1,12 +1,12 @@
 # 图表
 
-要以图形方式显示蜡烛，可以使用专用的 [Chart](xref:StockSharp.Xaml.Charting.Chart) 组件（请参阅[图表构建组件](../graphical_user_interface/charts.md)）。蜡烛显示效果如下：
+要以图形方式显示K线，可以使用专用的 [Chart](xref:StockSharp.Xaml.Charting.Chart) 组件（请参阅[图表构建组件](../graphical_user_interface/charts.md)）。K线显示效果如下：
 
 ![sample candleschart](../../../images/sample_candleschart.png)
 
-## 显示蜡烛的基本方式
+## 显示K线的基本方式
 
-在图表上显示蜡烛有两种方式。第一种是在接收数据时手动绘制：
+在图表上显示K线有两种方式。第一种是在接收数据时手动绘制：
 
 ```cs
 // CandlesChart - StockSharp.Xaml.Chart
@@ -100,7 +100,7 @@ private void InitializeChartWithAutoBinding()
 
 ## 使用指标
 
-要在图表中同时显示蜡烛和指标，请使用 [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) 类型的元素：
+要在图表中同时显示K线和指标，请使用 [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) 类型的元素：
 
 ```cs
 // Adding indicator to chart
@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-有关在图表上显示蜡烛的示例，请参阅 [Candles](../candles.md) 章节。
+有关在图表上显示K线的示例，请参阅 [Candles](../candles.md) 章节。
 
 ## 另请参阅
 

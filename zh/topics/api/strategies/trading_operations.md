@@ -204,7 +204,7 @@ public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = Str
 
 此参数允许您指定执行特定操作所需的最低交易权限级别：
 
-1. **StrategyTradingModes.Full**（默认值）——仅当策略处于全交易模式（`TradingMode = StrategyTradingModes.Full`）时才返回 `true`。用于可以增加仓位的操作。
+1. **StrategyTradingModes.Full**（默认值）——仅当策略处于全交易模式（`TradingMode = StrategyTradingModes.Full`）时才返回 `true`。用于可以增加持仓的操作。
 
 2. **StrategyTradingModes.ReducePositionOnly** - 如果策略处于全交易模式或仅处于减仓模式，则返回 `true`。用于平仓或部分平仓操作。
 
@@ -233,7 +233,7 @@ else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly)
 }
 ```
 
-因此，这种方法允许您为交易功能实现安全的访问控制机制，其中更关键的操作（例如开立新仓位）需要更高等级的权限，而较不关键的操作（如撤销订单）即使在有限的交易模式下也可以执行。
+因此，这种方法允许您为交易功能实现安全的访问控制机制，其中更关键的操作（例如开立新持仓）需要更高等级的权限，而较不关键的操作（如撤销订单）即使在有限的交易模式下也可以执行。
 
 在执行交易操作之前使用这些方法是良好的实践：
 
@@ -321,4 +321,4 @@ private void ProcessCandle(ICandleMessage candle)
 - [订单](../orders_management.md)
 - [订单规则](event_model/samples/rule_order.md)
 - [事件模型](event_model.md)
-- [仓位保护](take_profit_and_stop_loss.md)
+- [持仓保护](take_profit_and_stop_loss.md)

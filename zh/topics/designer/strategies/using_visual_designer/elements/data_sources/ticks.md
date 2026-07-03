@@ -2,13 +2,13 @@
 
 ![Designer Ticks](../../../../../../images/designer_ticks_00.png)
 
-该模块用于接收证券的 **Tick** 数据。
+该模块用于接收交易品种的 **Tick** 数据。
 
 ### 输入端口
 
 输入端口
 
-- **Instrument** – 要接收 **Level1** 数据的证券。
+- **Instrument** – 要接收 **Level1** 数据的交易品种。
 
 ### 输出端口
 

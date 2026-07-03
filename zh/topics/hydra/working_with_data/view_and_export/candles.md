@@ -1,3 +1,3 @@
-# 蜡烛图
+# K线
 
-请参阅[生成蜡烛图](../candles_generation.md)。
+请参阅[生成K线](../candles_generation.md)。

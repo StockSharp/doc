@@ -1,6 +1,6 @@
-# Rithmic 图形配置
+# Rithmic 图形化配置
 
-对于所有 [S\#](../../../../api.md) 产品，连接的图形配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有 [S#](../../../../api.md) 产品，连接的图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
 
 ![API GUI 设置 Rithmic](../../../../../images/api_gui_settings_rithmic.png)
 
@@ -19,7 +19,7 @@
 - **域名（地址）** - 域名地址。
 - **域名 (name)** - 域名。
 - **许可证** - 许可证服务器地址。
-- **经纪人** - 经纪人地址。
+- **经纪商** - 经纪商地址。
 - **日志（地址）** - 日志记录器地址。
 - **用户名（历史）** - 额外登录。用于历史工厂认证的用户ID。
 - **密码（hist）** - 附加密码。用于与历史工厂进行身份验证的密码
@@ -30,7 +30,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

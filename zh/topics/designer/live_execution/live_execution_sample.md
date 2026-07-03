@@ -8,7 +8,7 @@
 
 3. 在 [Designer](../../designer.md) 中配置 IB TWS Demo 连接并建立连接。
 
-4. 下载所需证券的历史数据。本例使用 **AAPL@NASDAQ** 证券。策略将使用 5 秒周期的蜡烛；虽然并不需要这些历史数据，但下载这些数据足以演示相应功能。
+4. 下载所需交易品种的历史数据。本例使用 **AAPL@NASDAQ** 交易品种。策略将使用 5 秒周期的K线；虽然并不需要这些历史数据，但下载这些数据足以演示相应功能。
 
 ![Designer Example of Live trading 00](../../../images/designer_example_of_live_trading_00.png)
 
@@ -16,11 +16,11 @@
 
 SMA 策略示例使用以下参数：
 
-- 证券 **AAPL@NASDAQ**
+- 交易品种 **AAPL@NASDAQ**
 - 标准存储 **\\Documents\\StockSharp\\Designer\\Storage**
 - 存储格式 \- **CSV**
 - 从存储中读取的数据类型 \- **Ticks**
-- 时间周期为 5 秒的蜡烛
+- 时间周期为 5 秒的K线
 - 成交量 \- 100
 - 历史数据天数 \- 2
 
@@ -37,6 +37,10 @@ SMA 策略示例使用以下参数：
 下图显示了 [Designer](../../designer.md) 中的成交：
 
 ![Designer Example of Live trading 03](../../../images/designer_example_of_live_trading_03.png)
+
+在 [Designer](../../designer.md) 中，策略继续在 Live 模式下运行，并显示实时交易结果：
+
+![Designer Example of Live trading 04](../../../images/designer_example_of_live_trading_04.png)
 
 ## 推荐内容
 

@@ -2,7 +2,7 @@
 
 可以在专用面板中查看 [Hydra](../../hydra.md) 接收到的数据。
 
-为此，请在 Common 选项卡中单击以下任一按钮：[逐笔成交](view_and_export/ticks.md)、[订单簿](view_and_export/order_books.md)、[生成蜡烛图](candles_generation.md)、[订单日志](view_and_export/order_log.md)、[Level 1](view_and_export/level_1_.md)、[新闻](view_and_export/news.md)、[交易事务](view_and_export/transactions.md)、[期权面板](view_and_export/option_desk.md)、[指标](view_and_export/indicators.md)、[持仓](view_and_export/positions.md)。
+为此，请在 Common 选项卡中单击以下任一按钮：[逐笔成交](view_and_export/ticks.md)、[订单簿](view_and_export/order_books.md)、[生成K线](candles_generation.md)、[订单日志](view_and_export/order_log.md)、[Level 1](view_and_export/level_1_.md)、[新闻](view_and_export/news.md)、[交易事务](view_and_export/transactions.md)、[期权面板](view_and_export/option_desk.md)、[指标](view_and_export/indicators.md)、[持仓](view_and_export/positions.md)。
 
 也可以按图中所示右键单击所需数据类型，或者直接双击该数据类型。
 

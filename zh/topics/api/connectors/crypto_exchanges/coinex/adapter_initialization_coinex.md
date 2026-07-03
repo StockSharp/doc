@@ -1,6 +1,6 @@
-# 适配器初始化 CoinEx
+# CoinEx 适配器初始化
 
-下面的代码演示了如何初始化 [CoinExMessageAdapter](xref:StockSharp.CoinEx.CoinExMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [CoinExMessageAdapter](xref:StockSharp.CoinEx.CoinExMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 			Connector Connector = new Connector();				

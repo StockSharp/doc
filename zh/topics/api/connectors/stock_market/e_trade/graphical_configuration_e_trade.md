@@ -1,11 +1,11 @@
-# 图形配置 E*TRADE
+# E\*TRADE 图形化配置
 
-对于所有 [S\#](../../../../api.md) 产品，连接的图形配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有 [S#](../../../../api.md) 产品，连接的图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
 
 ![API GUI 设置 E TRADE](../../../../../images/api_gui_settings_e_trade.png)
 
-- **钥匙** - 钥匙。
-- **秘密** \- 秘密。
+- **Key** - API key。
+- **Secret** - API secret。
 - **演示** - 连接到模拟交易而不是真实交易服务器。
 - **验证码** - 验证码，由用户在浏览器中接收，在确认程序的工作权限后。
 - **心跳** - 用于跟踪连接是否存活的服务器检查间隔。默认值为1分钟。
@@ -15,7 +15,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

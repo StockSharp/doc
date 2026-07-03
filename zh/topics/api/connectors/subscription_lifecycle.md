@@ -65,7 +65,7 @@ event Action<Subscription, Exception, bool> SubscriptionFailed;
 ISet<Subscription> SubscriptionsOnConnect { get; }
 ```
 
-默认情况下，包括用于安全查询、投资组合查询和订单查询的订阅：
+默认情况下，包括用于交易品种查询、投资组合查询和订单查询的订阅：
 
 ```cs
 SubscriptionsOnConnect.Add(SecurityLookup);

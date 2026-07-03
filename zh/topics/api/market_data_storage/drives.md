@@ -8,8 +8,8 @@ StockSharp中的存储驱动负责市场数据的物理存放——无论是在�
 
 - **路径** -- 数据存储的路径。
 - **GetAvailableSecuritiesAsync()** -- 检索存储中所有可用工具的列表。
-- **GetAvailableDataTypesAsync()** -- 检索特定仪器可用的数据类型列表。
-- **GetStorageDrive()** -- 获取特定仪器和数据类型的存储驱动器。
+- **GetAvailableDataTypesAsync()** -- 检索特定交易品种可用的数据类型列表。
+- **GetStorageDrive()** -- 获取特定交易品种和数据类型的存储驱动器。
 - **VerifyAsync()** -- 验证存储的完整性。
 - **LookupSecuritiesAsync()** -- 根据指定条件搜索金融工具。
 
@@ -19,7 +19,7 @@ StockSharp中的存储驱动负责市场数据的物理存放——无论是在�
 
 ### 主要特点
 
-- **文件系统** -- 数据按仪器和日期组织在分层目录结构中。
+- **文件系统** -- 数据按交易品种和日期组织在分层目录结构中。
 - **索引系统** -- 内部的 `Index` 类提供无需扫描文件系统的快速数据访问。索引文件以 `{instrument_path}{file_name}Dates2.bin` 格式存储。
 - **线程安全** —— 数据访问通过锁机制保护，以确保在多线程应用中的正确操作。
 - **索引构建** -- `BuildIndexAsync()` 方法允许在批量数据操作后重建索引以提高性能。

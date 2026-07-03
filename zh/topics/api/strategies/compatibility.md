@@ -287,7 +287,7 @@ protected override void OnStarted2(DateTime time)
 
 1. **自动退订** - 当策略停止或不再需要时，规则会自动从事件中退订。你无需手动管理订阅。
 
-2. **高级 API** - 规则提供了比标准事件处理程序更易理解和方便的接口。例如，`WhenCandlesFinished` 比订阅 `CandleReceived` 事件并随后检查蜡烛状态要清晰得多。
+2. **高级 API** - 规则提供了比标准事件处理程序更易理解和方便的接口。例如，`WhenCandlesFinished` 比订阅 `CandleReceived` 事件并随后检查K线状态要清晰得多。
 
 3. **条件组合** - 规则可以使用 `And`、`Or` 等运算符组合，从而创建复杂的激活条件：
 

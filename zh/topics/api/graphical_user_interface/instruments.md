@@ -1,6 +1,6 @@
 # 乐器
 
-[S\#](../../api.md) 提供了一大套用于操作仪器的图形组件。该套件包括：
+[S#](../../api.md) 提供了一大套用于操作交易品种的图形组件。该套件包括：
 
 - 用于创建工具的组件 – [SecurityCreateWindow](xref:StockSharp.Xaml.SecurityCreateWindow)。
 - 用于在工具上显示财务信息的组件 - [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid)。

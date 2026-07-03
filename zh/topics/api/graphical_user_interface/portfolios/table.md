@@ -6,7 +6,7 @@
 
 **主要属性**
 
-- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – 职位和职务列表。
+- [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – 持仓列表。
 - [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – 选定的位置。
 - [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) - 已选择的位置。
 

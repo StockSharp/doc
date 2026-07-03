@@ -15,7 +15,7 @@ var state = new PositionManagerState();
 var manager = new PositionManager(byOrders: false, state);
 ```
 
-- `byOrders = true` —— 该仓位是基于订单余额变化计算的。适用于交易系统接收订单状态更新但未接收单笔交易的情况。
+- `byOrders = true` —— 该持仓是基于订单余额变化计算的。适用于交易系统接收订单状态更新但未接收单笔交易的情况。
 - `byOrders = false` -- 该位置基于交易量计算（推荐模式）。提供对已执行操作的更精确的核算。
 
 ### 处理中消息
@@ -33,14 +33,14 @@ if (posChange != null)
 
 ## IPositionManagerState
 
-[IPositionManagerState](xref:StockSharp.Algo.Positions.IPositionManagerState) 接口描述了仓位管理器的内部状态。[PositionManagerState](xref:StockSharp.Algo.Positions.PositionManagerState) 实现存储有关当前订单和仓位的信息。
+[IPositionManagerState](xref:StockSharp.Algo.Positions.IPositionManagerState) 接口描述了持仓管理器的内部状态。[PositionManagerState](xref:StockSharp.Algo.Positions.PositionManagerState) 实现存储有关当前订单和持仓的信息。
 
 ### 主要方法
 
 | 方法 | 描述 |
 |--------|-------------|
 | `AddOrGetOrder` | 注册一个新订单或通过 `transactionId` 返回现有订单 |
-| `TryGetOrder` | 检索订单参数（交易工具、投资组合、方向、余额） |
+| `TryGetOrder` | 检索订单参数（交易品种、投资组合、方向、余额） |
 | `UpdateOrderBalance` | 在部分执行后更新当前订单余额 |
 | `RemoveOrder` | 从跟踪中移除已完成的订单 |
 | `UpdatePosition` | 按工具和投资组合更新持仓，返回新值 |
@@ -72,21 +72,21 @@ Console.WriteLine($"Current position: {newPosition}");
 state.Clear();
 ```
 
-## 职位生命周期追踪器
+## 持仓生命周期追踪器
 
 [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) 类跟踪头寸的完整生命周期——从开仓到平仓（往返）。这对于分析单个交易、计算每个头寸的利润以及生成报告非常有用。
 
 ### 主要特点
 
 - **历史**：`History` 属性（`IReadOnlyList<ReportPosition>`）包含所有已完成的往返头寸。
-- **`RoundTripClosed` 事件**：当一个仓位被平仓（数值变为零）或反转（仓位符号改变）时触发。
+- **`RoundTripClosed` 事件**：当一个持仓被平仓（数值变为零）或反转（持仓符号改变）时触发。
 - **`ProcessPosition` 方法**：接受一个 [Position](xref:StockSharp.BusinessEntities.Position) 对象并更新内部状态。
 
 ### 检测到的状态
 
 | 状态 | 描述 |
 |-------|-------------|
-| 开仓 | 仓位从零变为非零 |
+| 开仓 | 持仓从零变为非零 |
 | 关闭 | 持仓价值为零 |
 | 反转 | 持仓方向变化（e.g，从多头变为空头） |
 
@@ -126,7 +126,7 @@ var posAdapter = new PositionMessageAdapter(innerAdapter, posManager);
 
 适配器拦截订单执行和交易消息，调用 `PositionManager.ProcessMessage`，并为上游处理器生成相应的 `PositionChangeMessage` 实例。
 
-## 策略中的职位
+## 策略中的持仓
 
 在 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类中，可以通过 `Position` 属性访问当前位置：
 
@@ -149,6 +149,6 @@ ClosePosition();
 ## 另请参阅
 
 - [交易操作](strategies/trading_operations.md)
-- [仓位保护](strategies/take_profit_and_stop_loss.md)
-- [目标职位管理](strategies/target_position_management.md)
+- [持仓保护](strategies/take_profit_and_stop_loss.md)
+- [目标持仓管理](strategies/target_position_management.md)
 - [报告](strategies/reporting.md)

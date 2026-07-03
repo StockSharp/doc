@@ -22,4 +22,4 @@ CurrComparison 和 PrevComparison 模块在 **Common** 属性组中启用了 **P
 
 ## 推荐内容
 
-[在图表上显示蜡烛图](schema_samples/display_candles_on_chart.md)
+[在图表上显示K线](schema_samples/display_candles_on_chart.md)

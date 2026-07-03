@@ -1,6 +1,6 @@
 # 中位数价格
 
-**中位价** 指标显示蜡烛的中位价。
+**中位价** 指标显示K线的中位价。
 
 要使用该指标，您必须使用 [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice) 类。
 

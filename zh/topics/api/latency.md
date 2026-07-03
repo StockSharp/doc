@@ -1,6 +1,6 @@
 # 延迟测量
 
-[S\#](../api.md) 通过 [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager) 测量订单注册和取消的延迟。该管理器确定从发送订单到收到交易所确认所经过的时间。
+[S#](../api.md) 通过 [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager) 测量订单注册和取消的延迟。该管理器确定从发送订单到收到交易所确认所经过的时间。
 
 ## ILatencyManager 接口
 

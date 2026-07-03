@@ -1,4 +1,4 @@
-# 瑞思米克
+# Rithmic
 
 **Rithmic** — 用于在国际交易所进行交易的交易平台。
 
@@ -8,7 +8,7 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 

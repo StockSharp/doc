@@ -10,7 +10,7 @@
 
 远程存储可以位于远程计算机上。配置远程存储时，需要指定远程存储地址，并在必要时填写登录名和密码。
 
-可以使用 [Hydra](../../hydra.md) 软件（代号 Hydra）在本地计算机上建立远程存储服务。Hydra 用于从不同数据源自动加载市场数据（证券、蜡烛、逐笔成交、订单簿等），并将其保存到本地存储。为此，请将 [Hydra](../../hydra.md) 切换到服务器模式。
+可以使用 [Hydra](../../hydra.md) 软件（代号 Hydra）在本地计算机上建立远程存储服务。Hydra 用于从不同数据源自动加载市场数据（交易品种、K线、逐笔成交、订单簿等），并将其保存到本地存储。为此，请将 [Hydra](../../hydra.md) 切换到服务器模式。
 
 ![Designer Creating a repository of historical data 04](../../../images/designer_creating_repository_of_historical_data_04.png)
 
@@ -26,4 +26,4 @@
 
 ## 推荐内容
 
-[下载证券](download_instruments.md)
+[下载交易品种](download_instruments.md)

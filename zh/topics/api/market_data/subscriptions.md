@@ -8,7 +8,7 @@
 
 要使用订阅功能，您需要使用 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类。让我们来看一些使用订阅获取各种类型数据的示例。
 
-## 蜡烛订阅示例
+## K线订阅示例
 
 ```cs
 // Create a subscription for 5-minute candles
@@ -97,7 +97,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 _connector.Subscribe(tickSubscription);
 ```
 
-## 带蜡烛构建模式配置的订阅示例
+## 带K线构建模式配置的订阅示例
 
 ```cs
 // Subscription to 5-minute candles that will be built from ticks
@@ -116,7 +116,7 @@ var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinute
 _connector.Subscribe(candleSubscription);
 ```
 
-## 一级订阅示例（基础仪器信息）
+## 一级订阅示例（基础交易品种信息）
 
 ```cs
 // Creating a subscription for basic instrument information

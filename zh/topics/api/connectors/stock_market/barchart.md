@@ -1,4 +1,4 @@
-# 柱状图
+# BarChart
 
 **Barchart** - 股票报价、外汇、新闻等的实时市场数据提供商。
 
@@ -11,11 +11,11 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 
-[创建自定义连接器](../creating_own_connector.md)
+[创建自己的连接器](../creating_own_connector.md)
 
 [订单管理](../../orders_management.md)
 

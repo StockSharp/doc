@@ -49,7 +49,7 @@ protected override void OnStarted2(DateTime time)
 
 ### 添加指标的规则：
 
-1. **独立指标** - 添加直接处理市场数据（蜡烛图、逐笔数据等）的指标：
+1. **独立指标** - 添加直接处理市场数据（K线、逐笔数据等）的指标：
 
    ```cs
    // Independent indicators

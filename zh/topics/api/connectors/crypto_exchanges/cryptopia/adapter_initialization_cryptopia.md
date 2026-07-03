@@ -1,9 +1,9 @@
 > [!WARNING]
 > 该交易所已永久关闭（2019年5月——被黑并清算）。此连接器不再可用。文档已保留以供历史参考。
 
-# 适配器初始化 Cryptopia
+# Cryptopia 适配器初始化
 
-下面的代码演示了如何初始化 [CryptopiaMessageAdapter](xref:StockSharp.Cryptopia.CryptopiaMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [CryptopiaMessageAdapter](xref:StockSharp.Cryptopia.CryptopiaMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 			Connector Connector = new Connector();				

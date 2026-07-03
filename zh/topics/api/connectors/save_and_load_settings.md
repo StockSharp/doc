@@ -2,7 +2,7 @@
 
 [Connector.Save](xref:StockSharp.Algo.Connector.Save(Ecng.Serialization.SettingsStorage)) 和 [Connector.Load](xref:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage)) 方法分别用于保存和加载 [Connector](xref:StockSharp.Algo.Connector) 设置。
 
-要从外部文件保存和加载设置，可以分别使用在 [S\#](../../api.md) 中实现的序列化和反序列化。
+要从外部文件保存和加载设置，可以分别使用在 [S#](../../api.md) 中实现的序列化和反序列化。
 
 ```cs
 ...

@@ -48,7 +48,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 | 软件包 | 描述 |
 |---------|-------------|
 | [StockSharp.Messages](https://www.nuget.org/packages/StockSharp.Messages/) | 基础消息和合约。整个框架的基础 |
-| [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | 交易实体：证券、订单、交易、投资组合等 |
+| [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | 交易实体：交易品种、订单、交易、投资组合等 |
 | [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | 核心算法交易，连接器，订阅，K线 |
 | [StockSharp.Configuration](https://www.nuget.org/packages/StockSharp.Configuration/) | 配置管理，连接设置 |
 | [StockSharp.Localization](https://www.nuget.org/packages/StockSharp.Localization/) | 本地化系统（默认英文） |
@@ -91,7 +91,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 | [StockSharp.Alerts.Interfaces](https://www.nuget.org/packages/StockSharp.Alerts.Interfaces/) | 警报系统接口 |
 | [StockSharp.Diagram.Core](https://www.nuget.org/packages/StockSharp.Diagram.Core/) | 可视化策略设计器核心 |
 
-### 连接器（交易所和经纪人）
+### 连接器（交易所和经纪商）
 
 每个连接器都是一个独立的 NuGet 封装。主要连接器：
 

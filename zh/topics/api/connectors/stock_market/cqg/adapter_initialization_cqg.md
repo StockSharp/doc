@@ -1,4 +1,4 @@
-# 适配器初始化 CQG
+# CQG 适配器初始化
 
 下面的代码演示了如何初始化[CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter)和[CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter)并将其发送到[Connector](xref:StockSharp.Algo.Connector)。
 

@@ -2,7 +2,7 @@
 
 ![Designer Cancellations 00](../../../../../../images/designer_cancellations_00.png)
 
-该模块用于撤销证券的订单。
+该模块用于撤销交易品种的订单。
 
 ### 输入端口
 

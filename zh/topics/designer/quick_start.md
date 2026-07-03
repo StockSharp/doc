@@ -1,26 +1,34 @@
 # 快速入门
 
-首次运行 [Designer](../designer.md) 时，程序会提示打开[下载市场数据](market_data_storage/download_market_data.md)窗口。也可以使用 [Hydra](../hydra.md)（代号 Hydra）下载历史数据。Hydra 用于从不同数据源自动下载市场数据（证券、蜡烛、逐笔成交、订单簿等），并将其保存到本地存储。有关历史数据下载和存储的详细说明，请参阅[市场数据存储](market_data_storage.md)。
-
-单击 **Download securities** 按钮后，会显示[下载证券](market_data_storage/download_instruments.md)窗口。要下载证券，请输入证券代码和证券类型，选择数据源，然后单击 **OK**。[Designer](../designer.md) 会向数据源查询可用证券，找到的所有证券都会显示在 **All securities** 面板中。[Designer](../designer.md) 默认已指定一个数据源，也可以使用交易终端作为数据源。有关配置终端连接的方法，请参阅[连接设置](connections_settings.md)。
+首次启动时，[Designer](../designer.md) 会打开预先配置好的移动平均线策略图表。
 
 ![Designer Quick start 01](../../images/designer_quick_start_01.png)
 
-要获取证券的历史数据，请从 **All securities** 列表中选择所需证券，设置历史数据时间段，并选择数据类型；如果下载蜡烛，还需选择 Time Frame。然后单击 **Start** 按钮。所有数据都会保存到[市场数据存储](market_data_storage.md)中。
+要在历史数据上运行该策略，需要先下载正确格式的数据。建议使用 [Hydra](../hydra.md)：这是一个用于从不同数据源自动加载市场数据（交易品种、K线、逐笔成交、订单簿以及其他数据）并保存到本地存储的程序。历史数据下载和存储在[市场数据存储](market_data_storage.md)中有详细说明。
+
+通过 [Hydra](../hydra.md) 下载数据后，需要在 [Designer](../designer.md) 中指定 [Hydra](../hydra.md) 保存历史数据的目录。该目录在 **Backtest** -> **Storage** 选项卡中配置。
 
 ![Designer Quick start 02](../../images/designer_quick_start_02.png)
 
-获取历史数据后，选择一个演示策略。在 **Strategy** 文件夹的 [Schemas](user_interface/schemas.md) 面板中双击 **SMA** 示例策略，工作区随后会显示 Sma 选项卡。切换到该策略后，工具栏中的 **Emulation** 选项卡会自动打开，其中包含创建、调试和测试策略所需的主要功能（参阅[策略](strategies/using_visual_designer.md)和[入门](backtesting/getting_started.md)）。
+单击 ![Designer Edit Tool](../../images/designer_edit_tool_00.png) 会打开 **Data storage settings** 窗口，可在其中配置本地或远程存储。也可以将 [Hydra](../hydra.md) [服务器模式](../hydra/server_mode/settings.md)配置为市场数据源。单击 ![[Designer_Settings_Repository_button.png]] 会打开文件夹选择窗口。请选择之前由 [Hydra](../hydra.md) 下载并保存历史数据的文件夹。
 
-![Designer Quick start 03](../../images/designer_quick_start_03.png)
+如果没有所需的交易品种，请手动下载它们。
 
-在 **Emulation** 选项卡中设置测试时间段，并在 **Market Data** 字段中选择[市场数据存储](market_data_storage.md)。
+![Designer Quick start 02](../../images/designer_quick_start_03.png)
 
-单击 **Security** 字段中的 ![Designer Quick start 04](../../images/designer_quick_start_04.png) 图标，会打开 **Select security** 窗口。请在该窗口中选择所需证券。
+市场数据管理选项卡会打开。要获取可用交易品种，请单击[下载交易品种](market_data_storage/download_instruments.md)。要下载交易品种，请输入其代码，或选择 **All** 标志，选择数据源，然后单击 **OK**。[Designer](../designer.md) 会从数据源请求可用交易品种。所有找到的交易品种都会显示在 **All instruments** 面板中。
+
+现在 [Designer](../designer.md) 可以使用存储中已有的已下载交易品种和历史数据。请选择一个演示策略。在 [Schemas](user_interface/schemas.md) 面板中打开 **Strategies** 文件夹，并双击 **SMA** 示例策略。工作区中会出现 **Sma** 选项卡。切换到策略后，功能区会自动打开 **Backtest** 选项卡，其中包含创建、调试和测试策略的主要控件（[创建策略](strategies/using_visual_designer.md)、[历史测试示例](backtesting/getting_started.md)）。
+
+![Designer Quick start 03](../../images/designer_quick_start_04_1.png)
+
+在 **Backtest** 选项卡中设置测试时间段，选择交易品种，并选择[市场数据存储](market_data_storage.md)。
+
+单击 **Instrument** 字段中的 ![Designer Quick start 04](../../images/designer_quick_start_04.png) 会打开 **Select instrument** 窗口。请在此窗口中选择所需的交易品种。
 
 ![Designer Quick start 05](../../images/designer_quick_start_05.png)
 
-在 **Designer** 面板中选择任意模块后，该模块的属性会显示在 **Properties** 面板中。在 **Candles** 模块的 **Properties** 面板中，可以设置[蜡烛](../api/candles.md)的类型和 Time Frame。
+在 **Designer** 面板中选择任意模块后，**Properties** 面板会显示该模块的属性。在 **Candles** 模块的 **Properties** 面板中，可以配置 K线类型和 Time Frame（[K线](../api/candles.md)）。
 
 单击 **Start** 按钮后，交易仿真开始运行。
 

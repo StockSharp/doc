@@ -11,7 +11,7 @@
 **Initialization**
 
 - **Data type** \- 数据类型。
-- **Time frame** \- 使用指定时间周期的蜡烛。
+- **Time frame** \- 使用指定时间周期的K线。
 - **Days of history data** \- 用于初始化策略的历史数据天数。
 
 **Settings**
@@ -20,10 +20,10 @@
 
 **Diagram parameters**
 
-- **Security** \- 证券。
+- **Security** \- 交易品种。
 - **Portfolio** \- 投资组合。
 
-如果未填写 **Diagram parameters**，仿真时将使用 **Emulation** 选项卡的 **Instrument** 字段中指定的证券，并默认使用测试投资组合作为投资组合。
+如果未填写 **Diagram parameters**，仿真时将使用 **Emulation** 选项卡的 **Instrument** 字段中指定的交易品种，并默认使用测试投资组合作为投资组合。
 
 ## 推荐内容
 

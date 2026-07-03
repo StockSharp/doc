@@ -1,10 +1,10 @@
-# 复杂蜡烛图形
+# 复杂K线形
 
 ## 概览
 
-`ComplexCandlePattern` 类允许通过将多个简单模式（`ICandlePattern`）组合成一个来创建复杂的蜡烛图模式。在识别复杂模式时，每个内部模式都会依次检查其对应的蜡烛图段。只有当所有内部模式都匹配时，该模式才被认为是已识别。
+`ComplexCandlePattern` 类允许通过将多个简单模式（`ICandlePattern`）组合成一个来创建复杂的K线模式。在识别复杂模式时，每个内部模式都会依次检查其对应的K线段。只有当所有内部模式都匹配时，该模式才被认为是已识别。
 
-## 蜡烛图形态
+## K线形态
 
 所有K线形态的基础接口：
 
@@ -48,7 +48,7 @@ public class ComplexCandlePattern : ICandlePattern
 }
 ```
 
-当调用 `Recognize` 时，蜡烛数组会根据每个内部模式的 `CandlesCount` 被分割成连续的段。如果至少有一个内部模式不匹配，该方法将返回 `false`。
+当调用 `Recognize` 时，K线数组会根据每个内部模式的 `CandlesCount` 被分割成连续的段。如果至少有一个内部模式不匹配，该方法将返回 `false`。
 
 ## 示例：创建复杂图案
 
@@ -69,7 +69,7 @@ var complex = new ComplexCandlePattern(
 Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
 ```
 
-## 蜡烛图模式提供者
+## K线模式提供者
 
 `ICandlePatternProvider` 接口管理模式存储和查找：
 
@@ -145,9 +145,9 @@ if (provider.TryFind("My Pattern", out var found))
 }
 ```
 
-## 蜡烛图形态
+## K线形态
 
-对于基于公式创建的图案，使用 `ExpressionCandlePattern`。图案中的每根蜡烛由 `CandleExpressionCondition` 表达式描述，可使用以下变量：
+对于基于公式创建的图案，使用 `ExpressionCandlePattern`。图案中的每根K线由 `CandleExpressionCondition` 表达式描述，可使用以下变量：
 
 | 变量 | 描述 |
 |----------|-------------|
@@ -156,11 +156,11 @@ if (provider.TryFind("My Pattern", out var found))
 | `L` | 低价 |
 | `C` | 收盘价 |
 | `V` | 音量 |
-| `B` | 蜡烛本体 |
-| `LEN` | 蜡烛长度 |
+| `B` | K线本体 |
+| `LEN` | K线长度 |
 | `BS` | 底部阴影 |
 | `TS` | 顶部阴影 |
 
-`p` 前缀指的是前一个蜡烛（`pO`、`pC`），`pp` -- 指的是两根蜡烛之前，以此类推。
+`p` 前缀指的是前一个K线（`pO`、`pC`），`pp` -- 指的是两根K线之前，以此类推。
 
 `CandlePatternRegistry` 中的所有内置模式都是使用 `ExpressionCandlePattern` 构建的。

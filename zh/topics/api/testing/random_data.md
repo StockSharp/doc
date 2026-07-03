@@ -4,7 +4,7 @@
 
 通常情况下，算法开发只使用一定的场景集。因此，当出现特殊情况时，算法可能反应不正确或抛出异常。例如，可能出现以下情况：
 
-- 该策略适用于 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) K 线，并期望在每次迭代中，总会有一根对应请求时间周期的 K 线。当在某个周期内没有任何交易时，K 线就不会生成。因此，如果没有适当的处理，将会抛出 [NullReferenceException](xref:System.NullReferenceException)，并导致策略停止运行。
+- 该策略适用于 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) K线，并期望在每次迭代中，总会有一根对应请求时间周期的 K线。当在某个周期内没有任何交易时，K线就不会生成。因此，如果没有适当的处理，将会抛出 [NullReferenceException](xref:System.NullReferenceException)，并导致策略停止运行。
 - 该策略适用于非流动性工具，并使用 [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage)。该策略假设订单簿始终被填充。在某些时候，订单簿可能只填充了一半（例如，有买盘，但没有卖盘）。如果策略没有预料到这种情况，那么它要么会错误地注册订单，要么会抛出异常并导致策略停止。
 - 该策略计算价格水平。代码的编写方式是策略会等待预先设定的水平被突破。如果水平被计算且设置不正确，那么它们将永远不会被突破，或者总是只有其中之一会被突破。结果，要么策略不会执行任何交易，要么这些交易会亏钱。
 

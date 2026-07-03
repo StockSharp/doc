@@ -1,4 +1,4 @@
-# 配置斯特林
+# Sterling 配置
 
 要使用 **Sterling** 连接器，您需要使用本地的 **Sterling Trader Pro** 终端，该终端直接安装在将用于连接的计算机上。要连接到 **Sterling Trader Pro**，您必须指定 **登录名** 和 **密码**。
 

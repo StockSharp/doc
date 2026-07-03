@@ -137,7 +137,7 @@ SampleRealTimeEmulation 示例演示了同时显示来自真实连接器和仿�
 ![sample realtime emulation](../../../images/sample_realtime_emulation.png)
 
 应用程序界面包含以下元素：
-- 用于显示蜡烛和订单的图表
+- 用于显示K线和订单的图表
 - 订购并拥有贸易表
 - 真实市场和模拟订单簿
 - 用于创建和取消订单的控制

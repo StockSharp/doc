@@ -25,13 +25,13 @@ public class BollingerStrategyUpBandStrategy : Strategy
 
 - **BollingerLength** - 布林带指标周期（默认 20）
 - **布林格偏差** - 标准差乘数（默认值 2.0）
-- **蜡烛类型** - 要使用的蜡烛类型（默认5分钟）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 
 ## 策略初始化
 
-在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，会创建布林带指标、设置蜡烛图订阅，并准备可视化：
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，会创建布林带指标、设置K线订阅，并准备可视化：
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -62,9 +62,9 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-## 加工蜡烛
+## 处理 K线
 
-`ProcessCandle` 方法在每个完成的蜡烛图上被调用，并实现交易逻辑：
+`ProcessCandle` 方法在每个完成的K线上被调用，并实现交易逻辑：
 
 ```cs
 private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
@@ -95,15 +95,15 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 
 ## 交易逻辑
 
-- **买入信号**：当没有持仓时，蜡烛收盘价达到或超过上布林带
+- **买入信号**：当没有持仓时，K线收盘价达到或超过上布林带
 - **卖出信号**（平多仓）：当存在多仓时，K线收盘价达到或跌破布林带中轨
-- 开仓时仓位固定，平仓时等于当前持仓的全部
+- 开仓时持仓固定，平仓时等于当前持仓的全部
 
 ## 特征
 
 - 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
-- 该策略仅适用于已完成的蜡烛
+- 该策略仅适用于已完成的K线
 - 该策略仅使用布林带指标的上轨和中轨
-- 只开多头仓位
-- 当图形区域可用时，指标和交易会在图表上可视化
+- 只开多头持仓
+- 当图表区域可用时，指标和交易会在图表上可视化
 - 支持参数优化以寻找最佳策略设置

@@ -2,7 +2,7 @@
 
 ![Designer Notice 00](../../../../../../images/designer_notice_00.png)
 
-当数据到达输入端口时，该模块会发送通知。传入值通过 `ToString` 转换为文本。可以连接 [Variable](../data_sources/variable.md) 来发送固定文本，连接成交或蜡烛数据流来查看其详细信息，也可以使用 [String format](string_format.md) 和 [String concat](string_concat.md) 模块生成自定义消息。
+当数据到达输入端口时，该模块会发送通知。传入值通过 `ToString` 转换为文本。可以连接 [Variable](../data_sources/variable.md) 来发送固定文本，连接成交或K线数据流来查看其详细信息，也可以使用 [String format](string_format.md) 和 [String concat](string_concat.md) 模块生成自定义消息。
 
 ### 输入端口
 

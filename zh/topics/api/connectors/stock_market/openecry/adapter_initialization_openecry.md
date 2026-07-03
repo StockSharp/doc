@@ -1,6 +1,6 @@
-# 适配器初始化 OpenECry
+# OpenECry 适配器初始化
 
-下面的代码演示了如何初始化 [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示了如何初始化 [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 Connector Connector = new Connector();				

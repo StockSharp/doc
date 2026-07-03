@@ -9,6 +9,6 @@
 目前，[Hydra](../hydra.md) 中提供四类任务：
 
 - [自动导入](tasks/import_auto.md) — 从 CSV 格式导入数据。
-- [转换器](tasks/converter.md) — 将交易所数据转换为逐笔成交、蜡烛图或订单簿。
-- [自动导出](tasks/export_auto.md) — 将蜡烛图导出为不同格式。
+- [转换器](tasks/converter.md) — 将交易所数据转换为逐笔成交、K线或订单簿。
+- [自动导出](tasks/export_auto.md) — 将K线导出为不同格式。
 - [备份](misc/backup.md) — 将数据备份到云服务。

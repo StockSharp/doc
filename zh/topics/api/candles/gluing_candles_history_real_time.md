@@ -1,6 +1,6 @@
-# 合并蜡烛：历史数据与实时数据
+# 合并K线：历史数据与实时数据
 
-要将历史蜡烛与实时数据衔接起来，需要初始化相应的存储：用于交易对象的 [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry)、用于市场数据的 [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)，以及快照存储注册表 [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)。
+要将历史K线与实时数据衔接起来，需要初始化相应的存储：用于交易对象的 [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry)、用于市场数据的 [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry)，以及快照存储注册表 [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)。
 
 下面以 Samples/Candles/CombineHistoryRealtime 项目为例进行说明：
 
@@ -14,19 +14,25 @@ public partial class MainWindow
 	
 	// Path to historical data
 	private readonly string _pathHistory = Paths.HistoryDataPath;
+
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
 	
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
+
+	private readonly ChannelExecutor _executor;
 	
 	public MainWindow()
 	{
 		InitializeComponent();
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
 		
 		// Initialize storages
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		
 		// Create connector with configured storages
@@ -35,16 +41,16 @@ public partial class MainWindow
 			entityRegistry.PositionStorage, 
 			new InMemoryExchangeInfoProvider(), 
 			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 		
 		// Register message adapter provider
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 		
 		// Load connector settings if file exists
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 		
 		// Set default candle data type (5-minute)
@@ -63,7 +69,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 	if (_connector.Configure(this))
 	{
 		// Save settings to file
-		_connector.Save().Serialize(_connectorFile);
+		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
@@ -81,7 +87,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 处理蜡烛并将其显示在图表上
+## 处理K线并将其显示在图表上
 
 ```cs
 // Handler for candle reception event
@@ -92,7 +98,7 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 }
 ```
 
-## 创建蜡烛订阅
+## 创建K线订阅
 
 ```cs
 // Method called when an instrument is selected
@@ -144,11 +150,13 @@ namespace StockSharp.Samples.Candles.CombineHistoryRealtime;
 
 using System;
 using System.Windows;
-using System.IO;
 
 using Ecng.Common;
 using Ecng.Serialization;
 using Ecng.Configuration;
+using Ecng.ComponentModel;
+using Ecng.Logging;
+using Ecng.IO;
 
 using StockSharp.Configuration;
 using StockSharp.Algo;
@@ -169,42 +177,55 @@ public partial class MainWindow
 	private const string _connectorFile = "ConnectorFile.json";
 
 	private readonly string _pathHistory = Paths.HistoryDataPath;
+	private readonly IFileSystem _fileSystem = Paths.FileSystem;
 
 	private Subscription _subscription;
 	private ChartCandleElement _candleElement;
+
+	private readonly ChannelExecutor _executor;
 	
 	public MainWindow()
 	{
 		InitializeComponent();
-		var entityRegistry = new CsvEntityRegistry(_pathHistory);
+
+		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
+
+		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
-			DefaultDrive = new LocalMarketDataDrive(_pathHistory)
+			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		_connector = new Connector(
 			entityRegistry.Securities, 
 			entityRegistry.PositionStorage, 
 			new InMemoryExchangeInfoProvider(), 
 			storageRegistry, 
-			new SnapshotRegistry("SnapshotRegistry"));
+			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
 		// registering all connectors
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-		if (File.Exists(_connectorFile))
+		if (_fileSystem.FileExists(_connectorFile))
 		{
-			_connector.Load(_connectorFile.Deserialize<SettingsStorage>());
+			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
+	}
+
+	protected override void OnClosed(EventArgs e)
+	{
+		AsyncHelper.Run(_executor.DisposeAsync);
+
+		base.OnClosed(e);
 	}
 
 	private void Setting_Click(object sender, RoutedEventArgs e)
 	{
 		if (_connector.Configure(this))
 		{
-			_connector.Save().Serialize(_connectorFile);
+			_connector.Save().Serialize(_fileSystem, _connectorFile);
 		}
 	}
 
@@ -250,6 +271,9 @@ public partial class MainWindow
 
 ## 示例的主要功能
 
+> [!IMPORTANT]
+> 所有使用文件系统的类（[CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry)、[LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive)、[SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)）都需要在构造函数中传入 `IFileSystem` 实例。标准实现可以使用 `Paths.FileSystem`。`CsvEntityRegistry` 还需要 `ChannelExecutor` 来同步磁盘访问。序列化方法（`Serialize`、`Deserialize`）也接受 `IFileSystem` 作为参数。
+
 1. **创建存储**：
    - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) 用于保存实体
    - [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) 配置市场数据存储路径
@@ -262,11 +286,11 @@ public partial class MainWindow
 
 3. **图表显示**：
    - 使用 Chart.AddElement 方法将图表元素与订阅关联
-   - 收到新蜡烛后自动更新图表
+   - 收到新K线后自动更新图表
 
 4. **事件处理**：
-   - 订阅 CandleReceived 事件以处理接收到的蜡烛
-   - 所选证券发生变化时取消之前的订阅
+   - 订阅 CandleReceived 事件以处理接收到的K线
+   - 所选交易品种发生变化时取消之前的订阅
 
 ## 扩展功能
 
@@ -305,21 +329,8 @@ private void SetHistoryPeriod(int days)
 }
 ```
 
-### 保存接收到的数据
 
-```cs
-// Method for saving received data
-private void SaveReceivedData()
-{
-	if (_connector.StorageAdapter != null)
-	{
-		// Force save cached data to disk
-		_connector.StorageAdapter.Flush();
-	}
-}
-```
-
-### 进一步处理蜡烛
+### 进一步处理K线
 
 ```cs
 // Extended candle processing with information output

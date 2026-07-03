@@ -197,7 +197,7 @@ protected override void OnStopped()
 
 - 使用现代报价处理器 [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) 和 [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior)
 - 通过同时下买单和卖单在市场中制造价差
-- 仅适用于零仓位，防止积累不必要的风险
+- 仅适用于零持仓，防止积累不必要的风险
 - 支持配置各种报价参数（价格类型、偏移量、最小偏差）
 - 包括报价处理器事件的详细日志记录
 - 在停止策略和创建新处理器时，正确管理资源

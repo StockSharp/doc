@@ -58,7 +58,7 @@ Func<Strategy, decimal> fitness = fitnessProvider.Compile("PnL / (MaxDD + 1)");
 | 平均每笔交易利润 | 每笔交易的平均利润 |
 | AvgWTrades | 平均获利交易 |
 | AvgLTrades | 平均亏损交易 |
-| 最大多头 | 最大多头仓位 |
+| 最大多头 | 最大多头持仓 |
 | 最大空头 | 最大空头头寸 |
 | 最大盈利 | 最大利润 |
 | 最大回撤 | 最大回撤 |

@@ -30,7 +30,9 @@
    // (to disable reconnection when there is no trading normally, for example, at night)
    Connector.Adapter.ReConnectionSettings.WorkingTime = ExchangeBoard.Nasdaq.WorkingTime;
    ```
-2. 要检查连接控制机制的工作原理，您可以关闭互联网连接：
+2. 要检查连接控制机制的工作原理，可以关闭互联网连接：
+
+   ![transactions](../../../images/transactions.png)
 3. 以下是程序日志，显示应用程序最初处于已连接状态，在关闭互联网连接后，应用程序尝试重新连接。在恢复互联网连接后，应用程序连接得以恢复：
 
    ![API 重连日志](../../../images/api_reconnectionlog.png)

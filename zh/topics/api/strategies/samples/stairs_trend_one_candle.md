@@ -1,4 +1,4 @@
-# 一根蜡烛趋势策略
+# 一根K线趋势策略
 
 ## 概览
 
@@ -17,7 +17,7 @@ public class OneCandleTrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **蜡烛类型** - 要使用的蜡烛类型（默认5分钟）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 ## 策略初始化
 
@@ -45,9 +45,9 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-## 加工蜡烛
+## 处理 K线
 
-`ProcessCandle` 方法在每个完成的蜡烛图上被调用，并实现交易逻辑：
+`ProcessCandle` 方法在每个完成的K线上被调用，并实现交易逻辑：
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -76,14 +76,14 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## 交易逻辑
 
-- **买入信号**：当没有多头仓位时出现看涨蜡烛（收盘价高于开盘价）
-- **卖出信号**：当没有做空仓位时出现看跌蜡烛（收盘价低于开盘价）
+- **买入信号**：当没有多头持仓时出现看涨K线（收盘价高于开盘价）
+- **卖出信号**：当没有做空持仓时出现看跌K线（收盘价低于开盘价）
 - 每次新交易时，持仓量按当前持仓数量增加
 
 ## 特征
 
 - 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
-- 该策略仅适用于已完成的蜡烛
+- 该策略仅适用于已完成的K线
 - 该策略使用市价单进行建仓
 - 该策略应用基于单根K线的简单趋势检测逻辑
-- 当图形区域可用时，蜡烛和交易将在图表上显示
+- 当图表区域可用时，K线和交易将在图表上显示

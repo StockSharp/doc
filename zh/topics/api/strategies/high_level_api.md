@@ -6,7 +6,7 @@ StockSharp 提供了一组高级 API，用于简化在交易策略中处理常�
 
 用于处理订阅的高级方法隐藏了管理订阅生命周期和数据处理的复杂性。
 
-### 订阅蜡烛方法
+### 订阅K线方法
 
 你可以使用 [SubscribeCandles](xref:StockSharp.Algo.Strategies.Strategy.SubscribeCandles(System.TimeSpan,System.Boolean,StockSharp.BusinessEntities.Security)) 方法，而不是手动创建订阅和设置事件处理程序：
 
@@ -131,7 +131,7 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 
 ### `Bind` 方法建立了订阅数据与指标之间的连接。当收到新的K线时：
 
-1. 蜡烛会自动发送到指标进行处理
+1. K线会自动发送到指标进行处理
 2. 处理结果会传递给指定的处理器（在示例中，是 `OnProcess` 方法）
 3. 所有同步和状态管理代码对开发者来说都是隐藏的
 
@@ -150,7 +150,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 ```
 
 这显著简化了代码并使其更易读，因为开发者不需要：
-- 手动处理收到蜡烛的事件
+- 手动处理收到K线的事件
 - 手动将数据传递给指标
 - 从指标结果中提取数值
 
@@ -181,9 +181,9 @@ if (area != null)
 }
 ```
 
-#### 绘制蜡烛方法
+#### 绘制K线方法
 
-[DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) 方法会自动将蜡烛订阅链接到图表蜡烛显示元素：
+[DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) 方法会自动将K线订阅链接到图表K线显示元素：
 
 ```cs
 // Create a chart element for displaying candles
@@ -284,7 +284,7 @@ DrawIndicator(secondArea, rsi);
 
 当接收到新数据时，系统会自动更新图表，使开发者可以避免关注技术可视化的细节。
 
-## 职位保护
+## 持仓保护
 
 ### 启动保护方法
 
@@ -299,7 +299,7 @@ StartProtection(TakeValue, StopValue);
 - 跟踪价格变化
 - 当达到止盈或止损水平时，自动创建平仓订单
 - 支持多种类型的测量单位（绝对值、百分比、点）
-- 可以使用跟踪止损进行自适应仓位保护
+- 可以使用跟踪止损进行自适应持仓保护
 
 带有附加参数的示例：
 
@@ -446,4 +446,4 @@ public class SmaStrategy : Strategy
 
 StockSharp 中的高层 API 显著简化了交易策略的开发，使开发者能够专注于交易逻辑而不是技术细节。对于不需要对数据处理或可视化进行精细调整的典型用例，它尤其有用。
 
-结合策略参数系统、事件模型和仓位保护机制，高层 API 使 StockSharp 成为一个功能强大且便捷的算法交易工具，适合初学者和有经验的开发者。
+结合策略参数系统、事件模型和持仓保护机制，高层 API 使 StockSharp 成为一个功能强大且便捷的算法交易品种，适合初学者和有经验的开发者。

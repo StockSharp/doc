@@ -12,11 +12,11 @@
 
 ## 运作方式
 
-滑移管理器分三个阶段工作：
+滑点管理器分三个阶段工作：
 
 ### 1. 更新市场价格
 
-当收到 [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) 或 [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 时，管理者会保存每个交易工具的最佳买价和卖价。
+当收到 [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) 或 [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) 时，管理者会保存每个交易品种的最佳买价和卖价。
 
 ### 2. 保存计划价格
 

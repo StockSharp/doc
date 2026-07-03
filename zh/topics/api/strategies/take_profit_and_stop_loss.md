@@ -1,10 +1,10 @@
-# 职位保护
+# 持仓保护
 
 ## 介绍
 
 这种对SMA策略的修改实现了使用本地保护控制器保护未平仓头寸的机制。这种方法允许灵活的风险管理，并在满足某些条件时自动平仓。
 
-## 职位保护的关键组成部分
+## 持仓保护的关键组成部分
 
 ### 保护控制器
 
@@ -20,12 +20,12 @@ private IProtectivePositionController _posController;
 // while IProtectivePositionController is responsible for a specific position.
 ```
 
-- `_protectiveController`：用于管理所有仓位保护的主控制器。
+- `_protectiveController`：用于管理所有持仓保护的主控制器。
 - `_posController`：特定位置的控制器。
 
 ### 保护初始化
 
-在开设新仓位或修改现有仓位时，将初始化保护控制器：
+在开设新持仓或修改现有持仓时，将初始化保护控制器：
 
 ```cs
 // Initialization of the protective controller for a new position
@@ -70,7 +70,7 @@ if (info is not null)
 
 ### 检查保护的激活条件
 
-在处理新数据的方法中（e.g.，当接收到新蜡烛时），会检查启动保护性订单的条件：
+在处理新数据的方法中（e.g.，当接收到新K线时），会检查启动保护性订单的条件：
 
 ```cs
 // Checking protection activation conditions in the ProcessCandle method
@@ -109,7 +109,7 @@ private void ActiveProtection((bool isTake, Sides side, decimal price, decimal v
 ### 服务器端止损单的优势
 
 1. 止损单（止损和止盈）会直接发送给经纪商。
-2. 经纪人独立监控止损条件的达成情况。
+2. 经纪商独立监控止损条件的达成情况。
 3. 当触发止损时，经纪商会自动下达市价单或限价单。
 
 ### 本地方法的优势
@@ -119,7 +119,7 @@ private void ActiveProtection((bool isTake, Sides side, decimal price, decimal v
 3. **反应速度**：对不断变化的市场条件可能有更快的反应。
 4. **适应性**：能够根据市场数据或策略逻辑动态调整保护级别。
 5. **独立于经纪商/交易所的实现**：本地方法的工作方式相同，无论经纪商或交易所是否支持所有必要类型的保护性订单。
-6. **在历史数据上测试**：能够在历史数据上完全测试带有仓位保护的策略，而服务器端止损无法实现这一点。
+6. **在历史数据上测试**：能够在历史数据上完全测试带有持仓保护的策略，而服务器端止损无法实现这一点。
 
 ### 地方方法的缺点
 

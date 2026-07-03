@@ -1,9 +1,9 @@
 # 参考资料
 
-**[S\#](../api.md) 相关资料：**
+**[S#](../api.md) 相关资料：**
 
 - 进阶培训 \- [StockSharp Education](https://stocksharp.com/edu/)。
-- S\# 核心源代码 \- [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp)。
+- S# 核心源代码 \- [GitHub/StockSharp](https://github.com/StockSharp/StockSharp)。
 - 免费和付费产品 \- [Shell](https://stocksharp.com/store/)。
 - YouTube 频道 \- [StockSharp YouTube](https://www.youtube.com/@stocksharp)。
 - Facebook \- [StockSharp Facebook](https://facebook.com/stocksharp)。

@@ -1,6 +1,6 @@
-# 适配器初始化 DukasCopy
+# DukasCopy 适配器初始化
 
-下面的代码演示了如何初始化 [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示了如何初始化 [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator);

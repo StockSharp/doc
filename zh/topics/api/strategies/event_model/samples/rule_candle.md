@@ -1,8 +1,8 @@
-# 单支蜡烛的规则
+# 单支K线的规则
 
 ## 概览
 
-`SimpleCandleRulesStrategy` 是一个策略，展示了在 StockSharp 中使用蜡烛规则的方法。它跟踪蜡烛的成交量，并在满足特定条件时记录信息。
+`SimpleCandleRulesStrategy` 是一个策略，展示了在 StockSharp 中使用K线规则的方法。它跟踪K线的成交量，并在满足特定条件时记录信息。
 
 ## 主要组件
 
@@ -18,7 +18,7 @@ public class SimpleCandleRulesStrategy : Strategy
 策略开始时调用：
 
 - 初始化对5分钟K线的订阅
-- 建立处理蜡烛的规则
+- 建立处理K线的规则
 
 ```cs
 // OnStarted method
@@ -62,16 +62,16 @@ protected override void OnStarted2(DateTime time)
 
 ## 逻辑
 
-- 该策略使用5分钟蜡烛图
-- 当每根蜡烛开始形成时，一条规则就被建立
-- 当蜡烛的总成交量超过10%（使用百分比值）时，该规则会触发
-- 当规则被触发时，关于蜡烛和计数器的信息会被添加到日志中
+- 该策略使用5分钟K线
+- 当每根K线开始形成时，一条规则就被建立
+- 当K线的总成交量超过10%（使用百分比值）时，该规则会触发
+- 当规则被触发时，关于K线和计数器的信息会被添加到日志中
 - 在第一次触发后，规则由于 `Once()` 方法而停止工作
 
 ## 特征
 
 - 演示 `WhenCandlesStarted` 和 `WhenTotalVolumeMore` 规则的使用
-- 使用蜡烛订阅机制
+- 使用K线订阅机制
 - 显示了通过 `"10%".ToUnit()` 创建百分比值的示例
 - 展示在策略中使用 `LogInfo` 方法记录信息的示例
 - 包含用于从逐笔数据构建K线的注释代码

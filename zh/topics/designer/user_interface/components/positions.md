@@ -4,7 +4,7 @@
 
 ![Designer Chart Position 00](../../../../images/designer_chart_position_00.png)
 
-**Positions** 组件以表格形式显示策略所用证券的持仓。
+**Positions** 组件以表格形式显示策略所用交易品种的持仓。
 
 ![Designer Table Position 00](../../../../images/designer_table_position_00.png)
 

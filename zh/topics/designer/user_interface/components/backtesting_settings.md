@@ -9,7 +9,7 @@
 - **Market data** – 数据存储。
 - **Storage format** – 存储格式。
 - **Data type** – 数据类型。
-- **Time frame** – 使用指定时间周期的蜡烛。
+- **Time frame** – 使用指定时间周期的K线。
 - **Maximum quote volume in generated depth** – 所生成市场深度中的最大报价数量。
 - **Interval** – 时间间隔。
 - **Unrealized P\/L** – 未实现盈亏的重新计算间隔。
@@ -47,10 +47,10 @@
 
 **Diagram parameters**
 
-- **Security** \- 证券。
+- **Security** \- 交易品种。
 - **Portfolio** \- 投资组合。
 
-如果未填写 **Diagram parameters**，仿真时将使用 **Emulation** 选项卡的 **Instrument** 字段中指定的证券，并默认使用测试投资组合作为投资组合。
+如果未填写 **Diagram parameters**，仿真时将使用 **Emulation** 选项卡的 **Instrument** 字段中指定的交易品种，并默认使用测试投资组合作为投资组合。
 
 ## 推荐内容
 

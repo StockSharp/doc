@@ -14,7 +14,7 @@ StockSharp 提供了一个强大的基础设施，用于创建、测试和运行
 
 - [策略中的交易操作](strategies/trading_operations.md) - 关于在策略中执行交易操作的指南。描述了创建和发送订单、平仓以及监控其状态的方法。
 
-- [仓位保护](strategies/take_profit_and_stop_loss.md) - 描述使用止盈和止损保护未平仓仓位的机制。研究仓位保护的本地和服务器方法。
+- [持仓保护](strategies/take_profit_and_stop_loss.md) - 描述使用止盈和止损保护未平仓持仓的机制。研究持仓保护的本地和服务器方法。
 
 - [策略参数](strategies/parameters.md) - 通过 [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) 使用策略参数的指南。描述了如何创建可配置参数、设置它们在图形界面中的显示以及在优化中使用它们。
 

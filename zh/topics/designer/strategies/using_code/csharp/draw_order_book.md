@@ -15,7 +15,7 @@ public override IEnumerable<IOrderBookSource> OrderBookSources
 	=> new[] { _bookSource };
 ```
 
-这样，策略便会向外部代码（本例中为[订单簿](../../../user_interface/components/order_book.md)面板）说明可用的订单簿数据源。如果策略使用多个订单簿，例如不同证券的订单簿，或经过不同方式处理的订单簿（如[稀疏订单簿](../../using_visual_designer/elements/market_depths/sparse_order_book.md)），则可以提供多个数据源。
+这样，策略便会向外部代码（本例中为[订单簿](../../../user_interface/components/order_book.md)面板）说明可用的订单簿数据源。如果策略使用多个订单簿，例如不同交易品种的订单簿，或经过不同方式处理的订单簿（如[稀疏订单簿](../../using_visual_designer/elements/market_depths/sparse_order_book.md)），则可以提供多个数据源。
 
 3. 在策略代码中添加订单簿订阅的初始化。对于 SmaStrategy，请将其添加到 [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted) 方法末尾：
 

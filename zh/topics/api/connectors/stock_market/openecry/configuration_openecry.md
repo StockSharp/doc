@@ -1,4 +1,4 @@
-# 配置 OpenECry
+# OpenECry 配置
 
 交互机制如图所示：
 

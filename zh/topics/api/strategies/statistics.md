@@ -42,10 +42,10 @@ StockSharp 中的 [IStatisticManager](xref:StockSharp.Algo.Statistics.IStatistic
 - 平均亏损交易
 - 每月/每日交易次数
 
-### 职位统计
+### 持仓统计
 
-- 最大多头仓位
-- 最大空头仓位
+- 最大多头持仓
+- 最大空头持仓
 
 ### 序统计量
 
@@ -62,7 +62,7 @@ StockSharp 中的 [IStatisticManager](xref:StockSharp.Algo.Statistics.IStatistic
 
 - `PnL`：盈亏值
 - `Commission`：已支付总佣金
-- `Slippage`：总滑移
+- `Slippage`：总滑点
 - `Latency`：平均订单操作延迟
 
 ## 可视化
@@ -133,7 +133,7 @@ strategy.PositionChanged += () =>
 - [IStatisticParameter](xref:StockSharp.Algo.Statistics.IStatisticParameter)：所有统计参数的基础接口
 - [IPnLStatisticParameter](xref:StockSharp.Algo.Statistics.IPnLStatisticParameter)：与利润/损失相关的参数
 - [ITradeStatisticParameter](xref:StockSharp.Algo.Statistics.ITradeStatisticParameter)：与交易相关的参数
-- [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter)：与职位相关的参数
+- [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter)：与持仓相关的参数
 - [IOrderStatisticParameter](xref:StockSharp.Algo.Statistics.IOrderStatisticParameter)：与订单相关的参数
 
 这里有一个自定义统计参数的简单例子：

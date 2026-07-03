@@ -6,7 +6,7 @@
 
 ## 输入端口
 
-- **Security**：要修改其持仓的证券。
+- **Security**：要修改其持仓的交易品种。
 - **Trigger**：激活持仓修改操作的信号。
 - **Portfolio**：执行操作的投资组合。
 - **Volume**（可选）：用于“Increase”和“Decrease”操作的数量。“Reverse”和“Close Position”操作不使用此值。

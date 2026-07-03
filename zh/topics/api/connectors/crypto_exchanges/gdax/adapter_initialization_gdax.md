@@ -1,9 +1,9 @@
 > [!NOTE]
 > GDAX 已被更名为 Coinbase Pro，后来又更名为 Coinbase 高级交易。此文档为历史参考而保留。
 
-# 适配器初始化 GDAX
+# GDAX 适配器初始化
 
-下面的代码演示了如何初始化 [GdaxMessageAdapter](xref:StockSharp.Gdax.GdaxMessageAdapter) 并将其发送到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [GdaxMessageAdapter](xref:StockSharp.Gdax.GdaxMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 			Connector Connector = new Connector();				

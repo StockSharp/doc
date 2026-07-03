@@ -1,15 +1,15 @@
-# 蜡烛图
+# K线
 
-要导入蜡烛图，请在应用程序主菜单中选择 **Import \=\> Candles**。
+要导入K线，请在应用程序主菜单中选择 **Import \=\> Candles**。
 
 ![hydra import candles](../../../images/hydra_import_candles.png)
 
-## 蜡烛图导入过程
+## K线导入过程
 
 1. **Common**
    - **Data type** — 导入的数据类型。
    - **Filename** — CSV 文件的完整路径。
-   - **Data directory** — 保存最终 [S\#](../../api.md) 文件的文件夹。
+   - **Data directory** — 保存最终 [S#](../../api.md) 文件的文件夹。
    - **File mask** — 扫描目录时使用的文件掩码，例如 `candle_*.csv`。
    - **Column separator** — 列分隔符。制表符使用 TAB 表示。
    - **Indent from the beginning** — 从文件开头跳过的行数，用于忽略包含元信息的行。
@@ -19,8 +19,8 @@
    **Instruments**
    - **Extended information** — 将导入的扩展字段保存到扩展信息存储中。
    - **Duplicates** — 如果重复的交易品种已存在，是否对其进行更新。
-2. 配置 [S\#](../../api.md) 字段的导入参数。
-   - **S\# field** — S\# 字段的值，例如 **Security、Board** 等。
+2. 配置 [S#](../../api.md) 字段的导入参数。
+   - **S# field** — S# 字段的值，例如 **Security、Board** 等。
    - **Associations** — 根据需要，将文件中的列值映射到 StockSharp 类型。
    - **Format** — 数据格式，通常用于导入日期和时间值，详见[逐笔成交](ticks.md)。
    - **Use** — 导入时是否使用该数据。

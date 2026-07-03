@@ -4,11 +4,11 @@
 
 ![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
-在 [Variable](../elements/data_sources/variable.md) 模块中选择 **Instrument** 数据类型。如果未指定证券，但已设置 **Common** 组中的 **Parameters** 标志，则会从策略中获取证券，再将其传递给 [Position](../elements/positions/current.md)。
+在 [Variable](../elements/data_sources/variable.md) 模块中选择 **Instrument** 数据类型。如果未指定交易品种，但已设置 **Common** 组中的 **Parameters** 标志，则会从策略中获取交易品种，再将其传递给 [Position](../elements/positions/current.md)。
 
 [Position](../elements/positions/current.md) 模块同样没有指定持仓属性，但设置了 **Common** 组中的 **Parameters** 标志。这意味着会针对策略设置中指定的投资组合获取持仓。
 
-传入证券并且持仓发生变化后，首先使用单参数数学函数（abs(pos)）计算绝对值，并向保存数值 2 的 Variable 模块发送信号。该模块保存系数 2，收到信号后通过输出参数传递此值。随后使用双参数数学公式（abs(pos) \* 2）计算二者的乘积。接下来，使用复合模块 Conditional operator（pos \=\= 0 ? 1 : pos）确定实际所需数量。该数量可能不同于当前持仓值乘以 2，例如策略刚启动且尚无订单成交时。在这种情况下，Conditional statement 元素会返回默认值 1。由于一个输出参数只能与另一个元素的输入参数连接一次，为了同时将同一个值传递给公式和条件运算符，还需要添加一个 **Combination** 模块。
+传入交易品种并且持仓发生变化后，首先使用单参数数学函数（abs(pos)）计算绝对值，并向保存数值 2 的 Variable 模块发送信号。该模块保存系数 2，收到信号后通过输出参数传递此值。随后使用双参数数学公式（abs(pos) \* 2）计算二者的乘积。接下来，使用复合模块 Conditional operator（pos \=\= 0 ? 1 : pos）确定实际所需数量。该数量可能不同于当前持仓值乘以 2，例如策略刚启动且尚无订单成交时。在这种情况下，Conditional statement 元素会返回默认值 1。由于一个输出参数只能与另一个元素的输入参数连接一次，为了同时将同一个值传递给公式和条件运算符，还需要添加一个 **Combination** 模块。
 
 ## 推荐内容
 

@@ -7,10 +7,26 @@
 - [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) - 时间变更事件到达的间隔。如果使用交易生成器，交易将以此频率生成。默认值为1分钟。
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) - 提交订单的最小延迟值。默认值为 TimeSpan.Zero，这意味着交易所即时接受提交的订单。
 - [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - 如果价格“触及”该水平，则满足订单（这种假设有时过于“乐观”，在实际测试中应关闭）。如果禁用，限价单仅在价格至少“穿过”一步时才会被执行。此选项在除订单日志模式外的所有模式下都可用。默认情况下为禁用。
+- [MarketEmulatorSettings.CandlePrice](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CandlePrice) - 用于订单成交的 K线价格：Middle、Open、High、Low 或 Close。默认值为 Middle。
+- [MarketEmulatorSettings.Failing](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Failing) - 新订单注册失败的百分比。取值范围为 0（无失败）到 100。默认禁用（0）。
+- [MarketEmulatorSettings.InitialOrderId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialOrderId) - 模拟器生成订单标识符时使用的初始编号。
+- [MarketEmulatorSettings.InitialTradeId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialTradeId) - 模拟器生成成交标识符时使用的初始编号。
+- [MarketEmulatorSettings.SpreadSize](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.SpreadSize) - 以价格步长表示的价差大小。从逐笔成交生成订单簿时使用。默认值为 2。
+- [MarketEmulatorSettings.MaxDepth](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MaxDepth) - 从 ticks 生成订单簿时的最大深度。默认值为 5。
+- [MarketEmulatorSettings.PortfolioRecalcInterval](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PortfolioRecalcInterval) - 投资组合数据重新计算间隔。如果等于 TimeSpan.Zero，则不执行重新计算。
+- [MarketEmulatorSettings.ConvertTime](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.ConvertTime) - 将订单和成交时间戳转换为交易所时间。默认禁用。
+- [MarketEmulatorSettings.TimeZone](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.TimeZone) - 交易所时区信息。
+- [MarketEmulatorSettings.PriceLimitOffset](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PriceLimitOffset) - 根据上一笔成交定义下一交易时段最高价和最低价限制的价格偏移。默认值为 40%。
+- [MarketEmulatorSettings.IncreaseDepthVolume](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.IncreaseDepthVolume) - 注册大额订单时向订单簿增加额外数量。默认启用。
+- [MarketEmulatorSettings.CheckTradingState](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradingState) - 检查交易时段状态。默认禁用。
+- [MarketEmulatorSettings.CheckMoney](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckMoney) - 检查资金余额。默认禁用。
+- [MarketEmulatorSettings.CheckShortable](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckShortable) - 检查是否允许做空。默认禁用。
+- [MarketEmulatorSettings.CheckTradableDates](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CheckTradableDates) - 检查加载的日期是否为交易日。默认禁用。
+- [MarketEmulatorSettings.CommissionRules](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CommissionRules) - 佣金计算规则。
 
 ## 市场数据订阅
 
-为了进行正确的策略测试，有必要订阅所需的市场数据类型。即使策略是在蜡烛图上测试的，为了正确的交易模拟，也需要订阅逐笔交易数据：
+为了进行正确的策略测试，有必要订阅所需的市场数据类型。即使策略是在K线上测试的，为了正确的交易模拟，也需要订阅逐笔交易数据：
 
 ```cs
 // Create a subscription to tick trades

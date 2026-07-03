@@ -9,7 +9,7 @@
 输入端口
 
 - **Model** – 计算模型（例如 Black-Scholes）。
-- **Instrument** – 作为标的资产的证券。
+- **Instrument** – 作为标的资产的交易品种。
 - **Volume** \- 成交量的数值。
 - **Position by underlying asset** – 标的资产的持仓。
 - **Flag** – 启动对冲过程的信号（标志）。

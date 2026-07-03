@@ -9,7 +9,7 @@
 1. **支持多种数据源：**详见[连接器](api/connectors.md)。
 2. **可直接在图表上交易**。
 3. **支持任意时间周期**。
-4. **支持 Volume、Tick、Range、PnF 和 Renko 蜡烛图**。
+4. **支持 Volume、Tick、Range、PnF 和 Renko K线**。
 5. **支持聚类图和箱形图**。
 6. **覆盖各类市场：**股票、期货、外汇和比特币。
 

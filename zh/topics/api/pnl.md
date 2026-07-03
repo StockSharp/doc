@@ -51,7 +51,7 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 - **已平仓量** — 已平仓头寸的交易量。
 - **PnL** — 来自此交易的已实现利润。
 
-例如，如果仓位是+2，而来了一个-5合约的交易，那么`ClosedVolume = 2`（仓位中的2个合约被平仓）。
+例如，如果持仓是+2，而来了一个-5合约的交易，那么`ClosedVolume = 2`（持仓中的2个合约被平仓）。
 
 ## 配置数据源
 
@@ -63,7 +63,7 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 | `UseOrderBook` | `false` | 使用订单簿（最佳买/卖价）。 |
 | `UseLevel1` | `false` | 使用 Level1 数据。 |
 | `UseOrderLog` | `false` | 使用订单日志。 |
-| `UseCandles` | `true` | 使用蜡烛图（收盘价）。|
+| `UseCandles` | `true` | 使用K线（收盘价）。|
 
 ## 通过适配器进行集成
 

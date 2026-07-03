@@ -103,7 +103,7 @@
   
 - **结合规则与条件 [MarketRuleHelper.Or](xref:StockSharp.Algo.MarketRuleHelper.Or(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) 规则, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) 规则 **)** / [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) 规则, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) 规则 **)**.
 
-当时间到期 **或** 蜡烛收盘时：
+当时间到期 **或** K线收盘时：
 
   ```cs
   // Create a subscription to candles
@@ -187,7 +187,7 @@
 
 ## 使用规则的示例
 
-### 蜡烛规则
+### K线规则
 
 ```cs
 // Create a subscription to 5-minute candles

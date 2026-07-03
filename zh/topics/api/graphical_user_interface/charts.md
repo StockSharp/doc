@@ -42,7 +42,7 @@
 
 ## 图表区域
 
-[IChartArea](xref:StockSharp.Charting.IChartArea) - 一个绘制图表的区域，作为 [IChartElement](xref:StockSharp.Charting.IChartElement)（指标、蜡烛图等）在图表上渲染的容器，以及图表坐标轴 ([IChartAxis](xref:StockSharp.Charting.IChartAxis))。
+[IChartArea](xref:StockSharp.Charting.IChartArea) - 一个绘制图表的区域，作为 [IChartElement](xref:StockSharp.Charting.IChartElement)（指标、K线等）在图表上渲染的容器，以及图表坐标轴 ([IChartAxis](xref:StockSharp.Charting.IChartAxis))。
 
 **[IChartArea](xref:StockSharp.Charting.IChartArea) 的关键属性**
 
@@ -54,16 +54,16 @@
 
 图表上显示的所有元素都必须实现 [IChartElement](xref:StockSharp.Charting.IChartElement) 接口。在 [S#](../../api.md) 中，以下类实现了该接口：
 
-- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - 用于显示蜡烛图的元素。
+- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - 用于显示K线的元素。
 - [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) - 一个用于显示指示器的元素。
 - [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - 一个用于显示订单的元素。
 - [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) - 一个用于显示交易的元素。
 
-视觉元素的类具有多个用于调整图表外观的属性。您可以调整元素的颜色、线条粗细和样式。例如，使用属性 [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle)，您可以更改K线的外观（蜡烛或条形）。使用属性 [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle)，您可以设置指标线的样式。要将指标显示为柱状图，请使用值 [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram)。属性 [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) 和 [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) 允许开/关图表坐标轴上的标记显示（见图）。
+视觉元素的类具有多个用于调整图表外观的属性。您可以调整元素的颜色、线条粗细和样式。例如，使用属性 [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle)，您可以更改K线的外观（K线或条形）。使用属性 [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle)，您可以设置指标线的样式。要将指标显示为柱状图，请使用值 [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram)。属性 [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) 和 [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) 允许开/关图表坐标轴上的标记显示（见图）。
 
 ## 另请参阅
 
-- [蜡烛图](charts/candle_chart.md)
+- [K线](charts/candle_chart.md)
 - [图表面板](charts/candle_chart_panel.md)
 - [权益曲线图](charts/equity_curve_chart.md)
 - [箱形图](charts/box_chart.md)

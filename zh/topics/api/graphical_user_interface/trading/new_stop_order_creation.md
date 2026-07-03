@@ -7,7 +7,7 @@
 **主要属性**
 
 - [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) - 投资组合列表。
-- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) - 提供关于仪器信息的供应商。
+- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) - 提供关于交易品种信息的供应商。
 - [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) - 市场数据提供商。
 - [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) - 消息适配器。
 - [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) - 已创建的订单。

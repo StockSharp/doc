@@ -6,7 +6,7 @@
 
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 由以下部分组成：
 
-1. 一个文本字段，用于输入仪器的代码（或编号）。输入后，列表将根据输入的子字符串进行过滤。
+1. 一个文本字段，用于输入交易品种的代码（或编号）。输入后，列表将根据输入的子字符串进行过滤。
 2. 用于按类型筛选工具的特殊 [SecurityTypeComboBox](xref:StockSharp.Xaml.SecurityTypeComboBox) 下拉框。
 3. 显示工具列表的 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 表。
 
@@ -18,11 +18,11 @@
 - [SecurityPicker.Title](xref:StockSharp.Xaml.SecurityPicker.Title) - 显示在组件顶部的标题。
 - [SecurityPicker.Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) - 乐器清单。
 - [SecurityPicker.SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) - 所选乐器。
-- [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) - 所选工具列表。
-- [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) - 筛选过的仪器列表。
+- [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) - 所选交易品种列表。
+- [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) - 筛选过的交易品种列表。
 - [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) - 隐藏乐器的列表。
 - [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) - 所选的工具类型。
-- [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) - 关于仪器信息的提供者。
+- [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) - 关于交易品种信息的提供者。
 - [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) - 市场数据提供商。
 
 下面是代码片段及其用法，摘自示例 *Samples/InteractiveBrokers/SampleIB*。

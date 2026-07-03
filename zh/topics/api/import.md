@@ -1,6 +1,6 @@
 # 数据导入
 
-[S\#](../api.md) 实现了一个从 CSV 文件导入市场数据的子系统。主要类位于 `StockSharp.Algo.Import` 命名空间中。
+[S#](../api.md) 实现了一个从 CSV 文件导入市场数据的子系统。主要类位于 `StockSharp.Algo.Import` 命名空间中。
 
 ## CsvParser — 基础解析器
 
@@ -35,7 +35,7 @@ await foreach (var msg in parser.Parse(stream))
 
 - **构造函数**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** — 执行导入并返回 `ValueTask<(int count, DateTime? lastTime)>`。
-- **UpdateDuplicateSecurities** — 是否更新重复的证券（默认 `false`）。
+- **UpdateDuplicateSecurities** — 是否更新重复的交易品种（默认 `false`）。
 - **SecurityUpdated** — 当工具被更新时触发的事件。
 
 ```cs
@@ -99,7 +99,7 @@ sideField.Values.Add(new FieldMappingValue
 
 - **CreateFields(DataType)** — 返回指定数据类型的 [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) 列表。
 
-支持的数据类型：ticks（滴答）、candles（蜡烛图）、order books（订单簿）、Level1（一阶行情）、order log（订单日志）、transactions（交易）、instruments（工具）、news（新闻）和positions（仓位）。
+支持的数据类型：ticks（逐笔成交）、candles（K线）、order books（订单簿）、Level1（Level1 数据）、order log（订单日志）、transactions（交易）、instruments（交易品种）、news（新闻）和 positions（持仓）。
 
 ## 导入设置 — 导入设置
 
@@ -112,7 +112,7 @@ sideField.Values.Add(new FieldMappingValue
 - **ColumnSeparator** — 列分隔符。
 - **SkipFromHeader** — 要跳过的行数。
 - **SelectedFields** — 选择导入的字段。
-- **UpdateDuplicateSecurities** — 是否更新重复的证券。
+- **UpdateDuplicateSecurities** — 是否更新重复的交易品种。
 
 辅助方法：
 

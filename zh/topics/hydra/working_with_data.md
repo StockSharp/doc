@@ -5,5 +5,5 @@
 程序支持以下操作：
 
 - [查看和导出](working_with_data/view_and_export.md)
-- [生成蜡烛图](working_with_data/candles_generation.md)
+- [生成K线](working_with_data/candles_generation.md)
 - [导出数据](working_with_data/export_data.md)

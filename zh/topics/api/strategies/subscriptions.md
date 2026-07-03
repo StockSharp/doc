@@ -119,7 +119,7 @@ Connector
 Connector.Subscribe(subscription);
 ```
 
-在上面的例子中，创建了一个规则，在接收到每个完成的蜡烛时将调用 `ProcessCandle` 方法。
+在上面的例子中，创建了一个规则，在接收到每个完成的K线时将调用 `ProcessCandle` 方法。
 
 ## 请求历史数据
 

@@ -1,158 +1,469 @@
-# 优化
+# ????
 
-为了优化[回测](historical_data.md)过程，可以使用基于多线程的并行计算。在具有多个核心或处理器的计算机上，由于多个操作的并发执行，这将减少总体测试时间。
+## ??
 
-> [!CAUTION]
-> 使用多个线程会增加内存消耗（大约与创建的线程数量相同，如果每个线程使用其在历史中的时间范围）。因此，在内存不足的情况下使用并行测试，将无法显著提高性能，甚至可能降低性能。
+StockSharp ??????????????????????????????????????????????????????????????????????????????????????????
 
-## 在多个线程中测试移动平均线策略的示例
+??????????
 
-1. 以[历史数据](historical_data.md) 测试部分中描述的 SampleHistoryTesting 示例为基础。该示例是一个经过修改的常规测试，用于通过拟合移动平均长度的最优值进行优化测试：![示例历史测试并行](../../../images/sample_history_test_parallel.png)
-2. 创建几个移动平均线长度的设置（第一个值负责最长的长度，第二个值负责最短的长度，第三个值负责权益曲线的颜色）：
+- **Brute force** -- `BruteForceOptimizer` ??????????????????????
+- **Genetic algorithm** -- `GeneticOptimizer` ??????????????????????????????
 
-   ```cs
-   var periods = new[]
-   {
-   	new Tuple<int, int, Color>(80, 10, Colors.DarkGreen),
-   	new Tuple<int, int, Color>(70, 8, Colors.Red),
-   	new Tuple<int, int, Color>(60, 6, Colors.DarkBlue)
-   };
-   ```
-3. 创建存储、工具和消息的实例，以设置 Level1 和投资组合的值：
+????????? `BaseOptimizer`??????????????????????? `IAsyncEnumerable` ?????
 
-   ```cs
-   					
-   // storage to historical data
-   var storageRegistry = new StorageRegistry
-   {
-   	// set historical path
-   	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
-   };
-   var timeFrame = TimeSpan.FromMinutes(5);
-   // create test security
-   var security = new Security
-   {
-   	Id = "ESM2@NYSE", // sec id has the same name as folder with historical data
-   	Code = "ESM2",
-   	Name = "ES-12.12",
-   	Board = ExchangeBoard.Nyse,
-   };
-   var startTime = new DateTime(2012, 10, 1);
-   var stopTime = new DateTime(2012, 10, 31);
-   var level1Info = new Level1ChangeMessage
-   {
-   	SecurityId = security.ToSecurityId(),
-   	ServerTime = startTime,
-   }
-   .TryAdd(Level1Fields.PriceStep, 10m)
-   .TryAdd(Level1Fields.StepPrice, 6m)
-   .TryAdd(Level1Fields.MinPrice, 10m)
-   .TryAdd(Level1Fields.MaxPrice, 1000000m)
-   .TryAdd(Level1Fields.MarginBuy, 10000m)
-   .TryAdd(Level1Fields.MarginSell, 10000m);
-   // test portfolio
-   var portfolio = new Portfolio
-   {
-   	Name = "test account",
-   	BeginValue = 1000000,
-   };
-   ```
-4. 创建一个统一的连接器 [BatchEmulation](xref:StockSharp.Algo.Strategies.Testing.BatchEmulation)，其中将包含下一步创建的所有 [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector)：
+## ????
 
-   ```cs
-   // create backtesting connector
-   var batchEmulation = new BatchEmulation(new[] { security }, new[] { portfolio }, storageRegistry)
-   {
-   	EmulationSettings =
-   	{
-   		MarketTimeChangedInterval = timeFrame,
-   		StartTime = startTime,
-   		StopTime = stopTime,
-   		// count of parallel testing strategies
-   		BatchSize = periods.Length,
-   	}
-   };
-   ```
-5. 接下来，执行对统一网关和连接器事件的订阅，配置测试参数，并为每个周期创建策略。
+### ??????????
 
-   ```cs
-   // handle historical time for update ProgressBar
-   batchEmulation.ProgressChanged += (curr, total) => this.GuiAsync(() => TestingProcess.Value = total);
-   batchEmulation.StateChanged += (oldState, newState) =>
-   {
-   	if (batchEmulation.State != EmulationStates.Stopped)
-   		return;
-   	this.GuiAsync(() =>
-   	{
-   		if (batchEmulation.IsFinished)
-   		{
-   			TestingProcess.Value = TestingProcess.Maximum;
-   			MessageBox.Show(this, LocalizedStrings.Str3024.Put(DateTime.Now - _startEmulationTime));
-   		}
-   		else
-   			MessageBox.Show(this, LocalizedStrings.cancelled);
-   	});
-   };
-   // get emulation connector
-   var connector = batchEmulation.EmulationConnector;
-   logManager.Sources.Add(connector);
-   connector.SecurityReceived += (sub, s) =>
-   {
-   	if (s != security)
-   		return;
-   	// fill level1 values
-   	connector.SendInMessage(level1Info);
-   	connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
-   	{
-   		IsSubscribe = true,
-   		Generator = new RandomWalkTradeGenerator(new SecurityId { SecurityCode = security.Code })
-   		{
-   			Interval = TimeSpan.FromSeconds(1),
-   			MaxVolume = maxVolume,
-   			MaxPriceStepCount = 3,	
-   			GenerateOriginSide = true,
-   			MinVolume = minVolume,
-   			RandomArrayLength = 99,
-   		}
-   	});				
-   };
-   TestingProcess.Maximum = 100;
-   TestingProcess.Value = 0;
-   _startEmulationTime = DateTime.Now;
-   var strategies = periods
-   	.Select(period =>
-   	{
-   		...
-       
-   		// create strategy based SMA
-   		var strategy = new SmaStrategy(series, new SimpleMovingAverage { Length = period.Item1 }, new SimpleMovingAverage { Length = period.Item2 })
-   		{
-   			Volume = 1,
-   			Security = security,
-   			Portfolio = portfolio,
-   			Connector = connector,
-   			// by default interval is 1 min,
-   			// it is excessively for time range with several months
-   			UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
-   		};
-   		...
-       var curveItems = Curve.CreateCurve(LocalizedStrings.Str3026Params.Put(period.Item1, period.Item2), period.Item3, DrawStyles.Line);
-   		strategy.PnLChanged += () =>
-   		{
-   			var data = new EquityData
-   			{
-   				Time = strategy.CurrentTime,
-   				Value = strategy.PnL,
-   			};
-   			this.GuiAsync(() => curveItems.Add(data));
-   		};
-   		Stat.AddStrategies(new[] { strategy });
-   		return strategy;
-   	});
-   ```
-6. 测试开始：
+?????????? `StrategyParam<T>` ???????????????`SetOptimize(from, to, step)` ????????????`SetCanOptimize(true)` ?????????
 
-   ```cs
-   // start emulation
-   batchEmulation.Start(strategies, periods.Length);
-   ```
+```csharp
+class SmaStrategy : Strategy
+{
+    private bool? _isShortLessThenLong;
+
+    public SmaStrategy()
+    {
+        _longSma = Param(nameof(LongSma), 80)
+            .SetCanOptimize(true)
+            .SetOptimize(50, 100, 5);      // from 50 to 100 with a step of 5
+
+        _shortSma = Param(nameof(ShortSma), 30)
+            .SetCanOptimize(true)
+            .SetOptimize(20, 40, 1);        // from 20 to 40 with a step of 1
+
+        _candleTimeFrame = Param<TimeSpan?>(nameof(CandleTimeFrame))
+            .SetCanOptimize(true)
+            .SetOptimize(
+                TimeSpan.FromMinutes(5),    // from 5 minutes
+                TimeSpan.FromMinutes(15),   // to 15 minutes
+                TimeSpan.FromMinutes(5));   // with a step of 5 minutes
+
+        _candleType = Param(nameof(CandleType),
+            TimeSpan.FromMinutes(1).TimeFrame()).SetRequired();
+    }
+
+    private readonly StrategyParam<int> _longSma;
+    public int LongSma
+    {
+        get => _longSma.Value;
+        set => _longSma.Value = value;
+    }
+
+    private readonly StrategyParam<int> _shortSma;
+    public int ShortSma
+    {
+        get => _shortSma.Value;
+        set => _shortSma.Value = value;
+    }
+
+    private readonly StrategyParam<TimeSpan?> _candleTimeFrame;
+    public TimeSpan? CandleTimeFrame
+    {
+        get => _candleTimeFrame.Value;
+        set => _candleTimeFrame.Value = value;
+    }
+
+    private readonly StrategyParam<DataType> _candleType;
+    public DataType CandleType
+    {
+        get => _candleType.Value;
+        set => _candleType.Value = value;
+    }
+
+    protected override void OnStarted2(DateTime time)
+    {
+        base.OnStarted2(time);
+
+        var dt = CandleTimeFrame is null
+            ? CandleType
+            : DataType.Create(CandleType.MessageType, CandleTimeFrame);
+
+        var subscription = new Subscription(dt, Security)
+        {
+            MarketData =
+            {
+                IsFinishedOnly = true,
+            }
+        };
+
+        var longSma = new SMA { Length = LongSma };
+        var shortSma = new SMA { Length = ShortSma };
+
+        SubscribeCandles(subscription)
+            .Bind(longSma, shortSma, OnProcess)
+            .Start();
+    }
+
+    private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
+    {
+        if (candle.State != CandleStates.Finished)
+            return;
+
+        var isShortLessThenLong = shortValue < longValue;
+
+        if (_isShortLessThenLong == null)
+        {
+            _isShortLessThenLong = isShortLessThenLong;
+        }
+        else if (_isShortLessThenLong != isShortLessThenLong)
+        {
+            var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
+            var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
+            var price = candle.ClosePrice;
+
+            if (direction == Sides.Buy)
+                BuyLimit(price, volume);
+            else
+                SellLimit(price, volume);
+
+            _isShortLessThenLong = isShortLessThenLong;
+        }
+    }
+
+    protected override void OnReseted()
+    {
+        base.OnReseted();
+        _isShortLessThenLong = null;
+    }
+}
+```
+
+### ???????
+
+??????????????????`decimal`?`TimeSpan`??????? `DataType` ????????????????????????????????
+
+```csharp
+_candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
+    .SetCanOptimize(true)
+    .SetOptimizeValues(new[]
+    {
+        TimeSpan.FromMinutes(5).TimeFrame(),
+        TimeSpan.FromMinutes(15).TimeFrame(),
+        TimeSpan.FromMinutes(30).TimeFrame(),
+    });
+```
+
+## Brute force ??
+
+Brute force ??????????????????????????????????????????????????????
+
+### ????????
+
+?? `BruteForceOptimizer` ?????????????????????????????????????????????????????????
+
+```csharp
+// Instrument and portfolio.
+var security = new Security
+{
+    Id = "AAPL@NASDAQ",
+    PriceStep = 0.01m,
+};
+
+var portfolio = Portfolio.CreateSimulator();
+
+// Historical data storage.
+var storageRegistry = new StorageRegistry
+{
+    DefaultDrive = new LocalMarketDataDrive(folder)
+};
+
+// Create the optimizer.
+var optimizer = new BruteForceOptimizer(
+    new CollectionSecurityProvider(new[] { security }),
+    new CollectionPortfolioProvider(new[] { portfolio }),
+    storageRegistry);
+
+// Configure emulation parameters.
+var settings = optimizer.EmulationSettings;
+settings.MaxIterations = 100;                          // maximum iterations (0 = unlimited)
+settings.CommissionRules = new[]                       // commission
+{
+    new CommissionTradeRule { Value = 0.01m },
+};
+// settings.BatchSize = 8;                             // number of parallel threads
+                                                       // default = CPU * 2
+
+// Cache market data between iterations to speed up optimization.
+optimizer.AdapterCache = new();
+```
+
+### ?? brute force ??
+
+?????????????????? `ToBruteForce` ??????????? `RunAsync` ???????????????????????????
+
+```csharp
+// Base strategy with optimization ranges.
+var strategy = new SmaStrategy
+{
+    Volume = 1,
+    Security = security,
+    Portfolio = portfolio,
+};
+
+// Select parameters to optimize.
+var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
+var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
+var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
+
+var optimizeParams = new IStrategyParam[] { longParam, shortParam, tfParam };
+
+// Generate all parameter combinations.
+var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
+
+// Run optimization.
+var startTime = new DateTime(2020, 1, 1);
+var stopTime = new DateTime(2020, 12, 31);
+var cts = new CancellationTokenSource();
+
+await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
+{
+    // s is the strategy with results after backtesting.
+    Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
+                      $"ShortSma={s.Parameters["ShortSma"].Value}");
+}
+```
+
+### ????
+
+???????????????????????????????????????????
+
+```csharp
+var randomCount = 50; // number of random combinations
+
+var strategies = strategy.ToBruteForceRandom(
+    optimizeParams,
+    randomCount,
+    out _,
+    out var totalCount);
+
+await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
+{
+    Console.WriteLine($"PnL={s.PnL}");
+}
+```
+
+## Genetic ??
+
+?????????????????????????????????????????????????????????????????????? brute force ????
+
+### ????????
+
+?? `GeneticOptimizer` ???? brute force ?????????????????????
+
+```csharp
+var optimizer = new GeneticOptimizer(
+    new CollectionSecurityProvider(new[] { security }),
+    new CollectionPortfolioProvider(new[] { portfolio }),
+    storageRegistry,
+    Paths.FileSystem);    // file system for the fitness formula
+
+optimizer.AdapterCache = new();
+
+// Configure the genetic algorithm.
+optimizer.Settings.Population = 8;            // population size
+optimizer.Settings.PopulationMax = 16;        // maximum population size
+optimizer.Settings.GenerationsMax = 20;       // maximum generations
+optimizer.Settings.GenerationsStagnation = 5; // stop after N generations without improvement
+optimizer.Settings.MutationProbability = 0.1m;
+optimizer.Settings.CrossoverProbability = 0.75m;
+optimizer.Settings.Fitness = "PnL";           // fitness formula (PnL by default)
+
+optimizer.EmulationSettings.MaxIterations = 100;
+```
+
+### ??????
+
+???????????????????
+
+- `PopulationSize` - ?????????
+- `Iterations` - ?????
+- `MutationProbability` - ?????
+- `CrossoverProbability` - ?????
+- `Fitness` - ???????????????????
+
+????????????????????????????????????????????????????
+
+### ?????
+
+??????????????????????? PnL????????????????????????Sharpe ????????????????????????
+
+### ?? genetic ??
+
+????????????????????????????????????????????????????
+
+```csharp
+var strategy = new SmaStrategy
+{
+    Volume = 1,
+    Security = security,
+    Portfolio = portfolio,
+};
+
+// Prepare parameters for the genetic optimizer.
+var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
+var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
+var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
+
+// ToGeneticParameters converts strategy parameters to the genetic optimizer format.
+// For parameters with a discrete set of values, such as TimeSpan?, pass an explicit
+// list through a (param, values) tuple:
+var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
+{
+    (tfParam, new[] { TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15) }),
+    (longParam, null),   // null = use the range from SetOptimize
+    (shortParam, null),
+});
+
+// Run optimization.
+var cts = new CancellationTokenSource();
+
+await foreach (var (s, parameters) in optimizer.RunAsync(
+    startTime, stopTime, strategy, geneticParams, cancellationToken: cts.Token))
+{
+    Console.WriteLine($"PnL={s.PnL}");
+}
+```
+
+## ???????
+
+???????????????????????????????????????????????????????????
+
+## ????
+
+??????????????????????????????????????????
+
+```csharp
+optimizer.AdapterCache = new MarketDataStorageCache();
+```
+
+## ?????
+
+???????????????????????? UI????????????????????????????
+
+```csharp
+optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
+{
+    if (progress == 100)
+        Console.WriteLine($"Iteration complete: PnL={strategy.PnL}");
+};
+```
+
+## ?????
+
+????????????????????????????????????
+
+```csharp
+// Pause. Current iterations will finish, new ones will not start.
+optimizer.Pause();
+
+// Resume.
+optimizer.Resume();
+
+// Check state.
+bool isPaused = optimizer.IsPaused;
+```
+
+??????????????????????
+
+```csharp
+cts.Cancel();
+```
+
+## ?????????????
+
+????????????????????????????????????????????
+
+```csharp
+using System;
+using System.Linq;
+using System.Threading;
+
+using StockSharp.Algo;
+using StockSharp.Algo.Storages;
+using StockSharp.Algo.Strategies;
+using StockSharp.Algo.Strategies.Optimization;
+using StockSharp.Algo.Commissions;
+using StockSharp.BusinessEntities;
+using StockSharp.Configuration;
+using StockSharp.Messages;
+
+// Configure the instrument and portfolio.
+var security = new Security
+{
+    Id = "AAPL@NASDAQ",
+    PriceStep = 0.01m,
+};
+
+var portfolio = Portfolio.CreateSimulator();
+
+// Data storage.
+var storageRegistry = new StorageRegistry
+{
+    DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
+};
+
+// Create the optimizer (brute force).
+var optimizer = new BruteForceOptimizer(
+    new CollectionSecurityProvider(new[] { security }),
+    new CollectionPortfolioProvider(new[] { portfolio }),
+    storageRegistry);
+
+optimizer.EmulationSettings.MaxIterations = 100;
+optimizer.EmulationSettings.CommissionRules = new[]
+{
+    new CommissionTradeRule { Value = 0.01m },
+};
+optimizer.AdapterCache = new();
+
+// Configure the strategy.
+var strategy = new SmaStrategy
+{
+    Volume = 1,
+    Security = security,
+    Portfolio = portfolio,
+};
+
+// Parameters to optimize.
+var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
+var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
+var optimizeParams = new IStrategyParam[] { longParam, shortParam };
+
+// Generate combinations.
+var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
+
+Console.WriteLine($"Total iterations: {totalCount}");
+
+// Run optimization.
+var startTime = Paths.HistoryBeginDate;
+var stopTime = Paths.HistoryEndDate;
+var cts = new CancellationTokenSource();
+
+var bestPnL = decimal.MinValue;
+Strategy bestStrategy = null;
+
+await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
+{
+    var pnl = s.PnL;
+    var paramStr = string.Join(", ", parameters.Select(p => $"{p.Id}={p.Value}"));
+    Console.WriteLine($"[{paramStr}] PnL={pnl:F2}");
+
+    if (pnl > bestPnL)
+    {
+        bestPnL = pnl;
+        bestStrategy = s;
+    }
+}
+
+if (bestStrategy != null)
+{
+    Console.WriteLine($"\nBest result: PnL={bestPnL:F2}");
+    foreach (var p in bestStrategy.Parameters)
+        Console.WriteLine($"  {p.Id} = {p.Value}");
+}
+```
+
+## ????
+
+- [??????](historical_data.md)
+- ???`Samples/07_Testing/02_Optimization`

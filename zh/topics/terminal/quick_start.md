@@ -14,7 +14,7 @@
 
 下一步，单击 **Connect** 按钮 ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) 建立连接。
 
-单击图表面板上的 **Add** 按钮 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png)，添加新的图表区域。右键单击图表区域，可以为所需交易品种添加蜡烛图。还可以向图表添加指标、自有成交和订单，并直接从图表登记订单。有关图表操作的详细信息，请参阅[图表](user_interface/components/chart.md)。
+单击图表面板上的 **Add** 按钮 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png)，添加新的图表区域。右键单击图表区域，可以为所需交易品种添加K线。还可以向图表添加指标、自有成交和订单，并直接从图表登记订单。有关图表操作的详细信息，请参阅[图表](user_interface/components/chart.md)。
 
 ![Terminal Quick start 01](../../images/terminal_quick_start_01.png)
 

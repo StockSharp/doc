@@ -5,13 +5,13 @@
 
 **BTC\-E** \- 加密货币交易所。
 
-在你开始为这个交易平台编写交易机器人之前，我们建议阅读[Connectors](../../connectors.md)部分的链接。
+在开始为该交易平台编写交易机器人之前，建议先阅读[连接器](../../connectors.md)章节中的链接。
 
 ## 推荐内容
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 

@@ -5,7 +5,7 @@
 
 **CoinExchange** - 加密货币实时数据的市场数据提供商。
 
-在您开始为此交易平台编写交易机器人之前，我们建议先阅读 [Connectors](../../connectors.md) 部分的链接。
+在开始为该交易平台编写交易机器人之前，建议先阅读[连接器](../../connectors.md)章节中的链接。
 
 > [!CAUTION]
 > 连接器仅支持市场数据传输，不支持交易。
@@ -14,11 +14,11 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 
-[创建自定义连接器](../creating_own_connector.md)
+[创建自己的连接器](../creating_own_connector.md)
 
 [订单管理](../../orders_management.md)
 

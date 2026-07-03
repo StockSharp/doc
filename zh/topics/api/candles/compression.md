@@ -1,8 +1,8 @@
-# 将逐笔成交和价差压缩为蜡烛
+# 将逐笔成交和价差压缩为K线
 
 ## 简介
 
-API 提供了将逐笔成交数据和价差（最佳买价／卖价）压缩为蜡烛的强大工具。此功能尤其适合分析历史数据和构建自定义指标。
+API 提供了将逐笔成交数据和价差（最佳买价／卖价）压缩为K线的强大工具。此功能尤其适合分析历史数据和构建自定义指标。
 
 数据压缩的主要扩展方法位于 `CandleHelper` 类中。该类的完整源代码[可在 GitHub 查看](https://github.com/StockSharp/StockSharp/blob/master/Algo/Candles/CandleHelper.cs)。
 
@@ -10,7 +10,7 @@ API 提供了将逐笔成交数据和价差（最佳买价／卖价）压缩为�
 
 ## 压缩方法
 
-### 将逐笔成交压缩为蜡烛
+### 将逐笔成交压缩为K线
 
 ```cs
 // Example usage of ToCandles for ticks
@@ -23,7 +23,7 @@ var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvid
 // candleBuilderProvider - the provider that supplies a specific candle builder implementation.
 ```
 
-### 将价差数据压缩为蜡烛
+### 将价差数据压缩为K线
 
 ```cs
 // Example usage of ToCandles for spread data
@@ -40,9 +40,9 @@ var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderPr
 
 压缩数据时可以指定以下参数：
 
-- `series`：定义所创建蜡烛类型和参数的蜡烛序列。
-- `type`：用于形成蜡烛的数据类型，例如最佳买价、最佳卖价或价差中间价。
-- `candleBuilderProvider`：蜡烛构建器提供程序（可选参数）。
+- `series`：定义所创建K线类型和参数的K线序列。
+- `type`：用于形成K线的数据类型，例如最佳买价、最佳卖价或价差中间价。
+- `candleBuilderProvider`：K线构建器提供程序（可选参数）。
 
 ## 使用示例
 
@@ -78,9 +78,9 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 
 ## 其他功能
 
-### 使用不同数据源构建蜡烛
+### 使用不同数据源构建K线
 
-API 不仅可以使用逐笔成交和价差构建蜡烛，还支持其他数据源：
+API 不仅可以使用逐笔成交和价差构建K线，还支持其他数据源：
 
 ```cs
 // Example of building candles from various sources
@@ -111,4 +111,4 @@ switch (type)
 
 ## 结论
 
-API 中的数据压缩方法为处理市场数据提供了灵活工具，可以高效地将逐笔成交和价差数据转换为不同类型、不同时间周期的蜡烛。这对市场分析和交易策略开发尤其有用。
+API 中的数据压缩方法为处理市场数据提供了灵活工具，可以高效地将逐笔成交和价差数据转换为不同类型、不同时间周期的K线。这对市场分析和交易策略开发尤其有用。

@@ -2,14 +2,14 @@
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 
-“Order Registration”组件用于为所选证券提交交易订单。
+“Order Registration”组件用于为所选交易品种提交交易订单。
 
 ## 输入端口
 
-- **Instrument** – 订单所使用的证券。
+- **Instrument** – 订单所使用的交易品种。
 - **Price** – 指定限价订单的价格。
 - **Trigger** – 订单的激活信号，可以接收除 `False` 以外的任意值。
-- **Volume** – 订单中的证券数量。
+- **Volume** – 订单中的交易品种数量。
 - **Portfolio** – 提交订单所使用的投资组合。
 
 ## 输出端口
@@ -37,7 +37,7 @@
 - **Connection** – 用于提交订单的连接。
 - **Stop Order Type** – 止损订单的类型。
 - **Result** – 已执行止损订单的结果。
-- **Instrument Identifier** – 当止损订单的条件与另一证券相关时，该证券的标识符。
+- **Instrument Identifier** – 当止损订单的条件与另一交易品种相关时，该交易品种的标识符。
 - **Stop Price Condition** – 止损价格条件。用于“Stop price for another instrument”等订单。
 - **Stop Price** – 设置止损订单触发条件的止损价格。
 - **Stop-Limit Price** – 与 Stop Price 类似，但仅用于“Take-profit and stop-limit”类型的订单。
@@ -46,7 +46,7 @@
 - **Conditional Order Execution Identifier** – 基于成交条件的条件订单标识符。
 - **Direction of Conditional Order by Execution** – 基于成交条件的条件订单方向。
 - **Activation on Partial Execution** – 是否考虑订单的部分成交。条件订单部分成交时，将激活“on-execution”订单。
-- **Executed Volume** – 使用订单的已成交数量作为提交止损订单的数量。“on-execution”订单中的证券数量取自条件订单的已成交数量。
+- **Executed Volume** – 使用订单的已成交数量作为提交止损订单的数量。“on-execution”订单中的交易品种数量取自条件订单的已成交数量。
 - **Price of Linked Order** – 关联限价订单的价格。
 - **Withdrawal on Partial Execution** – 指定关联限价订单部分成交时是否撤销止损订单。
 - **Offset from Maximum** – 相对于最近一笔成交最高（最低）价格的偏移量。

@@ -154,4 +154,4 @@ public class TimerStrategy : Strategy
 }
 ```
 
-在此示例中，使用了两个计时器：一个用于定期状态检查（`StartTimer` —— 已创建并立即启动），另一个用于限制持仓时间（`CreateTimer` —— 已创建但仅在进入仓位时启动）。
+在此示例中，使用了两个计时器：一个用于定期状态检查（`StartTimer` —— 已创建并立即启动），另一个用于限制持仓时间（`CreateTimer` —— 已创建但仅在进入持仓时启动）。

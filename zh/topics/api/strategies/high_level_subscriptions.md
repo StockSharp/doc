@@ -14,9 +14,9 @@
 
 ## 订阅方式
 
-### 订阅蜡烛
+### 订阅K线
 
-订阅蜡烛图。接受时间框架或 `DataType`：
+订阅K线。接受时间框架或 `DataType`：
 
 ```csharp
 // Subscribe by timeframe

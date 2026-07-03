@@ -10,10 +10,4 @@
 
 ![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
 
-通过上下文菜单，可以配置自有交易表格的参数，例如行分组、可用列和显示格式等。
-
-![hydra export context](../../../../images/hydra_export_context.png)
-
-可以使用下拉列表将找到的交易事务导出为 [Excel](https://en.wikipedia.org/wiki/Excel)、xml、sql、bin 或 txt 格式：
-
-![hydra export](../../../../images/hydra_export.png)
+找到的数据可以[导出为所需格式](../export_data.md)。

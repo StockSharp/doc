@@ -1,14 +1,14 @@
 > [!NOTE]
 > GDAX 已被更名为 Coinbase Pro，后来又更名为 Coinbase 高级交易。此文档为历史参考而保留。
 
-# 图形配置 GDAX
+# GDAX 图形化配置
 
-对于所有[S\#](../../../../api.md) 产品，连接的图形配置在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中完成：
 
 ![API GUI 设置 GDAX](../../../../../images/api_gui_settings_gdax.png)
 
-- **钥匙** - 钥匙。
-- **秘密** \- 秘密。
+- **Key** - API key。
+- **Secret** - API secret。
 - **口令** - 口令。
 - **余额** - 余额检查间隔。在存款和取款操作中需要。
 - **心跳** - 用于检查服务器连接是否存活的间隔时间。默认值为1分钟。
@@ -18,7 +18,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

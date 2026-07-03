@@ -75,12 +75,12 @@
 
 ## 位置参数
 
-此组中的参数实现了 [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter) 接口。它们在每次仓位变动时接收数据。
+此组中的参数实现了 [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter) 接口。它们在每次持仓变动时接收数据。
 
 | 类别 | 描述 | 值类型 |
 |-------|-------------|------------|
-| [MaxLongPositionParameter](xref:StockSharp.Algo.Statistics.MaxLongPositionParameter) | 最大多头仓位。最高正仓位值 | `decimal` |
-| [MaxShortPositionParameter](xref:StockSharp.Algo.Statistics.MaxShortPositionParameter) | 最大空头仓位。最高绝对负仓位数值 | `decimal` |
+| [MaxLongPositionParameter](xref:StockSharp.Algo.Statistics.MaxLongPositionParameter) | 最大多头持仓。最高正持仓值 | `decimal` |
+| [MaxShortPositionParameter](xref:StockSharp.Algo.Statistics.MaxShortPositionParameter) | 最大空头持仓。最高绝对负持仓数值 | `decimal` |
 
 ## 订单参数
 

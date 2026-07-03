@@ -22,7 +22,7 @@
 
 默认情况下，构建策略图时首先以 *Basic settings* 模式显示属性。要切换到 *Advanced settings* 模式，请单击相应标题。
 
-*Basic settings* 模式仅显示模块最常用的属性。例如，对于[蜡烛](elements/data_sources/candles.md)模块，会显示时间周期、是否仅接收已形成蜡烛、是否允许根据更小时间周期构建蜡烛，以及是否根据信号订阅蜡烛等选项。
+*Basic settings* 模式仅显示模块最常用的属性。例如，对于[K线](elements/data_sources/candles.md)模块，会显示时间周期、是否仅接收已形成K线、是否允许根据更小时间周期构建K线，以及是否根据信号订阅K线等选项。
 
 *Advanced settings* 模式会显示该模块所有可修改和配置的属性。
 

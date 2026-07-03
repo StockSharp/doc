@@ -1,6 +1,6 @@
-# 图形配置 Paradex
+# Paradex 图形化配置
 
-对于所有 [S#](../../../../api.md) 产品，图形配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行。
+对于所有 [S#](../../../../api.md) 产品，图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行。
 
 主要字段：
 
@@ -19,7 +19,7 @@
 
 [连接器](../../../connectors.md)
 
-[图形配置](../../graphical_configuration.md)
+[图形化配置](../../graphical_configuration.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
 

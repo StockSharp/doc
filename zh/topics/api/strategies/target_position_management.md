@@ -1,8 +1,8 @@
-# 目标职位管理
+# 目标持仓管理
 
 ## 概览
 
-目标仓位管理系统允许策略声明性地指定所需的仓位大小，而平台会自动下达必要的订单以达到该水平。你无需手动计算交易的数量和方向，只需调用 `SetTargetPosition(10)` —— 管理器将决定是买入还是卖出，以及交易的数量。
+目标持仓管理系统允许策略声明性地指定所需的持仓大小，而平台会自动下达必要的订单以达到该水平。你无需手动计算交易的数量和方向，只需调用 `SetTargetPosition(10)` —— 管理器将决定是买入还是卖出，以及交易的数量。
 
 关键组件是 `PositionTargetManager` 类，它会自动：
 
@@ -25,7 +25,7 @@ SetTargetPosition(decimal target);
 SetTargetPosition(Security security, Portfolio portfolio, decimal target);
 ```
 
-当 `target` 大于当前仓位时，经理将下买单。当小于时——下卖单。如果仓位已等于目标仓位（考虑到 `PositionTolerance`），则不采取任何行动。
+当 `target` 大于当前持仓时，经理将下买单。当小于时——下卖单。如果持仓已等于目标持仓（考虑到 `PositionTolerance`），则不采取任何行动。
 
 ### 取消目标位置
 
@@ -133,4 +133,4 @@ public class TargetPositionStrategy : Strategy
 }
 ```
 
-在这个例子中，该策略不处理手动的交易量和方向计算。它只是声明所需的仓位大小，`PositionTargetManager` 处理所有的下单工作。
+在这个例子中，该策略不处理手动的交易量和方向计算。它只是声明所需的持仓大小，`PositionTargetManager` 处理所有的下单工作。

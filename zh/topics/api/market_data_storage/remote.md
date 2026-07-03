@@ -20,7 +20,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 // Credentials are set for authentication.
 ```
 
-## 正在加载仪器信息
+## 正在加载交易品种信息
 
 在加载市场数据之前，您需要获取可用工具的信息。
 
@@ -39,7 +39,7 @@ var securities = securityStorage.LookupAll();
 
 ## 正在加载市场数据
 
-在获取了仪器信息后，您可以继续加载市场数据。
+在获取了交易品种信息后，您可以继续加载市场数据。
 
 ```cs
 // Loading market data

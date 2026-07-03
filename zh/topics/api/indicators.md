@@ -1,6 +1,6 @@
 # 指标
 
-[S\#](../api.md) 提供了超过 140 种标准技术分析指标。这使您可以使用现成的指标，而不是从头创建。您还可以根据现有指标创建自己的指标，如 [自定义指标](indicators/custom_indicator.md) 部分所示。所有用于处理指标的基类以及指标本身都位于 [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators) 命名空间中。
+[S#](../api.md) 提供了超过 140 种标准技术分析指标。这使您可以使用现成的指标，而不是从头创建。您还可以根据现有指标创建自己的指标，如 [自定义指标](indicators/custom_indicator.md) 部分所示。所有用于处理指标的基类以及指标本身都位于 [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators) 命名空间中。
 
 ## 将指标整合到交易算法中
 
@@ -33,9 +33,9 @@
    }
    ```
 
-指标接受 [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) 作为输入。一些指标使用简单数字，例如 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)。其他指标则需要完整的蜡烛数据，例如 [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice)。因此，输入值需要被转换为 [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) 或 [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue)。指标的结果值遵循与输入值相同的规则。
+指标接受 [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) 作为输入。一些指标使用简单数字，例如 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)。其他指标则需要完整的K线数据，例如 [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice)。因此，输入值需要被转换为 [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) 或 [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue)。指标的结果值遵循与输入值相同的规则。
 
-3. 指标的结果值和输入值都具有 [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 属性，该属性表示该值是最终值，指标在此时不会变化。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标是基于蜡烛的收盘价形成的，但在当前时刻，最终收盘价未知且在变化。在这种情况下，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的结果值将为 false。如果你将一个已完成的蜡烛传入指标，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的输入值和结果值都将为 true。
+3. 指标的结果值和输入值都具有 [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 属性，该属性表示该值是最终值，指标在此时不会变化。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标是基于K线的收盘价形成的，但在当前时刻，最终收盘价未知且在变化。在这种情况下，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的结果值将为 false。如果你将一个已完成的K线传入指标，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的输入值和结果值都将为 true。
 
 4. **推荐方法**：直接使用从调用 [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) 方法获得的值，而不是随后调用 [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator))：
 
@@ -93,7 +93,7 @@
 
 使用这种方法，会额外访问历史指标值的容器，这会引入延迟并扰乱数据处理的流式模型。
 
-6. 所有指标都有 [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) 属性，该属性表示指标是否可以使用。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标有一个周期，在指标处理的蜡烛数量达到指标的周期之前，该指标将被视为不可用。而 [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) 属性将为假。
+6. 所有指标都有 [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) 属性，该属性表示指标是否可以使用。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标有一个周期，在指标处理的K线数量达到指标的周期之前，该指标将被视为不可用。而 [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) 属性将为假。
 
 ## 完整移动平均策略示例
 

@@ -1,6 +1,6 @@
 # 记录
 
-[S\#](../../api.md) 提供了几个用于显示日志的图形组件：[LogControl](xref:StockSharp.Xaml.LogControl) 和 [Monitor](xref:StockSharp.Xaml.Monitor)。
+[S#](../../api.md) 提供了几个用于显示日志的图形组件：[LogControl](xref:StockSharp.Xaml.LogControl) 和 [Monitor](xref:StockSharp.Xaml.Monitor)。
 
 在使用日志可视化组件时，您需要使用 [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) 日志器作为“监听器”。当记录新的 [LogMessage](xref:Ecng.Logging.LogMessage) 消息时，该日志器会与 GUI 提供流式同步。
 

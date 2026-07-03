@@ -61,7 +61,7 @@ var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
 ### Csv实体注册表
 
-实体注册表（交易所、证券、投资组合）CSV 格式：
+实体注册表（交易所、交易品种、投资组合）CSV 格式：
 
 ```csharp
 using StockSharp.Algo.Storages.Csv;
@@ -107,9 +107,9 @@ if (@"C:\config.json".IsConfigExists(fs))
 }
 ```
 
-### 蜡烛图模式文件存储
+### K线模式文件存储
 
-蜡烛图形存储：
+K线形存储：
 
 ```csharp
 using StockSharp.Algo.Candles.Patterns;

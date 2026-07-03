@@ -8,7 +8,7 @@
 - [Level 1](components/level_1.md) — 显示所选交易品种 Level 1 数据变更历史的表格。
 - [买入\/卖出](components/buy_sell.md) — 一组面板，用于显示所选交易品种的最优价格，并按指定数量买入或卖出所选交易品种。
 - [订单簿](components/order_book.md) — 显示买卖限价订单的表格。
-- [图表](components/chart.md) — 用于绘制所选交易品种的蜡烛图和指标。
+- [图表](components/chart.md) — 用于绘制所选交易品种的K线和指标。
 - [盈亏曲线](../../designer/user_interface/components/pnl_equity.md) — 显示未实现盈亏、已实现盈亏和佣金的图表。
 - [成交](../../designer/user_interface/components/trades.md) — 显示策略全部成交详细信息的表格。
 - [订单](../../designer/user_interface/components/orders.md) — 显示策略全部订单详细信息的表格。

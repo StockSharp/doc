@@ -12,7 +12,7 @@
 
 - **Scheme** 面板：通过组合模块和连接线，完成策略及其组件的主要设计工作。有关 Scheme 的详细说明，请参阅[图表面板](../strategies/using_visual_designer/diagram_panel.md)。
 - 信息组件面板：包含 **Chart**、**Orders**、**Trades**、**Statistics** 等组件。可以在 **Emulation** 选项卡的 **Components** 组中选择并添加所需组件。
-- **Properties** 面板：默认折叠在策略选项卡右侧。可以在 **Properties** 面板中配置 **Emulation** 的常规设置。例如，根据所选存储的文件格式，将 **Market-data storage format** 设置为 **BIN** 或 **CSV**。数据类型可以选择 Ticks 或 Candles。如果选择 Ticks，将根据[回测设置](../user_interface/components/backtesting_settings.md)中指定的逐笔成交生成蜡烛。
+- **Properties** 面板：默认折叠在策略选项卡右侧。可以在 **Properties** 面板中配置 **Emulation** 的常规设置。例如，根据所选存储的文件格式，将 **Market-data storage format** 设置为 **BIN** 或 **CSV**。数据类型可以选择 Ticks 或 Candles。如果选择 Ticks，将根据[回测设置](../user_interface/components/backtesting_settings.md)中指定的逐笔成交生成K线。
 
 ## 推荐内容
 

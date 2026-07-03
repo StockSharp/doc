@@ -5,7 +5,7 @@
 可以使用各种类型的市场数据进行测试：
 - 逐笔交易 ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - 订单簿 ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
-- 不同时间框架的蜡烛
+- 不同时间框架的K线
 - [订单日志](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage)（最佳买价和卖价）
 - 不同数据类型的组合
@@ -249,9 +249,9 @@ connector.Connect();
 
 在最新版本的[S#](../../api.md)中，历史测试示例已经得到显著现代化，现在允许使用各种类型的市场数据进行测试策略：
 
-- 滴答（交易）
+- 逐笔成交
 - 订单簿
-- 不同时间框架的蜡烛
+- 不同时间框架的K线
 - 订单日志
 - 一级数据（最佳价格）
 - 不同数据类型的组合
@@ -351,7 +351,7 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-蜡烛的处理和交易决策现在被分离到一个专用的方法中：
+K线的处理和交易决策现在被分离到一个专用的方法中：
 
 ```csharp
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)

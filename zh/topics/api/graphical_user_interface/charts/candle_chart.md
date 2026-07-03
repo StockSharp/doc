@@ -1,6 +1,6 @@
-# 蜡烛图
+# K线
 
-[Chart](xref:StockSharp.Xaml.Charting.Chart) 是一个图形组件，允许构建股票图表：蜡烛图、指标，并在图表上显示订单和交易标记。
+[Chart](xref:StockSharp.Xaml.Charting.Chart) 是一个图形组件，允许构建股票图表：K线、指标，并在图表上显示订单和交易标记。
 
 下面是使用 [Chart](xref:StockSharp.Xaml.Charting.Chart) 组件构建图表的示例。该示例基于 Samples/02_Candles/01_Realtime，并进行了一些修改。
 
@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. 在 **Connect** 按钮的 **Click** 事件处理程序中，除了订阅连接器事件并调用 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法之外，我们还订阅了 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件。在该事件处理程序中，当收到新的蜡烛图时，将绘制图表。
+3. 在 **Connect** 按钮的 **Click** 事件处理程序中，除了订阅连接器事件并调用 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法之外，我们还订阅了 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件。在该事件处理程序中，当收到新的K线时，将绘制图表。
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@
    }
    ```
 
-4. 在 **ShowChart** 按钮处理程序中，我们创建指标对象、区域和图表元素。我们将元素添加到区域，将区域添加到图表。我们打开图表窗口并开始订阅蜡烛图。
+4. 在 **ShowChart** 按钮处理程序中，我们创建指标对象、区域和图表元素。我们将元素添加到区域，将区域添加到图表。我们打开图表窗口并开始订阅K线。
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)
@@ -120,7 +120,7 @@
    }
    ```
 
-5. 在 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件处理程序中，我们绘制每根完成蜡烛的蜡烛图和指标值。
+5. 在 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件处理程序中，我们绘制每根完成K线的K线和指标值。
 
    ```cs
    private void OnCandleReceived(Subscription subscription, ICandleMessage candle)

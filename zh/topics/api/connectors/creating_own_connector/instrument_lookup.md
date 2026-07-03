@@ -7,7 +7,7 @@
 **SecurityLookupAsync** 方法通常执行以下操作：
 
 1. 从传入消息中获取支持的金融工具类型列表。
-2. 通过 API 向交易所请求金融工具列表。
+2. 通过 API 向交易所请求交易品种列表。
 3. 为每个接收到的金融工具创建一个 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息，并填充相应的工具数据。
 4. 检查该金融工具是否符合搜索条件。
 5. 通过 **SendOutMessageAsync** 方法发送创建好的 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息。

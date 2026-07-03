@@ -16,26 +16,26 @@
 
 3. 移动平均线（SMA）策略的基本原理如下：
 
-- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [Indicator](elements/common/indicator.md) 模块名为 Long SMA，周期为 80 根蜡烛；短期 SMA 模块名为 Short SMA，周期为 10 根蜡烛。
+- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [Indicator](elements/common/indicator.md) 模块名为 Long SMA，周期为 80 根K线；短期 SMA 模块名为 Short SMA，周期为 10 根K线。
 - 当短期移动平均线从下向上穿过长期移动平均线时，建立多头持仓。
 - 当短期移动平均线从上向下穿过长期移动平均线时，建立空头持仓。
 - 收到开仓信号时，如果当前存在相反方向的持仓，则反转持仓。
 
-4. 所有策略都需要用于成交的证券和投资组合。应从 **Palette** 面板将它们添加到 **Designer** 面板。本示例中，类型为 **Instrument** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Instrument，类型为 **Portfolio** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Portfolio。选中 Instrument 和 Portfolio 模块的 **Parameters** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入证券和投资组合的值。如果将 [Variable](elements/data_sources/variable.md) 模块的 Value 字段留空，同时也未选中 Parameters 复选框，测试策略时会报告 [Variable](elements/data_sources/variable.md) 模块的值未设置。
+4. 所有策略都需要用于成交的交易品种和投资组合。应从 **Palette** 面板将它们添加到 **Designer** 面板。本示例中，类型为 **Instrument** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Instrument，类型为 **Portfolio** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Portfolio。选中 Instrument 和 Portfolio 模块的 **Parameters** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入交易品种和投资组合的值。如果将 [Variable](elements/data_sources/variable.md) 模块的 Value 字段留空，同时也未选中 Parameters 复选框，测试策略时会报告 [Variable](elements/data_sources/variable.md) 模块的值未设置。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-如果策略需要使用多个证券或投资组合，则应为每个模块取消选中 **Parameters** 复选框，并设置相应的证券或投资组合值。
+如果策略需要使用多个交易品种或投资组合，则应为每个模块取消选中 **Parameters** 复选框，并设置相应的交易品种或投资组合值。
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. 添加证券和投资组合后，添加两个 [Indicator](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 Long SMA，周期设置为 80 根蜡烛；将第二个命名为 Short SMA，周期设置为 10 根蜡烛。
+5. 添加交易品种和投资组合后，添加两个 [Indicator](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 Long SMA，周期设置为 80 根K线；将第二个命名为 Short SMA，周期设置为 10 根K线。
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. 指标需要接收蜡烛序列才能工作。为此，需要创建 [Candles](elements/data_sources/candles.md) 模块。本示例仅使用时间周期为 5 分钟的已完成蜡烛。
+6. 指标需要接收K线序列才能工作。为此，需要创建 [Candles](elements/data_sources/candles.md) 模块。本示例仅使用时间周期为 5 分钟的已完成K线。
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
@@ -43,7 +43,7 @@
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. 为了直观显示蜡烛、指标和成交，应添加 [Chart](elements/common/chart.md)。在 [Chart](elements/common/chart.md) 中添加蜡烛、两个指标和成交等显示元素。
+8. 为了直观显示K线、指标和成交，应添加 [Chart](elements/common/chart.md)。在 [Chart](elements/common/chart.md) 中添加K线、两个指标和成交等显示元素。
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 

@@ -29,13 +29,13 @@ public class PairsTradingStrategy : Strategy
 - **SpreadLength** - 用于计算点差均值和标准差的周期（默认值20）
 - **入场阈值** - 建仓的 Z 分数阈值（默认值 2.0）
 - **退出阈值** - 用于退出头寸的 Z 分数阈值（默认 0.5）
-- **蜡烛类型** - 要使用的蜡烛类型（默认5分钟）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 
 ## 策略初始化
 
-在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，为两个工具创建指标并设置蜡烛订阅：
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，为两个工具创建指标并设置K线订阅：
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -136,15 +136,15 @@ private void ProcessSpread(decimal price1, decimal price2,
 
 ## 交易逻辑
 
-- **卖出信号**：当没有空头仓位时，利差 Z 分数超过入场阈值（默认 2.0）
+- **卖出信号**：当没有空头持仓时，利差 Z 分数超过入场阈值（默认 2.0）
 - **买入信号**：当没有多头头寸时，价差 Z 分数跌破负入场阈值（默认 -2.0）
 - **平仓**：当绝对 Z 分数值降至退出阈值以下（默认 0.5）时，表示价差正在回归均值
 
 ## 特征
 
 - 该策略适用于通过 `GetWorkingSecurities()` 方法获得的两种工具
-- 价差是通过两个工具的蜡烛收盘价的差额来计算的
+- 价差是通过两个工具的K线收盘价的差额来计算的
 - Z 分数用于标准化与平均值的偏差分布
 - 该策略实现了经典的均值回归概念
-- 该策略仅适用于已完成的蜡烛
+- 该策略仅适用于已完成的K线
 - 支持参数优化以寻找最佳策略设置

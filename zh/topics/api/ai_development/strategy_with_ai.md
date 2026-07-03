@@ -162,8 +162,8 @@ public class SmaCrossStrategy : Strategy
 
 - **继承**：类继承自 `Strategy` ✓
 - **参数**：使用 `StrategyParam<T>`，以便进行优化 ✓
-- **蜡烛订阅**：通过 `Subscribe(new Subscription(...))` 完成 ✓
-- **蜡烛处理**：通过 `WhenCandlesFinished` 规则完成 ✓
+- **K线订阅**：通过 `Subscribe(new Subscription(...))` 完成 ✓
+- **K线处理**：通过 `WhenCandlesFinished` 规则完成 ✓
 - **IsFormed 检查**：检查指标是否已经形成 ✓
 - **订单**：通过 `RegisterOrder()` 和 `BuyAtMarket` / `SellAtMarket` 提交 ✓
 - **持仓**：提交订单前检查 `Position` ✓

@@ -1,6 +1,6 @@
 # 在策略中使用图表
 
-在 StockSharp 中，[Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类提供了一个便捷的界面，用于在图表上可视化交易活动。在本文中，我们将探讨如何从策略访问图表、创建区域 (ChartArea)、添加各种元素（蜡烛图、指标、交易）以及渲染数据。
+在 StockSharp 中，[Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类提供了一个便捷的界面，用于在图表上可视化交易活动。在本文中，我们将探讨如何从策略访问图表、创建区域 (ChartArea)、添加各种元素（K线、指标、交易）以及渲染数据。
 
 ## 访问图表
 
@@ -89,11 +89,11 @@ private void InitializeChart()
 
 ## 向图表添加元素
 
-创建图表区域后，您可以添加各种元素来显示数据。StockSharp 支持不同类型的元素，如蜡烛图、指标、交易和订单。
+创建图表区域后，您可以添加各种元素来显示数据。StockSharp 支持不同类型的元素，如K线、指标、交易和订单。
 
-### 添加蜡烛
+### 添加K线
 
-要显示蜡烛图，请使用图表区域的 [AddCandles](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddCandles(StockSharp.Charting.IChartArea)) 方法：
+要显示K线，请使用图表区域的 [AddCandles](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddCandles(StockSharp.Charting.IChartArea)) 方法：
 
 ```cs
 private void ConfigureChartElements()
@@ -113,10 +113,10 @@ private void ConfigureChartElements()
 }
 ```
 
-[IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 接口提供了许多用于配置蜡烛显示的属性：
+[IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 接口提供了许多用于配置K线显示的属性：
 
-- **绘图样式** - 蜡烛图显示风格：
-  - **蜡烛图** - 日本蜡烛
+- **绘图样式** - K线显示风格：
+  - **K线** - 日本K线
   - **OHLC** - 柱状图
   - **LineOpen/LineHigh/LineLow/LineClose** - 分别表示相应价格的线
   - **箱体体积** - 体积盒
@@ -125,8 +125,8 @@ private void ConfigureChartElements()
   - **PnF** - 点数图表
 
 - **颜色设置**：
-  - **UpFillColor/DownFillColor** - 上涨/下跌蜡烛实体颜色
-  - **UpBorderColor/DownBorderColor** - 上涨/下跌蜡烛边框颜色
+  - **UpFillColor/DownFillColor** - 上涨/下跌K线实体颜色
+  - **UpBorderColor/DownBorderColor** - 上涨/下跌K线边框颜色
   - **LineColor** - 线型图的线条颜色
   - **AreaColor** - 区域类型的区域颜色
 
@@ -227,7 +227,7 @@ _ordersElement.PointSize = 8;                // Point size
 
 在配置所有图表元素后，您可以开始绘制数据。根据数据的类型使用不同的方法。
 
-### 绘制蜡烛图和指标
+### 绘制K线和指标
 
 绘制数据的最高效方法是使用 [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData) 方法配合 [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) 对象：
 

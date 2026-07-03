@@ -13,7 +13,7 @@
 1. **Simulator**
 
 - **Use emulator** – 使用模拟器。
-- **Instruments** – 证券。
+- **Instruments** – 交易品种。
 
 2. **Settings**
 

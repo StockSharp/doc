@@ -1,6 +1,6 @@
 # 中华民国
 
-**变化率 (RoC)** 指标显示当前价格与 n 根蜡烛前价格之间的差异。
+**变化率 (RoC)** 指标显示当前价格与 n 根K线前价格之间的差异。
 
 要使用该指标，您必须使用 [RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange) 类。
 

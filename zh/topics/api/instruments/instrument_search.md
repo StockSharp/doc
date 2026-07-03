@@ -1,8 +1,8 @@
 # 乐器搜索
 
-大多数与美国股票交易所的连接器（例如 [Interactive Brokers](../connectors/stock_market/interactive_brokers.md)、[PolygonIO](../connectors/stock_market/polygonio.md) 等）在通过 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法建立连接后，并不会向客户端传输所有可用的交易工具。这是由于美国交易所交易的工具数量庞大，因此这样做是为了减轻经纪商服务器和数据源的负载。
+大多数与美国股票交易所的连接器（例如 [Interactive Brokers](../connectors/stock_market/interactive_brokers.md)、[PolygonIO](../connectors/stock_market/polygonio.md) 等）在通过 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法建立连接后，并不会向客户端传输所有可用的交易品种。这是由于美国交易所交易的工具数量庞大，因此这样做是为了减轻经纪商服务器和数据源的负载。
 
-## 仪器搜索基础
+## 交易品种搜索基础
 
 在 S# 中搜索工具时，使用订阅机制，类似于接收市场数据。这种方法允许对所有类型的数据，包括工具，使用统一的代码。
 
@@ -37,7 +37,7 @@ var subscription = new Subscription(lookupMessage);
 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息允许设置以下搜索条件：
 
 - **SecurityId** — 工具标识符，包含：
-  - **SecurityCode** — 证券代码或代码掩码（例如，“AAPL”或“MS*”）
+  - **SecurityCode** — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
   - **BoardCode** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
 - **SecurityType** — 工具类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
 - **SecurityTypes** — 用于高级搜索的工具类型数组
@@ -94,7 +94,7 @@ Connector.Subscribe(subscription);
 
 ### 乐器搜索完整示例
 
-下面是一个用于搜索仪器的方法的完整示例：
+下面是一个用于搜索交易品种的方法的完整示例：
 
 ```csharp
 public void FindSecurities(string searchCode, SecurityTypes? securityType = null)
@@ -175,7 +175,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 
 ### 在 WPF 应用中的使用示例
 
-在图形应用程序中，仪器搜索通常由按钮点击处理程序调用：
+在图形应用程序中，交易品种搜索通常由按钮点击处理程序调用：
 
 ```csharp
 private void FindButton_Click(object sender, RoutedEventArgs e)

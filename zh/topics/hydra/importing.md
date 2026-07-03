@@ -6,7 +6,7 @@
 
 可以导入以下数据类型：
 
-- [蜡烛图](importing/candles.md)
+- [K线](importing/candles.md)
 - [交易品种](importing/instruments.md)
 - [逐笔成交](importing/ticks.md)
 - [订单簿](importing/order_books.md)

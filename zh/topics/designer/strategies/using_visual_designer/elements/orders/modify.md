@@ -2,7 +2,7 @@
 
 ![Designer Moving applications 00](../../../../../../images/designer_moving_applications_00.png)
 
-该模块用于修改证券的订单。
+该模块用于修改交易品种的订单。
 
 ### 输入端口
 

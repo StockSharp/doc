@@ -28,14 +28,14 @@
   5. **KeepSubscriptionsOnDisconnect** \- 与数据源断开连接后保留订阅。
   6. **DeadSessionCleanupInterval** \- 连接断开后，经过多长时间清除相关信息。
 - **Authorization** \- 访问 Hydra 服务器时使用的身份验证方式。
-- **Number of securities** \- 可从服务器请求的最大证券数量。
-- **Candles (days)** \- 可下载的蜡烛历史数据的最大天数。
+- **Number of securities** \- 可从服务器请求的最大交易品种数量。
+- **Candles (days)** \- 可下载的K线历史数据的最大天数。
 - **Ticks (days)** \- 可下载的逐笔成交历史数据的最大天数。
 - **Order books (days)** \- 可下载的订单簿历史数据的最大天数。
 - **OL (days)** \- 可下载的订单日志数据的最大天数。
 - **Transactions (days)** \- 可下载的事务历史数据的最大天数。
 - **Simulator** \- 启用仿真模式。
-- **Security mapping** \- 启用仅传输指定证券的模式。
+- **Security mapping** \- 启用仅传输指定交易品种的模式。
 
 如果将 **Authorization** 设置为 **Anonymous** 以外的选项，**Common** 选项卡中将显示 **Users** 按钮。单击该按钮后会打开 **Users** 窗口。
 

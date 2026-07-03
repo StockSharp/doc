@@ -20,7 +20,7 @@
 
 **主要属性**
 
-- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) - 关于仪器信息的提供者。
+- [PropertyGridEx.SecurityProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.SecurityProvider) - 关于交易品种信息的提供者。
 - [PropertyGridEx.ExchangeInfoProvider](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.ExchangeInfoProvider) - 网站信息提供者。
 - [PropertyGridEx.Portfolios](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx.Portfolios) - 可用投资组合的列表。
 - **SelectedObject** - 将在表格中显示其属性的对象。

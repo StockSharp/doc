@@ -18,7 +18,7 @@
 
 添加市场数据源后，中央区域会打开相应的数据源面板，其中显示交易品种列表。如果面板已关闭，可以双击程序左侧列表中的数据源徽标重新打开。
 
-例如，从支持的数据源下载 AAPL@NASDAQ 证券。
+例如，从支持的数据源下载 AAPL@NASDAQ 交易品种。
 
 ![hydra choose market data](../../images/hydra_choose_market_data.png)
 
@@ -56,17 +56,17 @@
 
    可以在该面板中执行以下操作：
    - 使用 **Trades、Order Books、Candles、Order Log、Level 1、Own Transactions** 按钮配置要接收的信息类型。不同数据源支持的市场数据类型列表可能不同。
-   - 指定要加载的蜡烛图时间周期。不同数据源提供的蜡烛图时间周期也可能不同。![hydra Quick start 02](../../images/hydra_quick_start_02.png)
+   - 指定要加载的K线时间周期。不同数据源提供的K线时间周期也可能不同。![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - 设置市场数据的下载时间范围。也可以直接在市场数据窗口中配置该范围，为此需要选择开始和结束时间。
 
      如果用户未指定结束日期，程序会下载截至当前日期的全部可用数据。如果数据源支持实时传输市场数据，并且未指定结束日期，程序还会继续实时下载市场数据。
 
      设置需要下载市场数据的时间范围。![hydra Quick start 02 01](../../images/hydra_quick_start_02_01.png)
-   - 指定用于构建蜡烛图的市场数据。如果未设置此参数，程序将接收数据源中直接提供的蜡烛图。如果用户指定了市场数据类型，则会使用该类型的数据构建蜡烛图。例如，可以根据最新成交价、订单簿价差（通常用于外汇市场）、波动率或最优价格构建蜡烛图。
+   - 指定用于构建K线的市场数据。如果未设置此参数，程序将接收数据源中直接提供的K线。如果用户指定了市场数据类型，则会使用该类型的数据构建K线。例如，可以根据最新成交价、订单簿价差（通常用于外汇市场）、波动率或最优价格构建K线。
 
-     如果数据源无法直接提供绘制蜡烛图所需的数据，此功能会非常有用。在这种情况下，程序会根据平均数据值绘制蜡烛图。![hydra candle build type](../../images/hydra_candle_build_type.png)
+     如果数据源无法直接提供绘制K线所需的数据，此功能会非常有用。在这种情况下，程序会根据平均数据值绘制K线。![hydra candle build type](../../images/hydra_candle_build_type.png)
 
-     用户还可以选择蜡烛图的[自定义类型](prepare_for_download/custom_candles.md)，以调整接收的数据。
+     用户还可以选择K线的[自定义类型](prepare_for_download/custom_candles.md)，以调整接收的数据。
    - 选择交易品种和市场数据类型并设置时间范围后，单击 **Start** 按钮。随后程序会开始下载市场数据。
 
    可以在程序底部固定的 **Logs** 选项卡中观察运行过程。此外，日志也会保存到本地文件夹中的文件内。
@@ -75,6 +75,6 @@
 
 用户还可以添加[其他数据源](data_sources/select_source.md)。
 
-下载市场数据后，用户可以[查看市场数据](working_with_data/view_and_export.md)、[绘制蜡烛图](working_with_data/candles_generation.md)，以及保存数据或[导出为各种格式](working_with_data/export_data.md)。
+下载市场数据后，用户可以[查看市场数据](working_with_data/view_and_export.md)、[绘制K线](working_with_data/candles_generation.md)，以及保存数据或[导出为各种格式](working_with_data/export_data.md)。
 
 **观看[视频教程](videos/first_start.md)**。

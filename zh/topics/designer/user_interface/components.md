@@ -4,13 +4,13 @@
 
 ![Designer Components](../../../images/designer_components.png)
 
-- [Chart](components/chart.md) - 显示蜡烛图和／或指标。包含策略中的所有 [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md) 模块。
+- [Chart](components/chart.md) - 显示K线和／或指标。包含策略中的所有 [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md) 模块。
 - [P/L](components/pnl_equity.md) - 显示未实现盈亏、已实现盈亏和佣金图表。
 - [Trades](components/trades.md) - 显示成交表，其中包含策略全部成交的完整信息。
 - [Orders](components/orders.md) - 显示订单表，其中包含策略全部订单的完整信息。
-- [Positions](components/positions.md) - 显示策略所用证券的持仓表。
+- [Positions](components/positions.md) - 显示策略所用交易品种的持仓表。
 - [Statistics](components/statistics.md) - 显示按盈亏、成交、持仓和订单分类的表格，其中包含策略绩效数据。
-- [Trade Tape](components/tick_trades.md) - 显示逐笔成交表，其中包含所选证券全部成交的完整信息。
+- [Trade Tape](components/tick_trades.md) - 显示逐笔成交表，其中包含所选交易品种全部成交的完整信息。
 - [Position Chart](components/positions.md) - 显示持仓图表。
 - Properties - 显示[回测属性](components/backtesting_settings.md)表或[实盘交易属性](components/live_settings.md)表。
 - [Scheme](../strategies/using_visual_designer/diagram_panel.md) - 显示策略图设计器。
@@ -19,4 +19,4 @@
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - 显示期权持仓图表。
 - [Options Board](../strategies/using_visual_designer/elements/options/option_desk.md) - 显示期权表。
 - [Depth](components/order_book.md) - 显示买入和卖出限价订单表。
-- [Order Log](../../terminal/user_interface/components/order_log.md) - 显示订单表，其中包含所选证券全部订单的完整信息。
+- [Order Log](../../terminal/user_interface/components/order_log.md) - 显示订单表，其中包含所选交易品种全部订单的完整信息。

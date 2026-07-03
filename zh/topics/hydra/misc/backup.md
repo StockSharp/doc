@@ -1,6 +1,6 @@
 # 备份
 
-[S\#](../../api.md) 提供将已下载数据备份到 [Amazon Web Services (AWS)](https://aws.amazon.com/s3/) 云存储的功能。
+[S#](../../api.md) 提供将已下载数据备份到 [Amazon Web Services (AWS)](https://aws.amazon.com/s3/) 云存储的功能。
 
 要使用备份功能，需要先创建并配置 AWS 账户，然后创建和配置“备份任务”。
 

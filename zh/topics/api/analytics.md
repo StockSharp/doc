@@ -1,6 +1,6 @@
 # 分析脚本
 
-[S\#](../api.md) 提供分析脚本子系统，可对市场数据执行任意分析并将结果可视化。相关类位于 `StockSharp.Algo.Analytics` 命名空间。
+[S#](../api.md) 提供分析脚本子系统，可对市场数据执行任意分析并将结果可视化。相关类位于 `StockSharp.Algo.Analytics` 命名空间。
 
 ## IAnalyticsScript — 主接口
 
@@ -24,7 +24,7 @@ Task Run(
 
 - **logs** — 用于输出诊断消息的日志接收器。
 - **panel** — 用于显示分析结果的面板。
-- **securities** — 要分析的证券数组。
+- **securities** — 要分析的交易品种数组。
 - **from** / **to** — 时间范围。
 - **storage** — 市场数据存储注册表。
 - **drive** — 数据源。
@@ -75,7 +75,7 @@ void Append(string title, IEnumerable<X> xValues, IEnumerable<Y> yValues,
 
 ## 示例：自定义分析脚本
 
-以下示例脚本会加载一组证券的蜡烛，并在折线图中显示收盘价：
+以下示例脚本会加载一组交易品种的K线，并在折线图中显示收盘价：
 
 ```cs
 public class MyAnalyticsScript : IAnalyticsScript

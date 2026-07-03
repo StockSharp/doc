@@ -1,4 +1,4 @@
-# 英镑
+# Sterling
 
 **Sterling** — 用于在国际交易所交易的交易平台。
 
@@ -8,7 +8,7 @@
 
 [连接器](../../connectors.md)
 
-[图形配置](../graphical_configuration.md)
+[图形化配置](../graphical_configuration.md)
 
 [保存和加载设置](../save_and_load_settings.md)
 

@@ -1,6 +1,6 @@
-# 职位图表
+# 持仓图表
 
-[OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) 图形组件是一个显示与标的资产相关的仓位及期权“希腊值”的图表。
+[OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) 图形组件是一个显示与标的资产相关的持仓及期权“希腊值”的图表。
 
 以下是 SampleOptionQuoting 示例，其中使用了该图表。示例的源代码可以在 *Samples/06_Strategies/09_LiveOptionsQuoting* 文件夹中找到。
 

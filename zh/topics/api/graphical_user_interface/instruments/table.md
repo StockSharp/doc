@@ -8,7 +8,7 @@
 
 - [SecurityGrid.Securities](xref:StockSharp.Xaml.SecurityGrid.Securities) - 乐器清单。
 - [SecurityGrid.SelectedSecurity](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurity) - 所选乐器。
-- [SecurityGrid.SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) - 所选工具列表。
+- [SecurityGrid.SelectedSecurities](xref:StockSharp.Xaml.SecurityGrid.SelectedSecurities) - 所选交易品种列表。
 - [SecurityGrid.MarketDataProvider](xref:StockSharp.Xaml.SecurityGrid.MarketDataProvider) - 市场数据提供商。
 
 请注意，对于市场信息变化的显示，您必须指定市场数据提供商。

@@ -2,7 +2,7 @@
 
 ## 概览
 
-`MultiTimeframeStrategy` 是一种使用两个时间框架做出交易决策的策略。小时线蜡烛图通过移动平均线交叉来确定趋势方向，而 5 分钟蜡烛图结合 [相对强弱指数](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) 指标用于在趋势方向上进行精确入场。
+`MultiTimeframeStrategy` 是一种使用两个时间框架做出交易决策的策略。小时线K线通过移动平均线交叉来确定趋势方向，而 5 分钟K线结合 [相对强弱指数](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) 指标用于在趋势方向上进行精确入场。
 
 ## 主要组件
 
@@ -91,7 +91,7 @@ private void ProcessHourlyCandle(ICandleMessage candle, decimal fastValue, decim
 }
 ```
 
-## 处理5分钟蜡烛
+## 处理5分钟K线
 
 `ProcessEntryCandle` 方法基于趋势方向上的 RSI 信号实现建仓：
 
@@ -120,16 +120,16 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 ## 交易逻辑
 
 - **趋势检测**：小时图上快速SMA位于慢速SMA之上表示上升趋势，位于之下表示下降趋势
-- **买入信号**：当没有多头仓位时，小时图呈上升趋势且5分钟图RSI < 30
-- **卖出信号**：当没有空头仓位时，小时图呈下降趋势且5分钟图RSI > 70
+- **买入信号**：当没有多头持仓时，小时图呈上升趋势且5分钟图RSI < 30
+- **卖出信号**：当没有空头持仓时，小时图呈下降趋势且5分钟图RSI > 70
 - **头寸保护**：通过 `StartProtection` 自动止盈和止损
 
 ## 特征
 
 - 该策略使用两个时间框架：小时图用于趋势，5分钟图用于入场
-- 仓位入场仅在高时间框架趋势的方向上进行
+- 持仓入场仅在高时间框架趋势的方向上进行
 - RSI被用作过滤器来寻找最佳入场点（超卖/超买）
-- 仓位会自动设置止损和止盈
-- 该策略仅适用于已完成的蜡烛
-- 当图形区域可用时，指标和交易会在图表上可视化
+- 持仓会自动设置止损和止盈
+- 该策略仅适用于已完成的K线
+- 当图表区域可用时，指标和交易会在图表上可视化
 - 支持参数优化以寻找最佳策略设置

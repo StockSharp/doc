@@ -26,7 +26,7 @@ connector.Connect();
 
 连接也可以使用图形界面进行配置，如[连接设置窗口](../graphical_user_interface/connection_settings_window.md)部分所述。
 
-### 订阅历史蜡烛图
+### 订阅历史K线
 
 要获取历史K线，您需要创建一个订阅并指定请求数据的参数：
 
@@ -67,9 +67,9 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 }
 ```
 
-### 使用蜡烛图进行绘图
+### 使用K线进行绘图
 
-接收到的蜡烛可以使用StockSharp内置的图形组件显示在图表上：
+接收到的K线可以使用StockSharp内置的图形组件显示在图表上：
 
 ```cs
 // Create and configure chart elements
@@ -102,7 +102,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 
 同样，你可以获取其他类型的历史数据：
 
-### 获取历史滴答
+### 获取历史逐笔成交
 
 ```cs
 var tickSubscription = new Subscription(DataType.Ticks, security)
@@ -146,6 +146,6 @@ connector.Subscribe(depthSubscription);
 
 ## 另请参阅
 
-- [蜡烛](../candles.md)
+- [K线](../candles.md)
 - [订阅](subscriptions.md)
 - [指标](../indicators.md)

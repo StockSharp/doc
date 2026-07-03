@@ -10,7 +10,7 @@
 
 - 交易所的 REST/WebSocket API 文档
 - 测试 API 密钥（沙盒／测试网）
-- 支持的数据类型列表（蜡烛、市场深度、逐笔成交、成交）
+- 支持的数据类型列表（K线、市场深度、逐笔成交、成交）
 - 支持的订单类型列表（限价、市价、止损）
 
 ### 2. 创建项目
@@ -68,7 +68,7 @@ called MyExchange using StockSharp:
 - Base API URL: https://api.myexchange.com/v1
 ```
 
-### 第 2 步：查询证券
+### 第 2 步：查询交易品种
 
 提示词：
 
@@ -149,7 +149,7 @@ Review the generated adapter for StockSharp API compliance:
 |-----------------|--------|-----------------|
 | `ConnectMessage` | 连接 API | `ConnectMessage`（响应） |
 | `DisconnectMessage` | 断开连接 | `DisconnectMessage`（响应） |
-| `SecurityLookupMessage` | 请求证券列表 | `SecurityMessage` × N |
+| `SecurityLookupMessage` | 请求交易品种列表 | `SecurityMessage` × N |
 | `MarketDataMessage`（订阅） | 订阅数据 | `SubscriptionResponseMessage` |
 | `OrderRegisterMessage` | 创建订单 | `ExecutionMessage` |
 | `OrderCancelMessage` | 撤销订单 | `ExecutionMessage` |
@@ -202,15 +202,15 @@ private string SignRequest(string payload)
 - [ ] 正确处理身份验证错误
 - [ ] 断开连接后能够重新连接
 
-### 证券
+### 交易品种
 
-- [ ] 成功加载证券列表
+- [ ] 成功加载交易品种列表
 - [ ] 正确映射 SecurityId、PriceStep 和 VolumeStep
 - [ ] 已发送 `SubscriptionFinishedMessage`
 
 ### 市场数据
 
-- [ ] 蜡烛：加载历史数据并订阅新蜡烛
+- [ ] K线：加载历史数据并订阅新K线
 - [ ] 市场深度：档位和更新均正确
 - [ ] 逐笔成交：时间、数量和方向均正确
 
@@ -252,8 +252,8 @@ Add rate limit handling to my connector:
 
 ## 建议
 
-1. **先实现只读功能** — 首先实现连接、证券和市场数据，验证无误后再添加交易操作
+1. **先实现只读功能** — 首先实现连接、交易品种和市场数据，验证无误后再添加交易操作
 2. **使用沙盒环境** — 在交易所的测试环境中进行验证
 3. **参考现有连接器** — 将现有 StockSharp 连接器代码提供给 AI 作为参考
 4. **记录所有信息** — 详细日志对于调试连接器非常重要
-5. **处理边界情况** — 包括重新连接、证券变更和非标准订单类型
+5. **处理边界情况** — 包括重新连接、交易品种变更和非标准订单类型

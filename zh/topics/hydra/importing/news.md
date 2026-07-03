@@ -8,9 +8,9 @@
 
 1. 配置 **CSV Import Settings**。
 
-   请参阅[蜡烛图](candles.md)导入说明。
-2. 配置 [S\#](../../api.md) 字段的导入参数。
+   请参阅[K线](candles.md)导入说明。
+2. 配置 [S#](../../api.md) 字段的导入参数。
 
-   请参阅[蜡烛图](candles.md)导入说明。
+   请参阅[K线](candles.md)导入说明。
 3. 要预览数据，请单击 **Preview** 按钮。
 4. 单击 **Import** 按钮。

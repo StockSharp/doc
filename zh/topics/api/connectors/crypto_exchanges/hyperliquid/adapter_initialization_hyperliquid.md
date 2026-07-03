@@ -1,6 +1,6 @@
-# 适配器初始化 Hyperliquid
+# Hyperliquid 适配器初始化
 
-下面的代码演示了如何初始化 [HyperliquidMessageAdapter](xref:StockSharp.Hyperliquid.HyperliquidMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [HyperliquidMessageAdapter](xref:StockSharp.Hyperliquid.HyperliquidMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 Connector Connector = new Connector();

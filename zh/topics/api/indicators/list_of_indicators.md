@@ -3,7 +3,7 @@
 [S#](../../api.md) 默认提供超过140种技术分析指标。这使您可以使用现成的指标，而无需从零创建。
 
 - [A/D](list_of_indicators/a_d.md) - 加速/减速指标，衡量价格变动的加速或减速
-- [ADL](list_of_indicators/accumulation_distribution_line.md) - 累积/分配线 (A/D线)，跟踪资金流入或流出某证券的情况
+- [ADL](list_of_indicators/accumulation_distribution_line.md) - 累积/分配线 (A/D线)，跟踪资金流入或流出某交易品种的情况
 - [ALF](list_of_indicators/adaptive_laguerre_filter.md) - 自适应拉盖尔滤波器，一种根据市场状况调整以平滑价格数据的滤波器
 - [APZ](list_of_indicators/adaptive_price_zone.md) - 自适应价格区，基于波动性识别潜在的支撑和阻力水平
 - [鳄鱼](list_of_indicators/alligator.md) - 鳄鱼，一种使用三条移动平均线来判断市场趋势的顺势指标
@@ -152,7 +152,7 @@
 - [VHF](list_of_indicators/vhf.md) - 垂直-水平滤波器，用于区分趋势市场与震荡市场
 - [VIDIA](list_of_indicators/vidya.md) - 可变指数动态平均，适应市场波动
 - [VMA](list_of_indicators/variable_moving_average.md) - 可变移动平均线，根据波动性进行调整
-- [成交量](list_of_indicators/volume.md) - 蜡烛成交量，衡量每根蜡烛的交易量
+- [成交量](list_of_indicators/volume.md) - K线成交量，衡量每根K线的交易量
 - [成交量概况](list_of_indicators/volume_profile.md) - 成交量概况，显示不同价格水平的交易活动
 - [VMA](list_of_indicators/volume_weighted_ma.md) - 成交量加权移动平均，对成交量较高的价格给予更大的权重
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - 成交量加权平均价格，按成交量加权的平均价格

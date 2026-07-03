@@ -6,9 +6,9 @@
 
 `Strategy` 类的主要功能：
 
-- 订阅蜡烛图、订单簿、成交数据以及其他市场数据
+- 订阅K线、订单簿、成交数据以及其他市场数据
 - 下单、修改和取消订单
-- 目标仓位管理
+- 目标持仓管理
 - 损益、佣金和统计计算
 - 风险管理
 - 计时器和规则系统
@@ -20,7 +20,7 @@
 
 ## 文档部分
 
-- [目标仓位管理](target_position_management.md) -- 通过 `SetTargetPosition` 的声明式仓位管理
+- [目标持仓管理](target_position_management.md) -- 通过 `SetTargetPosition` 的声明式持仓管理
 - [交易模式](trading_modes.md) -- 通过 `StrategyTradingModes` 限制交易活动
 - [警报系统](alert_system.md) -- 发送通知（弹出、声音、日志、Telegram）
 - [计时器系统](timer_system.md) -- 定期动作执行

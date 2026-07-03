@@ -1,6 +1,6 @@
-# 适配器初始化 Paradex
+# Paradex 适配器初始化
 
-下面的代码演示了如何初始化 [ParadexMessageAdapter](xref:StockSharp.Paradex.ParadexMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示如何初始化 [ParadexMessageAdapter](xref:StockSharp.Paradex.ParadexMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
 Connector Connector = new Connector();

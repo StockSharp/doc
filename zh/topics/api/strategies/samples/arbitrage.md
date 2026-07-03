@@ -37,7 +37,7 @@ public class ArbitrageStrategy : Strategy
 该策略允许自定义以下参数：
 
 - **FutureSecurity** - 期货工具
-- **股票证券** - 基础资产工具
+- **股票类交易品种** - 基础资产
 - **FuturePortfolio** - 期货交易组合
 - **股票投资组合** - 用于基础资产交易的投资组合
 - **股票乘数** - 标的资产的乘数（e.g.，合约单位）
