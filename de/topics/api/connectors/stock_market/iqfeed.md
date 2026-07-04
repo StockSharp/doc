@@ -1,0 +1,59 @@
+# IQFeed
+
+**DTN IQFeed** - Anbieter von Echtzeit-Marktdaten fuer Aktienkurse, Forex, Nachrichten, Futures-Kontrakte usw.
+
+Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+
+## Konfiguration IQFeed
+
+Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
+
+![IQFeed](../../../../images/iqfeed.jpg)
+
+Um mit dem **IQFeed**-Connector zu arbeiten, muessen Sie den Router **IQ Feed Client** auf dem Computer installieren; er kann sowohl auf dem lokalen als auch auf einem entfernten Computer installiert werden. Der Datenaustausch zwischen der Clientanwendung und dem **IQ Feed Client** sowie zwischen dem **IQ Feed Client** und den Servern erfolgt ueber das TCP/IP-Protokoll.
+
+Um den **IQ Feed Client** von der [IQFeed](https://www.iqfeed.net/stocksharp/)-Website herunterzuladen, muessen Sie sich zuerst mit dem von **iQFeed** erhaltenen Passwort und Login autorisieren.
+
+Nach der Installation von **IQ Feed Client** wird empfohlen, den Computer neu zu starten.
+
+Nach der Installation von **IQ Feed Client, IQLink Launcher** muss dieser gestartet werden.
+
+![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+
+Klicken Sie im geoeffneten Fenster **IQLink Launcher** auf **Start IQLink**.
+
+![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+
+Geben Sie im geoeffneten Fenster **IQ Connect Login** das **Login** und **Password** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Login und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
+
+Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen ueber verschiedene Ports:
+
+1. Level1 (Port 5009) wird verwendet, um Echtzeitdaten zu Instrumenten (Ticks, Eroeffnungs- und Schlusskurse, Volatilitaet usw.) und Nachrichten zu erhalten.
+2. Level2 (Port 9200) wird verwendet, um erweiterte Quotes fuer Instrumente zu erhalten; fuer jedes ECN koennen Sie das beste Quote-Paar erhalten.
+3. Lookup (Port 9100) wird verwendet, um nach Instrumenten zu suchen, historische Daten abzurufen und erweiterte Informationen zu Nachrichten zu erhalten.
+4. Admin (Port 9300) wird verwendet, um allgemeine Informationen zur Verbindung zu erhalten und Einstellungen zu aendern.
+
+Die Portnummern, die standardmaessig fuer die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Fuer Clientverbindungen koennen die Portnummern in der Registry geaendert werden, zum Beispiel fuer Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern fuer die Verbindung zu IQ-Servern koennen nicht geaendert werden.
+
+> [!CAUTION]
+> Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.
+
+## Empfohlene Inhalte
+
+[Connectors](../../connectors.md)
+
+[Grafische Konfiguration](../graphical_configuration.md)
+
+[Einstellungen speichern und laden](../save_and_load_settings.md)
+
+[Eigenen Connector erstellen](../creating_own_connector.md)
+
+[Auftragsverwaltung](../../orders_management.md)
+
+[Neuen Auftrag erstellen](../../orders_management/create_new_order.md)
+
+[Neue Stop-Order erstellen](../../orders_management/create_new_stop_order.md)
+
+[Verbindung IQFeed](iqfeed/connection_iqfeed.md)
+
+[Adapterinitialisierung IQFeed](iqfeed/adapter_initialization_iqfeed.md)

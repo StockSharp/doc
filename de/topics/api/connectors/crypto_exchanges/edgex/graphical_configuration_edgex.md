@@ -1,0 +1,25 @@
+# Grafische Konfiguration edgeX
+
+Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md).
+
+Wichtige Felder:
+
+- **Key** - API-Schlüssel.
+- **Secret** - API-Secret.
+- **Clearing account** - Wert des Clearing-Kontos.
+- **Passphrase** - Wert der Passphrase.
+- **Section** - Handelsbereich (`Spot` oder `Derivatives`).
+- **Enable spot** - aktiviert den Spot-Bereich.
+- **Demo** - Modus der Demo-Umgebung.
+- **Spot REST / Derivatives REST** - REST-Endpunkte.
+- **Spot WS / Derivatives public WS / Derivatives private WS** - WebSocket-Endpunkte.
+
+## Empfohlener Inhalt
+
+[Connectors](../../../connectors.md)
+
+[Grafische Konfiguration](../../graphical_configuration.md)
+
+[Erstellen eines eigenen Connectors](../../creating_own_connector.md)
+
+[Speichern und Laden von Einstellungen](../../save_and_load_settings.md)

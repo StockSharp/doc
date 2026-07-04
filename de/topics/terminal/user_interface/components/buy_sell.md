@@ -1,0 +1,11 @@
+# Buy/Sell
+
+Die Komponente **Buy/Sell** ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen zu kaufen oder zu verkaufen.
+
+Um ein neues Instrument hinzuzufügen, klicken Sie auf die Schaltfläche ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png).
+
+![Terminal Buy Sell 00](../../../../images/terminal_buy_sell_00.png)
+
+## Empfohlene Inhalte
+
+[Order book](order_book.md)

@@ -1,0 +1,28 @@
+# Indexer
+
+![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
+
+Das Element wird verwendet, um ein Element aus einer Sammlung mit dem angegebenen Index abzurufen.
+
+### Eingehende Sockets
+
+Eingehende Sockets
+
+- **Any data** – die Sammlung von Elementen.
+
+### Ausgehende Sockets
+
+Ausgehende Sockets
+
+- **Any data** - das Element aus der Sammlung mit dem in den Parametern angegebenen Index.
+
+### Parameter
+
+Parameter
+
+- **Index** - der Index des erforderlichen Elements.
+
+## Empfohlene Inhalte
+
+[Converter](converter.md)
+

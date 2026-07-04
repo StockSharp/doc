@@ -1,0 +1,25 @@
+# Value Delay
+
+![Designer Delay 00](../../../../../../images/designer_delay_00.png)
+
+Diese Komponente wird verwendet, um die Übertragung eines Werts um eine angegebene Anzahl von Iterationen zu verzögern.
+
+## Eingabe-Sockets
+
+- **Trigger** – ein Signal (jeder Wert außer `False`), das den internen Zähler initialisiert, um den Verzögerungs-Countdown zu starten.
+- **Input** - ein beliebiger eingehender Wert (außer [nicht abgeschlossenen Kerzen](../data_sources/candles.md) oder [nicht finalen Indikatorwerten](indicator.md)), der den internen Zähler verringert. Wenn der Zähler null erreicht, wird er deaktiviert und der ausgehende Socket wird aktiviert. Wenn der Zähler nicht durch **Trigger** aktiviert wurde, werden eingehende Werte ignoriert.
+
+## Ausgabe-Sockets
+
+- **Signal** – gibt ein Signal aus, wenn der Zähler null erreicht, und zeigt damit das Ende der Verzögerung an.
+
+## Parameter
+
+- **Duration** - gibt die Verzögerungsdauer in Iterationen an.
+
+![Designer Delay 01](../../../../../../images/designer_delay_01.png)
+
+## Siehe auch
+
+- [Comparison](comparison.md)
+

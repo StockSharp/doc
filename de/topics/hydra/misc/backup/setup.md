@@ -1,0 +1,24 @@
+# Einrichtung
+
+Im Folgenden wird beschrieben, wie Sie ein AWS-Konto erstellen und konfigurieren.
+
+1. Um ein AWS-Konto zu erstellen, gehen Sie zur Seite [Create an AWS Account](https://aws.amazon.com/ru/) und klicken auf die Schaltflaeche **Create Account**.![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
+2. Fuellen Sie anschliessend die Formulare aus, die der Webservice anbietet.
+3. Geben Sie Ihre Kartendaten ein. Dies dient der Ueberpruefung Ihrer Identitaet.![Aws 3 Paytest](../../../../images/aws3_paytest.png)
+4. In einem der Registrierungsschritte werden Sie aufgefordert, eine Telefonnummer einzugeben und ueber die Schaltflaeche **Call Me Now** einen Anruf auf Ihr Telefon zu starten.![Aws3 CallMeNow](../../../../images/aws3_callmenow.png)
+
+   Nehmen Sie den Anruf an und geben Sie auf dem Telefon den Code ein, der auf dem Computerbildschirm angezeigt wird.
+5. Danach werden Sie aufgefordert, einen Supportplan auszuwaehlen. Nach Abschluss der Kontoerstellung muessen Sie zur Verwaltungskonsole wechseln.![Aws3 console](../../../../images/aws3_console.png)
+6. Der erste Schritt bei der Kontoeinrichtung besteht darin, einen Bucket zu erstellen.![Aws3 CreateBucket](../../../../images/aws3_createbucket.png)
+
+   Ein Bucket ist ein Container zum Speichern von Objekten in der Cloud. Fuer einen Bucket muessen Sie einen eindeutigen Namen festlegen und ausserdem ein regionales Rechenzentrum (Region) auswaehlen, in dem die Daten physisch gespeichert werden. Beachten Sie bei der spaeteren Konfiguration der Backup-Aufgabe: 1) Im Feld **Storage** muessen Sie den Bucket-Namen eingeben, 2) im Feld **Address** muessen Sie nicht den Namen, sondern die Adresse des regionalen Rechenzentrums verwenden, die Sie [hier](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) finden. Fahren Sie danach mit der Konfiguration fort.![Aws3 CreateBucket](../../../../images/aws3_createbucket.png)![Aws 3 Create Bucket Name](../../../../images/aws3_createbucketname.png)![Aws 3 Create Bucket Name property](../../../../images/aws3_createbucketname_propert.png)
+7. Anschliessend muessen Sie Schluessel fuer den programmgesteuerten Zugriff auf AWS-Services festlegen. Wechseln Sie dazu in der AWS-Konsole zum Link **Security Credentials**.![Aws3 SecurityCredentials](../../../../images/aws3_securitycredentials.png)
+8. Erweitern Sie die Ueberschrift **Access Keys (Access Key ID and Secret Access Key)** und erstellen Sie Zugriffsschluessel ueber die Schaltflaeche ![Aws3 CreateNewAccessKey](../../../../images/aws3_createnewaccesskey.png).![Aws3 SecurityCredentialsCreate](../../../../images/aws3_securitycredentialscreate.png)
+
+  Die erstellten Schluessel koennen ueber die Schaltflaeche **Download Key File** in einer Datei gespeichert werden.
+
+   Beachten Sie, dass bei der Konfiguration einer Backup-Aufgabe die **Access Key ID** als Login und der **Secret Access Key** als Passwort verwendet werden muss.
+
+## Empfohlene Inhalte
+
+[Aufgabe erstellen und konfigurieren](hydra_settings.md)

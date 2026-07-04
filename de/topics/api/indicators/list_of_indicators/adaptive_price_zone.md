@@ -1,0 +1,51 @@
+# APZ
+
+**Adaptive Price Zone (APZ)** ist ein von Lee Leibfarth entwickelter technischer Indikator, der dynamische Unterstützungs- und Widerstandszonen bildet und sich an die Marktvolatilität anpasst.
+
+Zur Verwendung des Indikators müssen Sie die Klasse [AdaptivePriceZone](xref:StockSharp.Algo.Indicators.AdaptivePriceZone) verwenden.
+
+## Beschreibung
+
+Der APZ-Indikator besteht aus zwei Linien (obere und untere), die eine Preiszone um den Durchschnittspreis bilden. Diese Zone dehnt sich je nach aktueller Marktvolatilität aus oder zieht sich zusammen. Wenn der Markt volatiler wird, erweitert sich die Zone; wenn die Volatilität abnimmt, verengt sie sich.
+
+APZ ist besonders nützlich für:
+- Erkennen potenzieller Unterstützungs- und Widerstandsniveaus
+- Erkennen möglicher Trendumkehrpunkte
+- Sichtbarmachen von Phasen erhöhter und verringerter Volatilität
+- Erstellen von Handelssystemen auf Basis von Ausbrüchen aus Preiszonen
+
+## Parameter
+
+Der Indikator hat die folgenden Parameter:
+- **Period** - Berechnungsperiode (Standardwert: 5)
+- **BandPercentage** - Prozentanteil der Spanne zur Definition der Bandbreite (Standardwert: 2 %)
+
+## Berechnung
+
+Die APZ-Berechnung basiert auf dem Exponential Moving Average (EMA) und dem Average True Range (ATR):
+
+1. Zunächst wird der EMA des Preises für die angegebene Periode berechnet:
+   ```
+   EMA = Exponential Moving Average of price over Period
+   ```
+
+2. Danach wird die Volatilität mit ATR berechnet:
+   ```
+   Volatility = Exponential Moving Average of ATR over Period
+   ```
+
+3. Die oberen und unteren APZ-Linien werden wie folgt berechnet:
+   ```
+   Upper Line = EMA + (Volatility * BandPercentage)
+   Lower Line = EMA - (Volatility * BandPercentage)
+   ```
+
+Wenn der Preis über der oberen APZ-Linie liegt, kann dies als Aufwärtstrend betrachtet werden. Wenn der Preis unter der unteren APZ-Linie liegt, kann dies auf einen Abwärtstrend hindeuten. Wenn sich der Preis innerhalb der APZ-Zone bewegt, kann sich der Markt in einer Konsolidierungs- oder Seitwärtsphase befinden.
+
+![indicator_adaptive_price_zone](../../../../images/indicator_adaptive_price_zone.png)
+
+## Siehe auch
+
+[BollingerBands](bollinger_bands.md)
+[KeltnerChannels](keltner_channels.md)
+[DonchianChannels](donchian_channels.md)

@@ -1,0 +1,24 @@
+> [!WARNING]
+> Diese Börse wurde im Dezember 2020 nach einem Hack endgültig geschlossen. Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+
+# Livecoin-Adapter initialisieren
+
+Der folgende Code zeigt, wie der [LiveCoinMessageAdapter](xref:StockSharp.LiveCoin.LiveCoinMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
+
+```cs
+			Connector Connector = new Connector();				
+			...				
+			var messageAdapter = new LiveCoinMessageAdapter(Connector.TransactionIdGenerator)
+			{
+				Key = "<Your API Key>".To<SecureString>(),
+				Secret = "<Your API Secret>".To<SecureString>(),
+			};
+			Connector.Adapter.InnerAdapters.Add(messageAdapter);
+			...	
+							
+```
+
+## Empfohlene Inhalte
+
+[Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md)
+

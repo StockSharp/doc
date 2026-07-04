@@ -1,0 +1,180 @@
+# Verbindung ueber das FIX-Protokoll
+
+[Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) moeglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Settings](settings.md) beschrieben.
+
+Fuer die Verbindung ueber das [FIX protocol](../../api/connectors/common/fix_protocol.md) muessen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX Adapter Initialization](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
+
+```cs
+// Connector-Instanz erstellen
+private readonly Connector _connector = new Connector();
+
+// Adapter fuer Marktdaten ueber das FIX-Protokoll konfigurieren
+var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
+{
+	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
+	SenderCompId = "hydra_user",
+	TargetCompId = "StockSharpHydraMD",
+	Login = "hydra_user",
+	Password = "qwerty".To<SecureString>(),
+};
+_connector.Adapter.InnerAdapters.Add(marketDataAdapter);
+
+// Adapter fuer Transaktionsdaten konfigurieren
+var transactionDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
+{
+	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
+	SenderCompId = "hydra_user",
+	TargetCompId = "StockSharpHydraMD",
+	Login = "hydra_user",
+	Password = "qwerty".To<SecureString>(),
+};
+_connector.Adapter.InnerAdapters.Add(transactionDataAdapter);
+```
+
+Abonnieren Sie Ereignisse und richten Sie Datenhandler ein:
+
+```cs
+// Ereignis bei erfolgreicher Verbindung
+_connector.Connected += () =>
+{
+	Console.WriteLine("Connection established");
+	
+	// Subscription zur Instrumentensuche erstellen
+	var lookupSubscription = new Subscription(DataType.Securities);
+	_connector.Subscribe(lookupSubscription);
+};
+
+// Ereignis bei Verbindungsverlust
+_connector.Disconnected += () =>
+{
+	Console.WriteLine("Connection lost");
+};
+
+// Ereignis bei empfangenem Instrument
+_connector.SecurityReceived += (subscription, security) =>
+{
+	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
+	BufferSecurity.Add(security);
+	
+	// Wenn dies das Zielinstrument ist, seine Daten abonnieren
+	if (security.Id == targetSecurityId)
+	{
+		// Order-Book-Subscription
+		var depthSubscription = new Subscription(DataType.MarketDepth, security);
+		_connector.Subscribe(depthSubscription);
+		
+		// Tick-Trades-Subscription
+		var tradesSubscription = new Subscription(DataType.Ticks, security);
+		_connector.Subscribe(tradesSubscription);
+		
+		// Kerzen-Subscription
+		var candleSubscription = new Subscription(
+			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+			security)
+		{
+			MarketData =
+			{
+				From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
+				To = DateTime.Now
+			}
+		};
+		_connector.Subscribe(candleSubscription);
+	}
+};
+
+// Ereignis bei empfangenem Tick-Trade
+_connector.TickTradeReceived += (subscription, trade) =>
+{
+	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
+};
+
+// Ereignis bei geaendertem Order Book
+_connector.OrderBookReceived += (subscription, depth) =>
+{
+	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
+};
+
+// Ereignis bei empfangener Kerze
+_connector.CandleReceived += (subscription, candle) =>
+{
+	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+};
+
+// Verbindungsfehlerereignis
+_connector.ConnectionError += error =>
+{
+	Console.WriteLine($"Connection error: {error.Message}");
+};
+
+// Allgemeines Fehlerereignis
+_connector.Error += error =>
+{
+	Console.WriteLine($"Error: {error.Message}");
+};
+
+// Fehlerereignis bei Marktdaten-Subscription
+_connector.SubscriptionFailed += (subscription, error) =>
+{
+	Console.WriteLine($"Subscription error {subscription.DataType} for {subscription.SecurityId}: {error}");
+};
+
+// Verbindung zum Server herstellen
+_connector.Connect();
+```
+
+## Hydra-Dienste verwenden
+
+Hydra stellt im Servermodus Zugriff auf verschiedene Datentypen bereit. Betrachten wir Beispiele fuer das Abrufen historischer Daten:
+
+```cs
+// Historische Kerzen abrufen
+private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
+{
+	// Subscription fuer historische Kerzen erstellen
+	var candleSubscription = new Subscription(
+		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
+		security)
+	{
+		MarketData =
+		{
+			From = from,
+			To = to
+		}
+	};
+	
+	// Abonnieren, um empfangene Kerzen zu verarbeiten
+	_connector.CandleReceived += OnCandleReceived;
+	
+	// Subscription starten
+	_connector.Subscribe(candleSubscription);
+}
+
+private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
+{
+	// Pruefen, ob die Kerze zu unserer Subscription gehoert
+	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
+		return;
+		
+	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	
+	// Empfangene Kerzen verarbeiten, zum Beispiel lokal speichern
+	// oder fuer Analyse/Visualisierung verwenden
+}
+```
+
+## Verbindung zum Hydra-Server trennen
+
+```cs
+// Verbindung korrekt schliessen
+private void DisconnectFromServer()
+{
+	// Von allen Subscriptions abmelden
+	foreach (var subscription in _connector.Subscriptions.ToArray())
+	{
+		_connector.UnSubscribe(subscription);
+	}
+	
+	// Verbindung zum Server trennen
+	_connector.Disconnect();
+}
+```

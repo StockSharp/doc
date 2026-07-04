@@ -1,0 +1,26 @@
+# Notification
+
+![Designer Notice 00](../../../../../../images/designer_notice_00.png)
+
+Der Würfel sendet eine Benachrichtigung, wenn Daten an seinem Eingabe-Socket eintreffen. Der eingehende Wert wird über `ToString` in Text umgewandelt. Sie können eine [Variable](../data_sources/variable.md) verbinden, um festen Text zu senden, Trades- oder Kerzen-Streams anschließen, um deren Details anzuzeigen, oder die Würfel [String format](string_format.md) und [String concat](string_concat.md) verwenden, um eine eigene Nachricht vorzubereiten.
+
+### Eingehende Sockets
+
+Eingehende Sockets
+
+- **Message** - zu sendende Daten. Jeder Wert wird akzeptiert und in eine Zeichenfolge umgewandelt.
+
+### Parameter
+
+Parameter
+
+- **Type** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Notification settings](../../../../../terminal/notifications.md) beschrieben.
+- **Telegram** - Kanal für Telegram-Benachrichtigungen.
+- **Header** - die Überschrift der Nachricht.
+
+## Empfohlene Inhalte
+
+[String format](string_format.md)
+[String concat](string_concat.md)
+[Notification settings](../../../../../terminal/notifications.md)
+
