@@ -1,0 +1,30 @@
+# Configuração gráfica Interactive Brokers
+
+Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
+
+![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
+
+- **Address** - Endereço TWS.
+- **Identifier** - ID único. Utilizado quando vários clientes estão ligados a um terminal ou gateway.
+- **Real-time** - Se devem ser utilizados dados em tempo real ou "congelados" no servidor da corretora.
+- **Logging level** - Nível de registo das mensagens do servidor.
+- **Market data fields** - Campos de dados de mercado que serão recebidos com as mensagens Level1 subscritas.
+- **Protocol** - Protocolo SSL para estabelecer a ligação
+- **Certificate** - Certificado SSL.
+- **Password** - Password do certificado SSL.
+- **Check revocation** - Verificar a revogação do certificado.
+- **Validate remote** - Validar certificados remotos.
+- **Host name** - O nome do servidor que partilha a ligação SSL.
+- **MaxVersion** - MaxVersion
+- **Heart beat** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
+- **Reconnection settings** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
+
+## Conteúdo recomendado
+
+[Conectores](../../../connectors.md)
+
+[Configuração gráfica](../../graphical_configuration.md)
+
+[Criar o próprio conector](../../creating_own_connector.md)
+
+[Guardar e carregar definições](../../save_and_load_settings.md)

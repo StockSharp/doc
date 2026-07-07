@@ -1,0 +1,22 @@
+# Break points
+
+Para adicionar um breakpoint, selecione o cubo e clique no botão ![Designer Debug 01](../../../../images/designer_debug_01.png)**Add Breakpoint**. Os breakpoints são assinalados com um círculo vermelho:
+
+![Designer Stopping point 00](../../../../images/designer_debug_break_points_00.png)
+
+Quando o breakpoint é acionado num elemento, o respetivo fundo muda para vermelho-claro.
+O elemento é automaticamente destacado na janela de propriedades, onde são apresentadas as suas propriedades e os valores dos parâmetros de entrada e de saída.
+Se apontar com o rato para o parâmetro de entrada ou saída, aparece uma dica com o valor do parâmetro.
+Um exemplo de visualização dos valores na entrada e na saída do elemento composto durante a execução da estratégia é apresentado na figura abaixo:
+
+![Designer Stopping point 01](../../../../images/designer_debug_break_points_01.png)
+
+Os breakpoints podem ser adicionados tanto antes de iniciar o processo de teste como durante o teste da estratégia no histórico.
+
+Se clicar no botão ![Designer Debug 01](../../../../images/designer_debug_01.png)**Breakpoints**, aparecerá uma janela na qual serão apresentados todos os breakpoints. Para cada um deles, pode ser definida uma condição adicional de acionamento. Por exemplo, pode definir o valor **True** para o sinal lógico. Neste caso, o breakpoint só irá parar se o valor do sinal for **True**. 
+
+![Designer Stopping point 02](../../../../images/designer_stopping_point_02.png)
+
+## Conteúdo recomendado
+
+[Execução passo a passo](step_by_step_execution.md)

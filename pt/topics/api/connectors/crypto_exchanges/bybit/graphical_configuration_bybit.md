@@ -1,0 +1,20 @@
+# Configuração gráfica de ByBit
+
+Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
+
+![API GUI Settings ByBit](../../../../../images/api_gui_settings_bybit.png)
+
+- **Key** - Key.
+- **Secret** - Secret.
+- **Sections** - Secções de negociação.
+- **Demo** - Ligação à negociação demo.
+
+## Ver também
+
+[Conectores](../../../connectors.md)
+
+[Configuração gráfica](../../graphical_configuration.md)
+
+[Criar o próprio conector](../../creating_own_connector.md)
+
+[Guardar e carregar definições](../../save_and_load_settings.md)

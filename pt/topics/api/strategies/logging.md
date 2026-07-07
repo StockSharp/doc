@@ -1,0 +1,230 @@
+# Logging em Estratégias
+
+Em StockSharp, a classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) herda de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), o que permite usar ferramentas integradas para registar todas as ações e eventos que ocorrem durante a operação de uma estratégia de negociação.
+
+## Níveis de Logging
+
+StockSharp suporta os seguintes níveis de logging (listados por ordem crescente de importância):
+
+1. Verbose - o nível de logging mais detalhado para rastreamento
+2. Debug - mensagens para depuração
+3. Info - mensagens informativas regulares
+4. Warning - avisos sobre problemas potenciais
+5. Error - mensagens de erro
+
+## Métodos de Logging na Estratégia
+
+A estratégia fornece os seguintes métodos para escrever mensagens no log:
+
+### LogVerbose
+
+O método [LogVerbose](xref:Ecng.Logging.BaseLogReceiver.LogVerbose(System.String,System.Object[])) destina-se a registar mensagens detalhadas para rastreamento:
+
+```cs
+protected override void OnStarted2(DateTime time)
+{
+	base.OnStarted2(time);
+	
+	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
+	
+	// ...
+}
+```
+
+### LogDebug
+
+O método [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,System.Object[])) é usado para mensagens de depuração:
+
+```cs
+private void ProcessCandle(ICandleMessage candle)
+{
+	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
+	
+	// ...
+}
+```
+
+### LogInfo
+
+O método [LogInfo](xref:Ecng.Logging.BaseLogReceiver.LogInfo(System.String,System.Object[])) é usado para mensagens informativas regulares:
+
+```cs
+private void CalculateSignal(decimal shortSma, decimal longSma)
+{
+	bool isShortGreaterThanLong = shortSma > longSma;
+	
+	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}", 
+		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
+	
+	// ...
+}
+```
+
+### LogWarning
+
+O método [LogWarning](xref:Ecng.Logging.BaseLogReceiver.LogWarning(System.String,System.Object[])) é usado para registar avisos:
+
+```cs
+public void RegisterOrder(Order order)
+{
+	if (order.Volume <= 0)
+	{
+		LogWarning("Attempt to register an order with invalid volume: {0}", order.Volume);
+		return;
+	}
+	
+	// ...
+}
+```
+
+### LogError
+
+O método [LogError](xref:Ecng.Logging.BaseLogReceiver.LogError(System.String,System.Object[])) é usado para registar mensagens de erro:
+
+```cs
+try
+{
+	// Some actions
+}
+catch (Exception ex)
+{
+	LogError("Error while performing operation: {0}", ex.Message);
+	Stop();
+}
+```
+
+Existe também uma sobrecarga [LogError](xref:Ecng.Logging.BaseLogReceiver.LogError(System.Exception)) que aceita diretamente uma exceção:
+
+```cs
+try
+{
+	// Some actions
+}
+catch (Exception ex)
+{
+	LogError(ex);
+	Stop();
+}
+```
+
+## Configurar o Nível de Logging
+
+A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propriedade [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina que mensagens serão escritas no log:
+
+```cs
+// Set the logging level for the strategy
+strategy.LogLevel = LogLevels.Info;
+```
+
+Com o nível de logging selecionado, apenas as mensagens desse nível e de níveis superiores serão registadas. Por exemplo, se `LogLevels.Info` estiver definido, as mensagens Verbose e Debug serão ignoradas.
+
+## Parâmetro LogLevel
+
+Para configurar convenientemente o nível de logging no construtor da estratégia, pode adicionar um parâmetro:
+
+```cs
+public class SmaStrategy : Strategy
+{
+	private readonly StrategyParam<LogLevels> _logLevel;
+	
+	public SmaStrategy()
+	{
+		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
+					.SetDisplay("Logging Level", "Level of log message detail", "Logging Settings");
+	}
+	
+	public override LogLevels LogLevel
+	{
+		get => _logLevel.Value;
+		set => _logLevel.Value = value;
+	}
+	
+	// ...
+}
+```
+
+## Exemplos de Utilização numa Estratégia Real
+
+### Registar o Início e a Paragem da Estratégia
+
+```cs
+protected override void OnStarted2(DateTime time)
+{
+	base.OnStarted2(time);
+	
+	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
+		Name, time, Security?.Code, Portfolio?.Name);
+	
+	// ...
+}
+
+protected override void OnStopped()
+{
+	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}", 
+		Name, Position, PnL);
+	
+	base.OnStopped();
+}
+```
+
+### Registar Negócios
+
+```cs
+protected override void OnNewMyTrade(MyTrade trade)
+{
+	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
+		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+		trade.Order.Security.Code,
+		trade.Order.Type,
+		trade.Trade.Price,
+		trade.Trade.Volume);
+
+	base.OnNewMyTrade(trade);
+}
+```
+
+### Registar Erros de Registo de Ordens
+
+```cs
+protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
+{
+	LogError("Order registration error {0}: {1}", 
+		fail.Order.TransactionId, fail.Error.Message);
+	
+	base.OnOrderRegisterFailed(fail, calcRisk);
+}
+```
+
+## Ligar Listeners de Log
+
+Para receber mensagens de uma estratégia, ligue listeners através de [LogManager](xref:Ecng.Logging.LogManager):
+
+```cs
+var logManager = new LogManager();
+
+// Write to file
+var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
+logManager.Listeners.Add(fileListener);
+
+// Send email
+var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
+emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
+logManager.Listeners.Add(emailListener);
+
+// Add strategy as a log source
+logManager.Sources.Add(strategy);
+```
+
+## Visualizar Logs
+
+As mensagens escritas no log da estratégia podem ser visualizadas:
+
+1. No programa [Designer](../../designer.md), no painel "Logs"
+2. Em ficheiros de log, se [FileLogListener](xref:Ecng.Logging.FileLogListener) estiver configurado
+3. Na interface de utilizador através de [LogControl](xref:StockSharp.Xaml.LogControl), se [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) for usado
+
+## Ver Também
+
+[Logging](../logging.md)
+[Componente LogControl](../graphical_user_interface/logging/log_panel.md)

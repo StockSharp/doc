@@ -1,4 +1,4 @@
-# Busca de Instrumentos
+# Pesquisa de instrumentos
 
 Ao criar seu próprio adaptador para trabalhar com uma exchange, você precisa implementar o método de busca de instrumentos. Esse método é chamado ao enviar uma mensagem [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) e retorna informações sobre os instrumentos através de mensagens [SecurityMessage](xref:StockSharp.Messages.SecurityMessage).
 

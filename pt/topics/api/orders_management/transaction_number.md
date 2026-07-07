@@ -1,0 +1,8 @@
+# Número da transação
+
+Ao trabalhar com ordens, o identificador principal é [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId), e não [Order.Id](xref:StockSharp.BusinessEntities.Order.Id). Isto acontece porque [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) é gerado pela bolsa. Por este motivo, imediatamente após a execução do método [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**, [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) pode permanecer por algum tempo sem ser inicializado. Portanto, logo após o envio da transação, o programa de negociação gera [Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId).
+
+[Order.TransactionId](xref:StockSharp.BusinessEntities.Order.TransactionId) é gerado automaticamente pela classe [IdGenerator](https://github.com/StockSharp/Ecng/blob/master/Common/IdGenerator.cs). Esta é uma classe abstrata que tem duas implementações padrão:
+
+- [IncrementalIdGenerator](https://github.com/StockSharp/Ecng/blob/master/Common/IdGenerator.cs#L28) - instalada por predefinição. Aumenta o número em 1. O valor inicial é definido através da propriedade [IncrementalIdGenerator.Current](https://github.com/StockSharp/Ecng/blob/master/Common/IdGenerator.cs#L42) e, por predefinição, é igual ao número de milissegundos desde o início do dia.
+- [MillisecondIdGenerator](https://github.com/StockSharp/Ecng/blob/master/Common/IdGenerator.cs#L93). Gera o número da transação, que é igual ao número de milissegundos desde o momento em que o gerador foi criado.

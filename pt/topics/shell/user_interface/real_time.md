@@ -1,0 +1,13 @@
+# Real-time
+
+O separador **Real-time** permite-lhe gerir estratégias iniciadas em negociação.
+
+![Shell realtime 00](../../../images/shell_realtime_00.png)
+
+Ao clicar no botão **Add** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), pode adicionar uma estratégia para iniciar a negociação. Cada estratégia adicionada é aberta num separador separado e adicionada à lista de estratégias no separador **Strategies**.
+
+No separador **Strategies**, pode eliminar, iniciar, parar e configurar estratégias. O mesmo pode ser feito num separador de estratégia individual. O separador de estratégia individual contém informações mais extensas sobre a estratégia, estatísticas, uma lista de ordens registadas e negócios da estratégia, etc.
+
+## Conteúdo recomendado
+
+[Common](common.md)

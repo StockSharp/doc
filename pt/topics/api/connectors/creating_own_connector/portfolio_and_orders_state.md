@@ -1,4 +1,4 @@
-# Informações sobre Portfólios e Ordens
+# Informações sobre carteiras e ordens
 
 Ao criar seu próprio adaptador para trabalhar com uma bolsa, você precisa implementar métodos para solicitar o estado atual do portfólio e das ordens. Esses métodos são chamados ao receber as mensagens [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) e [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage), respectivamente.
 

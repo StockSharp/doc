@@ -1,0 +1,22 @@
+# IV book
+
+![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+
+O cubo é usado para calcular um livro de ordens de volatilidade implícita.
+
+### Sockets de entrada
+
+Sockets de entrada
+
+- **Model** - o modelo de cálculo (por exemplo, Black-Scholes).
+- **Order book** - o livro de ordens.
+
+### Sockets de saída
+
+Sockets de saída
+
+- **Order book** - os valores do livro de ordens de volatilidade implícita.
+
+## Conteúdo recomendado
+
+[Option desk](option_desk.md)

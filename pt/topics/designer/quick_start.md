@@ -1,0 +1,35 @@
+# Início rápido
+
+No primeiro arranque, o [Designer](../designer.md) abre o diagrama de estratégia de médias móveis pré-configurado.
+
+![Designer Quick start 01](../../images/designer_quick_start_01.png)
+
+Para o executar em dados históricos, é necessário descarregar os dados no formato correto. Recomendamos usar o [Hydra](../hydra.md), um programa concebido para carregar automaticamente dados de mercado (instrumentos, candles, negócios por tick, livros de ordens e outros dados) a partir de diferentes fontes e guardá-los no armazenamento local. O descarregamento e armazenamento de dados históricos são descritos em detalhe em [Armazenamento de dados de mercado](market_data_storage.md).
+
+Depois de os dados serem descarregados com o [Hydra](../hydra.md), indique a pasta onde o [Hydra](../hydra.md) guardou o histórico no [Designer](../designer.md). Isto é configurado no separador **Backtest** -> **Storage**.
+
+![Designer Quick start 02](../../images/designer_quick_start_02.png)
+
+Ao clicar em ![Designer Edit Tool](../../images/designer_edit_tool_00.png), é aberta a janela **Data storage settings**, onde pode configurar armazenamento local ou remoto. Também pode configurar o [Hydra](../hydra.md) [em modo de servidor](../hydra/server_mode/settings.md) como fonte de dados de mercado. Ao clicar em ![[Designer_Settings_Repository_button.png]], é aberta a janela de seleção de pasta. Selecione a pasta onde guardou anteriormente o histórico descarregado pelo [Hydra](../hydra.md).
+
+Agora obtenha os instrumentos e os respetivos dados a partir do armazenamento local configurado. Aceda ao separador **Common** e selecione o componente **Market data**.
+
+![Designer Quick start 02](../../images/designer_quick_start_03.png)
+
+É aberto o separador de gestão de dados de mercado. Para obter os instrumentos disponíveis, clique em [Download instruments](market_data_storage/download_instruments.md). Para descarregar um instrumento, introduza o seu código ou selecione a opção **All**, escolha a fonte de dados e clique em **OK**. O [Designer](../designer.md) solicita os instrumentos disponíveis à fonte de dados. Todos os instrumentos encontrados aparecem no painel **All instruments**.
+
+Agora o [Designer](../designer.md) pode usar os instrumentos descarregados e os dados históricos disponíveis no armazenamento. Escolha uma das estratégias de demonstração. No painel [Schemas](user_interface/schemas.md), abra a pasta **Strategies** e faça duplo clique na estratégia de exemplo **SMA**. O separador **Sma** aparece na área de trabalho. Depois de mudar para a estratégia, a faixa abre automaticamente o separador **Backtest**, que contém os principais controlos para criar, depurar e testar estratégias ([Criar estratégias](strategies/using_visual_designer.md), [Exemplo de teste histórico](backtesting/getting_started.md)).
+
+![Designer Quick start 03](../../images/designer_quick_start_04_1.png)
+
+No separador **Backtest**, defina o período de teste, selecione o instrumento e escolha o [Armazenamento de dados de mercado](market_data_storage.md).
+
+Ao clicar em ![Designer Quick start 04](../../images/designer_quick_start_04.png) no campo **Instrument**, é aberta a janela **Select instrument**. Selecione nesta janela o instrumento necessário.
+
+![Designer Quick start 05](../../images/designer_quick_start_05.png)
+
+Quando seleciona qualquer bloco no painel **Designer**, o painel **Properties** mostra as propriedades desse bloco. No painel **Properties** do bloco **Candles**, pode configurar o tipo de candle e o Time Frame ([Candles](../api/candles.md)).
+
+Depois de clicar em **Start**, começa a emulação de negociação. Os resultados do teste ficam disponíveis nos separadores correspondentes do diagrama: Chart, Orders, Trades, P/L, Positions (chart), Statistics e Positions.
+
+![Designer Quick start 06](../../images/designer_quick_start_06.png)

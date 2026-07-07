@@ -1,0 +1,170 @@
+# Estados das ordens
+
+A API StockSharp fornece a capacidade de receber informação sobre ordens através do mecanismo de subscrição integrado. Tal como nos dados de mercado, a informação de transações usa uma abordagem unificada baseada em [Subscription](xref:StockSharp.BusinessEntities.Subscription).
+
+## Eventos Relacionados com Ordens
+
+[Connector](xref:StockSharp.Algo.Connector) fornece os seguintes eventos para processar informação de ordens:
+
+| Evento | Descrição |
+|---------|----------|
+| [OrderReceived](xref:StockSharp.Algo.Connector.OrderReceived) | Evento para receber informação de ordens |
+| [OrderRegisterFailReceived](xref:StockSharp.Algo.Connector.OrderRegisterFailReceived) | Evento para falha no registo de ordens |
+| [OrderCancelFailReceived](xref:StockSharp.Algo.Connector.OrderCancelFailReceived) | Evento para falha no cancelamento de ordens |
+| [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Evento para falha na modificação de ordens |
+| [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Evento para receber informação sobre negócios próprios |
+
+## Enum OrderStates
+
+Durante o seu tempo de vida, uma ordem passa pelos seguintes estados:
+
+![OrderStates](../../../images/orderstates.png)
+
+- [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - a ordem foi criada no algoritmo de negociação, mas ainda não foi enviada para registo.
+- [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - a ordem foi enviada para registo ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). O sistema aguarda confirmação da sua aceitação pela bolsa. Se a aceitação for bem-sucedida, o evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) será acionado e a ordem passará para o estado [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active). As propriedades [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) e [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime) também serão inicializadas. Se a ordem for rejeitada, o evento [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) será acionado com uma descrição do erro, e a ordem passará para o estado [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed).
+- [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) - a ordem está ativa na bolsa. Essa ordem permanecerá ativa até que todo o seu volume [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume) seja executado ou até ser cancelada forçadamente através de [CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order)). Se a ordem for parcialmente executada, são acionados os eventos [OwnTradeReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OwnTradeReceived) sobre novos negócios da ordem colocada, bem como o evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived), que passa uma notificação sobre a alteração do saldo da ordem [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance). Este último evento também será acionado em caso de cancelamento da ordem.
+- [OrderStates.Done](xref:StockSharp.Messages.OrderStates.Done) - a ordem já não está ativa na bolsa (foi totalmente executada ou cancelada).
+- [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) - a ordem não foi aceite pela bolsa (ou por um sistema intermediário, como a parte de servidor da plataforma de negociação) por algum motivo.
+
+## Subscrições Automáticas
+
+Por predefinição, [Connector](xref:StockSharp.Algo.Connector) cria automaticamente subscrições para informação de transações ao ligar ([SubscriptionsOnConnect](xref:StockSharp.Algo.Connector.SubscriptionsOnConnect)). Isto inclui subscrições para:
+
+- Informação de ordens
+- Informação de negócios
+- Informação de posições
+- Pesquisa básica de instrumentos
+
+Exemplo de processamento de um evento de receção de ordem:
+
+```cs
+private void InitConnector()
+{
+	// Subscribe to order reception event
+	Connector.OrderReceived += OnOrderReceived;
+	
+	// Subscribe to own trade reception event
+	Connector.OwnTradeReceived += OnOwnTradeReceived;
+	
+	// Subscribe to order registration failure event
+	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
+}
+
+private void OnOrderReceived(Subscription subscription, Order order)
+{
+	// Process the received order
+	_ordersWindow.OrderGrid.Orders.TryAdd(order);
+	
+	// Important! Check if the order belongs to the current subscription
+	// to avoid duplicate processing
+	if (subscription == _myOrdersSubscription)
+	{
+		// Additional processing for the specific subscription
+		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+	}
+}
+```
+
+## Criação Manual de Subscrições de Ordens
+
+Em alguns casos, pode ser necessário solicitar explicitamente informação sobre ordens. Para isso, pode criar subscrições separadas:
+
+```cs
+// Create a subscription for orders of a specific portfolio
+var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
+{
+	TransactionId = Connector.TransactionIdGenerator.GetNextId(),
+};
+
+// Handler for receiving orders
+Connector.OrderReceived += (subscription, order) =>
+{
+	if (subscription == ordersSubscription)
+	{
+		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+	}
+};
+
+// Start the subscription
+Connector.Subscribe(ordersSubscription);
+```
+
+## Verificar o Estado da Ordem
+
+São usados métodos de extensão para determinar o estado atual de uma ordem:
+
+```cs
+// Check order status
+Order order = ...; // received order
+
+// Is the order canceled
+bool isCanceled = order.IsCanceled();
+
+// Is the order fully executed
+bool isMatched = order.IsMatched();
+
+// Is the order partially executed
+bool isPartiallyMatched = order.IsMatchedPartially();
+
+// Is at least part of the order executed
+bool isNotEmpty = order.IsMatchedEmpty();
+
+// Get the executed volume
+decimal matchedVolume = order.GetMatchedVolume();
+```
+
+## Abordagem Avançada: Trabalhar com Várias Subscrições
+
+Em cenários complexos, pode ser necessário trabalhar com várias subscrições de ordens em simultâneo. Neste caso, é importante processar corretamente os eventos para evitar duplicação:
+
+```cs
+private Subscription _portfolio1OrdersSubscription;
+private Subscription _portfolio2OrdersSubscription;
+
+private void RequestOrdersForDifferentPortfolios()
+{
+	// Subscription for orders of the first portfolio
+	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
+	
+	// Subscription for orders of the second portfolio
+	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
+	
+	// Common handler for receiving orders
+	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
+	
+	// Start subscriptions
+	Connector.Subscribe(_portfolio1OrdersSubscription);
+	Connector.Subscribe(_portfolio2OrdersSubscription);
+}
+
+private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
+{
+	// Determine which subscription the order belongs to
+	if (subscription == _portfolio1OrdersSubscription)
+	{
+		// Process orders of the first portfolio
+	}
+	else if (subscription == _portfolio2OrdersSubscription)
+	{
+		// Process orders of the second portfolio
+	}
+}
+```
+
+> [!NOTE]
+> Esta abordagem avançada com várias subscrições de ordens deve ser usada apenas em casos excecionais, quando o mecanismo de subscrição padrão é insuficiente.
+
+## Natureza Assíncrona das Transações
+
+O envio de transações (registo, substituição ou cancelamento de ordens) é efetuado de forma assíncrona. Isto permite que o programa de negociação não espere pela confirmação da bolsa e continue a funcionar, acelerando a reação a alterações na situação de mercado.
+
+Para acompanhar o estado de uma ordem, é necessário subscrever os eventos correspondentes:
+- [OrderReceived](xref:StockSharp.Algo.Connector.OrderReceived) para receber atualizações do estado da ordem
+- [OrderRegisterFailReceived](xref:StockSharp.Algo.Connector.OrderRegisterFailReceived) para tratar erros de registo
+
+## Ver Também
+
+- [Subscrições](../market_data/subscriptions.md)
+- [Estados da Ordem](orders_states.md)
+- [Criar uma Nova Ordem](create_new_order.md)
+- [Cancelar Ordens](order_cancel.md)

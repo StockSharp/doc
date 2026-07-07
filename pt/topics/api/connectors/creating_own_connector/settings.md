@@ -1,4 +1,4 @@
-# Armazenamento de Configurações
+# Armazenamento de definições
 
 Ao criar seu próprio adaptador, certifique-se de fornecer a capacidade de salvar e carregar configurações. Para isso, o StockSharp usa os métodos `Save` e `Load`, que trabalham com o objeto `SettingsStorage`.
 

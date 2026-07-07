@@ -1,4 +1,4 @@
-# Condições Estendidas de Ordem
+# Condições estendidas de ordem
 
 Ao trabalhar com algumas bolsas ou sistemas de negociação, os campos padrão para registrar uma ordem podem não ser suficientes. Por exemplo, quando é necessário:
 

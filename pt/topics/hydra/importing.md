@@ -1,0 +1,18 @@
+# Importação
+
+[Hydra](../hydra.md) permite importar os seus próprios dados guardados no formato .csv. Para importar, abra o separador **Import** e selecione o tipo de dados de bolsa que pretende importar.
+
+![hydra import menu](../../images/hydra_import_menu.png)
+
+Podem ser importados os seguintes tipos:
+
+- [Candles](importing/candles.md)
+- [Securities](importing/instruments.md)
+- [Trades](importing/ticks.md)
+- [Order books](importing/order_books.md)
+- [Order log](importing/order_log.md)
+- [Level 1](importing/level_1.md)
+- [News](importing/news.md)
+- [Own transactions](importing/transactions.md)
+
+**Ver [tutorial em vídeo](videos/import_task.md)**

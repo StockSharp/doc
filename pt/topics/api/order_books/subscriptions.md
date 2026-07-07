@@ -1,0 +1,55 @@
+# Subscrições
+
+## Subscrever o Livro de Ofertas
+
+Para subscrever o livro de ofertas no StockSharp, é necessário executar os seguintes passos:
+
+1. Subscrever o evento de receção de livros de ofertas [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) e processar objetos da interface [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage):
+
+```cs
+// event handler
+private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
+{
+	// Here you can process the order book data, for example, display it on the screen or use it in your trading strategy
+	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
+}
+
+// subscribing to the event
+connector.OrderBookReceived += OnOrderBookReceived;
+```
+
+É importante subscrever o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) **antes** de enviar um pedido de subscrição para o livro de ofertas. Isto garante que não perde dados se os livros de ofertas começarem a chegar muito rapidamente após o envio do pedido de subscrição.
+
+2. Envie um pedido de subscrição usando o método [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)):
+
+```cs
+var security = GetSecurity(); // Get the Security object you want to subscribe to
+				
+// subscribe to the order book
+var subscription = new Subscription(DataType.MarketDepth, security);
+connector.Subscribe(subscription);
+```
+
+## Cancelar a Subscrição do Livro de Ofertas
+
+Para cancelar a subscrição do livro de ofertas, chame o método [Connector.UnSubscribe](xref:StockSharp.Algo.Connector.UnSubscribe(StockSharp.BusinessEntities.Subscription)):
+
+```cs
+connector.UnSubscribe(subscription);
+```
+
+## Esclarecimento Sobre a Receção de Livros de Ofertas
+
+Ao trabalhar com o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived), é importante compreender que os livros de ofertas que chegam através deste evento já estão compilados e prontos a usar. Isto significa que, independentemente do método de transmissão de dados pela fonte - sejam dados diferenciais (apenas alterações no livro de ofertas) ou snapshots completos do livro de ofertas - a plataforma StockSharp processa estes dados de modo que o trader recebe um livro de ofertas completo e atualizado.
+
+A plataforma integra automaticamente as alterações no livro de ofertas, atualizando o seu conteúdo para o estado atual antes de chamar o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived). Isto simplifica o trabalho com dados, pois os traders não precisam de processar dados diferenciais de forma independente nem compilar o livro de ofertas a partir de snapshots consecutivos. Assim, pode ter a certeza de que os dados recebidos no manipulador de eventos refletem o estado mais recente do livro de ofertas no momento do evento.
+
+Isto simplifica significativamente o desenvolvimento de estratégias de negociação e a análise de mercado, pois os traders podem concentrar-se diretamente na lógica das suas estratégias, sem gastar tempo nos aspetos técnicos de compilação e processamento dos dados do livro de ofertas.
+
+## Exemplo de Utilização
+
+Exemplos de utilização do livro de ofertas estão disponíveis no projeto *Samples\/01\_Basic\/02\_MarketDepths* no [GitHub](https://github.com/StockSharp/StockSharp/) ou no arquivo da API StockSharp, que pode ser obtido através do [Instalador](../../installer.md). Estes exemplos fornecem ilustrações práticas de ligação a um sistema de negociação, subscrição de um livro de ofertas filtrado e processamento dos dados recebidos, podendo servir como um bom ponto de partida para desenvolver as suas próprias estratégias de negociação.
+
+## Ver Também
+
+[Subscrições](../market_data/subscriptions.md)
