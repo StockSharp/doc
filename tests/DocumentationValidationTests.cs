@@ -47,115 +47,163 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	};
 
 	[TestMethod]
-	public void Localization_manifest_and_strings_are_consistent()
+	public void Localization_metadata_and_strings_are_consistent()
 	{
 		var errors = new List<string>();
-		var manifestPath = Path.Combine(_repoRoot, "i18n", "languages.json");
 
-		if (!File.Exists(manifestPath))
-			errors.Add("i18n/languages.json is missing.");
+		if (Directory.Exists(Path.Combine(_repoRoot, "i18n")))
+			errors.Add("i18n folder is obsolete. Keep language metadata, strings, and flags under each language folder.");
 
-		var entries = Array.Empty<LanguageEntry>();
+		var languageDirs = Directory.EnumerateDirectories(_repoRoot)
+			.Select(path => new { Path = path, Code = Path.GetFileName(path) })
+			.Where(item => item.Code is not null && Regex.IsMatch(item.Code, "^[a-z]{2}$", RegexOptions.CultureInvariant))
+			.OrderBy(item => item.Code, StringComparer.OrdinalIgnoreCase)
+			.ToArray();
 
-		if (File.Exists(manifestPath))
+		var codes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+		var orders = new Dictionary<int, string>();
+		var defaults = 0;
+		var metadataCount = 0;
+
+		foreach (var dir in languageDirs)
 		{
+			var code = dir.Code;
+			var metadataPath = Path.Combine(dir.Path, "language.json");
+
+			if (!File.Exists(metadataPath))
+			{
+				if (HasContent(code))
+					errors.Add($"{code}/language.json is missing.");
+
+				continue;
+			}
+
+			metadataCount++;
+
+			LanguageEntry entry;
 			try
 			{
-				entries = JsonSerializer.Deserialize<LanguageEntry[]>(ReadAllText(manifestPath), _json) ?? Array.Empty<LanguageEntry>();
+				entry = JsonSerializer.Deserialize<LanguageEntry>(ReadAllText(metadataPath), _json);
+				if (entry == null)
+				{
+					errors.Add($"{code}/language.json must contain a JSON object.");
+					continue;
+				}
 			}
 			catch (Exception ex)
 			{
-				errors.Add($"i18n/languages.json is invalid JSON: {ex.Message}");
+				errors.Add($"{code}/language.json is invalid JSON: {ex.Message}");
+				continue;
 			}
-		}
 
-		if (entries.Length == 0)
-			errors.Add("i18n/languages.json must contain at least one language.");
+			var declaredCode = (entry.Code ?? string.Empty).Trim();
 
-		var codes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-		var defaults = 0;
-		var flagsRoot = Path.Combine(_repoRoot, "i18n", "flags");
-
-		foreach (var entry in entries)
-		{
-			var code = (entry.Code ?? string.Empty).Trim();
-
-			if (!Regex.IsMatch(code, "^[a-z]{2}$", RegexOptions.CultureInvariant))
-				errors.Add($"i18n/languages.json has invalid language code '{entry.Code}'. Expected two lowercase ISO letters.");
-			else if (!codes.Add(code))
-				errors.Add($"i18n/languages.json has duplicate language code '{code}'.");
+			if (!Regex.IsMatch(declaredCode, "^[a-z]{2}$", RegexOptions.CultureInvariant))
+				errors.Add($"{code}/language.json has invalid language code '{entry.Code}'. Expected two lowercase ISO letters.");
+			else if (!declaredCode.Equals(code, StringComparison.OrdinalIgnoreCase))
+				errors.Add($"{code}/language.json code '{declaredCode}' must match its folder name.");
+			else if (!codes.Add(declaredCode))
+				errors.Add($"{code}/language.json has duplicate language code '{declaredCode}'.");
 
 			if (string.IsNullOrWhiteSpace(entry.Name))
-				errors.Add($"i18n/languages.json language '{code}' has empty name.");
+				errors.Add($"{code}/language.json has empty name.");
+
+			if (entry.Order == int.MaxValue)
+				errors.Add($"{code}/language.json must declare order.");
+			else if (entry.Order < 0)
+				errors.Add($"{code}/language.json order must be non-negative.");
+			else if (orders.TryGetValue(entry.Order, out var previous))
+				errors.Add($"{code}/language.json order {entry.Order} duplicates {previous}/language.json.");
+			else
+				orders[entry.Order] = code;
 
 			if (entry.IsDefault)
 				defaults++;
 
-			if (string.IsNullOrWhiteSpace(entry.Flag))
-			{
-				errors.Add($"i18n/languages.json language '{code}' has empty flag.");
-			}
-			else
-			{
-				var flag = ResolveExistingPath(flagsRoot, entry.Flag.Replace('\\', '/'));
-				if (!flag.Exists)
-					errors.Add($"i18n/languages.json language '{code}' references missing flag '{entry.Flag}'.");
-				else if (!flag.ExactCase)
-					errors.Add($"i18n/languages.json language '{code}' references flag '{entry.Flag}' with wrong case; actual path is '{flag.ActualRelativePath}'.");
-			}
+			ValidateLanguageFlag(code, dir.Path, entry.Flag, errors);
+			ValidateLanguageStrings(code, Path.Combine(dir.Path, "strings.json"), errors);
+
+			if (HasContent(code))
+				ValidateContentLanguageEntryFiles(code, dir.Path, errors);
 		}
 
+		if (metadataCount == 0)
+			errors.Add("At least one language.json file must be present.");
+
 		if (defaults != 1)
-			errors.Add($"i18n/languages.json must contain exactly one default language, found {defaults}.");
+			errors.Add($"Exactly one language.json file must declare default=true, found {defaults}.");
 
 		if (!codes.Contains(DefaultLanguage))
-			errors.Add($"i18n/languages.json must declare the default content language '{DefaultLanguage}'.");
+			errors.Add($"Default content language '{DefaultLanguage}' must have language.json.");
 
 		foreach (var lang in GetContentLanguages())
 		{
 			if (!codes.Contains(lang))
-				errors.Add($"Content folder '{lang}' is not declared in i18n/languages.json.");
-
-			var root = Path.Combine(_repoRoot, lang);
-			if (!File.Exists(Path.Combine(root, "index.md")))
-				errors.Add($"{lang}/index.md is missing.");
-			if (!File.Exists(Path.Combine(root, "toc.yml")))
-				errors.Add($"{lang}/toc.yml is missing.");
-		}
-
-		foreach (var file in Directory.EnumerateFiles(Path.Combine(_repoRoot, "i18n"), "*.json"))
-		{
-			var name = Path.GetFileNameWithoutExtension(file);
-			if (name.Equals("languages", StringComparison.OrdinalIgnoreCase))
-				continue;
-
-			if (!codes.Contains(name))
-				errors.Add($"i18n/{Path.GetFileName(file)} has no matching entry in languages.json.");
-
-			try
-			{
-				var strings = JsonSerializer.Deserialize<Dictionary<string, string>>(ReadAllText(file), _json);
-				if (strings is null)
-				{
-					errors.Add($"{RelativeToRepo(file)} must contain a JSON object.");
-					continue;
-				}
-
-				foreach (var (key, value) in strings)
-				{
-					if (string.IsNullOrWhiteSpace(key))
-						errors.Add($"{RelativeToRepo(file)} contains an empty localization key.");
-					if (value is null)
-						errors.Add($"{RelativeToRepo(file)} key '{key}' has null value.");
-				}
-			}
-			catch (Exception ex)
-			{
-				errors.Add($"{RelativeToRepo(file)} is invalid JSON: {ex.Message}");
-			}
+				errors.Add($"Content folder '{lang}' has no matching language.json.");
 		}
 
 		AssertNoErrors(errors);
+	}
+
+	private static void ValidateLanguageFlag(string code, string langRoot, string flagPath, List<string> errors)
+	{
+		if (string.IsNullOrWhiteSpace(flagPath))
+		{
+			errors.Add($"{code}/language.json has empty flag.");
+			return;
+		}
+
+		var normalized = flagPath.Replace('\\', '/');
+		if (normalized.Contains('/', StringComparison.Ordinal))
+		{
+			errors.Add($"{code}/language.json flag must be a file name inside the language folder.");
+			return;
+		}
+
+		var flag = ResolveExistingPath(langRoot, normalized);
+		if (!flag.Exists)
+			errors.Add($"{code}/language.json references missing flag '{flagPath}'.");
+		else if (!flag.ExactCase)
+			errors.Add($"{code}/language.json references flag '{flagPath}' with wrong case; actual path is '{code}/{flag.ActualRelativePath}'.");
+	}
+
+	private static void ValidateLanguageStrings(string code, string stringsPath, List<string> errors)
+	{
+		if (!File.Exists(stringsPath))
+		{
+			errors.Add($"{code}/strings.json is missing.");
+			return;
+		}
+
+		try
+		{
+			var strings = JsonSerializer.Deserialize<Dictionary<string, string>>(ReadAllText(stringsPath), _json);
+			if (strings is null)
+			{
+				errors.Add($"{code}/strings.json must contain a JSON object.");
+				return;
+			}
+
+			foreach (var (key, value) in strings)
+			{
+				if (string.IsNullOrWhiteSpace(key))
+					errors.Add($"{code}/strings.json contains an empty localization key.");
+				if (value is null)
+					errors.Add($"{code}/strings.json key '{key}' has null value.");
+			}
+		}
+		catch (Exception ex)
+		{
+			errors.Add($"{code}/strings.json is invalid JSON: {ex.Message}");
+		}
+	}
+
+	private static void ValidateContentLanguageEntryFiles(string code, string langRoot, List<string> errors)
+	{
+		if (!File.Exists(Path.Combine(langRoot, "index.md")))
+			errors.Add($"{code}/index.md is missing.");
+		if (!File.Exists(Path.Combine(langRoot, "toc.yml")))
+			errors.Add($"{code}/toc.yml is missing.");
 	}
 
 	[TestMethod]
@@ -832,7 +880,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		for (var dir = new DirectoryInfo(AppContext.BaseDirectory); dir is not null; dir = dir.Parent)
 		{
-			if (Directory.Exists(Path.Combine(dir.FullName, "i18n")) && Directory.Exists(Path.Combine(dir.FullName, DefaultLanguage)))
+			if (Directory.Exists(Path.Combine(dir.FullName, DefaultLanguage))
+				&& File.Exists(Path.Combine(dir.FullName, DefaultLanguage, "language.json")))
 				return dir.FullName;
 		}
 
@@ -899,6 +948,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		[JsonPropertyName("default")]
 		public bool IsDefault { get; init; }
+
+		[JsonPropertyName("order")]
+		public int Order { get; init; } = int.MaxValue;
 	}
 
 	private readonly record struct PathResolution(bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);

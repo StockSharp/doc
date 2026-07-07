@@ -1,0 +1,7 @@
+{
+  "code": "ru",
+  "name": "Русский",
+  "flag": "flag.svg",
+  "default": false,
+  "order": 1
+}
