@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EcngVer>1.0.*</EcngVer>
+    <MarkdigVer>1.*</MarkdigVer>
+    <MicrosoftNetTestSdkVer>18.*</MicrosoftNetTestSdkVer>
+    <MSTestVer>4.*</MSTestVer>
+    <YamlDotNetVer>18.*</YamlDotNetVer>
+  </PropertyGroup>
+</Project>

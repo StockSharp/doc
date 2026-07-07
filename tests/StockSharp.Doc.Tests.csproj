@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="Versions.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ecng.UnitTesting" Version="$(EcngVer)" />
+    <PackageReference Include="Markdig" Version="$(MarkdigVer)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNetTestSdkVer)" />
+    <PackageReference Include="MSTest.TestAdapter" Version="$(MSTestVer)" />
+    <PackageReference Include="MSTest.TestFramework" Version="$(MSTestVer)" />
+    <PackageReference Include="YamlDotNet" Version="$(YamlDotNetVer)" />
+  </ItemGroup>
+</Project>

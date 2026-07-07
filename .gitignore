@@ -1,1 +1,4 @@
 *.log
+[Bb]in/
+[Oo]bj/
+TestResults/

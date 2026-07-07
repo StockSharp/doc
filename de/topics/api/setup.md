@@ -105,7 +105,7 @@ Jeder Connector ist ein separates NuGet-Paket. Wichtige Connectors:
 | `StockSharp.Connectors.Bittrex` | Bittrex |
 
 > [!NOTE]
-> Die vollständige Liste der Connectors finden Sie im Abschnitt [Connectors](connectors.md). Einige Connectors sind nur über den [privaten NuGet-Server](#private-nuget-server) verfügbar.
+> Die vollständige Liste der Connectors finden Sie im Abschnitt [Connectors](connectors.md). Einige Connectors sind nur über den [privaten NuGet-Server](#privater-nuget-server) verfügbar.
 
 ### Lokalisierung
 
@@ -232,7 +232,7 @@ Alle StockSharp-Pakete müssen dieselbe Version haben. Wenn Typ- oder Methodenfe
 
 ### Paket auf öffentlichem NuGet nicht gefunden
 
-Einige Connectors sind nur über den [privaten Server](#private-nuget-server) verfügbar. Stellen Sie sicher, dass die richtige Quelle hinzugefügt wurde.
+Einige Connectors sind nur über den [privaten Server](#privater-nuget-server) verfügbar. Stellen Sie sicher, dass die richtige Quelle hinzugefügt wurde.
 
 ### GUI-Probleme außerhalb von Windows
 

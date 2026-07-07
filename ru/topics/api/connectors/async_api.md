@@ -123,4 +123,4 @@ public async Task PlaceAndManageOrderAsync(Security security, Portfolio portfoli
 
 ## См. также
 
-[Заявки](../orders.md)
+[Заявки](../orders_management.md)

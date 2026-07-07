@@ -105,7 +105,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 | `StockSharp.Connectors.Bittrex` | Bittrex |
 
 > [!NOTE]
-> 有关连接器的完整列表，请参见 [连接器](connectors.md) 部分。某些连接器仅通过 [私有 NuGet 服务器](#private-nuget-server) 提供。
+> 有关连接器的完整列表，请参见 [连接器](connectors.md) 部分。某些连接器仅通过 [私有 NuGet 服务器](#私人-nuget-服务器) 提供。
 
 ### 本地化
 
@@ -232,7 +232,7 @@ dotnet add package StockSharp.Algo
 
 ### 在公共 NuGet 上未找到包
 
-有些连接器只能通过[私人服务器](#private-nuget-server)使用。请确保已添加正确的来源。
+有些连接器只能通过[私人服务器](#私人-nuget-服务器)使用。请确保已添加正确的来源。
 
 ### 非 Windows 系统上的 GUI 问题
 
