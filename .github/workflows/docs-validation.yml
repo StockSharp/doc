@@ -26,4 +26,4 @@ jobs:
         run: dotnet restore tests/StockSharp.Doc.Tests.csproj
 
       - name: Test
-        run: dotnet test tests/StockSharp.Doc.Tests.csproj --configuration Release --no-restore --filter "FullyQualifiedName~StockSharp.Doc.Tests" --logger "console;verbosity=normal"
+        run: dotnet test tests/StockSharp.Doc.Tests.csproj --configuration Release --no-restore --logger "console;verbosity=normal"
