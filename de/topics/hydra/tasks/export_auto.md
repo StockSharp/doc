@@ -1,14 +1,14 @@
-# Export (auto)
+# Automatischer Export
 
-Die Aufgabe exportiert Boersendaten in verschiedene Formate: Excel, xml, sql, bin, Json oder txt.
+Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bin, Json oder txt.
 
 ![hydra tasks export](../../../images/hydra_tasks_export.png)
 
 **Database**
 
 - **Connection** - Verbindung zur Datenbank. Wird beim Export über SQL verwendet.
-- **Packet** - Groesse des uebertragenen Datenpakets. Standardmaessig betraegt die Groesse 50 Elemente. Wird beim Export über SQL verwendet.
-- **Uniqueness** - Pruefung der Dateneindeutigkeit in der Datenbank. Beeinflusst die Performance. Standardmaessig aktiviert. Wird beim Export über SQL verwendet.
+- **Packet** - Größe des ?bertragenen Datenpakets. Standardmäßig beträgt die Größe 50 Elemente. Wird beim Export über SQL verwendet.
+- **Uniqueness** - Prüfung der Dateneindeutigkeit in der Datenbank. Beeinflusst die Performance. Standardmäßig aktiviert. Wird beim Export über SQL verwendet.
 
 > [!TIP]
 > Beim Export über SQL müssen die Parameter der Verbindungszeichenfolge gesetzt werden.
@@ -32,10 +32,10 @@ Die Aufgabe exportiert Boersendaten in verschiedene Formate: Excel, xml, sql, bi
 
 - **Header** - Converter.
 - **Working hours** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - das Ausfuehrungsintervall.
+- **Interval of operation** - das Ausführungsintervall.
 - **Data directory** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
-- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmaessig 0, die Anzahl der Fehler wird ignoriert.
+- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmäßig 0, die Anzahl der Fehler wird ignoriert.
 - **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
 
 **CSV**
@@ -62,8 +62,8 @@ Betrachten wir ein Beispiel für den automatischen Export:
 
 1. Wählen Sie ein Instrument aus.
 2. Richten Sie die Marktdaten ein, die exportiert werden müssen.![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
-3. Legen Sie den Exportzeitraum fest. Wenn der Download von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemaess dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
-4. Richten Sie Verzeichnisse, Ausfuehrungsintervall, Datentyp und Datenformat ein.
+3. Legen Sie den Exportzeitraum fest. Wenn der Download von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemäß dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
+4. Richten Sie Verzeichnisse, Ausführungsintervall, Datentyp und Datenformat ein.
 5. Starten Sie den Export.![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)
 
 Sehen wir uns die exportierten Daten an.

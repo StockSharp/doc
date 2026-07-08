@@ -4,7 +4,7 @@ Verbindungseinstellungen in [Designer](../../designer.md), [Terminal](../../term
 
 Weitere Informationen zur grafischen Verbindungskonfiguration für verschiedene Konnektoren finden Sie unter [Grafische Konfiguration](../../api/connectors/graphical_configuration.md).
 
-- [Oanda](sources_samples/oanda.md)
-- [Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Bitmex](sources_samples/bitmex.md)
-- [Binance](sources_samples/binance.md)
+- [Verbindung zu OANDA](sources_samples/oanda.md)
+- [Verbindung zu Interactive Brokers](sources_samples/interactive_brokers.md)
+- [Verbindung zu BitMEX](sources_samples/bitmex.md)
+- [Verbindung zu Binance](sources_samples/binance.md)

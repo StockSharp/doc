@@ -1,6 +1,6 @@
-# Import (auto)
+# Automatischer Import
 
-Die Aufgabe fuehrt den automatischen Import von Boersendaten aus Dateien im angegebenen Verzeichnis gemaess der angegebenen Dateimaske aus.
+Die Aufgabe führt den automatischen Import von Börsendaten aus Dateien im angegebenen Verzeichnis gemäß der angegebenen Dateimaske aus.
 
 Für jeden ausgewählten Marktdatentyp wird die Vorlage auf der Registerkarte [Import](../importing.md) konfiguriert.
 
@@ -33,10 +33,10 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 
 - **Header** - Converter.
 - **Working hours** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - das Ausfuehrungsintervall.
+- **Interval of operation** - das Ausführungsintervall.
 - **Data directory** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
-- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmaessig 0, die Anzahl der Fehler wird ignoriert.
+- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmäßig 0, die Anzahl der Fehler wird ignoriert.
 - **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
 
 **Logging**

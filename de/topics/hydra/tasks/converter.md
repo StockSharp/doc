@@ -1,6 +1,6 @@
 # Konverter
 
-Die Aufgabe konvertiert Boersendaten. Zum Beispiel von Order Logs in Ticks oder von Ticks in Kerzen usw.
+Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder von Ticks in Kerzen usw.
 
 ![hydra tasks converter](../../../images/hydra_tasks_converter.png)
 
@@ -19,18 +19,18 @@ Die Aufgabe konvertiert Boersendaten. Zum Beispiel von Order Logs in Ticks oder 
 - **Depth** - maximale Tiefe der Order-Book-Erzeugung.
 - **Order log** - wie Order Books aus dem Order Log erstellt werden.
 
-  Jede Boerse hat ihr eigenes **Order Log**-Format. Das Programm [Hydra](../../hydra.md) unterstuetzt drei Formate:
+  Jede Börse hat ihr eigenes **Order Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
   - **By default** - wird in den meisten Faellen verwendet.
-  - **ITCH** - wird für das ITCH-Protokoll verwendet (Boersen: LSE und Nasdaq).
+  - **ITCH** - wird für das ITCH-Protokoll verwendet (Börsen: LSE und Nasdaq).
 
 **General**
 
 - **Header** - Converter.
 - **Working hours** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - das Ausfuehrungsintervall.
+- **Interval of operation** - das Ausführungsintervall.
 - **Data directory** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
-- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmaessig 0, die Anzahl der Fehler wird ignoriert.
+- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmäßig 0, die Anzahl der Fehler wird ignoriert.
 - **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
 
 **Logging**
@@ -45,7 +45,7 @@ Betrachten wir ein Beispiel für eine Datenkonvertierung.
 
    > [!TIP]
 > WICHTIG\! Der angeforderte Datenzeitraum muss dem für die Konvertierung verfügbaren Zeitraum entsprechen, andernfalls werden die Daten nicht konvertiert. Geben Sie in den Einstellungen das korrekte Quelldatenformat an, damit es dem Format der zu konvertierenden Daten entspricht.
-3. Geben Sie die erforderlichen Verzeichnisse, den Zeitoffset und das Ausfuehrungsintervall an.
+3. Geben Sie die erforderlichen Verzeichnisse, den Zeitoffset und das Ausführungsintervall an.
 4. Starten Sie die Konvertierung.![hydra tasks converter 01](../../../images/hydra_tasks_converter_01.png)
 
 Es ist zu sehen, dass die Daten konvertiert wurden. [Sehen wir uns](../working_with_data/view_and_export.md) die resultierenden Daten an.
