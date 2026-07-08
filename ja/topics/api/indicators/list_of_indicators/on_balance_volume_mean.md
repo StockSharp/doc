@@ -1,0 +1,91 @@
+# OBVM
+
+**On Balance Volume Mean (OBVM)** は、On Balance Volume (OBV) インジケーターの移動平均を表すテクニカルインジケーターであり、出来高に基づくトレンドシグナルをより明確にします。
+
+インジケーターを使用するには、[OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean) クラスを使用する必要があります。
+
+## 説明
+
+On Balance Volume Mean (OBVM) は、古典的な On Balance Volume (OBV) インジケーターの改良版であり、OBV 値に移動平均を適用して変動を平滑化し、より明確なトレンドを特定します。このインジケーターは、価格方向の変化に基づく出来高の累積という OBV の中核概念を維持しながら、追加のフィルタリング層を加えます。
+
+OBVM は、元の OBV に存在するノイズを取り除き、長期的な出来高フローのトレンドをより目立たせるのに役立ちます。これは、変動の大きい市場や、不規則な取引出来高を持つ銘柄を分析する場合に特に有用です。
+
+OBVM の主な利点は、古典的な OBV と比較して、より明確で誤シグナルが発生しにくい取引シグナルを生成できることです。このインジケーターは、OBV とその平均値のクロスオーバーを特定するためにも使用でき、追加の取引機会を提供します。
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります:
+- **Length** - 移動平均計算の期間 (既定値: 20)
+
+## 計算
+
+On Balance Volume Mean の計算には、次の手順が含まれます:
+
+1. 基本となる On Balance Volume (OBV) インジケーターを計算します:
+   ```
+   If Close[current] > Close[previous]:
+       OBV[current] = OBV[previous] + Volume[current]
+   If Close[current] < Close[previous]:
+       OBV[current] = OBV[previous] - Volume[current]
+   If Close[current] = Close[previous]:
+       OBV[current] = OBV[previous]
+   ```
+
+2. OBV 値に移動平均を適用します:
+   ```
+   OBVM = SMA(OBV, Length)
+   ```
+
+ここで:
+- Close - 終値
+- Volume - 取引出来高
+- OBV - On Balance Volume
+- SMA - 単純移動平均
+- Length - 移動平均期間
+
+注: SMA の代わりに、EMA (指数移動平均)、WMA (加重移動平均) など、他の種類の移動平均も使用できます。
+
+## 解釈
+
+On Balance Volume Mean は次のように解釈できます:
+
+1. **トレンド分析**:
+   - OBVM の上昇は、強い出来高の支持を伴う強気トレンドを示します
+   - OBVM の下落は、強い出来高の支持を伴う弱気トレンドを示します
+   - 横ばいの OBVM は、明確なトレンドがないことを示します
+
+2. **OBV と OBVM のクロスオーバー**:
+   - OBV が OBVM を下から上へクロスする場合、強気シグナルと見なすことができます
+   - OBV が OBVM を上から下へクロスする場合、弱気シグナルと見なすことができます
+   - これらのクロスオーバーは、多くの場合、新しいトレンドの開始または重要な価格変動を示します
+
+3. **ダイバージェンス**:
+   - 強気ダイバージェンス: 価格が新しい安値を形成する一方で、OBVM はより高い安値を形成します
+   - 弱気ダイバージェンス: 価格が新しい高値を形成する一方で、OBVM はより低い高値を形成します
+   - ダイバージェンスは、多くの場合、重要なトレンド反転に先行します
+
+4. **価格トレンドの確認**:
+   - OBVM が価格と同じ方向に動く場合、現在の価格トレンドを確認します
+   - OBVM と価格が反対方向に動く場合、潜在的なトレンド反転を示す場合があります
+
+5. **サポートおよびレジスタンス水準**:
+   - OBVM チャートは独自のサポートおよびレジスタンス水準を形成する場合があります
+   - これらの水準のブレイクアウトは、価格チャート上の同様のブレイクアウトに先行する場合があります
+
+6. **他の出来高インジケーターとの比較**:
+   - OBVM は、シグナルを確認するために他の出来高インジケーターと比較できます
+   - 複数の出来高インジケーターからのシグナルに一貫性があると、その信頼性が高まります
+
+7. **Length パラメーターの選択**:
+   - 短い期間 (例: 10-15) は、OBVM を短期的な変化に対してより敏感にします
+   - 長い期間 (例: 30-50) は、長期トレンドの特定により適しています
+   - 最適な期間は、取引の時間軸と特定の銘柄の特性によって異なります
+
+![indicator_on_balance_volume_mean](../../../../images/indicator_on_balance_volume_mean.png)
+
+## 関連項目
+
+[OBV](on_balance_volume.md)
+[ADL](accumulation_distribution_line.md)
+[ChaikinMoneyFlow](chaikin_money_flow.md)
+[ForceIndex](force_index.md)

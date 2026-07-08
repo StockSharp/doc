@@ -1,0 +1,94 @@
+# KPO
+
+**Kase Peak Oscillator (KPO)** は、潜在的な市場のピークとボトムを特定するために、モメンタムとボラティリティを組み合わせる、Celia Kase によって開発されたテクニカルインジケーターです。
+
+インジケーターを使用するには、[KasePeakOscillator](xref:StockSharp.Algo.Indicators.KasePeakOscillator) クラスを使用する必要があります。
+
+## 説明
+
+Kase Peak Oscillator (KPO) は、市場の買われすぎおよび売られすぎの状態を判断し、潜在的な反転ポイントを特定するためのツールです。これは、トレーダーでありエンジニアでもある Celia Kase によって、彼女の取引手法の一部として開発されました。
+
+KPO は、価格変動のモメンタムが尽き始めると市場のピークとボトムが形成されるという概念に基づいています。このオシレーターは、これらの重要な転換点を特定するために、モメンタムインジケーターとボラティリティインジケーターを組み合わせて使用します。
+
+このインジケーターは、ゼロラインの周囲で変動する無次元のオシレーターです。正の値は上方向のモメンタムを示し、負の値は下方向のモメンタムを示します。オシレーターの極端な値は、多くの場合、価格チャート上のピークやボトムと一致します。
+
+## パラメーター
+
+このインジケーターには、次のパラメーターがあります。
+- **ShortPeriod** - モメンタム計算の短期期間（デフォルト値: 10）
+- **LongPeriod** - モメンタム計算の長期期間（デフォルト値: 30）
+
+## 計算
+
+Kase Peak Oscillator の計算には、いくつかの手順があります。
+
+1. 短期期間に基づいて短期モメンタムを計算します。
+   ```
+   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   ```
+
+2. 長期期間に基づいて長期モメンタムを計算します。
+   ```
+   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   ```
+
+3. 現在のボラティリティを計算します。
+   ```
+   Volatility = ATR(ShortPeriod)
+   ```
+
+4. ボラティリティに対してモメンタムを正規化します。
+   ```
+   Normalized Short Momentum = Short Momentum / Volatility
+   Normalized Long Momentum = Long Momentum / Volatility
+   ```
+
+5. 最終的な KPO を計算します。
+   ```
+   KPO = Normalized Short Momentum - Normalized Long Momentum
+   ```
+
+ここで:
+- Price - 通常は終値
+- EMA - 指数移動平均
+- ATR - 平均真の値幅
+- ShortPeriod - 短期計算期間
+- LongPeriod - 長期計算期間
+
+## 解釈
+
+Kase Peak Oscillator は、次のように解釈できます。
+
+1. **ゼロラインのクロスオーバー**:
+   - 下から上へのクロスは強気シグナルと見なすことができます
+   - 上から下へのクロスは弱気シグナルと見なすことができます
+
+2. **極端な値**:
+   - 高い正の値は、市場の買われすぎ状態と潜在的な下方向反転を示す場合があります
+   - 高い負の値は、市場の売られすぎ状態と潜在的な上方向反転を示す場合があります
+
+3. **ダイバージェンス**:
+   - 強気ダイバージェンス（価格が新たな安値を形成する一方で、KPO はより高い安値を形成する）は、今後の上方向反転を示す場合があります
+   - 弱気ダイバージェンス（価格が新たな高値を形成する一方で、KPO はより低い高値を形成する）は、今後の下方向反転を示す場合があります
+
+4. **構成要素のクロスオーバー**:
+   - 短期モメンタムが長期モメンタムを下から上へクロスする場合、強気シグナルと見なすことができます
+   - 短期モメンタムが長期モメンタムを上から下へクロスする場合、弱気シグナルと見なすことができます
+
+5. **加速と減速**:
+   - KPO の傾きの増加は、モメンタムの加速を示します
+   - KPO の傾きの低下は、反転に先行する可能性があるモメンタムの減速を示します
+
+6. **他のインジケーターとの組み合わせ**:
+   - KPO は、シグナルを確認するために他のテクニカルインジケーターと併用されることがよくあります
+   - トレンドインジケーターおよびサポート/レジスタンスレベルと組み合わせると特に効果的です
+
+![indicator_kase_peak_oscillator](../../../../images/indicator_kase_peak_oscillator.png)
+
+## 関連項目
+
+[MomentumOscillator](momentum.md)
+[MACD](macd.md)
+[PrettyGoodOscillator](pretty_good_oscillator.md)
+[ATR](atr.md)
+

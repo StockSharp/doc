@@ -1,0 +1,29 @@
+# KalmanFilter
+
+**Kalman Filter** は、ノイズを含む観測値からシステムの基礎状態を推定する再帰的アルゴリズムです。
+
+この指標を使用するには、[KalmanFilter](xref:StockSharp.Algo.Indicators.KalmanFilter) クラスを使用する必要があります。
+
+## 説明
+
+Kalman Filter は、予測-補正サイクルを適用して価格データを平滑化し、市場ノイズを低減します。新しい情報が利用可能になるにつれて動的に適応するため、ボラティリティの高い市場でトレンドを追跡するのに役立ちます。
+
+## パラメーター
+
+- **ProcessNoise** - 基礎プロセスにおいて想定される分散。
+- **ObservationNoise** - 観測データにおいて想定される分散。
+
+## 計算
+
+各ステップで、このフィルターは次を実行します。
+1. 前回の推定値に基づく次の状態の**予測**。
+2. 最新の価格観測値とノイズ推定値を使用した、この予測の**更新**。
+
+これにより、短期的な変動をフィルタリングしながら価格変化に素早く反応する、最適化された推定値が得られます。
+
+![indicator_kalman_filter](../../../../images/indicator_kalman_filter.png)
+
+## 関連項目
+
+[Kaufman ??????](kama.md)
+[Adaptive Laguerre Filter](adaptive_laguerre_filter.md)

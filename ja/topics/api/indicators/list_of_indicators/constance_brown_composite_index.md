@@ -1,0 +1,74 @@
+# CBCI
+
+**Constance Brown Composite Index (CBCI)** は、Constance Brown によって開発されたインジケーターで、さまざまなテクニカルインジケーターの要素を組み合わせ、総合的な市場分析ツールを作成します。
+
+このインジケーターを使用するには、[ConstanceBrownCompositeIndex](xref:StockSharp.Algo.Indicators.ConstanceBrownCompositeIndex) クラスを使用する必要があります。
+
+## 説明
+
+Constance Brown Composite Index (CBCI) は、複数のインジケーターの長所を 1 つの総合的なツールに統合するために作成されました。これは、ストキャスティクスオシレーター、RSI、およびその他のオシレーターの要素を取り入れ、潜在的な市場反転とトレンドの動きについて、より正確なシグナルを提供します。
+
+CBCI は次の目的で設計されています。
+- 潜在的なトレンド反転ポイントの特定
+- 買われ過ぎおよび売られ過ぎ水準の判断
+- 隠れたダイバージェンスの検出
+- 現在のトレンドの強さの確認
+
+このインジケーターは、株式、外国為替、商品市場を含むさまざまな時間枠と市場タイプで良好に機能します。
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります。
+- **Length** - インデックスの主な計算期間（既定値: 14）
+- **StochasticKPeriod** - ストキャスティクスオシレーター %K を計算するための期間（既定値: 5）
+- **StochasticDPeriod** - ストキャスティクスオシレーター %D を計算するための期間（既定値: 3）
+
+## 計算
+
+CBCI の計算には、次の手順が含まれます。
+
+1. Length 期間にわたる RSI を計算します。
+   ```
+   RSI = 100 - (100 / (1 + RS))
+   RS = Average Gain / Average Loss
+   ```
+
+2. ストキャスティクスオシレーターを計算します。
+   ```
+   %K = ((Close - Lowest Low) / (Highest High - Lowest Low)) * 100
+   %D = SMA(%K, StochasticDPeriod)
+   ```
+
+3. RSI とストキャスティクスオシレーターを組み合わせます。
+   ```
+   CBCI = (RSI + %K + %D) / 3
+   ```
+
+この組み合わせたインデックスは、その後ノイズを減らすために平滑化できます。
+
+## 解釈
+
+- **買われ過ぎおよび売られ過ぎ水準**: 
+  - 80 を超える値は、市場が買われ過ぎの状態にあることを示す場合があります
+  - 20 未満の値は、市場が売られ過ぎの状態にあることを示す場合があります
+
+- **中心線の交差**:
+  - 50 ラインを下から上へ交差することは、強気シグナルと見なすことができます
+  - 50 ラインを上から下へ交差することは、弱気シグナルと見なすことができます
+
+- **ダイバージェンス**:
+  - 通常のダイバージェンス: 価格と CBCI が反対方向に動く場合
+  - 隠れたダイバージェンス: 価格と CBCI が異なる種類の高値または安値を形成する場合
+
+- **トレンドの動き**:
+  - CBCI が一貫して 50 を上回っている場合、上昇トレンドの強さを示すことがあります
+  - CBCI が一貫して 50 を下回っている場合、下降トレンドの強さを示すことがあります
+
+![indicator_constance_brown_composite_index](../../../../images/indicator_constance_brown_composite_index.png)
+
+## 関連項目
+
+[RSI](rsi.md)
+[StochasticOscillator](stochastic_oscillator.md)
+[StochasticK](stochastic_oscillator_k.md)
+[CCI](cci.md)

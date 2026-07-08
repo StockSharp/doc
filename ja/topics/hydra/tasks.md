@@ -1,0 +1,14 @@
+# タスク
+
+ツールは、特定の時刻に繰り返されるアクションです。
+
+ツールのリストを表示するには、左ペインで **Tools** 項目を選択します。ツールの操作はソースの場合と同じです。ツールは追加、削除、編集、有効化\/無効化できます。**Tool** を追加するには、**Common** タブで **Add \=\> Tools** を選択します。必要な **Tool** を選択できる対応するウィンドウが表示されます...
+
+![hydra tasks](../../images/hydra_tasks.png)
+
+現在、[Hydra](../hydra.md) には4つのタスククラスがあります
+
+- [Import (auto)](tasks/import_auto.md) - CSV 形式からデータをインポートするタスクです。 
+- [Converter](tasks/converter.md) - 取引所データをティック、ローソク足、または板情報に変換するタスクです。 
+- [Export (auto)](tasks/export_auto.md) - ローソク足をさまざまな形式にエクスポートするタスクです。 
+- [Backup](misc/backup.md) - クラウドサービスへデータをバックアップするタスクです。 

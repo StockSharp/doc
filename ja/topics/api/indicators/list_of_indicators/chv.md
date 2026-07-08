@@ -1,0 +1,23 @@
+# CHV
+
+**Chaikin Volatility (CHV)** は、一定期間における買いの最大値と売りの最小値との差を示します。このインジケーターにより、価格変化と、価格の最大値と最小値の間のレンジ幅を定性的に分析できます。CHV は計算で価格ギャップを考慮しないため、ある程度の欠点と見なすことができます。
+
+このインジケーターを使用するには、[ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility) クラスを使用する必要があります。
+##### 計算
+
+Chaikin Volatility インジケーターの計算は、スプレッド、つまり現在のバーの最大値と最小値の差を決定することから始まります。得られた結果は、対応する期間の指数移動平均で平滑化されます。ボラティリティは次の式で計算されます。
+
+CHV = (EMA(H-L(i), n) — EMA(H-L(i-n), n)) / EMA(H-L(i-n), n) x 100.
+
+この場合、H-L(i) は現在のバーの価格差を表し、H-L(i-n) は n 期間前に発生したバーの価格差を表します。これにより、時間の経過に伴って価格がどのように変化したかを視覚的に確認できます。
+
+インジケーターの主なパラメーター:
+
+- **ROCPeriod** — 計算の基準となる期間数。初期値は 5 です。
+- **SmoothPeriod** — 移動平均の期間。既定では 32 に設定されています。
+
+![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+
+## 関連項目
+
+[CMO](cmo.md)

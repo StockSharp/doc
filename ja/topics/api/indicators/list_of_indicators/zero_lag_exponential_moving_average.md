@@ -1,0 +1,56 @@
+# ZLEMA
+
+**Zero Lag Exponential Moving Average (ZLEMA)** は、John Ehlers によって開発された指数移動平均 (EMA) の修正版です。ZLEMA は、従来の移動平均に固有の遅延を排除する、または大幅に低減するように設計されています。
+
+このインジケーターを使用するには、[ZeroLagExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ZeroLagExponentialMovingAverage) クラスを使用する必要があります。
+
+## 説明
+
+Zero Lag Exponential Moving Average (ZLEMA) は、ほとんどの移動平均における主要な問題であるシグナル遅延を解決するために作成されました。従来の移動平均は、計算に使用される時間ウィンドウのために価格変動に遅れて反応します。ZLEMA は、現在価格と過去の価格との差に基づく補正メカニズムを使用することで、この遅延を最小化します。
+
+ZLEMA の主な利点:
+- 価格変化への反応が速い
+- 従来の移動平均と比較して遅延が少ない
+- EMA に特徴的な平滑化効果を保持する
+
+ZLEMA は次の用途に使用できます。
+- トレンド方向を判断する
+- エントリーポイントとエグジットポイントを見つける
+- サポート水準とレジスタンス水準を特定する
+- クロスオーバーに基づく取引システムを作成する
+
+## パラメーター
+
+- **Length** - 平滑化の度合いを決定する計算期間 (EMA の期間と同様)。
+
+## 計算
+
+ZLEMA の計算は、予測によって遅延を排除することに基づいており、次の手順を含みます。
+
+1. 期間の半分としてラグを計算します。
+   ```
+   lag = (Length - 1) / 2
+   ```
+
+2. 「デトレンド」価格を計算します。
+   ```
+   detrendedPrice = 2 * Price - Price[lag]
+   ```
+   これは「先を見る」ことを可能にし、遅延を排除するための重要な手順です。
+
+3. デトレンド価格に指数平滑化を適用します。
+   ```
+   k = 2 / (Length + 1)
+   ZLEMA = k * detrendedPrice + (1 - k) * ZLEMA[previous]
+   ```
+
+その結果、同じ期間の通常の EMA よりも価格にはるかに近く追随しながら、平滑化効果を維持する移動平均が得られます。
+
+![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+
+## 関連項目
+
+[EMA](ema.md)
+[DEMA](dema.md)
+[TEMA](tema.md)
+[T3MA](t3_moving_average.md)

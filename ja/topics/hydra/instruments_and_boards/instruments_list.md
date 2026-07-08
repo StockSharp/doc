@@ -1,0 +1,14 @@
+# 銘柄リスト
+
+General タブで **Instruments** ボタンをクリックすると、**Instruments** パネルが表示されます。**Instruments** パネルには、利用可能なすべての銘柄と、それらのマーケットデータが表示されます。 
+
+![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
+
+**Instruments** パネルの下部には、次の操作を行うためのボタンがあります。
+
+- [銘柄の作成](create_instrument.md) の節で説明されているように、新しい銘柄を追加します。
+- [インデックス](index.md) の節で説明されているように、新しいインデックスを追加します。
+- [連続先物](continuous_futures.md) の節で説明されているように、新しい連続先物を追加します。
+- [銘柄の編集](editing_instruments.md) の節で説明されているように、銘柄または銘柄グループを変更します。
+- [拡張銘柄情報](extended_instrument_info.md) の節で説明されているように、銘柄に関する追加情報を指定します。
+- [銘柄と接続の照合](matching_instruments_connections.md) の節で説明されているように、銘柄と接続を照合します。

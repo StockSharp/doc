@@ -1,0 +1,86 @@
+# HVR
+
+**Historical Volatility Ratio (HVR)** は、市場活動の変化を評価するために、短期のヒストリカル・ボラティリティを長期のヒストリカル・ボラティリティと比較するテクニカル指標です。
+
+この指標を使用するには、[HistoricalVolatilityRatio](xref:StockSharp.Algo.Indicators.HistoricalVolatilityRatio) クラスを使用する必要があります。
+
+## 説明
+
+Historical Volatility Ratio (HVR) は、短期ボラティリティを長期の市場ボラティリティと比較する相対ボラティリティ指標です。この指標は、現在のボラティリティが過去水準に対して増加しているのか、減少しているのかを判断するのに役立ちます。
+
+HVR は、短期のヒストリカル・ボラティリティを長期のヒストリカル・ボラティリティで割った比率として計算されます。1.0 を超える値は、現在の (短期) ボラティリティが長期ボラティリティより高いことを示し、市場活動の増加または潜在的なトレンド変化を示唆する場合があります。
+
+この指標は特に次の用途に役立ちます。
+- 高ボラティリティ期間と低ボラティリティ期間を特定する
+- 潜在的なトレンド反転ポイントを判断する
+- 現在の市場状況に合わせて取引戦略を適応させる
+- 市場リスクを評価し、適切なポジションサイズを設定する
+
+## パラメーター
+
+この指標には次のパラメーターがあります。
+- **ShortPeriod** - 短期ボラティリティを計算する期間 (デフォルト値: 5)
+- **LongPeriod** - 長期ボラティリティを計算する期間 (デフォルト値: 20)
+
+## 計算
+
+Historical Volatility Ratio の計算には、次の手順が含まれます。
+
+1. 短期のヒストリカル・ボラティリティを計算します。
+   ```
+   Short-term Volatility = Standard Deviation of Log Returns over ShortPeriod * Sqrt(Trading Days Per Year)
+   ```
+
+2. 長期のヒストリカル・ボラティリティを計算します。
+   ```
+   Long-term Volatility = Standard Deviation of Log Returns over LongPeriod * Sqrt(Trading Days Per Year)
+   ```
+
+3. 短期ボラティリティと長期ボラティリティの比率として HVR を計算します。
+   ```
+   HVR = Short-term Volatility / Long-term Volatility
+   ```
+
+ここで:
+- Log Returns - 対数リターン (ln(Price[i] / Price[i-1]))
+- Standard Deviation - 標準偏差
+- Trading Days Per Year - 1年あたりの取引日数 (株式市場では通常 252)
+- ShortPeriod - ボラティリティ計算の短期期間
+- LongPeriod - ボラティリティ計算の長期期間
+
+## 解釈
+
+Historical Volatility Ratio は次のように解釈できます。
+
+1. **レベル 1.0**:
+   - HVR = 1.0 は、短期ボラティリティが長期ボラティリティと等しいことを意味します
+   - HVR > 1.0 は、短期ボラティリティが長期ボラティリティより高いことを示します
+   - HVR < 1.0 は、短期ボラティリティが長期ボラティリティより低いことを示します
+
+2. **極端な値**:
+   - 非常に高い HVR 値 (例: > 2.0) は、急激なボラティリティ上昇を示す場合があり、多くの場合、市場パニックや強い値動きの際に発生します
+   - 非常に低い HVR 値 (例: < 0.5) は、ボラティリティ圧縮期間を示す場合があり、多くの場合、強い値動きに先行します
+
+3. **HVR のトレンド**:
+   - HVR の上昇は、現在のボラティリティの増加を示します
+   - HVR の低下は、現在のボラティリティの減少を示します
+
+4. **取引戦略**:
+   - HVR が高い場合、ブレイクアウトベースの戦略を使用することが適切な場合があります
+   - HVR が低い場合、平均回帰またはレンジ取引戦略の方が適している場合があります
+
+5. **リスク管理**:
+   - 高い HVR 値は、ボラティリティ上昇によりポジションサイズを減らす必要があることを示唆する場合があります
+   - 低い HVR 値は、ボラティリティ低下によりポジションサイズの拡大を許容する場合があります
+
+6. **潜在的な反転**:
+   - 極端な HVR 値は、多くの場合、重要な価格変動に先行します
+   - 低ボラティリティ期間後の急激な HVR 上昇は、新しいトレンドの開始を示唆する場合があります
+
+![indicator_historical_volatility_ratio](../../../../images/indicator_historical_volatility_ratio.png)
+
+## 関連項目
+
+[ATR](atr.md)
+[StandardDeviation](standard_deviation.md)
+[ChoppinessIndex](choppiness_index.md)

@@ -1,0 +1,2399 @@
+- name: Installer
+  href: installer.md
+  items:
+  - name: 動画
+    items:
+    - name: セットアップ
+      href: installer/videos/setup.md
+    - name: アプリのインストールと削除
+      href: installer/videos/install_and_remove_apps.md
+    - name: アプリの更新
+      href: installer/videos/update_apps.md
+  - name: 初回実行
+    href: installer/setup.md
+  - name: アプリのインストールと削除
+    href: installer/install_and_remove_apps.md
+  - name: アプリの更新
+    href: installer/update_apps.md
+  - name: コンソールインストーラー
+    href: installer/console.md
+- name: Designer
+  href: designer.md
+  items:
+  - name: 動画
+    items:
+      - name: はじめに
+        href: designer/videos/beginning.md
+      - name: 取引戦略コンストラクター
+        href: designer/videos/constructor.md
+      - name: 変数ロジックの数学
+        href: designer/videos/variable_math.md
+      - name: 取引戦略デバッガー
+        href: designer/videos/debugger.md
+      - name: ポジションの保護
+        href: designer/videos/protect_position.md
+      - name: インジケーターと数式
+        href: designer/videos/indicators_formula.md
+      - name: ボリンジャー バンドと MACD
+        href: designer/videos/bollinger_macd.md
+      - name: 複数タイムフレーム
+        href: designer/videos/multi_timeframes.md
+      - name: 時間
+        href: designer/videos/time.md
+      - name: Designer と Hydra の接続
+        href: designer/videos/connect_hydra.md
+      - name: 取引戦略の最適化
+        href: designer/videos/optimization.md
+      - name: ライブ取引
+        href: designer/videos/live_trading.md
+      - name: 複合キューブ
+        href: designer/videos/complex_elements.md
+      - name: ティックからローソク足を圧縮
+        href: designer/videos/candles_build_ticks.md
+      - name: フラグ
+        href: designer/videos/flag.md
+      - name: 最大出来高戦略
+        href: designer/videos/strategy_max_volume.md
+      - name: 金融指数
+        href: designer/videos/financial_index.md
+      - name: ペア取引
+        href: designer/videos/pair_trading.md
+      - name: 指数とペア取引
+        href: designer/videos/index_pair_trading.md
+  - name: 学習用リソース
+    href: designer/materials.md
+  - name: Designer のインストール
+    href: designer/installing_designer.md
+  - name: 新しいバージョンへの更新
+    href: designer/update_to_the_new_version.md
+  - name: クイックスタート
+    href: designer/quick_start.md
+  - name: ユーザーインターフェイス
+    items:
+    - name: リボン
+      href: designer/user_interface/ribbon.md
+    - name: ワークスペース
+      href: designer/user_interface/workspace.md
+    - name: Schemes パネル
+      href: designer/user_interface/schemas.md
+    - name: Logs パネル
+      href: designer/user_interface/logs.md
+    - name: ポートフォリオ
+      href: designer/user_interface/portfolios.md
+    - name: ボード
+      href: designer/user_interface/boards.md
+    - name: リスク管理
+      href: designer/user_interface/risk_management.md
+    - name: 手数料
+      href: designer/user_interface/commissions.md
+    - name: コンポーネント
+      href: designer/user_interface/components.md
+      items:
+      - name: チャート
+        href: designer/user_interface/components/chart.md
+      - name: 注文
+        href: designer/user_interface/components/orders.md
+      - name: 約定
+        href: designer/user_interface/components/trades.md
+      - name: 板情報
+        href: designer/user_interface/components/order_book.md
+      - name: ポジション
+        href: designer/user_interface/components/positions.md
+      - name: 統計
+        href: designer/user_interface/components/statistics.md
+      - name: P&L エクイティ
+        href: designer/user_interface/components/pnl_equity.md
+      - name: バックテスト設定
+        href: designer/user_interface/components/backtesting_settings.md
+      - name: Live 設定
+        href: designer/user_interface/components/live_settings.md
+      - name: ティック約定
+        href: designer/user_interface/components/tick_trades.md
+  - name: 戦略
+    items:
+    - name: ブロックの使用
+      href: designer/strategies/using_visual_designer.md
+      items:
+      - name: ストラテジーデザイナー
+        href: designer/strategies/using_visual_designer/diagram_panel.md
+      - name: 要素
+        href: designer/strategies/using_visual_designer/elements.md
+        items:
+        - name: 共通
+          items:
+          - name: Chart
+            href: designer/strategies/using_visual_designer/elements/common/chart.md
+          - name: Crossing
+            href: designer/strategies/using_visual_designer/elements/common/crossing.md
+          - name: Value Delay
+            href: designer/strategies/using_visual_designer/elements/common/delay_value.md
+          - name: Comparison
+            href: designer/strategies/using_visual_designer/elements/common/comparison.md
+          - name: Indicator
+            href: designer/strategies/using_visual_designer/elements/common/indicator.md
+          - name: Logical Condition
+            href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
+          - name: Formula
+            href: designer/strategies/using_visual_designer/elements/common/formula.md
+          - name: Combination
+            href: designer/strategies/using_visual_designer/elements/common/combination.md
+          - name: Prev value
+            href: designer/strategies/using_visual_designer/elements/common/prev_value.md
+          - name: Random Value
+            href: designer/strategies/using_visual_designer/elements/common/random.md
+          - name: Flag
+            href: designer/strategies/using_visual_designer/elements/common/flag.md
+          - name: Synchronization
+            href: designer/strategies/using_visual_designer/elements/common/sync.md
+          - name: P&L strategy
+            href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
+          - name: Trades by strategy
+            href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
+        - name: データソース
+          items:
+          - name: Candles
+            href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
+          - name: Level 1
+            href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
+          - name: Ticks
+            href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
+          - name: Index
+            href: designer/strategies/using_visual_designer/elements/data_sources/index.md
+          - name: Variable
+            href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
+        - name: 時間
+          items:
+          - name: 稼働時間
+            href: designer/strategies/using_visual_designer/elements/time/working_time.md
+          - name: 取引が許可されているか
+            href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
+          - name: Current Time
+            href: designer/strategies/using_visual_designer/elements/time/current_time.md
+        - name: ポジション
+          items:
+          - name: Modify Position
+            href: designer/strategies/using_visual_designer/elements/positions/modify.md
+          - name: Position
+            href: designer/strategies/using_visual_designer/elements/positions/current.md
+          - name: Position Protection
+            href: designer/strategies/using_visual_designer/elements/positions/protect.md
+        - name: 注文
+          items:
+          - name: Order Registration
+            href: designer/strategies/using_visual_designer/elements/orders/register.md
+          - name: Order Cancellation
+            href: designer/strategies/using_visual_designer/elements/orders/cancel.md
+          - name: Order Movement
+            href: designer/strategies/using_visual_designer/elements/orders/modify.md
+          - name: Mass Order Cancellations
+            href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
+        - name: コンバーター
+          items:
+          - name: Indexer
+            href: designer/strategies/using_visual_designer/elements/converters/indexer.md
+          - name: Converter
+            href: designer/strategies/using_visual_designer/elements/converters/converter.md
+        - name: 通知
+          items:
+          - name: Notification
+            href: designer/strategies/using_visual_designer/elements/notifying/notification.md
+          - name: String concat
+            href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
+          - name: String format
+            href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
+        - name: 板情報
+          items:
+          - name: Order book
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
+          - name: Grouped order book
+            href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
+          - name: Order Book Panel
+            href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
+          - name: Sparse order book
+            href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
+          - name: Truncated order book
+            href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
+        - name: オプション
+          items:
+          - name: IV book
+            href: designer/strategies/using_visual_designer/elements/options/iv_book.md
+          - name: Option desk
+            href: designer/strategies/using_visual_designer/elements/options/option_desk.md
+          - name: Chart positions
+            href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
+          - name: Greeks
+            href: designer/strategies/using_visual_designer/elements/options/greeks.md
+          - name: Black-Scholes
+            href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
+          - name: Basket
+            href: designer/strategies/using_visual_designer/elements/options/basket.md
+          - name: Hedging
+            href: designer/strategies/using_visual_designer/elements/options/hedging.md
+          - name: Options quoting
+            href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
+          - name: Strikes
+            href: designer/strategies/using_visual_designer/elements/options/strikes.md
+      - name: 線
+        href: designer/strategies/using_visual_designer/lines.md
+      - name: イベントモデル
+        href: designer/strategies/using_visual_designer/event_model.md
+      - name: 最初のストラテジー
+        href: designer/strategies/using_visual_designer/first_strategy.md
+      - name: 複合要素
+        href: designer/strategies/using_visual_designer/composite_elements.md
+      - name: スキーマサンプル
+        items:
+        - name: チャートにローソク足を表示する
+          href: designer/strategies/using_visual_designer/schema_samples/display_candles_on_chart.md
+        - name: インストゥルメントの最良価格を取得する
+          href: designer/strategies/using_visual_designer/schema_samples/get_best_price_for_instrument.md
+        - name: 現在ポジションを取得する
+          href: designer/strategies/using_visual_designer/schema_samples/get_current_position.md
+        - name: オーダーブックの価格レベルを取得する
+          href: designer/strategies/using_visual_designer/schema_samples/get_order_book_price_level.md
+    - name: プログラミング言語
+      href: designer/strategies/using_code.md
+      items:
+      - name: C# の使用
+        href: designer/strategies/using_code/csharp.md
+        items:
+        - name: C# ストラテジーの例
+          href: designer/strategies/using_code/csharp/first_strategy.md
+        - name: 外部 DLL
+          href: designer/strategies/using_code/csharp/external_dlls.md
+        - name: 独自のキューブを作成する
+          href: designer/strategies/using_code/csharp/creating_your_own_cube.md
+        - name: C# でインジケーターを作成する
+          href: designer/strategies/using_code/csharp/create_own_indicator.md
+        - name: 板情報の描画
+          href: designer/strategies/using_code/csharp/draw_order_book.md
+        - name: Visual Studio または Rider の使用
+          href: designer/strategies/using_code/csharp/using_visual_studio_or_rider.md
+      - name: F# の使用
+        href: designer/strategies/using_code/fsharp.md
+        items:
+        - name: F# ストラテジーの例
+          href: designer/strategies/using_code/fsharp/first_strategy.md
+        - name: 独自のキューブを作成する
+          href: designer/strategies/using_code/fsharp/creating_your_own_cube.md
+        - name: インジケーターを作成する
+          href: designer/strategies/using_code/fsharp/create_own_indicator.md
+      - name: Python の使用
+        href: designer/strategies/using_code/python.md
+        items:
+        - name: Python ストラテジーの例
+          href: designer/strategies/using_code/python/first_strategy.md
+        - name: 独自キューブの作成
+          href: designer/strategies/using_code/python/creating_your_own_cube.md
+        - name: インジケーターの作成
+          href: designer/strategies/using_code/python/create_own_indicator.md
+    - name: DLL の使用
+      href: designer/strategies/using_dll.md
+      items:
+      - name: キューブとインジケーターの作成
+        href: designer/strategies/using_dll/create_element_and_indicator.md
+      - name: Visual Studio で DLL をデバッグ
+        href: designer/strategies/using_dll/debug_dll_in_visual_studio.md
+      - name: DLL パネル
+        href: designer/strategies/using_dll/dll_panel.md
+  - name: インジケーター
+    items:
+    - name: インジケーター
+      href: designer/indicators/indicators.md
+    - name: 独自インジケーターの作成
+      href: designer/indicators/creating_your_own_indicator.md
+  - name: バックテスト
+    items:
+    - name: ユーザーインターフェイス
+      href: designer/backtesting/user_interface.md
+    - name: はじめに
+      href: designer/backtesting/getting_started.md
+    - name: デバッグ
+      href: designer/backtesting/debugging.md
+      items:
+      - name: ブレークポイント
+        href: designer/backtesting/debugging/break_points.md
+      - name: ステップごとの実行
+        href: designer/backtesting/debugging/step_by_step_execution.md
+    - name: クラウドテスト
+      href: designer/backtesting/cloud_backtesting.md
+  - name: 最適化
+    items:
+    - name: 総当たり
+      href: designer/optimization/brute_force.md
+    - name: 最適化パラメーター
+      href: designer/optimization/optimization_parameters.md
+    - name: 遺伝的最適化
+      href: designer/optimization/genetic.md
+    - name: 3D レポート
+      href: designer/optimization/3d_chart.md
+    - name: ポートフォリオ最適化
+      href: designer/optimization/portfolio_optimization.md
+    - name: クラウド最適化
+      href: designer/optimization/cloud_optimization.md
+  - name: マーケットデータストレージ
+    href: designer/market_data_storage.md
+    items:
+    - name: 銘柄のダウンロード
+      href: designer/market_data_storage/download_instruments.md
+    - name: 銘柄の作成
+      href: designer/market_data_storage/create_instrument.md
+    - name: 銘柄の編集
+      href: designer/market_data_storage/edit_instrument.md
+    - name: インデックス
+      href: designer/market_data_storage/index.md
+    - name: 連続先物
+      href: designer/market_data_storage/continuous_futures.md
+    - name: マーケットデータのダウンロード
+      href: designer/market_data_storage/download_market_data.md
+    - name: はじめに
+      href: designer/market_data_storage/getting_started.md
+    - name: 銘柄の拡張情報
+      href: designer/market_data_storage/instrument_extended_info.md
+    - name: シンボルマッピング
+      href: designer/market_data_storage/symbol_mapping.md
+  - name: リアルタイム実行
+    items:
+    - name: はじめに
+      href: designer/live_execution/getting_started.md
+    - name: インターフェイス
+      href: designer/live_execution/user_interface.md
+    - name: ストラテジーダッシュボード
+      href: designer/live_execution/strategies_dashboard.md
+    - name: Live 実行の例
+      href: designer/live_execution/live_execution_sample.md
+    - name: Designer の外部でストラテジーを実行する
+      href: designer/live_execution/running_strategies_outside_of_designer.md
+  - name: 接続設定
+    href: designer/connections_settings.md
+    items:
+    - name: コネクター設定
+      href: designer/connections_settings/connectors_settings.md
+    - name: シミュレーター
+      href: designer/connections_settings/simulator.md
+  - name: ストラテジーギャラリー
+    href: designer/strategy_gallery.md
+    items:
+    - name: ストラテジーの公開
+      href: designer/strategy_gallery/publish_own_strategy.md
+  - name: エクスポートとインポート
+    items:
+    - name: エクスポート
+      href: designer/export_import/export.md
+    - name: インポート
+      href: designer/export_import/import.md
+  - name: 設定
+    items:
+    - name: 設定のリセット
+      href: designer/settings/reset_settings.md
+    - name: 設定ディレクトリ
+      href: designer/settings/settings_directory.md
+- name: Terminal
+  href: terminal.md
+  items:
+  - name: Terminal のインストール
+    href: terminal/installing_terminal.md
+  - name: 新しいバージョンへの更新
+    href: terminal/update_to_the_new_version.md
+  - name: クイックスタート
+    href: terminal/quick_start.md
+  - name: ユーザーインターフェイス
+    items:
+    - name: リボン
+      href: terminal/user_interface/ribbon.md
+    - name: ワークスペース
+      href: terminal/user_interface/workspace.md
+    - name: ログ
+      href: terminal/user_interface/logs.md
+    - name: ポートフォリオ
+      href: terminal/user_interface/portfolios.md
+    - name: ボードエディター
+      href: terminal/user_interface/board_editor.md
+    - name: リスク管理
+      href: terminal/user_interface/risk_management.md
+    - name: コンポーネント
+      href: terminal/user_interface/components.md
+      items:
+      - name: 銘柄
+        href: terminal/user_interface/components/instruments.md
+      - name: Level 1
+        href: terminal/user_interface/components/level_1.md
+      - name: Buy\/Sell
+        href: terminal/user_interface/components/buy_sell.md
+      - name: 板情報
+        href: terminal/user_interface/components/order_book.md
+      - name: チャート
+        href: terminal/user_interface/components/chart.md
+      - name: P&L チャート
+        href: terminal/user_interface/components/pnl_chart.md
+      - name: 約定
+        href: terminal/user_interface/components/trades.md
+      - name: 注文
+        href: terminal/user_interface/components/orders.md
+      - name: 条件付き注文
+        href: terminal/user_interface/components/conditional_orders.md
+      - name: ポジション
+        href: terminal/user_interface/components/positions.md
+      - name: 約定フィード
+        href: terminal/user_interface/components/trades_feed.md
+      - name: ニュース
+        href: terminal/user_interface/components/news.md
+      - name: ポジション（オプション）
+        href: terminal/user_interface/components/positions_options.md
+      - name: オプションデスク
+        href: terminal/user_interface/components/option_desk.md
+      - name: スマイル・ボラティリティ
+        href: terminal/user_interface/components/smile_volatility.md
+      - name: 注文ログ
+        href: terminal/user_interface/components/order_log.md
+  - name: 接続設定
+    href: terminal/connection_settings.md
+  - name: マーケットデータストレージ
+    href: terminal/market_data_storage.md
+  - name: インジケーター
+    href: terminal/indicators.md
+  - name: 通知
+    href: terminal/notifications.md
+    items:
+    - name: 通知パネル
+      href: terminal/notifications/notification_panel.md
+    - name: 通知設定
+      href: terminal/notifications/notifications_setup.md
+  - name: 設定
+    items:
+    - name: 設定のリセット
+      href: terminal/settings/reset_settings.md
+- name: Hydra
+  href: hydra.md
+  items:
+  - name: 動画
+    items:
+    - name: 初回起動
+      href: hydra/videos/first_start.md
+    - name: ソースのサンプル
+      href: hydra/videos/sources_samples.md
+      items:
+      - name: Oanda
+        href: hydra/videos/sources_samples/oanda.md
+      - name: Interactive Brokers
+        href: hydra/videos/sources_samples/interactive_brokers.md
+      - name: Bitmex
+        href: hydra/videos/sources_samples/bitmex.md
+      - name: Binance
+        href: hydra/videos/sources_samples/binance.md
+    - name: 銘柄のダウンロード
+      href: hydra/videos/instruments_downloading.md
+    - name: ローソク足の構築
+      href: hydra/videos/building_candles.md
+    - name: 板情報の構築
+      href: hydra/videos/building_order_books.md
+    - name: 保存形式
+      href: hydra/videos/saving_format.md
+    - name: インジケーター
+      href: hydra/videos/indicators.md
+    - name: 分析
+      href: hydra/videos/analytics.md
+    - name: インポートタスク
+      href: hydra/videos/import_task.md
+    - name: エクスポートタスク
+      href: hydra/videos/export_task.md
+    - name: コンバータータスク
+      href: hydra/videos/converter_task.md
+  - name: Hydra のインストール
+    href: hydra/installing_hydra.md
+  - name: 新しいバージョンへの更新
+    href: hydra/update_to_the_new_version.md
+  - name: 初回起動
+    href: hydra/first_start.md
+  - name: データ ソース
+    href: hydra/data_sources.md
+    items:
+    - name: ソースの選択
+      href: hydra/data_sources/select_source.md
+    - name: 共通接続設定
+      href: hydra/data_sources/common_connection_settings.md
+  - name: ダウンロードの準備
+    items:
+    - name: 銘柄リスト
+      href: hydra/prepare_for_download/instruments_list.md
+    - name: カスタムローソク足
+      href: hydra/prepare_for_download/custom_candles.md
+  - name: データの操作
+    href: hydra/working_with_data.md
+    items:
+    - name: 表示とエクスポート
+      href: hydra/working_with_data/view_and_export.md
+      items:
+      - name: ティック
+        href: hydra/working_with_data/view_and_export/ticks.md
+      - name: 板情報
+        href: hydra/working_with_data/view_and_export/order_books.md
+      - name: ローソク足
+        href: hydra/working_with_data/view_and_export/candles.md
+      - name: 注文ログ
+        href: hydra/working_with_data/view_and_export/order_log.md
+      - name: Level 1
+        href: hydra/working_with_data/view_and_export/level_1_.md
+      - name: ニュース
+        href: hydra/working_with_data/view_and_export/news.md
+      - name: トランザクション
+        href: hydra/working_with_data/view_and_export/transactions.md
+      - name: オプションデスク
+        href: hydra/working_with_data/view_and_export/option_desk.md
+      - name: インジケーター
+        href: hydra/working_with_data/view_and_export/indicators.md
+      - name: ポジション
+        href: hydra/working_with_data/view_and_export/positions.md
+    - name: ローソク足の生成
+      href: hydra/working_with_data/candles_generation.md
+    - name: データのエクスポート
+      href: hydra/working_with_data/export_data.md
+      items:
+      - name: MetaStock へのエクスポート
+        href: hydra/working_with_data/export_data/export_into_metastock.md
+    - name: 任意のマーケットデータ型
+      href: hydra/working_with_data/any_market_data_types.md
+  - name: インジケーター
+    href: hydra/indicators.md
+  - name: インポート
+    href: hydra/importing.md
+    items:
+    - name: ローソク足
+      href: hydra/importing/candles.md
+    - name: 銘柄
+      href: hydra/importing/instruments.md
+    - name: ティック
+      href: hydra/importing/ticks.md
+    - name: 板情報
+      href: hydra/importing/order_books.md
+    - name: 注文ログ
+      href: hydra/importing/order_log.md
+    - name: Level 1
+      href: hydra/importing/level_1.md
+    - name: ニュース
+      href: hydra/importing/news.md
+    - name: トランザクション
+      href: hydra/importing/transactions.md
+  - name: サーバーモード
+    items:
+    - name: 設定
+      href: hydra/server_mode/settings.md
+    - name: エミュレーション設定
+      href: hydra/server_mode/emulation_setup.md
+    - name: 銘柄マッピング
+      href: hydra/server_mode/instruments_mapping.md
+    - name: FIX プロトコル経由の接続
+      href: hydra/server_mode/fix_fast_connectivity.md
+    - name: Hydra クライアントの接続
+      href: hydra/server_mode/hydra_client_connectivity.md
+  - name: 銘柄と取引所ボード
+    items:
+    - name: 銘柄リスト
+      href: hydra/instruments_and_boards/instruments_list.md
+    - name: 銘柄の作成
+      href: hydra/instruments_and_boards/create_instrument.md
+    - name: インデックス
+      href: hydra/instruments_and_boards/index.md
+    - name: 連続先物
+      href: hydra/instruments_and_boards/continuous_futures.md
+    - name: 銘柄の編集
+      href: hydra/instruments_and_boards/editing_instruments.md
+    - name: 拡張銘柄情報
+      href: hydra/instruments_and_boards/extended_instrument_info.md
+    - name: 銘柄と接続の照合
+      href: hydra/instruments_and_boards/matching_instruments_connections.md
+    - name: ボード
+      href: hydra/instruments_and_boards/boards.md
+  - name: タスク
+    href: hydra/tasks.md
+    items:
+    - name: コンバーター
+      href: hydra/tasks/converter.md
+    - name: Export (auto)
+      href: hydra/tasks/export_auto.md
+    - name: Import (auto)
+      href: hydra/tasks/import_auto.md
+    - name: バックアップ
+      href: hydra/tasks/backup.md
+  - name: 分析
+    href: hydra/analytics.md
+    items:
+    - name: スクリプトの実行
+      href: hydra/analytics/running_a_script.md
+    - name: スクリプトの作成
+      href: hydra/analytics/create_own_script.md
+    - name: 例
+      items:
+      - name: 日中出来高
+        href: hydra/analytics/examples/intraday_volume.md
+      - name: ボリュームプロファイル
+        href: hydra/analytics/examples/volume_profile.md
+      - name: インジケーター
+        href: hydra/analytics/examples/indicators.md
+      - name: 3D チャート
+        href: hydra/analytics/examples/3d_chart.md
+      - name: 終値の正規化
+        href: hydra/analytics/examples/normalization.md
+      - name: ピアソン相関
+        href: hydra/analytics/examples/pearson_correlation.md
+      - name: 最大ローソク足
+        href: hydra/analytics/examples/largest_candles.md
+  - name: その他
+    items:
+    - name: 設定のリセット
+      href: hydra/misc/settings_reset.md
+    - name: データの削除
+      href: hydra/misc/delete_data.md
+    - name: ネットワーク設定
+      href: hydra/misc/network_settings.md
+    - name: 同期
+      href: hydra/misc/synchronization.md
+    - name: バックアップ
+      href: hydra/misc/backup.md
+      items:
+      - name: セットアップ
+        href: hydra/misc/backup/setup.md
+      - name: Hydra 設定
+        href: hydra/misc/backup/hydra_settings.md
+      - name: リカバリ
+        href: hydra/misc/backup/recovery.md
+  - name: 新しいソースの作成
+    href: hydra/create_new_source.md
+  - name: 新しいタスクの作成
+    href: hydra/create_new_task.md
+- name: Hydra Server
+  href: hydra_server.md
+- name: Telegram Services
+  href: telegram_services.md
+  items:
+  - name: 認可
+    href: telegram_services/authorization.md
+  - name: アラート
+    href: telegram_services/alerts.md
+  - name: コントロールパネル
+    href: telegram_services/control_panel.md
+- name: Runner
+  href: runner.md
+  items:
+  - name: Designer からのエクスポート
+    href: runner/export_from_designer.md
+  - name: コマンドライン
+    href: runner/command_line.md
+  - name: 接続設定
+    href: runner/connection_setup.md
+  - name: Visual Studio との統合
+    href: runner/integration_with_visual_studio.md
+- name: API ドキュメント
+  href: api.md
+  items:
+  - name: 環境のセットアップ
+    href: api/setup.md
+  - name: AI 支援開発
+    href: api/ai_development.md
+    items:
+    - name: AI で戦略を書く
+      href: api/ai_development/strategy_with_ai.md
+    - name: AI でコネクタを書く
+      href: api/ai_development/connector_with_ai.md
+  - name: S# の例
+    href: api/examples.md
+  - name: コネクター
+    href: api/connectors.md
+    items:
+    - name: グラフィカル設定
+      href: api/connectors/graphical_configuration.md
+    - name: 株式市場
+      items:
+      - name: Alpaca
+        href: api/connectors/stock_market/alpaca.md
+        items:
+        - name: Alpaca の設定
+          href: api/connectors/stock_market/alpaca/configuration_alpaca.md
+        - name: Alpaca のグラフィカル設定
+          href: api/connectors/stock_market/alpaca/graphical_configuration_alpaca.md
+        - name: Alpaca アダプターの初期化
+          href: api/connectors/stock_market/alpaca/adapter_initialization_alpaca.md
+      - name: AlphaVantage
+        href: api/connectors/stock_market/alphavantage.md
+        items:
+        - name: AlphaVantage の設定
+          href: api/connectors/stock_market/alphavantage/configuration_alphavantage.md
+        - name: AlphaVantage のグラフィカル設定
+          href: api/connectors/stock_market/alphavantage/graphical_configuration_alphavantage.md
+        - name: AlphaVantage のアダプター初期化
+          href: api/connectors/stock_market/alphavantage/adapter_initialization_alphavantage.md
+      - name: BarChart
+        href: api/connectors/stock_market/barchart.md
+        items:
+        - name: BarChart の設定
+          href: api/connectors/stock_market/barchart/configuration_barchart.md
+        - name: BarChart のグラフィカル設定
+          href: api/connectors/stock_market/barchart/graphical_configuration_barchart.md
+        - name: BarChart のアダプター初期化
+          href: api/connectors/stock_market/barchart/adapter_initialization_barchart.md
+      - name: Blackwood (Fusion)
+        href: api/connectors/stock_market/blackwood_fusion.md
+        items:
+        - name: Blackwood (Fusion) の設定
+          href: api/connectors/stock_market/blackwood_fusion/configuration_blackwood_fusion.md
+        - name: Blackwood (Fusion) のグラフィカル設定
+          href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
+        - name: Blackwood (Fusion) のアダプター初期化
+          href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
+      - name: CQG
+        href: api/connectors/stock_market/cqg.md
+        items:
+        - name: CQG の設定
+          href: api/connectors/stock_market/cqg/configuration_cqg.md
+        - name: CQG COM のグラフィカル設定
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
+        - name: CQG Continuum のグラフィカル設定
+          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+        - name: CQG アダプターの初期化
+          href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
+      - name: E*TRADE
+        href: api/connectors/stock_market/e_trade.md
+        items:
+        - name: E*TRADE の設定
+          href: api/connectors/stock_market/e_trade/configuration_e_trade.md
+        - name: E*TRADE のグラフィカル設定
+          href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
+        - name: E*TRADE アダプターの初期化
+          href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
+      - name: IEX
+        href: api/connectors/stock_market/iex.md
+        items:
+        - name: IEX の設定
+          href: api/connectors/stock_market/iex/configuration_iex.md
+        - name: IEX のグラフィカル設定
+          href: api/connectors/stock_market/iex/graphical_configuration_iex.md
+        - name: IEX アダプターの初期化
+          href: api/connectors/stock_market/iex/adapter_initialization_iex.md
+      - name: Interactive Brokers
+        href: api/connectors/stock_market/interactive_brokers.md
+        items:
+        - name: Interactive Brokers のグラフィカル設定
+          href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
+        - name: Interactive Brokers アダプターの初期化
+          href: api/connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md
+      - name: IQFeed
+        href: api/connectors/stock_market/iqfeed.md
+        items:
+        - name: IQFeed の接続
+          href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
+        - name: IQFeed のグラフィカル設定
+          href: api/connectors/stock_market/iqfeed/graphical_configuration_iqfeed.md
+        - name: IQFeed アダプターの初期化
+          href: api/connectors/stock_market/iqfeed/adapter_initialization_iqfeed.md
+      - name: ITCH
+        href: api/connectors/stock_market/itch.md
+        items:
+        - name: ITCH の設定
+          href: api/connectors/stock_market/itch/configuration_itch.md
+        - name: ITCH のグラフィカル設定
+          href: api/connectors/stock_market/itch/graphical_configuration_itch.md
+        - name: ITCH アダプターの初期化
+          href: api/connectors/stock_market/itch/adapter_initialization_itch.md
+      - name: OpenECry
+        href: api/connectors/stock_market/openecry.md
+        items:
+        - name: OpenECry の設定
+          href: api/connectors/stock_market/openecry/configuration_openecry.md
+        - name: OpenECry のグラフィカル設定
+          href: api/connectors/stock_market/openecry/graphical_configuration_openecry.md
+        - name: OpenECry アダプターの初期化
+          href: api/connectors/stock_market/openecry/adapter_initialization_openecry.md
+        - name: 複数アルゴリズムの接続
+          href: api/connectors/stock_market/openecry/several_algorithms_connection.md
+        - name: ターミナルとアルゴリズムの同時動作
+          href: api/connectors/stock_market/openecry/simultaneous_terminal_and_algorithm_operation.md
+      - name: PolygonIO
+        href: api/connectors/stock_market/polygonio.md
+        items:
+        - name: PolygonIO の設定
+          href: api/connectors/stock_market/polygonio/configuration_polygonio.md
+        - name: PolygonIO のグラフィカル設定
+          href: api/connectors/stock_market/polygonio/graphical_configuration_polygonio.md
+        - name: PolygonIO アダプターの初期化
+          href: api/connectors/stock_market/polygonio/adapter_initialization_polygonio.md
+      - name: Quandl
+        href: api/connectors/stock_market/quandl.md
+        items:
+        - name: Quandl の設定
+          href: api/connectors/stock_market/quandl/configuration_quandl.md
+        - name: Quandl のグラフィカル設定
+          href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
+        - name: Quandl アダプターの初期化
+          href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
+      - name: QuantFEED
+        href: api/connectors/stock_market/quantfeed.md
+        items:
+        - name: QuantFEED の設定
+          href: api/connectors/stock_market/quantfeed/configuration_quantfeed.md
+        - name: QuantFEED のグラフィカル設定
+          href: api/connectors/stock_market/quantfeed/graphical_configuration_quantfeed.md
+        - name: QuantFEED アダプターの初期化
+          href: api/connectors/stock_market/quantfeed/adapter_initialization_quantfeed.md
+      - name: Rithmic
+        href: api/connectors/stock_market/rithmic.md
+        items:
+        - name: Rithmic の設定
+          href: api/connectors/stock_market/rithmic/configuration_rithmic.md
+        - name: Rithmic のグラフィカル設定
+          href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
+        - name: Rithmic アダプターの初期化
+          href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
+      - name: Sterling
+        href: api/connectors/stock_market/sterling.md
+        items:
+        - name: Sterling の構成
+          href: api/connectors/stock_market/sterling/configuration_sterling.md
+        - name: Sterling のグラフィカル構成
+          href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
+        - name: Sterling アダプターの初期化
+          href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: Tradier
+        href: api/connectors/stock_market/tradier.md
+        items:
+        - name: Tradier の構成
+          href: api/connectors/stock_market/tradier/configuration_tradier.md
+        - name: Tradier のグラフィカル構成
+          href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
+        - name: Tradier アダプターの初期化
+          href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Xignite
+        href: api/connectors/stock_market/xignite.md
+        items:
+        - name: Xignite の構成
+          href: api/connectors/stock_market/xignite/configuration_xignite.md
+        - name: Xignite のグラフィカル構成
+          href: api/connectors/stock_market/xignite/graphical_configuration_xignite.md
+        - name: Xignite アダプターの初期化
+          href: api/connectors/stock_market/xignite/adapter_initialization_xignite.md
+      - name: Yahoo
+        href: api/connectors/stock_market/yahoo.md
+        items:
+        - name: Yahoo のグラフィカル設定
+          href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
+        - name: Yahoo アダプターの初期化
+          href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+    - name: Forex
+      items:
+      - name: MetaTrader
+        href: api/connectors/forex/metatrader.md
+      - name: DXtrade
+        href: api/connectors/forex/dxtrade.md
+        items:
+        - name: DXtrade コネクタ設定
+          href: api/connectors/forex/dxtrade/configuration_dxtrade.md
+        - name: DXtrade のグラフィカル設定
+          href: api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md
+        - name: DXtrade アダプターの初期化
+          href: api/connectors/forex/dxtrade/adapter_initialization_dxtrade.md
+      - name: cTrader
+        href: api/connectors/forex/ctrader.md
+        items:
+        - name: cTrader コネクタ設定
+          href: api/connectors/forex/ctrader/configuration_ctrader.md
+        - name: cTrader のグラフィカル設定
+          href: api/connectors/forex/ctrader/graphical_configuration_ctrader.md
+        - name: cTrader アダプターの初期化
+          href: api/connectors/forex/ctrader/adapter_initialization_ctrader.md
+      - name: DukasCopy
+        href: api/connectors/forex/dukascopy.md
+        items:
+        - name: DukasCopy のグラフィカル設定
+          href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
+        - name: DukasCopy アダプターの初期化
+          href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
+      - name: FXCM
+        href: api/connectors/forex/fxcm.md
+        items:
+        - name: FXCM の設定
+          href: api/connectors/forex/fxcm/configuration_fxcm.md
+        - name: FXCM のグラフィカル設定
+          href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
+        - name: FXCM アダプタの初期化
+          href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
+      - name: LMAX
+        href: api/connectors/forex/lmax.md
+        items:
+        - name: LMAX の設定
+          href: api/connectors/forex/lmax/configuration_lmax.md
+        - name: LMAX のグラフィカル設定
+          href: api/connectors/forex/lmax/graphical_configuration_lmax.md
+        - name: LMAX アダプタの初期化
+          href: api/connectors/forex/lmax/adapter_initialization_lmax.md
+      - name: Oanda
+        href: api/connectors/forex/oanda.md
+        items:
+        - name: Oanda の設定
+          href: api/connectors/forex/oanda/configuration_oanda.md
+        - name: Oanda のグラフィカル設定
+          href: api/connectors/forex/oanda/graphical_configuration_oanda.md
+        - name: Oanda アダプタの初期化
+          href: api/connectors/forex/oanda/adapter_initialization_oanda.md
+    - name: 暗号資産取引所
+      items:
+      - name: Bibox
+        href: api/connectors/crypto_exchanges/bibox.md
+        items:
+        - name: Bibox 設定
+          href: api/connectors/crypto_exchanges/bibox/configuration_bibox.md
+        - name: Bibox のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md
+        - name: Bibox アダプターの初期化
+          href: api/connectors/crypto_exchanges/bibox/adapter_initialization_bibox.md
+      - name: Binance
+        href: api/connectors/crypto_exchanges/binance.md
+        items:
+        - name: Binance の設定
+          href: api/connectors/crypto_exchanges/binance/configuration_binance.md
+        - name: Binance のグラフィカル設定
+          href: api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md
+        - name: Binance アダプターの初期化
+          href: api/connectors/crypto_exchanges/binance/adapter_initialization_binance.md
+      - name: Binance History
+        href: api/connectors/crypto_exchanges/binance_history.md
+        items:
+        - name: Binance History の設定
+          href: api/connectors/crypto_exchanges/binance_history/configuration_binance_history.md
+        - name: Binance History のグラフィカル設定
+          href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
+        - name: Binance History アダプターの初期化
+          href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+      - name: Bybit History
+        href: api/connectors/crypto_exchanges/bybit_history.md
+        items:
+        - name: Bybit History の設定
+          href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+        - name: Bybit History のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+        - name: アダプターの初期化 Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
+      - name: BingX
+        href: api/connectors/crypto_exchanges/bingx.md
+        items:
+        - name: BingX の設定
+          href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
+        - name: BingX のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
+        - name: BingX アダプターの初期化
+          href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
+      - name: Bitalong
+        href: api/connectors/crypto_exchanges/bitalong.md
+        items:
+        - name: Bitalong 設定
+          href: api/connectors/crypto_exchanges/bitalong/configuration_bitalong.md
+        - name: Bitalong のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitalong/graphical_configuration_bitalong.md
+        - name: Bitalong アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitalong/adapter_initialization_bitalong.md
+      - name: Bitbank
+        href: api/connectors/crypto_exchanges/bitbank.md
+        items:
+        - name: Bitbank 設定
+          href: api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md
+        - name: Bitbank のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
+        - name: Bitbank アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+      - name: Bitget
+        href: api/connectors/crypto_exchanges/bitget.md
+        items:
+        - name: Bitget コネクタ設定
+          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+        - name: Bitget のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+        - name: Bitget アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
+      - name: Bitexbook
+        href: api/connectors/crypto_exchanges/bitexbook.md
+        items:
+        - name: Bitexbook 設定
+          href: api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md
+        - name: Bitexbook のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md
+        - name: Bitexbook アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitexbook/adapter_initialization_bitexbook.md
+      - name: Bitfinex
+        href: api/connectors/crypto_exchanges/bitfinex.md
+        items:
+        - name: Bitfinex の設定
+          href: api/connectors/crypto_exchanges/bitfinex/configuration_bitfinex.md
+        - name: Bitfinex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
+        - name: Bitfinex アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
+      - name: Bithumb
+        href: api/connectors/crypto_exchanges/bithumb.md
+        items:
+        - name: Bithumb の設定
+          href: api/connectors/crypto_exchanges/bithumb/configuration_bithumb.md
+        - name: Bithumb のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bithumb/graphical_configuration_bithumb.md
+        - name: Bithumb アダプターの初期化
+          href: api/connectors/crypto_exchanges/bithumb/adapter_initialization_bithumb.md
+      - name: Bitmart
+        href: api/connectors/crypto_exchanges/bitmart.md
+        items:
+        - name: Bitmart の設定
+          href: api/connectors/crypto_exchanges/bitmart/configuration_bitmart.md
+        - name: Bitmart のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitmart/graphical_configuration_bitmart.md
+        - name: Bitmart アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitmart/adapter_initialization_bitmart.md
+      - name: BitMax
+        href: api/connectors/crypto_exchanges/bitmax.md
+        items:
+        - name: BitMax の設定
+          href: api/connectors/crypto_exchanges/bitmax/configuration_bitmax.md
+        - name: BitMax のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
+        - name: BitMax アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
+      - name: BitMEX
+        href: api/connectors/crypto_exchanges/bitmex.md
+        items:
+        - name: BitMEX の設定
+          href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
+        - name: BitMEX のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
+        - name: BitMEX アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
+      - name: BitStamp
+        href: api/connectors/crypto_exchanges/bitstamp.md
+        items:
+        - name: BitStamp の設定
+          href: api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md
+        - name: BitStamp のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md
+        - name: BitStamp アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitstamp/adapter_initialization_bitstamp.md
+      - name: Bittrex
+        href: api/connectors/crypto_exchanges/bittrex.md
+        items:
+        - name: Bittrex の設定
+          href: api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md
+        - name: Bittrex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md
+        - name: Bittrex アダプターの初期化
+          href: api/connectors/crypto_exchanges/bittrex/adapter_initialization_bittrex.md
+      - name: BitZ
+        href: api/connectors/crypto_exchanges/bitz.md
+        items:
+        - name: BitZ の設定
+          href: api/connectors/crypto_exchanges/bitz/configuration_bitz.md
+        - name: BitZ のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
+        - name: BitZ アダプターの初期化
+          href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
+      - name: ByBit
+        href: api/connectors/crypto_exchanges/bybit.md
+        items:
+        - name: ByBit コネクタ設定
+          href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
+        - name: ByBit のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
+        - name: ByBit アダプターの初期化
+          href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+      - name: BW
+        href: api/connectors/crypto_exchanges/bw.md
+        items:
+        - name: BW の設定
+          href: api/connectors/crypto_exchanges/bw/configuration_bw.md
+        - name: BW のグラフィカル設定
+          href: api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md
+        - name: アダプターの初期化 BW
+          href: api/connectors/crypto_exchanges/bw/adapter_initialization_bw.md
+      - name: CEX.IO
+        href: api/connectors/crypto_exchanges/cex.io.md
+        items:
+        - name: CEX.IO の設定
+          href: api/connectors/crypto_exchanges/cex.io/configuration_cex.io.md
+        - name: CEX.IO のグラフィカル設定
+          href: api/connectors/crypto_exchanges/cex.io/graphical_configuration_cex.io.md
+        - name: CEX.IO アダプターの初期化
+          href: api/connectors/crypto_exchanges/cex.io/adapter_initialization_cex.io.md
+      - name: Coinbase
+        href: api/connectors/crypto_exchanges/coinbase.md
+        items:
+        - name: Coinbase の設定
+          href: api/connectors/crypto_exchanges/coinbase/configuration_coinbase.md
+        - name: Coinbase のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinbase/graphical_configuration_coinbase.md
+        - name: Coinbase アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinbase/adapter_initialization_coinbase.md
+      - name: CoinBene
+        href: api/connectors/crypto_exchanges/coinbene.md
+        items:
+        - name: CoinBene の設定
+          href: api/connectors/crypto_exchanges/coinbene/configuration_coinbene.md
+        - name: CoinBene のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinbene/graphical_configuration_coinbene.md
+        - name: CoinBene アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinbene/adapter_initialization_coinbene.md
+      - name: CoinCap
+        href: api/connectors/crypto_exchanges/coincap.md
+        items:
+        - name: CoinCap の設定
+          href: api/connectors/crypto_exchanges/coincap/configuration_coincap.md
+        - name: CoinCap のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coincap/graphical_configuration_coincap.md
+        - name: CoinCap アダプターの初期化
+          href: api/connectors/crypto_exchanges/coincap/adapter_initialization_coincap.md
+      - name: Coincheck
+        href: api/connectors/crypto_exchanges/coincheck.md
+        items:
+        - name: Coincheck の設定
+          href: api/connectors/crypto_exchanges/coincheck/configuration_coincheck.md
+        - name: Coincheck のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coincheck/graphical_configuration_coincheck.md
+        - name: Coincheck アダプターの初期化
+          href: api/connectors/crypto_exchanges/coincheck/adapter_initialization_coincheck.md
+      - name: CoinEx
+        href: api/connectors/crypto_exchanges/coinex.md
+        items:
+        - name: CoinEx の設定
+          href: api/connectors/crypto_exchanges/coinex/configuration_coinex.md
+        - name: CoinEx のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinex/graphical_configuration_coinex.md
+        - name: CoinEx アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinex/adapter_initialization_coinex.md
+      - name: CoinExchange
+        href: api/connectors/crypto_exchanges/coinexchange.md
+        items:
+        - name: CoinExchange の設定
+          href: api/connectors/crypto_exchanges/coinexchange/configuration_coinexchange.md
+        - name: CoinExchange のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinexchange/graphical_configuration_coinexchange.md
+        - name: CoinExchange アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinexchange/adapter_initialization_coinexchange.md
+      - name: Coinigy
+        href: api/connectors/crypto_exchanges/coinigy.md
+        items:
+        - name: Coinigy の設定
+          href: api/connectors/crypto_exchanges/coinigy/configuration_coinigy.md
+        - name: Coinigy のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinigy/graphical_configuration_coinigy.md
+        - name: Coinigy アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinigy/adapter_initialization_coinigy.md
+      - name: CoinHub
+        href: api/connectors/crypto_exchanges/coinhub.md
+        items:
+        - name: CoinHub の設定
+          href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
+        - name: CoinHub のグラフィカル設定
+          href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
+        - name: CoinHub アダプターの初期化
+          href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
+      - name: Cryptopia
+        href: api/connectors/crypto_exchanges/cryptopia.md
+        items:
+        - name: Cryptopia の設定
+          href: api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md
+        - name: Cryptopia のグラフィカル設定
+          href: api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md
+        - name: Cryptopia アダプターの初期化
+          href: api/connectors/crypto_exchanges/cryptopia/adapter_initialization_cryptopia.md
+      - name: Deribit
+        href: api/connectors/crypto_exchanges/deribit.md
+        items:
+        - name: Deribit の設定
+          href: api/connectors/crypto_exchanges/deribit/configuration_deribit.md
+        - name: Deribit のグラフィカル設定
+          href: api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md
+        - name: Deribit アダプターの初期化
+          href: api/connectors/crypto_exchanges/deribit/adapter_initialization_deribit.md
+      - name: DigiFinex
+        href: api/connectors/crypto_exchanges/digifinex.md
+        items:
+        - name: DigiFinex の設定
+          href: api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md
+        - name: DigiFinex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md
+        - name: DigiFinex アダプターの初期化
+          href: api/connectors/crypto_exchanges/digifinex/adapter_initialization_digifinex.md
+      - name: DigitexFutures
+        href: api/connectors/crypto_exchanges/digitexfutures.md
+        items:
+        - name: DigitexFutures の設定
+          href: api/connectors/crypto_exchanges/digitexfutures/configuration_digitexfutures.md
+        - name: DigitexFutures のグラフィカル設定
+          href: api/connectors/crypto_exchanges/digitexfutures/graphical_configuration_digitexfutures.md
+        - name: DigitexFutures アダプターの初期化
+          href: api/connectors/crypto_exchanges/digitexfutures/adapter_initialization_digitexfutures.md
+      - name: EXMO
+        href: api/connectors/crypto_exchanges/exmo.md
+        items:
+        - name: EXMO の設定
+          href: api/connectors/crypto_exchanges/exmo/configuration_exmo.md
+        - name: EXMO のグラフィカル設定
+          href: api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md
+        - name: EXMO アダプターの初期化
+          href: api/connectors/crypto_exchanges/exmo/adapter_initialization_exmo.md
+      - name: FatBTC
+        href: api/connectors/crypto_exchanges/fatbtc.md
+        items:
+        - name: FatBTC の設定
+          href: api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md
+        - name: FatBTC のグラフィカル設定
+          href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
+        - name: FatBTC アダプターの初期化
+          href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+      - name: Gate.io
+        href: api/connectors/crypto_exchanges/gateio.md
+        items:
+        - name: Gate.io コネクター設定
+          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+        - name: Gate.io のグラフィカル設定
+          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+        - name: Gate.io アダプターの初期化
+          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
+      - name: GDAX
+        href: api/connectors/crypto_exchanges/gdax.md
+        items:
+        - name: GDAX の設定
+          href: api/connectors/crypto_exchanges/gdax/configuration_gdax.md
+        - name: GDAX のグラフィカル設定
+          href: api/connectors/crypto_exchanges/gdax/graphical_configuration_gdax.md
+        - name: GDAX アダプターの初期化
+          href: api/connectors/crypto_exchanges/gdax/adapter_initialization_gdax.md
+      - name: Gopax
+        href: api/connectors/crypto_exchanges/gopax.md
+        items:
+        - name: 設定 Gopax
+          href: api/connectors/crypto_exchanges/gopax/configuration_gopax.md
+        - name: グラフィカル設定 Gopax
+          href: api/connectors/crypto_exchanges/gopax/graphical_configuration_gopax.md
+        - name: アダプターの初期化 Gopax
+          href: api/connectors/crypto_exchanges/gopax/adapter_initialization_gopax.md
+      - name: HitBTC
+        href: api/connectors/crypto_exchanges/hitbtc.md
+        items:
+        - name: 設定 HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
+        - name: グラフィカル設定 HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
+        - name: アダプターの初期化 HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
+      - name: Hotbit
+        href: api/connectors/crypto_exchanges/hotbit.md
+        items:
+        - name: 設定 Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/configuration_hotbit.md
+        - name: グラフィカル設定 Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/graphical_configuration_hotbit.md
+        - name: アダプターの初期化 Hotbit
+          href: api/connectors/crypto_exchanges/hotbit/adapter_initialization_hotbit.md
+      - name: Huobi
+        href: api/connectors/crypto_exchanges/huobi.md
+        items:
+        - name: Huobi の設定
+          href: api/connectors/crypto_exchanges/huobi/configuration_huobi.md
+        - name: Huobi のグラフィカル設定
+          href: api/connectors/crypto_exchanges/huobi/graphical_configuration_huobi.md
+        - name: Huobi アダプターの初期化
+          href: api/connectors/crypto_exchanges/huobi/adapter_initialization_huobi.md
+      - name: Idax
+        href: api/connectors/crypto_exchanges/idax.md
+        items:
+        - name: Idax の設定
+          href: api/connectors/crypto_exchanges/idax/configuration_idax.md
+        - name: Idax のグラフィカル設定
+          href: api/connectors/crypto_exchanges/idax/graphical_configuration_idax.md
+        - name: Idax アダプターの初期化
+          href: api/connectors/crypto_exchanges/idax/adapter_initialization_idax.md
+      - name: Kraken
+        href: api/connectors/crypto_exchanges/kraken.md
+        items:
+        - name: Kraken 設定
+          href: api/connectors/crypto_exchanges/kraken/configuration_kraken.md
+        - name: Kraken グラフィカル設定
+          href: api/connectors/crypto_exchanges/kraken/graphical_configuration_kraken.md
+        - name: Kraken アダプターの初期化
+          href: api/connectors/crypto_exchanges/kraken/adapter_initialization_kraken.md
+      - name: Kucoin
+        href: api/connectors/crypto_exchanges/kucoin.md
+        items:
+        - name: Kucoin 設定
+          href: api/connectors/crypto_exchanges/kucoin/configuration_kucoin.md
+        - name: Kucoin グラフィカル設定
+          href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
+        - name: Kucoin アダプターの初期化
+          href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+      - name: Latoken
+        href: api/connectors/crypto_exchanges/latoken.md
+        items:
+        - name: Latoken 設定
+          href: api/connectors/crypto_exchanges/latoken/configuration_latoken.md
+        - name: Latoken グラフィカル設定
+          href: api/connectors/crypto_exchanges/latoken/graphical_configuration_latoken.md
+        - name: Latoken アダプターの初期化
+          href: api/connectors/crypto_exchanges/latoken/adapter_initialization_latoken.md
+      - name: LBank
+        href: api/connectors/crypto_exchanges/lbank.md
+        items:
+        - name: LBank 設定
+          href: api/connectors/crypto_exchanges/lbank/configuration_lbank.md
+        - name: LBank グラフィカル設定
+          href: api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md
+        - name: LBank アダプターの初期化
+          href: api/connectors/crypto_exchanges/lbank/adapter_initialization_lbank.md
+      - name: Liqui
+        href: api/connectors/crypto_exchanges/liqui.md
+        items:
+        - name: Liqui 設定
+          href: api/connectors/crypto_exchanges/liqui/configuration_liqui.md
+        - name: Liqui グラフィカル設定
+          href: api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md
+        - name: Liqui アダプターの初期化
+          href: api/connectors/crypto_exchanges/liqui/adapter_initialization_liqui.md
+      - name: Livecoin
+        href: api/connectors/crypto_exchanges/livecoin.md
+        items:
+        - name: Livecoin 設定
+          href: api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md
+        - name: Livecoin グラフィカル設定
+          href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
+        - name: Livecoin アダプターの初期化
+          href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
+      - name: MEXC
+        href: api/connectors/crypto_exchanges/mexc.md
+        items:
+        - name: MEXC 設定
+          href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
+        - name: MEXC のグラフィカル設定
+          href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
+        - name: MEXC アダプターの初期化
+          href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
+      - name: OKCoin
+        href: api/connectors/crypto_exchanges/okcoin.md
+        items:
+        - name: OKCoin 設定
+          href: api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md
+        - name: OKCoin グラフィカル設定
+          href: api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md
+        - name: OKCoin アダプターの初期化
+          href: api/connectors/crypto_exchanges/okcoin/adapter_initialization_okcoin.md
+      - name: OKEx
+        href: api/connectors/crypto_exchanges/okex.md
+        items:
+        - name: OKEx の設定
+          href: api/connectors/crypto_exchanges/okex/configuration_okex.md
+        - name: OKEx のグラフィカル設定
+          href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
+        - name: アダプターの初期化 OKEx
+          href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
+      - name: OKEx History
+        href: api/connectors/crypto_exchanges/okex_history.md
+        items:
+        - name: OKEx History の設定
+          href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
+        - name: OKEx History のグラフィカル設定
+          href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
+        - name: OKEx History アダプターの初期化
+          href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
+      - name: Poloniex
+        href: api/connectors/crypto_exchanges/poloniex.md
+        items:
+        - name: Poloniex の設定
+          href: api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md
+        - name: Poloniex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md
+        - name: Poloniex アダプターの初期化
+          href: api/connectors/crypto_exchanges/poloniex/adapter_initialization_poloniex.md
+      - name: PrizmBit
+        href: api/connectors/crypto_exchanges/prizmbit.md
+        items:
+        - name: PrizmBit の設定
+          href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
+        - name: PrizmBit のグラフィカル設定
+          href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
+        - name: PrizmBit アダプターの初期化
+          href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
+      - name: Quoinex
+        href: api/connectors/crypto_exchanges/quoinex.md
+        items:
+        - name: Quoinex の設定
+          href: api/connectors/crypto_exchanges/quoinex/configuration_quoinex.md
+        - name: Quoinex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
+        - name: Quoinex アダプターの初期化
+          href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
+      - name: TradeOgre
+        href: api/connectors/crypto_exchanges/tradeogre.md
+        items:
+        - name: TradeOgre の設定
+          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+        - name: TradeOgre のグラフィカル設定
+          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
+        - name: TradeOgre アダプターの初期化
+          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
+      - name: Upbit
+        href: api/connectors/crypto_exchanges/upbit.md
+        items:
+        - name: Upbit の設定
+          href: api/connectors/crypto_exchanges/upbit/configuration_upbit.md
+        - name: Upbit のグラフィカル設定
+          href: api/connectors/crypto_exchanges/upbit/graphical_configuration_upbit.md
+        - name: Upbit アダプターの初期化
+          href: api/connectors/crypto_exchanges/upbit/adapter_initialization_upbit.md
+      - name: WEX (BTC-e)
+        href: api/connectors/crypto_exchanges/wex_btc_e.md
+        items:
+        - name: WEX (BTC-e) の設定
+          href: api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md
+        - name: WEX (BTC-e) のグラフィカル設定
+          href: api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md
+        - name: WEX (BTC-e) アダプターの初期化
+          href: api/connectors/crypto_exchanges/wex_btc_e/adapter_initialization_wex_btc_e.md
+      - name: Yobit
+        href: api/connectors/crypto_exchanges/yobit.md
+        items:
+        - name: Yobit 設定
+          href: api/connectors/crypto_exchanges/yobit/configuration_yobit.md
+        - name: Yobit のグラフィカル設定
+          href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
+        - name: Yobit アダプターの初期化
+          href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
+      - name: Zaif
+        href: api/connectors/crypto_exchanges/zaif.md
+        items:
+        - name: Zaif 設定
+          href: api/connectors/crypto_exchanges/zaif/configuration_zaif.md
+        - name: Zaif のグラフィカル設定
+          href: api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md
+        - name: Zaif アダプターの初期化
+          href: api/connectors/crypto_exchanges/zaif/adapter_initialization_zaif.md
+      - name: ZB
+        href: api/connectors/crypto_exchanges/zb.md
+        items:
+        - name: ZB 設定
+          href: api/connectors/crypto_exchanges/zb/configuration_zb.md
+        - name: ZB のグラフィカル設定
+          href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
+        - name: ZB アダプターの初期化
+          href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
+      - name: 出金
+        href: api/connectors/crypto_exchanges/withdraw.md
+    - name: DEX
+      items:
+      - name: Aster
+        href: api/connectors/crypto_exchanges/aster.md
+        items:
+        - name: Aster 設定
+          href: api/connectors/crypto_exchanges/aster/configuration_aster.md
+        - name: Aster のグラフィカル設定
+          href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
+        - name: Aster アダプターの初期化
+          href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: edgeX
+        href: api/connectors/crypto_exchanges/edgex.md
+        items:
+        - name: edgeX の設定
+          href: api/connectors/crypto_exchanges/edgex/configuration_edgex.md
+        - name: edgeX のグラフィカル設定
+          href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
+        - name: edgeX アダプターの初期化
+          href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Hyperliquid
+        href: api/connectors/crypto_exchanges/hyperliquid.md
+        items:
+        - name: Hyperliquid の設定
+          href: api/connectors/crypto_exchanges/hyperliquid/configuration_hyperliquid.md
+        - name: Hyperliquid のグラフィカル設定
+          href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
+        - name: Hyperliquid アダプターの初期化
+          href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Ligther
+        href: api/connectors/crypto_exchanges/ligther.md
+        items:
+        - name: Ligther 設定
+          href: api/connectors/crypto_exchanges/ligther/configuration_ligther.md
+        - name: Ligther グラフィカル設定
+          href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
+        - name: Ligther アダプターの初期化
+          href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: Paradex の設定
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: Paradex のグラフィカル設定
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: Paradex アダプターの初期化
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+    - name: 共通
+      items:
+      - name: CSV
+        href: api/connectors/common/csv.md
+        items:
+        - name: CSV のグラフィカル設定
+          href: api/connectors/common/csv/graphical_configuration_csv.md
+        - name: CSV アダプターの初期化
+          href: api/connectors/common/csv/adapter_initialization_csv.md
+      - name: FIX プロトコル
+        href: api/connectors/common/fix_protocol.md
+        items:
+        - name: FIX の設定
+          href: api/connectors/common/fix_protocol/configuration_fix.md
+        - name: FIX のグラフィカル設定
+          href: api/connectors/common/fix_protocol/graphical_configuration_fix.md
+        - name: FIX アダプターの初期化
+          href: api/connectors/common/fix_protocol/adapter_initialization_fix.md
+      - name: FAST プロトコル
+        href: api/connectors/common/fast_protocol.md
+        items:
+        - name: FAST のグラフィカル設定
+          href: api/connectors/common/fast_protocol/graphical_configuration_fast.md
+        - name: FAST アダプターの初期化
+          href: api/connectors/common/fast_protocol/adapter_initialization_fast.md
+        - name: ダンプモード
+          href: api/connectors/common/fast_protocol/dump_mode.md
+      - name: FIX Server
+        href: api/connectors/common/fix_server.md
+      - name: RSS
+        href: api/connectors/common/rss.md
+        items:
+        - name: RSS のグラフィカル設定
+          href: api/connectors/common/rss/graphical_configuration_rss.md
+        - name: RSS アダプターの初期化
+          href: api/connectors/common/rss/adapter_initialization_rss.md
+    - name: 独自コネクターの作成
+      href: api/connectors/creating_own_connector.md
+      items:
+      - name: 銘柄検索
+        href: api/connectors/creating_own_connector/instrument_lookup.md
+      - name: マーケットデータ
+        href: api/connectors/creating_own_connector/market_data.md
+      - name: ポートフォリオと注文に関する情報
+        href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
+      - name: 取引操作
+        href: api/connectors/creating_own_connector/trading_operations.md
+      - name: 設定の保存
+        href: api/connectors/creating_own_connector/settings.md
+      - name: 拡張注文条件
+        href: api/connectors/creating_own_connector/order_extended.md
+      - name: メッセージ一覧
+        href: api/connectors/creating_own_connector/messages.md
+      - name: ベストプラクティス
+        href: api/connectors/creating_own_connector/best_practices/common.md
+        items:
+        - name: 認証
+          href: api/connectors/creating_own_connector/best_practices/authentication.md
+        - name: REST クライアント
+          href: api/connectors/creating_own_connector/best_practices/rest_client.md
+        - name: WebSocket クライアント
+          href: api/connectors/creating_own_connector/best_practices/websocket_client.md
+        - name: 型変換
+          href: api/connectors/creating_own_connector/best_practices/type_conversion.md
+    - name: 設定の保存と読み込み
+      href: api/connectors/save_and_load_settings.md
+    - name: 再接続設定
+      href: api/connectors/reconnection_settings.md
+    - name: OAuth 認可
+      href: api/connectors/oauth.md
+    - name: 非同期注文操作
+      href: api/connectors/async_api.md
+    - name: IFileSystem と Paths.FileSystem
+      href: api/connectors/ifile_system_and_paths.md
+    - name: サブスクリプションのライフサイクル
+      href: api/connectors/subscription_lifecycle.md
+  - name: 市場データ
+    items:
+    - name: サブスクリプション
+      href: api/market_data/subscriptions.md
+    - name: ヒストリカルデータの取得
+      href: api/market_data/getting_historical_data.md
+    - name: ニュースデータの取得
+      href: api/market_data/getting_news_data.md
+  - name: 注文管理
+    href: api/orders_management.md
+    items:
+    - name: 新しい注文の作成
+      href: api/orders_management/create_new_order.md
+    - name: 新しいストップ注文の作成
+      href: api/orders_management/create_new_stop_order.md
+    - name: 注文状態
+      href: api/orders_management/orders_states.md
+    - name: 注文のキャンセル
+      href: api/orders_management/order_cancel.md
+    - name: 注文の一括キャンセル
+      href: api/orders_management/orders_mass_cancel.md
+    - name: 注文の差し替え
+      href: api/orders_management/orders_replacement.md
+    - name: トランザクション番号
+      href: api/orders_management/transaction_number.md
+  - name: 金融商品
+    href: api/instruments.md
+    items:
+    - name: 金融商品の検索
+      href: api/instruments/instrument_search.md
+    - name: 金融商品の識別子
+      href: api/instruments/instrument_identifier.md
+    - name: 識別子 *@ALL
+      href: api/instruments/identifier_@all.md
+    - name: 連続先物
+      href: api/instruments/continuous_futures.md
+    - name: 指数
+      href: api/instruments/index.md
+    - name: 出来高ベースの連続先物 (VolumeContinuousSecurity)
+      href: api/instruments/volume_continuous_security.md
+  - name: 市場データストレージ
+    href: api/market_data_storage.md
+    items:
+    - name: API の操作
+      href: api/market_data_storage/api.md
+    - name: リモートストレージの操作
+      href: api/market_data_storage/remote.md
+    - name: ストレージ形式
+      href: api/market_data_storage/formats.md
+    - name: ストレージドライブ
+      href: api/market_data_storage/drives.md
+    - name: スナップショットシステム
+      href: api/market_data_storage/snapshots.md
+  - name: キャンドル
+    href: api/candles.md
+    items:
+    - name: チャート
+      href: api/candles/chart.md
+    - name: カスタムタイプのローソク足
+      href: api/candles/custom_type_of_candle.md
+    - name: ローソク足の結合: 履歴 + リアルタイム
+      href: api/candles/gluing_candles_history_real_time.md
+    - name: インストゥルメントバスケットによるローソク足の作成
+      href: api/candles/candle_creation_by_the_instruments_basket.md
+    - name: ティックデータとスプレッドのローソク足への圧縮
+      href: api/candles/compression.md
+  - name: インジケーター
+    href: api/indicators.md
+    items:
+    - name: チャートへのインジケーター追加
+      href: api/indicators/indicator_adding_to_the_chart.md
+    - name: インジケーター一覧
+      href: api/indicators/list_of_indicators.md
+      items:
+      - name: A/D
+        href: api/indicators/list_of_indicators/a_d.md
+      - name: ADL
+        href: api/indicators/list_of_indicators/accumulation_distribution_line.md
+      - name: ALF
+        href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
+      - name: APZ
+        href: api/indicators/list_of_indicators/adaptive_price_zone.md
+      - name: Alligator
+        href: api/indicators/list_of_indicators/alligator.md
+      - name: AFI
+        href: api/indicators/list_of_indicators/approval_flow_index.md
+      - name: ALMA
+        href: api/indicators/list_of_indicators/arnaud_legoux_moving_average.md
+      - name: Aroon
+        href: api/indicators/list_of_indicators/aroon.md
+      - name: ADX
+        href: api/indicators/list_of_indicators/adx.md
+      - name: ATR
+        href: api/indicators/list_of_indicators/atr.md
+      - name: AO
+        href: api/indicators/list_of_indicators/ao.md
+      - name: BMP
+        href: api/indicators/list_of_indicators/balance_of_market_power.md
+      - name: BOP
+        href: api/indicators/list_of_indicators/balance_of_power.md
+      - name: BV
+        href: api/indicators/list_of_indicators/balance_volume.md
+      - name: Bear Power
+        href: api/indicators/list_of_indicators/bear_power.md
+      - name: Bull Power
+        href: api/indicators/list_of_indicators/bull_power.md
+      - name: Bollinger Bands
+        href: api/indicators/list_of_indicators/bollinger_bands.md
+      - name: BBP
+        href: api/indicators/list_of_indicators/bollinger_percent_b.md
+      - name: CGO
+        href: api/indicators/list_of_indicators/center_of_gravity_oscillator.md
+      - name: CMF
+        href: api/indicators/list_of_indicators/chaikin_money_flow.md
+      - name: CHV
+        href: api/indicators/list_of_indicators/chv.md
+      - name: CKS
+        href: api/indicators/list_of_indicators/chande_kroll_stop.md
+      - name: CMO
+        href: api/indicators/list_of_indicators/cmo.md
+      - name: CHOP
+        href: api/indicators/list_of_indicators/choppiness_index.md
+      - name: CCI
+        href: api/indicators/list_of_indicators/cci.md
+      - name: CM
+        href: api/indicators/list_of_indicators/composite_momentum.md
+      - name: CRSI
+        href: api/indicators/list_of_indicators/connors_rsi.md
+      - name: CBCI
+        href: api/indicators/list_of_indicators/constance_brown_composite_index.md
+      - name: DeMarker
+        href: api/indicators/list_of_indicators/demarker.md
+      - name: DI
+        href: api/indicators/list_of_indicators/demand_index.md
+      - name: DPO
+        href: api/indicators/list_of_indicators/dpo.md
+      - name: DSP
+        href: api/indicators/list_of_indicators/detrended_synthetic_price.md
+      - name: DMI
+        href: api/indicators/list_of_indicators/dmi.md
+      - name: DPI
+        href: api/indicators/list_of_indicators/disparity_index.md
+      - name: DC
+        href: api/indicators/list_of_indicators/donchian_channels.md
+      - name: DEMA
+        href: api/indicators/list_of_indicators/dema.md
+      - name: DZRSI
+        href: api/indicators/list_of_indicators/dynamic_zones_rsi.md
+      - name: EMV
+        href: api/indicators/list_of_indicators/ease_of_movement.md
+      - name: EFT
+        href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
+      - name: EIS
+        href: api/indicators/list_of_indicators/elder_impulse_system.md
+      - name: Elder's Force Index
+        href: api/indicators/list_of_indicators/elder_force_index.md
+      - name: EWO
+        href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
+      - name: EPMA
+        href: api/indicators/list_of_indicators/endpoint_moving_average.md
+      - name: Envelope
+        href: api/indicators/list_of_indicators/envelope.md
+      - name: Elder Ray
+        href: api/indicators/list_of_indicators/elder_ray.md
+      - name: EMA
+        href: api/indicators/list_of_indicators/ema.md
+      - name: FR
+        href: api/indicators/list_of_indicators/fibonacci_retracement.md
+      - name: FVE
+        href: api/indicators/list_of_indicators/finite_volume_element.md
+      - name: FI
+        href: api/indicators/list_of_indicators/force_index.md
+      - name: FOSC
+        href: api/indicators/list_of_indicators/forecast_oscillator.md
+      - name: FRAMA
+        href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
+      - name: Fractals
+        href: api/indicators/list_of_indicators/fractals.md
+      - name: FDI
+        href: api/indicators/list_of_indicators/fractal_dimension.md
+      - name: Gator Oscillator
+        href: api/indicators/list_of_indicators/gator_oscillator.md
+      - name: GAPO
+        href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
+      - name: GMMA
+        href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
+      - name: HO
+        href: api/indicators/list_of_indicators/harmonic_oscillator.md
+      - name: Highest
+        href: api/indicators/list_of_indicators/highest.md
+      - name: HLI
+        href: api/indicators/list_of_indicators/high_low_index.md
+      - name: HVR
+        href: api/indicators/list_of_indicators/historical_volatility_ratio.md
+      - name: HurstExponent
+        href: api/indicators/list_of_indicators/hurst_exponent.md
+      - name: HMA
+        href: api/indicators/list_of_indicators/hma.md
+      - name: Ichimoku
+        href: api/indicators/list_of_indicators/ichimoku.md
+      - name: III
+        href: api/indicators/list_of_indicators/intraday_intensity_index.md
+      - name: IMI
+        href: api/indicators/list_of_indicators/intraday_momentum_index.md
+      - name: JMA
+        href: api/indicators/list_of_indicators/jma.md
+      - name: KPO
+        href: api/indicators/list_of_indicators/kase_peak_oscillator.md
+      - name: KER
+        href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
+      - name: KAMA
+        href: api/indicators/list_of_indicators/kama.md
+      - name: KalmanFilter
+        href: api/indicators/list_of_indicators/kalman_filter.md
+      - name: KC
+        href: api/indicators/list_of_indicators/keltner_channels.md
+      - name: KVO
+        href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
+      - name: KST
+        href: api/indicators/list_of_indicators/kst.md
+      - name: LRSI
+        href: api/indicators/list_of_indicators/laguerre_rsi.md
+      - name: LRC
+        href: api/indicators/list_of_indicators/lrc.md
+      - name: Linear Regression Slope
+        href: api/indicators/list_of_indicators/lrs.md
+      - name: Linear Regression Forecast
+        href: api/indicators/list_of_indicators/linear_regression_forecast.md
+      - name: R-Squared
+        href: api/indicators/list_of_indicators/linear_reg_rsquared.md
+      - name: Lowest
+        href: api/indicators/list_of_indicators/lowest.md
+      - name: LP
+        href: api/indicators/list_of_indicators/lunar_phase.md
+      - name: Market Facilitation Index
+        href: api/indicators/list_of_indicators/market_facilitation_index.md
+      - name: MMI
+        href: api/indicators/list_of_indicators/market_meanness_index.md
+      - name: MI
+        href: api/indicators/list_of_indicators/mass_index.md
+      - name: MCO
+        href: api/indicators/list_of_indicators/mcclellan_oscillator.md
+      - name: MGD
+        href: api/indicators/list_of_indicators/mcginley_dynamic.md
+      - name: Mean Deviation
+        href: api/indicators/list_of_indicators/mean_deviation.md
+      - name: Moving Median
+        href: api/indicators/list_of_indicators/median.md
+      - name: Median Price
+        href: api/indicators/list_of_indicators/median_price.md
+      - name: Momentum
+        href: api/indicators/list_of_indicators/momentum.md
+      - name: MOMA
+        href: api/indicators/list_of_indicators/momentum_of_moving_average.md
+      - name: MP
+        href: api/indicators/list_of_indicators/momentum_pinball.md
+      - name: Money Flow Index
+        href: api/indicators/list_of_indicators/money_flow_index.md
+      - name: MACD
+        href: api/indicators/list_of_indicators/macd.md
+      - name: MACD Histogram
+        href: api/indicators/list_of_indicators/macd_histogram.md
+      - name: MACD with Signal Line
+        href: api/indicators/list_of_indicators/macd_with_signal_line.md
+      - name: MAC
+        href: api/indicators/list_of_indicators/moving_average_crossover.md
+      - name: MAR
+        href: api/indicators/list_of_indicators/moving_average_ribbon.md
+      - name: NVI
+        href: api/indicators/list_of_indicators/negative_volume_index.md
+      - name: PVI
+        href: api/indicators/list_of_indicators/positive_volume_index.md
+      - name: NRTR
+        href: api/indicators/list_of_indicators/nrtr.md
+      - name: OBV
+        href: api/indicators/list_of_indicators/on_balance_volume.md
+      - name: OBVM
+        href: api/indicators/list_of_indicators/on_balance_volume_mean.md
+      - name: Optimal Tracking
+        href: api/indicators/list_of_indicators/optimal_tracking.md
+      - name: OMA
+        href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
+      - name: Parabolic SAR
+        href: api/indicators/list_of_indicators/parabolic_sar.md
+      - name: Pass-Through
+        href: api/indicators/list_of_indicators/pass_through.md
+      - name: Peak
+        href: api/indicators/list_of_indicators/peak.md
+      - name: PPO
+        href: api/indicators/list_of_indicators/percentage_price_oscillator.md
+      - name: Percentage Price Oscillator Signal
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
+      - name: Percentage Price Oscillator Histogram
+        href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
+      - name: PVO
+        href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
+      - name: PP
+        href: api/indicators/list_of_indicators/pivot_points.md
+      - name: Price Channels
+        href: api/indicators/list_of_indicators/price_channels.md
+      - name: PVT
+        href: api/indicators/list_of_indicators/price_volume_trend.md
+      - name: PGO
+        href: api/indicators/list_of_indicators/pretty_good_oscillator.md
+      - name: PSY
+        href: api/indicators/list_of_indicators/psychological_line.md
+      - name: QStick
+        href: api/indicators/list_of_indicators/qstick.md
+      - name: RC
+        href: api/indicators/list_of_indicators/rainbow_charts.md
+      - name: RAVI
+        href: api/indicators/list_of_indicators/ravi.md
+      - name: Rank Correlation Index
+        href: api/indicators/list_of_indicators/rank_correlation_index.md
+      - name: RoC
+        href: api/indicators/list_of_indicators/roc.md
+      - name: RMI
+        href: api/indicators/list_of_indicators/relative_momentum_index.md
+      - name: RSI
+        href: api/indicators/list_of_indicators/rsi.md
+      - name: RVI
+        href: api/indicators/list_of_indicators/rvi.md
+      - name: STC
+        href: api/indicators/list_of_indicators/schaff_trend_cycle.md
+      - name: Shift
+        href: api/indicators/list_of_indicators/shift.md
+      - name: SuperTrend
+        href: api/indicators/list_of_indicators/supertrend.md
+      - name: SMA
+        href: api/indicators/list_of_indicators/sma.md
+      - name: SW
+        href: api/indicators/list_of_indicators/sine_wave.md
+      - name: Smoothed MA
+        href: api/indicators/list_of_indicators/smoothed_ma.md
+      - name: Standard Deviation
+        href: api/indicators/list_of_indicators/standard_deviation.md
+      - name: Standard Error
+        href: api/indicators/list_of_indicators/standard_error.md
+      - name: Stochastic Oscillator %K
+        href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
+      - name: Stochastic Oscillator
+        href: api/indicators/list_of_indicators/stochastic_oscillator.md
+      - name: Sum N
+        href: api/indicators/list_of_indicators/sum_n.md
+      - name: T3MA
+        href: api/indicators/list_of_indicators/t3_moving_average.md
+      - name: TWAP
+        href: api/indicators/list_of_indicators/time_weighted_average_price.md
+      - name: Typical Price
+        href: api/indicators/list_of_indicators/typical_price.md
+      - name: TEMA
+        href: api/indicators/list_of_indicators/tema.md
+      - name: TRIX
+        href: api/indicators/list_of_indicators/trix.md
+      - name: Trough
+        href: api/indicators/list_of_indicators/trough.md
+      - name: True Range
+        href: api/indicators/list_of_indicators/true_range.md
+      - name: True Strength Index
+        href: api/indicators/list_of_indicators/true_strength_index.md
+      - name: TMF
+        href: api/indicators/list_of_indicators/twiggs_money_flow.md
+      - name: UO
+        href: api/indicators/list_of_indicators/uo.md
+      - name: VHF
+        href: api/indicators/list_of_indicators/vhf.md
+      - name: VIDYA
+        href: api/indicators/list_of_indicators/vidya.md
+      - name: Variable MA
+        href: api/indicators/list_of_indicators/variable_moving_average.md
+      - name: Volume
+        href: api/indicators/list_of_indicators/volume.md
+      - name: Volume Profile
+        href: api/indicators/list_of_indicators/volume_profile.md
+      - name: VWAP
+        href: api/indicators/list_of_indicators/volume_weighted_average_price.md
+      - name: Volume Weighted MA
+        href: api/indicators/list_of_indicators/volume_weighted_ma.md
+      - name: VI
+        href: api/indicators/list_of_indicators/vortex_indicator.md
+      - name: WTO
+        href: api/indicators/list_of_indicators/wave_trend_oscillator.md
+      - name: Weighted Close Price
+        href: api/indicators/list_of_indicators/weighted_close_price.md
+      - name: Weighted MA
+        href: api/indicators/list_of_indicators/weighted_ma.md
+      - name: Wilder MA
+        href: api/indicators/list_of_indicators/wilder_ma.md
+      - name: WAD
+        href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
+      - name: %R
+        href: api/indicators/list_of_indicators/williams_r.md
+      - name: WCCI
+        href: api/indicators/list_of_indicators/woodies_cci.md
+      - name: ZLEMA
+        href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
+      - name: ZigZag
+        href: api/indicators/list_of_indicators/zigzag.md
+      - name: WVAD
+        href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
+    - name: カスタムインジケーター
+      href: api/indicators/custom_indicator.md
+    - name: インジケーターのグラフィックレンダラー
+      href: api/indicators/graphic_renderer_of_indicators.md
+  - name: パターン
+    href: api/patterns.md
+    items:
+    - name: 3 Outside Down と 3 Outside Up パターン
+      href: api/patterns/3_outside_down_3_outside_up.md
+    - name: 3 Inside Down と 3 Inside Up パターン
+      href: api/patterns/3_inside_down_3_side_up.md
+    - name: 3 Black Crows と 3 White Soldiers パターン
+      href: api/patterns/3_black_crows_3_white_soldiers.md
+    - name: Three White Soldiers パターン
+      href: api/patterns/three_white_soldiers.md
+    - name: Three Black Crows パターン
+      href: api/patterns/three_black_crows.md
+    - name: On-Neck パターン
+      href: api/patterns/on_neck.md
+    - name: Piercing パターン
+      href: api/patterns/piercing.md
+    - name: Bearish Candle パターン
+      href: api/patterns/bearish.md
+    - name: Bearish Engulfing パターン
+      href: api/patterns/bearish_engulfing.md
+    - name: Bearish Harami パターン
+      href: api/patterns/bearish_harami.md
+    - name: Black Candle パターン
+      href: api/patterns/black_candle.md
+    - name: Black Marubozu パターン
+      href: api/patterns/black_marubozu.md
+    - name: Bullish Candle パターン
+      href: api/patterns/bullish.md
+    - name: Bullish Engulfing パターン
+      href: api/patterns/bullish_engulfing.md
+    - name: Bullish Harami パターン
+      href: api/patterns/bullish_harami.md
+    - name: Dragonfly パターン
+      href: api/patterns/dragonfly.md
+    - name: Evening Star パターン
+      href: api/patterns/evening_star.md
+    - name: Falling Three Methods パターン
+      href: api/patterns/falling_three_methods.md
+    - name: Flat（中立）Candle パターン
+      href: api/patterns/flat_candle.md
+    - name: Gravestone パターン
+      href: api/patterns/gravestone.md
+    - name: Hammer パターン
+      href: api/patterns/hammer.md
+    - name: Hanging Man パターン
+      href: api/patterns/hanging_man.md
+    - name: Inverted Hammer パターン
+      href: api/patterns/inverted_hammer.md
+    - name: Morning Star パターン
+      href: api/patterns/morning_star.md
+    - name: Rising Three Methods パターン
+      href: api/patterns/rising_three_methods.md
+    - name: Shooting Star パターン
+      href: api/patterns/shooting_star.md
+    - name: Spinning Top パターン
+      href: api/patterns/spinning_top.md
+    - name: Tweezer Bottom パターン
+      href: api/patterns/tweezer_bottom.md
+    - name: Tweezer Top パターン
+      href: api/patterns/tweezer_top.md
+    - name: White Candle パターン
+      href: api/patterns/white_candle.md
+    - name: White Marubozu パターン
+      href: api/patterns/white_marubozu.md
+    - name: 複合ローソク足パターン
+      href: api/patterns/complex_patterns.md
+  - name: ポジション管理
+    href: api/positions.md
+  - name: アダプタールーティング
+    href: api/basket_routing.md
+  - name: 板情報
+    href: api/order_books.md
+    items:
+    - name: サブスクリプション
+      href: api/order_books/subscriptions.md
+    - name: 板情報の例
+      href: api/order_books/examples.md
+    - name: フィルター済み板情報
+      href: api/order_books/filtered_order_book.md
+    - name: スパース板情報
+      href: api/order_books/sparse.md
+    - name: グループ化された板情報
+      href: api/order_books/grouped.md
+    - name: 表示
+      href: api/order_books/display.md
+  - name: StockSharp の戦略
+    href: api/strategies.md
+    items:
+    - name: 戦略における市場データ購読
+      href: api/strategies/subscriptions.md
+    - name: ストラテジー内のインジケーター
+      href: api/strategies/indicators.md
+    - name: ストラテジーでの取引操作
+      href: api/strategies/trading_operations.md
+    - name: ポジション保護
+      href: api/strategies/take_profit_and_stop_loss.md
+    - name: ストラテジーパラメーター
+      href: api/strategies/parameters.md
+    - name: ストラテジーでのログ記録
+      href: api/strategies/logging.md
+    - name: StockSharp プラットフォームとのストラテジー互換性
+      href: api/strategies/compatibility.md
+    - name: ストラテジーにおける高レベル API
+      href: api/strategies/high_level_api.md
+    - name: ストラテジーでのチャートの操作
+      href: api/strategies/chart.md
+    - name: 戦略の統計
+      href: api/strategies/statistics.md
+    - name: 設定の保存と読み込み
+      href: api/strategies/settings_saving_and_loading.md
+    - name: 注文と約定の読み込み
+      href: api/strategies/orders_and_trades_loading.md
+    - name: 価格の丸め
+      href: api/strategies/shrink_price.md
+    - name: Unit 型
+      href: api/strategies/unit_type.md
+    - name: クォーティングアルゴリズム
+      href: api/strategies/quoting.md
+    - name: 使用銘柄
+      href: api/strategies/working_securities.md
+    - name: 戦略
+      href: api/strategies/strategies.md
+    - name: 目標ポジション管理
+      href: api/strategies/target_position_management.md
+    - name: アラートシステム
+      href: api/strategies/alert_system.md
+    - name: タイマーシステム
+      href: api/strategies/timer_system.md
+    - name: 高レベルサブスクリプション
+      href: api/strategies/high_level_subscriptions.md
+    - name: リスク管理
+      href: api/strategies/risk_management.md
+    - name: ストラテジー レポート
+      href: api/strategies/reporting.md
+    - name: ストラテジーの取引モード
+      href: api/strategies/trading_modes.md
+    - name: 高度な戦略機能
+      href: api/strategies/advanced_features.md
+    - name: 統計リファレンス
+      href: api/strategies/statistics_reference.md
+    - name: 高度な最適化
+      href: api/strategies/optimization_advanced.md
+    - name: クォーティング リファレンス
+      href: api/strategies/quoting_reference.md
+    - name: イベントモデル
+      href: api/strategies/event_model.md
+      items:
+      - name: ルールの使用
+        href: api/strategies/event_model/rules_using.md
+      - name: ルールのサスペンド
+        href: api/strategies/event_model/rules_suspension.md
+      - name: 相互排他的なルール
+        href: api/strategies/event_model/rules_mutually_exclusive.md
+      - name: 独自ルールの作成
+        href: api/strategies/event_model/rules_create.md
+      - name: サンプル
+        items:
+        - name: 単一ローソク足のルール
+          href: api/strategies/event_model/samples/rule_candle.md
+        - name: ティック取引のルール
+          href: api/strategies/event_model/samples/rule_ticks.md
+        - name: オーダーブックと取引のルール
+          href: api/strategies/event_model/samples/rule_marketdepth.md
+        - name: 注文のルール
+          href: api/strategies/event_model/samples/rule_order.md
+        - name: Until ルール
+          href: api/strategies/event_model/samples/rule_until.md
+    - name: その他のストラテジー例
+      href: api/strategies/samples.md
+      items:
+      - name: アービトラージ ストラテジー
+        href: api/strategies/samples/arbitrage.md
+      - name: クラシック Bollinger ストラテジー
+        href: api/strategies/samples/bollinger_classic.md
+      - name: 下限バンドに焦点を当てた Bollinger ストラテジー
+        href: api/strategies/samples/bollinger_low.md
+      - name: 上限バンドに焦点を当てた Bollinger ストラテジー
+        href: api/strategies/samples/bollinger_up.md
+      - name: マーチンゲール付き移動平均
+        href: api/strategies/samples/sma_martingale.md
+      - name: 1 本ローソク足トレンド戦略
+        href: api/strategies/samples/stairs_trend_one_candle.md
+      - name: Stairs トレンド戦略
+        href: api/strategies/samples/stairs_trend.md
+      - name: 1 本ローソク足逆張り戦略
+        href: api/strategies/samples/stairs_countertrend_one_candle.md
+      - name: Stairs 逆張り戦略
+        href: api/strategies/samples/stairs_countertrend.md
+      - name: クォーティング付き逆張り戦略
+        href: api/strategies/samples/stairs_countertrend_quoting.md
+      - name: クォーティング ストラテジー
+        href: api/strategies/samples/mq.md
+      - name: スプレッド・クォーティング戦略
+        href: api/strategies/samples/mq_spread.md
+      - name: ペアトレーディング戦略
+        href: api/strategies/samples/pairs_trading.md
+      - name: マルチタイムフレーム戦略
+        href: api/strategies/samples/multi_timeframe.md
+  - name: コミッションシステム
+    href: api/commissions.md
+  - name: 損益管理
+    href: api/pnl.md
+  - name: スリッページ測定
+    href: api/slippage.md
+  - name: レイテンシ測定
+    href: api/latency.md
+  - name: ロギング
+    href: api/logging.md
+    items:
+    - name: ストラテジーのログ記録
+      href: api/logging/strategy_logging.md
+    - name: IConnector のロギング
+      href: api/logging/iconnector_logging.md
+    - name: その他のログソース
+      href: api/logging/other_logs_sources.md
+    - name: ビジュアル監視
+      href: api/logging/visual_monitoring.md
+    - name: カスタム ILogListener
+      href: api/logging/custom_iloglistener.md
+  - name: オプション
+    href: api/options.md
+    items:
+    - name: グリークス
+      href: api/options/greeks.md
+    - name: ボラティリティ取引
+      href: api/options/volatility_trading.md
+    - name: デルタヘッジ
+      href: api/options/delta_hedging.md
+    - name: グラフィックコンポーネント
+      href: api/options/graphic_components.md
+  - name: バックテスト\/エミュレーション
+    href: api/testing.md
+    items:
+    - name: 履歴データ
+      href: api/testing/historical_data.md
+    - name: ストラテジー最適化
+      href: api/testing/optimization.md
+    - name: ランダムデータ
+      href: api/testing/random_data.md
+    - name: リアルタイム市場データテスト
+      href: api/testing/simulator.md
+    - name: テスト設定
+      href: api/testing/extended_settings.md
+  - name: データエクスポート
+    href: api/export.md
+  - name: データインポート
+    href: api/import.md
+  - name: 分析スクリプト
+    href: api/analytics.md
+  - name: グラフィカルユーザーインターフェイス
+    href: api/graphical_user_interface.md
+    items:
+    - name: チャート
+      href: api/graphical_user_interface/charts.md
+      items:
+      - name: ローソク足チャート
+        href: api/graphical_user_interface/charts/candle_chart.md
+      - name: ローソク足チャートパネル
+        href: api/graphical_user_interface/charts/candle_chart_panel.md
+      - name: エクイティカーブチャート
+        href: api/graphical_user_interface/charts/equity_curve_chart.md
+      - name: ボックスチャート
+        href: api/graphical_user_interface/charts/box_chart.md
+      - name: クラスターチャート
+        href: api/graphical_user_interface/charts/cluster_chart.md
+      - name: チャートからの注文登録
+        href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
+      - name: 注釈
+        href: api/graphical_user_interface/charts/annotations.md
+    - name: ログ
+      href: api/graphical_user_interface/logging.md
+      items:
+      - name: ログパネル
+        href: api/graphical_user_interface/logging/log_panel.md
+      - name: 拡張ログパネル
+        href: api/graphical_user_interface/logging/extended_log_panel.md
+    - name: ポートフォリオ
+      href: api/graphical_user_interface/portfolios.md
+      items:
+      - name: ドロップダウンリスト
+        href: api/graphical_user_interface/portfolios/drop_down_list.md
+      - name: ピッカー
+        href: api/graphical_user_interface/portfolios/picker.md
+      - name: ポートフォリオピッカーウィンドウ
+        href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
+      - name: テーブル
+        href: api/graphical_user_interface/portfolios/table.md
+    - name: 銘柄
+      href: api/graphical_user_interface/instruments.md
+      items:
+      - name: ウィンドウ
+        href: api/graphical_user_interface/instruments/window.md
+      - name: テーブル
+        href: api/graphical_user_interface/instruments/table.md
+      - name: ピッカー
+        href: api/graphical_user_interface/instruments/picker.md
+      - name: 連続先物
+        href: api/graphical_user_interface/instruments/continuous_futures.md
+      - name: インデックス
+        href: api/graphical_user_interface/instruments/index.md
+    - name: マーケットデータ
+      href: api/graphical_user_interface/market_data.md
+      items:
+      - name: ティック約定
+        href: api/graphical_user_interface/market_data/ticks.md
+      - name: Level1
+        href: api/graphical_user_interface/market_data/level1.md
+      - name: オーダーブック
+        href: api/graphical_user_interface/market_data/order_book.md
+      - name: 注文ログ
+        href: api/graphical_user_interface/market_data/order_log.md
+      - name: ニュース
+        href: api/graphical_user_interface/market_data/news.md
+    - name: 取引
+      href: api/graphical_user_interface/trading.md
+      items:
+      - name: 注文
+        href: api/graphical_user_interface/trading/orders.md
+      - name: 自分の約定
+        href: api/graphical_user_interface/trading/own_trades.md
+      - name: 新規注文の作成
+        href: api/graphical_user_interface/trading/new_order_creation.md
+      - name: 新規ストップ注文の作成
+        href: api/graphical_user_interface/trading/new_stop_order_creation.md
+      - name: 利用可能なマーケットデータのテーブル
+        href: api/graphical_user_interface/trading/table_of_available_market_data.md
+      - name: Buy\/Sell パネル
+        href: api/graphical_user_interface/trading/buy_sell_panel.md
+    - name: ストラテジー
+      href: api/graphical_user_interface/strategies.md
+      items:
+      - name: 統計
+        href: api/graphical_user_interface/strategies/statistics.md
+    - name: オプション
+      href: api/graphical_user_interface/options.md
+      items:
+      - name: オプションデスク
+        href: api/graphical_user_interface/options/option_desk.md
+      - name: ポジションチャート
+        href: api/graphical_user_interface/options/position_chart.md
+    - name: オブジェクトプロパティ編集テーブル
+      href: api/graphical_user_interface/object_properties_editing_table.md
+    - name: 接続設定ウィンドウ
+      href: api/graphical_user_interface/connection_settings_window.md
+    - name: リスク設定ウィンドウ
+      href: api/graphical_user_interface/risk_settings_window.md
+    - name: 手数料設定ウィンドウ
+      href: api/graphical_user_interface/commission_settings_window.md
+    - name: 通知設定ウィンドウ
+      href: api/graphical_user_interface/notification_settings_window.md
+    - name: S# グラフィカルコンポーネントのテーマ
+      href: api/graphical_user_interface/themes_light_and_dark.md
+- name: Shell
+  href: shell.md
+  items:
+  - name: Shell のインストール
+    href: shell/installing_shell.md
+  - name: クイックスタート
+    href: shell/quick_start.md
+  - name: ユーザーインターフェイス
+    items:
+    - name: Common
+      href: shell/user_interface/common.md
+    - name: Real-time
+      href: shell/user_interface/real_time.md
+    - name: Emulation
+      href: shell/user_interface/emulation.md
+    - name: RemoteManager
+      href: shell/user_interface/remotemanager.md
+  - name: 接続設定
+    href: shell/connections_settings.md
+    items:
+    - name: コネクター設定
+      href: shell/connections_settings/connector_settings.md
+  - name: ストラテジーの作成
+    href: shell/create_strategy.md
+  - name: ストラテジーパネルの作成
+    href: shell/create_strategy_panel.md
+  - name: Designer からストラテジーを実行
+    href: shell/run_strategies_from_designer.md
+- name: Store
+  href: store.md
+- name: MATLAB
+  href: matlab.md
+- name: UDP Dumper
+  href: udp_dumper.md
+- name: 共通
+  items:
+  - name: ソースコード
+    href: common/source_codes.md
+  - name: 参考資料
+    href: common/reference_materials.md

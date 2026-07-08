@@ -1,0 +1,11 @@
+# SMA
+
+**Simple Moving Average (SMA)** は、直近の終値を合計し、その値を期間数で割って算出する算術移動平均です。
+
+このインジケーターを使用するには、[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) クラスを使用する必要があります。
+
+![IndicatorSimpleMovingAverage](../../../../images/indicatorsimplemovingaverage.png)
+
+## 推奨コンテンツ
+
+[Smoothed MA](smoothed_ma.md)

@@ -1,0 +1,78 @@
+# CMF
+
+**Chaikin Money Flow (CMF)** は、Mark Chaikin によって開発されたテクニカルインジケーターで、特定の期間にわたる市場内のマネーフロー（蓄積と分配）の強さを測定します。
+
+このインジケーターを使用するには、[ChaikinMoneyFlow](xref:StockSharp.Algo.Indicators.ChaikinMoneyFlow) クラスを使用する必要があります。
+
+## 説明
+
+Chaikin Money Flow (CMF) は、Accumulation/Distribution Line（A/D Line）の概念を拡張し、特定の期間に焦点を当てます。このインジケーターは、指定期間における総出来高に対する割合として表されるマネーフロー出来高を測定します。
+
+CMF はトレーダーが次のことを行うのに役立ちます。
+- 買い圧力と売り圧力の強さを判断する
+- 蓄積（買い）と分配（売り）のトレンドを特定する
+- 価格変動とマネーフローの間のダイバージェンスを検出する
+- 現在のトレンドまたはその弱さを確認する
+
+CMF の主要な考え方は、強い上昇トレンドでは終値が期間の高値に近いはずであり、強い下降トレンドでは期間の安値に近いはずだというものです。
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります。
+- **Length** - 計算期間（標準値: 20-21 日）
+
+## 計算
+
+CMF の計算には次の手順が含まれます。
+
+1. 各期間の Money Flow Multiplier を計算します。
+   ```
+   Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
+   ```
+   
+   (High - Low) = 0 の場合、Money Flow Multiplier = 0 です。
+
+2. 期間の Money Flow Volume を計算します。
+   ```
+   Money Flow Volume = Money Flow Multiplier * Volume
+   ```
+
+3. Chaikin Money Flow を計算します。
+   ```
+   CMF = Sum(Money Flow Volume over Length period) / Sum(Volume over Length period)
+   ```
+
+## 解釈
+
+CMF はゼロライン付近で振動し、通常は -1 から +1 の範囲内にあります。
+
+- **正の CMF 値**（ゼロより上）:
+  - 買い手の圧力（蓄積）を示します
+  - 値が高いほど、買い手の圧力は強くなります
+  - 長期間維持される場合は特に重要です
+
+- **負の CMF 値**（ゼロより下）:
+  - 売り手の圧力（分配）を示します
+  - 値が低いほど、売り手の圧力は強くなります
+  - 負の領域に長く留まることは下降トレンドを確認します
+
+- **ゼロラインのクロス**:
+  - 下から上へのクロスは、上昇トレンドの開始を示す場合があります
+  - 上から下へのクロスは、下降トレンドの始まりを示す場合があります
+
+- **ダイバージェンス**:
+  - 強気ダイバージェンス: CMF が上昇している一方で価格が下落する場合（潜在的な上方反転）
+  - 弱気ダイバージェンス: CMF が低下している一方で価格が上昇する場合（潜在的な下方反転）
+
+- **極端な水準**:
+  - +0.25 を上回る値は、強い蓄積を示す場合があります
+  - -0.25 を下回る値は、強い分配を示す場合があります
+
+![indicator_chaikin_money_flow](../../../../images/indicator_chaikin_money_flow.png)
+
+## 関連項目
+
+[ADL](accumulation_distribution_line.md)
+[OBV](on_balance_volume.md)
+[ForceIndex](force_index.md)
+[MFI](money_flow_index.md)

@@ -1,0 +1,11 @@
+# 銘柄のダウンロード
+
+**Download securities** ボタン ![Designer_Download_instruments_button](../../../images/designer_download_instruments_button.png) をクリックすると、**Download securities** ウィンドウが開きます。銘柄をダウンロードするには、銘柄コードを入力するか **All** フラグを選択し、データソースを選んで **OK** をクリックします。[Designer](../../designer.md) は、選択したソース内で銘柄の検索を開始します。見つかったすべての銘柄は、**All securities** パネルの銘柄リストに追加されます。ソースとしてストレージを選択しており、そのストレージにダウンロード済みの銘柄がすでに含まれている場合、[Designer](../../designer.md) はそのストレージで利用可能なすべての銘柄を見つけます。これは、ある銘柄の履歴がすでにダウンロードされ、ストレージフォルダーにコピーされている場合に役立ちます。既定では [Designer](../../designer.md) は独自のストレージを使用するため、別のフォルダーにデータを保存した場合は、ストレージパスとデータ形式（bin または csv）に注意してください。
+
+![Designer Download the tools 00](../../../images/designer_download_instruments_00.png)
+
+**Add connection** ボタンをクリックすると、[接続設定](../connections_settings.md) ウィンドウが開きます。
+
+## 関連項目
+
+[銘柄の作成](create_instrument.md)

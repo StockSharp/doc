@@ -1,0 +1,181 @@
+# インジケーター一覧
+
+[S#](../../api.md) は、デフォルトで 140 を超えるテクニカル分析インジケーターを提供します。これにより、インジケーターをゼロから作成する代わりに、既製のインジケーターを使用できます。
+
+- [A/D](list_of_indicators/a_d.md) - Acceleration / Deceleration Indicator。価格変動の加速または減速を測定します
+- [ADL](list_of_indicators/accumulation_distribution_line.md) - Accumulation/Distribution Line (A/D Line)。証券への資金の流入または流出を追跡します
+- [ALF](list_of_indicators/adaptive_laguerre_filter.md) - Adaptive Laguerre Filter。市場状況に適応して価格データを平滑化するフィルターです
+- [APZ](list_of_indicators/adaptive_price_zone.md) - Adaptive Price Zone。ボラティリティに基づいて潜在的なサポートレベルとレジスタンスレベルを特定します
+- [Alligator](list_of_indicators/alligator.md) - Alligator。3 本の移動平均を使用して市場トレンドを判断するトレンドフォロー型インジケーターです
+- [AFI](list_of_indicators/approval_flow_index.md) - Approval Flow Index。価格と出来高に基づいてトレンドの強さを測定します
+- [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux Moving Average。遅延とノイズを低減した移動平均です
+- [Aroon](list_of_indicators/aroon.md) - Aroon indicator。トレンドの強さと方向を判定します
+- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - Aroon Oscillator。Aroon Up と Aroon Down の差を示します
+- [ADX](list_of_indicators/adx.md) - Welles Wilder Average Directional Index。トレンドの強さを測定します
+- [ATR](list_of_indicators/atr.md) - Average True Range。市場のボラティリティを測定します
+- [AO](list_of_indicators/ao.md) - Awesome Oscillator。市場のモメンタムを測定します
+- [Bear Power](list_of_indicators/bear_power.md) - Bear Power。EMA に対する弱気圧力を測定します
+- [Bull Power](list_of_indicators/bull_power.md) - Bull Power。EMA に対する強気圧力を測定します
+- [BMP](list_of_indicators/balance_of_market_power.md) - Balance of Market Power。買い圧力と売り圧力を比較します
+- [BOP](list_of_indicators/balance_of_power.md) - Balance of Power。買い手と売り手の強さを示します
+- [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator。出来高を価格変化に結び付けます
+- [Bollinger](list_of_indicators/bollinger_bands.md) - Bollinger Bands。ボラティリティを測定し、買われ過ぎまたは売られ過ぎの状態を特定します
+- [BBP](list_of_indicators/bollinger_percent_b.md) - Bollinger %b。Bollinger Bands に対する価格位置を示します
+- [Pattern](../patterns.md) - Pattern。チャート上の特定の価格パターンを認識します
+- [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Center of Gravity Oscillator。潜在的な反転ポイントを特定します
+- [CMF](list_of_indicators/chaikin_money_flow.md) - Chaikin Money Flow。出来高に基づいて買い圧力と売り圧力を測定します
+- [Chaikin's Volatility](list_of_indicators/chv.md) - Chaikin volatility。取引レンジの変化率を測定します
+- [CKS](list_of_indicators/chande_kroll_stop.md) - Chande Kroll Stop。ボラティリティに基づくストップロス水準を提供します
+- [CMO](list_of_indicators/cmo.md) - Chande Momentum Oscillator。価格変化のモメンタムを測定します
+- [CHOP](list_of_indicators/choppiness_index.md) - Choppiness Index。市場がトレンド状態かレンジ状態かを判定します
+- [CCI](list_of_indicators/cci.md) - Commodity Channel Index。商品市場の循環的トレンドを特定します
+- [CM](list_of_indicators/composite_momentum.md) - Composite Momentum。複数のモメンタムインジケーターを組み合わせます
+- [CRSI](list_of_indicators/connors_rsi.md) - Connors RSI。買われ過ぎと売られ過ぎの状態を特定するための複合インジケーターです
+- [CBCI](list_of_indicators/constance_brown_composite_index.md) - Constance Brown Composite Index。市場のモメンタムとトレンドの強さを測定します
+- [DI](list_of_indicators/demand_index.md) - Demand Index。買い圧力と売り圧力を比較します
+- [DPO](list_of_indicators/dpo.md) - Price oscillator without trend。サイクルに注目するためにトレンド成分を除去します
+- [DSP](list_of_indicators/detrended_synthetic_price.md) - Detrended Synthetic Price。価格変動を分析するためにトレンドを除去します
+- [DMI](list_of_indicators/dmi.md) - Welles Wilder Directional Movement Index。トレンド方向と強さを判定します
+- [DPI](list_of_indicators/disparity_index.md) - Disparity Index。価格と移動平均との差を測定します
+- [DC](list_of_indicators/donchian_channels.md) - Donchian Channels。高値と安値に基づいてブレイクアウト水準を特定します
+- [DEMA](list_of_indicators/dema.md) - Double Exponential Moving Average。移動平均計算の遅延を低減します
+- [DeMarker](list_of_indicators/demarker.md) - DeMarker。連続する高値と安値を比較して需要を測ります
+- [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - Dynamic Zones RSI。RSI 水準を市場状況に適応させます
+- [EMV](list_of_indicators/ease_of_movement.md) - Ease of Movement。価格変化を出来高に結び付けます
+- [EFT](list_of_indicators/ehlers_fisher_transform.md) - Ehlers Fisher Transform。極端な値を強調するために価格を正規化します
+- [EIS](list_of_indicators/elder_impulse_system.md) - Elder Impulse System。トレンドとモメンタムを組み合わせて取引機会を見つけます
+- [Elder Ray](list_of_indicators/elder_ray.md) - Elder Ray Index。EMA を使用して強気派と弱気派のバランスを評価します
+- [EWO](list_of_indicators/elliot_wave_oscillator.md) - Elliot Wave Oscillator。価格変動の波動パターンを特定します
+- [EPMA](list_of_indicators/endpoint_moving_average.md) - Endpoint Moving Average。遅延を低減した移動平均です
+- [Envelope](list_of_indicators/envelope.md) - Envelope。買われ過ぎと売られ過ぎの水準を特定するため、移動平均の周囲にバンドを作成します
+- [EMA](list_of_indicators/ema.md) - Exponential Moving Average。直近の価格により大きな重みを与えます
+- [FR](list_of_indicators/fibonacci_retracement.md) - Fibonacci Retracement。Fibonacci 比率に基づいて潜在的な反転水準を判定します
+- [FVE](list_of_indicators/finite_volume_element.md) - Finite Volume Element。出来高を考慮して価格変動の強さを測定します
+- [FI](list_of_indicators/force_index.md) - Force Index。価格と出来高を組み合わせて買い圧力と売り圧力を測定します
+- [EFI](list_of_indicators/elder_force_index.md) - Elder's Force Index。買い圧力と売り圧力を測定します
+- [FOSC](list_of_indicators/forecast_oscillator.md) - Forecast Oscillator。実際の価格を予測価格と比較します
+- [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Fractal Adaptive Moving Average。市場ボラティリティに適応します
+- [Fractals](list_of_indicators/fractals.md) - Fractals。価格チャート上の潜在的な反転ポイントを特定します
+- [FDI](list_of_indicators/fractal_dimension.md) - Fractal Dimension Index。市場の粗さを測定します
+- [Gator](list_of_indicators/gator_oscillator.md) - Gator oscillator。移動平均の収束と発散を測定します
+- [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Gopalakrishnan Range Index。価格変動の変動性を測定します
+- [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Guppy Multiple Moving Average。複数の移動平均を使用してトレンドを特定します
+- [HO](list_of_indicators/harmonic_oscillator.md) - Harmonic Oscillator。価格データ内のハーモニックパターンを検出します
+- [Highest](list_of_indicators/highest.md) - Maximum value for a period。指定期間における最高価格を判定します
+- [HLI](list_of_indicators/high_low_index.md) - High Low Index。新高値と新安値の数を測定します
+- [HVR](list_of_indicators/historical_volatility_ratio.md) - Historical Volatility Ratio。現在のボラティリティを過去の水準と比較します
+- [H](list_of_indicators/hurst_exponent.md) - Hurst Exponent。系列の長期記憶を測定します
+- [HMA](list_of_indicators/hma.md) - Hull Moving Average。高速で滑らかな移動平均です
+- [Ichimoku](list_of_indicators/ichimoku.md) - Ichimoku。トレンド識別のための包括的なインジケーターです
+- [III](list_of_indicators/intraday_intensity_index.md) - Intraday Intensity Index。取引日中の買い圧力と売り圧力を測定します
+- [IMI](list_of_indicators/intraday_momentum_index.md) - Intraday Momentum Index。日中の買われ過ぎと売られ過ぎの状態を特定します
+- [JMA](list_of_indicators/jma.md) - Jurik Moving Average。滑らかで応答性の高い移動平均です
+- [KPO](list_of_indicators/kase_peak_oscillator.md) - Kase Peak Oscillator。潜在的な反転ポイントを特定します
+- [KER](list_of_indicators/kaufman_efficiency_ratio.md) - Kaufman Efficiency Ratio。価格変動の効率性を測定します
+- [KAMA](list_of_indicators/kama.md) - Kaufman adaptive moving average。市場ボラティリティに適応します
+- [Kalman Filter](list_of_indicators/kalman_filter.md) - ノイズの多いデータでトレンドを追跡するための適応フィルターです
+- [KC](list_of_indicators/keltner_channels.md) - Keltner Channels indicator。ボラティリティに基づいて取引レンジを定義します
+- [KVO](list_of_indicators/klinger_volume_oscillator.md) - Klinger Volume Oscillator。出来高トレンドを測定します
+- [KST](list_of_indicators/kst.md) - Know Sure Thing。モメンタムオシレーターです
+- [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI。遅延を低減した修正版 RSI です
+- [LRC](list_of_indicators/lrc.md) - Linear regression。過去のトレンドに基づいて将来価格を予測します
+- [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast。将来価格を予測します
+- [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared。線形関係の強さを測定します
+- [LRS](list_of_indicators/lrs.md) - Linear regression gradient。回帰直線の傾きを示します
+- [Lowest](list_of_indicators/lowest.md) - Minimum value for a period。指定期間における最低価格を判定します
+- [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator。市場変動と月相サイクルを関連付けます
+- [MFI](list_of_indicators/market_facilitation_index.md) - Market Facilitation Index。価格変動の効率性を測定します
+- [MMI](list_of_indicators/market_meanness_index.md) - Market Meanness Index。平均回帰的な挙動を判定します
+- [MI](list_of_indicators/mass_index.md) - Mass Index。レンジ拡大に基づいて潜在的な反転を特定します
+- [MCO](list_of_indicators/mcclellan_oscillator.md) - McClellan Oscillator。市場の広がりを測定します
+- [MGD](list_of_indicators/mcginley_dynamic.md) - McGinley Dynamic。応答性の高い移動平均です
+- [MeanDev](list_of_indicators/mean_deviation.md) - Average deviation。平均からの平均偏差を測定します
+- [Moving Median](list_of_indicators/median.md) - Moving Median。ウィンドウの中央値を使用してデータを平滑化します
+- [MedPr](list_of_indicators/median_price.md) - Median price。取引レンジの中間点を計算します
+- [Momentum](list_of_indicators/momentum.md) - Momentum。価格変化の速度を測定します
+- [MOMA](list_of_indicators/momentum_of_moving_average.md) - Momentum of Moving Average。移動平均のモメンタムを測定します
+- [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator。買われ過ぎと売られ過ぎの状態を特定します
+- [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index。価格と出来高に基づいて買い圧力と売り圧力を測定します
+- [MACD](list_of_indicators/macd.md) - Convergence/divergence of moving averages。トレンド変化を特定します
+- [MACD Histogram](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram。MACD とシグナルラインの差を可視化します
+- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence of moving averages with signal line。買いシグナルと売りシグナルを提供します
+- [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover。2 本の移動平均を使用してトレンド反転を特定します
+- [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon。複数の移動平均を使用してトレンドを可視化します
+- [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index。出来高が減少した日の価格変動を追跡します
+- [PVI](list_of_indicators/positive_volume_index.md) - Positive Volume Index。出来高が増加した日の価格変動を追跡します
+- [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse。トレーリングストップインジケーターです
+- [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV)。出来高を価格変化に結び付けます
+- [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean。OBV の平滑化版です
+- [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された Optimal Tracking Filter。価格データをフィルタリングしてノイズを低減します
+- [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average。移動平均と価格との差を測定します
+- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR trend indicator implementation。潜在的な反転ポイントを特定します
+- [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
+- [Peak](list_of_indicators/peak.md) - Peak。価格データ内の局所的な高値を特定します
+- [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator。2 本の移動平均間のパーセント差を測定します
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator with signal line。PPO を EMA で平滑化します
+- [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Percentage Price Oscillator histogram。PPO とそのシグナルラインとの差をプロットします
+- [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator。出来高トレンドのパーセント差を測定します
+- [PP](list_of_indicators/pivot_points.md) - Pivot Points。過去の価格変動に基づいてサポートレベルとレジスタンスレベルを計算します
+- [PC](list_of_indicators/price_channels.md) - Price Channels。上側および下側の価格境界を示します
+- [PVT](list_of_indicators/price_volume_trend.md) - Price Volume Trend。価格変化に出来高を掛け合わせます
+- [PGO](list_of_indicators/pretty_good_oscillator.md) - Pretty Good Oscillator。買われ過ぎと売られ過ぎの状態を特定します
+- [PSY](list_of_indicators/psychological_line.md) - Psychological Line。価格変化に基づいて市場センチメントを測定します
+- [QStick](list_of_indicators/qstick.md) - QStick。買い圧力と売り圧力を測定します
+- [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts。複数の移動平均を使用してトレンドを可視化します
+- [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index。Spearman の順位相関を使用してトレンドを測定します
+- [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index。トレンドの強さを測定します
+- [ROC](list_of_indicators/roc.md) - Rate of change。価格のパーセント変化を測定します
+- [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index。モメンタムを組み込んだ RSI の変種です
+- [RSI](list_of_indicators/rsi.md) - Relative Strength Index。価格変動の速度と変化を測定します
+- [RVI](list_of_indicators/rvi.md) - Relative Vigor Index。トレンドの信頼度を測定します
+- [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff Trend Cycle。トレンドサイクルを特定します
+- [SuperTrend](list_of_indicators/supertrend.md) - ATR に基づく SuperTrend インジケーターです
+- [SMA](list_of_indicators/sma.md) - Simple moving average。一定期間の平均価格を計算します
+- [Shift](list_of_indicators/shift.md) - Shift。データストリームを選択した期間数だけオフセットします
+- [SW](list_of_indicators/sine_wave.md) - Sine Wave。価格データ内の周期的パターンを特定します
+- [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average。直近の価格により大きな重みを与える移動平均です
+- [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation。価格データのばらつきを測定します
+- [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression。予測精度を測定します
+- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K。レンジ内の価格位置に基づいてモメンタムを測定します
+- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator。買われ過ぎと売られ過ぎの状態を特定します
+- [Sum](list_of_indicators/sum_n.md) - Sum of N last values。直近 N 個の価格の合計を計算します
+- [T3MA](list_of_indicators/t3_moving_average.md) - T3 Moving Average。滑らかで応答性の高い移動平均です
+- [TWAP](list_of_indicators/time_weighted_average_price.md) - Time Weighted Average Price。時間で加重された平均価格を計算します
+- [TP](list_of_indicators/typical_price.md) - Typical Price。High、Low、Close の平均です
+- [TEMA](list_of_indicators/tema.md) - Triple Exponential Moving Average。移動平均計算の遅延を低減します
+- [TRIX](list_of_indicators/trix.md) - Triple Exponential Moving Average。トレンド変化を特定します
+- [Trough](list_of_indicators/trough.md) - Trough。価格データ内の局所的な安値を特定します
+- [TR](list_of_indicators/true_range.md) - True range。価格変動の実際のレンジを測定します
+- [TSI](list_of_indicators/true_strength_index.md) - True Strength Index。二重平滑化モメンタム分析を適用します
+- [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs Money Flow。買い圧力と売り圧力を測定します
+- [UltimateOsc](list_of_indicators/uo.md) - Last oscillator。複数のタイムフレームを組み合わせてモメンタムを測定します
+- [VHF](list_of_indicators/vhf.md) - Vertical-horizontal filter。トレンド市場とレンジ市場を区別します
+- [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average。市場ボラティリティに適応します
+- [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average。ボラティリティに合わせて調整します
+- [Volume](list_of_indicators/volume.md) - Candle volume。ローソク足ごとの取引出来高を測定します
+- [Volume profile](list_of_indicators/volume_profile.md) - Volume profile。異なる価格水準での取引活動を示します
+- [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average。出来高の多い価格により大きな重みを与えます
+- [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price。取引出来高で加重された平均価格です
+- [VI](list_of_indicators/vortex_indicator.md) - Vortex。新しいトレンドの開始を特定します
+- [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator。トレンド反転を特定します
+- [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average。直近の価格により大きな重みを与えます
+- [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price。(High + Low + 2 × Close) / 4
+- [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average。平滑化された移動平均です
+- [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution。買い圧力と売り圧力を測定します
+- [%R](list_of_indicators/williams_r.md) - Williams Percent Range。買われ過ぎと売られ過ぎの状態を特定します
+- [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI。トレンド識別のための CCI の変種です
+- [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - Zero Lag Exponential Moving Average。EMA 計算の遅延を低減します
+- [Zig Zag](list_of_indicators/zigzag.md) - ZigZag。小さな価格変動を除外して重要なトレンドを表示します
+
+## 注記
+
+この一覧には、StockSharp ライブラリのテクニカル分析インジケーターが含まれています。各インジケーターは、金融市場分析のさまざまな側面に合わせて設計されています。
+
+- トレンドの特定
+- ボラティリティの評価
+- 反転ポイントの検出
+- モメンタムの測定
+- 取引出来高の分析
+- サポートレベルとレジスタンスレベルの特定
+
+インジケーターは、過去の価格データを分析し、パターンを特定することで、トレーダーが情報に基づいた意思決定を行うのを支援します。

@@ -1,0 +1,13 @@
+# Money Flow Index
+
+**Money Flow Index (MFI)** は、流入する資金フローと流出する資金フローの差を計算します。資産の基準値がその差を下回る場合、流入する資金量が増加していることを示し、市場が強気であることを意味します。逆の状況が観察される場合、投資家がその銘柄から離れており、市場が弱気であることを意味します。  
+このインジケーターは、資産の買われ過ぎまたは売られ過ぎの状態を判定するためのテクニカルオシレーターです。また、価格トレンドの変化を警告するダイバージェンスを特定するためにも使用できます。このオシレーターは 0 から 100 の間で推移します。
+
+インジケーターを使用するには、[MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) クラスを使用します。
+
+![IndicatorMoneyFlowIndex](../../../../images/indicatormoneyflowindex.png)
+
+## 関連項目
+
+[MACD](macd.md)
+

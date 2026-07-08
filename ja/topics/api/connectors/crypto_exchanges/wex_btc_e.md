@@ -1,0 +1,24 @@
+> [!WARNING]
+> この取引所は完全に閉鎖されています（2017年7月に差し押さえ）。このコネクタは現在動作しません。ドキュメントは履歴参照用に保持されています。
+
+# WEX (BTC-e)
+
+**BTC-E** - 暗号資産取引所。
+
+この取引プラットフォーム向けの取引ロボットを書き始める前に、[コネクタ](../../connectors.md) セクションのリンクを読むことを推奨します。
+
+## 推奨コンテンツ
+
+[コネクタ](../../connectors.md)
+
+[グラフィカル設定](../graphical_configuration.md)
+
+[設定の保存と読み込み](../save_and_load_settings.md)
+
+[独自コネクタの作成](../creating_own_connector.md)
+
+[注文管理](../../orders_management.md)
+
+[新規注文の作成](../../orders_management/create_new_order.md)
+
+[新規ストップ注文の作成](../../orders_management/create_new_stop_order.md)

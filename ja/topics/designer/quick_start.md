@@ -1,0 +1,36 @@
+# クイックスタート
+
+初回起動時、[Designer](../designer.md) は事前設定済みの移動平均ストラテジーダイアグラムを開きます。
+
+![Designer Quick start 01](../../images/designer_quick_start_01.png)
+
+これを履歴データで実行するには、正しい形式のデータをダウンロードする必要があります。[Hydra](../hydra.md) の使用をお勧めします。Hydra は、さまざまなソースからマーケットデータ（銘柄、ローソク足、ティック取引、板情報、その他のデータ）を自動的に読み込み、ローカルストレージに保存するために設計されたプログラムです。履歴データのダウンロードと保存については、[マーケットデータストレージ](market_data_storage.md) で詳しく説明されています。
+
+[Hydra](../hydra.md) でデータをダウンロードした後、[Hydra](../hydra.md) が履歴を保存したディレクトリを [Designer](../designer.md) で指定します。これは **Backtest** -> **Storage** タブで設定します。
+
+![Designer Quick start 02](../../images/designer_quick_start_02.png)
+
+![Designer Edit Tool](../../images/designer_edit_tool_00.png) をクリックすると **Data storage settings** ウィンドウが開き、ローカルストレージまたはリモートストレージを設定できます。また、[Hydra](../hydra.md) をマーケットデータソースとして [サーバーモード](../hydra/server_mode/settings.md) で設定することもできます。![[Designer_Settings_Repository_button.png]] をクリックすると、フォルダー選択ウィンドウが開きます。以前に [Hydra](../hydra.md) でダウンロードした履歴を保存したフォルダーを選択します。
+
+次に、設定済みのローカルストレージから銘柄とそのデータを取得します。**Common** タブに移動し、**Market data** コンポーネントを選択します。
+
+![Designer Quick start 02](../../images/designer_quick_start_03.png)
+
+マーケットデータ管理タブが開きます。利用可能な銘柄を取得するには、[Download instruments](market_data_storage/download_instruments.md) をクリックします。銘柄をダウンロードするには、そのコードを入力するか **All** フラグを選択し、データソースを選んで **OK** をクリックします。[Designer](../designer.md) は、利用可能な銘柄をデータソースに要求します。見つかったすべての銘柄が **All instruments** パネルに表示されます。
+
+これで [Designer](../designer.md) は、ダウンロード済みの銘柄と、ストレージ内で利用可能な履歴データを使用できます。デモストラテジーのいずれかを選択します。[Schemas](user_interface/schemas.md) パネルで **Strategies** フォルダーを開き、**SMA** サンプルストラテジーをダブルクリックします。ワークスペースに **Sma** タブが表示されます。ストラテジーに切り替えると、リボンは自動的に **Backtest** タブを開きます。このタブには、ストラテジーの作成、デバッグ、テストのための主要なコントロールが含まれています（[ストラテジーの作成](strategies/using_visual_designer.md)、[履歴テストの例](backtesting/getting_started.md)）。
+
+![Designer Quick start 03](../../images/designer_quick_start_04_1.png)
+
+**Backtest** タブで、テスト期間を設定し、銘柄を選択して、[マーケットデータストレージ](market_data_storage.md) を選びます。
+
+**Instrument** フィールドで ![Designer Quick start 04](../../images/designer_quick_start_04.png) をクリックすると、**Select instrument** ウィンドウが開きます。このウィンドウで必要な銘柄を選択します。
+
+![Designer Quick start 05](../../images/designer_quick_start_05.png)
+
+**Designer** パネルで任意のブロックを選択すると、**Properties** パネルにそのブロックのプロパティが表示されます。**Candles** ブロックの **Properties** パネルでは、ローソク足の種類と Time Frame（[Candles](../api/candles.md)）を設定できます。
+
+**Start** をクリックすると、取引エミュレーションが開始されます。テスト結果は、ダイアグラムの対応するタブで利用できます: Chart、Orders、Trades、P/L、Positions (chart)、Statistics、Positions。
+
+![Designer Quick start 06](../../images/designer_quick_start_06.png)
+

@@ -1,0 +1,36 @@
+# Rank Correlation Index
+
+**Rank Correlation Index (RCI)** は、Spearman の順位相関係数に基づくオシレーターです。移動ウィンドウ内で価格の順位と時間の順位を比較し、直近の動きが完全な上昇または下降の連続にどれだけ近いかを示します。
+
+この指標にアクセスするには、[RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex) クラスを使用します。
+
+## 計算
+
+1. **Length** ウィンドウ内の各データポイントに時間順位を割り当てます（最も古い値を 1、最新の値を `Length`）。
+2. 価格を値で順位付けします（最も低い価格を 1、最も高い価格を `Length`）。
+3. 各バーについて差 `d = RankTime − RankPrice` を計算します。
+4. Spearman の公式を適用します。  
+   `RCI = 1 − (6 × Σ d²) / (Length × (Length² − 1))`。
+
+100 を掛けると、指標は −100 から +100 の範囲になります。
+
+## パラメーター
+
+- **Length** — 順位付け手順のウィンドウサイズ。
+
+## 解釈
+
+- **RCI ≈ +100** — 完全な上昇の連続（強い上昇トレンド）。
+- **RCI ≈ −100** — 完全な下降の連続（強い下降トレンド）。
+- **RCI が 0 付近** — ランダムまたは横ばいの市場。
+- 価格と RCI の間のダイバージェンスは、反転の可能性を警告します。
+
+この指標は、特にモメンタム系ツールと組み合わせた場合、短期トレンド評価と転換点の発見に役立ちます。
+
+![indicator_rank_correlation_index](../../../../images/indicator_rank_correlation_index.png)
+
+## 関連項目
+
+[Momentum](momentum.md)
+[ROC](roc.md)
+[RSI](rsi.md)

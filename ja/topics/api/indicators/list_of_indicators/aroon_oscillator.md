@@ -1,0 +1,44 @@
+# Aroon Oscillator
+
+**Aroon Oscillator** は、Aroon Up ラインと Aroon Down ラインの差を測定します。市場のどちら側が
+優勢であるか、そして現在のトレンドがどれほど強いかを明らかにします。
+
+このインジケーターを使用するには、[AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) クラスを使用します。
+
+## 説明
+
+このオシレーターは -100 から +100 の間で振動します。
+
+- 正の値は、Aroon Up が Aroon Down を上回っており、市場で買い手が優勢であることを示します。
+- 負の値は、Aroon Down が先行しており、弱気側が支配していることを示します。
+- ゼロ付近の値は、均衡または保ち合いを反映します。
+
+値がゼロから離れるほど、方向性のある値動きは強くなります。
+
+## パラメーター
+
+- **Length** - 基礎となる Aroon 計算に使用される期間。値を大きくすると、反応は遅くなりますが、より滑らかな読み取り値になります。
+
+## 計算
+
+1. 選択した `Length` で Aroon Up と Aroon Down の系列を計算します。
+2. 2 本のラインを差し引きます。  
+   `Aroon Oscillator = Aroon Up - Aroon Down`。
+
+## 解釈
+
+- **Aroon Oscillator > 0** - 強気優勢。
+- **Aroon Oscillator < 0** - 弱気優勢。
+- **ゼロラインのクロス** - 支配的なトレンドが転換する可能性。
+- **極端な値** - 強い方向性トレンド。多くの場合、方向フィルターとして使用されます。
+
+このオシレーターは、絶対水準とその差の両方を観察するために、基本の [Aroon](aroon.md) インジケーターとあわせて
+分析されることがよくあります。
+
+![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
+
+## 関連項目
+
+[Aroon](aroon.md)
+[ADX](adx.md)
+[DMI](dmi.md)

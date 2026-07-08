@@ -1,0 +1,97 @@
+# PPO
+
+**Percentage Price Oscillator (PPO)** は MACD に似たテクニカルインジケーターですが、2 つの指数移動平均の差を絶対値ではなくパーセンテージで表します。
+
+このインジケーターを使用するには、[PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator) クラスを使用する必要があります。
+
+## 説明
+
+Percentage Price Oscillator (PPO) は、よりよく知られている MACD (Moving Average Convergence Divergence) インジケーターの変形です。主な違いは、PPO が 2 つの指数移動平均の差を絶対単位ではなくパーセンテージで表すことです。これにより、価格水準の異なる複数の銘柄を比較する場合や、価格が大きく変化した単一の銘柄を長期間にわたって分析する場合に、PPO は特に有用です。
+
+PPO は 3 つの構成要素で構成されます。
+1. **PPO ライン** - 高速 EMA と低速 EMA の差をパーセンテージで表したもの
+2. **シグナルライン** - PPO ラインの EMA
+3. **ヒストグラム** - PPO ラインとシグナルラインの差
+
+PPO インジケーターはゼロラインを中心に振動し、正の値は強気の市場心理を、負の値は弱気の市場心理を示します。ゼロからの乖離の大きさは、現在のトレンドの強さを反映します。
+
+## パラメーター
+
+このインジケーターには、次のパラメーターがあります。
+- **ShortPeriod** - 短期 EMA を計算する期間（既定値: 12）
+- **LongPeriod** - 長期 EMA を計算する期間（既定値: 26）
+
+## 計算
+
+Percentage Price Oscillator の計算は、次の手順で行います。
+
+1. 短期および長期の指数移動平均を計算します。
+   ```
+   Short EMA = EMA(Price, ShortPeriod)
+   Long EMA = EMA(Price, LongPeriod)
+   ```
+
+2. 短期 EMA と長期 EMA のパーセンテージ差として PPO ラインを計算します。
+   ```
+   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   ```
+
+3. シグナルライン（通常は PPO ラインの 9 期間 EMA）を計算します。
+   ```
+   Signal Line = EMA(PPO Line, 9)
+   ```
+
+4. ヒストグラムを計算します。
+   ```
+   Histogram = PPO Line - Signal Line
+   ```
+
+ここで:
+- Price - 価格（通常は終値）
+- EMA - 指数移動平均
+- ShortPeriod - 短期 EMA の期間
+- LongPeriod - 長期 EMA の期間
+
+## 解釈
+
+Percentage Price Oscillator は、次のように解釈できます。
+
+1. **ゼロラインのクロスオーバー**:
+   - PPO ラインがゼロラインを下から上へ交差する場合、強気シグナルと見なせます
+   - PPO ラインがゼロラインを上から下へ交差する場合、弱気シグナルと見なせます
+
+2. **シグナルラインのクロスオーバー**:
+   - PPO ラインがシグナルラインを下から上へ交差する場合、強気シグナルと見なせます
+   - PPO ラインがシグナルラインを上から下へ交差する場合、弱気シグナルと見なせます
+
+3. **ダイバージェンス**:
+   - 強気ダイバージェンス: 価格が新しい安値を形成する一方で、PPO はより高い安値を形成します
+   - 弱気ダイバージェンス: 価格が新しい高値を形成する一方で、PPO はより低い高値を形成します
+
+4. **買われ過ぎ/売られ過ぎ**:
+   - 極端に高い正の PPO 値は、市場の買われ過ぎ状態を示す場合があります
+   - 極端に低い負の PPO 値は、市場の売られ過ぎ状態を示す場合があります
+
+5. **ヒストグラム分析**:
+   - ヒストグラムの拡大は、現在のトレンドが強まっていることを示します
+   - ヒストグラムの縮小は、現在のトレンドが弱まっていることを示します
+   - ヒストグラムの色（または符号）の変化は、短期モメンタムの変化を示します
+
+6. **銘柄比較**:
+   - MACD とは異なり、PPO は異なる銘柄を直接比較するために使用できます
+   - ある銘柄の PPO 値が別の銘柄より高い場合、相対的なモメンタムがより強いことを示す場合があります
+
+7. **シグナルフィルタリング**:
+   - シグナルラインのクロスオーバーシグナルは、PPO が主トレンドと一致している場合に、より信頼性が高くなります
+   - たとえば、PPO が正の場合は強気シグナルの信頼性が高く、PPO が負の場合は弱気シグナルの信頼性が高くなります
+
+![indicator_percentage_price_oscillator](../../../../images/indicator_percentage_price_oscillator.png)
+
+## 関連項目
+
+[MACD](macd.md)
+[EMA](ema.md)
+[Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
+[Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+[PercentageVolumeOscillator](percentage_volume_oscillator.md)
+[TRIX](trix.md)

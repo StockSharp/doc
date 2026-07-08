@@ -1,0 +1,12 @@
+# ADX
+
+**Welles Wilder's ADX (Average Directional Index)** は方向性移動インジケーターのグループです。ADX、DI+、DI- のラインが Directional Movement Index (DMI) を構成します。ADX はトレンドの強さを示し、DI+ と DI- は現在の価格方向を示します。
+
+このインジケーターを使用するには、[AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex) を使用する必要があります。
+
+![IndicatorAverageDirectionalIndex](../../../../images/indicatoraveragedirectionalindex.png)
+
+## 推奨コンテンツ
+
+[ATR](atr.md)
+

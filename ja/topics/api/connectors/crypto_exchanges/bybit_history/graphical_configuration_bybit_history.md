@@ -1,0 +1,7 @@
+# Bybit History のグラフィカル設定
+
+すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [?????????](../../../graphical_user_interface/connection_settings_window.md) で行います:
+
+![API GUI Settings Bybit History](../../../../../images/api_gui_settings_bybit_history.png)
+
+このウィンドウでは、Bybit History 固有のオプションは表示されません。

@@ -1,0 +1,60 @@
+# BMP
+
+**Balance of Market Power (BMP)** は、価格変動と出来高の分析に基づいて、売り手に対する買い手の強さを測定するインジケーターです。
+
+このインジケーターを使用するには、[BalanceOfMarketPower](xref:StockSharp.Algo.Indicators.BalanceOfMarketPower) クラスを使用する必要があります。
+
+## 説明
+
+Balance of Market Power インジケーターは、市場における買い手と売り手の現在の力関係を評価するために設計されています。終値がそのレンジ（高値-安値）からどれだけ乖離しているかを分析し、それを出来高と関連付けます。
+
+BMP はトレーダーが次のことを行うのに役立ちます。
+- 市場で優勢な側（買い手または売り手）を判断する
+- 潜在的なトレンド反転を特定する
+- 価格とインジケーターの間のダイバージェンスを検出する
+- 買われ過ぎと売られ過ぎの水準を見つける
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります。
+- **Length** - 平滑化期間（既定値: 14）
+
+## 計算
+
+BMP の計算は 2 段階で行われます。
+
+1. 個々のローソク足ごとに BMP を計算します。
+   ```
+   Raw BMP = ((Close Price - Open Price) / (High - Low)) * Volume
+   ```
+   (High - Low) がゼロの場合、未加工の BMP はゼロに設定されます。
+
+2. 単純移動平均 (SMA) を使用して BMP を平滑化します。
+   ```
+   BMP = SMA(Raw BMP, Length)
+   ```
+
+ここで:
+- Close Price - 現在のローソク足の終値
+- Open Price - 現在のローソク足の始値
+- High - 現在のローソク足の最高値
+- Low - 現在のローソク足の最安値
+- Volume - 現在のローソク足期間の出来高
+- Length - 選択された平滑化期間
+
+## 解釈
+
+- **正の BMP 値** は、市場で買い手（強気側）が優勢であることを示します
+- **負の BMP 値** は、市場で売り手（弱気側）が優勢であることを示します
+- **ゼロラインのクロス** は、トレンド変化のシグナルと見なすことができます
+- **極端な値**（一定の水準を上回る、または下回る値）は、市場が買われ過ぎまたは売られ過ぎの状態にあることを示す場合があります
+- **BMP と価格の間のダイバージェンス** は、潜在的なトレンド反転を示す場合があります
+
+![indicator_balance_of_market_power](../../../../images/indicator_balance_of_market_power.png)
+
+## 関連項目
+
+[BalanceOfPower](balance_of_power.md)
+[ForceIndex](force_index.md)
+[ADL](accumulation_distribution_line.md)
+[OBV](on_balance_volume.md)

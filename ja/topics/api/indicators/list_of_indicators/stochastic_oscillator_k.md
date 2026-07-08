@@ -1,0 +1,47 @@
+# Stochastic Oscillator %K
+
+**Stochastic Oscillator %K** は、選択した期間の価格範囲に対して、現在の終値がどの位置にあるかを示すストキャスティクスオシレーターの構成要素です。このインジケーターは、1950年代後半に George Lane によって開発されました。
+
+このインジケーターを使用するには、[StochasticK](xref:StockSharp.Algo.Indicators.StochasticK) クラスを使用します。
+
+## 説明
+
+Stochastic Oscillator %K は、上昇トレンドでは終値が通常、価格範囲の上限に近いところに集中し、下降トレンドでは下限に近いところに集中しやすいという観察に基づいています。
+
+%K はストキャスティクスオシレーターの「速い」ラインであり、%K の移動平均である %D ラインを計算するために使用される主要な構成要素です。
+
+オシレーターは 0 から 100 の範囲で推移します。
+
+- 80 を上回る値は、通常、買われ過ぎの市場を示します。
+- 20 を下回る値は、売られ過ぎの市場を示します。
+- %K ラインと %D ラインのクロスオーバーは、エントリーまたはイグジットシグナルとして使用できます。
+
+## パラメーター
+
+- **Length** - 高値と安値、つまり価格範囲を計算するために使用される期間です。一般的な既定値は 14 です。
+
+## 計算
+
+%K を計算する式:
+
+```
+%K = 100 * ((Close - Low(Length)) / (High(Length) - Low(Length)))
+```
+
+ここで:
+
+- Close - 現在の終値。
+- Low(Length) - Length 期間における最小価格。
+- High(Length) - Length 期間における最大価格。
+
+完全なストキャスティクスオシレーターでは、%D ラインは指定された期間、通常は 3 にわたる %K の単純移動平均として計算されます。
+
+```
+%D = SMA(%K, 3)
+```
+
+![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+
+## 関連項目
+
+[Stochastic Oscillator](stochastic_oscillator.md)

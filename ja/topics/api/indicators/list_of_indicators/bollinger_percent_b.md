@@ -1,0 +1,65 @@
+# BBP
+
+**Bollinger Percent B (BBP)** は、John Bollinger によって Bollinger Bands インジケーターを補完するものとして開発されたインジケーターです。BBP は、上側および下側の Bollinger Bands に対する価格の位置を示します。
+
+このインジケーターを使用するには、[BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB) クラスを使用する必要があります。
+
+## 説明
+
+Bollinger Percent B インジケーターは、上側および下側の Bollinger Bands に対する価格位置を、0 から 1（または 0% から 100%）のパーセント値として判断します。これにより、Bollinger Bands の文脈で価格位置をより正確に判断できます。
+
+- 値 1（または 100%）は、価格が上側 Bollinger Band にあることを意味します。
+- 値 0（または 0%）は、価格が下側 Bollinger Band にあることを意味します。
+- 値 0.5（または 50%）は、価格が中央の Bollinger Band（SMA）にあることを意味します。
+
+BBP は 0-1 の範囲外の値を取ることもあります。
+- 1 を超える値は、価格が上側 Bollinger Band を上回っていることを示します。
+- 0 未満の値は、価格が下側 Bollinger Band を下回っていることを示します。
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります。
+- **Length** - SMA の計算期間（既定値: 20）
+- **StdDevMultiplier** - Bollinger Bands を計算するための標準偏差乗数（既定値: 2）
+
+## 計算
+
+Bollinger Percent B の計算は次の式に基づいています。
+
+```
+BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
+```
+
+ここで:
+- Price - 現在価格（通常は終値）
+- Lower Bollinger Band = SMA - (StdDevMultiplier * Standard Deviation)
+- Upper Bollinger Band = SMA + (StdDevMultiplier * Standard Deviation)
+- SMA - Length 期間の単純移動平均
+- Standard Deviation - Length 期間の価格標準偏差
+
+## 使用方法
+
+Bollinger Percent B はさまざまな方法で使用できます。
+
+1. **買われ過ぎ/売られ過ぎ状態の特定**:
+   - 1 を超える値は、市場が買われ過ぎであることを示します
+   - 0 未満の値は、市場が売られ過ぎであることを示します
+
+2. **反転シグナル**:
+   - BBP が範囲外に出た後、0-1 の範囲へ戻る場合
+   - BBP と価格の間のダイバージェンス
+
+3. **トレンド判定**:
+   - BBP の値が一貫して 0.5 を上回る場合、上昇トレンドを示します
+   - BBP の値が一貫して 0.5 を下回る場合、下降トレンドを示します
+
+4. **隠れたサポートおよびレジスタンス水準の発見**:
+   - 0.8 と 0.2 の水準は、追加のサポートおよびレジスタンス水準としてよく使用されます
+
+![indicator_bollinger_percent_b](../../../../images/indicator_bollinger_percent_b.png)
+
+## 関連項目
+
+[BollingerBands](bollinger_bands.md)
+[StdDev](standard_deviation.md)
+[RSI](rsi.md)

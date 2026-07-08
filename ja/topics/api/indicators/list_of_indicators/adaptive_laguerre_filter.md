@@ -1,0 +1,47 @@
+# ALF
+
+**Adaptive Laguerre Filter (ALF)** は、Laguerre フィルターの数学的原理に基づき、最小限の遅延で価格データを平滑化するために開発されたインジケーターです。
+
+このインジケーターを使用するには、[AdaptiveLaguerreFilter](xref:StockSharp.Algo.Indicators.AdaptiveLaguerreFilter) クラスを使用する必要があります。
+
+## 説明
+
+Adaptive Laguerre Filter は高度な市場ノイズのフィルタリングツールです。実際のトレンド変化への素早い応答を維持しながら、価格変動をより滑らかに表現します。このフィルターは、従来の平滑化インジケーターでしばしば発生する遅延を減らすうえで特に有用です。
+
+古典的な移動平均と比較した ALF の主な利点は、市場ノイズと本物の価格変動をより効果的に分離できる点にあります。そのため、だましシグナルを減らしたいトレーダーにとって有用なツールです。
+
+## パラメーター
+
+このインジケーターには次のパラメーターがあります。
+- **Gamma** - フィルタリング係数（通常は 0.1 から 0.9 の範囲）
+
+Gamma パラメーターは平滑化の度合いを決定します。値が低いほど遅延の大きい滑らかなラインになり、値が高いほど平滑化は弱くなりますが価格変化への応答は速くなります。
+
+## 計算
+
+Adaptive Laguerre Filter は Laguerre 多項式に基づき、有限インパルス応答（FIR）フィルタリングシステムを表します。計算では次の式を使用します。
+
+1. 中間値 L0、L1、L2、L3 を計算します。
+   ```
+   L0(t) = (1 - γ) * price(t) + γ * L0(t-1)
+   L1(t) = -γ * L0(t) + L0(t-1) + γ * L1(t-1)
+   L2(t) = -γ * L1(t) + L1(t-1) + γ * L2(t-1)
+   L3(t) = -γ * L2(t) + L2(t-1) + γ * L3(t-1)
+   ```
+
+2. 最終的な ALF 値を平均として計算します。
+   ```
+   ALF = (L0 + L1 + L2 + L3) / 4
+   ```
+
+ここで:
+- γ (gamma) - フィルタリング係数
+- price(t) - 現在価格
+- L0, L1, L2, L3 - フィルターの中間値
+
+![indicator_adaptive_laguerre_filter](../../../../images/indicator_adaptive_laguerre_filter.png)
+
+## 関連項目
+
+[LaguerreRSI](laguerre_rsi.md)
+[ZLEMA](zero_lag_exponential_moving_average.md)

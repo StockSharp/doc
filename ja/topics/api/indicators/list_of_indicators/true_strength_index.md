@@ -1,0 +1,36 @@
+# True Strength Index
+
+**True Strength Index (TSI)** は、William Blau によって作成されたモメンタム・オシレーターです。連続する終値の差分に二重平滑化を適用し、多くの古典的なオシレーターと比較して遅れを抑えながら、トレンドと転換点の特定を支援します。
+
+インジケーターにアクセスするには、[TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthIndex) クラスを使用します。
+
+## 計算
+
+1. 価格変化 `m = Close − PreviousClose` を計算します。
+2. `m` と `|m|` の両方に、期間 `Length1` と `Length2` の 2 つの指数移動平均を適用します。
+3. 二重平滑化されたモメンタムと、二重平滑化された絶対モメンタムの比率を計算します:  
+   `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`。
+4. 必要に応じて、期間 **Signal** の TSI の EMA を取得してシグナルラインを導出します。
+
+## パラメーター
+
+- **Length1** — 1 番目の平滑化期間。
+- **Length2** — 2 番目の平滑化期間。
+- **Signal** — シグナルラインの期間（任意）。
+
+## 解釈
+
+- **TSI > 0** — 強気モメンタム。
+- **TSI < 0** — 弱気モメンタム。
+- **シグナルラインのクロスオーバー** はトレードのエントリーを提供します。
+- **TSI と価格の間のダイバージェンス** は、潜在的な反転を警告します。
+
+二重平滑化と正規化により、このインジケーターはノイズを除去しつつ、単純なモメンタム計算と比較して応答性を維持します。
+
+![indicator_true_strength_index](../../../../images/indicator_true_strength_index.png)
+
+## 関連項目
+
+[モメンタム](momentum.md)
+[MACD](macd.md)
+[RSI](rsi.md)
