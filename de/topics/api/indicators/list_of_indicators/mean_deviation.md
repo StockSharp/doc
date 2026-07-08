@@ -8,4 +8,4 @@ Um den Indikator zu verwenden, sollte die Klasse [MeanDeviation](xref:StockSharp
 
 ## Siehe auch
 
-[Median Price](median_price.md)
+[Medianpreis](median_price.md)

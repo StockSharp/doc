@@ -1,6 +1,6 @@
-# Median Price
+# 中央値価格
 
-**Median Price** 指標は、ローソク足の中央値価格を示します。 
+**中央値価格** 指標は、ローソク足の中央値価格を示します。
 
 この指標を使用するには、[MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice) クラスを使用する必要があります。 
 
@@ -9,4 +9,3 @@
 ## 推奨コンテンツ
 
 [Momentum](momentum.md)
-

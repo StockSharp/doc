@@ -1,6 +1,6 @@
-# Median Price
+# Preço mediano
 
-O indicador **Median Price** mostra o preço mediano da vela. 
+O indicador **Preço mediano** mostra o preço mediano da vela.
 
 Para utilizar o indicador, deve usar a classe [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). 
 
@@ -9,4 +9,3 @@ Para utilizar o indicador, deve usar a classe [MedianPrice](xref:StockSharp.Algo
 ## Conteúdo recomendado
 
 [Momentum](momentum.md)
-

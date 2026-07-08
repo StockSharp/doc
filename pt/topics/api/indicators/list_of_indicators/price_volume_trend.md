@@ -8,5 +8,4 @@ Para usar o indicador, deve usar a classe [PriceVolumeTrend](xref:StockSharp.Alg
 
 ## Conteúdo recomendado
 
-[On-Balance Volume](on_balance_volume.md)
-
+[OBV](on_balance_volume.md)

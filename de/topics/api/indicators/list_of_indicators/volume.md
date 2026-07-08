@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [VolumeIndicator](xref:Stoc
 
 ## Empfohlene Inhalte
 
-[Volume Profile](volume_profile.md)
-
+[Volumenprofil](volume_profile.md)

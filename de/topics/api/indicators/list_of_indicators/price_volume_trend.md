@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [PriceVolumeTrend]
 
 ## Empfohlene Inhalte
 
-[On-Balance Volume](on_balance_volume.md)
+[OBV](on_balance_volume.md)

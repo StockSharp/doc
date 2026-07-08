@@ -8,5 +8,4 @@ Para utilizar o indicador, deve ser usada a classe [MeanDeviation](xref:StockSha
 
 ## Ver Também
 
-[Median Price](median_price.md)
-
+[Preço mediano](median_price.md)

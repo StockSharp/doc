@@ -8,4 +8,4 @@ Para utilizar el indicador, se debe utilizar la clase [MeanDeviation](xref:Stock
 
 ## Véase también
 
-[Median Price](median_price.md)
+[Precio mediano](median_price.md)

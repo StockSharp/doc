@@ -8,5 +8,4 @@
 
 ## 関連項目
 
-[Median Price](median_price.md)
-
+[中央値価格](median_price.md)

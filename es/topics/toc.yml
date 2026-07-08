@@ -1848,7 +1848,7 @@
         href: api/indicators/list_of_indicators/mean_deviation.md
       - name: Moving Median
         href: api/indicators/list_of_indicators/median.md
-      - name: Median Price
+      - name: Precio mediano
         href: api/indicators/list_of_indicators/median_price.md
       - name: Momentum
         href: api/indicators/list_of_indicators/momentum.md
@@ -1948,7 +1948,7 @@
         href: api/indicators/list_of_indicators/t3_moving_average.md
       - name: TWAP
         href: api/indicators/list_of_indicators/time_weighted_average_price.md
-      - name: Typical Price
+      - name: Precio típico
         href: api/indicators/list_of_indicators/typical_price.md
       - name: TEMA
         href: api/indicators/list_of_indicators/tema.md
@@ -1972,17 +1972,17 @@
         href: api/indicators/list_of_indicators/variable_moving_average.md
       - name: Volume
         href: api/indicators/list_of_indicators/volume.md
-      - name: Volume Profile
+      - name: Perfil de volumen
         href: api/indicators/list_of_indicators/volume_profile.md
       - name: VWAP
         href: api/indicators/list_of_indicators/volume_weighted_average_price.md
-      - name: Volume Weighted MA
+      - name: Media móvil ponderada por volumen
         href: api/indicators/list_of_indicators/volume_weighted_ma.md
       - name: VI
         href: api/indicators/list_of_indicators/vortex_indicator.md
       - name: WTO
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
-      - name: Weighted Close Price
+      - name: Precio de cierre ponderado
         href: api/indicators/list_of_indicators/weighted_close_price.md
       - name: Weighted MA
         href: api/indicators/list_of_indicators/weighted_ma.md

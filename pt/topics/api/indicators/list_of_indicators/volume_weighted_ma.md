@@ -1,4 +1,4 @@
-# Volume Weighted MA
+# Média móvel ponderada por volume
 
 **Volume Weighted Moving Average (VWMA)** - o indicador apresenta o preço ponderado pelo volume durante um determinado período. Este indicador acompanha o preço como uma linha ondulada, com um certo desvio em relação ao gráfico de preços.
 

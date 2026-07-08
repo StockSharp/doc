@@ -8,4 +8,4 @@ Para usar o indicador, deve usar a classe [VolumeWeightedAveragePrice](xref:Stoc
 
 ## Conteúdo recomendado
 
-[Time Weighted Average Price](time_weighted_average_price.md)
+[TWAP](time_weighted_average_price.md)

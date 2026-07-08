@@ -1,6 +1,6 @@
-# Weighted Close Price
+# Precio de cierre ponderado
 
-**Weighted Close Price (WCP)** se calcula como (High + Low + 2 × Close) / 4 para cada vela.
+**Precio de cierre ponderado (WCP)** se calcula como (High + Low + 2 × Close) / 4 para cada vela.
 
 Para utilizar el indicador, debe utilizar la clase [WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice).
 
@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [WeightedClosePrice](xref:Sto
 
 ## Contenido recomendado
 
-[Typical Price](typical_price.md)
+[Precio típico](typical_price.md)

@@ -1,6 +1,6 @@
-# Volume Profile
+# Perfil de volumen
 
-**Volume Profile** es un indicador avanzado que muestra la actividad comercial durante un período de tiempo determinado y a ciertos niveles de precios. El indicador es un histograma en el gráfico que muestra los niveles de precios predominantes o importantes según el volumen. 
+**Perfil de volumen** es un indicador avanzado que muestra la actividad comercial durante un período de tiempo determinado y a ciertos niveles de precios. El indicador es un histograma en el gráfico que muestra los niveles de precios predominantes o importantes según el volumen.
 
 Para utilizar el indicador, debe utilizar la clase [VolumeProfileIndicator](xref:StockSharp.Algo.Indicators.VolumeProfileIndicator). 
 
@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [VolumeProfileIndicator](xref
 
 ## Contenido recomendado
 
-[Volume Weighted MA](volume_weighted_ma.md)
+[Media móvil ponderada por volumen](volume_weighted_ma.md)

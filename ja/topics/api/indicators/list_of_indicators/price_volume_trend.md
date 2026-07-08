@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[On-Balance Volume](on_balance_volume.md)
+[OBV](on_balance_volume.md)

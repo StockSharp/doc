@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [PriceVolumeTrend](xref:Stock
 
 ## Contenido recomendado
 
-[On-Balance Volume](on_balance_volume.md)
+[OBV](on_balance_volume.md)

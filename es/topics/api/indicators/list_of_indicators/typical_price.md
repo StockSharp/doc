@@ -1,6 +1,6 @@
-# Typical Price
+# Precio típico
 
-**Typical Price** calcula el promedio de los valores máximo, mínimo y cercano de una vela.
+**Precio típico** calcula el promedio de los valores máximo, mínimo y de cierre de una vela.
 
 Para utilizar el indicador, debe utilizar la clase [TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice).
 
@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [TypicalPrice](xref:StockShar
 
 ## Contenido recomendado
 
-[Median Price](median_price.md)
+[Precio mediano](median_price.md)

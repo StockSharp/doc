@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [VolumeIndicator](xref:StockS
 
 ## Contenido recomendado
 
-[Volume Profile](volume_profile.md)
+[Perfil de volumen](volume_profile.md)

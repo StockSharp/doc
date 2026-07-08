@@ -1,6 +1,6 @@
-# Typical Price
+# Typischer Preis
 
-**Typical Price** berechnet den Durchschnitt aus High-, Low- und Close-Werten einer Candle.
+**Typischer Preis** berechnet den Durchschnitt aus High-, Low- und Close-Werten einer Candle.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice).
 
@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [TypicalPrice](xref:StockSh
 
 ## Empfohlene Inhalte
 
-[Median Price](median_price.md)
-
+[Medianpreis](median_price.md)

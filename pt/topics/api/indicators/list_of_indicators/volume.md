@@ -8,4 +8,4 @@ Para usar o indicador, deve usar a classe [VolumeIndicator](xref:StockSharp.Algo
 
 ## Conteúdo recomendado
 
-[Volume Profile](volume_profile.md)
+[Perfil de volume](volume_profile.md)

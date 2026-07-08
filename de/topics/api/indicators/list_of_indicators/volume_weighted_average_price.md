@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [VolumeWeightedAveragePrice
 
 ## Empfohlene Inhalte
 
-[Time Weighted Average Price](time_weighted_average_price.md)
-
+[TWAP](time_weighted_average_price.md)

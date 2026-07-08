@@ -8,4 +8,4 @@ Para usar o indicador, deve usar a classe [WeightedClosePrice](xref:StockSharp.A
 
 ## Conteúdo recomendado
 
-[Typical Price](typical_price.md)
+[Preço típico](typical_price.md)

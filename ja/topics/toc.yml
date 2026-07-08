@@ -1848,7 +1848,7 @@
         href: api/indicators/list_of_indicators/mean_deviation.md
       - name: Moving Median
         href: api/indicators/list_of_indicators/median.md
-      - name: Median Price
+      - name: 中央値価格
         href: api/indicators/list_of_indicators/median_price.md
       - name: Momentum
         href: api/indicators/list_of_indicators/momentum.md
@@ -1948,7 +1948,7 @@
         href: api/indicators/list_of_indicators/t3_moving_average.md
       - name: TWAP
         href: api/indicators/list_of_indicators/time_weighted_average_price.md
-      - name: Typical Price
+      - name: 典型価格
         href: api/indicators/list_of_indicators/typical_price.md
       - name: TEMA
         href: api/indicators/list_of_indicators/tema.md
@@ -1972,17 +1972,17 @@
         href: api/indicators/list_of_indicators/variable_moving_average.md
       - name: Volume
         href: api/indicators/list_of_indicators/volume.md
-      - name: Volume Profile
+      - name: 出来高プロファイル
         href: api/indicators/list_of_indicators/volume_profile.md
       - name: VWAP
         href: api/indicators/list_of_indicators/volume_weighted_average_price.md
-      - name: Volume Weighted MA
+      - name: 出来高加重 MA
         href: api/indicators/list_of_indicators/volume_weighted_ma.md
       - name: VI
         href: api/indicators/list_of_indicators/vortex_indicator.md
       - name: WTO
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
-      - name: Weighted Close Price
+      - name: 加重終値
         href: api/indicators/list_of_indicators/weighted_close_price.md
       - name: Weighted MA
         href: api/indicators/list_of_indicators/weighted_ma.md
