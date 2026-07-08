@@ -1,4 +1,4 @@
-# Hydra Server
+# Hydra サーバー
 
 **Hydra Server** は、[Designer](designer.md) などの外部プログラムが接続できるように、ネットワーク経由でデータを配信するサービスです。
 

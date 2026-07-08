@@ -1,4 +1,4 @@
-# Export (auto)
+# エクスポート（自動）
 
 このタスクは、取引所データを Excel、xml、sql、bin、Json、txt などのさまざまな形式にエクスポートします。
 

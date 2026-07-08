@@ -473,13 +473,13 @@
     - name: ソースのサンプル
       href: hydra/videos/sources_samples.md
       items:
-      - name: Oanda
+      - name: OANDA への接続
         href: hydra/videos/sources_samples/oanda.md
-      - name: Interactive Brokers
+      - name: Interactive Brokers への接続
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: Bitmex
+      - name: BitMEX への接続
         href: hydra/videos/sources_samples/bitmex.md
-      - name: Binance
+      - name: Binance への接続
         href: hydra/videos/sources_samples/binance.md
     - name: 銘柄のダウンロード
       href: hydra/videos/instruments_downloading.md
@@ -609,9 +609,9 @@
     items:
     - name: コンバーター
       href: hydra/tasks/converter.md
-    - name: Export (auto)
+    - name: エクスポート（自動）
       href: hydra/tasks/export_auto.md
-    - name: Import (auto)
+    - name: インポート（自動）
       href: hydra/tasks/import_auto.md
     - name: バックアップ
       href: hydra/tasks/backup.md
@@ -661,9 +661,9 @@
     href: hydra/create_new_source.md
   - name: 新しいタスクの作成
     href: hydra/create_new_task.md
-- name: Hydra Server
+- name: Hydra サーバー
   href: hydra_server.md
-- name: Telegram Services
+- name: Telegram サービス
   href: telegram_services.md
   items:
   - name: 認可
