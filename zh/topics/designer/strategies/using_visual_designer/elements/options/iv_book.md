@@ -19,4 +19,4 @@
 
 ## 推荐内容
 
-[Option desk](option_desk.md)
+[期权面板](option_desk.md)

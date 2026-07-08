@@ -1,6 +1,6 @@
 # Indikator erstellen
 
-Das Erstellen eines eigenen Indikators in der [API](../../../../api.md) wird im Abschnitt [Custom Indicator](../../../../api/indicators/custom_indicator.md) beschrieben. Solche Indikatoren sind vollständig mit **Designer** kompatibel.
+Das Erstellen eines eigenen Indikators in der [API](../../../../api.md) wird im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md) beschrieben. Solche Indikatoren sind vollständig mit **Designer** kompatibel.
 
 Um einen Indikator zu erstellen, wählen Sie im Panel **Scheme** den Ordner **Indicators** aus, klicken mit der rechten Maustaste und wählen im Kontextmenü **Add**:
 
@@ -101,7 +101,7 @@ type EmptyIndicator() as this =
 
 Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des gesetzten Parameterwerts **Change** eine beliebige Abweichung.
 
-Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Custom Indicator](../../../../api/indicators/custom_indicator.md).
+Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md).
 
 Um den erstellten Indikator zum Diagramm hinzuzufügen, verwenden Sie den Würfel [Indicator](../../using_visual_designer/elements/common/indicator.md) und geben darin den gewünschten Indikator an:
 

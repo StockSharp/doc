@@ -10,7 +10,7 @@
 
 ## Empfohlene Inhalte
 
-[Working with the API](market_data_storage/api.md)
+[Arbeiten mit der API](market_data_storage/api.md)
 
-[Working with Remote Storage](market_data_storage/remote.md)
+[Arbeiten mit Remote Storage](market_data_storage/remote.md)
 

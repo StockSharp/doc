@@ -16,7 +16,7 @@ O painel **Properties** está minimizado por predefinição no lado direito do s
 
 **Definições**
 
-- [Risk management](../risk_management.md) - definições de gestão de risco.
+- [Gestão de risco](../risk_management.md) - definições de gestão de risco.
 
 **Parâmetros do diagrama**
 

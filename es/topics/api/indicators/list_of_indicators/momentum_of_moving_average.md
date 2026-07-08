@@ -82,4 +82,4 @@ Momentum of Moving Average se puede interpretar de la siguiente manera:
 [Momentum](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
-[ROC](roc.md)
+[RoC](roc.md)

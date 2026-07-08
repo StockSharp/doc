@@ -80,7 +80,7 @@
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI。遅延を低減した修正版 RSI です
 - [LRC](list_of_indicators/lrc.md) - Linear regression。過去のトレンドに基づいて将来価格を予測します
 - [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast。将来価格を予測します
-- [R-squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared。線形関係の強さを測定します
+- [R-Squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared。線形関係の強さを測定します
 - [LRS](list_of_indicators/lrs.md) - Linear regression gradient。回帰直線の傾きを示します
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period。指定期間における最低価格を判定します
 - [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator。市場変動と月相サイクルを関連付けます
@@ -124,7 +124,7 @@
 - [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts。複数の移動平均を使用してトレンドを可視化します
 - [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index。Spearman の順位相関を使用してトレンドを測定します
 - [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index。トレンドの強さを測定します
-- [ROC](list_of_indicators/roc.md) - Rate of change。価格のパーセント変化を測定します
+- [RoC](list_of_indicators/roc.md) - Rate of change。価格のパーセント変化を測定します
 - [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index。モメンタムを組み込んだ RSI の変種です
 - [RSI](list_of_indicators/rsi.md) - Relative Strength Index。価格変動の速度と変化を測定します
 - [RVI](list_of_indicators/rvi.md) - Relative Vigor Index。トレンドの信頼度を測定します
@@ -135,7 +135,7 @@
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave。価格データ内の周期的パターンを特定します
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average。直近の価格により大きな重みを与える移動平均です
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation。価格データのばらつきを測定します
-- [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression。予測精度を測定します
+- [Standard Error](list_of_indicators/standard_error.md) - Standard error in linear regression。予測精度を測定します
 - [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K。レンジ内の価格位置に基づいてモメンタムを測定します
 - [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator。買われ過ぎと売られ過ぎの状態を特定します
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values。直近 N 個の価格の合計を計算します
@@ -153,7 +153,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average。市場ボラティリティに適応します
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average。ボラティリティに合わせて調整します
 - [Volume](list_of_indicators/volume.md) - Candle volume。ローソク足ごとの取引出来高を測定します
-- [Volume profile](list_of_indicators/volume_profile.md) - Volume profile。異なる価格水準での取引活動を示します
+- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile。異なる価格水準での取引活動を示します
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average。出来高の多い価格により大きな重みを与えます
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price。取引出来高で加重された平均価格です
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex。新しいトレンドの開始を特定します

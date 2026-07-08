@@ -67,4 +67,4 @@ Cada instrumento no StockSharp tem um identificador único [SecurityId](xref:Sto
 
 [Índice](instruments/index.md)
 
-[Pesquisa de instrumentos](instruments/instrument_search.md)
+[Pesquisa de Instrumentos](instruments/instrument_search.md)

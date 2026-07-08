@@ -71,5 +71,5 @@ Zur Verarbeitung der aktuellen Position können Sie das fertige Schema verwenden
 
 ## Empfohlene Inhalte
 
-[Composite elements](composite_elements.md)
+[Zusammengesetzte Elemente](composite_elements.md)
 

@@ -4,7 +4,7 @@
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 
-異なるソースからの銘柄には、統一された識別子があります。これは、取引ロボットのコードが接続タイプ（[Connectors](../../api/connectors.md)）に依存しないようにするためです。銘柄識別子には、**\[security code\]@\[board code\]** という構文が使用されます。たとえば、NASDAQ 証券取引所の Apple 株式の場合、識別子は **AAPL@NASDAQ** になります。
+異なるソースからの銘柄には、統一された識別子があります。これは、取引ロボットのコードが接続タイプ（[コネクター](../../api/connectors.md)）に依存しないようにするためです。銘柄識別子には、**\[security code\]@\[board code\]** という構文が使用されます。たとえば、NASDAQ 証券取引所の Apple 株式の場合、識別子は **AAPL@NASDAQ** になります。
 
 ## 推奨コンテンツ
 

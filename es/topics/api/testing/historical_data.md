@@ -1,6 +1,6 @@
 # Datos históricos
 
-Las pruebas con datos históricos permiten tanto analizar el mercado para encontrar patrones como realizar la [optimización de parámetros de estrategias](optimization.md). El trabajo principal lo realiza la clase [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), que obtiene los datos almacenados en un repositorio local mediante una [API](../market_data_storage/api.md) especial. Los parámetros adicionales se describen en la sección [configuración de pruebas](extended_settings.md).
+Las pruebas con datos históricos permiten tanto analizar el mercado para encontrar patrones como realizar la [optimización de parámetros de estrategias](optimization.md). El trabajo principal lo realiza la clase [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), que obtiene los datos almacenados en un repositorio local mediante una [API](../market_data_storage/api.md) especial. Los parámetros adicionales se describen en la sección [Configuración de pruebas](extended_settings.md).
 
 Las pruebas pueden realizarse con distintos tipos de datos de mercado:
 - Operaciones tick ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
@@ -12,7 +12,7 @@ Las pruebas pueden realizarse con distintos tipos de datos de mercado:
 
 Si no hay libros de órdenes guardados para el período de prueba, pueden generarse a partir de operaciones usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) o reconstruirse desde el registro de órdenes con [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
-Los datos para pruebas históricas deben descargarse y guardarse previamente en un formato especial de [S#](../../api.md). Esto puede hacerse manualmente con [Connectors](../connectors.md) y la [Storage API](../market_data_storage/api.md), o configurando y ejecutando la aplicación especial [Hydra](../../hydra.md).
+Los datos para pruebas históricas deben descargarse y guardarse previamente en un formato especial de [S#](../../api.md). Esto puede hacerse manualmente con [Conectores](../connectors.md) y la [Storage API](../market_data_storage/api.md), o configurando y ejecutando la aplicación especial [Hydra](../../hydra.md).
 
 ## Etapas principales de las pruebas históricas
 

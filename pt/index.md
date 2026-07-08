@@ -83,4 +83,4 @@ A [API](topics/api.md) é uma biblioteca C# para desenvolvimento profissional de
 
 ## Conteúdo Recomendado
 
-[Materiais de Referência](topics/common/reference_materials.md)
+[Materiais de referência](topics/common/reference_materials.md)

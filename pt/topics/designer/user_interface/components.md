@@ -4,7 +4,7 @@ Durante testes ou negociação, surge a necessidade de controlar totalmente o pr
 
 ![Designer Components](../../../images/designer_components.png)
 
-- [Chart](components/chart.md) - representa um gráfico de velas e/ou indicadores. Contém todos os cubos [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md) presentes na estratégia.
+- [Gráfico](components/chart.md) - representa um gráfico de velas e/ou indicadores. Contém todos os cubos [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md) presentes na estratégia.
 - [P/L](components/pnl_equity.md) - representa um gráfico de Profit/Loss (não realizado), Profit/Loss (realizado) e comissões.
 - [Trades](components/trades.md) - representa uma tabela com negociações, apresentando informação completa sobre todas as negociações da estratégia.
 - [Orders](components/orders.md) - representa uma tabela com ordens, apresentando informação completa sobre todas as ordens da estratégia.
@@ -19,4 +19,4 @@ Durante testes ou negociação, surge a necessidade de controlar totalmente o pr
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - representa um gráfico de posição de opções.
 - [Options Board](../strategies/using_visual_designer/elements/options/option_desk.md) - representa uma tabela de opções.
 - [Depth](components/order_book.md) - representa uma tabela de ordens limitadas de compra e venda.
-- [Order Log](../../terminal/user_interface/components/order_log.md) - representa uma tabela com ordens, apresentando informação completa sobre todas as ordens dos instrumentos seleccionados.
+- [Log de ordens](../../terminal/user_interface/components/order_log.md) - representa uma tabela com ordens, apresentando informação completa sobre todas as ordens dos instrumentos seleccionados.

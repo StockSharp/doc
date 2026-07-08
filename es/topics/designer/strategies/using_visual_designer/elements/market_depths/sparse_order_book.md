@@ -20,4 +20,4 @@ El cubo se usa para obtener un libro de órdenes disperso para el instrumento es
 
 ## Contenido recomendado
 
-[IV book](../options/iv_book.md)
+[Libro IV](../options/iv_book.md)

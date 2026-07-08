@@ -14,7 +14,7 @@ Los patrones se dividen convencionalmente en:
 
 ### En Designer
 
-[Designer](../designer.md) tiene patrones de velas predefinidos integrados que se pueden usar en su estrategia de trading. Los patrones se llaman mediante el cubo [indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), con la selección posterior del valor correspondiente. El propio patrón se selecciona de la lista desplegable en la ventana de la derecha.
+[Designer](../designer.md) tiene patrones de velas predefinidos integrados que se pueden usar en su estrategia de trading. Los patrones se llaman mediante el cubo [Indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), con la selección posterior del valor correspondiente. El propio patrón se selecciona de la lista desplegable en la ventana de la derecha.
 
 ![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
 
@@ -83,7 +83,7 @@ Todas las referencias deben estar dentro del rango del patrón actual. Por ejemp
 
 Para verificación adicional de parámetros en correlación, se usa la expresión &&, que representa un AND lógico.
 
-Al describir un patrón, también es posible usar las siguientes funciones: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Se explica más sobre el uso de funciones en la descripción del cubo [fórmula](../designer/strategies/using_visual_designer/elements/common/formula.md).
+Al describir un patrón, también es posible usar las siguientes funciones: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Se explica más sobre el uso de funciones en la descripción del cubo [Fórmula](../designer/strategies/using_visual_designer/elements/common/formula.md).
 
 Al usar [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.ExpressionCandlePattern) en código, las fórmulas se crean con las mismas reglas descritas anteriormente y usan las mismas variables.
 

@@ -39,8 +39,8 @@
 
 ## 注意
 
-如需进行低层级的订单管理，可以使用 [Order Registration](../orders/register.md) 组件。对于更高层级的持仓管理，建议使用“Modify Position”组件。
+如需进行低层级的订单管理，可以使用 [注册订单](../orders/register.md) 组件。对于更高层级的持仓管理，建议使用“Modify Position”组件。
 
 ## 另请参阅
 
-- [Order Registration](../orders/register.md)
+- [注册订单](../orders/register.md)

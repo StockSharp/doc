@@ -12,4 +12,4 @@ Quando clica no botão ![Designer Alert Bell](../../../images/designer_alert_bel
 
 ## Conteúdo recomendado
 
-[Strategy gallery](../strategy_gallery.md)
+[Galeria de estratégias](../strategy_gallery.md)

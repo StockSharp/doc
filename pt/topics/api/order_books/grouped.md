@@ -9,7 +9,7 @@ Vantagens de um livro de ofertas agrupado:
 
 ## Implementação de um livro de ofertas agrupado:
 
-Para trabalhar com um livro de ofertas agrupado, é necessário configurar primeiro a receção através de [subscrições](subscriptions.md) e, em seguida, chamar o método de extensão [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
+Para trabalhar com um livro de ofertas agrupado, é necessário configurar primeiro a receção através de [Subscrições](subscriptions.md) e, em seguida, chamar o método de extensão [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
 
 ```cs
 // Agrupar dados do livro de ofertas com passo de agregação de preço, por exemplo, 0,5 unidade de preço

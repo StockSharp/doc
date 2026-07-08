@@ -109,7 +109,7 @@ driveCache.NewDriveCreated += drive =>
 
 ## Siehe auch
 
-- [Working with the API](api.md)
-- [Working with Remote Storage](remote.md)
-- [Storage Formats](formats.md)
+- [Arbeiten mit der API](api.md)
+- [Arbeiten mit Remote Storage](remote.md)
+- [Speicherformate](formats.md)
 

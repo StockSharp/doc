@@ -7,4 +7,4 @@
 - **Key** - キー。
 - **Secret** - シークレット。
 - **Demo** - デモモード。
-- **Reconnection settings** - 取引システムとの再接続メカニズムのパラメーター（[Reconnection settings](../../reconnection_settings.md)）。
+- **Reconnection settings** - 取引システムとの再接続メカニズムのパラメーター（[再接続設定](../../reconnection_settings.md)）。

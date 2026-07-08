@@ -33,6 +33,6 @@ Dragonfly требует дополнительного подтверждени
 
 ## См. также
 
-[Pattern Gravestone](gravestone.md)
+[Паттерн Gravestone (Надгробие)](gravestone.md)
 
-[Pattern Hammer](hammer.md)
+[Паттерн Hammer (Молот)](hammer.md)

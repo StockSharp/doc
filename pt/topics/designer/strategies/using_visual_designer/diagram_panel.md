@@ -22,7 +22,7 @@ O painel **Properties** pode ser apresentado em dois modos: *Basic settings* e *
 
 Por predefinição, ao construir um esquema, as propriedades são inicialmente apresentadas no modo *basic settings*. Para mudar para o modo *advanced settings*, tem de clicar no título correspondente.
 
-No modo *basic settings*, são apresentadas apenas as propriedades mais necessárias do bloco. Por exemplo, para o bloco [candles](elements/data_sources/candles.md), serão apresentados o timeframe, a flag para receber apenas velas formadas, a flag para a possibilidade de construir velas a partir de um timeframe menor e a flag para subscrever velas por sinal.
+No modo *basic settings*, são apresentadas apenas as propriedades mais necessárias do bloco. Por exemplo, para o bloco [Candles](elements/data_sources/candles.md), serão apresentados o timeframe, a flag para receber apenas velas formadas, a flag para a possibilidade de construir velas a partir de um timeframe menor e a flag para subscrever velas por sinal.
 
 No modo *advanced settings*, serão apresentadas todas as propriedades do bloco disponíveis para alteração e definição.
 

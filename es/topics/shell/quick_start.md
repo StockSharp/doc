@@ -32,6 +32,6 @@ Una vez añadida la estrategia, rellene sus parámetros básicos, como **Securit
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-De forma similar a la pestaña [Real-time](user_interface/real_time.md), puede ejecutar una prueba de estrategia sobre datos históricos en la pestaña [Emulation](user_interface/emulation.md).
+De forma similar a la pestaña [Real-time](user_interface/real_time.md), puede ejecutar una prueba de estrategia sobre datos históricos en la pestaña [Emulación](user_interface/emulation.md).
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

@@ -35,7 +35,7 @@ El panel **Properties** está minimizado de forma predeterminada en el lado dere
 - **Time zone** – información sobre la zona horaria donde se encuentra el exchange.
 - **Price shift** – desplazamiento de precio desde la última operación, que especifica los límites de precios máximo y mínimo para la siguiente sesión.
 - **Add extra volume** – añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
-- **[Commissions](../commissions.md)** – comisión (brokerage, exchange, etc.).
+- **[Comisiones](../commissions.md)** – comisión (brokerage, exchange, etc.).
 
 **Logging**
 
@@ -43,7 +43,7 @@ El panel **Properties** está minimizado de forma predeterminada en el lado dere
 
 **Setting**
 
-- **[Risk management](../risk_management.md)** – configuración de gestión de riesgos.
+- **[Gestión de riesgos](../risk_management.md)** – configuración de gestión de riesgos.
 
 **Diagram parameters**
 
@@ -54,4 +54,4 @@ Si no rellena los **Diagram parameters**, durante la emulación se usará el ins
 
 ## Contenido recomendado
 
-[Chart](chart.md)
+[Gráfico](chart.md)

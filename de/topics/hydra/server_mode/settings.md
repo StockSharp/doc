@@ -1,6 +1,6 @@
 # Einstellungen
 
-[Hydra](../../hydra.md) kann im Servermodus verwendet werden. In diesem Modus koennen Sie sich remote mit [Hydra](../../hydra.md) verbinden und vorhandene Daten aus dem Speicher abrufen. Sie koennen sich aus [Designer](../../designer.md) mit [Hydra](../../hydra.md) im Servermodus verbinden (siehe [Getting started](../../designer/market_data_storage/getting_started.md) in der Dokumentation von [Designer](../../designer.md)). Sie koennen auch ueber die [API](../../api.md) eine Verbindung zu [Hydra](../../hydra.md) herstellen (Details finden Sie im Abschnitt [FIX/FAST connectivity](fix_fast_connectivity.md)).
+[Hydra](../../hydra.md) kann im Servermodus verwendet werden. In diesem Modus koennen Sie sich remote mit [Hydra](../../hydra.md) verbinden und vorhandene Daten aus dem Speicher abrufen. Sie koennen sich aus [Designer](../../designer.md) mit [Hydra](../../hydra.md) im Servermodus verbinden (siehe [Erste Schritte](../../designer/market_data_storage/getting_started.md) in der Dokumentation von [Designer](../../designer.md)). Sie koennen auch ueber die [API](../../api.md) eine Verbindung zu [Hydra](../../hydra.md) herstellen (Details finden Sie im Abschnitt [FIX/FAST connectivity](fix_fast_connectivity.md)).
 
 Im Servermodus ermoeglicht das Programm [Hydra](../../hydra.md) dem Benutzer, mit einer Verbindung gleichzeitig in mehreren Programmen zu arbeiten. Durch Festlegen des Zugriffsschluessels in den Programmeinstellungen kann der Benutzer gleichzeitig mit einer Quelle unter einem Konto arbeiten.
 

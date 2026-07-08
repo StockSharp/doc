@@ -12,7 +12,7 @@ Usar un libro de órdenes disperso tiene varias ventajas:
 
 ## Creación de un libro de órdenes disperso
 
-Para trabajar con un libro de órdenes agrupado, primero necesita configurar la recepción mediante [suscripciones](subscriptions.md) y después llamar al método de extensión [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). El método toma los siguientes parámetros:
+Para trabajar con un libro de órdenes agrupado, primero necesita configurar la recepción mediante [Suscripciones](subscriptions.md) y después llamar al método de extensión [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). El método toma los siguientes parámetros:
 
 - `priceRange` - la diferencia de precio hasta la cual deben expandirse los niveles.
 - `priceStep` - el paso de precio del instrumento de trading. Se usa en caso de que `priceRange` tenga menor precisión en niveles de precio que `priceStep` y necesite redondear los precios obtenidos al paso de precio del instrumento.

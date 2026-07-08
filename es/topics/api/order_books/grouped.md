@@ -1,6 +1,6 @@
 # Libro de órdenes agrupado
 
-Además del [libro de órdenes disperso](sparse.md), puede ser útil usar un libro de órdenes agrupado, donde las órdenes se agregan en rangos de precio más amplios para simplificar el análisis e identificar tendencias generales de demanda y oferta.
+Además del [Libro de órdenes disperso](sparse.md), puede ser útil usar un libro de órdenes agrupado, donde las órdenes se agregan en rangos de precio más amplios para simplificar el análisis e identificar tendencias generales de demanda y oferta.
 
 Ventajas de un libro de órdenes agrupado:
 
@@ -9,7 +9,7 @@ Ventajas de un libro de órdenes agrupado:
 
 ## Implementación de un libro de órdenes agrupado:
 
-Para trabajar con un libro de órdenes agrupado, primero es necesario configurar la recepción mediante [suscripciones](subscriptions.md) y después llamar al método de extensión [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
+Para trabajar con un libro de órdenes agrupado, primero es necesario configurar la recepción mediante [Suscripciones](subscriptions.md) y después llamar al método de extensión [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
 
 ```cs
 // Agrupar datos del libro de órdenes con un paso de agregación de precio, por ejemplo, 0.5 unidades de precio

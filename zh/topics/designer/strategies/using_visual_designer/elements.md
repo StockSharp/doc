@@ -6,7 +6,7 @@
 
 模块左右两侧的彩色方框分别表示输入参数（左侧）和输出参数（右侧）。
 
-策略运行时，输入参数用于向模块传递所需的数据。例如，[Candles](elements/data_sources/candles.md) 模块通过输入端接收要为其生成K线的交易品种，并通过输出端返回生成的K线。这些K线又可以作为 [Chart](elements/common/chart.md) 元素的输入参数，也可以传递给用于确定K线大小的方法。
+策略运行时，输入参数用于向模块传递所需的数据。例如，[K线](elements/data_sources/candles.md) 模块通过输入端接收要为其生成K线的交易品种，并通过输出端返回生成的K线。这些K线又可以作为 [图表](elements/common/chart.md) 元素的输入参数，也可以传递给用于确定K线大小的方法。
 
 ![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
 
@@ -39,15 +39,15 @@
 
 因此，可以连接颜色相同（即数据类型相同）的参数，但以下参数类型除外：
 
-1. **黑色**参数可以接收任意数据。这类参数通常用于向模块内部传递操作触发信号。例如，[Variable](elements/data_sources/variable.md) 模块会保存某个值，并在收到信号时将其发送到输出端。
+1. **黑色**参数可以接收任意数据。这类参数通常用于向模块内部传递操作触发信号。例如，[变量](elements/data_sources/variable.md) 模块会保存某个值，并在收到信号时将其发送到输出端。
 2. **深板岩蓝色**参数可以在输入端接收各种可比较的数据类型，例如数值、指标值和字符串等。
 
-需要注意的是，参数类型可能取决于模块的属性。例如，[Converter](elements/converters/converter.md) 模块输入参数的类型，会根据连接到 [Converter](elements/converters/converter.md) 的数据源模块的数据类型自动确定。创建连接后，元素上方框的颜色会自动变化。
+需要注意的是，参数类型可能取决于模块的属性。例如，[转换器](elements/converters/converter.md) 模块输入参数的类型，会根据连接到 [转换器](elements/converters/converter.md) 的数据源模块的数据类型自动确定。创建连接后，元素上方框的颜色会自动变化。
 
-输出参数通常允许与多个不同模块建立连接，而输入参数一般只允许一个连接。[Combination](elements/common/combination.md) 模块是例外，它可以将来自不同模块的数据流合并为一个数据流。参数允许的并发连接数在模块的源代码中指定。
+输出参数通常允许与多个不同模块建立连接，而输入参数一般只允许一个连接。[组合](elements/common/combination.md) 模块是例外，它可以将来自不同模块的数据流合并为一个数据流。参数允许的并发连接数在模块的源代码中指定。
 
 用于构建策略图的模块分为多个类别，每个类别适用于策略图中的特定部分。
 
 ## 推荐内容
 
-[Chart](elements/common/chart.md)
+[图表](elements/common/chart.md)

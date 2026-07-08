@@ -11,7 +11,7 @@
 - **Secret** - Secret。
 - **Balance** - 残高確認間隔。入金および出金操作を行う場合に必要です。
 - **Heart beat** - 接続が稼働していることを追跡するためのサーバー確認間隔。デフォルトでは 1 分に等しくなります。
-- **Reconnection settings** - 取引システム設定との接続を追跡するためのメカニズム。([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

@@ -20,4 +20,4 @@
 
 ## 另请参阅
 
-[Current Time](current_time.md)
+[当前时间](current_time.md)

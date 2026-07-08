@@ -21,4 +21,4 @@
 
 ## 另请参阅
 
-[Value Delay](delay_value.md)
+[值延迟](delay_value.md)

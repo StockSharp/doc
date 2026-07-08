@@ -82,7 +82,7 @@
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI, uma versão modificada do RSI com menor atraso
 - [LRC](list_of_indicators/lrc.md) - regressão linear, prevê preços futuros com base em tendências passadas
 - [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast, prevê preços futuros
-- [R-squared](list_of_indicators/linear_reg_rsquared.md) - R-squared da regressão linear, mede a força de uma relação linear
+- [R-Squared](list_of_indicators/linear_reg_rsquared.md) - R-squared da regressão linear, mede a força de uma relação linear
 - [LRS](list_of_indicators/lrs.md) - gradiente de regressão linear, indica a inclinação da linha de regressão
 - [Lowest](list_of_indicators/lowest.md) - valor mínimo de um período, determina o preço mais baixo num período especificado
 - [LP](list_of_indicators/lunar_phase.md) - indicador Lunar Phase, correlaciona movimentos de mercado com ciclos lunares
@@ -126,7 +126,7 @@
 - [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts, usa várias médias móveis para visualizar tendências
 - [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index, mede a tendência usando a correlação de postos de Spearman
 - [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index, mede a força da tendência
-- [ROC](list_of_indicators/roc.md) - taxa de variação, mede a alteração percentual do preço
+- [RoC](list_of_indicators/roc.md) - taxa de variação, mede a alteração percentual do preço
 - [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index, uma variação do RSI que incorpora momentum
 - [RSI](list_of_indicators/rsi.md) - Relative Strength Index, mede a velocidade e a alteração dos movimentos de preço
 - [RVI](list_of_indicators/rvi.md) - Relative Vigor Index, mede a confiança da tendência
@@ -137,7 +137,7 @@
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, identifica padrões cíclicos em dados de preço
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, uma média móvel que dá mais peso aos preços recentes
 - [Std Dev](list_of_indicators/standard_deviation.md) - desvio padrão, mede a dispersão dos dados de preço
-- [Standard error](list_of_indicators/standard_error.md) - erro padrão na regressão linear, mede a precisão da previsão
+- [Standard Error](list_of_indicators/standard_error.md) - erro padrão na regressão linear, mede a precisão da previsão
 - [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K, mede o momentum com base na posição do preço dentro de um intervalo
 - [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator, identifica condições de sobrecompra e sobrevenda
 - [Sum](list_of_indicators/sum_n.md) - soma dos últimos N valores, calcula a soma dos últimos N preços
@@ -155,7 +155,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, adapta-se à volatilidade do mercado
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, ajusta-se à volatilidade
 - [Volume](list_of_indicators/volume.md) - volume da vela, mede o volume negociado por vela
-- [Volume profile](list_of_indicators/volume_profile.md) - Volume profile, mostra a atividade de negociação em diferentes níveis de preço
+- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile, mostra a atividade de negociação em diferentes níveis de preço
 - [VMA](list_of_indicators/volume_weighted_ma.md) - média móvel ponderada por volume, dá mais peso a preços com maior volume
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, preço médio ponderado pelo volume negociado
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifica o início de novas tendências

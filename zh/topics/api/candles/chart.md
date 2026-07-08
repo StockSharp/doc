@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-有关在图表上显示K线的示例，请参阅 [Candles](../candles.md) 章节。
+有关在图表上显示K线的示例，请参阅 [K线](../candles.md) 章节。
 
 ## 另请参阅
 

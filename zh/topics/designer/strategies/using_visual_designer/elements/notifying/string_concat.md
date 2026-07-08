@@ -33,5 +33,5 @@
 
 ## 推荐内容
 
-[String format](string_format.md)
-[Notification](notification.md)
+[字符串格式化](string_format.md)
+[通知](notification.md)

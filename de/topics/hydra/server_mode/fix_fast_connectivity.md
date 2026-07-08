@@ -1,8 +1,8 @@
 # Verbindung ueber das FIX-Protokoll
 
-[Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) moeglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Settings](settings.md) beschrieben.
+[Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) moeglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Einstellungen](settings.md) beschrieben.
 
-Fuer die Verbindung ueber das [FIX protocol](../../api/connectors/common/fix_protocol.md) muessen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX Adapter Initialization](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
+Fuer die Verbindung ueber das [FIX-Protokoll](../../api/connectors/common/fix_protocol.md) muessen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX-Adapterinitialisierung](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
 
 ```cs
 // Connector-Instanz erstellen

@@ -6,5 +6,5 @@ Die P\/L-Komponente ist ein Chart für Profit\/Loss (nicht realisiert), Profit\/
 
 ## Empfohlene Inhalte
 
-[Live execution sample](../../live_execution/live_execution_sample.md)
+[Beispiel für Live-Ausführung](../../live_execution/live_execution_sample.md)
 

@@ -2,7 +2,7 @@
 
 Los datos recibidos por [Hydra](../../hydra.md) se pueden ver en paneles especiales.
 
-Para ello, en la pestaña Common, haga clic en uno de los siguientes botones: [Ticks](view_and_export/ticks.md), [Order books](view_and_export/order_books.md), [Generación de velas](candles_generation.md), [Order log](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [News](view_and_export/news.md), [Transactions](view_and_export/transactions.md), [Option desk](view_and_export/option_desk.md), [Indicators](view_and_export/indicators.md), [Positions](view_and_export/positions.md).
+Para ello, en la pestaña Common, haga clic en uno de los siguientes botones: [Ticks](view_and_export/ticks.md), [Libros de órdenes](view_and_export/order_books.md), [Generación de velas](candles_generation.md), [Registro de órdenes](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Noticias](view_and_export/news.md), [Transacciones](view_and_export/transactions.md), [Option desk](view_and_export/option_desk.md), [Indicadores](view_and_export/indicators.md), [Posiciones](view_and_export/positions.md).
 
 O haga clic derecho en el tipo de datos requerido, como se muestra en la figura, así como doble clic en el tipo de datos requerido.
 

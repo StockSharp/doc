@@ -2,7 +2,7 @@
 
 O [Hydra](../../hydra.md) pode ser utilizado em modo de servidor, o que permite a ligação remota ao [Hydra](../../hydra.md) para aceder aos dados no armazenamento. A ativação do modo de servidor do [Hydra](../../hydra.md) é descrita na secção [Definições](settings.md).
 
-Para ligar através do [protocolo FIX](../../api/connectors/common/fix_protocol.md), é necessário criar e configurar uma ligação Fix ([Inicialização do Adaptador FIX](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
+Para ligar através do [Protocolo FIX](../../api/connectors/common/fix_protocol.md), é necessário criar e configurar uma ligação Fix ([Inicialização do adaptador FIX](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
 
 ```cs
 // Criar uma instância do conector

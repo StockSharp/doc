@@ -11,7 +11,7 @@
 - **Reconnection** - 「ネイティブ」の再接続メカニズムを使用します。
 - **Logging level** - OpenECry API のログを使用します。
 - **Heart beat** - 接続が生存していることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システム設定を使用して接続を追跡するメカニズム。([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - 取引システム設定を使用して接続を追跡するメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

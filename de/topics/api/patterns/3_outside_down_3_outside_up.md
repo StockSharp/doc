@@ -34,5 +34,5 @@ Die erste Candle signalisiert den Beginn des Endes des vorherrschenden Trends, d
 
 ## Siehe auch
 
-[Pattern 3 Inside Down and 3 Inside Up](3_inside_down_3_side_up.md)
+[Pattern 3 Inside Down und 3 Inside Up](3_inside_down_3_side_up.md)
 

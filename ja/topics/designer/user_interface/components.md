@@ -19,4 +19,4 @@
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - オプションポジションチャートを表します。
 - [Options Board](../strategies/using_visual_designer/elements/options/option_desk.md) - オプションテーブルを表します。
 - [Depth](components/order_book.md) - 売買の指値注文のテーブルを表します。
-- [Order Log](../../terminal/user_interface/components/order_log.md) - 注文のテーブルを表し、選択した銘柄のすべての注文に関する完全な情報を表示します。
+- [注文ログ](../../terminal/user_interface/components/order_log.md) - 注文のテーブルを表し、選択した銘柄のすべての注文に関する完全な情報を表示します。

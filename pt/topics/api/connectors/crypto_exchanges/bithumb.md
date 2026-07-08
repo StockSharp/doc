@@ -12,7 +12,7 @@ Antes de começar a escrever robôs de negociação para esta plataforma de nego
 
 [Salvar e carregar configurações](../save_and_load_settings.md)
 
-[Criando seu próprio conector](../creating_own_connector.md)
+[Criando Seu Próprio Conector](../creating_own_connector.md)
 
 [Gerenciamento de ordens](../../orders_management.md)
 

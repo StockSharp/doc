@@ -60,6 +60,6 @@ O valor final de CM é um oscilador que pode flutuar em zonas positivas e negati
 ## Ver também
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

@@ -36,6 +36,6 @@ Three Black Crows предоставляет надежные возможнос
 
 ## См. также
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Паттерн Three White Soldiers (Три белых солдата)](three_white_soldiers.md)
 
-[Pattern Falling Three Methods](falling_three_methods.md)
+[Паттерн Falling Three Methods (Падающие три метода)](falling_three_methods.md)

@@ -59,7 +59,7 @@ Jedes Instrument in StockSharp besitzt einen eindeutigen Bezeichner [SecurityId]
 
 ## Siehe auch
 
-[Instrument Identifier](instruments/instrument_identifier.md)
+[Instrumentenbezeichner](instruments/instrument_identifier.md)
 
 [Identifier \*@ALL](instruments/identifier_@all.md)
 
@@ -67,5 +67,5 @@ Jedes Instrument in StockSharp besitzt einen eindeutigen Bezeichner [SecurityId]
 
 [Index](instruments/index.md)
 
-[Instrument Search](instruments/instrument_search.md)
+[Instrumentensuche](instruments/instrument_search.md)
 

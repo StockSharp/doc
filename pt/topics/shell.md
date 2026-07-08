@@ -9,7 +9,7 @@ Não precisa de construir uma GUI (Graphical User Interface) do zero. O Shell in
 As principais funcionalidades da shell do robô de negociação:
 
 1. Código-fonte completo, adequado para robôs de negociação personalizados e soluções personalizadas.
-2. **Suporte para mais de 70 ligações** a bolsas e brokers através de [Connectors](api/connectors.md).
+2. **Suporte para mais de 70 ligações** a bolsas e brokers através de [Conectores](api/connectors.md).
 3. Interface de utilizador flexível.
 4. Ferramentas de teste de estratégias: estatísticas, equity e relatórios.
 5. Guardar e restaurar definições da estratégia.
@@ -19,4 +19,4 @@ As principais funcionalidades da shell do robô de negociação:
 
 ## Conteúdo recomendado
 
-[Installing Shell](shell/installing_shell.md)
+[Instalar o Shell](shell/installing_shell.md)

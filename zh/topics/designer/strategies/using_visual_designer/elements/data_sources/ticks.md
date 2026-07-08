@@ -24,4 +24,4 @@
 
 ## 另请参阅
 
-[Index](index.md)
+[指数](index.md)

@@ -12,5 +12,5 @@ Das Element stellt P/L-Informationen der Strategie bereit.
 
 ## Empfohlene Inhalte
 
-[Prev Value](prev_value.md)
+[Prev value](prev_value.md)
 

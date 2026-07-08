@@ -9,6 +9,6 @@ Para ver a lista de ferramentas, selecione o item **Tools** no painel esquerdo. 
 Atualmente, existem quatro classes de tarefas no [Hydra](../hydra.md)
 
 - [Import (auto)](tasks/import_auto.md) - a tarefa consiste em importar dados a partir do formato CSV. 
-- [Converter](tasks/converter.md) - a tarefa consiste em converter dados da bolsa em ticks, candles ou livros de ordens. 
+- [Conversor](tasks/converter.md) - a tarefa consiste em converter dados da bolsa em ticks, candles ou livros de ordens. 
 - [Export (auto)](tasks/export_auto.md) - a tarefa consiste em exportar candles para diferentes formatos. 
-- [Backup](misc/backup.md) - a tarefa consiste em fazer uma cópia de segurança dos dados para o serviço na nuvem. 
+- [Cópia de segurança](misc/backup.md) - a tarefa consiste em fazer uma cópia de segurança dos dados para o serviço na nuvem. 

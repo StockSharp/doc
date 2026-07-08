@@ -10,5 +10,5 @@ Além disso, pode especificar um filtro para a data de expiração exata das op�
 
 ## Conteúdo recomendado
 
-[Option desk](option_desk.md)
+[Painel de opções](option_desk.md)
 

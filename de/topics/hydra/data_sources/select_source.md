@@ -24,7 +24,7 @@ Die Einstellungen einer Quelle konnen im Panel **Properties** auf der rechten Se
 
 ![hydra setting source button](../../../images/hydra_setting_source_button.png)
 
-Allgemeine Einstellungen fur alle Quellen finden Sie im Eintrag [Common connection settings](common_connection_settings.md).
+Allgemeine Einstellungen fur alle Quellen finden Sie im Eintrag [Allgemeine Verbindungseinstellungen](common_connection_settings.md).
 
 Jede Verbindung hat ihre eigenen Besonderheiten. Der Link [List of connectors](../data_sources.md) enthalt eine Liste der Konnektoren und ihrer Einstellungen.
 

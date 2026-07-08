@@ -18,4 +18,4 @@ El cubo se usa para obtener un libro de órdenes truncado a una profundidad espe
 
 ## Contenido recomendado
 
-[IV book](../options/iv_book.md)
+[Libro IV](../options/iv_book.md)

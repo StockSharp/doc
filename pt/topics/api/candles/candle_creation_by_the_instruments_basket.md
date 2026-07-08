@@ -193,6 +193,6 @@ _connector.Subscribe(volatilitySubscription);
 
 ## Veja também
 
-[Futuros Contínuos](../instruments/continuous_futures.md)
+[Futuros contínuos](../instruments/continuous_futures.md)
 
 [Índice](../instruments/index.md)

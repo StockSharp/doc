@@ -8,7 +8,7 @@ Cada ligação pode ser realçada apontando para ela e clicando com o botão esq
 
 Pode ligar entre si parâmetros das mesmas cores (os mesmos tipos de dados), excepto os seguintes tipos de parâmetros:
 
-- O parâmetro **preto** pode aceitar quaisquer dados. Na maioria das vezes, estes parâmetros são utilizados para passar sinais para quaisquer acções dentro do elemento. Por exemplo, o elemento [Variable](elements/data_sources/variable.md) armazena um valor e, quando recebe um sinal, passa o valor para a saída.
+- O parâmetro **preto** pode aceitar quaisquer dados. Na maioria das vezes, estes parâmetros são utilizados para passar sinais para quaisquer acções dentro do elemento. Por exemplo, o elemento [Variável](elements/data_sources/variable.md) armazena um valor e, quando recebe um sinal, passa o valor para a saída.
 - O parâmetro **verde** pode aceitar diferentes tipos de dados comparados. Por exemplo, valores numéricos, valores de indicadores, cadeias de caracteres, etc.
 
 ## Conteúdo recomendado

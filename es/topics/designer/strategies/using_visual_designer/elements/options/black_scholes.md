@@ -24,4 +24,4 @@ Parámetros
 
 ## Véase también
 
-[Hedging](hedging.md)
+[Cobertura](hedging.md)

@@ -33,4 +33,4 @@
 ![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> 传入成交不能是整个策略的成交（即 [Strategy Trades](../common/trades_by_strategy.md) 模块的输出），否则会导致当前持仓计算错误：保护订单产生的成交也会成为策略成交。**Position Protection** 模块应接收 [Order Registration](../orders/register.md) 和 [Modify Position](modify.md) 模块的 **Transaction** 输出端口所产生的成交，或接收来自其他直接改变持仓的类似组件的成交。
+> 传入成交不能是整个策略的成交（即 [Strategy Trades](../common/trades_by_strategy.md) 模块的输出），否则会导致当前持仓计算错误：保护订单产生的成交也会成为策略成交。**Position Protection** 模块应接收 [注册订单](../orders/register.md) 和 [修改持仓](modify.md) 模块的 **Transaction** 输出端口所产生的成交，或接收来自其他直接改变持仓的类似组件的成交。

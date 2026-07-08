@@ -146,6 +146,6 @@ connector.Connect();
 
 ## Siehe auch
 
-- [Subscriptions](subscriptions.md)
+- [Abonnements](subscriptions.md)
 - [Graphical Components](../graphical_user_interface.md)
 

@@ -31,6 +31,6 @@ Bullish Candle может использоваться в различных т�
 
 ## См. также
 
-[Pattern Bearish Candle](bearish.md)
+[Паттерн Bearish Candle (Медвежья свеча)](bearish.md)
 
-[Pattern White Candle](white_candle.md)
+[Паттерн White Candle (Белая свеча)](white_candle.md)

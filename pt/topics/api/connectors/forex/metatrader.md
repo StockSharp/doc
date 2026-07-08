@@ -47,7 +47,7 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
 
     ![MT 5](../../../../images/mt_5.png)
 
-12. A ligação ao MT é feita através do protocolo FIX, utilizando o conector [protocolo FIX](../common/fix_protocol.md). O programa [Terminal](../../../terminal.md) foi utilizado para demonstração. Abaixo encontram-se as definições para a ligação transacional e para a ligação de dados de mercado (para MT5, a porta predefinida é 23001 em vez de 23000):
+12. A ligação ao MT é feita através do protocolo FIX, utilizando o conector [Protocolo FIX](../common/fix_protocol.md). O programa [Terminal](../../../terminal.md) foi utilizado para demonstração. Abaixo encontram-se as definições para a ligação transacional e para a ligação de dados de mercado (para MT5, a porta predefinida é 23001 em vez de 23000):
 
     ![MT 6](../../../../images/mt_6.png)![MT 7](../../../../images/mt_7.png)
 

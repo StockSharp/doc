@@ -12,7 +12,7 @@
 
 テスト期間の保存済み板情報がない場合は、[MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) を使用して約定に基づいて生成するか、[OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) を使用して注文ログから再構築できます。
 
-履歴テスト用のデータは、事前に特別な [S#](../../api.md) 形式でダウンロードして保存しておく必要があります。これは、[Connectors](../connectors.md) と [Storage API](../market_data_storage/api.md) を使用して手動で行うことも、専用の [Hydra](../../hydra.md) アプリケーションを設定して実行することでも行えます。
+履歴テスト用のデータは、事前に特別な [S#](../../api.md) 形式でダウンロードして保存しておく必要があります。これは、[コネクター](../connectors.md) と [Storage API](../market_data_storage/api.md) を使用して手動で行うことも、専用の [Hydra](../../hydra.md) アプリケーションを設定して実行することでも行えます。
 
 ## 履歴テストの主な段階
 

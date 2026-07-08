@@ -21,7 +21,7 @@ Parámetros disponibles:
 - --hf - fecha de inicio para pruebas en formato YYYYMMDD.
 - --ht - fecha de finalización para pruebas en formato YYYYMMDD.
 - -f - (opcional) formato de almacenamiento (Binary o Csv).
-- --sec - (opcional) [identificador de instrumento](../api/instruments/instrument_identifier.md).
+- --sec - (opcional) [Identificador de instrumento](../api/instruments/instrument_identifier.md).
 - -r - (opcional) formato del informe de resultado de prueba (json, xml, csv).
 - --tm - (opcional) timeout de la estrategia.
 - --memory - (opcional) tamaño máximo de memoria (en megabytes).

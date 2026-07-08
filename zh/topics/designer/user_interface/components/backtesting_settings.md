@@ -35,7 +35,7 @@
 - **Time zone** – 交易所所在时区的信息。
 - **Price shift** – 相对于最近一笔成交的价格偏移，用于指定下一交易时段的最高价和最低价限制。
 - **Add extra volume** – 注册大数量订单时，向市场深度添加额外数量。
-- **[Commissions](../commissions.md)** – 佣金（经纪商佣金、交易所费用等）。
+- **[佣金](../commissions.md)** – 佣金（经纪商佣金、交易所费用等）。
 
 **Logging**
 
@@ -43,7 +43,7 @@
 
 **Setting**
 
-- **[Risk management](../risk_management.md)** – 风险管理设置。
+- **[风险管理](../risk_management.md)** – 风险管理设置。
 
 **Diagram parameters**
 
@@ -54,4 +54,4 @@
 
 ## 推荐内容
 
-[Chart](chart.md)
+[图表](chart.md)

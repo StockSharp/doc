@@ -4,7 +4,7 @@ Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrolliere
 
 ![Designer Components](../../../images/designer_components.png)
 
-- [Instruments](components/instruments.md) - ist eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
+- [Instrumente](components/instruments.md) - ist eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
 - [Level 1](components/level_1.md) - ist eine Tabelle mit der Änderungshistorie von Level 1 für die ausgewählten Instrumente.
 - [Buy/Sell](components/buy_sell.md) - ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen für die ausgewählten Instrumente zu kaufen oder zu verkaufen.
 - [Order book](components/order_book.md) - ist eine Tabelle mit Limit-Orders für Kauf und Verkauf.

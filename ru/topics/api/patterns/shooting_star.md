@@ -35,6 +35,6 @@ Shooting Star предоставляет возможности для вход�
 
 ## См. также
 
-[Pattern Inverted Hammer](inverted_hammer.md)
+[Паттерн Inverted Hammer (Перевернутый Молот)](inverted_hammer.md)
 
-[Pattern Hanging Man](hanging_man.md)
+[Паттерн Hanging Man (Повешенный)](hanging_man.md)

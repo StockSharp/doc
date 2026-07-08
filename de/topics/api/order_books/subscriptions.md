@@ -52,5 +52,5 @@ Beispiele für die Verwendung des Orderbuchs sind im Projekt *Samples\/01\_Basic
 
 ## Siehe auch
 
-[Subscriptions](../market_data/subscriptions.md)
+[Abonnements](../market_data/subscriptions.md)
 

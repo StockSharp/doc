@@ -36,6 +36,6 @@ Falling Three Methods предоставляет хорошие возможно
 
 ## См. также
 
-[Pattern Rising Three Methods](rising_three_methods.md)
+[Паттерн Rising Three Methods (Восходящие три метода)](rising_three_methods.md)
 
-[Pattern Three Black Crows](three_black_crows.md)
+[Паттерн Three Black Crows (Три черных вороны)](three_black_crows.md)

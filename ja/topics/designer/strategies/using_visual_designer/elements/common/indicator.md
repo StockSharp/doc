@@ -22,6 +22,6 @@
 
 ## 関連項目
 
-[List of Indicators](../../../../../api/indicators/list_of_indicators.md)
+[インジケーター一覧](../../../../../api/indicators/list_of_indicators.md)
 [Logical Condition](logical_condition.md)
 

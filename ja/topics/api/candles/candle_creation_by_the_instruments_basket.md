@@ -193,6 +193,6 @@ _connector.Subscribe(volatilitySubscription);
 
 ## 関連項目
 
-[Continuous Futures](../instruments/continuous_futures.md)
+[連続先物](../instruments/continuous_futures.md)
 
-[Index](../instruments/index.md)
+[指数](../instruments/index.md)

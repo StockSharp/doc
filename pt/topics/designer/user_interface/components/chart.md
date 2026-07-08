@@ -4,7 +4,7 @@ O componente **Chart** contém todos os cubos **Chart panel** que estão na estr
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 
-O canto superior esquerdo de cada gráfico mostra todos os elementos gráficos adicionados ao gráfico. Se desmarcar a caixa de verificação no elemento gráfico ![Designer Schedule 00](../../../../images/designer_schedule_00.png), o elemento será removido do gráfico. Clicar no botão ![Designer Schedule 01](../../../../images/designer_schedule_01.png) abrirá as definições do elemento gráfico. Também pode configurar o elemento gráfico nas propriedades do cubo [Chart](../../strategies/using_visual_designer/elements/common/chart.md).
+O canto superior esquerdo de cada gráfico mostra todos os elementos gráficos adicionados ao gráfico. Se desmarcar a caixa de verificação no elemento gráfico ![Designer Schedule 00](../../../../images/designer_schedule_00.png), o elemento será removido do gráfico. Clicar no botão ![Designer Schedule 01](../../../../images/designer_schedule_01.png) abrirá as definições do elemento gráfico. Também pode configurar o elemento gráfico nas propriedades do cubo [Gráfico](../../strategies/using_visual_designer/elements/common/chart.md).
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 

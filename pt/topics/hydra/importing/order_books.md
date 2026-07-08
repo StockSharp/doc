@@ -8,10 +8,10 @@ Para importar livros de ordens, selecione o item **Import \=\> Order books** no 
 
 1. **Import settings.**.
 
-   Consulte a importação de [Candles](candles.md).
+   Consulte a importação de [Velas](candles.md).
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
 
-   Consulte a importação de [Candles](candles.md).
+   Consulte a importação de [Velas](candles.md).
 
    **Vamos considerar um exemplo de importação de um livro de ordens a partir de um ficheiro CSV:**
    - O ficheiro a partir do qual pretende importar dados tem o seguinte modelo:

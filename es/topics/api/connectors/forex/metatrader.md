@@ -47,7 +47,7 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
 
     ![MT 5](../../../../images/mt_5.png)
 
-12. La conexión a MT se realiza mediante el protocolo FIX, usando el conector [protocolo FIX](../common/fix_protocol.md). Para la demostración se utilizó el programa [Terminal](../../../terminal.md). A continuación se muestran los ajustes para la conexión transaccional y la conexión de datos de mercado (para MT5, el puerto predeterminado es 23001 en lugar de 23000):
+12. La conexión a MT se realiza mediante el protocolo FIX, usando el conector [Protocolo FIX](../common/fix_protocol.md). Para la demostración se utilizó el programa [Terminal](../../../terminal.md). A continuación se muestran los ajustes para la conexión transaccional y la conexión de datos de mercado (para MT5, el puerto predeterminado es 23001 en lugar de 23000):
 
     ![MT 6](../../../../images/mt_6.png)![MT 7](../../../../images/mt_7.png)
 

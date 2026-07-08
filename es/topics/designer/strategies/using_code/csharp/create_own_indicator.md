@@ -94,7 +94,7 @@ Este indicador recibe un valor entrante y realiza una desviación arbitraria bas
 
 La descripción de los métodos del indicador está disponible en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
-Para añadir el indicador creado al diagrama, debe usar el cubo [Indicator](../../using_visual_designer/elements/common/indicator.md) y especificar en él el indicador necesario:
+Para añadir el indicador creado al diagrama, debe usar el cubo [Indicador](../../using_visual_designer/elements/common/indicator.md) y especificar en él el indicador necesario:
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 

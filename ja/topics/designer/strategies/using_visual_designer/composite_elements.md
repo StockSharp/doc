@@ -14,7 +14,7 @@
 
 ![Designer Crossing 01](../../../../images/designer_crossing_01.png)
 
-複合要素のダイアグラムは単純な要素で構成され、現在値（Prev In 1 と Prev In 2）を記憶し、現在（CurrComparison）と過去（PrevComparison）の値のペアを互いに比較することに基づいています。各入力値はダイアグラム内の 2 つの要素で使用されるため、[Combination](elements/common/combination.md) 要素（In 1、In 2）が複合要素の入力に配置されています。これにより、1 つの入力を 2 つの要素に分割し、入力値を [Comparison](elements/common/comparison.md) 要素と [Prev value](elements/common/prev_value.md) 要素に渡せます。新しい値が入力に到着すると、現在値が比較され、新しい値が [Prev value](elements/common/prev_value.md) 要素に渡されます。そこから現在の入力に対する前回値が渡され、その後で前回値が比較されます。両方の条件が満たされると（これは And [Logical condition](elements/common/logical_condition.md) を使用してチェックされます）、立てられたフラグの値が複合要素の出力へ渡され、以降のアクションのトリガーとして使用できます。
+複合要素のダイアグラムは単純な要素で構成され、現在値（Prev In 1 と Prev In 2）を記憶し、現在（CurrComparison）と過去（PrevComparison）の値のペアを互いに比較することに基づいています。各入力値はダイアグラム内の 2 つの要素で使用されるため、[Combination](elements/common/combination.md) 要素（In 1、In 2）が複合要素の入力に配置されています。これにより、1 つの入力を 2 つの要素に分割し、入力値を [Comparison](elements/common/comparison.md) 要素と [Prev value](elements/common/prev_value.md) 要素に渡せます。新しい値が入力に到着すると、現在値が比較され、新しい値が [Prev value](elements/common/prev_value.md) 要素に渡されます。そこから現在の入力に対する前回値が渡され、その後で前回値が比較されます。両方の条件が満たされると（これは And [Logical Condition](elements/common/logical_condition.md) を使用してチェックされます）、立てられたフラグの値が複合要素の出力へ渡され、以降のアクションのトリガーとして使用できます。
 
 CurrComparison キューブと PrevComparison キューブでは、**Common** プロパティグループの **Parameters** フラグが設定されています。そのため、これらのキューブのプロパティは複合要素 [Crossing](elements/common/crossing.md) のプロパティに取り込まれ、ストラテジースキーマで複合要素を使用するときに指定されます。
 

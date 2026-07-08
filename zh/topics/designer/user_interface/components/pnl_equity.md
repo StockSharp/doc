@@ -6,4 +6,4 @@ P\/L 组件以图表形式显示未实现盈亏、已实现盈亏和佣金。图
 
 ## 推荐内容
 
-[Live execution sample](../../live_execution/live_execution_sample.md)
+[实盘运行示例](../../live_execution/live_execution_sample.md)

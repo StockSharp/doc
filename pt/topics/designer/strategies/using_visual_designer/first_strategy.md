@@ -21,7 +21,7 @@ Depois de clicar no botão **Add** ![Designer Panel Circuits 01](../../../../ima
 - Quando uma média móvel curta cruza uma longa de cima para baixo, abre-se uma posição curta.
 - Se existir uma posição oposta no momento em que é recebido um sinal para abrir uma posição, inverte-se a posição.
 
-4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Palette** ao painel **Designer**. No exemplo, o cubo [Variable](elements/data_sources/variable.md) com o tipo **Instrument** chama-se Instrument, e o cubo [Variable](elements/data_sources/variable.md) com o tipo **Portfolio** chama-se Portfolio. Defina a caixa de verificação **Parameters** dos cubos Instrument e Portfolio. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo Value do cubo [Variable](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variable](elements/data_sources/variable.md).
+4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Palette** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrument** chama-se Instrument, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Portfolio** chama-se Portfolio. Defina a caixa de verificação **Parameters** dos cubos Instrument e Portfolio. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo Value do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -43,7 +43,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. Adicione o [Chart](elements/common/chart.md) para apresentar visualmente velas, indicadores e negociações. Adicione elementos de apresentação para velas, dois indicadores e negociações ao [Chart](elements/common/chart.md).
+8. Adicione o [Gráfico](elements/common/chart.md) para apresentar visualmente velas, indicadores e negociações. Adicione elementos de apresentação para velas, dois indicadores e negociações ao [Gráfico](elements/common/chart.md).
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
@@ -59,7 +59,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-Para controlar a posição, precisa de adicionar o cubo [Position](elements/positions/current.md), para cuja entrada são passados **Instrument** e **Portfolio**.
+Para controlar a posição, precisa de adicionar o cubo [Posição](elements/positions/current.md), para cuja entrada são passados **Instrument** e **Portfolio**.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

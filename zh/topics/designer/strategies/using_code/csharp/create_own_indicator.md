@@ -94,7 +94,7 @@ public class EmptyIndicator : BaseIndicator
 
 有关指标方法的说明，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。
 
-要将创建的指标添加到策略图，请使用 [Indicator](../../using_visual_designer/elements/common/indicator.md) 模块，并在其中选择所需指标：
+要将创建的指标添加到策略图，请使用 [指标](../../using_visual_designer/elements/common/indicator.md) 模块，并在其中选择所需指标：
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 

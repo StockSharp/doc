@@ -18,7 +18,7 @@ Durante a negociação, pode precisar de controlar totalmente o processo. Para c
 - [Posições](../../designer/user_interface/components/positions.md) - é um gráfico da posição.
 - [Notícias](components/news.md) - apresenta notícias recebidas das ligações.
 - [Posições (opções)](components/positions_options.md) - é uma apresentação gráfica da posição por opções.
-- [Option desk](components/option_desk.md) - é uma tabela dos principais parâmetros das opções selecionadas para o instrumento subjacente.
-- [Smile volatility](components/smile_volatility.md) - é uma representação gráfica do nível de volatilidade esperado para opções com o mesmo ativo subjacente e diferentes strikes.
+- [Painel de opções](components/option_desk.md) - é uma tabela dos principais parâmetros das opções selecionadas para o instrumento subjacente.
+- [Smile de volatilidade](components/smile_volatility.md) - é uma representação gráfica do nível de volatilidade esperado para opções com o mesmo ativo subjacente e diferentes strikes.
 - [Log de ordens](components/order_log.md) - é uma tabela com ordens, que apresenta informações completas sobre todas as ordens dos instrumentos selecionados.
 

@@ -2,4 +2,4 @@
 
 Consulte
 
-[P&L equity](../../../designer/user_interface/components/pnl_equity.md)
+[Equity P&L](../../../designer/user_interface/components/pnl_equity.md)

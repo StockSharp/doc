@@ -60,6 +60,6 @@ CM эффективен для:
 ## См. также
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

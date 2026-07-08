@@ -34,5 +34,5 @@
 
 ## 推荐内容
 
-[String concat](string_concat.md)
-[Notification](notification.md)
+[字符串拼接](string_concat.md)
+[通知](notification.md)

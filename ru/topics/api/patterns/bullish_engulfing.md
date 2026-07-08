@@ -35,6 +35,6 @@ Bullish Engulfing предоставляет отличные возможнос
 
 ## См. также
 
-[Pattern Bearish Engulfing](bearish_engulfing.md)
+[Паттерн Bearish Engulfing (Медвежье поглощение)](bearish_engulfing.md)
 
-[Pattern Piercing](piercing.md)
+[Паттерн Piercing (Пробивающий паттерн)](piercing.md)

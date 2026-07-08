@@ -102,7 +102,7 @@ if (snapshot != null)
 
 ## Siehe auch
 
-- [Working with the API](api.md)
-- [Storage Formats](formats.md)
-- [Storage Drives](drives.md)
+- [Arbeiten mit der API](api.md)
+- [Speicherformate](formats.md)
+- [Speicherlaufwerke](drives.md)
 

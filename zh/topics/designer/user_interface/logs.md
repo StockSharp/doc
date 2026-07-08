@@ -6,4 +6,4 @@
 
 ## 另请参阅
 
-[Portfolios](portfolios.md)
+[投资组合](portfolios.md)

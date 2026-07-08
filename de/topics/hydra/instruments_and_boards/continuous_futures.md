@@ -18,7 +18,7 @@ Als Beispiel betrachten wir das Zusammenfassen von E-mini S&P 500 Futures.
    - Wenn Sie die ersten beiden Buchstaben des Kontrakts als Namen festlegen, zum Beispiel RI, und auf die Schaltflaeche **Auto** klicken, werden alle in der Datenbank gefundenen Instrumente hinzugefuegt.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Waehlen Sie die erforderlichen Kontrakte aus und legen Sie deren Uebergangsdaten fest. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. Weisen Sie anschliessend die Instrumentkennung **ES\_continuous@CME** zu und klicken Sie auf die Schaltflaeche **OK**. Danach wird ein neues Instrument erstellt.
-5. Klicken Sie danach auf der Registerkarte **Common** auf die Schaltflaeche [Candles](../working_with_data/view_and_export/candles.md), waehlen Sie das resultierende Instrument und den Datenzeitraum aus, setzen Sie im Feld **Build from** den Wert **Composite element** und klicken Sie dann auf die Schaltflaeche ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. Klicken Sie danach auf der Registerkarte **Common** auf die Schaltflaeche [Kerzen](../working_with_data/view_and_export/candles.md), waehlen Sie das resultierende Instrument und den Datenzeitraum aus, setzen Sie im Feld **Build from** den Wert **Composite element** und klicken Sie dann auf die Schaltflaeche ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 Die erzeugten Daten koennen in die Formate Excel, XML, JSON oder TXT exportiert werden. Der Export erfolgt ueber die Dropdown-Liste.
 

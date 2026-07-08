@@ -1,6 +1,6 @@
 # Configuração gráfica Zaif
 
-Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
+Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
 ![API GUI Settings Zaif](../../../../../images/api_gui_settings_zaif.png)
 

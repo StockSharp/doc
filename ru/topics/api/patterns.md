@@ -14,7 +14,7 @@
 
 ### В Designer
 
-В [Designer](../designer.md) встроены предустановленные свечные паттерны, которые можно использовать в вашей торговой стратегии. Паттерны вызываются через кубик [индикатор](../designer/strategies/using_visual_designer/elements/common/indicator.md) с последующим выбором соответствующего значения. Сам паттерн выбирается из выпадающего списка в окне справа. 
+В [Designer](../designer.md) встроены предустановленные свечные паттерны, которые можно использовать в вашей торговой стратегии. Паттерны вызываются через кубик [Индикатор](../designer/strategies/using_visual_designer/elements/common/indicator.md) с последующим выбором соответствующего значения. Сам паттерн выбирается из выпадающего списка в окне справа. 
 
 ![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
 
@@ -83,7 +83,7 @@ if (result.GetValue<bool>())
 
 Для дополнительной проверки параметров во взаимосвязи используется выражение && представляющее собой логическое И.
 
-При описании паттерна также возможно использование следующих функций: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Подробнее об использовании функций рассказывается при описании кубика [формула](../designer/strategies/using_visual_designer/elements/common/formula.md).
+При описании паттерна также возможно использование следующих функций: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Подробнее об использовании функций рассказывается при описании кубика [Формула](../designer/strategies/using_visual_designer/elements/common/formula.md).
 
 При использовании [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.ExpressionCandlePattern) в коде, формулы создаются по тем же правилам, что описаны выше, и используют те же переменные.
 

@@ -35,6 +35,6 @@ Hanging Man обычно требует дополнительного подт�
 
 ## См. также
 
-[Pattern Hammer](hammer.md)
+[Паттерн Hammer (Молот)](hammer.md)
 
-[Pattern Shooting Star](shooting_star.md)
+[Паттерн Shooting Star (Падающая звезда)](shooting_star.md)

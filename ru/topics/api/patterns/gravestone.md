@@ -33,6 +33,6 @@ Gravestone требует дополнительного подтвержден�
 
 ## См. также
 
-[Pattern Dragonfly](dragonfly.md)
+[Паттерн Dragonfly (Стрекоза)](dragonfly.md)
 
-[Pattern Shooting Star](shooting_star.md)
+[Паттерн Shooting Star (Падающая звезда)](shooting_star.md)

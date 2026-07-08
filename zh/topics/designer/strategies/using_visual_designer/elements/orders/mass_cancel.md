@@ -26,4 +26,4 @@
 
 ## 另请参阅
 
-[Order Registration](register.md)
+[注册订单](register.md)

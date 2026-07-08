@@ -26,4 +26,4 @@ Parâmetros
 
 ## Ver também
 
-[Order Registration](register.md)
+[Registo de ordem](register.md)

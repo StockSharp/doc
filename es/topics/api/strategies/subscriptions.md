@@ -48,7 +48,7 @@ El uso de suscripciones en estrategias tiene varias ventajas frente a la suscrip
 
 4. **Uniformidad de código** - las suscripciones usan un enfoque unificado, independiente del tipo de datos solicitado.
 
-5. **Integración con reglas** - las suscripciones se integran fácilmente con el [modelo de eventos](event_model.md) de la estrategia mediante reglas.
+5. **Integración con reglas** - las suscripciones se integran fácilmente con el [Modelo de eventos](event_model.md) de la estrategia mediante reglas.
 
 6. **Gestión automática de suscripciones** - cuando la estrategia se detiene, todas sus suscripciones se cancelan automáticamente y liberan recursos.
 

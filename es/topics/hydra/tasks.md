@@ -8,7 +8,7 @@ Para ver la lista de herramientas, seleccione el elemento **Tools** en el panel 
 
 Actualmente, hay cuatro clases de tareas en [Hydra](../hydra.md):
 
-- [Import (auto)](tasks/import_auto.md) - la tarea consiste en importar datos desde formato CSV.
-- [Converter](tasks/converter.md) - la tarea consiste en convertir datos bursátiles a ticks, velas o libros de órdenes.
-- [Export (auto)](tasks/export_auto.md) - la tarea consiste en exportar velas a distintos formatos.
-- [Backup](misc/backup.md) - la tarea consiste en crear una copia de seguridad de datos en el servicio en la nube.
+- [Importación automática](tasks/import_auto.md) - la tarea consiste en importar datos desde formato CSV.
+- [Convertidor](tasks/converter.md) - la tarea consiste en convertir datos bursátiles a ticks, velas o libros de órdenes.
+- [Exportación automática](tasks/export_auto.md) - la tarea consiste en exportar velas a distintos formatos.
+- [Copia de seguridad](misc/backup.md) - la tarea consiste en crear una copia de seguridad de datos en el servicio en la nube.

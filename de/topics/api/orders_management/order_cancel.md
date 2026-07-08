@@ -9,7 +9,7 @@ _connector.CancelOrder(registeredOrder);
 
 ## Empfohlene Inhalte
 
-[Orders mass cancel](orders_mass_cancel.md)
+[Massenstornierung von Orders](orders_mass_cancel.md)
 
-[Orders replacement](orders_replacement.md)
+[Orders ersetzen](orders_replacement.md)
 

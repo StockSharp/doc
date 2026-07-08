@@ -219,6 +219,6 @@ public override bool IsFormed
 
 ## Ver Também
 
-- [Lista de Indicadores](../indicators/list_of_indicators.md)
-- [Indicador Personalizado](../indicators/custom_indicator.md)
+- [Lista de indicadores](../indicators/list_of_indicators.md)
+- [Indicador personalizado](../indicators/custom_indicator.md)
 - [Compatibilidade da Estratégia com Plataformas](compatibility.md)

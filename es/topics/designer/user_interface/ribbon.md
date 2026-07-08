@@ -20,4 +20,4 @@ El elemento principal de la interfaz de usuario de [Designer](../../designer.md)
 
 ## Véase también
 
-[Workspace](workspace.md)
+[Espacio de trabajo](workspace.md)

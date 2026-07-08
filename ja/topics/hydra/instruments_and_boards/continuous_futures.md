@@ -18,7 +18,7 @@
    - たとえば RI のように、限月の先頭 2 文字を名前として設定して **Auto** ボタンをクリックすると、データベース内で見つかったすべての銘柄が追加されます。![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. 必要な限月を選択し、その移行日を設定します。 ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. 次に、銘柄識別子 **ES\_continuous@CME** を割り当て、**OK** ボタンをクリックします。その後、新しい銘柄が作成されます。
-5. 次に、**Common** タブの [Candles](../working_with_data/view_and_export/candles.md) ボタンをクリックし、作成された銘柄とデータ期間を選択し、**Build from** フィールドで **Composite element** の値を設定してから、![hydra find](../../../images/hydra_find.png) ボタンをクリックします。 ![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. 次に、**Common** タブの [ローソク足](../working_with_data/view_and_export/candles.md) ボタンをクリックし、作成された銘柄とデータ期間を選択し、**Build from** フィールドで **Composite element** の値を設定してから、![hydra find](../../../images/hydra_find.png) ボタンをクリックします。 ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 生成されたデータは、Excel、XML、JSON、または TXT 形式にエクスポートできます。エクスポートはドロップダウン リストを使用して実行されます。
 

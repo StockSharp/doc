@@ -1,3 +1,3 @@
 # Candles
 
-Consulte a secção [Geração de candles](../candles_generation.md).
+Consulte a secção [Geração de Candles](../candles_generation.md).

@@ -60,6 +60,6 @@ Composite Momentum の計算には、複数の段階と構成要素が含まれ�
 ## 関連項目
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

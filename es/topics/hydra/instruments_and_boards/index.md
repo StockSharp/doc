@@ -32,7 +32,7 @@ Como ejemplo, consideremos el índice de relación de instrumentos AAPL@NYSE\/GO
    - **tan(a)** - devuelve la tangente del ángulo especificado.
    - **truncate(a)** - calcula la parte entera del número especificado.
 4. Introduzca la operación matemática que se usará para calcular el índice. ![hydra index sec 01](../../../images/hydra_index_sec_01.png)
-5. A continuación, haga clic en [Candles](../working_with_data/view_and_export/candles.md) en la pestaña **Common**, seleccione el instrumento **Index** creado y el período de datos, establezca **Composite Element** en el campo **Create From:** y luego haga clic en ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
+5. A continuación, haga clic en [Velas](../working_with_data/view_and_export/candles.md) en la pestaña **Common**, seleccione el instrumento **Index** creado y el período de datos, establezca **Composite Element** en el campo **Create From:** y luego haga clic en ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
 
 Los datos generados se pueden exportar a formatos Excel, XML o TXT. La exportación se realiza mediante la lista desplegable.
 

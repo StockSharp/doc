@@ -8,5 +8,5 @@
 
 ## 推奨コンテンツ
 
-[Highest ](highest.md)
+[Highest](highest.md)
 

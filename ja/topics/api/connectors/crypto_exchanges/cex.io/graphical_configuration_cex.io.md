@@ -7,11 +7,11 @@
 - **Key** - キー。
 - **Secret** - シークレット。
 - **Heart beat** - 接続が生存しているかを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システムとの接続を設定付きで追跡するための仕組み。([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - 取引システムとの接続を設定付きで追跡するための仕組み。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 
-[Connectors](../../../connectors.md)
+[コネクター](../../../connectors.md)
 
 [グラフィカル設定](../../graphical_configuration.md)
 

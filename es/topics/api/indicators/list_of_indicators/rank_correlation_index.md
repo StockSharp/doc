@@ -33,5 +33,5 @@ El indicador es útil para evaluar tendencias a corto plazo y detectar puntos de
 ## Véase también
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)

@@ -1,6 +1,6 @@
 # 佣金
 
-可以在 [Backtesting settings](components/backtesting_settings.md) 面板中配置佣金计算规则。
+可以在 [回测设置](components/backtesting_settings.md) 面板中配置佣金计算规则。
 
 在 **Commissions** 窗口中，需要选择佣金类型，设置佣金值以及收取佣金的条件。
 

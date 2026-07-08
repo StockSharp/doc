@@ -35,6 +35,6 @@ Tweezer Top требует осторожного подхода и часто �
 
 ## См. также
 
-[Pattern Tweezer Bottom](tweezer_bottom.md)
+[Паттерн Tweezer Bottom (Дно пинцета)](tweezer_bottom.md)
 
-[Pattern Evening Star](evening_star.md)
+[Паттерн Evening Star (Вечерняя звезда)](evening_star.md)

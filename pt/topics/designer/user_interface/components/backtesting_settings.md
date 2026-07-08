@@ -35,7 +35,7 @@ O painel **Properties** está minimizado por predefinição no lado direito do s
 - **Time zone** - informação sobre o fuso horário onde a bolsa se encontra.
 - **Price shift** - o deslocamento de preço face à última negociação, especificando os limites dos preços máximo e mínimo para a sessão seguinte.
 - **Add extra volume** - adicionar volume extra ao livro de ordens quando estão a ser registadas ordens com grande volume.
-- **[Commissions](../commissions.md)** - a comissão (corretagem, bolsa, etc.).
+- **[Comissões](../commissions.md)** - a comissão (corretagem, bolsa, etc.).
 
 **Registo**
 
@@ -43,7 +43,7 @@ O painel **Properties** está minimizado por predefinição no lado direito do s
 
 **Configuração**
 
-- **[Risk management](../risk_management.md)** - as definições de gestão de risco.
+- **[Gestão de risco](../risk_management.md)** - as definições de gestão de risco.
 
 **Parâmetros do diagrama**
 

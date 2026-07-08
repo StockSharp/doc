@@ -23,4 +23,4 @@
 
 ## 推荐内容
 
-[Indicator](indicator.md)
+[指标](indicator.md)

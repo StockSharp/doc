@@ -145,7 +145,7 @@ connector.Connect();
 
 ### Configuração Gráfica
 
-Para configuração visual de conexões, use o componente de configuração gráfica. Veja a seção [Configuração Gráfica](connectors/graphical_configuration.md) para detalhes.
+Para configuração visual de conexões, use o componente de configuração gráfica. Veja a seção [Configuração gráfica](connectors/graphical_configuration.md) para detalhes.
 
 ## Rastreamento de Ordens
 
@@ -171,5 +171,5 @@ connector.CancelOrder(order);
 ## Veja Também
 
 - [Conectores](connectors.md)
-- [Configuração Gráfica](connectors/graphical_configuration.md)
+- [Configuração gráfica](connectors/graphical_configuration.md)
 - [Gerenciamento de Posições](positions.md)

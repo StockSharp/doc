@@ -32,4 +32,4 @@ Histogram = PPO - Signal
 ## См. также
 
 - [Percentage Price Oscillator](percentage_price_oscillator.md)
-- [Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
+- [PPOS](percentage_price_oscillator_signal.md)

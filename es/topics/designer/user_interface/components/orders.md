@@ -6,4 +6,4 @@ El componente **Orders** es una tabla con órdenes que muestra información comp
 
 ## Contenido recomendado
 
-[Trades](trades.md)
+[Operaciones](trades.md)

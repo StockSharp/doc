@@ -2,7 +2,7 @@
 
 [S#](../../api.md) 默认提供超过140种技术分析指标。这使您可以使用现成的指标，而无需从零创建。
 
-- [A/D](list_of_indicators/a_d.md) - 加速/减速指标，衡量价格变动的加速或减速
+- [模数转换](list_of_indicators/a_d.md) - 加速/减速指标，衡量价格变动的加速或减速
 - [ADL](list_of_indicators/accumulation_distribution_line.md) - 累积/分配线 (A/D线)，跟踪资金流入或流出某交易品种的情况
 - [ALF](list_of_indicators/adaptive_laguerre_filter.md) - 自适应拉盖尔滤波器，一种根据市场状况调整以平滑价格数据的滤波器
 - [APZ](list_of_indicators/adaptive_price_zone.md) - 自适应价格区，基于波动性识别潜在的支撑和阻力水平
@@ -18,7 +18,7 @@
 - [牛市力量](list_of_indicators/bull_power.md) - 牛市力量，衡量相对于指数移动平均线的多头压力
 - [BMP](list_of_indicators/balance_of_market_power.md) - 市场力量平衡，比对买入与卖出压力
 - [BOP](list_of_indicators/balance_of_power.md) - 力量平衡，显示买方与卖方的强度
-- [BV](list_of_indicators/balance_volume.md) - 平衡量指标，将成交量与价格变化联系起来
+- [bv](list_of_indicators/balance_volume.md) - 平衡量指标，将成交量与价格变化联系起来
 - [Bollinger](list_of_indicators/bollinger_bands.md) - 布林带，用于衡量波动性并识别超买或超卖状态
 - [BBP](list_of_indicators/bollinger_percent_b.md) - 布林带 %b，显示价格相对于布林带的位置
 - [Pattern](../patterns.md) - 模式，在图表上识别特定价格模式
@@ -99,7 +99,7 @@
 - [MACD](list_of_indicators/macd.md) - 移动平均线的收敛/发散，用于识别趋势变化
 - [MACD柱状图](list_of_indicators/macd_histogram.md) - 移动平均线的趋同/发散。柱状图，可视化MACD与信号线之间的差异
 - [MACD 信号](list_of_indicators/macd_with_signal_line.md) - 移动平均线与信号线的聚合/背离，提供买入和卖出信号
-- [MAC](list_of_indicators/moving_average_crossover.md) - 移动平均交叉，通过使用两条移动平均线识别趋势反转
+- [Mac](list_of_indicators/moving_average_crossover.md) - 移动平均交叉，通过使用两条移动平均线识别趋势反转
 - [MAR](list_of_indicators/moving_average_ribbon.md) - 移动平均带，使用多个移动平均线来可视化趋势
 - [NVI](list_of_indicators/negative_volume_index.md) - 负成交量指标，用于跟踪成交量减少日的价格变动
 - [PVI](list_of_indicators/positive_volume_index.md) - 正成交量指标，在成交量增加的日子跟踪价格变动

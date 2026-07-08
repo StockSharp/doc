@@ -41,5 +41,5 @@ Parámetros
 
 ## Contenido recomendado
 
-[String concat](string_concat.md)
+[Concatenación de cadenas](string_concat.md)
 [Notificación](notification.md)

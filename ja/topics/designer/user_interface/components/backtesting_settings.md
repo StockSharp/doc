@@ -35,7 +35,7 @@
 - **Time zone** – 取引所が所在するタイムゾーンに関する情報です。
 - **Price shift** – 最終約定からの価格シフトで、次のセッションの最大価格と最小価格の制限を指定します。
 - **Add extra volume** – 大きな数量の注文が登録されるときに、板情報へ追加数量を加えます。
-- **[Commissions](../commissions.md)** – 手数料（ブローカー手数料、取引所手数料など）です。
+- **[手数料](../commissions.md)** – 手数料（ブローカー手数料、取引所手数料など）です。
 
 **Logging**
 
@@ -43,7 +43,7 @@
 
 **Setting**
 
-- **[Risk management](../risk_management.md)** – リスク管理設定です。
+- **[リスク管理](../risk_management.md)** – リスク管理設定です。
 
 **Diagram parameters**
 

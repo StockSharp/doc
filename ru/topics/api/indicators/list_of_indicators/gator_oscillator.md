@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Highest ](highest.md)
+[Highest](highest.md)

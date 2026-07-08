@@ -4,7 +4,7 @@ El componente **Chart** contiene todos los cubos **Chart panel** que están en l
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 
-La esquina superior izquierda de cada gráfico muestra todos los elementos gráficos añadidos al gráfico. Si desmarca la casilla del elemento gráfico ![Designer Schedule 00](../../../../images/designer_schedule_00.png), el elemento se eliminará del gráfico. Al hacer clic en el botón ![Designer Schedule 01](../../../../images/designer_schedule_01.png), se abrirá la configuración del elemento gráfico. También puede configurar el elemento gráfico en las propiedades del cubo [Chart](../../strategies/using_visual_designer/elements/common/chart.md).
+La esquina superior izquierda de cada gráfico muestra todos los elementos gráficos añadidos al gráfico. Si desmarca la casilla del elemento gráfico ![Designer Schedule 00](../../../../images/designer_schedule_00.png), el elemento se eliminará del gráfico. Al hacer clic en el botón ![Designer Schedule 01](../../../../images/designer_schedule_01.png), se abrirá la configuración del elemento gráfico. También puede configurar el elemento gráfico en las propiedades del cubo [Gráfico](../../strategies/using_visual_designer/elements/common/chart.md).
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
@@ -22,4 +22,4 @@ Encima del gráfico hay una barra de herramientas donde puede seleccionar auto s
 
 ## Contenido recomendado
 
-[Orders](orders.md)
+[Órdenes](orders.md)

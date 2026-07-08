@@ -153,6 +153,6 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 
 ## Ver Também
 
-- [Otimização de Estratégias](../testing/optimization.md)
+- [Otimização de estratégias](../testing/optimization.md)
 - [Estatísticas da Estratégia](statistics.md)
 - [Otimização Genética no Designer](../../designer/optimization/genetic.md)

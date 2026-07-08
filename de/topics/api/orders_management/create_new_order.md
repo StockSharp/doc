@@ -20,5 +20,5 @@ Das folgende Beispiel zeigt die Erstellung einer Order und ihre Registrierung an
 
 ## Empfohlene Inhalte
 
-[Order cancel](order_cancel.md)
+[Order stornieren](order_cancel.md)
 

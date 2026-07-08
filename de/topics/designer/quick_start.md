@@ -16,7 +16,7 @@ Rufen Sie nun die Instrumente und ihre Daten aus dem konfigurierten lokalen Spei
 
 ![Designer Quick start 02](../../images/designer_quick_start_03.png)
 
-Der Tab zur Marktdatenverwaltung wird geöffnet. Um die verfügbaren Instrumente abzurufen, klicken Sie auf [Download instruments](market_data_storage/download_instruments.md). Um ein Instrument herunterzuladen, geben Sie dessen Code ein oder wählen das Flag **All**, wählen die Datenquelle aus und klicken auf **OK**. [Designer](../designer.md) fragt die verfügbaren Instrumente bei der Datenquelle ab. Alle gefundenen Instrumente erscheinen im Panel **All instruments**.
+Der Tab zur Marktdatenverwaltung wird geöffnet. Um die verfügbaren Instrumente abzurufen, klicken Sie auf [Instrumente herunterladen](market_data_storage/download_instruments.md). Um ein Instrument herunterzuladen, geben Sie dessen Code ein oder wählen das Flag **All**, wählen die Datenquelle aus und klicken auf **OK**. [Designer](../designer.md) fragt die verfügbaren Instrumente bei der Datenquelle ab. Alle gefundenen Instrumente erscheinen im Panel **All instruments**.
 
 Jetzt kann [Designer](../designer.md) die heruntergeladenen Instrumente und die im Speicher verfügbaren historischen Daten verwenden. Wählen Sie eine der Demostrategien. Öffnen Sie im Panel [Schemas](user_interface/schemas.md) den Ordner **Strategies** und doppelklicken Sie auf die Beispielstrategie **SMA**. Im Arbeitsbereich erscheint der Tab **Sma**. Nach dem Wechsel zur Strategie öffnet das Ribbon automatisch den Tab **Backtest**, der die wichtigsten Steuerelemente zum Erstellen, Debuggen und Testen von Strategien enthält ([Strategien erstellen](strategies/using_visual_designer.md), [Beispiel für historisches Testing](backtesting/getting_started.md)).
 

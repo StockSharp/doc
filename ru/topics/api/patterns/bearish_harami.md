@@ -34,6 +34,6 @@ Bearish Harami обычно требует дополнительного под
 
 ## См. также
 
-[Pattern Bullish Harami](bullish_harami.md)
+[Паттерн Bullish Harami (Бычий харами)](bullish_harami.md)
 
-[Pattern Bearish Engulfing](bearish_engulfing.md)
+[Паттерн Bearish Engulfing (Медвежье поглощение)](bearish_engulfing.md)

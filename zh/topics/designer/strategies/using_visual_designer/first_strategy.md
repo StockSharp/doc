@@ -16,12 +16,12 @@
 
 3. 移动平均线（SMA）策略的基本原理如下：
 
-- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [Indicator](elements/common/indicator.md) 模块名为 Long SMA，周期为 80 根K线；短期 SMA 模块名为 Short SMA，周期为 10 根K线。
+- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [指标](elements/common/indicator.md) 模块名为 Long SMA，周期为 80 根K线；短期 SMA 模块名为 Short SMA，周期为 10 根K线。
 - 当短期移动平均线从下向上穿过长期移动平均线时，建立多头持仓。
 - 当短期移动平均线从上向下穿过长期移动平均线时，建立空头持仓。
 - 收到开仓信号时，如果当前存在相反方向的持仓，则反转持仓。
 
-4. 所有策略都需要用于成交的交易品种和投资组合。应从 **Palette** 面板将它们添加到 **Designer** 面板。本示例中，类型为 **Instrument** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Instrument，类型为 **Portfolio** 的 [Variable](elements/data_sources/variable.md) 模块命名为 Portfolio。选中 Instrument 和 Portfolio 模块的 **Parameters** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入交易品种和投资组合的值。如果将 [Variable](elements/data_sources/variable.md) 模块的 Value 字段留空，同时也未选中 Parameters 复选框，测试策略时会报告 [Variable](elements/data_sources/variable.md) 模块的值未设置。
+4. 所有策略都需要用于成交的交易品种和投资组合。应从 **Palette** 面板将它们添加到 **Designer** 面板。本示例中，类型为 **Instrument** 的 [变量](elements/data_sources/variable.md) 模块命名为 Instrument，类型为 **Portfolio** 的 [变量](elements/data_sources/variable.md) 模块命名为 Portfolio。选中 Instrument 和 Portfolio 模块的 **Parameters** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入交易品种和投资组合的值。如果将 [变量](elements/data_sources/variable.md) 模块的 Value 字段留空，同时也未选中 Parameters 复选框，测试策略时会报告 [变量](elements/data_sources/variable.md) 模块的值未设置。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -31,19 +31,19 @@
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. 添加交易品种和投资组合后，添加两个 [Indicator](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 Long SMA，周期设置为 80 根K线；将第二个命名为 Short SMA，周期设置为 10 根K线。
+5. 添加交易品种和投资组合后，添加两个 [指标](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 Long SMA，周期设置为 80 根K线；将第二个命名为 Short SMA，周期设置为 10 根K线。
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. 指标需要接收K线序列才能工作。为此，需要创建 [Candles](elements/data_sources/candles.md) 模块。本示例仅使用时间周期为 5 分钟的已完成K线。
+6. 指标需要接收K线序列才能工作。为此，需要创建 [K线](elements/data_sources/candles.md) 模块。本示例仅使用时间周期为 5 分钟的已完成K线。
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. 添加指标后，需要添加两个用于判断指标交叉的模块，即复合元素中的 [Crossing](elements/common/crossing.md) 模块。第一个模块命名为 Crossing Up，用于判断自下而上的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“大于”，将 PrevComparison 运算符设置为“小于或等于”。第二个模块命名为 Crossing Down，用于判断自上而下的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“小于”，将 PrevComparison 运算符设置为“大于或等于”。
+7. 添加指标后，需要添加两个用于判断指标交叉的模块，即复合元素中的 [交叉](elements/common/crossing.md) 模块。第一个模块命名为 Crossing Up，用于判断自下而上的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“大于”，将 PrevComparison 运算符设置为“小于或等于”。第二个模块命名为 Crossing Down，用于判断自上而下的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“小于”，将 PrevComparison 运算符设置为“大于或等于”。
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. 为了直观显示K线、指标和成交，应添加 [Chart](elements/common/chart.md)。在 [Chart](elements/common/chart.md) 中添加K线、两个指标和成交等显示元素。
+8. 为了直观显示K线、指标和成交，应添加 [图表](elements/common/chart.md)。在 [图表](elements/common/chart.md) 中添加K线、两个指标和成交等显示元素。
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
@@ -55,15 +55,15 @@
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
-11. 使用连接线（[Lines](lines.md)）连接上述元素后，就得到了一个尚未考虑策略当前持仓的策略图。在这种情况下，策略可能累积过多手数。
+11. 使用连接线（[连接线](lines.md)）连接上述元素后，就得到了一个尚未考虑策略当前持仓的策略图。在这种情况下，策略可能累积过多手数。
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-要控制持仓，需要添加 [Position](elements/positions/current.md) 模块，并将 **Instrument** 和 **Portfolio** 传入其输入端。
+要控制持仓，需要添加 [持仓](elements/positions/current.md) 模块，并将 **Instrument** 和 **Portfolio** 传入其输入端。
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 
-可以使用 [Get current position](schema_samples/get_current_position.md) 章节中介绍的现成策略图来处理当前持仓。该策略图会计算注册订单时所需的实际数量；如果需要反转持仓，则会给出当前持仓数量的两倍。
+可以使用 [获取当前持仓](schema_samples/get_current_position.md) 章节中介绍的现成策略图来处理当前持仓。该策略图会计算注册订单时所需的实际数量；如果需要反转持仓，则会给出当前持仓数量的两倍。
 
 12. 最终完成的策略如下所示：
 
@@ -71,4 +71,4 @@
 
 ## 推荐内容
 
-[Composite elements](composite_elements.md)
+[复合元素](composite_elements.md)

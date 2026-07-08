@@ -16,9 +16,9 @@ Nach dem Drücken von **OK** erscheint eine neue Strategie im Ordner **Strategie
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 
-Der Strategietab besteht aus dem Panel **Scheme** ([Strategy Designer](using_visual_designer/diagram_panel.md)) sowie weiteren Tabs, die die [grafischen Komponenten](../user_interface/components.md) der Strategie darstellen und zur Anzeige der Testergebnisse der im Bereich **Scheme** erstellten Strategie erforderlich sind. Detaillierte Informationen zum Strategietest finden Sie im Abschnitt [Example of backtesting](../backtesting/getting_started.md).
+Der Strategietab besteht aus dem Panel **Scheme** ([Strategie-Designer](using_visual_designer/diagram_panel.md)) sowie weiteren Tabs, die die [grafischen Komponenten](../user_interface/components.md) der Strategie darstellen und zur Anzeige der Testergebnisse der im Bereich **Scheme** erstellten Strategie erforderlich sind. Detaillierte Informationen zum Strategietest finden Sie im Abschnitt [Example of backtesting](../backtesting/getting_started.md).
 
 ## Siehe auch
 
-[Strategy Designer](using_visual_designer/diagram_panel.md)
+[Strategie-Designer](using_visual_designer/diagram_panel.md)
 

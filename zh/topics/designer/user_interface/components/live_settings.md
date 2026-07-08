@@ -16,7 +16,7 @@
 
 **Settings**
 
-- [Risk management](../risk_management.md) \- 风险管理设置。
+- [风险管理](../risk_management.md) \- 风险管理设置。
 
 **Diagram parameters**
 
@@ -27,4 +27,4 @@
 
 ## 推荐内容
 
-[Chart](chart.md)
+[图表](chart.md)

@@ -33,4 +33,4 @@ Parâmetros de Take e Stop
 ![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> As transacções de entrada NÃO PODEM ser transacções de toda a estratégia (o bloco [Strategy Trades](../common/trades_by_strategy.md)), pois isso levará ao cálculo incorrecto da posição actual: as transacções de protecção também se tornarão transacções da estratégia. O bloco **Position Protection** deve receber transacções do socket de saída **Transaction** dos cubos [Order Registration](../orders/register.md) e [Modify Position](modify.md), ou de componentes semelhantes que alterem directamente a posição.
+> As transacções de entrada NÃO PODEM ser transacções de toda a estratégia (o bloco [Strategy Trades](../common/trades_by_strategy.md)), pois isso levará ao cálculo incorrecto da posição actual: as transacções de protecção também se tornarão transacções da estratégia. O bloco **Position Protection** deve receber transacções do socket de saída **Transaction** dos cubos [Registo de ordem](../orders/register.md) e [Modificar posição](modify.md), ou de componentes semelhantes que alterem directamente a posição.

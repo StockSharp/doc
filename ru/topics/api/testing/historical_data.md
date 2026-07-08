@@ -1,6 +1,6 @@
 # На истории
 
-Тестирование на исторических данных позволяет проводить как анализ рынка для поиска закономерностей, так и [оптимизацию параметров стратегии](optimization.md). Основную работу при этом выполняет класс [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), который получает сохраненные в локальном хранилище данные через специальный [API](../market_data_storage/api.md). Дополнительные параметры описаны в разделе [настройки тестирования](extended_settings.md).
+Тестирование на исторических данных позволяет проводить как анализ рынка для поиска закономерностей, так и [оптимизацию параметров стратегии](optimization.md). Основную работу при этом выполняет класс [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), который получает сохраненные в локальном хранилище данные через специальный [API](../market_data_storage/api.md). Дополнительные параметры описаны в разделе [Настройки тестирования](extended_settings.md).
 
 Тестирование может выполняться по различным типам маркет-данных:
 - Тиковые сделки ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))

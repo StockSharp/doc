@@ -12,7 +12,7 @@ Antes de comenzar a escribir robots de trading para esta plataforma de trading, 
 
 [Guardar y cargar configuración](../save_and_load_settings.md)
 
-[Creación de su propio conector](../creating_own_connector.md)
+[Creación de su Propio Conector](../creating_own_connector.md)
 
 [Gestión de órdenes](../../orders_management.md)
 

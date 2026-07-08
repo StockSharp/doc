@@ -22,5 +22,5 @@ Este bloco é usado para calcular valores de indicadores.
 
 ## Ver também
 
-[List of Indicators](../../../../../api/indicators/list_of_indicators.md)
+[Lista de indicadores](../../../../../api/indicators/list_of_indicators.md)
 [Logical Condition](logical_condition.md)

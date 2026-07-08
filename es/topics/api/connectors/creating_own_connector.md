@@ -219,6 +219,6 @@ Este documento describe los principios generales del funcionamiento del adaptado
 - [Trabajo con Datos de Mercado](creating_own_connector/market_data.md)
 - [Solicitud del Estado Actual de la Cartera y las Órdenes](creating_own_connector/portfolio_and_orders_state.md)
 - [Trabajo con Operaciones de Trading](creating_own_connector/trading_operations.md)
-- [Almacenamiento de Configuraciones](creating_own_connector/settings.md)
+- [Almacenamiento de configuraciones](creating_own_connector/settings.md)
 - [Condiciones de Órdenes Extendidas](creating_own_connector/order_extended.md)
 </content>

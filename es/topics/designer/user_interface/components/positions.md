@@ -10,4 +10,4 @@ El componente **Positions** es una tabla de posiciones para los instrumentos de 
 
 ## Contenido recomendado
 
-[Statistics](statistics.md)
+[Estadísticas](statistics.md)

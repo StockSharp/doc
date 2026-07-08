@@ -16,7 +16,7 @@ Después de hacer clic en el botón **Add** ![Designer Panel Circuits 01](../../
 
 3. La esencia de la estrategia de media móvil (SMA) es la siguiente:
 
-- Hay dos medias móviles con distintos períodos de cálculo: una SMA larga y una SMA corta. En el ejemplo, el cubo [Indicator](elements/common/indicator.md) de la SMA larga se llama Long SMA y tiene un período de 80 velas; la SMA corta se llama Short SMA y tiene un período de 10 velas.
+- Hay dos medias móviles con distintos períodos de cálculo: una SMA larga y una SMA corta. En el ejemplo, el cubo [Indicador](elements/common/indicator.md) de la SMA larga se llama Long SMA y tiene un período de 80 velas; la SMA corta se llama Short SMA y tiene un período de 10 velas.
 - Cuando una media móvil corta cruza una larga de abajo hacia arriba, se abre una posición larga.
 - Cuando una media móvil corta cruza una larga de arriba hacia abajo, se abre una posición corta.
 - Si hay una posición opuesta en el momento de recibir una señal para abrir una posición, se revierte la posición.
@@ -31,11 +31,11 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Después de añadir el instrumento y la cartera, debe añadir dos cubos [Indicator](elements/common/indicator.md), seleccionar el tipo SMA, nombrar el primero Long SMA y establecer el período de 80 velas; nombrar el segundo Short SMA y establecer el período de 10 velas.
+5. Después de añadir el instrumento y la cartera, debe añadir dos cubos [Indicador](elements/common/indicator.md), seleccionar el tipo SMA, nombrar el primero Long SMA y establecer el período de 80 velas; nombrar el segundo Short SMA y establecer el período de 10 velas.
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. Para que los indicadores funcionen, páseles una serie de velas. Para ello, cree el cubo [Candles](elements/data_sources/candles.md). En el ejemplo, se usan solo velas formadas con un timeframe de 5 minutos.
+6. Para que los indicadores funcionen, páseles una serie de velas. Para ello, cree el cubo [Velas](elements/data_sources/candles.md). En el ejemplo, se usan solo velas formadas con un timeframe de 5 minutos.
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
@@ -43,7 +43,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. Añada [Chart](elements/common/chart.md) para mostrar visualmente velas, indicadores y operaciones. Añada al [Chart](elements/common/chart.md) elementos de visualización para velas, dos indicadores y operaciones.
+8. Añada [Gráfico](elements/common/chart.md) para mostrar visualmente velas, indicadores y operaciones. Añada al [Gráfico](elements/common/chart.md) elementos de visualización para velas, dos indicadores y operaciones.
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
@@ -59,7 +59,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-Para controlar la posición, debe añadir el cubo [Position](elements/positions/current.md), a cuya entrada se pasan **Instrument** y **Portfolio**.
+Para controlar la posición, debe añadir el cubo [Posición](elements/positions/current.md), a cuya entrada se pasan **Instrument** y **Portfolio**.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

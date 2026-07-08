@@ -22,7 +22,7 @@ Das Panel **Properties** kann in zwei Modi angezeigt werden: *Basic settings* un
 
 Standardmäßig werden die Eigenschaften beim Erstellen eines Schemas zunächst im Modus *Basic settings* angezeigt. Um in den Modus *Advanced settings* zu wechseln, müssen Sie auf die entsprechende Überschrift klicken.
 
-Im Modus *Basic settings* werden nur die wichtigsten Eigenschaften des Blocks angezeigt. Für den Block [candles](elements/data_sources/candles.md) werden beispielsweise der Timeframe, das Flag zum Empfangen nur gebildeter Kerzen, das Flag für die Möglichkeit, Kerzen aus einem kleineren Timeframe zu bilden, und das Flag zum Abonnieren von Kerzen per Signal angezeigt.
+Im Modus *Basic settings* werden nur die wichtigsten Eigenschaften des Blocks angezeigt. Für den Block [Candles](elements/data_sources/candles.md) werden beispielsweise der Timeframe, das Flag zum Empfangen nur gebildeter Kerzen, das Flag für die Möglichkeit, Kerzen aus einem kleineren Timeframe zu bilden, und das Flag zum Abonnieren von Kerzen per Signal angezeigt.
 
 Im Modus *Advanced settings* werden alle änderbaren und konfigurierbaren Eigenschaften des Blocks angezeigt.
 

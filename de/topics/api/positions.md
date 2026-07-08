@@ -149,6 +149,6 @@ Weitere Details zu Handelsoperationen in Strategien finden Sie im Abschnitt [Tra
 ## Siehe auch
 
 - [Trading Operations](strategies/trading_operations.md)
-- [Position Protection](strategies/take_profit_and_stop_loss.md)
-- [Target Position Management](strategies/target_position_management.md)
+- [Positionsschutz](strategies/take_profit_and_stop_loss.md)
+- [Verwaltung der Zielposition](strategies/target_position_management.md)
 - [Reporting](strategies/reporting.md)

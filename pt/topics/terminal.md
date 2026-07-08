@@ -6,7 +6,7 @@ O **Terminal** é um terminal de negociação gratuito. A sua principal vantagem
 
 ## Vantagens e funcionalidades do Terminal:
 
-1. **Suporta muitas fontes de dados:** [Connectors](api/connectors.md).
+1. **Suporta muitas fontes de dados:** [Conectores](api/connectors.md).
 2. **Negociação a partir dos gráficos**. 
 3. **Timeframes personalizados**. 
 4. **Velas Volume, Tick, Range, PnF e Renko**. 
@@ -15,4 +15,4 @@ O **Terminal** é um terminal de negociação gratuito. A sua principal vantagem
 
 ## Conteúdo recomendado
 
-[Installing Terminal](terminal/installing_terminal.md)
+[Instalar o Terminal](terminal/installing_terminal.md)

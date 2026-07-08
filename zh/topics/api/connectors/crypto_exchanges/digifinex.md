@@ -1,6 +1,6 @@
 # Digifinex
 
-**DigiFinex** - 加密货币交易所。在你开始为这个交易平台编写交易机器人之前，我们建议阅读 [Connectors](../../connectors.md) 部分中的链接。
+**DigiFinex** - 加密货币交易所。在你开始为这个交易平台编写交易机器人之前，我们建议阅读 [连接器](../../connectors.md) 部分中的链接。
 
 
 

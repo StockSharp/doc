@@ -2,7 +2,7 @@
 
 受信した [Hydra](../../hydra.md) データは、専用パネルで表示できます。 
 
-これを行うには、Common タブで次のいずれかのボタンをクリックします: [Ticks](view_and_export/ticks.md)、[Order books](view_and_export/order_books.md)、[ローソク足の生成](candles_generation.md)、[Order log](view_and_export/order_log.md)、[Level 1 ](view_and_export/level_1_.md)、[News](view_and_export/news.md)、[Transactions](view_and_export/transactions.md)、[Option desk](view_and_export/option_desk.md)、[Indicators](view_and_export/indicators.md)、[Positions](view_and_export/positions.md)。 
+これを行うには、Common タブで次のいずれかのボタンをクリックします: [ティック](view_and_export/ticks.md)、[板情報](view_and_export/order_books.md)、[ローソク足の生成](candles_generation.md)、[注文ログ](view_and_export/order_log.md)、[Level 1](view_and_export/level_1_.md)、[ニュース](view_and_export/news.md)、[トランザクション](view_and_export/transactions.md)、[オプションデスク](view_and_export/option_desk.md)、[インジケーター](view_and_export/indicators.md)、[ポジション](view_and_export/positions.md)。 
 
 または、図に示すように必要なデータ型を右クリックするか、必要なデータ型をダブルクリックします。
 

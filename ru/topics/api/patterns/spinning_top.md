@@ -32,6 +32,6 @@ Spinning Top сам по себе не является сильным торг�
 
 ## См. также
 
-[Pattern Hammer](hammer.md)
+[Паттерн Hammer (Молот)](hammer.md)
 
-[Pattern Inverted Hammer](inverted_hammer.md)
+[Паттерн Inverted Hammer (Перевернутый Молот)](inverted_hammer.md)

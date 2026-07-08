@@ -161,7 +161,7 @@ StartProtection(
 
 [IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) 属性指示策略中使用的所有指标是否已形成（已准备好）。默认情况下，它会检查添加到 [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中的所有指标是否处于状态 [IIndicator.IsFormed](xref:StockSharp.Algo.Indicators.IIndicator.IsFormed) = `true`。
 
-关于在策略中使用指标的更多信息，请参见 [Indicators in Strategy](indicators.md) 部分。
+关于在策略中使用指标的更多信息，请参见 [战略中的指标](indicators.md) 部分。
 
 ### 是否在线属性
 

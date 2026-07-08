@@ -12,4 +12,4 @@ RemoteManager の英語ドキュメント
 
 ## 推奨コンテンツ
 
-[Prev Value](prev_value.md)
+[Prev value](prev_value.md)

@@ -6,4 +6,4 @@
 
 ## 推荐内容
 
-[P&L equity](pnl_equity.md)
+[盈亏曲线](pnl_equity.md)

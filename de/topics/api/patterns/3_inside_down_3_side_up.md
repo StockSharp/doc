@@ -35,5 +35,5 @@ Diese Muster sind im Kern Harami-Muster, denen eine bestätigende Candle folgt, 
 
 ## Siehe auch
 
-[Pattern 3 Outside Down and 3 Outside Up](3_outside_down_3_outside_up.md)
+[Pattern 3 Outside Down und 3 Outside Up](3_outside_down_3_outside_up.md)
 

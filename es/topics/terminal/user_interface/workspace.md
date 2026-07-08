@@ -2,4 +2,4 @@
 
 Consulte
 
-[Workspace](../../designer/user_interface/workspace.md)
+[Espacio de trabajo](../../designer/user_interface/workspace.md)

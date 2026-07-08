@@ -82,4 +82,4 @@ MOMA помогает определить силу тренда и потенц
 [Momentum](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
-[ROC](roc.md)
+[RoC](roc.md)

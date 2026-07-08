@@ -1,3 +1,3 @@
 # Indicadores
 
-Vea la [lista de indicadores](../../api/indicators/list_of_indicators.md)
+Vea la [Lista de indicadores](../../api/indicators/list_of_indicators.md)

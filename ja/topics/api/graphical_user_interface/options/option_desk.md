@@ -146,4 +146,4 @@
 
 ## 推奨コンテンツ
 
-[Greeks](../../options/greeks.md)
+[グリークス](../../options/greeks.md)

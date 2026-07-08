@@ -43,5 +43,5 @@ Der Mechanismus zur Orderverwaltung ist eng mit Komponenten zur Entwicklung von 
 
 [Order Replacement](orders_management/orders_replacement.md)
 
-[Transaction Number](orders_management/transaction_number.md)
+[Transaktionsnummer](orders_management/transaction_number.md)
 

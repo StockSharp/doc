@@ -25,4 +25,4 @@
 
 ## 另请参阅
 
-[Ticks](ticks.md)
+[逐笔成交](ticks.md)

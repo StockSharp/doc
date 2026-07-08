@@ -1,6 +1,6 @@
 # 策略图面板
 
-要打开 **Schemes** 面板，请在 **Common** 选项卡中单击 **Schemes** 按钮。**Schemes** 面板包含按用途分组到不同文件夹中的脚本树。策略图与自定义模块本质上没有区别，均使用同一个编辑器 [Strategy Designer](../strategies/using_visual_designer/diagram_panel.md) 进行编辑。为了避免混淆，它们被分成两个独立列表并保存在不同文件夹中：策略保存在 **Backtest** 文件夹，自定义模块保存在 **Custom Blocks** 文件夹。双击列表中的所需项目即可选择要编辑的策略图，随后会在设计器中打开该策略图以供查看和编辑。下面介绍 **Schemes** 面板中的文件夹：
+要打开 **Schemes** 面板，请在 **Common** 选项卡中单击 **Schemes** 按钮。**Schemes** 面板包含按用途分组到不同文件夹中的脚本树。策略图与自定义模块本质上没有区别，均使用同一个编辑器 [策略设计器](../strategies/using_visual_designer/diagram_panel.md) 进行编辑。为了避免混淆，它们被分成两个独立列表并保存在不同文件夹中：策略保存在 **Backtest** 文件夹，自定义模块保存在 **Custom Blocks** 文件夹。双击列表中的所需项目即可选择要编辑的策略图，随后会在设计器中打开该策略图以供查看和编辑。下面介绍 **Schemes** 面板中的文件夹：
 
 ![Designer Panel Circuits 00](../../../images/designer_panel_circuits_00.png)
 
@@ -14,10 +14,10 @@
 
 3. **Live** 文件夹包含已添加用于交易的策略。正在运行的策略以图标 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) 标记，已停止的策略以图标 ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) 标记。有关如何向 **Live** 文件夹添加并启动策略，请参阅[实盘交易](../live_execution/getting_started.md)章节。
 
-4. **Indicators** 文件夹包含自行编写、供交易策略使用的自定义指标。不能使用策略图创建新指标，只能使用代码或外部 DLL 文件。选择指标类型时，可以通过 [Indicator](../strategies/using_visual_designer/elements/common/indicator.md) 模块在策略图中使用自定义指标。
+4. **Indicators** 文件夹包含自行编写、供交易策略使用的自定义指标。不能使用策略图创建新指标，只能使用代码或外部 DLL 文件。选择指标类型时，可以通过 [指标](../strategies/using_visual_designer/elements/common/indicator.md) 模块在策略图中使用自定义指标。
 
 5. **Remote** 文件夹包含位于远程服务器上的策略。
 
 ## 另请参阅
 
-[Logs Panel](logs.md)
+[日志面板](logs.md)

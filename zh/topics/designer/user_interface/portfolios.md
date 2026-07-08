@@ -12,4 +12,4 @@
 
 ## 推荐内容
 
-[Strategy gallery](../strategy_gallery.md)
+[策略库](../strategy_gallery.md)

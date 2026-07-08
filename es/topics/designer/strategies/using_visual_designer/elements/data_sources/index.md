@@ -18,7 +18,7 @@ Parámetros
 - **Ignore errors** - la bandera establecida indica que los errores se ignorarán al calcular el índice.
 - **Calculate extended information** - la bandera establecida indica que, al calcular el índice, además de la información básica (volumen total, precio de apertura, precio de cierre, precio máximo, precio mínimo), se calculará la información extendida (volumen total negociado, volumen de apertura, volumen de cierre, volumen máximo, volumen mínimo).
 
-Las fórmulas matemáticas disponibles son similares a las del cubo [Formula](../common/formula.md).
+Las fórmulas matemáticas disponibles son similares a las del cubo [Fórmula](../common/formula.md).
 
 ## Contenido recomendado
 

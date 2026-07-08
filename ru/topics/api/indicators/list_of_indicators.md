@@ -2,7 +2,7 @@
 
 [S\#](../../api.md) стандартно предоставляет более 160 индикаторов технического анализа. Это позволяет не создавать с нуля нужные индикаторы, а использовать уже готовые.
 
-- [A/D](list_of_indicators/a_d.md) - Acceleration / Deceleration Indicator, измеряет ускорение или замедление движения цены
+- [A\/D](list_of_indicators/a_d.md) - Acceleration / Deceleration Indicator, измеряет ускорение или замедление движения цены
 - [ADL](list_of_indicators/accumulation_distribution_line.md) - Accumulation/Distribution Line (A/D Line), отслеживает приток или отток денег в ценную бумагу
 - [ALF](list_of_indicators/adaptive_laguerre_filter.md) - Adaptive Laguerre Filter, фильтр, адаптирующийся к рыночным условиям для сглаживания данных о цене
 - [APZ](list_of_indicators/adaptive_price_zone.md) - Adaptive Price Zone, определяет потенциальные уровни поддержки и сопротивления на основе волатильности
@@ -126,7 +126,7 @@
 - [RC](list_of_indicators/rainbow_charts.md) - Rainbow Charts, использует несколько скользящих средних для визуализации трендов
 - [RCI](list_of_indicators/rank_correlation_index.md) - Rank Correlation Index, измеряет тренд с помощью ранговой корреляции Спирмена
 - [RAVI](list_of_indicators/ravi.md) - Range Action Verification Index, измеряет силу тренда
-- [ROC](list_of_indicators/roc.md) - Rate of change, измеряет процентное изменение цены
+- [RoC](list_of_indicators/roc.md) - Rate of change, измеряет процентное изменение цены
 - [RMI](list_of_indicators/relative_momentum_index.md) - Relative Momentum Index, вариация RSI с учётом импульса
 - [RSI](list_of_indicators/rsi.md) - Relative Strength Index, измеряет скорость и изменение движения цены
 - [RVI](list_of_indicators/rvi.md) - Relative Vigor Index, измеряет уверенность тренда
@@ -137,7 +137,7 @@
 - [SW](list_of_indicators/sine_wave.md) - Sine Wave, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - Smoothed Moving Average, скользящая средняя с большим весом последних цен
 - [Std Dev](list_of_indicators/standard_deviation.md) - Standard deviation, измеряет разброс ценовых данных
-- [Standard error](list_of_indicators/standard_error.md) - Standard error in linear regression, измеряет точность прогнозов
+- [Standard Error](list_of_indicators/standard_error.md) - Standard error in linear regression, измеряет точность прогнозов
 - [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Stochastic %K, измеряет импульс на основе положения цены в диапазоне
 - [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Stochastic Oscillator, определяет состояния перекупленности и перепроданности
 - [Sum](list_of_indicators/sum_n.md) - Sum of N last values, вычисляет сумму последних N цен
@@ -155,7 +155,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, адаптируется к волатильности рынка
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, адаптирует период сглаживания
 - [Volume](list_of_indicators/volume.md) - Candle volume, измеряет объём торгов за свечу
-- [Volume profile](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
+- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, придаёт больший вес ценам с большим объёмом
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, средняя цена с учётом объёма
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, определяет начало новых трендов

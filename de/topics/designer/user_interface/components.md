@@ -19,4 +19,4 @@ Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollstandig zu k
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - stellt einen Chart fur Optionspositionen dar.
 - [Options Board](../strategies/using_visual_designer/elements/options/option_desk.md) - stellt eine Optionstabelle dar.
 - [Depth](components/order_book.md) - stellt eine Tabelle mit Limit-Orders zum Kaufen und Verkaufen dar.
-- [Order Log](../../terminal/user_interface/components/order_log.md) - stellt eine Tabelle mit Orders dar, die vollstandige Informationen zu allen Orders fur ausgewahlte Instrumente anzeigt.
+- [Order log](../../terminal/user_interface/components/order_log.md) - stellt eine Tabelle mit Orders dar, die vollstandige Informationen zu allen Orders fur ausgewahlte Instrumente anzeigt.

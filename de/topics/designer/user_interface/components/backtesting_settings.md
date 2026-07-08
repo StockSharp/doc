@@ -43,7 +43,7 @@ Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategie
 
 **Setting**
 
-- **[Risk management](../risk_management.md)** - die Risikomanagement-Einstellungen.
+- **[Risk Management](../risk_management.md)** - die Risikomanagement-Einstellungen.
 
 **Diagram parameters**
 

@@ -5,7 +5,7 @@
 ![API GUI Settings Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
 
 - **Heartbeat** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システム設定との接続を追跡するためのメカニズム。([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

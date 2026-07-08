@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API GUI Settings Yahoo](../../../../../images/api_gui_settings_yahoo.png)
 
 - **Heart beat** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.
-- **Reconnection settings** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte
 

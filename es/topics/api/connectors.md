@@ -141,7 +141,7 @@ private void InitConnector()
 
 Cómo guardar y cargar la configuración de [Connector](xref:StockSharp.Algo.Connector) en un archivo se puede encontrar en la sección [Guardado y carga de configuración](connectors/save_and_load_settings.md).
 
-La información sobre cómo crear su propio [Connector](xref:StockSharp.Algo.Connector) se puede encontrar en la sección [Creación de su propio conector](connectors/creating_own_connector.md).
+La información sobre cómo crear su propio [Connector](xref:StockSharp.Algo.Connector) se puede encontrar en la sección [Creación de su Propio Conector](connectors/creating_own_connector.md).
 
 La colocación de órdenes se describe en las secciones [Órdenes](orders_management.md), [Creación de una nueva orden](orders_management/create_new_order.md), [Creación de una nueva orden stop](orders_management/create_new_stop_order.md).
 

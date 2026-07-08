@@ -26,7 +26,7 @@
 - **Revocation check** - 証明書失効チェック。
 - **Check remote** - リモート証明書を確認します。
 - **Server name** - SSL 接続を使用するサーバー名。
-- **Reconnection settings** - 取引システムとの接続を追跡するメカニズムの設定（[Reconnection settings](../../reconnection_settings.md)）。
+- **Reconnection settings** - 取引システムとの接続を追跡するメカニズムの設定（[再接続設定](../../reconnection_settings.md)）。
 - **Heartbeat interval** - 接続がまだ有効であることをサーバーへ通知する間隔。既定値は 1 分です。
 - **Unified board code** - 統一銘柄用のボードコード。
 

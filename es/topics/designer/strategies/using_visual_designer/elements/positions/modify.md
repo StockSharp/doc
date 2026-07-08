@@ -39,7 +39,7 @@ Si el componente recibe un disparador mientras ya ha empezado a cambiar el volum
 
 ## Nota
 
-Para la gestión de órdenes de bajo nivel, puede usarse el componente [Order Registration](../orders/register.md). Para una gestión de posiciones de nivel superior, se recomienda este componente "Modify Position".
+Para la gestión de órdenes de bajo nivel, puede usarse el componente [Registro de orden](../orders/register.md). Para una gestión de posiciones de nivel superior, se recomienda este componente "Modify Position".
 
 ## Véase también
 

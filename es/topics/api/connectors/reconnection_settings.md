@@ -1,6 +1,6 @@
 # Configuración de reconexión
 
-Todos los conectores proporcionan la posibilidad de configurar la reconexión en caso de desconexión. En el elemento gráfico [ventana de configuración de conexión](../graphical_user_interface/connection_settings_window.md), se ve así: 
+Todos los conectores proporcionan la posibilidad de configurar la reconexión en caso de desconexión. En el elemento gráfico [Ventana de configuración de conexión](../graphical_user_interface/connection_settings_window.md), se ve así: 
 
 ![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
 

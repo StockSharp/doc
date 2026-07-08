@@ -21,4 +21,4 @@
 
 ## 另请参阅
 
-- [Comparison](comparison.md)
+- [比较](comparison.md)

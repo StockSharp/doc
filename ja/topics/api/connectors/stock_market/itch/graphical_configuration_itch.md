@@ -16,7 +16,7 @@
 - **Group ID** - グループ ID。
 - **Time zone** - 取引所が所在するタイムゾーンに関する情報。
 - **Heart beat** - 接続が生存していることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システム設定を使用して接続を追跡するメカニズム。([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - 取引システム設定を使用して接続を追跡するメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

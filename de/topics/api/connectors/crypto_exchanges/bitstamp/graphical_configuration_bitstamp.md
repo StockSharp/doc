@@ -9,7 +9,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Client** - Client-ID.
 - **Balance** - Intervall der Kontostandsprüfung. Erforderlich bei Ein- und Auszahlungsvorgängen.
 - **Heart beat** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.
-- **Reconnection settings** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 - **AuthV2** - AuthV2
 
 ## Empfohlener Inhalt

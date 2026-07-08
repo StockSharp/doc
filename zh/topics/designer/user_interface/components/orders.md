@@ -6,4 +6,4 @@
 
 ## 推荐内容
 
-[Trades](trades.md)
+[成交](trades.md)

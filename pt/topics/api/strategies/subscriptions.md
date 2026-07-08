@@ -48,7 +48,7 @@ Usar subscrições em estratégias tem várias vantagens em comparação com a s
 
 4. **Uniformidade do Código** - as subscrições usam uma abordagem unificada, independente do tipo de dados solicitado.
 
-5. **Integração com Regras** - as subscrições integram-se facilmente com o [modelo de eventos](event_model.md) da estratégia através de regras.
+5. **Integração com Regras** - as subscrições integram-se facilmente com o [Modelo de Eventos](event_model.md) da estratégia através de regras.
 
 6. **Gestão Automática de Subscrições** - quando a estratégia para, todas as suas subscrições são automaticamente canceladas, libertando recursos.
 

@@ -1,6 +1,6 @@
 # Obter Dados Históricos
 
-A API StockSharp fornece mecanismos convenientes para obter dados históricos, que podem ser utilizados tanto para testar estratégias de negociação como para construir [indicadores](../indicators.md).
+A API StockSharp fornece mecanismos convenientes para obter dados históricos, que podem ser utilizados tanto para testar estratégias de negociação como para construir [Indicadores](../indicators.md).
 
 ## Obter Dados Históricos via Connector
 
@@ -24,7 +24,7 @@ connector.Adapter.InnerAdapters.Add(messageAdapter);
 connector.Connect();
 ```
 
-A ligação também pode ser configurada utilizando a interface gráfica, conforme descrito na secção [Janela de Definições de Ligação](../graphical_user_interface/connection_settings_window.md).
+A ligação também pode ser configurada utilizando a interface gráfica, conforme descrito na secção [Janela de definições de ligação](../graphical_user_interface/connection_settings_window.md).
 
 ### Subscrever Velas Históricas
 

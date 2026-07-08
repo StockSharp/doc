@@ -24,4 +24,4 @@
 
 ## 另请参阅
 
-[Hedging](hedging.md)
+[对冲](hedging.md)

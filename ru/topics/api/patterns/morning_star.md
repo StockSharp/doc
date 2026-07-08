@@ -33,6 +33,6 @@ Morning Star предоставляет хорошие возможности д
 
 ## См. также
 
-[Pattern Evening Star](evening_star.md)
+[Паттерн Evening Star (Вечерняя звезда)](evening_star.md)
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Паттерн Three White Soldiers (Три белых солдата)](three_white_soldiers.md)

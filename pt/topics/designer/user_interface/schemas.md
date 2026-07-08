@@ -8,7 +8,7 @@ Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separado
    
     ![Designer Panel Circuits 04](../../../images/designer_panel_circuits_04.png)
    
-    As estratégias podem ser criadas usando um designer visual sem programação ou usando o editor de código-fonte integrado. Além disso, podem ser ligados ficheiros DLL externos com estratégias escritas no Microsoft Visual Studio. As informações detalhadas sobre **Strategies** são descritas na secção [Using blocks](../strategies/using_visual_designer.md).
+    As estratégias podem ser criadas usando um designer visual sem programação ou usando o editor de código-fonte integrado. Além disso, podem ser ligados ficheiros DLL externos com estratégias escritas no Microsoft Visual Studio. As informações detalhadas sobre **Strategies** são descritas na secção [Usar blocos](../strategies/using_visual_designer.md).
 
 2. A pasta **Own elements** contém elementos que representam uma funcionalidade completa e podem ser usados em vários esquemas ou num esquema várias vezes com valores de propriedades diferentes. Esses conjuntos de elementos podem ser extraídos para um bloco separado, que será depois usado como qualquer elemento padrão. **Custom block** é um esquema normal que é guardado/carregado/editado como qualquer esquema de estratégia. Adicione um novo elemento composto premindo o botão **Add** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) no separador **Common** e selecionando **Custom Blocks**. Ou clicando com o botão direito do rato na pasta **Custom Blocks** no painel **Schemes** e premindo o botão **Add** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) no menu pendente. Ao adicionar novos blocos personalizados, estes são adicionados automaticamente à **Element Palette**, no grupo **Custom Blocks**, e podem ser usados na criação de outros esquemas de estratégias e blocos personalizados. As informações detalhadas sobre **Custom Blocks** são descritas na secção [Creating composite elements](../strategies/using_visual_designer/composite_elements.md).
 
@@ -20,4 +20,4 @@ Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separado
 
 ## Ver Também
 
-[Logs Panel](logs.md)
+[Painel Logs](logs.md)

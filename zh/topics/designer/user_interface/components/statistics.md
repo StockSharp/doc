@@ -6,4 +6,4 @@
 
 ## 另请参阅
 
-[Debugging](../../backtesting/debugging.md)
+[调试](../../backtesting/debugging.md)

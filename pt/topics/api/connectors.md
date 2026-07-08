@@ -21,7 +21,7 @@ public MainWindow()
 
 ```
 
-Para configurar o [Connector](xref:StockSharp.Algo.Connector), a **API** possui uma interface gráfica especial que permite configurar várias conexões simultaneamente. Como usá-la é descrito na seção [Configuração Gráfica](connectors/graphical_configuration.md).
+Para configurar o [Connector](xref:StockSharp.Algo.Connector), a **API** possui uma interface gráfica especial que permite configurar várias conexões simultaneamente. Como usá-la é descrito na seção [Configuração gráfica](connectors/graphical_configuration.md).
 
 ```cs
 ...
@@ -186,4 +186,4 @@ Os seguintes eventos estão disponíveis para rastrear eventos de adaptadores es
 
 ## Veja também
 
-[Configuração Gráfica](connectors/graphical_configuration.md)
+[Configuração gráfica](connectors/graphical_configuration.md)

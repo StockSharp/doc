@@ -20,4 +20,4 @@
 
 ## См. также
 
-[Установка и удаление программ ](install_and_remove_apps.md)
+[Установка и удаление программ](install_and_remove_apps.md)

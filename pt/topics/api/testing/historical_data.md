@@ -1,6 +1,6 @@
 # Dados históricos
 
-O teste com dados históricos permite tanto a análise de mercado para encontrar padrões como a [otimização de parâmetros da estratégia](optimization.md). O trabalho principal é realizado pela classe [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), que obtém os dados armazenados num repositório local através de uma [API](../market_data_storage/api.md) especial. Parâmetros adicionais são descritos na secção [definições de teste](extended_settings.md).
+O teste com dados históricos permite tanto a análise de mercado para encontrar padrões como a [otimização de parâmetros da estratégia](optimization.md). O trabalho principal é realizado pela classe [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), que obtém os dados armazenados num repositório local através de uma [API](../market_data_storage/api.md) especial. Parâmetros adicionais são descritos na secção [Definições de Teste](extended_settings.md).
 
 O teste pode ser realizado usando vários tipos de dados de mercado:
 - Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
@@ -12,7 +12,7 @@ O teste pode ser realizado usando vários tipos de dados de mercado:
 
 Se não existirem livros de ordens guardados para o período de teste, estes podem ser gerados com base nas transações usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) ou reconstruídos a partir do order log usando [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
-Os dados para testes históricos devem ser descarregados e guardados antecipadamente num formato especial [S#](../../api.md). Isto pode ser feito manualmente usando [Connectors](../connectors.md) e a [Storage API](../market_data_storage/api.md), ou configurando e executando a aplicação especial [Hydra](../../hydra.md).
+Os dados para testes históricos devem ser descarregados e guardados antecipadamente num formato especial [S#](../../api.md). Isto pode ser feito manualmente usando [Conectores](../connectors.md) e a [Storage API](../market_data_storage/api.md), ou configurando e executando a aplicação especial [Hydra](../../hydra.md).
 
 ## Etapas principais do teste histórico
 
@@ -399,4 +399,4 @@ Definições alargadas para testes estão disponíveis em [S#](../../api.md), in
 - Definições de slippage de preço
 - Emulação de atraso de execução
 
-Estas definições são descritas com mais detalhe na secção [Definições de teste](extended_settings.md).
+Estas definições são descritas com mais detalhe na secção [Definições de Teste](extended_settings.md).

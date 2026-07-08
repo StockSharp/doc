@@ -6,7 +6,7 @@ Dentro de cada cubo se muestra un icono que lo caracteriza, así como un nombre 
 
 A la izquierda y a la derecha del cubo, los cuadros de color muestran los parámetros de entrada (izquierda) y salida (derecha).
 
-Los parámetros son necesarios para llenar el cubo con información mientras la estrategia se ejecuta. Por ejemplo, para el cubo [Candles](elements/data_sources/candles.md), se pasa a la entrada el instrumento para el que se desea construir una vela, y en la salida se devuelven las velas construidas. Estas, a su vez, pueden usarse como parámetro de entrada para el elemento [Chart](elements/common/chart.md). O pasarse a un método que determina el tamaño de la vela.
+Los parámetros son necesarios para llenar el cubo con información mientras la estrategia se ejecuta. Por ejemplo, para el cubo [Velas](elements/data_sources/candles.md), se pasa a la entrada el instrumento para el que se desea construir una vela, y en la salida se devuelven las velas construidas. Estas, a su vez, pueden usarse como parámetro de entrada para el elemento [Gráfico](elements/common/chart.md). O pasarse a un método que determina el tamaño de la vela.
 
 ![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
 
@@ -42,9 +42,9 @@ Así, puede conectar parámetros de los mismos colores (los mismos tipos de dato
 1. El parámetro **black** puede aceptar cualquier dato. Con mayor frecuencia, estos parámetros se usan para pasar señales para cualquier acción dentro del cubo. Por ejemplo, el cubo [Variable](elements/data_sources/variable.md) almacena un valor determinado y lo envía a la salida cuando recibe una señal.
 2. El parámetro **dark slate blue** puede recibir en la entrada distintos tipos de datos comparables. Por ejemplo, numéricos, valores de indicadores, cadenas, etc.
 
-Debe tenerse en cuenta que los tipos de parámetros pueden depender de las propiedades del cubo. Por ejemplo, para el cubo [Converter](elements/converters/converter.md), el tipo del parámetro de entrada se determina automáticamente por el tipo de datos del cubo fuente para [Converter](elements/converters/converter.md). Al crear un enlace, el color del cuadrado en el elemento cambia automáticamente.
+Debe tenerse en cuenta que los tipos de parámetros pueden depender de las propiedades del cubo. Por ejemplo, para el cubo [Convertidor](elements/converters/converter.md), el tipo del parámetro de entrada se determina automáticamente por el tipo de datos del cubo fuente para [Convertidor](elements/converters/converter.md). Al crear un enlace, el color del cuadrado en el elemento cambia automáticamente.
 
-Los parámetros de salida normalmente permiten varias conexiones salientes a distintos cubos; los parámetros de entrada generalmente permiten una conexión, excepto el cubo [Combination](elements/common/combination.md), que permite combinar el flujo de datos de distintos cubos en uno. El número de conexiones concurrentes para un parámetro se especifica en el código fuente del cubo.
+Los parámetros de salida normalmente permiten varias conexiones salientes a distintos cubos; los parámetros de entrada generalmente permiten una conexión, excepto el cubo [Combinación](elements/common/combination.md), que permite combinar el flujo de datos de distintos cubos en uno. El número de conexiones concurrentes para un parámetro se especifica en el código fuente del cubo.
 
 Los cubos para construir esquemas se dividen en varias categorías, cada una destinada a usarse en una parte determinada del esquema.
 

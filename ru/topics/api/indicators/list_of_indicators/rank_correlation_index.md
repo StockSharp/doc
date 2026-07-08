@@ -33,5 +33,5 @@ RCI принимает значения от −100 до +100 (при умнож
 ## См. также
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)

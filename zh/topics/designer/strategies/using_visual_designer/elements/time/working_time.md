@@ -20,4 +20,4 @@
 
 ## 另请参阅
 
-[Is Trading Allowed](trade_allow.md)
+[是否允许交易](trade_allow.md)

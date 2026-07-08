@@ -77,7 +77,7 @@
 | [CoinHub](../api/connectors/crypto_exchanges/coinhub.md) | [CoinHub の設定](../api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md) | [CoinHub のグラフィカル設定](../api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md) |
 | [Cryptopia](../api/connectors/crypto_exchanges/cryptopia.md) | [Cryptopia の設定](../api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md) | [Cryptopia のグラフィカル設定](../api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md) |
 | [Deribit](../api/connectors/crypto_exchanges/deribit.md) | [Deribit の設定](../api/connectors/crypto_exchanges/deribit/configuration_deribit.md) | [Deribit のグラフィカル設定](../api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md) |
-| [Digifinex](../api/connectors/crypto_exchanges/digifinex.md) | [Digifinex の設定](../api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md) | [Digifinex のグラフィカル設定](../api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md) |
+| [DigiFinex](../api/connectors/crypto_exchanges/digifinex.md) | [DigiFinex の設定](../api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md) | [DigiFinex のグラフィカル設定](../api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md) |
 | [EXMO](../api/connectors/crypto_exchanges/exmo.md) | [EXMO の設定](../api/connectors/crypto_exchanges/exmo/configuration_exmo.md) | [EXMO のグラフィカル設定](../api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md) |
 | [FatBTC](../api/connectors/crypto_exchanges/fatbtc.md) | [FatBTC の設定](../api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md) | [FatBTC のグラフィカル設定](../api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md) |
 | [Gate.io](../api/connectors/crypto_exchanges/gateio.md) | [Gate.io の設定](../api/connectors/crypto_exchanges/gateio/configuration_gateio.md) | [Gate.io のグラフィカル設定](../api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md) |
@@ -120,6 +120,6 @@
 | コネクタ | コネクタ設定 | グラフィカル設定 |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
 | [CSV](../api/connectors/common/csv.md) | ---------------------------------- | [CSV のグラフィカル設定](../api/connectors/common/csv/graphical_configuration_csv.md) |
-| [FIX protocol](../api/connectors/common/fix_protocol.md) | [FIX の設定](../api/connectors/common/fix_protocol/configuration_fix.md) | [FIX のグラフィカル設定](../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
-| [FAST protocol](../api/connectors/common/fast_protocol.md) | [FAST の設定](../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [FAST のグラフィカル設定](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
+| [FIX プロトコル](../api/connectors/common/fix_protocol.md) | [FIX の設定](../api/connectors/common/fix_protocol/configuration_fix.md) | [FIX のグラフィカル設定](../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
+| [FAST プロトコル](../api/connectors/common/fast_protocol.md) | [FAST の設定](../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [FAST のグラフィカル設定](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
 | [RSS](../api/connectors/common/rss.md) | ---------------------------------- | [RSS のグラフィカル設定](../api/connectors/common/rss/graphical_configuration_rss.md) |

@@ -10,5 +10,5 @@ Além disso, pode especificar um filtro para a data de expiração exata das op�
 
 ## Conteúdo recomendado
 
-[Smile volatility](smile_volatility.md)
+[Smile de volatilidade](smile_volatility.md)
 

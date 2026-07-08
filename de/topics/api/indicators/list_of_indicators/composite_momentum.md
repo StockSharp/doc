@@ -60,6 +60,6 @@ Der endgültige CM-Wert ist ein Oszillator, der sowohl im positiven als auch im 
 ## Siehe auch
 
 [Momentum](momentum.md)
-[ROC](roc.md)
+[RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

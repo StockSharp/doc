@@ -22,6 +22,6 @@ Dieser Block wird zur Berechnung von Indikatorwerten verwendet.
 
 ## Siehe auch
 
-[List of Indicators](../../../../../api/indicators/list_of_indicators.md)
+[Liste der Indikatoren](../../../../../api/indicators/list_of_indicators.md)
 [Logical Condition](logical_condition.md)
 

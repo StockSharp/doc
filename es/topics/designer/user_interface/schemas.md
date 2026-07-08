@@ -14,7 +14,7 @@ Para abrir el panel **Schemes**, debe hacer clic en el botón **Schemes** de la 
 
 3. La carpeta **Live** contiene estrategias añadidas para trading. Las estrategias iniciadas se marcan con el icono ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), y las detenidas se marcan con el icono ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png). Cómo añadir estrategias a la carpeta **Live** y cómo iniciarlas se describe en la sección [Trading en vivo](../live_execution/getting_started.md).
 
-4. La carpeta **Indicators** contiene sus propios indicadores para estrategias de trading, escritos por usted. No se pueden crear nuevos indicadores con esquemas; solo están disponibles código y archivos DLL externos. El uso de indicadores personalizados en esquemas está disponible mediante el bloque [Indicator](../strategies/using_visual_designer/elements/common/indicator.md) al seleccionar el tipo de indicador.
+4. La carpeta **Indicators** contiene sus propios indicadores para estrategias de trading, escritos por usted. No se pueden crear nuevos indicadores con esquemas; solo están disponibles código y archivos DLL externos. El uso de indicadores personalizados en esquemas está disponible mediante el bloque [Indicador](../strategies/using_visual_designer/elements/common/indicator.md) al seleccionar el tipo de indicador.
 
 5. La carpeta **Remote** contiene estrategias ubicadas en un servidor remoto.
 

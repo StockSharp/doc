@@ -16,7 +16,7 @@ Agora obtenha os instrumentos e os respetivos dados a partir do armazenamento lo
 
 ![Designer Quick start 02](../../images/designer_quick_start_03.png)
 
-É aberto o separador de gestão de dados de mercado. Para obter os instrumentos disponíveis, clique em [Download instruments](market_data_storage/download_instruments.md). Para descarregar um instrumento, introduza o seu código ou selecione a opção **All**, escolha a fonte de dados e clique em **OK**. O [Designer](../designer.md) solicita os instrumentos disponíveis à fonte de dados. Todos os instrumentos encontrados aparecem no painel **All instruments**.
+É aberto o separador de gestão de dados de mercado. Para obter os instrumentos disponíveis, clique em [Transferir instrumentos](market_data_storage/download_instruments.md). Para descarregar um instrumento, introduza o seu código ou selecione a opção **All**, escolha a fonte de dados e clique em **OK**. O [Designer](../designer.md) solicita os instrumentos disponíveis à fonte de dados. Todos os instrumentos encontrados aparecem no painel **All instruments**.
 
 Agora o [Designer](../designer.md) pode usar os instrumentos descarregados e os dados históricos disponíveis no armazenamento. Escolha uma das estratégias de demonstração. No painel [Schemas](user_interface/schemas.md), abra a pasta **Strategies** e faça duplo clique na estratégia de exemplo **SMA**. O separador **Sma** aparece na área de trabalho. Depois de mudar para a estratégia, a faixa abre automaticamente o separador **Backtest**, que contém os principais controlos para criar, depurar e testar estratégias ([Criar estratégias](strategies/using_visual_designer.md), [Exemplo de teste histórico](backtesting/getting_started.md)).
 

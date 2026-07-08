@@ -14,13 +14,13 @@ Normalerweise enthält [S#](../api.md) die folgenden Implementierungen von [ILog
 
 ## Nächste Schritte
 
-[Strategy logging](logging/strategy_logging.md)
+[Strategie-Logging](logging/strategy_logging.md)
 
-[IConnector logging](logging/iconnector_logging.md)
+[IConnector-Logging](logging/iconnector_logging.md)
 
-[Other logs sources](logging/other_logs_sources.md)
+[Andere Logquellen](logging/other_logs_sources.md)
 
-[Visual monitoring](logging/visual_monitoring.md)
+[Visuelles Monitoring](logging/visual_monitoring.md)
 
 [ILogListener creating](logging/custom_iloglistener.md)
 

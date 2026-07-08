@@ -12,7 +12,7 @@ Usar um livro de ofertas esparso tem várias vantagens:
 
 ## Criar um Livro de Ofertas Esparso
 
-Para trabalhar com um livro de ofertas agrupado, primeiro tem de configurar a receção através de [subscrições](subscriptions.md) e, em seguida, chamar o método de extensão [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). O método recebe os seguintes parâmetros:
+Para trabalhar com um livro de ofertas agrupado, primeiro tem de configurar a receção através de [Subscrições](subscriptions.md) e, em seguida, chamar o método de extensão [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)). O método recebe os seguintes parâmetros:
 
 - `priceRange` - a diferença de preço até à qual os níveis devem ser expandidos.
 - `priceStep` - o passo de preço do instrumento de negociação. É usado caso `priceRange` tenha menor precisão nos níveis de preço do que `priceStep`, sendo necessário arredondar os preços obtidos para o passo de preço do instrumento.

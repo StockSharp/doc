@@ -1,6 +1,6 @@
 # Configuración gráfica Ligther
 
-Para todos los productos [S#](../../../../api.md), la configuración gráfica se realiza en la [ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md).
+Para todos los productos [S#](../../../../api.md), la configuración gráfica se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md).
 
 Campos principales:
 

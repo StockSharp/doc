@@ -162,5 +162,5 @@ Für Optionsquoting ist eine spezielle Strategie [VolatilityQuotingStrategy](xre
 
 ## Empfohlene Inhalte
 
-[Delta hedging](delta_hedging.md)
+[Delta-Hedging](delta_hedging.md)
 

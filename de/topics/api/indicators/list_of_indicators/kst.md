@@ -84,7 +84,7 @@ Der KST-Indikator kann wie folgt interpretiert werden:
 
 ## Siehe auch
 
-[ROC](roc.md)
+[RoC](roc.md)
 [MACD](macd.md)
 [Momentum](momentum.md)
 [RSI](rsi.md)

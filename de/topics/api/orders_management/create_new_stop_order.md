@@ -35,5 +35,5 @@ Jede Verbindung hat ihre eigene Implementierung der Klasse [OrderCondition](xref
 
 ## Empfohlene Inhalte
 
-[Orders states](orders_states.md)
+[Orderzustände](orders_states.md)
 

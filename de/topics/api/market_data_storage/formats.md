@@ -116,6 +116,6 @@ var depthStorage = storageRegistry.GetQuoteMessageStorage(
 
 ## Siehe auch
 
-- [Working with the API](api.md)
-- [Storage Drives](drives.md)
+- [Arbeiten mit der API](api.md)
+- [Speicherlaufwerke](drives.md)
 

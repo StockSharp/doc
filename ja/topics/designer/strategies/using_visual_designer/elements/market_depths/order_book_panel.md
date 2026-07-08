@@ -2,9 +2,9 @@
 
 ![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 
-このキューブは、専用のグラフィカルコンポーネント [Order Book](../../../../user_interface/components/order_book.md) に板情報を表示するために設計されています。
+このキューブは、専用のグラフィカルコンポーネント [板情報](../../../../user_interface/components/order_book.md) に板情報を表示するために設計されています。
 
-[Order Book](../../../../user_interface/components/order_book.md) コンポーネントは、**Simulation** または **Trading** タブの [Components](../../../../user_interface/components.md) グループから追加する必要があります。[Order Book](../../../../user_interface/components/order_book.md) コンポーネントの詳細は、[Order Book](../../../../user_interface/components/order_book.md) セクションに記載されています。
+[板情報](../../../../user_interface/components/order_book.md) コンポーネントは、**Simulation** または **Trading** タブの [コンポーネント](../../../../user_interface/components.md) グループから追加する必要があります。[板情報](../../../../user_interface/components/order_book.md) コンポーネントの詳細は、[板情報](../../../../user_interface/components/order_book.md) セクションに記載されています。
 
 ### 入力ソケット
 

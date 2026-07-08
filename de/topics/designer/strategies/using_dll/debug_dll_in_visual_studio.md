@@ -1,6 +1,6 @@
 # Debugging einer DLL mit Visual Studio
 
-Visual Studio bietet einen Mechanismus, um sich mit dem Visual-Studio-Debugger an laufende Prozesse anzuhängen. Der Visual-Studio-Debugger wird in der Dokumentation [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) ausführlicher beschrieben. Der Debugging-Prozess wird am Beispiel einer Strategie gezeigt, die im Abschnitt [Using DLL](../using_dll.md) hinzugefügt wurde.
+Visual Studio bietet einen Mechanismus, um sich mit dem Visual-Studio-Debugger an laufende Prozesse anzuhängen. Der Visual-Studio-Debugger wird in der Dokumentation [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) ausführlicher beschrieben. Der Debugging-Prozess wird am Beispiel einer Strategie gezeigt, die im Abschnitt [DLL verwenden](../using_dll.md) hinzugefügt wurde.
 
 1. Um sich an einen Prozess anzuhängen und das Debugging einer DLL-Strategie zu starten, muss diese in den Speicher geladen werden. Die DLL wird nach dem [Hinzufügen der Strategie](../using_dll.md) in den Speicher geladen. Sobald die DLL im Speicher geladen ist, können Sie sich an den Prozess anhängen.
 

@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [GatorOscillator](xref:StockS
 
 ## Contenido recomendado
 
-[Highest ](highest.md)
+[Highest](highest.md)

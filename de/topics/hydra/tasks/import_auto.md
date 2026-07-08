@@ -2,7 +2,7 @@
 
 Die Aufgabe fuehrt den automatischen Import von Boersendaten aus Dateien im angegebenen Verzeichnis gemaess der angegebenen Dateimaske aus.
 
-Fuer jeden ausgewaehlten Marktdatentyp wird die Vorlage auf der Registerkarte [Importing](../importing.md) konfiguriert.
+Fuer jeden ausgewaehlten Marktdatentyp wird die Vorlage auf der Registerkarte [Import](../importing.md) konfiguriert.
 
 ![hydra tasks import](../../../images/hydra_tasks_import.png)
 

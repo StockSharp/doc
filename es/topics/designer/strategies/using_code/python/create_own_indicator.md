@@ -106,7 +106,7 @@ Este indicador recibe un valor entrante y realiza una desviación aleatoria basa
 
 La descripción de los métodos del indicador está disponible en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
-Para añadir el indicador creado al esquema, debe usar el cubo [Indicator](../../using_visual_designer/elements/common/indicator.md) y después establecer en él el indicador deseado:
+Para añadir el indicador creado al esquema, debe usar el cubo [Indicador](../../using_visual_designer/elements/common/indicator.md) y después establecer en él el indicador deseado:
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 

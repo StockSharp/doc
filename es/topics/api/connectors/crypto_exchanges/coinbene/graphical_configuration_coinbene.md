@@ -3,7 +3,7 @@
 
 # Configuración gráfica CoinBene
 
-Para todos los productos de [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
+Para todos los productos de [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
 ![API GUI Settings CoinBene](../../../../../images/api_gui_settings_coinbene.png)
 
@@ -19,6 +19,6 @@ Para todos los productos de [S#](../../../../api.md), la configuración gráfica
 
 [Configuración gráfica](../../graphical_configuration.md)
 
-[Creación de su propio conector](../../creating_own_connector.md)
+[Creación de su Propio Conector](../../creating_own_connector.md)
 
 [Guardar y cargar configuración](../../save_and_load_settings.md)

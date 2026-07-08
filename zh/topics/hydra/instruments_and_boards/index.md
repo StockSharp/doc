@@ -39,7 +39,7 @@
 - **tan(a)** \- 返回指定角度的正切值。
 - **truncate(a)** \- 计算指定数字的整数部分。
 
-接下来，在 **Common** 选项卡中单击 [Candles](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**交易品种和数据时间段，在 **Create From:** 字段中选择 **Composite Element**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
+接下来，在 **Common** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**交易品种和数据时间段，在 **Create From:** 字段中选择 **Composite Element**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
 
 ![hydra index candle](../../../images/hydra_index_candle.png)
 

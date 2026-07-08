@@ -8,10 +8,10 @@ Para importar o log de ordens, selecione o item **Import \=\> Order log** no men
 
 1. **Definições de importação.**.
 
-   Consulte a importação de [Candles](candles.md).
+   Consulte a importação de [Velas](candles.md).
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
 
-   Consulte a importação de [Candles](candles.md).
+   Consulte a importação de [Velas](candles.md).
 
    **Vejamos um exemplo de importação de um Log de Ordens a partir de um ficheiro CSV:**
    - O ficheiro a partir do qual pretende importar dados tem o seguinte modelo:

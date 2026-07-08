@@ -12,7 +12,7 @@
 
 如果在测试期间没有保存的订单簿，可以使用 [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) 基于交易生成，或者使用 [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) 从订单日志重建。
 
-历史测试的数据必须事先以特殊的 [S#](../../api.md) 格式下载并保存。可以手动使用 [Connectors](../connectors.md) 和 [Storage API](../market_data_storage/api.md) 完成，也可以通过配置并运行特殊的 [Hydra](../../hydra.md) 应用程序完成。
+历史测试的数据必须事先以特殊的 [S#](../../api.md) 格式下载并保存。可以手动使用 [连接器](../connectors.md) 和 [Storage API](../market_data_storage/api.md) 完成，也可以通过配置并运行特殊的 [Hydra](../../hydra.md) 应用程序完成。
 
 ## 历史测试的主要阶段
 

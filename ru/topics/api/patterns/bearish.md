@@ -32,6 +32,6 @@ Bearish Candle может использоваться в различных т�
 
 ## См. также
 
-[Pattern Bullish Candle](bullish.md)
+[Паттерн Bullish Candle (Бычья свеча)](bullish.md)
 
-[Pattern Black Candle](black_candle.md)
+[Паттерн Black Candle (Черная свеча)](black_candle.md)

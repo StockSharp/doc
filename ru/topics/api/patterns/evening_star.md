@@ -34,6 +34,6 @@ Evening Star предоставляет хорошие возможности д
 
 ## См. также
 
-[Pattern Morning Star](morning_star.md)
+[Паттерн Morning Star (Утренняя звезда)](morning_star.md)
 
-[Pattern Three Black Crows](three_black_crows.md)
+[Паттерн Three Black Crows (Три черных вороны)](three_black_crows.md)

@@ -2,7 +2,7 @@
 
 ## Подписка на стакан заявок
 
-Для [подписки](../market_data/subscriptions.md) на стакан в StockSharp необходимо выполнить следующие шаги:
+Для [Подписки](../market_data/subscriptions.md) на стакан в StockSharp необходимо выполнить следующие шаги:
 
 1. Подписаться на событие получения стаканов [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) и обрабатывать объекты интерфейса [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage):
 

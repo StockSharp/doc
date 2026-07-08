@@ -15,6 +15,6 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 [Configuração gráfica](../../graphical_configuration.md)
 
-[Criando seu próprio conector](../../creating_own_connector.md)
+[Criando Seu Próprio Conector](../../creating_own_connector.md)
 
 [Salvar e carregar configurações](../../save_and_load_settings.md)

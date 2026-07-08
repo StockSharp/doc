@@ -12,4 +12,4 @@ RemoteManager 英文文档
 
 ## 推荐内容
 
-[Prev Value](prev_value.md)
+[前一个值](prev_value.md)

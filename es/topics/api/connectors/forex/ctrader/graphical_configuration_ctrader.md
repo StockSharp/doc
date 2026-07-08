@@ -1,6 +1,6 @@
 # Configuración gráfica de cTrader
 
-Para todos los productos StockSharp, la configuración gráfica de la conexión se realiza en el formulario de pantalla [ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
+Para todos los productos StockSharp, la configuración gráfica de la conexión se realiza en el formulario de pantalla [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
 ![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
 

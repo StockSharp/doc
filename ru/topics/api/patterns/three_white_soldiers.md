@@ -35,6 +35,6 @@ Three White Soldiers предоставляет надежные возможн�
 
 ## См. также
 
-[Pattern Three Black Crows](three_black_crows.md)
+[Паттерн Three Black Crows (Три черных вороны)](three_black_crows.md)
 
-[Pattern Rising Three Methods](rising_three_methods.md)
+[Паттерн Rising Three Methods (Восходящие три метода)](rising_three_methods.md)

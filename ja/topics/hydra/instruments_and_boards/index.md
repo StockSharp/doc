@@ -32,7 +32,7 @@
    - **tan(a)** - 指定した角度の正接を返します。
    - **truncate(a)** - 指定した数値の整数部を計算します。
 4. インデックスの計算に使用する数学演算を入力します。![hydra index sec 01](../../../images/hydra_index_sec_01.png)
-5. 次に、**Common** タブで [Candles](../working_with_data/view_and_export/candles.md) をクリックし、作成した **Index** 銘柄とデータ期間を選択し、**Create From:** フィールドで **Composite Element** を設定してから、![hydra find](../../../images/hydra_find.png) をクリックします。![hydra index candle](../../../images/hydra_index_candle.png)
+5. 次に、**Common** タブで [ローソク足](../working_with_data/view_and_export/candles.md) をクリックし、作成した **Index** 銘柄とデータ期間を選択し、**Create From:** フィールドで **Composite Element** を設定してから、![hydra find](../../../images/hydra_find.png) をクリックします。![hydra index candle](../../../images/hydra_index_candle.png)
 
 生成されたデータは Excel、XML、または TXT 形式にエクスポートできます。エクスポートはドロップダウンリストを使用して行います。
 

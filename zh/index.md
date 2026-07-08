@@ -2,7 +2,7 @@
 
 [StockSharp (S#)](https://stocksharp.com/store/) 提供面向全球市场（美国、欧洲、亚洲、俄罗斯，涵盖股票、期货、期权、比特币、外汇等）的**免费**交易程序。用户可选择手动交易或通过自动化交易进行操作，包括算法交易机器人、传统交易或高频交易（HFT）。
 
-**支持 90 多家券商、交易所和数据源：** [Connectors](topics/api/connectors.md).
+**支持 90 多家券商、交易所和数据源：** [连接器](topics/api/connectors.md).
 
 S# 与任何支持我们连接方式的经纪商均兼容。
 
@@ -31,7 +31,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 
 [Hydra](topics/hydra.md) 是一款用于自动下载历史及实时市场数据的应用程序：
 
-- 支持多种数据源 [Connectors](topics/api/connectors.md).
+- 支持多种数据源 [连接器](topics/api/connectors.md).
 - 压缩率极高（每笔交易 2 字节，每本订单簿 7 字节）。
 - 支持处理任何数据类型（K线、Tick数据、订单簿、订单日志、期权、新闻等）。
 - 对存储数据的 API 访问。
@@ -83,4 +83,4 @@ Shell 提供了一个现成的图形化框架，可根据您的需求快速定�
 
 ## 推荐内容
 
-[Reference Materials](topics/common/reference_materials.md)
+[参考资料](topics/common/reference_materials.md)

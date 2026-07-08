@@ -18,4 +18,4 @@
 
 ## 推荐内容
 
-[Chart positions](chart_positions.md)
+[期权持仓图表](chart_positions.md)

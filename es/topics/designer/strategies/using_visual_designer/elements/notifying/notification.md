@@ -2,7 +2,7 @@
 
 ![Designer Notice 00](../../../../../../images/designer_notice_00.png)
 
-El cubo envía una notificación cuando llegan datos a su socket de entrada. El valor entrante se convierte en texto mediante `ToString`. Puede conectar una [Variable](../data_sources/variable.md) para enviar texto fijo, adjuntar flujos de operaciones o velas para ver sus detalles, o usar los cubos [String format](string_format.md) y [String concat](string_concat.md) para preparar un mensaje personalizado.
+El cubo envía una notificación cuando llegan datos a su socket de entrada. El valor entrante se convierte en texto mediante `ToString`. Puede conectar una [Variable](../data_sources/variable.md) para enviar texto fijo, adjuntar flujos de operaciones o velas para ver sus detalles, o usar los cubos [Formato de cadena](string_format.md) y [Concatenación de cadenas](string_concat.md) para preparar un mensaje personalizado.
 
 ### Sockets de entrada
 
@@ -20,6 +20,6 @@ Parámetros
 
 ## Contenido recomendado
 
-[String format](string_format.md)
-[String concat](string_concat.md)
+[Formato de cadena](string_format.md)
+[Concatenación de cadenas](string_concat.md)
 [Configuración de notificaciones](../../../../../terminal/notifications.md)

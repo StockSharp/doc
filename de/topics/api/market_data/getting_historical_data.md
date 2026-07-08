@@ -24,7 +24,7 @@ connector.Adapter.InnerAdapters.Add(messageAdapter);
 connector.Connect();
 ```
 
-Die Verbindung kann auch über die grafische Oberfläche konfiguriert werden, wie im Abschnitt [Connection Settings Window](../graphical_user_interface/connection_settings_window.md) beschrieben.
+Die Verbindung kann auch über die grafische Oberfläche konfiguriert werden, wie im Abschnitt [Fenster für Verbindungseinstellungen](../graphical_user_interface/connection_settings_window.md) beschrieben.
 
 ### Historische Candles abonnieren
 
@@ -147,6 +147,6 @@ connector.Subscribe(depthSubscription);
 ## Siehe auch
 
 - [Candles](../candles.md)
-- [Subscriptions](subscriptions.md)
-- [Indicators](../indicators.md)
+- [Abonnements](subscriptions.md)
+- [Indikatoren](../indicators.md)
 

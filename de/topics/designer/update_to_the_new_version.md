@@ -1,8 +1,8 @@
 # Update to the new version
 
-[Update apps](../installer/update_apps.md)
+[Apps aktualisieren](../installer/update_apps.md)
 
 ## Empfohlene Inhalte
 
-[Installing Designer](installing_designer.md)
+[Designer installieren](installing_designer.md)
 

@@ -31,6 +31,6 @@ White Marubozu предоставляет более сильный сигнал
 
 ## См. также
 
-[Pattern Black Marubozu](black_marubozu.md)
+[Паттерн Black Marubozu (Черный Марубозу)](black_marubozu.md)
 
-[Pattern White Candle](white_candle.md)
+[Паттерн White Candle (Белая свеча)](white_candle.md)

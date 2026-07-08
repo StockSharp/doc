@@ -55,8 +55,8 @@
 
 ## 注意
 
-直接操作订单是一种低层级的持仓管理方式。对于更高层级的管理，建议使用“Modify Position”组件，详见 [Modify Position](../positions/modify.md)。
+直接操作订单是一种低层级的持仓管理方式。对于更高层级的管理，建议使用“Modify Position”组件，详见 [修改持仓](../positions/modify.md)。
 
 ## 另请参阅
 
-[Modify Position](../positions/modify.md)
+[修改持仓](../positions/modify.md)

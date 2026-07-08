@@ -37,10 +37,10 @@ O mecanismo de gestão de ordens está estreitamente integrado com componentes p
 
 [Estados da Ordem](orders_management/orders_states.md)
 
-[Cancelamento de Ordem](orders_management/order_cancel.md)
+[Cancelamento de ordem](orders_management/order_cancel.md)
 
-[Cancelamento em Massa de Ordens](orders_management/orders_mass_cancel.md)
+[Cancelamento em massa de ordens](orders_management/orders_mass_cancel.md)
 
-[Substituição de Ordens](orders_management/orders_replacement.md)
+[Substituição de ordens](orders_management/orders_replacement.md)
 
-[Número da Transação](orders_management/transaction_number.md)
+[Número da transação](orders_management/transaction_number.md)

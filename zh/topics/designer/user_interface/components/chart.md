@@ -4,7 +4,7 @@
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 
-每个图表的左上角会显示添加到图表中的全部图形元素。清除 ![Designer Schedule 00](../../../../images/designer_schedule_00.png) 图形元素旁的复选框后，该元素会从图表中隐藏。单击 ![Designer Schedule 01](../../../../images/designer_schedule_01.png) 按钮可以打开图形元素设置。也可以在 [Chart](../../strategies/using_visual_designer/elements/common/chart.md) 模块的属性中配置图形元素。
+每个图表的左上角会显示添加到图表中的全部图形元素。清除 ![Designer Schedule 00](../../../../images/designer_schedule_00.png) 图形元素旁的复选框后，该元素会从图表中隐藏。单击 ![Designer Schedule 01](../../../../images/designer_schedule_01.png) 按钮可以打开图形元素设置。也可以在 [图表](../../strategies/using_visual_designer/elements/common/chart.md) 模块的属性中配置图形元素。
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
@@ -22,4 +22,4 @@
 
 ## 推荐内容
 
-[Orders](orders.md)
+[订单](orders.md)

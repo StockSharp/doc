@@ -14,7 +14,7 @@ Antes de começar a escrever robôs de negociação para a plataforma de negocia
 
 [Criar o próprio conector](../creating_own_connector.md)
 
-[Gestão de ordens](../../orders_management.md)
+[Gestão de Ordens](../../orders_management.md)
 
 [Criar nova ordem](../../orders_management/create_new_order.md)
 

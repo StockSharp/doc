@@ -6,7 +6,7 @@
 
 在搜索字段中输入交易品种名称，然后单击 **Search**（或按 **Enter**），StockSharp 服务器会返回符合条件的搜索结果。交易品种名称右侧还会显示可用历史数据的日期范围。
 
-对于每个新交易品种，此操作只需执行一次。找到的交易品种随后会保存在本地磁盘中；重新启动 **Designer** 后，程序会直接从本地存储加载这些交易品种。此步骤是必需的，因为启动策略时需要指定交易品种；在 [Variable](../strategies/using_visual_designer/elements/data_sources/variable.md) 块中直接指定交易品种时同样如此。
+对于每个新交易品种，此操作只需执行一次。找到的交易品种随后会保存在本地磁盘中；重新启动 **Designer** 后，程序会直接从本地存储加载这些交易品种。此步骤是必需的，因为启动策略时需要指定交易品种；在 [变量](../strategies/using_visual_designer/elements/data_sources/variable.md) 块中直接指定交易品种时同样如此。
 
 接下来返回策略，并在 **Backtest** 选项卡中启用云端选项：
 

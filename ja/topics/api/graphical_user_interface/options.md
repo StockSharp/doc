@@ -7,6 +7,6 @@
 
 ## 推奨コンテンツ
 
-[Greeks](../options/greeks.md)
+[グリークス](../options/greeks.md)
 
 [ボラティリティ取引](../options/volatility_trading.md)

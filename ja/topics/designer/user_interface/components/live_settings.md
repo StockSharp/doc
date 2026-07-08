@@ -16,7 +16,7 @@
 
 **Settings**
 
-- [Risk management](../risk_management.md) - リスク管理の設定です。
+- [リスク管理](../risk_management.md) - リスク管理の設定です。
 
 **Diagram parameters**
 

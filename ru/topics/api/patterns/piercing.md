@@ -33,4 +33,4 @@ Piercing предоставляет хорошие возможности для
 
 ## См. также
 
-[Pattern Bullish Engulfing](bullish_engulfing.md)
+[Паттерн Bullish Engulfing (Бычье поглощение)](bullish_engulfing.md)

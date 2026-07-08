@@ -8,7 +8,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Secret** - Secret.
 - **Demo** - Verbindung zum Demo-Handel anstelle des realen Handelsservers.
 - **Heart beat** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.
-- **Reconnection settings** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Reconnection settings](../../reconnection_settings.md))
+- **Reconnection settings** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlener Inhalt
 

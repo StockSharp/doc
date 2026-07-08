@@ -32,7 +32,7 @@ Als Beispiel betrachten wir den Instrumentenverhaeltnis-Index AAPL@NYSE\/GOOG@NY
    - **tan(a)** - Gibt den Tangens des angegebenen Winkels zurueck.
    - **truncate(a)** - Berechnet den ganzzahligen Anteil der angegebenen Zahl.
 4. Geben Sie die mathematische Operation ein, mit der der Index berechnet werden soll. ![hydra index sec 01](../../../images/hydra_index_sec_01.png)
-5. Klicken Sie danach auf der Registerkarte **Common** auf [Candles](../working_with_data/view_and_export/candles.md), waehlen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Create From:** den Wert **Composite Element** und klicken Sie dann auf ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
+5. Klicken Sie danach auf der Registerkarte **Common** auf [Kerzen](../working_with_data/view_and_export/candles.md), waehlen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Create From:** den Wert **Composite Element** und klicken Sie dann auf ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
 
 Die erzeugten Daten koennen in die Formate Excel, XML oder TXT exportiert werden. Der Export erfolgt ueber die Dropdown-Liste.
 

@@ -37,6 +37,6 @@ Parámetros
 
 ## Contenido recomendado
 
-[String format](string_format.md)
+[Formato de cadena](string_format.md)
 [Notificación](notification.md)
 

@@ -20,7 +20,7 @@ Parâmetros disponíveis:
 - --hf - data inicial para o teste no formato YYYYMMDD.
 - --ht - data final para o teste no formato YYYYMMDD.
 - -f - (opcional) formato de armazenamento (Binary ou Csv).
-- --sec - (opcional) [identificador do instrumento](../api/instruments/instrument_identifier.md).
+- --sec - (opcional) [Identificador do instrumento](../api/instruments/instrument_identifier.md).
 - -r - (opcional) formato do relatório de resultado do teste (json, xml, csv).
 - --tm - (opcional) timeout da estratégia.
 - --memory - (opcional) tamanho máximo de memória (em megabytes).

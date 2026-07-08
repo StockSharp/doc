@@ -18,4 +18,4 @@
 
 ## 推荐内容
 
-[Comparison](comparison.md)
+[比较](comparison.md)

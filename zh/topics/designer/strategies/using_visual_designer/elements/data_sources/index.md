@@ -18,8 +18,8 @@
 - **Ignore errors** \- 设置此标志后，计算指数时会忽略错误。
 - **Calculate extended information** \- 设置此标志后，计算指数时除了基本信息（总成交量、开盘价、收盘价、最高价和最低价）外，还会计算扩展信息（总成交额、开盘成交量、收盘成交量、最大成交量和最小成交量）。
 
-可用的数学公式与 [Formula](../common/formula.md) 模块相同。
+可用的数学公式与 [公式](../common/formula.md) 模块相同。
 
 ## 推荐内容
 
-[Variable](variable.md)
+[变量](variable.md)

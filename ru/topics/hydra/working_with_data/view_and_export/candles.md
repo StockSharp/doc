@@ -1,3 +1,3 @@
 # Свечи
 
-См. раздел [Генерация свечей.](../candles_generation.md)
+См. раздел [Генерация свечей](../candles_generation.md)

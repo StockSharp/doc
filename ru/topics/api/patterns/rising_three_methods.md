@@ -36,6 +36,6 @@ Rising Three Methods предоставляет хорошие возможно�
 
 ## См. также
 
-[Pattern Falling Three Methods](falling_three_methods.md)
+[Паттерн Falling Three Methods (Падающие три метода)](falling_three_methods.md)
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Паттерн Three White Soldiers (Три белых солдата)](three_white_soldiers.md)

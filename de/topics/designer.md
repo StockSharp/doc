@@ -9,5 +9,5 @@
 
 ## Empfohlene Inhalte
 
-[Installing Designer](designer/installing_designer.md)
+[Designer installieren](designer/installing_designer.md)
 

@@ -2,9 +2,9 @@
 
 ![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 
-O cubo foi concebido para apresentar o livro de ordens num componente gráfico especializado [Order Book](../../../../user_interface/components/order_book.md).
+O cubo foi concebido para apresentar o livro de ordens num componente gráfico especializado [Livro de ordens](../../../../user_interface/components/order_book.md).
 
-O componente [Order Book](../../../../user_interface/components/order_book.md) deve ser adicionado a partir do grupo [Components](../../../../user_interface/components.md) dos separadores **Simulation** ou **Trading**. Pode encontrar mais detalhes sobre o componente [Order Book](../../../../user_interface/components/order_book.md) na secção [Order Book](../../../../user_interface/components/order_book.md).
+O componente [Livro de ordens](../../../../user_interface/components/order_book.md) deve ser adicionado a partir do grupo [Componentes](../../../../user_interface/components.md) dos separadores **Simulation** ou **Trading**. Pode encontrar mais detalhes sobre o componente [Livro de ordens](../../../../user_interface/components/order_book.md) na secção [Livro de ordens](../../../../user_interface/components/order_book.md).
 
 ### Sockets de entrada
 
@@ -14,4 +14,4 @@ O componente [Order Book](../../../../user_interface/components/order_book.md) d
 
 ## Ver também
 
-[Grouped Order Book](grouped_order_book.md)
+[Grouped order book](grouped_order_book.md)

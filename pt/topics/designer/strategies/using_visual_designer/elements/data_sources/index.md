@@ -22,4 +22,4 @@ As fórmulas matemáticas disponíveis são semelhantes às do cubo [Formula](..
 
 ## Conteúdo recomendado
 
-[Variable](variable.md)
+[Variável](variable.md)

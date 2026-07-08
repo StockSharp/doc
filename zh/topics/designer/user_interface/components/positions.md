@@ -10,4 +10,4 @@
 
 ## 推荐内容
 
-[Statistics](statistics.md)
+[统计](statistics.md)

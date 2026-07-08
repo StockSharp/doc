@@ -2,11 +2,11 @@
 
 **CEX.IO** - 暗号資産取引所。
 
-この取引プラットフォーム向けの取引ロボットを書き始める前に、[Connectors](../../connectors.md) セクションのリンクを読むことをお勧めします。
+この取引プラットフォーム向けの取引ロボットを書き始める前に、[コネクター](../../connectors.md) セクションのリンクを読むことをお勧めします。
 
 ## 推奨コンテンツ
 
-[Connectors](../../connectors.md)
+[コネクター](../../connectors.md)
 
 [グラフィカル設定](../graphical_configuration.md)
 
@@ -14,7 +14,7 @@
 
 [独自コネクターの作成](../creating_own_connector.md)
 
-[Orders management](../../orders_management.md)
+[注文管理](../../orders_management.md)
 
 [新しい注文の作成](../../orders_management/create_new_order.md)
 

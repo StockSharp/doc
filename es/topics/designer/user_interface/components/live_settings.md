@@ -16,7 +16,7 @@ El panel **Properties** está minimizado de forma predeterminada en el lado dere
 
 **Settings**
 
-- [Risk management](../risk_management.md) - configuración de gestión de riesgos.
+- [Gestión de riesgos](../risk_management.md) - configuración de gestión de riesgos.
 
 **Diagram parameters**
 
@@ -27,4 +27,4 @@ Si no rellena los **Diagram parameters**, durante la emulación se usará el ins
 
 ## Contenido recomendado
 
-[Chart](chart.md)
+[Gráfico](chart.md)

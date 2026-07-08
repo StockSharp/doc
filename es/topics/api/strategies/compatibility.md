@@ -258,7 +258,7 @@ Sin embargo, los principales parámetros configurables deben seguir implementán
 
 ### Use reglas en lugar de suscripción directa
 
-Para procesar datos de mercado, se recomienda usar el [modelo de eventos](event_model.md) y reglas:
+Para procesar datos de mercado, se recomienda usar el [Modelo de eventos](event_model.md) y reglas:
 
 ```cs
 protected override void OnStarted2(DateTime time)

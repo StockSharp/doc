@@ -19,4 +19,4 @@
 
 ## 另请参阅
 
-[Formula](formula.md)
+[公式](formula.md)

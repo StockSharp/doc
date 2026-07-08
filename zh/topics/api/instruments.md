@@ -59,7 +59,7 @@ StockSharp 中的每个工具都有一个唯一标识符 [SecurityId](xref:Stock
 
 ## 另请参阅
 
-[ 交易品种标识符 ](instruments/instrument_identifier.md)
+[交易品种标识符](instruments/instrument_identifier.md)
 
 [ 标识符 *@ALL ](instruments/identifier_@all.md)
 

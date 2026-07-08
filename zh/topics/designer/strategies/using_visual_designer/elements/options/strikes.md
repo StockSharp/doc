@@ -27,4 +27,4 @@
 
 ## 推荐内容
 
-[Crossing](../common/crossing.md)
+[交叉](../common/crossing.md)

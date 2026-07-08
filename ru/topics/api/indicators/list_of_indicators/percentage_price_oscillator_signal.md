@@ -39,4 +39,4 @@ Signal = EMA(PPO, SignalPeriod)
 ## См. также
 
 - [Percentage Price Oscillator](percentage_price_oscillator.md)
-- [Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+- [PPOH](percentage_price_oscillator_histogram.md)

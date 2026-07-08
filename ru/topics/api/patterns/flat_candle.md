@@ -29,6 +29,6 @@
 
 ## См. также
 
-[Pattern White Candle](white_candle.md)
+[Паттерн White Candle (Белая свеча)](white_candle.md)
 
-[Pattern Black Candle](black_candle.md)
+[Паттерн Black Candle (Черная свеча)](black_candle.md)

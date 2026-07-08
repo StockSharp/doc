@@ -33,5 +33,5 @@
 
 ## См. также
 
-[Pattern 3 Inside Down and 3 Inside Up](3_inside_down_3_side_up.md)
+[Паттерн 3 Inside Down and 3 Inside Up (3 Вниз и 3 Вверх)](3_inside_down_3_side_up.md)
 
