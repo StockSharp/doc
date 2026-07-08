@@ -65,7 +65,7 @@ CHOP 对以下情况特别有用：
 
 ## 另请参阅
 
-[ATR](atr.md)
+[平均真实波幅](atr.md)
 [ADX](adx.md)
 [VHF](vhf.md)
 [真实波动幅度](true_range.md)

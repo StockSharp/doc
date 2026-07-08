@@ -95,6 +95,6 @@ LRSI的主要优势在于能够快速识别趋势变化，同时保持信号稳�
 
 ## 另请参阅
 
-[RSI](rsi.md)
+[相对强弱指数](rsi.md)
 [自适应拉盖尔滤波器](adaptive_laguerre_filter.md)
 [康纳RSI](connors_rsi.md)

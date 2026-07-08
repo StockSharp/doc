@@ -26,7 +26,7 @@ Bull Power 从 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.Expone
 
 - 上涨的公牛力量与上升的EMA一起确认了趋势强度。
 - 价格创出新高而牛市力量读数没有创高，形成看跌背离。
-- 将多空能量与价格EMA结合，以评估完整的[Elder Ray](elder_ray.md)结构。
+- 将多空能量与价格EMA结合，以评估完整的[埃尔德射线指数](elder_ray.md)结构。
 
 ![指标_多头力量](../../../../images/indicator_bull_power.png)
 

@@ -69,6 +69,6 @@ Connors RSI 在日线到周线的时间周期图表上以及以均值回归为�
 
 ## 另请参阅
 
-[RSI](rsi.md)
+[相对强弱指数](rsi.md)
 [RMI](relative_momentum_index.md)
 [LRSI](laguerre_rsi.md)

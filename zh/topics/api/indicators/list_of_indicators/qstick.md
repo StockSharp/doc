@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[RAVI](ravi.md)
+[区间动作验证指数 (RAVI)](ravi.md)

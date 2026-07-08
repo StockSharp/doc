@@ -83,5 +83,5 @@ FRAMA 可以类似于其他移动平均线来解释，但需要考虑其自适�
 ## 另请参阅
 
 [EMA](ema.md)
-[KAMA](kama.md)
-[VIDYA](vidya.md)
+[考夫曼自适应移动平均线 (KAMA)](kama.md)
+[可变指数动态平均 (VIDYA)](vidya.md)

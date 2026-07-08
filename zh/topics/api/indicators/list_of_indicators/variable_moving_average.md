@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[VIDYA](vidya.md)
+[可变指数动态平均 (VIDYA)](vidya.md)

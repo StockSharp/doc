@@ -81,6 +81,6 @@ HVR 的计算方法是短期历史波动率与长期历史波动率的比值。�
 
 ## 另请参阅
 
-[ATR](atr.md)
+[平均真实波幅](atr.md)
 [标准差](standard_deviation.md)
 [波动指数](choppiness_index.md)

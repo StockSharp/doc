@@ -54,5 +54,5 @@ T3 移动平均的计算分为几个步骤进行：
 ## 另请参阅
 
 [EMA](ema.md)
-[DEMA](dema.md)
+[双指数移动平均](dema.md)
 [TEMA](tema.md)

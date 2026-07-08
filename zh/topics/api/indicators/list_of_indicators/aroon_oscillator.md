@@ -32,13 +32,13 @@
 - **零线穿越** — 潜在的主要趋势变化。
 - **极值** — 强烈的方向性趋势，通常用作方向性过滤器。
 
-振荡器通常与基础 [Aroon](aroon.md) 指标一起分析，以观察绝对水平及其
+振荡器通常与基础 [阿隆](aroon.md) 指标一起分析，以观察绝对水平及其
 差异。
 
 ![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
 
 ## 另请参阅
 
-[Aroon](aroon.md)
+[阿隆](aroon.md)
 [ADX](adx.md)
 [DMI](dmi.md)

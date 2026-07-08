@@ -62,4 +62,4 @@ ALMA 计算分几个阶段进行：
 [SMA](sma.md)
 [EMA](ema.md)
 [T3MA](t3_moving_average.md)
-[ZLEMA](zero_lag_exponential_moving_average.md)
+[零滞后指数移动平均线](zero_lag_exponential_moving_average.md)

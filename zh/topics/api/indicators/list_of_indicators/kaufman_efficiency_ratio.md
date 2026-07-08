@@ -79,7 +79,7 @@ KER 值在 0 和 1 之间波动：
 
 ## 另请参阅
 
-[KAMA](kama.md)
+[考夫曼自适应移动平均线 (KAMA)](kama.md)
 [ADX](adx.md)
 [VHF](vhf.md)
-[VIDYA](vidya.md)
+[可变指数动态平均 (VIDYA)](vidya.md)

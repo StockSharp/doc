@@ -78,5 +78,5 @@ For first calculation: MGD = SMA(Price, Length)
 
 [SMA](sma.md)
 [EMA](ema.md)
-[DEMA](dema.md)
+[双指数移动平均](dema.md)
 [HMA](hma.md)

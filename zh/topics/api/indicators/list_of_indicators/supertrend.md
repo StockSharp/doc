@@ -28,5 +28,5 @@ SuperTrend 是使用平均价格和 ATR 值构建的。当趋势发生变化时�
 
 ## 另请参阅
 
-[ATR](atr.md)
+[平均真实波幅](atr.md)
 [抛物线SAR](parabolic_sar.md)

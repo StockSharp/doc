@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[TRIX](trix.md)
+[TRIX 指标](trix.md)

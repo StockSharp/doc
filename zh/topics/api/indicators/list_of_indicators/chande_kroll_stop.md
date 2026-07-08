@@ -66,6 +66,6 @@ Chande Kroll 停止计算涉及以下步骤：
 
 ## 另请参阅
 
-[ATR](atr.md)
+[平均真实波幅](atr.md)
 [抛物线SAR](parabolic_sar.md)
 [唐奇安通道](donchian_channels.md)

@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[QStick](qstick.md)
+[Q棒](qstick.md)

@@ -44,4 +44,4 @@ Stochastic Oscillator %K 基于这样一个观察：在上升趋势中，收盘�
 
 ## 另请参阅
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[随机振荡器](stochastic_oscillator.md)

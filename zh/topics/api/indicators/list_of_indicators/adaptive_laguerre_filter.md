@@ -44,4 +44,4 @@ ALF 相比经典移动平均的主要优势在于它能够更有效地将市场�
 ## 另请参阅
 
 [拉盖尔RSI](laguerre_rsi.md)
-[ZLEMA](zero_lag_exponential_moving_average.md)
+[零滞后指数移动平均线](zero_lag_exponential_moving_average.md)

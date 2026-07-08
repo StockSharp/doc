@@ -94,4 +94,4 @@ PPO 指标围绕零线波动，正值表示看涨的市场情绪，负值表示�
 [百分价格振荡信号](percentage_price_oscillator_signal.md)
 [百分价格振荡直方图](percentage_price_oscillator_histogram.md)
 [百分量振荡器](percentage_volume_oscillator.md)
-[TRIX](trix.md)
+[TRIX 指标](trix.md)

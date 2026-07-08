@@ -65,6 +65,6 @@ DPI = ((Price / MA) - 1) * 100
 ## 另请参阅
 
 [SMA](sma.md)
-[RSI](rsi.md)
+[相对强弱指数](rsi.md)
 [随机振荡器](stochastic_oscillator.md)
 [布林带](bollinger_bands.md)

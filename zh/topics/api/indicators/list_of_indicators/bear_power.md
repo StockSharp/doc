@@ -27,7 +27,7 @@ Bear Power 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.
 
 - 当EMA开始上升时，如果熊势能在极低点之后转向上升，要寻找反转信号。
 - 穿越零线可能确认当前趋势的变化。
-- 将熊力与[Bull Power](bull_power.md)以及价格EMA结合起来，构建完整的[Elder Ray](elder_ray.md)指标。
+- 将熊力与[多头力量](bull_power.md)以及价格EMA结合起来，构建完整的[埃尔德射线指数](elder_ray.md)指标。
 
 ![indicator_bear_power](../../../../images/indicator_bear_power.png)
 

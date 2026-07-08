@@ -21,4 +21,4 @@ n 的值被设置为指示参数。
 
 ## 另请参阅
 
-[ZigZag](zigzag.md)
+[之字形](zigzag.md)

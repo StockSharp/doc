@@ -69,5 +69,5 @@ EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 
 [EMA](ema.md)
 [MACD](macd.md)
-[ZigZag](zigzag.md)
+[之字形](zigzag.md)
 [WaveTrendOscillator](wave_trend_oscillator.md)

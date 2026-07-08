@@ -67,6 +67,6 @@ DZRSI 的解释类似于传统 RSI，但考虑了动态区域：
 
 ## 另请参阅
 
-[RSI](rsi.md)
+[相对强弱指数](rsi.md)
 [ConnorsRSI](connors_rsi.md)
 [LRSI](laguerre_rsi.md)

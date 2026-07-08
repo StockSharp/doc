@@ -68,7 +68,7 @@ CBCI 计算包括以下步骤：
 
 ## 另请参阅
 
-[RSI](rsi.md)
+[相对强弱指数](rsi.md)
 [随机震荡指标](stochastic_oscillator.md)
 [随机K](stochastic_oscillator_k.md)
 [CCI](cci.md)

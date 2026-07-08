@@ -13,4 +13,4 @@
 
 ## 另请参阅
 
-[KAMA](kama.md)
+[考夫曼自适应移动平均线 (KAMA)](kama.md)

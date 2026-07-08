@@ -51,6 +51,6 @@ ZLEMA 的计算基于通过预测消除滞后，包括以下步骤：
 ## 另请参阅
 
 [EMA](ema.md)
-[DEMA](dema.md)
+[双指数移动平均](dema.md)
 [TEMA](tema.md)
 [T3MA](t3_moving_average.md)

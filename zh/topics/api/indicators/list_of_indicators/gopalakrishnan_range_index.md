@@ -68,6 +68,6 @@ GAPO = log(N) * log(Highest High - Lowest Low)
 
 ## 另请参阅
 
-[ATR](atr.md)
+[平均真实波幅](atr.md)
 [波动指数](choppiness_index.md)
 [真实波幅](true_range.md)
