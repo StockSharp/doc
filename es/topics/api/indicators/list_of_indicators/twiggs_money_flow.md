@@ -31,7 +31,7 @@ El cálculo de Twiggs Money Flow se realiza en varios pasos:
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
 
-2. Determine Twiggs Money Flow Volume (TMFV):
+2. Determinar el volumen de flujo monetario de Twiggs (TMFV):
    ```
    TMFV = Volume * ((Close - Low - (High - Close)) / TR)
    ```

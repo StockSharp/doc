@@ -159,7 +159,7 @@
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifica el inicio de nuevas tendencias
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator, identifica cambios de tendencia
 - [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average, da más peso a los precios recientes
-- [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price, (High + Low + 2 × Close) / 4
+- [WCP](list_of_indicators/weighted_close_price.md) - Precio de cierre ponderado, (High + Low + 2 × Close) / 4
 - [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average, una media móvil suavizada
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution, mide la presión de compra y venta
 - [%R](list_of_indicators/williams_r.md) - Williams Percent Range, identifica condiciones de sobrecompra y sobreventa
