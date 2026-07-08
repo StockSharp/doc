@@ -1860,9 +1860,9 @@
         href: api/indicators/list_of_indicators/money_flow_index.md
       - name: MACD
         href: api/indicators/list_of_indicators/macd.md
-      - name: MACD Histogram
+      - name: Histograma MACD
         href: api/indicators/list_of_indicators/macd_histogram.md
-      - name: MACD with Signal Line
+      - name: MACD con línea de señal
         href: api/indicators/list_of_indicators/macd_with_signal_line.md
       - name: MAC
         href: api/indicators/list_of_indicators/moving_average_crossover.md

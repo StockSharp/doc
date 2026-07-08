@@ -1,6 +1,6 @@
-# MACD Histogram
+# Histograma MACD
 
-**Moving Averages Convergence-divergencia (MACD)** es un indicador de impulso que muestra la relación entre dos promedios móviles del precio de un valor, presentado como un histograma.
+**Convergencia/Divergencia de Medias Móviles (MACD)** es un indicador de impulso que muestra la relación entre dos promedios móviles del precio de un valor, presentado como un histograma.
 
 Para utilizar el indicador, se debe utilizar la clase [MovingAverageConvergenceDivergenceHistogram](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceHistogram).
 
@@ -14,10 +14,10 @@ Signal = EMA_a(EMA_s(P) − EMA_l(P))
 
 Estas dos curvas resultantes representan el MACD lineal regular. Además, la línea cero, con respecto a la cual fluctúan las curvas, suele estar marcada en la ventana del indicador.
 
-Al construir el MACD Histogram (MACD Histogram), las barras del histograma muestran la diferencia entre las líneas Signal y MACD, simplificando aún más la percepción del indicador.
+Al construir el histograma MACD, las barras del histograma muestran la diferencia entre la línea de señal y la línea MACD, simplificando aún más la percepción del indicador.
 
 ![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## Véase también
 
-[MACD with Signal Line](macd_with_signal_line.md)
+[MACD con línea de señal](macd_with_signal_line.md)

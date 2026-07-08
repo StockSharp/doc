@@ -1,6 +1,6 @@
 # MACD
 
-**Moving Averages Convergence-divergencia (MACD)** es un indicador de impulso que muestra la relación entre dos promedios móviles del precio de un valor.
+**Convergencia/Divergencia de Medias Móviles (MACD)** es un indicador de impulso que muestra la relación entre dos promedios móviles del precio de un valor.
 
 El indicador se calcula como la diferencia entre una media móvil corta y una media móvil larga. De forma predeterminada, los períodos para estos promedios se establecen en 12 y 26, respectivamente.
 
@@ -10,4 +10,4 @@ Para utilizar el indicador, se debe utilizar la clase [MovingAverageConvergenceD
 
 ## Véase también
 
-[MACD Histogram](macd_histogram.md)
+[Histograma MACD](macd_histogram.md)

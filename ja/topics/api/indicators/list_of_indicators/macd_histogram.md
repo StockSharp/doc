@@ -1,6 +1,6 @@
-# MACD Histogram
+# MACD ヒストグラム
 
-**Moving Averages Convergence-Divergence (MACD)** は、証券価格の 2 つの移動平均の関係をヒストグラムとして表示するモメンタム指標です。
+**移動平均収束拡散 (MACD)** は、証券価格の 2 つの移動平均の関係をヒストグラムとして表示するモメンタム指標です。
 
 この指標を使用するには、[MovingAverageConvergenceDivergenceHistogram](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceHistogram) クラスを使用する必要があります。
 
@@ -14,10 +14,10 @@ Signal = EMA_a(EMA_s(P) - EMA_l(P))
 
 これら 2 つの結果の曲線が、通常の線形 MACD を表します。また、指標ウィンドウには通常、曲線がその周辺で変動するゼロラインも表示されます。
 
-MACD Histogram (MACD Histogram) を構築する際、ヒストグラムのバーは Signal ラインと MACD ラインの差を示し、指標の把握をさらに簡単にします。
+MACD ヒストグラムを構築する際、ヒストグラムのバーはシグナルラインと MACD ラインの差を示し、指標の把握をさらに簡単にします。
 
 ![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## 関連項目
 
-[MACD with Signal Line](macd_with_signal_line.md)
+[シグナルライン付き MACD](macd_with_signal_line.md)

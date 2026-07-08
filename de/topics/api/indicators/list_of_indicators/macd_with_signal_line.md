@@ -1,8 +1,8 @@
-# MACD with Signal Line
+# MACD mit Signallinie
 
-**Moving Averages Convergence-Divergence (MACD)** ist ein Momentum-Indikator, der die Beziehung zwischen zwei gleitenden Durchschnitten des Preises eines Wertpapiers anzeigt, dargestellt durch eine Signallinie.
+**Konvergenz/Divergenz gleitender Durchschnitte (MACD)** ist ein Momentum-Indikator, der die Beziehung zwischen zwei gleitenden Durchschnitten des Preises eines Wertpapiers anzeigt, dargestellt durch eine Signallinie.
 
-Eine detaillierte Beschreibung der Indikatorberechnung finden Sie unter [MACD Histogram](macd_histogram.md).
+Eine detaillierte Beschreibung der Indikatorberechnung finden Sie unter [MACD-Histogramm](macd_histogram.md).
 
 Um den Indikator zu verwenden, sollte die Klasse [MovingAverageConvergenceDivergenceSignal](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceSignal) verwendet werden.
 

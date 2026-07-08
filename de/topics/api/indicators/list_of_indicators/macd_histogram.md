@@ -1,6 +1,6 @@
-# MACD Histogram
+# MACD-Histogramm
 
-**Moving Averages Convergence-Divergence (MACD)** ist ein Momentum-Indikator, der die Beziehung zwischen zwei gleitenden Durchschnitten des Kurses eines Wertpapiers anzeigt, dargestellt als Histogramm.
+**Konvergenz/Divergenz gleitender Durchschnitte (MACD)** ist ein Momentum-Indikator, der die Beziehung zwischen zwei gleitenden Durchschnitten des Kurses eines Wertpapiers anzeigt, dargestellt als Histogramm.
 
 Um den Indikator zu verwenden, sollte die Klasse [MovingAverageConvergenceDivergenceHistogram](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceHistogram) verwendet werden.
 
@@ -20,4 +20,4 @@ Beim Erstellen des MACD-Histogramms (MACD-Histogramm) zeigen die Histogrammbalke
 
 ## Siehe auch
 
-[MACD with Signal Line](macd_with_signal_line.md)
+[MACD mit Signallinie](macd_with_signal_line.md)
