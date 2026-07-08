@@ -1,4 +1,4 @@
-# Real-time
+# Tiempo real
 
 La pestaña **Real-time** permite gestionar estrategias lanzadas en trading.
 
@@ -10,4 +10,4 @@ En la pestaña **Strategies**, puede eliminar, iniciar, detener y configurar est
 
 ## Contenido recomendado
 
-[Common](common.md)
+[Común](common.md)

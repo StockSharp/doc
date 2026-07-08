@@ -10,4 +10,4 @@ Además, puede especificar un filtro para la fecha exacta de vencimiento de las 
 
 ## Contenido recomendado
 
-[Option desk](option_desk.md)
+[Mesa de opciones](option_desk.md)

@@ -6,7 +6,7 @@ Durante el trading, puede necesitar controlar completamente el proceso. Para con
 
 - [Instrumentos](components/instruments.md) - tabla con instrumentos que muestra información sobre todos los instrumentos seleccionados.
 - [Level 1](components/level_1.md) - tabla con el historial de cambios de Level 1 para los instrumentos seleccionados.
-- [Buy\/Sell](components/buy_sell.md) - grupo de paneles que muestra la mejor información de precio para los instrumentos seleccionados y permite comprar o vender el volumen requerido de esos instrumentos.
+- [Comprar/Vender](components/buy_sell.md) - grupo de paneles que muestra la mejor información de precio para los instrumentos seleccionados y permite comprar o vender el volumen requerido de esos instrumentos.
 - [Libro de órdenes](components/order_book.md) - tabla de órdenes limitadas de compra y venta.
 - [Gráfico](components/chart.md) - permite dibujar velas e indicadores para el instrumento seleccionado.
 - [Equity P&L](../../designer/user_interface/components/pnl_equity.md) - gráfico de Profit\/Loss (no realizado), Profit\/Loss (realizado) y comisión.
@@ -18,6 +18,6 @@ Durante el trading, puede necesitar controlar completamente el proceso. Para con
 - [Posiciones](../../designer/user_interface/components/positions.md) - gráfico de la posición.
 - [Noticias](components/news.md) - muestra noticias recibidas desde conexiones.
 - [Posiciones (opciones)](components/positions_options.md) - representación gráfica de la posición por opciones.
-- [Option desk](components/option_desk.md) - tabla de los principales parámetros de las opciones seleccionadas para el instrumento subyacente.
-- [Smile volatility](components/smile_volatility.md) - representación gráfica del nivel esperado de volatilidad para opciones con el mismo activo subyacente y distintos strikes.
+- [Mesa de opciones](components/option_desk.md) - tabla de los principales parámetros de las opciones seleccionadas para el instrumento subyacente.
+- [Sonrisa de volatilidad](components/smile_volatility.md) - representación gráfica del nivel esperado de volatilidad para opciones con el mismo activo subyacente y distintos strikes.
 - [Registro de órdenes](components/order_log.md) - tabla con órdenes que muestra información completa sobre todas las órdenes de los instrumentos seleccionados.

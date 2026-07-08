@@ -1,4 +1,4 @@
-# Option desk
+# Mesa de opciones
 
 El componente **Option desk** es una tabla con los principales parámetros de las opciones seleccionadas para el instrumento subyacente.
 
@@ -10,4 +10,4 @@ Además, puede especificar un filtro para la fecha exacta de vencimiento de las 
 
 ## Contenido recomendado
 
-[Smile volatility](smile_volatility.md)
+[Sonrisa de volatilidad](smile_volatility.md)

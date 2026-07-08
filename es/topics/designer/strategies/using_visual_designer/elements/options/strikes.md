@@ -27,4 +27,4 @@ Parámetros
 
 ## Contenido recomendado
 
-[Crossing](../common/crossing.md)
+[Cruce](../common/crossing.md)

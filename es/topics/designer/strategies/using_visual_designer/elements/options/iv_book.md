@@ -19,4 +19,4 @@ Sockets de salida
 
 ## Contenido recomendado
 
-[Option desk](option_desk.md)
+[Mesa de opciones](option_desk.md)

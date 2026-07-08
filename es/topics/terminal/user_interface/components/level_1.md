@@ -8,4 +8,4 @@ El componente **Level 1** es una tabla con el historial de cambios de **Level 1*
 
 ## Contenido recomendado
 
-[Buy\/Sell](buy_sell.md)
+[Comprar/Vender](buy_sell.md)

@@ -19,7 +19,7 @@ Sustituya `UserControl` por `controls:BaseStudioControl`.
 
 Después implemente la lógica de su propio panel de forma similar a los paneles de estrategia existentes.
 
-Para que el panel [Real-time](user_interface/real_time.md) vea la estrategia en su panel, la estrategia debe establecerse como propiedad:
+Para que el panel [Tiempo real](user_interface/real_time.md) vea la estrategia en su panel, la estrategia debe establecerse como propiedad:
 
 ```cs
 	public partial class SmaMonitoringControl

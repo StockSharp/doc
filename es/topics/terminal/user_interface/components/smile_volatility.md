@@ -1,4 +1,4 @@
-# Smile volatility
+# Sonrisa de volatilidad
 
 El componente **Smile volatility** es una representación gráfica del nivel esperado de volatilidad para opciones con el mismo activo subyacente y distintos strikes.
 

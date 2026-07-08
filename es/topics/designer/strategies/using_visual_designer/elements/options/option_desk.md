@@ -1,4 +1,4 @@
-# Option desk
+# Mesa de opciones
 
 ![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
 

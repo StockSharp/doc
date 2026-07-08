@@ -20,7 +20,7 @@ Vaya a la configuración de conexión y seleccione la conexión necesaria. Cómo
 
 El siguiente paso es conectarse haciendo clic en el botón **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
 
-Después de conectarse, en la pestaña [Common](user_interface/common.md), puede ver las carteras, instrumentos, órdenes y operaciones propias recibidas desde la conexión.
+Después de conectarse, en la pestaña [Común](user_interface/common.md), puede ver las carteras, instrumentos, órdenes y operaciones propias recibidas desde la conexión.
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
@@ -32,6 +32,6 @@ Una vez añadida la estrategia, rellene sus parámetros básicos, como **Securit
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-De forma similar a la pestaña [Real-time](user_interface/real_time.md), puede ejecutar una prueba de estrategia sobre datos históricos en la pestaña [Emulación](user_interface/emulation.md).
+De forma similar a la pestaña [Tiempo real](user_interface/real_time.md), puede ejecutar una prueba de estrategia sobre datos históricos en la pestaña [Emulación](user_interface/emulation.md).
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

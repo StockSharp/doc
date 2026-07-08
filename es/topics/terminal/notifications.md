@@ -11,7 +11,7 @@ Las notificaciones pueden tener las siguientes formas:
 - **SMS** - el mensaje se enviará por SMS.
 - **Email** - el mensaje se enviará por correo electrónico.
 - **Voice** - el mensaje será pronunciado por una voz generada por ordenador.
-- **Log** - el mensaje se enviará a [Logs](user_interface/logs.md).
+- **Log** - el mensaje se enviará a [Registros](user_interface/logs.md).
 - **Disabled** - la notificación no se mostrará.
 
 Para establecer una notificación, debe hacer clic en el botón ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notifications/notification_panel.md)) o hacer clic en el botón ![Designer Alert Bell](../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones.

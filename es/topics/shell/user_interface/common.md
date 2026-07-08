@@ -1,4 +1,4 @@
-# Common
+# Común
 
 La pestaña **Common** permite ver información general sobre carteras, órdenes, operaciones e instrumentos. Aquí también puede establecer el tema de la interfaz de [Shell](../../shell.md).
 
@@ -10,4 +10,4 @@ En la pestaña **Securities**, puede cargar instrumentos desde el almacenamiento
 
 ## Contenido recomendado
 
-[Real-time](real_time.md)
+[Tiempo real](real_time.md)

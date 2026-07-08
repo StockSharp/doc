@@ -1,4 +1,4 @@
-# Ribbon
+# Cinta
 
 El elemento principal de la interfaz de usuario de [Designer](../../designer.md) es la **Ribbon**, que se encuentra en la parte superior de la ventana de la aplicación. La cinta permite acceder rápidamente a los comandos necesarios. Los comandos se organizan en grupos lógicos reunidos en pestañas. Para ir a la pestaña deseada, basta con hacer clic en su título (nombre). Cada pestaña está asociada con el tipo de acción que se realiza.
 
