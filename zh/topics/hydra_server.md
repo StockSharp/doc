@@ -1,4 +1,4 @@
-# Hydra Server
+# Hydra 服务器
 
 **Hydra Server** 是一项专用服务，可通过网络广播数据，供外部程序连接使用，例如 [Designer](designer.md)。
 

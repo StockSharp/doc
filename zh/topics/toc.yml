@@ -473,13 +473,13 @@
     - name: 示例来源
       href: hydra/videos/sources_samples.md
       items:
-      - name: Oanda
+      - name: 连接到 OANDA
         href: hydra/videos/sources_samples/oanda.md
-      - name: 盈透证券
+      - name: 连接到盈透证券
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: Bitmex
+      - name: 连接到 BitMEX
         href: hydra/videos/sources_samples/bitmex.md
-      - name: 币安
+      - name: 连接到币安
         href: hydra/videos/sources_samples/binance.md
     - name: 下载工具
       href: hydra/videos/instruments_downloading.md
