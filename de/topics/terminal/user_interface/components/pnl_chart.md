@@ -2,4 +2,4 @@
 
 Siehe
 
-[P&L equity](../../../designer/user_interface/components/pnl_equity.md)
+[P&L-Kurve](../../../designer/user_interface/components/pnl_equity.md)

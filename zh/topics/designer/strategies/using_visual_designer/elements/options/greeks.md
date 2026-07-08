@@ -1,8 +1,8 @@
-# Greeks
+# 希腊值
 
 ![Designer Greek 00](../../../../../../images/designer_greek_00.png)
 
-该模块用于计算当前时刻的主要 Greeks：Delta、Gamma、Vega、Theta 和 Rho。
+该模块用于计算当前时刻的主要希腊值：Delta、Gamma、Vega、Theta 和 Rho。
 
 ### 输入端口
 
@@ -16,7 +16,7 @@
 
 输出端口
 
-- **Result** – 当前时刻主要 Greeks（Delta、Gamma、Vega、Theta 和 Rho）的计算结果。
+- **Result** – 当前时刻主要希腊值（Delta、Gamma、Vega、Theta 和 Rho）的计算结果。
 
 ### 参数
 

@@ -6,5 +6,5 @@ Die Komponente **Trades** ist eine Tabelle mit Trades, die vollständige Informa
 
 ## Empfohlene Inhalte
 
-[P&L equity](pnl_equity.md)
+[P&L-Kurve](pnl_equity.md)
 
