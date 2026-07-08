@@ -2,7 +2,7 @@
 
 ## Einführung
 
-Zusätzlich zum lokalen Speicher bietet die API die Möglichkeit, mit entferntem Marktdatenspeicher zu arbeiten. Dies ist besonders nützlich, wenn Hydra im [Servermodus](../../hydra/server_mode/settings.md) verwendet wird oder wenn eine Verbindung zu einem [Hydra Server](../../hydra_server.md) hergestellt wird.
+Zusätzlich zum lokalen Speicher bietet die API die Möglichkeit, mit entferntem Marktdatenspeicher zu arbeiten. Dies ist besonders nützlich, wenn Hydra im [Servermodus](../../hydra/server_mode/settings.md) verwendet wird oder wenn eine Verbindung zu einem [Hydra-Server](../../hydra_server.md) hergestellt wird.
 
 ## Verbindung zu Remote Storage herstellen
 
@@ -102,5 +102,5 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 
 ## Fazit
 
-Die Funktionalität der API für entfernten Marktdatenspeicher bietet flexible Möglichkeiten zum Abrufen und Verwenden historischer Daten. Dadurch können Handelsstrategien effizient getestet und Marktanalysen mit umfangreichen Datensätzen durchgeführt werden, die über den [Hydra Server](../../hydra_server.md) verfügbar sind.
+Die Funktionalität der API für entfernten Marktdatenspeicher bietet flexible Möglichkeiten zum Abrufen und Verwenden historischer Daten. Dadurch können Handelsstrategien effizient getestet und Marktanalysen mit umfangreichen Datensätzen durchgeführt werden, die über den [Hydra-Server](../../hydra_server.md) verfügbar sind.
 

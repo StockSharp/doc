@@ -1,4 +1,4 @@
-# Candles
+# Kerzen
 
 Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Import \=\> Candles**.
 

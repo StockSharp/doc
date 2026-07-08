@@ -1,4 +1,4 @@
-# Alerts
+# Benachrichtigungen
 
 Ein Dienst zum Senden von Nachrichten aus Anwendungen (zum Beispiel [Designer](../designer.md) oder einem eigenen benutzerdefinierten Programm) an private und öffentliche Kanäle oder Gruppen im Telegram-Messenger.
 

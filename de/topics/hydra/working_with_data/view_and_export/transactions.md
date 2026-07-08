@@ -1,4 +1,4 @@
-# Transactions
+# Transaktionen
 
 Wählen Sie im angezeigten Fenster die Instrumente und das gewünschte Zeitintervall aus und klicken Sie auf die Schaltfläche ![hydra find](../../../../images/hydra_find.png):
 

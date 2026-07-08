@@ -8,10 +8,10 @@ Um das Order-Log zu importieren, wählen Sie im Hauptmenü der Anwendung den Ein
 
 1. **Importeinstellungen.**.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 
    **Betrachten wir ein Beispiel für den Import eines Order-Logs aus einer CSV-Datei:**
    - Die Datei, aus der Sie Daten importieren möchten, hat die folgende Vorlage:

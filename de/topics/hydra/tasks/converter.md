@@ -1,4 +1,4 @@
-# Converter
+# Konverter
 
 Die Aufgabe konvertiert Boersendaten. Zum Beispiel von Order Logs in Ticks oder von Ticks in Kerzen usw.
 

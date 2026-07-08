@@ -491,7 +491,7 @@
       href: hydra/videos/saving_format.md
     - name: Indikatoren
       href: hydra/videos/indicators.md
-    - name: Analytics
+    - name: Analytik
       href: hydra/videos/analytics.md
     - name: Import-Aufgabe
       href: hydra/videos/import_task.md
@@ -536,7 +536,7 @@
         href: hydra/working_with_data/view_and_export/level_1_.md
       - name: Nachrichten
         href: hydra/working_with_data/view_and_export/news.md
-      - name: Transactions
+      - name: Transaktionen
         href: hydra/working_with_data/view_and_export/transactions.md
       - name: Option Desk
         href: hydra/working_with_data/view_and_export/option_desk.md
@@ -558,9 +558,9 @@
   - name: Import
     href: hydra/importing.md
     items:
-    - name: Candles
+    - name: Kerzen
       href: hydra/importing/candles.md
-    - name: Instruments
+    - name: Instrumente
       href: hydra/importing/instruments.md
     - name: Ticks
       href: hydra/importing/ticks.md
@@ -570,9 +570,9 @@
       href: hydra/importing/order_log.md
     - name: Level 1
       href: hydra/importing/level_1.md
-    - name: News
+    - name: Nachrichten
       href: hydra/importing/news.md
-    - name: Transactions
+    - name: Transaktionen
       href: hydra/importing/transactions.md
   - name: Servermodus
     items:
@@ -602,12 +602,12 @@
       href: hydra/instruments_and_boards/extended_instrument_info.md
     - name: Instrumente-Verbindungen zuordnen
       href: hydra/instruments_and_boards/matching_instruments_connections.md
-    - name: Boards
+    - name: Handelsplätze
       href: hydra/instruments_and_boards/boards.md
   - name: Aufgaben
     href: hydra/tasks.md
     items:
-    - name: Converter
+    - name: Konverter
       href: hydra/tasks/converter.md
     - name: Export (auto)
       href: hydra/tasks/export_auto.md
@@ -615,7 +615,7 @@
       href: hydra/tasks/import_auto.md
     - name: Backup
       href: hydra/tasks/backup.md
-  - name: Analytics
+  - name: Analytik
     href: hydra/analytics.md
     items:
     - name: Skript ausführen
@@ -624,7 +624,7 @@
       href: hydra/analytics/create_own_script.md
     - name: Beispiele
       items:
-      - name: Intraday Volume
+      - name: Intraday-Volumen
         href: hydra/analytics/examples/intraday_volume.md
       - name: Volumenprofil
         href: hydra/analytics/examples/volume_profile.md
@@ -661,16 +661,16 @@
     href: hydra/create_new_source.md
   - name: Neue Aufgabe erstellen
     href: hydra/create_new_task.md
-- name: Hydra Server
+- name: Hydra-Server
   href: hydra_server.md
-- name: Telegram Services
+- name: Telegram-Dienste
   href: telegram_services.md
   items:
   - name: Autorisierung
     href: telegram_services/authorization.md
-  - name: Alerts
+  - name: Benachrichtigungen
     href: telegram_services/alerts.md
-  - name: Control Panel
+  - name: Bedienfeld
     href: telegram_services/control_panel.md
 - name: Runner
   href: runner.md

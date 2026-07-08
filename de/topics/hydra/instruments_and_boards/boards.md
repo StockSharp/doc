@@ -1,4 +1,4 @@
-# Boards
+# Handelsplätze
 
 Klicken Sie auf der Registerkarte **Common** auf die Schaltfläche **Boards**.
 

@@ -1,4 +1,4 @@
-# News
+# Nachrichten
 
 Um Nachrichten zu importieren, wählen Sie im Hauptmenü der Anwendung **Import \=\> News**.
 
@@ -6,12 +6,12 @@ Um Nachrichten zu importieren, wählen Sie im Hauptmenü der Anwendung **Import 
 
 ## Nachrichtenimportprozess
 
-1. Fuhren Sie **CSV Import Settings** aus.
+1. Führen Sie **CSV Import Settings** aus.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Preview**
 4. Klicken Sie auf die Schaltfläche **Import**.
 

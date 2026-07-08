@@ -1,4 +1,4 @@
-# Control Panel
+# Bedienfeld
 
 Ein Dienst zur Verwaltung von Handelsstrategien und Robotern über einen Telegram-Bot.
 

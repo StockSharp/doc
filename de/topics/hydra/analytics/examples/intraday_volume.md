@@ -1,4 +1,4 @@
-# Intraday Volume
+# Intraday-Volumen
 
 Das Skript "Intraday Volume" ist ein Werkzeug zur Analyse der Verteilung des Handelsvolumens von Wertpapieren nach Stunden innerhalb einer einzelnen Handelssitzung. Es ist für die Verwendung innerhalb der StockSharp-Plattform konzipiert und richtet sich an Trader und quantitative Analysten, die Marktverhalten detailliert untersuchen und Handelsstrategien optimieren möchten.
 

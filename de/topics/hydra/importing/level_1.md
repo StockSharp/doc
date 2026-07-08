@@ -8,10 +8,10 @@ Um Level-1-Daten zu importieren, wählen Sie im Hauptmenü der Anwendung **Impor
 
 1. **Import settings.**.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
 
-   Siehe Import von [Candles](candles.md).
+   Siehe Import von [Kerzen](candles.md).
 
    **Betrachten wir ein Beispiel für den Import von Level 1 aus einer CSV-Datei:**
    - Die Datei, aus der Sie Daten importieren möchten, hat die folgende Vorlage:

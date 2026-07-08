@@ -1,4 +1,4 @@
-# Analytics
+# Analytik
 
 Die Funktion **Analytics** stellt Benutzern ein Werkzeug zur Analyse von Marktdaten bereit. Diese Funktionalitat ermöglicht eine detaillierte Analyse von Preisdaten, Volumina und anderen Marktindikatoren mithilfe einbindbarer [Skripte](analytics/running_a_script.md) in den Sprachen C#, F# und Python.
 

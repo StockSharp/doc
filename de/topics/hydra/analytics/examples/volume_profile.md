@@ -1,4 +1,4 @@
-# Volume Profile
+# Volumenprofil
 
 Das Skript "Volume Profile" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
 
