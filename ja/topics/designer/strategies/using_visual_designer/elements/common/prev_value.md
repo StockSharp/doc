@@ -1,4 +1,4 @@
-# Prev value
+# 前回値
 
 ![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
 

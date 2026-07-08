@@ -1,4 +1,4 @@
-# Candles
+# ローソク足
 
 ![Designer Candles 00](../../../../../../images/designer_candles_00.png)
 

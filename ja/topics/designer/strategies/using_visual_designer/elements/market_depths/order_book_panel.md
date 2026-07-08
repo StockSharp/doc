@@ -1,4 +1,4 @@
-# Order Book Panel
+# 板情報パネル
 
 ![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 

@@ -1,4 +1,4 @@
-# Flag
+# フラグ
 
 ![Designer Flag](../../../../../../images/designer_flag_00.png)
 

@@ -1,4 +1,4 @@
-# Trades by strategy
+# ストラテジー別約定
 
 ![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
 

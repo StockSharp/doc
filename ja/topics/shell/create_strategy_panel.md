@@ -19,7 +19,7 @@
 
 次に、既存のストラテジーパネルと同様に、独自のパネルロジックを実装します。
 
-[Real-time](user_interface/real_time.md) パネルがパネル内のストラテジーを認識できるようにするには、ストラテジーをプロパティとして設定する必要があります。
+[リアルタイム](user_interface/real_time.md) パネルがパネル内のストラテジーを認識できるようにするには、ストラテジーをプロパティとして設定する必要があります。
 
 ```cs
 	public partial class SmaMonitoringControl

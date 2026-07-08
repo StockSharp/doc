@@ -1,4 +1,4 @@
-# Grouped order book
+# グループ化された板情報
 
 ![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
@@ -20,4 +20,4 @@
 
 ## 推奨コンテンツ
 
-[Sparse order book](sparse_order_book.md)
+[間引き板情報](sparse_order_book.md)

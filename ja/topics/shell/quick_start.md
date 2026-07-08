@@ -20,7 +20,7 @@
 
 次の手順は、**Connect** ボタン ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) をクリックして接続することです。
 
-接続後、[??](user_interface/common.md) タブで、接続から受信したポートフォリオ、銘柄、注文、および自己約定を確認できます。
+接続後、[共通](user_interface/common.md) タブで、接続から受信したポートフォリオ、銘柄、注文、および自己約定を確認できます。
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
@@ -32,6 +32,6 @@ Real-time タブに移動し、**Add** ![Designer Creation tool 00](../../images
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-[Real-time](user_interface/real_time.md) タブと同様に、[Emulation](user_interface/emulation.md) タブでは、ヒストリカルデータに対してストラテジーのテストを実行できます。
+[リアルタイム](user_interface/real_time.md) タブと同様に、[エミュレーション](user_interface/emulation.md) タブでは、ヒストリカルデータに対してストラテジーのテストを実行できます。
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

@@ -1,4 +1,4 @@
-# Truncated order book
+# 深度制限付き板情報
 
 ![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
@@ -18,5 +18,5 @@
 
 ## 推奨コンテンツ
 
-[IV book](../options/iv_book.md)
+[IV 板情報](../options/iv_book.md)
 

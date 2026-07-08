@@ -1,4 +1,4 @@
-# Variable
+# 変数
 
 ![Designer Variable 00](../../../../../../images/designer_variable_00.png)
 
@@ -29,4 +29,4 @@
 
 ## 推奨コンテンツ
 
-[Indexer](../converters/indexer.md)
+[インデクサー](../converters/indexer.md)

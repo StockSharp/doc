@@ -1,4 +1,4 @@
-# Value Delay
+# 値の遅延
 
 ![Designer Delay 00](../../../../../../images/designer_delay_00.png)
 
@@ -21,5 +21,5 @@
 
 ## 関連項目
 
-- [Comparison](comparison.md)
+- [比較](comparison.md)
 

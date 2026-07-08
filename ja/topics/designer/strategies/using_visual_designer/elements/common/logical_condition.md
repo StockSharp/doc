@@ -1,4 +1,4 @@
-# Logical Condition
+# 論理条件
 
 ![Designer The logical condition 00](../../../../../../images/designer_logical_condition_00.png)
 
@@ -19,5 +19,5 @@
 
 ## 関連項目
 
-[Formula](formula.md)
+[数式](formula.md)
 

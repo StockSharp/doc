@@ -1,4 +1,4 @@
-# Combination
+# 組み合わせ
 
 ![Designer Association 00](../../../../../../images/designer_association_00.png)
 
@@ -18,5 +18,5 @@
 
 ## 推奨コンテンツ
 
-[Comparison](comparison.md)
+[比較](comparison.md)
 

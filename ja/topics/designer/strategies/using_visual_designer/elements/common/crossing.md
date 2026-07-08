@@ -1,4 +1,4 @@
-# Crossing
+# クロス
 
 ![Designer Crossing 00](../../../../../../images/designer_crossing_00.png)
 
@@ -21,5 +21,5 @@
 
 ## 関連項目
 
-[Value Delay](delay_value.md)
+[値の遅延](delay_value.md)
 

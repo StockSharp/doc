@@ -106,7 +106,7 @@ class empty_indicator(BaseIndicator):
 
 インジケーターメソッドの説明は、[カスタムインジケーター](../../../../api/indicators/custom_indicator.md)セクションで確認できます。
 
-作成したインジケーターをスキームに追加するには、[Indicator](../../using_visual_designer/elements/common/indicator.md) キューブを使用し、その内部で目的のインジケーターを設定する必要があります。
+作成したインジケーターをスキームに追加するには、[インジケーター](../../using_visual_designer/elements/common/indicator.md) キューブを使用し、その内部で目的のインジケーターを設定する必要があります。
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 

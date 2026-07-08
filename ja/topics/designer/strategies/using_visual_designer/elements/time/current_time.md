@@ -1,4 +1,4 @@
-# Current Time
+# 現在時刻
 
 ![Designer time 00](../../../../../../images/designer_time_00.png)
 

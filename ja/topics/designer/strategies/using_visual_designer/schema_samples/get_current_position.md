@@ -4,9 +4,9 @@
 
 ![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
-[Variable](../elements/data_sources/variable.md) キューブでは、**Instrument** データ型が選択されています。インストゥルメントが指定されていないが、**Common** グループの **Parameters** フラグが設定されている場合、それはストラテジーから取得され、その後 [Position](../elements/positions/current.md) に渡されます。
+[変数](../elements/data_sources/variable.md) キューブでは、**Instrument** データ型が選択されています。インストゥルメントが指定されていないが、**Common** グループの **Parameters** フラグが設定されている場合、それはストラテジーから取得され、その後 [ポジション](../elements/positions/current.md) に渡されます。
 
-[Position](../elements/positions/current.md) キューブでは、ポジションプロパティも指定されていませんが、**Common** グループの **Parameters** フラグが設定されています。これは、ストラテジー設定で指定されたポートフォリオについてポジションが取得されることを意味します。
+[ポジション](../elements/positions/current.md) キューブでは、ポジションプロパティも指定されていませんが、**Common** グループの **Parameters** フラグが設定されています。これは、ストラテジー設定で指定されたポートフォリオについてポジションが取得されることを意味します。
 
 インストゥルメントを渡し、ポジションが変化した後、1 つの引数を持つ数学関数（abs(pos)）を使用して絶対値が計算され、変数キューブ（2）にシグナルが送られます。このキューブには係数 2 が含まれており、保存された値を出力パラメーターを通じて渡します。その後、2 つの引数を持つ数式（abs(pos) \* 2）を使用して、それらの積が計算されます。次に、複合キューブ Conditional operator（pos \=\= 0 ? 1 : pos）を使用して、必要な数量の実際の値が決定されます。この値は、現在ポジション値に 2 を掛けた値とは異なる場合があります。たとえば、ストラテジー開始時点で、まだ注文が約定していない場合です。この場合、Conditional statement 要素は既定値の 1 を返します。1 つの出力パラメーターは別の要素の入力パラメーターに 1 回しか接続できないため、数式と条件演算子の間で同じ値を渡すために、追加の **Combination** キューブが追加されます。
 

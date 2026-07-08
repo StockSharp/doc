@@ -1,4 +1,4 @@
-# Order book
+# 板情報
 
 ![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
 

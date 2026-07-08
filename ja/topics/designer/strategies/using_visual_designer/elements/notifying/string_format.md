@@ -1,4 +1,4 @@
-# String format
+# 文字列フォーマット
 
 ![Designer String Format 00](../../../../../../images/designer_string_format_00.png)
 
@@ -34,6 +34,6 @@
 
 ## 推奨コンテンツ
 
-[String concat](string_concat.md)
-[Notification](notification.md)
+[文字列連結](string_concat.md)
+[通知](notification.md)
 

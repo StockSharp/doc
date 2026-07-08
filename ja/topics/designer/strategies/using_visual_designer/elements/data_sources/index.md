@@ -18,8 +18,8 @@
 - **Ignore errors** - 設定されたフラグは、インデックス計算時にエラーが無視されることを示します。
 - **Calculate extended information** - 設定されたフラグは、インデックス計算時に、基本情報（Total volume、Opening price、Closing price、Highest price、Lowest price）に加えて、拡張情報（Total trade turnover、Opening volume、Closing volume、Maximum volume、Minimum volume）が計算されることを示します。
 
-使用可能な数式は、[Formula](../common/formula.md) キューブと同様です。
+使用可能な数式は、[数式](../common/formula.md) キューブと同様です。
 
 ## 推奨コンテンツ
 
-[Variable](variable.md)
+[変数](variable.md)

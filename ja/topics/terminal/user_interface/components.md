@@ -6,7 +6,7 @@
 
 - [銘柄](components/instruments.md) - 選択したすべての銘柄に関する情報を表示する銘柄テーブルです。
 - [Level 1](components/level_1.md) - 選択した銘柄の Level 1 の変更履歴を表示するテーブルです。
-- [Buy\/Sell](components/buy_sell.md) - 選択した銘柄の最良価格情報を表示するパネルグループであり、選択した銘柄について必要な数量の買いまたは売りを行うことができます。
+- [売買](components/buy_sell.md) - 選択した銘柄の最良価格情報を表示するパネルグループであり、選択した銘柄について必要な数量の買いまたは売りを行うことができます。
 - [板情報](components/order_book.md) - 買いおよび売りの指値注文のテーブルです。
 - [チャート](components/chart.md) - 選択した銘柄のローソク足とインジケーターを描画できます。
 - [P&L エクイティ](../../designer/user_interface/components/pnl_equity.md) - 損益（未実現）、損益（実現）、および手数料のチャートです。

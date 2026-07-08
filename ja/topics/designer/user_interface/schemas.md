@@ -14,7 +14,7 @@
 
 3. **Live** フォルダーには、取引用に追加されたストラテジーが含まれます。起動中のストラテジーはアイコン ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) で示され、停止中のストラテジーはアイコン ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) で示されます。**Live** フォルダーにストラテジーを追加する方法と起動する方法は、[実取引](../live_execution/getting_started.md)セクションで説明されています。
 
-4. **Indicators** フォルダーには、自分で記述した取引ストラテジー用の独自インジケーターが含まれます。新しいインジケーターはスキームでは作成できず、コードと外部 DLL ファイルのみが使用可能です。スキームでのカスタム インジケーターの使用は、インジケーターの種類を選択するときに [Indicator](../strategies/using_visual_designer/elements/common/indicator.md) ブロックを通じて利用できます。
+4. **Indicators** フォルダーには、自分で記述した取引ストラテジー用の独自インジケーターが含まれます。新しいインジケーターはスキームでは作成できず、コードと外部 DLL ファイルのみが使用可能です。スキームでのカスタム インジケーターの使用は、インジケーターの種類を選択するときに [インジケーター](../strategies/using_visual_designer/elements/common/indicator.md) ブロックを通じて利用できます。
 
 5. **Remote** フォルダーには、リモート サーバー上にあるストラテジーが含まれます。
 

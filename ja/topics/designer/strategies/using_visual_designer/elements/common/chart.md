@@ -1,4 +1,4 @@
-# Chart
+# チャート
 
 ![Designer Panel graphics 00](../../../../../../images/designer_panel_graphics_00.png)
 
@@ -10,5 +10,5 @@
 
 ## 推奨コンテンツ
 
-[Crossing](crossing.md)
+[クロス](crossing.md)
 

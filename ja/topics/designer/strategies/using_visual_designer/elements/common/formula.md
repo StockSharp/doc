@@ -1,4 +1,4 @@
-# Formula
+# 数式
 
 ![Designer Universal formula 00](../../../../../../images/designer_universal_formula_00.png)
 
@@ -39,5 +39,5 @@
 
 ## 推奨コンテンツ
 
-[Indicator](indicator.md)
+[インジケーター](indicator.md)
 

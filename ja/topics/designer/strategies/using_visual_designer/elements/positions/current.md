@@ -1,4 +1,4 @@
-# Position
+# ポジション
 
 ![Designer Position 00](../../../../../../images/designer_position_00.png)
 

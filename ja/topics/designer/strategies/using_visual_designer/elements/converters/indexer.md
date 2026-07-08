@@ -1,4 +1,4 @@
-# Indexer
+# インデクサー
 
 ![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
 
@@ -24,4 +24,4 @@
 
 ## 推奨コンテンツ
 
-[Converter](converter.md)
+[コンバーター](converter.md)

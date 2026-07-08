@@ -1,4 +1,4 @@
-# Mass Order Cancellations
+# 注文一括キャンセル
 
 ![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
 

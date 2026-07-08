@@ -1,4 +1,4 @@
-# Modify Position
+# ポジション変更
 
 ![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
 
@@ -39,8 +39,8 @@
 
 ## 注記
 
-低レベルの注文管理には、[Order Registration](../orders/register.md) コンポーネントを使用できます。より高レベルのポジション管理には、この "Modify Position" コンポーネントを推奨します。
+低レベルの注文管理には、[注文登録](../orders/register.md) コンポーネントを使用できます。より高レベルのポジション管理には、この "Modify Position" コンポーネントを推奨します。
 
 ## 関連項目
 
-- [Order Registration](../orders/register.md)
+- [注文登録](../orders/register.md)

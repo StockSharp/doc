@@ -1,4 +1,4 @@
-# Ticks
+# ティック
 
 ![Designer Ticks](../../../../../../images/designer_ticks_00.png)
 

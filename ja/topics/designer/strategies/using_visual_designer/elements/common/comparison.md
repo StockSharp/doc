@@ -1,4 +1,4 @@
-# Comparison
+# 比較
 
 ![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
 
@@ -23,5 +23,5 @@
 
 ## 推奨コンテンツ
 
-[Indicator](indicator.md)
+[インジケーター](indicator.md)
 

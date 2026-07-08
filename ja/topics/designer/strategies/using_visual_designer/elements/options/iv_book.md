@@ -1,4 +1,4 @@
-# IV book
+# IV 板情報
 
 ![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 

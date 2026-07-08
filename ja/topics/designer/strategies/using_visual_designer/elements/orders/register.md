@@ -1,4 +1,4 @@
-# Order Registration
+# 注文登録
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 

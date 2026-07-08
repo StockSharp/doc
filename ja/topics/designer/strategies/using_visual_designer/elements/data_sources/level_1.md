@@ -25,4 +25,4 @@
 
 ## 関連項目
 
-[Ticks](ticks.md)
+[ティック](ticks.md)

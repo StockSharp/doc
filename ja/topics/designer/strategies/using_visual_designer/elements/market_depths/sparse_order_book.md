@@ -1,4 +1,4 @@
-# Sparse order book
+# 間引き板情報
 
 ![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
@@ -20,4 +20,4 @@
 
 ## 推奨コンテンツ
 
-[IV book](../options/iv_book.md)
+[IV 板情報](../options/iv_book.md)

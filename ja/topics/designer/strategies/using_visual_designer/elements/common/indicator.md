@@ -1,4 +1,4 @@
-# Indicator
+# インジケーター
 
 ![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
 
@@ -23,5 +23,5 @@
 ## 関連項目
 
 [インジケーター一覧](../../../../../api/indicators/list_of_indicators.md)
-[Logical Condition](logical_condition.md)
+[論理条件](logical_condition.md)
 

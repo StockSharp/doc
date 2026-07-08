@@ -8,5 +8,5 @@
 
 ## 推奨コンテンツ
 
-[Buy\/Sell](buy_sell.md)
+[売買](buy_sell.md)
 

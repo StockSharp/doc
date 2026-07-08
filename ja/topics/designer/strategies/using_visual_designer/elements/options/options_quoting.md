@@ -1,4 +1,4 @@
-# Options quoting
+# オプションのクォーティング
 
 ![Designer Quoting 00](../../../../../../images/designer_quoting_00.png)
 

@@ -28,5 +28,5 @@
 
 ## 推奨コンテンツ
 
-[Options quoting](options_quoting.md)
+[オプションのクォーティング](options_quoting.md)
 

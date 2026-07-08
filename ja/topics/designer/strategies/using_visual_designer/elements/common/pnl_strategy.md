@@ -1,4 +1,4 @@
-# P&L strategy
+# ストラテジーの P&L
 
 ![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
@@ -12,4 +12,4 @@ RemoteManager の英語ドキュメント
 
 ## 推奨コンテンツ
 
-[Prev value](prev_value.md)
+[前回値](prev_value.md)

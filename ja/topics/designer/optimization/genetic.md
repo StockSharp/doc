@@ -16,7 +16,7 @@
 
   ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
 
-  たとえば、**Profit** だけでなく、その **Maximum Drawdown** との相対関係でも計算できます。利用可能な数学関数は、[Formula](../strategies/using_visual_designer/elements/common/formula.md) ブロックと同様です。
+  たとえば、**Profit** だけでなく、その **Maximum Drawdown** との相対関係でも計算できます。利用可能な数学関数は、[数式](../strategies/using_visual_designer/elements/common/formula.md) ブロックと同様です。
 
 > [!TIP]
 > 遺伝的最適化は決定論的ではありません。そのため、[総当たり検索](brute_force.md)とは異なり、正確な反復回数、したがって必要な総時間を決定することはできません。

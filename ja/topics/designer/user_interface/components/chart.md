@@ -4,7 +4,7 @@
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 
-各チャートの左上隅には、チャートに追加されたすべてのグラフィック要素が表示されます。グラフィック要素の ![Designer Schedule 00](../../../../images/designer_schedule_00.png) チェックボックスをオフにすると、その要素はチャートから削除されます。![Designer Schedule 01](../../../../images/designer_schedule_01.png) ボタンをクリックすると、グラフィック要素の設定が開きます。また、[Chart](../../strategies/using_visual_designer/elements/common/chart.md) キューブのプロパティでもグラフィック要素を設定できます。
+各チャートの左上隅には、チャートに追加されたすべてのグラフィック要素が表示されます。グラフィック要素の ![Designer Schedule 00](../../../../images/designer_schedule_00.png) チェックボックスをオフにすると、その要素はチャートから削除されます。![Designer Schedule 01](../../../../images/designer_schedule_01.png) ボタンをクリックすると、グラフィック要素の設定が開きます。また、[チャート](../../strategies/using_visual_designer/elements/common/chart.md) キューブのプロパティでもグラフィック要素を設定できます。
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 

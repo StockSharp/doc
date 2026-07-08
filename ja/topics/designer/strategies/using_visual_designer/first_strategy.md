@@ -16,12 +16,12 @@
 
 3. 移動平均（SMA）ストラテジーの要点は次のとおりです:
 
-- 計算期間が異なる 2 つの移動平均、長期 SMA と短期 SMA があります。この例では、長期 SMA の [Indicator](elements/common/indicator.md) キューブは Long SMA と呼ばれ、期間は 80 本のローソク足です。短期 SMA は Short SMA と呼ばれ、期間は 10 本のローソク足です。
+- 計算期間が異なる 2 つの移動平均、長期 SMA と短期 SMA があります。この例では、長期 SMA の [インジケーター](elements/common/indicator.md) キューブは Long SMA と呼ばれ、期間は 80 本のローソク足です。短期 SMA は Short SMA と呼ばれ、期間は 10 本のローソク足です。
 - 短期移動平均が長期移動平均を下から上へクロスしたら、ロングポジションを開きます。
 - 短期移動平均が長期移動平均を上から下へクロスしたら、ショートポジションを開きます。
 - ポジションを開くシグナルを受け取った時点で反対ポジションがある場合は、ポジションを反転します。
 
-4. すべてのストラテジーでは、取引に使用するインストゥルメントとポートフォリオが必要です。これらを **Palette** パネルから **Designer** パネルに追加する必要があります。この例では、**Instrument** 型の [Variable](elements/data_sources/variable.md) キューブを Instrument、**Portfolio** 型の [Variable](elements/data_sources/variable.md) キューブを Portfolio と呼びます。Instrument キューブと Portfolio キューブの **Parameters** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、インストゥルメントとポートフォリオの値を手動で入力する必要があります。[Variable](elements/data_sources/variable.md) キューブの Value フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [Variable](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
+4. すべてのストラテジーでは、取引に使用するインストゥルメントとポートフォリオが必要です。これらを **Palette** パネルから **Designer** パネルに追加する必要があります。この例では、**Instrument** 型の [変数](elements/data_sources/variable.md) キューブを Instrument、**Portfolio** 型の [変数](elements/data_sources/variable.md) キューブを Portfolio と呼びます。Instrument キューブと Portfolio キューブの **Parameters** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、インストゥルメントとポートフォリオの値を手動で入力する必要があります。[変数](elements/data_sources/variable.md) キューブの Value フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [変数](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -31,19 +31,19 @@
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. インストゥルメントとポートフォリオを追加した後、2 つの [Indicator](elements/common/indicator.md) キューブを追加し、SMA 型を選択します。1 つ目に Long SMA という名前を付け、期間を 80 本のローソク足に設定します。2 つ目に Short SMA という名前を付け、期間を 10 本のローソク足に設定します。
+5. インストゥルメントとポートフォリオを追加した後、2 つの [インジケーター](elements/common/indicator.md) キューブを追加し、SMA 型を選択します。1 つ目に Long SMA という名前を付け、期間を 80 本のローソク足に設定します。2 つ目に Short SMA という名前を付け、期間を 10 本のローソク足に設定します。
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. インジケーターを動作させるには、ローソク足系列を渡します。そのために、[Candles](elements/data_sources/candles.md) キューブを作成します。この例では、時間枠が 5 分の形成済みローソク足のみを使用します。
+6. インジケーターを動作させるには、ローソク足系列を渡します。そのために、[ローソク足](elements/data_sources/candles.md) キューブを作成します。この例では、時間枠が 5 分の形成済みローソク足のみを使用します。
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. インジケーターを追加した後、インジケーターの交差を定義する 2 つのキューブを追加する必要があります。これらは複合要素の [Crossing](elements/common/crossing.md) キューブです。1 つ目のキューブは Crossing Up と呼ばれます。これは下から上への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより大きい値に設定され、PrevComparison 演算子は以下に設定されます。2 つ目のキューブは Crossing Down と呼ばれ、上から下への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより小さい値に設定され、PrevComparison 演算子は以上に設定されます。
+7. インジケーターを追加した後、インジケーターの交差を定義する 2 つのキューブを追加する必要があります。これらは複合要素の [クロス](elements/common/crossing.md) キューブです。1 つ目のキューブは Crossing Up と呼ばれます。これは下から上への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより大きい値に設定され、PrevComparison 演算子は以下に設定されます。2 つ目のキューブは Crossing Down と呼ばれ、上から下への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより小さい値に設定され、PrevComparison 演算子は以上に設定されます。
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. ローソク足、インジケーター、取引を視覚的に表示するために、[Chart](elements/common/chart.md) を追加します。[Chart](elements/common/chart.md) に、ローソク足、2 つのインジケーター、取引用の表示要素を追加します。
+8. ローソク足、インジケーター、取引を視覚的に表示するために、[チャート](elements/common/chart.md) を追加します。[チャート](elements/common/chart.md) に、ローソク足、2 つのインジケーター、取引用の表示要素を追加します。
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
@@ -59,7 +59,7 @@
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-ポジションを制御するには、[Position](elements/positions/current.md) を追加する必要があります。このキューブの入力には **Instrument** と **Portfolio** が渡されます。
+ポジションを制御するには、[ポジション](elements/positions/current.md) を追加する必要があります。このキューブの入力には **Instrument** と **Portfolio** が渡されます。
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

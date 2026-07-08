@@ -1,4 +1,4 @@
-# Chart positions
+# ポジションチャート
 
 ![Designer Graph options positions 00](../../../../../../images/designer_graph_options_positions_00.png)
 
