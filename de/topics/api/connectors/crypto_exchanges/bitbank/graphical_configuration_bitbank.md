@@ -13,7 +13,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ## Empfohlener Inhalt
 
-[Connectors](../../../connectors.md)
+[Konnektoren](../../../connectors.md)
 
 [Grafische Konfiguration](../../graphical_configuration.md)
 

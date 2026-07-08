@@ -1,10 +1,10 @@
 # Delta-Hedging
 
-Wenn Sie Positionen durch Optionsstrategien absichern möchten (zum Beispiel wie bei [Volatility Trading](volatility_trading.md)), können Sie die [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) verwenden, eine Hedging-Strategie nach Delta.
+Wenn Sie Positionen durch Optionsstrategien absichern möchten (zum Beispiel wie bei [Volatilitätshandel](volatility_trading.md)), können Sie die [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) verwenden, eine Hedging-Strategie nach Delta.
 
 ## Delta-Hedging
 
-1. Zur Demonstration der Funktionsweise von [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) wird das Beispiel SampleOptionQuoting angepasst (Details siehe [Volatility Trading](volatility_trading.md)).
+1. Zur Demonstration der Funktionsweise von [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) wird das Beispiel SampleOptionQuoting angepasst (Details siehe [Volatilitätshandel](volatility_trading.md)).
 2. Die Strategie [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) wird nicht gestartet, sondern als untergeordnete Strategie an [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) übergeben.
 
    ```cs

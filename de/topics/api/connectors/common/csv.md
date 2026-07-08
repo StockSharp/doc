@@ -2,14 +2,14 @@
 
 **CSV** - Import von Daten aus einem Textformat.
 
-Bevor Sie mit dem Schreiben von Handelsrobotern für die aktuelle Handelsplattform beginnen, wird empfohlen, die Links im Abschnitt [Connectors](../../connectors.md) durchzusehen.
+Bevor Sie mit dem Schreiben von Handelsrobotern für die aktuelle Handelsplattform beginnen, wird empfohlen, die Links im Abschnitt [Konnektoren](../../connectors.md) durchzusehen.
 
 > [!CAUTION]
 > Der Connector unterstützt nur Marktdaten-Feeds; Transaktionen werden nicht unterstützt.
 
 ## Empfohlener Inhalt
 
-[Connectors](../../connectors.md)
+[Konnektoren](../../connectors.md)
 
 [Grafische Konfiguration](../graphical_configuration.md)
 

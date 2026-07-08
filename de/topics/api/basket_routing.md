@@ -170,6 +170,6 @@ connector.CancelOrder(order);
 
 ## Siehe auch
 
-- [Connectors](connectors.md)
+- [Konnektoren](connectors.md)
 - [Grafische Konfiguration](connectors/graphical_configuration.md)
 - [Positionsverwaltung](positions.md)

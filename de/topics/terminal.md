@@ -6,7 +6,7 @@
 
 ## Vorteile und Funktionen von Terminal:
 
-1. **Unterstützt viele Datenquellen:** [Connectors](api/connectors.md).
+1. **Unterstützt viele Datenquellen:** [Konnektoren](api/connectors.md).
 2. **Handel aus Charts**.
 3. **Benutzerdefinierte Timeframes**.
 4. **Volume-, Tick-, Range-, PnF- und Renko-Kerzen**.

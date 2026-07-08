@@ -5,11 +5,11 @@
 
 **BitMax** - Kryptowährungsbörse.
 
-Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir Ihnen, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen.
+Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir Ihnen, die Links im Abschnitt [Konnektoren](../../connectors.md) zu lesen.
 
 ## Empfohlener Inhalt
 
-[Connectors](../../connectors.md)
+[Konnektoren](../../connectors.md)
 
 [Grafische Konfiguration](../graphical_configuration.md)
 

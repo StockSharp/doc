@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-Ein Beispiel für die Anzeige von Candles in einem Chart finden Sie im Abschnitt [Candles](../candles.md).
+Ein Beispiel für die Anzeige von Candles in einem Chart finden Sie im Abschnitt [Kerzen](../candles.md).
 
 ## Siehe auch
 

@@ -1,4 +1,4 @@
-# Connectors
+# Konnektoren
 
 Für die Arbeit mit Börsen und Datenquellen in [S#](../api.md) wird empfohlen, die Basisklasse [Connector](xref:StockSharp.Algo.Connector) zu verwenden.
 

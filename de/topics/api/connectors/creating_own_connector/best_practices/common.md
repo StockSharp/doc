@@ -1,4 +1,4 @@
-# Best Practices
+# Bewährte Vorgehensweisen
 
 Bei der Entwicklung eines Connectors für eine Reihe von Börsen innerhalb der StockSharp-Plattform wird empfohlen, einem etablierten Ansatz zu folgen, der die Aufteilung der Funktionalität in mehrere Schlüsselkomponenten vorsieht:
 

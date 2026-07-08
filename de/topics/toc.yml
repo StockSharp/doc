@@ -697,7 +697,7 @@
       href: api/ai_development/connector_with_ai.md
   - name: "S#-Beispiele"
     href: api/examples.md
-  - name: Connectors
+  - name: Konnektoren
     href: api/connectors.md
     items:
     - name: Grafische Konfiguration
@@ -1577,7 +1577,7 @@
         href: api/connectors/creating_own_connector/order_extended.md
       - name: Liste der Nachrichten
         href: api/connectors/creating_own_connector/messages.md
-      - name: Best Practices
+      - name: Bewährte Vorgehensweisen
         href: api/connectors/creating_own_connector/best_practices/common.md
         items:
         - name: Authentifizierung
@@ -1634,11 +1634,11 @@
       href: api/instruments/instrument_identifier.md
     - name: "Identifier \\*@ALL"
       href: api/instruments/identifier_@all.md
-    - name: Continuous Futures
+    - name: Fortlaufende Futures
       href: api/instruments/continuous_futures.md
     - name: Index
       href: api/instruments/index.md
-    - name: Volume Continuous Futures (VolumeContinuousSecurity)
+    - name: Volumenbasierte fortlaufende Futures (VolumeContinuousSecurity)
       href: api/instruments/volume_continuous_security.md
   - name: Marktdatenspeicher
     href: api/market_data_storage.md
@@ -1653,7 +1653,7 @@
       href: api/market_data_storage/drives.md
     - name: Snapshot-System
       href: api/market_data_storage/snapshots.md
-  - name: Candles
+  - name: Kerzen
     href: api/candles.md
     items:
     - name: Chart
@@ -2084,7 +2084,7 @@
       href: api/order_books/examples.md
     - name: Gefiltertes Orderbuch
       href: api/order_books/filtered_order_book.md
-    - name: Sparse Order Book
+    - name: Dünnes Orderbuch
       href: api/order_books/sparse.md
     - name: Gruppiertes Orderbuch
       href: api/order_books/grouped.md
@@ -2123,7 +2123,7 @@
       href: api/strategies/unit_type.md
     - name: Quoting-Algorithmus
       href: api/strategies/quoting.md
-    - name: Working Securities
+    - name: Arbeitsinstrumente
       href: api/strategies/working_securities.md
     - name: Strategien
       href: api/strategies/strategies.md
@@ -2211,7 +2211,7 @@
     href: api/slippage.md
   - name: Latenzmessung
     href: api/latency.md
-  - name: Logging
+  - name: Protokollierung
     href: api/logging.md
     items:
     - name: Strategie-Logging
@@ -2227,9 +2227,9 @@
   - name: Optionen
     href: api/options.md
     items:
-    - name: Greeks
+    - name: Optionsgriechen
       href: api/options/greeks.md
-    - name: Volatility Trading
+    - name: Volatilitätshandel
       href: api/options/volatility_trading.md
     - name: Delta-Hedging
       href: api/options/delta_hedging.md
@@ -2274,7 +2274,7 @@
         href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
       - name: Annotationen
         href: api/graphical_user_interface/charts/annotations.md
-    - name: Logging
+    - name: Protokollierung
       href: api/graphical_user_interface/logging.md
       items:
       - name: Log-Panel
@@ -2299,7 +2299,7 @@
         href: api/graphical_user_interface/instruments/window.md
       - name: Tabelle
         href: api/graphical_user_interface/instruments/table.md
-      - name: Picker
+      - name: Instrumentenauswahl
         href: api/graphical_user_interface/instruments/picker.md
       - name: Kontinuierliche Futures
         href: api/graphical_user_interface/instruments/continuous_futures.md
@@ -2318,7 +2318,7 @@
         href: api/graphical_user_interface/market_data/order_log.md
       - name: Nachrichten
         href: api/graphical_user_interface/market_data/news.md
-    - name: Trading
+    - name: Handel
       href: api/graphical_user_interface/trading.md
       items:
       - name: Orders

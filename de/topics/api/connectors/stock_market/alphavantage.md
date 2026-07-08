@@ -2,14 +2,14 @@
 
 **Alpha Vantage** - Marktdatenanbieter für Echtzeit- und historische Daten zu Aktien, Forex (FX) sowie digitalen/Krypto-Waehrungen.
 
-Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Konnektoren](../../connectors.md) zu lesen.
 
 > [!CAUTION]
 > Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.
 
 ## Empfohlene Inhalte
 
-[Connectors](../../connectors.md)
+[Konnektoren](../../connectors.md)
 
 [Grafische Konfiguration](../graphical_configuration.md)
 

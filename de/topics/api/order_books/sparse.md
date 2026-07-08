@@ -1,4 +1,4 @@
-# Sparse Order Book
+# Dünnes Orderbuch
 
 Ein Sparse Order Book ist eine Darstellung des Orderbuchs, die alle möglichen Preisniveaus anzeigt, einschließlich solcher, auf denen aktuell keine aktiven Orders vorhanden sind. Dieser Ansatz ermöglicht Tradern, die "Lücken" zwischen Orders visuell zu bewerten, also Preisniveaus ohne Kauf- oder Verkaufsorders, und gibt Einblick in mögliche Widerstands- oder Unterstützungsniveaus.
 

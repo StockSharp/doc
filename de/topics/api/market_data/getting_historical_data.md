@@ -146,7 +146,7 @@ connector.Subscribe(depthSubscription);
 
 ## Siehe auch
 
-- [Candles](../candles.md)
+- [Kerzen](../candles.md)
 - [Abonnements](subscriptions.md)
 - [Indikatoren](../indicators.md)
 

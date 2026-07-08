@@ -63,7 +63,7 @@ Jedes Instrument in StockSharp besitzt einen eindeutigen Bezeichner [SecurityId]
 
 [Identifier \*@ALL](instruments/identifier_@all.md)
 
-[Continuous Futures](instruments/continuous_futures.md)
+[Fortlaufende Futures](instruments/continuous_futures.md)
 
 [Index](instruments/index.md)
 

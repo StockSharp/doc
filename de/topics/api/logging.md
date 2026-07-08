@@ -1,4 +1,4 @@
-# Logging
+# Protokollierung
 
 Für das Monitoring von in [S#](../api.md) geschriebenen Handelsalgorithmen können Sie die spezielle Klasse [LogManager](xref:Ecng.Logging.LogManager) verwenden. Diese Klasse empfängt Nachrichten [LogMessage](xref:Ecng.Logging.LogMessage) aus [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources) über das Ereignis [ILogSource.Log](xref:Ecng.Logging.ILogSource.Log) und übergibt sie an die Listener [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). Dadurch kann der Algorithmuscode Debug-Informationen übergeben (zum Beispiel über Fehler während der Ausführung oder zusätzliche Informationen zu mathematischen Berechnungen), und [LogManager](xref:Ecng.Logging.LogManager) entscheidet, wie diese Informationen dem Operator angezeigt werden.
 

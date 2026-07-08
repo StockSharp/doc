@@ -12,7 +12,7 @@ Tests können mit verschiedenen Arten von Marktdaten durchgeführt werden:
 
 Wenn für den Testzeitraum keine gespeicherten Orderbücher vorhanden sind, können sie auf Basis von Trades mit [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) generiert oder aus dem Order-Log mit [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) rekonstruiert werden.
 
-Daten für historische Tests müssen im Voraus in einem speziellen [S#](../../api.md)-Format heruntergeladen und gespeichert werden. Dies kann manuell über [Connectors](../connectors.md) und die [Storage API](../market_data_storage/api.md) erfolgen oder durch Konfiguration und Start der speziellen Anwendung [Hydra](../../hydra.md).
+Daten für historische Tests müssen im Voraus in einem speziellen [S#](../../api.md)-Format heruntergeladen und gespeichert werden. Dies kann manuell über [Konnektoren](../connectors.md) und die [Storage API](../market_data_storage/api.md) erfolgen oder durch Konfiguration und Start der speziellen Anwendung [Hydra](../../hydra.md).
 
 ## Hauptphasen des historischen Testens
 

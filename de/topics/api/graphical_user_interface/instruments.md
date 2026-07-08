@@ -13,7 +13,7 @@
 
 [Tabelle](instruments/table.md)
 
-[Picker](instruments/picker.md)
+[Instrumentenauswahl](instruments/picker.md)
 
 [Kontinuierliche Futures](instruments/continuous_futures.md)
 

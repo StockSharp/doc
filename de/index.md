@@ -2,7 +2,7 @@
 
 [StockSharp (S#)](https://stocksharp.com/store/) bietet **kostenlose** Handelsanwendungen für globale Märkte, einschließlich Aktien, Futures, Optionen, Kryptowährungen und Forex. Sie können manuell handeln oder automatisierte Strategien ausführen, von herkömmlichen Handelsrobotern bis hin zu HFT-Systemen (High-Frequency Trading).
 
-**Unterstützt 90+ Broker, Börsen und Datenquellen:** [Connectors](topics/api/connectors.md).
+**Unterstützt 90+ Broker, Börsen und Datenquellen:** [Konnektoren](topics/api/connectors.md).
 
 S# funktioniert mit jedem Broker, jeder Börse oder Datenquelle, die von den verfügbaren Connectors unterstützt wird.
 
@@ -31,7 +31,7 @@ S# funktioniert mit jedem Broker, jeder Börse oder Datenquelle, die von den ver
 
 [Hydra](topics/hydra.md) lädt automatisch historische und Echtzeit-Marktdaten herunter:
 
-- Unterstützt viele Datenquellen über [Connectors](topics/api/connectors.md).
+- Unterstützt viele Datenquellen über [Konnektoren](topics/api/connectors.md).
 - Hohes Kompressionsverhältnis (2 Bytes pro Trade, 7 Bytes pro Orderbuch).
 - Verarbeitet jeden Datentyp (Candles, Ticks, Orderbücher, Order-Logs, Optionen, Nachrichten und mehr).
 - API-Zugriff auf gespeicherte Daten.

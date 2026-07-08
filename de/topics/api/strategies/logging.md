@@ -226,6 +226,6 @@ Meldungen, die in das Strategielog geschrieben wurden, können angezeigt werden:
 
 ## Siehe auch
 
-[Logging](../logging.md)
+[Protokollierung](../logging.md)
 [LogControl-Komponente](../graphical_user_interface/logging/log_panel.md)
 

@@ -1,4 +1,4 @@
-# Candles
+# Kerzen
 
 [S#](../api.md) unterstützt die folgenden Candle-Typen:
 

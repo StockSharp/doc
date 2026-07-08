@@ -2,7 +2,7 @@
 
 **Interactive Brokers** - Handelsplattform für den Handel mit Finanzanlagen, darunter Aktien, Optionen, Futures, EFPs, Futures-Optionen, Forex, Anleihen und Fonds.
 
-Bevor Sie Handelsroboter für diese Handelsplattform schreiben, lesen Sie die Links unter [Connectors](../../connectors.md).
+Bevor Sie Handelsroboter für diese Handelsplattform schreiben, lesen Sie die Links unter [Konnektoren](../../connectors.md).
 
 ## TWS-Konfiguration Interactive Brokers
 
@@ -14,7 +14,7 @@ Bevor Sie Handelsroboter für diese Handelsplattform schreiben, lesen Sie die Li
 
 ## Siehe auch
 
-[Connectors](../../connectors.md)
+[Konnektoren](../../connectors.md)
 
 [Grafische Konfiguration](../graphical_configuration.md)
 

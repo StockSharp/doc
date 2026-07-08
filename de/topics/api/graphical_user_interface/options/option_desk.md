@@ -146,4 +146,4 @@ Unten folgt das Beispiel **OptionCalculator**, das diese Komponente verwendet. D
 
 ## Empfohlene Inhalte
 
-[Greeks](../../options/greeks.md)
+[Optionsgriechen](../../options/greeks.md)

@@ -19,7 +19,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ## Empfohlene Inhalte
 
-[Connectors](../../../connectors.md)
+[Konnektoren](../../../connectors.md)
 
 [Grafische Konfiguration](../../graphical_configuration.md)
 

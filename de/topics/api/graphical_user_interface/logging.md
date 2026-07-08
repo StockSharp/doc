@@ -1,4 +1,4 @@
-# Logging
+# Protokollierung
 
 [S#](../../api.md) bietet mehrere grafische Komponenten zur Anzeige von Logs: [LogControl](xref:StockSharp.Xaml.LogControl) und [Monitor](xref:StockSharp.Xaml.Monitor).
 
@@ -34,7 +34,7 @@ public MainWindow()
 
 ## Empfohlene Inhalte
 
-[Logging](../logging.md)
+[Protokollierung](../logging.md)
 
 [Log-Panel](logging/log_panel.md)
 

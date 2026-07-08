@@ -1,4 +1,4 @@
-# Volume Continuous Futures (VolumeContinuousSecurity)
+# Volumenbasierte fortlaufende Futures (VolumeContinuousSecurity)
 
 ## Überblick
 

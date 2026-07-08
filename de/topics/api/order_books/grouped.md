@@ -1,6 +1,6 @@
 # Gruppiertes Orderbuch
 
-Zusätzlich zum [Sparse Order Book](sparse.md) kann es nützlich sein, ein gruppiertes Orderbuch zu verwenden, in dem Orders über breitere Preisbereiche aggregiert werden, um die Analyse zu vereinfachen und allgemeine Trends in Nachfrage und Angebot zu erkennen.
+Zusätzlich zum [Dünnes Orderbuch](sparse.md) kann es nützlich sein, ein gruppiertes Orderbuch zu verwenden, in dem Orders über breitere Preisbereiche aggregiert werden, um die Analyse zu vereinfachen und allgemeine Trends in Nachfrage und Angebot zu erkennen.
 
 Vorteile eines gruppierten Orderbuchs:
 

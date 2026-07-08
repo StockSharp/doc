@@ -16,7 +16,7 @@ Wichtige Felder:
 
 ## Empfohlener Inhalt
 
-[Connectors](../../../connectors.md)
+[Konnektoren](../../../connectors.md)
 
 [Grafische Konfiguration](../../graphical_configuration.md)
 

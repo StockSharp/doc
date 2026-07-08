@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [LinearRegSlope](x
 
 ## Empfohlene Inhalte
 
-[Logging](../../logging.md)
+[Protokollierung](../../logging.md)

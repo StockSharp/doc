@@ -2,14 +2,14 @@
 
 **Binance History** - historischer Dienst der Binance-Börse.
 
-Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir Ihnen, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen.
+Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir Ihnen, die Links im Abschnitt [Konnektoren](../../connectors.md) zu lesen.
 
 > [!CAUTION]
 > Der Connector unterstützt nur den Marktdaten-Feed, Transaktionen werden nicht unterstützt.
 
 ## Empfohlener Inhalt
 
-[Connectors](../../connectors.md)
+[Konnektoren](../../connectors.md)
 
 [Grafische Konfiguration](../graphical_configuration.md)
 

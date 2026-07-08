@@ -28,7 +28,7 @@ Ein Klick auf ![Designer Quick start 04](../../images/designer_quick_start_04.pn
 
 ![Designer Quick start 05](../../images/designer_quick_start_05.png)
 
-Wenn Sie einen beliebigen Block im Panel **Designer** auswählen, zeigt das Panel **Properties** die Eigenschaften dieses Blocks an. Im Panel **Properties** des Blocks **Candles** können Sie Kerzentyp und Time Frame konfigurieren ([Candles](../api/candles.md)).
+Wenn Sie einen beliebigen Block im Panel **Designer** auswählen, zeigt das Panel **Properties** die Eigenschaften dieses Blocks an. Im Panel **Properties** des Blocks **Candles** können Sie Kerzentyp und Time Frame konfigurieren ([Kerzen](../api/candles.md)).
 
 Nach dem Klicken auf **Start** beginnt die Handelsemulation. Die Testergebnisse sind in den entsprechenden Tabs des Diagramms verfügbar: Chart, Orders, Trades, P/L, Positions (chart), Statistics und Positions.
 

@@ -1,4 +1,4 @@
-# Volatility Trading
+# Volatilitätshandel
 
 Für Optionsquoting ist eine spezielle Strategie [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) implementiert, die Volumenquoting innerhalb des angegebenen Volatilitätsbereichs bereitstellt.
 

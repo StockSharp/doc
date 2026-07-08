@@ -4,9 +4,9 @@ Für die Arbeit mit Optionen stellt [S#](../api.md) spezielle Methoden zur Berec
 
 ## Empfohlene Inhalte
 
-[Greeks](options/greeks.md)
+[Optionsgriechen](options/greeks.md)
 
-[Volatility Trading](options/volatility_trading.md)
+[Volatilitätshandel](options/volatility_trading.md)
 
 [Delta-Hedging](options/delta_hedging.md)
 

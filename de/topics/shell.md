@@ -9,7 +9,7 @@ Sie müssen keine GUI (Graphical User Interface) von Grund auf erstellen. Shell 
 Die Hauptfunktionen der Handelsroboter-Shell:
 
 1. Vollständiger Quellcode, geeignet für eigene Handelsroboter und individuelle Lösungen.
-2. **Unterstützung für mehr als 70 Verbindungen** zu Börsen und Brokern über [Connectors](api/connectors.md).
+2. **Unterstützung für mehr als 70 Verbindungen** zu Börsen und Brokern über [Konnektoren](api/connectors.md).
 3. Flexible Benutzeroberfläche.
 4. Werkzeuge zum Strategietesting: Statistiken, Equity und Berichte.
 5. Speichern und Wiederherstellen von Strategieeinstellungen.

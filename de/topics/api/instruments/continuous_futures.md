@@ -1,4 +1,4 @@
-# Continuous Futures
+# Fortlaufende Futures
 
 [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity) ist ein kontinuierliches Instrument, üblicherweise ein Futures-Kontrakt, das Instrumente enthält, die einem Verfall unterliegen.
 
