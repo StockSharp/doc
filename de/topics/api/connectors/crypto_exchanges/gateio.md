@@ -14,7 +14,7 @@ Bevor Sie mit der Entwicklung von Handelsrobotern für diese Handelsplattform be
 
 [Eigenen Connector erstellen](../creating_own_connector.md)
 
-[Orders](../../orders_management.md)
+[Orderverwaltung](../../orders_management.md)
 
 [Neue Order erstellen](../../orders_management/create_new_order.md)
 

@@ -1,19 +1,19 @@
-# Order books
+# Orderbücher
 
-Um Order Books zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Import \=\> Order books**.
+Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Import \=\> Orderbücher**.
 
 ![hydra import depths](../../../images/hydra_import_depths.png)
 
 ## Importprozess.
 
-1. **Import settings.**.
+1. **Importeinstellungen.**.
 
    Siehe Import von [Candles](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
 
    Siehe Import von [Candles](candles.md).
 
-   **Betrachten wir ein Beispiel für den Import eines Order Books aus einer CSV-Datei:**
+   **Betrachten wir ein Beispiel für den Import eines Orderbuchs aus einer CSV-Datei:**
    - Die Datei, aus der Sie Daten importieren möchten, hat die folgende Vorlage:
 
      ```none

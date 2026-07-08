@@ -485,7 +485,7 @@
       href: hydra/videos/instruments_downloading.md
     - name: Kerzen erstellen
       href: hydra/videos/building_candles.md
-    - name: Order Books erstellen
+    - name: Orderbücher erstellen
       href: hydra/videos/building_order_books.md
     - name: Speicherformat
       href: hydra/videos/saving_format.md
@@ -526,11 +526,11 @@
       items:
       - name: Ticks
         href: hydra/working_with_data/view_and_export/ticks.md
-      - name: Order Books
+      - name: Orderbücher
         href: hydra/working_with_data/view_and_export/order_books.md
       - name: Kerzen
         href: hydra/working_with_data/view_and_export/candles.md
-      - name: Order Log
+      - name: Order-Log
         href: hydra/working_with_data/view_and_export/order_log.md
       - name: Level 1
         href: hydra/working_with_data/view_and_export/level_1_.md
@@ -564,9 +564,9 @@
       href: hydra/importing/instruments.md
     - name: Ticks
       href: hydra/importing/ticks.md
-    - name: Order books
+    - name: Orderbücher
       href: hydra/importing/order_books.md
-    - name: Order log
+    - name: Order-Log
       href: hydra/importing/order_log.md
     - name: Level 1
       href: hydra/importing/level_1.md

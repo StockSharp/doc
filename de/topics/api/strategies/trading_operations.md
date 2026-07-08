@@ -71,7 +71,7 @@ var order = new Order
 RegisterOrder(order);
 ```
 
-Weitere Details zur Arbeit mit Orders finden Sie im Abschnitt [Orders](../orders_management.md).
+Weitere Details zur Arbeit mit Orders finden Sie im Abschnitt [Orderverwaltung](../orders_management.md).
 
 ## Verarbeitung von Order-Ereignissen
 
@@ -318,7 +318,7 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## Siehe auch
 
-- [Orders](../orders_management.md)
+- [Orderverwaltung](../orders_management.md)
 - [Order-Regeln](event_model/samples/rule_order.md)
 - [Ereignismodell](event_model.md)
 - [Positionsschutz](take_profit_and_stop_loss.md)

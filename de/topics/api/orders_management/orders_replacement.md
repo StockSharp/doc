@@ -20,5 +20,4 @@ if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk
 
 ## Empfohlene Inhalte
 
-[Orders cancel](order_cancel.md)
-
+[Order stornieren](order_cancel.md)

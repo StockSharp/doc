@@ -20,5 +20,5 @@ Ausgehende Sockets
 
 ## Siehe auch
 
-[Mass Orders Cancel](mass_cancel.md)
+[Massenstornierung von Orders](mass_cancel.md)
 
