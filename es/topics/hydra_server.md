@@ -1,4 +1,4 @@
-# Hydra Server
+# Servidor Hydra
 
 **Hydra Server** es un servicio que transmite datos por la red para que programas externos, como [Designer](designer.md), puedan conectarse a él.
 

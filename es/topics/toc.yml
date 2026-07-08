@@ -473,13 +473,13 @@
     - name: Ejemplos de fuentes
       href: hydra/videos/sources_samples.md
       items:
-      - name: Oanda
+      - name: Conexión a OANDA
         href: hydra/videos/sources_samples/oanda.md
-      - name: Interactive Brokers
+      - name: Conexión a Interactive Brokers
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: Bitmex
+      - name: Conexión a BitMEX
         href: hydra/videos/sources_samples/bitmex.md
-      - name: Binance
+      - name: Conexión a Binance
         href: hydra/videos/sources_samples/binance.md
     - name: Descarga de instrumentos
       href: hydra/videos/instruments_downloading.md
@@ -661,7 +661,7 @@
     href: hydra/create_new_source.md
   - name: Crear nueva tarea
     href: hydra/create_new_task.md
-- name: Hydra Server
+- name: Servidor Hydra
   href: hydra_server.md
 - name: Servicios de Telegram
   href: telegram_services.md
