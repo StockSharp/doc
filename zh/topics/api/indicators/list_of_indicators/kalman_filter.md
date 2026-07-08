@@ -25,5 +25,5 @@
 
 ## 另请参阅
 
-[Kaufman自适应移动平均](kama.md)
+[Kaufman 自适应移动平均](kama.md)
 [自适应拉盖尔滤波器](adaptive_laguerre_filter.md)

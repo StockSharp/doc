@@ -93,5 +93,5 @@ PPO состоит из трех компонентов:
 [EMA](ema.md)
 [PPOS](percentage_price_oscillator_signal.md)
 [PPOH](percentage_price_oscillator_histogram.md)
-[PercentageVolumeOscillator](percentage_volume_oscillator.md)
+[Percentage Volume Oscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)

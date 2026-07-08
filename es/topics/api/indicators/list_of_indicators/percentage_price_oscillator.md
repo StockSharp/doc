@@ -93,5 +93,5 @@ El Percentage Price Oscillator se puede interpretar de la siguiente manera:
 [EMA](ema.md)
 [Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
 [Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
-[PercentageVolumeOscillator](percentage_volume_oscillator.md)
+[Percentage Volume Oscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)

@@ -155,4 +155,4 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 
 - [策略优化](../testing/optimization.md)
 - [策略统计](statistics.md)
-- [Designer中的遗传优化](../../designer/optimization/genetic.md)
+- [Designer 中的遗传优化](../../designer/optimization/genetic.md)

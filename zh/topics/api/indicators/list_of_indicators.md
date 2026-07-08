@@ -10,7 +10,7 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - 批准流指数，根据价格和成交量衡量趋势强度
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux 移动平均线，一种减少滞后和噪音的移动平均线
 - [Aroon](list_of_indicators/aroon.md) - Aroon 指标，用于确定趋势的强度和方向
-- [Aroon 振荡器](list_of_indicators/aroon_oscillator.md) - Aroon 振荡器，显示 Aroon 向上与 Aroon 向下之间的差距
+- [阿隆振荡器](list_of_indicators/aroon_oscillator.md) - Aroon 振荡器，显示 Aroon 向上与 Aroon 向下之间的差距
 - [ADX](list_of_indicators/adx.md) - 韦尔斯·威尔德平均方向指数，衡量趋势强度
 - [ATR](list_of_indicators/atr.md) - 平均真实波幅，衡量市场波动性
 - [AO](list_of_indicators/ao.md) - 超级振荡器，衡量市场动能

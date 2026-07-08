@@ -94,6 +94,6 @@ KVO 将价格信息与成交量结合，使用一个考虑价格变动方向和�
 ## 另请参阅
 
 [OBV](on_balance_volume.md)
-[Chaikin资金流量](chaikin_money_flow.md)
+[Chaikin 资金流量](chaikin_money_flow.md)
 [累积/派发线](accumulation_distribution_line.md)
 [力量指数](force_index.md)

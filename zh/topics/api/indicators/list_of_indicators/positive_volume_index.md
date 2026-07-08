@@ -76,6 +76,6 @@ PVI通常与互补的负成交量指标（NVI）一起使用，相反，NVI仅�
 
 [OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
-[Chaikin资金流量](chaikin_money_flow.md)
+[Chaikin 资金流量](chaikin_money_flow.md)
 [力量指数](force_index.md)
 [负成交量指数](negative_volume_index.md)
