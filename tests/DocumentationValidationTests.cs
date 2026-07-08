@@ -47,7 +47,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	};
 
 	[TestMethod]
-	public void Localization_metadata_and_strings_are_consistent()
+	public void LocalizationMetadataAndStringsAreConsistent()
 	{
 		var errors = new List<string>();
 
@@ -207,7 +207,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void Toc_files_reference_existing_markdown()
+	public void TocFilesReferenceExistingMarkdown()
 	{
 		var errors = new List<string>();
 
@@ -224,7 +224,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void Markdown_links_and_local_assets_resolve()
+	public void MarkdownLinksAndLocalAssetsResolve()
 	{
 		var errors = new List<string>();
 
@@ -242,7 +242,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void Markdown_files_have_basic_document_structure()
+	public void MarkdownFilesHaveBasicDocumentStructure()
 	{
 		var errors = new List<string>();
 
@@ -268,7 +268,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void Text_files_do_not_contain_question_mark_garbling()
+	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
 		var extensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
