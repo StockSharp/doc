@@ -44,7 +44,7 @@
         href: designer/videos/connect_hydra.md
       - name: Optimierung von Handelsstrategien
         href: designer/videos/optimization.md
-      - name: Live Trading
+      - name: Live-Handel
         href: designer/videos/live_trading.md
       - name: Zusammengesetzte Wurfel
         href: designer/videos/complex_elements.md
@@ -56,7 +56,7 @@
         href: designer/videos/strategy_max_volume.md
       - name: Finanzindizes
         href: designer/videos/financial_index.md
-      - name: Pair Trading
+      - name: Paarhandel
         href: designer/videos/pair_trading.md
       - name: Indizes und Pair Trading
         href: designer/videos/index_pair_trading.md
@@ -64,27 +64,27 @@
     href: designer/materials.md
   - name: Designer installieren
     href: designer/installing_designer.md
-  - name: Update to the new version
+  - name: Auf neue Version aktualisieren
     href: designer/update_to_the_new_version.md
   - name: Schnellstart
     href: designer/quick_start.md
   - name: Benutzeroberfläche
     items:
-    - name: Ribbon
+    - name: Menüband
       href: designer/user_interface/ribbon.md
-    - name: Workspace
+    - name: Arbeitsbereich
       href: designer/user_interface/workspace.md
-    - name: Schemes Panel
+    - name: Schemata-Panel
       href: designer/user_interface/schemas.md
-    - name: Logs Panel
+    - name: Protokoll-Panel
       href: designer/user_interface/logs.md
     - name: Portfolios
       href: designer/user_interface/portfolios.md
-    - name: Boards
+    - name: Börsenplätze
       href: designer/user_interface/boards.md
-    - name: Risk Management
+    - name: Risikomanagement
       href: designer/user_interface/risk_management.md
-    - name: Commissions
+    - name: Kommissionen
       href: designer/user_interface/commissions.md
     - name: Komponenten
       href: designer/user_interface/components.md
@@ -95,23 +95,23 @@
         href: designer/user_interface/components/orders.md
       - name: Trades
         href: designer/user_interface/components/trades.md
-      - name: Order book
+      - name: Orderbuch
         href: designer/user_interface/components/order_book.md
-      - name: Positions
+      - name: Positionen
         href: designer/user_interface/components/positions.md
-      - name: Statistics
+      - name: Statistik
         href: designer/user_interface/components/statistics.md
-      - name: "P&L equity"
+      - name: "P&L-Kurve"
         href: designer/user_interface/components/pnl_equity.md
-      - name: Backtesting settings
+      - name: Backtesting-Einstellungen
         href: designer/user_interface/components/backtesting_settings.md
-      - name: Live settings
+      - name: Live-Einstellungen
         href: designer/user_interface/components/live_settings.md
-      - name: Tick trades
+      - name: Tick-Trades
         href: designer/user_interface/components/tick_trades.md
   - name: Strategien
     items:
-    - name: Using Blocks
+    - name: Arbeiten mit Blöcken
       href: designer/strategies/using_visual_designer.md
       items:
       - name: Strategie-Designer
@@ -123,35 +123,35 @@
           items:
           - name: Chart
             href: designer/strategies/using_visual_designer/elements/common/chart.md
-          - name: Crossing
+          - name: Kreuzung
             href: designer/strategies/using_visual_designer/elements/common/crossing.md
-          - name: Value Delay
+          - name: Wertverzögerung
             href: designer/strategies/using_visual_designer/elements/common/delay_value.md
-          - name: Comparison
+          - name: Vergleich
             href: designer/strategies/using_visual_designer/elements/common/comparison.md
-          - name: Indicator
+          - name: Indikator
             href: designer/strategies/using_visual_designer/elements/common/indicator.md
-          - name: Logical Condition
+          - name: Logische Bedingung
             href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
-          - name: Formula
+          - name: Formel
             href: designer/strategies/using_visual_designer/elements/common/formula.md
-          - name: Combination
+          - name: Kombination
             href: designer/strategies/using_visual_designer/elements/common/combination.md
-          - name: Prev value
+          - name: Vorheriger Wert
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
-          - name: Random Value
+          - name: Zufallswert
             href: designer/strategies/using_visual_designer/elements/common/random.md
           - name: Flag
             href: designer/strategies/using_visual_designer/elements/common/flag.md
           - name: Synchronization
             href: designer/strategies/using_visual_designer/elements/common/sync.md
-          - name: "P&L strategy"
+          - name: "P&L-Strategie"
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
-          - name: Trades by strategy
+          - name: Trades nach Strategie
             href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
         - name: Datenquellen
           items:
-          - name: Candles
+          - name: Kerzen
             href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
           - name: Level 1
             href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
@@ -163,65 +163,65 @@
             href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
         - name: Zeit
           items:
-          - name: Working Time
+          - name: Arbeitszeit
             href: designer/strategies/using_visual_designer/elements/time/working_time.md
-          - name: Is Trading Allowed
+          - name: Handel erlaubt
             href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
-          - name: Current Time
+          - name: Aktuelle Zeit
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
         - name: Positionen
           items:
-          - name: Modify Position
+          - name: Position ändern
             href: designer/strategies/using_visual_designer/elements/positions/modify.md
           - name: Position
             href: designer/strategies/using_visual_designer/elements/positions/current.md
-          - name: Position Protection
+          - name: Positionsschutz
             href: designer/strategies/using_visual_designer/elements/positions/protect.md
         - name: Orders
           items:
-          - name: Order Registration
+          - name: Orderregistrierung
             href: designer/strategies/using_visual_designer/elements/orders/register.md
-          - name: Order Cancellation
+          - name: Orderstornierung
             href: designer/strategies/using_visual_designer/elements/orders/cancel.md
-          - name: Order Movement
+          - name: Orderverschiebung
             href: designer/strategies/using_visual_designer/elements/orders/modify.md
-          - name: Mass Order Cancellations
+          - name: Massenstornierung von Orders
             href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
         - name: Konverter
           items:
           - name: Indexer
             href: designer/strategies/using_visual_designer/elements/converters/indexer.md
-          - name: Converter
+          - name: Konverter
             href: designer/strategies/using_visual_designer/elements/converters/converter.md
         - name: Benachrichtigung
           items:
-          - name: Notification
+          - name: Benachrichtigung
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
-          - name: String concat
+          - name: Zeichenkettenverkettung
             href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
-          - name: String format
+          - name: Zeichenkettenformatierung
             href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
         - name: Orderbücher
           items:
-          - name: Order book
+          - name: Orderbuch
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
-          - name: Grouped order book
+          - name: Gruppiertes Orderbuch
             href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
-          - name: Order Book Panel
+          - name: Orderbuch-Panel
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
-          - name: Sparse order book
+          - name: Ausgedünntes Orderbuch
             href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
-          - name: Truncated order book
+          - name: Gekürztes Orderbuch
             href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
         - name: Optionen
           items:
-          - name: IV book
+          - name: IV-Orderbuch
             href: designer/strategies/using_visual_designer/elements/options/iv_book.md
-          - name: Option desk
+          - name: Optionsdesk
             href: designer/strategies/using_visual_designer/elements/options/option_desk.md
-          - name: Chart positions
+          - name: Positionschart
             href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
-          - name: Greeks
+          - name: Griechen
             href: designer/strategies/using_visual_designer/elements/options/greeks.md
           - name: Black-Scholes
             href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
@@ -229,27 +229,27 @@
             href: designer/strategies/using_visual_designer/elements/options/basket.md
           - name: Hedging
             href: designer/strategies/using_visual_designer/elements/options/hedging.md
-          - name: Options quoting
+          - name: Optionsquotierung
             href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
           - name: Strikes
             href: designer/strategies/using_visual_designer/elements/options/strikes.md
-      - name: Lines
+      - name: Linien
         href: designer/strategies/using_visual_designer/lines.md
-      - name: Event model
+      - name: Ereignismodell
         href: designer/strategies/using_visual_designer/event_model.md
-      - name: First strategy
+      - name: Erste Strategie
         href: designer/strategies/using_visual_designer/first_strategy.md
       - name: Zusammengesetzte Elemente
         href: designer/strategies/using_visual_designer/composite_elements.md
       - name: Schema-Beispiele
         items:
-        - name: Display candles on chart
+        - name: Kerzen im Chart anzeigen
           href: designer/strategies/using_visual_designer/schema_samples/display_candles_on_chart.md
-        - name: Get best price for instrument
+        - name: Besten Preis für ein Instrument abrufen
           href: designer/strategies/using_visual_designer/schema_samples/get_best_price_for_instrument.md
-        - name: Get current position
+        - name: Aktuelle Position abrufen
           href: designer/strategies/using_visual_designer/schema_samples/get_current_position.md
-        - name: Get order book price level
+        - name: Preisniveau im Orderbuch abrufen
           href: designer/strategies/using_visual_designer/schema_samples/get_order_book_price_level.md
     - name: Programmiersprachen
       href: designer/strategies/using_code.md
@@ -371,10 +371,10 @@
       href: designer/connections_settings/connectors_settings.md
     - name: Simulator
       href: designer/connections_settings/simulator.md
-  - name: Strategy Gallery
+  - name: Strategiegalerie
     href: designer/strategy_gallery.md
     items:
-    - name: Publishing Your Strategy
+    - name: Eigene Strategie veröffentlichen
       href: designer/strategy_gallery/publish_own_strategy.md
   - name: Export und Import
     items:
@@ -399,11 +399,11 @@
     href: terminal/quick_start.md
   - name: Benutzeroberfläche
     items:
-    - name: Ribbon
+    - name: Menüband
       href: terminal/user_interface/ribbon.md
-    - name: Workspace
+    - name: Arbeitsbereich
       href: terminal/user_interface/workspace.md
-    - name: Logs
+    - name: Protokolle
       href: terminal/user_interface/logs.md
     - name: Portfolios
       href: terminal/user_interface/portfolios.md
@@ -420,7 +420,7 @@
         href: terminal/user_interface/components/level_1.md
       - name: Buy/Sell
         href: terminal/user_interface/components/buy_sell.md
-      - name: Order book
+      - name: Orderbuch
         href: terminal/user_interface/components/order_book.md
       - name: Chart
         href: terminal/user_interface/components/chart.md
@@ -430,21 +430,21 @@
         href: terminal/user_interface/components/trades.md
       - name: Orders
         href: terminal/user_interface/components/orders.md
-      - name: Conditional orders
+      - name: Bedingte Orders
         href: terminal/user_interface/components/conditional_orders.md
       - name: Positionen
         href: terminal/user_interface/components/positions.md
-      - name: Trades feed
+      - name: Trade-Feed
         href: terminal/user_interface/components/trades_feed.md
-      - name: News
+      - name: Nachrichten
         href: terminal/user_interface/components/news.md
-      - name: Positions (options)
+      - name: Positionen (Optionen)
         href: terminal/user_interface/components/positions_options.md
-      - name: Option desk
+      - name: Optionsdesk
         href: terminal/user_interface/components/option_desk.md
-      - name: Smile volatility
+      - name: Smile-Volatilität
         href: terminal/user_interface/components/smile_volatility.md
-      - name: Order log
+      - name: Orderlog
         href: terminal/user_interface/components/order_log.md
   - name: Verbindungseinstellungen
     href: terminal/connection_settings.md
@@ -2366,9 +2366,9 @@
     href: shell/quick_start.md
   - name: Benutzeroberfläche
     items:
-    - name: Common
+    - name: Allgemein
       href: shell/user_interface/common.md
-    - name: Real-time
+    - name: Echtzeit
       href: shell/user_interface/real_time.md
     - name: Emulation
       href: shell/user_interface/emulation.md

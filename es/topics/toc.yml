@@ -70,7 +70,7 @@
     href: designer/quick_start.md
   - name: Interfaz de usuario
     items:
-    - name: Ribbon
+    - name: Cinta
       href: designer/user_interface/ribbon.md
     - name: Espacio de trabajo
       href: designer/user_interface/workspace.md
@@ -80,7 +80,7 @@
       href: designer/user_interface/logs.md
     - name: Carteras
       href: designer/user_interface/portfolios.md
-    - name: Boards
+    - name: Boards de negociación
       href: designer/user_interface/boards.md
     - name: Gestión de riesgos
       href: designer/user_interface/risk_management.md
@@ -123,7 +123,7 @@
           items:
           - name: Gráfico
             href: designer/strategies/using_visual_designer/elements/common/chart.md
-          - name: Crossing
+          - name: Cruce
             href: designer/strategies/using_visual_designer/elements/common/crossing.md
           - name: Retraso de valor
             href: designer/strategies/using_visual_designer/elements/common/delay_value.md
@@ -217,7 +217,7 @@
           items:
           - name: Libro IV
             href: designer/strategies/using_visual_designer/elements/options/iv_book.md
-          - name: Option desk
+          - name: Mesa de opciones
             href: designer/strategies/using_visual_designer/elements/options/option_desk.md
           - name: Gráfico de posiciones
             href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
@@ -399,11 +399,11 @@
     href: terminal/quick_start.md
   - name: Interfaz de usuario
     items:
-    - name: Ribbon
+    - name: Cinta
       href: terminal/user_interface/ribbon.md
-    - name: Workspace
+    - name: Área de trabajo
       href: terminal/user_interface/workspace.md
-    - name: Logs
+    - name: Registros
       href: terminal/user_interface/logs.md
     - name: Carteras
       href: terminal/user_interface/portfolios.md
@@ -418,7 +418,7 @@
         href: terminal/user_interface/components/instruments.md
       - name: Level 1
         href: terminal/user_interface/components/level_1.md
-      - name: Buy\/Sell
+      - name: Comprar/Vender
         href: terminal/user_interface/components/buy_sell.md
       - name: Libro de órdenes
         href: terminal/user_interface/components/order_book.md
@@ -440,9 +440,9 @@
         href: terminal/user_interface/components/news.md
       - name: Posiciones (opciones)
         href: terminal/user_interface/components/positions_options.md
-      - name: Option desk
+      - name: Mesa de opciones
         href: terminal/user_interface/components/option_desk.md
-      - name: Smile volatility
+      - name: Sonrisa de volatilidad
         href: terminal/user_interface/components/smile_volatility.md
       - name: Registro de órdenes
         href: terminal/user_interface/components/order_log.md
@@ -2366,9 +2366,9 @@
     href: shell/quick_start.md
   - name: Interfaz de usuario
     items:
-    - name: Common
+    - name: Común
       href: shell/user_interface/common.md
-    - name: Real-time
+    - name: Tiempo real
       href: shell/user_interface/real_time.md
     - name: Emulación
       href: shell/user_interface/emulation.md

@@ -50,7 +50,7 @@
         href: designer/videos/complex_elements.md
       - name: Compressão de candles a partir de ticks
         href: designer/videos/candles_build_ticks.md
-      - name: Flag
+      - name: Sinalizador
         href: designer/videos/flag.md
       - name: Estratégia de Volume Máximo
         href: designer/videos/strategy_max_volume.md
@@ -70,17 +70,17 @@
     href: designer/quick_start.md
   - name: Interface de utilizador
     items:
-    - name: Ribbon
+    - name: Friso
       href: designer/user_interface/ribbon.md
-    - name: Workspace
+    - name: Área de trabalho
       href: designer/user_interface/workspace.md
     - name: Painel Schemes
       href: designer/user_interface/schemas.md
     - name: Painel Logs
       href: designer/user_interface/logs.md
-    - name: Portfolios
+    - name: Carteiras
       href: designer/user_interface/portfolios.md
-    - name: Boards
+    - name: Boards de negociação
       href: designer/user_interface/boards.md
     - name: Gestão de risco
       href: designer/user_interface/risk_management.md
@@ -91,67 +91,67 @@
       items:
       - name: Gráfico
         href: designer/user_interface/components/chart.md
-      - name: Orders
+      - name: Ordens
         href: designer/user_interface/components/orders.md
-      - name: Trades
+      - name: Negócios
         href: designer/user_interface/components/trades.md
       - name: Livro de ordens
         href: designer/user_interface/components/order_book.md
-      - name: Positions
+      - name: Posições
         href: designer/user_interface/components/positions.md
-      - name: Statistics
+      - name: Estatísticas
         href: designer/user_interface/components/statistics.md
-      - name: 'P&L equity'
+      - name: 'Curva de P&L'
         href: designer/user_interface/components/pnl_equity.md
       - name: Definições de backtesting
         href: designer/user_interface/components/backtesting_settings.md
       - name: Definições de negociação em tempo real
         href: designer/user_interface/components/live_settings.md
-      - name: Tick trades
+      - name: Negócios tick
         href: designer/user_interface/components/tick_trades.md
   - name: Estratégias
     items:
     - name: Usar blocos
       href: designer/strategies/using_visual_designer.md
       items:
-      - name: Strategy Designer
+      - name: Designer de estratégias
         href: designer/strategies/using_visual_designer/diagram_panel.md
       - name: Elementos
         href: designer/strategies/using_visual_designer/elements.md
         items:
         - name: Comum
           items:
-          - name: Chart
+          - name: Gráfico
             href: designer/strategies/using_visual_designer/elements/common/chart.md
-          - name: Crossing
+          - name: Cruzamento
             href: designer/strategies/using_visual_designer/elements/common/crossing.md
-          - name: Value Delay
+          - name: Atraso de valor
             href: designer/strategies/using_visual_designer/elements/common/delay_value.md
-          - name: Comparison
+          - name: Comparação
             href: designer/strategies/using_visual_designer/elements/common/comparison.md
-          - name: Indicator
+          - name: Indicador
             href: designer/strategies/using_visual_designer/elements/common/indicator.md
-          - name: Logical Condition
+          - name: Condição lógica
             href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
-          - name: Formula
+          - name: Fórmula
             href: designer/strategies/using_visual_designer/elements/common/formula.md
-          - name: Combination
+          - name: Combinação
             href: designer/strategies/using_visual_designer/elements/common/combination.md
-          - name: Prev value
+          - name: Valor anterior
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
-          - name: Random Value
+          - name: Valor aleatório
             href: designer/strategies/using_visual_designer/elements/common/random.md
-          - name: Flag
+          - name: Sinalizador
             href: designer/strategies/using_visual_designer/elements/common/flag.md
           - name: Sincronização
             href: designer/strategies/using_visual_designer/elements/common/sync.md
           - name: 'Estratégia de P&L'
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
-          - name: Trades by strategy
+          - name: Negócios por estratégia
             href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
         - name: Fontes de dados
           items:
-          - name: Candles
+          - name: Velas
             href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
           - name: Level 1
             href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
@@ -159,7 +159,7 @@
             href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
           - name: Index
             href: designer/strategies/using_visual_designer/elements/data_sources/index.md
-          - name: Variable
+          - name: Variável
             href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
         - name: Tempo
           items:
@@ -181,55 +181,55 @@
           items:
           - name: Registo de ordem
             href: designer/strategies/using_visual_designer/elements/orders/register.md
-          - name: Order Cancellation
+          - name: Cancelamento de ordem
             href: designer/strategies/using_visual_designer/elements/orders/cancel.md
           - name: Deslocação de ordem
             href: designer/strategies/using_visual_designer/elements/orders/modify.md
-          - name: Mass Order Cancellations
+          - name: Cancelamento em massa de ordens
             href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
         - name: Conversores
           items:
-          - name: Indexer
+          - name: Indexador
             href: designer/strategies/using_visual_designer/elements/converters/indexer.md
-          - name: Converter
+          - name: Conversor
             href: designer/strategies/using_visual_designer/elements/converters/converter.md
         - name: Notificações
           items:
-          - name: Notification
+          - name: Notificação
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
-          - name: String concat
+          - name: Concatenação de strings
             href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
-          - name: String format
+          - name: Formatação de strings
             href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
         - name: Livros de ofertas
           items:
-          - name: Order book
+          - name: Livro de ofertas
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
-          - name: Grouped order book
+          - name: Livro de ofertas agrupado
             href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
-          - name: Order Book Panel
+          - name: Painel de livro de ofertas
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
-          - name: Sparse order book
+          - name: Livro de ofertas esparso
             href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
-          - name: Truncated order book
+          - name: Livro de ofertas truncado
             href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
         - name: Opções
           items:
-          - name: IV book
+          - name: Livro de IV
             href: designer/strategies/using_visual_designer/elements/options/iv_book.md
-          - name: Option desk
+          - name: Mesa de opções
             href: designer/strategies/using_visual_designer/elements/options/option_desk.md
-          - name: Chart positions
+          - name: Gráfico de posições
             href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
-          - name: Greeks
+          - name: Gregas
             href: designer/strategies/using_visual_designer/elements/options/greeks.md
           - name: Black-Scholes
             href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
-          - name: Basket
+          - name: Cesta
             href: designer/strategies/using_visual_designer/elements/options/basket.md
-          - name: Hedging
+          - name: Cobertura
             href: designer/strategies/using_visual_designer/elements/options/hedging.md
-          - name: Options quoting
+          - name: Cotação de opções
             href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
           - name: Strikes
             href: designer/strategies/using_visual_designer/elements/options/strikes.md
@@ -311,7 +311,7 @@
     - name: Depuração
       href: designer/backtesting/debugging.md
       items:
-      - name: Break points
+      - name: Pontos de interrupção
         href: designer/backtesting/debugging/break_points.md
       - name: Execução passo a passo
         href: designer/backtesting/debugging/step_by_step_execution.md
@@ -319,7 +319,7 @@
       href: designer/backtesting/cloud_backtesting.md
   - name: Otimização
     items:
-    - name: Brute-force
+    - name: Força bruta
       href: designer/optimization/brute_force.md
     - name: Parâmetros de otimização
       href: designer/optimization/optimization_parameters.md
@@ -399,11 +399,11 @@
     href: terminal/quick_start.md
   - name: Interface de utilizador
     items:
-    - name: Ribbon
+    - name: Friso
       href: terminal/user_interface/ribbon.md
     - name: Área de trabalho
       href: terminal/user_interface/workspace.md
-    - name: Logs
+    - name: Registos
       href: terminal/user_interface/logs.md
     - name: Portefólios
       href: terminal/user_interface/portfolios.md
@@ -418,7 +418,7 @@
         href: terminal/user_interface/components/instruments.md
       - name: Level 1
         href: terminal/user_interface/components/level_1.md
-      - name: Buy\/Sell
+      - name: Compra/Venda
         href: terminal/user_interface/components/buy_sell.md
       - name: Livro de ofertas
         href: terminal/user_interface/components/order_book.md
@@ -440,9 +440,9 @@
         href: terminal/user_interface/components/news.md
       - name: Posições (opções)
         href: terminal/user_interface/components/positions_options.md
-      - name: Option desk
+      - name: Painel de opções
         href: terminal/user_interface/components/option_desk.md
-      - name: Smile volatility
+      - name: Smile de volatilidade
         href: terminal/user_interface/components/smile_volatility.md
       - name: Log de ordens
         href: terminal/user_interface/components/order_log.md
@@ -2366,11 +2366,11 @@
     href: shell/quick_start.md
   - name: Interface de utilizador
     items:
-    - name: Common
+    - name: Comum
       href: shell/user_interface/common.md
-    - name: Real-time
+    - name: Tempo real
       href: shell/user_interface/real_time.md
-    - name: Emulation
+    - name: Emulação
       href: shell/user_interface/emulation.md
     - name: RemoteManager
       href: shell/user_interface/remotemanager.md

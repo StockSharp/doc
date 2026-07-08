@@ -121,45 +121,45 @@
         items:
         - name: 共通
           items:
-          - name: Chart
+          - name: チャート
             href: designer/strategies/using_visual_designer/elements/common/chart.md
-          - name: Crossing
+          - name: クロス
             href: designer/strategies/using_visual_designer/elements/common/crossing.md
-          - name: Value Delay
+          - name: 値の遅延
             href: designer/strategies/using_visual_designer/elements/common/delay_value.md
-          - name: Comparison
+          - name: 比較
             href: designer/strategies/using_visual_designer/elements/common/comparison.md
-          - name: Indicator
+          - name: インジケーター
             href: designer/strategies/using_visual_designer/elements/common/indicator.md
-          - name: Logical Condition
+          - name: 論理条件
             href: designer/strategies/using_visual_designer/elements/common/logical_condition.md
-          - name: Formula
+          - name: 数式
             href: designer/strategies/using_visual_designer/elements/common/formula.md
-          - name: Combination
+          - name: 組み合わせ
             href: designer/strategies/using_visual_designer/elements/common/combination.md
-          - name: Prev value
+          - name: 前回値
             href: designer/strategies/using_visual_designer/elements/common/prev_value.md
-          - name: Random Value
+          - name: ランダム値
             href: designer/strategies/using_visual_designer/elements/common/random.md
-          - name: Flag
+          - name: フラグ
             href: designer/strategies/using_visual_designer/elements/common/flag.md
           - name: Synchronization
             href: designer/strategies/using_visual_designer/elements/common/sync.md
-          - name: P&L strategy
+          - name: ストラテジーの P&L
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md
-          - name: Trades by strategy
+          - name: ストラテジー別約定
             href: designer/strategies/using_visual_designer/elements/common/trades_by_strategy.md
         - name: データソース
           items:
-          - name: Candles
+          - name: ローソク足
             href: designer/strategies/using_visual_designer/elements/data_sources/candles.md
           - name: Level 1
             href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
-          - name: Ticks
+          - name: ティック
             href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
           - name: Index
             href: designer/strategies/using_visual_designer/elements/data_sources/index.md
-          - name: Variable
+          - name: 変数
             href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
         - name: 時間
           items:
@@ -167,69 +167,69 @@
             href: designer/strategies/using_visual_designer/elements/time/working_time.md
           - name: 取引が許可されているか
             href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
-          - name: Current Time
+          - name: 現在時刻
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
         - name: ポジション
           items:
-          - name: Modify Position
+          - name: ポジション変更
             href: designer/strategies/using_visual_designer/elements/positions/modify.md
-          - name: Position
+          - name: ポジション
             href: designer/strategies/using_visual_designer/elements/positions/current.md
-          - name: Position Protection
+          - name: ポジション保護
             href: designer/strategies/using_visual_designer/elements/positions/protect.md
         - name: 注文
           items:
-          - name: Order Registration
+          - name: 注文登録
             href: designer/strategies/using_visual_designer/elements/orders/register.md
-          - name: Order Cancellation
+          - name: 注文キャンセル
             href: designer/strategies/using_visual_designer/elements/orders/cancel.md
-          - name: Order Movement
+          - name: 注文変更
             href: designer/strategies/using_visual_designer/elements/orders/modify.md
-          - name: Mass Order Cancellations
+          - name: 注文一括キャンセル
             href: designer/strategies/using_visual_designer/elements/orders/mass_cancel.md
         - name: コンバーター
           items:
-          - name: Indexer
+          - name: インデクサー
             href: designer/strategies/using_visual_designer/elements/converters/indexer.md
-          - name: Converter
+          - name: コンバーター
             href: designer/strategies/using_visual_designer/elements/converters/converter.md
         - name: 通知
           items:
-          - name: Notification
+          - name: 通知
             href: designer/strategies/using_visual_designer/elements/notifying/notification.md
-          - name: String concat
+          - name: 文字列連結
             href: designer/strategies/using_visual_designer/elements/notifying/string_concat.md
-          - name: String format
+          - name: 文字列フォーマット
             href: designer/strategies/using_visual_designer/elements/notifying/string_format.md
         - name: 板情報
           items:
-          - name: Order book
+          - name: 板情報
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book.md
-          - name: Grouped order book
+          - name: グループ化された板情報
             href: designer/strategies/using_visual_designer/elements/market_depths/grouped_order_book.md
-          - name: Order Book Panel
+          - name: 板情報パネル
             href: designer/strategies/using_visual_designer/elements/market_depths/order_book_panel.md
-          - name: Sparse order book
+          - name: 間引き板情報
             href: designer/strategies/using_visual_designer/elements/market_depths/sparse_order_book.md
-          - name: Truncated order book
+          - name: 深度制限付き板情報
             href: designer/strategies/using_visual_designer/elements/market_depths/truncated_order_book.md
         - name: オプション
           items:
-          - name: IV book
+          - name: IV 板情報
             href: designer/strategies/using_visual_designer/elements/options/iv_book.md
-          - name: Option desk
+          - name: オプションデスク
             href: designer/strategies/using_visual_designer/elements/options/option_desk.md
-          - name: Chart positions
+          - name: ポジションチャート
             href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
-          - name: Greeks
+          - name: グリークス
             href: designer/strategies/using_visual_designer/elements/options/greeks.md
           - name: Black-Scholes
             href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
-          - name: Basket
+          - name: バスケット
             href: designer/strategies/using_visual_designer/elements/options/basket.md
           - name: Hedging
             href: designer/strategies/using_visual_designer/elements/options/hedging.md
-          - name: Options quoting
+          - name: オプションのクォーティング
             href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
           - name: Strikes
             href: designer/strategies/using_visual_designer/elements/options/strikes.md
@@ -418,7 +418,7 @@
         href: terminal/user_interface/components/instruments.md
       - name: Level 1
         href: terminal/user_interface/components/level_1.md
-      - name: Buy\/Sell
+      - name: 売買
         href: terminal/user_interface/components/buy_sell.md
       - name: 板情報
         href: terminal/user_interface/components/order_book.md
@@ -2366,11 +2366,11 @@
     href: shell/quick_start.md
   - name: ユーザーインターフェイス
     items:
-    - name: Common
+    - name: 共通
       href: shell/user_interface/common.md
-    - name: Real-time
+    - name: リアルタイム
       href: shell/user_interface/real_time.md
-    - name: Emulation
+    - name: エミュレーション
       href: shell/user_interface/emulation.md
     - name: RemoteManager
       href: shell/user_interface/remotemanager.md

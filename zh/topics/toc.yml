@@ -1906,7 +1906,7 @@
         href: api/indicators/list_of_indicators/pretty_good_oscillator.md
       - name: 心理线 (PSY)
         href: api/indicators/list_of_indicators/psychological_line.md
-      - name: QStick
+      - name: Q棒
         href: api/indicators/list_of_indicators/qstick.md
       - name: 彩虹图 (RC)
         href: api/indicators/list_of_indicators/rainbow_charts.md
@@ -2310,7 +2310,7 @@
       items:
       - name: 逐笔记录
         href: api/graphical_user_interface/market_data/ticks.md
-      - name: Level1
+      - name: 等级1
         href: api/graphical_user_interface/market_data/level1.md
       - name: 订单簿
         href: api/graphical_user_interface/market_data/order_book.md
