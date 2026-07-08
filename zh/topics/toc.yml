@@ -1836,7 +1836,7 @@
         href: api/indicators/list_of_indicators/lunar_phase.md
       - name: 市场便利指数 (MFI)
         href: api/indicators/list_of_indicators/market_facilitation_index.md
-      - name: 市场平均性指数 (MMI)
+      - name: 市场“刻薄”指数 (MMI)
         href: api/indicators/list_of_indicators/market_meanness_index.md
       - name: 质量指数 (MI)
         href: api/indicators/list_of_indicators/mass_index.md

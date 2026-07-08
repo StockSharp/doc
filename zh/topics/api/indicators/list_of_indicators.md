@@ -85,7 +85,7 @@
 - [最低](list_of_indicators/lowest.md) - 一个周期内的最小值，决定指定周期内的最低价格
 - [LP](list_of_indicators/lunar_phase.md) - 月相指示器，将市场走势与月亮周期相关联
 - [MFI](list_of_indicators/market_facilitation_index.md) - 市场促进指数，衡量价格变动的效率
-- [MMI](list_of_indicators/market_meanness_index.md) - 市场平均指数，用于判断均值回复行为
+- [MMI](list_of_indicators/market_meanness_index.md) - 市场“刻薄”指数，用于判断市场处于趋势还是横盘/混乱状态
 - [MI](list_of_indicators/mass_index.md) - 量指数，根据范围扩展识别潜在反转
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - 麦克莱伦振荡器，衡量市场广度
 - [MGD](list_of_indicators/mcginley_dynamic.md) - 麦金利动态, 一种响应式移动平均
