@@ -34,13 +34,13 @@ protected override void OnStarted2(DateTime time)
 		var ruleRegFailed = order.WhenRegisterFailed(this);
 
 		ruleReg
-			.Do(() => LogInfo("Order в„–1 Registered"))
+			.Do(() => LogInfo("Order №1 Registered"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleRegFailed);
 
 		ruleRegFailed
-			.Do(() => LogInfo("Order в„–1 RegisterFailed"))
+			.Do(() => LogInfo("Order №1 RegisterFailed"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleReg);
@@ -56,13 +56,13 @@ protected override void OnStarted2(DateTime time)
 		var ruleRegFailed = order.WhenRegisterFailed(this);
 
 		ruleReg
-			.Do(() => LogInfo("Order в„–2 Registered"))
+			.Do(() => LogInfo("Order №2 Registered"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleRegFailed);
 
 		ruleRegFailed
-			.Do(() => LogInfo("Order в„–2 RegisterFailed"))
+			.Do(() => LogInfo("Order №2 RegisterFailed"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleReg);

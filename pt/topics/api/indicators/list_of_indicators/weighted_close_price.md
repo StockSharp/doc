@@ -1,6 +1,6 @@
 # Weighted Close Price
 
-**Weighted Close Price (WCP)** é calculado como (High + Low + 2 Г— Close) / 4 para cada vela.
+**Weighted Close Price (WCP)** é calculado como (High + Low + 2 × Close) / 4 para cada vela.
 
 Para usar o indicador, deve usar a classe [WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice).
 

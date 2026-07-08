@@ -29,6 +29,73 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static readonly string _repoRoot = FindRepoRoot();
 
+	private static readonly string[] _textFileExtensions =
+	[
+		".json",
+		".md",
+		".txt",
+		".yml",
+		".yaml",
+	];
+
+	private static readonly string[] _mojibakeMarkers =
+	[
+		// UTF-8 punctuation decoded as Windows-1251.
+		"\u0432\u201E", // в„
+		"\u0432\u20AC", // в€
+		"\u0432\u0402", // вЂ
+		"\u0413\u2014", // Г—
+		"\u0412\u0406", // ВІ
+		"\u0412\u00B2", // В²
+		"\u0412\u00B0", // В°
+		"\u0412\u00AB", // В«
+		"\u0412\u00BB", // В»
+		"\u0412\u00B1", // В±
+		"\u0412\u00B7", // В·
+
+		// UTF-8 punctuation decoded as Latin-1.
+		"\u00E2\u20AC", // â€
+		"\u00E2\u201E", // â„
+		"\u00E2\u02C6", // âˆ
+
+		// UTF-8 accented Latin text decoded as Latin-1.
+		// Do not check single Ã/Â characters: they are valid in words like NÃO and Ângulo.
+		"\u00C3\u00A1", // Ã¡
+		"\u00C3\u00A9", // Ã©
+		"\u00C3\u00AD", // Ãí
+		"\u00C3\u00B3", // Ã³
+		"\u00C3\u00BA", // Ãº
+		"\u00C3\u00B1", // Ãñ
+		"\u00C3\u00A3", // Ã£
+		"\u00C3\u00A7", // Ã§
+		"\u00C3\u00BC", // Ãü
+		"\u00C3\u00B6", // Ã¶
+		"\u00C3\u00A4", // Ãä
+
+		// UTF-8 Cyrillic decoded as Latin-1.
+		"\u00D0\u00B0", // Ð°
+		"\u00D0\u00B1", // Ð±
+		"\u00D0\u00B2", // Ð²
+		"\u00D0\u00B3", // Ð³
+		"\u00D0\u00B4", // Ð´
+		"\u00D0\u00B5", // Ðµ
+		"\u00D0\u00B8", // Ð¸
+		"\u00D0\u00B9", // Ð¹
+		"\u00D0\u00BA", // Ðº
+		"\u00D0\u00BB", // Ð»
+		"\u00D0\u00BC", // Ð¼
+		"\u00D0\u00BD", // Ð½
+		"\u00D0\u00BE", // Ð¾
+		"\u00D0\u00BF", // Ð¿
+		"\u00D1\u0080", // Ñ€
+		"\u00D1\u0081", // Ñ
+		"\u00D1\u0082", // Ñ‚
+		"\u00D1\u0083", // Ñƒ
+		"\u00D1\u0087", // Ñ‡
+		"\u00D1\u0088", // Ñˆ
+		"\u00D1\u008F", // Ñ
+	];
+
 	private static readonly MarkdownPipeline _markdown = new MarkdownPipelineBuilder()
 		.UseAdvancedExtensions()
 		.UseAutoIdentifiers()
@@ -302,26 +369,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
-		var extensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-		{
-			".json",
-			".md",
-			".txt",
-			".yml",
-			".yaml",
-		};
 
-		foreach (var lang in GetContentLanguages())
-		{
-			var langRoot = Path.Combine(_repoRoot, lang);
+		foreach (var file in EnumerateContentTextFiles())
+			ValidateNoQuestionMarkGarbling(file, errors);
 
-			foreach (var file in Directory.EnumerateFiles(langRoot, "*", SearchOption.AllDirectories)
-				.Where(file => extensions.Contains(Path.GetExtension(file)))
-				.Order(StringComparer.OrdinalIgnoreCase))
-			{
-				ValidateNoQuestionMarkGarbling(file, errors);
-			}
-		}
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void TextFilesDoNotContainMojibakeMarkers()
+	{
+		var errors = new List<string>();
+
+		foreach (var file in EnumerateContentTextFiles())
+			ValidateNoMojibakeMarkers(file, errors);
 
 		AssertNoErrors(errors);
 	}
@@ -811,6 +872,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static void ValidateNoMojibakeMarkers(string file, List<string> errors)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var marker = _mojibakeMarkers.FirstOrDefault(text.Contains);
+			if (marker is null)
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains mojibake marker '{marker}', which usually means Unicode punctuation was decoded with the wrong encoding. Line: {Truncate(text.Trim(), 180)}");
+		}
+	}
+
 	private static (string Path, string Fragment) SplitPathQueryAndFragment(string url)
 	{
 		var path = url;
@@ -942,6 +1018,23 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		return fullPath.Equals(fullRoot, StringComparison.OrdinalIgnoreCase)
 			|| fullPath.StartsWith(fullRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)
 			|| fullPath.StartsWith(fullRoot + Path.AltDirectorySeparatorChar, StringComparison.OrdinalIgnoreCase);
+	}
+
+	private static IEnumerable<string> EnumerateContentTextFiles()
+	{
+		var extensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*", SearchOption.AllDirectories)
+				.Where(file => extensions.Contains(Path.GetExtension(file)))
+				.Order(StringComparer.OrdinalIgnoreCase))
+			{
+				yield return file;
+			}
+		}
 	}
 
 	private static int[] GetLineStarts(string text)
