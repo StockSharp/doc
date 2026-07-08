@@ -30,18 +30,18 @@ El cálculo de Connors RSI implica tres componentes que luego se promedian para 
 1. **Precio RSI Componente** - RSI estándar calculado en un período corto (normalmente 3 días):
    ```
    RSI = 100 - (100 / (1 + RS))
-   where RS = Average Positive Change / Average Negative Change
+   donde RS = Cambio positivo medio / Cambio negativo medio
    ```
 
-2. **Streak RSI Component**:
+2. **Componente RSI de racha**:
    - Primero, calcule la racha (número de días consecutivos de subida o bajada de precios)
    - Luego aplique RSI a esta racha usando el StreakRSIPeriod
 
-3. **Rate of Change RSI Component (ROC RSI)**:
+3. **Componente RSI de tasa de cambio (ROC RSI)**:
    - Calcule el rango percentil del ROC actual sobre el ROCRSIPeriod
    - Escale el rango percentil de 0 a 100
 
-4. **Final Connors RSI Value**:
+4. **Valor final de Connors RSI**:
    ```
    CRSI = (RSI + StreakRSI + ROCRSI) / 3
    ```
@@ -50,9 +50,9 @@ El cálculo de Connors RSI implica tres componentes que luego se promedian para 
 
 Connors RSI oscila entre 0 y 100, similar al estándar RSI:
 
-- **Extremely high values (above 90)** indica fuertes condiciones de sobrecompra. Esto puede ser una señal para vender o tomar una posición corta.
+- **Valores extremadamente altos (por encima de 90)** indican fuertes condiciones de sobrecompra. Esto puede ser una señal para vender o tomar una posición corta.
 
-- **Extremely low values (below 10)** indica fuertes condiciones de sobreventa. Esto puede ser una señal para comprar o cerrar una posición corta.
+- **Valores extremadamente bajos (por debajo de 10)** indican fuertes condiciones de sobreventa. Esto puede ser una señal para comprar o cerrar una posición corta.
 
 - **Niveles estándar**:
   - Por encima de 70-80: sobrecompra
