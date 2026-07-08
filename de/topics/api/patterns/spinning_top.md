@@ -1,4 +1,4 @@
-# Pattern Spinning Top
+# Spinning Top
 
 Spinning Top ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper sowie länge obere und untere Schatten von ungefähr gleicher Länge gekennzeichnet ist. Dieses Muster weist auf Unentschlossenheit im Markt und einen Kampf zwischen Käufern und Verkäufern hin.
 
@@ -32,6 +32,6 @@ Spinning Top ist für sich genommen kein starkes Handelssignal, kann aber in Kom
 
 ## Siehe auch
 
-[Pattern Hammer](hammer.md)
+[Hammer](hammer.md)
 
-[Pattern Inverted Hammer](inverted_hammer.md)
+[Umgekehrter Hammer](inverted_hammer.md)

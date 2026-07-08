@@ -1,4 +1,4 @@
-# Pattern Bullish Candle
+# Bullische Kerze
 
 Bullish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs oberhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bullische Marktstimmung.
 
@@ -31,7 +31,7 @@ Bullish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 
 ## Siehe auch
 
-[Pattern Bearish Candle](bearish.md)
+[Bärische Kerze](bearish.md)
 
-[Pattern White Candle](white_candle.md)
+[Weiße Kerze](white_candle.md)
 

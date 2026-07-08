@@ -1,4 +1,4 @@
-# Pattern Falling Three Methods
+# Fallende Drei-Methoden-Formation
 
 Falling Three Methods ist ein bärisches Trendfortsetzungsmuster aus fünf Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt eine vorübergehende Konsolidierung oder Pause innerhalb eines bestehenden Abwärtstrends vor dessen Fortsetzung.
 
@@ -36,6 +36,6 @@ Falling Three Methods bietet gute Möglichkeiten für den Einstieg in oder den A
 
 ## Siehe auch
 
-[Pattern Rising Three Methods](rising_three_methods.md)
+[Steigende Drei-Methoden-Formation](rising_three_methods.md)
 
-[Pattern Three Black Crows](three_black_crows.md)
+[Drei schwarze Krähen](three_black_crows.md)

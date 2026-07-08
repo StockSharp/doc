@@ -1,4 +1,4 @@
-# Pattern Shooting Star
+# Shooting Star
 
 Shooting Star ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärtstrend entsteht. Die Candle hat einen kleinen Körper im unteren Bereich und einen langen oberen Schatten; der untere Schatten fehlt oder ist sehr kurz. Sie ähnelt einem Stern mit nach oben gerichtetem Schweif.
 
@@ -35,6 +35,6 @@ Shooting Star bietet Möglichkeiten für den Einstieg in eine Short-Position:
 
 ## Siehe auch
 
-[Pattern Inverted Hammer](inverted_hammer.md)
+[Umgekehrter Hammer](inverted_hammer.md)
 
-[Pattern Hanging Man](hanging_man.md)
+[Hanging Man](hanging_man.md)

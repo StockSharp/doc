@@ -1,4 +1,4 @@
-# Pattern 3 Black Crows und 3 White Soldiers
+# Drei schwarze Krähen und drei weiße Soldaten
 
 ### 3 Black Crows
 

@@ -1,4 +1,4 @@
-# Pattern Three White Soldiers
+# Drei weiße Soldaten
 
 Three White Soldiers ist ein starkes bullisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Abwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Verkäufern zu Käufern hin und signalisiert eine mögliche Umkehr eines Abwärtstrends.
 
@@ -35,6 +35,6 @@ Three White Soldiers bietet zuverlässige Möglichkeiten für den Einstieg in ei
 
 ## Siehe auch
 
-[Pattern Three Black Crows](three_black_crows.md)
+[Drei schwarze Krähen](three_black_crows.md)
 
-[Pattern Rising Three Methods](rising_three_methods.md)
+[Steigende Drei-Methoden-Formation](rising_three_methods.md)

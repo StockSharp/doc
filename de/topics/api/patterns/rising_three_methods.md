@@ -1,4 +1,4 @@
-# Pattern Rising Three Methods
+# Steigende Drei-Methoden-Formation
 
 Rising Three Methods ist ein bullisches Trendfortsetzungsmuster aus fünf Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt eine vorübergehende Konsolidierung oder Pause innerhalb eines bestehenden Aufwärtstrends vor dessen Fortsetzung.
 
@@ -36,6 +36,6 @@ Rising Three Methods bietet gute Möglichkeiten für den Einstieg in oder den Au
 
 ## Siehe auch
 
-[Pattern Falling Three Methods](falling_three_methods.md)
+[Fallende Drei-Methoden-Formation](falling_three_methods.md)
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Drei weiße Soldaten](three_white_soldiers.md)

@@ -1,4 +1,4 @@
-# Pattern Flat (Neutral) Candle
+# Flache (neutrale) Kerze
 
 Eine flache (neutrale) Candle ist ein Candlestick-Muster, das entsteht, wenn Eröffnungs- und Schlusskurs identisch oder sehr nahe beieinander liegen. Diese Candle spiegelt Unentschlossenheit im Markt wider, wenn die Kräfte von Käufern und Verkäufern ausgeglichen sind.
 
@@ -29,6 +29,6 @@ Flache Candles werden selten als eigenständige Signale für den Positionseinsti
 
 ## Siehe auch
 
-[Pattern White Candle](white_candle.md)
+[Weiße Kerze](white_candle.md)
 
-[Pattern Black Candle](black_candle.md)
+[Schwarze Kerze](black_candle.md)

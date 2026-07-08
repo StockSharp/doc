@@ -1,4 +1,4 @@
-# Pattern Three Black Crows
+# Drei schwarze Krähen
 
 Three Black Crows ist ein starkes bärisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Aufwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Käufern zu Verkäufern hin und signalisiert eine mögliche Umkehr eines Aufwärtstrends.
 
@@ -36,6 +36,6 @@ Three Black Crows bietet zuverlässige Möglichkeiten für den Einstieg in eine 
 
 ## Siehe auch
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Drei weiße Soldaten](three_white_soldiers.md)
 
-[Pattern Falling Three Methods](falling_three_methods.md)
+[Fallende Drei-Methoden-Formation](falling_three_methods.md)

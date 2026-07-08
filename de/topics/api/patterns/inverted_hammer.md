@@ -1,4 +1,4 @@
-# Pattern Inverted Hammer
+# Umgekehrter Hammer
 
 Inverted Hammer ist ein bullisches Candlestick-Muster, das während eines Abwärtstrends entsteht. Die Candle hat einen kleinen Körper im unteren Bereich und einen langen oberen Schatten; der untere Schatten fehlt oder ist sehr kurz. Sie sieht aus wie ein umgedrehter Hammer.
 
@@ -33,6 +33,6 @@ Inverted Hammer erfordert einen vorsichtigen Ansatz und Bestätigung:
 
 ## Siehe auch
 
-[Pattern Hammer](hammer.md)
+[Hammer](hammer.md)
 
-[Pattern Shooting Star](shooting_star.md)
+[Shooting Star](shooting_star.md)

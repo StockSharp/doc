@@ -1,4 +1,4 @@
-# Pattern 3 Inside Down und 3 Inside Up
+# 3 Inside Down und 3 Inside Up
 
 Die Begriffe 3 Inside Down und 3 Inside Up bezeichnen ein Paar von Umkehr-Candlestick-Mustern (jeweils mit drei einzelnen Candles), die in Candlestick-Charts angezeigt werden. Für das Muster müssen drei Candles in einer bestimmten Reihenfolge entstehen, was darauf hinweist, dass der aktuelle Trend an Momentum verloren hat und eine Bewegung in die Gegenrichtung beginnen kann.
 
@@ -35,5 +35,5 @@ Diese Muster sind im Kern Harami-Muster, denen eine bestätigende Candle folgt, 
 
 ## Siehe auch
 
-[Pattern 3 Outside Down und 3 Outside Up](3_outside_down_3_outside_up.md)
+[3 Outside Down und 3 Outside Up](3_outside_down_3_outside_up.md)
 

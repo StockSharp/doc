@@ -1,4 +1,4 @@
-# Pattern Bearish Candle
+# Bärische Kerze
 
 Bearish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs unterhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bärische Marktstimmung.
 
@@ -32,7 +32,7 @@ Bearish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 
 ## Siehe auch
 
-[Pattern Bullish Candle](bullish.md)
+[Bullische Kerze](bullish.md)
 
-[Pattern Black Candle](black_candle.md)
+[Schwarze Kerze](black_candle.md)
 

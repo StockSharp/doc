@@ -1,4 +1,4 @@
-# Pattern Black Candle
+# Schwarze Kerze
 
 Black Candle (bärische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs unter dem Eröffnungskurs liegt. Diese Candle spiegelt eine bärische Marktstimmung wider, bei der Verkäufer während der Candle-Bildungsperiode den Preis kontrollierten.
 
@@ -31,7 +31,7 @@ Obwohl eine einzelne schwarze Candle normalerweise kein eigenständiges Handelss
 
 ## Siehe auch
 
-[Pattern White Candle](white_candle.md)
+[Weiße Kerze](white_candle.md)
 
-[Pattern Black Marubozu](black_marubozu.md)
+[Schwarzer Marubozu](black_marubozu.md)
 

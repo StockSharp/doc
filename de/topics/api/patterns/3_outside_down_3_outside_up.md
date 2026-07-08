@@ -1,4 +1,4 @@
-# Pattern 3 Outside Down und 3 Outside Up
+# 3 Outside Down und 3 Outside Up
 
 Die Begriffe 3 Outside Down und 3 Outside Up bezeichnen Drei-Candle-Umkehrmuster. Damit ein Muster entsteht, müssen drei Candles in einer bestimmten Reihenfolge gebildet werden. Dies weist darauf hin, dass der aktuelle Trend an Momentum verloren hat und eine Umkehr des bestehenden Trends signalisieren kann. Konkret entsteht ein Muster, wenn auf eine bärische Candle (die tiefer schließt als sie eröffnet hat) zwei bullische Candles folgen (die höher schließen als sie eröffnet haben) oder umgekehrt.
 
@@ -34,5 +34,5 @@ Die erste Candle signalisiert den Beginn des Endes des vorherrschenden Trends, d
 
 ## Siehe auch
 
-[Pattern 3 Inside Down und 3 Inside Up](3_inside_down_3_side_up.md)
+[3 Inside Down und 3 Inside Up](3_inside_down_3_side_up.md)
 

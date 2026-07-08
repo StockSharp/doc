@@ -1,4 +1,4 @@
-# Pattern Bearish Harami
+# Bärischer Harami
 
 Bearish Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Der Begriff "Harami" stammt aus dem Japanischen und bedeutet "Schwangerschaft", da die kleine Candle (Kind) im Körper der großen Candle (Mutter) enthalten ist.
 
@@ -34,7 +34,7 @@ Bearish Harami erfordert für den Positionseinstieg in der Regel zusätzliche Be
 
 ## Siehe auch
 
-[Pattern Bullish Harami](bullish_harami.md)
+[Bullischer Harami](bullish_harami.md)
 
-[Pattern Bearish Engulfing](bearish_engulfing.md)
+[Bärisches Engulfing](bearish_engulfing.md)
 

@@ -1,4 +1,4 @@
-# Pattern Morning Star
+# Morgenstern
 
 Morning Star ist ein bullisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt den Übergang von bärischer zu bullischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
 
@@ -33,6 +33,6 @@ Morning Star bietet gute Möglichkeiten für den Einstieg in eine Long-Position:
 
 ## Siehe auch
 
-[Pattern Evening Star](evening_star.md)
+[Abendstern](evening_star.md)
 
-[Pattern Three White Soldiers](three_white_soldiers.md)
+[Drei weiße Soldaten](three_white_soldiers.md)

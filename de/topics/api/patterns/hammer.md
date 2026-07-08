@@ -1,4 +1,4 @@
-# Pattern Hammer
+# Hammer
 
 Hammer ist ein bullisches Candlestick-Muster, das während eines Abwärtstrends entsteht. Die Candle hat einen kleinen Körper im oberen Bereich und einen langen unteren Schatten; der obere Schatten fehlt oder ist sehr kurz. Der Name stammt von der Ähnlichkeit der Candle mit einem Hammer.
 
@@ -33,6 +33,6 @@ Hammer bietet Möglichkeiten für den Einstieg in eine Long-Position:
 
 ## Siehe auch
 
-[Pattern Inverted Hammer](inverted_hammer.md)
+[Umgekehrter Hammer](inverted_hammer.md)
 
-[Pattern Hanging Man](hanging_man.md)
+[Hanging Man](hanging_man.md)

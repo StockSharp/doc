@@ -1,4 +1,4 @@
-# Pattern Bearish Engulfing
+# Bärisches Engulfing
 
 Bearish Engulfing ist ein starkes bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Die erste Candle ist weiß (bullisch), gefolgt von einer schwarzen (bärischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
 

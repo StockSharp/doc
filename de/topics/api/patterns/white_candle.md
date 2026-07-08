@@ -1,4 +1,4 @@
-# Pattern White Candle
+# Weiße Kerze
 
 White Candle (bullische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs über dem Eröffnungskurs liegt. Diese Candle spiegelt eine bullische Marktstimmung wider, bei der Käufer während der Candle-Bildungsperiode den Preis kontrollierten.
 
@@ -31,6 +31,6 @@ Obwohl eine einzelne weiße Candle normalerweise kein eigenständiges Handelssig
 
 ## Siehe auch
 
-[Pattern Black Candle](black_candle.md)
+[Schwarze Kerze](black_candle.md)
 
-[Pattern White Marubozu](white_marubozu.md)
+[Weißer Marubozu](white_marubozu.md)

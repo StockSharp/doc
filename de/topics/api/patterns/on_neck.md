@@ -1,4 +1,4 @@
-# Pattern On-Neck
+# On-Neck
 
 On-Neck ist ein bärisches Trendfortsetzungs-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt einen vorübergehenden erfolglosen Versuch der Bullen, den Trend umzukehren; danach setzt sich die Abwärtsbewegung fort.
 
