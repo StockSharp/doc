@@ -1,6 +1,6 @@
-# 老人力指数
+# 埃尔德力量指数 (EFI)
 
-**长者力量指数（EFI）** 使用价格变动和成交量来衡量买卖压力。
+**埃尔德力量指数（EFI）** 使用价格变动和成交量来衡量买卖压力。
 
 要使用该指标，您必须使用[ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex) 类。
 

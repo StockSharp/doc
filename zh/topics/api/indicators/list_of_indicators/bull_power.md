@@ -1,6 +1,6 @@
-# 公牛力量
+# 多头力量
 
-**牛力（Bull Power）** 是 Elder-ray 系统中的看涨对应指标。它通过比较K线最高价与
+**多头力量（Bull Power）** 是 Elder-ray 系统中的看涨对应指标。它通过比较K线最高价与
 指数移动平均线（EMA）来衡量买家推动价格上涨的力度。
 
 使用 [BullPower](xref:StockSharp.Algo.Indicators.BullPower) 类可以操作该指标。

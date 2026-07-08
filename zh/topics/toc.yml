@@ -1702,9 +1702,9 @@
         href: api/indicators/list_of_indicators/balance_of_power.md
       - name: 成交量平衡指标 (BV)
         href: api/indicators/list_of_indicators/balance_volume.md
-      - name: 空头力道
+      - name: 空头力量
         href: api/indicators/list_of_indicators/bear_power.md
-      - name: 多头力道
+      - name: 多头力量
         href: api/indicators/list_of_indicators/bull_power.md
       - name: 布林带 (Bollinger)
         href: api/indicators/list_of_indicators/bollinger_bands.md
@@ -1752,17 +1752,17 @@
         href: api/indicators/list_of_indicators/ease_of_movement.md
       - name: 埃勒斯费舍尔变换 (EFT)
         href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
-      - name: 老牌冲动系统 (EIS)
+      - name: 埃尔德冲动系统 (EIS)
         href: api/indicators/list_of_indicators/elder_impulse_system.md
-      - name: 老牌力量指数 (EFI)
+      - name: 埃尔德力量指数 (EFI)
         href: api/indicators/list_of_indicators/elder_force_index.md
       - name: 艾略特波振荡器 (EWO)
         href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
       - name: 端点移动平均线 (EPMA)
         href: api/indicators/list_of_indicators/endpoint_moving_average.md
-      - name: 信封指标
+      - name: 包络线
         href: api/indicators/list_of_indicators/envelope.md
-      - name: 埃lder雷指数
+      - name: 埃尔德射线指数
         href: api/indicators/list_of_indicators/elder_ray.md
       - name: 指数移动平均线 (EMA)
         href: api/indicators/list_of_indicators/ema.md
@@ -1780,7 +1780,7 @@
         href: api/indicators/list_of_indicators/fractals.md
       - name: 分形维度指数 (FDI)
         href: api/indicators/list_of_indicators/fractal_dimension.md
-      - name: 鳄鱼振荡器 (Gator)
+      - name: 鳄鱼振荡器
         href: api/indicators/list_of_indicators/gator_oscillator.md
       - name: 戈帕拉克里希南区间指数 (GAPO)
         href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
@@ -1914,7 +1914,7 @@
         href: api/indicators/list_of_indicators/ravi.md
       - name: 等级相关指数 (RCI)
         href: api/indicators/list_of_indicators/rank_correlation_index.md
-      - name: 变动率 (ROC)
+      - name: 变化率 (RoC)
         href: api/indicators/list_of_indicators/roc.md
       - name: 相对动量指数 (RMI)
         href: api/indicators/list_of_indicators/relative_momentum_index.md
@@ -1968,7 +1968,7 @@
         href: api/indicators/list_of_indicators/vhf.md
       - name: 可变指数动态平均 (VIDIA)
         href: api/indicators/list_of_indicators/vidya.md
-      - name: 可变移动平均 (VMA)
+      - name: 可变移动平均线 (VMA)
         href: api/indicators/list_of_indicators/variable_moving_average.md
       - name: 成交量
         href: api/indicators/list_of_indicators/volume.md

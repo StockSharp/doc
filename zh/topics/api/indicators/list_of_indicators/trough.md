@@ -1,8 +1,8 @@
-# 槽
+# 波谷
 
-**低谷** 指标显示该期间的最小值。
+**波谷** 指标显示该期间的最小值。
 
-要使用该指标，必须使用 [低谷](xref:StockSharp.Algo.Indicators.Trough) 类。
+要使用该指标，必须使用 [Trough](xref:StockSharp.Algo.Indicators.Trough) 类。
 
 ![IndicatorTrough](../../../../images/indicatortrough.png)
 

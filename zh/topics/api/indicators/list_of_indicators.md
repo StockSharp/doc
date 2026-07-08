@@ -2,7 +2,7 @@
 
 [S#](../../api.md) 默认提供超过140种技术分析指标。这使您可以使用现成的指标，而无需从零创建。
 
-- [模数转换](list_of_indicators/a_d.md) - 加速/减速指标，衡量价格变动的加速或减速
+- [加速/减速指标 (A/D)](list_of_indicators/a_d.md) - 衡量价格变动的加速或减速
 - [ADL](list_of_indicators/accumulation_distribution_line.md) - 累积/分配线 (A/D线)，跟踪资金流入或流出某交易品种的情况
 - [ALF](list_of_indicators/adaptive_laguerre_filter.md) - 自适应拉盖尔滤波器，一种根据市场状况调整以平滑价格数据的滤波器
 - [APZ](list_of_indicators/adaptive_price_zone.md) - 自适应价格区，基于波动性识别潜在的支撑和阻力水平
@@ -14,8 +14,8 @@
 - [ADX](list_of_indicators/adx.md) - 韦尔斯·威尔德平均方向指数，衡量趋势强度
 - [ATR](list_of_indicators/atr.md) - 平均真实波幅，衡量市场波动性
 - [AO](list_of_indicators/ao.md) - 超级振荡器，衡量市场动能
-- [熊力量](list_of_indicators/bear_power.md) - 熊力量，衡量相对于指数移动平均线的看跌压力
-- [牛市力量](list_of_indicators/bull_power.md) - 牛市力量，衡量相对于指数移动平均线的多头压力
+- [空头力量](list_of_indicators/bear_power.md) - 衡量相对于指数移动平均线的看跌压力
+- [多头力量](list_of_indicators/bull_power.md) - 衡量相对于指数移动平均线的多头压力
 - [BMP](list_of_indicators/balance_of_market_power.md) - 市场力量平衡，比对买入与卖出压力
 - [BOP](list_of_indicators/balance_of_power.md) - 力量平衡，显示买方与卖方的强度
 - [BV](list_of_indicators/balance_volume.md) - 平衡量指标，将成交量与价格变化联系起来
@@ -43,21 +43,21 @@
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - 动态区间RSI，根据市场状况调整RSI水平
 - [EMV](list_of_indicators/ease_of_movement.md) - 移动易度，将价格变化与交易量联系起来
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - 埃勒斯-费舍尔变换，将价格标准化以突出极端值
-- [EIS](list_of_indicators/elder_impulse_system.md) - 老年冲动系统，结合趋势和动量来寻找交易机会
-- [老雷](list_of_indicators/elder_ray.md) - 老雷指标，使用指数移动平均线（EMA）评估多空力量的平衡
+- [EIS](list_of_indicators/elder_impulse_system.md) - 埃尔德冲动系统，结合趋势和动量来寻找交易机会
+- [埃尔德射线指数](list_of_indicators/elder_ray.md) - 使用指数移动平均线（EMA）评估多空力量的平衡
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - 艾略特波动振荡器，用于识别价格走势中的波浪模式
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - 端点移动平均，一种滞后减小的移动平均
-- [信封](list_of_indicators/envelope.md) - 信封，在移动平均线周围创建带，以识别超买和超卖水平
+- [包络线](list_of_indicators/envelope.md) - 在移动平均线周围创建通道，以识别超买和超卖水平
 - [EMA](list_of_indicators/ema.md) - 指数移动平均线，对近期价格赋予更大权重
 - [FR](list_of_indicators/fibonacci_retracement.md) - 斐波那契回撤，根据斐波那契比例确定潜在反转水平
 - [FVE](list_of_indicators/finite_volume_element.md) - 有限体积元素，考虑成交量来衡量价格波动的强度
 - [FI](list_of_indicators/force_index.md) - 力量指标，结合价格和成交量来衡量买卖压力
-- [EFI](list_of_indicators/elder_force_index.md) - 长者力量指数，衡量买卖压力
+- [EFI](list_of_indicators/elder_force_index.md) - 埃尔德力量指数，衡量买卖压力
 - [FOSC](list_of_indicators/forecast_oscillator.md) - 预测振荡器，将实际价格与预测价格进行比较
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - 分形自适应移动平均线，适应市场波动性
 - [分形](list_of_indicators/fractals.md) - 分形，用于识别价格图表上的潜在反转点
 - [FDI](list_of_indicators/fractal_dimension.md) - 分形维度指数，衡量市场粗糙度
-- [Gator](list_of_indicators/gator_oscillator.md) - Gator振荡器，用于测量移动平均线的收敛和发散
+- [鳄鱼振荡器](list_of_indicators/gator_oscillator.md) - 用于测量移动平均线的收敛和发散
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Gopalakrishnan 范围指数，衡量价格波动的变异性
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - 古比多重移动平均线，使用多条移动平均线来识别趋势
 - [HO](list_of_indicators/harmonic_oscillator.md) - 谐波振荡器，检测价格数据中的谐波模式
@@ -131,7 +131,7 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Schaff趋势周期，识别趋势周期
 - [SuperTrend](list_of_indicators/supertrend.md) - 基于ATR的SuperTrend指标
 - [SMA](list_of_indicators/sma.md) - 简单移动平均线，计算一段时间内的平均价格
-- [Shift](list_of_indicators/shift.md) - Shift，将数据流按选定的周期数进行偏移
+- [移位](list_of_indicators/shift.md) - 将数据流按选定的周期数进行偏移
 - [SW](list_of_indicators/sine_wave.md) - 正弦波，用于识别价格数据中的周期性模式
 - [SMMA](list_of_indicators/smoothed_ma.md) - 平滑移动平均线，一种对最近价格给予更多权重的移动平均线
 - [Std Dev](list_of_indicators/standard_deviation.md) - 标准差，衡量价格数据的分散程度
@@ -144,14 +144,14 @@
 - [TP](list_of_indicators/typical_price.md) - 典型价格，高点、低点和收盘价的平均值
 - [TEMA](list_of_indicators/tema.md) - 三重指数移动平均线，减少移动平均计算中的滞后
 - [TRIX](list_of_indicators/trix.md) - 三重指数移动平均线，用于识别趋势变化
-- [谷](list_of_indicators/trough.md) - 谷，识别价格数据中的局部低点
+- [波谷](list_of_indicators/trough.md) - 识别价格数据中的局部低点
 - [TR](list_of_indicators/true_range.md) - 真正波动幅度，衡量价格变动的实际范围
 - [TSI](list_of_indicators/true_strength_index.md) - 真正强弱指数，应用双重平滑动量分析
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs 资金流量，衡量买卖压力
 - [UltimateOsc](list_of_indicators/uo.md) - 最终振荡器，结合多个时间框架来衡量动量
 - [VHF](list_of_indicators/vhf.md) - 垂直-水平滤波器，用于区分趋势市场与震荡市场
 - [VIDIA](list_of_indicators/vidya.md) - 可变指数动态平均，适应市场波动
-- [VMA](list_of_indicators/variable_moving_average.md) - 可变移动平均线，根据波动性进行调整
+- [VMA](list_of_indicators/variable_moving_average.md) - 可变移动平均线，根据波动性调整平滑周期
 - [成交量](list_of_indicators/volume.md) - K线成交量，衡量每根K线的交易量
 - [成交量概况](list_of_indicators/volume_profile.md) - 成交量概况，显示不同价格水平的交易活动
 - [VMA](list_of_indicators/volume_weighted_ma.md) - 成交量加权移动平均，对成交量较高的价格给予更大的权重

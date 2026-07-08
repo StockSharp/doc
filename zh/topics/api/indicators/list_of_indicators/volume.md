@@ -1,6 +1,6 @@
-# 音量
+# 成交量
 
-**K线量** 指标显示K线量。
+**成交量** 指标显示K线成交量。
 
 要使用该指标，您必须使用 [VolumeIndicator](xref:StockSharp.Algo.Indicators.VolumeIndicator) 类。
 
