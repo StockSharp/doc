@@ -18,7 +18,7 @@ Como exemplo, considere a combinação de futuros E-mini S&P 500.
    - Se definir as duas primeiras letras do contrato como nome, por exemplo, RI, e clicar no botão **Auto**, todos os instrumentos encontrados na base de dados serão adicionados.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Selecione os contratos necessários e defina as respetivas datas de transição. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. Em seguida, atribua o identificador de instrumento **ES\_continuous@CME** e clique no botão **OK**, após o que será criado um novo instrumento.
-5. Em seguida, clique no botão [Candles](../working_with_data/view_and_export/candles.md) no separador **Common**, selecione o instrumento resultante e o período dos dados, defina o valor **Composite element** no campo **Build from** e depois clique no botão ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. Em seguida, clique no botão [Velas](../working_with_data/view_and_export/candles.md) no separador **Common**, selecione o instrumento resultante e o período dos dados, defina o valor **Composite element** no campo **Build from** e depois clique no botão ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 Os dados gerados podem ser exportados para os formatos Excel, XML, JSON ou TXT. A exportação é efetuada através da lista pendente.
 

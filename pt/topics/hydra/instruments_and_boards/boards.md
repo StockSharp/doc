@@ -1,4 +1,4 @@
-# Boards
+# Praças de negociação
 
 No separador **Common**, clique no botão **Boards**.
 

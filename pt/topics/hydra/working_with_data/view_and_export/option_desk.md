@@ -1,4 +1,4 @@
-# Option desk
+# Painel de opções
 
 Na janela que aparece, selecione o intervalo temporal pretendido, escolha o ativo subjacente, adicione as opções correspondentes e clique no botão ![hydra find](../../../../images/hydra_find.png):
 

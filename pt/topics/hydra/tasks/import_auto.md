@@ -1,4 +1,4 @@
-# Import (auto)
+# Importação (automática)
 
 A tarefa executa a importação automática de dados da bolsa a partir de ficheiros no diretório especificado, de acordo com a máscara de ficheiro especificada.
 

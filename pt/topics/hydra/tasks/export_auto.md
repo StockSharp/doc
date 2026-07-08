@@ -1,4 +1,4 @@
-# Export (auto)
+# Exportação (automática)
 
 A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Json ou txt.
 

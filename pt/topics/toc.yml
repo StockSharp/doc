@@ -473,13 +473,13 @@
     - name: Exemplos de fontes
       href: hydra/videos/sources_samples.md
       items:
-      - name: Oanda
+      - name: Conexão com OANDA
         href: hydra/videos/sources_samples/oanda.md
-      - name: Interactive Brokers
+      - name: Conexão com Interactive Brokers
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: Bitmex
+      - name: Conexão com BitMEX
         href: hydra/videos/sources_samples/bitmex.md
-      - name: Binance
+      - name: Conexão com Binance
         href: hydra/videos/sources_samples/binance.md
     - name: Descarregamento de instrumentos
       href: hydra/videos/instruments_downloading.md
@@ -528,7 +528,7 @@
         href: hydra/working_with_data/view_and_export/ticks.md
       - name: Livros de ordens
         href: hydra/working_with_data/view_and_export/order_books.md
-      - name: Candles
+      - name: Velas
         href: hydra/working_with_data/view_and_export/candles.md
       - name: Log de ordens
         href: hydra/working_with_data/view_and_export/order_log.md
@@ -538,7 +538,7 @@
         href: hydra/working_with_data/view_and_export/news.md
       - name: Transações
         href: hydra/working_with_data/view_and_export/transactions.md
-      - name: Option desk
+      - name: Painel de opções
         href: hydra/working_with_data/view_and_export/option_desk.md
       - name: Indicadores
         href: hydra/working_with_data/view_and_export/indicators.md
@@ -602,20 +602,20 @@
       href: hydra/instruments_and_boards/extended_instrument_info.md
     - name: Correspondência instrumentos-ligações
       href: hydra/instruments_and_boards/matching_instruments_connections.md
-    - name: Boards
+    - name: Praças de negociação
       href: hydra/instruments_and_boards/boards.md
   - name: Tarefas
     href: hydra/tasks.md
     items:
     - name: Conversor
       href: hydra/tasks/converter.md
-    - name: Export (auto)
+    - name: Exportação (automática)
       href: hydra/tasks/export_auto.md
-    - name: Import (auto)
+    - name: Importação (automática)
       href: hydra/tasks/import_auto.md
     - name: Cópia de segurança
       href: hydra/tasks/backup.md
-  - name: Analytics
+  - name: Análises
     href: hydra/analytics.md
     items:
     - name: Executar um Script
@@ -661,7 +661,7 @@
     href: hydra/create_new_source.md
   - name: Criar nova tarefa
     href: hydra/create_new_task.md
-- name: Hydra Server
+- name: Servidor Hydra
   href: hydra_server.md
 - name: Serviços Telegram
   href: telegram_services.md

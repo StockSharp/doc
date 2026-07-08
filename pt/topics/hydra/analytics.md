@@ -1,4 +1,4 @@
-# Analytics
+# Análises
 
 A funcionalidade **Analytics** fornece aos utilizadores uma ferramenta para análise de dados de mercado. Esta funcionalidade permite uma análise aprofundada de dados de preços, volumes e outros indicadores de mercado através de [scripts](analytics/running_a_script.md) conectáveis nas linguagens C#, F# e Python.
 
