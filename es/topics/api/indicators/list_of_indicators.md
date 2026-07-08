@@ -85,7 +85,7 @@
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period, determina el precio más bajo durante un período específico
 - [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator, correlaciona los movimientos del mercado con los ciclos lunares
 - [MFI](list_of_indicators/market_facilitation_index.md) - Market Facilitation Index, mide la eficiencia del movimiento de precios
-- [MMI](list_of_indicators/market_meanness_index.md) - Market Meanness Index, determina el comportamiento de inversión media
+- [MMI](list_of_indicators/market_meanness_index.md) - Índice de “maldad” del mercado, determina si el mercado está en tendencia o lateral
 - [MI](list_of_indicators/mass_index.md) - Mass Index, identifica posibles reversiones en función de la expansión del rango
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - McClellan Oscilador, mide la amplitud del mercado
 - [MGD](list_of_indicators/mcginley_dynamic.md) - McGinley Dynamic, una media móvil responsiva
