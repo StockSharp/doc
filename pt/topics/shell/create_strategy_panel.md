@@ -19,7 +19,7 @@ Substitua `UserControl` por `controls:BaseStudioControl`.
 
 Depois, implemente a lógica do seu próprio painel de forma semelhante aos painéis de estratégia existentes.
 
-Para que o painel [Real-time](user_interface/real_time.md) veja a estratégia no seu painel, a sua estratégia deve ser definida como uma propriedade:
+Para que o painel [Tempo real](user_interface/real_time.md) veja a estratégia no seu painel, a sua estratégia deve ser definida como uma propriedade:
 
 ```cs
 	public partial class SmaMonitoringControl

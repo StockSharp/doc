@@ -1,4 +1,4 @@
-# Crossing
+# Cruzamento
 
 ![Designer Crossing 00](../../../../../../images/designer_crossing_00.png)
 
@@ -21,4 +21,4 @@ Um exemplo de utilização do bloco Crossing para acompanhar os cruzamentos de d
 
 ## Ver também
 
-[Value Delay](delay_value.md)
+[Atraso de valor](delay_value.md)

@@ -1,4 +1,4 @@
-# String format
+# Formatação de strings
 
 ![Designer String Format 00](../../../../../../images/designer_string_format_00.png)
 
@@ -41,5 +41,5 @@ Parâmetros
 
 ## Conteúdo recomendado
 
-[String concat](string_concat.md)
-[Notification](notification.md)
+[Concatenação de strings](string_concat.md)
+[Notificação](notification.md)

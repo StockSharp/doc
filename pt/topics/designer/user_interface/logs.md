@@ -6,4 +6,4 @@ Para simplificar a monitorização do funcionamento do programa, existe um paine
 
 ## Ver Também
 
-[Portfolios](portfolios.md)
+[Carteiras](portfolios.md)

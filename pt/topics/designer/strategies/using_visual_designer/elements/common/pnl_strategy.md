@@ -12,4 +12,4 @@ Documentação RemoteManager
 
 ## Conteúdo recomendado
 
-[Prev value](prev_value.md)
+[Valor anterior](prev_value.md)

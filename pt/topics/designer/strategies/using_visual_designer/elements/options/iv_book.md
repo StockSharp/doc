@@ -1,4 +1,4 @@
-# IV book
+# Livro de IV
 
 ![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
@@ -19,4 +19,4 @@ Sockets de saída
 
 ## Conteúdo recomendado
 
-[Option desk](option_desk.md)
+[Mesa de opções](option_desk.md)

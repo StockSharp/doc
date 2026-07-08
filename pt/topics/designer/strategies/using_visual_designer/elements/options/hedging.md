@@ -1,4 +1,4 @@
-# Hedging
+# Cobertura
 
 ![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
 
@@ -28,4 +28,4 @@ Parâmetros
 
 ## Conteúdo recomendado
 
-[Options quoting](options_quoting.md)
+[Cotação de opções](options_quoting.md)

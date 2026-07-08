@@ -1,4 +1,4 @@
-# Trades
+# Negócios
 
 O componente **Trades** é uma tabela de negócios que apresenta informações completas sobre todos os negócios da estratégia:
 
@@ -6,4 +6,4 @@ O componente **Trades** é uma tabela de negócios que apresenta informações c
 
 ## Conteúdo recomendado
 
-[P&L equity](pnl_equity.md)
+[Curva de P&L](pnl_equity.md)

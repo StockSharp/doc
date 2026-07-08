@@ -1,4 +1,4 @@
-# Indexer
+# Indexador
 
 ![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
 
@@ -24,4 +24,4 @@ Parâmetros
 
 ## Conteúdo recomendado
 
-[Converter](converter.md)
+[Conversor](converter.md)

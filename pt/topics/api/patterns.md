@@ -83,7 +83,7 @@ Todas as referências têm de estar dentro do intervalo do padrão atual. Por ex
 
 Para verificação adicional de parâmetros em correlação, é utilizada a expressão &&, que representa um AND lógico.
 
-Ao descrever um padrão, também é possível utilizar as seguintes funções: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Mais informações sobre a utilização de funções são explicadas na descrição do cubo [Formula](../designer/strategies/using_visual_designer/elements/common/formula.md).
+Ao descrever um padrão, também é possível utilizar as seguintes funções: abs, acos, asin, atan, ceiling, cos, exp, floor, log, log10, max, min, pow, round, sign, sin, sqrt, tan, truncate. Mais informações sobre a utilização de funções são explicadas na descrição do cubo [Fórmula](../designer/strategies/using_visual_designer/elements/common/formula.md).
 
 Ao utilizar [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.ExpressionCandlePattern) em código, as fórmulas são criadas pelas mesmas regras descritas acima e utilizam as mesmas variáveis.
 

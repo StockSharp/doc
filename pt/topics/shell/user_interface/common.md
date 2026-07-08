@@ -1,4 +1,4 @@
-# Common
+# Comum
 
 O separador **Common** permite-lhe ver informações gerais sobre carteiras, ordens, negócios e instrumentos. Aqui também pode definir o tema da interface do [Shell](../../shell.md).
 
@@ -10,4 +10,4 @@ No separador **Securities**, pode carregar instrumentos a partir do armazenament
 
 ## Conteúdo recomendado
 
-[Real-time](real_time.md)
+[Tempo real](real_time.md)

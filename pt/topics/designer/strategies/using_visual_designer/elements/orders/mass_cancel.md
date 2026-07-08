@@ -1,4 +1,4 @@
-# Mass Order Cancellations
+# Cancelamento em massa de ordens
 
 ![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
 

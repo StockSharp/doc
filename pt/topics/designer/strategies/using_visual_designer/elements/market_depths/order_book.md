@@ -1,4 +1,4 @@
-# Order book
+# Livro de ofertas
 
 ![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
 
@@ -14,4 +14,4 @@ O cubo é usado para obter o livro de ordens pelo instrumento especificado.
 
 ## Conteúdo recomendado
 
-[Grouped order book](grouped_order_book.md)
+[Livro de ofertas agrupado](grouped_order_book.md)

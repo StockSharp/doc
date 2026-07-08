@@ -16,7 +16,7 @@ Depois de clicar no botão **Add** ![Designer Panel Circuits 01](../../../../ima
 
 3. A essência da estratégia de média móvel (SMA) é a seguinte:
 
-- Existem duas médias móveis com períodos de cálculo diferentes, uma SMA longa e uma SMA curta. No exemplo, o cubo [Indicator](elements/common/indicator.md) da SMA longa chama-se Long SMA, com um período de 80 velas, e a SMA curta chama-se Short SMA, com um período de 10 velas.
+- Existem duas médias móveis com períodos de cálculo diferentes, uma SMA longa e uma SMA curta. No exemplo, o cubo [Indicador](elements/common/indicator.md) da SMA longa chama-se Long SMA, com um período de 80 velas, e a SMA curta chama-se Short SMA, com um período de 10 velas.
 - Quando uma média móvel curta cruza uma longa de baixo para cima, abre-se uma posição longa.
 - Quando uma média móvel curta cruza uma longa de cima para baixo, abre-se uma posição curta.
 - Se existir uma posição oposta no momento em que é recebido um sinal para abrir uma posição, inverte-se a posição.
@@ -31,15 +31,15 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicator](elements/common/indicator.md), seleccionar o tipo SMA, nomear o primeiro Long SMA, definir o período de 80 velas, nomear o segundo Short SMA e definir o período de 10 velas.
+5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicador](elements/common/indicator.md), seleccionar o tipo SMA, nomear o primeiro Long SMA, definir o período de 80 velas, nomear o segundo Short SMA e definir o período de 10 velas.
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. Para que os indicadores funcionem, passe-lhes uma série de velas. Para isso, crie o cubo [Candles](elements/data_sources/candles.md). No exemplo, são utilizadas apenas velas formadas com um período de 5 minutos.
+6. Para que os indicadores funcionem, passe-lhes uma série de velas. Para isso, crie o cubo [Velas](elements/data_sources/candles.md). No exemplo, são utilizadas apenas velas formadas com um período de 5 minutos.
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. Depois de adicionar os indicadores, precisa de adicionar dois cubos que definem os cruzamentos dos indicadores. Estes são os cubos [Crossing](elements/common/crossing.md) dos elementos compostos. O primeiro cubo chama-se Crossing Up. Define o cruzamento de baixo para cima. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor maior, e o operador PrevComparison é definido para menor ou igual. O segundo cubo chama-se Crossing Down; define o cruzamento de cima para baixo. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor menor, e o operador PrevComparison é definido para maior ou igual.
+7. Depois de adicionar os indicadores, precisa de adicionar dois cubos que definem os cruzamentos dos indicadores. Estes são os cubos [Cruzamento](elements/common/crossing.md) dos elementos compostos. O primeiro cubo chama-se Crossing Up. Define o cruzamento de baixo para cima. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor maior, e o operador PrevComparison é definido para menor ou igual. O segundo cubo chama-se Crossing Down; define o cruzamento de cima para baixo. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor menor, e o operador PrevComparison é definido para maior ou igual.
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 

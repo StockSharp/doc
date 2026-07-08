@@ -1,4 +1,4 @@
-# Comparison
+# Comparação
 
 ![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
 
@@ -23,4 +23,4 @@ Quando altera o operador, o nome do cubo muda automaticamente para o nome do ope
 
 ## Conteúdo recomendado
 
-[Indicator](indicator.md)
+[Indicador](indicator.md)

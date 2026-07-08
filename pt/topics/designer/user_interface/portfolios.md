@@ -1,4 +1,4 @@
-# Portfolios
+# Carteiras
 
 Para trabalhar com portefólios existe o painel **Portfolios**. Pode abri-lo clicando no botão Portfolios no separador **Common**.
 

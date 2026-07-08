@@ -1,4 +1,4 @@
-# Buy\/Sell
+# Compra/Venda
 
 O componente **Buy\/Sell** é um grupo de painéis que apresenta as informações do melhor preço para os instrumentos selecionados e também permite comprar ou vender o volume necessário.
 

@@ -1,4 +1,4 @@
-# Value Delay
+# Atraso de valor
 
 ![Designer Delay 00](../../../../../../images/designer_delay_00.png)
 
@@ -21,4 +21,4 @@ Este componente é usado para atrasar a transmissão de um valor durante um núm
 
 ## Ver também
 
-- [Comparison](comparison.md)
+- [Comparação](comparison.md)

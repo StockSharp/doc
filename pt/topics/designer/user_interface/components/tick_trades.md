@@ -1,4 +1,4 @@
-# Tick trades
+# Negócios tick
 
 O componente **Trades feed** é uma tabela de negócios que apresenta informações completas sobre todos os negócios dos instrumentos selecionados.
 

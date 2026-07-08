@@ -1,4 +1,4 @@
-# Order Book Panel
+# Painel de livro de ofertas
 
 ![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 
@@ -14,4 +14,4 @@ O componente [Livro de ordens](../../../../user_interface/components/order_book.
 
 ## Ver também
 
-[Grouped order book](grouped_order_book.md)
+[Livro de ofertas agrupado](grouped_order_book.md)

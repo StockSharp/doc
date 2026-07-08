@@ -1,4 +1,4 @@
-# Boards
+# Boards de negociação
 
 No painel **Board editor**, pode criar **Boards** e **Exchanges**, e ver ou personalizar os existentes.
 

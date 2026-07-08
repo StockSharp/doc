@@ -16,8 +16,8 @@ Depois de premir **OK**, aparecerá uma nova estratégia na pasta **Strategies**
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 
-O separador da estratégia é composto pelo painel **Scheme** ([Strategy Designer](using_visual_designer/diagram_panel.md)), bem como por outros separadores que representam os [componentes gráficos](../user_interface/components.md) da estratégia, necessários para apresentar os resultados do teste da estratégia criada na área **Scheme**. As informações detalhadas sobre testes de estratégias são descritas na secção [Exemplo de backtesting](../backtesting/getting_started.md).
+O separador da estratégia é composto pelo painel **Scheme** ([Designer de estratégias](using_visual_designer/diagram_panel.md)), bem como por outros separadores que representam os [componentes gráficos](../user_interface/components.md) da estratégia, necessários para apresentar os resultados do teste da estratégia criada na área **Scheme**. As informações detalhadas sobre testes de estratégias são descritas na secção [Exemplo de backtesting](../backtesting/getting_started.md).
 
 ## Ver também
 
-[Strategy Designer](using_visual_designer/diagram_panel.md)
+[Designer de estratégias](using_visual_designer/diagram_panel.md)

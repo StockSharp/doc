@@ -10,4 +10,4 @@ O painel [Gráfico](../../../../user_interface/components/chart.md) apresenta to
 
 ## Conteúdo recomendado
 
-[Crossing](crossing.md)
+[Cruzamento](crossing.md)

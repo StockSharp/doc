@@ -1,4 +1,4 @@
-# Ribbon
+# Friso
 
 O elemento principal da interface de utilizador do [Terminal](../../terminal.md) é uma **Ribbon**, localizada ao longo da parte superior da janela da aplicação. Com a ribbon, pode encontrar rapidamente os comandos necessários. Os comandos estão organizados em grupos lógicos, reunidos em separadores. Para aceder ao separador pretendido, basta clicar no respetivo nome. Cada separador está associado ao tipo de ação que está a ser executada.
 

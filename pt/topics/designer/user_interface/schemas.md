@@ -1,6 +1,6 @@
 # Painel Schemes
 
-Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separador **Common**. O painel **Schemes** contém uma árvore de scripts, agrupados em pastas por finalidade. Os esquemas de estratégias e os blocos personalizados não são diferentes. São editados com um editor comum, [Strategy Designer](../strategies/using_visual_designer/diagram_panel.md). No entanto, para evitar confusão entre eles, estão divididos em duas listas independentes e guardados em pastas diferentes (estratégias na pasta **Backtest**, blocos personalizados na pasta **Custom Blocks**). A seleção de um esquema para edição é feita com duplo clique no item necessário na lista. O esquema selecionado será então aberto no designer para visualização e edição. Abaixo encontra-se uma descrição das pastas no painel **Schemes**:
+Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separador **Common**. O painel **Schemes** contém uma árvore de scripts, agrupados em pastas por finalidade. Os esquemas de estratégias e os blocos personalizados não são diferentes. São editados com um editor comum, [Designer de estratégias](../strategies/using_visual_designer/diagram_panel.md). No entanto, para evitar confusão entre eles, estão divididos em duas listas independentes e guardados em pastas diferentes (estratégias na pasta **Backtest**, blocos personalizados na pasta **Custom Blocks**). A seleção de um esquema para edição é feita com duplo clique no item necessário na lista. O esquema selecionado será então aberto no designer para visualização e edição. Abaixo encontra-se uma descrição das pastas no painel **Schemes**:
 
 ![Designer Panel Circuits 00](../../../images/designer_panel_circuits_00.png)
 
@@ -14,7 +14,7 @@ Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separado
 
 3. A pasta **Live** contém estratégias adicionadas para negociação. As estratégias iniciadas são marcadas com o ícone ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), e as que estão paradas são marcadas com o ícone ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png). A forma de adicionar estratégias à pasta **Live** e de as iniciar é descrita na secção [Live trading](../live_execution/getting_started.md).
 
-4. A pasta **Indicators** contém os seus próprios indicadores para estratégias de negociação, escritos por si. Não é possível criar novos indicadores com esquemas; apenas estão disponíveis código e ficheiros DLL externos. O uso de indicadores personalizados em esquemas está disponível através do bloco [Indicator](../strategies/using_visual_designer/elements/common/indicator.md) ao selecionar o tipo de indicador.
+4. A pasta **Indicators** contém os seus próprios indicadores para estratégias de negociação, escritos por si. Não é possível criar novos indicadores com esquemas; apenas estão disponíveis código e ficheiros DLL externos. O uso de indicadores personalizados em esquemas está disponível através do bloco [Indicador](../strategies/using_visual_designer/elements/common/indicator.md) ao selecionar o tipo de indicador.
 
 5. A pasta **Remote** contém estratégias localizadas num servidor remoto.
 

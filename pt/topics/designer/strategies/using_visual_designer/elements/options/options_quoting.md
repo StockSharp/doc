@@ -1,4 +1,4 @@
-# Options quoting
+# Cotação de opções
 
 ![Designer Quoting 00](../../../../../../images/designer_quoting_00.png)
 

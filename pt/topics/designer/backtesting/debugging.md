@@ -16,4 +16,4 @@ Os seguintes botões encontram-se no grupo **Debugger** do Ribbon **Emulation**:
 
 ## Conteúdo recomendado
 
-[Break points](debugging/break_points.md)
+[Pontos de interrupção](debugging/break_points.md)

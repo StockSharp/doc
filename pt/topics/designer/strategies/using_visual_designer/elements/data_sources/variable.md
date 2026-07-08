@@ -29,4 +29,4 @@ Se o tipo de dados **Instrument** ou **Portfolio** estiver selecionado, o valor 
 
 ## Conteúdo recomendado
 
-[Indexer](../converters/indexer.md)
+[Indexador](../converters/indexer.md)

@@ -1,4 +1,4 @@
-# Formula
+# Fórmula
 
 ![Designer Universal formula 00](../../../../../../images/designer_universal_formula_00.png)
 
@@ -39,4 +39,4 @@ Juntamente com os operadores matemáticos padrão, pode usar as seguintes funç�
 
 ## Conteúdo recomendado
 
-[Indicator](indicator.md)
+[Indicador](indicator.md)

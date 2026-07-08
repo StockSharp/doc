@@ -1,4 +1,4 @@
-# Brute-force
+# Força bruta
 
 Para mudar para o modo de otimização de estratégia, clique no botão **Optimization** no separador **Emulation**. O exemplo de otimização será considerado usando a estratégia SMA criada [a partir de cubos](../strategies/using_visual_designer/first_strategy.md).
 

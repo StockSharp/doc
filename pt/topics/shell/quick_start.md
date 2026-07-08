@@ -20,7 +20,7 @@ Aceda às definições de ligação e selecione a ligação necessária. A forma
 
 O passo seguinte é ligar clicando no botão **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
 
-Depois de ligar, no separador [Common](user_interface/common.md), pode ver as carteiras, instrumentos, ordens e negócios próprios recebidos da ligação.
+Depois de ligar, no separador [Comum](user_interface/common.md), pode ver as carteiras, instrumentos, ordens e negócios próprios recebidos da ligação.
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
@@ -32,6 +32,6 @@ Depois de a estratégia ser adicionada, preencha os seus parâmetros básicos, c
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-De forma semelhante ao separador [Real-time](user_interface/real_time.md), pode executar um teste de estratégia em dados históricos no separador [Emulation](user_interface/emulation.md).
+De forma semelhante ao separador [Tempo real](user_interface/real_time.md), pode executar um teste de estratégia em dados históricos no separador [Emulação](user_interface/emulation.md).
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

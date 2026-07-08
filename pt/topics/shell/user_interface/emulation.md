@@ -1,4 +1,4 @@
-# Emulation
+# Emulação
 
 O separador **Emulation** permite-lhe testar estratégias em dados históricos.
 

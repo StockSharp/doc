@@ -1,4 +1,4 @@
-# Break points
+# Pontos de interrupção
 
 Para adicionar um breakpoint, selecione o cubo e clique no botão ![Designer Debug 01](../../../../images/designer_debug_01.png)**Add Breakpoint**. Os breakpoints são assinalados com um círculo vermelho:
 

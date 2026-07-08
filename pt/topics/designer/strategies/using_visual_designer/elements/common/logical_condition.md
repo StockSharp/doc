@@ -1,4 +1,4 @@
-# Logical Condition
+# Condição lógica
 
 ![Designer The logical condition 00](../../../../../../images/designer_logical_condition_00.png)
 
@@ -19,4 +19,4 @@ Este elemento é usado para calcular uma fórmula lógica com dois argumentos.
 
 ## Ver também
 
-[Formula](formula.md)
+[Fórmula](formula.md)

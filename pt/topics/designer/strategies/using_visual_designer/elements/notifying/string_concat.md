@@ -1,4 +1,4 @@
-# String concat
+# Concatenação de strings
 
 ![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
 
@@ -37,6 +37,6 @@ Parâmetros
 
 ## Conteúdo recomendado
 
-[String format](string_format.md)
-[Notification](notification.md)
+[Formatação de strings](string_format.md)
+[Notificação](notification.md)
 

@@ -18,7 +18,7 @@ Parâmetros
 - **Ignore errors** - a flag definida indica que os erros serão ignorados ao calcular o índice.
 - **Calculate extended information** - a flag definida indica que, ao calcular o índice, além da informação básica (Volume total, Preço de abertura, Preço de fecho, Preço máximo, Preço mínimo), será calculada a informação alargada (Volume financeiro total das transações, Volume de abertura, Volume de fecho, Volume máximo, Volume mínimo).
 
-As fórmulas matemáticas disponíveis são semelhantes às do cubo [Formula](../common/formula.md).
+As fórmulas matemáticas disponíveis são semelhantes às do cubo [Fórmula](../common/formula.md).
 
 ## Conteúdo recomendado
 

@@ -1,4 +1,4 @@
-# Orders
+# Ordens
 
 O componente **Orders** é uma tabela de ordens que apresenta informações completas sobre todas as ordens da estratégia.
 
@@ -6,4 +6,4 @@ O componente **Orders** é uma tabela de ordens que apresenta informações comp
 
 ## Conteúdo recomendado
 
-[Trades](trades.md)
+[Negócios](trades.md)

@@ -1,4 +1,4 @@
-# Grouped order book
+# Livro de ofertas agrupado
 
 ![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
@@ -20,4 +20,4 @@ O cubo é usado para obter um livro de ordens agrupado.
 
 ## Conteúdo recomendado
 
-[Sparse order book](sparse_order_book.md)
+[Livro de ofertas esparso](sparse_order_book.md)

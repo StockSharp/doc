@@ -1,4 +1,4 @@
-# Option desk
+# Mesa de opções
 
 ![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
 
@@ -18,4 +18,4 @@ Sockets de entrada
 
 ## Conteúdo recomendado
 
-[Chart positions](chart_positions.md)
+[Gráfico de posições](chart_positions.md)

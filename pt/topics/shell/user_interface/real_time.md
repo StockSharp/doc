@@ -1,4 +1,4 @@
-# Real-time
+# Tempo real
 
 O separador **Real-time** permite-lhe gerir estratégias iniciadas em negociação.
 
@@ -10,4 +10,4 @@ No separador **Strategies**, pode eliminar, iniciar, parar e configurar estraté
 
 ## Conteúdo recomendado
 
-[Common](common.md)
+[Comum](common.md)

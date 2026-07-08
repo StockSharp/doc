@@ -6,10 +6,10 @@ Durante testes ou negociação, surge a necessidade de controlar totalmente o pr
 
 - [Gráfico](components/chart.md) - representa um gráfico de velas e/ou indicadores. Contém todos os cubos [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md) presentes na estratégia.
 - [P/L](components/pnl_equity.md) - representa um gráfico de Profit/Loss (não realizado), Profit/Loss (realizado) e comissões.
-- [Trades](components/trades.md) - representa uma tabela com negociações, apresentando informação completa sobre todas as negociações da estratégia.
-- [Orders](components/orders.md) - representa uma tabela com ordens, apresentando informação completa sobre todas as ordens da estratégia.
-- [Positions](components/positions.md) - representa uma tabela de posições dos instrumentos da estratégia.
-- [Statistics](components/statistics.md) - representa uma tabela, agrupada por categorias: P/L, Trades, Positions, Orders. Contém dados sobre o desempenho da estratégia.
+- [Negócios](components/trades.md) - representa uma tabela com negociações, apresentando informação completa sobre todas as negociações da estratégia.
+- [Ordens](components/orders.md) - representa uma tabela com ordens, apresentando informação completa sobre todas as ordens da estratégia.
+- [Posições](components/positions.md) - representa uma tabela de posições dos instrumentos da estratégia.
+- [Estatísticas](components/statistics.md) - representa uma tabela, agrupada por categorias: P/L, Trades, Positions, Orders. Contém dados sobre o desempenho da estratégia.
 - [Trade Tape](components/tick_trades.md) - representa uma tabela com negociações, apresentando informação completa sobre todas as negociações dos instrumentos seleccionados.
 - [Position Chart](components/positions.md) - representa um gráfico de posições.
 - Properties - representa uma tabela de [Propriedades de teste](components/backtesting_settings.md) ou uma tabela de [Propriedades de negociação em tempo real](components/live_settings.md).

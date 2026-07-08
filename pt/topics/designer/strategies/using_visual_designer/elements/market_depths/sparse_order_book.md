@@ -1,4 +1,4 @@
-# Sparse order book
+# Livro de ofertas esparso
 
 ![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
@@ -20,4 +20,4 @@ O cubo é usado para obter um livro de ordens esparso para o instrumento especif
 
 ## Conteúdo recomendado
 
-[IV book](../options/iv_book.md)
+[Livro de IV](../options/iv_book.md)

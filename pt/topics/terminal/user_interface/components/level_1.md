@@ -8,5 +8,5 @@ O **Level 1** tem um filtro para selecionar os instrumentos necessários. També
 
 ## Conteúdo recomendado
 
-[Buy\/Sell](buy_sell.md)
+[Compra/Venda](buy_sell.md)
 
