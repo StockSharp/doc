@@ -31,17 +31,17 @@ Der Mechanismus zur Orderverwaltung ist eng mit Komponenten zur Entwicklung von 
 
 ## Siehe auch
 
-[Create a New Order](orders_management/create_new_order.md)
+[Neue Order erstellen](orders_management/create_new_order.md)
 
-[Create a New Stop Order](orders_management/create_new_stop_order.md)
+[Neue Stop-Order erstellen](orders_management/create_new_stop_order.md)
 
-[Order States](orders_management/orders_states.md)
+[Orderzustände](orders_management/orders_states.md)
 
-[Order Cancellation](orders_management/order_cancel.md)
+[Order stornieren](orders_management/order_cancel.md)
 
-[Bulk Order Cancellation](orders_management/orders_mass_cancel.md)
+[Massenstornierung von Orders](orders_management/orders_mass_cancel.md)
 
-[Order Replacement](orders_management/orders_replacement.md)
+[Orders ersetzen](orders_management/orders_replacement.md)
 
 [Transaktionsnummer](orders_management/transaction_number.md)
 

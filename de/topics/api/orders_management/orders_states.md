@@ -165,7 +165,7 @@ Um den Status einer Order zu verfolgen, müssen Sie die entsprechenden Ereigniss
 ## Siehe auch
 
 - [Abonnements](../market_data/subscriptions.md)
-- [Order States](orders_states.md)
-- [Creating a New Order](create_new_order.md)
-- [Canceling Orders](order_cancel.md)
+- [Orderzustände](orders_states.md)
+- [Neue Order erstellen](create_new_order.md)
+- [Order stornieren](order_cancel.md)
 
