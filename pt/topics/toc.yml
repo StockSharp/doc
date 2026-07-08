@@ -1982,7 +1982,7 @@
         href: api/indicators/list_of_indicators/vortex_indicator.md
       - name: WTO
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
-      - name: Weighted Close Price
+      - name: Preço de Fechamento Ponderado
         href: api/indicators/list_of_indicators/weighted_close_price.md
       - name: Weighted MA
         href: api/indicators/list_of_indicators/weighted_ma.md
