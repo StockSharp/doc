@@ -33,6 +33,6 @@ Bear Power 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.
 
 ## 另请参阅
 
-[牛势力量](bull_power.md)
-[老年射线](elder_ray.md)
+[多头力量](bull_power.md)
+[埃尔德射线指数](elder_ray.md)
 [指数移动平均线](ema.md)

@@ -79,7 +79,7 @@ mdGenerator.MaxBidsDepth = 1;
 mdGenerator.UseTradeVolume = true;
 ```
 
-- 音量范围 ([MarketDataGenerator.MinVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MinVolume) 和 [MarketDataGenerator.MaxVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume))：
+- 成交量范围 ([MarketDataGenerator.MinVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MinVolume) 和 [MarketDataGenerator.MaxVolume](xref:StockSharp.Algo.Testing.MarketDataGenerator.MaxVolume))：
 
 ```cs
 mdGenerator.MinVolume = 1;

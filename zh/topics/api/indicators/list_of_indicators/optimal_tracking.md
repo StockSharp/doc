@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[短吻鳄](alligator.md)
+[鳄鱼](alligator.md)

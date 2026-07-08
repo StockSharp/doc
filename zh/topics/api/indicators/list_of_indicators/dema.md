@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[信封](envelope.md)
+[包络线](envelope.md)

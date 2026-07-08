@@ -9,7 +9,7 @@ ClusterChart - 是一种特殊类型的图表，用于以柱状图的形式显�
 - [ChartCandleElement.ClusterLineColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterLineColor) - 基本群集线颜色。
 - [ChartCandleElement.ClusterTextColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterTextColor) - 图表上的成交量数值颜色。
 - [ChartCandleElement.ClusterColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterColor) - 聚类直方图中主要条形的颜色。
-- [ChartCandleElement.ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) - 集群直方图中最大音量条的颜色。
+- [ChartCandleElement.ClusterMaxColor](xref:StockSharp.Xaml.Charting.ChartCandleElement.ClusterMaxColor) - 集群直方图中最大成交量条的颜色。
 
 使用这种类型图表的一个例子是在 *Samples/Common/SampleChart*。
 

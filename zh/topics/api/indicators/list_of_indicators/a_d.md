@@ -25,4 +25,4 @@ AO — [超级振荡器](ao.md)指标.
 
 ## 另请参阅
 
-[短吻鳄](alligator.md)
+[鳄鱼](alligator.md)

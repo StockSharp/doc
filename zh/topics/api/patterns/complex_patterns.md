@@ -155,7 +155,7 @@ if (provider.TryFind("My Pattern", out var found))
 | `H` | 高价 |
 | `L` | 低价 |
 | `C` | 收盘价 |
-| `V` | 音量 |
+| `V` | 成交量 |
 | `B` | K线本体 |
 | `LEN` | K线长度 |
 | `BS` | 底部阴影 |

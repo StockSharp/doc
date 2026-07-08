@@ -77,7 +77,7 @@
 - [KC](list_of_indicators/keltner_channels.md) - Keltner通道指标，根据波动性定义交易区间
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - 克林格成交量振荡器，用于衡量成交量趋势
 - [KST](list_of_indicators/kst.md) - 确定趋势指标，一种动量振荡器
-- [LRSI](list_of_indicators/laguerre_rsi.md) - 拉格朗日RSI，一种经过改良、滞后性较低的RSI
+- [LRSI](list_of_indicators/laguerre_rsi.md) - 拉盖尔 RSI，一种经过改良、滞后性较低的 RSI
 - [LRC](list_of_indicators/lrc.md) - 线性回归，根据过去的趋势预测未来价格
 - [LRF](list_of_indicators/linear_regression_forecast.md) - 线性回归预测，预测未来价格
 - [R平方](list_of_indicators/linear_reg_rsquared.md) - 线性回归 R平方，衡量线性关系的强度

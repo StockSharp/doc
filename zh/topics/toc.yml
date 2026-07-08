@@ -1820,7 +1820,7 @@
         href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
       - name: 确定信号 (KST)
         href: api/indicators/list_of_indicators/kst.md
-      - name: 拉格朗日 RSI (LRSI)
+      - name: 拉盖尔 RSI (LRSI)
         href: api/indicators/list_of_indicators/laguerre_rsi.md
       - name: 线性回归 (LRC)
         href: api/indicators/list_of_indicators/lrc.md
