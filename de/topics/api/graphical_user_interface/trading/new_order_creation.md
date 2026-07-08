@@ -1,6 +1,6 @@
 # Erstellen einer neuen Order
 
-[OrderWindow](xref:StockSharp.Xaml.OrderWindow) - Fenster zum Erstellen einer Order. 
+[OrderWindow](xref:StockSharp.Xaml.OrderWindow) - Fenster zum Erstellen einer Order.
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
@@ -31,6 +31,6 @@ private void NewOrderClick(object sender, RoutedEventArgs e)
 	if (wnd.ShowModal(this))
 		_connector.RegisterOrder(wnd.Order);
 }
-						
-	  				
+
+
 ```

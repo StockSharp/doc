@@ -32,7 +32,7 @@ Der Ansatz zur Arbeit mit dem gefilterten Orderbuch verwendet dieselbe Methode w
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
-    
+
     // oder so
     //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```

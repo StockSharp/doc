@@ -18,21 +18,21 @@ Nachfolgend wird das Beispiel SampleOptionQuoting gezeigt, in dem dieses Diagram
            xmlns:xaml="http://schemas.stocksharp.com/xaml"
            Title="{x:Static loc:LocalizedStrings.XamlStr396}" Height="400" Width="1030">
        <Grid Margin="5,5,5,5">
-       
+
    	    .........................................................
-   	    
+
    	    <xaml:OptionPositionChart x:Name="PosChart" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" />
    	</Grid>
    </Window>
-   				
+
    ```
 
 2. Erstellen Sie im C#-Code eine Verbindung und abonnieren Sie die erforderlichen Ereignisse.
 
    ```cs
-   ...                 
+   ...
    public readonly Connector Connector = new Connector();
-   ...                 
+   ...
    // Ereignis für erfolgreiche Verbindung abonnieren
    Connector.Connected += () =>
    {
@@ -95,8 +95,8 @@ Nachfolgend wird das Beispiel SampleOptionQuoting gezeigt, in dem dieses Diagram
 
 3. Legen Sie beim Verbinden die anfänglichen Einstellungen des Steuerelements fest:
 
-   1. Zurücksetzen des Modells des Steuerelements [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model); 
-   2. Neuzeichnen des Diagramms mit den Anfangswerten [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**; 
+   1. Zurücksetzen des Modells des Steuerelements [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model);
+   2. Neuzeichnen des Diagramms mit den Anfangswerten [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**;
    3. Angeben des Nachrichtenproviders für Marktdaten und Instrumente.
 
    ```cs

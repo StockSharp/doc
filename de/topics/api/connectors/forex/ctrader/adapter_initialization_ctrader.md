@@ -11,7 +11,7 @@ var messageAdapter = new cTraderMessageAdapter(Connector.TransactionIdGenerator)
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...
-							
+
 ```
 
 ## Empfohlene Inhalte

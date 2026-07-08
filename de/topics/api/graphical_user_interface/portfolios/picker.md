@@ -4,4 +4,4 @@
 
 **Wichtigste Eigenschaften und Verwendung**
 
-Siehe [Dropdown-Liste](drop_down_list.md). 
+Siehe [Dropdown-Liste](drop_down_list.md).

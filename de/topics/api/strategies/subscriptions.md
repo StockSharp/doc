@@ -14,21 +14,21 @@ In der Methode [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Abonnement für 5-Minuten-Kerzen direkt über DataType erstellen
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
-	
+
 	// Wenn zusätzliche Parameter erforderlich sind, können Sie das Abonnement konfigurieren
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
-	
+
 	// Regel zur Verarbeitung eingehender Kerzen erstellen
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
-	
+
 	// Abonnement starten
 	Connector.Subscribe(subscription);
 }
@@ -67,7 +67,7 @@ private void CheckRefreshOnlineState()
 		nowOnline = _subscriptions.CachedKeys
 			.Where(s => !s.SubscriptionMessage.IsHistoryOnly())
 			.All(s => s.State == SubscriptionStates.Online);
-	
+
 	// IsOnline-Zustand der Strategie aktualisieren
 	IsOnline = nowOnline;
 }

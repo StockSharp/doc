@@ -40,7 +40,7 @@ In dieser Formel wird jeder Preis anhand seiner Position in der Zeitreihe gewich
 
 - **Indikator-Extreme**: Wenn CGO Extreme (Höchst- oder Tiefstwerte) erreicht, kann dies auf eine mögliche Trendumkehr hinweisen.
 
-- **Abweichungen**: 
+- **Abweichungen**:
   - Bullische Divergenz: Wenn der Preis ein neues Tief bildet, CGO dies jedoch nicht bestätigt und ein höheres Tief bildet.
   - Bärische Divergenz: Wenn der Preis ein neues Hoch erreicht, CGO jedoch ein niedrigeres Hoch bildet.
 

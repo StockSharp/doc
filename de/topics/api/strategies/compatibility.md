@@ -79,10 +79,10 @@ Statt direkt auf Elemente der Benutzeroberfläche zuzugreifen, verwenden Sie die
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Den von der Laufzeitumgebung bereitgestellten Chart abrufen
 	_chart = GetChart();
-	
+
 	if (_chart != null)
 	{
 		// Chart ist verfügbar (z. B. in Designer oder Shell)
@@ -122,7 +122,7 @@ Prüfen Sie immer die Chartverfügbarkeit, bevor Sie den Chart verwenden:
 private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
 {
 	if (_chart == null) return; // Wichtige Prüfung
-	
+
 	var data = _chart.CreateData();
 	data.Group(candle.OpenTime)
 		.Add(_chartCandleElement, candle)
@@ -146,7 +146,7 @@ private void ProcessCandle(ICandleMessage candle)
 	var longSmaIsFormedPrev = _longSma.IsFormed;
 	var ls = _longSma.Process(candle);
 	var ss = _shortSma.Process(candle);
-	
+
 	// ...
 }
 
@@ -206,13 +206,13 @@ protected override void OnStopped()
 {
 	// Nicht so vorgehen
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
-	
+
 	// oder so
 	using (var connection = new SqlConnection("..."))
 	{
 		// ...
 	}
-	
+
 	base.OnStopped();
 }
 ```
@@ -233,7 +233,7 @@ Die Methoden [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.
 public override void Save(SettingsStorage settings)
 {
 	base.Save(settings); // Zuerst Strategieparameter speichern
-	
+
 	// Dann benutzerdefinierte Daten speichern
 	settings.SetValue("CustomState", _customState);
 	settings.SetValue("LastSignalTime", _lastSignalTime);
@@ -242,11 +242,11 @@ public override void Save(SettingsStorage settings)
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings); // Zuerst Strategieparameter laden
-	
+
 	// Dann benutzerdefinierte Daten laden
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");
-	
+
 	if (settings.Contains("LastSignalTime"))
 		_lastSignalTime = settings.GetValue<DateTimeOffset>("LastSignalTime");
 }
@@ -270,7 +270,7 @@ protected override void OnStarted2(DateTime time)
 
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	var subscription = new Subscription(Series, Security);
 
 	// Korrekt: Regeln für die Datenverarbeitung verwenden
@@ -350,11 +350,11 @@ public class SmaStrategy : Strategy
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetDisplay("Long SMA length", string.Empty, "Base settings")
 							.SetCanOptimize(true);
-							
+
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetDisplay("Short SMA length", string.Empty, "Base settings")
 							.SetCanOptimize(true);
-							
+
 		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Series", string.Empty, "Base settings");
 	}
@@ -368,12 +368,12 @@ public class SmaStrategy : Strategy
 
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
-		
+
 		// Chart initialisieren, falls verfügbar
 		_chart = GetChart();
 		if (_chart != null)
 			InitChart();
-		
+
 		var subscription = new Subscription(Series, Security);
 
 		Connector
@@ -388,13 +388,13 @@ public class SmaStrategy : Strategy
 	{
 		_chart.ClearAreas();
 		var area = _chart.AddArea();
-		
+
 		_chartCandleElement = area.AddCandles();
-		
+
 		_longSmaIndicatorElement = area.AddIndicator(_longSma);
 		_longSmaIndicatorElement.Color = System.Drawing.Color.Brown;
 		_longSmaIndicatorElement.DrawStyle = DrawStyles.Line;
-		
+
 		_shortSmaIndicatorElement = area.AddIndicator(_shortSma);
 		_shortSmaIndicatorElement.Color = System.Drawing.Color.Blue;
 		_shortSmaIndicatorElement.DrawStyle = DrawStyles.Line;
@@ -404,7 +404,7 @@ public class SmaStrategy : Strategy
 	{
 		var ls = _longSma.Process(candle);
 		var ss = _shortSma.Process(candle);
-		
+
 		// Im Chart zeichnen, falls verfügbar
 		if (_chart != null)
 		{
@@ -415,16 +415,16 @@ public class SmaStrategy : Strategy
 				.Add(_shortSmaIndicatorElement, ss);
 			_chart.Draw(data);
 		}
-		
+
 		if (!_longSma.IsFormed)
 			return;
-			
+
 		var isShortLessCurrent = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
 		if (isShortLessCurrent == isShortLessPrev)
 			return;
-			
+
 		// Handelslogik
 		var volume = Volume + Math.Abs(Position);
 

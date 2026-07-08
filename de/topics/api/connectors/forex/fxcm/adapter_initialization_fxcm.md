@@ -3,8 +3,8 @@
 Der folgende Code zeigt, wie der [FxcmMessageAdapter](xref:StockSharp.Fxcm.FxcmMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var messageAdapter = new FxcmMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Login = "<Your Login>",
@@ -13,8 +13,8 @@ var messageAdapter = new FxcmMessageAdapter(Connector.TransactionIdGenerator)
 	IsDemo = true
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

@@ -9,7 +9,7 @@ Das Hinzufügen von Annotationen erfolgt genauso wie das Hinzufügen anderer Inf
 ```cs
 var _annotation = new ChartAnnotation { Type = ChartAnnotationTypes.BoxAnnotation };
 Chart.AddElement(chartArea, _annotation);
-		
+
 ```
 
 Danach müssen Sie eine neue Instanz der Klasse [AnnotationData](xref:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData) initialisieren, in der die Annotation beschrieben wird, und sie zum Zeichnen an die Methode [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData))**(**[StockSharp.Charting.IChartDrawData](xref:StockSharp.Charting.IChartDrawData) data **)** übergeben:
@@ -34,5 +34,5 @@ var data = new ChartDrawData.AnnotationData
 var drawData = new ChartDrawData();
 drawData.Add(_annotation, data);
 Chart.Draw(drawData);
-		
+
 ```

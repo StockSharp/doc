@@ -34,7 +34,7 @@ Die Harmonic Oscillator-Berechnung umfasst die folgenden Schritte:
    ```
    Spectral Components = FFT(Detrended Price)
    ```
-   
+
 3. Extrahieren der wichtigsten harmonischen Komponenten:
    ```
    Dominant Cycles = Extract Top N Spectral Components based on amplitude

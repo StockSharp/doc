@@ -42,10 +42,10 @@ private void InitConnector()
 {
 	// Ereignis für Orderempfang abonnieren
 	Connector.OrderReceived += OnOrderReceived;
-	
+
 	// Ereignis für Empfang eigener Trades abonnieren
 	Connector.OwnTradeReceived += OnOwnTradeReceived;
-	
+
 	// Ereignis für Fehler bei der Orderregistrierung abonnieren
 	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
@@ -54,7 +54,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 {
 	// Empfangene Order verarbeiten
 	_ordersWindow.OrderGrid.Orders.TryAdd(order);
-	
+
 	// Wichtig! Prüfen, ob die Order zum aktuellen Abonnement gehört,
 	// um doppelte Verarbeitung zu vermeiden
 	if (subscription == _myOrdersSubscription)
@@ -125,13 +125,13 @@ private void RequestOrdersForDifferentPortfolios()
 {
 	// Abonnement für Orders des ersten Portfolios
 	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
-	
+
 	// Abonnement für Orders des zweiten Portfolios
 	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
-	
+
 	// Gemeinsamer Handler für den Empfang von Orders
 	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
-	
+
 	// Abonnements starten
 	Connector.Subscribe(_portfolio1OrdersSubscription);
 	Connector.Subscribe(_portfolio2OrdersSubscription);

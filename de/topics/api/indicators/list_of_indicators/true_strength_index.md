@@ -8,7 +8,7 @@ Verwenden Sie die Klasse [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.Tru
 
 1. Berechnen Sie die Kursänderung `m = Close - PreviousClose`.
 2. Wenden Sie zwei exponentielle gleitende Durchschnitte mit den Perioden `Length1` und `Length2` sowohl auf `m` als auch auf `|m|` an.
-3. Berechnen Sie das Verhältnis des doppelt geglätteten Momentums zum doppelt geglätteten absoluten Momentum:  
+3. Berechnen Sie das Verhältnis des doppelt geglätteten Momentums zum doppelt geglätteten absoluten Momentum:
    `TSI = 100 * EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`.
 4. Optional kann eine Signallinie als EMA des TSI mit der Periode **Signal** abgeleitet werden.
 

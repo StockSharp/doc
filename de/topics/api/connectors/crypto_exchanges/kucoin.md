@@ -2,7 +2,7 @@
 
 **KuCoin** - Kryptowährungsbörse.
 
-Bevor Sie mit der Entwicklung von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Konnektoren](../../connectors.md) zu lesen. 
+Bevor Sie mit der Entwicklung von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Konnektoren](../../connectors.md) zu lesen.
 
 ## Empfohlene Inhalte
 

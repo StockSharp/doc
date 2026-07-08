@@ -4,13 +4,13 @@ Der **Momentum**-Indikator misst das Ausmaß der Preisänderung eines Finanzinst
 
 Um den Indikator zu verwenden, sollte die Klasse [Momentum](xref:StockSharp.Algo.Indicators.Momentum) verwendet werden.
 ##### Berechnung
-  
+
 Momentum ist definiert als das Verhältnis des heutigen Preises zum Preis vor n Perioden:
- 
-MOMENTUM = CLOSE(i) / CLOSE(i - n) * 100  
+
+MOMENTUM = CLOSE(i) / CLOSE(i - n) * 100
 
 Dabei gilt:
-CLOSE(i) – der Schlusskurs des aktuellen Balkens;  
+CLOSE(i) – der Schlusskurs des aktuellen Balkens;
 CLOSE(i - n) – der Schlusskurs von n Balken zurück.
 
 

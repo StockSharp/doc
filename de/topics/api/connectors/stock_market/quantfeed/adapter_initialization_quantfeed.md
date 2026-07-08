@@ -3,8 +3,8 @@
 Der folgende Code zeigt, wie der [QuantFeedMessageAdapter](xref:StockSharp.QuantHouse.QuantFeedMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var messageAdapter = new QuantFeedMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Login = "<Your Login>",
@@ -12,8 +12,8 @@ var messageAdapter = new QuantFeedMessageAdapter(Connector.TransactionIdGenerato
 	Address = "<Address>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

@@ -32,7 +32,7 @@ Die ALMA-Berechnung erfolgt in mehreren Schritten:
    ```
    m = floor(Offset * (Length - 1))
    s = Length / Sigma
-   
+
    For each i from 0 to Length-1:
    w(i) = exp(-((i - m)^2) / (2 * s^2))
    ```
@@ -40,7 +40,7 @@ Die ALMA-Berechnung erfolgt in mehreren Schritten:
 2. Normalisierung der Gewichte:
    ```
    Sum_of_weights = sum of all w(i)
-   
+
    For each i from 0 to Length-1:
    w_norm(i) = w(i) / Sum_of_weights
    ```

@@ -93,8 +93,8 @@ Für Optionsquoting ist eine spezielle Strategie [VolatilityQuotingStrategy](xre
    	}
    	else
    		Connector.Disconnect();
-   }            		
-   	  				
+   }
+
    ```
 
 3. Konfigurieren Sie die Strategie [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy): Befüllen des Volatilitätsbereichs sowie Erstellen der Order, über die das erforderliche Volumen und die Quoting-Richtung angegeben werden:

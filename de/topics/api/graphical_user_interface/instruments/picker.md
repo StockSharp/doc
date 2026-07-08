@@ -42,7 +42,7 @@ Unten sehen Sie ein Codefragment zur Verwendung, entnommen aus dem Beispiel *Sam
 		<xaml:SecurityPicker x:Name="SecurityPicker" x:FieldModifier="public" SecuritySelected="SecurityPicker_OnSecuritySelected" ShowCommonStatColumns="True" />
 	</Grid>
 </Window>
-	  	
+
 ```
 ```cs
 private void ConnectClick(object sender, RoutedEventArgs e)

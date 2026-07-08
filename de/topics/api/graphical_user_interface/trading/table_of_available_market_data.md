@@ -1,10 +1,10 @@
 # Tabelle verfügbarer Marktdaten
 
-[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - eine Tabelle, die verfügbare Marktdaten anzeigt. 
+[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - eine Tabelle, die verfügbare Marktdaten anzeigt.
 
 ![API GUI MarketDataGrid](../../../../images/api_gui_marketdatagrid.png)
 
-Nachfolgend sehen Sie ein Codebeispiel zum Hinzufügen einer [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid)-Tabelle zum Bildschirmformular. 
+Nachfolgend sehen Sie ein Codebeispiel zum Hinzufügen einer [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid)-Tabelle zum Bildschirmformular.
 
 ```xaml
 <Window x:Class="MainWindow"
@@ -30,5 +30,5 @@ Nachfolgend sehen Sie ein Codebeispiel zum Hinzufügen einer [MarketDataGrid](xr
 		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Connect" Click="Connect_Click" />
 	</Grid>
 </Window>
-	  				
+
 ```

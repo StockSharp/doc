@@ -11,8 +11,8 @@ Die Objekte [IConnector](xref:StockSharp.BusinessEntities.IConnector) implementi
    private readonly Connector _connector = new Connector();
    private readonly LogManager _logManager = new LogManager();
    ...
-   				
-   				
+
+
    ```
 2. Danach müssen Sie einen Datei-Logger erstellen und ihn zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) hinzufügen:
 

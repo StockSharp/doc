@@ -27,7 +27,7 @@ In der Abbildung ist die Komponente [SecurityGrid](xref:StockSharp.Xaml.Security
 		<sx:SecurityGrid x:Name="SecurityGrid"/>
 	</Grid>
 </Window>
-	  				
+
 ```
 ```cs
 private readonly Connector _connector = new Connector();
@@ -41,11 +41,11 @@ _connector.SecurityReceived += (sub, security) =>
 private void ColumnsFilter()
 {
 	string[]  columns = { "Board", "BestAsk.Price", "BestAsk.Volume" };
-	
+
 	foreach (var column in SecurityGrid.Columns)
 	{
 		column.Visibility = columns.Contains(column.SortMemberPath) ? Visibility.Visible : Visibility.Collapsed;
 	}
 }
-				
+
 ```

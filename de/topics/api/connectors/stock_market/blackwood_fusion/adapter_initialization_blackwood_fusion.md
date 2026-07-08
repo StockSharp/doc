@@ -3,8 +3,8 @@
 Der folgende Code zeigt, wie der [BlackwoodMessageAdapter](xref:StockSharp.Blackwood.BlackwoodMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var address = "<Address>".To<IPAddress>();
 var messageAdapter = new BlackwoodMessageAdapter(Connector.TransactionIdGenerator)
 {
@@ -15,8 +15,8 @@ var messageAdapter = new BlackwoodMessageAdapter(Connector.TransactionIdGenerato
 	HistoricalDataAddress = new IPEndPoint(address, BlackwoodAddresses.HistoricalDataPort)
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

@@ -115,7 +115,7 @@ order
 	.Do(() => {
 		// Aktionen nach Order-Ausführung
 		LogInfo($"Order {order.TransactionId} executed");
-		
+
 		// Zum Beispiel eine Stop-Order platzieren
 		var stopOrder = SellLimit(price * 0.95, volume);
 	})
@@ -244,7 +244,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// und ob Handel erlaubt ist
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
-	
+
 	// Handelslogik
 	// ...
 }
@@ -258,18 +258,18 @@ Unten sehen Sie ein Beispiel, das verschiedene Möglichkeiten zum Platzieren von
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Kerzen abonnieren
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
-	
+
 	// Regel zur Verarbeitung von Kerzen erstellen
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
-	
+
 	Connector.Subscribe(subscription);
 }
 
@@ -278,13 +278,13 @@ private void ProcessCandle(ICandleMessage candle)
 	// Prüfen, ob die Strategie handelsbereit ist
 	if (!this.IsFormedAndOnlineAndAllowTrading())
 		return;
-	
+
 	// Beispielhafte Handelslogik auf Basis des Schlusskurses
 	if (candle.ClosePrice > _previousClose * 1.01)
 	{
 		// Option 1: Verwendung einer High-Level-Methode
 		var order = BuyLimit(candle.ClosePrice, Volume);
-		
+
 		// Regel zur Verarbeitung der Order-Ausführung erstellen
 		order
 			.WhenMatched(this)
@@ -302,7 +302,7 @@ private void ProcessCandle(ICandleMessage candle)
 		// Option 2: Getrennte Erstellung und Registrierung
 		var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
 		RegisterOrder(order);
-		
+
 		// Alternative Verarbeitung über das Ereignis
 		OrderReceived += (o) => {
 			if (o == order && o.State == OrderStates.Done)
@@ -311,7 +311,7 @@ private void ProcessCandle(ICandleMessage candle)
 			}
 		};
 	}
-	
+
 	_previousClose = candle.ClosePrice;
 }
 ```

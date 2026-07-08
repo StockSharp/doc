@@ -69,7 +69,7 @@ var connector = new HistoryEmulationConnector(
 				// Standardmäßig ist dies deaktiviert; der Preis muss den Limit-Order-Preis durchlaufen
 				// (strengerer Testmodus)
 				MatchOnTouch = false,
-				
+
 				// Kommission für Trades
 				CommissionRules = new ICommissionRule[]
 				{
@@ -106,15 +106,15 @@ connector.SecurityReceived += (subscr, s) =>
 {
 	if (s != security)
 		return;
-		
+
 	// Level1-Werte füllen
 	connector.EmulationAdapter.SendInMessage(level1Info);
-	
+
 	// Erforderliche Daten abhängig von den Testeinstellungen abonnieren
 	if (emulationInfo.UseMarketDepth)
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
-		
+
 		// Wenn Orderbücher generiert werden müssen
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
@@ -133,25 +133,25 @@ connector.SecurityReceived += (subscr, s) =>
 			});
 		}
 	}
-	
+
 	if (emulationInfo.UseOrderLog)
 	{
 		connector.Subscribe(new(DataType.OrderLog, security));
 	}
-	
+
 	if (emulationInfo.UseTicks)
 	{
 		connector.Subscribe(new(DataType.Ticks, security));
 	}
-	
+
 	if (emulationInfo.UseLevel1)
 	{
 		connector.Subscribe(new(DataType.Level1, security));
 	}
-	
+
 	// Strategie starten, bevor die Emulation beginnt
 	strategy.Start();
-	
+
 	// Laden historischer Daten starten
 	connector.Start();
 };
@@ -178,7 +178,7 @@ var strategy = new SmaStrategy
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
-	
+
 	if (strategy.CandleType != TimeSpan.FromMinutes(1).TimeFrame())
 	{
 		strategy.BuildFrom = TimeSpan.FromMinutes(1).TimeFrame();
@@ -294,7 +294,7 @@ _settings = new[]
 		TicksAndDepthsEquity,
 		TicksAndDepthsPosition
 	),
-	
+
 	// andere Kombinationen von Datentypen
 };
 ```

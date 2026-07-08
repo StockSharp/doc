@@ -27,17 +27,17 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	// Weitere Verbindungsaktionen
-	
+
 	// Nachrichtenanbieter setzen
 	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
-	
+
 	// Ereignis für Nachrichtenempfang abonnieren
 	_connector.NewsReceived += OnNewsReceived;
-	
+
 	// Nachrichtenabonnement erstellen
 	var newsSubscription = new Subscription(DataType.News);
 	_connector.Subscribe(newsSubscription);
-	
+
 	// Verbindung herstellen
 	_connector.Connect();
 }
@@ -63,15 +63,15 @@ public void SubscribeToFilteredNews(string source = null, DateTime? from = null)
 		{
 			// Startdatum für historische Nachrichten setzen
 			From = from ?? DateTime.Today.AddDays(-7),
-			
+
 			// Optional Nachrichtenquelle setzen
 			NewsSource = source
 		}
 	};
-	
+
 	// Ereignis für Nachrichtenempfang abonnieren
 	_connector.NewsReceived += OnFilteredNewsReceived;
-	
+
 	// Abonnement starten
 	_connector.Subscribe(newsSubscription);
 }
@@ -80,13 +80,13 @@ public void SubscribeToFilteredNews(string source = null, DateTime? from = null)
 private void OnFilteredNewsReceived(Subscription subscription, News news)
 {
 	// Quellenfilter prüfen
-	if (subscription.MarketData.NewsSource != null && 
+	if (subscription.MarketData.NewsSource != null &&
 		!string.Equals(news.Source, subscription.MarketData.NewsSource, StringComparison.OrdinalIgnoreCase))
 		return;
-		
+
 	// Nachrichten zu NewsGrid hinzufügen
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
-	
+
 	// Nachrichteninformationen ausgeben
 	Console.WriteLine($"News: {news.Headline}");
 	Console.WriteLine($"Source: {news.Source}");
@@ -103,20 +103,20 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 public void FilterNewsByKeywords(IEnumerable<string> keywords)
 {
 	var keywordsList = keywords.ToList();
-	
+
 	// Wenn bereits ein Nachrichtenabonnement besteht,
 	// nur den Handler setzen
 	_connector.NewsReceived += (subscription, news) =>
 	{
 		// Prüfen, ob die Nachrichtenüberschrift eines der Schlüsselwörter enthält
-		bool containsKeyword = keywordsList.Any(keyword => 
+		bool containsKeyword = keywordsList.Any(keyword =>
 			news.Headline.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0);
-			
+
 		if (containsKeyword)
 		{
 			// Nachrichten zu NewsGrid hinzufügen
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
-			
+
 			// Benachrichtigung anzeigen
 			ShowNotification($"New news on topic: {news.Headline}");
 		}

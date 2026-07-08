@@ -29,7 +29,7 @@ Die CMF-Berechnung umfasst die folgenden Schritte:
    ```
    Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
    ```
-   
+
    Wenn (High - Low) = 0, dann ist der Geldfluss Multiplier = 0.
 
 2. Berechnen Sie den Geldfluss Volume für den Zeitraum:

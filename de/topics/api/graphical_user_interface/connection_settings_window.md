@@ -16,7 +16,7 @@ Dieses Fenster sollte über die Erweiterungsmethode [Extensions.Configure](xref:
 				new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 			}
 		}
-	  				
+
 ```
 
 > [!TIP]

@@ -58,9 +58,9 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
-	
+
 	// Hier können Sie das Instrument zu einer Sammlung hinzufügen oder andere Aktionen ausführen
 	Securities.Add(security);
 }
@@ -70,7 +70,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
 }
 
@@ -79,7 +79,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Instrument search error: {error.Message}");
 }
 
@@ -111,63 +111,63 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		SecurityType = securityType,
 		TransactionId = Connector.TransactionIdGenerator.GetNextId()
 	};
-	
+
 	// Abonnement erstellen
 	var subscription = new Subscription(lookupMessage);
-	
+
 	// Sammlung für Suchergebnisse leeren
 	_searchResults.Clear();
-	
+
 	// Temporäre Sammlung zum Sammeln der Ergebnisse
 	var foundSecurities = new List<Security>();
-	
+
 	// Abonnement für den Empfang von Instrumenten
 	void OnSecurityReceived(Subscription sub, Security security)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		// Gefundenes Instrument zur Sammlung hinzufügen
 		foundSecurities.Add(security);
 		Console.WriteLine($"Found: {security.Id}, {security.Name}");
 	}
-	
+
 	// Abonnement für den Abschluss der Suche
 	void OnSubscriptionFinished(Subscription sub)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		// Ergebnisse in die Hauptsammlung kopieren
 		_searchResults.AddRange(foundSecurities);
-		
+
 		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
-		
+
 		// Ereignisse abbestellen
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Behandlung von Abonnementfehlern
 	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		Console.WriteLine($"Instrument search error: {error.Message}");
-		
+
 		// Ereignisse abbestellen
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Ereignisse abonnieren
 	Connector.SecurityReceived += OnSecurityReceived;
 	Connector.SubscriptionFinished += OnSubscriptionFinished;
 	Connector.SubscriptionFailed += OnSubscriptionFailed;
-	
+
 	// Suchanfrage senden
 	Connector.Subscribe(subscription);
 }
@@ -182,13 +182,13 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 {
 	// Suchkriterium aus dem Textfeld abrufen
 	var searchText = SearchTextBox.Text;
-	
+
 	if (string.IsNullOrWhiteSpace(searchText))
 	{
 		MessageBox.Show("Enter a search criterion");
 		return;
 	}
-	
+
 	// Suchabonnement erstellen und senden
 	var lookupMessage = new SecurityLookupMessage
 	{
@@ -196,12 +196,12 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 		// Wenn im Interface ein Typ ausgewählt ist
 		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
 	};
-	
+
 	var subscription = new Subscription(lookupMessage);
-	
+
 	// Hier kann ein Ladeindikator angezeigt werden
 	LoadingIndicator.Visibility = Visibility.Visible;
-	
+
 	// Anfrage senden
 	Connector.Subscribe(subscription);
 }
@@ -219,7 +219,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 		// Möglichkeit zur Suche nach allen Instrumenten angeben
 		// (wenn der Connector diese Funktion unterstützt)
 		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
-		
+
 		// Anfangs-Suchkriterien festlegen
 		CriteriaMessage = new SecurityLookupMessage
 		{
@@ -227,7 +227,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 			SecurityType = SecurityTypes.Stock
 		}
 	};
-	
+
 	// Fenster als modalen Dialog anzeigen
 	if (lookupWindow.ShowModal(this))
 	{

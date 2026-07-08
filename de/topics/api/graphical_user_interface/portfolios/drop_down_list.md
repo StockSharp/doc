@@ -9,7 +9,7 @@
 - [PortfolioComboBox.Portfolios](xref:StockSharp.Xaml.PortfolioComboBox.Portfolios) - Liste der Portfolios.
 - [PortfolioComboBox.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioComboBox.SelectedPortfolio) - das ausgewählte Portfolio.
 
-Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/InteractiveBrokers\/SampleIB*. 
+Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/InteractiveBrokers\/SampleIB*.
 
 ```xaml
 <Window x:Class="SampleAsyncTransactions.MainWindow"
@@ -36,7 +36,7 @@ Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Sam
 		<Button x:Name="ShowSecurities" Grid.Column="1" Grid.Row="2" IsEnabled="False" Content="{x:Static loc:LocalizedStrings.Securities}" Click="ShowSecuritiesClick" />
 	</Grid>
 </Window>
-	  				
+
 ```
 ```cs
 	.............................................
@@ -45,8 +45,8 @@ Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Sam
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	.............................................
-	Portfolios.Portfolios = new PortfolioDataSource(_connector);	
+	Portfolios.Portfolios = new PortfolioDataSource(_connector);
 	.............................................
 }
-	  				
+
 ```

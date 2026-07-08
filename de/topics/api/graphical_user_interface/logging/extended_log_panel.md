@@ -16,7 +16,7 @@ Beispielcode
 		<sx:Monitor x:Name="Monitor" />
 	</Grid>
 </Window>
-				
+
 ```
 ```cs
 // Neue Instanz von LogManager erstellen
@@ -25,5 +25,5 @@ _logManager = new LogManager();
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // Monitor als Loglistener hinzufügen.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));
-					
+
 ```

@@ -6,16 +6,16 @@
 Der folgende Code zeigt, wie der [FatBtcMessageAdapter](xref:StockSharp.FatBTC.FatBtcMessageAdapter) initialisiert und an [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
-			Connector Connector = new Connector();				
-			...				
+			Connector Connector = new Connector();
+			...
 			var messageAdapter = new FatBtcMessageAdapter(Connector.TransactionIdGenerator)
 			{
 				Key = "<Your API Key>".To<SecureString>(),
 				Secret = "<Your API Secret>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
-			...	
-							
+			...
+
 ```
 
 ## Empfohlene Inhalte

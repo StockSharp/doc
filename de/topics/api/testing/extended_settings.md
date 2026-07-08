@@ -69,7 +69,7 @@ mdGenerator.Interval = TimeSpan.FromSeconds(1);
 - Orderbuchtiefe ([MarketDepthGenerator.MaxBidsDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxBidsDepth) und [MarketDepthGenerator.MaxAsksDepth](xref:StockSharp.Algo.Testing.MarketDepthGenerator.MaxAsksDepth)) - je tiefer, desto langsamer der Test:
 
 ```cs
-mdGenerator.MaxAsksDepth = 1; 
+mdGenerator.MaxAsksDepth = 1;
 mdGenerator.MaxBidsDepth = 1;
 ```
 
@@ -175,14 +175,14 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var bestBid = orderBook.GetBestBid();
 	var bestAsk = orderBook.GetBestAsk();
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
-	
+
 	// Empfangene Orderbücher verarbeiten
 	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
-	
+
 	// Preis nach Order-Seite abrufen
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
-	
+
 	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
 }
 ```

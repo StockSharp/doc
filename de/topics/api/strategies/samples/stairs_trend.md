@@ -11,7 +11,7 @@ public class StairsTrendStrategy : Strategy
 {
 	private readonly StrategyParam<int> _lengthParam;
 	private readonly StrategyParam<DataType> _candleType;
-	
+
 	private int _bullLength;
 	private int _bearLength;
 }
@@ -34,14 +34,14 @@ In der Methode [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Zähler zurücksetzen
 	_bullLength = 0;
 	_bearLength = 0;
 
 	// Abonnement erstellen
 	var subscription = SubscribeCandles(CandleType);
-	
+
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
@@ -85,7 +85,7 @@ private void ProcessCandle(ICandleMessage candle)
 		_bearLength++;
 	}
 
-	// Trendstrategie: 
+	// Trendstrategie:
 	// Nach Length aufeinanderfolgenden bullischen Kerzen kaufen
 	if (_bullLength >= Length && Position <= 0)
 	{

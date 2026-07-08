@@ -7,11 +7,11 @@ Verwenden Sie die Klasse [DeMarker](xref:StockSharp.Algo.Indicators.DeMarker), u
 
 ## Berechnung
 
-1. Berechnen Sie für jeden Balken Zwischenwerte:  
-   `DeMax = max(High − PreviousHigh, 0)`  
+1. Berechnen Sie für jeden Balken Zwischenwerte:
+   `DeMax = max(High − PreviousHigh, 0)`
    `DeMin = max(PreviousLow − Low, 0)`
 2. Glätten Sie `DeMax` und `DeMin` mit einem gleitenden Durchschnitt der Länge **Length**.
-3. Berechnen Sie den Endwert:  
+3. Berechnen Sie den Endwert:
    `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`.
 
 Die Ausgabe wird zwischen 0 und 1 normalisiert.

@@ -16,7 +16,7 @@
    private ExpressionIndexSecurity _indexInstr;
    private const string _secCode1 = "AAPL";
    private const string _secCode2 = "MSFT";
-   							
+
    ```
 2. Erstellen Sie [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity):
 
@@ -27,7 +27,7 @@
        Expression = "AAPL@NASDAQ/MSFT@NASDAQ",
        Board = ExchangeBoard.Nasdaq,
    };
-   							
+
    ```
 
 ## Erstellen von WeightedIndexSecurity
@@ -40,19 +40,19 @@
    private WeightedIndexSecurity _indexInstr;
    private const string _secCode1 = "AAPL";
    private const string _secCode2 = "MSFT";
-   							
+
    ```
 2. Erstellen Sie [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity):
 
    ```cs
    _indexInstr = new WeightedIndexSecurity() { Board = ExchangeBoard.Nasdaq, Id = "IndexInstr" };
-   							
+
    ```
 3. Fügen Sie die Komponenteninstrumente hinzu:
 
    ```cs
    _indexInstr.Weights.Add(_instr1.ToSecurityId(), 1);
    _indexInstr.Weights.Add(_instr2.ToSecurityId(), -1);
-   							
+
    ```
 

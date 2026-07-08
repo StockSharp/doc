@@ -28,9 +28,9 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 			return usercontrol;
 		}
 		#endregion
-	...	
+	...
 	}
-		
+
 ```
 
 Außerdem müssen die Panels selbst erstellt werden. Wie Sie ein eigenes Testing- oder Monitoring-Panel erstellen, ist unter [Strategiepanel erstellen](create_strategy_panel.md) beschrieben.
@@ -52,8 +52,8 @@ Damit die erstellte Strategie im Strategieauswahlfenster verfügbar ist, muss si
 		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
 	};
 	//---------------------------------------------------------------------
-	...	
-		
+	...
+
 ```
 
 Damit die Strategie gespeichert und anschließend geladen werden kann, müssen Sie den Strategieparameter im Konstruktor der Strategie setzen.
@@ -68,9 +68,9 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 			this.Param("TypeId", GetType().GUID);
 			...
 		}
-	...	
+	...
 	}
-		
+
 ```
 
 Um zusätzliche Felder zu speichern, müssen Sie die Methoden **Load** und **Save** überschreiben.
@@ -112,9 +112,9 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 				storage.SetValue(nameof(Series.Arg), Series.Arg);
 		}
 		#endregion
-	...	
+	...
 	}
-		
+
 ```
 
 ## Empfohlene Inhalte

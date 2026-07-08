@@ -29,35 +29,35 @@ public class TradesWindow
 	private readonly Connector _connector;
 	private readonly Security _security;
 	private Subscription _tickSubscription;
-	
+
 	public TradesWindow(Connector connector, Security security)
 	{
 		InitializeComponent();
-		
+
 		_connector = connector;
 		_security = security;
-		
+
 		// Empfangsereignis für Tick-Trades abonnieren
 		_connector.TickTradeReceived += OnTickReceived;
-		
+
 		// Subscription auf Tick-Trades erstellen
 		_tickSubscription = new Subscription(DataType.Ticks, security);
-		
+
 		// Subscription starten
 		_connector.Subscribe(_tickSubscription);
 	}
-	
+
 	// Handler für das Empfangsereignis von Tick-Trades
 	private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 	{
 		// Prüfen, ob der Trade zu unserer Subscription gehört
 		if (subscription != _tickSubscription)
 			return;
-			
+
 		// Trade im UI-Thread zu TradeGrid hinzufügen
 		this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	}
-	
+
 	// Methode zum Abbestellen beim Schließen des Fensters
 	public void Unsubscribe()
 	{
@@ -77,23 +77,23 @@ public class TradesWindow
 public class MyTradesWindow
 {
 	private readonly Connector _connector;
-	
+
 	public MyTradesWindow(Connector connector)
 	{
 		InitializeComponent();
-		
+
 		_connector = connector;
-		
+
 		// Empfangsereignis für eigene Trades abonnieren
 		_connector.OwnTradeReceived += OnOwnTradeReceived;
-		
+
 		// Subscription auf Transaktionsdaten erstellen
 		var myTradesSubscription = new Subscription(DataType.Transactions, null);
-		
+
 		// Subscription starten
 		_connector.Subscribe(myTradesSubscription);
 	}
-	
+
 	// Handler für das Empfangsereignis eigener Trades
 	private void OnOwnTradeReceived(Subscription subscription, MyTrade myTrade)
 	{
@@ -111,7 +111,7 @@ public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 {
 	// Aktuelle Trades löschen
 	TradeGrid.Trades.Clear();
-	
+
 	// Subscription auf historische Tick-Trades erstellen
 	var historySubscription = new Subscription(DataType.Ticks, security)
 	{
@@ -122,10 +122,10 @@ public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 			To = to
 		}
 	};
-	
+
 	// Empfangsereignis für Tick-Trades abonnieren
 	_connector.TickTradeReceived += OnHistoricalTickReceived;
-	
+
 	// Subscription starten
 	_connector.Subscribe(historySubscription);
 }
@@ -134,10 +134,10 @@ public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 private void OnHistoricalTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// Tick im UI-Thread zu TradeGrid hinzufügen
-	this.GuiAsync(() => 
+	this.GuiAsync(() =>
 	{
 		TradeGrid.Trades.Add(tick);
-		
+
 		// Statistik aktualisieren
 		UpdateTradeStatistics();
 	});
@@ -148,10 +148,10 @@ private void UpdateTradeStatistics()
 {
 	int totalTrades = TradeGrid.Trades.Count;
 	decimal totalVolume = TradeGrid.Trades.Sum(t => t.Volume);
-	decimal averagePrice = TradeGrid.Trades.Any() 
+	decimal averagePrice = TradeGrid.Trades.Any()
 		? TradeGrid.Trades.Average(t => t.Price)
 		: 0;
-	
+
 	// Statistikelemente der Oberfläche aktualisieren
 	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
 	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
@@ -167,7 +167,7 @@ public void FilterTicksByVolume(decimal minVolume)
 {
 	// Filterwert speichern
 	_minVolumeFilter = minVolume;
-	
+
 	// Handler für das Empfangsereignis von Tick-Trades aktualisieren
 	_connector.TickTradeReceived -= OnTickReceived;
 	_connector.TickTradeReceived += OnFilteredTickReceived;
@@ -179,14 +179,14 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 	// Prüfen, ob der Trade zum ausgewählten Instrument gehört
 	if (tick.SecurityId != _security.ToSecurityId())
 		return;
-		
+
 	// Volumenfilter anwenden
 	if (tick.Volume < _minVolumeFilter)
 		return;
-		
+
 	// Trade im UI-Thread zu TradeGrid hinzufügen
 	this.GuiAsync(() => TradeGrid.Trades.Add(tick));
-	
+
 	// Bei einem großen Trade kann er hervorgehoben oder eine Benachrichtigung gesendet werden
 	if (tick.Volume >= _largeVolumeThreshold)
 	{
@@ -199,9 +199,9 @@ private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
 	// Informationen über den großen Trade ausgeben
 	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
-	
+
 	// Akustische oder visuelle Benachrichtigung hinzufügen
-	this.GuiAsync(() => 
+	this.GuiAsync(() =>
 	{
 		// Beispiel für visuelle Hervorhebung in der Liste
 		var tradeItem = TradeGrid.Trades.LastOrDefault();

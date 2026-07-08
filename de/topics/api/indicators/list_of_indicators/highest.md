@@ -1,4 +1,4 @@
-# Highest 
+# Highest
 
 Der Indikator zeigt den **Maximum value for the period** an.
 

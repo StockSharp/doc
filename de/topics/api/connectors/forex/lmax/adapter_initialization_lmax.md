@@ -3,8 +3,8 @@
 Der folgende Code zeigt, wie der [LmaxMessageAdapter](xref:StockSharp.LMAX.LmaxMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var messageAdapter = new LmaxMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Login = "<Your Login>",
@@ -12,8 +12,8 @@ var messageAdapter = new LmaxMessageAdapter(Connector.TransactionIdGenerator)
 	IsDemo = true
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

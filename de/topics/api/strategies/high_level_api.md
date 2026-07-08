@@ -61,7 +61,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 	{
 		// Für Indikatoren, die boolesche Werte zurückgeben
 		var boolValue = value.GetValue<bool>();
-		
+
 		// Oder andere Datentypen, die für einen bestimmten Indikator spezifisch sind
 		// ...
 	}
@@ -80,10 +80,10 @@ Für komplexe Indikatoren, die mehrere interne Indikatoren enthalten, z. B. [Bol
 
 ```cs
 // Komplexen Indikator erstellen
-var bollinger = new BollingerBands 
-{ 
-	Length = 20, 
-	Deviation = 2 
+var bollinger = new BollingerBands
+{
+	Length = 20,
+	Deviation = 2
 };
 
 // Komplexen Indikator an ein Abonnement binden
@@ -138,7 +138,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	// Direkt mit fertigen Indikatorwerten arbeiten
 	var isShortLessThenLong = shortValue < longValue;
-	
+
 	// Handelslogik verwendet saubere numerische Werte
 	// ohne sie aus IIndicatorValue extrahieren zu müssen
 	// ...
@@ -168,10 +168,10 @@ if (area != null)
 	// Indikatoren mit Farbanpassung zeichnen
 	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
 	DrawIndicator(area, longSma);
-	
+
 	// Eigene Trades zeichnen
 	DrawOwnTrades(area);
-	
+
 	// Orders zeichnen
 	DrawOrders(area);
 }
@@ -206,8 +206,8 @@ IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.R
 
 // Hinzufügen eines Indikators mit angegebener Primär- und Sekundärfarbe
 IChartIndicatorElement bollingerElem = DrawIndicator(
-	area, 
-	bollinger, 
+	area,
+	bollinger,
 	System.Drawing.Color.Blue,    // Primärfarbe
 	System.Drawing.Color.Gray     // Sekundärfarbe (für die zweite Linie)
 );

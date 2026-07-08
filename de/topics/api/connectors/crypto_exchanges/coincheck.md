@@ -2,7 +2,7 @@
 
 **Coincheck** - Kryptowährungsbörse.
 
-Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen. 
+Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen.
 
 ## Empfohlener Inhalt
 

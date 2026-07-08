@@ -8,7 +8,7 @@
   private void btnBuy_Click(object sender, RoutedEventArgs e)
   {
      var order = new Order
-     { 
+     {
          Portfolio = Portfolio.SelectedPortfolio,
          Price = _instr1.BestAsk.Price,
          Security = _instr1,
@@ -20,7 +20,7 @@
          .Do(() => Connector.AddInfoLog("Order successfully registered"))
          .Once()
          .Apply(this);
-      
+
      // Orderregistrierung
      Connector.RegisterOrder(order);
   }
@@ -29,7 +29,7 @@
   Wenn nun das Ereignis ausgelöst wird (die Order wird an der Börse registriert), wird die über die Methode [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** angegebene Aktion aufgerufen.
 
   Am Ende der Regelbildung wird die Methode [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply(StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule **)** aufgerufen. Bis diese Methode für die Regel aufgerufen wurde, ist sie inaktiv (der Handler in [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** wird nicht aufgerufen).
-  
+
 - **Erstellen von Regeln innerhalb einer Strategie:**
 
   ```cs
@@ -43,27 +43,27 @@
               .WhenCandlesStarted(candleSubscription)
               .Do(ProcessCandle)
               .Apply(this);
-              
+
           // Abonnement für Tick-Trades
           var tickSubscription = new Subscription(DataType.Ticks, Security);
           tickSubscription
               .WhenTickTradeReceived(this)
               .Do(ProcessTick)
               .Apply(this);
-              
+
           // Abonnementanfragen senden
           Subscribe(candleSubscription);
           Subscribe(tickSubscription);
-              
+
           base.OnStarted2(time);
       }
-      
+
       // Methoden zur Ereignisverarbeitung
       private void ProcessCandle(ICandleMessage candle) { /* ... */ }
       private void ProcessTick(ITickTradeMessage tick) { /* ... */ }
-  }    
+  }
   ```
-  
+
 - **Entfernen nicht benötigter Regeln.**
 
   [IMarketRule](xref:StockSharp.Algo.IMarketRule) besitzt [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token) - ein Token der Regel, mit dem sie verknüpft ist. Für die Regel [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider)) ist das Token beispielsweise die Order.
@@ -100,7 +100,7 @@
   // Orderregistrierung
   RegisterOrder(order);
   ```
-  
+
 - **Kombinieren von Regeln mit der Bedingung [MarketRuleHelper.Or](xref:StockSharp.Algo.MarketRuleHelper.Or(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)** / [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)**.**
 
   Wenn die Zeit abläuft **ODER** eine Candle schließt:
@@ -109,14 +109,14 @@
   // Abonnement für Candles erstellen
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
-  
+
   Connector
       .WhenIntervalElapsed(timeInterval)
       .Or(this.WhenCandlesStarted(subscription))
       .Do(() => this.AddInfoLog("Candle closed or time expired"))
       .Once()
       .Apply(this);
-      
+
   // Abonnementanfrage senden
   Subscribe(subscription);
   ```
@@ -127,16 +127,16 @@
   // Abonnement für Candles erstellen
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
-  
+
   MarketRuleHelper
       .Or(new IMarketRule[] {
-          Connector.WhenIntervalElapsed(timeInterval), 
+          Connector.WhenIntervalElapsed(timeInterval),
           this.WhenCandlesStarted(subscription)
       })
       .Do(() => this.AddInfoLog("Candle closed or time expired"))
       .Once()
       .Apply(this);
-      
+
   // Abonnementanfrage senden
   Subscribe(subscription);
   ```
@@ -148,39 +148,39 @@
   var subscription = new Subscription(DataType.Ticks, Security);
   var priceMore = new Unit(135000m, UnitTypes.Limit);
   var priceLess = new Unit(140000m, UnitTypes.Limit);
-  				
+
   MarketRuleHelper
       .And(new IMarketRule[] {
-          subscription.WhenLastTradePriceMore(this, 135000m), 
+          subscription.WhenLastTradePriceMore(this, 135000m),
           subscription.WhenLastTradePriceLess(this, 140000m)
       })
       .Do(() => this.AddInfoLog($"Last trade price is in the range from {priceMore} to {priceLess}"))
       .Apply(this);
-      
+
   // Abonnementanfrage senden
   Subscribe(subscription);
   ```
 
   > [!TIP]
   > Der Handler in [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** wird aufgerufen, nachdem die letzte über [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)** hinzugefügte Regel ausgelöst wurde.
-  
+
 - **Periodizität der Regelausführung - [IMarketRule.Until](xref:StockSharp.Algo.IMarketRule.Until(System.Func{System.Boolean}))**(**[System.Func\<System.Boolean\>](xref:System.Func`1) canFinish **)**:**
 
   ```cs
   bool flag = false;
-  
+
   // Abonnement für Tick-Trades erstellen
   var subscription = new Subscription(DataType.Ticks, Security);
-  				
+
   subscription
       .WhenTickTradeReceived(this)
       .Do((tick) =>
       {
           if(condition) flag = true;
       })
-      .Until(() => flag)			
+      .Until(() => flag)
       .Apply(this);
-      
+
   // Abonnementanfrage senden
   Subscribe(subscription);
   ```
@@ -214,7 +214,7 @@ this.WhenCandlesStarted(subscription)
 			.Once().Apply(this);
 
 	}).Apply(this);
-	
+
 // Abonnementanfrage senden
 Subscribe(subscription);
 ```

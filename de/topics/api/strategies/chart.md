@@ -12,10 +12,10 @@ Um aus einer Strategie auf den Chart zuzugreifen, verwenden Sie die Methode [Str
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Chart abrufen
 	_chart = GetChart();
-	
+
 	// Chart-Verfügbarkeit prüfen
 	if (_chart != null)
 	{
@@ -41,7 +41,7 @@ In manchen Fällen kann der Chart von außen gesetzt werden. Verwenden Sie dafü
 public void ConfigureVisualization(IChart chart)
 {
 	SetChart(chart);
-	
+
 	if (chart != null)
 	{
 		InitializeChart();
@@ -58,10 +58,10 @@ private void InitializeChart()
 {
 	// Hauptbereich für Kerzen und Indikatoren erstellen
 	_mainArea = CreateChartArea();
-	
+
 	// Zusätzlichen Bereich für Volumen erstellen
 	_volumeArea = CreateChartArea();
-	
+
 	// Bereiche konfigurieren und Elemente hinzufügen
 	ConfigureChartElements();
 }
@@ -75,13 +75,13 @@ private void InitializeChart()
 	// Vorhandene Bereiche bei Bedarf löschen
 	foreach (var area in _chart.Areas.ToArray())
 		_chart.RemoveArea(area);
-	
+
 	// Hauptbereich für Kerzen und Indikatoren erstellen
 	_mainArea = _chart.AddArea();
-	
+
 	// Zusätzlichen Bereich für Volumen erstellen
 	_volumeArea = _chart.AddArea();
-	
+
 	// Bereiche konfigurieren und Elemente hinzufügen
 	ConfigureChartElements();
 }
@@ -100,7 +100,7 @@ private void ConfigureChartElements()
 {
 	// Kerzenelement zum Hauptbereich hinzufügen
 	_candleElement = _mainArea.AddCandles();
-	
+
 	// Kerzendarstellung konfigurieren
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // japanische Kerzen
 	_candleElement.AntiAliasing = true; // Glättung
@@ -237,38 +237,38 @@ private void ProcessCandle(ICandleMessage candle)
 	// Kerze in Indikatoren verarbeiten
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
-	
+
 	// Wenn der Chart nicht verfügbar ist, Zeichnen überspringen
 	if (_chart == null)
 		return;
-	
+
 	// Daten zum Zeichnen erstellen
 	var drawData = _chart.CreateData();
-	
+
 	// Daten nach Kerzenzeit gruppieren
 	var group = drawData.Group(candle.OpenTime);
-	
+
 	// Kerze hinzufügen
-	group.Add(_candleElement, 
-		candle.DataType, 
-		candle.SecurityId, 
-		candle.OpenPrice, 
-		candle.HighPrice, 
-		candle.LowPrice, 
-		candle.ClosePrice, 
-		candle.PriceLevels, 
+	group.Add(_candleElement,
+		candle.DataType,
+		candle.SecurityId,
+		candle.OpenPrice,
+		candle.HighPrice,
+		candle.LowPrice,
+		candle.ClosePrice,
+		candle.PriceLevels,
 		candle.State);
-	
+
 	// Indikatorwerte hinzufügen
 	group.Add(_smaElement, smaValue);
-	
+
 	if (bollingerValue != null)
 	{
 		group.Add(_bollingerUpperElement, bollingerValue);
 		group.Add(_bollingerMiddleElement, bollingerValue);
 		group.Add(_bollingerLowerElement, bollingerValue);
 	}
-	
+
 	// Daten im Chart zeichnen
 	_chart.Draw(drawData);
 }
@@ -306,14 +306,14 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _smaLength;
 	private readonly StrategyParam<int> _bollingerLength;
 	private readonly StrategyParam<decimal> _bollingerDeviation;
-	
+
 	private SimpleMovingAverage _sma;
 	private BollingerBands _bollinger;
-	
+
 	private IChart _chart;
 	private IChartArea _mainArea;
 	private IChartArea _volumeArea;
-	
+
 	private IChartCandleElement _candleElement;
 	private IChartIndicatorElement _smaElement;
 	private IChartIndicatorElement _bollingerUpperElement;
@@ -321,36 +321,36 @@ public class SmaStrategy : Strategy
 	private IChartIndicatorElement _bollingerLowerElement;
 	private IChartOrderElement _ordersElement;
 	private IChartTradeElement _tradesElement;
-	
+
 	public SmaStrategy()
 	{
 		_smaLength = Param(nameof(SmaLength), 20);
 		_bollingerLength = Param(nameof(BollingerLength), 20);
 		_bollingerDeviation = Param(nameof(BollingerDeviation), 2m);
 	}
-	
+
 	public int SmaLength
 	{
 		get => _smaLength.Value;
 		set => _smaLength.Value = value;
 	}
-	
+
 	public int BollingerLength
 	{
 		get => _bollingerLength.Value;
 		set => _bollingerLength.Value = value;
 	}
-	
+
 	public decimal BollingerDeviation
 	{
 		get => _bollingerDeviation.Value;
 		set => _bollingerDeviation.Value = value;
 	}
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		// Indikatoren erstellen
 		_sma = new SimpleMovingAverage { Length = SmaLength };
 		_bollinger = new BollingerBands
@@ -358,49 +358,49 @@ public class SmaStrategy : Strategy
 			Length = BollingerLength,
 			Deviation = BollingerDeviation
 		};
-		
+
 		// Indikatoren zur Strategiesammlung hinzufügen
 		Indicators.Add(_sma);
 		Indicators.Add(_bollinger);
-		
+
 		// Chart abrufen
 		_chart = GetChart();
-		
+
 		// Chart initialisieren, wenn verfügbar
 		if (_chart != null)
 		{
 			InitializeChart();
 		}
-		
+
 		// Kerzen abonnieren
 		var subscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			Security);
-		
+
 		subscription
 			.WhenCandlesFinished(this)
 			.Do(ProcessCandle)
 			.Apply(this);
-		
+
 		Subscribe(subscription);
 	}
-	
+
 	private void InitializeChart()
 	{
 		// Vorhandene Bereiche löschen
 		foreach (var area in _chart.Areas.ToArray())
 			_chart.RemoveArea(area);
-		
+
 		// Hauptbereich für Kerzen und Indikatoren erstellen
 		_mainArea = _chart.AddArea();
-		
+
 		// Zusätzlichen Bereich für Volumen erstellen
 		_volumeArea = _chart.AddArea();
-		
+
 		// Chart-Elemente konfigurieren
 		ConfigureChartElements();
 	}
-	
+
 	private void ConfigureChartElements()
 	{
 		// Element zur Anzeige von Kerzen hinzufügen
@@ -413,71 +413,71 @@ public class SmaStrategy : Strategy
 		_candleElement.DownBorderColor = Color.DarkRed;
 		_candleElement.StrokeThickness = 1;
 		_candleElement.ShowAxisMarker = true;
-		
+
 		// Elemente für Indikatoren hinzufügen
 		_smaElement = _mainArea.AddIndicator(_sma);
 		_smaElement.Color = Color.Blue;
 		_smaElement.StrokeThickness = 2;
-		
+
 		_bollingerUpperElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerUpperElement.Color = Color.Purple;
 		_bollingerUpperElement.StrokeThickness = 1;
-		
+
 		_bollingerMiddleElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerMiddleElement.Color = Color.Gray;
 		_bollingerMiddleElement.StrokeThickness = 1;
-		
+
 		_bollingerLowerElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerLowerElement.Color = Color.Purple;
 		_bollingerLowerElement.StrokeThickness = 1;
-		
+
 		// Elemente für Orders und Trades hinzufügen
 		_ordersElement = DrawOrders(_mainArea);
 		_tradesElement = DrawOwnTrades(_mainArea);
 	}
-	
+
 	private void ProcessCandle(ICandleMessage candle)
 	{
 		// Kerze mit Indikatoren verarbeiten
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
-		
+
 		// Wenn der Chart nicht verfügbar ist, Zeichnen überspringen
 		if (_chart == null)
 			return;
-		
+
 		// Daten im Chart zeichnen
 		var drawData = _chart.CreateData();
 		var group = drawData.Group(candle.OpenTime);
-		
+
 		// Kerze hinzufügen
-		group.Add(_candleElement, 
-			candle.DataType, 
-			candle.SecurityId, 
-			candle.OpenPrice, 
-			candle.HighPrice, 
-			candle.LowPrice, 
-			candle.ClosePrice, 
-			candle.PriceLevels, 
+		group.Add(_candleElement,
+			candle.DataType,
+			candle.SecurityId,
+			candle.OpenPrice,
+			candle.HighPrice,
+			candle.LowPrice,
+			candle.ClosePrice,
+			candle.PriceLevels,
 			candle.State);
-		
+
 		// Indikatorwerte hinzufügen
 		group.Add(_smaElement, smaValue);
-		
+
 		if (bollingerValue != null)
 		{
 			group.Add(_bollingerUpperElement, bollingerValue);
 			group.Add(_bollingerMiddleElement, bollingerValue);
 			group.Add(_bollingerLowerElement, bollingerValue);
 		}
-		
+
 		// Daten im Chart zeichnen
 		_chart.Draw(drawData);
-		
+
 		// Handelslogik
 		if (!IsFormed)
 			return;
-			
+
 		// ... Implementierung der Handelslogik ...
 	}
 }

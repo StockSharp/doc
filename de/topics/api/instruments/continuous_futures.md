@@ -14,13 +14,13 @@ Betrachten Sie zum Beispiel zwei E-mini S&P 500 Futures: **ESM5** und **ESU5**. 
    private Security _esm5;
    private Security _esu5;
    private ExpirationContinuousSecurity _es;
-   							
+
    ```
 2. Erstellen Sie [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity):
 
    ```cs
    _es = new ExpirationContinuousSecurity { Board = ExchangeBoard.Cme, Id = "ES" };
-   							
+
    ```
 3. Fügen Sie Komponenteninstrumente hinzu und geben Sie für jedes Instrument Datum und Uhrzeit des Verfalls an:
 

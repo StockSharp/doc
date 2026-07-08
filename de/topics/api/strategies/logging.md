@@ -24,9 +24,9 @@ Die Methode [LogVerbose](xref:Ecng.Logging.BaseLogReceiver.LogVerbose(System.Str
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-	
+
 	// ...
 }
 ```
@@ -38,9 +38,9 @@ Die Methode [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-	
+
 	// ...
 }
 ```
@@ -53,10 +53,10 @@ Die Methode [LogInfo](xref:Ecng.Logging.BaseLogReceiver.LogInfo(System.String,Sy
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
-	
-	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}", 
+
+	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}",
 		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
-	
+
 	// ...
 }
 ```
@@ -73,7 +73,7 @@ public void RegisterOrder(Order order)
 		LogWarning("Attempt to register an order with invalid volume: {0}", order.Volume);
 		return;
 	}
-	
+
 	// ...
 }
 ```
@@ -127,19 +127,19 @@ Für eine bequeme Konfiguration der Logging-Stufe im Strategiekonstruktor könne
 public class SmaStrategy : Strategy
 {
 	private readonly StrategyParam<LogLevels> _logLevel;
-	
+
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
 					.SetDisplay("Logging Level", "Level of log message detail", "Logging Settings");
 	}
-	
+
 	public override LogLevels LogLevel
 	{
 		get => _logLevel.Value;
 		set => _logLevel.Value = value;
 	}
-	
+
 	// ...
 }
 ```
@@ -152,18 +152,18 @@ public class SmaStrategy : Strategy
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
+
+	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
-	
+
 	// ...
 }
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}", 
+	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
 		Name, Position, PnL);
-	
+
 	base.OnStopped();
 }
 ```
@@ -189,9 +189,9 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Order registration error {0}: {1}", 
+	LogError("Order registration error {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
-	
+
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
 ```

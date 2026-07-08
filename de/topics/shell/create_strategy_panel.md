@@ -14,7 +14,7 @@ Ersetzen Sie `UserControl` durch `controls:BaseStudioControl`.
 <controls:BaseStudioControl>
 ...
 </controls:BaseStudioControl>
-	  				
+
 ```
 
 Implementieren Sie anschließend Ihre eigene Panel-Logik ähnlich wie bei den vorhandenen Strategiepanels.
@@ -28,7 +28,7 @@ Damit das Panel [Real-time](user_interface/real_time.md) die Strategie in Ihrem 
 		public Strategy Strategy { get; set; }
 	...
 	}
-		
+
 ```
 
 Um die Strategieeinstellungen zu speichern, müssen Sie im Panel die Methoden **Load** und **Save** überschreiben.
@@ -57,7 +57,7 @@ Um die Strategieeinstellungen zu speichern, müssen Sie im Panel die Methoden **
 		}
 	...
 	}
-		
+
 ```
 
 ## Empfohlene Inhalte

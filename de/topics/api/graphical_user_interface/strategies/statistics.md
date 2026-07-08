@@ -11,7 +11,7 @@
 - [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategy **)** - fügt Strategien zur Tabelle hinzu.
 - [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) name, [System.Windows.Visibility](xref:System.Windows.Visibility) visibility **)** - legt die Sichtbarkeit der Spalten in der Tabelle fest.
 
-Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/Testing\/SampleHistoryTestingParallel*. 
+Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/Testing\/SampleHistoryTestingParallel*.
 
 ```xaml
 <Window x:Class="SampleHistoryTestingParallel.MainWindow"
@@ -20,7 +20,7 @@ Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Sam
 		xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
 		xmlns:charting="http://schemas.stocksharp.com/xaml"
 		Title="{x:Static loc:LocalizedStrings.XamlStr563}" Height="430" Width="525">
-	
+
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="100" />
@@ -49,7 +49,7 @@ Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Sam
 		</TabControl>
 	</Grid>
 </Window>
-	  				
+
 ```
 ```cs
 var strategies = periods
@@ -82,6 +82,6 @@ var strategies = periods
 			return strategy;
 		})
 		.ToEx(periods.Length);
-						
-	  				
+
+
 ```

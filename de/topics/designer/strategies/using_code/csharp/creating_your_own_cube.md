@@ -11,7 +11,7 @@ Im folgenden Beispiel erbt der Würfel von der Klasse [DiagramExternalElement](x
 ```cs
 /// <summary>
 /// Beispiel-Diagrammelement, das die Verwendung von Eingabe- und Ausgabesockets demonstriert.
-/// 
+///
 /// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
 /// </summary>
 public class EmptyDiagramElement : DiagramExternalElement
@@ -21,7 +21,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	public EmptyDiagramElement()
 	{
 		// Beispiel-Eigenschaft, um zu zeigen, wie Parameter erstellt werden.
-	
+
 		_minValue = AddParam("MinValue", 10)
 			.SetBasic(true) // Parameter im Basismodus sichtbar machen
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);

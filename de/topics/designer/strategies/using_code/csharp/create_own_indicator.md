@@ -11,11 +11,11 @@ Der Indikatorcode sieht folgendermaßen aus:
 ```cs
 /// <summary>
 /// Beispielindikator, der das Speichern und Laden von Parametern demonstriert.
-/// 
+///
 /// Ändert den Eingangspreis um +20 % oder -20 %.
-/// 
+///
 /// Weitere Beispiele: https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
-/// 
+///
 /// Dokumentation: https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator

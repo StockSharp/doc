@@ -35,7 +35,7 @@ Die Ehlers Fisher Transform-Berechnung umfasst mehrere Schritte:
    ```
    If Value >= 0.999, then Value = 0.999
    If Value <= -0.999, then Value = -0.999
-   
+
    Fisher = 0.5 * ln((1 + Value) / (1 - Value))
    ```
    wobei ln der natürliche Logarithmus ist.

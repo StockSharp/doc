@@ -24,7 +24,7 @@ Es ist wichtig, das Ereignis [Connector.OrderBookReceived](xref:StockSharp.Algo.
 
 ```cs
 var security = GetSecurity(); // Security-Objekt abrufen, das abonniert werden soll
-				
+
 // Orderbuch abonnieren
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);

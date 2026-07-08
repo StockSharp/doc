@@ -107,12 +107,12 @@ strategy.Start();
 strategy.PnLChanged += () =>
 {
 	Console.WriteLine($"Current PnL: {strategy.PnL}");
-	
+
 	// Sie können auch auf einzelne statistische Parameter zugreifen
 	var netProfit = statisticManager.Parameters
 		.OfType<NetProfitParameter>()
 		.FirstOrDefault();
-		
+
 	if (netProfit != null)
 	{
 		Console.WriteLine($"Net Profit: {netProfit.Value}");

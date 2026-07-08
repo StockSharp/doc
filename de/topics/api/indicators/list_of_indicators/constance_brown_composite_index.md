@@ -48,7 +48,7 @@ Dieser kombinierte Index kann dann geglättet werden, um das Rauschen zu reduzie
 
 ## Interpretation
 
-- **Überkaufte und überverkaufte Niveaus**: 
+- **Überkaufte und überverkaufte Niveaus**:
   - Werte über 80 können auf überkaufte Marktbedingungen hinweisen
   - Werte unter 20 können auf überverkaufte Marktbedingungen hinweisen
 

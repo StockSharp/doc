@@ -18,6 +18,6 @@ Installieren Sie UDPDumper über [Installer](installer.md).
 
    ```cs
    		StockSharp.UdpDumper.Console.exe settings.json
-   		
+
    ```
 8. Um einen Connector mit den gesammelten Daten zu testen, verwenden Sie den Dump-Modus. Details finden Sie unter [Dump-Modus](api/connectors/common/fast_protocol/dump_mode.md).

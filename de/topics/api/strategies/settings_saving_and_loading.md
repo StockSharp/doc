@@ -38,16 +38,16 @@ public override void Save(SettingsStorage settings)
 {
 	// Zuerst Basismethode aufrufen, um Standardparameter zu speichern
 	base.Save(settings);
-	
+
 	// Dann eigene Speicherlogik hinzufügen
 	settings.SetValue("CustomState", _customState);
 }
-	
+
 public override void Load(SettingsStorage settings)
 {
 	// Zuerst Basismethode aufrufen, um Standardparameter zu laden
 	base.Load(settings);
-	
+
 	// Dann eigene Ladelogik hinzufügen
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");

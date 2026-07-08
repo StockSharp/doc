@@ -34,7 +34,7 @@ Die Berechnung der Fibonacci Retracement-Werte umfasst die folgenden Schritte:
 2. Berechnung der Korrekturstufen basierend auf der Reichweite dieser Bewegung:
    ```
    Range = |High - Low|
-   
+
    Level 0% = High (for upward trend) or Low (for downward trend)
    Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
    Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)

@@ -29,7 +29,7 @@ public MainWindow()
 		FileName = "logs",
 	});
 }
-	  				
+
 ```
 
 ## Empfohlene Inhalte

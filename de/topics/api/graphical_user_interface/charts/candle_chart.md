@@ -41,11 +41,11 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
        _connector.CandleReceived += OnCandleReceived;
-       
+
        // Weitere erforderliche Ereignisse abonnieren
        _connector.Connected += () => this.GuiAsync(() => { /* Verbindung verarbeiten */ });
        _connector.Disconnected += () => this.GuiAsync(() => { /* Trennung verarbeiten */ });
-       
+
        // Mit dem Handelssystem verbinden
        _connector.Connect();
    }
@@ -57,13 +57,13 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
    private void ShowChartClick(object sender, RoutedEventArgs e)
    {
        var security = SelectedSecurity;
-       
+
        // Kerzenabonnement erstellen
        var subscription = new Subscription(
            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
            security)
        {
-           MarketData = 
+           MarketData =
            {
                // Historische Daten für 30 Tage anfordern
                From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
@@ -72,7 +72,7 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
                IsFinishedOnly = true
            }
        };
-       
+
        // Diagrammfenster erstellen
        _chartWindows.SafeAdd(subscription, key =>
        {
@@ -81,40 +81,40 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
                Title = $"{security.Code} {TimeSpan.FromMinutes(5)}"
            };
            wnd.MakeHideable();
-           
+
            // Indikatoren initialisieren
            _sma = new SimpleMovingAverage() { Length = 11 };
            _macd = new MovingAverageConvergenceDivergence();
-           
+
            // Diagrammelemente initialisieren
            _smaChartElement = new ChartIndicatorElement();
            _macdChartElement = new ChartIndicatorElement();
            _candlesElem = new ChartCandleElement();
-           
+
            // MACD-Anzeigestil als Histogramm setzen
            _macdChartElement.DrawStyle = DrawStyles.Histogram;
-           
+
            // Diagrammbereiche initialisieren
            _candlesArea = new ChartArea();
            _indicatorsArea = new ChartArea();
-           
+
            // Bereiche zum Diagramm hinzufügen
            wnd.Chart.Areas.Add(_candlesArea);
            wnd.Chart.Areas.Add(_indicatorsArea);
-           
+
            // Elemente zu Bereichen hinzufügen
            _candlesArea.Elements.Add(_candlesElem);
            _candlesArea.Elements.Add(_smaChartElement);
            _indicatorsArea.Elements.Add(_macdChartElement);
-           
+
            // Diagrammelemente für automatisches Zeichnen an das Abonnement binden
            wnd.Chart.AddElement(_candlesArea, _candlesElem, subscription);
            wnd.Chart.AddElement(_candlesArea, _smaChartElement, subscription);
            wnd.Chart.AddElement(_indicatorsArea, _macdChartElement, subscription);
-           
+
            return wnd;
        }).Show();
-       
+
        // Kerzenabonnement starten
        _connector.Subscribe(subscription);
    }
@@ -128,15 +128,15 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
        var wnd = _chartWindows.TryGetValue(subscription);
        if (wnd == null)
            return;
-       
+
        // Nur abgeschlossene Kerzen verarbeiten
        if (candle.State != CandleStates.Finished)
            return;
-       
+
        // Indikatorwerte berechnen
        var smaValue = _sma.Process(candle);
        var macdValue = _macd.Process(candle);
-       
+
        // Daten zum Zeichnen erstellen
        var data = new ChartDrawData();
        data
@@ -144,7 +144,7 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
                .Add(_candlesElem, candle)
                .Add(_smaChartElement, smaValue)
                .Add(_macdChartElement, macdValue);
-       
+
        // Daten im UI-Thread in das Diagramm zeichnen
        this.GuiAsync(() => wnd.Chart.Draw(data));
    }
@@ -158,54 +158,54 @@ Ab den neueren Versionen von StockSharp ist es möglich, das automatische Zeichn
 private void SetupAutoDrawingChart()
 {
 	var security = SelectedSecurity;
-	
+
 	// Diagrammelemente erstellen
 	var candleElement = new ChartCandleElement();
 	var smaElement = new ChartIndicatorElement { Title = "SMA" };
-	
+
 	// Diagrammbereiche erstellen
 	var area = new ChartArea();
-	
+
 	// Bereich zum Diagramm hinzufügen
 	Chart.Areas.Add(area);
-	
+
 	// Kerzenabonnement erstellen
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
 	{
-		MarketData = 
+		MarketData =
 		{
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 			To = DateTime.Now
 		}
 	};
-	
+
 	// Elemente an Diagrammbereich und Abonnement binden
 	Chart.AddElement(area, candleElement, subscription);
 	Chart.AddElement(area, smaElement, subscription);
-	
+
 	// Indikator erstellen
 	var sma = new SimpleMovingAverage { Length = 14 };
-	
+
 	// Ereignis für Kerzenempfang zur Indikatorverarbeitung abonnieren
-	_connector.CandleReceived += (sub, candle) => 
+	_connector.CandleReceived += (sub, candle) =>
 	{
 		if (sub == subscription && candle.State == CandleStates.Finished)
 		{
 			// Kerze mit dem Indikator verarbeiten und Wert abrufen
 			var smaValue = sma.Process(candle);
-			
+
 			// Indikatorwert zeichnen
 			var data = new ChartDrawData();
 			data
 				.Group(candle.OpenTime)
 					.Add(smaElement, smaValue);
-			
+
 			this.GuiAsync(() => Chart.Draw(data));
 		}
 	};
-	
+
 	// Abonnement starten
 	_connector.Subscribe(subscription);
 }
@@ -225,27 +225,27 @@ _candlesArea.Elements.Add(orderElement);
 _candlesArea.Elements.Add(tradeElement);
 
 // Ereignisse für Order- und Trade-Empfang abonnieren
-_connector.OrderReceived += (sub, order) => 
+_connector.OrderReceived += (sub, order) =>
 {
 	if (order.Security != _security)
 		return;
-	
+
 	// Order im Diagramm zeichnen
 	var data = new ChartDrawData();
 	data.Group(order.Time).Add(orderElement, order);
-	
+
 	this.GuiAsync(() => Chart.Draw(data));
 };
 
-_connector.OwnTradeReceived += (sub, trade) => 
+_connector.OwnTradeReceived += (sub, trade) =>
 {
 	if (trade.Order.Security != _security)
 		return;
-	
+
 	// Trade im Diagramm zeichnen
 	var data = new ChartDrawData();
 	data.Group(trade.Time).Add(tradeElement, trade);
-	
+
 	this.GuiAsync(() => Chart.Draw(data));
 };
 ```

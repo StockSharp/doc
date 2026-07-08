@@ -22,7 +22,7 @@ Je weiter sich der Wert von null entfernt, desto stärker ist die gerichtete Bew
 ## Berechnung
 
 1. Berechnen Sie die Reihen Aroon Up und Aroon Down mit dem ausgewählten `Length`.
-2. Subtrahieren Sie die beiden Linien:  
+2. Subtrahieren Sie die beiden Linien:
    `Aroon Oscillator = Aroon Up - Aroon Down`.
 
 ## Interpretation

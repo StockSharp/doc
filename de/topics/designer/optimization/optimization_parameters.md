@@ -18,7 +18,7 @@ Standardmäßig erscheinen alle Parameter mit diesen Typen in der [Tabelle der O
 ```cs
 _long = this.Param(nameof(Long), 80);
 _short = this.Param(nameof(Short), 20);
-			
+
 // Parameter für die Optimierung deaktivieren
 _long.CanOptimize = false;
 ```

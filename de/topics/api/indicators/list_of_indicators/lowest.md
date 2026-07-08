@@ -1,4 +1,4 @@
-# Lowest 
+# Lowest
 
 Der Indikator zeigt den **Minimum value for the period** an.
 

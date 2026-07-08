@@ -22,7 +22,7 @@ Für diese und viele andere Börsenszenarien, die sich im Voraus nicht vorhersag
        {
            Interval = TimeSpan.FromSeconds(1),
            MaxVolume = maxVolume,
-           MaxPriceStepCount = 3,	
+           MaxPriceStepCount = 3,
            GenerateOriginSide = true,
            MinVolume = minVolume,
            RandomArrayLength = 99,

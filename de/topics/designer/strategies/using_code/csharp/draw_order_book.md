@@ -21,7 +21,7 @@ Damit teilt die Strategie externem Code, in diesem Fall dem Panel [Order book](.
 
 ```cs
 var bookSubscription = new Subscription(DataType.MarketDepth, Security);
-			
+
 bookSubscription
 	.WhenOrderBookReceived(this)
 	.Do(book =>
@@ -30,7 +30,7 @@ bookSubscription
 		DrawOrderBook(bookSubscription, _bookSource, book);
 	})
 	.Apply(this);
-			
+
 Subscribe(bookSubscription);
 ```
 

@@ -1,6 +1,6 @@
 # Optionsdesk
 
-Die grafische Komponente [OptionDesk](xref:StockSharp.Xaml.OptionDesk) ist eine Tabelle zur Anzeige des Optionsdesks. Sie zeigt die "Greeks", die implizite Volatilität, den theoretischen Preis sowie das beste Brief- und Geldangebot für Put- und Call-Optionen. 
+Die grafische Komponente [OptionDesk](xref:StockSharp.Xaml.OptionDesk) ist eine Tabelle zur Anzeige des Optionsdesks. Sie zeigt die "Greeks", die implizite Volatilität, den theoretischen Preis sowie das beste Brief- und Geldangebot für Put- und Call-Optionen.
 
 Unten folgt das Beispiel **OptionCalculator**, das diese Komponente verwendet. Der Quellcode des Beispiels befindet sich im Ordner *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
@@ -8,7 +8,7 @@ Unten folgt das Beispiel **OptionCalculator**, das diese Komponente verwendet. D
 
 ## Beispiel OptionCalculator
 
-1. Fügen Sie im XAML-Code das Element [OptionDesk](xref:StockSharp.Xaml.OptionDesk) hinzu und weisen Sie ihm den Namen **Desk** zu. 
+1. Fügen Sie im XAML-Code das Element [OptionDesk](xref:StockSharp.Xaml.OptionDesk) hinzu und weisen Sie ihm den Namen **Desk** zu.
 
    ```xaml
    <Window x:Class="OptionCalculator.MainWindow"
@@ -18,21 +18,21 @@ Unten folgt das Beispiel **OptionCalculator**, das diese Komponente verwendet. D
            xmlns:xaml="http://schemas.stocksharp.com/xaml"
            Title="{x:Static loc:LocalizedStrings.XamlStr396}" Height="400" Width="1030">
        <Grid Margin="5,5,5,5">
-       
+
    	    .........................................................
-   	    
+
    	    <xaml:OptionDesk x:Name="Desk" Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="0" />
-       
+
    	</Grid>
    </Window>
-   	  				
+
    ```
-2. Erstellen Sie im C#-Code eine Verbindung und abonnieren Sie die erforderlichen Ereignisse. 
+2. Erstellen Sie im C#-Code eine Verbindung und abonnieren Sie die erforderlichen Ereignisse.
 
    ```cs
-   ...                 
+   ...
    public readonly Connector Connector = new Connector();
-   ...                 
+   ...
    // Ereignis für erfolgreiche Verbindung abonnieren
    Connector.Connected += () =>
    {

@@ -1,10 +1,10 @@
 # Fenster für Risikoeinstellungen
 
-[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - ein spezielles Fenster zum Konfigurieren der Risikokontrolle. 
+[AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - ein spezielles Fenster zum Konfigurieren der Risikokontrolle.
 
 ![API GUI RiskWindow](../../../images/api_gui_riskwindow.png)
 
-Nachfolgend sehen Sie ein Codebeispiel zum Aufrufen des Fensters für Risikokontrolleinstellungen der Strategie. 
+Nachfolgend sehen Sie ein Codebeispiel zum Aufrufen des Fensters für Risikokontrolleinstellungen der Strategie.
 
 ```cs
 		private void RiskButton_OnClick(object sender, RoutedEventArgs e)
@@ -16,5 +16,5 @@ Nachfolgend sehen Sie ein Codebeispiel zum Aufrufen des Fensters für Risikokont
 			Strategy.RiskManager.Rules.Clear();
 			Strategy.RiskManager.Rules.AddRange(wnd.Rules);
 		}
-	  				
+
 ```

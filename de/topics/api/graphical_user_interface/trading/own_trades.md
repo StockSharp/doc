@@ -1,6 +1,6 @@
 # Eigene Trades
 
-[MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - eine Tabelle zur Anzeige eigener Trades. 
+[MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - eine Tabelle zur Anzeige eigener Trades.
 
 ![GUI MytradeGrid](../../../../images/gui_mytradegrid.png)
 
@@ -21,7 +21,7 @@ Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Sam
 	Title="{x:Static loc:LocalizedStrings.MyTrades}" Height="284" Width="644">
 	<xaml:MyTradeGrid x:Name="TradeGrid" x:FieldModifier="public" />
 </Window>
-	  				
+
 ```
 ```cs
 private readonly Connector _connector = new Connector();
@@ -29,8 +29,8 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 {
 		...............................................
 		_connector.OwnTradeReceived += trade => _myTradesWindow.TradeGrid.Trades.Add(trade);
-			
+
 		...............................................
 }
-	  				
+
 ```

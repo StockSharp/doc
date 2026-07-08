@@ -12,7 +12,7 @@ Um den Modus [OECRemoting](https://gainfutures.com/gainfuturesapi) explizit fest
 
 ```cs
 Trader.RemotingRequired = OECRemoting.Secondary;
-		
+
 ```
 
 Standardmäßig arbeitet der [OpenECryTrader](xref:StockSharp.OpenECry.OpenECryTrader)-Adapter im Modus [OpenECryRemoting.None](xref:StockSharp.OpenECry.OpenECryRemoting.None).

@@ -9,7 +9,7 @@ Um die Arbeit mit arithmetischen Operationen auf Werten wie Prozentangaben und a
   ```csharp
   // absoluten Wert erstellen
   var absolute = new Unit(30);
-  
+
   // Prozentwert erstellen
   var percent = 30.0.Percents();
   ```
@@ -33,13 +33,13 @@ Um die Arbeit mit arithmetischen Operationen auf Werten wie Prozentangaben und a
   ```csharp
   // Addition von Werten
   Console.WriteLine("absolute + percent = " + (absolute + percent));
-  
+
   // Multiplikation von Werten
   Console.WriteLine("absolute * percent = " + (absolute * percent));
-  
+
   // Subtraktion von Werten
   Console.WriteLine("absolute - percent = " + (absolute - percent));
-  
+
   // Division von Werten
   Console.WriteLine("absolute / percent = " + (absolute / percent));
   ```
@@ -67,7 +67,7 @@ Um die Arbeit mit arithmetischen Operationen auf Werten wie Prozentangaben und a
   ```csharp
   if (absolute > percent)
       Console.WriteLine("Absolute value is greater than percentage");
-      
+
   if (absolute == percent)
       Console.WriteLine("Values are equal");
   ```

@@ -1,18 +1,18 @@
 # Erstellen einer neuen Stop-Order
 
-[OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - das Fenster zum Erstellen einer bedingten Order. 
+[OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - das Fenster zum Erstellen einer bedingten Order.
 
 ![GUI OrderConditionalWindow](../../../../images/gui_orderconditionalwindow.png)
 
 **Wichtigste Eigenschaften**
 
-- [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) - Liste der Portfolios. 
-- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) - Provider für Informationen über Instrumente. 
-- [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) - Provider für Marktdaten. 
-- [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) - Nachrichtenadapter. 
-- [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) - die erstellte Order. 
+- [OrderConditionalWindow.Portfolios](xref:StockSharp.Xaml.OrderConditionalWindow.Portfolios) - Liste der Portfolios.
+- [OrderConditionalWindow.SecurityProvider](xref:StockSharp.Xaml.OrderConditionalWindow.SecurityProvider) - Provider für Informationen über Instrumente.
+- [OrderConditionalWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderConditionalWindow.MarketDataProvider) - Provider für Marktdaten.
+- [OrderConditionalWindow.Adapter](xref:StockSharp.Xaml.OrderConditionalWindow.Adapter) - Nachrichtenadapter.
+- [OrderConditionalWindow.Order](xref:StockSharp.Xaml.OrderConditionalWindow.Order) - die erstellte Order.
 
-Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/InteractiveBrokers\/SampleIB*. 
+Unten ist ein Codebeispiel für die Verwendung. Das Codebeispiel stammt aus *Samples\/InteractiveBrokers\/SampleIB*.
 
 ```cs
 ...
@@ -36,6 +36,6 @@ private void NewStopOrderClick(object sender, RoutedEventArgs e)
 	if (wnd.ShowModal(this))
 		_connector.RegisterOrder(wnd.Order);
 }
-						
-	  				
+
+
 ```

@@ -3,15 +3,15 @@
 Der folgende Code zeigt, wie der [InteractiveBrokersMessageAdapter](xref:StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "<Your Address>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 Eine alternative und bequemere Moeglichkeit ist die Verwendung der Erweiterungsmethode `AddAdapter<T>()`:

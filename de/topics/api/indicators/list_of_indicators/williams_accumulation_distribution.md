@@ -30,7 +30,7 @@ Der Williams Accumulation/Distribution-Indikator wird nach folgender Logik berec
 2. Accumulation/Distribution-Wert (AD) für die aktuelle Periode berechnen:
    - Wenn Close > Close_prev (steigender Markt):
       ```
-      AD = Close - Min(Low, Close_prev) 
+      AD = Close - Min(Low, Close_prev)
       ```
    - Wenn Close < Close_prev (fallender Markt):
       ```

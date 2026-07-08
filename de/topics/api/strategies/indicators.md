@@ -34,11 +34,11 @@ protected override void OnStarted2(DateTime time)
 	// Indikatoren erstellen
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// Indikatoren zur Sammlung hinzufügen
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	// ...
 }
 ```
@@ -55,7 +55,7 @@ Sie sollten nur **unabhängige Indikatoren** zur Sammlung [Indicators](xref:Stoc
    // Unabhängige Indikatoren
    var sma = new SimpleMovingAverage { Length = 20 };
    var rsi = new RelativeStrengthIndex { Length = 14 };
-   
+
    Indicators.Add(sma);
    Indicators.Add(rsi);
    ```
@@ -66,12 +66,12 @@ Sie sollten nur **unabhängige Indikatoren** zur Sammlung [Indicators](xref:Stoc
    // Indikatorkette
    var sma = new SimpleMovingAverage { Length = 20 };
    var stdev = new StandardDeviation { Length = 20 };
-   var bollingerBands = new BollingerBands 
-   { 
+   var bollingerBands = new BollingerBands
+   {
        SmaIndicator = sma,
        DeviationIndicator = stdev
    };
-   
+
    // Nur den ersten Indikator in der Kette hinzufügen
    Indicators.Add(sma);
    // Keine Indikatoren hinzufügen, die von anderen Indikatoren abhängen
@@ -91,7 +91,7 @@ Sie sollten nur **unabhängige Indikatoren** zur Sammlung [Indicators](xref:Stoc
        SlowEma = slowEma,
        SignalEma = signalEma
    };
-   
+
    // Basisindikatoren hinzufügen
    Indicators.Add(fastEma);
    Indicators.Add(slowEma);
@@ -106,33 +106,33 @@ public class SmaStrategy : Strategy
 {
 	private SimpleMovingAverage _longSma;
 	private SimpleMovingAverage _shortSma;
-	
+
 	// ...
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-		
+
 		// Indikatoren zur Sammlung hinzufügen, um ihren Zustand zu verfolgen
 		Indicators.Add(_longSma);
 		Indicators.Add(_shortSma);
-		
+
 		// ...
 	}
-	
+
 	private void ProcessCandle(ICandleMessage candle)
 	{
 		// Indikatoren verarbeiten
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
-		
+
 		// Prüfen, ob die Strategie bereit ist, bevor Handelslogik ausgeführt wird
 		if (!IsFormed)
 			return;
-			
+
 		// Handelslogik
 		// ...
 	}
@@ -149,11 +149,11 @@ private void ProcessCandle(ICandleMessage candle)
 	// Indikatoren verarbeiten
 	var longValue = _longSma.Process(candle);
 	var shortValue = _shortSma.Process(candle);
-	
+
 	// Umfassende Prüfung der Strategiebereitschaft
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
-		
+
 	// Handelslogik
 	// ...
 }
@@ -170,30 +170,30 @@ public class ComplexStrategy : Strategy
 	private RelativeStrengthIndex _rsi;
 	private BollingerBands _bollinger;
 	private StandardDeviation _stdev;
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		// Indikatoren erstellen
 		_sma = new SimpleMovingAverage { Length = 20 };
 		_rsi = new RelativeStrengthIndex { Length = 14 };
-		
+
 		_stdev = new StandardDeviation { Length = 20 };
-		_bollinger = new BollingerBands 
-		{ 
+		_bollinger = new BollingerBands
+		{
 			SmaIndicator = _sma,
-			DeviationIndicator = _stdev 
+			DeviationIndicator = _stdev
 		};
-		
+
 		// Nur unabhängige Indikatoren hinzufügen
 		Indicators.Add(_sma);
 		Indicators.Add(_rsi);
 		// _stdev und _bollinger nicht hinzufügen, da sie von _sma abhängen
-		
+
 		// ...
 	}
-	
+
 	// ...
 }
 ```
@@ -210,7 +210,7 @@ public override bool IsFormed
 		// Standardprüfung der Indikatoren
 		if (!base.IsFormed)
 			return false;
-			
+
 		// Zusätzliche Bedingungen für die Strategiebereitschaft
 		return _customCondition && _additionalCheck;
 	}

@@ -34,14 +34,14 @@ public Level1Window()
 {
 	InitializeComponent();
 	_connector = MainWindow.This.Connector;
-	
+
 	// Ereignis für den Empfang von Level1-Daten abonnieren
 	_connector.Level1Received += OnLevel1Received;
-	
+
 	// Level1-Abonnement erstellen, falls noch nicht abonniert
 	var security = MainWindow.This.SelectedSecurity;
-	if (!_connector.Subscriptions.Any(s => 
-			s.DataType == DataType.Level1 && 
+	if (!_connector.Subscriptions.Any(s =>
+			s.DataType == DataType.Level1 &&
 			s.SecurityId == security.ToSecurityId()))
 	{
 		var subscription = new Subscription(DataType.Level1, security);
@@ -54,7 +54,7 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 	// Prüfen, ob die Meldung zum ausgewählten Instrument gehört
 	if (level1Message.SecurityId != MainWindow.This.SelectedSecurity.ToSecurityId())
 		return;
-		
+
 	// Meldung zu Level1Grid hinzufügen
 	this.GuiAsync(() => Level1Grid.Messages.Add(level1Message));
 }
@@ -78,7 +78,7 @@ public void SubscribeToLevel1(IEnumerable<Security> securities)
 		var subscription = new Subscription(DataType.Level1, security);
 		_connector.Subscribe(subscription);
 	}
-	
+
 	// Ereignis für den Empfang von Level1-Daten abonnieren
 	_connector.Level1Received += OnLevel1Received;
 }
@@ -90,11 +90,11 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 	if (IsLevel1Needed(subscription))
 	{
 		// GUI im UI-Thread aktualisieren
-		this.GuiAsync(() => 
+		this.GuiAsync(() =>
 		{
 			// Meldung zu Level1Grid hinzufügen
 			Level1Grid.Messages.Add(level1Message);
-			
+
 			// Änderungen in Level1-Feldern verarbeiten
 			foreach (var change in level1Message.Changes)
 			{
@@ -105,13 +105,13 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 						var lastPrice = (decimal)change.Value;
 						Console.WriteLine($"Last price {security.Code}: {lastPrice}");
 						break;
-						
+
 					case Level1Fields.BestBidPrice:
 						// Änderung des besten Geldkurses verarbeiten
 						var bestBid = (decimal)change.Value;
 						Console.WriteLine($"Best bid {security.Code}: {bestBid}");
 						break;
-						
+
 					case Level1Fields.BestAskPrice:
 						// Änderung des besten Briefkurses verarbeiten
 						var bestAsk = (decimal)change.Value;

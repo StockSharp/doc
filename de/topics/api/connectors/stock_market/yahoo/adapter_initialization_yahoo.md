@@ -5,8 +5,8 @@ Der folgende Code zeigt, wie der [YahooMessageAdapter](xref:StockSharp.Yahoo.Yah
 ```cs
 var messageAdapter = new YahooMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

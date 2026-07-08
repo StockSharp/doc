@@ -16,14 +16,14 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    ```cs
    private readonly LogManager _logManager = new LogManager();
    private readonly TestSource _testSource;
-   				
+
    ```
 3. Fügen Sie Logquellen hinzu.
 
    ```cs
    _logManager.Sources.Add(_testSource = new TestSource());
    _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-   				
+
    ```
 4. Fügen Sie Loglistener hinzu.
 
@@ -35,7 +35,7 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    {
    	FileName = "logs",
    });
-   				
+
    ```
 5. Fügen Sie Logging-Nachrichten der benutzerdefinierten Klasse hinzu. Die Logging-Stufe wird zufällig ausgewählt.
 

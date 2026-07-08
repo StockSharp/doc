@@ -1,10 +1,10 @@
 # Kauf-/Verkaufspanel
 
-[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - ein spezielles Panel, mit dem Sie schnell eine Order zu den besten Preisen registrieren können. 
+[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - ein spezielles Panel, mit dem Sie schnell eine Order zu den besten Preisen registrieren können.
 
 ![API GUI BuySell](../../../../images/api_gui_buysell.png)
 
-Unten sehen Sie ein Codebeispiel zum Hinzufügen von [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel). 
+Unten sehen Sie ein Codebeispiel zum Hinzufügen von [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel).
 
 ```xaml
 <Window x:Class="MainWindow"
@@ -30,7 +30,7 @@ Unten sehen Sie ein Codebeispiel zum Hinzufügen von [BuySellPanel](xref:StockSh
 		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Connect" Click="Connect_Click" />
 	</Grid>
 </Window>
-	  				
+
 ```
 
 Um das Panel mit Daten zu füllen, müssen Sie die Marktdatenquelle und die Instrumentenquelle angeben.
@@ -43,5 +43,5 @@ Um das Panel mit Daten zu füllen, müssen Sie die Marktdatenquelle und die Inst
 			BuySellPanel.MarketDataProvider = _connector;
 			...
 		}
-	  				
+
 ```

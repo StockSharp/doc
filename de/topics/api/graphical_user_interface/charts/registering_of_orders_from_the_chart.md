@@ -16,7 +16,7 @@ ChartPanel.CreateOrder += (chartArea,order) =>
 	order.Portfolio = _portfolio;
 	order.Security = _security;
 	order.Volume = 1;
-	
+
 	_connector.RegisterOrder(order);
 };
 ```

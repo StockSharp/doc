@@ -18,7 +18,7 @@ Beispielcode
 		<sx:LogControl x:Name="LogControl"/>
 	</Grid>
 </Window>
-	  				
+
 ```
 ```cs
 // Neue Instanz von LogManager erstellen
@@ -27,10 +27,10 @@ _logManager = new LogManager();
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // LogControl als Loglistener hinzufügen.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
-..........................                  
+..........................
 // Testmeldungen aus der TraceSource senden:
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
 Trace.TraceError("Error test message");
-					
+
 ```

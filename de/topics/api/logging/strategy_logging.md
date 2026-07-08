@@ -32,7 +32,7 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
 
    ```cs
    var soundListener = new SoundLogListener("error.mp3");
-   						
+
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```

@@ -5,8 +5,8 @@ Der folgende Code zeigt, wie der [DukasCopyMessageAdapter](xref:StockSharp.Dukas
 ```cs
 var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

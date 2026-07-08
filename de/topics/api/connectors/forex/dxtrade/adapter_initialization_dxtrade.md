@@ -12,7 +12,7 @@ var messageAdapter = new DXtradeMessageAdapter(Connector.TransactionIdGenerator)
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...
-							
+
 ```
 
 ## Empfohlene Inhalte

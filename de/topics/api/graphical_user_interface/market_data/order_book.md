@@ -30,38 +30,38 @@ public class MarketDepthWindow
 	private readonly Connector _connector;
 	private readonly Security _security;
 	private Subscription _depthSubscription;
-	
+
 	public MarketDepthWindow(Connector connector, Security security)
 	{
 		InitializeComponent();
-		
+
 		_connector = connector;
 		_security = security;
-		
+
 		// Orderbuchformatierung konfigurieren
 		DepthCtrl.UpdateFormat(security);
-		
+
 		// Empfangsereignis für Orderbücher abonnieren
 		_connector.OrderBookReceived += OnMarketDepthReceived;
-		
+
 		// Subscription auf das Orderbuch für das ausgewählte Instrument erstellen
 		_depthSubscription = new Subscription(DataType.MarketDepth, security);
-		
+
 		// Subscription starten
 		_connector.Subscribe(_depthSubscription);
 	}
-	
+
 	// Handler für das Empfangsereignis von Orderbüchern
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
 		// Prüfen, ob das Orderbuch zu unserer Subscription gehört
 		if (subscription != _depthSubscription)
 			return;
-			
+
 		// Orderbuch im UI-Thread aktualisieren
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
-	
+
 	// Methode zum Abbestellen beim Schließen des Fensters
 	public void Unsubscribe()
 	{
@@ -82,51 +82,51 @@ public class MarketDepthWithOrdersWindow
 {
 	private readonly Connector _connector;
 	private readonly Security _security;
-	
+
 	public MarketDepthWithOrdersWindow(Connector connector, Security security)
 	{
 		InitializeComponent();
-		
+
 		_connector = connector;
 		_security = security;
-		
+
 		// Orderbuchformatierung konfigurieren
 		DepthCtrl.UpdateFormat(security);
-		
+
 		// Empfangsereignisse für Orderbücher und Orders abonnieren
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		_connector.OrderReceived += OnOrderReceived;
-		
+
 		// Subscription auf das Orderbuch erstellen
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
-		
+
 		// Bei Bedarf eine Subscription auf Orders erstellen
 		var ordersSubscription = new Subscription(DataType.Transactions, null);
 		_connector.Subscribe(ordersSubscription);
 	}
-	
+
 	// Handler für das Empfangsereignis von Orderbüchern
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
 		if (depth.SecurityId != _security.ToSecurityId())
 			return;
-			
+
 		// Orderbuch im UI-Thread aktualisieren
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
-	
+
 	// Handler für das Empfangsereignis von Orders
 	private void OnOrderReceived(Subscription subscription, Order order)
 	{
 		if (order.Security != _security)
 			return;
-			
+
 		// Order im Orderbuch anzeigen
 		this.GuiAsync(() => DepthCtrl.ProcessOrder(
-			order, 
-			order.Price, 
-			order.Balance, 
+			order,
+			order.Price,
+			order.Balance,
 			order.State));
 	}
 }
@@ -140,10 +140,10 @@ public (decimal? BestBid, decimal? BestAsk) GetBestPrices(IOrderBookMessage dept
 {
 	if (depth == null)
 		return (null, null);
-		
+
 	var bestBid = depth.GetBestBid()?.Price;
 	var bestAsk = depth.GetBestAsk()?.Price;
-	
+
 	return (bestBid, bestAsk);
 }
 
@@ -152,22 +152,22 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 {
 	if (depth.SecurityId != _security.ToSecurityId())
 		return;
-		
+
 	// Beste Preise abrufen
 	var (bestBid, bestAsk) = GetBestPrices(depth);
-	
+
 	// Spread berechnen und anzeigen
 	if (bestBid.HasValue && bestAsk.HasValue)
 	{
 		var spread = bestAsk.Value - bestBid.Value;
 		var spreadPercent = bestBid.Value > 0 ? spread / bestBid.Value * 100 : 0;
-		
-		this.GuiAsync(() => 
+
+		this.GuiAsync(() =>
 		{
 			SpreadLabel.Content = $"Spread: {spread:F2} ({spreadPercent:F2}%)";
 		});
 	}
-	
+
 	// Orderbuch aktualisieren
 	this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 }

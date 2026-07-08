@@ -16,5 +16,5 @@ Unten sehen Sie ein Codebeispiel zum Aufrufen eines Fensters für die Festlegung
 			Strategy.RiskManager.Rules.Clear();
 			Strategy.RiskManager.Rules.AddRange(wnd.Rules);
 		}
-	  				
+
 ```

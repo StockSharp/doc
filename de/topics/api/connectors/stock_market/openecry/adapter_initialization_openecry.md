@@ -3,8 +3,8 @@
 Der folgende Code zeigt, wie der [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
 
 ```cs
-Connector Connector = new Connector();				
-...				
+Connector Connector = new Connector();
+...
 var messageAdapter = new OpenECryMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Login = "<Your Login>",
@@ -13,8 +13,8 @@ var messageAdapter = new OpenECryMessageAdapter(Connector.TransactionIdGenerator
 	EnableOECLogging = true,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

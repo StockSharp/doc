@@ -20,7 +20,7 @@ ruleRegFailed
 	.Exclusive(ruleReg);
 // Order registrieren
 RegisterOrder(order);
-		
+
 ```
 
 Gegenseitig ausschließende Regeln können auch durch Hinzufügen zu [IMarketRule.ExclusiveRules](xref:StockSharp.Algo.IMarketRule.ExclusiveRules) erstellt werden:
@@ -41,5 +41,5 @@ ruleRegFailed
 	.Apply(this);
 // Order registrieren
 RegisterOrder(order);
-		
+
 ```

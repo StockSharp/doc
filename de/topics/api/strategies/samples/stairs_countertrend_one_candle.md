@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 
 	// Abonnement erstellen
 	var subscription = SubscribeCandles(CandleType);
-	
+
 	subscription
 		.Bind(ProcessCandle)
 		.Start();

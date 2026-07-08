@@ -5,10 +5,10 @@
 
 **CoinExchange** - Marktdatenanbieter für Echtzeitdaten zu Kryptowährungen.
 
-Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen. 
+Bevor Sie mit dem Schreiben von Handelsrobotern für diese Handelsplattform beginnen, empfehlen wir, die Links im Abschnitt [Connectors](../../connectors.md) zu lesen.
 
 > [!CAUTION]
-> Der Connector unterstützt nur den Marktdaten-Feed; Transaktionen werden nicht unterstützt. 
+> Der Connector unterstützt nur den Marktdaten-Feed; Transaktionen werden nicht unterstützt.
 
 ## Empfohlener Inhalt
 

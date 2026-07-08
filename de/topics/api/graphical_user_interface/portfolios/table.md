@@ -1,6 +1,6 @@
 # Tabelle
 
-[PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) ist eine Komponente, die den Status von Portfolios und Positionen anzeigt. 
+[PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) ist eine Komponente, die den Status von Portfolios und Positionen anzeigt.
 
 ![GUI PortfolioGrid](../../../../images/gui_portfoliogrid.png)
 
@@ -21,16 +21,16 @@ Das folgende Codebeispiel zeigt die Verwendung. Das Codebeispiel stammt aus *Sam
 		Title="{x:Static loc:LocalizedStrings.Portfolios}" Height="200" Width="470">
 	<xaml:PortfolioGrid x:Name="PortfolioGrid" x:FieldModifier="public" />
 </Window>
-	  				
+
 ```
 ```cs
-				  
+
 private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	.........................................................				
+	.........................................................
 	_connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 	.........................................................
 }
-	  				
+
 ```

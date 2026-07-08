@@ -5,8 +5,8 @@ Der folgende Code zeigt, wie der [TradierMessageAdapter](xref:StockSharp.Tradier
 ```cs
 var messageAdapter = new TradierMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

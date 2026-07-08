@@ -15,7 +15,7 @@ Das folgende Beispiel zeigt die Erstellung einer Order und ihre Registrierung an
 		Direction = Sides.Buy,
 	};
 	_connector.RegisterOrder(order);
-	
+
 ```
 
 ## Empfohlene Inhalte

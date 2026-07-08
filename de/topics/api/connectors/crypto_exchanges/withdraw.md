@@ -3,10 +3,10 @@
 Um Mittel von der Kryptobörse abzuheben, müssen Sie einen Auszahlungsauftrag erstellen und ihn im Connector wie einen normalen Auftrag registrieren. Für die Börse [Binance](binance.md) sieht der Code für eine Auszahlungsanfrage beispielsweise so aus:
 
 ```cs
-Connector Connector = new Connector();		
-...   
+Connector Connector = new Connector();
+...
 public void Withdraw()
-{         				
+{
 	var order = new Order
 	{
 		Type = OrderTypes.Conditional,
@@ -27,6 +27,6 @@ public void Withdraw()
 	_connector.RegisterOrder(order);
 }
 ...
-							
+
 ```
 

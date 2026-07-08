@@ -29,35 +29,35 @@ public class OrderLogWindow
 	private readonly Connector _connector;
 	private readonly Security _security;
 	private Subscription _orderLogSubscription;
-	
+
 	public OrderLogWindow(Connector connector, Security security)
 	{
 		InitializeComponent();
-		
+
 		_connector = connector;
 		_security = security;
-		
+
 		// Empfangsereignis für Orderlog-Einträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
-		
+
 		// Subscription auf das Orderlog erstellen
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
-		
+
 		// Subscription starten
 		_connector.Subscribe(_orderLogSubscription);
 	}
-	
+
 	// Handler für das Empfangsereignis von Orderlog-Einträgen
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		// Prüfen, ob der Logeintrag zu unserer Subscription gehört
 		if (subscription != _orderLogSubscription)
 			return;
-			
+
 		// Eintrag im UI-Thread zu OrderLogGrid hinzufügen
 		this.GuiAsync(() => OrderLogGrid.LogItems.Add(item));
 	}
-	
+
 	// Methode zum Abbestellen beim Schließen des Fensters
 	public void Unsubscribe()
 	{
@@ -87,10 +87,10 @@ public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 			To = to
 		}
 	};
-	
+
 	// Empfangsereignis für Orderlog-Einträge abonnieren
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
-	
+
 	// Subscription starten
 	_connector.Subscribe(orderLogSubscription);
 }
@@ -101,16 +101,16 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 	// Subscription-Typ prüfen
 	if (subscription.DataType != DataType.OrderLog)
 		return;
-		
+
 	// Nach Preis filtern (Beispiel)
 	if (item.Price < _minPrice || item.Price > _maxPrice)
 		return;
-		
+
 	// Eintrag im UI-Thread zu OrderLogGrid hinzufügen
-	this.GuiAsync(() => 
+	this.GuiAsync(() =>
 	{
 		OrderLogGrid.LogItems.Add(item);
-		
+
 		// Anzahl der angezeigten Einträge begrenzen
 		while (OrderLogGrid.LogItems.Count > _maxItems)
 			OrderLogGrid.LogItems.RemoveAt(0);
@@ -127,35 +127,35 @@ public class OrderLogAnalyzer
 	private readonly Connector _connector;
 	private readonly Security _security;
 	private readonly OrderLogGrid _orderLogGrid;
-	
+
 	// Zähler für die Analyse
 	private int _buyCount = 0;
 	private int _sellCount = 0;
 	private decimal _buyVolume = 0;
 	private decimal _sellVolume = 0;
-	
+
 	public OrderLogAnalyzer(Connector connector, Security security, OrderLogGrid orderLogGrid)
 	{
 		_connector = connector;
 		_security = security;
 		_orderLogGrid = orderLogGrid;
-		
+
 		// Empfangsereignis für Orderlog-Einträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
-		
+
 		// Subscription auf das Orderlog erstellen
 		var subscription = new Subscription(DataType.OrderLog, security);
-		
+
 		// Subscription starten
 		_connector.Subscribe(subscription);
 	}
-	
+
 	// Handler für das Empfangsereignis von Orderlog-Einträgen
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		if (item.SecurityId != _security.ToSecurityId())
 			return;
-			
+
 		// Orderlog-Eintrag analysieren
 		if (item.Side == Sides.Buy)
 		{
@@ -167,18 +167,18 @@ public class OrderLogAnalyzer
 			_sellCount++;
 			_sellVolume += item.Volume;
 		}
-		
+
 		// Oberfläche mit Analyseergebnissen aktualisieren
-		this.GuiAsync(() => 
+		this.GuiAsync(() =>
 		{
 			// Eintrag zu OrderLogGrid hinzufügen
 			_orderLogGrid.LogItems.Add(item);
-			
+
 			// Statistik aktualisieren
 			UpdateStatistics();
 		});
 	}
-	
+
 	// Statistik aktualisieren
 	private void UpdateStatistics()
 	{
@@ -186,13 +186,13 @@ public class OrderLogAnalyzer
 		SellCountLabel.Content = $"Sells: {_sellCount}";
 		BuyVolumeLabel.Content = $"Buy volume: {_buyVolume}";
 		SellVolumeLabel.Content = $"Sell volume: {_sellVolume}";
-		
+
 		// Ungleichgewicht berechnen
 		var volumeImbalance = _buyVolume - _sellVolume;
-		var imbalancePercent = (_buyVolume + _sellVolume) > 0 
-			? volumeImbalance / (_buyVolume + _sellVolume) * 100 
+		var imbalancePercent = (_buyVolume + _sellVolume) > 0
+			? volumeImbalance / (_buyVolume + _sellVolume) * 100
 			: 0;
-			
+
 		ImbalanceLabel.Content = $"Imbalance: {volumeImbalance:F2} ({imbalancePercent:F2}%)";
 	}
 }

@@ -26,11 +26,11 @@ Unten sind Codefragmente für die Verwendung gezeigt. Das Codebeispiel stammt au
 	xmlns:loc="clr-namespace:StockSharp.Localization;assembly=StockSharp.Localization"
 	xmlns:xaml="http://schemas.stocksharp.com/xaml"
 	Title="{x:Static loc:LocalizedStrings.Orders}" Height="410" Width="930">
-	<xaml:OrderGrid x:Name="OrderGrid" x:FieldModifier="public" 
-					OrderCanceling="OrderGrid_OnOrderCanceling" 
+	<xaml:OrderGrid x:Name="OrderGrid" x:FieldModifier="public"
+					OrderCanceling="OrderGrid_OnOrderCanceling"
 					OrderReRegistering="OrderGrid_OnOrderReRegistering" />
 </Window>
-	  				
+
 ```
 ```cs
 private readonly Connector _connector = new Connector();
@@ -38,18 +38,18 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	// Sonstiger Code während der Verbindung...
-	
+
 	// Ereignis für empfangene Orders abonnieren
-	_connector.OrderReceived += (subscription, order) => 
+	_connector.OrderReceived += (subscription, order) =>
 	{
 		// Orders zur Tabelle OrderGrid hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	};
-	
+
 	// Connector verbinden
 	_connector.Connect();
 }
-					
+
 // Storniert alle ausgewählten Orders
 private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 {
@@ -71,11 +71,11 @@ private void OrderGrid_OnOrderReRegistering(Order order)
 		Portfolios = new PortfolioDataSource(_connector),
 		Order = order.ReRegisterClone(newVolume: order.Balance)
 	};
-	
+
 	if (window.ShowModal(this))
 		_connector.ReRegisterOrder(order, window.Order);
 }
-	  				
+
 ```
 
 ## Arbeiten mit Orders über Subscriptions
@@ -94,10 +94,10 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	{
 		// Order zur Tabelle hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
-		
+
 		// Zusätzliche Orderverarbeitung
 		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
-		
+
 		// Wenn die Order in einem finalen Zustand ist, UI aktualisieren
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
@@ -118,7 +118,7 @@ private void CancelOrder(Order order)
 	try
 	{
 		_connector.CancelOrder(order);
-		
+
 		// Aktion protokollieren
 		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
 	}
@@ -134,7 +134,7 @@ private void CancelAllOrders()
 	var activeOrders = _ordersWindow.OrderGrid.Orders
 		.Where(o => o.State == OrderStates.Active)
 		.ToArray();
-		
+
 	foreach (var order in activeOrders)
 	{
 		CancelOrder(order);
@@ -153,17 +153,17 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 {
 	// Fehlerinformationen zu OrderGrid hinzufügen
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
-	
+
 	// Fehler protokollieren
 	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
-	
+
 	// Benutzer benachrichtigen
-	this.GuiAsync(() => 
+	this.GuiAsync(() =>
 	{
-		MessageBox.Show(this, 
-			$"Failed to register order: {fail.Error}", 
-			"Registration Error", 
-			MessageBoxButton.OK, 
+		MessageBox.Show(this,
+			$"Failed to register order: {fail.Error}",
+			"Registration Error",
+			MessageBoxButton.OK,
 			MessageBoxImage.Error);
 	});
 }

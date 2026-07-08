@@ -9,7 +9,7 @@
 - [PortfolioPickerWindow.Portfolios](xref:StockSharp.Xaml.PortfolioPickerWindow.Portfolios) - Liste der Portfolios.
 - [PortfolioPickerWindow.SelectedPortfolio](xref:StockSharp.Xaml.PortfolioPickerWindow.SelectedPortfolio) - das ausgewählte Portfolio.
 
-Unten ist ein Codebeispiel für die Verwendung. 
+Unten ist ein Codebeispiel für die Verwendung.
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -22,5 +22,5 @@ private void Button_Click(object sender, RoutedEventArgs e)
 		SelectedPortfolio = wnd.SelectedPortfolio;
 	}
 }
-	  				
+
 ```

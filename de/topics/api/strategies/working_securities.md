@@ -20,8 +20,8 @@ In der Basisklasse `Strategy` gibt die Methode eine leere Sammlung zurück. Für
 public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 {
 	// Liste der von der Strategie verwendeten Paare (Instrument, Datentyp) zurückgeben
-	return new[] 
-	{ 
+	return new[]
+	{
 		(Security, CandleType),
 		// Weitere Instrument-Datentyp-Paare, wenn die Strategie mehrere verwendet
 	};
@@ -43,24 +43,24 @@ Wenn die Methode `GetWorkingSecurities()` in Ihrer Strategie nicht überschriebe
 public class MySmaStrategy : Strategy
 {
 	private readonly StrategyParam<DataType> _candleType;
-	
+
 	public DataType CandleType
 	{
 		get => _candleType.Value;
 		set => _candleType.Value = value;
 	}
-	
+
 	public MySmaStrategy()
 	{
 		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
 	}
-	
+
 	// Methode für die korrekte Arbeit mit dem Designer überschreiben
 	public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 	{
 		return new[] { (Security, CandleType) };
 	}
-	
+
 	// Restlicher Strategiecode...
 }
 ```

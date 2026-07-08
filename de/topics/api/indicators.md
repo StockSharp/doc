@@ -9,7 +9,7 @@
    ```cs
    var longSma = new SimpleMovingAverage { Length = 80 };
    var shortSma = new SimpleMovingAverage { Length = 30 };
-   
+
    // Es wird empfohlen, Indikatoren zur Strategie-Sammlung hinzuzufügen
    Indicators.Add(longSma);
    Indicators.Add(shortSma);
@@ -23,7 +23,7 @@
        // Candle mit Indikatoren verarbeiten und Ergebnisse sofort speichern
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
-       
+
        // Ergebnisse für Handelsentscheidungen verwenden
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
@@ -46,23 +46,23 @@
        // Candle mit Indikatoren verarbeiten und Ergebnisse sofort speichern
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
-       
+
        // Im Chart zeichnen
        DrawCandlesAndIndicators(candle, longValue, shortValue);
-       
-       if (!IsFormedAndOnlineAndAllowTrading()) 
+
+       if (!IsFormedAndOnlineAndAllowTrading())
            return;
-           
+
        // Erhaltene Werte für den Vergleich verwenden
        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
-       
+
        // Prüfen, ob eine Kreuzung aufgetreten ist
-       if (isShortLessCurrent == isShortLessPrev) 
+       if (isShortLessCurrent == isShortLessPrev)
            return;
-       
+
        var volume = Volume + Math.Abs(Position);
-       
+
        // Handelsaktionen auf Basis des Signals
        if (isShortLessCurrent)
            SellMarket(volume);
@@ -86,11 +86,11 @@
        _longSma.Process(candle);
        _shortSma.Process(candle);
    }
-   
+
    // Später versuchen, Werte über GetCurrentValue() abzurufen
    var isShortLessThenLong = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
    ```
-   
+
    Bei diesem Ansatz erfolgt ein zusätzlicher Zugriff auf den Container historischer Indikatorwerte. Das führt zu Verzögerungen und stört das Streaming-Modell der Datenverarbeitung.
 
 6. Alle Indikatoren besitzen die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), die angibt, ob der Indikator einsatzbereit ist. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) besitzt beispielsweise eine Periode. Solange der Indikator nicht eine Anzahl von Candles verarbeitet hat, die der Indikatorperiode entspricht, gilt er als nicht einsatzbereit. Die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) ist dann `false`.
@@ -143,7 +143,7 @@ public class SmaStrategy : Strategy
 		{
 			InitChart();
 		}
-		
+
 		// Candles abonnieren
 		var subscription = new Subscription(_series.Value, Security);
 
@@ -160,12 +160,12 @@ public class SmaStrategy : Strategy
 		// Candle mit Indikatoren verarbeiten und Ergebnisse speichern
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
-		
+
 		// Im Chart zeichnen
 		DrawCandlesAndIndicators(candle, longValue, shortValue);
-		
+
 		// Handelsbedingungen prüfen
-		if (!IsFormedAndOnlineAndAllowTrading()) 
+		if (!IsFormedAndOnlineAndAllowTrading())
 			return;
 
 		// Aktuelle und vorherige Indikatorwerte vergleichen
@@ -173,7 +173,7 @@ public class SmaStrategy : Strategy
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
 		// Auf Kreuzung prüfen
-		if (isShortLessCurrent == isShortLessPrev) 
+		if (isShortLessCurrent == isShortLessPrev)
 			return;
 
 		var volume = Volume + Math.Abs(Position);

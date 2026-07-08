@@ -43,7 +43,7 @@ Die T3 Moving Average-Berechnung erfolgt in mehreren Schritten:
    c2 = 3 * VolumeFactor^2 + 3 * VolumeFactor^3
    c3 = -6 * VolumeFactor^2 - 3 * VolumeFactor - 3 * VolumeFactor^3
    c4 = 1 + 3 * VolumeFactor + VolumeFactor^3 + 3 * VolumeFactor^2
-   
+
    T3 = c1 * EMA6 + c2 * EMA5 + c3 * EMA4 + c4 * EMA3
    ```
 

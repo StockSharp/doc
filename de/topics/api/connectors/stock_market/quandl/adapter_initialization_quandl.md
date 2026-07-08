@@ -5,8 +5,8 @@ Der folgende Code zeigt, wie der [QuandlMessageAdapter](xref:StockSharp.Quandl.Q
 ```cs
 var messageAdapter = new QuandlMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

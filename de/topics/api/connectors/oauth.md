@@ -9,7 +9,7 @@ ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvid
 
 // Dienstanbieter für den Zugriff auf StockSharp WebAPI verbinden.
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
-							
+
 // OAuth-Autorisierungsdienst, der von Connectoren verwendet wird.
 ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 //ConfigManager.RegisterService<IOAuthProvider>(new WebApiOAuthProvider());

@@ -55,7 +55,7 @@ Die Laguerre RSI-Berechnung umfasst mehrere Schritte:
    ```
    LRSI = UP / (UP + DN)
    ```
-   
+
    Wenn (UP + DN) Null ist, wird LRSI auf den vorherigen Wert gesetzt.
 
 Dabei gilt:

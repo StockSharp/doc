@@ -19,21 +19,21 @@ private void InitializeChart()
 	// Chartbereich erstellen
 	_area = new ChartArea();
 	_chart.Areas.Add(_area);
-	
+
 	// Chartelement erstellen, das Kerzen darstellt
 	_candlesElem = new ChartCandleElement();
 	_area.Elements.Add(_candlesElem);
-	
+
 	// Chartelement erstellen, das den Indikator darstellt
 	_longMaElem = new ChartIndicatorElement
 	{
 		Title = "Long"
 	};
 	_area.Elements.Add(_longMaElem);
-	
+
 	// Indikator erstellen
 	_sma = new SimpleMovingAverage() { Length = 80 };
-	
+
 	// Ereignis für den Kerzenempfang abonnieren
 	_connector.CandleReceived += OnCandleReceived;
 }
@@ -46,7 +46,7 @@ private void SubscribeToCandles()
 		DataType.TimeFrame(_timeFrame),
 		_security)
 	{
-		MarketData = 
+		MarketData =
 		{
 			// Historische Daten für 30 Tage anfordern
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
@@ -55,7 +55,7 @@ private void SubscribeToCandles()
 			IsFinishedOnly = true
 		}
 	};
-	
+
 	// Subscription starten
 	_connector.Subscribe(_candleSubscription);
 }
@@ -66,21 +66,21 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Prüfen, ob die Kerze zu unserer Subscription gehört
 	if (subscription != _candleSubscription)
 		return;
-	
+
 	// Kerzenstatus prüfen
 	if (candle.State != CandleStates.Finished)
 		return;
-	
+
 	// Kerze mit dem Indikator verarbeiten
 	var longValue = _sma.Process(candle);
-	
+
 	// Daten zum Zeichnen erstellen
 	var data = new ChartDrawData();
 	data
 		.Group(candle.OpenTime)
 			.Add(_candlesElem, candle)
 			.Add(_longMaElem, longValue);
-	
+
 	// Im UI-Thread auf dem Chart zeichnen
 	this.GuiAsync(() => _chart.Draw(data));
 }
@@ -121,49 +121,49 @@ private void InitializeChartWithMultipleIndicators()
 	// Hauptbereich für Kerzen und gleitende Durchschnitte erstellen
 	_mainArea = new ChartArea();
 	_chart.Areas.Add(_mainArea);
-	
+
 	// Bereich für RSI erstellen
 	_indicatorArea = new ChartArea();
 	_chart.Areas.Add(_indicatorArea);
-	
+
 	// Chartelemente erstellen
 	_candlesElem = new ChartCandleElement();
 	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (short)" };
 	_longSmaElem = new ChartIndicatorElement { Title = "SMA (long)" };
 	_rsiElem = new ChartIndicatorElement { Title = "RSI" };
-	
+
 	// Elementfarben festlegen
 	_shortSmaElem.Color = Colors.Red;
 	_longSmaElem.Color = Colors.Blue;
 	_rsiElem.Color = Colors.Green;
-	
+
 	// Elemente zu ihren jeweiligen Bereichen hinzufügen
 	_mainArea.Elements.Add(_candlesElem);
 	_mainArea.Elements.Add(_shortSmaElem);
 	_mainArea.Elements.Add(_longSmaElem);
 	_indicatorArea.Elements.Add(_rsiElem);
-	
+
 	// Indikatoren erstellen
 	_shortSma = new SimpleMovingAverage { Length = 9 };
 	_longSma = new SimpleMovingAverage { Length = 20 };
 	_rsi = new RelativeStrengthIndex { Length = 14 };
-	
+
 	// Ereignis für den Kerzenempfang abonnieren
 	_connector.CandleReceived += OnCandleReceivedMultipleIndicators;
-	
+
 	// Subscription auf Kerzen erstellen
 	_candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security)
 	{
-		MarketData = 
+		MarketData =
 		{
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 			To = DateTime.Now,
 			IsFinishedOnly = true
 		}
 	};
-	
+
 	// Subscription starten
 	_connector.Subscribe(_candleSubscription);
 }
@@ -174,15 +174,15 @@ private void OnCandleReceivedMultipleIndicators(Subscription subscription, ICand
 	// Prüfen, ob die Kerze zu unserer Subscription gehört
 	if (subscription != _candleSubscription)
 		return;
-	
+
 	if (candle.State != CandleStates.Finished)
 		return;
-	
+
 	// Kerze mit Indikatoren verarbeiten
 	var shortSmaValue = _shortSma.Process(candle);
 	var longSmaValue = _longSma.Process(candle);
 	var rsiValue = _rsi.Process(candle);
-	
+
 	// Daten zum Zeichnen erstellen
 	var data = new ChartDrawData();
 	data
@@ -191,7 +191,7 @@ private void OnCandleReceivedMultipleIndicators(Subscription subscription, ICand
 			.Add(_shortSmaElem, shortSmaValue)
 			.Add(_longSmaElem, longSmaValue)
 			.Add(_rsiElem, rsiValue);
-	
+
 	// Im UI-Thread auf dem Chart zeichnen
 	this.GuiAsync(() => _chart.Draw(data));
 }

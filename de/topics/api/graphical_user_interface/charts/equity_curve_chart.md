@@ -18,7 +18,7 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
            Title="{x:Static loc:LocalizedStrings.XamlStr564}" Height="460" Width="604"
    		xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
    		xmlns:charting="http://schemas.stocksharp.com/xaml">
-       
+
    	<Grid>
    		<Grid.ColumnDefinitions>
    			<ColumnDefinition Width="85*" />
@@ -44,7 +44,7 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
    			<ProgressBar x:Name="TestingProcess" Grid.Column="1" Grid.Row="0" />
    			<Button x:Name="Report" Content="{x:Static loc:LocalizedStrings.XamlStr432}" Grid.Row="0" Width="75" IsEnabled="False" Click="ReportClick" Grid.Column="2" Margin="0,0,0,-1" />
    		</Grid>
-   		
+
    		<Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0">
    			<Grid>
    				<Grid.ColumnDefinitions>
@@ -57,7 +57,7 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
    		</Grid>
    	</Grid>
    </Window>
-   	  				
+
    ```
 2. Im Code des Hauptfensters erstellen wir eine Datenquelle zum Zeichnen des Diagramms mit der Methode [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,Ecng.Drawing.DrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [Ecng.Drawing.DrawStyles](xref:Ecng.Drawing.DrawStyles) style, [System.Guid](xref:System.Guid) id **)**.
 
@@ -67,7 +67,7 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
    private ChartBandElement _commissionCurve;
 
    .................................................
-                 		
+
    public MainWindow()
    {
    	InitializeComponent();
@@ -78,7 +78,7 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
 	_unrealizedPnL = (ChartBandElement)EquityCurveChart.CreateCurve("unrealizedPnL", Colors.Black, DrawStyles.Line);
 	_commissionCurve = (ChartBandElement)EquityCurveChart.CreateCurve("commissionCurve", Colors.Red, DrawStyles.Line);
    }
-   	  				
+
    ```
 3. Wenn sich der PnL-Wert der Strategie ändert, fügen wir der Datenquelle Daten hinzu. In diesem Fall verwenden wir die spezielle Klasse [ChartDrawData](xref:StockSharp.Xaml.Charting.ChartDrawData).
 
@@ -90,8 +90,8 @@ Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollstä
 		.Add(_pnl, _strategy.PnL)
 		.Add(_unrealizedPnL, _strategy.PnLManager.UnrealizedPnL ?? 0)
 		.Add(_commissionCurve, _strategy.Commission ?? 0);
-	
+
 	EquityCurveChart.Draw(data);
    };
-   	  				
+
    ```

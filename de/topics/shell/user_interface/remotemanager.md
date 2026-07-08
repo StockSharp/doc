@@ -58,7 +58,7 @@ Um Ihren Befehl in der Strategie festzulegen, müssen Sie die Methode [Strategy.
 
 ```cs
 public virtual void ApplyCommand(CommandMessage cmdMsg)
-		
+
 ```
 
 Die Basisklasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) steuert nur Start und Stopp der Strategie.

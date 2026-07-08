@@ -7,21 +7,21 @@ Manchmal sollen mehrere Regeln in einen Aussetzungsmodus versetzt werden, damit 
 - Außerhalb der Strategie:
 
   ```cs
-  MarketRuleHelper.SuspendRules(() =>	
+  MarketRuleHelper.SuspendRules(() =>
   {
   	order
   		.WhenRegistered(Connector)
   		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
   		.Once()
   		.Apply(this);
-  	
+
   	order
   		.WhenCanceled(Connector)
   		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
   		.Once()
   		.Apply(this);
   });
-  							
+
   ```
 - Innerhalb der Strategie:
 
@@ -29,7 +29,7 @@ Manchmal sollen mehrere Regeln in einen Aussetzungsmodus versetzt werden, damit 
   class FirstStrategy : Strategy
   {
   	...
-  	
+
          this.SuspendRules(() =>
          {
   		_connector
@@ -44,5 +44,5 @@ Manchmal sollen mehrere Regeln in einen Aussetzungsmodus versetzt werden, damit 
      }
       ...
   }
-  							
+
   ```

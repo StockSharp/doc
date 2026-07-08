@@ -5,8 +5,8 @@ Der folgende Code zeigt, wie der [XigniteMessageAdapter](xref:StockSharp.Xignite
 ```cs
 var messageAdapter = new XigniteMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
+...
+
 ```
 
 ## Empfohlene Inhalte

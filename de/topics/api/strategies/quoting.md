@@ -111,7 +111,7 @@ protected override void OnStopped()
 	// Ressourcen des aktuellen Prozessors freigeben
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
-	
+
 	base.OnStopped();
 }
 ```

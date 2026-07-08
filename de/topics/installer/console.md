@@ -7,7 +7,7 @@ Die Anwendung `Installer.Console` ist eine plattformübergreifende Version des S
 1. Installieren Sie das .NET 6 SDK oder die Runtime für Ihre Plattform.
 2. Laden Sie `StockSharp.Installer.Console.zip` von der [Download-Seite](https://stocksharp.com/products/download/) herunter.
 3. Entpacken Sie das Archiv und starten Sie das Dienstprogramm über die Befehlszeile:
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```

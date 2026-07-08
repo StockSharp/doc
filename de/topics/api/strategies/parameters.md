@@ -95,7 +95,7 @@ public class EvenNumberAttribute : ValidationAttribute
 	{
 		if (value is int intValue)
 			return intValue % 2 == 0;
-		
+
 		return false;
 	}
 }
@@ -157,7 +157,7 @@ protected override void OnStarted2(DateTime time)
 
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// ...
 }
 ```
@@ -170,14 +170,14 @@ Parameterwerte werden in der Basisklasse [Strategy](xref:StockSharp.Algo.Strateg
 public override void Save(SettingsStorage settings)
 {
 	base.Save(settings);
-	
+
 	// Zusätzliche Speicherlogik...
 }
 
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings);
-	
+
 	// Zusätzliche Ladelogik...
 }
 ```
@@ -221,13 +221,13 @@ public class SmaStrategy : Strategy
 							.SetDisplay("Long SMA length", string.Empty, "Base settings")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
-		
+
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
 							.SetDisplay("Short SMA length", string.Empty, "Base settings")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
-		
+
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("Series", string.Empty, "Base settings");
 	}
