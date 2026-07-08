@@ -1,12 +1,12 @@
 # PPO
 
-**Percentage Price Oscillator (PPO)** は MACD に似たテクニカルインジケーターですが、2 つの指数移動平均の差を絶対値ではなくパーセンテージで表します。
+**価格パーセントオシレーター (PPO)** は MACD に似たテクニカルインジケーターですが、2 つの指数移動平均の差を絶対値ではなくパーセンテージで表します。
 
 このインジケーターを使用するには、[PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator) クラスを使用する必要があります。
 
 ## 説明
 
-Percentage Price Oscillator (PPO) は、よりよく知られている MACD (Moving Average Convergence Divergence) インジケーターの変形です。主な違いは、PPO が 2 つの指数移動平均の差を絶対単位ではなくパーセンテージで表すことです。これにより、価格水準の異なる複数の銘柄を比較する場合や、価格が大きく変化した単一の銘柄を長期間にわたって分析する場合に、PPO は特に有用です。
+価格パーセントオシレーター (PPO) は、よりよく知られている MACD（移動平均収束拡散）インジケーターの変形です。主な違いは、PPO が 2 つの指数移動平均の差を絶対単位ではなくパーセンテージで表すことです。これにより、価格水準の異なる複数の銘柄を比較する場合や、価格が大きく変化した単一の銘柄を長期間にわたって分析する場合に、PPO は特に有用です。
 
 PPO は 3 つの構成要素で構成されます。
 1. **PPO ライン** - 高速 EMA と低速 EMA の差をパーセンテージで表したもの
@@ -23,7 +23,7 @@ PPO インジケーターはゼロラインを中心に振動し、正の値は�
 
 ## 計算
 
-Percentage Price Oscillator の計算は、次の手順で行います。
+PPO の計算は、次の手順で行います。
 
 1. 短期および長期の指数移動平均を計算します。
    ```
@@ -54,7 +54,7 @@ Percentage Price Oscillator の計算は、次の手順で行います。
 
 ## 解釈
 
-Percentage Price Oscillator は、次のように解釈できます。
+PPO は、次のように解釈できます。
 
 1. **ゼロラインのクロスオーバー**:
    - PPO ラインがゼロラインを下から上へ交差する場合、強気シグナルと見なせます
@@ -91,7 +91,7 @@ Percentage Price Oscillator は、次のように解釈できます。
 
 [MACD](macd.md)
 [EMA](ema.md)
-[Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
-[Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+[PPO シグナル](percentage_price_oscillator_signal.md)
+[PPO ヒストグラム](percentage_price_oscillator_histogram.md)
 [Percentage Volume Oscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)

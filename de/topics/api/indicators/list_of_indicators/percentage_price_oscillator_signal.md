@@ -1,12 +1,12 @@
-# Percentage Price Oscillator Signal
+# PPO-Signal
 
-Der **Percentage Price Oscillator Signal (PPOS)**-Indikator erweitert den Standard-Percentage Price Oscillator um die zugehörige Signalleitung, die normalerweise zum Filtern von Trades verwendet wird.
+Der **PPO-Signalindikator (PPOS)** erweitert den Standard-PPO um die zugehörige Signallinie, die normalerweise zum Filtern von Trades verwendet wird.
 
 Um den Indikator zu verwenden, verwenden Sie die Klasse [PercentagePriceOscillatorSignal](xref:StockSharp.Algo.Indicators.PercentagePriceOscillatorSignal).
 
 ## Beschreibung
 
-Der Percentage Price Oscillator (PPO) misst die prozentuale Differenz zwischen zwei exponentiellen gleitenden Durchschnitten (EMAs). Die Signalversion konzentriert sich auf die Glättung der PPO-Linie mit einem zusätzlichen EMA und hilft Händlern, nur auf anhaltendere Impulsverschiebungen zu reagieren.
+Der prozentuale Preisoszillator (PPO) misst die prozentuale Differenz zwischen zwei exponentiellen gleitenden Durchschnitten (EMAs). Die Signalversion konzentriert sich auf die Glättung der PPO-Linie mit einem zusätzlichen EMA und hilft Händlern, nur auf anhaltendere Impulsverschiebungen zu reagieren.
 
 Der Indikator besteht aus folgenden Komponenten:
 
@@ -38,5 +38,5 @@ Signal = EMA(PPO, SignalPeriod)
 
 ## Siehe auch
 
-- [Percentage Price Oscillator](percentage_price_oscillator.md)
-- [Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+- [PPO](percentage_price_oscillator.md)
+- [PPO-Histogramm](percentage_price_oscillator_histogram.md)

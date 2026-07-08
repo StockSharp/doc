@@ -1,19 +1,19 @@
 # PPO
 
-**Percentage Price Oscillator (PPO)** é um indicador técnico semelhante ao MACD, mas expressa a diferença entre duas médias móveis exponenciais como percentagem, em vez de valores absolutos.
+**Oscilador percentual de preço (PPO)** é um indicador técnico semelhante ao MACD, mas expressa a diferença entre duas médias móveis exponenciais como percentagem, em vez de valores absolutos.
 
 Para usar o indicador, é necessário usar a classe [PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator).
 
 ## Descrição
 
-O Percentage Price Oscillator (PPO) é uma variação do indicador mais conhecido MACD (Moving Average Convergence Divergence). A principal diferença é que o PPO expressa a diferença entre duas médias móveis exponenciais como percentagem, em vez de unidades absolutas. Isto torna o PPO particularmente útil ao comparar instrumentos diferentes com níveis de preço distintos ou ao analisar um único instrumento durante um período longo em que o seu preço mudou significativamente.
+O oscilador percentual de preço (PPO) é uma variação do indicador mais conhecido MACD (Convergência/Divergência de Médias Móveis). A principal diferença é que o PPO expressa a diferença entre duas médias móveis exponenciais como percentagem, em vez de unidades absolutas. Isto torna o PPO particularmente útil ao comparar instrumentos diferentes com níveis de preço distintos ou ao analisar um único instrumento durante um período longo em que o seu preço mudou significativamente.
 
 O PPO consiste em três componentes:
 1. **Linha PPO** - diferença entre a EMA rápida e a lenta, expressa como percentagem
 2. **Linha de sinal** - EMA da linha PPO
 3. **Histograma** - diferença entre a linha PPO e a linha de sinal
 
-O indicador PPO oscila em torno da linha zero, onde valores positivos indicam um sentimento de mercado bullish e valores negativos indicam um sentimento bearish. A magnitude do desvio em relação a zero reflete a força da tendência atual.
+O indicador PPO oscila em torno da linha zero, onde valores positivos indicam um sentimento de mercado de alta e valores negativos indicam um sentimento de baixa. A magnitude do desvio em relação a zero reflete a força da tendência atual.
 
 ## Parâmetros
 
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Percentage Price Oscillator envolve os seguintes passos:
+O cálculo do PPO envolve os seguintes passos:
 
 1. Calcular as médias móveis exponenciais curta e longa:
    ```
@@ -54,19 +54,19 @@ Onde:
 
 ## Interpretação
 
-O Percentage Price Oscillator pode ser interpretado da seguinte forma:
+O PPO pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento da linha PPO da linha zero de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento da linha PPO da linha zero de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento da linha PPO da linha zero de baixo para cima pode ser visto como um sinal de alta
+   - O cruzamento da linha PPO da linha zero de cima para baixo pode ser visto como um sinal de baixa
 
 2. **Cruzamentos da linha de sinal**:
-   - O cruzamento da linha PPO da linha de sinal de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento da linha PPO da linha de sinal de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento da linha PPO da linha de sinal de baixo para cima pode ser visto como um sinal de alta
+   - O cruzamento da linha PPO da linha de sinal de cima para baixo pode ser visto como um sinal de baixa
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o PPO forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o PPO forma um máximo mais baixo
+   - Divergência de alta: o preço forma um novo mínimo, enquanto o PPO forma um mínimo mais alto
+   - Divergência de baixa: o preço forma um novo máximo, enquanto o PPO forma um máximo mais baixo
 
 4. **Sobrecompra/Sobrevenda**:
    - Valores positivos extremamente elevados do PPO podem indicar condições de sobrecompra no mercado
@@ -83,7 +83,7 @@ O Percentage Price Oscillator pode ser interpretado da seguinte forma:
 
 7. **Filtragem de sinais**:
    - Os sinais de cruzamento da linha de sinal são mais fiáveis quando o PPO está alinhado com a tendência principal
-   - Por exemplo, sinais bullish são mais fiáveis quando o PPO é positivo, e sinais bearish são mais fiáveis quando o PPO é negativo
+   - Por exemplo, sinais de alta são mais fiáveis quando o PPO é positivo, e sinais de baixa são mais fiáveis quando o PPO é negativo
 
 ![indicator_percentage_price_oscillator](../../../../images/indicator_percentage_price_oscillator.png)
 
@@ -91,7 +91,7 @@ O Percentage Price Oscillator pode ser interpretado da seguinte forma:
 
 [MACD](macd.md)
 [EMA](ema.md)
-[Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
-[Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+[Sinal do PPO](percentage_price_oscillator_signal.md)
+[Histograma do PPO](percentage_price_oscillator_histogram.md)
 [Percentage Volume Oscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)

@@ -1,12 +1,12 @@
-# Percentage Price Oscillator Histogram
+# PPO ヒストグラム
 
-**Percentage Price Oscillator Histogram (PPOH)** は、PPO ラインとそのシグナルラインの距離をヒストグラムとして表示し、トレーダーがモメンタムのバランスを即座に評価できるようにします。
+**PPO ヒストグラム (PPOH)** は、PPO ラインとそのシグナルラインの距離をヒストグラムとして表示し、トレーダーがモメンタムのバランスを即座に評価できるようにします。
 
 このインジケーターを使用するには、[PercentagePriceOscillatorHistogram](xref:StockSharp.Algo.Indicators.PercentagePriceOscillatorHistogram) クラスを使用します。
 
 ## 説明
 
-PPO ヒストグラムは、標準の Percentage Price Oscillator (PPO) から派生したものです。PPO ラインとシグナルラインの両方を描画する代わりに、その差をゼロ水準の周囲のバーとして可視化します。正のバーは PPO ラインがシグナルラインを上回っていること（強気モメンタム）を示し、負のバーは PPO ラインがシグナルラインを下回っていること（弱気モメンタム）を示します。
+PPO ヒストグラムは、標準の PPO から派生したものです。PPO ラインとシグナルラインの両方を描画する代わりに、その差をゼロ水準の周囲のバーとして可視化します。正のバーは PPO ラインがシグナルラインを上回っていること（強気モメンタム）を示し、負のバーは PPO ラインがシグナルラインを下回っていること（弱気モメンタム）を示します。
 
 ヒストグラムは PPO とシグナルラインのスプレッドの変化に素早く反応するため、トレンドの強さの早期変化を見つけたり、モメンタムのダイバージェンスを特定したりするのに適しています。
 
@@ -31,5 +31,5 @@ Histogram = PPO - Signal
 
 ## 関連項目
 
-- [Percentage Price Oscillator](percentage_price_oscillator.md)
-- [Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
+- [PPO](percentage_price_oscillator.md)
+- [PPO シグナル](percentage_price_oscillator_signal.md)

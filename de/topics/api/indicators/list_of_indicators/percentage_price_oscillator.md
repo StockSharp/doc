@@ -1,12 +1,12 @@
 # PPO
 
-**Percentage Price Oscillator (PPO)** ist ein technischer Indikator ähnlich wie MACD, der jedoch die Differenz zwischen zwei exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht als absolute Werte ausdrückt.
+**Prozentualer Preisoszillator (PPO)** ist ein technischer Indikator ähnlich wie MACD, der jedoch die Differenz zwischen zwei exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht als absolute Werte ausdrückt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator) verwenden.
 
 ## Beschreibung
 
-Der Percentage Price Oscillator (PPO) ist eine Variante des bekannteren Indikators MACD (Moving Average Convergence Divergence). Der Hauptunterschied besteht darin, dass PPO die Differenz zwischen zwei exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht in absoluten Einheiten ausdrückt. Dies macht PPO besonders nützlich, wenn Sie verschiedene Instrumente mit unterschiedlichen Preisniveaus vergleichen oder ein einzelnes Instrument über einen langen Zeitraum hinweg analysieren, wenn sich sein Preis erheblich geändert hat.
+Der prozentuale Preisoszillator (PPO) ist eine Variante des bekannteren Indikators MACD (Konvergenz/Divergenz gleitender Durchschnitte). Der Hauptunterschied besteht darin, dass PPO die Differenz zwischen zwei exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht in absoluten Einheiten ausdrückt. Dies macht PPO besonders nützlich, wenn Sie verschiedene Instrumente mit unterschiedlichen Preisniveaus vergleichen oder ein einzelnes Instrument über einen langen Zeitraum hinweg analysieren, wenn sich sein Preis erheblich geändert hat.
 
 PPO besteht aus drei Komponenten:
 1. **PPO-Linie** – Differenz zwischen schnellem und langsamem EMA, ausgedrückt als Prozentsatz
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Percentage Price Oscillator-Berechnung umfasst die folgenden Schritte:
+Die PPO-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte:
    ```
@@ -54,7 +54,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Percentage Price Oscillator kann wie folgt interpretiert werden:
+Der PPO kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Die PPO-Linie, die die Nulllinie von unten nach oben kreuzt, kann als bullisches Signal angesehen werden
@@ -91,7 +91,7 @@ Der Percentage Price Oscillator kann wie folgt interpretiert werden:
 
 [MACD](macd.md)
 [EMA](ema.md)
-[Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
-[Percentage Price Oscillator Histogram](percentage_price_oscillator_histogram.md)
+[PPO-Signal](percentage_price_oscillator_signal.md)
+[PPO-Histogramm](percentage_price_oscillator_histogram.md)
 [Percentage Volume Oscillator](percentage_volume_oscillator.md)
 [TRIX](trix.md)

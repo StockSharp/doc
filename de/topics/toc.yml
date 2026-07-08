@@ -1890,9 +1890,9 @@
         href: api/indicators/list_of_indicators/peak.md
       - name: PPO
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
-      - name: Percentage Price Oscillator Signal
+      - name: PPO-Signal
         href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
-      - name: Percentage Price Oscillator Histogram
+      - name: PPO-Histogramm
         href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
       - name: PVO
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md

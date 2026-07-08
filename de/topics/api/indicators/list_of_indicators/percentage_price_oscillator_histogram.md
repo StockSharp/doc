@@ -1,12 +1,12 @@
-# Percentage Price Oscillator Histogram
+# PPO-Histogramm
 
-**Percentage Price Oscillator Histogram (PPOH)** zeigt den Abstand zwischen der PPO-Linie und ihrer Signallinie als Histogramm an und hilft Händlern so, das Momentum-Gleichgewicht sofort zu beurteilen.
+**PPO-Histogramm (PPOH)** zeigt den Abstand zwischen der PPO-Linie und ihrer Signallinie als Histogramm an und hilft Händlern so, das Momentum-Gleichgewicht sofort zu beurteilen.
 
 Um den Indikator zu verwenden, verwenden Sie die Klasse [PercentagePriceOscillatorHistogram](xref:StockSharp.Algo.Indicators.PercentagePriceOscillatorHistogram).
 
 ## Beschreibung
 
-Das PPO-Histogramm ist vom Standard-Histogramm Percentage Price Oscillator (PPO) abgeleitet. Anstatt sowohl die PPO- als auch die Signallinien darzustellen, werden deren Differenz als Balken um den Nullpegel herum visualisiert. Positive Balken zeigen an, dass die PPO-Linie über der Signallinie liegt (bullisches Momentum), während negative Balken zeigen, dass die PPO-Linie unter der Signallinie liegt (bärisches Momentum).
+Das PPO-Histogramm ist vom Standard-PPO abgeleitet. Anstatt sowohl die PPO- als auch die Signallinie darzustellen, wird deren Differenz als Balken um den Nullpegel herum visualisiert. Positive Balken zeigen an, dass die PPO-Linie über der Signallinie liegt (bullisches Momentum), während negative Balken zeigen, dass die PPO-Linie unter der Signallinie liegt (bärisches Momentum).
 
 Das Histogramm reagiert schnell auf Änderungen in der Spanne zwischen PPO und der Signallinie und eignet sich daher zum Erkennen früher Verschiebungen der Trendstärke oder zum Erkennen von Momentumdivergenzen.
 
@@ -31,5 +31,5 @@ Werte über Null verdeutlichen den Aufwärtsdruck, während Werte unter Null den
 
 ## Siehe auch
 
-- [Percentage Price Oscillator](percentage_price_oscillator.md)
-- [Percentage Price Oscillator Signal](percentage_price_oscillator_signal.md)
+- [PPO](percentage_price_oscillator.md)
+- [PPO-Signal](percentage_price_oscillator_signal.md)
