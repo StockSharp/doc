@@ -1,4 +1,4 @@
-# Black-Scholes
+# 布莱克-斯科尔斯
 
 ![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
 

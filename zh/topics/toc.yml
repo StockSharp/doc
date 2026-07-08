@@ -1636,7 +1636,7 @@
       href: api/instruments/identifier_@all.md
     - name: 连续期货
       href: api/instruments/continuous_futures.md
-    - name: 目录
+    - name: 指数
       href: api/instruments/index.md
     - name: 交易品种连续合约
       href: api/instruments/volume_continuous_security.md

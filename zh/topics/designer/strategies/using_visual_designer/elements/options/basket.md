@@ -26,4 +26,4 @@
 
 ## 另请参阅
 
-[Black-Scholes](black_scholes.md)
+[布莱克-斯科尔斯](black_scholes.md)

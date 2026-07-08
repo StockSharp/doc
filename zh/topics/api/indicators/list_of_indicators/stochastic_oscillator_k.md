@@ -1,12 +1,12 @@
-# Stochastic Oscillator %K
+# 随机振荡器 %K
 
-**Stochastic Oscillator %K** 是随机振荡器的一部分，用于显示当前收盘价相对于所选周期价格区间的位置。该指标由 George Lane 于 20 世纪 50 年代末提出。
+**随机振荡器 %K** 是随机振荡器的一部分，用于显示当前收盘价相对于所选周期价格区间的位置。该指标由 George Lane 于 20 世纪 50 年代末提出。
 
 要使用该指标，请使用 [StochasticK](xref:StockSharp.Algo.Indicators.StochasticK) 类。
 
 ## 描述
 
-Stochastic Oscillator %K 基于这样一个观察：在上升趋势中，收盘价通常更接近价格区间的上边界；在下降趋势中，收盘价通常更接近下边界。
+随机振荡器 %K 基于这样一个观察：在上升趋势中，收盘价通常更接近价格区间的上边界；在下降趋势中，收盘价通常更接近下边界。
 
 %K 是随机振荡器的“快线”，也是计算 %D 线的主要组成部分。%D 线是 %K 的移动平均。
 

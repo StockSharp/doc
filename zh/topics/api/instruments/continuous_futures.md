@@ -1,4 +1,4 @@
-# Continuous Futures
+# 连续期货
 
 [ExpirationContinuousSecurity](xref:StockSharp.Algo.ExpirationContinuousSecurity) 是一种连续交易品种，通常是期货合约，内部包含会到期的交易品种。
 

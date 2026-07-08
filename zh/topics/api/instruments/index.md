@@ -1,4 +1,4 @@
-# Index
+# 指数
 
 [IndexSecurity](xref:StockSharp.Algo.IndexSecurity) 是由多个交易品种构建的指数。例如，它可用于定义套利或配对交易中的价差。它有以下实现：
 
