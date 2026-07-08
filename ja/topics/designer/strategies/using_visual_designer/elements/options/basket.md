@@ -26,4 +26,4 @@
 
 ## 関連項目
 
-[Black-Scholes](black_scholes.md)
+[ブラック・ショールズ](black_scholes.md)

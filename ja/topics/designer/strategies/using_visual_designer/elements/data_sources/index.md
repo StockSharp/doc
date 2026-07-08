@@ -1,4 +1,4 @@
-# Index
+# インデックス
 
 ![Designer Index 00](../../../../../../images/designer_index_00.png)
 

@@ -24,4 +24,4 @@
 
 ## 関連項目
 
-[Index](index.md)
+[インデックス](index.md)

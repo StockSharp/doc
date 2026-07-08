@@ -1,4 +1,4 @@
-# Hedging
+# ヘッジング
 
 ![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
 

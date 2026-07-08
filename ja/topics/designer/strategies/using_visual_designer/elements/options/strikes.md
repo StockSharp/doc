@@ -1,4 +1,4 @@
-# Strikes
+# 権利行使価格
 
 ![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
 

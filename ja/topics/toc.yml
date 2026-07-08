@@ -157,7 +157,7 @@
             href: designer/strategies/using_visual_designer/elements/data_sources/level_1.md
           - name: ティック
             href: designer/strategies/using_visual_designer/elements/data_sources/ticks.md
-          - name: Index
+          - name: インデックス
             href: designer/strategies/using_visual_designer/elements/data_sources/index.md
           - name: 変数
             href: designer/strategies/using_visual_designer/elements/data_sources/variable.md
@@ -223,15 +223,15 @@
             href: designer/strategies/using_visual_designer/elements/options/chart_positions.md
           - name: グリークス
             href: designer/strategies/using_visual_designer/elements/options/greeks.md
-          - name: Black-Scholes
+          - name: ブラック・ショールズ
             href: designer/strategies/using_visual_designer/elements/options/black_scholes.md
           - name: バスケット
             href: designer/strategies/using_visual_designer/elements/options/basket.md
-          - name: Hedging
+          - name: ヘッジング
             href: designer/strategies/using_visual_designer/elements/options/hedging.md
           - name: オプションのクォーティング
             href: designer/strategies/using_visual_designer/elements/options/options_quoting.md
-          - name: Strikes
+          - name: 権利行使価格
             href: designer/strategies/using_visual_designer/elements/options/strikes.md
       - name: 線
         href: designer/strategies/using_visual_designer/lines.md
