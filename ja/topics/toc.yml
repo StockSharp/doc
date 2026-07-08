@@ -1660,7 +1660,7 @@
       href: api/candles/chart.md
     - name: カスタムタイプのローソク足
       href: api/candles/custom_type_of_candle.md
-    - name: ローソク足の結合: 履歴 + リアルタイム
+    - name: "ローソク足の結合: 履歴 + リアルタイム"
       href: api/candles/gluing_candles_history_real_time.md
     - name: インストゥルメントバスケットによるローソク足の作成
       href: api/candles/candle_creation_by_the_instruments_basket.md
@@ -1990,7 +1990,7 @@
         href: api/indicators/list_of_indicators/wilder_ma.md
       - name: WAD
         href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
-      - name: %R
+      - name: "%R"
         href: api/indicators/list_of_indicators/williams_r.md
       - name: WCCI
         href: api/indicators/list_of_indicators/woodies_cci.md

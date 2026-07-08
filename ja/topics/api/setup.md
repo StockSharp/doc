@@ -105,7 +105,7 @@ StockSharp は NuGet 経由で配布されます。以下はカテゴリ別に�
 | `StockSharp.Connectors.Bittrex` | Bittrex |
 
 > [!NOTE]
-> コネクターの完全な一覧については、[コネクター](connectors.md) セクションを参照してください。一部のコネクターは [プライベート NuGet サーバー](#private-nuget-server) 経由でのみ利用できます。
+> コネクターの完全な一覧については、[コネクター](connectors.md) セクションを参照してください。一部のコネクターは [プライベート NuGet サーバー](#プライベート-nuget-サーバー) 経由でのみ利用できます。
 
 ### ローカリゼーション
 
@@ -232,7 +232,7 @@ dotnet add package StockSharp.Algo
 
 ### Public NuGet でパッケージが見つからない
 
-一部のコネクターは [プライベートサーバー](#private-nuget-server) 経由でのみ利用できます。正しいソースが追加されていることを確認してください。
+一部のコネクターは [プライベートサーバー](#プライベート-nuget-サーバー) 経由でのみ利用できます。正しいソースが追加されていることを確認してください。
 
 ### 非 Windows での GUI の問題
 
