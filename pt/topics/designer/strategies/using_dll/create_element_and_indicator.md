@@ -14,4 +14,4 @@ Ao adicionar cubos ou indicadores ligados ao diagrama, tem de seguir os passos d
 
 ## Ver Também
 
-[Debugging a DLL Cube with Visual Studio](debug_dll_in_visual_studio.md)
+[Depurar uma DLL com o Visual Studio](debug_dll_in_visual_studio.md)

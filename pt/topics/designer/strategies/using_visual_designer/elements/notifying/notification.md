@@ -14,7 +14,7 @@ Sockets de entrada
 
 Parâmetros
 
-- **Type** - tipo de mensagem (janela pop-up, e-mail, sms, etc.). Os tipos de notificações são descritos na secção [Notification settings](../../../../../terminal/notifications.md).
+- **Type** - tipo de mensagem (janela pop-up, e-mail, sms, etc.). Os tipos de notificações são descritos na secção [Notificações](../../../../../terminal/notifications.md).
 - **Telegram** - canal usado para notificações do Telegram.
 - **Header** - o cabeçalho da mensagem.
 
@@ -22,4 +22,4 @@ Parâmetros
 
 [Formatação de strings](string_format.md)
 [Concatenação de strings](string_concat.md)
-[Notification settings](../../../../../terminal/notifications.md)
+[Notificações](../../../../../terminal/notifications.md)

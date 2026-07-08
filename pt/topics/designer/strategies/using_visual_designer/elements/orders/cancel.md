@@ -20,4 +20,4 @@ Sockets de saída
 
 ## Ver também
 
-[Mass Orders Cancel](mass_cancel.md)
+[Cancelamento em massa de ordens](mass_cancel.md)
