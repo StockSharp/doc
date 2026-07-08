@@ -150,7 +150,7 @@
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs 资金流量，衡量买卖压力
 - [UltimateOsc](list_of_indicators/uo.md) - 最终振荡器，结合多个时间框架来衡量动量
 - [VHF](list_of_indicators/vhf.md) - 垂直-水平滤波器，用于区分趋势市场与震荡市场
-- [VIDIA](list_of_indicators/vidya.md) - 可变指数动态平均，适应市场波动
+- [VIDYA](list_of_indicators/vidya.md) - 可变指数动态平均，适应市场波动
 - [VMA](list_of_indicators/variable_moving_average.md) - 可变移动平均线，根据波动性调整平滑周期
 - [成交量](list_of_indicators/volume.md) - K线成交量，衡量每根K线的交易量
 - [成交量概况](list_of_indicators/volume_profile.md) - 成交量概况，显示不同价格水平的交易活动

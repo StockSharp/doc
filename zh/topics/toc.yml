@@ -1678,7 +1678,7 @@
         href: api/indicators/list_of_indicators/a_d.md
       - name: 累积/派发线 (ADL)
         href: api/indicators/list_of_indicators/accumulation_distribution_line.md
-      - name: 自适应拉格朗日滤波器 (ALF)
+      - name: 自适应拉盖尔滤波器 (ALF)
         href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
       - name: 自适应价格区间 (APZ)
         href: api/indicators/list_of_indicators/adaptive_price_zone.md
@@ -1966,7 +1966,7 @@
         href: api/indicators/list_of_indicators/uo.md
       - name: 垂直-水平滤波器 (VHF)
         href: api/indicators/list_of_indicators/vhf.md
-      - name: 可变指数动态平均 (VIDIA)
+      - name: 可变指数动态平均 (VIDYA)
         href: api/indicators/list_of_indicators/vidya.md
       - name: 可变移动平均线 (VMA)
         href: api/indicators/list_of_indicators/variable_moving_average.md
