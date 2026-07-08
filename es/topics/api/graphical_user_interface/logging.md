@@ -1,4 +1,4 @@
-# Logging
+# Registro de logs
 
 [S#](../../api.md) ofrece varios componentes gráficos para mostrar logs: [LogControl](xref:StockSharp.Xaml.LogControl) y [Monitor](xref:StockSharp.Xaml.Monitor). 
 
@@ -34,7 +34,7 @@ public MainWindow()
 
 ## Contenido recomendado
 
-[Logging](../logging.md)
+[Registro de logs](../logging.md)
 
 [Panel de logs](logging/log_panel.md)
 

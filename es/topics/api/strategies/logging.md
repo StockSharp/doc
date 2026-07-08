@@ -226,5 +226,5 @@ Los mensajes escritos en el log de la estrategia se pueden ver:
 
 ## Ver también
 
-[Logging](../logging.md)
+[Registro de logs](../logging.md)
 [Componente LogControl](../graphical_user_interface/logging/log_panel.md)

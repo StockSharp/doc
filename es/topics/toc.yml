@@ -56,7 +56,7 @@
         href: designer/videos/strategy_max_volume.md
       - name: Índices financieros
         href: designer/videos/financial_index.md
-      - name: Pair trading
+      - name: Trading de pares
         href: designer/videos/pair_trading.md
       - name: Índices y pair trading
         href: designer/videos/index_pair_trading.md
@@ -538,7 +538,7 @@
         href: hydra/working_with_data/view_and_export/news.md
       - name: Transacciones
         href: hydra/working_with_data/view_and_export/transactions.md
-      - name: Option desk
+      - name: Panel de opciones
         href: hydra/working_with_data/view_and_export/option_desk.md
       - name: Indicadores
         href: hydra/working_with_data/view_and_export/indicators.md
@@ -2211,7 +2211,7 @@
     href: api/slippage.md
   - name: Medición de latencia
     href: api/latency.md
-  - name: Logging
+  - name: Registro de logs
     href: api/logging.md
     items:
     - name: Logging de estrategias
@@ -2274,7 +2274,7 @@
         href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
       - name: Anotaciones
         href: api/graphical_user_interface/charts/annotations.md
-    - name: Logging
+    - name: Registro de logs
       href: api/graphical_user_interface/logging.md
       items:
       - name: Panel de logs
@@ -2318,7 +2318,7 @@
         href: api/graphical_user_interface/market_data/order_log.md
       - name: Noticias
         href: api/graphical_user_interface/market_data/news.md
-    - name: Trading
+    - name: Operaciones
       href: api/graphical_user_interface/trading.md
       items:
       - name: Órdenes
