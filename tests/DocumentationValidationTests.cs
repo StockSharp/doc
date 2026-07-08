@@ -267,6 +267,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		AssertNoErrors(errors);
 	}
 
+	[TestMethod]
+	public void Text_files_do_not_contain_question_mark_garbling()
+	{
+		var errors = new List<string>();
+		var extensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+		{
+			".json",
+			".md",
+			".txt",
+			".yml",
+			".yaml",
+		};
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*", SearchOption.AllDirectories)
+				.Where(file => extensions.Contains(Path.GetExtension(file)))
+				.Order(StringComparer.OrdinalIgnoreCase))
+			{
+				ValidateNoQuestionMarkGarbling(file, errors);
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
 	private static void ValidateTocFile(
 		string lang,
 		string langRoot,
@@ -703,6 +731,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static void ValidateNoQuestionMarkGarbling(string file, List<string> errors)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var match = Regex.Match(text, @"\?{3,}", RegexOptions.CultureInvariant);
+			if (!match.Success)
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains '{match.Value}', which usually means translated Unicode text was corrupted. Line: {Truncate(text.Trim(), 180)}");
+		}
+	}
+
 	private static (string Path, string Fragment) SplitPathQueryAndFragment(string url)
 	{
 		var path = url;
@@ -914,6 +957,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		return Path.GetRelativePath(_repoRoot, fullPath).Replace('\\', '/');
 	}
+
+	private static string Truncate(string value, int maxLength)
+		=> value.Length <= maxLength
+			? value
+			: value[..maxLength] + "…";
 
 	private void AssertNoErrors(IReadOnlyList<string> errors)
 	{

@@ -1,6 +1,6 @@
 # Bitmart のグラフィカル設定
 
-すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [?????????](../../../graphical_user_interface/connection_settings_window.md) で行います。
+すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
 ![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 

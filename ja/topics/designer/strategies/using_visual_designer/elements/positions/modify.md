@@ -39,8 +39,8 @@
 
 ## 注記
 
-低レベルの注文管理には、[????](../orders/register.md) コンポーネントを使用できます。より高レベルのポジション管理には、この "Modify Position" コンポーネントを推奨します。
+低レベルの注文管理には、[Order Registration](../orders/register.md) コンポーネントを使用できます。より高レベルのポジション管理には、この "Modify Position" コンポーネントを推奨します。
 
 ## 関連項目
 
-- [????](../orders/register.md)
+- [Order Registration](../orders/register.md)

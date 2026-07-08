@@ -29,4 +29,4 @@ Connector.AddAdapter<CoinbaseMessageAdapter>(a =>
 
 ## 関連項目
 
-[?????????](../../../graphical_user_interface/connection_settings_window.md)
+[接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md)

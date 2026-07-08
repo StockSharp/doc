@@ -33,4 +33,4 @@ Take と Stop のパラメーター
 ![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> 入力取引は、ストラテジー全体の取引（[?????](../common/trades_by_strategy.md) ブロック）であってはなりません。これは現在ポジションの計算が不正確になるためです。保護取引もストラテジー取引になってしまいます。**Position Protection** ブロックは、[????](../orders/register.md) および [???????](modify.md) キューブの **Transaction** 出力ソケット、またはポジションを直接変更する同様のコンポーネントから取引を受け取る必要があります。
+> 入力取引は、ストラテジー全体の取引（[Trades by strategy](../common/trades_by_strategy.md) ブロック）であってはなりません。これは現在ポジションの計算が不正確になるためです。保護取引もストラテジー取引になってしまいます。**Position Protection** ブロックは、[Order Registration](../orders/register.md) および [Modify Position](modify.md) キューブの **Transaction** 出力ソケット、またはポジションを直接変更する同様のコンポーネントから取引を受け取る必要があります。

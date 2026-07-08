@@ -20,4 +20,4 @@
 
 ## 推奨コンテンツ
 
-[???????](sparse_order_book.md)
+[Sparse order book](sparse_order_book.md)

@@ -1,6 +1,6 @@
 # cTrader のグラフィカル設定
 
-すべての StockSharp 製品では、グラフィカルな接続設定は [?????????](../../../graphical_user_interface/connection_settings_window.md) 画面フォームで行います。
+すべての StockSharp 製品では、グラフィカルな接続設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) 画面フォームで行います。
 
 ![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
 

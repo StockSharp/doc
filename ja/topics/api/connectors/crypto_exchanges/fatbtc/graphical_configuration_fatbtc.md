@@ -3,7 +3,7 @@
 
 # FatBTC のグラフィカル設定
 
-すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [?????????](../../../graphical_user_interface/connection_settings_window.md) で行います。
+すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
 ![API GUI Settings FatBTC](../../../../../images/api_gui_settings_fatbtc.png)
 
@@ -18,8 +18,8 @@
 
 [Connectors](../../../connectors.md)
 
-[????????](../../graphical_configuration.md)
+[グラフィカル設定](../../graphical_configuration.md)
 
-[??????????](../../creating_own_connector.md)
+[独自コネクターの作成](../../creating_own_connector.md)
 
-[??????????](../../save_and_load_settings.md)
+[設定の保存と読み込み](../../save_and_load_settings.md)

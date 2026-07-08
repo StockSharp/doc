@@ -25,5 +25,5 @@ Kalman Filter は、予測-補正サイクルを適用して価格データを�
 
 ## 関連項目
 
-[Kaufman ??????](kama.md)
+[KAMA](kama.md)
 [Adaptive Laguerre Filter](adaptive_laguerre_filter.md)

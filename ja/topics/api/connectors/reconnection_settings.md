@@ -1,6 +1,6 @@
 # 再接続設定
 
-すべてのコネクターでは、切断時に再接続を設定できます。[?????????](../graphical_user_interface/connection_settings_window.md) のグラフィック要素では、次のように表示されます。 
+すべてのコネクターでは、切断時に再接続を設定できます。[接続設定ウィンドウ](../graphical_user_interface/connection_settings_window.md) のグラフィック要素では、次のように表示されます。 
 
 ![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
 

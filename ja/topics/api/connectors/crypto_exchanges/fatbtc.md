@@ -11,14 +11,14 @@
 
 [Connectors](../../connectors.md)
 
-[????????](../graphical_configuration.md)
+[グラフィカル設定](../graphical_configuration.md)
 
-[??????????](../save_and_load_settings.md)
+[設定の保存と読み込み](../save_and_load_settings.md)
 
-[??????????](../creating_own_connector.md)
+[独自コネクターの作成](../creating_own_connector.md)
 
 [Orders management](../../orders_management.md)
 
-[???????](../../orders_management/create_new_order.md)
+[新しい注文の作成](../../orders_management/create_new_order.md)
 
-[??????????](../../orders_management/create_new_stop_order.md)
+[新しいストップ注文の作成](../../orders_management/create_new_stop_order.md)
