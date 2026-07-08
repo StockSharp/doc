@@ -7,7 +7,7 @@
 ## 主要组件
 
 ```cs
-// Main components
+// 主要组件
 public class SimpleCandleRulesStrategy : Strategy
 {
 }
@@ -21,12 +21,12 @@ public class SimpleCandleRulesStrategy : Strategy
 - 建立处理K线的规则
 
 ```cs
-// OnStarted method
+// OnStarted 方法
 protected override void OnStarted2(DateTime time)
 {
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
-		// ready-to-use candles much faster than compression on fly mode
+		// 现成 K线比即时压缩模式快得多
 		// turn off compression to boost optimizer (!!! make sure you have candles)
 
 		//MarketData =

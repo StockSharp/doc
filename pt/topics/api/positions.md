@@ -51,7 +51,7 @@ A interface [IPositionManagerState](xref:StockSharp.Algo.Positions.IPositionMana
 ```cs
 var state = new PositionManagerState();
 
-// Register an order
+// Registrar uma ordem
 state.AddOrGetOrder(
     transactionId: 12345,
     securityId: secId,
@@ -61,10 +61,10 @@ state.AddOrGetOrder(
     balance: 100
 );
 
-// Update after partial execution
+// Atualizar após execução parcial
 state.UpdateOrderBalance(12345, newBalance: 60);
 
-// Update position directly
+// Atualizar posição diretamente
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
 Console.WriteLine($"Current position: {newPosition}");
 
@@ -102,10 +102,10 @@ tracker.RoundTripClosed += report =>
     Console.WriteLine($"  Closed: {report.CloseTime}");
 };
 
-// Process position updates
+// Processar atualizações de posição
 tracker.ProcessPosition(position);
 
-// View history
+// Ver histórico
 foreach (var report in tracker.History)
 {
     Console.WriteLine($"  {report.OpenTime} -> {report.CloseTime}");
@@ -131,16 +131,16 @@ O adapter intercepta mensagens de execução de ordens e de negócios, chama `Po
 Na classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy), a posição atual é acedida através da propriedade `Position`:
 
 ```cs
-// Current position for the primary instrument
+// Posição atual do instrumento principal
 decimal currentPosition = Position;
 
-// Close position
+// Fechar posição
 if (Position > 0)
     SellMarket(Math.Abs(Position));
 else if (Position < 0)
     BuyMarket(Math.Abs(Position));
 
-// Or through a built-in method
+// Ou por meio de um método integrado
 ClosePosition();
 ```
 

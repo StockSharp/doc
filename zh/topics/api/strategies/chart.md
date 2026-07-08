@@ -13,18 +13,18 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Obtaining the chart
+	// 获取图表
 	_chart = GetChart();
 	
-	// Checking chart availability
+	// 检查图表是否可用
 	if (_chart != null)
 	{
-		// Initializing the chart
+		// 初始化图表
 		InitializeChart();
 	}
 	else
 	{
-		// Chart is unavailable, for example, when running in console mode
+		// 图表不可用，例如在控制台模式运行时
 		LogInfo("Chart is unavailable. Visualization disabled.");
 	}
 }
@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 在某些情况下，图表可能会从外部设置。为此，请使用 [Strategy.SetChart](xref:StockSharp.Algo.Strategies.Strategy.SetChart(StockSharp.Charting.IChart)) 方法：
 
 ```cs
-// Setting the chart from an external source
+// 从外部来源设置图表
 public void ConfigureVisualization(IChart chart)
 {
 	SetChart(chart);
@@ -56,13 +56,13 @@ public void ConfigureVisualization(IChart chart)
 ```cs
 private void InitializeChart()
 {
-	// Creating the main area for candles and indicators
+	// 创建 K线和指标的主区域
 	_mainArea = CreateChartArea();
 	
-	// Creating an additional area for volume
+	// 创建成交量的附加区域
 	_volumeArea = CreateChartArea();
 	
-	// Configuring areas and adding elements
+	// 配置区域并添加元素
 	ConfigureChartElements();
 }
 ```
@@ -72,17 +72,17 @@ private void InitializeChart()
 ```cs
 private void InitializeChart()
 {
-	// Clear existing areas if necessary
+	// 必要时清除现有区域
 	foreach (var area in _chart.Areas.ToArray())
 		_chart.RemoveArea(area);
 	
-	// Create the main area for candles and indicators
+	// 创建 K线和指标的主区域
 	_mainArea = _chart.AddArea();
 	
-	// Create an additional area for volume
+	// 创建成交量的附加区域
 	_volumeArea = _chart.AddArea();
 	
-	// Configure areas and add elements
+	// 配置区域并添加元素
 	ConfigureChartElements();
 }
 ```
@@ -98,10 +98,10 @@ private void InitializeChart()
 ```cs
 private void ConfigureChartElements()
 {
-	// Adding a candle element to the main area
+	// 向主区域添加 K线元素
 	_candleElement = _mainArea.AddCandles();
 	
-	// Configuring candle display
+	// 配置 K线显示
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Japanese candles
 	_candleElement.AntiAliasing = true; // Smoothing
 	_candleElement.UpFillColor = Color.Green; // Rising candle body color
@@ -140,7 +140,7 @@ private void ConfigureChartElements()
 要显示指标，请使用 [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) 方法：
 
 ```cs
-// Creating indicators
+// 创建指标
 _sma = new SimpleMovingAverage { Length = SmaLength };
 _bollinger = new BollingerBands
 {
@@ -148,11 +148,11 @@ _bollinger = new BollingerBands
 	Deviation = BollingerDeviation
 };
 
-// Adding indicators to the strategy collection
+// 将指标添加到策略集合
 Indicators.Add(_sma);
 Indicators.Add(_bollinger);
 
-// Visualizing indicators
+// 可视化指标
 _smaElement = DrawIndicator(_mainArea, _sma, Color.Blue);
 _bollingerUpperElement = DrawIndicator(_mainArea, _bollinger, Color.Purple);
 _bollingerLowerElement = DrawIndicator(_mainArea, _bollinger, Color.Purple);
@@ -164,7 +164,7 @@ _bollingerMiddleElement = DrawIndicator(_mainArea, _bollinger, Color.Gray);
 您也可以通过图表区域的 [AddIndicator](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator)) 方法直接添加指示器元素：
 
 ```cs
-// Adding SMA directly through the chart area
+// 直接通过图表区域添加 SMA
 var smaElement = _mainArea.AddIndicator(_sma);
 smaElement.Color = Color.Blue;
 smaElement.StrokeThickness = 2;
@@ -189,10 +189,10 @@ smaElement.AutoAssignYAxis = true; // Automatically assign Y-axis
 要显示交易，请使用 [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) 方法：
 
 ```cs
-// Adding an element to display trades
+// 添加用于显示成交的元素
 _tradesElement = DrawOwnTrades(_mainArea);
 
-// Configuring trade display
+// 配置成交显示
 _tradesElement.BuyBrush = Color.Green;  // Buy color
 _tradesElement.SellBrush = Color.Red;   // Sell color
 _tradesElement.PointSize = 10;          // Point size
@@ -203,10 +203,10 @@ _tradesElement.PointSize = 10;          // Point size
 要显示订单，请使用 [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)) 方法：
 
 ```cs
-// Adding an element to display orders
+// 添加用于显示订单的元素
 _ordersElement = DrawOrders(_mainArea);
 
-// Configuring order display
+// 配置订单显示
 _ordersElement.ActiveBrush = Color.Blue;     // Active orders color
 _ordersElement.CanceledBrush = Color.Gray;   // Canceled orders color
 _ordersElement.DoneBrush = Color.Green;      // Completed orders color
@@ -234,7 +234,7 @@ _ordersElement.PointSize = 8;                // Point size
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Processing candle in indicators
+	// 在指标中处理 K线
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
 	
@@ -242,10 +242,10 @@ private void ProcessCandle(ICandleMessage candle)
 	if (_chart == null)
 		return;
 	
-	// Create data for drawing
+	// 创建绘制数据
 	var drawData = _chart.CreateData();
 	
-	// Group data by candle time
+	// 按 K线时间分组数据
 	var group = drawData.Group(candle.OpenTime);
 	
 	// Add candle
@@ -259,7 +259,7 @@ private void ProcessCandle(ICandleMessage candle)
 		candle.PriceLevels, 
 		candle.State);
 	
-	// Add indicator values
+	// 添加指标值
 	group.Add(_smaElement, smaValue);
 	
 	if (bollingerValue != null)
@@ -269,7 +269,7 @@ private void ProcessCandle(ICandleMessage candle)
 		group.Add(_bollingerLowerElement, bollingerValue);
 	}
 	
-	// Draw data on the chart
+	// 在图表上绘制数据
 	_chart.Draw(drawData);
 }
 ```
@@ -283,13 +283,13 @@ private void ProcessCandle(ICandleMessage candle)
 对于交易和订单的绘制，通常使用一种自动机制，当接收到新交易或订单发生变化时触发。然而，如果需要手动绘制，可以使用以下代码：
 
 ```cs
-// Drawing a trade
+// 绘制成交
 var tradeDrawData = _chart.CreateData();
 var tradeGroup = tradeDrawData.Group(trade.Time);
 tradeGroup.Add(_tradesElement, trade.Id, trade.StringId, trade.Side, trade.Price, trade.Volume);
 _chart.Draw(tradeDrawData);
 
-// Drawing an order
+// 绘制订单
 var orderDrawData = _chart.CreateData();
 var orderGroup = orderDrawData.Group(order.Time);
 orderGroup.Add(_ordersElement, order.Id, order.StringId, order.Side, order.Price, order.Volume);
@@ -351,7 +351,7 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 		
-		// Creating indicators
+		// 创建指标
 		_sma = new SimpleMovingAverage { Length = SmaLength };
 		_bollinger = new BollingerBands
 		{
@@ -359,20 +359,20 @@ public class SmaStrategy : Strategy
 			Deviation = BollingerDeviation
 		};
 		
-		// Adding indicators to strategy collection
+		// 将指标添加到策略集合
 		Indicators.Add(_sma);
 		Indicators.Add(_bollinger);
 		
-		// Getting the chart
+		// 获取图表
 		_chart = GetChart();
 		
-		// Initializing the chart if available
+		// 如果可用则初始化图表
 		if (_chart != null)
 		{
 			InitializeChart();
 		}
 		
-		// Subscribing to candles
+		// 订阅 K线
 		var subscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			Security);
@@ -387,23 +387,23 @@ public class SmaStrategy : Strategy
 	
 	private void InitializeChart()
 	{
-		// Clear existing areas
+		// 清除现有区域
 		foreach (var area in _chart.Areas.ToArray())
 			_chart.RemoveArea(area);
 		
-		// Create the main area for candles and indicators
+		// 创建 K线和指标的主区域
 		_mainArea = _chart.AddArea();
 		
-		// Create an additional area for volume
+		// 创建成交量的附加区域
 		_volumeArea = _chart.AddArea();
 		
-		// Configure chart elements
+		// 配置图表元素
 		ConfigureChartElements();
 	}
 	
 	private void ConfigureChartElements()
 	{
-		// Adding an element for displaying candles
+		// 添加用于显示 K线的元素
 		_candleElement = _mainArea.AddCandles();
 		_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
 		_candleElement.AntiAliasing = true;
@@ -414,7 +414,7 @@ public class SmaStrategy : Strategy
 		_candleElement.StrokeThickness = 1;
 		_candleElement.ShowAxisMarker = true;
 		
-		// Adding elements for indicators
+		// 添加指标元素
 		_smaElement = _mainArea.AddIndicator(_sma);
 		_smaElement.Color = Color.Blue;
 		_smaElement.StrokeThickness = 2;
@@ -431,14 +431,14 @@ public class SmaStrategy : Strategy
 		_bollingerLowerElement.Color = Color.Purple;
 		_bollingerLowerElement.StrokeThickness = 1;
 		
-		// Adding elements for orders and trades
+		// 添加订单和成交元素
 		_ordersElement = DrawOrders(_mainArea);
 		_tradesElement = DrawOwnTrades(_mainArea);
 	}
 	
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Processing candle with indicators
+		// 用指标处理 K线
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
 		
@@ -446,11 +446,11 @@ public class SmaStrategy : Strategy
 		if (_chart == null)
 			return;
 		
-		// Drawing data on the chart
+		// 在图表上绘制数据
 		var drawData = _chart.CreateData();
 		var group = drawData.Group(candle.OpenTime);
 		
-		// Adding candle
+		// 添加 K线
 		group.Add(_candleElement, 
 			candle.DataType, 
 			candle.SecurityId, 
@@ -461,7 +461,7 @@ public class SmaStrategy : Strategy
 			candle.PriceLevels, 
 			candle.State);
 		
-		// Adding indicator values
+		// 添加指标值
 		group.Add(_smaElement, smaValue);
 		
 		if (bollingerValue != null)
@@ -471,14 +471,14 @@ public class SmaStrategy : Strategy
 			group.Add(_bollingerLowerElement, bollingerValue);
 		}
 		
-		// Drawing data on the chart
+		// 在图表上绘制数据
 		_chart.Draw(drawData);
 		
-		// Trading logic
+		// 交易逻辑
 		if (!IsFormed)
 			return;
 			
-		// ... implementation of trading logic ...
+		// ... 交易逻辑实现 ...
 	}
 }
 ```

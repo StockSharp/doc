@@ -40,26 +40,26 @@ StockSharp API 提供通过内置订阅机制接收订单信息的能力。与�
 ```cs
 private void InitConnector()
 {
-	// Subscribe to order reception event
+	// 订阅订单接收事件
 	Connector.OrderReceived += OnOrderReceived;
 	
-	// Subscribe to own trade reception event
+	// 订阅 own trade 接收事件
 	Connector.OwnTradeReceived += OnOwnTradeReceived;
 	
-	// Subscribe to order registration failure event
+	// 订阅订单注册失败事件
 	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
 
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Process the received order
+	// 处理收到的订单
 	_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	
-	// Important! Check if the order belongs to the current subscription
-	// to avoid duplicate processing
+	// 重要！检查订单是否属于当前订阅
+	// 以避免重复处理
 	if (subscription == _myOrdersSubscription)
 	{
-		// Additional processing for the specific subscription
+		// 针对特定订阅的附加处理
 		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
 	}
 }
@@ -70,13 +70,13 @@ private void OnOrderReceived(Subscription subscription, Order order)
 在某些情况下，您可能需要明确地请求有关订单的信息。为此，您可以创建单独的订阅：
 
 ```cs
-// Create a subscription for orders of a specific portfolio
+// 为特定投资组合的订单创建订阅
 var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
 {
 	TransactionId = Connector.TransactionIdGenerator.GetNextId(),
 };
 
-// Handler for receiving orders
+// 订单接收处理器
 Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
@@ -85,7 +85,7 @@ Connector.OrderReceived += (subscription, order) =>
 	}
 };
 
-// Start the subscription
+// 启动订阅
 Connector.Subscribe(ordersSubscription);
 ```
 
@@ -94,22 +94,22 @@ Connector.Subscribe(ordersSubscription);
 扩展方法用于确定订单的当前状态：
 
 ```cs
-// Check order status
+// 检查订单状态
 Order order = ...; // received order
 
-// Is the order canceled
+// 订单是否已撤销
 bool isCanceled = order.IsCanceled();
 
-// Is the order fully executed
+// 订单是否已完全成交
 bool isMatched = order.IsMatched();
 
-// Is the order partially executed
+// 订单是否部分成交
 bool isPartiallyMatched = order.IsMatchedPartially();
 
-// Is at least part of the order executed
+// 订单是否至少部分成交
 bool isNotEmpty = order.IsMatchedEmpty();
 
-// Get the executed volume
+// 获取已成交数量
 decimal matchedVolume = order.GetMatchedVolume();
 ```
 
@@ -123,30 +123,30 @@ private Subscription _portfolio2OrdersSubscription;
 
 private void RequestOrdersForDifferentPortfolios()
 {
-	// Subscription for orders of the first portfolio
+	// 第一个投资组合订单的订阅
 	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
 	
-	// Subscription for orders of the second portfolio
+	// 第二个投资组合订单的订阅
 	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
 	
-	// Common handler for receiving orders
+	// 订单接收通用处理器
 	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
 	
-	// Start subscriptions
+	// 启动订阅
 	Connector.Subscribe(_portfolio1OrdersSubscription);
 	Connector.Subscribe(_portfolio2OrdersSubscription);
 }
 
 private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
 {
-	// Determine which subscription the order belongs to
+	// 确定订单属于哪个订阅
 	if (subscription == _portfolio1OrdersSubscription)
 	{
-		// Process orders of the first portfolio
+		// 处理第一个投资组合的订单
 	}
 	else if (subscription == _portfolio2OrdersSubscription)
 	{
-		// Process orders of the second portfolio
+		// 处理第二个投资组合的订单
 	}
 }
 ```

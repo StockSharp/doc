@@ -10,7 +10,7 @@
 
 ```cs
 /// <summary>
-/// Sample diagram element demonstrates input and output sockets usage.
+/// 示例图表元素演示输入和输出插槽的用法。
 /// 
 /// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
 /// </summary>
@@ -20,14 +20,14 @@ public class EmptyDiagramElement : DiagramExternalElement
 
 	public EmptyDiagramElement()
 	{
-		// example property to show how to make parameters
+		// 演示如何创建参数的示例属性
 	
 		_minValue = AddParam("MinValue", 10)
 			.SetBasic(true) // make parameter visible in basic mode
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
 	}
 
-	// output sockets are events marked with DiagramExternal attribute
+	// 输出插槽是带 DiagramExternal 特性的事件
 
 	[DiagramExternal]
 	public event Action<Unit> Output1;
@@ -35,9 +35,9 @@ public class EmptyDiagramElement : DiagramExternalElement
 	[DiagramExternal]
 	public event Action<Unit> Output2;
 
-	// input sockets are method parameters marked with DiagramExternal attribute
+	// 输入插槽是带 DiagramExternal 特性的方法参数
 
-	// uncomment to get Process method called every time when new arg received
+	// 取消注释后，每次收到新参数都会调用 Process 方法
 	// (no need wait when all input args received)
 	//public override bool WaitAllInput => false;
 
@@ -56,21 +56,21 @@ public class EmptyDiagramElement : DiagramExternalElement
 	{
 		base.Start();
 
-		// add logic before start
+		// 启动前添加逻辑
 	}
 
 	public override void Stop()
 	{
 		base.Stop();
 
-		// add logic after stop
+		// 停止后添加逻辑
 	}
 
 	public override void Reset()
 	{
 		base.Reset();
 
-		// add logic for reset internal state
+		// 添加重置内部状态的逻辑
 	}
 }
 ```

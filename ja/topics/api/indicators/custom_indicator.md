@@ -4,7 +4,7 @@
 
 ```cs
 /// <summary>
-/// Simple Moving Average.
+/// 単純移動平均。
 /// </summary>
 [DisplayName("SMA")]
 [Description("Simple Moving Average.")]
@@ -19,10 +19,10 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// 入力値を処理。
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>結果値。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var newValue = input.GetValue<decimal>();
@@ -111,7 +111,7 @@ public override void Load(SettingsStorage storage)
 
 ```cs
 /// <summary>
-/// Chaikin Volatility.
+/// Chaikin ボラティリティ。
 /// </summary>
 [DisplayName("Volatility")]
 [Description("Chaikin Volatility.")]
@@ -127,7 +127,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Moving Average.
+	/// 移動平均。
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("MA")]
@@ -136,7 +136,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
-	/// Rate of Change.
+	/// 変化率。
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
@@ -145,7 +145,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public RateOfChange Roc { get; private set; }
 
 	/// <summary>
-	/// Is the indicator formed.
+	/// インジケーターが形成済みか。
 	/// </summary>
 	public override bool IsFormed
 	{
@@ -153,10 +153,10 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// 入力値を処理。
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>結果値。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var candle = input.GetValue<Candle>();
@@ -178,7 +178,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 
 ```cs
 /// <summary>
-/// Welles Wilder's Average Directional Index.
+/// Welles Wilder の平均方向性指数。
 /// </summary>
 [DisplayName("ADX")]
 [Description("Welles Wilder's Average Directional Index.")]
@@ -210,19 +210,19 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Welles Wilder's Directional Movement Index.
+	/// Welles Wilder の方向性指数。
 	/// </summary>
 	[Browsable(false)]
 	public DirectionalIndex Dx { get; private set; }
 
 	/// <summary>
-	/// Moving Average.
+	/// 移動平均。
 	/// </summary>
 	[Browsable(false)]
 	public LengthIndicator<decimal> MovingAverage { get; private set; }
 
 	/// <summary>
-	/// Period length.
+	/// 期間の長さ。
 	/// </summary>
 	[DisplayName("Period")]
 	[Description("Indicator period.")]
@@ -284,7 +284,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Short period.
+	/// 短期期間。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -298,7 +298,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Long period.
+	/// 長期期間。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

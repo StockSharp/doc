@@ -38,31 +38,31 @@ public class MarketDepthWindow
 		_connector = connector;
 		_security = security;
 		
-		// Configure order book formatting
+		// Configurar formatação do livro de ofertas
 		DepthCtrl.UpdateFormat(security);
 		
-		// Subscribe to order book reception event
+		// Assinar evento de recebimento do livro de ofertas
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		
-		// Create a subscription to order book for the selected instrument
+		// Criar assinatura do livro de ofertas para o instrumento selecionado
 		_depthSubscription = new Subscription(DataType.MarketDepth, security);
 		
-		// Start subscription
+		// Iniciar assinatura
 		_connector.Subscribe(_depthSubscription);
 	}
 	
-	// Handler for order book reception event
+	// Manipulador do evento de recebimento do livro de ofertas
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
-		// Check if the order book belongs to our subscription
+		// Verificar se o livro de ofertas pertence à nossa assinatura
 		if (subscription != _depthSubscription)
 			return;
 			
-		// Update the order book in the user interface thread
+		// Atualizar livro de ofertas na thread da interface
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
 	
-	// Method for unsubscribing when the window is closed
+	// Método para cancelar a assinatura quando a janela é fechada
 	public void Unsubscribe()
 	{
 		if (_depthSubscription != null)
@@ -90,14 +90,14 @@ public class MarketDepthWithOrdersWindow
 		_connector = connector;
 		_security = security;
 		
-		// Configure order book formatting
+		// Configurar formatação do livro de ofertas
 		DepthCtrl.UpdateFormat(security);
 		
-		// Subscribe to order book and order reception events
+		// Assinar eventos de recebimento do livro de ofertas e ordens
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		_connector.OrderReceived += OnOrderReceived;
 		
-		// Create a subscription to order book
+		// Criar assinatura do livro de ofertas
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 		
@@ -106,23 +106,23 @@ public class MarketDepthWithOrdersWindow
 		_connector.Subscribe(ordersSubscription);
 	}
 	
-	// Handler for order book reception event
+	// Manipulador do evento de recebimento do livro de ofertas
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
 		if (depth.SecurityId != _security.ToSecurityId())
 			return;
 			
-		// Update the order book in the user interface thread
+		// Atualizar livro de ofertas na thread da interface
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
 	
-	// Handler for order reception event
+	// Manipulador do evento de recebimento de ordens
 	private void OnOrderReceived(Subscription subscription, Order order)
 	{
 		if (order.Security != _security)
 			return;
 			
-		// Display the order in the order book
+		// Exibir ordem no livro de ofertas
 		this.GuiAsync(() => DepthCtrl.ProcessOrder(
 			order, 
 			order.Price, 
@@ -135,7 +135,7 @@ public class MarketDepthWithOrdersWindow
 ### Obter os melhores preços do livro de ofertas
 
 ```cs
-// Method to get best prices from the order book
+// Método para obter melhores preços do livro de ofertas
 public (decimal? BestBid, decimal? BestAsk) GetBestPrices(IOrderBookMessage depth)
 {
 	if (depth == null)
@@ -153,10 +153,10 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 	if (depth.SecurityId != _security.ToSecurityId())
 		return;
 		
-	// Get best prices
+	// Obter melhores preços
 	var (bestBid, bestAsk) = GetBestPrices(depth);
 	
-	// Calculate and display spread
+	// Calcular e exibir spread
 	if (bestBid.HasValue && bestAsk.HasValue)
 	{
 		var spread = bestAsk.Value - bestBid.Value;
@@ -168,7 +168,7 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 		});
 	}
 	
-	// Update order book
+	// Atualizar livro de ofertas
 	this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 }
 ```

@@ -19,13 +19,13 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 {
 	var transId = lookupMsg.TransactionId;
 
-	// Send confirmation of receiving the request
+	// Enviar confirmación de recepción de la solicitud
 	await SendSubscriptionReplyAsync(transId, cancellationToken);
 
 	if (!lookupMsg.IsSubscribe)
 		return;
 
-	// Send a message with information about the portfolio
+	// Enviar mensaje con información de la cartera
 	await SendOutMessageAsync(new PortfolioMessage
 	{
 		PortfolioName = PortfolioName,
@@ -33,7 +33,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 		OriginalTransactionId = transId,
 	}, cancellationToken);
 
-	// Request current account balances
+	// Solicitar saldos actuales de la cuenta
 	var accounts = await _restClient.GetAccounts(cancellationToken);
 
 	foreach (var account in accounts)
@@ -53,7 +53,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true), cancellationToken);
 	}
 
-	// Send a message about successful completion of the subscription
+	// Enviar un mensaje sobre la finalización correcta de la suscripción
 	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
@@ -73,13 +73,13 @@ Para solicitar el estado de las órdenes, se implementa el método **OrderStatus
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the request
+	// Enviar confirmación de recepción de la solicitud
 	await SendSubscriptionReplyAsync(statusMsg.TransactionId, cancellationToken);
 
 	if (!statusMsg.IsSubscribe)
 		return;
 
-	// Request the list of current orders
+	// Solicitar lista de órdenes actuales
 	var orders = await _restClient.GetOrders(cancellationToken);
 
 	foreach (var order in orders)
@@ -87,11 +87,11 @@ public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, C
 
 	if (!statusMsg.IsHistoryOnly())
 	{
-		// Set up a subscription to receive order updates in real time
+		// Configurar suscripción para recibir actualizaciones de órdenes en tiempo real
 		await _socketClient.SubscribeOrders(cancellationToken);
 	}
 
-	// Send a message about successful completion of the subscription
+	// Enviar un mensaje sobre la finalización correcta de la suscripción
 	await SendSubscriptionResultAsync(statusMsg, cancellationToken);
 }
 
@@ -102,7 +102,7 @@ private async ValueTask ProcessOrder(Order order, long originTransId, Cancellati
 
 	var state = order.Status.ToOrderState();
 
-	// Create and send a message with information about the order
+	// Crear y enviar mensaje con información de la orden
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
@@ -131,7 +131,7 @@ Para procesar las actualizaciones del estado de las órdenes en tiempo real, nor
 ```cs
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
-	// Process the received order update
+	// Procesar actualización de orden recibida
 	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
 	await ProcessOrder(order, 0, cancellationToken);
 }

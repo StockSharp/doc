@@ -11,30 +11,30 @@
 ## K线订阅示例
 
 ```cs
-// Create a subscription for 5-minute candles
+// 创建 5 分钟 K线订阅
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
-	// Configure subscription parameters via the MarketData property
+	// 通过 MarketData 属性配置订阅参数
 	MarketData =
 	{
-		// Request data for the last 30 days
+		// 请求最近 30 天的数据
 		From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(30)),
-		// null means the subscription will switch to real-time mode after receiving history
+		// null 表示订阅在接收历史数据后会切换到实时模式
 		To = null
 	}
 };
 
-// Processing received candles
+// 处理接收到的 K线
 _connector.CandleReceived += (sub, candle) =>
 {
 	if (sub != subscription)
 		return;
 
-	// Process the candle
+	// 处理 K线
 	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
-// Handling the subscription's transition to online mode
+// 处理订阅切换到在线模式
 _connector.SubscriptionOnline += (sub) =>
 {
 	if (sub != subscription)
@@ -43,7 +43,7 @@ _connector.SubscriptionOnline += (sub) =>
 	Console.WriteLine("Subscription switched to real-time mode");
 };
 
-// Handling subscription errors
+// 处理订阅错误
 _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 {
 	if (sub != subscription)
@@ -52,63 +52,63 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 	Console.WriteLine($"Subscription error: {error}");
 };
 
-// Starting the subscription
+// 启动订阅
 _connector.Subscribe(subscription);
 ```
 
 ## 订单簿订阅示例
 
 ```cs
-// Create a subscription to the order book for the selected instrument
+// 为所选交易品种创建订单簿订阅
 var depthSubscription = new Subscription(DataType.MarketDepth, security);
 
-// Processing received order books
+// 处理接收到的订单簿
 _connector.OrderBookReceived += (sub, depth) =>
 {
 	if (sub != depthSubscription)
 		return;
 
-	// Process the order book
+	// 处理订单簿
 	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
 };
 
-// Starting the subscription
+// 启动订阅
 _connector.Subscribe(depthSubscription);
 ```
 
 ## Tick交易订阅示例
 
 ```cs
-// Create a subscription to tick trades for the selected instrument
+// 为所选交易品种创建 tick 成交订阅
 var tickSubscription = new Subscription(DataType.Ticks, security);
 
-// Processing received ticks
+// 处理接收到的 tick
 _connector.TickTradeReceived += (sub, tick) =>
 {
 	if (sub != tickSubscription)
 		return;
 
-	// Process the tick
+	// 处理 tick
 	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 };
 
-// Starting the subscription
+// 启动订阅
 _connector.Subscribe(tickSubscription);
 ```
 
 ## 带K线构建模式配置的订阅示例
 
 ```cs
-// Subscription to 5-minute candles that will be built from ticks
+// 从 tick 构建的 5 分钟 K线订阅
 var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
 	MarketData =
 	{
-		// Specify the building mode and data source
+		// 指定构建模式和数据源
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.Ticks,
-		// You can also enable volume profile building
+		// 也可以启用成交量分布构建
 		IsCalcVolumeProfile = true,
 	}
 };
@@ -119,10 +119,10 @@ _connector.Subscribe(candleSubscription);
 ## 一级订阅示例（基础交易品种信息）
 
 ```cs
-// Creating a subscription for basic instrument information
+// 创建基础交易品种信息订阅
 var level1Subscription = new Subscription(DataType.Level1, security);
 
-// Processing received Level1 data
+// 处理接收到的 Level1 数据
 _connector.Level1Received += (sub, level1) =>
 {
 	if (sub != level1Subscription)
@@ -130,14 +130,14 @@ _connector.Level1Received += (sub, level1) =>
 
 	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
 
-	// Output Level1 field values
+	// 输出 Level1 字段值
 	foreach (var pair in level1.Changes)
 	{
 		Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
 	}
 };
 
-// Starting the subscription
+// 启动订阅
 _connector.Subscribe(level1Subscription);
 ```
 
@@ -146,10 +146,10 @@ _connector.Subscribe(level1Subscription);
 要停止接收数据，请使用 `UnSubscribe` 方法：
 
 ```cs
-// Unsubscribe from a specific subscription
+// 取消特定订阅
 _connector.UnSubscribe(subscription);
 
-// Or you can unsubscribe from all subscriptions
+// 或者可以取消所有订阅
 foreach (var sub in _connector.Subscriptions)
 {
 	_connector.UnSubscribe(sub);

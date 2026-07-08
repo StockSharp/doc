@@ -7,10 +7,10 @@
 - 你可以使用特殊构造函数创建一个 [Unit](xref:StockSharp.Messages.Unit)，或者借助 [UnitHelper](xref:StockSharp.Messages.UnitHelper) 使用更简短的表示法：
 
   ```csharp
-  // creating an absolute value
+  // 创建绝对值
   var absolute = new Unit(30);
   
-  // creating a percentage value
+  // 创建百分比值
   var percent = 30.0.Percents();
   ```
 
@@ -31,25 +31,25 @@
 - 对 [Unit](xref:StockSharp.Messages.Unit) 的算术运算与对普通数字的运算方式相同：
 
   ```csharp
-  // addition of values
+  // 数值相加
   Console.WriteLine("absolute + percent = " + (absolute + percent));
   
-  // multiplication of values
+  // 数值相乘
   Console.WriteLine("absolute * percent = " + (absolute * percent));
   
-  // subtraction of values
+  // 数值相减
   Console.WriteLine("absolute - percent = " + (absolute - percent));
   
-  // division of values
+  // 数值相除
   Console.WriteLine("absolute / percent = " + (absolute / percent));
   ```
 
 - 对 [Unit](xref:StockSharp.Messages.Unit) 进行算术运算的结果本身会变成一个 [Unit](xref:StockSharp.Messages.Unit)，其类型等于第一个操作数的类型。例如，如果你将一个绝对值和一个百分比相加，结果将是绝对值：
 
   ```csharp
-  // addition of absolute value and percentage
+  // 绝对值和百分比相加
   var resultAbsolutePercents = absolute + percent;
-  // and converting from absolute value to decimal
+  // 并从绝对值转换为 decimal
   var resultAbsolutePercentsDecimal = (decimal)resultAbsolutePercents;
   Console.WriteLine("absolute + percent = " + resultAbsolutePercents);
   Console.WriteLine("(decimal)(absolute + percent) = " + resultAbsolutePercentsDecimal);

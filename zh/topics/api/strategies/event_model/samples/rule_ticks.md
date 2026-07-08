@@ -7,7 +7,7 @@
 ## 主要组件
 
 ```cs
-// Main components
+// 主要组件
 public class SimpleTradeRulesStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ public class SimpleTradeRulesStrategy : Strategy
 - 创建一个用于分析交易价格的组合规则
 
 ```cs
-// OnStarted method
+// OnStarted 方法
 protected override void OnStarted2(DateTime time)
 {
 	var sub = new Subscription(DataType.Ticks, Security);
@@ -40,7 +40,7 @@ protected override void OnStarted2(DateTime time)
 	.Once() // call this rule only once
 	.Apply(this);
 
-	// Sending request for subscribe to market data.
+	// 发送市场数据订阅请求。
 	Subscribe(sub);
 
 	base.OnStarted2(time);

@@ -34,7 +34,7 @@ Cuanto más contexto tenga la IA, más preciso será el resultado. Especifique:
 Cree un archivo de reglas del proyecto en la raíz del repositorio:
 
 ```markdown
-# Project Rules
+# Reglas del proyecto
 
 - Using StockSharp 5.x API
 - Target framework: .NET 10

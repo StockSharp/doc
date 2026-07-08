@@ -61,10 +61,10 @@
 ## 使用示例
 
 ```cs
-// Creating a manager with a state store
+// 创建带状态存储的管理器
 var manager = new SlippageManager(new SlippageManagerState());
 
-// Only account for unfavorable slippage
+// 仅统计不利滑点
 manager.CalculateNegative = false;
 
 // Processing market data (updating best prices)
@@ -81,7 +81,7 @@ if (slippage != null)
     Console.WriteLine($"Slippage: {slippage.Value}");
 }
 
-// Total accumulated slippage
+// 累计总滑点
 Console.WriteLine($"Total slippage: {manager.Slippage}");
 ```
 

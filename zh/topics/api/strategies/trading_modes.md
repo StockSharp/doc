@@ -19,11 +19,11 @@
 ## 设置模式
 
 ```csharp
-// When creating the strategy
+// 创建策略时
 var strategy = new MyStrategy();
 strategy.TradingMode = StrategyTradingModes.ReducePositionOnly;
 
-// Dynamic change during operation
+// 运行期间动态变更
 strategy.TradingMode = StrategyTradingModes.Disabled;
 ```
 
@@ -46,11 +46,11 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 if (!IsFormedAndOnlineAndAllowTrading())
     return;
 
-// Check permission for order cancellation only
+// 只检查撤单权限
 if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
     CancelActiveOrders();
 
-// Check permission for position reduction
+// 检查减仓权限
 if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
     return;
 ```
@@ -96,7 +96,7 @@ public class TradingModeStrategy : Strategy
 
     private void ProcessCandle(ICandleMessage candle)
     {
-        // Check that the strategy is ready for full trading
+        // 检查策略是否已准备好进行完整交易
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
@@ -111,15 +111,15 @@ public class TradingModeStrategy : Strategy
     }
 }
 
-// Start the strategy with a restriction -- long positions only
+// 以限制模式启动策略 -- 仅允许多头持仓
 var strategy = new TradingModeStrategy();
 strategy.TradingMode = StrategyTradingModes.LongOnly;
 strategy.Start();
 
-// Later -- switch to position closing mode
+// 稍后 -- 切换到平仓模式
 strategy.TradingMode = StrategyTradingModes.ReducePositionOnly;
 
-// Full trading block
+// 完整交易块
 strategy.TradingMode = StrategyTradingModes.Disabled;
 ```
 

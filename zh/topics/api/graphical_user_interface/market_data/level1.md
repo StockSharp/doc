@@ -35,10 +35,10 @@ public Level1Window()
 	InitializeComponent();
 	_connector = MainWindow.This.Connector;
 	
-	// Subscribe to Level1 data reception event
+	// 订阅 Level1 数据接收事件
 	_connector.Level1Received += OnLevel1Received;
 	
-	// Create a subscription to Level1 data if not already subscribed
+	// 如果尚未订阅，则创建 Level1 数据订阅
 	var security = MainWindow.This.SelectedSecurity;
 	if (!_connector.Subscriptions.Any(s => 
 			s.DataType == DataType.Level1 && 
@@ -51,17 +51,17 @@ public Level1Window()
 
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-	// Check if the message belongs to the selected instrument
+	// 检查消息是否属于所选交易品种
 	if (level1Message.SecurityId != MainWindow.This.SelectedSecurity.ToSecurityId())
 		return;
 		
-	// Add the message to Level1Grid
+	// 将消息添加到 Level1Grid
 	this.GuiAsync(() => Level1Grid.Messages.Add(level1Message));
 }
 
 private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 {
-	// Unsubscribe from events when the window is closing
+	// 窗口关闭时取消事件订阅
 	if (_connector != null)
 		_connector.Level1Received -= OnLevel1Received;
 }
@@ -70,7 +70,7 @@ private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs
 ### 处理一级数据的推荐方法
 
 ```cs
-// Creating a subscription to Level1 using multiple instruments
+// 使用多个交易品种创建 Level1 订阅
 public void SubscribeToLevel1(IEnumerable<Security> securities)
 {
 	foreach (var security in securities)
@@ -79,41 +79,41 @@ public void SubscribeToLevel1(IEnumerable<Security> securities)
 		_connector.Subscribe(subscription);
 	}
 	
-	// Subscribe to Level1 data reception event
+	// 订阅 Level1 数据接收事件
 	_connector.Level1Received += OnLevel1Received;
 }
 
-// Handler for Level1 data reception event
+// Level1 数据接收事件处理器
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-	// Check if we need to process this particular message
+	// 检查是否需要处理此特定消息
 	if (IsLevel1Needed(subscription))
 	{
-		// Update GUI in the user interface thread
+		// 在用户界面线程中更新 GUI
 		this.GuiAsync(() => 
 		{
-			// Add the message to Level1Grid
+			// 将消息添加到 Level1Grid
 			Level1Grid.Messages.Add(level1Message);
 			
-			// Process changes in Level1 fields
+			// 处理 Level1 字段变更
 			foreach (var change in level1Message.Changes)
 			{
 				switch (change.Key)
 				{
 					case Level1Fields.LastTradePrice:
-						// Process last trade price change
+						// 处理最新成交价变更
 						var lastPrice = (decimal)change.Value;
 						Console.WriteLine($"Last price {security.Code}: {lastPrice}");
 						break;
 						
 					case Level1Fields.BestBidPrice:
-						// Process best bid price change
+						// 处理最佳 bid 价格变更
 						var bestBid = (decimal)change.Value;
 						Console.WriteLine($"Best bid {security.Code}: {bestBid}");
 						break;
 						
 					case Level1Fields.BestAskPrice:
-						// Process best ask price change
+						// 处理最佳 ask 价格变更
 						var bestAsk = (decimal)change.Value;
 						Console.WriteLine($"Best ask {security.Code}: {bestAsk}");
 						break;

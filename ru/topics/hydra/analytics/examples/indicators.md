@@ -44,7 +44,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, using indicator ROC.
+	/// Аналитический скрипт использует индикатор ROC.
 	/// </summary>
 	public class IndicatorScript : IAnalyticsScript
 	{
@@ -56,23 +56,23 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// creating 2 panes for candles and indicator series
+			// создание двух панелей для свечей и серии индикатора
 			var candleChart = panel.CreateChart<DateTimeOffset, decimal>();
 			var indicatorChart = panel.CreateChart<DateTimeOffset, decimal>();
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// остановить расчёт, если пользователь отменил выполнение скрипта
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var candlesSeries = new Dictionary<DateTimeOffset, decimal>();
 				var indicatorSeries = new Dictionary<DateTimeOffset, decimal>();
 
-				// creating ROC
+				// создание ROC
 				var roc = new RateOfChange();
 
-				// get candle storage
+				// получение хранилища свечей
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
@@ -82,7 +82,7 @@ namespace StockSharp.Algo.Analytics
 					indicatorSeries[candle.OpenTime] = roc.Process(candle).ToDecimal();
 				}
 
-				// draw series on chart
+				// отрисовать серии на графике
 				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
@@ -99,7 +99,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -113,14 +113,14 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, using indicator ROC.
+# Аналитический скрипт использует индикатор ROC.
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# creating 2 panes for candles and indicator series
+		# создание двух панелей для свечей и серии индикатора
 		candle_chart = create_chart(panel, datetime, float)
 		indicator_chart = create_chart(panel, datetime, float)
 
@@ -131,17 +131,17 @@ class indicator_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# остановить расчёт, если пользователь отменил выполнение скрипта
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			candles_series = {}
 			indicator_series = {}
 
-			# creating ROC
+			# создание ROC
 			roc = ROC()
 
-			# get candle storage
+			# получение хранилища свечей
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			for candle in load_range(candle_storage, message_type, from_date, to_date):
@@ -149,7 +149,7 @@ class indicator_script(IAnalyticsScript):
 				candles_series[candle.OpenTime] = candle.ClosePrice
 				indicator_series[candle.OpenTime] = to_decimal(process_candle(roc, candle))
 
-			# draw series on chart
+			# отрисовать серии на графике
 			candle_chart.Append(
 				f"{security} (close)",
 				list(candles_series.keys()),

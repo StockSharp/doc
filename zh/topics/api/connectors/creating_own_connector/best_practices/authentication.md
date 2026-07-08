@@ -24,36 +24,36 @@ class Authenticator : Disposable
 		Secret = secret;
 		Passphrase = passphrase;
 
-		// Create a hashing algorithm based on the secret key
+		// 基于密钥创建哈希算法
 		_hasher = secret.IsEmpty() ? null : new HMACSHA256(secret.UnSecure().Base64());
 	}
 
 	protected override void DisposeManaged()
 	{
-		// Dispose of the hashing algorithm resources
+		// 释放哈希算法资源
 		_hasher?.Dispose();
 		base.DisposeManaged();
 	}
 
-	// Flag indicating whether the authenticator can create signatures
+	// 指示认证器是否可以创建签名的标志
 	public bool CanSign { get; }
 	
-	// API public key
+	// API 公钥
 	public SecureString Key { get; }
 	
-	// API secret key
+	// API 密钥
 	public SecureString Secret { get; }
 	
 	// Passphrase (if required by the exchange)
 	public SecureString Passphrase { get; }
 
-	// Method for creating a request signature
+	// 创建请求签名的方法
 	public string MakeSign(string url, Method method, string parameters, out string timestamp)
 	{
-		// Generate a timestamp
+		// 生成时间戳
 		timestamp = DateTime.UtcNow.ToUnix().ToString("F0");
 
-		// Create a signature based on the timestamp, method, URL, and parameters
+		// 基于时间戳、方法、URL 和参数创建签名
 		return _hasher
 			.ComputeHash((timestamp + method.ToString().ToUpperInvariant() + url + parameters).UTF8())
 			.Base64();

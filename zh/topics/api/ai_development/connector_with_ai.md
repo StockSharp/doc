@@ -27,7 +27,7 @@ dotnet add package StockSharp.Algo
 创建 `CLAUDE.md` 文件：
 
 ```markdown
-# Project Rules — Exchange Connector
+# 项目规则 — 交易所连接器
 
 - Framework: StockSharp 5.x, .NET 10
 - Connector is implemented as a MessageAdapter
@@ -174,10 +174,10 @@ public class MyExchangeAdapter : AsyncMessageAdapter
 
     protected override ValueTask OnSecurityLookupAsync(SecurityLookupMessage msg, CancellationToken token)
     {
-        // ... request instruments
+        // ... 请求交易品种
     }
 
-    // ... other methods
+    // ... 其他方法
 }
 ```
 

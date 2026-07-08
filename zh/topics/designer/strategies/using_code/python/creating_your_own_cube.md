@@ -23,7 +23,7 @@ from StockSharp.Diagram import DiagramExternalElement
 
 from designer_extensions import diagram_external
 
-# Custom diagram element class that demonstrates input and output sockets usage
+# 演示输入和输出插槽用法的自定义图表元素类
 class empty_diagram_element(DiagramExternalElement):
 	"""
 	Sample diagram element demonstrating input and output sockets usage.
@@ -34,18 +34,18 @@ class empty_diagram_element(DiagramExternalElement):
 	def __init__(self):
 		super(empty_diagram_element, self).__init__()
 
-		# Example property to show how to add parameters to the diagram element
-		# This parameter is named "MinValue" with a default value of 10
+		# 演示如何向图表元素添加参数的示例属性
+		# 此参数名为 "MinValue"，默认值为 10
 		self._minValue = self.AddParam("MinValue", 10)\
 							.SetBasic(True)\
 							.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 
-		# Initialize output event handlers as empty lists
-		# Subscribers can assign callable methods to these handlers
+		# 将输出事件处理程序初始化为空列表
+		# 订阅者可以为这些处理程序分配可调用方法
 		self._output1_handlers = []
 		self._output2_handlers = []
 
-	# Output sockets are events marked with the DiagramExternal attribute
+	# 输出插槽是带 DiagramExternal 特性的事件
 
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
@@ -83,8 +83,8 @@ class empty_diagram_element(DiagramExternalElement):
 		if handler in self._output2_handlers:
 			self._output2_handlers.remove(handler)
 
-	# Uncomment the following property if you want the Process method 
-	# to be called every time when a new argument is received
+	# 如果希望调用 Process 方法，请取消注释以下属性 
+	# 使其在每次收到新参数时被调用
 	# (no need to wait for all input args to be received).
 	#
 	# @property
@@ -100,11 +100,11 @@ class empty_diagram_element(DiagramExternalElement):
 		:param candle: CandleMessage input representing a candlestick.
 		:param diff: Unit representing the difference value to be processed.
 		"""
-		# Calculate the result as the sum of the candle's close price and the diff value
+		# 将结果计算为蜡烛收盘价与 diff 值之和
 		res = candle.ClosePrice + diff
 
-		# Invoke Output1 if diff is greater than or equal to the MinValue parameter,
-		# otherwise invoke Output2
+		# 如果 diff 大于或等于 MinValue 参数，则调用 Output1，
+		# 否则调用 Output2
 		if diff >= self._minValue.Value:
 			for handler in self._output1_handlers:
 				handler(res)
@@ -117,21 +117,21 @@ class empty_diagram_element(DiagramExternalElement):
 		Called when the diagram element starts. Add any pre-start logic here.
 		"""
 		super(empty_diagram_element, self).Start()
-		# Add custom logic to be executed before the element starts
+		# 添加在元素启动前执行的自定义逻辑
 
 	def Stop(self):
 		"""
 		Called when the diagram element stops. Add any post-stop logic here.
 		"""
 		super(empty_diagram_element, self).Stop()
-		# Add custom logic to be executed after the element stops
+		# 添加在元素停止后执行的自定义逻辑
 
 	def Reset(self):
 		"""
 		Called when the diagram element resets. Add any reset logic here.
 		"""
 		super(empty_diagram_element, self).Reset()
-		# Add custom logic to reset the internal state of the element
+		# 添加用于重置元素内部状态的自定义逻辑
 ```
 
 在这段代码中，模块包含两个输入端口和两个输出端口。对方法应用 @diagram_external 装饰器，即可定义输入端口：
@@ -144,7 +144,7 @@ def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 对事件的订阅操作 add_NNN 应用 @diagram_external 装饰器，即可定义输出端口。示例模块包含以下两个事件：
 
 ```python
-# Output sockets are events marked with the DiagramExternal attribute
+# 输出插槽是带 DiagramExternal 特性的事件
 
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):

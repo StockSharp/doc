@@ -44,14 +44,14 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ```cs
 ...
-// Add adapter for connecting to Binance
+// 添加用于连接 Binance 的适配器
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
 	a.Key = "<Your API Key>";
 	a.Secret = "<Your Secret Key>";
 });
 
-// Add RSS for news
+// 添加用于新闻的 RSS
 connector.AddAdapter<RssMessageAdapter>(a => 
 {
 	a.Address = "https://news-source.com/feed";
@@ -66,32 +66,32 @@ connector.AddAdapter<RssMessageAdapter>(a =>
 ```cs
 private void InitConnector()
 {
-	// Subscribe to successful connection event
+	// 订阅连接成功事件
 	Connector.Connected += () =>
 	{
 		this.GuiAsync(() => ChangeConnectStatus(true));
 	};
 	
-	// Subscribe to connection error event
+	// 订阅连接错误事件
 	Connector.ConnectionError += error => this.GuiAsync(() =>
 	{
 		ChangeConnectStatus(false);
 		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 	});
 	
-	// Subscribe to disconnection event
+	// 订阅断开连接事件
 	Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
 	
-	// Subscribe to error event
+	// 订阅错误事件
 	Connector.Error += error =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
 	
-	// Subscribe to market data subscription failure event
+	// 订阅市场数据订阅失败事件
 	Connector.SubscriptionFailed += (subscription, error, isSubscribe) =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), 
 			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
 	
-	// Subscriptions for data reception
+	// 用于接收数据的订阅
 	
 	// Instruments
 	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
@@ -108,13 +108,13 @@ private void InitConnector()
 	// Positions
 	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
-	// Order registration failures
+	// 订单注册失败
 	Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
-	// Order cancellation failures
+	// 订单撤销失败
 	Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
 	
-	// Set market data provider
+	// 设置市场数据提供者
 	_securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
 	
 	try
@@ -133,7 +133,7 @@ private void InitConnector()
 	
 	ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
 	
-	// Register adapter provider for graphical configuration
+	// 为图形化配置注册适配器提供者
 	ConfigManager.RegisterService<IMessageAdapterProvider>(
 		new InMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }

@@ -26,26 +26,26 @@
 private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Other connection actions
+	// 其他连接操作
 	
-	// Set news provider
+	// 设置新闻提供者
 	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
 	
-	// Subscribe to news reception event
+	// 订阅新闻接收事件
 	_connector.NewsReceived += OnNewsReceived;
 	
-	// Create a subscription to news
+	// 创建新闻订阅
 	var newsSubscription = new Subscription(DataType.News);
 	_connector.Subscribe(newsSubscription);
 	
-	// Perform connection
+	// 执行连接
 	_connector.Connect();
 }
 
-// Handler for news reception event
+// 新闻接收事件处理器
 private void OnNewsReceived(Subscription subscription, News news)
 {
-	// Add news to NewsGrid in user interface thread
+	// 在用户界面线程中将新闻添加到 NewsGrid
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 }
 ```
@@ -53,41 +53,41 @@ private void OnNewsReceived(Subscription subscription, News news)
 ### 新闻筛选
 
 ```cs
-// Creating a subscription to news with filtering
+// 创建带过滤的新闻订阅
 public void SubscribeToFilteredNews(string source = null, DateTime? from = null)
 {
-	// Create a subscription to news
+	// 创建新闻订阅
 	var newsSubscription = new Subscription(DataType.News)
 	{
 		MarketData =
 		{
-			// Set starting date for historical news
+			// 设置历史新闻的开始日期
 			From = from ?? DateTime.Today.AddDays(-7),
 			
-			// Optionally set news source
+			// 可选设置新闻来源
 			NewsSource = source
 		}
 	};
 	
-	// Subscribe to news reception event
+	// 订阅新闻接收事件
 	_connector.NewsReceived += OnFilteredNewsReceived;
 	
-	// Start the subscription
+	// 启动订阅
 	_connector.Subscribe(newsSubscription);
 }
 
-// Handler for filtered news reception events
+// 过滤新闻接收事件处理器
 private void OnFilteredNewsReceived(Subscription subscription, News news)
 {
-	// Check source filter
+	// 检查来源过滤器
 	if (subscription.MarketData.NewsSource != null && 
 		!string.Equals(news.Source, subscription.MarketData.NewsSource, StringComparison.OrdinalIgnoreCase))
 		return;
 		
-	// Add news to NewsGrid
+	// 将新闻添加到 NewsGrid
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 	
-	// Output news information
+	// 输出新闻信息
 	Console.WriteLine($"News: {news.Headline}");
 	Console.WriteLine($"Source: {news.Source}");
 	Console.WriteLine($"Time: {news.ServerTime}");
@@ -99,25 +99,25 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 ### 按关键词搜索新闻
 
 ```cs
-// Method for filtering news by keywords
+// 按关键字过滤新闻的方法
 public void FilterNewsByKeywords(IEnumerable<string> keywords)
 {
 	var keywordsList = keywords.ToList();
 	
 	// If already subscribed to news,
-	// just set the handler
+	// 只需设置处理器
 	_connector.NewsReceived += (subscription, news) =>
 	{
-		// Check if the news headline contains any of the keywords
+		// 检查新闻标题是否包含任一关键字
 		bool containsKeyword = keywordsList.Any(keyword => 
 			news.Headline.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0);
 			
 		if (containsKeyword)
 		{
-			// Add news to NewsGrid
+			// 将新闻添加到 NewsGrid
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 			
-			// Display notification
+			// 显示通知
 			ShowNotification($"New news on topic: {news.Headline}");
 		}
 	};

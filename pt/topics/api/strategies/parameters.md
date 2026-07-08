@@ -48,19 +48,19 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 O método [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) define um validador para verificar o valor do parâmetro. StockSharp fornece um conjunto de validadores predefinidos que podem ser usados para as tarefas mais comuns:
 
 ```cs
-// Check that the number is greater than zero
+// Verificar se o número é maior que zero
 _longSmaLength = Param(nameof(LongSmaLength), 80)
 					.SetValidator(new IntGreaterThanZeroAttribute());
 
-// Check that the number is not negative
+// Verificar se o número não é negativo
 _volume = Param(nameof(Volume), 1)
 			.SetValidator(new DecimalNotNegativeAttribute());
 
-// Check for value range
+// Verificar o intervalo de valores
 _percentage = Param(nameof(Percentage), 50)
 				.SetValidator(new RangeAttribute(0, 100));
 
-// Check for required value
+// Verificar o valor obrigatório
 _security = Param<Security>(nameof(Security))
 				.SetValidator(new RequiredAttribute());
 ```
@@ -68,16 +68,16 @@ _security = Param<Security>(nameof(Security))
 Por conveniência, [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) tem métodos integrados para os validadores mais comuns:
 
 ```cs
-// Check that the number is greater than zero
+// Verificar se o número é maior que zero
 _longSmaLength = Param(nameof(LongSmaLength), 80).SetGreaterThanZero();
 
-// Check that the number is not negative
+// Verificar se o número não é negativo
 _volume = Param(nameof(Volume), 1).SetNotNegative();
 
-// Check that the value is NULL or not negative
+// Verificar se o valor é NULL ou não negativo
 _interval = Param<TimeSpan?>(nameof(Interval)).SetNullOrNotNegative();
 
-// Set value range
+// Definir o intervalo de valores
 _percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
 ```
 
@@ -171,14 +171,14 @@ public override void Save(SettingsStorage settings)
 {
 	base.Save(settings);
 	
-	// Additional saving logic...
+	// Lógica adicional de salvamento...
 }
 
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings);
 	
-	// Additional loading logic...
+	// Lógica adicional de carregamento...
 }
 ```
 

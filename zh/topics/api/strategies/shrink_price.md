@@ -29,41 +29,41 @@ StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensi
 ## 示例用法
 
 ```cs
-// Create a Security object with specified parameters
+// 使用指定参数创建 Security 对象
 var security = new Security
 {
 	PriceStep = 0.01m,  // Price step of 0.01
 	Decimals = 2        // Two decimal places
 };
 
-// Examples of using ShrinkPrice
+// ShrinkPrice 使用示例
 
-// Example 1: Rounding to the price step
+// 示例 1：按价格步长取整
 decimal price1 = 10.234m;
 decimal shrunkPrice1 = price1.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price1}, After ShrinkPrice: {shrunkPrice1}");
-// Output: Original price: 10.234, After ShrinkPrice: 10.23
+// 输出：原始价格：10.234，ShrinkPrice 后：10.23
 
-// Example 2: Rounding a price that already matches the step
+// 示例 2：对已符合步长的价格取整
 decimal price2 = 10.22m;
 decimal shrunkPrice2 = price2.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price2}, After ShrinkPrice: {shrunkPrice2}");
-// Output: Original price: 10.22, After ShrinkPrice: 10.22
+// 输出：原始价格：10.22，ShrinkPrice 后：10.22
 
-// Example 3: Rounding a price with more decimal places
+// 示例 3：对小数位更多的价格取整
 decimal price3 = 10.2345678m;
 decimal shrunkPrice3 = price3.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}");
-// Output: Original price: 10.2345678, After ShrinkPrice: 10.23
+// 输出：原始价格：10.2345678，ShrinkPrice 后：10.23
 
-// Example 4: Using ShrinkPrice when creating an order
+// 示例 4：创建订单时使用 ShrinkPrice
 var order = new Order
 {
 	Security = security,
 	Price = 10.237m.ShrinkPrice(security)  // Round the price before creating the order
 };
 Console.WriteLine($"Order price: {order.Price}");
-// Output: Order price: 10.24
+// 输出：订单价格：10.24
 ```
 
 ## 应用

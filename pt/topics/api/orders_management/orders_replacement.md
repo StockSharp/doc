@@ -9,11 +9,11 @@ O exemplo seguinte mostra como "mover" a ordem para o melhor preço:
 ```cs
 if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk != null)
 {
-	// registeredOrder - successfully registered order.
+	// registeredOrder — ordem registrada com sucesso.
 	var newOrder = registeredOrder.Clone();
-	// changing the price to be the best on order book
+	// alterar o preço para ser o melhor no livro de ofertas
 	newOrder.Price = (registeredOrder.Direction == Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
-	// sending request the replace our order with new price
+	// enviar solicitação para substituir nossa ordem pelo novo preço
 	_connector.ReRegisterOrder(registeredOrder, newOrder);
 }
 ```

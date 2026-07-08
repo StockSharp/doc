@@ -37,30 +37,30 @@ private readonly Connector _connector = new Connector();
 
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Other code during connection...
+	// 连接期间的其他代码...
 	
-	// Subscribe to the order received event
+	// 订阅订单接收事件
 	_connector.OrderReceived += (subscription, order) => 
 	{
-		// Add orders to the OrderGrid table
+		// 将订单添加到 OrderGrid 表
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	};
 	
-	// To connect the connector
+	// 用于连接连接器
 	_connector.Connect();
 }
 					
-// Cancels all selected orders
+// 撤销所有选定订单
 private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 {
-	// Iterate through selected orders and cancel each one
+	// 遍历选定订单并逐个撤销
 	foreach (var order in orders)
 	{
 		_connector.CancelOrder(order);
 	}
 }
 
-// Opens an order editing window and performs replacement of the selected order
+// 打开订单编辑窗口并替换选定订单
 private void OrderGrid_OnOrderReRegistering(Order order)
 {
 	var window = new OrderWindow
@@ -83,26 +83,26 @@ private void OrderGrid_OnOrderReRegistering(Order order)
 处理订单的现代方法涉及使用订阅：
 
 ```cs
-// Subscribe to the order received event
+// 订阅订单接收事件
 _connector.OrderReceived += OnOrderReceived;
 
-// Order received handler
+// 订单接收处理器
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Check if the order belongs to the subscription we're interested in
+	// 检查订单是否属于目标订阅
 	if (subscription == _ordersSubscription)
 	{
-		// Add the order to the table
+		// 将订单添加到表
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
-		// Additional order processing
+		// 订单的附加处理
 		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
 		
 		// If the order is in a final state, update the UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {
-				// Update interface for completed orders
+				// 为已完成订单更新界面
 			});
 		}
 	}
@@ -112,14 +112,14 @@ private void OnOrderReceived(Subscription subscription, Order order)
 ## 取消订单
 
 ```cs
-// Modern approach to order cancellation
+// 订单撤销的现代方式
 private void CancelOrder(Order order)
 {
 	try
 	{
 		_connector.CancelOrder(order);
 		
-		// Log the action
+		// 记录操作
 		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
 	}
 	catch (Exception ex)
@@ -128,7 +128,7 @@ private void CancelOrder(Order order)
 	}
 }
 
-// Mass cancellation of orders
+// 批量撤销订单
 private void CancelAllOrders()
 {
 	var activeOrders = _ordersWindow.OrderGrid.Orders
@@ -145,19 +145,19 @@ private void CancelAllOrders()
 ## 处理订单注册和取消错误
 
 ```cs
-// Subscribe to order registration failures
+// 订阅订单注册失败事件
 _connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 
-// Order registration failure handler
+// 订单注册失败处理器
 private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 {
-	// Add error information to OrderGrid
+	// 将错误信息添加到 OrderGrid
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
-	// Log the error
+	// 记录错误
 	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
 	
-	// Notify the user
+	// 通知用户
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 

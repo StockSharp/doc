@@ -70,11 +70,11 @@ var snapshotRegistry = new SnapshotRegistry(Path.Combine(
 ### 使用 Level1 快照
 
 ```cs
-// Get the Level1 snapshot storage
+// 获取 Level1 快照存储
 var level1Snapshots = snapshotRegistry.GetSnapshotStorage(
     DataType.Level1);
 
-// Save a snapshot
+// 保存快照
 var level1Msg = new Level1ChangeMessage
 {
     SecurityId = "AAPL@NASDAQ".ToSecurityId(),
@@ -90,7 +90,7 @@ level1Snapshots.Update(level1Msg);
 ### 正在检索快照
 
 ```cs
-// Get the latest snapshot for an instrument
+// 获取交易品种的最新快照
 var secId = "AAPL@NASDAQ".ToSecurityId();
 var snapshot = level1Snapshots.Get(secId);
 

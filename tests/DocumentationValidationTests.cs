@@ -387,6 +387,44 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		AssertNoErrors(errors);
 	}
 
+	[TestMethod]
+	public void LocalizedCodeCommentsAreTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var defaultComments = EnumerateCodeComments(ReadAllText(defaultFile))
+				.Select(comment => NormalizeCodeCommentForTranslationCheck(comment.Text))
+				.Where(comment => comment.Length > 0)
+				.ToHashSet(StringComparer.Ordinal);
+
+			if (defaultComments.Count == 0)
+				continue;
+
+			foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeCommentForTranslationCheck(comment.Text);
+					if (normalized.Length == 0 || !defaultComments.Contains(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: code comment is identical to the English source comment. Comment: {Truncate(comment.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
 	private static void ValidateTocFile(
 		string lang,
 		string langRoot,
@@ -887,6 +925,44 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
+	{
+		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+		{
+			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
+			using var reader = new StringReader(block.Groups["code"].Value);
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var trimmed = text.Trim();
+				if (trimmed.StartsWith("///", StringComparison.Ordinal)
+					|| trimmed.StartsWith("//", StringComparison.Ordinal)
+					|| trimmed.StartsWith("#", StringComparison.Ordinal))
+				{
+					yield return new CodeComment(trimmed, line);
+				}
+			}
+		}
+	}
+
+	private static string NormalizeCodeCommentForTranslationCheck(string comment)
+	{
+		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+			return string.Empty;
+
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#)\s*", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+		if (text.Length < 12)
+			return string.Empty;
+
+		// Skip XML doc boilerplate, commented-out code, identifiers, and compiler/preprocessor directives.
+		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|[;{}=()]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+			return string.Empty;
+
+		return text;
+	}
+
 	private static (string Path, string Fragment) SplitPathQueryAndFragment(string url)
 	{
 		var path = url;
@@ -1162,4 +1238,6 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct PathResolution(bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
 
 	private readonly record struct MarkdownTarget(string Language, bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
+
+	private readonly record struct CodeComment(string Text, int Line);
 }

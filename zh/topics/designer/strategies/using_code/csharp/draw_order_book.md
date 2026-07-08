@@ -26,7 +26,7 @@ bookSubscription
 	.WhenOrderBookReceived(this)
 	.Do(book =>
 	{
-		// drawing order book
+		// 绘制订单簿
 		DrawOrderBook(bookSubscription, _bookSource, book);
 	})
 	.Apply(this);

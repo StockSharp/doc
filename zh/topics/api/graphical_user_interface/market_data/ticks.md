@@ -37,28 +37,28 @@ public class TradesWindow
 		_connector = connector;
 		_security = security;
 		
-		// Subscribe to tick trade reception event
+		// 订阅 tick 成交接收事件
 		_connector.TickTradeReceived += OnTickReceived;
 		
-		// Create a subscription to tick trades
+		// 创建 tick 成交订阅
 		_tickSubscription = new Subscription(DataType.Ticks, security);
 		
-		// Start subscription
+		// 启动订阅
 		_connector.Subscribe(_tickSubscription);
 	}
 	
-	// Handler for tick trade reception event
+	// tick 成交接收事件处理器
 	private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 	{
-		// Check if the trade belongs to our subscription
+		// 检查成交是否属于我们的订阅
 		if (subscription != _tickSubscription)
 			return;
 			
-		// Add the trade to TradeGrid in the user interface thread
+		// 在用户界面线程中将成交添加到 TradeGrid
 		this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	}
 	
-	// Method for unsubscribing when the window is closed
+	// 窗口关闭时取消订阅的方法
 	public void Unsubscribe()
 	{
 		if (_tickSubscription != null)
@@ -84,20 +84,20 @@ public class MyTradesWindow
 		
 		_connector = connector;
 		
-		// Subscribe to own trade reception event
+		// 订阅 own trade 接收事件
 		_connector.OwnTradeReceived += OnOwnTradeReceived;
 		
-		// Create a subscription to transaction data
+		// 创建交易数据订阅
 		var myTradesSubscription = new Subscription(DataType.Transactions, null);
 		
-		// Start subscription
+		// 启动订阅
 		_connector.Subscribe(myTradesSubscription);
 	}
 	
-	// Handler for own trade reception event
+	// own trade 接收事件处理器
 	private void OnOwnTradeReceived(Subscription subscription, MyTrade myTrade)
 	{
-		// Add own trade to TradeGrid in the user interface thread
+		// 在用户界面线程中将 own trade 添加到 TradeGrid
 		this.GuiAsync(() => TradeGrid.Trades.Add(myTrade));
 	}
 }
@@ -106,44 +106,44 @@ public class MyTradesWindow
 ### 获取历史成交数据
 
 ```cs
-// Method for getting historical tick trades
+// 获取历史 tick 成交的方法
 public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 {
-	// Clear current trades
+	// 清除当前成交
 	TradeGrid.Trades.Clear();
 	
-	// Create a subscription to historical tick trades
+	// 创建历史 tick 成交订阅
 	var historySubscription = new Subscription(DataType.Ticks, security)
 	{
 		MarketData =
 		{
-			// Specify time period for historical data
+			// 指定历史数据时间段
 			From = from,
 			To = to
 		}
 	};
 	
-	// Subscribe to tick trade reception event
+	// 订阅 tick 成交接收事件
 	_connector.TickTradeReceived += OnHistoricalTickReceived;
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(historySubscription);
 }
 
-// Handler for historical tick trade reception event
+// 历史 tick 成交接收事件处理器
 private void OnHistoricalTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-	// Add tick to TradeGrid in the user interface thread
+	// 在用户界面线程中将 tick 添加到 TradeGrid
 	this.GuiAsync(() => 
 	{
 		TradeGrid.Trades.Add(tick);
 		
-		// Update statistics
+		// 更新统计信息
 		UpdateTradeStatistics();
 	});
 }
 
-// Method for updating trade statistics
+// 更新成交统计的方法
 private void UpdateTradeStatistics()
 {
 	int totalTrades = TradeGrid.Trades.Count;
@@ -152,7 +152,7 @@ private void UpdateTradeStatistics()
 		? TradeGrid.Trades.Average(t => t.Price)
 		: 0;
 	
-	// Update interface statistics elements
+	// 更新界面统计元素
 	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
 	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
 	AveragePriceLabel.Content = $"Average price: {averagePrice:F2}";
@@ -162,29 +162,29 @@ private void UpdateTradeStatistics()
 ### 按成交量筛选交易
 
 ```cs
-// Method for filtering trades by minimum volume
+// 按最小成交量过滤成交的方法
 public void FilterTicksByVolume(decimal minVolume)
 {
-	// Save filter value
+	// 保存过滤值
 	_minVolumeFilter = minVolume;
 	
-	// Update tick trade reception event handler
+	// 更新 tick 成交接收事件处理器
 	_connector.TickTradeReceived -= OnTickReceived;
 	_connector.TickTradeReceived += OnFilteredTickReceived;
 }
 
-// Handler for tick trade reception event with volume filtering
+// 带成交量过滤的 tick 成交接收事件处理器
 private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-	// Check if the trade belongs to the selected instrument
+	// 检查成交是否属于所选交易品种
 	if (tick.SecurityId != _security.ToSecurityId())
 		return;
 		
-	// Apply volume filter
+	// 应用成交量过滤
 	if (tick.Volume < _minVolumeFilter)
 		return;
 		
-	// Add the trade to TradeGrid in the user interface thread
+	// 在用户界面线程中将成交添加到 TradeGrid
 	this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	
 	// If it's a large trade, you can highlight it or send a notification
@@ -194,16 +194,16 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 	}
 }
 
-// Method for large trade notification
+// 大额成交通知的方法
 private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
-	// Output information about the large trade
+	// 输出大额成交信息
 	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 	
-	// You can add sound or visual notification
+	// 可以添加声音或视觉通知
 	this.GuiAsync(() => 
 	{
-		// Example of visual highlighting in the list
+		// 列表中视觉高亮的示例
 		var tradeItem = TradeGrid.Trades.LastOrDefault();
 		if (tradeItem != null)
 		{

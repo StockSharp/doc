@@ -34,7 +34,7 @@ Je mehr Kontext die KI hat, desto genauer ist das Ergebnis. Geben Sie an:
 Erstellen Sie eine Projektregel-Datei im Repository-Root:
 
 ```markdown
-# Project Rules
+# Projektregeln
 
 - Using StockSharp 5.x API
 - Target framework: .NET 10

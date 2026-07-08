@@ -26,7 +26,7 @@ El mecanismo de reconexión se configura mediante la propiedad [ReConnectionSett
    // initialize the reconnection mechanism (it will automatically connect 
    // every 10 seconds if the gateway loses connection with the server)
    Connector.Adapter.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
-   // reconnection will work only during the selected board working hours
+   // la reconexión funcionará solo durante el horario de la bolsa seleccionada
    // (to disable reconnection when there is no trading normally, for example, at night)
    Connector.Adapter.ReConnectionSettings.WorkingTime = ExchangeBoard.Nasdaq.WorkingTime;
    ```

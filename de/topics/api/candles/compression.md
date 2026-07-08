@@ -13,27 +13,27 @@ Es wird empfohlen, diese Datei zu überprüfen, um ein vollständiges Verständn
 ### Komprimierung von Tick-Daten zu Candles
 
 ```cs
-// Example usage of ToCandles for ticks
+// Beispiel für die Verwendung von ToCandles für Ticks
 var tickStorage = storageRegistry.GetTickMessageStorage(securityId, Drive, StorageFormat);
 var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
-// This code loads tick data from storage and converts it into candles.
+// Dieser Code lädt Tickdaten aus dem Speicher und wandelt sie in Kerzen um.
 // mdMsg - the message with parameters of the created candles (type, time frame, etc.).
-// candleBuilderProvider - the provider that supplies a specific candle builder implementation.
+// candleBuilderProvider — Provider, der eine konkrete Kerzen-Builder-Implementierung bereitstellt.
 ```
 
 ### Komprimierung von Spread-Daten zu Candles
 
 ```cs
-// Example usage of ToCandles for spread data
+// Beispiel für die Verwendung von ToCandles für Spread-Daten
 var depthStorage = storageRegistry.GetQuoteMessageStorage(securityId, Drive, StorageFormat);
 var depths = depthStorage.LoadAsync(from, to);
 var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderProvider: candleBuilderProvider);
 
-// Here we load spread data and convert it into candles.
-// Level1Fields.SpreadMiddle indicates using the spread middle price for building candles.
-// You can also use Level1Fields.BestBid or Level1Fields.BestAsk for the best bid or ask prices, respectively.
+// Hier laden wir Spread-Daten und wandeln sie in Kerzen um.
+// Level1Fields.SpreadMiddle bedeutet, dass die Spread-Mitte zum Erstellen von Kerzen verwendet wird.
+// Sie können auch Level1Fields.BestBid bzw. Level1Fields.BestAsk für den besten Bid- oder Ask-Preis verwenden.
 ```
 
 ## Komprimierungsparameter
@@ -72,8 +72,8 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 	}
 }
 
-// This method demonstrates various ways to build candles depending on the type of source data.
-// It supports building from ticks, order log, spreads, and other sources.
+// Diese Methode zeigt verschiedene Möglichkeiten zum Erstellen von Kerzen je nach Quelldatentyp.
+// Es unterstützt das Erstellen aus Ticks, Orderlog, Spreads und anderen Quellen.
 ```
 
 ## Zusätzliche Funktionen
@@ -83,7 +83,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 Die API ermöglicht die Erstellung von Candles nicht nur aus Ticks und Spreads, sondern auch aus anderen Datenquellen:
 
 ```cs
-// Example of building candles from various sources
+// Beispiel für das Erstellen von Kerzen aus verschiedenen Quellen
 switch (type)
 {
 	case BuildTypes.Ticks:
@@ -106,7 +106,7 @@ switch (type)
 	// ... (other cases)
 }
 
-// This code shows how to build candles from different data sources: ticks, order log, spreads, Level1 data, and even from smaller time frame candles.
+// Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderlog, Spreads, Level1-Daten und sogar Kerzen kleinerer Timeframes.
 ```
 
 ## Fazit

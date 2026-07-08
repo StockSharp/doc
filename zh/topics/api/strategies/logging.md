@@ -85,7 +85,7 @@ public void RegisterOrder(Order order)
 ```cs
 try
 {
-	// Some actions
+	// 一些操作
 }
 catch (Exception ex)
 {
@@ -99,7 +99,7 @@ catch (Exception ex)
 ```cs
 try
 {
-	// Some actions
+	// 一些操作
 }
 catch (Exception ex)
 {
@@ -113,7 +113,7 @@ catch (Exception ex)
 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类包含一个 [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) 属性，该属性决定哪些消息将被写入日志：
 
 ```cs
-// Set the logging level for the strategy
+// 设置策略日志级别
 strategy.LogLevel = LogLevels.Info;
 ```
 

@@ -13,14 +13,14 @@ public void Load()
 {
 	if (File.Exists(_connectorFile))
 	{
-		//Download connector settings from an existing configuration file
+		// Cargar ajustes del conector desde un archivo de configuración existente
 		_connector.Load(new JsonSerializer<SettingsStorage>().Deserialize(_connectorFile));
 	}
 }
 ...
 public void Save()
 {
-	//Save the connector settings to the configuration file
+	// Guardar ajustes del conector en el archivo de configuración
 	new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 }
 ...

@@ -16,7 +16,7 @@ readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
 private ChartArea _area;
 private ChartCandleElement _candleElement;
 
-// Connection setup and connector configuration
+// Configuración de conexión y del conector
 private void ConfigureConnector()
 {
 	if (_connector.Configure(this))
@@ -25,7 +25,7 @@ private void ConfigureConnector()
 	}
 }
 
-// Chart setup
+// Configuración del gráfico
 private void SetupChart()
 {
 	_area = new ChartArea();
@@ -33,74 +33,74 @@ private void SetupChart()
 	_candleElement = new ChartCandleElement();
 	_area.Elements.Add(_candleElement);
 
-	// Subscribe to candle reception event
+	// Suscribirse al evento de recepción de velas
 	_connector.CandleReceived += OnCandleReceived;
 }
 
-// Service registration
+// Registro de servicios
 private void RegisterServices()
 {
 	ConfigManager.RegisterService<ISecurityProvider>(_connector);
 	ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 }
 
-// Creating index instrument and subscribing to candles
+// Crear instrumento de índice y suscribirse a velas
 private void CreateIndexAndSubscribe()
 {
-	// Create index instrument (spread)
+	// Crear instrumento de índice (spread)
 	_indexInstr = new WeightedIndexSecurity()
 	{
 		Board = ExchangeBoard.Nyse,
 		Id = "IndexInstr"
 	};
 
-	// Add instruments with weights (1 and -1 for spread)
+	// Añadir instrumentos con pesos (1 y -1 para el spread)
 	_indexInstr.Weights.Add(_instr1, 1);
 	_indexInstr.Weights.Add(_instr2, -1);
 
-	// Create subscription to index instrument candles
+	// Crear suscripción a velas del instrumento de índice
 	_indexSubscription = new Subscription(
 		DataType.TimeFrame(_timeFrame),  // 1-minute candles
 		_indexInstr)  // Our index instrument
 	{
 		MarketData =
 		{
-			// Configure subscription to build candles from ticks
+			// Configurar la suscripción para construir velas desde ticks
 			BuildMode = MarketDataBuildModes.Build,
 			BuildFrom = DataType.Ticks,
 
-			// Request historical data for 30 days
+			// Solicitar datos históricos de 30 días
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 			To = DateTime.Now
 		}
 	};
 
-	// Add element to chart and bind it to subscription
+	// Añadir elemento al gráfico y vincularlo a la suscripción
 	_chart.AddElement(_area, _candleElement, _indexSubscription);
 
-	// Start subscription
+	// Iniciar suscripción
 	_connector.Subscribe(_indexSubscription);
 }
 
-// Handler for candle reception event
+// Controlador del evento de recepción de velas
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle belongs to our subscription
+	// Comprobar si la vela pertenece a nuestra suscripción
 	if (subscription != _indexSubscription)
 		return;
 
-	// If needed, limit processing to only completed candles
+	// Si es necesario, limitar el procesamiento a velas completadas
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Draw the candle on the chart
+	// Dibujar la vela en el gráfico
 	var chartData = new ChartDrawData();
 	chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 
 	this.GuiAsync(() => _chart.Draw(chartData));
 }
 
-// Unsubscribe when closing the application
+// Cancelar la suscripción al cerrar la aplicación
 private void Unsubscribe()
 {
 	if (_indexSubscription != null)
@@ -117,14 +117,14 @@ private void Unsubscribe()
 ### Creación de una suscripción a velas de índice a partir de velas de componentes
 
 ```cs
-// Create subscription to build index candles from component candles
+// Crear suscripción para construir velas de índice desde velas de componentes
 var indexFromCandlesSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	_indexInstr)
 {
 	MarketData =
 	{
-		// Configure subscription to build from component candles
+		// Configurar la suscripción para construir desde velas de componentes
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
@@ -132,21 +132,21 @@ var indexFromCandlesSubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// Iniciar suscripción
 _connector.Subscribe(indexFromCandlesSubscription);
 ```
 
 ### Creación de una suscripción a velas de índice a partir de libros de órdenes
 
 ```cs
-// Create subscription to build index candles from order books
+// Crear suscripción para construir velas de índice desde libros de órdenes
 var indexFromDepthSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	_indexInstr)
 {
 	MarketData =
 	{
-		// Configure subscription to build from order books
+		// Configurar la suscripción para construir desde libros de órdenes
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.MarketDepth,
 		BuildField = Level1Fields.SpreadMiddle,  // Use middle of spread
@@ -155,14 +155,14 @@ var indexFromDepthSubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// Iniciar suscripción
 _connector.Subscribe(indexFromDepthSubscription);
 ```
 
 ### Trabajando con el índice de volatilidad
 
 ```cs
-// Create volatility index based on expression
+// Crear índice de volatilidad basado en una expresión
 var volatilityIndex = new ExpressionIndexSecurity
 {
 	Board = ExchangeBoard.Nyse,
@@ -170,10 +170,10 @@ var volatilityIndex = new ExpressionIndexSecurity
 	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Formula for calculating volatility
 };
 
-// Add main instrument to index
+// Añadir el instrumento principal al índice
 volatilityIndex.InnerSecurityIds.Add(_instr1.ToSecurityId());
 
-// Create subscription to volatility index candles
+// Crear suscripción a velas del índice de volatilidad
 var volatilitySubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	volatilityIndex)
@@ -187,7 +187,7 @@ var volatilitySubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// Iniciar suscripción
 _connector.Subscribe(volatilitySubscription);
 ```
 

@@ -22,15 +22,15 @@ K线的使用方法可参阅 *Samples\/02\_Candles\/01\_Realtime* 文件夹中�
 1. 要获取K线，请使用 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类创建订阅：
 
 ```cs
-// Create a subscription to 5-minute candles
+// 创建 5 分钟 K线订阅
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Data type with timeframe specification
-	security)  // Instrument
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // 带有时间框架设置的数据类型
+	security)  // 交易品种
 {
-	// Configure additional parameters through the MarketData property
+	// 通过 MarketData 属性配置附加参数
 	MarketData = 
 	{
-		// Period for which we request historical data (last 30 days)
+		// 请求历史数据的期间（最近 30 天）
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 		To = DateTime.Now
 	}
@@ -40,19 +40,19 @@ var subscription = new Subscription(
 2. 要接收K线，请订阅 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件。出现可供处理的新值时，该事件会发出通知：
 
 ```cs
-// Subscribe to the candle reception event
+// 订阅 K线接收事件
 _connector.CandleReceived += OnCandleReceived;
 
-// Candle reception event handler
+// K线接收事件处理器
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Here subscription is the subscription object we created
-	// candle - the received candle
+	// 这里 subscription 是我们创建的订阅对象
+	// candle — 接收到的 K线
 	
-	// Check if the candle belongs to our subscription
+	// 检查 K线是否属于我们的订阅
 	if (subscription == _candleSubscription)
 	{
-		// Draw the candle on the chart
+		// 在图表上绘制 K线
 		Chart.Draw(_candleElement, candle);
 	}
 }
@@ -64,7 +64,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 3. 接下来，通过 [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)) 方法启动订阅：
 
 ```cs
-// Start the subscription
+// 启动订阅
 _connector.Subscribe(subscription);
 ```
 
@@ -77,18 +77,18 @@ _connector.Subscribe(subscription);
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle belongs to our subscription
+	// 检查 K线是否属于我们的订阅
 	if (subscription != _candleSubscription)
 		return;
 	
-	// Check if the candle is completed
+	// 检查 K线是否已完成
 	if (candle.State == CandleStates.Finished) 
 	{
-		// Create data for drawing
+		// 创建绘制数据
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 		
-		// Draw the candle on the chart
+		// 在图表上绘制 K线
 		this.GuiAsync(() => Chart.Draw(chartData));
 	}
 }
@@ -99,46 +99,46 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 - **K线构建模式** - 指定请求现成数据，还是使用其他数据类型构建K线：
 
 ```cs
-// Request only ready-made data
+// 仅请求现成数据
 subscription.MarketData.BuildMode = MarketDataBuildModes.Load;
 
-// Only build from another data type
+// 仅从其他数据类型构建
 subscription.MarketData.BuildMode = MarketDataBuildModes.Build;
 
-// Request ready-made data, and if not available - build
+// 请求现成数据，若不可用则构建
 subscription.MarketData.BuildMode = MarketDataBuildModes.LoadAndBuild;
 ```
 
 - **K线构建数据源** - 如果无法直接获取K线，指定使用哪种数据类型进行构建：
 
 ```cs
-// Building candles from tick trades
+// 从 tick 成交构建 K线
 subscription.MarketData.BuildFrom = DataType.Ticks;
 
-// Building candles from order books
+// 从订单簿构建 K线
 subscription.MarketData.BuildFrom = DataType.MarketDepth;
 
-// Building candles from Level1
+// 从 Level1 构建 K线
 subscription.MarketData.BuildFrom = DataType.Level1;
 ```
 
 - **K线构建字段** - 某些数据类型必须指定此参数：
 
 ```cs
-// Building candles from the best bid price in Level1
+// 按 Level1 中的最佳 bid 价格构建 K线
 subscription.MarketData.BuildField = Level1Fields.BestBidPrice;
 
-// Building candles from the best ask price in Level1
+// 按 Level1 中的最佳 ask 价格构建 K线
 subscription.MarketData.BuildField = Level1Fields.BestAskPrice;
 
-// Building candles from the middle of the spread in the order book
+// 按订单簿中的点差中间价构建 K线
 subscription.MarketData.BuildField = Level1Fields.SpreadMiddle;
 ```
 
 - **成交量分布** - 计算K线的成交量分布：
 
 ```cs
-// Enable volume profile calculation
+// 启用成交量分布计算
 subscription.MarketData.IsCalcVolumeProfile = true;
 ```
 
@@ -147,7 +147,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 ### 标准时间周期K线
 
 ```cs
-// 5-minute candles
+// 5 分钟 K线
 var timeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security);
@@ -157,7 +157,7 @@ _connector.Subscribe(timeFrameSubscription);
 ### 仅加载历史K线
 
 ```cs
-// Loading only historical candles without transitioning to real-time
+// 仅加载历史 K线，不切换到实时模式
 var historicalSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -175,7 +175,7 @@ _connector.Subscribe(historicalSubscription);
 ### 使用逐笔成交构建非标准时间周期K线
 
 ```cs
-// Candles with a 21-second timeframe, built from ticks
+// 从 tick 构建的 21 秒周期 K线
 var customTimeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
 	security)
@@ -192,7 +192,7 @@ _connector.Subscribe(customTimeFrameSubscription);
 ### 使用市场深度数据构建K线
 
 ```cs
-// Candles built from the middle of the spread in the order book
+// 按订单簿点差中间价构建的 K线
 var depthBasedSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	security)
@@ -210,7 +210,7 @@ _connector.Subscribe(depthBasedSubscription);
 ### 带成交量分布的K线
 
 ```cs
-// 5-minute candles with volume profile calculation
+// 带成交量分布计算的 5 分钟 K线
 var volumeProfileSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -228,7 +228,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ### 成交量K线
 
 ```cs
-// Volume candles (each candle contains 1000 contracts in volume)
+// 成交量 K线（每根 K线包含 1000 份合约的成交量）
 var volumeCandleSubscription = new Subscription(
 	DataType.Volume(1000m),  // Specify candle type and volume
 	security)
@@ -245,7 +245,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ### 成交笔数K线
 
 ```cs
-// Tick count candles (each candle contains 1000 trades)
+// tick 数 K线（每根 K线包含 1000 笔成交）
 var tickCandleSubscription = new Subscription(
 	DataType.Tick(1000),  // Specify candle type and number of trades
 	security)
@@ -262,7 +262,7 @@ _connector.Subscribe(tickCandleSubscription);
 ### 价格范围K线
 
 ```cs
-// Price range candles with a range of 0.1 units
+// 范围为 0.1 单位的价格区间 K线
 var rangeCandleSubscription = new Subscription(
 	DataType.Range(0.1m),  // Specify candle type and price range
 	security)
@@ -279,7 +279,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ### 砖形图K线
 
 ```cs
-// Renko candles with a step of 0.1
+// 步长为 0.1 的 Renko K线
 var renkoCandleSubscription = new Subscription(
 	DataType.Renko(0.1m),  // Specify candle type and block size
 	security)
@@ -296,7 +296,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ### 点数图K线（P&F）
 
 ```cs
-// Point and Figure candles
+// Point and Figure K线
 var pnfCandleSubscription = new Subscription(
 	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
 	security)

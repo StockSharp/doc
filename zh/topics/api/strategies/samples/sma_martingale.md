@@ -13,7 +13,7 @@ public class SmaStrategyMartingaleStrategy : Strategy
 	private readonly StrategyParam<int> _shortSmaLength;
 	private readonly StrategyParam<DataType> _candleType;
 
-	// Variables to store previous indicator values
+	// 用于保存上一周期指标值的变量
 	private decimal _prevLongValue;
 	private decimal _prevShortValue;
 	private bool _isFirstValue = true;
@@ -39,21 +39,21 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Create indicators
+	// 创建指标
 	var longSma = new SimpleMovingAverage { Length = LongSmaLength };
 	var shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 
-	// Add indicators to the strategy collection for automatic IsFormed tracking
+	// 将指标添加到策略集合，以自动跟踪 IsFormed
 	Indicators.Add(longSma);
 	Indicators.Add(shortSma);
 
-	// Create subscription and bind indicators
+	// 创建订阅并绑定指标
 	var subscription = SubscribeCandles(CandleType);
 	subscription
 		.Bind(longSma, shortSma, ProcessCandle)
 		.Start();
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -72,11 +72,11 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-	// Skip incomplete candles
+	// 跳过未完成的蜡烛
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Check if the strategy is ready for trading
+	// 检查策略是否已准备好交易
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
@@ -89,11 +89,11 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 		return;
 	}
 
-	// Get current and previous comparison of indicator values
+	// 获取当前和上一周期指标值的比较结果
 	var isShortLessThenLongCurrent = shortValue < longValue;
 	var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
 
-	// Save current values as previous for the next candle
+	// 将当前值保存为下一根蜡烛的上一周期值
 	_prevLongValue = longValue;
 	_prevShortValue = shortValue;
 
@@ -101,16 +101,16 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
 		return;
 
-	// Cancel active orders before placing new ones
+	// 下新单前取消活动订单
 	CancelActiveOrders();
 
-	// Determine trade direction
+	// 确定交易方向
 	var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
 	// Calculate position size (increase position with each trade - martingale approach)
 	var volume = Volume + Math.Abs(Position);
 
-	// Create and register an order with the appropriate price
+	// 按合适价格创建并注册订单
 	var price = Security.ShrinkPrice(shortValue);
 	RegisterOrder(CreateOrder(direction, price, volume));
 }

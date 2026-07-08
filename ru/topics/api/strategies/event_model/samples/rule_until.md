@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 	.Until(() => i >= 10)
 	.Apply(this);
 
-	// Sending requests for subscribe to market data.
+	// Отправка запросов на подписку на рыночные данные.
 	Subscribe(tickSub);
 	Subscribe(mdSub);
 

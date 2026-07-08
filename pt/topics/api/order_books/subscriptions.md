@@ -7,14 +7,14 @@ Para subscrever o livro de ofertas no StockSharp, é necessário executar os seg
 1. Subscrever o evento de receção de livros de ofertas [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) e processar objetos da interface [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage):
 
 ```cs
-// event handler
+// manipulador de evento
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-	// Here you can process the order book data, for example, display it on the screen or use it in your trading strategy
+	// Aqui você pode processar os dados do livro de ofertas, por exemplo, exibí-los na tela ou usá-los na estratégia
 	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
 }
 
-// subscribing to the event
+// assinatura do evento
 connector.OrderBookReceived += OnOrderBookReceived;
 ```
 
@@ -25,7 +25,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 ```cs
 var security = GetSecurity(); // Get the Security object you want to subscribe to
 				
-// subscribe to the order book
+// assinar o livro de ofertas
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);
 ```

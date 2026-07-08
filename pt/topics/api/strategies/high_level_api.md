@@ -11,7 +11,7 @@ Os métodos de alto nível para trabalhar com subscrições ocultam a complexida
 Em vez de criar manualmente uma subscrição e configurar manipuladores de eventos, pode usar o método [SubscribeCandles](xref:StockSharp.Algo.Strategies.Strategy.SubscribeCandles(System.TimeSpan,System.Boolean,StockSharp.BusinessEntities.Security)):
 
 ```cs
-// Create and configure a candle subscription in a single line
+// Criar e configurar assinatura de velas em uma linha
 var subscription = SubscribeCandles(CandleType);
 ```
 
@@ -26,9 +26,9 @@ var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 subscription
-	// Bind indicators to candle subscription
+	// Vincular indicadores à assinatura de velas
 	.Bind(longSma, shortSma, OnProcess)
-	// Start processing
+	// Iniciar processamento
 	.Start();
 ```
 
@@ -53,16 +53,16 @@ subscription
 	.BindEx(indicator, OnProcessWithRawValue)
 	.Start();
 
-// Handler receives the original IIndicatorValue
+// O manipulador recebe o IIndicatorValue original
 private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 {
-	// Access to IIndicatorValue properties
+	// Acesso às propriedades de IIndicatorValue
 	if (value.IsFinal)
 	{
 		// For indicators returning boolean values
 		var boolValue = value.GetValue<bool>();
 		
-		// Or other data types specific to a particular indicator
+		// Ou outros tipos de dados específicos de um indicador específico
 		// ...
 	}
 }
@@ -79,24 +79,24 @@ O método [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx
 Para indicadores complexos que contêm vários indicadores internos (por exemplo, [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)), a API fornece sobrecargas especiais dos métodos `Bind` e `BindEx`:
 
 ```cs
-// Create a complex indicator
+// Criar indicador complexo
 var bollinger = new BollingerBands 
 { 
 	Length = 20, 
 	Deviation = 2 
 };
 
-// Bind the complex indicator to a subscription
+// Vincular indicador complexo a uma assinatura
 subscription
 	.BindEx(bollinger, OnProcessBollinger)
 	.Start();
 
-// Handler receives the BollingerBandsValue instance
+// O manipulador recebe a instância BollingerBandsValue
 private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
 	var typed = (BollingerBandsValue)value;
 
-	// Use Bollinger band values
+	// Usar valores das bandas de Bollinger
 	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 		SellMarket(Volume + Math.Abs(Position));
 	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
@@ -136,11 +136,11 @@ O manipulador recebe valores prontos a usar como tipos `decimal` simples. O mét
 ```cs
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-	// Work directly with ready-made indicator values
+	// Trabalhar diretamente com valores prontos dos indicadores
 	var isShortLessThenLong = shortValue < longValue;
 	
-	// Trading logic uses clean numeric values
-	// without the need to extract them from IIndicatorValue
+	// A lógica de negociação usa valores numéricos limpos
+	// sem necessidade de extraí-los de IIndicatorValue
 	// ...
 }
 ```
@@ -159,20 +159,20 @@ A API de alto nível fornece métodos simples para associar subscrições e indi
 ```cs
 var area = CreateChartArea();
 
-// area can be null when running without GUI
+// area pode ser null ao executar sem GUI
 if (area != null)
 {
-	// Automatic binding of candles to chart area
+	// Vinculação automática de velas à área do gráfico
 	DrawCandles(area, subscription);
 
-	// Drawing indicators with color customization
+	// Desenhar indicadores com personalização de cores
 	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
 	DrawIndicator(area, longSma);
 	
-	// Drawing own trades
+	// Desenhar negociações próprias
 	DrawOwnTrades(area);
 	
-	// Drawing orders
+	// Desenhar ordens
 	DrawOrders(area);
 }
 ```
@@ -182,10 +182,10 @@ if (area != null)
 O método [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) liga automaticamente uma subscrição de candles a um elemento de apresentação de candles no gráfico:
 
 ```cs
-// Create a chart element for displaying candles
+// Criar elemento gráfico para exibir velas
 IChartCandleElement candles = DrawCandles(area, subscription);
 
-// Additional element parameters can be configured
+// Parâmetros adicionais do elemento podem ser configurados
 candles.DrawOpenClose = true;  // Display open/close lines
 candles.DrawHigh = true;       // Display highs
 candles.DrawLow = true;        // Display lows
@@ -198,13 +198,13 @@ O método devolve um elemento de gráfico [IChartCandleElement](xref:StockSharp.
 O método [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) cria e configura um elemento de gráfico para apresentar valores de indicadores:
 
 ```cs
-// Simple addition of an indicator to the chart with default color
+// Adição simples de indicador ao gráfico com cor padrão
 IChartIndicatorElement smaElem = DrawIndicator(area, sma);
 
-// Adding an indicator with a specified primary color
+// Adicionar indicador com cor primária especificada
 IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.Red);
 
-// Adding an indicator with specified primary and secondary colors
+// Adicionar indicador com cores primária e secundária especificadas
 IChartIndicatorElement bollingerElem = DrawIndicator(
 	area, 
 	bollinger, 
@@ -212,7 +212,7 @@ IChartIndicatorElement bollingerElem = DrawIndicator(
 	System.Drawing.Color.Gray     // Secondary color (for the second line)
 );
 
-// Additional element configuration
+// Configuração adicional do elemento
 smaElem.DrawStyle = DrawStyles.Line;           // Drawing style: line
 rsiFast.DrawStyle = DrawStyles.Dot;            // Drawing style: dots
 bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
@@ -225,10 +225,10 @@ O método devolve um elemento de gráfico [IChartIndicatorElement](xref:StockSha
 O método [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) cria um elemento para apresentar os negócios próprios da estratégia no gráfico:
 
 ```cs
-// Create an element for displaying trades
+// Criar elemento para exibir negociações
 IChartTradeElement trades = DrawOwnTrades(area);
 
-// Element configuration
+// Configuração do elemento
 trades.BuyColor = System.Drawing.Color.Green;   // Color for buy trades
 trades.SellColor = System.Drawing.Color.Red;    // Color for sell trades
 trades.FullTitle = "My Strategy Trades";        // Element title
@@ -241,10 +241,10 @@ Este método configura automaticamente a apresentação de todos os negócios ex
 O método [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)) cria um elemento para apresentar ordens no gráfico:
 
 ```cs
-// Create an element for displaying orders
+// Criar elemento para exibir ordens
 IChartOrderElement orders = DrawOrders(area);
 
-// Element configuration
+// Configuração do elemento
 orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Color for active buy orders
 orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Color for active sell orders
 orders.BuyColor = System.Drawing.Color.Green;              // Color for executed buy orders
@@ -259,7 +259,7 @@ Este método configura automaticamente a apresentação de todas as ordens coloc
 O método [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea) cria uma nova área no gráfico da estratégia:
 
 ```cs
-// Create the first area for candles and indicators
+// Criar primeira área para velas e indicadores
 var mainArea = CreateChartArea();
 DrawCandles(mainArea, subscription);
 DrawIndicator(mainArea, sma);
@@ -287,7 +287,7 @@ O sistema atualiza automaticamente o gráfico quando novos dados são recebidos,
 Para proteger posições abertas, StockSharp fornece o método de alto nível [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)):
 
 ```cs
-// Start position protection with Take Profit and Stop Loss levels
+// Iniciar proteção de posição com níveis Take Profit e Stop Loss
 StartProtection(TakeValue, StopValue);
 ```
 
@@ -300,7 +300,7 @@ Este método configura automaticamente a proteção para todas as posições abe
 Exemplo com parâmetros adicionais:
 
 ```cs
-// Start protection with trailing stop and market orders
+// Iniciar proteção com trailing stop e ordens de mercado
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
 	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
@@ -380,17 +380,17 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Create indicators
+		// Criar indicadores
 		var longSma = new SMA { Length = Long };
 		var shortSma = new SMA { Length = Short };
 
-		// Create a candle subscription and bind to indicators
+		// Criar assinatura de velas e vinculá-la aos indicadores
 		var subscription = SubscribeCandles(CandleType);
 		subscription
 			.Bind(longSma, shortSma, OnProcess)
 			.Start();
 
-		// Configure visualization
+		// Configurar visualização
 		var area = CreateChartArea();
 		if (area != null)
 		{
@@ -400,17 +400,17 @@ public class SmaStrategy : Strategy
 			DrawOwnTrades(area);
 		}
 
-		// Start position protection
+		// Iniciar proteção de posição
 		StartProtection(TakeValue, StopValue);
 	}
 
 	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 	{
-		// Process only finished candles
+		// Processar apenas velas concluídas
 		if (candle.State != CandleStates.Finished)
 			return;
 
-		// Trading logic based on indicator crossover
+		// Lógica de negociação baseada no cruzamento de indicadores
 		var isShortLessThenLong = shortValue < longValue;
 
 		if (_isShortLessThenLong == null)
@@ -419,19 +419,19 @@ public class SmaStrategy : Strategy
 		}
 		else if (_isShortLessThenLong != isShortLessThenLong)
 		{
-			// Crossover occurred
+			// Cruzamento ocorreu
 			var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 			var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 			var priceStep = GetSecurity().PriceStep ?? 1;
 			var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
-			// Place an order
+			// Colocar ordem
 			if (direction == Sides.Buy)
 				BuyLimit(price, volume);
 			else
 				SellLimit(price, volume);
 
-			// Save current indicator position
+			// Salvar a posição atual do indicador
 			_isShortLessThenLong = isShortLessThenLong;
 		}
 	}

@@ -31,7 +31,7 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
-	// Coinbase only supports 5-minute candles for updating via websockets
+	// Coinbase 仅支持通过 WebSocket 更新 5 分钟 K线
 	// Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
 	return subscription.DataType2 == _tf5min;
 }
@@ -46,7 +46,7 @@ public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 ```cs
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// 发送已收到订阅请求的确认
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -66,7 +66,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 			while (from < to)
 			{
-				// Request historical candles
+				// 请求历史 K线
 				var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
 				var needBreak = true;
 				var last = from;
@@ -86,7 +86,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 						break;
 					}
 
-					// Send information about each historical candle
+					// 发送每根历史 K线的信息
 					await SendOutMessageAsync(new TimeFrameCandleMessage
 					{
 						OpenPrice = (decimal)candle.Open,
@@ -97,7 +97,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 						OpenTime = candle.Time,
 						State = CandleStates.Finished,
 
-						// In case of identifying data by subscription, filling instrument information is not required
+						// 按订阅识别数据时无需填写交易品种信息
 						OriginalTransactionId = mdMsg.TransactionId,
 					}, cancellationToken);
 
@@ -120,11 +120,11 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 		if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
 		{
-			// Subscribe to receive new candles in real time
+			// 订阅实时接收新 K线
 			_candlesTransIds[symbol] = mdMsg.TransactionId;
 			await _socketClient.SubscribeCandles(symbol, cancellationToken);
 
-			// Notify that the subscription has transitioned to online status
+			// 通知订阅已切换到在线状态
 			await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 		}
 		else
@@ -135,7 +135,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	}
 	else
 	{
-		// Unsubscribe from receiving candles
+		// 取消接收 K线的订阅
 		_candlesTransIds.Remove(symbol);
 		await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
 	}
@@ -149,11 +149,11 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 ```cs
 private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken cancellationToken)
 {
-	// Check if there is an active subscription to candles for this instrument
+	// 检查该交易品种是否有活跃的 K线订阅
 	if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
 		return;
 
-	// Create and send a message about a new candle
+	// 创建并发送新 K线消息
 	await SendOutMessageAsync(new TimeFrameCandleMessage
 	{
 		OpenPrice = (decimal)candle.Open,
@@ -164,7 +164,7 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 		OpenTime = candle.Time,
 		State = CandleStates.Active,  // The candle is considered active as it may still change
 
-		// In case of identifying data by subscription, filling instrument information is not required
+		// 按订阅识别数据时无需填写交易品种信息
 		OriginalTransactionId = transId,
 	}, cancellationToken);
 }
@@ -179,27 +179,27 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 ```cs
 protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
-	// This informs the system that the request has been received and is being processed
+	// 发送已收到订阅请求的确认
+	// 这会通知系统请求已收到并正在处理
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a symbol understood by the exchange
+	// 将交易品种标识转换为交易所可识别的代码
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
 	{
 		// If this is a subscription request
-		// Subscribe to receive Level 1 data via WebSocket
+		// 订阅通过 WebSocket 接收 Level1 数据
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
-		// Send a message about successful subscription
-		// This informs the system that the subscription is set up and data will be received
+		// 发送订阅成功消息
+		// 这会通知系统订阅已设置并将接收数据
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
 		// If this is an unsubscription request
-		// Cancel the subscription to receive Level 1 data
+		// 取消接收 Level1 数据的订阅
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
 }
@@ -212,15 +212,15 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 ```cs
 private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken cancellationToken)
 {
-	// Create a message with Level 1 data changes
+	// 创建包含 Level1 数据变更的消息
 	await SendOutMessageAsync(new Level1ChangeMessage
 	{
-		// Specify the instrument identifier
+		// 指定交易品种标识符
 		SecurityId = ticker.Product.ToStockSharp(),
-		// Set the time of receiving data
+		// 设置数据接收时间
 		ServerTime = CurrentTime.ConvertToUtc(),
 	}
-	// Add various Level 1 fields if they are present in the data from the exchange
+	// 如果交易所数据中存在，则添加各种 Level1 字段
 	.TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
 	.TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
 	.TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
@@ -258,25 +258,25 @@ public override bool IsSupportOrderBookIncrements => true;
 ```cs
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// 发送已收到订阅请求的确认
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a symbol understood by the exchange
+	// 将交易品种标识转换为交易所可识别的代码
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
 	{
 		// If this is a subscription request
-		// Subscribe to receive order book data via WebSocket
+		// 订阅通过 WebSocket 接收订单簿数据
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
-		// Send a message about successful subscription
+		// 发送订阅成功消息
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
 		// If this is an unsubscription request
-		// Cancel the subscription to receive order book data
+		// 取消接收订单簿数据的订阅
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
 }
@@ -292,7 +292,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 	var bids = new List<QuoteChange>();
 	var asks = new List<QuoteChange>();
 
-	// Distribute changes by bids and asks
+	// 按 bids 和 asks 分配变更
 	foreach (var change in changes)
 	{
 		var side = change.Side.ToSide();
@@ -300,7 +300,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		quotes.Add(new((decimal)change.Price, (decimal)change.Size));
 	}
 
-	// Create and send a message with changes in the order book
+	// 创建并发送订单簿变更消息
 	await SendOutMessageAsync(new QuoteChangeMessage
 	{
 		SecurityId = symbol.ToStockSharp(),
@@ -308,9 +308,9 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		Asks = asks.ToArray(),
 		ServerTime = CurrentTime.ConvertToUtc(),
 
-		// Determine if this is a full order book snapshot or an incremental update.
+		// 确定这是完整订单簿快照还是增量更新。
 		// If the exchange always sends only full order books and does not support incrementality,
-		// then setting this property is not required at all
+		// 则完全不需要设置此属性
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
 }
@@ -325,7 +325,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 ```cs
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// 发送已收到订阅请求的确认
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -341,7 +341,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 			while (from < to)
 			{
-				// Request historical trades
+				// 请求历史成交
 				var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
 				var needBreak = true;
 				var last = from;
@@ -361,10 +361,10 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						break;
 					}
 
-					// Send information about each historical trade
+					// 发送每笔历史成交的信息
 					await SendOutMessageAsync(new ExecutionMessage
 					{
-						// Set that the message carries information about a tick trade
+						// 设置消息包含 tick 成交信息
 						// (not a transaction like an order or own trade)
 						DataTypeEx = DataType.Ticks,
 
@@ -375,8 +375,8 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						OriginSide = trade.Side.ToSide(),
 
 						// For history, always set the subscription identifier,
-						// so that the external code can understand which subscription the data was received for.
-						// In case of identifying data by subscription, filling instrument information is not required
+						// 以便外部代码理解数据属于哪个订阅。
+						// 按订阅识别数据时无需填写交易品种信息
 						OriginalTransactionId = mdMsg.TransactionId,
 					}, cancellationToken);
 
@@ -399,16 +399,16 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Subscribe to receive new trades in real time
+			// 订阅实时接收新成交
 			await _socketClient.SubscribeTrades(symbol, cancellationToken);
 		}
 
-		// Send a message about successful subscription
+		// 发送订阅成功消息
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
-		// Unsubscribe from receiving trades in real time
+		// 取消实时接收成交的订阅
 		await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
 	}
 }
@@ -421,10 +421,10 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 ```cs
 private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
 {
-	// Create and send a message about a new trade
+	// 创建并发送新成交消息
 	await SendOutMessageAsync(new ExecutionMessage
 	{
-		// Set that the message carries information about a tick trade
+		// 设置消息包含 tick 成交信息
 		// (not a transaction like an order or own trade)
 		DataTypeEx = DataType.Ticks,
 
@@ -449,25 +449,25 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// 发送已收到订阅请求的确认
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a currency pair
+	// 将交易品种标识符转换为货币对
 	var symbol = mdMsg.SecurityId.ToCurrency();
 
 	if (mdMsg.IsSubscribe)
 	{
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Subscribe to receive order log in real time
+			// 订阅实时接收订单日志
 			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
 		}
 
-		// Send a message about successful subscription
+		// 发送订阅成功消息
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
-		// Unsubscribe from receiving order log
+		// 取消接收订单日志的订阅
 		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
@@ -477,7 +477,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
 {
-	// Create and send a message with information about a new entry in the order log
+	// 创建并发送包含订单日志新条目信息的消息
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,

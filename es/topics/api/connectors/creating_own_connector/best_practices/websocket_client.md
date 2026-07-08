@@ -37,7 +37,7 @@ class SocketClient : BaseLogReceiver
 	private readonly WebSocketClient _client;
 	private readonly Authenticator _authenticator;
 
-	// Events for different types of data
+	// Eventos para distintos tipos de datos
 	public event Action<Heartbeat> HeartbeatReceived;
 	public event Action<Ticker> TickerReceived;
 	public event Action<Trade> TradeReceived;
@@ -56,32 +56,32 @@ class SocketClient : BaseLogReceiver
 
 	public ValueTask Connect(CancellationToken cancellationToken)
 	{
-		// Connection logic
+		// Lógica de conexión
 	}
 
 	public void Disconnect()
 	{
-		// Disconnection logic
+		// Lógica de desconexión
 	}
 
 	public ValueTask SubscribeTicker(string symbol, CancellationToken cancellationToken)
 	{
-		// Ticker subscription logic
+		// Lógica de suscripción a ticker
 	}
 
 	public ValueTask UnSubscribeTicker(string symbol, CancellationToken cancellationToken)
 	{
-		// Ticker unsubscription logic
+		// Lógica de cancelación de suscripción a ticker
 	}
 
 	// Similar methods for other types of subscriptions (trades, order book, etc.)
 
 	private void OnProcess(dynamic obj)
 	{
-		// Processing incoming messages
+		// Procesar mensajes entrantes
 	}
 
-	// Helper methods
+	// Métodos auxiliares
 }
 ```
 

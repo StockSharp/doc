@@ -35,7 +35,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Subscribe to market time changes for quote updates
+	// 订阅市场时间变化以更新报价
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
 	Connector_CurrentTimeChanged(new TimeSpan());
 }
@@ -48,7 +48,7 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-	// Create new processors only with zero position and if current ones are stopped
+	// 仅在零持仓且当前处理器已停止时创建新处理器
 	if (Position != 0)
 		return;
 
@@ -58,14 +58,14 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	if (_sellProcessor != null && _sellProcessor.LeftVolume > 0)
 		return;
 
-	// Release resources of existing processors
+	// 释放现有处理器资源
 	_buyProcessor?.Dispose();
 	_buyProcessor = null;
 
 	_sellProcessor?.Dispose();
 	_sellProcessor = null;
 
-	// Create behaviors for market quoting
+	// 创建市价报价行为
 	var buyBehavior = new MarketQuotingBehavior(
 		PriceOffset,
 		BestPriceOffset,
@@ -78,7 +78,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		PriceType
 	);
 
-	// Create processor for buying
+	// 创建买入处理器
 	_buyProcessor = new QuotingProcessor(
 		buyBehavior,
 		Security,
@@ -100,7 +100,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Create processor for selling
+	// 创建卖出处理器
 	_sellProcessor = new QuotingProcessor(
 		sellBehavior,
 		Security,
@@ -122,10 +122,10 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Log creation of new quoting processors
+	// 记录新报价处理器的创建
 	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
 
-	// Subscribe to buy processor events for logging
+	// 订阅买入处理器事件以记录日志
 	_buyProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
 
@@ -141,7 +141,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		_buyProcessor = null;
 	};
 
-	// Subscribe to sell processor events for logging
+	// 订阅卖出处理器事件以记录日志
 	_sellProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
 
@@ -157,7 +157,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		_sellProcessor = null;
 	};
 
-	// Start both processors
+	// 启动两个处理器
 	_buyProcessor.Start();
 	_sellProcessor.Start();
 }
@@ -170,10 +170,10 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 ```cs
 protected override void OnStopped()
 {
-	// Unsubscribe to prevent memory leaks
+	// 取消订阅以防止内存泄漏
 	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-	// Release processor resources
+	// 释放处理器资源
 	_buyProcessor?.Dispose();
 	_buyProcessor = null;
 

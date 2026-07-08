@@ -65,38 +65,38 @@
 ```cs
 var manager = new CommissionManager();
 
-// Fixed commission of 1.5 per trade
+// 每笔成交固定佣金 1.5
 manager.Rules.Add(new CommissionTradeRule { Value = 1.5m });
 
-// 0.1% of turnover for futures
+// 期货成交额的 0.1%
 manager.Rules.Add(new CommissionSecurityTypeRule
 {
     SecurityType = SecurityTypes.Future,
     Value = new Unit(0.1m, UnitTypes.Percent)
 });
 
-// Commission of 50 for every 100 orders
+// 每 100 个订单收取 50 佣金
 manager.Rules.Add(new CommissionOrderCountRule
 {
     Count = 100,
     Value = 50m
 });
 
-// Commission of 10 for every 1,000,000 in turnover
+// 每 1,000,000 成交额收取 10 佣金
 manager.Rules.Add(new CommissionTurnOverRule
 {
     TurnOver = 1_000_000m,
     Value = 10m
 });
 
-// Processing a message
+// 处理消息
 decimal? commission = manager.Process(executionMsg);
 if (commission != null)
 {
     Console.WriteLine($"Commission for message: {commission.Value}");
 }
 
-// Total accumulated commission
+// 累计总佣金
 Console.WriteLine($"Total commission: {manager.Commission}");
 ```
 

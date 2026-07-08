@@ -4,7 +4,7 @@
 
 ```cs
 /// <summary>
-/// Simple Moving Average.
+/// 简单移动平均。
 /// </summary>
 [DisplayName("SMA")]
 [Description("Simple Moving Average.")]
@@ -19,10 +19,10 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// 处理输入值。
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>结果值。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var newValue = input.GetValue<decimal>();
@@ -111,7 +111,7 @@ public override void Load(SettingsStorage storage)
 
 ```cs
 /// <summary>
-/// Chaikin Volatility.
+/// Chaikin 波动率。
 /// </summary>
 [DisplayName("Volatility")]
 [Description("Chaikin Volatility.")]
@@ -127,7 +127,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Moving Average.
+	/// 移动平均。
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("MA")]
@@ -136,7 +136,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
-	/// Rate of Change.
+	/// 变化率。
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
@@ -145,7 +145,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public RateOfChange Roc { get; private set; }
 
 	/// <summary>
-	/// Is the indicator formed.
+	/// 指标是否已形成。
 	/// </summary>
 	public override bool IsFormed
 	{
@@ -153,10 +153,10 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// 处理输入值。
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>结果值。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var candle = input.GetValue<Candle>();
@@ -178,7 +178,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 
 ```cs
 /// <summary>
-/// Welles Wilder's Average Directional Index.
+/// Welles Wilder 平均趋向指数。
 /// </summary>
 [DisplayName("ADX")]
 [Description("Welles Wilder's Average Directional Index.")]
@@ -210,19 +210,19 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Welles Wilder's Directional Movement Index.
+	/// Welles Wilder 趋向运动指数。
 	/// </summary>
 	[Browsable(false)]
 	public DirectionalIndex Dx { get; private set; }
 
 	/// <summary>
-	/// Moving Average.
+	/// 移动平均。
 	/// </summary>
 	[Browsable(false)]
 	public LengthIndicator<decimal> MovingAverage { get; private set; }
 
 	/// <summary>
-	/// Period length.
+	/// 周期长度。
 	/// </summary>
 	[DisplayName("Period")]
 	[Description("Indicator period.")]
@@ -284,7 +284,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Short period.
+	/// 短周期。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -298,7 +298,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Long period.
+	/// 长周期。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

@@ -10,21 +10,21 @@
 
 ```fsharp
 /// <summary>
-/// Sample diagram element demonstrating input and output sockets usage.
+/// 示例图表元素演示输入和输出插槽的用法。
 ///
-/// See more details:
+/// 更多详细信息：
 /// https://doc.stocksharp.com/topics/designer/strategies/using_code/fsharp/creating_your_own_cube.html
 /// </summary>
 type EmptyDiagramElement() as this =
 	inherit DiagramExternalElement()
 
-	// Example property showing how to create parameters
+	// 演示如何创建参数的示例属性
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
 			.SetBasic(true)  // make the parameter visible in basic mode
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 
-	// Output sockets are events marked with DiagramExternal attribute
+	// 输出插槽是带 DiagramExternal 特性的事件
 	let output1Event = new Event<Unit>()
 	let output2Event = new Event<Unit>()
 
@@ -36,37 +36,37 @@ type EmptyDiagramElement() as this =
 	[<DiagramExternal>]
 	member this.Output2 = output2Event.Publish
 
-	// Uncomment the following property if you want the Process method 
-	// to be called every time when a new argument is received
+	// 如果希望调用 Process 方法，请取消注释以下属性 
+	// 使其在每次收到新参数时被调用
 	// (no need to wait for all input args to be received).
 	//
-	// override this.WaitAllInput 
+	// 重写 this.WaitAllInput
 	//     with get () = false
 
-	// Input sockets are method parameters marked with DiagramExternal attribute
+	// 输入插槽是带 DiagramExternal 特性的方法参数
 
 	[<DiagramExternal>]
 	member this.Process(candle: CandleMessage, diff: Unit) =
 		let res = candle.ClosePrice + diff
 
 		if diff >= minValueParam.Value then
-			// Trigger the first output event
+			// 触发第一个输出事件
 			output1Event.Trigger(res)
 		else
-			// Trigger the second output event
+			// 触发第二个输出事件
 			output2Event.Trigger(res)
 
 	override this.Start() =
 		base.Start()
-		// Add logic before start if needed
+		// 如有需要，在启动前添加逻辑
 
 	override this.Stop() =
 		base.Stop()
-		// Add logic after stop if needed
+		// 如有需要，在停止后添加逻辑
 
 	override this.Reset() =
 		base.Reset()
-		// Add logic for resetting internal state if needed
+		// 如有需要，添加重置内部状态的逻辑
 ```
 
 在这段代码中，模块包含两个输入端口和两个输出端口。对方法应用 [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) 特性，即可定义输入端口：
@@ -110,7 +110,7 @@ let minValueParam =
 已注释的 [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) 属性控制何时根据输入端口的数据调用方法：
 
 ```fsharp
-// override this.WaitAllInput 
+// 重写 this.WaitAllInput
 //     with get () = false
 ```
 

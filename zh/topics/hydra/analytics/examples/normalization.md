@@ -38,7 +38,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, normalize securities close prices and shows on same chart.
+	/// 对证券收盘价归一化并显示在同一图表上的分析脚本。
 	/// </summary>
 	public class NormalizePriceScript : IAnalyticsScript
 	{
@@ -54,13 +54,13 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// 如果用户取消脚本执行，则停止计算
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var series = new Dictionary<DateTimeOffset, decimal>();
 
-				// get candle storage
+				// 获取 K线存储
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				decimal? firstClose = null;
@@ -69,11 +69,11 @@ namespace StockSharp.Algo.Analytics
 				{
 					firstClose ??= candle.ClosePrice;
 
-					// normalize close prices by dividing on first close
+					// 通过除以首个收盘价来归一化收盘价
 					series[candle.OpenTime] = candle.ClosePrice / firstClose.Value;
 				}
 
-				// draw series on chart
+				// 在图表上绘制序列
 				chart.Append(security.ToStringId(), series.Keys, series.Values);
 			}
 
@@ -89,7 +89,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# 添加 .NET 引用
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -102,7 +102,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, normalize securities close prices and shows on same chart.
+# 对证券收盘价归一化并显示在同一图表上的分析脚本。
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
@@ -118,13 +118,13 @@ class normalize_price_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# 如果用户取消脚本执行，则停止计算
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			series = {}
 
-			# get candle storage
+			# 获取 K线存储
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			first_close = None
@@ -133,10 +133,10 @@ class normalize_price_script(IAnalyticsScript):
 				if first_close is None:
 					first_close = candle.ClosePrice
 
-				# normalize close prices by dividing on first close
+				# 通过除以首个收盘价来归一化收盘价
 				series[candle.OpenTime] = candle.ClosePrice / first_close
 
-			# draw series on chart
+			# 在图表上绘制序列
 			chart.Append(to_string_id(security), list(series.keys()), list(series.values()))
 
 		return Task.CompletedTask

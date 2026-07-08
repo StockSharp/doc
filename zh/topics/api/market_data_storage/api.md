@@ -11,12 +11,12 @@
 在 StockSharp 中处理市场数据存储时，使用 [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) 类。创建此类对象时，可以通过 [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive) 属性设置默认存储的路径，或使用 [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) 指定用于处理历史数据的特定文件夹。
 
 ```cs
-// Creating StorageRegistry with default path
+// 使用默认路径创建 StorageRegistry
 var storageRegistry = new StorageRegistry();
 ```
 
 ```cs
-// Creating StorageRegistry with the path to data from the NuGet package
+// 使用 NuGet 包数据路径创建 StorageRegistry
 var pathHistory = Paths.HistoryDataPath; // path to data from the NuGet package
 var localDrive = new LocalMarketDataDrive(pathHistory);
 var storageRegistry = new StorageRegistry()
@@ -36,7 +36,7 @@ var storageRegistry = new StorageRegistry()
 每种方法都会返回相应的存储，可以使用 `LoadAsync` 方法从中加载数据，指定开始和结束日期。
 
 ```cs
-// Retrieving candles
+// 获取 K线
 var securityId = "AAPL@NASDAQ".ToSecurityId();
 var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
 var candles = candleStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
@@ -48,7 +48,7 @@ await foreach (var candle in candles)
 ```
 
 ```cs
-// Retrieving ticks
+// 获取 tick
 var tradeStorage = storageRegistry.GetTickMessageStorage(securityId, StorageFormats.Binary);
 var trades = tradeStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
@@ -59,7 +59,7 @@ await foreach (var trade in trades)
 ```
 
 ```cs
-// Retrieving order books
+// 获取订单簿
 var marketDepthStorage = storageRegistry.GetQuoteMessageStorage(securityId, StorageFormats.Binary);
 var marketDepths = marketDepthStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 
@@ -74,7 +74,7 @@ await foreach (var marketDepth in marketDepths)
 要将新数据保存到现有存储中，请使用相应存储的 `SaveAsync` 方法。这使您可以用新值补充历史数据。
 
 ```cs
-// Saving new candles
+// 保存新 K线
 var newCandles = new List<CandleMessage>
 {
 	// New CandleMessage objects are created here
@@ -83,7 +83,7 @@ await candleStorage.SaveAsync(newCandles);
 ```
 
 ```cs
-// Saving new ticks
+// 保存新 tick
 var newTrades = new List<ExecutionMessage>
 {
 	// New ExecutionMessage objects for ticks are created here
@@ -92,7 +92,7 @@ await tradeStorage.SaveAsync(newTrades);
 ```
 
 ```cs
-// Saving new order books
+// 保存新订单簿
 var newMarketDepths = new List<QuoteChangeMessage>
 {
 	// New QuoteChangeMessage objects for order books are created here
@@ -105,17 +105,17 @@ await marketDepthStorage.SaveAsync(newMarketDepths);
 要删除特定期间的数据，请使用相应存储的 `DeleteAsync` 方法。在删除样本包中的数据时要小心。
 
 ```cs
-// Deleting candles for the specified period
+// 删除指定期间的 K线
 await candleStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
-// Deleting ticks for the specified period
+// 删除指定期间的 tick
 await tradeStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 
 ```cs
-// Deleting order books for the specified period
+// 删除指定期间的订单簿
 await marketDepthStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 

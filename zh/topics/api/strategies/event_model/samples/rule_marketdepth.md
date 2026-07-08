@@ -7,7 +7,7 @@
 ## 主要组件
 
 ```cs
-// Main components
+// 主要组件
 public class SimpleRulesStrategy : Strategy
 {
 }
@@ -21,19 +21,19 @@ public class SimpleRulesStrategy : Strategy
 - 演示创建和应用规则的各种方法
 
 ```cs
-// OnStarted method
+// OnStarted 方法
 protected override void OnStarted2(DateTime time)
 {
 	var tickSub = new Subscription(DataType.Ticks, Security);
 	var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-	//-----------------------Create a rule. Method №1-----------------------------------
+	// -----------------------创建规则。方法 №1-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
 		LogInfo($"The rule WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
-	//-----------------------Create a rule. Method №2-----------------------------------
+	// -----------------------创建规则。方法 №2-----------------------------------
 	var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 	whenMarketDepthChanged.Do((depth) =>
@@ -41,19 +41,19 @@ protected override void OnStarted2(DateTime time)
 		LogInfo($"The rule WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
-	//----------------------Rule inside rule-----------------------------------
+	// ----------------------规则中的规则-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
 		LogInfo($"The rule WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-		//----------------------not a Once rule-----------------------------------
+		// ----------------------不是 Once 规则-----------------------------------
 		mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 		{
 			LogInfo($"The rule WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 		}).Apply(this);
 	}).Once().Apply(this);
 
-	// Sending requests for subscribe to market data.
+	// 发送市场数据订阅请求。
 	Subscribe(tickSub);
 	Subscribe(mdSub);
 

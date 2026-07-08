@@ -11,24 +11,24 @@
 要搜索工具，您需要创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例，并以包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息为基础：
 
 ```csharp
-// Create a filter object for search
+// 创建搜索过滤对象
 var lookupMessage = new SecurityLookupMessage
 {
-	// Set search criteria
+	// 设置搜索条件
 	SecurityId = new SecurityId
 	{
 		// Search by instrument code (you can use a mask like "AAPL*")
 		SecurityCode = "AAPL",
-		// Optionally, you can specify the board code
+		// 可选指定交易板代码
 		BoardCode = "NASDAQ"
 	},
-	// You can specify the instrument type
+	// 可以指定交易品种类型
 	SecurityType = SecurityTypes.Stock,
-	// Set transaction ID
+	// 设置事务 ID
 	TransactionId = Connector.TransactionIdGenerator.GetNextId()
 };
 
-// Create a subscription for instrument search
+// 创建交易品种搜索订阅
 var subscription = new Subscription(lookupMessage);
 ```
 
@@ -53,7 +53,7 @@ var subscription = new Subscription(lookupMessage);
 创建订阅后，您需要订阅事件以接收工具并发送请求：
 
 ```csharp
-// Handler for instrument receiving event
+// 交易品种接收事件处理器
 private void OnSecurityReceived(Subscription subscription, Security security)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
@@ -61,11 +61,11 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 		
 	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
 	
-	// Here you can add the instrument to a collection or perform other actions
+	// 这里可以将交易品种添加到集合或执行其他操作
 	Securities.Add(security);
 }
 
-// Handler for search completion event
+// 搜索完成事件处理器
 private void OnSubscriptionFinished(Subscription subscription)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
@@ -74,7 +74,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
 }
 
-// Subscription error handler
+// 订阅错误处理器
 private void OnSubscriptionFailed(Subscription subscription, Exception error, bool isSubscribe)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
@@ -83,12 +83,12 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 	Console.WriteLine($"Instrument search error: {error.Message}");
 }
 
-// Subscribe to events
+// 订阅事件
 Connector.SecurityReceived += OnSecurityReceived;
 Connector.SubscriptionFinished += OnSubscriptionFinished;
 Connector.SubscriptionFailed += OnSubscriptionFailed;
 
-// Send the instrument search request
+// 发送交易品种搜索请求
 Connector.Subscribe(subscription);
 ```
 
@@ -99,7 +99,7 @@ Connector.Subscribe(subscription);
 ```csharp
 public void FindSecurities(string searchCode, SecurityTypes? securityType = null)
 {
-	// Create an object for instrument search
+	// 创建交易品种搜索对象
 	var lookupMessage = new SecurityLookupMessage
 	{
 		SecurityId = new SecurityId
@@ -112,44 +112,44 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		TransactionId = Connector.TransactionIdGenerator.GetNextId()
 	};
 	
-	// Create a subscription
+	// 创建订阅
 	var subscription = new Subscription(lookupMessage);
 	
-	// Clear the collection for search results
+	// 清空搜索结果集合
 	_searchResults.Clear();
 	
-	// Temporary collection for accumulating results
+	// 用于累积结果的临时集合
 	var foundSecurities = new List<Security>();
 	
-	// Subscription for receiving instruments
+	// 用于接收交易品种的订阅
 	void OnSecurityReceived(Subscription sub, Security security)
 	{
 		if (sub != subscription)
 			return;
 			
-		// Add the found instrument to the collection
+		// 将找到的交易品种添加到集合
 		foundSecurities.Add(security);
 		Console.WriteLine($"Found: {security.Id}, {security.Name}");
 	}
 	
-	// Subscription for search completion
+	// 搜索完成订阅
 	void OnSubscriptionFinished(Subscription sub)
 	{
 		if (sub != subscription)
 			return;
 			
-		// Copy results to the main collection
+		// 将结果复制到主集合
 		_searchResults.AddRange(foundSecurities);
 		
 		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
 		
-		// Unsubscribe from events
+		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
 	
-	// Handling subscription errors
+	// 处理订阅错误
 	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
 	{
 		if (sub != subscription)
@@ -157,18 +157,18 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 			
 		Console.WriteLine($"Instrument search error: {error.Message}");
 		
-		// Unsubscribe from events
+		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
 	
-	// Subscribe to events
+	// 订阅事件
 	Connector.SecurityReceived += OnSecurityReceived;
 	Connector.SubscriptionFinished += OnSubscriptionFinished;
 	Connector.SubscriptionFailed += OnSubscriptionFailed;
 	
-	// Send the search request
+	// 发送搜索请求
 	Connector.Subscribe(subscription);
 }
 ```
@@ -180,7 +180,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 ```csharp
 private void FindButton_Click(object sender, RoutedEventArgs e)
 {
-	// Get search criteria from the text field
+	// 从文本字段获取搜索条件
 	var searchText = SearchTextBox.Text;
 	
 	if (string.IsNullOrWhiteSpace(searchText))
@@ -189,7 +189,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 		return;
 	}
 	
-	// Create and send a search subscription
+	// 创建并发送搜索订阅
 	var lookupMessage = new SecurityLookupMessage
 	{
 		SecurityId = new SecurityId { SecurityCode = searchText },
@@ -199,10 +199,10 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 	
 	var subscription = new Subscription(lookupMessage);
 	
-	// Here you can show a loading indicator
+	// 这里可以显示加载指示器
 	LoadingIndicator.Visibility = Visibility.Visible;
 	
-	// Send the request
+	// 发送请求
 	Connector.Subscribe(subscription);
 }
 ```
@@ -216,11 +216,11 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 {
 	var lookupWindow = new SecurityLookupWindow
 	{
-		// Specify the ability to search for all instruments
+		// 指定可搜索所有交易品种
 		// (if the connector supports this function)
 		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
 		
-		// Set initial search criteria
+		// 设置初始搜索条件
 		CriteriaMessage = new SecurityLookupMessage
 		{
 			SecurityId = new SecurityId { SecurityCode = "AAPL" },
@@ -228,7 +228,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 		}
 	};
 	
-	// Show the window as a modal dialog
+	// 以模态对话框显示窗口
 	if (lookupWindow.ShowModal(this))
 	{
 		// If the user confirmed the selection, send the request

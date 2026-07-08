@@ -65,38 +65,38 @@ A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a pr
 ```cs
 var manager = new CommissionManager();
 
-// Fixed commission of 1.5 per trade
+// Comissão fixa de 1,5 por negociação
 manager.Rules.Add(new CommissionTradeRule { Value = 1.5m });
 
-// 0.1% of turnover for futures
+// 0,1% do giro para futuros
 manager.Rules.Add(new CommissionSecurityTypeRule
 {
     SecurityType = SecurityTypes.Future,
     Value = new Unit(0.1m, UnitTypes.Percent)
 });
 
-// Commission of 50 for every 100 orders
+// Comissão de 50 para cada 100 ordens
 manager.Rules.Add(new CommissionOrderCountRule
 {
     Count = 100,
     Value = 50m
 });
 
-// Commission of 10 for every 1,000,000 in turnover
+// Comissão de 10 para cada 1.000.000 em giro
 manager.Rules.Add(new CommissionTurnOverRule
 {
     TurnOver = 1_000_000m,
     Value = 10m
 });
 
-// Processing a message
+// Processar mensagem
 decimal? commission = manager.Process(executionMsg);
 if (commission != null)
 {
     Console.WriteLine($"Commission for message: {commission.Value}");
 }
 
-// Total accumulated commission
+// Comissão acumulada total
 Console.WriteLine($"Total commission: {manager.Commission}");
 ```
 

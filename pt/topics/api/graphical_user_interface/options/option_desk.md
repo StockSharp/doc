@@ -33,26 +33,26 @@ Abaixo está o exemplo **OptionCalculator**, que utiliza este componente. O cód
    ...                 
    public readonly Connector Connector = new Connector();
    ...                 
-   // subscribe on connection successfully event
+   // assinar o evento de conexão bem-sucedida
    Connector.Connected += () =>
    {
-   	// update gui labels
+   	// atualizar rótulos da interface
    	this.GuiAsync(() => ChangeConnectStatus(true));
    };
-   // subscribe on disconnection event
+   // assinar o evento de desconexão
    Connector.Disconnected += () =>
    {
-   	// update gui labels
+   	// atualizar rótulos da interface
    	this.GuiAsync(() => ChangeConnectStatus(false));
    };
-   // subscribe on connection error event
+   // assinar o evento de erro de conexão
    Connector.ConnectionError += error => this.GuiAsync(() =>
    {
-   	// update gui labels
+   	// atualizar rótulos da interface
    	ChangeConnectStatus(false);
    	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
-   // fill underlying asset's list
+   // preencher a lista de ativos subjacentes
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
@@ -63,7 +63,7 @@ Abaixo está o exemplo **OptionCalculator**, que utiliza este componente. O cód
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
-   // subscribing on tick prices and updating asset price
+   // assinatura de preços tick e atualização do preço do ativo
    Connector.TickTradeReceived += (sub, trade) =>
    {
    	if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
@@ -116,7 +116,7 @@ Abaixo está o exemplo **OptionCalculator**, que utiliza este componente. O cód
 4. Ao receber instrumentos, adicionamos os ativos subjacentes à lista.
 
    ```cs
-   // fill underlying asset's list
+   // preencher a lista de ativos subjacentes
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)

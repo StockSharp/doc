@@ -11,13 +11,13 @@
 ```csharp
 public interface ICandlePattern : IPersistable
 {
-    // Pattern name
+    // 形态名称
     string Name { get; }
 
-    // Number of candles required for recognition
+    // 识别所需的 K线数量
     int CandlesCount { get; }
 
-    // Check whether the pattern is recognized on the given candles
+    // 检查给定 K线上是否识别出形态
     bool Recognize(ReadOnlySpan<ICandleMessage> candles);
 }
 ```
@@ -31,16 +31,16 @@ public interface ICandlePattern : IPersistable
 ```csharp
 public class ComplexCandlePattern : ICandlePattern
 {
-    // Create an empty pattern
+    // 创建空形态
     public ComplexCandlePattern() { }
 
-    // Create a pattern with a name and set of inner patterns
+    // 创建带名称和内部形态集合的形态
     public ComplexCandlePattern(string name, IEnumerable<ICandlePattern> inner);
 
-    // Complex pattern name
+    // 复杂形态名称
     public string Name { get; }
 
-    // Inner patterns
+    // 内部形态
     public IEnumerable<ICandlePattern> Inner { get; }
 
     // Total number of candles (sum of CandlesCount for all inner patterns)
@@ -55,7 +55,7 @@ public class ComplexCandlePattern : ICandlePattern
 ```csharp
 using StockSharp.Algo.Candles.Patterns;
 
-// Create a complex pattern: first a bearish candle, then bullish engulfing
+// 创建复杂形态：先是看跌 K线，然后是看涨吞没
 var complex = new ComplexCandlePattern(
     "Reversal Up",
     new ICandlePattern[]
@@ -76,21 +76,21 @@ Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
 ```csharp
 public interface ICandlePatternProvider
 {
-    // Events for pattern creation, replacement, and deletion
+    // 形态创建、替换和删除事件
     event Action<ICandlePattern> PatternCreated;
     event Action<ICandlePattern, ICandlePattern> PatternReplaced;
     event Action<ICandlePattern> PatternDeleted;
 
-    // Initialize storage
+    // 初始化存储
     ValueTask InitAsync(CancellationToken cancellationToken);
 
-    // All available patterns
+    // 所有可用形态
     IEnumerable<ICandlePattern> Patterns { get; }
 
-    // Find a pattern by name
+    // 按名称查找形态
     bool TryFind(string name, out ICandlePattern pattern);
 
-    // Remove a pattern
+    // 删除形态
     bool Remove(ICandlePattern pattern);
 
     // Save (create or replace) a pattern
@@ -109,7 +109,7 @@ public interface ICandlePatternProvider
 using StockSharp.Algo.Candles.Patterns;
 using StockSharp.Configuration;
 
-// Create file-based pattern storage
+// 创建基于文件的形态存储
 var executor = new ChannelExecutor();
 var provider = new CandlePatternFileStorage(
     Paths.FileSystem,
@@ -120,13 +120,13 @@ var provider = new CandlePatternFileStorage(
 // Initialize (loads built-in + custom patterns from file)
 await provider.InitAsync(CancellationToken.None);
 
-// Subscribe to new pattern creation event
+// 订阅新形态创建事件
 provider.PatternCreated += pattern =>
 {
     Console.WriteLine($"Pattern created: {pattern.Name}");
 };
 
-// Create and save a complex pattern
+// 创建并保存复杂形态
 var myPattern = new ComplexCandlePattern(
     "My Pattern",
     new ICandlePattern[]
@@ -138,7 +138,7 @@ var myPattern = new ComplexCandlePattern(
 
 provider.Save(myPattern);
 
-// Find a pattern by name
+// 按名称查找形态
 if (provider.TryFind("My Pattern", out var found))
 {
     Console.WriteLine($"Found: {found.Name}, candles: {found.CandlesCount}");

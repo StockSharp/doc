@@ -40,7 +40,7 @@ protected override void OnStarted2(DateTime time)
 	.Once() // call this rule only once
 	.Apply(this);
 
-	// Sending request for subscribe to market data.
+	// Отправка запроса на подписку на рыночные данные.
 	Subscribe(sub);
 
 	base.OnStarted2(time);

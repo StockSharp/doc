@@ -63,7 +63,7 @@ Latency = ExecutionMessage.LocalTime - StoredLocalTime
 ## 使用示例
 
 ```cs
-// Creating a manager with a state store
+// 创建带状态存储的管理器
 var manager = new LatencyManager(new LatencyManagerState());
 
 // Processing order registration (saving the send time)
@@ -76,7 +76,7 @@ if (latency != null)
     Console.WriteLine($"Latency: {latency.Value.TotalMilliseconds} ms");
 }
 
-// Total latencies
+// 总延迟
 Console.WriteLine($"Registration latency: {manager.LatencyRegistration.TotalMilliseconds} ms");
 Console.WriteLine($"Cancellation latency: {manager.LatencyCancellation.TotalMilliseconds} ms");
 ```

@@ -28,9 +28,9 @@
 4. 添加日志监听器。
 
    ```cs
-   // log messages will be displayed in GUI component
+   // 日志消息将显示在 GUI 组件中
    _logManager.Listeners.Add(new GuiLogListener(Monitor));
-   // also writing in files
+   // 同时写入文件
    _logManager.Listeners.Add(new FileLogListener
    {
    	FileName = "logs",

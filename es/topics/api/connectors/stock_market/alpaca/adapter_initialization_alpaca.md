@@ -10,7 +10,7 @@ var messageAdapter = new AlpacaMessageAdapter(Connector.TransactionIdGenerator)
 	Key = "<Your API Key>".To<SecureString>(),
 	Secret = "<Your API Secret>".To<SecureString>(),
 
-	// uncomment for sandbox mode
+	// descomentar para modo sandbox
 	//IsDemo = true,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

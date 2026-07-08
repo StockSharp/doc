@@ -5,7 +5,7 @@ O conector FAST está disponível em modo dump. Nesse caso, os dados não vêm d
 Para ativar o modo dump, passe os arquivos por meio do método de dump [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** antes de conectar:
 
 ```cs
-// ... connector initialization
+// ... inicialização do conector
 var fastAdapter = (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
 IEnumerable<string> dumpFiles = Directory.GetFiles(dumpDir, "*.bin");
 var dict = dumpFiles.Select(f =>

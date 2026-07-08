@@ -21,7 +21,7 @@
     {
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
-            // Handling logic for the filtered order book
+            // 过滤订单簿的处理逻辑
             Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
         }
     };
@@ -33,7 +33,7 @@
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
     
-    // or like this
+    // 或这样
     //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```
 

@@ -38,20 +38,20 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Create indicator
+	// 创建指标
 	_bollingerBands = new BollingerBands
 	{
 		Length = BollingerLength,
 		Width = BollingerDeviation
 	};
 
-	// Create subscription and bind indicator
+	// 创建订阅并绑定指标
 	var subscription = SubscribeCandles(CandleType);
 	subscription
 		.BindEx(_bollingerBands, ProcessCandle)
 		.Start();
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -69,23 +69,23 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
 {
-	// Skip incomplete candles
+	// 跳过未完成的蜡烛
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Check if the strategy is ready for trading
+	// 检查策略是否已准备好交易
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
 	var typed = (BollingerBandsValue)bollingerValue;
 
-	// Trading logic:
-	// Sell when price reaches or exceeds the upper band
+	// 交易逻辑：
+	// 价格达到或超过上轨时卖出
 	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
 	}
-	// Buy when price reaches or falls below the lower band
+	// 价格达到或低于下轨时买入
 	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));

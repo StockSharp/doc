@@ -35,14 +35,14 @@ StockSharp 支持同时连接多个交易所和经纪商。路由系统（篮子
 ```cs
 var router = connector.Adapter.InnerAdapters;
 
-// Bind instrument to adapter for receiving tick data
+// 将交易品种绑定到适配器以接收 tick 数据
 router.SetSecurityAdapter(
     secId,
     DataType.Ticks,
     binanceAdapter
 );
 
-// Bind portfolio to adapter for transactions
+// 将投资组合绑定到适配器以执行交易操作
 router.SetPortfolioAdapter(
     "MyPortfolio",
     interactiveBrokersAdapter
@@ -70,7 +70,7 @@ router.SetPortfolioAdapter(
 - `false` -- 只有在**所有**适配器均已连接后才触发事件。
 
 ```cs
-// Wait for all adapters to connect
+// 等待所有适配器连接
 connector.Adapter.InnerAdapters.ConnectDisconnectEventOnFirstAdapter = false;
 
 connector.Connected += () =>
@@ -92,14 +92,14 @@ connector.Connect();
 ### 多交易所示例
 
 ```cs
-// Adding adapters
+// 添加适配器
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 connector.Adapter.InnerAdapters.Add(bybitAdapter);
 
 connector.Connect();
 
-// Subscribing to ticks -- will be automatically routed
-// to all adapters supporting the given instrument
+// 订阅 tick 数据 -- 将自动路由
+// 到所有支持该交易品种的适配器
 var subscription = new Subscription(DataType.Ticks, security);
 connector.Subscribe(subscription);
 ```
@@ -109,8 +109,8 @@ connector.Subscribe(subscription);
 发送消息时如果没有任何适配器已连接，该消息会进入待处理队列（`IPendingMessageState`）。适配器连接后，所有积压消息都会自动发送。
 
 ```cs
-// Registering an order before connecting -- the order will be sent
-// automatically after the connection is established
+// 连接前注册订单 -- 订单将被发送
+// 在连接建立后自动执行
 connector.RegisterOrder(order);
 connector.Connect();
 ```
@@ -120,7 +120,7 @@ connector.Connect();
 ### 使用代码配置
 
 ```cs
-// Creating adapters
+// 创建适配器
 var binance = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
     Key = "<API_KEY>",
@@ -132,11 +132,11 @@ var ib = new InteractiveBrokersMessageAdapter(connector.TransactionIdGenerator)
     Address = InteractiveBrokersMessageAdapter.DefaultAddress,
 };
 
-// Adding to the basket
+// 添加到篮子
 connector.Adapter.InnerAdapters.Add(binance);
 connector.Adapter.InnerAdapters.Add(ib);
 
-// Configuring routing
+// 配置路由
 connector.Adapter.InnerAdapters.SetPortfolioAdapter("BinancePortfolio", binance);
 connector.Adapter.InnerAdapters.SetPortfolioAdapter("IBPortfolio", ib);
 
@@ -152,7 +152,7 @@ connector.Connect();
 路由器会自动跟踪每个订单是通过哪个适配器注册的。收到订单更新（状态变化、成交）时，系统会通过同一个适配器进行路由：
 
 ```cs
-// The order will be registered through the adapter bound to the portfolio
+// 订单将通过绑定到投资组合的适配器注册
 var order = new Order
 {
     Security = security,
@@ -164,7 +164,7 @@ var order = new Order
 
 connector.RegisterOrder(order);
 
-// Cancellation will go through the same adapter automatically
+// 撤单将自动通过同一适配器执行
 connector.CancelOrder(order);
 ```
 

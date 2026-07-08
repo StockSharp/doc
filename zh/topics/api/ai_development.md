@@ -34,7 +34,7 @@ AI 获得的上下文越充分，结果就越准确。请明确说明：
 在仓库根目录创建项目规则文件：
 
 ```markdown
-# Project Rules
+# 项目规则
 
 - Using StockSharp 5.x API
 - Target framework: .NET 10

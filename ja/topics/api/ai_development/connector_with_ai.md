@@ -172,10 +172,10 @@ public class MyExchangeAdapter : AsyncMessageAdapter
 
     protected override ValueTask OnSecurityLookupAsync(SecurityLookupMessage msg, CancellationToken token)
     {
-        // ... request instruments
+        // ... 銘柄をリクエスト
     }
 
-    // ... other methods
+    // ... その他のメソッド
 }
 ```
 

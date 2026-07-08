@@ -26,7 +26,7 @@ bookSubscription
 	.WhenOrderBookReceived(this)
 	.Do(book =>
 	{
-		// drawing order book
+		// рисование стакана заявок
 		DrawOrderBook(bookSubscription, _bookSource, book);
 	})
 	.Apply(this);

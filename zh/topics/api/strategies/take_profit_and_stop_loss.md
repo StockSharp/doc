@@ -11,12 +11,12 @@
 该策略使用两个关键对象来保护持仓：
 
 ```cs
-// Declaration of protective controllers
+// 声明保护控制器
 private readonly ProtectiveController _protectiveController = new();
 private IProtectivePositionController _posController;
 
-// This code initializes the main protective controller and creates a placeholder for
-// a specific position controller. ProtectiveController manages all positions,
+// 此代码初始化主保护控制器，并为以下内容创建占位符
+// 特定持仓控制器。ProtectiveController 管理所有持仓，
 // while IProtectivePositionController is responsible for a specific position.
 ```
 
@@ -28,7 +28,7 @@ private IProtectivePositionController _posController;
 在开设新持仓或修改现有持仓时，将初始化保护控制器：
 
 ```cs
-// Initialization of the protective controller for a new position
+// 为新持仓初始化保护控制器
 this.WhenOwnTradeReceived()
 	.Do(t =>
 	{
@@ -50,9 +50,9 @@ this.WhenOwnTradeReceived()
 	})
 	.Apply(this);
 
-// This code creates and initializes a protective controller for a new position
-// upon receiving information about a new trade. It also updates the information
-// about the position in the controller and activates protection if necessary.
+// 此代码为新持仓创建并初始化保护控制器
+// 在收到新成交信息后执行。它还会更新信息
+// 更新控制器中的持仓信息，并在需要时激活保护。
 ```
 
 这会为特定位置创建一个带有指定止盈和止损参数的控制器。
@@ -73,13 +73,13 @@ if (info is not null)
 在处理新数据的方法中（e.g.，当接收到新K线时），会检查启动保护性订单的条件：
 
 ```cs
-// Checking protection activation conditions in the ProcessCandle method
+// 在 ProcessCandle 方法中检查保护激活条件
 var info = _posController?.TryActivate(candle.ClosePrice, CurrentTime);
 
 if (info is not null)
 	ActiveProtection(info.Value);
 
-// This code checks if a protective order needs to be activated based on
+// 此代码根据条件检查是否需要激活保护订单
 // the current price (in this case, the candle's closing price) and time.
 // If the conditions are met, the ActiveProtection method is called.
 ```
@@ -91,15 +91,15 @@ if (info is not null)
 如果满足启动保护令的条件，将触发相应的逻辑：
 
 ```cs
-// Method for activating a protective order
+// 激活保护订单的方法
 private void ActiveProtection((bool isTake, Sides side, decimal price, decimal volume, OrderCondition condition) info)
 {
 	// sending a protective (position-closing) order as a regular order
 	RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
 }
 
-// This method creates and registers an order to close the position
-// based on the information received from the protective controller.
+// 此方法创建并注册用于平仓的订单
+// 基于从保护控制器收到的信息。
 ```
 
 此方法根据保护控制器返回的参数创建并注册一个平仓订单。

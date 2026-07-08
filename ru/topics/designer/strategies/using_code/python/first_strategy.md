@@ -34,7 +34,7 @@ def __init__(self):
 	super(sma_strategy, self).__init__()
 	self._isShortLessThenLong = None
 
-	# Initialize strategy parameters
+	# Инициализировать параметры стратегии
 	self._candleTypeParam = self.Param("CandleType", DataType.TimeFrame(TimeSpan.FromMinutes(1))) \
 		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
 
@@ -90,22 +90,22 @@ def StopValue(self, value):
 3. При создании индикаторов и подписки на маркет-данные необходимо связать их, чтобы поступающие данные из подписки могли обновлять значения индикаторов:
 
 ```python
-# Create indicators
+# Создать индикаторы
 longSma = SMA()
 longSma.Length = self.Long
 shortSma = SMA()
 shortSma.Length = self.Short
 
-# Bind candles set and indicators
+# Связать набор свечей и индикаторы
 subscription = self.SubscribeCandles(self.CandleType)
-# Bind indicators to the candles and start processing
+# Связать индикаторы со свечами и запустить обработку
 subscription.Bind(longSma, shortSma, self.OnProcess).Start()
 ```
 
 4. При работе с графиком необходимо учитывать, что в случае запуска стратегии [вне Дизайнера](../../../live_execution/running_strategies_outside_of_designer.md) объект графика может быть отсутствовать.
 
 ```python
-# Configure chart if GUI is available
+# Настроить график, если доступен GUI
 area = self.CreateChartArea()
 if area is not None:
 	self.DrawCandles(area, subscription)
@@ -137,22 +137,22 @@ def OnProcess(self, candle, longValue, shortValue):
 	if candle.State != CandleStates.Finished:
 		return
 
-	# Determine if short SMA is less than long SMA
+	# Определить, меньше ли короткая SMA длинной SMA
 	isShortLessThenLong = shortValue < longValue
 
 	if self._isShortLessThenLong is None:
 		self._isShortLessThenLong = isShortLessThenLong
 	elif self._isShortLessThenLong != isShortLessThenLong:
-		# Crossing happened
+		# Произошло пересечение
 		direction = Sides.Sell if isShortLessThenLong else Sides.Buy
 
-		# Calculate volume for opening position or reverting
+		# Рассчитать объём для открытия позиции или разворота
 		volume = self.Volume if self.Position == 0 else Math.Min(Math.Abs(self.Position), self.Volume) * 2
 
 		# Get price step (default to 1 if not set)
 		priceStep = self.GetSecurity().PriceStep or 1
 
-		# Calculate order price with offset
+		# Рассчитать цену заявки со смещением
 		price = candle.ClosePrice + (priceStep if direction == Sides.Buy else -priceStep)
 
 		if direction == Sides.Buy:
@@ -160,7 +160,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		else:
 			self.SellLimit(price, volume)
 
-		# Update state
+		# Обновить состояние
 		self._isShortLessThenLong = isShortLessThenLong
 ```
 

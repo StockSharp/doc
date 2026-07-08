@@ -3,7 +3,7 @@
 O cancelamento de ordem é necessário se a situação de mercado se alterar de forma desfavorável à ordem emitida. Para cancelar ordens, use o método [ITransactionProvider.CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)** no [S#](../../api.md).
 
 ```cs
-// registeredOrder - successfully registered order.
+// registeredOrder — ordem registrada com sucesso.
 _connector.CancelOrder(registeredOrder);
 ```
 

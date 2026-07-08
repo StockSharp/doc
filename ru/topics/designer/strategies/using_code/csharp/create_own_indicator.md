@@ -10,9 +10,9 @@
 
 ```cs
 /// <summary>
-/// Sample indicator demonstrating to save and load parameters.
+/// Пример индикатора, показывающий сохранение и загрузку параметров.
 /// 
-/// Changes input price on +20% or -20%.
+/// Изменяет входную цену на +20% или -20%.
 /// 
 /// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 /// 
@@ -33,7 +33,7 @@ public class EmptyIndicator : BaseIndicator
 	}
 
 	private int _counter;
-	// formed indicator received all necessary inputs for be available for trading
+	// сформированный индикатор получил все нужные входные данные и готов для торговли
 	private bool _isFormed;
 
 	protected override bool CalcIsFormed() => _isFormed;
@@ -48,7 +48,7 @@ public class EmptyIndicator : BaseIndicator
 
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
-		// every 10th call try return empty value
+		// каждый 10-й вызов пытается вернуть пустое значение
 		if (RandomGen.GetInt(0, 10) == 0)
 			return new DecimalIndicatorValue(this);
 
@@ -60,19 +60,19 @@ public class EmptyIndicator : BaseIndicator
 
 		var value = input.GetValue<decimal>();
 
-		// random change on +20% or -20% current value
+		// случайно изменить текущее значение на +20% или -20%
 
 		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
 
 		return new DecimalIndicatorValue(this, value)
 		{
-			// final value means that this value for the specified input
+			// финальное значение означает, что это значение для указанного входа
 			// is not changed anymore (for example, for candles that changes with last price)
 			IsFinal = RandomGen.GetBool()
 		};
 	}
 
-	// persist our properties to save for further the app restarts
+	// сохранить наши свойства для последующих перезапусков приложения
 
 	public override void Load(SettingsStorage storage)
 	{

@@ -38,7 +38,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, normalize securities close prices and shows on same chart.
+	/// Аналитический скрипт нормализует цены закрытия инструментов и показывает их на одном графике.
 	/// </summary>
 	public class NormalizePriceScript : IAnalyticsScript
 	{
@@ -54,13 +54,13 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// остановить расчёт, если пользователь отменил выполнение скрипта
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var series = new Dictionary<DateTimeOffset, decimal>();
 
-				// get candle storage
+				// получение хранилища свечей
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				decimal? firstClose = null;
@@ -69,11 +69,11 @@ namespace StockSharp.Algo.Analytics
 				{
 					firstClose ??= candle.ClosePrice;
 
-					// normalize close prices by dividing on first close
+					// нормализовать цены закрытия делением на первое закрытие
 					series[candle.OpenTime] = candle.ClosePrice / firstClose.Value;
 				}
 
-				// draw series on chart
+				// отрисовать серии на графике
 				chart.Append(security.ToStringId(), series.Keys, series.Values);
 			}
 
@@ -89,7 +89,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -102,7 +102,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, normalize securities close prices and shows on same chart.
+# Аналитический скрипт нормализует цены закрытия инструментов и показывает их на одном графике.
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
@@ -118,13 +118,13 @@ class normalize_price_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# остановить расчёт, если пользователь отменил выполнение скрипта
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			series = {}
 
-			# get candle storage
+			# получение хранилища свечей
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			first_close = None
@@ -133,10 +133,10 @@ class normalize_price_script(IAnalyticsScript):
 				if first_close is None:
 					first_close = candle.ClosePrice
 
-				# normalize close prices by dividing on first close
+				# нормализовать цены закрытия делением на первое закрытие
 				series[candle.OpenTime] = candle.ClosePrice / first_close
 
-			# draw series on chart
+			# отрисовать серии на графике
 			chart.Append(to_string_id(security), list(series.keys()), list(series.values()))
 
 		return Task.CompletedTask

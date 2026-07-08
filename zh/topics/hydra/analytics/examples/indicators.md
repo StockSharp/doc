@@ -44,7 +44,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, using indicator ROC.
+	/// 使用 ROC 指标的分析脚本。
 	/// </summary>
 	public class IndicatorScript : IAnalyticsScript
 	{
@@ -56,23 +56,23 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// creating 2 panes for candles and indicator series
+			// 为蜡烛和指标序列创建两个面板
 			var candleChart = panel.CreateChart<DateTimeOffset, decimal>();
 			var indicatorChart = panel.CreateChart<DateTimeOffset, decimal>();
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// 如果用户取消脚本执行，则停止计算
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var candlesSeries = new Dictionary<DateTimeOffset, decimal>();
 				var indicatorSeries = new Dictionary<DateTimeOffset, decimal>();
 
-				// creating ROC
+				// 创建 ROC
 				var roc = new RateOfChange();
 
-				// get candle storage
+				// 获取 K线存储
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
@@ -82,7 +82,7 @@ namespace StockSharp.Algo.Analytics
 					indicatorSeries[candle.OpenTime] = roc.Process(candle).ToDecimal();
 				}
 
-				// draw series on chart
+				// 在图表上绘制序列
 				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
@@ -99,7 +99,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# 添加 .NET 引用
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -113,14 +113,14 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, using indicator ROC.
+# 使用 ROC 指标的分析脚本。
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# creating 2 panes for candles and indicator series
+		# 为蜡烛和指标序列创建两个面板
 		candle_chart = create_chart(panel, datetime, float)
 		indicator_chart = create_chart(panel, datetime, float)
 
@@ -131,17 +131,17 @@ class indicator_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# 如果用户取消脚本执行，则停止计算
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			candles_series = {}
 			indicator_series = {}
 
-			# creating ROC
+			# 创建 ROC
 			roc = ROC()
 
-			# get candle storage
+			# 获取 K线存储
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			for candle in load_range(candle_storage, message_type, from_date, to_date):
@@ -149,7 +149,7 @@ class indicator_script(IAnalyticsScript):
 				candles_series[candle.OpenTime] = candle.ClosePrice
 				indicator_series[candle.OpenTime] = to_decimal(process_candle(roc, candle))
 
-			# draw series on chart
+			# 在图表上绘制序列
 			candle_chart.Append(
 				f"{security} (close)",
 				list(candles_series.keys()),

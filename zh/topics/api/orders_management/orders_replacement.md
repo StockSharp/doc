@@ -9,11 +9,11 @@
 ```cs
 if (registeredOrder.Security.BestBid != null && registeredOrder.Security.BestAsk != null)
 {
-	// registeredOrder - successfully registered order.
+	// registeredOrder — 成功注册的订单。
 	var newOrder = registeredOrder.Clone();
-	// changing the price to be the best on order book
+	// 将价格改为订单簿中的最佳价格
 	newOrder.Price = (registeredOrder.Direction == Sides.Buy ? registeredOrder.Security.BestBid : registeredOrder.Security.BestAsk).Price;
-	// sending request the replace our order with new price
+	// 发送请求，用新价格替换我们的订单
 	_connector.ReRegisterOrder(registeredOrder, newOrder);
 }
 ```

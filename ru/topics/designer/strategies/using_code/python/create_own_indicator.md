@@ -58,7 +58,7 @@ class empty_indicator(BaseIndicator):
 		:param input: The incoming indicator value.
 		:return: A new DecimalIndicatorValue after applying changes.
 		"""
-		# Every 10th call, try to return an empty value
+		# Каждый 10-й вызов пытается вернуть пустое значение
 		if random.randint(0, 10) == 0:
 			return DecimalIndicatorValue(self, input.Time)
 
@@ -69,11 +69,11 @@ class empty_indicator(BaseIndicator):
 
 		value = to_decimal(input)
 
-		# Apply random change of +/- _change percent to the current value
+		# Применить случайное изменение +/- _change процентов к текущему значению
 		value += value * random.randint(-self._change, self._change) / 100.0
 
 		result = DecimalIndicatorValue(self, value, input.Time)
-		# Mark value as final based on a random decision
+		# Пометить значение как финальное на основе случайного выбора
 		result.IsFinal = bool(random.getrandbits(1))
 		return result
 

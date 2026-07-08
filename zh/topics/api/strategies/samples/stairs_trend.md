@@ -35,18 +35,18 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Reset counters
+	// 重置计数器
 	_bullLength = 0;
 	_bearLength = 0;
 
-	// Create subscription
+	// 创建订阅
 	var subscription = SubscribeCandles(CandleType);
 	
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -63,35 +63,35 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Check if the candle is finished
+	// 检查蜡烛是否已完成
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Check if the strategy is ready for trading
+	// 检查策略是否已准备好交易
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// Update counters based on candle direction
+	// 根据蜡烛方向更新计数器
 	if (candle.OpenPrice < candle.ClosePrice)
 	{
-		// Bullish candle
+		// 看涨蜡烛
 		_bullLength++;
 		_bearLength = 0;
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
-		// Bearish candle
+		// 看跌蜡烛
 		_bullLength = 0;
 		_bearLength++;
 	}
 
-	// Trend strategy: 
-	// Buy after Length consecutive bullish candles
+	// 趋势策略： 
+	// 连续 Length 根看涨蜡烛后买入
 	if (_bullLength >= Length && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}
-	// Sell after Length consecutive bearish candles
+	// 连续 Length 根看跌蜡烛后卖出
 	else if (_bearLength >= Length && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));

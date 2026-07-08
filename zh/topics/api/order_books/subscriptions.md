@@ -7,14 +7,14 @@
 1. 订阅事件以接收订单簿 [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) 并处理 [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) 接口对象：
 
 ```cs
-// event handler
+// 事件处理器
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-	// Here you can process the order book data, for example, display it on the screen or use it in your trading strategy
+	// 这里可以处理订单簿数据，例如显示在屏幕上或用于交易策略
 	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
 }
 
-// subscribing to the event
+// 订阅事件
 connector.OrderBookReceived += OnOrderBookReceived;
 ```
 
@@ -25,7 +25,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 ```cs
 var security = GetSecurity(); // Get the Security object you want to subscribe to
 				
-// subscribe to the order book
+// 订阅订单簿
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);
 ```

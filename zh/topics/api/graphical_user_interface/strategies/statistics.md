@@ -56,15 +56,15 @@ var strategies = periods
 	.Select(period =>
 		{
 			...
-			// create strategy based SMA
+			// 创建基于 SMA 的策略
 			var strategy = new SmaStrategy(series, new SimpleMovingAverage { Length = period.Item1 }, new SimpleMovingAverage { Length = period.Item2 })
 			{
 				Volume = 1,
 				Security = security,
 				Portfolio = portfolio,
 				Connector = connector,
-				// by default interval is 1 min,
-				// it is excessively for time range with several months
+				// 默认间隔为 1 分钟，
+				// 对于数月的时间范围来说过于频繁
 				UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 			};
 			...

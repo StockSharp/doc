@@ -19,7 +19,7 @@
 订阅K线。接受时间框架或 `DataType`：
 
 ```csharp
-// Subscribe by timeframe
+// 按时间周期订阅
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     TimeSpan tf,
     bool isFinishedOnly = true,
@@ -31,7 +31,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     bool isFinishedOnly = true,
     Security security = default);
 
-// Subscribe with a ready-made Subscription object
+// 使用现成的 Subscription 对象订阅
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription);
 ```
 
@@ -92,16 +92,16 @@ handler.Bind(Action<T> callback);
 将处理程序绑定到一个或多个指标。指标会自动处理传入的数据，而处理程序接收已经计算好的值：
 
 ```csharp
-// One indicator -- decimal value
+// 一个指标 -- decimal 数值
 handler.Bind(IIndicator indicator, Action<T, decimal> callback);
 
-// Two indicators
+// 两个指标
 handler.Bind(IIndicator ind1, IIndicator ind2, Action<T, decimal, decimal> callback);
 
-// Up to eight indicators
+// 最多八个指标
 handler.Bind(ind1, ind2, ind3, ..., callback);
 
-// Array of indicators
+// 指标数组
 handler.Bind(IIndicator[] indicators, Action<T, decimal[]> callback);
 ```
 
@@ -166,8 +166,8 @@ public class SmaStrategy : Strategy
 
         var subscription = SubscribeCandles(CandleType);
 
-        // Binding two indicators -- handler is called
-        // when both indicators are formed
+        // 绑定两个指标 -- 处理程序会被调用
+        // 当两个指标都已形成时
         subscription
             .Bind(shortSma, longSma, (candle, shortValue, longValue) =>
             {

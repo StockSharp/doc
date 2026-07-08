@@ -10,22 +10,22 @@ StockSharp API 允许您从各种来源接收新闻数据。新闻在做出交�
 要开始接收新闻，您需要创建新闻数据订阅，然后处理新闻接收事件：
 
 ```cs
-// Create a subscription to news
+// 创建新闻订阅
 var newsSubscription = new Subscription(DataType.News);
 
-// Subscribe to the news received event
+// 订阅新闻接收事件
 _connector.NewsReceived += OnNewsReceived;
 
-// Start the subscription
+// 启动订阅
 _connector.Subscribe(newsSubscription);
 
-// Event handler for receiving news
+// 新闻接收事件处理器
 private void OnNewsReceived(Subscription subscription, News news)
 {
 	if (subscription != newsSubscription)
 		return;
 
-	// Process the received news
+	// 处理收到的新闻
 	Console.WriteLine($"News: {news.Id}");
 	Console.WriteLine($"Headline: {news.Headline}");
 	Console.WriteLine($"Source: {news.Source}");
@@ -47,15 +47,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 在订阅新闻时，您可以指定过滤参数，只接收您感兴趣的新闻：
 
 ```cs
-// Create a subscription to news with filtering
+// 创建带过滤的新闻订阅
 var filteredNewsSubscription = new Subscription(DataType.News)
 {
 	MarketData =
 	{
-		// Specify the period for which to get news
+		// 指定获取新闻的期间
 		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
 
-		// You can specify a specific news source
+		// 可以指定特定新闻来源
 		// For example, we use an RSS source
 		NewsSource = "CryptoNews"
 	}
@@ -69,14 +69,14 @@ _connector.Subscribe(filteredNewsSubscription);
 StockSharp 提供了一个用于显示新闻的特殊视觉组件 [NewsPanel](xref:StockSharp.Xaml.NewsPanel)：
 
 ```cs
-// Create and configure a news panel
+// 创建并配置新闻面板
 var newsPanel = new NewsPanel();
 
-// Subscribe to the news received event and add news to the panel
+// 订阅新闻接收事件并将新闻添加到面板
 _connector.NewsReceived += (subscription, news) =>
 {
-	// To update UI elements
-	// you need to use the GuiAsync or GuiSync method
+	// 要更新 UI 元素
+	// 需要使用 GuiAsync 或 GuiSync 方法
 	this.GuiAsync(() => newsPanel.NewsGrid.News.Add(news));
 };
 ```
@@ -92,12 +92,12 @@ _connector.NewsReceived += (subscription, news) =>
 要获取特定时间段的历史新闻，您可以使用相同的订阅机制并指定时间范围：
 
 ```cs
-// Create a subscription to historical news
+// 创建历史新闻订阅
 var historicalNewsSubscription = new Subscription(DataType.News)
 {
 	MarketData =
 	{
-		// Specify the period for which to get news
+		// 指定获取新闻的期间
 		From = DateTime.Now.Subtract(TimeSpan.FromDays(7)),
 		To = DateTime.Now
 	}
@@ -111,10 +111,10 @@ _connector.Subscribe(historicalNewsSubscription);
 如果你正在使用不提供新闻源的连接器（例如 Binance），你可以通过 RSS 添加额外的新闻来源：
 
 ```cs
-// Create a Connector instance
+// 创建 Connector 实例
 var connector = new Connector();
 
-// Add the main adapter for connecting to Binance
+// 添加用于连接 Binance 的主适配器
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
 	Key = "<Your API Key>",
@@ -122,7 +122,7 @@ var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 
-// Add an adapter for receiving news via RSS
+// 添加通过 RSS 接收新闻的适配器
 var rssAdapter = new RssMessageAdapter(connector.TransactionIdGenerator)
 {
 	Address = "https://news-source.com/feed",
@@ -130,7 +130,7 @@ var rssAdapter = new RssMessageAdapter(connector.TransactionIdGenerator)
 };
 connector.Adapter.InnerAdapters.Add(rssAdapter);
 
-// Subscribe to the news received event
+// 订阅新闻接收事件
 connector.NewsReceived += OnNewsReceived;
 
 // Connect

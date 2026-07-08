@@ -8,15 +8,15 @@
 
    ```cs
    /// <summary>
-   /// Candle formed based on the delta of buy and sell volumes.
+   /// 基于买入和卖出成交量差值形成的 K线。
    /// </summary>
    public class DeltaCandleMessage : CandleMessage
    {
-       // We get the message type identifier from the helper
-       // to use the same value in RegisterCandleType
+       // 从辅助方法获取消息类型标识符
+       // 以便在 RegisterCandleType 中使用相同值
        
        /// <summary>
-       /// Initialize a new instance of <see cref="DeltaCandleMessage"/>.
+       /// 初始化 <see cref="DeltaCandleMessage"/> 的新实例。
        /// </summary>
        public DeltaCandleMessage()
            : base(DeltaCandleHelper.DeltaCandleType)
@@ -24,19 +24,19 @@
        }
        
        /// <summary>
-       /// Delta threshold value for candle formation.
+       /// K线形成的 delta 阈值。
        /// </summary>
        public decimal DeltaThreshold { get; set; }
        
        /// <summary>
-       /// Current delta value.
+       /// 当前 delta 值。
        /// </summary>
        public decimal CurrentDelta { get; set; }
        
        /// <summary>
-       /// Create a copy of <see cref="DeltaCandleMessage"/>.
+       /// 创建 <see cref="DeltaCandleMessage"/> 的副本。
        /// </summary>
-       /// <returns>Copy.</returns>
+       /// <returns>副本。</returns>
        public override Message Clone()
        {
            return CopyTo(new DeltaCandleMessage
@@ -47,7 +47,7 @@
        }
        
        /// <summary>
-       /// Candle parameter.
+       /// K线参数。
        /// </summary>
        public override object Arg
        {
@@ -56,7 +56,7 @@
        }
        
        /// <summary>
-       /// Type of candle argument.
+       /// K线参数类型。
        /// </summary>
        public override Type ArgType => typeof(decimal);
    }
@@ -68,32 +68,32 @@
    public static class DeltaCandleHelper
    {
        /// <summary>
-       /// Define a unique MessageType for delta-candles.
+       /// 为 delta-K线定义唯一的 MessageType。
        /// </summary>
        public const MessageTypes DeltaCandleType = (MessageTypes)10001;
        
        /// <summary>
-       /// <see cref="DeltaCandleMessage"/> data type.
+       /// <see cref="DeltaCandleMessage"/> 数据类型。
        /// </summary>
        public static readonly DataType CandleDelta = 
            DataType.Create(typeof(DeltaCandleMessage)).Immutable();
        
        /// <summary>
-       /// Create a data type for delta-candles.
+       /// 创建 delta-K线的数据类型。
        /// </summary>
-       /// <param name="threshold">Delta threshold value.</param>
-       /// <returns>Data type.</returns>
+       /// <param name="threshold">delta 阈值。</param>
+       /// <returns>数据类型。</returns>
        public static DataType Delta(this decimal threshold)
        {
            return DataType.Create(typeof(DeltaCandleMessage), threshold);
        }
        
        /// <summary>
-       /// Register the delta-candle type in the system.
+       /// 在系统中注册 delta-K线类型。
        /// </summary>
        public static void RegisterDeltaCandleType()
        {
-           // Register new candle type in StockSharp
+           // 在 StockSharp 中注册新的 K线类型
            Extensions.RegisterCandleType<decimal>(
                typeof(DeltaCandleMessage),      // Candle message type
                DeltaCandleType,                // Message type
@@ -111,14 +111,14 @@
 
    ```cs
    /// <summary>
-   /// Candle builder for <see cref="DeltaCandleMessage"/> type.
+   /// <see cref="DeltaCandleMessage"/> 类型的 K线构建器。
    /// </summary>
    public class DeltaCandleBuilder : CandleBuilder<DeltaCandleMessage>
    {
        /// <summary>
-       /// Initializes a new instance of <see cref="DeltaCandleBuilder"/>.
+       /// 初始化 <see cref="DeltaCandleBuilder"/> 的新实例。
        /// </summary>
-       /// <param name="exchangeInfoProvider">Exchange information provider.</param>
+       /// <param name="exchangeInfoProvider">交易所信息提供者。</param>
        public DeltaCandleBuilder(IExchangeInfoProvider exchangeInfoProvider)
            : base(exchangeInfoProvider)
        {
@@ -143,7 +143,7 @@
        /// <inheritdoc />
        protected override bool IsCandleFinishedBeforeChange(ICandleBuilderSubscription subscription, DeltaCandleMessage candle, ICandleBuilderValueTransform transform)
        {
-           // The candle closes when the absolute value of delta exceeds the threshold
+           // 当 delta 的绝对值超过阈值时 K线 收盘
            return Math.Abs(candle.CurrentDelta) >= candle.DeltaThreshold;
        }
        
@@ -152,7 +152,7 @@
        {
            base.UpdateCandle(subscription, candle, transform);
            
-           // Update delta based on the trade side
+           // 根据成交方向更新 delta
            if (transform.Side == Sides.Buy)
                candle.CurrentDelta += transform.Volume ?? 0;
            else if (transform.Side == Sides.Sell)
@@ -166,34 +166,34 @@
    ```cs
    private Connector _connector;
    ...
-   // Register delta-candle type in the system
+   // 在系统中注册 delta-K线类型
    DeltaCandleHelper.RegisterDeltaCandleType();
    
-   // Register the delta-candle builder
+   // 注册 delta-K线构建器
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
 5. 为 `DeltaCandleMessage` 类型的K线创建订阅并请求数据：
 
    ```cs
-   // Delta threshold value
+   // delta 阈值
    decimal deltaThreshold = 1000m;
    
-   // Create a subscription for delta-candles
+   // 创建 delta-K线订阅
    var subscription = new Subscription(
-       // Use our extension method to create a data type
+       // 使用我们的扩展方法创建数据类型
        deltaThreshold.Delta(), 
        security)
    {
        MarketData =
        {
-           // Specify that candles will be built from ticks
+           // 指定 K线将从 tick 构建
            BuildMode = MarketDataBuildModes.Build,
            BuildFrom = DataType.Ticks
        }
    };
    
-   // Subscribe to the candle received event
+   // 订阅 K线接收事件
    _connector.CandleReceived += (sub, candle) =>
    {
        if (sub != subscription)
@@ -201,19 +201,19 @@
        
        var deltaCandle = (DeltaCandleMessage)candle;
        
-       // Process delta-candle
+       // 处理 delta-K线
        Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
    
-   // Subscribe to the online mode transition
+   // 订阅切换到在线模式的事件
    _connector.SubscriptionOnline += sub => 
    {
        if (sub == subscription)
            Console.WriteLine("Delta-candle subscription has transitioned to online mode");
    };
    
-   // Start the subscription
+   // 启动订阅
    _connector.Subscribe(subscription);
    ```
 
@@ -252,7 +252,7 @@ public class DeltaCandleStrategy : Strategy
 
 	public DeltaCandleStrategy()
 	{
-		// Strategy parameters
+		// 策略参数
 		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
 			.SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
 			.SetGreaterThanZero()
@@ -275,7 +275,7 @@ public class DeltaCandleStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Chart initialization, if available
+		// 如果可用，则初始化图表
 		_chart = GetChart();
 		if (_chart != null)
 		{
@@ -286,7 +286,7 @@ public class DeltaCandleStrategy : Strategy
 			_deltaIndicatorElement.Color = System.Drawing.Color.Purple;
 		}
 
-		// Create a subscription for delta-candles
+		// 创建 delta-K线订阅
 		var subscription = new Subscription(DeltaThreshold.Delta(), Security)
 		{
 			MarketData =
@@ -296,19 +296,19 @@ public class DeltaCandleStrategy : Strategy
 			}
 		};
 
-		// Create a rule for processing delta-candles
+		// 创建处理 delta-K线的规则
 		this
 			.WhenCandleReceived(subscription)
 			.Do(ProcessDeltaCandle)
 			.Apply(this);
 
-		// Start the subscription
+		// 启动订阅
 		Subscribe(subscription);
 	}
 
 	private void ProcessDeltaCandle(ICandleMessage candle)
 	{
-		// Draw on the chart, if available
+		// 如果图表可用，则绘制到图表上
 		if (_chart != null)
 		{
 			var deltaCandle = (DeltaCandleMessage)candle;
@@ -321,37 +321,37 @@ public class DeltaCandleStrategy : Strategy
 			_chart.Draw(data);
 		}
 
-		// Process only finished candles
+		// 只处理已完成的 K线
 		if (candle.State != CandleStates.Finished)
 			return;
 			
 		var deltaCandle = (DeltaCandleMessage)candle;
 		
-		// Check if delta is sufficient for a signal
+		// 检查 delta 是否足以形成信号
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
 			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
 			return;
 		}
 
-		// Operation direction depends on the delta sign
+		// 操作方向取决于 delta 符号
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 		
 		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
 		
-		// Use the candle's close price to determine the price
+		// 使用 K线收盘价确定价格
 		var price = deltaCandle.ClosePrice;
 		var volume = Volume;
 		
-		// If we already have a position in the opposite direction, 
-		// increase the volume to close the existing position
+		// 如果 已经有反向仓位，
+		// 增加数量以平掉现有仓位
 		if ((Position < 0 && direction == Sides.Buy) || 
 			(Position > 0 && direction == Sides.Sell))
 		{
 			volume = Math.Max(volume, Math.Abs(Position) + volume);
 		}
 		
-		// Register an order
+		// 注册订单
 		RegisterOrder(this.CreateOrder(direction, price, volume));
 	}
 }

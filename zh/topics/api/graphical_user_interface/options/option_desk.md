@@ -33,26 +33,26 @@
    ...                 
    public readonly Connector Connector = new Connector();
    ...                 
-   // subscribe on connection successfully event
+   // 订阅连接成功事件
    Connector.Connected += () =>
    {
-   	// update gui labels
+   	// 更新界面标签
    	this.GuiAsync(() => ChangeConnectStatus(true));
    };
-   // subscribe on disconnection event
+   // 订阅断开连接事件
    Connector.Disconnected += () =>
    {
-   	// update gui labels
+   	// 更新界面标签
    	this.GuiAsync(() => ChangeConnectStatus(false));
    };
-   // subscribe on connection error event
+   // 订阅连接错误事件
    Connector.ConnectionError += error => this.GuiAsync(() =>
    {
-   	// update gui labels
+   	// 更新界面标签
    	ChangeConnectStatus(false);
    	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
-   // fill underlying asset's list
+   // 填充标的资产列表
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
@@ -63,7 +63,7 @@
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
-   // subscribing on tick prices and updating asset price
+   // 订阅 tick 价格并更新资产价格
    Connector.TickTradeReceived += (sub, trade) =>
    {
    	if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
@@ -116,7 +116,7 @@
 4. 在接收工具时，我们将基础资产添加到清单中。
 
    ```cs
-   // fill underlying asset's list
+   // 填充标的资产列表
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)

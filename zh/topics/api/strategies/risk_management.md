@@ -13,7 +13,7 @@ StockSharp 中的每个策略都内置了 `RiskManager`，可实现交易风险�
 `IRiskManager` 对象用于管理规则列表。当策略初始化时，它会自动创建：
 
 ```csharp
-// Access the risk manager
+// 访问风险管理器
 IRiskManager manager = strategy.RiskManager;
 ```
 
@@ -22,10 +22,10 @@ IRiskManager manager = strategy.RiskManager;
 一个用于读取和设置规则列表的方便属性：
 
 ```csharp
-// Read current rules
+// 读取当前规则
 IEnumerable<IRiskRule> rules = strategy.RiskRules;
 
-// Set new rules
+// 设置新规则
 strategy.RiskRules = new IRiskRule[]
 {
     new RiskPnLRule { PnL = -1000m, Action = RiskActions.StopTrading },
@@ -52,7 +52,7 @@ strategy.RiskRules = new IRiskRule[]
 当达到指定的盈亏水平时触发。正值控制利润，负值控制亏损：
 
 ```csharp
-// Stop trading on a loss exceeding 5000
+// 亏损超过 5000 时停止交易
 new RiskPnLRule
 {
     PnL = -5000m,
@@ -78,7 +78,7 @@ new RiskPositionSizeRule
 当指定时间间隔内的订单数量超过限制时触发：
 
 ```csharp
-// Stop on more than 50 orders per minute
+// 每分钟超过 50 个订单时停止
 new RiskOrderFreqRule
 {
     Count = 50,
@@ -149,24 +149,24 @@ public class RiskAwareStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Configure risk management rules
+        // 配置风险管理规则
         RiskRules = new IRiskRule[]
         {
-            // Close positions on a loss exceeding 10000
+            // 亏损超过 10000 时平仓
             new RiskPnLRule
             {
                 PnL = -10000m,
                 Action = RiskActions.ClosePositions
             },
 
-            // Stop trading when position exceeds 500 contracts
+            // 持仓超过 500 手时停止交易
             new RiskPositionSizeRule
             {
                 Position = 500m,
                 Action = RiskActions.StopTrading
             },
 
-            // Cancel orders when frequency exceeds 100 per minute
+            // 频率超过每分钟 100 个订单时撤单
             new RiskOrderFreqRule
             {
                 Count = 100,
@@ -187,7 +187,7 @@ public class RiskAwareStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Trading logic
+        // 交易逻辑
         if (candle.OpenPrice < candle.ClosePrice && Position <= 0)
             BuyMarket(Volume + Math.Abs(Position));
         else if (candle.OpenPrice > candle.ClosePrice && Position >= 0)

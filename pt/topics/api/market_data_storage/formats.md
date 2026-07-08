@@ -66,12 +66,12 @@ Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
 O StockSharp permite carregar dados num formato e guardá-los noutro. Isto pode ser útil, por exemplo, para exportar dados binários para CSV para análise em ferramentas externas:
 
 ```cs
-// Load from binary storage
+// Carregar do armazenamento binário
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Binary);
 var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 
-// Save to CSV storage
+// Salvar no armazenamento CSV
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Csv);
 await csvStorage.SaveAsync(candles);
@@ -84,13 +84,13 @@ O formato é selecionado ao criar um armazenamento através de [StorageRegistry]
 ```cs
 var storageRegistry = new StorageRegistry();
 
-// Create candle storage in binary format
+// Criar armazenamento de velas em formato binário
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
     StorageFormats.Binary);
 
-// Create candle storage in CSV format
+// Criar armazenamento de velas em formato CSV
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
@@ -105,11 +105,11 @@ var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 O formato de armazenamento também pode ser especificado ao trabalhar com dados de ticks e livros de ofertas:
 
 ```cs
-// Ticks in binary format
+// Ticks em formato binário
 var tickStorage = storageRegistry.GetTickMessageStorage(
     securityId, StorageFormats.Binary);
 
-// Order books in CSV format
+// Livros de ofertas em formato CSV
 var depthStorage = storageRegistry.GetQuoteMessageStorage(
     securityId, StorageFormats.Csv);
 ```

@@ -34,7 +34,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Subscribe to market time changes for quote updates
+	// 订阅市场时间变化以更新报价
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
 	Connector_CurrentTimeChanged(default);
 }
@@ -47,28 +47,28 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
 {
-	// Create a new processor only if the current one is stopped or doesn't exist
+	// 仅在当前处理器已停止或不存在时创建新处理器
 	if (_quotingProcessor != null && _quotingProcessor.LeftVolume > 0)
 		return;
 
-	// Release resources of the old processor if it exists
+	// 如果旧处理器存在，则释放其资源
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 
-	// Determine quoting side based on current position
+	// 根据当前持仓确定报价方向
 	var side = Position <= 0 ? Sides.Buy : Sides.Sell;
 
-	// Create new quoting behavior
+	// 创建新的报价行为
 	var behavior = new MarketQuotingBehavior(
 		PriceOffset,
 		BestPriceOffset,
 		PriceType
 	);
 
-	// Calculate quoting volume
+	// 计算报价数量
 	var quotingVolume = Volume + Math.Abs(Position);
 
-	// Create and initialize the processor
+	// 创建并初始化处理器
 	_quotingProcessor = new QuotingProcessor(
 		behavior,
 		Security,
@@ -90,7 +90,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Subscribe to processor events for logging
+	// 订阅处理器事件以记录日志
 	_quotingProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
@@ -106,7 +106,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		_quotingProcessor = null;
 	};
 
-	// Start the processor
+	// 启动处理器
 	_quotingProcessor.Start();
 }
 ```
@@ -118,10 +118,10 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 ```cs
 protected override void OnStopped()
 {
-	// Unsubscribe to prevent memory leaks
+	// 取消订阅以防止内存泄漏
 	Connector.CurrentTimeChanged -= Connector_CurrentTimeChanged;
 
-	// Release resources of the current processor if it exists
+	// 如果当前处理器存在，则释放其资源
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 

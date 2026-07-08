@@ -36,7 +36,7 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 	private HttpClient _restClient;
 	private SocketClient _socketClient;
 
-	// Other adapter fields and properties
+	// 适配器的其他字段和属性
 }
 ```
 
@@ -58,15 +58,15 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 {
 	HeartbeatInterval = TimeSpan.FromSeconds(5);
 
-	// Add support for market data and transactions
+	// 添加市场数据和交易操作支持
 	this.AddMarketDataSupport();
 	this.AddTransactionalSupport();
 
-	// Remove unsupported message types
+	// 移除不支持的消息类型
 	this.RemoveSupportedMessage(MessageTypes.Portfolio);
 	this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
 
-	// Add supported market data types
+	// 添加支持的市场数据类型
 	this.AddSupportedMarketDataType(DataType.Ticks);
 	this.AddSupportedMarketDataType(DataType.MarketDepth);
 	this.AddSupportedMarketDataType(DataType.Level1);
@@ -81,7 +81,7 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
 {
-	// Check the presence of keys for transactional mode
+	// 检查交易模式所需密钥是否存在
 	if (this.IsTransactional())
 	{
 		if (Key.IsEmpty())
@@ -91,27 +91,27 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 			throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
 	}
 
-	// Initialize the authenticator
+	// 初始化认证器
 	_authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
 
-	// Check that clients are not yet created
+	// 检查客户端尚未创建
 	if (_restClient != null)
 		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
 	if (_socketClient != null)
 		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-	// Create REST client
+	// 创建 REST 客户端
 	_restClient = new(_authenticator) { Parent = this };
 
-	// Create and configure WebSocket client
+	// 创建并配置 WebSocket 客户端
 	_socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
 	SubscribePusherClient();
 
-	// Connect WebSocket client
+	// 连接 WebSocket 客户端
 	await _socketClient.Connect(cancellationToken);
 
-	// Send successful connection message
+	// 发送连接成功消息
 	SendOutMessage(new ConnectMessage());
 }
 ```
@@ -121,21 +121,21 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
 {
-	// Check that clients are created
+	// 检查客户端已创建
 	if (_restClient == null)
 		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
 	if (_socketClient == null)
 		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-	// Free REST client resources
+	// 释放 REST 客户端资源
 	_restClient.Dispose();
 	_restClient = null;
 
-	// Disconnect WebSocket client
+	// 断开 WebSocket 客户端
 	_socketClient.Disconnect();
 
-	// Send disconnection message
+	// 发送断开连接消息
 	SendOutDisconnectMessage(true);
 	return default;
 }
@@ -146,7 +146,7 @@ public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, Cance
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)
 {
-	// Free REST client resources
+	// 释放 REST 客户端资源
 	if (_restClient != null)
 	{
 		try
@@ -161,7 +161,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_restClient = null;
 	}
 
-	// Disconnect and clear WebSocket client
+	// 断开并清理 WebSocket 客户端
 	if (_socketClient != null)
 	{
 		try
@@ -177,7 +177,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_socketClient = null;
 	}
 
-	// Free authenticator resources
+	// 释放认证器资源
 	if (_authenticator != null)
 	{
 		try
@@ -192,10 +192,10 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_authenticator = null;
 	}
 
-	// Clear additional data
+	// 清理附加数据
 	_candlesTransIds.Clear();
 
-	// Send reset message
+	// 发送重置消息
 	SendOutMessage(new ResetMessage());
 	return default;
 }

@@ -33,26 +33,26 @@
    ...                 
    public readonly Connector Connector = new Connector();
    ...                 
-   // subscribe on connection successfully event
+   // подписаться на событие успешного подключения
    Connector.Connected += () =>
    {
-   	// update gui labels
+   	// обновить надписи интерфейса
    	this.GuiAsync(() => ChangeConnectStatus(true));
    };
-   // subscribe on disconnection event
+   // подписаться на событие отключения
    Connector.Disconnected += () =>
    {
-   	// update gui labels
+   	// обновить надписи интерфейса
    	this.GuiAsync(() => ChangeConnectStatus(false));
    };
-   // subscribe on connection error event
+   // подписаться на событие ошибки подключения
    Connector.ConnectionError += error => this.GuiAsync(() =>
    {
-   	// update gui labels
+   	// обновить надписи интерфейса
    	ChangeConnectStatus(false);
    	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    });
-   // fill underlying asset's list
+   // заполнить список базовых активов
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)
@@ -61,7 +61,7 @@
    	if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    		_isDirty = true;
    };
-   // subscribing on tick prices and updating asset price
+   // подписка на тиковые цены и обновление цены актива
    Connector.TickTradeReceived += (sub, trade) =>
    {
    	if (_model.UnderlyingAssetId == trade.SecurityId)
@@ -107,7 +107,7 @@
 4. При получении инструментов добавляем базовые активы в список.
 
    ```cs
-   // fill underlying asset's list
+   // заполнить список базовых активов
    Connector.SecurityReceived += (sub, security) =>
    {
    	if (security.Type == SecurityTypes.Future)

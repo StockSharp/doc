@@ -21,10 +21,10 @@
 第一步是创建一个 [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) 对象，[HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) 将通过它访问历史数据：
 
 ```csharp
-// storage for accessing historical data
+// 用于访问历史数据的存储
 var storageRegistry = new StorageRegistry
 {
-	// set path to directory with historical data
+	// 设置历史数据目录路径
 	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
 };
 ```
@@ -35,7 +35,7 @@ var storageRegistry = new StorageRegistry
 ### 2. 创建工具和投资组合
 
 ```csharp
-// create test instrument for testing
+// 创建用于测试的测试工具
 var security = new Security
 {
 	Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
@@ -43,7 +43,7 @@ var security = new Security
 	Board = board,
 };
 
-// test portfolio
+// 测试投资组合
 var portfolio = new Portfolio
 {
 	Name = "test account",
@@ -54,7 +54,7 @@ var portfolio = new Portfolio
 ### 3. 创建仿真连接器
 
 ```csharp
-// create connector for emulation
+// 创建仿真用连接器
 var connector = new HistoryEmulationConnector(
 	new[] { security },
 	new[] { portfolio })
@@ -65,12 +65,12 @@ var connector = new HistoryEmulationConnector(
 		{
 			Settings =
 			{
-				// match order if historical price touched our limit order price
-				// By default it's turned off, price should go through the limit order price
+				// 当历史价格触及限价单价格时撮合订单
+				// 默认关闭；价格必须穿过限价单价格
 				// (more strict testing mode)
 				MatchOnTouch = false,
 				
-				// commission for trades
+				// 成交手续费
 				CommissionRules = new ICommissionRule[]
 				{
 					new CommissionPerTradeRule { Value = 0.01m },
@@ -84,7 +84,7 @@ var connector = new HistoryEmulationConnector(
 	HistoryMessageAdapter =
 	{
 		StorageRegistry = storageRegistry,
-		// set testing range
+		// 设置测试范围
 		StartDate = startTime,
 		StopDate = stopTime,
 		OrderLogMarketDepthBuilders =
@@ -92,7 +92,7 @@ var connector = new HistoryEmulationConnector(
 			{ secId, new ItchOrderLogMarketDepthBuilder(secId) }
 		}
 	},
-	// set market time update interval
+	// 设置市场时间更新间隔
 	MarketTimeChangedInterval = timeFrame,
 };
 ```
@@ -107,10 +107,10 @@ connector.SecurityReceived += (subscr, s) =>
 	if (s != security)
 		return;
 		
-	// fill Level1 values
+	// 填充 Level1 值
 	connector.EmulationAdapter.SendInMessage(level1Info);
 	
-	// subscribe to necessary data depending on testing settings
+	// 根据测试设置订阅必要数据
 	if (emulationInfo.UseMarketDepth)
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
@@ -119,7 +119,7 @@ connector.SecurityReceived += (subscr, s) =>
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
 			// if no historical order book data is available but required by the strategy,
-			// use generator based on last prices
+			// 使用基于最新价格的生成器
 			connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
 			{
 				Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
@@ -149,10 +149,10 @@ connector.SecurityReceived += (subscr, s) =>
 		connector.Subscribe(new(DataType.Level1, security));
 	}
 	
-	// start strategy before emulation begins
+	// 仿真开始前启动策略
 	strategy.Start();
 	
-	// start loading historical data
+	// 开始加载历史数据
 	connector.Start();
 };
 ```
@@ -160,7 +160,7 @@ connector.SecurityReceived += (subscr, s) =>
 ### 5. 创建和配置策略
 
 ```csharp
-// create trading strategy based on moving averages with periods 80 and 10
+// 创建基于周期 80 和 10 移动平均线的交易策略
 var strategy = new SmaStrategy
 {
 	LongSma = 80,
@@ -170,11 +170,11 @@ var strategy = new SmaStrategy
 	Security = security,
 	Connector = connector,
 	LogLevel = DebugLogCheckBox.IsChecked == true ? LogLevels.Debug : LogLevels.Info,
-	// default interval is 1 min, which is excessive for a range of several months
+	// 默认间隔为 1 分钟，对于数月范围来说过于频繁
 	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 };
 
-// configure the type of data used to build candles
+// 配置用于构建蜡烛的数据类型
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
@@ -234,14 +234,14 @@ strategy.PositionReceived += (s, p) =>
 	pos.Draw(data);
 };
 
-// subscribe to progress updates
+// 订阅进度更新
 connector.ProgressChanged += steps => this.GuiAsync(() => progressBar.Value = steps);
 ```
 
 ### 7. 开始测试
 
 ```csharp
-// start emulation
+// 启动仿真
 connector.Connect();
 ```
 
@@ -259,7 +259,7 @@ connector.Connect();
 为每种数据类型创建一个包含图表和统计信息的独立标签页：
 
 ```csharp
-// create testing modes
+// 创建测试模式
 _settings = new[]
 {
 	(
@@ -282,7 +282,7 @@ _settings = new[]
 		TicksAndDepthsCheckBox,
 		TicksAndDepthsProgress,
 		TicksAndDepthsParameterGrid,
-		// ticks + order books
+		// 逐笔成交 + 订单簿
 		new EmulationInfo
 		{
 			UseTicks = true,
@@ -295,7 +295,7 @@ _settings = new[]
 		TicksAndDepthsPosition
 	),
 	
-	// other combinations of data types
+	// 其他数据类型组合
 };
 ```
 
@@ -310,7 +310,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// create subscription to candles of the required type
+	// 创建所需类型蜡烛的订阅
 	var dt = CandleTimeFrame is null
 		? CandleType
 		: DataType.Create(CandleType.MessageType, CandleTimeFrame);
@@ -326,16 +326,16 @@ protected override void OnStarted2(DateTime time)
 		}
 	};
 
-	// create indicators
+	// 创建指标
 	var longSma = new SMA { Length = LongSma };
 	var shortSma = new SMA { Length = ShortSma };
 
-	// subscribe to candles and bind them to indicators
+	// 订阅蜡烛并将其绑定到指标
 	SubscribeCandles(subscription)
 		.Bind(longSma, shortSma, OnProcess)
 		.Start();
 
-	// configure display on the chart
+	// 配置图表显示
 	var area = CreateChartArea();
 
 	if (area != null)
@@ -346,7 +346,7 @@ protected override void OnStarted2(DateTime time)
 		DrawOwnTrades(area);
 	}
 
-	// configure position protection
+	// 配置持仓保护
 	StartProtection(TakeValue, StopValue);
 }
 ```
@@ -358,11 +358,11 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// check if the candle is completed
+	// 检查蜡烛是否完成
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// analyze indicator crossover
+	// 分析指标交叉
 	var isShortLessThenLong = shortValue < longValue;
 
 	if (_isShortLessThenLong == null)
@@ -374,10 +374,10 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		// if short is less than long - sell, otherwise buy
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-		// calculate volume for opening position or reversal
+		// 计算开仓或反转持仓的数量
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-		// use the candle's close price
+		// 使用蜡烛收盘价
 		var price = candle.ClosePrice;
 
 		if (direction == Sides.Buy)

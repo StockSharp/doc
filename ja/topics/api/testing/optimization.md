@@ -161,7 +161,7 @@ _candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
 ### 最適化器の作成と設定
 
 ```csharp
-// Instrument and portfolio.
+// 銘柄とポートフォリオ。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",
@@ -170,19 +170,19 @@ var security = new Security
 
 var portfolio = Portfolio.CreateSimulator();
 
-// Historical data storage.
+// 履歴データストレージ。
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = new LocalMarketDataDrive(folder)
 };
 
-// Create the optimizer.
+// オプティマイザーを作成。
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),
     storageRegistry);
 
-// Configure emulation parameters.
+// エミュレーションパラメータを設定。
 var settings = optimizer.EmulationSettings;
 settings.MaxIterations = 100;                          // maximum iterations (0 = unlimited)
 settings.CommissionRules = new[]                       // commission
@@ -192,14 +192,14 @@ settings.CommissionRules = new[]                       // commission
 // settings.BatchSize = 8;                             // number of parallel threads
                                                        // default = CPU * 2
 
-// Cache market data between iterations to speed up optimization.
+// 最適化を高速化するため、反復間で市場データをキャッシュ。
 optimizer.AdapterCache = new();
 ```
 
 ### 総当たり最適化の実行
 
 ```csharp
-// Base strategy with optimization ranges.
+// 最適化範囲を持つベース戦略。
 var strategy = new SmaStrategy
 {
     Volume = 1,
@@ -207,24 +207,24 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Select parameters to optimize.
+// 最適化するパラメータを選択。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
 var optimizeParams = new IStrategyParam[] { longParam, shortParam, tfParam };
 
-// Generate all parameter combinations.
+// すべてのパラメータ組み合わせを生成。
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
-// Run optimization.
+// 最適化を実行。
 var startTime = new DateTime(2020, 1, 1);
 var stopTime = new DateTime(2020, 12, 31);
 var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
-    // s is the strategy with results after backtesting.
+    // s はバックテスト後の結果を持つ戦略です。
     Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
                       $"ShortSma={s.Parameters["ShortSma"].Value}");
 }
@@ -264,7 +264,7 @@ var optimizer = new GeneticOptimizer(
 
 optimizer.AdapterCache = new();
 
-// Configure the genetic algorithm.
+// 遺伝的アルゴリズムを設定。
 optimizer.Settings.Population = 8;            // population size
 optimizer.Settings.PopulationMax = 16;        // maximum population size
 optimizer.Settings.GenerationsMax = 20;       // maximum generations
@@ -320,12 +320,12 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Prepare parameters for the genetic optimizer.
+// 遺伝的オプティマイザー用のパラメータを準備。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
-// ToGeneticParameters converts strategy parameters to the genetic optimizer format.
+// ToGeneticParameters は戦略パラメータを遺伝的オプティマイザー形式に変換します。
 // For parameters with a discrete set of values, such as TimeSpan?, pass an explicit
 // list through a (param, values) tuple:
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
@@ -335,7 +335,7 @@ var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerabl
     (shortParam, null),
 });
 
-// Run optimization.
+// 最適化を実行。
 var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(
@@ -385,13 +385,13 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 最適化は一時停止して再開できます。
 
 ```csharp
-// Pause. Current iterations will finish, new ones will not start.
+// 一時停止。現在の反復は完了し、新しい反復は開始されません。
 optimizer.Pause();
 
 // Resume.
 optimizer.Resume();
 
-// Check state.
+// 状態を確認。
 bool isPaused = optimizer.IsPaused;
 ```
 
@@ -417,7 +417,7 @@ using StockSharp.BusinessEntities;
 using StockSharp.Configuration;
 using StockSharp.Messages;
 
-// Configure the instrument and portfolio.
+// 銘柄とポートフォリオを設定。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",
@@ -426,7 +426,7 @@ var security = new Security
 
 var portfolio = Portfolio.CreateSimulator();
 
-// Data storage.
+// データストレージ。
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
@@ -445,7 +445,7 @@ optimizer.EmulationSettings.CommissionRules = new[]
 };
 optimizer.AdapterCache = new();
 
-// Configure the strategy.
+// 戦略を設定。
 var strategy = new SmaStrategy
 {
     Volume = 1,
@@ -453,17 +453,17 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Parameters to optimize.
+// 最適化するパラメータ。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var optimizeParams = new IStrategyParam[] { longParam, shortParam };
 
-// Generate combinations.
+// 組み合わせを生成。
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
 Console.WriteLine($"Total iterations: {totalCount}");
 
-// Run optimization.
+// 最適化を実行。
 var startTime = Paths.HistoryBeginDate;
 var stopTime = Paths.HistoryEndDate;
 var cts = new CancellationTokenSource();

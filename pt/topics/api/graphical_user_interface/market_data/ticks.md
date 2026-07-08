@@ -37,28 +37,28 @@ public class TradesWindow
 		_connector = connector;
 		_security = security;
 		
-		// Subscribe to tick trade reception event
+		// Assinar evento de recebimento de negociações tick
 		_connector.TickTradeReceived += OnTickReceived;
 		
-		// Create a subscription to tick trades
+		// Criar uma assinatura para negociações tick
 		_tickSubscription = new Subscription(DataType.Ticks, security);
 		
-		// Start subscription
+		// Iniciar assinatura
 		_connector.Subscribe(_tickSubscription);
 	}
 	
-	// Handler for tick trade reception event
+	// Manipulador do evento de recebimento de negociações tick
 	private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 	{
-		// Check if the trade belongs to our subscription
+		// Verificar se a negociação pertence à nossa assinatura
 		if (subscription != _tickSubscription)
 			return;
 			
-		// Add the trade to TradeGrid in the user interface thread
+		// Adicionar negociação ao TradeGrid na thread da interface
 		this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	}
 	
-	// Method for unsubscribing when the window is closed
+	// Método para cancelar a assinatura quando a janela é fechada
 	public void Unsubscribe()
 	{
 		if (_tickSubscription != null)
@@ -84,20 +84,20 @@ public class MyTradesWindow
 		
 		_connector = connector;
 		
-		// Subscribe to own trade reception event
+		// Assinar evento de recebimento de negociações próprias
 		_connector.OwnTradeReceived += OnOwnTradeReceived;
 		
-		// Create a subscription to transaction data
+		// Criar assinatura de dados transacionais
 		var myTradesSubscription = new Subscription(DataType.Transactions, null);
 		
-		// Start subscription
+		// Iniciar assinatura
 		_connector.Subscribe(myTradesSubscription);
 	}
 	
-	// Handler for own trade reception event
+	// Manipulador do evento de recebimento de negociações próprias
 	private void OnOwnTradeReceived(Subscription subscription, MyTrade myTrade)
 	{
-		// Add own trade to TradeGrid in the user interface thread
+		// Adicionar negociação própria ao TradeGrid na thread da interface
 		this.GuiAsync(() => TradeGrid.Trades.Add(myTrade));
 	}
 }
@@ -106,44 +106,44 @@ public class MyTradesWindow
 ### Obter negócios tick históricos
 
 ```cs
-// Method for getting historical tick trades
+// Método para obter negociações tick históricas
 public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 {
-	// Clear current trades
+	// Limpar negociações atuais
 	TradeGrid.Trades.Clear();
 	
-	// Create a subscription to historical tick trades
+	// Criar assinatura de negociações tick históricas
 	var historySubscription = new Subscription(DataType.Ticks, security)
 	{
 		MarketData =
 		{
-			// Specify time period for historical data
+			// Especificar período para dados históricos
 			From = from,
 			To = to
 		}
 	};
 	
-	// Subscribe to tick trade reception event
+	// Assinar evento de recebimento de negociações tick
 	_connector.TickTradeReceived += OnHistoricalTickReceived;
 	
-	// Start subscription
+	// Iniciar assinatura
 	_connector.Subscribe(historySubscription);
 }
 
-// Handler for historical tick trade reception event
+// Manipulador do evento de recebimento de negociações tick históricas
 private void OnHistoricalTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-	// Add tick to TradeGrid in the user interface thread
+	// Adicionar tick ao TradeGrid na thread da interface
 	this.GuiAsync(() => 
 	{
 		TradeGrid.Trades.Add(tick);
 		
-		// Update statistics
+		// Atualizar estatísticas
 		UpdateTradeStatistics();
 	});
 }
 
-// Method for updating trade statistics
+// Método para atualizar estatísticas de negociações
 private void UpdateTradeStatistics()
 {
 	int totalTrades = TradeGrid.Trades.Count;
@@ -152,7 +152,7 @@ private void UpdateTradeStatistics()
 		? TradeGrid.Trades.Average(t => t.Price)
 		: 0;
 	
-	// Update interface statistics elements
+	// Atualizar elementos de estatísticas da interface
 	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
 	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
 	AveragePriceLabel.Content = $"Average price: {averagePrice:F2}";
@@ -162,29 +162,29 @@ private void UpdateTradeStatistics()
 ### Filtrar negócios por volume
 
 ```cs
-// Method for filtering trades by minimum volume
+// Método para filtrar negociações por volume mínimo
 public void FilterTicksByVolume(decimal minVolume)
 {
-	// Save filter value
+	// Salvar valor do filtro
 	_minVolumeFilter = minVolume;
 	
-	// Update tick trade reception event handler
+	// Atualizar manipulador do evento de recebimento de negociações tick
 	_connector.TickTradeReceived -= OnTickReceived;
 	_connector.TickTradeReceived += OnFilteredTickReceived;
 }
 
-// Handler for tick trade reception event with volume filtering
+// Manipulador do evento de recebimento de negociações tick com filtro de volume
 private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-	// Check if the trade belongs to the selected instrument
+	// Verificar se a negociação pertence ao instrumento selecionado
 	if (tick.SecurityId != _security.ToSecurityId())
 		return;
 		
-	// Apply volume filter
+	// Aplicar filtro de volume
 	if (tick.Volume < _minVolumeFilter)
 		return;
 		
-	// Add the trade to TradeGrid in the user interface thread
+	// Adicionar negociação ao TradeGrid na thread da interface
 	this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	
 	// If it's a large trade, you can highlight it or send a notification
@@ -194,16 +194,16 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 	}
 }
 
-// Method for large trade notification
+// Método para notificação de grande negociação
 private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
-	// Output information about the large trade
+	// Exibir informações sobre a grande negociação
 	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 	
-	// You can add sound or visual notification
+	// É possível adicionar notificação sonora ou visual
 	this.GuiAsync(() => 
 	{
-		// Example of visual highlighting in the list
+		// Exemplo de destaque visual na lista
 		var tradeItem = TradeGrid.Trades.LastOrDefault();
 		if (tradeItem != null)
 		{

@@ -45,21 +45,21 @@ public int Short
 2. При создании индикаторов и подписки на маркет-данные необходимо связать их, чтобы поступающие данные из подписки могли обновлять значения индикаторов:
 
 ```cs
-// ---------- create indicators -----------
+// ---------- создать индикаторы -----------
 
 var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 // ----------------------------------------
 
-// --- bind candles set and indicators ----
+// --- связать набор свечей и индикаторы ----
 
 var subscription = SubscribeCandles(CandleType);
 
 subscription
-	// bind indicators to the candles
+	// связать индикаторы со свечами
 	.Bind(longSma, shortSma, OnProcess)
-	// start processing
+	// запустить обработку
 	.Start();
 ```
 
@@ -83,7 +83,7 @@ if (area != null)
 4. Запустить защиту позиций через [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)), если такое требует логика стратегии:
 
 ```cs
-// start protection by take profit and-or stop loss
+// запустить защиту по take profit и/или stop loss
 StartProtection(TakeValue, StopValue);
 ```
 
@@ -94,11 +94,11 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// in case we subscribed on non finished only candles
+	// если мы подписались только на незавершённые свечи
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// calc new values for short and long
+	// рассчитать новые значения short и long
 	var isShortLessThenLong = shortValue < longValue;
 
 	if (_isShortLessThenLong == null)
@@ -107,17 +107,17 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	}
 	else if (_isShortLessThenLong != isShortLessThenLong)
 	{
-		// crossing happened
+		// произошло пересечение
 
 		// if short less than long, the sale, otherwise buy
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-		// calc size for open position or revert
+		// рассчитать размер для открытия позиции или разворота
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
 		var priceStep = GetSecurity().PriceStep ?? 1;
 
-		// calc order price as a close price + offset
+		// рассчитать цену заявки как цену закрытия + смещение
 		var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
 		if (direction == Sides.Buy)
@@ -125,7 +125,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		else
 			SellLimit(price, volume);
 
-		// store current values for short and long
+		// сохранить текущие значения short и long
 		_isShortLessThenLong = isShortLessThenLong;
 	}
 }

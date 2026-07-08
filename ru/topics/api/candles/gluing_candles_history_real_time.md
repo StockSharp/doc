@@ -169,7 +169,7 @@ using StockSharp.Xaml.Charting;
 using StockSharp.Charting;
 
 /// <summary>
-/// Interaction logic for MainWindow.xaml
+/// Логика взаимодействия для MainWindow.xaml
 /// </summary>
 public partial class MainWindow
 {
@@ -202,7 +202,7 @@ public partial class MainWindow
 			storageRegistry,
 			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
-		// registering all connectors
+		// регистрация всех коннекторов
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
@@ -255,7 +255,7 @@ public partial class MainWindow
 			}
 		};
 
-		//-----------------Chart--------------------------------
+		// -----------------График--------------------------------
 		Chart.ClearAreas();
 
 		var area = new ChartArea();

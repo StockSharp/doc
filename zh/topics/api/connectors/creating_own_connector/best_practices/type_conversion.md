@@ -59,21 +59,21 @@ static class Extensions
 			_ => throw new ArgumentOutOfRangeException(nameof(type), type, LocalizedStrings.InvalidValue),
 		};
 
-	// Other conversion methods...
+	// 其他转换方法...
 
 	// Dictionary for mapping StockSharp timeframes to exchange string representations
 	public static readonly PairSet<TimeSpan, string> TimeFrames = new()
 	{
 		{ TimeSpan.FromMinutes(1), "ONE_MINUTE" },
 		{ TimeSpan.FromMinutes(5), "FIVE_MINUTE" },
-		// Other timeframes...
+		// 其他时间框架...
 	};
 
 	// Converting StockSharp timeframe to exchange string representation
 	public static string ToNative(this TimeSpan timeFrame)
 		=> TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
 
-	// Converting exchange timeframe string representation to TimeSpan
+	// 将交易所时间框架字符串表示转换为 TimeSpan
 	public static TimeSpan ToTimeFrame(this string name)
 		=> TimeFrames.TryGetKey2(name) ?? throw new ArgumentOutOfRangeException(nameof(name), name, LocalizedStrings.InvalidValue);
 }

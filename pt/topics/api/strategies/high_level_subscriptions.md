@@ -19,7 +19,7 @@ Ao contrário da criação manual de um objeto `Subscription` e da chamada a `Su
 Subscreve candles. Aceita um timeframe ou `DataType`:
 
 ```csharp
-// Subscribe by timeframe
+// Assinar por timeframe
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     TimeSpan tf,
     bool isFinishedOnly = true,
@@ -31,7 +31,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     bool isFinishedOnly = true,
     Security security = default);
 
-// Subscribe with a ready-made Subscription object
+// Assinar usando um objeto Subscription pronto
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription);
 ```
 
@@ -92,16 +92,16 @@ handler.Bind(Action<T> callback);
 Associar um manipulador com um ou mais indicadores. O indicador processa automaticamente os dados recebidos e o manipulador recebe o valor já calculado:
 
 ```csharp
-// One indicator -- decimal value
+// Um indicador -- valor decimal
 handler.Bind(IIndicator indicator, Action<T, decimal> callback);
 
-// Two indicators
+// Dois indicadores
 handler.Bind(IIndicator ind1, IIndicator ind2, Action<T, decimal, decimal> callback);
 
-// Up to eight indicators
+// Até oito indicadores
 handler.Bind(ind1, ind2, ind3, ..., callback);
 
-// Array of indicators
+// Array de indicadores
 handler.Bind(IIndicator[] indicators, Action<T, decimal[]> callback);
 ```
 
@@ -166,8 +166,8 @@ public class SmaStrategy : Strategy
 
         var subscription = SubscribeCandles(CandleType);
 
-        // Binding two indicators -- handler is called
-        // when both indicators are formed
+        // Vinculação de dois indicadores -- o manipulador é chamado
+        // quando ambos os indicadores estiverem formados
         subscription
             .Bind(shortSma, longSma, (candle, shortValue, longValue) =>
             {

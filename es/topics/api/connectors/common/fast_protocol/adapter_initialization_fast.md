@@ -7,10 +7,10 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new FastMessageAdapter(Connector.TransactionIdGenerator)
 {
-	// choose required dialect
+	// elegir el dialecto requerido
 	Dialect = typeof(StockSharp.Fix.Dialects.Bovespa.BovespaFastDialect),
 };
-// load all dialect settings from an exchange config file
+// cargar todos los ajustes del dialecto desde el archivo de configuración del exchange
 messageAdapter.DialectSettings.LoadSettingsFromFile(configFile);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...

@@ -35,14 +35,14 @@ El sistema determina el adaptador de destino en el siguiente orden de prioridad:
 ```cs
 var router = connector.Adapter.InnerAdapters;
 
-// Bind instrument to adapter for receiving tick data
+// Vincular el instrumento al adaptador para recibir datos tick
 router.SetSecurityAdapter(
     secId,
     DataType.Ticks,
     binanceAdapter
 );
 
-// Bind portfolio to adapter for transactions
+// Vincular la cartera al adaptador para transacciones
 router.SetPortfolioAdapter(
     "MyPortfolio",
     interactiveBrokersAdapter
@@ -70,7 +70,7 @@ La propiedad `ConnectDisconnectEventOnFirstAdapter` determina cuándo se conside
 - `false` — el evento se dispara solo después de que **todos** los adaptadores se hayan conectado.
 
 ```cs
-// Wait for all adapters to connect
+// Esperar a que todos los adaptadores se conecten
 connector.Adapter.InnerAdapters.ConnectDisconnectEventOnFirstAdapter = false;
 
 connector.Connected += () =>
@@ -92,14 +92,14 @@ Al trabajar con varios adaptadores, una única suscripción puede dividirse en v
 ### Ejemplo multi-bolsa
 
 ```cs
-// Adding adapters
+// Añadir adaptadores
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 connector.Adapter.InnerAdapters.Add(bybitAdapter);
 
 connector.Connect();
 
-// Subscribing to ticks -- will be automatically routed
-// to all adapters supporting the given instrument
+// Suscripción a ticks -- se enrutará automáticamente
+// a todos los adaptadores que admiten el instrumento indicado
 var subscription = new Subscription(DataType.Ticks, security);
 connector.Subscribe(subscription);
 ```
@@ -109,8 +109,8 @@ connector.Subscribe(subscription);
 Si no hay ningún adaptador conectado cuando se envía un mensaje, el mensaje se coloca en una cola pendiente (`IPendingMessageState`). Cuando un adaptador se conecta, todos los mensajes acumulados se envían automáticamente.
 
 ```cs
-// Registering an order before connecting -- the order will be sent
-// automatically after the connection is established
+// Registrar una orden antes de conectar -- la orden se enviará
+// automáticamente después de establecer la conexión
 connector.RegisterOrder(order);
 connector.Connect();
 ```
@@ -120,7 +120,7 @@ connector.Connect();
 ### Configuración programática
 
 ```cs
-// Creating adapters
+// Crear adaptadores
 var binance = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
     Key = "<API_KEY>",
@@ -132,11 +132,11 @@ var ib = new InteractiveBrokersMessageAdapter(connector.TransactionIdGenerator)
     Address = InteractiveBrokersMessageAdapter.DefaultAddress,
 };
 
-// Adding to the basket
+// Añadir a la cesta
 connector.Adapter.InnerAdapters.Add(binance);
 connector.Adapter.InnerAdapters.Add(ib);
 
-// Configuring routing
+// Configurar el enrutamiento
 connector.Adapter.InnerAdapters.SetPortfolioAdapter("BinancePortfolio", binance);
 connector.Adapter.InnerAdapters.SetPortfolioAdapter("IBPortfolio", ib);
 
@@ -152,7 +152,7 @@ Para la configuración visual de conexiones, use el componente de configuración
 El enrutador rastrea automáticamente qué adaptador se usó para registrar cada orden. Al recibir actualizaciones de órdenes (cambios de estado, operaciones), el sistema las enruta a través del mismo adaptador:
 
 ```cs
-// The order will be registered through the adapter bound to the portfolio
+// La orden se registrará a través del adaptador vinculado a la cartera
 var order = new Order
 {
     Security = security,
@@ -164,7 +164,7 @@ var order = new Order
 
 connector.RegisterOrder(order);
 
-// Cancellation will go through the same adapter automatically
+// La cancelación pasará automáticamente por el mismo adaptador
 connector.CancelOrder(order);
 ```
 

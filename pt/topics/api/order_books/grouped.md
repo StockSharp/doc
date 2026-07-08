@@ -12,11 +12,11 @@ Vantagens de um livro de ofertas agrupado:
 Para trabalhar com um livro de ofertas agrupado, é necessário configurar primeiro a receção através de [subscrições](subscriptions.md) e, em seguida, chamar o método de extensão [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)):
 
 ```cs
-// Grouping order book data with a price aggregation step, for example, 0.5 units of price
+// Agrupar dados do livro de ofertas com passo de agregação de preço, por exemplo, 0,5 unidade de preço
 var groupedDepth = orderBook.Group(0.5);
 
-// groupedDepth now contains an order book in which orders are grouped
-// by price levels with the specified aggregation step.
+// groupedDepth agora contém um livro de ofertas no qual as ordens são agrupadas
+// por níveis de preço com o passo de agregação especificado.
 ```
 
 O método [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)) permite agregar ordens no livro em níveis de preço maiores, simplificando a análise visual do mercado e ajudando a identificar os principais níveis de procura e oferta sem necessidade de analisar cada alteração individual de preço.

@@ -40,7 +40,7 @@ type EmptyDiagramElement() as this =
 	// 次のプロパティをコメント解除します。
 	// (すべての入力引数を受信するまで待つ必要はありません)。
 	//
-	// override this.WaitAllInput 
+	// this.WaitAllInput をオーバーライド
 	//     with get () = false
 
 	// 入力ソケットは DiagramExternal 属性でマークされたメソッドパラメーターです。
@@ -110,7 +110,7 @@ let minValueParam =
 コメントアウトされている [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッド呼び出しのタイミングを担います。
 
 ```fsharp
-// override this.WaitAllInput 
+// this.WaitAllInput をオーバーライド
 //     with get () = false
 ```
 

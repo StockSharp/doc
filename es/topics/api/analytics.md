@@ -86,16 +86,16 @@ public class MyAnalyticsScript : IAnalyticsScript
         StorageFormats format, DataType dataType,
         CancellationToken cancellationToken)
     {
-        // create a two-dimensional chart
+        // crear un gráfico bidimensional
         var chart = panel.CreateChart<DateTime, decimal>();
 
         foreach (var secId in securities)
         {
-            // get candle storage
+            // obtener el almacenamiento de velas
             var candleStorage = storage.GetCandleMessageStorage(
                 secId, dataType, drive, format);
 
-            // load data for the period
+            // cargar datos del periodo
             var candles = await candleStorage
                 .LoadAsync(from, to)
                 .WithCancellation(cancellationToken)
@@ -107,7 +107,7 @@ public class MyAnalyticsScript : IAnalyticsScript
                 continue;
             }
 
-            // add series to the chart
+            // añadir una serie al gráfico
             chart.Append(secId.ToString(),
                 candles.Select(c => c.OpenTime.UtcDateTime),
                 candles.Select(c => c.ClosePrice),

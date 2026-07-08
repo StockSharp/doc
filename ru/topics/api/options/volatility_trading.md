@@ -13,26 +13,26 @@
    ```cs
    private void InitConnector()
    {
-   	// subscribe on connection successfully event
+   	// подписаться на событие успешного подключения
    	Connector.Connected += () =>
    	{
-   		// update gui labels
+   		// обновить надписи интерфейса
    		this.GuiAsync(() => ChangeConnectStatus(true));
    	};
-   	// subscribe on disconnection event
+   	// подписаться на событие отключения
    	Connector.Disconnected += () =>
    	{
-   		// update gui labels
+   		// обновить надписи интерфейса
    		this.GuiAsync(() => ChangeConnectStatus(false));
    	};
-   	// subscribe on connection error event
+   	// подписаться на событие ошибки подключения
    	Connector.ConnectionError += error => this.GuiAsync(() =>
    	{
-   		// update gui labels
+   		// обновить надписи интерфейса
    		ChangeConnectStatus(false);
    		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    	});
-   	// fill underlying asset's list
+   	// заполнить список базовых активов
    	Connector.SecurityReceived += (sub, security) =>
    	{
    		if (security.Type == SecurityTypes.Future)
@@ -41,7 +41,7 @@
    		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    			_isDirty = true;
    	};
-   	// subscribing on tick prices and updating asset price
+   	// подписка на тиковые цены и обновление цены актива
    	Connector.TickTradeReceived += (sub, trade) =>
    	{
    		if (_model.UnderlyingAssetId == trade.SecurityId)
@@ -93,7 +93,7 @@
    private void StartClick(object sender, RoutedEventArgs e)
    {
    	var option = SelectedOption;
-   	// create DOM window
+   	// создать окно DOM
    	var wnd = new QuotesWindow { Title = option.Name };
    	// create delta hedge strategy (requires BasketBlackScholes model)
    	var hedge = new DeltaHedgeStrategy(PosChart.Model)
@@ -102,25 +102,25 @@
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// create option quoting for 20 contracts
+   	// создать котирование опциона на 20 контрактов
    	var quoting = new VolatilityQuotingStrategy
    	{
    		QuotingSide = Sides.Buy,
    		QuotingVolume = 20,
    		IVRange = new Range<decimal>((decimal?)ImpliedVolatilityMin.EditValue ?? 0, (decimal?)ImpliedVolatilityMax.EditValue ?? 100),
-   		// working size is 1 contract
+   		// рабочий объём равен 1 контракту
    		Volume = 1,
    		Security = option,
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// link quoting and hedging
+   	// связать котирование и хеджирование
    	hedge.ChildStrategies.Add(quoting);
-   	// start hedging
+   	// запустить хеджирование
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
-   		// force close all strategies while the DOM was closed
+   		// принудительно закрыть все стратегии при закрытии DOM
    		hedge.Stop();
    	};
    	// show DOM

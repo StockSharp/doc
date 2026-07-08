@@ -76,11 +76,11 @@ SubscriptionsOnConnect.Add(OrderLookup);
 Puede agregar sus propias suscripciones que se iniciarán automáticamente en cada conexión:
 
 ```cs
-// Add automatic Level1 data subscription
+// Añadir suscripción automática a datos Level1
 var l1Sub = new Subscription(DataType.Level1, security);
 connector.SubscriptionsOnConnect.Add(l1Sub);
 
-// Remove automatic order lookup on connection
+// Eliminar búsqueda automática de órdenes al conectar
 connector.SubscriptionsOnConnect.Remove(connector.OrderLookup);
 ```
 
@@ -121,7 +121,7 @@ private readonly Connector _connector = new();
 
 public void SetupSubscriptionTracking()
 {
-    // Track subscription lifecycle
+    // Seguir ciclo de vida de la suscripción
     _connector.SubscriptionStarted += subscription =>
     {
         Console.WriteLine($"Subscription started: {subscription.DataType}, " +
@@ -142,7 +142,7 @@ public void SetupSubscriptionTracking()
                 $"Error: {error.Message}");
     };
 
-    // Track individual adapter connections
+    // Seguir conexiones de adaptadores individuales
     _connector.ConnectedEx += adapter =>
     {
         Console.WriteLine($"Adapter connected: {adapter.Name}");
@@ -161,7 +161,7 @@ public void SetupSubscriptionTracking()
     // Connect
     _connector.Connect();
 
-    // After connection -- create a subscription
+    // Después de conectar -- crear suscripción
     _connector.Connected += () =>
     {
         var subscription = new Subscription(DataType.Ticks, security);

@@ -18,24 +18,24 @@
 ```cs
 public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-	// Get the list of instrument types to find
+	// 获取要查找的交易品种类型列表
 	var secTypes = lookupMsg.GetSecurityTypes();
 	
-	// Determine the maximum number of instruments to search for
+	// 确定要搜索的最大交易品种数量
 	var left = lookupMsg.Count ?? long.MaxValue;
 
-	// Iterate over the instrument types supported by the exchange
+	// 遍历交易所支持的交易品种类型
 	foreach (var type in new[] { "SPOT", "FUTURE" })
 	{
-		// Request the list of instruments from the exchange
+		// 从交易所请求交易品种列表
 		var products = await _restClient.GetProducts(type, cancellationToken);
 
 		foreach (var product in products)
 		{
-			// Create the instrument identifier
+			// 创建交易品种标识符
 			var secId = product.ProductId.ToStockSharp();
 
-			// Create a message with instrument information
+			// 创建包含交易品种信息的消息
 			var secMsg = new SecurityMessage
 			{
 				SecurityType = product.ProductType.ToSecurityType(),
@@ -48,20 +48,20 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
 				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-				// you need to fill in the subscription identifier
-				// so that the external code can understand which subscription the data was received for
+				// 需要填写订阅标识符
+				// 以便外部代码理解数据属于哪个订阅
 				OriginalTransactionId = lookupMsg.TransactionId,
 			}
 			.TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
 
-			// Check if the instrument matches the search criteria
+			// 检查交易品种是否符合搜索条件
 			if (!secMsg.IsMatch(lookupMsg, secTypes))
 				continue;
 
-			// Send a message with instrument information
+			// 发送包含交易品种信息的消息
 			await SendOutMessageAsync(secMsg, cancellationToken);
 
-			// Decrease the counter of remaining instruments
+			// 减少剩余交易品种计数器
 			if (--left <= 0)
 				break;
 		}
@@ -70,7 +70,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 			break;
 	}
 
-	// Send a message about the completion of the search
+	// 发送搜索完成消息
 	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```

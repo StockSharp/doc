@@ -56,7 +56,7 @@ decimal? target = GetTargetPosition(security, portfolio);
 // Maximum number of retry attempts on order error (default is 3)
 TargetPositionManager.MaxRetries = 5;
 
-// Tolerance for determining whether the target position is reached
+// 用于判断是否达到目标持仓的容差
 TargetPositionManager.PositionTolerance = 0.01m;
 
 // Order type (default is Market)
@@ -74,7 +74,7 @@ TargetPositionManager.OrderType = OrderTypes.Market;
 `TargetAlgoFactory` 属性允许设置位置变动算法的工厂。默认使用 `MarketOrderAlgo`，它会创建市价单：
 
 ```csharp
-// Use a custom algorithm instead of market orders
+// 使用自定义算法替代市价单
 TargetAlgoFactory = (side, volume) => new MyCustomAlgo(side, volume);
 ```
 
@@ -100,7 +100,7 @@ public class TargetPositionStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Configure the target position manager
+        // 配置目标持仓管理器
         TargetPositionManager.MaxRetries = 5;
         TargetPositionManager.TargetReached += (sec, pf) =>
         {
@@ -121,12 +121,12 @@ public class TargetPositionStrategy : Strategy
 
         if (candle.OpenPrice < candle.ClosePrice)
         {
-            // Bullish candle -- set target position for buying
+            // 看涨蜡烛 -- 设置买入目标持仓
             SetTargetPosition(Volume);
         }
         else if (candle.OpenPrice > candle.ClosePrice)
         {
-            // Bearish candle -- set target position for selling
+            // 看跌蜡烛 -- 设置卖出目标持仓
             SetTargetPosition(-Volume);
         }
     }

@@ -9,15 +9,15 @@
 要使用远程存储，请使用 [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataDrive) 类。
 
 ```cs
-// Creating RemoteMarketDataDrive
+// 创建 RemoteMarketDataDrive
 var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress, new FixMessageAdapter(new IncrementalIdGenerator()))
 {
 	Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
 };
 
-// This code creates an instance of RemoteMarketDataDrive to connect to remote storage.
-// It uses the default address and FixMessageAdapter for communication.
-// Credentials are set for authentication.
+// 此代码创建 RemoteMarketDataDrive 实例以连接远程存储。
+// 它使用默认地址和 FixMessageAdapter 进行通信。
+// 设置凭据用于认证。
 ```
 
 ## 正在加载交易品种信息
@@ -25,7 +25,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 在加载市场数据之前，您需要获取可用工具的信息。
 
 ```cs
-// Loading instrument information
+// 加载交易品种信息
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
@@ -33,8 +33,8 @@ remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Secur
 
 var securities = securityStorage.LookupAll();
 
-// This code loads information about all available instruments from the remote storage.
-// The loaded instruments are saved in local storage and output to the console.
+// 此代码从远程存储加载所有可用交易品种的信息。
+// 加载的交易品种会保存到本地存储并输出到控制台。
 ```
 
 ## 正在加载市场数据
@@ -42,7 +42,7 @@ var securities = securityStorage.LookupAll();
 在获取了交易品种信息后，您可以继续加载市场数据。
 
 ```cs
-// Loading market data
+// 加载市场数据
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
@@ -51,7 +51,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 	// ... (data loading code)
 }
 
-// This loop iterates through all available data types for the specified instrument.
+// 此循环遍历指定交易品种的所有可用数据类型。
 // For each data type, a local storage is created and remote storage is accessed.
 ```
 
@@ -60,7 +60,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 加载的数据可以本地保存以便进一步使用。
 
 ```cs
-// Saving data locally
+// 本地保存数据
 foreach (var dateTime in dates)
 {
 	using (var stream = remoteStorage.LoadStream(dateTime))
@@ -74,7 +74,7 @@ foreach (var dateTime in dates)
 	// ... (data output code)
 }
 
-// This code loads data for each date from the remote storage and saves it to local storage.
+// 此代码从远程存储加载每个日期的数据并保存到本地存储。
 ```
 
 ## 使用数据进行测试
@@ -89,12 +89,12 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 ## 获取可用日期范围
 
 ```cs
-// Working with various data types
+// 处理各种数据类型
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	// ... (data processing code)
 
-	// Error handling and logging
+	// 错误处理和日志记录
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
 	Console.WriteLine($"{dataType}={dateTime}");
 }

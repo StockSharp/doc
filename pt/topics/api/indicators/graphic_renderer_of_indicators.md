@@ -60,7 +60,7 @@ No construtor de [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPainte
 ...
 
 /// <summary>
-/// Create instance.
+/// Criar instância.
 /// </summary>
 public FractalsPainter()
 {
@@ -116,7 +116,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 		Description = LocalizedStrings.Str2038Key)]
 	public ChartLineElement Down { get; }
 	/// <summary>
-	/// Create instance.
+	/// Criar instância.
 	/// </summary>
 	public FractalsPainter()
 	{

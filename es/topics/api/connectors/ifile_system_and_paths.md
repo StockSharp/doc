@@ -52,7 +52,7 @@ Almacenamiento local de datos de mercado en disco:
 using StockSharp.Algo.Storages;
 using StockSharp.Configuration;
 
-// Recommended way -- explicitly passing IFileSystem
+// Forma recomendada -- pasar IFileSystem explícitamente
 var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
 // Deprecated way (uses Paths.FileSystem internally)
@@ -91,16 +91,16 @@ using StockSharp.Configuration;
 
 var fs = Paths.FileSystem;
 
-// Serialize an object to a file
+// Serializar objeto a un archivo
 settings.Serialize(fs, @"C:\config.json");
 
-// Deserialize an object from a file
+// Deserializar objeto desde un archivo
 var loaded = @"C:\config.json".Deserialize<SettingsStorage>(fs);
 
-// Async deserialization
+// Deserialización asíncrona
 var data = await @"C:\data.json".DeserializeAsync<MyData>(fs, cancellationToken);
 
-// Check if a configuration file exists
+// Comprobar si existe un archivo de configuración
 if (@"C:\config.json".IsConfigExists(fs))
 {
     // ...
@@ -146,17 +146,17 @@ using StockSharp.Algo;
 using StockSharp.Algo.Storages;
 using StockSharp.Configuration;
 
-// Get the file system
+// Obtener sistema de archivos
 var fs = Paths.FileSystem;
 
-// Create data storage
+// Crear almacenamiento de datos
 var drive = new LocalMarketDataDrive(fs, Paths.StorageDir);
 
-// Create a connector and configure storage
+// Crear conector y configurar almacenamiento
 var connector = new Connector();
 connector.Adapter.StorageSettings.Drive = drive;
 
-// Load settings from a file
+// Cargar ajustes desde archivo
 var configFile = Path.Combine(Paths.AppDataPath, "connector_config.json");
 
 if (configFile.IsConfigExists(fs))
@@ -171,12 +171,12 @@ if (configFile.IsConfigExists(fs))
 Muchas clases conservan constructores sin `IFileSystem` por compatibilidad hacia atrás, pero están marcados con el atributo `[Obsolete]`. Estos constructores usan `Paths.FileSystem` internamente:
 
 ```csharp
-// Deprecated way
+// Forma obsoleta
 [Obsolete("Use IFileSystem overload.")]
 public LocalMarketDataDrive(string path)
     : this(Paths.FileSystem, path) { }
 
-// Recommended way
+// Forma recomendada
 public LocalMarketDataDrive(IFileSystem fileSystem, string path) { }
 ```
 

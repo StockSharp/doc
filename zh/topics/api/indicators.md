@@ -10,7 +10,7 @@
    var longSma = new SimpleMovingAverage { Length = 80 };
    var shortSma = new SimpleMovingAverage { Length = 30 };
    
-   // It's recommended to add indicators to the strategy collection
+   // 建议将指标添加到策略集合
    Indicators.Add(longSma);
    Indicators.Add(shortSma);
    ```
@@ -20,11 +20,11 @@
    ```cs
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Process the candle with indicators and immediately save the results
+       // 用指标处理 K线并立即保存结果
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
        
-       // Use the results for trading decisions
+       // 将结果用于交易决策
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
            // Buy signal
@@ -40,30 +40,30 @@
 4. **推荐方法**：直接使用从调用 [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) 方法获得的值，而不是随后调用 [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator))：
 
    ```cs
-   // Example of a strategy with two moving averages
+   // 包含两个移动平均的策略示例
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Process the candle with indicators and immediately save the results
+       // 用指标处理 K线并立即保存结果
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
        
-       // Draw on the chart
+       // 在图表上绘制
        DrawCandlesAndIndicators(candle, longValue, shortValue);
        
        if (!IsFormedAndOnlineAndAllowTrading()) 
            return;
            
-       // Use the obtained values for comparison
+       // 使用获得的值进行比较
        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
        
-       // Check if a crossover occurred
+       // 检查是否发生交叉
        if (isShortLessCurrent == isShortLessPrev) 
            return;
        
        var volume = Volume + Math.Abs(Position);
        
-       // Trading actions based on the signal
+       // 基于信号的交易操作
        if (isShortLessCurrent)
            SellMarket(volume);
        else
@@ -79,10 +79,10 @@
 5. 不推荐的方法（效率较低）：
 
    ```cs
-   // Suboptimal approach
+   // 次优方式
    foreach (var candle in candles)
    {
-       // Process the candle but ignore the returned value
+       // 处理 K线但忽略返回值
        _longSma.Process(candle);
        _shortSma.Process(candle);
    }
@@ -119,7 +119,7 @@ public class SmaStrategy : Strategy
 	{
 		base.Name = "SMA strategy";
 
-		// Initialize strategy parameters
+		// 初始化策略参数
 		_longSmaLength = Param(nameof(LongSmaLength), 80);
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30);
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
@@ -129,22 +129,22 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Create indicators
+		// 创建指标
 		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
 		_longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
 
-		// Add indicators to the strategy collection
+		// 将指标添加到策略集合
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
 
-		// Initialize chart
+		// 初始化图表
 		_chart = GetChart();
 		if (_chart != null)
 		{
 			InitChart();
 		}
 		
-		// Subscribe to candles
+		// 订阅 K线
 		var subscription = new Subscription(_series.Value, Security);
 
 		Connector
@@ -157,28 +157,28 @@ public class SmaStrategy : Strategy
 
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Process the candle with indicators and save the results
+		// 用指标处理 K线并保存结果
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 		
-		// Draw on the chart
+		// 在图表上绘制
 		DrawCandlesAndIndicators(candle, longValue, shortValue);
 		
-		// Check conditions for trading
+		// 检查交易条件
 		if (!IsFormedAndOnlineAndAllowTrading()) 
 			return;
 
-		// Compare current and previous indicator values
+		// 比较当前和前一个指标值
 		var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
-		// Check for crossover
+		// 检查是否交叉
 		if (isShortLessCurrent == isShortLessPrev) 
 			return;
 
 		var volume = Volume + Math.Abs(Position);
 
-		// Trading actions based on the signal
+		// 基于信号的交易操作
 		if (isShortLessCurrent)
 			SellMarket(volume);
 		else
@@ -196,7 +196,7 @@ public class SmaStrategy : Strategy
 		_chart.Draw(data);
 	}
 
-	// Other chart initialization methods omitted for brevity
+	// 为简洁起见省略其他图表初始化方法
 }
 ```
 

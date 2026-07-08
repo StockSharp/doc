@@ -37,7 +37,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, calculating distribution of the volume by price levels.
+	/// 按价格档位计算成交量分布的分析脚本。
 	/// </summary>
 	public class PriceVolumeScript : IAnalyticsScript
 	{
@@ -49,13 +49,13 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// script can process only 1 instrument
+			// 脚本只能处理 1 个工具
 			var security = securities.First();
 
-			// get candle storage
+			// 获取 K线存储
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-			// get available dates for the specified period
+			// 获取指定期间内的可用日期
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
@@ -64,12 +64,12 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// grouping candles by middle price
+			// 按中间价对蜡烛分组
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.LowPrice + c.GetLength() / 2)
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
-			// draw on chart
+			// 绘制到图表上
 			panel.CreateChart<decimal, decimal>()
 				.Append(security.ToStringId(), rows.Keys, rows.Values, DrawStyles.Histogram);
 
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# 添加 .NET 引用
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, calculating distribution of the volume by price levels.
+# 按价格档位计算成交量分布的分析脚本。
 class price_volume_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -113,12 +113,12 @@ class price_volume_script(IAnalyticsScript):
 		data_type,
 		cancellation_token
 	):
-		# Check if there are no instruments
+		# 检查是否 没有交易品种
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# Script can process only 1 instrument
+		# 脚本只能处理 1 个工具
 		security = securities[0]
 
 		if data_type is None:
@@ -127,26 +127,26 @@ class price_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# Get candle storage
+		# 获取蜡烛存储
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-		# Get available dates for the specified period
+		# 获取指定期间内的可用日期
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
 			logs.LogWarning("no data")
 			return Task.CompletedTask
 
-		# Grouping candles by middle price and summing their volumes
+		# 按中间价对蜡烛分组并汇总成交量
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows_dict = {}
 		for candle in candles:
-			# Calculate middle price of the candle
+			# 计算蜡烛的中间价
 			key = candle.LowPrice + get_length(candle) / 2
-			# Sum volumes for same price level
+			# 汇总同一价格档位的成交量
 			rows_dict[key] = rows_dict.get(key, 0) + candle.TotalVolume
 
-		# Draw on chart
+		# 绘制到图表上
 		chart = create_chart(panel, float, float)
 		chart.Append(to_string_id(security), list(rows_dict.keys()), list(rows_dict.values()), DrawStyles.Histogram)
 

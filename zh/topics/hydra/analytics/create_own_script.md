@@ -6,7 +6,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, shows chart drawing possibilities.
+	/// 该分析脚本展示图表绘制能力。
 	/// </summary>
 	public class ChartDrawScript : IAnalyticsScript
 	{
@@ -23,14 +23,14 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// 如果用户取消脚本执行，则停止计算
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var candlesSeries = new Dictionary<DateTimeOffset, decimal>();
 				var volsSeries = new Dictionary<DateTimeOffset, decimal>();
 
-				// get candle storage
+				// 获取 K线存储
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 					volsSeries[candle.OpenTime] = candle.TotalVolume;
 				}
 
-				// draw series on chart as line and histogram
+				// 将序列以折线和柱状图绘制到图表上
 				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
 				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}

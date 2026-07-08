@@ -28,7 +28,7 @@ dotnet add package StockSharp.Binance
 Crie um arquivo `CLAUDE.md` (ou `.cursorrules`) na raiz do projeto:
 
 ```markdown
-# Project Rules
+# Regras do projeto
 
 - Framework: StockSharp 5.x, .NET 10
 - Strategies inherit from Strategy class
@@ -137,13 +137,13 @@ public class SmaCrossStrategy : Strategy
         {
             if (fastAbove && !_prevFastAbove)
             {
-                // Fast SMA crossed above slow — buy
+                // A SMA rápida cruzou acima da lenta — comprar
                 if (Position <= 0)
                     RegisterOrder(this.BuyAtMarket(Volume));
             }
             else if (!fastAbove && _prevFastAbove)
             {
-                // Fast SMA crossed below slow — sell
+                // A SMA rápida cruzou abaixo da lenta — vender
                 if (Position >= 0)
                     RegisterOrder(this.SellAtMarket(Volume));
             }
@@ -224,7 +224,7 @@ connector.CandleSeriesProcessing += (series, candle) => { ... };
 
 **Correto** (API atual):
 ```csharp
-// Use subscriptions
+// Usar assinaturas
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security);
 connector.Subscribe(subscription);
 ```

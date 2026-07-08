@@ -21,14 +21,14 @@ Código de exemplo
 	  				
 ```
 ```cs
-// creating a new instance of LogManager
+// criar nova instância de LogManager
 _logManager = new LogManager();
-// adding .NET tracing as a log source.
+// adicionar .NET tracing como fonte de log.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// adding LogControl as a log listener.
+// adicionar LogControl como listener de log.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
-// sending test messages from the TraceSource:
+// enviar mensagens de teste do TraceSource:
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
 Trace.TraceError("Error test message");

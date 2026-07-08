@@ -61,10 +61,10 @@ A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a pr
 ## Exemplo de Utilização
 
 ```cs
-// Creating a manager with a state store
+// Criar gerenciador com armazenamento de estado
 var manager = new SlippageManager(new SlippageManagerState());
 
-// Only account for unfavorable slippage
+// Considerar apenas slippage desfavorável
 manager.CalculateNegative = false;
 
 // Processing market data (updating best prices)
@@ -81,7 +81,7 @@ if (slippage != null)
     Console.WriteLine($"Slippage: {slippage.Value}");
 }
 
-// Total accumulated slippage
+// Slippage acumulado total
 Console.WriteLine($"Total slippage: {manager.Slippage}");
 ```
 

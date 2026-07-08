@@ -88,14 +88,14 @@ var pnlManager = new PnLManager
     UseCandles = true
 };
 
-// Processing messages
+// 处理消息
 var info = pnlManager.ProcessMessage(executionMsg);
 if (info != null)
 {
     Console.WriteLine($"Closed: {info.ClosedVolume}, PnL: {info.PnL}");
 }
 
-// Total profit/loss
+// 总盈亏
 var realizedPnL = pnlManager.RealizedPnL;
 var unrealizedPnL = pnlManager.UnrealizedPnL;
 var totalPnL = realizedPnL + unrealizedPnL;

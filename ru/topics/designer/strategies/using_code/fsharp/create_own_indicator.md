@@ -10,19 +10,19 @@
 
 ```fsharp
 /// <summary>
-/// Sample indicator demonstrating how to save and load parameters.
-/// Changes the input price by +20% or -20%.
+/// Пример индикатора, показывающий, как сохранять и загружать параметры.
+/// Изменяет входную цену на +20% или -20%.
 ///
-/// See more examples:
+/// См. дополнительные примеры:
 /// https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 ///
-/// Documentation:
+/// Документация:
 /// https://doc.stocksharp.com/topics/designer/strategies/using_code/fsharp/create_own_indicator.html
 /// </summary>
 type EmptyIndicator() as this =
 	inherit BaseIndicator()
 
-	// Internal fields
+	// Внутренние поля
 	let mutable changeValue = 20
 	let mutable counter = 0
 	let mutable isFormedValue = false
@@ -42,7 +42,7 @@ type EmptyIndicator() as this =
 	override this.CalcIsFormed() = isFormedValue
 
 	/// <summary>
-	/// Resets the indicator to its initial state.
+	/// Сбрасывает индикатор в исходное состояние.
 	/// </summary>
 	override this.Reset() =
 		base.Reset()
@@ -50,30 +50,30 @@ type EmptyIndicator() as this =
 		counter <- 0
 
 	/// <summary>
-	/// The main logic to process input values.
+	/// Основная логика обработки входных значений.
 	/// </summary>
 	override this.OnProcess(input: IIndicatorValue) : IIndicatorValue =
-		// every 10th call try to return an "empty" value
+		// каждый 10-й вызов пытается вернуть «пустое» значение
 		if RandomGen.GetInt(0, 10) = 0 then
-			// empty value still contains just time, no actual data
+			// пустое значение содержит только время, без фактических данных
 			DecimalIndicatorValue(this, input.Time)
 		else
-			// increment counter on each call
+			// увеличивать счётчик при каждом вызове
 			counter <- counter + 1
 
-			// after 5 inputs, indicator is considered formed
+			// после 5 входных значений индикатор считается сформированным
 			if counter = 5 then
 				isFormedValue <- true
 
 			let mutable value = input.ToDecimal()
 
-			// random change by a factor of +/- Change%
+			// случайно изменить на +/- Change%
 			let randomFactor = decimal (RandomGen.GetInt(-changeValue, changeValue)) / 100m
 			value <- value + (value * randomFactor)
 
 			// return final indicator value
 			let result = DecimalIndicatorValue(this, value, input.Time)
-			// randomly mark it as final or not
+			// случайно пометить значение как финальное или нет
 			result.IsFinal <- RandomGen.GetBool()
 			result
 

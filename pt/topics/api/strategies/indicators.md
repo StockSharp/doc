@@ -7,7 +7,7 @@ Em StockSharp, a classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) for
 A propriedade [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) é uma coleção de indicadores usados na estratégia. Esta coleção foi concebida para acompanhar automaticamente o estado de formação dos indicadores (warm-up).
 
 ```cs
-// Accessing the indicators collection
+// Acesso à coleção de indicadores
 INotifyList<IIndicator> indicators = strategy.Indicators;
 ```
 
@@ -16,7 +16,7 @@ INotifyList<IIndicator> indicators = strategy.Indicators;
 Por defeito, a implementação da propriedade [Strategy.IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) verifica se todos os indicadores na coleção [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) estão formados:
 
 ```cs
-// Standard implementation in the Strategy class
+// Implementação padrão na classe Strategy
 public virtual bool IsFormed => _indicators.AllFormed;
 ```
 
@@ -31,11 +31,11 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Creating indicators
+	// Criar indicadores
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 	
-	// Adding indicators to the collection
+	// Adicionando indicadores à coleção
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
@@ -52,7 +52,7 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
 1. **Indicadores Independentes** - adicione indicadores que processam diretamente dados de mercado (candles, ticks, etc.):
 
    ```cs
-   // Independent indicators
+   // Indicadores independentes
    var sma = new SimpleMovingAverage { Length = 20 };
    var rsi = new RelativeStrengthIndex { Length = 14 };
    
@@ -63,7 +63,7 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
 2. **Cadeias de Indicadores** - ao usar uma cadeia de indicadores (em que a saída de um é a entrada de outro), adicione à coleção apenas o **primeiro indicador da cadeia**:
 
    ```cs
-   // Indicator chain
+   // Cadeia de indicadores
    var sma = new SimpleMovingAverage { Length = 20 };
    var stdev = new StandardDeviation { Length = 20 };
    var bollingerBands = new BollingerBands 
@@ -72,9 +72,9 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
        DeviationIndicator = stdev
    };
    
-   // Add only the first indicator in the chain
+   // Adicione apenas o primeiro indicador da cadeia
    Indicators.Add(sma);
-   // DO NOT add indicators dependent on other indicators
+   // NÃO adicione indicadores dependentes de outros indicadores
    // Indicators.Add(stdev); - incorrect
    // Indicators.Add(bollingerBands); - incorrect
    ```
@@ -92,7 +92,7 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
        SignalEma = signalEma
    };
    
-   // Add base indicators
+   // Adicione indicadores base
    Indicators.Add(fastEma);
    Indicators.Add(slowEma);
    ```
@@ -116,7 +116,7 @@ public class SmaStrategy : Strategy
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 		
-		// Add indicators to the collection to track their state
+		// Adicione indicadores à coleção para acompanhar seu estado
 		Indicators.Add(_longSma);
 		Indicators.Add(_shortSma);
 		
@@ -125,15 +125,15 @@ public class SmaStrategy : Strategy
 	
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Process indicators
+		// Processar indicadores
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 		
-		// Check if the strategy is ready before executing trading logic
+		// Verificar se a estratégia está pronta antes de executar a lógica de negociação
 		if (!IsFormed)
 			return;
 			
-		// Trading logic
+		// Lógica de negociação
 		// ...
 	}
 }
@@ -146,15 +146,15 @@ Para verificar se a estratégia está pronta para negociação, é frequentement
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Process indicators
+	// Processar indicadores
 	var longValue = _longSma.Process(candle);
 	var shortValue = _shortSma.Process(candle);
 	
-	// Comprehensive check of strategy readiness
+	// Verificação completa da prontidão da estratégia
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 		
-	// Trading logic
+	// Lógica de negociação
 	// ...
 }
 ```
@@ -175,7 +175,7 @@ public class ComplexStrategy : Strategy
 	{
 		base.OnStarted2(time);
 		
-		// Create indicators
+		// Criar indicadores
 		_sma = new SimpleMovingAverage { Length = 20 };
 		_rsi = new RelativeStrengthIndex { Length = 14 };
 		
@@ -186,10 +186,10 @@ public class ComplexStrategy : Strategy
 			DeviationIndicator = _stdev 
 		};
 		
-		// Add only independent indicators
+		// Adicione apenas indicadores independentes
 		Indicators.Add(_sma);
 		Indicators.Add(_rsi);
-		// Do not add _stdev and _bollinger as they depend on _sma
+		// Não adicione _stdev e _bollinger, pois dependem de _sma
 		
 		// ...
 	}
@@ -207,11 +207,11 @@ public override bool IsFormed
 {
 	get
 	{
-		// Standard indicator check
+		// Verificação padrão do indicador
 		if (!base.IsFormed)
 			return false;
 			
-		// Additional strategy readiness conditions
+		// Condições adicionais de prontidão da estratégia
 		return _customCondition && _additionalCheck;
 	}
 }

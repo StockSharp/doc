@@ -63,7 +63,7 @@
 1. 创建 [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) 日志记录器：
 
    ```cs
-    // each strategy will have their own windows
+    // 每个策略都有自己的窗口
    var guiListener = new GuiLogListener();
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);

@@ -31,7 +31,7 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
-	// Coinbase only supports 5-minute candles for updating via websockets
+	// Coinbase só suporta velas de 5 minutos para atualização via WebSocket
 	// Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
 	return subscription.DataType2 == _tf5min;
 }
@@ -46,7 +46,7 @@ Para assinar dados de candles, o método **OnTFCandlesSubscriptionAsync** é imp
 ```cs
 protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// Enviar confirmação de recebimento da solicitação de assinatura
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -66,7 +66,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 			while (from < to)
 			{
-				// Request historical candles
+				// Solicitar velas históricas
 				var candles = await _restClient.GetCandles(symbol, from, from + step, granularity, cancellationToken);
 				var needBreak = true;
 				var last = from;
@@ -86,7 +86,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 						break;
 					}
 
-					// Send information about each historical candle
+					// Enviar informações sobre cada vela histórica
 					await SendOutMessageAsync(new TimeFrameCandleMessage
 					{
 						OpenPrice = (decimal)candle.Open,
@@ -97,7 +97,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 						OpenTime = candle.Time,
 						State = CandleStates.Finished,
 
-						// In case of identifying data by subscription, filling instrument information is not required
+						// Ao identificar dados pela assinatura, não é necessário preencher as informações do instrumento
 						OriginalTransactionId = mdMsg.TransactionId,
 					}, cancellationToken);
 
@@ -120,11 +120,11 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 		if (!mdMsg.IsHistoryOnly() && mdMsg.DataType2 == _tf5min)
 		{
-			// Subscribe to receive new candles in real time
+			// Assinar recebimento de novas velas em tempo real
 			_candlesTransIds[symbol] = mdMsg.TransactionId;
 			await _socketClient.SubscribeCandles(symbol, cancellationToken);
 
-			// Notify that the subscription has transitioned to online status
+			// Notificar que a assinatura passou para o status online
 			await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 		}
 		else
@@ -135,7 +135,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	}
 	else
 	{
-		// Unsubscribe from receiving candles
+		// Cancelar recebimento de velas
 		_candlesTransIds.Remove(symbol);
 		await _socketClient.UnSubscribeCandles(symbol, cancellationToken);
 	}
@@ -149,11 +149,11 @@ Para processar dados de candles recebidos da exchange em tempo real, um método 
 ```cs
 private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken cancellationToken)
 {
-	// Check if there is an active subscription to candles for this instrument
+	// Verificar se há uma assinatura ativa de velas para este instrumento
 	if (!_candlesTransIds.TryGetValue(candle.Symbol, out var transId))
 		return;
 
-	// Create and send a message about a new candle
+	// Criar e enviar mensagem sobre uma nova vela
 	await SendOutMessageAsync(new TimeFrameCandleMessage
 	{
 		OpenPrice = (decimal)candle.Open,
@@ -164,7 +164,7 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 		OpenTime = candle.Time,
 		State = CandleStates.Active,  // The candle is considered active as it may still change
 
-		// In case of identifying data by subscription, filling instrument information is not required
+		// Ao identificar dados pela assinatura, não é necessário preencher as informações do instrumento
 		OriginalTransactionId = transId,
 	}, cancellationToken);
 }
@@ -179,27 +179,27 @@ Para assinar mudanças de Nível 1, o método **OnLevel1SubscriptionAsync** é i
 ```cs
 protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
-	// This informs the system that the request has been received and is being processed
+	// Enviar confirmação de recebimento da solicitação de assinatura
+	// Isso informa ao sistema que a solicitação foi recebida e está sendo processada
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a symbol understood by the exchange
+	// Converter o identificador do instrumento em um símbolo compreendido pela exchange
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
 	{
 		// If this is a subscription request
-		// Subscribe to receive Level 1 data via WebSocket
+		// Assinar recebimento de dados Level1 via WebSocket
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
-		// Send a message about successful subscription
-		// This informs the system that the subscription is set up and data will be received
+		// Enviar mensagem de assinatura bem-sucedida
+		// Isso informa ao sistema que a assinatura foi configurada e os dados serão recebidos
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
 		// If this is an unsubscription request
-		// Cancel the subscription to receive Level 1 data
+		// Cancelar assinatura de recebimento de dados Level1
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
 }
@@ -212,15 +212,15 @@ Para processar dados de Nível 1 recebidos da exchange em tempo real, um método
 ```cs
 private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken cancellationToken)
 {
-	// Create a message with Level 1 data changes
+	// Criar mensagem com alterações de dados Level1
 	await SendOutMessageAsync(new Level1ChangeMessage
 	{
-		// Specify the instrument identifier
+		// Especificar identificador do instrumento
 		SecurityId = ticker.Product.ToStockSharp(),
-		// Set the time of receiving data
+		// Definir hora de recebimento dos dados
 		ServerTime = CurrentTime.ConvertToUtc(),
 	}
-	// Add various Level 1 fields if they are present in the data from the exchange
+	// Adicionar vários campos Level1 se estiverem presentes nos dados da exchange
 	.TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
 	.TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
 	.TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
@@ -258,25 +258,25 @@ Para assinar mudanças do livro de ofertas, o método **OnMarketDepthSubscriptio
 ```cs
 protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// Enviar confirmação de recebimento da solicitação de assinatura
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a symbol understood by the exchange
+	// Converter o identificador do instrumento em um símbolo compreendido pela exchange
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
 	{
 		// If this is a subscription request
-		// Subscribe to receive order book data via WebSocket
+		// Assinar recebimento de dados do livro de ofertas via WebSocket
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
-		// Send a message about successful subscription
+		// Enviar mensagem de assinatura bem-sucedida
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
 		// If this is an unsubscription request
-		// Cancel the subscription to receive order book data
+		// Cancelar assinatura de recebimento de dados do livro de ofertas
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
 }
@@ -292,7 +292,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 	var bids = new List<QuoteChange>();
 	var asks = new List<QuoteChange>();
 
-	// Distribute changes by bids and asks
+	// Distribuir alterações por bids e asks
 	foreach (var change in changes)
 	{
 		var side = change.Side.ToSide();
@@ -300,7 +300,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		quotes.Add(new((decimal)change.Price, (decimal)change.Size));
 	}
 
-	// Create and send a message with changes in the order book
+	// Criar e enviar mensagem com alterações no livro de ofertas
 	await SendOutMessageAsync(new QuoteChangeMessage
 	{
 		SecurityId = symbol.ToStockSharp(),
@@ -308,9 +308,9 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		Asks = asks.ToArray(),
 		ServerTime = CurrentTime.ConvertToUtc(),
 
-		// Determine if this is a full order book snapshot or an incremental update.
+		// Determinar se é um snapshot completo do livro de ofertas ou uma atualização incremental.
 		// If the exchange always sends only full order books and does not support incrementality,
-		// then setting this property is not required at all
+		// então não é necessário definir esta propriedade
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
 }
@@ -325,7 +325,7 @@ Para assinar dados de ticks, o método **OnTicksSubscriptionAsync** é implement
 ```cs
 protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// Enviar confirmação de recebimento da solicitação de assinatura
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
 	var symbol = mdMsg.SecurityId.ToSymbol();
@@ -341,7 +341,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 			while (from < to)
 			{
-				// Request historical trades
+				// Solicitar negociações históricas
 				var trades = await _restClient.GetTrades(symbol, from, to, cancellationToken);
 				var needBreak = true;
 				var last = from;
@@ -361,10 +361,10 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						break;
 					}
 
-					// Send information about each historical trade
+					// Enviar informações sobre cada negociação histórica
 					await SendOutMessageAsync(new ExecutionMessage
 					{
-						// Set that the message carries information about a tick trade
+						// Definir que a mensagem contém informações sobre uma negociação tick
 						// (not a transaction like an order or own trade)
 						DataTypeEx = DataType.Ticks,
 
@@ -375,8 +375,8 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						OriginSide = trade.Side.ToSide(),
 
 						// For history, always set the subscription identifier,
-						// so that the external code can understand which subscription the data was received for.
-						// In case of identifying data by subscription, filling instrument information is not required
+						// para que o código externo entenda para qual assinatura os dados foram recebidos.
+						// Ao identificar dados pela assinatura, não é necessário preencher as informações do instrumento
 						OriginalTransactionId = mdMsg.TransactionId,
 					}, cancellationToken);
 
@@ -399,16 +399,16 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Subscribe to receive new trades in real time
+			// Assinar recebimento de novas negociações em tempo real
 			await _socketClient.SubscribeTrades(symbol, cancellationToken);
 		}
 
-		// Send a message about successful subscription
+		// Enviar mensagem de assinatura bem-sucedida
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
 	{
-		// Unsubscribe from receiving trades in real time
+		// Cancelar recebimento de negociações em tempo real
 		await _socketClient.UnSubscribeTrades(symbol, cancellationToken);
 	}
 }
@@ -421,10 +421,10 @@ Para processar dados de ticks recebidos da exchange em tempo real, um método co
 ```cs
 private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
 {
-	// Create and send a message about a new trade
+	// Criar e enviar mensagem sobre uma nova negociação
 	await SendOutMessageAsync(new ExecutionMessage
 	{
-		// Set that the message carries information about a tick trade
+		// Definir que a mensagem contém informações sobre uma negociação tick
 		// (not a transaction like an order or own trade)
 		DataTypeEx = DataType.Ticks,
 
@@ -449,25 +449,25 @@ Abaixo está um exemplo de implementação desse método retirado do conector [B
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the subscription request
+	// Enviar confirmação de recebimento da solicitação de assinatura
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convert the instrument identifier to a currency pair
+	// Converter identificador do instrumento em par de moedas
 	var symbol = mdMsg.SecurityId.ToCurrency();
 
 	if (mdMsg.IsSubscribe)
 	{
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Subscribe to receive order log in real time
+			// Assinar recebimento do log de ordens em tempo real
 			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
 		}
 
-		// Send a message about successful subscription
+		// Enviar mensagem de assinatura bem-sucedida
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
-		// Unsubscribe from receiving order log
+		// Cancelar recebimento do log de ordens
 		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
@@ -477,7 +477,7 @@ Ao processar dados de order log recebidos da exchange, um método separado geral
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
 {
-	// Create and send a message with information about a new entry in the order log
+	// Criar e enviar mensagem com informações sobre uma nova entrada no log de ordens
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,

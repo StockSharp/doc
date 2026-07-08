@@ -42,8 +42,8 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, calculating distribution of the biggest volume by hours
-	/// and shows its in 3D chart.
+	/// Аналитический скрипт рассчитывает распределение максимального объёма по часам
+	/// и показывает его на 3D-графике.
 	/// </summary>
 	public class Chart3DScript : IAnalyticsScript
 	{
@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 			var x = new List<string>();
 			var y = new List<string>();
 
-			// fill Y labels
+			// заполнить подписи Y
 			for (var h = 0; h < 24; h++)
 				y.Add(h.ToString());
 
@@ -66,19 +66,19 @@ namespace StockSharp.Algo.Analytics
 
 			for (var i = 0; i < securities.Length; i++)
 			{
-				// stop calculation if user cancel script execution
+				// остановить расчёт, если пользователь отменил выполнение скрипта
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
 				var security = securities[i];
 
-				// fill X labels
+				// заполнить подписи X
 				x.Add(security.ToStringId());
 
-				// get candle storage
+				// получение хранилища свечей
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-				// get available dates for the specified period
+				// получить доступные даты за указанный период
 				var dates = candleStorage.GetDates(from, to).ToArray();
 
 				if (dates.Length == 0)
@@ -92,7 +92,7 @@ namespace StockSharp.Algo.Analytics
 					.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 					.ToDictionary(g => g.Key.Hours, g => g.Sum(c => c.TotalVolume));
 
-				// fill Z values
+				// заполнить значения Z
 				foreach (var pair in byHours)
 					z[i, pair.Key] = (double)pair.Value;
 			}
@@ -111,7 +111,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -124,7 +124,7 @@ from candle_extensions import *
 from chart_extensions import *
 from numpy_extensions import nx
 
-# The analytic script, calculating distribution of the biggest volume by hours and shows its in 3D chart.
+# Аналитический скрипт рассчитывает распределение максимального объёма по часам и показывает его на 3D-графике.
 class chart3d_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -139,7 +139,7 @@ class chart3d_script(IAnalyticsScript):
 		data_type,
 		cancellation_token
 	):
-		# Check if there are no instruments
+		# Проверить, что инструменты отсутствуют
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
@@ -147,7 +147,7 @@ class chart3d_script(IAnalyticsScript):
 		x = []  # X labels for instruments
 		y = []  # Y labels for hours
 
-		# Fill Y labels with hours 0 to 23
+		# Заполнить подписи Y часами от 0 до 23
 		for h in range(24):
 			y.append(str(h))
 
@@ -161,17 +161,17 @@ class chart3d_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for i, security in enumerate(securities):
-			# Stop calculation if user cancels script execution
+			# Остановить расчёт, если пользователь отменил выполнение скрипта
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# Fill X labels with security identifiers
+			# Заполнить подписи X идентификаторами инструментов
 			x.append(to_string_id(security))
 
-			# Get candle storage for current security
+			# Получить хранилище свечей для текущего инструмента
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-			# Get available dates for the specified period
+			# Получить доступные даты за указанный период
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
@@ -185,12 +185,12 @@ class chart3d_script(IAnalyticsScript):
 				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
 				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
 
-			# Fill Z values for current security
+			# Заполнить значения Z для текущего инструмента
 			for hour, volume in by_hours.items():
 				if hour < len(y):
 					z[i][hour] = float(volume)
 
-		# Draw the 3D chart using panel
+		# Нарисовать 3D-график с использованием панели
 		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
 
 		return Task.CompletedTask

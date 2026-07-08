@@ -36,19 +36,19 @@ private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
 // Подписываемся на события коннектора
 _emuConnector.Connected += () =>
 {
-	// update gui labels
+	// обновить надписи интерфейса
 	this.GuiAsync(() => { ChangeConnectStatus(true); });
 };
 
 _emuConnector.Disconnected += () =>
 {
-	// update gui labels
+	// обновить надписи интерфейса
 	this.GuiAsync(() => { ChangeConnectStatus(false); });
 };
 
 _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
-	// update gui labels
+	// обновить надписи интерфейса
 	ChangeConnectStatus(false);
 	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 });

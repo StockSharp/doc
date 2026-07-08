@@ -44,14 +44,14 @@ Da mesma forma, você pode adicionar conexões diretamente pelo código (sem jan
 
 ```cs
 ...
-// Add adapter for connecting to Binance
+// Adicionar adaptador para conectar à Binance
 connector.AddAdapter<BinanceMessageAdapter>(a =>
 {
 	a.Key = "<Your API Key>";
 	a.Secret = "<Your Secret Key>";
 });
 
-// Add RSS for news
+// Adicionar RSS para notícias
 connector.AddAdapter<RssMessageAdapter>(a =>
 {
 	a.Address = "https://news-source.com/feed";
@@ -66,32 +66,32 @@ No método *InitConnector*, definimos os manipuladores de eventos necessários p
 ```cs
 private void InitConnector()
 {
-	// Subscribe to successful connection event
+	// Assinar evento de conexão bem-sucedida
 	Connector.Connected += () =>
 	{
 		this.GuiAsync(() => ChangeConnectStatus(true));
 	};
 
-	// Subscribe to connection error event
+	// Assinar evento de erro de conexão
 	Connector.ConnectionError += error => this.GuiAsync(() =>
 	{
 		ChangeConnectStatus(false);
 		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 	});
 
-	// Subscribe to disconnection event
+	// Assinar evento de desconexão
 	Connector.Disconnected += () => this.GuiAsync(() => ChangeConnectStatus(false));
 
-	// Subscribe to error event
+	// Assinar evento de erro
 	Connector.Error += error =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2955));
 
-	// Subscribe to market data subscription failure event
+	// Assinar evento de falha na assinatura de dados de mercado
 	Connector.SubscriptionFailed += (subscription, error, isSubscribe) =>
 		this.GuiAsync(() => MessageBox.Show(this, error.ToString(),
 			LocalizedStrings.Str2956Params.Put(subscription.DataType, subscription.SecurityId)));
 
-	// Subscriptions for data reception
+	// Assinaturas para recebimento de dados
 
 	// Instruments
 	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
@@ -108,13 +108,13 @@ private void InitConnector()
 	// Positions
 	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
-	// Order registration failures
+	// Falhas no registro de ordens
 	Connector.OrderRegisterFailReceived += (sub, fail) => _ordersWindow.OrderGrid.AddRegistrationFail(fail);
 
-	// Order cancellation failures
+	// Falhas no cancelamento de ordens
 	Connector.OrderCancelFailReceived += (sub, fail) => OrderFailed(fail);
 
-	// Set market data provider
+	// Definir provedor de dados de mercado
 	_securitiesWindow.SecurityPicker.MarketDataProvider = Connector;
 
 	try
@@ -133,7 +133,7 @@ private void InitConnector()
 
 	ConfigManager.RegisterService<IExchangeInfoProvider>(new InMemoryExchangeInfoProvider());
 
-	// Register adapter provider for graphical configuration
+	// Registrar provedor de adaptadores para configuração gráfica
 	ConfigManager.RegisterService<IMessageAdapterProvider>(
 		new InMemoryMessageAdapterProvider(Connector.Adapter.InnerAdapters));
 }

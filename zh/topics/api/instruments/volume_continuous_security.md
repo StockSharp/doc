@@ -25,10 +25,10 @@ public class VolumeContinuousSecurity : ContinuousSecurity
     // List of inner securities (contracts), ordered by rollover sequence
     public SynchronizedList<SecurityId> InnerSecurities { get; }
 
-    // Use open interest instead of volume for rollover determination
+    // 使用 open interest 而不是成交量来确定 rollover
     public bool IsOpenInterest { get; set; }
 
-    // Volume threshold at which switching to the next contract occurs
+    // 切换到下一合约的成交量阈值
     public Unit VolumeLevel { get; set; }
 }
 ```
@@ -41,14 +41,14 @@ public class VolumeContinuousSecurity : ContinuousSecurity
 using StockSharp.Algo;
 using StockSharp.Messages;
 
-// Create a volume-based continuous futures
+// 创建基于成交量的连续期货
 var continuous = new VolumeContinuousSecurity
 {
     Id = "ES-CONT@CME",
     Board = ExchangeBoard.Cme,
 };
 
-// Add contracts in rollover order
+// 按 rollover 顺序添加合约
 continuous.InnerSecurities.AddRange(new[]
 {
     "ES-3.26@CME".ToSecurityId(),
@@ -56,10 +56,10 @@ continuous.InnerSecurities.AddRange(new[]
     "ES-9.26@CME".ToSecurityId(),
 });
 
-// Set volume threshold for switching
+// 设置切换成交量阈值
 continuous.VolumeLevel = new Unit(10000);
 
-// Or use open interest
+// 或使用 open interest
 continuous.IsOpenInterest = true;
 continuous.VolumeLevel = new Unit(50000);
 ```
@@ -70,14 +70,14 @@ continuous.VolumeLevel = new Unit(50000);
 using StockSharp.Algo;
 using StockSharp.Messages;
 
-// Expiration-based continuous futures
+// 基于到期日的连续期货
 var expContinuous = new ExpirationContinuousSecurity
 {
     Id = "ES-CONT-EXP@CME",
     Board = ExchangeBoard.Cme,
 };
 
-// Specify exact transition dates for each contract
+// 为每个合约指定准确切换日期
 expContinuous.ExpirationJumps.Add(
     "ES-3.26@CME".ToSecurityId(),
     new DateTime(2026, 3, 15)

@@ -40,7 +40,7 @@ type EmptyDiagramElement() as this =
 	// jedes Mal aufgerufen werden soll, wenn ein neues Argument empfangen wird
 	// (es muss nicht gewartet werden, bis alle Eingabeargumente empfangen wurden).
 	//
-	// override this.WaitAllInput
+	// this.WaitAllInput überschreiben
 	//     with get () = false
 
 	// Eingabesockets sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind
@@ -110,7 +110,7 @@ Die Eigenschaft **MinValue** ist als basic markiert und wird im Modus [Basic pro
 Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) ist für den Zeitpunkt des Methodenaufrufs mit eingehenden Sockets zuständig:
 
 ```fsharp
-// override this.WaitAllInput
+// this.WaitAllInput überschreiben
 //     with get () = false
 ```
 

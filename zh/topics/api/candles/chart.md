@@ -13,22 +13,22 @@
 private ChartArea _areaComb;
 private ChartCandleElement _candleElement;
 
-// Chart initialization
+// 图表初始化
 private void InitializeChart()
 {
-	// Create chart area
+	// 创建图表区域
 	_areaComb = new ChartArea();
 	_chart.Areas.Add(_areaComb);
 	
-	// Create chart element representing candles
+	// 创建表示 K线的图表元素
 	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
 	_areaComb.Elements.Add(_candleElement);
 	
-	// Subscribe to candle reception event
+	// 订阅 K线接收事件
 	_connector.CandleReceived += OnCandleReceived;
 }
 
-// Create subscription to 5-minute candles
+// 创建 5 分钟 K线订阅
 private void SubscribeToCandles()
 {
 	var subscription = new Subscription(
@@ -37,27 +37,27 @@ private void SubscribeToCandles()
 	{
 		MarketData = 
 		{
-			// Request historical data for 5 days
+			// 请求 5 天的历史数据
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(5)),
 			To = DateTime.Now
 		}
 	};
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(subscription);
 }
 
-// Handler for candle reception event
+// K线接收事件处理器
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle is completed
+	// 检查 K线是否已完成
 	if (candle.State == CandleStates.Finished) 
 	{
-		// Create data for drawing
+		// 创建绘制数据
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 		
-		// Draw on chart in UI thread
+		// 在 UI 线程中绘制到图表
 		this.GuiAsync(() => _chart.Draw(chartData));
 	}
 }
@@ -68,17 +68,17 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 第二种方式是将订阅自动绑定到图表元素，从而自动显示接收到的数据：
 
 ```cs
-// Chart initialization with automatic binding
+// 带自动绑定的图表初始化
 private void InitializeChartWithAutoBinding()
 {
-	// Create chart area
+	// 创建图表区域
 	var area = new ChartArea();
 	_chart.Areas.Add(area);
 	
-	// Create element for displaying candles
+	// 创建用于显示 K线的元素
 	var candleElement = new ChartCandleElement();
 	
-	// Create subscription to candles
+	// 创建 K线订阅
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security)
@@ -90,10 +90,10 @@ private void InitializeChartWithAutoBinding()
 		}
 	};
 	
-	// Bind element to subscription
+	// 将元素绑定到订阅
 	_chart.AddElement(area, candleElement, subscription);
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(subscription);
 }
 ```
@@ -103,29 +103,29 @@ private void InitializeChartWithAutoBinding()
 要在图表中同时显示K线和指标，请使用 [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) 类型的元素：
 
 ```cs
-// Adding indicator to chart
+// 向图表添加指标
 private void AddIndicatorToChart()
 {
-	// Create element for indicator
+	// 为指标创建元素
 	var smaElement = new ChartIndicatorElement
 	{
 		Title = "SMA (14)",
 		Color = Colors.Red
 	};
 	
-	// Add element to the same area as candles
+	// 将元素添加到与 K线相同的区域
 	_areaComb.Elements.Add(smaElement);
 	
-	// Create indicator
+	// 创建指标
 	var sma = new SimpleMovingAverage { Length = 14 };
 	
-	// Subscribe to candle reception event for indicator calculation
+	// 订阅 K线接收事件以计算指标
 	_connector.CandleReceived += (subscription, candle) =>
 	{
-		// Calculate indicator value
+		// 计算指标值
 		var indicatorValue = sma.Process(candle);
 		
-		// Draw value on chart
+		// 在图表上绘制值
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(smaElement, indicatorValue);
 		
@@ -139,42 +139,42 @@ private void AddIndicatorToChart()
 可以将指标放置到不同的独立图表区域中：
 
 ```cs
-// Adding indicators to different areas
+// 向不同区域添加指标
 private void AddIndicatorsToSeparateAreas()
 {
-	// Main area for candles
+	// K线的主区域
 	var candleArea = new ChartArea();
 	_chart.Areas.Add(candleArea);
 	
-	// Element for candles
+	// K线元素
 	var candleElement = new ChartCandleElement();
 	candleArea.Elements.Add(candleElement);
 	
-	// Element for SMA on the same area
+	// 同一区域中的 SMA 元素
 	var smaElement = new ChartIndicatorElement { Title = "SMA (14)" };
 	candleArea.Elements.Add(smaElement);
 	
-	// Separate area for RSI
+	// RSI 的单独区域
 	var rsiArea = new ChartArea();
 	_chart.Areas.Add(rsiArea);
 	
-	// Element for RSI
+	// RSI 元素
 	var rsiElement = new ChartIndicatorElement { Title = "RSI (14)" };
 	rsiArea.Elements.Add(rsiElement);
 	
-	// Create indicators
+	// 创建指标
 	var sma = new SimpleMovingAverage { Length = 14 };
 	var rsi = new RelativeStrengthIndex { Length = 14 };
 	
-	// Subscription to candles
+	// K线订阅
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security);
 	
-	// Bind candle element to subscription
+	// 将 K线元素绑定到订阅
 	_chart.AddElement(candleArea, candleElement, subscription);
 	
-	// Start subscription and process indicators
+	// 启动订阅并处理指标
 	_connector.Subscribe(subscription);
 	
 	_connector.CandleReceived += (sub, candle) =>
@@ -182,11 +182,11 @@ private void AddIndicatorsToSeparateAreas()
 		if (sub != subscription || candle.State != CandleStates.Finished)
 			return;
 		
-		// Calculate indicator values
+		// 计算指标值
 		var smaValue = sma.Process(candle);
 		var rsiValue = rsi.Process(candle);
 		
-		// Draw values on chart
+		// 在图表上绘制值
 		var chartData = new ChartDrawData();
 		chartData
 			.Group(candle.OpenTime)
@@ -203,24 +203,24 @@ private void AddIndicatorsToSeparateAreas()
 使用专用元素在图表上显示订单和成交：
 
 ```cs
-// Adding elements for displaying orders and trades
+// 添加用于显示订单和成交的元素
 private void AddOrdersAndTradesToChart()
 {
-	// Create elements for displaying orders and trades
+	// 创建用于显示订单和成交的元素
 	var orderElement = new ChartOrderElement();
 	var tradeElement = new ChartTradeElement();
 	
-	// Add elements to chart area
+	// 向图表区域添加元素
 	_areaComb.Elements.Add(orderElement);
 	_areaComb.Elements.Add(tradeElement);
 	
-	// Subscribe to order and trade reception events
+	// 订阅订单和成交接收事件
 	_connector.OrderReceived += (subscription, order) =>
 	{
 		if (order.Security != _security)
 			return;
 		
-		// Draw order on chart
+		// 在图表上绘制订单
 		var chartData = new ChartDrawData();
 		chartData.Group(order.Time).Add(orderElement, order);
 		
@@ -232,7 +232,7 @@ private void AddOrdersAndTradesToChart()
 		if (trade.Order.Security != _security)
 			return;
 		
-		// Draw trade on chart
+		// 在图表上绘制成交
 		var chartData = new ChartDrawData();
 		chartData.Group(trade.Time).Add(tradeElement, trade);
 		
@@ -246,21 +246,21 @@ private void AddOrdersAndTradesToChart()
 可以配置图表外观的多个方面：
 
 ```cs
-// Configuring chart appearance
+// 配置图表外观
 private void ConfigureChartAppearance()
 {
-	// Configuring chart area
+	// 配置图表区域
 	_areaComb.Height = 300;
 	_areaComb.BackgroundMajorGridColor = Colors.Gray;
 	_areaComb.BackgroundMinorGridColor = Colors.LightGray;
 	
-	// Configuring candle element
+	// 配置 K线元素
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
 	_candleElement.UpBrush = Brushes.Green;
 	_candleElement.DownBrush = Brushes.Red;
 	_candleElement.StrokeThickness = 1;
 	
-	// Configuring entire chart
+	// 配置整个图表
 	_chart.IsAutoRange = true;            // Automatic scaling
 	_chart.IsManualVerticalValues = false; // Automatic calculation of vertical values
 	_chart.BidEnabled = false;            // Disable display of best bid price
@@ -273,24 +273,24 @@ private void ConfigureChartAppearance()
 以下代码用于控制图表缩放和滚动：
 
 ```cs
-// Configuring zooming and scrolling
+// 配置缩放和滚动
 private void ConfigureChartZoomAndScroll()
 {
-	// Setting initial and final dates for display
+	// 设置显示的开始和结束日期
 	_chart.SetXRange(DateTime.Today.AddDays(-10), DateTime.Today);
 	
-	// Setting Y-axis range
+	// 设置 Y 轴范围
 	_chart.SetYRange(100, 150);
 	
-	// Buttons for zoom control
+	// 缩放控制按钮
 	zoomInButton.Click += (s, e) => _chart.ZoomIn();
 	zoomOutButton.Click += (s, e) => _chart.ZoomOut();
 	
-	// Buttons for scrolling
+	// 滚动按钮
 	scrollLeftButton.Click += (s, e) => _chart.ScrollLeft();
 	scrollRightButton.Click += (s, e) => _chart.ScrollRight();
 	
-	// Reset zoom to automatic
+	// 将缩放重置为自动
 	resetZoomButton.Click += (s, e) => _chart.IsAutoRange = true;
 }
 ```
@@ -300,10 +300,10 @@ private void ConfigureChartZoomAndScroll()
 可以将图表保存为图像文件：
 
 ```cs
-// Exporting chart to image
+// 将图表导出为图像
 private void ExportChartToImage()
 {
-	// Create object for saving image
+	// 创建用于保存图像的对象
 	var saveFileDialog = new SaveFileDialog
 	{
 		Filter = "PNG Image|*.png|JPEG Image|*.jpg|BMP Image|*.bmp",
@@ -312,7 +312,7 @@ private void ExportChartToImage()
 	
 	if (saveFileDialog.ShowDialog() == true)
 	{
-		// Create image from chart
+		// 从图表创建图像
 		var rtb = new RenderTargetBitmap(
 			(int)_chart.ActualWidth, 
 			(int)_chart.ActualHeight, 
@@ -321,7 +321,7 @@ private void ExportChartToImage()
 		
 		rtb.Render(_chart);
 		
-		// Save image in selected format
+		// 以所选格式保存图像
 		BitmapEncoder encoder;
 		
 		switch (Path.GetExtension(saveFileDialog.FileName).ToLower())
@@ -352,16 +352,16 @@ private void ExportChartToImage()
 使用以下代码清除图表数据：
 
 ```cs
-// Clearing chart or its elements
+// 清除图表或其元素
 private void ClearChart()
 {
-	// Clear entire chart
+	// 清除整个图表
 	_chart.Reset();
 	
-	// Clear specific area
+	// 清除指定区域
 	_areaComb.Reset();
 	
-	// Clear specific element
+	// 清除指定元素
 	_candleElement.Reset();
 }
 ```

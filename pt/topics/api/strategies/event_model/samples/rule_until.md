@@ -7,7 +7,7 @@
 ## Componentes Principais
 
 ```cs
-// Main components
+// Componentes principais
 public class SimpleRulesUntilStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ Chamado quando a estratégia inicia:
 - Cria uma regra que é executada quando são recebidos dados do livro de ordens até uma determinada condição ser cumprida
 
 ```cs
-// OnStarted method
+// Método OnStarted
 protected override void OnStarted2(DateTime time)
 {
 	var tickSub = new Subscription(DataType.Ticks, Security);
@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 	.Until(() => i >= 10)
 	.Apply(this);
 
-	// Sending requests for subscribe to market data.
+	// Enviar solicitações de assinatura de dados de mercado.
 	Subscribe(tickSub);
 	Subscribe(mdSub);
 

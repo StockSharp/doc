@@ -25,7 +25,7 @@ await using var stream = File.OpenRead("trades.csv");
 
 await foreach (var msg in parser.Parse(stream))
 {
-    // process each message
+    // procesar cada mensaje
 }
 ```
 
@@ -130,7 +130,7 @@ var settings = new ImportSettings
 };
 
 var fields = FieldMappingRegistry.CreateFields(settings.DataType);
-// configure column order
+// configurar orden de columnas
 fields[0].Order = 0; // SecurityId
 fields[1].Order = 1; // Date
 fields[2].Order = 2; // Price

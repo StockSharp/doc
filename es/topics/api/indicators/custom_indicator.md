@@ -22,7 +22,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	/// Valor de entrada del proceso.
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var newValue = input.GetValue<decimal>();
@@ -136,7 +136,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
-	/// Rate of Change.
+	/// Tasa de cambio.
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
@@ -156,7 +156,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// Valor de entrada del proceso.
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var candle = input.GetValue<Candle>();

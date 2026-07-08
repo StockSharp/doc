@@ -21,7 +21,7 @@ A abordagem para trabalhar com o livro de ofertas filtrado usa o mesmo método q
     {
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
-            // Handling logic for the filtered order book
+            // Lógica de processamento do livro de ofertas filtrado
             Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
         }
     };
@@ -33,7 +33,7 @@ A abordagem para trabalhar com o livro de ofertas filtrado usa o mesmo método q
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
     
-    // or like this
+    // ou assim
     //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```
 

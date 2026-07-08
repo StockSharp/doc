@@ -34,7 +34,7 @@ def __init__(self):
 	super(sma_strategy, self).__init__()
 	self._isShortLessThenLong = None
 
-	# Initialize strategy parameters
+	# 初始化策略参数
 	self._candleTypeParam = self.Param("CandleType", DataType.TimeFrame(TimeSpan.FromMinutes(1))) \
 		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
 
@@ -90,22 +90,22 @@ def StopValue(self, value):
 3. 创建指标并订阅市场数据时，需要将二者绑定，使订阅收到的数据能够更新指标值：
 
 ```python
-# Create indicators
+# 创建指标
 longSma = SMA()
 longSma.Length = self.Long
 shortSma = SMA()
 shortSma.Length = self.Short
 
-# Bind candles set and indicators
+# 绑定蜡烛集和指标
 subscription = self.SubscribeCandles(self.CandleType)
-# Bind indicators to the candles and start processing
+# 将指标绑定到蜡烛并开始处理
 subscription.Bind(longSma, shortSma, self.OnProcess).Start()
 ```
 
 4. 使用图表时需要注意：在 [Designer](../../../live_execution/running_strategies_outside_of_designer.md) 外部运行策略时，图表对象可能不存在。
 
 ```python
-# Configure chart if GUI is available
+# 如果 GUI 可用，则配置图表
 area = self.CreateChartArea()
 if area is not None:
 	self.DrawCandles(area, subscription)
@@ -137,22 +137,22 @@ def OnProcess(self, candle, longValue, shortValue):
 	if candle.State != CandleStates.Finished:
 		return
 
-	# Determine if short SMA is less than long SMA
+	# 判断短周期 SMA 是否小于长周期 SMA
 	isShortLessThenLong = shortValue < longValue
 
 	if self._isShortLessThenLong is None:
 		self._isShortLessThenLong = isShortLessThenLong
 	elif self._isShortLessThenLong != isShortLessThenLong:
-		# Crossing happened
+		# 发生交叉
 		direction = Sides.Sell if isShortLessThenLong else Sides.Buy
 
-		# Calculate volume for opening position or reverting
+		# 计算开仓或反转持仓的数量
 		volume = self.Volume if self.Position == 0 else Math.Min(Math.Abs(self.Position), self.Volume) * 2
 
 		# Get price step (default to 1 if not set)
 		priceStep = self.GetSecurity().PriceStep or 1
 
-		# Calculate order price with offset
+		# 使用偏移计算订单价格
 		price = candle.ClosePrice + (priceStep if direction == Sides.Buy else -priceStep)
 
 		if direction == Sides.Buy:
@@ -160,7 +160,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		else:
 			self.SellLimit(price, volume)
 
-		# Update state
+		# 更新状态
 		self._isShortLessThenLong = isShortLessThenLong
 ```
 

@@ -21,8 +21,8 @@ Para trabalhar com um livro de ofertas agrupado, primeiro tem de configurar a re
 // It is assumed that orderBook is an IOrderBookMessage object obtained from StockSharp
 var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 
-// Now, sparseDepth contains a representation of the original order book,
-// where all possible price levels are considered, including those without any orders.
+// Agora sparseDepth contém uma representação do livro de ofertas original,
+// onde todos os níveis de preço possíveis são considerados, incluindo aqueles sem ordens.
 ```
 
 Neste exemplo, [Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)) é usado para criar um livro de ofertas esparso, que permite mostrar todos os níveis de preço, mesmo aqueles sem ordens ativas. Isto pode ser útil para analisar potenciais níveis "vazios" que podem servir como níveis de suporte ou resistência.

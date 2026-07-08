@@ -10,55 +10,55 @@
 1. 使用专门的方式创建策略参数：
 
 ```fsharp
-// --- Strategy parameters: CandleType, Long, Short, TakeValue, StopValue ---
+// --- 策略参数：CandleType、Long、Short、TakeValue、StopValue ---
 
-// Parameter for the candle type
+// 蜡烛类型参数
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
 		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
 
-// Parameter for the long SMA
+// 长周期 SMA 参数
 let longParam =
 	this.Param<int>(nameof(this.Long), 80)
 
-// Parameter for the short SMA
+// 短周期 SMA 参数
 let shortParam =
 	this.Param<int>(nameof(this.Short), 30)
 
-// Parameter for take profit
+// take profit 参数
 let takeValueParam =
 	this.Param<Unit>(nameof(this.TakeValue), Unit(0m, UnitTypes.Absolute))
 
-// Parameter for stop loss
+// stop loss 参数
 let stopValueParam =
 	this.Param<Unit>(nameof(this.StopValue), Unit(2m, UnitTypes.Percent))
 
-// Flag to track SMA crossing
+// 用于跟踪 SMA 交叉的标志
 let mutable isShortLessThenLong : bool option = None
 
-// --------------------- Public properties ---------------------
+// --------------------- 公共属性 ---------------------
 
-/// <summary>The candle type used by the strategy.</summary>
+/// <summary>策略使用的蜡烛类型。</summary>
 member this.CandleType
 	with get () = candleTypeParam.Value
 	and set value = candleTypeParam.Value <- value
 
-/// <summary>The period for the long SMA indicator.</summary>
+/// <summary>长周期 SMA 指标的周期。</summary>
 member this.Long
 	with get () = longParam.Value
 	and set value = longParam.Value <- value
 
-/// <summary>The period for the short SMA indicator.</summary>
+/// <summary>短周期 SMA 指标的周期。</summary>
 member this.Short
 	with get () = shortParam.Value
 	and set value = shortParam.Value <- value
 
-/// <summary>Take profit value.</summary>
+/// <summary>take profit 值。</summary>
 member this.TakeValue
 	with get () = takeValueParam.Value
 	and set value = takeValueParam.Value <- value
 
-/// <summary>Stop loss value.</summary>
+/// <summary>stop loss 值。</summary>
 member this.StopValue
 	with get () = stopValueParam.Value
 	and set value = stopValueParam.Value <- value
@@ -69,7 +69,7 @@ member this.StopValue
 2. 创建指标并订阅市场数据时，需要将二者绑定，使订阅收到的数据能够更新指标值：
 
 ```fsharp
-// ---------- Create indicators ----------
+// ---------- 创建指标 ----------
 let longSma = SMA()
 longSma.Length <- this.Long
 
@@ -77,10 +77,10 @@ let shortSma = SMA()
 shortSma.Length <- this.Short
 // ---------------------------------------
 
-// ------ Subscribe to the candle flow and bind indicators ------
+// ------ 订阅蜡烛流并绑定指标 ------
 let subscription = this.SubscribeCandles(this.CandleType)
 
-// Bind our indicators to the subscription and assign the processing function
+// 将指标绑定到订阅并指定处理函数
 subscription
 	.Bind(longSma, shortSma, fun candle longV shortV -> this.OnProcess(candle, longV, shortV))
 	.Start() |> ignore
@@ -89,19 +89,19 @@ subscription
 3. 使用图表时需要注意：在 [Designer](../../../live_execution/running_strategies_outside_of_designer.md) 外部运行策略时，图表对象可能不存在。
 
 ```fsharp
-// ------------- Configure chart -------------
+// ------------- 配置图表 -------------
 let area = this.CreateChartArea()
 
 // area can be null in case there is no GUI (e.g., Runner or console app)
 if not (isNull area) then
-	// Draw candles
+	// 绘制蜡烛
 	this.DrawCandles(area, subscription) |> ignore
 
-	// Draw indicators
+	// 绘制指标
 	this.DrawIndicator(area, shortSma, System.Drawing.Color.Coral) |> ignore
 	this.DrawIndicator(area, longSma) |> ignore
 
-	// Draw own trades
+	// 绘制自身成交
 	this.DrawOwnTrades(area) |> ignore
 ```
 
@@ -120,7 +120,7 @@ member private this.OnProcess
 		longValue: decimal,
 		shortValue: decimal
 	) =
-	// Log candle information
+	// 记录蜡烛信息
 	this.LogInfo(
 		LocalizedStrings.SmaNewCandleLog,
 		candle.OpenTime,
@@ -132,19 +132,19 @@ member private this.OnProcess
 		candle.SecurityId
 	)
 
-	// Skip if the candle is not finished
+	// 如果蜡烛未完成则跳过
 	if candle.State <> CandleStates.Finished then
 		()
 	else
-		// Determine if short SMA is less than long SMA
+		// 判断短周期 SMA 是否小于长周期 SMA
 		let shortLess = shortValue < longValue
 
 		match isShortLessThenLong with
 		| None ->
-			// First time: just remember the current relation
+			// 第一次：只记住当前关系
 			isShortLessThenLong <- Some shortLess
 		| Some prevValue when prevValue <> shortLess ->
-			// A crossing has occurred
+			// 发生了交叉
 			// If short < long, that means Sell, otherwise Buy
 			let direction =
 				if shortLess then
@@ -152,36 +152,36 @@ member private this.OnProcess
 				else
 					Sides.Buy
 
-			// Calculate volume for opening a new position or reversing
+			// 计算开新仓或反转持仓的数量
 			// If there is no position, use Volume; otherwise, double
-			// the minimum of the absolute position size and Volume
+			// 取绝对持仓大小和 Volume 中的较小值
 			let vol =
 				if this.Position = 0m then
 					this.Volume
 				else
 					(abs this.Position |> min this.Volume) * 2m
 
-			// Get price step for the limit price
+			// 获取限价价格步长
 			let priceStep =
 				let step = this.GetSecurity().PriceStep
 				if step.HasValue then step.Value else 1m
 
-			// Set the limit order price slightly higher/lower than the current close price
+			// 将限价单价格设置为略高/略低于当前收盘价
 			let limitPrice =
 				match direction with
 				| Sides.Buy  -> candle.ClosePrice + priceStep
 				| Sides.Sell -> candle.ClosePrice - priceStep
 				| _          -> candle.ClosePrice // should not occur
 
-			// Send limit order
+			// 发送限价单
 			match direction with
 			| Sides.Buy  -> this.BuyLimit(limitPrice, vol) |> ignore
 			| Sides.Sell -> this.SellLimit(limitPrice, vol) |> ignore
 			| _          -> ()
 
-			// Update the tracking flag
+			// 更新跟踪标志
 			isShortLessThenLong <- Some shortLess
 		| _ ->
-			// Do nothing if no crossing
+			// 没有交叉则不执行操作
 			()
 ```

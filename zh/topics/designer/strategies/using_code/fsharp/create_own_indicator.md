@@ -10,19 +10,19 @@
 
 ```fsharp
 /// <summary>
-/// Sample indicator demonstrating how to save and load parameters.
-/// Changes the input price by +20% or -20%.
+/// 演示如何保存和加载参数的示例指标。
+/// 将输入价格改变 +20% 或 -20%。
 ///
-/// See more examples:
+/// 更多示例：
 /// https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 ///
-/// Documentation:
+/// 文档：
 /// https://doc.stocksharp.com/topics/designer/strategies/using_code/fsharp/create_own_indicator.html
 /// </summary>
 type EmptyIndicator() as this =
 	inherit BaseIndicator()
 
-	// Internal fields
+	// 内部字段
 	let mutable changeValue = 20
 	let mutable counter = 0
 	let mutable isFormedValue = false
@@ -42,7 +42,7 @@ type EmptyIndicator() as this =
 	override this.CalcIsFormed() = isFormedValue
 
 	/// <summary>
-	/// Resets the indicator to its initial state.
+	/// 将指标重置为初始状态。
 	/// </summary>
 	override this.Reset() =
 		base.Reset()
@@ -50,30 +50,30 @@ type EmptyIndicator() as this =
 		counter <- 0
 
 	/// <summary>
-	/// The main logic to process input values.
+	/// 处理输入值的主要逻辑。
 	/// </summary>
 	override this.OnProcess(input: IIndicatorValue) : IIndicatorValue =
-		// every 10th call try to return an "empty" value
+		// 每第 10 次调用尝试返回“空”值
 		if RandomGen.GetInt(0, 10) = 0 then
-			// empty value still contains just time, no actual data
+			// 空值仍只包含时间，不包含实际数据
 			DecimalIndicatorValue(this, input.Time)
 		else
-			// increment counter on each call
+			// 每次调用时递增计数器
 			counter <- counter + 1
 
-			// after 5 inputs, indicator is considered formed
+			// 收到 5 个输入后，指标视为已形成
 			if counter = 5 then
 				isFormedValue <- true
 
 			let mutable value = input.ToDecimal()
 
-			// random change by a factor of +/- Change%
+			// 按 +/- Change% 随机改变
 			let randomFactor = decimal (RandomGen.GetInt(-changeValue, changeValue)) / 100m
 			value <- value + (value * randomFactor)
 
 			// return final indicator value
 			let result = DecimalIndicatorValue(this, value, input.Time)
-			// randomly mark it as final or not
+			// 随机将其标记为最终值或非最终值
 			result.IsFinal <- RandomGen.GetBool()
 			result
 

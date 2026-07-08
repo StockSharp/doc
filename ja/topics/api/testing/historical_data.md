@@ -21,10 +21,10 @@
 最初のステップは、[IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) オブジェクトを作成することです。[HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) はこのオブジェクトを通じて履歴データへアクセスします。
 
 ```csharp
-// storage for accessing historical data
+// 履歴データにアクセスするためのストレージ
 var storageRegistry = new StorageRegistry
 {
-	// set path to directory with historical data
+	// 履歴データディレクトリのパスを設定
 	DefaultDrive = new LocalMarketDataDrive(HistoryPath.Folder)
 };
 ```
@@ -35,7 +35,7 @@ var storageRegistry = new StorageRegistry
 ### 2. 銘柄とポートフォリオの作成
 
 ```csharp
-// create test instrument for testing
+// テスト用の銘柄を作成
 var security = new Security
 {
 	Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
@@ -43,7 +43,7 @@ var security = new Security
 	Board = board,
 };
 
-// test portfolio
+// テスト用ポートフォリオ
 var portfolio = new Portfolio
 {
 	Name = "test account",
@@ -54,7 +54,7 @@ var portfolio = new Portfolio
 ### 3. エミュレーションコネクターの作成
 
 ```csharp
-// create connector for emulation
+// エミュレーション用コネクタを作成
 var connector = new HistoryEmulationConnector(
 	new[] { security },
 	new[] { portfolio })
@@ -65,12 +65,12 @@ var connector = new HistoryEmulationConnector(
 		{
 			Settings =
 			{
-				// match order if historical price touched our limit order price
-				// By default it's turned off, price should go through the limit order price
+				// 履歴価格が指値注文価格に到達した場合に注文をマッチング
+				// デフォルトではオフ。価格が指値注文価格を通過する必要があります
 				// (more strict testing mode)
 				MatchOnTouch = false,
 				
-				// commission for trades
+				// 約定手数料
 				CommissionRules = new ICommissionRule[]
 				{
 					new CommissionPerTradeRule { Value = 0.01m },
@@ -84,7 +84,7 @@ var connector = new HistoryEmulationConnector(
 	HistoryMessageAdapter =
 	{
 		StorageRegistry = storageRegistry,
-		// set testing range
+		// テスト範囲を設定
 		StartDate = startTime,
 		StopDate = stopTime,
 		OrderLogMarketDepthBuilders =
@@ -92,7 +92,7 @@ var connector = new HistoryEmulationConnector(
 			{ secId, new ItchOrderLogMarketDepthBuilder(secId) }
 		}
 	},
-	// set market time update interval
+	// 市場時刻の更新間隔を設定
 	MarketTimeChangedInterval = timeFrame,
 };
 ```
@@ -107,10 +107,10 @@ connector.SecurityReceived += (subscr, s) =>
 	if (s != security)
 		return;
 		
-	// fill Level1 values
+	// Level1 値を埋める
 	connector.EmulationAdapter.SendInMessage(level1Info);
 	
-	// subscribe to necessary data depending on testing settings
+	// テスト設定に応じて必要なデータを購読
 	if (emulationInfo.UseMarketDepth)
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
@@ -119,7 +119,7 @@ connector.SecurityReceived += (subscr, s) =>
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
 			// if no historical order book data is available but required by the strategy,
-			// use generator based on last prices
+			// 直近価格に基づくジェネレータを使用
 			connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
 			{
 				Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
@@ -149,10 +149,10 @@ connector.SecurityReceived += (subscr, s) =>
 		connector.Subscribe(new(DataType.Level1, security));
 	}
 	
-	// start strategy before emulation begins
+	// エミュレーション開始前に戦略を開始
 	strategy.Start();
 	
-	// start loading historical data
+	// 履歴データの読み込みを開始
 	connector.Start();
 };
 ```
@@ -160,7 +160,7 @@ connector.SecurityReceived += (subscr, s) =>
 ### 5. ストラテジーの作成と設定
 
 ```csharp
-// create trading strategy based on moving averages with periods 80 and 10
+// 期間 80 と 10 の移動平均に基づく取引戦略を作成
 var strategy = new SmaStrategy
 {
 	LongSma = 80,
@@ -170,11 +170,11 @@ var strategy = new SmaStrategy
 	Security = security,
 	Connector = connector,
 	LogLevel = DebugLogCheckBox.IsChecked == true ? LogLevels.Debug : LogLevels.Info,
-	// default interval is 1 min, which is excessive for a range of several months
+	// デフォルト間隔は 1 分で、数か月の範囲では細かすぎます
 	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 };
 
-// configure the type of data used to build candles
+// ローソク足構築に使用するデータ型を設定
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
@@ -234,14 +234,14 @@ strategy.PositionReceived += (s, p) =>
 	pos.Draw(data);
 };
 
-// subscribe to progress updates
+// 進捗更新を購読
 connector.ProgressChanged += steps => this.GuiAsync(() => progressBar.Value = steps);
 ```
 
 ### 7. テストの開始
 
 ```csharp
-// start emulation
+// エミュレーションを開始
 connector.Connect();
 ```
 
@@ -259,7 +259,7 @@ connector.Connect();
 データ型ごとに、チャートと統計を含む個別のタブが作成されます。
 
 ```csharp
-// create testing modes
+// テストモードを作成
 _settings = new[]
 {
 	(
@@ -282,7 +282,7 @@ _settings = new[]
 		TicksAndDepthsCheckBox,
 		TicksAndDepthsProgress,
 		TicksAndDepthsParameterGrid,
-		// ticks + order books
+		// ティック + 板情報
 		new EmulationInfo
 		{
 			UseTicks = true,
@@ -295,7 +295,7 @@ _settings = new[]
 		TicksAndDepthsPosition
 	),
 	
-	// other combinations of data types
+	// その他のデータ型の組み合わせ
 };
 ```
 
@@ -310,7 +310,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// create subscription to candles of the required type
+	// 必要な種類のローソク足購読を作成
 	var dt = CandleTimeFrame is null
 		? CandleType
 		: DataType.Create(CandleType.MessageType, CandleTimeFrame);
@@ -326,16 +326,16 @@ protected override void OnStarted2(DateTime time)
 		}
 	};
 
-	// create indicators
+	// インジケーターを作成
 	var longSma = new SMA { Length = LongSma };
 	var shortSma = new SMA { Length = ShortSma };
 
-	// subscribe to candles and bind them to indicators
+	// ローソク足を購読してインジケーターにバインド
 	SubscribeCandles(subscription)
 		.Bind(longSma, shortSma, OnProcess)
 		.Start();
 
-	// configure display on the chart
+	// チャート表示を設定
 	var area = CreateChartArea();
 
 	if (area != null)
@@ -346,7 +346,7 @@ protected override void OnStarted2(DateTime time)
 		DrawOwnTrades(area);
 	}
 
-	// configure position protection
+	// ポジション保護を設定
 	StartProtection(TakeValue, StopValue);
 }
 ```
@@ -358,11 +358,11 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// check if the candle is completed
+	// ローソク足が完了しているか確認
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// analyze indicator crossover
+	// インジケーターのクロスを分析
 	var isShortLessThenLong = shortValue < longValue;
 
 	if (_isShortLessThenLong == null)
@@ -374,10 +374,10 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		// if short is less than long - sell, otherwise buy
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-		// calculate volume for opening position or reversal
+		// ポジション開始または反転用の数量を計算
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-		// use the candle's close price
+		// ローソク足の終値を使用
 		var price = candle.ClosePrice;
 
 		if (direction == Sides.Buy)

@@ -12,7 +12,7 @@ public partial class MainWindow
 	private readonly Connector _connector;
 	private const string _connectorFile = "ConnectorFile.json";
 	
-	// Path to historical data
+	// 历史数据路径
 	private readonly string _pathHistory = Paths.HistoryDataPath;
 
 	private readonly IFileSystem _fileSystem = Paths.FileSystem;
@@ -28,14 +28,14 @@ public partial class MainWindow
 
 		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
 		
-		// Initialize storages
+		// 初始化存储
 		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
 			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 		
-		// Create connector with configured storages
+		// 使用已配置的存储创建连接器
 		_connector = new Connector(
 			entityRegistry.Securities, 
 			entityRegistry.PositionStorage, 
@@ -43,11 +43,11 @@ public partial class MainWindow
 			storageRegistry, 
 			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 		
-		// Register message adapter provider
+		// 注册消息适配器提供者
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 		
-		// Load connector settings if file exists
+		// 如果文件存在，则加载连接器设置
 		if (_fileSystem.FileExists(_connectorFile))
 		{
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
@@ -62,24 +62,24 @@ public partial class MainWindow
 ## 连接设置
 
 ```cs
-// Method for configuring connection parameters
+// 配置连接参数的方法
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-	// Call connector configuration window
+	// 调用连接器配置窗口
 	if (_connector.Configure(this))
 	{
-		// Save settings to file
+		// 将设置保存到文件
 		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
-// Method for connecting to trading system
+// 连接到交易系统的方法
 private void Connect_Click(object sender, RoutedEventArgs e)
 {
-	// Set connector as data source for instrument selection
+	// 将连接器设置为交易品种选择的数据源
 	SecurityPicker.SecurityProvider = _connector;
 	
-	// Subscribe to candle reception event
+	// 订阅 K线接收事件
 	_connector.CandleReceived += Connector_CandleReceived;
 	
 	// Connect
@@ -90,10 +90,10 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 ## 处理K线并将其显示在图表上
 
 ```cs
-// Handler for candle reception event
+// K线接收事件处理器
 private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Draw candle on chart
+	// 在图表上绘制 K线
 	Chart.Draw(_candleElement, candle);
 }
 ```
@@ -101,44 +101,44 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 ## 创建K线订阅
 
 ```cs
-// Method called when an instrument is selected
+// 选择交易品种时调用的方法
 private void SecurityPicker_SecuritySelected(Security security)
 {
-	// Check if instrument is selected
+	// 检查是否已选择交易品种
 	if (security == null) 
 		return;
 	
-	// Unsubscribe from previous subscription if it exists
+	// 如果存在上一个订阅，则取消订阅
 	if (_subscription != null) 
 		_connector.UnSubscribe(_subscription);
 	
-	// Create new subscription for selected instrument
+	// 为所选交易品种创建新订阅
 	_subscription = new(CandleDataTypeEdit.DataType, security)
 	{
 		MarketData =
 		{
-			// Request historical data for last 720 days
+			// 请求最近 720 天的历史数据
 			From = DateTime.Today.AddDays(-720),
 			
-			// Mode: load historical data and build in real-time
+			// 模式：加载历史数据并实时构建
 			BuildMode = MarketDataBuildModes.LoadAndBuild,
 		}
 	};
 	
-	// Configure chart
+	// 配置图表
 	Chart.ClearAreas();
 	
-	// Create chart area and element for displaying candles
+	// 创建图表区域和用于显示 K线的元素
 	var area = new ChartArea();
 	_candleElement = new ChartCandleElement();
 	
-	// Add area and element to chart
+	// 向图表添加区域和元素
 	Chart.AddArea(area);
 	
-	// Link chart element with subscription for automatic drawing
+	// 将图表元素与订阅关联以自动绘制
 	Chart.AddElement(area, _candleElement, _subscription);
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(_subscription);
 }
 ```
@@ -169,7 +169,7 @@ using StockSharp.Xaml.Charting;
 using StockSharp.Charting;
 
 /// <summary>
-/// Interaction logic for MainWindow.xaml
+/// MainWindow.xaml 的交互逻辑
 /// </summary>
 public partial class MainWindow
 {
@@ -202,7 +202,7 @@ public partial class MainWindow
 			storageRegistry, 
 			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
-		// registering all connectors
+		// 注册所有连接器
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
@@ -255,7 +255,7 @@ public partial class MainWindow
 			}
 		};
 
-		//-----------------Chart--------------------------------
+		// -----------------图表--------------------------------
 		Chart.ClearAreas();
 
 		var area = new ChartArea();
@@ -299,10 +299,10 @@ public partial class MainWindow
 ### 跟踪向实时模式的切换
 
 ```cs
-// Subscription to the event of transition to real-time mode
+// 订阅切换到实时模式的事件
 _connector.SubscriptionOnline += OnSubscriptionOnline;
 
-// Event handler
+// 事件处理器
 private void OnSubscriptionOnline(Subscription subscription)
 {
 	if (subscription == _subscription)
@@ -315,7 +315,7 @@ private void OnSubscriptionOnline(Subscription subscription)
 ### 配置历史数据加载时段
 
 ```cs
-// Setting history loading period
+// 设置历史加载期间
 private void SetHistoryPeriod(int days)
 {
 	if (_subscription != null)
@@ -333,13 +333,13 @@ private void SetHistoryPeriod(int days)
 ### 进一步处理K线
 
 ```cs
-// Extended candle processing with information output
+// 带信息输出的扩展 K线处理
 private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage candle)
 {
-	// Draw candle on chart
+	// 在图表上绘制 K线
 	Chart.Draw(_candleElement, candle);
 	
-	// Output information about candle to logs
+	// 将 K线信息输出到日志
 	this.GuiAsync(() => 
 	{
 		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";

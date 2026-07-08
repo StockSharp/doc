@@ -9,13 +9,13 @@
 要创建一个模拟连接器，首先创建一个用于接收市场数据的常规连接器，然后在其基础上创建一个模拟连接器：
 
 ```csharp
-// Create a regular connector for receiving market data
+// 创建用于接收市场数据的常规连接器
 private readonly Connector _realConnector = new();
 
-// Create an emulation connector
+// 创建仿真连接器
 _emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, false);
 
-// Configure emulation parameters
+// 配置仿真参数
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 settings.TimeZone = TimeHelper.Est;
 settings.ConvertTime = true;
@@ -32,22 +32,22 @@ private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
 像普通连接器一样，仿真连接器在接收市场数据和执行交易时会生成事件：
 
 ```csharp
-// Subscribe to connector events
+// 订阅连接器事件
 _emuConnector.Connected += () =>
 {
-	// update gui labels
+	// 更新界面标签
 	this.GuiAsync(() => { ChangeConnectStatus(true); });
 };
 
 _emuConnector.Disconnected += () =>
 {
-	// update gui labels
+	// 更新界面标签
 	this.GuiAsync(() => { ChangeConnectStatus(false); });
 };
 
 _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
-	// update gui labels
+	// 更新界面标签
 	ChangeConnectStatus(false);
 	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 });
@@ -64,7 +64,7 @@ _emuConnector.OrderReceived += (s, o) =>
 	OrderGrid.Orders.Add(o);
 };
 
-// Subscribe to order registration errors
+// 订阅订单注册错误
 _emuConnector.OrderRegisterFailReceived += (s, f) => OrderGrid.AddRegistrationFail(f);
 
 _emuConnector.CandleReceived += (s, candle) =>
@@ -79,7 +79,7 @@ _emuConnector.CandleReceived += (s, candle) =>
 要处理市场数据，您需要订阅相应的数据类型：
 
 ```csharp
-// Subscribe to order books, ticks, and Level1 for the emulation connector
+// 为仿真连接器订阅订单簿、逐笔成交和 Level1
 _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
@@ -87,7 +87,7 @@ _emuConnector.Subscribe(new(DataType.Level1, security));
 // Subscribe to order books for the real connector (needed for emulation)
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
-// Subscribe to candles
+// 订阅 K线
 _candlesSubscription = new(CandleDataTypeEdit.DataType, security)
 {
 	From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
@@ -100,13 +100,13 @@ _emuConnector.Subscribe(_candlesSubscription);
 订单通过模拟连接器注册，方式类似于常规连接器：
 
 ```csharp
-// Order registration
+// 订单注册
 _emuConnector.RegisterOrder(order);
 
-// Order cancellation
+// 订单撤销
 _emuConnector.CancelOrder(order);
 
-// Order replacement
+// 订单替换
 _emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
 ```
 
@@ -117,16 +117,16 @@ _emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
 ```csharp
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 
-// Set timezone
+// 设置时区
 settings.TimeZone = TimeHelper.Est;
 
-// Convert time
+// 转换时间
 settings.ConvertTime = true;
 
-// Match orders on price touch
+// 价格触及时撮合订单
 settings.MatchOnTouch = false;
 
-// Emulate order execution latency
+// 模拟订单执行延迟
 settings.Latency = TimeSpan.FromMilliseconds(100);
 ```
 

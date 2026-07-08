@@ -5,10 +5,10 @@
 要通过 [FIX 协议](../../api/connectors/common/fix_protocol.md)连接，需要创建并配置 FIX 连接（参阅 [FIX 适配器初始化](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)）。
 
 ```cs
-// Create a connector instance
+// 创建连接器实例
 private readonly Connector _connector = new Connector();
 
-// Configure the adapter for market data via FIX protocol
+// 配置通过 FIX 协议接收市场数据的适配器
 var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
 	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
@@ -19,7 +19,7 @@ var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 };
 _connector.Adapter.InnerAdapters.Add(marketDataAdapter);
 
-// Configure the adapter for transaction data
+// 配置交易数据适配器
 var transactionDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
 	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
@@ -34,23 +34,23 @@ _connector.Adapter.InnerAdapters.Add(transactionDataAdapter);
 订阅相关事件并配置数据处理程序：
 
 ```cs
-// Successful connection event
+// 连接成功事件
 _connector.Connected += () =>
 {
 	Console.WriteLine("Connection established");
 	
-	// Create a subscription to search for instruments
+	// 创建搜索工具的订阅
 	var lookupSubscription = new Subscription(DataType.Securities);
 	_connector.Subscribe(lookupSubscription);
 };
 
-// Connection lost event
+// 连接丢失事件
 _connector.Disconnected += () =>
 {
 	Console.WriteLine("Connection lost");
 };
 
-// Instrument received event
+// 收到工具事件
 _connector.SecurityReceived += (subscription, security) =>
 {
 	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
@@ -59,15 +59,15 @@ _connector.SecurityReceived += (subscription, security) =>
 	// If this is the target instrument, subscribe to its data
 	if (security.Id == targetSecurityId)
 	{
-		// Order book subscription
+		// 订单簿订阅
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 		
-		// Tick trades subscription
+		// 逐笔成交订阅
 		var tradesSubscription = new Subscription(DataType.Ticks, security);
 		_connector.Subscribe(tradesSubscription);
 		
-		// Candles subscription
+		// 蜡烛订阅
 		var candleSubscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			security)
@@ -82,43 +82,43 @@ _connector.SecurityReceived += (subscription, security) =>
 	}
 };
 
-// Tick trade received event
+// 收到逐笔成交事件
 _connector.TickTradeReceived += (subscription, trade) =>
 {
 	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
-// Order book changed event
+// 订单簿变更事件
 _connector.OrderBookReceived += (subscription, depth) =>
 {
 	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
 };
 
-// Candle received event
+// 收到蜡烛事件
 _connector.CandleReceived += (subscription, candle) =>
 {
 	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
-// Connection error event
+// 连接错误事件
 _connector.ConnectionError += error =>
 {
 	Console.WriteLine($"Connection error: {error.Message}");
 };
 
-// General error event
+// 通用错误事件
 _connector.Error += error =>
 {
 	Console.WriteLine($"Error: {error.Message}");
 };
 
-// Market data subscription error event
+// 市场数据订阅错误事件
 _connector.SubscriptionFailed += (subscription, error) =>
 {
 	Console.WriteLine($"Subscription error {subscription.DataType} for {subscription.SecurityId}: {error}");
 };
 
-// Connect to the server
+// 连接到服务器
 _connector.Connect();
 ```
 
@@ -127,10 +127,10 @@ _connector.Connect();
 服务器模式下的 Hydra 支持访问多种数据。下面以获取历史数据为例：
 
 ```cs
-// Getting historical candles
+// 获取历史蜡烛
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// Create a subscription to historical candles
+	// 创建历史蜡烛订阅
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -142,39 +142,39 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 		}
 	};
 	
-	// Subscribe to process received candles
+	// 订阅以处理收到的蜡烛
 	_connector.CandleReceived += OnCandleReceived;
 	
-	// Start the subscription
+	// 启动订阅
 	_connector.Subscribe(candleSubscription);
 }
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check that the candle belongs to our subscription
+	// 检查蜡烛是否属于当前订阅
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
 	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
-	// Process the received candles, for example, save to local storage
-	// or use for analysis/visualization
+	// 处理收到的蜡烛，例如保存到本地存储
+	// 或用于分析/可视化
 }
 ```
 
 ## 断开与 Hydra 服务器的连接
 
 ```cs
-// Proper connection closing
+// 正确关闭连接
 private void DisconnectFromServer()
 {
-	// Unsubscribe from all subscriptions
+	// 取消所有订阅
 	foreach (var subscription in _connector.Subscriptions.ToArray())
 	{
 		_connector.UnSubscribe(subscription);
 	}
 	
-	// Disconnect from the server
+	// 断开服务器连接
 	_connector.Disconnect();
 }
 ```

@@ -23,7 +23,7 @@ public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 	return new[] 
 	{ 
 		(Security, CandleType),
-		// Other instrument-data type pairs if the strategy uses multiple
+		// 如果策略使用多个工具，则列出其他工具-数据类型对
 	};
 }
 ```
@@ -55,13 +55,13 @@ public class MySmaStrategy : Strategy
 		_candleType = Param(nameof(CandleType), DataType.TimeFrame(TimeSpan.FromMinutes(1)));
 	}
 	
-	// Override the method for correct work with the Designer
+	// 重写该方法以便在 Designer 中正确工作
 	public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 	{
 		return new[] { (Security, CandleType) };
 	}
 	
-	// The rest of the strategy code...
+	// 策略代码的其余部分...
 }
 ```
 

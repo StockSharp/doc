@@ -49,16 +49,16 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// остановить расчёт, если пользователь отменил выполнение скрипта
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
-				// get candle storage
+				// получение хранилища свечей
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				var allCandles = candleStorage.Load(from, to).ToArray();
 
-				// first orders by volume desc will be our biggest candle
+				// первые записи после сортировки по объёму по убыванию будут самой крупной свечой
 				var bigPriceCandle = allCandles.OrderByDescending(c => c.GetLength()).FirstOrDefault();
 				var bigVolCandle = allCandles.OrderByDescending(c => c.TotalVolume).FirstOrDefault();
 
@@ -69,7 +69,7 @@ namespace StockSharp.Algo.Analytics
 					bigVolCandles.Add(bigVolCandle);
 			}
 
-			// draw series on chart
+			// отрисовать серии на графике
 			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
 			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -118,16 +118,16 @@ class biggest_candle_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# остановить расчёт, если пользователь отменил выполнение скрипта
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# get candle storage
+			# получение хранилища свечей
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 			all_candles = load_range(candle_storage, message_type, from_date, to_date)
 
 			if len(all_candles) > 0:
-				# first orders by volume desc will be our biggest candle
+				# первые записи после сортировки по объёму по убыванию будут самой крупной свечой
 				big_price_candle = max(all_candles, key=lambda c: get_length(c))
 				big_vol_candle = max(all_candles, key=lambda c: c.TotalVolume)
 
@@ -137,7 +137,7 @@ class biggest_candle_script(IAnalyticsScript):
 				if big_vol_candle is not None:
 					big_vol_candles.append(big_vol_candle)
 
-		# draw series on chart
+		# отрисовать серии на графике
 		price_chart.Append(
 			"prices",
 			[c.OpenTime for c in big_price_candles],

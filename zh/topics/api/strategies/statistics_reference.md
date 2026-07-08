@@ -111,7 +111,7 @@
 ```cs
 var strategy = new MyStrategy();
 
-// Access statistics after execution
+// 执行后访问统计信息
 foreach (var param in strategy.StatisticManager.Parameters)
 {
     Console.WriteLine($"{param.DisplayName}: {param.Value}");
@@ -121,7 +121,7 @@ foreach (var param in strategy.StatisticManager.Parameters)
 ### 检索特定参数
 
 ```cs
-// Get the net profit value
+// 获取净利润值
 var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
@@ -134,7 +134,7 @@ Console.WriteLine($"Net profit: {netProfit.Value}");
 夏普比率和索提诺比率需要设定无风险利率以便正确计算：
 
 ```cs
-// Set a 3% risk-free rate for all coefficients
+// 为所有系数设置 3% 的无风险利率
 foreach (var param in strategy.StatisticManager.Parameters
     .OfType<IRiskFreeRateStatisticParameter>())
 {
@@ -147,7 +147,7 @@ foreach (var param in strategy.StatisticManager.Parameters
 [NetProfitPercentParameter](xref:StockSharp.Algo.Statistics.NetProfitPercentParameter) 和 [MaxProfitPercentParameter](xref:StockSharp.Algo.Statistics.MaxProfitPercentParameter) 参数需要设置初始资金值：
 
 ```cs
-// Set initial capital for percentage calculations
+// 设置用于百分比计算的初始资金
 foreach (var param in strategy.StatisticManager.Parameters
     .OfType<IBeginValueStatisticParameter>())
 {
@@ -158,7 +158,7 @@ foreach (var param in strategy.StatisticManager.Parameters
 ### 重置统计数据
 
 ```cs
-// Reset all statistic parameters
+// 重置所有统计参数
 strategy.StatisticManager.Reset();
 ```
 

@@ -76,11 +76,11 @@ SubscriptionsOnConnect.Add(OrderLookup);
 您可以添加您自己的订阅，这些订阅将在每次连接时自动启动：
 
 ```cs
-// Add automatic Level1 data subscription
+// 添加自动 Level1 数据订阅
 var l1Sub = new Subscription(DataType.Level1, security);
 connector.SubscriptionsOnConnect.Add(l1Sub);
 
-// Remove automatic order lookup on connection
+// 移除连接时的自动订单查找
 connector.SubscriptionsOnConnect.Remove(connector.OrderLookup);
 ```
 
@@ -121,7 +121,7 @@ private readonly Connector _connector = new();
 
 public void SetupSubscriptionTracking()
 {
-    // Track subscription lifecycle
+    // 跟踪订阅生命周期
     _connector.SubscriptionStarted += subscription =>
     {
         Console.WriteLine($"Subscription started: {subscription.DataType}, " +
@@ -142,7 +142,7 @@ public void SetupSubscriptionTracking()
                 $"Error: {error.Message}");
     };
 
-    // Track individual adapter connections
+    // 跟踪各个适配器连接
     _connector.ConnectedEx += adapter =>
     {
         Console.WriteLine($"Adapter connected: {adapter.Name}");
@@ -161,7 +161,7 @@ public void SetupSubscriptionTracking()
     // Connect
     _connector.Connect();
 
-    // After connection -- create a subscription
+    // 连接后 -- 创建订阅
     _connector.Connected += () =>
     {
         var subscription = new Subscription(DataType.Ticks, security);

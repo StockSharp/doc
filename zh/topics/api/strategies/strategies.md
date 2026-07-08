@@ -63,7 +63,7 @@ public class MyStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Trading logic
+        // 交易逻辑
     }
 }
 ```

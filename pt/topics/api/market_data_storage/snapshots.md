@@ -70,11 +70,11 @@ var snapshotRegistry = new SnapshotRegistry(Path.Combine(
 ### Trabalhar com Snapshots Level1
 
 ```cs
-// Get the Level1 snapshot storage
+// Obter armazenamento de snapshots Level1
 var level1Snapshots = snapshotRegistry.GetSnapshotStorage(
     DataType.Level1);
 
-// Save a snapshot
+// Salvar snapshot
 var level1Msg = new Level1ChangeMessage
 {
     SecurityId = "AAPL@NASDAQ".ToSecurityId(),
@@ -90,7 +90,7 @@ level1Snapshots.Update(level1Msg);
 ### Obter um Snapshot
 
 ```cs
-// Get the latest snapshot for an instrument
+// Obter snapshot mais recente para um instrumento
 var secId = "AAPL@NASDAQ".ToSecurityId();
 var snapshot = level1Snapshots.Get(secId);
 

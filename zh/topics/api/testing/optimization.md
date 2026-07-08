@@ -161,7 +161,7 @@ _candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
 ### 创建并配置优化器
 
 ```csharp
-// Instrument and portfolio.
+// 工具和投资组合。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",
@@ -170,19 +170,19 @@ var security = new Security
 
 var portfolio = Portfolio.CreateSimulator();
 
-// Historical data storage.
+// 历史数据存储。
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = new LocalMarketDataDrive(folder)
 };
 
-// Create the optimizer.
+// 创建优化器。
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),
     storageRegistry);
 
-// Configure emulation parameters.
+// 配置仿真参数。
 var settings = optimizer.EmulationSettings;
 settings.MaxIterations = 100;                          // maximum iterations (0 = unlimited)
 settings.CommissionRules = new[]                       // commission
@@ -192,14 +192,14 @@ settings.CommissionRules = new[]                       // commission
 // settings.BatchSize = 8;                             // number of parallel threads
                                                        // default = CPU * 2
 
-// Cache market data between iterations to speed up optimization.
+// 在迭代之间缓存市场数据以加快优化。
 optimizer.AdapterCache = new();
 ```
 
 ### 运行 brute force 优化
 
 ```csharp
-// Base strategy with optimization ranges.
+// 带优化范围的基础策略。
 var strategy = new SmaStrategy
 {
     Volume = 1,
@@ -207,24 +207,24 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Select parameters to optimize.
+// 选择要优化的参数。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
 var optimizeParams = new IStrategyParam[] { longParam, shortParam, tfParam };
 
-// Generate all parameter combinations.
+// 生成所有参数组合。
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
-// Run optimization.
+// 运行优化。
 var startTime = new DateTime(2020, 1, 1);
 var stopTime = new DateTime(2020, 12, 31);
 var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
-    // s is the strategy with results after backtesting.
+    // s 是回测后带有结果的策略。
     Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
                       $"ShortSma={s.Parameters["ShortSma"].Value}");
 }
@@ -264,7 +264,7 @@ var optimizer = new GeneticOptimizer(
 
 optimizer.AdapterCache = new();
 
-// Configure the genetic algorithm.
+// 配置遗传算法。
 optimizer.Settings.Population = 8;            // population size
 optimizer.Settings.PopulationMax = 16;        // maximum population size
 optimizer.Settings.GenerationsMax = 20;       // maximum generations
@@ -320,12 +320,12 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Prepare parameters for the genetic optimizer.
+// 为遗传优化器准备参数。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
-// ToGeneticParameters converts strategy parameters to the genetic optimizer format.
+// ToGeneticParameters 将策略参数转换为遗传优化器格式。
 // For parameters with a discrete set of values, such as TimeSpan?, pass an explicit
 // list through a (param, values) tuple:
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
@@ -335,7 +335,7 @@ var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerabl
     (shortParam, null),
 });
 
-// Run optimization.
+// 运行优化。
 var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(
@@ -385,13 +385,13 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 优化可以暂停和恢复：
 
 ```csharp
-// Pause. Current iterations will finish, new ones will not start.
+// 暂停。当前迭代会完成，新迭代不会启动。
 optimizer.Pause();
 
 // Resume.
 optimizer.Resume();
 
-// Check state.
+// 检查状态。
 bool isPaused = optimizer.IsPaused;
 ```
 
@@ -417,7 +417,7 @@ using StockSharp.BusinessEntities;
 using StockSharp.Configuration;
 using StockSharp.Messages;
 
-// Configure the instrument and portfolio.
+// 配置工具和投资组合。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",
@@ -426,7 +426,7 @@ var security = new Security
 
 var portfolio = Portfolio.CreateSimulator();
 
-// Data storage.
+// 数据存储。
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
@@ -445,7 +445,7 @@ optimizer.EmulationSettings.CommissionRules = new[]
 };
 optimizer.AdapterCache = new();
 
-// Configure the strategy.
+// 配置策略。
 var strategy = new SmaStrategy
 {
     Volume = 1,
@@ -453,17 +453,17 @@ var strategy = new SmaStrategy
     Portfolio = portfolio,
 };
 
-// Parameters to optimize.
+// 要优化的参数。
 var longParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.LongSma)];
 var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSma)];
 var optimizeParams = new IStrategyParam[] { longParam, shortParam };
 
-// Generate combinations.
+// 生成组合。
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
 Console.WriteLine($"Total iterations: {totalCount}");
 
-// Run optimization.
+// 运行优化。
 var startTime = Paths.HistoryBeginDate;
 var stopTime = Paths.HistoryEndDate;
 var cts = new CancellationTokenSource();

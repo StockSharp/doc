@@ -66,12 +66,12 @@ Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
 StockSharp 允许以一种格式加载数据并以另一种格式保存数据。例如，这在将二进制数据导出为 CSV 以便在外部工具中进行分析时非常有用：
 
 ```cs
-// Load from binary storage
+// 从二进制存储加载
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Binary);
 var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 
-// Save to CSV storage
+// 保存到 CSV 存储
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Csv);
 await csvStorage.SaveAsync(candles);
@@ -84,13 +84,13 @@ await csvStorage.SaveAsync(candles);
 ```cs
 var storageRegistry = new StorageRegistry();
 
-// Create candle storage in binary format
+// 创建二进制格式的 K线存储
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
     StorageFormats.Binary);
 
-// Create candle storage in CSV format
+// 创建 CSV 格式的 K线存储
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
@@ -105,11 +105,11 @@ var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 在处理市场数据和订单簿时，也可以指定存储格式：
 
 ```cs
-// Ticks in binary format
+// 二进制格式的 tick
 var tickStorage = storageRegistry.GetTickMessageStorage(
     securityId, StorageFormats.Binary);
 
-// Order books in CSV format
+// CSV 格式的订单簿
 var depthStorage = storageRegistry.GetQuoteMessageStorage(
     securityId, StorageFormats.Csv);
 ```

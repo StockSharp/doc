@@ -33,10 +33,10 @@
 在使用 [S#](../api.md)（或在 Designer 中从代码创建 [策略](../designer/strategies/using_code.md)）时，处理模式与使用其他指标相同。使用示例：
 
 ```cs
-// Creating a pattern indicator
+// 创建形态指标
 var patternIndicator = new CandlePatternIndicator
 {
-	// Setting the desired pattern
+	// 设置所需形态
 	Pattern = new ExpressionCandlePattern("My pattern", new[]
 	{
 		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Current candle is rising
@@ -44,16 +44,16 @@ var patternIndicator = new CandlePatternIndicator
 	})
 };
 
-// Adding the indicator to the collection
+// 将指标添加到集合
 Indicators.Add(patternIndicator);
 
-// Processing a candle
+// 处理 K线
 var result = patternIndicator.Process(candle);
 
-// Checking the result
+// 检查结果
 if (result.GetValue<bool>())
 {
-	// Pattern detected, perform necessary actions
+	// 检测到模式，执行必要操作
 }
 ```
 

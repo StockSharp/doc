@@ -21,8 +21,8 @@
 // It is assumed that orderBook is an IOrderBookMessage object obtained from StockSharp
 var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 
-// Now, sparseDepth contains a representation of the original order book,
-// where all possible price levels are considered, including those without any orders.
+// 现在 sparseDepth 包含原始订单簿的表示，
+// 其中考虑所有可能的价格层级，包括没有任何订单的层级。
 ```
 
 在这个例子中，[Sparse](xref:StockSharp.Messages.Extensions.Sparse(StockSharp.Messages.IOrderBookMessage,System.Decimal,System.Nullable{System.Decimal},System.Int32)) 被用来创建一个稀疏的订单簿，这允许显示所有价格级别，即使那些没有任何活跃订单的价格级别也能显示。这对于分析可能作为支撑或阻力位的“空”级别可能很有用。

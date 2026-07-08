@@ -28,14 +28,14 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Create subscription
+	// 创建订阅
 	var subscription = SubscribeCandles(CandleType);
 	
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -52,23 +52,23 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Check if the candle is finished
+	// 检查蜡烛是否已完成
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Check if the strategy is ready for trading
+	// 检查策略是否已准备好交易
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// Countertrend strategy: buy on bearish candle, sell on bullish candle
+	// 逆势策略：看跌蜡烛买入，看涨蜡烛卖出
 	if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
 	{
-		// Bullish candle - sell
+		// 看涨蜡烛 - 卖出
 		SellMarket(Volume + Math.Abs(Position));
 	}
 	else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
 	{
-		// Bearish candle - buy
+		// 看跌蜡烛 - 买入
 		BuyMarket(Volume + Math.Abs(Position));
 	}
 }

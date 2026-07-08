@@ -12,7 +12,7 @@ public partial class MainWindow
 	private readonly Connector _connector;
 	private const string _connectorFile = "ConnectorFile.json";
 
-	// Path to historical data
+	// Pfad zu historischen Daten
 	private readonly string _pathHistory = Paths.HistoryDataPath;
 
 	private readonly IFileSystem _fileSystem = Paths.FileSystem;
@@ -28,14 +28,14 @@ public partial class MainWindow
 
 		_executor = TimeSpan.FromSeconds(1).CreateExecutorAndRun(ex => ex.LogError());
 
-		// Initialize storages
+		// Speicher initialisieren
 		var entityRegistry = new CsvEntityRegistry(_fileSystem, _pathHistory, _executor);
 		var storageRegistry = new StorageRegistry
 		{
 			DefaultDrive = new LocalMarketDataDrive(_fileSystem, _pathHistory)
 		};
 
-		// Create connector with configured storages
+		// Connector mit konfigurierten Speichern erstellen
 		_connector = new Connector(
 			entityRegistry.Securities,
 			entityRegistry.PositionStorage,
@@ -43,11 +43,11 @@ public partial class MainWindow
 			storageRegistry,
 			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
-		// Register message adapter provider
+		// Provider für Nachrichtenadapter registrieren
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-		// Load connector settings if file exists
+		// Connector-Einstellungen laden, falls die Datei existiert
 		if (_fileSystem.FileExists(_connectorFile))
 		{
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
@@ -62,24 +62,24 @@ public partial class MainWindow
 ## Verbindungseinrichtung
 
 ```cs
-// Method for configuring connection parameters
+// Methode zum Konfigurieren der Verbindungsparameter
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
-	// Call connector configuration window
+	// Connector-Konfigurationsfenster öffnen
 	if (_connector.Configure(this))
 	{
-		// Save settings to file
+		// Einstellungen in Datei speichern
 		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
-// Method for connecting to trading system
+// Methode zum Verbinden mit dem Handelssystem
 private void Connect_Click(object sender, RoutedEventArgs e)
 {
-	// Set connector as data source for instrument selection
+	// Connector als Datenquelle für die Instrumentenauswahl festlegen
 	SecurityPicker.SecurityProvider = _connector;
 
-	// Subscribe to candle reception event
+	// Ereignis zum Empfang von Kerzen abonnieren
 	_connector.CandleReceived += Connector_CandleReceived;
 
 	// Connect
@@ -90,10 +90,10 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 ## Verarbeitung von Candles und Anzeige im Chart
 
 ```cs
-// Handler for candle reception event
+// Handler für das Kerzenempfangsereignis
 private void Connector_CandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Draw candle on chart
+	// Kerze im Diagramm zeichnen
 	Chart.Draw(_candleElement, candle);
 }
 ```
@@ -101,44 +101,44 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 ## Erstellung eines Candle-Abonnements
 
 ```cs
-// Method called when an instrument is selected
+// Methode, die bei Auswahl eines Instruments aufgerufen wird
 private void SecurityPicker_SecuritySelected(Security security)
 {
-	// Check if instrument is selected
+	// Prüfen, ob ein Instrument ausgewählt ist
 	if (security == null)
 		return;
 
-	// Unsubscribe from previous subscription if it exists
+	// Vorheriges Abonnement abbestellen, falls vorhanden
 	if (_subscription != null)
 		_connector.UnSubscribe(_subscription);
 
-	// Create new subscription for selected instrument
+	// Neues Abonnement für das ausgewählte Instrument erstellen
 	_subscription = new(CandleDataTypeEdit.DataType, security)
 	{
 		MarketData =
 		{
-			// Request historical data for last 720 days
+			// Historische Daten für die letzten 720 Tage anfordern
 			From = DateTime.Today.AddDays(-720),
 
-			// Mode: load historical data and build in real-time
+			// Modus: historische Daten laden und in Echtzeit erstellen
 			BuildMode = MarketDataBuildModes.LoadAndBuild,
 		}
 	};
 
-	// Configure chart
+	// Diagramm konfigurieren
 	Chart.ClearAreas();
 
-	// Create chart area and element for displaying candles
+	// Diagrammbereich und Element zur Anzeige von Kerzen erstellen
 	var area = new ChartArea();
 	_candleElement = new ChartCandleElement();
 
-	// Add area and element to chart
+	// Bereich und Element zum Diagramm hinzufügen
 	Chart.AddArea(area);
 
-	// Link chart element with subscription for automatic drawing
+	// Diagrammelement für automatisches Zeichnen mit Abonnement verknüpfen
 	Chart.AddElement(area, _candleElement, _subscription);
 
-	// Start subscription
+	// Abonnement starten
 	_connector.Subscribe(_subscription);
 }
 ```
@@ -169,7 +169,7 @@ using StockSharp.Xaml.Charting;
 using StockSharp.Charting;
 
 /// <summary>
-/// Interaction logic for MainWindow.xaml
+/// Interaktionslogik für MainWindow.xaml
 /// </summary>
 public partial class MainWindow
 {
@@ -202,7 +202,7 @@ public partial class MainWindow
 			storageRegistry,
 			new SnapshotRegistry(_fileSystem, "SnapshotRegistry"));
 
-		// registering all connectors
+		// alle Connectoren registrieren
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
@@ -255,7 +255,7 @@ public partial class MainWindow
 			}
 		};
 
-		//-----------------Chart--------------------------------
+		// -----------------Diagramm--------------------------------
 		Chart.ClearAreas();
 
 		var area = new ChartArea();
@@ -299,10 +299,10 @@ Sie können dieses Beispiel um folgende Funktionen erweitern:
 ### Verfolgung des Übergangs in den Echtzeitmodus
 
 ```cs
-// Subscription to the event of transition to real-time mode
+// Abonnement für das Ereignis des Übergangs in den Echtzeitmodus
 _connector.SubscriptionOnline += OnSubscriptionOnline;
 
-// Event handler
+// Ereignishandler
 private void OnSubscriptionOnline(Subscription subscription)
 {
 	if (subscription == _subscription)
@@ -315,7 +315,7 @@ private void OnSubscriptionOnline(Subscription subscription)
 ### Konfiguration des Zeitraums für das Laden der Historie
 
 ```cs
-// Setting history loading period
+// Zeitraum zum Laden der Historie festlegen
 private void SetHistoryPeriod(int days)
 {
 	if (_subscription != null)
@@ -332,13 +332,13 @@ private void SetHistoryPeriod(int days)
 ### Zusätzliche Candle-Verarbeitung
 
 ```cs
-// Extended candle processing with information output
+// Erweiterte Kerzenverarbeitung mit Informationsausgabe
 private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage candle)
 {
-	// Draw candle on chart
+	// Kerze im Diagramm zeichnen
 	Chart.Draw(_candleElement, candle);
 
-	// Output information about candle to logs
+	// Informationen zur Kerze in Logs ausgeben
 	this.GuiAsync(() =>
 	{
 		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";

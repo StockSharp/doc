@@ -9,16 +9,16 @@
 为了确保与 StockSharp 平台的兼容性，特别是在云回测时，**你不应该在策略构造函数中添加参数**：
 
 ```cs
-// Correct: constructor without parameters
+// 正确：无参数构造函数
 public class SmaStrategy : Strategy
 {
 	public SmaStrategy()
 	{
-		// Parameters initialization
+		// 参数初始化
 	}
 }
 
-// Incorrect: constructor with parameters
+// 错误：带参数的构造函数
 public class SmaStrategy : Strategy
 {
 	public SmaStrategy(int longLength, int shortLength) // Don't use this approach
@@ -37,7 +37,7 @@ StockSharp 平台使用无参数构造函数创建策略实例。如果你的策
 不要创建常规的 C# 属性然后覆盖 `Save` 和 `Load` 方法，而是对所有可自定义参数使用 [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1)：
 
 ```cs
-// Correct: using StrategyParam
+// 正确：使用 StrategyParam
 private readonly StrategyParam<int> _longSmaLength;
 
 public int LongSmaLength
@@ -52,7 +52,7 @@ public SmaStrategy()
 						.SetDisplay("Long SMA length", string.Empty, "Base settings");
 }
 
-// Incorrect: using regular properties
+// 错误：使用普通属性
 private int _longSmaLength = 80; // Don't use this approach
 
 public int LongSmaLength
@@ -75,12 +75,12 @@ public int LongSmaLength
 不要直接访问用户界面元素，而是使用 StockSharp 提供的抽象。
 
 ```cs
-// Correct approach: using IChart
+// 正确方式：使用 IChart
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Get the chart provided by the runtime environment
+	// 获取运行环境提供的图表
 	_chart = GetChart();
 	
 	if (_chart != null)
@@ -91,13 +91,13 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// Chart is unavailable (e.g., in Runner or cloud backtesting)
-		// Strategy continues to work without visualization
+		// 策略在没有可视化时仍继续运行
 	}
 }
 
 private void InitChart()
 {
-	// Configure chart through the abstract interface
+	// 通过抽象接口配置图表
 	_chart.ClearAreas();
 	var area = _chart.AddArea();
 	_chartCandleElement = area.AddCandles();
@@ -139,10 +139,10 @@ private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue lon
 在 StockSharp 中，**你不需要为数据处理创建额外的线程**。所有事件（市场数据、交易）都在单个线程中进行：
 
 ```cs
-// Correct: using standard event handlers
+// 正确：使用标准事件处理器
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Process candle in the main thread
+	// 在主线程中处理 K线
 	var longSmaIsFormedPrev = _longSma.IsFormed;
 	var ls = _longSma.Process(candle);
 	var ss = _shortSma.Process(candle);
@@ -150,10 +150,10 @@ private void ProcessCandle(ICandleMessage candle)
 	// ...
 }
 
-// Incorrect: creating additional threads
+// 错误：创建额外线程
 private void ProcessCandle(ICandleMessage candle)
 {
-	// DON'T do this
+	// 不要这样做
 	Task.Run(() => {
 		var longSmaIsFormedPrev = _longSma.IsFormed;
 		// ...
@@ -166,7 +166,7 @@ private void ProcessCandle(ICandleMessage candle)
 由于所有事件都在单线程中处理，**无需使用同步对象**：
 
 ```cs
-// Correct: regular processing without synchronization
+// 正确：无需同步的常规处理
 private void ProcessCandle(ICandleMessage candle)
 {
 	var ls = _longSma.Process(candle);
@@ -174,7 +174,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// ...
 }
 
-// Incorrect: unnecessary synchronization
+// 错误：不必要的同步
 private readonly object _syncLock = new object(); // Not needed
 
 private void ProcessCandle(ICandleMessage candle)
@@ -194,17 +194,17 @@ private void ProcessCandle(ICandleMessage candle)
 不要直接访问外部资源（文件、数据库、网络），而应使用 StockSharp 平台提供的功能：
 
 ```cs
-// Correct: using built-in mechanisms for data saving
+// 正确：使用内置机制保存数据
 protected override void OnStopped()
 {
-	// Data is automatically saved through strategy parameters
+	// 数据会通过策略参数自动保存
 	base.OnStopped();
 }
 
-// Incorrect: direct access to external resources
+// 错误：直接访问外部资源
 protected override void OnStopped()
 {
-	// DON'T do this
+	// 不要这样做
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
 	
 	// or this
@@ -234,7 +234,7 @@ public override void Save(SettingsStorage settings)
 {
 	base.Save(settings); // First save strategy parameters
 	
-	// Then save custom data
+	// 然后保存自定义数据
 	settings.SetValue("CustomState", _customState);
 	settings.SetValue("LastSignalTime", _lastSignalTime);
 }
@@ -243,7 +243,7 @@ public override void Load(SettingsStorage settings)
 {
 	base.Load(settings); // First load strategy parameters
 	
-	// Then load custom data
+	// 然后加载自定义数据
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");
 	
@@ -273,7 +273,7 @@ protected override void OnStarted2(DateTime time)
 	
 	var subscription = new Subscription(Series, Security);
 
-	// Correct: using rules for data processing
+	// 正确：使用规则处理数据
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
@@ -292,7 +292,7 @@ protected override void OnStarted2(DateTime time)
 3. **条件组合** - 规则可以使用 `And`、`Or` 等运算符组合，从而创建复杂的激活条件：
 
 ```cs
-// Example of combining rules
+// 组合规则示例
 Security
 	.WhenNewTrade()
 	.And(Portfolio.WhenMoneyChanged())
@@ -365,7 +365,7 @@ public class SmaStrategy : Strategy
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
 		
-		// Initialize chart if available
+		// 如果可用则初始化图表
 		_chart = GetChart();
 		if (_chart != null)
 			InitChart();
@@ -401,7 +401,7 @@ public class SmaStrategy : Strategy
 		var ls = _longSma.Process(candle);
 		var ss = _shortSma.Process(candle);
 		
-		// Draw on chart if available
+		// 如果可用则在图表上绘制
 		if (_chart != null)
 		{
 			var data = _chart.CreateData();
@@ -421,7 +421,7 @@ public class SmaStrategy : Strategy
 		if (isShortLessCurrent == isShortLessPrev)
 			return;
 			
-		// Trading logic
+		// 交易逻辑
 		var volume = Volume + Math.Abs(Position);
 
 		if (isShortLessCurrent)

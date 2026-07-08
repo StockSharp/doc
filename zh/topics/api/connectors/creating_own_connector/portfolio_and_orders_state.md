@@ -19,13 +19,13 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 {
 	var transId = lookupMsg.TransactionId;
 
-	// Send confirmation of receiving the request
+	// 发送已收到请求的确认
 	await SendSubscriptionReplyAsync(transId, cancellationToken);
 
 	if (!lookupMsg.IsSubscribe)
 		return;
 
-	// Send a message with information about the portfolio
+	// 发送包含投资组合信息的消息
 	await SendOutMessageAsync(new PortfolioMessage
 	{
 		PortfolioName = PortfolioName,
@@ -33,7 +33,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 		OriginalTransactionId = transId,
 	}, cancellationToken);
 
-	// Request current account balances
+	// 请求当前账户余额
 	var accounts = await _restClient.GetAccounts(cancellationToken);
 
 	foreach (var account in accounts)
@@ -53,7 +53,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 		.TryAdd(PositionChangeTypes.BlockedValue, (decimal)account.Hold, true), cancellationToken);
 	}
 
-	// Send a message about successful completion of the subscription
+	// 发送订阅成功完成消息
 	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```
@@ -73,13 +73,13 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 ```cs
 public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, CancellationToken cancellationToken)
 {
-	// Send confirmation of receiving the request
+	// 发送已收到请求的确认
 	await SendSubscriptionReplyAsync(statusMsg.TransactionId, cancellationToken);
 
 	if (!statusMsg.IsSubscribe)
 		return;
 
-	// Request the list of current orders
+	// 请求当前订单列表
 	var orders = await _restClient.GetOrders(cancellationToken);
 
 	foreach (var order in orders)
@@ -87,11 +87,11 @@ public override async ValueTask OrderStatusAsync(OrderStatusMessage statusMsg, C
 
 	if (!statusMsg.IsHistoryOnly())
 	{
-		// Set up a subscription to receive order updates in real time
+		// 设置实时接收订单更新的订阅
 		await _socketClient.SubscribeOrders(cancellationToken);
 	}
 
-	// Send a message about successful completion of the subscription
+	// 发送订阅成功完成消息
 	await SendSubscriptionResultAsync(statusMsg, cancellationToken);
 }
 
@@ -102,7 +102,7 @@ private async ValueTask ProcessOrder(Order order, long originTransId, Cancellati
 
 	var state = order.Status.ToOrderState();
 
-	// Create and send a message with information about the order
+	// 创建并发送包含订单信息的消息
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		ServerTime = originTransId == 0 ? CurrentTime.ConvertToUtc() : order.CreationTime,
@@ -131,7 +131,7 @@ private async ValueTask ProcessOrder(Order order, long originTransId, Cancellati
 ```cs
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
-	// Process the received order update
+	// 处理收到的订单更新
 	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
 	await ProcessOrder(order, 0, cancellationToken);
 }

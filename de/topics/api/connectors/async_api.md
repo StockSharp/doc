@@ -92,7 +92,7 @@ private readonly Connector _connector = new();
 
 public async Task PlaceAndManageOrderAsync(Security security, Portfolio portfolio, CancellationToken cancellationToken)
 {
-    // Create an order
+    // Order erstellen
     var order = new Order
     {
         Security = security,
@@ -103,10 +103,10 @@ public async Task PlaceAndManageOrderAsync(Security security, Portfolio portfoli
         Type = OrderTypes.Limit,
     };
 
-    // Async registration
+    // Asynchrone Registrierung
     await _connector.RegisterOrderAsync(order, cancellationToken);
 
-    // ... wait for market condition changes ...
+    // ... auf Änderungen der Marktbedingungen warten ...
 
     // Async price edit (if supported)
     if (_connector.IsOrderEditable(order) == true)
@@ -116,7 +116,7 @@ public async Task PlaceAndManageOrderAsync(Security security, Portfolio portfoli
         await _connector.EditOrderAsync(order, changes, cancellationToken);
     }
 
-    // Async cancellation
+    // Asynchrone Stornierung
     await _connector.CancelOrderAsync(order, cancellationToken);
 }
 ```

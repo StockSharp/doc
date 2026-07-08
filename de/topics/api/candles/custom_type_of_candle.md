@@ -8,15 +8,15 @@
 
    ```cs
    /// <summary>
-   /// Candle formed based on the delta of buy and sell volumes.
+   /// Kerze, die auf Basis des Deltas von Kauf- und Verkaufsvolumen gebildet wird.
    /// </summary>
    public class DeltaCandleMessage : CandleMessage
    {
-       // We get the message type identifier from the helper
-       // to use the same value in RegisterCandleType
+       // Nachrichtentypkennung aus dem Helper abrufen
+       // um denselben Wert in RegisterCandleType zu verwenden
 
        /// <summary>
-       /// Initialize a new instance of <see cref="DeltaCandleMessage"/>.
+       /// Neue Instanz von <see cref="DeltaCandleMessage"/> initialisieren.
        /// </summary>
        public DeltaCandleMessage()
            : base(DeltaCandleHelper.DeltaCandleType)
@@ -24,19 +24,19 @@
        }
 
        /// <summary>
-       /// Delta threshold value for candle formation.
+       /// Delta-Schwellenwert für die Kerzenbildung.
        /// </summary>
        public decimal DeltaThreshold { get; set; }
 
        /// <summary>
-       /// Current delta value.
+       /// Aktueller Delta-Wert.
        /// </summary>
        public decimal CurrentDelta { get; set; }
 
        /// <summary>
-       /// Create a copy of <see cref="DeltaCandleMessage"/>.
+       /// Kopie von <see cref="DeltaCandleMessage"/> erstellen.
        /// </summary>
-       /// <returns>Copy.</returns>
+       /// <returns>Kopie.</returns>
        public override Message Clone()
        {
            return CopyTo(new DeltaCandleMessage
@@ -47,7 +47,7 @@
        }
 
        /// <summary>
-       /// Candle parameter.
+       /// Kerzenparameter.
        /// </summary>
        public override object Arg
        {
@@ -56,7 +56,7 @@
        }
 
        /// <summary>
-       /// Type of candle argument.
+       /// Typ des Kerzenarguments.
        /// </summary>
        public override Type ArgType => typeof(decimal);
    }
@@ -68,32 +68,32 @@
    public static class DeltaCandleHelper
    {
        /// <summary>
-       /// Define a unique MessageType for delta-candles.
+       /// Eindeutigen MessageType für Delta-Kerzen definieren.
        /// </summary>
        public const MessageTypes DeltaCandleType = (MessageTypes)10001;
 
        /// <summary>
-       /// <see cref="DeltaCandleMessage"/> data type.
+       /// Datentyp <see cref="DeltaCandleMessage"/>.
        /// </summary>
        public static readonly DataType CandleDelta =
            DataType.Create(typeof(DeltaCandleMessage)).Immutable();
 
        /// <summary>
-       /// Create a data type for delta-candles.
+       /// Datentyp für Delta-Kerzen erstellen.
        /// </summary>
-       /// <param name="threshold">Delta threshold value.</param>
-       /// <returns>Data type.</returns>
+       /// <param name="threshold">Delta-Schwellenwert.</param>
+       /// <returns>Datentyp.</returns>
        public static DataType Delta(this decimal threshold)
        {
            return DataType.Create(typeof(DeltaCandleMessage), threshold);
        }
 
        /// <summary>
-       /// Register the delta-candle type in the system.
+       /// Delta-Kerzentyp im System registrieren.
        /// </summary>
        public static void RegisterDeltaCandleType()
        {
-           // Register new candle type in StockSharp
+           // Neuen Kerzentyp in StockSharp registrieren
            Extensions.RegisterCandleType<decimal>(
                typeof(DeltaCandleMessage),      // Candle message type
                DeltaCandleType,                // Message type
@@ -111,14 +111,14 @@
 
    ```cs
    /// <summary>
-   /// Candle builder for <see cref="DeltaCandleMessage"/> type.
+   /// Kerzen-Builder für den Typ <see cref="DeltaCandleMessage"/>.
    /// </summary>
    public class DeltaCandleBuilder : CandleBuilder<DeltaCandleMessage>
    {
        /// <summary>
-       /// Initializes a new instance of <see cref="DeltaCandleBuilder"/>.
+       /// Initialisiert eine neue Instanz von <see cref="DeltaCandleBuilder"/>.
        /// </summary>
-       /// <param name="exchangeInfoProvider">Exchange information provider.</param>
+       /// <param name="exchangeInfoProvider">Börseninformationsprovider.</param>
        public DeltaCandleBuilder(IExchangeInfoProvider exchangeInfoProvider)
            : base(exchangeInfoProvider)
        {
@@ -143,7 +143,7 @@
        /// <inheritdoc />
        protected override bool IsCandleFinishedBeforeChange(ICandleBuilderSubscription subscription, DeltaCandleMessage candle, ICandleBuilderValueTransform transform)
        {
-           // The candle closes when the absolute value of delta exceeds the threshold
+           // Die Kerze wird geschlossen, wenn der absolute Delta-Wert den Schwellenwert überschreitet
            return Math.Abs(candle.CurrentDelta) >= candle.DeltaThreshold;
        }
 
@@ -152,7 +152,7 @@
        {
            base.UpdateCandle(subscription, candle, transform);
 
-           // Update delta based on the trade side
+           // Delta anhand der Trade-Seite aktualisieren
            if (transform.Side == Sides.Buy)
                candle.CurrentDelta += transform.Volume ?? 0;
            else if (transform.Side == Sides.Sell)
@@ -166,34 +166,34 @@
    ```cs
    private Connector _connector;
    ...
-   // Register delta-candle type in the system
+   // Delta-Kerzentyp im System registrieren
    DeltaCandleHelper.RegisterDeltaCandleType();
 
-   // Register the delta-candle builder
+   // Delta-Kerzen-Builder registrieren
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
 5. Erstellen Sie ein Abonnement für Candles vom Typ `DeltaCandleMessage` und fordern Sie Daten dafür an:
 
    ```cs
-   // Delta threshold value
+   // Delta-Schwellenwert
    decimal deltaThreshold = 1000m;
 
-   // Create a subscription for delta-candles
+   // Abonnement für Delta-Kerzen erstellen
    var subscription = new Subscription(
-       // Use our extension method to create a data type
+       // Unsere Erweiterungsmethode zum Erstellen eines Datentyps verwenden
        deltaThreshold.Delta(),
        security)
    {
        MarketData =
        {
-           // Specify that candles will be built from ticks
+           // Angeben, dass Kerzen aus Ticks erstellt werden
            BuildMode = MarketDataBuildModes.Build,
            BuildFrom = DataType.Ticks
        }
    };
 
-   // Subscribe to the candle received event
+   // Ereignis zum Empfang einer Kerze abonnieren
    _connector.CandleReceived += (sub, candle) =>
    {
        if (sub != subscription)
@@ -201,19 +201,19 @@
 
        var deltaCandle = (DeltaCandleMessage)candle;
 
-       // Process delta-candle
+       // Delta-Kerze verarbeiten
        Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
 
-   // Subscribe to the online mode transition
+   // Übergang in den Online-Modus abonnieren
    _connector.SubscriptionOnline += sub =>
    {
        if (sub == subscription)
            Console.WriteLine("Delta-candle subscription has transitioned to online mode");
    };
 
-   // Start the subscription
+   // Abonnement starten
    _connector.Subscribe(subscription);
    ```
 
@@ -252,7 +252,7 @@ public class DeltaCandleStrategy : Strategy
 
 	public DeltaCandleStrategy()
 	{
-		// Strategy parameters
+		// Strategieparameter
 		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
 			.SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
 			.SetGreaterThanZero()
@@ -275,7 +275,7 @@ public class DeltaCandleStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Chart initialization, if available
+		// Diagramm initialisieren, falls verfügbar
 		_chart = GetChart();
 		if (_chart != null)
 		{
@@ -286,7 +286,7 @@ public class DeltaCandleStrategy : Strategy
 			_deltaIndicatorElement.Color = System.Drawing.Color.Purple;
 		}
 
-		// Create a subscription for delta-candles
+		// Abonnement für Delta-Kerzen erstellen
 		var subscription = new Subscription(DeltaThreshold.Delta(), Security)
 		{
 			MarketData =
@@ -296,19 +296,19 @@ public class DeltaCandleStrategy : Strategy
 			}
 		};
 
-		// Create a rule for processing delta-candles
+		// Regel zur Verarbeitung von Delta-Kerzen erstellen
 		this
 			.WhenCandleReceived(subscription)
 			.Do(ProcessDeltaCandle)
 			.Apply(this);
 
-		// Start the subscription
+		// Abonnement starten
 		Subscribe(subscription);
 	}
 
 	private void ProcessDeltaCandle(ICandleMessage candle)
 	{
-		// Draw on the chart, if available
+		// Im Diagramm zeichnen, falls verfügbar
 		if (_chart != null)
 		{
 			var deltaCandle = (DeltaCandleMessage)candle;
@@ -321,37 +321,37 @@ public class DeltaCandleStrategy : Strategy
 			_chart.Draw(data);
 		}
 
-		// Process only finished candles
+		// Nur abgeschlossene Kerzen verarbeiten
 		if (candle.State != CandleStates.Finished)
 			return;
 
 		var deltaCandle = (DeltaCandleMessage)candle;
 
-		// Check if delta is sufficient for a signal
+		// Prüfen, ob das Delta für ein Signal ausreicht
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
 			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
 			return;
 		}
 
-		// Operation direction depends on the delta sign
+		// Operationsrichtung hängt vom Vorzeichen des Deltas ab
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 
 		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
 
-		// Use the candle's close price to determine the price
+		// Schlusskurs der Kerze zur Preisbestimmung verwenden
 		var price = deltaCandle.ClosePrice;
 		var volume = Volume;
 
-		// If we already have a position in the opposite direction,
-		// increase the volume to close the existing position
+		// Wenn bereits eine Position in Gegenrichtung vorhanden ist,
+		// Volumen erhöhen, um die bestehende Position zu schließen
 		if ((Position < 0 && direction == Sides.Buy) ||
 			(Position > 0 && direction == Sides.Sell))
 		{
 			volume = Math.Max(volume, Math.Abs(Position) + volume);
 		}
 
-		// Register an order
+		// Order registrieren
 		RegisterOrder(this.CreateOrder(direction, price, volume));
 	}
 }

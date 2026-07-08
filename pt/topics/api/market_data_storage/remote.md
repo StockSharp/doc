@@ -9,15 +9,15 @@ Além do armazenamento local, a API disponibiliza a capacidade de trabalhar com 
 Para trabalhar com armazenamento remoto, use a classe [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataDrive).
 
 ```cs
-// Creating RemoteMarketDataDrive
+// Criar RemoteMarketDataDrive
 var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress, new FixMessageAdapter(new IncrementalIdGenerator()))
 {
 	Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
 };
 
-// This code creates an instance of RemoteMarketDataDrive to connect to remote storage.
-// It uses the default address and FixMessageAdapter for communication.
-// Credentials are set for authentication.
+// Este código cria uma instância de RemoteMarketDataDrive para conectar ao armazenamento remoto.
+// Ele usa o endereço padrão e FixMessageAdapter para comunicação.
+// As credenciais são definidas para autenticação.
 ```
 
 ## Carregar Informação de Instrumentos
@@ -25,7 +25,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 Antes de carregar dados de mercado, é necessário obter informação sobre os instrumentos disponíveis.
 
 ```cs
-// Loading instrument information
+// Carregar informações de instrumentos
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
@@ -33,8 +33,8 @@ remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Secur
 
 var securities = securityStorage.LookupAll();
 
-// This code loads information about all available instruments from the remote storage.
-// The loaded instruments are saved in local storage and output to the console.
+// Este código carrega informações sobre todos os instrumentos disponíveis do armazenamento remoto.
+// Os instrumentos carregados são salvos no armazenamento local e exibidos no console.
 ```
 
 ## Carregar Dados de Mercado
@@ -42,7 +42,7 @@ var securities = securityStorage.LookupAll();
 Depois de obter a informação dos instrumentos, pode avançar para o carregamento dos dados de mercado.
 
 ```cs
-// Loading market data
+// Carregar dados de mercado
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
@@ -51,7 +51,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 	// ... (data loading code)
 }
 
-// This loop iterates through all available data types for the specified instrument.
+// Este loop percorre todos os tipos de dados disponíveis para o instrumento especificado.
 // For each data type, a local storage is created and remote storage is accessed.
 ```
 
@@ -60,7 +60,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 Os dados carregados podem ser guardados localmente para utilização posterior.
 
 ```cs
-// Saving data locally
+// Salvar dados localmente
 foreach (var dateTime in dates)
 {
 	using (var stream = remoteStorage.LoadStream(dateTime))
@@ -74,7 +74,7 @@ foreach (var dateTime in dates)
 	// ... (data output code)
 }
 
-// This code loads data for each date from the remote storage and saves it to local storage.
+// Este código carrega dados de cada data do armazenamento remoto e os salva no armazenamento local.
 ```
 
 ## Usar Dados para Testes
@@ -89,12 +89,12 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 ## Obter Intervalos de Datas Disponíveis
 
 ```cs
-// Working with various data types
+// Trabalhar com vários tipos de dados
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	// ... (data processing code)
 
-	// Error handling and logging
+	// Tratamento de erros e logging
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
 	Console.WriteLine($"{dataType}={dateTime}");
 }

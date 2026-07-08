@@ -7,7 +7,7 @@
 ## 主要组件
 
 ```cs
-// Main components
+// 主要组件
 public class SimpleOrderRulesStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ public class SimpleOrderRulesStrategy : Strategy
 - 为处理订单注册事件创建两套规则
 
 ```cs
-// OnStarted method
+// OnStarted 方法
 protected override void OnStarted2(DateTime time)
 {
 	var sub = new Subscription(DataType.Ticks, Security);
@@ -70,7 +70,7 @@ protected override void OnStarted2(DateTime time)
 		RegisterOrder(order);
 	}).Once().Apply(this);
 
-	// Sending request for subscribe to market data.
+	// 发送市场数据订阅请求。
 	Subscribe(sub);
 
 	base.OnStarted2(time);

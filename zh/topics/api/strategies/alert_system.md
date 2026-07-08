@@ -24,7 +24,7 @@ StockSharp 中的策略具有内置警报系统，可发送各种类型的通知
 用于发送具有指定类型、标题和消息的警报的基本方法：
 
 ```csharp
-// With caption and message
+// 带标题和消息
 Alert(AlertNotifications type, string caption, string message);
 
 // With automatic caption (uses the strategy name)
@@ -107,7 +107,7 @@ public class AlertStrategy : Strategy
             .Bind(ProcessCandle)
             .Start();
 
-        // Alert about strategy start
+        // 策略启动提醒
         AlertLog("Strategy started, tracked level: " + PriceLevel);
     }
 
@@ -116,7 +116,7 @@ public class AlertStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Price crossed the level from below upward
+        // 价格自下向上穿越水平
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
             AlertPopup("Price crossed level " + PriceLevel + " upward!");
@@ -124,7 +124,7 @@ public class AlertStrategy : Strategy
             BuyMarket();
         }
 
-        // Price crossed the level from above downward
+        // 价格自上向下穿越水平
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
             Alert(AlertNotifications.Telegram, "Trading signal",

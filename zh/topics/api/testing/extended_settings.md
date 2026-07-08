@@ -29,7 +29,7 @@
 为了进行正确的策略测试，有必要订阅所需的市场数据类型。即使策略是在K线上测试的，为了正确的交易模拟，也需要订阅逐笔交易数据：
 
 ```cs
-// Create a subscription to tick trades
+// 创建 tick 成交订阅
 var tickSubscription = new Subscription(DataType.Ticks, security);
 _connector.Subscribe(tickSubscription);
 ```
@@ -37,7 +37,7 @@ _connector.Subscribe(tickSubscription);
 如果策略需要订单簿数据：
 
 ```cs
-// Create a subscription to order books
+// 创建订单簿订阅
 var depthSubscription = new Subscription(DataType.MarketDepth, security);
 _connector.Subscribe(depthSubscription);
 ```
@@ -47,10 +47,10 @@ _connector.Subscribe(depthSubscription);
 如果没有历史订单簿，但策略测试需要它们，你可以启用订单簿生成：
 
 ```cs
-// Create an order book generator with trend behavior
+// 创建具有趋势行为的订单簿生成器
 var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId());
 
-// Send a subscription message to the generator
+// 向生成器发送订阅消息
 _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 {
 	IsSubscribe = true,
@@ -96,19 +96,19 @@ mdGenerator.MaxSpreadStepCount = 5;
 ## 全面测试配置示例
 
 ```cs
-// Create a historical connection
+// 创建历史连接
 var connector = new HistoryEmulationConnector();
 
-// Configure basic parameters
+// 配置基本参数
 connector.MarketTimeChangedInterval = TimeSpan.FromSeconds(10);
 connector.EmulationAdapter.Emulator.Settings.Latency = TimeSpan.FromMilliseconds(100);
 connector.EmulationAdapter.Emulator.Settings.MatchOnTouch = false;
 
-// Load historical data
+// 加载历史数据
 var storage = new StorageRegistry();
 var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
-// Create a subscription to candles
+// 创建 K线订阅
 var candleSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -122,11 +122,11 @@ var candleSubscription = new Subscription(
 };
 connector.Subscribe(candleSubscription);
 
-// Create a subscription to ticks for correct emulation
+// 创建逐笔成交订阅以便正确仿真
 var tickSubscription = new Subscription(DataType.Ticks, security);
 connector.Subscribe(tickSubscription);
 
-// Configure order book generation
+// 配置订单簿生成
 var mdGenerator = new TrendMarketDepthGenerator(security.ToSecurityId())
 {
 	Interval = TimeSpan.FromSeconds(1),
@@ -145,12 +145,12 @@ connector.MarketDataAdapter.SendInMessage(new GeneratorMessage
 	Generator = mdGenerator
 });
 
-// Subscribe to data reception
+// 订阅数据接收
 connector.CandleReceived += OnCandleReceived;
 connector.TickTradeReceived += OnTickReceived;
 connector.OrderBookReceived += OnOrderBookReceived;
 
-// Start testing
+// 开始测试
 connector.Connect();
 ```
 
@@ -159,13 +159,13 @@ connector.Connect();
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Processing received candles
+	// 处理收到的蜡烛
 	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
-	// Processing received ticks
+	// 处理收到的逐笔成交
 	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
 }
 
@@ -176,10 +176,10 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var bestAsk = orderBook.GetBestAsk();
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 	
-	// Processing received order books
+	// 处理收到的订单簿
 	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
 	
-	// Getting price by order side
+	// 按订单方向获取价格
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 	
@@ -192,23 +192,23 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 在使用 IOrderBookMessage 处理订单簿时，你可以使用以下扩展方法：
 
 ```cs
-// Get the best bid
+// 获取最佳买价
 var bestBid = orderBook.GetBestBid();
 
-// Get the best ask
+// 获取最佳卖价
 var bestAsk = orderBook.GetBestAsk();
 
-// Get the middle of the spread
+// 获取价差中点
 var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 
-// Get the price by order side
+// 按订单方向获取价格
 var price = orderBook.GetPrice(Sides.Buy); // or Sides.Sell, or null for the middle of the spread
 ```
 
 在处理 Level1 数据时，你也可以获取买卖价差的中间值：
 
 ```cs
-// Get the middle of the spread from a Level1 message
+// 从 Level1 消息获取价差中点
 var spreadMiddle = level1.GetSpreadMiddle(Security.PriceStep);
 ```
 

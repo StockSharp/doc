@@ -38,31 +38,31 @@ public class MarketDepthWindow
 		_connector = connector;
 		_security = security;
 		
-		// Configure order book formatting
+		// 配置订单簿格式
 		DepthCtrl.UpdateFormat(security);
 		
-		// Subscribe to order book reception event
+		// 订阅订单簿接收事件
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		
-		// Create a subscription to order book for the selected instrument
+		// 为所选交易品种创建订单簿订阅
 		_depthSubscription = new Subscription(DataType.MarketDepth, security);
 		
-		// Start subscription
+		// 启动订阅
 		_connector.Subscribe(_depthSubscription);
 	}
 	
-	// Handler for order book reception event
+	// 订单簿接收事件处理器
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
-		// Check if the order book belongs to our subscription
+		// 检查订单簿是否属于我们的订阅
 		if (subscription != _depthSubscription)
 			return;
 			
-		// Update the order book in the user interface thread
+		// 在用户界面线程中更新订单簿
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
 	
-	// Method for unsubscribing when the window is closed
+	// 窗口关闭时取消订阅的方法
 	public void Unsubscribe()
 	{
 		if (_depthSubscription != null)
@@ -90,14 +90,14 @@ public class MarketDepthWithOrdersWindow
 		_connector = connector;
 		_security = security;
 		
-		// Configure order book formatting
+		// 配置订单簿格式
 		DepthCtrl.UpdateFormat(security);
 		
-		// Subscribe to order book and order reception events
+		// 订阅订单簿和订单接收事件
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		_connector.OrderReceived += OnOrderReceived;
 		
-		// Create a subscription to order book
+		// 创建订单簿订阅
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 		
@@ -106,23 +106,23 @@ public class MarketDepthWithOrdersWindow
 		_connector.Subscribe(ordersSubscription);
 	}
 	
-	// Handler for order book reception event
+	// 订单簿接收事件处理器
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
 		if (depth.SecurityId != _security.ToSecurityId())
 			return;
 			
-		// Update the order book in the user interface thread
+		// 在用户界面线程中更新订单簿
 		this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 	}
 	
-	// Handler for order reception event
+	// 订单接收事件处理器
 	private void OnOrderReceived(Subscription subscription, Order order)
 	{
 		if (order.Security != _security)
 			return;
 			
-		// Display the order in the order book
+		// 在订单簿中显示订单
 		this.GuiAsync(() => DepthCtrl.ProcessOrder(
 			order, 
 			order.Price, 
@@ -135,7 +135,7 @@ public class MarketDepthWithOrdersWindow
 ### 从订单簿获取最佳价格
 
 ```cs
-// Method to get best prices from the order book
+// 从订单簿获取最佳价格的方法
 public (decimal? BestBid, decimal? BestAsk) GetBestPrices(IOrderBookMessage depth)
 {
 	if (depth == null)
@@ -153,10 +153,10 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 	if (depth.SecurityId != _security.ToSecurityId())
 		return;
 		
-	// Get best prices
+	// 获取最佳价格
 	var (bestBid, bestAsk) = GetBestPrices(depth);
 	
-	// Calculate and display spread
+	// 计算并显示价差
 	if (bestBid.HasValue && bestAsk.HasValue)
 	{
 		var spread = bestAsk.Value - bestBid.Value;
@@ -168,7 +168,7 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 		});
 	}
 	
-	// Update order book
+	// 更新订单簿
 	this.GuiAsync(() => DepthCtrl.UpdateDepth(depth, _security));
 }
 ```

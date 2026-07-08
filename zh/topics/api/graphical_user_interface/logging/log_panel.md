@@ -21,14 +21,14 @@
 	  				
 ```
 ```cs
-// creating a new instance of LogManager
+// 创建 LogManager 的新实例
 _logManager = new LogManager();
-// adding .NET tracing as a log source.
+// 将 .NET tracing 添加为日志源。
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// adding LogControl as a log listener.
+// 将 LogControl 添加为日志监听器。
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
-// sending test messages from the TraceSource:
+// 从 TraceSource 发送测试消息：
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
 Trace.TraceError("Error test message");

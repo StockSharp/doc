@@ -10,7 +10,7 @@
    var longSma = new SimpleMovingAverage { Length = 80 };
    var shortSma = new SimpleMovingAverage { Length = 30 };
    
-   // It's recommended to add indicators to the strategy collection
+   // É recomendado adicionar indicadores à coleção da estratégia
    Indicators.Add(longSma);
    Indicators.Add(shortSma);
    ```
@@ -20,11 +20,11 @@
    ```cs
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Process the candle with indicators and immediately save the results
+       // Processar a vela com indicadores e salvar imediatamente os resultados
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
        
-       // Use the results for trading decisions
+       // Usar resultados para decisões de negociação
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
            // Buy signal
@@ -40,30 +40,30 @@
 4. **Abordagem recomendada**: usar diretamente os valores obtidos ao chamar o método [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)), em vez de chamar posteriormente [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator)):
 
    ```cs
-   // Example of a strategy with two moving averages
+   // Exemplo de estratégia com duas médias móveis
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Process the candle with indicators and immediately save the results
+       // Processar a vela com indicadores e salvar imediatamente os resultados
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
        
-       // Draw on the chart
+       // Desenhar no gráfico
        DrawCandlesAndIndicators(candle, longValue, shortValue);
        
        if (!IsFormedAndOnlineAndAllowTrading()) 
            return;
            
-       // Use the obtained values for comparison
+       // Usar os valores obtidos para comparação
        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
        
-       // Check if a crossover occurred
+       // Verificar se ocorreu cruzamento
        if (isShortLessCurrent == isShortLessPrev) 
            return;
        
        var volume = Volume + Math.Abs(Position);
        
-       // Trading actions based on the signal
+       // Ações de negociação com base no sinal
        if (isShortLessCurrent)
            SellMarket(volume);
        else
@@ -79,10 +79,10 @@
 5. Abordagem não recomendada (menos eficiente):
 
    ```cs
-   // Suboptimal approach
+   // Abordagem subótima
    foreach (var candle in candles)
    {
-       // Process the candle but ignore the returned value
+       // Processar a vela, mas ignorar o valor retornado
        _longSma.Process(candle);
        _shortSma.Process(candle);
    }
@@ -119,7 +119,7 @@ public class SmaStrategy : Strategy
 	{
 		base.Name = "SMA strategy";
 
-		// Initialize strategy parameters
+		// Inicializar parâmetros da estratégia
 		_longSmaLength = Param(nameof(LongSmaLength), 80);
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30);
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)));
@@ -129,22 +129,22 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Create indicators
+		// Criar indicadores
 		_shortSma = new SimpleMovingAverage { Length = _shortSmaLength.Value };
 		_longSma = new SimpleMovingAverage { Length = _longSmaLength.Value };
 
-		// Add indicators to the strategy collection
+		// Adicionar indicadores à coleção da estratégia
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
 
-		// Initialize chart
+		// Inicializar gráfico
 		_chart = GetChart();
 		if (_chart != null)
 		{
 			InitChart();
 		}
 		
-		// Subscribe to candles
+		// Assinar velas
 		var subscription = new Subscription(_series.Value, Security);
 
 		Connector
@@ -157,28 +157,28 @@ public class SmaStrategy : Strategy
 
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Process the candle with indicators and save the results
+		// Processar a vela com indicadores e salvar resultados
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 		
-		// Draw on the chart
+		// Desenhar no gráfico
 		DrawCandlesAndIndicators(candle, longValue, shortValue);
 		
-		// Check conditions for trading
+		// Verificar condições de negociação
 		if (!IsFormedAndOnlineAndAllowTrading()) 
 			return;
 
-		// Compare current and previous indicator values
+		// Comparar valores atuais e anteriores do indicador
 		var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
-		// Check for crossover
+		// Verificar cruzamento
 		if (isShortLessCurrent == isShortLessPrev) 
 			return;
 
 		var volume = Volume + Math.Abs(Position);
 
-		// Trading actions based on the signal
+		// Ações de negociação com base no sinal
 		if (isShortLessCurrent)
 			SellMarket(volume);
 		else
@@ -196,7 +196,7 @@ public class SmaStrategy : Strategy
 		_chart.Draw(data);
 	}
 
-	// Other chart initialization methods omitted for brevity
+	// Outros métodos de inicialização do gráfico foram omitidos por brevidade
 }
 ```
 

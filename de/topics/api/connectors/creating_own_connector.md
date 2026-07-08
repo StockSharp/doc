@@ -36,7 +36,7 @@ public partial class CoinbaseMessageAdapter : AsyncMessageAdapter
 	private HttpClient _restClient;
 	private SocketClient _socketClient;
 
-	// Other adapter fields and properties
+	// Weitere Adapterfelder und -eigenschaften
 }
 ```
 
@@ -58,15 +58,15 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 {
 	HeartbeatInterval = TimeSpan.FromSeconds(5);
 
-	// Add support for market data and transactions
+	// Unterstützung für Marktdaten und Transaktionen hinzufügen
 	this.AddMarketDataSupport();
 	this.AddTransactionalSupport();
 
-	// Remove unsupported message types
+	// Nicht unterstützte Nachrichtentypen entfernen
 	this.RemoveSupportedMessage(MessageTypes.Portfolio);
 	this.RemoveSupportedMessage(MessageTypes.OrderGroupCancel);
 
-	// Add supported market data types
+	// Unterstützte Marktdatentypen hinzufügen
 	this.AddSupportedMarketDataType(DataType.Ticks);
 	this.AddSupportedMarketDataType(DataType.MarketDepth);
 	this.AddSupportedMarketDataType(DataType.Level1);
@@ -81,7 +81,7 @@ Um den Adapter mit dem Handelssystem zu verbinden, wird die Methode [AsyncMessag
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
 {
-	// Check the presence of keys for transactional mode
+	// Vorhandensein der Schlüssel für den Transaktionsmodus prüfen
 	if (this.IsTransactional())
 	{
 		if (Key.IsEmpty())
@@ -91,27 +91,27 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 			throw new InvalidOperationException(LocalizedStrings.SecretNotSpecified);
 	}
 
-	// Initialize the authenticator
+	// Authentifikator initialisieren
 	_authenticator = new(this.IsTransactional(), Key, Secret, Passphrase);
 
-	// Check that clients are not yet created
+	// Prüfen, dass Clients noch nicht erstellt wurden
 	if (_restClient != null)
 		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
 	if (_socketClient != null)
 		throw new InvalidOperationException(LocalizedStrings.NotDisconnectPrevTime);
 
-	// Create REST client
+	// REST-Client erstellen
 	_restClient = new(_authenticator) { Parent = this };
 
-	// Create and configure WebSocket client
+	// WebSocket-Client erstellen und konfigurieren
 	_socketClient = new(_authenticator, ReConnectionSettings.ReAttemptCount) { Parent = this };
 	SubscribePusherClient();
 
-	// Connect WebSocket client
+	// WebSocket-Client verbinden
 	await _socketClient.Connect(cancellationToken);
 
-	// Send successful connection message
+	// Nachricht über erfolgreiche Verbindung senden
 	SendOutMessage(new ConnectMessage());
 }
 ```
@@ -121,21 +121,21 @@ Um den Adapter vom Handelssystem zu trennen, wird die Methode [AsyncMessageAdapt
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
 {
-	// Check that clients are created
+	// Prüfen, dass Clients erstellt wurden
 	if (_restClient == null)
 		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
 	if (_socketClient == null)
 		throw new InvalidOperationException(LocalizedStrings.ConnectionNotOk);
 
-	// Free REST client resources
+	// REST-Client-Ressourcen freigeben
 	_restClient.Dispose();
 	_restClient = null;
 
-	// Disconnect WebSocket client
+	// WebSocket-Client trennen
 	_socketClient.Disconnect();
 
-	// Send disconnection message
+	// Trennungsnachricht senden
 	SendOutDisconnectMessage(true);
 	return default;
 }
@@ -146,7 +146,7 @@ Darüber hinaus stellt der Adapter die Methode [AsyncMessageAdapter.ResetAsync](
 ```cs
 public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken cancellationToken)
 {
-	// Free REST client resources
+	// REST-Client-Ressourcen freigeben
 	if (_restClient != null)
 	{
 		try
@@ -161,7 +161,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_restClient = null;
 	}
 
-	// Disconnect and clear WebSocket client
+	// WebSocket-Client trennen und bereinigen
 	if (_socketClient != null)
 	{
 		try
@@ -177,7 +177,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_socketClient = null;
 	}
 
-	// Free authenticator resources
+	// Authentifikator-Ressourcen freigeben
 	if (_authenticator != null)
 	{
 		try
@@ -192,10 +192,10 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 		_authenticator = null;
 	}
 
-	// Clear additional data
+	// Zusätzliche Daten bereinigen
 	_candlesTransIds.Clear();
 
-	// Send reset message
+	// Reset-Nachricht senden
 	SendOutMessage(new ResetMessage());
 	return default;
 }

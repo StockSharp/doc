@@ -18,7 +18,7 @@ ruleRegFailed
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleReg);
-// registering the order
+// 注册订单
 RegisterOrder(order);
 		
 ```
@@ -39,7 +39,7 @@ ruleRegFailed
 	.Do(() => this.AddInfoLog("The order was not accepted by broker."))
 	.Once()
 	.Apply(this);
-// registering the order
+// 注册订单
 RegisterOrder(order);
 		
 ```

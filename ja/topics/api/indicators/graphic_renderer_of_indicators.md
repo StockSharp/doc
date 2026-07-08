@@ -60,7 +60,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 ...
 
 /// <summary>
-/// Create instance.
+/// インスタンスを作成。
 /// </summary>
 public FractalsPainter()
 {
@@ -116,7 +116,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 		Description = LocalizedStrings.Str2038Key)]
 	public ChartLineElement Down { get; }
 	/// <summary>
-	/// Create instance.
+	/// インスタンスを作成。
 	/// </summary>
 	public FractalsPainter()
 	{

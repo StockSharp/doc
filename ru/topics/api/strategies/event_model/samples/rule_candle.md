@@ -26,7 +26,7 @@ protected override void OnStarted2(DateTime time)
 {
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
-		// ready-to-use candles much faster than compression on fly mode
+		// готовые свечи намного быстрее, чем сжатие на лету
 		// turn off compression to boost optimizer (!!! make sure you have candles)
 
 		//MarketData =

@@ -9,10 +9,10 @@ StockSharp API 提供了获取历史数据的便捷机制，这些数据既可�
 要获取历史数据，您首先需要配置与交易系统的连接：
 
 ```cs
-// Create a Connector instance
+// 创建 Connector 实例
 var connector = new Connector();
 
-// Add an adapter for connecting to Binance
+// 添加用于连接 Binance 的适配器
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
 	Key = "<Your API Key>",
@@ -31,35 +31,35 @@ connector.Connect();
 要获取历史K线，您需要创建一个订阅并指定请求数据的参数：
 
 ```cs
-// Create a subscription for 5-minute candles for the selected instrument
+// 为所选交易品种创建 5 分钟 K线订阅
 var subscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
 {
 	MarketData =
 	{
-		// Specify the period for which to get historical data
+		// 指定获取历史数据的期间
 		From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
 		To = DateTime.Now,
-		// Set the flag to receive only completed candles
+		// 设置仅接收已完成 K线的标志
 		IsFinishedOnly = true
 	}
 };
 
-// Subscribe to the candle received event
+// 订阅 K线接收事件
 connector.CandleReceived += OnCandleReceived;
 
-// Start the subscription
+// 启动订阅
 connector.Subscribe(subscription);
 
-// Event handler for receiving candles
+// K线接收事件处理器
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check that the candle belongs to our subscription
+	// 检查 K线是否属于我们的订阅
 	if (subscription != _subscription)
 		return;
 
-	// Process the received candle
+	// 处理收到的 K线
 	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// For display on the chart, you can use:
@@ -72,19 +72,19 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 接收到的K线可以使用StockSharp内置的图形组件显示在图表上：
 
 ```cs
-// Create and configure chart elements
+// 创建并配置图表元素
 var chart = new Chart();
 var area = new ChartArea();
 var candleElement = new ChartCandleElement();
 
-// Add area and element to the chart
+// 向图表添加区域和元素
 chart.AddArea(area);
 chart.AddElement(area, candleElement, subscription);
 
-// In the CandleReceived event handler, draw candles
+// 在 CandleReceived 事件处理器中绘制 K线
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check that the candle belongs to our subscription
+	// 检查 K线是否属于我们的订阅
 	if (subscription != _subscription)
 		return;
 

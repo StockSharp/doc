@@ -37,28 +37,28 @@ public class OrderLogWindow
 		_connector = connector;
 		_security = security;
 		
-		// Subscribe to order log item reception event
+		// 订阅订单日志项接收事件
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Create a subscription to order log
+		// 创建订单日志订阅
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
 		
-		// Start subscription
+		// 启动订阅
 		_connector.Subscribe(_orderLogSubscription);
 	}
 	
-	// Handler for order log item reception event
+	// 订单日志项接收事件处理器
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
-		// Check if the log item belongs to our subscription
+		// 检查日志项是否属于我们的订阅
 		if (subscription != _orderLogSubscription)
 			return;
 			
-		// Add the item to OrderLogGrid in the user interface thread
+		// 在用户界面线程中将项目添加到 OrderLogGrid
 		this.GuiAsync(() => OrderLogGrid.LogItems.Add(item));
 	}
 	
-	// Method for unsubscribing when the window is closed
+	// 窗口关闭时取消订阅的方法
 	public void Unsubscribe()
 	{
 		if (_orderLogSubscription != null)
@@ -74,31 +74,31 @@ public class OrderLogWindow
 ### 订单日志过滤
 
 ```cs
-// Creating a subscription to order log with filtering
+// 创建带过滤的订单日志订阅
 public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 {
-	// Create a subscription to order log
+	// 创建订单日志订阅
 	var orderLogSubscription = new Subscription(DataType.OrderLog, security)
 	{
 		MarketData =
 		{
-			// Specify time period for historical data
+			// 指定历史数据时间段
 			From = from,
 			To = to
 		}
 	};
 	
-	// Subscribe to order log item reception event
+	// 订阅订单日志项接收事件
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(orderLogSubscription);
 }
 
-// Handler for order log item reception event with filtering
+// 带过滤的订单日志项接收事件处理器
 private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 {
-	// Check subscription type
+	// 检查订阅类型
 	if (subscription.DataType != DataType.OrderLog)
 		return;
 		
@@ -106,12 +106,12 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 	if (item.Price < _minPrice || item.Price > _maxPrice)
 		return;
 		
-	// Add the item to OrderLogGrid in the user interface thread
+	// 在用户界面线程中将项目添加到 OrderLogGrid
 	this.GuiAsync(() => 
 	{
 		OrderLogGrid.LogItems.Add(item);
 		
-		// Limit the number of displayed items
+		// 限制显示项目数量
 		while (OrderLogGrid.LogItems.Count > _maxItems)
 			OrderLogGrid.LogItems.RemoveAt(0);
 	});
@@ -128,7 +128,7 @@ public class OrderLogAnalyzer
 	private readonly Security _security;
 	private readonly OrderLogGrid _orderLogGrid;
 	
-	// Counters for analysis
+	// 用于分析的计数器
 	private int _buyCount = 0;
 	private int _sellCount = 0;
 	private decimal _buyVolume = 0;
@@ -140,23 +140,23 @@ public class OrderLogAnalyzer
 		_security = security;
 		_orderLogGrid = orderLogGrid;
 		
-		// Subscribe to order log item reception event
+		// 订阅订单日志项接收事件
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Create a subscription to order log
+		// 创建订单日志订阅
 		var subscription = new Subscription(DataType.OrderLog, security);
 		
-		// Start subscription
+		// 启动订阅
 		_connector.Subscribe(subscription);
 	}
 	
-	// Handler for order log item reception event
+	// 订单日志项接收事件处理器
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		if (item.SecurityId != _security.ToSecurityId())
 			return;
 			
-		// Analyze order log item
+		// 分析订单日志项
 		if (item.Side == Sides.Buy)
 		{
 			_buyCount++;
@@ -168,18 +168,18 @@ public class OrderLogAnalyzer
 			_sellVolume += item.Volume;
 		}
 		
-		// Update interface with analysis results
+		// 用分析结果更新界面
 		this.GuiAsync(() => 
 		{
-			// Add item to OrderLogGrid
+			// 将项目添加到 OrderLogGrid
 			_orderLogGrid.LogItems.Add(item);
 			
-			// Update statistics
+			// 更新统计信息
 			UpdateStatistics();
 		});
 	}
 	
-	// Update statistics
+	// 更新统计信息
 	private void UpdateStatistics()
 	{
 		BuyCountLabel.Content = $"Buys: {_buyCount}";
@@ -187,7 +187,7 @@ public class OrderLogAnalyzer
 		BuyVolumeLabel.Content = $"Buy volume: {_buyVolume}";
 		SellVolumeLabel.Content = $"Sell volume: {_sellVolume}";
 		
-		// Calculate imbalance
+		// 计算不平衡
 		var volumeImbalance = _buyVolume - _sellVolume;
 		var imbalancePercent = (_buyVolume + _sellVolume) > 0 
 			? volumeImbalance / (_buyVolume + _sellVolume) * 100 

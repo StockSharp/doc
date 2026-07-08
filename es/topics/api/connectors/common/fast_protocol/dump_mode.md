@@ -5,7 +5,7 @@ El conector FAST está disponible en modo de volcado (dump mode). En este caso, 
 Para habilitar el modo de volcado, pase los archivos a través del método de volcado [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** antes de conectar:
 
 ```cs
-// ... connector initialization
+// ... inicialización del conector
 var fastAdapter = (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
 IEnumerable<string> dumpFiles = Directory.GetFiles(dumpDir, "*.bin");
 var dict = dumpFiles.Select(f =>

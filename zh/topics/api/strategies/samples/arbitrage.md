@@ -19,7 +19,7 @@ public class ArbitrageStrategy : Strategy
 		OrderRegistration // In the process of registering orders
 	}
 
-	// Strategy parameters
+	// 策略参数
 	private readonly StrategyParam<Security> _futureSecurity;
 	private readonly StrategyParam<Security> _stockSecurity;
 	private readonly StrategyParam<Portfolio> _futurePortfolio;
@@ -70,20 +70,20 @@ protected override void OnStarted2(DateTime time)
 	_futId = FutureSecurity.ToSecurityId();
 	_stockId = StockSecurity.ToSecurityId();
 
-	// Subscription to order book updates for both instruments
+	// 订阅两个工具的订单簿更新
 	var futureDepthSubscription = new Subscription(DataType.MarketDepth, FutureSecurity);
 	var stockDepthSubscription = new Subscription(DataType.MarketDepth, StockSecurity);
 
 	futureDepthSubscription.WhenOrderBookReceived(this).Do(ProcessMarketDepth).Apply(this);
 	stockDepthSubscription.WhenOrderBookReceived(this).Do(ProcessMarketDepth).Apply(this);
 
-	// Subscription to own trades to track execution prices
+	// 订阅自身成交以跟踪成交价格
 	this
 		.WhenOwnTradeReceived()
 		.Do(OnOwnTradeReceived)
 		.Apply(this);
 
-	// Sending requests for market data subscription
+	// 发送市场数据订阅请求
 	Subscribe(futureDepthSubscription);
 	Subscribe(stockDepthSubscription);
 }
@@ -96,34 +96,34 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessMarketDepth(IOrderBookMessage depth)
 {
-	// Update the last order book for each instrument
+	// 更新每个工具的最新订单簿
 	if (depth.SecurityId == _futId)
 		_lastFut = depth;
 	else if (depth.SecurityId == _stockId)
 		_lastSt = depth;
 
-	// Wait for data for both instruments
+	// 等待两个工具的数据
 	if (_lastFut is null || _lastSt is null)
 		return;
 
-	// Calculate volume-weighted average prices for specific volumes
+	// 计算指定成交量的成交量加权平均价
 	_futBid = GetAveragePrice(_lastFut, Sides.Sell, FutureVolume);
 	_futAck = GetAveragePrice(_lastFut, Sides.Buy, FutureVolume);
 	_stBid = GetAveragePrice(_lastSt, Sides.Sell, StockVolume) * StockMultiplicator;
 	_stAsk = GetAveragePrice(_lastSt, Sides.Buy, StockVolume) * StockMultiplicator;
 
-	// Validate prices
+	// 校验价格
 	if (_futBid == 0 || _futAck == 0 || _stBid == 0 || _stAsk == 0)
 		return;
 
-	// Calculate spreads
+	// 计算价差
 	var contangoSpread = _futBid - _stAsk;        // Futures price > underlying asset price
 	var backwardationSpread = _stBid - _futAck;   // Underlying asset price > futures price
 
 	decimal spread;
 	ArbitrageState arbitrageSignal;
 
-	// Determine the best arbitrage opportunity
+	// 确定最佳套利机会
 	if (backwardationSpread > contangoSpread)
 	{
 		arbitrageSignal = ArbitrageState.Backwardation;
@@ -135,20 +135,20 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 		spread = contangoSpread;
 	}
 
-	// Log current state and spreads
+	// 记录当前状态和价差
 	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
 	LogInfo($"Entry from spread:{SpreadToGenerateSignal}. Exit from profit:{ProfitToExit}");
 
-	// Recalculate profit based on current market conditions
+	// 根据当前市场状态重新计算利润
 	if (_currentState != ArbitrageState.None && _currentState != ArbitrageState.OrderRegistration)
 	{
 		CalculateProfit();
 		LogInfo($"Profit: {_profit}");
 	}
 
-	// Process signals based on current state and market conditions
+	// 根据当前状态和市场条件处理信号
 	ProcessSignals(arbitrageSignal, spread);
 }
 ```
@@ -160,7 +160,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 ```cs
 private void ProcessSignals(ArbitrageState arbitrageSignal, decimal spread)
 {
-	// Enter a new position when there's no open position and spread exceeds threshold
+	// 没有未平持仓且价差超过阈值时建立新持仓
 	if (_currentState == ArbitrageState.None && spread > SpreadToGenerateSignal)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
@@ -174,13 +174,13 @@ private void ProcessSignals(ArbitrageState arbitrageSignal, decimal spread)
 			ExecuteContango();
 		}
 	}
-	// Exit from Backwardation position when profit threshold is reached
+	// 达到利润阈值时退出 Backwardation 持仓
 	else if (_currentState == ArbitrageState.Backwardation && _profit >= ProfitToExit)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
 		CloseBackwardationPosition();
 	}
-	// Exit from Contango position when profit threshold is reached
+	// 达到利润阈值时退出 Contango 持仓
 	else if (_currentState == ArbitrageState.Contango && _profit >= ProfitToExit)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
@@ -199,12 +199,12 @@ private void CalculateProfit()
 	switch (_currentState)
 	{
 		case ArbitrageState.Backwardation:
-			// Buy futures, sell underlying asset - profit when futures price rises and underlying asset price falls
+			// 买入期货、卖出标的资产 - 期货价格上涨且标的资产价格下跌时获利
 			_profit = (_stockExitPrice * StockMultiplicator - _stAsk) + (_futBid - _futureBuyPrice);
 			break;
 
 		case ArbitrageState.Contango:
-			// Sell futures, buy underlying asset - profit when futures price falls and underlying asset price rises
+			// 卖出期货、买入标的资产 - 期货价格下跌且标的资产价格上涨时获利
 			_profit = (_futureExitPrice - _futAck) + (_stBid - _stockBuyPrice * StockMultiplicator);
 			break;
 

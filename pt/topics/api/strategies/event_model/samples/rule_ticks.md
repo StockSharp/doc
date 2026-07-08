@@ -7,7 +7,7 @@
 ## Componentes Principais
 
 ```cs
-// Main components
+// Componentes principais
 public class SimpleTradeRulesStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ Chamado quando a estratégia inicia:
 - Cria uma regra combinada para analisar preços de negócios
 
 ```cs
-// OnStarted method
+// Método OnStarted
 protected override void OnStarted2(DateTime time)
 {
 	var sub = new Subscription(DataType.Ticks, Security);
@@ -40,7 +40,7 @@ protected override void OnStarted2(DateTime time)
 	.Once() // call this rule only once
 	.Apply(this);
 
-	// Sending request for subscribe to market data.
+	// Enviar solicitação de assinatura de dados de mercado.
 	Subscribe(sub);
 
 	base.OnStarted2(time);

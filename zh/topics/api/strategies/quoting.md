@@ -40,7 +40,7 @@ StockSharp 支持各种引用行为：
 ### 步骤 1：创建引用行为
 
 ```csharp
-// Create a behavior for market quoting
+// 创建市价报价行为
 var behavior = new MarketQuotingBehavior(
 	new Unit(0.01m), // Price offset from the best quote
 	new Unit(0.1m, UnitTypes.Percent), // Minimum deviation for quote update
@@ -51,10 +51,10 @@ var behavior = new MarketQuotingBehavior(
 ### 步骤 2：创建并初始化处理器
 
 ```csharp
-// Create a quoting processor
+// 创建报价处理器
 _quotingProcessor = new QuotingProcessor(
 	behavior,
-	Security, // Instrument
+	Security, // 交易品种
 	Portfolio, // Portfolio
 	Sides.Buy, // Quoting direction
 	Volume, // Quoting volume
@@ -77,7 +77,7 @@ _quotingProcessor = new QuotingProcessor(
 ### 第3步：订阅处理器事件
 
 ```csharp
-// Subscribe to processor events for logging and handling
+// 订阅处理器事件以记录日志和处理
 _quotingProcessor.OrderRegistered += order =>
 	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
@@ -97,7 +97,7 @@ _quotingProcessor.Finished += isOk => {
 ### 第4步：启动处理器
 
 ```csharp
-// Start the processor
+// 启动处理器
 _quotingProcessor.Start();
 ```
 
@@ -108,7 +108,7 @@ _quotingProcessor.Start();
 ```csharp
 protected override void OnStopped()
 {
-	// Release resources of the current processor
+	// 释放当前处理器的资源
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 	

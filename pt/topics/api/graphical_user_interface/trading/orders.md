@@ -37,30 +37,30 @@ private readonly Connector _connector = new Connector();
 
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Other code during connection...
+	// Outro código durante a conexão...
 	
-	// Subscribe to the order received event
+	// Assinar o evento de ordem recebida
 	_connector.OrderReceived += (subscription, order) => 
 	{
-		// Add orders to the OrderGrid table
+		// Adicionar ordens à tabela OrderGrid
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	};
 	
-	// To connect the connector
+	// Para conectar o conector
 	_connector.Connect();
 }
 					
-// Cancels all selected orders
+// Cancela todas as ordens selecionadas
 private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 {
-	// Iterate through selected orders and cancel each one
+	// Iterar pelas ordens selecionadas e cancelar cada uma
 	foreach (var order in orders)
 	{
 		_connector.CancelOrder(order);
 	}
 }
 
-// Opens an order editing window and performs replacement of the selected order
+// Abre uma janela de edição de ordem e substitui a ordem selecionada
 private void OrderGrid_OnOrderReRegistering(Order order)
 {
 	var window = new OrderWindow
@@ -83,26 +83,26 @@ private void OrderGrid_OnOrderReRegistering(Order order)
 A abordagem moderna para trabalhar com ordens envolve a utilização de subscrições:
 
 ```cs
-// Subscribe to the order received event
+// Assinar o evento de ordem recebida
 _connector.OrderReceived += OnOrderReceived;
 
-// Order received handler
+// Manipulador de ordem recebida
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Check if the order belongs to the subscription we're interested in
+	// Verificar se a ordem pertence à assinatura de interesse
 	if (subscription == _ordersSubscription)
 	{
-		// Add the order to the table
+		// Adicionar ordem à tabela
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
-		// Additional order processing
+		// Processamento adicional da ordem
 		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
 		
 		// If the order is in a final state, update the UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {
-				// Update interface for completed orders
+				// Atualizar interface para ordens concluídas
 			});
 		}
 	}
@@ -112,14 +112,14 @@ private void OnOrderReceived(Subscription subscription, Order order)
 ## Cancelar ordens
 
 ```cs
-// Modern approach to order cancellation
+// Abordagem moderna para cancelamento de ordens
 private void CancelOrder(Order order)
 {
 	try
 	{
 		_connector.CancelOrder(order);
 		
-		// Log the action
+		// Registrar a ação
 		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
 	}
 	catch (Exception ex)
@@ -128,7 +128,7 @@ private void CancelOrder(Order order)
 	}
 }
 
-// Mass cancellation of orders
+// Cancelamento em massa de ordens
 private void CancelAllOrders()
 {
 	var activeOrders = _ordersWindow.OrderGrid.Orders
@@ -145,19 +145,19 @@ private void CancelAllOrders()
 ## Tratar erros de registo e cancelamento de ordens
 
 ```cs
-// Subscribe to order registration failures
+// Assinar falhas de registro de ordens
 _connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 
-// Order registration failure handler
+// Manipulador de falha de registro de ordem
 private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 {
-	// Add error information to OrderGrid
+	// Adicionar informações de erro ao OrderGrid
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
-	// Log the error
+	// Registrar erro
 	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
 	
-	// Notify the user
+	// Notificar o usuário
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 

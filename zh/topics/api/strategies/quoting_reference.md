@@ -142,13 +142,13 @@ var behavior = new VolatilityQuotingBehavior
 ### 带处理器的完整示例
 
 ```cs
-// Choose the quoting behavior
+// 选择报价行为
 var behavior = new BestByPriceQuotingBehavior
 {
 	BestPriceOffset = new Unit(0.01m),
 };
 
-// Create the processor
+// 创建处理器
 var processor = new QuotingProcessor(
 	behavior,
 	Security,

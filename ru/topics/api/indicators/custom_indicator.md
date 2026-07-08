@@ -138,7 +138,7 @@ public class ChaikinVolatility : BaseIndicator
 	}
 
 	/// <summary>
-	/// Moving Average.
+	/// Скользящая средняя.
 	/// </summary>
 	[TypeConverter(typeof(ExpandableObjectConverter))]
 	[Display(
@@ -251,13 +251,13 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 	public DirectionalIndex Dx { get; }
 
 	/// <summary>
-	/// Moving Average.
+	/// Скользящая средняя.
 	/// </summary>
 	[Browsable(false)]
 	public DecimalLengthIndicator MovingAverage { get; }
 
 	/// <summary>
-	/// Period length.
+	/// Длина периода.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -386,7 +386,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 	}
 
 	/// <summary>
-	/// Short period.
+	/// Короткий период.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -400,7 +400,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 	}
 
 	/// <summary>
-	/// Long period.
+	/// Длинный период.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

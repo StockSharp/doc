@@ -10,26 +10,26 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    ```cs
    private void InitConnector()
    {
-   	// subscribe on connection successfully event
+   	// assinar o evento de conexão bem-sucedida
    	Connector.Connected += () =>
    	{
-   		// update gui labels
+   		// atualizar rótulos da interface
    		this.GuiAsync(() => ChangeConnectStatus(true));
    	};
-   	// subscribe on disconnection event
+   	// assinar o evento de desconexão
    	Connector.Disconnected += () =>
    	{
-   		// update gui labels
+   		// atualizar rótulos da interface
    		this.GuiAsync(() => ChangeConnectStatus(false));
    	};
-   	// subscribe on connection error event
+   	// assinar o evento de erro de conexão
    	Connector.ConnectionError += error => this.GuiAsync(() =>
    	{
-   		// update gui labels
+   		// atualizar rótulos da interface
    		ChangeConnectStatus(false);
    		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    	});
-   	// fill underlying asset's list
+   	// preencher a lista de ativos subjacentes
    	Connector.SecurityReceived += (sub, security) =>
    	{
    		if (security.Type == SecurityTypes.Future)
@@ -40,7 +40,7 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    			_isDirty = true;
    	};
-   	// subscribing on tick prices and updating asset price
+   	// assinatura de preços tick e atualização do preço do ativo
    	Connector.TickTradeReceived += (sub, trade) =>
    	{
    		if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
@@ -103,33 +103,33 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    private void StartClick(object sender, RoutedEventArgs e)
    {
    	var option = SelectedOption;
-   	// create DOM window
+   	// criar janela DOM
    	var wnd = new QuotesWindow { Title = option.Name };
    	wnd.Init(option);
-   	// create delta hedge strategy
+   	// criar estratégia de hedge delta
    	var hedge = new DeltaHedgeStrategy
    	{
    		Security = option.GetUnderlyingAsset(Connector),
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// create option quoting for 20 contracts
+   	// criar cotação de opção para 20 contratos
    	var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
    			new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    	{
-   		// working size is 1 contract
+   		// tamanho de trabalho é 1 contrato
    		Volume = 1,
    		Security = option,
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-        // link quoting and hedging
+        // vincular cotação e hedge
    	hedge.ChildStrategies.Add(quoting);
-        // start hedging
+        // iniciar hedge
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
-   		// force close all strategies while the DOM was closed
+   		// forçar fechamento de todas as estratégias quando o DOM for fechado
    		hedge.Stop();
    	};
    	// show DOM

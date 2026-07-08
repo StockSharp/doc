@@ -19,7 +19,7 @@
 _long = this.Param(nameof(Long), 80);
 _short = this.Param(nameof(Short), 20);
 			
-// turn off param for optimization
+// отключить параметр для оптимизации
 _long.CanOptimize = false;
 ```
 

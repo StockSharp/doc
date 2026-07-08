@@ -27,17 +27,17 @@ StockSharp中的存储驱动负责市场数据的物理存放——无论是在�
 ### 使用示例
 
 ```cs
-// Create a local drive with a specified path
+// 使用指定路径创建本地驱动
 var localDrive = new LocalMarketDataDrive(Path.Combine(
     Directory.GetCurrentDirectory(), "Storage"));
 
-// Use with the storage registry
+// 与存储注册表一起使用
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = localDrive,
 };
 
-// Retrieve the list of available instruments
+// 获取可用交易品种列表
 await foreach (var secId in localDrive.GetAvailableSecuritiesAsync())
 {
     Console.WriteLine(secId);
@@ -59,14 +59,14 @@ await foreach (var secId in localDrive.GetAvailableSecuritiesAsync())
 ### 使用示例
 
 ```cs
-// Create a remote drive
+// 创建远程驱动
 var remoteDrive = new RemoteMarketDataDrive
 {
     Address = "192.168.1.100:5002".To<EndPoint>(),
     Credentials = { Email = "user", Password = "pass".Secure() }
 };
 
-// Retrieve available data types for an instrument
+// 获取交易品种的可用数据类型
 var secId = "AAPL@NASDAQ".ToSecurityId();
 await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, StorageFormats.Binary))
 {
@@ -94,15 +94,15 @@ await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, Sto
 ### 使用示例
 
 ```cs
-// Create a cache with a default local drive
+// 使用默认本地驱动创建缓存
 var defaultDrive = new LocalMarketDataDrive(Path.Combine(
     Directory.GetCurrentDirectory(), "Storage"));
 var driveCache = new DriveCache(defaultDrive);
 
-// Get or create a drive by path
+// 按路径获取或创建驱动
 var anotherDrive = driveCache.GetDrive(@"D:\MarketData");
 
-// Subscribe to events
+// 订阅事件
 driveCache.NewDriveCreated += drive =>
     Console.WriteLine($"Drive created: {drive.Path}");
 ```

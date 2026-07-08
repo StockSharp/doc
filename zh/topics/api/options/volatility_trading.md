@@ -10,26 +10,26 @@
    ```cs
    private void InitConnector()
    {
-   	// subscribe on connection successfully event
+   	// 订阅连接成功事件
    	Connector.Connected += () =>
    	{
-   		// update gui labels
+   		// 更新界面标签
    		this.GuiAsync(() => ChangeConnectStatus(true));
    	};
-   	// subscribe on disconnection event
+   	// 订阅断开连接事件
    	Connector.Disconnected += () =>
    	{
-   		// update gui labels
+   		// 更新界面标签
    		this.GuiAsync(() => ChangeConnectStatus(false));
    	};
-   	// subscribe on connection error event
+   	// 订阅连接错误事件
    	Connector.ConnectionError += error => this.GuiAsync(() =>
    	{
-   		// update gui labels
+   		// 更新界面标签
    		ChangeConnectStatus(false);
    		MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
    	});
-   	// fill underlying asset's list
+   	// 填充标的资产列表
    	Connector.SecurityReceived += (sub, security) =>
    	{
    		if (security.Type == SecurityTypes.Future)
@@ -40,7 +40,7 @@
    		if (_model.UnderlyingAsset == security || _model.UnderlyingAsset.Id == security.UnderlyingSecurityId)
    			_isDirty = true;
    	};
-   	// subscribing on tick prices and updating asset price
+   	// 订阅 tick 价格并更新资产价格
    	Connector.TickTradeReceived += (sub, trade) =>
    	{
    		if (_model.UnderlyingAsset == trade.Security || _model.UnderlyingAsset.Id == trade.Security.UnderlyingSecurityId)
@@ -103,33 +103,33 @@
    private void StartClick(object sender, RoutedEventArgs e)
    {
    	var option = SelectedOption;
-   	// create DOM window
+   	// 创建 DOM 窗口
    	var wnd = new QuotesWindow { Title = option.Name };
    	wnd.Init(option);
-   	// create delta hedge strategy
+   	// 创建 delta 对冲策略
    	var hedge = new DeltaHedgeStrategy
    	{
    		Security = option.GetUnderlyingAsset(Connector),
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-   	// create option quoting for 20 contracts
+   	// 为 20 份合约创建期权报价
    	var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
    			new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    	{
-   		// working size is 1 contract
+   		// 工作数量为 1 份合约
    		Volume = 1,
    		Security = option,
    		Portfolio = Portfolio.SelectedPortfolio,
    		Connector = Connector,
    	};
-        // link quoting and hedging
+        // 关联报价和对冲
    	hedge.ChildStrategies.Add(quoting);
-        // start hedging
+        // 启动对冲
    	hedge.Start();
    	wnd.Closed += (s1, e1) =>
    	{
-   		// force close all strategies while the DOM was closed
+   		// DOM 关闭时强制关闭所有策略
    		hedge.Stop();
    	};
    	// show DOM

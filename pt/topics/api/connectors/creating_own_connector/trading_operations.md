@@ -26,7 +26,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 			break;
 		case OrderTypes.Conditional:
 		{
-			// Handling conditional orders, for example, withdrawal of funds
+			// Processar ordens condicionais, por exemplo retirada de fundos
 			if (!condition.IsWithdraw)
 				break;
 
@@ -53,7 +53,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 	var isMarket = regMsg.OrderType == OrderTypes.Market;
 	var price = isMarket ? (decimal?)null : regMsg.Price;
 
-	// Sending the order to the exchange
+	// Enviar ordem para a exchange
 	var result = await _restClient.RegisterOrder(
 		regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
 		regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
@@ -62,7 +62,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 
 	var orderState = result.Status.ToOrderState();
 
-	// Processing the order registration result
+	// Processar resultado do registro da ordem
 	if (orderState == OrderStates.Failed)
 	{
 		await SendOutMessageAsync(new ExecutionMessage
@@ -91,15 +91,15 @@ As principais etapas ao substituir uma ordem:
 ```cs
 public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg, CancellationToken cancellationToken)
 {
-	// Sending a request to replace the order
+	// Enviar solicitação para substituir a ordem
 	await _restClient.EditOrder(
 		replaceMsg.OldOrderId.To<string>(),
 		replaceMsg.Price,
 		replaceMsg.Volume,
 		cancellationToken);
 
-	// Note: Processing the order replacement result usually occurs
-	// in a separate method that is called when receiving an update from the exchange
+	// Observação: o processamento do resultado da substituição da ordem geralmente ocorre
+	// em um método separado chamado ao receber uma atualização da exchange
 }
 ```
 
@@ -128,15 +128,15 @@ As principais etapas ao cancelar uma ordem:
 ```cs
 public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-	// Checking the presence of the order identifier
+	// Verificar a presença do identificador da ordem
 	if (cancelMsg.OrderStringId.IsEmpty())
 		throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
 
-	// Sending a request to cancel the order
+	// Enviar solicitação para cancelar a ordem
 	await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
 
-	// Note: Processing the order cancellation result usually occurs
-	// in a separate method that is called when receiving an update from the exchange
+	// Observação: o processamento do resultado do cancelamento da ordem geralmente ocorre
+	// em um método separado chamado ao receber uma atualização da exchange
 }
 ```
 

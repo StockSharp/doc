@@ -5,7 +5,7 @@ Der FAST-Connector ist im Dump-Modus verfügbar. In diesem Fall stammen die Date
 Um den Dump-Modus zu aktivieren, übergeben Sie die Dateien über die Dump-Methode [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** vor dem Verbinden:
 
 ```cs
-// ... connector initialization
+// ... Connector-Initialisierung
 var fastAdapter = (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
 IEnumerable<string> dumpFiles = Directory.GetFiles(dumpDir, "*.bin");
 var dict = dumpFiles.Select(f =>

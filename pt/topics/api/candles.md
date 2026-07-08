@@ -22,15 +22,15 @@ As imagens a seguir mostram os gráficos [TimeFrameCandleMessage](xref:StockShar
 1. Para obter candles, crie uma assinatura usando a classe [Subscription](xref:StockSharp.BusinessEntities.Subscription):
 
 ```cs
-// Create a subscription to 5-minute candles
+// Criar uma assinatura para velas de 5 minutos
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Data type with timeframe specification
-	security)  // Instrument
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Tipo de dados com especificação do timeframe
+	security)  // Instrumento
 {
-	// Configure additional parameters through the MarketData property
+	// Configurar parâmetros adicionais pela propriedade MarketData
 	MarketData =
 	{
-		// Period for which we request historical data (last 30 days)
+		// Período para o qual solicitamos dados históricos (últimos 30 dias)
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 		To = DateTime.Now
 	}
@@ -40,19 +40,19 @@ var subscription = new Subscription(
 2. Para receber candles, assine o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived), que sinaliza o aparecimento de um novo valor para processamento:
 
 ```cs
-// Subscribe to the candle reception event
+// Assinar o evento de recebimento de velas
 _connector.CandleReceived += OnCandleReceived;
 
-// Candle reception event handler
+// Manipulador do evento de recebimento de velas
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Here subscription is the subscription object we created
-	// candle - the received candle
+	// Aqui subscription é o objeto de assinatura que criamos
+	// candle — vela recebida
 
-	// Check if the candle belongs to our subscription
+	// Verificar se a vela pertence à nossa assinatura
 	if (subscription == _candleSubscription)
 	{
-		// Draw the candle on the chart
+		// Desenhar a vela no gráfico
 		Chart.Draw(_candleElement, candle);
 	}
 }
@@ -64,7 +64,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 3. Em seguida, inicie a assinatura através do método [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)):
 
 ```cs
-// Start the subscription
+// Iniciar a assinatura
 _connector.Subscribe(subscription);
 ```
 
@@ -77,18 +77,18 @@ Se você precisar exibir apenas candles **"completos"**, você precisa verificar
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle belongs to our subscription
+	// Verificar se a vela pertence à nossa assinatura
 	if (subscription != _candleSubscription)
 		return;
 
-	// Check if the candle is completed
+	// Verificar se a vela está concluída
 	if (candle.State == CandleStates.Finished)
 	{
-		// Create data for drawing
+		// Criar dados para desenho
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 
-		// Draw the candle on the chart
+		// Desenhar a vela no gráfico
 		this.GuiAsync(() => Chart.Draw(chartData));
 	}
 }
@@ -99,46 +99,46 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 - **Modo de construção de candles** - determina se dados prontos serão solicitados ou construídos a partir de outro tipo de dado:
 
 ```cs
-// Request only ready-made data
+// Solicitar apenas dados prontos
 subscription.MarketData.BuildMode = MarketDataBuildModes.Load;
 
-// Only build from another data type
+// Construir apenas a partir de outro tipo de dados
 subscription.MarketData.BuildMode = MarketDataBuildModes.Build;
 
-// Request ready-made data, and if not available - build
+// Solicitar dados prontos e, se não estiverem disponíveis, construí-los
 subscription.MarketData.BuildMode = MarketDataBuildModes.LoadAndBuild;
 ```
 
 - **Fonte para construção de candles** - indica a partir de qual tipo de dado construir candles se eles não estiverem diretamente disponíveis:
 
 ```cs
-// Building candles from tick trades
+// Construção de velas a partir de negociações tick
 subscription.MarketData.BuildFrom = DataType.Ticks;
 
-// Building candles from order books
+// Construção de velas a partir do livro de ofertas
 subscription.MarketData.BuildFrom = DataType.MarketDepth;
 
-// Building candles from Level1
+// Construção de velas a partir de Level1
 subscription.MarketData.BuildFrom = DataType.Level1;
 ```
 
 - **Campo para construção de candles** - deve ser especificado para determinados tipos de dados:
 
 ```cs
-// Building candles from the best bid price in Level1
+// Construção de velas a partir do melhor preço bid em Level1
 subscription.MarketData.BuildField = Level1Fields.BestBidPrice;
 
-// Building candles from the best ask price in Level1
+// Construção de velas a partir do melhor preço ask em Level1
 subscription.MarketData.BuildField = Level1Fields.BestAskPrice;
 
-// Building candles from the middle of the spread in the order book
+// Construção de velas a partir do meio do spread no livro de ofertas
 subscription.MarketData.BuildField = Level1Fields.SpreadMiddle;
 ```
 
 - **Perfil de volume** - cálculo do perfil de volume para candles:
 
 ```cs
-// Enable volume profile calculation
+// Ativar o cálculo do perfil de volume
 subscription.MarketData.IsCalcVolumeProfile = true;
 ```
 
@@ -147,7 +147,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 ### Candles com Timeframe Padrão
 
 ```cs
-// 5-minute candles
+// Velas de 5 minutos
 var timeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security);
@@ -157,7 +157,7 @@ _connector.Subscribe(timeFrameSubscription);
 ### Carregando Apenas Candles Históricos
 
 ```cs
-// Loading only historical candles without transitioning to real-time
+// Carregar apenas velas históricas sem transição para tempo real
 var historicalSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -175,7 +175,7 @@ _connector.Subscribe(historicalSubscription);
 ### Construindo Candles de Timeframe Não Padrão a Partir de Ticks
 
 ```cs
-// Candles with a 21-second timeframe, built from ticks
+// Velas com timeframe de 21 segundos construídas a partir de ticks
 var customTimeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
 	security)
@@ -192,7 +192,7 @@ _connector.Subscribe(customTimeFrameSubscription);
 ### Construindo Candles a Partir de Dados do Livro de Ofertas
 
 ```cs
-// Candles built from the middle of the spread in the order book
+// Velas construídas a partir do meio do spread no livro de ofertas
 var depthBasedSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	security)
@@ -210,7 +210,7 @@ _connector.Subscribe(depthBasedSubscription);
 ### Candles com Perfil de Volume
 
 ```cs
-// 5-minute candles with volume profile calculation
+// Velas de 5 minutos com cálculo do perfil de volume
 var volumeProfileSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -228,7 +228,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ### Candles de Volume
 
 ```cs
-// Volume candles (each candle contains 1000 contracts in volume)
+// Velas de volume (cada vela contém volume de 1000 contratos)
 var volumeCandleSubscription = new Subscription(
 	DataType.Volume(1000m),  // Specify candle type and volume
 	security)
@@ -245,7 +245,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ### Candles de Contagem de Ticks
 
 ```cs
-// Tick count candles (each candle contains 1000 trades)
+// Velas por contagem de ticks (cada vela contém 1000 negociações)
 var tickCandleSubscription = new Subscription(
 	DataType.Tick(1000),  // Specify candle type and number of trades
 	security)
@@ -262,7 +262,7 @@ _connector.Subscribe(tickCandleSubscription);
 ### Candles de Faixa de Preço
 
 ```cs
-// Price range candles with a range of 0.1 units
+// Velas de faixa de preço com intervalo de 0,1 unidade
 var rangeCandleSubscription = new Subscription(
 	DataType.Range(0.1m),  // Specify candle type and price range
 	security)
@@ -279,7 +279,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ### Candles Renko
 
 ```cs
-// Renko candles with a step of 0.1
+// Velas Renko com passo de 0,1
 var renkoCandleSubscription = new Subscription(
 	DataType.Renko(0.1m),  // Specify candle type and block size
 	security)
@@ -296,7 +296,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ### Candles Ponto e Figura (P&F)
 
 ```cs
-// Point and Figure candles
+// Velas Point and Figure
 var pnfCandleSubscription = new Subscription(
 	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
 	security)

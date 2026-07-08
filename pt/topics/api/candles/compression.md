@@ -13,27 +13,27 @@ Recomenda-se revisar este arquivo para uma compreensão completa de todos os mé
 ### Compressão de Dados de Tick em Candles
 
 ```cs
-// Example usage of ToCandles for ticks
+// Exemplo de uso de ToCandles para ticks
 var tickStorage = storageRegistry.GetTickMessageStorage(securityId, Drive, StorageFormat);
 var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
-// This code loads tick data from storage and converts it into candles.
+// Este código carrega dados de ticks do armazenamento e os converte em velas.
 // mdMsg - the message with parameters of the created candles (type, time frame, etc.).
-// candleBuilderProvider - the provider that supplies a specific candle builder implementation.
+// candleBuilderProvider — provedor que fornece uma implementação específica do construtor de velas.
 ```
 
 ### Compressão de Dados de Spread em Candles
 
 ```cs
-// Example usage of ToCandles for spread data
+// Exemplo de uso de ToCandles para dados de spread
 var depthStorage = storageRegistry.GetQuoteMessageStorage(securityId, Drive, StorageFormat);
 var depths = depthStorage.LoadAsync(from, to);
 var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderProvider: candleBuilderProvider);
 
-// Here we load spread data and convert it into candles.
-// Level1Fields.SpreadMiddle indicates using the spread middle price for building candles.
-// You can also use Level1Fields.BestBid or Level1Fields.BestAsk for the best bid or ask prices, respectively.
+// Aqui carregamos dados de spread e os convertemos em velas.
+// Level1Fields.SpreadMiddle indica o uso do meio do spread para construir velas.
+// Também é possível usar Level1Fields.BestBid ou Level1Fields.BestAsk para os melhores preços bid ou ask, respectivamente.
 ```
 
 ## Parâmetros de Compressão
@@ -72,8 +72,8 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 	}
 }
 
-// This method demonstrates various ways to build candles depending on the type of source data.
-// It supports building from ticks, order log, spreads, and other sources.
+// Este método demonstra várias formas de construir velas dependendo do tipo dos dados de origem.
+// Suporta construção a partir de ticks, log de ordens, spreads e outras fontes.
 ```
 
 ## Recursos Adicionais
@@ -83,7 +83,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 A API permite construir candles não apenas a partir de ticks e spreads, mas também de outras fontes de dados:
 
 ```cs
-// Example of building candles from various sources
+// Exemplo de construção de velas a partir de várias fontes
 switch (type)
 {
 	case BuildTypes.Ticks:
@@ -106,7 +106,7 @@ switch (type)
 	// ... (other cases)
 }
 
-// This code shows how to build candles from different data sources: ticks, order log, spreads, Level1 data, and even from smaller time frame candles.
+// Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, log de ordens, spreads, dados Level1 e até velas de timeframes menores.
 ```
 
 ## Conclusão

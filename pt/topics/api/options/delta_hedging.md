@@ -8,26 +8,26 @@ Se pretender proteger posições através de estratégias com opções (por exem
 2. A estratégia [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) não é iniciada diretamente; em vez disso, é passada como estratégia filha para [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy).
 
    ```cs
-   // create delta hedge strategy
+   // criar estratégia de hedge delta
    var hedge = new DeltaHedgeStrategy
    {
    	Security = option.GetUnderlyingAsset(Connector),
    	Portfolio = Portfolio.SelectedPortfolio,
    	Connector = Connector,
    };
-   // create option quoting for 20 contracts
+   // criar cotação de opção para 20 contratos
    var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
    		new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    {
-           // working size is 1 contract
+           // tamanho de trabalho é 1 contrato
    	Volume = 1,
    	Security = option,
    	Portfolio = Portfolio.SelectedPortfolio,
    	Connector = Connector,
    };
-   // link quoting and hedging
+   // vincular cotação e hedge
    hedge.ChildStrategies.Add(quoting);
-   // start hedging
+   // iniciar hedge
    hedge.Start();
    ```
 

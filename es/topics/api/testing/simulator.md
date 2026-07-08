@@ -9,13 +9,13 @@ Para emular trading con datos reales, debe usar [RealTimeEmulationTrader\<TAdapt
 Para crear un conector de emulación, primero cree un conector normal para recibir datos de mercado y luego cree un conector de emulación basado en él:
 
 ```csharp
-// Create a regular connector for receiving market data
+// Crear un conector normal para recibir datos de mercado
 private readonly Connector _realConnector = new();
 
-// Create an emulation connector
+// Crear un conector de emulación
 _emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, false);
 
-// Configure emulation parameters
+// Configurar parámetros de emulación
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 settings.TimeZone = TimeHelper.Est;
 settings.ConvertTime = true;
@@ -32,22 +32,22 @@ private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
 Igual que un conector normal, el conector de emulación genera eventos al recibir datos de mercado y ejecutar transacciones:
 
 ```csharp
-// Subscribe to connector events
+// Suscribirse a eventos del conector
 _emuConnector.Connected += () =>
 {
-	// update gui labels
+	// actualizar etiquetas de la interfaz
 	this.GuiAsync(() => { ChangeConnectStatus(true); });
 };
 
 _emuConnector.Disconnected += () =>
 {
-	// update gui labels
+	// actualizar etiquetas de la interfaz
 	this.GuiAsync(() => { ChangeConnectStatus(false); });
 };
 
 _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
-	// update gui labels
+	// actualizar etiquetas de la interfaz
 	ChangeConnectStatus(false);
 	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 });
@@ -64,7 +64,7 @@ _emuConnector.OrderReceived += (s, o) =>
 	OrderGrid.Orders.Add(o);
 };
 
-// Subscribe to order registration errors
+// Suscribirse a errores de registro de órdenes
 _emuConnector.OrderRegisterFailReceived += (s, f) => OrderGrid.AddRegistrationFail(f);
 
 _emuConnector.CandleReceived += (s, candle) =>
@@ -79,7 +79,7 @@ _emuConnector.CandleReceived += (s, candle) =>
 Para trabajar con datos de mercado, debe suscribirse a los tipos de datos correspondientes:
 
 ```csharp
-// Subscribe to order books, ticks, and Level1 for the emulation connector
+// Suscribirse a libros de órdenes, ticks y Level1 para el conector de emulación
 _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
@@ -87,7 +87,7 @@ _emuConnector.Subscribe(new(DataType.Level1, security));
 // Subscribe to order books for the real connector (needed for emulation)
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
-// Subscribe to candles
+// Suscribirse a velas
 _candlesSubscription = new(CandleDataTypeEdit.DataType, security)
 {
 	From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
@@ -100,13 +100,13 @@ _emuConnector.Subscribe(_candlesSubscription);
 Las órdenes se registran mediante el conector de emulación de forma similar a un conector normal:
 
 ```csharp
-// Order registration
+// Registro de órdenes
 _emuConnector.RegisterOrder(order);
 
-// Order cancellation
+// Cancelación de órdenes
 _emuConnector.CancelOrder(order);
 
-// Order replacement
+// Reemplazo de órdenes
 _emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
 ```
 
@@ -117,16 +117,16 @@ Puede usar la propiedad [MarketEmulatorSettings](xref:StockSharp.Algo.Testing.Ma
 ```csharp
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 
-// Set timezone
+// Establecer zona horaria
 settings.TimeZone = TimeHelper.Est;
 
-// Convert time
+// Convertir hora
 settings.ConvertTime = true;
 
-// Match orders on price touch
+// Casar órdenes al tocar el precio
 settings.MatchOnTouch = false;
 
-// Emulate order execution latency
+// Emular latencia de ejecución de órdenes
 settings.Latency = TimeSpan.FromMilliseconds(100);
 ```
 

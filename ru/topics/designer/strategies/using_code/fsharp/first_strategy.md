@@ -10,55 +10,55 @@
 1. Параметры стратегии создаются через специальный подход:
 
 ```fsharp
-// --- Strategy parameters: CandleType, Long, Short, TakeValue, StopValue ---
+// --- Параметры стратегии: CandleType, Long, Short, TakeValue, StopValue ---
 
-// Parameter for the candle type
+// Параметр типа свечей
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
 		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
 
-// Parameter for the long SMA
+// Параметр длинной SMA
 let longParam =
 	this.Param<int>(nameof(this.Long), 80)
 
-// Parameter for the short SMA
+// Параметр короткой SMA
 let shortParam =
 	this.Param<int>(nameof(this.Short), 30)
 
-// Parameter for take profit
+// Параметр take profit
 let takeValueParam =
 	this.Param<Unit>(nameof(this.TakeValue), Unit(0m, UnitTypes.Absolute))
 
-// Parameter for stop loss
+// Параметр stop loss
 let stopValueParam =
 	this.Param<Unit>(nameof(this.StopValue), Unit(2m, UnitTypes.Percent))
 
-// Flag to track SMA crossing
+// Флаг для отслеживания пересечения SMA
 let mutable isShortLessThenLong : bool option = None
 
-// --------------------- Public properties ---------------------
+// --------------------- Открытые свойства ---------------------
 
-/// <summary>The candle type used by the strategy.</summary>
+/// <summary>Тип свечей, используемый стратегией.</summary>
 member this.CandleType
 	with get () = candleTypeParam.Value
 	and set value = candleTypeParam.Value <- value
 
-/// <summary>The period for the long SMA indicator.</summary>
+/// <summary>Период длинной SMA.</summary>
 member this.Long
 	with get () = longParam.Value
 	and set value = longParam.Value <- value
 
-/// <summary>The period for the short SMA indicator.</summary>
+/// <summary>Период короткой SMA.</summary>
 member this.Short
 	with get () = shortParam.Value
 	and set value = shortParam.Value <- value
 
-/// <summary>Take profit value.</summary>
+/// <summary>Значение take profit.</summary>
 member this.TakeValue
 	with get () = takeValueParam.Value
 	and set value = takeValueParam.Value <- value
 
-/// <summary>Stop loss value.</summary>
+/// <summary>Значение stop loss.</summary>
 member this.StopValue
 	with get () = stopValueParam.Value
 	and set value = stopValueParam.Value <- value
@@ -69,7 +69,7 @@ member this.StopValue
 2. При создании индикаторов и подписки на маркет-данные необходимо связать их, чтобы поступающие данные из подписки могли обновлять значения индикаторов:
 
 ```fsharp
-// ---------- Create indicators ----------
+// ---------- Создать индикаторы ----------
 let longSma = SMA()
 longSma.Length <- this.Long
 
@@ -77,10 +77,10 @@ let shortSma = SMA()
 shortSma.Length <- this.Short
 // ---------------------------------------
 
-// ------ Subscribe to the candle flow and bind indicators ------
+// ------ Подписаться на поток свечей и связать индикаторы ------
 let subscription = this.SubscribeCandles(this.CandleType)
 
-// Bind our indicators to the subscription and assign the processing function
+// Связать индикаторы с подпиской и назначить функцию обработки
 subscription
 	.Bind(longSma, shortSma, fun candle longV shortV -> this.OnProcess(candle, longV, shortV))
 	.Start() |> ignore
@@ -93,14 +93,14 @@ let area = this.CreateChartArea()
 
 // area can be null in case there is no GUI (e.g., Runner or console app)
 if not (isNull area) then
-	// Draw candles
+	// Нарисовать свечи
 	this.DrawCandles(area, subscription) |> ignore
 
-	// Draw indicators
+	// Нарисовать индикаторы
 	this.DrawIndicator(area, shortSma, System.Drawing.Color.Coral) |> ignore
 	this.DrawIndicator(area, longSma) |> ignore
 
-	// Draw own trades
+	// Нарисовать собственные сделки
 	this.DrawOwnTrades(area) |> ignore
 ```
 
@@ -119,7 +119,7 @@ member private this.OnProcess
 		longValue: decimal,
 		shortValue: decimal
 	) =
-	// Log candle information
+	// Записать информацию о свече в лог
 	this.LogInfo(
 		LocalizedStrings.SmaNewCandleLog,
 		candle.OpenTime,
@@ -131,19 +131,19 @@ member private this.OnProcess
 		candle.SecurityId
 	)
 
-	// Skip if the candle is not finished
+	// Пропустить, если свеча не завершена
 	if candle.State <> CandleStates.Finished then
 		()
 	else
-		// Determine if short SMA is less than long SMA
+		// Определить, меньше ли короткая SMA длинной SMA
 		let shortLess = shortValue < longValue
 
 		match isShortLessThenLong with
 		| None ->
-			// First time: just remember the current relation
+			// Первый раз: просто запомнить текущее соотношение
 			isShortLessThenLong <- Some shortLess
 		| Some prevValue when prevValue <> shortLess ->
-			// A crossing has occurred
+			// Произошло пересечение
 			// If short < long, that means Sell, otherwise Buy
 			let direction =
 				if shortLess then
@@ -151,36 +151,36 @@ member private this.OnProcess
 				else
 					Sides.Buy
 
-			// Calculate volume for opening a new position or reversing
+			// Рассчитать объём для открытия новой позиции или разворота
 			// If there is no position, use Volume; otherwise, double
-			// the minimum of the absolute position size and Volume
+			// минимум из абсолютного размера позиции и Volume
 			let vol =
 				if this.Position = 0m then
 					this.Volume
 				else
 					(abs this.Position |> min this.Volume) * 2m
 
-			// Get price step for the limit price
+			// Получить шаг цены для лимитной цены
 			let priceStep =
 				let step = this.GetSecurity().PriceStep
 				if step.HasValue then step.Value else 1m
 
-			// Set the limit order price slightly higher/lower than the current close price
+			// Установить цену лимитной заявки немного выше/ниже текущей цены закрытия
 			let limitPrice =
 				match direction with
 				| Sides.Buy  -> candle.ClosePrice + priceStep
 				| Sides.Sell -> candle.ClosePrice - priceStep
 				| _          -> candle.ClosePrice // should not occur
 
-			// Send limit order
+			// Отправить лимитную заявку
 			match direction with
 			| Sides.Buy  -> this.BuyLimit(limitPrice, vol) |> ignore
 			| Sides.Sell -> this.SellLimit(limitPrice, vol) |> ignore
 			| _          -> ()
 
-			// Update the tracking flag
+			// Обновить флаг отслеживания
 			isShortLessThenLong <- Some shortLess
 		| _ ->
-			// Do nothing if no crossing
+			// Ничего не делать, если пересечения нет
 			()
 ```

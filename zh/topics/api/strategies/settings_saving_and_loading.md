@@ -36,19 +36,19 @@ public class SmaStrategy : Strategy
 ```cs
 public override void Save(SettingsStorage settings)
 {
-	// First call the base method to save standard parameters
+	// 先调用基类方法保存标准参数
 	base.Save(settings);
 	
-	// Then add your specific saving logic
+	// 然后添加你的特定保存逻辑
 	settings.SetValue("CustomState", _customState);
 }
 	
 public override void Load(SettingsStorage settings)
 {
-	// First call the base method to load standard parameters
+	// 先调用基类方法加载标准参数
 	base.Load(settings);
 	
-	// Then add your specific loading logic
+	// 然后添加你的特定加载逻辑
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");
 }
@@ -59,12 +59,12 @@ public override void Load(SettingsStorage settings)
 要将设置保存到文件或从文件加载，您可以使用 StockSharp 中实现的序列化和反序列化：
 
 ```cs
-// Save settings to a file
+// 将设置保存到文件
 var settingsStorage = new SettingsStorage();
 strategy.Save(settingsStorage);
 new JsonSerializer<SettingsStorage>().Serialize(settingsStorage, "strategy.json");
 
-// Load settings from a file
+// 从文件加载设置
 var newStrategy = new SmaStrategy();
 if (File.Exists("strategy.json"))
 {

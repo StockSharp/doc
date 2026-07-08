@@ -26,7 +26,7 @@ dotnet add package StockSharp.Algo
 Cree un archivo `CLAUDE.md`:
 
 ```markdown
-# Project Rules — Exchange Connector
+# Reglas del proyecto — conector de exchange
 
 - Framework: StockSharp 5.x, .NET 10
 - Connector is implemented as a MessageAdapter
@@ -172,10 +172,10 @@ public class MyExchangeAdapter : AsyncMessageAdapter
 
     protected override ValueTask OnSecurityLookupAsync(SecurityLookupMessage msg, CancellationToken token)
     {
-        // ... request instruments
+        // ... solicitar instrumentos
     }
 
-    // ... other methods
+    // ... otros métodos
 }
 ```
 

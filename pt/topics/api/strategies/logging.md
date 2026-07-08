@@ -85,7 +85,7 @@ O método [LogError](xref:Ecng.Logging.BaseLogReceiver.LogError(System.String,Sy
 ```cs
 try
 {
-	// Some actions
+	// Algumas ações
 }
 catch (Exception ex)
 {
@@ -99,7 +99,7 @@ Existe também uma sobrecarga [LogError](xref:Ecng.Logging.BaseLogReceiver.LogEr
 ```cs
 try
 {
-	// Some actions
+	// Algumas ações
 }
 catch (Exception ex)
 {
@@ -113,7 +113,7 @@ catch (Exception ex)
 A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propriedade [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina que mensagens serão escritas no log:
 
 ```cs
-// Set the logging level for the strategy
+// Definir o nível de log da estratégia
 strategy.LogLevel = LogLevels.Info;
 ```
 
@@ -203,7 +203,7 @@ Para receber mensagens de uma estratégia, ligue listeners através de [LogManag
 ```cs
 var logManager = new LogManager();
 
-// Write to file
+// Gravar em arquivo
 var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
 logManager.Listeners.Add(fileListener);
 
@@ -212,7 +212,7 @@ var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.c
 emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
 logManager.Listeners.Add(emailListener);
 
-// Add strategy as a log source
+// Adicionar a estratégia como fonte de log
 logManager.Sources.Add(strategy);
 ```
 

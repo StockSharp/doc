@@ -15,7 +15,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Creating a subscription for 5-minute candles directly through DataType
+	// 直接通过 DataType 创建 5 分钟蜡烛订阅
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
@@ -23,13 +23,13 @@ protected override void OnStarted2(DateTime time)
 	// If additional parameters are required, you can configure the subscription
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
 	
-	// Creating a rule to process incoming candles
+	// 创建处理传入蜡烛的规则
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
 	
-	// Starting the subscription
+	// 启动订阅
 	Connector.Subscribe(subscription);
 }
 ```
@@ -68,7 +68,7 @@ private void CheckRefreshOnlineState()
 			.Where(s => !s.SubscriptionMessage.IsHistoryOnly())
 			.All(s => s.State == SubscriptionStates.Online);
 	
-	// Update strategy's IsOnline state
+	// 更新策略的 IsOnline 状态
 	IsOnline = nowOnline;
 }
 ```
@@ -80,17 +80,17 @@ private void CheckRefreshOnlineState()
 在策略中，您可以订阅各种类型的市场数据：
 
 ```cs
-// Subscription to candles
+// K线订阅
 var candleSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	Security);
 
-// Subscription to market depth
+// 订阅市场深度
 var depthSubscription = new Subscription(
 	DataType.MarketDepth,
 	Security);
 
-// Subscription to tick trades
+// tick 成交订阅
 var tickSubscription = new Subscription(
 	DataType.Ticks,
 	Security);
@@ -106,16 +106,16 @@ var level1Subscription = new Subscription(
 要处理通过订阅传入的数据，建议使用 [规则](event_model.md)：
 
 ```cs
-// Subscription to candles
+// K线订阅
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), Security);
 
-// Creating a rule for processing incoming candles
+// 创建用于处理传入蜡烛的规则
 Connector
 	.WhenCandlesFinished(subscription)  // Rule activation when a completed candle is received
 	.Do(ProcessCandle)                   // Call processing method
 	.Apply(this);                        // Apply rule to strategy
 
-// Start subscription
+// 启动订阅
 Connector.Subscribe(subscription);
 ```
 
@@ -126,7 +126,7 @@ Connector.Subscribe(subscription);
 该策略通过 [Strategy.HistorySize](xref:StockSharp.Algo.Strategies.Strategy.HistorySize) 属性自动设置历史加载周期：
 
 ```cs
-// Set history load period to 30 days
+// 将历史加载周期设置为 30 天
 strategy.HistorySize = TimeSpan.FromDays(30);
 ```
 
@@ -137,7 +137,7 @@ strategy.HistorySize = TimeSpan.FromDays(30);
 可以通过调用 [UnSubscribe](xref:StockSharp.BusinessEntities.ISubscriptionProvider.UnSubscribe(StockSharp.BusinessEntities.Subscription)) 方法手动取消订阅：
 
 ```cs
-// Cancel subscription
+// 取消订阅
 Connector.UnSubscribe(subscription);
 ```
 

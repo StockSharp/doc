@@ -30,7 +30,7 @@ class HttpClient : BaseLogReceiver
 	private readonly RestClient _restClient;
 	private readonly Authenticator _authenticator;
 
-	// The constructor initializes RestClient and configures the base URL
+	// Der Konstruktor initialisiert RestClient und konfiguriert die Basis-URL
 	public HttpClient(Authenticator authenticator)
 	{
 		_authenticator = authenticator ?? throw new ArgumentNullException(nameof(authenticator));
@@ -55,7 +55,7 @@ class HttpClient : BaseLogReceiver
 		return response.Data;
 	}
 
-	// Method for getting historical candles
+	// Methode zum Abrufen historischer Kerzen
 	public async Task<IEnumerable<Candle>> GetCandles(string symbol, long start, long end, string granularity, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest($"products/{symbol}/candles", Method.Get)
@@ -67,7 +67,7 @@ class HttpClient : BaseLogReceiver
 		return response.Data;
 	}
 
-	// Method for registering a new order
+	// Methode zum Registrieren einer neuen Order
 	public async Task<Order> RegisterOrder(string clientOrderId, string symbol, string type, string side, decimal? price, decimal volume, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest("orders", Method.Post)
@@ -81,12 +81,12 @@ class HttpClient : BaseLogReceiver
 				volume
 			});
 
-		// Applying authentication before executing the request
+		// Authentifizierung vor Ausführung der Anfrage anwenden
 		var response = await _restClient.ExecuteAsync<Order>(ApplyAuth(request), cancellationToken);
 		return response.Data;
 	}
 
-	// Method for canceling an existing order
+	// Methode zum Stornieren einer bestehenden Order
 	public async Task<bool> CancelOrder(string orderId, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest($"orders/{orderId}", Method.Delete);
@@ -95,7 +95,7 @@ class HttpClient : BaseLogReceiver
 		return response.IsSuccessful;
 	}
 
-	// Helper method for applying authentication to a request
+	// Hilfsmethode zum Anwenden der Authentifizierung auf eine Anfrage
 	private RestRequest ApplyAuth(RestRequest request)
 	{
 		_authenticator.ApplyAuthentication(request);

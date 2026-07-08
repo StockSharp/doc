@@ -40,26 +40,26 @@ Exemplo de processamento de um evento de receção de ordem:
 ```cs
 private void InitConnector()
 {
-	// Subscribe to order reception event
+	// Assinar evento de recebimento de ordens
 	Connector.OrderReceived += OnOrderReceived;
 	
-	// Subscribe to own trade reception event
+	// Assinar evento de recebimento de negociações próprias
 	Connector.OwnTradeReceived += OnOwnTradeReceived;
 	
-	// Subscribe to order registration failure event
+	// Assinar evento de falha no registro de ordem
 	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
 
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Process the received order
+	// Processar ordem recebida
 	_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	
-	// Important! Check if the order belongs to the current subscription
-	// to avoid duplicate processing
+	// Importante! Verifique se a ordem pertence à assinatura atual
+	// para evitar processamento duplicado
 	if (subscription == _myOrdersSubscription)
 	{
-		// Additional processing for the specific subscription
+		// Processamento adicional para a assinatura específica
 		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
 	}
 }
@@ -70,13 +70,13 @@ private void OnOrderReceived(Subscription subscription, Order order)
 Em alguns casos, pode ser necessário solicitar explicitamente informação sobre ordens. Para isso, pode criar subscrições separadas:
 
 ```cs
-// Create a subscription for orders of a specific portfolio
+// Criar assinatura para ordens de uma carteira específica
 var ordersSubscription = new Subscription(DataType.Transactions, portfolio)
 {
 	TransactionId = Connector.TransactionIdGenerator.GetNextId(),
 };
 
-// Handler for receiving orders
+// Manipulador para recebimento de ordens
 Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
@@ -85,7 +85,7 @@ Connector.OrderReceived += (subscription, order) =>
 	}
 };
 
-// Start the subscription
+// Iniciar a assinatura
 Connector.Subscribe(ordersSubscription);
 ```
 
@@ -94,22 +94,22 @@ Connector.Subscribe(ordersSubscription);
 São usados métodos de extensão para determinar o estado atual de uma ordem:
 
 ```cs
-// Check order status
+// Verificar status da ordem
 Order order = ...; // received order
 
-// Is the order canceled
+// A ordem foi cancelada
 bool isCanceled = order.IsCanceled();
 
-// Is the order fully executed
+// A ordem foi totalmente executada
 bool isMatched = order.IsMatched();
 
-// Is the order partially executed
+// A ordem foi parcialmente executada
 bool isPartiallyMatched = order.IsMatchedPartially();
 
-// Is at least part of the order executed
+// Pelo menos parte da ordem foi executada
 bool isNotEmpty = order.IsMatchedEmpty();
 
-// Get the executed volume
+// Obter volume executado
 decimal matchedVolume = order.GetMatchedVolume();
 ```
 
@@ -123,30 +123,30 @@ private Subscription _portfolio2OrdersSubscription;
 
 private void RequestOrdersForDifferentPortfolios()
 {
-	// Subscription for orders of the first portfolio
+	// Assinatura para ordens da primeira carteira
 	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
 	
-	// Subscription for orders of the second portfolio
+	// Assinatura para ordens da segunda carteira
 	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
 	
-	// Common handler for receiving orders
+	// Manipulador comum para recebimento de ordens
 	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
 	
-	// Start subscriptions
+	// Iniciar assinaturas
 	Connector.Subscribe(_portfolio1OrdersSubscription);
 	Connector.Subscribe(_portfolio2OrdersSubscription);
 }
 
 private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Order order)
 {
-	// Determine which subscription the order belongs to
+	// Determinar a qual assinatura a ordem pertence
 	if (subscription == _portfolio1OrdersSubscription)
 	{
-		// Process orders of the first portfolio
+		// Processar ordens da primeira carteira
 	}
 	else if (subscription == _portfolio2OrdersSubscription)
 	{
-		// Process orders of the second portfolio
+		// Processar ordens da segunda carteira
 	}
 }
 ```

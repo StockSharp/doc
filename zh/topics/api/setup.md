@@ -31,7 +31,7 @@ dotnet --version
 ### 命令行（CLI）
 
 ```bash
-# Console application
+# 控制台应用程序
 dotnet new console -n MyTradingApp --framework net10.0
 cd MyTradingApp
 
@@ -128,7 +128,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 ### 通过命令行界面（推荐）
 
 ```bash
-# Core packages
+# 核心包
 dotnet add package StockSharp.Algo
 dotnet add package StockSharp.Algo.Strategies
 
@@ -207,10 +207,10 @@ dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name St
 ### 命令行界面
 
 ```bash
-# Check for available updates
+# 检查可用更新
 dotnet list package --outdated
 
-# Update a specific package
+# 更新指定包
 dotnet add package StockSharp.Algo
 ```
 
@@ -241,10 +241,10 @@ GUI 组件（`StockSharp.Xaml`, `StockSharp.Xaml.Charting`）仅在 Windows 上�
 ### 包还原错误
 
 ```bash
-# Clear NuGet cache
+# 清理 NuGet 缓存
 dotnet nuget locals all --clear
 
-# Retry restore
+# 重试 restore
 dotnet restore
 ```
 

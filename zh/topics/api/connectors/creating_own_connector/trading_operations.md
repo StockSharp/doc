@@ -26,7 +26,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 			break;
 		case OrderTypes.Conditional:
 		{
-			// Handling conditional orders, for example, withdrawal of funds
+			// 处理条件订单，例如资金提现
 			if (!condition.IsWithdraw)
 				break;
 
@@ -53,7 +53,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 	var isMarket = regMsg.OrderType == OrderTypes.Market;
 	var price = isMarket ? (decimal?)null : regMsg.Price;
 	
-	// Sending the order to the exchange
+	// 向交易所发送订单
 	var result = await _restClient.RegisterOrder(
 		regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
 		regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
@@ -62,7 +62,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 
 	var orderState = result.Status.ToOrderState();
 
-	// Processing the order registration result
+	// 处理订单注册结果
 	if (orderState == OrderStates.Failed)
 	{
 		await SendOutMessageAsync(new ExecutionMessage
@@ -91,15 +91,15 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 ```cs
 public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg, CancellationToken cancellationToken)
 {
-	// Sending a request to replace the order
+	// 发送替换订单请求
 	await _restClient.EditOrder(
 		replaceMsg.OldOrderId.To<string>(), 
 		replaceMsg.Price, 
 		replaceMsg.Volume, 
 		cancellationToken);
 	
-	// Note: Processing the order replacement result usually occurs
-	// in a separate method that is called when receiving an update from the exchange
+	// 注意：订单替换结果的处理通常发生在
+	// 在收到交易所更新时调用的单独方法中
 }
 ```
 
@@ -128,15 +128,15 @@ public override bool IsReplaceCommandEditCurrent => true;
 ```cs
 public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, CancellationToken cancellationToken)
 {
-	// Checking the presence of the order identifier
+	// 检查订单标识符是否存在
 	if (cancelMsg.OrderStringId.IsEmpty())
 		throw new InvalidOperationException(LocalizedStrings.OrderNoExchangeId.Put(cancelMsg.OriginalTransactionId));
 
-	// Sending a request to cancel the order
+	// 发送撤销订单请求
 	await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
 
-	// Note: Processing the order cancellation result usually occurs
-	// in a separate method that is called when receiving an update from the exchange
+	// 注意：订单撤销结果的处理通常发生在
+	// 在收到交易所更新时调用的单独方法中
 }
 ```
 

@@ -13,22 +13,22 @@ Es gibt zwei Ansätze zur Anzeige von Candles in einem Chart. Der erste Ansatz i
 private ChartArea _areaComb;
 private ChartCandleElement _candleElement;
 
-// Chart initialization
+// Diagramm initialisieren
 private void InitializeChart()
 {
-	// Create chart area
+	// Diagrammbereich erstellen
 	_areaComb = new ChartArea();
 	_chart.Areas.Add(_areaComb);
 
-	// Create chart element representing candles
+	// Diagrammelement für Kerzen erstellen
 	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
 	_areaComb.Elements.Add(_candleElement);
 
-	// Subscribe to candle reception event
+	// Ereignis zum Empfang von Kerzen abonnieren
 	_connector.CandleReceived += OnCandleReceived;
 }
 
-// Create subscription to 5-minute candles
+// Abonnement für 5-Minuten-Kerzen erstellen
 private void SubscribeToCandles()
 {
 	var subscription = new Subscription(
@@ -37,27 +37,27 @@ private void SubscribeToCandles()
 	{
 		MarketData =
 		{
-			// Request historical data for 5 days
+			// Historische Daten für 5 Tage anfordern
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(5)),
 			To = DateTime.Now
 		}
 	};
 
-	// Start subscription
+	// Abonnement starten
 	_connector.Subscribe(subscription);
 }
 
-// Handler for candle reception event
+// Handler für das Kerzenempfangsereignis
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle is completed
+	// Prüfen, ob die Kerze abgeschlossen ist
 	if (candle.State == CandleStates.Finished)
 	{
-		// Create data for drawing
+		// Daten zum Zeichnen erstellen
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 
-		// Draw on chart in UI thread
+		// Im UI-Thread im Diagramm zeichnen
 		this.GuiAsync(() => _chart.Draw(chartData));
 	}
 }
@@ -68,17 +68,17 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 Der zweite Ansatz besteht darin, die automatische Bindung eines Abonnements an ein Chart-Element zu verwenden. Dies ermöglicht die automatische Anzeige der empfangenen Daten:
 
 ```cs
-// Chart initialization with automatic binding
+// Diagramminitialisierung mit automatischer Bindung
 private void InitializeChartWithAutoBinding()
 {
-	// Create chart area
+	// Diagrammbereich erstellen
 	var area = new ChartArea();
 	_chart.Areas.Add(area);
 
-	// Create element for displaying candles
+	// Element zur Anzeige von Kerzen erstellen
 	var candleElement = new ChartCandleElement();
 
-	// Create subscription to candles
+	// Kerzenabonnement erstellen
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security)
@@ -90,10 +90,10 @@ private void InitializeChartWithAutoBinding()
 		}
 	};
 
-	// Bind element to subscription
+	// Element an Abonnement binden
 	_chart.AddElement(area, candleElement, subscription);
 
-	// Start subscription
+	// Abonnement starten
 	_connector.Subscribe(subscription);
 }
 ```
@@ -103,29 +103,29 @@ private void InitializeChartWithAutoBinding()
 Um Indikatoren zusammen mit Candles im Chart anzuzeigen, werden Elemente vom Typ [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) verwendet:
 
 ```cs
-// Adding indicator to chart
+// Indikator zum Diagramm hinzufügen
 private void AddIndicatorToChart()
 {
-	// Create element for indicator
+	// Element für Indikator erstellen
 	var smaElement = new ChartIndicatorElement
 	{
 		Title = "SMA (14)",
 		Color = Colors.Red
 	};
 
-	// Add element to the same area as candles
+	// Element zum selben Bereich wie die Kerzen hinzufügen
 	_areaComb.Elements.Add(smaElement);
 
-	// Create indicator
+	// Indikator erstellen
 	var sma = new SimpleMovingAverage { Length = 14 };
 
-	// Subscribe to candle reception event for indicator calculation
+	// Kerzenempfangsereignis zur Indikatorberechnung abonnieren
 	_connector.CandleReceived += (subscription, candle) =>
 	{
-		// Calculate indicator value
+		// Indikatorwert berechnen
 		var indicatorValue = sma.Process(candle);
 
-		// Draw value on chart
+		// Wert im Diagramm zeichnen
 		var chartData = new ChartDrawData();
 		chartData.Group(candle.OpenTime).Add(smaElement, indicatorValue);
 
@@ -139,42 +139,42 @@ private void AddIndicatorToChart()
 Indikatoren können in separaten Chart-Bereichen platziert werden:
 
 ```cs
-// Adding indicators to different areas
+// Indikatoren zu verschiedenen Bereichen hinzufügen
 private void AddIndicatorsToSeparateAreas()
 {
-	// Main area for candles
+	// Hauptbereich für Kerzen
 	var candleArea = new ChartArea();
 	_chart.Areas.Add(candleArea);
 
-	// Element for candles
+	// Element für Kerzen
 	var candleElement = new ChartCandleElement();
 	candleArea.Elements.Add(candleElement);
 
-	// Element for SMA on the same area
+	// Element für SMA im selben Bereich
 	var smaElement = new ChartIndicatorElement { Title = "SMA (14)" };
 	candleArea.Elements.Add(smaElement);
 
-	// Separate area for RSI
+	// Separater Bereich für RSI
 	var rsiArea = new ChartArea();
 	_chart.Areas.Add(rsiArea);
 
-	// Element for RSI
+	// Element für RSI
 	var rsiElement = new ChartIndicatorElement { Title = "RSI (14)" };
 	rsiArea.Elements.Add(rsiElement);
 
-	// Create indicators
+	// Indikatoren erstellen
 	var sma = new SimpleMovingAverage { Length = 14 };
 	var rsi = new RelativeStrengthIndex { Length = 14 };
 
-	// Subscription to candles
+	// Kerzenabonnement
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security);
 
-	// Bind candle element to subscription
+	// Kerzenelement an Abonnement binden
 	_chart.AddElement(candleArea, candleElement, subscription);
 
-	// Start subscription and process indicators
+	// Abonnement starten und Indikatoren verarbeiten
 	_connector.Subscribe(subscription);
 
 	_connector.CandleReceived += (sub, candle) =>
@@ -182,11 +182,11 @@ private void AddIndicatorsToSeparateAreas()
 		if (sub != subscription || candle.State != CandleStates.Finished)
 			return;
 
-		// Calculate indicator values
+		// Indikatorwerte berechnen
 		var smaValue = sma.Process(candle);
 		var rsiValue = rsi.Process(candle);
 
-		// Draw values on chart
+		// Werte im Diagramm zeichnen
 		var chartData = new ChartDrawData();
 		chartData
 			.Group(candle.OpenTime)
@@ -203,24 +203,24 @@ private void AddIndicatorsToSeparateAreas()
 Für die Anzeige von Orders und Trades im Chart werden spezielle Elemente verwendet:
 
 ```cs
-// Adding elements for displaying orders and trades
+// Elemente zur Anzeige von Orders und Trades hinzufügen
 private void AddOrdersAndTradesToChart()
 {
-	// Create elements for displaying orders and trades
+	// Elemente zur Anzeige von Orders und Trades erstellen
 	var orderElement = new ChartOrderElement();
 	var tradeElement = new ChartTradeElement();
 
-	// Add elements to chart area
+	// Elemente zum Diagrammbereich hinzufügen
 	_areaComb.Elements.Add(orderElement);
 	_areaComb.Elements.Add(tradeElement);
 
-	// Subscribe to order and trade reception events
+	// Ereignisse zum Empfang von Orders und Trades abonnieren
 	_connector.OrderReceived += (subscription, order) =>
 	{
 		if (order.Security != _security)
 			return;
 
-		// Draw order on chart
+		// Order im Diagramm zeichnen
 		var chartData = new ChartDrawData();
 		chartData.Group(order.Time).Add(orderElement, order);
 
@@ -232,7 +232,7 @@ private void AddOrdersAndTradesToChart()
 		if (trade.Order.Security != _security)
 			return;
 
-		// Draw trade on chart
+		// Trade im Diagramm zeichnen
 		var chartData = new ChartDrawData();
 		chartData.Group(trade.Time).Add(tradeElement, trade);
 
@@ -246,21 +246,21 @@ private void AddOrdersAndTradesToChart()
 Verschiedene Aspekte des Chart-Erscheinungsbilds können konfiguriert werden:
 
 ```cs
-// Configuring chart appearance
+// Diagrammdarstellung konfigurieren
 private void ConfigureChartAppearance()
 {
-	// Configuring chart area
+	// Diagrammbereich konfigurieren
 	_areaComb.Height = 300;
 	_areaComb.BackgroundMajorGridColor = Colors.Gray;
 	_areaComb.BackgroundMinorGridColor = Colors.LightGray;
 
-	// Configuring candle element
+	// Kerzenelement konfigurieren
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
 	_candleElement.UpBrush = Brushes.Green;
 	_candleElement.DownBrush = Brushes.Red;
 	_candleElement.StrokeThickness = 1;
 
-	// Configuring entire chart
+	// Gesamtes Diagramm konfigurieren
 	_chart.IsAutoRange = true;            // Automatic scaling
 	_chart.IsManualVerticalValues = false; // Automatic calculation of vertical values
 	_chart.BidEnabled = false;            // Disable display of best bid price
@@ -273,24 +273,24 @@ private void ConfigureChartAppearance()
 Verwaltung von Chart-Zoom und -Scrollen:
 
 ```cs
-// Configuring zooming and scrolling
+// Zoom und Scrollen konfigurieren
 private void ConfigureChartZoomAndScroll()
 {
-	// Setting initial and final dates for display
+	// Start- und Enddatum für die Anzeige festlegen
 	_chart.SetXRange(DateTime.Today.AddDays(-10), DateTime.Today);
 
-	// Setting Y-axis range
+	// Y-Achsenbereich festlegen
 	_chart.SetYRange(100, 150);
 
-	// Buttons for zoom control
+	// Schaltflächen zur Zoomsteuerung
 	zoomInButton.Click += (s, e) => _chart.ZoomIn();
 	zoomOutButton.Click += (s, e) => _chart.ZoomOut();
 
-	// Buttons for scrolling
+	// Schaltflächen zum Scrollen
 	scrollLeftButton.Click += (s, e) => _chart.ScrollLeft();
 	scrollRightButton.Click += (s, e) => _chart.ScrollRight();
 
-	// Reset zoom to automatic
+	// Zoom auf automatisch zurücksetzen
 	resetZoomButton.Click += (s, e) => _chart.IsAutoRange = true;
 }
 ```
@@ -300,10 +300,10 @@ private void ConfigureChartZoomAndScroll()
 Um das Chart in einer Datei zu speichern:
 
 ```cs
-// Exporting chart to image
+// Diagramm als Bild exportieren
 private void ExportChartToImage()
 {
-	// Create object for saving image
+	// Objekt zum Speichern des Bildes erstellen
 	var saveFileDialog = new SaveFileDialog
 	{
 		Filter = "PNG Image|*.png|JPEG Image|*.jpg|BMP Image|*.bmp",
@@ -312,7 +312,7 @@ private void ExportChartToImage()
 
 	if (saveFileDialog.ShowDialog() == true)
 	{
-		// Create image from chart
+		// Bild aus Diagramm erstellen
 		var rtb = new RenderTargetBitmap(
 			(int)_chart.ActualWidth,
 			(int)_chart.ActualHeight,
@@ -321,7 +321,7 @@ private void ExportChartToImage()
 
 		rtb.Render(_chart);
 
-		// Save image in selected format
+		// Bild im ausgewählten Format speichern
 		BitmapEncoder encoder;
 
 		switch (Path.GetExtension(saveFileDialog.FileName).ToLower())
@@ -352,16 +352,16 @@ private void ExportChartToImage()
 Um Daten im Chart zu löschen:
 
 ```cs
-// Clearing chart or its elements
+// Diagramm oder seine Elemente leeren
 private void ClearChart()
 {
-	// Clear entire chart
+	// Gesamtes Diagramm leeren
 	_chart.Reset();
 
-	// Clear specific area
+	// Bestimmten Bereich leeren
 	_areaComb.Reset();
 
-	// Clear specific element
+	// Bestimmtes Element leeren
 	_candleElement.Reset();
 }
 ```

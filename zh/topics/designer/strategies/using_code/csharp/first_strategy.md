@@ -45,21 +45,21 @@ public int Short
 2. 创建指标并订阅市场数据时，需要将二者绑定，使订阅收到的数据能够更新指标值：
 
 ```cs
-// ---------- create indicators -----------
+// ---------- 创建指标 -----------
 
 var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 // ----------------------------------------
 
-// --- bind candles set and indicators ----
+// --- 绑定蜡烛集和指标 ----
 
 var subscription = SubscribeCandles(CandleType);
 
 subscription
-	// bind indicators to the candles
+	// 将指标绑定到蜡烛
 	.Bind(longSma, shortSma, OnProcess)
-	// start processing
+	// 开始处理
 	.Start();
 ```
 
@@ -83,7 +83,7 @@ if (area != null)
 4. 如果策略逻辑需要，请通过 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 启动持仓保护：
 
 ```cs
-// start protection by take profit and-or stop loss
+// 按 take profit 和/或 stop loss 启动保护
 StartProtection(TakeValue, StopValue);
 ```
 
@@ -94,11 +94,11 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// in case we subscribed on non finished only candles
+	// 如果我们只订阅了未完成的蜡烛
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// calc new values for short and long
+	// 计算 short 和 long 的新值
 	var isShortLessThenLong = shortValue < longValue;
 
 	if (_isShortLessThenLong == null)
@@ -107,17 +107,17 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	}
 	else if (_isShortLessThenLong != isShortLessThenLong)
 	{
-		// crossing happened
+		// 发生交叉
 
 		// if short less than long, the sale, otherwise buy
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
-		// calc size for open position or revert
+		// 计算开仓或反转的数量
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
 		var priceStep = GetSecurity().PriceStep ?? 1;
 
-		// calc order price as a close price + offset
+		// 将订单价格计算为收盘价 + 偏移
 		var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
 		if (direction == Sides.Buy)
@@ -125,7 +125,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		else
 			SellLimit(price, volume);
 
-		// store current values for short and long
+		// 保存 short 和 long 的当前值
 		_isShortLessThenLong = isShortLessThenLong;
 	}
 }

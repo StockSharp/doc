@@ -10,9 +10,9 @@
 
 ```cs
 /// <summary>
-/// Sample indicator demonstrating to save and load parameters.
+/// 演示保存和加载参数的示例指标。
 /// 
-/// Changes input price on +20% or -20%.
+/// 将输入价格改变 +20% 或 -20%。
 /// 
 /// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 /// 
@@ -33,7 +33,7 @@ public class EmptyIndicator : BaseIndicator
 	}
 
 	private int _counter;
-	// formed indicator received all necessary inputs for be available for trading
+	// 已形成的指标收到所有必要输入，可用于交易
 	private bool _isFormed;
 
 	protected override bool CalcIsFormed() => _isFormed;
@@ -48,7 +48,7 @@ public class EmptyIndicator : BaseIndicator
 
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
-		// every 10th call try return empty value
+		// 每第 10 次调用尝试返回空值
 		if (RandomGen.GetInt(0, 10) == 0)
 			return new DecimalIndicatorValue(this);
 
@@ -60,19 +60,19 @@ public class EmptyIndicator : BaseIndicator
 
 		var value = input.GetValue<decimal>();
 
-		// random change on +20% or -20% current value
+		// 随机将当前值改变 +20% 或 -20%
 
 		value += value * RandomGen.GetInt(-Change, Change) / 100.0m;
 
 		return new DecimalIndicatorValue(this, value)
 		{
-			// final value means that this value for the specified input
+			// final 值表示这是指定输入的最终值
 			// is not changed anymore (for example, for candles that changes with last price)
 			IsFinal = RandomGen.GetBool()
 		};
 	}
 
-	// persist our properties to save for further the app restarts
+	// 持久化属性，以便应用后续重启时保存
 
 	public override void Load(SettingsStorage storage)
 	{

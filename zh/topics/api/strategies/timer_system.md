@@ -56,13 +56,13 @@ timer.Start();
 // Stop
 timer.Stop();
 
-// Change interval
+// 更改间隔
 timer.Interval = TimeSpan.FromMinutes(5);
 
 // Start again
 timer.Start();
 
-// Release resources
+// 释放资源
 timer.Dispose();
 ```
 
@@ -99,7 +99,7 @@ public class TimerStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Timer for periodic market condition checks
+        // 用于定期检查市场状态的定时器
         _checkTimer = StartTimer(CheckInterval, OnCheckTimer);
 
         // Timer for forced position closing (created but not started)
@@ -119,7 +119,7 @@ public class TimerStrategy : Strategy
 
         this.AddInfoLog("Checking market conditions at {0}", CurrentTime);
 
-        // Periodic position state check
+        // 定期检查持仓状态
         if (Position != 0)
         {
             this.AddInfoLog("Current position: {0}", Position);
@@ -133,7 +133,7 @@ public class TimerStrategy : Strategy
             this.AddInfoLog("Position hold time expired, closing");
             ClosePosition();
 
-            // Stop the close timer after it fires
+            // 关闭定时器触发后停止它
             _closeTimer.Stop();
         }
     }
@@ -147,7 +147,7 @@ public class TimerStrategy : Strategy
         {
             BuyMarket();
 
-            // Start the forced close timer
+            // 启动强制平仓定时器
             _closeTimer.Start();
         }
     }

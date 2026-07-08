@@ -17,7 +17,7 @@ public class MultiTimeframeStrategy : Strategy
 	private readonly StrategyParam<decimal> _takeProfit;
 	private readonly StrategyParam<decimal> _stopLoss;
 
-	// Trend direction on the higher timeframe
+	// 较高时间周期上的趋势方向
 	private Sides? _hourlyTrend;
 }
 ```
@@ -65,7 +65,7 @@ protected override void OnStarted2(DateTime time)
 		new Unit(StopLoss, UnitTypes.Percent)
 	);
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -86,7 +86,7 @@ private void ProcessHourlyCandle(ICandleMessage candle, decimal fastValue, decim
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Determine trend by moving average crossover
+	// 通过移动平均线交叉确定趋势
 	_hourlyTrend = fastValue > slowValue ? Sides.Buy : Sides.Sell;
 }
 ```
@@ -104,12 +104,12 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 	if (_hourlyTrend == null || !IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// Buy: uptrend and RSI in oversold zone
+	// 买入：上升趋势且 RSI 位于超卖区
 	if (_hourlyTrend == Sides.Buy && rsiValue < 30 && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}
-	// Sell: downtrend and RSI in overbought zone
+	// 卖出：下降趋势且 RSI 位于超买区
 	else if (_hourlyTrend == Sides.Sell && rsiValue > 70 && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));

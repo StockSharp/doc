@@ -50,7 +50,7 @@ namespace StockSharp.Algo.Analytics
 	using MathNet.Numerics.Statistics;
 
 	/// <summary>
-	/// The analytic script, calculating Pearson correlation by specified securities.
+	/// Аналитический скрипт рассчитывает корреляцию Pearson для указанных инструментов.
 	/// </summary>
 	public class PearsonCorrelationScript : IAnalyticsScript
 	{
@@ -66,14 +66,14 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// stop calculation if user cancel script execution
+				// остановить расчёт, если пользователь отменил выполнение скрипта
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
-				// get candle storage
+				// получение хранилища свечей
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-				// get closing prices
+				// получить цены закрытия
 				var prices = candleStorage.Load(from, to).Select(c => (double)c.ClosePrice).ToArray();
 
 				if (prices.Length == 0)
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 				closes.Add(prices);
 			}
 
-			// all array must be same length, so truncate longer
+			// все массивы должны быть одной длины, поэтому обрезаем более длинные
 			var min = closes.Select(arr => arr.Length).Min();
 
 			for (var i = 0; i < closes.Count; i++)
@@ -96,10 +96,10 @@ namespace StockSharp.Algo.Analytics
 					closes[i] = arr.Take(min).ToArray();
 			}
 
-			// calculating correlation
+			// расчёт корреляции
 			var matrix = Correlation.PearsonMatrix(closes);
 
-			// displaying result into heatmap
+			// показать результат на тепловой карте
 			var ids = securities.Select(s => s.ToStringId());
 			panel.DrawHeatmap(ids, ids, matrix.ToArray());
 
@@ -115,7 +115,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -132,7 +132,7 @@ from numpy_extensions import nx
 clr.AddReference("NumpyDotNet")
 from NumpyDotNet import np
 
-# The analytic script, calculating Pearson correlation by specified securities.
+# Аналитический скрипт рассчитывает корреляцию Pearson для указанных инструментов.
 class pearson_correlation_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -160,14 +160,14 @@ class pearson_correlation_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# stop calculation if user cancel script execution
+			# остановить расчёт, если пользователь отменил выполнение скрипта
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# get candle storage
+			# получение хранилища свечей
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-			# get closing prices
+			# получить цены закрытия
 			prices = [float(c.ClosePrice) for c in load_range(candle_storage, message_type, from_date, to_date)]
 
 			if len(prices) == 0:
@@ -176,18 +176,18 @@ class pearson_correlation_script(IAnalyticsScript):
 
 			closes.append(prices)
 
-		# all arrays must be the same length, so truncate longer ones
+		# все массивы должны быть одной длины, поэтому обрезаем более длинные
 		min_length = min(len(arr) for arr in closes)
 		closes = [arr[:min_length] for arr in closes]
 
-		# convert list or array into 2D array
+		# преобразовать список или массив в 2D-массив
 		array2d = nx.to2darray(closes)
 
-		# calculating correlation using NumSharp
+		# расчёт корреляции с помощью NumSharp
 		np_array = np.array(array2d)
 		matrix = np.corrcoef(np_array)
 
-		# displaying result into heatmap
+		# показать результат на тепловой карте
 		ids = [to_string_id(s) for s in securities]
 		panel.DrawHeatmap(ids, ids, nx.tosystemarray(matrix))
 

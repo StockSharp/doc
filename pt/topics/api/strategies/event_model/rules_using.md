@@ -21,7 +21,7 @@
          .Once()
          .Apply(this);
       
-     // order registration
+     // registro de ordem
      Connector.RegisterOrder(order);
   }
   ```
@@ -37,28 +37,28 @@
   {
       protected override void OnStarted2(DateTime time)
       {
-          // Subscription to candles
+          // Assinatura de velas
           var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
           this
               .WhenCandlesStarted(candleSubscription)
               .Do(ProcessCandle)
               .Apply(this);
               
-          // Subscription to tick trades
+          // Assinatura de negociações tick
           var tickSubscription = new Subscription(DataType.Ticks, Security);
           tickSubscription
               .WhenTickTradeReceived(this)
               .Do(ProcessTick)
               .Apply(this);
               
-          // Send subscription requests
+          // Enviar solicitações de assinatura
           Subscribe(candleSubscription);
           Subscribe(tickSubscription);
               
           base.OnStarted2(time);
       }
       
-      // Methods for event processing
+      // Métodos para processamento de eventos
       private void ProcessCandle(ICandleMessage candle) { /* ... */ }
       private void ProcessTick(ITickTradeMessage tick) { /* ... */ }
   }    
@@ -77,7 +77,7 @@
       .Do(() =>
       {
           this.AddInfoLog("Order successfully canceled");
-          // removing all rules associated with order
+          // remover todas as regras associadas à ordem
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
       .Once()
@@ -97,7 +97,7 @@
       .Do(() => this.AddInfoLog("Order fully executed"))
       .Once()
       .Apply(this);
-  // order registration
+  // registro de ordem
   RegisterOrder(order);
   ```
   
@@ -106,7 +106,7 @@
   Quando o tempo expira **OU** uma vela fecha:
 
   ```cs
-  // Create a subscription to candles
+  // Criar assinatura de velas
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
   
@@ -117,14 +117,14 @@
       .Once()
       .Apply(this);
       
-  // Send subscription request
+  // Enviar solicitação de assinatura
   Subscribe(subscription);
   ```
 
   Ou neste formato:
 
   ```cs
-  // Create a subscription to candles
+  // Criar assinatura de velas
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
   
@@ -137,14 +137,14 @@
       .Once()
       .Apply(this);
       
-  // Send subscription request
+  // Enviar solicitação de assinatura
   Subscribe(subscription);
   ```
 
   Quando o preço do último negócio está acima de 135000 **E** abaixo de 140000:
 
   ```cs
-  // Create a subscription to tick trades
+  // Criar assinatura de negociações tick
   var subscription = new Subscription(DataType.Ticks, Security);
   var priceMore = new Unit(135000m, UnitTypes.Limit);
   var priceLess = new Unit(140000m, UnitTypes.Limit);
@@ -157,7 +157,7 @@
       .Do(() => this.AddInfoLog($"Last trade price is in the range from {priceMore} to {priceLess}"))
       .Apply(this);
       
-  // Send subscription request
+  // Enviar solicitação de assinatura
   Subscribe(subscription);
   ```
 
@@ -169,7 +169,7 @@
   ```cs
   bool flag = false;
   
-  // Create a subscription to tick trades
+  // Criar assinatura de negociações tick
   var subscription = new Subscription(DataType.Ticks, Security);
   				
   subscription
@@ -181,7 +181,7 @@
       .Until(() => flag)			
       .Apply(this);
       
-  // Send subscription request
+  // Enviar solicitação de assinatura
   Subscribe(subscription);
   ```
 
@@ -190,20 +190,20 @@
 ### Regras em Velas
 
 ```cs
-// Create a subscription to 5-minute candles
+// Criar uma assinatura para velas de 5 minutos
 var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
 
-// Variable for counting candles
+// Variável para contar velas
 var i = 0;
 var diff = "10%".ToUnit();
 
-// Rule that activates when a new candle starts
+// Regra que é ativada quando uma nova vela começa
 this.WhenCandlesStarted(subscription)
 	.Do((candle) =>
 	{
 		i++;
 
-		// Nested rule: check when total volume exceeds threshold
+		// Regra aninhada: verificar quando o volume total excede o limite
 		this
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
@@ -215,23 +215,23 @@ this.WhenCandlesStarted(subscription)
 
 	}).Apply(this);
 	
-// Send subscription request
+// Enviar solicitação de assinatura
 Subscribe(subscription);
 ```
 
 ### Regras em Livros de Ordens (Profundidade de Mercado)
 
 ```cs
-// Subscription to order book data
+// Assinatura de dados do livro de ofertas
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-// Method 1: Creating a rule in a chain
+// Método 1: criar regra em cadeia
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
-// Method 2: First create a rule variable
+// Método 2: primeiro criar variável de regra
 var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
@@ -239,7 +239,7 @@ whenMarketDepthChanged.Do((depth) =>
 	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
-// Rule within a rule
+// Regra dentro de regra
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
@@ -251,20 +251,20 @@ mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	}).Apply(this);
 }).Once().Apply(this);
 
-// Send subscription request
+// Enviar solicitação de assinatura
 Subscribe(mdSub);
 ```
 
 ### Regras com Condição de Conclusão
 
 ```cs
-// Subscription to order book data
+// Assinatura de dados do livro de ofertas
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
 // Counter
 var i = 0;
 
-// Create a rule that processes order books until i reaches 10
+// Criar regra que processa livros de ofertas até i chegar a 10
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
 	i++;
@@ -274,17 +274,17 @@ mdSub.WhenOrderBookReceived(this).Do(depth =>
 .Until(() => i >= 10)
 .Apply(this);
 
-// Send subscription request
+// Enviar solicitação de assinatura
 Subscribe(mdSub);
 ```
 
 ### Regras em Ordens
 
 ```cs
-// Subscription to tick trades
+// Assinatura de negociações tick
 var sub = new Subscription(DataType.Ticks, Security);
 
-// When we receive the first tick, we'll create an order
+// Quando recebermos o primeiro tick, criaremos uma ordem
 sub.WhenTickTradeReceived(this).Do(() =>
 {
 	var order = CreateOrder(Sides.Buy, default, 1);
@@ -307,20 +307,20 @@ sub.WhenTickTradeReceived(this).Do(() =>
 	RegisterOrder(order);
 }).Once().Apply(this);
 
-// Send subscription request
+// Enviar solicitação de assinatura
 Subscribe(sub);
 ```
 
 ### Regras em Alterações de Preço
 
 ```cs
-// Subscription to tick trades
+// Assinatura de negociações tick
 var sub = new Subscription(DataType.Ticks, Security);
 
-// Rule activates on the first tick and creates another rule
+// A regra é ativada no primeiro tick e cria outra regra
 sub.WhenTickTradeReceived(this).Do(t =>
 {
-	// Create a rule that activates when the price moves 2 points in any direction
+	// Criar regra ativada quando o preço se move 2 pontos em qualquer direção
 	sub
 		.WhenLastTradePriceMore(this, t.Price + 2)
 		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
@@ -333,6 +333,6 @@ sub.WhenTickTradeReceived(this).Do(t =>
 .Once() // call this rule only once
 .Apply(this);
 
-// Send subscription request
+// Enviar solicitação de assinatura
 Subscribe(sub);
 ```

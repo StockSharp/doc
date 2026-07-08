@@ -11,19 +11,19 @@
 最简单的方法是使用内置方法，在一次调用中创建并注册订单：
 
 ```cs
-// Buy at market price
+// 按市价买入
 BuyMarket(volume);
 
-// Sell at market price
+// 按市价卖出
 SellMarket(volume);
 
-// Buy at limit price
+// 按限价买入
 BuyLimit(price, volume);
 
-// Sell at limit price
+// 按限价卖出
 SellLimit(price, volume);
 
-// Close the current position at market price
+// 按市价关闭当前持仓
 ClosePosition();
 ```
 
@@ -37,14 +37,14 @@ ClosePosition();
 一种更灵活的方法是将订单的创建和注册分开：
 
 ```cs
-// Create an order object
+// 创建订单对象
 var order = CreateOrder(Sides.Buy, price, volume);
 
-// Additional order settings
+// 额外订单设置
 order.Comment = "My special order";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
-// Register the order
+// 注册订单
 RegisterOrder(order);
 ```
 
@@ -55,7 +55,7 @@ RegisterOrder(order);
 为了获得最大的控制力，您可以直接创建一个订单对象并注册它：
 
 ```cs
-// Create an order object directly
+// 直接创建订单对象
 var order = new Order
 {
 	Security = Security,
@@ -67,7 +67,7 @@ var order = new Order
 	Comment = "Custom order"
 };
 
-// Register the order
+// 注册订单
 RegisterOrder(order);
 ```
 
@@ -80,23 +80,23 @@ RegisterOrder(order);
 ### 1. 使用事件处理程序
 
 ```cs
-// Subscribe to the order received event
+// 订阅订单接收事件
 OrderReceived += OnOrderReceived;
 
-// Subscribe to the order registration failure event
+// 订阅订单注册失败事件
 OrderRegisterFailed += OnOrderRegisterFailed;
 
 private void OnOrderReceived(Order order)
 {
 	if (order.State == OrderStates.Done)
 	{
-		// Order executed - perform corresponding logic
+		// 订单已成交 - 执行相应逻辑
 	}
 }
 
 private void OnOrderRegisterFailed(OrderFail fail)
 {
-	// Handle order registration error
+	// 处理订单注册错误
 	LogError($"Order registration error: {fail.Error}");
 }
 ```
@@ -106,14 +106,14 @@ private void OnOrderRegisterFailed(OrderFail fail)
 一种更强大的方法是使用[规则](event_model.md)来处理订单：
 
 ```cs
-// Create an order
+// 创建订单
 var order = BuyLimit(price, volume);
 
-// Create a rule that will trigger when the order is executed
+// 创建在订单成交时触发的规则
 order
 	.WhenMatched(this)
 	.Do(() => {
-		// Actions after order execution
+		// 订单成交后的操作
 		LogInfo($"Order {order.TransactionId} executed");
 		
 		// For example, place a stop order
@@ -121,12 +121,12 @@ order
 	})
 	.Apply(this);
 
-// Rule for handling registration error
+// 处理注册错误的规则
 order
 	.WhenRegisterFailed(this)
 	.Do(fail => {
 		LogError($"Order registration error: {fail.Error}");
-		// Possibly retry with different parameters
+		// 可以使用不同参数重试
 	})
 	.Apply(this);
 ```
@@ -138,13 +138,13 @@ order
 该策略还提供了持仓管理的方法：
 
 ```cs
-// Get current position
+// 获取当前持仓
 decimal currentPosition = Position;
 
-// Close current position
+// 关闭当前持仓
 ClosePosition();
 
-// Protect position with stop-loss and take-profit
+// 使用 stop-loss 和 take-profit 保护持仓
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute),   // take-profit
 	stopLoss: new Unit(20, UnitTypes.Absolute),     // stop-loss
@@ -216,19 +216,19 @@ public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = Str
 // For placing a new order that increases a position, full trading mode is required
 if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
 {
-	// We can place any orders
+	// 可以下任何订单
 	RegisterOrder(CreateOrder(Sides.Buy, price, volume));
 }
 // For closing a position, the position reduction mode is sufficient
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly) && Position != 0)
 {
-	// We can only close the position
+	// 只能关闭持仓
 	ClosePosition();
 }
 // For cancelling active orders, the order cancellation mode is sufficient
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
 {
-	// We can only cancel orders
+	// 只能撤销订单
 	CancelActiveOrders();
 }
 ```
@@ -240,12 +240,12 @@ else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Check if the strategy is formed and in online mode,
-	// and if trading is allowed
+	// 检查策略是否已形成并处于在线模式，
+	// 以及是否允许交易
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 	
-	// Trading logic
+	// 交易逻辑
 	// ...
 }
 ```
@@ -259,12 +259,12 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Subscribe to candles
+	// 订阅 K线
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
 	
-	// Create a rule for processing candles
+	// 创建处理蜡烛的规则
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
@@ -275,21 +275,21 @@ protected override void OnStarted2(DateTime time)
 
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Check if the strategy is ready to trade
+	// 检查策略是否已准备好交易
 	if (!this.IsFormedAndOnlineAndAllowTrading())
 		return;
 	
-	// Example trading logic based on closing price
+	// 基于收盘价的交易逻辑示例
 	if (candle.ClosePrice > _previousClose * 1.01)
 	{
-		// Option 1: Using a high-level method
+		// 选项 1：使用高级方法
 		var order = BuyLimit(candle.ClosePrice, Volume);
 		
-		// Create a rule for handling order execution
+		// 创建处理订单成交的规则
 		order
 			.WhenMatched(this)
 			.Do(() => {
-				// When the order is executed, set stop-loss and take-profit
+				// 订单成交后设置 stop-loss 和 take-profit
 				StartProtection(
 					takeProfit: new Unit(50, UnitTypes.Absolute),
 					stopLoss: new Unit(20, UnitTypes.Absolute)
@@ -299,15 +299,15 @@ private void ProcessCandle(ICandleMessage candle)
 	}
 	else if (candle.ClosePrice < _previousClose * 0.99)
 	{
-		// Option 2: Separate creation and registration
+		// 选项 2：分别创建和注册
 		var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
 		RegisterOrder(order);
 		
-		// Alternative way of handling through the event
+		// 通过事件处理的替代方式
 		OrderReceived += (o) => {
 			if (o == order && o.State == OrderStates.Done)
 			{
-				// Actions after execution
+				// 成交后的操作
 			}
 		};
 	}

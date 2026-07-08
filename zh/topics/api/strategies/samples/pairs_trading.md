@@ -16,7 +16,7 @@ public class PairsTradingStrategy : Strategy
 	private readonly StrategyParam<decimal> _exitThreshold;
 	private readonly StrategyParam<DataType> _candleType;
 
-	// Latest prices for each instrument
+	// 每个工具的最新价格
 	private decimal? _lastPrice1;
 	private decimal? _lastPrice2;
 }
@@ -42,7 +42,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Get two instruments for pairs trading
+	// 获取用于配对交易的两个工具
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
 		throw new InvalidOperationException("Two instruments must be specified.");
@@ -50,14 +50,14 @@ protected override void OnStarted2(DateTime time)
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;
 
-	// Indicators for calculating the spread mean and standard deviation
+	// 用于计算价差均值和标准差的指标
 	var sma = new SimpleMovingAverage { Length = SpreadLength };
 	var stdDev = new StandardDeviation { Length = SpreadLength };
 
 	_lastPrice1 = null;
 	_lastPrice2 = null;
 
-	// Subscribe to candles of the first instrument
+	// 订阅第一个工具的蜡烛
 	SubscribeCandles(CandleType, security: sec1)
 		.Bind(c =>
 		{
@@ -68,7 +68,7 @@ protected override void OnStarted2(DateTime time)
 		})
 		.Start();
 
-	// Subscribe to candles of the second instrument with spread processing
+	// 订阅第二个工具的蜡烛并处理价差
 	SubscribeCandles(CandleType, security: sec2)
 		.Bind(c =>
 		{
@@ -94,10 +94,10 @@ protected override void OnStarted2(DateTime time)
 private void ProcessSpread(decimal price1, decimal price2,
 	SimpleMovingAverage sma, StandardDeviation stdDev)
 {
-	// Calculate spread as the price difference
+	// 将价差计算为价格差
 	var spread = price1 - price2;
 
-	// Process indicators
+	// 处理指标
 	var smaValue = sma.Process(new DecimalIndicatorValue(sma, spread));
 	var devValue = stdDev.Process(new DecimalIndicatorValue(stdDev, spread));
 
@@ -113,20 +113,20 @@ private void ProcessSpread(decimal price1, decimal price2,
 	if (dev == 0)
 		return;
 
-	// Calculate Z-Score: spread deviation from the mean in standard deviation units
+	// 计算 Z-Score：以标准差为单位的价差偏离均值程度
 	var zScore = (spread - mean) / dev;
 
-	// Spread too high: sell the first instrument, buy the second
+	// 价差过高：卖出第一个工具，买入第二个工具
 	if (zScore > EntryThreshold && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
 	}
-	// Spread too low: buy the first instrument, sell the second
+	// 价差过低：买入第一个工具，卖出第二个工具
 	else if (zScore < -EntryThreshold && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}
-	// Reversion to the mean: close position
+	// 回归均值：平仓
 	else if (Math.Abs(zScore) < ExitThreshold && Position != 0)
 	{
 		ClosePosition();

@@ -27,13 +27,13 @@ protected override void OnStarted2(DateTime time)
 	var tickSub = new Subscription(DataType.Ticks, Security);
 	var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-	//-----------------------Create a rule. Method №1-----------------------------------
+	// -----------------------Создать правило. Метод №1-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
 		LogInfo($"The rule WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
-	//-----------------------Create a rule. Method №2-----------------------------------
+	// -----------------------Создать правило. Метод №2-----------------------------------
 	var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 	whenMarketDepthChanged.Do((depth) =>
@@ -41,19 +41,19 @@ protected override void OnStarted2(DateTime time)
 		LogInfo($"The rule WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
-	//----------------------Rule inside rule-----------------------------------
+	// ----------------------Правило внутри правила-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
 		LogInfo($"The rule WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-		//----------------------not a Once rule-----------------------------------
+		// ----------------------не Once-правило-----------------------------------
 		mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 		{
 			LogInfo($"The rule WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 		}).Apply(this);
 	}).Once().Apply(this);
 
-	// Sending requests for subscribe to market data.
+	// Отправка запросов на подписку на рыночные данные.
 	Subscribe(tickSub);
 	Subscribe(mdSub);
 

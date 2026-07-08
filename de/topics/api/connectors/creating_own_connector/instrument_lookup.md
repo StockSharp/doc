@@ -18,24 +18,24 @@ Nachfolgend finden Sie ein Beispiel für die Implementierung der Methode Securit
 ```cs
 public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookupMsg, CancellationToken cancellationToken)
 {
-	// Get the list of instrument types to find
+	// Liste der zu suchenden Instrumententypen abrufen
 	var secTypes = lookupMsg.GetSecurityTypes();
 
-	// Determine the maximum number of instruments to search for
+	// Maximale Anzahl zu suchender Instrumente bestimmen
 	var left = lookupMsg.Count ?? long.MaxValue;
 
-	// Iterate over the instrument types supported by the exchange
+	// Über die von der Börse unterstützten Instrumententypen iterieren
 	foreach (var type in new[] { "SPOT", "FUTURE" })
 	{
-		// Request the list of instruments from the exchange
+		// Instrumentenliste von der Börse anfordern
 		var products = await _restClient.GetProducts(type, cancellationToken);
 
 		foreach (var product in products)
 		{
-			// Create the instrument identifier
+			// Instrumentkennung erstellen
 			var secId = product.ProductId.ToStockSharp();
 
-			// Create a message with instrument information
+			// Nachricht mit Instrumentinformationen erstellen
 			var secMsg = new SecurityMessage
 			{
 				SecurityType = product.ProductType.ToSecurityType(),
@@ -48,20 +48,20 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 				ExpiryDate = product.FutureProductDetails?.ContractExpiry,
 				Multiplier = product.FutureProductDetails?.ContractSize?.ToDecimal(),
 
-				// you need to fill in the subscription identifier
-				// so that the external code can understand which subscription the data was received for
+				// die Abonnementkennung muss ausgefüllt werden
+				// damit externer Code erkennt, für welches Abonnement die Daten empfangen wurden
 				OriginalTransactionId = lookupMsg.TransactionId,
 			}
 			.TryFillUnderlyingId(product.BaseCurrencyId.ToUpperInvariant());
 
-			// Check if the instrument matches the search criteria
+			// Prüfen, ob das Instrument den Suchkriterien entspricht
 			if (!secMsg.IsMatch(lookupMsg, secTypes))
 				continue;
 
-			// Send a message with instrument information
+			// Nachricht mit Instrumentinformationen senden
 			await SendOutMessageAsync(secMsg, cancellationToken);
 
-			// Decrease the counter of remaining instruments
+			// Zähler der verbleibenden Instrumente verringern
 			if (--left <= 0)
 				break;
 		}
@@ -70,7 +70,7 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 			break;
 	}
 
-	// Send a message about the completion of the search
+	// Nachricht über Abschluss der Suche senden
 	await SendSubscriptionResultAsync(lookupMsg, cancellationToken);
 }
 ```

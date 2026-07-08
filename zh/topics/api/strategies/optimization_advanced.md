@@ -118,11 +118,11 @@ var geneticSettings = new GeneticSettings
 	CrossoverProbability = 0.75m,
 };
 
-// Custom fitness function formula
+// 自定义适应度函数公式
 var fitnessProvider = new FitnessFormulaProvider();
 var fitness = fitnessProvider.Compile("PnL / (MaxDD + 1)");
 
-// Create the genetic optimizer
+// 创建遗传优化器
 var optimizer = new GeneticOptimizer(
 	new CollectionSecurityProvider(new[] { security }),
 	new CollectionPortfolioProvider(new[] { portfolio }),
@@ -136,7 +136,7 @@ optimizer.Settings.GenerationsStagnation = geneticSettings.GenerationsStagnation
 optimizer.Settings.MutationProbability = geneticSettings.MutationProbability;
 optimizer.Settings.CrossoverProbability = geneticSettings.CrossoverProbability;
 
-// Progress monitoring
+// 进度监控
 var tracker = new OptimizationProgressTracker();
 tracker.Reset(totalIterations: 100);
 

@@ -7,7 +7,7 @@
 ## Componentes Principais
 
 ```cs
-// Main components
+// Componentes principais
 public class SimpleCandleRulesStrategy : Strategy
 {
 }
@@ -21,12 +21,12 @@ Chamado quando a estratégia inicia:
 - Define regras para processar velas
 
 ```cs
-// OnStarted method
+// Método OnStarted
 protected override void OnStarted2(DateTime time)
 {
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
-		// ready-to-use candles much faster than compression on fly mode
+		// velas prontas são muito mais rápidas que compressão em tempo real
 		// turn off compression to boost optimizer (!!! make sure you have candles)
 
 		//MarketData =

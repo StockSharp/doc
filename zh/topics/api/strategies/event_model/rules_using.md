@@ -21,7 +21,7 @@
          .Once()
          .Apply(this);
       
-     // order registration
+     // 订单注册
      Connector.RegisterOrder(order);
   }
   ```
@@ -37,28 +37,28 @@
   {
       protected override void OnStarted2(DateTime time)
       {
-          // Subscription to candles
+          // K线订阅
           var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
           this
               .WhenCandlesStarted(candleSubscription)
               .Do(ProcessCandle)
               .Apply(this);
               
-          // Subscription to tick trades
+          // tick 成交订阅
           var tickSubscription = new Subscription(DataType.Ticks, Security);
           tickSubscription
               .WhenTickTradeReceived(this)
               .Do(ProcessTick)
               .Apply(this);
               
-          // Send subscription requests
+          // 发送订阅请求
           Subscribe(candleSubscription);
           Subscribe(tickSubscription);
               
           base.OnStarted2(time);
       }
       
-      // Methods for event processing
+      // 事件处理方法
       private void ProcessCandle(ICandleMessage candle) { /* ... */ }
       private void ProcessTick(ITickTradeMessage tick) { /* ... */ }
   }    
@@ -77,7 +77,7 @@
       .Do(() =>
       {
           this.AddInfoLog("Order successfully canceled");
-          // removing all rules associated with order
+          // 删除与订单关联的所有规则
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
       .Once()
@@ -97,7 +97,7 @@
       .Do(() => this.AddInfoLog("Order fully executed"))
       .Once()
       .Apply(this);
-  // order registration
+  // 订单注册
   RegisterOrder(order);
   ```
   
@@ -106,7 +106,7 @@
 当时间到期 **或** K线收盘时：
 
   ```cs
-  // Create a subscription to candles
+  // 创建 K线订阅
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
   
@@ -117,14 +117,14 @@
       .Once()
       .Apply(this);
       
-  // Send subscription request
+  // 发送订阅请求
   Subscribe(subscription);
   ```
 
 或者这种格式：
 
   ```cs
-  // Create a subscription to candles
+  // 创建 K线订阅
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
   
@@ -137,14 +137,14 @@
       .Once()
       .Apply(this);
       
-  // Send subscription request
+  // 发送订阅请求
   Subscribe(subscription);
   ```
 
 当最后成交价高于135000 **且** 低于140000时：
 
   ```cs
-  // Create a subscription to tick trades
+  // 创建 tick 成交订阅
   var subscription = new Subscription(DataType.Ticks, Security);
   var priceMore = new Unit(135000m, UnitTypes.Limit);
   var priceLess = new Unit(140000m, UnitTypes.Limit);
@@ -157,7 +157,7 @@
       .Do(() => this.AddInfoLog($"Last trade price is in the range from {priceMore} to {priceLess}"))
       .Apply(this);
       
-  // Send subscription request
+  // 发送订阅请求
   Subscribe(subscription);
   ```
 
@@ -169,7 +169,7 @@
   ```cs
   bool flag = false;
   
-  // Create a subscription to tick trades
+  // 创建 tick 成交订阅
   var subscription = new Subscription(DataType.Ticks, Security);
   				
   subscription
@@ -181,7 +181,7 @@
       .Until(() => flag)			
       .Apply(this);
       
-  // Send subscription request
+  // 发送订阅请求
   Subscribe(subscription);
   ```
 
@@ -190,20 +190,20 @@
 ### K线规则
 
 ```cs
-// Create a subscription to 5-minute candles
+// 创建 5 分钟 K线订阅
 var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
 
-// Variable for counting candles
+// 用于统计 K线数量的变量
 var i = 0;
 var diff = "10%".ToUnit();
 
-// Rule that activates when a new candle starts
+// 新 K线开始时激活的规则
 this.WhenCandlesStarted(subscription)
 	.Do((candle) =>
 	{
 		i++;
 
-		// Nested rule: check when total volume exceeds threshold
+		// 嵌套规则：检查总成交量是否超过阈值
 		this
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
@@ -215,23 +215,23 @@ this.WhenCandlesStarted(subscription)
 
 	}).Apply(this);
 	
-// Send subscription request
+// 发送订阅请求
 Subscribe(subscription);
 ```
 
 ### 关于订单簿（市场深度）的规则
 
 ```cs
-// Subscription to order book data
+// 订单簿数据订阅
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-// Method 1: Creating a rule in a chain
+// 方法 1：在链中创建规则
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
-// Method 2: First create a rule variable
+// 方法 2：先创建规则变量
 var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
@@ -239,7 +239,7 @@ whenMarketDepthChanged.Do((depth) =>
 	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
-// Rule within a rule
+// 规则中的规则
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
@@ -251,20 +251,20 @@ mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	}).Apply(this);
 }).Once().Apply(this);
 
-// Send subscription request
+// 发送订阅请求
 Subscribe(mdSub);
 ```
 
 ### 带完成条件的规则
 
 ```cs
-// Subscription to order book data
+// 订单簿数据订阅
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
 // Counter
 var i = 0;
 
-// Create a rule that processes order books until i reaches 10
+// 创建处理订单簿直到 i 达到 10 的规则
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
 	i++;
@@ -274,17 +274,17 @@ mdSub.WhenOrderBookReceived(this).Do(depth =>
 .Until(() => i >= 10)
 .Apply(this);
 
-// Send subscription request
+// 发送订阅请求
 Subscribe(mdSub);
 ```
 
 ### 关于命令的规则
 
 ```cs
-// Subscription to tick trades
+// tick 成交订阅
 var sub = new Subscription(DataType.Ticks, Security);
 
-// When we receive the first tick, we'll create an order
+// 收到第一个 tick 时创建订单
 sub.WhenTickTradeReceived(this).Do(() =>
 {
 	var order = CreateOrder(Sides.Buy, default, 1);
@@ -307,20 +307,20 @@ sub.WhenTickTradeReceived(this).Do(() =>
 	RegisterOrder(order);
 }).Once().Apply(this);
 
-// Send subscription request
+// 发送订阅请求
 Subscribe(sub);
 ```
 
 ### 价格变动规则
 
 ```cs
-// Subscription to tick trades
+// tick 成交订阅
 var sub = new Subscription(DataType.Ticks, Security);
 
-// Rule activates on the first tick and creates another rule
+// 规则在第一个 tick 时激活并创建另一条规则
 sub.WhenTickTradeReceived(this).Do(t =>
 {
-	// Create a rule that activates when the price moves 2 points in any direction
+	// 创建价格向任意方向移动 2 点时激活的规则
 	sub
 		.WhenLastTradePriceMore(this, t.Price + 2)
 		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
@@ -333,6 +333,6 @@ sub.WhenTickTradeReceived(this).Do(t =>
 .Once() // call this rule only once
 .Apply(this);
 
-// Send subscription request
+// 发送订阅请求
 Subscribe(sub);
 ```

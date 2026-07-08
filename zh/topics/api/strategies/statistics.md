@@ -76,39 +76,39 @@ StockSharp 提供了一个用于可视化策略统计的特殊图形组件，称
 下面是一个在代码中使用策略统计的示例：
 
 ```csharp
-// Create a strategy
+// 创建策略
 var strategy = new SmaStrategy
 {
-	// Configure strategy parameters
+	// 配置策略参数
 	Security = security,
 	Portfolio = portfolio,
 	Volume = 1,
-	// Set SMA parameters
+	// 设置 SMA 参数
 	LongSma = 200,
 	ShortSma = 50,
 };
 
-// Connect the strategy to a chart for visualization
+// 将策略连接到图表以便可视化
 var chart = new ChartPanel();
 strategy.SetChart(chart);
 
-// Access the statistics manager
+// 访问统计管理器
 var statisticManager = strategy.StatisticManager;
 
-// Display strategy statistics in the user interface
-// Assuming you have a StatisticParameterGrid defined in XAML as 'StatisticsGrid'
+// 在用户界面中显示策略统计
+// 假设你在 XAML 中定义了名为 'StatisticsGrid' 的 StatisticParameterGrid
 StatisticsGrid.Parameters.Clear();
 StatisticsGrid.Parameters.AddRange(statisticManager.Parameters);
 
-// Start the strategy
+// 启动策略
 strategy.Start();
 
-// When you need to react to changes in statistics
+// 当需要响应统计变化时
 strategy.PnLChanged += () =>
 {
 	Console.WriteLine($"Current PnL: {strategy.PnL}");
 	
-	// You can also access individual statistical parameters
+	// 也可以访问单个统计参数
 	var netProfit = statisticManager.Parameters
 		.OfType<NetProfitParameter>()
 		.FirstOrDefault();
@@ -155,12 +155,12 @@ public class MyCustomParameter : BasePnLStatisticParameter<decimal>
 
 	public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
 	{
-		// Custom calculation logic
+		// 自定义计算逻辑
 		Value = /* your custom calculation */;
 	}
 }
 
-// Then add it to your strategy's StatisticManager
+// 然后将其添加到策略的 StatisticManager
 strategy.StatisticManager.Parameters.Add(new MyCustomParameter());
 ```
 

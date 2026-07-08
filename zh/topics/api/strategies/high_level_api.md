@@ -11,7 +11,7 @@ StockSharp 提供了一组高级 API，用于简化在交易策略中处理常�
 你可以使用 [SubscribeCandles](xref:StockSharp.Algo.Strategies.Strategy.SubscribeCandles(System.TimeSpan,System.Boolean,StockSharp.BusinessEntities.Security)) 方法，而不是手动创建订阅和设置事件处理程序：
 
 ```cs
-// Create and configure a candle subscription in a single line
+// 用一行创建并配置 K线订阅
 var subscription = SubscribeCandles(CandleType);
 ```
 
@@ -26,9 +26,9 @@ var longSma = new SMA { Length = Long };
 var shortSma = new SMA { Length = Short };
 
 subscription
-	// Bind indicators to candle subscription
+	// 将指标绑定到 K线订阅
 	.Bind(longSma, shortSma, OnProcess)
-	// Start processing
+	// 开始处理
 	.Start();
 ```
 
@@ -57,16 +57,16 @@ subscription
 	.BindEx(indicator, OnProcessWithRawValue)
 	.Start();
 
-// Handler receives the original IIndicatorValue
+// 处理器接收原始 IIndicatorValue
 private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 {
-	// Access to IIndicatorValue properties
+	// 访问 IIndicatorValue 属性
 	if (value.IsFinal)
 	{
 		// For indicators returning boolean values
 		var boolValue = value.GetValue<bool>();
 		
-		// Or other data types specific to a particular indicator
+		// 或特定指标专用的其他数据类型
 		// ...
 	}
 }
@@ -83,24 +83,24 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 对于包含多个内部指标的复杂指标（e.g., [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)），API 提供了 `Bind` 和 `BindEx` 方法的特殊重载：
 
 ```cs
-// Create a complex indicator
+// 创建复杂指标
 var bollinger = new BollingerBands 
 { 
 	Length = 20, 
 	Deviation = 2 
 };
 
-// Bind the complex indicator to a subscription
+// 将复杂指标绑定到订阅
 subscription
 	.BindEx(bollinger, OnProcessBollinger)
 	.Start();
 
-// Handler receives the BollingerBandsValue instance
+// 处理器接收 BollingerBandsValue 实例
 private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
 	var typed = (BollingerBandsValue)value;
 
-	// Use Bollinger band values
+	// 使用 Bollinger Bands 值
 	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 		SellMarket(Volume + Math.Abs(Position));
 	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)
@@ -140,11 +140,11 @@ subscription.BindEx(bollinger, (candle, indicatorValue) =>
 ```cs
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-	// Work directly with ready-made indicator values
+	// 直接使用现成指标值
 	var isShortLessThenLong = shortValue < longValue;
 	
-	// Trading logic uses clean numeric values
-	// without the need to extract them from IIndicatorValue
+	// 交易逻辑使用干净的数值
+	// 无需从 IIndicatorValue 中提取
 	// ...
 }
 ```
@@ -163,20 +163,20 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 ```cs
 var area = CreateChartArea();
 
-// area can be null when running without GUI
+// 无 GUI 运行时 area 可以为 null
 if (area != null)
 {
-	// Automatic binding of candles to chart area
+	// 将 K线自动绑定到图表区域
 	DrawCandles(area, subscription);
 
-	// Drawing indicators with color customization
+	// 以自定义颜色绘制指标
 	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
 	DrawIndicator(area, longSma);
 	
-	// Drawing own trades
+	// 绘制 own trades
 	DrawOwnTrades(area);
 	
-	// Drawing orders
+	// 绘制订单
 	DrawOrders(area);
 }
 ```
@@ -186,10 +186,10 @@ if (area != null)
 [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) 方法会自动将K线订阅链接到图表K线显示元素：
 
 ```cs
-// Create a chart element for displaying candles
+// 创建用于显示 K线的图表元素
 IChartCandleElement candles = DrawCandles(area, subscription);
 
-// Additional element parameters can be configured
+// 可以配置元素的附加参数
 candles.DrawOpenClose = true;  // Display open/close lines
 candles.DrawHigh = true;       // Display highs
 candles.DrawLow = true;        // Display lows
@@ -202,13 +202,13 @@ candles.DrawLow = true;        // Display lows
 [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})) 方法创建并配置用于显示指标值的图表元素：
 
 ```cs
-// Simple addition of an indicator to the chart with default color
+// 使用默认颜色将指标简单添加到图表
 IChartIndicatorElement smaElem = DrawIndicator(area, sma);
 
-// Adding an indicator with a specified primary color
+// 添加带指定主颜色的指标
 IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.Red);
 
-// Adding an indicator with specified primary and secondary colors
+// 添加带指定主色和辅色的指标
 IChartIndicatorElement bollingerElem = DrawIndicator(
 	area, 
 	bollinger, 
@@ -216,7 +216,7 @@ IChartIndicatorElement bollingerElem = DrawIndicator(
 	System.Drawing.Color.Gray     // Secondary color (for the second line)
 );
 
-// Additional element configuration
+// 元素附加配置
 smaElem.DrawStyle = DrawStyles.Line;           // Drawing style: line
 rsiFast.DrawStyle = DrawStyles.Dot;            // Drawing style: dots
 bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
@@ -229,10 +229,10 @@ bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
 [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)) 方法在图表上创建一个用于显示策略自身交易的元素：
 
 ```cs
-// Create an element for displaying trades
+// 创建用于显示成交的元素
 IChartTradeElement trades = DrawOwnTrades(area);
 
-// Element configuration
+// 元素配置
 trades.BuyColor = System.Drawing.Color.Green;   // Color for buy trades
 trades.SellColor = System.Drawing.Color.Red;    // Color for sell trades
 trades.FullTitle = "My Strategy Trades";        // Element title
@@ -245,10 +245,10 @@ trades.FullTitle = "My Strategy Trades";        // Element title
 [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)) 方法创建一个用于在图表上显示订单的元素：
 
 ```cs
-// Create an element for displaying orders
+// 创建用于显示订单的元素
 IChartOrderElement orders = DrawOrders(area);
 
-// Element configuration
+// 元素配置
 orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Color for active buy orders
 orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Color for active sell orders
 orders.BuyColor = System.Drawing.Color.Green;              // Color for executed buy orders
@@ -263,7 +263,7 @@ orders.CancelColor = System.Drawing.Color.Gray;            // Color for canceled
 [CreateChartArea](xref:StockSharp.Algo.Strategies.Strategy.CreateChartArea) 方法在策略图上创建一个新区域：
 
 ```cs
-// Create the first area for candles and indicators
+// 创建 K线和指标的第一个区域
 var mainArea = CreateChartArea();
 DrawCandles(mainArea, subscription);
 DrawIndicator(mainArea, sma);
@@ -291,7 +291,7 @@ DrawIndicator(secondArea, rsi);
 为了保护未平仓持仓，StockSharp 提供了高级 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 方法：
 
 ```cs
-// Start position protection with Take Profit and Stop Loss levels
+// 使用 Take Profit 和 Stop Loss 水平启动仓位保护
 StartProtection(TakeValue, StopValue);
 ```
 
@@ -304,7 +304,7 @@ StartProtection(TakeValue, StopValue);
 带有附加参数的示例：
 
 ```cs
-// Start protection with trailing stop and market orders
+// 使用 trailing stop 和市价订单启动保护
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
 	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
@@ -384,17 +384,17 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 
-		// Create indicators
+		// 创建指标
 		var longSma = new SMA { Length = Long };
 		var shortSma = new SMA { Length = Short };
 
-		// Create a candle subscription and bind to indicators
+		// 创建 K线订阅并绑定到指标
 		var subscription = SubscribeCandles(CandleType);
 		subscription
 			.Bind(longSma, shortSma, OnProcess)
 			.Start();
 
-		// Configure visualization
+		// 配置可视化
 		var area = CreateChartArea();
 		if (area != null)
 		{
@@ -404,17 +404,17 @@ public class SmaStrategy : Strategy
 			DrawOwnTrades(area);
 		}
 
-		// Start position protection
+		// 启动仓位保护
 		StartProtection(TakeValue, StopValue);
 	}
 
 	private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 	{
-		// Process only finished candles
+		// 只处理已完成的 K线
 		if (candle.State != CandleStates.Finished)
 			return;
 
-		// Trading logic based on indicator crossover
+		// 基于指标交叉的交易逻辑
 		var isShortLessThenLong = shortValue < longValue;
 
 		if (_isShortLessThenLong == null)
@@ -423,19 +423,19 @@ public class SmaStrategy : Strategy
 		}
 		else if (_isShortLessThenLong != isShortLessThenLong)
 		{
-			// Crossover occurred
+			// 发生交叉
 			var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 			var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 			var priceStep = GetSecurity().PriceStep ?? 1;
 			var price = candle.ClosePrice + (direction == Sides.Buy ? priceStep : -priceStep);
 
-			// Place an order
+			// 下单
 			if (direction == Sides.Buy)
 				BuyLimit(price, volume);
 			else
 				SellLimit(price, volume);
 
-			// Save current indicator position
+			// 保存当前指标位置
 			_isShortLessThenLong = isShortLessThenLong;
 		}
 	}

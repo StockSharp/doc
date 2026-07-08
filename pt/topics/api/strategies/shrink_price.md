@@ -42,19 +42,19 @@ var security = new Security
 decimal price1 = 10.234m;
 decimal shrunkPrice1 = price1.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price1}, After ShrinkPrice: {shrunkPrice1}");
-// Output: Original price: 10.234, After ShrinkPrice: 10.23
+// Saída: preço original: 10.234, após ShrinkPrice: 10.23
 
 // Exemplo 2: Arredondamento de um preço que já corresponde ao passo
 decimal price2 = 10.22m;
 decimal shrunkPrice2 = price2.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price2}, After ShrinkPrice: {shrunkPrice2}");
-// Output: Original price: 10.22, After ShrinkPrice: 10.22
+// Saída: preço original: 10.22, após ShrinkPrice: 10.22
 
 // Exemplo 3: Arredondamento de um preço com mais casas decimais
 decimal price3 = 10.2345678m;
 decimal shrunkPrice3 = price3.ShrinkPrice(security);
 Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}");
-// Output: Original price: 10.2345678, After ShrinkPrice: 10.23
+// Saída: preço original: 10.2345678, após ShrinkPrice: 10.23
 
 // Exemplo 4: Utilizar ShrinkPrice ao criar uma ordem
 var order = new Order
@@ -63,7 +63,7 @@ var order = new Order
 	Price = 10.237m.ShrinkPrice(security)  // Arredondar o preço antes de criar a ordem
 };
 Console.WriteLine($"Order price: {order.Price}");
-// Output: Order price: 10.24
+// Saída: preço da ordem: 10.24
 ```
 
 ## Aplicação

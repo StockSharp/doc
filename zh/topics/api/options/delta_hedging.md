@@ -8,26 +8,26 @@
 2. [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) 策略不会启动，而是作为子策略传递给 [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy)。
 
    ```cs
-   // create delta hedge strategy
+   // 创建 delta 对冲策略
    var hedge = new DeltaHedgeStrategy
    {
    	Security = option.GetUnderlyingAsset(Connector),
    	Portfolio = Portfolio.SelectedPortfolio,
    	Connector = Connector,
    };
-   // create option quoting for 20 contracts
+   // 为 20 份合约创建期权报价
    var quoting = new VolatilityQuotingStrategy(Sides.Buy, 20,
    		new Range<decimal>(ImpliedVolatilityMin.Value ?? 0, ImpliedVolatilityMax.Value ?? 100))
    {
-           // working size is 1 contract
+           // 工作数量为 1 份合约
    	Volume = 1,
    	Security = option,
    	Portfolio = Portfolio.SelectedPortfolio,
    	Connector = Connector,
    };
-   // link quoting and hedging
+   // 关联报价和对冲
    hedge.ChildStrategies.Add(quoting);
-   // start hedging
+   // 启动对冲
    hedge.Start();
    ```
 

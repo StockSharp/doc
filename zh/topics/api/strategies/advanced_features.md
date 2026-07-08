@@ -25,10 +25,10 @@ public class CommentStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // All orders will be tagged with the strategy name
+        // 所有订单都会带有策略名称标签
         CommentMode = StrategyCommentModes.Name;
 
-        // Or with the identifier for exact binding
+        // 或使用标识符进行精确绑定
         // CommentMode = StrategyCommentModes.Id;
     }
 }
@@ -47,7 +47,7 @@ public class ScheduledStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Configure working time
+        // 配置工作时间
         WorkingTime = new WorkingTime
         {
             Periods = new List<WorkingTimePeriod>
@@ -57,7 +57,7 @@ public class ScheduledStrategy : Strategy
                     Till = DateTime.MaxValue,
                     Times = new List<Range<TimeSpan>>
                     {
-                        // Trade from 10:00 to 18:00
+                        // 从 10:00 到 18:00 交易
                         new Range<TimeSpan>(
                             TimeSpan.FromHours(10),
                             TimeSpan.FromHours(18))
@@ -78,7 +78,7 @@ public class ScheduledStrategy : Strategy
 ```csharp
 var strategy = new MyStrategy();
 
-// Risk-free rate of 5% per annum
+// 年化 5% 的无风险利率
 strategy.RiskFreeRate = 0.05m;
 ```
 
@@ -91,10 +91,10 @@ strategy.RiskFreeRate = 0.05m;
 ```csharp
 var strategy = new MyStrategy();
 
-// All indicators will use the last trade price by default
+// 所有指标默认使用最新成交价
 strategy.IndicatorSource = Level1Fields.LastTradePrice;
 
-// Or the average price
+// 或平均价格
 // strategy.IndicatorSource = Level1Fields.AveragePrice;
 ```
 
@@ -120,7 +120,7 @@ public class SmaCrossStrategy : Strategy
         _longPeriod = Param(nameof(LongPeriod), 50);
     }
 
-    // Automatic calculation of the required historical period
+    // 自动计算所需历史期间
     protected override TimeSpan? HistoryCalculated
         => TimeSpan.FromDays(LongPeriod * 2);
 }
@@ -154,7 +154,7 @@ public class AdvancedStrategy : Strategy
         _smaPeriod = Param(nameof(SmaPeriod), 20);
     }
 
-    // Automatic historical period calculation
+    // 自动计算历史期间
     protected override TimeSpan? HistoryCalculated
         => TimeSpan.FromDays(SmaPeriod * 2);
 
@@ -162,13 +162,13 @@ public class AdvancedStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Order comments -- strategy name
+        // 订单注释 -- 策略名称
         CommentMode = StrategyCommentModes.Name;
 
-        // Risk-free rate for Sharpe calculation
+        // 用于 Sharpe 计算的无风险利率
         RiskFreeRate = 0.05m;
 
-        // Data source for indicators
+        // 指标的数据源
         IndicatorSource = Level1Fields.LastTradePrice;
 
         var subscription = SubscribeCandles(CandleType);
@@ -183,7 +183,7 @@ public class AdvancedStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Trading logic...
+        // 交易逻辑...
     }
 }
 ```

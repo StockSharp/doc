@@ -26,26 +26,26 @@ Abaixo encontram-se fragmentos de código que demonstram a sua utilização:
 private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Other connection actions
+	// Outras ações de conexão
 	
-	// Set news provider
+	// Definir provedor de notícias
 	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
 	
-	// Subscribe to news reception event
+	// Assinar evento de recebimento de notícias
 	_connector.NewsReceived += OnNewsReceived;
 	
-	// Create a subscription to news
+	// Criar uma assinatura de notícias
 	var newsSubscription = new Subscription(DataType.News);
 	_connector.Subscribe(newsSubscription);
 	
-	// Perform connection
+	// Realizar conexão
 	_connector.Connect();
 }
 
-// Handler for news reception event
+// Manipulador do evento de recebimento de notícias
 private void OnNewsReceived(Subscription subscription, News news)
 {
-	// Add news to NewsGrid in user interface thread
+	// Adicionar notícia ao NewsGrid na thread da interface
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 }
 ```
@@ -53,41 +53,41 @@ private void OnNewsReceived(Subscription subscription, News news)
 ### Filtragem de notícias
 
 ```cs
-// Creating a subscription to news with filtering
+// Criar assinatura de notícias com filtragem
 public void SubscribeToFilteredNews(string source = null, DateTime? from = null)
 {
-	// Create a subscription to news
+	// Criar uma assinatura de notícias
 	var newsSubscription = new Subscription(DataType.News)
 	{
 		MarketData =
 		{
-			// Set starting date for historical news
+			// Definir data inicial para notícias históricas
 			From = from ?? DateTime.Today.AddDays(-7),
 			
-			// Optionally set news source
+			// Opcionalmente definir fonte de notícias
 			NewsSource = source
 		}
 	};
 	
-	// Subscribe to news reception event
+	// Assinar evento de recebimento de notícias
 	_connector.NewsReceived += OnFilteredNewsReceived;
 	
-	// Start the subscription
+	// Iniciar a assinatura
 	_connector.Subscribe(newsSubscription);
 }
 
-// Handler for filtered news reception events
+// Manipulador de eventos de recebimento de notícias filtradas
 private void OnFilteredNewsReceived(Subscription subscription, News news)
 {
-	// Check source filter
+	// Verificar filtro de fonte
 	if (subscription.MarketData.NewsSource != null && 
 		!string.Equals(news.Source, subscription.MarketData.NewsSource, StringComparison.OrdinalIgnoreCase))
 		return;
 		
-	// Add news to NewsGrid
+	// Adicionar notícia ao NewsGrid
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 	
-	// Output news information
+	// Exibir informações da notícia
 	Console.WriteLine($"News: {news.Headline}");
 	Console.WriteLine($"Source: {news.Source}");
 	Console.WriteLine($"Time: {news.ServerTime}");
@@ -99,25 +99,25 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 ### Pesquisa de notícias por palavras-chave
 
 ```cs
-// Method for filtering news by keywords
+// Método para filtrar notícias por palavras-chave
 public void FilterNewsByKeywords(IEnumerable<string> keywords)
 {
 	var keywordsList = keywords.ToList();
 	
 	// If already subscribed to news,
-	// just set the handler
+	// basta definir o manipulador
 	_connector.NewsReceived += (subscription, news) =>
 	{
-		// Check if the news headline contains any of the keywords
+		// Verificar se o título da notícia contém alguma palavra-chave
 		bool containsKeyword = keywordsList.Any(keyword => 
 			news.Headline.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0);
 			
 		if (containsKeyword)
 		{
-			// Add news to NewsGrid
+			// Adicionar notícia ao NewsGrid
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 			
-			// Display notification
+			// Exibir notificação
 			ShowNotification($"New news on topic: {news.Headline}");
 		}
 	};

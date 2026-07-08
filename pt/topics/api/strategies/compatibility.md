@@ -9,16 +9,16 @@ Ao desenvolver estratégias de negociação no StockSharp, é importante conside
 Para garantir a compatibilidade com as plataformas StockSharp, especialmente com testes na cloud, **não deve adicionar parâmetros ao construtor da estratégia**:
 
 ```cs
-// Correct: constructor without parameters
+// Correto: construtor sem parâmetros
 public class SmaStrategy : Strategy
 {
 	public SmaStrategy()
 	{
-		// Parameters initialization
+		// Inicialização de parâmetros
 	}
 }
 
-// Incorrect: constructor with parameters
+// Incorreto: construtor com parâmetros
 public class SmaStrategy : Strategy
 {
 	public SmaStrategy(int longLength, int shortLength) // Don't use this approach
@@ -37,7 +37,7 @@ As plataformas StockSharp criam instâncias de estratégias usando um construtor
 Em vez de criar propriedades C# normais e depois sobrepor os métodos `Save` e `Load`, use [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) para todos os parâmetros personalizáveis:
 
 ```cs
-// Correct: using StrategyParam
+// Correto: usando StrategyParam
 private readonly StrategyParam<int> _longSmaLength;
 
 public int LongSmaLength
@@ -52,7 +52,7 @@ public SmaStrategy()
 						.SetDisplay("Long SMA length", string.Empty, "Base settings");
 }
 
-// Incorrect: using regular properties
+// Incorreto: usando propriedades comuns
 private int _longSmaLength = 80; // Don't use this approach
 
 public int LongSmaLength
@@ -75,12 +75,12 @@ Os parâmetros criados através de [StrategyParam\<T\>](xref:StockSharp.Algo.Str
 Em vez de aceder directamente aos elementos da interface de utilizador, use as abstracções fornecidas pelo StockSharp:
 
 ```cs
-// Correct approach: using IChart
+// Abordagem correta: usando IChart
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Get the chart provided by the runtime environment
+	// Obter gráfico fornecido pelo ambiente de execução
 	_chart = GetChart();
 	
 	if (_chart != null)
@@ -91,13 +91,13 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// Chart is unavailable (e.g., in Runner or cloud backtesting)
-		// Strategy continues to work without visualization
+		// A estratégia continua funcionando sem visualização
 	}
 }
 
 private void InitChart()
 {
-	// Configure chart through the abstract interface
+	// Configurar gráfico pela interface abstrata
 	_chart.ClearAreas();
 	var area = _chart.AddArea();
 	_chartCandleElement = area.AddCandles();
@@ -139,10 +139,10 @@ private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue lon
 No StockSharp, **não precisa de criar threads adicionais** para processamento de dados. Todos os eventos (dados de mercado, transacções) chegam numa única thread:
 
 ```cs
-// Correct: using standard event handlers
+// Correto: usando manipuladores de evento padrão
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Process candle in the main thread
+	// Processar vela na thread principal
 	var longSmaIsFormedPrev = _longSma.IsFormed;
 	var ls = _longSma.Process(candle);
 	var ss = _shortSma.Process(candle);
@@ -150,10 +150,10 @@ private void ProcessCandle(ICandleMessage candle)
 	// ...
 }
 
-// Incorrect: creating additional threads
+// Incorreto: criar threads adicionais
 private void ProcessCandle(ICandleMessage candle)
 {
-	// DON'T do this
+	// NÃO faça isso
 	Task.Run(() => {
 		var longSmaIsFormedPrev = _longSma.IsFormed;
 		// ...
@@ -166,7 +166,7 @@ private void ProcessCandle(ICandleMessage candle)
 Como todos os eventos são processados numa única thread, **não há necessidade de usar objectos de sincronização**:
 
 ```cs
-// Correct: regular processing without synchronization
+// Correto: processamento normal sem sincronização
 private void ProcessCandle(ICandleMessage candle)
 {
 	var ls = _longSma.Process(candle);
@@ -174,7 +174,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// ...
 }
 
-// Incorrect: unnecessary synchronization
+// Incorreto: sincronização desnecessária
 private readonly object _syncLock = new object(); // Not needed
 
 private void ProcessCandle(ICandleMessage candle)
@@ -194,17 +194,17 @@ private void ProcessCandle(ICandleMessage candle)
 Em vez de aceder directamente a recursos externos (ficheiros, bases de dados, rede), use as capacidades fornecidas pelas plataformas StockSharp:
 
 ```cs
-// Correct: using built-in mechanisms for data saving
+// Correto: usando mecanismos integrados para salvar dados
 protected override void OnStopped()
 {
-	// Data is automatically saved through strategy parameters
+	// Os dados são salvos automaticamente pelos parâmetros da estratégia
 	base.OnStopped();
 }
 
-// Incorrect: direct access to external resources
+// Incorreto: acesso direto a recursos externos
 protected override void OnStopped()
 {
-	// DON'T do this
+	// NÃO faça isso
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
 	
 	// or this
@@ -234,7 +234,7 @@ public override void Save(SettingsStorage settings)
 {
 	base.Save(settings); // First save strategy parameters
 	
-	// Then save custom data
+	// Então salvar dados personalizados
 	settings.SetValue("CustomState", _customState);
 	settings.SetValue("LastSignalTime", _lastSignalTime);
 }
@@ -243,7 +243,7 @@ public override void Load(SettingsStorage settings)
 {
 	base.Load(settings); // First load strategy parameters
 	
-	// Then load custom data
+	// Então carregar dados personalizados
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");
 	
@@ -273,7 +273,7 @@ protected override void OnStarted2(DateTime time)
 	
 	var subscription = new Subscription(Series, Security);
 
-	// Correct: using rules for data processing
+	// Correto: usando regras para processamento de dados
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
@@ -292,15 +292,15 @@ As regras têm várias vantagens importantes sobre processadores de eventos norm
 3. **Combinação de condições** - as regras podem ser combinadas usando operadores como `And`, `Or` e outros, criando condições de activação complexas:
 
 ```cs
-// Example of combining rules
+// Exemplo de combinação de regras
 var tickSub = new Subscription(DataType.Ticks, Security);
 
 tickSub
 	.WhenTickTradeReceived(this)
 	.And(Portfolio.WhenChanged(Connector))
 	.Do(() => {
-		// Code that executes only when there is a new trade
-		// and the portfolio balance changes
+		// Código executado apenas quando há uma nova negociação
+		// e o saldo da carteira muda
 	})
 	.Apply(this);
 
@@ -369,7 +369,7 @@ public class SmaStrategy : Strategy
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
 		
-		// Initialize chart if available
+		// Inicializar gráfico se disponível
 		_chart = GetChart();
 		if (_chart != null)
 			InitChart();
@@ -405,7 +405,7 @@ public class SmaStrategy : Strategy
 		var ls = _longSma.Process(candle);
 		var ss = _shortSma.Process(candle);
 		
-		// Draw on chart if available
+		// Desenhar no gráfico se disponível
 		if (_chart != null)
 		{
 			var data = _chart.CreateData();
@@ -425,7 +425,7 @@ public class SmaStrategy : Strategy
 		if (isShortLessCurrent == isShortLessPrev)
 			return;
 			
-		// Trading logic
+		// Lógica de negociação
 		var volume = Volume + Math.Abs(Position);
 
 		if (isShortLessCurrent)

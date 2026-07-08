@@ -29,7 +29,7 @@ dotnet add package StockSharp.Binance
 在项目根目录创建 `CLAUDE.md`（或 `.cursorrules`）文件：
 
 ```markdown
-# Project Rules
+# 项目规则
 
 - Framework: StockSharp 5.x, .NET 10
 - Strategies inherit from Strategy class
@@ -138,13 +138,13 @@ public class SmaCrossStrategy : Strategy
         {
             if (fastAbove && !_prevFastAbove)
             {
-                // Fast SMA crossed above slow — buy
+                // 快速 SMA 上穿慢速 SMA — 买入
                 if (Position <= 0)
                     RegisterOrder(this.BuyAtMarket(Volume));
             }
             else if (!fastAbove && _prevFastAbove)
             {
-                // Fast SMA crossed below slow — sell
+                // 快速 SMA 下穿慢速 SMA — 卖出
                 if (Position >= 0)
                     RegisterOrder(this.SellAtMarket(Volume));
             }
@@ -227,7 +227,7 @@ connector.CandleSeriesProcessing += (series, candle) => { ... };
 **正确**（当前 API）：
 
 ```csharp
-// Use subscriptions
+// 使用订阅
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security);
 connector.Subscribe(subscription);
 ```

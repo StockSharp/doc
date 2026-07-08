@@ -24,7 +24,7 @@ A enumeração `AlertNotifications` define os tipos disponíveis:
 Método base para enviar um alerta com tipo, legenda e mensagem especificados:
 
 ```csharp
-// With caption and message
+// Com título e mensagem
 Alert(AlertNotifications type, string caption, string message);
 
 // With automatic caption (uses the strategy name)
@@ -107,7 +107,7 @@ public class AlertStrategy : Strategy
             .Bind(ProcessCandle)
             .Start();
 
-        // Alert about strategy start
+        // Alerta sobre início da estratégia
         AlertLog("Strategy started, tracked level: " + PriceLevel);
     }
 
@@ -116,7 +116,7 @@ public class AlertStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Price crossed the level from below upward
+        // O preço cruzou o nível de baixo para cima
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
             AlertPopup("Price crossed level " + PriceLevel + " upward!");
@@ -124,7 +124,7 @@ public class AlertStrategy : Strategy
             BuyMarket();
         }
 
-        // Price crossed the level from above downward
+        // O preço cruzou o nível de cima para baixo
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
             Alert(AlertNotifications.Telegram, "Trading signal",

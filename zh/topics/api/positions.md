@@ -51,7 +51,7 @@ if (posChange != null)
 ```cs
 var state = new PositionManagerState();
 
-// Register an order
+// 注册订单
 state.AddOrGetOrder(
     transactionId: 12345,
     securityId: secId,
@@ -61,10 +61,10 @@ state.AddOrGetOrder(
     balance: 100
 );
 
-// Update after partial execution
+// 部分成交后更新
 state.UpdateOrderBalance(12345, newBalance: 60);
 
-// Update position directly
+// 直接更新仓位
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
 Console.WriteLine($"Current position: {newPosition}");
 
@@ -102,10 +102,10 @@ tracker.RoundTripClosed += report =>
     Console.WriteLine($"  Closed: {report.CloseTime}");
 };
 
-// Process position updates
+// 处理仓位更新
 tracker.ProcessPosition(position);
 
-// View history
+// 查看历史
 foreach (var report in tracker.History)
 {
     Console.WriteLine($"  {report.OpenTime} -> {report.CloseTime}");
@@ -131,16 +131,16 @@ var posAdapter = new PositionMessageAdapter(innerAdapter, posManager);
 在 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类中，可以通过 `Position` 属性访问当前持仓：
 
 ```cs
-// Current position for the primary instrument
+// 主交易品种的当前仓位
 decimal currentPosition = Position;
 
-// Close position
+// 平仓
 if (Position > 0)
     SellMarket(Math.Abs(Position));
 else if (Position < 0)
     BuyMarket(Math.Abs(Position));
 
-// Or through a built-in method
+// 或通过内置方法
 ClosePosition();
 ```
 

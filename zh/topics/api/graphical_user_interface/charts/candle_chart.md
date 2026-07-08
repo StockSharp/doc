@@ -42,11 +42,11 @@
    {
        _connector.CandleReceived += OnCandleReceived;
        
-       // Subscribe to other necessary events
+       // 订阅其他必要事件
        _connector.Connected += () => this.GuiAsync(() => { /* Handle connection */ });
        _connector.Disconnected += () => this.GuiAsync(() => { /* Handle disconnection */ });
        
-       // Connect to the trading system
+       // 连接到交易系统
        _connector.Connect();
    }
    ```
@@ -58,22 +58,22 @@
    {
        var security = SelectedSecurity;
        
-       // Create a subscription to candles
+       // 创建 K线订阅
        var subscription = new Subscription(
            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
            security)
        {
            MarketData = 
            {
-               // Request historical data for 30 days
+               // 请求 30 天的历史数据
                From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
                To = DateTime.Now,
-               // Get only finished candles
+               // 仅获取已完成的 K线
                IsFinishedOnly = true
            }
        };
        
-       // Create a chart window
+       // 创建图表窗口
        _chartWindows.SafeAdd(subscription, key =>
        {
            var wnd = new ChartWindow
@@ -82,32 +82,32 @@
            };
            wnd.MakeHideable();
            
-           // Initialize indicators
+           // 初始化指标
            _sma = new SimpleMovingAverage() { Length = 11 };
            _macd = new MovingAverageConvergenceDivergence();
            
-           // Initialize chart elements
+           // 初始化图表元素
            _smaChartElement = new ChartIndicatorElement();
            _macdChartElement = new ChartIndicatorElement();
            _candlesElem = new ChartCandleElement();
            
-           // Set MACD display style as histogram
+           // 将 MACD 显示样式设置为直方图
            _macdChartElement.DrawStyle = DrawStyles.Histogram;
            
-           // Initialize chart areas
+           // 初始化图表区域
            _candlesArea = new ChartArea();
            _indicatorsArea = new ChartArea();
            
-           // Add areas to the chart
+           // 向图表添加区域
            wnd.Chart.Areas.Add(_candlesArea);
            wnd.Chart.Areas.Add(_indicatorsArea);
            
-           // Add elements to areas
+           // 向区域添加元素
            _candlesArea.Elements.Add(_candlesElem);
            _candlesArea.Elements.Add(_smaChartElement);
            _indicatorsArea.Elements.Add(_macdChartElement);
            
-           // Bind chart elements to subscription for automatic drawing
+           // 将图表元素绑定到订阅以自动绘制
            wnd.Chart.AddElement(_candlesArea, _candlesElem, subscription);
            wnd.Chart.AddElement(_candlesArea, _smaChartElement, subscription);
            wnd.Chart.AddElement(_indicatorsArea, _macdChartElement, subscription);
@@ -115,7 +115,7 @@
            return wnd;
        }).Show();
        
-       // Start subscription to candles
+       // 启动 K线订阅
        _connector.Subscribe(subscription);
    }
    ```
@@ -129,15 +129,15 @@
        if (wnd == null)
            return;
        
-       // Process only finished candles
+       // 只处理已完成的 K线
        if (candle.State != CandleStates.Finished)
            return;
        
-       // Calculate indicator values
+       // 计算指标值
        var smaValue = _sma.Process(candle);
        var macdValue = _macd.Process(candle);
        
-       // Create data for drawing
+       // 创建绘制数据
        var data = new ChartDrawData();
        data
            .Group(candle.OpenTime)
@@ -145,7 +145,7 @@
                .Add(_smaChartElement, smaValue)
                .Add(_macdChartElement, macdValue);
        
-       // Draw data on the chart in the user interface thread
+       // 在用户界面线程中将数据绘制到图表
        this.GuiAsync(() => wnd.Chart.Draw(data));
    }
    ```
@@ -159,17 +159,17 @@ private void SetupAutoDrawingChart()
 {
 	var security = SelectedSecurity;
 	
-	// Create chart elements
+	// 创建图表元素
 	var candleElement = new ChartCandleElement();
 	var smaElement = new ChartIndicatorElement { Title = "SMA" };
 	
-	// Create chart areas
+	// 创建图表区域
 	var area = new ChartArea();
 	
-	// Add area to the chart
+	// 向图表添加区域
 	Chart.Areas.Add(area);
 	
-	// Create a subscription to candles
+	// 创建 K线订阅
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -181,22 +181,22 @@ private void SetupAutoDrawingChart()
 		}
 	};
 	
-	// Bind elements to the chart area and subscription
+	// 将元素绑定到图表区域和订阅
 	Chart.AddElement(area, candleElement, subscription);
 	Chart.AddElement(area, smaElement, subscription);
 	
-	// Create an indicator
+	// 创建指标
 	var sma = new SimpleMovingAverage { Length = 14 };
 	
-	// Subscribe to the candle receiving event for indicator processing
+	// 订阅 K线接收事件以处理指标
 	_connector.CandleReceived += (sub, candle) => 
 	{
 		if (sub == subscription && candle.State == CandleStates.Finished)
 		{
-			// Process the candle with the indicator and get the value
+			// 用指标处理 K线并获取值
 			var smaValue = sma.Process(candle);
 			
-			// Draw the indicator value
+			// 绘制指标值
 			var data = new ChartDrawData();
 			data
 				.Group(candle.OpenTime)
@@ -206,7 +206,7 @@ private void SetupAutoDrawingChart()
 		}
 	};
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(subscription);
 }
 ```
@@ -216,21 +216,21 @@ private void SetupAutoDrawingChart()
 您可以直接在图表上显示订单和交易标记：
 
 ```cs
-// Create elements for displaying orders and trades
+// 创建用于显示订单和成交的元素
 var orderElement = new ChartOrderElement();
 var tradeElement = new ChartTradeElement();
 
-// Add elements to the chart area
+// 向图表区域添加元素
 _candlesArea.Elements.Add(orderElement);
 _candlesArea.Elements.Add(tradeElement);
 
-// Subscribe to order and trade receiving events
+// 订阅订单和成交接收事件
 _connector.OrderReceived += (sub, order) => 
 {
 	if (order.Security != _security)
 		return;
 	
-	// Draw the order on the chart
+	// 在图表上绘制订单
 	var data = new ChartDrawData();
 	data.Group(order.Time).Add(orderElement, order);
 	
@@ -242,7 +242,7 @@ _connector.OwnTradeReceived += (sub, trade) =>
 	if (trade.Order.Security != _security)
 		return;
 	
-	// Draw the trade on the chart
+	// 在图表上绘制成交
 	var data = new ChartDrawData();
 	data.Group(trade.Time).Add(tradeElement, trade);
 	
@@ -255,12 +255,12 @@ _connector.OwnTradeReceived += (sub, trade) =>
 要清除图表，您可以使用 Reset 方法：
 
 ```cs
-// Clear the entire chart
+// 清除整个图表
 Chart.Reset();
 
-// Clear a specific area
+// 清除指定区域
 _candlesArea.Reset();
 
-// Clear a specific element
+// 清除指定元素
 _candlesElem.Reset();
 ```

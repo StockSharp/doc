@@ -15,15 +15,15 @@ private readonly TestSource _testSource = new TestSource();
 public MainWindow()
 {
 	InitializeComponent();
-	// immediate flush
+	// немедленный сброс буфера
 	_logManager.FlushInterval = TimeSpan.FromMilliseconds(1);
-	// set test log source
+	// установить тестовый источник логов
 	_logManager.Sources.Add(_testSource);
-	// set .NET Trace system based source
+	// установить источник на основе системы .NET Trace
 	_logManager.Sources.Add(new Ecng.Logging.TraceSource());
-	// write logs into MainWindow
+	// записывать логи в MainWindow
 	_logManager.Listeners.Add(new GuiLogListener(Monitor));
-	// and file logs.txt
+	// и в файл logs.txt
 	_logManager.Listeners.Add(new FileLogListener
 	{
 		FileName = "logs",

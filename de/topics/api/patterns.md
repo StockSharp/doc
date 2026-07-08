@@ -53,7 +53,7 @@ var result = patternIndicator.Process(candle);
 // Ergebnis prüfen
 if (result.GetValue<bool>())
 {
-	// Pattern detected, perform necessary actions
+	// Muster erkannt, erforderliche Aktionen ausführen
 }
 ```
 

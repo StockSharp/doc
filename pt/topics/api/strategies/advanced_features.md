@@ -25,10 +25,10 @@ public class CommentStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // All orders will be tagged with the strategy name
+        // Todas as ordens serão marcadas com o nome da estratégia
         CommentMode = StrategyCommentModes.Name;
 
-        // Or with the identifier for exact binding
+        // Ou com o identificador para vinculação exata
         // CommentMode = StrategyCommentModes.Id;
     }
 }
@@ -47,7 +47,7 @@ public class ScheduledStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Configure working time
+        // Configurar horário de trabalho
         WorkingTime = new WorkingTime
         {
             Periods = new List<WorkingTimePeriod>
@@ -57,7 +57,7 @@ public class ScheduledStrategy : Strategy
                     Till = DateTime.MaxValue,
                     Times = new List<Range<TimeSpan>>
                     {
-                        // Trade from 10:00 to 18:00
+                        // Negociar das 10:00 às 18:00
                         new Range<TimeSpan>(
                             TimeSpan.FromHours(10),
                             TimeSpan.FromHours(18))
@@ -78,7 +78,7 @@ A propriedade `RiskFreeRate` define a taxa anual livre de risco usada nos cálcu
 ```csharp
 var strategy = new MyStrategy();
 
-// Risk-free rate of 5% per annum
+// Taxa livre de risco de 5% ao ano
 strategy.RiskFreeRate = 0.05m;
 ```
 
@@ -91,10 +91,10 @@ A propriedade `IndicatorSource` define o valor predefinido para a propriedade `I
 ```csharp
 var strategy = new MyStrategy();
 
-// All indicators will use the last trade price by default
+// Todos os indicadores usarão o preço da última negociação por padrão
 strategy.IndicatorSource = Level1Fields.LastTradePrice;
 
-// Or the average price
+// Ou o preço médio
 // strategy.IndicatorSource = Level1Fields.AveragePrice;
 ```
 
@@ -120,7 +120,7 @@ public class SmaCrossStrategy : Strategy
         _longPeriod = Param(nameof(LongPeriod), 50);
     }
 
-    // Automatic calculation of the required historical period
+    // Cálculo automático do período histórico necessário
     protected override TimeSpan? HistoryCalculated
         => TimeSpan.FromDays(LongPeriod * 2);
 }
@@ -154,7 +154,7 @@ public class AdvancedStrategy : Strategy
         _smaPeriod = Param(nameof(SmaPeriod), 20);
     }
 
-    // Automatic historical period calculation
+    // Cálculo automático do período histórico
     protected override TimeSpan? HistoryCalculated
         => TimeSpan.FromDays(SmaPeriod * 2);
 
@@ -162,13 +162,13 @@ public class AdvancedStrategy : Strategy
     {
         base.OnStarted2(time);
 
-        // Order comments -- strategy name
+        // Comentários das ordens -- nome da estratégia
         CommentMode = StrategyCommentModes.Name;
 
-        // Risk-free rate for Sharpe calculation
+        // Taxa livre de risco para cálculo de Sharpe
         RiskFreeRate = 0.05m;
 
-        // Data source for indicators
+        // Fonte de dados para indicadores
         IndicatorSource = Level1Fields.LastTradePrice;
 
         var subscription = SubscribeCandles(CandleType);
@@ -183,7 +183,7 @@ public class AdvancedStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Trading logic...
+        // Lógica de negociação...
     }
 }
 ```

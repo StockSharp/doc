@@ -69,7 +69,7 @@ public class CoinbaseOrderCondition : BaseWithdrawOrderCondition, IStopLossOrder
 	}
 
 	/// <summary>
-	/// Activation price, when reached an order will be placed.
+	/// Precio de activación; al alcanzarse, se colocará una orden.
 	/// </summary>
 	[DataMember]
 	[Display(

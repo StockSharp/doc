@@ -4,7 +4,7 @@ Para criar o seu próprio indicador, é necessário implementar a interface [IIn
 
 ```cs
 /// <summary>
-/// Simple Moving Average.
+/// Média móvel simples.
 /// </summary>
 [DisplayName("SMA")]
 [Description("Simple Moving Average.")]
@@ -19,10 +19,10 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// Processar valor de entrada.
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var newValue = input.GetValue<decimal>();
@@ -111,7 +111,7 @@ Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. 
 
 ```cs
 /// <summary>
-/// Chaikin Volatility.
+/// Volatilidade de Chaikin.
 /// </summary>
 [DisplayName("Volatility")]
 [Description("Chaikin Volatility.")]
@@ -127,7 +127,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Moving Average.
+	/// Média móvel.
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("MA")]
@@ -136,7 +136,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
-	/// Rate of Change.
+	/// Taxa de mudança.
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
@@ -145,7 +145,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	public RateOfChange Roc { get; private set; }
 
 	/// <summary>
-	/// Is the indicator formed.
+	/// Se o indicador está formado.
 	/// </summary>
 	public override bool IsFormed
 	{
@@ -153,10 +153,10 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	}
 
 	/// <summary>
-	/// Process input value.
+	/// Processar valor de entrada.
 	/// </summary>
 	/// <param name="input">Input value.</param>
-	/// <returns>Resulting value.</returns>
+	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
 		var candle = input.GetValue<Candle>();
@@ -178,7 +178,7 @@ O último tipo de indicadores são os que não só são compostos por outros ind
 
 ```cs
 /// <summary>
-/// Welles Wilder's Average Directional Index.
+/// Índice direcional médio de Welles Wilder.
 /// </summary>
 [DisplayName("ADX")]
 [Description("Welles Wilder's Average Directional Index.")]
@@ -210,19 +210,19 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Welles Wilder's Directional Movement Index.
+	/// Índice de movimento direcional de Welles Wilder.
 	/// </summary>
 	[Browsable(false)]
 	public DirectionalIndex Dx { get; private set; }
 
 	/// <summary>
-	/// Moving Average.
+	/// Média móvel.
 	/// </summary>
 	[Browsable(false)]
 	public LengthIndicator<decimal> MovingAverage { get; private set; }
 
 	/// <summary>
-	/// Period length.
+	/// Comprimento do período.
 	/// </summary>
 	[DisplayName("Period")]
 	[Description("Indicator period.")]
@@ -284,7 +284,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Short period.
+	/// Período curto.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -298,7 +298,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Long period.
+	/// Período longo.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

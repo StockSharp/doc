@@ -13,18 +13,18 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Obtaining the chart
+	// Obtendo o gráfico
 	_chart = GetChart();
 	
-	// Checking chart availability
+	// Verificando disponibilidade do gráfico
 	if (_chart != null)
 	{
-		// Initializing the chart
+		// Inicializando o gráfico
 		InitializeChart();
 	}
 	else
 	{
-		// Chart is unavailable, for example, when running in console mode
+		// O gráfico está indisponível, por exemplo, ao executar em modo console
 		LogInfo("Chart is unavailable. Visualization disabled.");
 	}
 }
@@ -37,7 +37,7 @@ O método [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) devolv
 Em alguns casos, o gráfico pode ser definido a partir do exterior. Para isso, use o método [Strategy.SetChart](xref:StockSharp.Algo.Strategies.Strategy.SetChart(StockSharp.Charting.IChart)):
 
 ```cs
-// Setting the chart from an external source
+// Definindo gráfico a partir de fonte externa
 public void ConfigureVisualization(IChart chart)
 {
 	SetChart(chart);
@@ -56,13 +56,13 @@ Depois de obter acesso ao gráfico, pode criar uma ou mais áreas para apresenta
 ```cs
 private void InitializeChart()
 {
-	// Creating the main area for candles and indicators
+	// Criando área principal para velas e indicadores
 	_mainArea = CreateChartArea();
 	
-	// Creating an additional area for volume
+	// Criando área adicional para volume
 	_volumeArea = CreateChartArea();
 	
-	// Configuring areas and adding elements
+	// Configurando áreas e adicionando elementos
 	ConfigureChartElements();
 }
 ```
@@ -72,17 +72,17 @@ Também pode usar directamente o método [IChart.AddArea](xref:StockSharp.Charti
 ```cs
 private void InitializeChart()
 {
-	// Clear existing areas if necessary
+	// Limpar áreas existentes se necessário
 	foreach (var area in _chart.Areas.ToArray())
 		_chart.RemoveArea(area);
 	
-	// Create the main area for candles and indicators
+	// Criar área principal para velas e indicadores
 	_mainArea = _chart.AddArea();
 	
-	// Create an additional area for volume
+	// Criar área adicional para volume
 	_volumeArea = _chart.AddArea();
 	
-	// Configure areas and add elements
+	// Configurar áreas e adicionar elementos
 	ConfigureChartElements();
 }
 ```
@@ -98,10 +98,10 @@ Para apresentar velas, use o método [AddCandles](xref:StockSharp.Charting.Chart
 ```cs
 private void ConfigureChartElements()
 {
-	// Adding a candle element to the main area
+	// Adicionando elemento de vela à área principal
 	_candleElement = _mainArea.AddCandles();
 	
-	// Configuring candle display
+	// Configurando exibição de velas
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Japanese candles
 	_candleElement.AntiAliasing = true; // Smoothing
 	_candleElement.UpFillColor = Color.Green; // Rising candle body color
@@ -140,7 +140,7 @@ A interface [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 
 Para apresentar indicadores, use o método [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})):
 
 ```cs
-// Creating indicators
+// Criar indicadores
 _sma = new SimpleMovingAverage { Length = SmaLength };
 _bollinger = new BollingerBands
 {
@@ -148,11 +148,11 @@ _bollinger = new BollingerBands
 	Deviation = BollingerDeviation
 };
 
-// Adding indicators to the strategy collection
+// Adicionando indicadores à coleção da estratégia
 Indicators.Add(_sma);
 Indicators.Add(_bollinger);
 
-// Visualizing indicators
+// Visualizando indicadores
 _smaElement = DrawIndicator(_mainArea, _sma, Color.Blue);
 _bollingerUpperElement = DrawIndicator(_mainArea, _bollinger, Color.Purple);
 _bollingerLowerElement = DrawIndicator(_mainArea, _bollinger, Color.Purple);
@@ -164,7 +164,7 @@ O método [DrawIndicator](xref:StockSharp.Algo.Strategies.Strategy.DrawIndicator
 Também pode adicionar um elemento de indicador directamente através do método [AddIndicator](xref:StockSharp.Charting.ChartingInterfacesExtensions.AddIndicator(StockSharp.Charting.IChartArea,StockSharp.Algo.Indicators.IIndicator)) da área do gráfico:
 
 ```cs
-// Adding SMA directly through the chart area
+// Adicionando SMA diretamente pela área do gráfico
 var smaElement = _mainArea.AddIndicator(_sma);
 smaElement.Color = Color.Blue;
 smaElement.StrokeThickness = 2;
@@ -189,10 +189,10 @@ A interface [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorEle
 Para apresentar negócios, use o método [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades(StockSharp.Charting.IChartArea)):
 
 ```cs
-// Adding an element to display trades
+// Adicionando elemento para exibir negociações
 _tradesElement = DrawOwnTrades(_mainArea);
 
-// Configuring trade display
+// Configurando exibição de negociações
 _tradesElement.BuyBrush = Color.Green;  // Buy color
 _tradesElement.SellBrush = Color.Red;   // Sell color
 _tradesElement.PointSize = 10;          // Point size
@@ -203,10 +203,10 @@ _tradesElement.PointSize = 10;          // Point size
 Para apresentar ordens, use o método [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(StockSharp.Charting.IChartArea)):
 
 ```cs
-// Adding an element to display orders
+// Adicionando elemento para exibir ordens
 _ordersElement = DrawOrders(_mainArea);
 
-// Configuring order display
+// Configurando exibição de ordens
 _ordersElement.ActiveBrush = Color.Blue;     // Active orders color
 _ordersElement.CanceledBrush = Color.Gray;   // Canceled orders color
 _ordersElement.DoneBrush = Color.Green;      // Completed orders color
@@ -234,7 +234,7 @@ A forma mais eficiente de desenhar dados é usar o método [IChart.Draw](xref:St
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Processing candle in indicators
+	// Processando vela nos indicadores
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
 	
@@ -242,10 +242,10 @@ private void ProcessCandle(ICandleMessage candle)
 	if (_chart == null)
 		return;
 	
-	// Create data for drawing
+	// Criar dados para desenho
 	var drawData = _chart.CreateData();
 	
-	// Group data by candle time
+	// Agrupar dados pelo horário da vela
 	var group = drawData.Group(candle.OpenTime);
 	
 	// Add candle
@@ -259,7 +259,7 @@ private void ProcessCandle(ICandleMessage candle)
 		candle.PriceLevels, 
 		candle.State);
 	
-	// Add indicator values
+	// Adicionar valores dos indicadores
 	group.Add(_smaElement, smaValue);
 	
 	if (bollingerValue != null)
@@ -269,7 +269,7 @@ private void ProcessCandle(ICandleMessage candle)
 		group.Add(_bollingerLowerElement, bollingerValue);
 	}
 	
-	// Draw data on the chart
+	// Desenhar dados no gráfico
 	_chart.Draw(drawData);
 }
 ```
@@ -283,13 +283,13 @@ Para adicionar dados de diferentes tipos, são usadas várias sobrecargas do mé
 Para desenhar negócios e ordens, normalmente é usado um mecanismo automático accionado quando são recebidos novos negócios ou quando as ordens mudam. No entanto, se for necessário desenho manual, pode usar o seguinte código:
 
 ```cs
-// Drawing a trade
+// Desenhando uma negociação
 var tradeDrawData = _chart.CreateData();
 var tradeGroup = tradeDrawData.Group(trade.Time);
 tradeGroup.Add(_tradesElement, trade.Id, trade.StringId, trade.Side, trade.Price, trade.Volume);
 _chart.Draw(tradeDrawData);
 
-// Drawing an order
+// Desenhando uma ordem
 var orderDrawData = _chart.CreateData();
 var orderGroup = orderDrawData.Group(order.Time);
 orderGroup.Add(_ordersElement, order.Id, order.StringId, order.Side, order.Price, order.Volume);
@@ -351,7 +351,7 @@ public class SmaStrategy : Strategy
 	{
 		base.OnStarted2(time);
 		
-		// Creating indicators
+		// Criar indicadores
 		_sma = new SimpleMovingAverage { Length = SmaLength };
 		_bollinger = new BollingerBands
 		{
@@ -359,20 +359,20 @@ public class SmaStrategy : Strategy
 			Deviation = BollingerDeviation
 		};
 		
-		// Adding indicators to strategy collection
+		// Adicionando indicadores à coleção da estratégia
 		Indicators.Add(_sma);
 		Indicators.Add(_bollinger);
 		
-		// Getting the chart
+		// Obtendo o gráfico
 		_chart = GetChart();
 		
-		// Initializing the chart if available
+		// Inicializando o gráfico se disponível
 		if (_chart != null)
 		{
 			InitializeChart();
 		}
 		
-		// Subscribing to candles
+		// Assinando velas
 		var subscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			Security);
@@ -387,23 +387,23 @@ public class SmaStrategy : Strategy
 	
 	private void InitializeChart()
 	{
-		// Clear existing areas
+		// Limpar áreas existentes
 		foreach (var area in _chart.Areas.ToArray())
 			_chart.RemoveArea(area);
 		
-		// Create the main area for candles and indicators
+		// Criar área principal para velas e indicadores
 		_mainArea = _chart.AddArea();
 		
-		// Create an additional area for volume
+		// Criar área adicional para volume
 		_volumeArea = _chart.AddArea();
 		
-		// Configure chart elements
+		// Configurar elementos do gráfico
 		ConfigureChartElements();
 	}
 	
 	private void ConfigureChartElements()
 	{
-		// Adding an element for displaying candles
+		// Adicionando elemento para exibir velas
 		_candleElement = _mainArea.AddCandles();
 		_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick;
 		_candleElement.AntiAliasing = true;
@@ -414,7 +414,7 @@ public class SmaStrategy : Strategy
 		_candleElement.StrokeThickness = 1;
 		_candleElement.ShowAxisMarker = true;
 		
-		// Adding elements for indicators
+		// Adicionando elementos para indicadores
 		_smaElement = _mainArea.AddIndicator(_sma);
 		_smaElement.Color = Color.Blue;
 		_smaElement.StrokeThickness = 2;
@@ -431,14 +431,14 @@ public class SmaStrategy : Strategy
 		_bollingerLowerElement.Color = Color.Purple;
 		_bollingerLowerElement.StrokeThickness = 1;
 		
-		// Adding elements for orders and trades
+		// Adicionando elementos para ordens e negociações
 		_ordersElement = DrawOrders(_mainArea);
 		_tradesElement = DrawOwnTrades(_mainArea);
 	}
 	
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Processing candle with indicators
+		// Processando vela com indicadores
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
 		
@@ -446,11 +446,11 @@ public class SmaStrategy : Strategy
 		if (_chart == null)
 			return;
 		
-		// Drawing data on the chart
+		// Desenhando dados no gráfico
 		var drawData = _chart.CreateData();
 		var group = drawData.Group(candle.OpenTime);
 		
-		// Adding candle
+		// Adicionando vela
 		group.Add(_candleElement, 
 			candle.DataType, 
 			candle.SecurityId, 
@@ -461,7 +461,7 @@ public class SmaStrategy : Strategy
 			candle.PriceLevels, 
 			candle.State);
 		
-		// Adding indicator values
+		// Adicionando valores dos indicadores
 		group.Add(_smaElement, smaValue);
 		
 		if (bollingerValue != null)
@@ -471,14 +471,14 @@ public class SmaStrategy : Strategy
 			group.Add(_bollingerLowerElement, bollingerValue);
 		}
 		
-		// Drawing data on the chart
+		// Desenhando dados no gráfico
 		_chart.Draw(drawData);
 		
-		// Trading logic
+		// Lógica de negociação
 		if (!IsFormed)
 			return;
 			
-		// ... implementation of trading logic ...
+		// ... implementação da lógica de negociação ...
 	}
 }
 ```

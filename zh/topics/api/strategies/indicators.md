@@ -7,7 +7,7 @@
 [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 属性是一组用于策略的指标集合。该集合旨在自动跟踪指标形成的状态（预热）。
 
 ```cs
-// Accessing the indicators collection
+// 访问指标集合
 INotifyList<IIndicator> indicators = strategy.Indicators;
 ```
 
@@ -16,7 +16,7 @@ INotifyList<IIndicator> indicators = strategy.Indicators;
 默认情况下，[Strategy.IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) 属性的实现会检查 [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中的所有指标是否已形成：
 
 ```cs
-// Standard implementation in the Strategy class
+// Strategy 类中的标准实现
 public virtual bool IsFormed => _indicators.AllFormed;
 ```
 
@@ -31,11 +31,11 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Creating indicators
+	// 创建指标
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 	
-	// Adding indicators to the collection
+	// 将指标添加到集合
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
@@ -52,7 +52,7 @@ protected override void OnStarted2(DateTime time)
 1. **独立指标** - 添加直接处理市场数据（K线、逐笔数据等）的指标：
 
    ```cs
-   // Independent indicators
+   // 独立指标
    var sma = new SimpleMovingAverage { Length = 20 };
    var rsi = new RelativeStrengthIndex { Length = 14 };
    
@@ -63,7 +63,7 @@ protected override void OnStarted2(DateTime time)
 2. **指标链** - 当使用指标链（一个指标的输出作为另一个指标的输入）时，仅将**链中的第一个指标**添加到集合中：
 
    ```cs
-   // Indicator chain
+   // 指标链
    var sma = new SimpleMovingAverage { Length = 20 };
    var stdev = new StandardDeviation { Length = 20 };
    var bollingerBands = new BollingerBands 
@@ -72,9 +72,9 @@ protected override void OnStarted2(DateTime time)
        DeviationIndicator = stdev
    };
    
-   // Add only the first indicator in the chain
+   // 只添加指标链中的第一个指标
    Indicators.Add(sma);
-   // DO NOT add indicators dependent on other indicators
+   // 不要添加依赖其他指标的指标
    // Indicators.Add(stdev); - incorrect
    // Indicators.Add(bollingerBands); - incorrect
    ```
@@ -92,7 +92,7 @@ protected override void OnStarted2(DateTime time)
        SignalEma = signalEma
    };
    
-   // Add base indicators
+   // 添加基础指标
    Indicators.Add(fastEma);
    Indicators.Add(slowEma);
    ```
@@ -116,7 +116,7 @@ public class SmaStrategy : Strategy
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 		
-		// Add indicators to the collection to track their state
+		// 将指标添加到集合以跟踪其状态
 		Indicators.Add(_longSma);
 		Indicators.Add(_shortSma);
 		
@@ -125,15 +125,15 @@ public class SmaStrategy : Strategy
 	
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Process indicators
+		// 处理指标
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 		
-		// Check if the strategy is ready before executing trading logic
+		// 执行交易逻辑前检查策略是否就绪
 		if (!IsFormed)
 			return;
 			
-		// Trading logic
+		// 交易逻辑
 		// ...
 	}
 }
@@ -146,15 +146,15 @@ public class SmaStrategy : Strategy
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// Process indicators
+	// 处理指标
 	var longValue = _longSma.Process(candle);
 	var shortValue = _shortSma.Process(candle);
 	
-	// Comprehensive check of strategy readiness
+	// 全面检查策略是否就绪
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 		
-	// Trading logic
+	// 交易逻辑
 	// ...
 }
 ```
@@ -175,7 +175,7 @@ public class ComplexStrategy : Strategy
 	{
 		base.OnStarted2(time);
 		
-		// Create indicators
+		// 创建指标
 		_sma = new SimpleMovingAverage { Length = 20 };
 		_rsi = new RelativeStrengthIndex { Length = 14 };
 		
@@ -186,10 +186,10 @@ public class ComplexStrategy : Strategy
 			DeviationIndicator = _stdev 
 		};
 		
-		// Add only independent indicators
+		// 只添加独立指标
 		Indicators.Add(_sma);
 		Indicators.Add(_rsi);
-		// Do not add _stdev and _bollinger as they depend on _sma
+		// 不要添加 _stdev 和 _bollinger，因为它们依赖 _sma
 		
 		// ...
 	}
@@ -207,11 +207,11 @@ public override bool IsFormed
 {
 	get
 	{
-		// Standard indicator check
+		// 标准指标检查
 		if (!base.IsFormed)
 			return false;
 			
-		// Additional strategy readiness conditions
+		// 额外的策略就绪条件
 		return _customCondition && _additionalCheck;
 	}
 }

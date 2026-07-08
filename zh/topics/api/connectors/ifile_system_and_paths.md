@@ -52,7 +52,7 @@ public static class Paths
 using StockSharp.Algo.Storages;
 using StockSharp.Configuration;
 
-// Recommended way -- explicitly passing IFileSystem
+// 推荐方式 -- 显式传递 IFileSystem
 var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
 // Deprecated way (uses Paths.FileSystem internally)
@@ -91,16 +91,16 @@ using StockSharp.Configuration;
 
 var fs = Paths.FileSystem;
 
-// Serialize an object to a file
+// 将对象序列化到文件
 settings.Serialize(fs, @"C:\config.json");
 
-// Deserialize an object from a file
+// 从文件反序列化对象
 var loaded = @"C:\config.json".Deserialize<SettingsStorage>(fs);
 
-// Async deserialization
+// 异步反序列化
 var data = await @"C:\data.json".DeserializeAsync<MyData>(fs, cancellationToken);
 
-// Check if a configuration file exists
+// 检查配置文件是否存在
 if (@"C:\config.json".IsConfigExists(fs))
 {
     // ...
@@ -146,17 +146,17 @@ using StockSharp.Algo;
 using StockSharp.Algo.Storages;
 using StockSharp.Configuration;
 
-// Get the file system
+// 获取文件系统
 var fs = Paths.FileSystem;
 
-// Create data storage
+// 创建数据存储
 var drive = new LocalMarketDataDrive(fs, Paths.StorageDir);
 
-// Create a connector and configure storage
+// 创建连接器并配置存储
 var connector = new Connector();
 connector.Adapter.StorageSettings.Drive = drive;
 
-// Load settings from a file
+// 从文件加载设置
 var configFile = Path.Combine(Paths.AppDataPath, "connector_config.json");
 
 if (configFile.IsConfigExists(fs))
@@ -171,12 +171,12 @@ if (configFile.IsConfigExists(fs))
 许多类保留了没有 `IFileSystem` 的构造函数以保持向后兼容性，但它们被标记了 `[Obsolete]` 属性。这些构造函数在内部使用 `Paths.FileSystem`：
 
 ```csharp
-// Deprecated way
+// 已弃用的方式
 [Obsolete("Use IFileSystem overload.")]
 public LocalMarketDataDrive(string path)
     : this(Paths.FileSystem, path) { }
 
-// Recommended way
+// 推荐方式
 public LocalMarketDataDrive(IFileSystem fileSystem, string path) { }
 ```
 

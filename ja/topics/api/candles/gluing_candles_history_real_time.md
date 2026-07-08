@@ -255,7 +255,7 @@ public partial class MainWindow
 			}
 		};
 
-		//-----------------Chart--------------------------------
+		// -----------------チャート--------------------------------
 		Chart.ClearAreas();
 
 		var area = new ChartArea();

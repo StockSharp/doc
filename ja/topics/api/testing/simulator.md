@@ -9,13 +9,13 @@
 エミュレーションコネクターを作成するには、まず市場データを受信する通常のコネクターを作成し、その後それを基にエミュレーションコネクターを作成します。
 
 ```csharp
-// Create a regular connector for receiving market data
+// 市場データを受信する通常のコネクタを作成
 private readonly Connector _realConnector = new();
 
-// Create an emulation connector
+// エミュレーション用コネクタを作成
 _emuConnector = new RealTimeEmulationTrader<IMessageAdapter>(_realConnector.Adapter, _realConnector, _emuPf, false);
 
-// Configure emulation parameters
+// エミュレーションパラメータを設定
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 settings.TimeZone = TimeHelper.Est;
 settings.ConvertTime = true;
@@ -32,22 +32,22 @@ private readonly Portfolio _emuPf = Portfolio.CreateSimulator();
 通常のコネクターと同様に、エミュレーションコネクターは市場データの受信時およびトランザクションの実行時にイベントを生成します。
 
 ```csharp
-// Subscribe to connector events
+// コネクタイベントを購読
 _emuConnector.Connected += () =>
 {
-	// update gui labels
+	// GUI ラベルを更新
 	this.GuiAsync(() => { ChangeConnectStatus(true); });
 };
 
 _emuConnector.Disconnected += () =>
 {
-	// update gui labels
+	// GUI ラベルを更新
 	this.GuiAsync(() => { ChangeConnectStatus(false); });
 };
 
 _emuConnector.ConnectionError += error => this.GuiAsync(() =>
 {
-	// update gui labels
+	// GUI ラベルを更新
 	ChangeConnectStatus(false);
 	MessageBox.Show(this, error.ToString(), LocalizedStrings.ErrorConnection);
 });
@@ -64,7 +64,7 @@ _emuConnector.OrderReceived += (s, o) =>
 	OrderGrid.Orders.Add(o);
 };
 
-// Subscribe to order registration errors
+// 注文登録エラーを購読
 _emuConnector.OrderRegisterFailReceived += (s, f) => OrderGrid.AddRegistrationFail(f);
 
 _emuConnector.CandleReceived += (s, candle) =>
@@ -79,7 +79,7 @@ _emuConnector.CandleReceived += (s, candle) =>
 市場データを扱うには、適切なデータ型を購読する必要があります。
 
 ```csharp
-// Subscribe to order books, ticks, and Level1 for the emulation connector
+// エミュレーション用コネクタで板情報、ティック、Level1 を購読
 _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
@@ -87,7 +87,7 @@ _emuConnector.Subscribe(new(DataType.Level1, security));
 // Subscribe to order books for the real connector (needed for emulation)
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
-// Subscribe to candles
+// ローソクを購読
 _candlesSubscription = new(CandleDataTypeEdit.DataType, security)
 {
 	From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
@@ -100,13 +100,13 @@ _emuConnector.Subscribe(_candlesSubscription);
 注文は、通常のコネクターと同様にエミュレーションコネクターを通じて登録されます。
 
 ```csharp
-// Order registration
+// 注文登録
 _emuConnector.RegisterOrder(order);
 
-// Order cancellation
+// 注文取消
 _emuConnector.CancelOrder(order);
 
-// Order replacement
+// 注文変更
 _emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
 ```
 
@@ -117,16 +117,16 @@ _emuConnector.ReRegisterOrder(order, newPrice, order.Balance);
 ```csharp
 var settings = _emuConnector.EmulationAdapter.Emulator.Settings;
 
-// Set timezone
+// タイムゾーンを設定
 settings.TimeZone = TimeHelper.Est;
 
-// Convert time
+// 時刻を変換
 settings.ConvertTime = true;
 
-// Match orders on price touch
+// 価格到達時に注文をマッチング
 settings.MatchOnTouch = false;
 
-// Emulate order execution latency
+// 注文実行レイテンシをエミュレート
 settings.Latency = TimeSpan.FromMilliseconds(100);
 ```
 

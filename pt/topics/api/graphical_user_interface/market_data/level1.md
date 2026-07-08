@@ -35,10 +35,10 @@ public Level1Window()
 	InitializeComponent();
 	_connector = MainWindow.This.Connector;
 	
-	// Subscribe to Level1 data reception event
+	// Assinar evento de recebimento de dados Level1
 	_connector.Level1Received += OnLevel1Received;
 	
-	// Create a subscription to Level1 data if not already subscribed
+	// Criar assinatura de dados Level1 se ainda não estiver assinada
 	var security = MainWindow.This.SelectedSecurity;
 	if (!_connector.Subscriptions.Any(s => 
 			s.DataType == DataType.Level1 && 
@@ -51,17 +51,17 @@ public Level1Window()
 
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-	// Check if the message belongs to the selected instrument
+	// Verificar se a mensagem pertence ao instrumento selecionado
 	if (level1Message.SecurityId != MainWindow.This.SelectedSecurity.ToSecurityId())
 		return;
 		
-	// Add the message to Level1Grid
+	// Adicionar mensagem ao Level1Grid
 	this.GuiAsync(() => Level1Grid.Messages.Add(level1Message));
 }
 
 private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 {
-	// Unsubscribe from events when the window is closing
+	// Cancelar assinatura de eventos ao fechar a janela
 	if (_connector != null)
 		_connector.Level1Received -= OnLevel1Received;
 }
@@ -70,7 +70,7 @@ private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs
 ### Forma recomendada de processar dados Level1
 
 ```cs
-// Creating a subscription to Level1 using multiple instruments
+// Criar assinatura de Level1 usando vários instrumentos
 public void SubscribeToLevel1(IEnumerable<Security> securities)
 {
 	foreach (var security in securities)
@@ -79,41 +79,41 @@ public void SubscribeToLevel1(IEnumerable<Security> securities)
 		_connector.Subscribe(subscription);
 	}
 	
-	// Subscribe to Level1 data reception event
+	// Assinar evento de recebimento de dados Level1
 	_connector.Level1Received += OnLevel1Received;
 }
 
-// Handler for Level1 data reception event
+// Manipulador do evento de recebimento de dados Level1
 private void OnLevel1Received(Subscription subscription, Level1ChangeMessage level1Message)
 {
-	// Check if we need to process this particular message
+	// Verificar se precisamos processar esta mensagem específica
 	if (IsLevel1Needed(subscription))
 	{
-		// Update GUI in the user interface thread
+		// Atualizar GUI na thread da interface
 		this.GuiAsync(() => 
 		{
-			// Add the message to Level1Grid
+			// Adicionar mensagem ao Level1Grid
 			Level1Grid.Messages.Add(level1Message);
 			
-			// Process changes in Level1 fields
+			// Processar alterações nos campos Level1
 			foreach (var change in level1Message.Changes)
 			{
 				switch (change.Key)
 				{
 					case Level1Fields.LastTradePrice:
-						// Process last trade price change
+						// Processar alteração do preço da última negociação
 						var lastPrice = (decimal)change.Value;
 						Console.WriteLine($"Last price {security.Code}: {lastPrice}");
 						break;
 						
 					case Level1Fields.BestBidPrice:
-						// Process best bid price change
+						// Processar alteração do melhor preço bid
 						var bestBid = (decimal)change.Value;
 						Console.WriteLine($"Best bid {security.Code}: {bestBid}");
 						break;
 						
 					case Level1Fields.BestAskPrice:
-						// Process best ask price change
+						// Processar alteração do melhor preço ask
 						var bestAsk = (decimal)change.Value;
 						Console.WriteLine($"Best ask {security.Code}: {bestAsk}");
 						break;

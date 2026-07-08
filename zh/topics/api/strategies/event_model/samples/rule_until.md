@@ -7,7 +7,7 @@
 ## 主要组件
 
 ```cs
-// Main components
+// 主要组件
 public class SimpleRulesUntilStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ public class SimpleRulesUntilStrategy : Strategy
 - 创建一个规则，当收到订单簿数据时执行，直到满足某个条件为止
 
 ```cs
-// OnStarted method
+// OnStarted 方法
 protected override void OnStarted2(DateTime time)
 {
 	var tickSub = new Subscription(DataType.Ticks, Security);
@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 	.Until(() => i >= 10)
 	.Apply(this);
 
-	// Sending requests for subscribe to market data.
+	// 发送市场数据订阅请求。
 	Subscribe(tickSub);
 	Subscribe(mdSub);
 

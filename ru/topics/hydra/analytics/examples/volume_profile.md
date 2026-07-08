@@ -37,7 +37,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, calculating distribution of the volume by price levels.
+	/// Аналитический скрипт рассчитывает распределение объёма по ценовым уровням.
 	/// </summary>
 	public class PriceVolumeScript : IAnalyticsScript
 	{
@@ -49,13 +49,13 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// script can process only 1 instrument
+			// скрипт может обрабатывать только 1 инструмент
 			var security = securities.First();
 
-			// get candle storage
+			// получение хранилища свечей
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-			// get available dates for the specified period
+			// получить доступные даты за указанный период
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
@@ -64,12 +64,12 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// grouping candles by middle price
+			// группировка свечей по средней цене
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.LowPrice + c.GetLength() / 2)
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
-			// draw on chart
+			// нарисовать на графике
 			panel.CreateChart<decimal, decimal>()
 				.Append(security.ToStringId(), rows.Keys, rows.Values, DrawStyles.Histogram);
 
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# Add .NET references
+# Добавить ссылки .NET
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, calculating distribution of the volume by price levels.
+# Аналитический скрипт рассчитывает распределение объёма по ценовым уровням.
 class price_volume_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -113,12 +113,12 @@ class price_volume_script(IAnalyticsScript):
 		data_type,
 		cancellation_token
 	):
-		# Check if there are no instruments
+		# Проверить, что инструменты отсутствуют
 		if not securities:
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# Script can process only 1 instrument
+		# Скрипт может обрабатывать только 1 инструмент
 		security = securities[0]
 
 		if data_type is None:
@@ -127,26 +127,26 @@ class price_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# Get candle storage
+		# Получить хранилище свечей
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-		# Get available dates for the specified period
+		# Получить доступные даты за указанный период
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
 			logs.LogWarning("no data")
 			return Task.CompletedTask
 
-		# Grouping candles by middle price and summing their volumes
+		# Группировка свечей по средней цене и суммирование объёмов
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows_dict = {}
 		for candle in candles:
-			# Calculate middle price of the candle
+			# Рассчитать среднюю цену свечи
 			key = candle.LowPrice + get_length(candle) / 2
-			# Sum volumes for same price level
+			# Суммировать объёмы для одного ценового уровня
 			rows_dict[key] = rows_dict.get(key, 0) + candle.TotalVolume
 
-		# Draw on chart
+		# Нарисовать на графике
 		chart = create_chart(panel, float, float)
 		chart.Append(to_string_id(security), list(rows_dict.keys()), list(rows_dict.values()), DrawStyles.Histogram)
 

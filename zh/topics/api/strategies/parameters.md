@@ -48,19 +48,19 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 [StrategyParam\<T\>.SetValidator](xref:Ecng.ComponentModel.Extensions.SetValidator``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute)) 方法设置一个验证器来检查参数值。StockSharp 提供了一系列预定义的验证器，可用于最常见的任务：
 
 ```cs
-// Check that the number is greater than zero
+// 检查数值是否大于零
 _longSmaLength = Param(nameof(LongSmaLength), 80)
 					.SetValidator(new IntGreaterThanZeroAttribute());
 
-// Check that the number is not negative
+// 检查数值是否非负
 _volume = Param(nameof(Volume), 1)
 			.SetValidator(new DecimalNotNegativeAttribute());
 
-// Check for value range
+// 检查取值范围
 _percentage = Param(nameof(Percentage), 50)
 				.SetValidator(new RangeAttribute(0, 100));
 
-// Check for required value
+// 检查必填值
 _security = Param<Security>(nameof(Security))
 				.SetValidator(new RequiredAttribute());
 ```
@@ -68,16 +68,16 @@ _security = Param<Security>(nameof(Security))
 为了方便，[StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) 为最常见的验证器内置了方法：
 
 ```cs
-// Check that the number is greater than zero
+// 检查数值是否大于零
 _longSmaLength = Param(nameof(LongSmaLength), 80).SetGreaterThanZero();
 
-// Check that the number is not negative
+// 检查数值是否非负
 _volume = Param(nameof(Volume), 1).SetNotNegative();
 
-// Check that the value is NULL or not negative
+// 检查该值是否为 NULL 或非负
 _interval = Param<TimeSpan?>(nameof(Interval)).SetNullOrNotNegative();
 
-// Set value range
+// 设置取值范围
 _percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
 ```
 
@@ -171,14 +171,14 @@ public override void Save(SettingsStorage settings)
 {
 	base.Save(settings);
 	
-	// Additional saving logic...
+	// 额外的保存逻辑...
 }
 
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings);
 	
-	// Additional loading logic...
+	// 额外的加载逻辑...
 }
 ```
 

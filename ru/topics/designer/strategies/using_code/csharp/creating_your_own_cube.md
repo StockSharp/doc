@@ -10,7 +10,7 @@
 
 ```cs
 /// <summary>
-/// Sample diagram element demonstrates input and output sockets usage.
+/// Пример элемента диаграммы показывает использование входных и выходных сокетов.
 /// 
 /// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
 /// </summary>
@@ -20,14 +20,14 @@ public class EmptyDiagramElement : DiagramExternalElement
 
 	public EmptyDiagramElement()
 	{
-		// example property to show how to make parameters
+		// пример свойства, показывающий создание параметров
 	
 		_minValue = AddParam("MinValue", 10)
 			.SetBasic(true) // make parameter visible in basic mode
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
 	}
 
-	// output sockets are events marked with DiagramExternal attribute
+	// выходные сокеты — это события, помеченные атрибутом DiagramExternal
 
 	[DiagramExternal]
 	public event Action<Unit> Output1;
@@ -35,11 +35,11 @@ public class EmptyDiagramElement : DiagramExternalElement
 	[DiagramExternal]
 	public event Action<Unit> Output2;
 
-	// uncomment to get Process method called every time when new arg received
+	// раскомментируйте, чтобы метод Process вызывался при каждом новом аргументе
 	// (no need wait when all input args received)
 	//public override bool WaitAllInput => false;
 
-	// input sockets are method parameters marked with DiagramExternal attribute
+	// входные сокеты — это параметры методов, помеченные атрибутом DiagramExternal
 
 	[DiagramExternal]
 	public void Process(CandleMessage candle, Unit diff)
@@ -56,21 +56,21 @@ public class EmptyDiagramElement : DiagramExternalElement
 	{
 		base.Start();
 
-		// add logic before start
+		// добавить логику перед запуском
 	}
 
 	public override void Stop()
 	{
 		base.Stop();
 
-		// add logic after stop
+		// добавить логику после остановки
 	}
 
 	public override void Reset()
 	{
 		base.Reset();
 
-		// add logic for reset internal state
+		// добавить логику сброса внутреннего состояния
 	}
 }
 ```

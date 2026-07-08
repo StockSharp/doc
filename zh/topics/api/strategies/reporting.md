@@ -69,7 +69,7 @@ source.MaxTradesBeforeAggregation = 5000;
 // Grouping interval (default is 1 hour)
 source.AggregationInterval = TimeSpan.FromMinutes(30);
 
-// Manual aggregation
+// 手动聚合
 source.AggregateOrders(TimeSpan.FromHours(1));
 source.AggregateTrades(TimeSpan.FromHours(1));
 ```
@@ -89,7 +89,7 @@ source.AggregateTrades(TimeSpan.FromHours(1));
 ```csharp
 var tracker = new PositionLifecycleTracker();
 
-// Event on round-trip close
+// 往返交易关闭事件
 tracker.RoundTripClosed += roundTrip =>
 {
     Console.WriteLine($"Position closed: {roundTrip.SecurityId}, " +
@@ -98,10 +98,10 @@ tracker.RoundTripClosed += roundTrip =>
         $"Max volume: {roundTrip.MaxPosition}");
 };
 
-// Process position update
+// 处理持仓更新
 tracker.ProcessPosition(position);
 
-// Access round-trip history
+// 访问往返交易历史
 IReadOnlyList<ReportPosition> history = tracker.History;
 ```
 
@@ -121,7 +121,7 @@ IReadOnlyList<ReportPosition> history = tracker.History;
 ```csharp
 var generator = new CsvReportGenerator();
 
-// Configure report sections
+// 配置报表章节
 generator.IncludeOrders = true;
 generator.IncludeTrades = true;
 generator.IncludePositions = true;
@@ -133,7 +133,7 @@ generator.Encoding = Encoding.UTF8;
 由于 `Strategy` 实现了 `IReportSource`，可以直接生成报告：
 
 ```csharp
-// The strategy itself is the data source
+// 策略本身作为数据源
 var generator = new JsonReportGenerator();
 
 using var stream = File.Create("report.json");
@@ -148,7 +148,7 @@ source.Name = strategy.Name;
 source.PnL = strategy.PnL;
 source.TotalWorkingTime = strategy.TotalWorkingTime;
 
-// Add positions from the tracker
+// 从跟踪器添加持仓
 source.AddPositions(tracker.History);
 
 var generator = new CsvReportGenerator();
@@ -190,12 +190,12 @@ public class ReportingStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Trading logic...
+        // 交易逻辑...
     }
 
     protected override void OnStopped()
     {
-        // Generate report when the strategy stops
+        // 策略停止时生成报表
         var generator = new CsvReportGenerator();
 
         using var stream = File.Create($"report_{Name}_{DateTime.Now:yyyyMMdd_HHmmss}.csv");

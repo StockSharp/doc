@@ -34,18 +34,18 @@ Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
 ```cs
 protected override void OnStarted2(DateTime time)
 {
-	// Reset counters at start
+	// 启动时重置计数器
 	_bullLength = 0;
 	_bearLength = 0;
 
-	// Create candle subscription
+	// 创建蜡烛订阅
 	var subscription = SubscribeCandles(CandleDataType);
 
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
 
-	// Set up visualization on the chart
+	// 在图表上设置可视化
 	var area = CreateChartArea();
 	if (area != null)
 	{
@@ -67,7 +67,7 @@ private void ProcessCandle(ICandleMessage candle)
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Identify bullish or bearish candle
+	// 识别看涨或看跌蜡烛
 	if (candle.OpenPrice < candle.ClosePrice)
 	{
 		_bullLength++;
@@ -83,16 +83,16 @@ private void ProcessCandle(ICandleMessage candle)
 		this.AddInfoLog($"Bearish candle detected. Streak: {_bearLength}");
 	}
 
-	// Stop existing processor when direction change is needed
+	// 需要改变方向时停止现有处理器
 	if (_quotingProcessor != null)
 	{
 		// Check if processor needs to be cleared (trend change or position)
 		var shouldClearProcessor = false;
 
-		// Need to sell if bullish trend and no short position
+		// 如果是看涨趋势且没有空头持仓，需要卖出
 		if (_bullLength >= Length && Position >= 0)
 			shouldClearProcessor = true;
-		// Need to buy if bearish trend and no long position
+		// 如果是看跌趋势且没有多头持仓，需要买入
 		else if (_bearLength >= Length && Position <= 0)
 			shouldClearProcessor = true;
 
@@ -103,18 +103,18 @@ private void ProcessCandle(ICandleMessage candle)
 		}
 	}
 
-	// Create new quoting processor when needed
+	// 需要时创建新的报价处理器
 	if (_quotingProcessor == null && IsFormedAndOnlineAndAllowTrading())
 	{
 		if (_bullLength >= Length && Position >= 0)
 		{
-			// Bullish trend - open short position
+			// 看涨趋势 - 开空头持仓
 			CreateQuotingProcessor(Sides.Sell);
 			this.AddInfoLog($"Starting SELL quoting after {_bullLength} bullish candles");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
-			// Bearish trend - open long position
+			// 看跌趋势 - 开多头持仓
 			CreateQuotingProcessor(Sides.Buy);
 			this.AddInfoLog($"Starting BUY quoting after {_bearLength} bearish candles");
 		}
@@ -129,14 +129,14 @@ private void ProcessCandle(ICandleMessage candle)
 ```cs
 private void CreateQuotingProcessor(Sides side)
 {
-	// Create behavior for market quoting
+	// 创建市价报价行为
 	var behavior = new MarketQuotingBehavior(
 		0, // No price offset
 		new Unit(0.1m, UnitTypes.Percent), // Use 0.1% as minimum deviation
 		MarketPriceTypes.Following // Follow market price
 	);
 
-	// Create quoting processor
+	// 创建报价处理器
 	_quotingProcessor = new(
 		behavior,
 		Security,
@@ -158,7 +158,7 @@ private void CreateQuotingProcessor(Sides side)
 		Parent = this
 	};
 
-	// Subscribe to processor events
+	// 订阅处理器事件
 	_quotingProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
 
@@ -174,7 +174,7 @@ private void CreateQuotingProcessor(Sides side)
 		_quotingProcessor = null;
 	};
 
-	// Initialize processor
+	// 初始化处理器
 	_quotingProcessor.Start();
 }
 ```

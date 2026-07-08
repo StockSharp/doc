@@ -5,7 +5,7 @@ FAST 连接器支持在转储模式下工作。在这种情况下，数据不是
 要启用转储模式，需要在连接之前，通过转储方法 [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** 传入文件：
 
 ```cs
-// ... connector initialization
+// ... 连接器初始化
 var fastAdapter = (FastMessageAdapter)connector.Adapters.InnerAdapters.First();
 IEnumerable<string> dumpFiles = Directory.GetFiles(dumpDir, "*.bin");
 var dict = dumpFiles.Select(f =>

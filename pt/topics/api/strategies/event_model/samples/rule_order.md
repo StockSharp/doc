@@ -7,7 +7,7 @@
 ## Componentes Principais
 
 ```cs
-// Main components
+// Componentes principais
 public class SimpleOrderRulesStrategy : Strategy
 {
 }
@@ -21,7 +21,7 @@ Chamado quando a estratégia inicia:
 - Cria dois conjuntos de regras para processar eventos de registo de ordens
 
 ```cs
-// OnStarted method
+// Método OnStarted
 protected override void OnStarted2(DateTime time)
 {
 	var sub = new Subscription(DataType.Ticks, Security);
@@ -70,7 +70,7 @@ protected override void OnStarted2(DateTime time)
 		RegisterOrder(order);
 	}).Once().Apply(this);
 
-	// Sending request for subscribe to market data.
+	// Enviar solicitação de assinatura de dados de mercado.
 	Subscribe(sub);
 
 	base.OnStarted2(time);

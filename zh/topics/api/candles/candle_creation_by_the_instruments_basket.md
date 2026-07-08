@@ -16,7 +16,7 @@ readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
 private ChartArea _area;
 private ChartCandleElement _candleElement;
 
-// Connection setup and connector configuration
+// 连接设置和连接器配置
 private void ConfigureConnector()
 {
 	if (_connector.Configure(this))
@@ -25,7 +25,7 @@ private void ConfigureConnector()
 	}
 }
 
-// Chart setup
+// 图表设置
 private void SetupChart()
 {
 	_area = new ChartArea();
@@ -33,74 +33,74 @@ private void SetupChart()
 	_candleElement = new ChartCandleElement();
 	_area.Elements.Add(_candleElement);
 	
-	// Subscribe to candle reception event
+	// 订阅 K线接收事件
 	_connector.CandleReceived += OnCandleReceived;
 }
 
-// Service registration
+// 服务注册
 private void RegisterServices()
 {
 	ConfigManager.RegisterService<ISecurityProvider>(_connector);
 	ConfigManager.RegisterService<ICompilerService>(new RoslynCompilerService());
 }
 
-// Creating index instrument and subscribing to candles
+// 创建指数交易品种并订阅 K线
 private void CreateIndexAndSubscribe()
 {
-	// Create index instrument (spread)
+	// 创建指数交易品种（价差）
 	_indexInstr = new WeightedIndexSecurity() 
 	{ 
 		Board = ExchangeBoard.Nyse, 
 		Id = "IndexInstr" 
 	};
 	
-	// Add instruments with weights (1 and -1 for spread)
+	// 添加带权重的交易品种（价差使用 1 和 -1）
 	_indexInstr.Weights.Add(_instr1, 1);
 	_indexInstr.Weights.Add(_instr2, -1);
 	
-	// Create subscription to index instrument candles
+	// 创建指数交易品种 K线订阅
 	_indexSubscription = new Subscription(
 		DataType.TimeFrame(_timeFrame),  // 1-minute candles
 		_indexInstr)  // Our index instrument
 	{
 		MarketData = 
 		{
-			// Configure subscription to build candles from ticks
+			// 配置订阅以从 tick 构建 K线
 			BuildMode = MarketDataBuildModes.Build,
 			BuildFrom = DataType.Ticks,
 			
-			// Request historical data for 30 days
+			// 请求 30 天的历史数据
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 			To = DateTime.Now
 		}
 	};
 	
-	// Add element to chart and bind it to subscription
+	// 向图表添加元素并将其绑定到订阅
 	_chart.AddElement(_area, _candleElement, _indexSubscription);
 	
-	// Start subscription
+	// 启动订阅
 	_connector.Subscribe(_indexSubscription);
 }
 
-// Handler for candle reception event
+// K线接收事件处理器
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Check if the candle belongs to our subscription
+	// 检查 K线是否属于我们的订阅
 	if (subscription != _indexSubscription)
 		return;
 	
-	// If needed, limit processing to only completed candles
+	// 如有需要，仅处理已完成的 K线
 	if (candle.State != CandleStates.Finished)
 		return;
 	
-	// Draw the candle on the chart
+	// 在图表上绘制 K线
 	var chartData = new ChartDrawData();
 	chartData.Group(candle.OpenTime).Add(_candleElement, candle);
 	
 	this.GuiAsync(() => _chart.Draw(chartData));
 }
 
-// Unsubscribe when closing the application
+// 关闭应用程序时取消订阅
 private void Unsubscribe()
 {
 	if (_indexSubscription != null)
@@ -117,14 +117,14 @@ private void Unsubscribe()
 ### 使用成分交易品种K线创建指数K线订阅
 
 ```cs
-// Create subscription to build index candles from component candles
+// 创建订阅以从组件 K线构建指数 K线
 var indexFromCandlesSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	_indexInstr)
 {
 	MarketData = 
 	{
-		// Configure subscription to build from component candles
+		// 配置订阅以从组件 K线构建
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
@@ -132,21 +132,21 @@ var indexFromCandlesSubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// 启动订阅
 _connector.Subscribe(indexFromCandlesSubscription);
 ```
 
 ### 使用市场深度创建指数K线订阅
 
 ```cs
-// Create subscription to build index candles from order books
+// 创建订阅以从订单簿构建指数 K线
 var indexFromDepthSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	_indexInstr)
 {
 	MarketData = 
 	{
-		// Configure subscription to build from order books
+		// 配置订阅以从订单簿构建
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.MarketDepth,
 		BuildField = Level1Fields.SpreadMiddle,  // Use middle of spread
@@ -155,14 +155,14 @@ var indexFromDepthSubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// 启动订阅
 _connector.Subscribe(indexFromDepthSubscription);
 ```
 
 ### 使用波动率指数
 
 ```cs
-// Create volatility index based on expression
+// 基于表达式创建波动率指数
 var volatilityIndex = new ExpressionIndexSecurity
 {
 	Board = ExchangeBoard.Nyse,
@@ -170,10 +170,10 @@ var volatilityIndex = new ExpressionIndexSecurity
 	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Formula for calculating volatility
 };
 
-// Add main instrument to index
+// 将主交易品种添加到指数
 volatilityIndex.InnerSecurityIds.Add(_instr1.ToSecurityId());
 
-// Create subscription to volatility index candles
+// 创建波动率指数 K线订阅
 var volatilitySubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	volatilityIndex)
@@ -187,7 +187,7 @@ var volatilitySubscription = new Subscription(
 	}
 };
 
-// Start subscription
+// 启动订阅
 _connector.Subscribe(volatilitySubscription);
 ```
 

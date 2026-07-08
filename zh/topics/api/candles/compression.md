@@ -13,27 +13,27 @@ API 提供了将逐笔成交数据和价差（最佳买价／卖价）压缩为K
 ### 将逐笔成交压缩为K线
 
 ```cs
-// Example usage of ToCandles for ticks
+// ToCandles 用于 tick 的示例
 var tickStorage = storageRegistry.GetTickMessageStorage(securityId, Drive, StorageFormat);
 var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
-// This code loads tick data from storage and converts it into candles.
+// 此代码从存储加载 tick 数据并将其转换为 K线。
 // mdMsg - the message with parameters of the created candles (type, time frame, etc.).
-// candleBuilderProvider - the provider that supplies a specific candle builder implementation.
+// candleBuilderProvider — 提供具体 K线构建器实现的提供者。
 ```
 
 ### 将价差数据压缩为K线
 
 ```cs
-// Example usage of ToCandles for spread data
+// ToCandles 用于价差数据的示例
 var depthStorage = storageRegistry.GetQuoteMessageStorage(securityId, Drive, StorageFormat);
 var depths = depthStorage.LoadAsync(from, to);
 var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderProvider: candleBuilderProvider);
 
-// Here we load spread data and convert it into candles.
-// Level1Fields.SpreadMiddle indicates using the spread middle price for building candles.
-// You can also use Level1Fields.BestBid or Level1Fields.BestAsk for the best bid or ask prices, respectively.
+// 这里加载价差数据并将其转换为 K线。
+// Level1Fields.SpreadMiddle 表示使用价差中间价构建 K线。
+// 也可以分别使用 Level1Fields.BestBid 或 Level1Fields.BestAsk 表示最佳 bid 或 ask 价格。
 ```
 
 ## 压缩参数
@@ -72,8 +72,8 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 	}
 }
 
-// This method demonstrates various ways to build candles depending on the type of source data.
-// It supports building from ticks, order log, spreads, and other sources.
+// 此方法演示根据源数据类型构建 K线的不同方式。
+// 支持从 tick、订单日志、价差和其他来源构建。
 ```
 
 ## 其他功能
@@ -83,7 +83,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 API 不仅可以使用逐笔成交和价差构建K线，还支持其他数据源：
 
 ```cs
-// Example of building candles from various sources
+// 从不同来源构建 K线的示例
 switch (type)
 {
 	case BuildTypes.Ticks:
@@ -106,7 +106,7 @@ switch (type)
 	// ... (other cases)
 }
 
-// This code shows how to build candles from different data sources: ticks, order log, spreads, Level1 data, and even from smaller time frame candles.
+// 此代码展示如何从不同数据源构建 K线：tick、订单日志、价差、Level1 数据，甚至更小周期的 K线。
 ```
 
 ## 结论
