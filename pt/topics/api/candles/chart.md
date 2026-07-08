@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-Um exemplo de exibição de candles em um gráfico é fornecido na seção [Candles](../candles.md).
+Um exemplo de exibição de candles em um gráfico é fornecido na seção [Velas](../candles.md).
 
 ## Veja também
 

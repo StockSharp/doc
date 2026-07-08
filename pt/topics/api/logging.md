@@ -1,4 +1,4 @@
-# Logging
+# Registo de logs
 
 Para monitorizar algoritmos de negociação escritos em [S#](../api.md), pode utilizar a classe especial [LogManager](xref:Ecng.Logging.LogManager). Esta classe recebe as mensagens [LogMessage](xref:Ecng.Logging.LogMessage) de [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources) através do evento [ILogSource.Log](xref:Ecng.Logging.ILogSource.Log) e passa-as para os listeners [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). Assim, o código do algoritmo poderá passar informação de depuração (por exemplo, sobre erros ocorridos durante a operação ou informação adicional sobre cálculos matemáticos) e o [LogManager](xref:Ecng.Logging.LogManager) decidirá como apresentar esta informação ao operador.
 

@@ -8,5 +8,5 @@ Para utilizar o indicador, deve usar a classe [LinearRegSlope](xref:StockSharp.A
 
 ## Conteúdo recomendado
 
-[Logging](../../logging.md)
+[Registo de logs](../../logging.md)
 

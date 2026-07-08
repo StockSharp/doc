@@ -1653,7 +1653,7 @@
       href: api/market_data_storage/drives.md
     - name: Sistema de Snapshots
       href: api/market_data_storage/snapshots.md
-  - name: Candles
+  - name: Velas
     href: api/candles.md
     items:
     - name: Gráfico
@@ -2211,7 +2211,7 @@
     href: api/slippage.md
   - name: Medição de Latência
     href: api/latency.md
-  - name: Logging
+  - name: Registo de logs
     href: api/logging.md
     items:
     - name: Logging de estratégia
@@ -2227,7 +2227,7 @@
   - name: Opções
     href: api/options.md
     items:
-    - name: Greeks
+    - name: Gregas
       href: api/options/greeks.md
     - name: Negociação de volatilidade
       href: api/options/volatility_trading.md
@@ -2274,7 +2274,7 @@
         href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
       - name: Anotações
         href: api/graphical_user_interface/charts/annotations.md
-    - name: Registo
+    - name: Registo de logs
       href: api/graphical_user_interface/logging.md
       items:
       - name: Painel de log

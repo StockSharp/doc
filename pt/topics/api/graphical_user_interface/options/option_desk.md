@@ -146,4 +146,4 @@ Abaixo está o exemplo **OptionCalculator**, que utiliza este componente. O cód
 
 ## Conteúdo recomendado
 
-[Greeks](../../options/greeks.md)
+[Gregas](../../options/greeks.md)

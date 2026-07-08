@@ -4,7 +4,7 @@ Para trabalhar com opções, o [S#](../api.md) fornece métodos especiais para c
 
 ## Conteúdo recomendado
 
-[Greeks](options/greeks.md)
+[Gregas](options/greeks.md)
 
 [Negociação de volatilidade](options/volatility_trading.md)
 

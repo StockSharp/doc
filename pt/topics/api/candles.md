@@ -1,4 +1,4 @@
-# Candles
+# Velas
 
 O [S#](../api.md) suporta os seguintes tipos de candles:
 

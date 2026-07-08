@@ -7,6 +7,6 @@
 
 ## Conteúdo recomendado
 
-[Greeks](../options/greeks.md)
+[Gregas](../options/greeks.md)
 
 [Negociação de volatilidade](../options/volatility_trading.md)
