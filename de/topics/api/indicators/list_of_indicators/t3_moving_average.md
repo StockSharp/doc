@@ -47,7 +47,7 @@ Die T3 Moving Average-Berechnung erfolgt in mehreren Schritten:
    T3 = c1 * EMA6 + c2 * EMA5 + c3 * EMA4 + c4 * EMA3
    ```
 
-When VolumeFactor = 0, T3 becomes equivalent to EMA3 (triple EMA). When VolumeFactor = 1, T3 is maximally smoothed.
+Wenn VolumeFactor = 0 ist, entspricht T3 EMA3 (dreifache EMA). Wenn VolumeFactor = 1 ist, wird T3 maximal geglättet.
 
 ![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
 

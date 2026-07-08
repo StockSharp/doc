@@ -14,7 +14,7 @@
 
 1. **订阅订单簿更新事件：**[Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived) 接收订单簿更新。此事件用于常规和过滤后的订单簿。
 
-    When processing the event, check the [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) in the `subscription` object associated with the event. If [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) is [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth), it indicates that the received order book is filtered:
+    处理事件时，请检查与该事件关联的 `subscription` 对象中的 [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType)。如果 [Subscription.DataType](xref:StockSharp.Messages.SubscriptionBase`1.DataType) 为 [DataType](xref:StockSharp.Messages.DataType.FilteredMarketDepth)，则表示接收到的订单簿是过滤后的订单簿：
 
     ```cs
     connector.OrderBookReceived += (sender, subscription, orderBook) =>
