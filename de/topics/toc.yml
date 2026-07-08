@@ -24,11 +24,11 @@
     items:
       - name: Erste Schritte
         href: designer/videos/beginning.md
-      - name: Konstruktor fur Handelsstrategien
+      - name: Konstruktor für Handelsstrategien
         href: designer/videos/constructor.md
       - name: Variable Logik und Mathematik
         href: designer/videos/variable_math.md
-      - name: Debugger fur Handelsstrategien
+      - name: Debugger für Handelsstrategien
         href: designer/videos/debugger.md
       - name: Positionen schutzen
         href: designer/videos/protect_position.md
@@ -52,7 +52,7 @@
         href: designer/videos/candles_build_ticks.md
       - name: Flagge
         href: designer/videos/flag.md
-      - name: Strategie fur maximales Volumen
+      - name: Strategie für maximales Volumen
         href: designer/videos/strategy_max_volume.md
       - name: Finanzindizes
         href: designer/videos/financial_index.md
@@ -508,7 +508,7 @@
   - name: Datenquellen
     href: hydra/data_sources.md
     items:
-    - name: Quelle auswahlen
+    - name: Quelle auswählen
       href: hydra/data_sources/select_source.md
     - name: Allgemeine Verbindungseinstellungen
       href: hydra/data_sources/common_connection_settings.md
@@ -582,7 +582,7 @@
       href: hydra/server_mode/emulation_setup.md
     - name: Instrumentenzuordnung
       href: hydra/server_mode/instruments_mapping.md
-    - name: Verbindung ueber das FIX-Protokoll
+    - name: Verbindung über das FIX-Protokoll
       href: hydra/server_mode/fix_fast_connectivity.md
     - name: Hydra Client verbinden
       href: hydra/server_mode/hydra_client_connectivity.md
@@ -618,7 +618,7 @@
   - name: Analytics
     href: hydra/analytics.md
     items:
-    - name: Skript ausfuhren
+    - name: Skript ausführen
       href: hydra/analytics/running_a_script.md
     - name: Skript erstellen
       href: hydra/analytics/create_own_script.md
@@ -640,9 +640,9 @@
         href: hydra/analytics/examples/largest_candles.md
   - name: Verschiedenes
     items:
-    - name: Einstellungen zuruecksetzen
+    - name: Einstellungen zurücksetzen
       href: hydra/misc/settings_reset.md
-    - name: Daten loeschen
+    - name: Daten löschen
       href: hydra/misc/delete_data.md
     - name: Netzwerkeinstellungen
       href: hydra/misc/network_settings.md
