@@ -1,4 +1,4 @@
-# 电子转账
+# EFT
 
 **Ehlers Fisher变换（EFT）** 是由John Ehlers开发的一种技术指标，它使用Fisher统计变换将价格数据转换为正态分布形式。
 

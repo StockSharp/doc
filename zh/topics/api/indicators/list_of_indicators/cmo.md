@@ -1,4 +1,4 @@
-# 首席营销官
+# CMO
 
 **Chande 动量振荡器 (CMO)** 是动量指标的一个修改版。CMO 的发明者是交易员 Tushar Chande。
 

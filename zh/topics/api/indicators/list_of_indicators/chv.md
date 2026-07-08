@@ -20,4 +20,4 @@ CHV = (EMA(H-L(i), n) — EMA(H-L(i-n), n)) / EMA(H-L(i-n), n) x 100。
 
 ## 另请参阅
 
-[首席营销官](cmo.md)
+[CMO](cmo.md)
