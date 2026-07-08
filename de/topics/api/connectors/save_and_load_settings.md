@@ -2,7 +2,7 @@
 
 Die Methoden [Connector.Save](xref:StockSharp.Algo.Connector.Save(Ecng.Serialization.SettingsStorage)) und [Connector.Load](xref:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage)) werden verwendet, um Einstellungen des [Connector](xref:StockSharp.Algo.Connector) zu speichern bzw. zu laden.
 
-Um Einstellungen aus einer externen Datei zu speichern und zu laden, koennen Sie die in [S#](../../api.md) implementierte Serialisierung bzw. Deserialisierung verwenden.
+Um Einstellungen aus einer externen Datei zu speichern und zu laden, können Sie die in [S#](../../api.md) implementierte Serialisierung bzw. Deserialisierung verwenden.
 
 ```cs
 ...
@@ -24,7 +24,7 @@ public void Save()
 	new JsonSerializer<SettingsStorage>().Serialize(_connector.Save(), _connectorFile);
 }
 ...
-		
+
 ```
 
 ## Empfohlene Inhalte

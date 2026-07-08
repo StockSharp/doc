@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 Die Percentage Price Oscillator-Berechnung umfasst die folgenden Schritte:
 
-1. Berechnen Sie kurze und lange exponentielle gleitende Durchschnitte:
+1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte:
    ```
    Short EMA = EMA(Price, ShortPeriod)
    Long EMA = EMA(Price, LongPeriod)

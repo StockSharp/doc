@@ -1,8 +1,8 @@
 # E\*TRADE
 
-**E-Trade Financial Corporation (E\*TRADE)** - Handelsplattform fuer den Handel mit Finanzanlagen, darunter Stammaktien, Vorzugsaktien, boersengehandelte Fonds, Futures-Kontrakte, Optionen, Investmentfonds und festverzinsliche Anlagen.
+**E-Trade Financial Corporation (E\*TRADE)** - Handelsplattform für den Handel mit Finanzanlagen, darunter Stammaktien, Vorzugsaktien, boersengehandelte Fonds, Futures-Kontrakte, Optionen, Investmentfonds und festverzinsliche Anlagen.
 
-Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
 
 ## Empfohlene Inhalte
 

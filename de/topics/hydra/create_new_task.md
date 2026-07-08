@@ -1,8 +1,8 @@
 # Neue Aufgabe erstellen
 
-[Hydra](../hydra.md) ist so aufgebaut, dass benutzerdefinierte Erweiterungen erstellt werden konnen. Um eine eigene Erweiterung hinzuzufugen, kopieren Sie die dll in den Unterordner **Plugins** des Installationsverzeichnisses von [Hydra](../hydra.md). Nachfolgend wird der Prozess zum Erstellen eines Hilfsprogramms zum Sichern vorhandener Daten beschrieben (es ist standardmassig enthalten und dient als Schulungsmaterial).
+[Hydra](../hydra.md) ist so aufgebaut, dass benutzerdefinierte Erweiterungen erstellt werden können. Um eine eigene Erweiterung hinzuzufügen, kopieren Sie die dll in den Unterordner **Plugins** des Installationsverzeichnisses von [Hydra](../hydra.md). Nachfolgend wird der Prozess zum Erstellen eines Hilfsprogramms zum Sichern vorhandener Daten beschrieben (es ist standardmäßig enthalten und dient als Schulungsmaterial).
 
-Jedes Hilfsprogramm muss die Schnittstelle [IHydraTask](xref:StockSharp.Hydra.Core.IHydraTask) implementieren (oder von den Klassen [BaseHydraTask](xref:StockSharp.Hydra.Core.BaseHydraTask) bzw. [ConnectorHydraTask\`1](xref:StockSharp.Hydra.Core.ConnectorHydraTask`1) erben): 
+Jedes Hilfsprogramm muss die Schnittstelle [IHydraTask](xref:StockSharp.Hydra.Core.IHydraTask) implementieren (oder von den Klassen [BaseHydraTask](xref:StockSharp.Hydra.Core.BaseHydraTask) bzw. [ConnectorHydraTask\`1](xref:StockSharp.Hydra.Core.ConnectorHydraTask`1) erben):
 
 ```cs
 	using System;
@@ -124,10 +124,10 @@ Jedes Hilfsprogramm muss die Schnittstelle [IHydraTask](xref:StockSharp.Hydra.Co
 		public override IEnumerable<DataType> SupportedDataTypes => Enumerable.Empty<DataType>();
 ```
 
-Ein wichtiger Schritt beim Erstellen des Hilfsprogramms ist die Implementierung der Methode [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), die die Logik des Hilfsprogramms umsetzt. Bei der Implementierung der Datensicherung befindet sich die gesamte Logik innerhalb der [API](../api.md): 
+Ein wichtiger Schritt beim Erstellen des Hilfsprogramms ist die Implementierung der Methode [BaseHydraTask.OnProcess](xref:StockSharp.Hydra.Core.BaseHydraTask.OnProcess), die die Logik des Hilfsprogramms umsetzt. Bei der Implementierung der Datensicherung befindet sich die gesamte Logik innerhalb der [API](../api.md):
 
 ```cs
-	[	
+	[
 		protected override TimeSpan OnProcess()
 		{
 			using (var service = CreateService())

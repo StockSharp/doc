@@ -1,31 +1,31 @@
 # Daten exportieren
 
-[Hydra](../../hydra.md) ermoeglicht den Export empfangener Marktdaten in verschiedene Formate, einschliesslich [MetaStock data formats](export_data/export_into_metastock.md).
+[Hydra](../../hydra.md) ermöglicht den Export empfangener Marktdaten in verschiedene Formate, einschliesslich [MetaStock data formats](export_data/export_into_metastock.md).
 
-Fuer den Export werden Dateien in den Formaten [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin, txt, Json oder SQL-Tabellen verwendet.
+Für den Export werden Dateien in den Formaten [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin, txt, Json oder SQL-Tabellen verwendet.
 
-Fuer den Export sollten Sie das erforderliche Dateiformat aus der Dropdown-Liste auswaehlen:
+Für den Export sollten Sie das erforderliche Dateiformat aus der Dropdown-Liste auswählen:
 
 ![hydra export](../../../images/hydra_export.png)
 
-Danach muessen Sie einen Ordner auswaehlen und bei Bedarf den Dateinamen aendern.
+Danach müssen Sie einen Ordner auswählen und bei Bedarf den Dateinamen aendern.
 
-Beim Export in Textdateien (txt) erscheint ein Fenster, in dem Sie die Exportvorlage in folgender Form angeben koennen:
+Beim Export in Textdateien (txt) erscheint ein Fenster, in dem Sie die Exportvorlage in folgender Form angeben können:
 
 **{OpenTime:default:yyyyMMdd};{OpenTime:default:HH:mm:ss};{OpenPrice};{HighPrice};{LowPrice};{ClosePrice};{TotalVolume}**
 
 Hier werden in geschweiften Klammern die zu exportierenden Eigenschaften und deren Reihenfolge angegeben, getrennt durch Semikolons.
 
-Durch Klicken auf die Schaltflaeche **Preview** koennen Sie sehen, welche Daten in der Datei gespeichert werden.
+Durch Klicken auf die Schaltfläche **Preview** können Sie sehen, welche Daten in der Datei gespeichert werden.
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
-Der Benutzer kann zusaetzliche Eigenschaften wie den Instrumentcode ueber die Eigenschaft **{SecurityId.SecurityCode}** hinzufuegen oder einen Time Frame-Wert angeben.
+Der Benutzer kann zusätzliche Eigenschaften wie den Instrumentcode über die Eigenschaft **{SecurityId.SecurityCode}** hinzufügen oder einen Time Frame-Wert angeben.
 
-Sie koennen eine Kopfzeile mit den Eigenschaftsnamen hinzufuegen. In diesem Fall sieht der Datensatz wie folgt aus.
+Sie können eine Kopfzeile mit den Eigenschaftsnamen hinzufügen. In diesem Fall sieht der Datensatz wie folgt aus.
 
 ![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
 
-Wenn Sie in ein Format exportieren muessen, das Doppelpunkte verwendet, sollten Sie das Schluesselwort default wie im obigen Beispiel angeben: **{OpenTime:default:HH:mm:ss}**.
+Wenn Sie in ein Format exportieren müssen, das Doppelpunkte verwendet, sollten Sie das Schluesselwort default wie im obigen Beispiel angeben: **{OpenTime:default:HH:mm:ss}**.
 
 **Sehen Sie sich das [Video-Tutorial](../videos/saving_format.md) an**

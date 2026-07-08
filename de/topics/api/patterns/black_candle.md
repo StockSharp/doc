@@ -16,7 +16,7 @@ Black Candle (bärische Candle) ist ein klassisches Candlestick-Muster, das ents
 Black Candle signalisiert bärischen Druck im Markt:
 
 - Je länger der Candle-Körper, desto stärker ist der bärische Druck.
-- Eine lange schwarze Candle nach einem Aufwärtstrend kann auf eine mögliche Umkehr hinweisen.
+- Eine länge schwarze Candle nach einem Aufwärtstrend kann auf eine mögliche Umkehr hinweisen.
 - Kurze Schatten zeigen, dass Bären den Preis während der gesamten Periode kontrollierten.
 - Aufeinanderfolgende schwarze Candles weisen auf einen stabilen Abwärtstrend hin.
 

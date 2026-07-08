@@ -1,16 +1,16 @@
 # Interactive Brokers
 
-**Interactive Brokers** - Handelsplattform fuer den Handel mit Finanzanlagen, darunter Aktien, Optionen, Futures, EFPs, Futures-Optionen, Forex, Anleihen und Fonds.
+**Interactive Brokers** - Handelsplattform für den Handel mit Finanzanlagen, darunter Aktien, Optionen, Futures, EFPs, Futures-Optionen, Forex, Anleihen und Fonds.
 
-Bevor Sie Handelsroboter fuer diese Handelsplattform schreiben, lesen Sie die Links unter [Connectors](../../connectors.md).
+Bevor Sie Handelsroboter für diese Handelsplattform schreiben, lesen Sie die Links unter [Connectors](../../connectors.md).
 
 ## TWS-Konfiguration Interactive Brokers
 
-1. Sie muessen Verbindungen von anderen Programmen erlauben (z. B. vom Handelsalgorithmus auf [S#](../../../api.md)). Oeffnen Sie dazu das Einstellungsmenue "File -> Global configuration...". Waehlen Sie im neuen Fenster "Configuration -> API -> Settings" aus:
+1. Sie müssen Verbindungen von anderen Programmen erlauben (z. B. vom Handelsalgorithmus auf [S#](../../../api.md)). Öffnen Sie dazu das Einstellungsmenü "File -> Global configuration...". Wählen Sie im neuen Fenster "Configuration -> API -> Settings" aus:
 
    ![ib settings](../../../../images/ib_settings.png)
 2. Aktivieren Sie den Modus "Enable ActiveX and Socket Clients".
-3. Fuegen Sie ausserdem die Adresse des Computers hinzu, auf dem der Algorithmus ausgefuehrt wird (lokale Adresse: 127.0.0.1). Dadurch muss die Berechtigung fuer die Terminalverbindung nicht bei jedem Start des Algorithmus erneut bestaetigt werden.
+3. Fügen Sie ausserdem die Adresse des Computers hinzu, auf dem der Algorithmus ausgeführt wird (lokale Adresse: 127.0.0.1). Dadurch muss die Berechtigung für die Terminalverbindung nicht bei jedem Start des Algorithmus erneut bestaetigt werden.
 
 ## Siehe auch
 

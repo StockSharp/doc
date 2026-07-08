@@ -7,7 +7,7 @@ Three Black Crows ist ein starkes bärisches Umkehr-Candlestick-Muster aus drei 
 - Drei aufeinanderfolgende schwarze (bärische) Candles mit Eröffnungskurs oberhalb des Schlusskurses (O > C).
 - Jede nachfolgende Candle eröffnet innerhalb des Körpers der vorherigen Candle (O < pO).
 - Jede Candle schließt tiefer als der Schlusskurs der vorherigen Candle.
-- Alle drei Candles haben relativ lange Körper und kurze Schatten.
+- Alle drei Candles haben relativ länge Körper und kurze Schatten.
 - Entsteht in einem Aufwärtstrend.
 
 ![Three Black Crows Pattern](../../../images/threeblackcrowspattern.png)
@@ -19,7 +19,7 @@ Three Black Crows gilt als eines der zuverlässigsten Signale für die Umkehr ei
 - Die Abfolge von drei fallenden Candles zeigt einen stetigen Anstieg bärischen Drucks.
 - Die Eröffnung jeder nachfolgenden Candle innerhalb des Körpers der vorherigen deutet auf eine gewisse Konsolidierung und anschließend auf die Fortsetzung der bärischen Bewegung hin.
 - Dass jede Candle tiefer als die vorherige schließt, zeigt die Fähigkeit der Verkäufer, den Preis konsequent zu senken.
-- Relativ lange Candle-Körper mit kurzen Schatten weisen auf eine entschlossene Kontrolle der Bären über den Markt hin.
+- Relativ länge Candle-Körper mit kurzen Schatten weisen auf eine entschlossene Kontrolle der Bären über den Markt hin.
 - Je gleichmäßiger die Größen der drei Candles sind, desto stärker ist das Signal.
 
 ### Handelsstrategien

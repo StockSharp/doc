@@ -1,17 +1,17 @@
 # Normalisierung des Schlusskurses
 
-Das Skript "Closing Price Normalization" dient zur Standardisierung der Schlusskurse von Finanzinstrumenten und ermoglicht den Vergleich und die Analyse unterschiedlicher Assets auf einer einheitlichen Skala. Dies ist besonders nutzlich beim Vergleich von Instrumenten mit unterschiedlichen Preisen und unterschiedlicher Volatilitat.
+Das Skript "Closing Price Normalization" dient zur Standardisierung der Schlusskurse von Finanzinstrumenten und ermöglicht den Vergleich und die Analyse unterschiedlicher Assets auf einer einheitlichen Skala. Dies ist besonders nutzlich beim Vergleich von Instrumenten mit unterschiedlichen Preisen und unterschiedlicher Volatilität.
 
 ![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
 
-## Beschreibung der Skriptausfuhrung
+## Beschreibung der Skriptausführung
 
-Das Skript passt Schlusskursdaten an, indem es sie entsprechend der gewahlten Normalisierungsmethode skaliert oder transformiert. Das Ergebnis ist ein Satz standardisierter Werte, der fur quantitative Vergleiche und Multi-Instrument-Analysen verwendet werden kann.
+Das Skript passt Schlusskursdaten an, indem es sie entsprechend der gewahlten Normalisierungsmethode skaliert oder transformiert. Das Ergebnis ist ein Satz standardisierter Werte, der für quantitative Vergleiche und Multi-Instrument-Analysen verwendet werden kann.
 
 ## Anwendung der Normalisierung
 
 - **Vereinheitlichung der Preisskala**: Die Normalisierung bringt Daten verschiedener Instrumente auf eine gemeinsame Skala und erleichtert dadurch den visuellen Vergleich und die analytische Bewertung.
-- **Korrelationsanalyse**: Standardisierte Daten ermoglichen das Erkennen korrelativer Beziehungen zwischen Assets und die Bildung diversifizierter Portfolios.
+- **Korrelationsanalyse**: Standardisierte Daten ermöglichen das Erkennen korrelativer Beziehungen zwischen Assets und die Bildung diversifizierter Portfolios.
 - **Index- und Modellerstellung**: Normalisierte Preise werden zur Erstellung zusammengesetzter Indizes, Preisbildungsmodelle und anderer quantitativer Untersuchungen verwendet.
 
 ## Normalisierungsmethodik
@@ -28,9 +28,9 @@ Der Normalisierungsprozess umfasst typischerweise die folgenden Schritte:
 
 1. **Auswahl der Normalisierung**: Festlegen der Normalisierungsmethode anhand der Analyseziele und Dateneigenschaften.
 2. **Datenverarbeitung**: Anwenden der gewahlten Normalisierungsmethode auf die Schlusskurse jedes Instruments.
-3. **Analyse der Ergebnisse**: Verwenden normalisierter Daten fur die anschliessende Analyse und den Vergleich von Instrumenten.
+3. **Analyse der Ergebnisse**: Verwenden normalisierter Daten für die anschliessende Analyse und den Vergleich von Instrumenten.
 
-Das Skript "Closing Price Normalization" ist ein wichtiges Werkzeug zur Vorbereitung von Daten fur Handel und quantitative Analyse. Es ermoglicht Tradern und Analysten, Finanzassets innerhalb verschiedener Strategien und Studien genauer zu vergleichen und zu bewerten.
+Das Skript "Closing Price Normalization" ist ein wichtiges Werkzeug zur Vorbereitung von Daten für Handel und quantitative Analyse. Es ermöglicht Tradern und Analysten, Finanzassets innerhalb verschiedener Strategien und Studien genauer zu vergleichen und zu bewerten.
 
 ## Skriptcode in C#
 
@@ -54,7 +54,7 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+				// Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
@@ -118,7 +118,7 @@ class normalize_price_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+			# Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 			if cancellation_token.IsCancellationRequested:
 				break
 

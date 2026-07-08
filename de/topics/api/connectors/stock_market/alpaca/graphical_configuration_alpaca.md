@@ -1,6 +1,6 @@
 # Grafische Konfiguration Alpaca
 
-Fuer alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
+Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
 ![API GUI Settings Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 

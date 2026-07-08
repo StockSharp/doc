@@ -1,14 +1,14 @@
-# Verbindung ueber das FIX-Protokoll
+# Verbindung über das FIX-Protokoll
 
 [Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) moeglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Einstellungen](settings.md) beschrieben.
 
-Fuer die Verbindung ueber das [FIX-Protokoll](../../api/connectors/common/fix_protocol.md) muessen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX-Adapterinitialisierung](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
+Für die Verbindung über das [FIX-Protokoll](../../api/connectors/common/fix_protocol.md) müssen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX-Adapterinitialisierung](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
 
 ```cs
 // Connector-Instanz erstellen
 private readonly Connector _connector = new Connector();
 
-// Adapter fuer Marktdaten ueber das FIX-Protokoll konfigurieren
+// Adapter für Marktdaten über das FIX-Protokoll konfigurieren
 var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
 	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
@@ -19,7 +19,7 @@ var marketDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 };
 _connector.Adapter.InnerAdapters.Add(marketDataAdapter);
 
-// Adapter fuer Transaktionsdaten konfigurieren
+// Adapter für Transaktionsdaten konfigurieren
 var transactionDataAdapter = new FixMessageAdapter(_connector.TransactionIdGenerator)
 {
 	Address = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5002),
@@ -38,7 +38,7 @@ Abonnieren Sie Ereignisse und richten Sie Datenhandler ein:
 _connector.Connected += () =>
 {
 	Console.WriteLine("Connection established");
-	
+
 	// Subscription zur Instrumentensuche erstellen
 	var lookupSubscription = new Subscription(DataType.Securities);
 	_connector.Subscribe(lookupSubscription);
@@ -55,18 +55,18 @@ _connector.SecurityReceived += (subscription, security) =>
 {
 	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
 	BufferSecurity.Add(security);
-	
+
 	// Wenn dies das Zielinstrument ist, seine Daten abonnieren
 	if (security.Id == targetSecurityId)
 	{
 		// Order-Book-Subscription
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
-		
+
 		// Tick-Trades-Subscription
 		var tradesSubscription = new Subscription(DataType.Ticks, security);
 		_connector.Subscribe(tradesSubscription);
-		
+
 		// Kerzen-Subscription
 		var candleSubscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
@@ -124,13 +124,13 @@ _connector.Connect();
 
 ## Hydra-Dienste verwenden
 
-Hydra stellt im Servermodus Zugriff auf verschiedene Datentypen bereit. Betrachten wir Beispiele fuer das Abrufen historischer Daten:
+Hydra stellt im Servermodus Zugriff auf verschiedene Datentypen bereit. Betrachten wir Beispiele für das Abrufen historischer Daten:
 
 ```cs
 // Historische Kerzen abrufen
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// Subscription fuer historische Kerzen erstellen
+	// Subscription für historische Kerzen erstellen
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -141,10 +141,10 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 			To = to
 		}
 	};
-	
+
 	// Abonnieren, um empfangene Kerzen zu verarbeiten
 	_connector.CandleReceived += OnCandleReceived;
-	
+
 	// Subscription starten
 	_connector.Subscribe(candleSubscription);
 }
@@ -154,11 +154,11 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// Pruefen, ob die Kerze zu unserer Subscription gehoert
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
-		
+
 	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
-	
+
 	// Empfangene Kerzen verarbeiten, zum Beispiel lokal speichern
-	// oder fuer Analyse/Visualisierung verwenden
+	// oder für Analyse/Visualisierung verwenden
 }
 ```
 
@@ -173,7 +173,7 @@ private void DisconnectFromServer()
 	{
 		_connector.UnSubscribe(subscription);
 	}
-	
+
 	// Verbindung zum Server trennen
 	_connector.Disconnect();
 }

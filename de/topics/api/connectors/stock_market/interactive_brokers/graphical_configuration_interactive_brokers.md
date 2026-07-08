@@ -1,13 +1,13 @@
 # Grafische Konfiguration Interactive Brokers
 
-Fuer alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
+Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
 ![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
 - **Address** - TWS-Adresse.
 - **Identifier** - Eindeutige ID. Wird verwendet, wenn mehrere Clients mit einem Terminal oder Gateway verbunden sind.
 - **Real-time** - Legt fest, ob Echtzeitdaten oder auf dem Brokerserver eingefrorene Daten verwendet werden.
-- **Logging level** - Protokollierungsstufe fuer Servermeldungen.
+- **Logging level** - Protokollierungsstufe für Servermeldungen.
 - **Market data fields** - Marktdatenfelder, die mit abonnierten Level1-Nachrichten empfangen werden.
 - **Protocol** - SSL-Protokoll zum Herstellen der Verbindung.
 - **Certificate** - SSL-Zertifikat.
@@ -17,7 +17,7 @@ Fuer alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Host name** - Name des Servers, der die SSL-Verbindung bereitstellt.
 - **MaxVersion** - MaxVersion
 - **Heart beat** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
-- **Reconnection settings** - Mechanismus fuer Einstellungen zur Ueberwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
+- **Reconnection settings** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte
 

@@ -56,7 +56,7 @@ Beide Connectoren werden auf die gleiche Weise verwendet. Daher wird im Folgende
     Login und Passwort bleiben bei anonymer Autorisierung leer (vorheriger Punkt). Wenn mehrere Roboter mit MT verbunden werden, muss zur Unterscheidung der Verbindungen ein eindeutiger Login angegeben werden.
 
     > [!TIP]
-    > - Das Skript muss vor der Verbindung von StockSharp mit MetaTrader gestartet werden und so lange ausgeführt bleiben, wie diese Verbindung benötigt wird.  
+    > - Das Skript muss vor der Verbindung von StockSharp mit MetaTrader gestartet werden und so länge ausgeführt bleiben, wie diese Verbindung benötigt wird.
     > - Um historische Kerzen in StockSharp zu sehen, müssen sie vom MetaTrader-Server heruntergeladen werden. Wie das funktioniert, lesen Sie in der MetaTrader-Dokumentation.
 
     Bei erfolgreicher Verbindung sollte das Beispiel eine Liste der Instrumente und Konten anzeigen:

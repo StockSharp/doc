@@ -15,7 +15,7 @@ Gravestone ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlus
 
 Gravestone Doji gilt als mögliches Umkehrsignal, insbesondere in einem Aufwärtstrend:
 
-- Der lange obere Schatten zeigt, dass Käufer den Markt während eines Großteils der Periode kontrollierten, Verkäufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
+- Der länge obere Schatten zeigt, dass Käufer den Markt während eines Großteils der Periode kontrollierten, Verkäufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
 - Die Zurückweisung höherer Preise kann das Ende bullischen Momentums signalisieren.
 - Anders als bei einem regulären Shooting Star weist die Gleichheit von Eröffnungs- und Schlusskurs (Doji) auf ein ausgeprägteres Kräftegleichgewicht hin.
 - In einem Aufwärtstrend hat dieses Muster bärische Implikationen und kann eine Umkehr ankündigen.

@@ -15,7 +15,7 @@ Dragonfly ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schluss
 
 Dragonfly Doji gilt als mögliches Umkehrsignal, insbesondere in einem Abwärtstrend:
 
-- Der lange untere Schatten zeigt, dass Verkäufer den Markt während eines Großteils der Periode kontrollierten, Käufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
+- Der länge untere Schatten zeigt, dass Verkäufer den Markt während eines Großteils der Periode kontrollierten, Käufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
 - Die Zurückweisung niedrigerer Preise kann das Ende bärischen Drucks signalisieren.
 - Anders als bei einem regulären Hammer weist die Gleichheit von Eröffnungs- und Schlusskurs (Doji) auf ein ausgeprägteres Kräftegleichgewicht hin.
 - In einem Abwärtstrend hat dieses Muster bullische Implikationen und kann eine Umkehr ankündigen.

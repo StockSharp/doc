@@ -1,8 +1,8 @@
 # AlphaVantage
 
-**Alpha Vantage** - Marktdatenanbieter fuer Echtzeit- und historische Daten zu Aktien, Forex (FX) sowie digitalen/Krypto-Waehrungen.
+**Alpha Vantage** - Marktdatenanbieter für Echtzeit- und historische Daten zu Aktien, Forex (FX) sowie digitalen/Krypto-Waehrungen.
 
-Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
 
 > [!CAUTION]
 > Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.

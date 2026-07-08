@@ -2,7 +2,7 @@
 
 ## Überblick
 
-`SmaStrategyMartingaleStrategy` ist eine Handelsstrategie auf Basis der Kreuzung zweier einfacher gleitender Durchschnitte ([SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)) mit Martingale-Elementen. Die Strategie verwendet lange und kurze SMAs zur Bestimmung von Ein- und Ausstiegssignalen und erhöht die Positionsgröße bei jedem neuen Trade.
+`SmaStrategyMartingaleStrategy` ist eine Handelsstrategie auf Basis der Kreuzung zweier einfacher gleitender Durchschnitte ([SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)) mit Martingale-Elementen. Die Strategie verwendet länge und kurze SMAs zur Bestimmung von Ein- und Ausstiegssignalen und erhöht die Positionsgröße bei jedem neuen Trade.
 
 ## Hauptkomponenten
 

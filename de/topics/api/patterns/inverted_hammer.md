@@ -16,7 +16,7 @@ Inverted Hammer ist ein bullisches Candlestick-Muster, das während eines Abwär
 
 Inverted Hammer gilt als mögliches Signal für eine Umkehr eines Abwärtstrends:
 
-- Der lange obere Schatten zeigt, dass Käufer versuchten, den Preis deutlich nach oben zu treiben, ihn aber nicht auf hohen Niveaus halten konnten.
+- Der länge obere Schatten zeigt, dass Käufer versuchten, den Preis deutlich nach oben zu treiben, ihn aber nicht auf hohen Niveaus halten konnten.
 - Trotz der Unfähigkeit, in der Nähe der Hochs zu schließen, kann das Auftreten von Käufern nach einem längeren Abwärtstrend einen Stimmungswechsel signalisieren.
 - Dieses Muster ist nicht so stark wie der klassische Hammer und erfordert Bestätigung durch nachfolgende Candles.
 - Die Farbe des Körpers ist weniger wichtig, obwohl ein weißer/grüner Inverted Hammer als bullischer gilt.

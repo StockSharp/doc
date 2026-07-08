@@ -15,36 +15,36 @@ Die Aufgabe konvertiert Boersendaten. Zum Beispiel von Order Logs in Ticks oder 
 
 **Order books**
 
-- **Interval** - Intervall fuer die Order-Book-Erzeugung.
+- **Interval** - Intervall für die Order-Book-Erzeugung.
 - **Depth** - maximale Tiefe der Order-Book-Erzeugung.
 - **Order log** - wie Order Books aus dem Order Log erstellt werden.
 
   Jede Boerse hat ihr eigenes **Order Log**-Format. Das Programm [Hydra](../../hydra.md) unterstuetzt drei Formate:
   - **By default** - wird in den meisten Faellen verwendet.
-  - **ITCH** - wird fuer das ITCH-Protokoll verwendet (Boersen: LSE und Nasdaq).
+  - **ITCH** - wird für das ITCH-Protokoll verwendet (Boersen: LSE und Nasdaq).
 
 **General**
 
 - **Header** - Converter.
 - **Working hours** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Interval of operation** - das Ausfuehrungsintervall.
-- **Data directory** - Datenverzeichnis, aus dem die Daten fuer die Konvertierung gelesen werden.
+- **Data directory** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
 - **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmaessig 0, die Anzahl der Fehler wird ignoriert.
-- **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgefuehrt werden muss.
+- **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
 
 **Logging**
 
 - **Identifier** - die Kennung.
 - **Logging level** - der Logging-Level.
 
-Betrachten wir ein Beispiel fuer eine Datenkonvertierung.
+Betrachten wir ein Beispiel für eine Datenkonvertierung.
 
 1. Wechseln Sie zur Aufgabe **Converter**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
-2. Waehlen Sie das Instrument aus und legen Sie im erscheinenden Fenster den Datentyp fest, der bei der Konvertierung entstehen soll, sowie den Datentyp, aus dem konvertiert werden soll. Zum Beispiel muessen Ticks in Kerzen mit einem Time Frame von 15 Minuten konvertiert werden.
+2. Wählen Sie das Instrument aus und legen Sie im erscheinenden Fenster den Datentyp fest, der bei der Konvertierung entstehen soll, sowie den Datentyp, aus dem konvertiert werden soll. Zum Beispiel müssen Ticks in Kerzen mit einem Time Frame von 15 Minuten konvertiert werden.
 
    > [!TIP]
-> WICHTIG\! Der angeforderte Datenzeitraum muss dem fuer die Konvertierung verfuegbaren Zeitraum entsprechen, andernfalls werden die Daten nicht konvertiert. Geben Sie in den Einstellungen das korrekte Quelldatenformat an, damit es dem Format der zu konvertierenden Daten entspricht.
+> WICHTIG\! Der angeforderte Datenzeitraum muss dem für die Konvertierung verfügbaren Zeitraum entsprechen, andernfalls werden die Daten nicht konvertiert. Geben Sie in den Einstellungen das korrekte Quelldatenformat an, damit es dem Format der zu konvertierenden Daten entspricht.
 3. Geben Sie die erforderlichen Verzeichnisse, den Zeitoffset und das Ausfuehrungsintervall an.
 4. Starten Sie die Konvertierung.![hydra tasks converter 01](../../../images/hydra_tasks_converter_01.png)
 

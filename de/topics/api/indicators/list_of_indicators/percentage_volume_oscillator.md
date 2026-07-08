@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 Die Percentage Volume Oscillator-Berechnung umfasst die folgenden Schritte:
 
-1. Berechnen Sie kurze und lange exponentielle gleitende Durchschnitte des Volumens:
+1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte des Volumens:
    ```
    Short EMA = EMA(Volume, ShortPeriod)
    Long EMA = EMA(Volume, LongPeriod)

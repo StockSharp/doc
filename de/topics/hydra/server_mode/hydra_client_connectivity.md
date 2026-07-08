@@ -1,8 +1,8 @@
 # Hydra Client verbinden
 
-Im Servermodus kann ein weiteres Hydra-Programm verbunden werden, das als Client arbeitet und Daten zu sich selbst herunterlaedt. Im Unterschied zu [Verbindung ueber FIX protocol](fix_fast_connectivity.md) werden Daten in Form von Dateien im StockSharp-Format uebertragen. Dadurch eignet sich die Quelle fuer die Uebertragung grosser Mengen historischer Daten.
+Im Servermodus kann ein weiteres Hydra-Programm verbunden werden, das als Client arbeitet und Daten zu sich selbst herunterlaedt. Im Unterschied zu [Verbindung über FIX protocol](fix_fast_connectivity.md) werden Daten in Form von Dateien im StockSharp-Format uebertragen. Dadurch eignet sich die Quelle für die Uebertragung größer Mengen historischer Daten.
 
-Fuer die Verbindung wird eine spezielle Quelle verwendet:
+Für die Verbindung wird eine spezielle Quelle verwendet:
 
 ![hydra tasks server](../../../images/hydratasksserver_1.png)
 
@@ -13,8 +13,8 @@ Fuer die Verbindung wird eine spezielle Quelle verwendet:
 - **Address** - die Adresse des Hydra-Servers.
 - **Login** - Login (erforderlich, wenn der Server Autorisierung verlangt).
 - **Password** - Passwort (erforderlich, wenn der Server Autorisierung verlangt).
-- **Time Offset** - ein Zeitoffset in Tagen ab dem aktuellen Datum, erforderlich, um das Herunterladen unvollstaendiger Daten fuer die aktuelle Handelssitzung zu verhindern.
-- **Weekends** - ob Daten fuer Wochenenden heruntergeladen werden sollen.
+- **Time Offset** - ein Zeitoffset in Tagen ab dem aktuellen Datum, erforderlich, um das Herunterladen unvollstaendiger Daten für die aktuelle Handelssitzung zu verhindern.
+- **Weekends** - ob Daten für Wochenenden heruntergeladen werden sollen.
 
 **Main**
 

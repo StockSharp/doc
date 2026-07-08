@@ -1,16 +1,16 @@
 # Benutzerdefinierte Kerzen
 
-Der Benutzer kann einen **Custom type** von Kerzen auswaehlen und selbst festlegen, welche Kerzen erstellt werden. Dabei werden die Kerzen "on the fly", also unmittelbar, erstellt.
+Der Benutzer kann einen **Custom type** von Kerzen auswählen und selbst festlegen, welche Kerzen erstellt werden. Dabei werden die Kerzen "on the fly", also unmittelbar, erstellt.
 
 ![hydra type candle 00 00](../../../images/hydra_type_candle_00_00.png)
 
-Betrachten wir ein Beispiel fuer eine solche Erstellung. Die Boerse **Bitmex** bietet keine Moeglichkeit, Kerzen mit einem Time Frame von 10 Minuten zu empfangen.
+Betrachten wir ein Beispiel für eine solche Erstellung. Die Boerse **Bitmex** bietet keine Moeglichkeit, Kerzen mit einem Time Frame von 10 Minuten zu empfangen.
 
 ![hydra type candle 00 01](../../../images/hydra_type_candle_00_01.png)
 
 Die Reihenfolge zum Erhalten solcher Kerzen:
 
-1. Waehlen Sie **Custom** candles.
+1. Wählen Sie **Custom** candles.
 2. In den Einstellungen geben wir **TF** candles und einen Zeitraum von 10 Minuten an.
 3. In der Quelle geben wir an, woraus die Kerzen erstellt werden sollen - **Order Log**. ![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
 4. Wir legen den Zeitraum fest. Wie Sie sehen, ist neben dem Kerzennamen der Hinweis **Generated** erschienen.![hydra type candle 00 03](../../../images/hydra_type_candle_00_03.png)
@@ -19,9 +19,9 @@ Die Reihenfolge zum Erhalten solcher Kerzen:
 
 Wie Sie sehen, wurden die Daten erfolgreich empfangen.
 
-Betrachten wir ein Beispiel, in dem wir eine [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) erhalten muessen:
+Betrachten wir ein Beispiel, in dem wir eine [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) erhalten müssen:
 
-1. Waehlen Sie **Custom** candles.
+1. Wählen Sie **Custom** candles.
 2. Geben Sie in den Einstellungen Range-Kerzen und das Volumen 10 an.
 3. In der Quelle geben wir an, woraus die Kerzen erstellt werden sollen - **Ticks**.![hydra type candle 00 07](../../../images/hydra_type_candle_00_07.png)
 4. Wir legen den Zeitraum fest.

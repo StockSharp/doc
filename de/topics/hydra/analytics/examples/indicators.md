@@ -1,6 +1,6 @@
 # Indikatoren
 
-Das Skript "Indicator" demonstriert die Arbeit mit technischen Analyseindikatoren innerhalb der StockSharp-Plattform. Es ermoglicht Benutzern, historische Daten zu laden, verschiedene Indikatoren darauf anzuwenden und die Ergebnisse in einem Chart anzuzeigen. Dieser Ansatz unterstutzt die Analyse von Markttrends und fundierte Handelsentscheidungen.
+Das Skript "Indicator" demonstriert die Arbeit mit technischen Analyseindikatoren innerhalb der StockSharp-Plattform. Es ermöglicht Benutzern, historische Daten zu laden, verschiedene Indikatoren darauf anzuwenden und die Ergebnisse in einem Chart anzuzeigen. Dieser Ansatz unterstützt die Analyse von Markttrends und fundierte Handelsentscheidungen.
 
 ![hydra_analytics_indicator](../../../../images/hydra_analytics_indicator.png)
 
@@ -8,35 +8,35 @@ Das Skript "Indicator" demonstriert die Arbeit mit technischen Analyseindikatore
 
 Das Skript bietet die folgende Funktionalitat:
 
-- **Laden historischer Daten**: Auswahl interessanter Finanzinstrumente und Laden ihrer historischen Daten fur einen angegebenen Zeitraum.
+- **Laden historischer Daten**: Auswahl interessanter Finanzinstrumente und Laden ihrer historischen Daten für einen angegebenen Zeitraum.
 - **Anwenden von Indikatoren**: Anwendung eines oder mehrerer technischer Analyseindikatoren auf die geladenen Daten.
 - **Visualisierung**: Anzeige von Daten und Analyseergebnissen mithilfe von Indikatoren in einem Chart, um einen klaren Blick auf die Marktdynamik zu bieten.
 
-## Beispiele fur Indikatoren
+## Beispiele für Indikatoren
 
-Das Skript kann mit einer grossen Auswahl von Indikatoren arbeiten, darunter unter anderem:
+Das Skript kann mit einer großen Auswahl von Indikatoren arbeiten, darunter unter anderem:
 
-- **Moving Averages (MA)**: Stellen den Durchschnittspreis uber einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
+- **Moving Averages (MA)**: Stellen den Durchschnittspreis über einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
 - **Relative Strength Index (RSI)**: Bewertet Ausmass und Geschwindigkeit von Preisanderungen und hilft, uberkaufte oder uberverkaufte Bedingungen zu erkennen.
-- **Bollinger Bands (BB)**: Zeigen Preisspanne und Volatilitat auf Basis gleitender Durchschnitte und Standardabweichungen.
+- **Bollinger Bands (BB)**: Zeigen Preisspanne und Volatilität auf Basis gleitender Durchschnitte und Standardabweichungen.
 
 ## Anwendung im Handel und in der Analyse
 
-Die Verwendung technischer Analyseindikatoren uber dieses Skript ermoglicht:
+Die Verwendung technischer Analyseindikatoren über dieses Skript ermöglicht:
 
 - **Trenderkennung**: Erkennen der Bewegungsrichtung des Marktes zur Planung von Einstiegs- und Ausstiegsstrategien.
-- **Erkennung von Umkehrpunkten**: Bestimmen von Momenten, in denen der Markttrend seine Richtung andern kann.
-- **Volatilitatsanalyse**: Bewertung der Preisinstabilitat, um Strategien an Marktbedingungen anzupassen.
+- **Erkennung von Umkehrpunkten**: Bestimmen von Momenten, in denen der Markttrend seine Richtung ändern kann.
+- **Volatilitätsanalyse**: Bewertung der Preisinstabilität, um Strategien an Marktbedingungen anzupassen.
 
 ## Implementierung im Skript
 
-Fur die Arbeit mit dem Skript sind die folgenden Schritte erforderlich:
+Für die Arbeit mit dem Skript sind die folgenden Schritte erforderlich:
 
-1. **Auswahl eines Instruments und Zeitraums**: Festlegen der Wertpapiere und des Zeitrahmens fur die Analyse.
+1. **Auswahl eines Instruments und Zeitraums**: Festlegen der Wertpapiere und des Zeitrahmens für die Analyse.
 2. **Anwenden von Indikatoren**: Auswahl und Parametrierung der Indikatoren, die auf die Daten angewendet werden sollen.
 3. **Anzeige der Ergebnisse**: Visualisierung historischer Daten und Indikatoren in einem Chart zur Analyse.
 
-Das Skript "Indicator" stellt ein leistungsfahiges Werkzeug fur die detaillierte Analyse von Finanzmarkten bereit und ermoglicht Tradern und Analysten, diese Indikatoren zur Entwicklung wirksamer Handelsstrategien zu nutzen.
+Das Skript "Indicator" stellt ein leistungsfahiges Werkzeug für die detaillierte Analyse von Finanzmarkten bereit und ermöglicht Tradern und Analysten, diese Indikatoren zur Entwicklung wirksamer Handelsstrategien zu nutzen.
 
 ## Skriptcode in C#
 
@@ -56,13 +56,13 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// 2 Bereiche fur Kerzen und Indikatorreihen erstellen
+			// 2 Bereiche für Kerzen und Indikatorreihen erstellen
 			var candleChart = panel.CreateChart<DateTimeOffset, decimal>();
 			var indicatorChart = panel.CreateChart<DateTimeOffset, decimal>();
 
 			foreach (var security in securities)
 			{
-				// Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+				// Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
@@ -120,7 +120,7 @@ class indicator_script(IAnalyticsScript):
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# 2 Bereiche fur Kerzen und Indikatorreihen erstellen
+		# 2 Bereiche für Kerzen und Indikatorreihen erstellen
 		candle_chart = create_chart(panel, datetime, float)
 		indicator_chart = create_chart(panel, datetime, float)
 
@@ -131,7 +131,7 @@ class indicator_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+			# Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 			if cancellation_token.IsCancellationRequested:
 				break
 

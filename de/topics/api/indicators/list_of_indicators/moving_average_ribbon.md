@@ -59,7 +59,7 @@ Der Moving Average Ribbon kann wie folgt interpretiert werden:
 
 3. **Verschieben von Average-Frequenzweichen**:
    - Der Beginn von Linienkreuzungen kann auf eine mögliche Trendänderung hinweisen
-   - Wenn kurze gleitende Durchschnitte beginnen, lange gleitende Durchschnitte zu kreuzen, kann dies ein frühes Signal für eine Trendumkehr sein
+   - Wenn kurze gleitende Durchschnitte beginnen, länge gleitende Durchschnitte zu kreuzen, kann dies ein frühes Signal für eine Trendumkehr sein
 
 4. **Bandneigungswinkel**:
    - Ein steiler Winkel weist auf einen starken Trend hin

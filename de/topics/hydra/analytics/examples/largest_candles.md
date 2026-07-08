@@ -1,27 +1,27 @@
 # Grosste Kerzen
 
-Das Skript "Largest Candles" dient dazu, Kerzen mit maximalem Volumen und der grossten Korperlange in den Charts ausgewahlter Finanzinstrumente uber einen bestimmten Zeitraum zu identifizieren. Dieses Werkzeug hilft Tradern und Analysten, wichtige Marktereignisse und die Reaktion der Marktteilnehmer zu erkennen.
+Das Skript "Largest Candles" dient dazu, Kerzen mit maximalem Volumen und der größten Körperlänge in den Charts ausgewahlter Finanzinstrumente über einen bestimmten Zeitraum zu identifizieren. Dieses Werkzeug hilft Tradern und Analysten, wichtige Marktereignisse und die Reaktion der Marktteilnehmer zu erkennen.
 
 ![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
 
 ## Hauptfunktionen
 
-Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerzen mit dem grossten Volumen und der grossten Korperlange und zeigt diese Daten in zwei Diagrammen an:
+Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerzen mit dem größten Volumen und der größten Körperlänge und zeigt diese Daten in zwei Diagrammen an:
 
-- **Chart der Kerzenkorperlange**: Zeigt Kerzen mit der grossten Differenz zwischen Eroffnungs- und Schlusskurs.
-- **Chart des Handelsvolumens**: Zeigt Kerzen mit dem maximalen Handelsvolumen fur die Existenzdauer der Kerze.
+- **Chart der Kerzenkorperlange**: Zeigt Kerzen mit der größten Differenz zwischen Eroffnungs- und Schlusskurs.
+- **Chart des Handelsvolumens**: Zeigt Kerzen mit dem maximalen Handelsvolumen für die Existenzdauer der Kerze.
 
 ## Ablauf
 
-1. **Auswahl von Instrumenten und Analysezeitraum**: Legt die Liste der Instrumente und das Zeitintervall fur die Analyse fest.
-2. **Datenanalyse**: Umfasst das Laden und Analysieren historischer Kerzendaten, um Kerzen mit den grossten Kennzahlen zu identifizieren.
-3. **Visualisierung der Ergebnisse**: Gefundene Kerzen werden in Charts in der Oberflache des Analysepanels angezeigt.
+1. **Auswahl von Instrumenten und Analysezeitraum**: Legt die Liste der Instrumente und das Zeitintervall für die Analyse fest.
+2. **Datenanalyse**: Umfasst das Laden und Analysieren historischer Kerzendaten, um Kerzen mit den größten Kennzahlen zu identifizieren.
+3. **Visualisierung der Ergebnisse**: Gefundene Kerzen werden in Charts in der Oberfläche des Analysepanels angezeigt.
 
 ## Anwendung
 
-- **Analyse der Marktaktivitat**: Hilft, Momente der grossten Traderaktivitat und potenzielle Marktumkehrungen zu bestimmen.
-- **Identifikation wichtiger Niveaus**: Kerzen mit signifikantem Volumen und grosser Korperlange entstehen haufig an wichtigen Unterstutzungs- und Widerstandsniveaus.
-- **Strategische Planung**: Informationen uber die grossten Kerzen konnen fur die Planung von Marktein- und -ausstiegen unter Berucksichtigung potenzieller Volatilitat verwendet werden.
+- **Analyse der Marktaktivitat**: Hilft, Momente der größten Traderaktivitat und potenzielle Marktumkehrungen zu bestimmen.
+- **Identifikation wichtiger Niveaus**: Kerzen mit signifikantem Volumen und größer Körperlänge entstehen häufig an wichtigen Unterstutzungs- und Widerstandsniveaus.
+- **Strategische Planung**: Informationen über die größten Kerzen können für die Planung von Marktein- und -ausstiegen unter Berucksichtigung potenzieller Volatilität verwendet werden.
 
 ## Skriptcode in C#
 
@@ -29,7 +29,7 @@ Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerz
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// Das Analyseskript zeigt die grosste Kerze (nach Volumen und nach Lange) fur angegebene Instrumente.
+	/// Das Analyseskript zeigt die größte Kerze (nach Volumen und nach Länge) für angegebene Instrumente.
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
@@ -49,7 +49,7 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+				// Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 
 				var allCandles = candleStorage.Load(from, to).ToArray();
 
-				// Die zuerst nach Volumen absteigend sortierte Kerze ist unsere grosste Kerze
+				// Die zuerst nach Volumen absteigend sortierte Kerze ist unsere größte Kerze
 				var bigPriceCandle = allCandles.OrderByDescending(c => c.GetLength()).FirstOrDefault();
 				var bigVolCandle = allCandles.OrderByDescending(c => c.TotalVolume).FirstOrDefault();
 
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# Das Analyseskript zeigt die grosste Kerze (nach Volumen und nach Lange) fur angegebene Instrumente.
+# Das Analyseskript zeigt die größte Kerze (nach Volumen und nach Länge) für angegebene Instrumente.
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
@@ -118,7 +118,7 @@ class biggest_candle_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+			# Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 			if cancellation_token.IsCancellationRequested:
 				break
 
@@ -127,7 +127,7 @@ class biggest_candle_script(IAnalyticsScript):
 			all_candles = load_range(candle_storage, message_type, from_date, to_date)
 
 			if len(all_candles) > 0:
-				# Die zuerst nach Volumen absteigend sortierte Kerze ist unsere grosste Kerze
+				# Die zuerst nach Volumen absteigend sortierte Kerze ist unsere größte Kerze
 				big_price_candle = max(all_candles, key=lambda c: get_length(c))
 				big_vol_candle = max(all_candles, key=lambda c: c.TotalVolume)
 

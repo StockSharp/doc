@@ -1,59 +1,59 @@
 # Kerzenerzeugung
 
-[Hydra](../../hydra.md) ermoeglicht die Erzeugung verschiedener Kerzentypen auf Basis heruntergeladener Trades. Diese koennen anschliessend in die Formate [Excel](https://en.wikipedia.org/wiki/Excel), XML, SQL, BIN, JSON oder TXT exportiert werden.
+[Hydra](../../hydra.md) ermöglicht die Erzeugung verschiedener Kerzentypen auf Basis heruntergeladener Trades. Diese können anschliessend in die Formate [Excel](https://en.wikipedia.org/wiki/Excel), XML, SQL, BIN, JSON oder TXT exportiert werden.
 
-Dadurch koennen Sie die erzeugten Daten in beliebigen Programmen fuer technische Analyse verwenden (WealthLab, AmiBroker usw.).
+Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische Analyse verwenden (WealthLab, AmiBroker usw.).
 
 ## Prozess der Kerzenerzeugung
 
-1. Klicken Sie auf der Registerkarte **General** auf die Schaltflaeche **Candles**. Das folgende Fenster wird geoeffnet:
+1. Klicken Sie auf der Registerkarte **General** auf die Schaltfläche **Candles**. Das folgende Fenster wird geöffnet:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
-2. Im geoeffneten Fenster muessen Sie die Parameter fuer die Kerzenerzeugung konfigurieren:
+2. Im geoeffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
 
-   - Waehlen Sie den gewuenschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstuetzt).
-   - Geben Sie die erforderlichen Parameter fuer den ausgewaehlten Kerzentyp an:
-     - Fuer [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - **Timeframe** auswaehlen.
-     - Fuer [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - **Volume** angeben.
-     - Fuer [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - **Number of ticks** angeben.
-     - Fuer [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - **Range** angeben.
-     - Fuer [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - **Block size** angeben.
-     - Fuer [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - **P&F Parameters** angeben.
-   - Waehlen Sie das Instrument aus, fuer das Kerzen erzeugt werden sollen.
+   - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstuetzt).
+   - Geben Sie die erforderlichen Parameter für den ausgewählten Kerzentyp an:
+     - Für [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - **Timeframe** auswählen.
+     - Für [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - **Volume** angeben.
+     - Für [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - **Number of ticks** angeben.
+     - Für [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - **Range** angeben.
+     - Für [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - **Block size** angeben.
+     - Für [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - **P&F Parameters** angeben.
+   - Wählen Sie das Instrument aus, für das Kerzen erzeugt werden sollen.
    - Geben Sie bei Bedarf einen Zeitbereich an.
-   - Klicken Sie auf die Schaltflaeche ![hydra find](../../../images/hydra_find.png), um die Erzeugung zu starten.
+   - Klicken Sie auf die Schaltfläche ![hydra find](../../../images/hydra_find.png), um die Erzeugung zu starten.
 
-### Beispiel fuer die Timeframe-Kerzenerzeugung
+### Beispiel für die Timeframe-Kerzenerzeugung
 
-Um 5-Minuten-Kerzen fuer das Instrument AAPL@NASDAQ zu erzeugen:
+Um 5-Minuten-Kerzen für das Instrument AAPL@NASDAQ zu erzeugen:
 
-1. Waehlen Sie den Kerzentyp [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage).
+1. Wählen Sie den Kerzentyp [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage).
 2. Setzen Sie **Timeframe** = 5 min.
-3. Waehlen Sie das Instrument AAPL@NASDAQ aus.
+3. Wählen Sie das Instrument AAPL@NASDAQ aus.
 4. Klicken Sie auf die Suchschaltflaeche.
 
 Nach der Datenerzeugung sehen Sie das Ergebnis:
 
 ![hydra candles tf](../../../images/hydra_candles_tf.png)
 
-### Beispiel fuer die Volume-Kerzenerzeugung
+### Beispiel für die Volume-Kerzenerzeugung
 
 Um Volume-Kerzen zu erzeugen:
 
-1. Waehlen Sie den Kerzentyp [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
+1. Wählen Sie den Kerzentyp [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
 2. Geben Sie das Volumen an, zum Beispiel 100.
-3. Waehlen Sie das Instrument aus.
-4. Waehlen Sie im Feld **Build from** den Wert **Ticks**.
+3. Wählen Sie das Instrument aus.
+4. Wählen Sie im Feld **Build from** den Wert **Ticks**.
 5. Klicken Sie auf die Suchschaltflaeche.
 
 Ergebnis der Erzeugung:
 
 ![hydra candles volume](../../../images/hydra_candles_volume.png)
 
-## Datenquellen fuer die Kerzenerstellung
+## Datenquellen für die Kerzenerstellung
 
-Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, koennen Sie Kerzen erzeugen, indem Sie im Feld [**Build from**](any_market_data_types.md) den Datentyp auswaehlen, aus dem sie erstellt werden:
+Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Sie Kerzen erzeugen, indem Sie im Feld [**Build from**](any_market_data_types.md) den Datentyp auswählen, aus dem sie erstellt werden:
 
 - **Ticks** - Kerzen aus Tick-Daten erstellen.
 - **Order Books** - Kerzen aus Order-Book-Daten erstellen.
@@ -71,35 +71,35 @@ Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, koennen Si
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
-> Wenn Sie im Feld **Build from** den Wert **don't build** auswaehlen, werden nur fertige Kerzen gesucht, die direkt ueber die Datenquelle heruntergeladen wurden.
+> Wenn Sie im Feld **Build from** den Wert **don't build** auswählen, werden nur fertige Kerzen gesucht, die direkt über die Datenquelle heruntergeladen wurden.
 
 ## Visualisierung erzeugter Kerzen
 
 Zur grafischen Anzeige erzeugter Kerzen:
 
-1. Klicken Sie auf die Schaltflaeche ![hydra candles](../../../images/hydra_candles.png).
-2. Ein Chart mit den erstellten Kerzen wird geoeffnet:
+1. Klicken Sie auf die Schaltfläche ![hydra candles](../../../images/hydra_candles.png).
+2. Ein Chart mit den erstellten Kerzen wird geöffnet:
 
    ![hydra candles tf chart](../../../images/hydra_candles_tf_chart.png)
 
    ![hydra candles volume chart](../../../images/hydra_candles_volume_chart.png)
 
-## Indikatoren zum Chart hinzufuegen
+## Indikatoren zum Chart hinzufügen
 
-Technische Indikatoren koennen zum Kerzenchart hinzugefuegt werden:
+Technische Indikatoren können zum Kerzenchart hinzugefügt werden:
 
-1. Oeffnen Sie das Kontextmenue durch Rechtsklick auf das Chartpanel.
-2. Waehlen Sie den Eintrag **Indicator** und den gewuenschten Indikator aus der Liste aus.
+1. Öffnen Sie das Kontextmenue durch Rechtsklick auf das Chartpanel.
+2. Wählen Sie den Eintrag **Indicator** und den gewünschten Indikator aus der Liste aus.
 3. Um den Indikator in einem separaten Panel anzuzeigen:
-   - Fuegen Sie ueber die Schaltflaeche ![hydra add](../../../images/hydra_add.png) ein neues Panel hinzu.
-   - Waehlen Sie den gewuenschten Indikator im Kontextmenue aus.
+   - Fügen Sie über die Schaltfläche ![hydra add](../../../images/hydra_add.png) ein neues Panel hinzu.
+   - Wählen Sie den gewünschten Indikator im Kontextmenue aus.
 
-Beispiel fuer ein Chart mit hinzugefuegten Indikatoren:
+Beispiel für ein Chart mit hinzugefuegten Indikatoren:
 
 ![hydra candles ind chart](../../../images/hydra_candles_ind_chart.png)
 
 ## Datenexport
 
-Die erhaltenen Kerzenwerte koennen [in verschiedene Formate exportiert](export_data.md) werden, um sie in anderen Programmen zu verwenden.
+Die erhaltenen Kerzenwerte können [in verschiedene Formate exportiert](export_data.md) werden, um sie in anderen Programmen zu verwenden.
 
 **Siehe auch das [Video-Tutorial](../videos/building_candles.md) zum Erstellen verschiedener Kerzentypen**

@@ -1,12 +1,12 @@
 # 3D-Chart
 
-Das Skript `Chart3DScript` demonstriert die Erstellung eines 3D-Charts zur Visualisierung der Verteilung von Handelsvolumina nach Stunden fur verschiedene Finanzinstrumente. Diese Visualisierungsmethode ermoglicht eine klare Darstellung der Handelsdynamik und das Erkennen von Spitzen der Marktaktivitat.
+Das Skript `Chart3DScript` demonstriert die Erstellung eines 3D-Charts zur Visualisierung der Verteilung von Handelsvolumina nach Stunden für verschiedene Finanzinstrumente. Diese Visualisierungsmethode ermöglicht eine klare Darstellung der Handelsdynamik und das Erkennen von Spitzen der Marktaktivitat.
 
 ![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
 
-## Beschreibung der Skriptausfuhrung
+## Beschreibung der Skriptausführung
 
-Das Skript analysiert Kerzendaten fur den angegebenen Zeitraum, gruppiert sie nach Stunden und berechnet das gesamte Handelsvolumen fur jede Stunde. Die Ergebnisse werden in einem 3D-Chart dargestellt, dessen Achsen Folgendes reprasentieren:
+Das Skript analysiert Kerzendaten für den angegebenen Zeitraum, gruppiert sie nach Stunden und berechnet das gesamte Handelsvolumen für jede Stunde. Die Ergebnisse werden in einem 3D-Chart dargestellt, dessen Achsen Folgendes reprasentieren:
 
 - **X-Achse**: Finanzinstrumente.
 - **Y-Achse**: Stunden der Handelssitzung (von 0 bis 23).
@@ -16,24 +16,24 @@ Das Skript analysiert Kerzendaten fur den angegebenen Zeitraum, gruppiert sie na
 
 ### Analyse der Marktaktivitat
 
-Der 3D-Chart ermoglicht die Einschatzung, wann bei mehreren Instrumenten gleichzeitig die grosste Aktivitat auftritt. Dies kann nutzlich sein, um optimale Handelsfenster zu identifizieren oder den Einfluss globaler Ereignisse auf den Markt zu untersuchen.
+Der 3D-Chart ermöglicht die Einschatzung, wann bei mehreren Instrumenten gleichzeitig die größte Aktivität auftritt. Dies kann nutzlich sein, um optimale Handelsfenster zu identifizieren oder den Einfluss globaler Ereignisse auf den Markt zu untersuchen.
 
 ### Vergleich von Instrumenten
 
-Durch die Visualisierung der Handelsvolumina nach Stunden im dreidimensionalen Raum konnen Trader Instrumente hinsichtlich Aktivitat und bevorzugter Handelszeiten miteinander vergleichen. Dies kann bei der Auswahl der liquidesten Instrumente zu bestimmten Stunden oder bei der Suche nach Instrumenten mit ahnlichen Aktivitätsmustern zur Portfoliodiversifikation helfen.
+Durch die Visualisierung der Handelsvolumina nach Stunden im dreidimensionalen Raum können Trader Instrumente hinsichtlich Aktivität und bevorzugter Handelszeiten miteinander vergleichen. Dies kann bei der Auswahl der liquidesten Instrumente zu bestimmten Stunden oder bei der Suche nach Instrumenten mit ahnlichen Aktivitätsmustern zur Portfoliodiversifikation helfen.
 
 ### Strategieoptimierung
 
-Die Analyse der Verteilung von Handelsvolumina kann als Grundlage fur die Optimierung von Handelsstrategien dienen, da sie eine Anpassung an Zeitraume mit der hochsten Marktaktivitat ermoglicht. Dies ist besonders fur algorithmischen und Hochfrequenzhandel relevant.
+Die Analyse der Verteilung von Handelsvolumina kann als Grundlage für die Optimierung von Handelsstrategien dienen, da sie eine Anpassung an Zeitraume mit der hochsten Marktaktivitat ermöglicht. Dies ist besonders für algorithmischen und Hochfrequenzhandel relevant.
 
 ## Skriptimplementierung
 
-Das Skript fuhrt die folgenden Aktionen aus:
+Das Skript führt die folgenden Aktionen aus:
 
-1. Prufen, ob Finanzinstrumente fur die Analyse vorhanden sind.
-2. Bilden der Beschriftungen fur die Achsen X (Instrumente) und Y (Stunden).
+1. Prüfen, ob Finanzinstrumente für die Analyse vorhanden sind.
+2. Bilden der Beschriftungen für die Achsen X (Instrumente) und Y (Stunden).
 3. Laden und Gruppieren der Kerzendaten.
-4. Berechnen der gesamten Handelsvolumina nach Stunden und Befullen der Daten fur die Z-Achse.
+4. Berechnen der gesamten Handelsvolumina nach Stunden und Befullen der Daten für die Z-Achse.
 5. Zeichnen des 3D-Charts mit der Methode `panel.Draw3D`.
 
 ## Skriptcode in C#
@@ -42,7 +42,7 @@ Das Skript fuhrt die folgenden Aktionen aus:
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// Das Analyseskript berechnet die Verteilung des grossten Volumens nach Stunden
+	/// Das Analyseskript berechnet die Verteilung des größten Volumens nach Stunden
 	/// und zeigt sie in einem 3D-Chart an.
 	/// </summary>
 	public class Chart3DScript : IAnalyticsScript
@@ -66,7 +66,7 @@ namespace StockSharp.Algo.Analytics
 
 			for (var i = 0; i < securities.Length; i++)
 			{
-				// Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+				// Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
@@ -78,7 +78,7 @@ namespace StockSharp.Algo.Analytics
 				// Kerzenspeicher abrufen
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-				// Verfugbare Daten fur den angegebenen Zeitraum abrufen
+				// Verfügbare Daten für den angegebenen Zeitraum abrufen
 				var dates = candleStorage.GetDates(from, to).ToArray();
 
 				if (dates.Length == 0)
@@ -124,7 +124,7 @@ from candle_extensions import *
 from chart_extensions import *
 from numpy_extensions import nx
 
-# Das Analyseskript berechnet die Verteilung des grossten Volumens nach Stunden und zeigt sie in einem 3D-Chart an.
+# Das Analyseskript berechnet die Verteilung des größten Volumens nach Stunden und zeigt sie in einem 3D-Chart an.
 class chart3d_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -144,14 +144,14 @@ class chart3d_script(IAnalyticsScript):
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		x = []  # X-Beschriftungen fur Instrumente
-		y = []  # Y-Beschriftungen fur Stunden
+		x = []  # X-Beschriftungen für Instrumente
+		y = []  # Y-Beschriftungen für Stunden
 
 		# Y-Beschriftungen mit Stunden von 0 bis 23 befullen
 		for h in range(24):
 			y.append(str(h))
 
-		# Ein 2D-Array fur Z-Werte mit Dimensionen erstellen: (Anzahl der Instrumente) x (Anzahl der Stunden)
+		# Ein 2D-Array für Z-Werte mit Dimensionen erstellen: (Anzahl der Instrumente) x (Anzahl der Stunden)
 		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
 
 		if data_type is None:
@@ -161,17 +161,17 @@ class chart3d_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for i, security in enumerate(securities):
-			# Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+			# Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 			if cancellation_token.IsCancellationRequested:
 				break
 
 			# X-Beschriftungen mit Instrumentkennungen befullen
 			x.append(to_string_id(security))
 
-			# Kerzenspeicher fur das aktuelle Instrument abrufen
+			# Kerzenspeicher für das aktuelle Instrument abrufen
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-			# Verfugbare Daten fur den angegebenen Zeitraum abrufen
+			# Verfügbare Daten für den angegebenen Zeitraum abrufen
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
@@ -185,12 +185,12 @@ class chart3d_script(IAnalyticsScript):
 				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
 				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
 
-			# Z-Werte fur das aktuelle Instrument befullen
+			# Z-Werte für das aktuelle Instrument befullen
 			for hour, volume in by_hours.items():
 				if hour < len(y):
 					z[i][hour] = float(volume)
 
-		# 3D-Chart uber panel zeichnen
+		# 3D-Chart über panel zeichnen
 		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
 
 		return Task.CompletedTask

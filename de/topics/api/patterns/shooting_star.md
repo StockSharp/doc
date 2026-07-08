@@ -16,7 +16,7 @@ Shooting Star ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwär
 
 Shooting Star gilt als starkes Signal für eine mögliche Umkehr eines Aufwärtstrends:
 
-- Der lange obere Schatten zeigt, dass der Preis während der Handelssitzung deutlich stieg, Verkäufer anschließend aber eingriffen und den Preis nach unten drückten.
+- Der länge obere Schatten zeigt, dass der Preis während der Handelssitzung deutlich stieg, Verkäufer anschließend aber eingriffen und den Preis nach unten drückten.
 - Dies weist auf die Zurückweisung höherer Preise durch den Markt und einen möglichen Stimmungswechsel von bullisch zu bärisch hin.
 - Je länger der obere Schatten ist, desto stärker ist das potenzielle Umkehrsignal.
 - Die Farbe des Candle-Körpers ist weniger wichtig, obwohl ein schwarzer/roter Shooting Star als bärischer gilt als ein weißer/grüner.

@@ -2,7 +2,7 @@
 
 **Alpaca** - Finanzbroker.
 
-Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
 
 ## Empfohlene Inhalte
 

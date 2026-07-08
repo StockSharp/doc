@@ -2,7 +2,7 @@
 
 Das Werkzeug ist eine wiederkehrende Aktion zu einem bestimmten Zeitpunkt.
 
-Um die Liste der Werkzeuge anzuzeigen, waehlen Sie im linken Panel den Eintrag **Tools** aus. Die Arbeit mit Werkzeugen erfolgt genauso wie mit Quellen: Das Werkzeug kann hinzugefuegt, geloescht, bearbeitet sowie aktiviert\/deaktiviert werden. Um das **Tool** hinzuzufuegen, waehlen Sie auf der Registerkarte **Common** den Punkt **Add \=\> Tools**. Es erscheint ein entsprechendes Fenster, in dem Sie das erforderliche **Tool** auswaehlen koennen...
+Um die Liste der Werkzeuge anzuzeigen, wählen Sie im linken Panel den Eintrag **Tools** aus. Die Arbeit mit Werkzeugen erfolgt genauso wie mit Quellen: Das Werkzeug kann hinzugefügt, gelöscht, bearbeitet sowie aktiviert\/deaktiviert werden. Um das **Tool** hinzuzufügen, wählen Sie auf der Registerkarte **Common** den Punkt **Add \=\> Tools**. Es erscheint ein entsprechendes Fenster, in dem Sie das erforderliche **Tool** auswählen können...
 
 ![hydra tasks](../../images/hydra_tasks.png)
 

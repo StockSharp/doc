@@ -32,10 +32,10 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 			if (Buffer.Count > Length)
 				Buffer.RemoveAt(0);
 		}
-		
+
 		if (input.IsFinal)
 			return new DecimalIndicatorValue(this, Buffer.Sum() / Length);
-		
+
 		return new DecimalIndicatorValue(this, (Buffer.Skip(1).Sum() + newValue) / Length);
 	}
 }
@@ -161,12 +161,12 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	{
 		var candle = input.GetValue<Candle>();
 		var emaValue = Ema.Process(input.SetValue(this, candle.HighPrice - candle.LowPrice));
-		
+
 		if (Ema.IsFormed)
 		{
 			return Roc.Process(emaValue);
 		}
-		
+
 		return input;
 	}
 }
@@ -203,7 +203,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 			throw new ArgumentNullException(nameof(dx));
 		if (movingAverage == null)
 			throw new ArgumentNullException(nameof(movingAverage));
-		
+
 		InnerIndicators.Add(Dx = dx);
 		InnerIndicators.Add(MovingAverage = movingAverage);
 		Mode = ComplexIndicatorModes.Sequence;
@@ -298,7 +298,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Lange Periode.
+	/// Länge Periode.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

@@ -16,7 +16,7 @@ Hammer ist ein bullisches Candlestick-Muster, das während eines Abwärtstrends 
 
 Hammer gilt als starkes Signal für eine mögliche Umkehr eines Abwärtstrends:
 
-- Der lange untere Schatten zeigt, dass der Preis während der Periode deutlich fiel, Käufer anschließend aber eingriffen und den Preis wieder nach oben drückten.
+- Der länge untere Schatten zeigt, dass der Preis während der Periode deutlich fiel, Käufer anschließend aber eingriffen und den Preis wieder nach oben drückten.
 - Dies weist auf die Zurückweisung niedrigerer Preise durch den Markt und einen möglichen Stimmungswechsel von bärisch zu bullisch hin.
 - Je länger der untere Schatten ist, desto stärker ist das potenzielle Umkehrsignal.
 - Die Farbe des Candle-Körpers ist weniger wichtig, obwohl ein weißer/grüner Hammer als bullischer gilt als ein schwarzer/roter.

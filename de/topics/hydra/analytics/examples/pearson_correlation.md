@@ -1,6 +1,6 @@
 # Pearson-Korrelation
 
-Die Pearson-Korrelation ist eine statistische Methode zur Messung des Grades einer linearen Beziehung zwischen zwei quantitativen Variablen. In der Finanzanalyse wird diese Methode haufig verwendet, um Beziehungen zwischen verschiedenen Assets wie Aktien oder Wahrungspaaren zu untersuchen.
+Die Pearson-Korrelation ist eine statistische Methode zur Messung des Grades einer linearen Beziehung zwischen zwei quantitativen Variablen. In der Finanzanalyse wird diese Methode häufig verwendet, um Beziehungen zwischen verschiedenen Assets wie Aktien oder Wahrungspaaren zu untersuchen.
 
 ![hydra_analytics_pearson_correlation](../../../../images/hydra_analytics_pearson_correlation.png)
 
@@ -35,12 +35,12 @@ wobei:
 
 Ein Skript zur Berechnung der Pearson-Korrelation sollte die folgenden Schritte enthalten:
 
-1. **Datenerfassung**: Laden der Zeitreihen fur die beiden analysierten Variablen.
+1. **Datenerfassung**: Laden der Zeitreihen für die beiden analysierten Variablen.
 2. **Vorverarbeitung**: Ausrichten der Zeitreihen nach Daten und Entfernen fehlender Werte.
 3. **Berechnung**: Anwenden der Pearson-Korrelationsformel auf die verarbeiteten Daten.
-4. **Analyse der Ergebnisse**: Interpretieren des resultierenden Korrelationskoeffizienten fur die Entscheidungsfindung.
+4. **Analyse der Ergebnisse**: Interpretieren des resultierenden Korrelationskoeffizienten für die Entscheidungsfindung.
 
-Die Berechnung der Pearson-Korrelation liefert wichtige Informationen fur Marktanalyse und Optimierung von Anlagestrategien, da sie die Einschatzung des gegenseitigen Einflusses zwischen Finanzassets ermoglicht.
+Die Berechnung der Pearson-Korrelation liefert wichtige Informationen für Marktanalyse und Optimierung von Anlagestrategien, da sie die Einschatzung des gegenseitigen Einflusses zwischen Finanzassets ermöglicht.
 
 ## Skriptcode in C#
 
@@ -50,7 +50,7 @@ namespace StockSharp.Algo.Analytics
 	using MathNet.Numerics.Statistics;
 
 	/// <summary>
-	/// Das Analyseskript berechnet die Pearson-Korrelation fur angegebene Instrumente.
+	/// Das Analyseskript berechnet die Pearson-Korrelation für angegebene Instrumente.
 	/// </summary>
 	public class PearsonCorrelationScript : IAnalyticsScript
 	{
@@ -66,7 +66,7 @@ namespace StockSharp.Algo.Analytics
 
 			foreach (var security in securities)
 			{
-				// Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+				// Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 				closes.Add(prices);
 			}
 
-			// Alle Arrays mussen die gleiche Lange haben, daher langere abschneiden
+			// Alle Arrays müssen die gleiche Länge haben, daher längere abschneiden
 			var min = closes.Select(arr => arr.Length).Min();
 
 			for (var i = 0; i < closes.Count; i++)
@@ -132,7 +132,7 @@ from numpy_extensions import nx
 clr.AddReference("NumpyDotNet")
 from NumpyDotNet import np
 
-# Das Analyseskript berechnet die Pearson-Korrelation fur angegebene Instrumente.
+# Das Analyseskript berechnet die Pearson-Korrelation für angegebene Instrumente.
 class pearson_correlation_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -160,7 +160,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		message_type = data_type.MessageType
 
 		for security in securities:
-			# Berechnung stoppen, wenn der Benutzer die Skriptausfuhrung abbricht
+			# Berechnung stoppen, wenn der Benutzer die Skriptausführung abbricht
 			if cancellation_token.IsCancellationRequested:
 				break
 
@@ -176,7 +176,7 @@ class pearson_correlation_script(IAnalyticsScript):
 
 			closes.append(prices)
 
-		# Alle Arrays mussen die gleiche Lange haben, daher langere abschneiden
+		# Alle Arrays müssen die gleiche Länge haben, daher längere abschneiden
 		min_length = min(len(arr) for arr in closes)
 		closes = [arr[:min_length] for arr in closes]
 

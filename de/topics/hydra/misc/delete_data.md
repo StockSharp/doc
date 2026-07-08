@@ -1,7 +1,7 @@
-# Daten loeschen
+# Daten löschen
 
-Registerkarte **Common**, Schaltflaeche **Delete data...**.
+Registerkarte **Common**, Schaltfläche **Delete data...**.
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 
-Damit koennen Sie Daten fuer alle oder bestimmte Instrumente an bestimmten Daten loeschen.
+Damit können Sie Daten für alle oder bestimmte Instrumente an bestimmten Daten löschen.

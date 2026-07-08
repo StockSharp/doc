@@ -17,7 +17,7 @@ Eine flache Candle liefert für sich genommen kein klares Signal zur Marktrichtu
 
 - Nach einer starken Aufwärts- oder Abwärtsbewegung kann eine flache Candle nachlassendes Momentum und eine mögliche Umkehr signalisieren.
 - Während einer Seitwärtsbewegung bestätigt eine flache Candle die Fortsetzung der Konsolidierung.
-- Die Größe der Schatten kann zusätzliche Informationen zur Marktstimmung liefern - lange Schatten weisen auf zurückgewiesene Preisbewegungsversuche hin, kurze Schatten auf geringe Volatilität.
+- Die Größe der Schatten kann zusätzliche Informationen zur Marktstimmung liefern - länge Schatten weisen auf zurückgewiesene Preisbewegungsversuche hin, kurze Schatten auf geringe Volatilität.
 
 ### Handelsstrategien
 

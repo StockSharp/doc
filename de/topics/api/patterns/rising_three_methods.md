@@ -17,9 +17,9 @@ Rising Three Methods ist ein bullisches Trendfortsetzungsmuster aus fünf Candle
 
 Rising Three Methods gilt als zuverlässiges Signal für die Fortsetzung eines Aufwärtstrends:
 
-- Die erste lange weiße Candle zeigt die Stärke des Aufwärtstrends.
+- Die erste länge weiße Candle zeigt die Stärke des Aufwärtstrends.
 - Drei kleine schwarze Candles stellen eine vorübergehende Konsolidierung oder Korrektur dar, während der Verkäufer den Trend nicht wesentlich verändern konnten.
-- Die fünfte lange weiße Candle bestätigt die Rückkehr der Kontrolle zu den Käufern und die Fortsetzung des Aufwärtstrends.
+- Die fünfte länge weiße Candle bestätigt die Rückkehr der Kontrolle zu den Käufern und die Fortsetzung des Aufwärtstrends.
 - Dieses Muster kann in der klassischen technischen Analyse als Flagge oder Wimpel betrachtet werden.
 - Eine solche Candle-Abfolge weist darauf hin, dass die Korrektur zum Aufbau von Long-Positionen genutzt wurde, bevor die Aufwärtsbewegung fortgesetzt wird.
 

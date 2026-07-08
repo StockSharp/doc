@@ -1,17 +1,17 @@
 # Intraday Volume
 
-Das Skript "Intraday Volume" ist ein Werkzeug zur Analyse der Verteilung des Handelsvolumens von Wertpapieren nach Stunden innerhalb einer einzelnen Handelssitzung. Es ist fur die Verwendung innerhalb der StockSharp-Plattform konzipiert und richtet sich an Trader und quantitative Analysten, die Marktverhalten detailliert untersuchen und Handelsstrategien optimieren mochten.
+Das Skript "Intraday Volume" ist ein Werkzeug zur Analyse der Verteilung des Handelsvolumens von Wertpapieren nach Stunden innerhalb einer einzelnen Handelssitzung. Es ist für die Verwendung innerhalb der StockSharp-Plattform konzipiert und richtet sich an Trader und quantitative Analysten, die Marktverhalten detailliert untersuchen und Handelsstrategien optimieren möchten.
 
 ![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## Funktionsbeschreibung
 
-Das Skript sammelt Daten zu Handelsoperationen fur einen ausgewahlten Zeitraum und stellt sie in Diagrammform dar. Dadurch konnen Benutzer visualisieren, wie sich das Handelsvolumen nach Stunden verandert. So lasst sich einschätzen, zu welchen Tageszeiten die Handelsaktivitat zunimmt oder abnimmt.
+Das Skript sammelt Daten zu Handelsoperationen für einen ausgewählten Zeitraum und stellt sie in Diagrammform dar. Dadurch können Benutzer visualisieren, wie sich das Handelsvolumen nach Stunden verandert. So lasst sich einschätzen, zu welchen Tageszeiten die Handelsaktivitat zunimmt oder abnimmt.
 
 ## Praktische Bedeutung
 
-- **Fur den Handel**: Das Verstandnis von Spitzen- und Nebenzeiten hilft, die aktivsten Marktphasen zu erkennen, und beeinflusst Entscheidungen daruber, wann Positionen eroffnet oder geschlossen werden.
-- **Fur quantitative Analyse**: Quantitative Analysten konnen Intraday-Volumendaten verwenden, um mathematische Modelle und Algorithmen zu erstellen, die Marktverhalten anhand von Volumenindikatoren prognostizieren.
+- **Für den Handel**: Das Verstandnis von Spitzen- und Nebenzeiten hilft, die aktivsten Marktphasen zu erkennen, und beeinflusst Entscheidungen daruber, wann Positionen eroffnet oder geschlossen werden.
+- **Für quantitative Analyse**: Quantitative Analysten können Intraday-Volumendaten verwenden, um mathematische Modelle und Algorithmen zu erstellen, die Marktverhalten anhand von Volumenindikatoren prognostizieren.
 
 ## Stundenverteilung
 
@@ -19,12 +19,12 @@ Die Verteilung des Handelsvolumens nach Stunden verdeutlicht die Marktdynamik un
 
 ## Datenanwendung
 
-Das Skript "Intraday Volume" kann in ein breiteres Marktanalysesystem integriert werden und Daten liefern, die fur Folgendes genutzt werden konnen:
+Das Skript "Intraday Volume" kann in ein breiteres Marktanalysesystem integriert werden und Daten liefern, die für Folgendes genutzt werden können:
 
 - **Strategieanpassung**: Anpassung der Parameter von Handelsalgorithmen an das Niveau der Marktaktivitat.
 - **Risikobewertung**: Berechnung der Wahrscheinlichkeit signifikanter Preisbewegungen in Abhangigkeit von der Tageszeit.
 
-Die Verwendung des Skripts "Intraday Volume" innerhalb der StockSharp-Handelsplattform ermoglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivitat zu stutzen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
+Die Verwendung des Skripts "Intraday Volume" innerhalb der StockSharp-Handelsplattform ermöglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivitat zu stutzen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
 
 ## Skriptcode in C#
 
@@ -32,7 +32,7 @@ Die Verwendung des Skripts "Intraday Volume" innerhalb der StockSharp-Handelspla
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// Das Analyseskript berechnet die Verteilung des grossten Volumens nach Stunden.
+	/// Das Analyseskript berechnet die Verteilung des größten Volumens nach Stunden.
 	/// </summary>
 	public class TimeVolumeScript : IAnalyticsScript
 	{
@@ -50,7 +50,7 @@ namespace StockSharp.Algo.Analytics
 			// Kerzenspeicher abrufen
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-			// Verfugbare Daten fur den angegebenen Zeitraum abrufen
+			// Verfügbare Daten für den angegebenen Zeitraum abrufen
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
@@ -99,7 +99,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# Das Analyseskript berechnet die Verteilung des grossten Volumens nach Stunden.
+# Das Analyseskript berechnet die Verteilung des größten Volumens nach Stunden.
 class time_volume_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -131,7 +131,7 @@ class time_volume_script(IAnalyticsScript):
 		# Kerzenspeicher abrufen
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-		# Verfugbare Daten fur den angegebenen Zeitraum abrufen
+		# Verfügbare Daten für den angegebenen Zeitraum abrufen
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:

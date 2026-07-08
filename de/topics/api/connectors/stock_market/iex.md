@@ -1,8 +1,8 @@
 # IEX
 
-**Investors Exchange (IEX)** - Anbieter von Echtzeit-Marktdaten fuer Aktienkurse, Forex, Nachrichten, Futures-Kontrakte usw.
+**Investors Exchange (IEX)** - Anbieter von Echtzeit-Marktdaten für Aktienkurse, Forex, Nachrichten, Futures-Kontrakte usw.
 
-Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
 
 > [!CAUTION]
 > Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.

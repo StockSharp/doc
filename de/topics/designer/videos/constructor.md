@@ -1,3 +1,3 @@
-# Konstruktor fur Handelsstrategien
+# Konstruktor für Handelsstrategien
 
 > [!Video https://www.youtube.com/embed/HQBIB_y5TUA]

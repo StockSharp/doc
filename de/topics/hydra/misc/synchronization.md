@@ -4,4 +4,4 @@ Registerkarte **Import \=\> Synchronize...**.
 
 ![hydra sync](../../../images/hydra_sync.png)
 
-Damit koennen Sie Instrumente aus heruntergeladenen Dateien wiederherstellen.
+Damit können Sie Instrumente aus heruntergeladenen Dateien wiederherstellen.

@@ -1,35 +1,35 @@
 # Volume Profile
 
-Das Skript "Volume Profile" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens uber Preisniveaus in einem ausgewahlten Zeitraum. Es ermoglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
+Das Skript "Volume Profile" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
 
 ![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
 
 ## Funktionsbeschreibung
 
-Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgefuhrten Volumina auf verschiedenen Preisniveaus anzeigt. Diese Informationen konnen in einem Chart dargestellt werden, der die Dichte der Trades uber verschiedene Preisbereiche hinweg verdeutlicht.
+Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgefuhrten Volumina auf verschiedenen Preisniveaus anzeigt. Diese Informationen können in einem Chart dargestellt werden, der die Dichte der Trades über verschiedene Preisbereiche hinweg verdeutlicht.
 
 ## Praktische Bedeutung
 
-Die Analyse des Volume Profile hilft beim Erkennen wichtiger Nachfrage- und Angebotszonen und kann fur Folgendes genutzt werden:
+Die Analyse des Volume Profile hilft beim Erkennen wichtiger Nachfrage- und Angebotszonen und kann für Folgendes genutzt werden:
 
 - Identifikation von Unterstutzungs- und Widerstandsniveaus, an denen das Instrument erhebliches Interesse von Marktteilnehmern findet.
-- Einschatzung der Starke des aktuellen Trends oder einer moglichen Abschwachung anhand der Anderung der Volumenverteilung.
+- Einschatzung der Starke des aktuellen Trends oder einer möglichen Abschwachung anhand der Anderung der Volumenverteilung.
 - Planung von Marktein- und -ausstiegen unter Berucksichtigung von Niveaus mit maximal angesammelter Liquiditat.
 
 ## Anwendung im Handel und in der quantitativen Analyse
 
 - **Handel**: Das Volume Profile kann zur Entwicklung von Strategien auf Basis der Volumenanalyse verwendet werden und zeigt klar, wo die wichtigsten Handelsoperationen stattfinden.
-- **Quantitative Analyse**: Daten zur Volumenverteilung konnen als Eingangsdaten fur quantitative Modelle dienen, die die Wahrscheinlichkeit von Preisbewegungen auf Basis des auf einem Niveau angesammelten Volumens prognostizieren.
+- **Quantitative Analyse**: Daten zur Volumenverteilung können als Eingangsdaten für quantitative Modelle dienen, die die Wahrscheinlichkeit von Preisbewegungen auf Basis des auf einem Niveau angesammelten Volumens prognostizieren.
 
 ## Skriptimplementierung
 
-Das Skript "Volume Profile" fuhrt die folgenden Schritte aus:
+Das Skript "Volume Profile" führt die folgenden Schritte aus:
 
-1. **Datenerfassung**: Das Skript aggregiert Transaktionsdaten fur den angegebenen Zeitraum.
+1. **Datenerfassung**: Das Skript aggregiert Transaktionsdaten für den angegebenen Zeitraum.
 2. **Profilbildung**: Auf Grundlage der gesammelten Daten erstellt das Skript ein Volumenprofil, das die Handelsaktivitat auf jedem Preisniveau widerspiegelt.
-3. **Visualisierung**: Die Ergebnisse der Skriptausfuhrung werden als Chart oder Histogramm visualisiert, wobei jeder Balken einem bestimmten Preisniveau und dessen Handelsvolumen entspricht.
+3. **Visualisierung**: Die Ergebnisse der Skriptausführung werden als Chart oder Histogramm visualisiert, wobei jeder Balken einem bestimmten Preisniveau und dessen Handelsvolumen entspricht.
 
-Die Verwendung des Skripts "Volume Profile" innerhalb der StockSharp-Plattform ermoglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualitat getroffener Handelsentscheidungen.
+Die Verwendung des Skripts "Volume Profile" innerhalb der StockSharp-Plattform ermöglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualitat getroffener Handelsentscheidungen.
 
 ## Skriptcode in C#
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 			// Kerzenspeicher abrufen
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
-			// Verfugbare Daten fur den angegebenen Zeitraum abrufen
+			// Verfügbare Daten für den angegebenen Zeitraum abrufen
 			var dates = candleStorage.GetDates(from, to).ToArray();
 
 			if (dates.Length == 0)
@@ -130,7 +130,7 @@ class price_volume_script(IAnalyticsScript):
 		# Kerzenspeicher abrufen
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
-		# Verfugbare Daten fur den angegebenen Zeitraum abrufen
+		# Verfügbare Daten für den angegebenen Zeitraum abrufen
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
@@ -143,7 +143,7 @@ class price_volume_script(IAnalyticsScript):
 		for candle in candles:
 			# Mittleren Preis der Kerze berechnen
 			key = candle.LowPrice + get_length(candle) / 2
-			# Volumina fur dasselbe Preisniveau summieren
+			# Volumina für dasselbe Preisniveau summieren
 			rows_dict[key] = rows_dict.get(key, 0) + candle.TotalVolume
 
 		# Im Chart zeichnen

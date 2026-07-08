@@ -1,6 +1,6 @@
 # Allgemeine Verbindungseinstellungen
 
-Verbindungseigenschaften, die fur alle Quellen gemeinsam gelten.
+Verbindungseigenschaften, die für alle Quellen gemeinsam gelten.
 
 ![hydra settings connectionparams](../../../images/hydra_settings_connectionparams.png)
 

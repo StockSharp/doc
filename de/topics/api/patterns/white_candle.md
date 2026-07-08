@@ -16,7 +16,7 @@ White Candle (bullische Candle) ist ein klassisches Candlestick-Muster, das ents
 White Candle signalisiert bullischen Druck im Markt:
 
 - Je länger der Candle-Körper ist, desto stärker ist der bullische Druck.
-- Eine lange weiße Candle nach einem Abwärtstrend kann auf eine mögliche Umkehr hinweisen.
+- Eine länge weiße Candle nach einem Abwärtstrend kann auf eine mögliche Umkehr hinweisen.
 - Kurze Schatten zeigen, dass Bullen den Preis während der gesamten Periode kontrollierten.
 - Aufeinanderfolgende weiße Candles weisen auf einen stabilen Aufwärtstrend hin.
 

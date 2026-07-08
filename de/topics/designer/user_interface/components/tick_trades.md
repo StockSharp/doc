@@ -1,8 +1,8 @@
 # Tick trades
 
-Die Komponente **Trades feed** ist eine Tabelle mit Trades, die vollstandige Informationen zu allen Trades fur die ausgewahlten Instrumente anzeigt.
+Die Komponente **Trades feed** ist eine Tabelle mit Trades, die vollständige Informationen zu allen Trades für die ausgewählten Instrumente anzeigt.
 
-Der **Trades feed** verfugt uber einen Filter zur Auswahl der benotigten Instrumente. Ausserdem konnen Sie im Fenster [Notification settings](../../../terminal/notifications.md) Benachrichtigungen fur Ereignisse konfigurieren, die mit den ausgewahlten Instrumenten verbunden sind.
+Der **Trades feed** verfügt über einen Filter zur Auswahl der benötigten Instrumente. Ausserdem können Sie im Fenster [Notification settings](../../../terminal/notifications.md) Benachrichtigungen für Ereignisse konfigurieren, die mit den ausgewählten Instrumenten verbunden sind.
 
 ![Designer Tape Trades](../../../../images/designer_tape_trades.png)
 

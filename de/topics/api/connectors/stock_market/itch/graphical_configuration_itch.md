@@ -1,6 +1,6 @@
 # Grafische Konfiguration ITCH
 
-Fuer alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
+Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
 ![API GUI Settings ITCH](../../../../../images/api_gui_settings_itch.png)
 
@@ -16,7 +16,7 @@ Fuer alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Group ID** - Group ID.
 - **Time zone** - Informationen zur Zeitzone, in der sich die Boerse befindet.
 - **Heart beat** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
-- **Reconnection settings** - Mechanismus fuer Einstellungen zur Ueberwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
+- **Reconnection settings** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte
 

@@ -1,8 +1,8 @@
 # IQFeed
 
-**DTN IQFeed** - Anbieter von Echtzeit-Marktdaten fuer Aktienkurse, Forex, Nachrichten, Futures-Kontrakte usw.
+**DTN IQFeed** - Anbieter von Echtzeit-Marktdaten für Aktienkurse, Forex, Nachrichten, Futures-Kontrakte usw.
 
-Bevor Sie Handelsroboter fuer die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
+Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Connectors](../../connectors.md) zu lesen.
 
 ## Konfiguration IQFeed
 
@@ -10,9 +10,9 @@ Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
 
 ![IQFeed](../../../../images/iqfeed.jpg)
 
-Um mit dem **IQFeed**-Connector zu arbeiten, muessen Sie den Router **IQ Feed Client** auf dem Computer installieren; er kann sowohl auf dem lokalen als auch auf einem entfernten Computer installiert werden. Der Datenaustausch zwischen der Clientanwendung und dem **IQ Feed Client** sowie zwischen dem **IQ Feed Client** und den Servern erfolgt ueber das TCP/IP-Protokoll.
+Um mit dem **IQFeed**-Connector zu arbeiten, müssen Sie den Router **IQ Feed Client** auf dem Computer installieren; er kann sowohl auf dem lokalen als auch auf einem entfernten Computer installiert werden. Der Datenaustausch zwischen der Clientanwendung und dem **IQ Feed Client** sowie zwischen dem **IQ Feed Client** und den Servern erfolgt über das TCP/IP-Protokoll.
 
-Um den **IQ Feed Client** von der [IQFeed](https://www.iqfeed.net/stocksharp/)-Website herunterzuladen, muessen Sie sich zuerst mit dem von **iQFeed** erhaltenen Passwort und Login autorisieren.
+Um den **IQ Feed Client** von der [IQFeed](https://www.iqfeed.net/stocksharp/)-Website herunterzuladen, müssen Sie sich zuerst mit dem von **iQFeed** erhaltenen Passwort und Login autorisieren.
 
 Nach der Installation von **IQ Feed Client** wird empfohlen, den Computer neu zu starten.
 
@@ -26,14 +26,14 @@ Klicken Sie im geoeffneten Fenster **IQLink Launcher** auf **Start IQLink**.
 
 Geben Sie im geoeffneten Fenster **IQ Connect Login** das **Login** und **Password** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Login und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
 
-Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen ueber verschiedene Ports:
+Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen über verschiedene Ports:
 
 1. Level1 (Port 5009) wird verwendet, um Echtzeitdaten zu Instrumenten (Ticks, Eroeffnungs- und Schlusskurse, Volatilitaet usw.) und Nachrichten zu erhalten.
-2. Level2 (Port 9200) wird verwendet, um erweiterte Quotes fuer Instrumente zu erhalten; fuer jedes ECN koennen Sie das beste Quote-Paar erhalten.
+2. Level2 (Port 9200) wird verwendet, um erweiterte Quotes für Instrumente zu erhalten; für jedes ECN können Sie das beste Quote-Paar erhalten.
 3. Lookup (Port 9100) wird verwendet, um nach Instrumenten zu suchen, historische Daten abzurufen und erweiterte Informationen zu Nachrichten zu erhalten.
 4. Admin (Port 9300) wird verwendet, um allgemeine Informationen zur Verbindung zu erhalten und Einstellungen zu aendern.
 
-Die Portnummern, die standardmaessig fuer die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Fuer Clientverbindungen koennen die Portnummern in der Registry geaendert werden, zum Beispiel fuer Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern fuer die Verbindung zu IQ-Servern koennen nicht geaendert werden.
+Die Portnummern, die standardmaessig für die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Für Clientverbindungen können die Portnummern in der Registry geaendert werden, zum Beispiel für Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern für die Verbindung zu IQ-Servern können nicht geaendert werden.
 
 > [!CAUTION]
 > Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.

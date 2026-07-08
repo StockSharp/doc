@@ -16,7 +16,7 @@ Hanging Man ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärts
 
 Hanging Man gilt als Warnung vor einem möglichen Ende eines Aufwärtstrends:
 
-- Der lange untere Schatten zeigt, dass der Preis während der Handelssitzung deutlich gefallen ist, was auf das Auftreten von Verkäufern hinweist.
+- Der länge untere Schatten zeigt, dass der Preis während der Handelssitzung deutlich gefallen ist, was auf das Auftreten von Verkäufern hinweist.
 - Obwohl Käufer den Preis wieder in den oberen Bereich der Spanne drücken konnten, ist bereits die Tatsache eines deutlichen Preisrückgangs in einem Aufwärtstrend ein Warnsignal.
 - Die Farbe des Candle-Körpers ist weniger wichtig, obwohl ein schwarzer/roter Körper als bärischer gilt als ein weißer/grüner.
 - Je länger der untere Schatten und je kleiner der Candle-Körper ist, desto stärker ist das Signal.

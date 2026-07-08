@@ -17,9 +17,9 @@ Falling Three Methods ist ein bärisches Trendfortsetzungsmuster aus fünf Candl
 
 Falling Three Methods gilt als zuverlässiges Signal für die Fortsetzung eines Abwärtstrends:
 
-- Die erste lange schwarze Candle zeigt die Stärke des Abwärtstrends.
+- Die erste länge schwarze Candle zeigt die Stärke des Abwärtstrends.
 - Drei kleine weiße Candles stellen eine vorübergehende Konsolidierung oder Korrektur dar, während der Käufer den Trend nicht wesentlich verändern konnten.
-- Die fünfte lange schwarze Candle bestätigt die Rückkehr der Kontrolle zu den Verkäufern und die Fortsetzung des Abwärtstrends.
+- Die fünfte länge schwarze Candle bestätigt die Rückkehr der Kontrolle zu den Verkäufern und die Fortsetzung des Abwärtstrends.
 - Dieses Muster kann in der klassischen technischen Analyse als Flagge oder Wimpel betrachtet werden.
 - Eine solche Candle-Abfolge weist darauf hin, dass die Korrektur zum Aufbau von Short-Positionen genutzt wurde, bevor die Abwärtsbewegung fortgesetzt wird.
 
