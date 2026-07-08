@@ -242,6 +242,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownAnchorReferencesMatchDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var expected = GetLocalAnchorReferences(defaultRoot, defaultFile);
+
+			if (expected.Count == 0)
+				continue;
+
+			foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
+			{
+				var localizedRoot = Path.Combine(_repoRoot, lang);
+				var localizedFile = Path.Combine(localizedRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(localizedFile))
+					continue;
+
+				var actual = GetLocalAnchorReferences(localizedRoot, localizedFile);
+				if (!expected.SequenceEqual(actual, StringComparer.Ordinal))
+					errors.Add($"{RelativeToRepo(localizedFile)}: local anchor references must keep the same stable fragments as {DefaultLanguage}/{relative}. Expected: {string.Join(", ", expected)}. Actual: {string.Join(", ", actual)}.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void MarkdownFilesHaveBasicDocumentStructure()
 	{
 		var errors = new List<string>();
@@ -572,6 +603,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		if (!asset.ExactCase)
 			errors.Add($"{location}: local {(link.IsImage ? "image" : "asset")} '{rawUrl}' has wrong case; actual path is '{lang}/{asset.ActualRelativePath}'.");
+	}
+
+	private static IReadOnlyList<string> GetLocalAnchorReferences(string langRoot, string file)
+	{
+		var markdown = ReadAllText(file);
+		var document = Markdown.Parse(markdown, _markdown);
+		var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+		var directory = Path.GetDirectoryName(relative);
+		var relDir = directory == null ? string.Empty : directory.Replace('\\', '/');
+		var references = new List<string>();
+
+		foreach (var link in document.Descendants().OfType<LinkInline>())
+		{
+			var url = link.Url?.Trim();
+			if (string.IsNullOrWhiteSpace(url)
+				|| IsAbsoluteUrl(url)
+				|| url.StartsWith("xref:", StringComparison.OrdinalIgnoreCase)
+				|| url.StartsWith("javascript:", StringComparison.OrdinalIgnoreCase))
+			{
+				continue;
+			}
+
+			var (path, fragment) = SplitPathQueryAndFragment(url);
+			if (string.IsNullOrEmpty(fragment))
+				continue;
+
+			var target = string.IsNullOrWhiteSpace(path)
+				? relative
+				: ResolveRelative(relDir, path);
+
+			references.Add($"{target}#{NormalizeAnchor(fragment)}");
+		}
+
+		return references;
 	}
 
 	private static MarkdownTarget ResolveMarkdownPage(string lang, string relativePath)

@@ -105,7 +105,7 @@ Cada conector es un paquete NuGet separado. Conectores principales:
 | `StockSharp.Connectors.Bittrex` | Bittrex |
 
 > [!NOTE]
-> Para la lista completa de conectores, consulte la sección [Conectores](connectors.md). Algunos conectores solo están disponibles mediante el [servidor NuGet privado](#servidor-nuget-privado).
+> Para la lista completa de conectores, consulte la sección [Conectores](connectors.md). Algunos conectores solo están disponibles mediante el [servidor NuGet privado](#private-nuget-server).
 
 ### Localización
 
@@ -167,7 +167,7 @@ Install-Package StockSharp.Binance
 Install-Package StockSharp.Algo.Strategies
 ```
 
-## Servidor NuGet privado
+## Servidor NuGet privado {#private-nuget-server}
 
 Algunos componentes (conectores cripto, etc.) solo están disponibles mediante el servidor NuGet privado para usuarios registrados.
 
@@ -232,7 +232,7 @@ Todos los paquetes StockSharp deben tener la misma versión. Si encuentra errore
 
 ### Paquete no encontrado en NuGet público
 
-Algunos conectores solo están disponibles mediante el [servidor privado](#servidor-nuget-privado). Asegúrese de que se haya agregado el origen correcto.
+Algunos conectores solo están disponibles mediante el [servidor privado](#private-nuget-server). Asegúrese de que se haya agregado el origen correcto.
 
 ### Problemas GUI en sistemas no Windows
 
