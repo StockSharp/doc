@@ -1,19 +1,19 @@
 # EIS
 
-**Elder Impulse System (EIS)** は、Dr. Alexander Elder によって開発されたテクニカル指標で、トレンド指標とモメンタムオシレーターを組み合わせて市場の動きの方向と強さを判断します。
+**エルダー・インパルス・システム (EIS)** は、Dr. Alexander Elder によって開発されたテクニカル指標で、トレンド指標とモメンタムオシレーターを組み合わせて市場の動きの方向と強さを判断します。
 
 この指標を使用するには、[ElderImpulseSystem](xref:StockSharp.Algo.Indicators.ElderImpulseSystem) クラスを使用する必要があります。
 
 ## 説明
 
-Elder Impulse System (EIS) は、市場モメンタムを可視化するためのシンプルでありながら強力なツールです。これは 2 つの指標を組み合わせます。
-1. **Exponential Moving Average (EMA)** - トレンド方向を判断するため
-2. **MACD Histogram** - 価格変動の強さとモメンタムを測定するため
+エルダー・インパルス・システム (EIS) は、市場モメンタムを可視化するためのシンプルでありながら強力なツールです。これは 2 つの指標を組み合わせます。
+1. **指数移動平均 (EMA)** - トレンド方向を判断するため
+2. **MACD ヒストグラム** - 価格変動の強さとモメンタムを測定するため
 
 EIS は価格チャート上の各ローソク足を、3 つのカテゴリのいずれかに分類します（通常は異なる色で示されます）。
-- **Green (strong bullish impulse)** - 両方の指標が上昇している場合
-- **Red (strong bearish impulse)** - 両方の指標が下降している場合
-- **Blue or neutral (no clear impulse)** - 指標が反対方向に動いている場合
+- **緑（強い上昇インパルス）** - 両方の指標が上昇している場合
+- **赤（強い下降インパルス）** - 両方の指標が下降している場合
+- **青または中立（明確なインパルスなし）** - 指標が反対方向に動いている場合
 
 EIS は特に次の用途に有用です。
 - トレンドの方向と強さを素早く視覚的に判断する
@@ -23,42 +23,42 @@ EIS は特に次の用途に有用です。
 
 ## 計算
 
-Elder Impulse System の計算には、次の手順が含まれます。
+エルダー・インパルス・システムの計算には、次の手順が含まれます。
 
 1. 13 期間の指数移動平均（EMA）を計算します。
    ```
    EMA = EMA(Close, 13)
    ```
 
-2. MACD Histogram（標準値: 12, 26, 9）を計算します。
+2. MACD ヒストグラム（標準値: 12, 26, 9）を計算します。
    ```
-   MACD Line = EMA(Close, 12) - EMA(Close, 26)
-   Signal Line = EMA(MACD Line, 9)
-   MACD Histogram = MACD Line - Signal Line
+   MACD ライン = EMA(Close, 12) - EMA(Close, 26)
+   シグナルライン = EMA(MACD ライン, 9)
+   MACD ヒストグラム = MACD ライン - シグナルライン
    ```
 
 3. 現在のローソク足の色分類を決定します。
    ```
-   If EMA[current] > EMA[previous] AND MACD Histogram[current] > MACD Histogram[previous], then Green (Bullish Impulse)
-   If EMA[current] < EMA[previous] AND MACD Histogram[current] < MACD Histogram[previous], then Red (Bearish Impulse)
-   Otherwise Blue (No Impulse)
+   EMA[現在] > EMA[前回] かつ MACD ヒストグラム[現在] > MACD ヒストグラム[前回] の場合、緑（上昇インパルス）
+   EMA[現在] < EMA[前回] かつ MACD ヒストグラム[現在] < MACD ヒストグラム[前回] の場合、赤（下降インパルス）
+   それ以外の場合、青（インパルスなし）
    ```
 
 ## 解釈
 
-Elder Impulse System は次のように解釈されます。
+エルダー・インパルス・システムは次のように解釈されます。
 
-1. **Green Candles (strong bullish impulse)**:
+1. **緑のローソク足（強い上昇インパルス）**:
    - 強い上昇モメンタムを示します
    - 買い、またはロングポジションを保有する最適なタイミングです
    - 緑のローソク足の連続は、強い上昇トレンドを示します
 
-2. **Red Candles (strong bearish impulse)**:
+2. **赤のローソク足（強い下降インパルス）**:
    - 強い下降モメンタムを示します
    - 売り、またはショートポジションを保有する最適なタイミングです
    - 赤のローソク足の連続は、強い下降トレンドを示します
 
-3. **Blue Candles (no clear impulse)**:
+3. **青のローソク足（明確なインパルスなし）**:
    - 不確実性または保ち合いを示します
    - 減速またはトレンド反転の可能性を示します
    - 保ち合い期間中、またはトレンド変化の前によく出現します
@@ -80,5 +80,5 @@ Elder Impulse System は次のように解釈されます。
 
 [EMA](ema.md)
 [MACD](macd.md)
-[MACDHistogram](macd_histogram.md)
-[ForceIndex](force_index.md)
+[MACD ヒストグラム](macd_histogram.md)
+[FI](force_index.md)

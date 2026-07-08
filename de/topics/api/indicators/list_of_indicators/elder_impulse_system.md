@@ -1,13 +1,13 @@
 # EIS
 
-**Elder Impulse System (EIS)** ist ein von Dr. Alexander Elder entwickelter technischer Indikator, der einen Trendindikator und einen Momentumoszillator kombiniert, um die Richtung und Stärke der Marktbewegung zu bestimmen.
+**Elder-Impulse-System (EIS)** ist ein von Dr. Alexander Elder entwickelter technischer Indikator, der einen Trendindikator und einen Momentumoszillator kombiniert, um die Richtung und Stärke der Marktbewegung zu bestimmen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ElderImpulseSystem](xref:StockSharp.Algo.Indicators.ElderImpulseSystem) verwenden.
 
 ## Beschreibung
 
-Der Elder Impulse System (EIS) ist ein einfaches, aber leistungsstarkes Tool zur Visualisierung der Marktdynamik. Es kombiniert zwei Indikatoren:
-1. **Exponentielle Bewegung Average (EMA)** – zur Bestimmung der Trendrichtung
+Das Elder-Impulse-System (EIS) ist ein einfaches, aber leistungsstarkes Tool zur Visualisierung der Marktdynamik. Es kombiniert zwei Indikatoren:
+1. **Exponentieller gleitender Durchschnitt (EMA)** – zur Bestimmung der Trendrichtung
 2. **MACD-Histogramm** – zur Messung der Stärke und Dynamik der Preisbewegung
 
 EIS klassifiziert jede Kerze im Preisdiagramm in eine von drei Kategorien (normalerweise durch unterschiedliche Farben gekennzeichnet):
@@ -23,7 +23,7 @@ EIS ist besonders nützlich für:
 
 ## Berechnung
 
-Die Elder Impulse System-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des Elder-Impulse-Systems umfasst die folgenden Schritte:
 
 1. Berechnen Sie den exponentiellen gleitenden Durchschnitt über 13 Perioden (EMA):
    ```
@@ -32,21 +32,21 @@ Die Elder Impulse System-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie das MACD-Histogramm (Standardwerte: 12, 26, 9):
    ```
-   MACD Line = EMA(Close, 12) - EMA(Close, 26)
-   Signal Line = EMA(MACD Line, 9)
-   MACD Histogram = MACD Line - Signal Line
+   MACD-Linie = EMA(Close, 12) - EMA(Close, 26)
+   Signallinie = EMA(MACD-Linie, 9)
+   MACD-Histogramm = MACD-Linie - Signallinie
    ```
 
 3. Bestimmen Sie die Farbklassifizierung für die aktuelle Kerze:
    ```
-   If EMA[current] > EMA[previous] AND MACD Histogram[current] > MACD Histogram[previous], then Green (Bullish Impulse)
-   If EMA[current] < EMA[previous] AND MACD Histogram[current] < MACD Histogram[previous], then Red (Bearish Impulse)
-   Otherwise Blue (No Impulse)
+   Wenn EMA[aktuell] > EMA[vorherig] UND MACD-Histogramm[aktuell] > MACD-Histogramm[vorherig], dann Grün (Aufwärtsimpuls)
+   Wenn EMA[aktuell] < EMA[vorherig] UND MACD-Histogramm[aktuell] < MACD-Histogramm[vorherig], dann Rot (Abwärtsimpuls)
+   Andernfalls Blau (kein Impuls)
    ```
 
 ## Interpretation
 
-Der Elder Impulse System wird wie folgt interpretiert:
+Das Elder-Impulse-System wird wie folgt interpretiert:
 
 1. **Grüne Kerzen (starker bullischer Impuls)**:
    - Zeigen Sie eine starke Aufwärtsdynamik an
@@ -66,8 +66,8 @@ Der Elder Impulse System wird wie folgt interpretiert:
 4. **Handelsstrategien**:
    - Kaufen Sie, wenn Kerzen ihre Farbe von Blau nach Grün ändern
    - Verkaufen, wenn die Kerzen ihre Farbe von Blau nach Rot ändern
-   - Close Long-Positionen, wenn Kerzen ihre Farbe von Grün in eine andere ändern
-   - Close-Short-Positionen, wenn Kerzen ihre Farbe von Rot zu einer anderen ändern
+   - Schließen Sie Long-Positionen, wenn Kerzen ihre Farbe von Grün in eine andere ändern
+   - Schließen Sie Short-Positionen, wenn Kerzen ihre Farbe von Rot zu einer anderen ändern
 
 5. **Trendbestätigung**:
    - Eine Reihe grüner Kerzen bestätigt einen Aufwärtstrend
@@ -80,5 +80,5 @@ Der Elder Impulse System wird wie folgt interpretiert:
 
 [EMA](ema.md)
 [MACD](macd.md)
-[MACDHistogram](macd_histogram.md)
-[ForceIndex](force_index.md)
+[MACD-Histogramm](macd_histogram.md)
+[FI](force_index.md)
