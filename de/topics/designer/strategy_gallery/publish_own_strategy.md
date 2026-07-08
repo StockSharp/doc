@@ -1,4 +1,4 @@
-# Publishing Your Strategy
+# Eigene Strategie veröffentlichen
 
 Sie können Ihre Strategie veröffentlichen, indem Sie im Panel [Schemes](../user_interface/schemas.md) mit der linken Maustaste auf die Strategie klicken und **Publish** auswählen:
 

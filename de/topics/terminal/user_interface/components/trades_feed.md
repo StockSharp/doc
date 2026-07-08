@@ -1,5 +1,5 @@
-# Trades feed
+# Trade-Feed
 
 Siehe
 
-[Tick trades](../../../designer/user_interface/components/tick_trades.md)
+[Tick-Trades](../../../designer/user_interface/components/tick_trades.md)

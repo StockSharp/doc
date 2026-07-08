@@ -1,4 +1,4 @@
-# Risk Management
+# Risikomanagement
 
 In den Panels [Testing Properties](components/backtesting_settings.md) und [Live Trading Properties](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
 

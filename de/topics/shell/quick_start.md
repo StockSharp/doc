@@ -20,7 +20,7 @@ Die Verbindungseinstellungen und Verbindungsschaltflächen sowie die Schaltfläc
 
 Der nächste Schritt ist die Verbindung durch Klicken auf die Schaltfläche **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
 
-Nach dem Verbindungsaufbau sehen Sie auf der Registerkarte [Common](user_interface/common.md) die Portfolios, Instrumente, Orders und eigenen Trades, die von der Verbindung empfangen wurden.
+Nach dem Verbindungsaufbau sehen Sie auf der Registerkarte [Allgemein](user_interface/common.md) die Portfolios, Instrumente, Orders und eigenen Trades, die von der Verbindung empfangen wurden.
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
@@ -32,6 +32,6 @@ Nachdem die Strategie hinzugefügt wurde, füllen Sie ihre Basisparameter wie **
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 
-Ähnlich wie auf der Registerkarte [Real-time](user_interface/real_time.md) können Sie auf der Registerkarte [Emulation](user_interface/emulation.md) einen Strategietest auf historischen Daten ausführen.
+Ähnlich wie auf der Registerkarte [Echtzeit](user_interface/real_time.md) können Sie auf der Registerkarte [Emulation](user_interface/emulation.md) einen Strategietest auf historischen Daten ausführen.
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)

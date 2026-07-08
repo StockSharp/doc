@@ -1,4 +1,4 @@
-# Position Protection
+# Positionsschutz
 
 ![Designer Protect positions 00](../../../../../../images/designer_protect_positions_00.png)
 
@@ -33,5 +33,5 @@ Take- und Stop-Parameter
 ![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> Eingehende Transaktionen DÜRFEN KEINE Transaktionen der gesamten Strategie sein (der Block [Strategy Trades](../common/trades_by_strategy.md)), da dies zu einer fehlerhaften Berechnung der aktuellen Position führt: Die Schutztransaktionen würden ebenfalls zu Strategietransaktionen. Der Block **Position Protection** sollte Transaktionen aus dem Ausgabe-Socket **Transaction** der Würfel [Order Registration](../orders/register.md) und [Modify Position](modify.md) oder ähnlicher Komponenten erhalten, die die Position direkt ändern.
+> Eingehende Transaktionen DÜRFEN KEINE Transaktionen der gesamten Strategie sein (der Block [Strategy Trades](../common/trades_by_strategy.md)), da dies zu einer fehlerhaften Berechnung der aktuellen Position führt: Die Schutztransaktionen würden ebenfalls zu Strategietransaktionen. Der Block **Position Protection** sollte Transaktionen aus dem Ausgabe-Socket **Transaction** der Würfel [Orderregistrierung](../orders/register.md) und [Position ändern](modify.md) oder ähnlicher Komponenten erhalten, die die Position direkt ändern.
 

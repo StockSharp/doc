@@ -1,4 +1,4 @@
-# Modify Position
+# Position ändern
 
 ![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
 
@@ -39,9 +39,9 @@ Wenn die Komponente einen Trigger empfängt, während sie bereits mit der Änder
 
 ## Hinweis
 
-Für die Low-Level-Orderverwaltung kann die Komponente [Order Registration](../orders/register.md) verwendet werden. Für die Positionsverwaltung auf höherer Ebene wird diese Komponente „Modify Position“ empfohlen.
+Für die Low-Level-Orderverwaltung kann die Komponente [Orderregistrierung](../orders/register.md) verwendet werden. Für die Positionsverwaltung auf höherer Ebene wird diese Komponente „Modify Position“ empfohlen.
 
 ## Siehe auch
 
-- [Order Registration](../orders/register.md)
+- [Orderregistrierung](../orders/register.md)
 

@@ -1,4 +1,4 @@
-# Truncated order book
+# Gekürztes Orderbuch
 
 ![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
@@ -18,5 +18,5 @@ Der Würfel wird verwendet, um ein auf eine angegebene Tiefe gekürztes Orderbuc
 
 ## Empfohlene Inhalte
 
-[IV book](../options/iv_book.md)
+[IV-Orderbuch](../options/iv_book.md)
 

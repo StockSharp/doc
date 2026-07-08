@@ -10,5 +10,5 @@ Das Panel [Chart](../../../../user_interface/components/chart.md) zeigt alle Dat
 
 ## Empfohlene Inhalte
 
-[Crossing](crossing.md)
+[Kreuzung](crossing.md)
 

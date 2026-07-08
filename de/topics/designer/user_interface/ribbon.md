@@ -1,8 +1,8 @@
-# Ribbon
+# Menüband
 
 Das wichtigste Element der Benutzeroberfläche von [Designer](../../designer.md) ist das **Ribbon**, das sich am oberen Rand des Anwendungsfensters befindet. Das Ribbon ermöglicht schnellen Zugriff auf die benötigten Befehle. Die Befehle sind in logischen Gruppen organisiert, die auf Registerkarten zusammengefasst sind. Um zur gewünschten Registerkarte zu wechseln, klicken Sie einfach auf deren Titel (Namen). Jede Registerkarte ist mit der Art der ausgefuhrten Aktion verknupft.
 
-1. Die Registerkarte **Common**, die nach dem Start standardmäßig geöffnet wird, enthält Elemente, die in der Anfangsphase der Arbeit benötigt werden können. Über die Registerkarte **Common** können Sie [Connection Settings](../connections_settings.md), [Scheme Panel](schemas.md), [Logs Panel](logs.md), [Portfolios](portfolios.md), [Board Editor](boards.md) und [Creating a Repository of Historical Data](../market_data_storage/getting_started.md) öffnen. Ausserdem können Sie auf der Registerkarte **Common** Strategien hinzufügen, öffnen, löschen, importieren und exportieren. Wenn Sie Ihre Strategie mit der Community teilen möchten, können Sie dies über die Schaltfläche *Publish* tun. Die danebenliegende Schaltfläche *Available Strategies* öffnet Algorithmen, die von Ihnen und anderen Benutzern veroffentlicht wurden. Rechts befinden sich Service-Schaltflächen zum Aufrufen der Hilfe sowie zur Kontaktaufnahme mit uns. Sie können ein Problem melden oder uns im Telegram-Chat schreiben.
+1. Die Registerkarte **Common**, die nach dem Start standardmäßig geöffnet wird, enthält Elemente, die in der Anfangsphase der Arbeit benötigt werden können. Über die Registerkarte **Common** können Sie [Connection Settings](../connections_settings.md), [Scheme Panel](schemas.md), [Protokoll-Panel](logs.md), [Portfolios](portfolios.md), [Board Editor](boards.md) und [Creating a Repository of Historical Data](../market_data_storage/getting_started.md) öffnen. Ausserdem können Sie auf der Registerkarte **Common** Strategien hinzufügen, öffnen, löschen, importieren und exportieren. Wenn Sie Ihre Strategie mit der Community teilen möchten, können Sie dies über die Schaltfläche *Publish* tun. Die danebenliegende Schaltfläche *Available Strategies* öffnet Algorithmen, die von Ihnen und anderen Benutzern veroffentlicht wurden. Rechts befinden sich Service-Schaltflächen zum Aufrufen der Hilfe sowie zur Kontaktaufnahme mit uns. Sie können ein Problem melden oder uns im Telegram-Chat schreiben.
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 
@@ -20,5 +20,5 @@ Das wichtigste Element der Benutzeroberfläche von [Designer](../../designer.md)
 
 ## Siehe auch
 
-[Workspace](workspace.md)
+[Arbeitsbereich](workspace.md)
 

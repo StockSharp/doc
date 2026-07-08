@@ -1,4 +1,4 @@
-# Value Delay
+# Wertverzögerung
 
 ![Designer Delay 00](../../../../../../images/designer_delay_00.png)
 
@@ -21,5 +21,5 @@ Diese Komponente wird verwendet, um die Übertragung eines Werts um eine angegeb
 
 ## Siehe auch
 
-- [Comparison](comparison.md)
+- [Vergleich](comparison.md)
 

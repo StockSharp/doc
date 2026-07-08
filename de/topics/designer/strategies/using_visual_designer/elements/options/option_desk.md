@@ -1,4 +1,4 @@
-# Option desk
+# Optionsdesk
 
 ![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
 
@@ -18,5 +18,5 @@ Eingehende Sockets
 
 ## Empfohlene Inhalte
 
-[Chart positions](chart_positions.md)
+[Positionschart](chart_positions.md)
 

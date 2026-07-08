@@ -24,5 +24,5 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[Converter](converter.md)
+[Konverter](converter.md)
 

@@ -1,4 +1,4 @@
-# Conditional orders
+# Bedingte Orders
 
 Die Komponente **Conditional orders** ist eine Tabelle mit Orders, die vollständige Informationen über alle bedingten Orders anzeigt. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue bedingte Order registrieren, die ausgewählte bedingte Order stornieren oder ändern können.
 

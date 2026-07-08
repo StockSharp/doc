@@ -1,4 +1,4 @@
-# Boards
+# Börsenplätze
 
 Im Panel **Board editor** können Sie **Boards** und **Exchanges** erstellen sowie vorhandene anzeigen oder anpassen.
 

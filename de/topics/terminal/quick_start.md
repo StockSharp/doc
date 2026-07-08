@@ -22,7 +22,7 @@ Durch Klicken auf die Schaltfläche **Add** ![Designer Creation tool 00](../../i
 
 ![Terminal Quick start 02](../../images/terminal_quick_start_02.png)
 
-Wenn Sie im Orderbuch auf die Schaltfläche **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) klicken, erscheint ein Panel, in dem Sie das **Instrument** und das **Portfolio** für Trades angeben können. Hier können Sie außerdem die Tiefe des Orderbuchs anpassen. Weitere Informationen zur Arbeit mit einem Orderbuch finden Sie im Abschnitt [Order book](user_interface/components/order_book.md).
+Wenn Sie im Orderbuch auf die Schaltfläche **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) klicken, erscheint ein Panel, in dem Sie das **Instrument** und das **Portfolio** für Trades angeben können. Hier können Sie außerdem die Tiefe des Orderbuchs anpassen. Weitere Informationen zur Arbeit mit einem Orderbuch finden Sie im Abschnitt [Orderbuch](user_interface/components/order_book.md).
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 

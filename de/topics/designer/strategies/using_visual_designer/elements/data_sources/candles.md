@@ -1,4 +1,4 @@
-# Candles
+# Kerzen
 
 ![Designer Candles 00](../../../../../../images/designer_candles_00.png)
 

@@ -1,4 +1,4 @@
-# String concat
+# Zeichenkettenverkettung
 
 ![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
 
@@ -30,6 +30,6 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[String format](string_format.md)
-[Notification](notification.md)
+[Zeichenkettenformatierung](string_format.md)
+[Benachrichtigung](notification.md)
 

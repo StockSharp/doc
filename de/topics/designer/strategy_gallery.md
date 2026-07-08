@@ -1,4 +1,4 @@
-# Strategy Gallery
+# Strategiegalerie
 
 Die **Strategy Gallery** bietet die Möglichkeit, fertige Handelsstrategien auf Ihren Computer herunterzuladen. Sie können die **Strategy Gallery** öffnen, indem Sie auf der Registerkarte **Common** auf die Schaltfläche **Strategy Gallery** klicken.
 
@@ -14,5 +14,5 @@ Um eine Strategie auf Ihren Computer herunterzuladen, müssen Sie:
 
 ## Siehe auch
 
-[Publishing Your Strategy](strategy_gallery/publish_own_strategy.md)
+[Eigene Strategie veröffentlichen](strategy_gallery/publish_own_strategy.md)
 

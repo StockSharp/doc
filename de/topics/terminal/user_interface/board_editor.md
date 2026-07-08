@@ -2,4 +2,4 @@
 
 Siehe
 
-[Boards](../../designer/user_interface/boards.md)
+[Börsenplätze](../../designer/user_interface/boards.md)

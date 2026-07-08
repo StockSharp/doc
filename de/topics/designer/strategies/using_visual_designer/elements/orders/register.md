@@ -1,4 +1,4 @@
-# Order Registration
+# Orderregistrierung
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 
@@ -55,9 +55,9 @@ Die Komponente „Order Registration“ wird verwendet, um Handelsorders für ei
 
 ## Hinweis
 
-Die Arbeit mit Orders ist eine Low-Level-Methode zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Modify Position“ zu verwenden, die unter [Modify Position](../positions/modify.md) beschrieben ist.
+Die Arbeit mit Orders ist eine Low-Level-Methode zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Modify Position“ zu verwenden, die unter [Position ändern](../positions/modify.md) beschrieben ist.
 
 ## Siehe auch
 
-[Modify Position](../positions/modify.md)
+[Position ändern](../positions/modify.md)
 

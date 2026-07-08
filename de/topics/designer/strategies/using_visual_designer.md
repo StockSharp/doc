@@ -1,4 +1,4 @@
-# Using Blocks
+# Arbeiten mit Blöcken
 
 Die Verwendung von Blöcken erfordert keine Programmierkenntnisse. Beim Erstellen einer Strategie werden Blöcke und Verbindungen (Linien) kombiniert, sodass der gesamte Ablauf visuell dargestellt wird.
 

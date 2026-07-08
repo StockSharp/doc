@@ -1,4 +1,4 @@
-# Lines
+# Linien
 
 Die Strategie im Designer ist ein Schema aus einer Gruppe von Elementen und Verknüpfungen zwischen ihnen, den sogenannten Verbindungen. Jede Verbindung führt vom Ausgabeparameter eines Würfels zum Eingabeparameter eines anderen Würfels. Normalerweise sind alle Verbindungslinien grau, aber wenn Sie auf den Würfel zeigen, zu dem sie gehören, werden die Linien schwarz dargestellt.
 
@@ -13,5 +13,5 @@ Sie können Parameter gleicher Farbe (also gleicher Datentypen) miteinander verb
 
 ## Empfohlene Inhalte
 
-[Event model](event_model.md)
+[Ereignismodell](event_model.md)
 

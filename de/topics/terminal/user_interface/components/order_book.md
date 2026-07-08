@@ -1,4 +1,4 @@
-# Order book
+# Orderbuch
 
 Die Komponente **Order book** ist eine Tabelle mit Limit-Orders für Kauf und Verkauf.
 
@@ -10,4 +10,4 @@ Orders können entweder über die Schaltflächen **Buy/Sell** oder durch Klicken
 
 ## Empfohlene Inhalte
 
-[Positions](../../../designer/user_interface/components/positions.md)
+[Positionen](../../../designer/user_interface/components/positions.md)

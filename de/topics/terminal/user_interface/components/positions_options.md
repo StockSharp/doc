@@ -1,4 +1,4 @@
-# Positions (options)
+# Positionen (Optionen)
 
 **Positions (options)** ist eine grafische Darstellung der Optionsposition.
 
@@ -10,4 +10,4 @@ Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen so
 
 ## Empfohlene Inhalte
 
-[Option desk](option_desk.md)
+[Optionsdesk](option_desk.md)

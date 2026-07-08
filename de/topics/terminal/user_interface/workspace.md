@@ -1,5 +1,5 @@
-# Workspace
+# Arbeitsbereich
 
 Siehe
 
-[Workspace](../../designer/user_interface/workspace.md)
+[Arbeitsbereich](../../designer/user_interface/workspace.md)

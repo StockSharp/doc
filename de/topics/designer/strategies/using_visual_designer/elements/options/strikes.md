@@ -27,5 +27,5 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[Crossing](../common/crossing.md)
+[Kreuzung](../common/crossing.md)
 

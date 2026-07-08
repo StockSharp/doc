@@ -1,4 +1,4 @@
-# Smile volatility
+# Smile-Volatilität
 
 Die Komponente **Smile volatility** ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
 
@@ -10,4 +10,4 @@ Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen so
 
 ## Empfohlene Inhalte
 
-[Order log](order_log.md)
+[Orderlog](order_log.md)

@@ -1,4 +1,4 @@
-# Backtesting settings
+# Backtesting-Einstellungen
 
 Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulations- oder Live-Trade-Eigenschaften. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
 
@@ -35,7 +35,7 @@ Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategie
 - **Time zone** - Informationen über die Zeitzone, in der sich die Börse befindet.
 - **Price shift** - die Preisverschiebung vom letzten Trade, mit der die Grenzen der maximalen und minimalen Preise für die nächste Sitzung angegeben werden.
 - **Add extra volume** - zusätzliches Volumen zum Orderbuch hinzufügen, wenn Orders mit großem Volumen registriert werden.
-- **[Commissions](../commissions.md)** - die Provision (Brokerage, Börse usw.).
+- **[Kommissionen](../commissions.md)** - die Provision (Brokerage, Börse usw.).
 
 **Logging**
 
@@ -43,7 +43,7 @@ Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategie
 
 **Setting**
 
-- **[Risk Management](../risk_management.md)** - die Risikomanagement-Einstellungen.
+- **[Risikomanagement](../risk_management.md)** - die Risikomanagement-Einstellungen.
 
 **Diagram parameters**
 

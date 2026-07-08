@@ -1,4 +1,4 @@
-# First strategy
+# Erste Strategie
 
 Zum Erstellen von Strategie-Schemas und zusammengesetzten Elementen sowie zum Testen der erhaltenen Strategien auf historischen Daten können Sie das Beispiel einer Strategie mit gleitendem Durchschnitt (SMA) verwenden. Es führt Sie durch den vollständigen Ablauf vom Erstellen einer Strategie bis zu deren Test und Debugging. Die Strategie mit gleitendem Durchschnitt (SMA) befindet sich im Ordner **Strategies** des Panels **Schemas**.
 
@@ -16,7 +16,7 @@ Nach dem Klicken auf die Schaltfläche **Add** ![Designer Panel Circuits 01](../
 
 3. Das Wesen der Strategie mit gleitendem Durchschnitt (SMA) ist wie folgt:
 
-- Es gibt zwei gleitende Durchschnitte mit unterschiedlichen Berechnungsperioden, einen langen SMA und einen kurzen SMA. Im Beispiel heißt der Würfel [Indicator](elements/common/indicator.md) für den langen SMA Long SMA mit einer Periode von 80 Kerzen; der kurze SMA heißt Short SMA mit einer Periode von 10 Kerzen.
+- Es gibt zwei gleitende Durchschnitte mit unterschiedlichen Berechnungsperioden, einen langen SMA und einen kurzen SMA. Im Beispiel heißt der Würfel [Indikator](elements/common/indicator.md) für den langen SMA Long SMA mit einer Periode von 80 Kerzen; der kurze SMA heißt Short SMA mit einer Periode von 10 Kerzen.
 - Wenn der kurze gleitende Durchschnitt den langen von unten nach oben kreuzt, wird eine Long-Position eröffnet.
 - Wenn der kurze gleitende Durchschnitt den langen von oben nach unten kreuzt, wird eine Short-Position eröffnet.
 - Wenn zum Zeitpunkt des Signals zum Eröffnen einer Position eine entgegengesetzte Position vorhanden ist, wird die Position gedreht.
@@ -31,15 +31,15 @@ Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen,
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Nach dem Hinzufügen von Instrument und Portfolio fügen Sie zwei Würfel [Indicator](elements/common/indicator.md) hinzu, wählen den SMA-Typ aus, nennen den ersten Long SMA und setzen die Periode auf 80 Kerzen, nennen den zweiten Short SMA und setzen die Periode auf 10 Kerzen.
+5. Nach dem Hinzufügen von Instrument und Portfolio fügen Sie zwei Würfel [Indikator](elements/common/indicator.md) hinzu, wählen den SMA-Typ aus, nennen den ersten Long SMA und setzen die Periode auf 80 Kerzen, nennen den zweiten Short SMA und setzen die Periode auf 10 Kerzen.
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. Damit die Indikatoren funktionieren, übergeben Sie ihnen eine Kerzenserie. Erstellen Sie dazu den Würfel [Candles](elements/data_sources/candles.md). Im Beispiel werden nur vollständig gebildete Kerzen mit einem Zeitrahmen von 5 Minuten verwendet.
+6. Damit die Indikatoren funktionieren, übergeben Sie ihnen eine Kerzenserie. Erstellen Sie dazu den Würfel [Kerzen](elements/data_sources/candles.md). Im Beispiel werden nur vollständig gebildete Kerzen mit einem Zeitrahmen von 5 Minuten verwendet.
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. Nach dem Hinzufügen der Indikatoren müssen Sie zwei Würfel hinzufügen, die die Kreuzungen der Indikatoren bestimmen. Dies sind die Würfel [Crossing](elements/common/crossing.md) aus den zusammengesetzten Elementen. Der erste Würfel heißt Crossing Up. Er bestimmt die Kreuzung von unten nach oben. Der Indikator Short SMA wird an den oberen Eingang des Würfels übergeben, der Indikator Long SMA an den unteren Eingang. Der Operator CurrComparison wird auf einen größeren Wert gesetzt, der Operator PrevComparison auf kleiner oder gleich. Der zweite Würfel heißt Crossing Down und bestimmt die Kreuzung von oben nach unten. Der Indikator Short SMA wird an den oberen Eingang des Würfels übergeben, der Indikator Long SMA an den unteren Eingang. Der Operator CurrComparison wird auf einen kleineren Wert gesetzt, der Operator PrevComparison auf größer oder gleich.
+7. Nach dem Hinzufügen der Indikatoren müssen Sie zwei Würfel hinzufügen, die die Kreuzungen der Indikatoren bestimmen. Dies sind die Würfel [Kreuzung](elements/common/crossing.md) aus den zusammengesetzten Elementen. Der erste Würfel heißt Crossing Up. Er bestimmt die Kreuzung von unten nach oben. Der Indikator Short SMA wird an den oberen Eingang des Würfels übergeben, der Indikator Long SMA an den unteren Eingang. Der Operator CurrComparison wird auf einen größeren Wert gesetzt, der Operator PrevComparison auf kleiner oder gleich. Der zweite Würfel heißt Crossing Down und bestimmt die Kreuzung von oben nach unten. Der Indikator Short SMA wird an den oberen Eingang des Würfels übergeben, der Indikator Long SMA an den unteren Eingang. Der Operator CurrComparison wird auf einen kleineren Wert gesetzt, der Operator PrevComparison auf größer oder gleich.
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
@@ -55,7 +55,7 @@ Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen,
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
-11. Durch Verbinden der oben genannten Elemente mit Linien ([Lines](lines.md)) entsteht ein Schema, das die aktuelle Position der Strategie noch nicht berücksichtigt. In diesem Zustand sammelt es eine übermäßige Anzahl von Lots an.
+11. Durch Verbinden der oben genannten Elemente mit Linien ([Linien](lines.md)) entsteht ein Schema, das die aktuelle Position der Strategie noch nicht berücksichtigt. In diesem Zustand sammelt es eine übermäßige Anzahl von Lots an.
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
@@ -63,7 +63,7 @@ Zur Positionskontrolle müssen Sie den Würfel [Position](elements/positions/cur
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 
-Zur Verarbeitung der aktuellen Position können Sie das fertige Schema verwenden, das unter [Get current position](schema_samples/get_current_position.md) beschrieben ist. Dieses Schema bestimmt den tatsächlichen Wert des erforderlichen Ordervolumens. Wenn die Position gedreht werden muss, gibt es den doppelten Portfoliowert zurück.
+Zur Verarbeitung der aktuellen Position können Sie das fertige Schema verwenden, das unter [Aktuelle Position abrufen](schema_samples/get_current_position.md) beschrieben ist. Dieses Schema bestimmt den tatsächlichen Wert des erforderlichen Ordervolumens. Wenn die Position gedreht werden muss, gibt es den doppelten Portfoliowert zurück.
 
 12. Als Ergebnis sieht die fertige Strategie so aus:
 

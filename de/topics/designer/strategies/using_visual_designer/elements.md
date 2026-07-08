@@ -6,7 +6,7 @@ In jedem Würfel wird ein Symbol angezeigt, das ihn charakterisiert, sowie ein N
 
 Links und rechts vom Würfel zeigen farbige Kästchen die eingehenden (links) und ausgehenden (rechts) Parameter.
 
-Parameter werden benötigt, um den Würfel während der Ausführung der Strategie mit Informationen zu füllen. Zum Beispiel wird beim Würfel [Candles](elements/data_sources/candles.md) das Instrument, für das eine Kerze erstellt werden soll, an den Eingang übergeben; die erstellten Kerzen werden am Ausgang zurückgegeben. Diese können wiederum als Eingabeparameter für das Element [Chart](elements/common/chart.md) verwendet oder an eine Methode übergeben werden, die die Kerzengröße bestimmt.
+Parameter werden benötigt, um den Würfel während der Ausführung der Strategie mit Informationen zu füllen. Zum Beispiel wird beim Würfel [Kerzen](elements/data_sources/candles.md) das Instrument, für das eine Kerze erstellt werden soll, an den Eingang übergeben; die erstellten Kerzen werden am Ausgang zurückgegeben. Diese können wiederum als Eingabeparameter für das Element [Chart](elements/common/chart.md) verwendet oder an eine Methode übergeben werden, die die Kerzengröße bestimmt.
 
 ![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
 
@@ -42,9 +42,9 @@ Somit können Sie Parameter gleicher Farbe (also gleicher Datentypen) verbinden,
 1. Der Parameter **black** kann beliebige Daten akzeptieren. Meist werden solche Parameter verwendet, um Signale für Aktionen innerhalb des Würfels zu übergeben. Zum Beispiel speichert der Würfel [Variable](elements/data_sources/variable.md) einen bestimmten Wert und sendet ihn an den Ausgang, wenn er ein Signal empfängt.
 2. Der Parameter **dark slate blue** kann am Eingang verschiedene vergleichbare Datentypen empfangen. Zum Beispiel numerische Werte, Indikatorwerte, Zeichenfolgen usw.
 
-Es ist zu beachten, dass die Parametertypen von den Eigenschaften des Würfels abhängen können. Zum Beispiel wird beim Würfel [Converter](elements/converters/converter.md) der Typ des Eingabeparameters automatisch anhand des Datentyps des Datenquellenwürfels für [Converter](elements/converters/converter.md) bestimmt. Beim Erstellen einer Verbindung ändert sich die Farbe des Quadrats am Element automatisch.
+Es ist zu beachten, dass die Parametertypen von den Eigenschaften des Würfels abhängen können. Zum Beispiel wird beim Würfel [Konverter](elements/converters/converter.md) der Typ des Eingabeparameters automatisch anhand des Datentyps des Datenquellenwürfels für [Konverter](elements/converters/converter.md) bestimmt. Beim Erstellen einer Verbindung ändert sich die Farbe des Quadrats am Element automatisch.
 
-Ausgabeparameter erlauben normalerweise mehrere ausgehende Verbindungen zu unterschiedlichen Würfeln. Eingabeparameter erlauben im Allgemeinen eine Verbindung, mit Ausnahme des Würfels [Combination](elements/common/combination.md), der das Zusammenführen des Datenstroms aus verschiedenen Würfeln in einen einzigen erlaubt. Die Anzahl gleichzeitiger Verbindungen für einen Parameter ist im Quellcode des Würfels festgelegt.
+Ausgabeparameter erlauben normalerweise mehrere ausgehende Verbindungen zu unterschiedlichen Würfeln. Eingabeparameter erlauben im Allgemeinen eine Verbindung, mit Ausnahme des Würfels [Kombination](elements/common/combination.md), der das Zusammenführen des Datenstroms aus verschiedenen Würfeln in einen einzigen erlaubt. Die Anzahl gleichzeitiger Verbindungen für einen Parameter ist im Quellcode des Würfels festgelegt.
 
 Würfel zum Erstellen von Schemas sind in mehrere Kategorien unterteilt; jede Kategorie ist für die Verwendung in einem bestimmten Teil des Schemas vorgesehen.
 

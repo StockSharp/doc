@@ -1,4 +1,4 @@
-# News
+# Nachrichten
 
 Die Komponente **News** zeigt Nachrichten an, die von Verbindungen empfangen wurden.
 
@@ -10,4 +10,4 @@ Im News-Panel können Sie Benachrichtigungen für ausgewählte Ereignisse konfig
 
 ## Empfohlene Inhalte
 
-[Positions (options)](positions_options.md)
+[Positionen (Optionen)](positions_options.md)

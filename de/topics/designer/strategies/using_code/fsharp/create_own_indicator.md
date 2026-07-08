@@ -103,7 +103,7 @@ Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des gese
 
 Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md).
 
-Um den erstellten Indikator zum Diagramm hinzuzufügen, verwenden Sie den Würfel [Indicator](../../using_visual_designer/elements/common/indicator.md) und geben darin den gewünschten Indikator an:
+Um den erstellten Indikator zum Diagramm hinzuzufügen, verwenden Sie den Würfel [Indikator](../../using_visual_designer/elements/common/indicator.md) und geben darin den gewünschten Indikator an:
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 

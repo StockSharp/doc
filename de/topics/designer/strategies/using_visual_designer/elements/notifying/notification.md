@@ -1,8 +1,8 @@
-# Notification
+# Benachrichtigung
 
 ![Designer Notice 00](../../../../../../images/designer_notice_00.png)
 
-Der Würfel sendet eine Benachrichtigung, wenn Daten an seinem Eingabe-Socket eintreffen. Der eingehende Wert wird über `ToString` in Text umgewandelt. Sie können eine [Variable](../data_sources/variable.md) verbinden, um festen Text zu senden, Trades- oder Kerzen-Streams anschließen, um deren Details anzuzeigen, oder die Würfel [String format](string_format.md) und [String concat](string_concat.md) verwenden, um eine eigene Nachricht vorzubereiten.
+Der Würfel sendet eine Benachrichtigung, wenn Daten an seinem Eingabe-Socket eintreffen. Der eingehende Wert wird über `ToString` in Text umgewandelt. Sie können eine [Variable](../data_sources/variable.md) verbinden, um festen Text zu senden, Trades- oder Kerzen-Streams anschließen, um deren Details anzuzeigen, oder die Würfel [Zeichenkettenformatierung](string_format.md) und [Zeichenkettenverkettung](string_concat.md) verwenden, um eine eigene Nachricht vorzubereiten.
 
 ### Eingehende Sockets
 
@@ -20,7 +20,7 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[String format](string_format.md)
-[String concat](string_concat.md)
+[Zeichenkettenformatierung](string_format.md)
+[Zeichenkettenverkettung](string_concat.md)
 [Notification settings](../../../../../terminal/notifications.md)
 

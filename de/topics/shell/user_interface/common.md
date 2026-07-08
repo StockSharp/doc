@@ -1,4 +1,4 @@
-# Common
+# Allgemein
 
 Auf der Registerkarte **Common** können Sie allgemeine Informationen zu Portfolios, Orders, Trades und Instrumenten anzeigen. Außerdem können Sie hier das Theme der [Shell](../../shell.md)-Oberfläche festlegen.
 
@@ -10,4 +10,4 @@ Auf der Registerkarte **Securities** können Sie Instrumente aus dem lokalen Spe
 
 ## Empfohlene Inhalte
 
-[Real-time](real_time.md)
+[Echtzeit](real_time.md)

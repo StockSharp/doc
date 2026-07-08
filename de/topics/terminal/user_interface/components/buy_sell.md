@@ -8,4 +8,4 @@ Um ein neues Instrument hinzuzufügen, klicken Sie auf die Schaltfläche ![Desig
 
 ## Empfohlene Inhalte
 
-[Order book](order_book.md)
+[Orderbuch](order_book.md)

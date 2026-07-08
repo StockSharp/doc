@@ -1,4 +1,4 @@
-# Live settings
+# Live-Einstellungen
 
 Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulationseigenschaften oder Live-Einstellungen. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
 
@@ -16,7 +16,7 @@ Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategie
 
 **Settings**
 
-- [Risk Management](../risk_management.md) - Einstellungen des Risikomanagements.
+- [Risikomanagement](../risk_management.md) - Einstellungen des Risikomanagements.
 
 **Diagram parameters**
 

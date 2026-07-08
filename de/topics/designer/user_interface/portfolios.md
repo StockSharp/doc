@@ -12,5 +12,5 @@ Wenn Sie auf die Schaltfläche ![Designer Alert Bell](../../../images/designer_a
 
 ## Empfohlene Inhalte
 
-[Strategy Gallery](../strategy_gallery.md)
+[Strategiegalerie](../strategy_gallery.md)
 

@@ -1,4 +1,4 @@
-# Comparison
+# Vergleich
 
 ![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
 
@@ -23,5 +23,5 @@ Wenn Sie den Operator ändern, ändert sich der Würfelname automatisch in den N
 
 ## Empfohlene Inhalte
 
-[Indicator](indicator.md)
+[Indikator](indicator.md)
 

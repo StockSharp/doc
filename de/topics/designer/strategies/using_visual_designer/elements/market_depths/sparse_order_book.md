@@ -1,4 +1,4 @@
-# Sparse order book
+# Ausgedünntes Orderbuch
 
 ![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
@@ -20,5 +20,5 @@ Der Würfel wird verwendet, um ein ausgedünntes Orderbuch für das angegebene I
 
 ## Empfohlene Inhalte
 
-[IV book](../options/iv_book.md)
+[IV-Orderbuch](../options/iv_book.md)
 

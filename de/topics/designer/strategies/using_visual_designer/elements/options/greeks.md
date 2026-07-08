@@ -1,4 +1,4 @@
-# Greeks
+# Griechen
 
 ![Designer Greek 00](../../../../../../images/designer_greek_00.png)
 

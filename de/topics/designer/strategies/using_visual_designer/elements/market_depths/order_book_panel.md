@@ -1,10 +1,10 @@
-# Order Book Panel
+# Orderbuch-Panel
 
 ![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
 
-Der Würfel dient dazu, das Orderbuch in der spezialisierten grafischen Komponente [Order book](../../../../user_interface/components/order_book.md) anzuzeigen.
+Der Würfel dient dazu, das Orderbuch in der spezialisierten grafischen Komponente [Orderbuch](../../../../user_interface/components/order_book.md) anzuzeigen.
 
-Die Komponente [Order book](../../../../user_interface/components/order_book.md) muss aus der Gruppe [Komponenten](../../../../user_interface/components.md) der Registerkarten **Simulation** oder **Trading** hinzugefügt werden. Weitere Informationen zur Komponente [Order book](../../../../user_interface/components/order_book.md) finden Sie im Abschnitt [Order book](../../../../user_interface/components/order_book.md).
+Die Komponente [Orderbuch](../../../../user_interface/components/order_book.md) muss aus der Gruppe [Komponenten](../../../../user_interface/components.md) der Registerkarten **Simulation** oder **Trading** hinzugefügt werden. Weitere Informationen zur Komponente [Orderbuch](../../../../user_interface/components/order_book.md) finden Sie im Abschnitt [Orderbuch](../../../../user_interface/components/order_book.md).
 
 ### Eingehende Sockets
 
@@ -14,5 +14,5 @@ Die Komponente [Order book](../../../../user_interface/components/order_book.md)
 
 ## Siehe auch
 
-[Grouped order book](grouped_order_book.md)
+[Gruppiertes Orderbuch](grouped_order_book.md)
 

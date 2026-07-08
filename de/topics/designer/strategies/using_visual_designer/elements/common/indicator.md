@@ -1,4 +1,4 @@
-# Indicator
+# Indikator
 
 ![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
 
@@ -23,5 +23,5 @@ Dieser Block wird zur Berechnung von Indikatorwerten verwendet.
 ## Siehe auch
 
 [Liste der Indikatoren](../../../../../api/indicators/list_of_indicators.md)
-[Logical Condition](logical_condition.md)
+[Logische Bedingung](logical_condition.md)
 

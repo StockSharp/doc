@@ -1,4 +1,4 @@
-# Tick trades
+# Tick-Trades
 
 Die Komponente **Trades feed** ist eine Tabelle mit Trades, die vollständige Informationen zu allen Trades für die ausgewählten Instrumente anzeigt.
 

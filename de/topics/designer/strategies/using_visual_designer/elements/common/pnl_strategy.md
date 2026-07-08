@@ -1,4 +1,4 @@
-# P&L strategy
+# P&L-Strategie
 
 ![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
@@ -12,5 +12,5 @@ Das Element stellt P/L-Informationen der Strategie bereit.
 
 ## Empfohlene Inhalte
 
-[Prev value](prev_value.md)
+[Vorheriger Wert](prev_value.md)
 

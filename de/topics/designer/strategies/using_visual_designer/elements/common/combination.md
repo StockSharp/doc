@@ -1,4 +1,4 @@
-# Combination
+# Kombination
 
 ![Designer Association 00](../../../../../../images/designer_association_00.png)
 
@@ -18,5 +18,5 @@ Der Würfel wird verwendet, um gleichartige Daten aus verschiedenen Würfeln in 
 
 ## Empfohlene Inhalte
 
-[Comparison](comparison.md)
+[Vergleich](comparison.md)
 

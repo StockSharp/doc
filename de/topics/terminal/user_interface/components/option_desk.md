@@ -1,4 +1,4 @@
-# Option desk
+# Optionsdesk
 
 Die Komponente **Option desk** ist eine Tabelle mit den wichtigsten Parametern der ausgewählten Optionen für den Basiswert.
 
@@ -10,4 +10,4 @@ Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen so
 
 ## Empfohlene Inhalte
 
-[Smile volatility](smile_volatility.md)
+[Smile-Volatilität](smile_volatility.md)

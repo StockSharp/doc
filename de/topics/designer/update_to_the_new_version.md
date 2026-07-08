@@ -1,4 +1,4 @@
-# Update to the new version
+# Auf neue Version aktualisieren
 
 [Apps aktualisieren](../installer/update_apps.md)
 

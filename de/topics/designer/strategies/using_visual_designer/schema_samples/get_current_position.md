@@ -1,4 +1,4 @@
-# Get current position
+# Aktuelle Position abrufen
 
 Um das Volumen zu erhalten, das zum Drehen der aktuellen Position in die entgegengesetzte Position erforderlich ist, kann das Schema aus dem SMA-Strategiebeispiel verwendet werden:
 
@@ -12,5 +12,5 @@ Nach dem Übergeben des Instruments und der Positionsänderung wird mit der math
 
 ## Empfohlene Inhalte
 
-[Get order book price level](get_order_book_price_level.md)
+[Preisniveau im Orderbuch abrufen](get_order_book_price_level.md)
 

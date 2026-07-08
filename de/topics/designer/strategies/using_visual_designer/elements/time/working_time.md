@@ -1,4 +1,4 @@
-# Working Time
+# Arbeitszeit
 
 ![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
 
@@ -20,5 +20,5 @@ Der Block kann verwendet werden, um zu bestimmen, wann der Handel für mehrere I
 
 ## Siehe auch
 
-[Is Trading Allowed](trade_allow.md)
+[Handel erlaubt](trade_allow.md)
 

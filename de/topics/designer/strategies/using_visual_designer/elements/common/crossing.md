@@ -1,4 +1,4 @@
-# Crossing
+# Kreuzung
 
 ![Designer Crossing 00](../../../../../../images/designer_crossing_00.png)
 
@@ -21,5 +21,5 @@ Ein Beispiel für die Verwendung des Blocks Crossing zur Verfolgung der Kreuzung
 
 ## Siehe auch
 
-[Value Delay](delay_value.md)
+[Wertverzögerung](delay_value.md)
 

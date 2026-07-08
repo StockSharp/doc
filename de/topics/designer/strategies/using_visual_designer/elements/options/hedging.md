@@ -28,5 +28,5 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[Options quoting](options_quoting.md)
+[Optionsquotierung](options_quoting.md)
 

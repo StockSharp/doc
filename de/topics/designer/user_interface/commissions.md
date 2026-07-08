@@ -1,6 +1,6 @@
-# Commissions
+# Kommissionen
 
-Im Panel [Backtesting settings](components/backtesting_settings.md) können Sie die Einstellungen zur Provisionsüberwachung festlegen.
+Im Panel [Backtesting-Einstellungen](components/backtesting_settings.md) können Sie die Einstellungen zur Provisionsüberwachung festlegen.
 
 Im Fenster **Commissions** sollten Sie den Provisionstyp auswählen, den Provisionswert festlegen und die Bedingung angeben, unter der die Provision berechnet wird.
 

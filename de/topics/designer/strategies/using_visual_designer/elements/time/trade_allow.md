@@ -1,4 +1,4 @@
-# Is Trading Allowed
+# Handel erlaubt
 
 ![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
@@ -20,5 +20,5 @@ Dieser Block wird verwendet, um zu prüfen, ob der Handel aktuell erlaubt ist. D
 
 ## Siehe auch
 
-[Current Time](current_time.md)
+[Aktuelle Zeit](current_time.md)
 

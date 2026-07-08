@@ -1,4 +1,4 @@
-# Real-time
+# Echtzeit
 
 Auf der Registerkarte **Real-time** können Sie im Handel gestartete Strategien verwalten.
 
@@ -10,4 +10,4 @@ Auf der Registerkarte **Strategies** können Sie Strategien löschen, starten, s
 
 ## Empfohlene Inhalte
 
-[Common](common.md)
+[Allgemein](common.md)

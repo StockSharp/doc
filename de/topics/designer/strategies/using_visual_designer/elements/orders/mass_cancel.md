@@ -1,4 +1,4 @@
-# Mass Order Cancellations
+# Massenstornierung von Orders
 
 ![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
 
@@ -26,5 +26,5 @@ Parameter
 
 ## Siehe auch
 
-[Order Registration](register.md)
+[Orderregistrierung](register.md)
 

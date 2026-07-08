@@ -1,4 +1,4 @@
-# Grouped order book
+# Gruppiertes Orderbuch
 
 ![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
@@ -20,5 +20,5 @@ Der Würfel wird verwendet, um ein gruppiertes Orderbuch zu erhalten.
 
 ## Empfohlene Inhalte
 
-[Sparse order book](sparse_order_book.md)
+[Ausgedünntes Orderbuch](sparse_order_book.md)
 

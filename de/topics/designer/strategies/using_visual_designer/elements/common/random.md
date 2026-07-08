@@ -1,4 +1,4 @@
-# Random Value
+# Zufallswert
 
 ![Designer Random 00](../../../../../../images/designer_random_00.png)
 

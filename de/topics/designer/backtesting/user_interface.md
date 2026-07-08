@@ -12,7 +12,7 @@ Der ausgewählte Strategietab enthält standardmäßig die folgenden Panels:
 
 - Das Panel **Scheme**, in dem der Hauptarbeitsprozess für die Gestaltung der Strategie und ihrer Komponenten durch Kombinieren von Würfeln und Verbindungslinien ausgeführt wird. Das Schema wird im Abschnitt [Diagram panel](../strategies/using_visual_designer/diagram_panel.md) ausführlich beschrieben.
 - Das Panel mit Informationselementen, das **Chart**, **Orders**, **Trades**, **Statistics** und weitere Komponenten enthält. Sie können die benötigte Komponente hinzufügen, indem Sie sie im Tab **Emulation** in der Gruppe **Components** auswählen.
-- Das Panel **Properties** ist standardmäßig rechts im Strategietab eingeklappt. Im Panel **Properties** können Sie die allgemeinen **Emulation**-Einstellungen festlegen. Beispielsweise kann das **Market-data storage format** je nach Dateiformat des ausgewählten Speichers auf **BIN** oder **CSV** gesetzt werden. Der Datentyp kann Ticks oder Candles sein. Wenn Ticks ausgewählt ist, werden Kerzen aus den Ticks gebildet, die in den [Backtesting settings](../user_interface/components/backtesting_settings.md) angegeben sind.
+- Das Panel **Properties** ist standardmäßig rechts im Strategietab eingeklappt. Im Panel **Properties** können Sie die allgemeinen **Emulation**-Einstellungen festlegen. Beispielsweise kann das **Market-data storage format** je nach Dateiformat des ausgewählten Speichers auf **BIN** oder **CSV** gesetzt werden. Der Datentyp kann Ticks oder Candles sein. Wenn Ticks ausgewählt ist, werden Kerzen aus den Ticks gebildet, die in den [Backtesting-Einstellungen](../user_interface/components/backtesting_settings.md) angegeben sind.
 
 ## Empfohlene Inhalte
 

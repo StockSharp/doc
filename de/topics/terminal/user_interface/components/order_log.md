@@ -1,4 +1,4 @@
-# Order log
+# Orderlog
 
 Die Komponente **Order log** ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders für die ausgewählten Instrumente anzeigt.
 

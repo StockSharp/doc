@@ -1,4 +1,4 @@
-# Order book
+# Orderbuch
 
 ![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
 
@@ -14,5 +14,5 @@ Der Würfel wird verwendet, um das Orderbuch für das angegebene Instrument zu e
 
 ## Empfohlene Inhalte
 
-[Grouped order book](grouped_order_book.md)
+[Gruppiertes Orderbuch](grouped_order_book.md)
 
