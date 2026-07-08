@@ -14,7 +14,7 @@ Eingehende Sockets
 
 Parameter
 
-- **Type** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Notification settings](../../../../../terminal/notifications.md) beschrieben.
+- **Type** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Benachrichtigungen](../../../../../terminal/notifications.md) beschrieben.
 - **Telegram** - Kanal für Telegram-Benachrichtigungen.
 - **Header** - die Überschrift der Nachricht.
 
@@ -22,5 +22,5 @@ Parameter
 
 [Zeichenkettenformatierung](string_format.md)
 [Zeichenkettenverkettung](string_concat.md)
-[Notification settings](../../../../../terminal/notifications.md)
+[Benachrichtigungen](../../../../../terminal/notifications.md)
 

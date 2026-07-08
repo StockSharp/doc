@@ -2,5 +2,4 @@
 
 Siehe
 
-[Market Depth Control](../graphical_user_interface/market_data/order_book.md)
-
+[Orderbuch](../graphical_user_interface/market_data/order_book.md)
