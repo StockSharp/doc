@@ -1,6 +1,6 @@
 # IConnector 日志记录
 
-[IConnector](xref:StockSharp.BusinessEntities.IConnector) 对象类似的 [strategies](strategy_logging.md) 也实现了 [ILogSource](xref:Ecng.Logging.ILogSource) 接口。因此，通过 [IConnector](xref:StockSharp.BusinessEntities.IConnector) 对象，你可以通过 [LogManager](xref:Ecng.Logging.LogManager) 以策略所提供的所有方式接收消息。
+[IConnector](xref:StockSharp.BusinessEntities.IConnector) 对象类似的[策略](strategy_logging.md)也实现了 [ILogSource](xref:Ecng.Logging.ILogSource) 接口。因此，通过 [IConnector](xref:StockSharp.BusinessEntities.IConnector) 对象，你可以通过 [LogManager](xref:Ecng.Logging.LogManager) 以策略所提供的所有方式接收消息。
 
 ## IConnector 日志记录示例
 

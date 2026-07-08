@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定の保存と復元の仕組みが自動的に使用されます。
 
-**MinValue** プロパティは basic としてマークされており、[Basic Properties](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされた [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッドがいつ呼び出されるかを決定します。
 

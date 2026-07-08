@@ -1,6 +1,6 @@
 # 绘制订单簿
 
-代码策略可以在[订单簿](../../../user_interface/components/order_book.md)面板中绘制数据，效果与 [Order Book](../../using_visual_designer/elements/market_depths/order_book_panel.md) 模块相同。为此，需要编写以下代码。
+代码策略可以在[订单簿](../../../user_interface/components/order_book.md)面板中绘制数据，效果与[市场深度面板](../../using_visual_designer/elements/market_depths/order_book_panel.md)模块相同。为此，需要编写以下代码。
 
 1. 创建 [IOrderBookSource](xref:StockSharp.Algo.Strategies.IOrderBookSource) 接口的实现，**Designer** 使用该接口识别数据源。本例使用 [OrderBookSource](xref:StockSharp.Algo.Strategies.OrderBookSource) 类，即该接口的默认实现：
 

@@ -28,4 +28,4 @@
 
 ## 推荐内容
 
-[Derivatives](strikes.md)
+[行权价](strikes.md)

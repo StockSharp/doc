@@ -25,4 +25,4 @@
 
 ## 推荐内容
 
-[Protect Position](protect.md)
+[持仓保护](protect.md)

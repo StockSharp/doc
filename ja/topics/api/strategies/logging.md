@@ -227,4 +227,4 @@ logManager.Sources.Add(strategy);
 ## 関連項目
 
 [ログ記録](../logging.md)
-[LogControl コンポーネント](../graphical_user_interface/logging/log_panel.md)
+[ログパネル](../graphical_user_interface/logging/log_panel.md)

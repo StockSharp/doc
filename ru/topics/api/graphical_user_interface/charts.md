@@ -8,10 +8,10 @@
 - [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) \- расширенный графический компонент для отображения биржевых графиков.
 - [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) \- графический компонент для отображения кривой доходности.
 - [BoxChart](charts/box_chart.md) \- график, представляющий объемы в виде сетки цифр.
-- [ClusterChart](charts/cluster_chart.md) \- график, отображающий объемы в виде кластеров с гистограммами.
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) \- графический компонент, показывающий позиции и "греки" опционов относительно базового актива. См. [OptionPositionChart](options/position_chart.md).
+- [Кластеры](charts/cluster_chart.md) \- график, отображающий объемы в виде кластеров с гистограммами.
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) \- графический компонент, показывающий позиции и "греки" опционов относительно базового актива. См. [график позиции](options/position_chart.md).
 
-Кроме того в состав [S\#](../../api.md) входят два типа графиков для анализа объемов [BoxChart](charts/box_chart.md) и [ClusterChart](charts/cluster_chart.md). 
+Кроме того в состав [S\#](../../api.md) входят два типа графиков для анализа объемов [BoxChart](charts/box_chart.md) и [кластеры](charts/cluster_chart.md).
 
 На следующем рисунке показаны основные элементы графического компонента. 
 

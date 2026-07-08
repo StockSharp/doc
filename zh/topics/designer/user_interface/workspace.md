@@ -6,4 +6,4 @@
 
 ## 推荐内容
 
-[Schemas](schemas.md)
+[策略图面板](schemas.md)

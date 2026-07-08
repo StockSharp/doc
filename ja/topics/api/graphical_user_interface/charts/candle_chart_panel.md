@@ -1,6 +1,6 @@
 # ローソク足チャートパネル
 
-[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) は、株価チャートを作成するための高度なコンポーネントで、ツールバーと追加機能を備えています。[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) によるチャート作成手法は、[Chart](candle_chart.md) の場合と大きく異なりません。
+[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) は、株価チャートを作成するための高度なコンポーネントで、ツールバーと追加機能を備えています。[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) によるチャート作成手法は、[ローソク足チャート](candle_chart.md)の場合と大きく異なりません。
 
 次の図は、コンポーネントの外観と、ツールバーボタンの機能を示しています。
 

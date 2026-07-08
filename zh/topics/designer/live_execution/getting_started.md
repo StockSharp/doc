@@ -1,6 +1,6 @@
 # 入门
 
-要将策略添加到 **Live trading**，请在 [Schemas](../user_interface/schemas.md) 面板的 **Strategies** 文件夹中右键单击所需策略，然后选择 ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**。该策略会被添加到 **Schemas** 面板的 **Live** 文件夹中。
+要将策略添加到 **Live trading**，请在[策略图面板](../user_interface/schemas.md)的 **Strategies** 文件夹中右键单击所需策略，然后选择 ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**。该策略会被添加到 **策略图面板** 的 **Live** 文件夹中。
 
 ![Designer Live trade 01](../../../images/designer_live_trade_01.png)
 

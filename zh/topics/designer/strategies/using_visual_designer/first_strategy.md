@@ -2,7 +2,7 @@
 
 要创建策略图和复合元素，并使用历史数据测试所得到的策略，可以参考移动平均线（SMA）策略示例。通过该示例，可以完成从策略创建到测试和调试的整个流程。移动平均线（SMA）策略位于 **Schemas** 面板的 **Strategies** 文件夹中。
 
-1. 按照 [Using Code](../using_code.md) 中的说明，使用模块创建新策略。可以在 **Common** 选项卡中单击 **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) 按钮，然后选择 **Strategy**。也可以在 **Schemas** 面板中右键单击 **Strategy** 文件夹，再在下拉菜单中单击 **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) 按钮。
+1. 按照[代码使用](../using_code.md)中的说明，使用模块创建新策略。可以在 **Common** 选项卡中单击 **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) 按钮，然后选择 **Strategy**。也可以在 **策略图面板** 中右键单击 **Strategy** 文件夹，再在下拉菜单中单击 **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) 按钮。
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
@@ -51,7 +51,7 @@
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. 添加两个 [Register order](elements/orders/register.md) 模块来建立持仓。第一个模块用于通过市价订单买入，其输入端接收 **Instrument**、来自 Crossing Up 交叉模块的开仓信号、**Portfolio** 和订单数量。第二个模块用于通过市价订单卖出，其输入端接收 **Instrument**、来自 Crossing Down 交叉模块的开仓信号、**Portfolio** 和订单数量。
+10. 添加两个[注册订单](elements/orders/register.md)模块来建立持仓。第一个模块用于通过市价订单买入，其输入端接收 **Instrument**、来自 Crossing Up 交叉模块的开仓信号、**Portfolio** 和订单数量。第二个模块用于通过市价订单卖出，其输入端接收 **Instrument**、来自 Crossing Down 交叉模块的开仓信号、**Portfolio** 和订单数量。
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 

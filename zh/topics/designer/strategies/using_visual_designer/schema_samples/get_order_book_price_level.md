@@ -8,4 +8,4 @@
 
 ## 推荐内容
 
-[Gallery](../../../strategy_gallery.md)
+[策略库](../../../strategy_gallery.md)

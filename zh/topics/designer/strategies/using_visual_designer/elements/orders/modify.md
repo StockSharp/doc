@@ -27,4 +27,4 @@
 
 ## 另请参阅
 
-[Cancel Order](cancel.md)
+[撤销订单](cancel.md)

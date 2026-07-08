@@ -1,6 +1,6 @@
 # 拡張ログパネル
 
-[Monitor](xref:StockSharp.Xaml.Monitor) は、[LogControl](log_panel.md) を **TreeView** 階層ツリーと組み合わせて使用する視覚要素であり、ツリーにはログソースが表示されます。当初、このコンポーネントは取引戦略を監視するために設計されました。そのため、既定では「ツリー」に **Strategy** ノードが含まれています。同時に、このコンポーネントでは他のソースも使用できます。
+[Monitor](xref:StockSharp.Xaml.Monitor) は、[ログパネル](log_panel.md)を **TreeView** 階層ツリーと組み合わせて使用する視覚要素であり、ツリーにはログソースが表示されます。当初、このコンポーネントは取引戦略を監視するために設計されました。そのため、既定では「ツリー」に **Strategy** ノードが含まれています。同時に、このコンポーネントでは他のソースも使用できます。
 
 ![GUI Monitor](../../../../images/gui_monitor.png)
 

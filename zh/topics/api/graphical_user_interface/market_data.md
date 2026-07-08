@@ -10,7 +10,7 @@
 
 ## 推荐内容
 
-[Ticks](market_data/ticks.md)
+[逐笔交易](market_data/ticks.md)
 
 [一级](market_data/level1.md)
 

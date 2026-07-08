@@ -34,7 +34,7 @@ subscription
 
 #### 自动向 Strategy.Indicators 集合添加指标
 
-需要注意的是，当使用 [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IIndicator,StockSharp.Algo.Indicators.IIndicator,System.Action{`0,System.Decimal,System.Decimal})) 方法将指标与订阅链接时，**不需要**额外将这些指标添加到 [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中，这在传统方法中通常是需要的（如 [indicators 文档](indicators.md) 中所述）。系统会自动：
+需要注意的是，当使用 [Bind](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.Bind(StockSharp.Algo.Indicators.IIndicator,StockSharp.Algo.Indicators.IIndicator,System.Action{`0,System.Decimal,System.Decimal})) 方法将指标与订阅链接时，**不需要**额外将这些指标添加到 [Strategy.Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中，这在传统方法中通常是需要的（如[指标文档](indicators.md)中所述）。系统会自动：
 
 1. 将指标添加到 [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中
 2. 跟踪指标的形成状态

@@ -7,11 +7,11 @@
 - [Chart](xref:StockSharp.Xaml.Charting.Chart) - 株価チャートを表示するためのグラフィカルコンポーネント。
 - [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) - 株価チャートを表示するための高度なグラフィカルコンポーネント。
 - [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) - エクイティカーブを表示するためのグラフィカルコンポーネント。
-- [BoxChart](charts/box_chart.md) - 出来高を数値のグリッドとして表すチャート。
-- [ClusterChart](charts/cluster_chart.md) - 出来高をヒストグラム付きのクラスターとして表示するチャート。
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 原資産に対するオプションポジションと「Greeks」を表示するグラフィカルコンポーネント。[OptionPositionChart](options/position_chart.md) を参照してください。
+- [ボックスチャート](charts/box_chart.md) - 出来高を数値のグリッドとして表すチャート。
+- [クラスターチャート](charts/cluster_chart.md) - 出来高をヒストグラム付きのクラスターとして表示するチャート。
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 原資産に対するオプションポジションと「Greeks」を表示するグラフィカルコンポーネント。[ポジションチャート](options/position_chart.md) を参照してください。
 
-さらに、[S#](../../api.md) には出来高分析用の 2 種類のチャート、[BoxChart](charts/box_chart.md) と [ClusterChart](charts/cluster_chart.md) が含まれています。
+さらに、[S#](../../api.md) には出来高分析用の 2 種類のチャート、[ボックスチャート](charts/box_chart.md)と[クラスターチャート](charts/cluster_chart.md)が含まれています。
 
 次の図は、グラフィカルコンポーネントの主要な要素を示しています。
 

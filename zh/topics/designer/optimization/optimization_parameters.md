@@ -5,7 +5,7 @@
 - 数值（整数和小数）
 - 时间（[TimeSpan](xref:System.TimeSpan)）
 - 布尔值（True-False）
-- [Unit](../../api/strategies/unit_type.md) 值
+- [单位类型](../../api/strategies/unit_type.md)值
 
 默认情况下，所有这些类型的参数都会显示在[优化器参数表](brute_force.md)中。如果需要从优化中排除某个参数，请按以下方式操作：
 

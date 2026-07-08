@@ -1,6 +1,6 @@
 # K线图面板
 
-[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) 是用于创建股票图表的高级组件，具有工具栏和附加功能。使用 [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) 绘图的技术与 [Chart](candle_chart.md) 并没有显著差异。
+[ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) 是用于创建股票图表的高级组件，具有工具栏和附加功能。使用 [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) 绘图的技术与[K线图](candle_chart.md)并没有显著差异。
 
 下图显示了组件的外观以及工具栏按钮的功能。
 

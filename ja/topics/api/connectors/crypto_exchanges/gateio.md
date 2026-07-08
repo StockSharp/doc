@@ -14,7 +14,7 @@
 
 [独自コネクターの作成](../creating_own_connector.md)
 
-[Orders](../../orders_management.md)
+[注文管理](../../orders_management.md)
 
 [新しい注文の作成](../../orders_management/create_new_order.md)
 

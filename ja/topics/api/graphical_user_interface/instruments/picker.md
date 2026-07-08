@@ -1,6 +1,6 @@
 # ピッカー
 
-[SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) コンポーネントは、銘柄を検索して選択するために設計されています。単一選択と複数選択の両方をサポートします。このコンポーネントでは、銘柄の種類で銘柄リストをフィルターできます。また、[SecurityGrid](table.md) セクションに示すように、金融情報（level1 フィールド）の表示にも使用できます。
+[SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) コンポーネントは、銘柄を検索して選択するために設計されています。単一選択と複数選択の両方をサポートします。このコンポーネントでは、銘柄の種類で銘柄リストをフィルターできます。また、[テーブル](table.md)セクションに示すように、金融情報（level1 フィールド）の表示にも使用できます。
 
 ![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
 

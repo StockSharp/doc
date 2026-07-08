@@ -1,6 +1,6 @@
 # ポートフォリオ最適化
 
-[Designer](../../designer.md) には、1 つのストラテジーをさまざまな証券で同時にテストする機能があります。これを行うには、[Optimization](brute_force.md) ボタンをクリックします。
+[Designer](../../designer.md) には、1 つのストラテジーをさまざまな証券で同時にテストする機能があります。これを行うには、[最適化](brute_force.md)ボタンをクリックします。
 
 ![Designer Portfolio testing](../../../images/designer_portfolio_testing.png)
 

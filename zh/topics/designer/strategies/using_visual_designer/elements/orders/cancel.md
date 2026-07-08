@@ -20,4 +20,4 @@
 
 ## 另请参阅
 
-[Mass Orders Cancel](mass_cancel.md)
+[批量撤销订单](mass_cancel.md)

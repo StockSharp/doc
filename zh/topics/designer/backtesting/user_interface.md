@@ -1,6 +1,6 @@
 # 用户界面
 
-要使用历史数据运行测试，请先选择需要回测的策略图。在策略文件夹的 [Schemas](../user_interface/schemas.md) 面板中，双击所需策略即可选中该策略。将策略添加到工作区后，会显示一个新的策略选项卡；切换到该选项卡时，Ribbon 中会自动打开 **Emulation** 选项卡。
+要使用历史数据运行测试，请先选择需要回测的策略图。在策略文件夹的[策略图面板](../user_interface/schemas.md)中，双击所需策略即可选中该策略。将策略添加到工作区后，会显示一个新的策略选项卡；切换到该选项卡时，Ribbon 中会自动打开 **Emulation** 选项卡。
 
 ![Designer Interface Backtesting 00](../../../images/designer_interface_backtesting_00.png)
 

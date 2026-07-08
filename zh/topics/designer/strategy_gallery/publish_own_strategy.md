@@ -1,10 +1,10 @@
 # 发布自己的策略
 
-在 [Schemes](../user_interface/schemas.md) 面板中用鼠标左键单击策略，然后选择 **Publish**，即可发布该策略：
+在[策略图面板](../user_interface/schemas.md)中用鼠标左键单击策略，然后选择 **Publish**，即可发布该策略：
 
 ![Designer_publish_00](../../../images/designer_publish_00.png)
 
-单击 **Publish** 按钮后，会打开用于选择导出类型的窗口。有关详细信息，请参阅 [Exporting Strategies](../export_import/export.md) 章节。
+单击 **Publish** 按钮后，会打开用于选择导出类型的窗口。有关详细信息，请参阅[策略导出](../export_import/export.md)章节。
 
 选择导出类型后，会使用发布参数激活 [Installer](../../installer.md) 程序（必须提前启动 [Installer](../../installer.md)）：
 

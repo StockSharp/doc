@@ -2,7 +2,7 @@
 
 **Hydra Server** は、[Designer](designer.md) などの外部プログラムが接続できるように、ネットワーク経由でデータを配信するサービスです。
 
-[server mode](hydra/server_mode/settings.md) とは異なり、**Hydra Server** はコンソールアプリケーションとして作成された独立したクロスプラットフォームプログラムであり、Windows または Linux サーバー上で実行できます。
+[サーバーモード](hydra/server_mode/settings.md)とは異なり、**Hydra Server** はコンソールアプリケーションとして作成された独立したクロスプラットフォームプログラムであり、Windows または Linux サーバー上で実行できます。
 
 > [!TIP]
 > Windows では、Hydra Server を Windows Service として登録し、システム起動時に自動的に起動できます。詳細については、[Windows service](https://en.wikipedia.org/wiki/Windows_service) を参照してください。

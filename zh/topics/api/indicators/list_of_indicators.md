@@ -21,7 +21,7 @@
 - [bv](list_of_indicators/balance_volume.md) - 平衡量指标，将成交量与价格变化联系起来
 - [Bollinger](list_of_indicators/bollinger_bands.md) - 布林带，用于衡量波动性并识别超买或超卖状态
 - [BBP](list_of_indicators/bollinger_percent_b.md) - 布林带 %b，显示价格相对于布林带的位置
-- [Pattern](../patterns.md) - 模式，在图表上识别特定价格模式
+- [模式](../patterns.md) - 在图表上识别特定价格模式
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - 重心振荡器，识别潜在的反转点
 - [CMF](list_of_indicators/chaikin_money_flow.md) - 查金资金流量，根据成交量衡量买卖压力
 - [蔡金波动率](list_of_indicators/chv.md) - 蔡金波动率，用于衡量交易范围变化的速度

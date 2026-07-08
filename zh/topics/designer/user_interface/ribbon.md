@@ -6,7 +6,7 @@
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 
-2. 在 [Scheme](schemas.md) 面板中选择策略后，**Backtest** 选项卡会自动打开。**Backtest** 选项卡包含创建、调试、测试和优化策略所需的主要元素（[创建策略](../strategies/using_visual_designer.md)、[回测示例](../backtesting/getting_started.md)）。还可以在此选项卡中启动策略进行实盘交易，并选择策略所需的组件，例如图表、市场深度和成交等。
+2. 在[策略图面板](schemas.md)中选择策略后，**Backtest** 选项卡会自动打开。**Backtest** 选项卡包含创建、调试、测试和优化策略所需的主要元素（[创建策略](../strategies/using_visual_designer.md)、[回测示例](../backtesting/getting_started.md)）。还可以在此选项卡中启动策略进行实盘交易，并选择策略所需的组件，例如图表、市场深度和成交等。
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 

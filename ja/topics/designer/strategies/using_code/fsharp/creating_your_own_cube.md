@@ -105,7 +105,7 @@ let minValueParam =
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定を保存および復元する方法が自動的に利用されます。
 
-**MinValue** プロパティは basic としてマークされており、[Basic properties](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされている [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッド呼び出しのタイミングを担います。
 

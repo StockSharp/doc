@@ -2,8 +2,8 @@
 
 [S#](../../api.md) 包含多个用于处理选项的图形组件。
 
-- [OptionDesk](options/option_desk.md) - 期权交易台。
-- [OptionPositionChart](options/position_chart.md) - 显示有关标的资产的持仓和期权希腊值的图表。
+- [期权交易台](options/option_desk.md) - 期权交易台。
+- [持仓图表](options/position_chart.md) - 显示有关标的资产的持仓和期权希腊值的图表。
 
 ## 推荐内容
 

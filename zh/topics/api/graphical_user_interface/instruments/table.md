@@ -1,4 +1,4 @@
-# 桌子
+# 表格
 
 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 组件用于以表格形式显示与金融工具相关的财务信息（一级字段）及其变动。该组件允许您选择一个或多个工具。
 
@@ -15,7 +15,7 @@
 
 以下是其使用的代码示例。
 
-在图中，[SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 组件显示在 [SecurityPicker](picker.md) 图形组件中。
+在图中，[SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 组件显示在[选择器](picker.md)图形组件中。
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"

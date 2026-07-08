@@ -15,7 +15,7 @@
 
 Ниже показаны внешний вид компонента и фрагмент кода с его использованием. 
 
-На рисунке компонент [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) показан в составе графического компонента [SecurityPicker](picker.md). 
+На рисунке компонент [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) показан в составе графического компонента [выбора инструмента](picker.md).
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"

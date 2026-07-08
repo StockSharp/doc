@@ -12,7 +12,7 @@ StockSharp の YouTube チャンネルでは、「Designer」の操作方法を�
 
 StockSharp 公式 Web サイトの Strategy Gallery には、「Designer」を使用して開発されたさまざまな取引ストラテジーが掲載されています。これらの例は、独自のストラテジーを作成するための優れた出発点になります。
 
-- **「Designer」Strategy Gallery**: [Strategy Gallery にアクセス](strategy_gallery.md)
+- **「Designer」Strategy Gallery**: [ストラテジーギャラリーにアクセス](strategy_gallery.md)
 
 ## GitHub リポジトリ
 

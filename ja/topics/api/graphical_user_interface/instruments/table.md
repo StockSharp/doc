@@ -15,7 +15,7 @@
 
 以下は、その使用例のコードスニペットです。
 
-図では、[SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) コンポーネントが [SecurityPicker](picker.md) グラフィカルコンポーネント内に表示されています。
+図では、[SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) コンポーネントが[ピッカー](picker.md)グラフィカルコンポーネント内に表示されています。
 
 ```xaml
 <Window x:Class="SecurityGridSample.MainWindow"

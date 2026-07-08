@@ -10,11 +10,11 @@
 
 该目录包含以下文件夹和文件：
 
-- **Compositions** 以 XML 文件形式保存 [Schemas](../user_interface/schemas.md) 面板中 **Composite elements** 文件夹内的所有模块。从此目录删除文件，会从 [Schemas](../user_interface/schemas.md) 面板的 **Composite elements** 文件夹中删除对应的 **Composite element**。请勿手动编辑这些文件，否则可能导致对应的 **Composite elements** 模块损坏。
-- **LiveStrategies** 以 XML 文件形式保存 [Schemas](../user_interface/schemas.md) 面板中 **Trading** 文件夹内的所有模块。从此目录删除文件，会从 [Schemas](../user_interface/schemas.md) 面板的 **Trading** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。
+- **Compositions** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **Composite elements** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **Composite elements** 文件夹中删除对应的 **Composite element**。请勿手动编辑这些文件，否则可能导致对应的 **Composite elements** 模块损坏。
+- **LiveStrategies** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **Trading** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **Trading** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。
 - **Logs** 包含 [Designer](../../designer.md) 的全部崩溃日志，可简化 [Designer](../../designer.md) 故障排查。
-- **SourceCode** 以 XML 文件形式保存 [Schemas](../user_interface/schemas.md) 面板中 **Source code** 文件夹内的所有模块。从此目录删除文件，会从 [Schemas](../user_interface/schemas.md) 面板的 **Source code** 文件夹中删除对应的 **Source code** 模块。请勿手动编辑这些文件，否则可能导致对应的 **Source code** 模块损坏。
-- **Strategies** 以 XML 文件形式保存 [Schemas](../user_interface/schemas.md) 面板中 **Strategies** 文件夹内的所有模块。从此目录删除文件，会从 Schemas 面板的 **Strategies** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。如果手动将策略文件添加到此文件夹并重新启动 [Designer](../../designer.md)，该策略会显示在 [Schemas](../user_interface/schemas.md) 面板的 **Strategies** 文件夹中。
+- **SourceCode** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **Source code** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **Source code** 文件夹中删除对应的 **Source code** 模块。请勿手动编辑这些文件，否则可能导致对应的 **Source code** 模块损坏。
+- **Strategies** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **Strategies** 文件夹内的所有模块。从此目录删除文件，会从 **策略图面板** 的 **Strategies** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。如果手动将策略文件添加到此文件夹并重新启动 [Designer](../../designer.md)，该策略会显示在[策略图面板](../user_interface/schemas.md)的 **Strategies** 文件夹中。
 - **Storage** 包含 [Designer](../../designer.md) 下载到相应[市场数据存储](../market_data_storage.md)的市场数据。创建[市场数据存储](../market_data_storage.md)时会创建该文件夹，默认路径也指向此文件夹。删除此文件夹会删除对应存储中的全部已下载市场数据。如果存储中包含 CSV 文件，可以使用标准文本编辑器或 MS Excel 编辑；BIN 文件不能手动编辑。
 - **exchange.csv** 和 **exchangeboard.csv** 包含**交易所**列表、交易品种代码和交易模式。这些文件可以使用标准文本编辑器或 MS Excel 编辑。
 - **security.csv** 包含所有来源接收和创建的全部交易品种。删除此文件会删除 [Designer](../../designer.md) 中的所有交易品种。添加新交易品种的方法请参阅[下载交易品种](../market_data_storage/download_instruments.md)和[创建交易品种](../market_data_storage/create_instrument.md)。该文件可以使用标准文本编辑器或 MS Excel 编辑。

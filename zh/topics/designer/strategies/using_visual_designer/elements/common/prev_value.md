@@ -19,4 +19,4 @@
 
 ## 推荐内容
 
-[Random](random.md)
+[随机值](random.md)

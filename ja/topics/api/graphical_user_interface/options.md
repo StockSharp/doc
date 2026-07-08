@@ -2,8 +2,8 @@
 
 [S#](../../api.md) には、オプションを扱うためのグラフィカルコンポーネントがいくつか含まれています。 
 
-- [OptionDesk](options/option_desk.md) - オプションデスク。
-- [OptionPositionChart](options/position_chart.md) - 原資産に対するポジションとオプション Greeks を表示するチャート。
+- [オプションデスク](options/option_desk.md) - オプションデスク。
+- [ポジションチャート](options/position_chart.md) - 原資産に対するポジションとオプション Greeks を表示するチャート。
 
 ## 推奨コンテンツ
 

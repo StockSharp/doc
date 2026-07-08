@@ -14,7 +14,7 @@
 
 参数
 
-- **Type** - 消息类型（弹出窗口、电子邮件、短信等）。通知类型在 [Notification settings](../../../../../terminal/notifications.md) 章节中说明。
+- **Type** - 消息类型（弹出窗口、电子邮件、短信等）。通知类型在[通知设置](../../../../../terminal/notifications.md)章节中说明。
 - **Telegram** - 用于发送 Telegram 通知的频道。
 - **Header** - 消息标题。
 
@@ -22,4 +22,4 @@
 
 [字符串格式化](string_format.md)
 [字符串拼接](string_concat.md)
-[Notification settings](../../../../../terminal/notifications.md)
+[通知设置](../../../../../terminal/notifications.md)

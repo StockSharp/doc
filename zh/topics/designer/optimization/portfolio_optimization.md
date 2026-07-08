@@ -1,6 +1,6 @@
 # 投资组合优化
 
-[Designer](../../designer.md) 支持同时在多个交易品种上测试同一个策略。为此，请单击 [Optimization](brute_force.md) 按钮。
+[Designer](../../designer.md) 支持同时在多个交易品种上测试同一个策略。为此，请单击[优化](brute_force.md)按钮。
 
 ![Designer Portfolio testing](../../../images/designer_portfolio_testing.png)
 

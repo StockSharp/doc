@@ -21,7 +21,7 @@
 - [BV](list_of_indicators/balance_volume.md) - Balance Volume indicator。出来高を価格変化に結び付けます
 - [Bollinger](list_of_indicators/bollinger_bands.md) - Bollinger Bands。ボラティリティを測定し、買われ過ぎまたは売られ過ぎの状態を特定します
 - [BBP](list_of_indicators/bollinger_percent_b.md) - Bollinger %b。Bollinger Bands に対する価格位置を示します
-- [Pattern](../patterns.md) - Pattern。チャート上の特定の価格パターンを認識します
+- [パターン](../patterns.md) - チャート上の特定の価格パターンを認識します
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Center of Gravity Oscillator。潜在的な反転ポイントを特定します
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Chaikin Money Flow。出来高に基づいて買い圧力と売り圧力を測定します
 - [Chaikin's Volatility](list_of_indicators/chv.md) - Chaikin volatility。取引レンジの変化率を測定します

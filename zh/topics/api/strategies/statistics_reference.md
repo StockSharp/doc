@@ -2,7 +2,7 @@
 
 [StatisticManager](xref:StockSharp.Algo.Statistics.StatisticManager) 管理一组 [IStatisticParameter](xref:StockSharp.Algo.Statistics.IStatisticParameter) 实例。每个参数在策略执行期间跟踪特定指标。所有可用参数都使用 [StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry) 创建。
 
-有关使用策略统计的一般概述，请参阅 [Statistics](statistics.md) 部分。
+有关使用策略统计的一般概述，请参阅[策略统计](statistics.md)部分。
 
 ## 接口
 
