@@ -8,8 +8,8 @@
 
 - 特殊 [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) 文本字段，它通过输入 Id \- \[Code\]@\[Board\] 生成一个*连续*的工具。
 - [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) 组件是一个用于处理属于*连续*工具的工具的特殊 DataGrid。工具被封装在 [SecurityJump](xref:StockSharp.Xaml.SecurityJump) 类中，该类具有两个属性：[SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) 和 [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date)（向前滚动）。添加的工具存储在 [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps) 列表中。该组件具有 [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) 函数，用于检查组件工具的正确性。
-- 用于添加/删除乐器的按钮。
-- **自动** 按钮允许你自动创建一个*连续*乐器。
+- 用于添加/删除交易品种的按钮。
+- **自动** 按钮允许你自动创建一个*连续*交易品种。
 - **确定**按钮完成*连续*交易品种的创建。
 
 **主要属性**

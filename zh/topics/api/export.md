@@ -114,7 +114,7 @@ await exporter.Export(tickMessages, token);
 - **TemplateTxtLevel1** — Level1 数据的模板。
 - **TemplateTxtOrderLog** — 订单日志模板。
 - **TemplateTxtTransaction** — 交易模板。
-- **TemplateTxtSecurity** — 乐器模板。
+- **TemplateTxtSecurity** — 交易品种模板。
 - **TemplateTxtNews** — 新闻模板。
 
 模板可以根据需要进行自定义或替换。注册表实现了 [IPersistable](xref:Ecng.Serialization.IPersistable)，可以从设置中保存/加载。

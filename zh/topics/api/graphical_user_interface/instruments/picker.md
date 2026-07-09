@@ -12,15 +12,15 @@
 
 **主要属性**
 
-- [SecurityPicker.SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) - 乐器选择模式：单个，多个。
+- [SecurityPicker.SelectionMode](xref:StockSharp.Xaml.SecurityPicker.SelectionMode) - 交易品种选择模式：单个，多个。
 - [SecurityPicker.ShowCommonStatColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonStatColumns) - 显示主要列。
 - [SecurityPicker.ShowCommonOptionColumns](xref:StockSharp.Xaml.SecurityPicker.ShowCommonOptionColumns) - 显示选项的主要列。
 - [SecurityPicker.Title](xref:StockSharp.Xaml.SecurityPicker.Title) - 显示在组件顶部的标题。
-- [SecurityPicker.Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) - 乐器清单。
-- [SecurityPicker.SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) - 所选乐器。
+- [SecurityPicker.Securities](xref:StockSharp.Xaml.SecurityPicker.Securities) - 交易品种列表。
+- [SecurityPicker.SelectedSecurity](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurity) - 所选交易品种。
 - [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) - 所选交易品种列表。
 - [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) - 筛选过的交易品种列表。
-- [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) - 隐藏乐器的列表。
+- [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) - 隐藏交易品种的列表。
 - [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) - 所选的工具类型。
 - [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) - 关于交易品种信息的提供者。
 - [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) - 市场数据提供商。

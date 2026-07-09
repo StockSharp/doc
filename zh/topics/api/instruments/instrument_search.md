@@ -1,4 +1,4 @@
-# 乐器搜索
+# 交易品种搜索
 
 大多数与美国股票交易所的连接器（例如 [Interactive Brokers](../connectors/stock_market/interactive_brokers.md)、[PolygonIO](../connectors/stock_market/polygonio.md) 等）在通过 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法建立连接后，并不会向客户端传输所有可用的交易品种。这是由于美国交易所交易的工具数量庞大，因此这样做是为了减轻经纪商服务器和数据源的负载。
 
@@ -6,7 +6,7 @@
 
 在 S# 中搜索工具时，使用订阅机制，类似于接收市场数据。这种方法允许对所有类型的数据，包括工具，使用统一的代码。
 
-### 为乐器搜索创建订阅
+### 为交易品种搜索创建订阅
 
 要搜索工具，您需要创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例，并以包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息为基础：
 
@@ -45,8 +45,8 @@ var subscription = new Subscription(lookupMessage);
 - **ExpiryDate** — 到期日（用于衍生品）
 - **行权价** — 期权的行权价
 - **OptionType** — 期权类型（适用于期权）
-- **名称** — 乐器名称或其部分
-- **类** — 乐器类别
+- **名称** — 交易品种名称或其部分
+- **类** — 交易品种类别
 
 ### 正在处理搜索结果
 
@@ -92,7 +92,7 @@ Connector.SubscriptionFailed += OnSubscriptionFailed;
 Connector.Subscribe(subscription);
 ```
 
-### 乐器搜索完整示例
+### 交易品种搜索完整示例
 
 下面是一个用于搜索交易品种的方法的完整示例：
 

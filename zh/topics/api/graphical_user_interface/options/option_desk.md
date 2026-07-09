@@ -123,7 +123,7 @@
    		_assets.Add(security);
    };
    ```
-5. 选择乐器时：
+5. 选择交易品种时：
    - 用一连串选项填充数组，其中所选的工具作为基础资产；
    - 将此数组分配给 [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options) 属性；
    - 使用 [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear) 方法清除选项板的值。
