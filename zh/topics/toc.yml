@@ -407,7 +407,7 @@
       href: terminal/user_interface/logs.md
     - name: 投资组合
       href: terminal/user_interface/portfolios.md
-    - name: 董事会编辑器
+    - name: 交易板编辑器
       href: terminal/user_interface/board_editor.md
     - name: 风险管理
       href: terminal/user_interface/risk_management.md
