@@ -56,7 +56,7 @@ _connector.SecurityReceived += (subscription, security) =>
 	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
 	BufferSecurity.Add(security);
 	
-	// If this is the target instrument, subscribe to its data
+	// 如果这是目标交易品种，则订阅其数据
 	if (security.Id == targetSecurityId)
 	{
 		// 订单簿订阅

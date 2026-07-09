@@ -165,8 +165,8 @@ var historicalSubscription = new Subscription(
 	MarketData =
 	{
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-		To = DateTime.Today,  // Specify end date
-		BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
+		To = DateTime.Today,  // Enddatum angeben
+		BuildMode = MarketDataBuildModes.Load  // Nur fertige Daten laden
 	}
 };
 _connector.Subscribe(historicalSubscription);
@@ -230,7 +230,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // Volumenkerzen (jede Kerze enthält 1000 Kontrakte Volumen)
 var volumeCandleSubscription = new Subscription(
-	DataType.Volume(1000m),  // Specify candle type and volume
+	DataType.Volume(1000m),  // Kerzentyp und Volumen angeben
 	security)
 {
 	MarketData =
@@ -247,7 +247,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // Tickanzahl-Kerzen (jede Kerze enthält 1000 Trades)
 var tickCandleSubscription = new Subscription(
-	DataType.Tick(1000),  // Specify candle type and number of trades
+	DataType.Tick(1000),  // Kerzentyp und Anzahl der Trades angeben
 	security)
 {
 	MarketData =
@@ -264,7 +264,7 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // Price-Range-Kerzen mit einer Spanne von 0,1 Einheiten
 var rangeCandleSubscription = new Subscription(
-	DataType.Range(0.1m),  // Specify candle type and price range
+	DataType.Range(0.1m),  // Kerzentyp und Preisspanne angeben
 	security)
 {
 	MarketData =
@@ -281,7 +281,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // Renko-Kerzen mit einer Schrittweite von 0,1
 var renkoCandleSubscription = new Subscription(
-	DataType.Renko(0.1m),  // Specify candle type and block size
+	DataType.Renko(0.1m),  // Kerzentyp und Blockgröße angeben
 	security)
 {
 	MarketData =
@@ -298,7 +298,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Point-and-Figure-Kerzen
 var pnfCandleSubscription = new Subscription(
-	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
+	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // P&F-Parameter angeben
 	security)
 {
 	MarketData =

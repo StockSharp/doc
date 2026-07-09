@@ -104,7 +104,7 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 {
 	var keywordsList = keywords.ToList();
 	
-	// If already subscribed to news,
+	// 如果已订阅新闻，
 	// 只需设置处理器
 	_connector.NewsReceived += (subscription, news) =>
 	{

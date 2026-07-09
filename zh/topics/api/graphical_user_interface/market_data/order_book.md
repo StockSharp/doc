@@ -101,7 +101,7 @@ public class MarketDepthWithOrdersWindow
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 		
-		// If necessary, create a subscription to orders
+		// 如有必要，创建订单订阅
 		var ordersSubscription = new Subscription(DataType.Transactions, null);
 		_connector.Subscribe(ordersSubscription);
 	}
@@ -147,7 +147,7 @@ public (decimal? BestBid, decimal? BestAsk) GetBestPrices(IOrderBookMessage dept
 	return (bestBid, bestAsk);
 }
 
-// Using the method to display spread
+// 使用该方法显示价差
 private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 {
 	if (depth.SecurityId != _security.ToSecurityId())

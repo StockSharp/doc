@@ -44,7 +44,7 @@ class Authenticator : Disposable
 	// API 密钥
 	public SecureString Secret { get; }
 	
-	// Passphrase (if required by the exchange)
+	// Passphrase（如果交易所要求）
 	public SecureString Passphrase { get; }
 
 	// 创建请求签名的方法

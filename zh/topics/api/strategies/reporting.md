@@ -62,7 +62,7 @@ source.AddOrder(new ReportOrder(
 在大量订单和交易的情况下，`ReportSource` 自动聚合数据以减少报告大小：
 
 ```csharp
-// Automatic aggregation threshold (default is 10000)
+// 自动聚合阈值（默认值为 10000）
 source.MaxOrdersBeforeAggregation = 5000;
 source.MaxTradesBeforeAggregation = 5000;
 

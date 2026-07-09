@@ -88,7 +88,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription != _subscription)
 		return;
 
-	// If you need to display only completed candles
+	// 如果只需要显示已完成的 K线
 	if (candle.State == CandleStates.Finished)
 	{
 		var chartData = new ChartDrawData();

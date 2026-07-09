@@ -55,7 +55,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	{
 		var tf = mdMsg.GetTimeFrame();
 
-		// If historical data is requested
+		// 如果请求了历史数据
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix();
@@ -188,7 +188,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// 如果这是订阅请求
 		// 订阅通过 WebSocket 接收 Level1 数据
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
@@ -198,7 +198,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// 如果这是取消订阅请求
 		// 取消接收 Level1 数据的订阅
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
@@ -266,7 +266,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// 如果这是订阅请求
 		// 订阅通过 WebSocket 接收订单簿数据
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
@@ -275,7 +275,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// 如果这是取消订阅请求
 		// 取消接收订单簿数据的订阅
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
@@ -309,7 +309,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		ServerTime = CurrentTime.ConvertToUtc(),
 
 		// 确定这是完整订单簿快照还是增量更新。
-		// If the exchange always sends only full order books and does not support incrementality,
+		// 如果交易所始终只发送完整订单簿且不支持增量更新，
 		// 则完全不需要设置此属性
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
@@ -332,7 +332,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If historical data is requested
+		// 如果请求了历史数据
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix(false);

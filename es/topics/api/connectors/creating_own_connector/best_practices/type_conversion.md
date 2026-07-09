@@ -16,7 +16,7 @@ A continuación se muestra un ejemplo de una clase con métodos de extensión pa
 ```cs
 static class Extensions
 {
-	// Converting StockSharp order side to exchange string representation
+	// Convertir el lado de la orden de StockSharp a la representación de cadena del exchange
 	public static string ToNative(this Sides side)
 	{
 		return side switch
@@ -27,7 +27,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order side string representation to StockSharp type
+	// Convertir la representación de cadena del lado de la orden del exchange al tipo de StockSharp
 	public static Sides ToSide(this string side)
 		=> side?.ToLowerInvariant() switch
 		{
@@ -36,7 +36,7 @@ static class Extensions
 			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
 		};
 
-	// Converting StockSharp order type to exchange string representation
+	// Convertir el tipo de orden de StockSharp a la representación de cadena del exchange
 	public static string ToNative(this OrderTypes? type)
 	{
 		return type switch
@@ -49,7 +49,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order type string representation to StockSharp type
+	// Convertir la representación de cadena del tipo de orden del exchange al tipo de StockSharp
 	public static OrderTypes ToOrderType(this string type)
 		=> type?.ToLowerInvariant() switch
 		{

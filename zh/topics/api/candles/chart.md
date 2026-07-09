@@ -261,10 +261,10 @@ private void ConfigureChartAppearance()
 	_candleElement.StrokeThickness = 1;
 	
 	// 配置整个图表
-	_chart.IsAutoRange = true;            // Automatic scaling
-	_chart.IsManualVerticalValues = false; // Automatic calculation of vertical values
-	_chart.BidEnabled = false;            // Disable display of best bid price
-	_chart.AskEnabled = false;            // Disable display of best ask price
+	_chart.IsAutoRange = true;            // 自动缩放
+	_chart.IsManualVerticalValues = false; // 自动计算垂直值
+	_chart.BidEnabled = false;            // 禁用最佳买价显示
+	_chart.AskEnabled = false;            // 禁用最佳卖价显示
 }
 ```
 

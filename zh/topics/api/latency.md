@@ -66,10 +66,10 @@ Latency = ExecutionMessage.LocalTime - StoredLocalTime
 // 创建带状态存储的管理器
 var manager = new LatencyManager(new LatencyManagerState());
 
-// Processing order registration (saving the send time)
+// 处理订单注册（保存发送时间）
 manager.ProcessMessage(orderRegisterMsg);
 
-// Processing confirmation (calculating latency)
+// 处理确认（计算延迟）
 TimeSpan? latency = manager.ProcessMessage(executionMsg);
 if (latency != null)
 {

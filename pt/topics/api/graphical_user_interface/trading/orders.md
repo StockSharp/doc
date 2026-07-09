@@ -98,7 +98,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		// Processamento adicional da ordem
 		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
 		
-		// If the order is in a final state, update the UI
+		// Se a ordem estiver num estado final, atualizar a UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {

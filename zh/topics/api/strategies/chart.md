@@ -171,7 +171,7 @@ smaElement.StrokeThickness = 2;
 smaElement.DrawStyle = DrawStyles.Line;
 smaElement.AntiAliasing = true;
 smaElement.ShowAxisMarker = true;
-smaElement.AutoAssignYAxis = true; // Automatically assign Y-axis
+smaElement.AutoAssignYAxis = true; // 自动分配 Y 轴
 ```
 
 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) 接口提供以下属性用于配置：

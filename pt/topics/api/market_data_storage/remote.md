@@ -82,7 +82,7 @@ foreach (var dateTime in dates)
 Os dados carregados e guardados localmente podem ser usados para testar estratégias de negociação com o [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
 
 ```cs
-// Using HistoryEmulationConnector
+// Usar HistoryEmulationConnector
 var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new StorageRegistry { DefaultDrive = remoteDrive });
 ```
 

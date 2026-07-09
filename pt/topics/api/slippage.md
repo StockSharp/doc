@@ -67,14 +67,14 @@ var manager = new SlippageManager(new SlippageManagerState());
 // Considerar apenas slippage desfavorável
 manager.CalculateNegative = false;
 
-// Processing market data (updating best prices)
+// Processar dados de mercado (atualizar melhores preços)
 manager.ProcessMessage(level1Msg);
 manager.ProcessMessage(quoteChangeMsg);
 
-// Processing order registration (saving the planned price)
+// Processar registo de ordem (guardar o preço planeado)
 manager.ProcessMessage(orderRegisterMsg);
 
-// Processing a trade (calculating slippage)
+// Processar uma negociação (calcular slippage)
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {

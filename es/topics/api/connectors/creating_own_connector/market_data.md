@@ -55,7 +55,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	{
 		var tf = mdMsg.GetTimeFrame();
 
-		// If historical data is requested
+		// Si se solicitan datos históricos
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix();
@@ -188,7 +188,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Si es una solicitud de suscripción
 		// Suscribirse para recibir datos Level1 vía WebSocket
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
@@ -198,7 +198,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Si es una solicitud de cancelación de suscripción
 		// Cancelar suscripción para recibir datos Level1
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
@@ -266,7 +266,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Si es una solicitud de suscripción
 		// Suscribirse para recibir datos del libro de órdenes vía WebSocket
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
@@ -275,7 +275,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Si es una solicitud de cancelación de suscripción
 		// Cancelar suscripción para recibir datos del libro de órdenes
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
@@ -309,7 +309,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		ServerTime = CurrentTime.ConvertToUtc(),
 
 		// Determinar si es una instantánea completa del libro de órdenes o una actualización incremental.
-		// If the exchange always sends only full order books and does not support incrementality,
+		// Si el exchange siempre envía solo libros de órdenes completos y no admite incrementalidad,
 		// entonces no es necesario establecer esta propiedad
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
@@ -332,7 +332,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If historical data is requested
+		// Si se solicitan datos históricos
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix(false);

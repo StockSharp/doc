@@ -201,7 +201,7 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 要接收策略发出的消息，需要通过 [LogManager](xref:Ecng.Logging.LogManager) 连接监听器：
 
 ```cs
-// Create log manager
+// 创建日志管理器
 var logManager = new LogManager();
 
 // Add log listener to console

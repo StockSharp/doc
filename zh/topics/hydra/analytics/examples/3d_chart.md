@@ -151,7 +151,7 @@ class chart3d_script(IAnalyticsScript):
 		for h in range(24):
 			y.append(str(h))
 
-		# Create a 2D array for Z values with dimensions: (number of securities) x (number of hours)
+		# 为 Z 值创建二维数组，维度为：（交易品种数量）x（小时数）
 		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
 
 		if data_type is None:

@@ -55,7 +55,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	{
 		var tf = mdMsg.GetTimeFrame();
 
-		// If historical data is requested
+		// Se forem solicitados dados históricos
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix();
@@ -188,7 +188,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Se for um pedido de subscrição
 		// Assinar recebimento de dados Level1 via WebSocket
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
@@ -198,7 +198,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Se for um pedido de cancelamento da subscrição
 		// Cancelar assinatura de recebimento de dados Level1
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
@@ -266,7 +266,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Se for um pedido de subscrição
 		// Assinar recebimento de dados do livro de ofertas via WebSocket
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
@@ -275,7 +275,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Se for um pedido de cancelamento da subscrição
 		// Cancelar assinatura de recebimento de dados do livro de ofertas
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
@@ -309,7 +309,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		ServerTime = CurrentTime.ConvertToUtc(),
 
 		// Determinar se é um snapshot completo do livro de ofertas ou uma atualização incremental.
-		// If the exchange always sends only full order books and does not support incrementality,
+		// Se a bolsa enviar sempre apenas livros de ofertas completos e não suportar incrementalidade,
 		// então não é necessário definir esta propriedade
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
@@ -332,7 +332,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If historical data is requested
+		// Se forem solicitados dados históricos
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix(false);

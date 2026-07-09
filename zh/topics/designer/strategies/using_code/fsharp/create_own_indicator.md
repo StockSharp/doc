@@ -78,7 +78,7 @@ type EmptyIndicator() as this =
 			result
 
 	/// <summary>
-	/// Load indicator settings from a given <see cref="SettingsStorage"/>.
+	/// 从指定的 <see cref="SettingsStorage"/> 加载指标设置。
 	/// </summary>
 	override this.Load(storage: SettingsStorage) =
 		base.Load(storage)

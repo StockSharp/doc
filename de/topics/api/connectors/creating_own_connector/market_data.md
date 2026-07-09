@@ -55,7 +55,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 	{
 		var tf = mdMsg.GetTimeFrame();
 
-		// If historical data is requested
+		// Wenn historische Daten angefordert werden
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix();
@@ -188,7 +188,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Wenn es sich um eine Abonnementanfrage handelt
 		// Level1-Daten per WebSocket abonnieren
 		await _socketClient.SubscribeTicker(symbol, cancellationToken);
 
@@ -198,7 +198,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Wenn es sich um eine Kündigungsanfrage handelt
 		// Abonnement für Level1-Daten stornieren
 		await _socketClient.UnSubscribeTicker(symbol, cancellationToken);
 	}
@@ -266,7 +266,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If this is a subscription request
+		// Wenn es sich um eine Abonnementanfrage handelt
 		// Orderbuchdaten per WebSocket abonnieren
 		await _socketClient.SubscribeOrderBook(symbol, cancellationToken);
 
@@ -275,7 +275,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 	}
 	else
 	{
-		// If this is an unsubscription request
+		// Wenn es sich um eine Kündigungsanfrage handelt
 		// Abonnement für Orderbuchdaten stornieren
 		await _socketClient.UnSubscribeOrderBook(symbol, cancellationToken);
 	}
@@ -309,7 +309,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		ServerTime = CurrentTime.ConvertToUtc(),
 
 		// Bestimmen, ob dies ein vollständiger Orderbuch-Snapshot oder ein inkrementelles Update ist.
-		// If the exchange always sends only full order books and does not support incrementality,
+		// Wenn die Börse immer nur vollständige Orderbücher sendet und keine inkrementellen Updates unterstützt,
 		// dann muss diese Eigenschaft überhaupt nicht gesetzt werden
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
@@ -332,7 +332,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 	if (mdMsg.IsSubscribe)
 	{
-		// If historical data is requested
+		// Wenn historische Daten angefordert werden
 		if (mdMsg.From is not null)
 		{
 			var from = (long)mdMsg.From.Value.ToUnix(false);

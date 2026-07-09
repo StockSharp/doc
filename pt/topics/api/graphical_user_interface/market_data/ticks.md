@@ -187,7 +187,7 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 	// Adicionar negociação ao TradeGrid na thread da interface
 	this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	
-	// If it's a large trade, you can highlight it or send a notification
+	// Se for uma negociação grande, pode destacá-la ou enviar uma notificação
 	if (tick.Volume >= _largeVolumeThreshold)
 	{
 		NotifyLargeVolumeTrade(tick);

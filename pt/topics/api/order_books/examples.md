@@ -71,7 +71,7 @@ Algoritmo:
 3. Registar os níveis de preço onde foram encontradas ordens com volume acima do limiar.
 
 ```cs
-double significantVolumeThreshold = 10000; // Example of a threshold value
+double significantVolumeThreshold = 10000; // Exemplo de valor de limiar
 
 Console.WriteLine("Significant volumes in the order book:");
 

@@ -23,7 +23,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 2. 使用 [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)) 方法发送订阅请求：
 
 ```cs
-var security = GetSecurity(); // Get the Security object you want to subscribe to
+var security = GetSecurity(); // 获取要订阅的 Security 对象
 				
 // 订阅订单簿
 var subscription = new Subscription(DataType.MarketDepth, security);

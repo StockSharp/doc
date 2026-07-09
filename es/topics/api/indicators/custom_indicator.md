@@ -7,11 +7,11 @@ Para crear su propio indicador, necesita implementar la interfaz [IIndicator](xr
 /// Media móvil simple.
 /// </summary>
 [DisplayName("SMA")]
-[Description("Simple Moving Average.")]
+[Description("Media móvil simple.")]
 public class SimpleMovingAverage : LengthIndicator<decimal>
 {
 	/// <summary>
-	/// Create <see cref="SimpleMovingAverage"/>.
+	/// Crea <see cref="SimpleMovingAverage"/>.
 	/// </summary>
 	public SimpleMovingAverage()
 	{
@@ -21,7 +21,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	/// <summary>
 	/// Valor de entrada del proceso.
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">Valor de entrada.</param>
 	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -118,7 +118,7 @@ Algunos indicadores son compuestos y utilizan otros indicadores en sus cálculos
 public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// Create <see cref="ChaikinVolatility"/>.
+	/// Crea <see cref="ChaikinVolatility"/>.
 	/// </summary>
 	public ChaikinVolatility()
 	{
@@ -155,7 +155,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// <summary>
 	/// Valor de entrada del proceso.
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">Valor de entrada.</param>
 	/// <returns>Valor resultante.</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -185,7 +185,7 @@ El último tipo de indicadores son aquellos que no sólo constan de otros indica
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// Crea <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
 	public AverageDirectionalIndex()
 		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
@@ -193,7 +193,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// Crea <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
 	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
 	/// <param name="movingAverage">Moving Average.</param>

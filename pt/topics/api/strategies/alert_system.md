@@ -27,7 +27,7 @@ Método base para enviar um alerta com tipo, legenda e mensagem especificados:
 // Com título e mensagem
 Alert(AlertNotifications type, string caption, string message);
 
-// With automatic caption (uses the strategy name)
+// Com legenda automática (usa o nome da estratégia)
 Alert(AlertNotifications type, string message);
 ```
 

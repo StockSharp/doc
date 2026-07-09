@@ -44,13 +44,13 @@ class HttpClient : BaseLogReceiver
 		_restClient = new RestClient(options);
 	}
 
-	// Method for getting a list of products (instruments) from the exchange
+	// 从交易所获取产品（交易品种）列表的方法
 	public async Task<IEnumerable<Product>> GetProducts(string type, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest("products", Method.Get)
 			.AddParameter("type", type);
 
-		// Using the ExecuteAsync extension method to execute the request
+		// 使用 ExecuteAsync 扩展方法执行请求
 		var response = await _restClient.ExecuteAsync<List<Product>>(request, cancellationToken);
 		return response.Data;
 	}

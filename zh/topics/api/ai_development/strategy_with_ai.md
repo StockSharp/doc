@@ -261,7 +261,7 @@ RegisterOrder(this.SellAtLimit(price, Volume));
 
 ```csharp
 var value = _sma.Process(candle);
-// Using value immediately — may not be ready
+// 立即使用该值 — 可能尚未准备好
 ```
 
 **正确**：

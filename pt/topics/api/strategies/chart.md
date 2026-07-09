@@ -171,7 +171,7 @@ smaElement.StrokeThickness = 2;
 smaElement.DrawStyle = DrawStyles.Line;
 smaElement.AntiAliasing = true;
 smaElement.ShowAxisMarker = true;
-smaElement.AutoAssignYAxis = true; // Automatically assign Y-axis
+smaElement.AutoAssignYAxis = true; // Atribuir automaticamente o eixo Y
 ```
 
 A interface [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) fornece as seguintes propriedades para configuração:

@@ -165,8 +165,8 @@ var historicalSubscription = new Subscription(
 	MarketData =
 	{
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-		To = DateTime.Today,  // Specify end date
-		BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
+		To = DateTime.Today,  // 指定结束日期
+		BuildMode = MarketDataBuildModes.Load  // 仅加载现成数据
 	}
 };
 _connector.Subscribe(historicalSubscription);
@@ -230,7 +230,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // 成交量 K线（每根 K线包含 1000 份合约的成交量）
 var volumeCandleSubscription = new Subscription(
-	DataType.Volume(1000m),  // Specify candle type and volume
+	DataType.Volume(1000m),  // 指定 K线类型和成交量
 	security)
 {
 	MarketData =
@@ -247,7 +247,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // tick 数 K线（每根 K线包含 1000 笔成交）
 var tickCandleSubscription = new Subscription(
-	DataType.Tick(1000),  // Specify candle type and number of trades
+	DataType.Tick(1000),  // 指定 K线类型和成交笔数
 	security)
 {
 	MarketData =
@@ -264,7 +264,7 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // 范围为 0.1 单位的价格区间 K线
 var rangeCandleSubscription = new Subscription(
-	DataType.Range(0.1m),  // Specify candle type and price range
+	DataType.Range(0.1m),  // 指定 K线类型和价格范围
 	security)
 {
 	MarketData =
@@ -281,7 +281,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // 步长为 0.1 的 Renko K线
 var renkoCandleSubscription = new Subscription(
-	DataType.Renko(0.1m),  // Specify candle type and block size
+	DataType.Renko(0.1m),  // 指定 K线类型和砖块大小
 	security)
 {
 	MarketData =
@@ -298,7 +298,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Point and Figure K线
 var pnfCandleSubscription = new Subscription(
-	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
+	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // 指定 P&F 参数
 	security)
 {
 	MarketData =

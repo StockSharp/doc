@@ -432,7 +432,7 @@ var storageRegistry = new StorageRegistry
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
 };
 
-// Create the optimizer (brute force).
+// オプティマイザーを作成します（総当たり）。
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),

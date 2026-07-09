@@ -432,7 +432,7 @@ var storageRegistry = new StorageRegistry
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
 };
 
-// Create the optimizer (brute force).
+// 创建优化器（暴力搜索）。
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),

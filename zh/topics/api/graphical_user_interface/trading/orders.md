@@ -98,7 +98,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		// 订单的附加处理
 		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
 		
-		// If the order is in a final state, update the UI
+		// 如果订单处于最终状态，则更新 UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {

@@ -171,7 +171,7 @@ strategy.StatisticManager.Reset();
 var storage = new SettingsStorage();
 strategy.StatisticManager.Save(storage);
 
-// Loading
+// 加载
 strategy.StatisticManager.Load(storage);
 ```
 

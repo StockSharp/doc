@@ -27,7 +27,7 @@ StockSharp 中的策略具有内置警报系统，可发送各种类型的通知
 // 带标题和消息
 Alert(AlertNotifications type, string caption, string message);
 
-// With automatic caption (uses the strategy name)
+// 使用自动标题（使用策略名称）
 Alert(AlertNotifications type, string message);
 ```
 

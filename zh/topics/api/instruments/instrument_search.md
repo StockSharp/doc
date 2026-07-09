@@ -105,7 +105,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		SecurityId = new SecurityId
 		{
 			SecurityCode = searchCode,
-			// If you need to search on a specific board
+			// 如果需要在指定交易板上搜索
 			// BoardCode = ExchangeBoard.Nyse.Code,
 		},
 		SecurityType = securityType,
@@ -193,7 +193,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 	var lookupMessage = new SecurityLookupMessage
 	{
 		SecurityId = new SecurityId { SecurityCode = searchText },
-		// If a type is selected in the interface
+		// 如果在界面中选择了类型
 		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
 	};
 	
@@ -231,7 +231,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 	// 以模态对话框显示窗口
 	if (lookupWindow.ShowModal(this))
 	{
-		// If the user confirmed the selection, send the request
+		// 如果用户确认了选择，则发送请求
 		Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
 	}
 }

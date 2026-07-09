@@ -7,11 +7,11 @@
 /// 単純移動平均。
 /// </summary>
 [DisplayName("SMA")]
-[Description("Simple Moving Average.")]
+[Description("単純移動平均。")]
 public class SimpleMovingAverage : LengthIndicator<decimal>
 {
 	/// <summary>
-	/// Create <see cref="SimpleMovingAverage"/>.
+	/// <see cref="SimpleMovingAverage"/> を作成します。
 	/// </summary>
 	public SimpleMovingAverage()
 	{
@@ -21,7 +21,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	/// <summary>
 	/// 入力値を処理。
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">入力値。</param>
 	/// <returns>結果値。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -118,7 +118,7 @@ public override void Load(SettingsStorage storage)
 public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// Create <see cref="ChaikinVolatility"/>.
+	/// <see cref="ChaikinVolatility"/> を作成します。
 	/// </summary>
 	public ChaikinVolatility()
 	{
@@ -155,7 +155,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// <summary>
 	/// 入力値を処理。
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">入力値。</param>
 	/// <returns>結果値。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -185,7 +185,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// <see cref="AverageDirectionalIndex"/> を作成します。
 	/// </summary>
 	public AverageDirectionalIndex()
 		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
@@ -193,7 +193,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// <see cref="AverageDirectionalIndex"/> を作成します。
 	/// </summary>
 	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
 	/// <param name="movingAverage">Moving Average.</param>

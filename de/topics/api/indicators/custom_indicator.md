@@ -7,7 +7,7 @@ Um einen eigenen Indikator zu erstellen, müssen Sie das Interface [IIndicator](
 /// Einfacher gleitender Durchschnitt.
 /// </summary>
 [DisplayName("SMA")]
-[Description("Simple Moving Average.")]
+[Description("Einfacher gleitender Durchschnitt.")]
 public class SimpleMovingAverage : LengthIndicator<decimal>
 {
 	/// <summary>

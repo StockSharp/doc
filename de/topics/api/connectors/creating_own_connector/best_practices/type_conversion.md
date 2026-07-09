@@ -16,7 +16,7 @@ Nachfolgend finden Sie ein Beispiel für eine Klasse mit Erweiterungsmethoden zu
 ```cs
 static class Extensions
 {
-	// Converting StockSharp order side to exchange string representation
+	// StockSharp-Orderseite in Zeichenfolgendarstellung der Börse konvertieren
 	public static string ToNative(this Sides side)
 	{
 		return side switch
@@ -27,7 +27,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order side string representation to StockSharp type
+	// Zeichenfolgendarstellung der Börsen-Orderseite in StockSharp-Typ konvertieren
 	public static Sides ToSide(this string side)
 		=> side?.ToLowerInvariant() switch
 		{
@@ -36,7 +36,7 @@ static class Extensions
 			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
 		};
 
-	// Converting StockSharp order type to exchange string representation
+	// StockSharp-Ordertyp in Zeichenfolgendarstellung der Börse konvertieren
 	public static string ToNative(this OrderTypes? type)
 	{
 		return type switch
@@ -49,7 +49,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order type string representation to StockSharp type
+	// Zeichenfolgendarstellung des Börsen-Ordertyps in StockSharp-Typ konvertieren
 	public static OrderTypes ToOrderType(this string type)
 		=> type?.ToLowerInvariant() switch
 		{

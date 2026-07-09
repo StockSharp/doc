@@ -67,14 +67,14 @@ var manager = new SlippageManager(new SlippageManagerState());
 // 仅统计不利滑点
 manager.CalculateNegative = false;
 
-// Processing market data (updating best prices)
+// 处理市场数据（更新最优价格）
 manager.ProcessMessage(level1Msg);
 manager.ProcessMessage(quoteChangeMsg);
 
-// Processing order registration (saving the planned price)
+// 处理订单注册（保存计划价格）
 manager.ProcessMessage(orderRegisterMsg);
 
-// Processing a trade (calculating slippage)
+// 处理成交（计算滑点）
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {

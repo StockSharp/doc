@@ -71,7 +71,7 @@ foreach (var ask in orderBook.Asks)
 3. 记录发现订单量超过阈值的价格水平。
 
 ```cs
-double significantVolumeThreshold = 10000; // Example of a threshold value
+double significantVolumeThreshold = 10000; // 阈值示例
 
 Console.WriteLine("Significant volumes in the order book:");
 

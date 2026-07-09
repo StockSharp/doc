@@ -100,7 +100,7 @@ public class EvenNumberAttribute : ValidationAttribute
 	}
 }
 
-// Using custom validator
+// 使用自定义验证器
 _barCount = Param(nameof(BarCount), 10)
 				.SetValidator(new EvenNumberAttribute());
 ```

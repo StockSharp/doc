@@ -20,7 +20,7 @@ protected override void OnStarted2(DateTime time)
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
 	
-	// If additional parameters are required, you can configure the subscription
+	// 如需其他参数，可以配置订阅
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
 	
 	// 创建处理传入K线的规则

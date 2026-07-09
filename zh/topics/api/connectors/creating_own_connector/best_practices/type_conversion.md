@@ -16,7 +16,7 @@
 ```cs
 static class Extensions
 {
-	// Converting StockSharp order side to exchange string representation
+	// 将 StockSharp 订单方向转换为交易所字符串表示
 	public static string ToNative(this Sides side)
 	{
 		return side switch
@@ -27,7 +27,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order side string representation to StockSharp type
+	// 将交易所订单方向字符串表示转换为 StockSharp 类型
 	public static Sides ToSide(this string side)
 		=> side?.ToLowerInvariant() switch
 		{
@@ -36,7 +36,7 @@ static class Extensions
 			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
 		};
 
-	// Converting StockSharp order type to exchange string representation
+	// 将 StockSharp 订单类型转换为交易所字符串表示
 	public static string ToNative(this OrderTypes? type)
 	{
 		return type switch
@@ -49,7 +49,7 @@ static class Extensions
 		};
 	}
 
-	// Converting exchange order type string representation to StockSharp type
+	// 将交易所订单类型字符串表示转换为 StockSharp 类型
 	public static OrderTypes ToOrderType(this string type)
 		=> type?.ToLowerInvariant() switch
 		{

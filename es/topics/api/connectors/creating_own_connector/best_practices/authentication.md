@@ -44,7 +44,7 @@ class Authenticator : Disposable
 	// Clave secreta de API
 	public SecureString Secret { get; }
 
-	// Passphrase (if required by the exchange)
+	// Passphrase (si el exchange la requiere)
 	public SecureString Passphrase { get; }
 
 	// Método para crear una firma de solicitud

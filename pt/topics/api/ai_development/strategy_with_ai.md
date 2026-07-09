@@ -255,7 +255,7 @@ RegisterOrder(this.SellAtLimit(price, Volume));
 **Errado**:
 ```csharp
 var value = _sma.Process(candle);
-// Using value immediately — may not be ready
+// Usar o valor imediatamente — pode ainda não estar pronto
 ```
 
 **Correto**:

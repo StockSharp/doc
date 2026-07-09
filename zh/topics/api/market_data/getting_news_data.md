@@ -32,11 +32,11 @@ private void OnNewsReceived(Subscription subscription, News news)
 	Console.WriteLine($"Time: {news.ServerTime}");
 	Console.WriteLine($"URL: {news.Url}");
 
-	// If there is news text
+	// 如果存在新闻文本
 	if (!string.IsNullOrEmpty(news.Story))
 		Console.WriteLine($"Story: {news.Story}");
 
-	// If the news is related to specific instruments
+	// 如果新闻与特定交易品种相关
 	if (news.SecurityId != null)
 		Console.WriteLine($"Instrument: {news.SecurityId}");
 }

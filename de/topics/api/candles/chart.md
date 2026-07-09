@@ -261,10 +261,10 @@ private void ConfigureChartAppearance()
 	_candleElement.StrokeThickness = 1;
 
 	// Gesamtes Diagramm konfigurieren
-	_chart.IsAutoRange = true;            // Automatic scaling
-	_chart.IsManualVerticalValues = false; // Automatic calculation of vertical values
-	_chart.BidEnabled = false;            // Disable display of best bid price
-	_chart.AskEnabled = false;            // Disable display of best ask price
+	_chart.IsAutoRange = true;            // Automatische Skalierung
+	_chart.IsManualVerticalValues = false; // Automatische Berechnung vertikaler Werte
+	_chart.BidEnabled = false;            // Anzeige des besten Bid-Preises deaktivieren
+	_chart.AskEnabled = false;            // Anzeige des besten Ask-Preises deaktivieren
 }
 ```
 

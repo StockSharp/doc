@@ -145,7 +145,7 @@ member private this.OnProcess
 			isShortLessThenLong <- Some shortLess
 		| Some prevValue when prevValue <> shortLess ->
 			// 发生了交叉
-			// If short < long, that means Sell, otherwise Buy
+			// 如果 short < long，则表示卖出；否则表示买入
 			let direction =
 				if shortLess then
 					Sides.Sell
@@ -153,7 +153,7 @@ member private this.OnProcess
 					Sides.Buy
 
 			// 计算开新仓或反转持仓的数量
-			// If there is no position, use Volume; otherwise, double
+			// 如果没有持仓，则使用 Volume；否则加倍
 			// 取绝对持仓大小和 Volume 中的较小值
 			let vol =
 				if this.Position = 0m then

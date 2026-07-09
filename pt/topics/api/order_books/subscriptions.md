@@ -23,7 +23,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 2. Envie um pedido de subscrição usando o método [Connector.Subscribe](xref:StockSharp.Algo.Connector.Subscribe(StockSharp.BusinessEntities.Subscription)):
 
 ```cs
-var security = GetSecurity(); // Get the Security object you want to subscribe to
+var security = GetSecurity(); // Obter o objeto Security que pretende subscrever
 				
 // assinar o livro de ofertas
 var subscription = new Subscription(DataType.MarketDepth, security);

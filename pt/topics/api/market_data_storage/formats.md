@@ -96,7 +96,7 @@ var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     TimeSpan.FromMinutes(5),
     StorageFormats.Csv);
 
-// Load data
+// Carregar dados
 var from = new DateTime(2024, 1, 1);
 var to = new DateTime(2024, 1, 31);
 var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();

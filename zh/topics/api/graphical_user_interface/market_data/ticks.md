@@ -187,7 +187,7 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 	// 在用户界面线程中将成交添加到 TradeGrid
 	this.GuiAsync(() => TradeGrid.Trades.Add(tick));
 	
-	// If it's a large trade, you can highlight it or send a notification
+	// 如果是大额成交，可以高亮显示或发送通知
 	if (tick.Volume >= _largeVolumeThreshold)
 	{
 		NotifyLargeVolumeTrade(tick);

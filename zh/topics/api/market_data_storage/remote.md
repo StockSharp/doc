@@ -82,7 +82,7 @@ foreach (var dateTime in dates)
 已加载并本地保存的数据可以用于使用 [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) 测试交易策略。
 
 ```cs
-// Using HistoryEmulationConnector
+// 使用 HistoryEmulationConnector
 var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new StorageRegistry { DefaultDrive = remoteDrive });
 ```
 

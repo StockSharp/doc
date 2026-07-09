@@ -207,7 +207,7 @@ var logManager = new LogManager();
 var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
 logManager.Listeners.Add(fileListener);
 
-// Send email
+// Enviar e-mail
 var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
 emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
 logManager.Listeners.Add(emailListener);

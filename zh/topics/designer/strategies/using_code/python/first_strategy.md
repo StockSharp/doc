@@ -133,7 +133,7 @@ def OnProcess(self, candle, longValue, shortValue):
 	"""
 	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
-	# If candle is not finished, do nothing
+	# 如果 K线尚未完成，则不执行任何操作
 	if candle.State != CandleStates.Finished:
 		return
 

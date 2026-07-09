@@ -171,7 +171,7 @@ private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-	// Using extension methods for IOrderBookMessage
+	// 使用 IOrderBookMessage 的扩展方法
 	var bestBid = orderBook.GetBestBid();
 	var bestAsk = orderBook.GetBestAsk();
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);

@@ -81,7 +81,7 @@ if (info is not null)
 
 // 此代码根据条件检查是否需要激活保护订单
 // the current price (in this case, the candle's closing price) and time.
-// If the conditions are met, the ActiveProtection method is called.
+// 如果满足条件，则调用 ActiveProtection 方法。
 ```
 
 这里，烛线的收盘价被用作当前价格，但它可以是任何相关的价格值（e.g。，最后一次交易的价格或订单簿中的当前买卖价差）。

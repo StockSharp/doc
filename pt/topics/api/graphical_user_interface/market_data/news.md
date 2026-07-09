@@ -104,7 +104,7 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 {
 	var keywordsList = keywords.ToList();
 	
-	// If already subscribed to news,
+	// Se já existir subscrição de notícias,
 	// basta definir o manipulador
 	_connector.NewsReceived += (subscription, news) =>
 	{

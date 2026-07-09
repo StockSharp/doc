@@ -7,11 +7,11 @@
 /// 简单移动平均。
 /// </summary>
 [DisplayName("SMA")]
-[Description("Simple Moving Average.")]
+[Description("简单移动平均线。")]
 public class SimpleMovingAverage : LengthIndicator<decimal>
 {
 	/// <summary>
-	/// Create <see cref="SimpleMovingAverage"/>.
+	/// 创建 <see cref="SimpleMovingAverage"/>。
 	/// </summary>
 	public SimpleMovingAverage()
 	{
@@ -21,7 +21,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 	/// <summary>
 	/// 处理输入值。
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">输入值。</param>
 	/// <returns>结果值。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -118,7 +118,7 @@ public override void Load(SettingsStorage storage)
 public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// Create <see cref="ChaikinVolatility"/>.
+	/// 创建 <see cref="ChaikinVolatility"/>。
 	/// </summary>
 	public ChaikinVolatility()
 	{
@@ -155,7 +155,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// <summary>
 	/// 处理输入值。
 	/// </summary>
-	/// <param name="input">Input value.</param>
+	/// <param name="input">输入值。</param>
 	/// <returns>结果值。</returns>
 	protected override IIndicatorValue OnProcess(IIndicatorValue input)
 	{
@@ -185,7 +185,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// 创建 <see cref="AverageDirectionalIndex"/>。
 	/// </summary>
 	public AverageDirectionalIndex()
 		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
@@ -193,7 +193,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Create <see cref="AverageDirectionalIndex"/>.
+	/// 创建 <see cref="AverageDirectionalIndex"/>。
 	/// </summary>
 	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
 	/// <param name="movingAverage">Moving Average.</param>

@@ -165,8 +165,8 @@ var historicalSubscription = new Subscription(
 	MarketData =
 	{
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
-		To = DateTime.Today,  // Specify end date
-		BuildMode = MarketDataBuildModes.Load  // Only load ready-made data
+		To = DateTime.Today,  // Especificar fecha final
+		BuildMode = MarketDataBuildModes.Load  // Cargar solo datos ya preparados
 	}
 };
 _connector.Subscribe(historicalSubscription);
@@ -230,7 +230,7 @@ _connector.Subscribe(volumeProfileSubscription);
 ```cs
 // Velas de volumen (cada vela contiene un volumen de 1000 contratos)
 var volumeCandleSubscription = new Subscription(
-	DataType.Volume(1000m),  // Specify candle type and volume
+	DataType.Volume(1000m),  // Especificar tipo de vela y volumen
 	security)
 {
 	MarketData =
@@ -247,7 +247,7 @@ _connector.Subscribe(volumeCandleSubscription);
 ```cs
 // Velas por número de ticks (cada vela contiene 1000 operaciones)
 var tickCandleSubscription = new Subscription(
-	DataType.Tick(1000),  // Specify candle type and number of trades
+	DataType.Tick(1000),  // Especificar tipo de vela y número de operaciones
 	security)
 {
 	MarketData =
@@ -264,7 +264,7 @@ _connector.Subscribe(tickCandleSubscription);
 ```cs
 // Velas de rango de precio con rango de 0,1 unidades
 var rangeCandleSubscription = new Subscription(
-	DataType.Range(0.1m),  // Specify candle type and price range
+	DataType.Range(0.1m),  // Especificar tipo de vela y rango de precios
 	security)
 {
 	MarketData =
@@ -281,7 +281,7 @@ _connector.Subscribe(rangeCandleSubscription);
 ```cs
 // Velas Renko con paso de 0,1
 var renkoCandleSubscription = new Subscription(
-	DataType.Renko(0.1m),  // Specify candle type and block size
+	DataType.Renko(0.1m),  // Especificar tipo de vela y tamaño de bloque
 	security)
 {
 	MarketData =
@@ -298,7 +298,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ```cs
 // Velas Point and Figure
 var pnfCandleSubscription = new Subscription(
-	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Specify P&F parameters
+	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Especificar parámetros P&F
 	security)
 {
 	MarketData =
