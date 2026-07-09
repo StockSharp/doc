@@ -1,6 +1,6 @@
 # MAR
 
-**Moving Average Ribbon (MAR)** ist ein technischer Indikator, der mehrere gleitende Durchschnitte mit zunehmend zunehmenden Perioden anzeigt, um die Stärke und Richtung des Trends zu visualisieren.
+**Moving Average Ribbon (MAR)** ist ein technischer Indikator, der mehrere gleitende Durchschnitte mit progressiv zunehmenden Perioden anzeigt, um die Stärke und Richtung des Trends zu visualisieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MovingAverageRibbon](xref:StockSharp.Algo.Indicators.MovingAverageRibbon) verwenden.
 
@@ -17,7 +17,7 @@ Der Grundgedanke besteht darin, dass die gegenseitige Positionierung und Form di
 Der Indikator hat die folgenden Parameter:
 - **ShortPeriod** – anfänglicher (minimaler) Zeitraum für gleitende Durchschnitte (Standardwert: 10)
 - **LongPeriod** – letzter (maximaler) Zeitraum für gleitende Durchschnitte (Standardwert: 100)
-- **RibbonCount** – Anzahl der gleitenden Durchschnitte im Menüband (Standardwert: 10)
+- **RibbonCount** – Anzahl der gleitenden Durchschnitte im Band (Standardwert: 10)
 
 ## Berechnung
 
@@ -66,7 +66,7 @@ Der Moving Average Ribbon kann wie folgt interpretiert werden:
    - Flacher Winkel weist auf einen schwachen Trend hin
    - Die horizontale Positionierung des Bandes weist auf einen Seitwärtstrend hin
 
-5. **Price Position relativ zum Menüband**:
+5. **Preisposition relativ zum Band**:
    - Wenn der Preis über dem gesamten Band liegt, bestätigt dies einen starken Aufwärtstrend
    - Wenn der Preis unter dem gesamten Band liegt, bestätigt dies einen starken Abwärtstrend
    - Wenn sich der Preis innerhalb des Bandes bewegt, kann dies auf einen Übergangszustand oder eine Konsolidierung hinweisen
