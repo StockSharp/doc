@@ -80,7 +80,7 @@
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI, un RSI modificado con retraso reducido
 - [LRC](list_of_indicators/lrc.md) - Linear regression, pronostica precios futuros basados en tendencias pasadas
 - [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast, predice precios futuros
-- [R-Squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared, mide la fuerza de una relación lineal
+- [R cuadrado](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared, mide la fuerza de una relación lineal
 - [LRS](list_of_indicators/lrs.md) - Linear regression gradient, indica la pendiente de la recta de regresión
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period, determina el precio más bajo durante un período específico
 - [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator, correlaciona los movimientos del mercado con los ciclos lunares

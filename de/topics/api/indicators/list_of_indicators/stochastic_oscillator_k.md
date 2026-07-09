@@ -1,4 +1,4 @@
-# Stochastic Oscillator %K
+# Stochastischer Oszillator %K
 
 **Stochastic Oscillator %K** ist eine Komponente des stochastischen Oszillators, die die aktuelle Schlusspreisposition im Verhältnis zur Preisspanne über den ausgewählten Zeitraum anzeigt. Der Indikator wurde Ende der 1950er Jahre von George Lane entwickelt.
 

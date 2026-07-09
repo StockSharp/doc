@@ -1,4 +1,4 @@
-# R-Squared
+# R-Quadrat
 
 **R-Squared in Linear Regression (Linear Regression R-Squared)** ist ein technischer Indikator, der misst, wie gut die lineare Regression Preisdaten annähert und die Stärke des Markttrends bestimmt.
 

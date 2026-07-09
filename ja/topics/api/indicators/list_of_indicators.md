@@ -80,7 +80,7 @@
 - [LRSI](list_of_indicators/laguerre_rsi.md) - Laguerre RSI。遅延を低減した修正版 RSI です
 - [LRC](list_of_indicators/lrc.md) - Linear regression。過去のトレンドに基づいて将来価格を予測します
 - [LRF](list_of_indicators/linear_regression_forecast.md) - Linear Regression Forecast。将来価格を予測します
-- [R-Squared](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared。線形関係の強さを測定します
+- [R二乗](list_of_indicators/linear_reg_rsquared.md) - Linear regression R-squared。線形関係の強さを測定します
 - [LRS](list_of_indicators/lrs.md) - Linear regression gradient。回帰直線の傾きを示します
 - [Lowest](list_of_indicators/lowest.md) - Minimum value for a period。指定期間における最低価格を判定します
 - [LP](list_of_indicators/lunar_phase.md) - Lunar Phase indicator。市場変動と月相サイクルを関連付けます

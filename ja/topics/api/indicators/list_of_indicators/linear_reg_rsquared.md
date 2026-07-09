@@ -1,4 +1,4 @@
-# R-Squared
+# R二乗
 
 **R-Squared in Linear Regression (Linear Regression R-Squared)** は、線形回帰が価格データをどの程度よく近似しているかを測定し、市場トレンドの強さを判断するテクニカルインジケーターです。
 

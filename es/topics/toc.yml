@@ -1828,7 +1828,7 @@
         href: api/indicators/list_of_indicators/lrs.md
       - name: Linear Regression Forecast
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
-      - name: R-Squared
+      - name: R cuadrado
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
       - name: Lowest
         href: api/indicators/list_of_indicators/lowest.md

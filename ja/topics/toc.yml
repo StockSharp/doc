@@ -1828,7 +1828,7 @@
         href: api/indicators/list_of_indicators/lrs.md
       - name: Linear Regression Forecast
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
-      - name: R-Squared
+      - name: R二乗
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
       - name: Lowest
         href: api/indicators/list_of_indicators/lowest.md
@@ -1938,7 +1938,7 @@
         href: api/indicators/list_of_indicators/standard_deviation.md
       - name: Standard Error
         href: api/indicators/list_of_indicators/standard_error.md
-      - name: Stochastic Oscillator %K
+      - name: ストキャスティクス・オシレーター %K
         href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
       - name: Stochastic Oscillator
         href: api/indicators/list_of_indicators/stochastic_oscillator.md

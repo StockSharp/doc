@@ -1,4 +1,4 @@
-# Stochastic Oscillator %K
+# Oscilador estocástico %K
 
 **Stochastic Oscillator %K** es un componente del oscilador estocástico que muestra la posición actual del precio de cierre en relación con el rango de precios durante el período seleccionado. El indicador fue desarrollado por George Lane a finales de los años cincuenta.
 
