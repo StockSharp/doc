@@ -6,7 +6,7 @@ Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrolliere
 
 - [Instrumente](components/instruments.md) - ist eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
 - [Level 1](components/level_1.md) - ist eine Tabelle mit der Änderungshistorie von Level 1 für die ausgewählten Instrumente.
-- [Buy/Sell](components/buy_sell.md) - ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen für die ausgewählten Instrumente zu kaufen oder zu verkaufen.
+- [Kaufen/Verkaufen](components/buy_sell.md) - ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen für die ausgewählten Instrumente zu kaufen oder zu verkaufen.
 - [Orderbuch](components/order_book.md) - ist eine Tabelle mit Limit-Orders für Kauf und Verkauf.
 - [Chart](components/chart.md) - ermöglicht das Zeichnen von Kerzen und Indikatoren für das ausgewählte Instrument.
 - [P&L-Kurve](../../designer/user_interface/components/pnl_equity.md) - ist ein Chart für Profit/Loss (unrealisiert), Profit/Loss (realisiert) und Kommission.

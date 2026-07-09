@@ -26,7 +26,7 @@ Wenn Sie im Orderbuch auf die Schaltfläche **Settings** ![Designer Schedule 01]
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-Registrieren wir die ersten Orders. Orders können entweder über die Schaltflächen **Buy/Sell** oder durch Klicken auf die Zellen in den Spalten **Bid/Offer** des Orderbuchs registriert werden. Das Order-Panel zeigt alle Ihre Orders an. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order senden, die ausgewählte Order stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Order-Panel finden Sie im Abschnitt [Orders](user_interface/components/orders.md).
+Registrieren wir die ersten Orders. Orders können entweder über die Schaltflächen **Kaufen/Verkaufen** oder durch Klicken auf die Zellen in den Spalten **Bid/Offer** des Orderbuchs registriert werden. Das Order-Panel zeigt alle Ihre Orders an. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order senden, die ausgewählte Order stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Order-Panel finden Sie im Abschnitt [Orders](user_interface/components/orders.md).
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 

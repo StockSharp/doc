@@ -8,4 +8,4 @@ Die Komponente **Level 1** ist eine Tabelle mit der Änderungshistorie von **Lev
 
 ## Empfohlene Inhalte
 
-[Buy/Sell](buy_sell.md)
+[Kaufen/Verkaufen](buy_sell.md)

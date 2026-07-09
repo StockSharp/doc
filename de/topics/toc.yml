@@ -418,7 +418,7 @@
         href: terminal/user_interface/components/instruments.md
       - name: Level 1
         href: terminal/user_interface/components/level_1.md
-      - name: Buy/Sell
+      - name: Kaufen/Verkaufen
         href: terminal/user_interface/components/buy_sell.md
       - name: Orderbuch
         href: terminal/user_interface/components/order_book.md
