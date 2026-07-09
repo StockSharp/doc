@@ -1,6 +1,6 @@
 # Libro de órdenes
 
-El componente **Order book** es una tabla de órdenes limitadas de compra y venta.
+El componente **Libro de órdenes** es una tabla de órdenes limitadas de compra y venta.
 
 Al hacer clic en el botón de configuración ![Designer The quick access toolbar 02](../../../../images/designer_quick_access_toolbar_02.png), aparece un panel donde puede establecer el instrumento y la cartera necesarios, así como configurar las opciones de visualización del libro de órdenes.
 

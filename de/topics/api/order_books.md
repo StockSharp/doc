@@ -6,7 +6,7 @@ Das Orderbuch (auch Market Depth) enthält Informationen über aktuelle Kauf- un
 
 ## Struktur
 
-Das [Order Book](xref:StockSharp.Messages.IOrderBookMessage) enthält zwei Orderlisten:
+Das [Orderbuch](xref:StockSharp.Messages.IOrderBookMessage) enthält zwei Orderlisten:
 
 - Kauforders, absteigend nach Preis sortiert - [Bids](xref:StockSharp.Messages.IOrderBookMessage.Bids).
 - Verkaufsorders, aufsteigend nach Preis sortiert - [Asks](xref:StockSharp.Messages.IOrderBookMessage.Asks).
@@ -24,4 +24,3 @@ Orderbuchdaten werden verwendet für:
 ## Datenabruf
 
 In StockSharp erfolgt das Abonnieren von Orderbuchdaten und der Empfang von Aktualisierungen über die entsprechenden [API-Methoden](order_books/subscriptions.md).
-

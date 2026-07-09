@@ -1,6 +1,6 @@
 # Desenhar o livro de ordens
 
-Uma estratégia criada a partir de código pode desenhar dados no painel [Livro de ordens](../../../user_interface/components/order_book.md), de forma semelhante ao cubo [Order Book](../../using_visual_designer/elements/market_depths/order_book_panel.md). Para isso, é necessário escrever o seguinte código.
+Uma estratégia criada a partir de código pode desenhar dados no painel [Livro de ordens](../../../user_interface/components/order_book.md), de forma semelhante ao cubo [Painel de livro de ofertas](../../using_visual_designer/elements/market_depths/order_book_panel.md). Para isso, é necessário escrever o seguinte código.
 
 1. Crie um descendente da interface [IOrderBookSource](xref:StockSharp.Algo.Strategies.IOrderBookSource), que o **Designer** usa para identificar a fonte. No exemplo, é usada a classe [OrderBookSource](xref:StockSharp.Algo.Strategies.OrderBookSource), que é a implementação predefinida da interface:
 

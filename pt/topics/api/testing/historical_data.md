@@ -252,7 +252,7 @@ Nas versões mais recentes de [S#](../../api.md), o exemplo de teste histórico 
 - Ticks (transações)
 - Livros de ordens
 - Candles de diferentes timeframes
-- Order log
+- Log de ordens
 - Dados Level1 (melhores preços)
 - Combinações de diferentes tipos de dados
 

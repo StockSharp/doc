@@ -8,11 +8,11 @@ O cubo é usado para obter um livro de ordens esparso para o instrumento especif
 
 ### Sockets de entrada
 
-- Order book - o livro de ordens que tem de ser rarefeito.
+- Livro de ordens - o livro de ordens que tem de ser rarefeito.
 
 ### Sockets de saída
 
-- Order book - o livro de ordens esparso.
+- Livro de ordens - o livro de ordens esparso.
 
 ### Parâmetros
 

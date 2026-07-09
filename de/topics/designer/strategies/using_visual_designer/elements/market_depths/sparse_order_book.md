@@ -8,11 +8,11 @@ Der Würfel wird verwendet, um ein ausgedünntes Orderbuch für das angegebene I
 
 ### Eingehende Sockets
 
-- Order book - das Orderbuch, das ausgedünnt werden soll.
+- Orderbuch - das Orderbuch, das ausgedünnt werden soll.
 
 ### Ausgehende Sockets
 
-- Order book - das ausgedünnte Orderbuch.
+- Orderbuch - das ausgedünnte Orderbuch.
 
 ### Parameter
 

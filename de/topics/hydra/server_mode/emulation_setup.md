@@ -18,7 +18,7 @@ Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulat
 ![hydra emulator prop](../../../images/hydra_emulator_prop.png)
 
 - **Bei Berührung zusammenführen** - beim Emulieren der Trade-Zuordnung Orders zuordnen, wenn der Trade-Preis dem Orderpreis entspricht.
-- **Orderbuch (Gültigkeitsdauer)** - maximale Gültigkeitsdauer des Order Books im Emulator. Wenn das Order Book innerhalb des angegebenen Zeitraums nicht aktualisiert wurde, wird sein Wert gelöscht. Dies wird verwendet, um alte Order-Book-Daten zu entfernen, wenn Datenlücken vorhanden sind.
+- **Orderbuch (Gültigkeitsdauer)** - maximale Gültigkeitsdauer des Orderbuchs im Emulator. Wenn das Orderbuch innerhalb des angegebenen Zeitraums nicht aktualisiert wurde, wird sein Wert gelöscht. Dies wird verwendet, um alte Orderbuchdaten zu entfernen, wenn Datenlücken vorhanden sind.
 - **Fehlerprozentsatz** - Prozentsatz von Fehlern beim Registrieren neuer Orders (von 0 bis 100).
 - **Latenz** - die minimale Latenz registrierter Orders.
 - **Neuregistrierung** - ob die Re-Registrierung von Orders als einzelne Transaktion unterstützt wird.
@@ -26,14 +26,14 @@ Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulat
 - **Order-ID** - die Nummer, mit der der Emulator Kennungen für Orders generiert.
 - **Trade-Kennung** - die Nummer, mit der der Emulator Kennungen für Trades generiert.
 - **Transaktion** - die Nummer, mit der der Emulator Kennungen für Ordertransaktionen generiert.
-- **Spreadgröße** - Spread-Größe in Preisschritten. Wird verwendet, um den Spread beim Erzeugen des Order Books aus Tick-Trades zu bestimmen.
+- **Spreadgröße** - Spread-Größe in Preisschritten. Wird verwendet, um den Spread beim Erzeugen des Orderbuchs aus Tick-Trades zu bestimmen.
 - **Orderbuchtiefe** - maximale Order-Book-Tiefe, die aus Ticks erzeugt wird.
 - **Anzahl der Volumenschritte** - die Anzahl der Volumenschritte, um die die Order größer ist als der Tick-Trade. Wird beim Testen auf Tick-Trades verwendet.
 - **Portfoliointervall** - Intervall für die Neuberechnung von Portfoliodaten. Wenn das Intervall 0 ist, erfolgt keine Neuberechnung.
 - **Zeit anpassen** - Zeit für Orders und Trades an die Börsenzeit anpassen.
 - **Zeitzone** - Informationen zur Zeitzone, in der sich die Börse befindet.
 - **Preisverschiebung** - Preisverschiebung vom letzten Trade, die die Grenzen der maximalen und minimalen Preise für die nächste Sitzung bestimmt.
-- **Zusätzliches Volumen hinzufügen** - zusätzliches Volumen zum Order Book hinzufügen, wenn Orders mit großem Volumen registriert werden.
+- **Zusätzliches Volumen hinzufügen** - zusätzliches Volumen zum Orderbuch hinzufügen, wenn Orders mit großem Volumen registriert werden.
 - **Status der Handelssitzung** - Prüfung des Handelsstatus.
 - **Geld** - Geldsaldo prüfen.
 - **Short** - Möglichkeit, Short-Positionen zu eröffnen.

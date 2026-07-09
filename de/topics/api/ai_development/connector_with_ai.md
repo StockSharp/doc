@@ -93,7 +93,7 @@ Add market data subscription to the adapter:
    - WebSocket: subscribe to channel kline_{symbol}_{interval}
    - Interval mapping: 1m, 5m, 15m, 1h, 4h, 1d
 
-2. Order book (MarketDataTypes.MarketDepth):
+2. Orderbuch (MarketDataTypes.MarketDepth):
    - WebSocket: subscribe to channel depth_{symbol}
    - Parse bids/asks into QuoteChangeMessage
 

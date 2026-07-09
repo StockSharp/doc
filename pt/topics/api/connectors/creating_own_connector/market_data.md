@@ -438,7 +438,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 }
 ```
 
-## Assinando o Order Log
+## Subscrição ao log de ordens
 
 O order log é uma informação detalhada sobre todas as mudanças no livro de ofertas, incluindo a adição, modificação e exclusão de ordens. Esses dados são específicos e não são fornecidos por todas as fontes de dados. Por exemplo, o Coinbase não suporta o fornecimento de order log.
 

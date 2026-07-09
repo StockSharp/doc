@@ -13,7 +13,7 @@ Para importar el registro de órdenes, seleccione **Importar \=\> Registro de ó
 
    Consulte la importación de [Velas](candles.md).
 
-   **Veamos un ejemplo de importación de Order Log desde un archivo CSV:**
+   **Veamos un ejemplo de importación del registro de órdenes desde un archivo CSV:**
    - El archivo desde el que desea importar datos tiene la siguiente plantilla:
 
      ```none

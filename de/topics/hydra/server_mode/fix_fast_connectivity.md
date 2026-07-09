@@ -88,7 +88,7 @@ _connector.TickTradeReceived += (subscription, trade) =>
 	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
-// Ereignis bei geändertem Order Book
+// Ereignis bei geändertem Orderbuch
 _connector.OrderBookReceived += (subscription, depth) =>
 {
 	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");

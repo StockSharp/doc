@@ -8,11 +8,11 @@ El cubo se usa para obtener un libro de órdenes disperso para el instrumento es
 
 ### Sockets de entrada
 
-- Order book - libro de órdenes que debe reducirse.
+- Libro de órdenes - libro de órdenes que debe reducirse.
 
 ### Sockets de salida
 
-- Order book - libro de órdenes disperso.
+- Libro de órdenes - libro de órdenes disperso.
 
 ### Parámetros
 

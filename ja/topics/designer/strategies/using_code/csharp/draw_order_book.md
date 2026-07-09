@@ -1,6 +1,6 @@
 # 板情報の描画
 
-コードから作成したストラテジーは、[板情報](../../../user_interface/components/order_book.md) パネルに、[Order Book](../../using_visual_designer/elements/market_depths/order_book_panel.md) キューブと同様にデータを描画できます。そのためには、次のコードを記述する必要があります。
+コードから作成したストラテジーは、[板情報](../../../user_interface/components/order_book.md) パネルに、[板情報パネル](../../using_visual_designer/elements/market_depths/order_book_panel.md) キューブと同様にデータを描画できます。そのためには、次のコードを記述する必要があります。
 
 1. [IOrderBookSource](xref:StockSharp.Algo.Strategies.IOrderBookSource) インターフェイスの派生を作成します。**Designer** はこれを使用してソースを識別します。この例では、インターフェイスの既定実装である [OrderBookSource](xref:StockSharp.Algo.Strategies.OrderBookSource) クラスを使用しています。
 

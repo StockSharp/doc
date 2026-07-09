@@ -1,6 +1,6 @@
 # Orderbuch zeichnen
 
-Eine Strategie aus Code kann Daten im Panel [Orderbuch](../../../user_interface/components/order_book.md) ähnlich wie der Würfel [Order Book](../../using_visual_designer/elements/market_depths/order_book_panel.md) zeichnen. Dafür muss der folgende Code geschrieben werden.
+Eine Strategie aus Code kann Daten im Panel [Orderbuch](../../../user_interface/components/order_book.md) ähnlich wie der Würfel [Orderbuch-Panel](../../using_visual_designer/elements/market_depths/order_book_panel.md) zeichnen. Dafür muss der folgende Code geschrieben werden.
 
 1. Erstellen Sie einen Nachfolger der Schnittstelle [IOrderBookSource](xref:StockSharp.Algo.Strategies.IOrderBookSource), die **Designer** verwendet, um die Quelle zu identifizieren. Im Beispiel wird die Klasse [OrderBookSource](xref:StockSharp.Algo.Strategies.OrderBookSource) verwendet, die die Standardimplementierung der Schnittstelle ist:
 
