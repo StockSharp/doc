@@ -1,6 +1,6 @@
 # Posições (opções)
 
-**Positions (options)** é uma apresentação gráfica da posição por opções.
+**Posições (opções)** é uma apresentação gráfica da posição por opções.
 
 Para apresentar a posição por opções, tem de selecionar o ativo subjacente e as opções com base nos preços das quais a posição será construída.
 

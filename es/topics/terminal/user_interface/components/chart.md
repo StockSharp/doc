@@ -1,6 +1,6 @@
 # Gráfico
 
-El componente **Chart** permite dibujar velas e indicadores para el instrumento seleccionado.
+El componente **Gráfico** permite dibujar velas e indicadores para el instrumento seleccionado.
 
 ![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
 
@@ -16,9 +16,9 @@ Al hacer clic en ![Designer Schedule 01](../../../../images/designer_schedule_01
 
 Puede registrar órdenes desde el gráfico. Para ello, primero especifique el **Instrumento** y la **Cartera** para los que se registrarán las órdenes.
 
-Las órdenes de compra se registrarán con la combinación de teclas **Ctrl+Left mouse button**.
+Las órdenes de compra se registrarán con la combinación de teclas **Ctrl+botón izquierdo del ratón**.
 
-Las órdenes de venta se registrarán con la combinación de teclas **Ctrl+Right mouse button**.
+Las órdenes de venta se registrarán con la combinación de teclas **Ctrl+botón derecho del ratón**.
 
 ![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
 

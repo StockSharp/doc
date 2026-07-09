@@ -1,6 +1,6 @@
 # Positionen (Optionen)
 
-**Positions (options)** ist eine grafische Darstellung der Optionsposition.
+**Positionen (Optionen)** ist eine grafische Darstellung der Optionsposition.
 
 Um die Optionsposition anzuzeigen, müssen Sie den Basiswert und die Optionen auswählen, auf deren Preisen die Position aufgebaut wird.
 

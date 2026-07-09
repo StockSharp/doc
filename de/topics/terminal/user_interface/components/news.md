@@ -1,10 +1,10 @@
 # Nachrichten
 
-Die Komponente **News** zeigt Nachrichten an, die von Verbindungen empfangen wurden.
+Die Komponente **Nachrichten** zeigt Nachrichten an, die von Verbindungen empfangen wurden.
 
-Um den Empfang von Nachrichten zu starten, klicken Sie auf die Schaltfläche **Receive news**.
+Um den Empfang von Nachrichten zu starten, klicken Sie auf die Schaltfläche **Nachrichten empfangen**.
 
-Im News-Panel können Sie Benachrichtigungen für ausgewählte Ereignisse konfigurieren - siehe [Benachrichtigungseinstellungen](../../notifications.md).
+Im Nachrichten-Panel können Sie Benachrichtigungen für ausgewählte Ereignisse konfigurieren - siehe [Benachrichtigungseinstellungen](../../notifications.md).
 
 ![Terminal news 00](../../../../images/terminal_news_00.png)
 

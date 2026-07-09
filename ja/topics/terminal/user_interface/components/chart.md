@@ -1,6 +1,6 @@
 # チャート
 
-**Chart** コンポーネントでは、選択した銘柄のローソク足とインジケーターを描画できます。
+**チャート** コンポーネントでは、選択した銘柄のローソク足とインジケーターを描画できます。
 
 ![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
 
@@ -14,11 +14,11 @@
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
-チャートから注文を登録できます。これを行うには、まず注文を登録する対象の **Instrument** と **Portfolio** を指定します。
+チャートから注文を登録できます。これを行うには、まず注文を登録する対象の **銘柄** と **ポートフォリオ** を指定します。
 
-買い注文は、**Ctrl+Left mouse button** のキーの組み合わせで登録されます。
+買い注文は、**Ctrl+左マウスボタン** のキーの組み合わせで登録されます。
 
-売り注文は、**Ctrl+Right mouse button** のキーの組み合わせで登録されます。
+売り注文は、**Ctrl+右マウスボタン** のキーの組み合わせで登録されます。
 
 ![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
 
@@ -37,4 +37,3 @@
 ## 関連項目
 
 [注文](../../../designer/user_interface/components/orders.md)
-
