@@ -1,6 +1,6 @@
 # Criar instrumento
 
-Ao clicar no botão **Create security** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), abre-se a janela **Editing**. Para criar um título, deve preencher as propriedades do título e clicar no botão **OK**:
+Ao clicar no botão **Criar instrumento** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), abre-se a janela **Edição**. Para criar um título, deve preencher as propriedades do título e clicar no botão **Confirmar**:
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 

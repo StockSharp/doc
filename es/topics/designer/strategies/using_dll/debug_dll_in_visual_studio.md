@@ -10,16 +10,16 @@ Visual Studio proporciona un mecanismo para adjuntarse a procesos en ejecución 
 
 ![Designer Debugging DLL cube using Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
-3. En el cuadro de diálogo **Attach to Process**, busque el proceso **Designer.exe** en la lista **Available processes** al que desea adjuntarse.
+3. En el cuadro de diálogo **Asociar al proceso**, busque el proceso **Designer.exe** en la lista **Procesos disponibles** al que desea adjuntarse.
 
 ![Designer Debugging DLL cube using Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
-Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **Show processes from all users**.
+Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **Mostrar procesos de todos los usuarios**.
 
-4. Es importante que la ventana **Attach to** especifique el tipo de código que debe depurarse. El parámetro predeterminado **Auto** intenta determinar el tipo de código que se debe depurar, pero no siempre identifica correctamente el tipo de código. Para establecer manualmente el tipo de código, debe realizar los siguientes pasos.
+4. Es importante que la ventana **Asociar a** especifique el tipo de código que debe depurarse. El parámetro predeterminado **Automático** intenta determinar el tipo de código que se debe depurar, pero no siempre identifica correctamente el tipo de código. Para establecer manualmente el tipo de código, debe realizar los siguientes pasos.
 
-- En el campo Attach to, haga clic en **Select**.
-- En el cuadro de diálogo **Select Code Type**, haga clic en el botón **Debug these code types** y seleccione los tipos para depuración.
+- En el campo Attach to, haga clic en **Seleccionar**.
+- En el cuadro de diálogo **Seleccionar tipo de código**, haga clic en el botón **Depurar estos tipos de código** y seleccione los tipos para depuración.
 - Haga clic en OK.
 
 ![Designer Debugging DLL cube using Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
@@ -32,7 +32,7 @@ Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **S
 
 ![Designer Debugging DLL cube using Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
-> [!WARNING] 
+> [!WARNING]
 > Cuando el código se detiene bajo el depurador, todos los procesos dentro del programa **Designer** se suspenden. Si el programa está conectado a trading real, en caso de una detención prolongada bajo el depurador se producirán desconexiones.
 
 ## Véase también

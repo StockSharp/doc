@@ -14,16 +14,16 @@ Después de pulsar el botón **Añadir** ![Designer Panel Circuits 01](../../../
 
 Para crear una estrategia desde código F#, debe seleccionar la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
-Después de pulsar **OK**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
+Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
 
 Pero en lugar de un diagrama, se mostrará un editor de código F#:
 
 ![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_fsharp_create_strategy_01.png)
 
-La pestaña del editor de código consta de los paneles **Source Code** y **Error List**. El panel **Source Code** contiene el propio editor de código F#. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Current Line**, **Line Number**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
+La pestaña del editor de código consta de los paneles **Código fuente** y **Lista de errores**. El panel **Código fuente** contiene el propio editor de código F#. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Línea actual**, **Número de línea**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
 
-El panel **Error List** es una tabla con la lista de errores en el código; al hacer doble clic en una fila, el cursor se moverá automáticamente en el panel **Source Code** a la ubicación del error.
+El panel **Lista de errores** es una tabla con la lista de errores en el código; al hacer doble clic en una fila, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error.
 
-Al editar el código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Error List**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
+Al editar el código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
 
 La ejecución de la estrategia en [backtest](../../backtesting/user_interface.md), en [live](../../live_execution/getting_started.md) y otras operaciones son similares a las de una estrategia creada a partir de diagramas.

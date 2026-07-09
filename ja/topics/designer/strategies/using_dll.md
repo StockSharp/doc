@@ -23,7 +23,7 @@
 
 ストラテジーがチャート関連インターフェイスを使用する場合は、NuGet パッケージ [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces) を含めます。これらのインターフェイスには実際のチャートロジックは含まれておらず、コードをコンパイルするためだけに必要です。ストラテジーが **Designer** で実行されると、実際のチャート描画はこれらのインターフェイスを通じて行われます。
 
-4. ストラテジーを作成した後、**Build** タブの **Build Solution** を押してプロジェクトをビルドする必要があります。
+4. ストラテジーを作成した後、**ビルド** タブの **ソリューションをビルド** を押してプロジェクトをビルドする必要があります。
 
 ![Designer Visual Studio での DLL キューブ作成 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
@@ -37,7 +37,7 @@
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. ウィンドウで、アセンブリへのパス（.NET 6.0 と互換性がある必要があります）を指定し、型を選択する必要があります。後者が必要なのは、1 つの DLL に複数のストラテジー（または[インジケーター付きキューブ](using_dll/create_element_and_indicator.md)）を含められるためです。**OK** をクリックすると、ストラテジーが **Scheme** パネルに追加され、使用できる状態になります。
+2. ウィンドウで、アセンブリへのパス（.NET 6.0 と互換性がある必要があります）を指定し、型を選択する必要があります。後者が必要なのは、1 つの DLL に複数のストラテジー（または[インジケーター付きキューブ](using_dll/create_element_and_indicator.md)）を含められるためです。**確定** をクリックすると、ストラテジーが **スキーマ** パネルに追加され、使用できる状態になります。
 
 ![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
 

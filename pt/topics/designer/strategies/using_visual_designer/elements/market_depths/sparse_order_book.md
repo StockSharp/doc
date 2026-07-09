@@ -16,7 +16,7 @@ O cubo é usado para obter um livro de ordens esparso para o instrumento especif
 
 ### Parâmetros
 
-- **Price Range** - o intervalo de preços, com os passos nos quais o livro de ordens será rarefeito.
+- **Intervalo de preços** - o intervalo de preços, com os passos nos quais o livro de ordens será rarefeito.
 
 ## Conteúdo recomendado
 

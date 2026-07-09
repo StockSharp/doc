@@ -12,7 +12,7 @@ Depois de premir o botão **Adicionar** ![Designer Panel Circuits 01](../../../i
 
 Para criar uma estratégia a partir de blocos, tem de selecionar o separador **Esquema**. Também pode escolher um modelo que será usado como esquema inicial.
 
-Depois de premir **OK**, aparecerá uma nova estratégia na pasta **Estratégias** do painel **Esquema**. Surgirá um novo separador com a estratégia na área de trabalho e, ao navegar para ele, o separador **Backtest** será aberto automaticamente no friso. No painel **Esquema**, clicar com o botão direito do rato na estratégia abre um menu que permite renomear a estratégia, entre outras ações.
+Depois de premir **Confirmar**, aparecerá uma nova estratégia na pasta **Estratégias** do painel **Esquema**. Surgirá um novo separador com a estratégia na área de trabalho e, ao navegar para ele, o separador **Teste histórico** será aberto automaticamente no friso. No painel **Esquema**, clicar com o botão direito do rato na estratégia abre um menu que permite renomear a estratégia, entre outras ações.
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 

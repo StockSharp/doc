@@ -1,10 +1,10 @@
 # Beispiel für Live-Ausführung
 
-Um ein Beispiel in **Live** auszuführen, benötigen Sie:
+Um ein Beispiel in **Live-Handel** auszuführen, benötigen Sie:
 
 1. Das Testterminal **IB Trader Workstation (TWS) Demo** von [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md), das Sie auf der Website des Herstellers erhalten.
 
-2. Richten Sie das Terminal IB TWS Demo für die Arbeit mit [Designer](../../designer.md) ein. Siehe **IB TWS Setting demo** im Abschnitt [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md).
+2. Richten Sie das Terminal IB TWS Demo für die Arbeit mit [Designer](../../designer.md) ein. Siehe **IB TWS-Einstellungsbeispiel** im Abschnitt [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md).
 
 3. Richten Sie die Verbindung zu IB TWS Demo in [Designer](../../designer.md) ein und verbinden Sie sich.
 

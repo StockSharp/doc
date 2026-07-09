@@ -10,7 +10,7 @@ El cubo se usa para obtener el libro de órdenes del instrumento especificado.
 
 ### Sockets de salida
 
-- **Order book** - cambios del libro de órdenes desde el momento en que se suscribe a la recepción de datos (entrada del instrumento en la entrada del elemento).
+- **Libro de órdenes** - cambios del libro de órdenes desde el momento en que se suscribe a la recepción de datos (entrada del instrumento en la entrada del elemento).
 
 ## Contenido recomendado
 

@@ -4,16 +4,16 @@
 
 Dieses Element wird verwendet, um die Position zweier Werte relativ zueinander zu verfolgen, zum Beispiel um den Zeitpunkt der Kreuzung zweier Linien zu bestimmen.
 
-Der Vergleich erfolgt anhand der Werte an den beiden Sockets **Up** und **Down**.
+Der Vergleich erfolgt anhand der Werte an den beiden Sockets **Aufwärts** und **Abwärts**.
 
 ## Eingehende Sockets
 
-- **Up** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
-- **Down** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
+- **Aufwärts** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
+- **Abwärts** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
 
 ## Ausgehende Sockets
 
-- **Flag** – true, wenn **Up** größer als **Down** ist, andernfalls false.
+- **Markierung** – true, wenn **Aufwärts** größer als **Abwärts** ist, andernfalls false.
 
 ![Designer Crossing 01](../../../../../../images/designer_crossing_01.png)
 

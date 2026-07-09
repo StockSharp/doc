@@ -2,7 +2,7 @@
 
 Tal como ao criar um [cubo a partir de um diagrama](../../using_visual_designer/composite_elements.md), pode criar o seu próprio cubo com base em código F#. Esse cubo será mais funcional do que um cubo criado a partir de um diagrama.
 
-Para criar um cubo a partir de código, este deve ser criado na pasta **Own elements**:
+Para criar um cubo a partir de código, este deve ser criado na pasta **Elementos próprios**:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -36,7 +36,7 @@ type EmptyDiagramElement() as this =
 	[<DiagramExternal>]
 	member this.Output2 = output2Event.Publish
 
-	// Descomente a propriedade seguinte se quiser que o método Process 
+	// Descomente a propriedade seguinte se quiser que o método Process
 	// seja chamado sempre que for recebido um novo argumento
 	// (não é necessário esperar que todos os argumentos de entrada sejam recebidos).
 	//
@@ -105,7 +105,7 @@ let minValueParam =
 
 A utilização da classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) aplica automaticamente a abordagem de guardar e restaurar definições.
 
-A propriedade **MinValue** está marcada como básica e ficará visível no modo [Basic properties](../../using_visual_designer/diagram_panel.md).
+A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Basic properties](../../using_visual_designer/diagram_panel.md).
 
 A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) é responsável pelo momento da chamada do método com sockets de entrada:
 
@@ -114,13 +114,13 @@ A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEl
 //     with get () = false
 ```
 
-Se for descomentada, o método **Process** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma candle ou um valor numérico).
+Se for descomentada, o método **Processo** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma candle ou um valor numérico).
 
-Para adicionar o cubo resultante ao diagrama, é necessário selecionar o cubo criado na paleta, na secção **Own elements**:
+Para adicionar o cubo resultante ao diagrama, é necessário selecionar o cubo criado na paleta, na secção **Elementos próprios**:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
-> [!WARNING] 
+> [!WARNING]
 > Cubos em código F# não podem ser usados em estratégias criadas em código F#. Só podem ser usados em estratégias criadas [a partir de cubos](../../using_visual_designer.md).
 
 ## Ver também

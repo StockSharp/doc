@@ -8,15 +8,15 @@ Der Würfel wird verwendet, um einen eigenen Index zu erstellen.
 
 Ausgehende Sockets
 
-- **Instrument** - der berechnete Index, dargestellt als **Instrument**.
+- **Handelsinstrument** - der berechnete Index, dargestellt als **Handelsinstrument**.
 
 ### Parameter
 
 Parameter
 
 - **Index** - die mathematische Formel einer Kombination mehrerer Instrumente (zum Beispiel (AAPL@NASDAQ+10)\*(abs(20\/GOOG@NYSE)).
-- **Ignore errors** - das gesetzte Flag gibt an, dass Fehler bei der Berechnung des Index ignoriert werden.
-- **Calculate extended information** - das gesetzte Flag gibt an, dass bei der Berechnung des Index zusätzlich zu den Basisinformationen (Total volume, Opening price, Closing price, Highest price, Lowest price) auch die erweiterten Informationen (Total trade turnover, Opening volume, Closing volume, Maximum volume, Minimum volume) berechnet werden.
+- **Fehler ignorieren** - das gesetzte Flag gibt an, dass Fehler bei der Berechnung des Index ignoriert werden.
+- **Erweiterte Informationen berechnen** - das gesetzte Flag gibt an, dass bei der Berechnung des Index zusätzlich zu den Basisinformationen (Total volume, Opening price, Closing price, Highest price, Lowest price) auch die erweiterten Informationen (Total trade turnover, Opening volume, Closing volume, Maximum volume, Minimum volume) berechnet werden.
 
 Verfügbare mathematische Formeln entsprechen denen im Würfel [Formel](../common/formula.md).
 

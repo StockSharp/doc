@@ -8,20 +8,20 @@ O elemento é utilizado para obter informação sobre a alteração da posição
 
 Sockets de entrada
 
-- **Instrument** - o instrumento para o qual pretende obter uma posição.
-- **Portfolio** - a carteira para a qual pretende obter uma posição.
+- **Instrumento** - o instrumento para o qual pretende obter uma posição.
+- **Carteira** - a carteira para a qual pretende obter uma posição.
 
 ### Sockets de saída
 
 Sockets de saída
 
-- **Position** - o valor numérico da posição no instrumento ou o montante actual de fundos disponíveis na conta. Este valor é gerado quando a posição ou os fundos se alteram e depois de a estratégia ser iniciada.
+- **Posição** - o valor numérico da posição no instrumento ou o montante actual de fundos disponíveis na conta. Este valor é gerado quando a posição ou os fundos se alteram e depois de a estratégia ser iniciada.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Money** - quando a marcação na entrada está definida, o elemento aceita apenas a carteira; a posição monetária da carteira seleccionada é passada para a saída do elemento.
+- **Dinheiro** - quando a marcação na entrada está definida, o elemento aceita apenas a carteira; a posição monetária da carteira seleccionada é passada para a saída do elemento.
 
 ## Conteúdo recomendado
 

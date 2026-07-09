@@ -6,8 +6,8 @@ Die Komponente "Flag" wird verwendet, um ein binäres Flag zu verwalten, das auf
 
 ## Eingabe-Sockets
 
-- **Trigger**: Akzeptiert jeden Wert außer `False`. Setzt das Flag beim Empfang des ersten passenden Werts. Wenn das Flag bereits gesetzt ist, werden nachfolgende Signale ignoriert, bis es zurückgesetzt wird.
-- **Reset**: Akzeptiert jeden Wert außer `False`. Setzt das Flag zurück, sodass es auf nachfolgende Trigger reagieren kann.
+- **Auslöser**: Akzeptiert jeden Wert außer `False`. Setzt das Flag beim Empfang des ersten passenden Werts. Wenn das Flag bereits gesetzt ist, werden nachfolgende Signale ignoriert, bis es zurückgesetzt wird.
+- **Zurücksetzen**: Akzeptiert jeden Wert außer `False`. Setzt das Flag zurück, sodass es auf nachfolgende Trigger reagieren kann.
 
 ## Ausgabe-Sockets
 

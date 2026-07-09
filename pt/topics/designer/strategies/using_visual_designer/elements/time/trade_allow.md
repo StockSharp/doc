@@ -11,12 +11,12 @@ Este bloco é utilizado para verificar se a negociação é actualmente permitid
 ### Sockets de entrada
 
 
-- **Trigger** - o sinal que determina o momento em que a verificação deve ser efectuada.
+- **Acionador** - o sinal que determina o momento em que a verificação deve ser efectuada.
 
 ### Sockets de saída
 
 
-- **Flag** - uma flag que determina se a sessão de negociação está activa.
+- **Sinalizador** - uma flag que determina se a sessão de negociação está activa.
 
 ## Ver também
 

@@ -8,21 +8,21 @@ Dieser Block wird verwendet, um die wichtigsten „Greeks“ zum aktuellen Zeitp
 
 Eingehende Sockets
 
-- **Model** - das Berechnungsmodell (zum Beispiel Black-Scholes).
-- **Price of the Underlying Asset** - der Preis des Basiswerts.
-- **Maximum Deviation** - die maximale Abweichung.
+- **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
+- **Preis des Basiswerts** - der Preis des Basiswerts.
+- **Maximale Abweichung** - die maximale Abweichung.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Result** - das Ergebnis der Berechnung der wichtigsten „Greeks“ zum aktuellen Zeitpunkt: Delta, Gamma, Vega, Theta und Rho.
+- **Ergebnis** - das Ergebnis der Berechnung der wichtigsten „Greeks“ zum aktuellen Zeitpunkt: Delta, Gamma, Vega, Theta und Rho.
 
 ### Parameter
 
 Parameter
 
-- **Value** - kann den Typ eines „Greek“ annehmen: Delta, Gamma, Vega, Theta oder Rho. Bestimmt, welcher Wert vom Block ausgegeben wird.
+- **Wert** - kann den Typ eines „Greek“ annehmen: Delta, Gamma, Vega, Theta oder Rho. Bestimmt, welcher Wert vom Block ausgegeben wird.
 
 ## Siehe auch
 

@@ -13,7 +13,7 @@ O painel **Propriedades** está minimizado por predefinição no lado direito do
 - **Volume máximo de cotações na profundidade gerada** - o volume máximo de cotações no livro de ordens gerado.
 - **Intervalo** - o intervalo de tempo.
 - **P/L não realizado** - o intervalo de recálculo do lucro não realizado.
-- **Trades** - que negociações utilizar.
+- **Negócios** - que negociações utilizar.
 - **Profundidade de mercado** - que livros de ordens utilizar.
 - **Registo de ordens** - para utilizar o registo de ordens.
 - **Número de estratégias** - o número de estratégias testadas em simultâneo.

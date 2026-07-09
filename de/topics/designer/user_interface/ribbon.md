@@ -6,11 +6,11 @@ Das wichtigste Element der Benutzeroberfläche von [Designer](../../designer.md)
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 
-2. Die Registerkarte **Backtest** wird automatisch geöffnet, wenn auf dem Panel [Schema](schemas.md) eine Strategie ausgewählt wird. Die Registerkarte **Backtest** enthält die wichtigsten Elemente zum Erstellen, Debuggen, Testen und Optimieren von Strategien ([Strategie erstellen](../strategies/using_visual_designer.md), [Backtesting-Beispiel](../backtesting/getting_started.md)). Auf dieser Registerkarte wird die Strategie ausserdem für den realen Handel gestartet, und die benötigten Komponenten für Ihre Strategie werden ausgewählt: Chart, Orderbuch, Trades usw.
+2. Die Registerkarte **Rücktest** wird automatisch geöffnet, wenn auf dem Panel [Schema](schemas.md) eine Strategie ausgewählt wird. Die Registerkarte **Rücktest** enthält die wichtigsten Elemente zum Erstellen, Debuggen, Testen und Optimieren von Strategien ([Strategie erstellen](../strategies/using_visual_designer.md), [Backtesting-Beispiel](../backtesting/getting_started.md)). Auf dieser Registerkarte wird die Strategie ausserdem für den realen Handel gestartet, und die benötigten Komponenten für Ihre Strategie werden ausgewählt: Chart, Orderbuch, Trades usw.
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 
-3. Die Registerkarte **Live** ist speziell für den realen Handel vorgesehen. Details zu den Verbindungseinstellungen finden Sie unter [Connection Settings](../connections_settings.md). Der reale Handel mit [Designer](../../designer.md) wird unter [Live Trading](../live_execution/getting_started.md) beschrieben.
+3. Die Registerkarte **Live-Handel** ist speziell für den realen Handel vorgesehen. Details zu den Verbindungseinstellungen finden Sie unter [Connection Settings](../connections_settings.md). Der reale Handel mit [Designer](../../designer.md) wird unter [Live Trading](../live_execution/getting_started.md) beschrieben.
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 

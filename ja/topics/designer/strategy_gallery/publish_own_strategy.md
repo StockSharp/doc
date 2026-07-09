@@ -16,7 +16,7 @@
 - 説明
 - NuGet パッケージ識別子。 このパラメーターは、ストア内の製品へのリンクを設定するために必要です。たとえば、アドレス https://stocksharp.com/store/runner/ では、**runner** という単語がこのパラメーターを通じて指定されています。
 
-**Free** または **Paid** レベルへのアクセスは、メール [info@stocksharp.com](mailto:info@stocksharp.com) で連絡した後にのみ付与されます。既定では **Private** レベルが使用可能であり、選択したユーザー向けのプライベート形式でのみストラテジーを公開できます:
+**無料** または **有料** レベルへのアクセスは、メール [info@stocksharp.com](mailto:info@stocksharp.com) で連絡した後にのみ付与されます。既定では **非公開** レベルが使用可能であり、選択したユーザー向けのプライベート形式でのみストラテジーを公開できます:
 
 **保存** ボタンをクリックすると、ストラテジーは StockSharp サーバーに送信されます。
 
@@ -24,6 +24,6 @@
 
 ![Designer_publish_02](../../../images/designer_publish_02.png)
 
-**OK** ボタンをクリックすると、更新が成功したことを示すウィンドウが表示されます:
+**確定** ボタンをクリックすると、更新が成功したことを示すウィンドウが表示されます:
 
 ![Designer_publish_03](../../../images/designer_publish_03.png)

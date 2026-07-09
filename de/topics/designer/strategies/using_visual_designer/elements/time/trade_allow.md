@@ -11,12 +11,12 @@ Dieser Block wird verwendet, um zu prüfen, ob der Handel aktuell erlaubt ist. D
 ### Eingehende Sockets
 
 
-- **Trigger** - das Signal, das bestimmt, wann die Prüfung ausgeführt werden soll.
+- **Auslöser** - das Signal, das bestimmt, wann die Prüfung ausgeführt werden soll.
 
 ### Ausgehende Sockets
 
 
-- **Flag** - ein Flag, das bestimmt, ob die Handelssitzung aktiv ist.
+- **Markierung** - ein Flag, das bestimmt, ob die Handelssitzung aktiv ist.
 
 ## Siehe auch
 

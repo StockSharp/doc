@@ -23,7 +23,7 @@ El uso de DLL listas resulta familiar para quienes desean trabajar continuamente
 
 Si la estrategia usa interfaces de gráficos, incluya el paquete NuGet [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). Estas interfaces no contienen la lógica real de gráficos y solo son necesarias para compilar el código. Cuando la estrategia se ejecuta en **Designer**, el renderizado real de gráficos ocurre mediante estas interfaces.
 
-4. Después de crear la estrategia, el proyecto debe compilarse pulsando **Build Solution** en la pestaña **Build**.
+4. Después de crear la estrategia, el proyecto debe compilarse pulsando **Compilar solución** en la pestaña **Compilar**.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
@@ -37,7 +37,7 @@ Si la estrategia usa interfaces de gráficos, incluya el paquete NuGet [StockSha
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. En la ventana debe especificar la ruta al ensamblado (debe ser compatible con .NET 6.0) y elegir el tipo. Esto último es necesario porque una DLL puede contener varias estrategias (o [cubos con indicadores](using_dll/create_element_and_indicator.md)). Después de hacer clic en **OK**, la estrategia se añadirá al panel **Esquema** y estará lista para usarse:
+2. En la ventana debe especificar la ruta al ensamblado (debe ser compatible con .NET 6.0) y elegir el tipo. Esto último es necesario porque una DLL puede contener varias estrategias (o [cubos con indicadores](using_dll/create_element_and_indicator.md)). Después de hacer clic en **Aceptar**, la estrategia se añadirá al panel **Esquema** y estará lista para usarse:
 
 ![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
 

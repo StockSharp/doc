@@ -13,7 +13,7 @@ Nach dem Drücken von **Exportieren** erscheint je nach Inhaltstyp ein Fenster:
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - exportiert das Schema unverändert. Der Modus **Standalone** ist für Schemas erforderlich, die eigene Elemente oder Indikatoren verwenden. In diesem Fall werden alle inneren Elemente innerhalb des Strategiediagramms exportiert.
+  - scheme - exportiert das Schema unverändert. Der Modus **Eigenständig** ist für Schemas erforderlich, die eigene Elemente oder Indikatoren verwenden. In diesem Fall werden alle inneren Elemente innerhalb des Strategiediagramms exportiert.
   - code - konvertiert das Schema in C#-Code.
   - DLL - kompiliert das Schema in eine DLL. Geeignet, wenn Sie den Code vertraulich halten müssen.
 

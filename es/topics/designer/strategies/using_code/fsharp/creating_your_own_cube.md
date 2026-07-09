@@ -105,7 +105,7 @@ let minValueParam =
 
 El uso de la clase [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) aplica automáticamente el enfoque para guardar y restaurar la configuración.
 
-La propiedad **MinValue** está marcada como básica y será visible en el modo de [propiedades básicas](../../using_visual_designer/diagram_panel.md).
+La propiedad **Valor mínimo** está marcada como básica y será visible en el modo de [propiedades básicas](../../using_visual_designer/diagram_panel.md).
 
 La propiedad comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) es responsable del momento de llamada del método con sockets de entrada:
 
@@ -114,13 +114,13 @@ La propiedad comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEle
 //     with get () = false
 ```
 
-Si se descomenta, el método **Process** se llamará siempre en cuanto llegue al menos un valor (en el ejemplo, una vela o un valor numérico).
+Si se descomenta, el método **Proceso** se llamará siempre en cuanto llegue al menos un valor (en el ejemplo, una vela o un valor numérico).
 
 Para añadir el cubo resultante al diagrama, debe seleccionar el cubo creado en la paleta, en la sección **Elementos propios**:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
-> [!WARNING] 
+> [!WARNING]
 > Los cubos creados con código F# no pueden usarse en estrategias creadas con código F#. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).
 
 ## Véase también

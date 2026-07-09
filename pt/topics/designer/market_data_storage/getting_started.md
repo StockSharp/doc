@@ -1,6 +1,6 @@
 # Introdução
 
-Para criar um armazenamento de dados históricos, clique no botão ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) no separador **Market data**. Clique em ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) para alterar os parâmetros do armazenamento atual. Clique em ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) para eliminar o armazenamento atual da lista de armazenamentos.
+Para criar um armazenamento de dados históricos, clique no botão ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) no separador **Dados de mercado**. Clique em ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) para alterar os parâmetros do armazenamento atual. Clique em ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) para eliminar o armazenamento atual da lista de armazenamentos.
 
 ![Designer Creating a repository of historical data 03](../../../images/designer_creating_repository_of_historical_data_03.png)
 
@@ -18,7 +18,7 @@ Depois disso, no [Designer](../../designer.md), crie um novo armazenamento clica
 
 ![Designer Creating a repository of historical data 05](../../../images/designer_creating_repository_of_historical_data_05.png)
 
-Depois de adicionar um novo armazenamento, este pode ser selecionado na lista pendente **Storage**.
+Depois de adicionar um novo armazenamento, este pode ser selecionado na lista pendente **Armazenamento**.
 
 ![Designer Creating a repository of historical data 06](../../../images/designer_creating_repository_of_historical_data_06.png)
 

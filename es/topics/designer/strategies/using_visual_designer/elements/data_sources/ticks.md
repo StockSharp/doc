@@ -8,7 +8,7 @@ Este bloque se usa para recibir datos **Tick** para un instrumento.
 
 Sockets de entrada
 
-- **Instrumento** – instrumento para el que deben recibirse datos **Level1**.
+- **Instrumento** – instrumento para el que deben recibirse datos **Nivel 1**.
 
 ### Sockets de salida
 
@@ -20,7 +20,7 @@ Sockets de salida
 
 Parámetros
 
-- **Subscribe on Signal** – suscribirse a datos solo después de que llegue un disparador.
+- **Suscribirse por señal** – suscribirse a datos solo después de que llegue un disparador.
 
 ## Véase también
 

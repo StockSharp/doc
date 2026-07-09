@@ -2,7 +2,7 @@
 
 A criação de um indicador personalizado na [API](../../../../api.md) é descrita na secção [Indicador personalizado](../../../../api/indicators/custom_indicator.md). Esses indicadores são totalmente compatíveis com o **Designer**.
 
-Para criar um indicador, é necessário selecionar a pasta **Indicators** no painel **Schemes**, clicar com o botão direito e selecionar **Add** no menu de contexto:
+Para criar um indicador, é necessário selecionar a pasta **Indicadores** no painel **Esquemas**, clicar com o botão direito e selecionar **Adicionar** no menu de contexto:
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 
@@ -23,7 +23,7 @@ class empty_indicator(BaseIndicator):
 	Indicador de exemplo que demonstra como guardar e carregar parâmetros.
 
 	Documentação https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
-	
+
 	Altera o preço de entrada em +20% ou -20%.
 	"""
 	def __init__(self):
@@ -54,7 +54,7 @@ class empty_indicator(BaseIndicator):
 	def OnProcess(self, input):
 		"""
 		Processa o valor de indicador recebido e aplica uma alteração aleatória.
-		
+
 		:param input: O valor de indicador recebido.
 		:return: Um novo DecimalIndicatorValue depois de aplicar as alterações.
 		"""
@@ -80,7 +80,7 @@ class empty_indicator(BaseIndicator):
 	def Load(self, storage):
 		"""
 		Carrega os parâmetros do indicador a partir do armazenamento persistente.
-		
+
 		:param storage: O armazenamento de definições a partir do qual carregar.
 		"""
 		super(empty_indicator, self).Load(storage)
@@ -89,7 +89,7 @@ class empty_indicator(BaseIndicator):
 	def Save(self, storage):
 		"""
 		Guarda os parâmetros do indicador no armazenamento persistente.
-		
+
 		:param storage: O armazenamento de definições onde guardar.
 		"""
 		super(empty_indicator, self).Save(storage)
@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-Este indicador recebe um valor de entrada e aplica um desvio aleatório com base no valor especificado do parâmetro **Change**.
+Este indicador recebe um valor de entrada e aplica um desvio aleatório com base no valor especificado do parâmetro **Alteração**.
 
 A descrição dos métodos do indicador está disponível na secção [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
@@ -110,7 +110,7 @@ Para adicionar o indicador criado ao esquema, é necessário usar o cubo [Indica
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-O parâmetro **Change**, previamente definido no código do indicador, é apresentado no painel de propriedades.
+O parâmetro **Alteração**, previamente definido no código do indicador, é apresentado no painel de propriedades.
 
-> [!WARNING] 
+> [!WARNING]
 > Indicadores em código Python não podem ser usados em estratégias criadas em código Python. Só podem ser usados em estratégias criadas [a partir de cubos](../../using_visual_designer.md).

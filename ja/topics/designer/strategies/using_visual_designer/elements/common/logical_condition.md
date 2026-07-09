@@ -6,16 +6,16 @@
 
 ## 入力ソケット
 
-- **Flag** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
-- **Flag** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
+- **フラグ** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
+- **フラグ** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
 
 ## 出力ソケット
 
-- **Flag** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
+- **フラグ** - フラグ値（状態を表し、raised（true）と lowered（false）の 2 つの値を持ちます）。
 
 ## パラメーター
 
-- **Operator** - 論理式 AND、OR、Exclusive OR の定義済みセット。
+- **演算子** - 論理式 AND、OR、Exclusive OR の定義済みセット。
 
 ## 関連項目
 

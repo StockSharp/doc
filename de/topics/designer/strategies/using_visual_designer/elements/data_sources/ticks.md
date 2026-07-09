@@ -8,7 +8,7 @@ Dieser Block wird verwendet, um **Tick**-Daten für ein Instrument zu empfangen.
 
 Eingehende Sockets
 
-- **Instrument** – das Instrument, für das **Level1**-Daten empfangen werden müssen.
+- **Handelsinstrument** – das Instrument, für das **Level1**-Daten empfangen werden müssen.
 
 ### Ausgehende Sockets
 
@@ -20,7 +20,7 @@ Ausgehende Sockets
 
 Parameter
 
-- **Subscribe on Signal** – Daten erst nach Eintreffen eines Triggers abonnieren.
+- **Bei Signal abonnieren** – Daten erst nach Eintreffen eines Triggers abonnieren.
 
 ## Siehe auch
 

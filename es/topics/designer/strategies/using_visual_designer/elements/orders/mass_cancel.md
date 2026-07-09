@@ -8,7 +8,7 @@ Este bloque se usa para cancelar todas las órdenes de un instrumento.
 
 Sockets de entrada
 
-- **Trigger** - señal que determina el momento en que es necesario cancelar órdenes.
+- **Activador** - señal que determina el momento en que es necesario cancelar órdenes.
 - **Cartera** – cartera para la que deben cancelarse todas las órdenes.
 - **Instrumento** – instrumento para el que deben cancelarse todas las órdenes.
 
@@ -16,13 +16,13 @@ Sockets de entrada
 
 Sockets de salida
 
-- **Result** - bandera que señala el éxito de la operación.
+- **Resultado** - bandera que señala el éxito de la operación.
 
 ### Parámetros
 
 Parámetros
 
-- **Direction** – dirección de las órdenes que se cancelan (compra o venta), actúa como señal de cancelación para la orden.
+- **Dirección** – dirección de las órdenes que se cancelan (compra o venta), actúa como señal de cancelación para la orden.
 
 ## Véase también
 

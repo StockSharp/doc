@@ -8,7 +8,7 @@ Para descargar una estrategia a su ordenador, debe:
 
   ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
 
-- la estrategia se añadirá al árbol de estrategias en la sección **Backtest**:
+- la estrategia se añadirá al árbol de estrategias en la sección **Prueba histórica**:
 
   ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
 

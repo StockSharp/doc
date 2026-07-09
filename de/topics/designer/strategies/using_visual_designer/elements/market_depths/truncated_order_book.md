@@ -6,15 +6,15 @@ Der Würfel wird verwendet, um ein auf eine angegebene Tiefe gekürztes Orderbuc
 
 ### Eingehende Sockets
 
-- **Order book** ist ein Orderbuch, das gekürzt werden soll.
+- **Orderbuch** ist ein Orderbuch, das gekürzt werden soll.
 
 ### Ausgehende Sockets
 
-- **Order book** ist das gekürzte Orderbuch.
+- **Orderbuch** ist das gekürzte Orderbuch.
 
 ### Parameter
 
-- **Depth** - die maximale Tiefe des Orderbuchs.
+- **Tiefe** - die maximale Tiefe des Orderbuchs.
 
 ## Empfohlene Inhalte
 

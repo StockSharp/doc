@@ -8,7 +8,7 @@ Das Element wird verwendet, um Informationen über Positionsänderungen für das
 
 Eingehende Sockets
 
-- **Instrument** - das Instrument, für das Sie eine Position erhalten möchten.
+- **Handelsinstrument** - das Instrument, für das Sie eine Position erhalten möchten.
 - **Portfolio** - das Portfolio, für das Sie eine Position erhalten möchten.
 
 ### Ausgehende Sockets
@@ -21,7 +21,7 @@ Ausgehende Sockets
 
 Parameter
 
-- **Money** - wenn das Flag am Eingang gesetzt ist, akzeptiert das Element nur das Portfolio; die Geldposition für das ausgewählte Portfolio wird an den Ausgang des Elements übergeben.
+- **Geld** - wenn das Flag am Eingang gesetzt ist, akzeptiert das Element nur das Portfolio; die Geldposition für das ausgewählte Portfolio wird an den Ausgang des Elements übergeben.
 
 ## Empfohlene Inhalte
 

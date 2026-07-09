@@ -6,7 +6,7 @@ Para executar o teste no histórico, deve selecionar uma estratégia cujo esquem
 
 Antes do teste, carregue os dados de mercado (instrumentos, candles, tick trades e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
 
-Ao mudar para o separador com uma estratégia, o separador **Emulation** abre automaticamente no **Ribbon**. Defina o período de teste neste separador. No campo de dados de mercado, especifique o armazenamento necessário ([Armazenamento de dados de mercado](../market_data_storage.md)); no campo de instrumento, especifique o instrumento necessário.
+Ao mudar para o separador com uma estratégia, o separador **Emulação** abre automaticamente no **Faixa de opções**. Defina o período de teste neste separador. No campo de dados de mercado, especifique o armazenamento necessário ([Armazenamento de dados de mercado](../market_data_storage.md)); no campo de instrumento, especifique o instrumento necessário.
 
 No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 

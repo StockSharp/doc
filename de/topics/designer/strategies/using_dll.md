@@ -23,7 +23,7 @@ Die Verwendung fertiger DLLs ist für Benutzer vertraut, die kontinuierlich in d
 
 Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces) ein. Diese Schnittstellen enthalten keine eigentliche Chartlogik und werden nur benötigt, um den Code zu kompilieren. Wenn die Strategie in **Designer** läuft, erfolgt die reale Chartdarstellung über diese Schnittstellen.
 
-4. Nach dem Erstellen der Strategie muss das Projekt gebaut werden, indem Sie im Tab **Build** auf **Build Solution** klicken.
+4. Nach dem Erstellen der Strategie muss das Projekt gebaut werden, indem Sie im Tab **Erstellen** auf **Projektmappe erstellen** klicken.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 

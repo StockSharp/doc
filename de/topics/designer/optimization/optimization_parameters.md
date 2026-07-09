@@ -9,7 +9,7 @@ Die Optimierung wird für Strategieparameter mit den folgenden Typen durchgefüh
 
 Standardmäßig erscheinen alle Parameter mit diesen Typen in der [Tabelle der Optimiererparameter](brute_force.md). Um einen Parameter von der Optimierung auszuschließen:
 
-- Für ein [Diagramm](../strategies/using_visual_designer.md) wählen Sie den erforderlichen Würfel aus, öffnen seine Eigenschaften, wechseln zu **Advanced settings** und deaktivieren das Kontrollkästchen **Parameter**:
+- Für ein [Diagramm](../strategies/using_visual_designer.md) wählen Sie den erforderlichen Würfel aus, öffnen seine Eigenschaften, wechseln zu **Erweiterte Einstellungen** und deaktivieren das Kontrollkästchen **Parameter**:
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 

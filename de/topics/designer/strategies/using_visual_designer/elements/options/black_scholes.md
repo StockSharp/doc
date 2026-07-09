@@ -14,13 +14,13 @@ Eingehende Sockets
 
 Ausgehende Sockets
 
-- **Model** - das Preismodell (zum Beispiel Black-Scholes).
+- **Modell** - das Preismodell (zum Beispiel Black-Scholes).
 
 ### Parameter
 
 Parameter
 
-- **Black Model** - ein Flag, das angibt, ob ein Black-Scholes-Modell erstellt werden soll.
+- **Black-Modell** - ein Flag, das angibt, ob ein Black-Scholes-Modell erstellt werden soll.
 
 ## Siehe auch
 

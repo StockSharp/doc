@@ -6,4 +6,4 @@ Este bloque se usa para obtener la hora actual.
 
 #### Sockets de salida
 
-- **Output** - hora actual.
+- **Salida** - hora actual.

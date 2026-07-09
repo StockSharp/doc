@@ -25,7 +25,7 @@ Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](..
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo debe desmarcar la casilla **Parameters** y establecer el valor del instrumento o cartera.
+Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo debe desmarcar la casilla **Parámetros** y establecer el valor del instrumento o cartera.
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
@@ -47,7 +47,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. Como fuente de operaciones para mostrar en el gráfico se usa el cubo **Trades** de la estrategia. En el ejemplo se llama Strategy trades.
+9. Como fuente de operaciones para mostrar en el gráfico se usa el cubo **Operaciones** de la estrategia. En el ejemplo se llama Strategy trades.
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 

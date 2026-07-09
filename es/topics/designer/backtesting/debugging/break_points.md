@@ -1,6 +1,6 @@
 # Puntos de interrupción
 
-Para añadir un punto de interrupción, seleccione el cubo y haga clic en el botón ![Designer Debug 01](../../../../images/designer_debug_01.png)**Add Breakpoint**. Los puntos de interrupción se resaltan con un círculo rojo:
+Para añadir un punto de interrupción, seleccione el cubo y haga clic en el botón ![Designer Debug 01](../../../../images/designer_debug_01.png)**Añadir punto de interrupción**. Los puntos de interrupción se resaltan con un círculo rojo:
 
 ![Designer Stopping point 00](../../../../images/designer_debug_break_points_00.png)
 
@@ -13,7 +13,7 @@ En la siguiente figura se muestra un ejemplo de visualización de los valores en
 
 Los puntos de interrupción pueden añadirse tanto antes de iniciar el proceso de prueba como durante la prueba de la estrategia sobre historial.
 
-Si hace clic en el botón ![Designer Debug 01](../../../../images/designer_debug_01.png)**Breakpoints**, aparecerá una ventana en la que se mostrarán todos los puntos de interrupción. Para cada uno de ellos puede definirse una condición adicional de activación. Por ejemplo, puede establecer el valor **True** para la señal lógica. En ese caso, el punto de interrupción se detendrá solo si el valor de la señal es **True**. 
+Si hace clic en el botón ![Designer Debug 01](../../../../images/designer_debug_01.png)**Puntos de interrupción**, aparecerá una ventana en la que se mostrarán todos los puntos de interrupción. Para cada uno de ellos puede definirse una condición adicional de activación. Por ejemplo, puede establecer el valor **True** para la señal lógica. En ese caso, el punto de interrupción se detendrá solo si el valor de la señal es **True**.
 
 ![Designer Stopping point 02](../../../../images/designer_stopping_point_02.png)
 

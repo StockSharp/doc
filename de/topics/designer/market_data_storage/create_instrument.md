@@ -1,6 +1,6 @@
 # Instrument erstellen
 
-Ein Klick auf die Schaltfläche **Create security** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) öffnet das Fenster **Editing**. Um ein Instrument zu erstellen, füllen Sie die Instrumenteigenschaften aus und klicken auf die Schaltfläche **OK**:
+Ein Klick auf die Schaltfläche **Instrument erstellen** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) öffnet das Fenster **Bearbeitung**. Um ein Instrument zu erstellen, füllen Sie die Instrumenteigenschaften aus und klicken auf die Schaltfläche **OK**:
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 

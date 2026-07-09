@@ -6,7 +6,7 @@ El proceso principal de diseño de una estrategia y sus elementos componentes se
 
 ## Panel Palette
 
-El panel **Palette** contiene bloques a partir de los cuales se crean estrategias. Todos los elementos de la paleta están divididos en categorías, descritas en la sección [Descripción de bloques](elements.md). Para añadir un bloque al panel **Designer**, haga clic con el botón derecho en el bloque requerido y, sin soltar el botón, arrástrelo al panel **Designer**. Después, el elemento se seleccionará automáticamente y sus parámetros se mostrarán en la ventana para editar las propiedades del bloque.
+El panel **Paleta** contiene bloques a partir de los cuales se crean estrategias. Todos los elementos de la paleta están divididos en categorías, descritas en la sección [Descripción de bloques](elements.md). Para añadir un bloque al panel **Designer**, haga clic con el botón derecho en el bloque requerido y, sin soltar el botón, arrástrelo al panel **Designer**. Después, el elemento se seleccionará automáticamente y sus parámetros se mostrarán en la ventana para editar las propiedades del bloque.
 
 ## Panel Designer
 
@@ -30,10 +30,10 @@ En el modo *advanced settings*, se mostrarán todas las propiedades del bloque d
 
 Todos los bloques contienen un conjunto de propiedades predefinidas que se hacen visibles en el modo *advanced settings*:
 
-- **Name** – nombre del elemento mostrado en el diseñador.
-- **Logging level** – nivel de registro para este elemento.
-- **Parameters** – mostrar los parámetros del elemento en elementos de nivel superior.
-- **Sockets** – mostrar los sockets del elemento en elementos de nivel superior.
+- **Nombre** – nombre del elemento mostrado en el diseñador.
+- **Nivel de registro** – nivel de registro para este elemento.
+- **Parámetros** – mostrar los parámetros del elemento en elementos de nivel superior.
+- **Conectores** – mostrar los sockets del elemento en elementos de nivel superior.
 
 La información detallada sobre las propiedades de cada bloque se describe en la sección [Descripción de bloques](elements.md).
 

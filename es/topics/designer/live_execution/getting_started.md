@@ -1,10 +1,10 @@
 # Primeros pasos
 
-Para añadir una estrategia a **Trading en vivo**, en el panel [Esquemas](../user_interface/schemas.md) haga clic con el botón derecho en la estrategia requerida de la carpeta **Estrategias** y seleccione ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**. La estrategia se añadirá a la carpeta **Live** del panel **Esquemas**.
+Para añadir una estrategia a **Trading en vivo**, en el panel [Esquemas](../user_interface/schemas.md) haga clic con el botón derecho en la estrategia requerida de la carpeta **Estrategias** y seleccione ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **En vivo**. La estrategia se añadirá a la carpeta **En vivo** del panel **Esquemas**.
 
 ![Designer Live trade 01](../../../images/designer_live_trade_01.png)
 
-También puede añadir una estrategia a Live trade haciendo clic en el botón ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live** en la pestaña **Backtest**.
+También puede añadir una estrategia a Live trade haciendo clic en el botón ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **En vivo** en la pestaña **Prueba histórica**.
 
 ![Designer Live trade 02](../../../images/designer_live_trade_02.png)
 

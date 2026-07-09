@@ -4,13 +4,13 @@
 
 O cubo é usado para apresentar o painel de opções.
 
-Para apresentar o **Option desk**, é necessário adicionar o componente gráfico **Option desk**.
+Para apresentar o **Mesa de opções**, é necessário adicionar o componente gráfico **Mesa de opções**.
 
 ### Sockets de entrada
 
 Sockets de entrada
 
-- **Model** - o modelo de cálculo (por exemplo, Black-Scholes).
+- **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 
 ![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
 

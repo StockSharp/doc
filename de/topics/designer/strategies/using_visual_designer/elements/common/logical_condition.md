@@ -6,12 +6,12 @@ Dieses Element wird verwendet, um eine logische Formel mit zwei Argumenten zu be
 
 ## Eingehende Sockets
 
-- **Flag** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
-- **Flag** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
+- **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
+- **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
 
 ## Ausgehende Sockets
 
-- **Flag** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
+- **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
 
 ## Parameter
 

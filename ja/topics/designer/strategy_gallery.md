@@ -1,6 +1,6 @@
 # ストラテジーギャラリー
 
-**Strategy Gallery** では、既製の取引ストラテジーをコンピューターにダウンロードできます。**Common** タブの **Strategy Gallery** ボタンをクリックすると、**Strategy Gallery** を開くことができます。
+**戦略ギャラリー** では、既製の取引ストラテジーをコンピューターにダウンロードできます。**共通** タブの **戦略ギャラリー** ボタンをクリックすると、**戦略ギャラリー** を開くことができます。
 
 ストラテジーをコンピューターにダウンロードするには、次の操作が必要です:
 
@@ -8,7 +8,7 @@
 
   ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
 
-- ストラテジーが **Backtest** セクションのストラテジーツリーに追加されます:
+- ストラテジーが **バックテスト** セクションのストラテジーツリーに追加されます:
 
   ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
 

@@ -24,7 +24,7 @@ Der Code-Editor-Tab besteht aus den Panels **Quellcode** und **Fehlerliste**. Da
 
 Das Panel **Fehlerliste** ist eine Tabelle mit einer Liste der Codefehler. Ein Doppelklick auf eine Zeile bewegt den Cursor im Panel **Quellcode** automatisch an die Fehlerstelle.
 
-Beim Bearbeiten des Codes erscheint in der rechten unteren Ecke des Panels **Error List** ein Symbol ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png), das anzeigt, dass die Änderungsverfolgung begonnen hat. Die Codekompilierung erfolgt, sobald sich der Code nicht mehr ändert.
+Beim Bearbeiten des Codes erscheint in der rechten unteren Ecke des Panels **Fehlerliste** ein Symbol ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png), das anzeigt, dass die Änderungsverfolgung begonnen hat. Die Codekompilierung erfolgt, sobald sich der Code nicht mehr ändert.
 
 Das Ausführen der Strategie im [Backtest](../../backtesting/user_interface.md), im [Live-Betrieb](../../live_execution/getting_started.md) und andere Operationen funktionieren ähnlich wie bei Strategien, die aus Schemas erstellt wurden.
 

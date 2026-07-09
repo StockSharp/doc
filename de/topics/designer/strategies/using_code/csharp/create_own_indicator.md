@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-Dieser Indikator empfängt einen eingehenden Wert und erzeugt eine zufällige Abweichung auf Basis des Parameterwerts **Change**.
+Dieser Indikator empfängt einen eingehenden Wert und erzeugt eine zufällige Abweichung auf Basis des Parameterwerts **Änderung**.
 
 Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md).
 
@@ -98,7 +98,7 @@ Um den erstellten Indikator zum Diagramm hinzuzufügen, verwenden Sie den Würfe
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-Der Parameter **Change**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
+Der Parameter **Änderung**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
 
 > [!WARNING]
 > Indikatoren aus C#-Code können nicht in Strategien verwendet werden, die in C#-Code erstellt wurden. Sie können nur in Strategien verwendet werden, die [aus Würfeln](../../using_visual_designer.md) erstellt wurden.

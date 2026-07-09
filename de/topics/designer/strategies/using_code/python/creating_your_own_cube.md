@@ -2,7 +2,7 @@
 
 Ähnlich wie beim Erstellen eines [Würfels aus einem Schema](../../using_visual_designer/composite_elements.md) können Sie einen eigenen Würfel auf Basis von Python-Code erstellen. Ein solcher Würfel ist funktionaler als ein aus einem Schema erstellter Würfel.
 
-Um einen Würfel aus Code zu erstellen, müssen Sie ihn im Ordner **Custom Cubes** erstellen:
+Um einen Würfel aus Code zu erstellen, müssen Sie ihn im Ordner **Benutzerdefinierte Blöcke** erstellen:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 Bei Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) wird automatisch der Ansatz zum Speichern und Wiederherstellen von Einstellungen verwendet.
 
-Die Eigenschaft **MinValue** ist als basic markiert und wird im Modus [Basic Properties](../../using_visual_designer/diagram_panel.md) sichtbar sein.
+Die Eigenschaft **Mindestwert** ist als basic markiert und wird im Modus [Basic Properties](../../using_visual_designer/diagram_panel.md) sichtbar sein.
 
 Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) bestimmt, wann die Methode mit eingehenden Sockets aufgerufen wird:
 
@@ -205,9 +205,9 @@ Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramEx
 #     return False
 ```
 
-Wenn Sie die Auskommentierung der Eigenschaft entfernen, wird die Methode **Process** immer aufgerufen, sobald mindestens ein Wert eintrifft (im Beispiel entweder eine Kerze oder ein numerischer Wert).
+Wenn Sie die Auskommentierung der Eigenschaft entfernen, wird die Methode **Prozess** immer aufgerufen, sobald mindestens ein Wert eintrifft (im Beispiel entweder eine Kerze oder ein numerischer Wert).
 
-Um den resultierenden Würfel zum Schema hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Custom Cubes** aus:
+Um den resultierenden Würfel zum Schema hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Benutzerdefinierte Blöcke** aus:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 

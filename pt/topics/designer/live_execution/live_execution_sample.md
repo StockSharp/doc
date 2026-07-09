@@ -1,10 +1,10 @@
 # Exemplo de execução em Live
 
-Para executar um exemplo em **Live**, irá precisar de:
+Para executar um exemplo em **Ao vivo**, irá precisar de:
 
 1. Terminal de teste **IB Trader Workstation (TWS) Demo** da [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md), que pode obter no site do fabricante.
 
-2. Configurar o terminal IB TWS Demo para funcionar com o [Designer](../../designer.md). Consulte **IB TWS Setting demo** na secção [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md).
+2. Configurar o terminal IB TWS Demo para funcionar com o [Designer](../../designer.md). Consulte **Exemplo de definições do IB TWS** na secção [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md).
 
 3. Configurar a ligação ao IB TWS Demo no [Designer](../../designer.md) e ligar.
 
@@ -19,7 +19,7 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 - Instrumento **AAPL@NASDAQ**
 - Armazenamento padrão **\\Documents\\StockSharp\\Designer\\Storage**
 - Formato de armazenamento - **CSV**
-- Tipo de dados obtidos do armazenamento - **Ticks**
+- Tipo de dados obtidos do armazenamento - **Tiques**
 - Candles com time frame de 5 s
 - Volume - 100
 - Dias de histórico - 2

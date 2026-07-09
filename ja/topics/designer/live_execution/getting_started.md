@@ -1,10 +1,10 @@
 # はじめに
 
-**Live trading** にストラテジーを追加するには、[Schemas](../user_interface/schemas.md) パネルで **Strategies** フォルダー内の必要なストラテジーを右クリックし、![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live** を選択します。ストラテジーは **Schemas** パネルの **Live** フォルダーに追加されます。
+**ライブ取引** にストラテジーを追加するには、[Schemas](../user_interface/schemas.md) パネルで **戦略** フォルダー内の必要なストラテジーを右クリックし、![Designer Live trade 00](../../../images/designer_live_trade_00.png) **ライブ** を選択します。ストラテジーは **スキーマ** パネルの **ライブ** フォルダーに追加されます。
 
 ![Designer Live trade 01](../../../images/designer_live_trade_01.png)
 
-また、**Backtest** タブの ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live** ボタンをクリックして、ストラテジーをライブ取引に追加することもできます。
+また、**バックテスト** タブの ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **ライブ** ボタンをクリックして、ストラテジーをライブ取引に追加することもできます。
 
 ![Designer Live trade 02](../../../images/designer_live_trade_02.png)
 

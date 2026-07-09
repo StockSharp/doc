@@ -1,6 +1,6 @@
 # Gráfico
 
-O componente **Chart** contém todos os cubos **Chart panel** que estão na estratégia. Por exemplo, se a estratégia utilizar dois cubos **Chart panel**, então no componente **Chart** são apresentados 2 gráficos, como na figura.
+O componente **Gráfico** contém todos os cubos **Painel do gráfico** que estão na estratégia. Por exemplo, se a estratégia utilizar dois cubos **Painel do gráfico**, então no componente **Gráfico** são apresentados 2 gráficos, como na figura.
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 

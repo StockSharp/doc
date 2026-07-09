@@ -1,6 +1,6 @@
 # ブレークポイント
 
-ブレークポイントを追加するには、キューブを選択して ![Designer Debug 01](../../../../images/designer_debug_01.png)**Add Breakpoint** ボタンをクリックします。ブレークポイントは赤い円で強調表示されます。
+ブレークポイントを追加するには、キューブを選択して ![Designer Debug 01](../../../../images/designer_debug_01.png)**ブレークポイントを追加** ボタンをクリックします。ブレークポイントは赤い円で強調表示されます。
 
 ![Designer Stopping point 00](../../../../images/designer_debug_break_points_00.png)
 
@@ -13,7 +13,7 @@
 
 ブレークポイントは、テストプロセスの開始前にも、履歴上でのストラテジーテスト中にも追加できます。
 
-![Designer Debug 01](../../../../images/designer_debug_01.png)**Breakpoints** ボタンをクリックすると、すべてのブレークポイントが表示されるウィンドウが開きます。それぞれに追加のトリガー条件を設定できます。たとえば、論理シグナルに **True** 値を設定できます。この場合、ブレークポイントはシグナル値が **True** の場合にのみ停止します。
+![Designer Debug 01](../../../../images/designer_debug_01.png)**ブレークポイント** ボタンをクリックすると、すべてのブレークポイントが表示されるウィンドウが開きます。それぞれに追加のトリガー条件を設定できます。たとえば、論理シグナルに **True** 値を設定できます。この場合、ブレークポイントはシグナル値が **True** の場合にのみ停止します。
 
 ![Designer Stopping point 02](../../../../images/designer_stopping_point_02.png)
 

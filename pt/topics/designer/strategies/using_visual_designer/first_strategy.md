@@ -1,16 +1,16 @@
 # Primeira estratégia
 
-Para criar esquemas de estratégias e elementos compostos, e para testar as estratégias obtidas em dados históricos, pode utilizar um exemplo da estratégia de média móvel (SMA). Este exemplo permite percorrer um ciclo completo desde a criação da estratégia até ao seu teste e depuração. A estratégia de média móvel (SMA) pode ser encontrada na pasta **Strategies** do painel **Schemas**.
+Para criar esquemas de estratégias e elementos compostos, e para testar as estratégias obtidas em dados históricos, pode utilizar um exemplo da estratégia de média móvel (SMA). Este exemplo permite percorrer um ciclo completo desde a criação da estratégia até ao seu teste e depuração. A estratégia de média móvel (SMA) pode ser encontrada na pasta **Estratégias** do painel **Esquemas**.
 
-1. Criar uma nova estratégia a partir dos cubos, conforme descrito em [Utilização de código](../using_code.md). Para adicionar uma nova estratégia, clique no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) no separador **Common** e seleccione **Strategy**. Em alternativa, clique com o botão direito do rato na pasta **Strategy** no painel **Schemas** e clique no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) no menu pendente.
+1. Criar uma nova estratégia a partir dos cubos, conforme descrito em [Utilização de código](../using_code.md). Para adicionar uma nova estratégia, clique no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) no separador **Geral** e seleccione **Estratégia**. Em alternativa, clique com o botão direito do rato na pasta **Estratégia** no painel **Esquemas** e clique no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) no menu pendente.
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Depois de clicar no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) na pasta **Strategy** do painel **Schemas**, aparecerá uma nova estratégia. Na área de trabalho, aparece um novo separador com uma estratégia; ao mudar para ele, o separador **Emulation** será aberto automaticamente na faixa de opções. No separador **Emulation**, pode alterar o nome da estratégia e atribuir-lhe uma breve descrição.
+Depois de clicar no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) na pasta **Estratégia** do painel **Esquemas**, aparecerá uma nova estratégia. Na área de trabalho, aparece um novo separador com uma estratégia; ao mudar para ele, o separador **Emulação** será aberto automaticamente na faixa de opções. No separador **Emulação**, pode alterar o nome da estratégia e atribuir-lhe uma breve descrição.
 
 ![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. Para trabalhar de forma conveniente, abra e fixe os painéis **Palette** e **Properties** da área **Schemas** clicando no botão ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png). O resultado é uma janela do seguinte tipo.
+2. Para trabalhar de forma conveniente, abra e fixe os painéis **Paleta** e **Propriedades** da área **Esquemas** clicando no botão ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png). O resultado é uma janela do seguinte tipo.
 
 ![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 
@@ -21,11 +21,11 @@ Depois de clicar no botão **Add** ![Designer Panel Circuits 01](../../../../ima
 - Quando uma média móvel curta cruza uma longa de cima para baixo, abre-se uma posição curta.
 - Se existir uma posição oposta no momento em que é recebido um sinal para abrir uma posição, inverte-se a posição.
 
-4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Palette** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrument** chama-se Instrument, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Portfolio** chama-se Portfolio. Defina a caixa de verificação **Parameters** dos cubos Instrument e Portfolio. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo Value do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
+4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Paleta** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrumento** chama-se Instrument, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Carteira** chama-se Portfolio. Defina a caixa de verificação **Parâmetros** dos cubos Instrument e Portfolio. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo Value do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então, para cada cubo, deve desmarcar a caixa **Parameters** e definir o valor do instrumento ou da carteira.
+Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então, para cada cubo, deve desmarcar a caixa **Parâmetros** e definir o valor do instrumento ou da carteira.
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
@@ -47,11 +47,11 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. Como origem das negociações para apresentação no gráfico, é utilizado o cubo **Trades** da estratégia. No exemplo, chama-se Strategy trades.
+9. Como origem das negociações para apresentação no gráfico, é utilizado o cubo **Negócios** da estratégia. No exemplo, chama-se Strategy trades.
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. Para abrir uma posição, adicione dois cubos [Register order](elements/orders/register.md). O primeiro cubo destina-se à compra por ordem de mercado. São passados para a entrada deste cubo: o **Instrument**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Up, o **Portfolio** e o volume da ordem. O segundo cubo destina-se à venda por ordem de mercado. São passados para a entrada deste cubo: o **Instrument**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Down, o **Portfolio** e o volume da ordem.
+10. Para abrir uma posição, adicione dois cubos [Register order](elements/orders/register.md). O primeiro cubo destina-se à compra por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Up, o **Carteira** e o volume da ordem. O segundo cubo destina-se à venda por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Down, o **Carteira** e o volume da ordem.
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
@@ -59,7 +59,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-Para controlar a posição, precisa de adicionar o cubo [Posição](elements/positions/current.md), para cuja entrada são passados **Instrument** e **Portfolio**.
+Para controlar a posição, precisa de adicionar o cubo [Posição](elements/positions/current.md), para cuja entrada são passados **Instrumento** e **Carteira**.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

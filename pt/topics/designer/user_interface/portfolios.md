@@ -1,10 +1,10 @@
 # Carteiras
 
-Para trabalhar com portefólios existe o painel **Portfolios**. Pode abri-lo clicando no botão Portfolios no separador **Common**.
+Para trabalhar com portefólios existe o painel **Carteiras**. Pode abri-lo clicando no botão Portfolios no separador **Geral**.
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 
-O painel **Portfolios** é uma tabela que mostra os dados básicos do portefólio e as posições atuais desses portefólios. Ao fazer duplo clique no portefólio ou na posição, aparece a janela **Creating portfolio** ou a janela **Creating position**, onde pode editar o portefólio ou a posição selecionada. Para criar um novo portefólio ou uma nova posição, deve clicar no botão ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01.png) e selecionar o item apropriado no menu pendente.
+O painel **Carteiras** é uma tabela que mostra os dados básicos do portefólio e as posições atuais desses portefólios. Ao fazer duplo clique no portefólio ou na posição, aparece a janela **Criação de carteira** ou a janela **Criação de posição**, onde pode editar o portefólio ou a posição selecionada. Para criar um novo portefólio ou uma nova posição, deve clicar no botão ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01.png) e selecionar o item apropriado no menu pendente.
 
 ![Designer Panel A Portfolios 01](../../../images/designer_panel_portfolios_01.png)
 

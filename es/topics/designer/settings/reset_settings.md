@@ -11,4 +11,4 @@ Al seleccionar **Restablecer configuración**, se abre una ventana de confirmaci
 
 ![Designer Reset language settings 01](../../../images/designer_reset_language_settings_01.png)
 
-Después de hacer clic en **OK**, todos los ajustes se restablecen a sus valores predeterminados. El directorio de configuración del programa se limpia por completo. **Todas las estrategias creadas, instrumentos descargados y demás información almacenada en el directorio de configuración se eliminarán.**
+Después de hacer clic en **Aceptar**, todos los ajustes se restablecen a sus valores predeterminados. El directorio de configuración del programa se limpia por completo. **Todas las estrategias creadas, instrumentos descargados y demás información almacenada en el directorio de configuración se eliminarán.**

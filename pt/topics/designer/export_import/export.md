@@ -2,18 +2,18 @@
 
 O Designer permite exportar qualquer tipo de dados: estratégias, blocos e indicadores. Existem várias formas de exportar:
 
-- No painel **Schemes**, clique com o botão direito do rato na estratégia, bloco ou indicador. No menu que aparece, selecione **Export**.
-- No separador **Common**, prima o botão **Export**:
+- No painel **Esquemas**, clique com o botão direito do rato na estratégia, bloco ou indicador. No menu que aparece, selecione **Exportar**.
+- No separador **Geral**, prima o botão **Exportar**:
 
 ![Designer Export strategies 00](../../../images/designer_export_strategies_00.png)
 
-Depois de premir **Export**, dependendo do tipo de conteúdo, será apresentada uma janela:
+Depois de premir **Exportar**, dependendo do tipo de conteúdo, será apresentada uma janela:
 
 - para um [esquema](../strategies/using_visual_designer.md):
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - exportar o esquema tal como está. O modo **Standalone** é necessário para esquemas que usam elementos ou indicadores próprios. Neste caso, todos os elementos internos serão exportados dentro do diagrama da estratégia.
+  - scheme - exportar o esquema tal como está. O modo **Independente** é necessário para esquemas que usam elementos ou indicadores próprios. Neste caso, todos os elementos internos serão exportados dentro do diagrama da estratégia.
   - code - converter o esquema em código C#.
   - DLL - compilar o esquema para uma DLL. Adequado se precisar de manter o código confidencial.
 

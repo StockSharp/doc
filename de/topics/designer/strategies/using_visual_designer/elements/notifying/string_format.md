@@ -8,7 +8,7 @@ Der Würfel wandelt einen eingehenden Wert beliebigen Typs in eine Textzeichenfo
 
 Eingehende Sockets
 
-- **Input** - der zu formatierende Wert. Der Socket akzeptiert Daten beliebigen Typs.
+- **Eingabe** - der zu formatierende Wert. Der Socket akzeptiert Daten beliebigen Typs.
 
 ### Ausgehende Sockets
 
@@ -20,7 +20,7 @@ Ausgehende Sockets
 
 Parameter
 
-- **Template** - Vorlage für die Zeichenfolgenformatierung, die auf den eingehenden Wert angewendet wird. Die Standardvorlage ist `{0}`; das bedeutet, dass der Wert ohne zusätzliche Formatierung eingefügt wird. Platzhalter können Eigenschaftsnamen und Formatzeichenfolgen enthalten, zum Beispiel `Price: {0:0.00}` oder `{Price:0.00}`.
+- **Vorlage** - Vorlage für die Zeichenfolgenformatierung, die auf den eingehenden Wert angewendet wird. Die Standardvorlage ist `{0}`; das bedeutet, dass der Wert ohne zusätzliche Formatierung eingefügt wird. Platzhalter können Eigenschaftsnamen und Formatzeichenfolgen enthalten, zum Beispiel `Price: {0:0.00}` oder `{Price:0.00}`.
 
 ### Beispiele
 

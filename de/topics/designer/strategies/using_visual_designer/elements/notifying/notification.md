@@ -8,15 +8,15 @@ Der Würfel sendet eine Benachrichtigung, wenn Daten an seinem Eingabe-Socket ei
 
 Eingehende Sockets
 
-- **Message** - zu sendende Daten. Jeder Wert wird akzeptiert und in eine Zeichenfolge umgewandelt.
+- **Nachricht** - zu sendende Daten. Jeder Wert wird akzeptiert und in eine Zeichenfolge umgewandelt.
 
 ### Parameter
 
 Parameter
 
-- **Type** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Benachrichtigungen](../../../../../terminal/notifications.md) beschrieben.
+- **Typ** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Benachrichtigungen](../../../../../terminal/notifications.md) beschrieben.
 - **Telegram** - Kanal für Telegram-Benachrichtigungen.
-- **Header** - die Überschrift der Nachricht.
+- **Kopfzeile** - die Überschrift der Nachricht.
 
 ## Empfohlene Inhalte
 

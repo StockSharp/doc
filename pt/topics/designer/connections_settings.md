@@ -12,12 +12,12 @@
 
 Os campos **Dados de mercado** e **Transações** mostram se o conector suporta dados de mercado e trabalho com ordens.
 
-4. Quando a caixa de seleção **Auto-connect** está selecionada, a ligação é efetuada automaticamente quando o [Designer](../designer.md) é iniciado.
+4. Quando a caixa de seleção **Ligação automática** está selecionada, a ligação é efetuada automaticamente quando o [Designer](../designer.md) é iniciado.
 
 5. A área n.º 2 apresenta as definições do conector selecionado. Ao clicar em ![Designer The connection settings 09](../../images/designer_connection_settings_09.png), o programa redireciona para a documentação ([API](../api.md)) sobre a configuração do conector selecionado.
 
   > [!IMPORTANT]
-  > As **Advanced settings** são necessárias em casos especiais, e a sua alteração não é recomendada.
+  > As **Definições avançadas** são necessárias em casos especiais, e a sua alteração não é recomendada.
 
 6. Clicar no botão **Verificar** irá verificar a ligação do conector atual. Se a verificação falhar, aparecerá uma janela com um erro, descrevendo o motivo da ligação sem êxito. Se a verificação for bem-sucedida, aparecerá uma janela:
 
@@ -25,7 +25,7 @@ Os campos **Dados de mercado** e **Transações** mostram se o conector suporta 
 
 7. A área n.º 3 apresenta os tipos de dados que serão recebidos ou transmitidos pelo conector. Ao clicar na caixa de seleção ![Designer The connection settings 11](../../images/designer_connection_settings_11.png)\/ ![Designer The connection settings 12](../../images/designer_connection_settings_12.png), pode ativar\/desativar a transmissão ou receção para este tipo de dados.
 
-8. Clicar no botão **Network settings** irá abrir a janela **Proxy-server settings**:
+8. Clicar no botão **Definições de rede** irá abrir a janela **Definições do servidor proxy**:
 
 ![Designer The connection settings 13](../../images/designer_connection_settings_13.png)
 

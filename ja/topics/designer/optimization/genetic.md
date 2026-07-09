@@ -2,7 +2,7 @@
 
 **Designer** は、[総当たり方式](brute_force.md)による最適化と、遺伝的アルゴリズムに基づく最適化の両方をサポートしています。遺伝的最適化により、最適なパラメーターを見つけるプロセスが大幅に高速化されます。
 
-**Genetic** 最適化を有効にするには、次の手順を実行します。
+**遺伝的** 最適化を有効にするには、次の手順を実行します。
 
 - モードを切り替えます。
 
@@ -16,7 +16,7 @@
 
   ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
 
-  たとえば、**Profit** だけでなく、その **Maximum Drawdown** との相対関係でも計算できます。利用可能な数学関数は、[数式](../strategies/using_visual_designer/elements/common/formula.md) ブロックと同様です。
+  たとえば、**利益** だけでなく、その **最大ドローダウン** との相対関係でも計算できます。利用可能な数学関数は、[数式](../strategies/using_visual_designer/elements/common/formula.md) ブロックと同様です。
 
 > [!TIP]
 > 遺伝的最適化は決定論的ではありません。そのため、[総当たり検索](brute_force.md)とは異なり、正確な反復回数、したがって必要な総時間を決定することはできません。

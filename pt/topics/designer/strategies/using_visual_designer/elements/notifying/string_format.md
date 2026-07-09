@@ -12,19 +12,19 @@ dois pontos para controlar como números, datas ou outros objetos aparecem no te
 
 Sockets de entrada
 
-- **Input** - o valor a formatar. O socket aceita dados de qualquer tipo.
+- **Entrada** - o valor a formatar. O socket aceita dados de qualquer tipo.
 
 ### Sockets de saída
 
 Sockets de saída
 
-- **Text** - o resultado da aplicação do modelo ao valor recebido.
+- **Texto** - o resultado da aplicação do modelo ao valor recebido.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Template** - modelo de formatação de strings aplicado ao valor recebido. O
+- **Modelo** - modelo de formatação de strings aplicado ao valor recebido. O
   modelo predefinido é `{0}`, o que significa que o valor é inserido sem formatação
   adicional. Os placeholders podem conter nomes de propriedades e strings de formato, por
   exemplo `Price: {0:0.00}` ou `{Price:0.00}`.

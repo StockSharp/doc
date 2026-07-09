@@ -4,16 +4,16 @@
 
 Este elemento é usado para acompanhar a posição de dois valores um em relação ao outro. Por exemplo, para determinar o momento de cruzamento entre duas linhas.
 
-A comparação é feita relativamente aos valores nos dois sockets **Up** e **Down**.
+A comparação é feita relativamente aos valores nos dois sockets **Acima** e **Abaixo**.
 
 ## Sockets de entrada
 
-- **Up** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
-- **Down** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
+- **Acima** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
+- **Abaixo** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
 
 ## Sockets de saída
 
-- **Flag** - true se **Up** for maior do que **Down**; caso contrário, false.
+- **Sinalizador** - true se **Acima** for maior do que **Abaixo**; caso contrário, false.
 
 ![Designer Crossing 01](../../../../../../images/designer_crossing_01.png)
 

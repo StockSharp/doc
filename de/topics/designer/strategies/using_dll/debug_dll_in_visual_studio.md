@@ -10,16 +10,16 @@ Visual Studio bietet einen Mechanismus, um sich mit dem Visual-Studio-Debugger a
 
 ![Designer Debugging DLL cube using Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
-3. Suchen Sie im Dialogfeld **Attach to Process** in der Liste **Available processes** den Prozess **Designer.exe**, an den Sie sich anhängen möchten.
+3. Suchen Sie im Dialogfeld **An Prozess anhängen** in der Liste **Verfügbare Prozesse** den Prozess **Designer.exe**, an den Sie sich anhängen möchten.
 
 ![Designer Debugging DLL cube using Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
-Wenn der Prozess unter einem anderen Benutzerkonto ausgeführt wird, müssen Sie das Kontrollkästchen **Show processes from all users** aktivieren.
+Wenn der Prozess unter einem anderen Benutzerkonto ausgeführt wird, müssen Sie das Kontrollkästchen **Prozesse aller Benutzer anzeigen** aktivieren.
 
-4. Wichtig ist, dass im Fenster **Attach to** der Codetyp angegeben ist, der debuggt werden soll. Der Standardparameter **Auto** versucht, den zu debuggenden Codetyp zu bestimmen, erkennt ihn aber nicht immer korrekt. Um den Codetyp manuell festzulegen, führen Sie die folgenden Schritte aus.
+4. Wichtig ist, dass im Fenster **Anhängen an** der Codetyp angegeben ist, der debuggt werden soll. Der Standardparameter **Automatisch** versucht, den zu debuggenden Codetyp zu bestimmen, erkennt ihn aber nicht immer korrekt. Um den Codetyp manuell festzulegen, führen Sie die folgenden Schritte aus.
 
-- Klicken Sie im Feld Attach to auf **Select**.
-- Klicken Sie im Dialogfeld **Select Code Type** auf die Schaltfläche **Debug these code types** und wählen Sie die Typen für das Debugging aus.
+- Klicken Sie im Feld Attach to auf **Auswählen**.
+- Klicken Sie im Dialogfeld **Codetyp auswählen** auf die Schaltfläche **Diese Codetypen debuggen** und wählen Sie die Typen für das Debugging aus.
 - Klicken Sie auf OK.
 
 ![Designer Debugging DLL cube using Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)

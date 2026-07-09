@@ -8,22 +8,22 @@ Este bloque se usa para modificar una orden de un instrumento.
 
 Sockets de entrada
 
-- **Trigger** - señal que determina cuándo mover una orden.
-- **Order** - orden que se modificará.
-- **Price** - valor numérico del nuevo precio.
-- **Volume** - valor numérico del nuevo volumen.
+- **Activador** - señal que determina cuándo mover una orden.
+- **Orden** - orden que se modificará.
+- **Precio** - valor numérico del nuevo precio.
+- **Volumen** - valor numérico del nuevo volumen.
 
 ### Sockets de salida
 
 Sockets de salida
 
-- **Order** - orden modificada, que puede usarse para obtener sus transacciones mediante el elemento **Transactions by Order** y para mostrarla en el gráfico usando el bloque **Chart Panel**.
+- **Orden** - orden modificada, que puede usarse para obtener sus transacciones mediante el elemento **Transacciones por orden** y para mostrarla en el gráfico usando el bloque **Panel de gráfico**.
 - **Error** - error al mover la orden.
-- **Trade** - operación de la orden colocada.
+- **Operación** - operación de la orden colocada.
 
 Parámetros
 
-- **Zero Price** – un precio cero registra una orden de mercado.
+- **Precio cero** – un precio cero registra una orden de mercado.
 
 ## Véase también
 

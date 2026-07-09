@@ -13,7 +13,7 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 - **Volumen máximo de cotización en la profundidad generada** – volumen máximo de cotización en el libro de órdenes generado.
 - **Intervalo** – intervalo de tiempo.
 - **P/L no realizado** – intervalo de recálculo del beneficio no realizado.
-- **Trades** – qué operaciones usar.
+- **Operaciones** – qué operaciones usar.
 - **Profundidad de mercado** – qué libros de órdenes usar.
 - **Registro de órdenes** – usar el registro de órdenes.
 - **Número de estrategias** – número de estrategias probadas simultáneamente.
@@ -24,8 +24,8 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 - **Latencia** – valor mínimo de latencia de la orden registrada.
 - **Nuevo registro** – si se admite el nuevo registro de órdenes como una sola operación.
 - **Periodo de búfer** – enviar respuestas en un único paquete por intervalos. Se emulan la latencia de red y la operación en búfer del núcleo del exchange.
-- **Order ID** – número desde el que el emulador generará identificadores de órdenes.
-- **Trade ID** – número desde el que el emulador generará identificadores de operaciones.
+- **ID de orden** – número desde el que el emulador generará identificadores de órdenes.
+- **ID de operación** – número desde el que el emulador generará identificadores de operaciones.
 - **Transacción** – número desde el que el emulador generará identificadores de transacciones de órdenes.
 - **Tamaño del spread** – tamaño del spread en pasos de precio. Se usa al especificar el spread para generar un libro de órdenes a partir de operaciones tick.
 - **Profundidad del libro** – profundidad máxima del libro de órdenes que se generará a partir de ticks.

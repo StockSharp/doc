@@ -4,7 +4,7 @@ Ein Klick auf die Schaltfläche **Instrumente herunterladen** ![Designer_Downloa
 
 ![Designer Download the tools 00](../../../images/designer_download_instruments_00.png)
 
-Ein Klick auf die Schaltfläche **Add connection** öffnet das Fenster [Verbindungseinstellungen](../connections_settings.md).
+Ein Klick auf die Schaltfläche **Verbindung hinzufügen** öffnet das Fenster [Verbindungseinstellungen](../connections_settings.md).
 
 ## Siehe auch
 

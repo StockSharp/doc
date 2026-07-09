@@ -16,7 +16,7 @@ El cubo se usa para obtener un libro de órdenes disperso para el instrumento es
 
 ### Parámetros
 
-- **Price Range** - rango de precios, con pasos en los que se reducirá el libro de órdenes.
+- **Rango de precios** - rango de precios, con pasos en los que se reducirá el libro de órdenes.
 
 ## Contenido recomendado
 

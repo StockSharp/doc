@@ -2,7 +2,7 @@
 
 [ダイアグラムからキューブ](../../using_visual_designer/composite_elements.md)を作成する場合と同様に、F# コードに基づいて独自のキューブを作成できます。このようなキューブは、ダイアグラムから作成したキューブよりも高機能になります。
 
-コードからキューブを作成するには、**Own elements** フォルダー内に作成する必要があります。
+コードからキューブを作成するには、**独自要素** フォルダー内に作成する必要があります。
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -105,7 +105,7 @@ let minValueParam =
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定を保存および復元する方法が自動的に利用されます。
 
-**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**最小値** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされている [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッド呼び出しのタイミングを担います。
 
@@ -114,13 +114,13 @@ let minValueParam =
 //     with get () = false
 ```
 
-コメント解除すると、少なくとも 1 つの値が到着した時点で、**Process** メソッドが常に呼び出されます (この例では、ローソク足または数値のいずれかです)。
+コメント解除すると、少なくとも 1 つの値が到着した時点で、**プロセス** メソッドが常に呼び出されます (この例では、ローソク足または数値のいずれかです)。
 
-作成されたキューブをダイアグラムに追加するには、パレットの **Own elements** セクションで作成したキューブを選択する必要があります。
+作成されたキューブをダイアグラムに追加するには、パレットの **独自要素** セクションで作成したキューブを選択する必要があります。
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
-> [!WARNING] 
+> [!WARNING]
 > F# コードのキューブは、F# コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。
 
 ## 関連項目

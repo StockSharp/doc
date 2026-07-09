@@ -13,7 +13,7 @@ Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strate
 - **Maximales Quote-Volumen in generierter Tiefe** - das maximale Quote-Volumen im generierten Orderbuch.
 - **Intervall** - das Zeitintervall.
 - **Nicht realisierter P\/L** - das Intervall zur Neuberechnung des nicht realisierten Gewinns.
-- **Trades** - welche Trades verwendet werden.
+- **Ausführungen** - welche Trades verwendet werden.
 - **Markttiefe** - welche Orderbücher verwendet werden.
 - **Order-Log** - das Order-Log verwenden.
 - **Anzahl der Strategien** - die Anzahl gleichzeitig getesteter Strategien.
@@ -47,10 +47,10 @@ Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strate
 
 **Diagrammparameter**
 
-- **Instrument** - das Instrument.
+- **Handelsinstrument** - das Instrument.
 - **Portfolio** - das Portfolio.
 
-Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Instrument** der Registerkarte **Emulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
+Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Handelsinstrument** der Registerkarte **Simulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
 
 ## Empfohlene Inhalte
 

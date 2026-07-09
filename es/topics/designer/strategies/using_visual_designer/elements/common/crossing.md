@@ -4,16 +4,16 @@
 
 Este elemento se usa para seguir la posición de dos valores entre sí. Por ejemplo, para determinar el momento de cruce entre dos líneas.
 
-La comparación se realiza con respecto a los valores en dos sockets **Up** y **Down**.
+La comparación se realiza con respecto a los valores en dos sockets **Arriba** y **Abajo**.
 
 ## Sockets de entrada
 
-- **Up** – valores que permiten comparación (por ejemplo, valor numérico, valor de indicador, etc.).
-- **Down** – valores que permiten comparación (por ejemplo, valor numérico, valor de indicador, etc.).
+- **Arriba** – valores que permiten comparación (por ejemplo, valor numérico, valor de indicador, etc.).
+- **Abajo** – valores que permiten comparación (por ejemplo, valor numérico, valor de indicador, etc.).
 
 ## Sockets de salida
 
-- **Flag** – true si **Up** es mayor que **Down**, de lo contrario false.
+- **Indicador** – true si **Arriba** es mayor que **Abajo**, de lo contrario false.
 
 ![Designer Crossing 01](../../../../../../images/designer_crossing_01.png)
 

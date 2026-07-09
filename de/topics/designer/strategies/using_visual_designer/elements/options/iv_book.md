@@ -8,14 +8,14 @@ Der Würfel wird verwendet, um ein Orderbuch der impliziten Volatilität zu bere
 
 Eingehende Sockets
 
-- **Model** - das Berechnungsmodell (zum Beispiel Black-Scholes).
-- **Order book** - das Orderbuch.
+- **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
+- **Orderbuch** - das Orderbuch.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Order book** - die Werte des Orderbuchs der impliziten Volatilität.
+- **Orderbuch** - die Werte des Orderbuchs der impliziten Volatilität.
 
 ## Empfohlene Inhalte
 

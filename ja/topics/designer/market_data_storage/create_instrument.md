@@ -1,6 +1,6 @@
 # 銘柄の作成
 
-**Create security** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックすると、**Editing** ウィンドウが開きます。銘柄を作成するには、銘柄のプロパティを入力して **OK** ボタンをクリックします。
+**銘柄を作成** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックすると、**編集** ウィンドウが開きます。銘柄を作成するには、銘柄のプロパティを入力して **確定** ボタンをクリックします。
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 

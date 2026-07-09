@@ -8,22 +8,22 @@ Dieser Block wird verwendet, um Kerzen für ein angegebenes Instrument zu bilden
 
 Eingehende Sockets
 
-- **Instrument** – das Instrument, für das die Kerzen mit den angegebenen Parametern gebildet werden sollen.
+- **Handelsinstrument** – das Instrument, für das die Kerzen mit den angegebenen Parametern gebildet werden sollen.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Candles** – die gebildeten Kerzen.
+- **Kerzen** – die gebildeten Kerzen.
 
 ### Parameter
 
 Parameter
 
-- **Series** – der Typ der Kerzenserie und die Parameter für den angegebenen Typ;
-- **Only Formed** – nur vollständig gebildete Kerzen oder jede Änderung an den Ausgang weitergeben;
-- **Smaller Timeframe** – Kerzen aus einem kleineren Timeframe bilden;
-- **Subscribe on Signal** – Daten erst nach Empfang eines Triggers abonnieren.
+- **Serie** – der Typ der Kerzenserie und die Parameter für den angegebenen Typ;
+- **Nur abgeschlossene** – nur vollständig gebildete Kerzen oder jede Änderung an den Ausgang weitergeben;
+- **Kleinerer Zeitrahmen** – Kerzen aus einem kleineren Timeframe bilden;
+- **Bei Signal abonnieren** – Daten erst nach Empfang eines Triggers abonnieren.
 
 ## Siehe auch
 

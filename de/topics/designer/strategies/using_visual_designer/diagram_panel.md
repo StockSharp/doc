@@ -1,12 +1,12 @@
 # Strategie-Designer
 
-Der Hauptprozess zum Entwerfen einer Strategie und ihrer Komponentenelemente findet im Panel **Schema** statt, indem Blöcke kombiniert und mit Linien verbunden werden. Das Panel Schema besteht aus den Panels **Palette**, **Designer** und **Eigenschaften**.
+Der Hauptprozess zum Entwerfen einer Strategie und ihrer Komponentenelemente findet im Panel **Schema** statt, indem Blöcke kombiniert und mit Linien verbunden werden. Das Panel Schema besteht aus den Panels **Elemente-Palette**, **Designer** und **Eigenschaften**.
 
 ![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Palette-Panel
 
-Das Panel **Palette** enthält Blöcke, aus denen Strategien erstellt werden. Alle Elemente in der Palette sind in Kategorien unterteilt, die im Abschnitt [Beschreibung der Blöcke](elements.md) beschrieben werden. Um einen Block zum Panel **Designer** hinzuzufügen, klicken Sie mit der rechten Maustaste auf den gewünschten Block und ziehen ihn bei gedrückter Taste in das Panel **Designer**. Danach wird das Element automatisch ausgewählt, und seine Parameter werden im Fenster zur Bearbeitung der Blockeigenschaften angezeigt.
+Das Panel **Elemente-Palette** enthält Blöcke, aus denen Strategien erstellt werden. Alle Elemente in der Palette sind in Kategorien unterteilt, die im Abschnitt [Beschreibung der Blöcke](elements.md) beschrieben werden. Um einen Block zum Panel **Designer** hinzuzufügen, klicken Sie mit der rechten Maustaste auf den gewünschten Block und ziehen ihn bei gedrückter Taste in das Panel **Designer**. Danach wird das Element automatisch ausgewählt, und seine Parameter werden im Fenster zur Bearbeitung der Blockeigenschaften angezeigt.
 
 ## Designer-Panel
 
@@ -32,8 +32,8 @@ Alle Blöcke enthalten einen Satz vordefinierter Eigenschaften, die im Modus *Er
 
 - **Name** – der Name des Elements, der im Designer angezeigt wird.
 - **Protokollierungsstufe** – die Protokollierungsstufe für dieses Element.
-- **Parameters** – Parameter des Elements in übergeordneten Elementen anzeigen.
-- **Sockets** – Sockets des Elements in übergeordneten Elementen anzeigen.
+- **Parameter** – Parameter des Elements in übergeordneten Elementen anzeigen.
+- **Anschlüsse** – Sockets des Elements in übergeordneten Elementen anzeigen.
 
 Ausführliche Informationen zu den Eigenschaften jedes Blocks finden Sie im Abschnitt [Beschreibung der Blöcke](elements.md).
 

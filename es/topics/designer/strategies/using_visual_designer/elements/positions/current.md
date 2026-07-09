@@ -15,13 +15,13 @@ Sockets de entrada
 
 Sockets de salida
 
-- **Position** - valor numérico de la posición en el instrumento o el importe actual de fondos disponibles en la cuenta. Este valor se genera cuando cambia la posición o los fondos, y después de iniciar la estrategia.
+- **Posición** - valor numérico de la posición en el instrumento o el importe actual de fondos disponibles en la cuenta. Este valor se genera cuando cambia la posición o los fondos, y después de iniciar la estrategia.
 
 ### Parámetros
 
 Parámetros
 
-- **Money** - cuando la bandera en la entrada está establecida, el elemento solo acepta la cartera; la posición de dinero para la cartera seleccionada se pasa a la salida del elemento.
+- **Dinero** - cuando la bandera en la entrada está establecida, el elemento solo acepta la cartera; la posición de dinero para la cartera seleccionada se pasa a la salida del elemento.
 
 ## Contenido recomendado
 

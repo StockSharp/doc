@@ -8,14 +8,14 @@ O cubo é usado para calcular um livro de ordens de volatilidade implícita.
 
 Sockets de entrada
 
-- **Model** - o modelo de cálculo (por exemplo, Black-Scholes).
-- **Order book** - o livro de ordens.
+- **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
+- **Livro de ofertas** - o livro de ordens.
 
 ### Sockets de saída
 
 Sockets de saída
 
-- **Order book** - os valores do livro de ordens de volatilidade implícita.
+- **Livro de ofertas** - os valores do livro de ordens de volatilidade implícita.
 
 ## Conteúdo recomendado
 

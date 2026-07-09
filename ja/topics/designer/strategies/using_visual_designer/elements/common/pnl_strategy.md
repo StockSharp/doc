@@ -8,7 +8,7 @@ RemoteManager の英語ドキュメント
 
 - **P\/L unrealized** - 未実現損益の数値です。
 - **P\/L realized** - 実現損益の数値です。
-- **Commission fee** - 手数料の数値です。
+- **手数料** - 手数料の数値です。
 
 ## 推奨コンテンツ
 

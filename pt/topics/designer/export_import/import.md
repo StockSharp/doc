@@ -2,8 +2,8 @@
 
 O Designer permite importar qualquer tipo de dados: estratégias, blocos e indicadores. Existem várias formas de importar:
 
-- No painel **Schemes**, clique com o botão direito do rato na pasta de estratégias e, no menu que aparece, selecione **Import**.
-- No separador **Common**, prima o botão **Import** e, no menu que aparece, selecione **Strategy**, **Own element** ou **Indicator**:
+- No painel **Esquemas**, clique com o botão direito do rato na pasta de estratégias e, no menu que aparece, selecione **Importar**.
+- No separador **Geral**, prima o botão **Importar** e, no menu que aparece, selecione **Estratégia**, **Elemento próprio** ou **Indicador**:
 
 ![Designer Import strategies 00](../../../images/designer_import_strategies_00.png)
 

@@ -6,7 +6,7 @@ O cubo foi concebido para apresentar dados no gráfico no painel [Gráfico](../.
 
 ![Designer Panel graphics 04](../../../../../../images/designer_panel_graphics_04.png)
 
-O painel [Gráfico](../../../../user_interface/components/chart.md) apresenta todos os dados recebidos nos cubos **Chart panel**. Para diferentes séries de velas, tem de usar diferentes cubos **Chart panel**. Nesse caso, os gráficos serão colocados uns sobre os outros, mas apenas os elementos gráficos correspondentes (série de velas, indicador, negócios, etc.) serão apresentados em cada um. O exemplo mostra que o gráfico superior apresenta velas, dois indicadores e negócios, que correspondem a quatro parâmetros de entrada do cubo superior. No gráfico inferior são mostradas apenas velas. Para mais informações sobre o painel [Gráfico](../../../../user_interface/components/chart.md), consulte a secção [Gráfico](../../../../user_interface/components/chart.md).
+O painel [Gráfico](../../../../user_interface/components/chart.md) apresenta todos os dados recebidos nos cubos **Painel do gráfico**. Para diferentes séries de velas, tem de usar diferentes cubos **Painel do gráfico**. Nesse caso, os gráficos serão colocados uns sobre os outros, mas apenas os elementos gráficos correspondentes (série de velas, indicador, negócios, etc.) serão apresentados em cada um. O exemplo mostra que o gráfico superior apresenta velas, dois indicadores e negócios, que correspondem a quatro parâmetros de entrada do cubo superior. No gráfico inferior são mostradas apenas velas. Para mais informações sobre o painel [Gráfico](../../../../user_interface/components/chart.md), consulte a secção [Gráfico](../../../../user_interface/components/chart.md).
 
 ## Conteúdo recomendado
 

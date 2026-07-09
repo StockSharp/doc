@@ -6,12 +6,12 @@ El bloque Synchronization está diseñado para acumular y sincronizar datos de v
 
 ## Sockets de entrada
 
-- **Incoming**: cuando se conecta una nueva fuente de datos, se crean automáticamente un socket de salida correspondiente y un nuevo socket de entrada. El número de valores entrantes es ilimitado.
+- **Entrada**: cuando se conecta una nueva fuente de datos, se crean automáticamente un socket de salida correspondiente y un nuevo socket de entrada. El número de valores entrantes es ilimitado.
 
 ## Parámetros
 
-- **Interval**: establece el tiempo después del cual los datos deben actualizarse o eliminarse. Si llega un valor entrante con una hora que supera el valor anterior más el intervalo, los datos antiguos se limpian y comienza una nueva tanda de acumulación de datos.
-- **Clear items**: si esta opción está activada, los datos se limpian después de acumularse para todos los sockets de entrada conectados, o se acumulan hasta que aparezcan datos del siguiente intervalo temporal.
+- **Intervalo**: establece el tiempo después del cual los datos deben actualizarse o eliminarse. Si llega un valor entrante con una hora que supera el valor anterior más el intervalo, los datos antiguos se limpian y comienza una nueva tanda de acumulación de datos.
+- **Borrar elementos**: si esta opción está activada, los datos se limpian después de acumularse para todos los sockets de entrada conectados, o se acumulan hasta que aparezcan datos del siguiente intervalo temporal.
 
 ## Ejemplos de uso
 

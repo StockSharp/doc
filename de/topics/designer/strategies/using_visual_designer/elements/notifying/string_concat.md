@@ -20,7 +20,7 @@ Ausgehende Sockets
 
 Parameter
 
-- **Template** - Vorlage für die Zeichenfolgenverkettung und -formatierung. Beim Bearbeiten der Vorlage wird die Liste der Eingabe-Sockets aktualisiert.
+- **Vorlage** - Vorlage für die Zeichenfolgenverkettung und -formatierung. Beim Bearbeiten der Vorlage wird die Liste der Eingabe-Sockets aktualisiert.
 
 ### Beispiele
 

@@ -2,7 +2,7 @@
 
 Der **Designer** unterstützt Optimierung sowohl mit der [Brute-Force-Methode](brute_force.md) als auch auf Basis genetischer Algorithmen. Genetische Optimierung beschleunigt den Prozess zum Finden optimaler Parameter erheblich.
 
-Um die **Genetic**-Optimierung zu aktivieren, müssen Sie:
+Um die **Genetisch**-Optimierung zu aktivieren, müssen Sie:
 
 - den Modus wechseln:
 
@@ -16,7 +16,7 @@ Um die **Genetic**-Optimierung zu aktivieren, müssen Sie:
 
   ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
 
-  Beispielsweise können Berechnungen nicht nur nach **Profit**, sondern auch relativ zu dessen **Maximum Drawdown** durchgeführt werden. Verfügbare mathematische Funktionen sind ähnlich wie im Block [Formel](../strategies/using_visual_designer/elements/common/formula.md).
+  Beispielsweise können Berechnungen nicht nur nach **Gewinn**, sondern auch relativ zu dessen **Maximaler Drawdown** durchgeführt werden. Verfügbare mathematische Funktionen sind ähnlich wie im Block [Formel](../strategies/using_visual_designer/elements/common/formula.md).
 
 > [!TIP]
 > Optimierung über Genetik ist nicht deterministisch. Daher ist es anders als bei der [Brute-Force-Suche](brute_force.md) unmöglich, die genaue Anzahl der Iterationen und damit die erforderliche Gesamtzeit zu bestimmen.

@@ -2,19 +2,19 @@
 
 ![Designer Universal formula 00](../../../../../../images/designer_universal_formula_00.png)
 
-Um cubo é usado para calcular uma fórmula matemática com um número arbitrário de argumentos. Pode escolher uma fórmula da lista disponível ou escrever a sua própria. No caso de escrever a sua própria fórmula, o número de sockets de entrada é determinado automaticamente. 
+Um cubo é usado para calcular uma fórmula matemática com um número arbitrário de argumentos. Pode escolher uma fórmula da lista disponível ou escrever a sua própria. No caso de escrever a sua própria fórmula, o número de sockets de entrada é determinado automaticamente.
 
 ## Sockets de entrada
 
-- **Value** - o valor com o qual pode realizar operações matemáticas (por exemplo, um número ou indicador). O número de valores de entrada depende da fórmula.
+- **Valor** - o valor com o qual pode realizar operações matemáticas (por exemplo, um número ou indicador). O número de valores de entrada depende da fórmula.
 
 ## Sockets de saída
 
-- **Result** - valor calculado da fórmula matemática.
+- **Resultado** - valor calculado da fórmula matemática.
 
 ## Parâmetros
 
-- **Formula** - conjunto predefinido de fórmulas matemáticas.
+- **Fórmula** - conjunto predefinido de fórmulas matemáticas.
 
 Juntamente com os operadores matemáticos padrão, pode usar as seguintes funções:
 

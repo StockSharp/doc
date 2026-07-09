@@ -6,7 +6,7 @@ Der Würfel dient dazu, Daten im Panel [Chart](../../../../user_interface/compon
 
 ![Designer Panel graphics 04](../../../../../../images/designer_panel_graphics_04.png)
 
-Das Panel [Chart](../../../../user_interface/components/chart.md) zeigt alle Daten an, die in den Würfeln **Chart panel** empfangen wurden. Für unterschiedliche Kerzenserien müssen unterschiedliche Würfel **Chart panel** verwendet werden. Dabei werden die Charts untereinander platziert, aber auf jedem Chart werden nur die entsprechenden grafischen Elemente (Kerzenserie, Indikator, Trades usw.) angezeigt. Das Beispiel zeigt, dass im oberen Chart Kerzen, zwei Indikatoren und Trades angezeigt werden, die vier Eingabeparametern des oberen Würfels entsprechen. Im unteren Chart werden nur Kerzen angezeigt. Weitere Informationen zum Panel [Chart](../../../../user_interface/components/chart.md) finden Sie im Abschnitt [Chart](../../../../user_interface/components/chart.md).
+Das Panel [Chart](../../../../user_interface/components/chart.md) zeigt alle Daten an, die in den Würfeln **Diagrammbereich** empfangen wurden. Für unterschiedliche Kerzenserien müssen unterschiedliche Würfel **Diagrammbereich** verwendet werden. Dabei werden die Charts untereinander platziert, aber auf jedem Chart werden nur die entsprechenden grafischen Elemente (Kerzenserie, Indikator, Trades usw.) angezeigt. Das Beispiel zeigt, dass im oberen Chart Kerzen, zwei Indikatoren und Trades angezeigt werden, die vier Eingabeparametern des oberen Würfels entsprechen. Im unteren Chart werden nur Kerzen angezeigt. Weitere Informationen zum Panel [Chart](../../../../user_interface/components/chart.md) finden Sie im Abschnitt [Chart](../../../../user_interface/components/chart.md).
 
 ## Empfohlene Inhalte
 

@@ -12,7 +12,7 @@ Después de pulsar el botón **Añadir** ![Designer Panel Circuits 01](../../../
 
 Para crear una estrategia a partir de bloques, debe seleccionar la pestaña **Esquema**. También puede elegir una plantilla que se usará como esquema inicial.
 
-Después de pulsar **OK**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**. En el espacio de trabajo aparecerá una nueva pestaña con la estrategia y, al cambiar a ella, la pestaña **Backtest** se abrirá automáticamente en la cinta. En el panel **Esquema**, al hacer clic con el botón derecho en la estrategia, se abre un menú que permite, entre otras acciones, renombrar la estrategia.
+Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**. En el espacio de trabajo aparecerá una nueva pestaña con la estrategia y, al cambiar a ella, la pestaña **Prueba histórica** se abrirá automáticamente en la cinta. En el panel **Esquema**, al hacer clic con el botón derecho en la estrategia, se abre un menú que permite, entre otras acciones, renombrar la estrategia.
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 

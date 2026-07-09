@@ -1,10 +1,10 @@
 # Live 実行の例
 
-**Live** で例を実行するには、以下が必要です。
+**ライブ** で例を実行するには、以下が必要です。
 
 1. [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) のテスト用ターミナル **IB Trader Workstation (TWS) Demo**。これはメーカーの Web サイトから入手できます。
 
-2. [Designer](../../designer.md) で動作するように IB TWS Demo ターミナルを設定します。[Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) セクションの **IB TWS Setting demo** を参照してください。
+2. [Designer](../../designer.md) で動作するように IB TWS Demo ターミナルを設定します。[Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) セクションの **IB TWS設定例** を参照してください。
 
 3. [Designer](../../designer.md) で IB TWS Demo への接続を設定し、接続します。
 
@@ -19,7 +19,7 @@ SMA ストラテジーを使用する例では、以下のパラメーターを�
 - **AAPL@NASDAQ** 銘柄
 - 標準ストレージ **\\Documents\\StockSharp\\Designer\\Storage**
 - ストレージ形式 - **CSV**
-- ストレージから取得するデータの種類 - **Ticks**
+- ストレージから取得するデータの種類 - **ティック**
 - 時間枠 5 s のローソク足
 - 数量 - 100
 - 履歴日数 - 2

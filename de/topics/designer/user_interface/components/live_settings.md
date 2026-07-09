@@ -20,10 +20,10 @@ Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strate
 
 **Diagrammparameter**
 
-- **Instrument** - das Instrument.
+- **Handelsinstrument** - das Instrument.
 - **Portfolio** - das Portfolio.
 
-Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Instrument** der Registerkarte **Emulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
+Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Handelsinstrument** der Registerkarte **Simulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
 
 ## Empfohlene Inhalte
 

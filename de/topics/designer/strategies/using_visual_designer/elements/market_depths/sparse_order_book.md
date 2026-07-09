@@ -16,7 +16,7 @@ Der Würfel wird verwendet, um ein ausgedünntes Orderbuch für das angegebene I
 
 ### Parameter
 
-- **Price Range** - der Preisbereich mit Schritten, nach denen das Orderbuch ausgedünnt wird.
+- **Preisbereich** - der Preisbereich mit Schritten, nach denen das Orderbuch ausgedünnt wird.
 
 ## Empfohlene Inhalte
 

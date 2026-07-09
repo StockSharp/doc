@@ -9,7 +9,7 @@
 
 既定では、これらの型を持つすべてのパラメーターが [オプティマイザーパラメーター表](brute_force.md) に表示されます。最適化からパラメーターを除外するには、次のようにします。
 
-- [ダイアグラム](../strategies/using_visual_designer.md)の場合は、必要なキューブを選択し、そのプロパティを開き、**Advanced settings** に切り替えて、**Parameter** チェックボックスをオフにします。
+- [ダイアグラム](../strategies/using_visual_designer.md)の場合は、必要なキューブを選択し、そのプロパティを開き、**詳細設定** に切り替えて、**パラメーター** チェックボックスをオフにします。
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 
@@ -18,7 +18,7 @@
 ```cs
 _long = this.Param(nameof(Long), 80);
 _short = this.Param(nameof(Short), 20);
-			
+
 // 最適化対象からパラメーターを除外する
 _long.CanOptimize = false;
 ```

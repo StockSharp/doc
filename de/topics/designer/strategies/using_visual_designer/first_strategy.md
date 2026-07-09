@@ -6,11 +6,11 @@ Zum Erstellen von Strategie-Schemas und zusammengesetzten Elementen sowie zum Te
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) im Ordner **Strategie** des Panels **Schemata** erscheint eine neue Strategie. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie; beim Wechsel dorthin wird automatisch die Registerkarte **Emulation** im Menüband geöffnet. Auf der Registerkarte **Emulation** können Sie den Namen der Strategie ändern und ihr eine kurze Beschreibung geben.
+Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) im Ordner **Strategie** des Panels **Schemata** erscheint eine neue Strategie. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie; beim Wechsel dorthin wird automatisch die Registerkarte **Simulation** im Menüband geöffnet. Auf der Registerkarte **Simulation** können Sie den Namen der Strategie ändern und ihr eine kurze Beschreibung geben.
 
 ![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. Öffnen und fixieren Sie für komfortables Arbeiten die Panels **Palette** und **Eigenschaften** des Bereichs **Schemata**, indem Sie auf die Schaltfläche ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) klicken. Das Ergebnis ist ein Fenster der folgenden Art.
+2. Öffnen und fixieren Sie für komfortables Arbeiten die Panels **Elemente-Palette** und **Eigenschaften** des Bereichs **Schemata**, indem Sie auf die Schaltfläche ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) klicken. Das Ergebnis ist ein Fenster der folgenden Art.
 
 ![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 
@@ -21,11 +21,11 @@ Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits
 - Wenn der kurze gleitende Durchschnitt den langen von oben nach unten kreuzt, wird eine Short-Position eröffnet.
 - Wenn zum Zeitpunkt des Signals zum Eröffnen einer Position eine entgegengesetzte Position vorhanden ist, wird die Position gedreht.
 
-4. Für alle Strategien benötigen Sie ein Instrument und ein Portfolio, die für Trades verwendet werden. Sie sollten diese aus dem Panel **Palette** in das Panel **Designer** hinzufügen. Im Beispiel heißt der Würfel [Variable](elements/data_sources/variable.md) mit dem Typ **Instrument** Instrument, und der Würfel [Variable](elements/data_sources/variable.md) mit dem Typ **Portfolio** heißt Portfolio. Setzen Sie das Kontrollkästchen **Parameters** der Würfel Instrument und Portfolio. Wenn das Kontrollkästchen aktiviert ist, übernimmt der Würfel den Wert aus den Strategieeinstellungen. Wenn Sie das Kontrollkästchen nicht aktivieren, müssen Sie die Werte für Instrument und Portfolio manuell eingeben. Wenn Sie das Feld Value des Würfels [Variable](elements/data_sources/variable.md) leer lassen und das Kontrollkästchen für Parameter nicht setzen, gibt die Strategie während des Tests einen Fehler wegen des nicht gesetzten Werts des Würfels [Variable](elements/data_sources/variable.md) aus.
+4. Für alle Strategien benötigen Sie ein Instrument und ein Portfolio, die für Trades verwendet werden. Sie sollten diese aus dem Panel **Elemente-Palette** in das Panel **Designer** hinzufügen. Im Beispiel heißt der Würfel [Variable](elements/data_sources/variable.md) mit dem Typ **Handelsinstrument** Instrument, und der Würfel [Variable](elements/data_sources/variable.md) mit dem Typ **Portfolio** heißt Portfolio. Setzen Sie das Kontrollkästchen **Parameter** der Würfel Instrument und Portfolio. Wenn das Kontrollkästchen aktiviert ist, übernimmt der Würfel den Wert aus den Strategieeinstellungen. Wenn Sie das Kontrollkästchen nicht aktivieren, müssen Sie die Werte für Instrument und Portfolio manuell eingeben. Wenn Sie das Feld Value des Würfels [Variable](elements/data_sources/variable.md) leer lassen und das Kontrollkästchen für Parameter nicht setzen, gibt die Strategie während des Tests einen Fehler wegen des nicht gesetzten Werts des Würfels [Variable](elements/data_sources/variable.md) aus.
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen, deaktivieren Sie für jeden Würfel das Kontrollkästchen **Parameters** und setzen Sie den Wert des Instruments oder Portfolios.
+Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen, deaktivieren Sie für jeden Würfel das Kontrollkästchen **Parameter** und setzen Sie den Wert des Instruments oder Portfolios.
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
@@ -47,11 +47,11 @@ Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen,
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. Als Quelle der Trades für die Anzeige im Chart wird der Würfel **Trades** der Strategie verwendet. Im Beispiel heißt er Strategy trades.
+9. Als Quelle der Trades für die Anzeige im Chart wird der Würfel **Ausführungen** der Strategie verwendet. Im Beispiel heißt er Strategy trades.
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. Um eine Position zu eröffnen, fügen Sie zwei Würfel [Register order](elements/orders/register.md) hinzu. Der erste Würfel ist für den Kauf per Market-Order vorgesehen. An den Eingang dieses Würfels werden übergeben: **Instrument**, das Signal zum Eröffnen einer Position aus dem Würfel Crossing Up, **Portfolio** und das Ordervolumen. Der zweite Würfel ist für den Verkauf per Market-Order vorgesehen. An den Eingang dieses Würfels werden übergeben: **Instrument**, das Signal zum Eröffnen einer Position aus dem Würfel Crossing Down, **Portfolio** und das Ordervolumen.
+10. Um eine Position zu eröffnen, fügen Sie zwei Würfel [Register order](elements/orders/register.md) hinzu. Der erste Würfel ist für den Kauf per Market-Order vorgesehen. An den Eingang dieses Würfels werden übergeben: **Handelsinstrument**, das Signal zum Eröffnen einer Position aus dem Würfel Crossing Up, **Portfolio** und das Ordervolumen. Der zweite Würfel ist für den Verkauf per Market-Order vorgesehen. An den Eingang dieses Würfels werden übergeben: **Handelsinstrument**, das Signal zum Eröffnen einer Position aus dem Würfel Crossing Down, **Portfolio** und das Ordervolumen.
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
@@ -59,7 +59,7 @@ Wenn Sie in der Strategie mehrere Instrumente oder Portfolios verwenden müssen,
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-Zur Positionskontrolle müssen Sie den Würfel [Position](elements/positions/current.md) hinzufügen, an dessen Eingang **Instrument** und **Portfolio** übergeben werden.
+Zur Positionskontrolle müssen Sie den Würfel [Position](elements/positions/current.md) hinzufügen, an dessen Eingang **Handelsinstrument** und **Portfolio** übergeben werden.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

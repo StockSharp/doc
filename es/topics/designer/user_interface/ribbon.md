@@ -6,15 +6,15 @@ El elemento principal de la interfaz de usuario de [Designer](../../designer.md)
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 
-2. La pestaña **Backtest** se abre automáticamente al seleccionar una estrategia en el panel [Esquemas](schemas.md). La pestaña **Backtest** contiene los elementos principales para crear, depurar, probar y optimizar estrategias ([Creación de una estrategia](../strategies/using_visual_designer.md), [Ejemplo de backtesting](../backtesting/getting_started.md)). Además, en esta pestaña se inicia la estrategia para trading real y se seleccionan los componentes necesarios para su estrategia: gráfico, libro de órdenes, operaciones, etc.
+2. La pestaña **Prueba histórica** se abre automáticamente al seleccionar una estrategia en el panel [Esquemas](schemas.md). La pestaña **Prueba histórica** contiene los elementos principales para crear, depurar, probar y optimizar estrategias ([Creación de una estrategia](../strategies/using_visual_designer.md), [Ejemplo de backtesting](../backtesting/getting_started.md)). Además, en esta pestaña se inicia la estrategia para trading real y se seleccionan los componentes necesarios para su estrategia: gráfico, libro de órdenes, operaciones, etc.
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 
-3. La pestaña **Live** está destinada específicamente al trading real. Los detalles de configuración de conexión se describen en [Configuración de conexión](../connections_settings.md). El trading real con [Designer](../../designer.md) se describe en [Trading en vivo](../live_execution/getting_started.md).
+3. La pestaña **En vivo** está destinada específicamente al trading real. Los detalles de configuración de conexión se describen en [Configuración de conexión](../connections_settings.md). El trading real con [Designer](../../designer.md) se describe en [Trading en vivo](../live_execution/getting_started.md).
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 
-4. La pestaña **Cloud**. [Designer](../../designer.md) está diseñado para trabajar con servicios en la nube. Permite ver *Cloud Tasks* completadas, obtener información sobre instrumentos disponibles en Cloud y configurar trabajo remoto con canales y robots.
+4. La pestaña **Nube**. [Designer](../../designer.md) está diseñado para trabajar con servicios en la nube. Permite ver *Cloud Tasks* completadas, obtener información sobre instrumentos disponibles en Cloud y configurar trabajo remoto con canales y robots.
 
 ![Designer Tape 03](../../../images/designer_tape_03.png)
 

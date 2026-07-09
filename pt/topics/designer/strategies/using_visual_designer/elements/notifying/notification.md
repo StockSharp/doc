@@ -8,15 +8,15 @@ O cubo envia uma notificação quando chegam dados ao seu socket de entrada. O v
 
 Sockets de entrada
 
-- **Message** - dados a enviar. Qualquer valor é aceite e convertido numa string.
+- **Mensagem** - dados a enviar. Qualquer valor é aceite e convertido numa string.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Type** - tipo de mensagem (janela pop-up, e-mail, sms, etc.). Os tipos de notificações são descritos na secção [Notificações](../../../../../terminal/notifications.md).
+- **Tipo** - tipo de mensagem (janela pop-up, e-mail, sms, etc.). Os tipos de notificações são descritos na secção [Notificações](../../../../../terminal/notifications.md).
 - **Telegram** - canal usado para notificações do Telegram.
-- **Header** - o cabeçalho da mensagem.
+- **Cabeçalho** - o cabeçalho da mensagem.
 
 ## Conteúdo recomendado
 

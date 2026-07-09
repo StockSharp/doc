@@ -1,6 +1,6 @@
 # Haltepunkte
 
-Um einen Haltepunkt hinzuzufügen, wählen Sie den Würfel aus und klicken Sie auf die Schaltfläche ![Designer Debug 01](../../../../images/designer_debug_01.png)**Add Breakpoint**. Haltepunkte werden mit einem roten Kreis hervorgehoben:
+Um einen Haltepunkt hinzuzufügen, wählen Sie den Würfel aus und klicken Sie auf die Schaltfläche ![Designer Debug 01](../../../../images/designer_debug_01.png)**Haltepunkt hinzufügen**. Haltepunkte werden mit einem roten Kreis hervorgehoben:
 
 ![Designer Stopping point 00](../../../../images/designer_debug_break_points_00.png)
 
@@ -13,7 +13,7 @@ Ein Beispiel für die Anzeige der Werte am Ein- und Ausgang eines zusammengesetz
 
 Haltepunkte können sowohl vor dem Start des Testprozesses als auch während des Testings der Strategie auf historischen Daten hinzugefügt werden.
 
-Wenn Sie auf die Schaltfläche ![Designer Debug 01](../../../../images/designer_debug_01.png)**Breakpoints** klicken, erscheint ein Fenster, in dem alle Haltepunkte angezeigt werden. Für jeden Haltepunkt kann eine zusätzliche Auslösebedingung festgelegt werden. Beispielsweise können Sie für ein logisches Signal den Wert **True** festlegen. In diesem Fall hält der Haltepunkt nur an, wenn der Signalwert **True** ist.
+Wenn Sie auf die Schaltfläche ![Designer Debug 01](../../../../images/designer_debug_01.png)**Haltepunkte** klicken, erscheint ein Fenster, in dem alle Haltepunkte angezeigt werden. Für jeden Haltepunkt kann eine zusätzliche Auslösebedingung festgelegt werden. Beispielsweise können Sie für ein logisches Signal den Wert **True** festlegen. In diesem Fall hält der Haltepunkt nur an, wenn der Signalwert **True** ist.
 
 ![Designer Stopping point 02](../../../../images/designer_stopping_point_02.png)
 

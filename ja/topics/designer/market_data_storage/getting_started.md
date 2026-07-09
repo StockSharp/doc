@@ -1,6 +1,6 @@
 # はじめに
 
-履歴データストレージを作成するには、**Market data** タブの ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) ボタンをクリックします。現在のストレージパラメーターを変更するには、![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) をクリックします。現在のストレージをストレージ一覧から削除するには、![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) をクリックします。
+履歴データストレージを作成するには、**市場データ** タブの ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) ボタンをクリックします。現在のストレージパラメーターを変更するには、![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) をクリックします。現在のストレージをストレージ一覧から削除するには、![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) をクリックします。
 
 ![Designer Creating a repository of historical data 03](../../../images/designer_creating_repository_of_historical_data_03.png)
 
@@ -18,7 +18,7 @@
 
 ![Designer Creating a repository of historical data 05](../../../images/designer_creating_repository_of_historical_data_05.png)
 
-新しいストレージを追加した後、**Storage** ドロップダウンリストで選択できます。
+新しいストレージを追加した後、**ストレージ** ドロップダウンリストで選択できます。
 
 ![Designer Creating a repository of historical data 06](../../../images/designer_creating_repository_of_historical_data_06.png)
 

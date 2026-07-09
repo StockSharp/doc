@@ -23,7 +23,7 @@ class empty_indicator(BaseIndicator):
 	パラメーターの保存と読み込みを示すサンプルインジケーター。
 
 	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
-	
+
 	入力価格を +20% または -20% 変化させます。
 	"""
 	def __init__(self):
@@ -54,7 +54,7 @@ class empty_indicator(BaseIndicator):
 	def OnProcess(self, input):
 		"""
 		入力されたインジケーター値を処理し、ランダムな変化を適用します。
-		
+
 		:param input: 入力されたインジケーター値。
 		:return: 変更適用後の新しい DecimalIndicatorValue。
 		"""
@@ -80,7 +80,7 @@ class empty_indicator(BaseIndicator):
 	def Load(self, storage):
 		"""
 		永続ストレージからインジケーターパラメーターを読み込みます。
-		
+
 		:param storage: 読み込み元の設定ストレージ。
 		"""
 		super(empty_indicator, self).Load(storage)
@@ -89,7 +89,7 @@ class empty_indicator(BaseIndicator):
 	def Save(self, storage):
 		"""
 		インジケーターパラメーターを永続ストレージへ保存します。
-		
+
 		:param storage: 保存先の設定ストレージ。
 		"""
 		super(empty_indicator, self).Save(storage)
@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-このインジケーターは入力値を受け取り、指定された **Change** パラメーター値に基づいてランダムな偏差を加えます。
+このインジケーターは入力値を受け取り、指定された **変更** パラメーター値に基づいてランダムな偏差を加えます。
 
 インジケーターメソッドの説明は、[カスタムインジケーター](../../../../api/indicators/custom_indicator.md)セクションで確認できます。
 
@@ -110,7 +110,7 @@ class empty_indicator(BaseIndicator):
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-インジケーターコードで事前に設定した **Change** パラメーターが、プロパティパネルに表示されます。
+インジケーターコードで事前に設定した **変更** パラメーターが、プロパティパネルに表示されます。
 
-> [!WARNING] 
+> [!WARNING]
 > Python コードのインジケーターは、Python コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

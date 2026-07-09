@@ -12,12 +12,12 @@
 
 Los campos **Datos de mercado** y **Operaciones** muestran si el conector admite datos de mercado y trabajo con órdenes.
 
-4. Cuando se selecciona la casilla **Auto-connect**, la conexión se conecta automáticamente al iniciar [Designer](../designer.md).
+4. Cuando se selecciona la casilla **Conexión automática**, la conexión se conecta automáticamente al iniciar [Designer](../designer.md).
 
 5. El área n.º 2 muestra la configuración del conector seleccionado. Al hacer clic en ![Designer The connection settings 09](../../images/designer_connection_settings_09.png), el programa redirige a la documentación ([API](../api.md)) sobre la configuración del conector seleccionado.
 
   > [!IMPORTANT]
-  > **Advanced settings** se necesitan en casos especiales y no se recomienda modificarlos.
+  > **Configuración avanzada** se necesitan en casos especiales y no se recomienda modificarlos.
 
 6. Al hacer clic en el botón **Comprobar**, se comprobará la conexión del conector actual. Si la comprobación falla, aparecerá una ventana con un error que describe la razón de la conexión fallida. Si la comprobación es correcta, aparecerá una ventana:
 
@@ -25,7 +25,7 @@ Los campos **Datos de mercado** y **Operaciones** muestran si el conector admite
 
 7. El área n.º 3 muestra los tipos de datos que el conector recibirá o transmitirá. Al hacer clic en la casilla ![Designer The connection settings 11](../../images/designer_connection_settings_11.png)\/ ![Designer The connection settings 12](../../images/designer_connection_settings_12.png), puede habilitar\/deshabilitar la transmisión o recepción para este tipo de datos.
 
-8. Al hacer clic en el botón **Network settings**, se abrirá la ventana **Proxy-server settings**:
+8. Al hacer clic en el botón **Configuración de red**, se abrirá la ventana **Configuración del servidor proxy**:
 
 ![Designer The connection settings 13](../../images/designer_connection_settings_13.png)
 

@@ -8,13 +8,13 @@ Das Element wird verwendet, um ein Element aus einer Sammlung mit dem angegebene
 
 Eingehende Sockets
 
-- **Any data** – die Sammlung von Elementen.
+- **Beliebige Daten** – die Sammlung von Elementen.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Any data** - das Element aus der Sammlung mit dem in den Parametern angegebenen Index.
+- **Beliebige Daten** - das Element aus der Sammlung mit dem in den Parametern angegebenen Index.
 
 ### Parameter
 

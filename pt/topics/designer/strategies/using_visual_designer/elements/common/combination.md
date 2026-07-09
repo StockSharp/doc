@@ -6,15 +6,15 @@ O cubo é usado para combinar dados do mesmo tipo provenientes de diferentes cub
 
 ## Sockets de entrada
 
-- **Any data** - especifica o tipo de dados recebidos e passados.
+- **Quaisquer dados** - especifica o tipo de dados recebidos e passados.
 
 ## Sockets de saída
 
-- **Any data** - especifica o tipo de dados recebidos e passados.
+- **Quaisquer dados** - especifica o tipo de dados recebidos e passados.
 
 ## Parâmetros
 
-- **Type** - especifica o tipo de dados recebidos e passados.
+- **Tipo** - especifica o tipo de dados recebidos e passados.
 
 ## Conteúdo recomendado
 

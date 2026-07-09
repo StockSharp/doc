@@ -6,15 +6,15 @@ Ein Würfel wird verwendet, um eine mathematische Formel mit einer beliebigen An
 
 ## Eingehende Sockets
 
-- **Value** – der Wert, mit dem mathematische Operationen durchgeführt werden können (zum Beispiel eine Zahl oder ein Indikator). Die Anzahl der Eingangswerte hängt von der Formel ab.
+- **Wert** – der Wert, mit dem mathematische Operationen durchgeführt werden können (zum Beispiel eine Zahl oder ein Indikator). Die Anzahl der Eingangswerte hängt von der Formel ab.
 
 ## Ausgehende Sockets
 
-- **Result** – berechneter Wert der mathematischen Formel.
+- **Ergebnis** – berechneter Wert der mathematischen Formel.
 
 ## Parameter
 
-- **Formula** – vordefinierter Satz mathematischer Formeln.
+- **Formel** – vordefinierter Satz mathematischer Formeln.
 
 Zusammen mit den standardmäßigen mathematischen Operatoren können Sie die folgenden Funktionen verwenden:
 

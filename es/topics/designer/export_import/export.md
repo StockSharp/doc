@@ -13,7 +13,7 @@ Después de pulsar **Exportar**, según el tipo de contenido, aparecerá una ven
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - exportar el esquema tal cual. El modo **Standalone** es necesario para esquemas que usan sus propios elementos o indicadores. En este caso, todos los elementos internos se exportarán dentro del diagrama de la estrategia.
+  - scheme - exportar el esquema tal cual. El modo **Independiente** es necesario para esquemas que usan sus propios elementos o indicadores. En este caso, todos los elementos internos se exportarán dentro del diagrama de la estrategia.
   - code - convertir el esquema en código C#.
   - DLL - compilar el esquema en una DLL. Es adecuado si necesita mantener el código confidencial.
 

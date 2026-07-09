@@ -1,6 +1,6 @@
 # Crear instrumento
 
-Al hacer clic en el botón **Create security** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), se abre la ventana **Editing**. Para crear un instrumento, debe rellenar sus propiedades y hacer clic en el botón **OK**:
+Al hacer clic en el botón **Crear instrumento** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), se abre la ventana **Edición**. Para crear un instrumento, debe rellenar sus propiedades y hacer clic en el botón **Aceptar**:
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 

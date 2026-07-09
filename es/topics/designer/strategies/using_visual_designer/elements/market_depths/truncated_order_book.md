@@ -6,15 +6,15 @@ El cubo se usa para obtener un libro de órdenes truncado a una profundidad espe
 
 ### Sockets de entrada
 
-- **Order book** es un libro de órdenes que debe truncarse.
+- **Libro de órdenes** es un libro de órdenes que debe truncarse.
 
 ### Sockets de salida
 
-- **Order book** es el libro de órdenes truncado.
+- **Libro de órdenes** es el libro de órdenes truncado.
 
 ### Parámetros
 
-- **Depth** – profundidad máxima del libro de órdenes.
+- **Profundidad** – profundidad máxima del libro de órdenes.
 
 ## Contenido recomendado
 

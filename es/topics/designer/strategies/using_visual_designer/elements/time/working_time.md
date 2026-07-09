@@ -5,14 +5,14 @@
 Este bloque se usa para determinar el horario de trabajo de la estrategia. Por ejemplo, para definir cuándo se negocia un instrumento específico o cuándo la estrategia tiene permitido operar.
 #### Sockets de entrada
 
-- **Any Data** - el bloque acepta cualquier valor, pero toma de él la marca de tiempo, que luego se compara con los parámetros del bloque.
+- **Cualquier dato** - el bloque acepta cualquier valor, pero toma de él la marca de tiempo, que luego se compara con los parámetros del bloque.
 #### Sockets de salida
 
-- **Flag** - bandera que determina si la marca de tiempo cumple los parámetros del bloque (true) o no (false).
+- **Indicador** - bandera que determina si la marca de tiempo cumple los parámetros del bloque (true) o no (false).
 #### Parámetros
 
-- **Time From** - hora de inicio del horario de trabajo.
-- **Time To** - hora de fin del horario de trabajo.
+- **Hora desde** - hora de inicio del horario de trabajo.
+- **Hora hasta** - hora de fin del horario de trabajo.
 
 El bloque puede usarse para determinar cuándo se realiza trading para varios instrumentos de distintas plataformas de trading.
 

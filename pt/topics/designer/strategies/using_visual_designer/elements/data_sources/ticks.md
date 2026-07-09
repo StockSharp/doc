@@ -2,25 +2,25 @@
 
 ![Designer Ticks](../../../../../../images/designer_ticks_00.png)
 
-Este bloco é usado para receber dados **Tick** de um instrumento.
+Este bloco é usado para receber dados **Tique** de um instrumento.
 
 ### Sockets de entrada
 
 Sockets de entrada
 
-- **Instrument** - o instrumento para o qual é necessário receber dados **Level1**.
+- **Instrumento** - o instrumento para o qual é necessário receber dados **Nível 1**.
 
 ### Sockets de saída
 
 Sockets de saída
 
-- **Tick** - uma transação tick.
+- **Tique** - uma transação tick.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Subscribe on Signal** - subscrever dados apenas depois de chegar um trigger.
+- **Subscrever por sinal** - subscrever dados apenas depois de chegar um trigger.
 
 ## Ver também
 

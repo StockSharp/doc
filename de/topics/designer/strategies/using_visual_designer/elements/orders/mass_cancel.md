@@ -8,21 +8,21 @@ Dieser Block wird verwendet, um alle Orders für ein Instrument zu stornieren.
 
 Eingehende Sockets
 
-- **Trigger** - das Signal, das bestimmt, wann Orders storniert werden müssen.
+- **Auslöser** - das Signal, das bestimmt, wann Orders storniert werden müssen.
 - **Portfolio** - das Portfolio, für das alle Orders storniert werden sollen.
-- **Instrument** - das Instrument, für das alle Orders storniert werden sollen.
+- **Handelsinstrument** - das Instrument, für das alle Orders storniert werden sollen.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Result** - ein Flag, das den Erfolg des Vorgangs signalisiert.
+- **Ergebnis** - ein Flag, das den Erfolg des Vorgangs signalisiert.
 
 ### Parameter
 
 Parameter
 
-- **Direction** - die Richtung der zu stornierenden Orders (Kauf oder Verkauf); dient als Stornierungssignal für die Order.
+- **Richtung** - die Richtung der zu stornierenden Orders (Kauf oder Verkauf); dient als Stornierungssignal für die Order.
 
 ## Siehe auch
 

@@ -8,23 +8,23 @@ Der Würfel wird zur Absicherung von Optionspositionen verwendet.
 
 Eingehende Sockets
 
-- **Model** - das Berechnungsmodell (zum Beispiel Black-Scholes).
-- **Instrument** - das Instrument, also der Basiswert.
-- **Volume** - der numerische Wert des Volumens.
-- **Position by underlying asset** - die Position im Basiswert.
-- **Flag** - das Signal (Flag), das den Absicherungsprozess startet.
+- **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
+- **Handelsinstrument** - das Instrument, also der Basiswert.
+- **Volumen** - der numerische Wert des Volumens.
+- **Position nach Basiswert** - die Position im Basiswert.
+- **Markierung** - das Signal (Flag), das den Absicherungsprozess startet.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Order** - die registrierte Order, die verwendet werden kann, um über das Element Trades by Order Trades dafür zu erhalten und sie mit dem Würfel Chart panel im Chart anzuzeigen.
+- **Auftrag** - die registrierte Order, die verwendet werden kann, um über das Element Trades by Order Trades dafür zu erhalten und sie mit dem Würfel Chart panel im Chart anzuzeigen.
 
 ### Parameter
 
 Parameter
 
-- **Hedging type** - der Absicherungstyp; mögliche Werte sind Delta, Gamma, Vega, Theta oder Rho.
+- **Hedging-Typ** - der Absicherungstyp; mögliche Werte sind Delta, Gamma, Vega, Theta oder Rho.
 
 ## Empfohlene Inhalte
 

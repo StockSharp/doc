@@ -2,26 +2,26 @@
 
 ![Designer Level 1 00](../../../../../../images/designer_level_1_00.png)
 
-Este bloque se usa para recibir datos **Level1** para un instrumento.
+Este bloque se usa para recibir datos **Nivel 1** para un instrumento.
 
 ### Sockets de entrada
 
 Sockets de entrada
 
-- **Instrumento** – instrumento para el que deben recibirse datos **Level1**.
+- **Instrumento** – instrumento para el que deben recibirse datos **Nivel 1**.
 
 ### Sockets de salida
 
 Sockets de salida
 
-- **Change** – valores **Level1** del parámetro rastreado.
+- **Cambio** – valores **Nivel 1** del parámetro rastreado.
 
 ### Parámetros
 
 Parámetros
 
-- **Value** – parámetro **Level1** que debe rastrearse.
-- **Subscribe on Signal** – suscribirse a datos solo después de que llegue un disparador.
+- **Valor** – parámetro **Nivel 1** que debe rastrearse.
+- **Suscribirse por señal** – suscribirse a datos solo después de que llegue un disparador.
 
 ## Véase también
 

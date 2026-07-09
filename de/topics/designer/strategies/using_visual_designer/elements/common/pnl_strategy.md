@@ -8,7 +8,7 @@ Das Element stellt P/L-Informationen der Strategie bereit.
 
 - **P/L unrealized** – numerischer Wert des nicht realisierten Gewinns/Verlusts.
 - **P/L realized** – numerischer Wert des realisierten Gewinns/Verlusts.
-- **Commission fee** – numerischer Wert der Kommissionsgebühr.
+- **Provisionsgebühr** – numerischer Wert der Kommissionsgebühr.
 
 ## Empfohlene Inhalte
 

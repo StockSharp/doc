@@ -10,16 +10,16 @@ Visual Studio には、Visual Studio デバッガーを使用して実行中の�
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
-3. **Attach to Process** ダイアログボックスで、アタッチしたい **Designer.exe** プロセスを **Available processes** リストから探します。
+3. **プロセスにアタッチ** ダイアログボックスで、アタッチしたい **Designer.exe** プロセスを **利用可能なプロセス** リストから探します。
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
-プロセスが別のユーザーアカウントで実行されている場合は、**Show processes from all users** チェックボックスをオンにする必要があります。
+プロセスが別のユーザーアカウントで実行されている場合は、**すべてのユーザーのプロセスを表示** チェックボックスをオンにする必要があります。
 
-4. **Attach to** ウィンドウで、デバッグする必要があるコードタイプが指定されていることが重要です。既定の **Auto** パラメーターはデバッグ対象のコードタイプを判定しようとしますが、常に正しく識別できるとは限りません。コードタイプを手動で設定するには、次の手順を実行する必要があります。
+4. **アタッチ先** ウィンドウで、デバッグする必要があるコードタイプが指定されていることが重要です。既定の **自動** パラメーターはデバッグ対象のコードタイプを判定しようとしますが、常に正しく識別できるとは限りません。コードタイプを手動で設定するには、次の手順を実行する必要があります。
 
-- Attach to フィールドで **Select** をクリックします。
-- **Select Code Type** ダイアログボックスで **Debug these code types** ボタンをクリックし、デバッグ対象の型を選択します。
+- Attach to フィールドで **選択** をクリックします。
+- **コードタイプを選択** ダイアログボックスで **これらのコードタイプをデバッグ** ボタンをクリックし、デバッグ対象の型を選択します。
 - OK をクリックします。
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
@@ -32,7 +32,7 @@ Visual Studio には、Visual Studio デバッガーを使用して実行中の�
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
-> [!WARNING] 
+> [!WARNING]
 > デバッガー下でコードが停止している間、**Designer** プログラム内のすべてのプロセスは一時停止します。プログラムが実取引に接続されている場合、デバッガーで長時間停止すると切断が発生します。
 
 ## 関連項目

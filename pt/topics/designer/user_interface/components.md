@@ -1,6 +1,6 @@
 # Componentes
 
-Durante testes ou negociação, surge a necessidade de controlar totalmente o processo. Para controlo e análise completos, o [Designer](../../designer.md) inclui componentes gráficos que podem ser adicionados seleccionando-os na **Ribbon**, no grupo **Components**:
+Durante testes ou negociação, surge a necessidade de controlar totalmente o processo. Para controlo e análise completos, o [Designer](../../designer.md) inclui componentes gráficos que podem ser adicionados seleccionando-os na **Faixa de opções**, no grupo **Componentes**:
 
 ![Designer Components](../../../images/designer_components.png)
 

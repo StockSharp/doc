@@ -8,19 +8,19 @@
 
 入力ソケット
 
-- **Options** - モデルを作成する必要がある権利行使価格。
+- **オプション** - モデルを作成する必要がある権利行使価格。
 
 ### 出力ソケット
 
 出力ソケット
 
-- **Model** - 価格モデル（例: Black-Scholes）。
+- **モデル** - 価格モデル（例: Black-Scholes）。
 
 ### パラメーター
 
 パラメーター
 
-- **Black Model** - Black-Scholes モデルを作成するかどうかを示すフラグ。
+- **Blackモデル** - Black-Scholes モデルを作成するかどうかを示すフラグ。
 
 ![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
 

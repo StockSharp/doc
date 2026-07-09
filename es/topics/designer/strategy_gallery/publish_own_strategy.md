@@ -16,7 +16,7 @@ Campos que deben rellenarse:
 - Descripción
 - Identificador de paquete Nuget. Este parámetro es necesario para establecer el enlace al producto en la tienda. Por ejemplo, en la dirección https://stocksharp.com/store/runner/, la palabra **runner** se especifica mediante este parámetro.
 
-El acceso al nivel **Free** o **Paid** se concede solo después de contactar por correo electrónico [info@stocksharp.com](mailto:info@stocksharp.com). De forma predeterminada, está disponible el nivel **Private**, que permite publicar estrategias solo en formato privado (para usuarios seleccionados):
+El acceso al nivel **Gratis** o **De pago** se concede solo después de contactar por correo electrónico [info@stocksharp.com](mailto:info@stocksharp.com). De forma predeterminada, está disponible el nivel **Privada**, que permite publicar estrategias solo en formato privado (para usuarios seleccionados):
 
 Después de hacer clic en el botón **Guardar**, la estrategia se enviará al servidor de StockSharp.
 
@@ -24,6 +24,6 @@ Al publicar actualizaciones, no es necesario introducir todos los parámetros de
 
 ![Designer_publish_02](../../../images/designer_publish_02.png)
 
-Después de hacer clic en el botón **OK**, aparecerá una ventana indicando que la actualización se realizó correctamente:
+Después de hacer clic en el botón **Aceptar**, aparecerá una ventana indicando que la actualización se realizó correctamente:
 
 ![Designer_publish_03](../../../images/designer_publish_03.png)

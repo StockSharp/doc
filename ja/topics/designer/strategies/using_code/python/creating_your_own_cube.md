@@ -2,7 +2,7 @@
 
 [スキームからキューブを作成](../../using_visual_designer/composite_elements.md)する場合と同様に、Python コードに基づいて独自のキューブを作成できます。このようなキューブは、スキームから作成したキューブよりも高機能になります。
 
-コードからキューブを作成するには、**Custom Cubes** フォルダー内に作成する必要があります。
+コードからキューブを作成するには、**カスタムブロック** フォルダー内に作成する必要があります。
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -51,7 +51,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def add_Output1(self, handler: Action[Unit]):
 		"""
 		Output1 イベントを購読します。
-		
+
 		:param handler: Output1 がトリガーされたときに呼び出される呼び出し可能メソッド。
 		"""
 		self._output1_handlers.append(handler)
@@ -59,7 +59,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def remove_Output1(self, handler):
 		"""
 		Output1 イベントの購読を解除します。
-		
+
 		:param handler: Output1 の購読者から削除される呼び出し可能メソッド。
 		"""
 		if handler in self._output1_handlers:
@@ -69,7 +69,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def add_Output2(self, handler: Action[Unit]):
 		"""
 		Output2 イベントを購読します。
-		
+
 		:param handler: Output2 がトリガーされたときに呼び出される呼び出し可能メソッド。
 		"""
 		self._output2_handlers.append(handler)
@@ -77,7 +77,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def remove_Output2(self, handler):
 		"""
 		Output2 イベントの購読を解除します。
-		
+
 		:param handler: Output2 の購読者から削除される呼び出し可能メソッド。
 		"""
 		if handler in self._output2_handlers:
@@ -90,13 +90,13 @@ class empty_diagram_element(DiagramExternalElement):
 	# @property
 	# def WaitAllInput(self):
 	#     return False
-	
+
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
 		入力ソケットは DiagramExternal 属性でマークされたメソッドパラメーターです。
 		ローソク足と diff 値を処理し、ロジックに基づいて出力イベントを呼び出します。
-		
+
 		:param candle: ローソク足を表す CandleMessage 入力。
 		:param diff: 処理対象の差分値を表す Unit。
 		"""
@@ -150,7 +150,7 @@ def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 def add_Output1(self, handler: Action[Unit]):
 	"""
 	Output1 イベントを購読します。
-	
+
 	:param handler: Output1 がトリガーされたときに呼び出される呼び出し可能メソッド。
 	"""
 	self._output1_handlers.append(handler)
@@ -158,7 +158,7 @@ def add_Output1(self, handler: Action[Unit]):
 def remove_Output1(self, handler):
 	"""
 	Output1 イベントの購読を解除します。
-	
+
 	:param handler: Output1 の購読者から削除される呼び出し可能メソッド。
 	"""
 	if handler in self._output1_handlers:
@@ -168,7 +168,7 @@ def remove_Output1(self, handler):
 def add_Output2(self, handler: Action[Unit]):
 	"""
 	Output2 イベントを購読します。
-	
+
 	:param handler: Output2 がトリガーされたときに呼び出される呼び出し可能メソッド。
 	"""
 	self._output2_handlers.append(handler)
@@ -176,7 +176,7 @@ def add_Output2(self, handler: Action[Unit]):
 def remove_Output2(self, handler):
 	"""
 	Output2 イベントの購読を解除します。
-	
+
 	:param handler: Output2 の購読者から削除される呼び出し可能メソッド。
 	"""
 	if handler in self._output2_handlers:
@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定の保存と復元の仕組みが自動的に使用されます。
 
-**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**最小値** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされた [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッドがいつ呼び出されるかを決定します。
 
@@ -205,13 +205,13 @@ self._minValue = self.AddParam("MinValue", 10)\
 #     return False
 ```
 
-このプロパティのコメントを解除すると、少なくとも 1 つの値が到着するたびに **Process** メソッドが呼び出されます（この例では、ローソク足または数値のどちらか）。
+このプロパティのコメントを解除すると、少なくとも 1 つの値が到着するたびに **プロセス** メソッドが呼び出されます（この例では、ローソク足または数値のどちらか）。
 
-作成したキューブをスキームに追加するには、パレットの **Custom Cubes** セクションで作成済みのキューブを選択する必要があります。
+作成したキューブをスキームに追加するには、パレットの **カスタムブロック** セクションで作成済みのキューブを選択する必要があります。
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
-> [!WARNING] 
+> [!WARNING]
 > Python コードのキューブは、Python コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。
 
 ## 関連項目

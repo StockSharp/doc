@@ -14,17 +14,17 @@
 
 Python コードからストラテジーを作成するには、2 番目のタブを選択します。初期コードとして使用するテンプレートを選択することもできます。
 
-**OK** をクリックすると、[スキーム](../using_visual_designer.md)からストラテジーを作成した場合と同様に、**スキーム** パネルの **ストラテジー** フォルダーに新しいストラテジーが表示されます。ストラテジーの削除や名前変更の操作も同様です。
+**確定** をクリックすると、[スキーム](../using_visual_designer.md)からストラテジーを作成した場合と同様に、**スキーム** パネルの **ストラテジー** フォルダーに新しいストラテジーが表示されます。ストラテジーの削除や名前変更の操作も同様です。
 
 ただし、スキームの代わりに Python コードエディターが表示されます。
 
 ![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
 
-コードエディタータブは、**Source Code** パネルと **Error List** パネルで構成されます。**Source Code** パネルには Python コードエディター本体があります。上部にはツールバーがあり、**Current Line**、**Line Number** などのハイライト表示を有効または無効にできます。フォントサイズを大きくするには、CTRL+MouseWheel の組み合わせを使用できます。
+コードエディタータブは、**ソースコード** パネルと **エラー一覧** パネルで構成されます。**ソースコード** パネルには Python コードエディター本体があります。上部にはツールバーがあり、**現在行**、**行番号** などのハイライト表示を有効または無効にできます。フォントサイズを大きくするには、CTRL+MouseWheel の組み合わせを使用できます。
 
-**Error List** パネルはコードエラーの一覧を含むテーブルです。行をダブルクリックすると、**Source Code** パネル内のエラー位置へカーソルが自動的に移動します。
+**エラー一覧** パネルはコードエラーの一覧を含むテーブルです。行をダブルクリックすると、**ソースコード** パネル内のエラー位置へカーソルが自動的に移動します。
 
-コードを編集すると、**Error List** パネルの右下隅にアイコン ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) が表示され、変更追跡が開始されたことを示します。コードの変更が停止するとコンパイルが行われます。
+コードを編集すると、**エラー一覧** パネルの右下隅にアイコン ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) が表示され、変更追跡が開始されたことを示します。コードの変更が停止するとコンパイルが行われます。
 
 [バックテスト](../../backtesting/user_interface.md)、[ライブ](../../live_execution/getting_started.md)でのストラテジー実行、およびその他の操作は、スキームから作成したストラテジーと同様に動作します。
 

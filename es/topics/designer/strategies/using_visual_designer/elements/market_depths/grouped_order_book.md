@@ -4,19 +4,19 @@
 
 ![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
-El cubo se usa para obtener un libro de órdenes agrupado. 
+El cubo se usa para obtener un libro de órdenes agrupado.
 
 ### Sockets de entrada
 
-- **Order book** - libro de órdenes que se debe agrupar.
+- **Libro de órdenes** - libro de órdenes que se debe agrupar.
 
 ### Sockets de salida
 
-- **Order book** - libro de órdenes agrupado.
+- **Libro de órdenes** - libro de órdenes agrupado.
 
 ### Parámetros
 
-- **Price range** - rango de precios en el que se agruparán las órdenes.
+- **Rango de precios** - rango de precios en el que se agruparán las órdenes.
 
 ## Contenido recomendado
 

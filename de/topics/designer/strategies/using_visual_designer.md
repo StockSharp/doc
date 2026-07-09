@@ -12,7 +12,7 @@ Nach dem Drücken der Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01
 
 Um eine Strategie aus Blöcken zu erstellen, müssen Sie die Registerkarte **Schema** auswählen. Sie können auch eine Vorlage auswählen, die als Anfangsschema verwendet wird.
 
-Nach dem Drücken von **OK** erscheint eine neue Strategie im Ordner **Strategien** des Panels **Schema**. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie, und beim Wechsel dorthin wird automatisch die Registerkarte **Backtest** im Menüband geöffnet. Im Panel **Schema** öffnet ein Rechtsklick auf die Strategie ein Menü, mit dem Sie die Strategie unter anderem umbenennen können.
+Nach dem Drücken von **OK** erscheint eine neue Strategie im Ordner **Strategien** des Panels **Schema**. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie, und beim Wechsel dorthin wird automatisch die Registerkarte **Rücktest** im Menüband geöffnet. Im Panel **Schema** öffnet ein Rechtsklick auf die Strategie ein Menü, mit dem Sie die Strategie unter anderem umbenennen können.
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 

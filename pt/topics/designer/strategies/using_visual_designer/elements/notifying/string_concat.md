@@ -17,13 +17,13 @@ Sockets de entrada
 
 Sockets de saída
 
-- **Text** - a string concatenada e formatada.
+- **Texto** - a string concatenada e formatada.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Template** - modelo de concatenação e formatação de strings. A edição do modelo
+- **Modelo** - modelo de concatenação e formatação de strings. A edição do modelo
   atualiza a lista de sockets de entrada.
 
 ### Exemplos

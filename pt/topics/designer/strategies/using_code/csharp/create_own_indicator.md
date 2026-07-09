@@ -2,7 +2,7 @@
 
 A criação do seu próprio indicador na [API](../../../../api.md) é descrita na secção [Indicador personalizado](../../../../api/indicators/custom_indicator.md). Esses indicadores são totalmente compatíveis com o **Designer**.
 
-Para criar um indicador, no painel **Scheme** é necessário selecionar a pasta **Indicators**, clicar com o botão direito e, no menu de contexto, selecionar **Add**:
+Para criar um indicador, no painel **Esquema** é necessário selecionar a pasta **Indicadores**, clicar com o botão direito e, no menu de contexto, selecionar **Adicionar**:
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 
@@ -11,11 +11,11 @@ O código do indicador terá o seguinte aspeto:
 ```cs
 /// <summary>
 /// Indicador de exemplo que demonstra como guardar e carregar parâmetros.
-/// 
+///
 /// Altera o preço de entrada em +20% ou -20%.
-/// 
+///
 /// Ver mais exemplos em https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
-/// 
+///
 /// Documentação https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator
@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-Este indicador recebe um valor de entrada e aplica um desvio arbitrário com base no valor do parâmetro **Change**.
+Este indicador recebe um valor de entrada e aplica um desvio arbitrário com base no valor do parâmetro **Alteração**.
 
 A descrição dos métodos do indicador está disponível na secção [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
@@ -98,7 +98,7 @@ Para adicionar o indicador criado ao diagrama, é necessário usar o cubo [Indic
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-O parâmetro **Change**, previamente definido no código do indicador, é apresentado no painel de propriedades.
+O parâmetro **Alteração**, previamente definido no código do indicador, é apresentado no painel de propriedades.
 
-> [!WARNING] 
+> [!WARNING]
 > Indicadores em código C# não podem ser usados em estratégias criadas em código C#. Só podem ser usados em estratégias criadas [a partir de cubos](../../using_visual_designer.md).

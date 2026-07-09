@@ -11,12 +11,12 @@ Este bloque se usa para comprobar si actualmente se permite operar. Se comprueba
 ### Sockets de entrada
 
 
-- **Trigger** - señal que determina el momento en que debe realizarse la comprobación.
+- **Activador** - señal que determina el momento en que debe realizarse la comprobación.
 
 ### Sockets de salida
 
 
-- **Flag** - bandera que determina si la sesión de trading está activa.
+- **Indicador** - bandera que determina si la sesión de trading está activa.
 
 ## Véase también
 

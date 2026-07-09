@@ -14,16 +14,16 @@ Sockets de entrada
 
 Sockets de salida
 
-- **Candles** – velas construidas.
+- **Velas** – velas construidas.
 
 ### Parámetros
 
 Parámetros
 
-- **Series** – tipo de serie de velas y parámetros para el tipo especificado;
-- **Only Formed** – pasar a la salida solo velas completamente formadas o cualquier cambio;
-- **Smaller Timeframe** – construir velas a partir de un timeframe menor;
-- **Subscribe on Signal** – suscribirse a datos solo después de recibir un disparador.
+- **Serie** – tipo de serie de velas y parámetros para el tipo especificado;
+- **Solo formadas** – pasar a la salida solo velas completamente formadas o cualquier cambio;
+- **Marco temporal menor** – construir velas a partir de un timeframe menor;
+- **Suscribirse por señal** – suscribirse a datos solo después de recibir un disparador.
 
 ## Véase también
 

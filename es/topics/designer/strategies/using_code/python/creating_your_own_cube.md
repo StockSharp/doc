@@ -2,7 +2,7 @@
 
 De forma similar a la creación de un [cubo a partir de un esquema](../../using_visual_designer/composite_elements.md), puede crear su propio cubo basado en código Python. Este cubo será más funcional que un cubo creado a partir de un esquema.
 
-Para crear un cubo desde código, debe crearlo en la carpeta **Custom Cubes**:
+Para crear un cubo desde código, debe crearlo en la carpeta **Bloques personalizados**:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -51,7 +51,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def add_Output1(self, handler: Action[Unit]):
 		"""
 		Suscribirse al evento Output1.
-		
+
 		:param handler: Método invocable que se llamará cuando Output1 se active.
 		"""
 		self._output1_handlers.append(handler)
@@ -59,7 +59,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def remove_Output1(self, handler):
 		"""
 		Cancelar la suscripción al evento Output1.
-		
+
 		:param handler: Método invocable que se eliminará de los suscriptores de Output1.
 		"""
 		if handler in self._output1_handlers:
@@ -69,7 +69,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def add_Output2(self, handler: Action[Unit]):
 		"""
 		Suscribirse al evento Output2.
-		
+
 		:param handler: Método invocable que se llamará cuando Output2 se active.
 		"""
 		self._output2_handlers.append(handler)
@@ -77,7 +77,7 @@ class empty_diagram_element(DiagramExternalElement):
 	def remove_Output2(self, handler):
 		"""
 		Cancelar la suscripción al evento Output2.
-		
+
 		:param handler: Método invocable que se eliminará de los suscriptores de Output2.
 		"""
 		if handler in self._output2_handlers:
@@ -90,13 +90,13 @@ class empty_diagram_element(DiagramExternalElement):
 	# @property
 	# def WaitAllInput(self):
 	#     return False
-	
+
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
 		Los sockets de entrada son parámetros de método marcados con el atributo DiagramExternal.
 		Procesa una vela y un valor diff, y luego invoca eventos de salida según la lógica.
-		
+
 		:param candle: Entrada CandleMessage que representa una vela.
 		:param diff: Unit que representa el valor de diferencia que se va a procesar.
 		"""
@@ -150,7 +150,7 @@ Los sockets de salida se definen aplicando el decorador @diagram_external a un e
 def add_Output1(self, handler: Action[Unit]):
 	"""
 	Suscribirse al evento Output1.
-	
+
 	:param handler: Método invocable que se llamará cuando Output1 se active.
 	"""
 	self._output1_handlers.append(handler)
@@ -158,7 +158,7 @@ def add_Output1(self, handler: Action[Unit]):
 def remove_Output1(self, handler):
 	"""
 	Cancelar la suscripción al evento Output1.
-	
+
 	:param handler: Método invocable que se eliminará de los suscriptores de Output1.
 	"""
 	if handler in self._output1_handlers:
@@ -168,7 +168,7 @@ def remove_Output1(self, handler):
 def add_Output2(self, handler: Action[Unit]):
 	"""
 	Suscribirse al evento Output2.
-	
+
 	:param handler: Método invocable que se llamará cuando Output2 se active.
 	"""
 	self._output2_handlers.append(handler)
@@ -176,7 +176,7 @@ def add_Output2(self, handler: Action[Unit]):
 def remove_Output2(self, handler):
 	"""
 	Cancelar la suscripción al evento Output2.
-	
+
 	:param handler: Método invocable que se eliminará de los suscriptores de Output2.
 	"""
 	if handler in self._output2_handlers:
@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 Al usar la clase [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1), se aplica automáticamente el enfoque de guardar y restaurar configuración.
 
-La propiedad **MinValue** está marcada como básica y será visible en el modo [Propiedades básicas](../../using_visual_designer/diagram_panel.md).
+La propiedad **Valor mínimo** está marcada como básica y será visible en el modo [Propiedades básicas](../../using_visual_designer/diagram_panel.md).
 
 La propiedad comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) determina cuándo se llama el método con sockets de entrada:
 
@@ -205,13 +205,13 @@ La propiedad comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEle
 #     return False
 ```
 
-Si descomenta la propiedad, el método **Process** se llamará siempre que llegue al menos un valor (en el ejemplo, una vela o un valor numérico).
+Si descomenta la propiedad, el método **Proceso** se llamará siempre que llegue al menos un valor (en el ejemplo, una vela o un valor numérico).
 
-Para añadir el cubo resultante al esquema, debe seleccionar el cubo creado en la paleta, en la sección **Custom Cubes**:
+Para añadir el cubo resultante al esquema, debe seleccionar el cubo creado en la paleta, en la sección **Bloques personalizados**:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 
-> [!WARNING] 
+> [!WARNING]
 > Los cubos creados con código Python no pueden usarse en estrategias creadas con código Python. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).
 
 ## Véase también

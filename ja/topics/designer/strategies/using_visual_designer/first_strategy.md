@@ -1,16 +1,16 @@
 # 最初のストラテジー
 
-ストラテジーおよび複合要素のスキーマを作成し、得られたストラテジーを履歴データでテストするには、移動平均（SMA）ストラテジーの例を使用できます。この例では、ストラテジーの作成からテスト、デバッグまでの完全なサイクルをたどることができます。移動平均（SMA）ストラテジーは、**Schemas** パネルの **Strategies** フォルダーにあります。
+ストラテジーおよび複合要素のスキーマを作成し、得られたストラテジーを履歴データでテストするには、移動平均（SMA）ストラテジーの例を使用できます。この例では、ストラテジーの作成からテスト、デバッグまでの完全なサイクルをたどることができます。移動平均（SMA）ストラテジーは、**スキーマ** パネルの **戦略** フォルダーにあります。
 
-1. [コードの使用](../using_code.md) で説明されているように、キューブから新しいストラテジーを作成します。新しいストラテジーを追加するには、**Common** タブの **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックし、**Strategy** を選択します。または、**Schemas** パネルの **Strategy** フォルダーを右クリックし、ドロップダウンメニューで **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックします。
+1. [コードの使用](../using_code.md) で説明されているように、キューブから新しいストラテジーを作成します。新しいストラテジーを追加するには、**共通** タブの **追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックし、**戦略** を選択します。または、**スキーマ** パネルの **戦略** フォルダーを右クリックし、ドロップダウンメニューで **追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックします。
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-**Schemas** パネルの **Strategy** フォルダーで **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックすると、新しいストラテジーが表示されます。ワークスペースにはストラテジーの新しいタブが表示され、そのタブに切り替えると、リボンの **Emulation** タブが自動的に開きます。**Emulation** タブでは、ストラテジーの名前を変更し、簡単な説明を付けることができます。
+**スキーマ** パネルの **戦略** フォルダーで **追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) ボタンをクリックすると、新しいストラテジーが表示されます。ワークスペースにはストラテジーの新しいタブが表示され、そのタブに切り替えると、リボンの **エミュレーション** タブが自動的に開きます。**エミュレーション** タブでは、ストラテジーの名前を変更し、簡単な説明を付けることができます。
 
 ![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. 作業しやすくするために、![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) ボタンをクリックして、**Schemas** 領域の **Palette** パネルと **Properties** パネルを開いてピン留めします。結果として、次のようなウィンドウになります。
+2. 作業しやすくするために、![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) ボタンをクリックして、**スキーマ** 領域の **パレット** パネルと **プロパティ** パネルを開いてピン留めします。結果として、次のようなウィンドウになります。
 
 ![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 
@@ -21,11 +21,11 @@
 - 短期移動平均が長期移動平均を上から下へクロスしたら、ショートポジションを開きます。
 - ポジションを開くシグナルを受け取った時点で反対ポジションがある場合は、ポジションを反転します。
 
-4. すべてのストラテジーでは、取引に使用するインストゥルメントとポートフォリオが必要です。これらを **Palette** パネルから **Designer** パネルに追加する必要があります。この例では、**Instrument** 型の [変数](elements/data_sources/variable.md) キューブを Instrument、**Portfolio** 型の [変数](elements/data_sources/variable.md) キューブを Portfolio と呼びます。Instrument キューブと Portfolio キューブの **Parameters** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、インストゥルメントとポートフォリオの値を手動で入力する必要があります。[変数](elements/data_sources/variable.md) キューブの Value フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [変数](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
+4. すべてのストラテジーでは、取引に使用するインストゥルメントとポートフォリオが必要です。これらを **パレット** パネルから **Designer** パネルに追加する必要があります。この例では、**銘柄** 型の [変数](elements/data_sources/variable.md) キューブを Instrument、**ポートフォリオ** 型の [変数](elements/data_sources/variable.md) キューブを Portfolio と呼びます。Instrument キューブと Portfolio キューブの **パラメーター** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、インストゥルメントとポートフォリオの値を手動で入力する必要があります。[変数](elements/data_sources/variable.md) キューブの Value フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [変数](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-ストラテジーで複数のインストゥルメントまたはポートフォリオを使用する必要がある場合は、各キューブで **Parameters** ボックスのチェックを外し、インストゥルメントまたはポートフォリオの値を設定する必要があります。
+ストラテジーで複数のインストゥルメントまたはポートフォリオを使用する必要がある場合は、各キューブで **パラメーター** ボックスのチェックを外し、インストゥルメントまたはポートフォリオの値を設定する必要があります。
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
@@ -47,11 +47,11 @@
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. チャートに表示する取引のソースとして、ストラテジーの **Trades** キューブを使用します。この例では Strategy trades と呼ばれます。
+9. チャートに表示する取引のソースとして、ストラテジーの **約定** キューブを使用します。この例では Strategy trades と呼ばれます。
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. ポジションを開くには、2 つの [Register order](elements/orders/register.md) キューブを追加します。1 つ目のキューブは成行注文による買い用です。このキューブの入力には、**Instrument**、Crossing Up 交差キューブからのポジションオープンシグナル、**Portfolio**、注文数量が渡されます。2 つ目のキューブは成行注文による売り用です。このキューブの入力には、**Instrument**、Crossing Down 交差キューブからのポジションオープンシグナル、**Portfolio**、注文数量が渡されます。
+10. ポジションを開くには、2 つの [Register order](elements/orders/register.md) キューブを追加します。1 つ目のキューブは成行注文による買い用です。このキューブの入力には、**銘柄**、Crossing Up 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。2 つ目のキューブは成行注文による売り用です。このキューブの入力には、**銘柄**、Crossing Down 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
@@ -59,7 +59,7 @@
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-ポジションを制御するには、[ポジション](elements/positions/current.md) を追加する必要があります。このキューブの入力には **Instrument** と **Portfolio** が渡されます。
+ポジションを制御するには、[ポジション](elements/positions/current.md) を追加する必要があります。このキューブの入力には **銘柄** と **ポートフォリオ** が渡されます。
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

@@ -4,7 +4,7 @@ Um Kerzen eines Instruments in einem Chart auszugeben, kann das folgende Schema 
 
 ![Designer The conclusion of the candles on the chart 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
 
-Für den Würfel [Variable](../elements/data_sources/variable.md) wird der Datentyp **Instrument** ausgewählt. Wenn das Instrument nicht angegeben ist, aber das Flag **Parameter** der Eigenschaftsgruppe **Allgemein** gesetzt ist, wird es aus der Strategie übernommen und an den Würfel [Kerzen](../elements/data_sources/candles.md) übergeben. Für den Würfel [Kerzen](../elements/data_sources/candles.md) sind die Einstellungen zum Erstellen von 5-Minuten-Kerzen und zum Übergeben nur vollständig gebildeter Kerzen angegeben.
+Für den Würfel [Variable](../elements/data_sources/variable.md) wird der Datentyp **Handelsinstrument** ausgewählt. Wenn das Instrument nicht angegeben ist, aber das Flag **Parameter** der Eigenschaftsgruppe **Allgemein** gesetzt ist, wird es aus der Strategie übernommen und an den Würfel [Kerzen](../elements/data_sources/candles.md) übergeben. Für den Würfel [Kerzen](../elements/data_sources/candles.md) sind die Einstellungen zum Erstellen von 5-Minuten-Kerzen und zum Übergeben nur vollständig gebildeter Kerzen angegeben.
 
 Für den Würfel [Chart](../elements/common/chart.md) wurde ein grafisches Element mit Kerzentyp hinzugefügt, für das der Eingabeparameter automatisch hinzugefügt wurde.
 

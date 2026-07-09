@@ -12,19 +12,19 @@ dos puntos para controlar cómo aparecen en el texto números, fechas u otros ob
 
 Sockets de entrada
 
-- **Input** – valor que se va a formatear. El socket acepta datos de cualquier tipo.
+- **Entrada** – valor que se va a formatear. El socket acepta datos de cualquier tipo.
 
 ### Sockets de salida
 
 Sockets de salida
 
-- **Text** – resultado de aplicar la plantilla al valor entrante.
+- **Texto** – resultado de aplicar la plantilla al valor entrante.
 
 ### Parámetros
 
 Parámetros
 
-- **Template** – plantilla de formateo de cadenas aplicada al valor entrante. La
+- **Plantilla** – plantilla de formateo de cadenas aplicada al valor entrante. La
   plantilla predeterminada es `{0}`, lo que significa que el valor se inserta sin
   formato adicional. Los marcadores pueden contener nombres de propiedades y cadenas de formato, por
   ejemplo `Price: {0:0.00}` o `{Price:0.00}`.

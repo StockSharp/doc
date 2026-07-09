@@ -8,21 +8,21 @@ Este bloque se usa para calcular las principales "griegas": Delta, Gamma, Vega, 
 
 Sockets de entrada
 
-- **Model** – modelo de cálculo (por ejemplo, Black-Scholes).
-- **Price of the Underlying Asset** – precio del activo subyacente.
-- **Maximum Deviation** – desviación máxima.
+- **Modelo** – modelo de cálculo (por ejemplo, Black-Scholes).
+- **Precio del activo subyacente** – precio del activo subyacente.
+- **Desviación máxima** – desviación máxima.
 
 ### Sockets de salida
 
 Sockets de salida
 
-- **Result** – resultado del cálculo de las principales "griegas": Delta, Gamma, Vega, Theta y Rho en el momento actual.
+- **Resultado** – resultado del cálculo de las principales "griegas": Delta, Gamma, Vega, Theta y Rho en el momento actual.
 
 ### Parámetros
 
 Parámetros
 
-- **Value** – puede tomar el tipo de "griega" Delta, Gamma, Vega, Theta o Rho y determina qué valor se emitirá desde el bloque.
+- **Valor** – puede tomar el tipo de "griega" Delta, Gamma, Vega, Theta o Rho y determina qué valor se emitirá desde el bloque.
 
 ## Véase también
 

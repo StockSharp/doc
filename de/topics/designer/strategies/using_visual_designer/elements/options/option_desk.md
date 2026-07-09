@@ -4,13 +4,13 @@
 
 Der Würfel wird verwendet, um das Option desk anzuzeigen.
 
-Um das **Option desk** anzuzeigen, müssen Sie die grafische Komponente **Option desk** hinzufügen.
+Um das **Optionsarbeitsplatz** anzuzeigen, müssen Sie die grafische Komponente **Optionsarbeitsplatz** hinzufügen.
 
 ### Eingehende Sockets
 
 Eingehende Sockets
 
-- **Model** - das Berechnungsmodell (zum Beispiel Black-Scholes).
+- **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 
 ![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
 

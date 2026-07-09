@@ -6,7 +6,7 @@ Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus,
 
 Laden Sie vor dem Testing Marktdaten (Instrumente, Kerzen, Tick-Trades und/oder Orderbücher). Dies wird im Abschnitt [Marktdatenspeicher](../market_data_storage.md) beschrieben.
 
-Beim Wechsel in den Tab mit der Strategie wird im **Menüband** automatisch der Tab **Emulation** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest. Geben Sie im Marktdatenfeld den erforderlichen Speicher an ([Marktdatenspeicher](../market_data_storage.md)); geben Sie im Instrumentfeld das erforderliche Instrument an.
+Beim Wechsel in den Tab mit der Strategie wird im **Menüband** automatisch der Tab **Simulation** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest. Geben Sie im Marktdatenfeld den erforderlichen Speicher an ([Marktdatenspeicher](../market_data_storage.md)); geben Sie im Instrumentfeld das erforderliche Instrument an.
 
 Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 
@@ -36,7 +36,7 @@ Der Chart zeigt, dass die Trades wie von der Strategie vorgesehen an den Schnitt
 
 ![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
 
-Im **Positions chart** ist zu sehen, dass die Strategie das gehandelte Volumen verringert hat. Dies geschah, weil das generierte Orderbuch eine Tiefe von 5 hat und die gesamte Orderbuchtiefe dadurch nicht ausreichte, um die Order über 200 Lots auszuführen. Da die Strategie lediglich die Position umkehrt, wurde die Ordergröße jedes Mal reduziert, wenn die Orderbuchtiefe für die Orderausführung nicht ausreichte.
+Im **Positionsdiagramm** ist zu sehen, dass die Strategie das gehandelte Volumen verringert hat. Dies geschah, weil das generierte Orderbuch eine Tiefe von 5 hat und die gesamte Orderbuchtiefe dadurch nicht ausreichte, um die Order über 200 Lots auszuführen. Da die Strategie lediglich die Position umkehrt, wurde die Ordergröße jedes Mal reduziert, wenn die Orderbuchtiefe für die Orderausführung nicht ausreichte.
 
 ![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
 

@@ -4,7 +4,7 @@
 
 ![Designer The conclusion of the candles on the chart 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
 
-[変数](../elements/data_sources/variable.md) キューブでは、**Instrument** データ型が選択されています。インストゥルメントが指定されていないが、**Common** プロパティグループの **Parameters** フラグが設定されている場合、インストゥルメントはストラテジーから取得され、[ローソク足](../elements/data_sources/candles.md) キューブに渡されます。[ローソク足](../elements/data_sources/candles.md) キューブでは、5 分足を構築し、完全に形成済みのローソク足のみを渡すための設定が指定されています。
+[変数](../elements/data_sources/variable.md) キューブでは、**銘柄** データ型が選択されています。インストゥルメントが指定されていないが、**共通** プロパティグループの **パラメーター** フラグが設定されている場合、インストゥルメントはストラテジーから取得され、[ローソク足](../elements/data_sources/candles.md) キューブに渡されます。[ローソク足](../elements/data_sources/candles.md) キューブでは、5 分足を構築し、完全に形成済みのローソク足のみを渡すための設定が指定されています。
 
 [チャート](../elements/common/chart.md) キューブには、ローソク足型のグラフィック要素が 1 つ追加され、その入力パラメーターが自動的に追加されました。
 

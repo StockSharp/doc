@@ -6,5 +6,5 @@ Dieser Block wird verwendet, um die aktuelle Uhrzeit zu erhalten.
 
 #### Ausgehende Sockets
 
-- **Output** - die aktuelle Uhrzeit.
+- **Ausgabe** - die aktuelle Uhrzeit.
 

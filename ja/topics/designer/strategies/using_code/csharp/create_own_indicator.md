@@ -11,11 +11,11 @@
 ```cs
 /// <summary>
 /// パラメーターの保存と読み込みを示すサンプルインジケーターです。
-/// 
+///
 /// 入力価格を +20% または -20% 変更します。
-/// 
+///
 /// その他の例は https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators を参照してください。
-/// 
+///
 /// ドキュメント https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator
@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-このインジケーターは入力値を受け取り、**Change** パラメーター値に基づいて任意の偏差を加えます。
+このインジケーターは入力値を受け取り、**変更** パラメーター値に基づいて任意の偏差を加えます。
 
 インジケーターメソッドの説明は、[カスタムインジケーター](../../../../api/indicators/custom_indicator.md) セクションで確認できます。
 
@@ -98,7 +98,7 @@ public class EmptyIndicator : BaseIndicator
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-インジケーターコードで以前に設定した **Change** パラメーターは、プロパティパネルに表示されます。
+インジケーターコードで以前に設定した **変更** パラメーターは、プロパティパネルに表示されます。
 
-> [!WARNING] 
+> [!WARNING]
 > C# コードのインジケーターは、C# コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

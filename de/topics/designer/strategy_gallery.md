@@ -8,7 +8,7 @@ Um eine Strategie auf Ihren Computer herunterzuladen, müssen Sie:
 
   ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
 
-- die Strategie wird dem Strategiebaum im Abschnitt **Backtest** hinzugefügt:
+- die Strategie wird dem Strategiebaum im Abschnitt **Rücktest** hinzugefügt:
 
   ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
 

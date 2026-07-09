@@ -9,7 +9,7 @@ A otimização é realizada sobre parâmetros da estratégia que tenham os segui
 
 Por predefinição, todos os parâmetros com estes tipos aparecem na [tabela de parâmetros do otimizador](brute_force.md). Para excluir um parâmetro da otimização:
 
-- Para um [diagrama](../strategies/using_visual_designer.md), selecione o cubo necessário, abra as suas propriedades, mude para **Advanced settings** e desative a caixa **Parameter**:
+- Para um [diagrama](../strategies/using_visual_designer.md), selecione o cubo necessário, abra as suas propriedades, mude para **Definições avançadas** e desative a caixa **Parâmetro**:
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 
@@ -18,7 +18,7 @@ Por predefinição, todos os parâmetros com estes tipos aparecem na [tabela de 
 ```cs
 _long = this.Param(nameof(Long), 80);
 _short = this.Param(nameof(Short), 20);
-			
+
 // desativar o parâmetro para otimização
 _long.CanOptimize = false;
 ```

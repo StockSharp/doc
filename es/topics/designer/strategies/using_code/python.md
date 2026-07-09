@@ -14,17 +14,17 @@ Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](..
 
 Para crear una estrategia desde código Python, seleccione la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
-Después de hacer clic en **OK**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquemas**, de forma similar a la creación de una estrategia desde un [esquema](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia también son similares.
+Después de hacer clic en **Aceptar**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquemas**, de forma similar a la creación de una estrategia desde un [esquema](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia también son similares.
 
 Pero en lugar de un esquema, se mostrará un editor de código Python:
 
 ![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
 
-La pestaña del editor de código consta de los paneles **Source Code** y **Error List**. El panel **Source Code** contiene el propio editor de código Python. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Current Line**, **Line Number**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
+La pestaña del editor de código consta de los paneles **Código fuente** y **Lista de errores**. El panel **Código fuente** contiene el propio editor de código Python. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Línea actual**, **Número de línea**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
 
-El panel **Error List** es una tabla con la lista de errores de código; al hacer doble clic en una línea, el cursor se moverá automáticamente en el panel **Source Code** a la ubicación del error.
+El panel **Lista de errores** es una tabla con la lista de errores de código; al hacer doble clic en una línea, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error.
 
-Al editar código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Error List**, indicando que ha comenzado el seguimiento de cambios. La compilación del código ocurre cuando el código deja de cambiar.
+Al editar código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. La compilación del código ocurre cuando el código deja de cambiar.
 
 La ejecución de la estrategia en [backtest](../../backtesting/user_interface.md), en [live](../../live_execution/getting_started.md) y otras operaciones funcionan de forma similar a las estrategias creadas desde esquemas.
 

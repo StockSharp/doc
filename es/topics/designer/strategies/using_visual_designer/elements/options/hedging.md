@@ -8,23 +8,23 @@ El cubo se usa para cubrir posiciones en opciones.
 
 Sockets de entrada
 
-- **Model** – modelo de cálculo (por ejemplo, Black-Scholes).
+- **Modelo** – modelo de cálculo (por ejemplo, Black-Scholes).
 - **Instrumento** – instrumento, el activo subyacente.
-- **Volume** - valor numérico del volumen.
-- **Position by underlying asset** – posición por el activo subyacente.
-- **Flag** – señal (bandera) que inicia el proceso de cobertura.
+- **Volumen** - valor numérico del volumen.
+- **Posición por activo subyacente** – posición por el activo subyacente.
+- **Indicador** – señal (bandera) que inicia el proceso de cobertura.
 
 ### Sockets de salida
 
 Sockets de salida
 
-- **Order** – orden registrada que puede usarse para obtener sus operaciones usando el elemento Trades por orden y mostrarla en el gráfico usando el cubo Chart panel.
+- **Orden** – orden registrada que puede usarse para obtener sus operaciones usando el elemento Trades por orden y mostrarla en el gráfico usando el cubo Chart panel.
 
 ### Parámetros
 
 Parámetros
 
-- **Hedging type** - tipo de cobertura; puede tomar los valores Delta, Gamma, Vega, Theta o Rho.
+- **Tipo de cobertura** - tipo de cobertura; puede tomar los valores Delta, Gamma, Vega, Theta o Rho.
 
 ## Contenido recomendado
 

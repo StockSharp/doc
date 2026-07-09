@@ -8,21 +8,21 @@ Der Würfel wird verwendet, um Optionen gemäß den angegebenen Parametern zu qu
 
 Eingehende Sockets
 
-- **Model** - das Berechnungsmodell (zum Beispiel Black-Scholes).
-- **Volume** - das Quoting-Volumen.
+- **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
+- **Volumen** - das Quoting-Volumen.
 
 ### Ausgehende Sockets
 
 Ausgehende Sockets
 
-- **Order** - die registrierte Order, die verwendet werden kann, um über das Element **Trades** by Order Trades dafür zu erhalten und sie mit dem Würfel **Chart panel** im Chart anzuzeigen.
+- **Auftrag** - die registrierte Order, die verwendet werden kann, um über das Element **Ausführungen** by Order Trades dafür zu erhalten und sie mit dem Würfel **Diagrammbereich** im Chart anzuzeigen.
 
 ### Parameter
 
 Parameter
 
-- **Quoting** - der Parameter, nach dem das Quoting durchgeführt wird. Mögliche Werte sind **Volatility** (das Quoting-Volumen folgt den angegebenen Volatilitätsgrenzen) oder **Theoretical price** (das Quoting-Volumen folgt den angegebenen Grenzen des theoretischen Preises).
-- **Direction** - die Quoting-Richtung kann die Werte Purchase und Sell annehmen.
+- **Quoting** - der Parameter, nach dem das Quoting durchgeführt wird. Mögliche Werte sind **Volatilität** (das Quoting-Volumen folgt den angegebenen Volatilitätsgrenzen) oder **Theoretischer Preis** (das Quoting-Volumen folgt den angegebenen Grenzen des theoretischen Preises).
+- **Richtung** - die Quoting-Richtung kann die Werte Purchase und Sell annehmen.
 - **Minimum** - der Mindestwert für Volatilität oder theoretischen Preis.
 - **Maximum** - der Höchstwert für Volatilität oder theoretischen Preis.
 

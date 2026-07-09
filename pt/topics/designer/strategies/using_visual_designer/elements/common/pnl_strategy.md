@@ -2,13 +2,13 @@
 
 ![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
-Documentação RemoteManager 
+Documentação RemoteManager
 
 ## Sockets de saída
 
 - **P\/L unrealized** - é o valor numérico do lucro\/perda não realizado.
 - **P\/L realized** - é o valor numérico do lucro\/perda realizado.
-- **Commission fee** - é o valor numérico da comissão.
+- **Comissão** - é o valor numérico da comissão.
 
 ## Conteúdo recomendado
 

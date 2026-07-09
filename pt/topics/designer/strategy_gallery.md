@@ -1,6 +1,6 @@
 # Galeria de estratégias
 
-A **Strategy Gallery** oferece a possibilidade de transferir estratégias de negociação prontas para o seu computador. Pode abrir a **Strategy Gallery** clicando no botão **Strategy Gallery** no separador **Common**.
+A **Galeria de estratégias** oferece a possibilidade de transferir estratégias de negociação prontas para o seu computador. Pode abrir a **Galeria de estratégias** clicando no botão **Galeria de estratégias** no separador **Geral**.
 
 Para transferir uma estratégia para o seu computador, tem de:
 
@@ -8,7 +8,7 @@ Para transferir uma estratégia para o seu computador, tem de:
 
   ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
 
-- a estratégia será adicionada à árvore de estratégias na secção **Backtest**:
+- a estratégia será adicionada à árvore de estratégias na secção **Teste histórico**:
 
   ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
 

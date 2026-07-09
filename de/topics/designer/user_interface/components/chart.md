@@ -1,6 +1,6 @@
 # Chart
 
-Die Komponente **Chart** enthält alle Würfel **Chart panel**, die in der Strategie vorhanden sind. Wenn die Strategie zum Beispiel zwei Würfel **Chart panel** verwendet, werden in der Komponente **Chart** zwei Charts angezeigt, wie in der Abbildung.
+Die Komponente **Diagramm** enthält alle Würfel **Diagrammbereich**, die in der Strategie vorhanden sind. Wenn die Strategie zum Beispiel zwei Würfel **Diagrammbereich** verwendet, werden in der Komponente **Diagramm** zwei Charts angezeigt, wie in der Abbildung.
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 

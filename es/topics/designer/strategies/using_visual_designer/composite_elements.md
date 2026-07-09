@@ -4,7 +4,7 @@ Al componer esquemas, a menudo hay conjuntos de elementos que forman una funcion
 
 Un elemento compuesto es un esquema normal que se guarda\/carga\/edita igual que cualquier esquema de estrategia.
 
-Al añadir un elemento compuesto a un esquema, todos los parámetros no conectados de todos los cubos internos se añaden automáticamente a él. Los parámetros no conectados en la entrada de los cubos se añaden como entrada, y los parámetros no conectados en la salida se añaden como salida. Cada parámetro añadido se nombra igual que el elemento fuente y su parámetro. Además, para este elemento se añaden las propiedades de todos los elementos para los que se especificó la propiedad **Parameters**.
+Al añadir un elemento compuesto a un esquema, todos los parámetros no conectados de todos los cubos internos se añaden automáticamente a él. Los parámetros no conectados en la entrada de los cubos se añaden como entrada, y los parámetros no conectados en la salida se añaden como salida. Cada parámetro añadido se nombra igual que el elemento fuente y su parámetro. Además, para este elemento se añaden las propiedades de todos los elementos para los que se especificó la propiedad **Parámetros**.
 
 Consideraremos el uso de elementos compuestos con el ejemplo de la estrategia de cruce de medias móviles, que ilustra el uso del elemento compuesto [Cruce](elements/common/crossing.md) varias veces. La estrategia puede abrir una posición larga cuando la media móvil corta cruza la larga de abajo hacia arriba, y una posición corta cuando la media móvil corta cruza la larga de arriba hacia abajo. El esquema de la parte de la estrategia de cruce de medias móviles donde se determina el momento del cruce se muestra en la siguiente figura:
 

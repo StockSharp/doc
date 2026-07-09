@@ -23,7 +23,7 @@ class empty_indicator(BaseIndicator):
 	Indicador de ejemplo que demuestra cómo guardar y cargar parámetros.
 
 	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
-	
+
 	Cambia el precio de entrada en +20% o -20%.
 	"""
 	def __init__(self):
@@ -54,7 +54,7 @@ class empty_indicator(BaseIndicator):
 	def OnProcess(self, input):
 		"""
 		Procesa el valor de indicador entrante y aplica un cambio aleatorio.
-		
+
 		:param input: Valor de indicador entrante.
 		:return: Nuevo DecimalIndicatorValue después de aplicar cambios.
 		"""
@@ -80,7 +80,7 @@ class empty_indicator(BaseIndicator):
 	def Load(self, storage):
 		"""
 		Carga los parámetros del indicador desde el almacenamiento persistente.
-		
+
 		:param storage: Almacenamiento de configuración desde el que cargar.
 		"""
 		super(empty_indicator, self).Load(storage)
@@ -89,7 +89,7 @@ class empty_indicator(BaseIndicator):
 	def Save(self, storage):
 		"""
 		Guarda los parámetros del indicador en el almacenamiento persistente.
-		
+
 		:param storage: Almacenamiento de configuración en el que guardar.
 		"""
 		super(empty_indicator, self).Save(storage)
@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-Este indicador recibe un valor entrante y realiza una desviación aleatoria basada en el valor especificado del parámetro **Change**.
+Este indicador recibe un valor entrante y realiza una desviación aleatoria basada en el valor especificado del parámetro **Cambio**.
 
 La descripción de los métodos del indicador está disponible en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
@@ -110,7 +110,7 @@ Para añadir el indicador creado al esquema, debe usar el cubo [Indicador](../..
 
 ![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
 
-El parámetro **Change**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
+El parámetro **Cambio**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
 
-> [!WARNING] 
+> [!WARNING]
 > Los indicadores creados con código Python no pueden usarse en estrategias creadas con código Python. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).

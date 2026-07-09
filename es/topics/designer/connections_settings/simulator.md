@@ -23,8 +23,8 @@
 - **Latencia** - valor mínimo de retraso para órdenes registradas.
 - **Nuevo registro** - indica si se admite el nuevo registro de órdenes en forma de una única operación.
 - **Periodo de búfer** - enviar respuestas por lotes en un único paquete. Se emulan el retraso de red y el trabajo en búfer del núcleo del exchange.
-- **Order ID** - número a partir del cual el emulador generará identificadores de órdenes.
-- **Trade ID** - número a partir del cual el emulador generará identificadores de operaciones.
+- **ID de orden** - número a partir del cual el emulador generará identificadores de órdenes.
+- **ID de operación** - número a partir del cual el emulador generará identificadores de operaciones.
 - **Transacción** - número a partir del cual el emulador generará identificadores de transacciones de órdenes.
 - **Tamaño del spread** - tamaño del spread en incrementos de precio. Se usa al determinar el spread para generar el libro de órdenes a partir de operaciones tick.
 - **Profundidad del libro** - profundidad máxima del libro de órdenes que se generará a partir de ticks.

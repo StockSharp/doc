@@ -17,13 +17,13 @@ Sockets de entrada
 
 Sockets de salida
 
-- **Text** – cadena concatenada y formateada.
+- **Texto** – cadena concatenada y formateada.
 
 ### Parámetros
 
 Parámetros
 
-- **Template** – plantilla de concatenación y formateo de cadenas. Editar la plantilla
+- **Plantilla** – plantilla de concatenación y formateo de cadenas. Editar la plantilla
   actualiza la lista de sockets de entrada.
 
 ### Ejemplos

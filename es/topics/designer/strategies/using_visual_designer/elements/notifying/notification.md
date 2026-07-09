@@ -8,15 +8,15 @@ El cubo envía una notificación cuando llegan datos a su socket de entrada. El 
 
 Sockets de entrada
 
-- **Message** - datos que se enviarán. Se acepta cualquier valor y se convierte en cadena.
+- **Mensaje** - datos que se enviarán. Se acepta cualquier valor y se convierte en cadena.
 
 ### Parámetros
 
 Parámetros
 
-- **Type** - tipo de mensaje (ventana emergente, e-mail, sms, etc.). Los tipos de notificaciones se describen en la sección [Configuración de notificaciones](../../../../../terminal/notifications.md).
+- **Tipo** - tipo de mensaje (ventana emergente, e-mail, sms, etc.). Los tipos de notificaciones se describen en la sección [Configuración de notificaciones](../../../../../terminal/notifications.md).
 - **Telegram** - canal usado para notificaciones de Telegram.
-- **Header** - encabezado del mensaje.
+- **Encabezado** - encabezado del mensaje.
 
 ## Contenido recomendado
 

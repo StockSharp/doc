@@ -1,10 +1,10 @@
 # Erste Schritte
 
-Um eine Strategie zum **Live-Handel** hinzuzufügen, klicken Sie im Panel [Schemata](../user_interface/schemas.md) mit der rechten Maustaste auf die gewünschte Strategie aus dem Ordner **Strategien** und wählen ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**. Die Strategie wird dem Ordner **Live** im Panel **Schemata** hinzugefügt.
+Um eine Strategie zum **Live-Handel** hinzuzufügen, klicken Sie im Panel [Schemata](../user_interface/schemas.md) mit der rechten Maustaste auf die gewünschte Strategie aus dem Ordner **Strategien** und wählen ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live-Handel**. Die Strategie wird dem Ordner **Live-Handel** im Panel **Schemata** hinzugefügt.
 
 ![Designer Live trade 01](../../../images/designer_live_trade_01.png)
 
-Sie können eine Strategie auch zum Live-Handel hinzufügen, indem Sie im Tab **Backtest** auf die Schaltfläche ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live** klicken.
+Sie können eine Strategie auch zum Live-Handel hinzufügen, indem Sie im Tab **Rücktest** auf die Schaltfläche ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live-Handel** klicken.
 
 ![Designer Live trade 02](../../../images/designer_live_trade_02.png)
 

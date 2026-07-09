@@ -6,15 +6,15 @@ Der Würfel wird verwendet, um gleichartige Daten aus verschiedenen Würfeln in 
 
 ## Eingehende Sockets
 
-- **Any data** - gibt den Typ der empfangenen und weitergegebenen Daten an.
+- **Beliebige Daten** - gibt den Typ der empfangenen und weitergegebenen Daten an.
 
 ## Ausgehende Sockets
 
-- **Any data** - gibt den Typ der empfangenen und weitergegebenen Daten an.
+- **Beliebige Daten** - gibt den Typ der empfangenen und weitergegebenen Daten an.
 
 ## Parameter
 
-- **Type** - gibt den Typ der empfangenen und weitergegebenen Daten an.
+- **Typ** - gibt den Typ der empfangenen und weitergegebenen Daten an.
 
 ## Empfohlene Inhalte
 

@@ -10,11 +10,11 @@
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 
-3. **Live** タブは、特に実取引用です。接続設定の詳細は、[接続設定](../connections_settings.md)に記載されています。[Designer](../../designer.md) を使用した実取引については、[実取引](../live_execution/getting_started.md)で説明されています。
+3. **ライブ** タブは、特に実取引用です。接続設定の詳細は、[接続設定](../connections_settings.md)に記載されています。[Designer](../../designer.md) を使用した実取引については、[実取引](../live_execution/getting_started.md)で説明されています。
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 
-4. **Cloud** タブ。[Designer](../../designer.md) はクラウド サービスと連携するように設計されています。完了した *Cloud Tasks* の表示、Cloud で利用可能な銘柄に関する情報の取得、チャネルおよびロボットを使用したリモート作業の設定ができます。
+4. **クラウド** タブ。[Designer](../../designer.md) はクラウド サービスと連携するように設計されています。完了した *Cloud Tasks* の表示、Cloud で利用可能な銘柄に関する情報の取得、チャネルおよびロボットを使用したリモート作業の設定ができます。
 
 ![Designer Tape 03](../../../images/designer_tape_03.png)
 
