@@ -2,7 +2,7 @@
 
 Como exemplo, será considerada a estratégia SMA.
 
-Para executar o teste no histórico, deve selecionar uma estratégia cujo esquema será testado no histórico. A estratégia é selecionada no painel [Schemas](../user_interface/schemas.md), na pasta da estratégia, fazendo duplo clique na estratégia pretendida.
+Para executar o teste no histórico, deve selecionar uma estratégia cujo esquema será testado no histórico. A estratégia é selecionada no [Painel de esquemas](../user_interface/schemas.md), na pasta da estratégia, fazendo duplo clique na estratégia pretendida.
 
 Antes do teste, carregue os dados de mercado (instrumentos, candles, tick trades e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
 
