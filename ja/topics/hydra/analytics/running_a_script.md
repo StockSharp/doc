@@ -23,5 +23,4 @@
 - データを取得するストレージ。
 - スクリプトが時間枠を使用する場合、その作業時間枠。
 
-**Start** ボタン ![hydra analytics compile](../../../images/hydra_analytics_compile.png) をクリックすると、スクリプトの実行結果を表示する新しいタブが開きます。
-
+**開始** ボタン ![hydra analytics compile](../../../images/hydra_analytics_compile.png) をクリックすると、スクリプトの実行結果を表示する新しいタブが開きます。

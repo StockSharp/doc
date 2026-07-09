@@ -12,29 +12,28 @@
 
 ![Terminal Quick start 011](../../images/terminal_quick_start_011.png)
 
-次のステップは、**Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) ボタンをクリックして接続することです。
+次のステップは、**接続** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) ボタンをクリックして接続することです。
 
-チャートパネルの **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しいチャート領域を追加します。チャート領域でマウスを右クリックすると、関心のある銘柄のローソク足をそこに追加できます。チャートには、インジケーター、自分の約定、注文を追加できます。また、チャートから注文を登録することもできます。チャートの操作方法の詳細については、[チャート](user_interface/components/chart.md)セクションを参照してください。
+チャートパネルの **追加** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しいチャート領域を追加します。チャート領域でマウスを右クリックすると、関心のある銘柄のローソク足をそこに追加できます。チャートには、インジケーター、自分の約定、注文を追加できます。また、チャートから注文を登録することもできます。チャートの操作方法の詳細については、[チャート](user_interface/components/chart.md)セクションを参照してください。
 
 ![Terminal Quick start 01](../../images/terminal_quick_start_01.png)
 
-Instrument パネルの **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、監視したい銘柄を追加できます。ここには最良価格データが表示されます。Instrument パネルの操作方法の詳細については、[銘柄](user_interface/components/instruments.md)セクションを参照してください。
+銘柄パネルの **追加** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、監視したい銘柄を追加できます。ここには最良価格データが表示されます。銘柄パネルの操作方法の詳細については、[銘柄](user_interface/components/instruments.md)セクションを参照してください。
 
 ![Terminal Quick start 02](../../images/terminal_quick_start_02.png)
 
-板情報で **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) ボタンをクリックすると、取引用の **Instrument** と **Portfolio** を指定できるパネルが表示されます。ここでは板の深さも調整できます。板情報の操作方法の詳細については、[板情報](user_interface/components/order_book.md)セクションを参照してください。
+板情報で **設定** ![Designer Schedule 01](../../images/designer_schedule_01.png) ボタンをクリックすると、取引用の **銘柄** と **ポートフォリオ** を指定できるパネルが表示されます。ここでは板の深さも調整できます。板情報の操作方法の詳細については、[板情報](user_interface/components/order_book.md)セクションを参照してください。
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-最初のいくつかの注文を登録してみましょう。注文は、**Buy/Sell** ボタンをクリックするか、板情報自体の **Bid/Offer** 列のセルをクリックすることで登録できます。注文パネルには、すべての注文が表示されます。注文を右クリックすると、新しい注文の送信、選択した注文のキャンセルまたは変更を行えるパネルが表示されます。注文パネルの操作方法の詳細については、[注文](user_interface/components/orders.md)セクションを参照してください。
+最初のいくつかの注文を登録してみましょう。注文は、**買い/売り** ボタンをクリックするか、板情報自体の **買気配/売気配** 列のセルをクリックすることで登録できます。注文パネルには、すべての注文が表示されます。注文を右クリックすると、新しい注文の送信、選択した注文のキャンセルまたは変更を行えるパネルが表示されます。注文パネルの操作方法の詳細については、[注文](user_interface/components/orders.md)セクションを参照してください。
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 
-Trades パネルでは、銘柄別に約定を表示できます。Trades パネルの操作方法の詳細については、[約定](user_interface/components/trades.md)セクションを参照してください。
+約定パネルでは、銘柄別に約定を表示できます。約定パネルの操作方法の詳細については、[約定](user_interface/components/trades.md)セクションを参照してください。
 
 ![Terminal Quick start 05](../../images/terminal_quick_start_05.png)
 
 必要に応じて、追加のコンポーネントを追加できます。すべてのコンポーネントについては、[コンポーネント](user_interface/components.md)セクションで説明しています。
 
 ![Terminal Quick start 06](../../images/terminal_quick_start_06.png)
-

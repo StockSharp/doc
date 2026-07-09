@@ -33,5 +33,5 @@ Level 1 データをインポートするには、アプリケーションのメ
    - フィールド設定ウィンドウは次のようになります。![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
 
    ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。 
-3. データをプレビューするには、**Preview** ボタンをクリックします。![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
-4. **Import** ボタンをクリックします。
+3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
+4. **インポート** ボタンをクリックします。

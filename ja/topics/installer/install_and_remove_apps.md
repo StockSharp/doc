@@ -6,21 +6,21 @@
 
 必要なアプリケーションをインストールするには、次の手順を行います。
 
-1. アプリケーションを選択し、**Install** をクリックし、ライセンス契約に同意して **Continue** をクリックします。![download installer](../../images/download_installer.png)
+1. アプリケーションを選択し、**インストール** をクリックし、ライセンス契約に同意して **続行** をクリックします。![download installer](../../images/download_installer.png)
 2. その後、インストールパスを選択する必要があります。 
 
    **重要\!** プログラムをインストールするフォルダーは空でなければなりません。 
 
-   **Continue** をクリックします。![direction installer](../../images/direction_installer.png)
-3. **Run** を選択し、インストールが完了するまで待ちます。 
+   **続行** をクリックします。![direction installer](../../images/direction_installer.png)
+3. **実行** を選択し、インストールが完了するまで待ちます。 
 
 インストールが完了すると、プログラムを使用できる状態になります。 
 
-プログラムをアンインストールするには、**Uninstall** を選択し、**Continue** ボタンをクリックします。
+プログラムをアンインストールするには、**アンインストール** を選択し、**続行** ボタンをクリックします。
 
 ![del installer](../../images/del_installer.png)
 
-復元するには、**Restore** を選択し、**Continue** をクリックします。
+復元するには、**復元** を選択し、**続行** をクリックします。
 
 ![repair installer](../../images/repair_installer.png)
 
@@ -29,4 +29,3 @@
 ## おすすめコンテンツ
 
 [アプリの更新](update_apps.md)
-

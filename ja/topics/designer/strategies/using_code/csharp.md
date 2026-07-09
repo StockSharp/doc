@@ -4,17 +4,17 @@
 
 ストラテジーの作成プロセスは、[Designer](../../../designer.md) 内で直接、または **C#** 開発環境 (最も一般的なのは **Visual Studio** と **JetBrains Rider**) で、**C#** による取引ロボットの専門的な開発用ライブラリと [API](../../../api.md) を使用して行います。
 
-新しいストラテジーは、**Common** タブの **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押して **Strategy** を選択することで追加できます。または、**Scheme** パネルの **Strategies** フォルダーを右クリックし、ドロップダウンメニューの **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押します。
+新しいストラテジーは、**共通** タブの **追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押して **ストラテジー** を選択することで追加できます。または、**スキーム** パネルの **ストラテジー** フォルダーを右クリックし、ドロップダウンメニューの **追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押します。
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-**Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押すと、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
+**追加** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押すと、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
 C# コードからストラテジーを作成するには、2 番目のタブを選択する必要があります。初期コードとして使用するテンプレートを選択することもできます。
 
-**OK** を押すと、[ダイアグラム](../using_visual_designer.md)からストラテジーを作成した場合と同様に、新しいストラテジーが **Scheme** パネルの **Strategies** フォルダーに表示されます。ストラテジーの削除や名前変更も同様に行います。
+**OK** を押すと、[ダイアグラム](../using_visual_designer.md)からストラテジーを作成した場合と同様に、新しいストラテジーが **スキーム** パネルの **ストラテジー** フォルダーに表示されます。ストラテジーの削除や名前変更も同様に行います。
 
 ただし、ダイアグラムの代わりに C# コードエディターが表示されます。
 

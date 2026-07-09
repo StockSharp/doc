@@ -34,5 +34,5 @@
    - フィールド設定ウィンドウは次のようになります。![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
 
    ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。 
-3. データをプレビューするには、**Preview** ボタンをクリックします。![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
-4. **Import** ボタンをクリックします。
+3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+4. **インポート** ボタンをクリックします。
