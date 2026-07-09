@@ -106,13 +106,13 @@
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock Trailing reverse, un indicador de trailing stop
 - [OBV](list_of_indicators/on_balance_volume.md) - On-Balance Volume (OBV), vincula el volumen con los cambios de precio
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean, una versión suavizada de OBV
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - Optimal Tracking Filter published by John Ehlers, filtra datos de precios para reducir el ruido
+- [OptimalTracking](list_of_indicators/optimal_tracking.md) - filtro Optimal Tracking publicado por John Ehlers, filtra datos de precios para reducir el ruido
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average, mide la diferencia entre una media móvil y el precio
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR trend indicator implementation, identifica posibles puntos de reversión
-- [Stub](list_of_indicators/pass_through.md) - An indicator without logic. Used to draw lines, un marcador de posición para indicadores personalizados
+- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - implementación del indicador de tendencia Parabolic SAR, identifica posibles puntos de reversión
+- [Stub](list_of_indicators/pass_through.md) - indicador sin lógica. Se usa para dibujar líneas y como marcador de posición para indicadores personalizados
 - [Peak](list_of_indicators/peak.md) - Peak, identifica máximos locales en datos de precios
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator, mide la diferencia porcentual entre dos medias móviles
-- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator with signal line, suaviza PPO con un EMA
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator con línea de señal, suaviza PPO con una EMA
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Percentage Price Oscillator histogram, traza la diferencia entre PPO y su línea de señal
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator, mide la diferencia porcentual en las tendencias de volumen
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points, calcula los niveles de soporte y resistencia en función de movimientos de precios pasados

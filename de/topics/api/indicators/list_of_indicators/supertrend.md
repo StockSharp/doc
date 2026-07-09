@@ -1,6 +1,6 @@
 # SuperTrend
 
-**The SuperTrend indicator** ist ein Trendfolgeindikator, der auf dem Average True Range (ATR) basiert. Es hilft, die aktuelle Trendrichtung und mögliche Umkehrpunkte zu identifizieren.
+**Der SuperTrend-Indikator** ist ein Trendfolgeindikator, der auf dem Average True Range (ATR) basiert. Er hilft, die aktuelle Trendrichtung und mögliche Umkehrpunkte zu identifizieren.
 
 Um den Indikator zu verwenden, sollte die Klasse [SuperTrend](xref:StockSharp.Algo.Indicators.SuperTrend) verwendet werden.
 

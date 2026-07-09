@@ -96,9 +96,9 @@
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Momentum of Moving Average。移動平均のモメンタムを測定します
 - [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator。買われ過ぎと売られ過ぎの状態を特定します
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index。価格と出来高に基づいて買い圧力と売り圧力を測定します
-- [MACD](list_of_indicators/macd.md) - Convergence/divergence of moving averages。トレンド変化を特定します
-- [MACD ヒストグラム](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram。MACD とシグナルラインの差を可視化します
-- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence of moving averages with signal line。買いシグナルと売りシグナルを提供します
+- [MACD](list_of_indicators/macd.md) - 移動平均の収束/発散。トレンド変化を特定します
+- [MACD ヒストグラム](list_of_indicators/macd_histogram.md) - 移動平均の収束/発散ヒストグラム。MACD とシグナルラインの差を可視化します
+- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - シグナルライン付きの移動平均の収束/発散。買いシグナルと売りシグナルを提供します
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover。2 本の移動平均を使用してトレンド反転を特定します
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon。複数の移動平均を使用してトレンドを可視化します
 - [NVI](list_of_indicators/negative_volume_index.md) - Negative Volume Index。出来高が減少した日の価格変動を追跡します
@@ -108,11 +108,11 @@
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - On Balance Volume Mean。OBV の平滑化版です
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された Optimal Tracking Filter。価格データをフィルタリングしてノイズを低減します
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Oscillator of Moving Average。移動平均と価格との差を測定します
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR trend indicator implementation。潜在的な反転ポイントを特定します
+- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
 - [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
 - [Peak](list_of_indicators/peak.md) - Peak。価格データ内の局所的な高値を特定します
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Percentage Price Oscillator。2 本の移動平均間のパーセント差を測定します
-- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Percentage Price Oscillator with signal line。PPO を EMA で平滑化します
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - シグナルライン付き Percentage Price Oscillator。PPO を EMA で平滑化します
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Percentage Price Oscillator histogram。PPO とそのシグナルラインとの差をプロットします
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Percentage Volume Oscillator。出来高トレンドのパーセント差を測定します
 - [PP](list_of_indicators/pivot_points.md) - Pivot Points。過去の価格変動に基づいてサポートレベルとレジスタンスレベルを計算します
