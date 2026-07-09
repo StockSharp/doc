@@ -1,4 +1,4 @@
-# Synchronisierung
+## Synchronisierung
 
 ![Designer Sync 00](../../../../../../images/designer_sync_00.png)
 

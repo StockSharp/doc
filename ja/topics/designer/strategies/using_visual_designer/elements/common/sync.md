@@ -1,4 +1,4 @@
-# 同期
+## 同期
 
 ![Designer Sync 00](../../../../../../images/designer_sync_00.png)
 
