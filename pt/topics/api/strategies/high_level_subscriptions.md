@@ -25,7 +25,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     bool isFinishedOnly = true,
     Security security = default);
 
-// Subscribe by DataType (supports all candle types)
+// Subscrever por DataType (suporta todos os tipos de candles)
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     DataType dt,
     bool isFinishedOnly = true,

@@ -53,7 +53,7 @@ public partial class MainWindow
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
-		// Set default candle data type (5-minute)
+		// Standard-Kerzdatentyp festlegen (5 Minuten)
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
 	}
 }

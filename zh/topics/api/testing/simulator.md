@@ -84,7 +84,7 @@ _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
 
-// Subscribe to order books for the real connector (needed for emulation)
+// 订阅真实连接器的订单簿（仿真需要）
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
 // 订阅 K线

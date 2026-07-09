@@ -53,7 +53,7 @@ public partial class MainWindow
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
-		// Set default candle data type (5-minute)
+		// Establecer tipo de datos de vela predeterminado (5 minutos)
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
 	}
 }

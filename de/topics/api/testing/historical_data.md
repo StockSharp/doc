@@ -346,7 +346,7 @@ protected override void OnStarted2(DateTime time)
 		DrawOwnTrades(area);
 	}
 
-	// Positionsschutz konfigurieren
+	// Positionenschutz konfigurieren
 	StartProtection(TakeValue, StopValue);
 }
 ```

@@ -102,7 +102,7 @@ tracker.RoundTripClosed += report =>
     Console.WriteLine($"  Closed: {report.CloseTime}");
 };
 
-// Positionsaktualisierungen verarbeiten
+// Positionenaktualisierungen verarbeiten
 tracker.ProcessPosition(position);
 
 // Historie anzeigen

@@ -129,7 +129,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 		}
 		else
 		{
-			// Send a response that the subscription is finished (not online)
+			// 发送订阅已完成（非在线）的响应
 			await SendSubscriptionFinishedAsync(mdMsg.TransactionId, cancellationToken);
 		}
 	}

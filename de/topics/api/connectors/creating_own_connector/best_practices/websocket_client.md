@@ -74,7 +74,7 @@ class SocketClient : BaseLogReceiver
 		// Ticker-Abbestelllogik
 	}
 
-	// Similar methods for other types of subscriptions (trades, order book, etc.)
+	// Ähnliche Methoden für andere Abonnementtypen (Trades, Orderbuch usw.)
 
 	private void OnProcess(dynamic obj)
 	{

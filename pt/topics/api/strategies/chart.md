@@ -248,7 +248,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// Agrupar dados pelo horário da vela
 	var group = drawData.Group(candle.OpenTime);
 	
-	// Add candle
+	// Adicionar candle
 	group.Add(_candleElement, 
 		candle.DataType, 
 		candle.SecurityId, 

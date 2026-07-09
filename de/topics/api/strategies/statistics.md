@@ -119,7 +119,7 @@ strategy.PnLChanged += () =>
 	}
 };
 
-// Positionsstatistiken verfolgen
+// Positionenstatistiken verfolgen
 strategy.PositionChanged += () =>
 {
 	Console.WriteLine($"Current Position: {strategy.Position}");

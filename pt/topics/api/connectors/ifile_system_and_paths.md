@@ -55,7 +55,7 @@ using StockSharp.Configuration;
 // Forma recomendada -- passar IFileSystem explicitamente
 var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
-// Deprecated way (uses Paths.FileSystem internally)
+// Forma obsoleta (usa Paths.FileSystem internamente)
 // var drive = new LocalMarketDataDrive(@"C:\MarketData"); // [Obsolete]
 ```
 

@@ -65,7 +65,7 @@ new RiskPnLRule
 Wird ausgelöst, wenn die angegebene Positionsgröße erreicht ist:
 
 ```csharp
-// Orders stornieren, wenn Position >= 100
+// Aufträge stornieren, wenn Position >= 100
 new RiskPositionSizeRule
 {
     Position = 100m,
@@ -166,7 +166,7 @@ public class RiskAwareStrategy : Strategy
                 Action = RiskActions.StopTrading
             },
 
-            // Orders stornieren, wenn die Frequenz 100 pro Minute überschreitet
+            // Aufträge stornieren, wenn die Frequenz 100 pro Minute überschreitet
             new RiskOrderFreqRule
             {
                 Count = 100,

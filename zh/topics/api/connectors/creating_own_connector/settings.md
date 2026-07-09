@@ -64,7 +64,7 @@ public SecureString Key { get; set; }
 public SecureString Secret { get; set; }
 
 /// <summary>
-/// Passphrase.
+/// 密码短语。
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),

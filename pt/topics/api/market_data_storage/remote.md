@@ -52,7 +52,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 }
 
 // Este loop percorre todos os tipos de dados disponíveis para o instrumento especificado.
-// For each data type, a local storage is created and remote storage is accessed.
+// Para cada tipo de dados, é criado um armazenamento local e o armazenamento remoto é acedido.
 ```
 
 ## Guardar Dados Localmente

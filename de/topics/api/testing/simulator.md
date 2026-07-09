@@ -103,7 +103,7 @@ Orders werden über den Emulations-Connector ähnlich wie über einen normalen C
 // Orderregistrierung
 _emuConnector.RegisterOrder(order);
 
-// Orderstornierung
+// Aufträgetornierung
 _emuConnector.CancelOrder(order);
 
 // Orderänderung
@@ -123,7 +123,7 @@ settings.TimeZone = TimeHelper.Est;
 // Zeit konvertieren
 settings.ConvertTime = true;
 
-// Orders bei Preisberührung matchen
+// Aufträge bei Preisberührung matchen
 settings.MatchOnTouch = false;
 
 // Latenz der Orderausführung emulieren

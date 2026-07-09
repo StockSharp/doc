@@ -52,7 +52,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 }
 
 // 此循环遍历指定交易品种的所有可用数据类型。
-// For each data type, a local storage is created and remote storage is accessed.
+// 为每种数据类型创建本地存储，并访问远程存储。
 ```
 
 ## 本地保存数据

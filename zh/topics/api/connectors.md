@@ -93,19 +93,19 @@ private void InitConnector()
 	
 	// 用于接收数据的订阅
 	
-	// Instruments
+	// 交易品种
 	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
 	
-	// Tick trades
+	// 逐笔成交
 	Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
 	
-	// Orders
+	// 订单
 	Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
 	
-	// Own trades
+	// 自有成交
 	Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
 	
-	// Positions
+	// 持仓
 	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
 	// 订单注册失败

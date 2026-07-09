@@ -107,7 +107,7 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	// Handelsrichtung bestimmen
 	var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
-	// Positionsgröße berechnen (Position mit jedem Trade erhöhen - Martingale-Ansatz)
+	// Positionengröße berechnen (Position mit jedem Trade erhöhen - Martingale-Ansatz)
 	var volume = Volume + Math.Abs(Position);
 
 	// Order mit dem passenden Preis erstellen und registrieren

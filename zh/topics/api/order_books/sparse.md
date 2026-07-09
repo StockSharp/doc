@@ -18,7 +18,7 @@
 - `priceStep` - 交易品种的价格步长。当 `priceRange` 在价格水平上的精度低于 `priceStep` 且需要将获得的价格四舍五入到工具的价格步长时使用。
 
 ```cs
-// It is assumed that orderBook is an IOrderBookMessage object obtained from StockSharp
+// 假定 orderBook 是从 StockSharp 获取的 IOrderBookMessage 对象
 var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 
 // 现在 sparseDepth 包含原始订单簿的表示，

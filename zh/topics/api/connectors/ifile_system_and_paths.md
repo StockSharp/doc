@@ -55,7 +55,7 @@ using StockSharp.Configuration;
 // 推荐方式 -- 显式传递 IFileSystem
 var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
-// Deprecated way (uses Paths.FileSystem internally)
+// 已弃用方式（内部使用 Paths.FileSystem）
 // var drive = new LocalMarketDataDrive(@"C:\MarketData"); // [Obsolete]
 ```
 

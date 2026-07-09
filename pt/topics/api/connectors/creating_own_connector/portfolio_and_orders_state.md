@@ -38,7 +38,7 @@ public override async ValueTask PortfolioLookupAsync(PortfolioLookupMessage look
 
 	foreach (var account in accounts)
 	{
-		// For each account, create and send a message with information about the position
+		// Para cada conta, criar e enviar uma mensagem com informações sobre a posição
 		await SendOutMessageAsync(new PositionChangeMessage
 		{
 			PortfolioName = PortfolioName,

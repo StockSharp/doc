@@ -3,11 +3,11 @@
 要在程序中的连接器中使用 OAuth 授权，您需要注册几个服务：
 
 ```csharp
-// Connecting the password storage for access to StockSharp WebAPI.
+// 连接用于访问 StockSharp WebAPI 的密码存储。
 ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvider());
 //ConfigManager.RegisterService<ICredentialsProvider>(new TokenCredentialsProvider("%token%"));
 
-// Connecting the service provider for access to StockSharp WebAPI
+// 连接用于访问 StockSharp WebAPI 的服务提供程序
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
 							
 // 连接器将使用的 OAuth 授权服务

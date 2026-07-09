@@ -158,7 +158,7 @@ public void SetupSubscriptionTracking()
         Console.WriteLine($"Adapter connection error {adapter.Name}: {error.Message}");
     };
 
-    // Connect
+    // 连接
     _connector.Connect();
 
     // 连接后 -- 创建订阅

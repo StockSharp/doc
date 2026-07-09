@@ -93,19 +93,19 @@ private void InitConnector()
 
 	// Abonnements zum Datenempfang
 
-	// Instruments
+	// Instrumente
 	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
 
-	// Tick trades
+	// Tick-Trades
 	Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
 
-	// Orders
+	// Aufträge
 	Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
 
-	// Own trades
+	// Eigene Ausführungen
 	Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
 
-	// Positions
+	// Positionen
 	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
 	// Fehler bei der Orderregistrierung

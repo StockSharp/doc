@@ -172,7 +172,7 @@ if (area != null)
 	// Eigene Trades zeichnen
 	DrawOwnTrades(area);
 
-	// Orders zeichnen
+	// Aufträge zeichnen
 	DrawOrders(area);
 }
 ```
@@ -287,7 +287,7 @@ Das System aktualisiert den Chart automatisch, wenn neue Daten empfangen werden,
 Zum Schutz offener Positionen stellt StockSharp die High-Level-Methode [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) bereit:
 
 ```cs
-// Positionsschutz mit Take-Profit- und Stop-Loss-Niveaus starten
+// Positionenschutz mit Take-Profit- und Stop-Loss-Niveaus starten
 StartProtection(TakeValue, StopValue);
 ```
 
@@ -400,7 +400,7 @@ public class SmaStrategy : Strategy
 			DrawOwnTrades(area);
 		}
 
-		// Positionsschutz starten
+		// Positionenschutz starten
 		StartProtection(TakeValue, StopValue);
 	}
 

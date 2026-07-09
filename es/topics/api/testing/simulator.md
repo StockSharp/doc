@@ -84,7 +84,7 @@ _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
 
-// Subscribe to order books for the real connector (needed for emulation)
+// Suscribirse a libros de órdenes para el conector real (necesario para la emulación)
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
 // Suscribirse a velas

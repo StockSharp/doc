@@ -74,7 +74,7 @@ class SocketClient : BaseLogReceiver
 		// Lógica de cancelamento de assinatura de ticker
 	}
 
-	// Similar methods for other types of subscriptions (trades, order book, etc.)
+	// Métodos semelhantes para outros tipos de subscrições (negócios, livro de ofertas, etc.)
 
 	private void OnProcess(dynamic obj)
 	{

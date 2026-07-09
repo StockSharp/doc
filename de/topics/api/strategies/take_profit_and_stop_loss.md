@@ -52,7 +52,7 @@ this.WhenOwnTradeReceived()
 
 // Dieser Code erstellt und initialisiert einen Schutzcontroller für eine neue Position
 // beim Empfang von Informationen über einen neuen Trade. Außerdem aktualisiert er die
-// Positionsinformationen im Controller und aktiviert bei Bedarf den Schutz.
+// Positioneninformationen im Controller und aktiviert bei Bedarf den Schutz.
 ```
 
 Dadurch wird ein Controller für eine spezifische Position mit den angegebenen Take-Profit- und Stop-Loss-Parametern erstellt.

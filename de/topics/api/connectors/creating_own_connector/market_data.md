@@ -129,7 +129,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 		}
 		else
 		{
-			// Send a response that the subscription is finished (not online)
+			// Eine Antwort senden, dass das Abonnement abgeschlossen ist (nicht online)
 			await SendSubscriptionFinishedAsync(mdMsg.TransactionId, cancellationToken);
 		}
 	}

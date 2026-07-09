@@ -84,7 +84,7 @@ _emuConnector.Subscribe(new(DataType.MarketDepth, security));
 _emuConnector.Subscribe(new(DataType.Ticks, security));
 _emuConnector.Subscribe(new(DataType.Level1, security));
 
-// Subscribe to order books for the real connector (needed for emulation)
+// 実コネクタの板情報をサブスクライブする（エミュレーションに必要）
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
 // ローソクを購読

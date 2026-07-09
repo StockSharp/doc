@@ -74,7 +74,7 @@ class SocketClient : BaseLogReceiver
 		// ticker 取消订阅逻辑
 	}
 
-	// Similar methods for other types of subscriptions (trades, order book, etc.)
+	// 其他订阅类型（成交、订单簿等）的类似方法
 
 	private void OnProcess(dynamic obj)
 	{

@@ -43,7 +43,7 @@ public class ComplexCandlePattern : ICandlePattern
     // 内部形态
     public IEnumerable<ICandlePattern> Inner { get; }
 
-    // Total number of candles (sum of CandlesCount for all inner patterns)
+    // K线总数（所有内部形态 CandlesCount 的总和）
     public int CandlesCount { get; }
 }
 ```
@@ -93,7 +93,7 @@ public interface ICandlePatternProvider
     // 删除形态
     bool Remove(ICandlePattern pattern);
 
-    // Save (create or replace) a pattern
+    // 保存（创建或替换）形态
     void Save(ICandlePattern pattern);
 }
 ```

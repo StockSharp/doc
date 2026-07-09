@@ -18,7 +18,7 @@ Para trabalhar com um livro de ofertas agrupado, primeiro tem de configurar a re
 - `priceStep` - o passo de preço do instrumento de negociação. É usado caso `priceRange` tenha menor precisão nos níveis de preço do que `priceStep`, sendo necessário arredondar os preços obtidos para o passo de preço do instrumento.
 
 ```cs
-// It is assumed that orderBook is an IOrderBookMessage object obtained from StockSharp
+// Assume-se que orderBook é um objeto IOrderBookMessage obtido do StockSharp
 var sparseDepth = orderBook.Sparse(priceRange, priceStep);
 
 // Agora sparseDepth contém uma representação do livro de ofertas original,

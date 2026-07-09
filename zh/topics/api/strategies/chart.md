@@ -248,7 +248,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// 按 K线时间分组数据
 	var group = drawData.Group(candle.OpenTime);
 	
-	// Add candle
+	// 添加 K线
 	group.Add(_candleElement, 
 		candle.DataType, 
 		candle.SecurityId, 

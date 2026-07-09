@@ -94,7 +94,7 @@ Connector.Subscribe(ordersSubscription);
 Zur Bestimmung des aktuellen Zustands einer Order werden Erweiterungsmethoden verwendet:
 
 ```cs
-// Orderstatus prüfen
+// Aufträgetatus prüfen
 Order order = ...; // empfangene Order
 
 // Ist die Order storniert
@@ -142,11 +142,11 @@ private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Orde
 	// Bestimmen, zu welchem Abonnement die Order gehört
 	if (subscription == _portfolio1OrdersSubscription)
 	{
-		// Orders des ersten Portfolios verarbeiten
+		// Aufträge des ersten Portfolios verarbeiten
 	}
 	else if (subscription == _portfolio2OrdersSubscription)
 	{
-		// Orders des zweiten Portfolios verarbeiten
+		// Aufträge des zweiten Portfolios verarbeiten
 	}
 }
 ```

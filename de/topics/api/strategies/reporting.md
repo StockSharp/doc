@@ -98,7 +98,7 @@ tracker.RoundTripClosed += roundTrip =>
         $"Max volume: {roundTrip.MaxPosition}");
 };
 
-// Positionsaktualisierung verarbeiten
+// Positionenaktualisierung verarbeiten
 tracker.ProcessPosition(position);
 
 // Zugriff auf die Round-Trip-Historie

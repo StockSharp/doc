@@ -42,7 +42,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 	// Ereignis für empfangene Orders abonnieren
 	_connector.OrderReceived += (subscription, order) =>
 	{
-		// Orders zur Tabelle OrderGrid hinzufügen
+		// Aufträge zur Tabelle OrderGrid hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	};
 

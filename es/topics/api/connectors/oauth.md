@@ -3,11 +3,11 @@
 Para usar autorización OAuth en conectores dentro de su programa, debe registrar varios servicios:
 
 ```csharp
-// Connecting the password storage for access to StockSharp WebAPI.
+// Conectar el almacenamiento de contraseñas para acceder a StockSharp WebAPI.
 ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvider());
 //ConfigManager.RegisterService<ICredentialsProvider>(new TokenCredentialsProvider("%token%"));
 
-// Connecting the service provider for access to StockSharp WebAPI
+// Conectar el proveedor de servicios para acceder a StockSharp WebAPI
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
 							
 // Servicio de autorización OAuth que usarán los conectores

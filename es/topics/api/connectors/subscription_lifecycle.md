@@ -158,7 +158,7 @@ public void SetupSubscriptionTracking()
         Console.WriteLine($"Adapter connection error {adapter.Name}: {error.Message}");
     };
 
-    // Connect
+    // Conectar
     _connector.Connect();
 
     // Después de conectar -- crear suscripción
