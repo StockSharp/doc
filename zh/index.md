@@ -23,7 +23,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 - 兼容全球所有交易平台。
 - 可与团队共享数据模型。
 
-[More...](topics/designer.md)
+[更多...](topics/designer.md)
 
 ### Hydra
 
@@ -39,7 +39,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 - CSV 导入功能。
 - 运行中的 Hydra 实例之间通过互联网进行定时任务和自动同步。
 
-[More...](topics/hydra.md)
+[更多...](topics/hydra.md)
 
 ### 终端
 
