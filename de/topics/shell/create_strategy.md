@@ -6,7 +6,7 @@ Um eine eigene Strategie zu erstellen, legen Sie im Ordner Strategies einen Ordn
 
 Erstellen Sie die Strategie selbst, zum Beispiel anhand von SmaStrategy.
 
-Wenn Sie für eine Strategie ein eigenes Testing- oder Monitoring-Panel hinzufügen müssen, muss die Strategie die Schnittstellen IHaveTestControl beziehungsweise IHaveMonitoringControl implementieren.
+Wenn Sie für eine Strategie ein eigenes Test- oder Überwachungspanel hinzufügen müssen, muss die Strategie die Schnittstellen IHaveTestControl beziehungsweise IHaveMonitoringControl implementieren.
 
 ```cs
 public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
@@ -33,10 +33,10 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 
 ```
 
-Außerdem müssen die Panels selbst erstellt werden. Wie Sie ein eigenes Testing- oder Monitoring-Panel erstellen, ist unter [Strategiepanel erstellen](create_strategy_panel.md) beschrieben.
+Außerdem müssen die Panels selbst erstellt werden. Wie Sie ein eigenes Test- oder Überwachungspanel erstellen, ist unter [Strategiepanel erstellen](create_strategy_panel.md) beschrieben.
 
 > [!TIP]
-> Wenn für die Strategie die Testing- oder Monitoring-Panels ausreichen, die für Standardstrategien verwendet werden, müssen Sie die Schnittstellen IHaveTestControl und IHaveMonitoringControl nicht implementieren. Shell startet die Standard-Testing- oder Monitoring-Panels selbst.
+> Wenn für die Strategie die Test- oder Überwachungspanels ausreichen, die für Standardstrategien verwendet werden, müssen Sie die Schnittstellen IHaveTestControl und IHaveMonitoringControl nicht implementieren. Shell startet die Standard-Test- oder Überwachungspanels selbst.
 
 ![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
 

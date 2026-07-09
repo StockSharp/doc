@@ -4,11 +4,11 @@ O separador **RemoteManager** permite ativar o modo de controlo remoto. Para ati
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-Na janela que aparece, defina o seu **login** e **password**.
+Na janela que aparece, defina o seu **nome de utilizador** e **palavra-passe**.
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
-Depois, é necessário ativar o **server mode**. 
+Depois, é necessário ativar o **modo de servidor**.
 
 ![Shell RemoteManager 02](../../../images/shell_remotemanager_02.png)
 
@@ -22,7 +22,7 @@ Na janela que abre, configure a ligação FIX.
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-Depois prima o botão Connect.
+Depois prima o botão Ligar.
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
@@ -30,7 +30,7 @@ Quando estiver ligado, todas as estratégias existentes no servidor Shell ficar�
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 
-Ao clicar no botão Add, pode adicionar outra estratégia para negociar.
+Ao clicar no botão Adicionar, pode adicionar outra estratégia para negociar.
 
 ![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
 
@@ -44,7 +44,7 @@ Depois de adicionar uma estratégia, ela aparecerá na lista de estratégias.
 
 Ao selecionar uma estratégia, haverá separadores à direita com as definições da estratégia, bem como as suas estatísticas.
 
-Depois de alterar as definições da estratégia, certifique-se de clicar no botão Apply changes; caso contrário, as alterações não serão aplicadas à estratégia.
+Depois de alterar as definições da estratégia, certifique-se de clicar no botão Aplicar alterações; caso contrário, as alterações não serão aplicadas à estratégia.
 
 ![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
 

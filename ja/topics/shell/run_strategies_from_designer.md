@@ -2,7 +2,7 @@
 
 [Shell](../shell.md) は、[Designer](../designer.md) で作成されたストラテジーを実行できます。
 
-[Designer](../designer.md) で作成されたストラテジーを起動するには、[リアルタイム](user_interface/real_time.md) タブでそのストラテジーを選択し、**Add Designer strategy** ボタンをクリックします。表示されるウィンドウで、[Designer](../designer.md) からエクスポートしたストラテジーファイルを選択します。
+[Designer](../designer.md) で作成されたストラテジーを起動するには、[リアルタイム](user_interface/real_time.md) タブでそのストラテジーを選択し、**Designer ストラテジーを追加** ボタンをクリックします。表示されるウィンドウで、[Designer](../designer.md) からエクスポートしたストラテジーファイルを選択します。
 
 ![Shell run Designer strategy 00](../../images/shell_run_designer_strategy_00.png)
 

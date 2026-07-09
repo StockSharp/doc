@@ -2,7 +2,7 @@
 
 [Shell](../shell.md) 可以运行在 [Designer](../designer.md) 中创建的策略。
 
-要启动在 [Designer](../designer.md) 中创建的策略，请在[实盘](user_interface/real_time.md)选项卡中选择策略，并单击 **Add Designer strategy** 按钮。在打开的窗口中，选择从 [Designer](../designer.md) 导出的策略文件。
+要启动在 [Designer](../designer.md) 中创建的策略，请在[实盘](user_interface/real_time.md)选项卡中选择策略，并单击 **添加 Designer 策略** 按钮。在打开的窗口中，选择从 [Designer](../designer.md) 导出的策略文件。
 
 ![Shell run Designer strategy 00](../../images/shell_run_designer_strategy_00.png)
 

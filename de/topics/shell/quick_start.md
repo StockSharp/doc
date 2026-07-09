@@ -2,7 +2,7 @@
 
 [Shell](../shell.md) ist auf die Programmierung in der Sprache [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) in Visual Studio oder einer ähnlichen Umgebung ausgerichtet.
 
-Wenn Sie das Projekt [Shell](../shell.md) starten, zeigt der Solution Explorer das Shell-Projekt an:
+Wenn Sie das Projekt [Shell](../shell.md) starten, zeigt der Projektmappen-Explorer das Shell-Projekt an:
 
 ![Shell Quick start 00](../../images/shell_quick_start_00.png)
 

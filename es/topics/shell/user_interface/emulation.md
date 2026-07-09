@@ -1,6 +1,6 @@
 # Emulación
 
-La pestaña **Emulation** permite probar estrategias sobre datos históricos.
+La pestaña **Emulación** permite probar estrategias sobre datos históricos.
 
 ![Shell emulation 00](../../../images/shell_emulation_00.png)
 

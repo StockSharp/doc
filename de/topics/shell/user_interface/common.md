@@ -4,7 +4,7 @@ Auf der Registerkarte **Allgemein** können Sie allgemeine Informationen zu Port
 
 ![Shell Common 00](../../../images/shell_common_00.png)
 
-Auf der Registerkarte **Securities** können Sie Instrumente aus dem lokalen Speicher laden und Instrumenteinstellungen ändern.
+Auf der Registerkarte **Instrumente** können Sie Instrumente aus dem lokalen Speicher laden und Instrumenteinstellungen ändern.
 
 ![Shell Common 01](../../../images/shell_common_01.png)
 

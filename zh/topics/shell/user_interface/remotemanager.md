@@ -4,7 +4,7 @@
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-在打开的窗口中设置 **login** 和 **password**。
+在打开的窗口中设置 **用户名** 和 **密码**。
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
@@ -22,7 +22,7 @@
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-然后单击 Connect 按钮。
+然后单击连接按钮。
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
@@ -30,7 +30,7 @@
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 
-单击 Add 按钮，可以添加另一个用于交易的策略。
+单击添加按钮，可以添加另一个用于交易的策略。
 
 ![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
 
@@ -44,7 +44,7 @@
 
 选择策略后，右侧会显示策略设置和统计数据等选项卡。
 
-修改策略设置后，务必单击 Apply changes 按钮，否则更改不会应用到策略。
+修改策略设置后，务必单击应用更改按钮，否则更改不会应用到策略。
 
 ![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
 

@@ -4,11 +4,11 @@ La pestaña **RemoteManager** permite habilitar el modo de control remoto. Para 
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-En la ventana que aparece, establezca su **login** y **password**.
+En la ventana que aparece, establezca su **nombre de usuario** y **contraseña**.
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
-Después debe habilitar el **server mode**.
+Después debe habilitar el **modo servidor**.
 
 ![Shell RemoteManager 02](../../../images/shell_remotemanager_02.png)
 
@@ -22,7 +22,7 @@ En la ventana que se abre, configure la conexión FIX.
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-Después pulse el botón Connect.
+Después pulse el botón Conectar.
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
@@ -30,7 +30,7 @@ Al conectarse, todas las estrategias existentes en el servidor Shell estarán di
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 
-Al hacer clic en el botón Add, puede añadir otra estrategia para trading.
+Al hacer clic en el botón Añadir, puede añadir otra estrategia para trading.
 
 ![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
 
@@ -44,7 +44,7 @@ Después de añadir una estrategia, aparecerá en la lista de estrategias.
 
 Al seleccionar una estrategia, habrá pestañas a la derecha con la configuración de la estrategia, así como sus estadísticas.
 
-Después de cambiar la configuración de la estrategia, asegúrese de hacer clic en el botón Apply changes; de lo contrario, los cambios no se aplicarán a la estrategia.
+Después de cambiar la configuración de la estrategia, asegúrese de hacer clic en el botón Aplicar cambios; de lo contrario, los cambios no se aplicarán a la estrategia.
 
 ![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
 

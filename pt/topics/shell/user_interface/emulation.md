@@ -1,6 +1,6 @@
 # Emulação
 
-O separador **Emulation** permite-lhe testar estratégias em dados históricos.
+O separador **Emulação** permite-lhe testar estratégias em dados históricos.
 
 ![Shell emulation 00](../../../images/shell_emulation_00.png)
 

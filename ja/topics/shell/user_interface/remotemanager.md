@@ -4,11 +4,11 @@
 
 ![Shell RemoteManager 00](../../../images/shell_remotemanager_00.png)
 
-表示されるウィンドウで、**login** と **password** を設定します。
+表示されるウィンドウで、**ログイン** と **パスワード** を設定します。
 
 ![Shell RemoteManager 01](../../../images/shell_remotemanager_01.png)
 
-次に、**server mode** を有効にする必要があります。
+次に、**サーバーモード** を有効にする必要があります。
 
 ![Shell RemoteManager 02](../../../images/shell_remotemanager_02.png)
 
@@ -22,7 +22,7 @@
 
 ![Shell RemoteManager 04](../../../images/shell_remotemanager_04.png)
 
-次に、Connect ボタンを押します。
+次に、接続ボタンを押します。
 
 ![Shell RemoteManager 05](../../../images/shell_remotemanager_05.png)
 
@@ -30,7 +30,7 @@
 
 ![Shell RemoteManager 06](../../../images/shell_remotemanager_06.png)
 
-Add ボタンをクリックすると、取引用に別のストラテジーを追加できます。
+追加ボタンをクリックすると、取引用に別のストラテジーを追加できます。
 
 ![Shell RemoteManager 07](../../../images/shell_remotemanager_07.png)
 
@@ -44,7 +44,7 @@ Shell クライアントは複数のサーバーをサポートしているた�
 
 ストラテジーを選択すると、右側にストラテジー設定と統計情報のタブが表示されます。
 
-ストラテジー設定を変更した後は、必ず Apply changes ボタンをクリックしてください。そうしないと、変更はストラテジーに適用されません。
+ストラテジー設定を変更した後は、必ず変更を適用ボタンをクリックしてください。そうしないと、変更はストラテジーに適用されません。
 
 ![Shell RemoteManager 10](../../../images/shell_remotemanager_10.png)
 
@@ -52,7 +52,7 @@ Shell クライアントは複数のサーバーをサポートしているた�
 
 ![Shell RemoteManager 11](../../../images/shell_remotemanager_11.png)
 
-そして、send command ボタンをクリックします。
+そして、コマンド送信ボタンをクリックします。
 
 ストラテジーで独自のコマンドを設定するには、[Strategy.ApplyCommand](xref:StockSharp.Algo.Strategies.Strategy.ApplyCommand(StockSharp.Messages.CommandMessage))**(**[StockSharp.Messages.CommandMessage](xref:StockSharp.Messages.CommandMessage) cmdMsg **)** メソッドをオーバーライドする必要があります。
 
@@ -66,4 +66,3 @@ public virtual void ApplyCommand(CommandMessage cmdMsg)
 ## 推奨コンテンツ
 
 [接続設定](../connections_settings.md)
-

@@ -2,7 +2,7 @@
 
 O [Shell](../shell.md) pode executar estratégias criadas no [Designer](../designer.md).
 
-Para iniciar uma estratégia criada no [Designer](../designer.md), selecione-a no separador [Tempo real](user_interface/real_time.md) e clique no botão **Add Designer strategy**. Na janela que aparece, escolha o ficheiro da estratégia exportado do [Designer](../designer.md).
+Para iniciar uma estratégia criada no [Designer](../designer.md), selecione-a no separador [Tempo real](user_interface/real_time.md) e clique no botão **Adicionar estratégia do Designer**. Na janela que aparece, escolha o ficheiro da estratégia exportado do [Designer](../designer.md).
 
 ![Shell run Designer strategy 00](../../images/shell_run_designer_strategy_00.png)
 

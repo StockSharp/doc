@@ -2,7 +2,7 @@
 
 [Shell](../shell.md) は、Visual Studio 環境または同様の環境で [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) 言語を使ってプログラミングすることに重点を置いています。
 
-[Shell](../shell.md) プロジェクトを起動すると、Solution Explorer に Shell プロジェクトが表示されます。
+[Shell](../shell.md) プロジェクトを起動すると、ソリューション エクスプローラーに Shell プロジェクトが表示されます。
 
 ![Shell Quick start 00](../../images/shell_quick_start_00.png)
 
