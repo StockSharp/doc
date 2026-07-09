@@ -1,6 +1,6 @@
 # 删除数据
 
-在 **Common** 选项卡中单击 **Delete data...** 按钮。
+在 **常规** 选项卡中单击 **删除数据...** 按钮。
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 

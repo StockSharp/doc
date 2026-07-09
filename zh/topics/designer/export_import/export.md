@@ -3,7 +3,7 @@
 Designer 支持导出任意类型的数据，包括策略、模块和指标。可以通过以下方式导出：
 
 - 在 **Schemes** 面板中右键单击策略、模块或指标，然后在显示的菜单中选择 **Export**。
-- 在 **Common** 选项卡中单击 **Export** 按钮：
+- 在 **常规** 选项卡中单击 **导出** 按钮：
 
 ![Designer Export strategies 00](../../../images/designer_export_strategies_00.png)
 

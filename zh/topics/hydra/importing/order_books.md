@@ -29,5 +29,5 @@
    - 字段设置窗口将如下所示：![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **Preview** 按钮。![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
+3. 要预览数据，请单击 **预览** 按钮。![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
 4. 单击 **Import** 按钮。

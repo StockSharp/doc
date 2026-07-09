@@ -6,7 +6,7 @@
 
 ## K线导入过程
 
-1. **Common**
+1. **常规**
    - **Data type** — 导入的数据类型。
    - **Filename** — CSV 文件的完整路径。
    - **Data directory** — 保存最终 [S#](../../api.md) 文件的文件夹。
@@ -47,5 +47,5 @@
    - **Zero** — 某些数据在保存时可能会错误地将属性值保存为“0”。例如，由于各种原因，价格可能等于 0，但这是无效值，之后会导致数据读取错误，进而使使用这些数据的策略产生错误结果。勾选此项后，如果本字段的数据等于 0，程序会将其写为空值，即视为不存在。之后在测试等操作中，用户会看到缺少数据的错误，从而发现导入过程有误。此功能用于防止“损坏”数据影响后续工作。
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **Preview** 按钮。![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
+3. 要预览数据，请单击 **预览** 按钮。![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
 4. 单击 **Import** 按钮。

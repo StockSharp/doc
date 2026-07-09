@@ -1,6 +1,6 @@
 # 图表
 
-**Chart** 组件用于绘制所选交易品种的K线和指标。
+**图表** 组件用于绘制所选交易品种的K线和指标。
 
 ![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
 
@@ -12,7 +12,7 @@
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
-可以直接从图表登记订单。首先需要指定用于登记订单的 **Instrument** 和 **Portfolio**。
+可以直接从图表登记订单。首先需要指定用于登记订单的 **交易品种** 和 **投资组合**。
 
 按 **Ctrl+鼠标左键** 登记买入订单。
 

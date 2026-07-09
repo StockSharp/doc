@@ -1,10 +1,10 @@
 # 首次启动
 
-首次运行程序时，会出现以下数据源选择窗口。也可以在 **Common** 选项卡中选择 **Add \=\> Sources** 打开此窗口。
+首次运行程序时，会出现以下数据源选择窗口。也可以在 **常规** 选项卡中选择 **添加 \=\> 数据源** 打开此窗口。
 
 ![hydra source add](../../images/hydra_source_add.png)
 
-在窗口中勾选所需的数据源。可以按地区、交易板、数据类型、付费方式以及是否提供实时数据进行筛选。选择完成后，单击 **OK**。随后程序会询问是否启用实用工具。有关实用工具的详细信息，请参阅[实用工具](tasks.md)。单击 **OK**。
+在窗口中勾选所需的数据源。可以按地区、交易板、数据类型、付费方式以及是否提供实时数据进行筛选。选择完成后，单击 **确定**。随后程序会询问是否启用实用工具。有关实用工具的详细信息，请参阅[实用工具](tasks.md)。单击 **确定**。
 
 ![hydra first started utilities 00](../../images/hydra_first_started_utilities00.png)
 
@@ -29,11 +29,11 @@
 
    首次启动时，程序会询问是否立即下载所选数据源的全部交易品种。之后需要由用户自行下载交易品种。最初，[Hydra](../hydra.md) 的交易品种数据库为空，仅包含辅助交易品种 **ALL@ALL**。选择该交易品种后，程序会下载当前数据源中所有可用交易品种的数据。
 
-   要添加交易品种，请单击 **Add** 按钮 ![hydra add](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![hydra securities](../../images/hydra_securities.png)
+   要添加交易品种，请单击 **添加** 按钮 ![hydra add](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![hydra securities](../../images/hydra_securities.png)
 
-   要下载交易品种，请单击相应的 **Download securities** 按钮。
+   要下载交易品种，请单击相应的 **下载交易品种** 按钮。
 
-   随后屏幕上会出现一个菜单，用户可以在其中选择 **Download all securities**。![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   随后屏幕上会出现一个菜单，用户可以在其中选择 **下载所有交易品种**。![hydra securities choose all](../../images/hydra_securities_choose_all.png)
 
    对于部分数据源，也可以[配置](prepare_for_download/instruments_list.md)需要下载的交易品种。
 
@@ -45,17 +45,17 @@
 
    随后，该品种会移动到表格右侧。![hydra security full list 01](../../images/hydra_security_full_list_01.png)
 
-   所选交易品种会显示在树形结构的 **Securities** 表格中。树的主元素是交易品种，子元素是要为该交易品种接收的市场数据类型。
+   所选交易品种会显示在树形结构的 **交易品种** 表格中。树的主元素是交易品种，子元素是要为该交易品种接收的市场数据类型。
 2. 为每个所选交易品种选择需要下载的市场数据类型。
 
    如果尚未设置全部必要的交易品种参数，交易品种行左侧会显示图标 ![hydra zero](../../images/hydra_zero.png)。![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
 
-   下面选择下载 **Ticks** 和 **Candles Time Frame 5**。
+   下面选择下载 **逐笔成交** 和 **5 分钟K线**。
 
    数据源窗口底部有一个按钮面板，用于配置要接收的数据和交易品种。![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
    可以在该面板中执行以下操作：
-   - 使用 **Trades、Order Books、Candles、Order Log、Level 1、Own Transactions** 按钮配置要接收的信息类型。不同数据源支持的市场数据类型列表可能不同。
+   - 使用 **成交、订单簿、K线、订单日志、Level 1、自有交易** 按钮配置要接收的信息类型。不同数据源支持的市场数据类型列表可能不同。
    - 指定要加载的K线时间周期。不同数据源提供的K线时间周期也可能不同。![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - 设置市场数据的下载时间范围。也可以直接在市场数据窗口中配置该范围，为此需要选择开始和结束时间。
 
@@ -67,9 +67,9 @@
      如果数据源无法直接提供绘制K线所需的数据，此功能会非常有用。在这种情况下，程序会根据平均数据值绘制K线。![hydra candle build type](../../images/hydra_candle_build_type.png)
 
      用户还可以选择K线的[自定义类型](prepare_for_download/custom_candles.md)，以调整接收的数据。
-   - 选择交易品种和市场数据类型并设置时间范围后，单击 **Start** 按钮。随后程序会开始下载市场数据。
+   - 选择交易品种和市场数据类型并设置时间范围后，单击 **开始** 按钮。随后程序会开始下载市场数据。
 
-   可以在程序底部固定的 **Logs** 选项卡中观察运行过程。此外，日志也会保存到本地文件夹中的文件内。
+   可以在程序底部固定的 **日志** 选项卡中观察运行过程。此外，日志也会保存到本地文件夹中的文件内。
 
 ![hydra main start](../../images/hydra_main_start.png)
 

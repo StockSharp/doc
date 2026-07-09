@@ -2,7 +2,7 @@
 
 有关在 [API](../../../../api.md) 中创建自定义指标的方法，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。此类指标与 **Designer** 完全兼容。
 
-要创建指标，请在 **Schemes** 面板中选择 **Indicators** 文件夹，右键单击该文件夹，然后在上下文菜单中选择 **Add**：
+要创建指标，请在 **策略图** 面板中选择 **指标** 文件夹，右键单击该文件夹，然后在上下文菜单中选择 **添加**：
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 

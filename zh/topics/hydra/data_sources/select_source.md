@@ -2,9 +2,9 @@
 
 要添加新的市场数据源，请执行以下操作：
 
-- 打开 **Common** 选项卡。
-- 选择 **Add**。
-- 选择 **Sources**。
+- 打开 **常规** 选项卡。
+- 选择 **添加**。
+- 选择 **数据源**。
 
 ![hydra source choose](../../../images/hydra_source_choose.png)
 
@@ -16,11 +16,11 @@
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-要使数据源在单击 **Start** 按钮后开始下载数据，必须先启用该数据源。为此，请在左侧面板中选择数据源图标，并使用 ![hydra source on off](../../../images/hydra_source_on_off.png) 按钮将其启用或禁用。可以在添加要下载的交易品种之前或之后执行此操作。
+要使数据源在单击 **开始** 按钮后开始下载数据，必须先启用该数据源。为此，请在左侧面板中选择数据源图标，并使用 ![hydra source on off](../../../images/hydra_source_on_off.png) 按钮将其启用或禁用。可以在添加要下载的交易品种之前或之后执行此操作。
 
 可以使用 ![hydra delete](../../../images/hydra_delete.png) 按钮删除不需要的数据源。
 
-可以在右侧的 **Properties** 面板中修改数据源设置。
+可以在右侧的 **属性** 面板中修改数据源设置。
 
 ![hydra setting source button](../../../images/hydra_setting_source_button.png)
 

@@ -2,11 +2,11 @@
 
 使用模块不需要编程技能。创建策略时，只需组合模块并用连接线将它们连接起来，即可直观展示完整的工作流程。
 
-要添加新策略，可以在 **Common** 选项卡中单击 **Add** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮，然后选择 **Strategy**。也可以在 **Scheme** 面板中右键单击 **Strategies** 文件夹，再在下拉菜单中单击 **Add** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮：
+要添加新策略，可以在 **常规** 选项卡中单击 **添加** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮，然后选择 **策略**。也可以在 **策略图** 面板中右键单击 **策略** 文件夹，再在下拉菜单中单击 **添加** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮：
 
 ![Designer The creation of a strategy 00](../../../images/designer_creation_of_strategy_00.png)
 
-单击 **Add** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮后，会显示用于选择策略内容类型的窗口：
+单击 **添加** ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01_button.png) 按钮后，会显示用于选择策略内容类型的窗口：
 
 ![Designer The creation of a strategy 02](../../../images/designer_creation_of_strategy_02.png)
 

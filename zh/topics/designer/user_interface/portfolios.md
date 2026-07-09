@@ -1,6 +1,6 @@
 # 投资组合
 
-可以使用 **Portfolios** 面板管理投资组合。在 **Common** 选项卡中单击 Portfolios 按钮即可打开该面板。
+可以使用 **投资组合** 面板管理投资组合。在 **常规** 选项卡中单击 **投资组合** 按钮即可打开该面板。
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 

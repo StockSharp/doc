@@ -16,7 +16,7 @@
 
 花括号中指定要导出的属性及其顺序，各属性之间使用分号分隔。
 
-单击 **Preview** 按钮，可以预览将写入文件的数据。
+单击 **预览** 按钮，可以预览将写入文件的数据。
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 

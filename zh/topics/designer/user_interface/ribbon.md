@@ -2,7 +2,7 @@
 
 [Designer](../../designer.md) 的主要用户界面元素是位于应用程序窗口顶部的 **Ribbon**。通过功能区可以快速访问所需命令。命令按逻辑分组，并放置在不同的选项卡中。要切换到所需选项卡，只需单击其标题（名称）。每个选项卡都对应一类操作。
 
-1. **Common** 选项卡在程序启动后默认打开，其中包含开始工作时可能需要的元素。通过 **Common** 选项卡可以打开[连接设置](../connections_settings.md)、[策略图面板](schemas.md)、[日志面板](logs.md)、[投资组合](portfolios.md)、[交易板编辑器](boards.md)和[创建历史数据存储](../market_data_storage/getting_started.md)。还可以在 **Common** 选项卡中添加、打开、删除、导入和导出策略。如果希望与社区分享策略，可以单击 *Publish* 按钮。旁边的 *Available Strategies* 按钮用于打开自己和其他用户发布的算法。右侧提供用于打开帮助和联系我们的服务按钮。可以报告问题，也可以通过 Telegram 聊天向我们发送消息。
+1. **常规** 选项卡在程序启动后默认打开，其中包含开始工作时可能需要的元素。通过 **常规** 选项卡可以打开[连接设置](../connections_settings.md)、[策略图面板](schemas.md)、[日志面板](logs.md)、[投资组合](portfolios.md)、[交易板编辑器](boards.md)和[创建历史数据存储](../market_data_storage/getting_started.md)。还可以在 **常规** 选项卡中添加、打开、删除、导入和导出策略。如果希望与社区分享策略，可以单击 *发布* 按钮。旁边的 *可用策略* 按钮用于打开自己和其他用户发布的算法。右侧提供用于打开帮助和联系我们的服务按钮。可以报告问题，也可以通过 Telegram 聊天向我们发送消息。
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 

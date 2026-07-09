@@ -6,21 +6,21 @@
 
 要安装所需的应用程序，请执行以下操作：
 
-1. 选择应用程序并单击 **Install**，接受许可协议，然后单击 **Continue**。![download installer](../../images/download_installer.png)
+1. 选择应用程序并单击 **安装**，接受许可协议，然后单击 **继续**。![download installer](../../images/download_installer.png)
 2. 接下来选择安装路径。
 
    **重要！**用于安装程序的文件夹必须为空。
 
-   单击 **Continue**。![direction installer](../../images/direction_installer.png)
-3. 选择 **Run**，等待安装完成。
+   单击 **继续**。![direction installer](../../images/direction_installer.png)
+3. 选择 **运行**，等待安装完成。
 
 安装完成后，即可使用该程序。
 
-要卸载程序，请选择 **Uninstall**，然后单击 **Continue** 按钮。
+要卸载程序，请选择 **卸载**，然后单击 **继续** 按钮。
 
 ![del installer](../../images/del_installer.png)
 
-要恢复程序，请选择 **Restore**，然后单击 **Continue**。
+要恢复程序，请选择 **恢复**，然后单击 **继续**。
 
 ![repair installer](../../images/repair_installer.png)
 
