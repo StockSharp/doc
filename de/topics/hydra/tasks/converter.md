@@ -10,7 +10,7 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder 
 - **From** - welcher Datentyp konvertiert wird.
 - **Data format** - Format der konvertierten Daten.
 - **Startdatum** - ab welchem Datum die Datenkonvertierung gestartet werden soll.
-- **Zeitversatz** - Zeitoffset in Tagen ab dem Datum, an dem die Aufgabe gestartet wurde. Dies verhindert die Konvertierung eines unvollstaendigen Tages. Wenn die Datenkonvertierung in Echtzeit konfiguriert ist, kann das Aktualisierungsintervall den aktuellen Tag nur teilweise konvertieren. Verwenden Sie den Zeitoffset, um dies zu vermeiden.
+- **Zeitversatz** - Zeitoffset in Tagen ab dem Datum, an dem die Aufgabe gestartet wurde. Dies verhindert die Konvertierung eines unvollständigen Tages. Wenn die Datenkonvertierung in Echtzeit konfiguriert ist, kann das Aktualisierungsintervall den aktuellen Tag nur teilweise konvertieren. Verwenden Sie den Zeitoffset, um dies zu vermeiden.
 - **Where** - das Datenverzeichnis, in dem die konvertierten Daten gespeichert werden.
 
 **Orderbücher**
@@ -20,7 +20,7 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder 
 - **Order log** - wie Order Books aus dem Order Log erstellt werden.
 
   Jede Börse hat ihr eigenes **Order Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
-  - **By default** - wird in den meisten Faellen verwendet.
+  - **By default** - wird in den meisten Fällen verwendet.
   - **ITCH** - wird für das ITCH-Protokoll verwendet (Börsen: LSE und Nasdaq).
 
 **Allgemein**

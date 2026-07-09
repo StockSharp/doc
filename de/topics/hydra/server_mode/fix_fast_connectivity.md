@@ -88,7 +88,7 @@ _connector.TickTradeReceived += (subscription, trade) =>
 	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
-// Ereignis bei geaendertem Order Book
+// Ereignis bei geändertem Order Book
 _connector.OrderBookReceived += (subscription, depth) =>
 {
 	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
@@ -151,7 +151,7 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, ob die Kerze zu unserer Subscription gehoert
+	// Prüfen, ob die Kerze zu unserer Subscription gehört
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 

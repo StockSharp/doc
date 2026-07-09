@@ -4,13 +4,13 @@ Dasselbe Instrument kann in verschiedenen Handelssystemen unterschiedlich bezeic
 
 Dadurch können Sie die empfangenen Daten organisieren und die Speicherung vereinfachen. Tatsächlich werden alle eingehenden Daten aus verschiedenen Quellen an einem Ort konsolidiert, und zwar nicht nach dem Quellnamen, sondern nach dem Instrumentennamen.
 
-Dies ist auch nuetzlich, wenn dasselbe Instrument auf verschiedenen Trading Boards oder über unterschiedliche Verbindungen (oder Broker) gehandelt wird. Ausserdem können Daten über eine Verbindung empfangen und Trades über eine andere Verbindung ausgeführt werden.
+Dies ist auch nützlich, wenn dasselbe Instrument auf verschiedenen Trading Boards oder über unterschiedliche Verbindungen (oder Broker) gehandelt wird. Außerdem können Daten über eine Verbindung empfangen und Trades über eine andere Verbindung ausgeführt werden.
 
 Um Instrumente und Verbindungen zuzuordnen, gehen Sie wie folgt vor:
 
 1. Wechseln Sie zur Registerkarte **Instrumente** und klicken Sie auf die Schaltfläche **Instrumente und Verbindungen**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. Wählen Sie in der Verbindungsliste die erforderliche Verbindung aus.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
-3. Fuellen Sie alle Spalten aus.
+3. Füllen Sie alle Spalten aus.
 
    Beispiel:
 

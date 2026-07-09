@@ -8,7 +8,7 @@ Für den Export sollten Sie das erforderliche Dateiformat aus der Dropdown-Liste
 
 ![hydra export](../../../images/hydra_export.png)
 
-Danach müssen Sie einen Ordner auswählen und bei Bedarf den Dateinamen aendern.
+Danach müssen Sie einen Ordner auswählen und bei Bedarf den Dateinamen ändern.
 
 Beim Export in Textdateien (txt) erscheint ein Fenster, in dem Sie die Exportvorlage in folgender Form angeben können:
 

@@ -10,7 +10,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
-2. Im geoeffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
+2. Im geöffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
 
    - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstützt).
    - Geben Sie die erforderlichen Parameter für den ausgewählten Kerzentyp an:
@@ -31,7 +31,7 @@ Um 5-Minuten-Kerzen für das Instrument AAPL@NASDAQ zu erzeugen:
 1. Wählen Sie den Kerzentyp [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage).
 2. Setzen Sie **Timeframe** = 5 min.
 3. Wählen Sie das Instrument AAPL@NASDAQ aus.
-4. Klicken Sie auf die Suchschaltflaeche.
+4. Klicken Sie auf die Suchschaltfläche.
 
 Nach der Datenerzeugung sehen Sie das Ergebnis:
 
@@ -45,7 +45,7 @@ Um Volume-Kerzen zu erzeugen:
 2. Geben Sie das Volumen an, zum Beispiel 100.
 3. Wählen Sie das Instrument aus.
 4. Wählen Sie im Feld **Erstellen aus** den Wert **Ticks**.
-5. Klicken Sie auf die Suchschaltflaeche.
+5. Klicken Sie auf die Suchschaltfläche.
 
 Ergebnis der Erzeugung:
 
@@ -88,13 +88,13 @@ Zur grafischen Anzeige erzeugter Kerzen:
 
 Technische Indikatoren können zum Kerzenchart hinzugefügt werden:
 
-1. Öffnen Sie das Kontextmenue durch Rechtsklick auf das Chartpanel.
+1. Öffnen Sie das Kontextmenü durch Rechtsklick auf das Chartpanel.
 2. Wählen Sie den Eintrag **Indikator** und den gewünschten Indikator aus der Liste aus.
 3. Um den Indikator in einem separaten Panel anzuzeigen:
    - Fügen Sie über die Schaltfläche ![hydra add](../../../images/hydra_add.png) ein neues Panel hinzu.
-   - Wählen Sie den gewünschten Indikator im Kontextmenue aus.
+   - Wählen Sie den gewünschten Indikator im Kontextmenü aus.
 
-Beispiel für ein Chart mit hinzugefuegten Indikatoren:
+Beispiel für ein Chart mit hinzugefügten Indikatoren:
 
 ![hydra candles ind chart](../../../images/hydra_candles_ind_chart.png)
 

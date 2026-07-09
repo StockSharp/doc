@@ -4,18 +4,18 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings ITCH](../../../../../images/api_gui_settings_itch.png)
 
-- **Main** - Die primaere UDP-Gruppe.
+- **Main** - Die primäre UDP-Gruppe.
 - **Duplicate** - Doppelte UDP-Gruppe.
 - **Recovery** - Recovery-Server.
 - **Replay** - Replay-Server.
 - **Benutzername** - Login.
 - **Passwort** - Password.
 - **Securities** - Datei mit Wertpapieren.
-- **Delay** - Instrumente verzoegert laden.
+- **Delay** - Instrumente verzögert laden.
 - **Active** - Nur aktive Instrumente.
 - **Group ID** - Group ID.
 - **Time zone** - Informationen zur Zeitzone, in der sich die Börse befindet.
-- **Verbindungsprüfung** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
+- **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte

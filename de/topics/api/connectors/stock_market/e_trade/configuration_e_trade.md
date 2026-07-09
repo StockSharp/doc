@@ -10,4 +10,4 @@ Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
 
 ![etrade authorization](../../../../../images/etrade_autoriazation.png)
 
-Ein vollständiges Autorisierungsverfahren sollte nur einmal pro Tag durchgeführt werden (der Server von [E\*TRADE](../e_trade.md) setzt zuvor ausgegebene AccessTokens um Mitternacht EST zurück). Wenn das vollständige Autorisierungsverfahren am aktuellen Tag nach EST bereits ausgeführt wurde, laedt der [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) automatisch das AccessToken, das in einem Unterverzeichnis des [E\*TRADE](../e_trade.md)-Algorithmus gespeichert ist.
+Ein vollständiges Autorisierungsverfahren sollte nur einmal pro Tag durchgeführt werden (der Server von [E\*TRADE](../e_trade.md) setzt zuvor ausgegebene AccessTokens um Mitternacht EST zurück). Wenn das vollständige Autorisierungsverfahren am aktuellen Tag nach EST bereits ausgeführt wurde, lädt der [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) automatisch das AccessToken, das in einem Unterverzeichnis des [E\*TRADE](../e_trade.md)-Algorithmus gespeichert ist.

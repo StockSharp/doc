@@ -15,9 +15,9 @@ Geben Sie in diesem Fenster die Exportvorlage an. Die geschweiften Klammern kenn
 
 ```
 
-Im Beispiel ist der Timeframe der Fuenf-Minuten-Kerze an zweiter Position angegeben.
+Im Beispiel ist der Timeframe der Fünf-Minuten-Kerze an zweiter Position angegeben.
 
-Ausserdem sollte in der Datei die erste Zeile (Header) gesetzt werden:
+Außerdem sollte in der Datei die erste Zeile (Header) gesetzt werden:
 
 ```none
 <TICKER>,<PER>,<DATE>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>

@@ -2,7 +2,7 @@
 
 [Hydra](../hydra.md) verfügt über Verbindungen zu verschiedenen Datenquellen. Neben dem Abruf historischer Daten kann das Programm Marktdaten von Brokern empfangen; diese Marktdaten werden in Echtzeit empfangen. Die Verbindung zu den Quellen erfolgt über die dem Benutzer bereitgestellten Konnektoren.
 
-Dem Benutzer stehen kostenlose Konnektoren zur Verfugung; ausserdem kann er kostenpflichtige Konnektoren erwerben, die den Empfang von Marktdaten aus kostenpflichtigen Quellen ermöglichen.
+Dem Benutzer stehen kostenlose Konnektoren zur Verfügung; außerdem kann er kostenpflichtige Konnektoren erwerben, die den Empfang von Marktdaten aus kostenpflichtigen Quellen ermöglichen.
 
 Derzeit unterstützt [Hydra](../hydra.md) die folgenden Quellen:
 

@@ -17,7 +17,7 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 **Einstellungen**
 
 - **Datentyp** - Typ der importierten Daten.
-- **Dateiname** - vollstaendiger Pfad zur Datei.
+- **Dateiname** - vollständiger Pfad zur Datei.
 - **Datenverzeichnis** - Datenverzeichnis.
 - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candles\*.csv.
 - **Unterverzeichnisse** - Unterverzeichnisse einschliessen.

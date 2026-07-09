@@ -20,20 +20,20 @@ Nach der Installation von **IQ Feed Client, IQLink Launcher** muss dieser gestar
 
 ![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
 
-Klicken Sie im geoeffneten Fenster **IQLink Launcher** auf **Start IQLink**.
+Klicken Sie im geöffneten Fenster **IQLink Launcher** auf **Start IQLink**.
 
 ![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
 
-Geben Sie im geoeffneten Fenster **IQ Connect Login** den **Benutzernamen** und das **Passwort** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Benutzernamen und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
+Geben Sie im geöffneten Fenster **IQ Connect Login** den **Benutzernamen** und das **Passwort** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Benutzernamen und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
 
 Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen über verschiedene Ports:
 
-1. Level1 (Port 5009) wird verwendet, um Echtzeitdaten zu Instrumenten (Ticks, Eroeffnungs- und Schlusskurse, Volatilitaet usw.) und Nachrichten zu erhalten.
+1. Level1 (Port 5009) wird verwendet, um Echtzeitdaten zu Instrumenten (Ticks, Eröffnungs- und Schlusskurse, Volatilität usw.) und Nachrichten zu erhalten.
 2. Level2 (Port 9200) wird verwendet, um erweiterte Quotes für Instrumente zu erhalten; für jedes ECN können Sie das beste Quote-Paar erhalten.
 3. Lookup (Port 9100) wird verwendet, um nach Instrumenten zu suchen, historische Daten abzurufen und erweiterte Informationen zu Nachrichten zu erhalten.
-4. Admin (Port 9300) wird verwendet, um allgemeine Informationen zur Verbindung zu erhalten und Einstellungen zu aendern.
+4. Admin (Port 9300) wird verwendet, um allgemeine Informationen zur Verbindung zu erhalten und Einstellungen zu ändern.
 
-Die Portnummern, die standardmaessig für die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Für Clientverbindungen können die Portnummern in der Registry geaendert werden, zum Beispiel für Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern für die Verbindung zu IQ-Servern können nicht geaendert werden.
+Die Portnummern, die standardmäßig für die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Für Clientverbindungen können die Portnummern in der Registry geändert werden, zum Beispiel für Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern für die Verbindung zu IQ-Servern können nicht geändert werden.
 
 > [!CAUTION]
 > Der Connector unterstützt nur den Marktdaten-Feed; Transaktionen werden nicht unterstützt.
