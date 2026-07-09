@@ -4,59 +4,59 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 
 ![hydra tasks export](../../../images/hydra_tasks_export.png)
 
-**Database**
+**Datenbank**
 
-- **Connection** - Verbindung zur Datenbank. Wird beim Export über SQL verwendet.
-- **Packet** - Größe des ?bertragenen Datenpakets. Standardmäßig beträgt die Größe 50 Elemente. Wird beim Export über SQL verwendet.
-- **Uniqueness** - Prüfung der Dateneindeutigkeit in der Datenbank. Beeinflusst die Performance. Standardmäßig aktiviert. Wird beim Export über SQL verwendet.
+- **Verbindung** - Verbindung zur Datenbank. Wird beim Export über SQL verwendet.
+- **Paket** - Größe des ?bertragenen Datenpakets. Standardmäßig beträgt die Größe 50 Elemente. Wird beim Export über SQL verwendet.
+- **Eindeutigkeit** - Prüfung der Dateneindeutigkeit in der Datenbank. Beeinflusst die Performance. Standardmäßig aktiviert. Wird beim Export über SQL verwendet.
 
 > [!TIP]
 > Beim Export über SQL müssen die Parameter der Verbindungszeichenfolge gesetzt werden.
 
-**New connection string**
+**Neue Verbindungszeichenfolge**
 
 ![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
 
 - **Provider** - Provider-Einstellungen.
 - **Server** - Serveradresse oder Pfad zur Datenbank.
-- **Database** - Datenbankname. Wird für SQLite nicht verwendet.
+- **Datenbank** - Datenbankname. Wird für SQLite nicht verwendet.
 - **Login** - Login für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
-- **Password** - Passwort für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
+- **Passwort** - Passwort für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
 - **Windows** - das aktuelle Windows-Konto für die Verbindung zur Datenbank verwenden.
-- **Connection** - fertige Verbindungszeichenfolge.
+- **Verbindung** - fertige Verbindungszeichenfolge.
 
 > [!TIP]
 > Sie können die Verbindung zur Datenbank mit der Schaltfläche **Prüfen** pruefen.
 
-**General**
+**Allgemein**
 
-- **Header** - Converter.
-- **Working hours** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - das Ausführungsintervall.
-- **Data directory** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
+- **Kopfzeile** - Converter.
+- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Betriebsintervall** - das Ausführungsintervall.
+- **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
-- **Max. errors** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmäßig 0, die Anzahl der Fehler wird ignoriert.
-- **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
+- **Max. Fehler** - maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmäßig 0, die Anzahl der Fehler wird ignoriert.
+- **Abhängigkeit** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe ausgeführt werden muss.
 
 **CSV**
 
-- **Templates** - Vorlagen für jeden Typ exportierter Daten.
-- **Header** - Kopfzeile in der ersten Zeile. Wenn eine leere Zeichenfolge uebergeben wird, wird dem Dateianfang keine Kopfzeile hinzugefügt.
-- **Name format** - Format für das Schreiben des exportierten Dateinamens.
+- **Vorlagen** - Vorlagen für jeden Typ exportierter Daten.
+- **Kopfzeile** - Kopfzeile in der ersten Zeile. Wenn eine leere Zeichenfolge uebergeben wird, wird dem Dateianfang keine Kopfzeile hinzugefügt.
+- **Namensformat** - Format für das Schreiben des exportierten Dateinamens.
 
-**Export (auto)**
+**Export (automatisch)**
 
-- **Type** - Exporttyp (Format).
-- **Start date** - ab welchem Datum der Datenexport gestartet werden soll.
-- **Time offset** - Zeitoffset in Tagen.
-- **Export directory** - Verzeichnis, in das Daten exportiert werden.
+- **Typ** - Exporttyp (Format).
+- **Startdatum** - ab welchem Datum der Datenexport gestartet werden soll.
+- **Zeitversatz** - Zeitoffset in Tagen.
+- **Exportverzeichnis** - Verzeichnis, in das Daten exportiert werden.
 - **Format** - Datenformat.
 - **Split** - Aufteilungstyp.
 
-**Logging**
+**Protokollierung**
 
-- **Identifier** - die Kennung.
-- **Logging level** - der Logging-Level.
+- **Kennung** - die Kennung.
+- **Protokollierungsstufe** - der Logging-Level.
 
 Betrachten wir ein Beispiel für den automatischen Export:
 

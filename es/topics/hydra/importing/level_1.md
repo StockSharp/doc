@@ -6,7 +6,7 @@ Para importar datos Level 1, seleccione **Import \=\> Level 1** en el menú prin
 
 ## Proceso de importación.
 
-1. **Import settings.**.
+1. **Configuración de importación**.
 
    Consulte la importación de [Velas](candles.md).
 2. Configure los parámetros de importación para los campos de [S#](../../api.md).
@@ -18,7 +18,7 @@ Para importar datos Level 1, seleccione **Import \=\> Level 1** en el menú prin
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{ServerTime:default:yyyyMMdd};{ServerTime:default:HH:mm:ss.ffffff};{Changes:{BestBidPrice};{BestBidVolume};{BestAskPrice};{BestAskVolume};{LastTradeTime};{LastTradePrice};{LastTradeVolume}}
-     	  				
+
      ```
 
      Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Security** y **Board**, respectivamente. Por lo tanto, en el campo **Field order** asignamos los valores 0 y 1, respectivamente.

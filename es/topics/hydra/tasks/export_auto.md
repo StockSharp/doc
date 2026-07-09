@@ -4,11 +4,11 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 
 ![hydra tasks export](../../../images/hydra_tasks_export.png)
 
-**Database**
+**Base de datos**
 
-- **Connection** - conexión a la base de datos. Se usa en caso de exportación mediante SQL.
-- **Packet** - tamaño del paquete de datos transmitido. De forma predeterminada, el tamaño es de 50 elementos. Se usa en caso de exportación mediante SQL.
-- **Uniqueness** - comprobar la unicidad de los datos en la base de datos. Afecta al rendimiento. Está habilitado de forma predeterminada. Se usa en caso de exportación mediante SQL.
+- **Conexión** - conexión a la base de datos. Se usa en caso de exportación mediante SQL.
+- **Paquete** - tamaño del paquete de datos transmitido. De forma predeterminada, el tamaño es de 50 elementos. Se usa en caso de exportación mediante SQL.
+- **Unicidad** - comprobar la unicidad de los datos en la base de datos. Afecta al rendimiento. Está habilitado de forma predeterminada. Se usa en caso de exportación mediante SQL.
 
 > [!TIP]
 > Al usar exportación mediante SQL, debe establecer los parámetros de la cadena de conexión.
@@ -17,46 +17,46 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 
 ![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
 
-- **Provider** - configuración del proveedor.
-- **Server** - dirección del servidor o ruta a la base de datos.
-- **Database** - nombre de la base de datos. No se usa para SQLite.
-- **Login** - login para acceder a la base de datos. No se usa para acceso anónimo.
-- **Password** - contraseña para acceder a la base de datos. No se usa para acceso anónimo.
+- **Proveedor** - configuración del proveedor.
+- **Servidor** - dirección del servidor o ruta a la base de datos.
+- **Base de datos** - nombre de la base de datos. No se usa para SQLite.
+- **Inicio de sesión** - login para acceder a la base de datos. No se usa para acceso anónimo.
+- **Contraseña** - contraseña para acceder a la base de datos. No se usa para acceso anónimo.
 - **Windows** - usar la cuenta actual de Windows para conectarse a la base de datos.
-- **Connection** - cadena de conexión preparada.
+- **Conexión** - cadena de conexión preparada.
 
 > [!TIP]
 > Puede comprobar la conexión a la base de datos con el botón **Comprobar**.
 
 **General**
 
-- **Header** - Converter.
-- **Working hours** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - intervalo de operación.
-- **Data directory** - directorio de datos desde el que se recibirán los datos para la conversión.
-- **Format** - formato de los datos convertidos: BIN\/CSV.
-- **Max. errors** - número máximo de errores tras el cual la tarea se detendrá. De forma predeterminada, 0: se ignora el número de errores.
-- **Dependency** - tarea que debe ejecutarse antes de iniciar la actual.
+- **Encabezado** - Converter.
+- **Horario de trabajo** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Intervalo de operación** - intervalo de operación.
+- **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
+- **Formato** - formato de los datos convertidos: BIN\/CSV.
+- **Máx. errores** - número máximo de errores tras el cual la tarea se detendrá. De forma predeterminada, 0: se ignora el número de errores.
+- **Dependencia** - tarea que debe ejecutarse antes de iniciar la actual.
 
 **CSV**
 
-- **Templates** - plantillas para cada tipo de datos exportados.
-- **Header** - encabezado en la primera línea. Si se pasa una cadena vacía, el encabezado no se añadirá al archivo.
-- **Name format** - formato para escribir el nombre del archivo exportado.
+- **Plantillas** - plantillas para cada tipo de datos exportados.
+- **Encabezado** - encabezado en la primera línea. Si se pasa una cadena vacía, el encabezado no se añadirá al archivo.
+- **Formato de nombre** - formato para escribir el nombre del archivo exportado.
 
-**Export (auto)**
+**Exportación (automática)**
 
-- **Type** - tipo de exportación (formato).
-- **Start date** - fecha desde la que iniciar la exportación de datos.
-- **Time offset** - desplazamiento de tiempo en días.
-- **Export directory** - directorio donde se exportarán los datos.
-- **Format** - formato de datos.
+- **Tipo** - tipo de exportación (formato).
+- **Fecha inicial** - fecha desde la que iniciar la exportación de datos.
+- **Desfase temporal** - desplazamiento de tiempo en días.
+- **Directorio de exportación** - directorio donde se exportarán los datos.
+- **Formato** - formato de datos.
 - **Split** - tipo de división.
 
-**Logging**
+**Registro**
 
-- **Identifier** - identificador.
-- **Logging level** - nivel de logging.
+- **Identificador** - identificador.
+- **Nivel de registro** - nivel de logging.
 
 Consideremos un ejemplo de exportación automática:
 

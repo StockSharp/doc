@@ -12,21 +12,21 @@ Für die Verbindung wird eine spezielle Quelle verwendet:
 
 - **Address** - die Adresse des Hydra-Servers.
 - **Login** - Login (erforderlich, wenn der Server Autorisierung verlangt).
-- **Password** - Passwort (erforderlich, wenn der Server Autorisierung verlangt).
+- **Passwort** - Passwort (erforderlich, wenn der Server Autorisierung verlangt).
 - **Time Offset** - ein Zeitoffset in Tagen ab dem aktuellen Datum, erforderlich, um das Herunterladen unvollstaendiger Daten für die aktuelle Handelssitzung zu verhindern.
 - **Weekends** - ob Daten für Wochenenden heruntergeladen werden sollen.
 
-**Main**
+**Hauptbereich**
 
-- **Title** - der Titel der Aufgabe.
+- **Titel** - der Titel der Aufgabe.
 - **Working Hours** - Einstellung des Plattformbetriebs.
 - **Interval of Operation** - Ausfuehrungsintervall.
 - **Data Directory** - das Datenverzeichnis, in dem die finalen Dateien im [S#](../../api.md)-Format gespeichert werden.
 - **Format** - Datenformat: BIN/CSV.
 - **Max. Errors** - die maximale Anzahl von Fehlern, bei deren Erreichen die Aufgabe gestoppt wird. Standardmaessig 0, die Anzahl der Fehler wird ignoriert.
-- **Dependency** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe abgeschlossen sein muss.
+- **Abhängigkeit** - eine Aufgabe, die vor dem Start der aktuellen Aufgabe abgeschlossen sein muss.
 
-**Logging**
+**Protokollierung**
 
-- **Identifier** - Kennung.
+- **Kennung** - Kennung.
 - **Logging Level** - Logging-Level.

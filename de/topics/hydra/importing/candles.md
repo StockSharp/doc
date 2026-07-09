@@ -6,19 +6,19 @@ Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **
 
 ## Kerzenimportprozess
 
-1. **Common.**
-   - **Data type** - Typ der importierten Daten.
-   - **Filename** - Vollständiger Pfad zur CSV-Datei.
-   - **Data directory** - Ordner, in dem die finalen [S#](../../api.md)-Dateien gespeichert werden.
-   - **File mask** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candle \_\*.csv.
-   - **Column separator** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
-   - **Indent from the beginning** - Anzahl der Zeilen am Anfang der Datei, die ubersprungen werden sollen (wenn sie Metainformationen enthalten).
-   - **Time zone** - Zeitzone.
-   - **Interval** - Haufigkeit der Datenaktualisierung.
+1. **Allgemein**
+   - **Datentyp** - Typ der importierten Daten.
+   - **Dateiname** - Vollständiger Pfad zur CSV-Datei.
+   - **Datenverzeichnis** - Ordner, in dem die finalen [S#](../../api.md)-Dateien gespeichert werden.
+   - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candle \_\*.csv.
+   - **Spaltentrennzeichen** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
+   - **Einzug vom Anfang** - Anzahl der Zeilen am Anfang der Datei, die ubersprungen werden sollen (wenn sie Metainformationen enthalten).
+   - **Zeitzone** - Zeitzone.
+   - **Intervall** - Haufigkeit der Datenaktualisierung.
 
-   **Instruments**
-   - **Extended information** - Erweiterte importierte Felder im Speicher für erweiterte Informationen speichern
-   - **Duplicates** - ob doppelte Instrumente aktualisiert werden, wenn sie bereits existieren.
+   **Instrumente**
+   - **Erweiterte Informationen** - Erweiterte importierte Felder im Speicher für erweiterte Informationen speichern
+   - **Duplikate** - ob doppelte Instrumente aktualisiert werden, wenn sie bereits existieren.
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
    - **S# field** - Wert des S#-Feldes. ( **Security, Board** usw.).
    - **Associations** - Spaltenwert in der Datei dem StockSharp-Typ zuordnen (falls erforderlich).

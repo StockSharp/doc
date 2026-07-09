@@ -6,27 +6,27 @@ No modo de servidor, é possível ligar outro programa Hydra, que atuará como c
 
 ![hydra tasks server](../../../images/hydratasksserver_1.png)
 
-**Settings**
+**Definições**
 
 ![hydra tasks server](../../../images/hydratasksserver_2.png)
 
 - **Address** - o endereço do servidor Hydra.
 - **Login** - login (necessário se o servidor exigir autorização).
-- **Password** - palavra-passe (necessária se o servidor exigir autorização).
+- **Palavra-passe** - palavra-passe (necessária se o servidor exigir autorização).
 - **Time Offset** - um desfasamento temporal em dias relativamente à data atual, necessário para evitar o descarregamento de dados incompletos da sessão de negociação atual.
 - **Weekends** - se deve descarregar dados dos fins de semana.
 
-**Main**
+**Principal**
 
-- **Title** - o título da tarefa.
+- **Título** - o título da tarefa.
 - **Working Hours** - definição do funcionamento da plataforma.
 - **Interval of Operation** - intervalo de funcionamento.
 - **Data Directory** - o diretório com dados onde serão guardados os ficheiros finais no formato [S#](../../api.md).
-- **Format** - o formato dos dados: BIN/CSV.
+- **Formato** - o formato dos dados: BIN/CSV.
 - **Max. Errors** - o número máximo de erros; ao atingi-lo, a tarefa será parada. Por predefinição, 0 - o número de erros é ignorado.
-- **Dependency** - uma tarefa que deve ser concluída antes de iniciar a atual.
+- **Dependência** - uma tarefa que deve ser concluída antes de iniciar a atual.
 
-**Logging**
+**Registo**
 
-- **Identifier** - identificador.
+- **Identificador** - identificador.
 - **Logging Level** - o nível de registo.

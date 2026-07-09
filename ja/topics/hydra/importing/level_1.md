@@ -6,7 +6,7 @@ Level 1 データをインポートするには、アプリケーションのメ
 
 ## インポート プロセス。
 
-1. **Import settings.**。
+1. **インポート設定**。
 
    [ローソク足](candles.md) のインポートを参照してください。
 2. [S#](../../api.md) フィールドのインポート パラメーターを設定します。
@@ -18,7 +18,7 @@ Level 1 データをインポートするには、アプリケーションのメ
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{ServerTime:default:yyyyMMdd};{ServerTime:default:HH:mm:ss.ffffff};{Changes:{BestBidPrice};{BestBidVolume};{BestAskPrice};{BestAskVolume};{LastTradeTime};{LastTradePrice};{LastTradeVolume}}
-     	  				
+
      ```
 
      ここで、{SecurityId.SecurityCode} と {SecurityId.BoardCode} の値は、それぞれ **Security** と **Board** の値に対応します。したがって、**Field order** フィールドには、それぞれ値 0 と 1 を割り当てます。
@@ -32,6 +32,6 @@ Level 1 データをインポートするには、アプリケーションのメ
    - {LastTradeVolume} フィールドについては、**S# field** ウィンドウから **Last trade volume** フィールドを選択します。値 10 を割り当てます。
    - フィールド設定ウィンドウは次のようになります。![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
 
-   ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。 
+   ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。
 3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
 4. **インポート** ボタンをクリックします。

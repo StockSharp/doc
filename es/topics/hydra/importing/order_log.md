@@ -6,7 +6,7 @@ Para importar el registro de órdenes, seleccione **Import \=\> Order log** en e
 
 ## Proceso de importación.
 
-1. **Import settings.**.
+1. **Configuración de importación**.
 
    Consulte la importación de [Velas](candles.md).
 2. Configure los parámetros de importación para los campos de [S#](../../api.md).
@@ -18,7 +18,7 @@ Para importar el registro de órdenes, seleccione **Import \=\> Order log** en e
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{ServerTime:default:yyyyMMdd};{ServerTime:default:HH:mm:ss.ffffff};{OrderId};{OrderPrice};{OrderVolume};{Side};{OrderState};{TimeInForce};{TradeId};{TradePrice}
-     	  				
+
      ```
 
      Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Security** y **Board**, respectivamente. Por lo tanto, en el campo **Field order** asignamos los valores 0 y 1, respectivamente.

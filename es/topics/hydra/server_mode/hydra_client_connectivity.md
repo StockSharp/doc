@@ -11,22 +11,22 @@ Para la conexión se usa una fuente especial:
 ![hydra tasks server](../../../images/hydratasksserver_2.png)
 
 - **Address** - dirección del servidor Hydra.
-- **Login** - login (obligatorio si el servidor requiere autorización).
-- **Password** - contraseña (obligatoria si el servidor requiere autorización).
+- **Inicio de sesión** - login (obligatorio si el servidor requiere autorización).
+- **Contraseña** - contraseña (obligatoria si el servidor requiere autorización).
 - **Time Offset** - desplazamiento de tiempo en días desde la fecha actual, necesario para evitar descargar datos incompletos de la sesión de negociación actual.
 - **Weekends** - indica si se deben descargar datos de fines de semana.
 
-**Main**
+**Principal**
 
-- **Title** - nombre de la tarea.
+- **Título** - nombre de la tarea.
 - **Working Hours** - configuración del funcionamiento de la plataforma.
 - **Interval of Operation** - intervalo de operación.
 - **Data Directory** - directorio con datos donde se guardarán los archivos finales en formato [S#](../../api.md).
-- **Format** - formato de datos: BIN/CSV.
+- **Formato** - formato de datos: BIN/CSV.
 - **Max. Errors** - número máximo de errores al alcanzarse el cual la tarea se detendrá. De forma predeterminada, 0: se ignora el número de errores.
-- **Dependency** - tarea que debe completarse antes de iniciar la actual.
+- **Dependencia** - tarea que debe completarse antes de iniciar la actual.
 
-**Logging**
+**Registro**
 
-- **Identifier** - identificador.
+- **Identificador** - identificador.
 - **Logging Level** - nivel de logging.

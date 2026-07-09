@@ -7,22 +7,22 @@
 ## K线导入过程
 
 1. **常规**
-   - **Data type** — 导入的数据类型。
-   - **Filename** — CSV 文件的完整路径。
-   - **Data directory** — 保存最终 [S#](../../api.md) 文件的文件夹。
-   - **File mask** — 扫描目录时使用的文件掩码，例如 `candle_*.csv`。
-   - **Column separator** — 列分隔符。制表符使用 TAB 表示。
-   - **Indent from the beginning** — 从文件开头跳过的行数，用于忽略包含元信息的行。
-   - **Time zone** — 时区。
-   - **Interval** — 数据更新频率。
+   - **数据类型** — 导入的数据类型。
+   - **文件名** — CSV 文件的完整路径。
+   - **数据目录** — 保存最终 [S#](../../api.md) 文件的文件夹。
+   - **文件掩码** — 扫描目录时使用的文件掩码，例如 `candle_*.csv`。
+   - **列分隔符** — 列分隔符。制表符使用 TAB 表示。
+   - **从文件开头跳过** — 从文件开头跳过的行数，用于忽略包含元信息的行。
+   - **时区** — 时区。
+   - **间隔** — 数据更新频率。
 
-   **Instruments**
-   - **Extended information** — 将导入的扩展字段保存到扩展信息存储中。
-   - **Duplicates** — 如果重复的交易品种已存在，是否对其进行更新。
+   **交易品种**
+   - **扩展信息** — 将导入的扩展字段保存到扩展信息存储中。
+   - **重复项** — 如果重复的交易品种已存在，是否对其进行更新。
 2. 配置 [S#](../../api.md) 字段的导入参数。
    - **S# field** — S# 字段的值，例如 **Security、Board** 等。
    - **Associations** — 根据需要，将文件中的列值映射到 StockSharp 类型。
-   - **Format** — 数据格式，通常用于导入日期和时间值，详见[逐笔成交](ticks.md)。
+   - **格式** — 数据格式，通常用于导入日期和时间值，详见[逐笔成交](ticks.md)。
    - **Use** — 导入时是否使用该数据。
    - **Field order** — 导入对象的属性列排列顺序。
 
@@ -30,7 +30,7 @@
 
      ```none
      {SecurityId.SecurityCode},{SecurityId.BoardCode},{OpenTime:yyyyMMdd},{OpenTime:default:HH:mm:ss},{OpenPrice},{HighPrice},{LowPrice},{ClosePrice},{TotalVolume}
-     	  				
+
      ```
 
      则应使用以下设置：![hydra import prop candles](../../../images/hydra_import_prop_candles.png)

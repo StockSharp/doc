@@ -4,18 +4,18 @@
 
 ![hydra tasks converter](../../../images/hydra_tasks_converter.png)
 
-**Converter**
+**转换器**
 
-- **Converter** — 转换器。
+- **转换器** — 转换器。
 - **From** — 要转换的源数据类型。
 - **Data format** — 转换后的数据格式。
-- **Start date** — 开始转换数据的日期。
-- **Time offset** — 相对于任务启动日期的偏移天数，用于避免转换不完整交易日的数据。如果配置了实时数据转换，受更新间隔影响，当前交易日的数据可能尚未完整。设置时间偏移可以避免转换此类不完整数据。
+- **开始日期** — 开始转换数据的日期。
+- **时间偏移** — 相对于任务启动日期的偏移天数，用于避免转换不完整交易日的数据。如果配置了实时数据转换，受更新间隔影响，当前交易日的数据可能尚未完整。设置时间偏移可以避免转换此类不完整数据。
 - **Where** — 保存转换后数据的数据目录。
 
-**Order books**
+**订单簿**
 
-- **Interval** — 订单簿生成间隔。
+- **间隔** — 订单簿生成间隔。
 - **Depth** — 生成订单簿时的最大深度。
 - **Order log** — 从订单日志构建订单簿的方式。
 
@@ -23,24 +23,24 @@
   - **By default** — 适用于大多数情况。
   - **ITCH** — 用于 ITCH 协议，例如 LSE 和 Nasdaq 交易所。
 
-**General**
+**常规**
 
-- **Header** — Converter。
-- **Working hours** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** — 任务的运行间隔。
-- **Data directory** — 用于接收待转换数据的数据目录。
-- **Format** — 转换后的数据格式：BIN\/CSV。
-- **Max. errors** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
-- **Dependency** — 启动当前任务前必须完成的任务。
+- **标题** — Converter。
+- **工作时间** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **操作间隔** — 任务的运行间隔。
+- **数据目录** — 用于接收待转换数据的数据目录。
+- **格式** — 转换后的数据格式：BIN\/CSV。
+- **最大错误数** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
+- **依赖任务** — 启动当前任务前必须完成的任务。
 
-**Logging**
+**日志**
 
-- **Identifier** — 标识符。
-- **Logging level** — 日志记录级别。
+- **标识符** — 标识符。
+- **日志级别** — 日志记录级别。
 
 下面以一个数据转换示例说明操作过程。
 
-1. 打开 **Converter** 任务。![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. 打开 **转换器** 任务。![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
 2. 选择交易品种，然后在打开的窗口中设置转换后需要得到的数据类型，以及用于转换的源数据类型。例如，将逐笔成交转换为 15 分钟时间周期的K线。
 
    > [!TIP]

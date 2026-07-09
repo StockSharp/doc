@@ -4,18 +4,18 @@ La tarea convierte datos bursátiles. Por ejemplo, de registros de órdenes a ti
 
 ![hydra tasks converter](../../../images/hydra_tasks_converter.png)
 
-**Converter**
+**Convertidor**
 
-- **Converter** - convertidor.
+- **Convertidor** - convertidor.
 - **From** - qué tipo de datos se convertirá.
 - **Data format** - formato de los datos convertidos.
-- **Start date** - fecha desde la que iniciar la conversión de datos.
-- **Time offset** - desplazamiento de tiempo en días desde la fecha en que se inició la tarea. Esto evita convertir un día incompleto. Si está configurada la conversión de datos en tiempo real, el intervalo de actualización puede dejar el día actual solo parcialmente convertido. Use el desplazamiento de tiempo para evitarlo.
+- **Fecha inicial** - fecha desde la que iniciar la conversión de datos.
+- **Desfase temporal** - desplazamiento de tiempo en días desde la fecha en que se inició la tarea. Esto evita convertir un día incompleto. Si está configurada la conversión de datos en tiempo real, el intervalo de actualización puede dejar el día actual solo parcialmente convertido. Use el desplazamiento de tiempo para evitarlo.
 - **Where** - directorio de datos donde se guardarán los datos convertidos.
 
-**Order books**
+**Libros de órdenes**
 
-- **Interval** - intervalo de generación del libro de órdenes.
+- **Intervalo** - intervalo de generación del libro de órdenes.
 - **Depth** - profundidad máxima de generación del libro de órdenes.
 - **Order log** - cómo construir libros de órdenes a partir del registro de órdenes.
 
@@ -25,22 +25,22 @@ La tarea convierte datos bursátiles. Por ejemplo, de registros de órdenes a ti
 
 **General**
 
-- **Header** - Converter.
-- **Working hours** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - intervalo de operación.
-- **Data directory** - directorio de datos desde el que se recibirán los datos para la conversión.
-- **Format** - formato de los datos convertidos: BIN\/CSV.
-- **Max. errors** - número máximo de errores tras el cual la tarea se detendrá. De forma predeterminada, 0: se ignora el número de errores.
-- **Dependency** - tarea que debe ejecutarse antes de iniciar la actual.
+- **Encabezado** - Converter.
+- **Horario de trabajo** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Intervalo de operación** - intervalo de operación.
+- **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
+- **Formato** - formato de los datos convertidos: BIN\/CSV.
+- **Máx. errores** - número máximo de errores tras el cual la tarea se detendrá. De forma predeterminada, 0: se ignora el número de errores.
+- **Dependencia** - tarea que debe ejecutarse antes de iniciar la actual.
 
-**Logging**
+**Registro**
 
-- **Identifier** - identificador.
-- **Logging level** - nivel de logging.
+- **Identificador** - identificador.
+- **Nivel de registro** - nivel de logging.
 
 Consideremos un ejemplo de conversión de datos.
 
-1. Vaya a la tarea **Converter**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. Vaya a la tarea **Convertidor**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
 2. Seleccione el instrumento y, en la ventana que aparece, establezca el tipo de datos que debemos recibir durante la conversión, así como el tipo de datos desde el que debemos convertir. Por ejemplo, necesita convertir Ticks en velas con Time Frame de 15 minutos.
 
    > [!TIP]

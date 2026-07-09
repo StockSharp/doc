@@ -6,7 +6,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
 ## Processo de Geração de Candles
 
-1. No separador **General**, clique no botão **Candles**; será aberta a seguinte janela:
+1. No separador **Geral**, clique no botão **Candles**; será aberta a seguinte janela:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 

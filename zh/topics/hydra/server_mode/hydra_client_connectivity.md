@@ -6,27 +6,27 @@
 
 ![hydra tasks server](../../../images/hydratasksserver_1.png)
 
-**Settings**
+**设置**
 
 ![hydra tasks server](../../../images/hydratasksserver_2.png)
 
 - **Address** - Hydra 服务器地址。
-- **Login** - 登录名（服务器要求身份验证时必填）。
-- **Password** - 密码（服务器要求身份验证时必填）。
+- **登录名** - 登录名（服务器要求身份验证时必填）。
+- **密码** - 密码（服务器要求身份验证时必填）。
 - **Time Offset** - 相对于当前日期的天数偏移，用于避免下载当前交易时段尚未完成的数据。
 - **Weekends** - 是否下载周末数据。
 
-**Main**
+**主要**
 
-- **Title** - 任务名称。
+- **标题** - 任务名称。
 - **Working Hours** - 设置平台的运行时间。
 - **Interval of Operation** - 运行间隔。
 - **Data Directory** - 数据目录，最终生成的 [S#](../../api.md) 格式文件将保存在此处。
-- **Format** - 数据格式：BIN 或 CSV。
+- **格式** - 数据格式：BIN 或 CSV。
 - **Max. Errors** - 允许的最大错误数。达到该数量后，任务将停止。默认值为 0，表示忽略错误数量。
-- **Dependency** - 启动当前任务前必须完成的任务。
+- **依赖任务** - 启动当前任务前必须完成的任务。
 
-**Logging**
+**日志**
 
-- **Identifier** - 标识符。
+- **标识符** - 标识符。
 - **Logging Level** - 日志级别。

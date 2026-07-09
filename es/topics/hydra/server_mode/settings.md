@@ -14,7 +14,7 @@ Después haga clic en el botón **Configuración** para abrir la ventana de conf
 
 ![hydra server](../../../images/hydra_server.png)
 
-**Hydra Server**
+**Servidor Hydra**
 
 - **FIX server** - cambiar [Hydra](../../hydra.md) al modo servidor, distribuyendo negociación en vivo y datos históricos mediante el protocolo FIX.
 

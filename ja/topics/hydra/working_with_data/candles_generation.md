@@ -6,7 +6,7 @@
 
 ## ローソク足生成プロセス
 
-1. **General** タブで **Candles** ボタンをクリックすると、次のウィンドウが開きます。
+1. **全般** タブで **Candles** ボタンをクリックすると、次のウィンドウが開きます。
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 

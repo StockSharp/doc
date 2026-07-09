@@ -6,7 +6,7 @@ Para importar instrumentos, selecione o separador **Import \=\> Instruments**.
 
 ## Processo de importação.
 
-1. **Import settings.**.
+1. **Definições de importação**.
 
    Consulte a importação de [Velas](candles.md).
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
@@ -18,12 +18,12 @@ Para importar instrumentos, selecione o separador **Import \=\> Instruments**.
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{PriceStep};{SecurityType};{VolumeStep}
-     	  				
+
      ```
 
      Aqui, os valores de {SecurityId.SecurityCode} e {SecurityId.BoardCode} correspondem aos valores de **Security** e **Board**, respetivamente. Portanto, no campo **Field order**, atribuímos os valores 0 e 1, respetivamente.
    - Para o campo {PriceStep}, selecione o campo **Nominal** na janela **S# field** e atribua-lhe o valor 2.
-   - Para o campo {SecurityType}, selecione o campo **Type** na janela **S# field** - o tipo de instrumento (ação, moeda, futuros, etc.). Atribuímos-lhe o valor 3.
+   - Para o campo {SecurityType}, selecione o campo **Tipo** na janela **S# field** - o tipo de instrumento (ação, moeda, futuros, etc.). Atribuímos-lhe o valor 3.
    - Para o campo {VolumeStep}, selecione o campo **Min volume (base)** na janela **S# field** - o volume base ou mínimo do instrumento. Atribuímos-lhe o valor 4
    - A janela de definição de campos terá o seguinte aspeto:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 

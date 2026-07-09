@@ -4,17 +4,17 @@
 
 ![hydra settings connectionparams](../../../images/hydra_settings_connectionparams.png)
 
-**Connection**
+**连接**
 
-- **Connection** — 连接设置。
-- **Title** — 任务名称。
-- **Start date (ticks)** — 开始下载数据的日期。
-- **Work from** — 开始工作时间。
-- **Work until** — 结束工作时间。
-- **Interval of work** — 工作间隔。
-- **Data directory** — 数据目录，StockSharp 格式的最终文件将保存在此目录中。
-- **Format** — 数据格式：BIN\/CSV。
-- **Max. errors** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
-- **News** — 下载新闻。
-- **Dependency** — 启动当前任务前必须完成的任务。
-- **Update securities** — 建立连接时更新交易品种。
+- **连接** — 连接设置。
+- **标题** — 任务名称。
+- **开始日期（逐笔成交）** — 开始下载数据的日期。
+- **工作开始** — 开始工作时间。
+- **工作结束** — 结束工作时间。
+- **工作间隔** — 工作间隔。
+- **数据目录** — 数据目录，StockSharp 格式的最终文件将保存在此目录中。
+- **格式** — 数据格式：BIN\/CSV。
+- **最大错误数** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
+- **新闻** — 下载新闻。
+- **依赖任务** — 启动当前任务前必须完成的任务。
+- **更新交易品种** — 建立连接时更新交易品种。

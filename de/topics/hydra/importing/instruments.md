@@ -6,7 +6,7 @@ Um Instrumente zu importieren, wählen Sie die Registerkarte **Import \=\> Instr
 
 ## Importprozess.
 
-1. **Import settings.**.
+1. **Importeinstellungen**.
 
    Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
@@ -23,7 +23,7 @@ Um Instrumente zu importieren, wählen Sie die Registerkarte **Import \=\> Instr
 
      Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Security** bzw. **Board**. Daher weisen wir im Feld **Field order** die Werte 0 bzw. 1 zu.
    - Für das Feld {PriceStep} wählen Sie im Fenster **S# field** das Feld **Nominal** und weisen ihm den Wert 2 zu.
-   - Für das Feld {SecurityType} wählen Sie im Fenster **S# field** das Feld **Type** - den Instrumenttyp (Aktie, Wahrung, Futures usw.). Wir weisen ihm den Wert 3 zu.
+   - Für das Feld {SecurityType} wählen Sie im Fenster **S# field** das Feld **Typ** - den Instrumenttyp (Aktie, Wahrung, Futures usw.). Wir weisen ihm den Wert 3 zu.
    - Für das Feld {VolumeStep} wählen Sie im Fenster **S# field** das Feld **Min volume (base)** - das Basis- oder Mindestvolumen des Instruments. Wir weisen ihm den Wert 4 zu.
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 

@@ -31,7 +31,7 @@ Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulat
 - **Number of volume steps** - die Anzahl der Volumenschritte, um die die Order groesser ist als der Tick-Trade. Wird beim Testen auf Tick-Trades verwendet.
 - **Portfolio interval** - Intervall für die Neuberechnung von Portfoliodaten. Wenn das Intervall 0 ist, erfolgt keine Neuberechnung.
 - **Adjust time** - Zeit für Orders und Trades an die Boersenzeit anpassen.
-- **Time zone** - Informationen zur Zeitzone, in der sich die Boerse befindet.
+- **Zeitzone** - Informationen zur Zeitzone, in der sich die Boerse befindet.
 - **Price shift** - Preisverschiebung vom letzten Trade, die die Grenzen der maximalen und minimalen Preise für die naechste Sitzung bestimmt.
 - **Add additional volume** - zusätzliches Volumen zum Order Book hinzufügen, wenn Orders mit grossem Volumen registriert werden.
 - **Trading session state** - Pruefung des Handelsstatus.

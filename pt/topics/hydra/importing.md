@@ -7,12 +7,12 @@
 Podem ser importados os seguintes tipos:
 
 - [Velas](importing/candles.md)
-- [Securities](importing/instruments.md)
-- [Trades](importing/ticks.md)
+- [Instrumentos](importing/instruments.md)
+- [Ticks](importing/ticks.md)
 - [Livros de ordens](importing/order_books.md)
 - [Log de ordens](importing/order_log.md)
 - [Level 1](importing/level_1.md)
 - [Notícias](importing/news.md)
-- [Own transactions](importing/transactions.md)
+- [Transações](importing/transactions.md)
 
 **Ver [tutorial em vídeo](videos/import_task.md)**

@@ -18,12 +18,12 @@
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{ServerTime:default:yyyyMMdd};{ServerTime:default:HH:mm:ss.ffffff};{TradeId};{TradePrice};{TradeVolume};{OriginSide}
-     	  				
+
      ```
 
      其中，{SecurityId.SecurityCode} 和 {SecurityId.BoardCode} 分别对应 **Security** 和 **Board**。因此，在 **Field order** 字段中分别为其分配序号 0 和 1。
    - 对于 {ServerTime:default:yyyyMMdd} 和 {ServerTime:default:HH:mm:ss.ffffff} 字段，在 **S# field** 窗口中分别选择 **Date** 和 **Time**，并将其序号设为 2 和 3。
-   - 对于 {TradeId} 字段，在 **S# field** 窗口中选择表示成交标识符或成交编号的 **Identifier**，并将其序号设为 4。
+   - 对于 {TradeId} 字段，在 **S# field** 窗口中选择表示成交标识符或成交编号的 **标识符**，并将其序号设为 4。
    - 对于 {TradePrice} 字段，在 **S# field** 窗口中选择表示成交价格的 **Price**，并将其序号设为 5。
    - 对于 {TradeVolume} 字段，在 **S# field** 窗口中选择表示成交量的 **Volume**，并将其序号设为 6。
    - 对于 {OriginSide} 字段，在 **S# field** 窗口中选择表示成交发起方（卖方或买方）的 **Initiator**，并将其序号设为 7。

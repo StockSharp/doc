@@ -10,7 +10,7 @@ Si la fuente no contiene información extendida para un instrumento, las columna
 
 Para seleccionar la información extendida necesaria, debe:
 
-1. En la pestaña **Securities**, hacer clic en el botón **Extended information**![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
+1. En la pestaña **Securities**, hacer clic en el botón **Información extendida**![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
 2. Aparecerá una ventana en la que debe seleccionar la ruta al archivo CSV requerido![hydra Extension Info window](../../../images/hydra_extensioninfo_window.png)
 
 A continuación se muestra un ejemplo de archivo **CSV** de información extendida abierto en distintos editores: **MS Excel** y **Notepad**.

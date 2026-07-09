@@ -14,7 +14,7 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
 
 ![hydra server](../../../images/hydra_server.png)
 
-**Hydra Server**
+**Hydra-Server**
 
 - **FIX server** - [Hydra](../../hydra.md) in den Servermodus schalten, der Live-Handelsdaten und historische Daten über das FIX-Protokoll verteilt.
 

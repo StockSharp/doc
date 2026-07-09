@@ -1,10 +1,10 @@
 # Lista de instrumentos
 
-Si hace clic en el botón **Instruments** de la pestaña General, aparece el panel **Instruments**. El panel **Instruments** muestra todos los instrumentos disponibles, así como sus datos de mercado.
+Si hace clic en el botón **Instrumentos** de la pestaña General, aparece el panel **Instrumentos**. El panel **Instrumentos** muestra todos los instrumentos disponibles, así como sus datos de mercado.
 
 ![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
 
-En la parte inferior del panel **Instruments** hay botones que permiten:
+En la parte inferior del panel **Instrumentos** hay botones que permiten:
 
 - Añadir un nuevo instrumento, como se describe en la sección [Crear instrumento](create_instrument.md).
 - Añadir un nuevo índice, como se describe en la sección [Índice](index.md).

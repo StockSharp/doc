@@ -12,34 +12,34 @@ Para cada instrumento, pode especificar as seguintes propriedades de importaçã
 
 ![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
 
-**Import (auto)**
+**Importação (automática)**
 
-**Settings**
+**Definições**
 
-- **Data type** - tipo dos dados importados. 
-- **Filename** - caminho completo para o ficheiro. 
-- **Data directory** - diretório de dados. 
-- **File mask** - máscara de ficheiro utilizada ao analisar o diretório. Por exemplo, candles\*.csv. 
-- **Subdirectories** - incluir subdiretórios. 
-- **Column separator** - separador de colunas. A tabulação é indicada por TAB. 
-- **Indent from the beginning** - o número de linhas a ignorar desde o início do ficheiro (se contiverem metainformação). 
-- **Time zone** - fuso horário. 
-- **Interval** - a frequência de atualização dos dados. 
-- **Extended information** - guardar campos importados alargados no armazenamento de informação alargada.
-- **Duplicates** - se instrumentos duplicados devem ser atualizados caso já existam. 
-- **Ignore without ID** - ignorar instrumentos sem identificador. 
+- **Tipo de dados** - tipo dos dados importados.
+- **Nome do ficheiro** - caminho completo para o ficheiro.
+- **Diretório de dados** - diretório de dados.
+- **Máscara de ficheiro** - máscara de ficheiro utilizada ao analisar o diretório. Por exemplo, candles\*.csv.
+- **Subdiretórios** - incluir subdiretórios.
+- **Separador de colunas** - separador de colunas. A tabulação é indicada por TAB.
+- **Recuo desde o início** - o número de linhas a ignorar desde o início do ficheiro (se contiverem metainformação).
+- **Fuso horário** - fuso horário.
+- **Intervalo** - a frequência de atualização dos dados.
+- **Informação alargada** - guardar campos importados alargados no armazenamento de informação alargada.
+- **Duplicados** - se instrumentos duplicados devem ser atualizados caso já existam.
+- **Ignorar sem ID** - ignorar instrumentos sem identificador.
 
-**General**
+**Geral**
 
-- **Header** - Converter. 
-- **Working hours** - configuração do horário de funcionamento da board. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** - o intervalo de funcionamento. 
-- **Data directory** - diretório de dados, de onde serão recebidos os dados para conversão. 
-- **Format** - o formato dos dados convertidos: BIN\/CSV. 
-- **Max. errors** - o número máximo de erros; ao atingi-lo, a tarefa será parada. Por predefinição, 0 - o número de erros é ignorado. 
-- **Dependency** - uma tarefa que deve ser executada antes de iniciar a atual. 
+- **Cabeçalho** - Converter.
+- **Horário de trabalho** - configuração do horário de funcionamento da board. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Intervalo de operação** - o intervalo de funcionamento.
+- **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.
+- **Formato** - o formato dos dados convertidos: BIN\/CSV.
+- **Máx. erros** - o número máximo de erros; ao atingi-lo, a tarefa será parada. Por predefinição, 0 - o número de erros é ignorado.
+- **Dependência** - uma tarefa que deve ser executada antes de iniciar a atual.
 
-**Logging**
+**Registo**
 
-- **Identifier** - o identificador. 
-- **Logging level** - o nível de registo. 
+- **Identificador** - o identificador.
+- **Nível de registo** - o nível de registo.

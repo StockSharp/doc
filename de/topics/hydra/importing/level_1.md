@@ -6,7 +6,7 @@ Um Level-1-Daten zu importieren, wählen Sie im Hauptmenü der Anwendung **Impor
 
 ## Importprozess.
 
-1. **Import settings.**.
+1. **Importeinstellungen**.
 
    Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.

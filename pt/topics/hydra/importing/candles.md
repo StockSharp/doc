@@ -6,23 +6,23 @@ Para importar velas, selecione o item **Import \=\> Candles** no menu principal 
 
 ## Processo de importação de velas
 
-1. **Common.**
-   - **Data type** - tipo dos dados importados.
-   - **Filename** - caminho completo para o ficheiro CSV.
-   - **Data directory** - pasta onde serão guardados os ficheiros finais [S#](../../api.md).
-   - **File mask** - máscara de ficheiro usada ao analisar o diretório. Por exemplo, candle \_\*.csv.
-   - **Column separator** - separador de colunas. A tabulação é indicada por TAB.
-   - **Indent from the beginning** - número de linhas desde o início do ficheiro a ignorar (se contiverem metainformação).
-   - **Time zone** - fuso horário.
-   - **Interval** - frequência de atualização dos dados.
+1. **Comum**
+   - **Tipo de dados** - tipo dos dados importados.
+   - **Nome do ficheiro** - caminho completo para o ficheiro CSV.
+   - **Diretório de dados** - pasta onde serão guardados os ficheiros finais [S#](../../api.md).
+   - **Máscara de ficheiro** - máscara de ficheiro usada ao analisar o diretório. Por exemplo, candle \_\*.csv.
+   - **Separador de colunas** - separador de colunas. A tabulação é indicada por TAB.
+   - **Recuo desde o início** - número de linhas desde o início do ficheiro a ignorar (se contiverem metainformação).
+   - **Fuso horário** - fuso horário.
+   - **Intervalo** - frequência de atualização dos dados.
 
-   **Instruments**
-   - **Extended information** - guardar os campos importados adicionais no armazenamento de informação adicional
-   - **Duplicates** - indica se os instrumentos duplicados serão atualizados caso já existam.
+   **Instrumentos**
+   - **Informação alargada** - guardar os campos importados adicionais no armazenamento de informação adicional
+   - **Duplicados** - indica se os instrumentos duplicados serão atualizados caso já existam.
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
    - **S# field** - valor do campo S#. ( **Security, Board**, etc.).
    - **Associations** - corresponder o valor da coluna no ficheiro ao tipo StockSharp (se necessário).
-   - **Format** - formato dos dados. Normalmente usado ao importar valores de data e hora (consulte [Trades](ticks.md)).
+   - **Formato** - formato dos dados. Normalmente usado ao importar valores de data e hora (consulte [Trades](ticks.md)).
    - **Use** - indica se os dados devem ser usados durante a importação.
    - **Field order** - sequência em que estão dispostas as colunas de propriedades do item importado.
 
@@ -30,7 +30,7 @@ Para importar velas, selecione o item **Import \=\> Candles** no menu principal 
 
      ```none
      {SecurityId.SecurityCode},{SecurityId.BoardCode},{OpenTime:yyyyMMdd},{OpenTime:default:HH:mm:ss},{OpenPrice},{HighPrice},{LowPrice},{ClosePrice},{TotalVolume}
-     	  				
+
      ```
 
      Então a seguinte definição corresponderá a esse modelo:![hydra import prop candles](../../../images/hydra_import_prop_candles.png)

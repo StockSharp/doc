@@ -6,7 +6,7 @@
 
 ## インポート プロセス。
 
-1. **Import settings.**.
+1. **インポート設定**.
 
    [ローソク足](candles.md) のインポートを参照してください。
 2. [S#](../../api.md) フィールドのインポート パラメーターを設定します。
@@ -18,12 +18,12 @@
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{PriceStep};{SecurityType};{VolumeStep}
-     	  				
+
      ```
 
      ここで、{SecurityId.SecurityCode} と {SecurityId.BoardCode} の値は、それぞれ **Security** と **Board** の値に対応します。したがって、**Field order** フィールドでは、それぞれ 0 と 1 の値を割り当てます。
    - {PriceStep} フィールドについては、**S# field** ウィンドウから **Nominal** フィールドを選択し、値 2 を割り当てます。
-   - {SecurityType} フィールドについては、**S# field** ウィンドウから **Type** フィールド、つまり銘柄タイプ（株式、通貨、先物など）を選択します。値 3 を割り当てます。
+   - {SecurityType} フィールドについては、**S# field** ウィンドウから **種類** フィールド、つまり銘柄タイプ（株式、通貨、先物など）を選択します。値 3 を割り当てます。
    - {VolumeStep} フィールドについては、**S# field** ウィンドウから **Min volume (base)** フィールド、つまり基本または最小銘柄数量を選択します。値 4 を割り当てます
    - フィールド設定ウィンドウは次のようになります:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 

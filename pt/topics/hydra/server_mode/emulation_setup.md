@@ -6,9 +6,9 @@ No modo de servidor, o programa permite ativar o modo de emulação.
 
 No modo de emulação, o programa [Hydra](../../hydra.md) permite executar as seguintes funções:
 
-- O programa permite configurar as chaves para ligar à fonte e trabalhar simultaneamente com uma ligação em diferentes programas ([Designer](../../designer.md), [Terminal](../../terminal.md)). 
+- O programa permite configurar as chaves para ligar à fonte e trabalhar simultaneamente com uma ligação em diferentes programas ([Designer](../../designer.md), [Terminal](../../terminal.md)).
 - Se a fonte de dados de mercado permitir descarregar dados históricos, estes podem ser utilizados simultaneamente para testes.
-- Se a fonte permitir receber dados em tempo real, então o modo de emulação permite emular o modo de negociação. Neste modo, os dados sobre ações do utilizador (registo de ordens, transações) são transferidos diretamente para o Hydra, enquanto as ações são registadas separadamente para cada programa. Por exemplo, ao registar uma ordem no Terminal, as alterações nela serão visíveis apenas para ele e, no Designer, não serão registadas. Isto evita conflitos entre dois programas executados sobre a mesma ligação. 
+- Se a fonte permitir receber dados em tempo real, então o modo de emulação permite emular o modo de negociação. Neste modo, os dados sobre ações do utilizador (registo de ordens, transações) são transferidos diretamente para o Hydra, enquanto as ações são registadas separadamente para cada programa. Por exemplo, ao registar uma ordem no Terminal, as alterações nela serão visíveis apenas para ele e, no Designer, não serão registadas. Isto evita conflitos entre dois programas executados sobre a mesma ligação.
 - IMPORTANTE\! As transações realizadas em modo de emulação, a negociação e as operações sobre elas são emuladas em tempo real; quando o modo está desligado, as ações serão executadas na negociação real.
 
 Este modo é utilizado ao [testar estratégias](../../shell/user_interface/emulation.md).
@@ -27,14 +27,14 @@ Este modo é utilizado ao [testar estratégias](../../shell/user_interface/emula
 - **Trade identifier** - o número com o qual o emulador irá gerar identificadores para transações.
 - **Transaction** - o número com o qual o emulador irá gerar identificadores para transações de ordens.
 - **Spread size** - o tamanho do spread em passos de preço. É utilizado para determinar o spread ao gerar o livro de ordens a partir de transações tick.
-- **Order book depth** - profundidade máxima do livro de ordens gerado por ticks 
+- **Order book depth** - profundidade máxima do livro de ordens gerado por ticks
 - **Number of volume steps** - o número de passos de volume pelos quais a ordem é maior do que a transação tick. É utilizado em testes com transações tick.
 - **Portfolio interval** - intervalo para recalcular dados sobre carteiras. Se o intervalo for 0, não é efetuado qualquer recálculo.
 - **Adjust time** - ajustar a hora de ordens e transações para a hora da bolsa.
-- **Time zone** - informações sobre o fuso horário onde a bolsa está localizada
+- **Fuso horário** - informações sobre o fuso horário onde a bolsa está localizada
 - **Price shift** - um deslocamento de preço a partir da última transação, que determina os limites dos preços máximo e mínimo para a sessão seguinte
 - **Add additional volume** - adicionar volume adicional ao livro de ordens ao registar ordens com grande volume.
 - **Trading session state** - verificação do estado de negociação.
-- **Money** - verificar o saldo monetário 
-- **Short** - a capacidade de abrir posições curtas. 
+- **Money** - verificar o saldo monetário
+- **Short** - a capacidade de abrir posições curtas.
 - **Storage** - armazenamento.

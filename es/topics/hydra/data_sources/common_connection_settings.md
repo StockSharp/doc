@@ -6,15 +6,15 @@ Propiedades de conexión comunes a todas las fuentes.
 
 **Conexión**
 
-- **Connection** - configuración de conexión.
-- **Title** - nombre de la tarea.
-- **Start date (ticks)** - fecha desde la que se debe iniciar la descarga de datos.
-- **Work from** - hora de inicio.
-- **Work until** - hora de finalización.
-- **Interval of work** - intervalo de trabajo.
-- **Data directory** - directorio con los datos donde se guardarán los archivos finales en formato StockSharp.
-- **Format** - formato de datos: BIN\/CSV.
-- **Max. errors** - número máximo de errores tras el cual la tarea se detendrá. El valor predeterminado es 0, lo que significa ignorar la cantidad de errores.
-- **News** - descargar noticias.
-- **Dependency** - tarea que debe completarse antes de iniciar la actual.
-- **Update securities** - actualizar instrumentos al conectarse.
+- **Conexión** - configuración de conexión.
+- **Título** - nombre de la tarea.
+- **Fecha inicial (ticks)** - fecha desde la que se debe iniciar la descarga de datos.
+- **Trabajar desde** - hora de inicio.
+- **Trabajar hasta** - hora de finalización.
+- **Intervalo de trabajo** - intervalo de trabajo.
+- **Directorio de datos** - directorio con los datos donde se guardarán los archivos finales en formato StockSharp.
+- **Formato** - formato de datos: BIN\/CSV.
+- **Máx. errores** - número máximo de errores tras el cual la tarea se detendrá. El valor predeterminado es 0, lo que significa ignorar la cantidad de errores.
+- **Noticias** - descargar noticias.
+- **Dependencia** - tarea que debe completarse antes de iniciar la actual.
+- **Actualizar instrumentos** - actualizar instrumentos al conectarse.

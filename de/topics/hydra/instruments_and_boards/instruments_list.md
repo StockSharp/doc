@@ -1,10 +1,10 @@
 # Instrumentenliste
 
-Wenn Sie auf der Registerkarte General auf die Schaltfläche **Instruments** klicken, erscheint das Panel **Instruments**. Das Panel **Instruments** zeigt alle verfügbaren Instrumente sowie deren Marktdaten an.
+Wenn Sie auf der Registerkarte General auf die Schaltfläche **Instrumente** klicken, erscheint das Panel **Instrumente**. Das Panel **Instrumente** zeigt alle verfügbaren Instrumente sowie deren Marktdaten an.
 
 ![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
 
-Am unteren Rand des Panels **Instruments** befinden sich Schaltflächen, mit denen Sie Folgendes ausführen können:
+Am unteren Rand des Panels **Instrumente** befinden sich Schaltflächen, mit denen Sie Folgendes ausführen können:
 
 - Ein neues Instrument hinzufügen, wie im Abschnitt [Instrument erstellen](create_instrument.md) beschrieben.
 - Einen neuen Index hinzufügen, wie im Abschnitt [Index](index.md) beschrieben.

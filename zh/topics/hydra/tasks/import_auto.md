@@ -12,34 +12,34 @@
 
 ![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
 
-**Import (auto)**
+**导入（自动）**
 
-**Settings**
+**设置**
 
-- **Data type** — 导入的数据类型。
-- **Filename** — 文件的完整路径。
-- **Data directory** — 数据目录。
-- **File mask** — 扫描目录时使用的文件掩码，例如 `candles\*.csv`。
-- **Subdirectories** — 是否包含子目录。
-- **Column separator** — 列分隔符。制表符使用 TAB 表示。
-- **Indent from the beginning** — 从文件开头跳过的行数，用于忽略包含元信息的行。
-- **Time zone** — 时区。
-- **Interval** — 数据更新频率。
-- **Extended information** — 将导入的扩展字段保存到扩展信息存储中。
-- **Duplicates** — 如果重复的交易品种已存在，是否对其进行更新。
-- **Ignore without ID** — 忽略没有标识符的交易品种。
+- **数据类型** — 导入的数据类型。
+- **文件名** — 文件的完整路径。
+- **数据目录** — 数据目录。
+- **文件掩码** — 扫描目录时使用的文件掩码，例如 `candles\*.csv`。
+- **子目录** — 是否包含子目录。
+- **列分隔符** — 列分隔符。制表符使用 TAB 表示。
+- **从文件开头跳过** — 从文件开头跳过的行数，用于忽略包含元信息的行。
+- **时区** — 时区。
+- **间隔** — 数据更新频率。
+- **扩展信息** — 将导入的扩展字段保存到扩展信息存储中。
+- **重复项** — 如果重复的交易品种已存在，是否对其进行更新。
+- **忽略无 ID 项** — 忽略没有标识符的交易品种。
 
-**General**
+**常规**
 
-- **Header** — Converter。
-- **Working hours** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
-- **Interval of operation** — 任务的运行间隔。
-- **Data directory** — 用于接收待转换数据的数据目录。
-- **Format** — 转换后的数据格式：BIN\/CSV。
-- **Max. errors** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
-- **Dependency** — 启动当前任务前必须完成的任务。
+- **标题** — Converter。
+- **工作时间** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **操作间隔** — 任务的运行间隔。
+- **数据目录** — 用于接收待转换数据的数据目录。
+- **格式** — 转换后的数据格式：BIN\/CSV。
+- **最大错误数** — 任务停止前允许出现的最大错误数。默认值为 0，表示忽略错误数量。
+- **依赖任务** — 启动当前任务前必须完成的任务。
 
-**Logging**
+**日志**
 
-- **Identifier** — 标识符。
-- **Logging level** — 日志记录级别。
+- **标识符** — 标识符。
+- **日志级别** — 日志记录级别。

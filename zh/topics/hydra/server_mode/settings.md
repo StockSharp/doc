@@ -10,11 +10,11 @@
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
-然后单击 **Settings** 按钮，打开服务器模式设置窗口。
+然后单击 **设置** 按钮，打开服务器模式设置窗口。
 
 ![hydra server](../../../images/hydra_server.png)
 
-**Hydra Server**
+**Hydra 服务器**
 
 - **FIX server** \- 将 [Hydra](../../hydra.md) 切换到服务器模式，通过 FIX 协议分发实时交易数据和历史数据。
 

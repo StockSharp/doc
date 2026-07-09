@@ -6,7 +6,7 @@
 
 ## K线生成过程
 
-1. 在 **General** 选项卡中单击 **Candles** 按钮，打开以下窗口：
+1. 在 **常规** 选项卡中单击 **Candles** 按钮，打开以下窗口：
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 

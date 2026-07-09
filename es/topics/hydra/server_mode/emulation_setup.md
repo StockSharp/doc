@@ -31,7 +31,7 @@ Este modo se utiliza al [probar estrategias](../../shell/user_interface/emulatio
 - **Number of volume steps** - número de pasos de volumen por los que la orden es mayor que la operación tick. Se usa en pruebas sobre operaciones tick.
 - **Portfolio interval** - intervalo para recalcular datos de carteras. Si el intervalo es 0, no se realiza recálculo.
 - **Adjust time** - ajustar la hora de órdenes y operaciones a la hora de la bolsa.
-- **Time zone** - información sobre la zona horaria donde se encuentra la bolsa.
+- **Zona horaria** - información sobre la zona horaria donde se encuentra la bolsa.
 - **Price shift** - desplazamiento de precio respecto a la última operación, que determina los límites de precios máximo y mínimo para la siguiente sesión.
 - **Add additional volume** - añadir volumen adicional al libro de órdenes al registrar órdenes con gran volumen.
 - **Trading session state** - comprobación del estado de negociación.

@@ -1,4 +1,4 @@
-# Backup
+# Sicherung
 
 [S#](../../api.md) stellt Funktionen zum Sichern heruntergeladener Daten im Cloud-Speicher [Amazon Web Services (AWS)](https://aws.amazon.com/s3/) bereit.
 

@@ -18,12 +18,12 @@
 
      ```none
      {SecurityId.SecurityCode};{SecurityId.BoardCode};{PriceStep};{SecurityType};{VolumeStep}
-     	  				
+
      ```
 
      其中，{SecurityId.SecurityCode} 和 {SecurityId.BoardCode} 分别对应 **Security** 和 **Board**。因此，在 **Field order** 字段中分别为其分配序号 0 和 1。
    - 对于 {PriceStep} 字段，在 **S# field** 窗口中选择 **Nominal**，并将其序号设为 2。
-   - 对于 {SecurityType} 字段，在 **S# field** 窗口中选择表示交易品种类型（股票、货币、期货等）的 **Type**，并将其序号设为 3。
+   - 对于 {SecurityType} 字段，在 **S# field** 窗口中选择表示交易品种类型（股票、货币、期货等）的 **类型**，并将其序号设为 3。
    - 对于 {VolumeStep} 字段，在 **S# field** 窗口中选择表示基础或最小交易数量的 **Min volume (base)**，并将其序号设为 4。
    - 字段设置窗口将如下所示：![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 
