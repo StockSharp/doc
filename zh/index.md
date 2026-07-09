@@ -79,7 +79,7 @@ Shell 提供了一个现成的图形化框架，可根据您的需求快速定�
 - [Shell](topics/shell.md) - 带源代码的现成策略图形化框架。
 - [MATLAB](topics/matlab.md) - MATLAB 与交易系统的集成。通过 MATLAB 脚本进行交易。
 
-[Download](https://stocksharp.com/products/download/)
+[下载](https://stocksharp.com/products/download/)
 
 ## 推荐内容
 

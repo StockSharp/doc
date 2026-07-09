@@ -1,4 +1,4 @@
-# Board-Editor
+# Börsenplatz-Editor
 
 Siehe
 

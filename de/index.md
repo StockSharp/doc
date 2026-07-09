@@ -79,7 +79,7 @@ Die Shell bietet ein fertiges grafisches Framework, das schnell an Ihre Bedürfn
 - [Shell](topics/shell.md) - Fertiges grafisches Framework für Strategien mit Quellcode.
 - [MATLAB](topics/matlab.md) - Integration von MATLAB mit Handelssystemen. Handeln aus MATLAB-Skripten heraus.
 
-[Download](https://stocksharp.com/products/download/)
+[Herunterladen](https://stocksharp.com/products/download/)
 
 ## Empfohlene Inhalte
 

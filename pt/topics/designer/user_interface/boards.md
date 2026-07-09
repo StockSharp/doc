@@ -1,4 +1,4 @@
-# Boards de negociação
+# Mercados de negociação
 
 No painel **Editor de mercados**, pode criar **Mercados** e **Bolsas**, e ver ou personalizar os existentes.
 

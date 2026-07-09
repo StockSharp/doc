@@ -4,7 +4,7 @@
 
 Für die Arbeit mit StockSharp benötigen Sie:
 
-- **.NET 10** (SDK und Runtime) - [Download](https://dotnet.microsoft.com/download/dotnet/10.0)
+- **.NET 10** (SDK und Runtime) - [Herunterladen](https://dotnet.microsoft.com/download/dotnet/10.0)
 - **IDE** - Visual Studio 2022+, JetBrains Rider oder VS Code
 - **NuGet** - Paketmanager (in Visual Studio und Rider integriert)
 

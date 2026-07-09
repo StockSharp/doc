@@ -79,7 +79,7 @@ A [API](topics/api.md) é uma biblioteca C# para desenvolvimento profissional de
 - [Shell](topics/shell.md) - Estrutura gráfica pronta para estratégias com código-fonte.
 - [MATLAB](topics/matlab.md) - Integração do MATLAB com sistemas de negociação. Negocie a partir de scripts do MATLAB.
 
-[Download](https://stocksharp.com/products/download/)
+[Transferir](https://stocksharp.com/products/download/)
 
 ## Conteúdo Recomendado
 
