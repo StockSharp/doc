@@ -4,9 +4,9 @@ Quellen für erweiterte Informationen sind **CSV**-Dateien im Ordner `c:\\Users\
 
 Erweiterte Informationen können beliebige zusätzliche Angaben zu einem Instrument enthalten, zum Beispiel Land, Stadt, Board usw.
 
-Jede Quelle erweiterter Informationen (CSV-Datei) enthaelt eine Liste von Instrumenten und die verfügbaren Eigenschaften. Für jede Quelle sind die erweiterten Informationen eindeutig.
+Jede Quelle erweiterter Informationen (CSV-Datei) enthält eine Liste von Instrumenten und die verfügbaren Eigenschaften. Für jede Quelle sind die erweiterten Informationen eindeutig.
 
-Wenn die Quelle keine erweiterten Informationen für ein Instrument enthaelt, bleiben die entsprechenden Spalten in der Instrumentenliste leer.
+Wenn die Quelle keine erweiterten Informationen für ein Instrument enthält, bleiben die entsprechenden Spalten in der Instrumentenliste leer.
 
 Um die erforderlichen erweiterten Informationen auszuwählen, gehen Sie wie folgt vor:
 

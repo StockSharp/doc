@@ -4,7 +4,7 @@ Wählen Sie im erscheinenden Fenster die Instrumente und das erforderliche Zeiti
 
 ![hydra export level1](../../../../images/hydra_export_level1.png)
 
-Sie können ausserdem auswählen, welche Arten von Aenderungen exportiert werden sollen. Dies erfolgt über die unten gezeigte Dropdown-Liste:
+Sie können ausserdem auswählen, welche Arten von Änderungen exportiert werden sollen. Dies erfolgt über die unten gezeigte Dropdown-Liste:
 
 ![hydra export security change selected](../../../../images/hydra_export_security_change_selected.png)
 

@@ -16,7 +16,7 @@ Für die Erstellung gehen Sie wie folgt vor:
    WICHTIG\! Wenn **Order Book, Order Log, Level 1** als Quelle für die Kerzenerstellung ausgewählt sind, erscheint eine Auswahl zusaetzlicher Parameter.![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
 3. Nachdem Sie die Parameter festgelegt haben, klicken Sie auf die Schaltfläche ![hydra candles](../../../images/hydra_candles.png).![hydra LEVEL 1 build depth data result](../../../images/hydra_level1_build_depth_data_result.png)
 
-Zum Erstellen von **Kerzen** ist auch die Option verfügbar, Kerzen mit groesserem Time Frame aus Kerzen mit kleinerem Time Frame zu erstellen.
+Zum Erstellen von **Kerzen** ist auch die Option verfügbar, Kerzen mit größerem Time Frame aus Kerzen mit kleinerem Time Frame zu erstellen.
 
 Wenn zum Beispiel Kerzen mit einem Time Frame von 1 Minute vorhanden sind, können Sie daraus Kerzen mit einem Time Frame von 5 Minuten erstellen, indem Sie in der Zeile **Erstellen aus** den entsprechenden Typ auswählen.
 

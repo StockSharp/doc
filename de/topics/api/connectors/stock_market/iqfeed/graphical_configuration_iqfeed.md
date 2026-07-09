@@ -9,7 +9,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Lookup server** - Adresse zum Abrufen historischer Daten.
 - **Admin server** - Adresse zum Abrufen von Servicedaten.
 - **Derivatives** - Adresse zum Abrufen von Derivatedaten.
-- **Data for Level1** - Alle Datentypen für Level1, die uebertragen werden müssen.
+- **Data for Level1** - Alle Datentypen für Level1, die übertragen werden müssen.
 - **Data type** - Wertpapiertypen, für die Daten empfangen werden müssen.
 - **Load securities** - Legt fest, ob der gesamte Satz von Wertpapieren aus dem IQFeed-Websitearchiv geladen werden soll.
 - **File with securities** - Pfad zur Datei mit der von der Website heruntergeladenen IQFeed-Wertpapierliste. Wenn ein Pfad angegeben ist, erfolgt kein zweiter Download von der Website, und nur die lokale Kopie wird geparst.

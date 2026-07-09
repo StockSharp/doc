@@ -4,7 +4,7 @@ Der Benutzer kann einen **Custom type** von Kerzen auswählen und selbst festleg
 
 ![hydra type candle 00 00](../../../images/hydra_type_candle_00_00.png)
 
-Betrachten wir ein Beispiel für eine solche Erstellung. Die Boerse **Bitmex** bietet keine Moeglichkeit, Kerzen mit einem Time Frame von 10 Minuten zu empfangen.
+Betrachten wir ein Beispiel für eine solche Erstellung. Die Börse **Bitmex** bietet keine Möglichkeit, Kerzen mit einem Time Frame von 10 Minuten zu empfangen.
 
 ![hydra type candle 00 01](../../../images/hydra_type_candle_00_01.png)
 

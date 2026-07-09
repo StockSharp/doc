@@ -1,6 +1,6 @@
 # Adapterinitialisierung AlphaVantage
 
-Der folgende Code zeigt, wie der [AlphaVantageMessageAdapter](xref:StockSharp.AlphaVantage.AlphaVantageMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [AlphaVantageMessageAdapter](xref:StockSharp.AlphaVantage.AlphaVantageMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

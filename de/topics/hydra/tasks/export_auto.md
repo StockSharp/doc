@@ -26,7 +26,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 - **Verbindung** - fertige Verbindungszeichenfolge.
 
 > [!TIP]
-> Sie können die Verbindung zur Datenbank mit der Schaltfläche **Prüfen** pruefen.
+> Sie können die Verbindung zur Datenbank mit der Schaltfläche **Prüfen** prüfen.
 
 **Allgemein**
 
@@ -41,7 +41,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 **CSV**
 
 - **Vorlagen** - Vorlagen für jeden Typ exportierter Daten.
-- **Kopfzeile** - Kopfzeile in der ersten Zeile. Wenn eine leere Zeichenfolge uebergeben wird, wird dem Dateianfang keine Kopfzeile hinzugefügt.
+- **Kopfzeile** - Kopfzeile in der ersten Zeile. Wenn eine leere Zeichenfolge übergeben wird, wird dem Dateianfang keine Kopfzeile hinzugefügt.
 - **Namensformat** - Format für das Schreiben des exportierten Dateinamens.
 
 **Export (automatisch)**

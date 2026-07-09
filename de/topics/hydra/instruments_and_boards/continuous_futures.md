@@ -13,10 +13,10 @@ Als Beispiel betrachten wir das Zusammenfassen von E-mini S&P 500 Futures.
    Danach erscheint das folgende Fenster:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Um einen fortlaufenden Future zu erstellen, müssen Sie einen Namen angeben und Kontrakte hinzufügen.
 
-   Es gibt zwei Moeglichkeiten, Kontrakte hinzuzufügen.
+   Es gibt zwei Möglichkeiten, Kontrakte hinzuzufügen.
    - Manuell durch Klicken auf die Schaltfläche ![hydra add](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - Wenn Sie die ersten beiden Buchstaben des Kontrakts als Namen festlegen, zum Beispiel RI, und auf die Schaltfläche **Auto** klicken, werden alle in der Datenbank gefundenen Instrumente hinzugefügt.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
-3. Wählen Sie die erforderlichen Kontrakte aus und legen Sie deren Uebergangsdaten fest. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
+3. Wählen Sie die erforderlichen Kontrakte aus und legen Sie deren Übergangsdaten fest. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. Weisen Sie anschließend die Instrumentkennung **ES\_continuous@CME** zu und klicken Sie auf die Schaltfläche **OK**. Danach wird ein neues Instrument erstellt.
 5. Klicken Sie danach auf der Registerkarte **Allgemein** auf die Schaltfläche [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das resultierende Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus** den Wert **Zusammengesetztes Element** und klicken Sie dann auf die Schaltfläche ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 

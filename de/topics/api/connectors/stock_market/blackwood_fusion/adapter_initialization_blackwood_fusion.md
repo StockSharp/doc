@@ -1,6 +1,6 @@
 # Adapterinitialisierung Blackwood (Fusion)
 
-Der folgende Code zeigt, wie der [BlackwoodMessageAdapter](xref:StockSharp.Blackwood.BlackwoodMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [BlackwoodMessageAdapter](xref:StockSharp.Blackwood.BlackwoodMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

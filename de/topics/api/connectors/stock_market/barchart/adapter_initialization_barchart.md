@@ -1,6 +1,6 @@
 # Adapterinitialisierung BarChart
 
-Der folgende Code zeigt, wie der [BarChartMessageAdapter](xref:StockSharp.BarChart.BarChartMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [BarChartMessageAdapter](xref:StockSharp.BarChart.BarChartMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

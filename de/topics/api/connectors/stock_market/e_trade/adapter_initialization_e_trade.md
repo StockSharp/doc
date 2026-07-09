@@ -1,6 +1,6 @@
 # Adapterinitialisierung E\*TRADE
 
-Der folgende Code zeigt, wie der [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [ETradeMessageAdapter](xref:StockSharp.ETrade.ETradeMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

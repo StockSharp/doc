@@ -1,6 +1,6 @@
 # Adapterinitialisierung OpenECry
 
-Der folgende Code zeigt, wie der [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

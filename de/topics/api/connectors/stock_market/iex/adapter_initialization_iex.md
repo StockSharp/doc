@@ -1,6 +1,6 @@
 # Adapterinitialisierung IEX
 
-Der folgende Code zeigt, wie der [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

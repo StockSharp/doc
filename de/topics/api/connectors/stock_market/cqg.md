@@ -1,6 +1,6 @@
 # CQG
 
-**CQG** - Handelsplattform für den Handel an internationalen Boersen wie CME, CBOT, NYMEX, ICE und EUREX.
+**CQG** - Handelsplattform für den Handel an internationalen Börsen wie CME, CBOT, NYMEX, ICE und EUREX.
 
 Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Konnektoren](../../connectors.md) zu lesen.
 

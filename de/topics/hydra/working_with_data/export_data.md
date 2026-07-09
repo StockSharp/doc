@@ -26,6 +26,6 @@ Sie können eine Kopfzeile mit den Eigenschaftsnamen hinzufügen. In diesem Fall
 
 ![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
 
-Wenn Sie in ein Format exportieren müssen, das Doppelpunkte verwendet, sollten Sie das Schluesselwort default wie im obigen Beispiel angeben: **{OpenTime:default:HH:mm:ss}**.
+Wenn Sie in ein Format exportieren müssen, das Doppelpunkte verwendet, sollten Sie das Schlüsselwort default wie im obigen Beispiel angeben: **{OpenTime:default:HH:mm:ss}**.
 
 **Sehen Sie sich das [Video-Tutorial](../videos/saving_format.md) an**

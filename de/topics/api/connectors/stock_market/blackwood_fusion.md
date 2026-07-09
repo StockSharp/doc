@@ -1,6 +1,6 @@
 # Blackwood (Fusion)
 
-**Fusion (Blackwood)** - Plattformen für den Handel mit Aktien an Boersen wie NYSE, NASDAQ, AMEX usw.
+**Fusion (Blackwood)** - Plattformen für den Handel mit Aktien an Börsen wie NYSE, NASDAQ, AMEX usw.
 
 Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Konnektoren](../../connectors.md) zu lesen.
 

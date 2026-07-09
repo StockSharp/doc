@@ -6,9 +6,9 @@ Im Servermodus ermöglicht das Programm, den Emulationsmodus zu aktivieren.
 
 Im Emulationsmodus bietet das Programm [Hydra](../../hydra.md) die folgenden Funktionen:
 
-- Das Programm ermöglicht die Konfiguration der Schluessel für die Verbindung zur Quelle und gleichzeitig die Arbeit mit einer Verbindung in verschiedenen Programmen ([Designer](../../designer.md), [Terminal](../../terminal.md)).
+- Das Programm ermöglicht die Konfiguration der Schlüssel für die Verbindung zur Quelle und gleichzeitig die Arbeit mit einer Verbindung in verschiedenen Programmen ([Designer](../../designer.md), [Terminal](../../terminal.md)).
 - Wenn die Marktdatenquelle das Herunterladen historischer Daten ermöglicht, können diese gleichzeitig zum Testen verwendet werden.
-- Wenn die Quelle Daten in Echtzeit empfangen kann, ermöglicht der Emulationsmodus die Nachbildung des Handelsmodus. In diesem Modus werden Daten über Benutzeraktionen (Orderregistrierung, Trades) direkt an Hydra uebertragen, während Aktionen für jedes Programm separat aufgezeichnet werden. Wenn zum Beispiel in Terminal eine Order registriert wird, sind Aenderungen daran nur dort sichtbar und werden in Designer nicht erfasst. Dadurch werden Konflikte zwischen zwei Programmen vermieden, die über dieselbe Verbindung laufen.
+- Wenn die Quelle Daten in Echtzeit empfangen kann, ermöglicht der Emulationsmodus die Nachbildung des Handelsmodus. In diesem Modus werden Daten über Benutzeraktionen (Orderregistrierung, Trades) direkt an Hydra übertragen, während Aktionen für jedes Programm separat aufgezeichnet werden. Wenn zum Beispiel in Terminal eine Order registriert wird, sind Änderungen daran nur dort sichtbar und werden in Designer nicht erfasst. Dadurch werden Konflikte zwischen zwei Programmen vermieden, die über dieselbe Verbindung laufen.
 - WICHTIG\! Trades, die im Emulationsmodus ausgeführt werden, sowie Handel und Operationen daran werden in Echtzeit emuliert. Wenn der Modus ausgeschaltet ist, werden Aktionen im realen Handel ausgeführt.
 
 Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulation.md) verwendet.

@@ -1,6 +1,6 @@
 # Adapterinitialisierung Alpaca
 
-Der folgende Code zeigt, wie der [AlpacaMessageAdapter](xref:StockSharp.Alpaca.AlpacaMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [AlpacaMessageAdapter](xref:StockSharp.Alpaca.AlpacaMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();

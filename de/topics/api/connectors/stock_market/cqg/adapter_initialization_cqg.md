@@ -1,6 +1,6 @@
 # Adapterinitialisierung CQG
 
-Der folgende Code zeigt, wie der [CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) und der [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben werden.
+Der folgende Code zeigt, wie der [CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) und der [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben werden.
 
 1. **CQG COM**, Verbindung über den lokalen **CQG Integrated Client**:
 

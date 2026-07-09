@@ -1,6 +1,6 @@
 # Kerzenerzeugung
 
-[Hydra](../../hydra.md) ermöglicht die Erzeugung verschiedener Kerzentypen auf Basis heruntergeladener Trades. Diese können anschliessend in die Formate [Excel](https://en.wikipedia.org/wiki/Excel), XML, SQL, BIN, JSON oder TXT exportiert werden.
+[Hydra](../../hydra.md) ermöglicht die Erzeugung verschiedener Kerzentypen auf Basis heruntergeladener Trades. Diese können anschließend in die Formate [Excel](https://en.wikipedia.org/wiki/Excel), XML, SQL, BIN, JSON oder TXT exportiert werden.
 
 Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische Analyse verwenden (WealthLab, AmiBroker usw.).
 
@@ -12,7 +12,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
 2. Im geoeffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
 
-   - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstuetzt).
+   - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstützt).
    - Geben Sie die erforderlichen Parameter für den ausgewählten Kerzentyp an:
      - Für [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - **Timeframe** auswählen.
      - Für [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - **Volume** angeben.
@@ -58,7 +58,7 @@ Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Si
 - **Ticks** - Kerzen aus Tick-Daten erstellen.
 - **Order Books** - Kerzen aus Order-Book-Daten erstellen.
 - **Level1** - Kerzen aus Level1-Daten erstellen.
-- **Smaller Timeframe** - Kerzen mit groesserem Timeframe aus Kerzen mit kleinerem Timeframe erstellen.
+- **Smaller Timeframe** - Kerzen mit größerem Timeframe aus Kerzen mit kleinerem Timeframe erstellen.
 
 ### Beispiele verschiedener Erstellungsoptionen:
 

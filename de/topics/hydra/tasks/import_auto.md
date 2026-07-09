@@ -22,9 +22,9 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candles\*.csv.
 - **Unterverzeichnisse** - Unterverzeichnisse einschliessen.
 - **Spaltentrennzeichen** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
-- **Einzug vom Anfang** - Anzahl der Zeilen, die am Anfang der Datei uebersprungen werden sollen (wenn sie Metainformationen enthalten).
+- **Einzug vom Anfang** - Anzahl der Zeilen, die am Anfang der Datei übersprungen werden sollen (wenn sie Metainformationen enthalten).
 - **Zeitzone** - Zeitzone.
-- **Intervall** - Haeufigkeit der Datenaktualisierung.
+- **Intervall** - Häufigkeit der Datenaktualisierung.
 - **Erweiterte Informationen** - erweiterte importierte Felder im Speicher für erweiterte Informationen speichern.
 - **Duplikate** - ob doppelte Instrumente aktualisiert werden sollen, wenn sie bereits existieren.
 - **Ohne ID ignorieren** - Instrumente ohne Kennung ignorieren.

@@ -8,7 +8,7 @@ Prüfen Sie vor dem Erstellen des **Index**, welche Marktdaten verfügbar sind. 
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
-Als Beispiel betrachten wir den Instrumentenverhaeltnis-Index AAPL@NYSE\/GOOG@NYSE.
+Als Beispiel betrachten wir den Instrumentenverhältnis-Index AAPL@NYSE\/GOOG@NYSE.
 
 1. Der erste Schritt besteht darin, den **Index** zu erstellen. Klicken Sie auf der Registerkarte **Alle Instrumente** auf **Instrument erstellen \=\> Index** ![hydra index sec 00](../../../images/hydra_index_sec_00.png).
 2. Das folgende Fenster erscheint: ![hydra index sec](../../../images/hydra_index_sec.png)

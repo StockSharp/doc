@@ -1,6 +1,6 @@
 # Verbindung über das FIX-Protokoll
 
-[Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) moeglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Einstellungen](settings.md) beschrieben.
+[Hydra](../../hydra.md) kann im Servermodus verwendet werden. Dadurch ist eine Remote-Verbindung zu [Hydra](../../hydra.md) möglich, um auf Daten im Speicher zuzugreifen. Das Aktivieren des Servermodus von [Hydra](../../hydra.md) ist im Abschnitt [Einstellungen](settings.md) beschrieben.
 
 Für die Verbindung über das [FIX-Protokoll](../../api/connectors/common/fix_protocol.md) müssen Sie eine Fix-Verbindung erstellen und konfigurieren ([FIX-Adapterinitialisierung](../../api/connectors/common/fix_protocol/adapter_initialization_fix.md)).
 
@@ -151,7 +151,7 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Pruefen, ob die Kerze zu unserer Subscription gehoert
+	// Prüfen, ob die Kerze zu unserer Subscription gehoert
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 

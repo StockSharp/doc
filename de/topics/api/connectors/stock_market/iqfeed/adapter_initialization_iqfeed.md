@@ -1,6 +1,6 @@
 # Adapterinitialisierung IQFeed
 
-Der folgende Code zeigt, wie der [IQFeedMessageAdapter](xref:StockSharp.IQFeed.IQFeedMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) uebergeben wird.
+Der folgende Code zeigt, wie der [IQFeedMessageAdapter](xref:StockSharp.IQFeed.IQFeedMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.
 
 ```cs
 Connector Connector = new Connector();
