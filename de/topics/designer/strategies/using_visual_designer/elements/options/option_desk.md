@@ -2,7 +2,7 @@
 
 ![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
 
-Der Würfel wird verwendet, um das Option desk anzuzeigen.
+Der Würfel wird verwendet, um den Optionsdesk anzuzeigen.
 
 Um das **Optionsarbeitsplatz** anzuzeigen, müssen Sie die grafische Komponente **Optionsarbeitsplatz** hinzufügen.
 

@@ -1,6 +1,6 @@
 # Smile-Volatilität
 
-Die Komponente **Smile volatility** ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
+Die Komponente **Smile-Volatilität** ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
 
 Um den Volatilitäts-Smile anzuzeigen, müssen Sie den Basiswert und die Optionen auswählen, auf deren Preisen der Volatilitäts-Smile aufgebaut wird.
 

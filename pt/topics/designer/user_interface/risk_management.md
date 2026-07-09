@@ -2,7 +2,7 @@
 
 Nos painéis [Testing Properties](components/backtesting_settings.md) e [Live Trading Properties](components/live_settings.md), pode definir as definições de controlo de risco.
 
-Na janela Risks, é necessário selecionar uma **Regra de risco**, configurar a condição de acionamento da **Regra de risco** e a ação (Close positions, Stop trading, Cancel orders) que será executada quando ocorrer a condição da **Regra de risco**.
+Na janela Riscos, é necessário selecionar uma **Regra de risco**, configurar a condição de acionamento da **Regra de risco** e a ação (Fechar posições, Parar negociação, Cancelar ordens) que será executada quando ocorrer a condição da **Regra de risco**.
 
 É possível usar várias regras de risco do mesmo tipo com ações diferentes. Por exemplo, na captura de ecrã abaixo, se o volume da ordem for 20, são executadas as ações de cancelar ordens e parar a negociação.
 

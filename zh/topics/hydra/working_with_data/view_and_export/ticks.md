@@ -4,6 +4,6 @@
 
 ![hydra export trades](../../../../images/hydra_export_trades.png)
 
-要加载非系统成交，请勾选 **Non-system**。
+要加载非系统成交，请勾选 **非系统**。
 
 可以将接收到的数据[导出为所需格式](../export_data.md)。

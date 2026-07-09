@@ -2,7 +2,7 @@
 
 En los paneles [Testing Properties](components/backtesting_settings.md) y [Live Trading Properties](components/live_settings.md), puede establecer la configuración de control de riesgos.
 
-En la ventana Risks, es necesario seleccionar una **Regla de riesgo**, configurar la condición de activación para la **Regla de riesgo** y la acción (cerrar posiciones, detener trading, cancelar órdenes) que se ejecutará cuando ocurra la condición de la **Regla de riesgo**.
+En la ventana Riesgos, es necesario seleccionar una **Regla de riesgo**, configurar la condición de activación para la **Regla de riesgo** y la acción (cerrar posiciones, detener trading, cancelar órdenes) que se ejecutará cuando ocurra la condición de la **Regla de riesgo**.
 
 Es posible usar varias reglas de riesgo del mismo tipo con distintas acciones. Por ejemplo, en la captura siguiente, si el volumen de la orden es 20, se ejecutan las acciones de cancelar órdenes y detener el trading.
 

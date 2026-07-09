@@ -2,7 +2,7 @@
 
 In den Panels [Testing Properties](components/backtesting_settings.md) und [Live Trading Properties](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
 
-Im Fenster Risks müssen Sie eine **Risikoregel** auswählen, die Auslosebedingung für die **Risikoregel** konfigurieren und die Aktion (Positionen schliessen, Handel stoppen, Orders stornieren) festlegen, die ausgeführt wird, wenn die Bedingung der **Risikoregel** eintritt.
+Im Fenster Risiken müssen Sie eine **Risikoregel** auswählen, die Auslösebedingung für die **Risikoregel** konfigurieren und die Aktion (Positionen schließen, Handel stoppen, Aufträge stornieren) festlegen, die ausgeführt wird, wenn die Bedingung der **Risikoregel** eintritt.
 
 Es ist möglich, mehrere Risikoregeln desselben Typs mit unterschiedlichen Aktionen zu verwenden. Im folgenden Screenshot werden beispielsweise bei einem Ordervolumen von 20 die Aktionen zum Stornieren von Orders und zum Stoppen des Handels ausgeführt.
 

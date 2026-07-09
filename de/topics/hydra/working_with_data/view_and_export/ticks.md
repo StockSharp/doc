@@ -4,6 +4,6 @@ Wählen Sie im angezeigten Fenster die Instrumente und das gewünschte Zeitinter
 
 ![hydra export trades](../../../../images/hydra_export_trades.png)
 
-Um nicht systembezogene Trades zu laden, aktivieren Sie das Kontrollkästchen **Non-system**.
+Um nicht systembezogene Ausführungen zu laden, aktivieren Sie das Kontrollkästchen **Nicht systembezogen**.
 
 Die empfangenen Werte können [in das erforderliche Format exportiert](../export_data.md) werden.

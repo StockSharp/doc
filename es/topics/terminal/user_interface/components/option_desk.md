@@ -1,8 +1,8 @@
 # Mesa de opciones
 
-El componente **Option desk** es una tabla con los principales parámetros de las opciones seleccionadas para el instrumento subyacente.
+El componente **Mesa de opciones** es una tabla con los principales parámetros de las opciones seleccionadas para el instrumento subyacente.
 
-Para mostrar el option desk, debe seleccionar el activo subyacente y las opciones necesarias.
+Para mostrar la mesa de opciones, debe seleccionar el activo subyacente y las opciones necesarias.
 
 Además, puede especificar un filtro para la fecha exacta de vencimiento de las opciones y filtros para strikes mínimos\/máximos.
 

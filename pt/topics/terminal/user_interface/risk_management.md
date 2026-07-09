@@ -1,8 +1,8 @@
 # Gestão de risco
 
-No painel **Risk**, pode definir as definições de controlo de risco.
+No painel **Risco**, pode definir as definições de controlo de risco.
 
-Na parte inferior do painel, tem de selecionar a **Risk-rule**, configurar a condição de acionamento da **Risk-rule** e a ação (Close positions, Stop trading, Cancel orders), que será executada quando a condição da **Risk-rule** for acionada.
+Na parte inferior do painel, tem de selecionar a **Regra de risco**, configurar a condição de acionamento da **Regra de risco** e a ação (Fechar posições, Parar negociação, Cancelar ordens), que será executada quando a condição da **Regra de risco** for acionada.
 
 ![Terminal Risk Rule](../../../images/terminal_risk_rule.png)
 

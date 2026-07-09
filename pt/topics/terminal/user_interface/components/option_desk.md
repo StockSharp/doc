@@ -1,8 +1,8 @@
 # Painel de opções
 
-O componente **Option desk** é uma tabela dos principais parâmetros das opções selecionadas para o instrumento subjacente.
+O componente **Painel de opções** é uma tabela dos principais parâmetros das opções selecionadas para o instrumento subjacente.
 
-Para apresentar o option desk, tem de selecionar o ativo subjacente e as opções necessárias.
+Para apresentar o painel de opções, tem de selecionar o ativo subjacente e as opções necessárias.
 
 Além disso, pode especificar um filtro para a data de expiração exata das opções e filtros para strikes mínimos\/máximos.
 
@@ -10,5 +10,5 @@ Além disso, pode especificar um filtro para a data de expiração exata das op�
 
 ## Conteúdo recomendado
 
-[Smile de volatilidade](smile_volatility.md)
+[Sorriso de volatilidade](smile_volatility.md)
 

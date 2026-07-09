@@ -1,8 +1,8 @@
 # Optionsdesk
 
-Die Komponente **Option desk** ist eine Tabelle mit den wichtigsten Parametern der ausgewählten Optionen für den Basiswert.
+Die Komponente **Optionsdesk** ist eine Tabelle mit den wichtigsten Parametern der ausgewählten Optionen für den Basiswert.
 
-Um das Option desk anzuzeigen, müssen Sie den Basiswert und die benötigten Optionen auswählen.
+Um den Optionsdesk anzuzeigen, müssen Sie den Basiswert und die benötigten Optionen auswählen.
 
 Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
 
