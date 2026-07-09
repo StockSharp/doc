@@ -2,7 +2,7 @@
 
 A seguir descreve-se como criar e configurar uma conta AWS.
 
-1. Para criar uma conta AWS, aceda à página [Create an AWS Account](https://aws.amazon.com/ru/) e clique no botão **Create Account**.![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
+1. Para criar uma conta AWS, aceda à página [Criar uma conta AWS](https://aws.amazon.com/ru/) e clique no botão **Criar conta**.![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
 2. Em seguida, preencha os formulários que o serviço Web apresentar.
 3. Preencha os dados do seu cartão; isto é feito para verificar a sua identidade.![Aws 3 Paytest](../../../../images/aws3_paytest.png)
 4. Num dos passos de registo, ser-lhe-á pedido que introduza um número de telefone e inicie uma chamada para o seu telefone através do botão **Call Me Now**.![Aws3 CallMeNow](../../../../images/aws3_callmenow.png)

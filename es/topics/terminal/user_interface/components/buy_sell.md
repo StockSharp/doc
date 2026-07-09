@@ -1,6 +1,6 @@
 # Comprar/Vender
 
-El componente **Buy\/Sell** es un grupo de paneles que muestra la mejor información de precio para los instrumentos seleccionados y también permite comprar o vender el volumen requerido.
+El componente **Comprar/Vender** es un grupo de paneles que muestra la mejor información de precio para los instrumentos seleccionados y también permite comprar o vender el volumen requerido.
 
 Para añadir un nuevo instrumento, haga clic en el botón ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png).
 

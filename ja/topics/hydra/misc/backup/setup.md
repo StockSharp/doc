@@ -2,7 +2,7 @@
 
 以下では、AWS アカウントの作成と設定方法について説明します。
 
-1. AWS アカウントを作成するには、[Create an AWS Account](https://aws.amazon.com/ru/) ページに移動し、**Create Account** ボタンをクリックします。![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
+1. AWS アカウントを作成するには、[AWS アカウントを作成](https://aws.amazon.com/ru/) ページに移動し、**アカウントを作成** ボタンをクリックします。![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
 2. 次に、Web サービスが提示するフォームに入力します。
 3. カード情報を入力します。これは本人確認のために行われます。![Aws 3 Paytest](../../../../images/aws3_paytest.png)
 4. 登録手順のいずれかで、電話番号を入力し、**Call Me Now** ボタンを使用して電話への通話を開始するよう求められます。![Aws3 CallMeNow](../../../../images/aws3_callmenow.png)

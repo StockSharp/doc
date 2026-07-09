@@ -2,7 +2,7 @@
 
 Im Folgenden wird beschrieben, wie Sie ein AWS-Konto erstellen und konfigurieren.
 
-1. Um ein AWS-Konto zu erstellen, gehen Sie zur Seite [Create an AWS Account](https://aws.amazon.com/ru/) und klicken auf die Schaltfläche **Create Account**.![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
+1. Um ein AWS-Konto zu erstellen, gehen Sie zur Seite [AWS-Konto erstellen](https://aws.amazon.com/ru/) und klicken auf die Schaltfläche **Konto erstellen**.![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
 2. Füllen Sie anschließend die Formulare aus, die der Webservice anbietet.
 3. Geben Sie Ihre Kartendaten ein. Dies dient der Überprüfung Ihrer Identität.![Aws 3 Paytest](../../../../images/aws3_paytest.png)
 4. In einem der Registrierungsschritte werden Sie aufgefordert, eine Telefonnummer einzugeben und über die Schaltfläche **Call Me Now** einen Anruf auf Ihr Telefon zu starten.![Aws3 CallMeNow](../../../../images/aws3_callmenow.png)

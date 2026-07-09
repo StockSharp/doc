@@ -1,4 +1,4 @@
-# Panel Buy\/Sell
+# Panel Comprar/Vender
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - Panel especial que permite registrar rápidamente una orden a los mejores precios. 
 
@@ -45,4 +45,3 @@ Para llenar el panel con datos, debe especificar la fuente de datos de mercado y
 		}
 	  				
 ```
-

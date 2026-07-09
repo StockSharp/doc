@@ -1,6 +1,6 @@
 # Órdenes condicionales
 
-El componente de órdenes **Conditional** es una tabla con órdenes que muestra información completa sobre todas las órdenes condicionales. Al hacer clic derecho sobre la orden, aparece un panel con el que puede registrar una nueva orden condicional, cancelar o cambiar la orden condicional seleccionada.
+El componente **Órdenes condicionales** es una tabla con órdenes que muestra información completa sobre todas las órdenes condicionales. Al hacer clic derecho sobre la orden, aparece un panel con el que puede registrar una nueva orden condicional, cancelar o cambiar la orden condicional seleccionada.
 
 ![Terminal Orders conditional panel 01](../../../../images/terminal_orders_conditional_panel_01.png)
 

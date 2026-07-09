@@ -1,4 +1,4 @@
-# Buy\/Sell パネル
+# 売買パネル
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - 最良価格ですばやく注文を登録できる専用パネルです。 
 

@@ -2,7 +2,7 @@
 
 下面介绍如何创建和配置 AWS 账户。
 
-1. 要创建 AWS 账户，请打开[创建 AWS 账户](https://aws.amazon.com/ru/)页面，然后单击 **Create Account** 按钮。![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
+1. 要创建 AWS 账户，请打开[创建 AWS 账户](https://aws.amazon.com/ru/)页面，然后单击 **创建账户** 按钮。![Aws3 CreateAccount](../../../../images/aws3_createaccount.png)
 2. 接下来，填写 Web 服务提供的表单。
 3. 填写银行卡信息，此步骤用于验证身份。![Aws 3 Paytest](../../../../images/aws3_paytest.png)
 4. 在注册过程的某个步骤中，系统会要求输入电话号码，并使用 **Call Me Now** 按钮呼叫该号码。![Aws3 CallMeNow](../../../../images/aws3_callmenow.png)
