@@ -26,6 +26,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 {
 	private const string DefaultLanguage = "en";
 	private const int MaxReportedErrors = 200;
+	private const string RussianSpecificPlaceholderMarker = "available only in the Russian version";
 
 	private static readonly string _repoRoot = FindRepoRoot();
 
@@ -94,6 +95,22 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"\u00D1\u0087", // Ñ‡
 		"\u00D1\u0088", // Ñˆ
 		"\u00D1\u008F", // Ñ
+	];
+
+	private static readonly string[] _knownEnglishUiPhrases =
+	[
+		"Add button",
+		"Add Designer strategy",
+		"Apply changes",
+		"Cloud panel",
+		"Connect button",
+		"More info",
+		"Open debug launch profiles UI",
+		"Remote Manager",
+		"Remote mode",
+		"Run anyway",
+		"send command",
+		"Solution Explorer",
 	];
 
 	private static readonly HashSet<string> _allowedInvariantHeadingTexts = new(StringComparer.Ordinal)
@@ -385,6 +402,62 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void ContentFileAndDirectoryNamesUseLowercase()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var path in Directory.EnumerateFileSystemEntries(langRoot, "*", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var relative = Path.GetRelativePath(langRoot, path).Replace('\\', '/');
+				if (!relative.Any(char.IsUpper))
+					continue;
+
+				errors.Add($"{RelativeToRepo(path)}: content file and directory names must be lowercase.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void RussianSpecificTopicsStayPlaceholdersOutsideRussian()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var languages = GetContentLanguages()
+			.Where(lang => !lang.Equals("ru", StringComparison.OrdinalIgnoreCase))
+			.ToArray();
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			if (!IsRussianSpecificPlaceholder(ReadAllText(defaultFile)))
+				continue;
+
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+
+			foreach (var lang in languages)
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+				{
+					errors.Add($"{lang}/{relative}: Russian-specific placeholder page is missing.");
+					continue;
+				}
+
+				ValidateRussianSpecificPlaceholderPage(file, ReadAllText(file), errors);
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void MarkdownLinksAndLocalAssetsResolve()
 	{
 		var errors = new List<string>();
@@ -556,6 +629,33 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				ValidateNoMergeConflictMarkers(rel, markdown, errors);
 				ValidateFencedCodeBlocks(rel, markdown, errors);
 				ValidateMarkdownParses(rel, markdown, errors);
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownDoesNotContainKnownEnglishUiPhrases()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in _knownEnglishUiPhrases)
+					{
+						if (!text.Contains(phrase, StringComparison.OrdinalIgnoreCase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English UI phrase '{phrase}'.");
+					}
+				}
 			}
 		}
 
@@ -1346,6 +1446,52 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		return fullPath.Equals(fullRoot, StringComparison.OrdinalIgnoreCase)
 			|| fullPath.StartsWith(fullRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)
 			|| fullPath.StartsWith(fullRoot + Path.AltDirectorySeparatorChar, StringComparison.OrdinalIgnoreCase);
+	}
+
+	private static bool IsRussianSpecificPlaceholder(string markdown)
+		=> markdown.Contains(RussianSpecificPlaceholderMarker, StringComparison.OrdinalIgnoreCase);
+
+	private static void ValidateRussianSpecificPlaceholderPage(string file, string markdown, List<string> errors)
+	{
+		var rel = RelativeToRepo(file);
+		var nonEmptyLines = markdown.Split(["\r\n", "\n"], StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+
+		if (nonEmptyLines.Length is < 2 or > 3)
+			errors.Add($"{rel}: Russian-specific non-Russian page must stay a short placeholder, not full localized connector/source documentation.");
+
+		if (nonEmptyLines.Length > 0 && !nonEmptyLines[0].StartsWith("# ", StringComparison.Ordinal))
+			errors.Add($"{rel}: Russian-specific placeholder must start with an H1 heading.");
+
+		if (Regex.IsMatch(markdown, @"```|~~~", RegexOptions.CultureInvariant))
+			errors.Add($"{rel}: Russian-specific placeholder must not contain code blocks.");
+
+		if (Regex.IsMatch(markdown, @"!\[[^\]]*\]\(|\[[^\]]+\]\([^)]+\)", RegexOptions.CultureInvariant))
+			errors.Add($"{rel}: Russian-specific placeholder must not contain links or images.");
+
+		if (Regex.IsMatch(markdown, @"^\s*(?:[-*+]\s+|\d+\.\s+|\|)", RegexOptions.Multiline | RegexOptions.CultureInvariant))
+			errors.Add($"{rel}: Russian-specific placeholder must not contain lists or tables.");
+	}
+
+	private static IEnumerable<(string Text, int Line)> EnumerateUserVisibleMarkdownLines(string markdown)
+	{
+		var line = 1;
+		var inFence = false;
+		using var reader = new StringReader(markdown);
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var trimmed = text.Trim();
+			if (Regex.IsMatch(trimmed, @"^(```|~~~)", RegexOptions.CultureInvariant))
+			{
+				inFence = !inFence;
+				continue;
+			}
+
+			if (inFence || trimmed.Length == 0 || trimmed.StartsWith("![", StringComparison.Ordinal))
+				continue;
+
+			yield return (text, line);
+		}
 	}
 
 	private static IEnumerable<string> EnumerateContentTextFiles()
