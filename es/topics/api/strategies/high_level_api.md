@@ -231,7 +231,7 @@ IChartTradeElement trades = DrawOwnTrades(area);
 // Configuración del elemento
 trades.BuyColor = System.Drawing.Color.Green;   // Color para operaciones de compra
 trades.SellColor = System.Drawing.Color.Red;    // Color para operaciones de venta
-trades.FullTitle = "My Strategy Trades";        // Título del elemento
+trades.FullTitle = "Operaciones de mi estrategia"; // Título del elemento
 ```
 
 Este método configura automáticamente la visualización de todas las operaciones ejecutadas por la estrategia. Las operaciones se muestran en el gráfico como marcadores en los puntos donde fueron ejecutadas, teniendo en cuenta el lado de la operación (compra/venta).

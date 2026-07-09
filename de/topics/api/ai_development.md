@@ -36,12 +36,12 @@ Erstellen Sie eine Projektregel-Datei im Repository-Root:
 ```markdown
 # Projektregeln
 
-- Using StockSharp 5.x API
-- Target framework: .NET 10
-- Strategies inherit from Strategy
-- Connectors implement MessageAdapter
-- All subscriptions via Connector.Subscribe()
-- Logging via this.AddInfoLog() / this.AddErrorLog()
+- StockSharp 5.x API verwenden
+- Zielframework: .NET 10
+- Strategien erben von Strategy
+- Connectors implementieren MessageAdapter
+- Alle Abonnements über Connector.Subscribe()
+- Protokollierung über this.AddInfoLog() / this.AddErrorLog()
 ```
 
 ### 3. Iterativer Ansatz

@@ -231,7 +231,7 @@ IChartTradeElement trades = DrawOwnTrades(area);
 // 要素設定
 trades.BuyColor = System.Drawing.Color.Green;   // 買い取引用の色
 trades.SellColor = System.Drawing.Color.Red;    // 売り取引用の色
-trades.FullTitle = "My Strategy Trades";        // 要素タイトル
+trades.FullTitle = "自分の戦略の約定";          // 要素タイトル
 ```
 
 このメソッドは、ストラテジーによって実行されたすべての取引の表示を自動的に設定します。取引は、売買方向（buy/sell）を考慮し、約定した位置にマーカーとしてチャート上に表示されます。

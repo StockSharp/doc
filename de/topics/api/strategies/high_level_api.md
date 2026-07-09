@@ -231,7 +231,7 @@ IChartTradeElement trades = DrawOwnTrades(area);
 // Elementkonfiguration
 trades.BuyColor = System.Drawing.Color.Green;   // Farbe für Kauftrades
 trades.SellColor = System.Drawing.Color.Red;    // Farbe für Verkaufstrades
-trades.FullTitle = "My Strategy Trades";        // Elementtitel
+trades.FullTitle = "Meine Strategie-Trades";    // Elementtitel
 ```
 
 Diese Methode richtet automatisch die Anzeige aller von der Strategie ausgeführten Trades ein. Trades werden im Chart als Marker an den Punkten angezeigt, an denen sie ausgeführt wurden, unter Berücksichtigung der Trade-Seite (Kauf/Verkauf).

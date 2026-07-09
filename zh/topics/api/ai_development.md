@@ -36,12 +36,12 @@ AI 获得的上下文越充分，结果就越准确。请明确说明：
 ```markdown
 # 项目规则
 
-- Using StockSharp 5.x API
-- Target framework: .NET 10
-- Strategies inherit from Strategy
-- Connectors implement MessageAdapter
-- All subscriptions via Connector.Subscribe()
-- Logging via this.AddInfoLog() / this.AddErrorLog()
+- 使用 StockSharp 5.x API
+- 目标框架：.NET 10
+- 策略继承 Strategy
+- 连接器实现 MessageAdapter
+- 所有订阅都通过 Connector.Subscribe()
+- 日志记录通过 this.AddInfoLog() / this.AddErrorLog()
 ```
 
 ### 3. 采用迭代方式

@@ -36,12 +36,12 @@ Cree un archivo de reglas del proyecto en la raíz del repositorio:
 ```markdown
 # Reglas del proyecto
 
-- Using StockSharp 5.x API
-- Target framework: .NET 10
-- Strategies inherit from Strategy
-- Connectors implement MessageAdapter
-- All subscriptions via Connector.Subscribe()
-- Logging via this.AddInfoLog() / this.AddErrorLog()
+- Usar la API StockSharp 5.x
+- Framework de destino: .NET 10
+- Las estrategias heredan de Strategy
+- Los conectores implementan MessageAdapter
+- Todas las suscripciones mediante Connector.Subscribe()
+- Registro mediante this.AddInfoLog() / this.AddErrorLog()
 ```
 
 ### 3. Enfoque iterativo
