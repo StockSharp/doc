@@ -4,8 +4,8 @@ Para todos los productos [S\\#](../../../../api.md), la configuración gráfica 
 
 ![API GUI Settings DXtrade](../../../../../images/api_gui_settings_dxtrade.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
+- **clave** - Clave.
+- **secreto** - Secreto.
 - **Demo** - Conexión al trading demo.
 
 ## Ver también

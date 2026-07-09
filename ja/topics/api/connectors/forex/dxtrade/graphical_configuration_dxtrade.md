@@ -4,8 +4,8 @@
 
 ![API GUI Settings DXtrade](../../../../../images/api_gui_settings_dxtrade.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Demo** - デモ取引への接続。
 
 ## 関連項目

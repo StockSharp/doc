@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bittrex](../../../../../images/api_gui_settings_bittrex.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
 - **Verbindungsprüfung** - Intervall der Serverprüfung zur Überwachung der aktiven Verbindung. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
 

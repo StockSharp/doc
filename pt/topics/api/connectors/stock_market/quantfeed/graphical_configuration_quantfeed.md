@@ -4,9 +4,9 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings QuantFEED](../../../../../images/api_gui_settings_quantfeed.png)
 
-- **Address** - Endereço do servidor.
-- **Login** - Login.
-- **Password** - Password.
+- **endereço** - Endereço do servidor.
+- **nome de utilizador** - Login.
+- **palavra-passe** - Password.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

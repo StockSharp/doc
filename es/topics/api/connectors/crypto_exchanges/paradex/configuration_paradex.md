@@ -4,7 +4,7 @@ Para trabajar con el conector, especifique sus credenciales API y la configuraci
 
 Configuración principal:
 
-- **Key** y **Secret**.
+- **clave** y **secreto**.
 - **Starknet account** y **Starknet key**.
 - **Section**: `Spot` o `Derivatives`.
 - **Enable spot**: habilita la sección spot cuando el soporte de la API está disponible.

@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
 
-- **Login** - Login.
-- **Password** - Password.
+- **usuario** - Login.
+- **contraseña** - Password.
 - **Datos de mercado** - Dirección del servidor de datos de mercado.
 - **History** - Dirección del servidor de datos históricos.
 - **Transactions** - Dirección del servidor de ejecución de transacciones.

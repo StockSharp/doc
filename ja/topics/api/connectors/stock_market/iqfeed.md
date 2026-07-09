@@ -24,7 +24,7 @@
 
 ![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
 
-開いた **IQ Connect Login** ウィンドウで、**iQFeed** サービスから受け取った **Login** と **Password** (または PIN) を入力します。これらの認証情報は、**iQFeed** Web サイトの Login と Password とは同じではありません。認証情報を入力した後、**Connect** をクリックします。
+開いた **IQ Connect Login** ウィンドウで、**iQFeed** サービスから受け取った **ログイン** と **パスワード** (または PIN) を入力します。これらの認証情報は、**iQFeed** Web サイトの Login と Password とは同じではありません。認証情報を入力した後、**Connect** をクリックします。
 
 データを受信するために、クライアントアプリケーションは異なるポートを介した 4 つの接続を使用します。 
 

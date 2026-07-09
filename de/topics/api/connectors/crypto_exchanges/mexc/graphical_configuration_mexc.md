@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings MEXC](../../../../../images/api_gui_settings_mexc.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimer Schlüssel.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Demo** - Demomodus.
 - **Einstellungen für die Wiederverbindung** - Parameter des Mechanismus zur Wiederverbindung mit dem Handelssystem ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md)).
 

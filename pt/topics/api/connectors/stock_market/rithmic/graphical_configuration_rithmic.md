@@ -4,25 +4,25 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Rithmic](../../../../../images/api_gui_settings_rithmic.png)
 
-- **Login** - Login.
-- **Password** - Password.
-- **Certificate** - Caminho para o ficheiro de certificado, necessário para ligar ao sistema Rithmic.
+- **nome de utilizador** - Login.
+- **palavra-passe** - Password.
+- **certificado** - Caminho para o ficheiro de certificado, necessário para ligar ao sistema Rithmic.
 - **File log** - Caminho para o ficheiro de registo.
 - **Server type** - Tipo de servidor.
 - **Point (admin)** - Ponto de ligação para funções administrativas (inicialização/desinicialização).
 - **Point (data)** - Ponto de ligação aos dados de mercado.
-- **Login (trans)** - Login adicional. Utilizado quando o envio de transações é efetuado para um servidor separado.
+- **nome de utilizador (transações)** - Login adicional. Utilizado quando o envio de transações é efetuado para um servidor separado.
 - **Point (transactions)** - Ponto de ligação ao sistema de execução de transações.
-- **Password (trans)** - Password adicional. Utilizada quando o envio de transações é efetuado para um servidor separado.
+- **palavra-passe (transações)** - Password adicional. Utilizada quando o envio de transações é efetuado para um servidor separado.
 - **Point (positions)** - Ponto de ligação para acesso a informações sobre carteiras e posições.
 - **Point (history)** - Ponto de ligação para acesso a dados históricos.
-- **Domain (address)** - Endereço do domínio.
-- **Domain (name)** - Nome do domínio.
+- **domínio (endereço)** - Endereço do domínio.
+- **domínio (nome)** - Nome do domínio.
 - **Licenses** - Endereço do servidor de licenças.
 - **Broker** - Endereço do corretor.
 - **Log (address)** - Endereço do logger.
 - **User name (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
-- **Password (hist)** - Password adicional. Password utilizada para autenticação com a history plant.
+- **palavra-passe (histórico)** - Password adicional. Password utilizada para autenticação com a history plant.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

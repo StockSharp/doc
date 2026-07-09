@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Kraken](../../../../../images/api_gui_settings_kraken.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
 - **Balance** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die erneute Verbindung](../../reconnection_settings.md))

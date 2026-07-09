@@ -4,13 +4,13 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
 
-- **Key** - chave.
-- **Secret** - segredo.
-- **Passphrase** - frase-passe.
+- **chave** - chave.
+- **segredo** - segredo.
+- **frase-passe** - frase-passe.
 - **Futures** - secção de futuros
 - **Spot** - secção spot
 - **Swap** - secção swap.
-- **Password** - password administrativa.
+- **palavra-passe** - password administrativa.
 - **Intervalo de verificação da ligação** - intervalo de verificação do servidor para controlar que a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - mecanismo para controlar as ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

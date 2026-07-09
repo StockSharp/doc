@@ -4,8 +4,8 @@
 
 ![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Sections** - 取引セクション。
 - **Demo** - デモ取引への接続。
 

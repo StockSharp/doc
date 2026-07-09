@@ -7,8 +7,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **chave** - Key.
+- **segredo** - Secret.
 - **User** - User
 - **Balance** - Intervalo de verificação do saldo. Necessário no caso de ações de depósito e levantamento.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por defeito é de 1 minuto.

@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Barchart](../../../../../images/api_gui_settings_barchart.png)
 
-- **Login** - Login.
-- **Password** - Password.
+- **nome de utilizador** - Login.
+- **palavra-passe** - Password.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para monitorizar as ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

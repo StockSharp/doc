@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings E TRADE](../../../../../images/api_gui_settings_e_trade.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
+- **clave** - Clave.
+- **secreto** - Secreto.
 - **Demo** - Conectarse al trading demo en lugar del servidor de trading real.
 - **Verification code** - Código de verificación recibido por el usuario en el navegador tras confirmar el permiso del programa para trabajar.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

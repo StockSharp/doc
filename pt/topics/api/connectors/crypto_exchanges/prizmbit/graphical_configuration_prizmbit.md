@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings PrizmBit](../../../../../images/api_gui_settings_prizmbit.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **chave** - Key.
+- **segredo** - Secret.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por defeito é de 1 minuto.
 - **Definições de religação** - Mecanismo de monitorização das ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

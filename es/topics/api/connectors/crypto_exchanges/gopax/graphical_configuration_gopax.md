@@ -7,10 +7,10 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Gopax](../../../../../images/api_gui_settings_gopax.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
+- **clave** - Clave.
+- **secreto** - Secreto.
 - **Balance** - Intervalo de comprobación del saldo. Necesario en caso de acciones de depósito y retiro.
-- **Domain (address)** - Dirección de dominio.
+- **dominio (dirección)** - Dirección de dominio.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

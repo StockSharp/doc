@@ -4,10 +4,10 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 Wichtige Felder:
 
-- **Key** - API-Schlüssel.
-- **Secret** - API-Secret.
-- **Clearing account** - Wert des Clearing-Kontos.
-- **Passphrase** - Wert der Passphrase.
+- **Schlüssel** - API-Schlüssel.
+- **Geheimnis** - API-Secret.
+- **Clearing-Konto** - Wert des Clearing-Kontos.
+- **Kennphrase** - Wert der Passphrase.
 - **Section** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Enable spot** - aktiviert den Spot-Bereich.
 - **Demo** - Modus der Demo-Umgebung.

@@ -4,9 +4,9 @@
 
 ![API GUI Settings CQG Continuum](../../../../../images/api_gui_settings_cqg_continuum.png)
 
-- **Login** - ログイン。
-- **Password** - パスワード。
-- **Address** - サーバーアドレス。
+- **ログイン** - ログイン。
+- **パスワード** - パスワード。
+- **アドレス** - サーバーアドレス。
 - **Software ID** - 一意のソフトウェア ID。
 - **ハートビート** - 接続が有効かどうかを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システムとの接続を追跡するための設定メカニズム。([再接続設定](../../reconnection_settings.md))

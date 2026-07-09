@@ -4,8 +4,8 @@
 
 ![API GUI 設定 HitBTC](../../../../../images/api_gui_settings_hitbtc.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバー確認間隔です。既定では 1 分です。
 - **再接続設定** - 取引システムへの接続を設定とともに追跡するメカニズムです。（[再接続設定](../../reconnection_settings.md)）
 

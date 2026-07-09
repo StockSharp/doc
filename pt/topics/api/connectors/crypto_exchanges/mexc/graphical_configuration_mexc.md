@@ -4,7 +4,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings MEXC](../../../../../images/api_gui_settings_mexc.png)
 
-- **Key** - chave.
-- **Secret** - segredo.
+- **chave** - chave.
+- **segredo** - segredo.
 - **Demo** - modo de demonstração.
 - **Definições de religação** - parâmetros do mecanismo de reconexão com o sistema de negociação ([Definições de reconexão](../../reconnection_settings.md)).

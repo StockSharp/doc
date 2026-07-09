@@ -7,9 +7,9 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings GDAX](../../../../../images/api_gui_settings_gdax.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
-- **Passphrase** - Passphrase.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
+- **Kennphrase** - Passphrase.
 - **Balance** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die erneute Verbindung](../../reconnection_settings.md))

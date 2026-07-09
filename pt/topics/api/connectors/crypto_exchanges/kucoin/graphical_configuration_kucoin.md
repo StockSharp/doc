@@ -4,9 +4,9 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Kucoin](../../../../../images/api_gui_settings_kucoin.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
-- **Passphrase** - Passphrase.
+- **chave** - Key.
+- **segredo** - Secret.
+- **frase-passe** - Passphrase.
 - **Demo** - ligar à negociação demo em vez do servidor de negociação real.
 - **Balance** - intervalo de verificação do saldo. Necessário em caso de ações de depósito e levantamento.
 - **Intervalo de verificação da ligação** - intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, igual a 1 minuto.

@@ -4,8 +4,8 @@
 
 主なフィールド:
 
-- **Key** - API キー。
-- **Secret** - API シークレット。
+- **キー** - API キー。
+- **シークレット** - API シークレット。
 - **Section** - 取引セクション（`Spot` または `Derivatives`）。
 - **Derivatives mode** - デリバティブのプロトコルファミリー。
 - **Demo** - デモ環境モード。

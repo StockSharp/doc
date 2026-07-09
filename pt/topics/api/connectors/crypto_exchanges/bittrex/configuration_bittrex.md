@@ -1,6 +1,6 @@
 # Configuração Bittrex
 
-Para trabalhar com um conector, é necessário gerar a **Key (API Key)** e o **Secret** na conta pessoal da bolsa e especificá-los nas configurações de conexão.
+Para trabalhar com um conector, é necessário gerar a **chave (API Key)** e o **segredo** na conta pessoal da bolsa e especificá-los nas configurações de conexão.
 
 > [!TIP]
-> considere prestar atenção que a **Key** e o **Secret** não são o **Login** e a **Password**. A **Key** e o **Secret** são gerados separadamente na sua conta pessoal. Você não precisa do **Login** e da **Password** para trabalhar com o conector e não precisa especificá-los em nenhum lugar.
+> considere prestar atenção que a **chave** e o **segredo** não são o **nome de utilizador** e a **palavra-passe**. A **chave** e o **segredo** são gerados separadamente na sua conta pessoal. Você não precisa do **nome de utilizador** e da **palavra-passe** para trabalhar com o conector e não precisa especificá-los em nenhum lugar.

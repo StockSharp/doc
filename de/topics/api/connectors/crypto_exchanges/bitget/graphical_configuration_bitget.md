@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimnis.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimnis.
 - **Sections** - Handelsbereiche.
 - **Demo** - Verbindung zum Demo-Handel.
 

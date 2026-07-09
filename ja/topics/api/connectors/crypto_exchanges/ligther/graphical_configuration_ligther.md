@@ -4,8 +4,8 @@
 
 主なフィールド:
 
-- **Key** - API キー。
-- **Secret** - API シークレット。
+- **キー** - API キー。
+- **シークレット** - API シークレット。
 - **Account index** - アカウント インデックス。
 - **API key index** - API キー インデックス。
 - **Section** - 取引セクション (`Spot` または `Derivatives`)。

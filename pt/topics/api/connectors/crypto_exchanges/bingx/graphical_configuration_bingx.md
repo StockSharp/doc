@@ -4,7 +4,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings BingX](../../../../../images/api_gui_settings_bingx.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
+- **chave** - Chave.
+- **segredo** - Segredo.
 - **Demo** - Modo de demonstração.
 - **Definições de religação** - Parâmetros do mecanismo de reconexão com o sistema de negociação ([Definições de reconexão](../../reconnection_settings.md)).

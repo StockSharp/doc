@@ -1,11 +1,11 @@
 # Configuração edgeX
 
-Para trabalhar com o conector, gere a **API Key** e o **Secret** na conta da bolsa e especifique-os nas definições de ligação.
+Para trabalhar com o conector, gere a **chave API** e o **segredo** na conta da bolsa e especifique-os nas definições de ligação.
 
 Definições principais:
 
-- **Key** e **Secret**.
-- **Clearing account** e **Passphrase**.
+- **chave** e **segredo**.
+- **conta de compensação** e **frase-passe**.
 - **Section**: `Spot` ou `Derivatives`.
 - **Enable spot**: ativa a secção spot quando o suporte da API estiver disponível.
 - Modo **Demo**.

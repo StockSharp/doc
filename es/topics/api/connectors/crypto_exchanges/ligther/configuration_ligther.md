@@ -1,10 +1,10 @@
 # Configuración Ligther
 
-Para trabajar con el conector, genere **API Key** y **Secret** en la cuenta del exchange y especifíquelos en la configuración de conexión.
+Para trabajar con el conector, genere **clave API** y **secreto** en la cuenta del exchange y especifíquelos en la configuración de conexión.
 
 Configuración principal:
 
-- **Key** y **Secret**.
+- **clave** y **secreto**.
 - **Account index** y **API key index**.
 - **Section**: `Spot` o `Derivatives`.
 - Modo **Demo**.

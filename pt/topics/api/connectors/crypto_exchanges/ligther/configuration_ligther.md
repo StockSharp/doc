@@ -1,10 +1,10 @@
 # Configuração Ligther
 
-Para trabalhar com o conector, gere a **API Key** e o **Secret** na conta da bolsa e especifique-os nas definições de ligação.
+Para trabalhar com o conector, gere a **chave API** e o **segredo** na conta da bolsa e especifique-os nas definições de ligação.
 
 Definições principais:
 
-- **Key** e **Secret**.
+- **chave** e **segredo**.
 - **Account index** e **API key index**.
 - **Section**: `Spot` ou `Derivatives`.
 - Modo **Demo**.

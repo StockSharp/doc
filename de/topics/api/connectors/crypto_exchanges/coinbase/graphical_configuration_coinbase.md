@@ -4,9 +4,9 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings Coinbase](../../../../../images/api_gui_settings_coinbase.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
-- **Passphrase** - Passphrase.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
+- **Kennphrase** - Passphrase.
 - **Balance** - Intervall der Guthabenprüfung. Erforderlich bei Einzahlungs- und Auszahlungsaktionen.
 - **Verbindungsprüfung** - Intervall der Serverprüfung zur Überwachung der aktiven Verbindung. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

@@ -50,7 +50,7 @@ await foreach (var secId in localDrive.GetAvailableSecuritiesAsync())
 
 ### 接続設定
 
-- **Address** -- リモートサーバーアドレス。既定値は `127.0.0.1:5002` です。
+- **アドレス** -- リモートサーバーアドレス。既定値は `127.0.0.1:5002` です。
 - **Credentials** -- 認証資格情報（Email と Password）。
 - **TargetCompId** -- 対象コンポーネント識別子。既定値は `"StockSharpHydraMD"` です。
 - **SecurityBatchSize** -- 銘柄を読み込む際のバッチサイズ。既定値は 1000 です。

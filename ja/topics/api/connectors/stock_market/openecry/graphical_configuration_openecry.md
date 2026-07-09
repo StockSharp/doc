@@ -4,9 +4,9 @@
 
 ![API GUI Settings OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
 
-- **Address** - サーバーアドレス。
-- **Login** - ログイン。
-- **Password** - パスワード。
+- **アドレス** - サーバーアドレス。
+- **ログイン** - ログイン。
+- **パスワード** - パスワード。
 - **Work schedule** - ターミナルへの接続に必要なモード。
 - **Reconnection** - 「ネイティブ」の再接続メカニズムを使用します。
 - **Logging level** - OpenECry API のログを使用します。

@@ -4,10 +4,10 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica se
 
 Campos principales:
 
-- **Key** - clave API.
-- **Secret** - secreto API.
-- **Clearing account** - valor de la cuenta de compensación.
-- **Passphrase** - valor de la frase de acceso.
+- **clave** - clave API.
+- **secreto** - secreto API.
+- **cuenta de compensación** - valor de la cuenta de compensación.
+- **frase de acceso** - valor de la frase de acceso.
 - **Section** - sección de trading (`Spot` o `Derivatives`).
 - **Enable spot** - habilita la sección spot.
 - **Demo** - modo de entorno demo.

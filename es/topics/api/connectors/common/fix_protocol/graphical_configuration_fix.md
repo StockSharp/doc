@@ -4,12 +4,12 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
-- **Address** - Dirección.
+- **dirección** - Dirección.
 - **Dialect** - Dialecto del protocolo FIX.
 - **Sender** - Identificador del remitente.
 - **Target** - Identificador del destinatario.
-- **Login** - Login.
-- **Password** - Contraseña.
+- **usuario** - Login.
+- **contraseña** - Contraseña.
 - **Portfolios** - Solicitar todos los portafolios al inicio.
 - **Instruments** - Solicitar todos los instrumentos al conectar.
 - **Encoding** - Codificación utilizada para la transferencia de datos.
@@ -21,8 +21,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Send timeout** - Tiempo de espera de envío de datos.
 - **Unknown transactions** - Procesar ejecuciones desconocidas generadas por un tercero.
 - **Protocol** - Protocolo SSL para establecer la conexión.
-- **Certificate** - Certificado SSL.
-- **Password** - Contraseña del certificado SSL.
+- **certificado** - Certificado SSL.
+- **contraseña** - Contraseña del certificado SSL.
 - **Revocation check** - Verificación de revocación del certificado.
 - **Check remote** - Verificar certificados remotos.
 - **Server name** - Nombre del servidor que utiliza la conexión SSL.

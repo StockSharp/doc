@@ -4,14 +4,14 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
-- **Address** - Endereço TWS.
+- **endereço** - Endereço TWS.
 - **Identifier** - ID único. Utilizado quando vários clientes estão ligados a um terminal ou gateway.
 - **Real-time** - Se devem ser utilizados dados em tempo real ou "congelados" no servidor da corretora.
 - **Logging level** - Nível de registo das mensagens do servidor.
 - **Market data fields** - Campos de dados de mercado que serão recebidos com as mensagens Level1 subscritas.
 - **Protocol** - Protocolo SSL para estabelecer a ligação
-- **Certificate** - Certificado SSL.
-- **Password** - Password do certificado SSL.
+- **certificado** - Certificado SSL.
+- **palavra-passe** - Password do certificado SSL.
 - **Check revocation** - Verificar a revogação do certificado.
 - **Validate remote** - Validar certificados remotos.
 - **Host name** - O nome do servidor que partilha a ligação SSL.

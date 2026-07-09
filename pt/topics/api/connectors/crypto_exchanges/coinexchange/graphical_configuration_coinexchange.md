@@ -7,8 +7,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings CoinExchange](../../../../../images/api_gui_settings_coinexchange.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
+- **chave** - Chave.
+- **segredo** - Segredo.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por defeito, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

@@ -7,9 +7,9 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings WEX (BTC-e)](../../../../../images/api_gui_settings_wex.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
-- **Domain (address)** - Endereço do domínio.
+- **chave** - Chave.
+- **segredo** - Segredo.
+- **domínio (endereço)** - Endereço do domínio.
 - **Balance** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e levantamento.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))

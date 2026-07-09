@@ -7,8 +7,8 @@
 
 ![API GUI Settings BW](../../../../../images/api_gui_settings_bw.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Balance** - 残高確認間隔。入金および出金操作の場合に必要です。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバー確認間隔。既定では 1 分です。
 - **再接続設定** - 取引システムとの接続を設定に基づいて追跡するメカニズム。([再接続設定](../../reconnection_settings.md))

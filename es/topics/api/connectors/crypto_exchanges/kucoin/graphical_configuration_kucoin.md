@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Kucoin](../../../../../images/api_gui_settings_kucoin.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Passphrase** - Frase de contraseña.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **frase de acceso** - Frase de contraseña.
 - **Demo** - Conectarse al trading demo en lugar del servidor de trading real.
 - **Balance** - Intervalo de comprobación del balance. Necesario en caso de operaciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

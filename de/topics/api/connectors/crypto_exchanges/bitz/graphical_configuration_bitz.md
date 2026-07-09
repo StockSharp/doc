@@ -7,11 +7,11 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bit-Z](../../../../../images/api_gui_settings_bit-z.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimschlüssel.
-- **Domain (address)** - Domänenadresse.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimschlüssel.
+- **Domain (Adresse)** - Domänenadresse.
 - **Balance** - Intervall der Guthabenprüfung. Erforderlich bei Ein- und Auszahlungsaktionen.
-- **Password** - Administratives Passwort.
+- **Passwort** - Administratives Passwort.
 - **Verbindungsprüfung** - Intervall der Serverprüfung zur Überwachung der Verbindung. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
 

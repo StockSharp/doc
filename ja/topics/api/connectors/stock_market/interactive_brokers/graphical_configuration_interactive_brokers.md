@@ -4,14 +4,14 @@
 
 ![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
-- **Address** - TWS アドレス。
+- **アドレス** - TWS アドレス。
 - **Identifier** - 一意の ID。複数のクライアントが 1 つのターミナルまたはゲートウェイに接続している場合に使用されます。
 - **Real-time** - リアルタイムデータを使用するか、ブローカーサーバー上の「フリーズ」データを使用するかを指定します。
 - **Logging level** - サーバーメッセージのログレベル。
 - **Market data fields** - 購読した Level1 メッセージで受信される市場データフィールド。
 - **Protocol** - 接続を確立するための SSL プロトコル
-- **Certificate** - SSL 証明書。
-- **Password** - SSL 証明書のパスワード。
+- **証明書** - SSL 証明書。
+- **パスワード** - SSL 証明書のパスワード。
 - **Check revocation** - 証明書の失効を確認します。
 - **Validate remote** - リモート証明書を検証します。
 - **Host name** - SSL 接続を共有するサーバーの名前。

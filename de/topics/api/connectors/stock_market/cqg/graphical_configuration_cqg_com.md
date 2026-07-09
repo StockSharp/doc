@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
 
-- **Login** - Login.
-- **Password** - Password.
+- **Benutzername** - Login.
+- **Passwort** - Password.
 - **Verbindungsprüfung** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

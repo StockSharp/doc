@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica é re
 
 Campos principais:
 
-- **Key** - chave da API.
-- **Secret** - segredo da API.
+- **chave** - chave da API.
+- **segredo** - segredo da API.
 - **Starknet account** - valor do cabeçalho da conta Starknet.
 - **Starknet key** - material da chave privada Starknet.
 - **Section** - secção de negociação (`Spot` ou `Derivatives`).

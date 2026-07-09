@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 Hauptfelder:
 
-- **Key** - API-Schlüssel.
-- **Secret** - API-Secret.
+- **Schlüssel** - API-Schlüssel.
+- **Geheimnis** - API-Secret.
 - **Account index** - Kontoindex.
 - **API key index** - API-Schlüsselindex.
 - **Section** - Handelssektion (`Spot` oder `Derivatives`).

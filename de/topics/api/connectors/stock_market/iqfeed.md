@@ -24,7 +24,7 @@ Klicken Sie im geoeffneten Fenster **IQLink Launcher** auf **Start IQLink**.
 
 ![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
 
-Geben Sie im geoeffneten Fenster **IQ Connect Login** das **Login** und **Password** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Login und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
+Geben Sie im geoeffneten Fenster **IQ Connect Login** den **Benutzernamen** und das **Passwort** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Benutzernamen und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
 
 Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen über verschiedene Ports:
 

@@ -2,9 +2,9 @@
 
 **CQG** コネクターを使用する方法は 2 つあります。
 
-1. **CQG COM**。接続元のコンピューターに直接インストールされているローカルの **CQG Integrated Client** 経由で接続します。**CQG Integrated Client** は [開発者のサイト](https://www.cqg.com/products/cqg-integrated-client) からダウンロードできます。**CQG Integrated Client** に接続するには、**Login** と **Password** を指定します。
+1. **CQG COM**。接続元のコンピューターに直接インストールされているローカルの **CQG Integrated Client** 経由で接続します。**CQG Integrated Client** は [開発者のサイト](https://www.cqg.com/products/cqg-integrated-client) からダウンロードできます。**CQG Integrated Client** に接続するには、**ログイン** と **パスワード** を指定します。
 
-2. **CQG Continuum**。サーバーへ直接接続します。**Login**、**Password**、および **server address** を指定します。
+2. **CQG Continuum**。サーバーへ直接接続します。**ログイン**、**パスワード**、および **サーバーアドレス** を指定します。
 
-**Login**、**Password**、および **server address** はブローカーから提供されます。API アクセスを取得するには、ブローカーへ問い合わせることを推奨します。
+**ログイン**、**パスワード**、および **サーバーアドレス** はブローカーから提供されます。API アクセスを取得するには、ブローカーへ問い合わせることを推奨します。
 

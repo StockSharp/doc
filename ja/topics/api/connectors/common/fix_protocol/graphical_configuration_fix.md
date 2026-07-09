@@ -4,12 +4,12 @@
 
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
-- **Address** - アドレス。
+- **アドレス** - アドレス。
 - **Dialect** - FIX プロトコルのダイアレクト。
 - **Sender** - 送信者識別子。
 - **Target** - ターゲット識別子。
-- **Login** - ログイン。
-- **Password** - パスワード。
+- **ログイン** - ログイン。
+- **パスワード** - パスワード。
 - **Portfolios** - 起動時にすべてのポートフォリオを要求します。
 - **Instruments** - 接続時にすべての銘柄を要求します。
 - **Encoding** - データ転送に使用されるエンコーディング。
@@ -21,8 +21,8 @@
 - **Send timeout** - データ送信タイムアウト。
 - **Unknown transactions** - サードパーティによって生成された不明な約定を処理します。
 - **Protocol** - 接続確立用の SSL プロトコル。
-- **Certificate** - SSL 証明書。
-- **Password** - SSL 証明書のパスワード。
+- **証明書** - SSL 証明書。
+- **パスワード** - SSL 証明書のパスワード。
 - **Revocation check** - 証明書失効チェック。
 - **Check remote** - リモート証明書を確認します。
 - **Server name** - SSL 接続を使用するサーバー名。

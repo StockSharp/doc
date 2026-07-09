@@ -7,8 +7,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Dialect** - Dialecto del protocolo FAST. Debe establecerse como primer parámetro. Después de seleccionarlo, el siguiente parámetro (**FAST settings**) contendrá las direcciones IP del dialecto especificado.
 - **FAST settings** - Direcciones IP y puertos del dialecto (seleccionado en el parámetro anterior). Puede usar la siguiente opción para cargar la configuración rápidamente.
 - **Settings file** - Opción rápida para cargar la configuración del dialecto desde un archivo de configuración de la bolsa.
-- **Login** - Inicio de sesión (usado para los servicios de recuperación TCP).
-- **Password** - Contraseña (usada para los servicios de recuperación TCP).
+- **usuario** - Inicio de sesión (usado para los servicios de recuperación TCP).
+- **contraseña** - Contraseña (usada para los servicios de recuperación TCP).
 
 ## Contenido recomendado
 

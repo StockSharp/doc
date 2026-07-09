@@ -4,7 +4,7 @@ Para trabalhar com o conector, especifique as suas credenciais de API e as defin
 
 Definições principais:
 
-- **Key** e **Secret**.
+- **chave** e **segredo**.
 - **Starknet account** e **Starknet key**.
 - **Section**: `Spot` ou `Derivatives`.
 - **Enable spot**: ativa a secção spot quando o suporte da API estiver disponível.

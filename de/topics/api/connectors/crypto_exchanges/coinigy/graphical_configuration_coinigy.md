@@ -4,9 +4,9 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Coinigy](../../../../../images/api_gui_settings_coinigy.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
-- **Password** - Administratives Passwort.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
+- **Passwort** - Administratives Passwort.
 - **Websocket** - WebSocket-ID.
 - **Balance** - Intervall zur Guthabenprüfung. Erforderlich bei Ein- und Auszahlungsvorgängen.
 - **Verbindungsprüfung** - Intervall der Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

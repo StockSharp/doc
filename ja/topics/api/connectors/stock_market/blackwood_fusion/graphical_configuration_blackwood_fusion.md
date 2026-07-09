@@ -4,8 +4,8 @@
 
 ![API GUI Settings Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
 
-- **Login** - ログイン。
-- **Password** - パスワード。
+- **ログイン** - ログイン。
+- **パスワード** - パスワード。
 - **Market data** - マーケットデータサーバーのアドレス。
 - **History** - 履歴データサーバーのアドレス。
 - **Transactions** - トランザクション実行サーバーのアドレス。

@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings LMAX](../../../../../images/api_gui_settings_lmax.png)
 
-- **Login** - Login.
-- **Password** - Passwort.
+- **Benutzername** - Login.
+- **Passwort** - Passwort.
 - **Demo** - Verbindung zum Demo-Handel statt zum Live-Handelsserver.
 - **LMAX location** - Standort der LMAX-Börse.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

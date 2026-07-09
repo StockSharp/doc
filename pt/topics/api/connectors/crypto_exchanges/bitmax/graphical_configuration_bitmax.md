@@ -7,8 +7,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings BitMax](../../../../../images/api_gui_settings_bitmax.png)
 
-- **Key** - Chave.
-- **Secret** - Chave secreta.
+- **chave** - Chave.
+- **segredo** - Chave secreta.
 - **Balance** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e retirada.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.
 - **Definições de religação** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))

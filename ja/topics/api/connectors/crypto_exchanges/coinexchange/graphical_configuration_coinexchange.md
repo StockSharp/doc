@@ -7,8 +7,8 @@
 
 ![API GUI Settings CoinExchange](../../../../../images/api_gui_settings_coinexchange.png)
 
-- **Key** - キー。
-- **Secret** - シークレット。
+- **キー** - キー。
+- **シークレット** - シークレット。
 - **ハートビート** - 接続が稼働していることを追跡するためのサーバーチェック間隔。デフォルトでは 1 分です。
 - **再接続設定** - 取引システムとの接続を追跡するための設定メカニズム。([再接続設定](../../reconnection_settings.md))
 

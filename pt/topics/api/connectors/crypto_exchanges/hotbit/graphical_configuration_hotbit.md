@@ -7,8 +7,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Hotbit](../../../../../images/api_gui_settings_hotbit.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **chave** - Key.
+- **segredo** - Secret.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

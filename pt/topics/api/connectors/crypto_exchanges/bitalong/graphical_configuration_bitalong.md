@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
+- **chave** - Chave.
+- **segredo** - Segredo.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, é de 1 minuto.
 - **Definições de religação** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
 

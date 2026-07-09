@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Gate.io](../../../../../images/api_gui_settings_gateio.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
 - **Sections** - Handelssektionen.
 - **Demo** - Verbindung zum Demo-Handel.
 

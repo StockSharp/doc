@@ -4,10 +4,10 @@
 
 ![API GUI Settings ZBCOM](../../../../../images/api_gui_settings_zbcom.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Balance** - 残高確認の間隔。入金および出金操作の場合に必要です。
-- **Password** - 管理者パスワード。
+- **パスワード** - 管理者パスワード。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 

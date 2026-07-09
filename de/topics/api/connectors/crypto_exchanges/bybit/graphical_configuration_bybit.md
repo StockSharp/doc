@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings ByBit](../../../../../images/api_gui_settings_bybit.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
 - **Sections** - Handelsbereiche.
 - **Demo** - Verbindung zum Demohandel.
 

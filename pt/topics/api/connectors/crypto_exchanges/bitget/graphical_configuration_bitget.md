@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
+- **chave** - Chave.
+- **segredo** - Segredo.
 - **Sections** - Seções de negociação.
 - **Demo** - Conexão à negociação demo.
 

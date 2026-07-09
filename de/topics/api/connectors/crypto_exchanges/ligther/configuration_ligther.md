@@ -1,10 +1,10 @@
 # Konfiguration Ligther
 
-Für die Arbeit mit dem Connector generieren Sie **API Key** und **Secret** im Börsenkonto und geben sie in den Verbindungseinstellungen an.
+Für die Arbeit mit dem Connector generieren Sie **API-Schlüssel** und **Geheimnis** im Börsenkonto und geben sie in den Verbindungseinstellungen an.
 
 Haupteinstellungen:
 
-- **Key** und **Secret**.
+- **Schlüssel** und **Geheimnis**.
 - **Account index** und **API key index**.
 - **Section**: `Spot` oder `Derivatives`.
 - **Demo**-Modus.

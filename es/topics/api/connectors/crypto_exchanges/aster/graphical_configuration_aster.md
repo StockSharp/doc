@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica se
 
 Campos principales:
 
-- **Key** - clave de la API.
-- **Secret** - secreto de la API.
+- **clave** - clave de la API.
+- **secreto** - secreto de la API.
 - **Section** - sección de trading (`Spot` o `Derivatives`).
 - **Derivatives mode** - familia de protocolo de derivados.
 - **Demo** - modo de entorno de demostración.

@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimnis.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimnis.
 - **Verbindungsprüfung** - Intervall der Serverüberprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig beträgt es 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
 

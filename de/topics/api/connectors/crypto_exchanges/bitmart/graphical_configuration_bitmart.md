@@ -4,10 +4,10 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimschlüssel.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimschlüssel.
 - **Board** - Bereich für die Verbindung (Spot, Futures).
-- **Passphrase** - Administratives Passwort.
+- **Kennphrase** - Administratives Passwort.
 
 ## Empfohlener Inhalt
 

@@ -4,8 +4,8 @@
 
 ![API GUI Settings Bitfinex](../../../../../images/api_gui_settings_bitfinex.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Cancel On Disconnect** - 切断時にキャンセルします。
 - **ハートビート** - 接続が維持されていることを追跡するためのサーバー確認間隔です。デフォルトでは 1 分です。
 - **再接続設定** - 取引システム設定で接続を追跡するためのメカニズムです。([再接続設定](../../reconnection_settings.md))

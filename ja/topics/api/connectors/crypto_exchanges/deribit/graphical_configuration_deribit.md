@@ -4,8 +4,8 @@
 
 ![Deribit API GUI 設定](../../../../../images/api_gui_settings_deribit.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **ハートビート** - 接続が稼働していることを追跡するためのサーバー確認間隔。デフォルトでは 1 分に等しくなります。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 

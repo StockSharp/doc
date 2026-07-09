@@ -4,9 +4,9 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings OKCoin](../../../../../images/api_gui_settings_okcoin.png)
 
-- **Key** - chave.
-- **Secret** - segredo.
-- **Password** - password administrativa.
+- **chave** - chave.
+- **segredo** - segredo.
+- **palavra-passe** - password administrativa.
 - **Intervalo de verificação da ligação** - intervalo de verificação do servidor para controlar que a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - mecanismo para controlar as ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

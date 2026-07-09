@@ -4,8 +4,8 @@
 
 ![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **ハートビート** - 接続が維持されていることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 

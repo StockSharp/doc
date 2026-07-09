@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
+- **clave** - Clave.
+- **secreto** - Secreto.
 - **Client** - ID de cliente.
 - **Balance** - Intervalo de comprobación del balance. Necesario en caso de acciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.

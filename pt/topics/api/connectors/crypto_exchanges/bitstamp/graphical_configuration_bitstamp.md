@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
 
-- **Key** - Chave.
-- **Secret** - Chave secreta.
+- **chave** - Chave.
+- **segredo** - Chave secreta.
 - **Client** - ID do cliente.
 - **Balance** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e retirada.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.

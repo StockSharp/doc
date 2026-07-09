@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Coinigy](../../../../../images/api_gui_settings_coinigy.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Password** - Contraseña administrativa.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **contraseña** - Contraseña administrativa.
 - **Websocket** - Id del websocket.
 - **Balance** - Intervalo de comprobación del saldo. Necesario en caso de acciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

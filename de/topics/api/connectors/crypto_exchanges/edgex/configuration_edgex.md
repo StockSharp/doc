@@ -1,11 +1,11 @@
 # Konfiguration edgeX
 
-Um mit dem Connector zu arbeiten, generieren Sie **API Key** und **Secret** im Börsenkonto und geben Sie diese in den Verbindungseinstellungen an.
+Um mit dem Connector zu arbeiten, generieren Sie **API-Schlüssel** und **Geheimnis** im Börsenkonto und geben Sie diese in den Verbindungseinstellungen an.
 
 Wichtige Einstellungen:
 
-- **Key** und **Secret**.
-- **Clearing account** und **Passphrase**.
+- **Schlüssel** und **Geheimnis**.
+- **Clearing-Konto** und **Kennphrase**.
 - **Section**: `Spot` oder `Derivatives`.
 - **Enable spot**: aktiviert den Spot-Bereich, sofern API-Unterstützung verfügbar ist.
 - **Demo**-Modus.

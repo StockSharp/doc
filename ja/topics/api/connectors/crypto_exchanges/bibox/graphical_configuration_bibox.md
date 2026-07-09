@@ -4,9 +4,9 @@
 
 ![Bibox API GUI 設定](../../../../../images/api_gui_settings_bibox.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
-- **Password** - 管理者パスワード。
+- **キー** - Key。
+- **シークレット** - Secret。
+- **パスワード** - 管理者パスワード。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 

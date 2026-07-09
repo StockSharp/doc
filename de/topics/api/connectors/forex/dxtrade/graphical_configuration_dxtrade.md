@@ -4,8 +4,8 @@ Für alle [S\\#](../../../../api.md)-Produkte erfolgt die grafische Konfiguratio
 
 ![API GUI Settings DXtrade](../../../../../images/api_gui_settings_dxtrade.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimer Schlüssel.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Demo** - Verbindung zum Demo-Handel.
 
 ## Siehe auch

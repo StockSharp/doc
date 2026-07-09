@@ -4,8 +4,8 @@
 
 ![API GUI Settings Gate.io](../../../../../images/api_gui_settings_gateio.png)
 
-- **Key** - キー。
-- **Secret** - シークレット。
+- **キー** - キー。
+- **シークレット** - シークレット。
 - **Sections** - 取引セクション。
 - **Demo** - デモ取引への接続。
 

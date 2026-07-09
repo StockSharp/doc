@@ -4,25 +4,25 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Rithmic](../../../../../images/api_gui_settings_rithmic.png)
 
-- **Login** - Login.
-- **Password** - Password.
-- **Certificate** - Pfad zur Zertifikatsdatei, erforderlich für die Verbindung zum Rithmic-System.
+- **Benutzername** - Login.
+- **Passwort** - Password.
+- **Zertifikat** - Pfad zur Zertifikatsdatei, erforderlich für die Verbindung zum Rithmic-System.
 - **File log** - Pfad zur Logdatei.
 - **Server type** - Servertyp.
 - **Point (admin)** - Verbindungspunkt für administrative Funktionen (Initialisierung/Deinitialisierung).
 - **Point (data)** - Verbindungspunkt für Marktdaten.
-- **Login (trans)** - Zusätzliches Login. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
+- **Benutzername (Transaktionen)** - Zusätzliches Login. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
 - **Point (transactions)** - Verbindungspunkt zum System für die Transaktionsausführung.
-- **Password (trans)** - Zusätzliches Passwort. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
+- **Passwort (Transaktionen)** - Zusätzliches Passwort. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
 - **Point (positions)** - Verbindungspunkt für den Zugriff auf Portfolio- und Positionsinformationen.
 - **Point (history)** - Verbindungspunkt für den Zugriff auf historische Daten.
-- **Domain (address)** - Domainadresse.
-- **Domain (name)** - Domainname.
+- **Domain (Adresse)** - Domainadresse.
+- **Domain (Name)** - Domainname.
 - **Licenses** - Adresse des Lizenzservers.
 - **Broker** - Brokeradresse.
 - **Log (address)** - Logger-Adresse.
 - **User name (hist)** - Zusätzliches Login. Benutzer-ID für die Authentifizierung beim History Plant.
-- **Password (hist)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim History Plant.
+- **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim History Plant.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

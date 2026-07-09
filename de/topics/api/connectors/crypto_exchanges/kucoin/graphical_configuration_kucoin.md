@@ -4,9 +4,9 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Kucoin](../../../../../images/api_gui_settings_kucoin.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
-- **Passphrase** - Passphrase.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
+- **Kennphrase** - Passphrase.
 - **Demo** - Verbindung zum Demo-Handel statt zum realen Handelsserver.
 - **Balance** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

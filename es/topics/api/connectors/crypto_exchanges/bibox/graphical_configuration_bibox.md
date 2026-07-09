@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Bibox](../../../../../images/api_gui_settings_bibox.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Password** - Contraseña administrativa.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **contraseña** - Contraseña administrativa.
 - **Intervalo de comprobación** - Intervalo de verificación del servidor para comprobar que la conexión está activa. Por defecto es de 1 minuto.
 - **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con las configuraciones del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

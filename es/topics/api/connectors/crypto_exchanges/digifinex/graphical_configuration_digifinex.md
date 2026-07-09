@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings DigiFinex](../../../../../images/api_gui_settings_digifinex.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Domain (address)** - Dirección de dominio.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **dominio (dirección)** - Dirección de dominio.
 - **Balance** - Intervalo de comprobación del saldo. Necesario en caso de acciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))

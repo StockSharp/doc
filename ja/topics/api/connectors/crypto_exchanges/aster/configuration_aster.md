@@ -1,10 +1,10 @@
 # Aster 設定
 
-コネクターを使用するには、取引所アカウントで **API Key** と **Secret** を生成し、接続設定で指定します。
+コネクターを使用するには、取引所アカウントで **APIキー** と **シークレット** を生成し、接続設定で指定します。
 
 主な設定:
 
-- **Key** と **Secret**。
+- **キー** と **シークレット**。
 - **Section**: `Spot` または `Derivatives`。
 - **Derivatives mode**: `Legacy` または `V3 Agent`。
 - **Spot REST / Spot WS** エンドポイント。

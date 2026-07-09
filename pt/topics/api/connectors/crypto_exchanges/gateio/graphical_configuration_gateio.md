@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings Gate.io](../../../../../images/api_gui_settings_gateio.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **chave** - Key.
+- **segredo** - Secret.
 - **Sections** - Secções de negociação.
 - **Demo** - Ligação à negociação demo.
 

@@ -4,9 +4,9 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings Bibox](../../../../../images/api_gui_settings_bibox.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Secret.
-- **Password** - Administratives Passwort.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Secret.
+- **Passwort** - Administratives Passwort.
 - **Verbindungsprüfung** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
 

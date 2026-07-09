@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings BitMEX](../../../../../images/api_gui_settings_bitmex.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
 - **Demo** - Verbindung zum Demo-Handel anstelle des realen Handelsservers.
 - **Verbindungsprüfung** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

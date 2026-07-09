@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 
-- **Key** - Schluessel.
-- **Secret** - Secret.
+- **Schlüssel** - Schluessel.
+- **Geheimnis** - Secret.
 - **Demo** - Sandbox-Modus.
 
 ## Empfohlene Inhalte

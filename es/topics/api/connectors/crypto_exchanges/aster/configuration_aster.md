@@ -1,10 +1,10 @@
 # Configuración Aster
 
-Para trabajar con el conector, genere una **API Key** y un **Secret** en la cuenta del exchange y especifíquelos en la configuración de conexión.
+Para trabajar con el conector, genere una **clave API** y un **secreto** en la cuenta del exchange y especifíquelos en la configuración de conexión.
 
 Configuraciones principales:
 
-- **Key** y **Secret**.
+- **clave** y **secreto**.
 - **Section**: `Spot` o `Derivatives`.
 - **Derivatives mode**: `Legacy` o `V3 Agent`.
 - Endpoints **Spot REST / Spot WS**.

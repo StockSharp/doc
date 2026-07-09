@@ -4,9 +4,9 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
 
-- **Address** - Endereço do servidor.
-- **Login** - Login.
-- **Password** - Password.
+- **endereço** - Endereço do servidor.
+- **nome de utilizador** - Login.
+- **palavra-passe** - Password.
 - **Work schedule** - Modo necessário de ligação ao terminal.
 - **Reconnection** - Utilizar o mecanismo de religação «nativo».
 - **Logging level** - Utilizar o registo da API OpenECry.

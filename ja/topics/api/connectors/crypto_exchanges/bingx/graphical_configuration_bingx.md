@@ -4,7 +4,7 @@
 
 ![BingX API GUI 設定](../../../../../images/api_gui_settings_bingx.png)
 
-- **Key** - キー。
-- **Secret** - シークレット。
+- **キー** - キー。
+- **シークレット** - シークレット。
 - **Demo** - デモモード。
 - **再接続設定** - 取引システムとの再接続メカニズムのパラメーター（[再接続設定](../../reconnection_settings.md)）。

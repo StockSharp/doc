@@ -1,10 +1,10 @@
 # Konfiguration Aster
 
-Um mit dem Connector zu arbeiten, generieren Sie **API Key** und **Secret** im Börsenkonto und geben Sie diese in den Verbindungseinstellungen an.
+Um mit dem Connector zu arbeiten, generieren Sie **API-Schlüssel** und **Geheimnis** im Börsenkonto und geben Sie diese in den Verbindungseinstellungen an.
 
 Haupteinstellungen:
 
-- **Key** und **Secret**.
+- **Schlüssel** und **Geheimnis**.
 - **Section**: `Spot` oder `Derivatives`.
 - **Derivatives mode**: `Legacy` oder `V3 Agent`.
 - **Spot REST / Spot WS**-Endpunkte.

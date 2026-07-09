@@ -4,13 +4,13 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Passphrase** - Frase de contraseña.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **frase de acceso** - Frase de contraseña.
 - **Futures** - Sección de futuros
 - **Spot** - Sección spot
 - **Swap** - Sección swap.
-- **Password** - Contraseña administrativa.
+- **contraseña** - Contraseña administrativa.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

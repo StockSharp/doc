@@ -7,8 +7,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
+- **clave** - Clave.
+- **secreto** - Secreto.
 - **User** - Usuario
 - **Balance** - Intervalo de comprobación del balance. Necesario en caso de operaciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

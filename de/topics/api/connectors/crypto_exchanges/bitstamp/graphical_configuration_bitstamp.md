@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
 - **Client** - Client-ID.
 - **Balance** - Intervall der Kontostandsprüfung. Erforderlich bei Ein- und Auszahlungsvorgängen.
 - **Verbindungsprüfung** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.

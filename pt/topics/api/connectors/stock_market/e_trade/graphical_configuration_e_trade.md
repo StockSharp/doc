@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings E TRADE](../../../../../images/api_gui_settings_e_trade.png)
 
-- **Key** - Chave.
-- **Secret** - Segredo.
+- **chave** - Chave.
+- **segredo** - Segredo.
 - **Demo** - Ligar à negociação demo em vez do servidor de negociação real.
 - **Verification code** - Código de verificação recebido pelo utilizador no browser, depois de confirmar a permissão do programa para trabalhar.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

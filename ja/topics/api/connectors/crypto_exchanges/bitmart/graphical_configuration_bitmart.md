@@ -4,10 +4,10 @@
 
 ![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
-- **Key** - キー。
-- **Secret** - シークレット。
+- **キー** - キー。
+- **シークレット** - シークレット。
 - **Board** - 接続するセクション (Spot、Futures)。
-- **Passphrase** - 管理者パスワード。
+- **パスフレーズ** - 管理者パスワード。
 
 ## 推奨コンテンツ
 

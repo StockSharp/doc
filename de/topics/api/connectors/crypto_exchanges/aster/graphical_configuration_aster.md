@@ -4,8 +4,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 Hauptfelder:
 
-- **Key** - API-Schlüssel.
-- **Secret** - API-Secret.
+- **Schlüssel** - API-Schlüssel.
+- **Geheimnis** - API-Secret.
 - **Section** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Derivatives mode** - Derivate-Protokollfamilie.
 - **Demo** - Demo-Umgebungsmodus.

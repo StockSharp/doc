@@ -4,8 +4,8 @@
 
 主なフィールド:
 
-- **Key** - API キー。
-- **Secret** - API シークレット。
+- **キー** - API キー。
+- **シークレット** - API シークレット。
 - **Starknet account** - Starknet アカウントヘッダー値。
 - **Starknet key** - Starknet 秘密鍵マテリアル。
 - **Section** - 取引セクション (`Spot` または `Derivatives`)。

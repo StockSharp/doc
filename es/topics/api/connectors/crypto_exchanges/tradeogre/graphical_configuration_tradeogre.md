@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings TradeOgre](../../../../../images/api_gui_settings_tradeogre.png)
 
-- **Key** - Clave.
-- **Secret** - Secreto.
-- **Password** - Contraseña administrativa.
+- **clave** - Clave.
+- **secreto** - Secreto.
+- **contraseña** - Contraseña administrativa.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

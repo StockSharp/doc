@@ -7,8 +7,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 ![API GUI Settings CoinBene](../../../../../images/api_gui_settings_coinbene.png)
 
-- **Key** - Key.
-- **Secret** - Secret.
+- **Schlüssel** - Key.
+- **Geheimnis** - Secret.
 - **Balance** - Intervall der Guthabenprüfung. Erforderlich bei Einzahlungs- und Auszahlungsaktionen.
 - **Verbindungsprüfung** - Intervall der Serverprüfung zur Überwachung der aktiven Verbindung. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

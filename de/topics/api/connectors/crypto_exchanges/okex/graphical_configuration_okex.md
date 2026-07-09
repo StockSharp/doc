@@ -4,13 +4,13 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
 
-- **Key** - Schlüssel.
-- **Secret** - Geheimer Schlüssel.
-- **Passphrase** - Passphrase.
+- **Schlüssel** - Schlüssel.
+- **Geheimnis** - Geheimer Schlüssel.
+- **Kennphrase** - Passphrase.
 - **Futures** - Futures-Bereich
 - **Spot** - Spot-Bereich
 - **Swap** - Swap-Bereich.
-- **Password** - Administratorpasswort.
+- **Passwort** - Administratorpasswort.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Verbindungsüberwachung mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

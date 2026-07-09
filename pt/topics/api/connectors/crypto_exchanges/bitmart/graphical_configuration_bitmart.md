@@ -4,10 +4,10 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
-- **Key** - Chave.
-- **Secret** - Chave secreta.
+- **chave** - Chave.
+- **segredo** - Chave secreta.
 - **Board** - Seção para conectar (Spot, Futures).
-- **Passphrase** - Senha administrativa.
+- **frase-passe** - Senha administrativa.
 
 ## Conteúdo recomendado
 

@@ -4,8 +4,8 @@
 
 ![API GUI Settings Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 
-- **Key** - Key。
-- **Secret** - Secret。
+- **キー** - Key。
+- **シークレット** - Secret。
 - **Demo** - サンドボックスモード。
 
 ## 推奨コンテンツ
