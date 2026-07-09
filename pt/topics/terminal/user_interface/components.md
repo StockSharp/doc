@@ -1,6 +1,6 @@
 # Componentes
 
-Durante a negociação, pode precisar de controlar totalmente o processo. Para controlo e análise completos, o **Terminal** disponibiliza componentes gráficos que pode adicionar selecionando-os no grupo **Components** da **Ribbon**:
+Durante a negociação, pode precisar de controlar totalmente o processo. Para controlo e análise completos, o **Terminal** disponibiliza componentes gráficos que pode adicionar selecionando-os no grupo **Componentes** do **friso**:
 
 ![Designer Components](../../../images/designer_components.png)
 
