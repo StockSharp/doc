@@ -79,16 +79,16 @@ _quotingProcessor = new QuotingProcessor(
 ```csharp
 // ログ記録と処理のためにプロセッサーイベントを購読
 _quotingProcessor.OrderRegistered += order =>
-	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	this.AddInfoLog($"注文 {order.TransactionId} を価格 {order.Price} で登録しました");
 
 _quotingProcessor.OrderFailed += fail =>
-	this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	this.AddInfoLog($"注文に失敗しました: {fail.Error.Message}");
 
 _quotingProcessor.OwnTrade += trade =>
-	this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	this.AddInfoLog($"約定が実行されました: {trade.Trade.Volume}、価格 {trade.Trade.Price}");
 
 _quotingProcessor.Finished += isOk => {
-	this.AddInfoLog($"Quoting finished with success: {isOk}");
+	this.AddInfoLog($"クォーティングが正常に完了しました: {isOk}");
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 };

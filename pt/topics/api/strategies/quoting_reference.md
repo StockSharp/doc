@@ -171,7 +171,7 @@ var processor = new QuotingProcessor(
 
 processor.Finished += isOk =>
 {
-	this.AddInfoLog($"Quoting finished: {isOk}");
+	this.AddInfoLog($"Cotação concluída: {isOk}");
 	processor?.Dispose();
 };
 

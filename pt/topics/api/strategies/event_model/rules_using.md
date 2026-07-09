@@ -154,7 +154,7 @@
           subscription.WhenLastTradePriceMore(this, 135000m), 
           subscription.WhenLastTradePriceLess(this, 140000m)
       })
-      .Do(() => this.AddInfoLog($"Last trade price is in the range from {priceMore} to {priceLess}"))
+      .Do(() => this.AddInfoLog($"O preço da última transação está no intervalo de {priceMore} a {priceLess}"))
       .Apply(this);
       
   // Enviar solicitação de assinatura

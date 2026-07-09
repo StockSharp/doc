@@ -171,7 +171,7 @@ var processor = new QuotingProcessor(
 
 processor.Finished += isOk =>
 {
-	this.AddInfoLog($"Quoting finished: {isOk}");
+	this.AddInfoLog($"Quoting abgeschlossen: {isOk}");
 	processor?.Dispose();
 };
 
@@ -183,4 +183,3 @@ processor.Start();
 - [Quoting-Algorithmus](quoting.md)
 - [Quoting-Strategie](samples/mq.md)
 - [Volatilitäts-Quoting](../options/volatility_trading.md)
-

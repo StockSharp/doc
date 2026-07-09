@@ -123,36 +123,36 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	};
 
 	// 新しいクォーティングプロセッサの作成をログ出力
-	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	this.AddInfoLog($"{CurrentTime} に買い/売りスプレッドを作成しました");
 
 	// ログ出力のために買いプロセッサのイベントを購読
 	_buyProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"買い注文 {order.TransactionId} を価格 {order.Price} で登録しました");
 
 	_buyProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+		this.AddInfoLog($"買い注文に失敗しました: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"買い約定が実行されました: {trade.Trade.Volume}、価格 {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		this.AddInfoLog($"買いクォーティングが正常に完了しました: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
 
 	// ログ出力のために売りプロセッサのイベントを購読
 	_sellProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"売り注文 {order.TransactionId} を価格 {order.Price} で登録しました");
 
 	_sellProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+		this.AddInfoLog($"売り注文に失敗しました: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"売り約定が実行されました: {trade.Trade.Volume}、価格 {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		this.AddInfoLog($"売りクォーティングが正常に完了しました: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};

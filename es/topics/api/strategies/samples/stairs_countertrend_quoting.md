@@ -73,14 +73,14 @@ private void ProcessCandle(ICandleMessage candle)
 		_bullLength++;
 		_bearLength = 0;
 
-		this.AddInfoLog($"Bullish candle detected. Streak: {_bullLength}");
+		this.AddInfoLog($"Vela alcista detectada. Racha: {_bullLength}");
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
 		_bullLength = 0;
 		_bearLength++;
 
-		this.AddInfoLog($"Bearish candle detected. Streak: {_bearLength}");
+		this.AddInfoLog($"Vela bajista detectada. Racha: {_bearLength}");
 	}
 
 	// Detener el procesador existente cuando se requiere cambio de dirección
@@ -110,13 +110,13 @@ private void ProcessCandle(ICandleMessage candle)
 		{
 			// Tendencia alcista - abrir posición corta
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"Starting SELL quoting after {_bullLength} bullish candles");
+			this.AddInfoLog($"Iniciando quoting de venta tras {_bullLength} velas alcistas");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// Tendencia bajista - abrir posición larga
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"Starting BUY quoting after {_bearLength} bearish candles");
+			this.AddInfoLog($"Iniciando quoting de compra tras {_bearLength} velas bajistas");
 		}
 	}
 }
@@ -160,13 +160,13 @@ private void CreateQuotingProcessor(Sides side)
 
 	// Suscribirse a eventos del procesador
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Orden {order.TransactionId} registrada al precio {order.Price}");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Error de orden: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Operación ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk =>
 	{

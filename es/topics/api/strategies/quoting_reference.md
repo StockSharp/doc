@@ -67,7 +67,7 @@ StockSharp proporciona 10 tipos de comportamientos de quoting, cada uno implemen
 | 7 | [BestByVolumeQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.BestByVolumeQuotingBehavior) | Volumen acumulado en el libro de órdenes | VolumeExchange |
 | 8 | [LevelQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.LevelQuotingBehavior) | Nivel de profundidad del libro de órdenes | Level (Range\<int\>), OwnLevel |
 | 9 | [VWAPQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.VWAPQuotingBehavior) | VWAP -- promedio ponderado por volumen | BestPriceOffset |
-| 10 | [TWAPQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.TWAPQuotingBehavior) | TWAP -- promedio ponderado por tiempo | TimeInterval, PriceBufferSize (default 10) |
+| 10 | [TWAPQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.TWAPQuotingBehavior) | TWAP -- promedio ponderado por tiempo | TimeInterval, PriceBufferSize (predeterminado 10) |
 
 ## Interfaz IQuotingBehavior
 
@@ -171,7 +171,7 @@ var processor = new QuotingProcessor(
 
 processor.Finished += isOk =>
 {
-	this.AddInfoLog($"Quoting finished: {isOk}");
+	this.AddInfoLog($"Quoting finalizado: {isOk}");
 	processor?.Dispose();
 };
 

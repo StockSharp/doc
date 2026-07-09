@@ -73,14 +73,14 @@ private void ProcessCandle(ICandleMessage candle)
 		_bullLength++;
 		_bearLength = 0;
 
-		this.AddInfoLog($"Bullish candle detected. Streak: {_bullLength}");
+		this.AddInfoLog($"陽線を検出しました。連続数: {_bullLength}");
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
 		_bullLength = 0;
 		_bearLength++;
 
-		this.AddInfoLog($"Bearish candle detected. Streak: {_bearLength}");
+		this.AddInfoLog($"陰線を検出しました。連続数: {_bearLength}");
 	}
 
 	// 方向変更が必要な場合は既存プロセッサを停止
@@ -110,13 +110,13 @@ private void ProcessCandle(ICandleMessage candle)
 		{
 			// 上昇トレンド - ショートポジションを建てる
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"Starting SELL quoting after {_bullLength} bullish candles");
+			this.AddInfoLog($"{_bullLength} 本の陽線後に売りクォーティングを開始します");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// 下降トレンド - ロングポジションを建てる
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"Starting BUY quoting after {_bearLength} bearish candles");
+			this.AddInfoLog($"{_bearLength} 本の陰線後に買いクォーティングを開始します");
 		}
 	}
 }
@@ -160,13 +160,13 @@ private void CreateQuotingProcessor(Sides side)
 
 	// プロセッサイベントを購読
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"注文 {order.TransactionId} を価格 {order.Price} で登録しました");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"注文に失敗しました: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"約定が実行されました: {trade.Trade.Volume}、価格 {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk =>
 	{

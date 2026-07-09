@@ -123,36 +123,36 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	};
 
 	// Erstellung neuer Quoting-Prozessoren protokollieren
-	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	this.AddInfoLog($"Kauf-/Verkaufs-Spread um {CurrentTime} erstellt");
 
 	// Ereignisse des Kaufprozessors für das Logging abonnieren
 	_buyProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Kauforder {order.TransactionId} zum Preis {order.Price} registriert");
 
 	_buyProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Kauforder fehlgeschlagen: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Kauftrade ausgeführt: {trade.Trade.Volume} zu {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		this.AddInfoLog($"Kauf-Quoting erfolgreich abgeschlossen: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
 
 	// Ereignisse des Verkaufsprozessors für das Logging abonnieren
 	_sellProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Verkaufsorder {order.TransactionId} zum Preis {order.Price} registriert");
 
 	_sellProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Verkaufsorder fehlgeschlagen: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Verkaufstrade ausgeführt: {trade.Trade.Volume} zu {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		this.AddInfoLog($"Verkaufs-Quoting erfolgreich abgeschlossen: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};

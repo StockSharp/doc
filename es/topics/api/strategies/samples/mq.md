@@ -92,16 +92,16 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 
 	// Suscribirse a eventos del procesador para logging
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Orden {order.TransactionId} registrada al precio {order.Price}");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Error de orden: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Operación ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk => {
-		this.AddInfoLog($"Quoting finished with success: {isOk}");
+		this.AddInfoLog($"Quoting finalizado correctamente: {isOk}");
 		_quotingProcessor?.Dispose();
 		_quotingProcessor = null;
 	};

@@ -123,36 +123,36 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	};
 
 	// Registrar creación de nuevos procesadores de quoting
-	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	this.AddInfoLog($"Spread de compra/venta creado en {CurrentTime}");
 
 	// Suscribirse a eventos del procesador de compra para logging
 	_buyProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Orden de compra {order.TransactionId} registrada al precio {order.Price}");
 
 	_buyProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Error de orden de compra: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Operación de compra ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		this.AddInfoLog($"Quoting de compra finalizado correctamente: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
 
 	// Suscribirse a eventos del procesador de venta para logging
 	_sellProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Orden de venta {order.TransactionId} registrada al precio {order.Price}");
 
 	_sellProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Error de orden de venta: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Operación de venta ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		this.AddInfoLog($"Quoting de venta finalizado correctamente: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};
