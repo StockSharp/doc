@@ -1,16 +1,16 @@
 # Configuración de conexiones
 
-1. Al hacer clic en la flecha junto al botón **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png), aparece el botón **Connection settings**:
+1. Al hacer clic en la flecha junto al botón **Conectar** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png), aparece el botón **Configuración de conexión**:
 
 ![Designer The connection settings 00](../../images/designer_connection_settings_00.png)
 
-2. Al hacer clic en el botón **Connection settings**, se abre la ventana **Connection settings**, que está dividida en 3 áreas:
+2. Al hacer clic en el botón **Configuración de conexión**, se abre la ventana **Configuración de conexión**, que está dividida en 3 áreas:
 
 ![Designer The connection settings 01](../../images/designer_connection_settings_01.png)
 
 3. Al hacer clic en el botón ![Designer The connection settings 02](../../images/designer_connection_settings_02.png), se activa la lista desplegable de conectores compatibles. Los conectores seleccionados se muestran en el área n.º 1. El botón ![Designer The connection settings 03](../../images/designer_connection_settings_03.png) elimina el conector seleccionado. La primera columna del área n.º 1 muestra si el conector se conectará al hacer clic en el botón Connect ![Designer The connection settings 04](../../images/designer_connection_settings_04.png) o no se conectará ![Designer The connection settings 05](../../images/designer_connection_settings_05.png). Estos valores se establecen con los botones ![Designer The connection settings 06](../../images/designer_connection_settings_06.png) y ![Designer The connection settings 07](../../images/designer_connection_settings_07.png).
 
-Los campos **Market data** y **Trades** muestran si el conector admite datos de mercado y trabajo con órdenes.
+Los campos **Datos de mercado** y **Operaciones** muestran si el conector admite datos de mercado y trabajo con órdenes.
 
 4. Cuando se selecciona la casilla **Auto-connect**, la conexión se conecta automáticamente al iniciar [Designer](../designer.md).
 
@@ -19,7 +19,7 @@ Los campos **Market data** y **Trades** muestran si el conector admite datos de 
   > [!IMPORTANT]
   > **Advanced settings** se necesitan en casos especiales y no se recomienda modificarlos.
 
-6. Al hacer clic en el botón **Check**, se comprobará la conexión del conector actual. Si la comprobación falla, aparecerá una ventana con un error que describe la razón de la conexión fallida. Si la comprobación es correcta, aparecerá una ventana:
+6. Al hacer clic en el botón **Comprobar**, se comprobará la conexión del conector actual. Si la comprobación falla, aparecerá una ventana con un error que describe la razón de la conexión fallida. Si la comprobación es correcta, aparecerá una ventana:
 
 ![Designer The connection settings 10](../../images/designer_connection_settings_10.png)
 

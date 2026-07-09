@@ -4,11 +4,11 @@ El componente de órdenes **Conditional** es una tabla con órdenes que muestra 
 
 ![Terminal Orders conditional panel 01](../../../../images/terminal_orders_conditional_panel_01.png)
 
-Al hacer clic en el botón **Order Registration**, aparece una ventana. Para registrar una nueva orden condicional, rellénela y haga clic en **Send**.
+Al hacer clic en el botón **Registro de orden**, aparece una ventana. Para registrar una nueva orden condicional, rellénela y haga clic en **Enviar**.
 
 ![Terminal Orders conditional panel 02](../../../../images/terminal_orders_conditional_panel_02.png)
 
-Al hacer clic en el botón **Change Order**, aparece una ventana. Para cambiar la orden condicional, realice los cambios necesarios y haga clic en **Send**.
+Al hacer clic en el botón **Modificar orden**, aparece una ventana. Para cambiar la orden condicional, realice los cambios necesarios y haga clic en **Enviar**.
 
 ![Terminal Orders conditional panel 03](../../../../images/terminal_orders_conditional_panel_03.png)
 

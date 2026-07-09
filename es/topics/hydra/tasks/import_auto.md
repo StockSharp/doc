@@ -14,7 +14,7 @@ Para cada instrumento, puede especificar las siguientes propiedades de importaci
 
 **Import (auto)**
 
-**Settings**
+**Configuración**
 
 - **Data type** - tipo de datos importados.
 - **Filename** - ruta completa al archivo.

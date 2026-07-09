@@ -1,16 +1,16 @@
 # Primera estrategia
 
-Para crear esquemas de estrategias y elementos compuestos, y probar las estrategias obtenidas con datos históricos, puede usar un ejemplo de estrategia de media móvil (SMA). Permite recorrer un ciclo completo desde la creación de una estrategia hasta su prueba y depuración. La estrategia de media móvil (SMA) se encuentra en la carpeta **Strategies** del panel **Schemas**.
+Para crear esquemas de estrategias y elementos compuestos, y probar las estrategias obtenidas con datos históricos, puede usar un ejemplo de estrategia de media móvil (SMA). Permite recorrer un ciclo completo desde la creación de una estrategia hasta su prueba y depuración. La estrategia de media móvil (SMA) se encuentra en la carpeta **Estrategias** del panel **Esquemas**.
 
-1. Cree una nueva estrategia a partir de cubos como se describe en [Uso de código](../using_code.md). Para añadir una nueva estrategia, haga clic en el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la pestaña **Common** y seleccione **Strategy**. O haga clic con el botón derecho en la carpeta **Strategy** del panel **Schemas** y haga clic en el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en el menú desplegable.
+1. Cree una nueva estrategia a partir de cubos como se describe en [Uso de código](../using_code.md). Para añadir una nueva estrategia, haga clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la pestaña **Común** y seleccione **Estrategia**. O haga clic con el botón derecho en la carpeta **Estrategia** del panel **Esquemas** y haga clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en el menú desplegable.
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Después de hacer clic en el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la carpeta **Strategy** del panel **Schemas**, aparecerá una nueva estrategia. En el espacio de trabajo aparece una nueva pestaña con la estrategia; al cambiar a ella, la pestaña **Emulation** se abrirá automáticamente en la cinta. En la pestaña **Emulation**, puede cambiar el nombre de la estrategia y darle una breve descripción.
+Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la carpeta **Estrategia** del panel **Esquemas**, aparecerá una nueva estrategia. En el espacio de trabajo aparece una nueva pestaña con la estrategia; al cambiar a ella, la pestaña **Emulación** se abrirá automáticamente en la cinta. En la pestaña **Emulación**, puede cambiar el nombre de la estrategia y darle una breve descripción.
 
 ![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. Para trabajar cómodamente, abra y fije los paneles **Palette** y **Properties** del área **Schemas** haciendo clic en el botón ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png). El resultado será una ventana del siguiente tipo.
+2. Para trabajar cómodamente, abra y fije los paneles **Paleta** y **Propiedades** del área **Esquemas** haciendo clic en el botón ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png). El resultado será una ventana del siguiente tipo.
 
 ![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 
@@ -21,7 +21,7 @@ Después de hacer clic en el botón **Add** ![Designer Panel Circuits 01](../../
 - Cuando una media móvil corta cruza una larga de arriba hacia abajo, se abre una posición corta.
 - Si hay una posición opuesta en el momento de recibir una señal para abrir una posición, se revierte la posición.
 
-4. Para todas las estrategias se necesita un instrumento y una cartera, que se usarán para las operaciones. Debe añadirlos desde el panel **Palette** al panel **Designer**. En el ejemplo, el cubo [Variable](elements/data_sources/variable.md) con el tipo **Instrument** se llama Instrument, y el cubo [Variable](elements/data_sources/variable.md) con el tipo **Portfolio** se llama Portfolio. Marque la casilla **Parameters** de los cubos Instrument y Portfolio. Cuando la casilla está seleccionada, el cubo tomará el valor de la configuración de la estrategia. Si no selecciona la casilla, debe introducir manualmente los valores de instrumento y cartera. Si deja vacío el campo Value del cubo [Variable](elements/data_sources/variable.md) y no marca la casilla de parámetros, durante las pruebas la estrategia generará un error por el valor no establecido del cubo [Variable](elements/data_sources/variable.md).
+4. Para todas las estrategias se necesita un instrumento y una cartera, que se usarán para las operaciones. Debe añadirlos desde el panel **Paleta** al panel **Designer**. En el ejemplo, el cubo [Variable](elements/data_sources/variable.md) con el tipo **Instrumento** se llama Instrument, y el cubo [Variable](elements/data_sources/variable.md) con el tipo **Cartera** se llama Portfolio. Marque la casilla **Parámetros** de los cubos Instrument y Portfolio. Cuando la casilla está seleccionada, el cubo tomará el valor de la configuración de la estrategia. Si no selecciona la casilla, debe introducir manualmente los valores de instrumento y cartera. Si deja vacío el campo Value del cubo [Variable](elements/data_sources/variable.md) y no marca la casilla de parámetros, durante las pruebas la estrategia generará un error por el valor no establecido del cubo [Variable](elements/data_sources/variable.md).
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -51,7 +51,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. Para abrir una posición, añada dos cubos [Register order](elements/orders/register.md). El primer cubo es para comprar con una orden de mercado. A la entrada de este cubo se pasan: **Instrument**, la señal de apertura de posición desde el cubo de cruce Crossing Up, **Portfolio** y el volumen de la orden. El segundo cubo es para vender con una orden de mercado. A la entrada de este cubo se pasan: **Instrument**, la señal de apertura de posición desde el cubo de cruce Crossing Down, **Portfolio** y el volumen de la orden.
+10. Para abrir una posición, añada dos cubos [Registrar orden](elements/orders/register.md). El primer cubo es para comprar con una orden de mercado. A la entrada de este cubo se pasan: **Instrumento**, la señal de apertura de posición desde el cubo de cruce Crossing Up, **Cartera** y el volumen de la orden. El segundo cubo es para vender con una orden de mercado. A la entrada de este cubo se pasan: **Instrumento**, la señal de apertura de posición desde el cubo de cruce Crossing Down, **Cartera** y el volumen de la orden.
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
@@ -59,7 +59,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
-Para controlar la posición, debe añadir el cubo [Posición](elements/positions/current.md), a cuya entrada se pasan **Instrument** y **Portfolio**.
+Para controlar la posición, debe añadir el cubo [Posición](elements/positions/current.md), a cuya entrada se pasan **Instrumento** y **Cartera**.
 
 ![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 

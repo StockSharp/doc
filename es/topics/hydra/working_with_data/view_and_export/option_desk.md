@@ -2,11 +2,11 @@
 
 En la ventana que aparece, seleccione el rango de tiempo deseado, elija el activo subyacente, añada opciones para él y haga clic en el botón ![hydra find](../../../../images/hydra_find.png):
 
-Si no hay historial, pero hay datos sobre el spread, puede calcular las principales griegas (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)); para ello debe seleccionarlas en el campo **Calculate Greeks**.
+Si no hay historial, pero hay datos sobre el spread, puede calcular las principales griegas (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)); para ello debe seleccionarlas en el campo **Calcular griegas**.
 
 ![hydra option desk](../../../../images/hydra_option_desk.png)
 
-Para ver la **Volatility Smile**, debe ir a la pestaña **Volatility Smile**.
+Para ver la **Sonrisa de volatilidad**, debe ir a la pestaña **Sonrisa de volatilidad**.
 
 ![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
 

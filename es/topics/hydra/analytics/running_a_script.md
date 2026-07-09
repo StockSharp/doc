@@ -15,7 +15,7 @@ El script analítico se formatea como una clase heredada de [IAnalyticsScript](x
 
 Al configurar parámetros:
 
-- **Instrument** puede establecerse de uno a varios instrumentos, según la lógica del script.
+- **Instrumento** puede establecerse de uno a varios instrumentos, según la lógica del script.
 
 ![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
 
@@ -23,4 +23,4 @@ Al configurar parámetros:
 - El almacenamiento desde el que obtener los datos.
 - El marco temporal de trabajo del script, si utiliza uno.
 
-Al hacer clic en el botón **Start** ![hydra analytics compile](../../../images/hydra_analytics_compile.png), se abrirá una nueva pestaña que mostrará los resultados de la ejecución del script.
+Al hacer clic en el botón **Iniciar** ![hydra analytics compile](../../../images/hydra_analytics_compile.png), se abrirá una nueva pestaña que mostrará los resultados de la ejecución del script.

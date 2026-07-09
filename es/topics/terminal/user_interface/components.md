@@ -1,6 +1,6 @@
 # Componentes
 
-Durante el trading, puede necesitar controlar completamente el proceso. Para control y análisis completos, **Terminal** proporciona componentes gráficos que puede añadir seleccionándolos en el grupo **Components** de la **Ribbon**:
+Durante el trading, puede necesitar controlar completamente el proceso. Para control y análisis completos, **Terminal** proporciona componentes gráficos que puede añadir seleccionándolos en el grupo **Componentes** de la **Cinta**:
 
 ![Designer Components](../../../images/designer_components.png)
 

@@ -34,5 +34,5 @@ Para importar el registro de órdenes, seleccione **Import \=\> Order log** en e
    - La ventana de configuración de campos tendrá este aspecto:![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Preview**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
-4. Haga clic en el botón **Import**.
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+4. Haga clic en el botón **Importar**.

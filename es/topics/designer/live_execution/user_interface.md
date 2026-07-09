@@ -1,6 +1,6 @@
 # Interfaz
 
-Después de añadir una estrategia a la carpeta **Live**, al hacer doble clic en la estrategia añadida se abrirá una pestaña titulada "Live [Nombre de la estrategia]". Al navegar a esta pestaña, la pestaña **Live** se abrirá automáticamente en la **Ribbon**. En la pestaña **Live**, puede especificar el instrumento y la cartera con los que trabajará la estrategia. Al pulsar el botón **Start**, se inicia el trading en vivo para la estrategia; al pulsar el botón **Stop**, se detiene.
+Después de añadir una estrategia a la carpeta **Live**, al hacer doble clic en la estrategia añadida se abrirá una pestaña titulada "Live [Nombre de la estrategia]". Al navegar a esta pestaña, la pestaña **Live** se abrirá automáticamente en la **Cinta**. En la pestaña **Live**, puede especificar el instrumento y la cartera con los que trabajará la estrategia. Al pulsar el botón **Iniciar**, se inicia el trading en vivo para la estrategia; al pulsar el botón **Detener**, se detiene.
 
 ![Designer Interface Live trade 00](../../../images/designer_interface_live_trade_00.png)
 

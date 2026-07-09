@@ -29,5 +29,5 @@ Para importar libros de órdenes, seleccione **Import \=\> Order books** en el m
    - La ventana de configuración de campos tendrá este aspecto:![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Preview**.![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
-4. Haga clic en el botón **Import**.
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
+4. Haga clic en el botón **Importar**.

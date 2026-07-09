@@ -6,11 +6,11 @@ El componente "Order Registration" se usa para colocar órdenes de trading para 
 
 ## Sockets de entrada
 
-- **Instrument** – instrumento seleccionado para la orden.
+- **Instrumento** – instrumento seleccionado para la orden.
 - **Price** – especifica el precio de una orden limitada.
 - **Trigger** – señal de activación para la orden; acepta cualquier valor excepto `False`.
 - **Volume** – cantidad de instrumentos para la orden.
-- **Portfolio** – cartera dentro de la cual se colocará la orden.
+- **Cartera** – cartera dentro de la cual se colocará la orden.
 
 ## Sockets de salida
 

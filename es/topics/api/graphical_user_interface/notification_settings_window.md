@@ -8,11 +8,10 @@ Puede configurar notificaciones sobre cambios en los siguientes tipos de datos: 
 
 Las notificaciones pueden tener la siguiente forma:
 
-- **Window** - aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
-- **Melody** - se reproducirá la melodía.
+- **Ventana** - aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
+- **Melodía** - se reproducirá la melodía.
 - **SMS** - se enviará un mensaje por SMS.
 - **Email** - se enviará un mensaje por correo electrónico.
-- **Speech** - el mensaje será pronunciado por la voz generada por el equipo.
+- **Voz** - el mensaje será pronunciado por la voz generada por el equipo.
 - **Log** - el mensaje se enviará a la ventana de logs de Designer.
-- **Disabled** - no se mostrará la notificación.
-
+- **Desactivado** - no se mostrará la notificación.

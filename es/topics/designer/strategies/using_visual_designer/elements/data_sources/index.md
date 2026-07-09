@@ -8,7 +8,7 @@ El cubo se usa para crear su propio índice.
 
 Sockets de salida
 
-- **Security** - índice calculado, representado como **Security**.
+- **Instrumento** - índice calculado, representado como **Instrumento**.
 
 ### Parámetros
 

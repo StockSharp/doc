@@ -20,9 +20,8 @@ Esta ventana debe llamarse mediante el método de extensión [Extensions.Configu
 ```
 
 > [!TIP]
-> La corrección de la conexión se puede comprobar mediante el botón **Check**.
+> La corrección de la conexión se puede comprobar mediante el botón **Comprobar**.
 
 El resultado de esta ventana será crear y agregar adaptadores a la lista de *adaptadores internos* de la propiedad [Connector.Adapter](xref:StockSharp.Algo.Connector.Adapter). 
 
 Para obtener más información sobre cómo guardar y cargar la configuración del conector, consulte [Guardar y cargar la configuración](../connectors/save_and_load_settings.md).
-

@@ -2,7 +2,7 @@
 
 La herramienta es una acción repetida en un momento específico.
 
-Para ver la lista de herramientas, seleccione el elemento **Tools** en el panel izquierdo. El trabajo con herramientas es igual que con las fuentes: la herramienta se puede añadir, eliminar, editar y habilitar\/deshabilitar. Para añadir una **Tool**, en la pestaña **Common**, seleccione **Add \=\> Tools**. Aparecerá una ventana correspondiente donde podrá seleccionar la **Tool** necesaria...
+Para ver la lista de herramientas, seleccione el elemento **Herramientas** en el panel izquierdo. El trabajo con herramientas es igual que con las fuentes: la herramienta se puede añadir, eliminar, editar y habilitar\/deshabilitar. Para añadir una **Herramienta**, en la pestaña **Común**, seleccione **Añadir \=\> Herramientas**. Aparecerá una ventana correspondiente donde podrá seleccionar la **Herramienta** necesaria...
 
 ![hydra tasks](../../images/hydra_tasks.png)
 

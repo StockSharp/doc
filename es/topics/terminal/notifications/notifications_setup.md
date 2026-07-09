@@ -8,10 +8,10 @@ Las notificaciones pueden configurarse para cambios en los siguientes tipos de d
 
 Las notificaciones pueden tener las siguientes formas:
 
-- **Window** – aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
-- **Melody** – se reproducirá una melodía.
+- **Ventana** – aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
+- **Melodía** – se reproducirá una melodía.
 - **SMS** – se enviará un mensaje por SMS.
 - **Email** – el mensaje se enviará por correo electrónico.
-- **Speech** – el mensaje será pronunciado por una voz generada por ordenador.
-- **Log** – el mensaje se enviará a la ventana de logs de Designer.
-- **Off** – la notificación no se mostrará.
+- **Voz** – el mensaje será pronunciado por una voz generada por ordenador.
+- **Registro** – el mensaje se enviará a la ventana de logs de Designer.
+- **Desactivado** – la notificación no se mostrará.

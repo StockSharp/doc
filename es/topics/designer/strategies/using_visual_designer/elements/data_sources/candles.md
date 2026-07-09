@@ -8,7 +8,7 @@ Este bloque se usa para construir velas para un instrumento especificado.
 
 Sockets de entrada
 
-- **Security** – instrumento para el que deben construirse las velas con los parámetros dados.
+- **Instrumento** – instrumento para el que deben construirse las velas con los parámetros dados.
 
 ### Sockets de salida
 

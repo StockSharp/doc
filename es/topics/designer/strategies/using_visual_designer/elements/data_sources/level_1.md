@@ -8,7 +8,7 @@ Este bloque se usa para recibir datos **Level1** para un instrumento.
 
 Sockets de entrada
 
-- **Instrument** – instrumento para el que deben recibirse datos **Level1**.
+- **Instrumento** – instrumento para el que deben recibirse datos **Level1**.
 
 ### Sockets de salida
 

@@ -8,8 +8,8 @@ El elemento se usa para obtener información sobre el cambio de posición para e
 
 Sockets de entrada
 
-- **Instrument** - instrumento para el que desea obtener una posición.
-- **Portfolio** - cartera para la que desea obtener una posición.
+- **Instrumento** - instrumento para el que desea obtener una posición.
+- **Cartera** - cartera para la que desea obtener una posición.
 
 ### Sockets de salida
 

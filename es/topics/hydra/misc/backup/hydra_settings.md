@@ -26,7 +26,7 @@ A continuación se describe cómo crear y configurar una tarea de copia de segur
    **Logging**
    - **Identifier** - identificador.
    - **Logging level** - nivel de logging.
-3. Después de configurar la tarea, añada los instrumentos que deben guardarse en el almacenamiento de copia de seguridad y haga clic en el botón **Start**.
+3. Después de configurar la tarea, añada los instrumentos que deben guardarse en el almacenamiento de copia de seguridad y haga clic en el botón **Iniciar**.
 
 ## Contenido recomendado
 

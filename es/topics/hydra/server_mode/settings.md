@@ -10,7 +10,7 @@ Para habilitar el modo servidor de [Hydra](../../hydra.md), seleccione la pesta�
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
-Después haga clic en el botón **Settings** para abrir la ventana de configuración del modo servidor.
+Después haga clic en el botón **Configuración** para abrir la ventana de configuración del modo servidor.
 
 ![hydra server](../../../images/hydra_server.png)
 
@@ -37,7 +37,7 @@ Después haga clic en el botón **Settings** para abrir la ventana de configurac
 - **Simulator** - activar el modo simulador.
 - **Security mapping** - habilitar el modo de transferencia solo para los instrumentos especificados.
 
-Si establece **Authorization** en un valor distinto de **Anonymous**, aparecerá el botón **Users** en la pestaña **Common**. Al hacer clic en él, aparecerá la ventana **Users**.
+Si establece **Autorización** en un valor distinto de **Anónimo**, aparecerá el botón **Usuarios** en la pestaña **Común**. Al hacer clic en él, aparecerá la ventana **Usuarios**.
 
 ![hydra users](../../../images/hydra_users.png)
 

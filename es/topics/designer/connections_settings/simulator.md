@@ -2,11 +2,11 @@
 
 [Designer](../../designer.md) permite ejecutar las estrategias creadas en modo **Simulation**. Para configurar la **Simulation**, se deben realizar las siguientes acciones:
 
-1. Al hacer clic en la flecha junto al botón **Connect** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png), aparece el botón **Emulator settings**:
+1. Al hacer clic en la flecha junto al botón **Conectar** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png), aparece el botón **Configuración del emulador**:
 
 ![Designer The connection settings 00](../../../images/designer_connection_settings_00.png)
 
-2. Al hacer clic en el botón **Emulator settings**, se abre la ventana **Emulator settings**:
+2. Al hacer clic en el botón **Configuración del emulador**, se abre la ventana **Configuración del emulador**:
 
 ![Designer Properties emulation 00](../../../images/designer_properties_emulation_00.png)
 
@@ -15,7 +15,7 @@
 - **Use emulator** – usar el emulador.
 - **Instruments** – instrumentos.
 
-2. **Settings**
+2. **Configuración**
 
 - **Combine on touch** - durante la emulación, combinar operaciones cuando el precio de la operación toca el precio de la orden (es decir, es igual al precio de la orden).
 - **Market depth (lifetime)** - tiempo máximo durante el cual el libro de órdenes está en el emulador. Si durante este tiempo no hubo actualización, el libro de órdenes se borra. Esta propiedad puede usarse para eliminar libros de órdenes antiguos cuando hay huecos en los datos.

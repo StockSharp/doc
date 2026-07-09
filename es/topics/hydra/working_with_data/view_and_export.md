@@ -13,7 +13,7 @@ Cada panel contiene una interfaz general de configuración como la siguiente:
 ![hydra export 00](../../../images/hydra_export_00.png)
 
 - La línea superior indica el almacenamiento de datos de mercado y su formato (BIN o CSV).
-- La línea inferior establece el período para el que se solicitarán los datos. Al hacer clic en el botón **Select security**, aparecerá la ventana de selección de instrumentos, donde puede seleccionar uno o varios instrumentos. Si se seleccionan varios instrumentos, durante la exportación posterior a Excel o CSV el programa ordenará automáticamente los datos de distintos instrumentos en archivos diferentes.
+- La línea inferior establece el período para el que se solicitarán los datos. Al hacer clic en el botón **Seleccionar instrumento**, aparecerá la ventana de selección de instrumentos, donde puede seleccionar uno o varios instrumentos. Si se seleccionan varios instrumentos, durante la exportación posterior a Excel o CSV el programa ordenará automáticamente los datos de distintos instrumentos en archivos diferentes.
 - Si, al construir una tabla con datos, la cantidad de datos descargados supera el límite establecido, aparecerá una ventana en pantalla:![hydra tick limit](../../../images/hydra_tick_limit.png)
 
   debe aumentar el límite de datos descargados.

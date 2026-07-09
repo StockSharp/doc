@@ -12,25 +12,25 @@ Vayamos a la configuración de conexión y seleccionemos la conexión requerida.
 
 ![Terminal Quick start 011](../../images/terminal_quick_start_011.png)
 
-El siguiente paso es conectarse haciendo clic en el botón **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
+El siguiente paso es conectarse haciendo clic en el botón **Conectar** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
 
-Al hacer clic en el botón **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel del gráfico, añadimos una nueva área de gráfico. Con clic derecho en el área del gráfico, añadimos velas para el instrumento que nos interesa. Podemos añadir indicadores, operaciones propias y órdenes al gráfico. También existe la posibilidad de registrar órdenes desde el gráfico. Para obtener más información sobre cómo trabajar con el gráfico, consulte la sección [Gráfico](user_interface/components/chart.md).
+Al hacer clic en el botón **Añadir** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel del gráfico, añadimos una nueva área de gráfico. Con clic derecho en el área del gráfico, añadimos velas para el instrumento que nos interesa. Podemos añadir indicadores, operaciones propias y órdenes al gráfico. También existe la posibilidad de registrar órdenes desde el gráfico. Para obtener más información sobre cómo trabajar con el gráfico, consulte la sección [Gráfico](user_interface/components/chart.md).
 
 ![Terminal Quick start 01](../../images/terminal_quick_start_01.png)
 
-Al hacer clic en el botón **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel Instrument, se añaden los instrumentos que desea observar. Aquí se mostrarán los mejores datos de precio. Para obtener más información sobre cómo trabajar con el panel Instrument, consulte la sección [Instrumentos](user_interface/components/instruments.md).
+Al hacer clic en el botón **Añadir** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel Instrumentos, se añaden los instrumentos que desea observar. Aquí se mostrarán los mejores datos de precio. Para obtener más información sobre cómo trabajar con el panel Instrumentos, consulte la sección [Instrumentos](user_interface/components/instruments.md).
 
 ![Terminal Quick start 02](../../images/terminal_quick_start_02.png)
 
-En el libro de órdenes, después de hacer clic en el botón **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png), aparece un panel donde puede especificar el **Instrument** y la **Portfolio** para las operaciones. Aquí también puede ajustar la profundidad del libro de órdenes. Para obtener más información sobre cómo trabajar con un libro de órdenes, consulte la sección [Libro de órdenes](user_interface/components/order_book.md).
+En el libro de órdenes, después de hacer clic en el botón **Configuración** ![Designer Schedule 01](../../images/designer_schedule_01.png), aparece un panel donde puede especificar el **Instrumento** y la **Cartera** para las operaciones. Aquí también puede ajustar la profundidad del libro de órdenes. Para obtener más información sobre cómo trabajar con un libro de órdenes, consulte la sección [Libro de órdenes](user_interface/components/order_book.md).
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-Registremos las primeras órdenes. Las órdenes se pueden registrar haciendo clic en los botones **Buy/Sell** o haciendo clic en las celdas de las columnas **Bid/Offer** del propio libro de órdenes. El panel de órdenes muestra todas sus órdenes. Al hacer clic derecho sobre una orden, verá un panel que permite enviar una nueva orden, cancelar o modificar la orden seleccionada. Para obtener más información sobre cómo trabajar con el panel de órdenes, consulte la sección [Órdenes](user_interface/components/orders.md).
+Registremos las primeras órdenes. Las órdenes se pueden registrar haciendo clic en los botones **Comprar/Vender** o haciendo clic en las celdas de las columnas **Compra/Venta** del propio libro de órdenes. El panel de órdenes muestra todas sus órdenes. Al hacer clic derecho sobre una orden, verá un panel que permite enviar una nueva orden, cancelar o modificar la orden seleccionada. Para obtener más información sobre cómo trabajar con el panel de órdenes, consulte la sección [Órdenes](user_interface/components/orders.md).
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 
-En el panel Trades, puede ver operaciones por instrumentos. Para obtener más información sobre cómo trabajar con el panel Trades, consulte la sección [Operaciones](user_interface/components/trades.md).
+En el panel Operaciones, puede ver operaciones por instrumentos. Para obtener más información sobre cómo trabajar con el panel Operaciones, consulte la sección [Operaciones](user_interface/components/trades.md).
 
 ![Terminal Quick start 05](../../images/terminal_quick_start_05.png)
 

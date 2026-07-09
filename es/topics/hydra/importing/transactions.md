@@ -12,5 +12,5 @@ Para importar sus transacciones, debe seleccionar **Import \=\> Own Transactions
 2. Configure los parámetros de importación para los campos de [S#](../../api.md).
 
    Consulte la importación de [Velas](candles.md).
-3. Para previsualizar los datos, haga clic en el botón **Preview**.
-4. Haga clic en el botón **Import**.
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.
+4. Haga clic en el botón **Importar**.

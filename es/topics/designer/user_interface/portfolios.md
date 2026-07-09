@@ -1,6 +1,6 @@
 # Carteras
 
-Para trabajar con carteras existe el panel **Portfolios**. Puede abrirlo haciendo clic en el botón Portfolios en la pestaña **Common**.
+Para trabajar con carteras existe el panel **Carteras**. Puede abrirlo haciendo clic en el botón Carteras en la pestaña **Común**.
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 

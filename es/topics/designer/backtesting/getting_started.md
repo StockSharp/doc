@@ -2,11 +2,11 @@
 
 Como ejemplo, se considerará la estrategia SMA.
 
-Para ejecutar la prueba sobre historial, debe seleccionar una estrategia cuyo esquema se probará sobre datos históricos. La estrategia se selecciona en el panel [Schemas](../user_interface/schemas.md), dentro de la carpeta de estrategias, haciendo doble clic en la estrategia de interés.
+Para ejecutar la prueba sobre historial, debe seleccionar una estrategia cuyo esquema se probará sobre datos históricos. La estrategia se selecciona en el panel [Esquemas](../user_interface/schemas.md), dentro de la carpeta de estrategias, haciendo doble clic en la estrategia de interés.
 
 Antes de probar, cargue los datos de mercado (instrumentos, velas, operaciones tick y\/o libros de órdenes). Esto se describe en [Almacenamiento de datos de mercado](../market_data_storage.md).
 
-Al cambiar a la pestaña con una estrategia, la pestaña **Emulation** se abre automáticamente en la **Ribbon**. Defina el período de prueba en esta pestaña. En el campo de datos de mercado, especifique el almacenamiento requerido ([Almacenamiento de datos de mercado](../market_data_storage.md)); en el campo de instrumento, especifique el instrumento requerido.
+Al cambiar a la pestaña con una estrategia, la pestaña **Emulación** se abre automáticamente en la **Cinta**. Defina el período de prueba en esta pestaña. En el campo de datos de mercado, especifique el almacenamiento requerido ([Almacenamiento de datos de mercado](../market_data_storage.md)); en el campo de instrumento, especifique el instrumento requerido.
 
 En el ejemplo con la estrategia SMA se usarán los siguientes parámetros.
 

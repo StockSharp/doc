@@ -6,4 +6,4 @@ El **Workspace** en [Designer](../../designer.md) es una interfaz de ventanas co
 
 ## Contenido recomendado
 
-[Schemas](schemas.md)
+[Esquemas](schemas.md)

@@ -1,12 +1,12 @@
 # Configuración de backtesting
 
-El panel **Properties** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o Live trade. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
+El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o trading en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
 
 ![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
 
-**Settings**
+**Configuración**
 
-- **Market data** – almacenamiento de datos.
+- **Datos de mercado** – almacenamiento de datos.
 - **Storage format** – formato de almacenamiento.
 - **Data type** – tipo de datos.
 - **Time frame** – usar velas con el marco temporal especificado.
@@ -47,10 +47,10 @@ El panel **Properties** está minimizado de forma predeterminada en el lado dere
 
 **Diagram parameters**
 
-- **Security** - instrumento.
-- **Portfolio** - cartera.
+- **Instrumento** - instrumento.
+- **Cartera** - cartera.
 
-Si no rellena los **Diagram parameters**, durante la emulación se usará el instrumento del campo **Instrument** de la pestaña **Emulation**, y como cartera se usará por defecto la cartera de prueba.
+Si no rellena los **Parámetros del diagrama**, durante la emulación se usará el instrumento del campo **Instrumento** de la pestaña **Emulación**, y como cartera se usará por defecto la cartera de prueba.
 
 ## Contenido recomendado
 

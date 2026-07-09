@@ -47,5 +47,5 @@ Para importar velas, seleccione **Import \=\> Candles** en el menú principal de
    - **Zero** - en algunos casos, al guardar datos, ciertas propiedades pueden guardarse como "0", lo que es un error. Por ejemplo, por distintas razones el precio puede ser igual a 0; esto no es aceptable y en el futuro provocará una lectura incorrecta. Esto puede causar un funcionamiento incorrecto de las estrategias que trabajan con esos datos y, como consecuencia, un resultado erróneo. Al marcar esta casilla, el usuario especifica que los datos de esta sección, si son iguales a 0, se escriban como vacíos, es decir, como ausentes. En el trabajo posterior, por ejemplo durante las pruebas, el usuario verá un error de ausencia de datos, lo que indicará una importación incorrecta. En realidad, esto protege al usuario frente a datos "rotos" y permite trabajar de forma más correcta.
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Preview**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
-4. Haga clic en el botón **Import**.
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
+4. Haga clic en el botón **Importar**.

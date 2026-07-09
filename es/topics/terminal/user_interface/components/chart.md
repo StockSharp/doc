@@ -14,7 +14,7 @@ Al hacer clic en ![Designer Schedule 01](../../../../images/designer_schedule_01
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
-Puede registrar órdenes desde el gráfico. Para ello, primero especifique el **Instrument** y la **Portfolio** para los que se registrarán las órdenes.
+Puede registrar órdenes desde el gráfico. Para ello, primero especifique el **Instrumento** y la **Cartera** para los que se registrarán las órdenes.
 
 Las órdenes de compra se registrarán con la combinación de teclas **Ctrl+Left mouse button**.
 

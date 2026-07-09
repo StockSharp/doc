@@ -9,8 +9,8 @@ Este bloque se usa para cancelar todas las órdenes de un instrumento.
 Sockets de entrada
 
 - **Trigger** - señal que determina el momento en que es necesario cancelar órdenes.
-- **Portfolio** – cartera para la que deben cancelarse todas las órdenes.
-- **Security** – instrumento para el que deben cancelarse todas las órdenes.
+- **Cartera** – cartera para la que deben cancelarse todas las órdenes.
+- **Instrumento** – instrumento para el que deben cancelarse todas las órdenes.
 
 ### Sockets de salida
 

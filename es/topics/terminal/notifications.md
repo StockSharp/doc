@@ -6,13 +6,13 @@ Las notificaciones pueden especificarse para una amplia gama de eventos de tradi
 
 Las notificaciones pueden tener las siguientes formas:
 
-- **Window** - aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
-- **Music** - se reproducirá música.
+- **Ventana** - aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
+- **Música** - se reproducirá música.
 - **SMS** - el mensaje se enviará por SMS.
 - **Email** - el mensaje se enviará por correo electrónico.
-- **Voice** - el mensaje será pronunciado por una voz generada por ordenador.
-- **Log** - el mensaje se enviará a [Registros](user_interface/logs.md).
-- **Disabled** - la notificación no se mostrará.
+- **Voz** - el mensaje será pronunciado por una voz generada por ordenador.
+- **Registro** - el mensaje se enviará a [Registros](user_interface/logs.md).
+- **Desactivado** - la notificación no se mostrará.
 
 Para establecer una notificación, debe hacer clic en el botón ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notifications/notification_panel.md)) o hacer clic en el botón ![Designer Alert Bell](../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones.
 

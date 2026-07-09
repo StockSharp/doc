@@ -2,7 +2,7 @@
 
 De forma similar a la creación de un [cubo a partir de un diagrama](../../using_visual_designer/composite_elements.md), puede crear su propio cubo basado en código F#. Este cubo será más funcional que un cubo creado a partir de un diagrama.
 
-Para crear un cubo desde código, debe crearse en la carpeta **Own elements**:
+Para crear un cubo desde código, debe crearse en la carpeta **Elementos propios**:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -116,7 +116,7 @@ La propiedad comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEle
 
 Si se descomenta, el método **Process** se llamará siempre en cuanto llegue al menos un valor (en el ejemplo, una vela o un valor numérico).
 
-Para añadir el cubo resultante al diagrama, debe seleccionar el cubo creado en la paleta, en la sección **Own elements**:
+Para añadir el cubo resultante al diagrama, debe seleccionar el cubo creado en la paleta, en la sección **Elementos propios**:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 

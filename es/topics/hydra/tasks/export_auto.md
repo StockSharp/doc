@@ -26,7 +26,7 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 - **Connection** - cadena de conexión preparada.
 
 > [!TIP]
-> Puede comprobar la conexión a la base de datos con el botón **Check**.
+> Puede comprobar la conexión a la base de datos con el botón **Comprobar**.
 
 **General**
 

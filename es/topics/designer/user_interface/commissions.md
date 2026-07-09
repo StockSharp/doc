@@ -17,7 +17,7 @@ Lista de tipos de comisión
 - **Trade (price)** – comisión por el precio de la operación.
 - **Trade** – comisión por la operación.
 - **Trade (volume)** – comisión por el volumen en la orden.
-- **Security** – comisión del instrumento.
+- **Instrumento** – comisión del instrumento.
 - **Security (type)** – comisión del tipo de instrumento.
 - **Turnover** – comisión por volumen negociado.
 - **Board** – comisión del board.

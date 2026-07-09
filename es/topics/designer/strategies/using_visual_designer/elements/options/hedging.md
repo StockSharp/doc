@@ -9,7 +9,7 @@ El cubo se usa para cubrir posiciones en opciones.
 Sockets de entrada
 
 - **Model** – modelo de cálculo (por ejemplo, Black-Scholes).
-- **Instrument** – instrumento, el activo subyacente.
+- **Instrumento** – instrumento, el activo subyacente.
 - **Volume** - valor numérico del volumen.
 - **Position by underlying asset** – posición por el activo subyacente.
 - **Flag** – señal (bandera) que inicia el proceso de cobertura.

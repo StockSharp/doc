@@ -18,7 +18,7 @@ Campos que deben rellenarse:
 
 El acceso al nivel **Free** o **Paid** se concede solo después de contactar por correo electrónico [info@stocksharp.com](mailto:info@stocksharp.com). De forma predeterminada, está disponible el nivel **Private**, que permite publicar estrategias solo en formato privado (para usuarios seleccionados):
 
-Después de hacer clic en el botón **Save**, la estrategia se enviará al servidor de StockSharp.
+Después de hacer clic en el botón **Guardar**, la estrategia se enviará al servidor de StockSharp.
 
 Al publicar actualizaciones, no es necesario introducir todos los parámetros de nuevo. En lugar de introducir parámetros del producto, aparecerá una ventana para introducir una nota de la actualización:
 

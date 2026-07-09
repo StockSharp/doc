@@ -1,6 +1,6 @@
 # Eliminar datos
 
-Pestaña **Common**, botón **Delete data...**.
+Pestaña **Común**, botón **Eliminar datos...**.
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 

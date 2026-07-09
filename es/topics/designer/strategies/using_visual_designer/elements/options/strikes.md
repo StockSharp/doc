@@ -8,7 +8,7 @@ El cubo se usa para obtener una lista de opciones por un filtro especificado.
 
 Sockets de entrada
 
-- **Instrument** – instrumento, el activo subyacente.
+- **Instrumento** – instrumento, el activo subyacente.
 
 ### Sockets de salida
 

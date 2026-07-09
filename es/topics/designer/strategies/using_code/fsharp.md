@@ -4,17 +4,17 @@ La creación de estrategias desde código está pensada para usuarios que prefie
 
 El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **F#** (los más populares son **Visual Studio** y **JetBrains Rider**), usando una biblioteca para el desarrollo profesional de robots de trading en **F#** y la [API](../../../api.md).
 
-Puede añadir una nueva estrategia pulsando el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Common** y eligiendo **Strategy**. O bien haciendo clic con el botón derecho en la carpeta **Strategies** del panel **Scheme** y pulsando el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
+Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Después de pulsar el botón **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido para crear la estrategia:
+Después de pulsar el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido para crear la estrategia:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_fsharp_create_strategy_00.png)
 
 Para crear una estrategia desde código F#, debe seleccionar la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
-Después de pulsar **OK**, aparecerá una nueva estrategia en la carpeta **Strategies** del panel **Scheme**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
+Después de pulsar **OK**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
 
 Pero en lugar de un diagrama, se mostrará un editor de código F#:
 

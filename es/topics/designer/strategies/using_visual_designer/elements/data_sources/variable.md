@@ -25,7 +25,7 @@ Parámetros
 - **Value** - valor predeterminado almacenado en la variable. Este valor se usa si no se recibieron otros valores en la entrada del elemento.
 - **Raise on start** - cuando la casilla está seleccionada, el valor se pasará al iniciar la estrategia.
 
-Si se selecciona el tipo de dato **Instrument** o **Portfolio**, el valor predeterminado puede faltar. En este caso, si la bandera **Parameters** está establecida en las propiedades, al ejecutarse la estrategia estos datos se tomarán de las propiedades correspondientes de la estrategia.
+Si se selecciona el tipo de dato **Instrumento** o **Cartera**, el valor predeterminado puede faltar. En este caso, si la bandera **Parámetros** está establecida en las propiedades, al ejecutarse la estrategia estos datos se tomarán de las propiedades correspondientes de la estrategia.
 
 ## Contenido recomendado
 

@@ -2,7 +2,7 @@
 
 La creación de un indicador personalizado en la [API](../../../../api.md) se describe en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md). Estos indicadores son totalmente compatibles con **Designer**.
 
-Para crear un indicador, debe seleccionar la carpeta **Indicators** en el panel **Schemes**, hacer clic con el botón derecho y seleccionar **Add** en el menú contextual:
+Para crear un indicador, debe seleccionar la carpeta **Indicadores** en el panel **Esquemas**, hacer clic con el botón derecho y seleccionar **Añadir** en el menú contextual:
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 

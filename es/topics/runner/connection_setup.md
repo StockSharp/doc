@@ -31,7 +31,7 @@ Para [Binance](../api/connectors/crypto_exchanges/binance.md), debe introducir s
 
 ![runner_setup_7](../../images/runner_setup_7.png)
 
-Para verificar la corrección de los datos introducidos, seleccione **Check**:
+Para verificar la corrección de los datos introducidos, seleccione **Comprobar**:
 
 ![runner_setup_8](../../images/runner_setup_8.png)
 
@@ -43,7 +43,7 @@ En caso de éxito, se mostrará un mensaje:
 
 ![runner_setup_10](../../images/runner_setup_10.png)
 
-Después de introducir todos los ajustes y verificarlos, debe pulsar **Save**:
+Después de introducir todos los ajustes y verificarlos, debe pulsar **Guardar**:
 
 ![runner_setup_11](../../images/runner_setup_11.png)
 

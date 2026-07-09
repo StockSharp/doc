@@ -2,12 +2,12 @@
 
 Designer permite exportar cualquier tipo de dato: estrategias, bloques e indicadores. Hay varias formas de exportar:
 
-- En el panel **Schemes**, haga clic con el botón derecho en la estrategia, bloque o indicador. En el menú que aparece, seleccione **Export**.
-- En la pestaña **Common**, pulse el botón **Export**:
+- En el panel **Esquemas**, haga clic con el botón derecho en la estrategia, bloque o indicador. En el menú que aparece, seleccione **Exportar**.
+- En la pestaña **Común**, pulse el botón **Exportar**:
 
 ![Designer Export strategies 00](../../../images/designer_export_strategies_00.png)
 
-Después de pulsar **Export**, según el tipo de contenido, aparecerá una ventana:
+Después de pulsar **Exportar**, según el tipo de contenido, aparecerá una ventana:
 
 - para un [esquema](../strategies/using_visual_designer.md):
 

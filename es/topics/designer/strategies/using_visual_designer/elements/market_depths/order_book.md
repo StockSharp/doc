@@ -6,7 +6,7 @@ El cubo se usa para obtener el libro de órdenes del instrumento especificado.
 
 ### Sockets de entrada
 
-- **Instrument** - instrumento para el que necesita obtener un libro de órdenes.
+- **Instrumento** - instrumento para el que necesita obtener un libro de órdenes.
 
 ### Sockets de salida
 

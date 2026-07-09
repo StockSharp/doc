@@ -1,6 +1,6 @@
 # Primer inicio
 
-La primera vez que se ejecuta, aparece la siguiente ventana para seleccionar fuentes de datos. También puede abrir esta ventana en la pestaña **Common**, seleccionando **Add \=\> Sources**.
+La primera vez que se ejecuta, aparece la siguiente ventana para seleccionar fuentes de datos. También puede abrir esta ventana en la pestaña **Común**, seleccionando **Añadir \=\> Fuentes**.
 
 ![hydra source add](../../images/hydra_source_add.png)
 
@@ -29,11 +29,11 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    En el primer inicio, el programa ofrecerá descargar todos los instrumentos de una vez para la fuente seleccionada. Más adelante, el usuario descargará los instrumentos por su cuenta. Inicialmente, la base de instrumentos de [Hydra](../hydra.md) está vacía; solo existe el instrumento auxiliar **ALL@ALL**. Al seleccionar este instrumento, se descargarán datos de todos los instrumentos disponibles para esta fuente.
 
-   Para añadir un instrumento, haga clic en el botón **Add** ![hydra add](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![hydra securities](../../images/hydra_securities.png)
+   Para añadir un instrumento, haga clic en el botón **Añadir** ![hydra add](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![hydra securities](../../images/hydra_securities.png)
 
-   Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Download securities**.
+   Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Descargar instrumentos**.
 
-   Después aparecerá en pantalla un menú donde el usuario puede seleccionar **Download all securities**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Después aparecerá en pantalla un menú donde el usuario puede seleccionar **Descargar todos los instrumentos**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
 
    O bien, para varias fuentes, [configurar](prepare_for_download/instruments_list.md) los instrumentos que necesita descargar.
 
@@ -45,7 +45,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    Después se moverá al lado derecho de la tabla.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
 
-   Los instrumentos seleccionados se mostrarán en la tabla **Securities**, que tiene estructura de árbol. Su elemento principal es el instrumento; el elemento adicional son los tipos de datos de mercado que se recibirán para ese instrumento.
+   Los instrumentos seleccionados se mostrarán en la tabla **Instrumentos**, que tiene estructura de árbol. Su elemento principal es el instrumento; el elemento adicional son los tipos de datos de mercado que se recibirán para ese instrumento.
 2. Para cada instrumento seleccionado, debe elegir los tipos de datos de mercado necesarios para la descarga.
 
    Si no se han establecido todos los parámetros necesarios del instrumento, aparecerá el icono ![hydra zero](../../images/hydra_zero.png) en la columna izquierda de la línea del instrumento. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
@@ -67,9 +67,9 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
      Esta función es conveniente si la fuente no permite recibir datos para construir velas. En este caso, las velas se construyen con base en valores de datos promediados.![hydra candle build type](../../images/hydra_candle_build_type.png)
 
      El usuario también puede seleccionar un [tipo personalizado](prepare_for_download/custom_candles.md) de velas para configurar los datos recibidos.
-   - Después de seleccionar un instrumento, un tipo de datos de mercado y establecer el período, debe hacer clic en el botón **Start**. Después comenzará la descarga de datos de mercado.
+   - Después de seleccionar un instrumento, un tipo de datos de mercado y establecer el período, debe hacer clic en el botón **Iniciar**. Después comenzará la descarga de datos de mercado.
 
-   El proceso de trabajo puede observarse en la pestaña especial **Logs**, fijada en la parte inferior del programa. Además, los registros se guardan en archivos en la carpeta local.
+   El proceso de trabajo puede observarse en la pestaña especial **Registros**, fijada en la parte inferior del programa. Además, los registros se guardan en archivos en la carpeta local.
 
 ![hydra main start](../../images/hydra_main_start.png)
 

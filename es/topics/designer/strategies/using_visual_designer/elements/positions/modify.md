@@ -6,9 +6,9 @@ El componente "Modify Position" se usa para cambiar una posición de trading seg
 
 ## Sockets de entrada
 
-- **Security**: instrumento para el que se modificará la posición.
+- **Instrumento**: instrumento para el que se modificará la posición.
 - **Trigger**: señal para activar la modificación de la posición.
-- **Portfolio**: cartera dentro de la cual ocurre la operación.
+- **Cartera**: cartera dentro de la cual ocurre la operación.
 - **Volume** (opcional): volumen para operaciones "Increase" y "Decrease". No se usa para "Reverse" y "Close Position".
 - **Last Price** y **Last Volume**: para los algoritmos "VWAP" e "Iceberg" se requieren datos sobre el último precio y volumen de la transacción.
 - **Cancel**: señal para cancelar la configuración de posición, por ejemplo, por timeout.
