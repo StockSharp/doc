@@ -4,9 +4,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings Bitfinex](../../../../../images/api_gui_settings_bitfinex.png)
 
-- **clave** - Clave.
-- **secreto** - Secreto.
-- **Cancel On Disconnect** - Cancel On Disconnect.
+- **Clave** - Clave.
+- **Secreto** - Secreto.
+- **Cancelar al desconectar** - Cancela las órdenes al desconectarse.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 
