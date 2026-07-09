@@ -55,7 +55,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstutzten Datenq
    Am unteren Rand des Quellenfensters befindet sich ein Panel mit Schaltflächen zur Einrichtung der zu empfangenden Daten und Instrumente. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
    In diesem Panel können die folgenden Operationen ausgeführt werden:
-   - Konfigurieren der Menge der empfangenen Informationen mit den Schaltflächen: **Trades, Order Books, Candles, Order Log, Level 1, Own Transactions**. Die Listen verfügbarer Marktdatentypen unterscheiden sich je nach Quelle.
+   - Konfigurieren der Menge der empfangenen Informationen mit den Schaltflächen: **Geschäfte, Orderbücher, Kerzen, Orderprotokoll, Level 1, Eigene Transaktionen**. Die Listen verfügbarer Marktdatentypen unterscheiden sich je nach Quelle.
    - Den erforderlichen Time Frame für die geladenen Kerzen angeben. Der Time Frame der empfangenen Kerzen unterscheidet sich je nach Quelle.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - Den erforderlichen Zeitraum für das Herunterladen von Marktdaten festlegen. Der Zeitraum kann auch direkt im Marktdatenfenster konfiguriert werden. Dazu wählen Sie den Beginn und das Ende des Zeitraums aus.
 

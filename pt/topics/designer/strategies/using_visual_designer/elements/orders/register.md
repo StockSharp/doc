@@ -2,7 +2,7 @@
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 
-O componente "Order Registration" é utilizado para colocar ordens de negociação para um instrumento seleccionado.
+O componente "Registo de ordem" é utilizado para colocar ordens de negociação para um instrumento seleccionado.
 
 ## Sockets de entrada
 
@@ -38,15 +38,15 @@ O componente "Order Registration" é utilizado para colocar ordens de negociaç�
 - **Tipo de ordem stop** - O tipo de ordem stop.
 - **Resultado** - O resultado da ordem stop executada.
 - **Identificador do instrumento** - O identificador do instrumento para ordens stop com condições relacionadas com outro instrumento.
-- **Condição de preço stop** - A condição do preço stop. Utilizada para ordens como "Stop price for another instrument."
+- **Condição de preço stop** - A condição do preço stop. Utilizada para ordens como "preço stop para outro instrumento".
 - **Preço stop** - O preço stop que define a condição de activação da ordem stop.
-- **Preço stop-limit** - Semelhante a Stop Price, mas utilizado apenas para ordens do tipo "Take-profit and stop-limit".
+- **Preço stop-limit** - Semelhante ao preço stop, mas utilizado apenas para ordens do tipo "take-profit e stop-limit".
 - **Stop-limit ao preço de mercado** - Indica se a ordem "Stop-Limit" é executada ao preço de mercado.
-- **Intervalo de verificação da condição** - O intervalo de tempo para verificar as condições da ordem apenas dentro do período especificado (se for nulo, não há verificações). Utilizado para os tipos "Take-profit and stop-limit" e "Take-profit and stop-limit by order".
+- **Intervalo de verificação da condição** - O intervalo de tempo para verificar as condições da ordem apenas dentro do período especificado (se for nulo, não há verificações). Utilizado para os tipos "take-profit e stop-limit" e "take-profit e stop-limit por ordem".
 - **Identificador de execução da ordem condicional** - O identificador da ordem condicional baseada na execução.
 - **Direção da ordem condicional por execução** - A direcção da ordem condicional baseada na execução.
-- **Ativação em execução parcial** - A execução parcial da ordem é considerada. Uma ordem "on-execution" será activada após a execução parcial da ordem de condição.
-- **Volume executado** - Usa o volume executado da ordem como quantidade para colocar a ordem stop. A quantidade de títulos numa ordem "on-execution" é tomada como o volume executado da ordem de condição.
+- **Ativação em execução parcial** - A execução parcial da ordem é considerada. Uma ordem "por execução" será activada após a execução parcial da ordem de condição.
+- **Volume executado** - Usa o volume executado da ordem como quantidade para colocar a ordem stop. A quantidade de títulos numa ordem "por execução" é tomada como o volume executado da ordem de condição.
 - **Preço da ordem ligada** - O preço da ordem limitada ligada.
 - **Retirada em execução parcial** - Indica a retirada da ordem stop após a execução parcial da ordem limitada ligada.
 - **Desvio do máximo** - O valor de desvio face ao preço máximo (mínimo) da última transacção.
@@ -55,7 +55,7 @@ O componente "Order Registration" é utilizado para colocar ordens de negociaç�
 
 ## Nota
 
-Trabalhar com ordens é um método de baixo nível para gerir posições. Para uma gestão de nível superior, recomenda-se utilizar o componente "Modify Position", descrito em [Modificar posição](../positions/modify.md).
+Trabalhar com ordens é um método de baixo nível para gerir posições. Para uma gestão de nível superior, recomenda-se utilizar o componente "Modificar posição", descrito em [Modificar posição](../positions/modify.md).
 
 ## Ver também
 

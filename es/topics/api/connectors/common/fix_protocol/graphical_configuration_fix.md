@@ -4,28 +4,28 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
-- **dirección** - Dirección.
+- **Dirección** - Dirección.
 - **Dialecto** - Dialecto del protocolo FIX.
-- **Sender** - Identificador del remitente.
-- **Target** - Identificador del destinatario.
-- **usuario** - Login.
-- **contraseña** - Contraseña.
-- **Portfolios** - Solicitar todos los portafolios al inicio.
-- **Instruments** - Solicitar todos los instrumentos al conectar.
-- **Encoding** - Codificación utilizada para la transferencia de datos.
-- **Sequence reset** - Si se debe reiniciar el contador de identificadores.
-- **Date format** - Formato de fecha.
-- **Date and time format** - Formato de fecha y hora.
-- **Time format** - Formato de hora.
-- **Receive timeout** - Tiempo de espera de recepción de datos.
-- **Send timeout** - Tiempo de espera de envío de datos.
-- **Unknown transactions** - Procesar ejecuciones desconocidas generadas por un tercero.
-- **Protocol** - Protocolo SSL para establecer la conexión.
-- **certificado** - Certificado SSL.
-- **contraseña** - Contraseña del certificado SSL.
-- **Revocation check** - Verificación de revocación del certificado.
-- **Check remote** - Verificar certificados remotos.
-- **Server name** - Nombre del servidor que utiliza la conexión SSL.
+- **Remitente** - Identificador del remitente.
+- **Destinatario** - Identificador del destinatario.
+- **Usuario** - Usuario.
+- **Contraseña** - Contraseña.
+- **Carteras** - Solicitar todas las carteras al inicio.
+- **Instrumentos** - Solicitar todos los instrumentos al conectar.
+- **Codificación** - Codificación utilizada para la transferencia de datos.
+- **Reinicio de secuencia** - Si se debe reiniciar el contador de identificadores.
+- **Formato de fecha** - Formato de fecha.
+- **Formato de fecha y hora** - Formato de fecha y hora.
+- **Formato de hora** - Formato de hora.
+- **Tiempo de espera de recepción** - Tiempo de espera de recepción de datos.
+- **Tiempo de espera de envío** - Tiempo de espera de envío de datos.
+- **Transacciones desconocidas** - Procesar ejecuciones desconocidas generadas por un tercero.
+- **Protocolo** - Protocolo SSL para establecer la conexión.
+- **Certificado** - Certificado SSL.
+- **Contraseña** - Contraseña del certificado SSL.
+- **Verificación de revocación** - Verificación de revocación del certificado.
+- **Verificar certificados remotos** - Verificar certificados remotos.
+- **Nombre del servidor** - Nombre del servidor que utiliza la conexión SSL.
 - **Configuración de reconexión** - Configuración del mecanismo de seguimiento de la conexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
 - **Intervalo de comprobación** - Intervalo para notificar al servidor que la conexión sigue activa. El valor predeterminado es 1 minuto.
 - **Código de mercado unificado** - Código de bolsa para el instrumento unificado.

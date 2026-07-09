@@ -55,7 +55,7 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
    Na parte inferior da janela da fonte existe um painel com botões para configurar os dados e instrumentos a receber. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
    Neste painel podem ser executadas as seguintes operações:
-   - Configurar a quantidade de informação recebida através dos botões: **Trades, Order Books, Candles, Order Log, Level 1, Own Transactions**. As listas de tipos de dados de mercado disponíveis variam consoante a fonte.
+   - Configurar a quantidade de informação recebida através dos botões: **Negócios, Livros de ofertas, Velas, Registo de ordens, Level 1, Transações próprias**. As listas de tipos de dados de mercado disponíveis variam consoante a fonte.
    - Especificar o Time Frame necessário para as velas carregadas. O Time Frame das velas recebidas é diferente para fontes diferentes.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - Definir o período necessário para a transferência dos dados de mercado. O período também pode ser configurado diretamente na janela de dados de mercado. Para isso, deve selecionar o início e o fim do período.
 

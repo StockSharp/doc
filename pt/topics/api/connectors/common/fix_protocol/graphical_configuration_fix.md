@@ -4,28 +4,28 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
-- **endereço** - Endereço.
+- **Endereço** - Endereço.
 - **Dialeto** - Dialeto do protocolo FIX.
-- **Sender** - Identificador do remetente.
-- **Target** - Identificador do destinatário.
-- **nome de utilizador** - Login.
-- **palavra-passe** - Senha.
-- **Portfolios** - Solicitar todos os portfólios ao iniciar.
-- **Instruments** - Solicitar todos os instrumentos na conexão.
-- **Encoding** - Codificação usada para a transferência de dados.
-- **Sequence reset** - Se deve redefinir o contador de identificadores.
-- **Date format** - Formato de data.
-- **Date and time format** - Formato de data e hora.
-- **Time format** - Formato de hora.
-- **Receive timeout** - Tempo limite para recebimento de dados.
-- **Send timeout** - Tempo limite para envio de dados.
-- **Unknown transactions** - Processar execuções desconhecidas geradas por terceiros.
-- **Protocol** - Protocolo SSL para estabelecer a conexão.
-- **certificado** - Certificado SSL.
-- **palavra-passe** - Senha do certificado SSL.
-- **Revocation check** - Verificação de revogação de certificado.
-- **Check remote** - Verificar certificados remotos.
-- **Server name** - Nome do servidor que usa a conexão SSL.
+- **Remetente** - Identificador do remetente.
+- **Destinatário** - Identificador do destinatário.
+- **Nome de utilizador** - Nome de utilizador.
+- **Palavra-passe** - Palavra-passe.
+- **Carteiras** - Solicitar todas as carteiras ao iniciar.
+- **Instrumentos** - Solicitar todos os instrumentos na ligação.
+- **Codificação** - Codificação usada para a transferência de dados.
+- **Reposição de sequência** - Se deve repor o contador de identificadores.
+- **Formato de data** - Formato de data.
+- **Formato de data e hora** - Formato de data e hora.
+- **Formato de hora** - Formato de hora.
+- **Tempo limite de receção** - Tempo limite para receção de dados.
+- **Tempo limite de envio** - Tempo limite para envio de dados.
+- **Transações desconhecidas** - Processar execuções desconhecidas geradas por terceiros.
+- **Protocolo** - Protocolo SSL para estabelecer a ligação.
+- **Certificado** - Certificado SSL.
+- **Palavra-passe** - Palavra-passe do certificado SSL.
+- **Verificação de revogação** - Verificação de revogação do certificado.
+- **Verificar certificados remotos** - Verificar certificados remotos.
+- **Nome do servidor** - Nome do servidor que usa a ligação SSL.
 - **Definições de religação** - Configurações do mecanismo para rastrear a conexão com o sistema de negociação ([Configurações de reconexão](../../reconnection_settings.md)).
 - **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a conexão ainda está ativa. O valor padrão é 1 minuto.
 - **Código de mercado unificado** - Código da bolsa para o instrumento unificado.

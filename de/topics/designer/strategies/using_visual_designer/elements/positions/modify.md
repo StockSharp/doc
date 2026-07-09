@@ -2,7 +2,7 @@
 
 ![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
 
-Die Komponente „Modify Position“ wird verwendet, um eine Handelsposition anhand angegebener Bedingungen zu ändern.
+Die Komponente „Position ändern“ wird verwendet, um eine Handelsposition anhand angegebener Bedingungen zu ändern.
 
 ## Eingabe-Sockets
 
@@ -39,7 +39,7 @@ Wenn die Komponente einen Trigger empfängt, während sie bereits mit der Änder
 
 ## Hinweis
 
-Für die Low-Level-Orderverwaltung kann die Komponente [Orderregistrierung](../orders/register.md) verwendet werden. Für die Positionsverwaltung auf höherer Ebene wird diese Komponente „Modify Position“ empfohlen.
+Für die Low-Level-Orderverwaltung kann die Komponente [Orderregistrierung](../orders/register.md) verwendet werden. Für die Positionsverwaltung auf höherer Ebene wird diese Komponente „Position ändern“ empfohlen.
 
 ## Siehe auch
 

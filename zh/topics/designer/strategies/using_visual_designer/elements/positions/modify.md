@@ -2,7 +2,7 @@
 
 ![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
 
-“Modify Position”组件用于根据指定条件更改交易持仓。
+“修改持仓”组件用于根据指定条件更改交易持仓。
 
 ## 输入端口
 
@@ -39,7 +39,7 @@
 
 ## 注意
 
-如需进行低层级的订单管理，可以使用 [注册订单](../orders/register.md) 组件。对于更高层级的持仓管理，建议使用“Modify Position”组件。
+如需进行低层级的订单管理，可以使用 [注册订单](../orders/register.md) 组件。对于更高层级的持仓管理，建议使用“修改持仓”组件。
 
 ## 另请参阅
 

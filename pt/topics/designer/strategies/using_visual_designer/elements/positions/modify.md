@@ -2,7 +2,7 @@
 
 ![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
 
-O componente "Modify Position" é utilizado para alterar uma posição de negociação com base em condições especificadas.
+O componente "Modificar posição" é utilizado para alterar uma posição de negociação com base em condições especificadas.
 
 ## Sockets de entrada
 
@@ -39,7 +39,7 @@ Se o componente receber um trigger quando já iniciou a alteração do volume, i
 
 ## Nota
 
-Para gestão de ordens de baixo nível, pode ser utilizado o componente [Registo de ordem](../orders/register.md). Para uma gestão de posições de nível superior, recomenda-se este componente "Modify Position".
+Para gestão de ordens de baixo nível, pode ser utilizado o componente [Registo de ordem](../orders/register.md). Para uma gestão de posições de nível superior, recomenda-se este componente "Modificar posição".
 
 ## Ver também
 

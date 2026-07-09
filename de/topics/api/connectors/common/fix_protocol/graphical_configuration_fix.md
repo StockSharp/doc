@@ -6,26 +6,26 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Adresse** - Adresse.
 - **Dialekt** - Dialekt des FIX-Protokolls.
-- **Sender** - Absenderkennung.
-- **Target** - Zielkennung.
-- **Benutzername** - Login.
+- **Absender** - Absenderkennung.
+- **Empfänger** - Empfängerkennung.
+- **Benutzername** - Benutzername.
 - **Passwort** - Passwort.
 - **Portfolios** - Alle Portfolios beim Start anfordern.
-- **Instruments** - Alle Instrumente bei der Verbindung anfordern.
-- **Encoding** - Für die Datenübertragung verwendete Kodierung.
-- **Sequence reset** - Ob der Bezeichnerzähler zurückgesetzt werden soll.
-- **Date format** - Datumsformat.
-- **Date and time format** - Datums- und Zeitformat.
-- **Time format** - Zeitformat.
-- **Receive timeout** - Timeout für den Datenempfang.
-- **Send timeout** - Timeout für das Senden von Daten.
-- **Unknown transactions** - Verarbeitung unbekannter, von Dritten erzeugter Ausführungen.
-- **Protocol** - SSL-Protokoll für den Verbindungsaufbau.
+- **Instrumente** - Alle Instrumente bei der Verbindung anfordern.
+- **Kodierung** - Für die Datenübertragung verwendete Kodierung.
+- **Sequenz zurücksetzen** - Ob der Bezeichnerzähler zurückgesetzt werden soll.
+- **Datumsformat** - Datumsformat.
+- **Datums- und Zeitformat** - Datums- und Zeitformat.
+- **Zeitformat** - Zeitformat.
+- **Empfangs-Timeout** - Timeout für den Datenempfang.
+- **Sende-Timeout** - Timeout für das Senden von Daten.
+- **Unbekannte Transaktionen** - Verarbeitung unbekannter, von Dritten erzeugter Ausführungen.
+- **Protokoll** - SSL-Protokoll für den Verbindungsaufbau.
 - **Zertifikat** - SSL-Zertifikat.
 - **Passwort** - Passwort für das SSL-Zertifikat.
-- **Revocation check** - Prüfung des Zertifikatswiderrufs.
-- **Check remote** - Prüfung der Remote-Zertifikate.
-- **Server name** - Servername, der die SSL-Verbindung verwendet.
+- **Widerrufsprüfung** - Prüfung des Zertifikatswiderrufs.
+- **Remote-Zertifikate prüfen** - Prüfung der Remote-Zertifikate.
+- **Servername** - Servername, der die SSL-Verbindung verwendet.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
 - **Intervall der Verbindungsprüfung** - Intervall zur Benachrichtigung des Servers, dass die Verbindung noch aktiv ist. Der Standardwert beträgt 1 Minute.
 - **Vereinheitlichter Board-Code** - Board-Code für das vereinheitlichte Instrument.

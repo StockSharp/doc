@@ -4,16 +4,16 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![API GUI Settings IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
 
-- **Level1 server** - Endereço para obter dados de Level1.
-- **Level2 server** - Endereço para obter dados de Level2.
-- **Lookup server** - Endereço para obter dados históricos.
-- **Admin server** - Endereço para obter dados de serviço.
-- **Derivatives** - Endereço para obter dados de derivados.
-- **Data for Level1** - Todos os tipos de dados para Level1 que têm de ser transmitidos.
-- **Data type** - Tipos de títulos para os quais os dados devem ser recebidos.
-- **Load securities** - Se o conjunto completo de títulos deve ser carregado a partir do arquivo do site IQFeed.
-- **File with securities** - Caminho para o ficheiro com a lista de títulos do IQFeed, descarregado do site. Se o caminho for especificado, não ocorre um segundo descarregamento a partir do site e apenas a cópia local é analisada.
-- **Version** - Versão.
+- **Servidor Level1** - Endereço para obter dados de Level1.
+- **Servidor Level2** - Endereço para obter dados de Level2.
+- **Servidor Lookup** - Endereço para obter dados históricos.
+- **Servidor Admin** - Endereço para obter dados de serviço.
+- **Derivados** - Endereço para obter dados de derivados.
+- **Dados de Level1** - Todos os tipos de dados para Level1 que têm de ser transmitidos.
+- **Tipo de dados** - Tipos de títulos para os quais os dados devem ser recebidos.
+- **Carregar títulos** - Se o conjunto completo de títulos deve ser carregado a partir do arquivo do site IQFeed.
+- **Ficheiro com títulos** - Caminho para o ficheiro com a lista de títulos do IQFeed, descarregado do site. Se o caminho for especificado, não ocorre um segundo descarregamento a partir do site e apenas a cópia local é analisada.
+- **Versão** - Versão.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

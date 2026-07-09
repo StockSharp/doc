@@ -2,7 +2,7 @@
 
 ![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
 
-Die Komponente „Order Registration“ wird verwendet, um Handelsorders für ein ausgewähltes Instrument zu platzieren.
+Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ein ausgewähltes Instrument zu platzieren.
 
 ## Eingabe-Sockets
 
@@ -38,15 +38,15 @@ Die Komponente „Order Registration“ wird verwendet, um Handelsorders für ei
 - **Stop-Order-Typ** - der Typ der Stop-Order.
 - **Ergebnis** - das Ergebnis der ausgeführten Stop-Order.
 - **Instrumentkennung** - die Kennung des Instruments für Stop-Orders mit Bedingungen, die sich auf ein anderes Instrument beziehen.
-- **Stop-Preis-Bedingung** - die Stop-Preis-Bedingung. Wird für Orders wie „Stop price for another instrument“ verwendet.
+- **Stop-Preis-Bedingung** - die Stop-Preis-Bedingung. Wird für Orders wie „Stop-Preis für ein anderes Instrument“ verwendet.
 - **Stop-Preis** - der Stop-Preis, der die Auslösebedingung für die Stop-Order festlegt.
-- **Stop-Limit-Preis** - ähnlich wie Stop Price, wird aber nur für Orders des Typs „Take-profit and stop-limit“ verwendet.
+- **Stop-Limit-Preis** - ähnlich wie der Stop-Preis, wird aber nur für Orders des Typs „Take-Profit und Stop-Limit“ verwendet.
 - **Stop-Limit zum Marktpreis** - gibt an, ob die „Stop-Limit“-Order zum Marktpreis ausgeführt wird.
-- **Intervall der Bedingungsprüfung** - das Zeitintervall, in dem die Bedingungen der Order nur innerhalb des angegebenen Zeitraums geprüft werden (bei null erfolgen keine Prüfungen). Wird für die Typen „Take-profit and stop-limit“ und „Take-profit and stop-limit by order“ verwendet.
+- **Intervall der Bedingungsprüfung** - das Zeitintervall, in dem die Bedingungen der Order nur innerhalb des angegebenen Zeitraums geprüft werden (bei null erfolgen keine Prüfungen). Wird für die Typen „Take-Profit und Stop-Limit“ und „Take-Profit und Stop-Limit nach Order“ verwendet.
 - **Ausführungskennung der bedingten Order** - die Kennung der bedingten Order auf Ausführungsbasis.
 - **Richtung der bedingten Order nach Ausführung** - die Richtung der bedingten Order auf Ausführungsbasis.
-- **Aktivierung bei Teilausführung** - die Teilausführung der Order wird berücksichtigt. Eine „on-execution“-Order wird bei Teilausführung der Bedingungsorder aktiviert.
-- **Ausgeführtes Volumen** - verwendet das ausgeführte Volumen der Order als Menge für die Platzierung der Stop-Order. Die Anzahl der Wertpapiere in einer „on-execution“-Order wird als ausgeführtes Volumen der Bedingungsorder übernommen.
+- **Aktivierung bei Teilausführung** - die Teilausführung der Order wird berücksichtigt. Eine Order „nach Ausführung“ wird bei Teilausführung der Bedingungsorder aktiviert.
+- **Ausgeführtes Volumen** - verwendet das ausgeführte Volumen der Order als Menge für die Platzierung der Stop-Order. Die Anzahl der Wertpapiere in einer Order „nach Ausführung“ wird als ausgeführtes Volumen der Bedingungsorder übernommen.
 - **Preis der verknüpften Order** - der Preis der verknüpften Limit-Order.
 - **Rücknahme bei Teilausführung** - gibt an, ob die Stop-Order bei Teilausführung der verknüpften Limit-Order zurückgezogen wird.
 - **Abstand vom Maximum** - der Versatz vom Maximum (Minimum) des Preises der letzten Transaktion.
@@ -55,7 +55,7 @@ Die Komponente „Order Registration“ wird verwendet, um Handelsorders für ei
 
 ## Hinweis
 
-Die Arbeit mit Orders ist eine Low-Level-Methode zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Modify Position“ zu verwenden, die unter [Position ändern](../positions/modify.md) beschrieben ist.
+Die Arbeit mit Orders ist eine Low-Level-Methode zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Position ändern“ zu verwenden, die unter [Position ändern](../positions/modify.md) beschrieben ist.
 
 ## Siehe auch
 
