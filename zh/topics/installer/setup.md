@@ -10,11 +10,11 @@
 
    ![Installerzip Properties](../../images/installer_warn_1.png)
 
-5. 遇到这种情况时，请单击警告窗口中的 **More info** 链接，随后会出现以下窗口：
+5. 遇到这种情况时，请单击警告窗口中的 **更多信息** 链接，随后会出现以下窗口：
 
     ![Installerzip Properties](../../images/installer_warn_2.png)
 
-    单击 **Run anyway** 按钮即可开始安装 [Installer](../installer.md)。
+    单击 **仍要运行** 按钮即可开始安装 [Installer](../installer.md)。
 
 6. 随后 [Installer](../installer.md) 将解压文件，请等待该过程完成。
 7. 首次启动时，需要输入您的 **StockSharp** 用户名和密码。

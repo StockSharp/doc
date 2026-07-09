@@ -1,6 +1,6 @@
 # Erster Start
 
-1. Um den [Installer](../installer.md) zu installieren, öffnen Sie die Seite [Download](https://stocksharp.com/products/download/):
+1. Um den [Installer](../installer.md) zu installieren, öffnen Sie die Seite [Downloadseite](https://stocksharp.com/products/download/):
 
     ![Installer installation](../../images/installer_installation.png)
 
@@ -10,11 +10,11 @@
 
    ![Installerzip Properties](../../images/installer_warn_1.png)
 
-5. Klicken Sie in diesem Fall im Warnfenster auf den Link **More info**. Danach erscheint das folgende Fenster:
+5. Klicken Sie in diesem Fall im Warnfenster auf den Link **Weitere Informationen**. Danach erscheint das folgende Fenster:
 
     ![Installerzip Properties](../../images/installer_warn_2.png)
 
-    Durch Klicken auf **Run anyway** wird die Installation des [Installer](../installer.md) gestartet.
+    Durch Klicken auf **Trotzdem ausführen** wird die Installation des [Installer](../installer.md) gestartet.
 
 6. Anschließend wird der [Installer](../installer.md) entpackt. Warten Sie, bis der Vorgang abgeschlossen ist.
 7. Beim ersten Start müssen Sie Ihren **StockSharp**-Login und Ihr Passwort eingeben.
