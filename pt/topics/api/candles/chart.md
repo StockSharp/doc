@@ -4,7 +4,7 @@ Para exibição gráfica de candles, você pode usar o componente especial [Char
 
 ![sample candleschart](../../../images/sample_candleschart.png)
 
-## Abordagem Básica para Exibir Candles
+## Abordagem básica para exibir velas
 
 Existem duas abordagens para exibir candles em um gráfico. A primeira abordagem é o desenho manual dos candles ao receber dados:
 

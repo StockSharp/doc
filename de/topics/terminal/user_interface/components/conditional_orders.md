@@ -14,4 +14,4 @@ Wenn Sie auf die Schaltfläche **Order ändern** klicken, erscheint ein Fenster.
 
 ## Empfohlene Inhalte
 
-[Trades](../../../designer/user_interface/components/trades.md)
+[Ausführungen](../../../designer/user_interface/components/trades.md)

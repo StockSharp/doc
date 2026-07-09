@@ -16,7 +16,7 @@
    重要\! ローソク足を構築するためのソースとして **板情報、注文ログ、Level 1** を選択すると、追加パラメーターの選択項目が表示されます。![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
 3. パラメーターを設定した後、![hydra candles](../../../images/hydra_candles.png) ボタンをクリックします。![hydra LEVEL 1 build depth data result](../../../images/hydra_level1_build_depth_data_result.png)
 
-**Candles** を構築する場合は、より小さい時間枠のローソク足から、より大きい時間枠のローソク足を構築するオプションも利用できます。 
+**ローソク足** を構築する場合は、より小さい時間枠のローソク足から、より大きい時間枠のローソク足を構築するオプションも利用できます。
 
 たとえば、時間枠が 1 分のローソク足がある場合、**構築元** 行で適切な種類を選択することで、それらから時間枠が 5 分のローソク足を構築できます。
 

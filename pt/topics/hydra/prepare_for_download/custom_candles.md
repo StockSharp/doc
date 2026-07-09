@@ -1,4 +1,4 @@
-# Candles personalizados
+# Velas personalizadas
 
 O utilizador pode selecionar um **tipo personalizado** de candles e escolher de forma independente que candles serão construídos, sendo os candles construídos imediatamente.
 

@@ -1,4 +1,4 @@
-# Orders
+# Aufträge
 
 Die Komponente **Aufträge** ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders der Strategie anzeigt.
 
@@ -6,5 +6,5 @@ Die Komponente **Aufträge** ist eine Tabelle mit Orders, die vollständige Info
 
 ## Empfohlene Inhalte
 
-[Trades](trades.md)
+[Ausführungen](trades.md)
 

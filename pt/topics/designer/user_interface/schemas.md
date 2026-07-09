@@ -20,4 +20,4 @@ Para abrir o painel **Esquemas**, tem de clicar no botão **Esquemas** no separa
 
 ## Ver Também
 
-[Painel Logs](logs.md)
+[Painel de registos](logs.md)

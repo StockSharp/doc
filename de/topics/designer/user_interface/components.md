@@ -6,8 +6,8 @@ Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu 
 
 - [Chart](components/chart.md) - stellt einen Candlestick-Chart und/oder Indikatoren dar. Enthalt alle [Chart Panel](../strategies/using_visual_designer/elements/common/chart.md)-Wurfel, die in der Strategie vorhanden sind.
 - [P/L](components/pnl_equity.md) - stellt einen Chart für Profit/Loss (unrealized), Profit/Loss (realized) und Kommissionen dar.
-- [Trades](components/trades.md) - stellt eine Tabelle mit Trades dar, die vollständige Informationen zu allen Trades der Strategie anzeigt.
-- [Orders](components/orders.md) - stellt eine Tabelle mit Orders dar, die vollständige Informationen zu allen Orders der Strategie anzeigt.
+- [Ausführungen](components/trades.md) - stellt eine Tabelle mit Ausführungen dar, die vollständige Informationen zu allen Ausführungen der Strategie anzeigt.
+- [Aufträge](components/orders.md) - stellt eine Tabelle mit Aufträgen dar, die vollständige Informationen zu allen Aufträgen der Strategie anzeigt.
 - [Positionen](components/positions.md) - stellt eine Tabelle mit Positionen für die Instrumente der Strategie dar.
 - [Statistik](components/statistics.md) - stellt eine nach Kategorien gruppierte Tabelle dar: P/L, Trades, Positions, Orders. Sie enthält Daten zur Performance der Strategie.
 - [Trade Tape](components/tick_trades.md) - stellt eine Tabelle mit Trades dar, die vollständige Informationen zu allen Trades für ausgewählte Instrumente anzeigt.

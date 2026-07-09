@@ -36,4 +36,4 @@ Bei einem Box-Chart können Kerzen zusätzlich gruppiert werden; die Gruppierung
 
 ## Siehe auch
 
-[Orders](../../../designer/user_interface/components/orders.md)
+[Aufträge](../../../designer/user_interface/components/orders.md)

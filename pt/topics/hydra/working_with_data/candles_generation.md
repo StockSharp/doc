@@ -1,10 +1,10 @@
-# Geração de Candles
+# Geração de velas
 
 O [Hydra](../../hydra.md) permite gerar vários tipos de candles com base nos negócios descarregados, que posteriormente podem ser exportadas para formatos [Excel](https://en.wikipedia.org/wiki/Excel), XML, SQL, BIN, JSON ou TXT.
 
 Isto permite utilizar os dados gerados em quaisquer programas de análise técnica (WealthLab, AmiBroker, etc.).
 
-## Processo de Geração de Candles
+## Processo de geração de velas
 
 1. No separador **Geral**, clique no botão **Velas**; será aberta a seguinte janela:
 
@@ -24,7 +24,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
    - Especifique um intervalo temporal (se necessário)
    - Clique no botão ![hydra find](../../../images/hydra_find.png) para iniciar a geração
 
-### Exemplo de Geração de Candles por período
+### Exemplo de geração de velas por período
 
 Para gerar candles de 5 minutos para o instrumento AAPL@NASDAQ:
 
@@ -37,7 +37,7 @@ Depois da geração dos dados, verá o resultado:
 
 ![hydra candles tf](../../../images/hydra_candles_tf.png)
 
-### Exemplo de Geração de Candles de Volume
+### Exemplo de geração de velas de volume
 
 Para gerar candles de volume:
 
@@ -51,7 +51,7 @@ Resultado da geração:
 
 ![hydra candles volume](../../../images/hydra_candles_volume.png)
 
-## Origens de Dados para Construir Candles
+## Origens de dados para construir velas
 
 Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, pode gerar candles selecionando, no campo [**Construir a partir de**](any_market_data_types.md), o tipo de dados a partir do qual serão construídas:
 
@@ -62,18 +62,18 @@ Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, 
 
 ### Exemplos de Diferentes Opções de Construção:
 
-- Candles de 10 minutos a partir de ticks:
+- Velas de 10 minutos a partir de ticks:
 
   ![hydra candles tf 10](../../../images/hydra_candles_tf_10.png)
 
-- Candles de 30 minutos a partir de candles de 5 minutos:
+- Velas de 30 minutos a partir de velas de 5 minutos:
 
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > Se selecionar **não construir** no campo **Construir a partir de**, serão pesquisadas apenas candles prontas que tenham sido descarregadas diretamente através da origem de dados.
 
-## Visualização das Candles Geradas
+## Visualização das velas geradas
 
 Para apresentação gráfica das candles geradas:
 

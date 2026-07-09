@@ -144,7 +144,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 
 ## Exemplos de Assinaturas para Diferentes Tipos de Candle
 
-### Candles com período padrão
+### Velas com período padrão
 
 ```cs
 // Velas de 5 minutos
@@ -154,7 +154,7 @@ var timeFrameSubscription = new Subscription(
 _connector.Subscribe(timeFrameSubscription);
 ```
 
-### Carregando Apenas Candles Históricos
+### Carregar apenas velas históricas
 
 ```cs
 // Carregar apenas velas históricas sem transição para tempo real
@@ -189,7 +189,7 @@ var customTimeFrameSubscription = new Subscription(
 _connector.Subscribe(customTimeFrameSubscription);
 ```
 
-### Construindo Candles a Partir de Dados do Livro de Ofertas
+### Construir velas a partir de dados do livro de ofertas
 
 ```cs
 // Velas construídas a partir do meio do spread no livro de ofertas
@@ -207,7 +207,7 @@ var depthBasedSubscription = new Subscription(
 _connector.Subscribe(depthBasedSubscription);
 ```
 
-### Candles com Perfil de Volume
+### Velas com perfil de volume
 
 ```cs
 // Velas de 5 minutos com cálculo do perfil de volume
@@ -225,7 +225,7 @@ var volumeProfileSubscription = new Subscription(
 _connector.Subscribe(volumeProfileSubscription);
 ```
 
-### Candles de Volume
+### Velas de volume
 
 ```cs
 // Velas de volume (cada vela contém volume de 1000 contratos)
@@ -242,7 +242,7 @@ var volumeCandleSubscription = new Subscription(
 _connector.Subscribe(volumeCandleSubscription);
 ```
 
-### Candles de Contagem de Ticks
+### Velas de contagem de ticks
 
 ```cs
 // Velas por contagem de ticks (cada vela contém 1000 negociações)
@@ -259,7 +259,7 @@ var tickCandleSubscription = new Subscription(
 _connector.Subscribe(tickCandleSubscription);
 ```
 
-### Candles de Faixa de Preço
+### Velas de faixa de preço
 
 ```cs
 // Velas de faixa de preço com intervalo de 0,1 unidade
@@ -276,7 +276,7 @@ var rangeCandleSubscription = new Subscription(
 _connector.Subscribe(rangeCandleSubscription);
 ```
 
-### Candles Renko
+### Velas Renko
 
 ```cs
 // Velas Renko com passo de 0,1
@@ -293,7 +293,7 @@ var renkoCandleSubscription = new Subscription(
 _connector.Subscribe(renkoCandleSubscription);
 ```
 
-### Candles Ponto e Figura (P&F)
+### Velas ponto e figura (P&F)
 
 ```cs
 // Velas Point and Figure

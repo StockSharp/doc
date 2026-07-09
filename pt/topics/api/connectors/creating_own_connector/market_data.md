@@ -10,7 +10,7 @@ Esquematicamente, o algoritmo de processamento de uma solicitação de assinatur
 4. Em caso de cancelamento de assinatura, cancela a assinatura correspondente (específico de cada exchange).
 5. Envia uma mensagem sobre o resultado da assinatura usando os métodos [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) ou [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Nullable{System.DateTimeOffset})), dependendo do tipo de assinatura e do resultado da operação.
 
-## Dados de Candles
+## Dados de velas
 
 Ao implementar uma assinatura para dados de candles em seu próprio adaptador, leve em conta como a exchange trabalha com esse tipo de dado. No Coinbase, os seguintes métodos e propriedades foram sobrescritos:
 
@@ -22,7 +22,7 @@ A propriedade `TimeFrames` define a lista de períodos suportados pelo adaptador
 protected override IEnumerable<TimeSpan> TimeFrames { get; } = Extensions.TimeFrames.Keys.ToArray();
 ```
 
-### Suporte para Atualizações de Candles
+### Suporte para atualizações de velas
 
 O método `IsSupportCandlesUpdates` determina se o adaptador suporta atualizações de candles em tempo real para uma solicitação de assinatura específica. No caso do Coinbase, apenas atualizações para candles de 5 minutos são suportadas.
 
@@ -39,7 +39,7 @@ public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 
 A sobrescrita desses métodos e propriedades permite que o adaptador trate corretamente as solicitações de assinatura de dados de candles, levando em conta as especificidades da API do Coinbase. Por exemplo, se um período diferente de 5 minutos for solicitado, o StockSharp saberá que precisa usar dados de ticks para construir candles de outros períodos.
 
-### Assinando Dados de Candles
+### Subscrever dados de velas
 
 Para assinar dados de candles, o método **OnTFCandlesSubscriptionAsync** é implementado. Esse método, assim como o método de assinatura de dados de ticks, pode solicitar dados históricos, bem como configurar uma assinatura para receber novos candles em tempo real.
 
@@ -142,7 +142,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 }
 ```
 
-### Processando Dados de Candles
+### Processar dados de velas
 
 Para processar dados de candles recebidos da exchange em tempo real, um método com um código semelhante ao do método **SessionOnCandleReceived** geralmente é implementado. Esse método converte os dados recebidos em uma mensagem [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) e a envia usando o método SendOutMessageAsync.
 

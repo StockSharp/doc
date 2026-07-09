@@ -14,7 +14,7 @@ Sockets de entrada
 
 Sockets de saída
 
-- **Velas** - os candles construídos.
+- **Velas** - as velas construídas.
 
 ### Parâmetros
 

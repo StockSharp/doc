@@ -1,4 +1,4 @@
-# Colagem de Candles: Histórico + Tempo Real
+# Combinação de velas: histórico + tempo real
 
 Para combinar candles históricos com dados em tempo real, você precisa inicializar os armazenamentos apropriados: armazenamento para objetos de negociação [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), armazenamento para dados de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), e o registro de armazenamento de snapshots [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
@@ -87,7 +87,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Processamento de Candles e Exibição no Gráfico
+## Processamento de velas e exibição no gráfico
 
 ```cs
 // Manipulador do evento de recebimento de velas
@@ -98,7 +98,7 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 }
 ```
 
-## Criando a Assinatura de Candles
+## Criar a subscrição de velas
 
 ```cs
 // Método chamado quando um instrumento é selecionado
@@ -329,7 +329,7 @@ private void SetHistoryPeriod(int days)
 }
 ```
 
-### Processamento Adicional de Candles
+### Processamento adicional de velas
 
 ```cs
 // Processamento estendido de velas com saída de informações

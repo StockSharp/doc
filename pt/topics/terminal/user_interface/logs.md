@@ -2,4 +2,4 @@
 
 Consulte 
 
-[Painel Logs](../../designer/user_interface/logs.md)
+[Painel de registos](../../designer/user_interface/logs.md)

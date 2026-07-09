@@ -1,4 +1,4 @@
-# Trades
+# Ausführungen
 
 Die Komponente **Ausführungen** ist eine Tabelle mit Trades, die vollständige Informationen zu allen Trades der Strategie anzeigt:
 

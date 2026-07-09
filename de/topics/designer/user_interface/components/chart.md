@@ -22,5 +22,4 @@ Bei Box-Chart-Kerzen kann zusätzlich gruppiert werden; die Gruppierungsreihenfo
 
 ## Empfohlene Inhalte
 
-[Orders](orders.md)
-
+[Aufträge](orders.md)

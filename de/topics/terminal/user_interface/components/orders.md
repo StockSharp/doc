@@ -1,6 +1,6 @@
-# Orders
+# Aufträge
 
-Die Komponente **Orders** ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders anzeigt. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order registrieren, die ausgewählte Order stornieren oder ändern können.
+Die Komponente **Aufträge** ist eine Tabelle mit Aufträgen, die vollständige Informationen über alle Aufträge anzeigt. Wenn Sie mit der rechten Maustaste auf einen Auftrag klicken, erscheint ein Panel, über das Sie einen neuen Auftrag registrieren, den ausgewählten Auftrag stornieren oder ändern können.
 
 ![Terminal Quick start 04](../../../../images/terminal_quick_start_04.png)
 
@@ -14,4 +14,4 @@ Wenn Sie auf die Schaltfläche **Order ändern** klicken, erscheint ein Fenster.
 
 ## Empfohlene Inhalte
 
-[Trades](../../../designer/user_interface/components/trades.md)
+[Ausführungen](../../../designer/user_interface/components/trades.md)

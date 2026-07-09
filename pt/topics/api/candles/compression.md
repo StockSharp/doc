@@ -1,4 +1,4 @@
-# Compressão de Dados de Tick e Spreads em Candles
+# Compressão de dados de tick e spreads em velas
 
 ## Introdução
 
@@ -10,7 +10,7 @@ Recomenda-se revisar este arquivo para uma compreensão completa de todos os mé
 
 ## Métodos de Compressão
 
-### Compressão de Dados de Tick em Candles
+### Compressão de dados de tick em velas
 
 ```cs
 // Exemplo de uso de ToCandles para ticks
@@ -23,7 +23,7 @@ var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvid
 // candleBuilderProvider — provedor que fornece uma implementação específica do construtor de velas.
 ```
 
-### Compressão de Dados de Spread em Candles
+### Compressão de dados de spread em velas
 
 ```cs
 // Exemplo de uso de ToCandles para dados de spread
@@ -78,7 +78,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 
 ## Recursos Adicionais
 
-### Construção de Candles a Partir de Diversas Fontes
+### Construção de velas a partir de diversas fontes
 
 A API permite construir candles não apenas a partir de ticks e spreads, mas também de outras fontes de dados:
 

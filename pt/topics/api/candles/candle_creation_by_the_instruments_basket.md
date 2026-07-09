@@ -1,4 +1,4 @@
-# Criação de Candles pela Cesta de Instrumentos
+# Criação de velas pela cesta de instrumentos
 
 Para criar candles para [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) ou [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity), é usado o mesmo mecanismo de assinatura que para instrumentos [Security](xref:StockSharp.BusinessEntities.Security) comuns.
 
@@ -114,7 +114,7 @@ private void Unsubscribe()
 
 ## Outros Casos de Uso para Assinaturas de Índice
 
-### Criando uma Assinatura para Candles de Índice a partir de Candles de Componentes
+### Criar uma subscrição para velas de índice a partir de velas de componentes
 
 ```cs
 // Criar assinatura para construir velas de índice a partir das velas dos componentes
@@ -136,7 +136,7 @@ var indexFromCandlesSubscription = new Subscription(
 _connector.Subscribe(indexFromCandlesSubscription);
 ```
 
-### Criando uma Assinatura para Candles de Índice a partir de Livros de Ofertas
+### Criar uma subscrição para velas de índice a partir de livros de ofertas
 
 ```cs
 // Criar assinatura para construir velas de índice a partir de livros de ofertas

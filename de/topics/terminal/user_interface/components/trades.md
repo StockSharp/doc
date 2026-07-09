@@ -1,5 +1,5 @@
-# Trades
+# Ausführungen
 
 Siehe
 
-[Trades](../../../designer/user_interface/components/trades.md)
+[Ausführungen](../../../designer/user_interface/components/trades.md)

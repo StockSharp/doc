@@ -1,6 +1,6 @@
 # Órdenes
 
-El componente **Orders** es una tabla con órdenes que muestra información completa sobre todas las órdenes. Al hacer clic derecho sobre la orden, aparece un panel con el que puede registrar una nueva orden, cancelar o cambiar la orden seleccionada.
+El componente **Órdenes** es una tabla con órdenes que muestra información completa sobre todas las órdenes. Al hacer clic derecho sobre la orden, aparece un panel con el que puede registrar una nueva orden, cancelar o cambiar la orden seleccionada.
 
 ![Terminal Quick start 04](../../../../images/terminal_quick_start_04.png)
 

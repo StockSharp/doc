@@ -26,11 +26,11 @@ Wenn Sie im Orderbuch auf die Schaltfläche **Einstellungen** ![Designer Schedul
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-Registrieren wir die ersten Orders. Orders können entweder über die Schaltflächen **Kaufen/Verkaufen** oder durch Klicken auf die Zellen in den Spalten **Geld/Brief** des Orderbuchs registriert werden. Das Order-Panel zeigt alle Ihre Orders an. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order senden, die ausgewählte Order stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Order-Panel finden Sie im Abschnitt [Orders](user_interface/components/orders.md).
+Registrieren wir die ersten Aufträge. Aufträge können entweder über die Schaltflächen **Kaufen/Verkaufen** oder durch Klicken auf die Zellen in den Spalten **Geld/Brief** des Orderbuchs registriert werden. Das Auftragspanel zeigt alle Ihre Aufträge an. Wenn Sie mit der rechten Maustaste auf einen Auftrag klicken, erscheint ein Panel, über das Sie einen neuen Auftrag senden, den ausgewählten Auftrag stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Auftragspanel finden Sie im Abschnitt [Aufträge](user_interface/components/orders.md).
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 
-Im Trades-Panel können Sie Trades nach Instrumenten anzeigen. Weitere Informationen zur Arbeit mit dem Trades-Panel finden Sie im Abschnitt [Trades](user_interface/components/trades.md).
+Im Ausführungspanel können Sie Ausführungen nach Instrumenten anzeigen. Weitere Informationen zur Arbeit mit dem Ausführungspanel finden Sie im Abschnitt [Ausführungen](user_interface/components/trades.md).
 
 ![Terminal Quick start 05](../../images/terminal_quick_start_05.png)
 

@@ -1,6 +1,6 @@
-# Maiores Candles
+# Maiores velas
 
-O script "Largest Candles" foi concebido para identificar candles com o volume máximo e o maior comprimento de corpo nos gráficos dos instrumentos financeiros selecionados ao longo de um determinado período. Esta ferramenta permite que traders e analistas identifiquem eventos significativos do mercado e a reação dos participantes do mercado.
+O script "Maiores velas" foi concebido para identificar velas com o volume máximo e o maior comprimento de corpo nos gráficos dos instrumentos financeiros selecionados ao longo de um determinado período. Esta ferramenta permite que traders e analistas identifiquem eventos significativos do mercado e a reação dos participantes do mercado.
 
 ![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
 
@@ -20,7 +20,7 @@ O script analisa um conjunto de instrumentos especificados, procura entre eles c
 ## Aplicação
 
 - **Análise da Atividade do Mercado**: Ajuda a determinar momentos de maior atividade dos traders e potenciais inversões do mercado.
-- **Identificação de Níveis Chave**: Candles com volume e comprimento de corpo significativos formam-se frequentemente em torno de níveis chave de suporte e resistência.
+- **Identificação de níveis-chave**: velas com volume e comprimento de corpo significativos formam-se frequentemente em torno de níveis-chave de suporte e resistência.
 - **Planeamento Estratégico**: A informação sobre as maiores candles pode ser usada para planear pontos de entrada e saída do mercado, tendo em conta a volatilidade potencial.
 
 ## Código do Script em C#

@@ -28,8 +28,8 @@ Ao clicar em ![Designer Quick start 04](../../images/designer_quick_start_04.png
 
 ![Designer Quick start 05](../../images/designer_quick_start_05.png)
 
-Quando seleciona qualquer bloco no painel **Designer**, o painel **Propriedades** mostra as propriedades desse bloco. No painel **Propriedades** do bloco **Velas**, pode configurar o tipo de candle e o período ([Velas](../api/candles.md)).
+Quando seleciona qualquer bloco no painel **Designer**, o painel **Propriedades** mostra as propriedades desse bloco. No painel **Propriedades** do bloco **Velas**, pode configurar o tipo de vela e o período ([Velas](../api/candles.md)).
 
-Depois de clicar em **Iniciar**, começa a emulação de negociação. Os resultados do teste ficam disponíveis nos separadores correspondentes do diagrama: Chart, Orders, Trades, P/L, Positions (chart), Statistics e Positions.
+Depois de clicar em **Iniciar**, começa a emulação de negociação. Os resultados do teste ficam disponíveis nos separadores correspondentes do diagrama: Gráfico, Ordens, Negócios, P/L, Posições (gráfico), Estatísticas e Posições.
 
 ![Designer Quick start 06](../../images/designer_quick_start_06.png)

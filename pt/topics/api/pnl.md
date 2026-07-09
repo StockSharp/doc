@@ -63,7 +63,7 @@ Por exemplo, se a posição era +2 e chegou um negócio de -5 contratos, então 
 | `UseOrderBook` | `false` | Usar livro de ordens (melhor bid/ask). |
 | `UseLevel1` | `false` | Usar dados Level1. |
 | `UseOrderLog` | `false` | Usar log de ordens. |
-| `UseCandles` | `true` | Usar candles (preço de fecho). |
+| `UseCandles` | `true` | Usar velas (preço de fecho). |
 
 ## Integração via Adapter
 

@@ -1,3 +1,3 @@
 # Velas
 
-Consulte a secção [Geração de Candles](../candles_generation.md).
+Consulte a secção [Geração de velas](../candles_generation.md).
