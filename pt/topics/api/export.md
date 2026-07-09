@@ -18,7 +18,7 @@ O método encaminha automaticamente os dados para manipuladores específicos por
 
 [TextExporter](xref:StockSharp.Algo.Export.TextExporter) exporta dados para formato de texto utilizando modelos SmartFormat.
 
-- **Constructor**: `(DataType dataType, Stream stream, string template, string header)`
+- **Construtor**: `(DataType dataType, Stream stream, string template, string header)`
 - Os modelos utilizam a sintaxe SmartFormat, por exemplo: `{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}`
 
 ```cs
@@ -34,7 +34,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) guarda dados em formato JSON.
 
-- **Constructor**: `(DataType dataType, Stream stream)`
+- **Construtor**: `(DataType dataType, Stream stream)`
 - **Indent** - formatação com indentação (predefinição `true`).
 
 ```cs
@@ -48,7 +48,7 @@ await exporter.Export(candleMessages, token);
 
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) guarda dados em formato XML.
 
-- **Constructor**: `(DataType dataType, Stream stream)`
+- **Construtor**: `(DataType dataType, Stream stream)`
 - **Indent** - formatação com indentação (predefinição `true`).
 
 ```cs
@@ -62,7 +62,7 @@ await exporter.Export(candleMessages, token);
 
 [ExcelExporter](xref:StockSharp.Algo.Export.ExcelExporter) exporta dados para folhas de cálculo Excel.
 
-- **Constructor**: `(IExcelWorkerProvider provider, DataType dataType, Stream stream, Action breaked)`
+- **Construtor**: `(IExcelWorkerProvider provider, DataType dataType, Stream stream, Action breaked)`
 - Número máximo de linhas: 1.048.576 (limitação do formato Excel).
 
 ```cs
@@ -76,7 +76,7 @@ await exporter.Export(tickMessages, token);
 
 [DatabaseExporter](xref:StockSharp.Algo.Export.DatabaseExporter) guarda dados numa base de dados através de LinqToDB.
 
-- **Constructor**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
+- **Construtor**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
 - **BatchSize** - tamanho do lote para registos (predefinição 50).
 - **CheckUnique** - verificar unicidade dos registos (predefinição `false`).
 - **DropExisting** - eliminar dados existentes antes da exportação (predefinição `false`).
@@ -95,7 +95,7 @@ await exporter.Export(tickMessages, token);
 
 [StockSharpExporter](xref:StockSharp.Algo.Export.StockSharpExporter) guarda dados no formato interno de armazenamento StockSharp.
 
-- **Constructor**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
+- **Construtor**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
 - **BatchSize** - tamanho do lote para registos (predefinição 50).
 
 ```cs

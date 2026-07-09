@@ -36,7 +36,7 @@ Zum Empfangen von Daten verwendet die Clientanwendung vier Verbindungen über ve
 Die Portnummern, die standardmaessig für die Verbindung mit dem **IQ Feed Client** verwendet werden, sind in Klammern angegeben. Für Clientverbindungen können die Portnummern in der Registry geaendert werden, zum Beispiel für Level1 unter folgendem Pfad: \[HKEY\_CURRENT\_USER\\SOFTWARE\\DTN\\IQFEED\\Startup\\Level1Port\]. Portnummern für die Verbindung zu IQ-Servern können nicht geaendert werden.
 
 > [!CAUTION]
-> Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.
+> Der Connector unterstützt nur den Marktdaten-Feed; Transaktionen werden nicht unterstützt.
 
 ## Empfohlene Inhalte
 

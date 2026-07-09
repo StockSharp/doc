@@ -14,7 +14,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Delay** - Instrumente verzoegert laden.
 - **Active** - Nur aktive Instrumente.
 - **Group ID** - Group ID.
-- **Time zone** - Informationen zur Zeitzone, in der sich die Boerse befindet.
+- **Time zone** - Informationen zur Zeitzone, in der sich die Börse befindet.
 - **Heart beat** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
 - **Reconnection settings** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

@@ -6,7 +6,7 @@
 
 Die Klasse [CsvParser](xref:StockSharp.Algo.Import.CsvParser) parst CSV-Dateien und konvertiert Zeilen in [S#](../api.md)-Nachrichten.
 
-- **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
+- **Konstruktor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
 - **ColumnSeparator** - Spaltentrennzeichen (Standard `","`).
 - **LineSeparator** - Zeilentrennzeichen (Standard CRLF).
 - **SkipFromHeader** - Anzahl der Zeilen, die am Dateianfang übersprungen werden (Standard `0`).
@@ -33,7 +33,7 @@ await foreach (var msg in parser.Parse(stream))
 
 Die Klasse [CsvImporter](xref:StockSharp.Algo.Import.CsvImporter) erweitert [CsvParser](xref:StockSharp.Algo.Import.CsvParser) und fügt die Möglichkeit hinzu, Daten automatisch in einem Marktdatenspeicher abzulegen.
 
-- **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
+- **Konstruktor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** - führt den Import aus und gibt `ValueTask<(int count, DateTime? lastTime)>` zurück.
 - **UpdateDuplicateSecurities** - ob doppelte Instrumente aktualisiert werden sollen (Standard `false`).
 - **SecurityUpdated** - Ereignis, das ausgelöst wird, wenn ein Instrument aktualisiert wird.

@@ -144,11 +144,11 @@ else if (Position < 0)
 ClosePosition();
 ```
 
-Weitere Details zu Handelsoperationen in Strategien finden Sie im Abschnitt [Trading Operations](strategies/trading_operations.md).
+Weitere Details zu Handelsoperationen in Strategien finden Sie im Abschnitt [Handelsoperationen](strategies/trading_operations.md).
 
 ## Siehe auch
 
-- [Trading Operations](strategies/trading_operations.md)
+- [Handelsoperationen](strategies/trading_operations.md)
 - [Positionsschutz](strategies/take_profit_and_stop_loss.md)
 - [Verwaltung der Zielposition](strategies/target_position_management.md)
-- [Reporting](strategies/reporting.md)
+- [Strategieberichte](strategies/reporting.md)

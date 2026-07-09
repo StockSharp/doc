@@ -6,7 +6,7 @@
 
 [CsvParser](xref:StockSharp.Algo.Import.CsvParser) クラスは CSV ファイルを解析し、行を [S#](../api.md) メッセージに変換します。
 
-- **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
+- **コンストラクター**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
 - **ColumnSeparator** — 列区切り文字（既定値 `","`）。
 - **LineSeparator** — 行区切り文字（既定値 CRLF）。
 - **SkipFromHeader** — ファイル先頭からスキップする行数（既定値 `0`）。
@@ -33,7 +33,7 @@ await foreach (var msg in parser.Parse(stream))
 
 [CsvImporter](xref:StockSharp.Algo.Import.CsvImporter) クラスは [CsvParser](xref:StockSharp.Algo.Import.CsvParser) を拡張し、データをマーケットデータストレージへ自動保存する機能を追加します。
 
-- **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
+- **コンストラクター**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** — インポートを実行し、`ValueTask<(int count, DateTime? lastTime)>` を返します。
 - **UpdateDuplicateSecurities** — 重複する銘柄を更新するかどうか（既定値 `false`）。
 - **SecurityUpdated** — 銘柄が更新されたときに発生するイベント。

@@ -159,7 +159,7 @@
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex。新しいトレンドの開始を特定します
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - Wave Trend Oscillator。トレンド反転を特定します
 - [WMA](list_of_indicators/weighted_ma.md) - Weighted moving average。直近の価格により大きな重みを与えます
-- [WCP](list_of_indicators/weighted_close_price.md) - Weighted Close Price。(High + Low + 2 × Close) / 4
+- [WCP](list_of_indicators/weighted_close_price.md) - 加重終値。(High + Low + 2 × Close) / 4
 - [Wilder MA](list_of_indicators/wilder_ma.md) - Welles Wilder Moving Average。平滑化された移動平均です
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Williams Accumulation/Distribution。買い圧力と売り圧力を測定します
 - [%R](list_of_indicators/williams_r.md) - Williams Percent Range。買われ過ぎと売られ過ぎの状態を特定します

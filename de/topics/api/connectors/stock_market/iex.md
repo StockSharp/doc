@@ -5,7 +5,7 @@
 Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empfohlen, die Links unter [Konnektoren](../../connectors.md) zu lesen.
 
 > [!CAUTION]
-> Der Connector unterstuetzt nur den Marktdaten-Feed; Transaktionen werden nicht unterstuetzt.
+> Der Connector unterstützt nur den Marktdaten-Feed; Transaktionen werden nicht unterstützt.
 
 ## Empfohlene Inhalte
 

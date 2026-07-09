@@ -12,7 +12,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Protocol** - SSL-Protokoll zum Herstellen der Verbindung.
 - **Certificate** - SSL-Zertifikat.
 - **Password** - Passwort des SSL-Zertifikats.
-- **Check revocation** - Zertifikatsperrung pruefen.
+- **Check revocation** - Zertifikatsperrung prüfen.
 - **Validate remote** - Remote-Zertifikate validieren.
 - **Host name** - Name des Servers, der die SSL-Verbindung bereitstellt.
 - **MaxVersion** - MaxVersion

@@ -18,7 +18,7 @@
 
 [TextExporter](xref:StockSharp.Algo.Export.TextExporter) は、SmartFormat テンプレートを使用してデータをテキスト形式へエクスポートします。
 
-- **Constructor**: `(DataType dataType, Stream stream, string template, string header)`
+- **コンストラクター**: `(DataType dataType, Stream stream, string template, string header)`
 - テンプレートは SmartFormat 構文を使用します。例: `{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}`
 
 ```cs
@@ -34,7 +34,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) はデータを JSON 形式で保存します。
 
-- **Constructor**: `(DataType dataType, Stream stream)`
+- **コンストラクター**: `(DataType dataType, Stream stream)`
 - **Indent** - インデント付き整形（既定値は `true`）。
 
 ```cs
@@ -48,7 +48,7 @@ await exporter.Export(candleMessages, token);
 
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) はデータを XML 形式で保存します。
 
-- **Constructor**: `(DataType dataType, Stream stream)`
+- **コンストラクター**: `(DataType dataType, Stream stream)`
 - **Indent** - インデント付き整形（既定値は `true`）。
 
 ```cs
@@ -62,7 +62,7 @@ await exporter.Export(candleMessages, token);
 
 [ExcelExporter](xref:StockSharp.Algo.Export.ExcelExporter) はデータを Excel スプレッドシートへエクスポートします。
 
-- **Constructor**: `(IExcelWorkerProvider provider, DataType dataType, Stream stream, Action breaked)`
+- **コンストラクター**: `(IExcelWorkerProvider provider, DataType dataType, Stream stream, Action breaked)`
 - 最大行数: 1,048,576（Excel 形式の制限）。
 
 ```cs
@@ -76,7 +76,7 @@ await exporter.Export(tickMessages, token);
 
 [DatabaseExporter](xref:StockSharp.Algo.Export.DatabaseExporter) は、LinqToDB 経由でデータをデータベースに保存します。
 
-- **Constructor**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
+- **コンストラクター**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
 - **BatchSize** - レコードのバッチサイズ（既定値は 50）。
 - **CheckUnique** - レコードの一意性をチェックします（既定値は `false`）。
 - **DropExisting** - エクスポート前に既存データを削除します（既定値は `false`）。
@@ -95,7 +95,7 @@ await exporter.Export(tickMessages, token);
 
 [StockSharpExporter](xref:StockSharp.Algo.Export.StockSharpExporter) は、内部 StockSharp ストレージ形式でデータを保存します。
 
-- **Constructor**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
+- **コンストラクター**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
 - **BatchSize** - レコードのバッチサイズ（既定値は 50）。
 
 ```cs

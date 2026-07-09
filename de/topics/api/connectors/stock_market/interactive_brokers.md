@@ -10,7 +10,7 @@ Bevor Sie Handelsroboter für diese Handelsplattform schreiben, lesen Sie die Li
 
    ![ib settings](../../../../images/ib_settings.png)
 2. Aktivieren Sie den Modus "Enable ActiveX and Socket Clients".
-3. Fügen Sie ausserdem die Adresse des Computers hinzu, auf dem der Algorithmus ausgeführt wird (lokale Adresse: 127.0.0.1). Dadurch muss die Berechtigung für die Terminalverbindung nicht bei jedem Start des Algorithmus erneut bestaetigt werden.
+3. Fügen Sie außerdem die Adresse des Computers hinzu, auf dem der Algorithmus ausgeführt wird (lokale Adresse: 127.0.0.1). Dadurch muss die Berechtigung für die Terminalverbindung nicht bei jedem Start des Algorithmus erneut bestätigt werden.
 
 ## Siehe auch
 
