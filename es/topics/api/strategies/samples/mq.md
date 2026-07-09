@@ -133,8 +133,8 @@ protected override void OnStopped()
 
 - La estrategia responde a cambios del tiempo de mercado
 - La dirección de quoting se determina según la posición actual:
-  - Si position <= 0, se crea una quote Buy
-  - Si position > 0, se crea una quote Sell
+  - Si position <= 0, se crea una cotización de compra
+  - Si position > 0, se crea una cotización de venta
 - El volumen de quoting se calcula como el volumen base más el valor absoluto de la posición actual
 - Se usa [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) con [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) para quoting
 

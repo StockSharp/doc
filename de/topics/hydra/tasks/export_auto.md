@@ -7,7 +7,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 **Datenbank**
 
 - **Verbindung** - Verbindung zur Datenbank. Wird beim Export über SQL verwendet.
-- **Paket** - Größe des ?bertragenen Datenpakets. Standardmäßig beträgt die Größe 50 Elemente. Wird beim Export über SQL verwendet.
+- **Paket** - Größe des übertragenen Datenpakets. Standardmäßig beträgt die Größe 50 Elemente. Wird beim Export über SQL verwendet.
 - **Eindeutigkeit** - Prüfung der Dateneindeutigkeit in der Datenbank. Beeinflusst die Performance. Standardmäßig aktiviert. Wird beim Export über SQL verwendet.
 
 > [!TIP]

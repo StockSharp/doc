@@ -31,7 +31,7 @@ _connector.CandleReceived += (sub, candle) =>
 		return;
 
 	// キャンドルを処理します
-	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
+	Console.WriteLine($"ローソク足: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
 // サブスクリプションのオンラインモードへの移行を処理します
@@ -40,7 +40,7 @@ _connector.SubscriptionOnline += (sub) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine("Subscription switched to real-time mode");
+	Console.WriteLine("サブスクリプションはリアルタイムモードに切り替わりました");
 };
 
 // サブスクリプションエラーを処理します
@@ -70,7 +70,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 
 	// 板情報を処理します
 	Console.WriteLine($"板情報: {depth.SecurityId}, 時刻: {depth.ServerTime}");
-	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
+	Console.WriteLine($"買い気配: {depth.Bids.Count}, 売り気配: {depth.Asks.Count}");
 };
 
 // サブスクリプションを開始します
@@ -90,7 +90,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 		return;
 
 	// ティックを処理します
-	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"ティック: {tick.SecurityId}, 時刻: {tick.ServerTime}, 価格: {tick.Price}, 数量: {tick.Volume}");
 };
 
 // サブスクリプションを開始します
@@ -128,12 +128,12 @@ _connector.Level1Received += (sub, level1) =>
 	if (sub != level1Subscription)
 		return;
 
-	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
+	Console.WriteLine($"Level1: {level1.SecurityId}, 時刻: {level1.ServerTime}");
 
 	// Level1 フィールド値を出力します
 	foreach (var pair in level1.Changes)
 	{
-		Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
+		Console.WriteLine($"フィールド: {pair.Key}, 値: {pair.Value}");
 	}
 };
 

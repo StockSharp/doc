@@ -92,10 +92,10 @@ var tracker = new PositionLifecycleTracker();
 // 往返交易关闭事件
 tracker.RoundTripClosed += roundTrip =>
 {
-    Console.WriteLine($"Position closed: {roundTrip.SecurityId}, " +
-        $"Open: {roundTrip.OpenTime} at {roundTrip.OpenPrice}, " +
-        $"Close: {roundTrip.CloseTime} at {roundTrip.ClosePrice}, " +
-        $"Max volume: {roundTrip.MaxPosition}");
+    Console.WriteLine($"持仓已平仓: {roundTrip.SecurityId}, " +
+        $"开仓: {roundTrip.OpenTime} 价格 {roundTrip.OpenPrice}, " +
+        $"平仓: {roundTrip.CloseTime} 价格 {roundTrip.ClosePrice}, " +
+        $"最大数量: {roundTrip.MaxPosition}");
 };
 
 // 处理持仓更新

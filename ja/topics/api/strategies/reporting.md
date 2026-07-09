@@ -92,10 +92,10 @@ var tracker = new PositionLifecycleTracker();
 // ラウンドトリップ クローズ時のイベント
 tracker.RoundTripClosed += roundTrip =>
 {
-    Console.WriteLine($"Position closed: {roundTrip.SecurityId}, " +
-        $"Open: {roundTrip.OpenTime} at {roundTrip.OpenPrice}, " +
-        $"Close: {roundTrip.CloseTime} at {roundTrip.ClosePrice}, " +
-        $"Max volume: {roundTrip.MaxPosition}");
+    Console.WriteLine($"ポジション終了: {roundTrip.SecurityId}, " +
+        $"開始: {roundTrip.OpenTime} 価格 {roundTrip.OpenPrice}, " +
+        $"終了: {roundTrip.CloseTime} 価格 {roundTrip.ClosePrice}, " +
+        $"最大数量: {roundTrip.MaxPosition}");
 };
 
 // ポジション更新を処理する

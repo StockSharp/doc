@@ -92,13 +92,13 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 
 	// Prozessorereignisse für das Logging abonnieren
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} zum Preis {order.Price} registriert");
+		this.AddInfoLog($"Auftrag {order.TransactionId} zum Preis {order.Price} registriert");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order fehlgeschlagen: {fail.Error.Message}");
+		this.AddInfoLog($"Auftrag fehlgeschlagen: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade ausgeführt: {trade.Trade.Volume} zu {trade.Trade.Price}");
+		this.AddInfoLog($"Ausführung erfolgt: {trade.Trade.Volume} zu {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk => {
 		this.AddInfoLog($"Quoting erfolgreich abgeschlossen: {isOk}");
@@ -133,8 +133,8 @@ protected override void OnStopped()
 
 - Die Strategie reagiert auf Änderungen der Marktzeit.
 - Die Quoting-Richtung wird anhand der aktuellen Position bestimmt:
-  - Wenn Position <= 0 ist, wird eine Buy-Quote erstellt.
-  - Wenn Position > 0 ist, wird eine Sell-Quote erstellt.
+  - Wenn Position <= 0 ist, wird eine Kauf-Quote erstellt.
+  - Wenn Position > 0 ist, wird eine Verkaufs-Quote erstellt.
 - Das Quoting-Volumen wird als Basisvolumen plus absoluter Wert der aktuellen Position berechnet.
 - Für das Quoting wird [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) mit [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) verwendet.
 

@@ -133,8 +133,8 @@ protected override void OnStopped()
 
 - A estratégia responde a alterações do tempo de mercado
 - A direção da cotação é determinada com base na posição atual:
-  - Se posição <= 0, é criada uma cotação Buy
-  - Se posição > 0, é criada uma cotação Sell
+  - Se posição <= 0, é criada uma cotação de compra
+  - Se posição > 0, é criada uma cotação de venda
 - O volume de cotação é calculado como o volume base mais o valor absoluto da posição atual
 - [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) com [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) é utilizado para cotação
 

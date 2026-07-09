@@ -31,7 +31,7 @@ _connector.CandleReceived += (sub, candle) =>
 		return;
 
 	// 处理 K线
-	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
+	Console.WriteLine($"K线: {candle.OpenTime} - 开:{candle.OpenPrice} 高:{candle.HighPrice} 低:{candle.LowPrice} 收:{candle.ClosePrice} 量:{candle.TotalVolume}");
 };
 
 // 处理订阅切换到在线模式
@@ -40,7 +40,7 @@ _connector.SubscriptionOnline += (sub) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine("Subscription switched to real-time mode");
+	Console.WriteLine("订阅已切换到实时模式");
 };
 
 // 处理订阅错误
@@ -70,7 +70,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 
 	// 处理订单簿
 	Console.WriteLine($"订单簿: {depth.SecurityId}, 时间: {depth.ServerTime}");
-	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
+	Console.WriteLine($"买盘: {depth.Bids.Count}, 卖盘: {depth.Asks.Count}");
 };
 
 // 启动订阅
@@ -90,7 +90,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 		return;
 
 	// 处理 tick
-	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"逐笔成交: {tick.SecurityId}, 时间: {tick.ServerTime}, 价格: {tick.Price}, 数量: {tick.Volume}");
 };
 
 // 启动订阅
@@ -128,12 +128,12 @@ _connector.Level1Received += (sub, level1) =>
 	if (sub != level1Subscription)
 		return;
 
-	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
+	Console.WriteLine($"Level1: {level1.SecurityId}, 时间: {level1.ServerTime}");
 
 	// 输出 Level1 字段值
 	foreach (var pair in level1.Changes)
 	{
-		Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
+		Console.WriteLine($"字段: {pair.Key}, 值: {pair.Value}");
 	}
 };
 

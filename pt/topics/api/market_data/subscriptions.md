@@ -31,7 +31,7 @@ _connector.CandleReceived += (sub, candle) =>
 		return;
 
 	// Processar a vela
-	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
+	Console.WriteLine($"Vela: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
 // Tratar a transição da subscrição para modo online
@@ -40,7 +40,7 @@ _connector.SubscriptionOnline += (sub) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine("Subscription switched to real-time mode");
+	Console.WriteLine("A subscrição mudou para o modo em tempo real");
 };
 
 // Tratar erros da subscrição
@@ -70,7 +70,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 
 	// Processar o livro de ofertas
 	Console.WriteLine($"Livro de ofertas: {depth.SecurityId}, hora: {depth.ServerTime}");
-	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
+	Console.WriteLine($"Compras: {depth.Bids.Count}, Vendas: {depth.Asks.Count}");
 };
 
 // Iniciar a subscrição
@@ -90,7 +90,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 		return;
 
 	// Processar o tick
-	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Tick: {tick.SecurityId}, Hora: {tick.ServerTime}, Preço: {tick.Price}, Volume: {tick.Volume}");
 };
 
 // Iniciar a subscrição
@@ -128,12 +128,12 @@ _connector.Level1Received += (sub, level1) =>
 	if (sub != level1Subscription)
 		return;
 
-	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
+	Console.WriteLine($"Level1: {level1.SecurityId}, Hora: {level1.ServerTime}");
 
 	// Escrever valores dos campos Level1
 	foreach (var pair in level1.Changes)
 	{
-		Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
+		Console.WriteLine($"Campo: {pair.Key}, Valor: {pair.Value}");
 	}
 };
 

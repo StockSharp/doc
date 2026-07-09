@@ -92,10 +92,10 @@ var tracker = new PositionLifecycleTracker();
 // Evento al cerrar round-trip
 tracker.RoundTripClosed += roundTrip =>
 {
-    Console.WriteLine($"Position closed: {roundTrip.SecurityId}, " +
-        $"Open: {roundTrip.OpenTime} at {roundTrip.OpenPrice}, " +
-        $"Close: {roundTrip.CloseTime} at {roundTrip.ClosePrice}, " +
-        $"Max volume: {roundTrip.MaxPosition}");
+    Console.WriteLine($"Posición cerrada: {roundTrip.SecurityId}, " +
+        $"Apertura: {roundTrip.OpenTime} a {roundTrip.OpenPrice}, " +
+        $"Cierre: {roundTrip.CloseTime} a {roundTrip.ClosePrice}, " +
+        $"Volumen máximo: {roundTrip.MaxPosition}");
 };
 
 // Procesar actualización de posición

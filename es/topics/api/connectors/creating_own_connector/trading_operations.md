@@ -49,7 +49,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 			throw new NotSupportedException(LocalizedStrings.OrderUnsupportedType.Put(regMsg.OrderType, regMsg.TransactionId));
 	}
 
-	// Determining the order type (market or limit)
+	// Determinar el tipo de orden (de mercado o limitada)
 	var isMarket = regMsg.OrderType == OrderTypes.Market;
 	var price = isMarket ? (decimal?)null : regMsg.Price;
 

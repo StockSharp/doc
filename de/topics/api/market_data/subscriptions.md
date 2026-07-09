@@ -30,8 +30,8 @@ _connector.CandleReceived += (sub, candle) =>
 	if (sub != subscription)
 		return;
 
-	// Candle verarbeiten
-	Console.WriteLine($"Candle: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
+	// Kerze verarbeiten
+	Console.WriteLine($"Kerze: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
 // Übergang des Abonnements in den Online-Modus behandeln
@@ -40,7 +40,7 @@ _connector.SubscriptionOnline += (sub) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine("Subscription switched to real-time mode");
+	Console.WriteLine("Abonnement ist in den Echtzeitmodus gewechselt");
 };
 
 // Abonnementfehler behandeln
@@ -70,7 +70,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 
 	// Orderbuch verarbeiten
 	Console.WriteLine($"Orderbuch: {depth.SecurityId}, Zeit: {depth.ServerTime}");
-	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
+	Console.WriteLine($"Gebote: {depth.Bids.Count}, Angebote: {depth.Asks.Count}");
 };
 
 // Abonnement starten
@@ -90,7 +90,7 @@ _connector.TickTradeReceived += (sub, tick) =>
 		return;
 
 	// Tick verarbeiten
-	Console.WriteLine($"Tick: {tick.SecurityId}, Time: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Tick: {tick.SecurityId}, Zeit: {tick.ServerTime}, Preis: {tick.Price}, Volumen: {tick.Volume}");
 };
 
 // Abonnement starten
@@ -128,12 +128,12 @@ _connector.Level1Received += (sub, level1) =>
 	if (sub != level1Subscription)
 		return;
 
-	Console.WriteLine($"Level1: {level1.SecurityId}, Time: {level1.ServerTime}");
+	Console.WriteLine($"Level1: {level1.SecurityId}, Zeit: {level1.ServerTime}");
 
 	// Level1-Feldwerte ausgeben
 	foreach (var pair in level1.Changes)
 	{
-		Console.WriteLine($"Field: {pair.Key}, Value: {pair.Value}");
+		Console.WriteLine($"Feld: {pair.Key}, Wert: {pair.Value}");
 	}
 };
 

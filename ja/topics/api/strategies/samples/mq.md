@@ -133,8 +133,8 @@ protected override void OnStopped()
 
 - このストラテジーは市場時刻の変化に応答します
 - クォーティング方向は現在のポジションに基づいて決定されます。
-  - ポジション <= 0 の場合、Buy クォートが作成されます
-  - ポジション > 0 の場合、Sell クォートが作成されます
+  - ポジション <= 0 の場合、買いクォートが作成されます
+  - ポジション > 0 の場合、売りクォートが作成されます
 - クォーティング数量は、基本数量に現在ポジションの絶対値を加えたものとして計算されます
 - クォーティングには、[QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) と [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) が使用されます
 

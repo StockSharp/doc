@@ -92,10 +92,10 @@ var tracker = new PositionLifecycleTracker();
 // Ereignis beim Schließen eines Round-Trips
 tracker.RoundTripClosed += roundTrip =>
 {
-    Console.WriteLine($"Position closed: {roundTrip.SecurityId}, " +
-        $"Open: {roundTrip.OpenTime} at {roundTrip.OpenPrice}, " +
-        $"Close: {roundTrip.CloseTime} at {roundTrip.ClosePrice}, " +
-        $"Max volume: {roundTrip.MaxPosition}");
+    Console.WriteLine($"Position geschlossen: {roundTrip.SecurityId}, " +
+        $"Öffnung: {roundTrip.OpenTime} zu {roundTrip.OpenPrice}, " +
+        $"Schließung: {roundTrip.CloseTime} zu {roundTrip.ClosePrice}, " +
+        $"Max. Volumen: {roundTrip.MaxPosition}");
 };
 
 // Positionenaktualisierung verarbeiten
@@ -207,4 +207,3 @@ public class ReportingStrategy : Strategy
 ```
 
 In diesem Beispiel erstellt die Strategie beim Stoppen automatisch einen CSV-Bericht. Der Bericht enthält Strategieparameter, Statistiken, Orders, Trades und Positions-Round-Trips.
-

@@ -133,8 +133,8 @@ protected override void OnStopped()
 
 - 该策略应对市场时间变化
 - 报价方向是根据当前位置确定的：
-  - 如果位置 <= 0，则创建一个买入报价
-  - 如果持仓 > 0，将创建一个卖出报价
+  - 如果持仓 <= 0，则创建买入报价
+  - 如果持仓 > 0，则创建卖出报价
 - 报价量的计算方式是基础量加上当前持仓的绝对值
 - [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) 与 [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) 一起用于报价
 
