@@ -85,16 +85,16 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Portfolio,
 		Sides.Buy,
 		Volume,
-		Volume, // Maximum order volume
-		TimeSpan.Zero, // No timeout
-		this, // Strategy implements ISubscriptionProvider
-		this, // Strategy implements IMarketRuleContainer
-		this, // Strategy implements ITransactionProvider
-		this, // Strategy implements ITimeProvider
-		this, // Strategy implements IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Check trading permission
-		true, // Use order book prices
-		true  // Use last trade price if the order book is empty
+		Volume, // 最大订单数量
+		TimeSpan.Zero, // 无超时
+		this, // 策略实现 ISubscriptionProvider
+		this, // 策略实现 IMarketRuleContainer
+		this, // 策略实现 ITransactionProvider
+		this, // 策略实现 ITimeProvider
+		this, // 策略实现 IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // 检查交易权限
+		true, // 使用订单簿价格
+		true  // 订单簿为空时使用最后成交价
 	)
 	{
 		Parent = this
@@ -107,52 +107,52 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Portfolio,
 		Sides.Sell,
 		Volume,
-		Volume, // Maximum order volume
-		TimeSpan.Zero, // No timeout
-		this, // Strategy implements ISubscriptionProvider
-		this, // Strategy implements IMarketRuleContainer
-		this, // Strategy implements ITransactionProvider
-		this, // Strategy implements ITimeProvider
-		this, // Strategy implements IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Check trading permission
-		true, // Use order book prices
-		true  // Use last trade price if the order book is empty
+		Volume, // 最大订单数量
+		TimeSpan.Zero, // 无超时
+		this, // 策略实现 ISubscriptionProvider
+		this, // 策略实现 IMarketRuleContainer
+		this, // 策略实现 ITransactionProvider
+		this, // 策略实现 ITimeProvider
+		this, // 策略实现 IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // 检查交易权限
+		true, // 使用订单簿价格
+		true  // 订单簿为空时使用最后成交价
 	)
 	{
 		Parent = this
 	};
 
 	// 记录新报价处理器的创建
-	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	this.AddInfoLog($"已在 {CurrentTime} 创建买卖价差");
 
 	// 订阅买入处理器事件以记录日志
 	_buyProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"买入订单 {order.TransactionId} 已以价格 {order.Price} 注册");
 
 	_buyProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+		this.AddInfoLog($"买入订单失败: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"买入成交已执行: {trade.Trade.Volume}，价格 {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		this.AddInfoLog($"买入报价成功完成: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
 
 	// 订阅卖出处理器事件以记录日志
 	_sellProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"卖出订单 {order.TransactionId} 已以价格 {order.Price} 注册");
 
 	_sellProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+		this.AddInfoLog($"卖出订单失败: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"卖出成交已执行: {trade.Trade.Volume}，价格 {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		this.AddInfoLog($"卖出报价成功完成: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};
@@ -187,9 +187,9 @@ protected override void OnStopped()
 ## 交易逻辑
 
 - 该策略应对市场时间变化
-- 在零位置和停止的处理器下，创建了两个新的处理器：
-  - 购买处理器（购买）
-  - 出售处理器（出售）
+- 在零持仓且处理器已停止时，创建两个新的处理器：
+  - 买入处理器（买入）
+  - 卖出处理器（卖出）
 - 两个处理器都配置了相同的成交量并使用相同的报价设置
 - 处理器通过同时下买单和卖单在市场上制造价差
 

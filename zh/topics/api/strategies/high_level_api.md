@@ -63,7 +63,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 	// 访问 IIndicatorValue 属性
 	if (value.IsFinal)
 	{
-		// For indicators returning boolean values
+		// 对于返回布尔值的指标
 		var boolValue = value.GetValue<bool>();
 		
 		// 或特定指标专用的其他数据类型
@@ -190,9 +190,9 @@ if (area != null)
 IChartCandleElement candles = DrawCandles(area, subscription);
 
 // 可以配置元素的附加参数
-candles.DrawOpenClose = true;  // Display open/close lines
-candles.DrawHigh = true;       // Display highs
-candles.DrawLow = true;        // Display lows
+candles.DrawOpenClose = true;  // 显示开盘/收盘线
+candles.DrawHigh = true;       // 显示最高价
+candles.DrawLow = true;        // 显示最低价
 ```
 
 该方法返回一个 [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 图表元素，可以进一步自定义。
@@ -212,14 +212,14 @@ IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.R
 IChartIndicatorElement bollingerElem = DrawIndicator(
 	area, 
 	bollinger, 
-	System.Drawing.Color.Blue,    // Primary color
-	System.Drawing.Color.Gray     // Secondary color (for the second line)
+	System.Drawing.Color.Blue,    // 主颜色
+	System.Drawing.Color.Gray     // 次颜色（用于第二条线）
 );
 
 // 元素附加配置
-smaElem.DrawStyle = DrawStyles.Line;           // Drawing style: line
-rsiFast.DrawStyle = DrawStyles.Dot;            // Drawing style: dots
-bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
+smaElem.DrawStyle = DrawStyles.Line;           // 绘制样式：线
+rsiFast.DrawStyle = DrawStyles.Dot;            // 绘制样式：点
+bollingerElem.DrawStyle = DrawStyles.Dashdot;  // 绘制样式：点划线
 ```
 
 该方法返回一个 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) 图表元素，该元素可以自定义。对于具有多个值的指标（e.g、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)），主要颜色应用于第一个值，次要颜色应用于第二个值。
@@ -306,10 +306,10 @@ StartProtection(TakeValue, StopValue);
 ```cs
 // 使用 trailing stop 和市价订单启动保护
 StartProtection(
-	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
-	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
-	isStopTrailing: true,                         // Enable trailing stop
-	useMarketOrders: true                         // Use market orders
+	takeProfit: new Unit(50, UnitTypes.Absolute), // 止盈
+	stopLoss: new Unit(2, UnitTypes.Percent),     // 百分比止损
+	isStopTrailing: true,                         // 启用跟踪止损
+	useMarketOrders: true                         // 使用市价单
 );
 ```
 

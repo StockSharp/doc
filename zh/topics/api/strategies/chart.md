@@ -102,14 +102,14 @@ private void ConfigureChartElements()
 	_candleElement = _mainArea.AddCandles();
 	
 	// 配置 K线显示
-	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Japanese candles
+	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // 日式K线
 	_candleElement.AntiAliasing = true; // Smoothing
-	_candleElement.UpFillColor = Color.Green; // Rising candle body color
-	_candleElement.DownFillColor = Color.Red; // Falling candle body color
-	_candleElement.UpBorderColor = Color.DarkGreen; // Rising candle border color
-	_candleElement.DownBorderColor = Color.DarkRed; // Falling candle border color
-	_candleElement.StrokeThickness = 1; // Line thickness
-	_candleElement.ShowAxisMarker = true; // Show Y-axis marker
+	_candleElement.UpFillColor = Color.Green; // 上涨K线实体颜色
+	_candleElement.DownFillColor = Color.Red; // 下跌K线实体颜色
+	_candleElement.UpBorderColor = Color.DarkGreen; // 上涨K线边框颜色
+	_candleElement.DownBorderColor = Color.DarkRed; // 下跌K线边框颜色
+	_candleElement.StrokeThickness = 1; // 线条粗细
+	_candleElement.ShowAxisMarker = true; // 显示Y轴标记
 }
 ```
 
@@ -207,10 +207,10 @@ _tradesElement.PointSize = 10;          // Point size
 _ordersElement = DrawOrders(_mainArea);
 
 // 配置订单显示
-_ordersElement.ActiveBrush = Color.Blue;     // Active orders color
-_ordersElement.CanceledBrush = Color.Gray;   // Canceled orders color
-_ordersElement.DoneBrush = Color.Green;      // Completed orders color
-_ordersElement.ErrorColor = Color.Red;       // Error color
+_ordersElement.ActiveBrush = Color.Blue;     // 活跃订单颜色
+_ordersElement.CanceledBrush = Color.Gray;   // 已取消订单颜色
+_ordersElement.DoneBrush = Color.Green;      // 已完成订单颜色
+_ordersElement.ErrorColor = Color.Red;       // 错误颜色
 _ordersElement.PointSize = 8;                // Point size
 ```
 

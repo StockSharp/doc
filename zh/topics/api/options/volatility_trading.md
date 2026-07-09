@@ -132,12 +132,12 @@
    		// DOM 关闭时强制关闭所有策略
    		hedge.Stop();
    	};
-   	// show DOM
+	// 显示 DOM
    	wnd.Show();
    }
    ```
 
-4. 开始引用：
+4. 开始报价：
 
    ```cs
    hedge.Start();
@@ -152,9 +152,9 @@
    }
    ```
 
-   ![示例引用 iv](../../../images/sample_quote_iv.png)
+   ![示例报价 IV](../../../images/sample_quote_iv.png)
 
-6. 结束引用并停止策略：
+6. 结束报价并停止策略：
 
    ```none
    hedge.Stop();

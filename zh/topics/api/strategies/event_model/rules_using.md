@@ -154,7 +154,7 @@
           subscription.WhenLastTradePriceMore(this, 135000m), 
           subscription.WhenLastTradePriceLess(this, 140000m)
       })
-      .Do(() => this.AddInfoLog($"Last trade price is in the range from {priceMore} to {priceLess}"))
+      .Do(() => this.AddInfoLog($"最后成交价在 {priceMore} 到 {priceLess} 的范围内"))
       .Apply(this);
       
   // 发送订阅请求
@@ -244,7 +244,7 @@ mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-	// Rule without specifying Once()
+	// 未指定 Once() 的规则
 	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 	{
 		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
@@ -296,13 +296,13 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Do(() => LogInfo("Order #1 registered"))
 		.Once()
 		.Apply(this)
-		.Exclusive(ruleRegFailed);  // Rules are mutually exclusive
+		.Exclusive(ruleRegFailed);  // 规则互斥
 
 	ruleRegFailed
 		.Do(() => LogInfo("Order #1 not registered"))
 		.Once()
 		.Apply(this)
-		.Exclusive(ruleReg);  // Rules are mutually exclusive
+		.Exclusive(ruleReg);  // 规则互斥
 
 	RegisterOrder(order);
 }).Once().Apply(this);

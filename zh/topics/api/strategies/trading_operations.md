@@ -116,7 +116,7 @@ order
 		// 订单成交后的操作
 		LogInfo($"Order {order.TransactionId} executed");
 		
-		// For example, place a stop order
+		// 例如，提交止损单
 		var stopOrder = SellLimit(price * 0.95, volume);
 	})
 	.Apply(this);
@@ -213,19 +213,19 @@ public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = Str
 这允许你根据当前的交易模式有选择地允许或禁止各种交易操作：
 
 ```cs
-// For placing a new order that increases a position, full trading mode is required
+// 提交会增加持仓的新订单需要全交易模式
 if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
 {
 	// 可以下任何订单
 	RegisterOrder(CreateOrder(Sides.Buy, price, volume));
 }
-// For closing a position, the position reduction mode is sufficient
+// 平仓时，减仓模式即可
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly) && Position != 0)
 {
 	// 只能关闭持仓
 	ClosePosition();
 }
-// For cancelling active orders, the order cancellation mode is sufficient
+// 取消活动订单时，订单取消模式即可
 else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly))
 {
 	// 只能撤销订单

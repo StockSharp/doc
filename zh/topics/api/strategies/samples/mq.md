@@ -75,16 +75,16 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Portfolio,
 		side,
 		quotingVolume,
-		Volume, // Maximum order volume
-		TimeSpan.Zero, // No timeout
-		this, // Strategy implements ISubscriptionProvider
-		this, // Strategy implements IMarketRuleContainer
-		this, // Strategy implements ITransactionProvider
-		this, // Strategy implements ITimeProvider
-		this, // Strategy implements IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Check trading permission
-		true, // Use order book prices
-		true  // Use last trade price if the order book is empty
+		Volume, // 最大订单数量
+		TimeSpan.Zero, // 无超时
+		this, // 策略实现 ISubscriptionProvider
+		this, // 策略实现 IMarketRuleContainer
+		this, // 策略实现 ITransactionProvider
+		this, // 策略实现 ITimeProvider
+		this, // 策略实现 IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // 检查交易权限
+		true, // 使用订单簿价格
+		true  // 订单簿为空时使用最后成交价
 	)
 	{
 		Parent = this
@@ -92,16 +92,16 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 
 	// 订阅处理器事件以记录日志
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"订单 {order.TransactionId} 已以价格 {order.Price} 注册");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"订单失败: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"成交已执行: {trade.Trade.Volume}，价格 {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk => {
-		this.AddInfoLog($"Quoting finished with success: {isOk}");
+		this.AddInfoLog($"报价成功完成: {isOk}");
 		_quotingProcessor?.Dispose();
 		_quotingProcessor = null;
 	};
@@ -132,7 +132,7 @@ protected override void OnStopped()
 ## 交易逻辑
 
 - 该策略应对市场时间变化
-- 引用方向是根据当前位置确定的：
+- 报价方向是根据当前位置确定的：
   - 如果位置 <= 0，则创建一个买入报价
   - 如果持仓 > 0，将创建一个卖出报价
 - 报价量的计算方式是基础量加上当前持仓的绝对值
@@ -140,7 +140,7 @@ protected override void OnStopped()
 
 ## 特征
 
-- 使用现代引用处理器而不是传统引用策略
+- 使用现代报价处理器而不是传统报价策略
 - 通过改变报价方向来自适应地响应位置变化
 - 支持配置各种报价参数（价格类型、偏移量、最小偏差）
 - 包括报价处理器事件的详细日志记录

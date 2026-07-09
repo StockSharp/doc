@@ -95,7 +95,7 @@ var tickSubscription = new Subscription(
 	DataType.Ticks,
 	Security);
 
-// Subscription to Level1 (best bid/ask and other basic information)
+// 订阅 Level1（最优买卖价及其他基础信息）
 var level1Subscription = new Subscription(
 	DataType.Level1,
 	Security);
@@ -111,9 +111,9 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 
 // 创建用于处理传入K线的规则
 Connector
-	.WhenCandlesFinished(subscription)  // Rule activation when a completed candle is received
-	.Do(ProcessCandle)                   // Call processing method
-	.Apply(this);                        // Apply rule to strategy
+	.WhenCandlesFinished(subscription)  // 收到完成K线时激活规则
+	.Do(ProcessCandle)                   // 调用处理方法
+	.Apply(this);                        // 将规则应用到策略
 
 // 启动订阅
 Connector.Subscribe(subscription);

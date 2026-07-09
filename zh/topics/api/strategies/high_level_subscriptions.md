@@ -181,7 +181,7 @@ public class SmaStrategy : Strategy
             })
             .Start();
 
-        // Chart setup
+        // 图表设置
         var area = CreateChartArea();
         if (area != null)
         {

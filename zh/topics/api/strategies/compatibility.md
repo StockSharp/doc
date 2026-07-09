@@ -121,7 +121,7 @@ private void InitChart()
 ```cs
 private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
 {
-	if (_chart == null) return; // Important check
+	if (_chart == null) return; // 重要检查
 	
 	var data = _chart.CreateData();
 	data.Group(candle.OpenTime)
@@ -232,7 +232,7 @@ protected override void OnStopped()
 ```cs
 public override void Save(SettingsStorage settings)
 {
-	base.Save(settings); // First save strategy parameters
+	base.Save(settings); // 先保存策略参数
 	
 	// 然后保存自定义数据
 	settings.SetValue("CustomState", _customState);
@@ -241,7 +241,7 @@ public override void Save(SettingsStorage settings)
 
 public override void Load(SettingsStorage settings)
 {
-	base.Load(settings); // First load strategy parameters
+	base.Load(settings); // 先加载策略参数
 	
 	// 然后加载自定义数据
 	if (settings.Contains("CustomState"))
@@ -297,8 +297,8 @@ Security
 	.WhenNewTrade()
 	.And(Portfolio.WhenMoneyChanged())
 	.Do(() => {
-		// Code that executes only when there's a new trade
-		// AND the portfolio balance changes
+		// 仅当有新成交
+		// 且投资组合余额发生变化时执行的代码
 	})
 	.Apply(this);
 ```

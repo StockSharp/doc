@@ -119,7 +119,7 @@ strategy.PnLChanged += () =>
 	}
 };
 
-// For tracking position statistics
+// 用于跟踪持仓统计
 strategy.PositionChanged += () =>
 {
 	Console.WriteLine($"Current Position: {strategy.Position}");

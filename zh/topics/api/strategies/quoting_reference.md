@@ -1,19 +1,19 @@
-# 引用参考
+# 报价参考
 
 ## 概览
 
-本节包含 StockSharp 中引用系统架构和组件的完整参考。描述了所有可用的引用行为、操作类型和接口。有关基本介绍，请参见 [引用算法](quoting.md)。
+本节包含 StockSharp 中报价系统架构和组件的完整参考。描述了所有可用的报价行为、操作类型和接口。有关基本介绍，请参见 [报价算法](quoting.md)。
 
-## 建筑学
+## 架构
 
-### 引用策略（已弃用）
+### 报价策略（已弃用）
 
 [QuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.QuotingStrategy) 类已被弃用。建议使用 [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) 代替。
 
 已弃用类的主要参数：
 
 - `QuotingSide` -- 报价方向（买入/卖出）
-- `QuotingVolume` -- 引用体积
+- `QuotingVolume` -- 报价数量
 - `TimeOut` -- 执行超时
 - `UseBidAsk` -- 使用订单簿价格
 - `UseLastTradePrice` -- 使用最后交易价格
@@ -22,7 +22,7 @@
 
 [QuotingEngine](xref:StockSharp.Algo.Strategies.Quoting.QuotingEngine) —— 报价系统的功能核心。它计算剩余量和超时，并返回操作建议而不产生副作用。
 
-### 引用行为算法
+### 报价行为算法
 
 [QuotingBehaviorAlgo](xref:StockSharp.Algo.Strategies.Quoting.QuotingBehaviorAlgo) -- `IPositionModifyAlgo` 接口在算法持仓管理中的实现。
 
@@ -36,11 +36,11 @@
 
 支持 VWAP 和 TWAP 模式。
 
-### 引用处理器
+### 报价处理器
 
 [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor)——策略中执行报价的主要处理器。管理订单生命周期：下单、修改、取消。
 
-## 引用操作类型
+## 报价操作类型
 
 处理器返回类型为 [QuotingAction](xref:StockSharp.Algo.Strategies.Quoting.QuotingAction) 的动作：
 
@@ -50,13 +50,13 @@
 | `PlaceOrder(price, volume)` | 下新订单 |
 | `ModifyOrder(price, volume)` | 修改现有订单 |
 | `CancelOrder()` | 取消订单 |
-| `Finish(success, reason)` | 完成引用 |
+| `Finish(success, reason)` | 完成报价 |
 
-## 引用行为
+## 报价行为
 
 StockSharp 提供 10 种报价行为，每种都实现了 [IQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.IQuotingBehavior) 接口：
 
-| # | 类别 | 描述 | 关键参数 |
+| # | 类 | 描述 | 关键参数 |
 |---|-------|-------------|----------------|
 | 1 | [按价格报价行为](xref:StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingBehavior) | 来自订单簿的最佳价格 | 最佳价格偏移 |
 | 2 | [LastTradeQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.LastTradeQuotingBehavior) | 最后交易价格 | 最佳价格偏移 |
@@ -90,7 +90,7 @@ decimal? CalculateBestPrice(
 	IEnumerable<QuoteChange> asks);
 ```
 
-### 需要引用
+### 是否需要报价
 
 确定是否需要更新当前订单：
 
@@ -171,7 +171,7 @@ var processor = new QuotingProcessor(
 
 processor.Finished += isOk =>
 {
-	this.AddInfoLog($"Quoting finished: {isOk}");
+	this.AddInfoLog($"报价已完成: {isOk}");
 	processor?.Dispose();
 };
 
@@ -180,6 +180,6 @@ processor.Start();
 
 ## 另请参阅
 
-- [引用算法](quoting.md)
-- [引用策略](samples/mq.md)
+- [报价算法](quoting.md)
+- [报价策略](samples/mq.md)
 - [波动率报价](../options/volatility_trading.md)

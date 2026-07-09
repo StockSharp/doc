@@ -13,10 +13,10 @@ public class ArbitrageStrategy : Strategy
 {
 	private enum ArbitrageState
 	{
-		Contango,        // Futures price is higher than the underlying asset
-		Backwardation,   // Underlying asset price is higher than the futures
-		None,            // No position
-		OrderRegistration // In the process of registering orders
+		Contango,        // 期货价格高于标的资产
+		Backwardation,   // 标的资产价格高于期货
+		None,            // 无持仓
+		OrderRegistration // 正在注册订单
 	}
 
 	// 策略参数
@@ -117,8 +117,8 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 		return;
 
 	// 计算价差
-	var contangoSpread = _futBid - _stAsk;        // Futures price > underlying asset price
-	var backwardationSpread = _stBid - _futAck;   // Underlying asset price > futures price
+	var contangoSpread = _futBid - _stAsk;        // 期货价格 > 标的资产价格
+	var backwardationSpread = _stBid - _futAck;   // 标的资产价格 > 期货价格
 
 	decimal spread;
 	ArbitrageState arbitrageSignal;

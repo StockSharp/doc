@@ -75,8 +75,8 @@ protected override void OnStarted2(DateTime time)
    // 只添加指标链中的第一个指标
    Indicators.Add(sma);
    // 不要添加依赖其他指标的指标
-   // Indicators.Add(stdev); - incorrect
-   // Indicators.Add(bollingerBands); - incorrect
+   // Indicators.Add(stdev); - 错误
+   // Indicators.Add(bollingerBands); - 错误
    ```
 
 3. **组合指标** - 对于使用多个独立指标的指标（例如， MACD），将它们全部相加：

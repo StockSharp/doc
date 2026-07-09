@@ -49,7 +49,7 @@ protected override void OnStarted2(DateTime time)
 
 	_hourlyTrend = null;
 
-	// Hourly candles for trend detection (SMA crossover)
+	// 用于趋势检测的小时K线（SMA 交叉）
 	SubscribeCandles(TimeSpan.FromHours(1))
 		.Bind(fastSma, slowSma, ProcessHourlyCandle)
 		.Start();

@@ -59,7 +59,7 @@ timer.Stop();
 // 更改间隔
 timer.Interval = TimeSpan.FromMinutes(5);
 
-// Start again
+// 再次启动
 timer.Start();
 
 // 释放资源
@@ -102,7 +102,7 @@ public class TimerStrategy : Strategy
         // 用于定期检查市场状态的定时器
         _checkTimer = StartTimer(CheckInterval, OnCheckTimer);
 
-        // Timer for forced position closing (created but not started)
+        // 用于强制平仓的定时器（已创建但未启动）
         _closeTimer = CreateTimer(MaxHoldTime, OnCloseTimer);
 
         var subscription = SubscribeCandles(TimeSpan.FromMinutes(5));

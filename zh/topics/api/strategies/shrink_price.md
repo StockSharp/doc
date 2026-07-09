@@ -32,8 +32,8 @@ StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensi
 // 使用指定参数创建 Security 对象
 var security = new Security
 {
-	PriceStep = 0.01m,  // Price step of 0.01
-	Decimals = 2        // Two decimal places
+	PriceStep = 0.01m,  // 价格步长为 0.01
+	Decimals = 2        // 两位小数
 };
 
 // ShrinkPrice 使用示例
@@ -60,7 +60,7 @@ Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}"
 var order = new Order
 {
 	Security = security,
-	Price = 10.237m.ShrinkPrice(security)  // Round the price before creating the order
+	Price = 10.237m.ShrinkPrice(security)  // 创建订单前对价格取整
 };
 Console.WriteLine($"Order price: {order.Price}");
 // 输出：订单价格：10.24

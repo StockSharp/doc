@@ -18,10 +18,10 @@
 设置目标位置。提供两种调用方式：
 
 ```csharp
-// For the strategy's main security and portfolio
+// 用于策略的主交易品种和投资组合
 SetTargetPosition(decimal target);
 
-// For an arbitrary security and portfolio
+// 用于任意交易品种和投资组合
 SetTargetPosition(Security security, Portfolio portfolio, decimal target);
 ```
 
@@ -32,10 +32,10 @@ SetTargetPosition(Security security, Portfolio portfolio, decimal target);
 取消先前设置的目标位置并停止所有相关的活动订单：
 
 ```csharp
-// For the strategy's main security and portfolio
+// 用于策略的主交易品种和投资组合
 CancelTargetPosition();
 
-// For an arbitrary security and portfolio
+// 用于任意交易品种和投资组合
 CancelTargetPosition(Security security, Portfolio portfolio);
 ```
 
@@ -53,13 +53,13 @@ decimal? target = GetTargetPosition(security, portfolio);
 `TargetPositionManager` 属性提供对 `PositionTargetManager` 对象的直接访问，以进行微调：
 
 ```csharp
-// Maximum number of retry attempts on order error (default is 3)
+// 订单出错时的最大重试次数（默认 3）
 TargetPositionManager.MaxRetries = 5;
 
 // 用于判断是否达到目标持仓的容差
 TargetPositionManager.PositionTolerance = 0.01m;
 
-// Order type (default is Market)
+// 订单类型（默认 Market）
 TargetPositionManager.OrderType = OrderTypes.Market;
 ```
 

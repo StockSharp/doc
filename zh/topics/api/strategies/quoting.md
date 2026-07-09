@@ -12,9 +12,9 @@ StockSharp 提供报价的两个关键组成部分：
 
 2. **[IQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.IQuotingBehavior)** — 一个定义报价行为的接口，包括计算最优价格和确定是否需要更新订单。
 
-## 引用策略示例
+## 报价策略示例
 
-文档展示了演示引用机制使用的策略示例：
+文档展示了演示报价机制用法的策略示例：
 
 - **MqStrategy** — 一个利用报价机制来管理市场持仓的策略示例。
 - **MqSpreadStrategy** — 一个示例策略，通过同时下买入和卖出报价在市场上创建价差。
@@ -22,9 +22,9 @@ StockSharp 提供报价的两个关键组成部分：
 
 这些例子有助于理解如何将报价机制整合到你自己的交易算法中。
 
-## 引用行为
+## 报价行为
 
-StockSharp 支持各种引用行为：
+StockSharp 支持各种报价行为：
 
 - **[MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior)** — 基于市场价格的报价，可自定义偏移量和类型。
 - **[BestByPriceQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.BestByPriceQuotingBehavior)** — 基于最佳价格进行报价，并可自定义偏移量。
@@ -37,14 +37,14 @@ StockSharp 支持各种引用行为：
 
 ## 在你自己的策略中使用
 
-### 步骤 1：创建引用行为
+### 步骤 1：创建报价行为
 
 ```csharp
 // 创建市价报价行为
 var behavior = new MarketQuotingBehavior(
-	new Unit(0.01m), // Price offset from the best quote
-	new Unit(0.1m, UnitTypes.Percent), // Minimum deviation for quote update
-	MarketPriceTypes.Following // Market price type for quoting
+	new Unit(0.01m), // 相对于最优报价的价格偏移
+	new Unit(0.1m, UnitTypes.Percent), // 报价更新的最小偏差
+	MarketPriceTypes.Following // 报价使用的市场价格类型
 );
 ```
 
@@ -55,19 +55,19 @@ var behavior = new MarketQuotingBehavior(
 _quotingProcessor = new QuotingProcessor(
 	behavior,
 	Security, // 交易品种
-	Portfolio, // Portfolio
-	Sides.Buy, // Quoting direction
-	Volume, // Quoting volume
-	Volume, // Maximum order volume
-	TimeSpan.Zero, // No timeout
-	this, // Strategy implements ISubscriptionProvider
-	this, // Strategy implements IMarketRuleContainer
-	this, // Strategy implements ITransactionProvider
-	this, // Strategy implements ITimeProvider
-	this, // Strategy implements IMarketDataProvider
-	IsFormedAndOnlineAndAllowTrading, // Check trading permission
-	true, // Use order book prices
-	true  // Use last trade price if order book is empty
+	Portfolio, // 投资组合
+	Sides.Buy, // 报价方向
+	Volume, // 报价数量
+	Volume, // 最大订单数量
+	TimeSpan.Zero, // 无超时
+	this, // 策略实现 ISubscriptionProvider
+	this, // 策略实现 IMarketRuleContainer
+	this, // 策略实现 ITransactionProvider
+	this, // 策略实现 ITimeProvider
+	this, // 策略实现 IMarketDataProvider
+	IsFormedAndOnlineAndAllowTrading, // 检查交易权限
+	true, // 使用订单簿价格
+	true  // 订单簿为空时使用最后成交价
 )
 {
 	Parent = this
@@ -79,16 +79,16 @@ _quotingProcessor = new QuotingProcessor(
 ```csharp
 // 订阅处理器事件以记录日志和处理
 _quotingProcessor.OrderRegistered += order =>
-	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	this.AddInfoLog($"订单 {order.TransactionId} 已以价格 {order.Price} 注册");
 
 _quotingProcessor.OrderFailed += fail =>
-	this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	this.AddInfoLog($"订单失败: {fail.Error.Message}");
 
 _quotingProcessor.OwnTrade += trade =>
-	this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	this.AddInfoLog($"成交已执行: {trade.Trade.Volume}，价格 {trade.Trade.Price}");
 
 _quotingProcessor.Finished += isOk => {
-	this.AddInfoLog($"Quoting finished with success: {isOk}");
+	this.AddInfoLog($"报价成功完成: {isOk}");
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 };

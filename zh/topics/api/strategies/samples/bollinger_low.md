@@ -80,12 +80,12 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 	var typed = (BollingerBandsValue)bollingerValue;
 
 	// 交易逻辑：
-	// Sell when price touches the lower band (only when no position exists)
+	// 价格触及下轨时卖出（仅在无持仓时）
 	if (candle.ClosePrice <= typed.LowBand && Position == 0)
 	{
 		SellMarket(Volume);
 	}
-	// Buy to close the position when price reaches the middle line (only with a short position)
+	// 价格到达中轨时买入平仓（仅在持有空头时）
 	else if (candle.ClosePrice >= typed.MiddleBand && Position < 0)
 	{
 		BuyMarket(Math.Abs(Position));

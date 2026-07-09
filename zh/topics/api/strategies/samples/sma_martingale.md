@@ -80,7 +80,7 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// For the first value, only save data without generating signals
+	// 对于第一个值，仅保存数据，不生成信号
 	if (_isFirstValue)
 	{
 		_prevLongValue = longValue;

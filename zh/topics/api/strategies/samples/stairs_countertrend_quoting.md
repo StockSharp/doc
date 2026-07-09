@@ -73,14 +73,14 @@ private void ProcessCandle(ICandleMessage candle)
 		_bullLength++;
 		_bearLength = 0;
 
-		this.AddInfoLog($"Bullish candle detected. Streak: {_bullLength}");
+		this.AddInfoLog($"检测到看涨K线，连续数量: {_bullLength}");
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
 		_bullLength = 0;
 		_bearLength++;
 
-		this.AddInfoLog($"Bearish candle detected. Streak: {_bearLength}");
+		this.AddInfoLog($"检测到看跌K线，连续数量: {_bearLength}");
 	}
 
 	// 需要改变方向时停止现有处理器
@@ -110,30 +110,30 @@ private void ProcessCandle(ICandleMessage candle)
 		{
 			// 看涨趋势 - 开空头持仓
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"Starting SELL quoting after {_bullLength} bullish candles");
+			this.AddInfoLog($"在 {_bullLength} 根看涨K线后开始卖出报价");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// 看跌趋势 - 开多头持仓
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"Starting BUY quoting after {_bearLength} bearish candles");
+			this.AddInfoLog($"在 {_bearLength} 根看跌K线后开始买入报价");
 		}
 	}
 }
 ```
 
-## 创建引用处理器
+## 创建报价处理器
 
-`CreateQuotingProcessor` 方法创建一个具有指定方向的引用处理器：
+`CreateQuotingProcessor` 方法创建一个具有指定方向的报价处理器：
 
 ```cs
 private void CreateQuotingProcessor(Sides side)
 {
 	// 创建市价报价行为
 	var behavior = new MarketQuotingBehavior(
-		0, // No price offset
-		new Unit(0.1m, UnitTypes.Percent), // Use 0.1% as minimum deviation
-		MarketPriceTypes.Following // Follow market price
+		0, // 无价格偏移
+		new Unit(0.1m, UnitTypes.Percent), // 使用 0.1% 作为最小偏差
+		MarketPriceTypes.Following // 跟随市场价格
 	);
 
 	// 创建报价处理器
@@ -142,17 +142,17 @@ private void CreateQuotingProcessor(Sides side)
 		Security,
 		Portfolio,
 		side,
-		Volume, // Quoting volume
-		Volume, // Maximum order volume
-		TimeSpan.Zero, // No timeout
-		this, // Strategy implements ISubscriptionProvider
-		this, // Strategy implements IMarketRuleContainer
-		this, // Strategy implements ITransactionProvider
-		this, // Strategy implements ITimeProvider
-		this, // Strategy implements IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Check trading permission
-		true, // Use order book prices
-		true // Use last trade price if order book is empty
+		Volume, // 报价数量
+		Volume, // 最大订单数量
+		TimeSpan.Zero, // 无超时
+		this, // 策略实现 ISubscriptionProvider
+		this, // 策略实现 IMarketRuleContainer
+		this, // 策略实现 ITransactionProvider
+		this, // 策略实现 ITimeProvider
+		this, // 策略实现 IMarketDataProvider
+		IsFormedAndOnlineAndAllowTrading, // 检查交易权限
+		true, // 使用订单簿价格
+		true // 订单簿为空时使用最后成交价
 	)
 	{
 		Parent = this
@@ -160,13 +160,13 @@ private void CreateQuotingProcessor(Sides side)
 
 	// 订阅处理器事件
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"订单 {order.TransactionId} 已以价格 {order.Price} 注册");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"订单失败: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"成交已执行: {trade.Trade.Volume}，价格 {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk =>
 	{
@@ -192,6 +192,6 @@ private void CreateQuotingProcessor(Sides side)
 - 为了更高效地进入市场，使用报价而不是市价单
 - 该策略采用逆势方法，开仓与已建立的趋势相反的方向
 - 已实现主要事件的详细日志记录以进行调试
-- 当趋势方向发生变化或达到目标时，引用处理器会自动清除
+- 当趋势方向发生变化或达到目标时，报价处理器会自动清除
 - 图表支持K线和交易可视化
 - 序列长度参数优化已用于策略配置
