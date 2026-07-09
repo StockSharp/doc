@@ -24,5 +24,4 @@ Parameter
 
 ## Siehe auch
 
-[Hedging](hedging.md)
-
+[Absicherung](hedging.md)

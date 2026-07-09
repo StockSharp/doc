@@ -27,5 +27,5 @@ Parameter
 
 ## Siehe auch
 
-[Cancel Order](cancel.md)
+[Orderstornierung](cancel.md)
 

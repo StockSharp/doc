@@ -25,5 +25,4 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[Protect Position](protect.md)
-
+[Positionsschutz](protect.md)

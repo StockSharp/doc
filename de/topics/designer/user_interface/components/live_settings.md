@@ -4,26 +4,26 @@ Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strate
 
 ![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
 
-**Logging**
+**Protokollierung**
 
-- **Logging level** - der Logging-Level für dieses Element.
+- **Protokollierungsstufe** - der Logging-Level für dieses Element.
 
-**Initialization**
+**Initialisierung**
 
-- **Data type** - der Datentyp.
-- **Time frame** - Kerzen mit dem angegebenen Zeitrahmen verwenden.
-- **Days of history data** - die Anzahl der Tage historischer Daten zur Initialisierung der Strategie.
+- **Datentyp** - der Datentyp.
+- **Zeitrahmen** - Kerzen mit dem angegebenen Zeitrahmen verwenden.
+- **Tage mit historischen Daten** - die Anzahl der Tage historischer Daten zur Initialisierung der Strategie.
 
 **Einstellungen**
 
 - [Risikomanagement](../risk_management.md) - Einstellungen des Risikomanagements.
 
-**Diagram parameters**
+**Diagrammparameter**
 
 - **Instrument** - das Instrument.
 - **Portfolio** - das Portfolio.
 
-Wenn Sie die **Diagram parameters** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Instrument** der Registerkarte **Emulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
+Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Instrument** der Registerkarte **Emulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
 
 ## Empfohlene Inhalte
 

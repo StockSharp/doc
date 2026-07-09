@@ -7,45 +7,45 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 **Configuración**
 
 - **Datos de mercado** – almacenamiento de datos.
-- **Storage format** – formato de almacenamiento.
-- **Data type** – tipo de datos.
-- **Time frame** – usar velas con el marco temporal especificado.
-- **Maximum quote volume in generated depth** – volumen máximo de cotización en el libro de órdenes generado.
-- **Interval** – intervalo de tiempo.
-- **Unrealized P\/L** – intervalo de recálculo del beneficio no realizado.
+- **Formato de almacenamiento** – formato de almacenamiento.
+- **Tipo de datos** – tipo de datos.
+- **Marco temporal** – usar velas con el marco temporal especificado.
+- **Volumen máximo de cotización en la profundidad generada** – volumen máximo de cotización en el libro de órdenes generado.
+- **Intervalo** – intervalo de tiempo.
+- **P/L no realizado** – intervalo de recálculo del beneficio no realizado.
 - **Trades** – qué operaciones usar.
-- **Marked depth** – qué libros de órdenes usar.
-- **Order log** – usar el registro de órdenes.
-- **Number of strategies** – número de estrategias probadas simultáneamente.
-- **Logging level** – nivel de registro.
-- **Combine on touch** – durante la emulación, combinar órdenes cuando el precio de la operación toca el precio de la orden (es decir, es igual al precio de la orden).
-- **Marked depth (lifetime)** – tiempo máximo durante el cual el libro de órdenes está en el emulador. Si durante este tiempo no hubo actualización, el libro de órdenes se elimina. Esta propiedad puede usarse para eliminar libros de órdenes antiguos cuando hay huecos en los datos.
-- **Errors percentage** – valor porcentual del error al registrar nuevas órdenes. El valor puede ser de 0 (no habrá errores) a 100.
-- **Latency** – valor mínimo de latencia de la orden registrada.
-- **Reregistering** – si se admite el nuevo registro de órdenes como una sola operación.
-- **Buffering period** – enviar respuestas en un único paquete por intervalos. Se emulan la latencia de red y la operación en búfer del núcleo del exchange.
+- **Profundidad de mercado** – qué libros de órdenes usar.
+- **Registro de órdenes** – usar el registro de órdenes.
+- **Número de estrategias** – número de estrategias probadas simultáneamente.
+- **Nivel de registro** – nivel de registro.
+- **Combinar al tocar** – durante la emulación, combinar órdenes cuando el precio de la operación toca el precio de la orden (es decir, es igual al precio de la orden).
+- **Profundidad de mercado (vida útil)** – tiempo máximo durante el cual el libro de órdenes está en el emulador. Si durante este tiempo no hubo actualización, el libro de órdenes se elimina. Esta propiedad puede usarse para eliminar libros de órdenes antiguos cuando hay huecos en los datos.
+- **Porcentaje de errores** – valor porcentual del error al registrar nuevas órdenes. El valor puede ser de 0 (no habrá errores) a 100.
+- **Latencia** – valor mínimo de latencia de la orden registrada.
+- **Nuevo registro** – si se admite el nuevo registro de órdenes como una sola operación.
+- **Periodo de búfer** – enviar respuestas en un único paquete por intervalos. Se emulan la latencia de red y la operación en búfer del núcleo del exchange.
 - **Order ID** – número desde el que el emulador generará identificadores de órdenes.
 - **Trade ID** – número desde el que el emulador generará identificadores de operaciones.
-- **Transaction** – número desde el que el emulador generará identificadores de transacciones de órdenes.
-- **Spread size** – tamaño del spread en pasos de precio. Se usa al especificar el spread para generar un libro de órdenes a partir de operaciones tick.
-- **Depth of book** – profundidad máxima del libro de órdenes que se generará a partir de ticks.
-- **Number of volume steps** – número de pasos de volumen por los que la orden es mayor que la operación tick. Se usa para pruebas con operaciones tick.
-- **Portfolios interval** – intervalo de recálculo de cartera. Si el intervalo es cero, no se realiza recálculo.
-- **Change time** – cambiar la hora de órdenes y operaciones a hora del exchange.
-- **Time zone** – información sobre la zona horaria donde se encuentra el exchange.
-- **Price shift** – desplazamiento de precio desde la última operación, que especifica los límites de precios máximo y mínimo para la siguiente sesión.
-- **Add extra volume** – añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
+- **Transacción** – número desde el que el emulador generará identificadores de transacciones de órdenes.
+- **Tamaño del spread** – tamaño del spread en pasos de precio. Se usa al especificar el spread para generar un libro de órdenes a partir de operaciones tick.
+- **Profundidad del libro** – profundidad máxima del libro de órdenes que se generará a partir de ticks.
+- **Número de pasos de volumen** – número de pasos de volumen por los que la orden es mayor que la operación tick. Se usa para pruebas con operaciones tick.
+- **Intervalo de carteras** – intervalo de recálculo de cartera. Si el intervalo es cero, no se realiza recálculo.
+- **Cambiar hora** – cambiar la hora de órdenes y operaciones a hora del exchange.
+- **Zona horaria** – información sobre la zona horaria donde se encuentra el exchange.
+- **Desplazamiento de precio** – desplazamiento de precio desde la última operación, que especifica los límites de precios máximo y mínimo para la siguiente sesión.
+- **Añadir volumen extra** – añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
 - **[Comisiones](../commissions.md)** – comisión (brokerage, exchange, etc.).
 
-**Logging**
+**Registro**
 
-- **Logging level** – nivel de registro para este elemento.
+- **Nivel de registro** – nivel de registro para este elemento.
 
-**Setting**
+**Configuración**
 
 - **[Gestión de riesgos](../risk_management.md)** – configuración de gestión de riesgos.
 
-**Diagram parameters**
+**Parámetros del diagrama**
 
 - **Instrumento** - instrumento.
 - **Cartera** - cartera.

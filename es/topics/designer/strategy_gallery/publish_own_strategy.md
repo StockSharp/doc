@@ -1,10 +1,10 @@
 # Publicación de su estrategia
 
-Puede publicar su estrategia haciendo clic con el botón izquierdo del ratón en la estrategia en el panel [Schemes](../user_interface/schemas.md) y seleccionando **Publish**:
+Puede publicar su estrategia haciendo clic con el botón izquierdo del ratón en la estrategia en el panel [Panel Esquemas](../user_interface/schemas.md) y seleccionando **Publicar**:
 
 ![Designer_publish_00](../../../images/designer_publish_00.png)
 
-Después de hacer clic en el botón **Publish**, se abrirá una ventana con la elección del tipo de exportación. Para más detalles, vea la sección [Exportación de estrategias](../export_import/export.md).
+Después de hacer clic en el botón **Publicar**, se abrirá una ventana con la elección del tipo de exportación. Para más detalles, vea la sección [Exportación de estrategias](../export_import/export.md).
 
 Después de elegir el tipo de exportación, se activa el programa [Installer](../../installer.md) con los parámetros de publicación ([Installer](../../installer.md) debe estar iniciado de antemano):
 
@@ -12,8 +12,8 @@ Después de elegir el tipo de exportación, se activa el programa [Installer](..
 
 Campos que deben rellenarse:
 
-- Name
-- Description
+- Nombre
+- Descripción
 - Identificador de paquete Nuget. Este parámetro es necesario para establecer el enlace al producto en la tienda. Por ejemplo, en la dirección https://stocksharp.com/store/runner/, la palabra **runner** se especifica mediante este parámetro.
 
 El acceso al nivel **Free** o **Paid** se concede solo después de contactar por correo electrónico [info@stocksharp.com](mailto:info@stocksharp.com). De forma predeterminada, está disponible el nivel **Private**, que permite publicar estrategias solo en formato privado (para usuarios seleccionados):

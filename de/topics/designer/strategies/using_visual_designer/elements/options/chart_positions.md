@@ -19,5 +19,5 @@ Eingehende Sockets
 
 ## Empfohlene Inhalte
 
-[Black Scholes](black_scholes.md)
+[Black-Scholes](black_scholes.md)
 

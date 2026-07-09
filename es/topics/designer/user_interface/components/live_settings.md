@@ -4,21 +4,21 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 
 ![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
 
-**Logging**
+**Registro**
 
-- **Logging level** – nivel de registro para este elemento.
+- **Nivel de registro** – nivel de registro para este elemento.
 
-**Initialization**
+**Inicialización**
 
-- **Data type** - tipo de datos.
-- **Time frame** - usar velas con el marco temporal especificado.
-- **Days of history data** - número de días de datos históricos para inicializar la estrategia.
+- **Tipo de datos** - tipo de datos.
+- **Marco temporal** - usar velas con el marco temporal especificado.
+- **Días de datos históricos** - número de días de datos históricos para inicializar la estrategia.
 
 **Configuración**
 
 - [Gestión de riesgos](../risk_management.md) - configuración de gestión de riesgos.
 
-**Diagram parameters**
+**Parámetros del diagrama**
 
 - **Instrumento** - instrumento.
 - **Cartera** - cartera.

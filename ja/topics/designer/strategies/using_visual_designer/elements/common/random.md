@@ -21,4 +21,4 @@
 
 ## 関連項目
 
-[Change in P/L](pnl_strategy.md)
+[ストラテジーの P&L](pnl_strategy.md)

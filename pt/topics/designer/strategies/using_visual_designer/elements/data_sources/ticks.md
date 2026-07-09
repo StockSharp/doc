@@ -24,4 +24,4 @@ Parâmetros
 
 ## Ver também
 
-[Index](index.md)
+[Índice](index.md)

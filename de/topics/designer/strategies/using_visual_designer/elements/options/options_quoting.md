@@ -28,5 +28,5 @@ Parameter
 
 ## Empfohlene Inhalte
 
-[Derivatives](strikes.md)
+[Ausübungspreise](strikes.md)
 

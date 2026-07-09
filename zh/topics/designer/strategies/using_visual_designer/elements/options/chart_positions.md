@@ -2,16 +2,16 @@
 
 ![Designer Graph options positions 00](../../../../../../images/designer_graph_options_positions_00.png)
 
-该模块用于显示 **Chart of options positions**。
+该模块用于显示 **期权持仓图表**。
 
-要显示 **Chart of options positions**，需要添加 **Chart of options positions** 图形组件。
+要显示 **期权持仓图表**，需要添加 **期权持仓图表** 图形组件。
 
 ### 输入端口
 
 输入端口
 
-- **Model** – 计算模型（例如 Black-Scholes）。
-- **Price of the underlying asset** \- 标的资产的价格。
+- **模型** – 计算模型（例如 Black-Scholes）。
+- **标的资产价格** \- 标的资产的价格。
 
 ![Designer Graph options positions 01](../../../../../../images/designer_graph_options_positions_01.png)
 
@@ -19,4 +19,4 @@
 
 ## 推荐内容
 
-[Black Scholes](black_scholes.md)
+[布莱克-斯科尔斯](black_scholes.md)

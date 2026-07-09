@@ -21,5 +21,5 @@ Dieser Block wird verwendet, um einen Zufallswert zu generieren.
 
 ## Siehe auch
 
-[Change in P/L](pnl_strategy.md)
+[P&L-Strategie](pnl_strategy.md)
 

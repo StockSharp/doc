@@ -8,22 +8,22 @@
 
 入力ソケット
 
-- **Model** - 計算モデル（例: Black-Scholes）。
-- **Price of the Underlying Asset** - 原資産の価格。
-- **Maximum Deviation** - 最大偏差。
+- **モデル** - 計算モデル（例: Black-Scholes）。
+- **原資産価格** - 原資産の価格。
+- **最大偏差** - 最大偏差。
 
 ### 出力ソケット
 
 出力ソケット
 
-- **Result** - 現在時点の主要な「グリークス」である Delta、Gamma、Vega、Theta、Rho の計算結果。
+- **結果** - 現在時点の主要な「グリークス」である Delta、Gamma、Vega、Theta、Rho の計算結果。
 
 ### パラメーター
 
 パラメーター
 
-- **Value** - 「グリーク」の種類である Delta、Gamma、Vega、Theta、Rho を取ることができ、このブロックからどの値を出力するかを決定します。
+- **値** - 「グリーク」の種類である Delta、Gamma、Vega、Theta、Rho を取ることができ、このブロックからどの値を出力するかを決定します。
 
 ## 関連項目
 
-[Hedging](black_scholes.md)
+[ブラック・ショールズ](black_scholes.md)

@@ -1,6 +1,6 @@
-# Painel Schemes
+# Painel de esquemas
 
-Para abrir o painel **Schemes**, tem de clicar no botão **Schemes** no separador **Common**. O painel **Schemes** contém uma árvore de scripts, agrupados em pastas por finalidade. Os esquemas de estratégias e os blocos personalizados não são diferentes. São editados com um editor comum, [Designer de estratégias](../strategies/using_visual_designer/diagram_panel.md). No entanto, para evitar confusão entre eles, estão divididos em duas listas independentes e guardados em pastas diferentes (estratégias na pasta **Backtest**, blocos personalizados na pasta **Custom Blocks**). A seleção de um esquema para edição é feita com duplo clique no item necessário na lista. O esquema selecionado será então aberto no designer para visualização e edição. Abaixo encontra-se uma descrição das pastas no painel **Schemes**:
+Para abrir o painel **Esquemas**, tem de clicar no botão **Esquemas** no separador **Comum**. O painel **Esquemas** contém uma árvore de scripts, agrupados em pastas por finalidade. Os esquemas de estratégias e os blocos personalizados não são diferentes. São editados com um editor comum, [Designer de estratégias](../strategies/using_visual_designer/diagram_panel.md). No entanto, para evitar confusão entre eles, estão divididos em duas listas independentes e guardados em pastas diferentes (estratégias na pasta **Backtest**, blocos personalizados na pasta **Blocos personalizados**). A seleção de um esquema para edição é feita com duplo clique no item necessário na lista. O esquema selecionado será então aberto no designer para visualização e edição. Abaixo encontra-se uma descrição das pastas no painel **Esquemas**:
 
 ![Designer Panel Circuits 00](../../../images/designer_panel_circuits_00.png)
 

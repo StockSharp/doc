@@ -8,5 +8,5 @@ Für den Würfel [Variable](../elements/data_sources/variable.md) wird der Daten
 
 ## Empfohlene Inhalte
 
-[Gallery](../../../strategy_gallery.md)
+[Strategiegalerie](../../../strategy_gallery.md)
 

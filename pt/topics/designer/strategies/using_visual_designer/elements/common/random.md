@@ -21,4 +21,4 @@ Este bloco é usado para gerar um valor aleatório.
 
 ## Ver também
 
-[Change in P/L](pnl_strategy.md)
+[Estratégia de P&L](pnl_strategy.md)

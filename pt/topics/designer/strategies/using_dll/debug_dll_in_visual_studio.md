@@ -37,4 +37,4 @@ Se o processo estiver em execução com outra conta de utilizador, tem de marcar
 
 ## Ver Também
 
-[Exporting Strategies](../../export_import/export.md)
+[Exportação de estratégias](../../export_import/export.md)

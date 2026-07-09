@@ -22,7 +22,7 @@ Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 - Datentyp aus dem Speicher - **Ticks**
 - Kerzen mit einem Zeitrahmen von 5 s
 - Volumen - 100
-- History days - 2
+- Historientage - 2
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
@@ -47,4 +47,3 @@ Chart aus dem Handelsterminal:
 ## Siehe auch
 
 [Marktdatenspeicher](../market_data_storage.md)
-

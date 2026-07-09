@@ -1,4 +1,4 @@
-# Strikes
+# Precios de ejercicio
 
 ![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
 

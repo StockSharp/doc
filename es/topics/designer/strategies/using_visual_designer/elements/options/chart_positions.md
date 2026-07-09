@@ -19,4 +19,4 @@ Sockets de entrada
 
 ## Contenido recomendado
 
-[Black Scholes](black_scholes.md)
+[Black-Scholes](black_scholes.md)

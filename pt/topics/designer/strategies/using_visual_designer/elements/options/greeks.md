@@ -8,22 +8,22 @@ Este bloco é usado para calcular os principais "Gregos": Delta, Gamma, Vega, Th
 
 Sockets de entrada
 
-- **Model** - o modelo de cálculo (por exemplo, Black-Scholes).
-- **Price of the Underlying Asset** - o preço do ativo subjacente.
-- **Maximum Deviation** - o desvio máximo.
+- **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
+- **Preço do ativo subjacente** - o preço do ativo subjacente.
+- **Desvio máximo** - o desvio máximo.
 
 ### Sockets de saída
 
 Sockets de saída
 
-- **Result** - o resultado do cálculo dos principais "Gregos": Delta, Gamma, Vega, Theta, Rho no momento atual.
+- **Resultado** - o resultado do cálculo dos principais "Gregos": Delta, Gamma, Vega, Theta, Rho no momento atual.
 
 ### Parâmetros
 
 Parâmetros
 
-- **Value** - pode assumir o tipo de "Grego" Delta, Gamma, Vega, Theta, Rho e determina que valor será emitido pelo bloco.
+- **Valor** - pode assumir o tipo de "Grego" Delta, Gamma, Vega, Theta, Rho e determina que valor será emitido pelo bloco.
 
 ## Ver também
 
-[Hedging](black_scholes.md)
+[Black-Scholes](black_scholes.md)

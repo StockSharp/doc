@@ -19,5 +19,5 @@ Der Würfel wird verwendet, um den vorherigen an den Eingang übergebenen Wert m
 
 ## Empfohlene Inhalte
 
-[Random](random.md)
+[Zufallswert](random.md)
 

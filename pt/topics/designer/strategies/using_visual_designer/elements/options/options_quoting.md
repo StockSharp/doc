@@ -28,4 +28,4 @@ Parâmetros
 
 ## Conteúdo recomendado
 
-[Derivatives](strikes.md)
+[Preços de exercício](strikes.md)

@@ -19,4 +19,4 @@
 
 ## 推奨コンテンツ
 
-[Random](random.md)
+[ランダム値](random.md)

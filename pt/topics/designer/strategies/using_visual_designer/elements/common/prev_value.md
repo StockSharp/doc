@@ -19,4 +19,4 @@ O cubo é usado para obter o valor anterior passado para a entrada, com o desloc
 
 ## Conteúdo recomendado
 
-[Random](random.md)
+[Valor aleatório](random.md)
