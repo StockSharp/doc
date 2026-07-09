@@ -10,7 +10,7 @@ Das wichtigste Element der Benutzeroberfläche von [Designer](../../designer.md)
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 
-3. Die Registerkarte **Live-Handel** ist speziell für den realen Handel vorgesehen. Details zu den Verbindungseinstellungen finden Sie unter [Connection Settings](../connections_settings.md). Der reale Handel mit [Designer](../../designer.md) wird unter [Live Trading](../live_execution/getting_started.md) beschrieben.
+3. Die Registerkarte **Live-Handel** ist speziell für den realen Handel vorgesehen. Details zu den Verbindungseinstellungen finden Sie unter [Verbindungseinstellungen](../connections_settings.md). Der reale Handel mit [Designer](../../designer.md) wird unter [Live-Handel](../live_execution/getting_started.md) beschrieben.
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 

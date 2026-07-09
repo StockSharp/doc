@@ -26,9 +26,9 @@ SMA 策略示例使用以下参数：
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
-设置完所有必需参数后，单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start 按钮启动策略。
+设置完所有必需参数后，单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮启动策略。
 
-单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start 按钮后，图表会开始显示已下载的完整两天历史数据：
+单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮后，图表会开始显示已下载的完整两天历史数据：
 
 ![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
 

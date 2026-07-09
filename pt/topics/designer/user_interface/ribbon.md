@@ -6,11 +6,11 @@ O principal elemento da interface de utilizador do [Designer](../../designer.md)
 
 ![Designer Tape 00](../../../images/designer_tape_00.png)
 
-2. O separador **Teste histórico** abre automaticamente ao selecionar uma estratégia no painel [Scheme](schemas.md). O separador **Teste histórico** contém os principais elementos para criar, depurar, testar e otimizar estratégias ([Creating a Strategy](../strategies/using_visual_designer.md), [Example of Backtesting](../backtesting/getting_started.md)). Também neste separador, a estratégia é iniciada para negociação real e são selecionados os componentes necessários para a sua estratégia: gráfico, livro de ordens, negócios, etc.
+2. O separador **Teste histórico** abre automaticamente ao selecionar uma estratégia no painel [Esquemas](schemas.md). O separador **Teste histórico** contém os principais elementos para criar, depurar, testar e otimizar estratégias ([Criar uma estratégia](../strategies/using_visual_designer.md), [Exemplo de backtesting](../backtesting/getting_started.md)). Também neste separador, a estratégia é iniciada para negociação real e são selecionados os componentes necessários para a sua estratégia: gráfico, livro de ordens, negócios, etc.
 
 ![Designer Tape 01](../../../images/designer_tape_01.png)
 
-3. O separador **Ao vivo** destina-se especificamente à negociação real. Os detalhes sobre as definições de ligação estão descritos em [Connection Settings](../connections_settings.md). A negociação real com o [Designer](../../designer.md) é descrita em [Live Trading](../live_execution/getting_started.md).
+3. O separador **Ao vivo** destina-se especificamente à negociação real. Os detalhes sobre as definições de ligação estão descritos em [Definições de ligação](../connections_settings.md). A negociação real com o [Designer](../../designer.md) é descrita em [Negociação em tempo real](../live_execution/getting_started.md).
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 

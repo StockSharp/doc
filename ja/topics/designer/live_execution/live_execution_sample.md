@@ -26,9 +26,9 @@ SMA ストラテジーを使用する例では、以下のパラメーターを�
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
-必要なすべてのパラメーターを設定したら、![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start ボタンをクリックして、ストラテジーのライブ取引を開始します。
+必要なすべてのパラメーターを設定したら、![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **開始** ボタンをクリックして、ストラテジーのライブ取引を開始します。
 
-![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start ボタンをクリックすると、チャートにはダウンロード済みの 2 日分の履歴全体が表示され始めます。
+![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **開始** ボタンをクリックすると、チャートにはダウンロード済みの 2 日分の履歴全体が表示され始めます。
 
 ![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
 

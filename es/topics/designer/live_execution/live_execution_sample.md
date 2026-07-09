@@ -26,9 +26,9 @@ En el ejemplo con la estrategia SMA se usarán los siguientes parámetros.
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
-Después de configurar todos los parámetros requeridos, inicie el trading en vivo para la estrategia haciendo clic en el botón Start ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png).
+Después de configurar todos los parámetros requeridos, inicie el trading en vivo para la estrategia haciendo clic en el botón **Iniciar** ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png).
 
-Después de hacer clic en el botón Start ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), el gráfico empezará a mostrar todo el historial descargado de 2 días:
+Después de hacer clic en el botón **Iniciar** ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), el gráfico empezará a mostrar todo el historial descargado de 2 días:
 
 ![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
 

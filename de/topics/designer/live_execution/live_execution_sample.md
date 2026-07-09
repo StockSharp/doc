@@ -26,9 +26,9 @@ Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 
 ![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
 
-Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie den Live-Handel für die Strategie, indem Sie auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start klicken.
+Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie den Live-Handel für die Strategie, indem Sie auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Starten** klicken.
 
-Nach dem Klicken auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) Start beginnt der Chart, die gesamte heruntergeladene Historie für 2 Tage anzuzeigen:
+Nach dem Klicken auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Starten** beginnt der Chart, die gesamte heruntergeladene Historie für 2 Tage anzuzeigen:
 
 ![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
 
