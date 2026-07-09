@@ -35,7 +35,7 @@ Die Connors RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, 
 
 2. **Streak RSI-Komponente**:
    - Berechnen Sie zunächst den Streak (Anzahl aufeinanderfolgender Tage mit Preisanstieg oder -abfall).
-   - Wenden Sie anschlie?end RSI mit dem StreakRSIPeriod auf diese Streak-Serie an
+   - Wenden Sie anschließend RSI mit dem StreakRSIPeriod auf diese Streak-Serie an
 
 3. **Änderungsrate RSI-Komponente (ROC RSI)**:
    - Berechnen Sie den Perzentilrang des aktuellen ROC gegenüber dem ROCRSIPeriod
