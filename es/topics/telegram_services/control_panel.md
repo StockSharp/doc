@@ -6,7 +6,7 @@ Para la configuración, complete previamente el [proceso de autorización del bo
 
 Después de esto, el bot está listo para usarse. A continuación, para que el bot empiece a ver sus estrategias, debe:
 
- - Al usar el programa [Designer](../designer.md), habilitar el modo Remote en el panel Cloud:
+ - Al usar el programa [Designer](../designer.md), habilitar el modo remoto en el panel Nube:
 
   ![DesignerRibbon.png](../../images/designerribbon.png)
 
@@ -24,7 +24,7 @@ Después de esto, el bot está listo para usarse. A continuación, para que el b
 
   ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
 
- - Al usar [Shell](../shell.md), vaya al panel Remote Manager y configure los ajustes de forma similar a [Designer](../designer.md).
+ - Al usar [Shell](../shell.md), vaya al panel RemoteManager y configure los ajustes de forma similar a [Designer](../designer.md).
  - Al usar [Hydra](../hydra.md), realice acciones similares a [Designer](../designer.md). La integración con [Hydra](../hydra.md) permite gestionar la descarga de datos de mercado y monitorizar estadísticas cuantitativas.
 
   ![TelegramHydra.png](../../images/telegramhydra.png)

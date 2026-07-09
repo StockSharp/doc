@@ -6,7 +6,7 @@ Telegram ボットを介して取引ストラテジーとロボットを管理�
 
 その後、ボットを使用できるようになります。次に、ボットがストラテジーを認識し始めるようにするには、次の操作が必要です。
 
- - [Designer](../designer.md) プログラムを使用する場合は、Cloud パネルで Remote mode を有効にします。
+ - [Designer](../designer.md) プログラムを使用する場合は、クラウド パネルでリモートモードを有効にします。
 
   ![DesignerRibbon.png](../../images/designerribbon.png)
 
@@ -24,7 +24,7 @@ Telegram ボットを介して取引ストラテジーとロボットを管理�
 
   ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
 
- - [Shell](../shell.md) を使用する場合は、Remote Manager パネルに移動し、[Designer](../designer.md) と同様に設定を構成します。
+ - [Shell](../shell.md) を使用する場合は、RemoteManager パネルに移動し、[Designer](../designer.md) と同様に設定を構成します。
  - [Hydra](../hydra.md) を使用する場合は、[Designer](../designer.md) と同様の操作を行います。[Hydra](../hydra.md) との連携により、市場データのダウンロードを管理し、数量統計を監視できます。
 
   ![TelegramHydra.png](../../images/telegramhydra.png)

@@ -6,7 +6,7 @@
 
 授权完成后即可使用机器人。为了让机器人识别您的策略，还需要执行以下操作：
 
- - 使用 [Designer](../designer.md) 时，在 Cloud 面板中启用 Remote 模式：
+ - 使用 [Designer](../designer.md) 时，在云面板中启用远程模式：
 
   ![DesignerRibbon.png](../../images/designerribbon.png)
 
@@ -24,7 +24,7 @@
 
   ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
 
- - 使用 [Shell](../shell.md) 时，打开 Remote Manager 面板，并按与 [Designer](../designer.md) 类似的方式配置设置。
+ - 使用 [Shell](../shell.md) 时，打开 RemoteManager 面板，并按与 [Designer](../designer.md) 类似的方式配置设置。
  - 使用 [Hydra](../hydra.md) 时，执行与 [Designer](../designer.md) 类似的操作。通过与 [Hydra](../hydra.md) 集成，可以管理市场数据下载并监控数量统计信息。
 
   ![TelegramHydra.png](../../images/telegramhydra.png)

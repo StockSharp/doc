@@ -1,6 +1,6 @@
 # Alertas
 
-Servicio para enviar mensajes desde aplicaciones (como [Designer](../designer.md) o su propio programa personalizado) tanto a canales o grupos privados como públicos en el messenger Telegram.
+Servicio para enviar mensajes desde aplicaciones (como [Designer](../designer.md) o su propio programa personalizado) tanto a canales o grupos privados como públicos en Telegram.
 
 Para configurar:
 
