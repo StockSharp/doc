@@ -41,20 +41,20 @@ var security = new Security
 // 例 1: 価格刻みに丸める
 decimal price1 = 10.234m;
 decimal shrunkPrice1 = price1.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price1}, After ShrinkPrice: {shrunkPrice1}");
-// 出力: Original price: 10.234, After ShrinkPrice: 10.23
+Console.WriteLine($"元の価格: {price1}, ShrinkPrice 後: {shrunkPrice1}");
+// 出力: 元の価格: 10.234, ShrinkPrice 後: 10.23
 
 // 例 2: すでに刻みに一致している価格を丸める
 decimal price2 = 10.22m;
 decimal shrunkPrice2 = price2.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price2}, After ShrinkPrice: {shrunkPrice2}");
-// 出力: Original price: 10.22, After ShrinkPrice: 10.22
+Console.WriteLine($"元の価格: {price2}, ShrinkPrice 後: {shrunkPrice2}");
+// 出力: 元の価格: 10.22, ShrinkPrice 後: 10.22
 
 // 例 3: 小数点以下桁数が多い価格を丸める
 decimal price3 = 10.2345678m;
 decimal shrunkPrice3 = price3.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}");
-// 出力: Original price: 10.2345678, After ShrinkPrice: 10.23
+Console.WriteLine($"元の価格: {price3}, ShrinkPrice 後: {shrunkPrice3}");
+// 出力: 元の価格: 10.2345678, ShrinkPrice 後: 10.23
 
 // 例 4: 注文作成時に ShrinkPrice を使用
 var order = new Order
@@ -62,8 +62,8 @@ var order = new Order
 	Security = security,
 	Price = 10.237m.ShrinkPrice(security)  // 注文作成前に価格を丸める
 };
-Console.WriteLine($"Order price: {order.Price}");
-// 出力: Order price: 10.24
+Console.WriteLine($"注文価格: {order.Price}");
+// 出力: 注文価格: 10.24
 ```
 
 ## 適用

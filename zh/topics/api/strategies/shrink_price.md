@@ -41,19 +41,19 @@ var security = new Security
 // 示例 1：按价格步长取整
 decimal price1 = 10.234m;
 decimal shrunkPrice1 = price1.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price1}, After ShrinkPrice: {shrunkPrice1}");
+Console.WriteLine($"原始价格: {price1}, ShrinkPrice 后: {shrunkPrice1}");
 // 输出：原始价格：10.234，ShrinkPrice 后：10.23
 
 // 示例 2：对已符合步长的价格取整
 decimal price2 = 10.22m;
 decimal shrunkPrice2 = price2.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price2}, After ShrinkPrice: {shrunkPrice2}");
+Console.WriteLine($"原始价格: {price2}, ShrinkPrice 后: {shrunkPrice2}");
 // 输出：原始价格：10.22，ShrinkPrice 后：10.22
 
 // 示例 3：对小数位更多的价格取整
 decimal price3 = 10.2345678m;
 decimal shrunkPrice3 = price3.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}");
+Console.WriteLine($"原始价格: {price3}, ShrinkPrice 后: {shrunkPrice3}");
 // 输出：原始价格：10.2345678，ShrinkPrice 后：10.23
 
 // 示例 4：创建订单时使用 ShrinkPrice
@@ -62,7 +62,7 @@ var order = new Order
 	Security = security,
 	Price = 10.237m.ShrinkPrice(security)  // 创建订单前对价格取整
 };
-Console.WriteLine($"Order price: {order.Price}");
+Console.WriteLine($"订单价格: {order.Price}");
 // 输出：订单价格：10.24
 ```
 

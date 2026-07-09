@@ -54,7 +54,7 @@ public class EmptyIndicator : BaseIndicator
 
 		if (_counter++ == 5)
 		{
-			// for example, our indicator needs 5 inputs for become formed
+			// 例如，此指标需要 5 个输入值才会形成
 			_isFormed = true;
 		}
 

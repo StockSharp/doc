@@ -41,19 +41,19 @@ var security = new Security
 // Beispiel 1: Rundung auf den Preisschritt
 decimal price1 = 10.234m;
 decimal shrunkPrice1 = price1.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price1}, After ShrinkPrice: {shrunkPrice1}");
+Console.WriteLine($"Ursprünglicher Preis: {price1}, nach ShrinkPrice: {shrunkPrice1}");
 // Ausgabe: ursprünglicher Preis: 10.234, nach ShrinkPrice: 10.23
 
 // Beispiel 2: Rundung eines Preises, der bereits dem Schritt entspricht
 decimal price2 = 10.22m;
 decimal shrunkPrice2 = price2.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price2}, After ShrinkPrice: {shrunkPrice2}");
+Console.WriteLine($"Ursprünglicher Preis: {price2}, nach ShrinkPrice: {shrunkPrice2}");
 // Ausgabe: ursprünglicher Preis: 10.22, nach ShrinkPrice: 10.22
 
 // Beispiel 3: Rundung eines Preises mit mehr Dezimalstellen
 decimal price3 = 10.2345678m;
 decimal shrunkPrice3 = price3.ShrinkPrice(security);
-Console.WriteLine($"Original price: {price3}, After ShrinkPrice: {shrunkPrice3}");
+Console.WriteLine($"Ursprünglicher Preis: {price3}, nach ShrinkPrice: {shrunkPrice3}");
 // Ausgabe: ursprünglicher Preis: 10.2345678, nach ShrinkPrice: 10.23
 
 // Beispiel 4: Verwendung von ShrinkPrice beim Erstellen einer Order
@@ -62,8 +62,8 @@ var order = new Order
 	Security = security,
 	Price = 10.237m.ShrinkPrice(security)  // Preis vor dem Erstellen der Order runden
 };
-Console.WriteLine($"Order price: {order.Price}");
-// Ausgabe: Orderpreis: 10.24
+Console.WriteLine($"Auftragspreis: {order.Price}");
+// Ausgabe: Auftragspreis: 10.24
 ```
 
 ## Anwendung
