@@ -65,7 +65,7 @@ new RiskPnLRule
 当达到指定的持仓规模时触发：
 
 ```csharp
-// Cancel orders when position >= 100
+// 当持仓 >= 100 时取消订单
 new RiskPositionSizeRule
 {
     Position = 100m,

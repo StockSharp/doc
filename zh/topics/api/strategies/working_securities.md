@@ -19,7 +19,7 @@
 ```cs
 public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 {
-	// Return a list of pairs (instrument, data type) used by the strategy
+	// 返回策略使用的（交易品种，数据类型）配对列表
 	return new[] 
 	{ 
 		(Security, CandleType),

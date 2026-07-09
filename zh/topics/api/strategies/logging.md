@@ -204,10 +204,10 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 // 创建日志管理器
 var logManager = new LogManager();
 
-// Add log listener to console
+// 添加控制台日志监听器
 logManager.Listeners.Add(new ConsoleLogListener());
 
-// Add strategy to log sources
+// 将策略添加到日志源
 logManager.Sources.Add(strategy);
 ```
 

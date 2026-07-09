@@ -11,7 +11,7 @@
 ```python
 import clr
 
-# Add references to the required StockSharp assemblies
+# 添加对所需 StockSharp 程序集的引用
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Diagram.Core")
 

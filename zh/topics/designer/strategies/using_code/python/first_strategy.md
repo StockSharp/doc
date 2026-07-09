@@ -149,7 +149,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		# 计算开仓或反转持仓的数量
 		volume = self.Volume if self.Position == 0 else Math.Min(Math.Abs(self.Position), self.Volume) * 2
 
-		# Get price step (default to 1 if not set)
+		# 获取价格步长（未设置时默认为 1）
 		priceStep = self.GetSecurity().PriceStep or 1
 
 		# 使用偏移计算订单价格

@@ -42,7 +42,7 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 `IsFormedAndOnlineAndAllowTrading` 扩展方法检查策略是否已形成（`IsFormed`）、是否处于在线状态（`IsOnline`），以及交易模式是否允许所需的操作：
 
 ```csharp
-// Check permission for full trading (default)
+// 检查完整交易权限（默认）
 if (!IsFormedAndOnlineAndAllowTrading())
     return;
 

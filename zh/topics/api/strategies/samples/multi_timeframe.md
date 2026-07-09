@@ -59,7 +59,7 @@ protected override void OnStarted2(DateTime time)
 		.Bind(rsi, ProcessEntryCandle)
 		.Start();
 
-	// Set up position protection (take-profit and stop-loss)
+	// 设置持仓保护（止盈和止损）
 	StartProtection(
 		new Unit(TakeProfit, UnitTypes.Percent),
 		new Unit(StopLoss, UnitTypes.Percent)

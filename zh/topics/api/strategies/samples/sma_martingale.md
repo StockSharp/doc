@@ -97,7 +97,7 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	_prevLongValue = longValue;
 	_prevShortValue = shortValue;
 
-	// Check for crossover (signal)
+	// 检查交叉（信号）
 	if (isShortLessThenLongPrevious == isShortLessThenLongCurrent)
 		return;
 
@@ -107,7 +107,7 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	// 确定交易方向
 	var direction = isShortLessThenLongCurrent ? Sides.Sell : Sides.Buy;
 
-	// Calculate position size (increase position with each trade - martingale approach)
+	// 计算持仓规模（每次交易增加持仓——马丁格尔方法）
 	var volume = Volume + Math.Abs(Position);
 
 	// 按合适价格创建并注册订单

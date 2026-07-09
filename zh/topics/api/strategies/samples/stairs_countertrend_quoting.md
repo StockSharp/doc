@@ -86,7 +86,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// 需要改变方向时停止现有处理器
 	if (_quotingProcessor != null)
 	{
-		// Check if processor needs to be cleared (trend change or position)
+		// 检查是否需要清理处理器（趋势变化或持仓变化）
 		var shouldClearProcessor = false;
 
 		// 如果是看涨趋势且没有空头持仓，需要卖出

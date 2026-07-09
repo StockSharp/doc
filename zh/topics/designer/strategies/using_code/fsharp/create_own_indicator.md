@@ -85,7 +85,7 @@ type EmptyIndicator() as this =
 		this.Change <- storage.GetValue<int>(nameof(this.Change))
 
 	/// <summary>
-	/// Save indicator settings to a given <see cref="SettingsStorage"/>.
+	/// 将指标设置保存到指定的 <see cref="SettingsStorage"/>。
 	/// </summary>
 	override this.Save(storage: SettingsStorage) =
 		base.Save(storage)

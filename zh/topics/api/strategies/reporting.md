@@ -66,7 +66,7 @@ source.AddOrder(new ReportOrder(
 source.MaxOrdersBeforeAggregation = 5000;
 source.MaxTradesBeforeAggregation = 5000;
 
-// Grouping interval (default is 1 hour)
+// 分组间隔（默认 1 小时）
 source.AggregationInterval = TimeSpan.FromMinutes(30);
 
 // 手动聚合
