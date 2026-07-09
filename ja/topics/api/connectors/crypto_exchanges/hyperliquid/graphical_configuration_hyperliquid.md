@@ -4,13 +4,13 @@
 
 主なフィールド:
 
-- **Wallet address** - ウォレットアドレス (`0x...`)。
-- **Private key** - 署名付き操作用の秘密鍵。
-- **Vault address** - 任意の vault またはサブアカウントアドレス。
-- **Expires after** - 任意の署名有効期限タイムスタンプ。
+ - **ウォレットアドレス** - ウォレットアドレス (`0x...`)。
+ - **秘密鍵** - 署名付き操作用の秘密鍵。
+ - **Vault アドレス** - 任意の vault またはサブアカウントアドレス。
+ - **有効期限** - 任意の署名有効期限タイムスタンプ。
 - **Section** - 取引セクション (`Spot` または `Derivatives`)。
 - **Testnet** - テストネットエンドポイント。
-- **Info endpoint / Exchange endpoint / WS endpoint** - エンドポイント URL。
+ - **Info エンドポイント / Exchange エンドポイント / WS エンドポイント** - エンドポイント URL。
 - **Market slippage** - 成行注文の既定スリッページ。
 
 ## 推奨コンテンツ

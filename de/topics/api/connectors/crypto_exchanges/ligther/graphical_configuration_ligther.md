@@ -12,7 +12,7 @@ Hauptfelder:
 - **Demo** - Modus für die Demo-Umgebung.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives WS** - Websocket-Endpunkte.
-- **WS read-only mode** - Flag für den schreibgeschützten Websocket-Modus.
+ - **Schreibgeschützter WS-Modus** - Flag für den schreibgeschützten Websocket-Modus.
 
 ## Empfohlene Inhalte
 

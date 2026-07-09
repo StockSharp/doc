@@ -10,7 +10,7 @@
 - **Demo** モード。
 - **Spot REST / Derivatives REST** エンドポイント。
 - **Spot WS / Derivatives WS** エンドポイント。
-- **WS read-only mode**。
+ - **WS 読み取り専用モード**。
 
 公式 API ドキュメント:
 

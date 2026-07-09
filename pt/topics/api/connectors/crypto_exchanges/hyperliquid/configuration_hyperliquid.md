@@ -4,13 +4,13 @@ Para trabalhar com o conector, especifique as credenciais de negociação ao ní
 
 Definições principais:
 
-- **Wallet address**.
-- **Private key**.
-- **Vault address** (opcional).
-- **Expires after** (opcional).
+ - **Endereço da carteira**.
+ - **Chave privada**.
+ - **Endereço do vault** (opcional).
+ - **Expira após** (opcional).
 - **Section**: `Spot` ou `Derivatives`.
 - Modo **Testnet**.
-- **Info endpoint / Exchange endpoint / WS endpoint**.
+ - **Endpoint de informação / endpoint de exchange / endpoint WS**.
 - **Market slippage** para ordens de mercado.
 
 Documentação oficial da API:

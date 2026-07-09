@@ -4,13 +4,13 @@
 
 主な設定:
 
-- **Wallet address**。
-- **Private key**。
-- **Vault address** (任意)。
-- **Expires after** (任意)。
+ - **ウォレットアドレス**。
+ - **秘密鍵**。
+ - **Vault アドレス** (任意)。
+ - **有効期限** (任意)。
 - **Section**: `Spot` または `Derivatives`。
 - **Testnet** モード。
-- **Info endpoint / Exchange endpoint / WS endpoint**。
+ - **Info エンドポイント / Exchange エンドポイント / WS エンドポイント**。
 - **Market slippage** (成行注文用)。
 
 公式 API ドキュメント:

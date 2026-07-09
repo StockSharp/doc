@@ -12,7 +12,7 @@
 - **Demo** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives WS** - websocket エンドポイント。
-- **WS read-only mode** - websocket 読み取り専用モードのフラグ。
+ - **WS 読み取り専用モード** - WebSocket 読み取り専用モードのフラグ。
 
 ## 推奨コンテンツ
 

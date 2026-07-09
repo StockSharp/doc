@@ -4,13 +4,13 @@ Für die Arbeit mit dem Connector geben Sie Trading-Anmeldedaten auf Wallet-Eben
 
 Haupteinstellungen:
 
-- **Wallet address**.
-- **Private key**.
-- **Vault address** (optional).
-- **Expires after** (optional).
+ - **Wallet-Adresse**.
+ - **Privater Schlüssel**.
+ - **Vault-Adresse** (optional).
+ - **Ablaufzeit** (optional).
 - **Section**: `Spot` oder `Derivatives`.
 - **Testnet**-Modus.
-- **Info endpoint / Exchange endpoint / WS endpoint**.
+ - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt**.
 - **Market slippage** für Market-Orders.
 
 Offizielle API-Dokumentation:

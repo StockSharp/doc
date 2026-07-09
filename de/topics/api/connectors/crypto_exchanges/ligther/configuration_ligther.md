@@ -10,7 +10,7 @@ Haupteinstellungen:
 - **Demo**-Modus.
 - **Spot REST / Derivatives REST**-Endpunkte.
 - **Spot WS / Derivatives WS**-Endpunkte.
-- **WS read-only mode**.
+ - **Schreibgeschützter WS-Modus**.
 
 Offizielle API-Dokumentation:
 

@@ -4,13 +4,13 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 Hauptfelder:
 
-- **Wallet address** - Wallet-Adresse (`0x...`).
-- **Private key** - privater Schlüssel für signierte Aktionen.
-- **Vault address** - optionale Vault- oder Unterkonto-Adresse.
-- **Expires after** - optionaler Zeitstempel für den Ablauf der Signatur.
+ - **Wallet-Adresse** - Wallet-Adresse (`0x...`).
+ - **Privater Schlüssel** - privater Schlüssel für signierte Aktionen.
+ - **Vault-Adresse** - optionale Vault- oder Unterkonto-Adresse.
+ - **Ablaufzeit** - optionaler Zeitstempel für den Ablauf der Signatur.
 - **Section** - Handelssektion (`Spot` oder `Derivatives`).
 - **Testnet** - Testnet-Endpunkte.
-- **Info endpoint / Exchange endpoint / WS endpoint** - Endpunkt-URLs.
+ - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt** - Endpunkt-URLs.
 - **Market slippage** - Standard-Slippage für Market-Orders.
 
 ## Empfohlene Inhalte

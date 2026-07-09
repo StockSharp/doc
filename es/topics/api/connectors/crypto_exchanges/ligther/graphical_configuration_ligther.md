@@ -12,7 +12,7 @@ Campos principales:
 - **Demo** - modo de entorno demo.
 - **Spot REST / Derivatives REST** - endpoints REST.
 - **Spot WS / Derivatives WS** - endpoints WebSocket.
-- **WS read-only mode** - indicador de modo de solo lectura WebSocket.
+ - **Modo WS de solo lectura** - indicador de modo de solo lectura WebSocket.
 
 ## Contenido recomendado
 

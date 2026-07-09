@@ -4,13 +4,13 @@ Para trabajar con el conector, especifique las credenciales de trading a nivel d
 
 Configuración principal:
 
-- **Wallet address**.
-- **Private key**.
-- **Vault address** (opcional).
-- **Expires after** (opcional).
+ - **Dirección de wallet**.
+ - **Clave privada**.
+ - **Dirección de vault** (opcional).
+ - **Expira después de** (opcional).
 - **Section**: `Spot` o `Derivatives`.
 - Modo **Testnet**.
-- **Info endpoint / Exchange endpoint / WS endpoint**.
+ - **Endpoint de información / endpoint de exchange / endpoint WS**.
 - **Market slippage** para órdenes de mercado.
 
 Documentación oficial de la API:

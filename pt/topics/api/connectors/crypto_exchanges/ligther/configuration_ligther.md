@@ -10,7 +10,7 @@ Definições principais:
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
-- **WS read-only mode**.
+ - **Modo WS só de leitura**.
 
 Documentação oficial da API:
 
