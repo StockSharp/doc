@@ -10,7 +10,7 @@ Wir betrachten die Verwendung zusammengesetzter Elemente am Beispiel der Strateg
 
 ![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
 
-Da sich die Kreuzung gleitender Durchschnitte nur in ihrer möglichen Richtung unterscheidet (short kreuzt von oben nach unten oder von unten nach oben), kann der Teil des Schemas, der den Kreuzungszeitpunkt bestimmt, in ein separates zusammengesetztes Element ausgelagert werden. Wenn Sie dieses Element zum Schema hinzufügen, geben Sie die Eigenschaften an, die den Algorithmus der Kreuzung gleitender Durchschnitte definieren. Das Schema des zusammengesetzten Elements, mit dem die Kreuzung bestimmt wird, ist in der folgenden Abbildung dargestellt:
+Da sich die Kreuzung gleitender Durchschnitte nur in ihrer möglichen Richtung unterscheidet (der kurze gleitende Durchschnitt kreuzt von oben nach unten oder von unten nach oben), kann der Teil des Schemas, der den Kreuzungszeitpunkt bestimmt, in ein separates zusammengesetztes Element ausgelagert werden. Wenn Sie dieses Element zum Schema hinzufügen, geben Sie die Eigenschaften an, die den Algorithmus der Kreuzung gleitender Durchschnitte definieren. Das Schema des zusammengesetzten Elements, mit dem die Kreuzung bestimmt wird, ist in der folgenden Abbildung dargestellt:
 
 ![Designer Crossing 01](../../../../images/designer_crossing_01.png)
 
