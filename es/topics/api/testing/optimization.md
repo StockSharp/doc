@@ -376,7 +376,7 @@ optimizer.AdapterCache = new MarketDataStorageCache();
 optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 {
     if (progress == 100)
-        Console.WriteLine($"Iteration complete: PnL={strategy.PnL}");
+        Console.WriteLine($"Iteración completada: PnL={strategy.PnL}");
 };
 ```
 
@@ -461,7 +461,7 @@ var optimizeParams = new IStrategyParam[] { longParam, shortParam };
 // Generar combinaciones.
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
-Console.WriteLine($"Total iterations: {totalCount}");
+Console.WriteLine($"Iteraciones totales: {totalCount}");
 
 // Ejecutar la optimización.
 var startTime = Paths.HistoryBeginDate;
@@ -486,7 +486,7 @@ await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, st
 
 if (bestStrategy != null)
 {
-    Console.WriteLine($"\nBest result: PnL={bestPnL:F2}");
+    Console.WriteLine($"\nMejor resultado: PnL={bestPnL:F2}");
     foreach (var p in bestStrategy.Parameters)
         Console.WriteLine($"  {p.Id} = {p.Value}");
 }

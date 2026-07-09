@@ -96,7 +96,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
 		// 订单的附加处理
-		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
+		Console.WriteLine($"已收到订单: {order.TransactionId}, 状态: {order.State}");
 		
 		// 如果订单处于最终状态，则更新 UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
@@ -120,11 +120,11 @@ private void CancelOrder(Order order)
 		_connector.CancelOrder(order);
 		
 		// 记录操作
-		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
+		_logManager.AddInfoLog($"已发送订单撤销命令 {order.TransactionId}");
 	}
 	catch (Exception ex)
 	{
-		_logManager.AddErrorLog($"Error when canceling order: {ex.Message}");
+		_logManager.AddErrorLog($"撤销订单时出错: {ex.Message}");
 	}
 }
 
@@ -155,7 +155,7 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
 	// 记录错误
-	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
+	_logManager.AddErrorLog($"订单注册错误: {fail.Error}");
 	
 	// 通知用户
 	this.GuiAsync(() => 

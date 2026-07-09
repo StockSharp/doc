@@ -113,7 +113,7 @@ public class MyAnalyticsScript : IAnalyticsScript
                 candles.Select(c => c.ClosePrice),
                 DrawStyles.Line);
 
-            logs.AddInfoLog($"{secId}: loaded {candles.Length} candles");
+            logs.AddInfoLog($"{secId}: {candles.Length} 本のローソク足を読み込みました");
         }
     }
 }

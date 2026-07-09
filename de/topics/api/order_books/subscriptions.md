@@ -11,7 +11,7 @@ Um das Orderbuch in StockSharp zu abonnieren, müssen Sie folgende Schritte ausf
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
 	// Hier können Sie Orderbuchdaten verarbeiten, zum Beispiel auf dem Bildschirm anzeigen oder in Ihrer Handelsstrategie verwenden
-	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
+	Console.WriteLine($"Orderbuch für {orderBook.SecurityId} empfangen. Bester Kaufpreis: {orderBook.GetBestBid()?.Price}, bester Verkaufspreis: {orderBook.GetBestAsk()?.Price}");
 }
 
 // Ereignis abonnieren

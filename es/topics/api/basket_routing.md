@@ -75,7 +75,7 @@ connector.Adapter.InnerAdapters.ConnectDisconnectEventOnFirstAdapter = false;
 
 connector.Connected += () =>
 {
-    Console.WriteLine("All adapters connected");
+    Console.WriteLine("Todos los adaptadores conectados");
 };
 
 connector.Connect();

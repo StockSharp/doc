@@ -330,14 +330,14 @@ public class DeltaCandleStrategy : Strategy
 		// Verificar se o delta é suficiente para um sinal
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
-			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
+			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} é menor que o valor de limiar {SignalDelta}. Nenhum sinal é gerado.");
 			return;
 		}
 
 		// A direção da operação depende do sinal do delta
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 
-		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
+		this.AddInfoLog($"Vela delta concluída. Delta: {deltaCandle.CurrentDelta}. Direção: {direction}");
 
 		// Usar o preço de fechamento da vela para determinar o preço
 		var price = deltaCandle.ClosePrice;

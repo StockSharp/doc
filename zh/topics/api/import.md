@@ -55,10 +55,10 @@ var importer = new CsvImporter(
 await using var stream = File.OpenRead("trades.csv");
 var (count, lastTime) = await importer.Import(
     stream,
-    p => Console.WriteLine($"Progress: {p}%"),
+    p => Console.WriteLine($"进度: {p}%"),
     token);
 
-Console.WriteLine($"Imported {count} records, last: {lastTime}");
+Console.WriteLine($"已导入 {count} 条记录，最后一条: {lastTime}");
 ```
 
 ## 字段映射 — 字段描述

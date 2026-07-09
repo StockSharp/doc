@@ -66,7 +66,7 @@ state.UpdateOrderBalance(12345, newBalance: 60);
 
 // ポジションを直接更新
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
-Console.WriteLine($"Current position: {newPosition}");
+Console.WriteLine($"現在のポジション: {newPosition}");
 
 // クリア
 state.Clear();
@@ -97,9 +97,9 @@ var tracker = new PositionLifecycleTracker();
 
 tracker.RoundTripClosed += report =>
 {
-    Console.WriteLine($"Round-trip completed:");
-    Console.WriteLine($"  Opened: {report.OpenTime}");
-    Console.WriteLine($"  Closed: {report.CloseTime}");
+    Console.WriteLine($"ラウンドトリップ完了:");
+    Console.WriteLine($"  開始: {report.OpenTime}");
+    Console.WriteLine($"  終了: {report.CloseTime}");
 };
 
 // ポジション更新を処理

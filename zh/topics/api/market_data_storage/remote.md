@@ -29,7 +29,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	(c, t) => Console.WriteLine($"已下载 [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 

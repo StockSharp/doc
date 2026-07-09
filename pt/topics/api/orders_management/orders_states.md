@@ -60,7 +60,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	if (subscription == _myOrdersSubscription)
 	{
 		// Processamento adicional para a assinatura específica
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+		Console.WriteLine($"Ordem: {order.TransactionId}, Estado: {order.State}");
 	}
 }
 ```
@@ -81,7 +81,7 @@ Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
 	{
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+		Console.WriteLine($"Ordem: {order.TransactionId}, Estado: {order.State}, Carteira: {order.Portfolio.Name}");
 	}
 };
 
@@ -95,7 +95,7 @@ São usados métodos de extensão para determinar o estado atual de uma ordem:
 
 ```cs
 // Verificar status da ordem
-Order order = ...; // received order
+Order order = ...; // ordem recebida
 
 // A ordem foi cancelada
 bool isCanceled = order.IsCanceled();

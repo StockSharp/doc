@@ -37,7 +37,7 @@ Abonnieren Sie Ereignisse und richten Sie Datenhandler ein:
 // Ereignis bei erfolgreicher Verbindung
 _connector.Connected += () =>
 {
-	Console.WriteLine("Connection established");
+	Console.WriteLine("Verbindung hergestellt");
 
 	// Subscription zur Instrumentensuche erstellen
 	var lookupSubscription = new Subscription(DataType.Securities);
@@ -47,7 +47,7 @@ _connector.Connected += () =>
 // Ereignis bei Verbindungsverlust
 _connector.Disconnected += () =>
 {
-	Console.WriteLine("Connection lost");
+	Console.WriteLine("Verbindung verloren");
 };
 
 // Ereignis bei empfangenem Instrument
@@ -103,13 +103,13 @@ _connector.CandleReceived += (subscription, candle) =>
 // Verbindungsfehlerereignis
 _connector.ConnectionError += error =>
 {
-	Console.WriteLine($"Connection error: {error.Message}");
+	Console.WriteLine($"Verbindungsfehler: {error.Message}");
 };
 
 // Allgemeines Fehlerereignis
 _connector.Error += error =>
 {
-	Console.WriteLine($"Error: {error.Message}");
+	Console.WriteLine($"Fehler: {error.Message}");
 };
 
 // Fehlerereignis bei Marktdaten-Subscription

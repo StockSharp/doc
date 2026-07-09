@@ -29,7 +29,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	(c, t) => Console.WriteLine($"ダウンロード済み [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 
@@ -103,4 +103,3 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 ## まとめ
 
 API のリモート市場データストレージ機能は、ヒストリカルデータを取得して使用するための柔軟な機能を提供します。これにより、[Hydra サーバー](../../hydra_server.md) を通じて利用可能な大規模データセットを使用して、取引ストラテジーの効率的なテストと市場分析を行えます。
-

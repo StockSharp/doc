@@ -73,12 +73,12 @@ manager.ProcessMessage(orderRegisterMsg);
 TimeSpan? latency = manager.ProcessMessage(executionMsg);
 if (latency != null)
 {
-    Console.WriteLine($"Latency: {latency.Value.TotalMilliseconds} ms");
+    Console.WriteLine($"Latencia: {latency.Value.TotalMilliseconds} ms");
 }
 
 // Latencias totales
-Console.WriteLine($"Registration latency: {manager.LatencyRegistration.TotalMilliseconds} ms");
-Console.WriteLine($"Cancellation latency: {manager.LatencyCancellation.TotalMilliseconds} ms");
+Console.WriteLine($"Latencia de registro: {manager.LatencyRegistration.TotalMilliseconds} ms");
+Console.WriteLine($"Latencia de cancelación: {manager.LatencyCancellation.TotalMilliseconds} ms");
 ```
 
 ## Restablecimiento del estado

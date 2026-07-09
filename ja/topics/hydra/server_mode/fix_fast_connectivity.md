@@ -37,7 +37,7 @@ _connector.Adapter.InnerAdapters.Add(transactionDataAdapter);
 // 接続成功イベント
 _connector.Connected += () =>
 {
-	Console.WriteLine("Connection established");
+	Console.WriteLine("接続が確立されました");
 	
 	// 銘柄検索用のサブスクリプションを作成
 	var lookupSubscription = new Subscription(DataType.Securities);
@@ -47,7 +47,7 @@ _connector.Connected += () =>
 // 接続喪失イベント
 _connector.Disconnected += () =>
 {
-	Console.WriteLine("Connection lost");
+	Console.WriteLine("接続が失われました");
 };
 
 // 銘柄受信イベント
@@ -103,13 +103,13 @@ _connector.CandleReceived += (subscription, candle) =>
 // 接続エラーイベント
 _connector.ConnectionError += error =>
 {
-	Console.WriteLine($"Connection error: {error.Message}");
+	Console.WriteLine($"接続エラー: {error.Message}");
 };
 
 // 一般エラーイベント
 _connector.Error += error =>
 {
-	Console.WriteLine($"Error: {error.Message}");
+	Console.WriteLine($"エラー: {error.Message}");
 };
 
 // マーケットデータサブスクリプションエラーイベント

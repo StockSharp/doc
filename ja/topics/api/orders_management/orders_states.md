@@ -60,7 +60,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	if (subscription == _myOrdersSubscription)
 	{
 		// 特定のサブスクリプションに対する追加処理
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+		Console.WriteLine($"注文: {order.TransactionId}, 状態: {order.State}");
 	}
 }
 ```
@@ -81,7 +81,7 @@ Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
 	{
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+		Console.WriteLine($"注文: {order.TransactionId}, 状態: {order.State}, ポートフォリオ: {order.Portfolio.Name}");
 	}
 };
 

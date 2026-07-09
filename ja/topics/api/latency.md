@@ -73,12 +73,12 @@ manager.ProcessMessage(orderRegisterMsg);
 TimeSpan? latency = manager.ProcessMessage(executionMsg);
 if (latency != null)
 {
-    Console.WriteLine($"Latency: {latency.Value.TotalMilliseconds} ms");
+    Console.WriteLine($"レイテンシ: {latency.Value.TotalMilliseconds} ms");
 }
 
 // 合計レイテンシ
-Console.WriteLine($"Registration latency: {manager.LatencyRegistration.TotalMilliseconds} ms");
-Console.WriteLine($"Cancellation latency: {manager.LatencyCancellation.TotalMilliseconds} ms");
+Console.WriteLine($"登録レイテンシ: {manager.LatencyRegistration.TotalMilliseconds} ms");
+Console.WriteLine($"取消レイテンシ: {manager.LatencyCancellation.TotalMilliseconds} ms");
 ```
 
 ## 状態のリセット

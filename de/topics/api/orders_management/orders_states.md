@@ -60,7 +60,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	if (subscription == _myOrdersSubscription)
 	{
 		// Zusätzliche Verarbeitung für das konkrete Abonnement
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+		Console.WriteLine($"Auftrag: {order.TransactionId}, Status: {order.State}");
 	}
 }
 ```
@@ -81,7 +81,7 @@ Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
 	{
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+		Console.WriteLine($"Auftrag: {order.TransactionId}, Status: {order.State}, Portfolio: {order.Portfolio.Name}");
 	}
 };
 

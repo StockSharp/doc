@@ -60,7 +60,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	if (subscription == _myOrdersSubscription)
 	{
 		// 针对特定订阅的附加处理
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}");
+		Console.WriteLine($"订单: {order.TransactionId}, 状态: {order.State}");
 	}
 }
 ```
@@ -81,7 +81,7 @@ Connector.OrderReceived += (subscription, order) =>
 {
 	if (subscription == ordersSubscription)
 	{
-		Console.WriteLine($"Order: {order.TransactionId}, State: {order.State}, Portfolio: {order.Portfolio.Name}");
+		Console.WriteLine($"订单: {order.TransactionId}, 状态: {order.State}, 投资组合: {order.Portfolio.Name}");
 	}
 };
 
@@ -95,7 +95,7 @@ Connector.Subscribe(ordersSubscription);
 
 ```cs
 // 检查订单状态
-Order order = ...; // received order
+Order order = ...; // 收到的订单
 
 // 订单是否已撤销
 bool isCanceled = order.IsCanceled();

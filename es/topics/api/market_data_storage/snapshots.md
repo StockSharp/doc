@@ -96,7 +96,7 @@ var snapshot = level1Snapshots.Get(secId);
 
 if (snapshot != null)
 {
-    Console.WriteLine($"Last price: {snapshot.Changes[Level1Fields.LastTradePrice]}");
+    Console.WriteLine($"Último precio: {snapshot.Changes[Level1Fields.LastTradePrice]}");
 }
 ```
 

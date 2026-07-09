@@ -104,7 +104,7 @@ var anotherDrive = driveCache.GetDrive(@"D:\MarketData");
 
 // 订阅事件
 driveCache.NewDriveCreated += drive =>
-    Console.WriteLine($"Drive created: {drive.Path}");
+    Console.WriteLine($"驱动已创建: {drive.Path}");
 ```
 
 ## 另请参阅

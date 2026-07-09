@@ -323,10 +323,10 @@ dotnet restore
 using StockSharp.Algo;
 using StockSharp.BusinessEntities;
 
-Console.WriteLine("StockSharp successfully configured!");
+Console.WriteLine("StockSharp 已成功配置！");
 
 var connector = new Connector();
-Console.WriteLine($"Connector created: {connector}");
+Console.WriteLine($"连接器已创建: {connector}");
 ```
 
 ```bash

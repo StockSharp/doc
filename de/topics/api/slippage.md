@@ -78,11 +78,11 @@ manager.ProcessMessage(orderRegisterMsg);
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {
-    Console.WriteLine($"Slippage: {slippage.Value}");
+    Console.WriteLine($"Berechnete Slippage: {slippage.Value}");
 }
 
 // Insgesamt akkumulierte Slippage
-Console.WriteLine($"Total slippage: {manager.Slippage}");
+Console.WriteLine($"Gesamte Slippage: {manager.Slippage}");
 ```
 
 ## Zustand zurücksetzen

@@ -29,7 +29,7 @@ Antes de carregar dados de mercado, é necessário obter informação sobre os i
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	(c, t) => Console.WriteLine($"Transferido [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 

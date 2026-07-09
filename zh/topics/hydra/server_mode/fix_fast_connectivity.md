@@ -37,7 +37,7 @@ _connector.Adapter.InnerAdapters.Add(transactionDataAdapter);
 // 连接成功事件
 _connector.Connected += () =>
 {
-	Console.WriteLine("Connection established");
+	Console.WriteLine("连接已建立");
 	
 	// 创建搜索工具的订阅
 	var lookupSubscription = new Subscription(DataType.Securities);
@@ -47,7 +47,7 @@ _connector.Connected += () =>
 // 连接丢失事件
 _connector.Disconnected += () =>
 {
-	Console.WriteLine("Connection lost");
+	Console.WriteLine("连接已断开");
 };
 
 // 收到工具事件
@@ -103,13 +103,13 @@ _connector.CandleReceived += (subscription, candle) =>
 // 连接错误事件
 _connector.ConnectionError += error =>
 {
-	Console.WriteLine($"Connection error: {error.Message}");
+	Console.WriteLine($"连接错误: {error.Message}");
 };
 
 // 通用错误事件
 _connector.Error += error =>
 {
-	Console.WriteLine($"Error: {error.Message}");
+	Console.WriteLine($"错误: {error.Message}");
 };
 
 // 市场数据订阅错误事件

@@ -113,7 +113,7 @@ public class MyAnalyticsScript : IAnalyticsScript
                 candles.Select(c => c.ClosePrice),
                 DrawStyles.Line);
 
-            logs.AddInfoLog($"{secId}: loaded {candles.Length} candles");
+            logs.AddInfoLog($"{secId}: 已加载 {candles.Length} 根K线");
         }
     }
 }

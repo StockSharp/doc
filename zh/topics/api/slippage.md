@@ -78,11 +78,11 @@ manager.ProcessMessage(orderRegisterMsg);
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {
-    Console.WriteLine($"Slippage: {slippage.Value}");
+    Console.WriteLine($"滑点: {slippage.Value}");
 }
 
 // 累计总滑点
-Console.WriteLine($"Total slippage: {manager.Slippage}");
+Console.WriteLine($"总滑点: {manager.Slippage}");
 ```
 
 ## 重置状态

@@ -93,11 +93,11 @@ manager.Rules.Add(new CommissionTurnOverRule
 decimal? commission = manager.Process(executionMsg);
 if (commission != null)
 {
-    Console.WriteLine($"Commission for message: {commission.Value}");
+    Console.WriteLine($"Kommission für Nachricht: {commission.Value}");
 }
 
 // Gesamte aufgelaufene Kommission
-Console.WriteLine($"Total commission: {manager.Commission}");
+Console.WriteLine($"Gesamte Kommission: {manager.Commission}");
 ```
 
 ## Zustand zurücksetzen
