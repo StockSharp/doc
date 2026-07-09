@@ -13,16 +13,16 @@ Designer 支持导出任意类型的数据，包括策略、模块和指标。�
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - 原样导出策略图。如果策略图使用自定义元素或指标，则需要启用 **独立** 模式。此时，所有内部元素都会随策略图一同导出。
-  - code - 将策略图转换为 C# 代码。
+  - 策略图 - 原样导出策略图。如果策略图使用自定义元素或指标，则需要启用 **独立** 模式。此时，所有内部元素都会随策略图一同导出。
+  - 代码 - 将策略图转换为 C# 代码。
   - DLL - 将策略图编译为 DLL。适用于需要对代码保密的情况。
 
 - 对于[代码](../strategies/using_code.md)：
 
   ![Designer Export strategies 02](../../../images/designer_export_strategies_02.png)
 
-  - scheme - 将代码导出为 JSON 文件，其中包含代码本身以及编译该代码所需的引用。
-  - code - 原样导出代码。
+  - 策略图 - 将代码导出为 JSON 文件，其中包含代码本身以及编译该代码所需的引用。
+  - 代码 - 原样导出代码。
   - DLL - 将代码编译为 DLL。适用于需要对代码保密的情况。
 
 - 对于 [dll](../strategies/using_dll.md)，会显示文件选择窗口。

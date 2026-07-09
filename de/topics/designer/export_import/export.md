@@ -13,16 +13,16 @@ Nach dem Drücken von **Exportieren** erscheint je nach Inhaltstyp ein Fenster:
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - exportiert das Schema unverändert. Der Modus **Eigenständig** ist für Schemas erforderlich, die eigene Elemente oder Indikatoren verwenden. In diesem Fall werden alle inneren Elemente innerhalb des Strategiediagramms exportiert.
-  - code - konvertiert das Schema in C#-Code.
+  - Schema - exportiert das Schema unverändert. Der Modus **Eigenständig** ist für Schemas erforderlich, die eigene Elemente oder Indikatoren verwenden. In diesem Fall werden alle inneren Elemente innerhalb des Strategiediagramms exportiert.
+  - Code - konvertiert das Schema in C#-Code.
   - DLL - kompiliert das Schema in eine DLL. Geeignet, wenn Sie den Code vertraulich halten müssen.
 
 - für [Code](../strategies/using_code.md):
 
   ![Designer Export strategies 02](../../../images/designer_export_strategies_02.png)
 
-  - scheme - exportiert den Code als JSON-Datei, die sowohl den Code selbst als auch die zum Kompilieren dieses Codes benötigten Referenzen enthält.
-  - code - exportiert den Code unverändert.
+  - Schema - exportiert den Code als JSON-Datei, die sowohl den Code selbst als auch die zum Kompilieren dieses Codes benötigten Referenzen enthält.
+  - Code - exportiert den Code unverändert.
   - DLL - kompiliert den Code in eine DLL. Geeignet, wenn Sie den Code vertraulich halten müssen.
 
 - für eine [dll](../strategies/using_dll.md) erscheint ein Dateiauswahlfenster.

@@ -13,16 +13,16 @@ Depois de premir **Exportar**, dependendo do tipo de conteúdo, será apresentad
 
   ![Designer Export strategies 01](../../../images/designer_export_strategies_01.png)
 
-  - scheme - exportar o esquema tal como está. O modo **Independente** é necessário para esquemas que usam elementos ou indicadores próprios. Neste caso, todos os elementos internos serão exportados dentro do diagrama da estratégia.
-  - code - converter o esquema em código C#.
+  - esquema - exportar o esquema tal como está. O modo **Independente** é necessário para esquemas que usam elementos ou indicadores próprios. Neste caso, todos os elementos internos serão exportados dentro do diagrama da estratégia.
+  - código - converter o esquema em código C#.
   - DLL - compilar o esquema para uma DLL. Adequado se precisar de manter o código confidencial.
 
 - para [código](../strategies/using_code.md):
 
   ![Designer Export strategies 02](../../../images/designer_export_strategies_02.png)
 
-  - scheme - exportar o código como um ficheiro JSON, que incluirá tanto o próprio código como as referências necessárias para compilar esse código.
-  - code - exportar o código tal como está.
+  - esquema - exportar o código como um ficheiro JSON, que incluirá tanto o próprio código como as referências necessárias para compilar esse código.
+  - código - exportar o código tal como está.
   - DLL - compilar o código para uma DLL. Adequado se precisar de manter o código confidencial.
 
 - para uma [dll](../strategies/using_dll.md), será apresentada uma janela de seleção de ficheiro.
