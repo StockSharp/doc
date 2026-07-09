@@ -13,10 +13,10 @@ Lista de componentes disponibles con código fuente:
 - Indicadores (más de 70) de análisis técnico.
 - Algoritmos para calcular profit-loss, slippage y delay.
 - Algoritmos para construir velas de cualquier time frame, así como velas no basadas en tiempo (tick, range, etc.).
-- Logging.
+- Registro.
 - Importación y exportación.
 
-Los códigos fuente de todos los componentes cerrados, así como los programas listos para usar, están disponibles tras la compra. Para más información sobre el coste de los códigos fuente, consulte [Source Code Cost](https://stocksharp.com/store/?groups=22). 
+Los códigos fuente de todos los componentes cerrados, así como los programas listos para usar, están disponibles tras la compra. Para más información sobre el coste de los códigos fuente, consulte [Coste del código fuente](https://stocksharp.com/store/?groups=22).
 
 ## Contenido recomendado
 

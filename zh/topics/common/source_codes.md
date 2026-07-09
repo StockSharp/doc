@@ -16,7 +16,7 @@
 - 日志记录。
 - 导入和导出。
 
-购买后可以获得所有闭源组件以及现成程序的源代码。有关源代码价格的详细信息，请参阅 [Source Code Cost](https://stocksharp.com/store/?groups=22)。
+购买后可以获得所有闭源组件以及现成程序的源代码。有关源代码价格的详细信息，请参阅 [源代码价格](https://stocksharp.com/store/?groups=22)。
 
 ## 推荐内容
 

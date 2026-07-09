@@ -13,12 +13,11 @@ Liste der Komponenten, die mit Quellcode verfügbar sind:
 - Indikatoren der technischen Analyse (mehr als 70).
 - Algorithmen zur Berechnung von Gewinn/Verlust, Slippage und Verzögerung.
 - Algorithmen zum Erstellen von Kerzen beliebiger Zeitrahmen sowie nicht zeitbasierter Kerzen (Tick, Range usw.).
-- Logging.
+- Protokollierung.
 - Import und Export.
 
-Die Quellcodes aller geschlossenen Komponenten sowie fertiger Programme sind nach dem Kauf verfügbar. Weitere Informationen zu den Kosten der Quellcodes finden Sie unter [Source Code Cost](https://stocksharp.com/store/?groups=22).
+Die Quellcodes aller geschlossenen Komponenten sowie fertiger Programme sind nach dem Kauf verfügbar. Weitere Informationen zu den Kosten der Quellcodes finden Sie unter [Kosten der Quellcodes](https://stocksharp.com/store/?groups=22).
 
 ## Empfohlene Inhalte
 
 [Installationsanleitung](../api/setup.md)
-
