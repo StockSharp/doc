@@ -96,6 +96,100 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"\u00D1\u008F", // Ñ
 	];
 
+	private static readonly HashSet<string> _allowedInvariantHeadingTexts = new(StringComparer.Ordinal)
+	{
+		"Backtesting/Emulation",
+		"Backup",
+		"Basket",
+		"Black-Scholes",
+		"Chart",
+		"Debugging",
+		"Designer",
+		"Emulation",
+		"Export",
+		"Flag",
+		"Hedging",
+		"Hydra",
+		"Identifier *@ALL",
+		"Identifier \\*@ALL",
+		"Import",
+		"Index",
+		"Indexer",
+		"Installer",
+		"Interface",
+		"Level 1",
+		"Level1",
+		"MATLAB",
+		"Orders",
+		"Portfolios",
+		"Position",
+		"RemoteManager",
+		"Runner",
+		"Shell",
+		"Simulator",
+		"Strikes",
+		"Terminal",
+		"Ticks",
+		"Trades",
+		"UDP Dumper",
+		"Variable",
+	};
+
+	private static readonly HashSet<string> _allowedInvariantIndicatorHeadingPaths = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"topics/api/indicators/list_of_indicators/aroon_oscillator.md",
+		"topics/api/indicators/list_of_indicators/bear_power.md",
+		"topics/api/indicators/list_of_indicators/bollinger_bands.md",
+		"topics/api/indicators/list_of_indicators/bull_power.md",
+		"topics/api/indicators/list_of_indicators/elder_force_index.md",
+		"topics/api/indicators/list_of_indicators/elder_ray.md",
+		"topics/api/indicators/list_of_indicators/gator_oscillator.md",
+		"topics/api/indicators/list_of_indicators/linear_regression_forecast.md",
+		"topics/api/indicators/list_of_indicators/lrs.md",
+		"topics/api/indicators/list_of_indicators/market_facilitation_index.md",
+		"topics/api/indicators/list_of_indicators/mean_deviation.md",
+		"topics/api/indicators/list_of_indicators/median.md",
+		"topics/api/indicators/list_of_indicators/money_flow_index.md",
+		"topics/api/indicators/list_of_indicators/optimal_tracking.md",
+		"topics/api/indicators/list_of_indicators/parabolic_sar.md",
+		"topics/api/indicators/list_of_indicators/pass_through.md",
+		"topics/api/indicators/list_of_indicators/price_channels.md",
+		"topics/api/indicators/list_of_indicators/rank_correlation_index.md",
+		"topics/api/indicators/list_of_indicators/smoothed_ma.md",
+		"topics/api/indicators/list_of_indicators/standard_deviation.md",
+		"topics/api/indicators/list_of_indicators/standard_error.md",
+		"topics/api/indicators/list_of_indicators/stochastic_oscillator.md",
+		"topics/api/indicators/list_of_indicators/sum_n.md",
+		"topics/api/indicators/list_of_indicators/true_range.md",
+		"topics/api/indicators/list_of_indicators/true_strength_index.md",
+		"topics/api/indicators/list_of_indicators/variable_moving_average.md",
+		"topics/api/indicators/list_of_indicators/weighted_ma.md",
+		"topics/api/indicators/list_of_indicators/wilder_ma.md",
+	};
+
+	private static readonly HashSet<string> _allowedInvariantLinkLabels = new(StringComparer.Ordinal)
+	{
+		"ALF",
+		"ALMA",
+		"Aroon",
+		"ATR",
+		"DEMA",
+		"DeMarker",
+		"Ichimoku",
+		"KAMA",
+		"Peak",
+		"QStick",
+		"RAVI",
+		"RSI",
+		"SuperTrend",
+		"TRIX",
+		"TWAP",
+		"VIDYA",
+		"VWAP",
+		"Wilder MA",
+		"ZLEMA",
+	};
+
 	private static readonly MarkdownPipeline _markdown = new MarkdownPipelineBuilder()
 		.UseAdvancedExtensions()
 		.UseAutoIdentifiers()
@@ -333,6 +427,109 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var actual = GetLocalAnchorReferences(localizedRoot, localizedFile);
 				if (!expected.SequenceEqual(actual, StringComparer.Ordinal))
 					errors.Add($"{RelativeToRepo(localizedFile)}: local anchor references must keep the same stable fragments as {DefaultLanguage}/{relative}. Expected: {string.Join(", ", expected)}. Actual: {string.Join(", ", actual)}.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownHeadingsDoNotKeepEnglishTextUnexpectedly()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var defaultHeading = GetFirstHeadingText(defaultFile);
+			if (defaultHeading.Length == 0)
+				continue;
+
+			foreach (var lang in GetTranslatedContentLanguages())
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				var localizedHeading = GetFirstHeadingText(file);
+				if (!localizedHeading.Equals(defaultHeading, StringComparison.Ordinal))
+					continue;
+
+				if (IsAllowedInvariantHeading(relative, localizedHeading))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}: H1 is identical to the English H1 '{localizedHeading}'. Localize it or add a deliberate allowlist entry.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownLinkLabelsDoNotKeepEnglishTargetHeadingsUnexpectedly()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+				var document = Markdown.Parse(markdown, _markdown);
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+				var directory = Path.GetDirectoryName(relative);
+				var relDir = directory == null ? string.Empty : directory.Replace('\\', '/');
+				var lineStarts = GetLineStarts(markdown);
+
+				foreach (var link in document.Descendants().OfType<LinkInline>())
+				{
+					if (link.IsImage)
+						continue;
+
+					var url = link.Url?.Trim();
+					if (string.IsNullOrWhiteSpace(url)
+						|| url[0] == '#'
+						|| IsAbsoluteUrl(url)
+						|| url.StartsWith("xref:", StringComparison.OrdinalIgnoreCase)
+						|| url.StartsWith("javascript:", StringComparison.OrdinalIgnoreCase))
+					{
+						continue;
+					}
+
+					var (path, _) = SplitPathQueryAndFragment(url);
+					if (string.IsNullOrWhiteSpace(path))
+						continue;
+
+					var targetRelative = ResolveRelative(relDir, path);
+					if (!targetRelative.EndsWith(".md", StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					var defaultTarget = Path.Combine(defaultRoot, targetRelative.Replace('/', Path.DirectorySeparatorChar));
+					var localizedTarget = Path.Combine(langRoot, targetRelative.Replace('/', Path.DirectorySeparatorChar));
+					if (!File.Exists(defaultTarget) || !File.Exists(localizedTarget))
+						continue;
+
+					var defaultHeading = GetFirstHeadingText(defaultTarget);
+					var localizedHeading = GetFirstHeadingText(localizedTarget);
+					var label = GetInlineText(link);
+					if (label.Length == 0
+						|| defaultHeading.Length == 0
+						|| localizedHeading.Length == 0
+						|| !label.Equals(defaultHeading, StringComparison.Ordinal)
+						|| label.Equals(localizedHeading, StringComparison.Ordinal)
+						|| IsAllowedInvariantLinkLabel(label))
+					{
+						continue;
+					}
+
+					var line = GetLineNumber(lineStarts, link.Span.Start);
+					errors.Add($"{RelativeToRepo(file)}:{line}: link label '{label}' is still the English H1 for target '{targetRelative}', but localized target H1 is '{localizedHeading}'.");
+				}
 			}
 		}
 
@@ -737,6 +934,61 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		return references;
 	}
+
+	private static string GetFirstHeadingText(string file)
+	{
+		var document = Markdown.Parse(ReadAllText(file), _markdown);
+		var heading = EnumerateHeadings(document).FirstOrDefault(heading => heading.Level == 1);
+
+		return heading?.Inline is null
+			? string.Empty
+			: GetInlineText(heading.Inline);
+	}
+
+	private static string GetInlineText(ContainerInline inline)
+	{
+		var text = string.Concat(inline.Descendants<LiteralInline>().Select(literal => literal.Content.ToString()));
+
+		return NormalizeHumanText(text);
+	}
+
+	private static string NormalizeHumanText(string text)
+		=> Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static bool IsAllowedInvariantHeading(string relativePath, string heading)
+	{
+		var normalizedPath = relativePath.Replace('\\', '/');
+
+		if (normalizedPath.StartsWith("topics/api/connectors/", StringComparison.OrdinalIgnoreCase))
+			return true;
+
+		if (normalizedPath.StartsWith("topics/api/indicators/list_of_indicators/", StringComparison.OrdinalIgnoreCase))
+		{
+			if (IsShortInvariantName(heading) || IsSingleTokenIndicatorName(heading))
+				return true;
+
+			if (_allowedInvariantIndicatorHeadingPaths.Contains(normalizedPath))
+				return true;
+		}
+
+		return _allowedInvariantHeadingTexts.Contains(heading) || IsShortInvariantName(heading);
+	}
+
+	private static bool IsAllowedInvariantLinkLabel(string label)
+		=> _allowedInvariantLinkLabels.Contains(label) || IsShortInvariantName(label);
+
+	private static bool IsShortInvariantName(string text)
+	{
+		var compact = text.Replace(" ", string.Empty, StringComparison.Ordinal);
+
+		return compact.Length is > 0 and <= 12
+			&& Regex.IsMatch(text, @"^[A-Z0-9%./+*() _-]+$", RegexOptions.CultureInvariant);
+	}
+
+	private static bool IsSingleTokenIndicatorName(string text)
+		=> !text.Contains(' ')
+			&& !text.Contains('-')
+			&& Regex.IsMatch(text, @"^[A-Za-z][A-Za-z0-9]*$", RegexOptions.CultureInvariant);
 
 	private static MarkdownTarget ResolveMarkdownPage(string lang, string relativePath)
 	{
@@ -1145,6 +1397,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				&& HasContent(name))
 			.Cast<string>()
 			.Order(StringComparer.OrdinalIgnoreCase)
+			.ToArray();
+
+	private static IReadOnlyList<string> GetTranslatedContentLanguages()
+		=> GetContentLanguages()
+			.Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)
+				&& !lang.Equals("ru", StringComparison.OrdinalIgnoreCase))
 			.ToArray();
 
 	private static bool HasContent(string lang)
