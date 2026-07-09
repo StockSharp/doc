@@ -16,22 +16,22 @@
 
 3. 移動平均（SMA）ストラテジーの要点は次のとおりです:
 
-- 計算期間が異なる 2 つの移動平均、長期 SMA と短期 SMA があります。この例では、長期 SMA の [インジケーター](elements/common/indicator.md) キューブは Long SMA と呼ばれ、期間は 80 本のローソク足です。短期 SMA は Short SMA と呼ばれ、期間は 10 本のローソク足です。
+- 計算期間が異なる 2 つの移動平均、長期 SMA と短期 SMA があります。この例では、長期 SMA の [インジケーター](elements/common/indicator.md) キューブは **長期 SMA** と呼ばれ、期間は 80 本のローソク足です。短期 SMA は **短期 SMA** と呼ばれ、期間は 10 本のローソク足です。
 - 短期移動平均が長期移動平均を下から上へクロスしたら、ロングポジションを開きます。
 - 短期移動平均が長期移動平均を上から下へクロスしたら、ショートポジションを開きます。
 - ポジションを開くシグナルを受け取った時点で反対ポジションがある場合は、ポジションを反転します。
 
-4. すべてのストラテジーでは、取引に使用するインストゥルメントとポートフォリオが必要です。これらを **パレット** パネルから **Designer** パネルに追加する必要があります。この例では、**銘柄** 型の [変数](elements/data_sources/variable.md) キューブを Instrument、**ポートフォリオ** 型の [変数](elements/data_sources/variable.md) キューブを Portfolio と呼びます。Instrument キューブと Portfolio キューブの **パラメーター** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、インストゥルメントとポートフォリオの値を手動で入力する必要があります。[変数](elements/data_sources/variable.md) キューブの Value フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [変数](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
+4. すべてのストラテジーでは、取引に使用する銘柄とポートフォリオが必要です。これらを **パレット** パネルから **デザイナー** パネルに追加する必要があります。この例では、**銘柄** 型の [変数](elements/data_sources/variable.md) キューブを **銘柄**、**ポートフォリオ** 型の [変数](elements/data_sources/variable.md) キューブを **ポートフォリオ** と呼びます。**銘柄** キューブと **ポートフォリオ** キューブの **パラメーター** チェックボックスを設定します。チェックボックスが選択されている場合、キューブはストラテジー設定から値を取得します。チェックボックスを選択しない場合は、銘柄とポートフォリオの値を手動で入力する必要があります。[変数](elements/data_sources/variable.md) キューブの **値** フィールドを空のままにし、パラメーターのチェックボックスも設定しない場合、テスト中にストラテジーは [変数](elements/data_sources/variable.md) キューブの未設定値に関するエラーを出します。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
-ストラテジーで複数のインストゥルメントまたはポートフォリオを使用する必要がある場合は、各キューブで **パラメーター** ボックスのチェックを外し、インストゥルメントまたはポートフォリオの値を設定する必要があります。
+ストラテジーで複数の銘柄またはポートフォリオを使用する必要がある場合は、各キューブで **パラメーター** ボックスのチェックを外し、銘柄またはポートフォリオの値を設定する必要があります。
 
 ![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. インストゥルメントとポートフォリオを追加した後、2 つの [インジケーター](elements/common/indicator.md) キューブを追加し、SMA 型を選択します。1 つ目に Long SMA という名前を付け、期間を 80 本のローソク足に設定します。2 つ目に Short SMA という名前を付け、期間を 10 本のローソク足に設定します。
+5. 銘柄とポートフォリオを追加した後、2 つの [インジケーター](elements/common/indicator.md) キューブを追加し、SMA 型を選択します。1 つ目に **長期 SMA** という名前を付け、期間を 80 本のローソク足に設定します。2 つ目に **短期 SMA** という名前を付け、期間を 10 本のローソク足に設定します。
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
@@ -39,7 +39,7 @@
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. インジケーターを追加した後、インジケーターの交差を定義する 2 つのキューブを追加する必要があります。これらは複合要素の [クロス](elements/common/crossing.md) キューブです。1 つ目のキューブは Crossing Up と呼ばれます。これは下から上への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより大きい値に設定され、PrevComparison 演算子は以下に設定されます。2 つ目のキューブは Crossing Down と呼ばれ、上から下への交差を定義します。Short SMA インジケーターはキューブの上側入力に渡され、Long SMA インジケーターは下側入力に渡されます。CurrComparison 演算子はより小さい値に設定され、PrevComparison 演算子は以上に設定されます。
+7. インジケーターを追加した後、インジケーターの交差を定義する 2 つのキューブを追加する必要があります。これらは複合要素の [クロス](elements/common/crossing.md) キューブです。1 つ目のキューブは **上向きクロス** と呼ばれます。これは下から上への交差を定義します。**短期 SMA** インジケーターはキューブの上側入力に渡され、**長期 SMA** インジケーターは下側入力に渡されます。CurrComparison 演算子はより大きい値に設定され、PrevComparison 演算子は以下に設定されます。2 つ目のキューブは **下向きクロス** と呼ばれ、上から下への交差を定義します。**短期 SMA** インジケーターはキューブの上側入力に渡され、**長期 SMA** インジケーターは下側入力に渡されます。CurrComparison 演算子はより小さい値に設定され、PrevComparison 演算子は以上に設定されます。
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
@@ -47,11 +47,11 @@
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. チャートに表示する取引のソースとして、ストラテジーの **約定** キューブを使用します。この例では Strategy trades と呼ばれます。
+9. チャートに表示する取引のソースとして、ストラテジーの **約定** キューブを使用します。この例では **ストラテジー別約定** と呼ばれます。
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. ポジションを開くには、2 つの [Register order](elements/orders/register.md) キューブを追加します。1 つ目のキューブは成行注文による買い用です。このキューブの入力には、**銘柄**、Crossing Up 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。2 つ目のキューブは成行注文による売り用です。このキューブの入力には、**銘柄**、Crossing Down 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。
+10. ポジションを開くには、2 つの [注文登録](elements/orders/register.md) キューブを追加します。1 つ目のキューブは成行注文による買い用です。このキューブの入力には、**銘柄**、**上向きクロス** 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。2 つ目のキューブは成行注文による売り用です。このキューブの入力には、**銘柄**、**下向きクロス** 交差キューブからのポジションオープンシグナル、**ポートフォリオ**、注文数量が渡されます。
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 

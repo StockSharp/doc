@@ -16,12 +16,12 @@ Depois de clicar no botão **Adicionar** ![Designer Panel Circuits 01](../../../
 
 3. A essência da estratégia de média móvel (SMA) é a seguinte:
 
-- Existem duas médias móveis com períodos de cálculo diferentes, uma SMA longa e uma SMA curta. No exemplo, o cubo [Indicador](elements/common/indicator.md) da SMA longa chama-se Long SMA, com um período de 80 velas, e a SMA curta chama-se Short SMA, com um período de 10 velas.
+- Existem duas médias móveis com períodos de cálculo diferentes, uma SMA longa e uma SMA curta. No exemplo, o cubo [Indicador](elements/common/indicator.md) da SMA longa chama-se **SMA longo**, com um período de 80 velas, e a SMA curta chama-se **SMA curto**, com um período de 10 velas.
 - Quando uma média móvel curta cruza uma longa de baixo para cima, abre-se uma posição longa.
 - Quando uma média móvel curta cruza uma longa de cima para baixo, abre-se uma posição curta.
 - Se existir uma posição oposta no momento em que é recebido um sinal para abrir uma posição, inverte-se a posição.
 
-4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Paleta** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrumento** chama-se Instrument, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Carteira** chama-se Portfolio. Defina a caixa de verificação **Parâmetros** dos cubos Instrument e Portfolio. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo Value do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
+4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Paleta** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrumento** chama-se **Instrumento**, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Carteira** chama-se **Carteira**. Defina a caixa de verificação **Parâmetros** dos cubos **Instrumento** e **Carteira**. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo **Valor** do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -31,7 +31,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicador](elements/common/indicator.md), seleccionar o tipo SMA, nomear o primeiro Long SMA, definir o período de 80 velas, nomear o segundo Short SMA e definir o período de 10 velas.
+5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicador](elements/common/indicator.md), seleccionar o tipo SMA, nomear o primeiro **SMA longo**, definir o período de 80 velas, nomear o segundo **SMA curto** e definir o período de 10 velas.
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
@@ -39,7 +39,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. Depois de adicionar os indicadores, precisa de adicionar dois cubos que definem os cruzamentos dos indicadores. Estes são os cubos [Cruzamento](elements/common/crossing.md) dos elementos compostos. O primeiro cubo chama-se Crossing Up. Define o cruzamento de baixo para cima. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor maior, e o operador PrevComparison é definido para menor ou igual. O segundo cubo chama-se Crossing Down; define o cruzamento de cima para baixo. O indicador Short SMA é passado para a entrada superior do cubo, e o indicador Long SMA para a entrada inferior. O operador CurrComparison é definido para um valor menor, e o operador PrevComparison é definido para maior ou igual.
+7. Depois de adicionar os indicadores, precisa de adicionar dois cubos que definem os cruzamentos dos indicadores. Estes são os cubos [Cruzamento](elements/common/crossing.md) dos elementos compostos. O primeiro cubo chama-se **Cruzamento ascendente**. Define o cruzamento de baixo para cima. O indicador **SMA curto** é passado para a entrada superior do cubo, e o indicador **SMA longo** para a entrada inferior. O operador CurrComparison é definido para um valor maior, e o operador PrevComparison é definido para menor ou igual. O segundo cubo chama-se **Cruzamento descendente**; define o cruzamento de cima para baixo. O indicador **SMA curto** é passado para a entrada superior do cubo, e o indicador **SMA longo** para a entrada inferior. O operador CurrComparison é definido para um valor menor, e o operador PrevComparison é definido para maior ou igual.
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
@@ -47,11 +47,11 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. Como origem das negociações para apresentação no gráfico, é utilizado o cubo **Negócios** da estratégia. No exemplo, chama-se Strategy trades.
+9. Como origem das negociações para apresentação no gráfico, é utilizado o cubo **Negócios** da estratégia. No exemplo, chama-se **Negócios por estratégia**.
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. Para abrir uma posição, adicione dois cubos [Register order](elements/orders/register.md). O primeiro cubo destina-se à compra por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Up, o **Carteira** e o volume da ordem. O segundo cubo destina-se à venda por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento Crossing Down, o **Carteira** e o volume da ordem.
+10. Para abrir uma posição, adicione dois cubos [Registo de ordem](elements/orders/register.md). O primeiro cubo destina-se à compra por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento **Cruzamento ascendente**, a **Carteira** e o volume da ordem. O segundo cubo destina-se à venda por ordem de mercado. São passados para a entrada deste cubo: o **Instrumento**, o sinal para abrir uma posição proveniente do cubo de cruzamento **Cruzamento descendente**, a **Carteira** e o volume da ordem.
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 

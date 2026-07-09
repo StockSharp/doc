@@ -16,12 +16,12 @@
 
 3. 移动平均线（SMA）策略的基本原理如下：
 
-- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [指标](elements/common/indicator.md) 模块名为 Long SMA，周期为 80 根K线；短期 SMA 模块名为 Short SMA，周期为 10 根K线。
+- 使用两个计算周期不同的移动平均线：长期 SMA 和短期 SMA。在本示例中，长期 SMA 的 [指标](elements/common/indicator.md) 模块名为 **长期 SMA**，周期为 80 根K线；短期 SMA 模块名为 **短期 SMA**，周期为 10 根K线。
 - 当短期移动平均线从下向上穿过长期移动平均线时，建立多头持仓。
 - 当短期移动平均线从上向下穿过长期移动平均线时，建立空头持仓。
 - 收到开仓信号时，如果当前存在相反方向的持仓，则反转持仓。
 
-4. 所有策略都需要用于成交的交易品种和投资组合。应从 **元素面板** 面板将它们添加到 **Designer** 面板。本示例中，类型为 **交易品种** 的 [变量](elements/data_sources/variable.md) 模块命名为 Instrument，类型为 **投资组合** 的 [变量](elements/data_sources/variable.md) 模块命名为 Portfolio。选中 Instrument 和 Portfolio 模块的 **参数** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入交易品种和投资组合的值。如果将 [变量](elements/data_sources/variable.md) 模块的 Value 字段留空，同时也未选中 Parameters 复选框，测试策略时会报告 [变量](elements/data_sources/variable.md) 模块的值未设置。
+4. 所有策略都需要用于成交的交易品种和投资组合。应从 **元素面板** 将它们添加到 **设计器** 面板。本示例中，类型为 **交易品种** 的 [变量](elements/data_sources/variable.md) 模块命名为 **交易品种**，类型为 **投资组合** 的 [变量](elements/data_sources/variable.md) 模块命名为 **投资组合**。选中 **交易品种** 和 **投资组合** 模块的 **参数** 复选框。选中后，模块会从策略设置中获取值。如果未选中，则需要手动输入交易品种和投资组合的值。如果将 [变量](elements/data_sources/variable.md) 模块的 **值** 字段留空，同时也未选中 **参数** 复选框，测试策略时会报告 [变量](elements/data_sources/variable.md) 模块的值未设置。
 
 ![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -31,7 +31,7 @@
 
 ![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. 添加交易品种和投资组合后，添加两个 [指标](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 Long SMA，周期设置为 80 根K线；将第二个命名为 Short SMA，周期设置为 10 根K线。
+5. 添加交易品种和投资组合后，添加两个 [指标](elements/common/indicator.md) 模块并选择 SMA 类型。将第一个命名为 **长期 SMA**，周期设置为 80 根K线；将第二个命名为 **短期 SMA**，周期设置为 10 根K线。
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
@@ -39,7 +39,7 @@
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. 添加指标后，需要添加两个用于判断指标交叉的模块，即复合元素中的 [交叉](elements/common/crossing.md) 模块。第一个模块命名为 Crossing Up，用于判断自下而上的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“大于”，将 PrevComparison 运算符设置为“小于或等于”。第二个模块命名为 Crossing Down，用于判断自上而下的交叉。将 Short SMA 指标传入模块的上方输入端，将 Long SMA 指标传入下方输入端。将 CurrComparison 运算符设置为“小于”，将 PrevComparison 运算符设置为“大于或等于”。
+7. 添加指标后，需要添加两个用于判断指标交叉的模块，即复合元素中的 [交叉](elements/common/crossing.md) 模块。第一个模块命名为 **上穿**，用于判断自下而上的交叉。将 **短期 SMA** 指标传入模块的上方输入端，将 **长期 SMA** 指标传入下方输入端。将 CurrComparison 运算符设置为“大于”，将 PrevComparison 运算符设置为“小于或等于”。第二个模块命名为 **下穿**，用于判断自上而下的交叉。将 **短期 SMA** 指标传入模块的上方输入端，将 **长期 SMA** 指标传入下方输入端。将 CurrComparison 运算符设置为“小于”，将 PrevComparison 运算符设置为“大于或等于”。
 
 ![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
@@ -47,11 +47,11 @@
 
 ![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. 使用策略的 **成交** 模块作为图表中成交数据的来源。本示例将其命名为 Strategy trades。
+9. 使用策略的 **成交** 模块作为图表中成交数据的来源。本示例将其命名为 **策略成交**。
 
 ![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
-10. 添加两个[注册订单](elements/orders/register.md)模块来建立持仓。第一个模块用于通过市价订单买入，其输入端接收 **交易品种**、来自 Crossing Up 交叉模块的开仓信号、**投资组合** 和订单数量。第二个模块用于通过市价订单卖出，其输入端接收 **交易品种**、来自 Crossing Down 交叉模块的开仓信号、**投资组合** 和订单数量。
+10. 添加两个[注册订单](elements/orders/register.md)模块来建立持仓。第一个模块用于通过市价订单买入，其输入端接收 **交易品种**、来自 **上穿** 交叉模块的开仓信号、**投资组合** 和订单数量。第二个模块用于通过市价订单卖出，其输入端接收 **交易品种**、来自 **下穿** 交叉模块的开仓信号、**投资组合** 和订单数量。
 
 ![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
