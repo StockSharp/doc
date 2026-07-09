@@ -26,7 +26,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 - **Connection** - string de ligação pronta a utilizar. 
 
 > [!TIP]
-> Pode verificar a ligação à base de dados usando o botão **Check**.
+> Pode verificar a ligação à base de dados usando o botão **Verificar**.
 
 **General**
 

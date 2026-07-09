@@ -26,7 +26,7 @@ A seguir descreve-se como criar e configurar uma tarefa de cópia de segurança.
    **Logging**
    - **Identifier** - o identificador. 
    - **Logging level** - o nível de logging. 
-3. Depois de configurar a tarefa, adicione os instrumentos que devem ser guardados no armazenamento de cópia de segurança e clique no botão **Start**.
+3. Depois de configurar a tarefa, adicione os instrumentos que devem ser guardados no armazenamento de cópia de segurança e clique no botão **Iniciar**.
 
 ## Conteúdo recomendado
 

@@ -16,7 +16,7 @@ Ao exportar para ficheiros de texto (txt), aparece uma janela na qual pode espec
 
 Aqui, entre chavetas, são indicadas as propriedades a exportar e a respetiva ordem, separadas por ponto e vírgula.
 
-Ao clicar no botão **Preview**, pode ver que dados serão guardados no ficheiro.
+Ao clicar no botão **Pré-visualizar**, pode ver que dados serão guardados no ficheiro.
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 

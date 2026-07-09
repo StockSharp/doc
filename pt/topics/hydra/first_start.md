@@ -1,6 +1,6 @@
 # Primeiro arranque
 
-Na primeira execução, aparece a seguinte janela para selecionar fontes de dados. Também pode abrir esta janela no separador **Common**, selecionando **Add \=\> Sources**.
+Na primeira execução, aparece a seguinte janela para selecionar fontes de dados. Também pode abrir esta janela no separador **Comum**, selecionando **Adicionar \=\> Fontes**.
 
 ![hydra source add](../../images/hydra_source_add.png)
 
@@ -29,11 +29,11 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    No primeiro arranque, o programa irá propor transferir todos os instrumentos de uma só vez para a fonte selecionada. Posteriormente, o próprio utilizador transferirá os instrumentos. Inicialmente, a base de dados de instrumentos em [Hydra](../hydra.md) está vazia; existe apenas um instrumento auxiliar **ALL@ALL**. Quando este instrumento é selecionado, os dados serão transferidos para todos os instrumentos disponíveis para esta fonte.
 
-   Para adicionar um instrumento, clique no botão **Add** ![hydra add](../../images/hydra_add.png). Em seguida, será aberta uma janela para transferir o instrumento. ![hydra securities](../../images/hydra_securities.png)
+   Para adicionar um instrumento, clique no botão **Adicionar** ![hydra add](../../images/hydra_add.png). Em seguida, será aberta uma janela para transferir o instrumento. ![hydra securities](../../images/hydra_securities.png)
 
-   Para transferir os instrumentos, é necessário clicar no botão **Download securities** correspondente.
+   Para transferir os instrumentos, é necessário clicar no botão **Transferir instrumentos** correspondente.
 
-   Depois disso, será apresentado no ecrã um menu no qual o utilizador pode selecionar **Download all securities**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Depois disso, será apresentado no ecrã um menu no qual o utilizador pode selecionar **Transferir todos os instrumentos**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
 
    Ou, para algumas fontes, [configurar](prepare_for_download/instruments_list.md) os instrumentos que pretende transferir.
 
@@ -45,7 +45,7 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    Em seguida, será movido para o lado direito da tabela.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
 
-   Os instrumentos selecionados serão apresentados na tabela **Securities**, que é uma tabela com estrutura em árvore. O elemento principal é o instrumento; o elemento adicional são os tipos de dados de mercado que serão recebidos para esse instrumento.
+   Os instrumentos selecionados serão apresentados na tabela **Instrumentos**, que é uma tabela com estrutura em árvore. O elemento principal é o instrumento; o elemento adicional são os tipos de dados de mercado que serão recebidos para esse instrumento.
 2. Para cada instrumento selecionado, deve selecionar os tipos de dados de mercado necessários para transferência.
 
    Se nem todos os parâmetros necessários do instrumento estiverem definidos, o ícone ![hydra zero](../../images/hydra_zero.png) aparecerá na coluna esquerda da linha do instrumento. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
@@ -67,9 +67,9 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
      Esta função é conveniente se a fonte não permitir receber dados para construir velas. Neste caso, as velas são construídas com base nos valores médios dos dados.![hydra candle build type](../../images/hydra_candle_build_type.png)
 
      O utilizador também tem a possibilidade de selecionar um [tipo personalizado](prepare_for_download/custom_candles.md) de velas para personalizar os dados recebidos.
-   - Depois de selecionar um instrumento, o tipo de dados de mercado e definir o período, deve clicar no botão **Start**. Depois disso, a transferência dos dados de mercado será iniciada.
+   - Depois de selecionar um instrumento, o tipo de dados de mercado e definir o período, deve clicar no botão **Iniciar**. Depois disso, a transferência dos dados de mercado será iniciada.
 
-   O processo de trabalho pode ser observado no separador especial **Logs**, fixado na parte inferior do programa. Além disso, os logs são guardados em ficheiros na pasta local.
+   O processo de trabalho pode ser observado no separador especial **Registos**, fixado na parte inferior do programa. Além disso, os logs são guardados em ficheiros na pasta local.
 
 ![hydra main start](../../images/hydra_main_start.png)
 

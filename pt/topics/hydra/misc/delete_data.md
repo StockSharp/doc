@@ -1,6 +1,6 @@
 # Eliminar dados
 
-Separador **Common**, botão **Delete data...**.
+Separador **Comum**, botão **Eliminar dados...**.
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 

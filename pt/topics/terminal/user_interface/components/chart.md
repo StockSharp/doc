@@ -14,7 +14,7 @@ Ao clicar em ![Designer Schedule 01](../../../../images/designer_schedule_01.png
 
 ![Designer Schedule 02](../../../../images/designer_schedule_02.png)
 
-Pode registar ordens a partir do gráfico. Para isso, especifique primeiro o **Instrument** e a **Portfolio** para os quais as ordens serão registadas.
+Pode registar ordens a partir do gráfico. Para isso, especifique primeiro o **Instrumento** e a **Carteira** para os quais as ordens serão registadas.
 
 As ordens de compra serão registadas pela combinação de teclas **Ctrl+Left mouse button**. 
 
@@ -37,4 +37,3 @@ Existe uma barra de ferramentas acima do gráfico, onde pode selecionar deslocam
 ## Consulte também
 
 [Ordens](../../../designer/user_interface/components/orders.md)
-

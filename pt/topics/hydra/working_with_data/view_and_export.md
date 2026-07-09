@@ -2,7 +2,7 @@
 
 Os dados recebidos pelo [Hydra](../../hydra.md) podem ser visualizados em painéis especiais.
 
-Para isso, no separador Common, clique num dos seguintes botões: [Ticks](view_and_export/ticks.md), [Livros de ordens](view_and_export/order_books.md), [Geração de Candles](candles_generation.md), [Log de ordens](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Notícias](view_and_export/news.md), [Transações](view_and_export/transactions.md), [Painel de opções](view_and_export/option_desk.md), [Indicadores](view_and_export/indicators.md), [Posições](view_and_export/positions.md).
+Para isso, no separador **Comum**, clique num dos seguintes botões: [Ticks](view_and_export/ticks.md), [Livros de ordens](view_and_export/order_books.md), [Geração de Candles](candles_generation.md), [Log de ordens](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Notícias](view_and_export/news.md), [Transações](view_and_export/transactions.md), [Painel de opções](view_and_export/option_desk.md), [Indicadores](view_and_export/indicators.md), [Posições](view_and_export/positions.md).
 
 Ou clique com o botão direito do rato no tipo de dados necessário, como mostrado na figura, ou faça duplo clique no tipo de dados necessário.
 
@@ -13,7 +13,7 @@ Cada painel contém uma interface geral das definições, como se segue:
 ![hydra export 00](../../../images/hydra_export_00.png)
 
 - A linha superior indica o armazenamento de dados de mercado e o respetivo formato (BIN ou CSV).
-- A linha inferior define o período para o qual os dados serão solicitados. Ao clicar no botão **Select security**, aparecerá a janela de seleção de instrumentos, na qual pode selecionar um ou vários instrumentos. Se forem selecionados vários instrumentos, durante a exportação posterior para Excel ou CSV o programa ordenará automaticamente os dados dos diferentes instrumentos para ficheiros diferentes.
+- A linha inferior define o período para o qual os dados serão solicitados. Ao clicar no botão **Selecionar instrumento**, aparecerá a janela de seleção de instrumentos, na qual pode selecionar um ou vários instrumentos. Se forem selecionados vários instrumentos, durante a exportação posterior para Excel ou CSV o programa ordenará automaticamente os dados dos diferentes instrumentos para ficheiros diferentes.
 - Se, ao construir uma tabela com dados, a quantidade de dados descarregados exceder o limite definido, aparecerá uma janela no ecrã:![hydra tick limit](../../../images/hydra_tick_limit.png)
 
   é necessário aumentar o limite de dados descarregados.

@@ -2,7 +2,7 @@
 
 A ferramenta é uma ação repetida a uma hora específica.
 
-Para ver a lista de ferramentas, selecione o item **Tools** no painel esquerdo. O trabalho com ferramentas é igual ao trabalho com fontes - a ferramenta pode ser adicionada, eliminada, editada, ativada/desativada. Para adicionar a **Tool**, no separador **Common**, selecione **Add \=\> Tools**. Surgirá uma janela correspondente, na qual pode selecionar a **Tool** necessária...
+Para ver a lista de ferramentas, selecione o item **Ferramentas** no painel esquerdo. O trabalho com ferramentas é igual ao trabalho com fontes - a ferramenta pode ser adicionada, eliminada, editada, ativada/desativada. Para adicionar a **Ferramenta**, no separador **Comum**, selecione **Adicionar \=\> Ferramentas**. Surgirá uma janela correspondente, na qual pode selecionar a **Ferramenta** necessária...
 
 ![hydra tasks](../../images/hydra_tasks.png)
 

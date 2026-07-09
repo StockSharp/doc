@@ -4,17 +4,17 @@ A criação de estratégias a partir de código destina-se a utilizadores que pr
 
 O processo de criação de uma estratégia ocorre diretamente no [Designer](../../../designer.md) ou num ambiente de desenvolvimento **Python** (os ambientes de desenvolvimento mais populares são **Visual Studio** e **JetBrains Rider**), usando a biblioteca para o desenvolvimento profissional de robôs de negociação em **Python** e a [API](../../../api.md).
 
-Pode adicionar uma nova estratégia clicando no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no separador **General** e selecionando **Strategy**. Ou clicando com o botão direito na pasta **Strategies** no painel **Schemes** e clicando no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
+Pode adicionar uma nova estratégia clicando no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no separador **Geral** e selecionando **Estratégia**. Ou clicando com o botão direito na pasta **Estratégias** no painel **Esquemas** e clicando no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Depois de clicar no botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo sobre o qual criar a estratégia:
+Depois de clicar no botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo sobre o qual criar a estratégia:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
 
 Para criar uma estratégia a partir de código Python, selecione o segundo separador. Também pode escolher um modelo que será usado como código inicial.
 
-Depois de clicar em **OK**, uma nova estratégia aparecerá na pasta **Strategies** do painel **Schemes**, de forma semelhante à criação de uma estratégia a partir de um [esquema](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
+Depois de clicar em **OK**, uma nova estratégia aparecerá na pasta **Estratégias** do painel **Esquemas**, de forma semelhante à criação de uma estratégia a partir de um [esquema](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
 
 Mas, em vez de um esquema, será apresentado um editor de código Python:
 

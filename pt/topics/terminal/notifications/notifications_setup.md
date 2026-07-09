@@ -8,11 +8,10 @@ As notificações podem ser configuradas para alterações nos seguintes tipos d
 
 As notificações podem ter as seguintes formas:
 
-- **Window** – será apresentada uma pequena janela pop-up com uma mensagem no canto do ecrã.
-- **Melody** – será reproduzida uma melodia.
+- **Janela** – será apresentada uma pequena janela pop-up com uma mensagem no canto do ecrã.
+- **Melodia** – será reproduzida uma melodia.
 - **SMS** – será enviada uma mensagem por SMS.
 - **Email** – a mensagem será enviada por email.
-- **Speech** – a mensagem será lida por uma voz gerada pelo computador.
-- **Log** – a mensagem será enviada para a janela de logs do Designer.
-- **Off** – a notificação não será apresentada.
-
+- **Voz** – a mensagem será lida por uma voz gerada pelo computador.
+- **Registo** – a mensagem será enviada para a janela de logs do Designer.
+- **Desligado** – a notificação não será apresentada.

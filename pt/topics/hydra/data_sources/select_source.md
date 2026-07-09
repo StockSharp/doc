@@ -2,9 +2,9 @@
 
 Para adicionar uma nova fonte de dados de mercado, é necessário:
 
-- Aceder ao separador **Common**
-- Selecionar **Add**
-- Selecionar **Sources**
+- Aceder ao separador **Comum**
+- Selecionar **Adicionar**
+- Selecionar **Fontes**
 
 ![hydra source choose](../../../images/hydra_source_choose.png)
 
@@ -16,11 +16,11 @@ Também pode criar várias instâncias da mesma fonte. Por exemplo, várias inst
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-Para que a fonte comece a transferir dados depois de clicar no botão **Start**, esta deve estar ativada. Para isso, selecione o ícone da fonte no painel esquerdo e utilize o botão ![hydra source on off](../../../images/hydra_source_on_off.png) para a ligar ou desligar. Pode executar esta operação antes ou depois de adicionar instrumentos para transferência.
+Para que a fonte comece a transferir dados depois de clicar no botão **Iniciar**, esta deve estar ativada. Para isso, selecione o ícone da fonte no painel esquerdo e utilize o botão ![hydra source on off](../../../images/hydra_source_on_off.png) para a ligar ou desligar. Pode executar esta operação antes ou depois de adicionar instrumentos para transferência.
 
 As fontes desnecessárias podem ser eliminadas com o botão ![hydra delete](../../../images/hydra_delete.png).
 
-As definições da fonte podem ser alteradas no painel **Properties** do lado direito.
+As definições da fonte podem ser alteradas no painel **Propriedades** do lado direito.
 
 ![hydra setting source button](../../../images/hydra_setting_source_button.png)
 

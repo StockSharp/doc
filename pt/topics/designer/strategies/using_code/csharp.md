@@ -4,17 +4,17 @@ A criação de estratégias a partir de código destina-se a utilizadores que pr
 
 O processo de criação de uma estratégia ocorre diretamente no [Designer](../../../designer.md) ou num ambiente de desenvolvimento **C#** (os mais populares são **Visual Studio** e **JetBrains Rider**), usando uma biblioteca para o desenvolvimento profissional de robôs de negociação em **C#** e a [API](../../../api.md).
 
-Pode adicionar uma nova estratégia premindo o botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no separador **Common** e escolhendo **Strategy**. Ou clicando com o botão direito na pasta **Strategies** no painel **Scheme** e premindo o botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
+Pode adicionar uma nova estratégia premindo o botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no separador **Comum** e escolhendo **Estratégia**. Ou clicando com o botão direito na pasta **Estratégias** no painel **Esquema** e premindo o botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Depois de premir o botão **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo para criar a estratégia:
+Depois de premir o botão **Adicionar** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo para criar a estratégia:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
 Para criar uma estratégia a partir de código C#, é necessário selecionar o segundo separador. Também pode escolher um modelo que será usado como código inicial.
 
-Depois de premir **OK**, uma nova estratégia aparecerá na pasta **Strategies** do painel **Scheme**, de forma semelhante à criação de uma estratégia a partir de [diagramas](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
+Depois de premir **OK**, uma nova estratégia aparecerá na pasta **Estratégias** do painel **Esquema**, de forma semelhante à criação de uma estratégia a partir de [diagramas](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
 
 Mas, em vez de um diagrama, será apresentado um editor de código C#:
 

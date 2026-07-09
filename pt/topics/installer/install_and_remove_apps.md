@@ -6,21 +6,21 @@ O programa [Installer](../installer.md) permite selecionar o tipo de aplicação
 
 Para instalar a aplicação necessária, é preciso:
 
-1. Selecionar uma aplicação, clicar em **Install**, aceitar o contrato de licença e clicar em **Continue**.![download installer](../../images/download_installer.png)
+1. Selecionar uma aplicação, clicar em **Instalar**, aceitar o contrato de licença e clicar em **Continuar**.![download installer](../../images/download_installer.png)
 2. Depois disso, é necessário selecionar o caminho de instalação. 
 
    **IMPORTANT\!** A pasta na qual o programa será instalado deve estar vazia. 
 
-   Clique em **Continue**.![direction installer](../../images/direction_installer.png)
-3. Selecionar **Run** e aguardar que a instalação seja concluída. 
+   Clique em **Continuar**.![direction installer](../../images/direction_installer.png)
+3. Selecionar **Executar** e aguardar que a instalação seja concluída. 
 
 Depois de concluída a instalação, o programa está pronto a usar. 
 
-Para desinstalar o programa, selecione **Uninstall** e clique no botão **Continue**.
+Para desinstalar o programa, selecione **Desinstalar** e clique no botão **Continuar**.
 
 ![del installer](../../images/del_installer.png)
 
-Para restaurar, selecione **Restore** e clique em **Continue**.
+Para restaurar, selecione **Restaurar** e clique em **Continuar**.
 
 ![repair installer](../../images/repair_installer.png)
 
