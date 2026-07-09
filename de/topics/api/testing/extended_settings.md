@@ -160,13 +160,13 @@ connector.Connect();
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// Empfangene Kerzen verarbeiten
-	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"Kerze: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// Empfangene Ticks verarbeiten
-	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Tick: {tick.ServerTime}, Preis: {tick.Price}, Volumen: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
@@ -177,13 +177,13 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 
 	// Empfangene Orderbücher verarbeiten
-	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	Console.WriteLine($"Orderbuch: {orderBook.ServerTime}, bestes Gebot: {bestBid?.Price}, bestes Angebot: {bestAsk?.Price}, Spread-Mitte: {spreadMiddle}");
 
 	// Preis nach Order-Seite abrufen
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 
-	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	Console.WriteLine($"Gebotspreis: {bidPrice}, Angebotspreis: {askPrice}");
 }
 ```
 

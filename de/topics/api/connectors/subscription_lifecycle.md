@@ -124,38 +124,38 @@ public void SetupSubscriptionTracking()
     // Lebenszyklus des Abonnements verfolgen
     _connector.SubscriptionStarted += subscription =>
     {
-        Console.WriteLine($"Subscription started: {subscription.DataType}, " +
-            $"Security: {subscription.SecurityId}");
+        Console.WriteLine($"Abonnement gestartet: {subscription.DataType}, " +
+            $"Instrument: {subscription.SecurityId}");
     };
 
     _connector.SubscriptionOnline += subscription =>
     {
-        Console.WriteLine($"Subscription online: {subscription.DataType}");
+        Console.WriteLine($"Abonnement online: {subscription.DataType}");
     };
 
     _connector.SubscriptionStopped += (subscription, error) =>
     {
         if (error == null)
-            Console.WriteLine($"Subscription completed: {subscription.DataType}");
+            Console.WriteLine($"Abonnement abgeschlossen: {subscription.DataType}");
         else
-            Console.WriteLine($"Subscription interrupted: {subscription.DataType}, " +
-                $"Error: {error.Message}");
+            Console.WriteLine($"Abonnement unterbrochen: {subscription.DataType}, " +
+                $"Fehler: {error.Message}");
     };
 
     // Einzelne Adapterverbindungen verfolgen
     _connector.ConnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter connected: {adapter.Name}");
+        Console.WriteLine($"Adapter verbunden: {adapter.Name}");
     };
 
     _connector.DisconnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter disconnected: {adapter.Name}");
+        Console.WriteLine($"Adapter getrennt: {adapter.Name}");
     };
 
     _connector.ConnectionErrorEx += (adapter, error) =>
     {
-        Console.WriteLine($"Adapter connection error {adapter.Name}: {error.Message}");
+        Console.WriteLine($"Adapter-Verbindungsfehler {adapter.Name}: {error.Message}");
     };
 
     // Verbinden
