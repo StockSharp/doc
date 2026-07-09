@@ -1,12 +1,12 @@
 # Skript erstellen
 
-Mit **Analytics** können Sie eigene Skripte erstellen. Als Beispiel betrachten wir **ChartDrawScript**, das die Moglichkeiten zum Zeichnen von Charts demonstriert:
+Mit **Analytics** können Sie eigene Skripte erstellen. Als Beispiel betrachten wir **ChartDrawScript**, das die Möglichkeiten zum Zeichnen von Charts demonstriert:
 
 ```cs
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// Das Analyseskript zeigt die Moglichkeiten zum Zeichnen von Charts.
+	/// Das Analyseskript zeigt die Möglichkeiten zum Zeichnen von Charts.
 	/// </summary>
 	public class ChartDrawScript : IAnalyticsScript
 	{

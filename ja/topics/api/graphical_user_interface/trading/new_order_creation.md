@@ -4,7 +4,7 @@
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
-接続が条件付き注文（ストップロス、テイクプロフィット）の登録をサポートしている場合、このウィンドウで **Advanced conditions** フラグを設定することで、高度な条件を持つ条件付き注文を登録できます。
+接続が条件付き注文（ストップロス、テイクプロフィット）の登録をサポートしている場合、このウィンドウで **詳細条件** フラグを設定することで、高度な条件を持つ条件付き注文を登録できます。
 
 **基本プロパティ**
 
@@ -34,4 +34,3 @@ private void NewOrderClick(object sender, RoutedEventArgs e)
 						
 	  				
 ```
-

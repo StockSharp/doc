@@ -16,7 +16,7 @@
 
 - **インデックス** - 複数の銘柄を組み合わせた数式（例: (AAPL@NASDAQ+10)\*(abs(20\/GOOG@NYSE))。
 - **エラーを無視** - 設定されたフラグは、インデックス計算時にエラーが無視されることを示します。
-- **拡張情報を計算** - 設定されたフラグは、インデックス計算時に、基本情報（Total volume、Opening price、Closing price、Highest price、Lowest price）に加えて、拡張情報（Total trade turnover、Opening volume、Closing volume、Maximum volume、Minimum volume）が計算されることを示します。
+- **拡張情報を計算** - 設定されたフラグは、インデックス計算時に、基本情報（総出来高、始値、終値、高値、安値）に加えて、拡張情報（総売買代金、開始出来高、終了出来高、最大出来高、最小出来高）が計算されることを示します。
 
 使用可能な数式は、[数式](../common/formula.md) キューブと同様です。
 

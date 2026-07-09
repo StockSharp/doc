@@ -4,7 +4,7 @@
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
-Si la conexión admite el registro de una orden condicional (stop-loss, take-profit), en esta ventana puede registrar una orden condicional con condiciones avanzadas estableciendo la bandera **Advanced conditions**.
+Si la conexión admite el registro de una orden condicional (stop-loss, take-profit), en esta ventana puede registrar una orden condicional con condiciones avanzadas estableciendo la bandera **Condiciones avanzadas**.
 
 **Propiedades básicas**
 
@@ -34,4 +34,3 @@ private void NewOrderClick(object sender, RoutedEventArgs e)
 						
 	  				
 ```
-

@@ -20,7 +20,7 @@
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
-用户可以通过 **{SecurityId.SecurityCode}** 属性添加交易品种代码等其他属性，也可以指定 Time Frame 值。
+用户可以通过 **{SecurityId.SecurityCode}** 属性添加交易品种代码等其他属性，也可以指定时间周期值。
 
 还可以添加包含属性名称的标题行。此时记录将如下所示。
 

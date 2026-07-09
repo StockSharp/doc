@@ -1,10 +1,10 @@
 # Velas personalizadas
 
-El usuario puede seleccionar un **Custom type** de velas y elegir de forma independiente qué velas se construirán; las velas se construirán "sobre la marcha", es decir, inmediatamente.
+El usuario puede seleccionar un **tipo personalizado** de velas y elegir de forma independiente qué velas se construirán; las velas se construirán "sobre la marcha", es decir, inmediatamente.
 
 ![hydra type candle 00 00](../../../images/hydra_type_candle_00_00.png)
 
-Consideremos un ejemplo de esta construcción. La bolsa **Bitmex** no proporciona la posibilidad de recibir velas con un Time Frame de 10 minutos.
+Consideremos un ejemplo de esta construcción. La bolsa **Bitmex** no proporciona la posibilidad de recibir velas con un marco temporal de 10 minutos.
 
 ![hydra type candle 00 01](../../../images/hydra_type_candle_00_01.png)
 
@@ -12,7 +12,7 @@ Secuencia para obtener dichas velas:
 
 1. Seleccione velas **Custom**.
 2. En la configuración, especifique velas **TF** y un período de 10 minutos.
-3. En la fuente, especifique a partir de qué se construirán las velas: **Order Log** ![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
+3. En la fuente, especifique a partir de qué se construirán las velas: **Registro de órdenes** ![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
 4. Establezca el período. Como puede ver, junto al nombre de la vela apareció la indicación **Generated**.![hydra type candle 00 03](../../../images/hydra_type_candle_00_03.png)
 5. Haga clic en Start y los datos empezarán a descargarse.![hydra type candle 00 04](../../../images/hydra_type_candle_00_04.png)
 6. Vaya a la sección de velas y [vea los datos descargados](../working_with_data/view_and_export.md).![hydra type candle 00 06](../../../images/hydra_type_candle_00_06.png)

@@ -12,24 +12,24 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
 2. Im geöffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
 
-   - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [standard candle types](../../api/candles.md) werden unterstützt).
+   - Wählen Sie den gewünschten Kerzentyp aus der Dropdown-Liste aus (alle [Standardkerzentypen](../../api/candles.md) werden unterstützt).
    - Geben Sie die erforderlichen Parameter für den ausgewählten Kerzentyp an:
-     - Für [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - **Timeframe** auswählen.
-     - Für [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - **Volume** angeben.
-     - Für [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - **Number of ticks** angeben.
-     - Für [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - **Range** angeben.
-     - Für [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - **Block size** angeben.
-     - Für [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - **P&F Parameters** angeben.
+     - Für [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - **Zeitrahmen** auswählen.
+     - Für [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - **Volumen** angeben.
+     - Für [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - **Anzahl der Ticks** angeben.
+     - Für [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - **Bereich** angeben.
+     - Für [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - **Blockgröße** angeben.
+     - Für [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - **P&F-Parameter** angeben.
    - Wählen Sie das Instrument aus, für das Kerzen erzeugt werden sollen.
    - Geben Sie bei Bedarf einen Zeitbereich an.
    - Klicken Sie auf die Schaltfläche ![hydra find](../../../images/hydra_find.png), um die Erzeugung zu starten.
 
-### Beispiel für die Timeframe-Kerzenerzeugung
+### Beispiel für die Zeitrahmen-Kerzenerzeugung
 
 Um 5-Minuten-Kerzen für das Instrument AAPL@NASDAQ zu erzeugen:
 
 1. Wählen Sie den Kerzentyp [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage).
-2. Setzen Sie **Timeframe** = 5 min.
+2. Setzen Sie **Zeitrahmen** = 5 min.
 3. Wählen Sie das Instrument AAPL@NASDAQ aus.
 4. Klicken Sie auf die Suchschaltfläche.
 
@@ -37,9 +37,9 @@ Nach der Datenerzeugung sehen Sie das Ergebnis:
 
 ![hydra candles tf](../../../images/hydra_candles_tf.png)
 
-### Beispiel für die Volume-Kerzenerzeugung
+### Beispiel für die Volumen-Kerzenerzeugung
 
-Um Volume-Kerzen zu erzeugen:
+Um Volumenkerzen zu erzeugen:
 
 1. Wählen Sie den Kerzentyp [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
 2. Geben Sie das Volumen an, zum Beispiel 100.
@@ -56,9 +56,9 @@ Ergebnis der Erzeugung:
 Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Sie Kerzen erzeugen, indem Sie im Feld [**Erstellen aus**](any_market_data_types.md) den Datentyp auswählen, aus dem sie erstellt werden:
 
 - **Ticks** - Kerzen aus Tick-Daten erstellen.
-- **Order Books** - Kerzen aus Order-Book-Daten erstellen.
+- **Orderbücher** - Kerzen aus Orderbuchdaten erstellen.
 - **Level1** - Kerzen aus Level1-Daten erstellen.
-- **Smaller Timeframe** - Kerzen mit größerem Timeframe aus Kerzen mit kleinerem Timeframe erstellen.
+- **Kleinerer Zeitrahmen** - Kerzen mit größerem Zeitrahmen aus Kerzen mit kleinerem Zeitrahmen erstellen.
 
 ### Beispiele verschiedener Erstellungsoptionen:
 

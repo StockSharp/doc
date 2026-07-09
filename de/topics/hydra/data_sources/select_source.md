@@ -4,7 +4,7 @@ Um eine neue Marktdatenquelle hinzuzufügen, gehen Sie wie folgt vor:
 
 - Zur Registerkarte **Allgemein** wechseln
 - **Hinzufügen** auswählen
-- **Sources** auswählen
+- **Quellen** auswählen
 
 ![hydra source choose](../../../images/hydra_source_choose.png)
 

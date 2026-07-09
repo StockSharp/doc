@@ -1,6 +1,6 @@
 # Conversor
 
-A tarefa converte dados da bolsa. Por exemplo, de Order Logs para ticks ou de ticks para candles, etc.
+A tarefa converte dados da bolsa. Por exemplo, de logs de ordens para ticks ou de ticks para candles, etc.
 
 ![hydra tasks converter](../../../images/hydra_tasks_converter.png)
 
@@ -17,9 +17,9 @@ A tarefa converte dados da bolsa. Por exemplo, de Order Logs para ticks ou de ti
 
 - **Intervalo** - intervalo de geração dos livros de ordens.
 - **Depth** - profundidade máxima da geração dos livros de ordens.
-- **Order log** - como construir livros de ordens a partir do order log.
+- **Log de ordens** - como construir livros de ordens a partir do log de ordens.
 
-  Cada bolsa tem o seu próprio formato de **Order Log**; o programa [Hydra](../../hydra.md) suporta três formatos:
+  Cada bolsa tem o seu próprio formato de **log de ordens**; o programa [Hydra](../../hydra.md) suporta três formatos:
   - **By default** - é utilizado na maioria dos casos.
   - **ITCH** - é utilizado para o protocolo ITCH (bolsas: LSE e Nasdaq).
 
@@ -41,7 +41,7 @@ A tarefa converte dados da bolsa. Por exemplo, de Order Logs para ticks ou de ti
 Consideremos um exemplo de conversão de dados.
 
 1. Aceda à tarefa **Conversor**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
-2. Selecione o instrumento e, na janela que aparece, defina o tipo de dados que devemos receber durante a conversão, bem como o tipo de dados a partir do qual devemos converter. Por exemplo, precisa de converter Ticks em candles com um Time Frame de 15 minutos.
+2. Selecione o instrumento e, na janela que aparece, defina o tipo de dados que devemos receber durante a conversão, bem como o tipo de dados a partir do qual devemos converter. Por exemplo, precisa de converter Ticks em candles com um período de 15 minutos.
 
    > [!TIP]
 > IMPORTANTE\! O período de dados solicitado deve corresponder ao período disponível para conversão; caso contrário, os dados não serão convertidos. Nas definições, especifique o formato correto dos dados de origem para que corresponda ao formato dos dados que estão a ser convertidos.

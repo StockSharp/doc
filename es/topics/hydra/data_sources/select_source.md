@@ -4,7 +4,7 @@ Para añadir una nueva fuente de datos de mercado, debe:
 
 - Ir a la pestaña **Común**
 - Seleccionar **Añadir**
-- Seleccionar **Sources**
+- Seleccionar **Fuentes**
 
 ![hydra source choose](../../../images/hydra_source_choose.png)
 

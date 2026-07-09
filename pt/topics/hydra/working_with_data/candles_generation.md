@@ -6,7 +6,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
 ## Processo de Geração de Candles
 
-1. No separador **Geral**, clique no botão **Candles**; será aberta a seguinte janela:
+1. No separador **Geral**, clique no botão **Velas**; será aberta a seguinte janela:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
@@ -14,22 +14,22 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
    - Selecione o tipo de candle pretendido na lista pendente (todos os [tipos de candles padrão](../../api/candles.md) são suportados)
    - Especifique os parâmetros necessários para o tipo de candle selecionado:
-     - Para [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - selecione **Timeframe**
+     - Para [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - selecione **Período**
      - Para [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - especifique **Volume**
-     - Para [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - especifique **Number of ticks**
-     - Para [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - especifique **Range**
-     - Para [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - especifique **Block size**
-     - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **P&F Parameters**
+     - Para [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - especifique **Número de ticks**
+     - Para [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - especifique **Intervalo**
+     - Para [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - especifique **Tamanho do bloco**
+     - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **Parâmetros P&F**
    - Selecione o instrumento para o qual as candles serão geradas
    - Especifique um intervalo temporal (se necessário)
    - Clique no botão ![hydra find](../../../images/hydra_find.png) para iniciar a geração
 
-### Exemplo de Geração de Candles Timeframe
+### Exemplo de Geração de Candles por período
 
 Para gerar candles de 5 minutos para o instrumento AAPL@NASDAQ:
 
 1. Selecione o tipo de candle [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)
-2. Defina **Timeframe** = 5 min
+2. Defina **Período** = 5 min
 3. Selecione o instrumento AAPL@NASDAQ
 4. Clique no botão de pesquisa
 
@@ -44,7 +44,7 @@ Para gerar candles de volume:
 1. Selecione o tipo de candle [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)
 2. Especifique o volume (por exemplo, 100)
 3. Selecione o instrumento
-4. No campo **Build from**, selecione **Ticks**
+4. No campo **Construir a partir de**, selecione **Ticks**
 5. Clique no botão de pesquisa
 
 Resultado da geração:
@@ -53,12 +53,12 @@ Resultado da geração:
 
 ## Origens de Dados para Construir Candles
 
-Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, pode gerar candles selecionando, no campo [**Build from**](any_market_data_types.md), o tipo de dados a partir do qual serão construídas:
+Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, pode gerar candles selecionando, no campo [**Construir a partir de**](any_market_data_types.md), o tipo de dados a partir do qual serão construídas:
 
 - **Ticks** - construção de candles a partir de dados de ticks
-- **Order Books** - construção de candles a partir de dados do livro de ordens
+- **Livros de ordens** - construção de candles a partir de dados do livro de ordens
 - **Level1** - construção de candles a partir de dados Level1
-- **Smaller Timeframe** - construção de candles com um timeframe maior a partir de candles com um menor
+- **Período menor** - construção de candles com um período maior a partir de candles com um menor
 
 ### Exemplos de Diferentes Opções de Construção:
 
@@ -71,7 +71,7 @@ Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, 
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
-> Se selecionar **don't build** no campo **Build from**, serão pesquisadas apenas candles prontas que tenham sido descarregadas diretamente através da origem de dados.
+> Se selecionar **não construir** no campo **Construir a partir de**, serão pesquisadas apenas candles prontas que tenham sido descarregadas diretamente através da origem de dados.
 
 ## Visualização das Candles Geradas
 

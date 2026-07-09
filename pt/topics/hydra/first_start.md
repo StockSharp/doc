@@ -50,13 +50,13 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    Se nem todos os parâmetros necessários do instrumento estiverem definidos, o ícone ![hydra zero](../../images/hydra_zero.png) aparecerá na coluna esquerda da linha do instrumento. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
 
-   Vamos selecionar a transferência de **Ticks** e **Candles Time Frame 5**.
+   Vamos selecionar a transferência de **Ticks** e **Velas período 5**.
 
    Na parte inferior da janela da fonte existe um painel com botões para configurar os dados e instrumentos a receber. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
    Neste painel podem ser executadas as seguintes operações:
    - Configurar a quantidade de informação recebida através dos botões: **Negócios, Livros de ofertas, Velas, Registo de ordens, Level 1, Transações próprias**. As listas de tipos de dados de mercado disponíveis variam consoante a fonte.
-   - Especificar o Time Frame necessário para as velas carregadas. O Time Frame das velas recebidas é diferente para fontes diferentes.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
+   - Especificar o período necessário para as velas carregadas. O período das velas recebidas é diferente para fontes diferentes.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - Definir o período necessário para a transferência dos dados de mercado. O período também pode ser configurado diretamente na janela de dados de mercado. Para isso, deve selecionar o início e o fim do período.
 
      Se o utilizador não especificar a data de fim do período, o programa transfere todos os dados disponíveis até à data atual. Se a fonte suportar a transmissão de dados de mercado em tempo real, então, se não existir data de fim para o período, os dados de mercado serão transferidos em tempo real.

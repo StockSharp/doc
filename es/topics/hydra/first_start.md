@@ -50,13 +50,13 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    Si no se han establecido todos los parámetros necesarios del instrumento, aparecerá el icono ![hydra zero](../../images/hydra_zero.png) en la columna izquierda de la línea del instrumento. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
 
-   Seleccionemos la descarga de **Ticks** y **Candles Time Frame 5**.
+   Seleccionemos la descarga de **Ticks** y **Velas marco temporal 5**.
 
    En la parte inferior de la ventana de la fuente hay un panel con botones para configurar los datos y los instrumentos que se recibirán. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
    En este panel se pueden realizar las siguientes operaciones:
    - Configurar la cantidad de información recibida mediante los botones: **Operaciones, Libros de órdenes, Velas, Registro de órdenes, Level 1, Transacciones propias**. Las listas de tipos de datos de mercado disponibles varían para distintas fuentes.
-   - Especificar el Time Frame necesario para las velas cargadas. El Time Frame de las velas recibidas es distinto para diferentes fuentes.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
+   - Especificar el marco temporal necesario para las velas cargadas. El marco temporal de las velas recibidas es distinto para diferentes fuentes.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
    - Establecer el período necesario para descargar datos de mercado. El período también se puede configurar directamente en la ventana de datos de mercado. Para ello, debe seleccionar el inicio y el final del período.
 
      Si el usuario no especifica la fecha final del período, el programa descarga todos los datos disponibles hasta la fecha actual. Si la fuente admite transmisión de datos de mercado en tiempo real, cuando no haya fecha final del período los datos de mercado se descargarán en tiempo real.

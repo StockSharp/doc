@@ -1,6 +1,6 @@
 # 自定义K线
 
-用户可以选择K线的 **Custom type**，自行指定要构建的K线。K线会即时动态生成。
+用户可以选择K线的 **自定义类型**，自行指定要构建的K线。K线会即时动态生成。
 
 ![hydra type candle 00 00](../../../images/hydra_type_candle_00_00.png)
 
@@ -12,7 +12,7 @@
 
 1. 选择 **Custom** K线。
 2. 在设置中选择 **TF** K线，并将时间周期设为 10 分钟。
-3. 在数据源设置中指定用于构建K线的数据类型：**Order Log**。![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
+3. 在数据源设置中指定用于构建K线的数据类型：**订单日志**。![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
 4. 设置下载时间范围。可以看到，K线名称旁边出现了 **Generated** 标记。![hydra type candle 00 03](../../../images/hydra_type_candle_00_03.png)
 5. 单击 Start，程序开始下载数据。![hydra type candle 00 04](../../../images/hydra_type_candle_00_04.png)
 6. 打开K线部分并[查看下载的数据](../working_with_data/view_and_export.md)。![hydra type candle 00 06](../../../images/hydra_type_candle_00_06.png)

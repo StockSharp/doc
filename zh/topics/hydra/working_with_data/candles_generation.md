@@ -6,7 +6,7 @@
 
 ## K线生成过程
 
-1. 在 **常规** 选项卡中单击 **Candles** 按钮，打开以下窗口：
+1. 在 **常规** 选项卡中单击 **K线** 按钮，打开以下窗口：
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
@@ -14,12 +14,12 @@
 
    - 从下拉列表中选择所需的K线类型，支持所有[标准K线类型](../../api/candles.md)。
    - 指定所选K线类型所需的参数：
-     - 对于 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)，选择 **Timeframe**。
-     - 对于 [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)，指定 **Volume**。
-     - 对于 [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage)，指定 **Number of ticks**。
-     - 对于 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage)，指定 **Range**。
-     - 对于 [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage)，指定 **Block size**。
-     - 对于 [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage)，指定 **P&F Parameters**。
+     - 对于 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)，选择 **时间周期**。
+     - 对于 [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)，指定 **成交量**。
+     - 对于 [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage)，指定 **Tick 数量**。
+     - 对于 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage)，指定 **区间**。
+     - 对于 [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage)，指定 **砖块大小**。
+     - 对于 [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage)，指定 **P&F 参数**。
    - 选择要为其生成K线的交易品种。
    - 根据需要指定时间范围。
    - 单击 ![hydra find](../../../images/hydra_find.png) 按钮开始生成。
@@ -29,7 +29,7 @@
 要为 AAPL@NASDAQ 交易品种生成 5 分钟K线：
 
 1. 选择K线类型 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)。
-2. 将 **Timeframe** 设置为 5 分钟。
+2. 将 **时间周期** 设置为 5 分钟。
 3. 选择 AAPL@NASDAQ 交易品种。
 4. 单击搜索按钮。
 
@@ -44,7 +44,7 @@
 1. 选择K线类型 [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)。
 2. 指定成交量，例如 100。
 3. 选择交易品种。
-4. 在 **Build from** 字段中选择 **Ticks**。
+4. 在 **构建来源** 字段中选择 **逐笔成交**。
 5. 单击搜索按钮。
 
 生成结果：
@@ -53,12 +53,12 @@
 
 ## 用于构建K线的数据源
 
-如果无法直接从数据源获取市场数据，可以在 [**Build from**](any_market_data_types.md) 字段中选择用于构建K线的数据类型：
+如果无法直接从数据源获取市场数据，可以在 [**构建来源**](any_market_data_types.md) 字段中选择用于构建K线的数据类型：
 
-- **Ticks** — 使用逐笔成交数据构建K线。
-- **Order Books** — 使用订单簿数据构建K线。
+- **逐笔成交** — 使用逐笔成交数据构建K线。
+- **订单簿** — 使用订单簿数据构建K线。
 - **Level1** — 使用 Level1 数据构建K线。
-- **Smaller Timeframe** — 使用较小时间周期的K线构建较大时间周期的K线。
+- **较小时间周期** — 使用较小时间周期的K线构建较大时间周期的K线。
 
 ### 不同构建方式的示例
 
@@ -71,7 +71,7 @@
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
-> 如果在 **Build from** 字段中选择 **don't build**，程序只会搜索直接通过数据源下载的现成K线。
+> 如果在 **构建来源** 字段中选择 **不构建**，程序只会搜索直接通过数据源下载的现成K线。
 
 ## 显示生成的K线
 

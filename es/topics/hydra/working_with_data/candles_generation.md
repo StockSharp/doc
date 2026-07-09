@@ -6,7 +6,7 @@ Esto permite usar los datos generados en cualquier programa de análisis técnic
 
 ## Proceso de generación de velas
 
-1. En la pestaña **General**, haga clic en el botón **Candles**; se abrirá la siguiente ventana:
+1. En la pestaña **General**, haga clic en el botón **Velas**; se abrirá la siguiente ventana:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
@@ -14,22 +14,22 @@ Esto permite usar los datos generados en cualquier programa de análisis técnic
 
    - Seleccione el tipo de vela deseado en la lista desplegable (se admiten todos los [tipos estándar de velas](../../api/candles.md)).
    - Especifique los parámetros necesarios para el tipo de vela seleccionado:
-     - Para [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - seleccione **Timeframe**
-     - Para [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - especifique **Volume**
-     - Para [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - especifique **Number of ticks**
-     - Para [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - especifique **Range**
-     - Para [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - especifique **Block size**
-     - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **P&F Parameters**
+     - Para [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - seleccione **Marco temporal**
+     - Para [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - especifique **Volumen**
+     - Para [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - especifique **Número de ticks**
+     - Para [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - especifique **Rango**
+     - Para [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage) - especifique **Tamaño de bloque**
+     - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **Parámetros P&F**
    - Seleccione el instrumento para el que se generarán las velas.
    - Especifique un rango de tiempo (si es necesario).
    - Haga clic en el botón ![hydra find](../../../images/hydra_find.png) para iniciar la generación.
 
-### Ejemplo de generación de velas Timeframe
+### Ejemplo de generación de velas por marco temporal
 
 Para generar velas de 5 minutos para el instrumento AAPL@NASDAQ:
 
 1. Seleccione el tipo de vela [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage).
-2. Establezca **Timeframe** = 5 min.
+2. Establezca **Marco temporal** = 5 min.
 3. Seleccione el instrumento AAPL@NASDAQ.
 4. Haga clic en el botón de búsqueda.
 
@@ -44,7 +44,7 @@ Para generar velas por volumen:
 1. Seleccione el tipo de vela [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
 2. Especifique el volumen (por ejemplo, 100).
 3. Seleccione el instrumento.
-4. En el campo **Build from**, seleccione **Ticks**.
+4. En el campo **Construir a partir de**, seleccione **Ticks**.
 5. Haga clic en el botón de búsqueda.
 
 Resultado de la generación:
@@ -53,12 +53,12 @@ Resultado de la generación:
 
 ## Fuentes de datos para construir velas
 
-Si no fue posible obtener datos de mercado directamente desde la fuente, puede generar velas seleccionando en el campo [**Build from**](any_market_data_types.md) el tipo de datos a partir del cual se construirán:
+Si no fue posible obtener datos de mercado directamente desde la fuente, puede generar velas seleccionando en el campo [**Construir a partir de**](any_market_data_types.md) el tipo de datos a partir del cual se construirán:
 
 - **Ticks** - construcción de velas a partir de datos tick.
-- **Order Books** - construcción de velas a partir de datos del libro de órdenes.
+- **Libros de órdenes** - construcción de velas a partir de datos del libro de órdenes.
 - **Level1** - construcción de velas a partir de datos Level1.
-- **Smaller Timeframe** - construcción de velas con un timeframe mayor a partir de velas con uno menor.
+- **Marco temporal menor** - construcción de velas con un marco temporal mayor a partir de velas con uno menor.
 
 ### Ejemplos de distintas opciones de construcción:
 
@@ -71,7 +71,7 @@ Si no fue posible obtener datos de mercado directamente desde la fuente, puede g
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
-> Si selecciona **don't build** en el campo **Build from**, solo se buscarán velas preparadas que se descargaron directamente mediante la fuente de datos.
+> Si selecciona **no construir** en el campo **Construir a partir de**, solo se buscarán velas preparadas que se descargaron directamente mediante la fuente de datos.
 
 ## Visualización de velas generadas
 

@@ -4,7 +4,7 @@
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
-Se a ligação suportar o registo de uma ordem condicional (stop-loss, take-profit), então nesta janela pode registar uma ordem condicional com condições avançadas definindo a opção **Advanced conditions**.
+Se a ligação suportar o registo de uma ordem condicional (stop-loss, take-profit), então nesta janela pode registar uma ordem condicional com condições avançadas definindo a opção **Condições avançadas**.
 
 **Propriedades básicas**
 

@@ -20,7 +20,7 @@ Durch Klicken auf die Schaltfläche **Vorschau** können Sie sehen, welche Daten
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
-Der Benutzer kann zusätzliche Eigenschaften wie den Instrumentcode über die Eigenschaft **{SecurityId.SecurityCode}** hinzufügen oder einen Time Frame-Wert angeben.
+Der Benutzer kann zusätzliche Eigenschaften wie den Instrumentcode über die Eigenschaft **{SecurityId.SecurityCode}** hinzufügen oder einen Zeitrahmenwert angeben.
 
 Sie können eine Kopfzeile mit den Eigenschaftsnamen hinzufügen. In diesem Fall sieht der Datensatz wie folgt aus.
 

@@ -20,7 +20,7 @@ Ao clicar no botão **Pré-visualizar**, pode ver que dados serão guardados no 
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
-O utilizador pode adicionar propriedades adicionais, como o código do instrumento através da propriedade **{SecurityId.SecurityCode}**, ou especificar um valor de Time Frame.
+O utilizador pode adicionar propriedades adicionais, como o código do instrumento através da propriedade **{SecurityId.SecurityCode}**, ou especificar um valor de período.
 
 Pode adicionar um cabeçalho indicando o nome das propriedades. Neste caso, o registo terá o seguinte aspeto.
 

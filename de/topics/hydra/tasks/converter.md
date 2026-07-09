@@ -1,6 +1,6 @@
 # Konverter
 
-Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder von Ticks in Kerzen usw.
+Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder von Ticks in Kerzen usw.
 
 ![hydra tasks converter](../../../images/hydra_tasks_converter.png)
 
@@ -17,9 +17,9 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder 
 
 - **Intervall** - Intervall für die Order-Book-Erzeugung.
 - **Depth** - maximale Tiefe der Order-Book-Erzeugung.
-- **Order log** - wie Order Books aus dem Order Log erstellt werden.
+- **Order-Log** - wie Orderbücher aus dem Order-Log erstellt werden.
 
-  Jede Börse hat ihr eigenes **Order Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
+  Jede Börse hat ihr eigenes **Order-Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
   - **By default** - wird in den meisten Fällen verwendet.
   - **ITCH** - wird für das ITCH-Protokoll verwendet (Börsen: LSE und Nasdaq).
 
@@ -41,7 +41,7 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order Logs in Ticks oder 
 Betrachten wir ein Beispiel für eine Datenkonvertierung.
 
 1. Wechseln Sie zur Aufgabe **Konverter**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
-2. Wählen Sie das Instrument aus und legen Sie im erscheinenden Fenster den Datentyp fest, der bei der Konvertierung entstehen soll, sowie den Datentyp, aus dem konvertiert werden soll. Zum Beispiel müssen Ticks in Kerzen mit einem Time Frame von 15 Minuten konvertiert werden.
+2. Wählen Sie das Instrument aus und legen Sie im erscheinenden Fenster den Datentyp fest, der bei der Konvertierung entstehen soll, sowie den Datentyp, aus dem konvertiert werden soll. Zum Beispiel müssen Ticks in Kerzen mit einem Zeitrahmen von 15 Minuten konvertiert werden.
 
    > [!TIP]
 > WICHTIG\! Der angeforderte Datenzeitraum muss dem für die Konvertierung verfügbaren Zeitraum entsprechen, andernfalls werden die Daten nicht konvertiert. Geben Sie in den Einstellungen das korrekte Quelldatenformat an, damit es dem Format der zu konvertierenden Daten entspricht.

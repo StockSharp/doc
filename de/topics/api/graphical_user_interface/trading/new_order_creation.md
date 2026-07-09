@@ -4,7 +4,7 @@
 
 ![GUI OrderWindow](../../../../images/gui_orderwindow.png)
 
-Wenn die Verbindung das Registrieren einer bedingten Order (Stop-Loss, Take-Profit) unterstützt, können Sie in diesem Fenster eine bedingte Order mit erweiterten Bedingungen registrieren, indem Sie das Flag **Advanced conditions** setzen.
+Wenn die Verbindung das Registrieren einer bedingten Order (Stop-Loss, Take-Profit) unterstützt, können Sie in diesem Fenster eine bedingte Order mit erweiterten Bedingungen registrieren, indem Sie das Flag **Erweiterte Bedingungen** setzen.
 
 **Grundlegende Eigenschaften**
 
