@@ -48,7 +48,7 @@ O [Hydra](topics/hydra.md) baixa automaticamente dados de mercado históricos e 
 O [Terminal](topics/terminal.md) é uma aplicação de negociação e gráficos (terminal de negociação):
 
 - Permite negociar diretamente a partir dos gráficos com um clique.
-- Suporta timeframes arbitrários.
+- Suporta períodos arbitrários.
 - Apresenta vários tipos de candle: Volume, Tick, Range, Renko.
 - Inclui gráficos de cluster e box.
 

@@ -81,9 +81,9 @@ R-Squared in Linear Regression pode ser interpretado da seguinte forma:
    - Valores altos de R² indicam movimento de preço mais previsível no curto prazo
    - Valores baixos de R² indicam movimento mais caótico e imprevisível
 
-7. **Timeframes**:
-   - R² pode produzir resultados diferentes em timeframes diferentes
-   - Comparar R² entre timeframes pode fornecer informação adicional sobre a estrutura do mercado
+7. **Períodos**:
+   - R² pode produzir resultados diferentes em períodos diferentes
+   - Comparar R² entre períodos pode fornecer informação adicional sobre a estrutura do mercado
 
 ![indicator_linear_reg_r_squared](../../../../images/indicator_linear_reg_rsquared.png)
 
@@ -92,4 +92,3 @@ R-Squared in Linear Regression pode ser interpretado da seguinte forma:
 [LinearRegression](lrc.md)
 [StandardError](standard_error.md)
 [ChoppinessIndex](choppiness_index.md)
-

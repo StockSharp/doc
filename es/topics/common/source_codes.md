@@ -12,7 +12,7 @@ Lista de componentes disponibles con código fuente:
 - Simulador histórico (backtester).
 - Indicadores (más de 70) de análisis técnico.
 - Algoritmos para calcular profit-loss, slippage y delay.
-- Algoritmos para construir velas de cualquier time frame, así como velas no basadas en tiempo (tick, range, etc.).
+- Algoritmos para construir velas de cualquier marco temporal, así como velas no basadas en tiempo (tick, range, etc.).
 - Registro.
 - Importación y exportación.
 

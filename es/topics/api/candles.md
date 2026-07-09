@@ -2,7 +2,7 @@
 
 [S#](../api.md) admite los siguientes tipos de velas:
 
-- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - una vela basada en un intervalo de tiempo, timeframe. Se pueden configurar tanto intervalos populares (minutos, horas, diario) como personalizados. Por ejemplo, 21 segundos, 4.5 minutos, etc.
+- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - una vela basada en un intervalo de tiempo. Se pueden configurar tanto intervalos populares (minutos, horas, diario) como personalizados. Por ejemplo, 21 segundos, 4.5 minutos, etc.
 - [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - una vela de rango de precio. Se crea una nueva vela cuando aparece una operación con un precio que excede los límites aceptables. El límite aceptable se forma cada vez basándose en el precio de la primera operación.
 - [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - una vela se forma hasta que el volumen total de operaciones supera un límite especificado. Si una nueva operación excede el volumen permitido, se incluye en una nueva vela.
 - [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - igual que [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), pero se usa el número de operaciones como limitación en lugar del volumen.
@@ -144,7 +144,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 
 ## Ejemplos de suscripciones a diferentes tipos de velas
 
-### Velas con timeframe estándar
+### Velas con marco temporal estándar
 
 ```cs
 // Velas de 5 minutos
@@ -172,7 +172,7 @@ var historicalSubscription = new Subscription(
 _connector.Subscribe(historicalSubscription);
 ```
 
-### Construcción de velas de timeframe no estándar a partir de ticks
+### Construcción de velas de marco temporal no estándar a partir de ticks
 
 ```cs
 // Velas con marco temporal de 21 segundos construidas desde ticks

@@ -75,7 +75,7 @@ Pivot Points se puede interpretar de la siguiente manera:
    - Pivot Points se utilizan a menudo en combinación con otros indicadores técnicos para confirmar señales.
    - Particularmente efectivo cuando se combina con indicadores de impulso (RSI, estocástico) e indicadores de tendencia (MA, MACD)
 
-6. **Timeframes**:
+6. **Marcos temporales**:
    - Los Pivot Points diarios se calculan en función del día de negociación anterior.
    - Los Pivot Points semanales se calculan en función de la semana anterior
    - Los Pivot Points mensuales se calculan en función del mes anterior

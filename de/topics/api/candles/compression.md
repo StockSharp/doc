@@ -19,7 +19,7 @@ var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 // Dieser Code lädt Tickdaten aus dem Speicher und wandelt sie in Kerzen um.
-// mdMsg - the message with parameters of the created candles (type, time frame, etc.).
+// mdMsg - Nachricht mit Parametern der zu erstellenden Kerzen (Typ, Zeitrahmen usw.).
 // candleBuilderProvider — Provider, der eine konkrete Kerzen-Builder-Implementierung bereitstellt.
 ```
 
@@ -106,7 +106,7 @@ switch (type)
 	// ... (other cases)
 }
 
-// Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderlog, Spreads, Level1-Daten und sogar Kerzen kleinerer Timeframes.
+// Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderlog, Spreads, Level1-Daten und sogar Kerzen kleinerer Zeitrahmen.
 ```
 
 ## Fazit

@@ -2,7 +2,7 @@
 
 O [S#](../api.md) suporta os seguintes tipos de candles:
 
-- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - um candle baseado em um intervalo de tempo, timeframe. Você pode definir tanto intervalos populares (minutos, horas, diário) quanto personalizados. Por exemplo, 21 segundos, 4,5 minutos, etc.
+- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - um candle baseado em um intervalo de tempo. Você pode definir tanto intervalos populares (minutos, horas, diário) quanto personalizados. Por exemplo, 21 segundos, 4,5 minutos, etc.
 - [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - um candle de faixa de preço. Um novo candle é criado quando aparece uma negociação com um preço que excede os limites aceitáveis. O limite aceitável é formado a cada vez com base no preço da primeira negociação.
 - [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - um candle é formado até que o volume total de negociações exceda um limite especificado. Se uma nova negociação exceder o volume permitido, ela é incluída em um novo candle.
 - [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - o mesmo que [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), mas o número de negociações é usado como limitação em vez do volume.
@@ -24,7 +24,7 @@ As imagens a seguir mostram os gráficos [TimeFrameCandleMessage](xref:StockShar
 ```cs
 // Criar uma assinatura para velas de 5 minutos
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Tipo de dados com especificação do timeframe
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Tipo de dados com especificação do período
 	security)  // Instrumento
 {
 	// Configurar parâmetros adicionais pela propriedade MarketData
@@ -144,7 +144,7 @@ subscription.MarketData.IsCalcVolumeProfile = true;
 
 ## Exemplos de Assinaturas para Diferentes Tipos de Candle
 
-### Candles com Timeframe Padrão
+### Candles com período padrão
 
 ```cs
 // Velas de 5 minutos
@@ -172,10 +172,10 @@ var historicalSubscription = new Subscription(
 _connector.Subscribe(historicalSubscription);
 ```
 
-### Construindo Candles de Timeframe Não Padrão a Partir de Ticks
+### Construindo candles de período não padrão a partir de ticks
 
 ```cs
-// Velas com timeframe de 21 segundos construídas a partir de ticks
+// Velas com período de 21 segundos construídas a partir de ticks
 var customTimeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
 	security)

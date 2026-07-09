@@ -8,7 +8,7 @@ O **Terminal** é um terminal de negociação gratuito. A sua principal vantagem
 
 1. **Suporta muitas fontes de dados:** [Conectores](api/connectors.md).
 2. **Negociação a partir dos gráficos**. 
-3. **Timeframes personalizados**. 
+3. **Períodos personalizados**.
 4. **Velas Volume, Tick, Range, PnF e Renko**. 
 5. **Gráficos cluster e box**. 
 6. **Vários mercados:** ações, futuros, Forex e criptomoedas. 

@@ -16,10 +16,10 @@ Im Unterschied zum manuellen Erstellen eines `Subscription`-Objekts und zum Aufr
 
 ### SubscribeCandles
 
-Abonniert Candles. Akzeptiert einen Timeframe oder `DataType`:
+Abonniert Candles. Akzeptiert einen Zeitrahmen oder `DataType`:
 
 ```csharp
-// Nach Timeframe abonnieren
+// Nach Zeitrahmen abonnieren
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     TimeSpan tf,
     bool isFinishedOnly = true,

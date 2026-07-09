@@ -14,9 +14,9 @@ Esquematicamente, o algoritmo de processamento de uma solicitação de assinatur
 
 Ao implementar uma assinatura para dados de candles em seu próprio adaptador, leve em conta como a exchange trabalha com esse tipo de dado. No Coinbase, os seguintes métodos e propriedades foram sobrescritos:
 
-### Timeframes Suportados
+### Períodos suportados
 
-A propriedade `TimeFrames` define a lista de timeframes suportados pelo adaptador para candles. Isso permite que o StockSharp saiba quais timeframes podem ser solicitados através desse adaptador.
+A propriedade `TimeFrames` define a lista de períodos suportados pelo adaptador para candles. Isso permite que o StockSharp saiba quais períodos podem ser solicitados através desse adaptador.
 
 ```cs
 protected override IEnumerable<TimeSpan> TimeFrames { get; } = Extensions.TimeFrames.Keys.ToArray();
@@ -32,12 +32,12 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
 	// Coinbase só suporta velas de 5 minutos para atualização via WebSocket
-	// Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
+	// Portanto, outros períodos serão construídos a partir de ticks (automaticamente pelo núcleo do StockSharp)
 	return subscription.DataType2 == _tf5min;
 }
 ```
 
-A sobrescrita desses métodos e propriedades permite que o adaptador trate corretamente as solicitações de assinatura de dados de candles, levando em conta as especificidades da API do Coinbase. Por exemplo, se um timeframe diferente de 5 minutos for solicitado, o StockSharp saberá que precisa usar dados de ticks para construir candles de outros timeframes.
+A sobrescrita desses métodos e propriedades permite que o adaptador trate corretamente as solicitações de assinatura de dados de candles, levando em conta as especificidades da API do Coinbase. Por exemplo, se um período diferente de 5 minutos for solicitado, o StockSharp saberá que precisa usar dados de ticks para construir candles de outros períodos.
 
 ### Assinando Dados de Candles
 

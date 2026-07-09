@@ -74,7 +74,7 @@ Die Methode [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Loggi
 - `storage`: Eine Instanz von [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry), die Zugriff auf den Marktdatenspeicher ermöglicht.
 - `drive`: Stellt [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) dar und gibt den Speicherort der Marktdaten an.
 - `format`: Ein Wert von [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats), der das Marktdatenformat angibt.
-- `dataType`: [DataType](xref:StockSharp.Messages.DataType), der den angeforderten Marktdatentyp und dessen Parameter beschreibt (zum Beispiel den Candle-Timeframe).
+- `dataType`: [DataType](xref:StockSharp.Messages.DataType), der den angeforderten Marktdatentyp und dessen Parameter beschreibt (zum Beispiel den Kerzenzeitrahmen).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken) zur Überwachung von Abbruchanforderungen.
 
 #### Ruckgabe:

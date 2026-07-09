@@ -2,7 +2,7 @@
 
 ![Designer Sync 00](../../../../../../images/designer_sync_00.png)
 
-O bloco Synchronization foi concebido para acumular e sincronizar dados de várias fontes (por exemplo, velas de diferentes instrumentos, diferentes timeframes, combinações de velas e transações) e, posteriormente, emiti-los quando uma determinada quantidade for acumulada. Este bloco é útil para criar índices personalizados ou arbitragem.
+O bloco Sincronização foi concebido para acumular e sincronizar dados de várias fontes (por exemplo, velas de diferentes instrumentos, diferentes períodos, combinações de velas e transações) e, posteriormente, emiti-los quando uma determinada quantidade for acumulada. Este bloco é útil para criar índices personalizados ou arbitragem.
 
 ## Sockets de entrada
 

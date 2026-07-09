@@ -43,7 +43,7 @@ private void InitializeChart()
 // Método para subscrever velas
 private void SubscribeToCandles()
 {
-	// Criar uma subscrição de velas com o timeframe especificado
+	// Criar uma subscrição de velas com o período especificado
 	_candleSubscription = new Subscription(
 		DataType.TimeFrame(_timeFrame),
 		_security)

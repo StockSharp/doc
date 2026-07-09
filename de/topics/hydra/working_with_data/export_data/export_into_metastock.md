@@ -15,7 +15,7 @@ Geben Sie in diesem Fenster die Exportvorlage an. Die geschweiften Klammern kenn
 
 ```
 
-Im Beispiel ist der Timeframe der Fünf-Minuten-Kerze an zweiter Position angegeben.
+Im Beispiel ist der Zeitrahmen der Fünf-Minuten-Kerze an zweiter Position angegeben.
 
 Außerdem sollte in der Datei die erste Zeile (Header) gesetzt werden:
 

@@ -21,7 +21,7 @@ O indicador é particularmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para determinar um movimento significativo do preço (o valor predefinido depende do timeframe)
+- **Length** - período para determinar um movimento significativo do preço (o valor predefinido depende do período)
 
 ## Cálculo
 
@@ -68,12 +68,11 @@ Os níveis de Fibonacci Retracement são interpretados da seguinte forma:
 4. **Coincidência com Outros Níveis**:
    - Os níveis de Fibonacci são mais significativos quando coincidem com outros níveis importantes (máximos/mínimos anteriores, médias móveis, etc.)
 
-5. **Traçado em Diferentes Timeframes**:
-   - Níveis de Fibonacci traçados em diferentes timeframes podem criar zonas de concentração onde a probabilidade de inversão aumenta
+5. **Traçado em diferentes períodos**:
+   - Níveis de Fibonacci traçados em diferentes períodos podem criar zonas de concentração onde a probabilidade de inversão aumenta
 
 ![indicator_fibonacci_retracement](../../../../images/indicator_fibonacci_retracement.png)
 
 ## Ver Também
 
 [PivotPoints](pivot_points.md)
-

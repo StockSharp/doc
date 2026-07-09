@@ -28,7 +28,7 @@ Al hacer clic en ![Designer Quick start 04](../../images/designer_quick_start_04
 
 ![Designer Quick start 05](../../images/designer_quick_start_05.png)
 
-Cuando selecciona cualquier bloque en el panel **Designer**, el panel **Propiedades** muestra las propiedades de ese bloque. En el panel **Propiedades** del bloque **Velas**, puede configurar el tipo de vela y Time Frame ([Velas](../api/candles.md)).
+Cuando selecciona cualquier bloque en el panel **Designer**, el panel **Propiedades** muestra las propiedades de ese bloque. En el panel **Propiedades** del bloque **Velas**, puede configurar el tipo de vela y el marco temporal ([Velas](../api/candles.md)).
 
 Después de hacer clic en **Iniciar**, comienza la emulación de trading. Los resultados de la prueba están disponibles en las pestañas correspondientes del diagrama: Gráfico, Órdenes, Operaciones, P/L, Posiciones (gráfico), Estadísticas y Posiciones.
 

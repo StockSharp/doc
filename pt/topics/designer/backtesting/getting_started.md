@@ -17,7 +17,7 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 5. Livro de ordens - gerado
 6. Profundidade do livro de ordens - 5
 7. Tamanho do spread - 2
-8. Candles com timeframe de 30 s
+8. Candles com período de 30 s
 9. Volume - 100
 
 É necessário configurar os parâmetros selecionados:

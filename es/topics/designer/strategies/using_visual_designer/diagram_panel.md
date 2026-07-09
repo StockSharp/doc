@@ -22,7 +22,7 @@ El panel **Propiedades** puede mostrarse en dos modos: *Configuración básica* 
 
 De forma predeterminada, al construir un esquema, las propiedades se muestran inicialmente en modo *basic settings*. Para cambiar al modo *advanced settings*, debe hacer clic en el título correspondiente.
 
-En el modo *basic settings*, solo se muestran las propiedades más necesarias del bloque. Por ejemplo, para el bloque [Velas](elements/data_sources/candles.md), se mostrará el timeframe, la bandera para recibir solo velas formadas, la bandera de posibilidad de construir velas a partir de un timeframe menor y la bandera de suscripción a velas por señal.
+En el modo *configuración básica*, solo se muestran las propiedades más necesarias del bloque. Por ejemplo, para el bloque [Velas](elements/data_sources/candles.md), se mostrará el marco temporal, la bandera para recibir solo velas formadas, la bandera de posibilidad de construir velas a partir de un marco temporal menor y la bandera de suscripción a velas por señal.
 
 En el modo *advanced settings*, se mostrarán todas las propiedades del bloque disponibles para cambio y configuración.
 

@@ -22,7 +22,7 @@ Parâmetros
 
 - **Série** - o tipo da série de candles e os parâmetros para o tipo especificado;
 - **Apenas formadas** - passar para a saída apenas candles totalmente formados ou qualquer alteração;
-- **Timeframe menor** - construir candles a partir de um timeframe menor;
+- **Período menor** - construir candles a partir de um período menor;
 - **Subscrever por sinal** - subscrever dados apenas depois de receber um trigger.
 
 ## Ver também

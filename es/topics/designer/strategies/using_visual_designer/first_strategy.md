@@ -35,7 +35,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
-6. Para que los indicadores funcionen, páseles una serie de velas. Para ello, cree el cubo [Velas](elements/data_sources/candles.md). En el ejemplo, se usan solo velas formadas con un timeframe de 5 minutos.
+6. Para que los indicadores funcionen, páseles una serie de velas. Para ello, cree el cubo [Velas](elements/data_sources/candles.md). En el ejemplo, se usan solo velas formadas con un marco temporal de 5 minutos.
 
 ![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 

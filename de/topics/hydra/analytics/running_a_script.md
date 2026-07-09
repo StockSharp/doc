@@ -21,7 +21,7 @@ Beim Festlegen der Parameter:
 
 - Der Datumsbereich.
 - Der Speicher, aus dem Daten abgerufen werden sollen.
-- Der Arbeits-Timeframe des Skripts, falls es einen verwendet.
+- Der Arbeitszeitrahmen des Skripts, falls es einen verwendet.
 
 Durch Klicken auf die Schaltfläche **Starten** ![hydra analytics compile](../../../images/hydra_analytics_compile.png) wird eine neue Registerkarte mit den Ergebnissen der Skriptausführung geöffnet.
 

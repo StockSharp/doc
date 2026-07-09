@@ -26,7 +26,7 @@ En la configuración del elemento gráfico, puede establecer el estilo de gráfi
 
 ![Designer Schedule 04](../../../../images/designer_schedule_04.png)
 
-Para un box chart, las velas también se pueden agrupar; el orden de agrupación se establece en los campos: multiplicador del 2.º timeframe y multiplicador del 3.º timeframe.
+Para un box chart, las velas también se pueden agrupar; el orden de agrupación se establece en los campos: multiplicador del segundo marco temporal y multiplicador del tercer marco temporal.
 
 ![Designer Schedule 05](../../../../images/designer_schedule_05.png)
 

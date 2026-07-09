@@ -63,7 +63,7 @@ Connors RSI oscila entre 0 e 100, de forma semelhante ao RSI padrão:
   - Divergência bullish: o preço forma um novo mínimo, enquanto o CRSI forma um mínimo mais alto
   - Divergência bearish: o preço forma um novo máximo, enquanto o CRSI forma um máximo mais baixo
 
-Connors RSI funciona melhor em gráficos com timeframes diários a semanais e em estratégias de trading orientadas para reversão à média.
+Connors RSI funciona melhor em gráficos com períodos diários a semanais e em estratégias de trading orientadas para reversão à média.
 
 ![indicator_connors_rsi](../../../../images/indicator_connors_rsi.png)
 

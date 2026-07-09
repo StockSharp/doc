@@ -12,7 +12,7 @@ En la configuración del elemento gráfico, puede establecer el estilo de gráfi
 
 ![Designer Schedule 04](../../../../images/designer_schedule_04.png)
 
-Para un gráfico box, las velas pueden agruparse adicionalmente; el orden de agrupación se establece en los campos: multiplicador del 2.º timeframe, multiplicador del 3.º timeframe.
+Para un gráfico box, las velas pueden agruparse adicionalmente; el orden de agrupación se establece en los campos: multiplicador del segundo marco temporal, multiplicador del tercer marco temporal.
 
 ![Designer Schedule 05](../../../../images/designer_schedule_05.png)
 

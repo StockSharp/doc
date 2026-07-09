@@ -71,8 +71,8 @@ O Market Meanness Index pode ser interpretado da seguinte forma:
    - MMI baixo e ADX alto confirmam uma tendência forte
    - MMI alto e ADX baixo confirmam um mercado lateral
 
-7. **Timeframes**:
-   - O MMI pode ser usado em diferentes timeframes para determinar o carácter do mercado
+7. **Períodos**:
+   - O MMI pode ser usado em diferentes períodos para determinar o carácter do mercado
    - O MMI de longo prazo ajuda a determinar o estado primário do mercado
    - O MMI de curto prazo ajuda a escolher uma estratégia adequada para as condições actuais
 

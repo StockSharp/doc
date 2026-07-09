@@ -8,7 +8,7 @@
 
 1. **Admite muchas fuentes de datos:** [Conectores](api/connectors.md).
 2. **Trading desde gráficos**.
-3. **Timeframes personalizados**.
+3. **Marcos temporales personalizados**.
 4. **Velas de volumen, tick, rango, PnF y Renko**.
 5. **Gráficos de clúster y box charts**.
 6. **Múltiples mercados:** acciones, futuros, Forex y criptomonedas.

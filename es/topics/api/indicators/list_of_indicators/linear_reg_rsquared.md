@@ -81,7 +81,7 @@ R-Squared en regresión lineal se puede interpretar de la siguiente manera:
    - Los valores High R² indican un movimiento de precios más predecible en el corto plazo
    - Los valores Low R² indican un movimiento más caótico e impredecible
 
-7. **Timeframes**:
+7. **Marcos temporales**:
    - R² puede producir diferentes resultados en diferentes plazos
    - Comparar R² entre períodos de tiempo puede proporcionar información adicional sobre la estructura del mercado
 

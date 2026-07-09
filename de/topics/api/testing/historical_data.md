@@ -5,7 +5,7 @@ Tests mit historischen Daten ermöglichen sowohl Marktanalysen zum Finden von Mu
 Tests können mit verschiedenen Arten von Marktdaten durchgeführt werden:
 - Tick-Trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Orderbücher ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
-- Kerzen verschiedener Timeframes
+- Kerzen verschiedener Zeitrahmen
 - [OrderLog](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (beste Geld- und Briefkurse)
 - Kombinationen verschiedener Datentypen
@@ -251,7 +251,7 @@ In den aktuellen Versionen von [S#](../../api.md) wurde das Beispiel für histor
 
 - Ticks (Trades)
 - Orderbücher
-- Kerzen verschiedener Timeframes
+- Kerzen verschiedener Zeitrahmen
 - Order-Log
 - Level1-Daten (beste Preise)
 - Kombinationen verschiedener Datentypen

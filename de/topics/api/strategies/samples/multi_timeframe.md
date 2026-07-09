@@ -1,4 +1,4 @@
-# Multi-Timeframe-Strategie
+# Multi-Zeitrahmen-Strategie
 
 ## Überblick
 
@@ -133,4 +133,3 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 - Die Strategie arbeitet nur mit abgeschlossenen Kerzen.
 - Indikatoren und Trades werden im Chart visualisiert, wenn ein grafischer Bereich verfügbar ist.
 - Parameteroptimierung wird unterstützt, um optimale Strategieeinstellungen zu finden.
-

@@ -74,7 +74,7 @@ El método [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Loggin
 - `storage`: instancia de [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) que permite acceder al almacenamiento de datos de mercado.
 - `drive`: representa [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) para especificar la ubicación del almacenamiento de datos de mercado.
 - `format`: valor [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) que indica el formato de datos de mercado.
-- `dataType`: [DataType](xref:StockSharp.Messages.DataType) que describe el tipo de datos de mercado solicitado y sus parámetros (por ejemplo, el timeframe de velas).
+- `dataType`: [DataType](xref:StockSharp.Messages.DataType) que describe el tipo de datos de mercado solicitado y sus parámetros (por ejemplo, el marco temporal de las velas).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken) que monitorea solicitudes de cancelación.
 
 #### Devuelve:

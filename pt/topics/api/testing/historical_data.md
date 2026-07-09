@@ -5,7 +5,7 @@ O teste com dados históricos permite tanto a análise de mercado para encontrar
 O teste pode ser realizado usando vários tipos de dados de mercado:
 - Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Livros de ordens ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
-- Candles de diferentes timeframes
+- Candles de diferentes períodos
 - [OrderLog](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (melhores preços bid e ask)
 - Combinações de diferentes tipos de dados
@@ -251,7 +251,7 @@ Nas versões mais recentes de [S#](../../api.md), o exemplo de teste histórico 
 
 - Ticks (transações)
 - Livros de ordens
-- Candles de diferentes timeframes
+- Candles de diferentes períodos
 - Log de ordens
 - Dados Level1 (melhores preços)
 - Combinações de diferentes tipos de dados

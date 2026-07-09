@@ -8,7 +8,7 @@ Para usar o indicador, é necessário usar a classe [PivotPoints](xref:StockShar
 
 Pivot Points (pontos pivô) são um dos métodos mais antigos e mais usados para identificar níveis-chave do mercado. O indicador calcula o ponto pivô central (PP) e vários níveis de suporte (S1, S2, S3) e resistência (R1, R2, R3) com base nos dados do período anterior.
 
-Originalmente, os Pivot Points eram usados por traders nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários timeframes - desde intradiário até mensal.
+Originalmente, os Pivot Points eram usados por traders nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários períodos - desde intradiário até mensal.
 
 A ideia principal dos Pivot Points é que o mercado tende a reagir a estes níveis pré-calculados, usando-os como pontos de reversão ou zonas onde pode ocorrer consolidação. Os traders usam estes níveis para tomar decisões sobre entrada e saída do mercado, bem como para definir níveis-alvo e stop-losses.
 
@@ -75,15 +75,14 @@ Pivot Points podem ser interpretados da seguinte forma:
    - Pivot Points são frequentemente usados em conjunto com outros indicadores técnicos para confirmar sinais
    - São particularmente eficazes quando combinados com indicadores de momentum (RSI, Stochastic) e indicadores de tendência (MA, MACD)
 
-6. **Timeframes**:
+6. **Períodos**:
    - Pivot Points diários são calculados com base no dia de negociação anterior
    - Pivot Points semanais são calculados com base na semana anterior
    - Pivot Points mensais são calculados com base no mês anterior
-   - A seleção do timeframe depende do estilo de trading e do horizonte temporal
+   - A seleção do período depende do estilo de trading e do horizonte temporal
 
 ![indicator_pivot_points](../../../../images/indicator_pivot_points.png)
 
 ## Ver também
 
 [FibonacciRetracement](fibonacci_retracement.md)
-

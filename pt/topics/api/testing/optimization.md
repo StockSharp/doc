@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-O StockSharp fornece um mecanismo incorporado para otimizar parâmetros de estratégias em dados históricos. A otimização percorre automaticamente diferentes combinações de parâmetros da estratégia, como comprimentos de indicadores, timeframes, valores de limiar e outras definições, e ajuda a encontrar o melhor resultado para o critério selecionado, como lucro, drawdown, número de transações, e assim por diante.
+O StockSharp fornece um mecanismo incorporado para otimizar parâmetros de estratégias em dados históricos. A otimização percorre automaticamente diferentes combinações de parâmetros da estratégia, como comprimentos de indicadores, períodos, valores de limiar e outras definições, e ajuda a encontrar o melhor resultado para o critério selecionado, como lucro, drawdown, número de transações, e assim por diante.
 
 Estão disponíveis dois modos de otimização:
 

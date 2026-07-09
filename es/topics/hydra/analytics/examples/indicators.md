@@ -32,7 +32,7 @@ El uso de indicadores de análisis técnico mediante este script permite:
 
 Para trabajar con el script, deben realizarse los siguientes pasos:
 
-1. **Seleccionar instrumento y período**: determinar valores y timeframe para el análisis.
+1. **Seleccionar instrumento y período**: determinar valores y marco temporal para el análisis.
 2. **Aplicar indicadores**: elegir y configurar parámetros para los indicadores que se aplicarán a los datos.
 3. **Mostrar resultados**: visualizar datos históricos e indicadores en un gráfico para su análisis.
 

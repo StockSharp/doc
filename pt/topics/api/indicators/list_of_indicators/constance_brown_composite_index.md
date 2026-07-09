@@ -14,7 +14,7 @@ CBCI foi concebido para:
 - Detetar divergências ocultas
 - Confirmar a força da tendência atual
 
-O indicador funciona bem em vários timeframes e tipos de mercado, incluindo ações, forex e mercados de matérias-primas.
+O indicador funciona bem em vários períodos e tipos de mercado, incluindo ações, forex e mercados de matérias-primas.
 
 ## Parâmetros
 

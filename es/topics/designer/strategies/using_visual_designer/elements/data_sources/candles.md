@@ -22,7 +22,7 @@ Parámetros
 
 - **Serie** – tipo de serie de velas y parámetros para el tipo especificado;
 - **Solo formadas** – pasar a la salida solo velas completamente formadas o cualquier cambio;
-- **Marco temporal menor** – construir velas a partir de un timeframe menor;
+- **Marco temporal menor** – construir velas a partir de un marco temporal menor;
 - **Suscribirse por señal** – suscribirse a datos solo después de recibir un disparador.
 
 ## Véase también

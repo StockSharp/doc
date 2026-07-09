@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 Neste exemplo, criámos uma estratégia baseada no cruzamento de duas médias móveis com três parâmetros configuráveis:
-- `Series` - tipo de dados e timeframe
+- `Series` - tipo de dados e período
 - `LongSmaLength` - período da média móvel longa
 - `ShortSmaLength` - período da média móvel curta
 

@@ -150,7 +150,7 @@
 - [TR](list_of_indicators/true_range.md) - true range, mede o intervalo real do movimento do preço
 - [TSI](list_of_indicators/true_strength_index.md) - True Strength Index, aplica análise de momentum duplamente suavizada
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs Money Flow, mede a pressão de compra e venda
-- [UltimateOsc](list_of_indicators/uo.md) - oscilador final, combina vários timeframes para medir o momentum
+- [UltimateOsc](list_of_indicators/uo.md) - oscilador final, combina vários períodos para medir o momentum
 - [VHF](list_of_indicators/vhf.md) - filtro vertical-horizontal, distingue mercados em tendência de mercados laterais
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, adapta-se à volatilidade do mercado
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, ajusta-se à volatilidade

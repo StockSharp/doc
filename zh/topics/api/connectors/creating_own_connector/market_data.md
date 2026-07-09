@@ -32,7 +32,7 @@ private static readonly DataType _tf5min = DataType.TimeFrame(TimeSpan.FromMinut
 public override bool IsSupportCandlesUpdates(MarketDataMessage subscription)
 {
 	// Coinbase 仅支持通过 WebSocket 更新 5 分钟 K线
-	// Therefore, other timeframes will be built from ticks (automatically by the StockSharp core)
+	// 因此，其他时间周期将由 Tick 构建（由 StockSharp 核心自动完成）
 	return subscription.DataType2 == _tf5min;
 }
 ```

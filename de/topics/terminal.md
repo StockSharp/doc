@@ -8,7 +8,7 @@
 
 1. **Unterstützt viele Datenquellen:** [Konnektoren](api/connectors.md).
 2. **Handel aus Charts**.
-3. **Benutzerdefinierte Timeframes**.
+3. **Benutzerdefinierte Zeitrahmen**.
 4. **Volume-, Tick-, Range-, PnF- und Renko-Kerzen**.
 5. **Cluster- und Box-Charts**.
 6. **Mehrere Märkte:** Aktien, Futures, Forex und Kryptowährungen.

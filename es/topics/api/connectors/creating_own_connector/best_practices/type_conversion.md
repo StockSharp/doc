@@ -61,7 +61,7 @@ static class Extensions
 
 	// Otros métodos de conversión...
 
-	// Dictionary for mapping StockSharp timeframes to exchange string representations
+	// Diccionario para mapear marcos temporales de StockSharp a representaciones de cadena de la bolsa
 	public static readonly PairSet<TimeSpan, string> TimeFrames = new()
 	{
 		{ TimeSpan.FromMinutes(1), "ONE_MINUTE" },
@@ -69,11 +69,11 @@ static class Extensions
 		// Otros marcos temporales...
 	};
 
-	// Converting StockSharp timeframe to exchange string representation
+	// Convertir el marco temporal de StockSharp a la representación de cadena de la bolsa
 	public static string ToNative(this TimeSpan timeFrame)
 		=> TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
 
-	// Convertir representación de cadena del timeframe del exchange a TimeSpan
+	// Convertir la representación de cadena del marco temporal de la bolsa a TimeSpan
 	public static TimeSpan ToTimeFrame(this string name)
 		=> TimeFrames.TryGetKey2(name) ?? throw new ArgumentOutOfRangeException(nameof(name), name, LocalizedStrings.InvalidValue);
 }

@@ -61,7 +61,7 @@ static class Extensions
 
 	// 其他转换方法...
 
-	// Dictionary for mapping StockSharp timeframes to exchange string representations
+	// 将 StockSharp 时间周期映射到交易所字符串表示的字典
 	public static readonly PairSet<TimeSpan, string> TimeFrames = new()
 	{
 		{ TimeSpan.FromMinutes(1), "ONE_MINUTE" },
@@ -69,7 +69,7 @@ static class Extensions
 		// 其他时间框架...
 	};
 
-	// Converting StockSharp timeframe to exchange string representation
+	// 将 StockSharp 时间周期转换为交易所字符串表示
 	public static string ToNative(this TimeSpan timeFrame)
 		=> TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
 

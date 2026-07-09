@@ -16,10 +16,10 @@ A diferencia de crear manualmente un objeto `Subscription` y llamar a `Subscribe
 
 ### SubscribeCandles
 
-Se suscribe a velas. Acepta un timeframe o `DataType`:
+Se suscribe a velas. Acepta un marco temporal o `DataType`:
 
 ```csharp
-// Suscribirse por timeframe
+// Suscribirse por marco temporal
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     TimeSpan tf,
     bool isFinishedOnly = true,

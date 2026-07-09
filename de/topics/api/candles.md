@@ -24,7 +24,7 @@ Die folgenden Bilder zeigen [TimeFrameCandleMessage](xref:StockSharp.Messages.Ti
 ```cs
 // Abonnement für 5-Minuten-Kerzen erstellen
 var subscription = new Subscription(
-	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Datentyp mit Timeframe-Angabe
+	DataType.TimeFrame(TimeSpan.FromMinutes(5)),  // Datentyp mit Zeitrahmenangabe
 	security)  // Instrument
 {
 	// Zusätzliche Parameter über die MarketData-Eigenschaft konfigurieren
@@ -175,7 +175,7 @@ _connector.Subscribe(historicalSubscription);
 ### Erstellung von Candles mit nicht standardmäßigem Zeitrahmen aus Ticks
 
 ```cs
-// Kerzen mit 21-Sekunden-Timeframe, aus Ticks erstellt
+// Kerzen mit 21-Sekunden-Zeitrahmen, aus Ticks erstellt
 var customTimeFrameSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromSeconds(21)),
 	security)

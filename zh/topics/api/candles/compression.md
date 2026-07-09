@@ -19,7 +19,7 @@ var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 // 此代码从存储加载 tick 数据并将其转换为 K线。
-// mdMsg - the message with parameters of the created candles (type, time frame, etc.).
+// mdMsg - 包含待创建K线参数（类型、时间周期等）的消息。
 // candleBuilderProvider — 提供具体 K线构建器实现的提供者。
 ```
 

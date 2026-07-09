@@ -84,7 +84,7 @@ O Mass Index é interpretado da seguinte forma:
    - Uma queda gradual do índice sugere estreitamento do intervalo e possível consolidação
 
 7. **Ajuste de Parâmetros**:
-   - Parâmetros padrão (9 para EMA, 25 para soma) funcionam bem na maioria dos timeframes
+   - Parâmetros padrão (9 para EMA, 25 para soma) funcionam bem na maioria dos períodos
    - Reduzir períodos pode criar sinais mais rápidos, mas pode aumentar sinais falsos
 
 ![indicator_mass_index](../../../../images/indicator_mass_index.png)
@@ -95,4 +95,3 @@ O Mass Index é interpretado da seguinte forma:
 [BollingerBands](bollinger_bands.md)
 [ChoppinessIndex](choppiness_index.md)
 [TrueRange](true_range.md)
-

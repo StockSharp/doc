@@ -7,7 +7,7 @@ O componente de conversão de tipos desempenha um papel importante para garantir
 1. Conversão dos tipos do StockSharp (por exemplo, [Sides](xref:StockSharp.Messages.Sides), [OrderTypes](xref:StockSharp.Messages.OrderTypes), [TimeInForce](xref:StockSharp.Messages.TimeInForce)) para representações de string usadas pela exchange.
 2. Conversão reversa dos dados recebidos da exchange para os tipos do StockSharp.
 3. Conversão de identificadores de instrumentos entre os formatos do StockSharp e da exchange.
-4. Conversão de formatos de tempo e timeframes.
+4. Conversão de formatos de tempo e períodos.
 
 ## Exemplo de Implementação
 
@@ -61,19 +61,19 @@ static class Extensions
 
 	// Outros métodos de conversão...
 
-	// Dictionary for mapping StockSharp timeframes to exchange string representations
+	// Dicionário para mapear períodos do StockSharp para representações de string da bolsa
 	public static readonly PairSet<TimeSpan, string> TimeFrames = new()
 	{
 		{ TimeSpan.FromMinutes(1), "ONE_MINUTE" },
 		{ TimeSpan.FromMinutes(5), "FIVE_MINUTE" },
-		// Outros timeframes...
+		// Outros períodos...
 	};
 
-	// Converting StockSharp timeframe to exchange string representation
+	// Converter o período do StockSharp para a representação de string da bolsa
 	public static string ToNative(this TimeSpan timeFrame)
 		=> TimeFrames.TryGetValue(timeFrame) ?? throw new ArgumentOutOfRangeException(nameof(timeFrame), timeFrame, LocalizedStrings.InvalidValue);
 
-	// Converter a representação em string do timeframe da exchange para TimeSpan
+	// Converter a representação em string do período da bolsa para TimeSpan
 	public static TimeSpan ToTimeFrame(this string name)
 		=> TimeFrames.TryGetKey2(name) ?? throw new ArgumentOutOfRangeException(nameof(name), name, LocalizedStrings.InvalidValue);
 }
@@ -85,6 +85,6 @@ static class Extensions
 - Trate todos os valores de enumeração possíveis, incluindo `null` e valores desconhecidos.
 - Use expressões `switch` (C# 8.0+) para um código mais limpo e legível.
 - Adicione verificações para valores inválidos e lance exceções com mensagens de erro claras.
-- Considere usar dicionários para mapear valores, especialmente para mapeamentos complexos ou que mudam com frequência (por exemplo, para timeframes).
+- Considere usar dicionários para mapear valores, especialmente para mapeamentos complexos ou que mudam com frequência (por exemplo, para períodos).
 
 A implementação adequada da conversão de tipos simplifica significativamente o trabalho com dados em outras partes do conector e reduz a probabilidade de erros relacionados a incompatibilidades de formato.

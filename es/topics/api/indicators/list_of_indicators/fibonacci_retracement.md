@@ -68,7 +68,7 @@ Los niveles Fibonacci Retracement se interpretan de la siguiente manera:
 4. **Coincidencia con otros niveles**:
    - Los niveles de Fibonacci son más significativos cuando coinciden con otros niveles importantes (máximos/mínimos anterior, medias móviles, etc.)
 
-5. **Plotting on Different Timeframes**:
+5. **Trazado en distintos marcos temporales**:
    - Los niveles de Fibonacci trazados en diferentes períodos de tiempo pueden crear zonas de agrupamiento donde aumenta la probabilidad de reversión.
 
 ![indicator_fibonacci_retracement](../../../../images/indicator_fibonacci_retracement.png)

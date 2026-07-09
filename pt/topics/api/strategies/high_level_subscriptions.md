@@ -16,10 +16,10 @@ Ao contrário da criação manual de um objeto `Subscription` e da chamada a `Su
 
 ### SubscribeCandles
 
-Subscreve candles. Aceita um timeframe ou `DataType`:
+Subscreve candles. Aceita um período ou `DataType`:
 
 ```csharp
-// Assinar por timeframe
+// Subscrever por período
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     TimeSpan tf,
     bool isFinishedOnly = true,

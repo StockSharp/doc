@@ -19,7 +19,7 @@ var trades = tickStorage.LoadAsync(from, to);
 var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 // Este código carrega dados de ticks do armazenamento e os converte em velas.
-// mdMsg - the message with parameters of the created candles (type, time frame, etc.).
+// mdMsg - mensagem com os parâmetros das velas criadas (tipo, período, etc.).
 // candleBuilderProvider — provedor que fornece uma implementação específica do construtor de velas.
 ```
 
@@ -106,7 +106,7 @@ switch (type)
 	// ... (other cases)
 }
 
-// Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, log de ordens, spreads, dados Level1 e até velas de timeframes menores.
+// Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, log de ordens, spreads, dados Level1 e até velas de períodos menores.
 ```
 
 ## Conclusão

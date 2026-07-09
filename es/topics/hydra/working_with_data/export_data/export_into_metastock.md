@@ -15,7 +15,7 @@ En esta ventana, especifique la plantilla de exportación, donde las llaves indi
 	  				
 ```
 
-En el ejemplo, el timeframe de vela de cinco minutos se especifica en la segunda posición.
+En el ejemplo, el marco temporal de la vela de cinco minutos se especifica en la segunda posición.
 
 Además, la primera línea (Header) debe establecerse en el archivo:
 

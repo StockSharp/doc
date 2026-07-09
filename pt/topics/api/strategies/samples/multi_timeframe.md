@@ -1,8 +1,8 @@
-# Estratégia Multi-Timeframe
+# Estratégia de múltiplos períodos
 
 ## Visão Geral
 
-`MultiTimeframeStrategy` é uma estratégia que utiliza dois timeframes para tomar decisões de negociação. Velas horárias determinam a direção da tendência através de cruzamentos de médias móveis, enquanto velas de 5 minutos com o indicador [RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) são utilizadas para uma entrada precisa na direção da tendência.
+`MultiTimeframeStrategy` é uma estratégia que utiliza dois períodos para tomar decisões de negociação. Velas horárias determinam a direção da tendência através de cruzamentos de médias móveis, enquanto velas de 5 minutos com o indicador [RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) são utilizadas para uma entrada precisa na direção da tendência.
 
 ## Componentes Principais
 
@@ -17,7 +17,7 @@ public class MultiTimeframeStrategy : Strategy
 	private readonly StrategyParam<decimal> _takeProfit;
 	private readonly StrategyParam<decimal> _stopLoss;
 
-	// Direção da tendência no timeframe superior
+	// Direção da tendência no período superior
 	private Sides? _hourlyTrend;
 }
 ```
@@ -36,7 +36,7 @@ Todos os parâmetros estão disponíveis para otimização com intervalos de val
 
 ## Inicialização da Estratégia
 
-No método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)), os indicadores são criados e as subscrições de velas são configuradas para dois timeframes:
+No método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)), os indicadores são criados e as subscrições de velas são configuradas para dois períodos:
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -78,7 +78,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Processamento de Velas Horárias
 
-O método `ProcessHourlyCandle` determina a direção da tendência no timeframe superior:
+O método `ProcessHourlyCandle` determina a direção da tendência no período superior:
 
 ```cs
 private void ProcessHourlyCandle(ICandleMessage candle, decimal fastValue, decimal slowValue)
@@ -126,8 +126,8 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 
 ## Funcionalidades
 
-- A estratégia utiliza dois timeframes: horário para tendência e 5 minutos para entrada
-- A entrada em posição é executada apenas na direção da tendência do timeframe superior
+- A estratégia utiliza dois períodos: horário para tendência e 5 minutos para entrada
+- A entrada em posição é executada apenas na direção da tendência do período superior
 - O RSI é utilizado como filtro para encontrar pontos de entrada ideais (sobrevenda/sobrecompra)
 - As posições são protegidas automaticamente com stop-loss e take-profit
 - A estratégia trabalha apenas com velas concluídas
