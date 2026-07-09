@@ -1,6 +1,6 @@
 # Configuración de red
 
-Panel de acceso rápido de la aplicación de configuración **Settings \=\> Network**.
+Panel de acceso rápido de la aplicación de configuración **Configuración \=\> Red**.
 
 ![hydra proxy settings](../../../images/hydra_proxy_settings.png)
 

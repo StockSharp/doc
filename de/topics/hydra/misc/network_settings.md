@@ -1,6 +1,6 @@
 # Netzwerkeinstellungen
 
-Schnellzugriffspanel der Anwendung **Settings \=\> Network**.
+Schnellzugriffspanel der Anwendung **Einstellungen \=\> Netzwerk**.
 
 ![hydra proxy settings](../../../images/hydra_proxy_settings.png)
 

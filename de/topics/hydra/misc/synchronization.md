@@ -1,6 +1,6 @@
 # Synchronisierung
 
-Registerkarte **Import \=\> Synchronize...**.
+Registerkarte **Importieren \=\> Synchronisieren...**.
 
 ![hydra sync](../../../images/hydra_sync.png)
 

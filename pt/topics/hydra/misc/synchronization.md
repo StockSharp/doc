@@ -1,6 +1,6 @@
 # Sincronização
 
-Separador **Import \=\> Synchronize...**.
+Separador **Importar \=\> Sincronizar...**.
 
 ![hydra sync](../../../images/hydra_sync.png)
 

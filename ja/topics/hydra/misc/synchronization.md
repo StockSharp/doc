@@ -1,8 +1,7 @@
 # 同期
 
-タブ **Import \=\> Synchronize...**。
+**インポート \=\> 同期...** タブ。
 
 ![hydra sync](../../../images/hydra_sync.png)
 
 これにより、ダウンロード済みファイルから銘柄を復元できます。
-

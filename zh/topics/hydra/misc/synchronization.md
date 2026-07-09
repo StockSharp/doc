@@ -1,6 +1,6 @@
 # 同步
 
-打开 **Import \=\> Synchronize...** 选项卡。
+打开 **导入 \=\> 同步...** 选项卡。
 
 ![hydra sync](../../../images/hydra_sync.png)
 

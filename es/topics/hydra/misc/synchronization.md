@@ -1,6 +1,6 @@
 # Sincronización
 
-Pestaña **Import \=\> Synchronize...**.
+Pestaña **Importar \=\> Sincronizar...**.
 
 ![hydra sync](../../../images/hydra_sync.png)
 

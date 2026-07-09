@@ -1,6 +1,6 @@
 # Definições de rede
 
-Painel de acesso rápido da aplicação de definições **Settings \=\> Network**.
+Painel de acesso rápido da aplicação de definições **Definições \=\> Rede**.
 
 ![hydra proxy settings](../../../images/hydra_proxy_settings.png)
 
