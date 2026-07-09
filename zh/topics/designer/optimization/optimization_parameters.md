@@ -9,7 +9,7 @@
 
 默认情况下，所有这些类型的参数都会显示在[优化器参数表](brute_force.md)中。如果需要从优化中排除某个参数，请按以下方式操作：
 
-- 对于[策略图](../strategies/using_visual_designer.md)，选择所需模块并打开其属性，切换到 **Advanced settings**，然后清除 **Parameter** 复选框：
+- 对于[策略图](../strategies/using_visual_designer.md)，选择所需模块并打开其属性，切换到 **高级设置**，然后清除 **参数** 复选框：
 
 ![Designer Optimization 01](../../../images/designer_optimization_01.png)
 

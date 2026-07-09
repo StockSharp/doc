@@ -10,16 +10,16 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 ![Designer Debugging DLL cube using Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
-3. 在 **Attach to Process** 对话框的 **Available processes** 列表中，找到需要附加的 **Designer.exe** 进程。
+3. 在 **附加到进程** 对话框的 **可用进程** 列表中，找到需要附加的 **Designer.exe** 进程。
 
 ![Designer Debugging DLL cube using Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
-如果该进程由其他用户账户运行，请选中 **Show processes from all users** 复选框。
+如果该进程由其他用户账户运行，请选中 **显示所有用户的进程** 复选框。
 
-4. 必须确保 **Attach to** 字段指定了正确的待调试代码类型。默认的 **Auto** 参数会尝试自动判断代码类型，但判断结果并不总是正确。要手动设置代码类型，请执行以下步骤：
+4. 必须确保 **附加到** 字段指定了正确的待调试代码类型。默认的 **自动** 参数会尝试自动判断代码类型，但判断结果并不总是正确。要手动设置代码类型，请执行以下步骤：
 
-- 在 Attach to 字段中单击 **Select**。
-- 在 **Select Code Type** 对话框中选择 **Debug these code types**，然后选择需要调试的类型。
+- 在 Attach to 字段中单击 **选择**。
+- 在 **选择代码类型** 对话框中选择 **调试这些代码类型**，然后选择需要调试的类型。
 - 单击 OK。
 
 ![Designer Debugging DLL cube using Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)

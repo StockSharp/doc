@@ -16,7 +16,7 @@
 - 描述
 - NuGet 包标识符。此参数用于设置商店中产品的链接。例如，在地址 https://stocksharp.com/store/runner/ 中，单词 **runner** 由此参数指定。
 
-只有通过电子邮件 [info@stocksharp.com](mailto:info@stocksharp.com) 联系后，才能获得 **Free** 或 **Paid** 级别的访问权限。默认提供 **Private** 级别，该级别仅允许以私有形式向选定用户发布策略：
+只有通过电子邮件 [info@stocksharp.com](mailto:info@stocksharp.com) 联系后，才能获得 **免费** 或 **付费** 级别的访问权限。默认提供 **私有** 级别，该级别仅允许以私有形式向选定用户发布策略：
 
 单击 **保存** 按钮后，策略将发送到 StockSharp 服务器。
 
@@ -24,6 +24,6 @@
 
 ![Designer_publish_02](../../../images/designer_publish_02.png)
 
-单击 **OK** 按钮后，会显示更新成功的窗口：
+单击 **确定** 按钮后，会显示更新成功的窗口：
 
 ![Designer_publish_03](../../../images/designer_publish_03.png)

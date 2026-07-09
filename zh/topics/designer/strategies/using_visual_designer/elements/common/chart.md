@@ -6,7 +6,7 @@
 
 ![Designer Panel graphics 04](../../../../../../images/designer_panel_graphics_04.png)
 
-[图表](../../../../user_interface/components/chart.md) 面板会显示所有传入 **Chart panel** 模块的数据。不同的K线序列需要使用不同的 **Chart panel** 模块。相应的图表区域会自上而下排列，每个区域仅显示与其对应的图形元素（K线序列、指标、成交等）。示例中，上方图表显示K线、两个指标和成交，分别对应上方模块的四个输入参数；下方图表则只显示K线。有关 [图表](../../../../user_interface/components/chart.md) 面板的更多信息，请参阅 [图表](../../../../user_interface/components/chart.md) 章节。
+[图表](../../../../user_interface/components/chart.md) 面板会显示所有传入 **图表面板** 模块的数据。不同的K线序列需要使用不同的 **图表面板** 模块。相应的图表区域会自上而下排列，每个区域仅显示与其对应的图形元素（K线序列、指标、成交等）。示例中，上方图表显示K线、两个指标和成交，分别对应上方模块的四个输入参数；下方图表则只显示K线。有关 [图表](../../../../user_interface/components/chart.md) 面板的更多信息，请参阅 [图表](../../../../user_interface/components/chart.md) 章节。
 
 ## 推荐内容
 

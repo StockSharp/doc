@@ -1,6 +1,6 @@
 # 图表
 
-**Chart** 组件包含策略中的所有 **Chart panel** 模块。例如，如果策略使用两个 **Chart panel** 模块，则 **Chart** 组件中会显示两个图表，如图所示。
+**图表** 组件包含策略中的所有 **图表面板** 模块。例如，如果策略使用两个 **图表面板** 模块，则 **图表** 组件中会显示两个图表，如图所示。
 
 ![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
 

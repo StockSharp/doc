@@ -10,13 +10,13 @@
 
 ![Designer The creation of a strategy 02](../../../images/designer_creation_of_strategy_02.png)
 
-要使用模块创建策略，请选择 **Scheme** 选项卡。还可以选择一个模板作为初始策略图。
+要使用模块创建策略，请选择 **策略图** 选项卡。还可以选择一个模板作为初始策略图。
 
-单击 **OK** 后，新策略会显示在 **Scheme** 面板的 **Strategies** 文件夹中。工作区中还会出现对应的策略选项卡；切换到该选项卡时，Ribbon 中会自动打开 **Backtest** 选项卡。在 **Scheme** 面板中右键单击策略，可以通过显示的菜单重命名策略或执行其他操作。
+单击 **确定** 后，新策略会显示在 **策略图** 面板的 **策略** 文件夹中。工作区中还会出现对应的策略选项卡；切换到该选项卡时，Ribbon 中会自动打开 **回测** 选项卡。在 **策略图** 面板中右键单击策略，可以通过显示的菜单重命名策略或执行其他操作。
 
 ![Designer The creation of a strategy 01](../../../images/designer_creation_of_strategy_01.png)
 
-策略选项卡包含 **Scheme** 面板（参阅[策略设计器](using_visual_designer/diagram_panel.md)），以及用于显示策略测试结果的其他[图形组件](../user_interface/components.md)选项卡。有关策略测试的详细说明，请参阅[回测示例](../backtesting/getting_started.md)。
+策略选项卡包含 **策略图** 面板（参阅[策略设计器](using_visual_designer/diagram_panel.md)），以及用于显示策略测试结果的其他[图形组件](../user_interface/components.md)选项卡。有关策略测试的详细说明，请参阅[回测示例](../backtesting/getting_started.md)。
 
 ## 另请参阅
 

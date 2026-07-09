@@ -1,10 +1,10 @@
 # 实盘运行示例
 
-要在 **Live** 模式下运行示例，需要完成以下准备：
+要在 **实盘** 模式下运行示例，需要完成以下准备：
 
 1. 安装 [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) 的测试终端 **IB Trader Workstation (TWS) Demo**。可从厂商网站获取该终端。
 
-2. 配置 IB TWS Demo，使其能够与 [Designer](../../designer.md) 配合使用。请参阅 [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) 章节中的 **IB TWS Setting demo**。
+2. 配置 IB TWS Demo，使其能够与 [Designer](../../designer.md) 配合使用。请参阅 [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md) 章节中的 **IB TWS 设置示例**。
 
 3. 在 [Designer](../../designer.md) 中配置 IB TWS Demo 连接并建立连接。
 
@@ -19,7 +19,7 @@ SMA 策略示例使用以下参数：
 - 交易品种 **AAPL@NASDAQ**
 - 标准存储 **\\Documents\\StockSharp\\Designer\\Storage**
 - 存储格式 \- **CSV**
-- 从存储中读取的数据类型 \- **Ticks**
+- 从存储中读取的数据类型 \- **逐笔成交**
 - 时间周期为 5 秒的K线
 - 成交量 \- 100
 - 历史数据天数 \- 2

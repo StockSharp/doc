@@ -4,13 +4,13 @@
 
 该模块用于显示期权面板。
 
-要显示 **Option desk**，需要添加 **Option desk** 图形组件。
+要显示 **期权工作台**，需要添加 **期权工作台** 图形组件。
 
 ### 输入端口
 
 输入端口
 
-- **Model** – 计算模型（例如 Black-Scholes）。
+- **模型** – 计算模型（例如 Black-Scholes）。
 
 ![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
 

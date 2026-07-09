@@ -8,19 +8,19 @@
 
 输入端口
 
-- **Option** – 要为其创建模型的执行价。
+- **期权** – 要为其创建模型的执行价。
 
 ### 输出端口
 
 输出端口
 
-- **Model** – 定价模型（例如 Black-Scholes）。
+- **模型** – 定价模型（例如 Black-Scholes）。
 
 ### 参数
 
 参数
 
-- **Black Model** – 指定是否创建 Black-Scholes 模型的标志。
+- **Black 模型** – 指定是否创建 Black-Scholes 模型的标志。
 
 ## 另请参阅
 

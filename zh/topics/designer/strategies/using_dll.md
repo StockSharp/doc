@@ -23,7 +23,7 @@
 
 如果策略使用图表接口，还需要添加 NuGet 包 [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces)。这些接口不包含实际的图表逻辑，仅用于编译代码。在 **Designer** 中启动策略时，真实数据会通过这些接口绘制到图表上。
 
-4. 创建策略后，请在 **Build** 选项卡中单击 **Build Solution** 构建项目。
+4. 创建策略后，请在 **生成** 选项卡中单击 **生成解决方案** 构建项目。
 
 ![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
@@ -37,7 +37,7 @@
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. 在窗口中指定程序集路径（程序集必须兼容 .NET 6.0），然后选择类型。之所以需要选择类型，是因为一个 DLL 中可以包含多个策略，也可以包含[模块和指标](using_dll/create_element_and_indicator.md)。单击 **OK** 后，策略会添加到 **Scheme** 面板并可立即使用：
+2. 在窗口中指定程序集路径（程序集必须兼容 .NET 6.0），然后选择类型。之所以需要选择类型，是因为一个 DLL 中可以包含多个策略，也可以包含[模块和指标](using_dll/create_element_and_indicator.md)。单击 **确定** 后，策略会添加到 **策略图** 面板并可立即使用：
 
 ![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
 

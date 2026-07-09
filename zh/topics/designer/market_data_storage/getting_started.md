@@ -1,6 +1,6 @@
 # 入门
 
-要创建历史数据存储，请在 **Market data** 选项卡中单击 ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) 按钮。单击 ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) 按钮可以修改当前存储的参数。单击 ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) 按钮可以从存储列表中删除当前存储。
+要创建历史数据存储，请在 **市场数据** 选项卡中单击 ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png) 按钮。单击 ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png) 按钮可以修改当前存储的参数。单击 ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png) 按钮可以从存储列表中删除当前存储。
 
 ![Designer Creating a repository of historical data 03](../../../images/designer_creating_repository_of_historical_data_03.png)
 
@@ -18,7 +18,7 @@
 
 ![Designer Creating a repository of historical data 05](../../../images/designer_creating_repository_of_historical_data_05.png)
 
-添加新存储后，可以在 **Storage** 下拉列表中选择该存储。
+添加新存储后，可以在 **存储** 下拉列表中选择该存储。
 
 ![Designer Creating a repository of historical data 06](../../../images/designer_creating_repository_of_historical_data_06.png)
 

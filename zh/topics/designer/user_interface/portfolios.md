@@ -4,7 +4,7 @@
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 
-**Portfolios** 面板以表格形式显示投资组合的基本数据以及这些投资组合的当前持仓。双击投资组合或持仓后，会打开 **Creating portfolio** 或 **Creating position** 窗口，可以在其中编辑所选投资组合或持仓。要创建新的投资组合或持仓，请单击 ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01.png) 按钮，然后在下拉菜单中选择相应项目。
+**投资组合** 面板以表格形式显示投资组合的基本数据以及这些投资组合的当前持仓。双击投资组合或持仓后，会打开 **创建投资组合** 或 **创建持仓** 窗口，可以在其中编辑所选投资组合或持仓。要创建新的投资组合或持仓，请单击 ![Designer Panel Circuits 01](../../../images/designer_panel_circuits_01.png) 按钮，然后在下拉菜单中选择相应项目。
 
 ![Designer Panel A Portfolios 01](../../../images/designer_panel_portfolios_01.png)
 

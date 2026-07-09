@@ -1,6 +1,6 @@
 # 组件
 
-在测试或交易过程中，需要对整个过程进行全面控制。为了实现完整的控制和分析，[Designer](../../designer.md) 提供了多种图形组件，可以在 **Ribbon** 的 **Components** 组中选择并添加：
+在测试或交易过程中，需要对整个过程进行全面控制。为了实现完整的控制和分析，[Designer](../../designer.md) 提供了多种图形组件，可以在 **功能区** 的 **组件** 组中选择并添加：
 
 ![Designer Components](../../../images/designer_components.png)
 

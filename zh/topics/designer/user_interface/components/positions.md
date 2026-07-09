@@ -1,10 +1,10 @@
 # 持仓
 
-**Positions (chart)** 组件以图表形式显示持仓。图表左上角会显示添加到图表中的所有图形元素。清除图形元素旁的 ![Designer Schedule 00](../../../../images/designer_schedule_00.png) 复选框后，该元素会从图表中隐藏。单击 ![Designer Schedule 01](../../../../images/designer_schedule_01.png) 按钮可以打开图形元素设置。
+**持仓（图表）** 组件以图表形式显示持仓。图表左上角会显示添加到图表中的所有图形元素。清除图形元素旁的 ![Designer Schedule 00](../../../../images/designer_schedule_00.png) 复选框后，该元素会从图表中隐藏。单击 ![Designer Schedule 01](../../../../images/designer_schedule_01.png) 按钮可以打开图形元素设置。
 
 ![Designer Chart Position 00](../../../../images/designer_chart_position_00.png)
 
-**Positions** 组件以表格形式显示策略所用交易品种的持仓。
+**持仓** 组件以表格形式显示策略所用交易品种的持仓。
 
 ![Designer Table Position 00](../../../../images/designer_table_position_00.png)
 

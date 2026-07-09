@@ -8,23 +8,23 @@
 
 输入端口
 
-- **Model** – 计算模型（例如 Black-Scholes）。
-- **Instrument** – 作为标的资产的交易品种。
-- **Volume** \- 成交量的数值。
-- **Position by underlying asset** – 标的资产的持仓。
-- **Flag** – 启动对冲过程的信号（标志）。
+- **模型** – 计算模型（例如 Black-Scholes）。
+- **交易品种** – 作为标的资产的交易品种。
+- **数量** \- 成交量的数值。
+- **按标的资产持仓** – 标的资产的持仓。
+- **标志** – 启动对冲过程的信号（标志）。
 
 ### 输出端口
 
 输出端口
 
-- **Order** – 已注册的订单。可以使用 Trades by order 元素获取该订单的成交，并通过 Chart panel 模块将其显示在图表上。
+- **订单** – 已注册的订单。可以使用 Trades by order 元素获取该订单的成交，并通过 Chart panel 模块将其显示在图表上。
 
 ### 参数
 
 参数
 
-- **Hedging type** \- 对冲类型，可取 Delta、Gamma、Vega、Theta 或 Rho。
+- **对冲类型** \- 对冲类型，可取 Delta、Gamma、Vega、Theta 或 Rho。
 
 ## 推荐内容
 

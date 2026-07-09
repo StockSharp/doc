@@ -1,6 +1,6 @@
 # 创建交易品种
 
-单击 **Create security** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮会打开 **Editing** 窗口。要创建交易品种，请填写交易品种属性，然后单击 **OK** 按钮：
+单击 **创建交易品种** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮会打开 **编辑** 窗口。要创建交易品种，请填写交易品种属性，然后单击 **确定** 按钮：
 
 ![Designer Creation tool 01](../../../images/designer_creation_tool_01.png)
 
