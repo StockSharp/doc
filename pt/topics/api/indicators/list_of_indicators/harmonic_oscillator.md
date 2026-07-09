@@ -48,7 +48,7 @@ O cálculo do Harmonic Oscillator envolve os seguintes passos:
 Onde:
 - Price - preço (normalmente preço de fecho)
 - SMA - média móvel simples
-- FFT - Fast Fourier Transform
+- FFT - Transformada rápida de Fourier
 - Length - período de análise
 
 ## Interpretação
@@ -87,4 +87,3 @@ O Harmonic Oscillator pode ser interpretado da seguinte forma:
 [CenterOfGravityOscillator](center_of_gravity_oscillator.md)
 [FisherTransform](ehlers_fisher_transform.md)
 [DetrendedSyntheticPrice](detrended_synthetic_price.md)
-

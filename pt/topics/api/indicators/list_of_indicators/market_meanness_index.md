@@ -37,7 +37,7 @@ Formalmente, isto pode ser representado como:
    - Se (Close[i-1] - Close[i-2]) * (Close[i] - Close[i-1]) < 0, o par é considerado não sequencial
    - Contar o número total desses pares
 
-2. MMI = (Number of non-sequential pairs / (Length - 2)) * 100
+2. MMI = (Número de pares não sequenciais / (Length - 2)) * 100
 
 ## Interpretação
 
@@ -84,4 +84,3 @@ O Market Meanness Index pode ser interpretado da seguinte forma:
 [ADX](adx.md)
 [VHF](vhf.md)
 [BalanceOfPower](balance_of_power.md)
-

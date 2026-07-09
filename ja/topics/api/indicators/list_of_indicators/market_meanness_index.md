@@ -37,7 +37,7 @@ Market Meanness Index の計算には、次の手順が含まれます。
    - (Close[i-1] - Close[i-2]) * (Close[i] - Close[i-1]) < 0 の場合、そのペアは非順序的と見なされます
    - そのようなペアの総数を数えます
 
-2. MMI = (Number of non-sequential pairs / (Length - 2)) * 100
+2. MMI = (非順序ペアの数 / (Length - 2)) * 100
 
 ## 解釈
 

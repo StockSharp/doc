@@ -48,7 +48,7 @@ Harmonic Oscillator の計算には、次の手順が含まれます。
 ここで:
 - Price - 価格 (通常は終値)
 - SMA - 単純移動平均
-- FFT - Fast Fourier Transform
+- FFT - 高速フーリエ変換
 - Length - 分析期間
 
 ## 解釈

@@ -45,7 +45,7 @@ HO尤其适用于：
    HO = Reconstruction of Dominant Cycles through Inverse FFT
    ```
 
-地点：
+其中：
 - 价格 - 价格（通常指收盘价）
 - SMA - 简单移动平均
 - FFT - 快速傅里叶变换
