@@ -46,7 +46,7 @@ PPO 指标围绕零线波动，正值表示看涨的市场情绪，负值表示�
    Histogram = PPO Line - Signal Line
    ```
 
-地点：
+其中：
 - 价格 - 价格（通常指收盘价）
 - EMA - 指数移动平均
 - ShortPeriod - 短期EMA的周期

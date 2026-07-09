@@ -50,7 +50,7 @@ ALMA 计算分几个阶段进行：
    ALMA = sum(Price(t-i) * w_norm(i)) for all i from 0 to Length-1
    ```
 
-地点：
+其中：
 - 长度 - ALMA周期
 - 偏移 - 偏移参数（从0到1）
 - Sigma - sigma 参数（通常从 2 到 8）

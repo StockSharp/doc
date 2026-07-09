@@ -37,7 +37,7 @@ PGO 对识别超买和超卖状况特别有用，也可用于检测可能预示�
    PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
    ```
 
-地点：
+其中：
 - 收盘价 - 当前收盘价格
 - 高 - 最高价
 - 低 - 最低价

@@ -46,7 +46,7 @@ PVO 指标有助于识别可能预示重大价格变动的成交量异常。它�
    Histogram = PVO Line - Signal Line
    ```
 
-地点：
+其中：
 - 成交量 - 交易量
 - EMA - 指数移动平均
 - ShortPeriod - 短期EMA的周期

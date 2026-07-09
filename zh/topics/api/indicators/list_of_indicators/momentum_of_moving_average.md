@@ -32,7 +32,7 @@ MOMA通过关注移动平均线动态的变化，而不是价格本身，帮助�
    MOMA = MA[current] - MA[current - MomentumPeriod]
    ```
 
-地点：
+其中：
 - 价格 - 价格（通常指收盘价）
 - SMA - 简单移动平均
 - 长度 - 移动平均周期

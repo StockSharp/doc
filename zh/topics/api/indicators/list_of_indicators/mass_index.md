@@ -47,7 +47,7 @@ MI 使用价格区间的指数移动平均线（EMA）来衡量波动性。它�
    MI = Sum(Ratio over last Length periods)
    ```
 
-地点：
+其中：
 - 最高价 - 期间最高价格
 - 最低价 - 本周期最低价格
 - EMA - 指数移动平均

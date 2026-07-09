@@ -34,7 +34,7 @@ MAR 包括几条移动平均线（通常为 5 到 10 条），其周期逐步增
    MAs = [SMA(Price, Period) for each Period in Periods]
    ```
 
-地点：
+其中：
 - 价格 - 价格（通常指收盘价）
 - SMA - 简单移动平均
 - 短期 - 初始阶段

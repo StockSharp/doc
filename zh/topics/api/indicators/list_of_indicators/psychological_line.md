@@ -28,7 +28,7 @@ PSY 指标有助于判断市场是否处于超买或超卖状态，并可以预�
 PSY = (Number of rising periods over Length periods / Length) * 100
 ```
 
-地点：
+其中：
 - 上涨周期被定义为收盘价高于前一周期收盘价的周期
 - 长度 - 考虑的周期数
 

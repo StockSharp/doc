@@ -26,7 +26,7 @@ CLV = ((Close - Low) - (High - Close)) / (High - Low)
 ADL = Previous ADL Value + CLV * Volume
 ```
 
-地点：
+其中：
 - 收盘价 - 该时期的收盘价格
 - 低 - 本期最低价格
 - 高 - 该时期的最高价格

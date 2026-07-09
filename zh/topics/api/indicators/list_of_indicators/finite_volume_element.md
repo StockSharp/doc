@@ -50,7 +50,7 @@ FVE 指标的计算涉及几个步骤：
    FVE = SMA(Cumulative Sum of Normalized Values, Length)
    ```
 
-地点：
+其中：
 - 高、低、收盘 - 最高价、最低价和收盘价
 - 成交量 - 交易量
 - SMA - 简单移动平均

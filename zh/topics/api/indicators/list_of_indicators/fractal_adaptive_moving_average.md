@@ -44,7 +44,7 @@ FRAMA 计算涉及几个步骤：
    FRAMA = Alpha * Price + (1 - Alpha) * FRAMA[previous]
    ```
 
-地点：
+其中：
 - 高 - 该期间的最高价格
 - 低 - 该期间的最低价格
 - log - 自然对数

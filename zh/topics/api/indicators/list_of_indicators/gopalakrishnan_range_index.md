@@ -29,7 +29,7 @@ Gopalakrishnan 范围指数的计算非常简单：
 GAPO = log(N) * log(Highest High - Lowest Low)
 ```
 
-地点：
+其中：
 - log - 自然对数
 - N - 期数（长度）
 - 最高高点 - 在长度周期内的最高高点

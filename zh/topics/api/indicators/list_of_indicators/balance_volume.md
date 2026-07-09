@@ -29,7 +29,7 @@ If Close = Previous Close:
 	BV = Previous BV
 ```
 
-地点：
+其中：
 - 收盘价 - 当前收盘价格
 - 前收盘价 - 前一交易日的收盘价
 - 成交量 - 当前交易量

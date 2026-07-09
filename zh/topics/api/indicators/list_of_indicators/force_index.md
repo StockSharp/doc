@@ -35,7 +35,7 @@
    Force Index = EMA(1-Period Force Index, Length)
    ```
 
-地点：
+其中：
 - 收盘价
 - 成交量 - 交易量
 - EMA - 指数移动平均

@@ -41,7 +41,7 @@
    Lower Band = Middle Line - (Multiplier * ATR)
    ```
 
-地点：
+其中：
 - 价格 - 通常为收盘价
 - EMA - 指数移动平均
 - ATR - 平均真实波幅

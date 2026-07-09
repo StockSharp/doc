@@ -30,7 +30,7 @@ BBP 也可以取 0-1 范围之外的值：
 BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
 ```
 
-地点：
+其中：
 - 价格 - 当前价格（通常是收盘价）
 - 下布林带 = 简单移动平均 - (标准差倍数 * 标准差)
 - 布林带上轨 = 简单移动平均 + (标准差乘数 * 标准差)

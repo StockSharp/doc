@@ -25,7 +25,7 @@ McGinley 动态计算是使用以下公式递归执行的：
 MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous])^4))
 ```
 
-地点：
+其中：
 - 价格 - 当前价格（通常是收盘价）
 - MGD[previous] - 前一个指标值
 - 长度 - 周期参数

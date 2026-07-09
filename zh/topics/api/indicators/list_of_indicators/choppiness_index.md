@@ -43,7 +43,7 @@ CHOP 对以下情况特别有用：
    CHOP = 100 * LOG10(Sum TR / (Highest High - Lowest Low)) / LOG10(Length)
    ```
 
-地点：
+其中：
 - TR - 每根K线的真实范围
 - 长度 - 选定周期
 - LOG10 - 十进制对数

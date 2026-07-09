@@ -40,7 +40,7 @@ DSP 的用途包括：
    DSP = Price - MA[shifted (Length/2) + 1 periods back]
    ```
 
-地点：
+其中：
 - 价格 - 当前价格（通常是收盘价）
 - MA - 简单移动平均
 - 长度 - 选定的计算周期

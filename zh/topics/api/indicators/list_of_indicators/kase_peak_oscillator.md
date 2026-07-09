@@ -48,7 +48,7 @@ Kase 峰值振荡器的计算涉及几个步骤：
    KPO = Normalized Short Momentum - Normalized Long Momentum
    ```
 
-地点：
+其中：
 - 价格 - 通常为收盘价
 - EMA - 指数移动平均
 - ATR - 平均真实波幅

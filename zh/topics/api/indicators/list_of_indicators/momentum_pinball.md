@@ -47,7 +47,7 @@
    MP = Normalized_Momentum + Momentum_Change
    ```
 
-地点：
+其中：
 - 价格 - 价格（通常指收盘价）
 - 长度 - 计算周期
 - 动量 - 基础动量

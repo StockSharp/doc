@@ -30,7 +30,7 @@ EWO 基于快速与慢速移动平均线的差值设计，旨在根据艾略特�
 EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 ```
 
-地点：
+其中：
 - EMA - 指数移动平均
 - 收盘价
 - 短期 - 短期（通常为5）
