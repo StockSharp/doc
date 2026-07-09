@@ -5,7 +5,7 @@ Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-
 Dieser Abschnitt beschreibt keine C#-Sprachkonstrukte oder die Klasse [Strategy](../../../../api/strategies.md), die als Basis für die Erstellung von Strategien verwendet wird, sondern erwähnt spezielle Aspekte der Arbeit mit Code im **Designer**.
 
 > [!TIP]
-> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designer** deutlich einfacher als das Ausführen von [Schemas](../../../live_execution/running_strategies_outside_of_designer.md).
+> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designer** deutlich einfacher als das Ausführen von [Schemata](../../../live_execution/running_strategies_outside_of_designer.md).
 
 1. Strategieparameter werden mit einem speziellen Ansatz erstellt:
 

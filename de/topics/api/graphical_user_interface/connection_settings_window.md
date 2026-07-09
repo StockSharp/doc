@@ -20,7 +20,7 @@ Dieses Fenster sollte über die Erweiterungsmethode [Extensions.Configure](xref:
 ```
 
 > [!TIP]
-> Die Korrektheit der Verbindung kann über die Schaltfläche **Check** geprüft werden.
+> Die Korrektheit der Verbindung kann über die Schaltfläche **Prüfen** geprüft werden.
 
 Das Ergebnis dieses Fensters ist das Erstellen und Hinzufügen von Adaptern zur Liste der *inneren Adapter* der Eigenschaft [Connector.Adapter](xref:StockSharp.Algo.Connector.Adapter).
 

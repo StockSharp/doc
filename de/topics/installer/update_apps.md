@@ -2,7 +2,7 @@
 
 Der [Installer](../installer.md) verfolgt alle Softwareupdates und aktualisiert sich automatisch. Daher muss er nach der Installation nicht deinstalliert werden.
 
-Um manuell nach verfügbaren Updates zu suchen, klicken Sie auf die Schaltfläche **Updates** in der rechten Ecke des Programmfensters.
+Um manuell nach verfügbaren Aktualisierungen zu suchen, klicken Sie auf die Schaltfläche **Aktualisierungen** in der rechten Ecke des Programmfensters.
 
 ![force update installer](../../images/force_update_installer.png)
 
@@ -14,7 +14,7 @@ Danach müssen Sie auf die Schaltfläche klicken.
 
 Der [Installer](../installer.md) wird nicht durch Klicken auf **"X"** im Programmfenster geschlossen, sondern über die Symbolleiste.
 
-Öffnen Sie dazu das Menü per Rechtsklick und klicken Sie auf **Close**.
+Öffnen Sie dazu das Menü per Rechtsklick und klicken Sie auf **Schließen**.
 
 **[Videoanleitung ansehen](videos/update_apps.md)**.
 

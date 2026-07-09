@@ -37,11 +37,10 @@ Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. Im Fenster müssen Sie den Pfad zur Assembly angeben (sie muss mit .NET 6.0 kompatibel sein) und den Typ auswählen. Letzteres ist erforderlich, weil eine DLL mehrere Strategien (oder [Würfel mit Indikatoren](using_dll/create_element_and_indicator.md)) enthalten kann. Nach dem Klicken auf **OK** wird die Strategie zum Panel **Scheme** hinzugefügt und ist einsatzbereit:
+2. Im Fenster müssen Sie den Pfad zur Assembly angeben (sie muss mit .NET 6.0 kompatibel sein) und den Typ auswählen. Letzteres ist erforderlich, weil eine DLL mehrere Strategien (oder [Würfel mit Indikatoren](using_dll/create_element_and_indicator.md)) enthalten kann. Nach dem Klicken auf **OK** wird die Strategie zum Panel **Schema** hinzugefügt und ist einsatzbereit:
 
 ![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
 
 3. Das Starten der Strategie im [Backtest](../backtesting/user_interface.md), im [Live-Betrieb](../live_execution/getting_started.md) und andere Operationen funktionieren ähnlich wie bei einer Strategie aus Diagrammen und Code:
 
 ![Designer_Creation_Strategy_Dll_02](../../../images/designer_creation_strategy_dll_02.png)
-

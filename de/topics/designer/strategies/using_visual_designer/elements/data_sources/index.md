@@ -8,7 +8,7 @@ Der Würfel wird verwendet, um einen eigenen Index zu erstellen.
 
 Ausgehende Sockets
 
-- **Security** - der berechnete Index, dargestellt als **Security**.
+- **Instrument** - der berechnete Index, dargestellt als **Instrument**.
 
 ### Parameter
 

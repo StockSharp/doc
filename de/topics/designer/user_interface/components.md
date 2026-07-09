@@ -1,6 +1,6 @@
 # Komponenten
 
-Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu kontrollieren. Für eine umfassende Kontrolle und Analyse enthält [Designer](../../designer.md) grafische Komponenten, die hinzugefügt werden können, indem sie im **Ribbon** in der Gruppe **Components** ausgewählt werden:
+Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu kontrollieren. Für eine umfassende Kontrolle und Analyse enthält [Designer](../../designer.md) grafische Komponenten, die hinzugefügt werden können, indem sie im **Menüband** in der Gruppe **Komponenten** ausgewählt werden:
 
 ![Designer Components](../../../images/designer_components.png)
 
@@ -13,7 +13,7 @@ Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu 
 - [Trade Tape](components/tick_trades.md) - stellt eine Tabelle mit Trades dar, die vollständige Informationen zu allen Trades für ausgewählte Instrumente anzeigt.
 - [Position Chart](components/positions.md) - stellt einen Positionschart dar.
 - Properties - stellt eine Tabelle mit [Testing Properties](components/backtesting_settings.md) oder eine Tabelle mit [Live Trading Properties](components/live_settings.md) dar.
-- [Scheme](../strategies/using_visual_designer/diagram_panel.md) - stellt den Schema-Designer dar.
+- [Schema](../strategies/using_visual_designer/diagram_panel.md) - stellt den Schema-Designer dar.
 - [Source Code](../strategies/using_code.md) - stellt ein Fenster zum Erstellen oder Bearbeiten von Strategien auf Basis von Quellcode dar.
 - [DLL](../strategies/using_dll/dll_panel.md) - ein Fenster zum Anzeigen von DLL-Metadaten, wenn eine Strategie auf Basis einer fertigen DLL erstellt wird.
 - [Options Position Chart](../strategies/using_visual_designer/elements/options/chart_positions.md) - stellt einen Chart für Optionspositionen dar.

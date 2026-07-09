@@ -26,7 +26,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 - **Connection** - fertige Verbindungszeichenfolge.
 
 > [!TIP]
-> Sie können die Verbindung zur Datenbank mit der Schaltfläche **Check** pruefen.
+> Sie können die Verbindung zur Datenbank mit der Schaltfläche **Prüfen** pruefen.
 
 **General**
 

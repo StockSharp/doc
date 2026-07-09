@@ -1,6 +1,6 @@
 # Strategie-Designer
 
-Der Hauptprozess zum Entwerfen einer Strategie und ihrer Komponentenelemente findet im Panel **Scheme** statt, indem Blöcke kombiniert und mit Linien verbunden werden. Das Panel Scheme besteht aus den Panels **Palette**, **Designer** und **Properties**.
+Der Hauptprozess zum Entwerfen einer Strategie und ihrer Komponentenelemente findet im Panel **Schema** statt, indem Blöcke kombiniert und mit Linien verbunden werden. Das Panel Schema besteht aus den Panels **Palette**, **Designer** und **Eigenschaften**.
 
 ![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
@@ -14,11 +14,11 @@ Das Panel **Designer** ist der Bereich, in dem der gesamte Prozess zum Erstellen
 
 ## Properties-Panel
 
-Das Panel **Properties** zeigt die Parameter des auf dem Panel **Designer** ausgewählten Blocks an. Wenn ein Block im Panel **Designer** ausgewählt ist, wird sein Rahmen schwarz eingefärbt.
+Das Panel **Eigenschaften** zeigt die Parameter des auf dem Panel **Designer** ausgewählten Blocks an. Wenn ein Block im Panel **Designer** ausgewählt ist, wird sein Rahmen schwarz eingefärbt.
 
 ![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
 
-Das Panel **Properties** kann in zwei Modi angezeigt werden: *Basic settings* und *Advanced settings*.
+Das Panel **Eigenschaften** kann in zwei Modi angezeigt werden: *Basiseinstellungen* und *Erweiterte Einstellungen*.
 
 Standardmäßig werden die Eigenschaften beim Erstellen eines Schemas zunächst im Modus *Basic settings* angezeigt. Um in den Modus *Advanced settings* zu wechseln, müssen Sie auf die entsprechende Überschrift klicken.
 

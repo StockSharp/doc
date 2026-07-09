@@ -10,7 +10,7 @@ Wenn die Quelle keine erweiterten Informationen für ein Instrument enthaelt, bl
 
 Um die erforderlichen erweiterten Informationen auszuwählen, gehen Sie wie folgt vor:
 
-1. Klicken Sie auf der Registerkarte **Securities** auf die Schaltfläche **Extended information**.![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
+1. Klicken Sie auf der Registerkarte **Instrumente** auf die Schaltfläche **Erweiterte Informationen**.![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
 2. Es erscheint ein Fenster, in dem Sie den Pfad zur erforderlichen CSV-Datei auswählen müssen.![hydra Extension Info window](../../../images/hydra_extensioninfo_window.png)
 
 Unten sehen Sie ein Beispiel einer **CSV**-Datei mit erweiterten Informationen, geöffnet in verschiedenen Editoren: **MS Excel** und **Notepad**.

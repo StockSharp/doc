@@ -1,6 +1,6 @@
 # Daten löschen
 
-Registerkarte **Common**, Schaltfläche **Delete data...**.
+Registerkarte **Allgemein**, Schaltfläche **Daten löschen...**.
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 

@@ -8,7 +8,7 @@ Dieser Block wird verwendet, um Kerzen für ein angegebenes Instrument zu bilden
 
 Eingehende Sockets
 
-- **Security** – das Instrument, für das die Kerzen mit den angegebenen Parametern gebildet werden sollen.
+- **Instrument** – das Instrument, für das die Kerzen mit den angegebenen Parametern gebildet werden sollen.
 
 ### Ausgehende Sockets
 

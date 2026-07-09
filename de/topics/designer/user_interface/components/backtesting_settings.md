@@ -1,12 +1,12 @@
 # Backtesting-Einstellungen
 
-Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulations- oder Live-Trade-Eigenschaften. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
+Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulations- oder Live-Trade-Eigenschaften. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
 
 ![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
 
-**Settings**
+**Einstellungen**
 
-- **Market data** - der Datenspeicher.
+- **Marktdaten** - der Datenspeicher.
 - **Storage format** - das Speicherformat.
 - **Data type** - der Datentyp.
 - **Time frame** - Kerzen mit dem angegebenen Zeitrahmen verwenden.
@@ -47,7 +47,7 @@ Das Panel **Properties** ist standardmäßig auf der rechten Seite des Strategie
 
 **Diagram parameters**
 
-- **Security** - das Instrument.
+- **Instrument** - das Instrument.
 - **Portfolio** - das Portfolio.
 
 Wenn Sie die **Diagram parameters** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Instrument** der Registerkarte **Emulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.

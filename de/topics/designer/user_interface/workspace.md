@@ -6,5 +6,5 @@ Der **Workspace** in [Designer](../../designer.md) ist eine Fensteroberflache mi
 
 ## Empfohlene Inhalte
 
-[Schemas](schemas.md)
+[Schemata](schemas.md)
 

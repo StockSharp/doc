@@ -5,7 +5,7 @@ Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-
 Dieser Abschnitt beschreibt keine Python-Sprachkonstrukte (oder [Strategy](../../../../api/strategies.md), die als Basis für die Erstellung von Strategien verwendet wird), sondern erwähnt spezielle Aspekte der Arbeit mit Code im **Designer**.
 
 > [!TIP]
-> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designer** deutlich einfacher als das Ausführen von [Schemas](../../../live_execution/running_strategies_outside_of_designer.md).
+> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designer** deutlich einfacher als das Ausführen von [Schemata](../../../live_execution/running_strategies_outside_of_designer.md).
 
 1. Vor dem Beginn der Python-Entwicklung müssen Sie .NET-Abhängigkeiten über das Modul clr importieren, das von IronPython für die Interaktion mit .NET bereitgestellt wird:
 
@@ -176,4 +176,3 @@ def CreateClone(self):
 
 > [!IMPORTANT]
 > Wenn die Methode CreateClone nicht überschrieben wird, ist es unmöglich, die Strategie auf historischen Daten zu testen oder eine Parameteroptimierung durchzuführen. Fügen Sie diese Methode beim Erstellen einer Strategie in Python immer hinzu.
-

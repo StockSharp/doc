@@ -1,16 +1,16 @@
 # Erste Strategie
 
-Zum Erstellen von Strategie-Schemas und zusammengesetzten Elementen sowie zum Testen der erhaltenen Strategien auf historischen Daten können Sie das Beispiel einer Strategie mit gleitendem Durchschnitt (SMA) verwenden. Es führt Sie durch den vollständigen Ablauf vom Erstellen einer Strategie bis zu deren Test und Debugging. Die Strategie mit gleitendem Durchschnitt (SMA) befindet sich im Ordner **Strategies** des Panels **Schemas**.
+Zum Erstellen von Strategie-Schemas und zusammengesetzten Elementen sowie zum Testen der erhaltenen Strategien auf historischen Daten können Sie das Beispiel einer Strategie mit gleitendem Durchschnitt (SMA) verwenden. Es führt Sie durch den vollständigen Ablauf vom Erstellen einer Strategie bis zu deren Test und Debugging. Die Strategie mit gleitendem Durchschnitt (SMA) befindet sich im Ordner **Strategien** des Panels **Schemata**.
 
-1. Erstellen Sie eine neue Strategie aus Würfeln, wie unter [Using Code](../using_code.md) beschrieben. Um eine neue Strategie hinzuzufügen, klicken Sie auf die Schaltfläche **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) auf der Registerkarte **Common** und wählen **Strategy** aus. Alternativ klicken Sie mit der rechten Maustaste auf den Ordner **Strategy** im Panel **Schemas** und klicken im Dropdown-Menü auf die Schaltfläche **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png).
+1. Erstellen Sie eine neue Strategie aus Würfeln, wie unter [Code verwenden](../using_code.md) beschrieben. Um eine neue Strategie hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) auf der Registerkarte **Allgemein** und wählen **Strategie** aus. Alternativ klicken Sie mit der rechten Maustaste auf den Ordner **Strategie** im Panel **Schemata** und klicken im Dropdown-Menü auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png).
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Nach dem Klicken auf die Schaltfläche **Add** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) im Ordner **Strategy** des Panels **Schemas** erscheint eine neue Strategie. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie; beim Wechsel dorthin wird automatisch die Registerkarte **Emulation** im Ribbon geöffnet. Auf der Registerkarte **Emulation** können Sie den Namen der Strategie ändern und ihr eine kurze Beschreibung geben.
+Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) im Ordner **Strategie** des Panels **Schemata** erscheint eine neue Strategie. Im Arbeitsbereich erscheint ein neuer Tab mit der Strategie; beim Wechsel dorthin wird automatisch die Registerkarte **Emulation** im Menüband geöffnet. Auf der Registerkarte **Emulation** können Sie den Namen der Strategie ändern und ihr eine kurze Beschreibung geben.
 
 ![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. Öffnen und fixieren Sie für komfortables Arbeiten die Panels **Palette** und **Properties** des Bereichs **Schemas**, indem Sie auf die Schaltfläche ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) klicken. Das Ergebnis ist ein Fenster der folgenden Art.
+2. Öffnen und fixieren Sie für komfortables Arbeiten die Panels **Palette** und **Eigenschaften** des Bereichs **Schemata**, indem Sie auf die Schaltfläche ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png) klicken. Das Ergebnis ist ein Fenster der folgenden Art.
 
 ![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 

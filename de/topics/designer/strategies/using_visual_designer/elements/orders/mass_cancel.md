@@ -10,7 +10,7 @@ Eingehende Sockets
 
 - **Trigger** - das Signal, das bestimmt, wann Orders storniert werden müssen.
 - **Portfolio** - das Portfolio, für das alle Orders storniert werden sollen.
-- **Security** - das Instrument, für das alle Orders storniert werden sollen.
+- **Instrument** - das Instrument, für das alle Orders storniert werden sollen.
 
 ### Ausgehende Sockets
 

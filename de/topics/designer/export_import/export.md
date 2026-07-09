@@ -2,12 +2,12 @@
 
 Der Designer ermöglicht den Export jeder Art von Daten: Strategien, Blöcke und Indikatoren. Es gibt mehrere Möglichkeiten zum Export:
 
-- Klicken Sie im Panel **Schemes** mit der rechten Maustaste auf die Strategie, den Block oder den Indikator. Wählen Sie im erscheinenden Menü **Export**.
-- Drücken Sie im Tab **Common** die Schaltfläche **Export**:
+- Klicken Sie im Panel **Schemata** mit der rechten Maustaste auf die Strategie, den Block oder den Indikator. Wählen Sie im erscheinenden Menü **Exportieren**.
+- Drücken Sie im Tab **Allgemein** die Schaltfläche **Exportieren**:
 
 ![Designer Export strategies 00](../../../images/designer_export_strategies_00.png)
 
-Nach dem Drücken von **Export** erscheint je nach Inhaltstyp ein Fenster:
+Nach dem Drücken von **Exportieren** erscheint je nach Inhaltstyp ein Fenster:
 
 - für ein [Schema](../strategies/using_visual_designer.md):
 
@@ -30,4 +30,3 @@ Nach dem Drücken von **Export** erscheint je nach Inhaltstyp ein Fenster:
 ## Siehe auch
 
 [Strategien außerhalb von Designer ausführen](../live_execution/running_strategies_outside_of_designer.md)
-

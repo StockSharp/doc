@@ -1,8 +1,8 @@
 # Risikomanagement
 
-Im Panel **Risk** können Sie Einstellungen zur Risikokontrolle festlegen.
+Im Panel **Risiko** können Sie Einstellungen zur Risikokontrolle festlegen.
 
-Am unteren Rand des Panels wählen Sie die **Risk-rule** aus, konfigurieren die Auslösebedingung für die **Risk-rule** und legen die Aktion (Close positions, Stop trading, Cancel orders) fest, die ausgeführt wird, wenn die Bedingung der **Risk-rule** ausgelöst wird.
+Am unteren Rand des Panels wählen Sie die **Risikoregel** aus, konfigurieren die Auslösebedingung für die **Risikoregel** und legen die Aktion (Positionen schließen, Trading stoppen, Orders stornieren) fest, die ausgeführt wird, wenn die Bedingung der **Risikoregel** ausgelöst wird.
 
 ![Terminal Risk Rule](../../../images/terminal_risk_rule.png)
 

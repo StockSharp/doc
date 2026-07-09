@@ -17,7 +17,7 @@ Liste der Provisionstypen
 - **Trade (price)** - die Provision für den Trade-Preis.
 - **Trade** - die Provision für den Trade.
 - **Trade (volume)** - die Provision für das Volumen in der Order.
-- **Security** - die Instrumentenprovision.
+- **Instrument** - die Instrumentenprovision.
 - **Security (type)** - die Provision für den Instrumententyp.
 - **Turnover** - die Provision für den Umsatz.
 - **Board** - die Board-Provision.

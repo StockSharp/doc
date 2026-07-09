@@ -12,21 +12,21 @@ Wechseln Sie zu den Verbindungseinstellungen und wählen Sie die benötigte Verb
 
 ![Terminal Quick start 011](../../images/terminal_quick_start_011.png)
 
-Der nächste Schritt besteht darin, die Verbindung über die Schaltfläche **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) herzustellen.
+Der nächste Schritt besteht darin, die Verbindung über die Schaltfläche **Verbinden** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png) herzustellen.
 
-Durch Klicken auf die Schaltfläche **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) im Chart-Panel fügen Sie einen neuen Chart-Bereich hinzu. Mit einem Rechtsklick in den Chart-Bereich fügen Sie Kerzen für das gewünschte Instrument hinzu. Sie können dem Chart Indikatoren, eigene Trades und Orders hinzufügen. Außerdem können Orders direkt aus dem Chart registriert werden. Weitere Informationen zur Arbeit mit dem Chart finden Sie im Abschnitt [Chart](user_interface/components/chart.md).
+Durch Klicken auf die Schaltfläche **Hinzufügen** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) im Chart-Panel fügen Sie einen neuen Chart-Bereich hinzu. Mit einem Rechtsklick in den Chart-Bereich fügen Sie Kerzen für das gewünschte Instrument hinzu. Sie können dem Chart Indikatoren, eigene Trades und Orders hinzufügen. Außerdem können Orders direkt aus dem Chart registriert werden. Weitere Informationen zur Arbeit mit dem Chart finden Sie im Abschnitt [Chart](user_interface/components/chart.md).
 
 ![Terminal Quick start 01](../../images/terminal_quick_start_01.png)
 
-Durch Klicken auf die Schaltfläche **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) im Instrument-Panel fügen Sie die Instrumente hinzu, die Sie beobachten möchten. Hier werden die besten Preisdaten angezeigt. Weitere Informationen zur Arbeit mit dem Instrument-Panel finden Sie im Abschnitt [Instrumente](user_interface/components/instruments.md).
+Durch Klicken auf die Schaltfläche **Hinzufügen** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) im Instrumente-Panel fügen Sie die Instrumente hinzu, die Sie beobachten möchten. Hier werden die besten Preisdaten angezeigt. Weitere Informationen zur Arbeit mit dem Instrumente-Panel finden Sie im Abschnitt [Instrumente](user_interface/components/instruments.md).
 
 ![Terminal Quick start 02](../../images/terminal_quick_start_02.png)
 
-Wenn Sie im Orderbuch auf die Schaltfläche **Settings** ![Designer Schedule 01](../../images/designer_schedule_01.png) klicken, erscheint ein Panel, in dem Sie das **Instrument** und das **Portfolio** für Trades angeben können. Hier können Sie außerdem die Tiefe des Orderbuchs anpassen. Weitere Informationen zur Arbeit mit einem Orderbuch finden Sie im Abschnitt [Orderbuch](user_interface/components/order_book.md).
+Wenn Sie im Orderbuch auf die Schaltfläche **Einstellungen** ![Designer Schedule 01](../../images/designer_schedule_01.png) klicken, erscheint ein Panel, in dem Sie das **Instrument** und das **Portfolio** für Trades angeben können. Hier können Sie außerdem die Tiefe des Orderbuchs anpassen. Weitere Informationen zur Arbeit mit einem Orderbuch finden Sie im Abschnitt [Orderbuch](user_interface/components/order_book.md).
 
 ![Terminal Quick start 03](../../images/terminal_quick_start_03.png)
 
-Registrieren wir die ersten Orders. Orders können entweder über die Schaltflächen **Kaufen/Verkaufen** oder durch Klicken auf die Zellen in den Spalten **Bid/Offer** des Orderbuchs registriert werden. Das Order-Panel zeigt alle Ihre Orders an. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order senden, die ausgewählte Order stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Order-Panel finden Sie im Abschnitt [Orders](user_interface/components/orders.md).
+Registrieren wir die ersten Orders. Orders können entweder über die Schaltflächen **Kaufen/Verkaufen** oder durch Klicken auf die Zellen in den Spalten **Geld/Brief** des Orderbuchs registriert werden. Das Order-Panel zeigt alle Ihre Orders an. Wenn Sie mit der rechten Maustaste auf eine Order klicken, erscheint ein Panel, über das Sie eine neue Order senden, die ausgewählte Order stornieren oder ändern können. Weitere Informationen zur Arbeit mit dem Order-Panel finden Sie im Abschnitt [Orders](user_interface/components/orders.md).
 
 ![Terminal Quick start 04](../../images/terminal_quick_start_04.png)
 

@@ -29,6 +29,5 @@ Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eint
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Preview**.![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
-4. Klicken Sie auf die Schaltfläche **Import**.
-
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
+4. Klicken Sie auf die Schaltfläche **Importieren**.

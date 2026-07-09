@@ -2,11 +2,11 @@
 
 [Designer](../../designer.md) ermöglicht das Ausführen erstellter Strategien im Modus **Simulation**. Um die **Simulation** anzupassen, führen Sie die folgenden Schritte aus:
 
-1. Wenn Sie auf den Pfeil neben der Schaltfläche **Connect** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png) klicken, erscheint die Schaltfläche **Emulator settings**:
+1. Wenn Sie auf den Pfeil neben der Schaltfläche **Verbinden** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png) klicken, erscheint die Schaltfläche **Emulatoreinstellungen**:
 
 ![Designer The connection settings 00](../../../images/designer_connection_settings_00.png)
 
-2. Wenn Sie auf die Schaltfläche **Emulator settings** klicken, öffnet sich das Fenster **Emulator settings**:
+2. Wenn Sie auf die Schaltfläche **Emulatoreinstellungen** klicken, öffnet sich das Fenster **Emulatoreinstellungen**:
 
 ![Designer Properties emulation 00](../../../images/designer_properties_emulation_00.png)
 
@@ -15,7 +15,7 @@
 - **Use emulator** - Emulator verwenden.
 - **Instruments** - Instrumente.
 
-2. **Settings**
+2. **Einstellungen**
 
 - **Combine on touch** - Während der Emulation Trades zusammenführen, wenn der Trade-Preis den Orderpreis berührt, also dem Orderpreis entspricht.
 - **Market depth (lifetime)** - Maximale Zeit, während der sich das Orderbuch im Emulator befindet. Wenn in dieser Zeit kein Update erfolgt, wird das Orderbuch gelöscht. Diese Eigenschaft kann verwendet werden, um alte Orderbücher zu entfernen, wenn Datenlücken vorhanden sind.
@@ -38,4 +38,3 @@
 ## Empfohlene Inhalte
 
 [Chart](../user_interface/components/chart.md)
-

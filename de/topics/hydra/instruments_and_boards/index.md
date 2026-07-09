@@ -2,7 +2,7 @@
 
 Mit [Hydra](../../hydra.md) können Sie einen eigenen Index erstellen.
 
-Wählen Sie auf der Registerkarte **Common** den Punkt **Securities**, sodass die Registerkarte **All Securities** angezeigt wird.
+Wählen Sie auf der Registerkarte **Allgemein** den Punkt **Instrumente**, sodass die Registerkarte **Alle Instrumente** angezeigt wird.
 
 Pruefen Sie vor dem Erstellen des **Index**, welche Marktdaten verfügbar sind. Wählen Sie den Pfad aus, in dem die Daten gespeichert sind, und betrachten Sie nacheinander die Instrumente, die in die Berechnung des Index eingehen sollen. Wenn Luecken vorhanden sind, laden Sie die erforderlichen Marktdaten aus einer unterstuetzten Datenquelle herunter.
 
@@ -32,7 +32,7 @@ Als Beispiel betrachten wir den Instrumentenverhaeltnis-Index AAPL@NYSE\/GOOG@NY
    - **tan(a)** - Gibt den Tangens des angegebenen Winkels zurück.
    - **truncate(a)** - Berechnet den ganzzahligen Anteil der angegebenen Zahl.
 4. Geben Sie die mathematische Operation ein, mit der der Index berechnet werden soll. ![hydra index sec 01](../../../images/hydra_index_sec_01.png)
-5. Klicken Sie danach auf der Registerkarte **Common** auf [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Create From:** den Wert **Composite Element** und klicken Sie dann auf ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
+5. Klicken Sie danach auf der Registerkarte **Allgemein** auf [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus:** den Wert **Zusammengesetztes Element** und klicken Sie dann auf ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
 
 Die erzeugten Daten können in die Formate Excel, XML oder TXT exportiert werden. Der Export erfolgt über die Dropdown-Liste.
 

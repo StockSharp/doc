@@ -16,7 +16,7 @@ Beim Export in Textdateien (txt) erscheint ein Fenster, in dem Sie die Exportvor
 
 Hier werden in geschweiften Klammern die zu exportierenden Eigenschaften und deren Reihenfolge angegeben, getrennt durch Semikolons.
 
-Durch Klicken auf die Schaltfläche **Preview** können Sie sehen, welche Daten in der Datei gespeichert werden.
+Durch Klicken auf die Schaltfläche **Vorschau** können Sie sehen, welche Daten in der Datei gespeichert werden.
 
 ![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
 

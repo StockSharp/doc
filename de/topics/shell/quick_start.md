@@ -6,7 +6,7 @@ Wenn Sie das Projekt [Shell](../shell.md) starten, zeigt der Solution Explorer d
 
 ![Shell Quick start 00](../../images/shell_quick_start_00.png)
 
-Der Ordner **Strategies** enthält drei in [Shell](../shell.md) enthaltene Strategien, eine Shell für Standardstrategien sowie einige Hilfsschnittstellen.
+Der Ordner **Strategien** enthält drei in [Shell](../shell.md) enthaltene Strategien, eine Shell für Standardstrategien sowie einige Hilfsschnittstellen.
 
 Das Projekt kann ohne vorherige Vorbereitung gestartet werden, um zu sehen, wie es mit den bereits in [Shell](../shell.md) enthaltenen Strategien arbeitet.
 
@@ -18,17 +18,17 @@ Die Verbindungseinstellungen und Verbindungsschaltflächen sowie die Schaltfläc
 
 Öffnen Sie die Verbindungseinstellungen und wählen Sie die erforderliche Verbindung aus. Wie eine Verbindung eingerichtet wird, ist unter [Verbindungseinstellungen](connections_settings.md) beschrieben.
 
-Der nächste Schritt ist die Verbindung durch Klicken auf die Schaltfläche **Connect** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
+Der nächste Schritt ist die Verbindung durch Klicken auf die Schaltfläche **Verbinden** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
 
 Nach dem Verbindungsaufbau sehen Sie auf der Registerkarte [Allgemein](user_interface/common.md) die Portfolios, Instrumente, Orders und eigenen Trades, die von der Verbindung empfangen wurden.
 
 ![Shell Quick start 02](../../images/shell_quick_start_02.png)
 
-Wechseln Sie zur Registerkarte Real-time und klicken Sie auf die Schaltfläche **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png), um eine Strategie für den Handel hinzuzufügen.
+Wechseln Sie zur Registerkarte Echtzeit und klicken Sie auf die Schaltfläche **Hinzufügen** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png), um eine Strategie für den Handel hinzuzufügen.
 
 ![Shell Quick start 03](../../images/shell_quick_start_03.png)
 
-Nachdem die Strategie hinzugefügt wurde, füllen Sie ihre Basisparameter wie **Security**, **Portfolio** usw. aus. Klicken Sie auf die Schaltfläche Start strategy, um sie zu starten.
+Nachdem die Strategie hinzugefügt wurde, füllen Sie ihre Basisparameter wie **Instrument**, **Portfolio** usw. aus. Klicken Sie auf die Schaltfläche Strategie starten, um sie zu starten.
 
 ![Shell Quick start 04](../../images/shell_quick_start_04.png)
 

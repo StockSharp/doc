@@ -6,7 +6,7 @@ Die Komponente „Modify Position“ wird verwendet, um eine Handelsposition anh
 
 ## Eingabe-Sockets
 
-- **Security**: Das Instrument, dessen Position geändert wird.
+- **Instrument**: Das Instrument, dessen Position geändert wird.
 - **Trigger**: Signal zum Aktivieren der Positionsänderung.
 - **Portfolio**: Das Portfolio, in dem der Vorgang ausgeführt wird.
 - **Volume** (optional): Das Volumen für die Vorgänge „Increase“ und „Decrease“. Wird für „Reverse“ und „Close Position“ nicht verwendet.

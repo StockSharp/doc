@@ -1,6 +1,6 @@
 # Benutzeroberfläche
 
-Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus, deren Schema auf der Historie getestet werden soll. Die Strategie wird im Panel [Schemas](../user_interface/schemas.md) im Strategieordner durch Doppelklick auf die gewünschte Strategie ausgewählt. Wenn Sie eine Strategie für den Arbeitsbereich auswählen, erscheint ein neuer Tab mit der Strategie. Beim Wechsel in diesen Tab wird im Ribbon automatisch der Tab **Emulation** geöffnet.
+Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus, deren Schema auf der Historie getestet werden soll. Die Strategie wird im Panel [Schemata](../user_interface/schemas.md) im Strategieordner durch Doppelklick auf die gewünschte Strategie ausgewählt. Wenn Sie eine Strategie für den Arbeitsbereich auswählen, erscheint ein neuer Tab mit der Strategie. Beim Wechsel in diesen Tab wird im Menüband automatisch der Tab **Emulation** geöffnet.
 
 ![Designer Interface Backtesting 00](../../../images/designer_interface_backtesting_00.png)
 
@@ -10,9 +10,9 @@ Um den Test auf historischen Daten auszuführen, geben Sie im **Emulation tab** 
 
 Der ausgewählte Strategietab enthält standardmäßig die folgenden Panels:
 
-- Das Panel **Scheme**, in dem der Hauptarbeitsprozess für die Gestaltung der Strategie und ihrer Komponenten durch Kombinieren von Würfeln und Verbindungslinien ausgeführt wird. Das Schema wird im Abschnitt [Diagram panel](../strategies/using_visual_designer/diagram_panel.md) ausführlich beschrieben.
-- Das Panel mit Informationselementen, das **Chart**, **Orders**, **Trades**, **Statistics** und weitere Komponenten enthält. Sie können die benötigte Komponente hinzufügen, indem Sie sie im Tab **Emulation** in der Gruppe **Components** auswählen.
-- Das Panel **Properties** ist standardmäßig rechts im Strategietab eingeklappt. Im Panel **Properties** können Sie die allgemeinen **Emulation**-Einstellungen festlegen. Beispielsweise kann das **Market-data storage format** je nach Dateiformat des ausgewählten Speichers auf **BIN** oder **CSV** gesetzt werden. Der Datentyp kann Ticks oder Candles sein. Wenn Ticks ausgewählt ist, werden Kerzen aus den Ticks gebildet, die in den [Backtesting-Einstellungen](../user_interface/components/backtesting_settings.md) angegeben sind.
+- Das Panel **Schema**, in dem der Hauptarbeitsprozess für die Gestaltung der Strategie und ihrer Komponenten durch Kombinieren von Würfeln und Verbindungslinien ausgeführt wird. Das Schema wird im Abschnitt [Diagramm-Panel](../strategies/using_visual_designer/diagram_panel.md) ausführlich beschrieben.
+- Das Panel mit Informationselementen, das **Chart**, **Orders**, **Trades**, **Statistik** und weitere Komponenten enthält. Sie können die benötigte Komponente hinzufügen, indem Sie sie im Tab **Emulation** in der Gruppe **Komponenten** auswählen.
+- Das Panel **Eigenschaften** ist standardmäßig rechts im Strategietab eingeklappt. Im Panel **Eigenschaften** können Sie die allgemeinen **Emulation**-Einstellungen festlegen. Beispielsweise kann das **Marktdatenspeicherformat** je nach Dateiformat des ausgewählten Speichers auf **BIN** oder **CSV** gesetzt werden. Der Datentyp kann Ticks oder Candles sein. Wenn Ticks ausgewählt ist, werden Kerzen aus den Ticks gebildet, die in den [Backtesting-Einstellungen](../user_interface/components/backtesting_settings.md) angegeben sind.
 
 ## Empfohlene Inhalte
 

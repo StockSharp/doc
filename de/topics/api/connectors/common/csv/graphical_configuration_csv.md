@@ -4,7 +4,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
 
-- **Settings** - Import-Einstellungen
+- **Einstellungen** - Import-Einstellungen
 - **Reconnection settings** - Mechanismus zur Überwachung der Verbindung mit dem Handelssystem. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
 - **Heartbeat** - Intervall der Serverüberprüfung, um sicherzustellen, dass die Verbindung aktiv ist. Standardmäßig beträgt es 1 Minute.
 

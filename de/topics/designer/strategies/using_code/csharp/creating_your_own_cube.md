@@ -2,7 +2,7 @@
 
 Ähnlich wie beim Erstellen eines [Würfels aus einem Diagramm](../../using_visual_designer/composite_elements.md) können Sie einen eigenen Würfel auf Basis von C#-Code erstellen. Ein solcher Würfel ist funktionaler als ein Würfel aus einem Diagramm.
 
-Um einen Würfel aus Code zu erstellen, muss er im Ordner **Own elements** erstellt werden:
+Um einen Würfel aus Code zu erstellen, muss er im Ordner **Eigene Elemente** erstellt werden:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -116,7 +116,7 @@ Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramEx
 
 Wenn die Auskommentierung entfernt wird, wird die Methode **Process** immer aufgerufen, sobald mindestens ein Wert eintrifft. Im Beispiel ist dies entweder eine Kerze oder ein numerischer Wert.
 
-Um den resultierenden Würfel zum Diagramm hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Own elements** aus:
+Um den resultierenden Würfel zum Diagramm hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Eigene Elemente** aus:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 

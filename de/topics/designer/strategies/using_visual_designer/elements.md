@@ -1,6 +1,6 @@
 # Elemente
 
-In jedem Würfel wird ein Symbol angezeigt, das ihn charakterisiert, sowie ein Name, der im Panel **Properties** in einen benutzerdefinierten Namen geändert werden kann. Ein Tooltip für den Würfel zeigt eine Beschreibung, wofür dieser Würfel vorgesehen ist. Wenn Sie einen Würfel mit der Maus auswählen, können Sie seine Eigenschaften im Panel **Properties** anzeigen und bei Bedarf einige Parameter ändern.
+In jedem Würfel wird ein Symbol angezeigt, das ihn charakterisiert, sowie ein Name, der im Panel **Eigenschaften** in einen benutzerdefinierten Namen geändert werden kann. Ein Tooltip für den Würfel zeigt eine Beschreibung, wofür dieser Würfel vorgesehen ist. Wenn Sie einen Würfel mit der Maus auswählen, können Sie seine Eigenschaften im Panel **Eigenschaften** anzeigen und bei Bedarf einige Parameter ändern.
 
 ![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
 

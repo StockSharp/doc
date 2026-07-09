@@ -1,6 +1,6 @@
 # Erste Schritte
 
-Um einen Speicher für historische Daten zu erstellen, klicken Sie im Tab **Market data** auf die Schaltfläche ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png). Klicken Sie auf ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png), um die aktuellen Speicherparameter zu ändern. Klicken Sie auf ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png), um den aktuellen Speicher aus der Liste der Speicher zu löschen.
+Um einen Speicher für historische Daten zu erstellen, klicken Sie im Tab **Marktdaten** auf die Schaltfläche ![Designer Creating a repository of historical data 00](../../../images/designer_creating_repository_of_historical_data_00.png). Klicken Sie auf ![Designer Creating a repository of historical data 01](../../../images/designer_creating_repository_of_historical_data_01.png), um die aktuellen Speicherparameter zu ändern. Klicken Sie auf ![Designer Creating a repository of historical data 02](../../../images/designer_creating_repository_of_historical_data_02.png), um den aktuellen Speicher aus der Liste der Speicher zu löschen.
 
 ![Designer Creating a repository of historical data 03](../../../images/designer_creating_repository_of_historical_data_03.png)
 
@@ -18,7 +18,7 @@ Erstellen Sie danach in [Designer](../../designer.md) einen neuen Speicher, inde
 
 ![Designer Creating a repository of historical data 05](../../../images/designer_creating_repository_of_historical_data_05.png)
 
-Nachdem ein neuer Speicher hinzugefügt wurde, kann er in der Dropdown-Liste **Storage** ausgewählt werden.
+Nachdem ein neuer Speicher hinzugefügt wurde, kann er in der Dropdown-Liste **Speicher** ausgewählt werden.
 
 ![Designer Creating a repository of historical data 06](../../../images/designer_creating_repository_of_historical_data_06.png)
 
@@ -27,4 +27,3 @@ Außerdem müssen Sie das Format der Speicherdateien auswählen: BIN oder CSV. D
 ## Empfohlene Inhalte
 
 [Instrumente herunterladen](download_instruments.md)
-

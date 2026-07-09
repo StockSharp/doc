@@ -2,7 +2,7 @@
 
 Um ein Instrument zu bearbeiten, zum Beispiel wenn es ohne alle erforderlichen Daten erstellt wurde, doppelklicken Sie auf das Instrument oder klicken Sie auf die Schaltfläche ![hydra edit](../../../images/hydra_edit.png), um das Fenster zu öffnen, in dem Sie die notwendigen Aenderungen vornehmen können:
 
-Wechseln Sie zum Fenster **Securities**.
+Wechseln Sie zum Fenster **Instrumente**.
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 

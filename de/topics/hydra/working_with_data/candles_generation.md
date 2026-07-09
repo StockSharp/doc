@@ -6,7 +6,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
 ## Prozess der Kerzenerzeugung
 
-1. Klicken Sie auf der Registerkarte **General** auf die Schaltfläche **Candles**. Das folgende Fenster wird geöffnet:
+1. Klicken Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Kerzen**. Das folgende Fenster wird geöffnet:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
@@ -44,7 +44,7 @@ Um Volume-Kerzen zu erzeugen:
 1. Wählen Sie den Kerzentyp [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
 2. Geben Sie das Volumen an, zum Beispiel 100.
 3. Wählen Sie das Instrument aus.
-4. Wählen Sie im Feld **Build from** den Wert **Ticks**.
+4. Wählen Sie im Feld **Erstellen aus** den Wert **Ticks**.
 5. Klicken Sie auf die Suchschaltflaeche.
 
 Ergebnis der Erzeugung:
@@ -53,7 +53,7 @@ Ergebnis der Erzeugung:
 
 ## Datenquellen für die Kerzenerstellung
 
-Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Sie Kerzen erzeugen, indem Sie im Feld [**Build from**](any_market_data_types.md) den Datentyp auswählen, aus dem sie erstellt werden:
+Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Sie Kerzen erzeugen, indem Sie im Feld [**Erstellen aus**](any_market_data_types.md) den Datentyp auswählen, aus dem sie erstellt werden:
 
 - **Ticks** - Kerzen aus Tick-Daten erstellen.
 - **Order Books** - Kerzen aus Order-Book-Daten erstellen.
@@ -71,7 +71,7 @@ Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Si
   ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
-> Wenn Sie im Feld **Build from** den Wert **don't build** auswählen, werden nur fertige Kerzen gesucht, die direkt über die Datenquelle heruntergeladen wurden.
+> Wenn Sie im Feld **Erstellen aus** den Wert **nicht erstellen** auswählen, werden nur fertige Kerzen gesucht, die direkt über die Datenquelle heruntergeladen wurden.
 
 ## Visualisierung erzeugter Kerzen
 
@@ -89,7 +89,7 @@ Zur grafischen Anzeige erzeugter Kerzen:
 Technische Indikatoren können zum Kerzenchart hinzugefügt werden:
 
 1. Öffnen Sie das Kontextmenue durch Rechtsklick auf das Chartpanel.
-2. Wählen Sie den Eintrag **Indicator** und den gewünschten Indikator aus der Liste aus.
+2. Wählen Sie den Eintrag **Indikator** und den gewünschten Indikator aus der Liste aus.
 3. Um den Indikator in einem separaten Panel anzuzeigen:
    - Fügen Sie über die Schaltfläche ![hydra add](../../../images/hydra_add.png) ein neues Panel hinzu.
    - Wählen Sie den gewünschten Indikator im Kontextmenue aus.

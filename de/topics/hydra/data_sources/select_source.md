@@ -2,8 +2,8 @@
 
 Um eine neue Marktdatenquelle hinzuzufügen, gehen Sie wie folgt vor:
 
-- Zur Registerkarte **Common** wechseln
-- **Add** auswählen
+- Zur Registerkarte **Allgemein** wechseln
+- **Hinzufügen** auswählen
 - **Sources** auswählen
 
 ![hydra source choose](../../../images/hydra_source_choose.png)
@@ -16,11 +16,11 @@ Sie können auch mehrere Instanzen derselben Quelle erstellen. Zum Beispiel mehr
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-Damit die Quelle nach dem Klicken auf die Schaltfläche **Start** mit dem Herunterladen von Daten beginnt, muss sie aktiviert sein. Wählen Sie dazu das Quellensymbol im linken Panel aus und schalten Sie es mit der Schaltfläche ![hydra source on off](../../../images/hydra_source_on_off.png) ein oder aus. Diese Operation kann vor oder nach dem Hinzufügen von Instrumenten für den Download ausgeführt werden.
+Damit die Quelle nach dem Klicken auf die Schaltfläche **Starten** mit dem Herunterladen von Daten beginnt, muss sie aktiviert sein. Wählen Sie dazu das Quellensymbol im linken Panel aus und schalten Sie es mit der Schaltfläche ![hydra source on off](../../../images/hydra_source_on_off.png) ein oder aus. Diese Operation kann vor oder nach dem Hinzufügen von Instrumenten für den Download ausgeführt werden.
 
 Nicht benötigte Quellen können mit der Schaltfläche ![hydra delete](../../../images/hydra_delete.png) gelöscht werden.
 
-Die Einstellungen einer Quelle können im Panel **Properties** auf der rechten Seite geändert werden.
+Die Einstellungen einer Quelle können im Panel **Eigenschaften** auf der rechten Seite geändert werden.
 
 ![hydra setting source button](../../../images/hydra_setting_source_button.png)
 

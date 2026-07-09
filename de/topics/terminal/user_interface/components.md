@@ -1,6 +1,6 @@
 # Komponenten
 
-Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrollieren. Für umfassende Kontrolle und Analyse stellt **Terminal** grafische Komponenten bereit, die Sie hinzufügen können, indem Sie sie in der Gruppe **Components** des **Ribbon** auswählen:
+Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrollieren. Für umfassende Kontrolle und Analyse stellt **Terminal** grafische Komponenten bereit, die Sie hinzufügen können, indem Sie sie in der Gruppe **Komponenten** des **Menübands** auswählen:
 
 ![Designer Components](../../../images/designer_components.png)
 

@@ -6,21 +6,21 @@ Mit dem Programm [Installer](../installer.md) können Sie den Anwendungstyp ausw
 
 Um die gewünschte Anwendung zu installieren, gehen Sie wie folgt vor:
 
-1. Wählen Sie eine Anwendung aus, klicken Sie auf **Install**, akzeptieren Sie die Lizenzvereinbarung und klicken Sie auf **Continue**.![download installer](../../images/download_installer.png)
+1. Wählen Sie eine Anwendung aus, klicken Sie auf **Installieren**, akzeptieren Sie die Lizenzvereinbarung und klicken Sie auf **Fortfahren**.![download installer](../../images/download_installer.png)
 2. Danach müssen Sie den Installationspfad auswählen.
 
    **WICHTIG\!** Der Ordner, in den das Programm installiert wird, muss leer sein.
 
-   Klicken Sie auf **Continue**.![direction installer](../../images/direction_installer.png)
-3. Wählen Sie **Run** und warten Sie, bis die Installation abgeschlossen ist.
+   Klicken Sie auf **Fortfahren**.![direction installer](../../images/direction_installer.png)
+3. Wählen Sie **Ausführen** und warten Sie, bis die Installation abgeschlossen ist.
 
 Nach Abschluss der Installation ist das Programm einsatzbereit.
 
-Um das Programm zu deinstallieren, wählen Sie **Uninstall** und klicken Sie auf die Schaltfläche **Continue**.
+Um das Programm zu deinstallieren, wählen Sie **Deinstallieren** und klicken Sie auf die Schaltfläche **Fortfahren**.
 
 ![del installer](../../images/del_installer.png)
 
-Zur Wiederherstellung wählen Sie **Restore** und klicken Sie auf **Continue**.
+Zur Wiederherstellung wählen Sie **Wiederherstellen** und klicken Sie auf **Fortfahren**.
 
 ![repair installer](../../images/repair_installer.png)
 

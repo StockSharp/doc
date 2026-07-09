@@ -6,7 +6,7 @@ Für die Verbindung wird eine spezielle Quelle verwendet:
 
 ![hydra tasks server](../../../images/hydratasksserver_1.png)
 
-**Settings**
+**Einstellungen**
 
 ![hydra tasks server](../../../images/hydratasksserver_2.png)
 

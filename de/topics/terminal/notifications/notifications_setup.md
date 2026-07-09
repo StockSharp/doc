@@ -8,10 +8,10 @@ Benachrichtigungen können für Änderungen der folgenden Datentypen konfigurier
 
 Benachrichtigungen können folgende Formen haben:
 
-- **Window** – ein kleines Popup-Fenster mit einer Nachricht wird in der Bildschirmecke angezeigt.
-- **Melody** – eine Melodie wird abgespielt.
+- **Fenster** – ein kleines Popup-Fenster mit einer Nachricht wird in der Bildschirmecke angezeigt.
+- **Melodie** – eine Melodie wird abgespielt.
 - **SMS** – eine Nachricht wird per SMS gesendet.
 - **Email** – die Nachricht wird per E-Mail gesendet.
-- **Speech** – die Nachricht wird von einer computergenerierten Stimme vorgelesen.
-- **Log** – die Nachricht wird an das Fenster Designer Logs gesendet.
-- **Off** – die Benachrichtigung wird nicht angezeigt.
+- **Sprachausgabe** – die Nachricht wird von einer computergenerierten Stimme vorgelesen.
+- **Protokoll** – die Nachricht wird an das Fenster Designer-Protokolle gesendet.
+- **Aus** – die Benachrichtigung wird nicht angezeigt.

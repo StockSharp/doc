@@ -2,11 +2,11 @@
 
 Als Beispiel wird die SMA-Strategie betrachtet.
 
-Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus, deren Schema auf der Historie getestet werden soll. Die Strategie wird im Panel [Schemas](../user_interface/schemas.md) im Strategieordner durch Doppelklick auf die gewünschte Strategie ausgewählt.
+Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus, deren Schema auf der Historie getestet werden soll. Die Strategie wird im Panel [Schemata](../user_interface/schemas.md) im Strategieordner durch Doppelklick auf die gewünschte Strategie ausgewählt.
 
 Laden Sie vor dem Testing Marktdaten (Instrumente, Kerzen, Tick-Trades und/oder Orderbücher). Dies wird im Abschnitt [Marktdatenspeicher](../market_data_storage.md) beschrieben.
 
-Beim Wechsel in den Tab mit der Strategie wird im **Ribbon** automatisch der Tab **Emulation** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest. Geben Sie im Marktdatenfeld den erforderlichen Speicher an ([Marktdatenspeicher](../market_data_storage.md)); geben Sie im Instrumentfeld das erforderliche Instrument an.
+Beim Wechsel in den Tab mit der Strategie wird im **Menüband** automatisch der Tab **Emulation** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest. Geben Sie im Marktdatenfeld den erforderlichen Speicher an ([Marktdatenspeicher](../market_data_storage.md)); geben Sie im Instrumentfeld das erforderliche Instrument an.
 
 Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 
@@ -45,4 +45,3 @@ Der **P\/L**-Chart zeigt, dass die Strategie mit diesen Parametern unprofitabel 
 ## Empfohlene Inhalte
 
 [Live-Ausführung](../live_execution/getting_started.md)
-

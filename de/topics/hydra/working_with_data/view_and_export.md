@@ -13,7 +13,7 @@ Jedes Panel enthält eine allgemeine Oberfläche mit folgenden Einstellungen:
 ![hydra export 00](../../../images/hydra_export_00.png)
 
 - Die obere Zeile zeigt den Marktdatenspeicher und dessen Format an (BIN oder CSV).
-- In der unteren Zeile wird der Zeitraum festgelegt, für den die Daten angefordert werden. Wenn Sie auf die Schaltfläche **Select security** klicken, erscheint das Fenster zur Instrumentauswahl, in dem Sie ein oder mehrere Instrumente auswählen können. Werden mehrere Instrumente ausgewählt, sortiert das Programm beim anschließenden Export nach Excel oder CSV die Daten der verschiedenen Instrumente automatisch in unterschiedliche Dateien.
+- In der unteren Zeile wird der Zeitraum festgelegt, für den die Daten angefordert werden. Wenn Sie auf die Schaltfläche **Instrument auswählen** klicken, erscheint das Fenster zur Instrumentauswahl, in dem Sie ein oder mehrere Instrumente auswählen können. Werden mehrere Instrumente ausgewählt, sortiert das Programm beim anschließenden Export nach Excel oder CSV die Daten der verschiedenen Instrumente automatisch in unterschiedliche Dateien.
 - Wenn beim Erstellen einer Datentabelle die Menge der geladenen Daten das festgelegte Limit überschreitet, erscheint auf dem Bildschirm ein Fenster:![hydra tick limit](../../../images/hydra_tick_limit.png)
 
   In diesem Fall müssen Sie das Limit für geladene Daten erhöhen.

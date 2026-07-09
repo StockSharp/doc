@@ -4,11 +4,11 @@ Die Komponente **Conditional orders** ist eine Tabelle mit Orders, die vollstän
 
 ![Terminal Orders conditional panel 01](../../../../images/terminal_orders_conditional_panel_01.png)
 
-Wenn Sie auf die Schaltfläche **Order Registration** klicken, erscheint ein Fenster. Um eine neue bedingte Order zu registrieren, füllen Sie es aus und klicken Sie auf **Send**.
+Wenn Sie auf die Schaltfläche **Orderregistrierung** klicken, erscheint ein Fenster. Um eine neue bedingte Order zu registrieren, füllen Sie es aus und klicken Sie auf **Senden**.
 
 ![Terminal Orders conditional panel 02](../../../../images/terminal_orders_conditional_panel_02.png)
 
-Wenn Sie auf die Schaltfläche **Change Order** klicken, erscheint ein Fenster. Um die bedingte Order zu ändern, nehmen Sie die erforderlichen Änderungen vor und klicken Sie auf **Send**.
+Wenn Sie auf die Schaltfläche **Order ändern** klicken, erscheint ein Fenster. Um die bedingte Order zu ändern, nehmen Sie die erforderlichen Änderungen vor und klicken Sie auf **Senden**.
 
 ![Terminal Orders conditional panel 03](../../../../images/terminal_orders_conditional_panel_03.png)
 

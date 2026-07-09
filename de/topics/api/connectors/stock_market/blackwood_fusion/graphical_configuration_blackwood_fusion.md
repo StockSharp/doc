@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 - **Login** - Login.
 - **Password** - Password.
-- **Market data** - Adresse des Marktdatenservers.
+- **Marktdaten** - Adresse des Marktdatenservers.
 - **History** - Adresse des Servers für historische Daten.
 - **Transactions** - Serveradresse für die Ausführung von Transaktionen.
 - **Path to logs** - Pfad zum Verzeichnis, in dem die Datei BWOrders.Log erstellt wird.

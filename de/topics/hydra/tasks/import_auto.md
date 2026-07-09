@@ -14,7 +14,7 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 
 **Import (auto)**
 
-**Settings**
+**Einstellungen**
 
 - **Data type** - Typ der importierten Daten.
 - **Filename** - vollstaendiger Pfad zur Datei.

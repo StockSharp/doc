@@ -47,6 +47,5 @@ Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **
    - **Zero** - In einigen Fällen können beim Speichern von Daten einzelne Dateneigenschaften als "0" gespeichert werden, was ein Fehler ist. Beispielsweise kann der Preiswert aus verschiedenen Gründen 0 sein, was unzulässig ist und später zu einem fehlerhaften Lesen führt. Dies kann zu fehlerhafter Strategieausfuhrung bei Strategien führen, die mit diesen Daten arbeiten, und folglich zu einem falschen Ergebnis. Durch Aktivieren des Kontrollkästchens gibt der Benutzer an, dass Daten in diesem Abschnitt, wenn sie 0 entsprechen, als leer geschrieben werden, also fehlen. Bei der weiteren Arbeit, zum Beispiel beim Testen, sieht der Benutzer einen Fehler wegen fehlender Daten, der auf einen fehlerhaften Datenimport hinweist. Tatsächlich ist dies ein Schutz des Benutzers vor "defekten" Daten für eine korrektere Arbeit.
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Preview**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
-4. Klicken Sie auf die Schaltfläche **Import**.
-
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
+4. Klicken Sie auf die Schaltfläche **Importieren**.

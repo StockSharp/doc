@@ -1,6 +1,6 @@
 # Erster Start
 
-Beim ersten Start erscheint das folgende Fenster zur Auswahl von Datenquellen. Sie können dieses Fenster auch auf der Registerkarte **Common** öffnen, indem Sie **Add \=\> Sources** auswählen.
+Beim ersten Start erscheint das folgende Fenster zur Auswahl von Datenquellen. Sie können dieses Fenster auch auf der Registerkarte **Allgemein** öffnen, indem Sie **Hinzufügen \=\> Quellen** auswählen.
 
 ![hydra source add](../../images/hydra_source_add.png)
 
@@ -29,11 +29,11 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstutzten Datenq
 
    Beim ersten Start bietet das Programm an, alle Instrumente für die ausgewählte Quelle auf einmal herunterzuladen. Danach lädt der Benutzer die Instrumente selbst herunter. Anfänglich ist die Instrumentendatenbank in [Hydra](../hydra.md) leer; es gibt nur das Hilfsinstrument **ALL@ALL**. Wenn dieses Instrument ausgewählt ist, werden Daten für alle für diese Quelle verfügbaren Instrumente heruntergeladen.
 
-   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Add** ![hydra add](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![hydra securities](../../images/hydra_securities.png)
+   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![hydra add](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![hydra securities](../../images/hydra_securities.png)
 
-   Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Download securities**.
+   Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Instrumente herunterladen**.
 
-   Danach erscheint auf dem Bildschirm ein Menü, in dem der Benutzer **Download all securities** auswählen kann.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Danach erscheint auf dem Bildschirm ein Menü, in dem der Benutzer **Alle Instrumente herunterladen** auswählen kann.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
 
    Oder Sie können für eine Reihe von Quellen die Instrumente [konfigurieren](prepare_for_download/instruments_list.md), die heruntergeladen werden sollen.
 
@@ -45,7 +45,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstutzten Datenq
 
    Anschliessend wird es auf die rechte Seite der Tabelle verschoben.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
 
-   Die ausgewählten Instrumente werden in der Tabelle **Securities** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusatzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
+   Die ausgewählten Instrumente werden in der Tabelle **Instrumente** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusatzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
 2. Für jedes ausgewählte Instrument sollten Sie die Marktdatentypen auswählen, die für den Download erforderlich sind.
 
    Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![hydra zero](../../images/hydra_zero.png). ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
@@ -67,9 +67,9 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstutzten Datenq
      Diese Funktion ist praktisch, wenn die Quelle keine Daten für die Kerzendarstellung bereitstellt. In diesem Fall werden Kerzen auf Basis gemittelter Datenwerte gezeichnet.![hydra candle build type](../../images/hydra_candle_build_type.png)
 
      Der Benutzer hat ausserdem die Moglichkeit, einen [Custom type](prepare_for_download/custom_candles.md) von Kerzen auszuwählen, um die empfangenen Daten anzupassen.
-   - Nach Auswahl eines Instruments, eines Marktdatentyps und Festlegung des Zeitraums klicken Sie auf die Schaltfläche **Start**. Danach beginnt der Download der Marktdaten.
+   - Nach Auswahl eines Instruments, eines Marktdatentyps und Festlegung des Zeitraums klicken Sie auf die Schaltfläche **Starten**. Danach beginnt der Download der Marktdaten.
 
-   Der Arbeitsprozess kann auf der speziellen Registerkarte **Logs** beobachtet werden, die am unteren Rand des Programms fixiert ist. Zusätzlich werden Logs in Dateien im lokalen Ordner gespeichert.
+   Der Arbeitsprozess kann auf der speziellen Registerkarte **Protokolle** beobachtet werden, die am unteren Rand des Programms fixiert ist. Zusätzlich werden Protokolle in Dateien im lokalen Ordner gespeichert.
 
 ![hydra main start](../../images/hydra_main_start.png)
 

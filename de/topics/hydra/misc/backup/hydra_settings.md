@@ -26,7 +26,7 @@ Im Folgenden wird beschrieben, wie Sie eine Backup-Aufgabe erstellen und konfigu
    **Logging**
    - **Identifier** - die Kennung.
    - **Logging level** - der Logging-Level.
-3. Nachdem Sie die Aufgabe eingerichtet haben, fügen Sie die Instrumente hinzu, die im Backup-Speicher gespeichert werden sollen, und klicken Sie auf die Schaltfläche **Start**.
+3. Nachdem Sie die Aufgabe eingerichtet haben, fügen Sie die Instrumente hinzu, die im Backup-Speicher gespeichert werden sollen, und klicken Sie auf die Schaltfläche **Starten**.
 
 ## Empfohlene Inhalte
 

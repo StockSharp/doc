@@ -10,7 +10,7 @@ Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im obe
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
-Klicken Sie danach auf die Schaltfläche **Settings**, um das Einstellungsfenster für den Servermodus zu öffnen.
+Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsfenster für den Servermodus zu öffnen.
 
 ![hydra server](../../../images/hydra_server.png)
 
@@ -37,7 +37,7 @@ Klicken Sie danach auf die Schaltfläche **Settings**, um das Einstellungsfenste
 - **Simulator** - Simulatormodus einschalten.
 - **Security mapping** - Übertragungsmodus nur für angegebene Instrumente aktivieren.
 
-Wenn Sie **Authorization** auf einen anderen Wert als **Anonymous** setzen, erscheint auf der Registerkarte **Common** die Schaltfläche **Users**. Nach dem Klicken darauf erscheint das Fenster **Users**.
+Wenn Sie **Autorisierung** auf einen anderen Wert als **Anonym** setzen, erscheint auf der Registerkarte **Allgemein** die Schaltfläche **Benutzer**. Nach dem Klicken darauf erscheint das Fenster **Benutzer**.
 
 ![hydra users](../../../images/hydra_users.png)
 

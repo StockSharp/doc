@@ -1,6 +1,6 @@
 # Erweitertes Log-Panel
 
-[Monitor](xref:StockSharp.Xaml.Monitor) ist ein visuelles Element, in dem [LogControl](log_panel.md) zusammen mit dem hierarchischen **TreeView**-Baum verwendet wird, in dem Logquellen angezeigt werden. Ursprünglich wurde die Komponente zur Überwachung von Handelsstrategien entwickelt. Daher enthält der "Baum" standardmäßig den Knoten **Strategy**. Gleichzeitig können mit dieser Komponente auch andere Quellen verwendet werden.
+[Monitor](xref:StockSharp.Xaml.Monitor) ist ein visuelles Element, in dem [LogControl](log_panel.md) zusammen mit dem hierarchischen **TreeView**-Baum verwendet wird, in dem Logquellen angezeigt werden. Ursprünglich wurde die Komponente zur Überwachung von Handelsstrategien entwickelt. Daher enthält der "Baum" standardmäßig den Knoten **Strategie**. Gleichzeitig können mit dieser Komponente auch andere Quellen verwendet werden.
 
 ![GUI Monitor](../../../../images/gui_monitor.png)
 

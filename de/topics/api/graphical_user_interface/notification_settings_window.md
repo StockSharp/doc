@@ -8,10 +8,10 @@ Sie können Benachrichtigungen über Änderungen der folgenden Datentypen konfig
 
 Benachrichtigungen können folgende Formen haben:
 
-- **Window** - ein kleines Popup-Fenster mit einer Nachricht wird in der Bildschirmecke angezeigt.
-- **Melody** - die Melodie wird abgespielt.
+- **Fenster** - ein kleines Popup-Fenster mit einer Nachricht wird in der Bildschirmecke angezeigt.
+- **Melodie** - die Melodie wird abgespielt.
 - **SMS** - eine Nachricht wird per SMS gesendet.
 - **Email** - eine Nachricht wird per E-Mail gesendet.
-- **Speech** - eine Nachricht wird von der computergenerierten Stimme vorgelesen.
-- **Log** - eine Nachricht wird an das Fenster Designer Logs gesendet.
-- **Disabled** - eine Benachrichtigung wird nicht angezeigt.
+- **Sprachausgabe** - eine Nachricht wird von der computergenerierten Stimme vorgelesen.
+- **Protokoll** - eine Nachricht wird an das Fenster Designer-Protokolle gesendet.
+- **Deaktiviert** - eine Benachrichtigung wird nicht angezeigt.

@@ -2,7 +2,7 @@
 
 Das Erstellen eines eigenen Indikators in der [API](../../../../api.md) wird im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md) beschrieben. Solche Indikatoren sind vollständig mit **Designer** kompatibel.
 
-Um einen Indikator zu erstellen, wählen Sie im Panel **Scheme** den Ordner **Indicators** aus, klicken mit der rechten Maustaste und wählen im Kontextmenü **Add**:
+Um einen Indikator zu erstellen, wählen Sie im Panel **Schema** den Ordner **Indikatoren** aus, klicken mit der rechten Maustaste und wählen im Kontextmenü **Hinzufügen**:
 
 ![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
 

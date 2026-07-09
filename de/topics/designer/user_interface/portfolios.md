@@ -1,6 +1,6 @@
 # Portfolios
 
-Für die Arbeit mit Portfolios gibt es das Panel **Portfolios**. Sie können es öffnen, indem Sie auf der Registerkarte **Common** auf die Schaltfläche Portfolios klicken.
+Für die Arbeit mit Portfolios gibt es das Panel **Portfolios**. Sie können es öffnen, indem Sie auf der Registerkarte **Allgemein** auf die Schaltfläche Portfolios klicken.
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 

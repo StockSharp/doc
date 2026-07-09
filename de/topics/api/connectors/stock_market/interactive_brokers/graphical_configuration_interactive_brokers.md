@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 - **Address** - TWS-Adresse.
 - **Identifier** - Eindeutige ID. Wird verwendet, wenn mehrere Clients mit einem Terminal oder Gateway verbunden sind.
-- **Real-time** - Legt fest, ob Echtzeitdaten oder auf dem Brokerserver eingefrorene Daten verwendet werden.
+- **Echtzeit** - Legt fest, ob Echtzeitdaten oder auf dem Brokerserver eingefrorene Daten verwendet werden.
 - **Logging level** - Protokollierungsstufe für Servermeldungen.
 - **Market data fields** - Marktdatenfelder, die mit abonnierten Level1-Nachrichten empfangen werden.
 - **Protocol** - SSL-Protokoll zum Herstellen der Verbindung.

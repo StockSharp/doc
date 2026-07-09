@@ -18,7 +18,7 @@ Auszufüllende Felder:
 
 Zugriff auf die Stufen **Free** oder **Paid** wird erst nach Kontaktaufnahme per E-Mail an [info@stocksharp.com](mailto:info@stocksharp.com) gewährt. Standardmäßig ist die Stufe **Private** verfügbar; sie erlaubt das Veröffentlichen von Strategien nur in privatem Format (für ausgewählte Benutzer):
 
-Nach dem Klicken auf die Schaltfläche **Save** wird die Strategie an den StockSharp-Server gesendet.
+Nach dem Klicken auf die Schaltfläche **Speichern** wird die Strategie an den StockSharp-Server gesendet.
 
 Beim Veröffentlichen von Updates müssen nicht alle Parameter erneut eingegeben werden. Statt der Eingabe von Produktparametern erscheint ein Fenster zur Eingabe einer Notiz für das Update:
 
