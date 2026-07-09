@@ -233,9 +233,9 @@ bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
 IChartTradeElement trades = DrawOwnTrades(area);
 
 // 元素配置
-trades.BuyColor = System.Drawing.Color.Green;   // Color for buy trades
-trades.SellColor = System.Drawing.Color.Red;    // Color for sell trades
-trades.FullTitle = "My Strategy Trades";        // Element title
+trades.BuyColor = System.Drawing.Color.Green;   // 买入成交颜色
+trades.SellColor = System.Drawing.Color.Red;    // 卖出成交颜色
+trades.FullTitle = "我的策略成交";              // 元素标题
 ```
 
 此方法会自动设置策略执行的所有交易的显示。交易会作为标记显示在图表上，标记出交易执行的点，并考虑交易方向（买入/卖出）。
@@ -249,11 +249,11 @@ trades.FullTitle = "My Strategy Trades";        // Element title
 IChartOrderElement orders = DrawOrders(area);
 
 // 元素配置
-orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Color for active buy orders
-orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Color for active sell orders
-orders.BuyColor = System.Drawing.Color.Green;              // Color for executed buy orders
-orders.SellColor = System.Drawing.Color.Red;               // Color for executed sell orders
-orders.CancelColor = System.Drawing.Color.Gray;            // Color for canceled orders
+orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // 活跃买入订单颜色
+orders.SellPendingColor = System.Drawing.Color.DarkRed;    // 活跃卖出订单颜色
+orders.BuyColor = System.Drawing.Color.Green;              // 已成交买入订单颜色
+orders.SellColor = System.Drawing.Color.Red;               // 已成交卖出订单颜色
+orders.CancelColor = System.Drawing.Color.Gray;            // 已撤销订单颜色
 ```
 
 此方法会自动设置策略所下的所有订单的显示。订单会以其价格水平的标记显示，不同的订单状态会有不同的颜色编码。

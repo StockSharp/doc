@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// たとえばコンソールモードで実行している場合、チャートは利用できません
-		LogInfo("Chart is unavailable. Visualization disabled.");
+		LogInfo("チャートは利用できません。可視化は無効です。");
 	}
 }
 ```

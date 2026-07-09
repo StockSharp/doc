@@ -31,12 +31,12 @@ Cree un archivo `CLAUDE.md` (o `.cursorrules`) en la raíz del proyecto:
 # Reglas del proyecto
 
 - Framework: StockSharp 5.x, .NET 10
-- Strategies inherit from Strategy class
-- Subscribe to candles via Connector.Subscribe(subscription)
-- Register orders via RegisterOrder(order)
+- Las estrategias heredan de la clase Strategy
+- Suscribirse a velas mediante Connector.Subscribe(subscription)
+- Registrar órdenes mediante RegisterOrder(order)
 - Logging: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
-- Indicators: create via new and call indicator.Process(candle)
-- Always handle connector.Error and strategy errors
+- Indicadores: crearlos con new y llamar a indicator.Process(candle)
+- Gestionar siempre connector.Error y los errores de la estrategia
 ```
 
 ## Ejemplo paso a paso: estrategia SMA
@@ -46,15 +46,15 @@ Cree un archivo `CLAUDE.md` (o `.cursorrules`) en la raíz del proyecto:
 Ejemplo de prompt:
 
 ```
-Create a trading strategy using StockSharp that:
-- Inherits from Strategy
-- Uses two simple moving averages (SMA): fast (period 10) and slow (period 30)
-- When the fast SMA crosses above the slow SMA — buy
-- When the fast SMA crosses below the slow SMA — sell
-- Position size: 1 lot
-- Uses 5-minute candles
-- Subscribes to candles in OnStarted()
-- Processes candles via subscription rules
+Cree una estrategia de trading con StockSharp que:
+- herede de Strategy
+- use dos medias móviles simples (SMA): fast (periodo 10) y slow (periodo 30)
+- compre cuando la SMA rápida cruza por encima de la SMA lenta
+- venda cuando la SMA rápida cruza por debajo de la SMA lenta
+- tamaño de posición: 1 lote
+- use velas de 5 minutos
+- se suscriba a las velas en OnStarted()
+- procese las velas mediante reglas de suscripción
 ```
 
 ### Paso 2: Revise el código generado
@@ -180,36 +180,36 @@ and output summary statistics (PnL, trade count, max drawdown).
 ### Estrategia de bandas de Bollinger
 
 ```
-Create a StockSharp strategy that trades using Bollinger Bands:
-- Buy when price touches the lower band
-- Sell when price touches the upper band
-- Period 20, multiplier 2.0
-- Stop-loss: 1% from entry price
-- Take-profit: 2% from entry price
-- Use StrategyParam for all parameters
+Cree una estrategia StockSharp que opere con Bandas de Bollinger:
+- comprar cuando el precio toca la banda inferior
+- vender cuando el precio toca la banda superior
+- periodo 20, multiplicador 2,0
+- stop-loss: 1 % desde el precio de entrada
+- take-profit: 2 % desde el precio de entrada
+- usar StrategyParam para todos los parámetros
 ```
 
 ### Estrategia de arbitraje
 
 ```
-Create a pairs arbitrage strategy on StockSharp:
-- Two instruments (specified via parameters)
-- Calculate the spread between prices
-- Enter when spread deviates by 2 standard deviations
-- Exit when spread returns to the mean
-- Volume neutralization (equal positions in monetary terms)
+Cree una estrategia de arbitraje de pares en StockSharp:
+- dos instrumentos (especificados mediante parámetros)
+- calcular el spread entre los precios
+- entrar cuando el spread se desvíe 2 desviaciones estándar
+- salir cuando el spread vuelva a la media
+- neutralización de volumen (posiciones equivalentes en términos monetarios)
 ```
 
 ### Scalping con libro de órdenes
 
 ```
-Create a scalping strategy on StockSharp:
-- Subscribe to order book (MarketDepth) via Subscribe
-- Analyze bid/ask imbalance
-- Enter on strong imbalance (> 3:1)
-- Quick exit on take-profit (5 ticks)
-- Stop-loss: 3 ticks
-- Maximum 1 position at a time
+Cree una estrategia de scalping en StockSharp:
+- suscribirse al libro de órdenes (MarketDepth) mediante Subscribe
+- analizar el desequilibrio bid/ask
+- entrar con un desequilibrio fuerte (> 3:1)
+- salida rápida por take-profit (5 ticks)
+- stop-loss: 3 ticks
+- máximo 1 posición a la vez
 ```
 
 ## Errores comunes de la IA

@@ -31,13 +31,13 @@ dotnet add package StockSharp.Binance
 ```markdown
 # 项目规则
 
-- Framework: StockSharp 5.x, .NET 10
-- Strategies inherit from Strategy class
-- Subscribe to candles via Connector.Subscribe(subscription)
-- Register orders via RegisterOrder(order)
-- Logging: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
-- Indicators: create via new and call indicator.Process(candle)
-- Always handle connector.Error and strategy errors
+- 框架：StockSharp 5.x、.NET 10
+- 策略继承 Strategy 类
+- 通过 Connector.Subscribe(subscription) 订阅 K线
+- 通过 RegisterOrder(order) 注册订单
+- 日志记录：this.AddInfoLog()、this.AddWarningLog()、this.AddErrorLog()
+- 指标：使用 new 创建，并调用 indicator.Process(candle)
+- 始终处理 connector.Error 和策略错误
 ```
 
 ## 分步示例：SMA 策略
@@ -47,15 +47,15 @@ dotnet add package StockSharp.Binance
 提示词示例：
 
 ```
-Create a trading strategy using StockSharp that:
-- Inherits from Strategy
-- Uses two simple moving averages (SMA): fast (period 10) and slow (period 30)
-- When the fast SMA crosses above the slow SMA — buy
-- When the fast SMA crosses below the slow SMA — sell
-- Position size: 1 lot
-- Uses 5-minute candles
-- Subscribes to candles in OnStarted()
-- Processes candles via subscription rules
+使用 StockSharp 创建满足以下条件的交易策略：
+- 继承 Strategy
+- 使用两条简单移动平均线（SMA）：fast（周期 10）和 slow（周期 30）
+- 当快速 SMA 上穿慢速 SMA 时买入
+- 当快速 SMA 下穿慢速 SMA 时卖出
+- 持仓规模：1 手
+- 使用 5 分钟 K线
+- 在 OnStarted() 中订阅 K线
+- 通过订阅规则处理 K线
 ```
 
 ### 第 2 步：检查生成的代码
@@ -181,36 +181,36 @@ and output summary statistics (PnL, trade count, max drawdown).
 ### 布林带策略
 
 ```
-Create a StockSharp strategy that trades using Bollinger Bands:
-- Buy when price touches the lower band
-- Sell when price touches the upper band
-- Period 20, multiplier 2.0
-- Stop-loss: 1% from entry price
-- Take-profit: 2% from entry price
-- Use StrategyParam for all parameters
+创建一个使用布林带交易的 StockSharp 策略：
+- 当价格触及下轨时买入
+- 当价格触及上轨时卖出
+- 周期 20，乘数 2.0
+- 止损：距入场价 1%
+- 止盈：距入场价 2%
+- 所有参数都使用 StrategyParam
 ```
 
 ### 套利策略
 
 ```
-Create a pairs arbitrage strategy on StockSharp:
-- Two instruments (specified via parameters)
-- Calculate the spread between prices
-- Enter when spread deviates by 2 standard deviations
-- Exit when spread returns to the mean
-- Volume neutralization (equal positions in monetary terms)
+在 StockSharp 上创建配对套利策略：
+- 两个交易品种（通过参数指定）
+- 计算价格之间的价差
+- 当价差偏离 2 个标准差时入场
+- 当价差回归均值时退出
+- 数量中性化（按金额保持等额持仓）
 ```
 
 ### 市场深度短线策略
 
 ```
-Create a scalping strategy on StockSharp:
-- Subscribe to order book (MarketDepth) via Subscribe
-- Analyze bid/ask imbalance
-- Enter on strong imbalance (> 3:1)
-- Quick exit on take-profit (5 ticks)
-- Stop-loss: 3 ticks
-- Maximum 1 position at a time
+创建一个 StockSharp 剥头皮策略：
+- 通过 Subscribe 订阅订单簿（MarketDepth）
+- 分析买卖盘不平衡
+- 在强不平衡（> 3:1）时入场
+- 快速止盈退出（5 个 tick）
+- 止损：3 个 tick
+- 同一时间最多 1 个持仓
 ```
 
 ## AI 常见错误

@@ -29,13 +29,13 @@ Erstellen Sie eine Datei `CLAUDE.md`:
 # Projektregeln — Börsen-Connector
 
 - Framework: StockSharp 5.x, .NET 10
-- Connector is implemented as a MessageAdapter
-- Inherit from AsyncMessageAdapter for async/await
-- All HTTP requests via HttpClient with CancellationToken
-- WebSocket subscriptions via native client or ClientWebSocket
-- Type mapping: exchange types → StockSharp Messages
-- Error handling: SendOutError() for connection errors
-- All strings in localization resources (or at least const)
+- Der Connector wird als MessageAdapter implementiert
+- Von AsyncMessageAdapter erben, um async/await zu nutzen
+- Alle HTTP-Anfragen über HttpClient mit CancellationToken ausführen
+- WebSocket-Abonnements über einen nativen Client oder ClientWebSocket
+- Typzuordnung: Börsentypen → StockSharp Messages
+- Fehlerbehandlung: SendOutError() bei Verbindungsfehlern
+- Alle Zeichenfolgen in Lokalisierungsressourcen ablegen (oder zumindest als const)
 ```
 
 ## Connector-Architektur
@@ -57,13 +57,13 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 Prompt:
 
 ```
-Create a basic MessageAdapter for a cryptocurrency exchange connector
-called MyExchange using StockSharp:
-- Inherit from AsyncMessageAdapter
-- Implement connect/disconnect (ConnectMessage, DisconnectMessage)
-- Add settings: ApiKey, Secret, demo mode
-- Use HttpClient for REST API
-- Base API URL: https://api.myexchange.com/v1
+Erstelle mit StockSharp einen einfachen MessageAdapter für einen
+Kryptowährungsbörsen-Connector namens MyExchange:
+- von AsyncMessageAdapter erben
+- Verbindung/Trennung implementieren (ConnectMessage, DisconnectMessage)
+- Einstellungen hinzufügen: ApiKey, Secret, Demo-Modus
+- HttpClient für die REST-API verwenden
+- Basis-API-URL: https://api.myexchange.com/v1
 ```
 
 ### Schritt 2: Instrumentensuche
@@ -71,14 +71,14 @@ called MyExchange using StockSharp:
 Prompt:
 
 ```
-Add SecurityLookupMessage handling to the adapter:
-- Request GET /api/v1/symbols returns a JSON list of instruments
-- Each instrument has: symbol, baseAsset, quoteAsset,
+Füge dem Adapter die Verarbeitung von SecurityLookupMessage hinzu:
+- Die Anfrage GET /api/v1/symbols gibt eine JSON-Liste von Instrumenten zurück
+- Jedes Instrument enthält: symbol, baseAsset, quoteAsset,
   minQty, maxQty, tickSize, status
-- Mapping: symbol → SecurityId, baseAsset/quoteAsset → name,
+- Zuordnung: symbol → SecurityId, baseAsset/quoteAsset → name,
   tickSize → SecurityMessage.PriceStep
-- Send SecurityMessage for each instrument
-- Send SubscriptionFinishedMessage at the end
+- Für jedes Instrument SecurityMessage senden
+- Am Ende SubscriptionFinishedMessage senden
 ```
 
 ### Schritt 3: Marktdaten
@@ -86,7 +86,7 @@ Add SecurityLookupMessage handling to the adapter:
 Prompt:
 
 ```
-Add market data subscription to the adapter:
+Füge dem Adapter Market-Data-Abonnements hinzu:
 
 1. Candles (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
@@ -107,7 +107,7 @@ Add market data subscription to the adapter:
 Prompt:
 
 ```
-Add trading operation support to the adapter:
+Füge dem Adapter Unterstützung für Handelsoperationen hinzu:
 
 1. Order registration (OrderRegisterMessage):
    - POST /api/v1/order with params: symbol, side, type, quantity, price
@@ -131,12 +131,12 @@ Add trading operation support to the adapter:
 Bitten Sie die KI nach dem Generieren jedes Schritts:
 
 ```
-Review the generated adapter for StockSharp API compliance:
-1. Are all message types handled?
-2. Is CancellationToken used correctly?
-3. Is HTTP error handling in place?
-4. Are SubscriptionFinishedMessage sent after completion?
-5. Does WebSocket reconnection work on disconnect?
+Prüfe den generierten Adapter auf Kompatibilität mit der StockSharp-API:
+1. Werden alle Nachrichtentypen verarbeitet?
+2. Wird CancellationToken korrekt verwendet?
+3. Ist die Behandlung von HTTP-Fehlern implementiert?
+4. Wird SubscriptionFinishedMessage nach Abschluss gesendet?
+5. Funktioniert die WebSocket-Wiederverbindung nach einer Trennung?
 ```
 
 ## Wichtige Implementierungsdetails
@@ -226,10 +226,10 @@ private string SignRequest(string payload)
 ### Hinzufügen eines neuen Datentyps
 
 ```
-Add Level 1 data support (BestBid/BestAsk) to my connector:
-- WebSocket channel: ticker_{symbol}
-- Parse bid, ask, last, volume
-- Send Level1ChangeMessage with fields:
+Füge meinem Connector Unterstützung für Level-1-Daten (BestBid/BestAsk) hinzu:
+- WebSocket-Kanal: ticker_{symbol}
+- bid, ask, last, volume parsen
+- Level1ChangeMessage mit folgenden Feldern senden:
   Level1Fields.BestBidPrice, Level1Fields.BestAskPrice,
   Level1Fields.LastTradePrice, Level1Fields.Volume
 ```
@@ -237,10 +237,10 @@ Add Level 1 data support (BestBid/BestAsk) to my connector:
 ### Umgang mit Rate Limits
 
 ```
-Add rate limit handling to my connector:
-- API returns headers X-RateLimit-Remaining and X-RateLimit-Reset
-- When limit is reached: wait until Reset, log a warning
-- Use SemaphoreSlim to limit concurrent requests
+Füge meinem Connector die Behandlung von Rate Limits hinzu:
+- Die API gibt die Header X-RateLimit-Remaining und X-RateLimit-Reset zurück
+- Wenn das Limit erreicht ist: bis Reset warten und eine Warnung protokollieren
+- SemaphoreSlim verwenden, um gleichzeitige Anfragen zu begrenzen
 ```
 
 ## Tipps

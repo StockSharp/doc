@@ -85,12 +85,12 @@ protected override void OnStarted2(DateTime time)
 	
 	if (_chart != null)
 	{
-		// Chart is available (e.g., in Designer or Shell)
+		// O gráfico está disponível (por exemplo, no Designer ou Shell)
 		InitChart();
 	}
 	else
 	{
-		// Chart is unavailable (e.g., in Runner or cloud backtesting)
+		// O gráfico não está disponível (por exemplo, no Runner ou em backtesting na nuvem)
 		// A estratégia continua funcionando sem visualização
 	}
 }

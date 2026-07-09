@@ -29,14 +29,14 @@ dotnet add package StockSharp.Algo
 ```markdown
 # 项目规则 — 交易所连接器
 
-- Framework: StockSharp 5.x, .NET 10
-- Connector is implemented as a MessageAdapter
-- Inherit from AsyncMessageAdapter for async/await
-- All HTTP requests via HttpClient with CancellationToken
-- WebSocket subscriptions via native client or ClientWebSocket
-- Type mapping: exchange types → StockSharp Messages
-- Error handling: SendOutError() for connection errors
-- All strings in localization resources (or at least const)
+- 框架：StockSharp 5.x、.NET 10
+- 连接器实现为 MessageAdapter
+- 为 async/await 继承 AsyncMessageAdapter
+- 所有 HTTP 请求都通过带 CancellationToken 的 HttpClient 发送
+- WebSocket 订阅通过原生客户端或 ClientWebSocket 实现
+- 类型映射：交易所类型 → StockSharp Messages
+- 错误处理：连接错误使用 SendOutError()
+- 所有字符串放入本地化资源（或至少定义为 const）
 ```
 
 ## 连接器架构
@@ -59,13 +59,13 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 提示词：
 
 ```
-Create a basic MessageAdapter for a cryptocurrency exchange connector
-called MyExchange using StockSharp:
-- Inherit from AsyncMessageAdapter
-- Implement connect/disconnect (ConnectMessage, DisconnectMessage)
-- Add settings: ApiKey, Secret, demo mode
-- Use HttpClient for REST API
-- Base API URL: https://api.myexchange.com/v1
+使用 StockSharp 为名为 MyExchange 的加密货币交易所连接器
+创建基础 MessageAdapter：
+- 继承 AsyncMessageAdapter
+- 实现连接/断开连接（ConnectMessage、DisconnectMessage）
+- 添加设置：ApiKey、Secret、demo 模式
+- REST API 使用 HttpClient
+- API 基础 URL：https://api.myexchange.com/v1
 ```
 
 ### 第 2 步：查询交易品种
@@ -73,14 +73,14 @@ called MyExchange using StockSharp:
 提示词：
 
 ```
-Add SecurityLookupMessage handling to the adapter:
-- Request GET /api/v1/symbols returns a JSON list of instruments
-- Each instrument has: symbol, baseAsset, quoteAsset,
+为适配器添加 SecurityLookupMessage 处理：
+- GET /api/v1/symbols 请求返回交易品种的 JSON 列表
+- 每个交易品种包含：symbol、baseAsset、quoteAsset、
   minQty, maxQty, tickSize, status
-- Mapping: symbol → SecurityId, baseAsset/quoteAsset → name,
+- 映射：symbol → SecurityId，baseAsset/quoteAsset → name，
   tickSize → SecurityMessage.PriceStep
-- Send SecurityMessage for each instrument
-- Send SubscriptionFinishedMessage at the end
+- 为每个交易品种发送 SecurityMessage
+- 最后发送 SubscriptionFinishedMessage
 ```
 
 ### 第 3 步：市场数据
@@ -88,7 +88,7 @@ Add SecurityLookupMessage handling to the adapter:
 提示词：
 
 ```
-Add market data subscription to the adapter:
+为适配器添加市场数据订阅：
 
 1. Candles (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
@@ -109,7 +109,7 @@ Add market data subscription to the adapter:
 提示词：
 
 ```
-Add trading operation support to the adapter:
+为适配器添加交易操作支持：
 
 1. Order registration (OrderRegisterMessage):
    - POST /api/v1/order with params: symbol, side, type, quantity, price
@@ -133,12 +133,12 @@ Add trading operation support to the adapter:
 每完成一个步骤后，都可以要求 AI 进行检查：
 
 ```
-Review the generated adapter for StockSharp API compliance:
-1. Are all message types handled?
-2. Is CancellationToken used correctly?
-3. Is HTTP error handling in place?
-4. Are SubscriptionFinishedMessage sent after completion?
-5. Does WebSocket reconnection work on disconnect?
+检查生成的适配器是否符合 StockSharp API：
+1. 是否处理了所有消息类型？
+2. CancellationToken 是否正确使用？
+3. 是否实现了 HTTP 错误处理？
+4. 完成后是否发送 SubscriptionFinishedMessage？
+5. WebSocket 断开后是否能重新连接？
 ```
 
 ## 关键实现细节
@@ -233,10 +233,10 @@ private string SignRequest(string payload)
 ### 添加新的数据类型
 
 ```
-Add Level 1 data support (BestBid/BestAsk) to my connector:
-- WebSocket channel: ticker_{symbol}
-- Parse bid, ask, last, volume
-- Send Level1ChangeMessage with fields:
+为我的连接器添加 Level 1 数据（BestBid/BestAsk）支持：
+- WebSocket 通道：ticker_{symbol}
+- 解析 bid、ask、last、volume
+- 发送包含以下字段的 Level1ChangeMessage：
   Level1Fields.BestBidPrice, Level1Fields.BestAskPrice,
   Level1Fields.LastTradePrice, Level1Fields.Volume
 ```
@@ -244,10 +244,10 @@ Add Level 1 data support (BestBid/BestAsk) to my connector:
 ### 处理速率限制
 
 ```
-Add rate limit handling to my connector:
-- API returns headers X-RateLimit-Remaining and X-RateLimit-Reset
-- When limit is reached: wait until Reset, log a warning
-- Use SemaphoreSlim to limit concurrent requests
+为我的连接器添加频率限制处理：
+- API 返回 X-RateLimit-Remaining 和 X-RateLimit-Reset 响应头
+- 达到限制时：等待到 Reset，并记录警告
+- 使用 SemaphoreSlim 限制并发请求数
 ```
 
 ## 建议

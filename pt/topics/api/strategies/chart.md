@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// O gráfico está indisponível, por exemplo, ao executar em modo console
-		LogInfo("Chart is unavailable. Visualization disabled.");
+		LogInfo("O gráfico não está disponível. Visualização desativada.");
 	}
 }
 ```
@@ -238,7 +238,7 @@ private void ProcessCandle(ICandleMessage candle)
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
 	
-	// If chart is unavailable, skip drawing
+	// Se o gráfico não estiver disponível, ignorar o desenho
 	if (_chart == null)
 		return;
 	
@@ -442,7 +442,7 @@ public class SmaStrategy : Strategy
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
 		
-		// If chart is unavailable, skip drawing
+		// Se o gráfico não estiver disponível, ignorar o desenho
 		if (_chart == null)
 			return;
 		

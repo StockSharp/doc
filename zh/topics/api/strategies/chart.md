@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// 图表不可用，例如在控制台模式运行时
-		LogInfo("Chart is unavailable. Visualization disabled.");
+		LogInfo("图表不可用。可视化已禁用。");
 	}
 }
 ```
@@ -238,7 +238,7 @@ private void ProcessCandle(ICandleMessage candle)
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
 	
-	// If chart is unavailable, skip drawing
+	// 如果图表不可用，则跳过绘制
 	if (_chart == null)
 		return;
 	
@@ -442,7 +442,7 @@ public class SmaStrategy : Strategy
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
 		
-		// If chart is unavailable, skip drawing
+		// 如果图表不可用，则跳过绘制
 		if (_chart == null)
 			return;
 		

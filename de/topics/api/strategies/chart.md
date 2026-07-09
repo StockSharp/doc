@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// Chart ist nicht verfügbar, z. B. beim Start im Konsolenmodus
-		LogInfo("Chart is unavailable. Visualization disabled.");
+		LogInfo("Diagramm ist nicht verfügbar. Visualisierung deaktiviert.");
 	}
 }
 ```

@@ -184,7 +184,7 @@ Esta propriedade pode ser configurada através dos parâmetros da estratégia:
 public SmaStrategy()
 {
 	_tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
-					.SetDisplay("Trading Mode", "Allowed trading operations", "Basic settings");
+					.SetDisplay("Modo de negociação", "Operações de negociação permitidas", "Definições básicas");
 }
 ```
 
@@ -322,4 +322,3 @@ private void ProcessCandle(ICandleMessage candle)
 - [Regras de Ordem](event_model/samples/rule_order.md)
 - [Modelo de Eventos](event_model.md)
 - [Proteção de Posição](take_profit_and_stop_loss.md)
-

@@ -184,7 +184,7 @@ Esta propiedad se puede configurar mediante parámetros de estrategia:
 public SmaStrategy()
 {
 	_tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
-					.SetDisplay("Trading Mode", "Allowed trading operations", "Basic settings");
+					.SetDisplay("Modo de trading", "Operaciones de trading permitidas", "Ajustes básicos");
 }
 ```
 

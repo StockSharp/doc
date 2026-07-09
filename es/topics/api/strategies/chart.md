@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 	else
 	{
 		// El gráfico no está disponible, por ejemplo, al ejecutarse en modo consola
-		LogInfo("Chart is unavailable. Visualization disabled.");
+		LogInfo("El gráfico no está disponible. Visualización desactivada.");
 	}
 }
 ```

@@ -229,9 +229,9 @@ O método [DrawOwnTrades](xref:StockSharp.Algo.Strategies.Strategy.DrawOwnTrades
 IChartTradeElement trades = DrawOwnTrades(area);
 
 // Configuração do elemento
-trades.BuyColor = System.Drawing.Color.Green;   // Color for buy trades
-trades.SellColor = System.Drawing.Color.Red;    // Color for sell trades
-trades.FullTitle = "My Strategy Trades";        // Element title
+trades.BuyColor = System.Drawing.Color.Green;   // Cor para negócios de compra
+trades.SellColor = System.Drawing.Color.Red;    // Cor para negócios de venda
+trades.FullTitle = "Negócios da minha estratégia"; // Título do elemento
 ```
 
 Este método configura automaticamente a apresentação de todos os negócios executados pela estratégia. Os negócios são apresentados no gráfico como marcadores nos pontos em que foram executados, tendo em conta o lado do negócio (buy/sell).
@@ -245,11 +245,11 @@ O método [DrawOrders](xref:StockSharp.Algo.Strategies.Strategy.DrawOrders(Stock
 IChartOrderElement orders = DrawOrders(area);
 
 // Configuração do elemento
-orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Color for active buy orders
-orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Color for active sell orders
-orders.BuyColor = System.Drawing.Color.Green;              // Color for executed buy orders
-orders.SellColor = System.Drawing.Color.Red;               // Color for executed sell orders
-orders.CancelColor = System.Drawing.Color.Gray;            // Color for canceled orders
+orders.BuyPendingColor = System.Drawing.Color.DarkGreen;   // Cor para ordens de compra ativas
+orders.SellPendingColor = System.Drawing.Color.DarkRed;    // Cor para ordens de venda ativas
+orders.BuyColor = System.Drawing.Color.Green;              // Cor para ordens de compra executadas
+orders.SellColor = System.Drawing.Color.Red;               // Cor para ordens de venda executadas
+orders.CancelColor = System.Drawing.Color.Gray;            // Cor para ordens canceladas
 ```
 
 Este método configura automaticamente a apresentação de todas as ordens colocadas pela estratégia. As ordens são apresentadas como marcadores nos seus níveis de preço, com codificação por cores diferente para diferentes estados de ordem.
@@ -264,7 +264,7 @@ var mainArea = CreateChartArea();
 DrawCandles(mainArea, subscription);
 DrawIndicator(mainArea, sma);
 
-// Create a second area for separate indicators (e.g., RSI)
+// Criar uma segunda área para indicadores separados (por exemplo, RSI)
 var secondArea = CreateChartArea();
 DrawIndicator(secondArea, rsi);
 ```

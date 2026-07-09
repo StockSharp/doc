@@ -184,7 +184,7 @@ StartProtection(
 public SmaStrategy()
 {
 	_tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
-					.SetDisplay("Trading Mode", "Allowed trading operations", "Basic settings");
+					.SetDisplay("交易模式", "允许的交易操作", "基本设置");
 }
 ```
 
