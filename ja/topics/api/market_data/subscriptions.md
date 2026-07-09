@@ -49,7 +49,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine($"Subscription error: {error}");
+	Console.WriteLine($"サブスクリプションエラー: {error}");
 };
 
 // サブスクリプションを開始します
@@ -69,7 +69,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 		return;
 
 	// 板情報を処理します
-	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
+	Console.WriteLine($"板情報: {depth.SecurityId}, 時刻: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
 };
 
@@ -165,4 +165,3 @@ foreach (var sub in _connector.Subscriptions)
 - [SubscriptionStates.Error](xref:StockSharp.Messages.SubscriptionStates.Error) — サブスクリプションは非アクティブで、エラー状態です。
 - [SubscriptionStates.Finished](xref:StockSharp.Messages.SubscriptionStates.Finished) — サブスクリプションは処理を完了しました（すべてのデータを受信済み）。
 - [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) — サブスクリプションはリアルタイムモードに切り替わっており、現在のデータのみを送信します。
-

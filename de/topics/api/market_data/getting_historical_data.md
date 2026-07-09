@@ -60,7 +60,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		return;
 
 	// Empfangene Candle verarbeiten
-	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	Console.WriteLine($"Kerze empfangen: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// Für die Anzeige im Chart können Sie verwenden:
 	// Chart.Draw(_candleElement, candle);
@@ -138,7 +138,7 @@ var depthSubscription = new Subscription(DataType.MarketDepth, security)
 connector.OrderBookReceived += (subscription, depth) =>
 {
 	if (subscription == depthSubscription)
-		Console.WriteLine($"Order book: {depth.ServerTime}, Best bid: {depth.GetBestBid()?.Price}, Best ask: {depth.GetBestAsk()?.Price}");
+		Console.WriteLine($"Orderbuch: {depth.ServerTime}, bestes Bid: {depth.GetBestBid()?.Price}, bestes Ask: {depth.GetBestAsk()?.Price}");
 };
 
 connector.Subscribe(depthSubscription);
@@ -149,4 +149,3 @@ connector.Subscribe(depthSubscription);
 - [Kerzen](../candles.md)
 - [Abonnements](subscriptions.md)
 - [Indikatoren](../indicators.md)
-

@@ -53,7 +53,7 @@ _connector.Disconnected += () =>
 // 收到工具事件
 _connector.SecurityReceived += (subscription, security) =>
 {
-	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
+	Console.WriteLine($"收到交易品种: {security.Code}, {security.Id}");
 	BufferSecurity.Add(security);
 	
 	// 如果这是目标交易品种，则订阅其数据
@@ -85,19 +85,19 @@ _connector.SecurityReceived += (subscription, security) =>
 // 收到逐笔成交事件
 _connector.TickTradeReceived += (subscription, trade) =>
 {
-	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
+	Console.WriteLine($"收到成交: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
 // 订单簿变更事件
 _connector.OrderBookReceived += (subscription, depth) =>
 {
-	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
+	Console.WriteLine($"收到订单簿: {depth.SecurityId}, 最优买价: {depth.BestBid()?.Price}, 最优卖价: {depth.BestAsk()?.Price}");
 };
 
 // 收到K线事件
 _connector.CandleReceived += (subscription, candle) =>
 {
-	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"收到K线: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
 // 连接错误事件
@@ -115,7 +115,7 @@ _connector.Error += error =>
 // 市场数据订阅错误事件
 _connector.SubscriptionFailed += (subscription, error) =>
 {
-	Console.WriteLine($"Subscription error {subscription.DataType} for {subscription.SecurityId}: {error}");
+	Console.WriteLine($"订阅错误 {subscription.DataType}（{subscription.SecurityId}）: {error}");
 };
 
 // 连接到服务器
@@ -155,7 +155,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
-	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	Console.WriteLine($"历史K线: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
 	// 处理收到的K线，例如保存到本地存储
 	// 或用于分析/可视化

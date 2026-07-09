@@ -29,7 +29,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, shows biggest candle (by volume and by length) for specified securities.
+	/// 分析脚本，用于显示指定交易品种中按成交量和长度计算的最大 K线。
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, shows biggest candle (by volume and by length) for specified securities.
+# 分析脚本，用于显示指定交易品种中按成交量和长度计算的最大 K线。
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:

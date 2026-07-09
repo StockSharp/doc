@@ -67,7 +67,7 @@ public class EmptyIndicator : BaseIndicator
 		return new DecimalIndicatorValue(this, value)
 		{
 			// final 值表示这是指定输入的最终值
-			// is not changed anymore (for example, for candles that changes with last price)
+			// 不再变化（例如，对于随最新价格变化的K线）
 			IsFinal = RandomGen.GetBool()
 		};
 	}

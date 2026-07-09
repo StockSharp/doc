@@ -49,7 +49,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine($"Subscription error: {error}");
+	Console.WriteLine($"Abonnementfehler: {error}");
 };
 
 // Abonnement starten
@@ -69,7 +69,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 		return;
 
 	// Orderbuch verarbeiten
-	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
+	Console.WriteLine($"Orderbuch: {depth.SecurityId}, Zeit: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
 };
 
@@ -165,4 +165,3 @@ Abonnements können sich in folgenden Zuständen befinden:
 - [SubscriptionStates.Error](xref:StockSharp.Messages.SubscriptionStates.Error) - das Abonnement ist inaktiv und befindet sich im Fehlerzustand.
 - [SubscriptionStates.Finished](xref:StockSharp.Messages.SubscriptionStates.Finished) - das Abonnement hat seine Arbeit abgeschlossen (alle Daten wurden empfangen).
 - [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) - das Abonnement ist in den Echtzeitmodus gewechselt und überträgt nur aktuelle Daten.
-

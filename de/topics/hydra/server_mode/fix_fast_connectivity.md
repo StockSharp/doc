@@ -53,7 +53,7 @@ _connector.Disconnected += () =>
 // Ereignis bei empfangenem Instrument
 _connector.SecurityReceived += (subscription, security) =>
 {
-	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
+	Console.WriteLine($"Instrument empfangen: {security.Code}, {security.Id}");
 	BufferSecurity.Add(security);
 
 	// Wenn dies das Zielinstrument ist, seine Daten abonnieren
@@ -85,19 +85,19 @@ _connector.SecurityReceived += (subscription, security) =>
 // Ereignis bei empfangenem Tick-Trade
 _connector.TickTradeReceived += (subscription, trade) =>
 {
-	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
+	Console.WriteLine($"Trade empfangen: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
 // Ereignis bei geändertem Orderbuch
 _connector.OrderBookReceived += (subscription, depth) =>
 {
-	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
+	Console.WriteLine($"Orderbuch empfangen: {depth.SecurityId}, bestes Bid: {depth.BestBid()?.Price}, bestes Ask: {depth.BestAsk()?.Price}");
 };
 
 // Ereignis bei empfangener Kerze
 _connector.CandleReceived += (subscription, candle) =>
 {
-	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"Kerze empfangen: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
 // Verbindungsfehlerereignis
@@ -115,7 +115,7 @@ _connector.Error += error =>
 // Fehlerereignis bei Marktdaten-Subscription
 _connector.SubscriptionFailed += (subscription, error) =>
 {
-	Console.WriteLine($"Subscription error {subscription.DataType} for {subscription.SecurityId}: {error}");
+	Console.WriteLine($"Abonnementfehler {subscription.DataType} für {subscription.SecurityId}: {error}");
 };
 
 // Verbindung zum Server herstellen
@@ -155,7 +155,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 
-	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	Console.WriteLine($"Historische Kerze: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 
 	// Empfangene Kerzen verarbeiten, zum Beispiel lokal speichern
 	// oder für Analyse/Visualisierung verwenden

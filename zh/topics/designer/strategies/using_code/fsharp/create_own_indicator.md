@@ -28,7 +28,7 @@ type EmptyIndicator() as this =
 	let mutable isFormedValue = false
 
 	/// <summary>
-	/// The percentage value (+/-) used to modify the input price.
+	/// 用于调整输入价格的百分比值（+/-）。
 	/// </summary>
 	member this.Change
 		with get () = changeValue
@@ -37,7 +37,7 @@ type EmptyIndicator() as this =
 			this.Reset()
 
 	/// <summary>
-	/// Defines if the indicator has formed (became ready for trading).
+	/// 指示指标是否已形成（已可用于交易）。
 	/// </summary>
 	override this.CalcIsFormed() = isFormedValue
 
@@ -92,7 +92,7 @@ type EmptyIndicator() as this =
 		storage.SetValue(nameof(this.Change), this.Change)
 
 	/// <summary>
-	/// A string representation that includes the current <see cref="Change"/> value.
+	/// 包含当前 <see cref="Change"/> 值的字符串表示。
 	/// </summary>
 	override this.ToString() =
 		sprintf "Change: %d" this.Change

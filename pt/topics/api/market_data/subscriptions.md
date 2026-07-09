@@ -49,7 +49,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine($"Subscription error: {error}");
+	Console.WriteLine($"Erro de subscrição: {error}");
 };
 
 // Iniciar a subscrição
@@ -69,7 +69,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 		return;
 
 	// Processar o livro de ofertas
-	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
+	Console.WriteLine($"Livro de ofertas: {depth.SecurityId}, hora: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
 };
 

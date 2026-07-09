@@ -60,7 +60,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		return;
 
 	// 受信したキャンドルを処理します
-	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	Console.WriteLine($"キャンドルを受信: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// チャートに表示するには、次を使用できます:
 	// Chart.Draw(_candleElement, candle);
@@ -138,7 +138,7 @@ var depthSubscription = new Subscription(DataType.MarketDepth, security)
 connector.OrderBookReceived += (subscription, depth) =>
 {
 	if (subscription == depthSubscription)
-		Console.WriteLine($"Order book: {depth.ServerTime}, Best bid: {depth.GetBestBid()?.Price}, Best ask: {depth.GetBestAsk()?.Price}");
+		Console.WriteLine($"板情報: {depth.ServerTime}, 最良買い気配: {depth.GetBestBid()?.Price}, 最良売り気配: {depth.GetBestAsk()?.Price}");
 };
 
 connector.Subscribe(depthSubscription);
@@ -149,4 +149,3 @@ connector.Subscribe(depthSubscription);
 - [キャンドル](../candles.md)
 - [サブスクリプション](subscriptions.md)
 - [インジケーター](../indicators.md)
-

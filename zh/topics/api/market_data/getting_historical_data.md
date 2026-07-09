@@ -60,7 +60,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		return;
 
 	// 处理收到的 K线
-	Console.WriteLine($"Candle received: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	Console.WriteLine($"收到K线: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// For display on the chart, you can use:
 	// Chart.Draw(_candleElement, candle);
@@ -138,7 +138,7 @@ var depthSubscription = new Subscription(DataType.MarketDepth, security)
 connector.OrderBookReceived += (subscription, depth) =>
 {
 	if (subscription == depthSubscription)
-		Console.WriteLine($"Order book: {depth.ServerTime}, Best bid: {depth.GetBestBid()?.Price}, Best ask: {depth.GetBestAsk()?.Price}");
+		Console.WriteLine($"订单簿: {depth.ServerTime}, 最优买价: {depth.GetBestBid()?.Price}, 最优卖价: {depth.GetBestAsk()?.Price}");
 };
 
 connector.Subscribe(depthSubscription);

@@ -109,13 +109,13 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 					case Level1Fields.BestBidPrice:
 						// 最良買気配価格の変更を処理します
 						var bestBid = (decimal)change.Value;
-						Console.WriteLine($"Best bid {security.Code}: {bestBid}");
+						Console.WriteLine($"最良買い気配 {security.Code}: {bestBid}");
 						break;
 						
 					case Level1Fields.BestAskPrice:
 						// 最良売気配価格の変更を処理します
 						var bestAsk = (decimal)change.Value;
-						Console.WriteLine($"Best ask {security.Code}: {bestAsk}");
+						Console.WriteLine($"最良売り気配 {security.Code}: {bestAsk}");
 						break;
 				}
 			}

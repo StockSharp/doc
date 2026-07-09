@@ -109,13 +109,13 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 					case Level1Fields.BestBidPrice:
 						// Processar alteração do melhor preço bid
 						var bestBid = (decimal)change.Value;
-						Console.WriteLine($"Best bid {security.Code}: {bestBid}");
+						Console.WriteLine($"Melhor bid {security.Code}: {bestBid}");
 						break;
 						
 					case Level1Fields.BestAskPrice:
 						// Processar alteração do melhor preço ask
 						var bestAsk = (decimal)change.Value;
-						Console.WriteLine($"Best ask {security.Code}: {bestAsk}");
+						Console.WriteLine($"Melhor ask {security.Code}: {bestAsk}");
 						break;
 				}
 			}

@@ -59,7 +59,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// grouping candles by opening time (time part only) with 1 hour truncating
+			// 按开盘时间对 K线分组（仅时间部分，截断到 1 小时）
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
@@ -138,7 +138,7 @@ class time_volume_script(IAnalyticsScript):
 			logs.LogWarning("no data")
 			return Task.CompletedTask
 
-		# Grouping candles by opening time (hourly truncation) and summing their volumes
+		# 按开盘时间对 K线分组（按小时截断）并汇总成交量
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows = {}
 		for candle in candles:

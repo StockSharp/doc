@@ -49,7 +49,7 @@ _connector.SubscriptionFailed += (sub, error, isSubscribe) =>
 	if (sub != subscription)
 		return;
 
-	Console.WriteLine($"Subscription error: {error}");
+	Console.WriteLine($"订阅错误: {error}");
 };
 
 // 启动订阅
@@ -69,7 +69,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 		return;
 
 	// 处理订单簿
-	Console.WriteLine($"Order book: {depth.SecurityId}, Time: {depth.ServerTime}");
+	Console.WriteLine($"订单簿: {depth.SecurityId}, 时间: {depth.ServerTime}");
 	Console.WriteLine($"Bids: {depth.Bids.Count}, Asks: {depth.Asks.Count}");
 };
 

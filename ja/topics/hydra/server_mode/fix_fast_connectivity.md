@@ -53,7 +53,7 @@ _connector.Disconnected += () =>
 // 銘柄受信イベント
 _connector.SecurityReceived += (subscription, security) =>
 {
-	Console.WriteLine($"Instrument received: {security.Code}, {security.Id}");
+	Console.WriteLine($"銘柄を受信: {security.Code}, {security.Id}");
 	BufferSecurity.Add(security);
 	
 	// これが対象銘柄である場合、そのデータを購読する
@@ -85,19 +85,19 @@ _connector.SecurityReceived += (subscription, security) =>
 // ティック取引受信イベント
 _connector.TickTradeReceived += (subscription, trade) =>
 {
-	Console.WriteLine($"Trade received: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
+	Console.WriteLine($"約定を受信: {trade.Security.Code}, {trade.Time}, {trade.Price}, {trade.Volume}");
 };
 
 // 板情報変更イベント
 _connector.OrderBookReceived += (subscription, depth) =>
 {
-	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
+	Console.WriteLine($"板情報を受信: {depth.SecurityId}, 最良買い気配: {depth.BestBid()?.Price}, 最良売り気配: {depth.BestAsk()?.Price}");
 };
 
 // ローソク足受信イベント
 _connector.CandleReceived += (subscription, candle) =>
 {
-	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"キャンドルを受信: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
 // 接続エラーイベント
@@ -115,7 +115,7 @@ _connector.Error += error =>
 // マーケットデータサブスクリプションエラーイベント
 _connector.SubscriptionFailed += (subscription, error) =>
 {
-	Console.WriteLine($"Subscription error {subscription.DataType} for {subscription.SecurityId}: {error}");
+	Console.WriteLine($"サブスクリプションエラー {subscription.DataType} ({subscription.SecurityId}): {error}");
 };
 
 // サーバーへ接続
@@ -155,7 +155,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
-	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	Console.WriteLine($"過去キャンドル: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
 	// 受信したローソク足を処理します。たとえば、ローカルストレージへ保存
 	// または分析/可視化に使用します
