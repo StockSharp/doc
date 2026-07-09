@@ -104,13 +104,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Apply changes",
 		"Cloud panel",
 		"Connect button",
+		"Control Panel → User Accounts → Credential Manager",
+		"File → New Solution",
+		"File → New → Project",
+		".NET / .NET Core → Console Application",
+		"Manage NuGet Packages",
 		"More info",
 		"Open debug launch profiles UI",
 		"Remote Manager",
 		"Remote mode",
 		"Run anyway",
 		"send command",
+		"Settings → Build, Execution, Deployment → NuGet → Sources",
 		"Solution Explorer",
+		"Tools → Options → NuGet Package Manager → Package Sources",
 	];
 
 	private static readonly HashSet<string> _allowedInvariantHeadingTexts = new(StringComparer.Ordinal)

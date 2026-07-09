@@ -18,15 +18,15 @@ dotnet --version
 
 ### Visual Studio 2022+
 
-1. **File -> New -> Project**
-2. Vorlage **Console App** oder **WPF Application** auswählen
+1. **Datei -> Neu -> Projekt**
+2. Vorlage **Konsolen-App** oder **WPF-Anwendung** auswählen
 3. Zielframework auf **.NET 10** setzen
 
 ### JetBrains Rider
 
-1. **File -> New Solution**
-2. **.NET / .NET Core -> Console Application** auswählen
-3. **Target Framework: net10.0** festlegen
+1. **Datei -> Neue Lösung**
+2. **.NET / .NET Core -> Konsolenanwendung** auswählen
+3. **Zielframework: net10.0** festlegen
 
 ### Befehlszeile (CLI)
 
@@ -147,19 +147,19 @@ dotnet add package StockSharp.Localization.ru
 
 ### Über Visual Studio
 
-1. Rechtsklick auf das Projekt -> **Manage NuGet Packages...**
+1. Rechtsklick auf das Projekt -> **NuGet-Pakete verwalten...**
 2. Nach `StockSharp` suchen
-3. Gewünschtes Paket auswählen -> **Install**
+3. Gewünschtes Paket auswählen -> **Installieren**
 
 Alle Abhängigkeiten werden automatisch installiert.
 
 ### Über JetBrains Rider
 
-1. Rechtsklick auf das Projekt -> **Manage NuGet Packages**
+1. Rechtsklick auf das Projekt -> **NuGet-Pakete verwalten**
 2. Nach `StockSharp` suchen
-3. Paket auswählen -> **Install**
+3. Paket auswählen -> **Installieren**
 
-### Über Package Manager Console (Visual Studio)
+### Über Paket-Manager-Konsole (Visual Studio)
 
 ```powershell
 Install-Package StockSharp.Algo
@@ -183,9 +183,9 @@ Einige Komponenten (Krypto-Connectors usw.) sind nur über den privaten NuGet-Se
 dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** Öffnen Sie **Tools -> Options -> NuGet Package Manager -> Package Sources** und fügen Sie eine neue Quelle mit der URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` hinzu.
+**Visual Studio:** Öffnen Sie **Extras -> Optionen -> NuGet-Paket-Manager -> Paketquellen** und fügen Sie eine neue Quelle mit der URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` hinzu.
 
-**Rider:** Öffnen Sie **Settings -> Build, Execution, Deployment -> NuGet -> Sources** und fügen Sie die Quelle hinzu.
+**Rider:** Öffnen Sie **Einstellungen -> Build, Ausführung, Bereitstellung -> NuGet -> Quellen** und fügen Sie die Quelle hinzu.
 
 ### Methode 2: Authentifizierung per Benutzername und Passwort
 
@@ -200,7 +200,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name St
 ```
 
 > [!TIP]
-> Um gespeicherte Anmeldedaten unter Windows zurückzusetzen, öffnen Sie **Control Panel -> User Accounts -> Credential Manager** und löschen Sie Einträge zu `nuget.stocksharp.com`.
+> Um gespeicherte Anmeldedaten unter Windows zurückzusetzen, öffnen Sie **Systemsteuerung -> Benutzerkonten -> Anmeldeinformationsverwaltung** und löschen Sie Einträge zu `nuget.stocksharp.com`.
 
 ## Pakete aktualisieren
 
@@ -216,13 +216,13 @@ dotnet add package StockSharp.Algo
 
 ### Visual Studio
 
-1. **Manage NuGet Packages...** -> Registerkarte **Updates**
-2. Pakete auswählen -> **Update**
+1. **NuGet-Pakete verwalten...** -> Registerkarte **Aktualisierungen**
+2. Pakete auswählen -> **Aktualisieren**
 
 ### Rider
 
-1. **Manage NuGet Packages** -> Registerkarte **Upgrades**
-2. Pakete auswählen -> **Upgrade**
+1. **NuGet-Pakete verwalten** -> Registerkarte **Aktualisierungen**
+2. Pakete auswählen -> **Aktualisieren**
 
 ## Problembehandlung
 

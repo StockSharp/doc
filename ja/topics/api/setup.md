@@ -18,15 +18,15 @@ dotnet --version
 
 ### Visual Studio 2022+
 
-1. **File → New → Project**
-2. **Console App** または **WPF Application** テンプレートを選択します
+1. **ファイル → 新規作成 → プロジェクト**
+2. **コンソール アプリ** または **WPF アプリケーション** テンプレートを選択します
 3. ターゲットフレームワークを **.NET 10** に設定します
 
 ### JetBrains Rider
 
-1. **File → New Solution**
-2. **.NET / .NET Core → Console Application** を選択します
-3. **Target Framework: net10.0** を設定します
+1. **ファイル → 新しいソリューション**
+2. **.NET / .NET Core → コンソール アプリケーション** を選択します
+3. **ターゲット フレームワーク: net10.0** を設定します
 
 ### コマンドライン（CLI）
 
@@ -147,19 +147,19 @@ dotnet add package StockSharp.Localization.ru
 
 ### Visual Studio 経由
 
-1. プロジェクトを右クリック → **Manage NuGet Packages...**
+1. プロジェクトを右クリック → **NuGet パッケージの管理...**
 2. `StockSharp` を検索します
-3. 目的のパッケージを選択 → **Install**
+3. 目的のパッケージを選択 → **インストール**
 
 すべての依存関係は自動的にインストールされます。
 
 ### JetBrains Rider 経由
 
-1. プロジェクトを右クリック → **Manage NuGet Packages**
+1. プロジェクトを右クリック → **NuGet パッケージの管理**
 2. `StockSharp` を検索します
-3. パッケージを選択 → **Install**
+3. パッケージを選択 → **インストール**
 
-### Package Manager Console 経由（Visual Studio）
+### パッケージ マネージャー コンソール経由（Visual Studio）
 
 ```powershell
 Install-Package StockSharp.Algo
@@ -183,9 +183,9 @@ Install-Package StockSharp.Algo.Strategies
 dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** **Tools → Options → NuGet Package Manager → Package Sources** を開き、URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` で新しいソースを追加します。
+**Visual Studio:** **ツール → オプション → NuGet パッケージ マネージャー → パッケージ ソース** を開き、URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` で新しいソースを追加します。
 
-**Rider:** **Settings → Build, Execution, Deployment → NuGet → Sources** を開き、ソースを追加します。
+**Rider:** **設定 → ビルド、実行、デプロイ → NuGet → ソース** を開き、ソースを追加します。
 
 ### 方法 2: ユーザー名とパスワードによる認証
 
@@ -200,7 +200,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name St
 ```
 
 > [!TIP]
-> Windows で保存済み認証情報をリセットするには、**Control Panel → User Accounts → Credential Manager** を開き、`nuget.stocksharp.com` に関連するエントリを削除します。
+> Windows で保存済み認証情報をリセットするには、**コントロール パネル → ユーザー アカウント → 資格情報マネージャー** を開き、`nuget.stocksharp.com` に関連するエントリを削除します。
 
 ## パッケージの更新
 
@@ -216,13 +216,13 @@ dotnet add package StockSharp.Algo
 
 ### Visual Studio
 
-1. **Manage NuGet Packages...** → **Updates** タブ
-2. パッケージを選択 → **Update**
+1. **NuGet パッケージの管理...** → **更新** タブ
+2. パッケージを選択 → **更新**
 
 ### Rider
 
-1. **Manage NuGet Packages** → **Upgrades** タブ
-2. パッケージを選択 → **Upgrade**
+1. **NuGet パッケージの管理** → **アップグレード** タブ
+2. パッケージを選択 → **アップグレード**
 
 ## トラブルシューティング
 
