@@ -5,7 +5,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
 - **dirección** - Dirección.
-- **Dialect** - Dialecto del protocolo FIX.
+- **Dialecto** - Dialecto del protocolo FIX.
 - **Sender** - Identificador del remitente.
 - **Target** - Identificador del destinatario.
 - **usuario** - Login.
@@ -28,7 +28,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Server name** - Nombre del servidor que utiliza la conexión SSL.
 - **Configuración de reconexión** - Configuración del mecanismo de seguimiento de la conexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
 - **Intervalo de comprobación** - Intervalo para notificar al servidor que la conexión sigue activa. El valor predeterminado es 1 minuto.
-- **Unified board code** - Código de bolsa para el instrumento unificado.
+- **Código de mercado unificado** - Código de bolsa para el instrumento unificado.
 
 ## Vea también
 

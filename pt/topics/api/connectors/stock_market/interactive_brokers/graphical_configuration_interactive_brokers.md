@@ -7,7 +7,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **endereço** - Endereço TWS.
 - **Identifier** - ID único. Utilizado quando vários clientes estão ligados a um terminal ou gateway.
 - **Real-time** - Se devem ser utilizados dados em tempo real ou "congelados" no servidor da corretora.
-- **Logging level** - Nível de registo das mensagens do servidor.
+- **Nível de registo** - Nível de registo das mensagens do servidor.
 - **Market data fields** - Campos de dados de mercado que serão recebidos com as mensagens Level1 subscritas.
 - **Protocol** - Protocolo SSL para estabelecer a ligação
 - **certificado** - Certificado SSL.

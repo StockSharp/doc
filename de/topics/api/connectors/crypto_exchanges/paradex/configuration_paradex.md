@@ -5,7 +5,7 @@ Um mit dem Connector zu arbeiten, geben Sie Ihre API-Zugangsdaten und die Starkn
 Wichtige Einstellungen:
 
 - **Schlüssel** und **Geheimnis**.
-- **Starknet account** und **Starknet key**.
+- **Starknet-Konto** und **Starknet-Schlüssel**.
 - **Section**: `Spot` oder `Derivatives`.
 - **Enable spot**: aktiviert den Spot-Bereich, wenn die API-Unterstützung verfügbar ist.
 - **Demo**-Modus.

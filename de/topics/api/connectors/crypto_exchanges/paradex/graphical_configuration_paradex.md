@@ -6,8 +6,8 @@ Wichtige Felder:
 
 - **Schlüssel** - API-Schlüssel.
 - **Geheimnis** - API-Secret.
-- **Starknet account** - Header-Wert des Starknet-Kontos.
-- **Starknet key** - Material des privaten Starknet-Schlüssels.
+- **Starknet-Konto** - Header-Wert des Starknet-Kontos.
+- **Starknet-Schlüssel** - Material des privaten Starknet-Schlüssels.
 - **Section** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Enable spot** - aktiviert den Spot-Bereich.
 - **Demo** - Demoumgebungsmodus.

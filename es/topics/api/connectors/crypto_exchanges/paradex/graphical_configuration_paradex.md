@@ -6,8 +6,8 @@ Campos principales:
 
 - **clave** - clave API.
 - **secreto** - secreto API.
-- **Starknet account** - valor del encabezado de la cuenta Starknet.
-- **Starknet key** - material de la clave privada Starknet.
+- **Cuenta Starknet** - valor del encabezado de la cuenta Starknet.
+- **Clave Starknet** - material de la clave privada Starknet.
 - **Section** - sección de trading (`Spot` o `Derivatives`).
 - **Enable spot** - habilita la sección spot.
 - **Demo** - modo de entorno demo.

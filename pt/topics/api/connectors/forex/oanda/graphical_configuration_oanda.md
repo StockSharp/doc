@@ -10,7 +10,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Transactions only** - Escrever mensagens de log apenas para o fluxo de transações.
 - **Definições de religação** - Definições do mecanismo para acompanhar a ligação ao sistema de negociação ([Definições de religação](../../reconnection_settings.md)).
 - **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a ligação ainda está ativa. O valor predefinido é 1 minuto.
-- **Unified board code** - Código de board para o instrumento unificado.
+- **Código de mercado unificado** - Código de board para o instrumento unificado.
 
 ## Ver também
 

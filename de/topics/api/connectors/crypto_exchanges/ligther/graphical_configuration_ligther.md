@@ -6,8 +6,8 @@ Hauptfelder:
 
 - **Schlüssel** - API-Schlüssel.
 - **Geheimnis** - API-Secret.
-- **Account index** - Kontoindex.
-- **API key index** - API-Schlüsselindex.
+- **Kontoindex** - Kontoindex.
+- **API-Schlüsselindex** - API-Schlüsselindex.
 - **Section** - Handelssektion (`Spot` oder `Derivatives`).
 - **Demo** - Modus für die Demo-Umgebung.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.

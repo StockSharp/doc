@@ -11,7 +11,7 @@
 - **Section**: `Spot` または `Derivatives`。
 - **Testnet** モード。
  - **Info エンドポイント / Exchange エンドポイント / WS エンドポイント**。
-- **Market slippage** (成行注文用)。
+- **成行スリッページ** (成行注文用)。
 
 公式 API ドキュメント:
 

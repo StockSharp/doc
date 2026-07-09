@@ -6,7 +6,7 @@ Haupteinstellungen:
 
 - **Schlüssel** und **Geheimnis**.
 - **Section**: `Spot` oder `Derivatives`.
-- **Derivatives mode**: `Legacy` oder `V3 Agent`.
+- **Derivatemodus**: `Legacy` oder `V3 Agent`.
 - **Spot REST / Spot WS**-Endpunkte.
 - **Derivatives REST / Derivatives WS**-Endpunkte.
 - **Demo**-Modus.
@@ -22,4 +22,4 @@ Offizielle API-Dokumentation:
 - [Aster Code endpoints](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]
-> Aster-Derivate haben zwei Protokollfamilien. Wählen Sie den korrekten **Derivatives mode**, bevor Sie den Handel aktivieren.
+> Aster-Derivate haben zwei Protokollfamilien. Wählen Sie den korrekten **Derivatemodus**, bevor Sie den Handel aktivieren.

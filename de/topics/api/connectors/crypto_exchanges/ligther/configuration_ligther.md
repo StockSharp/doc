@@ -5,7 +5,7 @@ Für die Arbeit mit dem Connector generieren Sie **API-Schlüssel** und **Geheim
 Haupteinstellungen:
 
 - **Schlüssel** und **Geheimnis**.
-- **Account index** und **API key index**.
+- **Kontoindex** und **API-Schlüsselindex**.
 - **Section**: `Spot` oder `Derivatives`.
 - **Demo**-Modus.
 - **Spot REST / Derivatives REST**-Endpunkte.

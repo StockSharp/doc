@@ -6,8 +6,8 @@
 
 - **キー** - API キー。
 - **シークレット** - API シークレット。
-- **Account index** - アカウント インデックス。
-- **API key index** - API キー インデックス。
+- **アカウントインデックス** - アカウント インデックス。
+- **API キーインデックス** - API キー インデックス。
 - **Section** - 取引セクション (`Spot` または `Derivatives`)。
 - **Demo** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。

@@ -6,8 +6,8 @@ Campos principais:
 
 - **chave** - chave API.
 - **segredo** - segredo API.
-- **Account index** - índice da conta.
-- **API key index** - índice da chave API.
+- **Índice da conta** - índice da conta.
+- **Índice da chave API** - índice da chave API.
 - **Section** - secção de negociação (`Spot` ou `Derivatives`).
 - **Demo** - modo de ambiente de demonstração.
 - **Spot REST / Derivatives REST** - endpoints REST.

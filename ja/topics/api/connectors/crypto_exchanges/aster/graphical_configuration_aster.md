@@ -7,7 +7,7 @@
 - **キー** - API キー。
 - **シークレット** - API シークレット。
 - **Section** - 取引セクション（`Spot` または `Derivatives`）。
-- **Derivatives mode** - デリバティブのプロトコルファミリー。
+- **デリバティブモード** - デリバティブのプロトコルファミリー。
 - **Demo** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives WS** - WebSocket エンドポイント。

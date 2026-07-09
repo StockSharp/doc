@@ -11,7 +11,7 @@ Haupteinstellungen:
 - **Section**: `Spot` oder `Derivatives`.
 - **Testnet**-Modus.
  - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt**.
-- **Market slippage** für Market-Orders.
+- **Markt-Slippage** für Market-Orders.
 
 Offizielle API-Dokumentation:
 

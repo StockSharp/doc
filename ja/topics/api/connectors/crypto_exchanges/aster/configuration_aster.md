@@ -6,7 +6,7 @@
 
 - **キー** と **シークレット**。
 - **Section**: `Spot` または `Derivatives`。
-- **Derivatives mode**: `Legacy` または `V3 Agent`。
+- **デリバティブモード**: `Legacy` または `V3 Agent`。
 - **Spot REST / Spot WS** エンドポイント。
 - **Derivatives REST / Derivatives WS** エンドポイント。
 - **Demo** モード。
@@ -22,4 +22,4 @@
 - [Aster Code エンドポイント](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]
-> Aster デリバティブには 2 つのプロトコルファミリーがあります。取引を有効にする前に、正しい **Derivatives mode** を選択してください。
+> Aster デリバティブには 2 つのプロトコルファミリーがあります。取引を有効にする前に、正しい **デリバティブモード** を選択してください。

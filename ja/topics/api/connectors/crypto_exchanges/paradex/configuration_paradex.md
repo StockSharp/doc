@@ -5,7 +5,7 @@
 主な設定:
 
 - **キー** と **シークレット**。
-- **Starknet account** と **Starknet key**。
+- **Starknet アカウント** と **Starknet キー**。
 - **Section**: `Spot` または `Derivatives`。
 - **Enable spot**: API サポートが利用可能な場合に Spot セクションを有効にします。
 - **Demo** モード。

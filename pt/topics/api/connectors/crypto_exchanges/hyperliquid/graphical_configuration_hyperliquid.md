@@ -11,7 +11,7 @@ Campos principais:
 - **Section** - secção de negociação (`Spot` ou `Derivatives`).
 - **Testnet** - endpoints de testnet.
  - **Endpoint de informação / endpoint de exchange / endpoint WS** - URLs dos endpoints.
-- **Market slippage** - slippage predefinido para ordens de mercado.
+- **Slippage de mercado** - slippage predefinido para ordens de mercado.
 
 ## Conteúdo recomendado
 

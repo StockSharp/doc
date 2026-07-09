@@ -5,7 +5,7 @@ Para trabajar con el conector, genere **clave API** y **secreto** en la cuenta d
 Configuración principal:
 
 - **clave** y **secreto**.
-- **Account index** y **API key index**.
+- **Índice de cuenta** y **Índice de clave API**.
 - **Section**: `Spot` o `Derivatives`.
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.

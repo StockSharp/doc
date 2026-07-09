@@ -10,7 +10,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Transactions only** - Logmeldungen nur für den Transaktionsstream schreiben.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md)).
 - **Intervall der Verbindungsprüfung** - Intervall für die Benachrichtigung des Servers, dass die Verbindung weiterhin aktiv ist. Standardwert: 1 Minute.
-- **Unified board code** - Board-Code für das vereinheitlichte Instrument.
+- **Vereinheitlichter Board-Code** - Board-Code für das vereinheitlichte Instrument.
 
 ## Siehe auch
 

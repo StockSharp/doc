@@ -6,7 +6,7 @@ Definições principais:
 
 - **chave** e **segredo**.
 - **Section**: `Spot` ou `Derivatives`.
-- **Derivatives mode**: `Legacy` ou `V3 Agent`.
+- **Modo de derivativos**: `Legacy` ou `V3 Agent`.
 - Endpoints **Spot REST / Spot WS**.
 - Endpoints **Derivatives REST / Derivatives WS**.
 - Modo **Demo**.
@@ -22,4 +22,4 @@ Documentação oficial da API:
 - [Aster Code endpoints](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]
-> A Aster tem duas famílias de protocolos para derivativos. Selecione o **Derivatives mode** correto antes de ativar a negociação.
+> A Aster tem duas famílias de protocolos para derivativos. Selecione o **Modo de derivativos** correto antes de ativar a negociação.

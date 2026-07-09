@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
 - **endereço** - Endereço.
-- **Dialect** - Dialeto do protocolo FIX.
+- **Dialeto** - Dialeto do protocolo FIX.
 - **Sender** - Identificador do remetente.
 - **Target** - Identificador do destinatário.
 - **nome de utilizador** - Login.
@@ -28,7 +28,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 - **Server name** - Nome do servidor que usa a conexão SSL.
 - **Definições de religação** - Configurações do mecanismo para rastrear a conexão com o sistema de negociação ([Configurações de reconexão](../../reconnection_settings.md)).
 - **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a conexão ainda está ativa. O valor padrão é 1 minuto.
-- **Unified board code** - Código da bolsa para o instrumento unificado.
+- **Código de mercado unificado** - Código da bolsa para o instrumento unificado.
 
 ## Veja também
 

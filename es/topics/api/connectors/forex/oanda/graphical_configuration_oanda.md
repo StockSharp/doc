@@ -10,7 +10,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Transactions only** - Escribir mensajes de log solo para el flujo de transacciones.
 - **Configuración de reconexión** - Configuración del mecanismo para rastrear la conexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
 - **Intervalo de comprobación** - Intervalo para notificar al servidor que la conexión sigue activa. El valor predeterminado es 1 minuto.
-- **Unified board code** - Código de board para el instrumento unificado.
+- **Código de mercado unificado** - Código de board para el instrumento unificado.
 
 ## Ver también
 

@@ -11,7 +11,7 @@ Configuración principal:
 - **Section**: `Spot` o `Derivatives`.
 - Modo **Testnet**.
  - **Endpoint de información / endpoint de exchange / endpoint WS**.
-- **Market slippage** para órdenes de mercado.
+- **Deslizamiento de mercado** para órdenes de mercado.
 
 Documentación oficial de la API:
 

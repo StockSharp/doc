@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
 
 - **Adresse** - Adresse.
-- **Dialect** - Dialekt des FIX-Protokolls.
+- **Dialekt** - Dialekt des FIX-Protokolls.
 - **Sender** - Absenderkennung.
 - **Target** - Zielkennung.
 - **Benutzername** - Login.
@@ -28,7 +28,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Server name** - Servername, der die SSL-Verbindung verwendet.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
 - **Intervall der Verbindungsprüfung** - Intervall zur Benachrichtigung des Servers, dass die Verbindung noch aktiv ist. Der Standardwert beträgt 1 Minute.
-- **Unified board code** - Board-Code für das vereinheitlichte Instrument.
+- **Vereinheitlichter Board-Code** - Board-Code für das vereinheitlichte Instrument.
 
 ## Siehe auch
 

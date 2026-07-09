@@ -5,7 +5,7 @@
 主な設定:
 
 - **キー** と **シークレット**。
-- **Account index** と **API key index**。
+- **アカウントインデックス** と **API キーインデックス**。
 - **Section**: `Spot` または `Derivatives`。
 - **Demo** モード。
 - **Spot REST / Derivatives REST** エンドポイント。

@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![API GUI Settings FAST](../../../../../images/api_gui_settings_fast.png)
 
-- **Dialect** - Dialeto do protocolo FAST. Deve ser definido como o primeiro parâmetro. Após a seleção, o próximo parâmetro (**FAST settings**) conterá os endereços IP do dialeto especificado.
-- **FAST settings** - Endereços IP e portas do dialeto (selecionado no parâmetro anterior). Você pode usar a opção a seguir para carregar as configurações rapidamente.
+- **Dialeto** - Dialeto do protocolo FAST. Deve ser definido como o primeiro parâmetro. Após a seleção, o próximo parâmetro (**Definições FAST**) conterá os endereços IP do dialeto especificado.
+- **Definições FAST** - Endereços IP e portas do dialeto (selecionado no parâmetro anterior). Você pode usar a opção a seguir para carregar as configurações rapidamente.
 - **Settings file** - Opção rápida para carregar as configurações do dialeto a partir de um arquivo de configuração da bolsa.
 - **nome de utilizador** - Login (usado para serviços de recuperação TCP).
 - **palavra-passe** - Senha (usada para serviços de recuperação TCP).

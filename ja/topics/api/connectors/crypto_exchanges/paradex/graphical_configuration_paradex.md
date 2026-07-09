@@ -6,8 +6,8 @@
 
 - **キー** - API キー。
 - **シークレット** - API シークレット。
-- **Starknet account** - Starknet アカウントヘッダー値。
-- **Starknet key** - Starknet 秘密鍵マテリアル。
+- **Starknet アカウント** - Starknet アカウントヘッダー値。
+- **Starknet キー** - Starknet 秘密鍵マテリアル。
 - **Section** - 取引セクション (`Spot` または `Derivatives`)。
 - **Enable spot** - Spot セクションを有効にします。
 - **Demo** - デモ環境モード。

@@ -11,7 +11,7 @@ Definições principais:
 - **Section**: `Spot` ou `Derivatives`.
 - Modo **Testnet**.
  - **Endpoint de informação / endpoint de exchange / endpoint WS**.
-- **Market slippage** para ordens de mercado.
+- **Slippage de mercado** para ordens de mercado.
 
 Documentação oficial da API:
 

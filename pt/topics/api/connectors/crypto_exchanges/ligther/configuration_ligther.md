@@ -5,7 +5,7 @@ Para trabalhar com o conector, gere a **chave API** e o **segredo** na conta da 
 Definições principais:
 
 - **chave** e **segredo**.
-- **Account index** e **API key index**.
+- **Índice da conta** e **Índice da chave API**.
 - **Section**: `Spot` ou `Derivatives`.
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.

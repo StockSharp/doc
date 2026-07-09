@@ -11,7 +11,7 @@ Hauptfelder:
 - **Section** - Handelssektion (`Spot` oder `Derivatives`).
 - **Testnet** - Testnet-Endpunkte.
  - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt** - Endpunkt-URLs.
-- **Market slippage** - Standard-Slippage für Market-Orders.
+- **Markt-Slippage** - Standard-Slippage für Market-Orders.
 
 ## Empfohlene Inhalte
 

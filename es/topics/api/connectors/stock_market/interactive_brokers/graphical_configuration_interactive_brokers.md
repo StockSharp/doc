@@ -7,7 +7,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **dirección** - Dirección TWS.
 - **Identifier** - ID único. Se usa cuando varios clientes están conectados a un terminal o gateway.
 - **Real-time** - Si deben usarse datos en tiempo real o datos "congelados" en el servidor del bróker.
-- **Logging level** - Nivel de logging de mensajes del servidor.
+- **Nivel de registro** - Nivel de registro de mensajes del servidor.
 - **Market data fields** - Campos de datos de mercado que se recibirán con mensajes Level1 suscritos.
 - **Protocol** - Protocolo SSL para establecer conexión
 - **certificado** - Certificado SSL.
