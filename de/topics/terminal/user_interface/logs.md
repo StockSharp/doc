@@ -2,4 +2,4 @@
 
 Siehe
 
-[Logs](../../designer/user_interface/logs.md)
+[Protokoll-Panel](../../designer/user_interface/logs.md)

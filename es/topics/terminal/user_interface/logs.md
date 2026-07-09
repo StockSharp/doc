@@ -2,4 +2,4 @@
 
 Consulte
 
-[Logs](../../designer/user_interface/logs.md)
+[Panel de logs](../../designer/user_interface/logs.md)
