@@ -7,25 +7,25 @@ A tarefa converte dados da bolsa. Por exemplo, de logs de ordens para ticks ou d
 **Conversor**
 
 - **Conversor** - conversor.
-- **From** - que tipo de dados será convertido.
-- **Data format** - formato dos dados convertidos.
+- **Origem** - que tipo de dados será convertido.
+- **Formato de dados** - formato dos dados convertidos.
 - **Data inicial** - a partir de que data iniciar a conversão dos dados.
 - **Desfasamento temporal** - o desfasamento temporal em dias relativamente à data em que a tarefa foi iniciada. Isto impede a conversão de um dia incompleto. Se estiver configurada a conversão de dados em tempo real, o intervalo de atualização pode deixar o dia atual apenas parcialmente convertido. Utilize o desfasamento temporal para evitar isso.
-- **Where** - o diretório de dados onde os dados convertidos serão guardados.
+- **Destino** - o diretório de dados onde os dados convertidos serão guardados.
 
 **Livros de ordens**
 
 - **Intervalo** - intervalo de geração dos livros de ordens.
-- **Depth** - profundidade máxima da geração dos livros de ordens.
+- **Profundidade** - profundidade máxima da geração dos livros de ordens.
 - **Log de ordens** - como construir livros de ordens a partir do log de ordens.
 
   Cada bolsa tem o seu próprio formato de **log de ordens**; o programa [Hydra](../../hydra.md) suporta três formatos:
-  - **By default** - é utilizado na maioria dos casos.
+  - **Por predefinição** - é utilizado na maioria dos casos.
   - **ITCH** - é utilizado para o protocolo ITCH (bolsas: LSE e Nasdaq).
 
 **Geral**
 
-- **Cabeçalho** - Converter.
+- **Cabeçalho** - Conversor.
 - **Horário de trabalho** - configuração do horário de funcionamento da board. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operação** - o intervalo de funcionamento.
 - **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.

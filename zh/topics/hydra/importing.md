@@ -1,6 +1,6 @@
 # 导入
 
-[Hydra](../hydra.md) 可以导入以 .csv 格式保存的自有数据。要执行导入，请打开 **Import** 选项卡，然后选择要导入的交易所数据类型。
+[Hydra](../hydra.md) 可以导入以 .csv 格式保存的自有数据。要执行导入，请打开 **导入** 选项卡，然后选择要导入的交易所数据类型。
 
 ![hydra import menu](../../images/hydra_import_menu.png)
 

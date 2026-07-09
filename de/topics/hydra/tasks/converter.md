@@ -6,26 +6,26 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder 
 
 **Konverter**
 
-- **Konverter** - Converter.
-- **From** - welcher Datentyp konvertiert wird.
-- **Data format** - Format der konvertierten Daten.
+- **Konverter** - Konverter.
+- **Von** - welcher Datentyp konvertiert wird.
+- **Datenformat** - Format der konvertierten Daten.
 - **Startdatum** - ab welchem Datum die Datenkonvertierung gestartet werden soll.
 - **Zeitversatz** - Zeitoffset in Tagen ab dem Datum, an dem die Aufgabe gestartet wurde. Dies verhindert die Konvertierung eines unvollständigen Tages. Wenn die Datenkonvertierung in Echtzeit konfiguriert ist, kann das Aktualisierungsintervall den aktuellen Tag nur teilweise konvertieren. Verwenden Sie den Zeitoffset, um dies zu vermeiden.
-- **Where** - das Datenverzeichnis, in dem die konvertierten Daten gespeichert werden.
+- **Ziel** - das Datenverzeichnis, in dem die konvertierten Daten gespeichert werden.
 
 **Orderbücher**
 
 - **Intervall** - Intervall für die Order-Book-Erzeugung.
-- **Depth** - maximale Tiefe der Order-Book-Erzeugung.
+- **Tiefe** - maximale Tiefe der Order-Book-Erzeugung.
 - **Order-Log** - wie Orderbücher aus dem Order-Log erstellt werden.
 
   Jede Börse hat ihr eigenes **Order-Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
-  - **By default** - wird in den meisten Fällen verwendet.
+  - **Standardmäßig** - wird in den meisten Fällen verwendet.
   - **ITCH** - wird für das ITCH-Protokoll verwendet (Börsen: LSE und Nasdaq).
 
 **Allgemein**
 
-- **Kopfzeile** - Converter.
+- **Kopfzeile** - Konverter.
 - **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.

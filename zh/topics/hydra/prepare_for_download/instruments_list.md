@@ -6,7 +6,7 @@
 
 下面以从 **Interactive Brokers** 数据源下载交易品种为例：
 
-1. 选择下载交易品种，然后单击 **Extended condition** 按钮。![hydra choose securitiy](../../../images/hydra_choose_securitiy.png)
+1. 选择下载交易品种，然后单击 **扩展条件** 按钮。![hydra choose securitiy](../../../images/hydra_choose_securitiy.png)
 2. 随后会打开用于下载交易品种的高级设置列表。![hydra choose securitiy 00](../../../images/hydra_choose_securitiy_00.png)
 3. 假设需要下载满足以下条件的交易品种：APPLE 股票，货币为美元。请按下图设置交易品种参数，然后单击 **OK**。![hydra choose securitiy 01](../../../images/hydra_choose_securitiy_01.png)
 

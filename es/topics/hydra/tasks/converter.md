@@ -7,25 +7,25 @@ La tarea convierte datos bursátiles. Por ejemplo, de registros de órdenes a ti
 **Convertidor**
 
 - **Convertidor** - convertidor.
-- **From** - qué tipo de datos se convertirá.
-- **Data format** - formato de los datos convertidos.
+- **Origen** - qué tipo de datos se convertirá.
+- **Formato de datos** - formato de los datos convertidos.
 - **Fecha inicial** - fecha desde la que iniciar la conversión de datos.
 - **Desfase temporal** - desplazamiento de tiempo en días desde la fecha en que se inició la tarea. Esto evita convertir un día incompleto. Si está configurada la conversión de datos en tiempo real, el intervalo de actualización puede dejar el día actual solo parcialmente convertido. Use el desplazamiento de tiempo para evitarlo.
-- **Where** - directorio de datos donde se guardarán los datos convertidos.
+- **Destino** - directorio de datos donde se guardarán los datos convertidos.
 
 **Libros de órdenes**
 
 - **Intervalo** - intervalo de generación del libro de órdenes.
-- **Depth** - profundidad máxima de generación del libro de órdenes.
+- **Profundidad** - profundidad máxima de generación del libro de órdenes.
 - **Registro de órdenes** - cómo construir libros de órdenes a partir del registro de órdenes.
 
   Cada bolsa tiene su propio formato de **registro de órdenes**; el programa [Hydra](../../hydra.md) admite tres formatos:
-  - **By default** - se usa en la mayoría de los casos.
+  - **Predeterminado** - se usa en la mayoría de los casos.
   - **ITCH** - se usa para el protocolo ITCH (bolsas: LSE y Nasdaq).
 
 **General**
 
-- **Encabezado** - Converter.
+- **Encabezado** - Convertidor.
 - **Horario de trabajo** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operación** - intervalo de operación.
 - **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
