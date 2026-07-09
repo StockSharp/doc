@@ -18,9 +18,9 @@ O painel **Propriedades** apresenta os parâmetros do bloco selecionado no paine
 
 ![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
 
-O painel **Propriedades** pode ser apresentado em dois modos: *Basic settings* e *Advanced settings*.
+O painel **Propriedades** pode ser apresentado em dois modos: *Definições básicas* e *Definições avançadas*.
 
-Por predefinição, ao construir um esquema, as propriedades são inicialmente apresentadas no modo *basic settings*. Para mudar para o modo *advanced settings*, tem de clicar no título correspondente.
+Por predefinição, ao construir um esquema, as propriedades são inicialmente apresentadas no modo *Definições básicas*. Para mudar para o modo *Definições avançadas*, tem de clicar no título correspondente.
 
 No modo *definições básicas*, são apresentadas apenas as propriedades mais necessárias do bloco. Por exemplo, para o bloco [Velas](elements/data_sources/candles.md), serão apresentados o período, a opção para receber apenas velas formadas, a opção para construir velas a partir de um período menor e a opção para subscrever velas por sinal.
 

@@ -18,7 +18,7 @@ Sockets de entrada
 
 Sockets de saída
 
-- **Ordem** - a ordem registada que pode ser usada para obter negócios sobre ela usando o elemento Trades pela ordem e apresentá-la no gráfico usando o cubo Chart panel
+- **Ordem** - a ordem registada que pode ser usada para obter negócios sobre ela usando o elemento **Negócios por ordem** e apresentá-los no gráfico usando o cubo **Painel de gráfico**
 
 ### Parâmetros
 

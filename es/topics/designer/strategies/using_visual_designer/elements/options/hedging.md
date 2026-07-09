@@ -18,7 +18,7 @@ Sockets de entrada
 
 Sockets de salida
 
-- **Orden** – orden registrada que puede usarse para obtener sus operaciones usando el elemento Trades por orden y mostrarla en el gráfico usando el cubo Chart panel.
+- **Orden** – orden registrada que puede usarse para obtener sus operaciones usando el elemento **Operaciones por orden** y mostrarlas en el gráfico usando el cubo **Panel de gráfico**.
 
 ### Parámetros
 

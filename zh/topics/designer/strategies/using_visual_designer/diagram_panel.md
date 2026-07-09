@@ -18,17 +18,17 @@
 
 ![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
 
-**属性** 面板支持两种显示模式：*Basic settings* 和 *Advanced settings*。
+**属性** 面板支持两种显示模式：*基本设置* 和 *高级设置*。
 
-默认情况下，构建策略图时首先以 *Basic settings* 模式显示属性。要切换到 *Advanced settings* 模式，请单击相应标题。
+默认情况下，构建策略图时首先以 *基本设置* 模式显示属性。要切换到 *高级设置* 模式，请单击相应标题。
 
-*Basic settings* 模式仅显示模块最常用的属性。例如，对于[K线](elements/data_sources/candles.md)模块，会显示时间周期、是否仅接收已形成K线、是否允许根据更小时间周期构建K线，以及是否根据信号订阅K线等选项。
+*基本设置* 模式仅显示模块最常用的属性。例如，对于[K线](elements/data_sources/candles.md)模块，会显示时间周期、是否仅接收已形成K线、是否允许根据更小时间周期构建K线，以及是否根据信号订阅K线等选项。
 
-*Advanced settings* 模式会显示该模块所有可修改和配置的属性。
+*高级设置* 模式会显示该模块所有可修改和配置的属性。
 
 ![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
 
-所有模块都包含一组预定义属性，这些属性会在 *Advanced settings* 模式中显示：
+所有模块都包含一组预定义属性，这些属性会在 *高级设置* 模式中显示：
 
 - **名称** – 元素名称，显示在设计器中。
 - **日志级别** – 该元素的日志级别。

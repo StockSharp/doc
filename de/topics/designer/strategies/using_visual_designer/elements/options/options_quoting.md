@@ -15,7 +15,7 @@ Eingehende Sockets
 
 Ausgehende Sockets
 
-- **Auftrag** - die registrierte Order, die verwendet werden kann, um über das Element **Ausführungen** by Order Trades dafür zu erhalten und sie mit dem Würfel **Diagrammbereich** im Chart anzuzeigen.
+- **Auftrag** - die registrierte Order, die verwendet werden kann, um über das Element **Trades nach Order** Trades dafür zu erhalten und sie mit dem Würfel **Diagrammbereich** im Chart anzuzeigen.
 
 ### Parameter
 

@@ -4,7 +4,7 @@ Durante o processo de teste de uma estratégia, muitas vezes torna-se necessári
 
 ![Designer Debug 00](../../../images/designer_debug_00.png)
 
-Os seguintes botões encontram-se no grupo **Depurador** do Ribbon **Emulação**:
+Os seguintes botões encontram-se no grupo **Depurador** do friso **Emulação**:
 
 - ![Designer Debug 01](../../../images/designer_debug_01.png)**Adicionar ponto de interrupção** – para adicionar um breakpoint ao elemento selecionado. Os elementos aos quais é adicionado um breakpoint ficam destacados com uma margem vermelha.
 - ![Designer Debug 02](../../../images/designer_debug_02.png)**Eliminar ponto de interrupção** – para eliminar um breakpoint.

@@ -4,7 +4,7 @@ Beim Strategietesting muss häufig geprüft werden, welche Daten am Eingang eine
 
 ![Designer Debug 00](../../../images/designer_debug_00.png)
 
-In der Gruppe **Debugger** des **Simulation**-Ribbon befinden sich die folgenden Schaltflächen:
+In der Gruppe **Debugger** des Menübands **Simulation** befinden sich die folgenden Schaltflächen:
 
 - ![Designer Debug 01](../../../images/designer_debug_01.png)**Haltepunkt hinzufügen** - fügt dem ausgewählten Element einen Haltepunkt hinzu. Elemente, für die ein Haltepunkt hinzugefügt wurde, werden mit einem roten Rahmen markiert.
 - ![Designer Debug 02](../../../images/designer_debug_02.png)**Haltepunkt löschen** - löscht einen Haltepunkt.
@@ -17,4 +17,3 @@ In der Gruppe **Debugger** des **Simulation**-Ribbon befinden sich die folgenden
 ## Empfohlene Inhalte
 
 [Haltepunkte](debugging/break_points.md)
-

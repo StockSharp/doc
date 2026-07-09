@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 Ao utilizar a classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1), a abordagem de guardar e restaurar definições é usada automaticamente.
 
-A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Basic Properties](../../using_visual_designer/diagram_panel.md).
+A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Definições básicas](../../using_visual_designer/diagram_panel.md).
 
 A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) determina quando é chamado o método com sockets de entrada:
 
