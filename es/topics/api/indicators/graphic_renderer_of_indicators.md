@@ -15,7 +15,7 @@ Todo IndicatorPainters debe heredar de la clase base [BaseChartIndicatorPainter\
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+/// Elemento de gráfico para <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
@@ -28,7 +28,7 @@ Definamos los elementos del gráfico [ChartLineElement](xref:StockSharp.Xaml.Cha
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+/// Elemento de gráfico para <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
@@ -94,7 +94,7 @@ Código completo de [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPai
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+/// Elemento de gráfico para <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>

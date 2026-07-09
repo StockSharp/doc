@@ -103,7 +103,7 @@ public class MyAnalyticsScript : IAnalyticsScript
 
             if (candles.Length == 0)
             {
-                logs.AddWarningLog($"No data for {secId}");
+                logs.AddWarningLog($"{secId} のデータがありません");
                 continue;
             }
 
@@ -162,4 +162,3 @@ public class VolumeTableScript : IAnalyticsScript
 [インジケーター](indicators.md)
 
 [データストレージ](market_data_storage.md)
-

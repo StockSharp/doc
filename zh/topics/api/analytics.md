@@ -103,7 +103,7 @@ public class MyAnalyticsScript : IAnalyticsScript
 
             if (candles.Length == 0)
             {
-                logs.AddWarningLog($"No data for {secId}");
+                logs.AddWarningLog($"没有 {secId} 的数据");
                 continue;
             }
 

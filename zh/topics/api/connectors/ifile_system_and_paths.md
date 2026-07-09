@@ -40,7 +40,7 @@ public static class Paths
 | `EnumerateFiles(path, mask)` | 枚举目录中的文件 |
 | `WriteAllTextAsync(path, text)` | 异步写入文本到文件 |
 
-## 它的使用地点
+## 使用位置
 
 几乎所有与文件系统一起工作的 StockSharp 组件在其构造函数中都接受 `IFileSystem`。以下是最常见的情况。
 

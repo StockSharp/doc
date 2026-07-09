@@ -103,7 +103,7 @@ public class MyAnalyticsScript : IAnalyticsScript
 
             if (candles.Length == 0)
             {
-                logs.AddWarningLog($"No data for {secId}");
+                logs.AddWarningLog($"No hay datos para {secId}");
                 continue;
             }
 

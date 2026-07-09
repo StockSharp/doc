@@ -78,7 +78,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (prices.Length == 0)
 				{
-					logs.LogWarning("No data for {0}", security);
+					logs.LogWarning("没有 {0} 的数据", security);
 					return Task.CompletedTask;
 				}
 
@@ -171,7 +171,7 @@ class pearson_correlation_script(IAnalyticsScript):
 			prices = [float(c.ClosePrice) for c in load_range(candle_storage, message_type, from_date, to_date)]
 
 			if len(prices) == 0:
-				logs.LogWarning("No data for {0}", security)
+				logs.LogWarning("没有 {0} 的数据", security)
 				return Task.CompletedTask
 
 			closes.append(prices)
