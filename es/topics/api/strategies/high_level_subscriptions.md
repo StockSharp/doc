@@ -207,7 +207,7 @@ protected override void OnStarted2(DateTime time)
             if (!IsFormedAndOnlineAndAllowTrading())
                 return;
 
-            this.AddInfoLog("Tick: price={0}, volume={1}", tick.Price, tick.Volume);
+            this.AddInfoLog("Tick: precio={0}, volumen={1}", tick.Price, tick.Volume);
         })
         .Start();
 }

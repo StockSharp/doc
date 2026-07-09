@@ -22,7 +22,7 @@ Sockets de saída
 Parâmetros
 
 - **Cotação** - o parâmetro pelo qual a cotação será executada. Pode assumir os valores **Volatilidade** (o volume de cotação seguirá os limites de volatilidade especificados) ou **Preço teórico** (o volume de cotação seguirá os limites especificados do preço teórico).
-- **Direção** - a direção da cotação pode assumir os valores Purchase e Sell.
+- **Direção** - a direção da cotação pode assumir os valores compra e venda.
 - **Mínimo** - o valor mínimo da volatilidade ou do preço teórico.
 - **Máximo** - o valor máximo da volatilidade ou do preço teórico.
 

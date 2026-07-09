@@ -117,7 +117,7 @@ var tickSubscription = new Subscription(DataType.Ticks, security)
 connector.TickTradeReceived += (subscription, tick) =>
 {
 	if (subscription == tickSubscription)
-		Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+		Console.WriteLine($"Tick: {tick.ServerTime}, Preis: {tick.Price}, Volumen: {tick.Volume}");
 };
 
 connector.Subscribe(tickSubscription);
