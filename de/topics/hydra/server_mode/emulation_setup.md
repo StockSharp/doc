@@ -17,24 +17,24 @@ Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulat
 
 ![hydra emulator prop](../../../images/hydra_emulator_prop.png)
 
-- **Match on touch** - beim Emulieren der Trade-Zuordnung Orders zuordnen, wenn der Trade-Preis dem Orderpreis entspricht.
-- **Order book (time in force)** - maximale Gueltigkeitsdauer des Order Books im Emulator. Wenn das Order Book innerhalb des angegebenen Zeitraums nicht aktualisiert wurde, wird sein Wert gelöscht. Dies wird verwendet, um alte Order-Book-Daten zu entfernen, wenn Datenluecken vorhanden sind.
-- **Percentage of errors** - Prozentsatz von Fehlern beim Registrieren neuer Orders (von 0 bis 100).
-- **Latency** - die minimale Latenz registrierter Orders.
-- **Re-registration** - ob die Re-Registrierung von Orders als einzelne Transaktion unterstuetzt wird.
-- **Buffering period** - Parameter, der für den Zeitraum verantwortlich ist, in dem ganze Pakete gesendet werden, um Netzwerklatenz zu emulieren und die Arbeit des Boersenkerns zu puffern.
-- **Order ID** - die Nummer, mit der der Emulator Kennungen für Orders generiert.
-- **Trade identifier** - die Nummer, mit der der Emulator Kennungen für Trades generiert.
-- **Transaction** - die Nummer, mit der der Emulator Kennungen für Ordertransaktionen generiert.
-- **Spread size** - Spread-Groesse in Preisschritten. Wird verwendet, um den Spread beim Erzeugen des Order Books aus Tick-Trades zu bestimmen.
-- **Order book depth** - maximale Order-Book-Tiefe, die aus Ticks erzeugt wird.
-- **Number of volume steps** - die Anzahl der Volumenschritte, um die die Order groesser ist als der Tick-Trade. Wird beim Testen auf Tick-Trades verwendet.
-- **Portfolio interval** - Intervall für die Neuberechnung von Portfoliodaten. Wenn das Intervall 0 ist, erfolgt keine Neuberechnung.
-- **Adjust time** - Zeit für Orders und Trades an die Boersenzeit anpassen.
-- **Zeitzone** - Informationen zur Zeitzone, in der sich die Boerse befindet.
-- **Price shift** - Preisverschiebung vom letzten Trade, die die Grenzen der maximalen und minimalen Preise für die naechste Sitzung bestimmt.
-- **Add additional volume** - zusätzliches Volumen zum Order Book hinzufügen, wenn Orders mit grossem Volumen registriert werden.
-- **Trading session state** - Pruefung des Handelsstatus.
-- **Money** - Geldsaldo pruefen.
-- **Short** - Moeglichkeit, Short-Positionen zu eroeffnen.
-- **Storage** - Speicher.
+- **Bei Berührung zusammenführen** - beim Emulieren der Trade-Zuordnung Orders zuordnen, wenn der Trade-Preis dem Orderpreis entspricht.
+- **Orderbuch (Gültigkeitsdauer)** - maximale Gültigkeitsdauer des Order Books im Emulator. Wenn das Order Book innerhalb des angegebenen Zeitraums nicht aktualisiert wurde, wird sein Wert gelöscht. Dies wird verwendet, um alte Order-Book-Daten zu entfernen, wenn Datenlücken vorhanden sind.
+- **Fehlerprozentsatz** - Prozentsatz von Fehlern beim Registrieren neuer Orders (von 0 bis 100).
+- **Latenz** - die minimale Latenz registrierter Orders.
+- **Neuregistrierung** - ob die Re-Registrierung von Orders als einzelne Transaktion unterstützt wird.
+- **Pufferungszeitraum** - Parameter, der für den Zeitraum verantwortlich ist, in dem ganze Pakete gesendet werden, um Netzwerklatenz zu emulieren und die Arbeit des Börsenkerns zu puffern.
+- **Order-ID** - die Nummer, mit der der Emulator Kennungen für Orders generiert.
+- **Trade-Kennung** - die Nummer, mit der der Emulator Kennungen für Trades generiert.
+- **Transaktion** - die Nummer, mit der der Emulator Kennungen für Ordertransaktionen generiert.
+- **Spreadgröße** - Spread-Größe in Preisschritten. Wird verwendet, um den Spread beim Erzeugen des Order Books aus Tick-Trades zu bestimmen.
+- **Orderbuchtiefe** - maximale Order-Book-Tiefe, die aus Ticks erzeugt wird.
+- **Anzahl der Volumenschritte** - die Anzahl der Volumenschritte, um die die Order größer ist als der Tick-Trade. Wird beim Testen auf Tick-Trades verwendet.
+- **Portfoliointervall** - Intervall für die Neuberechnung von Portfoliodaten. Wenn das Intervall 0 ist, erfolgt keine Neuberechnung.
+- **Zeit anpassen** - Zeit für Orders und Trades an die Börsenzeit anpassen.
+- **Zeitzone** - Informationen zur Zeitzone, in der sich die Börse befindet.
+- **Preisverschiebung** - Preisverschiebung vom letzten Trade, die die Grenzen der maximalen und minimalen Preise für die nächste Sitzung bestimmt.
+- **Zusätzliches Volumen hinzufügen** - zusätzliches Volumen zum Order Book hinzufügen, wenn Orders mit großem Volumen registriert werden.
+- **Status der Handelssitzung** - Prüfung des Handelsstatus.
+- **Geld** - Geldsaldo prüfen.
+- **Short** - Möglichkeit, Short-Positionen zu eröffnen.
+- **Speicher** - Speicher.

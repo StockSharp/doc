@@ -10,23 +10,23 @@ No modo de servidor, é possível ligar outro programa Hydra, que atuará como c
 
 ![hydra tasks server](../../../images/hydratasksserver_2.png)
 
-- **Address** - o endereço do servidor Hydra.
-- **Login** - login (necessário se o servidor exigir autorização).
+- **Endereço** - o endereço do servidor Hydra.
+- **Início de sessão** - login (necessário se o servidor exigir autorização).
 - **Palavra-passe** - palavra-passe (necessária se o servidor exigir autorização).
-- **Time Offset** - um desfasamento temporal em dias relativamente à data atual, necessário para evitar o descarregamento de dados incompletos da sessão de negociação atual.
-- **Weekends** - se deve descarregar dados dos fins de semana.
+- **Desfasamento temporal** - um desfasamento temporal em dias relativamente à data atual, necessário para evitar o descarregamento de dados incompletos da sessão de negociação atual.
+- **Fins de semana** - se deve descarregar dados dos fins de semana.
 
 **Principal**
 
 - **Título** - o título da tarefa.
-- **Working Hours** - definição do funcionamento da plataforma.
-- **Interval of Operation** - intervalo de funcionamento.
-- **Data Directory** - o diretório com dados onde serão guardados os ficheiros finais no formato [S#](../../api.md).
+- **Horário de trabalho** - definição do funcionamento da plataforma.
+- **Intervalo de funcionamento** - intervalo de funcionamento.
+- **Diretório de dados** - o diretório com dados onde serão guardados os ficheiros finais no formato [S#](../../api.md).
 - **Formato** - o formato dos dados: BIN/CSV.
-- **Max. Errors** - o número máximo de erros; ao atingi-lo, a tarefa será parada. Por predefinição, 0 - o número de erros é ignorado.
+- **Máx. erros** - o número máximo de erros; ao atingi-lo, a tarefa será parada. Por predefinição, 0 - o número de erros é ignorado.
 - **Dependência** - uma tarefa que deve ser concluída antes de iniciar a atual.
 
 **Registo**
 
 - **Identificador** - identificador.
-- **Logging Level** - o nível de registo.
+- **Nível de registo** - o nível de registo.

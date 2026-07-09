@@ -6,7 +6,7 @@ Im Servermodus ermöglicht das Programm [Hydra](../../hydra.md) dem Benutzer, mi
 
 Tatsächlich erfolgt die Verbindung zur Quelle über [Hydra](../../hydra.md), mit dem zum Beispiel [Designer](../../designer.md) und [Terminal](../../terminal.md) gleichzeitig verbunden sind. Diese Methode ermöglicht es, erneute Verbindungen zwischen Programmen und den Kauf einer zusätzlichen Verbindung zu vermeiden. Bei einer solchen Arbeit sind Konflikte ausgeschlossen, die durch Orderregistrierungen oder Trades aus unterschiedlichen Programmen entstehen können. [Hydra](../../hydra.md) empfängt das Signal und gibt das Ergebnis an das Programm zurück, von dem es empfangen wurde, während der Ablauf anderer Arbeiten nicht gestört wird.
 
-Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im oberen Menü des Programms die Registerkarte **Server mode**.
+Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im oberen Menü des Programms die Registerkarte **Servermodus**.
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
@@ -16,7 +16,7 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
 
 **Hydra-Server**
 
-- **FIX server** - [Hydra](../../hydra.md) in den Servermodus schalten, der Live-Handelsdaten und historische Daten über das FIX-Protokoll verteilt.
+- **FIX-Server** - [Hydra](../../hydra.md) in den Servermodus schalten, der Live-Handelsdaten und historische Daten über das FIX-Protokoll verteilt.
 
   In diesem Abschnitt konfigurieren Sie die Verbindung für die Arbeit mit Quellen:
   1. **ConvertToLatin** - Kyrillisch in Latein umwandeln.
@@ -24,18 +24,18 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
   3. **TransactionSession** - Einstellung einer Handelssitzung. Einrichtung für den Handel über das Programm [Hydra](../../hydra.md).
 
      Mit dieser Einstellung können Sie Dialect des FIX-Protokolls, Sender und Recipient, Datenformat und weitere Einstellungen konfigurieren. Details finden Sie unter [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm).
-  4. **MarketDataSession** - Einstellungen für die Uebertragung von Marktdaten, die mit [Hydra](../../hydra.md) empfangen wurden. Details finden Sie unter [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm).
+  4. **MarketDataSession** - Einstellungen für die Übertragung von Marktdaten, die mit [Hydra](../../hydra.md) empfangen wurden. Details finden Sie unter [FIXServer properties](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm).
   5. **KeepSubscriptionsOnDisconnect** - Subscriptions beim Trennen der Verbindung zur Quelle beibehalten.
   6. **DeadSessionCleanupInterval** - nach welchem Zeitintervall Informationen gelöscht werden, wenn die Verbindung getrennt ist.
-- **Authorization** - Autorisierung für den Zugriff auf den Hydra-Server.
-- **Number of securities** - die maximale Anzahl von Instrumenten, die vom Server angefordert werden kann.
-- **Candles (days)** - die maximale Anzahl von Tagen, die zum Herunterladen der Kerzenhistorie verfügbar ist.
-- **Ticks (days)** - die maximale Anzahl von Tagen, die zum Herunterladen der Tick-Datenhistorie verfügbar ist.
-- **Order books (days)** - die maximale Anzahl von Tagen, die zum Herunterladen der Order-Book-Historie verfügbar ist.
-- **OL (days)** - die maximale Anzahl von Tagen, die zum Herunterladen der OL-Datenhistorie verfügbar ist.
-- **Transactions (days)** - die maximale Anzahl von Tagen, die zum Herunterladen der Transaktionshistorie verfügbar ist.
+- **Autorisierung** - Autorisierung für den Zugriff auf den Hydra-Server.
+- **Anzahl der Instrumente** - die maximale Anzahl von Instrumenten, die vom Server angefordert werden kann.
+- **Kerzen (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Kerzenhistorie verfügbar ist.
+- **Ticks (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Tick-Datenhistorie verfügbar ist.
+- **Orderbücher (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Order-Book-Historie verfügbar ist.
+- **OL (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der OL-Datenhistorie verfügbar ist.
+- **Transaktionen (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Transaktionshistorie verfügbar ist.
 - **Simulator** - Simulatormodus einschalten.
-- **Security mapping** - Übertragungsmodus nur für angegebene Instrumente aktivieren.
+- **Instrumentzuordnung** - Übertragungsmodus nur für angegebene Instrumente aktivieren.
 
 Wenn Sie **Autorisierung** auf einen anderen Wert als **Anonym** setzen, erscheint auf der Registerkarte **Allgemein** die Schaltfläche **Benutzer**. Nach dem Klicken darauf erscheint das Fenster **Benutzer**.
 
