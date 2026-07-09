@@ -4,11 +4,11 @@ O **Runner** pode ser usado como meio de depuração de estratégias de forma se
 
 Para configurar o processo de depuração, é necessário realizar os seguintes passos:
 
-1. Clique com o botão direito no projeto da estratégia de negociação e selecione **Properties** no menu de contexto:
+1. Clique com o botão direito no projeto da estratégia de negociação e selecione **Propriedades** no menu de contexto:
 
 ![runner_debug_00](../../images/runner_debug_00.png)
 
-No separador apresentado, encontre o item **Debug**, selecione a secção **General** e clique em **Open debug launch profiles UI**.
+No separador apresentado, encontre o item **Depurar**, selecione a secção **Geral** e clique em **Abrir interface de perfis de arranque de depuração**.
 
 2. Em seguida, na janela que abre, crie um novo perfil de depuração com o lançamento de um programa externo:
 

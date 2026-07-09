@@ -4,11 +4,11 @@
 
 Um den Debugging-Prozess einzurichten, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie mit der rechten Maustaste auf das Handelsstrategieprojekt und wählen Sie im Kontextmenü **Properties**:
+1. Klicken Sie mit der rechten Maustaste auf das Handelsstrategieprojekt und wählen Sie im Kontextmenü **Eigenschaften**:
 
 ![runner_debug_00](../../images/runner_debug_00.png)
 
-Suchen Sie auf der geöffneten Registerkarte den Punkt **Debug**, wählen Sie den Abschnitt **General** aus und klicken Sie auf **Open debug launch profiles UI**.
+Suchen Sie auf der geöffneten Registerkarte den Punkt **Debuggen**, wählen Sie den Abschnitt **Allgemein** aus und klicken Sie auf **Benutzeroberfläche für Debugstartprofile öffnen**.
 
 2. Erstellen Sie anschließend im geöffneten Fenster ein neues Debugging-Profil mit dem Start eines externen Programms:
 

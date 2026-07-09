@@ -30,7 +30,7 @@ stocksharp.studio.runner setup
 
 ![runner_setup_7](../../images/runner_setup_7.png)
 
-要验证输入数据是否正确，请选择 **Check**：
+要验证输入数据是否正确，请选择 **检查**：
 
 ![runner_setup_8](../../images/runner_setup_8.png)
 
@@ -42,7 +42,7 @@ stocksharp.studio.runner setup
 
 ![runner_setup_10](../../images/runner_setup_10.png)
 
-输入并验证所有设置后，必须单击 **Save**：
+输入并验证所有设置后，必须单击 **保存**：
 
 ![runner_setup_11](../../images/runner_setup_11.png)
 

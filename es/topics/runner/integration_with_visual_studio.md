@@ -4,11 +4,11 @@
 
 Para configurar el proceso de depuración, deben realizarse los siguientes pasos:
 
-1. Haga clic derecho en el proyecto de estrategia de trading y seleccione **Properties** en el menú contextual:
+1. Haga clic derecho en el proyecto de estrategia de trading y seleccione **Propiedades** en el menú contextual:
 
 ![runner_debug_00](../../images/runner_debug_00.png)
 
-En la pestaña que aparece, busque el elemento **Debug**, seleccione la sección **General** y haga clic en **Open debug launch profiles UI**.
+En la pestaña que aparece, busque el elemento **Depurar**, seleccione la sección **General** y haga clic en **Abrir interfaz de perfiles de inicio de depuración**.
 
 2. Después, en la ventana que se abre, cree un nuevo perfil de depuración con el lanzamiento de un programa externo:
 

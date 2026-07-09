@@ -31,7 +31,7 @@ Connections 項目を選択すると、プログラムはコネクター設定�
 
 ![runner_setup_7](../../images/runner_setup_7.png)
 
-入力したデータが正しいことを確認するには、**Check** を選択します。
+入力したデータが正しいことを確認するには、**確認** を選択します。
 
 ![runner_setup_8](../../images/runner_setup_8.png)
 
@@ -43,7 +43,7 @@ Connections 項目を選択すると、プログラムはコネクター設定�
 
 ![runner_setup_10](../../images/runner_setup_10.png)
 
-すべての設定を入力して確認したら、**Save** を押す必要があります。
+すべての設定を入力して確認したら、**保存** を押す必要があります。
 
 ![runner_setup_11](../../images/runner_setup_11.png)
 
