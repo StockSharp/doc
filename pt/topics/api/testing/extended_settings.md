@@ -160,13 +160,13 @@ connector.Connect();
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// Processar candles recebidas
-	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"Vela: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// Processar ticks recebidos
-	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Tick: {tick.ServerTime}, Preço: {tick.Price}, Volume: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
@@ -177,13 +177,13 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 	
 	// Processar livros de ordens recebidos
-	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	Console.WriteLine($"Livro de ordens: {orderBook.ServerTime}, melhor compra: {bestBid?.Price}, melhor venda: {bestAsk?.Price}, meio do spread: {spreadMiddle}");
 	
 	// Obter preço por lado da ordem
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 	
-	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	Console.WriteLine($"Preço de compra: {bidPrice}, preço de venda: {askPrice}");
 }
 ```
 
@@ -213,4 +213,3 @@ var spreadMiddle = level1.GetSpreadMiddle(Security.PriceStep);
 ```
 
 Estes métodos de extensão simplificam o acesso a dados do livro de ordens e permitem escrever código mais limpo e compreensível ao trabalhar com cotações da bolsa.
-

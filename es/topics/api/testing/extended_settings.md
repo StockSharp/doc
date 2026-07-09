@@ -160,13 +160,13 @@ connector.Connect();
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// Procesamiento de las velas recibidas
-	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"Vela: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// Procesamiento de los ticks recibidos
-	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Tick: {tick.ServerTime}, Precio: {tick.Price}, Volumen: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
@@ -177,13 +177,13 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 	
 	// Procesamiento de los libros de órdenes recibidos
-	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	Console.WriteLine($"Libro de órdenes: {orderBook.ServerTime}, mejor compra: {bestBid?.Price}, mejor venta: {bestAsk?.Price}, centro del spread: {spreadMiddle}");
 	
 	// Obtener el precio por lado de la orden
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 	
-	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	Console.WriteLine($"Precio de compra: {bidPrice}, precio de venta: {askPrice}");
 }
 ```
 

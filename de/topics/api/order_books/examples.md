@@ -73,7 +73,7 @@ Algorithmus:
 ```cs
 double significantVolumeThreshold = 10000; // Beispiel für einen Schwellenwert
 
-Console.WriteLine("Significant volumes in the order book:");
+Console.WriteLine("Signifikante Volumina im Orderbuch:");
 
 foreach (var bid in orderBook.Bids)
 {
@@ -93,4 +93,3 @@ foreach (var ask in orderBook.Asks)
 ```
 
 Dieser Algorithmus hilft, Niveaus mit signifikanten Volumina hervorzuheben, die eine wichtige Rolle in Marktpreisbewegungen spielen können.
-

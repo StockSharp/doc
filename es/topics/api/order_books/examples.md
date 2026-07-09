@@ -73,7 +73,7 @@ Algoritmo:
 ```cs
 double significantVolumeThreshold = 10000; // Ejemplo de valor umbral
 
-Console.WriteLine("Significant volumes in the order book:");
+Console.WriteLine("Volúmenes significativos en el libro de órdenes:");
 
 foreach (var bid in orderBook.Bids)
 {

@@ -73,7 +73,7 @@ foreach (var ask in orderBook.Asks)
 ```cs
 double significantVolumeThreshold = 10000; // しきい値の例
 
-Console.WriteLine("Significant volumes in the order book:");
+Console.WriteLine("板の大きな数量:");
 
 foreach (var bid in orderBook.Bids)
 {

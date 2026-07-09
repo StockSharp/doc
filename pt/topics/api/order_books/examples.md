@@ -73,7 +73,7 @@ Algoritmo:
 ```cs
 double significantVolumeThreshold = 10000; // Exemplo de valor de limiar
 
-Console.WriteLine("Significant volumes in the order book:");
+Console.WriteLine("Volumes significativos no livro de ordens:");
 
 foreach (var bid in orderBook.Bids)
 {

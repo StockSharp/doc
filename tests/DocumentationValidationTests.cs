@@ -120,6 +120,28 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Tools → Options → NuGet Package Manager → Package Sources",
 	];
 
+	private static readonly (string Name, string Pattern)[] _knownEnglishCodeOutputPatterns =
+	[
+		("subscription lifecycle output", @"\bSubscription (?:started|completed|interrupted|online|switched to real-time mode)\b"),
+		("adapter connection output", @"\bAdapter (?:connected|disconnected|connection error)\b"),
+		("round-trip output", @"\bPosition closed:|\bMax volume:"),
+		("ShrinkPrice output", @"\bOrder price:|\bOriginal price:|\bAfter ShrinkPrice:"),
+		("tick price output", @"\bTick:.*\bPrice:"),
+		("order book output", @"\bOrder Book:|\bBest Bid\b|\bBest Ask\b|\bMiddle of Spread\b|\bBid Price:|\bAsk Price:"),
+		("field/value output", @"\bField:|\bValue:|\bBids:|\bAsks:"),
+	];
+
+	private static readonly string[] _knownBrokenGermanEncodingFragments =
+	[
+		"anschlie?end",
+		"?bertragen",
+		"?bertragung",
+		"?bersicht",
+		"f?r",
+		"m?glich",
+		"w?hrend",
+	];
+
 	private static readonly HashSet<string> _allowedInvariantHeadingTexts = new(StringComparer.Ordinal)
 	{
 		"Backtesting/Emulation",
@@ -670,12 +692,66 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCodeOutputStringsDoNotContainKnownEnglishPhrases()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var output in EnumerateCodeOutputStrings(ReadAllText(file)))
+				{
+					foreach (var (name, pattern) in _knownEnglishCodeOutputPatterns)
+					{
+						if (!Regex.IsMatch(output.Text, pattern, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string contains known untranslated English {name}. String: {Truncate(output.Text, 180)}");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
 
 		foreach (var file in EnumerateContentTextFiles())
 			ValidateNoQuestionMarkGarbling(file, errors);
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanTextDoesNotContainKnownBrokenEncodingFragments()
+	{
+		var errors = new List<string>();
+		var germanRoot = Path.Combine(_repoRoot, "de");
+		var extensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*", SearchOption.AllDirectories)
+			.Where(file => extensions.Contains(Path.GetExtension(file)))
+			.Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var fragment = _knownBrokenGermanEncodingFragments.FirstOrDefault(text.Contains);
+				if (fragment is null)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: contains known broken German encoding fragment '{fragment}'. Line: {Truncate(text.Trim(), 180)}");
+			}
+		}
 
 		AssertNoErrors(errors);
 	}
@@ -1304,6 +1380,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static IEnumerable<CodeOutputString> EnumerateCodeOutputStrings(string markdown)
+	{
+		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+		{
+			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
+			using var reader = new StringReader(block.Groups["code"].Value);
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant))
+					continue;
+
+				foreach (Match literal in Regex.Matches(text, @"\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+				{
+					var value = literal.Groups["value"].Value;
+					value = Regex.Replace(value, @"\{[^{}]*\}", " ", RegexOptions.CultureInvariant);
+					value = Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+					if (value.Length > 0)
+						yield return new CodeOutputString(value, line);
+				}
+			}
+		}
+	}
+
 	private static string NormalizeCodeCommentForTranslationCheck(string comment)
 	{
 		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
@@ -1651,4 +1752,6 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct MarkdownTarget(string Language, bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
 
 	private readonly record struct CodeComment(string Text, int Line);
+
+	private readonly record struct CodeOutputString(string Text, int Line);
 }

@@ -124,38 +124,38 @@ public void SetupSubscriptionTracking()
     // サブスクリプションのライフサイクルを追跡
     _connector.SubscriptionStarted += subscription =>
     {
-        Console.WriteLine($"Subscription started: {subscription.DataType}, " +
-            $"Security: {subscription.SecurityId}");
+        Console.WriteLine($"サブスクリプション開始: {subscription.DataType}, " +
+            $"銘柄: {subscription.SecurityId}");
     };
 
     _connector.SubscriptionOnline += subscription =>
     {
-        Console.WriteLine($"Subscription online: {subscription.DataType}");
+        Console.WriteLine($"サブスクリプションはオンライン: {subscription.DataType}");
     };
 
     _connector.SubscriptionStopped += (subscription, error) =>
     {
         if (error == null)
-            Console.WriteLine($"Subscription completed: {subscription.DataType}");
+            Console.WriteLine($"サブスクリプション完了: {subscription.DataType}");
         else
-            Console.WriteLine($"Subscription interrupted: {subscription.DataType}, " +
-                $"Error: {error.Message}");
+            Console.WriteLine($"サブスクリプション中断: {subscription.DataType}, " +
+                $"エラー: {error.Message}");
     };
 
     // 個別のアダプター接続を追跡
     _connector.ConnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter connected: {adapter.Name}");
+        Console.WriteLine($"アダプター接続: {adapter.Name}");
     };
 
     _connector.DisconnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter disconnected: {adapter.Name}");
+        Console.WriteLine($"アダプター切断: {adapter.Name}");
     };
 
     _connector.ConnectionErrorEx += (adapter, error) =>
     {
-        Console.WriteLine($"Adapter connection error {adapter.Name}: {error.Message}");
+        Console.WriteLine($"アダプター接続エラー {adapter.Name}: {error.Message}");
     };
 
     // 接続

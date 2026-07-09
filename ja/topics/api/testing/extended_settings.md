@@ -160,13 +160,13 @@ connector.Connect();
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// 受信したローソク足を処理
-	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"ローソク足: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// 受信したティックを処理
-	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"ティック: {tick.ServerTime}, 価格: {tick.Price}, 数量: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
@@ -177,13 +177,13 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 	
 	// 受信した板を処理
-	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	Console.WriteLine($"板: {orderBook.ServerTime}, 最良買い: {bestBid?.Price}, 最良売り: {bestAsk?.Price}, スプレッド中央: {spreadMiddle}");
 	
 	// 注文方向によって価格を取得
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 	
-	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	Console.WriteLine($"買値: {bidPrice}, 売値: {askPrice}");
 }
 ```
 

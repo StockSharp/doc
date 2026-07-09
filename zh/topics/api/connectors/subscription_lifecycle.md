@@ -124,38 +124,38 @@ public void SetupSubscriptionTracking()
     // 跟踪订阅生命周期
     _connector.SubscriptionStarted += subscription =>
     {
-        Console.WriteLine($"Subscription started: {subscription.DataType}, " +
-            $"Security: {subscription.SecurityId}");
+        Console.WriteLine($"订阅已启动: {subscription.DataType}, " +
+            $"证券: {subscription.SecurityId}");
     };
 
     _connector.SubscriptionOnline += subscription =>
     {
-        Console.WriteLine($"Subscription online: {subscription.DataType}");
+        Console.WriteLine($"订阅在线: {subscription.DataType}");
     };
 
     _connector.SubscriptionStopped += (subscription, error) =>
     {
         if (error == null)
-            Console.WriteLine($"Subscription completed: {subscription.DataType}");
+            Console.WriteLine($"订阅已完成: {subscription.DataType}");
         else
-            Console.WriteLine($"Subscription interrupted: {subscription.DataType}, " +
-                $"Error: {error.Message}");
+            Console.WriteLine($"订阅已中断: {subscription.DataType}, " +
+                $"错误: {error.Message}");
     };
 
     // 跟踪各个适配器连接
     _connector.ConnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter connected: {adapter.Name}");
+        Console.WriteLine($"适配器已连接: {adapter.Name}");
     };
 
     _connector.DisconnectedEx += adapter =>
     {
-        Console.WriteLine($"Adapter disconnected: {adapter.Name}");
+        Console.WriteLine($"适配器已断开: {adapter.Name}");
     };
 
     _connector.ConnectionErrorEx += (adapter, error) =>
     {
-        Console.WriteLine($"Adapter connection error {adapter.Name}: {error.Message}");
+        Console.WriteLine($"适配器连接错误 {adapter.Name}: {error.Message}");
     };
 
     // 连接

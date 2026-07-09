@@ -160,13 +160,13 @@ connector.Connect();
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// 处理收到的K线
-	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"K线: {candle.OpenTime}, 开:{candle.OpenPrice}, 高:{candle.HighPrice}, 低:{candle.LowPrice}, 收:{candle.ClosePrice}");
 }
 
 private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 {
 	// 处理收到的逐笔成交
-	Console.WriteLine($"Tick: {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"逐笔成交: {tick.ServerTime}, 价格: {tick.Price}, 数量: {tick.Volume}");
 }
 
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
@@ -177,13 +177,13 @@ private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage or
 	var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 	
 	// 处理收到的订单簿
-	Console.WriteLine($"Order Book: {orderBook.ServerTime}, Best Bid: {bestBid?.Price}, Best Ask: {bestAsk?.Price}, Middle of Spread: {spreadMiddle}");
+	Console.WriteLine($"订单簿: {orderBook.ServerTime}, 最佳买价: {bestBid?.Price}, 最佳卖价: {bestAsk?.Price}, 价差中点: {spreadMiddle}");
 	
 	// 按订单方向获取价格
 	var bidPrice = orderBook.GetPrice(Sides.Buy);
 	var askPrice = orderBook.GetPrice(Sides.Sell);
 	
-	Console.WriteLine($"Bid Price: {bidPrice}, Ask Price: {askPrice}");
+	Console.WriteLine($"买价: {bidPrice}, 卖价: {askPrice}");
 }
 ```
 
