@@ -6,8 +6,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 - **Address** - Endereço do feed RSS.
 - **Dates format** - Formato de datas. Necessário se o formato do stream RSS for diferente de `ddd, dd MMM yyyy HH:mm:ss zzzz`.
-- **Heart beat** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, é igual a 1 minuto.
-- **Reconnection settings** - Mecanismo para rastrear as configurações de conexão com o sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
+- **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, é igual a 1 minuto.
+- **Definições de religação** - Mecanismo para rastrear as configurações de conexão com o sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
 
 ## Conteúdo recomendado
 

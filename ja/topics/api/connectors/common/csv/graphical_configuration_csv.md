@@ -5,8 +5,8 @@
 ![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **Settings** - インポート設定。
-- **Reconnection settings** - 取引システムとの接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
-- **Heartbeat** - 接続が生きていることを追跡するためのサーバーチェック間隔。既定では 1 分です。
+- **再接続設定** - 取引システムとの接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が生きていることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 
 ## 推奨コンテンツ
 

@@ -26,8 +26,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Revocation check** - Prüfung des Zertifikatswiderrufs.
 - **Check remote** - Prüfung der Remote-Zertifikate.
 - **Server name** - Servername, der die SSL-Verbindung verwendet.
-- **Reconnection settings** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
-- **Heartbeat interval** - Intervall zur Benachrichtigung des Servers, dass die Verbindung noch aktiv ist. Der Standardwert beträgt 1 Minute.
+- **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
+- **Intervall der Verbindungsprüfung** - Intervall zur Benachrichtigung des Servers, dass die Verbindung noch aktiv ist. Der Standardwert beträgt 1 Minute.
 - **Unified board code** - Board-Code für das vereinheitlichte Instrument.
 
 ## Siehe auch

@@ -4,8 +4,8 @@
 
 ![API GUI Settings CoinCap](../../../../../images/api_gui_settings_coincap.png)
 
-- **Heart beat** - 接続が有効であることを追跡するためのサーバーチェック間隔です。既定では 1 分です。
-- **Reconnection settings** - 取引システムとの接続を設定付きで追跡するための仕組みです。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔です。既定では 1 分です。
+- **再接続設定** - 取引システムとの接続を設定付きで追跡するための仕組みです。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

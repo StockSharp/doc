@@ -6,8 +6,8 @@
 
 - **Address** - RSS フィードのアドレス。
 - **Dates format** - 日付形式。RSS ストリーム形式が `ddd, dd MMM yyyy HH:mm:ss zzzz` と異なる場合に必要です。
-- **Heart beat** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システムとの接続を追跡するメカニズムの設定。（[再接続設定](../../reconnection_settings.md)）
+- **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
+- **再接続設定** - 取引システムとの接続を追跡するメカニズムの設定。（[再接続設定](../../reconnection_settings.md)）
 
 ## 推奨コンテンツ
 

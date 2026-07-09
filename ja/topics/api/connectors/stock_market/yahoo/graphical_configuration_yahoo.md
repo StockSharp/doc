@@ -4,8 +4,8 @@
 
 ![API GUI Settings Yahoo](../../../../../images/api_gui_settings_yahoo.png)
 
-- **Heart beat** - 接続が生きていることを追跡するためのサーバーチェック間隔です。既定では 1 分です。
-- **Reconnection settings** - 取引システムとの接続を設定に従って追跡するためのメカニズムです。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が生きていることを追跡するためのサーバーチェック間隔です。既定では 1 分です。
+- **再接続設定** - 取引システムとの接続を設定に従って追跡するためのメカニズムです。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

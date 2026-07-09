@@ -14,8 +14,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Load securities** - Se o conjunto completo de títulos deve ser carregado a partir do arquivo do site IQFeed.
 - **File with securities** - Caminho para o ficheiro com a lista de títulos do IQFeed, descarregado do site. Se o caminho for especificado, não ocorre um segundo descarregamento a partir do site e apenas a cópia local é analisada.
 - **Version** - Versão.
-- **Heart beat** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
-- **Reconnection settings** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
+- **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
+- **Definições de religação** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 
 ## Conteúdo recomendado
 

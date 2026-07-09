@@ -23,8 +23,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Log (address)** - Endereço do logger.
 - **User name (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
 - **Password (hist)** - Password adicional. Password utilizada para autenticação com a history plant.
-- **Heart beat** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
-- **Reconnection settings** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
+- **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
+- **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 
 ## Conteúdo recomendado
 

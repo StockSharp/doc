@@ -26,8 +26,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 - **Revocation check** - Verificação de revogação de certificado.
 - **Check remote** - Verificar certificados remotos.
 - **Server name** - Nome do servidor que usa a conexão SSL.
-- **Reconnection settings** - Configurações do mecanismo para rastrear a conexão com o sistema de negociação ([Configurações de reconexão](../../reconnection_settings.md)).
-- **Heartbeat interval** - Intervalo para notificar o servidor de que a conexão ainda está ativa. O valor padrão é 1 minuto.
+- **Definições de religação** - Configurações do mecanismo para rastrear a conexão com o sistema de negociação ([Configurações de reconexão](../../reconnection_settings.md)).
+- **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a conexão ainda está ativa. O valor padrão é 1 minuto.
 - **Unified board code** - Código da bolsa para o instrumento unificado.
 
 ## Veja também

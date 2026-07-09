@@ -10,8 +10,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Key** - chave.
 - **Secret** - segredo.
 - **Balance** - intervalo de verificação do saldo. Necessário no caso de ações de depósito e levantamento.
-- **Heart beat** - intervalo de verificação do servidor para controlar que a ligação está ativa. Por predefinição, é igual a 1 minuto.
-- **Reconnection settings** - mecanismo para controlar as ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
+- **Intervalo de verificação da ligação** - intervalo de verificação do servidor para controlar que a ligação está ativa. Por predefinição, é igual a 1 minuto.
+- **Definições de religação** - mecanismo para controlar as ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 
 ## Conteúdo recomendado
 

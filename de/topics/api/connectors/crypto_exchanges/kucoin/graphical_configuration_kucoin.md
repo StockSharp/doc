@@ -9,8 +9,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Passphrase** - Passphrase.
 - **Demo** - Verbindung zum Demo-Handel statt zum realen Handelsserver.
 - **Balance** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
-- **Heart beat** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
-- **Reconnection settings** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die erneute Verbindung](../../reconnection_settings.md))
+- **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
+- **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die erneute Verbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte
 

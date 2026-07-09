@@ -16,8 +16,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Validate remote** - Remote-Zertifikate validieren.
 - **Host name** - Name des Servers, der die SSL-Verbindung bereitstellt.
 - **MaxVersion** - MaxVersion
-- **Heart beat** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
-- **Reconnection settings** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
+- **Verbindungsprüfung** - Intervall zur Serverpruefung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmaessig 1 Minute.
+- **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
 ## Empfohlene Inhalte
 

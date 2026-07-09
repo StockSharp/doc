@@ -7,8 +7,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Key** - Clave.
 - **Secret** - Secreto.
 - **Password** - Contraseña administrativa.
-- **Heart beat** - Intervalo de verificación del servidor para comprobar que la conexión está activa. Por defecto es de 1 minuto.
-- **Reconnection settings** - Mecanismo para el seguimiento de las conexiones con las configuraciones del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Intervalo de comprobación** - Intervalo de verificación del servidor para comprobar que la conexión está activa. Por defecto es de 1 minuto.
+- **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con las configuraciones del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

@@ -7,8 +7,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Key** - Clave.
 - **Secret** - Secreto.
 - **Demo** - Conectar al trading de demostración en lugar del servidor de trading real.
-- **Heart beat** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.
-- **Reconnection settings** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Intervalo de comprobación** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.
+- **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

@@ -5,8 +5,8 @@
 ![API GUI Settings AlphaVantage](../../../../../images/api_gui_settings_alphavantage.png)
 
 - **Token** - Token。
-- **Heart beat** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
+- **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

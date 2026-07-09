@@ -8,8 +8,8 @@
 - **Token** - トークン。
 - **Compression** - 圧縮。
 - **Transactions only** - トランザクションストリームのログメッセージのみを書き込みます。
-- **Reconnection settings** - 取引システムとの接続を監視する機構の設定（[再接続設定](../../reconnection_settings.md)）。
-- **Heartbeat interval** - 接続がまだ有効であることをサーバーへ通知する間隔。既定値は 1 分です。
+- **再接続設定** - 取引システムとの接続を監視する機構の設定（[再接続設定](../../reconnection_settings.md)）。
+- **ハートビート間隔** - 接続がまだ有効であることをサーバーへ通知する間隔。既定値は 1 分です。
 - **Unified board code** - 統一銘柄用のボードコード。
 
 ## 関連項目

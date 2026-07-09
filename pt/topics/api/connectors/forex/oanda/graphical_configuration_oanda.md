@@ -8,8 +8,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Token** - Token.
 - **Compression** - Compressão.
 - **Transactions only** - Escrever mensagens de log apenas para o fluxo de transações.
-- **Reconnection settings** - Definições do mecanismo para acompanhar a ligação ao sistema de negociação ([Definições de religação](../../reconnection_settings.md)).
-- **Heartbeat interval** - Intervalo para notificar o servidor de que a ligação ainda está ativa. O valor predefinido é 1 minuto.
+- **Definições de religação** - Definições do mecanismo para acompanhar a ligação ao sistema de negociação ([Definições de religação](../../reconnection_settings.md)).
+- **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a ligação ainda está ativa. O valor predefinido é 1 minuto.
 - **Unified board code** - Código de board para o instrumento unificado.
 
 ## Ver também

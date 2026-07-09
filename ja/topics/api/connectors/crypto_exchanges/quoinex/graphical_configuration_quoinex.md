@@ -11,8 +11,8 @@
 - **Secret** - シークレット。
 - **User** - User
 - **Balance** - 残高確認間隔。入金および出金操作を行う場合に必要です。
-- **Heart beat** - 接続が維持されていることを追跡するためのサーバー確認間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システムとの接続を追跡するための設定メカニズム。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が維持されていることを追跡するためのサーバー確認間隔。既定では 1 分です。
+- **再接続設定** - 取引システムとの接続を追跡するための設定メカニズム。([再接続設定](../../reconnection_settings.md))
 - **IsQryptos** - IsQryptos
 - **PusherAccessKey** - PusherAccessKey
 

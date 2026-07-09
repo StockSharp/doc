@@ -5,8 +5,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 ![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **Configuración** - Configuración de importación
-- **Reconnection settings** - Mecanismo para el seguimiento de la conexión con el sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
-- **Heartbeat** - Intervalo de verificación del servidor para comprobar que la conexión está activa. Por defecto, es igual a 1 minuto.
+- **Configuración de reconexión** - Mecanismo para el seguimiento de la conexión con el sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Intervalo de comprobación** - Intervalo de verificación del servidor para comprobar que la conexión está activa. Por defecto, es igual a 1 minuto.
 
 ## Contenido recomendado
 

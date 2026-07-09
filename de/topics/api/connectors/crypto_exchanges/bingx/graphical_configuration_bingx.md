@@ -7,4 +7,4 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Key** - Schlüssel.
 - **Secret** - Secret.
 - **Demo** - Demo-Modus.
-- **Reconnection settings** - Parameter des Wiederverbindungsmechanismus mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
+- **Einstellungen für die Wiederverbindung** - Parameter des Wiederverbindungsmechanismus mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).

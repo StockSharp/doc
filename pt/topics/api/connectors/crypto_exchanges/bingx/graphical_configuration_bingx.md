@@ -7,4 +7,4 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 - **Key** - Chave.
 - **Secret** - Segredo.
 - **Demo** - Modo de demonstração.
-- **Reconnection settings** - Parâmetros do mecanismo de reconexão com o sistema de negociação ([Definições de reconexão](../../reconnection_settings.md)).
+- **Definições de religação** - Parâmetros do mecanismo de reconexão com o sistema de negociação ([Definições de reconexão](../../reconnection_settings.md)).

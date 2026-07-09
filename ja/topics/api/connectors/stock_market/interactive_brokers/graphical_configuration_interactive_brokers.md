@@ -16,8 +16,8 @@
 - **Validate remote** - リモート証明書を検証します。
 - **Host name** - SSL 接続を共有するサーバーの名前。
 - **MaxVersion** - MaxVersion
-- **Heart beat** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
-- **Reconnection settings** - 取引システム設定で接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
+- **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
+- **再接続設定** - 取引システム設定で接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 
 ## 推奨コンテンツ
 

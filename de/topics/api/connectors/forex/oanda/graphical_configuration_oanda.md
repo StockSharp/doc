@@ -8,8 +8,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Token** - Token.
 - **Compression** - Komprimierung.
 - **Transactions only** - Logmeldungen nur für den Transaktionsstream schreiben.
-- **Reconnection settings** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md)).
-- **Heartbeat interval** - Intervall für die Benachrichtigung des Servers, dass die Verbindung weiterhin aktiv ist. Standardwert: 1 Minute.
+- **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md)).
+- **Intervall der Verbindungsprüfung** - Intervall für die Benachrichtigung des Servers, dass die Verbindung weiterhin aktiv ist. Standardwert: 1 Minute.
 - **Unified board code** - Board-Code für das vereinheitlichte Instrument.
 
 ## Siehe auch

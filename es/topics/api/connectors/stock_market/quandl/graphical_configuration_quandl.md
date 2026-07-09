@@ -6,8 +6,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 - **Token** - Token.
 - **Database** - Identificador de base de datos Quandl.
-- **Heart beat** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
-- **Reconnection settings** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
+- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

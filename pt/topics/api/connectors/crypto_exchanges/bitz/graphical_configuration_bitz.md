@@ -12,8 +12,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 - **Domain (address)** - Endereço do domínio.
 - **Balance** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e retirada.
 - **Password** - Senha administrativa.
-- **Heart beat** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.
-- **Reconnection settings** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
+- **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.
+- **Definições de religação** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
 
 ## Conteúdo recomendado
 
