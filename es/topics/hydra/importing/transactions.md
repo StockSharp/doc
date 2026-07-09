@@ -1,12 +1,12 @@
 # Transacciones
 
-Para importar sus transacciones, debe seleccionar **Import \=\> Own Transactions** en el menú principal de la aplicación.
+Para importar sus transacciones, debe seleccionar **Importar \=\> Transacciones propias** en el menú principal de la aplicación.
 
 ![hydra import executions](../../../images/hydra_import_executions.png)
 
 ## Proceso de importación de sus transacciones
 
-1. Ejecute **CSV Import Settings**.
+1. Ejecute **Configuración de importación CSV**.
 
    Consulte la importación de [Velas](candles.md).
 2. Configure los parámetros de importación para los campos de [S#](../../api.md).

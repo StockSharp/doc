@@ -1,6 +1,6 @@
 # Orderbücher
 
-Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Import \=\> Orderbücher**.
+Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Orderbücher**.
 
 ![hydra import depths](../../../images/hydra_import_depths.png)
 
@@ -21,11 +21,11 @@ Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eint
 
      ```
 
-     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Security** bzw. **Board**. Daher weisen wir im Feld **Field order** die Werte 0 bzw. 1 zu.
-   - Für die Felder {ServerTime:default:yyyyMMdd} und {ServerTime:default:HH:mm:ss.ffffff} wählen Sie im Fenster **S# field** die Felder **Date** bzw. **Time**. Wir weisen die Werte 2 und 3 zu.
-   - Für das Feld {Quote.Price} wählen Sie im Fenster **S# field** das Feld **Price** - den Quote-Preis. Wir weisen ihm den Wert 4 zu.
-   - Für das Feld {Quote.Volume} wählen Sie im Fenster **S# field** das Feld **Volume** - das Quote-Volumen. Wir weisen ihm den Wert 5 zu.
-   - Für das Feld {Side} wählen Sie im Fenster **S# field** das Feld **Direction** - die Handelsrichtung (Buy oder Sell). Wir weisen ihm den Wert 6 zu.
+     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Instrument** bzw. **Handelsplatz**. Daher weisen wir im Feld **Feldreihenfolge** die Werte 0 bzw. 1 zu.
+   - Für die Felder {ServerTime:default:yyyyMMdd} und {ServerTime:default:HH:mm:ss.ffffff} wählen Sie im Fenster **S#-Feld** die Felder **Datum** bzw. **Zeit**. Wir weisen die Werte 2 und 3 zu.
+   - Für das Feld {Quote.Price} wählen Sie im Fenster **S#-Feld** das Feld **Preis** - den Quote-Preis. Wir weisen ihm den Wert 4 zu.
+   - Für das Feld {Quote.Volume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen** - das Quote-Volumen. Wir weisen ihm den Wert 5 zu.
+   - Für das Feld {Side} wählen Sie im Fenster **S#-Feld** das Feld **Richtung** - die Handelsrichtung (Kaufen oder Verkaufen). Wir weisen ihm den Wert 6 zu.
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.

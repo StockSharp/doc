@@ -1,6 +1,6 @@
 # Instrumente
 
-Um Instrumente zu importieren, wählen Sie die Registerkarte **Import \=\> Instruments**.
+Um Instrumente zu importieren, wählen Sie die Registerkarte **Importieren \=\> Instrumente**.
 
 ![hydra import securities](../../../images/hydra_import_securities.png)
 
@@ -21,10 +21,10 @@ Um Instrumente zu importieren, wählen Sie die Registerkarte **Import \=\> Instr
 
      ```
 
-     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Security** bzw. **Board**. Daher weisen wir im Feld **Field order** die Werte 0 bzw. 1 zu.
-   - Für das Feld {PriceStep} wählen Sie im Fenster **S# field** das Feld **Nominal** und weisen ihm den Wert 2 zu.
-   - Für das Feld {SecurityType} wählen Sie im Fenster **S# field** das Feld **Typ** - den Instrumenttyp (Aktie, Wahrung, Futures usw.). Wir weisen ihm den Wert 3 zu.
-   - Für das Feld {VolumeStep} wählen Sie im Fenster **S# field** das Feld **Min volume (base)** - das Basis- oder Mindestvolumen des Instruments. Wir weisen ihm den Wert 4 zu.
+     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Instrument** bzw. **Handelsplatz**. Daher weisen wir im Feld **Feldreihenfolge** die Werte 0 bzw. 1 zu.
+   - Für das Feld {PriceStep} wählen Sie im Fenster **S#-Feld** das Feld **Nominalwert** und weisen ihm den Wert 2 zu.
+   - Für das Feld {SecurityType} wählen Sie im Fenster **S#-Feld** das Feld **Typ** - den Instrumenttyp (Aktie, Währung, Futures usw.). Wir weisen ihm den Wert 3 zu.
+   - Für das Feld {VolumeStep} wählen Sie im Fenster **S#-Feld** das Feld **Mindestvolumen (Basis)** - das Basis- oder Mindestvolumen des Instruments. Wir weisen ihm den Wert 4 zu.
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.

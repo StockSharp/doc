@@ -1,6 +1,6 @@
 # Level 1
 
-Para importar datos Level 1, seleccione **Import \=\> Level 1** en el menú principal de la aplicación.
+Para importar datos Level 1, seleccione **Importar \=\> Level 1** en el menú principal de la aplicación.
 
 ![hydra import level1](../../../images/hydra_import_level1.png)
 
@@ -21,15 +21,15 @@ Para importar datos Level 1, seleccione **Import \=\> Level 1** en el menú prin
 
      ```
 
-     Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Security** y **Board**, respectivamente. Por lo tanto, en el campo **Field order** asignamos los valores 0 y 1, respectivamente.
-   - Para los campos {ServerTime:default:yyyyMMdd} y {ServerTime:default:HH:mm:ss.ffffff}, seleccione los campos Date y **Time** en la ventana **S# field**, respectivamente. Asigne los valores 2 y 3.
-   - Para el campo {BestBidPrice}, seleccione el campo **Best buy price** en la ventana **S# field**. Asígnele el valor 4.
-   - Para el campo {BestBidVolume}, seleccione el campo **Best buy volume** en la ventana **S# field**. Asígnele el valor 5.
-   - Para el campo {BestAskPrice}, seleccione el campo **Best sale price** en la ventana **S# field**. Asígnele el valor 6.
-   - Para el campo {BestAskVolume}, seleccione el campo **Best sale volume** en la ventana **S# field**. Asígnele el valor 7.
-   - Para el campo {LastTradeTime}, seleccione el campo **Last trade time** en la ventana **S# field**. Asígnele el valor 8.
-   - Para el campo {LastTradePrice}, seleccione el campo **Last trade price** en la ventana **S# field**. Asígnele el valor 9.
-   - Para el campo {LastTradeVolume}, seleccione el campo **Last trade volume** en la ventana **S# field**. Asígnele el valor 10.
+     Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Instrumento** y **Mercado**, respectivamente. Por lo tanto, en el campo **Orden de campos** asignamos los valores 0 y 1, respectivamente.
+   - Para los campos {ServerTime:default:yyyyMMdd} y {ServerTime:default:HH:mm:ss.ffffff}, seleccione los campos **Fecha** y **Hora** en la ventana **campo S#**, respectivamente. Asigne los valores 2 y 3.
+   - Para el campo {BestBidPrice}, seleccione el campo **Mejor precio de compra** en la ventana **campo S#**. Asígnele el valor 4.
+   - Para el campo {BestBidVolume}, seleccione el campo **Mejor volumen de compra** en la ventana **campo S#**. Asígnele el valor 5.
+   - Para el campo {BestAskPrice}, seleccione el campo **Mejor precio de venta** en la ventana **campo S#**. Asígnele el valor 6.
+   - Para el campo {BestAskVolume}, seleccione el campo **Mejor volumen de venta** en la ventana **campo S#**. Asígnele el valor 7.
+   - Para el campo {LastTradeTime}, seleccione el campo **Hora de la última operación** en la ventana **campo S#**. Asígnele el valor 8.
+   - Para el campo {LastTradePrice}, seleccione el campo **Precio de la última operación** en la ventana **campo S#**. Asígnele el valor 9.
+   - Para el campo {LastTradeVolume}, seleccione el campo **Volumen de la última operación** en la ventana **campo S#**. Asígnele el valor 10.
    - La ventana de configuración de campos tendrá este aspecto:![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.

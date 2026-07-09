@@ -1,6 +1,6 @@
 # Ticks
 
-Para importar operaciones, seleccione la pestaña **Import \=\> Ticks**.
+Para importar operaciones, seleccione la pestaña **Importar \=\> Ticks**.
 
 ![hydra import trades](../../../images/hydra_import_trades.png)
 
@@ -21,12 +21,12 @@ Para importar operaciones, seleccione la pestaña **Import \=\> Ticks**.
 
      ```
 
-     Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Security** y **Board**, respectivamente. Por lo tanto, en el campo **Field order** asignamos los valores 0 y 1, respectivamente.
-   - Para los campos {ServerTime:default:yyyyMMdd} y {ServerTime:default:HH:mm:ss.ffffff}, seleccione los campos **Date** y **Time** en la ventana **S# field**, respectivamente. Asigne los valores 2 y 3.
-   - Para el campo {TradeId}, seleccione el campo **Identificador** en la ventana **S# field**: identificador o número de la operación. Asígnele el valor 4.
-   - Para el campo {TradePrice}, seleccione el campo **Price** en la ventana **S# field**: precio de la operación. Asígnele el valor 5.
-   - Para el campo {TradeVolume}, seleccione el campo **Volume** en la ventana **S# field**: volumen de la operación. Asígnele el valor 6.
-   - Para el campo {OriginSide}, seleccione el campo **Initiator** en la ventana **S# field**: iniciador de la operación (Seller o Buyer). Asígnele el valor 7.
+     Aquí los valores de {SecurityId.SecurityCode} y {SecurityId.BoardCode} corresponden a los valores de **Instrumento** y **Mercado**, respectivamente. Por lo tanto, en el campo **Orden de campos** asignamos los valores 0 y 1, respectivamente.
+   - Para los campos {ServerTime:default:yyyyMMdd} y {ServerTime:default:HH:mm:ss.ffffff}, seleccione los campos **Fecha** y **Hora** en la ventana **campo S#**, respectivamente. Asigne los valores 2 y 3.
+   - Para el campo {TradeId}, seleccione el campo **Identificador** en la ventana **campo S#**: identificador o número de la operación. Asígnele el valor 4.
+   - Para el campo {TradePrice}, seleccione el campo **Precio** en la ventana **campo S#**: precio de la operación. Asígnele el valor 5.
+   - Para el campo {TradeVolume}, seleccione el campo **Volumen** en la ventana **campo S#**: volumen de la operación. Asígnele el valor 6.
+   - Para el campo {OriginSide}, seleccione el campo **Iniciador** en la ventana **campo S#**: iniciador de la operación (vendedor o comprador). Asígnele el valor 7.
    - La ventana de configuración de campos tendrá este aspecto:![hydra import prop trade](../../../images/hydra_import_prop_trade.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.

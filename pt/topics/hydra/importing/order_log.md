@@ -1,6 +1,6 @@
 # Log de ordens
 
-Para importar o log de ordens, selecione o item **Import \=\> Order log** no menu principal da aplicação.
+Para importar o log de ordens, selecione o item **Importar \=\> Registo de ordens** no menu principal da aplicação.
 
 ![hydra import orderlog](../../../images/hydra_import_orderlog.png)
 
@@ -21,18 +21,18 @@ Para importar o log de ordens, selecione o item **Import \=\> Order log** no men
      	  				
      ```
 
-     Aqui, os valores de {SecurityId.SecurityCode} e {SecurityId.BoardCode} correspondem aos valores de **Security** e **Board**, respetivamente. Por isso, no campo **Field order** atribuímos os valores 0 e 1, respetivamente.
-   - Para os campos {ServerTime:default:yyyyMMdd} e {ServerTime:default:HH:mm:ss.ffffff}, selecione os campos **Date** e **Time** na janela **S# field**, respetivamente. Atribuímos os valores 2 e 3.
-   - Para o campo {OrderId}, selecione o campo **ID** na janela **S# field** - ID da ordem. Atribuímos-lhe o valor 4.
-   - Para o campo {OrderPrice}, selecione o campo **Price** na janela **S# field** - preço da ordem. Atribuímos-lhe o valor 5
-   - Para o campo {OrderVolume}, selecione o campo **Volume** na janela **S# field** - volume da ordem. Atribuímos-lhe o valor 6.
-   - Para o campo {Side}, selecione o campo **Direction** na janela **S# field** - direção da ordem (compra ou venda). Atribuímos-lhe o valor 7.
-   - Para o campo {OrderState}, selecione o campo **Action** na janela **S# field** - o estado da ordem (ativa, inativa ou erro). Atribuímos-lhe o valor 8.
-   - Para o campo {TimeInForce}, selecione **Time** in force na janela **S# field** - uma condição de execução da ordem limite. Atribuímos-lhe o valor 9.
-   - Para o campo {TradeId}, selecione o campo **ID (trade)** na janela **S# field** - o identificador da transação. Atribuímos-lhe o valor 10.
-   - Para o campo {TradePrice}, selecione o campo **Price (trade)** na janela **S# field** - o preço da transação. Atribuímos-lhe o valor 11.
+     Aqui, os valores de {SecurityId.SecurityCode} e {SecurityId.BoardCode} correspondem aos valores de **Instrumento** e **Mercado**, respetivamente. Por isso, no campo **Ordem dos campos** atribuímos os valores 0 e 1, respetivamente.
+   - Para os campos {ServerTime:default:yyyyMMdd} e {ServerTime:default:HH:mm:ss.ffffff}, selecione os campos **Data** e **Hora** na janela **campo S#**, respetivamente. Atribuímos os valores 2 e 3.
+   - Para o campo {OrderId}, selecione o campo **ID** na janela **campo S#** - ID da ordem. Atribuímos-lhe o valor 4.
+   - Para o campo {OrderPrice}, selecione o campo **Preço** na janela **campo S#** - preço da ordem. Atribuímos-lhe o valor 5
+   - Para o campo {OrderVolume}, selecione o campo **Volume** na janela **campo S#** - volume da ordem. Atribuímos-lhe o valor 6.
+   - Para o campo {Side}, selecione o campo **Direção** na janela **campo S#** - direção da ordem (compra ou venda). Atribuímos-lhe o valor 7.
+   - Para o campo {OrderState}, selecione o campo **Ação** na janela **campo S#** - o estado da ordem (ativa, inativa ou erro). Atribuímos-lhe o valor 8.
+   - Para o campo {TimeInForce}, selecione **Validade** na janela **campo S#** - uma condição de execução da ordem limite. Atribuímos-lhe o valor 9.
+   - Para o campo {TradeId}, selecione o campo **ID (transação)** na janela **campo S#** - o identificador da transação. Atribuímos-lhe o valor 10.
+   - Para o campo {TradePrice}, selecione o campo **Preço (transação)** na janela **campo S#** - o preço da transação. Atribuímos-lhe o valor 11.
    - A janela de definição dos campos terá este aspeto:![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
 
    O utilizador pode configurar um grande número de propriedades para os dados descarregados. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência. 
-3. Para pré-visualizar os dados, clique no botão **Preview**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
-4. Clique no botão **Import**.
+3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+4. Clique no botão **Importar**.

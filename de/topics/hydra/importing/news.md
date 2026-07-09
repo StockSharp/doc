@@ -1,12 +1,12 @@
 # Nachrichten
 
-Um Nachrichten zu importieren, wählen Sie im Hauptmenü der Anwendung **Import \=\> News**.
+Um Nachrichten zu importieren, wählen Sie im Hauptmenü der Anwendung **Importieren \=\> Nachrichten**.
 
 ![hydra import news](../../../images/hydra_import_news.png)
 
 ## Nachrichtenimportprozess
 
-1. Führen Sie **CSV Import Settings** aus.
+1. Führen Sie **CSV-Importeinstellungen** aus.
 
    Siehe Import von [Kerzen](candles.md).
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.

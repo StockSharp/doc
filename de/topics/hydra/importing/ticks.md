@@ -1,6 +1,6 @@
 # Ticks
 
-Um Trades zu importieren, wählen Sie die Registerkarte **Import \=\> Ticks**.
+Um Trades zu importieren, wählen Sie die Registerkarte **Importieren \=\> Ticks**.
 
 ![hydra import trades](../../../images/hydra_import_trades.png)
 
@@ -21,12 +21,12 @@ Um Trades zu importieren, wählen Sie die Registerkarte **Import \=\> Ticks**.
 
      ```
 
-     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Security** bzw. **Board**. Daher weisen wir im Feld **Field order** die Werte 0 bzw. 1 zu.
-   - Für die Felder {ServerTime:default:yyyyMMdd} und {ServerTime:default:HH:mm:ss.ffffff} wählen Sie im Fenster **S# field** die Felder **Date** bzw. **Time**. Wir weisen die Werte 2 und 3 zu.
-   - Für das Feld {TradeId} wählen Sie im Fenster **S# field** das Feld **Kennung** - die Trade-Kennung oder Trade-Nummer. Wir weisen ihm den Wert 4 zu.
-   - Für das Feld {TradePrice} wählen Sie das Feld **Price** - den Trade-Preis aus dem Fenster **S# field**. Wir weisen ihm den Wert 5 zu.
-   - Für das Feld {TradeVolume} wählen Sie im Fenster **S# field** das Feld **Volume** - das Trade-Volumen. Wir weisen ihm den Wert 6 zu.
-   - Für das Feld {OriginSide} wählen Sie im Fenster **S# field** das Feld **Initiator** - den Trade-Initiator (Seller oder Buyer). Wir weisen ihm den Wert 7 zu.
+     Hier entsprechen die Werte von {SecurityId.SecurityCode} und {SecurityId.BoardCode} den Werten **Instrument** bzw. **Handelsplatz**. Daher weisen wir im Feld **Feldreihenfolge** die Werte 0 bzw. 1 zu.
+   - Für die Felder {ServerTime:default:yyyyMMdd} und {ServerTime:default:HH:mm:ss.ffffff} wählen Sie im Fenster **S#-Feld** die Felder **Datum** bzw. **Zeit**. Wir weisen die Werte 2 und 3 zu.
+   - Für das Feld {TradeId} wählen Sie im Fenster **S#-Feld** das Feld **Kennung** - die Trade-Kennung oder Trade-Nummer. Wir weisen ihm den Wert 4 zu.
+   - Für das Feld {TradePrice} wählen Sie das Feld **Preis** - den Trade-Preis aus dem Fenster **S#-Feld**. Wir weisen ihm den Wert 5 zu.
+   - Für das Feld {TradeVolume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen** - das Trade-Volumen. Wir weisen ihm den Wert 6 zu.
+   - Für das Feld {OriginSide} wählen Sie im Fenster **S#-Feld** das Feld **Initiator** - den Trade-Initiator (Verkäufer oder Käufer). Wir weisen ihm den Wert 7 zu.
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop trade](../../../images/hydra_import_prop_trade.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
