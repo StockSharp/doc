@@ -6,15 +6,15 @@ El proceso principal de diseño de una estrategia y sus elementos componentes se
 
 ## Panel Palette
 
-El panel **Paleta** contiene bloques a partir de los cuales se crean estrategias. Todos los elementos de la paleta están divididos en categorías, descritas en la sección [Descripción de bloques](elements.md). Para añadir un bloque al panel **Designer**, haga clic con el botón derecho en el bloque requerido y, sin soltar el botón, arrástrelo al panel **Designer**. Después, el elemento se seleccionará automáticamente y sus parámetros se mostrarán en la ventana para editar las propiedades del bloque.
+El panel **Paleta** contiene bloques a partir de los cuales se crean estrategias. Todos los elementos de la paleta están divididos en categorías, descritas en la sección [Descripción de bloques](elements.md). Para añadir un bloque al panel **Diseñador**, haga clic con el botón derecho en el bloque requerido y, sin soltar el botón, arrástrelo al panel **Diseñador**. Después, el elemento se seleccionará automáticamente y sus parámetros se mostrarán en la ventana para editar las propiedades del bloque.
 
 ## Panel Designer
 
-El panel **Designer** es donde ocurre todo el proceso de creación de una estrategia mediante la combinación de bloques y conexiones (líneas). Representa visualmente el esquema de la estrategia. La información detallada sobre la creación de una estrategia se describe en la sección [Creación de un algoritmo a partir de bloques](first_strategy.md).
+El panel **Diseñador** es donde ocurre todo el proceso de creación de una estrategia mediante la combinación de bloques y conexiones (líneas). Representa visualmente el esquema de la estrategia. La información detallada sobre la creación de una estrategia se describe en la sección [Creación de un algoritmo a partir de bloques](first_strategy.md).
 
 ## Panel Propiedades
 
-El panel **Propiedades** muestra los parámetros del bloque seleccionado en el panel **Designer**. Cuando se selecciona un bloque en el panel **Designer**, su marco se colorea de negro.
+El panel **Propiedades** muestra los parámetros del bloque seleccionado en el panel **Diseñador**. Cuando se selecciona un bloque en el panel **Diseñador**, su marco se colorea de negro.
 
 ![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
 

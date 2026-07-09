@@ -1,6 +1,6 @@
 # Carteiras
 
-Para trabalhar com portefólios existe o painel **Carteiras**. Pode abri-lo clicando no botão Portfolios no separador **Geral**.
+Para trabalhar com portefólios existe o painel **Carteiras**. Pode abri-lo clicando no botão **Carteiras** no separador **Geral**.
 
 ![Designer Panel A Portfolios 00](../../../images/designer_panel_portfolios_00.png)
 
