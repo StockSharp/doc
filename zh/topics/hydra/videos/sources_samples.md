@@ -4,7 +4,7 @@
 
 有关通过不同连接器进行连接设置的更多信息，请参阅[此处](../../api/connectors/graphical_configuration.md)。
 
-- [Oanda](sources_samples/oanda.md)
-- [Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Bitmex](sources_samples/bitmex.md)
-- [Binance](sources_samples/binance.md)
+- [连接到 OANDA](sources_samples/oanda.md)
+- [连接到盈透证券](sources_samples/interactive_brokers.md)
+- [连接到 BitMEX](sources_samples/bitmex.md)
+- [连接到币安](sources_samples/binance.md)

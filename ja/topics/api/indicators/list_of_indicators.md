@@ -97,7 +97,7 @@
 - [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator。買われ過ぎと売られ過ぎの状態を特定します
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index。価格と出来高に基づいて買い圧力と売り圧力を測定します
 - [MACD](list_of_indicators/macd.md) - Convergence/divergence of moving averages。トレンド変化を特定します
-- [MACD Histogram](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram。MACD とシグナルラインの差を可視化します
+- [MACD ヒストグラム](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram。MACD とシグナルラインの差を可視化します
 - [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence of moving averages with signal line。買いシグナルと売りシグナルを提供します
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover。2 本の移動平均を使用してトレンド反転を特定します
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon。複数の移動平均を使用してトレンドを可視化します
@@ -153,7 +153,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average。市場ボラティリティに適応します
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average。ボラティリティに合わせて調整します
 - [Volume](list_of_indicators/volume.md) - Candle volume。ローソク足ごとの取引出来高を測定します
-- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile。異なる価格水準での取引活動を示します
+- [出来高プロファイル](list_of_indicators/volume_profile.md) - Volume profile。異なる価格水準での取引活動を示します
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average。出来高の多い価格により大きな重みを与えます
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price。取引出来高で加重された平均価格です
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex。新しいトレンドの開始を特定します

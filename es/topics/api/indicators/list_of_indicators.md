@@ -97,7 +97,7 @@
 - [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator, identifica condiciones de sobrecompra y sobreventa
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index, mide la presión de compra y venta en función del precio y el volumen
 - [MACD](list_of_indicators/macd.md) - Convergence/divergence de medias móviles, identifica cambios de tendencia
-- [MACD Histogram](list_of_indicators/macd_histogram.md) - Convergence/divergence de medias móviles. Histogram, visualiza la diferencia entre MACD y la línea de señal
+- [Histograma MACD](list_of_indicators/macd_histogram.md) - Convergence/divergence de medias móviles. Histogram, visualiza la diferencia entre MACD y la línea de señal
 - [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence de medias móviles con línea de señal, proporciona señales de compra y venta
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, identifica cambios de tendencia utilizando dos medias móviles
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, utiliza múltiples promedios móviles para visualizar tendencias
@@ -153,7 +153,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, se adapta a la volatilidad del mercado
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, se ajusta a la volatilidad
 - [Volume](list_of_indicators/volume.md) - Candle volume, mide el volumen de operaciones por vela
-- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile, muestra la actividad comercial en diferentes niveles de precios
+- [Perfil de volumen](list_of_indicators/volume_profile.md) - Volume profile, muestra la actividad comercial en diferentes niveles de precios
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, da más peso a los precios con mayor volumen
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted precio medio, precio promedio ponderado por el volumen negociado
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifica el inicio de nuevas tendencias

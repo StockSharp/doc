@@ -97,7 +97,7 @@
 - [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball-Indikator, erkennt überkaufte und überverkaufte Bedingungen
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index, misst Kauf- und Verkaufsdruck anhand von Preis und Volumen
 - [MACD](list_of_indicators/macd.md) - Konvergenz/Divergenz gleitender Durchschnitte, erkennt Trendwechsel
-- [MACD Histogram](list_of_indicators/macd_histogram.md) - Konvergenz/Divergenz gleitender Durchschnitte. Histogramm, visualisiert die Differenz zwischen MACD und Signallinie
+- [MACD-Histogramm](list_of_indicators/macd_histogram.md) - Konvergenz/Divergenz gleitender Durchschnitte. Histogramm, visualisiert die Differenz zwischen MACD und Signallinie
 - [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Konvergenz/Divergenz gleitender Durchschnitte mit Signallinie, liefert Kauf- und Verkaufssignale
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, erkennt Trendumkehrungen mithilfe zweier gleitender Durchschnitte
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, nutzt mehrere gleitende Durchschnitte zur Trendvisualisierung
@@ -153,7 +153,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, passt sich der Marktvolatilität an
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, passt sich der Volatilität an
 - [Volume](list_of_indicators/volume.md) - Candle Volume, misst das Handelsvolumen pro Candle
-- [Volume Profile](list_of_indicators/volume_profile.md) - Volume Profile, zeigt Handelsaktivität auf verschiedenen Preisniveaus
+- [Volumenprofil](list_of_indicators/volume_profile.md) - Volume Profile, zeigt Handelsaktivität auf verschiedenen Preisniveaus
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume Weighted Moving Average, gewichtet Preise mit höherem Volumen stärker
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, durchschnittlicher nach gehandeltem Volumen gewichteter Preis
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifiziert den Beginn neuer Trends
@@ -179,4 +179,3 @@ Diese Liste enthält Indikatoren der technischen Analyse aus der StockSharp-Bibl
 - Identifikation von Unterstützungs- und Widerstandsniveaus
 
 Indikatoren unterstützen Trader dabei, fundierte Entscheidungen zu treffen, indem sie historische Preisdaten analysieren und Muster identifizieren.
-

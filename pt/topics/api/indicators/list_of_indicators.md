@@ -99,7 +99,7 @@
 - [MP](list_of_indicators/momentum_pinball.md) - indicador Momentum Pinball, identifica condições de sobrecompra e sobrevenda
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index, mede a pressão de compra e venda com base no preço e no volume
 - [MACD](list_of_indicators/macd.md) - convergência/divergência de médias móveis, identifica alterações de tendência
-- [MACD Histogram](list_of_indicators/macd_histogram.md) - convergência/divergência de médias móveis. Histograma, visualiza a diferença entre MACD e linha de sinal
+- [Histograma MACD](list_of_indicators/macd_histogram.md) - convergência/divergência de médias móveis. Histograma, visualiza a diferença entre MACD e linha de sinal
 - [MACD Signal](list_of_indicators/macd_with_signal_line.md) - convergência/divergência de médias móveis com linha de sinal, fornece sinais de compra e venda
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, identifica reversões de tendência usando duas médias móveis
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, usa várias médias móveis para visualizar tendências
@@ -155,7 +155,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, adapta-se à volatilidade do mercado
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, ajusta-se à volatilidade
 - [Volume](list_of_indicators/volume.md) - volume da vela, mede o volume negociado por vela
-- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile, mostra a atividade de negociação em diferentes níveis de preço
+- [Perfil de volume](list_of_indicators/volume_profile.md) - Volume profile, mostra a atividade de negociação em diferentes níveis de preço
 - [VMA](list_of_indicators/volume_weighted_ma.md) - média móvel ponderada por volume, dá mais peso a preços com maior volume
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, preço médio ponderado pelo volume negociado
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, identifica o início de novas tendências
