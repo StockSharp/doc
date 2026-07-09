@@ -37,7 +37,7 @@ Onde:
 - Lower Bollinger Band = SMA - (StdDevMultiplier * Standard Deviation)
 - Upper Bollinger Band = SMA + (StdDevMultiplier * Standard Deviation)
 - SMA - média móvel simples ao longo do período Length
-- Standard Deviation - desvio padrão do preço ao longo do período Length
+- Desvio-padrão - desvio padrão do preço ao longo do período Length
 
 ## Utilização
 

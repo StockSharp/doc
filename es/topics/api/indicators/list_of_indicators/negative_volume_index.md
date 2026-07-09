@@ -23,7 +23,7 @@ El cálculo de Negative Volume Index implica los siguientes pasos:
 
 2. Para cada período posterior:
    ```
-   If Volume[current] < Volume[previous], then:
+   Si Volume[current] < Volume[previous], entonces:
        NVI[current] = NVI[previous] * (1 + (Price[current] - Price[previous]) / Price[previous])
    Otherwise:
        NVI[current] = NVI[previous]

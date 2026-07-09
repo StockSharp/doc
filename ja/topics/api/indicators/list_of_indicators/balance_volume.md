@@ -21,11 +21,11 @@ BV インジケーターは特に次の用途に有用です。
 Balance Volume インジケーターの計算は、終値を前回の終値と比較し、出来高で重み付けすることに基づいています。
 
 ```
-If Close > Previous Close:
+Close > Previous Close の場合:
 	BV = Previous BV + Volume
-If Close < Previous Close:
+Close < Previous Close の場合:
 	BV = Previous BV - Volume
-If Close = Previous Close:
+Close = Previous Close の場合:
 	BV = Previous BV
 ```
 

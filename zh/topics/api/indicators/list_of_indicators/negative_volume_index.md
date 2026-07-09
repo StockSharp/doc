@@ -23,7 +23,7 @@ NVI 通常与互补的正成交量指数（PVI）一起使用，相反，PVI 仅
 
 2. 对于每一个后续时期：
    ```
-   If Volume[current] < Volume[previous], then:
+   如果 Volume[current] < Volume[previous]，则：
        NVI[current] = NVI[previous] * (1 + (Price[current] - Price[previous]) / Price[previous])
    Otherwise:
        NVI[current] = NVI[previous]

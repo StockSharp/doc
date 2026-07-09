@@ -43,7 +43,7 @@ Laguerre RSI の計算には、いくつかの手順があります。
 
 4. 「上昇」と「下降」の構成要素に分離します。
    ```
-   If CU >= CU_old, then:
+   CU >= CU_old の場合:
      UP = CU - CU_old
      DN = 0
    Otherwise:

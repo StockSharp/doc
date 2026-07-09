@@ -31,8 +31,8 @@ Die RMI-Berechnung erfolgt in mehreren Schritten:
 
 2. Teilen Sie Impulse in positive (U) und negative (D) auf:
    ```
-   If Momentum > 0, then U = Momentum, D = 0
-   If Momentum < 0, then U = 0, D = |Momentum|
+   Wenn Momentum > 0, dann U = Momentum, D = 0
+   Wenn Momentum < 0, dann U = 0, D = |Momentum|
    ```
 
 3. Berechnen Sie die Durchschnittswerte der positiven und negativen Impulse über den angegebenen Zeitraum:

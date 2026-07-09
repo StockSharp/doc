@@ -31,8 +31,8 @@ O cálculo do RMI é efetuado em vários passos:
 
 2. Dividir os momentums em positivos (U) e negativos (D):
    ```
-   If Momentum > 0, then U = Momentum, D = 0
-   If Momentum < 0, then U = 0, D = |Momentum|
+   Se Momentum > 0, então U = Momentum, D = 0
+   Se Momentum < 0, então U = 0, D = |Momentum|
    ```
 
 3. Calcular os valores médios dos momentums positivos e negativos ao longo do período especificado:

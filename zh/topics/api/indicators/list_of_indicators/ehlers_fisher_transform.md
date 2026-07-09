@@ -33,8 +33,8 @@ Ehlers Fisher变换的计算涉及几个步骤：
 
 2. 应用费舍尔变换：
    ```
-   If Value >= 0.999, then Value = 0.999
-   If Value <= -0.999, then Value = -0.999
+   如果 Value >= 0.999，则 Value = 0.999
+   如果 Value <= -0.999，则 Value = -0.999
    
    Fisher = 0.5 * ln((1 + Value) / (1 - Value))
    ```

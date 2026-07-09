@@ -23,11 +23,11 @@ OBVM 的主要优势在于相比经典 OBV，它能够生成更清晰且较少�
 
 1. 计算基础的能量潮（OBV）指标：
    ```
-   If Close[current] > Close[previous]:
+   如果 Close[current] > Close[previous]：
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous]:
+   如果 Close[current] < Close[previous]：
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous]:
+   如果 Close[current] = Close[previous]：
        OBV[current] = OBV[previous]
    ```
 

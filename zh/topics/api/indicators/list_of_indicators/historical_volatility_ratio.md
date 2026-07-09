@@ -28,17 +28,17 @@ HVR 的计算方法是短期历史波动率与长期历史波动率的比值。�
 
 1. 计算短期历史波动率：
    ```
-   Short-term Volatility = Standard Deviation of Log Returns over ShortPeriod * Sqrt(Trading Days Per Year)
+   短期波动率 = ShortPeriod 内对数收益率的标准差 * Sqrt(每年交易日数)
    ```
 
 2. 计算长期历史波动率：
    ```
-   Long-term Volatility = Standard Deviation of Log Returns over LongPeriod * Sqrt(Trading Days Per Year)
+   长期波动率 = LongPeriod 内对数收益率的标准差 * Sqrt(每年交易日数)
    ```
 
 3. 将 HVR 计算为短期波动率与长期波动率的比率：
    ```
-   HVR = Short-term Volatility / Long-term Volatility
+   HVR = 短期波动率 / 长期波动率
    ```
 
 其中：

@@ -27,22 +27,22 @@ El cálculo de Harmonic Oscillator implica los siguientes pasos:
 
 1. Preprocesamiento de la serie de precios (eliminación de tendencia):
    ```
-   Detrended Price = Price - SMA(Price, Length)
+   Precio sin tendencia = Price - SMA(Price, Length)
    ```
 
 2. Aplicar análisis espectral para identificar ciclos dominantes:
    ```
-   Spectral Components = FFT(Detrended Price)
+   Componentes espectrales = FFT(Precio sin tendencia)
    ```
    
 3. Extracción de los componentes armónicos más significativos:
    ```
-   Dominant Cycles = Extract Top N Spectral Components based on amplitude
+   Ciclos dominantes = extraer los N principales componentes espectrales según la amplitud
    ```
 
 4. Sintetizando el Harmonic Oscillator en base a ciclos dominantes:
    ```
-   HO = Reconstruction of Dominant Cycles through Inverse FFT
+   HO = reconstrucción de ciclos dominantes mediante FFT inversa
    ```
 
 donde:

@@ -23,11 +23,11 @@ El cálculo del Volume en equilibrio es muy sencillo:
 
 2. Para cada período posterior:
    ```
-   If Close[current] > Close[previous], then:
+   Si Close[current] > Close[previous], entonces:
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous], then:
+   Si Close[current] < Close[previous], entonces:
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous], then:
+   Si Close[current] = Close[previous], entonces:
        OBV[current] = OBV[previous]
    ```
 

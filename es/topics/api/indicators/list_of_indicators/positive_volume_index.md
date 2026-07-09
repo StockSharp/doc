@@ -23,7 +23,7 @@ El cálculo de Positive Volume Index implica los siguientes pasos:
 
 2. Para cada período posterior:
    ```
-   If Volume[current] > Volume[previous], then:
+   Si Volume[current] > Volume[previous], entonces:
        PVI[current] = PVI[previous] * (1 + (Price[current] - Price[previous]) / Price[previous])
    Otherwise:
        PVI[current] = PVI[previous]

@@ -23,11 +23,11 @@ Die On Balance Volume Mean-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den Basis-On-Balance-Indikator Volume (OBV):
    ```
-   If Close[current] > Close[previous]:
+   Wenn Close[current] > Close[previous]:
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous]:
+   Wenn Close[current] < Close[previous]:
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous]:
+   Wenn Close[current] = Close[previous]:
        OBV[current] = OBV[previous]
    ```
 

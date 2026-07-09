@@ -23,11 +23,11 @@ On Balance Volume Mean の計算には、次の手順が含まれます:
 
 1. 基本となる On Balance Volume (OBV) インジケーターを計算します:
    ```
-   If Close[current] > Close[previous]:
+   Close[current] > Close[previous] の場合:
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous]:
+   Close[current] < Close[previous] の場合:
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous]:
+   Close[current] = Close[previous] の場合:
        OBV[current] = OBV[previous]
    ```
 

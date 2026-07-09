@@ -28,23 +28,23 @@ Historical Volatility Ratio の計算には、次の手順が含まれます。
 
 1. 短期のヒストリカル・ボラティリティを計算します。
    ```
-   Short-term Volatility = Standard Deviation of Log Returns over ShortPeriod * Sqrt(Trading Days Per Year)
+   短期ボラティリティ = ShortPeriod におけるログリターンの標準偏差 * Sqrt(年間取引日数)
    ```
 
 2. 長期のヒストリカル・ボラティリティを計算します。
    ```
-   Long-term Volatility = Standard Deviation of Log Returns over LongPeriod * Sqrt(Trading Days Per Year)
+   長期ボラティリティ = LongPeriod におけるログリターンの標準偏差 * Sqrt(年間取引日数)
    ```
 
 3. 短期ボラティリティと長期ボラティリティの比率として HVR を計算します。
    ```
-   HVR = Short-term Volatility / Long-term Volatility
+   HVR = 短期ボラティリティ / 長期ボラティリティ
    ```
 
 ここで:
-- Log Returns - 対数リターン (ln(Price[i] / Price[i-1]))
-- Standard Deviation - 標準偏差
-- Trading Days Per Year - 1年あたりの取引日数 (株式市場では通常 252)
+- ログリターン - 対数リターン (ln(Price[i] / Price[i-1]))
+- 標準偏差 - 標準偏差
+- 年間取引日数 - 1年あたりの取引日数 (株式市場では通常 252)
 - ShortPeriod - ボラティリティ計算の短期期間
 - LongPeriod - ボラティリティ計算の長期期間
 

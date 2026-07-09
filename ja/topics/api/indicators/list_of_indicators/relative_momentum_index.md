@@ -31,8 +31,8 @@ RMI の計算は複数のステップで実行されます。
 
 2. モメンタムを正（U）と負（D）に分けます。
    ```
-   If Momentum > 0, then U = Momentum, D = 0
-   If Momentum < 0, then U = 0, D = |Momentum|
+   Momentum > 0 の場合、U = Momentum, D = 0
+   Momentum < 0 の場合、U = 0, D = |Momentum|
    ```
 
 3. 指定された期間における正および負のモメンタムの平均値を計算します。

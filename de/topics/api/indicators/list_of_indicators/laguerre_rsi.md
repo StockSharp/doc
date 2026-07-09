@@ -43,7 +43,7 @@ Die Laguerre RSI-Berechnung umfasst mehrere Schritte:
 
 4. Unterteilen Sie die Komponenten in „oben“ und „unten“:
    ```
-   If CU >= CU_old, then:
+   Wenn CU >= CU_old, dann:
      UP = CU - CU_old
      DN = 0
    Otherwise:

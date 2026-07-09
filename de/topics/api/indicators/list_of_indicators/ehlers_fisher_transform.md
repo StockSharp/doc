@@ -33,8 +33,8 @@ Die Ehlers Fisher Transform-Berechnung umfasst mehrere Schritte:
 
 2. Wenden Sie die Fisher-Transformation an:
    ```
-   If Value >= 0.999, then Value = 0.999
-   If Value <= -0.999, then Value = -0.999
+   Wenn Value >= 0.999, dann Value = 0.999
+   Wenn Value <= -0.999, dann Value = -0.999
 
    Fisher = 0.5 * ln((1 + Value) / (1 - Value))
    ```

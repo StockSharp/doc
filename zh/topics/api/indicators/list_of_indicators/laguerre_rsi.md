@@ -43,7 +43,7 @@ LRSI的主要优势在于能够快速识别趋势变化，同时保持信号稳�
 
 4. 分成“上”和“下”部分：
    ```
-   If CU >= CU_old, then:
+   如果 CU >= CU_old，则：
      UP = CU - CU_old
      DN = 0
    Otherwise:

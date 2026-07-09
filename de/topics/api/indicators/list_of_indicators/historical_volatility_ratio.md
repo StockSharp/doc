@@ -28,21 +28,21 @@ Die Historical Volatility Ratio-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die kurzfristige historische Volatilität:
    ```
-   Short-term Volatility = Standard Deviation of Log Returns over ShortPeriod * Sqrt(Trading Days Per Year)
+   Kurzfristige Volatilität = Standardabweichung der Log-Returns über ShortPeriod * Sqrt(Handelstage pro Jahr)
    ```
 
 2. Berechnen Sie die langfristige historische Volatilität:
    ```
-   Long-term Volatility = Standard Deviation of Log Returns over LongPeriod * Sqrt(Trading Days Per Year)
+   Langfristige Volatilität = Standardabweichung der Log-Returns über LongPeriod * Sqrt(Handelstage pro Jahr)
    ```
 
 3. Berechnen Sie HVR als Verhältnis der kurzfristigen Volatilität zur langfristigen Volatilität:
    ```
-   HVR = Short-term Volatility / Long-term Volatility
+   HVR = Kurzfristige Volatilität / Langfristige Volatilität
    ```
 
 Dabei gilt:
-- Log Returns – logarithmische Returns (ln(Price[i] / Price[i-1]))
+- Log-Returns – logarithmische Renditen (ln(Price[i] / Price[i-1]))
 - Standardabweichung - Standardabweichung
 - Handelstage pro Jahr – Anzahl der Handelstage in einem Jahr (normalerweise 252 für Aktienmärkte)
 - ShortPeriod – kurzer Zeitraum für die Volatilitätsberechnung

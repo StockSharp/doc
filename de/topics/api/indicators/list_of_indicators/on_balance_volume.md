@@ -23,11 +23,11 @@ Die On-Balance Volume-Berechnung ist sehr einfach:
 
 2. Für jede weitere Periode:
    ```
-   If Close[current] > Close[previous], then:
+   Wenn Close[current] > Close[previous], dann:
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous], then:
+   Wenn Close[current] < Close[previous], dann:
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous], then:
+   Wenn Close[current] = Close[previous], dann:
        OBV[current] = OBV[previous]
    ```
 

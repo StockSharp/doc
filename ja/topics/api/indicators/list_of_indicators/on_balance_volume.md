@@ -23,11 +23,11 @@ On-Balance Volume の計算は非常に単純です:
 
 2. 以降の各期間について:
    ```
-   If Close[current] > Close[previous], then:
+   Close[current] > Close[previous] の場合:
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous], then:
+   Close[current] < Close[previous] の場合:
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous], then:
+   Close[current] = Close[previous] の場合:
        OBV[current] = OBV[previous]
    ```
 

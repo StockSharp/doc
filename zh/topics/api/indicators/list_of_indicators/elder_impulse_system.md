@@ -39,9 +39,9 @@ EIS 尤其适用于：
 
 3. 确定当前K线的颜色分类：
    ```
-   If EMA[current] > EMA[previous] AND MACD Histogram[current] > MACD Histogram[previous], then Green (Bullish Impulse)
-   If EMA[current] < EMA[previous] AND MACD Histogram[current] < MACD Histogram[previous], then Red (Bearish Impulse)
-   Otherwise Blue (No Impulse)
+   如果 EMA[current] > EMA[previous] 且 MACD Histogram[current] > MACD Histogram[previous]，则为绿色（看涨脉冲）
+   如果 EMA[current] < EMA[previous] 且 MACD Histogram[current] < MACD Histogram[previous]，则为红色（看跌脉冲）
+   否则为蓝色（无脉冲）
    ```
 
 ## 解释

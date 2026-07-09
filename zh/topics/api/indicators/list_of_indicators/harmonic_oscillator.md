@@ -27,22 +27,22 @@ HO尤其适用于：
 
 1. 价格序列预处理（去趋势）:
    ```
-   Detrended Price = Price - SMA(Price, Length)
+   去趋势价格 = Price - SMA(Price, Length)
    ```
 
 2. 应用频谱分析来识别主要周期：
    ```
-   Spectral Components = FFT(Detrended Price)
+   频谱成分 = FFT(去趋势价格)
    ```
    
 3. 提取最显著的谐波分量：
    ```
-   Dominant Cycles = Extract Top N Spectral Components based on amplitude
+   主导周期 = 根据振幅提取前 N 个频谱成分
    ```
 
 4. 基于主导周期的谐振子合成：
    ```
-   HO = Reconstruction of Dominant Cycles through Inverse FFT
+   HO = 通过逆 FFT 重构主导周期
    ```
 
 其中：

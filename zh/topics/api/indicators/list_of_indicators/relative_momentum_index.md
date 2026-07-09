@@ -31,8 +31,8 @@ RMI 计算分几个步骤进行：
 
 2. 将动量分为正（U）和负（D）:
    ```
-   If Momentum > 0, then U = Momentum, D = 0
-   If Momentum < 0, then U = 0, D = |Momentum|
+   如果 Momentum > 0，则 U = Momentum，D = 0
+   如果 Momentum < 0，则 U = 0，D = |Momentum|
    ```
 
 3. 计算指定期间正负动量的平均值：

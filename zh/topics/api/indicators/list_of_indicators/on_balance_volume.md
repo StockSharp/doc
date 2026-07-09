@@ -23,11 +23,11 @@ OBV指标最早由约瑟夫·格兰维尔在1963年他的著作《格兰维尔�
 
 2. 对于每一个后续时期：
    ```
-   If Close[current] > Close[previous], then:
+   如果 Close[current] > Close[previous]，则：
        OBV[current] = OBV[previous] + Volume[current]
-   If Close[current] < Close[previous], then:
+   如果 Close[current] < Close[previous]，则：
        OBV[current] = OBV[previous] - Volume[current]
-   If Close[current] = Close[previous], then:
+   如果 Close[current] = Close[previous]，则：
        OBV[current] = OBV[previous]
    ```
 

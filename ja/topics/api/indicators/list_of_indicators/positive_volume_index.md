@@ -23,7 +23,7 @@ Positive Volume Index の計算は、次の手順で行います。
 
 2. 後続の各期間について:
    ```
-   If Volume[current] > Volume[previous], then:
+   Volume[current] > Volume[previous] の場合:
        PVI[current] = PVI[previous] * (1 + (Price[current] - Price[previous]) / Price[previous])
    Otherwise:
        PVI[current] = PVI[previous]

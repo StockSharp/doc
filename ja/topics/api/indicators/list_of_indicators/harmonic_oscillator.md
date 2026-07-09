@@ -27,22 +27,22 @@ Harmonic Oscillator の計算には、次の手順が含まれます。
 
 1. 価格系列の前処理 (トレンド除去):
    ```
-   Detrended Price = Price - SMA(Price, Length)
+   トレンド除去後価格 = Price - SMA(Price, Length)
    ```
 
 2. 支配的なサイクルを特定するためのスペクトル分析の適用:
    ```
-   Spectral Components = FFT(Detrended Price)
+   スペクトル成分 = FFT(トレンド除去後価格)
    ```
    
 3. 最も重要な調和成分の抽出:
    ```
-   Dominant Cycles = Extract Top N Spectral Components based on amplitude
+   主周期 = 振幅に基づき上位 N 個のスペクトル成分を抽出
    ```
 
 4. 支配的なサイクルに基づく Harmonic Oscillator の合成:
    ```
-   HO = Reconstruction of Dominant Cycles through Inverse FFT
+   HO = 逆 FFT による主周期の再構成
    ```
 
 ここで:

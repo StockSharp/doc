@@ -43,7 +43,7 @@ O cálculo do Laguerre RSI envolve vários passos:
 
 4. Separar em componentes "up" e "down":
    ```
-   If CU >= CU_old, then:
+   Se CU >= CU_old, então:
      UP = CU - CU_old
      DN = 0
    Otherwise:
