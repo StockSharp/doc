@@ -57,7 +57,7 @@ protected override void OnStarted2(DateTime time)
 	_lastPrice1 = null;
 	_lastPrice2 = null;
 
-	// 订阅第一个工具的蜡烛
+	// 订阅第一个工具的K线
 	SubscribeCandles(CandleType, security: sec1)
 		.Bind(c =>
 		{
@@ -68,7 +68,7 @@ protected override void OnStarted2(DateTime time)
 		})
 		.Start();
 
-	// 订阅第二个工具的蜡烛并处理价差
+	// 订阅第二个工具的K线并处理价差
 	SubscribeCandles(CandleType, security: sec2)
 		.Bind(c =>
 		{

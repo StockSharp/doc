@@ -64,7 +64,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// 按中间价对蜡烛分组
+			// 按中间价对K线分组
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.LowPrice + c.GetLength() / 2)
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
@@ -127,7 +127,7 @@ class price_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# 获取蜡烛存储
+		# 获取K线存储
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# 获取指定期间内的可用日期
@@ -137,11 +137,11 @@ class price_volume_script(IAnalyticsScript):
 			logs.LogWarning("no data")
 			return Task.CompletedTask
 
-		# 按中间价对蜡烛分组并汇总成交量
+		# 按中间价对K线分组并汇总成交量
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows_dict = {}
 		for candle in candles:
-			# 计算蜡烛的中间价
+			# 计算K线的中间价
 			key = candle.LowPrice + get_length(candle) / 2
 			# 汇总同一价格档位的成交量
 			rows_dict[key] = rows_dict.get(key, 0) + candle.TotalVolume

@@ -72,7 +72,7 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
-	// 跳过未完成的蜡烛
+	// 跳过未完成的K线
 	if (candle.State != CandleStates.Finished)
 		return;
 
@@ -93,7 +93,7 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 	var isShortLessThenLongCurrent = shortValue < longValue;
 	var isShortLessThenLongPrevious = _prevShortValue < _prevLongValue;
 
-	// 将当前值保存为下一根蜡烛的上一周期值
+	// 将当前值保存为下一根K线的上一周期值
 	_prevLongValue = longValue;
 	_prevShortValue = shortValue;
 

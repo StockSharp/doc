@@ -121,12 +121,12 @@ public class TargetPositionStrategy : Strategy
 
         if (candle.OpenPrice < candle.ClosePrice)
         {
-            // 看涨蜡烛 -- 设置买入目标持仓
+            // 看涨K线 -- 设置买入目标持仓
             SetTargetPosition(Volume);
         }
         else if (candle.OpenPrice > candle.ClosePrice)
         {
-            // 看跌蜡烛 -- 设置卖出目标持仓
+            // 看跌K线 -- 设置卖出目标持仓
             SetTargetPosition(-Volume);
         }
     }

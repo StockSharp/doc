@@ -128,7 +128,7 @@ class time_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# 获取蜡烛存储
+		# 获取K线存储
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# 获取指定期间内的可用日期

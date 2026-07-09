@@ -15,7 +15,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// 直接通过 DataType 创建 5 分钟蜡烛订阅
+	// 直接通过 DataType 创建 5 分钟K线订阅
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
@@ -23,7 +23,7 @@ protected override void OnStarted2(DateTime time)
 	// If additional parameters are required, you can configure the subscription
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
 	
-	// 创建处理传入蜡烛的规则
+	// 创建处理传入K线的规则
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
@@ -109,7 +109,7 @@ var level1Subscription = new Subscription(
 // K线订阅
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), Security);
 
-// 创建用于处理传入蜡烛的规则
+// 创建用于处理传入K线的规则
 Connector
 	.WhenCandlesFinished(subscription)  // Rule activation when a completed candle is received
 	.Do(ProcessCandle)                   // Call processing method

@@ -100,7 +100,7 @@ class empty_diagram_element(DiagramExternalElement):
 		:param candle: CandleMessage input representing a candlestick.
 		:param diff: Unit representing the difference value to be processed.
 		"""
-		# 将结果计算为蜡烛收盘价与 diff 值之和
+		# 将结果计算为K线收盘价与 diff 值之和
 		res = candle.ClosePrice + diff
 
 		# 如果 diff 大于或等于 MinValue 参数，则调用 Output1，

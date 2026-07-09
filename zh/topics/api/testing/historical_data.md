@@ -174,7 +174,7 @@ var strategy = new SmaStrategy
 	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 };
 
-// 配置用于构建蜡烛的数据类型
+// 配置用于构建K线的数据类型
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
@@ -310,7 +310,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// 创建所需类型蜡烛的订阅
+	// 创建所需类型K线的订阅
 	var dt = CandleTimeFrame is null
 		? CandleType
 		: DataType.Create(CandleType.MessageType, CandleTimeFrame);
@@ -330,7 +330,7 @@ protected override void OnStarted2(DateTime time)
 	var longSma = new SMA { Length = LongSma };
 	var shortSma = new SMA { Length = ShortSma };
 
-	// 订阅蜡烛并将其绑定到指标
+	// 订阅K线并将其绑定到指标
 	SubscribeCandles(subscription)
 		.Bind(longSma, shortSma, OnProcess)
 		.Start();
@@ -358,7 +358,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// 检查蜡烛是否完成
+	// 检查K线是否完成
 	if (candle.State != CandleStates.Finished)
 		return;
 
@@ -377,7 +377,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		// 计算开仓或反转持仓的数量
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-		// 使用蜡烛收盘价
+		// 使用K线收盘价
 		var price = candle.ClosePrice;
 
 		if (direction == Sides.Buy)

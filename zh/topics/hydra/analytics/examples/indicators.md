@@ -56,7 +56,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// 为蜡烛和指标序列创建两个面板
+			// 为K线和指标序列创建两个面板
 			var candleChart = panel.CreateChart<DateTimeOffset, decimal>();
 			var indicatorChart = panel.CreateChart<DateTimeOffset, decimal>();
 
@@ -120,7 +120,7 @@ class indicator_script(IAnalyticsScript):
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		# 为蜡烛和指标序列创建两个面板
+		# 为K线和指标序列创建两个面板
 		candle_chart = create_chart(panel, datetime, float)
 		indicator_chart = create_chart(panel, datetime, float)
 

@@ -52,12 +52,12 @@ var shortSma = new SMA { Length = Short };
 
 // ----------------------------------------
 
-// --- 绑定蜡烛集和指标 ----
+// --- 绑定K线集和指标 ----
 
 var subscription = SubscribeCandles(CandleType);
 
 subscription
-	// 将指标绑定到蜡烛
+	// 将指标绑定到K线
 	.Bind(longSma, shortSma, OnProcess)
 	// 开始处理
 	.Start();
@@ -94,7 +94,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// 如果我们只订阅了未完成的蜡烛
+	// 如果我们只订阅了未完成的K线
 	if (candle.State != CandleStates.Finished)
 		return;
 

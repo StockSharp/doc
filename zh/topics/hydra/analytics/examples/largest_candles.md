@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 
 				var allCandles = candleStorage.Load(from, to).ToArray();
 
-				// 按成交量降序排列后的首条记录就是最大蜡烛
+				// 按成交量降序排列后的首条记录就是最大K线
 				var bigPriceCandle = allCandles.OrderByDescending(c => c.GetLength()).FirstOrDefault();
 				var bigVolCandle = allCandles.OrderByDescending(c => c.TotalVolume).FirstOrDefault();
 
@@ -127,7 +127,7 @@ class biggest_candle_script(IAnalyticsScript):
 			all_candles = load_range(candle_storage, message_type, from_date, to_date)
 
 			if len(all_candles) > 0:
-				# 按成交量降序排列后的首条记录就是最大蜡烛
+				# 按成交量降序排列后的首条记录就是最大K线
 				big_price_candle = max(all_candles, key=lambda c: get_length(c))
 				big_vol_candle = max(all_candles, key=lambda c: c.TotalVolume)
 

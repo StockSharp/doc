@@ -96,9 +96,9 @@ longSma.Length = self.Long
 shortSma = SMA()
 shortSma.Length = self.Short
 
-# 绑定蜡烛集和指标
+# 绑定K线集和指标
 subscription = self.SubscribeCandles(self.CandleType)
-# 将指标绑定到蜡烛并开始处理
+# 将指标绑定到K线并开始处理
 subscription.Bind(longSma, shortSma, self.OnProcess).Start()
 ```
 

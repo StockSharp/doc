@@ -52,7 +52,7 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	// 检查蜡烛是否已完成
+	// 检查K线是否已完成
 	if (candle.State != CandleStates.Finished)
 		return;
 
@@ -60,15 +60,15 @@ private void ProcessCandle(ICandleMessage candle)
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// 逆势策略：看跌蜡烛买入，看涨蜡烛卖出
+	// 逆势策略：看跌K线买入，看涨K线卖出
 	if (candle.OpenPrice < candle.ClosePrice && Position >= 0)
 	{
-		// 看涨蜡烛 - 卖出
+		// 看涨K线 - 卖出
 		SellMarket(Volume + Math.Abs(Position));
 	}
 	else if (candle.OpenPrice > candle.ClosePrice && Position <= 0)
 	{
-		// 看跌蜡烛 - 买入
+		// 看跌K线 - 买入
 		BuyMarket(Volume + Math.Abs(Position));
 	}
 }

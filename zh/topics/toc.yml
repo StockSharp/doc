@@ -516,7 +516,7 @@
     items:
     - name: 工具列表
       href: hydra/prepare_for_download/instruments_list.md
-    - name: 自定义蜡烛图
+    - name: 自定义K线图
       href: hydra/prepare_for_download/custom_candles.md
   - name: 数据处理
     href: hydra/working_with_data.md
@@ -528,7 +528,7 @@
         href: hydra/working_with_data/view_and_export/ticks.md
       - name: 订单簿
         href: hydra/working_with_data/view_and_export/order_books.md
-      - name: 蜡烛图
+      - name: K线图
         href: hydra/working_with_data/view_and_export/candles.md
       - name: 订单日志
         href: hydra/working_with_data/view_and_export/order_log.md
@@ -544,7 +544,7 @@
         href: hydra/working_with_data/view_and_export/indicators.md
       - name: 持仓
         href: hydra/working_with_data/view_and_export/positions.md
-    - name: 蜡烛图生成
+    - name: K线图生成
       href: hydra/working_with_data/candles_generation.md
     - name: 导出数据
       href: hydra/working_with_data/export_data.md
@@ -558,7 +558,7 @@
   - name: 导入
     href: hydra/importing.md
     items:
-    - name: 蜡烛图
+    - name: K线图
       href: hydra/importing/candles.md
     - name: 工具
       href: hydra/importing/instruments.md
@@ -636,7 +636,7 @@
         href: hydra/analytics/examples/normalization.md
       - name: 皮尔森相关
         href: hydra/analytics/examples/pearson_correlation.md
-      - name: 最大蜡烛图
+      - name: 最大K线图
         href: hydra/analytics/examples/largest_candles.md
   - name: 杂项
     items:
@@ -2027,7 +2027,7 @@
       href: api/patterns/bearish_engulfing.md
     - name: '看跌孕线'
       href: api/patterns/bearish_harami.md
-    - name: '黑色蜡烛'
+    - name: '黑色K线'
       href: api/patterns/black_candle.md
     - name: '黑色光头阳线'
       href: api/patterns/black_marubozu.md
@@ -2043,7 +2043,7 @@
       href: api/patterns/evening_star.md
     - name: '下跌三法'
       href: api/patterns/falling_three_methods.md
-    - name: '平线蜡烛'
+    - name: '平线K线'
       href: api/patterns/flat_candle.md
     - name: '墓碑'
       href: api/patterns/gravestone.md
@@ -2065,7 +2065,7 @@
       href: api/patterns/tweezer_bottom.md
     - name: '镊子顶'
       href: api/patterns/tweezer_top.md
-    - name: '白色蜡烛'
+    - name: '白色K线'
       href: api/patterns/white_candle.md
     - name: '白色光头阳线'
       href: api/patterns/white_marubozu.md

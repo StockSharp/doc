@@ -67,7 +67,7 @@ _connector.SecurityReceived += (subscription, security) =>
 		var tradesSubscription = new Subscription(DataType.Ticks, security);
 		_connector.Subscribe(tradesSubscription);
 		
-		// 蜡烛订阅
+		// K线订阅
 		var candleSubscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			security)
@@ -94,7 +94,7 @@ _connector.OrderBookReceived += (subscription, depth) =>
 	Console.WriteLine($"Order book received: {depth.SecurityId}, Best bid: {depth.BestBid()?.Price}, Best ask: {depth.BestAsk()?.Price}");
 };
 
-// 收到蜡烛事件
+// 收到K线事件
 _connector.CandleReceived += (subscription, candle) =>
 {
 	Console.WriteLine($"Candle received: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
@@ -127,10 +127,10 @@ _connector.Connect();
 服务器模式下的 Hydra 支持访问多种数据。下面以获取历史数据为例：
 
 ```cs
-// 获取历史蜡烛
+// 获取历史K线
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// 创建历史蜡烛订阅
+	// 创建历史K线订阅
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -142,7 +142,7 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 		}
 	};
 	
-	// 订阅以处理收到的蜡烛
+	// 订阅以处理收到的K线
 	_connector.CandleReceived += OnCandleReceived;
 	
 	// 启动订阅
@@ -151,13 +151,13 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// 检查蜡烛是否属于当前订阅
+	// 检查K线是否属于当前订阅
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
 	Console.WriteLine($"Historical candle: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
-	// 处理收到的蜡烛，例如保存到本地存储
+	// 处理收到的K线，例如保存到本地存储
 	// 或用于分析/可视化
 }
 ```

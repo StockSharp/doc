@@ -159,7 +159,7 @@ connector.Connect();
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// 处理收到的蜡烛
+	// 处理收到的K线
 	Console.WriteLine($"Candle: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 

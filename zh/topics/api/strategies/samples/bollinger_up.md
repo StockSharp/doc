@@ -69,7 +69,7 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
 {
-	// 跳过未完成的蜡烛
+	// 跳过未完成的K线
 	if (candle.State != CandleStates.Finished)
 		return;
 

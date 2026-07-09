@@ -38,7 +38,7 @@ protected override void OnStarted2(DateTime time)
 	_bullLength = 0;
 	_bearLength = 0;
 
-	// 创建蜡烛订阅
+	// 创建K线订阅
 	var subscription = SubscribeCandles(CandleDataType);
 
 	subscription
@@ -67,7 +67,7 @@ private void ProcessCandle(ICandleMessage candle)
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// 识别看涨或看跌蜡烛
+	// 识别看涨或看跌K线
 	if (candle.OpenPrice < candle.ClosePrice)
 	{
 		_bullLength++;

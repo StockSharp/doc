@@ -12,7 +12,7 @@
 ```fsharp
 // --- 策略参数：CandleType、Long、Short、TakeValue、StopValue ---
 
-// 蜡烛类型参数
+// K线类型参数
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
 		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
@@ -38,7 +38,7 @@ let mutable isShortLessThenLong : bool option = None
 
 // --------------------- 公共属性 ---------------------
 
-/// <summary>策略使用的蜡烛类型。</summary>
+/// <summary>策略使用的K线类型。</summary>
 member this.CandleType
 	with get () = candleTypeParam.Value
 	and set value = candleTypeParam.Value <- value
@@ -77,7 +77,7 @@ let shortSma = SMA()
 shortSma.Length <- this.Short
 // ---------------------------------------
 
-// ------ 订阅蜡烛流并绑定指标 ------
+// ------ 订阅K线流并绑定指标 ------
 let subscription = this.SubscribeCandles(this.CandleType)
 
 // 将指标绑定到订阅并指定处理函数
@@ -94,7 +94,7 @@ let area = this.CreateChartArea()
 
 // area can be null in case there is no GUI (e.g., Runner or console app)
 if not (isNull area) then
-	// 绘制蜡烛
+	// 绘制K线
 	this.DrawCandles(area, subscription) |> ignore
 
 	// 绘制指标
@@ -120,7 +120,7 @@ member private this.OnProcess
 		longValue: decimal,
 		shortValue: decimal
 	) =
-	// 记录蜡烛信息
+	// 记录K线信息
 	this.LogInfo(
 		LocalizedStrings.SmaNewCandleLog,
 		candle.OpenTime,
@@ -132,7 +132,7 @@ member private this.OnProcess
 		candle.SecurityId
 	)
 
-	// 如果蜡烛未完成则跳过
+	// 如果K线未完成则跳过
 	if candle.State <> CandleStates.Finished then
 		()
 	else

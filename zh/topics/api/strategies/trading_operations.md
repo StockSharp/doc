@@ -264,7 +264,7 @@ protected override void OnStarted2(DateTime time)
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
 	
-	// 创建处理蜡烛的规则
+	// 创建处理K线的规则
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)

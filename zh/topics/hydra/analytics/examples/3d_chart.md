@@ -168,7 +168,7 @@ class chart3d_script(IAnalyticsScript):
 			# 用工具标识符填充 X 标签
 			x.append(to_string_id(security))
 
-			# 获取当前工具的蜡烛存储
+			# 获取当前工具的K线存储
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# 获取指定期间内的可用日期
