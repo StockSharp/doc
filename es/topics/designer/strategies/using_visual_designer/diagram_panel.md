@@ -12,7 +12,7 @@ El panel **Paleta** contiene bloques a partir de los cuales se crean estrategias
 
 El panel **Designer** es donde ocurre todo el proceso de creación de una estrategia mediante la combinación de bloques y conexiones (líneas). Representa visualmente el esquema de la estrategia. La información detallada sobre la creación de una estrategia se describe en la sección [Creación de un algoritmo a partir de bloques](first_strategy.md).
 
-## Panel Properties
+## Panel Propiedades
 
 El panel **Propiedades** muestra los parámetros del bloque seleccionado en el panel **Designer**. Cuando se selecciona un bloque en el panel **Designer**, su marco se colorea de negro.
 

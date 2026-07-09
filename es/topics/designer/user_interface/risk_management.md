@@ -1,6 +1,6 @@
 # Gestión de riesgos
 
-En los paneles [Testing Properties](components/backtesting_settings.md) y [Live Trading Properties](components/live_settings.md), puede establecer la configuración de control de riesgos.
+En los paneles [Configuración de backtesting](components/backtesting_settings.md) y [Configuración live](components/live_settings.md), puede establecer la configuración de control de riesgos.
 
 En la ventana Riesgos, es necesario seleccionar una **Regla de riesgo**, configurar la condición de activación para la **Regla de riesgo** y la acción (cerrar posiciones, detener trading, cancelar órdenes) que se ejecutará cuando ocurra la condición de la **Regla de riesgo**.
 

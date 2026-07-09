@@ -12,7 +12,7 @@
 - [統計](components/statistics.md) - P/L、Trades、Positions、Orders のカテゴリでグループ化されたテーブルを表します。ストラテジーのパフォーマンスに関するデータを含みます。
 - [ティック約定](components/tick_trades.md) - 約定のテーブルを表し、選択した銘柄のすべての約定に関する完全な情報を表示します。
 - [ポジションチャート](components/positions.md) - Position チャートを表します。
-- Properties - [テストプロパティ](components/backtesting_settings.md) のテーブル、または [ライブ取引プロパティ](components/live_settings.md) のテーブルを表します。
+- プロパティ - [バックテスト設定](components/backtesting_settings.md) のテーブル、または [Live 設定](components/live_settings.md) のテーブルを表します。
 - [スキーマ](../strategies/using_visual_designer/diagram_panel.md) - スキーマデザイナーを表します。
 - [ソースコード](../strategies/using_code.md) - ソースコードに基づくストラテジーを作成または編集するためのウィンドウを表します。
 - [DLL](../strategies/using_dll/dll_panel.md) - DLL メタデータを表示するためのウィンドウです。既製の DLL に基づいてストラテジーを作成する場合に使用します。

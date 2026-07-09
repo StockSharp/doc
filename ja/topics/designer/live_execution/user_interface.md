@@ -4,7 +4,7 @@
 
 ![Designer Interface Live trade 00](../../../images/designer_interface_live_trade_00.png)
 
-ストラテジータブには、[ストラテジーデザイナー](../strategies/using_visual_designer/diagram_panel.md) で説明されているものと同様に、スキームおよびコンポーネント要素用の Strategy Designer が含まれます。さらに、このタブには [Live Trading Properties](../user_interface/components/live_settings.md) パネルも含まれており、既定では折りたたまれてタブの右側に固定されています。
+ストラテジータブには、[ストラテジーデザイナー](../strategies/using_visual_designer/diagram_panel.md) で説明されているものと同様に、スキームおよびコンポーネント要素用のストラテジーデザイナーが含まれます。さらに、このタブには [Live 設定](../user_interface/components/live_settings.md) パネルも含まれており、既定では折りたたまれてタブの右側に固定されています。
 
 ストラテジーを **ライブ** に追加する処理では、元のコードからコピーが作成されます（[スキーム](../strategies/using_visual_designer.md)または[コード](../strategies/using_code.md)を使用している場合）。したがって、**ライブ** コピー内のアルゴリズムを変更しても、元のものには影響しません。ストラテジー起動時に **ライブ** と元のものの間に不一致がある場合、警告が表示されます。
 

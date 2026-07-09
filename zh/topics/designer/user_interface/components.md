@@ -12,7 +12,7 @@
 - [统计](components/statistics.md) - 显示按盈亏、成交、持仓和订单分类的表格，其中包含策略绩效数据。
 - [逐笔成交](components/tick_trades.md) - 显示逐笔成交表，其中包含所选交易品种全部成交的完整信息。
 - [持仓图表](components/positions.md) - 显示持仓图表。
-- Properties - 显示[回测属性](components/backtesting_settings.md)表或[实盘交易属性](components/live_settings.md)表。
+- 属性 - 显示[回测设置](components/backtesting_settings.md)表或[实盘设置](components/live_settings.md)表。
 - [策略图](../strategies/using_visual_designer/diagram_panel.md) - 显示策略图设计器。
 - [源代码](../strategies/using_code.md) - 显示用于创建或编辑源代码策略的窗口。
 - [DLL](../strategies/using_dll/dll_panel.md) - 显示 DLL 元数据的窗口，用于基于现有 DLL 创建策略。

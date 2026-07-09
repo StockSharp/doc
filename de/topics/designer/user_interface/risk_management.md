@@ -1,6 +1,6 @@
 # Risikomanagement
 
-In den Panels [Testing Properties](components/backtesting_settings.md) und [Live Trading Properties](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
+In den Panels [Backtesting-Einstellungen](components/backtesting_settings.md) und [Live-Einstellungen](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
 
 Im Fenster Risiken müssen Sie eine **Risikoregel** auswählen, die Auslösebedingung für die **Risikoregel** konfigurieren und die Aktion (Positionen schließen, Handel stoppen, Aufträge stornieren) festlegen, die ausgeführt wird, wenn die Bedingung der **Risikoregel** eintritt.
 

@@ -4,7 +4,7 @@ Depois de adicionar uma estratégia à pasta **Ao vivo**, ao fazer duplo clique 
 
 ![Designer Interface Live trade 00](../../../images/designer_interface_live_trade_00.png)
 
-O separador da estratégia contém o Strategy Designer para esquemas e elementos de componentes, semelhante ao descrito em [Designer de estratégias](../strategies/using_visual_designer/diagram_panel.md). Além disso, o separador inclui o painel [Live Trading Properties](../user_interface/components/live_settings.md), que por predefinição está recolhido e anexado ao lado direito do separador.
+O separador da estratégia contém o designer de estratégias para esquemas e elementos de componentes, semelhante ao descrito em [Designer de estratégias](../strategies/using_visual_designer/diagram_panel.md). Além disso, o separador inclui o painel [Definições de negociação em tempo real](../user_interface/components/live_settings.md), que por predefinição está recolhido e anexado ao lado direito do separador.
 
 Adicionar uma estratégia a **Ao vivo** implica copiá-la do código original (no caso de usar [esquemas](../strategies/using_visual_designer.md) ou [código](../strategies/using_code.md)). Por isso, as alterações ao algoritmo dentro da cópia **Ao vivo** não afetam o original. Ao iniciar a estratégia, se houver uma discrepância entre **Ao vivo** e o original, será apresentado um aviso:
 

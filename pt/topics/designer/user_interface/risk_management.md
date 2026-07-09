@@ -1,6 +1,6 @@
 # Gestão de risco
 
-Nos painéis [Testing Properties](components/backtesting_settings.md) e [Live Trading Properties](components/live_settings.md), pode definir as definições de controlo de risco.
+Nos painéis [Definições de backtesting](components/backtesting_settings.md) e [Definições de negociação em tempo real](components/live_settings.md), pode definir as definições de controlo de risco.
 
 Na janela Riscos, é necessário selecionar uma **Regra de risco**, configurar a condição de acionamento da **Regra de risco** e a ação (Fechar posições, Parar negociação, Cancelar ordens) que será executada quando ocorrer a condição da **Regra de risco**.
 

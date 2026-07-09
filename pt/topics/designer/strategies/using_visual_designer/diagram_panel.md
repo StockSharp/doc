@@ -1,6 +1,6 @@
 # Designer de estratégias
 
-O principal processo de conceção de uma estratégia e dos seus elementos componentes decorre no painel **Esquema**, através da combinação de blocos e linhas de ligação. O painel Scheme é composto pelos painéis: **Paleta**, **Designer** e **Propriedades**.
+O principal processo de conceção de uma estratégia e dos seus elementos componentes decorre no painel **Esquema**, através da combinação de blocos e linhas de ligação. O painel Esquema é composto pelos painéis: **Paleta**, **Designer** e **Propriedades**.
 
 ![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
@@ -12,7 +12,7 @@ O painel **Paleta** contém os blocos a partir dos quais as estratégias são cr
 
 O painel **Designer** é onde ocorre todo o processo de criação de uma estratégia através da combinação de blocos e ligações (linhas). Ele representa visualmente o esquema da estratégia. As informações detalhadas sobre a criação de uma estratégia são descritas na secção [Criar um algoritmo a partir de blocos](first_strategy.md).
 
-## Painel Properties
+## Painel Propriedades
 
 O painel **Propriedades** apresenta os parâmetros do bloco selecionado no painel **Designer**. Quando um bloco é selecionado no painel **Designer**, a sua moldura fica preta.
 
