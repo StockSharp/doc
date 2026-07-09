@@ -2,7 +2,7 @@
 
 Para editar um instrumento (por exemplo, se tiver sido criado sem todos os dados necessários), faça duplo clique no instrumento ou clique no botão ![hydra edit](../../../images/hydra_edit.png) para abrir a janela onde pode fazer as alterações necessárias:
 
-Vá para a janela **Securities**.
+Vá para a janela **Instrumentos**.
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 

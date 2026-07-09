@@ -2,7 +2,7 @@
 
 銘柄を編集するには（たとえば、必要なデータがすべて揃っていない状態で作成された場合）、銘柄をダブルクリックするか、![hydra edit](../../../images/hydra_edit.png) ボタンをクリックして、必要な変更を行えるウィンドウを開きます。
 
-**Securities** ウィンドウに移動します。
+**銘柄** ウィンドウに移動します。
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 

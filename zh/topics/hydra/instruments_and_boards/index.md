@@ -2,7 +2,7 @@
 
 使用 [Hydra](../../hydra.md)，可以创建自定义指数。
 
-在 **Common** 选项卡中选择 **Securities**，此时会显示 **All Securities** 选项卡。
+在 **常规** 选项卡中选择 **交易品种**，此时会显示 **所有交易品种** 选项卡。
 
 创建**指数**前，请先检查可用的市场数据。选择数据的存储路径，然后依次查看应参与指数计算的交易品种。如果数据存在缺口，请从支持的数据源下载所需的市场数据。
 
@@ -12,7 +12,7 @@
 
 下面以交易品种比值指数 AAPL@NYSE\/GOOG@NYSE 为例。
 
-第一步是创建**指数**。在 **All Securities** 选项卡中单击 **Create security\=\>Index** 按钮，随后将显示以下窗口：
+第一步是创建**指数**。在 **所有交易品种** 选项卡中单击 **创建交易品种\=\>指数** 按钮，随后将显示以下窗口：
 
 ![hydra index sec](../../../images/hydra_index_sec.png)
 
@@ -39,7 +39,7 @@
 - **tan(a)** \- 返回指定角度的正切值。
 - **truncate(a)** \- 计算指定数字的整数部分。
 
-接下来，在 **Common** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**交易品种和数据时间段，在 **Create From:** 字段中选择 **Composite Element**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
+接下来，在 **常规** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**交易品种和数据时间段，在 **创建来源:** 字段中选择 **复合元素**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
 
 ![hydra index candle](../../../images/hydra_index_candle.png)
 

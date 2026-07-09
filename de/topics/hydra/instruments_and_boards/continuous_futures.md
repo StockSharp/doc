@@ -2,13 +2,13 @@
 
 Das Programm [Hydra](../../hydra.md) ermöglicht es dem Benutzer, verschiedene Typen von Marktdaten aus unterschiedlichen Kontrakten zu einem einzigen fortlaufenden Instrument zusammenzufassen.
 
-Wählen Sie dazu auf der Registerkarte **Allgemein** den Punkt **Instrumente**, sodass die Registerkarte **Alle Instrumente** angezeigt wird. Pruefen Sie vor dem Zusammenfassen der Daten, welche Marktdaten verfügbar sind. Wählen Sie den Pfad aus, in dem sich die Daten befinden, und pruefen Sie die Instrumente, die Sie zusammenfassen moechten. Wenn Luecken vorhanden sind, laden Sie die fehlenden Marktdaten herunter, zum Beispiel aus einer unterstuetzten Datenquelle.
+Wählen Sie dazu auf der Registerkarte **Allgemein** den Punkt **Instrumente**, sodass die Registerkarte **Alle Instrumente** angezeigt wird. Prüfen Sie vor dem Zusammenfassen der Daten, welche Marktdaten verfügbar sind. Wählen Sie den Pfad aus, in dem sich die Daten befinden, und prüfen Sie die Instrumente, die Sie zusammenfassen möchten. Wenn Lücken vorhanden sind, laden Sie die fehlenden Marktdaten herunter, zum Beispiel aus einer unterstützten Datenquelle.
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
 Als Beispiel betrachten wir das Zusammenfassen von E-mini S&P 500 Futures.
 
-1. Um einen fortlaufenden Futures-Kontrakt zu erstellen, klicken Sie auf der Registerkarte **All securities** auf die Schaltfläche **Create security \=\> Continuous security**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. Um einen fortlaufenden Futures-Kontrakt zu erstellen, klicken Sie auf der Registerkarte **Alle Instrumente** auf die Schaltfläche **Instrument erstellen \=\> Fortlaufendes Instrument**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
 
    Danach erscheint das folgende Fenster:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Um einen fortlaufenden Future zu erstellen, müssen Sie einen Namen angeben und Kontrakte hinzufügen.
@@ -17,7 +17,7 @@ Als Beispiel betrachten wir das Zusammenfassen von E-mini S&P 500 Futures.
    - Manuell durch Klicken auf die Schaltfläche ![hydra add](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - Wenn Sie die ersten beiden Buchstaben des Kontrakts als Namen festlegen, zum Beispiel RI, und auf die Schaltfläche **Auto** klicken, werden alle in der Datenbank gefundenen Instrumente hinzugefügt.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Wählen Sie die erforderlichen Kontrakte aus und legen Sie deren Uebergangsdaten fest. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
-4. Weisen Sie anschliessend die Instrumentkennung **ES\_continuous@CME** zu und klicken Sie auf die Schaltfläche **OK**. Danach wird ein neues Instrument erstellt.
+4. Weisen Sie anschließend die Instrumentkennung **ES\_continuous@CME** zu und klicken Sie auf die Schaltfläche **OK**. Danach wird ein neues Instrument erstellt.
 5. Klicken Sie danach auf der Registerkarte **Allgemein** auf die Schaltfläche [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das resultierende Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus** den Wert **Zusammengesetztes Element** und klicken Sie dann auf die Schaltfläche ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 Die erzeugten Daten können in die Formate Excel, XML, JSON oder TXT exportiert werden. Der Export erfolgt über die Dropdown-Liste.

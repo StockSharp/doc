@@ -8,15 +8,15 @@
 
 銘柄と接続を照合するには、次の手順を実行します。
 
-1. **Securities** タブに移動し、**Securities and Connections** ボタンをクリックします。![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. **銘柄** タブに移動し、**銘柄と接続** ボタンをクリックします。![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. 接続のリストで必要な接続を選択します。![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
 3. すべての列に入力します。
 
    例:
 
    APPLE 株式銘柄。
-   - Connection - **Interactive Brokers**。![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しい行が追加されます。 
-   - **Security** code 列と **Board code** 列に、銘柄コードとボードコードを指定します。**Security code in adapter** 列と **Board code in adapter** 列には、外部取引システムで指定されている銘柄コードとボードコードを指定します。**OK** をクリックします。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - 接続 - **Interactive Brokers**。![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しい行が追加されます。
+   - **銘柄コード** 列と **ボードコード** 列に、銘柄コードとボードコードを指定します。**アダプター内の銘柄コード** 列と **アダプター内のボードコード** 列には、外部取引システムで指定されている銘柄コードとボードコードを指定します。**OK** をクリックします。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
    - **Interactive Brokers** 接続と **CQG Continuum** 接続について、同じ方法で手順を繰り返します。
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

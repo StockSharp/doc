@@ -2,17 +2,17 @@
 
 Com o [Hydra](../../hydra.md), pode criar o seu próprio índice.
 
-No separador **Common**, selecione **Securities** para que apareça o separador **All Securities**.
+No separador **Comum**, selecione **Instrumentos** para que apareça o separador **Todos os instrumentos**.
 
-Antes de criar o **Index**, verifique que dados de mercado estão disponíveis. Selecione o caminho onde os dados estão armazenados e veja sequencialmente os instrumentos que devem participar no cálculo do índice. Se existirem lacunas, descarregue os dados de mercado necessários a partir de uma fonte de dados suportada.
+Antes de criar o **Índice**, verifique que dados de mercado estão disponíveis. Selecione o caminho onde os dados estão armazenados e veja sequencialmente os instrumentos que devem participar no cálculo do índice. Se existirem lacunas, descarregue os dados de mercado necessários a partir de uma fonte de dados suportada.
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
 Como exemplo, considere o índice de rácio de instrumentos AAPL@NYSE\/GOOG@NYSE.
 
-1. O primeiro passo é criar o **Index**. No separador **All Securities**, clique em **Create security \=\> Index** ![hydra index sec 00](../../../images/hydra_index_sec_00.png).
+1. O primeiro passo é criar o **Índice**. No separador **Todos os instrumentos**, clique em **Criar instrumento \=\> Índice** ![hydra index sec 00](../../../images/hydra_index_sec_00.png).
 2. Aparece a seguinte janela: ![hydra index sec](../../../images/hydra_index_sec.png)
-3. Para criar o instrumento **Index**, especifique um nome e adicione a fórmula matemática para uma combinação de vários instrumentos. Juntamente com os operadores matemáticos padrão, pode utilizar as seguintes funções:
+3. Para criar o instrumento **Índice**, especifique um nome e adicione a fórmula matemática para uma combinação de vários instrumentos. Juntamente com os operadores matemáticos padrão, pode utilizar as seguintes funções:
    - **abs(a)** - Devolve o valor absoluto de um número.
    - **acos(a)** - Devolve o ângulo cujo cosseno é igual ao número especificado.
    - **asin(a)** - Devolve o ângulo cujo seno é igual ao número especificado.
@@ -32,7 +32,7 @@ Como exemplo, considere o índice de rácio de instrumentos AAPL@NYSE\/GOOG@NYSE
    - **tan(a)** - Devolve a tangente do ângulo especificado.
    - **truncate(a)** - Calcula a parte inteira do número especificado.
 4. Introduza a operação matemática que será utilizada para calcular o índice. ![hydra index sec 01](../../../images/hydra_index_sec_01.png)
-5. Em seguida, clique em [Velas](../working_with_data/view_and_export/candles.md) no separador **Common**, selecione o instrumento **Index** criado e o período dos dados, defina **Composite Element** no campo **Create From:** e depois clique em ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
+5. Em seguida, clique em [Velas](../working_with_data/view_and_export/candles.md) no separador **Comum**, selecione o instrumento **Índice** criado e o período dos dados, defina **Elemento composto** no campo **Criar a partir de:** e depois clique em ![hydra find](../../../images/hydra_find.png). ![hydra index candle](../../../images/hydra_index_candle.png)
 
 Os dados gerados podem ser exportados para os formatos Excel, XML ou TXT. A exportação é feita através da lista pendente.
 

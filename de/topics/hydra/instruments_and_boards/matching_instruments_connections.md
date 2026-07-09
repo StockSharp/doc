@@ -8,15 +8,15 @@ Dies ist auch nuetzlich, wenn dasselbe Instrument auf verschiedenen Trading Boar
 
 Um Instrumente und Verbindungen zuzuordnen, gehen Sie wie folgt vor:
 
-1. Wechseln Sie zur Registerkarte **Securities** und klicken Sie auf die Schaltfläche **Securities and Connections**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. Wechseln Sie zur Registerkarte **Instrumente** und klicken Sie auf die Schaltfläche **Instrumente und Verbindungen**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. Wählen Sie in der Verbindungsliste die erforderliche Verbindung aus.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
 3. Fuellen Sie alle Spalten aus.
 
    Beispiel:
 
    APPLE-Aktieninstrument.
-   - Connection - **Interactive Brokers**. Klicken Sie auf die Schaltfläche ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), danach wird eine neue Zeile hinzugefügt.
-   - Geben Sie in den Spalten **Security** code und **Board code** den Instrumentcode und den Board-Code an. Geben Sie in den Spalten **Security code in adapter** und **Board code in adapter** den Instrumentcode und den Board-Code so an, wie sie im externen Handelssystem angegeben sind. Klicken Sie auf **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Verbindung - **Interactive Brokers**. Klicken Sie auf die Schaltfläche ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), danach wird eine neue Zeile hinzugefügt.
+   - Geben Sie in den Spalten **Instrumentcode** und **Handelsplatzcode** den Instrumentcode und den Board-Code an. Geben Sie in den Spalten **Instrumentcode im Adapter** und **Handelsplatzcode im Adapter** den Instrumentcode und den Board-Code so an, wie sie im externen Handelssystem angegeben sind. Klicken Sie auf **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
    - Wiederholen Sie die Schritte für die Verbindungen **Interactive Brokers** und **CQG Continuum** auf die gleiche Weise.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

@@ -8,7 +8,7 @@ Para ello, en la pestaña **Común** seleccione **Instrumentos** para que aparez
 
 Como ejemplo, consideremos la combinación de futuros E-mini S&P 500.
 
-1. Para crear un contrato de futuros continuo, haga clic en el botón **Create security \=\> Continuous security** en la pestaña **All securities**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. Para crear un contrato de futuros continuo, haga clic en el botón **Crear instrumento \=\> Instrumento continuo** en la pestaña **Todos los instrumentos**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
 
    Después aparecerá la siguiente ventana:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Para crear un futuro continuo, debe especificar un nombre y añadir contratos.
@@ -17,7 +17,7 @@ Como ejemplo, consideremos la combinación de futuros E-mini S&P 500.
    - Manualmente, haciendo clic en el botón ![hydra add](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - Si establece como nombre las dos primeras letras del contrato, por ejemplo RI, y hace clic en el botón **Auto**, se añadirán todos los instrumentos encontrados en la base de datos.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Seleccione los contratos necesarios y establezca sus fechas de transición. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
-4. Después, asigne el identificador de instrumento **ES\_continuous@CME** y haga clic en el botón **OK**; se creará un nuevo instrumento.
+4. Después, asigne el identificador de instrumento **ES\_continuous@CME** y haga clic en el botón **Aceptar**; se creará un nuevo instrumento.
 5. Luego haga clic en el botón [Velas](../working_with_data/view_and_export/candles.md) en la pestaña **Común**, seleccione el instrumento resultante y el período de datos, establezca el valor **Elemento compuesto** en el campo **Construir desde** y haga clic en el botón ![hydra find](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 Los datos generados se pueden exportar a formatos Excel, XML, JSON o TXT. La exportación se realiza mediante la lista desplegable.

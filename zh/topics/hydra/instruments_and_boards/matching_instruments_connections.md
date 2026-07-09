@@ -8,7 +8,7 @@
 
 要匹配交易品种与连接，请执行以下操作：
 
-1. 进入 **Securities** 选项卡，然后单击 **Securities and Connections** 按钮。![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. 进入 **交易品种** 选项卡，然后单击 **交易品种和连接** 按钮。![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. 在连接列表中选择所需的连接。![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
 3. 填写所有列。
 
@@ -16,7 +16,7 @@
 
    以 APPLE 股票为例。
    - 连接选择 **Interactive Brokers**。单击 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮，随后将添加一行。
-   - 在 **Security code** 和 **Board code** 列中指定交易品种代码和交易板块代码。在 **Security code in adapter** 和 **Board code in adapter** 列中，按照外部交易系统中的定义填写交易品种代码和交易板块代码。单击 **OK**。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - 在 **交易品种代码** 和 **交易板块代码** 列中指定交易品种代码和交易板块代码。在 **适配器中的交易品种代码** 和 **适配器中的交易板块代码** 列中，按照外部交易系统中的定义填写交易品种代码和交易板块代码。单击 **确定**。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
    - 以相同方式为 **Interactive Brokers** 和 **CQG Continuum** 连接重复上述步骤。
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

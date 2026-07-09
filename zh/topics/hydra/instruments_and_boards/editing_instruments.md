@@ -2,7 +2,7 @@
 
 要编辑交易品种（例如，创建交易品种时未填写全部必需数据），请双击该交易品种，或单击 ![hydra edit](../../../images/hydra_edit.png) 按钮，打开用于进行必要修改的窗口：
 
-进入 **Securities** 窗口。
+进入 **交易品种** 窗口。
 
 ![hydra security edit 00](../../../images/hydra_security_edit_00.png)
 

@@ -8,7 +8,7 @@ Esto también es útil al negociar el mismo instrumento en distintos mercados o 
 
 Para asociar instrumentos y conexiones, debe:
 
-1. Ir a la pestaña **Securities** y hacer clic en el botón **Securities and Connections**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. Vaya a la pestaña **Instrumentos** y hacer clic en el botón **Instrumentos y conexiones**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. En la lista de conexiones, seleccionar la conexión necesaria.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
 3. Rellenar todas las columnas.
 
@@ -16,7 +16,7 @@ Para asociar instrumentos y conexiones, debe:
 
    Instrumento de acciones APPLE.
    - Conexión - **Interactive Brokers**. Haga clic en el botón ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), después de lo cual se añadirá una nueva línea.
-   - En las columnas **Security** code y **Board code**, especifique el código del instrumento y el código del mercado. En las columnas **Security code in adapter** y **Board code in adapter**, especifique el código del instrumento y el código del mercado tal como están especificados en el sistema de negociación externo. Haga clic en **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - En las columnas **Código de instrumento** y **Código de mercado**, especifique el código del instrumento y el código del mercado. En las columnas **Código de instrumento en el adaptador** y **Código de mercado en el adaptador**, especifique el código del instrumento y el código del mercado tal como están especificados en el sistema de negociación externo. Haga clic en **Aceptar** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
    - Repita los pasos para las conexiones **Interactive Brokers** y **CQG Continuum** de la misma forma.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

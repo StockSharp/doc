@@ -4,15 +4,15 @@ Con [Hydra](../../hydra.md), puede crear su propio índice.
 
 En la pestaña **Común**, seleccione **Instrumentos** para que aparezca la pestaña **Todos los instrumentos**.
 
-Antes de crear el **Index**, compruebe qué datos de mercado están disponibles. Seleccione la ruta donde se almacenan los datos y revise secuencialmente los instrumentos que deben participar en el cálculo del índice. Si hay huecos, descargue los datos de mercado necesarios desde una fuente de datos compatible.
+Antes de crear el **Índice**, compruebe qué datos de mercado están disponibles. Seleccione la ruta donde se almacenan los datos y revise secuencialmente los instrumentos que deben participar en el cálculo del índice. Si hay huecos, descargue los datos de mercado necesarios desde una fuente de datos compatible.
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
 Como ejemplo, consideremos el índice de relación de instrumentos AAPL@NYSE\/GOOG@NYSE.
 
-1. El primer paso es crear el **Index**. En la pestaña **All Securities**, haga clic en **Create security \=\> Index** ![hydra index sec 00](../../../images/hydra_index_sec_00.png).
+1. El primer paso es crear el **Índice**. En la pestaña **Todos los instrumentos**, haga clic en **Crear instrumento \=\> Índice** ![hydra index sec 00](../../../images/hydra_index_sec_00.png).
 2. Aparecerá la siguiente ventana: ![hydra index sec](../../../images/hydra_index_sec.png)
-3. Para crear el instrumento **Index**, especifique un nombre y añada la fórmula matemática para una combinación de varios instrumentos. Junto con los operadores matemáticos estándar, puede usar las siguientes funciones:
+3. Para crear el instrumento **Índice**, especifique un nombre y añada la fórmula matemática para una combinación de varios instrumentos. Junto con los operadores matemáticos estándar, puede usar las siguientes funciones:
    - **abs(a)** - devuelve el valor absoluto de un número.
    - **acos(a)** - devuelve el ángulo cuyo coseno es igual al número especificado.
    - **asin(a)** - devuelve el ángulo cuyo seno es igual al número especificado.
