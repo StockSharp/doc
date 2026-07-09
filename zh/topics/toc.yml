@@ -2123,7 +2123,7 @@
       href: api/strategies/unit_type.md
     - name: 报价算法
       href: api/strategies/quoting.md
-    - name: 操作证券
+    - name: 工作交易品种
       href: api/strategies/working_securities.md
     - name: 策略概览
       href: api/strategies/strategies.md

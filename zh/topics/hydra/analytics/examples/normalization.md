@@ -38,7 +38,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// 对证券收盘价归一化并显示在同一图表上的分析脚本。
+	/// 对交易品种收盘价归一化并显示在同一图表上的分析脚本。
 	/// </summary>
 	public class NormalizePriceScript : IAnalyticsScript
 	{
@@ -102,7 +102,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# 对证券收盘价归一化并显示在同一图表上的分析脚本。
+# 对交易品种收盘价归一化并显示在同一图表上的分析脚本。
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:

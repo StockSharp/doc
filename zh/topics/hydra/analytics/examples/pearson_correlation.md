@@ -50,7 +50,7 @@ namespace StockSharp.Algo.Analytics
 	using MathNet.Numerics.Statistics;
 
 	/// <summary>
-	/// 计算指定证券 Pearson 相关性的分析脚本。
+	/// 计算指定交易品种 Pearson 相关性的分析脚本。
 	/// </summary>
 	public class PearsonCorrelationScript : IAnalyticsScript
 	{
@@ -132,7 +132,7 @@ from numpy_extensions import nx
 clr.AddReference("NumpyDotNet")
 from NumpyDotNet import np
 
-# 计算指定证券 Pearson 相关性的分析脚本。
+# 计算指定交易品种 Pearson 相关性的分析脚本。
 class pearson_correlation_script(IAnalyticsScript):
 	def Run(
 		self,

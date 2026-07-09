@@ -1,12 +1,12 @@
-# 交易品种运作
+# 工作交易品种
 
 ## 描述
 
-基类 `Strategy` 中的 `GetWorkingSecurities()` 方法用于获取策略在操作中使用的工具和数据类型列表。当使用 [Designer](../../designer.md) 时，该方法起着重要作用。
+基类 `Strategy` 中的 `GetWorkingSecurities()` 方法用于获取策略运行时使用的交易品种和数据类型列表。当使用 [Designer](../../designer.md) 时，该方法起着重要作用。
 
 ## 目的
 
-该方法的主要目的是向 Designer 提供有关策略工作所需的工具和数据类型的信息。这使得 Designer 能够：
+该方法的主要目的是向 Designer 提供有关策略工作所需的交易品种和数据类型的信息。这使得 Designer 能够：
 
 1. 在开始测试之前，检查存储中必要历史数据的可用性
 2. 在可用时自动加载所需数据
