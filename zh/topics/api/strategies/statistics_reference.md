@@ -48,7 +48,7 @@
 
 它们支持以下设置：
 
-- **无风险利率** -- 年化无风险利率 (e.g., `0.03m` = 3%)
+- **无风险利率** -- 年化无风险利率 (例如， `0.03m` = 3%)
 - **期间** -- 返回计算期间（默认 `TimeSpan.FromDays(1)`）
 
 [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) 和 [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) 依赖于其他参数 (`NetProfitParameter`, `MaxDrawdownParameter`, `AverageDrawdownParameter`)，并且在通过 [StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry) 创建时会自动关联。

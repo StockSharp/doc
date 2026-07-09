@@ -69,7 +69,7 @@ El Mass Index se interpreta de la siguiente manera:
 
 3. **Dirección de tendencia**:
    - El índice de masa no indica la dirección de la tendencia ni su reversión.
-   - Se necesitan indicadores o métodos de análisis adicionales para determinar la dirección (e.g., promedios móviles o niveles support/resistance)
+   - Se necesitan indicadores o métodos de análisis adicionales para determinar la dirección (por ejemplo, promedios móviles o niveles de soporte/resistencia)
 
 4. **Divergencias**:
    - Divergencias entre el precio y el índice de masa son menos significativos que el patrón de "joroba de inversión"

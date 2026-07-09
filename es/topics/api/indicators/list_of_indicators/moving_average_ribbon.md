@@ -8,7 +8,7 @@ Para utilizar el indicador, debe utilizar la clase [MovingAverageRibbon](xref:St
 
 El Moving Average Ribbon (MAR) es un conjunto de múltiples promedios móviles que se muestran en un gráfico en forma de "cinta" o "abanico". Este indicador ayuda a los operadores a visualizar el estado de la tendencia actual y su fuerza de manera más intuitiva que usar uno o dos promedios móviles.
 
-MAR incluye varias medias móviles (normalmente de 5 a 10) con períodos progresivamente crecientes. El intervalo entre periodos puede ser uniforme (e.g., 10, 20, 30, 40...) o exponencial (e.g., 5, 10, 20, 40...).
+MAR incluye varias medias móviles (normalmente de 5 a 10) con períodos progresivamente crecientes. El intervalo entre periodos puede ser uniforme (por ejemplo, 10, 20, 30, 40...) o exponencial (por ejemplo, 5, 10, 20, 40...).
 
 La idea principal es que el posicionamiento mutuo y la forma de estos promedios móviles pueden proporcionar información valiosa sobre el estado y la fuerza de la tendencia actual y ayudar a identificar posibles puntos de reversión.
 

@@ -1,6 +1,6 @@
 # Ichimoku
 
-**Ichimoku** es un indicador representado por una combinación de cinco líneas, tres de las cuales son medias móviles y dos son derivadas de estas. Ichimoku identifica la presencia de una tendencia, así como también indica zonas support/resistance y retrocesos de tendencia.
+**Ichimoku** es un indicador representado por una combinación de cinco líneas, tres de las cuales son medias móviles y dos son derivadas de estas. Ichimoku identifica la presencia de una tendencia y también indica zonas de soporte/resistencia y retrocesos de tendencia.
 
 Para utilizar el indicador, se debe utilizar la clase [Ichimoku](xref:StockSharp.Algo.Indicators.Ichimoku).
 ##### Descripción del indicador Ichimoku

@@ -92,7 +92,7 @@ subscription
 // ------------- 配置图表 -------------
 let area = this.CreateChartArea()
 
-// area can be null in case there is no GUI (e.g., Runner or console app)
+// 如果没有 GUI，area 可以为 null（例如 Runner 或控制台应用）
 if not (isNull area) then
 	// 绘制K线
 	this.DrawCandles(area, subscription) |> ignore

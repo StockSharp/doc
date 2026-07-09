@@ -74,10 +74,10 @@ public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 ```
 
 可用的测量类型：
-- `IndicatorMeasures.Price` - 指标衡量价格（e.g., 移动平均线）
-- `IndicatorMeasures.Percent` - 指标使用从 0 到 100 的百分比刻度 (e.g., RSI)
+- `IndicatorMeasures.Price` - 指标衡量价格（例如， 移动平均线）
+- `IndicatorMeasures.Percent` - 指标使用从 0 到 100 的百分比刻度 (例如， RSI)
 - `IndicatorMeasures.MinusOnePlusOne` - 指标使用从 -1 到 +1 的刻度
-- `IndicatorMeasures.Volume` - 指标用于测量交易量 (e.g., OBV)
+- `IndicatorMeasures.Volume` - 指标用于测量交易量 (例如， OBV)
 
 该属性对于在图表上正确显示指标至关重要。当在同一面板上叠加具有不同维度的多个指标时，会为具有不同 `Measure` 类型的指标创建独立的 Y 轴。这可以让所有指标以其自然的比例进行可视化显示，即使一个指标的数值以千为单位（e.g，价格），而另一个指标以单位的小数部分为单位（e.g，振荡器）。
 

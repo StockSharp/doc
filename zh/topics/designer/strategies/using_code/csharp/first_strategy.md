@@ -68,7 +68,7 @@ subscription
 ```cs
 var area = CreateChartArea();
 
-// area can be null in case of no GUI (strategy hosted in Runner or in own console app)
+// 如果没有 GUI，area 可以为 null（策略运行在 Runner 或自己的控制台应用中）
 if (area != null)
 {
 	DrawCandles(area, subscription);

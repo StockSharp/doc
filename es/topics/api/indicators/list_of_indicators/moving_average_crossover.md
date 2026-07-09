@@ -67,15 +67,15 @@ El indicador Moving Average Crossover se puede interpretar de la siguiente maner
 
 4. **False Signals**:
    - Durante los períodos de consolidación lateral, MAC puede generar múltiples señales falsas debido a frecuentes cruces de medias móviles
-   - A menudo se utilizan indicadores o reglas adicionales para filtrar señales falsas (e.g., lo que requiere que el precio sea por encima/por debajo en ambas medias móviles).
+   - A menudo se utilizan indicadores o reglas adicionales para filtrar señales falsas (por ejemplo, lo que requiere que el precio sea por encima/por debajo en ambas medias móviles).
 
 5. **Combinando con otros indicadores**:
    - MAC se utiliza a menudo en combinación con indicadores de impulso (RSI, estocástico) para confirmar señales
    - También se puede combinar con indicadores de tendencia y volatilidad para crear sistemas de trading más completos.
 
 6. **Parameter Selection**:
-   - Los períodos más cortos (e.g., 5 y 20) son más sensibles y adecuados para operaciones a corto plazo.
-   - Los períodos más largos (e.g., 50 y 200) son menos sensibles y adecuados para operaciones a largo plazo.
+   - Los períodos más cortos (por ejemplo, 5 y 20) son más sensibles y adecuados para operaciones a corto plazo.
+   - Los períodos más largos (por ejemplo, 50 y 200) son menos sensibles y adecuados para operaciones a largo plazo.
 
 ![indicator_moving_average_crossover](../../../../images/indicator_moving_average_crossover.png)
 

@@ -51,7 +51,7 @@ For first calculation: MGD = SMA(Price, Length)
    - 由于其自适应特性，这些交叉通常比传统移动平均线形成得更早
 
 3. **多次MGD交叉**:
-   - 可以使用不同周期的多个MGD（e.g., MGD(14)和MGD(30)）
+   - 可以使用不同周期的多个MGD（例如， MGD(14)和MGD(30)）
    - 短期MGD自下而上穿越长期MGD可以被视为看涨趋势确认
    - 从上到下短期MGD穿过长期MGD可以被视为看跌趋势确认
 
@@ -69,8 +69,8 @@ For first calculation: MGD = SMA(Price, Length)
    - 可以作为其他交易系统的趋势过滤器
 
 7. **长度参数选择**：
-   - 较小的长度值（e.g., 8-12）使MGD对价格变化更敏感，适合短期交易
-   - 更大的长度值（e.g., 20-50）使MGD更平滑，更适合长期交易
+   - 较小的长度值（例如， 8-12）使MGD对价格变化更敏感，适合短期交易
+   - 更大的长度值（例如， 20-50）使MGD更平滑，更适合长期交易
 
 ![indicator_mcginley_dynamic](../../../../images/indicator_mcginley_dynamic.png)
 

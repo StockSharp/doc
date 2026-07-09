@@ -79,7 +79,7 @@ protected override void OnStarted2(DateTime time)
    // Indicators.Add(bollingerBands); - incorrect
    ```
 
-3. **组合指标** - 对于使用多个独立指标的指标（e.g., MACD），将它们全部相加：
+3. **组合指标** - 对于使用多个独立指标的指标（例如， MACD），将它们全部相加：
 
    ```cs
    var fastEma = new ExponentialMovingAverage { Length = 12 };

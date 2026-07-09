@@ -60,8 +60,8 @@ El Psychological Line se puede interpretar de la siguiente manera:
    - En una fuerte tendencia a la baja, PSY a menudo permanece por debajo de 50, con rebotes periódicos desde la zona de sobreventa.
 
 6. **Length Parameter Tuning**:
-   - Períodos más cortos (e.g., 5-8) hacen que PSY sea más sensible y adecuado para operaciones a corto plazo
-   - Períodos más largos (e.g., 20-25) hacen que PSY sea más fluido y adecuado para operaciones a largo plazo
+   - Períodos más cortos (por ejemplo, 5-8) hacen que PSY sea más sensible y adecuado para operaciones a corto plazo
+   - Períodos más largos (por ejemplo, 20-25) hacen que PSY sea más fluido y adecuado para operaciones a largo plazo
 
 7. **Combinando con otros indicadores**:
    - PSY se utiliza a menudo en combinación con otros indicadores para confirmar señales

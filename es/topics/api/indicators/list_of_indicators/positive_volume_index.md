@@ -67,7 +67,7 @@ El Positive Volume Index se puede interpretar de la siguiente manera:
    - Las señales PVI se vuelven más confiables cuando son confirmadas por otros indicadores
 
 7. **Setting Thresholds**:
-   - Algunos operadores establecen niveles de umbral para PVI (e.g., 5% por encima o por debajo de la media móvil)
+   - Algunos operadores establecen niveles de umbral para PVI (por ejemplo, 5% por encima o por debajo de la media móvil)
    - Cruzar estos umbrales puede considerarse una señal más fuerte que los simples cruces.
 
 ![indicator_positive_volume_index](../../../../images/indicator_positive_volume_index.png)

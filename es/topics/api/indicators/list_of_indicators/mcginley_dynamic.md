@@ -51,7 +51,7 @@ McGinley Dynamic se puede interpretar de manera similar a otras medias móviles,
    - Debido a su naturaleza adaptativa, estos cruces suelen formarse antes que con las medias móviles tradicionales.
 
 3. **Múltiples cruces MGD**:
-   - Se pueden utilizar múltiples MGD con diferentes períodos (e.g., MGD(14) y MGD(30))
+   - Se pueden utilizar múltiples MGD con diferentes períodos (por ejemplo, MGD(14) y MGD(30))
    - MGD corto cruzando MGD largo de abajo hacia arriba puede verse como una confirmación de la tendencia alcista
    - MGD corto cruzando MGD largo de arriba a abajo puede verse como una confirmación de la tendencia bajista
 
@@ -69,8 +69,8 @@ McGinley Dynamic se puede interpretar de manera similar a otras medias móviles,
    - Puede utilizarse como filtro de tendencias para otros sistemas de trading.
 
 7. **Length Parameter Selection**:
-   - Los valores más pequeños de Length (e.g., 8-12) hacen que MGD sea más sensible a los cambios de precios y se adapta al comercio a corto plazo.
-   - Los valores Length más altos (e.g., 20-50) hacen que MGD sea más fluido y adecuado para el comercio a largo plazo.
+   - Los valores más pequeños de Length (por ejemplo, 8-12) hacen que MGD sea más sensible a los cambios de precios y se adapta al comercio a corto plazo.
+   - Los valores Length más altos (por ejemplo, 20-50) hacen que MGD sea más fluido y adecuado para el comercio a largo plazo.
 
 ![indicator_mcginley_dynamic](../../../../images/indicator_mcginley_dynamic.png)
 

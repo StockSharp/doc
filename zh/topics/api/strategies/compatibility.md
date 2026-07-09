@@ -85,12 +85,12 @@ protected override void OnStarted2(DateTime time)
 	
 	if (_chart != null)
 	{
-		// Chart is available (e.g., in Designer or Shell)
+		// 图表可用（例如在 Designer 或 Shell 中）
 		InitChart();
 	}
 	else
 	{
-		// Chart is unavailable (e.g., in Runner or cloud backtesting)
+		// 图表不可用（例如在 Runner 或云端回测中）
 		// 策略在没有可视化时仍继续运行
 	}
 }

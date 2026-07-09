@@ -74,12 +74,12 @@ public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 ```
 
 Tipos de medición disponibles:
-- `IndicatorMeasures.Price` - indicador mide el precio (e.g., medias móviles)
-- `IndicatorMeasures.Percent`: el indicador utiliza una escala porcentual de 0 a 100 (e.g., RSI)
+- `IndicatorMeasures.Price` - indicador mide el precio (por ejemplo, medias móviles)
+- `IndicatorMeasures.Percent`: el indicador utiliza una escala porcentual de 0 a 100 (por ejemplo, RSI)
 - `IndicatorMeasures.MinusOnePlusOne`: el indicador utiliza una escala de -1 a +1
-- `IndicatorMeasures.Volume` - indicador mide el volumen (e.g., OBV)
+- `IndicatorMeasures.Volume` - indicador mide el volumen (por ejemplo, OBV)
 
-Esta propiedad es de vital importancia para mostrar correctamente los indicadores en un gráfico. Cuando se superponen varios indicadores con diferentes dimensiones en el mismo panel, se crean ejes Y separados para indicadores con diferentes tipos `Measure`. Esto permite visualizar visualmente todos los indicadores en su escala natural, incluso si uno tiene valores en miles (e.g., precio), mientras que otro se mide en fracciones de unidad (e.g., oscilador).
+Esta propiedad es de vital importancia para mostrar correctamente los indicadores en un gráfico. Cuando se superponen varios indicadores con diferentes dimensiones en el mismo panel, se crean ejes Y separados para indicadores con diferentes tipos `Measure`. Esto permite visualizar visualmente todos los indicadores en su escala natural, incluso si uno tiene valores en miles (por ejemplo, precio), mientras que otro se mide en fracciones de unidad (por ejemplo, oscilador).
 
 ### Save y Load
 

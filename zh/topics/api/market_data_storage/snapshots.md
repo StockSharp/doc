@@ -11,7 +11,7 @@ StockSharp 中的快照是一种保存市场数据最新实际状态的机制。
 [ISnapshotStorage](xref:StockSharp.Algo.Storages.ISnapshotStorage) 接口定义了用于处理快照的基本契约。类型化版本 `ISnapshotStorage<TKey, TMessage>` 提供以下方法：
 
 - **Update(message)** -- 保存或更新快照。如果给定键的快照已存在，将会更新该快照。
-- **Get(key)** -- 通过键获取快照（e.g., 按工具标识符）。
+- **Get(key)** -- 通过键获取快照（例如， 按工具标识符）。
 - **GetAll(from, to)** -- 获取指定日期范围内的所有快照。
 - **Clear(key)** -- 删除特定键的快照。
 - **ClearAll()** -- 删除所有快照。

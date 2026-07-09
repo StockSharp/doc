@@ -77,8 +77,8 @@ On Balance Volume Mean se puede interpretar de la siguiente manera:
    - La consistencia de las señales de múltiples indicadores de volumen aumenta su confiabilidad.
 
 7. **Length Parameter Selection**:
-   - Períodos más cortos (e.g., 10-15) hacen que OBVM sea más sensible a cambios a corto plazo
-   - Períodos más largos (e.g., 30-50) identifican mejor las tendencias a largo plazo
+   - Períodos más cortos (por ejemplo, 10-15) hacen que OBVM sea más sensible a cambios a corto plazo
+   - Períodos más largos (por ejemplo, 30-50) identifican mejor las tendencias a largo plazo
    - El período óptimo depende del horizonte temporal de negociación y de las características específicas del instrumento.
 
 ![indicator_on_balance_volume_mean](../../../../images/indicator_on_balance_volume_mean.png)

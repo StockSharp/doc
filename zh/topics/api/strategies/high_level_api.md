@@ -74,13 +74,13 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 
 [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx(StockSharp.Algo.Indicators.IIndicator,System.Action{`0,StockSharp.Algo.Indicators.IIndicatorValue},System.Boolean)) 方法在以下情况下特别有用：
 
-- 使用返回布尔值的指标（e.g., [Fractals](xref:StockSharp.Algo.Indicators.Fractals)）
-- 访问指标值类型的附加属性（e.g.，[IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal)标志）
+- 使用返回布尔值的指标（例如， [Fractals](xref:StockSharp.Algo.Indicators.Fractals)）
+- 访问指标值类型的附加属性（例如，[IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal)标志）
 - 使用返回结构化数据的指标
 
 #### 使用复杂指标（IComplexIndicator）
 
-对于包含多个内部指标的复杂指标（e.g., [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)），API 提供了 `Bind` 和 `BindEx` 方法的特殊重载：
+对于包含多个内部指标的复杂指标（例如， [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands), [MACD](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence)），API 提供了 `Bind` 和 `BindEx` 方法的特殊重载：
 
 ```cs
 // 创建复杂指标
@@ -268,7 +268,7 @@ var mainArea = CreateChartArea();
 DrawCandles(mainArea, subscription);
 DrawIndicator(mainArea, sma);
 
-// Create a second area for separate indicators (e.g., RSI)
+// 为单独的指标创建第二个区域（例如 RSI）
 var secondArea = CreateChartArea();
 DrawIndicator(secondArea, rsi);
 ```
@@ -325,7 +325,7 @@ StockSharp 策略中的高级 API 提供以下优势：
 
 4. **降低错误概率** - 通过自动化常规任务可以消除许多典型错误
 
-5. **处理干净的数据类型** - 与其处理复杂对象，你可以操作简单的数据类型 (e.g., `decimal`)
+5. **处理干净的数据类型** - 与其处理复杂对象，你可以操作简单的数据类型 (例如， `decimal`)
 
 ## 使用高级 API 的示例策略
 
