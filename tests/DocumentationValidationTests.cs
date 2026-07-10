@@ -227,6 +227,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Usage",
 	};
 
+	private static readonly string[] _knownEnglishNotificationDataTypeLabels =
+	[
+		"Customer code",
+		"Client code",
+		"Server time",
+		"Data type",
+		"Visible volume",
+		"Message to order",
+		"Order expiration time",
+		"Execution condition",
+		"Trade initiator",
+		"Identifier (user)",
+	];
+
 	private static readonly HashSet<string> _cjkLanguageCodes = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"ja",
@@ -1204,6 +1218,43 @@ public sealed class DocumentationValidationTests : BaseTestClass
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English UI phrase '{phrase}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedNotificationDataTypeListsDoNotKeepEnglishLabels()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/graphical_user_interface/notification_settings_window.md",
+			"topics/terminal/notifications/notifications_setup.md",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var label in _knownEnglishNotificationDataTypeLabels)
+					{
+						if (!ContainsStandaloneText(text, label))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: notification data type list keeps English label '{label}'. Localize the label in the target language.");
 					}
 				}
 			}
@@ -2471,6 +2522,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeHumanText(string text)
 		=> Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static bool ContainsStandaloneText(string text, string value)
+		=> Regex.IsMatch(text, $@"(?<![A-Za-z]){Regex.Escape(value)}(?![A-Za-z])", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 	private static bool IsAllowedInvariantHeading(string relativePath, string heading)
 	{

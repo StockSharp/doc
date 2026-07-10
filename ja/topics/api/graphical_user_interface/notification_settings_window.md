@@ -4,7 +4,7 @@
 
 ![API GUI AlertWindow](../../../images/api_gui_alertwindow.png)
 
-次のデータ型の変更に関する通知を設定できます: Portfolio、Client code、Broker、Depository、Server time、Transaction、Data type、Cancel、Order ID、Order ID (string)、Order ID (platform)、Derivative、Derivative (string)、Price、Volume (order)、Volume (trade)、Visible volume、Direction、Balance、Order type、Status、Comment、Order message、System order、Order expiration time、Execution condition、Price、Trade initiator、Open interest、Error、Condition、Uptrend、Commission、Delay、Slippage、Identifier (user)、Currency、P\/L、Position、Market maker。
+次のデータ型の変更に関する通知を設定できます: ポートフォリオ、顧客コード、ブローカー、保管機関、サーバー時刻、トランザクション、データ型、キャンセル、注文 ID、注文 ID（文字列）、注文 ID（プラットフォーム）、デリバティブ、デリバティブ（文字列）、価格、数量（注文）、数量（取引）、表示数量、方向、残高、注文タイプ、状態、コメント、注文メッセージ、システム注文、注文有効期限、執行条件、価格、取引開始者、未決済建玉、エラー、条件、上昇トレンド、手数料、遅延、スリッページ、識別子（ユーザー）、通貨、P\/L、ポジション、マーケットメーカー。
 
 通知は次の形式にできます。
 

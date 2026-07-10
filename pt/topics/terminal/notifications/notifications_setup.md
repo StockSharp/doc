@@ -4,7 +4,7 @@ Para definir uma notificação, tem de clicar no botão ![Designer Creation tool
 
 ![Designer Configuração de notificações](../../../images/designer_notifications_setting.png)
 
-As notificações podem ser configuradas para alterações nos seguintes tipos de dados: Portfolio, Customer code, Broker, Depository, Server time, Trade, Data type, Cancellation, Order ID, Order ID (string), Order ID (board), Derivative, Derivative (string), Price, Volume (order), Volume (trade), Visible volume, Direction, Remainder, Order type, Status, Comment, Message to order, System order, Order expiration time, Execution condition, Order ID, Order ID (string), Price, Trade initiator, Open interest, Error, Condition, Uptrend, Commission, Delay, Slippage, ID (user), Currency, P\/L, Position, Market Maker.
+As notificações podem ser configuradas para alterações nos seguintes tipos de dados: carteira, código do cliente, corretor, depositário, hora do servidor, negócio, tipo de dados, cancelamento, ID da ordem, ID da ordem (string), ID da ordem (quadro), derivado, derivado (string), preço, volume (ordem), volume (negócio), volume visível, direção, remanescente, tipo de ordem, estado, comentário, mensagem da ordem, ordem do sistema, hora de expiração da ordem, condição de execução, ID da ordem, ID da ordem (string), preço, iniciador do negócio, interesse aberto, erro, condição, tendência de alta, comissão, atraso, derrapagem, ID (utilizador), moeda, P\/L, posição, formador de mercado.
 
 As notificações podem ter as seguintes formas:
 
