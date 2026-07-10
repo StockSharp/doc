@@ -7,11 +7,11 @@ Configuración principal:
 - **clave** y **secreto**.
 - **Cuenta Starknet** y **Clave Starknet**.
 - **Section**: `Spot` o `Derivatives`.
-- **Enable spot**: habilita la sección spot cuando el soporte de la API está disponible.
+- **Habilitar spot**: habilita la sección spot cuando el soporte de la API está disponible.
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
-- **Auth path** (valor predeterminado: `/v1/auth`).
+- **Ruta de autenticación** (valor predeterminado: `/v1/auth`).
 
 Documentación oficial de la API:
 

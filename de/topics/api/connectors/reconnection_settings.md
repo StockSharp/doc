@@ -10,7 +10,7 @@ Alle Connectoren bieten die Möglichkeit, eine Wiederverbindung für den Fall ei
 - **Initially** - Die Anzahl der Versuche, die erste Verbindung herzustellen, wenn sie nicht hergestellt wurde (Timeout, Netzwerkfehler usw.).
 - **Reconnection** - Die Anzahl der Versuche, die Verbindung erneut herzustellen, wenn sie während des Betriebs getrennt wurde.
 - **Timeout** - Timeout für eine erfolgreiche Verbindung/Trennung.
-- **Operating mode** - Der Betriebsmodus, während dessen Verbindungsversuche ausgeführt werden sollen.
+- **Betriebsmodus** - Der Betriebsmodus, während dessen Verbindungsversuche ausgeführt werden sollen.
 
 ## Wiederverbindung im Code konfigurieren
 

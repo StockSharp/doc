@@ -9,11 +9,11 @@
 - **Starknet account** - значение заголовка Starknet account.
 - **Starknet key** - приватный ключ Starknet для подписи.
 - **Section** - торговая секция (`Spot` или `Derivatives`).
-- **Enable spot** - включает секцию spot.
+- **Включить спот** - включает секцию spot.
 - **Demo** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
 - **Spot WS / Derivatives WS** - websocket адреса.
-- **Auth path** - путь auth endpoint.
+- **Путь аутентификации** - путь auth endpoint.
 
 ## См. также
 

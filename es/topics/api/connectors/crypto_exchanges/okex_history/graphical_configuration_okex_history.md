@@ -4,4 +4,4 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![Configuración de API GUI OKEx History](../../../../../images/api_gui_settings_okex_history.png)
 
-- **Check dates** - Validar las fechas solicitadas antes de enviar solicitudes de descarga.
+- **Comprobar fechas** - Validar las fechas solicitadas antes de enviar solicitudes de descarga.

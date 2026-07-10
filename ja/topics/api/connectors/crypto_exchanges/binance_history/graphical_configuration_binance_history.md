@@ -4,4 +4,4 @@
 
 ![Binance History API GUI 設定](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Check dates** - ダウンロード要求を送信する前に、要求された日付を検証します。
+- **日付を確認** - ダウンロード要求を送信する前に、要求された日付を検証します。

@@ -13,8 +13,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Securities** - Datei mit Wertpapieren.
 - **Delay** - Instrumente verzögert laden.
 - **Active** - Nur aktive Instrumente.
-- **Group ID** - Group ID.
-- **Time zone** - Informationen zur Zeitzone, in der sich die Börse befindet.
+- **Gruppen-ID** - Gruppen-ID.
+- **Zeitzone** - Informationen zur Zeitzone, in der sich die Börse befindet.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

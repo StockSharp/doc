@@ -4,4 +4,4 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI OKEx History](../../../../../images/api_gui_settings_okex_history.png)
 
-- **Check dates** - validar as datas solicitadas antes de enviar pedidos de transferência.
+- **Verificar datas** - validar as datas solicitadas antes de enviar pedidos de transferência.

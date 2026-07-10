@@ -7,7 +7,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **usuario** - Login.
 - **contraseña** - Password.
 - **dirección** - Dirección del servidor.
-- **Software ID** - ID de software único.
+- **ID de software** - ID de software único.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

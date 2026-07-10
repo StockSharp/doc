@@ -9,7 +9,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Marktdaten** - Adresse des Marktdatenservers.
 - **History** - Adresse des Servers für historische Daten.
 - **Transactions** - Serveradresse für die Ausführung von Transaktionen.
-- **Path to logs** - Pfad zum Verzeichnis, in dem die Datei BWOrders.Log erstellt wird.
+- **Pfad zu Logs** - Pfad zum Verzeichnis, in dem die Datei BWOrders.Log erstellt wird.
 - **Override** - DLL-Datei aus Ressourcen überschreiben. Standardmäßig aktiviert.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

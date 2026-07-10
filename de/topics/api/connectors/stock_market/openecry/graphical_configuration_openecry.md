@@ -7,7 +7,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Adresse** - Serveradresse.
 - **Benutzername** - Login.
 - **Passwort** - Password.
-- **Work schedule** - Erforderlicher Modus für die Verbindung zum Terminal.
+- **Arbeitszeitplan** - Erforderlicher Modus für die Verbindung zum Terminal.
 - **Reconnection** - Nativen Wiederverbindungsmechanismus verwenden.
 - **Protokollierungsstufe** - Protokollierung der OpenECry API verwenden.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.

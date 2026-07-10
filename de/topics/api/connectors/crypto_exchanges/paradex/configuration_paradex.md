@@ -7,11 +7,11 @@ Wichtige Einstellungen:
 - **Schlüssel** und **Geheimnis**.
 - **Starknet-Konto** und **Starknet-Schlüssel**.
 - **Section**: `Spot` oder `Derivatives`.
-- **Enable spot**: aktiviert den Spot-Bereich, wenn die API-Unterstützung verfügbar ist.
+- **Spot aktivieren**: aktiviert den Spot-Bereich, wenn die API-Unterstützung verfügbar ist.
 - **Demo**-Modus.
 - **Spot REST / Derivatives REST**-Endpunkte.
 - **Spot WS / Derivatives WS**-Endpunkte.
-- **Auth path** (Standard: `/v1/auth`).
+- **Authentifizierungspfad** (Standard: `/v1/auth`).
 
 Offizielle API-Dokumentation:
 

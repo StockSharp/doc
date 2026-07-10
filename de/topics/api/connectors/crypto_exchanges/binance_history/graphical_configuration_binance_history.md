@@ -4,4 +4,4 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API-GUI-Einstellungen Binance History](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Check dates** - Überprüft angeforderte Daten, bevor Download-Anfragen gesendet werden.
+- **Datumsangaben prüfen** - Überprüft angeforderte Daten, bevor Download-Anfragen gesendet werden.

@@ -114,10 +114,26 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Ctrl + Left Mouse Button",
 		"Ctrl + Right Mouse Button",
 		"Dates format",
+		"Auth path",
+		"Check dates",
+		"Check revocation",
+		"Enable spot",
 		"File -> Allow Remoting",
+		"File log",
 		"File → New Solution",
 		"File → New → Project",
+		"Group ID",
+		"Host name",
+		"Log (address)",
+		"Market data fields",
 		".NET / .NET Core → Console Application",
+		"Operating mode",
+		"Path to logs",
+		"Point (admin)",
+		"Point (data)",
+		"Point (history)",
+		"Point (positions)",
+		"Point (transactions)",
 		"Manage NuGet Packages",
 		"More info",
 		"Open debug launch profiles UI",
@@ -125,11 +141,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Remote mode",
 		"Run anyway",
 		"send command",
+		"Server type",
+		"Settings file",
 		"Settings → Build, Execution, Deployment → NuGet → Sources",
 		"Solution Explorer",
+		"Software ID",
 		"Target Framework",
+		"Time zone",
 		"Tools → Options → NuGet Package Manager → Package Sources",
 		"User name (hist)",
+		"Validate remote",
+		"Verification code",
+		"Work schedule",
 		"WPF Application",
 	];
 
@@ -1120,7 +1143,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 

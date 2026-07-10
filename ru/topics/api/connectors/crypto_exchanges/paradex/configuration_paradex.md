@@ -7,11 +7,11 @@
 - **Key** и **Secret**.
 - **Starknet account** и **Starknet key**.
 - **Section**: `Spot` или `Derivatives`.
-- **Enable spot**: включает секцию spot, если она поддерживается API.
+- **Включить спот**: включает секцию spot, если она поддерживается API.
 - режим **Demo**.
 - адреса **Spot REST / Derivatives REST**.
 - адреса **Spot WS / Derivatives WS**.
-- **Auth path** (по умолчанию: `/v1/auth`).
+- **Путь аутентификации** (по умолчанию: `/v1/auth`).
 
 Официальная документация API:
 

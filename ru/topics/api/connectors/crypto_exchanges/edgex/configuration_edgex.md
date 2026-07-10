@@ -7,7 +7,7 @@
 - **Key** и **Secret**.
 - **Clearing account** и **Passphrase**.
 - **Section**: `Spot` или `Derivatives`.
-- **Enable spot**: включает секцию spot, если она поддерживается API.
+- **Включить спот**: включает секцию spot, если она поддерживается API.
 - режим **Demo**.
 - адреса **Spot REST / Derivatives REST**.
 - адреса **Spot WS / Derivatives public WS / Derivatives private WS**.

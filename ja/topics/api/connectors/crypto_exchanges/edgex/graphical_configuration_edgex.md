@@ -9,7 +9,7 @@
 - **清算口座** - 清算アカウントの値。
 - **パスフレーズ** - パスフレーズの値。
 - **Section** - 取引セクション（`Spot` または `Derivatives`）。
-- **Enable spot** - スポットセクションを有効にします。
+- **スポットを有効化** - スポットセクションを有効にします。
 - **Demo** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives public WS / Derivatives private WS** - websocket エンドポイント。

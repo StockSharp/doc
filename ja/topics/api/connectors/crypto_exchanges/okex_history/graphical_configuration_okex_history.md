@@ -4,4 +4,4 @@
 
 ![API GUI 設定 OKEx History](../../../../../images/api_gui_settings_okex_history.png)
 
-- **Check dates** - ダウンロード要求を送信する前に、要求された日付を検証します。
+- **日付を確認** - ダウンロード要求を送信する前に、要求された日付を検証します。

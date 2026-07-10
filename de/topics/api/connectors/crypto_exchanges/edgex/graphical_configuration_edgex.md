@@ -9,7 +9,7 @@ Wichtige Felder:
 - **Clearing-Konto** - Wert des Clearing-Kontos.
 - **Kennphrase** - Wert der Passphrase.
 - **Section** - Handelsbereich (`Spot` oder `Derivatives`).
-- **Enable spot** - aktiviert den Spot-Bereich.
+- **Spot aktivieren** - aktiviert den Spot-Bereich.
 - **Demo** - Modus der Demo-Umgebung.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives public WS / Derivatives private WS** - WebSocket-Endpunkte.

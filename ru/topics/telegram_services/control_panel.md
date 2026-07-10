@@ -24,7 +24,7 @@
 
   ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
 
-- В случае использования [Shell](../shell.md) вам необходимо перейти в панель **Remote Manager** и сделать настройки, аналогичные тем, что в [Designer](../designer.md).
+- В случае использования [Shell](../shell.md) вам необходимо перейти в панель **Удалённый менеджер** и сделать настройки, аналогичные тем, что в [Designer](../designer.md).
 - В случае использования [Hydra](../hydra.md) все действия делаются аналогично [Designer](../designer.md). Интеграция с [Hydra](../hydra.md) позволяет управлять скачиванием маркет-данных и отслеживать количественную статистику.
 
   ![TelegramHydra.png](../../images/telegramhydra.png)

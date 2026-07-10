@@ -9,11 +9,11 @@ Campos principais:
 - **Conta Starknet** - valor do cabeçalho da conta Starknet.
 - **Chave Starknet** - material da chave privada Starknet.
 - **Section** - secção de negociação (`Spot` ou `Derivatives`).
-- **Enable spot** - ativa a secção spot.
+- **Ativar spot** - ativa a secção spot.
 - **Demo** - modo de ambiente de demonstração.
 - **Spot REST / Derivatives REST** - endpoints REST.
 - **Spot WS / Derivatives WS** - endpoints websocket.
-- **Auth path** - caminho do endpoint de autenticação.
+- **Caminho de autenticação** - caminho do endpoint de autenticação.
 
 ## Conteúdo recomendado
 

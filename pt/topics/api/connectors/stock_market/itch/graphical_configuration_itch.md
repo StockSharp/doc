@@ -13,8 +13,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Securities** - Ficheiro com títulos.
 - **Delay** - Atrasar o carregamento de instrumentos.
 - **Active** - Apenas instrumentos ativos.
-- **Group ID** - ID do grupo.
-- **Time zone** - Informação sobre o fuso horário onde a bolsa está localizada.
+- **ID do grupo** - ID do grupo.
+- **Fuso horário** - Informação sobre o fuso horário onde a bolsa está localizada.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

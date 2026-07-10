@@ -7,7 +7,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.
 - **Demo** - Mit dem Demo-Handel statt mit dem echten Handelsserver verbinden.
-- **Verification code** - Verifizierungscode, den der Benutzer im Browser nach Bestätigung der Programmberechtigung erhält.
+- **Verifizierungscode** - Verifizierungscode, den der Benutzer im Browser nach Bestätigung der Programmberechtigung erhält.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

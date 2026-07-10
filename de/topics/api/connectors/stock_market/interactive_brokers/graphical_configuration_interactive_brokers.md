@@ -8,13 +8,13 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Identifier** - Eindeutige ID. Wird verwendet, wenn mehrere Clients mit einem Terminal oder Gateway verbunden sind.
 - **Echtzeit** - Legt fest, ob Echtzeitdaten oder auf dem Brokerserver eingefrorene Daten verwendet werden.
 - **Protokollierungsstufe** - Protokollierungsstufe für Servermeldungen.
-- **Market data fields** - Marktdatenfelder, die mit abonnierten Level1-Nachrichten empfangen werden.
+- **Marktdatenfelder** - Marktdatenfelder, die mit abonnierten Level1-Nachrichten empfangen werden.
 - **Protocol** - SSL-Protokoll zum Herstellen der Verbindung.
 - **Zertifikat** - SSL-Zertifikat.
 - **Passwort** - Passwort des SSL-Zertifikats.
-- **Check revocation** - Zertifikatsperrung prüfen.
-- **Validate remote** - Remote-Zertifikate validieren.
-- **Host name** - Name des Servers, der die SSL-Verbindung bereitstellt.
+- **Zertifikatsperrung prüfen** - Zertifikatsperrung prüfen.
+- **Remote-Zertifikate validieren** - Remote-Zertifikate validieren.
+- **Hostname** - Name des Servers, der die SSL-Verbindung bereitstellt.
 - **MaxVersion** - MaxVersion
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus für Einstellungen zur Überwachung von Verbindungen mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

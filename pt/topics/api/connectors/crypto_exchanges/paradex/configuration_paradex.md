@@ -7,11 +7,11 @@ Definições principais:
 - **chave** e **segredo**.
 - **Conta Starknet** e **Chave Starknet**.
 - **Section**: `Spot` ou `Derivatives`.
-- **Enable spot**: ativa a secção spot quando o suporte da API estiver disponível.
+- **Ativar spot**: ativa a secção spot quando o suporte da API estiver disponível.
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
-- **Auth path** (predefinição: `/v1/auth`).
+- **Caminho de autenticação** (predefinição: `/v1/auth`).
 
 Documentação oficial da API:
 

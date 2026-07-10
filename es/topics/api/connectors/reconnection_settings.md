@@ -10,7 +10,7 @@ Todos los conectores proporcionan la posibilidad de configurar la reconexión en
 - **Initially** - Número de intentos para establecer la conexión inicial si no se estableció (timeout, fallo de red, etc.). 
 - **Reconnection** - Número de intentos para reconectar si la conexión se interrumpió durante el funcionamiento. 
 - **Timeout** - Timeout para una conexión\/desconexión correcta. 
-- **Operating mode** - Modo de operación durante el cual deben realizarse los intentos de conexión.
+- **Modo de operación** - Modo de operación durante el cual deben realizarse los intentos de conexión.
 
 ## Configuración de reconexión en código
 

@@ -2,7 +2,7 @@
 
 [Shell](../shell.md) может запускать стратегии, созданные в [Designer](../designer.md) и выгруженные через [Экспорт стратегий](../designer/export_import/export.md).
 
-Для запуска стратегии, созданной в [Designer](../designer.md), необходимо выбрать ее на вкладке [Реал\-тайм](user_interface/real_time.md), нажать кнопку **Add Designer strategy** и в появившемся окне выбрать файл стратегии, экспортированной из [Designer](../designer.md).
+Для запуска стратегии, созданной в [Designer](../designer.md), необходимо выбрать ее на вкладке [Реал\-тайм](user_interface/real_time.md), нажать кнопку **Добавить стратегию Designer** и в появившемся окне выбрать файл стратегии, экспортированной из [Designer](../designer.md).
 
 ![Shell run Designer strategy 00](../../images/shell_run_designer_strategy_00.png)
 

@@ -9,7 +9,7 @@ Campos principais:
 - **conta de compensação** - valor da conta de compensação.
 - **frase-passe** - valor da frase-passe.
 - **Section** - secção de negociação (`Spot` ou `Derivatives`).
-- **Enable spot** - ativa a secção spot.
+- **Ativar spot** - ativa a secção spot.
 - **Demo** - modo de ambiente demo.
 - **Spot REST / Derivatives REST** - endpoints REST.
 - **Spot WS / Derivatives public WS / Derivatives private WS** - endpoints websocket.

@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Dialekt** - Dialekt des FAST-Protokolls. Muss als erster Parameter festgelegt werden. Nach der Auswahl enthält der nächste Parameter (**FAST-Einstellungen**) die angegebenen Dialekt-IP-Adressen.
 - **FAST-Einstellungen** - IP-Adressen und Ports des (im vorherigen Parameter ausgewählten) Dialekts. Sie können die folgende Option zum schnellen Laden der Einstellungen verwenden.
-- **Settings file** - Schnelle Option zum Laden der Dialekteinstellungen aus einer Börsenkonfigurationsdatei.
+- **Einstellungsdatei** - Schnelle Option zum Laden der Dialekteinstellungen aus einer Börsenkonfigurationsdatei.
 - **Benutzername** - Login (wird für TCP-Wiederherstellungsdienste verwendet).
 - **Passwort** - Passwort (wird für TCP-Wiederherstellungsdienste verwendet).
 

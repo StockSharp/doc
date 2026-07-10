@@ -7,7 +7,7 @@
 - **キー** と **シークレット**。
 - **清算口座** と **パスフレーズ**。
 - **Section**: `Spot` または `Derivatives`。
-- **Enable spot**: API サポートが利用可能な場合にスポットセクションを有効にします。
+- **スポットを有効化**: API サポートが利用可能な場合にスポットセクションを有効にします。
 - **Demo** モード。
 - **Spot REST / Derivatives REST** エンドポイント。
 - **Spot WS / Derivatives public WS / Derivatives private WS** エンドポイント。

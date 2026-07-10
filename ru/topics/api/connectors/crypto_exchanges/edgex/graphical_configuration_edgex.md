@@ -9,7 +9,7 @@
 - **Clearing account** - значение clearing account.
 - **Passphrase** - значение passphrase.
 - **Section** - торговая секция (`Spot` или `Derivatives`).
-- **Enable spot** - включает секцию spot.
+- **Включить спот** - включает секцию spot.
 - **Demo** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
 - **Spot WS / Derivatives public WS / Derivatives private WS** - websocket адреса.

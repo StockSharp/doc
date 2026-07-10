@@ -7,20 +7,20 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **nome de utilizador** - Login.
 - **palavra-passe** - Password.
 - **certificado** - Caminho para o ficheiro de certificado, necessário para ligar ao sistema Rithmic.
-- **File log** - Caminho para o ficheiro de registo.
-- **Server type** - Tipo de servidor.
-- **Point (admin)** - Ponto de ligação para funções administrativas (inicialização/desinicialização).
-- **Point (data)** - Ponto de ligação aos dados de mercado.
+- **Ficheiro de registo** - Caminho para o ficheiro de registo.
+- **Tipo de servidor** - Tipo de servidor.
+- **Ponto (administração)** - Ponto de ligação para funções administrativas (inicialização/desinicialização).
+- **Ponto (dados)** - Ponto de ligação aos dados de mercado.
 - **nome de utilizador (transações)** - Login adicional. Utilizado quando o envio de transações é efetuado para um servidor separado.
-- **Point (transactions)** - Ponto de ligação ao sistema de execução de transações.
+- **Ponto (transações)** - Ponto de ligação ao sistema de execução de transações.
 - **palavra-passe (transações)** - Password adicional. Utilizada quando o envio de transações é efetuado para um servidor separado.
-- **Point (positions)** - Ponto de ligação para acesso a informações sobre carteiras e posições.
-- **Point (history)** - Ponto de ligação para acesso a dados históricos.
+- **Ponto (posições)** - Ponto de ligação para acesso a informações sobre carteiras e posições.
+- **Ponto (histórico)** - Ponto de ligação para acesso a dados históricos.
 - **domínio (endereço)** - Endereço do domínio.
 - **domínio (nome)** - Nome do domínio.
 - **Licenses** - Endereço do servidor de licenças.
 - **Broker** - Endereço do corretor.
-- **Log (address)** - Endereço do logger.
+- **Log (endereço)** - Endereço do logger.
 - **Nome de utilizador (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
 - **palavra-passe (histórico)** - Password adicional. Password utilizada para autenticação com a history plant.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

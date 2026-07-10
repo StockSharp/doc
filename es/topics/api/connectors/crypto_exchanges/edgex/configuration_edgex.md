@@ -7,7 +7,7 @@ Configuración principal:
 - **clave** y **secreto**.
 - **cuenta de compensación** y **frase de acceso**.
 - **Section**: `Spot` o `Derivatives`.
-- **Enable spot**: habilita la sección spot cuando el soporte de la API está disponible.
+- **Habilitar spot**: habilita la sección spot cuando el soporte de la API está disponible.
 - Modo **Demo**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives public WS / Derivatives private WS**.

@@ -149,17 +149,17 @@ dotnet add package StockSharp.Localization.ru
 
 ### Через Visual Studio
 
-1. Правый клик на проекте → **Manage NuGet Packages...**
+1. Правый клик на проекте → **Управление пакетами NuGet...**
 2. В поиске введите `StockSharp`
-3. Выберите нужный пакет → **Install**
+3. Выберите нужный пакет → **Установить**
 
 Все зависимости установятся автоматически.
 
 ### Через JetBrains Rider
 
-1. Правый клик на проекте → **Manage NuGet Packages**
+1. Правый клик на проекте → **Управление пакетами NuGet**
 2. В поиске введите `StockSharp`
-3. Выберите пакет → **Install**
+3. Выберите пакет → **Установить**
 
 ### Через Package Manager Console (Visual Studio)
 
@@ -185,9 +185,9 @@ Install-Package StockSharp.Algo.Strategies
 dotnet nuget add source "https://nuget.stocksharp.com/{ВАШ_ТОКЕН}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** откройте **Tools → Options → NuGet Package Manager → Package Sources** и добавьте новый источник с адресом `https://nuget.stocksharp.com/{ВАШ_ТОКЕН}/v3/index.json`.
+**Visual Studio:** откройте **Сервис → Параметры → Диспетчер пакетов NuGet → Источники пакетов** и добавьте новый источник с адресом `https://nuget.stocksharp.com/{ВАШ_ТОКЕН}/v3/index.json`.
 
-**Rider:** откройте **Settings → Build, Execution, Deployment → NuGet → Sources** и добавьте источник.
+**Rider:** откройте **Настройки → Сборка, выполнение, развёртывание → NuGet → Источники** и добавьте источник.
 
 ### Способ 2: Аутентификация через логин и пароль
 
@@ -218,13 +218,13 @@ dotnet add package StockSharp.Algo
 
 ### Visual Studio
 
-1. **Manage NuGet Packages...** → вкладка **Updates**
-2. Выберите пакеты → **Update**
+1. **Управление пакетами NuGet...** → вкладка **Обновления**
+2. Выберите пакеты → **Обновить**
 
 ### Rider
 
-1. **Manage NuGet Packages** → вкладка **Upgrades**
-2. Выберите пакеты → **Upgrade**
+1. **Управление пакетами NuGet** → вкладка **Доступные обновления**
+2. Выберите пакеты → **Обновить**
 
 ## Типичные проблемы
 

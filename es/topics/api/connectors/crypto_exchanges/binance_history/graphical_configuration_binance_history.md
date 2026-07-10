@@ -4,4 +4,4 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![Configuración de API GUI Binance History](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Check dates** - Validar las fechas solicitadas antes de enviar las solicitudes de descarga.
+- **Comprobar fechas** - Validar las fechas solicitadas antes de enviar las solicitudes de descarga.

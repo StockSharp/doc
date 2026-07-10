@@ -7,11 +7,11 @@
 - **キー** と **シークレット**。
 - **Starknet アカウント** と **Starknet キー**。
 - **Section**: `Spot` または `Derivatives`。
-- **Enable spot**: API サポートが利用可能な場合に Spot セクションを有効にします。
+- **スポットを有効化**: API サポートが利用可能な場合に Spot セクションを有効にします。
 - **Demo** モード。
 - **Spot REST / Derivatives REST** エンドポイント。
 - **Spot WS / Derivatives WS** エンドポイント。
-- **Auth path** (デフォルト: `/v1/auth`)。
+- **認証パス** (デフォルト: `/v1/auth`)。
 
 公式 API ドキュメント:
 

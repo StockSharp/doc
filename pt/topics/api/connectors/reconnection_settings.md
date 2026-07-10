@@ -10,7 +10,7 @@ Todos os conectores disponibilizam a possibilidade de configurar a religação e
 - **Initially** - O número de tentativas para estabelecer a ligação inicial caso esta não tenha sido estabelecida (timeout, falha de rede, etc.). 
 - **Reconnection** - O número de tentativas para religar se a ligação tiver sido interrompida durante a operação. 
 - **Timeout** - Timeout para uma ligação\/desligação bem-sucedida. 
-- **Operating mode** - O modo de operação durante o qual as tentativas de ligação devem ser efetuadas.
+- **Modo de operação** - O modo de operação durante o qual as tentativas de ligação devem ser efetuadas.
 
 ## Definições de religação no código
 

@@ -7,7 +7,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **dirección** - Dirección del servidor.
 - **usuario** - Login.
 - **contraseña** - Password.
-- **Work schedule** - Modo requerido de conexión al terminal.
+- **Horario de trabajo** - Modo requerido de conexión al terminal.
 - **Reconnection** - Usar el mecanismo de reconexión «nativo».
 - **Nivel de registro** - Usar registro de OpenECry API.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
