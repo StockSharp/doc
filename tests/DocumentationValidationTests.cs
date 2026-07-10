@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -28,6 +29,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private const string DefaultLanguage = "en";
 	private const int MaxReportedErrors = 200;
 	private const string RussianSpecificPlaceholderMarker = "available only in the Russian version";
+	private const string LocalizedAuditReportEnvironmentVariable = "DOC_WRITE_LOCALIZED_AUDIT_REPORT";
+	private const string LocalizedAuditReportFileName = "LOCALIZED_AUDIT_REPORT.md";
 
 	private static readonly string _repoRoot = FindRepoRoot();
 
@@ -155,11 +158,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"error",
 		"exchange",
 		"exit",
+		"failed",
 		"found",
 		"greater",
 		"instrument",
 		"instruments",
 		"invalid",
+		"large",
 		"less",
 		"loaded",
 		"lost",
@@ -174,6 +179,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"price",
 		"profit",
 		"received",
+		"register",
+		"registration",
 		"registered",
 		"rule",
 		"search",
@@ -182,6 +189,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"spread",
 		"successfully",
 		"threshold",
+		"trade",
 		"transitioned",
 		"type",
 		"unsupported",
@@ -194,6 +202,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		"api",
 		"csv",
+		"delta",
 		"fast",
 		"fix",
 		"http",
@@ -201,6 +210,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"json",
 		"pnl",
 		"rest",
+		"signal",
+		"signals",
 		"sma",
 		"stocksharp",
 		"tcp",
@@ -879,12 +890,59 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCodeOutputStringsDoNotLookLikeEnglish()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var output in EnumerateCodeOutputStrings(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeOutputForTranslationCheck(output.Text);
+					if (!IsTranslatableEnglishCodeOutput(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string looks like untranslated English. Localize it or add a deliberate allowlist entry. String: {Truncate(output.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
 
 		foreach (var file in EnumerateContentTextFiles())
 			ValidateNoQuestionMarkGarbling(file, errors);
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void TextFilesDoNotContainReplacementCharacters()
+	{
+		var errors = new List<string>();
+
+		foreach (var file in EnumerateContentTextFiles())
+			ValidateNoReplacementCharacters(file, errors);
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void TextFilesDoNotContainIntraWordQuestionMarkGarbling()
+	{
+		var errors = new List<string>();
+
+		foreach (var file in EnumerateContentTextFiles())
+			ValidateNoIntraWordQuestionMarkGarbling(file, errors);
 
 		AssertNoErrors(errors);
 	}
@@ -925,6 +983,17 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			ValidateNoMojibakeMarkers(file, errors);
 
 		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocumentationAuditIsClean()
+	{
+		var audit = BuildLocalizedDocumentationAudit();
+
+		if (ShouldWriteLocalizedAuditReport())
+			WriteLocalizedAuditReport(audit);
+
+		AssertNoErrors(audit.Issues.Select(issue => issue.ToString()).ToArray());
 	}
 
 	[TestMethod]
@@ -1586,6 +1655,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static void ValidateNoReplacementCharacters(string file, List<string> errors)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			if (!text.Contains('\uFFFD'))
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains the Unicode replacement character '�', which usually means text was decoded with the wrong encoding. Line: {Truncate(text.Trim(), 180)}");
+		}
+	}
+
+	private static void ValidateNoIntraWordQuestionMarkGarbling(string file, List<string> errors)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var scanText = RemoveQuestionMarkSafeSegments(text);
+			var match = Regex.Match(scanText, @"[A-Za-zÀ-ÖØ-öø-ÿ]\?{1,2}[A-Za-zÀ-ÖØ-öø-ÿ]", RegexOptions.CultureInvariant);
+			if (!match.Success)
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains suspicious '?' inside a word ('{match.Value}'), which usually means translated Unicode text was corrupted. Line: {Truncate(text.Trim(), 180)}");
+		}
+	}
+
 	private static void ValidateNoMojibakeMarkers(string file, List<string> errors)
 	{
 		var line = 1;
@@ -1599,6 +1698,203 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			errors.Add($"{RelativeToRepo(file)}:{line}: contains mojibake marker '{marker}', which usually means Unicode punctuation was decoded with the wrong encoding. Line: {Truncate(text.Trim(), 180)}");
 		}
+	}
+
+	private static LocalizedDocumentationAudit BuildLocalizedDocumentationAudit()
+	{
+		var languages = GetTranslatedContentLanguages();
+		var issues = new List<AuditIssue>();
+		var stats = new List<LocalizedAuditLanguageStats>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var defaultOutputsByRelativePath = BuildDefaultCodeOutputMap(defaultRoot);
+		var defaultCommentsByRelativePath = BuildDefaultCodeCommentMap(defaultRoot);
+		var textExtensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
+
+		foreach (var lang in languages)
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+			var textFiles = Directory.EnumerateFiles(langRoot, "*", SearchOption.AllDirectories)
+				.Where(file => textExtensions.Contains(Path.GetExtension(file)))
+				.Order(StringComparer.OrdinalIgnoreCase)
+				.ToArray();
+			var markdownFiles = textFiles
+				.Where(file => Path.GetExtension(file).Equals(".md", StringComparison.OrdinalIgnoreCase))
+				.ToArray();
+
+			var outputCount = 0;
+			var commentCount = 0;
+
+			foreach (var file in textFiles)
+				CollectTextEncodingAuditIssues(file, issues);
+
+			foreach (var file in markdownFiles)
+			{
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+				var markdown = ReadAllText(file);
+				defaultOutputsByRelativePath.TryGetValue(relative, out var defaultOutputs);
+				defaultCommentsByRelativePath.TryGetValue(relative, out var defaultComments);
+
+				foreach (var output in EnumerateCodeOutputStrings(markdown))
+				{
+					outputCount++;
+					var normalized = NormalizeCodeOutputForTranslationCheck(output.Text);
+					var exactEnglish = defaultOutputs is not null && defaultOutputs.Contains(normalized);
+
+					foreach (var (name, pattern) in _knownEnglishCodeOutputPatterns)
+					{
+						if (!Regex.IsMatch(output.Text, pattern, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+							continue;
+
+						issues.Add(new AuditIssue("code-output-known-english", RelativeToRepo(file), output.Line, $"contains known untranslated English {name}: {Truncate(output.Text, 180)}"));
+					}
+
+					if (exactEnglish)
+					{
+						issues.Add(new AuditIssue("code-output-exact-english", RelativeToRepo(file), output.Line, $"is identical to the English source output: {Truncate(output.Text, 180)}"));
+						continue;
+					}
+
+					if (IsTranslatableEnglishCodeOutput(normalized))
+						issues.Add(new AuditIssue("code-output-likely-english", RelativeToRepo(file), output.Line, $"looks like untranslated English: {Truncate(output.Text, 180)}"));
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					commentCount++;
+					var normalized = NormalizeCodeCommentForTranslationCheck(comment.Text);
+					if (normalized.Length == 0 || defaultComments is null || !defaultComments.Contains(normalized))
+						continue;
+
+					issues.Add(new AuditIssue("code-comment-exact-english", RelativeToRepo(file), comment.Line, $"is identical to the English source comment: {Truncate(comment.Text, 180)}"));
+				}
+			}
+
+			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, outputCount, commentCount));
+		}
+
+		return new LocalizedDocumentationAudit(languages, stats, issues);
+	}
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultCodeOutputMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file => new
+			{
+				RelativePath = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'),
+				Outputs = EnumerateCodeOutputStrings(ReadAllText(file))
+					.Select(output => NormalizeCodeOutputForTranslationCheck(output.Text))
+					.Where(IsTranslatableEnglishCodeOutput)
+					.ToHashSet(StringComparer.Ordinal),
+			})
+			.Where(entry => entry.Outputs.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.Outputs, StringComparer.OrdinalIgnoreCase);
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultCodeCommentMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file => new
+			{
+				RelativePath = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'),
+				Comments = EnumerateCodeComments(ReadAllText(file))
+					.Select(comment => NormalizeCodeCommentForTranslationCheck(comment.Text))
+					.Where(comment => comment.Length > 0)
+					.ToHashSet(StringComparer.Ordinal),
+			})
+			.Where(entry => entry.Comments.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.Comments, StringComparer.OrdinalIgnoreCase);
+
+	private static void CollectTextEncodingAuditIssues(string file, List<AuditIssue> issues)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var repeatedQuestionMarks = Regex.Match(text, @"\?{3,}", RegexOptions.CultureInvariant);
+			if (repeatedQuestionMarks.Success)
+			{
+				issues.Add(new AuditIssue("encoding-repeated-question-marks", RelativeToRepo(file), line, $"contains '{repeatedQuestionMarks.Value}': {Truncate(text.Trim(), 180)}"));
+			}
+
+			var scanText = RemoveQuestionMarkSafeSegments(text);
+			var intraWordQuestionMark = Regex.Match(scanText, @"[A-Za-zÀ-ÖØ-öø-ÿ]\?{1,2}[A-Za-zÀ-ÖØ-öø-ÿ]", RegexOptions.CultureInvariant);
+			if (intraWordQuestionMark.Success)
+			{
+				issues.Add(new AuditIssue("encoding-intra-word-question-mark", RelativeToRepo(file), line, $"contains suspicious '?' inside a word ('{intraWordQuestionMark.Value}'): {Truncate(text.Trim(), 180)}"));
+			}
+
+			if (text.Contains('\uFFFD'))
+				issues.Add(new AuditIssue("encoding-replacement-character", RelativeToRepo(file), line, $"contains the Unicode replacement character '�': {Truncate(text.Trim(), 180)}"));
+
+			var marker = _mojibakeMarkers.FirstOrDefault(text.Contains);
+			if (marker is not null)
+				issues.Add(new AuditIssue("encoding-mojibake-marker", RelativeToRepo(file), line, $"contains mojibake marker '{marker}': {Truncate(text.Trim(), 180)}"));
+		}
+	}
+
+	private static bool ShouldWriteLocalizedAuditReport()
+	{
+		var value = Environment.GetEnvironmentVariable(LocalizedAuditReportEnvironmentVariable);
+		return value is not null
+			&& (value.Equals("1", StringComparison.Ordinal)
+				|| value.Equals("true", StringComparison.OrdinalIgnoreCase)
+				|| value.Equals("yes", StringComparison.OrdinalIgnoreCase));
+	}
+
+	private static void WriteLocalizedAuditReport(LocalizedDocumentationAudit audit)
+	{
+		var path = Path.Combine(_repoRoot, LocalizedAuditReportFileName);
+		var report = new StringBuilder();
+
+		report.AppendLine("# Localized Documentation Audit");
+		report.AppendLine();
+		report.AppendLine($"Generated: {DateTimeOffset.Now:yyyy-MM-dd HH:mm:ss zzz}");
+		report.AppendLine($"Languages: {string.Join(", ", audit.Languages)}");
+		report.AppendLine();
+		report.AppendLine("## Coverage");
+		report.AppendLine();
+		report.AppendLine("| Language | Markdown files | Text files | Code output strings | Code comments |");
+		report.AppendLine("| --- | ---: | ---: | ---: | ---: |");
+
+		foreach (var stat in audit.Stats)
+			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.CodeOutputStrings} | {stat.CodeComments} |");
+
+		report.AppendLine();
+		report.AppendLine("## Checks");
+		report.AppendLine();
+		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
+		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
+		report.AppendLine("- Code comments: exact matches with English source comments.");
+		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
+		report.AppendLine();
+		report.AppendLine("## Issues");
+		report.AppendLine();
+
+		if (audit.Issues.Count == 0)
+		{
+			report.AppendLine("No issues found.");
+		}
+		else
+		{
+			report.AppendLine("| Category | Location | Details |");
+			report.AppendLine("| --- | --- | --- |");
+
+			foreach (var issue in audit.Issues)
+				report.AppendLine($"| {EscapeMarkdownTableCell(issue.Category)} | {EscapeMarkdownTableCell(issue.Location)} | {EscapeMarkdownTableCell(issue.Message)} |");
+		}
+
+		File.WriteAllText(path, report.ToString(), Encoding.UTF8);
+	}
+
+	private static string EscapeMarkdownTableCell(string value)
+		=> value.Replace("|", "\\|", StringComparison.Ordinal)
+			.Replace("\r", " ", StringComparison.Ordinal)
+			.Replace("\n", "<br>", StringComparison.Ordinal);
+
+	private static string RemoveQuestionMarkSafeSegments(string text)
+	{
+		var withoutUrls = Regex.Replace(text, @"https?://[^\s)\]>""']+", " ", RegexOptions.CultureInvariant);
+		return Regex.Replace(withoutUrls, @"(?:^|[\s(`])[\w./-]+\?[\w=&%{}./:+-]+", " ", RegexOptions.CultureInvariant);
 	}
 
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
@@ -2030,4 +2326,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct CodeComment(string Text, int Line);
 
 	private readonly record struct CodeOutputString(string Text, int Line);
+
+	private sealed record LocalizedDocumentationAudit(
+		IReadOnlyList<string> Languages,
+		IReadOnlyList<LocalizedAuditLanguageStats> Stats,
+		IReadOnlyList<AuditIssue> Issues);
+
+	private readonly record struct LocalizedAuditLanguageStats(
+		string Language,
+		int MarkdownFiles,
+		int TextFiles,
+		int CodeOutputStrings,
+		int CodeComments);
+
+	private readonly record struct AuditIssue(string Category, string File, int Line, string Message)
+	{
+		public string Location => Line > 0 ? $"{File}:{Line}" : File;
+
+		public override string ToString()
+			=> $"{Location}: [{Category}] {Message}";
+	}
 }

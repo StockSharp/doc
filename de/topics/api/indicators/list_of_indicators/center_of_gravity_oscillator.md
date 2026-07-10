@@ -12,7 +12,7 @@ CGO ist besonders nützlich für:
 - Identifizieren potenzieller Umkehrpunkte, bevor sie auf dem Preisdiagramm erscheinen
 - Aufdecken der Stärken und Schwächen des aktuellen Trends
 - Erkennen versteckter Abweichungen zwischen Preis und Indikator
-- Erstellen von Handelssystemen basierend auf f?hrenden Signalen
+- Erstellen von Handelssystemen basierend auf führenden Signalen
 
 ## Parameter
 

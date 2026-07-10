@@ -8,19 +8,19 @@ This block is used to create an option pricing model.
 
 Incoming Sockets
 
-- **Options** � the strikes for which the model needs to be created.
+- **Options** - the strikes for which the model needs to be created.
 
 ### Outgoing Sockets
 
 Outgoing Sockets
 
-- **Model** � the pricing model (for example, Black-Scholes).
+- **Model** - the pricing model (for example, Black-Scholes).
 
 ### Parameters
 
 Parameters
 
-- **Black Model** � a flag indicating whether to create a Black-Scholes model.
+- **Black Model** - a flag indicating whether to create a Black-Scholes model.
 
 ![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
 
