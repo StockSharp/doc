@@ -243,7 +243,7 @@ Esses indicadores devem herdar da classe [BaseComplexIndicator](xref:StockSharp.
 
 ## Exemplo de indicador complexo com implementação de SaveLoad
 
-Abaixo está um exemplo de implementação do Percentage Volume Oscillator (PVO), que demonstra a implementação de `NumValuesToInitialize`, `Measure` e dos métodos `Save` e `Load`:
+Abaixo está um exemplo de implementação do oscilador percentual de volume (PVO), que demonstra a implementação de `NumValuesToInitialize`, `Measure` e dos métodos `Save` e `Load`:
 
 ```cs
 /// <summary>

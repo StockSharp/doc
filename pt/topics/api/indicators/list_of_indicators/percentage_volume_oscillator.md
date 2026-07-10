@@ -1,12 +1,12 @@
 # PVO
 
-**Percentage Volume Oscillator (PVO)** é um indicador técnico semelhante ao MACD, mas aplicado ao volume de negociação em vez do preço, expressando a diferença entre médias móveis exponenciais rápida e lenta do volume como percentagem.
+**Oscilador percentual de volume (PVO)** é um indicador técnico semelhante ao MACD, mas aplicado ao volume de negociação em vez do preço, expressando a diferença entre médias móveis exponenciais rápida e lenta do volume como percentagem.
 
 Para usar o indicador, é necessário usar a classe [PercentageVolumeOscillator](xref:StockSharp.Algo.Indicators.PercentageVolumeOscillator).
 
 ## Descrição
 
-O Percentage Volume Oscillator (PVO) é uma modificação do indicador MACD (convergência/divergência de médias móveis), aplicada ao volume de negociação em vez do preço. Tal como o PPO (Percentage Price Oscillator), o PVO expressa a diferença entre médias móveis exponenciais rápida e lenta como percentagem, em vez de unidades absolutas. Isto torna o PVO particularmente útil ao comparar instrumentos diferentes com níveis de volume distintos ou ao analisar um único instrumento durante um período alargado.
+O oscilador percentual de volume (PVO) é uma modificação do indicador MACD (convergência/divergência de médias móveis), aplicada ao volume de negociação em vez do preço. Tal como o PPO (oscilador percentual de preço), o PVO expressa a diferença entre médias móveis exponenciais rápida e lenta como percentagem, em vez de unidades absolutas. Isto torna o PVO particularmente útil ao comparar instrumentos diferentes com níveis de volume distintos ou ao analisar um único instrumento durante um período alargado.
 
 O PVO consiste em três componentes:
 1. **Linha PVO** - diferença percentual entre a EMA rápida e a EMA lenta do volume
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Percentage Volume Oscillator envolve os seguintes passos:
+O cálculo do oscilador percentual de volume envolve os seguintes passos:
 
 1. Calcular as médias móveis exponenciais curta e longa do volume:
    ```
@@ -54,7 +54,7 @@ Onde:
 
 ## Interpretação
 
-O Percentage Volume Oscillator pode ser interpretado da seguinte forma:
+O oscilador percentual de volume pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
    - O cruzamento da linha PVO da linha zero de baixo para cima indica aceleração do volume acima da média, o que pode anunciar um movimento altista

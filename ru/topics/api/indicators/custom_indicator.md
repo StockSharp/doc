@@ -336,7 +336,7 @@ public class AverageDirectionalIndexValue(AverageDirectionalIndex indicator, Dat
 
 ## Пример комплексного индикатора с реализацией SaveLoad
 
-Ниже приведен пример реализации индикатора Percentage Volume Oscillator (PVO), который демонстрирует реализацию свойств `NumValuesToInitialize`, `Measure`, а также методов `Save` и `Load`:
+Ниже приведен пример реализации осциллятора процентного объема (PVO), который демонстрирует реализацию свойств `NumValuesToInitialize`, `Measure`, а также методов `Save` и `Load`:
 
 ```cs
 /// <summary>
@@ -502,7 +502,7 @@ public interface IPercentageVolumeOscillatorValue : IComplexIndicatorValue
 }
 
 /// <summary>
-/// Реализация значения индикатора Percentage Volume Oscillator.
+/// Реализация значения осциллятора процентного объема.
 /// </summary>
 public class PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTime time)
 	: ComplexIndicatorValue<PercentageVolumeOscillator>(indicator, time), IPercentageVolumeOscillatorValue

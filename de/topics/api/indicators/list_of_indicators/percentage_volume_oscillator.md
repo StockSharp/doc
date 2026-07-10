@@ -1,12 +1,12 @@
 # PVO
 
-**Percentage Volume Oscillator (PVO)** ist ein technischer Indikator ähnlich wie MACD, der jedoch auf das Handelsvolumen statt auf den Preis angewendet wird und die Differenz zwischen schnellen und langsamen exponentiellen gleitenden Durchschnitten des Volumens in Prozent ausdrückt.
+**Prozentualer Volumenoszillator (PVO)** ist ein technischer Indikator ähnlich wie MACD, der jedoch auf das Handelsvolumen statt auf den Preis angewendet wird und die Differenz zwischen schnellen und langsamen exponentiellen gleitenden Durchschnitten des Volumens in Prozent ausdrückt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PercentageVolumeOscillator](xref:StockSharp.Algo.Indicators.PercentageVolumeOscillator) verwenden.
 
 ## Beschreibung
 
-Der Percentage Volume Oscillator (PVO) ist eine Modifikation des Indikators MACD (Konvergenz/Divergenz gleitender Durchschnitte), der auf das Handelsvolumen statt auf den Preis angewendet wird. Ähnlich wie PPO (Percentage Price Oscillator) drückt PVO die Differenz zwischen schnellen und langsamen exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht in absoluten Einheiten aus. Dies macht PVO besonders nützlich, wenn Sie verschiedene Instrumente mit unterschiedlichen Volumenniveaus vergleichen oder ein einzelnes Instrument über einen längeren Zeitraum analysieren.
+Der prozentuale Volumenoszillator (PVO) ist eine Modifikation des Indikators MACD (Konvergenz/Divergenz gleitender Durchschnitte), der auf das Handelsvolumen statt auf den Preis angewendet wird. Ähnlich wie PPO (prozentualer Preisoszillator) drückt PVO die Differenz zwischen schnellen und langsamen exponentiellen gleitenden Durchschnitten als Prozentsatz und nicht in absoluten Einheiten aus. Dies macht PVO besonders nützlich, wenn Sie verschiedene Instrumente mit unterschiedlichen Volumenniveaus vergleichen oder ein einzelnes Instrument über einen längeren Zeitraum analysieren.
 
 PVO besteht aus drei Komponenten:
 1. **PVO-Linie** – prozentuale Differenz zwischen schneller und langsamer Volumen-EMA
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Percentage Volume Oscillator-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des prozentualen Volumenoszillators umfasst die folgenden Schritte:
 
 1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte des Volumens:
    ```
@@ -54,7 +54,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Percentage Volume Oscillator kann wie folgt interpretiert werden:
+Der prozentuale Volumenoszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Die PVO-Linie, die die Nulllinie von unten nach oben kreuzt, weist auf eine überdurchschnittliche Volumenbeschleunigung hin, die eine Aufwärtsbewegung ankündigen könnte

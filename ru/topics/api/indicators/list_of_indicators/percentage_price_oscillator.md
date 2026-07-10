@@ -1,6 +1,6 @@
 # PPO
 
-**Осциллятор процентной цены (Percentage Price Oscillator, PPO)** - это технический индикатор, похожий на MACD, но выражающий разницу между двумя экспоненциальными скользящими средними в процентном отношении, а не в абсолютных значениях.
+**Осциллятор процентной цены (PPO)** - это технический индикатор, похожий на MACD, но выражающий разницу между двумя экспоненциальными скользящими средними в процентном отношении, а не в абсолютных значениях.
 
 Для использования индикатора необходимо использовать класс [PercentagePriceOscillator](xref:StockSharp.Algo.Indicators.PercentagePriceOscillator).
 
@@ -93,5 +93,5 @@ PPO состоит из трех компонентов:
 [EMA](ema.md)
 [PPOS](percentage_price_oscillator_signal.md)
 [PPOH](percentage_price_oscillator_histogram.md)
-[Percentage Volume Oscillator](percentage_volume_oscillator.md)
+[Осциллятор процентного объема](percentage_volume_oscillator.md)
 [TRIX](trix.md)

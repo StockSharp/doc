@@ -93,5 +93,5 @@ PPO は、次のように解釈できます。
 [EMA](ema.md)
 [PPO シグナル](percentage_price_oscillator_signal.md)
 [PPO ヒストグラム](percentage_price_oscillator_histogram.md)
-[Percentage Volume Oscillator](percentage_volume_oscillator.md)
+[パーセンテージ・ボリューム・オシレーター](percentage_volume_oscillator.md)
 [TRIX](trix.md)

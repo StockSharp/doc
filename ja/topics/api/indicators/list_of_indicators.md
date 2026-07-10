@@ -112,7 +112,7 @@
 - [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
 - [Peak](list_of_indicators/peak.md) - インジケーター Peak、価格データ内の局所的な高値を特定します
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - インジケーター PPO、2 本の移動平均間のパーセント差を測定します
-- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - シグナルライン付き Percentage Price Oscillator。PPO を EMA で平滑化します
+- [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - シグナルライン付きパーセンテージ価格オシレーター。PPO を EMA で平滑化します
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - インジケーター PPOH、PPO とそのシグナルラインとの差をプロットします
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - インジケーター PVO、出来高トレンドのパーセント差を測定します
 - [PP](list_of_indicators/pivot_points.md) - インジケーター PP、過去の価格変動に基づいてサポートレベルとレジスタンスレベルを計算します

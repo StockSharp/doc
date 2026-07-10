@@ -93,5 +93,5 @@ El PPO se puede interpretar de la siguiente manera:
 [EMA](ema.md)
 [Señal del PPO](percentage_price_oscillator_signal.md)
 [Histograma del PPO](percentage_price_oscillator_histogram.md)
-[Percentage Volume Oscillator](percentage_volume_oscillator.md)
+[Oscilador porcentual de volumen](percentage_volume_oscillator.md)
 [TRIX](trix.md)

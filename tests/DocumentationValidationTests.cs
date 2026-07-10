@@ -2273,6 +2273,53 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishPercentageOscillatorNames()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Percentage Price Oscillator",
+			"Percentage Volume Oscillator",
+		};
+		var apiStyleLocalLinks = new[]
+		{
+			"[Percentage Volume Oscillator](percentage_volume_oscillator.md)",
+			"[Percentage Price Oscillator](percentage_price_oscillator.md)",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var content = ReadAllText(file);
+
+				foreach (var link in apiStyleLocalLinks)
+				{
+					if (content.Contains(link, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(file)}: localized indicator documentation keeps English percentage oscillator link label '{link}'. Localize the link label.");
+				}
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(content))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English percentage oscillator name '{phrase}'. Localize the name while keeping PPO/PVO abbreviations where useful.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

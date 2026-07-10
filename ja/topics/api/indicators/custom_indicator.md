@@ -243,7 +243,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 
 ## SaveLoad 実装を含む複合インジケーターの例
 
-以下は Percentage Volume Oscillator (PVO) の実装例です。`NumValuesToInitialize`、`Measure`、および `Save` と `Load` メソッドの実装を示しています。
+以下はパーセンテージ・ボリューム・オシレーター (PVO) の実装例です。`NumValuesToInitialize`、`Measure`、および `Save` と `Load` メソッドの実装を示しています。
 
 ```cs
 /// <summary>

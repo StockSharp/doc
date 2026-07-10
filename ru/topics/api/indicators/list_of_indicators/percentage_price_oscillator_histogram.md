@@ -1,6 +1,6 @@
 # PPOH
 
-**Percentage Price Oscillator Histogram (PPOH)** отображает разницу между линией PPO и её сигнальной линией в виде гистограммы, что позволяет быстро оценить баланс импульса.
+**Гистограмма осциллятора процентной цены (PPOH)** отображает разницу между линией PPO и её сигнальной линией в виде гистограммы, что позволяет быстро оценить баланс импульса.
 
 Для использования индикатора необходимо применить класс [PercentagePriceOscillatorHistogram](xref:StockSharp.Algo.Indicators.PercentagePriceOscillatorHistogram).
 
