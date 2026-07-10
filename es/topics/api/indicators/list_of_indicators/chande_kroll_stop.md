@@ -58,7 +58,7 @@ El cálculo de Chande Kroll Stop implica los siguientes pasos:
 
 - **Cruce del precio con las líneas de stop** puede indicar un posible cambio de tendencia o el comienzo de un nuevo impulso.
 
-- **Abrupt changes in stop lines** puede ocurrir con cambios significativos en la volatilidad del mercado.
+- **Cambios bruscos en las líneas de stop** pueden ocurrir con cambios significativos en la volatilidad del mercado.
 
 - **Usar con otros indicadores**: CKS funciona mejor en combinación con otros indicadores de tendencia e impulso que ayudan a determinar la dirección de entrada al mercado.
 

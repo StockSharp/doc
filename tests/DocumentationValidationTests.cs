@@ -2074,6 +2074,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepKnownEnglishSentenceFragments()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Lines componen",
+			"Abrupt changes in stop lines",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English sentence fragment '{phrase}'. Localize the sentence text.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
