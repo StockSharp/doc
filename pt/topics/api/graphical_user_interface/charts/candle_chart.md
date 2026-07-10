@@ -43,8 +43,8 @@ Abaixo está um exemplo de construção de um gráfico utilizando o componente [
        _connector.CandleReceived += OnCandleReceived;
        
        // Subscrever outros eventos necessários
-       _connector.Connected += () => this.GuiAsync(() => { /* Handle connection */ });
-       _connector.Disconnected += () => this.GuiAsync(() => { /* Handle disconnection */ });
+       _connector.Connected += () => this.GuiAsync(() => { /* Processar conexão */ });
+       _connector.Disconnected += () => this.GuiAsync(() => { /* Processar desconexão */ });
        
        // Ligar ao sistema de negociação
        _connector.Connect();

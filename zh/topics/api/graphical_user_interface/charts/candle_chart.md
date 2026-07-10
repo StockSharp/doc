@@ -43,8 +43,8 @@
        _connector.CandleReceived += OnCandleReceived;
        
        // 订阅其他必要事件
-       _connector.Connected += () => this.GuiAsync(() => { /* Handle connection */ });
-       _connector.Disconnected += () => this.GuiAsync(() => { /* Handle disconnection */ });
+       _connector.Connected += () => this.GuiAsync(() => { /* 处理连接 */ });
+       _connector.Disconnected += () => this.GuiAsync(() => { /* 处理断开连接 */ });
        
        // 连接到交易系统
        _connector.Connect();

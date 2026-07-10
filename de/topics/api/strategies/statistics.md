@@ -156,7 +156,7 @@ public class MyCustomParameter : BasePnLStatisticParameter<decimal>
 	public override void Add(DateTimeOffset marketTime, decimal pnl, decimal? commission)
 	{
 		// Benutzerdefinierte Berechnungslogik
-		Value = /* your custom calculation */;
+		Value = /* Ihre eigene Berechnung */;
 	}
 }
 

@@ -50,7 +50,7 @@ class SocketClient : BaseLogReceiver
 	public SocketClient(Authenticator authenticator, int reconnectAttempts)
 	{
 		_authenticator = authenticator;
-		_client = new WebSocketClient(/* parameters */);
+		_client = new WebSocketClient(/* パラメーター */);
 		_client.ReconnectAttempts = reconnectAttempts;
 	}
 

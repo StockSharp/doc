@@ -68,7 +68,7 @@ await exporter.Export(candleMessages, token);
 ```cs
 await using var stream = File.Create("data.xlsx");
 var exporter = new ExcelExporter(excelProvider, DataType.Ticks, stream,
-    () => { /* handle interruption */ });
+    () => { /* gestionar la interrupción */ });
 await exporter.Export(tickMessages, token);
 ```
 

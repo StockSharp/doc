@@ -201,6 +201,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Connector",
 		"Core",
 		"Localization",
+		"parameters",
 		"Strategies and indicators",
 	};
 
@@ -3323,6 +3324,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				foreach (Match xmlComment in Regex.Matches(trimmed, @"<!--\s*.*?\s*-->", RegexOptions.CultureInvariant))
 					yield return new CodeComment(xmlComment.Value, line);
 
+				foreach (Match blockComment in Regex.Matches(trimmed, @"/\*\s*.*?\s*\*/", RegexOptions.CultureInvariant))
+					yield return new CodeComment(blockComment.Value, line);
+
 				if (trimmed.StartsWith("///", StringComparison.Ordinal)
 					|| trimmed.StartsWith("//", StringComparison.Ordinal)
 					|| trimmed.StartsWith("#", StringComparison.Ordinal))
@@ -3656,8 +3660,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
-		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--)\s*", string.Empty, RegexOptions.CultureInvariant);
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s*\*/\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
 		if (text.Length < 12 && !_knownEnglishCodeCommentLabels.Contains(text))
@@ -3675,8 +3680,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
-		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--)\s*", string.Empty, RegexOptions.CultureInvariant);
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s*\*/\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
 		if (text.Length < 20)
