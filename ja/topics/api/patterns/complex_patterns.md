@@ -66,7 +66,7 @@ var complex = new ComplexCandlePattern(
 );
 
 // 認識には 3 本のローソク足が必要（1 + 2）
-Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
+Console.WriteLine($"必要なローソク足数: {complex.CandlesCount}"); // 3
 ```
 
 ## ICandlePatternProvider

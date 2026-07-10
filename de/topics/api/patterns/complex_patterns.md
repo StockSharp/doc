@@ -66,7 +66,7 @@ var complex = new ComplexCandlePattern(
 );
 
 // Für die Erkennung sind 3 Candles erforderlich (1 + 2)
-Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
+Console.WriteLine($"Benötigte Kerzen: {complex.CandlesCount}"); // 3
 ```
 
 ## ICandlePatternProvider

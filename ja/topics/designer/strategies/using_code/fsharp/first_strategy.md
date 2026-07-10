@@ -145,7 +145,7 @@ member private this.OnProcess
 			isShortLessThenLong <- Some shortLess
 		| Some prevValue when prevValue <> shortLess ->
 			// クロスが発生
-			// short < long の場合は Sell、それ以外は Buy
+			// short < long の場合は売り、それ以外は買い
 			let direction =
 				if shortLess then
 					Sides.Sell

@@ -1355,6 +1355,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		AssertNoErrors(errors);
 	}
 
+	[TestMethod]
+	public void LocalizedCodeCommentsDoNotLookLikeEnglish()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeCommentForLikelyEnglishCheck(comment.Text);
+					if (!IsLikelyUntranslatedEnglishCodeComment(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: code comment looks like untranslated English. Localize it or add a deliberate allowlist entry. Comment: {Truncate(comment.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
 	private static void ValidateTocFile(
 		string lang,
 		string langRoot,
@@ -2206,10 +2231,17 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				{
 					commentCount++;
 					var normalized = NormalizeCodeCommentForTranslationCheck(comment.Text);
-					if (normalized.Length == 0 || defaultComments is null || !defaultComments.Contains(normalized))
-						continue;
+					var exactEnglish = normalized.Length > 0 && defaultComments is not null && defaultComments.Contains(normalized);
 
-					issues.Add(new AuditIssue("code-comment-exact-english", RelativeToRepo(file), comment.Line, $"is identical to the English source comment: {Truncate(comment.Text, 180)}"));
+					if (exactEnglish)
+					{
+						issues.Add(new AuditIssue("code-comment-exact-english", RelativeToRepo(file), comment.Line, $"is identical to the English source comment: {Truncate(comment.Text, 180)}"));
+						continue;
+					}
+
+					var likelyEnglish = NormalizeCodeCommentForLikelyEnglishCheck(comment.Text);
+					if (IsLikelyUntranslatedEnglishCodeComment(likelyEnglish))
+						issues.Add(new AuditIssue("code-comment-likely-english", RelativeToRepo(file), comment.Line, $"looks like untranslated English: {Truncate(comment.Text, 180)}"));
 				}
 			}
 
@@ -2388,7 +2420,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
 		report.AppendLine("- Code string literals: exact matches with English source string literals that look like user-facing text.");
-		report.AppendLine("- Code comments: exact matches with English source comments.");
+		report.AppendLine("- Code comments: exact matches with English source comments and comments that look like untranslated English.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
 		report.AppendLine("## Issues");
@@ -3031,6 +3063,93 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		return text;
 	}
+
+	private static string NormalizeCodeCommentForLikelyEnglishCheck(string comment)
+	{
+		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+			return string.Empty;
+
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#)\s*", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+		if (text.Length < 20)
+			return string.Empty;
+
+		// Unlike exact-comment matching, keep parentheses: translated comments often use them
+		// for explanatory prose, and several previous misses were English comments in parentheses.
+		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|[;{}=]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+			return string.Empty;
+
+		return text;
+	}
+
+	private static bool IsLikelyUntranslatedEnglishCodeComment(string comment)
+	{
+		if (string.IsNullOrWhiteSpace(comment))
+			return false;
+
+		var words = Regex.Matches(comment, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 1
+				&& !Regex.IsMatch(word, @"^[A-Z]{2,}$", RegexOptions.CultureInvariant)
+				&& !IsAllowedInvariantCodeCommentWord(word))
+			.ToArray();
+
+		if (words.Length < 4)
+			return false;
+
+		var hits = words.Count(IsTranslatableEnglishCodeCommentWord);
+		return hits >= 3 && (double)hits / words.Length >= 0.45;
+	}
+
+	private static bool IsAllowedInvariantCodeCommentWord(string word)
+		=> _allowedInvariantCodeOutputWords.Contains(word)
+			|| word.Equals("api", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("board", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("candlemessage", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("csharp", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("ecng", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("executionmessage", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("fsharp", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("securityid", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("system", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("timespan", StringComparison.OrdinalIgnoreCase);
+
+	private static bool IsTranslatableEnglishCodeCommentWord(string word)
+		=> IsCommonEnglishMarkdownWord(word)
+			|| _translatableEnglishCodeOutputWords.Contains(word)
+			|| word.Equals("automatically", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("built", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("building", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("custom", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("descending", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("disable", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("discrete", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("display", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("example", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("explicit", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("filter", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("form", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("generate", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("generated", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("gateway", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("here", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("history", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("initialize", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("list", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("loads", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("mechanism", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("normally", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("objects", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("own", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("protective", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("regular", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("search", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("selected", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("server", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("sorting", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("subscription", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("transaction", StringComparison.OrdinalIgnoreCase);
 
 	private static (string Path, string Fragment) SplitPathQueryAndFragment(string url)
 	{

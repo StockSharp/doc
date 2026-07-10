@@ -102,7 +102,7 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 	if (subscription.DataType != DataType.OrderLog)
 		return;
 		
-	// Filter by price (example)
+	// 按价格过滤（示例）
 	if (item.Price < _minPrice || item.Price > _maxPrice)
 		return;
 		

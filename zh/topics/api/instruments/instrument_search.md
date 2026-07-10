@@ -17,7 +17,7 @@ var lookupMessage = new SecurityLookupMessage
 	// 设置搜索条件
 	SecurityId = new SecurityId
 	{
-		// Search by instrument code (you can use a mask like "AAPL*")
+		// 按交易品种代码搜索（可以使用类似 "AAPL*" 的掩码）
 		SecurityCode = "AAPL",
 		// 可选指定交易板代码
 		BoardCode = "NASDAQ"
@@ -217,7 +217,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 	var lookupWindow = new SecurityLookupWindow
 	{
 		// 指定可搜索所有交易品种
-		// (if the connector supports this function)
+		// （如果连接器支持此功能）
 		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
 		
 		// 设置初始搜索条件

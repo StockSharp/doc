@@ -38,7 +38,7 @@ type EmptyDiagramElement() as this =
 
 	// 如果希望调用 Process 方法，请取消注释以下属性 
 	// 使其在每次收到新参数时被调用
-	// (no need to wait for all input args to be received).
+	// （无需等待接收所有输入参数）。
 	//
 	// 重写 this.WaitAllInput
 	//     with get () = false

@@ -94,7 +94,7 @@ if (info is not null)
 // 激活保护订单的方法
 private void ActiveProtection((bool isTake, Sides side, decimal price, decimal volume, OrderCondition condition) info)
 {
-	// sending a protective (position-closing) order as a regular order
+	// 将保护性（平仓）订单作为普通订单发送
 	RegisterOrder(this.CreateOrder(info.side, info.price, info.volume));
 }
 

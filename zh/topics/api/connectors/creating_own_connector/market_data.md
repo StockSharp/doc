@@ -365,7 +365,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 					await SendOutMessageAsync(new ExecutionMessage
 					{
 						// 设置消息包含 tick 成交信息
-						// (not a transaction like an order or own trade)
+						// （不是订单或自身成交这样的交易）
 						DataTypeEx = DataType.Ticks,
 
 						TradeId = trade.TradeId,
@@ -374,7 +374,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						ServerTime = trade.Time,
 						OriginSide = trade.Side.ToSide(),
 
-						// For history, always set the subscription identifier,
+						// 对于历史数据，始终设置订阅标识符，
 						// 以便外部代码理解数据属于哪个订阅。
 						// 按订阅识别数据时无需填写交易品种信息
 						OriginalTransactionId = mdMsg.TransactionId,
@@ -425,7 +425,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		// 设置消息包含 tick 成交信息
-		// (not a transaction like an order or own trade)
+		// （不是订单或自身成交这样的交易）
 		DataTypeEx = DataType.Ticks,
 
 		SecurityId = trade.ProductId.ToStockSharp(),

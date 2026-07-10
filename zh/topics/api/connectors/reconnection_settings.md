@@ -23,11 +23,11 @@
 1. 在创建网关时，您需要通过 [ReConnectionSettings](xref:StockSharp.Messages.IMessageAdapter.ReConnectionSettings) 属性初始化重连机制的设置：
 
    ```cs
-   // initialize the reconnection mechanism (it will automatically connect 
-   // every 10 seconds if the gateway loses connection with the server)
+   // 初始化重连机制（如果网关与服务器断开连接，
+   // 它会每 10 秒自动连接一次）
    Connector.Adapter.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
    // 重连仅在所选交易板的工作时间内运行
-   // (to disable reconnection when there is no trading normally, for example, at night)
+   // （用于在通常没有交易时禁用重连，例如夜间）
    Connector.Adapter.ReConnectionSettings.WorkingTime = ExchangeBoard.Nasdaq.WorkingTime;
    ```
 2. 要检查连接控制机制的工作原理，可以关闭互联网连接：

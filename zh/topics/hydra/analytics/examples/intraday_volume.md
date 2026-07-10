@@ -70,7 +70,7 @@ namespace StockSharp.Algo.Analytics
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
-			// sorting by volume column (descending)
+			// 按成交量列降序排序
 			grid.SetSort("Volume", false);
 
 			return Task.CompletedTask;

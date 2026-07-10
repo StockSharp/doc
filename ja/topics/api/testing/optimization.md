@@ -326,8 +326,8 @@ var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSm
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
 // ToGeneticParameters は戦略パラメータを遺伝的オプティマイザー形式に変換します。
-// For parameters with a discrete set of values, such as TimeSpan?, pass an explicit
-// list through a (param, values) tuple:
+// TimeSpan? など値の候補が離散的なパラメーターでは、
+// (param, values) タプルで明示的にリストを渡します:
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
 {
     (tfParam, new[] { TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15) }),

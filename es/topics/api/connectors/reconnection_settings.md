@@ -23,11 +23,11 @@ El mecanismo de reconexión se configura mediante la propiedad [ReConnectionSett
 1. Al crear un gateway, debe inicializar la configuración del mecanismo de reconexión mediante la propiedad [ReConnectionSettings](xref:StockSharp.Messages.IMessageAdapter.ReConnectionSettings): 
 
    ```cs
-   // initialize the reconnection mechanism (it will automatically connect 
-   // every 10 seconds if the gateway loses connection with the server)
+   // inicializar el mecanismo de reconexión (se conectará automáticamente
+   // cada 10 segundos si el gateway pierde la conexión con el servidor)
    Connector.Adapter.ReConnectionSettings.Interval = TimeSpan.FromSeconds(10);
    // la reconexión funcionará solo durante el horario de la bolsa seleccionada
-   // (to disable reconnection when there is no trading normally, for example, at night)
+   // (para desactivar la reconexión cuando normalmente no hay negociación, por ejemplo, por la noche)
    Connector.Adapter.ReConnectionSettings.WorkingTime = ExchangeBoard.Nasdaq.WorkingTime;
    ```
 2. Para comprobar cómo funciona el mecanismo de control de conexión, puede desactivar la conexión a Internet: 

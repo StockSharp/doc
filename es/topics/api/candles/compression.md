@@ -60,7 +60,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
-			// ... (code for building candles from order log)
+			// ... (código para construir velas a partir del registro de órdenes)
 
 		case BuildTypes.Depths:
 			return StorageRegistry

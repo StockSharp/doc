@@ -60,7 +60,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
-			// ... (code for building candles from order log)
+			// ...（从订单日志构建 K 线的代码）
 
 		case BuildTypes.Depths:
 			return StorageRegistry

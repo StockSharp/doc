@@ -60,13 +60,13 @@ var complex = new ComplexCandlePattern(
     "Reversal Up",
     new ICandlePattern[]
     {
-        CandlePatternRegistry.Black,            // 1 candle: bearish
-        CandlePatternRegistry.BullishEngulfing,  // 2 candles: bullish engulfing
+        CandlePatternRegistry.Black,            // 1 根 K 线：看跌
+        CandlePatternRegistry.BullishEngulfing,  // 2 根 K 线：看涨吞没
     }
 );
 
-// 3 candles are required for recognition (1 + 2)
-Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
+// 识别需要 3 根 K 线（1 + 2）
+Console.WriteLine($"所需 K 线数量: {complex.CandlesCount}"); // 3
 ```
 
 ## K线模式提供者
@@ -117,7 +117,7 @@ var provider = new CandlePatternFileStorage(
     executor
 );
 
-// Initialize (loads built-in + custom patterns from file)
+// 初始化（从文件加载内置模式和自定义模式）
 await provider.InitAsync(CancellationToken.None);
 
 // 订阅新形态创建事件

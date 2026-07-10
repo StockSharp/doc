@@ -326,8 +326,8 @@ var shortParam = (StrategyParam<int>)strategy.Parameters[nameof(strategy.ShortSm
 var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.CandleTimeFrame)];
 
 // ToGeneticParameters 将策略参数转换为遗传优化器格式。
-// For parameters with a discrete set of values, such as TimeSpan?, pass an explicit
-// list through a (param, values) tuple:
+// 对于 TimeSpan? 这类取值集合离散的参数，请通过
+// (param, values) 元组显式传入列表：
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
 {
     (tfParam, new[] { TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15) }),

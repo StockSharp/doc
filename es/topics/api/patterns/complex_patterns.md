@@ -66,7 +66,7 @@ var complex = new ComplexCandlePattern(
 );
 
 // Se requieren 3 velas para el reconocimiento (1 + 2)
-Console.WriteLine($"Candles required: {complex.CandlesCount}"); // 3
+Console.WriteLine($"Velas requeridas: {complex.CandlesCount}"); // 3
 ```
 
 ## ICandlePatternProvider

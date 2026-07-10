@@ -62,7 +62,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	// 处理收到的 K线
 	Console.WriteLine($"收到K线: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
-	// For display on the chart, you can use:
+	// 要在图表上显示，可以使用：
 	// Chart.Draw(_candleElement, candle);
 }
 ```

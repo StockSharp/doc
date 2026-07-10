@@ -35,7 +35,7 @@ dotnet --version
 dotnet new console -n MyTradingApp --framework net10.0
 cd MyTradingApp
 
-# WPF application (Windows only)
+# WPF 应用程序（仅限 Windows）
 dotnet new wpf -n MyTradingGui --framework net10.0-windows
 ```
 
@@ -132,7 +132,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 dotnet add package StockSharp.Algo
 dotnet add package StockSharp.Algo.Strategies
 
-# Connector (example — Binance)
+# 连接器（示例 — Binance）
 dotnet add package StockSharp.Binance
 
 # Indicators

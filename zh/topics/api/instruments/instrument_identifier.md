@@ -14,7 +14,7 @@
    {
       public override string GenerateId(string secCode, ExchangeBoard board)
       {
-         // will be generate in CODE--BOARD form
+         // 将以 CODE--BOARD 形式生成
          return secCode + "--" + board.Code;
       }
    }

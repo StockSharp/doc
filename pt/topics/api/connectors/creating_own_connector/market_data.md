@@ -365,7 +365,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 					await SendOutMessageAsync(new ExecutionMessage
 					{
 						// Definir que a mensagem contém informações sobre uma negociação tick
-						// (not a transaction like an order or own trade)
+						// (não uma transação como uma ordem ou uma negociação própria)
 						DataTypeEx = DataType.Ticks,
 
 						TradeId = trade.TradeId,
@@ -374,7 +374,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 						ServerTime = trade.Time,
 						OriginSide = trade.Side.ToSide(),
 
-						// For history, always set the subscription identifier,
+						// Para histórico, defina sempre o identificador da subscrição,
 						// para que o código externo entenda para qual assinatura os dados foram recebidos.
 						// Ao identificar dados pela assinatura, não é necessário preencher as informações do instrumento
 						OriginalTransactionId = mdMsg.TransactionId,
@@ -425,7 +425,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		// Definir que a mensagem contém informações sobre uma negociação tick
-		// (not a transaction like an order or own trade)
+		// (não uma transação como uma ordem ou uma negociação própria)
 		DataTypeEx = DataType.Ticks,
 
 		SecurityId = trade.ProductId.ToStockSharp(),

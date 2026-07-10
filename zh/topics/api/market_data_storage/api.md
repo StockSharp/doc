@@ -77,7 +77,7 @@ await foreach (var marketDepth in marketDepths)
 // 保存新 K线
 var newCandles = new List<CandleMessage>
 {
-	// New CandleMessage objects are created here
+	// 在这里创建新的 CandleMessage 对象
 };
 await candleStorage.SaveAsync(newCandles);
 ```
