@@ -91,8 +91,8 @@ public override void Save(SettingsStorage storage)
 {
 	base.Save(storage);
 
-	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-	storage.SetValue(nameof(LongPeriod), LongPeriod);
+	storage.SetValue(nameof(Short期間), Short期間);
+	storage.SetValue(nameof(Long期間), Long期間);
 }
 
 /// <inheritdoc />
@@ -100,27 +100,27 @@ public override void Load(SettingsStorage storage)
 {
 	base.Load(storage);
 
-	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	Short期間 = storage.GetValue<int>(nameof(Short期間));
+	Long期間 = storage.GetValue<int>(nameof(Long期間));
 }
 ```
 
 ## 複合インジケーター
 
-一部のインジケーターは複合型で、計算に他のインジケーターを使用します。そのため、[ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility) インジケーターの実装例に示すように、インジケーター同士で再利用できます。
+一部のインジケーターは複合型で、計算に他のインジケーターを使用します。そのため、[Chaikinボラティリティ](xref:StockSharp.Algo.Indicators.Chaikinボラティリティ) インジケーターの実装例に示すように、インジケーター同士で再利用できます。
 
 ```cs
 /// <summary>
 /// Chaikin ボラティリティ。
 /// </summary>
-[DisplayName("Volatility")]
-[Description("Chaikin Volatility.")]
-public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
+[DisplayName("ボラティリティ")]
+[Description("チャイキン・ボラティリティ。")]
+public class Chaikinボラティリティ : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// <see cref="ChaikinVolatility"/> を作成します。
+	/// <see cref="Chaikinボラティリティ"/> を作成します。
 	/// </summary>
-	public ChaikinVolatility()
+	public Chaikinボラティリティ()
 	{
 		Ema = new ExponentialMovingAverage();
 		Roc = new RateOfChange();
@@ -131,8 +131,8 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("MA")]
-	[Description("Moving Average.")]
-	[Category("Main")]
+	[Description("移動平均。")]
+	[Category("メイン")]
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
@@ -140,8 +140,8 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
-	[Description("Rate of Change.")]
-	[Category("Main")]
+	[Description("変化率。")]
+	[Category("メイン")]
 	public RateOfChange Roc { get; private set; }
 
 	/// <summary>
@@ -181,7 +181,7 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 /// Welles Wilder の平均方向性指数。
 /// </summary>
 [DisplayName("ADX")]
-[Description("Welles Wilder's Average Directional Index.")]
+[Description("ウェルズ・ワイルダーの平均方向性指数。")]
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
 	/// <summary>
@@ -196,7 +196,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	/// <see cref="AverageDirectionalIndex"/> を作成します。
 	/// </summary>
 	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
-	/// <param name="movingAverage">Moving Average.</param>
+	/// <param name="movingAverage">移動平均。</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
 	{
 		if (dx == null)
@@ -224,9 +224,9 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	/// <summary>
 	/// 期間の長さ。
 	/// </summary>
-	[DisplayName("Period")]
-	[Description("Indicator period.")]
-	[Category("Main")]
+	[DisplayName("期間")]
+	[Description("インジケーターの期間。")]
+	[Category("メイン")]
 	public virtual int Length
 	{
 		get { return MovingAverage.Length; }
@@ -267,8 +267,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public PercentageVolumeOscillator()
 		: this(new(), new())
 	{
-		ShortPeriod = 12;
-		LongPeriod = 26;
+		Short期間 = 12;
+		Long期間 = 26;
 	}
 
 	/// <summary>
@@ -288,10 +288,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.ShortPeriodKey,
+		Name = LocalizedStrings.Short期間Key,
 		Description = LocalizedStrings.ShortMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int ShortPeriod
+	public int Short期間
 	{
 		get => _shortEma.Length;
 		set => _shortEma.Length = value;
@@ -302,10 +302,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.LongPeriodKey,
+		Name = LocalizedStrings.Long期間Key,
 		Description = LocalizedStrings.LongMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int LongPeriod
+	public int Long期間
 	{
 		get => _longEma.Length;
 		set => _longEma.Length = value;
@@ -348,8 +348,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Save(storage);
 
-		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-		storage.SetValue(nameof(LongPeriod), LongPeriod);
+		storage.SetValue(nameof(Short期間), Short期間);
+		storage.SetValue(nameof(Long期間), Long期間);
 	}
 
 	/// <inheritdoc />
@@ -357,12 +357,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Load(storage);
 
-		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+		Short期間 = storage.GetValue<int>(nameof(Short期間));
+		Long期間 = storage.GetValue<int>(nameof(Long期間));
 	}
 
 	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+	public override string ToString() => base.ToString() + $" S={Short期間},L={Long期間}";
 
 	/// <inheritdoc />
 	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)

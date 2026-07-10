@@ -21,7 +21,7 @@ private void InitializeChart()
 	_chart.Areas.Add(_areaComb);
 
 	// Diagrammelement für Kerzen erstellen
-	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
+	_candleElement = new ChartCandleElement() { FullTitle = "Kerzen" };
 	_areaComb.Elements.Add(_candleElement);
 
 	// Ereignis zum Empfang von Kerzen abonnieren

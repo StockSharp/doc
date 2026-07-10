@@ -21,7 +21,7 @@ private void InitializeChart()
 	_chart.Areas.Add(_areaComb);
 	
 	// 创建表示 K线的图表元素
-	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
+	_candleElement = new ChartCandleElement() { FullTitle = "K线" };
 	_areaComb.Elements.Add(_candleElement);
 	
 	// 订阅 K线接收事件

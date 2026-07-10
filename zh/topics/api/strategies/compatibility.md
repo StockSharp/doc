@@ -49,7 +49,7 @@ public int LongSmaLength
 public SmaStrategy()
 {
 	_longSmaLength = Param(nameof(LongSmaLength), 80)
-						.SetDisplay("Long SMA length", string.Empty, "基本设置");
+						.SetDisplay("长期 SMA 周期", string.Empty, "基本设置");
 }
 
 // 错误：使用普通属性
@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(Series, Security);
+	var subscription = new Subscription(序列, Security);
 
 	// 正确：使用规则处理数据
 	Connector
@@ -316,7 +316,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Series
+	public DataType 序列
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -344,15 +344,15 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
-							.SetDisplay("Long SMA length", string.Empty, "基本设置")
+							.SetDisplay("长期 SMA 周期", string.Empty, "基本设置")
 							.SetCanOptimize(true);
 							
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
-							.SetDisplay("Short SMA length", string.Empty, "基本设置")
+							.SetDisplay("短期 SMA 周期", string.Empty, "基本设置")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-					.SetDisplay("Series", string.Empty, "基本设置");
+		_series = Param(nameof(序列), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+					.SetDisplay("序列", string.Empty, "基本设置");
 	}
 
 	protected override void OnStarted2(DateTime time)
@@ -370,7 +370,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(Series, Security);
+		var subscription = new Subscription(序列, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)

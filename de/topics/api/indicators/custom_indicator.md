@@ -42,7 +42,7 @@ public class SimpleMovingAverage : LengthIndicator<decimal>
 ```
 
 
-[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) erbt von [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1), von dem alle Indikatoren mit einem Parameter für die Periodenlänge erben müssen.
+[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) erbt von [LengthIndicator\<TResult\>](xref:StockSharp.Algo.Indicators.LengthIndicator`1), von dem alle Indikatoren mit einem Parameter für die Periodeenlänge erben müssen.
 
 ## Wichtige Indikatoreigenschaften und -methoden
 
@@ -91,8 +91,8 @@ public override void Save(SettingsStorage storage)
 {
 	base.Save(storage);
 
-	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-	storage.SetValue(nameof(LongPeriod), LongPeriod);
+	storage.SetValue(nameof(ShortPeriode), ShortPeriode);
+	storage.SetValue(nameof(LongPeriode), LongPeriode);
 }
 
 /// <inheritdoc />
@@ -100,27 +100,27 @@ public override void Load(SettingsStorage storage)
 {
 	base.Load(storage);
 
-	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+	ShortPeriode = storage.GetValue<int>(nameof(ShortPeriode));
+	LongPeriode = storage.GetValue<int>(nameof(LongPeriode));
 }
 ```
 
 ## Zusammengesetzte Indikatoren
 
-Einige Indikatoren sind zusammengesetzt und verwenden andere Indikatoren in ihren Berechnungen. Daher können Indikatoren gegenseitig wiederverwendet werden, wie im Beispiel der Implementierung des Chaikin-Volatility-Indikators [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility) gezeigt:
+Einige Indikatoren sind zusammengesetzt und verwenden andere Indikatoren in ihren Berechnungen. Daher können Indikatoren gegenseitig wiederverwendet werden, wie im Beispiel der Implementierung des Chaikin-Volatilität-Indikators [ChaikinVolatilität](xref:StockSharp.Algo.Indicators.ChaikinVolatilität) gezeigt:
 
 ```cs
 /// <summary>
 /// Chaikin-Volatilität.
 /// </summary>
-[DisplayName("Volatility")]
-[Description("Chaikin Volatility.")]
-public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
+[DisplayName("Volatilität")]
+[Description("Chaikin-Volatilität.")]
+public class ChaikinVolatilität : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// <see cref="ChaikinVolatility"/> erstellen.
+	/// <see cref="ChaikinVolatilität"/> erstellen.
 	/// </summary>
-	public ChaikinVolatility()
+	public ChaikinVolatilität()
 	{
 		Ema = new ExponentialMovingAverage();
 		Roc = new RateOfChange();
@@ -131,8 +131,8 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("MA")]
-	[Description("Moving Average.")]
-	[Category("Main")]
+	[Description("Gleitender Durchschnitt.")]
+	[Category("Hauptgruppe")]
 	public ExponentialMovingAverage Ema { get; private set; }
 
 	/// <summary>
@@ -140,8 +140,8 @@ public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 	/// </summary>
 	[ExpandableObject]
 	[DisplayName("ROC")]
-	[Description("Rate of Change.")]
-	[Category("Main")]
+	[Description("Änderungsrate.")]
+	[Category("Hauptgruppe")]
 	public RateOfChange Roc { get; private set; }
 
 	/// <summary>
@@ -181,7 +181,7 @@ Der letzte Typ von Indikatoren besteht nicht nur aus anderen Indikatoren, sonder
 /// Welles Wilders Average Directional Index.
 /// </summary>
 [DisplayName("ADX")]
-[Description("Welles Wilder's Average Directional Index.")]
+[Description("Welles Wilders durchschnittlicher Richtungsindex.")]
 public class AverageDirectionalIndex : BaseComplexIndicator
 {
 	/// <summary>
@@ -222,11 +222,11 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	public LengthIndicator<decimal> MovingAverage { get; private set; }
 
 	/// <summary>
-	/// Periodenlänge.
+	/// Periodeenlänge.
 	/// </summary>
-	[DisplayName("Period")]
-	[Description("Indicator period.")]
-	[Category("Main")]
+	[DisplayName("Periode")]
+	[Description("Indikatorperiode.")]
+	[Category("Hauptgruppe")]
 	public virtual int Length
 	{
 		get { return MovingAverage.Length; }
@@ -267,8 +267,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public PercentageVolumeOscillator()
 		: this(new(), new())
 	{
-		ShortPeriod = 12;
-		LongPeriod = 26;
+		ShortPeriode = 12;
+		LongPeriode = 26;
 	}
 
 	/// <summary>
@@ -284,28 +284,28 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Kurze Periode.
+	/// Kurze Periodee.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.ShortPeriodKey,
+		Name = LocalizedStrings.ShortPeriodeKey,
 		Description = LocalizedStrings.ShortMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int ShortPeriod
+	public int ShortPeriode
 	{
 		get => _shortEma.Length;
 		set => _shortEma.Length = value;
 	}
 
 	/// <summary>
-	/// Länge Periode.
+	/// Länge Periodee.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.LongPeriodKey,
+		Name = LocalizedStrings.LongPeriodeKey,
 		Description = LocalizedStrings.LongMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int LongPeriod
+	public int LongPeriode
 	{
 		get => _longEma.Length;
 		set => _longEma.Length = value;
@@ -348,8 +348,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Save(storage);
 
-		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
-		storage.SetValue(nameof(LongPeriod), LongPeriod);
+		storage.SetValue(nameof(ShortPeriode), ShortPeriode);
+		storage.SetValue(nameof(LongPeriode), LongPeriode);
 	}
 
 	/// <inheritdoc />
@@ -357,12 +357,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Load(storage);
 
-		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
-		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
+		ShortPeriode = storage.GetValue<int>(nameof(ShortPeriode));
+		LongPeriode = storage.GetValue<int>(nameof(LongPeriode));
 	}
 
 	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
+	public override string ToString() => base.ToString() + $" S={ShortPeriode},L={LongPeriode}";
 
 	/// <inheritdoc />
 	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)

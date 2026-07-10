@@ -23,7 +23,7 @@ public class SmaStrategy : Strategy
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Configuración básica");
+							.SetDisplay("Longitud de la SMA larga", string.Empty, "Configuración básica");
 	}
 }
 ```
@@ -40,7 +40,7 @@ El método [StrategyParam\<T\>.SetDisplay](xref:StockSharp.Algo.Strategies.Strat
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-					.SetDisplay("Long SMA length", "Period of the long moving average", "Configuración básica");
+					.SetDisplay("Longitud de la SMA larga", "Período de la media móvil larga", "Configuración básica");
 ```
 
 ### SetValidator
@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Series
+	public DataType Serie
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -218,18 +218,18 @@ public class SmaStrategy : Strategy
 		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Configuración básica")
+							.SetDisplay("Longitud de la SMA larga", string.Empty, "Configuración básica")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
 		
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
-							.SetDisplay("Short SMA length", string.Empty, "Configuración básica")
+							.SetDisplay("Longitud de la SMA corta", string.Empty, "Configuración básica")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-					.SetDisplay("Series", string.Empty, "Configuración básica");
+		_series = Param(nameof(Serie), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+					.SetDisplay("Serie", string.Empty, "Configuración básica");
 	}
 
 	// ...
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 En este ejemplo, creamos una estrategia basada en el cruce de dos medias móviles con tres parámetros configurables:
-- `Series` - tipo de datos y marco temporal
+- `Serie` - tipo de datos y marco temporal
 - `LongSmaLength` - periodo de la media móvil larga
 - `ShortSmaLength` - periodo de la media móvil corta
 

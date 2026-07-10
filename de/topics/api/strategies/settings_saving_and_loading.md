@@ -22,7 +22,7 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
-							.SetDisplay("Long SMA length", string.Empty, "Grundeinstellungen");
+							.SetDisplay("Länge der langen SMA", string.Empty, "Grundeinstellungen");
 	}
 }
 ```

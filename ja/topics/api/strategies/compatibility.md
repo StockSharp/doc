@@ -49,7 +49,7 @@ public int LongSmaLength
 public SmaStrategy()
 {
 	_longSmaLength = Param(nameof(LongSmaLength), 80)
-						.SetDisplay("Long SMA length", string.Empty, "基本設定");
+						.SetDisplay("長期SMAの期間", string.Empty, "基本設定");
 }
 
 // 誤り: 通常のプロパティを使用
@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(Series, Security);
+	var subscription = new Subscription(シリーズ, Security);
 
 	// 正しい: データ処理にルールを使用
 	Connector
@@ -319,7 +319,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Series
+	public DataType シリーズ
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -347,15 +347,15 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
-							.SetDisplay("Long SMA length", string.Empty, "基本設定")
+							.SetDisplay("長期SMAの期間", string.Empty, "基本設定")
 							.SetCanOptimize(true);
 							
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
-							.SetDisplay("Short SMA length", string.Empty, "基本設定")
+							.SetDisplay("短期SMAの期間", string.Empty, "基本設定")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
-					.SetDisplay("Series", string.Empty, "基本設定");
+		_series = Param(nameof(シリーズ), TimeSpan.FromMinutes(15).TimeFrame())
+					.SetDisplay("シリーズ", string.Empty, "基本設定");
 	}
 
 	protected override void OnStarted2(DateTime time)
@@ -373,7 +373,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(Series, Security);
+		var subscription = new Subscription(シリーズ, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)

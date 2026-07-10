@@ -21,7 +21,7 @@ private void InitializeChart()
 	_chart.Areas.Add(_areaComb);
 	
 	// ローソク足を表すチャート要素を作成
-	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
+	_candleElement = new ChartCandleElement() { FullTitle = "ローソク足" };
 	_areaComb.Elements.Add(_candleElement);
 	
 	// ローソク足受信イベントを購読

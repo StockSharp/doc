@@ -23,7 +23,7 @@ public class SmaStrategy : Strategy
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "基本设置");
+							.SetDisplay("长期 SMA 周期", string.Empty, "基本设置");
 	}
 }
 ```
@@ -40,7 +40,7 @@ public class SmaStrategy : Strategy
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-					.SetDisplay("Long SMA length", "Period of the long moving average", "基本设置");
+					.SetDisplay("长期 SMA 周期", "长期移动平均周期", "基本设置");
 ```
 
 ### 设置验证器
@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Series
+	public DataType 序列
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -218,18 +218,18 @@ public class SmaStrategy : Strategy
 		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "基本设置")
+							.SetDisplay("长期 SMA 周期", string.Empty, "基本设置")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
 		
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
-							.SetDisplay("Short SMA length", string.Empty, "基本设置")
+							.SetDisplay("短期 SMA 周期", string.Empty, "基本设置")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-					.SetDisplay("Series", string.Empty, "基本设置");
+		_series = Param(nameof(序列), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+					.SetDisplay("序列", string.Empty, "基本设置");
 	}
 
 	// ...
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 在此示例中，我们创建了一个基于两条移动平均线交叉的策略，并具有三个可配置参数：
-- `Series` - 数据类型和时间范围
+- `序列` - 数据类型和时间范围
 - `LongSmaLength` - 长期移动平均线的周期
 - `ShortSmaLength` - 短期移动平均线的周期
 

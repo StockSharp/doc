@@ -21,7 +21,7 @@ private void InitializeChart()
 	_chart.Areas.Add(_areaComb);
 
 	// Criar elemento do gráfico que representa velas
-	_candleElement = new ChartCandleElement() { FullTitle = "Candles" };
+	_candleElement = new ChartCandleElement() { FullTitle = "Velas" };
 	_areaComb.Elements.Add(_candleElement);
 
 	// Assinar o evento de recebimento de velas

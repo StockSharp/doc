@@ -49,7 +49,7 @@ public int LongSmaLength
 public SmaStrategy()
 {
 	_longSmaLength = Param(nameof(LongSmaLength), 80)
-						.SetDisplay("Long SMA length", string.Empty, "Configurações básicas");
+						.SetDisplay("Período da SMA longa", string.Empty, "Configurações básicas");
 }
 
 // Incorreto: usando propriedades comuns
@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(Series, Security);
+	var subscription = new Subscription(Série, Security);
 
 	// Correto: usando regras para processamento de dados
 	Connector
@@ -320,7 +320,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Series
+	public DataType Série
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -348,15 +348,15 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
-							.SetDisplay("Long SMA length", string.Empty, "Configurações básicas")
+							.SetDisplay("Período da SMA longa", string.Empty, "Configurações básicas")
 							.SetCanOptimize(true);
 							
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
-							.SetDisplay("Short SMA length", string.Empty, "Configurações básicas")
+							.SetDisplay("Período da SMA curta", string.Empty, "Configurações básicas")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
-					.SetDisplay("Series", string.Empty, "Configurações básicas");
+		_series = Param(nameof(Série), TimeSpan.FromMinutes(15).TimeFrame())
+					.SetDisplay("Série", string.Empty, "Configurações básicas");
 	}
 
 	protected override void OnStarted2(DateTime time)
@@ -374,7 +374,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(Series, Security);
+		var subscription = new Subscription(Série, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)

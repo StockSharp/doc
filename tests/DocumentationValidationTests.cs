@@ -165,11 +165,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"accepted",
 		"adapter",
 		"adapters",
+		"average",
 		"buy",
 		"canceled",
 		"cancelled",
 		"candle",
 		"candles",
+		"change",
 		"commission",
 		"completed",
 		"configured",
@@ -188,14 +190,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"found",
 		"general",
 		"greater",
+		"index",
+		"indicator",
 		"instrument",
 		"instruments",
 		"invalid",
 		"large",
 		"level",
+		"length",
 		"less",
 		"loaded",
 		"logging",
+		"long",
 		"lost",
 		"main",
 		"message",
@@ -204,6 +210,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"min",
 		"minimum",
 		"mode",
+		"moving",
 		"not",
 		"online",
 		"operation",
@@ -212,8 +219,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"parameter",
 		"parameters",
 		"percentage",
+		"period",
 		"price",
 		"profit",
+		"rate",
 		"received",
 		"register",
 		"registration",
@@ -221,9 +230,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"rule",
 		"search",
 		"sell",
+		"series",
 		"setting",
 		"settings",
 		"signal",
+		"simple",
 		"spread",
 		"successfully",
 		"threshold",
@@ -234,6 +245,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"value",
 		"values",
 		"volume",
+		"volatility",
 	};
 
 	private static readonly HashSet<string> _allowedInvariantCodeOutputWords = new(StringComparer.OrdinalIgnoreCase)
@@ -2445,6 +2457,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
 			{
+				foreach (var value in EnumerateCodeUiAttributeStrings(text))
+					yield return new CodeUiString(value, line);
+
+				foreach (var value in EnumerateCodeUiAssignmentStrings(text))
+					yield return new CodeUiString(value, line);
+
 				if (!inUiInvocation && IsCodeUiInvocationStart(text))
 					inUiInvocation = true;
 
@@ -2464,6 +2482,26 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				if (IsCodeUiInvocationEnd(text))
 					inUiInvocation = false;
 			}
+		}
+	}
+
+	private static IEnumerable<string> EnumerateCodeUiAttributeStrings(string text)
+	{
+		foreach (Match match in Regex.Matches(text, @"\[(?:DisplayName|Description|Category)\(\s*""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+		{
+			var value = NormalizeCodeUiStringForTranslationCheck(match.Groups["value"].Value);
+			if (value.Length > 0)
+				yield return value;
+		}
+	}
+
+	private static IEnumerable<string> EnumerateCodeUiAssignmentStrings(string text)
+	{
+		foreach (Match match in Regex.Matches(text, @"\bFullTitle\s*=\s*""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+		{
+			var value = NormalizeCodeUiStringForTranslationCheck(match.Groups["value"].Value);
+			if (value.Length > 0)
+				yield return value;
 		}
 	}
 
