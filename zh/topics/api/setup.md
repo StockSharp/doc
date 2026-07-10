@@ -135,13 +135,13 @@ dotnet add package StockSharp.Algo.Strategies
 # 连接器（示例 — Binance）
 dotnet add package StockSharp.Binance
 
-# Indicators
+# 指标
 dotnet add package StockSharp.Algo.Indicators
 
-# Backtesting
+# 回测
 dotnet add package StockSharp.Algo.Testing
 
-# Localization (Russian)
+# 本地化（俄语）
 dotnet add package StockSharp.Localization.ru
 ```
 

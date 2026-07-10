@@ -200,7 +200,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Backtesting",
 		"Connector",
 		"Core",
+		"Indicators",
 		"Localization",
+		"Localization (Russian)",
 		"parameters",
 		"Strategies and indicators",
 	};
@@ -3703,6 +3705,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		if (text.Length < 12 && !_knownEnglishCodeCommentLabels.Contains(text))
 			return string.Empty;
+
+		if (_knownEnglishCodeCommentLabels.Contains(text))
+			return text;
 
 		// Skip XML doc boilerplate, commented-out code, identifiers, and compiler/preprocessor directives.
 		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|[;{}=()]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))

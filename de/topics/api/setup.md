@@ -138,7 +138,7 @@ dotnet add package StockSharp.Binance
 # Indikatoren
 dotnet add package StockSharp.Algo.Indicators
 
-# Backtesting
+# Rücktests
 dotnet add package StockSharp.Algo.Testing
 
 # Lokalisierung (Russisch)
