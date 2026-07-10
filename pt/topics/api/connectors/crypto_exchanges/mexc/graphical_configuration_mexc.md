@@ -6,5 +6,5 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 - **chave** - chave.
 - **segredo** - segredo.
-- **Demo** - modo de demonstração.
+- **Demonstração** - modo de demonstração.
 - **Definições de religação** - parâmetros do mecanismo de reconexão com o sistema de negociação ([Definições de reconexão](../../reconnection_settings.md)).

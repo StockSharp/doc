@@ -8,8 +8,8 @@ Hauptfelder:
  - **Privater Schlüssel** - privater Schlüssel für signierte Aktionen.
  - **Vault-Adresse** - optionale Vault- oder Unterkonto-Adresse.
  - **Ablaufzeit** - optionaler Zeitstempel für den Ablauf der Signatur.
-- **Section** - Handelssektion (`Spot` oder `Derivatives`).
-- **Testnet** - Testnet-Endpunkte.
+- **Handelsbereich** - Handelssektion (`Spot` oder `Derivatives`).
+- **Testnetz** - Testnet-Endpunkte.
  - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt** - Endpunkt-URLs.
 - **Markt-Slippage** - Standard-Slippage für Market-Orders.
 

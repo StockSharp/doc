@@ -6,7 +6,7 @@ Für alle [S\\#](../../../../api.md)-Produkte erfolgt die grafische Konfiguratio
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimer Schlüssel.
-- **Demo** - Verbindung zum Demo-Handel.
+- **Demomodus** - Verbindung zum Demo-Handel.
 
 ## Siehe auch
 

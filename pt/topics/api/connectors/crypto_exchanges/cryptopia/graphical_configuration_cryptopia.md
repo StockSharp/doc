@@ -9,7 +9,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 - **chave** - Chave.
 - **segredo** - Segredo.
-- **Balance** - Intervalo de verificação do saldo. Necessário em caso de operações de depósito e levantamento.
+- **Saldo** - Intervalo de verificação do saldo. Necessário em caso de operações de depósito e levantamento.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por defeito, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

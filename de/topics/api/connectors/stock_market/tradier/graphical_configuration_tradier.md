@@ -5,7 +5,7 @@ Für alle StockSharp-Produkte erfolgt die grafische Verbindungseinrichtung im [F
 ![API-GUI-Einstellungen Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **Token** - Autorisierungstoken.
-- **Demo** - Demomodus.
+- **Demomodus** - Demomodus.
 
 OAuth-Autorisierung:
 

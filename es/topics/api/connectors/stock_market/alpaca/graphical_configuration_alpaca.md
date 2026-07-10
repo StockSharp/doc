@@ -6,7 +6,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Demo** - Modo sandbox.
+- **Demostración** - Modo sandbox.
 
 ## Contenido recomendado
 

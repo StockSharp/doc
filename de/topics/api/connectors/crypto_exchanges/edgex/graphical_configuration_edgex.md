@@ -8,9 +8,9 @@ Wichtige Felder:
 - **Geheimnis** - API-Secret.
 - **Clearing-Konto** - Wert des Clearing-Kontos.
 - **Kennphrase** - Wert der Passphrase.
-- **Section** - Handelsbereich (`Spot` oder `Derivatives`).
+- **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Spot aktivieren** - aktiviert den Spot-Bereich.
-- **Demo** - Modus der Demo-Umgebung.
+- **Demomodus** - Modus der Demo-Umgebung.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives public WS / Derivatives private WS** - WebSocket-Endpunkte.
 

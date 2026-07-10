@@ -8,8 +8,8 @@ Campos principais:
  - **Chave privada** - chave privada para ações assinadas.
  - **Endereço do vault** - endereço opcional do vault ou da subconta.
  - **Expira após** - carimbo de data/hora opcional de expiração da assinatura.
-- **Section** - secção de negociação (`Spot` ou `Derivatives`).
-- **Testnet** - endpoints de testnet.
+- **Secção** - secção de negociação (`Spot` ou `Derivatives`).
+- **Rede de teste** - endpoints de testnet.
  - **Endpoint de informação / endpoint de exchange / endpoint WS** - URLs dos endpoints.
 - **Slippage de mercado** - slippage predefinido para ordens de mercado.
 

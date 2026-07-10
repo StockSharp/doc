@@ -5,11 +5,11 @@ Um mit dem Connector zu arbeiten, generieren Sie **API-Schlüssel** und **Geheim
 Haupteinstellungen:
 
 - **Schlüssel** und **Geheimnis**.
-- **Section**: `Spot` oder `Derivatives`.
+- **Handelsbereich**: `Spot` oder `Derivatives`.
 - **Derivatemodus**: `Legacy` oder `V3 Agent`.
 - **Spot REST / Spot WS**-Endpunkte.
 - **Derivatives REST / Derivatives WS**-Endpunkte.
-- **Demo**-Modus.
+- **Demomodus**.
 
 Offizielle API-Dokumentation:
 

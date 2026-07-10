@@ -4,15 +4,15 @@
 
 Основные поля:
 
-- **Key** - API ключ.
-- **Secret** - API секрет.
-- **Account index** - индекс аккаунта.
-- **API key index** - индекс API ключа.
-- **Section** - торговая секция (`Spot` или `Derivatives`).
-- **Demo** - режим демо среды.
+- **Ключ** - API ключ.
+- **Секрет** - API секрет.
+- **Индекс аккаунта** - индекс аккаунта.
+- **Индекс API-ключа** - индекс API ключа.
+- **Секция** - торговая секция (`Spot` или `Derivatives`).
+- **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
 - **Spot WS / Derivatives WS** - websocket адреса.
-- **WS read-only mode** - флаг read-only режима websocket.
+- **Режим WS только для чтения** - флаг read-only режима websocket.
 
 ## См. также
 

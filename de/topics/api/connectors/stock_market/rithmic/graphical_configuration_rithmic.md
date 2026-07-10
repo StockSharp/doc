@@ -18,8 +18,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Punkt (Historie)** - Verbindungspunkt für den Zugriff auf historische Daten.
 - **Domain (Adresse)** - Domainadresse.
 - **Domain (Name)** - Domainname.
-- **Licenses** - Adresse des Lizenzservers.
-- **Broker** - Brokeradresse.
+- **Lizenzen** - Adresse des Lizenzservers.
+- **Brokeradresse** - Brokeradresse.
 - **Log (Adresse)** - Logger-Adresse.
 - **Benutzername (hist)** - Zusätzliches Login. Benutzer-ID für die Authentifizierung beim History Plant.
 - **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim History Plant.

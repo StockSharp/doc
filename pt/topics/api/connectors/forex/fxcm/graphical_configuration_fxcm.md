@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **Token** - Token.
-- **Demo** - Ligar à negociação demo em vez do servidor de negociação real.
+- **Demonstração** - Ligar à negociação demo em vez do servidor de negociação real.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

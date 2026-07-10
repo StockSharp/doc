@@ -10,7 +10,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **clave** - Clave.
 - **secreto** - Secreto.
 - **dominio (dirección)** - Dirección de dominio.
-- **Balance** - Intervalo de comprobación del balance. Necesario en caso de acciones de depósito y retiro.
+- **Saldo** - Intervalo de comprobación del balance. Necesario en caso de acciones de depósito y retiro.
 - **contraseña** - Contraseña administrativa.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))

@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.
-- **Demo** - Sandbox-Modus.
+- **Demomodus** - Sandbox-Modus.
 
 ## Empfohlene Inhalte
 

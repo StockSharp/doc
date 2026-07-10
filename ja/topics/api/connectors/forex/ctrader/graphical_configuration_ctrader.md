@@ -4,7 +4,7 @@
 
 ![API GUI 設定 cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
-- **Demo** - デモ取引への接続。
+- **デモ** - デモ取引への接続。
 
 OAuth 認証:
 

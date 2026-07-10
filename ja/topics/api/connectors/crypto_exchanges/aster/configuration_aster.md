@@ -5,11 +5,11 @@
 主な設定:
 
 - **キー** と **シークレット**。
-- **Section**: `Spot` または `Derivatives`。
+- **セクション**: `Spot` または `Derivatives`。
 - **デリバティブモード**: `Legacy` または `V3 Agent`。
 - **Spot REST / Spot WS** エンドポイント。
 - **Derivatives REST / Derivatives WS** エンドポイント。
-- **Demo** モード。
+- **デモ** モード。
 
 公式 API ドキュメント:
 

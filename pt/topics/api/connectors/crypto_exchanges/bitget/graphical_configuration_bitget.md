@@ -6,8 +6,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 - **chave** - Chave.
 - **segredo** - Segredo.
-- **Sections** - Seções de negociação.
-- **Demo** - Conexão à negociação demo.
+- **Secções** - Seções de negociação.
+- **Demonstração** - Conexão à negociação demo.
 
 ## Veja também
 

@@ -8,9 +8,9 @@ Wichtige Felder:
 - **Geheimnis** - API-Secret.
 - **Starknet-Konto** - Header-Wert des Starknet-Kontos.
 - **Starknet-Schlüssel** - Material des privaten Starknet-Schlüssels.
-- **Section** - Handelsbereich (`Spot` oder `Derivatives`).
+- **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Spot aktivieren** - aktiviert den Spot-Bereich.
-- **Demo** - Demoumgebungsmodus.
+- **Demomodus** - Demoumgebungsmodus.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives WS** - Websocket-Endpunkte.
 - **Authentifizierungspfad** - Pfad des Authentifizierungsendpunkts.

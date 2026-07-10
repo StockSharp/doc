@@ -8,8 +8,8 @@ Definições principais:
  - **Chave privada**.
  - **Endereço do vault** (opcional).
  - **Expira após** (opcional).
-- **Section**: `Spot` ou `Derivatives`.
-- Modo **Testnet**.
+- **Secção**: `Spot` ou `Derivatives`.
+- Modo de **rede de teste**.
  - **Endpoint de informação / endpoint de exchange / endpoint WS**.
 - **Slippage de mercado** para ordens de mercado.
 

@@ -156,6 +156,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"WPF Application",
 	];
 
+	private static readonly HashSet<string> _knownEnglishBoldUiLabels = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"Account index",
+		"API Key",
+		"API key index",
+		"Balance",
+		"Broker",
+		"Clearing account",
+		"Demo",
+		"Derivatives mode",
+		"Expires after",
+		"Info endpoint / Exchange endpoint / WS endpoint",
+		"Key",
+		"Licenses",
+		"Market slippage",
+		"Passphrase",
+		"Private key",
+		"Section",
+		"Sections",
+		"Secret",
+		"Starknet account",
+		"Starknet key",
+		"Testnet",
+		"Vault address",
+		"Wallet address",
+		"WS read-only mode",
+	};
+
 	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"Description",
@@ -1157,6 +1185,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English UI phrase '{phrase}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownDoesNotKeepKnownEnglishBoldUiLabels()
+	{
+		var errors = new List<string>();
+		var boldPattern = new Regex(@"\*\*(?<label>[^*`\r\n]+)\*\*", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (Match match in boldPattern.Matches(text))
+					{
+						var label = Regex.Replace(match.Groups["label"].Value.Trim(), @"\s+", " ", RegexOptions.CultureInvariant);
+						if (!_knownEnglishBoldUiLabels.Contains(label))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English bold UI label '{label}'.");
 					}
 				}
 			}

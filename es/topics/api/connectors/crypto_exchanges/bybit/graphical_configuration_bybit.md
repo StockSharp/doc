@@ -6,8 +6,8 @@ Para todos los productos de [S#](../../../../api.md), la configuración gráfica
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Sections** - Secciones de trading.
-- **Demo** - Conexión al trading demo.
+- **Secciones** - Secciones de trading.
+- **Demostración** - Conexión al trading demo.
 
 ## Véase también
 

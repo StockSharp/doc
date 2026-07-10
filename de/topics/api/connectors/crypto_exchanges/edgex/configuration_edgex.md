@@ -6,9 +6,9 @@ Wichtige Einstellungen:
 
 - **Schlüssel** und **Geheimnis**.
 - **Clearing-Konto** und **Kennphrase**.
-- **Section**: `Spot` oder `Derivatives`.
+- **Handelsbereich**: `Spot` oder `Derivatives`.
 - **Spot aktivieren**: aktiviert den Spot-Bereich, sofern API-Unterstützung verfügbar ist.
-- **Demo**-Modus.
+- **Demomodus**.
 - **Spot REST / Derivatives REST**-Endpunkte.
 - **Spot WS / Derivatives public WS / Derivatives private WS**-Endpunkte.
 

@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimer Schlüssel.
-- **Balance** - Intervall zur Kontostandsprüfung. Erforderlich bei Einzahlungen und Auszahlungen.
+- **Saldo** - Intervall zur Kontostandsprüfung. Erforderlich bei Einzahlungen und Auszahlungen.
 - **Passwort** - Administratives Passwort.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

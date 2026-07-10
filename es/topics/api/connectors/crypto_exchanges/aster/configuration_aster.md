@@ -5,11 +5,11 @@ Para trabajar con el conector, genere una **clave API** y un **secreto** en la c
 Configuraciones principales:
 
 - **clave** y **secreto**.
-- **Section**: `Spot` o `Derivatives`.
+- **Sección**: `Spot` o `Derivatives`.
 - **Modo de derivados**: `Legacy` o `V3 Agent`.
 - Endpoints **Spot REST / Spot WS**.
 - Endpoints **Derivatives REST / Derivatives WS**.
-- Modo **Demo**.
+- Modo de **demostración**.
 
 Documentación oficial de la API:
 

@@ -8,9 +8,9 @@
 - **シークレット** - API シークレット。
 - **清算口座** - 清算アカウントの値。
 - **パスフレーズ** - パスフレーズの値。
-- **Section** - 取引セクション（`Spot` または `Derivatives`）。
+- **セクション** - 取引セクション（`Spot` または `Derivatives`）。
 - **スポットを有効化** - スポットセクションを有効にします。
-- **Demo** - デモ環境モード。
+- **デモ** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives public WS / Derivatives private WS** - websocket エンドポイント。
 

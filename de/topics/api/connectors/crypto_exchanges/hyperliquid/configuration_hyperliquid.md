@@ -8,8 +8,8 @@ Haupteinstellungen:
  - **Privater Schlüssel**.
  - **Vault-Adresse** (optional).
  - **Ablaufzeit** (optional).
-- **Section**: `Spot` oder `Derivatives`.
-- **Testnet**-Modus.
+- **Handelsbereich**: `Spot` oder `Derivatives`.
+- **Testnetzmodus**.
  - **Info-Endpunkt / Exchange-Endpunkt / WS-Endpunkt**.
 - **Markt-Slippage** für Market-Orders.
 

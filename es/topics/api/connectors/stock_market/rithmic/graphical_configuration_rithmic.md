@@ -18,8 +18,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Punto (historial)** - Punto de conexión para acceder a datos históricos.
 - **dominio (dirección)** - Dirección de dominio.
 - **dominio (nombre)** - Nombre de dominio.
-- **Licenses** - Dirección del servidor de licencias.
-- **Broker** - Dirección del bróker.
+- **Licencias** - Dirección del servidor de licencias.
+- **Bróker** - Dirección del bróker.
 - **Registro (dirección)** - Dirección del logger.
 - **Nombre de usuario (hist)** - Login adicional. ID de usuario usado para autenticarse con history plant.
 - **contraseña (historial)** - Contraseña adicional. Contraseña usada para autenticarse con history plant

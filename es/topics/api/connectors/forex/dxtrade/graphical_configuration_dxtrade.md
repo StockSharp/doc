@@ -6,7 +6,7 @@ Para todos los productos [S\\#](../../../../api.md), la configuración gráfica 
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Demo** - Conexión al trading demo.
+- **Demostración** - Conexión al trading demo.
 
 ## Ver también
 

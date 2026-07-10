@@ -6,8 +6,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.
-- **Sections** - Handelssektionen.
-- **Demo** - Verbindung zum Demo-Handel.
+- **Handelsbereiche** - Handelssektionen.
+- **Demomodus** - Verbindung zum Demo-Handel.
 
 ## Siehe auch
 

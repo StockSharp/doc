@@ -8,8 +8,8 @@ Configuración principal:
  - **Clave privada**.
  - **Dirección de vault** (opcional).
  - **Expira después de** (opcional).
-- **Section**: `Spot` o `Derivatives`.
-- Modo **Testnet**.
+- **Sección**: `Spot` o `Derivatives`.
+- Modo de **red de pruebas**.
  - **Endpoint de información / endpoint de exchange / endpoint WS**.
 - **Deslizamiento de mercado** para órdenes de mercado.
 

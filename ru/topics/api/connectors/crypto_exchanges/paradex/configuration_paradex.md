@@ -4,11 +4,11 @@
 
 Основные настройки:
 
-- **Key** и **Secret**.
-- **Starknet account** и **Starknet key**.
-- **Section**: `Spot` или `Derivatives`.
+- **Ключ** и **Секрет**.
+- **Аккаунт Starknet** и **Ключ Starknet**.
+- **Секция**: `Spot` или `Derivatives`.
 - **Включить спот**: включает секцию spot, если она поддерживается API.
-- режим **Demo**.
+- режим **демонстрации**.
 - адреса **Spot REST / Derivatives REST**.
 - адреса **Spot WS / Derivatives WS**.
 - **Путь аутентификации** (по умолчанию: `/v1/auth`).

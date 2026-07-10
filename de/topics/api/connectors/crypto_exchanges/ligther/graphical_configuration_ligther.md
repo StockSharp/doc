@@ -8,8 +8,8 @@ Hauptfelder:
 - **Geheimnis** - API-Secret.
 - **Kontoindex** - Kontoindex.
 - **API-Schlüsselindex** - API-Schlüsselindex.
-- **Section** - Handelssektion (`Spot` oder `Derivatives`).
-- **Demo** - Modus für die Demo-Umgebung.
+- **Handelsbereich** - Handelssektion (`Spot` oder `Derivatives`).
+- **Demomodus** - Modus für die Demo-Umgebung.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives WS** - Websocket-Endpunkte.
  - **Schreibgeschützter WS-Modus** - Flag für den schreibgeschützten Websocket-Modus.

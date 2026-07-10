@@ -10,7 +10,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimschlüssel.
 - **Domain (Adresse)** - Domänenadresse.
-- **Balance** - Intervall der Guthabenprüfung. Erforderlich bei Ein- und Auszahlungsaktionen.
+- **Saldo** - Intervall der Guthabenprüfung. Erforderlich bei Ein- und Auszahlungsaktionen.
 - **Passwort** - Administratives Passwort.
 - **Verbindungsprüfung** - Intervall der Serverprüfung zur Überwachung der Verbindung. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))

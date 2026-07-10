@@ -6,8 +6,8 @@ Configuración principal:
 
 - **clave** y **secreto**.
 - **Índice de cuenta** y **Índice de clave API**.
-- **Section**: `Spot` o `Derivatives`.
-- Modo **Demo**.
+- **Sección**: `Spot` o `Derivatives`.
+- Modo de **demostración**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
  - **Modo WS de solo lectura**.

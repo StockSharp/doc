@@ -5,11 +5,11 @@ Para trabalhar com o conector, gere a **chave API** e o **segredo** na conta da 
 Definições principais:
 
 - **chave** e **segredo**.
-- **Section**: `Spot` ou `Derivatives`.
+- **Secção**: `Spot` ou `Derivatives`.
 - **Modo de derivativos**: `Legacy` ou `V3 Agent`.
 - Endpoints **Spot REST / Spot WS**.
 - Endpoints **Derivatives REST / Derivatives WS**.
-- Modo **Demo**.
+- Modo de **demonstração**.
 
 Documentação oficial da API:
 

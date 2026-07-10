@@ -8,8 +8,8 @@ Campos principales:
  - **Clave privada** - clave privada para acciones firmadas.
  - **Dirección de vault** - dirección opcional de vault o subcuenta.
  - **Expira después de** - marca de tiempo opcional de expiración de la firma.
-- **Section** - sección de trading (`Spot` o `Derivatives`).
-- **Testnet** - endpoints de testnet.
+- **Sección** - sección de trading (`Spot` o `Derivatives`).
+- **Red de pruebas** - endpoints de testnet.
  - **Endpoint de información / endpoint de exchange / endpoint WS** - URL de endpoints.
 - **Deslizamiento de mercado** - deslizamiento predeterminado para órdenes de mercado.
 

@@ -6,8 +6,8 @@
 
 - **キー** と **シークレット**。
 - **アカウントインデックス** と **API キーインデックス**。
-- **Section**: `Spot` または `Derivatives`。
-- **Demo** モード。
+- **セクション**: `Spot` または `Derivatives`。
+- **デモ** モード。
 - **Spot REST / Derivatives REST** エンドポイント。
 - **Spot WS / Derivatives WS** エンドポイント。
  - **WS 読み取り専用モード**。

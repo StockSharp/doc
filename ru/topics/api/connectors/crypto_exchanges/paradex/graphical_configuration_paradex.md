@@ -4,13 +4,13 @@
 
 Основные поля:
 
-- **Key** - API ключ.
-- **Secret** - API секрет.
-- **Starknet account** - значение заголовка Starknet account.
-- **Starknet key** - приватный ключ Starknet для подписи.
-- **Section** - торговая секция (`Spot` или `Derivatives`).
+- **Ключ** - API ключ.
+- **Секрет** - API секрет.
+- **Аккаунт Starknet** - значение заголовка Starknet account.
+- **Ключ Starknet** - приватный ключ Starknet для подписи.
+- **Секция** - торговая секция (`Spot` или `Derivatives`).
 - **Включить спот** - включает секцию spot.
-- **Demo** - режим демо среды.
+- **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
 - **Spot WS / Derivatives WS** - websocket адреса.
 - **Путь аутентификации** - путь auth endpoint.

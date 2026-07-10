@@ -6,7 +6,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 - **chave** - Chave.
 - **segredo** - Chave secreta.
-- **Demo** - Conectar à negociação demo em vez do servidor de negociação real.
+- **Demonstração** - Conectar à negociação demo em vez do servidor de negociação real.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.
 - **Definições de religação** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
 

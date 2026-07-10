@@ -6,8 +6,8 @@ Haupteinstellungen:
 
 - **Schlüssel** und **Geheimnis**.
 - **Kontoindex** und **API-Schlüsselindex**.
-- **Section**: `Spot` oder `Derivatives`.
-- **Demo**-Modus.
+- **Handelsbereich**: `Spot` oder `Derivatives`.
+- **Demomodus**.
 - **Spot REST / Derivatives REST**-Endpunkte.
 - **Spot WS / Derivatives WS**-Endpunkte.
  - **Schreibgeschützter WS-Modus**.

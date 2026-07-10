@@ -18,8 +18,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Ponto (histórico)** - Ponto de ligação para acesso a dados históricos.
 - **domínio (endereço)** - Endereço do domínio.
 - **domínio (nome)** - Nome do domínio.
-- **Licenses** - Endereço do servidor de licenças.
-- **Broker** - Endereço do corretor.
+- **Licenças** - Endereço do servidor de licenças.
+- **Corretor** - Endereço do corretor.
 - **Log (endereço)** - Endereço do logger.
 - **Nome de utilizador (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
 - **palavra-passe (histórico)** - Password adicional. Password utilizada para autenticação com a history plant.

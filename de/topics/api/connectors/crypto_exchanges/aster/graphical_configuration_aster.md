@@ -6,9 +6,9 @@ Hauptfelder:
 
 - **Schlüssel** - API-Schlüssel.
 - **Geheimnis** - API-Secret.
-- **Section** - Handelsbereich (`Spot` oder `Derivatives`).
+- **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Derivatemodus** - Derivate-Protokollfamilie.
-- **Demo** - Demo-Umgebungsmodus.
+- **Demomodus** - Demo-Umgebungsmodus.
 - **Spot REST / Derivatives REST** - REST-Endpunkte.
 - **Spot WS / Derivatives WS** - Websocket-Endpunkte.
 

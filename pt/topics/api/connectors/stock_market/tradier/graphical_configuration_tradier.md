@@ -5,7 +5,7 @@ Para todos os produtos StockSharp, a configuração gráfica da ligação é rea
 ![Configurações da API GUI Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **Token** - Token de autorização.
-- **Demo** - Modo de demonstração.
+- **Demonstração** - Modo de demonstração.
 
 Autorização OAuth:
 

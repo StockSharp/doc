@@ -6,9 +6,9 @@ Campos principais:
 
 - **chave** - chave da API.
 - **segredo** - segredo da API.
-- **Section** - secção de negociação (`Spot` ou `Derivatives`).
+- **Secção** - secção de negociação (`Spot` ou `Derivatives`).
 - **Modo de derivativos** - família de protocolos de derivativos.
-- **Demo** - modo de ambiente demo.
+- **Demonstração** - modo de ambiente demo.
 - **Spot REST / Derivatives REST** - endpoints REST.
 - **Spot WS / Derivatives WS** - endpoints websocket.
 

@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **Token** - Token.
-- **Demo** - Verbindung zum Demo-Handel statt zum Live-Handelsserver.
+- **Demomodus** - Verbindung zum Demo-Handel statt zum Live-Handelsserver.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

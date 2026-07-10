@@ -6,7 +6,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Demo** - Conectarse al trading demo en lugar del servidor de trading real.
+- **Demostración** - Conectarse al trading demo en lugar del servidor de trading real.
 - **Código de verificación** - Código de verificación recibido por el usuario en el navegador tras confirmar el permiso del programa para trabajar.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))

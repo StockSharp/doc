@@ -8,8 +8,8 @@
 - **シークレット** - API シークレット。
 - **アカウントインデックス** - アカウント インデックス。
 - **API キーインデックス** - API キー インデックス。
-- **Section** - 取引セクション (`Spot` または `Derivatives`)。
-- **Demo** - デモ環境モード。
+- **セクション** - 取引セクション (`Spot` または `Derivatives`)。
+- **デモ** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives WS** - websocket エンドポイント。
  - **WS 読み取り専用モード** - WebSocket 読み取り専用モードのフラグ。

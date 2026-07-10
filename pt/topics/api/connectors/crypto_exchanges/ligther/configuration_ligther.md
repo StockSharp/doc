@@ -6,8 +6,8 @@ Definições principais:
 
 - **chave** e **segredo**.
 - **Índice da conta** e **Índice da chave API**.
-- **Section**: `Spot` ou `Derivatives`.
-- Modo **Demo**.
+- **Secção**: `Spot` ou `Derivatives`.
+- Modo de **demonstração**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
  - **Modo WS só de leitura**.

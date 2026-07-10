@@ -6,7 +6,7 @@ Para todos os produtos [S\\#](../../../../api.md), a configuração gráfica da 
 
 - **chave** - Key.
 - **segredo** - Secret.
-- **Demo** - Ligação à negociação demo.
+- **Demonstração** - Ligação à negociação demo.
 
 ## Ver também
 

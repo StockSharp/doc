@@ -6,7 +6,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 - **chave** - Chave.
 - **segredo** - Secret.
-- **Demo** - Modo sandbox.
+- **Demonstração** - Modo sandbox.
 
 ## Ver também
 

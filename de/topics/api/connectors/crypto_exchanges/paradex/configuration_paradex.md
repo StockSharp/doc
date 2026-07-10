@@ -6,9 +6,9 @@ Wichtige Einstellungen:
 
 - **Schlüssel** und **Geheimnis**.
 - **Starknet-Konto** und **Starknet-Schlüssel**.
-- **Section**: `Spot` oder `Derivatives`.
+- **Handelsbereich**: `Spot` oder `Derivatives`.
 - **Spot aktivieren**: aktiviert den Spot-Bereich, wenn die API-Unterstützung verfügbar ist.
-- **Demo**-Modus.
+- **Demomodus**.
 - **Spot REST / Derivatives REST**-Endpunkte.
 - **Spot WS / Derivatives WS**-Endpunkte.
 - **Authentifizierungspfad** (Standard: `/v1/auth`).

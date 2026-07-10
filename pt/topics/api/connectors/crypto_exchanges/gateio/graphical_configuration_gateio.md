@@ -6,8 +6,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 - **chave** - Key.
 - **segredo** - Secret.
-- **Sections** - Secções de negociação.
-- **Demo** - Ligação à negociação demo.
+- **Secções** - Secções de negociação.
+- **Demonstração** - Ligação à negociação demo.
 
 ## Ver também
 

@@ -6,9 +6,9 @@ Definições principais:
 
 - **chave** e **segredo**.
 - **conta de compensação** e **frase-passe**.
-- **Section**: `Spot` ou `Derivatives`.
+- **Secção**: `Spot` ou `Derivatives`.
 - **Ativar spot**: ativa a secção spot quando o suporte da API estiver disponível.
-- Modo **Demo**.
+- Modo de **demonstração**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives public WS / Derivatives private WS**.
 
