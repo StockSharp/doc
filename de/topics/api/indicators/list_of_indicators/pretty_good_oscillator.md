@@ -29,12 +29,12 @@ Die Pretty Good Oscillator-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie die Standardabweichung der Schlusskurse über den angegebenen Zeitraum:
    ```
-   Standard Deviation = StdDev(Close, Length)
+   Standardabweichung = StdDev(Close, Length)
    ```
 
 3. Berechnen Sie den Pretty Good Oscillator:
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
+   PGO = (Close - (Highest High + Lowest Low) / 2) / Standardabweichung
    ```
 
 Dabei gilt:

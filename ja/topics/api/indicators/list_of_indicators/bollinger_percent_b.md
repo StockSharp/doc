@@ -32,10 +32,10 @@ BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger B
 
 ここで:
 - Price - 現在価格（通常は終値）
-- Lower Bollinger Band = SMA - (StdDevMultiplier * Standard Deviation)
-- Upper Bollinger Band = SMA + (StdDevMultiplier * Standard Deviation)
+- 下側ボリンジャーバンド = SMA - (StdDevMultiplier * 標準偏差)
+- 上側ボリンジャーバンド = SMA + (StdDevMultiplier * 標準偏差)
 - SMA - Length 期間の単純移動平均
-- Standard Deviation - Length 期間の価格標準偏差
+- 標準偏差 - Length 期間の価格標準偏差
 
 ## 使用方法
 

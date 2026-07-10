@@ -35,7 +35,7 @@ donde:
 - Banda inferior Bollinger = SMA - (StdDevMultiplier * Standard Deviation)
 - Banda superior Bollinger = SMA + (StdDevMultiplier * Standard Deviation)
 - SMA - media móvil simple durante el período Length
-- Standard Deviation: desviación estándar del precio durante el período Length
+- Desviación estándar: desviación estándar del precio durante el período Length
 
 ## Uso
 

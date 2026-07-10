@@ -28,8 +28,8 @@ Momentum Pinball インジケーター の計算には、次の手順が含ま�
 
 2. 指定期間におけるモメンタムの過去最大値と最小値を判定します:
    ```
-   Max_Momentum = Maximum(Momentum) over Length period
-   Min_Momentum = Minimum(Momentum) over Length period
+   Max_Momentum = Length 期間の Maximum(Momentum)
+   Min_Momentum = Length 期間の Minimum(Momentum)
    ```
 
 3. 過去の極値に対して現在のモメンタムを正規化します:

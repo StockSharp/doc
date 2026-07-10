@@ -29,12 +29,12 @@ PGO особенно полезен для выявления состояний
 
 2. Расчет стандартного отклонения цены закрытия за заданный период:
    ```
-   Standard Deviation = StdDev(Close, Length)
+   Стандартное отклонение = StdDev(Close, Length)
    ```
 
 3. Расчет Довольно хорошего осциллятора:
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
+   PGO = (Close - (Highest High + Lowest Low) / 2) / стандартное отклонение
    ```
 
 где:

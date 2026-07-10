@@ -29,12 +29,12 @@ PGO 对识别超买和超卖状况特别有用，也可用于检测可能预示�
 
 2. 计算指定期间收盘价的标准差：
    ```
-   Standard Deviation = StdDev(Close, Length)
+   标准差 = StdDev(Close, Length)
    ```
 
 3. 计算漂亮振荡器：
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
+   PGO = (Close - (Highest High + Lowest Low) / 2) / 标准差
    ```
 
 其中：

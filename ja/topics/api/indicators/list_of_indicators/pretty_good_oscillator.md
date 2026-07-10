@@ -29,12 +29,12 @@ Pretty Good Oscillator の計算は、次の手順で行います。
 
 2. 指定期間における終値の標準偏差を計算します。
    ```
-   Standard Deviation = StdDev(Close, Length)
+   標準偏差 = StdDev(Close, Length)
    ```
 
 3. Pretty Good Oscillator を計算します。
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
+   PGO = (Close - (Highest High + Lowest Low) / 2) / 標準偏差
    ```
 
 ここで:

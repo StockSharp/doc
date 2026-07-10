@@ -34,8 +34,8 @@ BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger B
 
 Onde:
 - Price - preço atual (normalmente preço de fecho)
-- Lower Bollinger Band = SMA - (StdDevMultiplier * Standard Deviation)
-- Upper Bollinger Band = SMA + (StdDevMultiplier * Standard Deviation)
+- Banda inferior Bollinger = SMA - (StdDevMultiplier * desvio padrão)
+- Banda superior Bollinger = SMA + (StdDevMultiplier * desvio padrão)
 - SMA - média móvel simples ao longo do período Length
 - Desvio-padrão - desvio padrão do preço ao longo do período Length
 

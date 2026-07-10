@@ -27,22 +27,22 @@ O cálculo do indicador FVE envolve vários passos:
 
 1. Calcular o preço típico para os períodos atual e anterior:
    ```
-   Typical Price = (High + Low + Close) / 3
+   Preço típico = (High + Low + Close) / 3
    ```
 
 2. Calcular a alteração do preço típico:
    ```
-   Price Change = Typical Price[current] - Typical Price[previous]
+   Alteração de preço = preço típico[current] - preço típico[previous]
    ```
 
 3. Calcular a alteração de preço ponderada pelo volume:
    ```
-   Volume-Weighted Price Change = Price Change * Volume[current]
+   Alteração de preço ponderada por volume = alteração de preço * Volume[current]
    ```
 
 4. Normalizar para considerar a escala do mercado:
    ```
-   Normalized Value = Volume-Weighted Price Change / (volume médio durante o período * Price Volatility)
+   Valor normalizado = alteração de preço ponderada por volume / (volume médio durante o período * volatilidade do preço)
    ```
 
 5. Soma acumulada e suavização:

@@ -30,7 +30,7 @@ donde:
 En la implementación práctica, los precios típicos para cada período (vela) se utilizan con mayor frecuencia:
 
 ```
-Typical Price = (High + Low + Close) / 3
+Precio típico = (High + Low + Close) / 3
 TWAP = Sum(Typical Price) / número de periodos
 ```
 

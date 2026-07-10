@@ -4,19 +4,19 @@
 
 Para utilizar el indicador, se debe utilizar la clase [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands).
 ##### Cálculo
-  
-Los siguientes parámetros con la configuración correspondiente se utilizan para calcular Bollinger Bands:  
-- tipo de desviación estándar: normalmente el doble;  
-- período de media móvil, a discreción del operador.  
+
+Los siguientes parámetros con la configuración correspondiente se utilizan para calcular Bollinger Bands:
+- tipo de desviación estándar: normalmente el doble;
+- período de media móvil, a discreción del operador.
 
 Así, el indicador está formado por tres líneas: central, superior e inferior, cada una con su fórmula:
-  
-Línea media (ML) = Media móvil (SMA (Close, N))  
-Upper Band = ML + (D x Standard Deviation)  
-Lower Band = ML - (D x Standard Deviation), donde  
-  
-D - el ancho del canal establecido en la configuración, Standard Deviation (StdDev) - desviación estándar, calculada mediante la fórmula: SQRT(Sum(Close, n))^2, n)/n), donde  
-Sum - la suma de n períodos, n - período de cálculo, SQRT - raíz cuadrada, Close - precio de cierre.  
+
+Línea media (ML) = Media móvil (SMA (Close, N))
+Banda superior = ML + (D x desviación estándar)
+Banda inferior = ML - (D x desviación estándar), donde
+
+D - el ancho del canal establecido en la configuración, Desviación estándar (StdDev) - desviación estándar, calculada mediante la fórmula: SQRT(Sum(Close, n))^2, n)/n), donde
+Sum - la suma de n períodos, n - período de cálculo, SQRT - raíz cuadrada, Close - precio de cierre.
 
 ![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
 

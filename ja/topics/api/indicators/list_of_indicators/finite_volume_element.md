@@ -27,22 +27,22 @@ FVE インジケーターの計算には複数の手順が含まれます:
 
 1. 現在および前の期間の典型価格を計算します:
    ```
-   Typical Price = (High + Low + Close) / 3
+   代表価格 = (High + Low + Close) / 3
    ```
 
 2. 典型価格の変化を計算します:
    ```
-   Price Change = Typical Price[current] - Typical Price[previous]
+   価格変化 = 代表価格[current] - 代表価格[previous]
    ```
 
 3. 出来高加重価格変化を計算します:
    ```
-   Volume-Weighted Price Change = Price Change * Volume[current]
+   出来高加重価格変化 = 価格変化 * Volume[current]
    ```
 
 4. 市場規模を考慮して正規化します:
    ```
-   Normalized Value = Volume-Weighted Price Change / (期間中の平均 Volume * Price Volatility)
+   正規化値 = 出来高加重価格変化 / (期間中の平均 Volume * 価格ボラティリティ)
    ```
 
 5. 累積合計と平滑化を行います:

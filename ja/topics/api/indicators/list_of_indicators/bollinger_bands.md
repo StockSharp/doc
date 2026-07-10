@@ -4,19 +4,19 @@
 
 このインジケーターを使用するには、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) クラスを使用する必要があります。
 ##### 計算
-  
-Bollinger Bands の計算には、対応する設定を持つ次のパラメーターが使用されます。  
-- 標準偏差の型 - 通常は double。  
-- Moving Average の期間 - トレーダーの裁量によります。  
 
-したがって、このインジケーターは中央、上側、下側の 3 本のラインで構成され、それぞれに式があります。  
-  
-Middle Line (ML) = Moving Average (SMA (Close, N))  
-Upper Band = ML + (D x Standard Deviation)  
-Lower Band = ML - (D x Standard Deviation)、ここで  
-  
-D - 設定で指定されたチャネル幅、Standard Deviation (StdDev) - 標準偏差。次の式で計算されます: SQRT(Sum(Close, n))^2, n)/n)、ここで  
-Sum - n 期間の合計、n - 計算期間、SQRT - 平方根、Close - 終値。  
+Bollinger Bands の計算には、対応する設定を持つ次のパラメーターが使用されます。
+- 標準偏差の型 - 通常は double。
+- Moving Average の期間 - トレーダーの裁量によります。
+
+したがって、このインジケーターは中央、上側、下側の 3 本のラインで構成され、それぞれに式があります。
+
+Middle Line (ML) = Moving Average (SMA (Close, N))
+上側バンド = ML + (D x 標準偏差)
+下側バンド = ML - (D x 標準偏差)、ここで
+
+D - 設定で指定されたチャネル幅、標準偏差 (StdDev) - 標準偏差。次の式で計算されます: SQRT(Sum(Close, n))^2, n)/n)、ここで
+Sum - n 期間の合計、n - 計算期間、SQRT - 平方根、Close - 終値。
 
 ![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
 

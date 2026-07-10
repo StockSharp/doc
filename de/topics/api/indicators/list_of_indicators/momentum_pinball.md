@@ -28,8 +28,8 @@ Die Berechnung des Momentum Pinball-Indikators umfasst die folgenden Schritte:
 
 2. Bestimmen Sie den historischen maximalen und minimalen Impuls über den angegebenen Zeitraum:
    ```
-   Max_Momentum = Maximum(Momentum) over Length period
-   Min_Momentum = Minimum(Momentum) over Length period
+   Max_Momentum = Maximum(Momentum) über Length-Periode
+   Min_Momentum = Minimum(Momentum) über Length-Periode
    ```
 
 3. Normalisieren Sie die aktuelle Dynamik relativ zu historischen Extremen:

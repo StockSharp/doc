@@ -27,22 +27,22 @@ Die Berechnung des FVE-Indikators umfasst mehrere Schritte:
 
 1. Berechnen Sie den typischen Preis für aktuelle und frühere Zeiträume:
    ```
-   Typical Price = (High + Low + Close) / 3
+   Typischer Preis = (High + Low + Close) / 3
    ```
 
 2. Berechnen Sie die typische Preisänderung:
    ```
-   Price Change = Typical Price[current] - Typical Price[previous]
+   Preisänderung = typischer Preis[current] - typischer Preis[previous]
    ```
 
 3. Berechnen Sie die volumengewichtete Preisänderung:
    ```
-   Volume-Weighted Price Change = Price Change * Volume[current]
+   Volumengewichtete Preisänderung = Preisänderung * Volume[current]
    ```
 
 4. Normalisieren, um der Marktgröße Rechnung zu tragen:
    ```
-   Normalized Value = Volume-Weighted Price Change / (durchschnittliches Volumen über die Periode * Price Volatility)
+   Normalisierter Wert = volumengewichtete Preisänderung / (durchschnittliches Volumen über die Periode * Preisvolatilität)
    ```
 
 5. Kumulierte Summierung und Glättung:

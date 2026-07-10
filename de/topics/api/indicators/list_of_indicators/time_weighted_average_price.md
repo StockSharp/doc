@@ -30,7 +30,7 @@ wobei gilt:
 In der praktischen Umsetzung werden am häufigsten typische Preise für jede Periode (Candle) verwendet:
 
 ```
-Typical Price = (High + Low + Close) / 3
+Typischer Preis = (High + Low + Close) / 3
 TWAP = Sum(Typical Price) / Anzahl der Perioden
 ```
 

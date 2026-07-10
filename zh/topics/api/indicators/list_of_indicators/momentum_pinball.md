@@ -28,8 +28,8 @@
 
 2. 确定指定时期的历史最大和最小动量：
    ```
-   Max_Momentum = Maximum(Momentum) over Length period
-   Min_Momentum = Minimum(Momentum) over Length period
+   Max_Momentum = Length 周期内 Maximum(Momentum)
+   Min_Momentum = Length 周期内 Minimum(Momentum)
    ```
 
 3. 将当前动量相对于历史极值进行归一化：

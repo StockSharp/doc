@@ -30,7 +30,7 @@ TWAP = (P1 + P2 + P3 + ... + Pn) / n
 実際の実装では、各期間 (ローソク足) の代表価格が最もよく使用されます。
 
 ```
-Typical Price = (High + Low + Close) / 3
+代表価格 = (High + Low + Close) / 3
 TWAP = Sum(Typical Price) / 期間数
 ```
 

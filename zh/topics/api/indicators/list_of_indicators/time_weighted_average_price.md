@@ -30,7 +30,7 @@ TWAP = (P₁ + P₂ + P₃ + ... + Pₙ) / n
 在实际操作中，各个周期（K线）的典型价格最常被使用：
 
 ```
-Typical Price = (High + Low + Close) / 3
+典型价格 = (High + Low + Close) / 3
 TWAP = Sum(Typical Price) / 周期数量
 ```
 

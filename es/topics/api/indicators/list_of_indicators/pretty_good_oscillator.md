@@ -29,12 +29,12 @@ El cálculo de Pretty Good Oscillator implica los siguientes pasos:
 
 2. Calcule la desviación estándar de los precios de cierre durante el período especificado:
    ```
-   Standard Deviation = StdDev(Close, Length)
+   Desviación estándar = StdDev(Close, Length)
    ```
 
 3. Calcule el Pretty Good Oscillator:
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standard Deviation
+   PGO = (Close - (Highest High + Lowest Low) / 2) / desviación estándar
    ```
 
 donde:

@@ -31,7 +31,7 @@ Woodies CCI 的计算分为几个步骤进行：
 
 1. 首先，计算标准CCI：
    ```
-   Typical Price (TP) = (High + Low + Close) / 3
+   典型价格 (TP) = (High + Low + Close) / 3
    Average Value (SMA) = SMA(TP, Length)
    Mean Deviation (MD) = Sum(|TP - SMA|) / Length
    CCI = (TP - SMA) / (0.015 * MD)

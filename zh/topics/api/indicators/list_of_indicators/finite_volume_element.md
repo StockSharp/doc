@@ -27,22 +27,22 @@ FVE 指标的计算涉及几个步骤：
 
 1. 计算当前和前一时期的典型价格：
    ```
-   Typical Price = (High + Low + Close) / 3
+   典型价格 = (High + Low + Close) / 3
    ```
 
 2. 计算典型价格变化：
    ```
-   Price Change = Typical Price[current] - Typical Price[previous]
+   价格变化 = 典型价格[current] - 典型价格[previous]
    ```
 
 3. 计算成交量加权价格变化：
    ```
-   Volume-Weighted Price Change = Price Change * Volume[current]
+   成交量加权价格变化 = 价格变化 * Volume[current]
    ```
 
 4. 进行归一化以考虑市场规模：
    ```
-   Normalized Value = Volume-Weighted Price Change / (周期内平均 Volume * Price Volatility)
+   归一化值 = 成交量加权价格变化 / (周期内平均 Volume * 价格波动率)
    ```
 
 5. 累计求和与平滑：

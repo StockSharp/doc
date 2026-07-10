@@ -6,19 +6,19 @@
 
 Para usar o indicador, deve ser usada a classe [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands).
 ##### Cálculo
-  
-Os seguintes parâmetros com as definições correspondentes são usados para calcular Bollinger Bands:  
-- tipo de desvio padrão — normalmente double;  
-- período da Moving Average — ao critério do trader.  
 
-Assim, o indicador é formado por três linhas: central, superior e inferior, cada uma com a sua fórmula:  
-  
-Middle Line (ML) = Moving Average (SMA (Close, N))  
-Upper Band = ML + (D x Standard Deviation)  
-Lower Band = ML - (D x Standard Deviation), onde  
-  
-D - a largura do canal definida nas definições, Standard Deviation (StdDev) - desvio padrão, calculado pela fórmula: SQRT(Sum(Close, n))^2, n)/n), onde  
-Sum - a soma de n períodos, n - período de cálculo, SQRT - raiz quadrada, Close - preço de fecho.  
+Os seguintes parâmetros com as definições correspondentes são usados para calcular Bollinger Bands:
+- tipo de desvio padrão — normalmente double;
+- período da Moving Average — ao critério do trader.
+
+Assim, o indicador é formado por três linhas: central, superior e inferior, cada uma com a sua fórmula:
+
+Middle Line (ML) = Moving Average (SMA (Close, N))
+Banda superior = ML + (D x desvio padrão)
+Banda inferior = ML - (D x desvio padrão), onde
+
+D - a largura do canal definida nas definições, Desvio padrão (StdDev) - desvio padrão, calculado pela fórmula: SQRT(Sum(Close, n))^2, n)/n), onde
+Sum - a soma de n períodos, n - período de cálculo, SQRT - raiz quadrada, Close - preço de fecho.
 
 ![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
 
