@@ -598,6 +598,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static Dictionary<string, string> ReadLanguageStrings(string stringsPath, List<string> errors)
+	{
+		try
+		{
+			var strings = JsonSerializer.Deserialize<Dictionary<string, string>>(ReadAllText(stringsPath), _json);
+			if (strings is not null)
+				return strings;
+
+			errors.Add($"{RelativeToRepo(stringsPath)} must contain a JSON object.");
+			return null;
+		}
+		catch (Exception ex)
+		{
+			errors.Add($"{RelativeToRepo(stringsPath)} is invalid JSON: {ex.Message}");
+			return null;
+		}
+	}
+
 	private static void ValidateContentLanguageEntryFiles(string code, string langRoot, List<string> errors)
 	{
 		if (!File.Exists(Path.Combine(langRoot, "index.md")))
@@ -618,6 +636,70 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			var slugs = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
 			ValidateTocFile(lang, langRoot, tocPath, errors, slugs, new HashSet<string>(StringComparer.OrdinalIgnoreCase));
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTocFilesMatchDefaultStructure()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultToc in Directory.EnumerateFiles(defaultRoot, "toc.yml", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultToc).Replace('\\', '/');
+			var expected = ReadTocEntries(defaultToc, errors);
+			if (expected is null)
+				continue;
+
+			foreach (var lang in GetTranslatedContentLanguages())
+			{
+				var localizedToc = Path.Combine(_repoRoot, lang, relative.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(localizedToc))
+				{
+					errors.Add($"{lang}/{relative}: localized TOC file is missing.");
+					continue;
+				}
+
+				var actual = ReadTocEntries(localizedToc, errors);
+				if (actual is null)
+					continue;
+
+				ValidateTocStructureMatchesDefault(relative, localizedToc, expected, actual, errors, string.Empty);
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedLanguageStringsMatchDefaultKeys()
+	{
+		var errors = new List<string>();
+		var defaultPath = Path.Combine(_repoRoot, DefaultLanguage, "strings.json");
+		var defaultStrings = ReadLanguageStrings(defaultPath, errors);
+		if (defaultStrings is null)
+		{
+			AssertNoErrors(errors);
+			return;
+		}
+
+		var defaultKeys = defaultStrings.Keys.ToHashSet(StringComparer.Ordinal);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var stringsPath = Path.Combine(_repoRoot, lang, "strings.json");
+			var strings = ReadLanguageStrings(stringsPath, errors);
+			if (strings is null)
+				continue;
+
+			foreach (var key in defaultKeys.Except(strings.Keys, StringComparer.Ordinal).Order(StringComparer.Ordinal))
+				errors.Add($"{lang}/strings.json is missing localization key '{key}' from {DefaultLanguage}/strings.json.");
+
+			foreach (var key in strings.Keys.Except(defaultKeys, StringComparer.Ordinal).Order(StringComparer.Ordinal))
+				errors.Add($"{lang}/strings.json contains extra localization key '{key}' not present in {DefaultLanguage}/strings.json.");
 		}
 
 		AssertNoErrors(errors);
@@ -1482,6 +1564,57 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		seenTocs.Remove(toc.FullPath);
 	}
+
+	private static TocEntry[] ReadTocEntries(string tocPath, List<string> errors)
+	{
+		try
+		{
+			return _yaml.Deserialize<TocEntry[]>(ReadAllText(tocPath)) ?? Array.Empty<TocEntry>();
+		}
+		catch (Exception ex)
+		{
+			errors.Add($"{RelativeToRepo(tocPath)} is invalid YAML: {ex.Message}");
+			return null;
+		}
+	}
+
+	private static void ValidateTocStructureMatchesDefault(
+		string relative,
+		string localizedToc,
+		IReadOnlyList<TocEntry> expected,
+		IReadOnlyList<TocEntry> actual,
+		List<string> errors,
+		string path)
+	{
+		if (expected.Count != actual.Count)
+		{
+			errors.Add($"{RelativeToRepo(localizedToc)}{FormatTocPath(path)}: TOC item count must match {DefaultLanguage}/{relative}. Expected {expected.Count}, actual {actual.Count}.");
+			return;
+		}
+
+		for (var i = 0; i < expected.Count; i++)
+		{
+			var expectedEntry = expected[i];
+			var actualEntry = actual[i];
+			var itemPath = string.IsNullOrEmpty(path)
+				? $"[{i}]"
+				: $"{path}/[{i}]";
+
+			var expectedHref = NormalizeStructureUrl(expectedEntry.Href);
+			var actualHref = NormalizeStructureUrl(actualEntry.Href);
+
+			if (!actualHref.Equals(expectedHref, StringComparison.Ordinal))
+			{
+				errors.Add($"{RelativeToRepo(localizedToc)}{FormatTocPath(itemPath)}: TOC href must match {DefaultLanguage}/{relative}. Expected '{expectedHref}', actual '{actualHref}'.");
+				continue;
+			}
+
+			ValidateTocStructureMatchesDefault(relative, localizedToc, expectedEntry.Items, actualEntry.Items, errors, itemPath);
+		}
+	}
+
+	private static string FormatTocPath(string path)
+		=> string.IsNullOrEmpty(path) ? string.Empty : $" {path}";
 
 	private static void ValidateTocEntry(
 		string lang,
@@ -2476,6 +2609,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
 		report.AppendLine("- Code string literals: exact matches with English source string literals and literals that look like untranslated English.");
 		report.AppendLine("- Code comments: exact matches with English source comments and comments that look like untranslated English.");
+		report.AppendLine("- TOC structure and language string key parity are covered by dedicated tests.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
 		report.AppendLine("## Issues");
