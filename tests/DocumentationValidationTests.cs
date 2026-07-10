@@ -824,6 +824,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownTextIsTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var defaultTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+				if (!defaultTextByRelativePath.TryGetValue(relative, out var defaultTexts))
+					continue;
+
+				foreach (var line in EnumerateTranslatableMarkdownTextLines(ReadAllText(file), relative))
+				{
+					if (!defaultTexts.Contains(line.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line.Line}: markdown text is identical to the English source. Localize it or add a deliberate allowlist entry. Text: {Truncate(line.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedCodeOutputStringsDoNotContainKnownEnglishPhrases()
 	{
 		var errors = new List<string>();
@@ -1706,6 +1736,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var issues = new List<AuditIssue>();
 		var stats = new List<LocalizedAuditLanguageStats>();
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var defaultMarkdownTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
 		var defaultOutputsByRelativePath = BuildDefaultCodeOutputMap(defaultRoot);
 		var defaultCommentsByRelativePath = BuildDefaultCodeCommentMap(defaultRoot);
 		var textExtensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
@@ -1723,6 +1754,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			var outputCount = 0;
 			var commentCount = 0;
+			var markdownTextCount = 0;
 
 			foreach (var file in textFiles)
 				CollectTextEncodingAuditIssues(file, issues);
@@ -1731,8 +1763,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			{
 				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
 				var markdown = ReadAllText(file);
+				defaultMarkdownTextByRelativePath.TryGetValue(relative, out var defaultMarkdownTexts);
 				defaultOutputsByRelativePath.TryGetValue(relative, out var defaultOutputs);
 				defaultCommentsByRelativePath.TryGetValue(relative, out var defaultComments);
+
+				foreach (var textLine in EnumerateTranslatableMarkdownTextLines(markdown, relative))
+				{
+					markdownTextCount++;
+					if (defaultMarkdownTexts is null || !defaultMarkdownTexts.Contains(textLine.Text))
+						continue;
+
+					issues.Add(new AuditIssue("markdown-text-exact-english", RelativeToRepo(file), textLine.Line, $"is identical to the English source text: {Truncate(textLine.Text, 180)}"));
+				}
 
 				foreach (var output in EnumerateCodeOutputStrings(markdown))
 				{
@@ -1769,11 +1811,28 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				}
 			}
 
-			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, outputCount, commentCount));
+			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, outputCount, commentCount));
 		}
 
 		return new LocalizedDocumentationAudit(languages, stats, issues);
 	}
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultMarkdownTextMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file =>
+			{
+				var relative = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/');
+				return new
+				{
+					RelativePath = relative,
+					Texts = EnumerateTranslatableMarkdownTextLines(ReadAllText(file), relative)
+						.Select(line => line.Text)
+						.ToHashSet(StringComparer.Ordinal),
+				};
+			})
+			.Where(entry => entry.Texts.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.Texts, StringComparer.OrdinalIgnoreCase);
 
 	private static Dictionary<string, HashSet<string>> BuildDefaultCodeOutputMap(string defaultRoot)
 		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
@@ -1853,15 +1912,16 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine();
 		report.AppendLine("## Coverage");
 		report.AppendLine();
-		report.AppendLine("| Language | Markdown files | Text files | Code output strings | Code comments |");
-		report.AppendLine("| --- | ---: | ---: | ---: | ---: |");
+		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Code output strings | Code comments |");
+		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: |");
 
 		foreach (var stat in audit.Stats)
-			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.CodeOutputStrings} | {stat.CodeComments} |");
+			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.CodeOutputStrings} | {stat.CodeComments} |");
 
 		report.AppendLine();
 		report.AppendLine("## Checks");
 		report.AppendLine();
+		report.AppendLine("- Markdown text: full normalized English-like visible text candidates must not be identical to the English source.");
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
 		report.AppendLine("- Code comments: exact matches with English source comments.");
@@ -1896,6 +1956,118 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var withoutUrls = Regex.Replace(text, @"https?://[^\s)\]>""']+", " ", RegexOptions.CultureInvariant);
 		return Regex.Replace(withoutUrls, @"(?:^|[\s(`])[\w./-]+\?[\w=&%{}./:+-]+", " ", RegexOptions.CultureInvariant);
 	}
+
+	private static IEnumerable<MarkdownTextLine> EnumerateTranslatableMarkdownTextLines(string markdown, string relativePath)
+	{
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+		{
+			var normalized = NormalizeMarkdownTextForTranslationCheck(text);
+			if (!IsTranslatableEnglishMarkdownText(relativePath, text, normalized))
+				continue;
+
+			yield return new MarkdownTextLine(normalized, line);
+		}
+	}
+
+	private static string NormalizeMarkdownTextForTranslationCheck(string text)
+	{
+		var value = text ?? string.Empty;
+
+		if (Regex.IsMatch(value.Trim(), @"^\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?$", RegexOptions.CultureInvariant))
+			return string.Empty;
+
+		value = Regex.Replace(value, @"^\s*>\s*\[!(?:NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*", string.Empty, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"^\s*>+\s*", string.Empty, RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"^\s{0,3}#{1,6}\s*", string.Empty, RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"^\s*(?:[-*+]|\d+\.)\s+", string.Empty, RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"!\[(?<label>[^\]]*)\]\([^)]+\)", "${label}", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"\[(?<label>[^\]]+)\]\([^)]+\)", "${label}", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"<[^>]+>", " ", RegexOptions.CultureInvariant);
+		value = value.Replace('|', ' ');
+		value = Regex.Replace(value, @"\\([\\`*_{}\[\]()#+\-.!|])", "$1", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"[`*_~]+", string.Empty, RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+		return value;
+	}
+
+	private static bool IsTranslatableEnglishMarkdownText(string relativePath, string rawText, string normalizedText)
+	{
+		if (normalizedText.Length < 24 || normalizedText.Contains(RussianSpecificPlaceholderMarker, StringComparison.OrdinalIgnoreCase))
+			return false;
+
+		if (IsAllowedInvariantMarkdownText(relativePath, rawText, normalizedText))
+			return false;
+
+		var words = Regex.Matches(normalizedText, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 1)
+			.ToArray();
+
+		if (words.Length < 4)
+			return false;
+
+		var commonWords = words.Count(IsCommonEnglishMarkdownWord);
+		return commonWords >= 2;
+	}
+
+	private static bool IsAllowedInvariantMarkdownText(string relativePath, string rawText, string normalizedText)
+	{
+		if (string.IsNullOrWhiteSpace(normalizedText))
+			return true;
+
+		if (normalizedText.StartsWith("xref:", StringComparison.OrdinalIgnoreCase)
+			|| normalizedText.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
+			|| normalizedText.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+		{
+			return true;
+		}
+
+		if (Regex.IsMatch(normalizedText, @"^[\p{P}\p{S}\p{N}\s]+$", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(normalizedText, @"^[A-Za-z0-9_.:/#?=&%{}+-]+$", RegexOptions.CultureInvariant))
+		{
+			return true;
+		}
+
+		if (IsShortInvariantName(normalizedText))
+			return true;
+
+		var trimmedRaw = rawText.Trim();
+		if (trimmedRaw.StartsWith("#", StringComparison.Ordinal))
+			return IsAllowedInvariantHeading(relativePath, normalizedText);
+
+		return _allowedInvariantHeadingTexts.Contains(normalizedText)
+			|| _allowedInvariantLinkLabels.Contains(normalizedText);
+	}
+
+	private static bool IsCommonEnglishMarkdownWord(string word)
+		=> word.Equals("a", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("an", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("and", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("are", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("as", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("be", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("by", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("can", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("for", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("from", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("has", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("in", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("into", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("is", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("it", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("of", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("on", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("or", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("that", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("the", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("this", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("to", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("using", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("when", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("which", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("will", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("with", StringComparison.OrdinalIgnoreCase);
 
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{
@@ -2323,6 +2495,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private readonly record struct TableShape(int Columns, int BodyRows);
 
+	private readonly record struct MarkdownTextLine(string Text, int Line);
+
 	private readonly record struct CodeComment(string Text, int Line);
 
 	private readonly record struct CodeOutputString(string Text, int Line);
@@ -2336,6 +2510,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		string Language,
 		int MarkdownFiles,
 		int TextFiles,
+		int MarkdownTextCandidates,
 		int CodeOutputStrings,
 		int CodeComments);
 
