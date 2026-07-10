@@ -143,7 +143,7 @@ Hier ist ein einfaches Beispiel für einen benutzerdefinierten statistischen Par
 	ResourceType = typeof(LocalizedStrings),
 	Name = "Mein benutzerdefinierter Indikator",
 	Description = "Beschreibung meines benutzerdefinierten Indikators",
-	GroupName = "Custom Parameters",
+	GroupName = "Benutzerdefinierte Parameter",
 	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>

@@ -3870,7 +3870,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static IEnumerable<string> EnumerateCodeUiAssignmentStrings(string text)
 	{
-		foreach (Match match in Regex.Matches(text, @"\b(?:FullTitle|Title|Content|Header|Caption|Filter)\s*=\s*\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+		foreach (Match match in Regex.Matches(text, @"\b(?:FullTitle|Title|Content|Header|Caption|Filter|GroupName)\s*=\s*\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
 		{
 			var rawValue = match.Groups["value"].Value;
 			if (rawValue.TrimStart().StartsWith("{", StringComparison.Ordinal))

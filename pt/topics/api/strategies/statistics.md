@@ -143,7 +143,7 @@ Segue-se um exemplo simples de um parâmetro estatístico personalizado:
 	ResourceType = typeof(LocalizedStrings),
 	Name = "Meu indicador personalizado",
 	Description = "Descrição do meu indicador personalizado",
-	GroupName = "Custom Parameters",
+	GroupName = "Parâmetros personalizados",
 	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>

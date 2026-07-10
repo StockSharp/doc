@@ -143,7 +143,7 @@ strategy.PositionChanged += () =>
 	ResourceType = typeof(LocalizedStrings),
 	Name = "自分のカスタムインジケーター",
 	Description = "カスタムインジケーターの説明",
-	GroupName = "Custom Parameters",
+	GroupName = "カスタムパラメーター",
 	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>

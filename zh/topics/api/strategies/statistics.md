@@ -143,7 +143,7 @@ strategy.PositionChanged += () =>
 	ResourceType = typeof(LocalizedStrings),
 	Name = "我的自定义指标",
 	Description = "我的自定义指标说明",
-	GroupName = "Custom Parameters",
+	GroupName = "自定义参数",
 	Order = 1000
 )]
 public class MyCustomParameter : BasePnLStatisticParameter<decimal>
