@@ -805,7 +805,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		var defaultKeys = defaultStrings.Keys.ToHashSet(StringComparer.Ordinal);
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
 		{
 			var stringsPath = Path.Combine(_repoRoot, lang, "strings.json");
 			var strings = ReadLanguageStrings(stringsPath, errors);
