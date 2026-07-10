@@ -4,7 +4,7 @@
 
 ## RestSharp の機能
 
-[RestSharp](https://www.nuget.org/packages/RestSharp) は、REST API を扱うための人気のある .NET ライブラリです。StockSharp の枠組み内で RestSharp を扱いやすくするために、[Ecng repository](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/RestSharpHelper.cs) で利用できる拡張メソッドが開発されています。
+[RestSharp](https://www.nuget.org/packages/RestSharp) は、REST API を扱うための人気のある .NET ライブラリです。StockSharp の枠組み内で RestSharp を扱いやすくするために、[Ecng リポジトリ](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/RestSharpHelper.cs) で利用できる拡張メソッドが開発されています。
 
 ## HttpClient の構造
 

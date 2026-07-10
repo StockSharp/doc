@@ -18,10 +18,10 @@ Documentação oficial da API:
 - [API URLs](https://docs.paradex.trade/api/prod/api-urls)
 - [Authentication](https://docs.paradex.trade/api/prod/authentication)
 - [REST API](https://docs.paradex.trade/api/prod/rest-api)
-- [Create a new order](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
-- [Websocket introduction](https://docs.paradex.trade/api/prod/websocket/introduction)
-- [Websocket channels](https://docs.paradex.trade/api/prod/websocket/channels)
-- [Order book channel](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
+- [Criar uma nova ordem](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
+- [Introdução ao WebSocket](https://docs.paradex.trade/api/prod/websocket/introduction)
+- [Canais WebSocket](https://docs.paradex.trade/api/prod/websocket/channels)
+- [Canal do livro de ofertas](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
 
 > [!TIP]
 > Os derivados da Paradex são totalmente suportados. Ative `Spot` apenas quando o ambiente da API de destino confirmar suporte para spot.

@@ -1,6 +1,6 @@
 # Exemplo de estratégia em Python
 
-A criação de uma estratégia a partir de código-fonte será demonstrada usando o exemplo da estratégia SMA, de forma semelhante ao exemplo da estratégia SMA montada a partir de cubos na secção [Creating Algorithm from Cubes](../../using_visual_designer/first_strategy.md).
+A criação de uma estratégia a partir de código-fonte será demonstrada usando o exemplo da estratégia SMA, de forma semelhante ao exemplo da estratégia SMA montada a partir de cubos na secção [Criando algoritmo a partir de cubos](../../using_visual_designer/first_strategy.md).
 
 Esta secção não irá descrever construções da linguagem Python (nem a [Strategy](../../../../api/strategies.md), que é usada como base para criar estratégias), mas irá mencionar funcionalidades específicas para trabalhar com código no **Designer**.
 

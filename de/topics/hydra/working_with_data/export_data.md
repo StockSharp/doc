@@ -1,6 +1,6 @@
 # Daten exportieren
 
-[Hydra](../../hydra.md) ermöglicht den Export empfangener Marktdaten in verschiedene Formate, einschliesslich [MetaStock data formats](export_data/export_into_metastock.md).
+[Hydra](../../hydra.md) ermöglicht den Export empfangener Marktdaten in verschiedene Formate, einschliesslich [MetaStock-Datenformate](export_data/export_into_metastock.md).
 
 Für den Export werden Dateien in den Formaten [Excel](https://en.wikipedia.org/wiki/Excel), xml, bin, txt, Json oder SQL-Tabellen verwendet.
 

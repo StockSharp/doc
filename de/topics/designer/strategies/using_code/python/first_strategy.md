@@ -1,6 +1,6 @@
 # Beispiel einer Python-Strategie
 
-Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-Strategie gezeigt, ähnlich wie im Beispiel der aus Würfeln zusammengesetzten SMA-Strategie im Abschnitt [Creating Algorithm from Cubes](../../using_visual_designer/first_strategy.md).
+Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-Strategie gezeigt, ähnlich wie im Beispiel der aus Würfeln zusammengesetzten SMA-Strategie im Abschnitt [Algorithmus aus Würfeln erstellen](../../using_visual_designer/first_strategy.md).
 
 Dieser Abschnitt beschreibt keine Python-Sprachkonstrukte (oder [Strategy](../../../../api/strategies.md), die als Basis für die Erstellung von Strategien verwendet wird), sondern erwähnt spezielle Aspekte der Arbeit mit Code im **Designer**.
 

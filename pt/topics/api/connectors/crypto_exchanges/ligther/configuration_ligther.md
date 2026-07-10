@@ -15,7 +15,7 @@ Definições principais:
 Documentação oficial da API:
 
 - [Getting started](https://apidocs.lighter.xyz/docs/getting-started/introduction)
-- [Get API key and secret](https://apidocs.lighter.xyz/docs/api/get-api-key-and-secret)
-- [API rate limits](https://apidocs.lighter.xyz/docs/api/get-api-rate-limits)
-- [Websocket channels](https://apidocs.lighter.xyz/docs/websocket/channels)
-- [Websocket API docs](https://apidocs.lighter.xyz/docs/websocket/api-docs)
+- [Obter chave e segredo da API](https://apidocs.lighter.xyz/docs/api/get-api-key-and-secret)
+- [Limites de taxa da API](https://apidocs.lighter.xyz/docs/api/get-api-rate-limits)
+- [Canais WebSocket](https://apidocs.lighter.xyz/docs/websocket/channels)
+- [Documentação da API WebSocket](https://apidocs.lighter.xyz/docs/websocket/api-docs)

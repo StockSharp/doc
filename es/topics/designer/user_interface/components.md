@@ -10,7 +10,7 @@ Durante las pruebas o el trading surge la necesidad de controlar completamente e
 - [Órdenes](components/orders.md) - representa una tabla con órdenes, mostrando información completa sobre todas las órdenes de la estrategia.
 - [Posiciones](components/positions.md) - representa una tabla de posiciones para los instrumentos de la estrategia.
 - [Estadísticas](components/statistics.md) - representa una tabla agrupada por categorías: P/L, Trades, Positions, Orders. Contiene datos sobre el rendimiento de la estrategia.
-- [Trade Tape](components/tick_trades.md) - representa una tabla con operaciones, mostrando información completa sobre todas las operaciones de los instrumentos seleccionados.
+- [Cinta de operaciones](components/tick_trades.md) - representa una tabla con operaciones, mostrando información completa sobre todas las operaciones de los instrumentos seleccionados.
 - [Gráfico de posiciones](components/positions.md) - representa un gráfico de posición.
 - Propiedades - representa una tabla de [Configuración de backtesting](components/backtesting_settings.md) o una tabla de [Configuración live](components/live_settings.md).
 - [Esquema](../strategies/using_visual_designer/diagram_panel.md) - representa el diseñador de esquemas.

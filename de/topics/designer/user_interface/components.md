@@ -10,7 +10,7 @@ Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu 
 - [Aufträge](components/orders.md) - stellt eine Tabelle mit Aufträgen dar, die vollständige Informationen zu allen Aufträgen der Strategie anzeigt.
 - [Positionen](components/positions.md) - stellt eine Tabelle mit Positionen für die Instrumente der Strategie dar.
 - [Statistik](components/statistics.md) - stellt eine nach Kategorien gruppierte Tabelle dar: P/L, Trades, Positions, Orders. Sie enthält Daten zur Performance der Strategie.
-- [Trade Tape](components/tick_trades.md) - stellt eine Tabelle mit Trades dar, die vollständige Informationen zu allen Trades für ausgewählte Instrumente anzeigt.
+- [Trade-Tape](components/tick_trades.md) - stellt eine Tabelle mit Trades dar, die vollständige Informationen zu allen Trades für ausgewählte Instrumente anzeigt.
 - [Positionschart](components/positions.md) - stellt einen Positionschart dar.
 - Eigenschaften - stellt eine Tabelle mit [Backtesting-Einstellungen](components/backtesting_settings.md) oder eine Tabelle mit [Live-Einstellungen](components/live_settings.md) dar.
 - [Schema](../strategies/using_visual_designer/diagram_panel.md) - stellt den Schema-Designer dar.

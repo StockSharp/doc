@@ -26,7 +26,7 @@ Die Einstellungen einer Quelle können im Panel **Eigenschaften** auf der rechte
 
 Allgemeine Einstellungen für alle Quellen finden Sie im Eintrag [Allgemeine Verbindungseinstellungen](common_connection_settings.md).
 
-Jede Verbindung hat ihre eigenen Besonderheiten. Der Link [List of connectors](../data_sources.md) enthält eine Liste der Konnektoren und ihrer Einstellungen.
+Jede Verbindung hat ihre eigenen Besonderheiten. Der Link [Liste der Connectors](../data_sources.md) enthält eine Liste der Konnektoren und ihrer Einstellungen.
 
 **Sehen Sie sich das [Video-Tutorial](../videos/sources_samples.md) an**
 

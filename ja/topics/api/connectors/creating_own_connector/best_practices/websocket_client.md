@@ -4,7 +4,7 @@
 
 ## WebSocketClient の機能
 
-`WebSocketClient` は、WebSocket 接続が失われた場合に自動再接続を行うために開発されたシステムクラスです。そのソースコードは [Ecng repository](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/WebSocketClient.cs) で利用できます。
+`WebSocketClient` は、WebSocket 接続が失われた場合に自動再接続を行うために開発されたシステムクラスです。そのソースコードは [Ecng リポジトリ](https://github.com/StockSharp/Ecng/blob/master/Net.SocketIO/WebSocketClient.cs) で利用できます。
 
 ## SocketClient の構造
 

@@ -7,7 +7,7 @@ A seguir descreve-se como criar e configurar uma tarefa de cópia de segurança.
 
    **Cópia de segurança**
    - **Serviço** - o endereço do serviço.
-   - **Endereço** - o endereço da região. O endereço da região especificado nas definições do bucket. Consulte [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
+   - **Endereço** - o endereço da região. O endereço da região especificado nas definições do bucket. Consulte [Regiões e endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
    - **Armazenamento** - o nome do bucket.
    - **Início de sessão** - início de sessão. **Access Key ID**.
    - **Palavra-passe** - palavra-passe. **Secret Access Key**.

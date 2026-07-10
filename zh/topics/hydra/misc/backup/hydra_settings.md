@@ -7,7 +7,7 @@
 
    **备份**
    - **服务** — 服务地址。
-   - **地址** — 区域地址，即 Bucket 设置中指定区域的地址。请参阅 [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)。
+   - **地址** — 区域地址，即 Bucket 设置中指定区域的地址。请参阅 [区域和端点](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)。
    - **存储** — Bucket 名称。
    - **登录名** — 登录名，即 Access Key ID。
    - **密码** — 密码，即 **Secret Access Key**。

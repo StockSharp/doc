@@ -7,7 +7,7 @@ Im Folgenden wird beschrieben, wie Sie eine Backup-Aufgabe erstellen und konfigu
 
    **Sicherung**
    - **Dienst** - die Dienstadresse.
-   - **Adresse** - die Regionsadresse. Die Adresse der Region, die in den Bucket-Einstellungen angegeben ist. Siehe [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
+   - **Adresse** - die Regionsadresse. Die Adresse der Region, die in den Bucket-Einstellungen angegeben ist. Siehe [Regionen und Endpunkte](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
    - **Speicher** - der Bucket-Name.
    - **Anmeldung** - Anmeldung. **Access Key ID**.
    - **Passwort** - Passwort. **Secret Access Key**.

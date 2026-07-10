@@ -1,6 +1,6 @@
 # Depuración de una DLL con Visual Studio
 
-Visual Studio proporciona un mecanismo para adjuntarse a procesos en ejecución mediante el depurador de Visual Studio. El depurador de Visual Studio se describe con más detalle en la documentación [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022). El proceso de depuración se demostrará con el ejemplo de una estrategia añadida en la sección [Uso de DLL](../using_dll.md).
+Visual Studio proporciona un mecanismo para adjuntarse a procesos en ejecución mediante el depurador de Visual Studio. El depurador de Visual Studio se describe con más detalle en la documentación [Adjuntar a procesos en ejecución](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022). El proceso de depuración se demostrará con el ejemplo de una estrategia añadida en la sección [Uso de DLL](../using_dll.md).
 
 1. Para adjuntarse a un proceso e iniciar la depuración de una estrategia DLL, debe estar cargada en memoria. La DLL se carga en memoria después de [añadir la estrategia](../using_dll.md). Una vez cargada la DLL en memoria, puede adjuntarse al proceso.
 

@@ -7,7 +7,7 @@
 
    **バックアップ**
    - **サービス** - サービスアドレス。
-   - **アドレス** - リージョンアドレス。バケット設定で指定したリージョンのアドレスです。[Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) を参照してください。
+   - **アドレス** - リージョンアドレス。バケット設定で指定したリージョンのアドレスです。[リージョンとエンドポイント](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) を参照してください。
    - **ストレージ** - バケット名。
    - **ログイン** - ログイン。**Access Key ID**。
    - **パスワード** - パスワード。**Secret Access Key**。

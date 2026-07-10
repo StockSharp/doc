@@ -17,9 +17,9 @@ Offizielle API-Dokumentation:
 - [Authentication](https://edgex-1.gitbook.io/edgex-documentation/developer/api/authentication)
 - [Order API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/order-api)
 - [Account API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/account-api)
-- [Private websocket stream](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/private-websocket-stream)
+- [Privater WebSocket-Stream](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/private-websocket-stream)
 - [Funding API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/funding-api)
-- [Meta-data API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/meta-data-api)
+- [Metadaten-API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/meta-data-api)
 - [Quote API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/quote-api)
 
 > [!TIP]

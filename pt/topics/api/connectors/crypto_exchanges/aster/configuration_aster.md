@@ -14,11 +14,11 @@ Definições principais:
 Documentação oficial da API:
 
 - [Spot API overview](https://asterdex.github.io/aster-api-website/spot/spot-api-overview/)
-- [Spot account and trading API](https://asterdex.github.io/aster-api-website/spot/spot-account-and-trading-api/)
-- [Spot websocket market data](https://asterdex.github.io/aster-api-website/spot/websocket-market-data/)
-- [Spot websocket account info](https://asterdex.github.io/aster-api-website/spot/websocket-account-info/)
-- [Futures v3 general info](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
-- [Futures user data streams](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
+- [API de conta e negociação spot](https://asterdex.github.io/aster-api-website/spot/spot-account-and-trading-api/)
+- [Dados de mercado spot via WebSocket](https://asterdex.github.io/aster-api-website/spot/websocket-market-data/)
+- [Informações de conta spot via WebSocket](https://asterdex.github.io/aster-api-website/spot/websocket-account-info/)
+- [Informações gerais de futures v3](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
+- [Streams de dados do utilizador de futures](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
 - [Aster Code endpoints](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]

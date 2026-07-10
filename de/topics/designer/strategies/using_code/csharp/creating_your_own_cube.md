@@ -106,7 +106,7 @@ _minValue = AddParam("MinValue", 10)
 
 Die Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) nutzt automatisch den Ansatz zum Speichern und Wiederherstellen von Einstellungen.
 
-Die Eigenschaft **Mindestwert** ist als basic markiert und wird im Modus [Basic properties](../../using_visual_designer/diagram_panel.md) sichtbar sein.
+Die Eigenschaft **Mindestwert** ist als basic markiert und wird im Modus [Grundeigenschaften](../../using_visual_designer/diagram_panel.md) sichtbar sein.
 
 Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) ist für den Zeitpunkt des Methodenaufrufs mit eingehenden Sockets zuständig:
 

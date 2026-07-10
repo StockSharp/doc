@@ -7,7 +7,7 @@ A continuación se describe cómo crear y configurar una tarea de copia de segur
 
    **Copia de seguridad**
    - **Servicio** - dirección del servicio.
-   - **Dirección** - dirección de la región. Es la dirección de la región especificada en la configuración del bucket. Consulte [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
+   - **Dirección** - dirección de la región. Es la dirección de la región especificada en la configuración del bucket. Consulte [Regiones y endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
    - **Almacenamiento** - nombre del bucket.
    - **Inicio de sesión** - inicio de sesión. **Access Key ID**.
    - **Contraseña** - contraseña. **Secret Access Key**.

@@ -1,6 +1,6 @@
 # Visual Studio で DLL をデバッグ
 
-Visual Studio には、Visual Studio デバッガーを使用して実行中のプロセスへアタッチする仕組みがあります。Visual Studio デバッガーについては、ドキュメント [Attach to running processes](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) で詳しく説明されています。デバッグプロセスは、[DLL の使用](../using_dll.md)セクションで追加したストラテジーを例に示します。
+Visual Studio には、Visual Studio デバッガーを使用して実行中のプロセスへアタッチする仕組みがあります。Visual Studio デバッガーについては、ドキュメント [実行中のプロセスにアタッチ](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) で詳しく説明されています。デバッグプロセスは、[DLL の使用](../using_dll.md)セクションで追加したストラテジーを例に示します。
 
 1. プロセスにアタッチして DLL ストラテジーのデバッグを開始するには、DLL がメモリに読み込まれている必要があります。DLL は[ストラテジーを追加](../using_dll.md)した後にメモリへ読み込まれます。DLL がメモリに読み込まれたら、プロセスにアタッチできます。
 
