@@ -63,7 +63,7 @@ class empty_indicator(BaseIndicator):
 			return DecimalIndicatorValue(self, input.Time)
 
 		if self._counter == 5:
-			# For example, our indicator needs 5 inputs to become formed
+	# Например, нашему индикатору нужно 5 входных значений, чтобы стать сформированным
 			self._isFormed = True
 		self._counter += 1
 

@@ -48,7 +48,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
 	var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
 
-	// ... (data loading code)
+// ...（数据加载代码）
 }
 
 // 此循环遍历指定交易品种的所有可用数据类型。
@@ -71,7 +71,7 @@ foreach (var dateTime in dates)
 		localStorage.Drive.SaveStream(dateTime, stream);
 	}
 
-	// ... (data output code)
+// ...（数据输出代码）
 }
 
 // 此代码从远程存储加载每个日期的数据并保存到本地存储。
@@ -92,7 +92,7 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 // 处理各种数据类型
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-	// ... (data processing code)
+// ...（数据处理代码）
 
 	// 错误处理和日志记录
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");

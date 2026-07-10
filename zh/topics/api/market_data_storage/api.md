@@ -86,7 +86,7 @@ await candleStorage.SaveAsync(newCandles);
 // 保存新 tick
 var newTrades = new List<ExecutionMessage>
 {
-	// New ExecutionMessage objects for ticks are created here
+	// 在这里创建用于 tick 的新 ExecutionMessage 对象
 };
 await tradeStorage.SaveAsync(newTrades);
 ```
@@ -95,7 +95,7 @@ await tradeStorage.SaveAsync(newTrades);
 // 保存新订单簿
 var newMarketDepths = new List<QuoteChangeMessage>
 {
-	// New QuoteChangeMessage objects for order books are created here
+	// 在这里创建用于订单簿的新 QuoteChangeMessage 对象
 };
 await marketDepthStorage.SaveAsync(newMarketDepths);
 ```

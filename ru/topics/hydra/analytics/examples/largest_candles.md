@@ -29,7 +29,7 @@
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// The analytic script, shows biggest candle (by volume and by length) for specified securities.
+/// Аналитический скрипт показывает самую большую свечу (по объёму и длине) для указанных инструментов.
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# The analytic script, shows biggest candle (by volume and by length) for specified securities.
+# Аналитический скрипт показывает самую большую свечу (по объёму и длине) для указанных инструментов.
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:

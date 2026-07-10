@@ -3734,11 +3734,23 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (_knownEnglishCodeCommentLabels.Contains(text))
 			return text;
 
-		// Skip XML doc boilerplate, commented-out code, identifiers, type notes, and compiler/preprocessor directives.
-		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=()]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+		if (IsCodeLikeCommentText(text))
 			return string.Empty;
 
 		return text;
+	}
+
+	private static bool IsCodeLikeCommentText(string text)
+	{
+		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=]", RegexOptions.CultureInvariant))
+			return true;
+
+		// Skip commented-out code and compiler/preprocessor directives without hiding prose comments
+		// such as "if no historical data..." or "Class for analyzing...".
+		return Regex.IsMatch(text, @"^(?:if|for|while)\s*\(", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(text, @"^return\s+(?:true|false|null|default|new\b|[A-Za-z_][A-Za-z0-9_.]*(?:\([^)]*\))?)$", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(text, @"^(?:using|var|let|public|private|protected|await|yield|pragma|region|endregion|nullable|define|endif|else|elif|def|with)\b", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(text, @"^(?:class|new)\s+[A-Za-z_][A-Za-z0-9_.]*(?:\b|[<(])", RegexOptions.CultureInvariant);
 	}
 
 	private static string NormalizeCodeCommentForLikelyEnglishCheck(string comment)
@@ -3757,7 +3769,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		// Unlike exact-comment matching, keep parentheses: translated comments often use them
 		// for explanatory prose, and several previous misses were English comments in parentheses.
-		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+		if (IsCodeLikeCommentText(text))
 			return string.Empty;
 
 		return text;

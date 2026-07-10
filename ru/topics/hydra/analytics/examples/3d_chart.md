@@ -87,7 +87,7 @@ namespace StockSharp.Algo.Analytics
 					return Task.CompletedTask;
 				}
 
-				// grouping candles by opening time (time part only) with 1 hour truncating
+// группировка свечей по времени открытия (только время) с усечением до 1 часа
 				var byHours = candleStorage.Load(from, to)
 					.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 					.ToDictionary(g => g.Key.Hours, g => g.Sum(c => c.TotalVolume));
@@ -151,7 +151,7 @@ class chart3d_script(IAnalyticsScript):
 		for h in range(24):
 			y.append(str(h))
 
-		# Create a 2D array for Z values with dimensions: (number of securities) x (number of hours)
+# Создать 2D-массив для значений Z с размерами: (количество инструментов) x (количество часов)
 		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
 
 		if data_type is None:
@@ -178,7 +178,7 @@ class chart3d_script(IAnalyticsScript):
 				logs.LogWarning("no data")
 				return Task.CompletedTask
 
-			# Grouping candles by opening time (truncated to the nearest hour) and summing volumes
+			# Группировка свечей по времени открытия (усечённому до ближайшего часа) и суммирование объёмов
 			candles = load_range(candle_storage, message_type, from_date, to_date)
 			by_hours = {}
 			for candle in candles:

@@ -49,7 +49,7 @@ Bei der Komprimierung von Daten können folgende Parameter angegeben werden:
 ```cs
 private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, DateTime? from, DateTime? to)
 {
-	// ... (initialization code)
+	// ... (Initialisierungscode)
 
 	switch (type)
 	{
@@ -68,7 +68,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.LoadAsync(from, to)
 					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
-		// ... (other cases)
+		// ... (andere Fälle)
 	}
 }
 
@@ -87,23 +87,23 @@ Die API ermöglicht die Erstellung von Candles nicht nur aus Ticks und Spreads, 
 switch (type)
 {
 	case BuildTypes.Ticks:
-		// ... (code for ticks)
+		// ... (Code für Ticks)
 
 	case BuildTypes.OrderLog:
-		// ... (code for order log)
+		// ... (Code für Order-Log)
 
 	case BuildTypes.Depths:
-		// ... (code for spreads)
+		// ... (Code für Spreads)
 
 	case BuildTypes.Level1:
-		// ... (code for Level1)
+		// ... (Code für Level1)
 
 	case BuildTypes.SmallerTimeFrame:
 		return candleBuilderProvider
 				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
 				.LoadAsync(from, to);
 
-	// ... (other cases)
+	// ... (andere Fälle)
 }
 
 // Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderlog, Spreads, Level1-Daten und sogar Kerzen kleinerer Zeitrahmen.

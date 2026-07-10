@@ -27,7 +27,7 @@ protected override void OnStarted2(DateTime time)
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
 		// velas prontas são muito mais rápidas que compressão em tempo real
-		// turn off compression to boost optimizer (!!! make sure you have candles)
+	// desativar compressão para acelerar o otimizador (!!! verifique se há candles)
 
 		//MarketData =
 		//{

@@ -121,7 +121,7 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 ### Análise da dinâmica do log de ordens
 
 ```cs
-// Class for analyzing order log dynamics
+	// Classe para analisar a dinâmica do log de ordens
 public class OrderLogAnalyzer
 {
 	private readonly Connector _connector;

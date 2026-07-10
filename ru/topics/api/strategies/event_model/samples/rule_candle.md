@@ -27,7 +27,7 @@ protected override void OnStarted2(DateTime time)
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
 		// готовые свечи намного быстрее, чем сжатие на лету
-		// turn off compression to boost optimizer (!!! make sure you have candles)
+	// отключить сжатие для ускорения оптимизатора (!!! убедитесь, что есть свечи)
 
 		//MarketData =
 		//{

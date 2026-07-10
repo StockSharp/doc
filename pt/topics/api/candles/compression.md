@@ -49,7 +49,7 @@ Ao comprimir dados, os seguintes parâmetros podem ser especificados:
 ```cs
 private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, DateTime? from, DateTime? to)
 {
-	// ... (initialization code)
+	// ... (código de inicialização)
 
 	switch (type)
 	{
@@ -68,7 +68,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.LoadAsync(from, to)
 					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
-		// ... (other cases)
+		// ... (outros casos)
 	}
 }
 
@@ -87,23 +87,23 @@ A API permite construir candles não apenas a partir de ticks e spreads, mas tam
 switch (type)
 {
 	case BuildTypes.Ticks:
-		// ... (code for ticks)
+		// ... (código para ticks)
 
 	case BuildTypes.OrderLog:
-		// ... (code for order log)
+		// ... (código para log de ordens)
 
 	case BuildTypes.Depths:
-		// ... (code for spreads)
+		// ... (código para spreads)
 
 	case BuildTypes.Level1:
-		// ... (code for Level1)
+		// ... (código para Level1)
 
 	case BuildTypes.SmallerTimeFrame:
 		return candleBuilderProvider
 				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
 				.LoadAsync(from, to);
 
-	// ... (other cases)
+	// ... (outros casos)
 }
 
 // Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, log de ordens, spreads, dados Level1 e até velas de períodos menores.

@@ -17,7 +17,7 @@ private IProtectivePositionController _posController;
 
 // 此代码初始化主保护控制器，并为以下内容创建占位符
 // 特定持仓控制器。ProtectiveController 管理所有持仓，
-// while IProtectivePositionController is responsible for a specific position.
+// 而 IProtectivePositionController 负责特定持仓。
 ```
 
 - `_protectiveController`：用于管理所有持仓保护的主控制器。
@@ -32,7 +32,7 @@ private IProtectivePositionController _posController;
 this.WhenOwnTradeReceived()
 	.Do(t =>
 	{
-		// ... (other code)
+// ...（其他代码）
 
 		if (TakeValue.IsSet() || StopValue.IsSet())
 		{

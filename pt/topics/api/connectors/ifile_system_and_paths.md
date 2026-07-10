@@ -17,7 +17,7 @@ A classe `Paths` (namespace `StockSharp.Configuration`) fornece a propriedade es
 ```csharp
 public static class Paths
 {
-    // Standard file system (LocalFileSystem)
+// Sistema de arquivos padrão (LocalFileSystem)
     public static readonly IFileSystem FileSystem = Messages.Extensions.DefaultFileSystem;
 }
 ```

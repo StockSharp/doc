@@ -68,7 +68,7 @@ subscription
 ```cs
 var area = CreateChartArea();
 
-// area can be null in case of no GUI (strategy hosted in Runner or in own console app)
+	// area может быть null при отсутствии GUI (стратегия размещена в Runner или собственном консольном приложении)
 if (area != null)
 {
 	DrawCandles(area, subscription);
@@ -109,7 +109,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	{
 		// произошло пересечение
 
-		// if short less than long, the sale, otherwise buy
+		// если short меньше long, продаём, иначе покупаем
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
 		// рассчитать размер для открытия позиции или разворота

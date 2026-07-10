@@ -108,7 +108,7 @@ public async Task PlaceAndManageOrderAsync(Security security, Portfolio portfoli
 
     // ... auf Änderungen der Marktbedingungen warten ...
 
-    // Async price edit (if supported)
+// Asynchrone Preisänderung (falls unterstützt)
     if (_connector.IsOrderEditable(order) == true)
     {
         var changes = order.CreateOrder();

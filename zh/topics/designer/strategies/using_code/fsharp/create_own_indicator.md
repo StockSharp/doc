@@ -71,7 +71,7 @@ type EmptyIndicator() as this =
 			let randomFactor = decimal (RandomGen.GetInt(-changeValue, changeValue)) / 100m
 			value <- value + (value * randomFactor)
 
-			// return final indicator value
+	// 返回最终指标值
 			let result = DecimalIndicatorValue(this, value, input.Time)
 			// 随机将其标记为最终值或非最终值
 			result.IsFinal <- RandomGen.GetBool()

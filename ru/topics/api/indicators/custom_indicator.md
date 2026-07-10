@@ -340,7 +340,7 @@ public class AverageDirectionalIndexValue(AverageDirectionalIndex indicator, Dat
 
 ```cs
 /// <summary>
-/// Percentage Volume Oscillator (PVO).
+/// Процентный осциллятор объёма (PVO).
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),

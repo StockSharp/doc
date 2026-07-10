@@ -87,7 +87,7 @@
        _shortSma.Process(candle);
    }
    
-   // Later try to get values via GetCurrentValue()
+   // 稍后尝试通过 GetCurrentValue() 获取值
    var isShortLessThenLong = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
    ```
 

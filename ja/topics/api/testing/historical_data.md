@@ -67,7 +67,7 @@ var connector = new HistoryEmulationConnector(
 			{
 				// 履歴価格が指値注文価格に到達した場合に注文をマッチング
 				// デフォルトではオフ。価格が指値注文価格を通過する必要があります
-				// (more strict testing mode)
+// (より厳格なテストモード)
 				MatchOnTouch = false,
 				
 				// 約定手数料
@@ -115,14 +115,14 @@ connector.SecurityReceived += (subscr, s) =>
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
 		
-		// if we need to generate order books
+		// 板情報を生成する必要がある場合
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
-			// if no historical order book data is available but required by the strategy,
+			// 戦略で必要だが履歴板情報がない場合、
 			// 直近価格に基づくジェネレータを使用
 			connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
 			{
-				Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
+				Interval = TimeSpan.FromSeconds(1), // 板情報の更新頻度 - 1 秒
 				MaxAsksDepth = maxDepth,
 				MaxBidsDepth = maxDepth,
 				UseTradeVolume = true,
@@ -369,9 +369,9 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	{
 		_isShortLessThenLong = isShortLessThenLong;
 	}
-	else if (_isShortLessThenLong != isShortLessThenLong) // crossover occurred
+	else if (_isShortLessThenLong != isShortLessThenLong) // クロスが発生
 	{
-		// if short is less than long - sell, otherwise buy
+		// short が long より小さい場合は売り、それ以外は買い
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
 		// ポジション開始または反転用の数量を計算

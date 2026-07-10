@@ -22,7 +22,7 @@
 ```csharp
 public class VolumeContinuousSecurity : ContinuousSecurity
 {
-    // List of inner securities (contracts), ordered by rollover sequence
+	// 按展期顺序排列的内部证券（合约）列表
     public SynchronizedList<SecurityId> InnerSecurities { get; }
 
     // 使用 open interest 而不是成交量来确定 rollover

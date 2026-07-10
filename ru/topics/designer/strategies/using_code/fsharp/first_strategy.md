@@ -91,7 +91,7 @@ subscription
 ```fsharp
 let area = this.CreateChartArea()
 
-// area can be null in case there is no GUI (e.g., Runner or console app)
+	// area может быть null, если GUI отсутствует (например, Runner или консольное приложение)
 if not (isNull area) then
 	// Нарисовать свечи
 	this.DrawCandles(area, subscription) |> ignore
@@ -144,7 +144,7 @@ member private this.OnProcess
 			isShortLessThenLong <- Some shortLess
 		| Some prevValue when prevValue <> shortLess ->
 			// Произошло пересечение
-			// If short < long, that means Sell, otherwise Buy
+		// Если short < long, это означает продажу, иначе покупку
 			let direction =
 				if shortLess then
 					Sides.Sell

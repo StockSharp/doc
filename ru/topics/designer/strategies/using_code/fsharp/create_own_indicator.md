@@ -28,7 +28,7 @@ type EmptyIndicator() as this =
 	let mutable isFormedValue = false
 
 	/// <summary>
-	/// The percentage value (+/-) used to modify the input price.
+	/// Процентное значение (+/-), используемое для изменения входной цены.
 	/// </summary>
 	member this.Change
 		with get () = changeValue
@@ -37,7 +37,7 @@ type EmptyIndicator() as this =
 			this.Reset()
 
 	/// <summary>
-	/// Defines if the indicator has formed (became ready for trading).
+	/// Определяет, сформирован ли индикатор (готов к торговле).
 	/// </summary>
 	override this.CalcIsFormed() = isFormedValue
 
@@ -71,7 +71,7 @@ type EmptyIndicator() as this =
 			let randomFactor = decimal (RandomGen.GetInt(-changeValue, changeValue)) / 100m
 			value <- value + (value * randomFactor)
 
-			// return final indicator value
+	// вернуть итоговое значение индикатора
 			let result = DecimalIndicatorValue(this, value, input.Time)
 			// случайно пометить значение как финальное или нет
 			result.IsFinal <- RandomGen.GetBool()

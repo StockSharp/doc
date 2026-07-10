@@ -109,7 +109,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	{
 		// 发生交叉
 
-		// if short less than long, the sale, otherwise buy
+		// short 小于 long 时卖出，否则买入
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
 		// 计算开仓或反转的数量

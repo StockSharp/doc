@@ -59,7 +59,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 	// Acesso às propriedades de IIndicatorValue
 	if (value.IsFinal)
 	{
-		// For indicators returning boolean values
+		// Para indicadores que retornam valores booleanos
 		var boolValue = value.GetValue<bool>();
 		
 		// Ou outros tipos de dados específicos de um indicador específico

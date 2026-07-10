@@ -247,7 +247,7 @@ Unten ist ein Beispiel für die Implementierung des Percentage Volume Oscillator
 
 ```cs
 /// <summary>
-/// Percentage Volume Oscillator (PVO).
+/// Prozentualer Volumenoszillator (PVO).
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),

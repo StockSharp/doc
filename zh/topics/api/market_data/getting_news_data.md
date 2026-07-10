@@ -56,7 +56,7 @@ var filteredNewsSubscription = new Subscription(DataType.News)
 		From = DateTime.Now.Subtract(TimeSpan.FromHours(24)),
 
 		// 可以指定特定新闻来源
-		// For example, we use an RSS source
+		// 例如，这里使用 RSS 源
 		NewsSource = "CryptoNews"
 	}
 };

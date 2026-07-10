@@ -38,7 +38,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	// 输入插槽是带 DiagramExternal 特性的方法参数
 
 	// 取消注释后，每次收到新参数都会调用 Process 方法
-	// (no need wait when all input args received)
+	// （无需等待获取所有输入参数）
 	//public override bool WaitAllInput => false;
 
 	[DiagramExternal]

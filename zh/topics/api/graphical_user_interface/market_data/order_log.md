@@ -121,7 +121,7 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 ### 订单日志动态分析
 
 ```cs
-// Class for analyzing order log dynamics
+	// 用于分析订单日志动态的类
 public class OrderLogAnalyzer
 {
 	private readonly Connector _connector;

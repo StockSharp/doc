@@ -133,7 +133,7 @@ def OnProcess(self, candle, longValue, shortValue):
 	"""
 	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
-	# If candle is not finished, do nothing
+		# Если свеча не завершена, ничего не делаем
 	if candle.State != CandleStates.Finished:
 		return
 
@@ -149,7 +149,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		# Рассчитать объём для открытия позиции или разворота
 		volume = self.Volume if self.Position == 0 else Math.Min(Math.Abs(self.Position), self.Volume) * 2
 
-		# Get price step (default to 1 if not set)
+		# Получить шаг цены (по умолчанию 1, если не задан)
 		priceStep = self.GetSecurity().PriceStep or 1
 
 		# Рассчитать цену заявки со смещением

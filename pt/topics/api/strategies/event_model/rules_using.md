@@ -244,7 +244,7 @@ mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
 	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
-	// Rule without specifying Once()
+// Regra sem especificar Once()
 	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 	{
 		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");

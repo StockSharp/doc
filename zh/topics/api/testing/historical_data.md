@@ -67,7 +67,7 @@ var connector = new HistoryEmulationConnector(
 			{
 				// 当历史价格触及限价单价格时撮合订单
 				// 默认关闭；价格必须穿过限价单价格
-				// (more strict testing mode)
+// （更严格的测试模式）
 				MatchOnTouch = false,
 				
 				// 成交手续费
@@ -115,14 +115,14 @@ connector.SecurityReceived += (subscr, s) =>
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
 		
-		// if we need to generate order books
+		// 如果需要生成订单簿
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
-			// if no historical order book data is available but required by the strategy,
+			// 如果策略需要但没有历史订单簿数据，
 			// 使用基于最新价格的生成器
 			connector.RegisterMarketDepth(new TrendMarketDepthGenerator(connector.GetSecurityId(security))
 			{
-				Interval = TimeSpan.FromSeconds(1), // order book refresh frequency - 1 sec
+				Interval = TimeSpan.FromSeconds(1), // 订单簿刷新频率 - 1 秒
 				MaxAsksDepth = maxDepth,
 				MaxBidsDepth = maxDepth,
 				UseTradeVolume = true,
@@ -369,9 +369,9 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	{
 		_isShortLessThenLong = isShortLessThenLong;
 	}
-	else if (_isShortLessThenLong != isShortLessThenLong) // crossover occurred
+	else if (_isShortLessThenLong != isShortLessThenLong) // 发生交叉
 	{
-		// if short is less than long - sell, otherwise buy
+		// short 小于 long 时卖出，否则买入
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
 		// 计算开仓或反转持仓的数量

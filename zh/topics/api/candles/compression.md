@@ -49,7 +49,7 @@ var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderPr
 ```cs
 private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, DateTime? from, DateTime? to)
 {
-	// ... (initialization code)
+	// ...（初始化代码）
 
 	switch (type)
 	{
@@ -68,7 +68,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.LoadAsync(from, to)
 					.ToCandles(mdMsg, Convert(extraType), candleBuilderProvider: candleBuilderProvider);
 
-		// ... (other cases)
+		// ...（其他情况）
 	}
 }
 
@@ -87,23 +87,23 @@ API 不仅可以使用逐笔成交和价差构建K线，还支持其他数据源
 switch (type)
 {
 	case BuildTypes.Ticks:
-		// ... (code for ticks)
+		// ...（tick 代码）
 
 	case BuildTypes.OrderLog:
-		// ... (code for order log)
+		// ...（订单日志代码）
 
 	case BuildTypes.Depths:
-		// ... (code for spreads)
+		// ...（价差代码）
 
 	case BuildTypes.Level1:
-		// ... (code for Level1)
+		// ...（Level1 代码）
 
 	case BuildTypes.SmallerTimeFrame:
 		return candleBuilderProvider
 				.GetCandleMessageBuildableStorage(StorageRegistry, securityId, mdMsg.GetTimeFrame(), Drive, StorageFormat)
 				.LoadAsync(from, to);
 
-	// ... (other cases)
+	// ...（其他情况）
 }
 
 // 此代码展示如何从不同数据源构建 K线：tick、订单日志、价差、Level1 数据，甚至更小周期的 K线。

@@ -59,7 +59,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// grouping candles by opening time (time part only) with 1 hour truncating
+// группировка свечей по времени открытия (только время) с усечением до 1 часа
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
@@ -70,7 +70,7 @@ namespace StockSharp.Algo.Analytics
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
-			// sorting by volume column (descending)
+// сортировка по столбцу объёма (по убыванию)
 			grid.SetSort("Volume", false);
 
 			return Task.CompletedTask;
@@ -138,7 +138,7 @@ class time_volume_script(IAnalyticsScript):
 			logs.LogWarning("no data")
 			return Task.CompletedTask
 
-		# Grouping candles by opening time (hourly truncation) and summing their volumes
+		# Группировка свечей по времени открытия (почасовое усечение) и суммирование их объёмов
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows = {}
 		for candle in candles:

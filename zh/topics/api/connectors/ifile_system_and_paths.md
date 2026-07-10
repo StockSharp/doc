@@ -17,7 +17,7 @@
 ```csharp
 public static class Paths
 {
-    // Standard file system (LocalFileSystem)
+// 标准文件系统 (LocalFileSystem)
     public static readonly IFileSystem FileSystem = Messages.Extensions.DefaultFileSystem;
 }
 ```

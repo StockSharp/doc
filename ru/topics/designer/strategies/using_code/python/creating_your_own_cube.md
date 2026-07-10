@@ -85,7 +85,7 @@ class empty_diagram_element(DiagramExternalElement):
 
 	# Раскомментируйте следующее свойство, если хотите, чтобы метод Process 
 	# вызывался каждый раз при получении нового аргумента
-	# (no need to wait for all input args to be received).
+	# (не нужно ждать получения всех входных аргументов).
 	#
 	# @property
 	# def WaitAllInput(self):

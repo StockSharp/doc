@@ -247,7 +247,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 
 ```cs
 /// <summary>
-/// Percentage Volume Oscillator (PVO).
+/// 百分比成交量振荡器 (PVO)。
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),

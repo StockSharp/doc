@@ -36,7 +36,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	public event Action<Unit> Output2;
 
 	// раскомментируйте, чтобы метод Process вызывался при каждом новом аргументе
-	// (no need wait when all input args received)
+	// (не нужно ждать получения всех входных аргументов)
 	//public override bool WaitAllInput => false;
 
 	// входные сокеты — это параметры методов, помеченные атрибутом DiagramExternal

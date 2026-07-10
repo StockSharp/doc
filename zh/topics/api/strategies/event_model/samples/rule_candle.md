@@ -27,7 +27,7 @@ protected override void OnStarted2(DateTime time)
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
 		// 现成 K线比即时压缩模式快得多
-		// turn off compression to boost optimizer (!!! make sure you have candles)
+	// 关闭压缩以加速优化器（!!! 请确保有K线）
 
 		//MarketData =
 		//{

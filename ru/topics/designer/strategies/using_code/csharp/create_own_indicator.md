@@ -54,7 +54,7 @@ public class EmptyIndicator : BaseIndicator
 
 		if (_counter++ == 5)
 		{
-			// for example, our indicator needs 5 inputs for become formed
+	// например, нашему индикатору нужно 5 входных значений, чтобы стать сформированным
 			_isFormed = true;
 		}
 
@@ -67,7 +67,7 @@ public class EmptyIndicator : BaseIndicator
 		return new DecimalIndicatorValue(this, value)
 		{
 			// финальное значение означает, что это значение для указанного входа
-			// is not changed anymore (for example, for candles that changes with last price)
+	// больше не изменяется (например, для свечей, изменяющихся по последней цене)
 			IsFinal = RandomGen.GetBool()
 		};
 	}

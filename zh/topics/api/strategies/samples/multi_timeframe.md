@@ -54,7 +54,7 @@ protected override void OnStarted2(DateTime time)
 		.Bind(fastSma, slowSma, ProcessHourlyCandle)
 		.Start();
 
-	// 5-minute candles for precise entry (RSI)
+		// 用于精确入场的 5 分钟K线 (RSI)
 	SubscribeCandles(TimeSpan.FromMinutes(5))
 		.Bind(rsi, ProcessEntryCandle)
 		.Start();

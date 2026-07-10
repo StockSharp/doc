@@ -48,7 +48,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 	var localStorage = storageRegistry.GetStorage(secId, dataType.MessageType, dataType.Arg, localDrive, format);
 	var remoteStorage = remoteDrive.GetStorageDrive(secId, dataType, format);
 
-	// ... (data loading code)
+// ... (código de carregamento de dados)
 }
 
 // Este loop percorre todos os tipos de dados disponíveis para o instrumento especificado.
@@ -71,7 +71,7 @@ foreach (var dateTime in dates)
 		localStorage.Drive.SaveStream(dateTime, stream);
 	}
 
-	// ... (data output code)
+// ... (código de saída de dados)
 }
 
 // Este código carrega dados de cada data do armazenamento remoto e os salva no armazenamento local.
@@ -92,7 +92,7 @@ var connector = new HistoryEmulationConnector(secProvider, new[] { pf }, new Sto
 // Trabalhar com vários tipos de dados
 foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
-	// ... (data processing code)
+// ... (código de processamento de dados)
 
 	// Tratamento de erros e logging
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
