@@ -182,10 +182,10 @@ public class OrderLogAnalyzer
 	// 更新统计信息
 	private void UpdateStatistics()
 	{
-		BuyCountLabel.Content = $"Buys: {_buyCount}";
-		SellCountLabel.Content = $"Sells: {_sellCount}";
-		BuyVolumeLabel.Content = $"Buy volume: {_buyVolume}";
-		SellVolumeLabel.Content = $"Sell volume: {_sellVolume}";
+		BuyCountLabel.Content = $"买入: {_buyCount}";
+		SellCountLabel.Content = $"卖出: {_sellCount}";
+		BuyVolumeLabel.Content = $"买入数量: {_buyVolume}";
+		SellVolumeLabel.Content = $"卖出数量: {_sellVolume}";
 		
 		// 计算不平衡
 		var volumeImbalance = _buyVolume - _sellVolume;
@@ -193,7 +193,7 @@ public class OrderLogAnalyzer
 			? volumeImbalance / (_buyVolume + _sellVolume) * 100 
 			: 0;
 			
-		ImbalanceLabel.Content = $"Imbalance: {volumeImbalance:F2} ({imbalancePercent:F2}%)";
+		ImbalanceLabel.Content = $"不平衡: {volumeImbalance:F2} ({imbalancePercent:F2}%)";
 	}
 }
 ```

@@ -153,9 +153,9 @@ private void UpdateTradeStatistics()
 		: 0;
 	
 	// Actualizar elementos de estadísticas de la interfaz
-	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
-	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
-	AveragePriceLabel.Content = $"Average price: {averagePrice:F2}";
+	TotalTradesLabel.Content = $"Total de operaciones: {totalTrades}";
+	TotalVolumeLabel.Content = $"Volumen total: {totalVolume}";
+	AveragePriceLabel.Content = $"Precio medio: {averagePrice:F2}";
 }
 ```
 

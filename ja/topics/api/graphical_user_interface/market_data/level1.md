@@ -22,7 +22,7 @@
 		xmlns:sx="http://schemas.stocksharp.com/xaml"
 		xmlns:local="clr-namespace:Membrane02"
 		mc:Ignorable="d"
-		Title="Level1Window" Height="300" Width="300" Closing="Window_Closing">
+		Title="Level1 ウィンドウ" Height="300" Width="300" Closing="Window_Closing">
 	<Grid>
 		<sx:Level1Grid x:Name="Level1Grid" />
 	</Grid>

@@ -306,8 +306,8 @@ private void ExportChartToImage()
 	// Crear objeto para guardar la imagen
 	var saveFileDialog = new SaveFileDialog
 	{
-		Filter = "PNG Image|*.png|JPEG Image|*.jpg|BMP Image|*.bmp",
-		Title = "Save Chart Image"
+		Filter = "Imagen PNG|*.png|Imagen JPEG|*.jpg|Imagen BMP|*.bmp",
+		Title = "Guardar imagen del gráfico"
 	};
 
 	if (saveFileDialog.ShowDialog() == true)

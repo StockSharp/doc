@@ -307,7 +307,7 @@ private void OnSubscriptionOnline(Subscription subscription)
 {
 	if (subscription == _subscription)
 	{
-		this.GuiAsync(() => StatusLabel.Content = "Online mode");
+		this.GuiAsync(() => StatusLabel.Content = "在线模式");
 	}
 }
 ```

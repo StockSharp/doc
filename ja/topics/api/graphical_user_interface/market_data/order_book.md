@@ -164,7 +164,7 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 		
 		this.GuiAsync(() => 
 		{
-			SpreadLabel.Content = $"Spread: {spread:F2} ({spreadPercent:F2}%)";
+			SpreadLabel.Content = $"スプレッド: {spread:F2} ({spreadPercent:F2}%)";
 		});
 	}
 	

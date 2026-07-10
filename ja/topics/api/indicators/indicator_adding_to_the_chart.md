@@ -27,7 +27,7 @@ private void InitializeChart()
 	// インジケーターを表すチャート要素の作成
 	_longMaElem = new ChartIndicatorElement
 	{
-		Title = "Long"
+		Title = "長期"
 	};
 	_area.Elements.Add(_longMaElem);
 	
@@ -128,8 +128,8 @@ private void InitializeChartWithMultipleIndicators()
 	
 	// チャート要素の作成
 	_candlesElem = new ChartCandleElement();
-	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (short)" };
-	_longSmaElem = new ChartIndicatorElement { Title = "SMA (long)" };
+	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (短期)" };
+	_longSmaElem = new ChartIndicatorElement { Title = "SMA (長期)" };
 	_rsiElem = new ChartIndicatorElement { Title = "RSI" };
 	
 	// 要素の色を設定

@@ -29,7 +29,7 @@ private void InitializeChart()
 	// Criar um elemento do gráfico que representa o indicador
 	_longMaElem = new ChartIndicatorElement
 	{
-		Title = "Long"
+		Title = "Longa"
 	};
 	_area.Elements.Add(_longMaElem);
 	
@@ -130,8 +130,8 @@ private void InitializeChartWithMultipleIndicators()
 	
 	// Criar elementos do gráfico
 	_candlesElem = new ChartCandleElement();
-	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (short)" };
-	_longSmaElem = new ChartIndicatorElement { Title = "SMA (long)" };
+	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (curta)" };
+	_longSmaElem = new ChartIndicatorElement { Title = "SMA (longa)" };
 	_rsiElem = new ChartIndicatorElement { Title = "RSI" };
 	
 	// Definir as cores dos elementos

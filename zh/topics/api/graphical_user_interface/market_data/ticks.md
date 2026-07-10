@@ -153,9 +153,9 @@ private void UpdateTradeStatistics()
 		: 0;
 	
 	// 更新界面统计元素
-	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
-	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
-	AveragePriceLabel.Content = $"Average price: {averagePrice:F2}";
+	TotalTradesLabel.Content = $"成交总数: {totalTrades}";
+	TotalVolumeLabel.Content = $"总成交量: {totalVolume}";
+	AveragePriceLabel.Content = $"平均价格: {averagePrice:F2}";
 }
 ```
 

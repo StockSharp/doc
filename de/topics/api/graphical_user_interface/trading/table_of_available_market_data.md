@@ -26,8 +26,8 @@ Nachfolgend sehen Sie ein Codebeispiel zum Hinzufügen einer [MarketDataGrid](xr
 			<RowDefinition/>
 		</Grid.RowDefinitions>
 		<xaml:MarketDataGrid x:Name="MarketDataGrid"  Grid.Row="1" Grid.ColumnSpan="3" />
-		<Button Grid.Row="0" Grid.Column="0" x:Name="Setting" Content="Setting" Click="Setting_Click" />
-		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Connect" Click="Connect_Click" />
+		<Button Grid.Row="0" Grid.Column="0" x:Name="Setting" Content="Einstellung" Click="Setting_Click" />
+		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Verbinden" Click="Connect_Click" />
 	</Grid>
 </Window>
 

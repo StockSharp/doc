@@ -22,7 +22,7 @@ A continuación se muestran fragmentos de código que demuestran su uso:
 		xmlns:sx="http://schemas.stocksharp.com/xaml"
 		xmlns:local="clr-namespace:Membrane02"
 		mc:Ignorable="d"
-		Title="Level1Window" Height="300" Width="300" Closing="Window_Closing">
+		Title="Ventana Level1" Height="300" Width="300" Closing="Window_Closing">
 	<Grid>
 		<sx:Level1Grid x:Name="Level1Grid" />
 	</Grid>

@@ -27,7 +27,7 @@ private void InitializeChart()
 	// 创建表示指标的图表元素
 	_longMaElem = new ChartIndicatorElement
 	{
-		Title = "Long"
+		Title = "长期"
 	};
 	_area.Elements.Add(_longMaElem);
 	
@@ -128,8 +128,8 @@ private void InitializeChartWithMultipleIndicators()
 	
 	// 创建图表元素
 	_candlesElem = new ChartCandleElement();
-	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (short)" };
-	_longSmaElem = new ChartIndicatorElement { Title = "SMA (long)" };
+	_shortSmaElem = new ChartIndicatorElement { Title = "SMA (短期)" };
+	_longSmaElem = new ChartIndicatorElement { Title = "SMA (长期)" };
 	_rsiElem = new ChartIndicatorElement { Title = "RSI" };
 	
 	// 设置元素颜色

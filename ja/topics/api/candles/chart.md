@@ -306,8 +306,8 @@ private void ExportChartToImage()
 	// 画像保存用のオブジェクトを作成
 	var saveFileDialog = new SaveFileDialog
 	{
-		Filter = "PNG Image|*.png|JPEG Image|*.jpg|BMP Image|*.bmp",
-		Title = "Save Chart Image"
+		Filter = "PNG 画像|*.png|JPEG 画像|*.jpg|BMP 画像|*.bmp",
+		Title = "チャート画像を保存"
 	};
 	
 	if (saveFileDialog.ShowDialog() == true)

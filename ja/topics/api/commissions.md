@@ -97,7 +97,7 @@ if (commission != null)
 }
 
 // 累積コミッション総額
-Console.WriteLine($"Total commission: {manager.Commission}");
+Console.WriteLine($"手数料合計: {manager.Commission}");
 ```
 
 ## 状態のリセット

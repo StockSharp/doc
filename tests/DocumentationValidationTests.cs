@@ -167,6 +167,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"adapters",
 		"average",
 		"buy",
+		"buys",
 		"canceled",
 		"cancelled",
 		"candle",
@@ -175,6 +176,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"commission",
 		"completed",
 		"configured",
+		"connect",
 		"connection",
 		"connector",
 		"created",
@@ -190,6 +192,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"found",
 		"general",
 		"greater",
+		"image",
+		"imbalance",
 		"index",
 		"indicator",
 		"instrument",
@@ -229,16 +233,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"registered",
 		"rule",
 		"search",
+		"save",
 		"sell",
+		"sells",
 		"series",
 		"setting",
 		"settings",
+		"short",
 		"signal",
 		"simple",
 		"spread",
 		"successfully",
 		"threshold",
+		"total",
 		"trade",
+		"trades",
 		"transitioned",
 		"type",
 		"unsupported",
@@ -2471,9 +2480,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 				foreach (Match literal in Regex.Matches(text, @"\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
 				{
-					var value = literal.Groups["value"].Value;
-					value = Regex.Replace(value, @"\{[^{}]*\}", " ", RegexOptions.CultureInvariant);
-					value = Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+					var value = NormalizeCodeUiLiteral(literal.Groups["value"].Value);
 
 					if (value.Length > 0)
 						yield return new CodeUiString(value, line);
@@ -2489,7 +2496,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		foreach (Match match in Regex.Matches(text, @"\[(?:DisplayName|Description|Category)\(\s*""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
 		{
-			var value = NormalizeCodeUiStringForTranslationCheck(match.Groups["value"].Value);
+			var value = NormalizeCodeUiLiteral(match.Groups["value"].Value);
 			if (value.Length > 0)
 				yield return value;
 		}
@@ -2497,9 +2504,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static IEnumerable<string> EnumerateCodeUiAssignmentStrings(string text)
 	{
-		foreach (Match match in Regex.Matches(text, @"\bFullTitle\s*=\s*""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+		foreach (Match match in Regex.Matches(text, @"\b(?:FullTitle|Title|Content|Header|Caption|Filter)\s*=\s*\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
 		{
-			var value = NormalizeCodeUiStringForTranslationCheck(match.Groups["value"].Value);
+			var rawValue = match.Groups["value"].Value;
+			if (rawValue.TrimStart().StartsWith("{", StringComparison.Ordinal))
+				continue;
+
+			var value = NormalizeCodeUiLiteral(rawValue);
 			if (value.Length > 0)
 				yield return value;
 		}
@@ -2513,6 +2524,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeCodeUiStringForTranslationCheck(string text)
 		=> Regex.Replace(text ?? string.Empty, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static string NormalizeCodeUiLiteral(string text)
+	{
+		var value = Regex.Replace(text ?? string.Empty, @"\{[^{}]*\}", " ", RegexOptions.CultureInvariant);
+		return NormalizeCodeUiStringForTranslationCheck(value);
+	}
 
 	private static bool IsTranslatableEnglishCodeUiString(string text)
 	{

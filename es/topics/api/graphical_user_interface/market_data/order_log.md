@@ -182,10 +182,10 @@ public class OrderLogAnalyzer
 	// Actualizar estadísticas
 	private void UpdateStatistics()
 	{
-		BuyCountLabel.Content = $"Buys: {_buyCount}";
-		SellCountLabel.Content = $"Sells: {_sellCount}";
-		BuyVolumeLabel.Content = $"Buy volume: {_buyVolume}";
-		SellVolumeLabel.Content = $"Sell volume: {_sellVolume}";
+		BuyCountLabel.Content = $"Compras: {_buyCount}";
+		SellCountLabel.Content = $"Ventas: {_sellCount}";
+		BuyVolumeLabel.Content = $"Volumen de compra: {_buyVolume}";
+		SellVolumeLabel.Content = $"Volumen de venta: {_sellVolume}";
 		
 		// Calcular desequilibrio
 		var volumeImbalance = _buyVolume - _sellVolume;
@@ -193,7 +193,7 @@ public class OrderLogAnalyzer
 			? volumeImbalance / (_buyVolume + _sellVolume) * 100 
 			: 0;
 			
-		ImbalanceLabel.Content = $"Imbalance: {volumeImbalance:F2} ({imbalancePercent:F2}%)";
+		ImbalanceLabel.Content = $"Desequilibrio: {volumeImbalance:F2} ({imbalancePercent:F2}%)";
 	}
 }
 ```

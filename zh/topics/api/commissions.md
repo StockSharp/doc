@@ -97,7 +97,7 @@ if (commission != null)
 }
 
 // 累计总佣金
-Console.WriteLine($"Total commission: {manager.Commission}");
+Console.WriteLine($"总佣金: {manager.Commission}");
 ```
 
 ## 重置状态

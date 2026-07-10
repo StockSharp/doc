@@ -153,9 +153,9 @@ private void UpdateTradeStatistics()
 		: 0;
 	
 	// インターフェイスの統計要素を更新します
-	TotalTradesLabel.Content = $"Total trades: {totalTrades}";
-	TotalVolumeLabel.Content = $"Total volume: {totalVolume}";
-	AveragePriceLabel.Content = $"Average price: {averagePrice:F2}";
+	TotalTradesLabel.Content = $"約定合計: {totalTrades}";
+	TotalVolumeLabel.Content = $"出来高合計: {totalVolume}";
+	AveragePriceLabel.Content = $"平均価格: {averagePrice:F2}";
 }
 ```
 

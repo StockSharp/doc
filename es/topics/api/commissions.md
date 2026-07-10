@@ -97,7 +97,7 @@ if (commission != null)
 }
 
 // Comisión acumulada total
-Console.WriteLine($"Total commission: {manager.Commission}");
+Console.WriteLine($"Comisión total: {manager.Commission}");
 ```
 
 ## Restablecimiento del estado
