@@ -2090,6 +2090,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			document.Descendants().OfType<CodeBlock>().Select(GetCodeBlockLanguage).ToArray(),
 			document.Descendants().OfType<LinkInline>().Where(link => link.IsImage).Select(link => NormalizeStructureUrl(link.Url)).ToArray(),
 			document.Descendants().OfType<Table>().Select(GetTableShape).ToArray(),
+			GetListSummary(document),
 			EnumerateUserVisibleMarkdownLines(markdown)
 				.Select(line => Regex.Match(line.Text, @"^\s*>\s*\[!(?<kind>NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
 				.Where(match => match.Success)
@@ -2108,6 +2109,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		ValidateStructureSequence(relative, localizedFile, "code block languages", expected.CodeBlockLanguages, actual.CodeBlockLanguages, errors);
 		ValidateStructureSequence(relative, localizedFile, "image URLs", expected.ImageUrls, actual.ImageUrls, errors);
 		ValidateStructureSequence(relative, localizedFile, "table shapes", expected.TableShapes, actual.TableShapes, errors);
+		ValidateStructureValue(relative, localizedFile, "list item counts", expected.ListSummary, actual.ListSummary, errors);
 		ValidateStructureSequence(relative, localizedFile, "admonition kinds", expected.AdmonitionKinds, actual.AdmonitionKinds, errors);
 	}
 
@@ -2123,6 +2125,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			return;
 
 		errors.Add($"{RelativeToRepo(localizedFile)}: {name} must match {DefaultLanguage}/{relative}. Expected: {FormatStructureSequence(expected)}. Actual: {FormatStructureSequence(actual)}.");
+	}
+
+	private static void ValidateStructureValue<T>(
+		string relative,
+		string localizedFile,
+		string name,
+		T expected,
+		T actual,
+		List<string> errors)
+	{
+		if (EqualityComparer<T>.Default.Equals(expected, actual))
+			return;
+
+		errors.Add($"{RelativeToRepo(localizedFile)}: {name} must match {DefaultLanguage}/{relative}. Expected: {expected}. Actual: {actual}.");
 	}
 
 	private static string GetCodeBlockLanguage(CodeBlock block)
@@ -2152,6 +2168,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			columnCounts.Length == 0 ? 0 : columnCounts.Max(),
 			Math.Max(0, rows.Length - 1));
 	}
+
+	private static ListSummary GetListSummary(MarkdownDocument document)
+	{
+		var ordered = 0;
+		var unordered = 0;
+
+		foreach (var list in document.Descendants().OfType<ListBlock>())
+		{
+			var items = list.OfType<ListItemBlock>().Count();
+			if (list.IsOrdered)
+				ordered += items;
+			else
+				unordered += items;
+		}
+
+		return new ListSummary(ordered, unordered);
+	}
+
 
 	private static IEnumerable<MarkdownTableCellText> EnumerateMarkdownTableCellTexts(string markdown)
 	{
@@ -4101,9 +4135,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		IReadOnlyList<string> CodeBlockLanguages,
 		IReadOnlyList<string> ImageUrls,
 		IReadOnlyList<TableShape> TableShapes,
+		ListSummary ListSummary,
 		IReadOnlyList<string> AdmonitionKinds);
 
 	private readonly record struct TableShape(int Columns, int BodyRows);
+
+	private readonly record struct ListSummary(int OrderedItems, int UnorderedItems);
 
 	private readonly record struct HeadingText(string Text, int Line);
 

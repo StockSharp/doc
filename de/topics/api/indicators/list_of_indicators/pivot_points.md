@@ -55,12 +55,12 @@ Pivot Points kann wie folgt interpretiert werden:
    - PP kann auch als Unterstützungs- oder Widerstandsniveau dienen
 
 2. **Widerstandsstufen (R1, R2, R3)**:
-   – Diese Niveaus stellen potenzielle Widerstandszonen in einem bullischen Markt dar
+   - Diese Niveaus stellen potenzielle Widerstandszonen in einem bullischen Markt dar
    - Ein Ausbruch aus einem Level kann zu einer weiteren Bewegung zum nächsten Level führen
    - Ein Abprall von einem Niveau kann zu einer Abwärtsumkehr führen
 
 3. **Unterstützungsstufen (S1, S2, S3)**:
-   – Diese Niveaus stellen potenzielle Unterstützungszonen in einem rückläufigen Markt dar
+   - Diese Niveaus stellen potenzielle Unterstützungszonen in einem rückläufigen Markt dar
    - Ein Ausbruch aus einem Level kann zu einer weiteren Bewegung zum nächsten Level führen
    - Ein Absprung von einem Niveau kann zu einer Aufwärtsumkehr führen
 

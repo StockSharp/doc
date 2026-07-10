@@ -14,7 +14,7 @@ Hauptmerkmale des Indikators:
 - Kann verwendet werden, um zukünftige Preisbewegungen vorherzusagen
 
 Anzeigesignale:
-– Möglicher Kauf, wenn die Sinuswellenlinie ein Minimum erreicht und beginnt, nach oben zu drehen
+- Möglicher Kauf, wenn die Sinuswellenlinie ein Minimum erreicht und beginnt, nach oben zu drehen
 - Möglicher Verkauf, wenn die Linie ein Maximum erreicht und beginnt, nach unten zu fallen
 
 ## Parameter
