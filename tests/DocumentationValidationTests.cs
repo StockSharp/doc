@@ -854,6 +854,27 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownTextDoesNotLookLikeEnglish()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+
+				foreach (var line in EnumerateLikelyEnglishMarkdownTextLines(ReadAllText(file), relative))
+					errors.Add($"{RelativeToRepo(file)}:{line.Line}: markdown text looks like untranslated English. Localize it or add a deliberate allowlist entry. Text: {Truncate(line.Text, 180)}");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedCodeOutputStringsDoNotContainKnownEnglishPhrases()
 	{
 		var errors = new List<string>();
@@ -1776,6 +1797,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					issues.Add(new AuditIssue("markdown-text-exact-english", RelativeToRepo(file), textLine.Line, $"is identical to the English source text: {Truncate(textLine.Text, 180)}"));
 				}
 
+				foreach (var textLine in EnumerateLikelyEnglishMarkdownTextLines(markdown, relative))
+					issues.Add(new AuditIssue("markdown-text-likely-english", RelativeToRepo(file), textLine.Line, $"looks like untranslated English: {Truncate(textLine.Text, 180)}"));
+
 				foreach (var output in EnumerateCodeOutputStrings(markdown))
 				{
 					outputCount++;
@@ -1922,6 +1946,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("## Checks");
 		report.AppendLine();
 		report.AppendLine("- Markdown text: full normalized English-like visible text candidates must not be identical to the English source.");
+		report.AppendLine("- Markdown text: visible localized text must not have a high ratio of English stop words.");
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
 		report.AppendLine("- Code comments: exact matches with English source comments.");
@@ -1969,6 +1994,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static IEnumerable<MarkdownTextLine> EnumerateLikelyEnglishMarkdownTextLines(string markdown, string relativePath)
+	{
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+		{
+			var normalized = NormalizeMarkdownTextForTranslationCheck(text);
+			if (!IsLikelyUntranslatedEnglishMarkdownText(relativePath, text, normalized))
+				continue;
+
+			yield return new MarkdownTextLine(normalized, line);
+		}
+	}
+
 	private static string NormalizeMarkdownTextForTranslationCheck(string text)
 	{
 		var value = text ?? string.Empty;
@@ -1980,9 +2017,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		value = Regex.Replace(value, @"^\s*>+\s*", string.Empty, RegexOptions.CultureInvariant);
 		value = Regex.Replace(value, @"^\s{0,3}#{1,6}\s*", string.Empty, RegexOptions.CultureInvariant);
 		value = Regex.Replace(value, @"^\s*(?:[-*+]|\d+\.)\s+", string.Empty, RegexOptions.CultureInvariant);
-		value = Regex.Replace(value, @"!\[(?<label>[^\]]*)\]\([^)]+\)", "${label}", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"!\[[^\]]*\]\([^)]+\)", " ", RegexOptions.CultureInvariant);
 		value = Regex.Replace(value, @"\[(?<label>[^\]]+)\]\([^)]+\)", "${label}", RegexOptions.CultureInvariant);
 		value = Regex.Replace(value, @"<[^>]+>", " ", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"[（(][^）)]*[A-Za-z][^）)]*[）)]", " ", RegexOptions.CultureInvariant);
 		value = value.Replace('|', ' ');
 		value = Regex.Replace(value, @"\\([\\`*_{}\[\]()#+\-.!|])", "$1", RegexOptions.CultureInvariant);
 		value = Regex.Replace(value, @"[`*_~]+", string.Empty, RegexOptions.CultureInvariant);
@@ -2009,6 +2047,26 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		var commonWords = words.Count(IsCommonEnglishMarkdownWord);
 		return commonWords >= 2;
+	}
+
+	private static bool IsLikelyUntranslatedEnglishMarkdownText(string relativePath, string rawText, string normalizedText)
+	{
+		if (normalizedText.Length < 32 || normalizedText.Contains(RussianSpecificPlaceholderMarker, StringComparison.OrdinalIgnoreCase))
+			return false;
+
+		if (IsAllowedInvariantMarkdownText(relativePath, rawText, normalizedText))
+			return false;
+
+		var words = Regex.Matches(normalizedText, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 1)
+			.ToArray();
+
+		if (words.Length < 5)
+			return false;
+
+		var commonWords = words.Count(IsCommonEnglishMarkdownWord);
+		return commonWords >= 3 && (double)commonWords / words.Length >= 0.30;
 	}
 
 	private static bool IsAllowedInvariantMarkdownText(string relativePath, string rawText, string normalizedText)
@@ -2041,7 +2099,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private static bool IsCommonEnglishMarkdownWord(string word)
-		=> word.Equals("a", StringComparison.OrdinalIgnoreCase)
+		=> !Regex.IsMatch(word, @"^[A-Z]{2,}$", RegexOptions.CultureInvariant)
+			&& (word.Equals("a", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("an", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("and", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("are", StringComparison.OrdinalIgnoreCase)
@@ -2067,7 +2126,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| word.Equals("when", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("which", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("will", StringComparison.OrdinalIgnoreCase)
-			|| word.Equals("with", StringComparison.OrdinalIgnoreCase);
+			|| word.Equals("with", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("you", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("your", StringComparison.OrdinalIgnoreCase));
 
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{

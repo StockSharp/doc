@@ -15,7 +15,7 @@ Este elemento se usa para calcular una fórmula lógica con dos argumentos.
 
 ## Parámetros
 
-- **Operador** - conjunto predefinido de fórmulas lógicas AND, OR, Exclusive OR.
+- **Operador** - conjunto predefinido de fórmulas lógicas AND, OR, OR exclusivo.
 
 ## Véase también
 

@@ -15,7 +15,7 @@ Dieses Element wird verwendet, um eine logische Formel mit zwei Argumenten zu be
 
 ## Parameter
 
-- **Operator** - ein vordefinierter Satz logischer Formeln: AND, OR, Exclusive OR.
+- **Operator** - ein vordefinierter Satz logischer Formeln: AND, OR, exklusives OR.
 
 ## Siehe auch
 
