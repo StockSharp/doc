@@ -48,7 +48,7 @@ connector.UnSubscribe(subscription);
 
 ## 使用示例
 
-使用订单簿的示例可在 *Samples/01_Basic/02_MarketDepths* 项目中找到，位于 [GitHub](https://github.com/StockSharp/StockSharp/)，或者在 StockSharp API 存档中获取，该存档可以通过 [Installer](../../installer.md) 获得。这些示例提供了连接交易系统、订阅过滤后的订单簿以及处理接收数据的实用演示，可以作为开发您自己的交易策略的良好起点。
+使用订单簿的示例可在 *Samples/01_Basic/02_MarketDepths* 项目中找到，位于 [GitHub](https://github.com/StockSharp/StockSharp/)，或者在 StockSharp API 存档中获取，该存档可以通过 [安装程序](../../installer.md) 获得。这些示例提供了连接交易系统、订阅过滤后的订单簿以及处理接收数据的实用演示，可以作为开发您自己的交易策略的良好起点。
 
 ## 另请参阅
 

@@ -1,10 +1,10 @@
 # 初回実行
 
-1. [Installer](../installer.md) をインストールするには、[ダウンロード](https://stocksharp.com/products/download/) ページに移動します。
+1. [インストーラー](../installer.md) をインストールするには、[ダウンロード](https://stocksharp.com/products/download/) ページに移動します。
    
     ![インストーラーのインストール](../../images/installer_installation.png)
 
-2. [Installer](../installer.md) のディストリビューションをダウンロードします。
+2. [インストーラー](../installer.md) のディストリビューションをダウンロードします。
 3. インストールファイル **stocksharp_setup.exe** を実行し、インストーラーの指示に従います。
 4. Windows がすぐにインストールを開始せず、警告を表示することがあります。
 
@@ -14,9 +14,9 @@
 
     ![インストーラーZIPのプロパティ](../../images/installer_warn_2.png)
 
-    **実行** ボタンをクリックすると、[Installer](../installer.md) のインストールが開始されます。
+    **実行** ボタンをクリックすると、[インストーラー](../installer.md) のインストールが開始されます。
 
-6. その後、[Installer](../installer.md) が展開されます。処理が完了するまで待ちます。
+6. その後、[インストーラー](../installer.md) が展開されます。処理が完了するまで待ちます。
 7. 初回起動時には、**StockSharp** のログイン名とパスワードを入力する必要があります。
 
     ![インストーラーログイン](../../images/login_installer.png)

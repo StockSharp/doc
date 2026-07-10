@@ -6,7 +6,7 @@
 
 单击 **发布** 按钮后，会打开用于选择导出类型的窗口。有关详细信息，请参阅[策略导出](../export_import/export.md)章节。
 
-选择导出类型后，会使用发布参数激活 [Installer](../../installer.md) 程序（必须提前启动 [Installer](../../installer.md)）：
+选择导出类型后，会使用发布参数激活 [安装程序](../../installer.md) 程序（必须提前启动 [安装程序](../../installer.md)）：
 
 ![Designer_publish_01](../../../images/designer_publish_01.png)
 

@@ -1,6 +1,6 @@
 # 安装和卸载应用程序
 
-[Installer](../installer.md) 可以按应用程序类型筛选产品，帮助您找到所需程序。
+[安装程序](../installer.md) 可以按应用程序类型筛选产品，帮助您找到所需程序。
 
 ![选择安装程序](../../images/choose_installer.png)
 

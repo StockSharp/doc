@@ -7,7 +7,7 @@
 S# 与任何支持我们连接方式的经纪商均兼容。
 
 > [!NOTE]
-> **所有**程序的安装均通过 [Installer](topics/installer.md) 实用程序。
+> **所有**程序的安装均通过 [安装程序](topics/installer.md) 实用程序。
 
 ### 设计师
 

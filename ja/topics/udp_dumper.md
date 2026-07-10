@@ -2,7 +2,7 @@
 
 **UDPDumper** は UDP パケットを記録します。ブローカーや取引所から提供されたネットワーク設定の検証や、[FAST](api/connectors/common/fast_protocol.md) や SBE などの UDP ベースのコネクターを後でテストするためのデータ収集に使用できます。
 
-[Installer](installer.md) から UDPDumper をインストールします。
+[インストーラー](installer.md) から UDPDumper をインストールします。
 
 ## セットアップと実行
 

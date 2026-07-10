@@ -1,6 +1,6 @@
 # MetaTrader
 
-[StockSharp](../../../api.md) は、特別なコネクタを通じて MT4 および MT5 ターミナルと連携します。これらのコネクタをインストールするには、[Installer](../../../installer.md) を使用します（詳細については、[プログラムのインストールと削除](../../../installer/install_and_remove_apps.md)を参照してください）。
+[StockSharp](../../../api.md) は、特別なコネクタを通じて MT4 および MT5 ターミナルと連携します。これらのコネクタをインストールするには、[インストーラー](../../../installer.md) を使用します（詳細については、[プログラムのインストールと削除](../../../installer/install_and_remove_apps.md)を参照してください）。
 
 どちらのコネクタも同じ方法で使用するため、以下では MT5 への接続プロセスについて説明します。
 
@@ -8,11 +8,11 @@
 
 > [!Video https://www.youtube.com/embed/qGnIa7YIS5Q]
 
-1. [Installer](../../../installer.md) で MT コネクタを選択し、インストールプロセスを開始します。
+1. [インストーラー](../../../installer.md) で MT コネクタを選択し、インストールプロセスを開始します。
 
    ![MT Install 1](../../../../images/mt_install_1.png)
 
-2. [Installer](../../../installer.md) は、コネクタをどのフォルダーにインストールするかを尋ねます（Experts フォルダーにインストールする必要があります）。
+2. [インストーラー](../../../installer.md) は、コネクタをどのフォルダーにインストールするかを尋ねます（Experts フォルダーにインストールする必要があります）。
 
    ![MT Install 2](../../../../images/mt_install_2.png)
 
@@ -27,7 +27,7 @@
    > [!TIP]
    > - パスを自動的に判定できない場合は、ディレクトリ検索で *C:\\Users\\%your_user_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%many_letters_and_numbers%\\MQL4\\Experts\\* を手動で選択する必要があります（MT5 の場合、パスには MQL5 が含まれます）。
 
-5. インストールを完了し、終了するまで待ちます。インストールの最後に、[Installer](../../../installer.md) はターミナルを設定する必要があることを警告します。これを行うには、MT ターミナルを起動して取引に接続します。
+5. インストールを完了し、終了するまで待ちます。インストールの最後に、[インストーラー](../../../installer.md) はターミナルを設定する必要があることを警告します。これを行うには、MT ターミナルを起動して取引に接続します。
 6. Tools->Options メニューで **Experts Advisors** タブを選択し、外部 DLL 取引の許可（**Allow DLL imports**）が有効になっていることを確認します。![MT 1](../../../../images/mt_1.png)
 7. コネクタのインストール中（手順 2）にターミナルが実行されていた場合は、Experts を右クリックし、メニューから **Refresh** を選択してエキスパートのリストを更新する必要があります。
 

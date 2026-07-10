@@ -768,6 +768,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCjkMarkdownHeadingsDoNotKeepKnownEnglishNames()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages().Where(_cjkLanguageCodes.Contains))
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var heading in EnumerateHeadingTexts(ReadAllText(file)))
+				{
+					if (!_translatableEnglishCjkTocNames.Contains(heading.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{heading.Line}: markdown heading looks like untranslated English for {lang}. Localize it or add a deliberate allowlist entry. Heading: {heading.Text}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedLanguageStringsMatchDefaultKeys()
 	{
 		var errors = new List<string>();
@@ -2965,7 +2989,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
 		report.AppendLine("- Code string literals: exact matches with English source string literals and literals that look like untranslated English.");
 		report.AppendLine("- Code comments: exact matches with English source comments and comments that look like untranslated English.");
-		report.AppendLine("- TOC structure, CJK TOC name localization, and language string key parity are covered by dedicated tests.");
+		report.AppendLine("- TOC structure, CJK TOC/heading localization, and language string key parity are covered by dedicated tests.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
 		report.AppendLine("## Issues");

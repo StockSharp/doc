@@ -1,4 +1,4 @@
-# Installer
+# 安装程序
 
 **Installer** 是 **StockSharp** 所有程序和应用程序的管理中心，可用于：
 

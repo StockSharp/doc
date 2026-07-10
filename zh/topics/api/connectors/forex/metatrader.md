@@ -1,6 +1,6 @@
 # MetaTrader
 
-[StockSharp](../../../api.md) 通过专用连接器与 MT4 和 MT5 终端集成。要安装这些连接器，请使用 [Installer](../../../installer.md)（更多详情，请参见 [安装和卸载程序](../../../installer/install_and_remove_apps.md)）。
+[StockSharp](../../../api.md) 通过专用连接器与 MT4 和 MT5 终端集成。要安装这些连接器，请使用 [安装程序](../../../installer.md)（更多详情，请参见 [安装和卸载程序](../../../installer/install_and_remove_apps.md)）。
 
 两个连接器的使用方法相同，因此下面是连接到 MT5 的操作说明：
 
@@ -8,7 +8,7 @@
 
 > [!视频 https://www.youtube.com/embed/qGnIa7YIS5Q]
 
-1. 在 [Installer](../../../installer.md) 中选择 MT 连接器并开始安装过程。
+1. 在 [安装程序](../../../installer.md) 中选择 MT 连接器并开始安装过程。
 
    ![MT 安装 1](../../../../images/mt_install_1.png)
 

@@ -48,7 +48,7 @@ connector.UnSubscribe(subscription);
 
 ## 使用例
 
-板情報の使用例は、[GitHub](https://github.com/StockSharp/StockSharp/) 上の *Samples\/01\_Basic\/02\_MarketDepths* プロジェクト、または [Installer](../../installer.md) を通じて取得できる StockSharp API アーカイブで利用できます。これらの例は、取引システムへの接続、フィルター済み板情報へのサブスクライブ、受信データの処理について実践的な説明を提供し、独自の取引戦略を開発するための良い出発点になります。
+板情報の使用例は、[GitHub](https://github.com/StockSharp/StockSharp/) 上の *Samples\/01\_Basic\/02\_MarketDepths* プロジェクト、または [インストーラー](../../installer.md) を通じて取得できる StockSharp API アーカイブで利用できます。これらの例は、取引システムへの接続、フィルター済み板情報へのサブスクライブ、受信データの処理について実践的な説明を提供し、独自の取引戦略を開発するための良い出発点になります。
 
 ## 関連項目
 
