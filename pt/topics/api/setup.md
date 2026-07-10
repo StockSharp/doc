@@ -287,7 +287,7 @@ dotnet restore
     <!-- Conector -->
     <PackageReference Include="StockSharp.Binance" Version="*" />
 
-    <!-- Backtesting -->
+    <!-- Testes retrospectivos -->
     <PackageReference Include="StockSharp.Algo.Testing" Version="*" />
 
     <!-- Localização -->

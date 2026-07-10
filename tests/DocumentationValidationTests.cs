@@ -195,6 +195,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"UDP Dumper",
 	};
 
+	private static readonly HashSet<string> _knownEnglishCodeCommentLabels = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"Backtesting",
+		"Connector",
+		"Core",
+		"Localization",
+		"Strategies and indicators",
+	};
+
 	private static readonly (string Name, string Pattern)[] _knownEnglishCodeOutputPatterns =
 	[
 		("subscription lifecycle output", @"\bSubscription (?:started|completed|interrupted|online|switched to real-time mode)\b"),
@@ -3311,6 +3320,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
 			{
 				var trimmed = text.Trim();
+				foreach (Match xmlComment in Regex.Matches(trimmed, @"<!--\s*.*?\s*-->", RegexOptions.CultureInvariant))
+					yield return new CodeComment(xmlComment.Value, line);
+
 				if (trimmed.StartsWith("///", StringComparison.Ordinal)
 					|| trimmed.StartsWith("//", StringComparison.Ordinal)
 					|| trimmed.StartsWith("#", StringComparison.Ordinal))
@@ -3644,10 +3656,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
-		var text = Regex.Replace(comment, @"^\s*(?:///?|#)\s*", string.Empty, RegexOptions.CultureInvariant);
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--)\s*", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
-		if (text.Length < 12)
+		if (text.Length < 12 && !_knownEnglishCodeCommentLabels.Contains(text))
 			return string.Empty;
 
 		// Skip XML doc boilerplate, commented-out code, identifiers, and compiler/preprocessor directives.
@@ -3662,7 +3675,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
-		var text = Regex.Replace(comment, @"^\s*(?:///?|#)\s*", string.Empty, RegexOptions.CultureInvariant);
+		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--)\s*", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
 		if (text.Length < 20)

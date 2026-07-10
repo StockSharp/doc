@@ -276,21 +276,21 @@ dotnet restore
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Core -->
+    <!-- 核心 -->
     <PackageReference Include="StockSharp.Algo" Version="*" />
     <PackageReference Include="StockSharp.Configuration" Version="*" />
 
-    <!-- Strategies and indicators -->
+    <!-- 策略和指标 -->
     <PackageReference Include="StockSharp.Algo.Strategies" Version="*" />
     <PackageReference Include="StockSharp.Algo.Indicators" Version="*" />
 
-    <!-- Connector -->
+    <!-- 连接器 -->
     <PackageReference Include="StockSharp.Binance" Version="*" />
 
-    <!-- Backtesting -->
+    <!-- 回测 -->
     <PackageReference Include="StockSharp.Algo.Testing" Version="*" />
 
-    <!-- Localization -->
+    <!-- 本地化 -->
     <PackageReference Include="StockSharp.Localization.ru" Version="*" />
   </ItemGroup>
 </Project>

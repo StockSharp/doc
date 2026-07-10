@@ -276,7 +276,7 @@ dotnet restore
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Core -->
+    <!-- Kern -->
     <PackageReference Include="StockSharp.Algo" Version="*" />
     <PackageReference Include="StockSharp.Configuration" Version="*" />
 
@@ -284,10 +284,10 @@ dotnet restore
     <PackageReference Include="StockSharp.Algo.Strategies" Version="*" />
     <PackageReference Include="StockSharp.Algo.Indicators" Version="*" />
 
-    <!-- Connector -->
+    <!-- Konnektor -->
     <PackageReference Include="StockSharp.Binance" Version="*" />
 
-    <!-- Backtesting -->
+    <!-- Rücktests -->
     <PackageReference Include="StockSharp.Algo.Testing" Version="*" />
 
     <!-- Lokalisierung -->
