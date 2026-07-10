@@ -4,7 +4,7 @@ El componente de autenticación desempeña un papel clave para garantizar la int
 
 ## Funciones Principales
 
-1. Almacenamiento de claves de API (clave pública, clave secreta, passphrase).
+1. Almacenamiento de claves de API (clave pública, clave secreta, frase de acceso).
 2. Generación de firmas para solicitudes de acuerdo con los requisitos de un exchange específico.
 3. Adición de los encabezados de autenticación necesarios a las solicitudes HTTP.
 
@@ -44,7 +44,7 @@ class Authenticator : Disposable
 	// Clave secreta de API
 	public SecureString Secret { get; }
 
-	// Passphrase (si el exchange la requiere)
+	// Frase de acceso (si el exchange la requiere)
 	public SecureString Passphrase { get; }
 
 	// Método para crear una firma de solicitud
@@ -63,7 +63,7 @@ class Authenticator : Disposable
 
 ## Recomendaciones
 
-- Utilice `SecureString` para almacenar datos sensibles, como claves y passphrases.
+- Utilice `SecureString` para almacenar datos sensibles, como claves y frases de acceso.
 - Implemente la interfaz `IDisposable` para una correcta liberación de recursos, especialmente si se utilizan primitivas criptográficas.
 - Asegúrese de que los métodos de generación de firmas correspondan a la última versión de la documentación de la API del exchange.
 

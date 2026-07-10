@@ -7,7 +7,7 @@ Wichtige Felder:
 - **Schlüssel** - API-Schlüssel.
 - **Geheimnis** - API-Secret.
 - **Clearing-Konto** - Wert des Clearing-Kontos.
-- **Kennphrase** - Wert der Passphrase.
+- **Kennphrase** - Wert der Kennphrase.
 - **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).
 - **Spot aktivieren** - aktiviert den Spot-Bereich.
 - **Demomodus** - Modus der Demo-Umgebung.

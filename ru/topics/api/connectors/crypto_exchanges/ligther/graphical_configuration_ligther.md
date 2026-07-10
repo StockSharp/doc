@@ -11,8 +11,8 @@
 - **Секция** - торговая секция (`Spot` или `Derivatives`).
 - **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
-- **Spot WS / Derivatives WS** - websocket адреса.
-- **Режим WS только для чтения** - флаг read-only режима websocket.
+- **Spot WS / Derivatives WS** - адреса WebSocket.
+- **Режим WS только для чтения** - флаг режима WebSocket только для чтения.
 
 ## См. также
 

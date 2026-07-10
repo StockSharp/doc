@@ -21,8 +21,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Lizenzen** - Adresse des Lizenzservers.
 - **Brokeradresse** - Brokeradresse.
 - **Log (Adresse)** - Logger-Adresse.
-- **Benutzername (hist)** - Zusätzliches Login. Benutzer-ID für die Authentifizierung beim History Plant.
-- **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim History Plant.
+- **Benutzername (hist)** - Zusätzliches Login. Benutzer-ID für die Authentifizierung beim Historienservice.
+- **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim Historienservice.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 

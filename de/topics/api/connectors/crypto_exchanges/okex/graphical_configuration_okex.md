@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimer Schlüssel.
-- **Kennphrase** - Passphrase.
+- **Kennphrase** - Kennphrase.
 - **Futures** - Futures-Bereich
 - **Spot** - Spot-Bereich
 - **Swap** - Swap-Bereich.

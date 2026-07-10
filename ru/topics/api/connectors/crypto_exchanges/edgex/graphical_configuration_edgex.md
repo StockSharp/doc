@@ -6,13 +6,13 @@
 
 - **Ключ** - API ключ.
 - **Секрет** - API секрет.
-- **Клиринговый аккаунт** - значение clearing account.
-- **Парольная фраза** - значение passphrase.
+- **Клиринговый аккаунт** - значение клирингового аккаунта.
+- **Парольная фраза** - значение парольной фразы.
 - **Секция** - торговая секция (`Spot` или `Derivatives`).
 - **Включить спот** - включает секцию spot.
 - **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
-- **Spot WS / Derivatives public WS / Derivatives private WS** - websocket адреса.
+- **Spot WS / Derivatives public WS / Derivatives private WS** - адреса WebSocket.
 
 ## См. также
 

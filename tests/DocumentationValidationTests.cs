@@ -105,7 +105,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	[
 		"Add button",
 		"Add Designer strategy",
+		"Account API",
 		"Apply changes",
+		"Aster Code endpoints",
 		"Cloud panel",
 		"Connect button",
 		"Console App",
@@ -118,22 +120,27 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Check dates",
 		"Check revocation",
 		"Enable spot",
+		"Exchange endpoint",
 		"File -> Allow Remoting",
 		"File log",
 		"File → New Solution",
 		"File → New → Project",
 		"Group ID",
+		"history plant",
 		"Host name",
+		"Info endpoint",
 		"Log (address)",
 		"Market data fields",
 		".NET / .NET Core → Console Application",
 		"Operating mode",
+		"Order book channel",
 		"Path to logs",
 		"Point (admin)",
 		"Point (data)",
 		"Point (history)",
 		"Point (positions)",
 		"Point (transactions)",
+		"Private websocket stream",
 		"Manage NuGet Packages",
 		"More info",
 		"Open debug launch profiles UI",
@@ -146,12 +153,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Settings → Build, Execution, Deployment → NuGet → Sources",
 		"Solution Explorer",
 		"Software ID",
+		"Spot account and trading API",
+		"Spot websocket account info",
+		"Spot websocket market data",
 		"Target Framework",
 		"Time zone",
 		"Tools → Options → NuGet Package Manager → Package Sources",
+		"trading demo",
 		"User name (hist)",
 		"Validate remote",
 		"Verification code",
+		"Websocket API docs",
+		"Websocket channels",
+		"Websocket introduction",
 		"Work schedule",
 		"WPF Application",
 	];
@@ -183,6 +197,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Wallet address",
 		"WS read-only mode",
 	};
+
+	private static readonly Regex[] _knownEnglishLowercaseProseTerms =
+	[
+		new(@"\bpassphrases?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+	];
 
 	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)
 	{
@@ -1214,6 +1233,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English bold UI label '{label}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownDoesNotKeepKnownEnglishLowercaseProseTerms()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var pattern in _knownEnglishLowercaseProseTerms)
+					{
+						var match = pattern.Match(text);
+						if (!match.Success)
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English prose term '{match.Value}'.");
 					}
 				}
 			}

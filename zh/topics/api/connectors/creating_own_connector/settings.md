@@ -37,7 +37,7 @@ public override void Load(SettingsStorage storage)
 1. [IKeySecretAdapter](xref:StockSharp.Messages.IKeySecretAdapter) - 用于需要 API key 和 secret 进行身份验证的适配器。
 2. [ILoginPasswordAdapter](xref:StockSharp.Messages.ILoginPasswordAdapter) - 用于使用登录名和密码的适配器。
 3. [ITokenAdapter](xref:StockSharp.Messages.ITokenAdapter) - 用于使用身份验证令牌的适配器。
-4. [IPassphraseAdapter](xref:StockSharp.Messages.IPassphraseAdapter) - 用于需要 passphrase 的适配器。
+4. [IPassphraseAdapter](xref:StockSharp.Messages.IPassphraseAdapter) - 用于需要密码短语的适配器。
 5. [IDemoAdapter](xref:StockSharp.Messages.IDemoAdapter) - 用于支持演示模式的适配器。
 6. [IAddressAdapter<TAddress>](xref:StockSharp.Messages.IAddressAdapter`1) - 用于需要指定服务器地址的适配器。
 7. [ISenderTargetAdapter](xref:StockSharp.Messages.ISenderTargetAdapter) - 用于使用发送方和接收方标识符的适配器。

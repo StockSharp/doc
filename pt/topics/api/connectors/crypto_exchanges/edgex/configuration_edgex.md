@@ -16,7 +16,7 @@ Documentação oficial da API:
 
 - [Authentication](https://edgex-1.gitbook.io/edgex-documentation/developer/api/authentication)
 - [Order API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/order-api)
-- [Account API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/account-api)
+- [API de conta](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/account-api)
 - [Stream WebSocket privado](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/private-websocket-stream)
 - [Funding API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/funding-api)
 - [API de metadados](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/meta-data-api)

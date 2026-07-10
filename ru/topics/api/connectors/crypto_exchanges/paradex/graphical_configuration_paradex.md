@@ -12,7 +12,7 @@
 - **Включить спот** - включает секцию spot.
 - **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
-- **Spot WS / Derivatives WS** - websocket адреса.
+- **Spot WS / Derivatives WS** - адреса WebSocket.
 - **Путь аутентификации** - путь auth endpoint.
 
 ## См. также

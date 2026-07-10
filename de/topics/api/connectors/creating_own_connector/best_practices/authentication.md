@@ -4,7 +4,7 @@ Die Authentifizierungskomponente spielt eine Schlüsselrolle bei der Gewährleis
 
 ## Hauptfunktionen
 
-1. Speicherung von API-Schlüsseln (öffentlicher Schlüssel, geheimer Schlüssel, Passphrase).
+1. Speicherung von API-Schlüsseln (öffentlicher Schlüssel, geheimer Schlüssel, Kennphrase).
 2. Generierung von Signaturen für Anfragen gemäß den Anforderungen einer bestimmten Börse.
 3. Hinzufügen der erforderlichen Authentifizierungsheader zu HTTP-Anfragen.
 
@@ -44,7 +44,7 @@ class Authenticator : Disposable
 	// Geheimer API-Schlüssel
 	public SecureString Secret { get; }
 
-	// Passphrase (falls von der Börse erforderlich)
+	// Kennphrase (falls von der Börse erforderlich)
 	public SecureString Passphrase { get; }
 
 	// Methode zum Erstellen einer Anfragesignatur

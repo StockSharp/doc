@@ -4,7 +4,7 @@ Para todos los productos StockSharp, la configuración gráfica de la conexión 
 
 ![Configuración de API GUI cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
-- **Demostración** - Conexión al trading demo.
+- **Demostración** - Conexión a la negociación de demostración.
 
 Autorización OAuth:
 

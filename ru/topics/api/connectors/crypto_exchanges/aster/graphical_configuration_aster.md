@@ -10,7 +10,7 @@
 - **Режим деривативов** - семейство протокола деривативов.
 - **Демо-режим** - режим демо среды.
 - **Spot REST / Derivatives REST** - REST адреса.
-- **Spot WS / Derivatives WS** - websocket адреса.
+- **Spot WS / Derivatives WS** - адреса WebSocket.
 
 ## См. также
 

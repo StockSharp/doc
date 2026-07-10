@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.
-- **Kennphrase** - Passphrase.
+- **Kennphrase** - Kennphrase.
 - **Demomodus** - Verbindung zum Demo-Handel statt zum realen Handelsserver.
 - **Saldo** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

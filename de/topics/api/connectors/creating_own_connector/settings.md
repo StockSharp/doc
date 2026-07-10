@@ -37,7 +37,7 @@ Beispiele für Basisschnittstellen:
 1. [IKeySecretAdapter](xref:StockSharp.Messages.IKeySecretAdapter) - für Adapter, die einen Schlüssel und ein Secret für die Authentifizierung benötigen.
 2. [ILoginPasswordAdapter](xref:StockSharp.Messages.ILoginPasswordAdapter) - für Adapter, die einen Login und ein Passwort verwenden.
 3. [ITokenAdapter](xref:StockSharp.Messages.ITokenAdapter) - für Adapter, die ein Authentifizierungstoken verwenden.
-4. [IPassphraseAdapter](xref:StockSharp.Messages.IPassphraseAdapter) - für Adapter, die ein Passwort oder eine Passphrase benötigen.
+4. [IPassphraseAdapter](xref:StockSharp.Messages.IPassphraseAdapter) - für Adapter, die ein Passwort oder eine Kennphrase benötigen.
 5. [IDemoAdapter](xref:StockSharp.Messages.IDemoAdapter) - für Adapter, die den Demomodus unterstützen.
 6. [IAddressAdapter<TAddress>](xref:StockSharp.Messages.IAddressAdapter`1) - für Adapter, die die Angabe einer Serveradresse erfordern.
 7. [ISenderTargetAdapter](xref:StockSharp.Messages.ISenderTargetAdapter) - für Adapter, die Absender- und Empfängerkennungen verwenden.

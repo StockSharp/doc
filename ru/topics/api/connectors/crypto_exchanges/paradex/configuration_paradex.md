@@ -19,9 +19,9 @@
 - [Authentication](https://docs.paradex.trade/api/prod/authentication)
 - [REST API](https://docs.paradex.trade/api/prod/rest-api)
 - [Create a new order](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
-- [Websocket introduction](https://docs.paradex.trade/api/prod/websocket/introduction)
-- [Websocket channels](https://docs.paradex.trade/api/prod/websocket/channels)
-- [Order book channel](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
+- [Введение в WebSocket](https://docs.paradex.trade/api/prod/websocket/introduction)
+- [Каналы WebSocket](https://docs.paradex.trade/api/prod/websocket/channels)
+- [Канал книги заявок](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
 
 > [!TIP]
 > В текущей реализации полностью поддержан `Derivatives`. `Spot` включайте только при подтвержденной поддержке в целевой API среде.

@@ -21,8 +21,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Licencias** - Dirección del servidor de licencias.
 - **Bróker** - Dirección del bróker.
 - **Registro (dirección)** - Dirección del logger.
-- **Nombre de usuario (hist)** - Login adicional. ID de usuario usado para autenticarse con history plant.
-- **contraseña (historial)** - Contraseña adicional. Contraseña usada para autenticarse con history plant
+- **Nombre de usuario (hist)** - Login adicional. ID de usuario usado para autenticarse con servicio histórico.
+- **contraseña (historial)** - Contraseña adicional. Contraseña usada para autenticarse con servicio histórico
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
 

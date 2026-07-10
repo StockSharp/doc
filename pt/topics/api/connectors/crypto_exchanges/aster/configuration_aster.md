@@ -19,7 +19,7 @@ Documentação oficial da API:
 - [Informações de conta spot via WebSocket](https://asterdex.github.io/aster-api-website/spot/websocket-account-info/)
 - [Informações gerais de futures v3](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
 - [Streams de dados do utilizador de futures](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
-- [Aster Code endpoints](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
+- [pontos de acesso Aster Code](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]
 > A Aster tem duas famílias de protocolos para derivativos. Selecione o **Modo de derivativos** correto antes de ativar a negociação.
