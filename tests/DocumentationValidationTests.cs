@@ -1682,19 +1682,26 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void RussianIndicatorListDescriptionsDoNotStartWithEnglishPhrases()
+	public void LocalizedIndicatorListDescriptionsDoNotStartWithEnglishPhrases()
 	{
 		var errors = new List<string>();
-		var file = Path.Combine(_repoRoot, "ru", "topics", "api", "indicators", "list_of_indicators.md");
-		var pattern = new Regex(@"^\s*-\s+\[[^\]\r\n]+\]\([^\)\r\n]+\)\s+-\s+(?<lead>[A-Za-z][^,\r\n]*),", RegexOptions.CultureInvariant);
+		var relative = Path.Combine("topics", "api", "indicators", "list_of_indicators.md");
+		var defaultLeadsByUrl = ReadIndicatorListDescriptionLeads(Path.Combine(_repoRoot, DefaultLanguage, relative));
 
-		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
-			var match = pattern.Match(text);
-			if (!match.Success)
-				continue;
+			var file = Path.Combine(_repoRoot, lang, relative);
 
-			errors.Add($"{RelativeToRepo(file)}:{line}: indicator list description starts with an English phrase '{match.Groups["lead"].Value}'. Start the Russian description in Russian; keep invariant indicator names in the link label if needed.");
+			foreach (var entry in EnumerateIndicatorListDescriptionLeads(file))
+			{
+				if (!defaultLeadsByUrl.TryGetValue(entry.Url, out var defaultLead))
+					continue;
+
+				if (!entry.Lead.Equals(defaultLead, StringComparison.OrdinalIgnoreCase))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{entry.Line}: indicator list description starts with the English source phrase '{entry.Lead}'. Start the localized description in the target language; keep invariant indicator names in the link label if needed.");
+			}
 		}
 
 		AssertNoErrors(errors);
@@ -4250,6 +4257,28 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static Dictionary<string, string> ReadIndicatorListDescriptionLeads(string file)
+		=> EnumerateIndicatorListDescriptionLeads(file)
+			.ToDictionary(entry => entry.Url, entry => entry.Lead, StringComparer.OrdinalIgnoreCase);
+
+	private static IEnumerable<IndicatorListDescriptionLead> EnumerateIndicatorListDescriptionLeads(string file)
+	{
+		var pattern = new Regex(@"^\s*-\s+\[[^\]\r\n]+\]\((?<url>[^\)\r\n]+)\)\s+-\s+(?<lead>.+?)(?:,|\u3001|\u3002|\uFF0C|\uFF1B|;|\.)", RegexOptions.CultureInvariant);
+
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+		{
+			var match = pattern.Match(text);
+			if (!match.Success)
+				continue;
+
+			var url = match.Groups["url"].Value.Trim();
+			var lead = NormalizeHumanText(match.Groups["lead"].Value);
+
+			if (url.Length > 0 && lead.Length > 0)
+				yield return new IndicatorListDescriptionLead(url, lead, line);
+		}
+	}
+
 	private static IEnumerable<string> EnumerateContentTextFiles()
 	{
 		var extensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
@@ -4432,6 +4461,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct MarkdownLinkLabel(string Text, string Url, int Line);
 
 	private readonly record struct MarkdownImageAltText(string Text, string Url, int Line);
+
+	private readonly record struct IndicatorListDescriptionLead(string Url, string Lead, int Line);
 
 	private readonly record struct CodeComment(string Text, int Line);
 

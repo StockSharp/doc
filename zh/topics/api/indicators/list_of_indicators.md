@@ -39,7 +39,7 @@
 - [DPI](list_of_indicators/disparity_index.md) - 差异指数，衡量价格与移动平均线之间的差异
 - [DC](list_of_indicators/donchian_channels.md) - 唐奇安通道，根据最高点和最低点识别突破水平
 - [DEMA](list_of_indicators/dema.md) - 双指数移动平均线，可减少移动平均计算中的滞后
-- [DeMarker](list_of_indicators/demarker.md) - DeMarker，通过比较连续的高点和低点来评估需求
+- [DeMarker](list_of_indicators/demarker.md) - DeMarker 指标，通过比较连续的高点和低点来评估需求
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - 动态区间RSI，根据市场状况调整RSI水平
 - [EMV](list_of_indicators/ease_of_movement.md) - 移动易度，将价格变化与交易量联系起来
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - 埃勒斯-费舍尔变换，将价格标准化以突出极端值
@@ -110,7 +110,7 @@
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - 移动平均振荡器，衡量移动平均线与价格之间的差异
 - [抛物线SAR](list_of_indicators/parabolic_sar.md) - 抛物线SAR趋势指标的实现，用于识别潜在的反转点
 - [Stub](list_of_indicators/pass_through.md) - 一个没有逻辑的指标。用于绘制线条，自定义指标的占位符
-- [Peak](list_of_indicators/peak.md) - Peak，用于识别价格数据中的局部高点
+- [Peak](list_of_indicators/peak.md) - 峰值指标，用于识别价格数据中的局部高点
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - 百分比价格振荡器，衡量两个移动平均线之间的百分比差异
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - 带信号线的百分比价格振荡器，用EMA平滑PPO
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - 百分比价格振荡器柱状图，绘制PPO与其信号线之间的差值
@@ -120,7 +120,7 @@
 - [PVT](list_of_indicators/price_volume_trend.md) - 价格成交量趋势，将价格变化与成交量相乘
 - [PGO](list_of_indicators/pretty_good_oscillator.md) - 相当好的振荡器，用于识别超买和超卖条件
 - [PSY](list_of_indicators/psychological_line.md) - 心理线，根据价格变化衡量市场情绪
-- [QStick](list_of_indicators/qstick.md) - QStick，衡量买卖压力
+- [QStick](list_of_indicators/qstick.md) - QStick 指标，衡量买卖压力
 - [RC](list_of_indicators/rainbow_charts.md) - 彩虹图，使用多个移动平均线来可视化趋势
 - [RCI](list_of_indicators/rank_correlation_index.md) - 排名相关指数，用斯皮尔曼等级相关来衡量趋势
 - [RAVI](list_of_indicators/ravi.md) - 区间动作验证指数，用于衡量趋势强度
@@ -163,9 +163,9 @@
 - [Wilder MA](list_of_indicators/wilder_ma.md) - 韦尔斯·怀尔德移动平均线，一种平滑的移动平均线
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - 威廉姆斯累积/派发指标，衡量买卖压力
 - [%R](list_of_indicators/williams_r.md) - 威廉指标百分比范围，用于识别超买和超卖状态
-- [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI，一种用于趋势识别的CCI变体
+- [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI 指标，一种用于趋势识别的CCI变体
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - 零滞后指数移动平均线，可减少EMA计算中的滞后
-- [Zig Zag](list_of_indicators/zigzag.md) - ZigZag，过滤掉小的价格波动以显示重要趋势
+- [Zig Zag](list_of_indicators/zigzag.md) - Zig Zag 指标，过滤掉小的价格波动以显示重要趋势
 
 ## 笔记
 
