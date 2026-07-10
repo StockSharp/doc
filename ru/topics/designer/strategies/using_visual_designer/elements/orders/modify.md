@@ -1,6 +1,6 @@
 # Перемещение заявки
 
-![Designer Moving applications 00](../../../../../../images/designer_moving_applications_00.png)
+![Designer перемещение приложений 00](../../../../../../images/designer_moving_applications_00.png)
 
 Кубик используется для изменения заявки по инструменту.
 

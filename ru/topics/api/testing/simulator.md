@@ -135,7 +135,7 @@ settings.Latency = TimeSpan.FromMilliseconds(100);
 
 Пример SampleRealTimeEmulation демонстрирует возможность одновременного отображения данных как от реального коннектора, так и от эмуляционного:
 
-![sample realtime emulation](../../../images/sample_realtime_emulation.png)
+![пример эмуляции в реальном времени](../../../images/sample_realtime_emulation.png)
 
 Интерфейс приложения содержит следующие элементы:
 - Графики для отображения свечей и заявок

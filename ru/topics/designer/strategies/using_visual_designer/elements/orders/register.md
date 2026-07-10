@@ -1,6 +1,6 @@
 # Регистрация заявки
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer открытие позиции 00](../../../../../../images/designer_position_opening_00.png)
 
 Компонент "Регистрация заявки" используется для выставления торговых заявок по выбранному инструменту.
 

@@ -1,6 +1,6 @@
 # Панель стакана
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer панель стакана](../../../../../../images/designer_orderbook_panel.png)
 
 Кубик предназначен для отображения стакана в специальном графическом компоненте [Стакан](../../../../user_interface/components/order_book.md).
 

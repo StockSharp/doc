@@ -2,10 +2,10 @@
 
 В появившемся окне выбрать интересуемый диапазон времени, выбрать инструмент и нажать кнопку ![hydra find](../../../../images/hydra_find.png):
 
-![hydra export level1](../../../../images/hydra_export_level1.png)
+![hydra экспорт Level1](../../../../images/hydra_export_level1.png)
 
 Также можно выбрать, какие именно типы изменений должны экспортироваться. Это делается при помощи раскрывающегося списка, показанного ниже: 
 
-![hydra export security change selected](../../../../images/hydra_export_security_change_selected.png)
+![hydra экспорт выбранного изменения инструмента](../../../../images/hydra_export_security_change_selected.png)
 
 Полученные значения можно [экспортировать в нужный формат](../export_data.md).

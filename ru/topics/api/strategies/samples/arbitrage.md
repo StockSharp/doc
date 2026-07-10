@@ -56,16 +56,16 @@ protected override void OnStarted2(DateTime time)
 	base.OnStarted2(time);
 
 	if (FutureSecurity == null)
-		throw new InvalidOperationException("Future security is not specified.");
+		throw new InvalidOperationException("Фьючерсный инструмент не задан.");
 
 	if (StockSecurity == null)
-		throw new InvalidOperationException("Stock security is not specified.");
+		throw new InvalidOperationException("Акция не задана.");
 
 	if (FuturePortfolio == null)
-		throw new InvalidOperationException("Future portfolio is not specified.");
+		throw new InvalidOperationException("Портфель для фьючерса не задан.");
 
 	if (StockPortfolio == null)
-		throw new InvalidOperationException("Stock portfolio is not specified.");
+		throw new InvalidOperationException("Портфель для акции не задан.");
 
 	_futId = FutureSecurity.ToSecurityId();
 	_stockId = StockSecurity.ToSecurityId();
@@ -139,7 +139,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backvordation} spread = {backvordationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
-	LogInfo($"Entry from spread:{SpreadToGenerateSignal}. Exit from profit:{ProfitToExit}");
+	LogInfo($"Вход по спреду:{SpreadToGenerateSignal}. Выход по прибыли:{ProfitToExit}");
 
 	// Пересчёт прибыли на основе текущих рыночных условий
 	if (_currentState != ArbitrageState.None && _currentState != ArbitrageState.OrderRegistration)

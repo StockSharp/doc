@@ -235,7 +235,7 @@ IChartTradeElement trades = DrawOwnTrades(area);
 // Настройка элемента
 trades.BuyColor = System.Drawing.Color.Green;   // Цвет для сделок на покупку
 trades.SellColor = System.Drawing.Color.Red;    // Цвет для сделок на продажу
-trades.FullTitle = "My Strategy Trades";        // Заголовок элемента
+trades.FullTitle = "Сделки моей стратегии";        // Заголовок элемента
 ```
 
 Данный метод автоматически настраивает отображение всех сделок, совершаемых стратегией. Сделки отображаются на графике в виде маркеров в местах их совершения, с учетом стороны сделки (покупка/продажа).

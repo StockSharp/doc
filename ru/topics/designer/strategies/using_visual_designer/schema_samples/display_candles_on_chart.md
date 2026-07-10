@@ -2,7 +2,7 @@
 
 Для вывода свечей по инструменту на график может использоваться следующая схема:
 
-![Designer The conclusion of the candles on the chart 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
+![Designer вывод свечей на график 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
 
 Для кубика [Переменная](../elements/data_sources/variable.md) выбран тип данных **Инструмент**. Если инструмент не указан, но установлен флаг **Параметры** группы свойств **Общее**, то он будет взят из стратегии и передан в кубик [Свечи](../elements/data_sources/candles.md). Для кубика [Свечи](../elements/data_sources/candles.md) указаны настройки построения 5-минутных свечей и передачи только полностью сформированных свечей.
 

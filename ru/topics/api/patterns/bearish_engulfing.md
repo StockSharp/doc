@@ -11,7 +11,7 @@ Bearish Engulfing (Медвежье поглощение) - это мощный 
 - Тело второй свечи полностью поглощает тело первой свечи.
 - Формируется в восходящем тренде.
 
-![Bearish Engulfing Pattern](../../../images/bearishengulfingpattern.png)
+![Паттерн медвежьего поглощения](../../../images/bearishengulfingpattern.png)
 
 ### Интерпретация
 

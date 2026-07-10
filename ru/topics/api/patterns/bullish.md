@@ -7,7 +7,7 @@ Bullish Candle (Бычья свеча) - это свечной паттерн, �
 - Цена открытия ниже цены закрытия (O < C).
 - Указывает на бычье давление на рынке.
 
-![Bullish Candle Pattern](../../../images/bullishcandlepattern.png)
+![Паттерн бычьей свечи](../../../images/bullishcandlepattern.png)
 
 ### Интерпретация
 

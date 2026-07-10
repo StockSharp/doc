@@ -5,7 +5,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings DigitexFutures](../../../../../images/api_gui_settings_digitexfutures.png)
+![Настройки GUI API DigitexFutures](../../../../../images/api_gui_settings_digitexfutures.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

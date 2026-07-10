@@ -10,7 +10,7 @@ Three White Soldiers (Три белых солдата) - это мощный б
 - Все три свечи имеют относительно длинные тела и короткие тени.
 - Формируется в нисходящем тренде.
 
-![Three White Soldiers Pattern](../../../images/threewhitesoldierspattern.png)
+![Паттерн три белых солдата](../../../images/threewhitesoldierspattern.png)
 
 ### Интерпретация
 

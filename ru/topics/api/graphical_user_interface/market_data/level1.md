@@ -1,6 +1,6 @@
 # Level1
 
-![GUI Level1Grid](../../../../images/gui_leve1grid.png)
+![GUI: таблица Level1](../../../../images/gui_leve1grid.png)
 
 [Level1Grid](xref:StockSharp.Xaml.Level1Grid) - таблица для отображения полей Level1. Эта таблица использует данные в виде сообщений [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage). 
 
@@ -22,7 +22,7 @@
 		xmlns:sx="http://schemas.stocksharp.com/xaml"
 		xmlns:local="clr-namespace:Membrane02"
 		mc:Ignorable="d"
-		Title="Level1Window" Height="300" Width="300" Closing="Window_Closing">
+		Title="Окно Level1" Height="300" Width="300" Closing="Window_Closing">
 	<Grid>
 		<sx:Level1Grid x:Name="Level1Grid" />
 	</Grid>

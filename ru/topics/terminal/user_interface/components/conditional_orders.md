@@ -2,15 +2,15 @@
 
 Компонент **Условные заявки** представляет собой таблицу с заявками, в которой отображается полная информация о всех условных заявках. При нажатии на вторую кнопку мыши на заявке появится панель, с которой можно выставить новую условную заявку, отменить или заменить выбранную условную заявку.
 
-![Terminal Orders conditional panel 01](../../../../images/terminal_orders_conditional_panel_01.png)
+![Terminal панель условных заявок 01](../../../../images/terminal_orders_conditional_panel_01.png)
 
 При нажатии на кнопку **Регистрация заявки** появится окно. Для выставления новой условной заявки его необходимо заполнить и нажать кнопку **Отправить**.
 
-![Terminal Orders conditional panel 02](../../../../images/terminal_orders_conditional_panel_02.png)
+![Terminal панель условных заявок 02](../../../../images/terminal_orders_conditional_panel_02.png)
 
 При нажатии на кнопку **Заменить заявку** появится окно. Для замены условной заявки необходимо внести требуемые изменения и нажать кнопку **Отправить**.
 
-![Terminal Orders conditional panel 03](../../../../images/terminal_orders_conditional_panel_03.png)
+![Terminal панель условных заявок 03](../../../../images/terminal_orders_conditional_panel_03.png)
 
 ## См. также
 

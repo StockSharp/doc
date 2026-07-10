@@ -15,7 +15,7 @@
 // Параметр типа свечей
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("Тип свечи", "Тип свечи для расчета стратегии.", "Общие")
 
 // Параметр длинной SMA
 let longParam =

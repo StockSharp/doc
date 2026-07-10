@@ -6,11 +6,11 @@
 
 - выбрать интересующую стратегию, и нажать на кнопку Скачать:
 
-  ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
+  ![Designer галерея стратегий 00](../../images/designer_gallery_of_strategies_00.png)
 
 - стратегия будет добавлена в дерево стратегий в раздел **Бэкстест**:
 
-  ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
+  ![Designer галерея стратегий 01](../../images/designer_gallery_of_strategies_01.png)
 
 ## См. также
 

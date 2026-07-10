@@ -9,7 +9,7 @@ Gravestone (Надгробие) - это свечной паттерн, кото
 - Отсутствует нижняя тень (BS == 0).
 - Похож на Shooting Star, но с нейтральным телом (doji).
 
-![Gravestone Pattern](../../../images/gravestonepattern.png)
+![Паттерн надгробие](../../../images/gravestonepattern.png)
 
 ### Интерпретация
 

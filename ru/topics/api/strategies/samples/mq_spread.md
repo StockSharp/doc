@@ -123,36 +123,36 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	};
 
 	// Логируем создание новых процессоров котирования
-	this.AddInfoLog($"Created buy/sell spread at {CurrentTime}");
+	this.AddInfoLog($"Создан спред покупки/продажи в {CurrentTime}");
 
 	// Подписываемся на события процессора покупки для логирования
 	_buyProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Buy order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Заявка на покупку {order.TransactionId} зарегистрирована по цене {order.Price}");
 
 	_buyProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Buy order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Ошибка заявки на покупку: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Buy trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка покупки исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Buy quoting finished with success: {isOk}");
+		this.AddInfoLog($"Котирование покупки успешно завершено: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
 
 	// Подписываемся на события процессора продажи для логирования
 	_sellProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Sell order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Заявка на продажу {order.TransactionId} зарегистрирована по цене {order.Price}");
 
 	_sellProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Sell order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Ошибка заявки на продажу: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Sell trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка продажи исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Sell quoting finished with success: {isOk}");
+		this.AddInfoLog($"Котирование продажи успешно завершено: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};

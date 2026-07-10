@@ -26,7 +26,7 @@ from designer_extensions import diagram_external
 # Класс пользовательского элемента диаграммы, показывающий использование входных и выходных сокетов
 class empty_diagram_element(DiagramExternalElement):
 	"""
-	Sample diagram element demonstrating input and output sockets usage.
+	Пример элемента диаграммы, демонстрирующий использование входных и выходных сокетов.
 
 	https://doc.stocksharp.com/topics/designer/strategies/using_code/python/creating_your_own_cube.html
 	"""
@@ -38,7 +38,7 @@ class empty_diagram_element(DiagramExternalElement):
 		# Этот параметр называется "MinValue" и имеет значение по умолчанию 10
 		self._minValue = self.AddParam("MinValue", 10)\
 							.SetBasic(True)\
-							.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+							.SetDisplay("Параметры", "Мин. значение", "Описание параметра минимального значения", 10)
 
 		# Инициализировать обработчики выходных событий пустыми списками
 		# Подписчики могут назначать этим обработчикам вызываемые методы
@@ -50,17 +50,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output1 event.
+		Подписаться на событие Output1.
 		
-		:param handler: A callable method to be invoked when Output1 is triggered.
+		:param handler: Вызываемый метод, который будет вызван при срабатывании Output1.
 		"""
 		self._output1_handlers.append(handler)
 
 	def remove_Output1(self, handler):
 		"""
-		Unsubscribe from the Output1 event.
+		Отписаться от события Output1.
 		
-		:param handler: The callable method to be removed from the Output1 subscribers.
+		:param handler: Вызываемый метод, который нужно удалить из подписчиков Output1.
 		"""
 		if handler in self._output1_handlers:
 			self._output1_handlers.remove(handler)
@@ -68,17 +68,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output2(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output2 event.
+		Подписаться на событие Output2.
 		
-		:param handler: A callable method to be invoked when Output2 is triggered.
+		:param handler: Вызываемый метод, который будет вызван при срабатывании Output2.
 		"""
 		self._output2_handlers.append(handler)
 
 	def remove_Output2(self, handler):
 		"""
-		Unsubscribe from the Output2 event.
+		Отписаться от события Output2.
 		
-		:param handler: The callable method to be removed from the Output2 subscribers.
+		:param handler: Вызываемый метод, который нужно удалить из подписчиков Output2.
 		"""
 		if handler in self._output2_handlers:
 			self._output2_handlers.remove(handler)
@@ -94,11 +94,11 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
-		Input sockets are method parameters marked with the DiagramExternal attribute.
-		Processes a candle and a diff value, then invokes output events based on the logic.
+		Входные сокеты являются параметрами метода, помеченными атрибутом DiagramExternal.
+		Обрабатывает свечу и значение diff, затем вызывает выходные события согласно логике.
 		
-		:param candle: CandleMessage input representing a candlestick.
-		:param diff: Unit representing the difference value to be processed.
+		:param candle: Входной CandleMessage, представляющий свечу.
+		:param diff: Unit, представляющий обрабатываемую разницу.
 		"""
 		# Рассчитать результат как сумму цены закрытия свечи и значения diff
 		res = candle.ClosePrice + diff
@@ -114,21 +114,21 @@ class empty_diagram_element(DiagramExternalElement):
 
 	def Start(self):
 		"""
-		Called when the diagram element starts. Add any pre-start logic here.
+		Вызывается при запуске элемента диаграммы. Добавьте здесь логику перед запуском.
 		"""
 		super(empty_diagram_element, self).Start()
 		# Добавить пользовательскую логику, выполняемую перед запуском элемента
 
 	def Stop(self):
 		"""
-		Called when the diagram element stops. Add any post-stop logic here.
+		Вызывается при остановке элемента диаграммы. Добавьте здесь логику после остановки.
 		"""
 		super(empty_diagram_element, self).Stop()
 		# Добавить пользовательскую логику, выполняемую после остановки элемента
 
 	def Reset(self):
 		"""
-		Called when the diagram element resets. Add any reset logic here.
+		Вызывается при сбросе элемента диаграммы. Добавьте здесь логику сброса.
 		"""
 		super(empty_diagram_element, self).Reset()
 		# Добавить пользовательскую логику для сброса внутреннего состояния элемента
@@ -149,17 +149,17 @@ def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output1 event.
+	Подписаться на событие Output1.
 	
-	:param handler: A callable method to be invoked when Output1 is triggered.
+	:param handler: Вызываемый метод, который будет вызван при срабатывании Output1.
 	"""
 	self._output1_handlers.append(handler)
 
 def remove_Output1(self, handler):
 	"""
-	Unsubscribe from the Output1 event.
+	Отписаться от события Output1.
 	
-	:param handler: The callable method to be removed from the Output1 subscribers.
+	:param handler: Вызываемый метод, который нужно удалить из подписчиков Output1.
 	"""
 	if handler in self._output1_handlers:
 		self._output1_handlers.remove(handler)
@@ -167,17 +167,17 @@ def remove_Output1(self, handler):
 @diagram_external
 def add_Output2(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output2 event.
+	Подписаться на событие Output2.
 	
-	:param handler: A callable method to be invoked when Output2 is triggered.
+	:param handler: Вызываемый метод, который будет вызван при срабатывании Output2.
 	"""
 	self._output2_handlers.append(handler)
 
 def remove_Output2(self, handler):
 	"""
-	Unsubscribe from the Output2 event.
+	Отписаться от события Output2.
 	
-	:param handler: The callable method to be removed from the Output2 subscribers.
+	:param handler: Вызываемый метод, который нужно удалить из подписчиков Output2.
 	"""
 	if handler in self._output2_handlers:
 		self._output2_handlers.remove(handler)
@@ -190,7 +190,7 @@ def remove_Output2(self, handler):
 ```python
 self._minValue = self.AddParam("MinValue", 10)\
 					.SetBasic(True)\
-					.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+					.SetDisplay("Параметры", "Мин. значение", "Описание параметра минимального значения", 10)
 ```
 
 При использовании класса [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) автоматически используется подход сохранения и восстановления настроек.

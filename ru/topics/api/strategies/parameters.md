@@ -23,7 +23,7 @@ public class SmaStrategy : Strategy
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Base settings");
+							.SetDisplay("Период длинной SMA", string.Empty, "Основные настройки");
 	}
 }
 ```
@@ -40,7 +40,7 @@ public class SmaStrategy : Strategy
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-					.SetDisplay("Long SMA length", "Период длинной скользящей средней", "Основные настройки");
+					.SetDisplay("Период длинной SMA", "Период длинной скользящей средней", "Основные настройки");
 ```
 
 ### SetValidator
@@ -123,7 +123,7 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 					.SetBasic(true);
 ```
 
-![strategy parameters basic advanced](../../../images/strategy_parameters_basic_advanced.png)
+![параметры стратегии: базовые и расширенные](../../../images/strategy_parameters_basic_advanced.png)
 
 ### SetReadOnly
 
@@ -218,18 +218,18 @@ public class SmaStrategy : Strategy
 		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Base settings")
+							.SetDisplay("Период длинной SMA", string.Empty, "Основные настройки")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
 		
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
-							.SetDisplay("Short SMA length", string.Empty, "Base settings")
+							.SetDisplay("Период короткой SMA", string.Empty, "Основные настройки")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
 		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
-					.SetDisplay("Series", string.Empty, "Base settings");
+					.SetDisplay("Серия", string.Empty, "Основные настройки");
 	}
 
 	// ...

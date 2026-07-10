@@ -5,7 +5,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Cryptopia](../../../../../images/api_gui_settings_cryptopia.png)
+![Настройки GUI API Cryptopia](../../../../../images/api_gui_settings_cryptopia.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

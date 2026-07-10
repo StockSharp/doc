@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Time Weighted Average Price](time_weighted_average_price.md)
+[Средняя цена, взвешенная по времени](time_weighted_average_price.md)

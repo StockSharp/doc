@@ -9,7 +9,7 @@ Bearish Harami (Медвежий харами) - это свечной патт�
 - Тело второй свечи полностью содержится внутри тела первой свечи (O < pC) и (C > pO).
 - Формируется в восходящем тренде.
 
-![Bearish Harami Pattern](../../../images/bearishharamipattern.png)
+![Паттерн медвежье харами](../../../images/bearishharamipattern.png)
 
 ### Интерпретация
 

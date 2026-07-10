@@ -11,7 +11,7 @@ Falling Three Methods (Падающие три метода) - это медве
 - Пятая свеча пробивает минимум первой свечи и закрывается ниже.
 - Формируется в нисходящем тренде.
 
-![Falling Three Methods Pattern](../../../images/fallingthreemethodspattern.png)
+![Паттерн падающие три метода](../../../images/fallingthreemethodspattern.png)
 
 ### Интерпретация
 

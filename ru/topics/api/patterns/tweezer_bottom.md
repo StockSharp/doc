@@ -11,7 +11,7 @@ Tweezer Bottom (Дно пинцета) - это бычий разворотны�
 - Обе свечи имеют одинаковый или очень близкий минимум.
 - Формируется в нисходящем тренде.
 
-![Tweezer Bottom Pattern](../../../images/tweezerbottompattern.png)
+![Паттерн основание пинцет](../../../images/tweezerbottompattern.png)
 
 ### Интерпретация
 

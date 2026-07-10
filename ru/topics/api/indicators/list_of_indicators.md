@@ -99,7 +99,7 @@
 - [MP](list_of_indicators/momentum_pinball.md) - Momentum Pinball indicator, определяет состояния перекупленности и перепроданности
 - [MFI](list_of_indicators/money_flow_index.md) - Money Flow Index, измеряет давление покупок и продаж на основе цены и объёма
 - [MACD](list_of_indicators/macd.md) - Convergence/divergence of moving averages, определяет изменения в тренде
-- [MACD Histogram](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram, визуализирует разницу между MACD и сигнальной линией
+- [MACD гистограмма](list_of_indicators/macd_histogram.md) - Convergence/divergence of moving averages. Histogram, визуализирует разницу между MACD и сигнальной линией
 - [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Convergence/divergence of moving averages with signal line, предоставляет сигналы на покупку и продажу
 - [MAC](list_of_indicators/moving_average_crossover.md) - Moving Average Crossover, определяет развороты тренда с использованием двух скользящих средних
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Moving Average Ribbon, использует несколько скользящих средних для визуализации трендов
@@ -155,7 +155,7 @@
 - [VIDIA](list_of_indicators/vidya.md) - Variable Index Dynamic Average, адаптируется к волатильности рынка
 - [VMA](list_of_indicators/variable_moving_average.md) - Variable Moving Average, адаптирует период сглаживания
 - [Volume](list_of_indicators/volume.md) - Candle volume, измеряет объём торгов за свечу
-- [Volume Profile](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
+- [Профиль объема](list_of_indicators/volume_profile.md) - Volume profile, показывает торговую активность на разных уровнях цены
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Volume weighted moving average, придаёт больший вес ценам с большим объёмом
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Volume Weighted Average Price, средняя цена с учётом объёма
 - [VI](list_of_indicators/vortex_indicator.md) - Vortex, определяет начало новых трендов

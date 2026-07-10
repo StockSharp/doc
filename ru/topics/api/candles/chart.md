@@ -21,7 +21,7 @@ private void InitializeChart()
 
 	// Создаем элемент для отображения свечей
 	_candleElement = _chart.CreateCandleElement();
-	_candleElement.FullTitle = "Candles";
+	_candleElement.FullTitle = "Свечи";
 	_chart.AddElement(_areaComb, _candleElement);
 	
 	// Подписываемся на событие получения свечей
@@ -289,8 +289,8 @@ private void ExportChartToImage()
 	// Создаем объект для сохранения изображения
 	var saveFileDialog = new SaveFileDialog
 	{
-		Filter = "PNG Image|*.png|JPEG Image|*.jpg|BMP Image|*.bmp",
-		Title = "Save Chart Image"
+		Filter = "Изображение PNG|*.png|Изображение JPEG|*.jpg|Изображение BMP|*.bmp",
+		Title = "Сохранить изображение графика"
 	};
 	
 	if (saveFileDialog.ShowDialog() == true)

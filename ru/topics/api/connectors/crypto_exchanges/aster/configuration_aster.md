@@ -13,12 +13,12 @@
 
 Официальная документация API:
 
-- [Spot API overview](https://asterdex.github.io/aster-api-website/spot/spot-api-overview/)
+- [Обзор Spot API](https://asterdex.github.io/aster-api-website/spot/spot-api-overview/)
 - [API спотового аккаунта и торговли](https://asterdex.github.io/aster-api-website/spot/spot-account-and-trading-api/)
 - [Спотовые рыночные данные WebSocket](https://asterdex.github.io/aster-api-website/spot/websocket-market-data/)
 - [Информация спотового аккаунта WebSocket](https://asterdex.github.io/aster-api-website/spot/websocket-account-info/)
-- [Futures v3 general info](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
-- [Futures user data streams](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
+- [Общая информация Futures v3](https://asterdex.github.io/aster-api-website/futures-v3/general-info/)
+- [Пользовательские потоки данных Futures](https://asterdex.github.io/aster-api-website/futures/user-data-streams/)
 - [Конечные точки Aster Code](https://asterdex.github.io/aster-api-website/asterCode/endpoints/)
 
 > [!TIP]

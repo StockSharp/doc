@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
+![Настройки GUI API IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
 
 - **Level1 сервер** \- Адрес для получения данных по Level1.
 - **Level2 сервер** \- Адрес для получения данных по Level2.

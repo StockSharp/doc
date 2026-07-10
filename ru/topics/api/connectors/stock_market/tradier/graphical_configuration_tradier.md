@@ -2,7 +2,7 @@
 
 Для всех продуктов StockSharp графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Tradier](../../../../../images/api_gui_settings_tradier.png)
+![Настройки GUI API Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **Токен** - Токен для авторизации.
 - **Демо** - Демо режим.
@@ -20,7 +20,7 @@
 
 2. После нажатия "Старт" пользователь будет перенаправлен на сайт Tradier для входа:
 
-   ![Tradier Login](../../../../../images/api_gui_settings_tradier_2.png)
+   ![Вход в Tradier](../../../../../images/api_gui_settings_tradier_2.png)
 
 3. На сайте Tradier нужно разрешить приложению StockSharp доступ к торговым операциям:
 

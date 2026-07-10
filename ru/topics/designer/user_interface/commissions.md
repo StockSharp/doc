@@ -4,7 +4,7 @@
 
 В окне **Комиссии** необходимо выбрать тип комиссии, настроить значение комиссии и условие, при котором комиссия будет начисляться.
 
-![Designer Commission Rule](../../../images/designer_commission_rule.png)
+![Designer правило комиссии](../../../images/designer_commission_rule.png)
 
 ### Список типов комиссий
 

@@ -7,7 +7,7 @@ Bearish Candle (Медвежья свеча) - это свечной патте�
 - Цена открытия выше цены закрытия (O > C).
 - Указывает на медвежье давление на рынке.
 
-![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
+![Паттерн медвежьей свечи](../../../images/bearishcandlepattern.png)
 
 ### Интерпретация
 

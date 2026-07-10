@@ -1,12 +1,12 @@
 # Панель стратегий
 
-При нажатии на вкладке **Общая** на кнопку **Торговля** ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) откроется панель **Торговля**.
+При нажатии на вкладке **Общая** на кнопку **Торговля** ![Designer панель стратегий 00](../../../images/designer_panel_strategies_00.png) откроется панель **Торговля**.
 
-![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
+![Designer панель стратегий 01](../../../images/designer_panel_strategies_01.png)
 
-Панель **Торговля** представляет собой таблицу, на которой отображены все стратегии, добавленные в **Live торговлю**. На панели **Торговля** можно посмотреть текущее состояние стратегии, а также запустить или остановить стратегию кнопками ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png).
+Панель **Торговля** представляет собой таблицу, на которой отображены все стратегии, добавленные в **Live торговлю**. На панели **Торговля** можно посмотреть текущее состояние стратегии, а также запустить или остановить стратегию кнопками ![Designer панель схем 02](../../../images/designer_panel_circuits_02.png), ![Designer панель схем 03](../../../images/designer_panel_circuits_03.png).
 
-![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
+![Designer панель стратегий 02](../../../images/designer_panel_strategies_02.png)
 
 - Первая колонка отвечает за запуск-остановку стратегии
 - Вторая колонка за настройки стратегии

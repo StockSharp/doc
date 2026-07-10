@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в окне [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings EXMO](../../../../../images/api_gui_settings_exmo.png)
+![Настройки GUI API EXMO](../../../../../images/api_gui_settings_exmo.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

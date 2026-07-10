@@ -36,7 +36,7 @@ def __init__(self):
 
 	# Инициализировать параметры стратегии
 	self._candleTypeParam = self.Param("CandleType", DataType.TimeFrame(TimeSpan.FromMinutes(1))) \
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("Тип свечи", "Тип свечи для расчета стратегии.", "Общие")
 
 	self._long = self.Param("Long", 80)
 	self._short = self.Param("Short", 30)
@@ -125,13 +125,13 @@ self.StartProtection(self.TakeValue, self.StopValue)
 ```python
 def OnProcess(self, candle, longValue, shortValue):
 	"""
-	Processes each finished candle, logs information, and executes trading logic on SMA crossing.
+	Обрабатывает каждую завершенную свечу, логирует информацию и выполняет торговую логику при пересечении SMA.
 	
-	:param candle: The processed candle message.
-	:param longValue: The current value of the long SMA.
-	:param shortValue: The current value of the short SMA.
+	:param candle: Обработанное сообщение свечи.
+	:param longValue: Текущее значение длинной SMA.
+	:param shortValue: Текущее значение короткой SMA.
 	"""
-	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
+	self.LogInfo("Новая свеча {0}: {6} {1};{2};{3};{4}; объем {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
 		# Если свеча не завершена, ничего не делаем
 	if candle.State != CandleStates.Finished:
@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! REQUIRED!! Creates a new instance of the strategy.
+	!! ОБЯЗАТЕЛЬНО!! Создает новый экземпляр стратегии.
 	"""
 	return sma_strategy()
 ```

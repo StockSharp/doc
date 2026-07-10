@@ -1,8 +1,8 @@
 # Разреженный стакан
 
-![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer разреженный стакан 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer разреженный стакан 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 Кубик используется для получения разреженного стакана по заданному инструменту.
 

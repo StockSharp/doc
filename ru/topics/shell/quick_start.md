@@ -4,7 +4,7 @@
 
 При запуске проекта [Shell](../shell.md) в обозревателе решений будет отображен проект Shell:
 
-![Shell Quick start 00](../../images/shell_quick_start_00.png)
+![Shell быстрый старт 00](../../images/shell_quick_start_00.png)
 
 Папка **Strategies** содержит три стратегии входящие в [Shell](../shell.md), оболочку для стратегий по умолчанию, а также некоторые вспомогательные интерфейсы.
 
@@ -12,26 +12,26 @@
 
 После запуска мы увидим окно следующего вида:
 
-![Shell Quick start 01](../../images/shell_quick_start_01.png)
+![Shell быстрый старт 01](../../images/shell_quick_start_01.png)
 
 В верхней части экрана расположены кнопки настройки подключения, подключения и кнопка сохранения текущей конфигурации Shell. Там же расположены основные вкладки.
 
 Перейдем в настройки подключения и выберем необходимое подключение. Как настроить подключение описано в пункте [Настройки подключения](connections_settings.md).
 
-Следующим шагом подключимся, нажав на кнопку **Подключиться** ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
+Следующим шагом подключимся, нажав на кнопку **Подключиться** ![Designer панель быстрого доступа 00](../../images/designer_quick_access_toolbar_00.png).
 
 После подключения на вкладке [Общее](user_interface/common.md) можно посмотреть портфели, инструменты, заявки и собственные сделки, которые были получены из подключения.
 
-![Shell Quick start 02](../../images/shell_quick_start_02.png)
+![Shell быстрый старт 02](../../images/shell_quick_start_02.png)
 
 Перейдя на вкладку Реал\-тайм, нажав на кнопку **Добавить** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) добавим стратегию для запуска в торговлю.
 
-![Shell Quick start 03](../../images/shell_quick_start_03.png)
+![Shell быстрый старт 03](../../images/shell_quick_start_03.png)
 
 После того как стратегия будет добавлена, необходимо заполнить ее основные параметры, такие как **Инструмент**, **Портфель** и др. Для запуска необходимо нажать на кнопку **Start strategy**.
 
-![Shell Quick start 04](../../images/shell_quick_start_04.png)
+![Shell быстрый старт 04](../../images/shell_quick_start_04.png)
 
 Аналогично вкладке [Реал\-тайм](user_interface/real_time.md) на вкладке [Эмуляция](user_interface/emulation.md) можно запустить тестирование стратегии на исторических данных.
 
-![Shell Quick start 05](../../images/shell_quick_start_05.png)
+![Shell быстрый старт 05](../../images/shell_quick_start_05.png)

@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
+![Настройки GUI API RSS](../../../../../images/api_gui_settings_rss.png)
 
 - **Адрес** \- Адрес сервера.
 - **Формат дат** \- Формат дат. Необходимо заполнить, если формат RSS потока отличается от ddd, dd MMM уууу HH:mm:ss zzzz.

@@ -79,16 +79,16 @@ _quotingProcessor = new QuotingProcessor(
 ```csharp
 // Подписываемся на события процессора для логирования и обработки
 _quotingProcessor.OrderRegistered += order =>
-	this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+	this.AddInfoLog($"Заявка {order.TransactionId} зарегистрирована по цене {order.Price}");
 
 _quotingProcessor.OrderFailed += fail =>
-	this.AddInfoLog($"Order failed: {fail.Error.Message}");
+	this.AddInfoLog($"Ошибка заявки: {fail.Error.Message}");
 
 _quotingProcessor.OwnTrade += trade =>
-	this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+	this.AddInfoLog($"Сделка исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 _quotingProcessor.Finished += isOk => {
-	this.AddInfoLog($"Quoting finished with success: {isOk}");
+	this.AddInfoLog($"Котирование успешно завершено: {isOk}");
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 };

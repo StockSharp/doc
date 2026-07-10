@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Quandl](../../../../../images/api_gui_settings_quandl.png)
+![Настройки GUI API Quandl](../../../../../images/api_gui_settings_quandl.png)
 
 - **Токен** \- Токен.
 - **База данных** \- Идентификатор базы данных Quandl. 

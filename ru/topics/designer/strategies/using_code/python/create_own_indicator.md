@@ -20,11 +20,11 @@ from indicator_extensions import *
 
 class empty_indicator(BaseIndicator):
 	"""
-	Sample indicator demonstrating saving and loading parameters.
+	Пример индикатора, демонстрирующий сохранение и загрузку параметров.
 
 	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 	
-	Changes input price on +20% or -20%.
+	Изменяет входную цену на +20% или -20%.
 	"""
 	def __init__(self):
 		super(empty_indicator, self).__init__()
@@ -42,21 +42,21 @@ class empty_indicator(BaseIndicator):
 		self.Reset()
 
 	def CalcIsFormed(self):
-		"""Determines if the indicator has received sufficient inputs to be considered formed."""
+		"""Определяет, получил ли индикатор достаточно входных значений, чтобы считаться сформированным."""
 		return self._isFormed
 
 	def Reset(self):
-		"""Resets the indicator's state and internal counters."""
+		"""Сбрасывает состояние индикатора и внутренние счетчики."""
 		super(empty_indicator, self).Reset()
 		self._isFormed = False
 		self._counter = 0
 
 	def OnProcess(self, input):
 		"""
-		Processes the incoming indicator value and applies a random change.
+		Обрабатывает входное значение индикатора и применяет случайное изменение.
 		
-		:param input: The incoming indicator value.
-		:return: A new DecimalIndicatorValue after applying changes.
+		:param input: Входное значение индикатора.
+		:return: Новое DecimalIndicatorValue после применения изменений.
 		"""
 		# Каждый 10-й вызов пытается вернуть пустое значение
 		if random.randint(0, 10) == 0:
@@ -79,18 +79,18 @@ class empty_indicator(BaseIndicator):
 
 	def Load(self, storage):
 		"""
-		Loads the indicator parameters from persistent storage.
+		Загружает параметры индикатора из постоянного хранилища.
 		
-		:param storage: The settings storage to load from.
+		:param storage: Хранилище настроек для загрузки.
 		"""
 		super(empty_indicator, self).Load(storage)
 		self.Change = storage.GetValue("Change", self.Change)
 
 	def Save(self, storage):
 		"""
-		Saves the indicator parameters to persistent storage.
+		Сохраняет параметры индикатора в постоянное хранилище.
 		
-		:param storage: The settings storage to save to.
+		:param storage: Хранилище настроек для сохранения.
 		"""
 		super(empty_indicator, self).Save(storage)
 		storage.SetValue("Change", self.Change)

@@ -1,6 +1,6 @@
 # Индикатор
 
-![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
+![Designer индикатор 00](../../../../../../images/designer_indicator_00.png)
 
 Кубик используется для вычисления значений индикаторов.
 
@@ -24,7 +24,7 @@
 - **Финальные** - передавать только [финальные значения](../../../../../api/indicators.md) индикатора.
 - **Сформирован** - передавать только значения, когда индикатор полностью [сформирован](../../../../../api/indicators.md).
 
-![Designer Indicator 01](../../../../../../images/designer_indicator_01.png)
+![Designer индикатор 01](../../../../../../images/designer_indicator_01.png)
 
 ## См. также
 

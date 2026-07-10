@@ -11,7 +11,7 @@ Bullish Engulfing (Бычье поглощение) - это мощный быч
 - Тело второй свечи полностью поглощает тело первой свечи.
 - Формируется в нисходящем тренде.
 
-![Bullish Engulfing Pattern](../../../images/bullishengulfingpattern.png)
+![Паттерн бычьего поглощения](../../../images/bullishengulfingpattern.png)
 
 ### Интерпретация
 

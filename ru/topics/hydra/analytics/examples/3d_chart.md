@@ -155,7 +155,7 @@ class chart3d_script(IAnalyticsScript):
 		z = [[0.0 for _ in range(len(y))] for _ in range(len(securities))]
 
 		if data_type is None:
-			logs.LogWarning(f"Unsupported data type {data_type}.")
+			logs.LogWarning(f"Неподдерживаемый тип данных {data_type}.")
 			return Task.CompletedTask
 
 		message_type = data_type.MessageType

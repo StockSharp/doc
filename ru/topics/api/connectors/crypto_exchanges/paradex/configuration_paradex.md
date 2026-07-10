@@ -15,10 +15,10 @@
 
 Официальная документация API:
 
-- [API URLs](https://docs.paradex.trade/api/prod/api-urls)
-- [Authentication](https://docs.paradex.trade/api/prod/authentication)
+- [URL API](https://docs.paradex.trade/api/prod/api-urls)
+- [Аутентификация](https://docs.paradex.trade/api/prod/authentication)
 - [REST API](https://docs.paradex.trade/api/prod/rest-api)
-- [Create a new order](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
+- [Создание новой заявки](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
 - [Введение в WebSocket](https://docs.paradex.trade/api/prod/websocket/introduction)
 - [Каналы WebSocket](https://docs.paradex.trade/api/prod/websocket/channels)
 - [Канал книги заявок](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)

@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 	// -----------------------Создать правило. Метод №1-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Правило WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// -----------------------Создать правило. Метод №2-----------------------------------
@@ -38,18 +38,18 @@ protected override void OnStarted2(DateTime time)
 
 	whenMarketDepthChanged.Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Правило WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// ----------------------Правило внутри правила-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Правило WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 		// ----------------------не Once-правило-----------------------------------
 		mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 		{
-			LogInfo($"The rule WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+			LogInfo($"Правило WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 		}).Apply(this);
 	}).Once().Apply(this);
 

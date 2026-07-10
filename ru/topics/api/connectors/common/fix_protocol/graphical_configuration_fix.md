@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FIX](../../../../../images/api_gui_settings_fix.png)
+![Настройки GUI API FIX](../../../../../images/api_gui_settings_fix.png)
 
 - **Адрес** \- Адрес.
 - **Диалект** \- Диалект FIX протокола.

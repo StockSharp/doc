@@ -2,7 +2,7 @@
 
 Для получения объема, необходимого для переворота текущей позиции на противоположную, может использоваться схема, используемая в пример\-стратегии SMA:
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer определение объема позиции 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 Для кубика [Переменная](../elements/data_sources/variable.md) выбран тип данных **Инструмент**. Если инструмент не указан, но установлен флаг **Параметры** группы **Общее**, то он будет взят из стратегии, после чего будет передан в элемент [Позиция](../elements/positions/current.md).
 

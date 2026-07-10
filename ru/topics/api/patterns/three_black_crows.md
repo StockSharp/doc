@@ -10,7 +10,7 @@ Three Black Crows (Три черных вороны) - это мощный ме�
 - Все три свечи имеют относительно длинные тела и короткие тени.
 - Формируется в восходящем тренде.
 
-![Three Black Crows Pattern](../../../images/threeblackcrowspattern.png)
+![Паттерн три черные вороны](../../../images/threeblackcrowspattern.png)
 
 ### Интерпретация
 

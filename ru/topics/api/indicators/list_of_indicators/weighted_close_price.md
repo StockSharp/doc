@@ -1,4 +1,4 @@
-# Weighted Close Price
+# Взвешенная цена закрытия (Weighted Close Price)
 
 **Взвешенная цена закрытия (Weighted Close Price, WCP)** вычисляется как (High + Low + 2 × Close) / 4.
 
@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Typical Price](typical_price.md)
+[Типичная цена](typical_price.md)

@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
+![Настройки GUI API Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

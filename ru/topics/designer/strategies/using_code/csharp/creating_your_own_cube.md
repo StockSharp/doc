@@ -24,7 +24,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	
 		_minValue = AddParam("MinValue", 10)
 			.SetBasic(true) // сделать параметр видимым в базовом режиме
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+			.SetDisplay("Параметры", "Мин. значение", "Описание параметра минимального значения", 10);
 	}
 
 	// выходные сокеты — это события, помеченные атрибутом DiagramExternal
@@ -99,7 +99,7 @@ public event Action<Unit> Output2;
 ```cs
 _minValue = AddParam("MinValue", 10)
 	.SetBasic(true) // сделать параметр видимым в базовом режиме
-	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+	.SetDisplay("Параметры", "Мин. значение", "Описание параметра минимального значения", 10);
 ```
 
 При использовании класса [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) автоматически используется подход сохранения и восстановления настроек.

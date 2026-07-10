@@ -1,6 +1,6 @@
 # Предыдущее значение
 
-![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
+![Designer предыдущее значение 00](../../../../../../images/designer_previous_value_00.png)
 
 Кубик используется для получения предыдущего значения, поданного на вход, с указанным смещением. 
 

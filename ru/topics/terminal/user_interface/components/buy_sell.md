@@ -4,7 +4,7 @@
 
 Для добавления нового инструмента необходимо нажать на кнопку ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png). 
 
-![Terminal Buy Sell 00](../../../../images/terminal_buy_sell_00.png)
+![Terminal покупка и продажа 00](../../../../images/terminal_buy_sell_00.png)
 
 ## См. также
 

@@ -8,7 +8,7 @@
 
 1. На вкладке **Общее** нажмите кнопку **Свечи**, откроется следующее окно:
 
-   ![hydra candles main](../../../images/hydra_candles_main.png)
+   ![hydra главный экран свечей](../../../images/hydra_candles_main.png)
 
 2. В открывшемся окне необходимо настроить параметры генерации свечей:
 
@@ -35,7 +35,7 @@
 
 После генерации данных вы увидите результат:
 
-![hydra candles tf](../../../images/hydra_candles_tf.png)
+![hydra таймфрейм свечей](../../../images/hydra_candles_tf.png)
 
 ### Пример генерации свечей по объему
 
@@ -49,7 +49,7 @@
 
 Результат генерации:
 
-![hydra candles volume](../../../images/hydra_candles_volume.png)
+![hydra объем свечей](../../../images/hydra_candles_volume.png)
 
 ## Источники данных для построения свечей
 
@@ -64,11 +64,11 @@
 
 - Свечи с таймфреймом 10 минут из тиков:
 
-  ![hydra candles tf 10](../../../images/hydra_candles_tf_10.png)
+  ![hydra таймфрейм свечей 10](../../../images/hydra_candles_tf_10.png)
 
 - Свечи с таймфреймом 30 минут из 5-минутных свечей:
 
-  ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
+  ![hydra таймфрейм свечей 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > Если в поле **Построить из** выбрать **не строить**, то будет произведен поиск только готовых свечей, которые были скачаны напрямую через источник данных.
@@ -77,12 +77,12 @@
 
 Для графического отображения сгенерированных свечей:
 
-1. Нажмите на кнопку ![hydra candles](../../../images/hydra_candles.png)
+1. Нажмите на кнопку ![hydra свечи](../../../images/hydra_candles.png)
 2. Откроется график с построенными свечами:
 
-   ![hydra candles tf chart](../../../images/hydra_candles_tf_chart.png)
+   ![hydra график свечей по таймфрейму](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra candles volume chart](../../../images/hydra_candles_volume_chart.png)
+   ![hydra график объема свечей](../../../images/hydra_candles_volume_chart.png)
 
 ## Добавление индикаторов на график
 
@@ -96,7 +96,7 @@
 
 Пример графика с добавленными индикаторами:
 
-![hydra candles ind chart](../../../images/hydra_candles_ind_chart.png)
+![hydra график свечей с индикатором](../../../images/hydra_candles_ind_chart.png)
 
 ## Экспорт данных
 

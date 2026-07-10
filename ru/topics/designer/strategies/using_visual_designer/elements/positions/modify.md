@@ -1,6 +1,6 @@
 # Изменить позицию
 
-![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
+![Designer изменение позиции 00](../../../../../../images/designer_position_modify_00.png)
 
 Компонент "Изменить позицию" используется для изменения торговой позиции по заданным условиям.
 

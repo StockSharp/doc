@@ -8,6 +8,6 @@
 
 Для просмотра **Улыбки волатильности**, необходимо перейти на вкладку **Улыбка волатильности**.
 
-![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
+![hydra option улыбка волатильности](../../../../images/hydra_option_smile_of_volatility.png)
 
 Полученные значения можно [экспортировать в нужный формат](../export_data.md).

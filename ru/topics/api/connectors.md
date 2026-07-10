@@ -4,7 +4,7 @@
 
 Рассмотрим работу с [Connector](xref:StockSharp.Algo.Connector). Исходные коды примера находятся в проекте Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
-![multiconnection main](../../images/multiconnection_main.png)
+![мультиподключение: главное окно](../../images/multiconnection_main.png)
 
 Создаём экземпляр класса [Connector](xref:StockSharp.Algo.Connector):
 

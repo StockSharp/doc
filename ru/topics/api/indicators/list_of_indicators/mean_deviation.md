@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Median Price](median_price.md)
+[Медианная цена](median_price.md)

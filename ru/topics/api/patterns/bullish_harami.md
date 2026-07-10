@@ -9,7 +9,7 @@ Bullish Harami (Бычий харами) - это свечной паттерн 
 - Тело второй свечи полностью содержится внутри тела первой свечи (O > pC) и (C < pO).
 - Формируется в нисходящем тренде.
 
-![Bullish Harami Pattern](../../../images/bullishharamipattern.png)
+![Паттерн бычье харами](../../../images/bullishharamipattern.png)
 
 ### Интерпретация
 

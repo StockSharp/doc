@@ -2,7 +2,7 @@
 
 Для всех продуктов StockSharp графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
+![Настройки GUI API cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
 - **Демо** - Подключение к демо торгам.
 
@@ -18,7 +18,7 @@ cTrader предоставляет только OAuth способ автори�
 
 2. После нажатия "Старт" пользователь будет перенаправлен на сайт cTrader для входа. На сайте cTrader нужно разрешить приложению StockSharp доступ к торговым операциям:
 
-   ![cTrader Login](../../../../../images/api_gui_settings_ctrader_2.png)
+   ![Вход в cTrader](../../../../../images/api_gui_settings_ctrader_2.png)
 
 3. После этого произойдет перенаправление обратно на сайт StockSharp, и программа автоматически выполнит вход.
 

@@ -5,7 +5,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в окне [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Gopax](../../../../../images/api_gui_settings_gopax.png)
+![Настройки GUI API Gopax](../../../../../images/api_gui_settings_gopax.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

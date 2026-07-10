@@ -10,7 +10,7 @@ Inverted Hammer (Перевернутый Молот) - это бычий све
 - Отсутствие или очень короткая нижняя тень.
 - Формируется в нисходящем тренде.
 
-![Inverted Hammer Pattern](../../../images/invertedhammer.png)
+![Паттерн перевернутый молот](../../../images/invertedhammer.png)
 
 ### Интерпретация
 

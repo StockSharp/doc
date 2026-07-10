@@ -10,7 +10,7 @@ Shooting Star (Падающая звезда) - это медвежий разв
 - Отсутствие или очень короткая нижняя тень (BS == 0).
 - Формируется в восходящем тренде.
 
-![Shooting Star Pattern](../../../images/shootingstarpattern.png)
+![Паттерн падающая звезда](../../../images/shootingstarpattern.png)
 
 ### Интерпретация
 

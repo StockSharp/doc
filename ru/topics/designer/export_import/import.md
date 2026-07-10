@@ -5,8 +5,8 @@
 - В панели **Схемы** нажать на правую кнопку мыши на папке стратегии, в появившемся меню выбрать **Импорт**.
 - На вкладке **Общее** нажать кнопку **Импорт**, и в появившемся меню выбрать **Стратегия**, **Собственный кубик** или **Индикатор**:
 
-![Designer Import strategies 00](../../../images/designer_import_strategies_00.png)
+![Designer импорт стратегий 00](../../../images/designer_import_strategies_00.png)
 
 Если тип данных с этим именем есть, то появится окно с предложением перезаписать, добавить с другим названием:
 
-![Designer Import strategies 01](../../../images/designer_import_strategies_01.png)
+![Designer импорт стратегий 01](../../../images/designer_import_strategies_01.png)

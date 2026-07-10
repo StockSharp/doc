@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings OKCoin](../../../../../images/api_gui_settings_okcoin.png)
+![Настройки GUI API OKCoin](../../../../../images/api_gui_settings_okcoin.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

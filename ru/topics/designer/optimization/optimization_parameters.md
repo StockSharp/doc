@@ -11,7 +11,7 @@
 
 - в случае [схемы](../strategies/using_visual_designer.md) необходимо выбрать нужный кубик, открыть его свойство, переключиться на **Расширенные настройки** и выключить флажок **Параметр**:
 
-![Designer Optimization 01](../../../images/designer_optimization_01.png)
+![Designer оптимизация 01](../../../images/designer_optimization_01.png)
 
 - в случае [кода](../strategies/using_code.md) необходимо прописать код при определении параметра, и изменить свойство [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize):
 

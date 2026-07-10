@@ -1,4 +1,4 @@
-# Typical Price
+# Типичная цена (Typical Price)
 
 **Типичная цена (Typical Price)** вычисляется как среднее значение High, Low и Close для свечи.
 
@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Median Price](median_price.md)
+[Медианная цена](median_price.md)

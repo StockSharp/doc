@@ -10,7 +10,7 @@
 - отслеживать процесс обновления программ
 - скачать библиотеку [API](api.md) и автоматически отслеживает ее обновления
 
-![first win installer](../images/first_win_installer.png)
+![установщик: первое окно](../images/first_win_installer.png)
 
 ## См. также
 

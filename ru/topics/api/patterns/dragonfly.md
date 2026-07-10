@@ -9,7 +9,7 @@ Dragonfly (Стрекоза) - это свечной паттерн, котор�
 - Длинная нижняя тень.
 - Похож на Hammer, но с нейтральным телом (doji).
 
-![Dragonfly Pattern](../../../images/dragonflypattern.png)
+![Паттерн стрекоза](../../../images/dragonflypattern.png)
 
 ### Интерпретация
 

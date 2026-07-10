@@ -83,4 +83,4 @@
    		throw new ArgumentOutOfRangeException();
    }
    ```
-7. Результат работы примера.![sample logging](../../../images/sample_logging.png)
+7. Результат работы примера.![пример логирования](../../../images/sample_logging.png)

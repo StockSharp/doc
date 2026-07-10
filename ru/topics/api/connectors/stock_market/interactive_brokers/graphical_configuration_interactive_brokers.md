@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
+![Настройки GUI API Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
 - **Адрес** \- Адрес TWS.
 - **Идентификатор** \- Уникальный идентификатор. Используется в случае подключения нескольких клиентов к одному терминалу или gateway.

@@ -41,7 +41,7 @@ ClosePosition();
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // Дополнительная настройка заявки
-order.Comment = "My special order";
+order.Comment = "Моя специальная заявка";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // Регистрация заявки

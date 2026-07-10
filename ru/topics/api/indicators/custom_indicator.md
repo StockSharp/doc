@@ -479,30 +479,30 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 public interface IPercentageVolumeOscillatorValue : IComplexIndicatorValue
 {
 	/// <summary>
-	/// Gets the short EMA value.
+	/// Возвращает значение короткой EMA.
 	/// </summary>
 	IIndicatorValue ShortEmaValue { get; }
 
 	/// <summary>
-	/// Gets the short EMA value.
+	/// Возвращает значение короткой EMA.
 	/// </summary>
 	[Browsable(false)]
 	decimal? ShortEma { get; }
 
 	/// <summary>
-	/// Gets the long EMA value.
+	/// Возвращает значение длинной EMA.
 	/// </summary>
 	IIndicatorValue LongEmaValue { get; }
 
 	/// <summary>
-	/// Gets the long EMA value.
+	/// Возвращает значение длинной EMA.
 	/// </summary>
 	[Browsable(false)]
 	decimal? LongEma { get; }
 }
 
 /// <summary>
-/// Percentage Volume Oscillator indicator value implementation.
+/// Реализация значения индикатора Percentage Volume Oscillator.
 /// </summary>
 public class PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTime time)
 	: ComplexIndicatorValue<PercentageVolumeOscillator>(indicator, time), IPercentageVolumeOscillatorValue

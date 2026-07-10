@@ -49,7 +49,7 @@ public int LongSmaLength
 public SmaStrategy()
 {
 	_longSmaLength = Param(nameof(LongSmaLength), 80)
-						.SetDisplay("Long SMA length", string.Empty, "Base settings");
+						.SetDisplay("Период длинной SMA", string.Empty, "Основные настройки");
 }
 
 // Неправильно: использование обычных свойств
@@ -348,15 +348,15 @@ public class SmaStrategy : Strategy
     public SmaStrategy()
     {
         _longSmaLength = Param(nameof(LongSmaLength), 80)
-                          .SetDisplay("Long SMA length", string.Empty, "Base settings")
+                          .SetDisplay("Период длинной SMA", string.Empty, "Основные настройки")
                           .SetCanOptimize(true);
                           
         _shortSmaLength = Param(nameof(ShortSmaLength), 30)
-                          .SetDisplay("Short SMA length", string.Empty, "Base settings")
+                          .SetDisplay("Период короткой SMA", string.Empty, "Основные настройки")
                           .SetCanOptimize(true);
                           
         _series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
-                 .SetDisplay("Series", string.Empty, "Base settings");
+                 .SetDisplay("Серия", string.Empty, "Основные настройки");
     }
 
     protected override void OnStarted2(DateTime time)

@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bittrex](../../../../../images/api_gui_settings_bittrex.png)
+![Настройки GUI API Bittrex](../../../../../images/api_gui_settings_bittrex.png)
 
 - **Ключ** \- Ключ. 
 - **Секрет** \- Секрет. 

@@ -8,4 +8,4 @@
 
 ## См. также
 
-[On-Balance Volume](on_balance_volume.md)
+[Балансовый объем](on_balance_volume.md)

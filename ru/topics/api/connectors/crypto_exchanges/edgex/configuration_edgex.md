@@ -14,13 +14,13 @@
 
 Официальная документация API:
 
-- [Authentication](https://edgex-1.gitbook.io/edgex-documentation/developer/api/authentication)
-- [Order API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/order-api)
+- [Аутентификация](https://edgex-1.gitbook.io/edgex-documentation/developer/api/authentication)
+- [API заявок](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/order-api)
 - [API аккаунта](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/account-api)
 - [Приватный поток WebSocket](https://edgex-1.gitbook.io/edgex-documentation/developer/api/private-api/private-websocket-stream)
-- [Funding API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/funding-api)
-- [Meta-data API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/meta-data-api)
-- [Quote API](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/quote-api)
+- [API финансирования](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/funding-api)
+- [API метаданных](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/meta-data-api)
+- [API котировок](https://edgex-1.gitbook.io/edgex-documentation/developer/api/public-api/quote-api)
 
 > [!TIP]
 > В текущей реализации полностью поддержан `Derivatives`. `Spot` включайте только при подтвержденной поддержке в целевой API среде.

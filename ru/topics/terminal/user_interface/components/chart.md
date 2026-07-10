@@ -2,7 +2,7 @@
 
 Компонент **График** позволяет отрисовывать свечи и индикаторы по выбранному инструменту. 
 
-![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
+![Terminal панель графиков 00](../../../../images/terminal_panel_graphics_00.png)
 
 Для добавления новой области необходимо нажать на кнопку ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png). 
 
@@ -18,7 +18,7 @@
 
 Заявки на продажу будут выставляться по сочетанию клавиш **Ctrl + ПКМ**. 
 
-![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
+![Terminal панель графиков 01](../../../../images/terminal_panel_graphics_01.png)
 
 В настройках графического элемента можно установить необходимый стиль графика: японские свечи, бары, боксовый график, кластерный профиль и др.
 

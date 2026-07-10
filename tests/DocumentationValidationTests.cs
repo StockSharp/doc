@@ -1062,7 +1062,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			if (defaultHeadings.Length == 0)
 				continue;
 
-			foreach (var lang in GetTranslatedContentLanguages())
+			foreach (var lang in GetLocalizedContentQualityLanguages())
 			{
 				var langRoot = Path.Combine(_repoRoot, lang);
 				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
@@ -1096,7 +1096,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 
@@ -1274,7 +1274,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 
@@ -1303,7 +1303,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 		var defaultTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 
@@ -2735,7 +2735,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static LocalizedDocumentationAudit BuildLocalizedDocumentationAudit()
 	{
-		var languages = GetTranslatedContentLanguages();
+		var languages = GetLocalizedContentQualityLanguages();
 		var issues = new List<AuditIssue>();
 		var stats = new List<LocalizedAuditLanguageStats>();
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
@@ -4286,6 +4286,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		=> GetContentLanguages()
 			.Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)
 				&& !lang.Equals("ru", StringComparison.OrdinalIgnoreCase))
+			.ToArray();
+
+	private static IReadOnlyList<string> GetLocalizedContentQualityLanguages()
+		=> GetContentLanguages()
+			.Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase))
 			.ToArray();
 
 	private static bool HasContent(string lang)

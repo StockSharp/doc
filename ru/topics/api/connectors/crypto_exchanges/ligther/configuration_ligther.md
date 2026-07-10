@@ -14,8 +14,8 @@
 
 Официальная документация API:
 
-- [Getting started](https://apidocs.lighter.xyz/docs/getting-started/introduction)
-- [Get API key and secret](https://apidocs.lighter.xyz/docs/api/get-api-key-and-secret)
-- [API rate limits](https://apidocs.lighter.xyz/docs/api/get-api-rate-limits)
+- [Начало работы](https://apidocs.lighter.xyz/docs/getting-started/introduction)
+- [Получение API-ключа и секрета](https://apidocs.lighter.xyz/docs/api/get-api-key-and-secret)
+- [Лимиты API](https://apidocs.lighter.xyz/docs/api/get-api-rate-limits)
 - [Каналы WebSocket](https://apidocs.lighter.xyz/docs/websocket/channels)
 - [Документация WebSocket API](https://apidocs.lighter.xyz/docs/websocket/api-docs)

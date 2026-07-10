@@ -1,6 +1,6 @@
 # Стакан
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer стакан 00](../../../../../../images/designer_orderbook_00.png)
 
 Кубик используется для получения стакана по заданному инструменту.
 

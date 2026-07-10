@@ -1,8 +1,8 @@
 # Сгруппированный стакан
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer сгруппированный стакан 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer сгруппированный стакан 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 Кубик используется для получения сгруппированного стакана. 
 

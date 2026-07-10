@@ -110,13 +110,13 @@ private void ProcessCandle(ICandleMessage candle)
 		{
 			// Бычий тренд - открываем короткую позицию
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"Starting SELL quoting after {_bullLength} bullish candles");
+			this.AddInfoLog($"Запуск SELL-котирования после {_bullLength} бычьих свечей");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// Медвежий тренд - открываем длинную позицию
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"Starting BUY quoting after {_bearLength} bearish candles");
+			this.AddInfoLog($"Запуск BUY-котирования после {_bearLength} медвежьих свечей");
 		}
 	}
 }
@@ -160,13 +160,13 @@ private void CreateQuotingProcessor(Sides side)
 
 	// Подписка на события процессора
 	_quotingProcessor.OrderRegistered += order =>
-		this.AddInfoLog($"Order {order.TransactionId} registered at price {order.Price}");
+		this.AddInfoLog($"Заявка {order.TransactionId} зарегистрирована по цене {order.Price}");
 
 	_quotingProcessor.OrderFailed += fail =>
-		this.AddInfoLog($"Order failed: {fail.Error.Message}");
+		this.AddInfoLog($"Ошибка заявки: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Trade executed: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk =>
 	{

@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Volume Profile](volume_profile.md)
+[Профиль объема](volume_profile.md)

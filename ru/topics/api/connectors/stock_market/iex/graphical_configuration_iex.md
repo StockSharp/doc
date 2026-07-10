@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings IEX](../../../../../images/api_gui_settings_iex.png)
+![Настройки GUI API IEX](../../../../../images/api_gui_settings_iex.png)
 
 - **Токен** \- Токен.
 - **Настройки переподключения** \- Настройки механизма отслеживания подключения с торговой системой ([Настройки переподключения](../../reconnection_settings.md)). 

@@ -97,7 +97,7 @@ private void UnsubscribeFromCandles()
 }
 ```
 
-![indicators chart](../../../images/indicators_chart.png)
+![индикаторы на графике](../../../images/indicators_chart.png)
 
 ## Пример работы с несколькими индикаторами
 

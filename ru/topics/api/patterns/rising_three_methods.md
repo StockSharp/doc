@@ -11,7 +11,7 @@ Rising Three Methods (Восходящие три метода) - это быч�
 - Пятая свеча пробивает максимум первой свечи и закрывается выше.
 - Формируется в восходящем тренде.
 
-![Rising Three Methods Pattern](../../../images/risingthreemethodspattern.png)
+![Паттерн растущие три метода](../../../images/risingthreemethodspattern.png)
 
 ### Интерпретация
 

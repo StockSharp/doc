@@ -11,25 +11,25 @@
 
 1. Чтобы создать стратегию в **Visual Studio** необходимо создать проект:
 
-![Designer Creating a DLL cube in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
+![Designer создание DLL-кубика в Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
 
 2. Далее необходимо написать код стратегии. Для быстрого старта можно скопировать код SmaStrategy, которая создается как шаблон в [стратегии из кода](using_code/csharp/first_strategy.md):
 
-![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
+![Designer создание DLL-кубика в Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
 3. Для компилирования кода необходимо подключить NuGet пакет [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), где находится базовый класс для всех стратегий [Strategy](xref:StockSharp.Algo.Strategies.Strategy):
 
-![Designer Creating a DLL cube in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
+![Designer создание DLL-кубика в Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
 
 Если стратегия использует программные интерфейсы графика, то необходимо подключить и NuGet пакет [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). Данные интерфейсы не содержат логику реального графика, и необходимы только для компилирования кода. В случае запуска стратегии в **Дизайнере** через данные интерфейсы будет идти уже реальная отрисовка данных на графике.
 
 4. После создания стратегии необходимо собрать проект, нажав **Собрать решение** во вкладке **Сборка**.
 
-![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
+![Designer создание DLL-кубика в Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
 5. В Visual Studio по умолчанию проект собирается в папку …\\bin\\Debug\\net6.0 .
 
-![Designer Creating a DLL cube in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
+![Designer создание DLL-кубика в Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
 ### Добавление DLL в Дизайнер
 
