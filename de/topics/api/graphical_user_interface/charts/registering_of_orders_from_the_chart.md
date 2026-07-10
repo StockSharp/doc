@@ -4,9 +4,9 @@ S# ermöglicht das Registrieren von Orders aus dem Diagramm. Um diese Funktion z
 
 ![API-GUI-Handel aus dem Chart](../../../../images/api_gui_trading_from_chart.png)
 
-Kauforders werden mit der Tastenkombination **Ctrl + Left Mouse Button** registriert.
+Kauforders werden mit der Tastenkombination **Ctrl + linke Maustaste** registriert.
 
-Verkaufsorders werden mit der Tastenkombination **Ctrl + Right Mouse Button** registriert.
+Verkaufsorders werden mit der Tastenkombination **Ctrl + rechte Maustaste** registriert.
 
 Die resultierende Order kann über das Ereignis zum Erstellen einer neuen Order abgefangen werden.
 

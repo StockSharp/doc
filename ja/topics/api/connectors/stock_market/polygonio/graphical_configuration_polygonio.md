@@ -5,7 +5,7 @@
 ![API GUI 設定 PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
 
 - **Token** - トークン。
-- **Connection type** - History (REST) または Real-Time (WebSockets) に接続します。
+- **接続タイプ** - History (REST) または Real-Time (WebSockets) に接続します。
 
 ## 推奨コンテンツ
 

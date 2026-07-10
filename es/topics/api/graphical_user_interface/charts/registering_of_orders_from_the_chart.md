@@ -4,9 +4,9 @@ S# permite registrar órdenes desde el gráfico. Para activar esta función, deb
 
 ![Trading desde el gráfico en API GUI](../../../../images/api_gui_trading_from_chart.png)
 
-Las órdenes de compra se registrarán usando la combinación **Ctrl + Left Mouse Button**.
+Las órdenes de compra se registrarán usando la combinación **Ctrl + botón izquierdo del ratón**.
 
-Las órdenes de venta se registrarán usando la combinación **Ctrl + Right Mouse Button**.
+Las órdenes de venta se registrarán usando la combinación **Ctrl + botón derecho del ratón**.
 
 La orden resultante se puede interceptar mediante el evento de creación de una nueva orden.
 
@@ -22,4 +22,3 @@ ChartPanel.CreateOrder += (chartArea,order) =>
 ```
 
 Las órdenes registradas se mostrarán como un elemento especial para mostrar órdenes [ChartActiveOrdersElement](xref:StockSharp.Xaml.Charting.ChartActiveOrdersElement).
-

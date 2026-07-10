@@ -108,7 +108,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Apply changes",
 		"Cloud panel",
 		"Connect button",
+		"Console App",
+		"Connection type",
 		"Control Panel → User Accounts → Credential Manager",
+		"Ctrl + Left Mouse Button",
+		"Ctrl + Right Mouse Button",
+		"Dates format",
+		"File -> Allow Remoting",
 		"File → New Solution",
 		"File → New → Project",
 		".NET / .NET Core → Console Application",
@@ -121,7 +127,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"send command",
 		"Settings → Build, Execution, Deployment → NuGet → Sources",
 		"Solution Explorer",
+		"Target Framework",
 		"Tools → Options → NuGet Package Manager → Package Sources",
+		"User name (hist)",
+		"WPF Application",
 	];
 
 	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)

@@ -21,7 +21,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Licenses** - Endereço do servidor de licenças.
 - **Broker** - Endereço do corretor.
 - **Log (address)** - Endereço do logger.
-- **User name (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
+- **Nome de utilizador (hist)** - Login adicional. ID de utilizador utilizado para autenticação com a history plant.
 - **palavra-passe (histórico)** - Password adicional. Password utilizada para autenticação com a history plant.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))

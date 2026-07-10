@@ -5,7 +5,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 ![Configuración de API GUI PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
 
 - **Token** - Token.
-- **Connection type** - Conectarse a History (REST) o Real-Time (WebSockets).
+- **Tipo de conexión** - Conectarse a History (REST) o Real-Time (WebSockets).
 
 ## Contenido recomendado
 
