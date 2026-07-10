@@ -1074,6 +1074,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownTableCellsAreTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var defaultTableCellsByRelativePath = BuildDefaultMarkdownTableCellMap(defaultRoot);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+				if (!defaultTableCellsByRelativePath.TryGetValue(relative, out var defaultTableCells))
+					continue;
+
+				foreach (var cell in EnumerateMarkdownTableCellTexts(ReadAllText(file)))
+				{
+					var normalized = NormalizeMarkdownTextForTranslationCheck(cell.Text);
+					if (normalized.Length == 0 || !defaultTableCells.Contains(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{cell.Line}: markdown table cell is identical to the English source. Localize it or add a deliberate allowlist entry. Cell: {Truncate(cell.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownTextDoesNotLookLikeEnglish()
 	{
 		var errors = new List<string>();
@@ -1948,6 +1979,23 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			Math.Max(0, rows.Length - 1));
 	}
 
+	private static IEnumerable<MarkdownTableCellText> EnumerateMarkdownTableCellTexts(string markdown)
+	{
+		var document = Markdown.Parse(markdown, _markdown);
+		var lineStarts = GetLineStarts(markdown);
+
+		foreach (var cell in document.Descendants().OfType<TableCell>())
+		{
+			var text = string.Concat(cell.Descendants().OfType<LiteralInline>().Select(literal => literal.Content.ToString()));
+			text = NormalizeHumanText(text);
+
+			if (text.Length == 0)
+				continue;
+
+			yield return new MarkdownTableCellText(text, GetLineNumber(lineStarts, cell.Span.Start));
+		}
+	}
+
 	private static string NormalizeStructureUrl(string url)
 		=> (url ?? string.Empty).Replace('\\', '/').Trim();
 
@@ -2288,6 +2336,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var stats = new List<LocalizedAuditLanguageStats>();
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 		var defaultMarkdownTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
+		var defaultTableCellsByRelativePath = BuildDefaultMarkdownTableCellMap(defaultRoot);
 		var defaultLinkLabelsByRelativePath = BuildDefaultMarkdownLinkLabelMap(defaultRoot);
 		var defaultImageAltTextsByRelativePath = BuildDefaultMarkdownImageAltTextMap(defaultRoot);
 		var defaultOutputsByRelativePath = BuildDefaultCodeOutputMap(defaultRoot);
@@ -2312,6 +2361,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			var codeLiteralCount = 0;
 			var commentCount = 0;
 			var markdownTextCount = 0;
+			var tableCellCount = 0;
 			var linkLabelCount = 0;
 			var imageAltTextCount = 0;
 
@@ -2323,6 +2373,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
 				var markdown = ReadAllText(file);
 				defaultMarkdownTextByRelativePath.TryGetValue(relative, out var defaultMarkdownTexts);
+				defaultTableCellsByRelativePath.TryGetValue(relative, out var defaultTableCells);
 				defaultLinkLabelsByRelativePath.TryGetValue(relative, out var defaultLinkLabels);
 				defaultImageAltTextsByRelativePath.TryGetValue(relative, out var defaultImageAltTexts);
 				defaultOutputsByRelativePath.TryGetValue(relative, out var defaultOutputs);
@@ -2344,6 +2395,16 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 				foreach (var textLine in EnumerateLikelyEnglishMarkdownTextLines(markdown, relative))
 					issues.Add(new AuditIssue("markdown-text-likely-english", RelativeToRepo(file), textLine.Line, $"looks like untranslated English: {Truncate(textLine.Text, 180)}"));
+
+				foreach (var tableCell in EnumerateMarkdownTableCellTexts(markdown))
+				{
+					tableCellCount++;
+					var normalized = NormalizeMarkdownTextForTranslationCheck(tableCell.Text);
+					if (normalized.Length == 0 || defaultTableCells is null || !defaultTableCells.Contains(normalized))
+						continue;
+
+					issues.Add(new AuditIssue("markdown-table-cell-exact-english", RelativeToRepo(file), tableCell.Line, $"is identical to the English source table cell: {Truncate(tableCell.Text, 180)}"));
+				}
 
 				foreach (var linkLabel in EnumerateMarkdownLinkLabels(markdown))
 				{
@@ -2433,7 +2494,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				}
 			}
 
-			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, linkLabelCount, imageAltTextCount, outputCount, uiStringCount, codeLiteralCount, commentCount));
+			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, tableCellCount, linkLabelCount, imageAltTextCount, outputCount, uiStringCount, codeLiteralCount, commentCount));
 		}
 
 		return new LocalizedDocumentationAudit(languages, stats, issues);
@@ -2450,6 +2511,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					RelativePath = relative,
 					Texts = EnumerateTranslatableMarkdownTextLines(ReadAllText(file), relative)
 						.Select(line => line.Text)
+						.ToHashSet(StringComparer.Ordinal),
+				};
+			})
+			.Where(entry => entry.Texts.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.Texts, StringComparer.OrdinalIgnoreCase);
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultMarkdownTableCellMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file =>
+			{
+				var relative = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/');
+				return new
+				{
+					RelativePath = relative,
+					Texts = EnumerateMarkdownTableCellTexts(ReadAllText(file))
+						.Select(cell => NormalizeMarkdownTextForTranslationCheck(cell.Text))
+						.Where(text => IsTranslatableEnglishMarkdownText(relative, text, text))
 						.ToHashSet(StringComparer.Ordinal),
 				};
 			})
@@ -2590,11 +2669,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine();
 		report.AppendLine("## Coverage");
 		report.AppendLine();
-		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Markdown link labels | Markdown image alt texts | Code output strings | Code UI strings | Code string literals | Code comments |");
-		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |");
+		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Markdown table cells | Markdown link labels | Markdown image alt texts | Code output strings | Code UI strings | Code string literals | Code comments |");
+		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |");
 
 		foreach (var stat in audit.Stats)
-			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.MarkdownLinkLabels} | {stat.MarkdownImageAltTexts} | {stat.CodeOutputStrings} | {stat.CodeUiStrings} | {stat.CodeStringLiterals} | {stat.CodeComments} |");
+			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.MarkdownTableCells} | {stat.MarkdownLinkLabels} | {stat.MarkdownImageAltTexts} | {stat.CodeOutputStrings} | {stat.CodeUiStrings} | {stat.CodeStringLiterals} | {stat.CodeComments} |");
 
 		report.AppendLine();
 		report.AppendLine("## Checks");
@@ -2602,6 +2681,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Markdown text: full normalized English-like visible text candidates must not be identical to the English source.");
 		report.AppendLine("- Markdown text: short known section labels must not remain in English.");
 		report.AppendLine("- Markdown text: visible localized text must not have a high ratio of English stop words.");
+		report.AppendLine("- Markdown table cells: exact matches with English source table cells for translatable text candidates.");
 		report.AppendLine("- Markdown link labels: exact matches with English source link labels for translatable label candidates.");
 		report.AppendLine("- Markdown image alt text: exact matches with English source alt text for translatable alt candidates.");
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
@@ -3757,6 +3837,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private readonly record struct MarkdownTextLine(string Text, int Line);
 
+	private readonly record struct MarkdownTableCellText(string Text, int Line);
+
 	private readonly record struct MarkdownLinkLabel(string Text, string Url, int Line);
 
 	private readonly record struct MarkdownImageAltText(string Text, string Url, int Line);
@@ -3779,6 +3861,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		int MarkdownFiles,
 		int TextFiles,
 		int MarkdownTextCandidates,
+		int MarkdownTableCells,
 		int MarkdownLinkLabels,
 		int MarkdownImageAltTexts,
 		int CodeOutputStrings,
