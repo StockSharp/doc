@@ -44,4 +44,4 @@ O mecanismo de religação é configurado através da propriedade [ReConnectionS
    Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Conexão restaurada"));
    ```
 
-   ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)
+   ![Exemplo de erro de ligação](../../../images/sample_connection_error.png)![Exemplo de ligação restaurada](../../../images/sample_connection_restored.png)

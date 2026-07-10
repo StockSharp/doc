@@ -30,4 +30,4 @@ Para estes e muitos outros cenários de funcionamento da bolsa, impossíveis de 
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. O resultado do funcionamento do exemplo é o seguinte: ![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. O resultado do funcionamento do exemplo é o seguinte: ![Exemplo de teste de emulação](../../../images/sample_emulation_test.png)

@@ -13,9 +13,9 @@ K线的使用方法可参阅 *Samples\/02\_Candles\/01\_Realtime* 文件夹中�
 
 下图分别展示 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) 和 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) 图表：
 
-![sample timeframecandles](../../images/sample_timeframecandles.png)
+![时间周期蜡烛图示例](../../images/sample_timeframecandles.png)
 
-![sample rangecandles](../../images/sample_rangecandles.png)
+![区间蜡烛图示例](../../images/sample_rangecandles.png)
 
 ## 开始获取数据
 

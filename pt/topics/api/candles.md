@@ -13,9 +13,9 @@ Como trabalhar com candles é mostrado no exemplo localizado na pasta *Samples\/
 
 As imagens a seguir mostram os gráficos [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) e [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
-![sample timeframecandles](../../images/sample_timeframecandles.png)
+![Exemplo de velas por período](../../images/sample_timeframecandles.png)
 
-![sample rangecandles](../../images/sample_rangecandles.png)
+![Exemplo de velas por intervalo](../../images/sample_rangecandles.png)
 
 ## Iniciando a Obtenção de Dados
 

@@ -30,4 +30,4 @@ Para estos y muchos otros escenarios del funcionamiento del exchange que es impo
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. El resultado del ejemplo es el siguiente: ![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. El resultado del ejemplo es el siguiente: ![Ejemplo de prueba de emulación](../../../images/sample_emulation_test.png)

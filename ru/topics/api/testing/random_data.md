@@ -30,4 +30,4 @@
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. Результат работы примера выглядит следующим образом: ![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. Результат работы примера выглядит следующим образом: ![Пример теста эмуляции](../../../images/sample_emulation_test.png)

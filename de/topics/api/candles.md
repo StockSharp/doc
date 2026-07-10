@@ -13,9 +13,9 @@ Die Arbeit mit Candles wird im Beispiel im Ordner *Samples\/02\_Candles\/01\_Rea
 
 Die folgenden Bilder zeigen [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)- und [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage)-Charts:
 
-![sample timeframecandles](../../images/sample_timeframecandles.png)
+![Beispiel Zeitrahmen-Kerzen](../../images/sample_timeframecandles.png)
 
-![sample rangecandles](../../images/sample_rangecandles.png)
+![Beispiel Range-Kerzen](../../images/sample_rangecandles.png)
 
 ## Beginn des Datenabrufs
 

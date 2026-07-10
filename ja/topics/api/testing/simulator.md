@@ -134,7 +134,7 @@ settings.Latency = TimeSpan.FromMilliseconds(100);
 
 SampleRealTimeEmulation の例は、実コネクターとエミュレーションコネクターの両方からのデータを同時に表示できることを示しています。
 
-![sample リアルタイムエミュレーション](../../../images/sample_realtime_emulation.png)
+![リアルタイムエミュレーションの例](../../../images/sample_realtime_emulation.png)
 
 アプリケーションインターフェイスには、次の要素が含まれます。
 - ローソク足と注文を表示するチャート

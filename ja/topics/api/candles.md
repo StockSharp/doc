@@ -13,9 +13,9 @@
 
 次の画像は、[TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) と [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) のチャートを示しています:
 
-![sample timeframecandles](../../images/sample_timeframecandles.png)
+![時間枠ローソク足の例](../../images/sample_timeframecandles.png)
 
-![sample rangecandles](../../images/sample_rangecandles.png)
+![レンジローソク足の例](../../images/sample_rangecandles.png)
 
 ## データ取得の開始
 

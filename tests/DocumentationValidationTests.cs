@@ -1740,6 +1740,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsDoNotUseEnglishSampleLabels()
+	{
+		var errors = new List<string>();
+		var samplePattern = new Regex(@"^sample(?:\b|[a-z])", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					if (!samplePattern.IsMatch(altText.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text keeps English sample label '{altText.Text}'. Localize the sample description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownLinkLabelsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();

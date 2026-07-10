@@ -141,7 +141,7 @@
    }
    ```
 
-   ![sample quote iv](../../../images/sample_quote_iv.png)
+   ![Пример котирования IV](../../../images/sample_quote_iv.png)
 6. Окончание котирования и остановка стратегии: 
 
    ```none

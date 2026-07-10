@@ -2,7 +2,7 @@
 
 Für die grafische Darstellung von Candles können Sie die spezielle Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart) verwenden (siehe [Komponenten für die Chart-Erstellung](../graphical_user_interface/charts.md)), die Candles wie folgt darstellt:
 
-![sample candleschart](../../../images/sample_candleschart.png)
+![Beispiel Kerzenchart](../../../images/sample_candleschart.png)
 
 ## Grundlegender Ansatz zur Anzeige von Candles
 

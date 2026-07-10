@@ -2,7 +2,7 @@
 
 Для графического отображения свечей можно использовать специальный компонент [Chart](xref:StockSharp.Xaml.Charting.Chart) (см. [Компоненты для построения графиков](../graphical_user_interface/charts.md)), который отрисовывает свечи следующим образом:
 
-![sample candleschart](../../../images/sample_candleschart.png)
+![Пример графика свечей](../../../images/sample_candleschart.png)
 
 ## Базовый подход к отображению свечей
 

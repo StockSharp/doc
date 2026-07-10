@@ -152,7 +152,7 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    }
    ```
 
-   ![sample quote iv](../../../images/sample_quote_iv.png)
+   ![Exemplo de cotação IV](../../../images/sample_quote_iv.png)
 
 6. Terminar a cotação e parar a estratégia:
 

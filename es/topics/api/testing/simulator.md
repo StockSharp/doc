@@ -134,7 +134,7 @@ settings.Latency = TimeSpan.FromMilliseconds(100);
 
 El ejemplo SampleRealTimeEmulation demuestra la posibilidad de mostrar simultáneamente datos tanto del conector real como del conector de emulación:
 
-![sample emulación en tiempo real](../../../images/sample_realtime_emulation.png)
+![Ejemplo de emulación en tiempo real](../../../images/sample_realtime_emulation.png)
 
 La interfaz de la aplicación contiene los siguientes elementos:
 - Gráficos para mostrar velas y órdenes

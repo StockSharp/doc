@@ -152,7 +152,7 @@ Para la cotización de opciones, se implementa una estrategia especial [Volatili
    }
    ```
 
-   ![sample quote iv](../../../images/sample_quote_iv.png)
+   ![Ejemplo de cotización IV](../../../images/sample_quote_iv.png)
 
 6. Finalización de la cotización y detención de la estrategia:
 

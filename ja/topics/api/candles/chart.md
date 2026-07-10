@@ -2,7 +2,7 @@
 
 ローソク足をグラフィカルに表示するには、専用の [Chart](xref:StockSharp.Xaml.Charting.Chart) コンポーネント（[チャート構築用コンポーネント](../graphical_user_interface/charts.md) を参照）を使用できます。このコンポーネントは、ローソク足を次のように描画します。
 
-![sample candleschart](../../../images/sample_candleschart.png)
+![ローソク足チャートの例](../../../images/sample_candleschart.png)
 
 ## ローソク足表示の基本アプローチ
 

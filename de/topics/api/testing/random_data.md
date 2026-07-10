@@ -30,5 +30,5 @@ Für diese und viele andere Börsenszenarien, die sich im Voraus nicht vorhersag
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. Das Ergebnis des Beispiels sieht wie folgt aus: ![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. Das Ergebnis des Beispiels sieht wie folgt aus: ![Beispiel Emulationstest](../../../images/sample_emulation_test.png)
 

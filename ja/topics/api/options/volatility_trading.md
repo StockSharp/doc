@@ -152,7 +152,7 @@
    }
    ```
 
-   ![sample quote iv](../../../images/sample_quote_iv.png)
+   ![IV クォートの例](../../../images/sample_quote_iv.png)
 
 6. クォーティングを終了し、戦略を停止します。
 

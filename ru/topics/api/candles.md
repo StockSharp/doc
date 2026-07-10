@@ -14,9 +14,9 @@
 
 На следующих рисунках представлены графики [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) и [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage):
 
-![sample timeframecandles](../../images/sample_timeframecandles.png)
+![Пример свечей по таймфрейму](../../images/sample_timeframecandles.png)
 
-![sample rangecandles](../../images/sample_rangecandles.png)
+![Пример диапазонных свечей](../../images/sample_rangecandles.png)
 
 ## Запуск получения данных
 

@@ -30,4 +30,4 @@
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. この例の実行結果は次のとおりです。![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. この例の実行結果は次のとおりです。![エミュレーションテストの例](../../../images/sample_emulation_test.png)

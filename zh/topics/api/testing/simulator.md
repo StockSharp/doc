@@ -134,7 +134,7 @@ settings.Latency = TimeSpan.FromMilliseconds(100);
 
 SampleRealTimeEmulation 示例演示了同时显示来自真实连接器和仿真连接器的数据的能力：
 
-![sample 实时仿真](../../../images/sample_realtime_emulation.png)
+![实时仿真示例](../../../images/sample_realtime_emulation.png)
 
 应用程序界面包含以下元素：
 - 用于显示K线和订单的图表

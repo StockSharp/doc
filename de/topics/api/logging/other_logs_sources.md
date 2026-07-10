@@ -81,5 +81,5 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    		throw new ArgumentOutOfRangeException();
    }
    ```
-7. Ergebnis der Beispielausführung.![sample Protokollierung](../../../images/sample_logging.png)
+7. Ergebnis der Beispielausführung.![Beispiel Protokollierung](../../../images/sample_logging.png)
 

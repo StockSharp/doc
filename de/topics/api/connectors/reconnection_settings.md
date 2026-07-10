@@ -44,4 +44,4 @@ Der Wiederverbindungsmechanismus wird über die Eigenschaft [ReConnectionSetting
    Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Verbindung wiederhergestellt"));
    ```
 
-   ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)
+   ![Beispiel Verbindungsfehler](../../../images/sample_connection_error.png)![Beispiel Verbindung wiederhergestellt](../../../images/sample_connection_restored.png)

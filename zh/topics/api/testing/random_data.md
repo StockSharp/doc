@@ -30,4 +30,4 @@
    });
    _connector.SubscribeMarketDepth(new TrendMarketDepthGenerator(_connector.GetSecurityId(security)) { GenerateDepthOnEachTrade = false });
    ```
-2. 示例工作的结果如下： ![sampleemulationtest](../../../images/sample_emulation_test.png)
+2. 示例工作的结果如下： ![仿真测试示例](../../../images/sample_emulation_test.png)

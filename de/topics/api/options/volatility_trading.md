@@ -152,7 +152,7 @@ Für Optionsquoting ist eine spezielle Strategie [VolatilityQuotingStrategy](xre
    }
    ```
 
-   ![sample quote iv](../../../images/sample_quote_iv.png)
+   ![Beispiel IV-Quotes](../../../images/sample_quote_iv.png)
 
 6. Quoting beenden und Strategie stoppen:
 

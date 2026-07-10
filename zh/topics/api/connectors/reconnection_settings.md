@@ -44,4 +44,4 @@
    Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "连接已恢复"));
    ```
 
-   ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)
+   ![连接错误示例](../../../images/sample_connection_error.png)![连接恢复示例](../../../images/sample_connection_restored.png)
