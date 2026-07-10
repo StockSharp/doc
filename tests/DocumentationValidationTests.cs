@@ -9,6 +9,7 @@ using System.Threading;
 
 using Ecng.UnitTesting;
 
+using Markdig.Extensions.Tables;
 using Markdig;
 using Markdig.Renderers.Html;
 using Markdig.Syntax;
@@ -529,6 +530,49 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var actual = GetLocalAnchorReferences(localizedRoot, localizedFile);
 				if (!expected.SequenceEqual(actual, StringComparer.Ordinal))
 					errors.Add($"{RelativeToRepo(localizedFile)}: local anchor references must keep the same stable fragments as {DefaultLanguage}/{relative}. Expected: {string.Join(", ", expected)}. Actual: {string.Join(", ", actual)}.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownStructureMatchesDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+		var defaultFiles = Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.ToArray();
+		var defaultRelativeFiles = defaultFiles
+			.Select(file => Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'))
+			.ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+			var localizedRelativeFiles = Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories)
+				.Select(file => Path.GetRelativePath(langRoot, file).Replace('\\', '/'))
+				.ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+			foreach (var relative in defaultRelativeFiles.Except(localizedRelativeFiles, StringComparer.OrdinalIgnoreCase).Order(StringComparer.OrdinalIgnoreCase))
+				errors.Add($"{lang}/{relative}: localized Markdown file is missing.");
+
+			foreach (var relative in localizedRelativeFiles.Except(defaultRelativeFiles, StringComparer.OrdinalIgnoreCase).Order(StringComparer.OrdinalIgnoreCase))
+				errors.Add($"{lang}/{relative}: localized Markdown file has no matching {DefaultLanguage}/{relative} source file.");
+
+			foreach (var defaultFile in defaultFiles)
+			{
+				var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+				var localizedFile = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(localizedFile))
+					continue;
+
+				var expected = GetMarkdownStructure(defaultFile);
+				var actual = GetMarkdownStructure(localizedFile);
+
+				ValidateMarkdownStructure(relative, localizedFile, expected, actual, errors);
 			}
 		}
 
@@ -1117,6 +1161,87 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		return references;
 	}
+
+	private static MarkdownStructure GetMarkdownStructure(string file)
+	{
+		var markdown = ReadAllText(file);
+		var document = Markdown.Parse(markdown, _markdown);
+
+		return new MarkdownStructure(
+			EnumerateHeadings(document).Select(heading => heading.Level).ToArray(),
+			document.Descendants().OfType<CodeBlock>().Select(GetCodeBlockLanguage).ToArray(),
+			document.Descendants().OfType<LinkInline>().Where(link => link.IsImage).Select(link => NormalizeStructureUrl(link.Url)).ToArray(),
+			document.Descendants().OfType<Table>().Select(GetTableShape).ToArray(),
+			EnumerateUserVisibleMarkdownLines(markdown)
+				.Select(line => Regex.Match(line.Text, @"^\s*>\s*\[!(?<kind>NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+				.Where(match => match.Success)
+				.Select(match => match.Groups["kind"].Value.ToUpperInvariant())
+				.ToArray());
+	}
+
+	private static void ValidateMarkdownStructure(
+		string relative,
+		string localizedFile,
+		MarkdownStructure expected,
+		MarkdownStructure actual,
+		List<string> errors)
+	{
+		ValidateStructureSequence(relative, localizedFile, "heading levels", expected.HeadingLevels, actual.HeadingLevels, errors);
+		ValidateStructureSequence(relative, localizedFile, "code block languages", expected.CodeBlockLanguages, actual.CodeBlockLanguages, errors);
+		ValidateStructureSequence(relative, localizedFile, "image URLs", expected.ImageUrls, actual.ImageUrls, errors);
+		ValidateStructureSequence(relative, localizedFile, "table shapes", expected.TableShapes, actual.TableShapes, errors);
+		ValidateStructureSequence(relative, localizedFile, "admonition kinds", expected.AdmonitionKinds, actual.AdmonitionKinds, errors);
+	}
+
+	private static void ValidateStructureSequence<T>(
+		string relative,
+		string localizedFile,
+		string name,
+		IReadOnlyList<T> expected,
+		IReadOnlyList<T> actual,
+		List<string> errors)
+	{
+		if (expected.SequenceEqual(actual))
+			return;
+
+		errors.Add($"{RelativeToRepo(localizedFile)}: {name} must match {DefaultLanguage}/{relative}. Expected: {FormatStructureSequence(expected)}. Actual: {FormatStructureSequence(actual)}.");
+	}
+
+	private static string GetCodeBlockLanguage(CodeBlock block)
+	{
+		if (block is not FencedCodeBlock fenced)
+			return "indented";
+
+		var info = fenced.Info?.Trim();
+		if (string.IsNullOrEmpty(info))
+			return "none";
+
+		var separator = info.IndexOfAny([' ', '\t']);
+		if (separator >= 0)
+			info = info[..separator];
+
+		return info.ToLowerInvariant();
+	}
+
+	private static TableShape GetTableShape(Table table)
+	{
+		var rows = table.OfType<TableRow>().ToArray();
+		var columnCounts = rows
+			.Select(row => row.OfType<TableCell>().Count())
+			.ToArray();
+
+		return new TableShape(
+			columnCounts.Length == 0 ? 0 : columnCounts.Max(),
+			Math.Max(0, rows.Length - 1));
+	}
+
+	private static string NormalizeStructureUrl(string url)
+		=> (url ?? string.Empty).Replace('\\', '/').Trim();
+
+	private static string FormatStructureSequence<T>(IReadOnlyList<T> values)
+		=> values.Count == 0
+			? "<none>"
+			: string.Join(", ", values);
 
 	private static string GetFirstHeadingText(string file)
 	{
@@ -1750,6 +1875,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct PathResolution(bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
 
 	private readonly record struct MarkdownTarget(string Language, bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
+
+	private readonly record struct MarkdownStructure(
+		IReadOnlyList<int> HeadingLevels,
+		IReadOnlyList<string> CodeBlockLanguages,
+		IReadOnlyList<string> ImageUrls,
+		IReadOnlyList<TableShape> TableShapes,
+		IReadOnlyList<string> AdmonitionKinds);
+
+	private readonly record struct TableShape(int Columns, int BodyRows);
 
 	private readonly record struct CodeComment(string Text, int Line);
 
