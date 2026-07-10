@@ -107,7 +107,7 @@ public override void Load(SettingsStorage storage)
 
 ## Zusammengesetzte Indikatoren
 
-Einige Indikatoren sind zusammengesetzt und verwenden andere Indikatoren in ihren Berechnungen. Daher können Indikatoren gegenseitig wiederverwendet werden, wie im Beispiel der Implementierung des Chaikin-Volatilität-Indikators [ChaikinVolatilität](xref:StockSharp.Algo.Indicators.ChaikinVolatilität) gezeigt:
+Einige Indikatoren sind zusammengesetzt und verwenden andere Indikatoren in ihren Berechnungen. Daher können Indikatoren gegenseitig wiederverwendet werden, wie im Beispiel der Implementierung des Chaikin-Volatilität-Indikators [ChaikinVolatilität](xref:StockSharp.Algo.Indicators.ChaikinVolatility) gezeigt:
 
 ```cs
 /// <summary>

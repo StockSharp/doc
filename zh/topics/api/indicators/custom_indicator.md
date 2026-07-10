@@ -107,7 +107,7 @@ public override void Load(SettingsStorage storage)
 
 ## 综合指标
 
-有些指标是复合指标，并在其计算中使用其他指标。因此，指标可以相互重用，如Chaikin波动率指标 [Chaikin波动率](xref:StockSharp.Algo.Indicators.Chaikin波动率) 的示例实现中所示：
+有些指标是复合指标，并在其计算中使用其他指标。因此，指标可以相互重用，如Chaikin波动率指标 [Chaikin波动率](xref:StockSharp.Algo.Indicators.ChaikinVolatility) 的示例实现中所示：
 
 ```cs
 /// <summary>

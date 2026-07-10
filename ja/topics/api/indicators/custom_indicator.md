@@ -107,7 +107,7 @@ public override void Load(SettingsStorage storage)
 
 ## 複合インジケーター
 
-一部のインジケーターは複合型で、計算に他のインジケーターを使用します。そのため、[Chaikinボラティリティ](xref:StockSharp.Algo.Indicators.Chaikinボラティリティ) インジケーターの実装例に示すように、インジケーター同士で再利用できます。
+一部のインジケーターは複合型で、計算に他のインジケーターを使用します。そのため、[Chaikinボラティリティ](xref:StockSharp.Algo.Indicators.ChaikinVolatility) インジケーターの実装例に示すように、インジケーター同士で再利用できます。
 
 ```cs
 /// <summary>

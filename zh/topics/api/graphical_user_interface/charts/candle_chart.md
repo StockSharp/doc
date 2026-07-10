@@ -8,7 +8,7 @@
 
 ## 使用 Chart 构建图表的示例
 
-1. 在 XAML 中，我们创建一个窗口并将 [Chart](xref:StockSharp.Xaml.Charting.Chart) 图形组件添加到其中。我们将组件命名为 **Chart**。注意，在创建窗口时，需要添加命名空间 *http://schemas.stocksharp.com/xaml*。
+1. 在 XAML 中，我们创建一个窗口并将 [Chart](xref:StockSharp.Xaml.Charting.Chart) 图形组件添加到其中。我们将组件命名为 **Chart**。注意，在创建窗口时，需要添加命名空间 *http:\/\/schemas.stocksharp.com\/xaml*。
 
    ```xaml
    <Window x:Class="SampleCandles.ChartWindow"

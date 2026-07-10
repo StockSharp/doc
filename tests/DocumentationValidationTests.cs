@@ -2088,6 +2088,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		return new MarkdownStructure(
 			EnumerateHeadings(document).Select(heading => heading.Level).ToArray(),
 			document.Descendants().OfType<CodeBlock>().Select(GetCodeBlockLanguage).ToArray(),
+			document.Descendants().OfType<LinkInline>().Where(link => !link.IsImage).Select(link => NormalizeStructureUrl(link.Url)).Order(StringComparer.Ordinal).ToArray(),
 			document.Descendants().OfType<LinkInline>().Where(link => link.IsImage).Select(link => NormalizeStructureUrl(link.Url)).ToArray(),
 			document.Descendants().OfType<Table>().Select(GetTableShape).ToArray(),
 			GetListSummary(document),
@@ -2107,6 +2108,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		ValidateStructureSequence(relative, localizedFile, "heading levels", expected.HeadingLevels, actual.HeadingLevels, errors);
 		ValidateStructureSequence(relative, localizedFile, "code block languages", expected.CodeBlockLanguages, actual.CodeBlockLanguages, errors);
+		ValidateStructureSequence(relative, localizedFile, "link URLs", expected.LinkUrls, actual.LinkUrls, errors);
 		ValidateStructureSequence(relative, localizedFile, "image URLs", expected.ImageUrls, actual.ImageUrls, errors);
 		ValidateStructureSequence(relative, localizedFile, "table shapes", expected.TableShapes, actual.TableShapes, errors);
 		ValidateStructureValue(relative, localizedFile, "list item counts", expected.ListSummary, actual.ListSummary, errors);
@@ -4133,6 +4135,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private readonly record struct MarkdownStructure(
 		IReadOnlyList<int> HeadingLevels,
 		IReadOnlyList<string> CodeBlockLanguages,
+		IReadOnlyList<string> LinkUrls,
 		IReadOnlyList<string> ImageUrls,
 		IReadOnlyList<TableShape> TableShapes,
 		ListSummary ListSummary,

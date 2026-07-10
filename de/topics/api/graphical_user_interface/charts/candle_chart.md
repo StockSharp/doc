@@ -8,7 +8,7 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
 
 ## Beispiel für den Aufbau eines Diagramms mit Chart
 
-1. In XAML erstellen wir ein Fenster und fügen die grafische Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart) hinzu. Wir weisen der Komponente den Namen **Chart** zu. Beachten Sie, dass beim Erstellen des Fensters der Namespace *http://schemas.stocksharp.com/xaml* hinzugefügt werden muss.
+1. In XAML erstellen wir ein Fenster und fügen die grafische Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart) hinzu. Wir weisen der Komponente den Namen **Chart** zu. Beachten Sie, dass beim Erstellen des Fensters der Namespace *http:\/\/schemas.stocksharp.com\/xaml* hinzugefügt werden muss.
 
    ```xaml
    <Window x:Class="SampleCandles.ChartWindow"

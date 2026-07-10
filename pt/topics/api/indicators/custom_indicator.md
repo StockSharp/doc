@@ -107,7 +107,7 @@ public override void Load(SettingsStorage storage)
 
 ## Indicadores compostos
 
-Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. Por isso, os indicadores podem ser reutilizados entre si, como demonstrado no exemplo de implementação do indicador Chaikin Volatilidade [ChaikinVolatilidade](xref:StockSharp.Algo.Indicators.ChaikinVolatilidade):
+Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. Por isso, os indicadores podem ser reutilizados entre si, como demonstrado no exemplo de implementação do indicador Chaikin Volatilidade [ChaikinVolatilidade](xref:StockSharp.Algo.Indicators.ChaikinVolatility):
 
 ```cs
 /// <summary>
