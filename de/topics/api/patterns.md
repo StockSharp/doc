@@ -37,7 +37,7 @@ Bei Verwendung von [S#](../api.md) (oder beim Erstellen von [Strategien aus Code
 var patternIndicator = new CandlePatternIndicator
 {
 	// Festlegen des gewünschten Patterns
-	Pattern = new ExpressionCandlePattern("My pattern", new[]
+	Pattern = new ExpressionCandlePattern("Mein Muster", new[]
 	{
 		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Current candle is rising
 		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Previous candle is falling

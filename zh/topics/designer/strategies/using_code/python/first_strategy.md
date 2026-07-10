@@ -1,4 +1,4 @@
-# Python 策略示例
+﻿# Python 策略示例
 
 下面以 SMA 策略为例，演示如何通过源代码创建策略。该示例与[通过模块创建算法](../../using_visual_designer/first_strategy.md)中使用模块组装的 SMA 策略相似。
 
@@ -125,11 +125,11 @@ self.StartProtection(self.TakeValue, self.StopValue)
 ```python
 def OnProcess(self, candle, longValue, shortValue):
 	"""
-	Processes each finished candle, logs information, and executes trading logic on SMA crossing.
+	处理每根已完成的 K 线，记录信息，并在 SMA 交叉时执行交易逻辑。
 	
-	:param candle: The processed candle message.
-		:param longValue: The current value of the long SMA.
-		:param shortValue: The current value of the short SMA.
+	:param candle: 已处理的 K 线消息。
+		:param longValue: 长周期 SMA 的当前值。
+		:param shortValue: 短周期 SMA 的当前值。
 	"""
 	self.LogInfo("新K线 {0}: {6} {1};{2};{3};{4}; 成交量 {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! REQUIRED!! Creates a new instance of the strategy.
+	!! 必需!! 创建新的策略实例。
 	"""
 	return sma_strategy()
 ```

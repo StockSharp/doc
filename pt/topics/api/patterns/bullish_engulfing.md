@@ -1,4 +1,4 @@
-# Padrão Bullish Engulfing
+﻿# Padrão Bullish Engulfing
 
 Bullish Engulfing é um poderoso padrão de velas de reversão bullish composto por duas velas que se forma numa tendência descendente. A primeira vela é preta (bearish), seguida por uma vela branca (bullish), cujo corpo engloba completamente (cobre) o corpo da vela anterior.
 
@@ -11,7 +11,7 @@ Bullish Engulfing é um poderoso padrão de velas de reversão bullish composto 
 - O corpo da segunda vela engloba completamente o corpo da primeira vela.
 - Forma-se numa tendência descendente.
 
-![Bullish Engulfing Pattern](../../../images/bullishengulfingpattern.png)
+![Padrão de engolfo de alta](../../../images/bullishengulfingpattern.png)
 
 ### Interpretação
 

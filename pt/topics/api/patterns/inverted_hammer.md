@@ -1,4 +1,4 @@
-# Padrão Inverted Hammer
+﻿# Padrão Inverted Hammer
 
 Inverted Hammer é um padrão de velas bullish que se forma durante uma tendência descendente. A vela tem um corpo pequeno na parte inferior e uma sombra superior longa, com a sombra inferior ausente ou muito curta. Parece um martelo invertido.
 
@@ -10,7 +10,7 @@ Inverted Hammer é um padrão de velas bullish que se forma durante uma tendênc
 - Sem sombra inferior ou com uma sombra muito curta.
 - Forma-se numa tendência descendente.
 
-![Inverted Hammer Pattern](../../../images/invertedhammer.png)
+![Padrão martelo invertido](../../../images/invertedhammer.png)
 
 ### Interpretação
 

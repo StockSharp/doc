@@ -41,7 +41,7 @@ Uma abordagem mais flexível é separar a criação e o registo das ordens:
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // Definições adicionais da ordem
-order.Comment = "My special order";
+order.Comment = "Minha ordem especial";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // Registar a ordem

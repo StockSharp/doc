@@ -1,4 +1,4 @@
-# Patrón Morning Star
+﻿# Patrón Morning Star
 
 Morning Star es un patrón de velas de reversión alcista compuesto por tres velas que se forma en una tendencia bajista. Este patrón muestra una transición de sentimiento bajista a alcista mediante un período de incertidumbre o consolidación.
 
@@ -9,7 +9,7 @@ Morning Star es un patrón de velas de reversión alcista compuesto por tres vel
 - La tercera vela es blanca (alcista) con precio de apertura menor que el de cierre (O < C), que cierra profundamente dentro del cuerpo de la primera vela.
 - Se forma en una tendencia bajista.
 
-![Morning Star Pattern](../../../images/morningstarpattern.png)
+![Patrón de estrella matutina](../../../images/morningstarpattern.png)
 
 ### Interpretación
 

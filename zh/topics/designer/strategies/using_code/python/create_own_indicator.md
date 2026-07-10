@@ -1,4 +1,4 @@
-# 创建指标
+﻿# 创建指标
 
 有关在 [API](../../../../api.md) 中创建自定义指标的方法，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。此类指标与 **Designer** 完全兼容。
 
@@ -20,11 +20,11 @@ from indicator_extensions import *
 
 class empty_indicator(BaseIndicator):
 	"""
-	Sample indicator demonstrating saving and loading parameters.
+	演示保存和加载参数的示例指标。
 
-	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+	文档 https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 	
-	Changes input price on +20% or -20%.
+	将输入价格调整 +20% 或 -20%。
 	"""
 	def __init__(self):
 		super(empty_indicator, self).__init__()
@@ -53,10 +53,10 @@ class empty_indicator(BaseIndicator):
 
 	def OnProcess(self, input):
 		"""
-		Processes the incoming indicator value and applies a random change.
+		处理传入的指标值并应用随机变化。
 		
-		:param input: The incoming indicator value.
-		:return: A new DecimalIndicatorValue after applying changes.
+		:param input: 传入的指标值。
+		:return: 应用变化后的新 DecimalIndicatorValue。
 		"""
 		# 每第 10 次调用尝试返回空值
 		if random.randint(0, 10) == 0:
@@ -79,18 +79,18 @@ class empty_indicator(BaseIndicator):
 
 	def Load(self, storage):
 		"""
-		Loads the indicator parameters from persistent storage.
+		从持久化存储加载指标参数。
 		
-		:param storage: The settings storage to load from.
+		:param storage: 要从中加载的设置存储。
 		"""
 		super(empty_indicator, self).Load(storage)
 		self.Change = storage.GetValue("Change", self.Change)
 
 	def Save(self, storage):
 		"""
-		Saves the indicator parameters to persistent storage.
+		将指标参数保存到持久化存储。
 		
-		:param storage: The settings storage to save to.
+		:param storage: 要保存到的设置存储。
 		"""
 		super(empty_indicator, self).Save(storage)
 		storage.SetValue("Change", self.Change)

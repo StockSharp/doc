@@ -1,4 +1,4 @@
-# Padrão Morning Star
+﻿# Padrão Morning Star
 
 Morning Star é um padrão de velas de reversão bullish composto por três velas que se forma numa tendência descendente. Este padrão mostra uma transição de sentimento bearish para bullish através de um período de incerteza ou consolidação.
 
@@ -9,7 +9,7 @@ Morning Star é um padrão de velas de reversão bullish composto por três vela
 - A terceira vela é branca (bullish), com preço de abertura inferior ao preço de fecho (O < C), que fecha profundamente dentro do corpo da primeira vela.
 - Forma-se numa tendência descendente.
 
-![Morning Star Pattern](../../../images/morningstarpattern.png)
+![Padrão estrela da manhã](../../../images/morningstarpattern.png)
 
 ### Interpretação
 

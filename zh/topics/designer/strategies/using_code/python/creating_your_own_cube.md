@@ -1,4 +1,4 @@
-# 创建自定义模块
+﻿# 创建自定义模块
 
 与[通过策略图创建模块](../../using_visual_designer/composite_elements.md)类似，也可以使用 Python 代码创建自定义模块。代码模块的功能比策略图模块更灵活。
 
@@ -26,7 +26,7 @@ from designer_extensions import diagram_external
 # 演示输入和输出插槽用法的自定义图表元素类
 class empty_diagram_element(DiagramExternalElement):
 	"""
-	Sample diagram element demonstrating input and output sockets usage.
+	演示输入和输出插槽用法的示例图表元素。
 
 	https://doc.stocksharp.com/topics/designer/strategies/using_code/python/creating_your_own_cube.html
 	"""
@@ -50,17 +50,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output1 event.
+		订阅 Output1 事件。
 		
-		:param handler: A callable method to be invoked when Output1 is triggered.
+		:param handler: 触发 Output1 时要调用的可调用方法。
 		"""
 		self._output1_handlers.append(handler)
 
 	def remove_Output1(self, handler):
 		"""
-		Unsubscribe from the Output1 event.
+		取消订阅 Output1 事件。
 		
-		:param handler: The callable method to be removed from the Output1 subscribers.
+		:param handler: 要从 Output1 订阅者中移除的可调用方法。
 		"""
 		if handler in self._output1_handlers:
 			self._output1_handlers.remove(handler)
@@ -68,17 +68,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output2(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output2 event.
+		订阅 Output2 事件。
 		
-		:param handler: A callable method to be invoked when Output2 is triggered.
+		:param handler: 触发 Output2 时要调用的可调用方法。
 		"""
 		self._output2_handlers.append(handler)
 
 	def remove_Output2(self, handler):
 		"""
-		Unsubscribe from the Output2 event.
+		取消订阅 Output2 事件。
 		
-		:param handler: The callable method to be removed from the Output2 subscribers.
+		:param handler: 要从 Output2 订阅者中移除的可调用方法。
 		"""
 		if handler in self._output2_handlers:
 			self._output2_handlers.remove(handler)
@@ -94,11 +94,11 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
-		Input sockets are method parameters marked with the DiagramExternal attribute.
-		Processes a candle and a diff value, then invokes output events based on the logic.
+		输入插槽是带有 DiagramExternal 属性的方法参数。
+		处理一根 K 线和一个 diff 值，然后根据逻辑调用输出事件。
 		
-		:param candle: CandleMessage input representing a candlestick.
-		:param diff: Unit representing the difference value to be processed.
+		:param candle: 表示 K 线的 CandleMessage 输入。
+		:param diff: 表示要处理的差值的 Unit。
 		"""
 		# 将结果计算为K线收盘价与 diff 值之和
 		res = candle.ClosePrice + diff
@@ -114,21 +114,21 @@ class empty_diagram_element(DiagramExternalElement):
 
 	def Start(self):
 		"""
-		Called when the diagram element starts. Add any pre-start logic here.
+		在图表元素启动时调用。可在此添加启动前逻辑。
 		"""
 		super(empty_diagram_element, self).Start()
 		# 添加在元素启动前执行的自定义逻辑
 
 	def Stop(self):
 		"""
-		Called when the diagram element stops. Add any post-stop logic here.
+		在图表元素停止时调用。可在此添加停止后逻辑。
 		"""
 		super(empty_diagram_element, self).Stop()
 		# 添加在元素停止后执行的自定义逻辑
 
 	def Reset(self):
 		"""
-		Called when the diagram element resets. Add any reset logic here.
+		在图表元素重置时调用。可在此添加重置逻辑。
 		"""
 		super(empty_diagram_element, self).Reset()
 		# 添加用于重置元素内部状态的自定义逻辑
@@ -149,17 +149,17 @@ def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output1 event.
+	订阅 Output1 事件。
 	
-	:param handler: A callable method to be invoked when Output1 is triggered.
+	:param handler: 触发 Output1 时要调用的可调用方法。
 	"""
 	self._output1_handlers.append(handler)
 
 def remove_Output1(self, handler):
 	"""
-	Unsubscribe from the Output1 event.
+	取消订阅 Output1 事件。
 	
-	:param handler: The callable method to be removed from the Output1 subscribers.
+	:param handler: 要从 Output1 订阅者中移除的可调用方法。
 	"""
 	if handler in self._output1_handlers:
 		self._output1_handlers.remove(handler)
@@ -167,17 +167,17 @@ def remove_Output1(self, handler):
 @diagram_external
 def add_Output2(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output2 event.
+	订阅 Output2 事件。
 	
-	:param handler: A callable method to be invoked when Output2 is triggered.
+	:param handler: 触发 Output2 时要调用的可调用方法。
 	"""
 	self._output2_handlers.append(handler)
 
 def remove_Output2(self, handler):
 	"""
-	Unsubscribe from the Output2 event.
+	取消订阅 Output2 事件。
 	
-	:param handler: The callable method to be removed from the Output2 subscribers.
+	:param handler: 要从 Output2 订阅者中移除的可调用方法。
 	"""
 	if handler in self._output2_handlers:
 		self._output2_handlers.remove(handler)

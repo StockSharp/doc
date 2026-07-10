@@ -1,4 +1,4 @@
-# Padrão Tweezer Top
+﻿# Padrão Tweezer Top
 
 Tweezer Top é um padrão de velas de reversão baixista composto por duas velas, que se forma numa tendência ascendente. Uma característica do padrão é que ambas as velas têm o mesmo máximo ou máximos quase iguais, lembrando uma pinça com duas extremidades idênticas.
 
@@ -10,7 +10,7 @@ Tweezer Top é um padrão de velas de reversão baixista composto por duas velas
 - O corpo da segunda vela é significativamente maior do que o corpo da primeira vela (B > (pB * 3)).
 - Forma-se numa tendência ascendente.
 
-![Tweezer Top Pattern](../../../images/tweezertoppattern.png)
+![Padrão topo em pinça](../../../images/tweezertoppattern.png)
 
 ### Interpretação
 

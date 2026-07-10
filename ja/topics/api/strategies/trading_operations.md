@@ -41,7 +41,7 @@ ClosePosition();
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // 追加の注文設定
-order.Comment = "My special order";
+order.Comment = "自分の特別注文";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // 注文を登録

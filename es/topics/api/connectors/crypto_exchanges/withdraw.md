@@ -17,7 +17,7 @@ public void Withdraw()
 			WithdrawInfo = new WithdrawInfo
 			{
 				// rellenar los detalles necesarios
-				Comment = "My profit",
+	Comment = "Mi beneficio",
 				//PaymentId = "45467dyjyttR8WBiTJXptyuTx4wbSerGZ5t45", //Riple
 				CryptoAddress = "16zK3M53JBGnjs9ajTBGBfkRqoHtm4E573",
 			}

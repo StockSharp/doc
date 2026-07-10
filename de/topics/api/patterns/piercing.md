@@ -1,4 +1,4 @@
-# Piercing Line
+﻿# Piercing Line
 
 Piercing ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, die unterhalb des Tiefs der vorherigen Candle eröffnet und oberhalb der Mitte des Körpers der vorherigen Candle schließt.
 
@@ -9,7 +9,7 @@ Piercing ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in e
 - Der Schlusskurs der zweiten Candle dringt tief in den Körper der ersten Candle ein und schließt oberhalb der Mitte der ersten Candle (C > (pB / 2 + pC)).
 - Entsteht in einem Abwärtstrend.
 
-![Piercing Pattern](../../../images/piercingpattern.png)
+![Piercing-Muster](../../../images/piercingpattern.png)
 
 ### Interpretation
 

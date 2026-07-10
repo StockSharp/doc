@@ -1,4 +1,4 @@
-# Patrón Bearish Engulfing
+﻿# Patrón Bearish Engulfing
 
 Bearish Engulfing es un potente patrón de velas de reversión bajista compuesto por dos velas que se forma en una tendencia alcista. La primera vela es blanca (alcista), seguida de una vela negra (bajista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
 
@@ -11,7 +11,7 @@ Bearish Engulfing es un potente patrón de velas de reversión bajista compuesto
 - El cuerpo de la segunda vela envuelve completamente el cuerpo de la primera vela.
 - Se forma en una tendencia alcista.
 
-![Bearish Engulfing Pattern](../../../images/bearishengulfingpattern.png)
+![Patrón envolvente bajista](../../../images/bearishengulfingpattern.png)
 
 ### Interpretación
 

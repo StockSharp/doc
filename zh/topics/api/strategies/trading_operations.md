@@ -41,7 +41,7 @@ ClosePosition();
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // 额外订单设置
-order.Comment = "My special order";
+order.Comment = "我的特殊订单";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // 注册订单

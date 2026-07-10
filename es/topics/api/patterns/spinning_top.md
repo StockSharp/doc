@@ -1,4 +1,4 @@
-# Patrón Spinning Top
+﻿# Patrón Spinning Top
 
 Spinning Top es un patrón de velas caracterizado por un cuerpo pequeño y largas sombras superior e inferior de longitud aproximadamente igual. Este patrón indica indecisión del mercado y una lucha entre compradores y vendedores.
 
@@ -9,7 +9,7 @@ Spinning Top es un patrón de velas caracterizado por un cuerpo pequeño y larga
 - Indica equilibrio entre alcistas y bajistas.
 - Refleja indecisión del mercado y posible cambio de tendencia.
 
-![Spinning Top Pattern](../../../images/spinningtop.png)
+![Patrón de peonza](../../../images/spinningtop.png)
 
 ### Interpretación
 

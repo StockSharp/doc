@@ -123,12 +123,12 @@ await provider.InitAsync(CancellationToken.None);
 // 订阅新形态创建事件
 provider.PatternCreated += pattern =>
 {
-    Console.WriteLine($"Pattern created: {pattern.Name}");
+    Console.WriteLine($"已创建形态: {pattern.Name}");
 };
 
 // 创建并保存复杂形态
 var myPattern = new ComplexCandlePattern(
-    "My Pattern",
+    "我的形态",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Hammer,
@@ -139,7 +139,7 @@ var myPattern = new ComplexCandlePattern(
 provider.Save(myPattern);
 
 // 按名称查找形态
-if (provider.TryFind("My Pattern", out var found))
+if (provider.TryFind("我的形态", out var found))
 {
     Console.WriteLine($"找到: {found.Name}, K线数量: {found.CandlesCount}");
 }

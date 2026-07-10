@@ -141,7 +141,7 @@ Hier ist ein einfaches Beispiel für einen benutzerdefinierten statistischen Par
 ```csharp
 [Display(
 	ResourceType = typeof(LocalizedStrings),
-	Name = "My Custom Indicator",
+	Name = "Mein benutzerdefinierter Indikator",
 	Description = "Beschreibung meines benutzerdefinierten Indikators",
 	GroupName = "Custom Parameters",
 	Order = 1000

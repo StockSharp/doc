@@ -128,7 +128,7 @@ provider.PatternCreated += pattern =>
 
 // Komplexes Muster erstellen und speichern
 var myPattern = new ComplexCandlePattern(
-    "My Pattern",
+    "Mein Muster",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Hammer,
@@ -139,7 +139,7 @@ var myPattern = new ComplexCandlePattern(
 provider.Save(myPattern);
 
 // Muster nach Namen suchen
-if (provider.TryFind("My Pattern", out var found))
+if (provider.TryFind("Mein Muster", out var found))
 {
     Console.WriteLine($"Gefunden: {found.Name}, Kerzen: {found.CandlesCount}");
 }

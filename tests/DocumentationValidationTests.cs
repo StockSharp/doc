@@ -166,12 +166,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"adapter",
 		"adapters",
 		"average",
+		"based",
 		"buy",
 		"buys",
 		"canceled",
 		"cancelled",
+		"callable",
 		"candle",
 		"candles",
+		"candlestick",
 		"change",
 		"commission",
 		"completed",
@@ -183,9 +186,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"data",
 		"delta",
 		"description",
+		"difference",
+		"diff",
 		"direction",
 		"display",
 		"error",
+		"events",
 		"exchange",
 		"exit",
 		"failed",
@@ -196,25 +202,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"imbalance",
 		"index",
 		"indicator",
+		"input",
 		"instrument",
 		"instruments",
 		"invalid",
+		"invoked",
+		"invokes",
 		"large",
 		"level",
 		"length",
 		"less",
+		"logic",
 		"loaded",
 		"logging",
 		"long",
 		"lost",
 		"main",
+		"marked",
 		"message",
+		"method",
 		"max",
 		"maximum",
 		"min",
 		"minimum",
 		"mode",
 		"moving",
+		"my",
 		"not",
 		"online",
 		"operation",
@@ -222,15 +235,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"orders",
 		"parameter",
 		"parameters",
+		"pattern",
+		"patterns",
 		"percentage",
 		"period",
 		"price",
+		"processed",
+		"processes",
 		"profit",
 		"rate",
 		"received",
 		"register",
 		"registration",
 		"registered",
+		"representing",
+		"required",
 		"rule",
 		"search",
 		"save",
@@ -242,14 +261,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"short",
 		"signal",
 		"simple",
+		"sockets",
 		"spread",
+		"subscribers",
+		"subscribe",
 		"successfully",
 		"threshold",
 		"total",
 		"trade",
 		"trades",
 		"transitioned",
+		"triggered",
 		"type",
+		"unsubscribe",
 		"unsupported",
 		"value",
 		"values",
@@ -1150,6 +1174,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: code string literal is identical to the English source. Localize it or add a deliberate allowlist entry. String: {Truncate(literal.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeStringLiteralsDoNotLookLikeEnglish()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeStringLiteralForTranslationCheck(literal.Text);
+					if (!IsLikelyUntranslatedEnglishCodeStringLiteral(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: code string literal looks like untranslated English. Localize it or add a deliberate allowlist entry. String: {Truncate(literal.Text, 180)}");
 				}
 			}
 		}
@@ -2221,10 +2270,16 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				{
 					codeLiteralCount++;
 					var normalized = NormalizeCodeStringLiteralForTranslationCheck(literal.Text);
-					if (normalized.Length == 0 || defaultCodeLiterals is null || !defaultCodeLiterals.Contains(normalized))
-						continue;
+					var exactEnglish = normalized.Length > 0 && defaultCodeLiterals is not null && defaultCodeLiterals.Contains(normalized);
 
-					issues.Add(new AuditIssue("code-literal-exact-english", RelativeToRepo(file), literal.Line, $"is identical to the English source string literal: {Truncate(literal.Text, 180)}"));
+					if (exactEnglish)
+					{
+						issues.Add(new AuditIssue("code-literal-exact-english", RelativeToRepo(file), literal.Line, $"is identical to the English source string literal: {Truncate(literal.Text, 180)}"));
+						continue;
+					}
+
+					if (IsLikelyUntranslatedEnglishCodeStringLiteral(normalized))
+						issues.Add(new AuditIssue("code-literal-likely-english", RelativeToRepo(file), literal.Line, $"looks like untranslated English: {Truncate(literal.Text, 180)}"));
 				}
 
 				foreach (var comment in EnumerateCodeComments(markdown))
@@ -2419,7 +2474,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
-		report.AppendLine("- Code string literals: exact matches with English source string literals that look like user-facing text.");
+		report.AppendLine("- Code string literals: exact matches with English source string literals and literals that look like untranslated English.");
 		report.AppendLine("- Code comments: exact matches with English source comments and comments that look like untranslated English.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
@@ -2970,8 +3025,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
 		{
-			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
-			using var reader = new StringReader(block.Groups["code"].Value);
+			var markdownLineStarts = GetLineStarts(markdown);
+			var code = block.Groups["code"].Value;
+
+			foreach (Match literal in Regex.Matches(code, "(?<quote>\"\"\"|''')(?<value>.*?)(?:\\k<quote>)", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+			{
+				var value = NormalizeCodeStringLiteralForTranslationCheck(literal.Groups["value"].Value);
+				if (value.Length > 0)
+					yield return new CodeStringLiteral(value, GetLineNumber(markdownLineStarts, block.Groups["code"].Index + literal.Groups["value"].Index));
+			}
+
+			var line = GetLineNumber(markdownLineStarts, block.Groups["code"].Index);
+			using var reader = new StringReader(code);
 
 			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
 			{
@@ -3016,6 +3081,72 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var hits = words.Count(word => _translatableEnglishCodeOutputWords.Contains(word) || IsCommonEnglishMarkdownWord(word));
 		return hits >= 2;
 	}
+
+	private static bool IsLikelyUntranslatedEnglishCodeStringLiteral(string text)
+	{
+		if (string.IsNullOrWhiteSpace(text) || text.Length < 6 || IsAllowedInvariantCodeStringLiteral(text))
+			return false;
+
+		var value = Regex.Replace(text, @"https?://[^\s)\]>""']+", " ", RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"\b(?:param|return|returns)\b:?", " ", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		value = Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+		var words = Regex.Matches(value, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 1
+				&& !Regex.IsMatch(word, @"^[A-Z]{2,}$", RegexOptions.CultureInvariant)
+				&& !_allowedInvariantCodeOutputWords.Contains(word))
+			.ToArray();
+
+		if (words.Length < 2)
+			return false;
+
+		var commonWords = words.Count(IsCommonEnglishMarkdownWord);
+		var translatableWords = words.Count(IsLikelyEnglishCodeStringLiteralWord);
+
+		if (words.Length <= 4)
+			return translatableWords >= 2 && (commonWords > 0 || words.Any(IsShortEnglishCodeStringLiteralMarkerWord));
+
+		return commonWords >= 1
+			&& translatableWords >= 4
+			&& (double)translatableWords / words.Length >= 0.35;
+	}
+
+	private static bool IsLikelyEnglishCodeStringLiteralWord(string word)
+		=> IsCommonEnglishMarkdownWord(word)
+			|| _translatableEnglishCodeOutputWords.Contains(word)
+			|| word.Equals("called", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("change", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("changes", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("crossing", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("demonstrating", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("diagram", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("element", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("executes", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("finished", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("incoming", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("loading", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("logs", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("persistent", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("random", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("resets", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("sample", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("saves", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("saving", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("settings", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("starts", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("stops", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("strategy", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("usage", StringComparison.OrdinalIgnoreCase);
+
+	private static bool IsShortEnglishCodeStringLiteralMarkerWord(string word)
+		=> word.Equals("created", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("custom", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("my", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("pattern", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("profit", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("required", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("special", StringComparison.OrdinalIgnoreCase);
 
 	private static bool IsAllowedInvariantCodeStringLiteral(string text)
 	{

@@ -1,4 +1,4 @@
-# Patrón Hanging Man
+﻿# Patrón Hanging Man
 
 Hanging Man es un patrón de velas de reversión bajista que se forma en una tendencia alcista. La vela tiene un cuerpo pequeño en la parte superior y una larga sombra inferior, con la sombra superior ausente o muy corta. La forma de la vela se parece a la figura de una persona con piernas colgantes, de ahí el nombre.
 
@@ -10,7 +10,7 @@ Hanging Man es un patrón de velas de reversión bajista que se forma en una ten
 - Sin sombra superior o con una muy corta (TS == 0).
 - Se forma en una tendencia alcista.
 
-![Hanging Man Pattern](../../../images/hangingmanpattern.png)
+![Patrón de hombre colgado](../../../images/hangingmanpattern.png)
 
 ### Interpretación
 

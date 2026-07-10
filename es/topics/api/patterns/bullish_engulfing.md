@@ -1,4 +1,4 @@
-# Patrón Bullish Engulfing
+﻿# Patrón Bullish Engulfing
 
 Bullish Engulfing es un potente patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
 
@@ -11,7 +11,7 @@ Bullish Engulfing es un potente patrón de velas de reversión alcista compuesto
 - El cuerpo de la segunda vela envuelve completamente el cuerpo de la primera vela.
 - Se forma en una tendencia bajista.
 
-![Bullish Engulfing Pattern](../../../images/bullishengulfingpattern.png)
+![Patrón envolvente alcista](../../../images/bullishengulfingpattern.png)
 
 ### Interpretación
 

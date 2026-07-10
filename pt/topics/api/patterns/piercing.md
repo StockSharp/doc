@@ -1,4 +1,4 @@
-# Padrão Piercing
+﻿# Padrão Piercing
 
 Piercing é um padrão de velas de reversão bullish composto por duas velas que se forma numa tendência descendente. A primeira vela é preta (bearish), seguida por uma vela branca (bullish) que abre abaixo do mínimo da vela anterior e fecha acima do ponto médio do corpo da vela anterior.
 
@@ -9,7 +9,7 @@ Piercing é um padrão de velas de reversão bullish composto por duas velas que
 - O preço de fecho da segunda vela penetra profundamente no corpo da primeira vela, fechando acima do ponto médio da primeira vela (C > (pB / 2 + pC)).
 - Forma-se numa tendência descendente.
 
-![Piercing Pattern](../../../images/piercingpattern.png)
+![Padrão piercing](../../../images/piercingpattern.png)
 
 ### Interpretação
 

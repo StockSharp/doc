@@ -1,4 +1,4 @@
-# Padrão Gravestone
+﻿# Padrão Gravestone
 
 Gravestone é um padrão de velas caracterizado por preços de abertura e fecho iguais, uma sombra superior longa e sem sombra inferior. A vela assemelha-se à forma de uma letra "T" invertida, o que lhe deu o nome "gravestone".
 
@@ -9,7 +9,7 @@ Gravestone é um padrão de velas caracterizado por preços de abertura e fecho 
 - Sem sombra inferior (BS == 0).
 - Semelhante a uma Shooting Star, mas com corpo neutro (doji).
 
-![Gravestone Pattern](../../../images/gravestonepattern.png)
+![Padrão gravestone](../../../images/gravestonepattern.png)
 
 ### Interpretação
 

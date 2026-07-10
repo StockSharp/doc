@@ -1,4 +1,4 @@
-# Patrón Black Marubozu
+﻿# Patrón Black Marubozu
 
 Black Marubozu es un patrón de velas bajista caracterizado por la ausencia de sombras en ambos extremos de la vela. El término "marubozu" proviene de la palabra japonesa que significa "calvo" o "afeitado", reflejando el aspecto de la vela sin sombras.
 
@@ -9,7 +9,7 @@ Black Marubozu es un patrón de velas bajista caracterizado por la ausencia de s
 - El precio de apertura es igual al máximo de la vela, y el precio de cierre es igual al mínimo de la vela.
 - Representa un fuerte movimiento bajista, donde los vendedores controlaron el precio durante todo el período.
 
-![Black Marubozu Pattern](../../../images/blackmarubozu.png)
+![Patrón Marubozu negro](../../../images/blackmarubozu.png)
 
 ### Interpretación
 

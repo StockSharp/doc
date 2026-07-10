@@ -36,7 +36,7 @@ Antes de leer los datos, se llama al método `Prepare()` para sincronizar el est
 
 ```csharp
 var source = new ReportSource();
-source.Name = "My strategy";
+source.Name = "Mi estrategia";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 

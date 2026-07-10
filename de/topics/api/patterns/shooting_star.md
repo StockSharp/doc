@@ -1,4 +1,4 @@
-# Shooting Star
+﻿# Shooting Star
 
 Shooting Star ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärtstrend entsteht. Die Candle hat einen kleinen Körper im unteren Bereich und einen langen oberen Schatten; der untere Schatten fehlt oder ist sehr kurz. Sie ähnelt einem Stern mit nach oben gerichtetem Schweif.
 
@@ -10,7 +10,7 @@ Shooting Star ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwär
 - Kein unterer Schatten oder nur ein sehr kurzer (BS == 0).
 - Entsteht in einem Aufwärtstrend.
 
-![Shooting Star Pattern](../../../images/shootingstarpattern.png)
+![Shooting-Star-Muster](../../../images/shootingstarpattern.png)
 
 ### Interpretation
 

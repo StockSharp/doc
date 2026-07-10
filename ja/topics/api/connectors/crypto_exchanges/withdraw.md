@@ -17,7 +17,7 @@ public void Withdraw()
 			WithdrawInfo = new WithdrawInfo
 			{
 				// 必要な詳細を入力します
-				Comment = "My profit",
+	Comment = "自分の利益",
 				//PaymentId = "45467dyjyttR8WBiTJXptyuTx4wbSerGZ5t45", //Riple
 				CryptoAddress = "16zK3M53JBGnjs9ajTBGBfkRqoHtm4E573",
 			}
@@ -29,4 +29,3 @@ public void Withdraw()
 ...
 							
 ```
-

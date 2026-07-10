@@ -1,4 +1,4 @@
-# Pinzettentief
+﻿# Pinzettentief
 
 Tweezer Bottom ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Tief haben und damit einer Pinzette mit zwei identischen Enden ähneln.
 
@@ -11,7 +11,7 @@ Tweezer Bottom ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, da
 - Beide Candles haben dasselbe oder sehr nahe beieinanderliegende Tiefs.
 - Entsteht in einem Abwärtstrend.
 
-![Tweezer Bottom Pattern](../../../images/tweezerbottompattern.png)
+![Tweezer-Bottom-Muster](../../../images/tweezerbottompattern.png)
 
 ### Interpretation
 

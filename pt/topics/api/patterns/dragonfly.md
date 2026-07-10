@@ -1,4 +1,4 @@
-# Padrão Dragonfly
+﻿# Padrão Dragonfly
 
 Dragonfly é um padrão de velas caracterizado por preços de abertura e fecho iguais, sem sombra superior e com uma sombra inferior longa. A vela assemelha-se à forma da letra "T", o que lhe deu o nome "dragonfly".
 
@@ -9,7 +9,7 @@ Dragonfly é um padrão de velas caracterizado por preços de abertura e fecho i
 - Sombra inferior longa.
 - Semelhante a um Hammer, mas com corpo neutro (doji).
 
-![Dragonfly Pattern](../../../images/dragonflypattern.png)
+![Padrão dragonfly](../../../images/dragonflypattern.png)
 
 ### Interpretação
 

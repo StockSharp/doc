@@ -1,4 +1,4 @@
-# Fallende Drei-Methoden-Formation
+﻿# Fallende Drei-Methoden-Formation
 
 Falling Three Methods ist ein bärisches Trendfortsetzungsmuster aus fünf Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt eine vorübergehende Konsolidierung oder Pause innerhalb eines bestehenden Abwärtstrends vor dessen Fortsetzung.
 
@@ -11,7 +11,7 @@ Falling Three Methods ist ein bärisches Trendfortsetzungsmuster aus fünf Candl
 - Die fünfte Candle durchbricht das Tief der ersten Candle und schließt tiefer.
 - Entsteht in einem Abwärtstrend.
 
-![Falling Three Methods Pattern](../../../images/fallingthreemethodspattern.png)
+![Falling-Three-Methods-Muster](../../../images/fallingthreemethodspattern.png)
 
 ### Interpretation
 

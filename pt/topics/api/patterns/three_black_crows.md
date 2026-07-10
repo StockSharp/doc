@@ -1,4 +1,4 @@
-# Padrão Three Black Crows
+﻿# Padrão Three Black Crows
 
 Three Black Crows é um poderoso padrão de velas de reversão baixista, composto por três velas consecutivas, que se forma numa tendência ascendente. Este padrão indica uma mudança decisiva de controlo dos compradores para os vendedores, sinalizando uma possível reversão de uma tendência ascendente.
 
@@ -10,7 +10,7 @@ Three Black Crows é um poderoso padrão de velas de reversão baixista, compost
 - Todas as três velas têm corpos relativamente longos e sombras curtas.
 - Forma-se numa tendência ascendente.
 
-![Three Black Crows Pattern](../../../images/threeblackcrowspattern.png)
+![Padrão três corvos negros](../../../images/threeblackcrowspattern.png)
 
 ### Interpretação
 

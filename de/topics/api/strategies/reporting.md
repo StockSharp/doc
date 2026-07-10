@@ -36,7 +36,7 @@ Vor dem Lesen der Daten wird die Methode `Prepare()` aufgerufen, um den internen
 
 ```csharp
 var source = new ReportSource();
-source.Name = "My strategy";
+source.Name = "Meine Strategie";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 

@@ -37,7 +37,7 @@
 var patternIndicator = new CandlePatternIndicator
 {
 	// 目的のパターンを設定します
-	Pattern = new ExpressionCandlePattern("My pattern", new[]
+	Pattern = new ExpressionCandlePattern("自分のパターン", new[]
 	{
 		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // 現在のローソク足は上昇しています
 		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // 前のローソク足は下降しています

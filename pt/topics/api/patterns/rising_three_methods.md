@@ -1,4 +1,4 @@
-# Padrão Rising Three Methods
+﻿# Padrão Rising Three Methods
 
 Rising Three Methods é um padrão de continuação de tendência bullish composto por cinco velas que se forma numa tendência ascendente. Este padrão mostra uma consolidação ou pausa temporária dentro de uma tendência ascendente existente antes da sua continuação.
 
@@ -11,7 +11,7 @@ Rising Three Methods é um padrão de continuação de tendência bullish compos
 - A quinta vela rompe o máximo da primeira vela e fecha mais acima.
 - Forma-se numa tendência ascendente.
 
-![Rising Three Methods Pattern](../../../images/risingthreemethodspattern.png)
+![Padrão três métodos de alta](../../../images/risingthreemethodspattern.png)
 
 ### Interpretação
 

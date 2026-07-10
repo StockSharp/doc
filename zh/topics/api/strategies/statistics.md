@@ -141,7 +141,7 @@ strategy.PositionChanged += () =>
 ```csharp
 [Display(
 	ResourceType = typeof(LocalizedStrings),
-	Name = "My Custom Indicator",
+	Name = "我的自定义指标",
 	Description = "我的自定义指标说明",
 	GroupName = "Custom Parameters",
 	Order = 1000

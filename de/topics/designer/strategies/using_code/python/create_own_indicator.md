@@ -1,4 +1,4 @@
-# Indikator erstellen
+﻿# Indikator erstellen
 
 Das Erstellen eines eigenen Indikators in der [API](../../../../api.md) wird im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md) beschrieben. Solche Indikatoren sind vollständig mit **Designer** kompatibel.
 
@@ -20,11 +20,11 @@ from indicator_extensions import *
 
 class empty_indicator(BaseIndicator):
 	"""
-	Sample indicator demonstrating saving and loading parameters.
+	Beispielindikator zum Speichern und Laden von Parametern.
 
-	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+	Dokumentation https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 
-	Changes input price on +20% or -20%.
+	Ändert den Eingangspreis um +20 % oder -20 %.
 	"""
 	def __init__(self):
 		super(empty_indicator, self).__init__()
@@ -53,10 +53,10 @@ class empty_indicator(BaseIndicator):
 
 	def OnProcess(self, input):
 		"""
-		Processes the incoming indicator value and applies a random change.
+		Verarbeitet den eingehenden Indikatorwert und wendet eine zufällige Änderung an.
 
-		:param input: The incoming indicator value.
-		:return: A new DecimalIndicatorValue after applying changes.
+		:param input: Der eingehende Indikatorwert.
+		:return: Ein neuer DecimalIndicatorValue nach Anwendung der Änderungen.
 		"""
 		# Bei jedem 10. Aufruf versuchen, einen leeren Wert zurückzugeben
 		if random.randint(0, 10) == 0:
@@ -79,18 +79,18 @@ class empty_indicator(BaseIndicator):
 
 	def Load(self, storage):
 		"""
-		Loads the indicator parameters from persistent storage.
+		Lädt die Indikatorparameter aus dem persistenten Speicher.
 
-		:param storage: The settings storage to load from.
+		:param storage: Der Einstellungsspeicher, aus dem geladen wird.
 		"""
 		super(empty_indicator, self).Load(storage)
 		self.Change = storage.GetValue("Change", self.Change)
 
 	def Save(self, storage):
 		"""
-		Saves the indicator parameters to persistent storage.
+		Speichert die Indikatorparameter im persistenten Speicher.
 
-		:param storage: The settings storage to save to.
+		:param storage: Der Einstellungsspeicher, in den gespeichert wird.
 		"""
 		super(empty_indicator, self).Save(storage)
 		storage.SetValue("Change", self.Change)

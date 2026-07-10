@@ -1,4 +1,4 @@
-# Padrão Black Marubozu
+﻿# Padrão Black Marubozu
 
 Black Marubozu é um padrão de velas bearish caracterizado pela ausência de sombras em ambas as extremidades da vela. O termo "marubozu" vem da palavra japonesa que significa "careca" ou "rapado", refletindo a aparência da vela sem sombras.
 
@@ -9,7 +9,7 @@ Black Marubozu é um padrão de velas bearish caracterizado pela ausência de so
 - O preço de abertura é igual ao máximo da vela, e o preço de fecho é igual ao mínimo da vela.
 - Representa um forte movimento bearish, em que os vendedores controlaram o preço durante todo o período.
 
-![Black Marubozu Pattern](../../../images/blackmarubozu.png)
+![Padrão marubozu preto](../../../images/blackmarubozu.png)
 
 ### Interpretação
 

@@ -36,7 +36,7 @@ StockSharp 提供了一个用于策略交易结果的报表生成系统。该系
 
 ```csharp
 var source = new ReportSource();
-source.Name = "My strategy";
+source.Name = "我的策略";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 

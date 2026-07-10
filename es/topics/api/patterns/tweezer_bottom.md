@@ -1,4 +1,4 @@
-# Patrón Tweezer Bottom
+﻿# Patrón Tweezer Bottom
 
 Tweezer Bottom es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. Una característica del patrón es que ambas velas tienen el mismo mínimo o casi el mismo, pareciéndose a unas pinzas con dos extremos idénticos.
 
@@ -11,7 +11,7 @@ Tweezer Bottom es un patrón de velas de reversión alcista compuesto por dos ve
 - Ambas velas tienen mínimos iguales o muy cercanos.
 - Se forma en una tendencia bajista.
 
-![Tweezer Bottom Pattern](../../../images/tweezerbottompattern.png)
+![Patrón de pinzas inferiores](../../../images/tweezerbottompattern.png)
 
 ### Interpretación
 

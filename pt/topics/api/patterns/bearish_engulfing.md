@@ -1,4 +1,4 @@
-# Padrão Bearish Engulfing
+﻿# Padrão Bearish Engulfing
 
 Bearish Engulfing é um poderoso padrão de velas de reversão bearish composto por duas velas que se forma numa tendência ascendente. A primeira vela é branca (bullish), seguida por uma vela preta (bearish), cujo corpo engloba completamente (cobre) o corpo da vela anterior.
 
@@ -11,7 +11,7 @@ Bearish Engulfing é um poderoso padrão de velas de reversão bearish composto 
 - O corpo da segunda vela engloba completamente o corpo da primeira vela.
 - Forma-se numa tendência ascendente.
 
-![Bearish Engulfing Pattern](../../../images/bearishengulfingpattern.png)
+![Padrão de engolfo de baixa](../../../images/bearishengulfingpattern.png)
 
 ### Interpretação
 

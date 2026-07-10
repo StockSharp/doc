@@ -1,4 +1,4 @@
-# Abendstern
+﻿# Abendstern
 
 Evening Star ist ein bärisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt den Übergang von bullischer zu bärischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
 
@@ -9,7 +9,7 @@ Evening Star ist ein bärisches Umkehr-Candlestick-Muster aus drei Candles, das 
 - Die dritte Candle ist schwarz (bärisch), mit Eröffnungskurs oberhalb des Schlusskurses und großem Körper ((O > C) && (B > pB * 2)); sie schließt tief innerhalb des Körpers der ersten Candle.
 - Entsteht in einem Aufwärtstrend.
 
-![Evening Star Pattern](../../../images/eveningstarpattern.png)
+![Evening-Star-Muster](../../../images/eveningstarpattern.png)
 
 ### Interpretation
 

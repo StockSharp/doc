@@ -1,4 +1,4 @@
-# Gravestone-Doji
+﻿# Gravestone-Doji
 
 Gravestone ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlusskurse, einen langen oberen Schatten und keinen unteren Schatten gekennzeichnet ist. Die Candle ähnelt der Form eines umgedrehten Buchstabens "T", woraus der Name "Gravestone" abgeleitet wurde.
 
@@ -9,7 +9,7 @@ Gravestone ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlus
 - Kein unterer Schatten (BS == 0).
 - Ähnlich wie ein Shooting Star, jedoch mit neutralem Körper (Doji).
 
-![Gravestone Pattern](../../../images/gravestonepattern.png)
+![Gravestone-Doji-Muster](../../../images/gravestonepattern.png)
 
 ### Interpretation
 

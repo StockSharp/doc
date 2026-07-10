@@ -123,12 +123,12 @@ await provider.InitAsync(CancellationToken.None);
 // 新しいパターン作成イベントを購読
 provider.PatternCreated += pattern =>
 {
-    Console.WriteLine($"Pattern created: {pattern.Name}");
+    Console.WriteLine($"パターン作成: {pattern.Name}");
 };
 
 // 複合パターンを作成して保存
 var myPattern = new ComplexCandlePattern(
-    "My Pattern",
+    "自分のパターン",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Hammer,
@@ -139,7 +139,7 @@ var myPattern = new ComplexCandlePattern(
 provider.Save(myPattern);
 
 // 名前でパターンを検索
-if (provider.TryFind("My Pattern", out var found))
+if (provider.TryFind("自分のパターン", out var found))
 {
     Console.WriteLine($"見つかりました: {found.Name}, ローソク足数: {found.CandlesCount}");
 }

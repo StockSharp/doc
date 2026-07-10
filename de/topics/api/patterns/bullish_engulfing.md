@@ -1,4 +1,4 @@
-# Bullisches Engulfing
+﻿# Bullisches Engulfing
 
 Bullish Engulfing ist ein starkes bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
 
@@ -11,7 +11,7 @@ Bullish Engulfing ist ein starkes bullisches Umkehr-Candlestick-Muster aus zwei 
 - Der Körper der zweiten Candle umschließt den Körper der ersten Candle vollständig.
 - Entsteht in einem Abwärtstrend.
 
-![Bullish Engulfing Pattern](../../../images/bullishengulfingpattern.png)
+![Bullisches Engulfing-Muster](../../../images/bullishengulfingpattern.png)
 
 ### Interpretation
 

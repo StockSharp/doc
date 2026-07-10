@@ -1,4 +1,4 @@
-# Patrón Bullish Harami
+﻿# Patrón Bullish Harami
 
 Bullish Harami es un patrón de velas de reversión compuesto por dos velas que se forma en una tendencia bajista. El término "harami" proviene de la palabra japonesa que significa "embarazo", ya que la vela pequeña (hijo) está contenida dentro de la vela grande (madre).
 
@@ -9,7 +9,7 @@ Bullish Harami es un patrón de velas de reversión compuesto por dos velas que 
 - El cuerpo de la segunda vela está completamente contenido dentro del cuerpo de la primera vela (O > pC) y (C < pO).
 - Se forma en una tendencia bajista.
 
-![Bullish Harami Pattern](../../../images/bullishharamipattern.png)
+![Patrón Harami alcista](../../../images/bullishharamipattern.png)
 
 ### Interpretación
 

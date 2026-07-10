@@ -208,8 +208,8 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-				LogInfo($"Regra WhenCandlesStarted and WhenTotalVolumeMore vela={candle1}");
-				LogInfo($"Regra WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+	LogInfo($"Regra WhenCandlesStarted e WhenTotalVolumeMore vela={candle1}");
+	LogInfo($"Regra WhenCandlesStarted e WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);
 

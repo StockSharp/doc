@@ -1,4 +1,4 @@
-# Dragonfly-Doji
+﻿# Dragonfly-Doji
 
 Dragonfly ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlusskurse, keinen oberen Schatten und einen langen unteren Schatten gekennzeichnet ist. Die Candle ähnelt der Form des Buchstabens "T", woraus der Name "Dragonfly" abgeleitet wurde.
 
@@ -9,7 +9,7 @@ Dragonfly ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schluss
 - Langer unterer Schatten.
 - Ähnlich wie ein Hammer, jedoch mit neutralem Körper (Doji).
 
-![Dragonfly Pattern](../../../images/dragonflypattern.png)
+![Dragonfly-Muster](../../../images/dragonflypattern.png)
 
 ### Interpretation
 

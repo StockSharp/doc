@@ -1,4 +1,4 @@
-# Weißer Marubozu
+﻿# Weißer Marubozu
 
 White Marubozu ist ein bullisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Candle gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Candle ohne Schatten beschreibt.
 
@@ -9,7 +9,7 @@ White Marubozu ist ein bullisches Candlestick-Muster, das durch das Fehlen von S
 - Der Eröffnungskurs entspricht dem Tief der Candle, und der Schlusskurs entspricht dem Hoch der Candle.
 - Stellt eine starke bullische Bewegung dar, bei der Käufer während der gesamten Periode den Preis kontrollierten.
 
-![White Marubozu Pattern](../../../images/whitemarubozu.png)
+![Weißes Marubozu-Muster](../../../images/whitemarubozu.png)
 
 ### Interpretation
 

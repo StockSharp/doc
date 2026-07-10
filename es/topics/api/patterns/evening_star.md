@@ -1,4 +1,4 @@
-# Patrón Evening Star
+﻿# Patrón Evening Star
 
 Evening Star es un patrón de velas de reversión bajista compuesto por tres velas que se forma en una tendencia alcista. Este patrón muestra una transición de sentimiento alcista a bajista mediante un período de incertidumbre o consolidación.
 
@@ -9,7 +9,7 @@ Evening Star es un patrón de velas de reversión bajista compuesto por tres vel
 - La tercera vela es negra (bajista) con precio de apertura mayor que el de cierre y un cuerpo grande ((O > C) && (B > pB * 2)), que cierra profundamente dentro del cuerpo de la primera vela.
 - Se forma en una tendencia alcista.
 
-![Evening Star Pattern](../../../images/eveningstarpattern.png)
+![Patrón de estrella vespertina](../../../images/eveningstarpattern.png)
 
 ### Interpretación
 

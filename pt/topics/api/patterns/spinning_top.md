@@ -1,4 +1,4 @@
-# Padrão Spinning Top
+﻿# Padrão Spinning Top
 
 Spinning Top é um padrão de velas caracterizado por um corpo pequeno da vela e sombras superior e inferior longas, de comprimento aproximadamente igual. Este padrão indica indecisão do mercado e uma disputa entre compradores e vendedores.
 
@@ -9,7 +9,7 @@ Spinning Top é um padrão de velas caracterizado por um corpo pequeno da vela e
 - Indica equilíbrio entre compradores e vendedores.
 - Reflete indecisão do mercado e uma potencial mudança de tendência.
 
-![Spinning Top Pattern](../../../images/spinningtop.png)
+![Padrão pião](../../../images/spinningtop.png)
 
 ### Interpretação
 

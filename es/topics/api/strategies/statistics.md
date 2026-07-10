@@ -141,7 +141,7 @@ A continuación se muestra un ejemplo simple de un parámetro estadístico perso
 ```csharp
 [Display(
 	ResourceType = typeof(LocalizedStrings),
-	Name = "My Custom Indicator",
+	Name = "Mi indicador personalizado",
 	Description = "Descripción de mi indicador personalizado",
 	GroupName = "Custom Parameters",
 	Order = 1000

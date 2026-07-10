@@ -1,4 +1,4 @@
-# Padrão White Marubozu
+﻿# Padrão White Marubozu
 
 White Marubozu é um padrão de velas altista caracterizado pela ausência de sombras em ambas as extremidades da vela. O termo "marubozu" vem da palavra japonesa que significa "careca" ou "rapado", refletindo a aparência da vela sem sombras.
 
@@ -9,7 +9,7 @@ White Marubozu é um padrão de velas altista caracterizado pela ausência de so
 - O preço de abertura é igual ao mínimo da vela e o preço de fecho é igual ao máximo da vela.
 - Representa um forte movimento altista, em que os compradores controlaram o preço durante todo o período.
 
-![White Marubozu Pattern](../../../images/whitemarubozu.png)
+![Padrão marubozu branco](../../../images/whitemarubozu.png)
 
 ### Interpretação
 

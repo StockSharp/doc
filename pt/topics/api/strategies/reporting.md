@@ -36,7 +36,7 @@ Antes de ler os dados, o método `Prepare()` é chamado para sincronizar o estad
 
 ```csharp
 var source = new ReportSource();
-source.Name = "My strategy";
+source.Name = "Minha estratégia";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 

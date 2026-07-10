@@ -41,7 +41,7 @@ Ein flexiblerer Ansatz besteht darin, Erstellung und Registrierung von Orders zu
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // Zusätzliche Order-Einstellungen
-order.Comment = "My special order";
+order.Comment = "Meine spezielle Order";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // Order registrieren

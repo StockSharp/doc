@@ -1,4 +1,4 @@
-# Padrão Three White Soldiers
+﻿# Padrão Three White Soldiers
 
 Three White Soldiers é um poderoso padrão de velas de reversão altista, composto por três velas consecutivas, que se forma numa tendência descendente. Este padrão indica uma mudança decisiva de controlo dos vendedores para os compradores, sinalizando uma possível reversão de uma tendência descendente.
 
@@ -10,7 +10,7 @@ Three White Soldiers é um poderoso padrão de velas de reversão altista, compo
 - Todas as três velas têm corpos relativamente longos e sombras curtas.
 - Forma-se numa tendência descendente.
 
-![Three White Soldiers Pattern](../../../images/threewhitesoldierspattern.png)
+![Padrão três soldados brancos](../../../images/threewhitesoldierspattern.png)
 
 ### Interpretação
 

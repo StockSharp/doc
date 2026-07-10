@@ -1,4 +1,4 @@
-# Padrão Shooting Star
+﻿# Padrão Shooting Star
 
 Shooting Star é um padrão de velas de reversão baixista que se forma numa tendência ascendente. A vela tem um corpo pequeno na parte inferior e uma longa sombra superior, com a sombra inferior ausente ou muito curta. Assemelha-se a uma estrela com uma cauda apontada para cima.
 
@@ -10,7 +10,7 @@ Shooting Star é um padrão de velas de reversão baixista que se forma numa ten
 - Sem sombra inferior ou com uma muito curta (BS == 0).
 - Forma-se numa tendência ascendente.
 
-![Shooting Star Pattern](../../../images/shootingstarpattern.png)
+![Padrão estrela cadente](../../../images/shootingstarpattern.png)
 
 ### Interpretação
 

@@ -1,4 +1,4 @@
-# Schwarzer Marubozu
+﻿# Schwarzer Marubozu
 
 Black Marubozu ist ein bärisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Candle gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Candle ohne Schatten beschreibt.
 
@@ -9,7 +9,7 @@ Black Marubozu ist ein bärisches Candlestick-Muster, das durch das Fehlen von S
 - Der Eröffnungskurs entspricht dem Hoch der Candle, und der Schlusskurs entspricht dem Tief der Candle.
 - Stellt eine starke bärische Bewegung dar, bei der Verkäufer während der gesamten Periode den Preis kontrollierten.
 
-![Black Marubozu Pattern](../../../images/blackmarubozu.png)
+![Schwarzes Marubozu-Muster](../../../images/blackmarubozu.png)
 
 ### Interpretation
 

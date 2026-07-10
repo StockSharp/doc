@@ -36,7 +36,7 @@ StockSharp は、ストラテジーの取引結果に対するレポート生成
 
 ```csharp
 var source = new ReportSource();
-source.Name = "My strategy";
+source.Name = "自分の戦略";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 

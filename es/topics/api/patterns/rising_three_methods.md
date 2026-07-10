@@ -1,4 +1,4 @@
-# Patrón Rising Three Methods
+﻿# Patrón Rising Three Methods
 
 Rising Three Methods es un patrón alcista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia alcista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia alcista existente antes de su continuación.
 
@@ -11,7 +11,7 @@ Rising Three Methods es un patrón alcista de continuación de tendencia compues
 - La quinta vela rompe el máximo de la primera vela y cierra más arriba.
 - Se forma en una tendencia alcista.
 
-![Rising Three Methods Pattern](../../../images/risingthreemethodspattern.png)
+![Patrón de tres métodos ascendentes](../../../images/risingthreemethodspattern.png)
 
 ### Interpretación
 

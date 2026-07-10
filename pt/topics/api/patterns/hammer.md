@@ -1,4 +1,4 @@
-# Padrão Hammer
+﻿# Padrão Hammer
 
 Hammer é um padrão de velas bullish que se forma durante uma tendência descendente. A vela tem um corpo pequeno na parte superior e uma sombra inferior longa, com a sombra superior ausente ou muito curta. O nome vem da semelhança da vela com um martelo.
 
@@ -10,7 +10,7 @@ Hammer é um padrão de velas bullish que se forma durante uma tendência descen
 - Sem sombra superior ou com uma sombra muito curta.
 - Forma-se numa tendência descendente.
 
-![Hammer Pattern](../../../images/hammerpattern.png)
+![Padrão martelo](../../../images/hammerpattern.png)
 
 ### Interpretação
 

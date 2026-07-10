@@ -37,7 +37,7 @@
 var patternIndicator = new CandlePatternIndicator
 {
 	// 设置所需形态
-	Pattern = new ExpressionCandlePattern("My pattern", new[]
+	Pattern = new ExpressionCandlePattern("我的形态", new[]
 	{
 		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Current candle is rising
 		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Previous candle is falling

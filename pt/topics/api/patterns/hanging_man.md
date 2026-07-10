@@ -1,4 +1,4 @@
-# Padrão Hanging Man
+﻿# Padrão Hanging Man
 
 Hanging Man é um padrão de velas de reversão bearish que se forma numa tendência ascendente. A vela tem um corpo pequeno na parte superior e uma sombra inferior longa, com a sombra superior ausente ou muito curta. A forma da vela assemelha-se à figura de um homem com as pernas penduradas, daí o nome.
 
@@ -10,7 +10,7 @@ Hanging Man é um padrão de velas de reversão bearish que se forma numa tendê
 - Sem sombra superior ou com uma sombra muito curta (TS == 0).
 - Forma-se numa tendência ascendente.
 
-![Hanging Man Pattern](../../../images/hangingmanpattern.png)
+![Padrão homem enforcado](../../../images/hangingmanpattern.png)
 
 ### Interpretação
 

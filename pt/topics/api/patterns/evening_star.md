@@ -1,4 +1,4 @@
-# Padrão Evening Star
+﻿# Padrão Evening Star
 
 Evening Star é um padrão de velas de reversão bearish composto por três velas que se forma numa tendência ascendente. Este padrão mostra uma transição de sentimento bullish para bearish através de um período de incerteza ou consolidação.
 
@@ -9,7 +9,7 @@ Evening Star é um padrão de velas de reversão bearish composto por três vela
 - A terceira vela é preta (bearish), com preço de abertura superior ao preço de fecho e um corpo grande ((O > C) && (B > pB * 2)), que fecha profundamente dentro do corpo da primeira vela.
 - Forma-se numa tendência ascendente.
 
-![Evening Star Pattern](../../../images/eveningstarpattern.png)
+![Padrão estrela da tarde](../../../images/eveningstarpattern.png)
 
 ### Interpretação
 

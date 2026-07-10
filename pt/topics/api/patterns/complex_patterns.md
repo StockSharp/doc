@@ -123,12 +123,12 @@ await provider.InitAsync(CancellationToken.None);
 // Subscrever o evento de criação de novo padrão
 provider.PatternCreated += pattern =>
 {
-    Console.WriteLine($"Pattern created: {pattern.Name}");
+    Console.WriteLine($"Padrão criado: {pattern.Name}");
 };
 
 // Criar e guardar um padrão complexo
 var myPattern = new ComplexCandlePattern(
-    "My Pattern",
+    "Meu padrão",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Hammer,
@@ -139,7 +139,7 @@ var myPattern = new ComplexCandlePattern(
 provider.Save(myPattern);
 
 // Encontrar um padrão por nome
-if (provider.TryFind("My Pattern", out var found))
+if (provider.TryFind("Meu padrão", out var found))
 {
     Console.WriteLine($"Encontrado: {found.Name}, velas: {found.CandlesCount}");
 }

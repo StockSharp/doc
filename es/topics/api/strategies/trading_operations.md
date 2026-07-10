@@ -41,7 +41,7 @@ Un enfoque más flexible consiste en separar la creación y el registro de órde
 var order = CreateOrder(Sides.Buy, price, volume);
 
 // Ajustes adicionales de la orden
-order.Comment = "My special order";
+order.Comment = "Mi orden especial";
 order.TimeInForce = TimeInForce.MatchOrCancel;
 
 // Registrar la orden

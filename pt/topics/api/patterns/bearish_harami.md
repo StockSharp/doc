@@ -1,4 +1,4 @@
-# Padrão Bearish Harami
+﻿# Padrão Bearish Harami
 
 Bearish Harami é um padrão de velas de reversão composto por duas velas que se forma numa tendência ascendente. O termo "harami" vem da palavra japonesa que significa "gravidez", pois a vela pequena (filho) está contida dentro da vela grande (mãe).
 
@@ -9,7 +9,7 @@ Bearish Harami é um padrão de velas de reversão composto por duas velas que s
 - O corpo da segunda vela está completamente contido dentro do corpo da primeira vela (O < pC) e (C > pO).
 - Forma-se numa tendência ascendente.
 
-![Bearish Harami Pattern](../../../images/bearishharamipattern.png)
+![Padrão harami de baixa](../../../images/bearishharamipattern.png)
 
 ### Interpretação
 

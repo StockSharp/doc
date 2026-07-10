@@ -1,4 +1,4 @@
-# Patrón Three White Soldiers
+﻿# Patrón Three White Soldiers
 
 Three White Soldiers es un potente patrón de velas de reversión alcista compuesto por tres velas consecutivas que se forma en una tendencia bajista. Este patrón indica un cambio decisivo de control de vendedores a compradores, señalando una posible reversión de una tendencia bajista.
 
@@ -10,7 +10,7 @@ Three White Soldiers es un potente patrón de velas de reversión alcista compue
 - Las tres velas tienen cuerpos relativamente largos y sombras cortas.
 - Se forma en una tendencia bajista.
 
-![Three White Soldiers Pattern](../../../images/threewhitesoldierspattern.png)
+![Patrón de tres soldados blancos](../../../images/threewhitesoldierspattern.png)
 
 ### Interpretación
 

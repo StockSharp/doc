@@ -1,4 +1,4 @@
-# Spinning Top
+﻿# Spinning Top
 
 Spinning Top ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper sowie länge obere und untere Schatten von ungefähr gleicher Länge gekennzeichnet ist. Dieses Muster weist auf Unentschlossenheit im Markt und einen Kampf zwischen Käufern und Verkäufern hin.
 
@@ -9,7 +9,7 @@ Spinning Top ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper 
 - Weist auf ein Gleichgewicht zwischen Bullen und Bären hin.
 - Spiegelt Marktunsicherheit und eine mögliche Trendänderung wider.
 
-![Spinning Top Pattern](../../../images/spinningtop.png)
+![Spinning-Top-Muster](../../../images/spinningtop.png)
 
 ### Interpretation
 

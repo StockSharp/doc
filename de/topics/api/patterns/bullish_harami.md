@@ -1,4 +1,4 @@
-# Bullischer Harami
+﻿# Bullischer Harami
 
 Bullish Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Der Begriff "Harami" stammt aus dem Japanischen und bedeutet "Schwangerschaft", da die kleine Candle (Kind) im Körper der großen Candle (Mutter) enthalten ist.
 
@@ -9,7 +9,7 @@ Bullish Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem 
 - Der Körper der zweiten Candle liegt vollständig innerhalb des Körpers der ersten Candle (O > pC) und (C < pO).
 - Entsteht in einem Abwärtstrend.
 
-![Bullish Harami Pattern](../../../images/bullishharamipattern.png)
+![Bullisches Harami-Muster](../../../images/bullishharamipattern.png)
 
 ### Interpretation
 

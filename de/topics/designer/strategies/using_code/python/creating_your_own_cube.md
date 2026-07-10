@@ -1,4 +1,4 @@
-# Eigenen Würfel erstellen
+﻿# Eigenen Würfel erstellen
 
 Ähnlich wie beim Erstellen eines [Würfels aus einem Schema](../../using_visual_designer/composite_elements.md) können Sie einen eigenen Würfel auf Basis von Python-Code erstellen. Ein solcher Würfel ist funktionaler als ein aus einem Schema erstellter Würfel.
 
@@ -26,7 +26,7 @@ from designer_extensions import diagram_external
 # Benutzerdefinierte Diagrammelementklasse, die die Verwendung von Eingabe- und Ausgabesockets demonstriert
 class empty_diagram_element(DiagramExternalElement):
 	"""
-	Sample diagram element demonstrating input and output sockets usage.
+	Beispiel-Diagrammelement zur Demonstration der Verwendung von Eingabe- und Ausgabesockets.
 
 	https://doc.stocksharp.com/topics/designer/strategies/using_code/python/creating_your_own_cube.html
 	"""
@@ -50,17 +50,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output1 event.
+		Abonniert das Output1-Ereignis.
 
-		:param handler: A callable method to be invoked when Output1 is triggered.
+		:param handler: Eine aufrufbare Methode, die beim Auslösen von Output1 aufgerufen wird.
 		"""
 		self._output1_handlers.append(handler)
 
 	def remove_Output1(self, handler):
 		"""
-		Unsubscribe from the Output1 event.
+		Meldet das Output1-Ereignis ab.
 
-		:param handler: The callable method to be removed from the Output1 subscribers.
+		:param handler: Die aufrufbare Methode, die aus den Output1-Abonnenten entfernt wird.
 		"""
 		if handler in self._output1_handlers:
 			self._output1_handlers.remove(handler)
@@ -68,17 +68,17 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def add_Output2(self, handler: Action[Unit]):
 		"""
-		Subscribe to the Output2 event.
+		Abonniert das Output2-Ereignis.
 
-		:param handler: A callable method to be invoked when Output2 is triggered.
+		:param handler: Eine aufrufbare Methode, die beim Auslösen von Output2 aufgerufen wird.
 		"""
 		self._output2_handlers.append(handler)
 
 	def remove_Output2(self, handler):
 		"""
-		Unsubscribe from the Output2 event.
+		Meldet das Output2-Ereignis ab.
 
-		:param handler: The callable method to be removed from the Output2 subscribers.
+		:param handler: Die aufrufbare Methode, die aus den Output2-Abonnenten entfernt wird.
 		"""
 		if handler in self._output2_handlers:
 			self._output2_handlers.remove(handler)
@@ -94,11 +94,11 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
-		Input sockets are method parameters marked with the DiagramExternal attribute.
-		Processes a candle and a diff value, then invokes output events based on the logic.
+		Eingabesockets sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind.
+		Verarbeitet eine Kerze und einen diff-Wert und ruft anschließend gemäß der Logik Ausgabeereignisse auf.
 
-		:param candle: CandleMessage input representing a candlestick.
-		:param diff: Unit representing the difference value to be processed.
+		:param candle: CandleMessage-Eingabe, die eine Kerze darstellt.
+		:param diff: Unit-Wert, der den zu verarbeitenden Differenzwert darstellt.
 		"""
 		# Ergebnis als Summe aus Schlusskurs der Kerze und diff-Wert berechnen
 		res = candle.ClosePrice + diff
@@ -114,21 +114,21 @@ class empty_diagram_element(DiagramExternalElement):
 
 	def Start(self):
 		"""
-		Called when the diagram element starts. Add any pre-start logic here.
+		Wird aufgerufen, wenn das Diagrammelement startet. Fügen Sie hier Logik vor dem Start hinzu.
 		"""
 		super(empty_diagram_element, self).Start()
 		# Benutzerdefinierte Logik hinzufügen, die vor dem Start des Elements ausgeführt wird
 
 	def Stop(self):
 		"""
-		Called when the diagram element stops. Add any post-stop logic here.
+		Wird aufgerufen, wenn das Diagrammelement stoppt. Fügen Sie hier Logik nach dem Stop hinzu.
 		"""
 		super(empty_diagram_element, self).Stop()
 		# Benutzerdefinierte Logik hinzufügen, die nach dem Stop des Elements ausgeführt wird
 
 	def Reset(self):
 		"""
-		Called when the diagram element resets. Add any reset logic here.
+		Wird aufgerufen, wenn das Diagrammelement zurückgesetzt wird. Fügen Sie hier Reset-Logik hinzu.
 		"""
 		super(empty_diagram_element, self).Reset()
 		# Benutzerdefinierte Logik zum Zurücksetzen des internen Zustands des Elements hinzufügen
@@ -149,17 +149,17 @@ Ausgehende Sockets werden definiert, indem der Decorator @diagram_external auf e
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output1 event.
+	Abonniert das Output1-Ereignis.
 
-	:param handler: A callable method to be invoked when Output1 is triggered.
+	:param handler: Eine aufrufbare Methode, die beim Auslösen von Output1 aufgerufen wird.
 	"""
 	self._output1_handlers.append(handler)
 
 def remove_Output1(self, handler):
 	"""
-	Unsubscribe from the Output1 event.
+	Meldet das Output1-Ereignis ab.
 
-	:param handler: The callable method to be removed from the Output1 subscribers.
+	:param handler: Die aufrufbare Methode, die aus den Output1-Abonnenten entfernt wird.
 	"""
 	if handler in self._output1_handlers:
 		self._output1_handlers.remove(handler)
@@ -167,17 +167,17 @@ def remove_Output1(self, handler):
 @diagram_external
 def add_Output2(self, handler: Action[Unit]):
 	"""
-	Subscribe to the Output2 event.
+	Abonniert das Output2-Ereignis.
 
-	:param handler: A callable method to be invoked when Output2 is triggered.
+	:param handler: Eine aufrufbare Methode, die beim Auslösen von Output2 aufgerufen wird.
 	"""
 	self._output2_handlers.append(handler)
 
 def remove_Output2(self, handler):
 	"""
-	Unsubscribe from the Output2 event.
+	Meldet das Output2-Ereignis ab.
 
-	:param handler: The callable method to be removed from the Output2 subscribers.
+	:param handler: Die aufrufbare Methode, die aus den Output2-Abonnenten entfernt wird.
 	"""
 	if handler in self._output2_handlers:
 		self._output2_handlers.remove(handler)

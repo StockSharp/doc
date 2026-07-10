@@ -1,4 +1,4 @@
-# Patrón Piercing
+﻿# Patrón Piercing
 
 Piercing es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista) que abre por debajo del mínimo de la vela anterior y cierra por encima del punto medio del cuerpo de la vela anterior.
 
@@ -9,7 +9,7 @@ Piercing es un patrón de velas de reversión alcista compuesto por dos velas qu
 - El precio de cierre de la segunda vela penetra profundamente en el cuerpo de la primera vela, cerrando por encima del punto medio de la primera vela (C > (pB / 2 + pC)).
 - Se forma en una tendencia bajista.
 
-![Piercing Pattern](../../../images/piercingpattern.png)
+![Patrón piercing](../../../images/piercingpattern.png)
 
 ### Interpretación
 

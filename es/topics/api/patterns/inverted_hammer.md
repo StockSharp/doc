@@ -1,4 +1,4 @@
-# Patrón Inverted Hammer
+﻿# Patrón Inverted Hammer
 
 Inverted Hammer es un patrón de velas alcista que se forma durante una tendencia bajista. La vela tiene un cuerpo pequeño en la parte inferior y una larga sombra superior, con la sombra inferior ausente o muy corta. Se parece a un martillo invertido.
 
@@ -10,7 +10,7 @@ Inverted Hammer es un patrón de velas alcista que se forma durante una tendenci
 - Sin sombra inferior o con una muy corta.
 - Se forma en una tendencia bajista.
 
-![Inverted Hammer Pattern](../../../images/invertedhammer.png)
+![Patrón de martillo invertido](../../../images/invertedhammer.png)
 
 ### Interpretación
 

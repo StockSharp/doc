@@ -1,4 +1,4 @@
-# Padrão Bullish Harami
+﻿# Padrão Bullish Harami
 
 Bullish Harami é um padrão de velas de reversão composto por duas velas que se forma numa tendência descendente. O termo "harami" vem da palavra japonesa que significa "gravidez", pois a vela pequena (filho) está contida dentro da vela grande (mãe).
 
@@ -9,7 +9,7 @@ Bullish Harami é um padrão de velas de reversão composto por duas velas que s
 - O corpo da segunda vela está completamente contido dentro do corpo da primeira vela (O > pC) e (C < pO).
 - Forma-se numa tendência descendente.
 
-![Bullish Harami Pattern](../../../images/bullishharamipattern.png)
+![Padrão harami de alta](../../../images/bullishharamipattern.png)
 
 ### Interpretação
 

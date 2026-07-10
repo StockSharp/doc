@@ -37,7 +37,7 @@ Ao utilizar [S#](../api.md) (ou ao criar [estratégias a partir de código](../d
 var patternIndicator = new CandlePatternIndicator
 {
 	// Definir o padrão pretendido
-	Pattern = new ExpressionCandlePattern("My pattern", new[]
+	Pattern = new ExpressionCandlePattern("Meu padrão", new[]
 	{
 		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // A vela atual é ascendente
 		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // A vela anterior é descendente

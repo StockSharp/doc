@@ -1,4 +1,4 @@
-# Pinzettenhoch
+﻿# Pinzettenhoch
 
 Tweezer Top ist ein bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Hoch haben und damit einer Pinzette mit zwei identischen Enden ähneln.
 
@@ -10,7 +10,7 @@ Tweezer Top ist ein bärisches Umkehr-Candlestick-Muster aus zwei Candles, das i
 - Der Körper der zweiten Candle ist deutlich größer als der Körper der ersten Candle (B > (pB * 3)).
 - Entsteht in einem Aufwärtstrend.
 
-![Tweezer Top Pattern](../../../images/tweezertoppattern.png)
+![Tweezer-Top-Muster](../../../images/tweezertoppattern.png)
 
 ### Interpretation
 

@@ -1,4 +1,4 @@
-# Beispiel einer Python-Strategie
+﻿# Beispiel einer Python-Strategie
 
 Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-Strategie gezeigt, ähnlich wie im Beispiel der aus Würfeln zusammengesetzten SMA-Strategie im Abschnitt [Algorithmus aus Würfeln erstellen](../../using_visual_designer/first_strategy.md).
 
@@ -125,11 +125,11 @@ self.StartProtection(self.TakeValue, self.StopValue)
 ```python
 def OnProcess(self, candle, longValue, shortValue):
 	"""
-	Processes each finished candle, logs information, and executes trading logic on SMA crossing.
+	Verarbeitet jede abgeschlossene Kerze, protokolliert Informationen und führt Handelslogik bei einer SMA-Kreuzung aus.
 
-	:param candle: The processed candle message.
-		:param longValue: The current value of the long SMA.
-		:param shortValue: The current value of the short SMA.
+	:param candle: Die verarbeitete Kerzennachricht.
+		:param longValue: Der aktuelle Wert des langen SMA.
+		:param shortValue: Der aktuelle Wert des kurzen SMA.
 	"""
 	self.LogInfo("Neue Kerze {0}: {6} {1};{2};{3};{4}; Volumen {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! REQUIRED!! Creates a new instance of the strategy.
+	!! ERFORDERLICH!! Erstellt eine neue Instanz der Strategie.
 	"""
 	return sma_strategy()
 ```

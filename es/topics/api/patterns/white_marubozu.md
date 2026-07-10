@@ -1,4 +1,4 @@
-# Patrón White Marubozu
+﻿# Patrón White Marubozu
 
 White Marubozu es un patrón de velas alcista caracterizado por la ausencia de sombras en ambos extremos de la vela. El término "marubozu" proviene de la palabra japonesa que significa "calvo" o "afeitado", reflejando el aspecto de la vela sin sombras.
 
@@ -9,7 +9,7 @@ White Marubozu es un patrón de velas alcista caracterizado por la ausencia de s
 - El precio de apertura es igual al mínimo de la vela, y el precio de cierre es igual al máximo de la vela.
 - Representa un fuerte movimiento alcista, donde los compradores controlaron el precio durante todo el período.
 
-![White Marubozu Pattern](../../../images/whitemarubozu.png)
+![Patrón Marubozu blanco](../../../images/whitemarubozu.png)
 
 ### Interpretación
 

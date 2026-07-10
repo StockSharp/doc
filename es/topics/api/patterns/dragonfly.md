@@ -1,4 +1,4 @@
-# Patrón Dragonfly
+﻿# Patrón Dragonfly
 
 Dragonfly es un patrón de velas caracterizado por precios de apertura y cierre iguales, sin sombra superior y con una larga sombra inferior. La vela se parece a la forma de la letra "T", lo que le dio el nombre "dragonfly".
 
@@ -9,7 +9,7 @@ Dragonfly es un patrón de velas caracterizado por precios de apertura y cierre 
 - Larga sombra inferior.
 - Similar a Hammer, pero con cuerpo neutral (doji).
 
-![Dragonfly Pattern](../../../images/dragonflypattern.png)
+![Patrón de libélula](../../../images/dragonflypattern.png)
 
 ### Interpretación
 

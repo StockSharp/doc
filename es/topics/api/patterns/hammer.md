@@ -1,4 +1,4 @@
-# Patrón Hammer
+﻿# Patrón Hammer
 
 Hammer es un patrón de velas alcista que se forma durante una tendencia bajista. La vela tiene un cuerpo pequeño en la parte superior y una larga sombra inferior, con la sombra superior ausente o muy corta. El nombre proviene del parecido de la vela con un martillo.
 
@@ -10,7 +10,7 @@ Hammer es un patrón de velas alcista que se forma durante una tendencia bajista
 - Sin sombra superior o con una muy corta.
 - Se forma en una tendencia bajista.
 
-![Hammer Pattern](../../../images/hammerpattern.png)
+![Patrón de martillo](../../../images/hammerpattern.png)
 
 ### Interpretación
 

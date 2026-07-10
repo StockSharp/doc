@@ -1,4 +1,4 @@
-# Padrão Falling Three Methods
+﻿# Padrão Falling Three Methods
 
 Falling Three Methods é um padrão de continuação de tendência bearish composto por cinco velas que se forma numa tendência descendente. Este padrão mostra uma consolidação ou pausa temporária dentro de uma tendência descendente existente antes da sua continuação.
 
@@ -11,7 +11,7 @@ Falling Three Methods é um padrão de continuação de tendência bearish compo
 - A quinta vela rompe o mínimo da primeira vela e fecha mais abaixo.
 - Forma-se numa tendência descendente.
 
-![Falling Three Methods Pattern](../../../images/fallingthreemethodspattern.png)
+![Padrão três métodos de queda](../../../images/fallingthreemethodspattern.png)
 
 ### Interpretação
 

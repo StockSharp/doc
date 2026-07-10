@@ -1,4 +1,4 @@
-# Patrón Falling Three Methods
+﻿# Patrón Falling Three Methods
 
 Falling Three Methods es un patrón bajista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia bajista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia bajista existente antes de su continuación.
 
@@ -11,7 +11,7 @@ Falling Three Methods es un patrón bajista de continuación de tendencia compue
 - La quinta vela rompe el mínimo de la primera vela y cierra más abajo.
 - Se forma en una tendencia bajista.
 
-![Falling Three Methods Pattern](../../../images/fallingthreemethodspattern.png)
+![Patrón de tres métodos descendentes](../../../images/fallingthreemethodspattern.png)
 
 ### Interpretación
 

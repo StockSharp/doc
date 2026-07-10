@@ -1,4 +1,4 @@
-# Hanging Man
+﻿# Hanging Man
 
 Hanging Man ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärtstrend entsteht. Die Candle hat einen kleinen Körper im oberen Bereich und einen langen unteren Schatten; der obere Schatten fehlt oder ist sehr kurz. Die Form der Candle erinnert an eine Figur mit hängenden Beinen, daher der Name.
 
@@ -10,7 +10,7 @@ Hanging Man ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärts
 - Kein oberer Schatten oder nur ein sehr kurzer (TS == 0).
 - Entsteht in einem Aufwärtstrend.
 
-![Hanging Man Pattern](../../../images/hangingmanpattern.png)
+![Hanging-Man-Muster](../../../images/hangingmanpattern.png)
 
 ### Interpretation
 
