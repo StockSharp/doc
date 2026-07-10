@@ -241,6 +241,17 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Identifier (user)",
 	];
 
+	private static readonly string[] _knownEnglishNotificationFormLabels =
+	[
+		"Window",
+		"Melody",
+		"Music",
+		"Speech",
+		"Voice",
+		"Log",
+		"Disabled",
+	];
+
 	private static readonly HashSet<string> _cjkLanguageCodes = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"ja",
@@ -1256,6 +1267,41 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: notification data type list keeps English label '{label}'. Localize the label in the target language.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedNotificationFormListsDoNotKeepEnglishLabels()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/graphical_user_interface/notification_settings_window.md",
+			"topics/terminal/notifications.md",
+			"topics/terminal/notifications/notifications_setup.md",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+				{
+					if (!_knownEnglishNotificationFormLabels.Contains(label.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: notification form list keeps English label '{label.Text}'. Localize the label in the target language.");
 				}
 			}
 		}
@@ -4308,6 +4354,22 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				continue;
 
 			yield return (text, line);
+		}
+	}
+
+	private static IEnumerable<MarkdownTextLine> EnumerateMarkdownBoldTexts(string markdown)
+	{
+		var boldPattern = new Regex(@"\*\*(?<label>[^*`\r\n]+)\*\*", RegexOptions.CultureInvariant);
+
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+		{
+			foreach (Match match in boldPattern.Matches(text))
+			{
+				var label = NormalizeHumanText(match.Groups["label"].Value);
+
+				if (label.Length > 0)
+					yield return new MarkdownTextLine(label, line);
+			}
 		}
 	}
 

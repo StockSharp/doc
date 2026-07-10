@@ -8,10 +8,10 @@ Pode configurar notificações sobre alterações dos seguintes tipos de dados: 
 
 As notificações podem ter as seguintes formas:
 
-- **Window** - será apresentada uma pequena janela pop-up com uma mensagem no canto do ecrã.
-- **Melody** - a melodia será reproduzida.
+- **Janela** - será apresentada uma pequena janela pop-up com uma mensagem no canto do ecrã.
+- **Melodia** - a melodia será reproduzida.
 - **SMS** - será enviada uma mensagem por SMS.
 - **Email** - será enviada uma mensagem por email.
-- **Speech** - a mensagem será pronunciada pela voz gerada pelo computador.
-- **Log** - será enviada uma mensagem para a janela Logs do Designer.
-- **Disabled** - a notificação não será apresentada.
+- **Voz** - a mensagem será pronunciada pela voz gerada pelo computador.
+- **Registo** - será enviada uma mensagem para a janela Logs do Designer.
+- **Desativado** - a notificação não será apresentada.

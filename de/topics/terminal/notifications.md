@@ -11,7 +11,7 @@ Benachrichtigungen können folgende Formen haben:
 - **SMS** - die Nachricht wird per SMS gesendet.
 - **Email** - die Nachricht wird per E-Mail gesendet.
 - **Stimme** - die Nachricht wird von der computergenerierten Stimme vorgelesen.
-- **Log** - die Nachricht wird an die [Protokolle](user_interface/logs.md) gesendet.
+- **Protokoll** - die Nachricht wird an die [Protokolle](user_interface/logs.md) gesendet.
 - **Deaktiviert** - die Benachrichtigung wird nicht angezeigt.
 
 Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notifications/notification_panel.md)) auf die Schaltfläche ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen, auf die Schaltfläche ![Designer Alert Bell](../../images/designer_alert_bell.png).
