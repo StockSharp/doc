@@ -1,4 +1,4 @@
-- name: Installer
+- name: インストーラー
   href: installer.md
   items:
   - name: 動画
@@ -143,7 +143,7 @@
             href: designer/strategies/using_visual_designer/elements/common/random.md
           - name: フラグ
             href: designer/strategies/using_visual_designer/elements/common/flag.md
-          - name: Synchronization
+          - name: 同期
             href: designer/strategies/using_visual_designer/elements/common/sync.md
           - name: ストラテジーの P&L
             href: designer/strategies/using_visual_designer/elements/common/pnl_strategy.md

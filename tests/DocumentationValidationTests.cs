@@ -148,6 +148,53 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Usage",
 	};
 
+	private static readonly HashSet<string> _cjkLanguageCodes = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"ja",
+		"zh",
+	};
+
+	private static readonly HashSet<string> _translatableEnglishCjkTocNames = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"Backtesting",
+		"Chart",
+		"Debugging",
+		"Export",
+		"Import",
+		"Installer",
+		"Orders",
+		"Portfolios",
+		"Setup",
+		"Synchronization",
+		"Trades",
+		"Tutorial",
+		"Videos",
+	};
+
+	private static readonly HashSet<string> _allowedInvariantCjkTocNames = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"API",
+		"C#",
+		"CSV",
+		"Designer",
+		"DEX",
+		"F#",
+		"FIX Server",
+		"Hydra",
+		"Level 1",
+		"Level1",
+		"MATLAB",
+		"OAuth",
+		"Python",
+		"RemoteManager",
+		"RSS",
+		"Runner",
+		"Shell",
+		"Store",
+		"Terminal",
+		"UDP Dumper",
+	};
+
 	private static readonly (string Name, string Pattern)[] _knownEnglishCodeOutputPatterns =
 	[
 		("subscription lifecycle output", @"\bSubscription (?:started|completed|interrupted|online|switched to real-time mode)\b"),
@@ -668,6 +715,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 
 				ValidateTocStructureMatchesDefault(relative, localizedToc, expected, actual, errors, string.Empty);
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCjkTocNamesDoNotLookLikeEnglish()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages().Where(_cjkLanguageCodes.Contains))
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var tocPath in Directory.EnumerateFiles(langRoot, "toc.yml", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var entries = ReadTocEntries(tocPath, errors);
+				if (entries is null)
+					continue;
+
+				var flatEntries = FlattenTocEntries(entries).ToArray();
+				var nameLines = EnumerateTocNameLines(tocPath).ToArray();
+				var count = Math.Min(flatEntries.Length, nameLines.Length);
+
+				for (var i = 0; i < count; i++)
+				{
+					var name = nameLines[i].Name;
+					var href = flatEntries[i].Href;
+					if (!IsLikelyUntranslatedEnglishCjkTocName(name, href))
+						continue;
+
+					errors.Add($"{RelativeToRepo(tocPath)}:{nameLines[i].Line}: TOC name looks like untranslated English for {lang}. Localize it or add a deliberate allowlist entry. Name: {name}");
+				}
 			}
 		}
 
@@ -1673,6 +1754,58 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			ValidateTocStructureMatchesDefault(relative, localizedToc, expectedEntry.Items, actualEntry.Items, errors, itemPath);
 		}
+	}
+
+	private static IEnumerable<TocEntryText> FlattenTocEntries(IEnumerable<TocEntry> entries)
+	{
+		foreach (var entry in entries)
+		{
+			yield return new TocEntryText(entry.Name?.Trim() ?? string.Empty, entry.Href?.Trim() ?? string.Empty);
+
+			if (entry.Items is null)
+				continue;
+
+			foreach (var child in FlattenTocEntries(entry.Items))
+				yield return child;
+		}
+	}
+
+	private static IEnumerable<TocNameLine> EnumerateTocNameLines(string tocPath)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(tocPath));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var match = Regex.Match(text, @"^\s*-\s*name:\s*(?<value>.*?)\s*$", RegexOptions.CultureInvariant);
+			if (!match.Success)
+				continue;
+
+			var value = match.Groups["value"].Value.Trim();
+			if (value.Length >= 2
+				&& ((value[0] == '\'' && value[^1] == '\'')
+					|| (value[0] == '"' && value[^1] == '"')))
+			{
+				value = value[1..^1].Trim();
+			}
+
+			yield return new TocNameLine(value, line);
+		}
+	}
+
+	private static bool IsLikelyUntranslatedEnglishCjkTocName(string name, string href)
+	{
+		if (string.IsNullOrWhiteSpace(name) || _allowedInvariantCjkTocNames.Contains(name))
+			return false;
+
+		var normalizedHref = NormalizeStructureUrl(href);
+		if (normalizedHref.StartsWith("api/connectors/", StringComparison.OrdinalIgnoreCase)
+			|| normalizedHref.StartsWith("api/indicators/list_of_indicators/", StringComparison.OrdinalIgnoreCase))
+		{
+			return false;
+		}
+
+		return _translatableEnglishCjkTocNames.Contains(name);
 	}
 
 	private static string FormatTocPath(string path)
@@ -2784,7 +2917,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
 		report.AppendLine("- Code string literals: exact matches with English source string literals and literals that look like untranslated English.");
 		report.AppendLine("- Code comments: exact matches with English source comments and comments that look like untranslated English.");
-		report.AppendLine("- TOC structure and language string key parity are covered by dedicated tests.");
+		report.AppendLine("- TOC structure, CJK TOC name localization, and language string key parity are covered by dedicated tests.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
 		report.AppendLine("## Issues");
@@ -3936,6 +4069,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private readonly record struct PathResolution(bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
+
+	private readonly record struct TocEntryText(string Name, string Href);
+
+	private readonly record struct TocNameLine(string Name, int Line);
 
 	private readonly record struct MarkdownTarget(string Language, bool Exists, bool ExactCase, string FullPath, string ActualRelativePath);
 
