@@ -18,8 +18,8 @@ PnL システムは 3 階層の構造を持ちます。
 
 ```
 PnLManager
-  └── PortfolioPnLManager (by portfolio name)
-        └── PnLQueue (by SecurityId)
+  └── PortfolioPnLManager（ポートフォリオ名ごと）
+        └── PnLQueue（SecurityIdごと）
 ```
 
 - [PnLManager](xref:StockSharp.Algo.PnL.PnLManager) — 最上位レベルで、ポートフォリオマネージャーの辞書を管理します。

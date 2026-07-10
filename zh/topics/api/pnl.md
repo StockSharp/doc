@@ -18,8 +18,8 @@ PnL 系统有三级层次结构：
 
 ```
 PnLManager
-  └── PortfolioPnLManager (by portfolio name)
-        └── PnLQueue (by SecurityId)
+  └── PortfolioPnLManager（按投资组合名称）
+        └── PnLQueue（按 SecurityId）
 ```
 
 - [PnLManager](xref:StockSharp.Algo.PnL.PnLManager) — 顶层，管理一个组合经理字典。

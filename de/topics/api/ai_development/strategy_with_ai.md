@@ -170,9 +170,9 @@ Gehen Sie diese Checkliste durch:
 ### Schritt 4: Die KI bitten, Backtesting hinzuzufügen
 
 ```
-Add backtesting code for this strategy using historical data.
-Use HistoryEmulationConnector, load data from local storage,
-and output summary statistics (PnL, trade count, max drawdown).
+Füge Backtesting-Code für diese Strategie mit historischen Daten hinzu.
+Verwende HistoryEmulationConnector, lade Daten aus dem lokalen Speicher
+und gib Zusammenfassungsstatistiken aus (PnL, Anzahl der Trades, maximaler Drawdown).
 ```
 
 ## Beispiel-Prompts

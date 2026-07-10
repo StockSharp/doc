@@ -170,9 +170,9 @@ Repase esta lista de verificación:
 ### Paso 4: Pida a la IA que añada backtesting
 
 ```
-Add backtesting code for this strategy using historical data.
-Use HistoryEmulationConnector, load data from local storage,
-and output summary statistics (PnL, trade count, max drawdown).
+Agregue código de backtesting para esta estrategia usando datos históricos.
+Use HistoryEmulationConnector, cargue datos desde el almacenamiento local
+y muestre estadísticas resumidas (PnL, número de operaciones, reducción máxima).
 ```
 
 ## Ejemplos de prompts

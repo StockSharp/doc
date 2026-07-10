@@ -171,9 +171,9 @@ public class SmaCrossStrategy : Strategy
 ### 第 4 步：要求 AI 添加回测
 
 ```
-Add backtesting code for this strategy using historical data.
-Use HistoryEmulationConnector, load data from local storage,
-and output summary statistics (PnL, trade count, max drawdown).
+使用历史数据为此策略添加回测代码。
+使用 HistoryEmulationConnector，从本地存储加载数据，
+并输出汇总统计信息（PnL、交易次数、最大回撤）。
 ```
 
 ## 提示词示例
