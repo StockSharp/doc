@@ -15,7 +15,7 @@ import clr
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Diagram.Core")
 
-# Import necessary types from .NET and StockSharp
+# 导入 .NET 和 StockSharp 中的必要类型
 from System import Action
 from StockSharp.Messages import Unit
 from StockSharp.Messages import ICandleMessage

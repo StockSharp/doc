@@ -3719,7 +3719,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeCodeCommentForTranslationCheck(string comment)
 	{
-		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
@@ -3733,8 +3733,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (_knownEnglishCodeCommentLabels.Contains(text))
 			return text;
 
-		// Skip XML doc boilerplate, commented-out code, identifiers, and compiler/preprocessor directives.
-		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|[;{}=()]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+		// Skip XML doc boilerplate, commented-out code, identifiers, type notes, and compiler/preprocessor directives.
+		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=()]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		return text;
@@ -3742,7 +3742,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeCodeCommentForLikelyEnglishCheck(string comment)
 	{
-		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|StockSharp|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
@@ -3755,7 +3755,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		// Unlike exact-comment matching, keep parentheses: translated comments often use them
 		// for explanatory prose, and several previous misses were English comments in parentheses.
-		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|[;{}=]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=]|^(if|for|while|return|using|var|let|public|private|protected|class|new|await|yield|pragma|region|endregion|nullable|define|endif|else|elif)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		return text;

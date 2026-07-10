@@ -11,11 +11,11 @@
 ```python
 import clr
 
-# Add references to the required StockSharp assemblies
+# Добавляем ссылки на необходимые сборки StockSharp
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Diagram.Core")
 
-# Import necessary types from .NET and StockSharp
+# Импортируем необходимые типы из .NET и StockSharp
 from System import Action
 from StockSharp.Messages import Unit
 from StockSharp.Messages import ICandleMessage
