@@ -36,13 +36,13 @@ Nesta fórmula, cada preço é ponderado pela sua posição na série temporal e
 
 ## Interpretação
 
-- **Cruzamento da linha zero**: quando o CGO cruza a linha zero de baixo para cima, isto pode ser visto como um sinal bullish. O cruzamento de cima para baixo pode indicar um sinal bearish.
+- **Cruzamento da linha zero**: quando o CGO cruza a linha zero de baixo para cima, isto pode ser visto como um sinal altista. O cruzamento de cima para baixo pode indicar um sinal baixista.
 
 - **Extremos do indicador**: quando o CGO atinge extremos (máximos ou mínimos), isto pode indicar uma potencial reversão da tendência.
 
 - **Divergências**: 
-  - Divergência bullish: quando o preço forma um novo mínimo, mas o CGO não o confirma, formando um mínimo mais alto.
-  - Divergência bearish: quando o preço atinge um novo máximo, mas o CGO forma um máximo mais baixo.
+  - Divergência altista: quando o preço forma um novo mínimo, mas o CGO não o confirma, formando um mínimo mais alto.
+  - Divergência baixista: quando o preço atinge um novo máximo, mas o CGO forma um máximo mais baixo.
 
 - **Movimento do indicador**: um movimento rápido do CGO numa direção pode indicar o início de uma nova tendência. Se o indicador se mover lentamente ou oscilar em torno da linha zero, isto pode indicar consolidação do mercado.
 

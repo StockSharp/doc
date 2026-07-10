@@ -55,15 +55,15 @@ O Ehlers Fisher Transform pode ser interpretado da seguinte forma:
    - Valores abaixo de -2 indicam frequentemente condições de sobrevenda no mercado
 
 2. **Cruzamentos da linha zero**:
-   - O cruzamento da linha zero de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento da linha zero de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento da linha zero de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento da linha zero de cima para baixo pode ser visto como um sinal baixista
 
 3. **Reversão do indicador**:
    - A reversão do indicador a partir de valores extremos precede frequentemente a reversão do preço
 
 4. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o EFT forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o EFT forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o EFT forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o EFT forma um máximo mais baixo
 
 5. **Inclinação da linha do indicador**:
    - Inclinação acentuada para cima indica forte momentum ascendente

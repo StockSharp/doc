@@ -64,13 +64,13 @@ O indicador Momentum Pinball pode ser interpretado da seguinte forma:
    - Quando o MP atinge estes níveis, aumenta a probabilidade de uma reversão ou correção
 
 2. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o MP forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o MP forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o MP forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o MP forma um máximo mais baixo
    - As divergências antecedem frequentemente reversões significativas de tendência
 
 3. **Cruzamentos da linha central**:
-   - O cruzamento do MP do nível 0,5 de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento do MP do nível 0,5 de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento do MP do nível 0,5 de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento do MP do nível 0,5 de cima para baixo pode ser visto como um sinal baixista
 
 4. **Ressaltos dos extremos**:
    - A reversão do MP a partir de níveis de sobrecompra ou sobrevenda pode gerar sinais de entrada no mercado

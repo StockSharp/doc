@@ -54,12 +54,12 @@ O Pretty Good Oscillator pode ser interpretado da seguinte forma:
    - Valores extremos (+3/-3 e acima/abaixo) podem sinalizar sobrecompra/sobrevenda significativa e potencial reversão
 
 2. **Cruzamentos da linha zero**:
-   - O cruzamento do PGO da linha zero de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento do PGO da linha zero de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento do PGO da linha zero de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento do PGO da linha zero de cima para baixo pode ser visto como um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o PGO forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o PGO forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o PGO forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o PGO forma um máximo mais baixo
    - As divergências antecedem frequentemente reversões significativas de tendência
 
 4. **Confirmação da tendência**:
@@ -72,7 +72,7 @@ O Pretty Good Oscillator pode ser interpretado da seguinte forma:
 
 6. **Filtragem de sinais**:
    - O PGO pode ser usado para filtrar sinais de outros indicadores
-   - Por exemplo, considerar apenas sinais bullish quando o PGO é positivo, e apenas sinais bearish quando o PGO é negativo
+   - Por exemplo, considerar apenas sinais altista quando o PGO é positivo, e apenas sinais baixista quando o PGO é negativo
 
 7. **Saídas de posição**:
    - Valores extremos do PGO podem ser usados como sinais para realizar lucros

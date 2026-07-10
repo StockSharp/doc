@@ -49,8 +49,8 @@ On-Balance Volume pode ser interpretado da seguinte forma:
    - Se o OBV e o preço se movem em direções opostas, isto pode sinalizar uma potencial reversão de tendência
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o OBV forma um mínimo mais alto (sinal de compra)
-   - Divergência bearish: o preço forma um novo máximo, enquanto o OBV forma um máximo mais baixo (sinal de venda)
+   - Divergência altista: o preço forma um novo mínimo, enquanto o OBV forma um mínimo mais alto (sinal de compra)
+   - Divergência baixista: o preço forma um novo máximo, enquanto o OBV forma um máximo mais baixo (sinal de venda)
 
 4. **Breakouts do OBV**:
    - Um breakout do OBV de um nível de resistência ou suporte antecede frequentemente um breakout semelhante no gráfico do preço

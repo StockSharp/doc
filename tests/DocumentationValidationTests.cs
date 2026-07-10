@@ -2024,6 +2024,56 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishBullishBearishWords()
+	{
+		var errors = new List<string>();
+		var phrases = new[] { "bullish", "bearish" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English market direction word '{phrase}'. Localize it for the target language.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void PortugueseIndicatorDocsDoNotKeepEnglishRateOfChangePhrase()
+	{
+		var errors = new List<string>();
+		var indicatorRoot = Path.Combine(_repoRoot, "pt", "topics", "api", "indicators", "list_of_indicators");
+
+		foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!ContainsStandaloneText(text, "rate of change"))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Portuguese indicator documentation keeps English phrase 'rate of change'. Use 'taxa de variacao' or another localized wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

@@ -45,12 +45,12 @@ O Disparity Index pode ser interpretado da seguinte forma:
    - Valores negativos elevados (por exemplo, abaixo de -10%) podem indicar condições de sobrevenda no mercado
 
 2. **Cruzamentos da linha zero**:
-   - O cruzamento de baixo para cima (de valores negativos para positivos) indica que o preço cruzou a sua média móvel de baixo para cima, o que pode ser visto como um sinal bullish
-   - O cruzamento de cima para baixo (de valores positivos para negativos) indica que o preço cruzou a sua média móvel de cima para baixo, o que pode ser visto como um sinal bearish
+   - O cruzamento de baixo para cima (de valores negativos para positivos) indica que o preço cruzou a sua média móvel de baixo para cima, o que pode ser visto como um sinal altista
+   - O cruzamento de cima para baixo (de valores positivos para negativos) indica que o preço cruzou a sua média móvel de cima para baixo, o que pode ser visto como um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço atinge um novo mínimo, mas o DPI forma um mínimo mais alto
-   - Divergência bearish: o preço atinge um novo máximo, mas o DPI forma um máximo mais baixo
+   - Divergência altista: o preço atinge um novo mínimo, mas o DPI forma um mínimo mais alto
+   - Divergência baixista: o preço atinge um novo máximo, mas o DPI forma um máximo mais baixo
 
 4. **Análise de tendência**:
    - Valores consistentemente positivos de DPI indicam uma forte tendência ascendente

@@ -42,18 +42,18 @@ A Psychological Line pode ser interpretada da seguinte forma:
    - Valores extremos precedem frequentemente inversões de tendência
 
 2. **Linha central (50)**:
-   - Cruzar o nível 50 de baixo para cima pode ser visto como um sinal bullish
-   - Cruzar o nível 50 de cima para baixo pode ser visto como um sinal bearish
+   - Cruzar o nível 50 de baixo para cima pode ser visto como um sinal altista
+   - Cruzar o nível 50 de cima para baixo pode ser visto como um sinal baixista
    - Movimento sustentado acima de 50 indica domínio dos compradores
    - Movimento sustentado abaixo de 50 indica domínio dos vendedores
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o PSY forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o PSY forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o PSY forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o PSY forma um máximo mais baixo
 
 4. **Ressaltos a partir de níveis extremos**:
-   - Uma inversão do PSY a partir da zona de sobrecompra pode sinalizar uma potencial inversão bearish
-   - Uma inversão do PSY a partir da zona de sobrevenda pode sinalizar uma potencial inversão bullish
+   - Uma inversão do PSY a partir da zona de sobrecompra pode sinalizar uma potencial inversão baixista
+   - Uma inversão do PSY a partir da zona de sobrevenda pode sinalizar uma potencial inversão altista
 
 5. **Análise de tendência**:
    - Numa tendência ascendente forte, o PSY permanece frequentemente acima de 50, com ressaltos periódicos a partir da zona de sobrecompra

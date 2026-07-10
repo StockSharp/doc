@@ -60,20 +60,20 @@ Onde:
 O Kase Peak Oscillator pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da Linha Zero**:
-   - O cruzamento de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento de cima para baixo pode ser visto como um sinal baixista
 
 2. **Valores Extremos**:
    - Valores positivos elevados podem indicar condições de sobrecompra do mercado e uma potencial inversão descendente
    - Valores negativos elevados podem indicar condições de sobrevenda do mercado e uma potencial inversão ascendente
 
 3. **Divergências**:
-   - Divergência bullish (o preço forma um novo mínimo, enquanto o KPO forma um mínimo mais alto) pode sinalizar uma próxima inversão ascendente
-   - Divergência bearish (o preço forma um novo máximo, enquanto o KPO forma um máximo mais baixo) pode sinalizar uma próxima inversão descendente
+   - Divergência altista (o preço forma um novo mínimo, enquanto o KPO forma um mínimo mais alto) pode sinalizar uma próxima inversão ascendente
+   - Divergência baixista (o preço forma um novo máximo, enquanto o KPO forma um máximo mais baixo) pode sinalizar uma próxima inversão descendente
 
 4. **Cruzamentos dos Componentes**:
-   - Quando o momentum de curto prazo cruza o momentum de longo prazo de baixo para cima, pode ser visto como um sinal bullish
-   - Quando o momentum de curto prazo cruza o momentum de longo prazo de cima para baixo, pode ser visto como um sinal bearish
+   - Quando o momentum de curto prazo cruza o momentum de longo prazo de baixo para cima, pode ser visto como um sinal altista
+   - Quando o momentum de curto prazo cruza o momentum de longo prazo de cima para baixo, pode ser visto como um sinal baixista
 
 5. **Aceleração e Desaceleração**:
    - O aumento da inclinação do KPO indica aceleração do momentum

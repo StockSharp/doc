@@ -50,8 +50,8 @@ Onde:
 O indicador DSP oscila em torno da linha zero e pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - Quando o DSP cruza a linha zero de baixo para cima, pode ser visto como um sinal bullish
-   - Quando o DSP cruza a linha zero de cima para baixo, pode ser visto como um sinal bearish
+   - Quando o DSP cruza a linha zero de baixo para cima, pode ser visto como um sinal altista
+   - Quando o DSP cruza a linha zero de cima para baixo, pode ser visto como um sinal baixista
 
 2. **Extremos do indicador**:
    - Quando o DSP atinge valores extremamente elevados, pode indicar condições de sobrecompra no mercado
@@ -62,8 +62,8 @@ O indicador DSP oscila em torno da linha zero e pode ser interpretado da seguint
    - Alterações na amplitude da oscilação podem indicar mudanças na dinâmica do mercado
 
 4. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o DSP forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o DSP forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o DSP forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o DSP forma um máximo mais baixo
 
 5. **Formação de padrões**:
    - Padrões técnicos (head and shoulders, double bottom, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de trading

@@ -45,18 +45,18 @@ O Positive Volume Index pode ser interpretado da seguinte forma:
 
 2. **Cruzamentos de médias móveis**:
    - O PVI é frequentemente comparado com a sua média móvel de 255 dias (aproximadamente um ano de negociação)
-   - Quando o PVI está acima da sua SMA de 255 dias, é considerado um sinal bullish
-   - Quando o PVI está abaixo da sua SMA de 255 dias, é considerado um sinal bearish
+   - Quando o PVI está acima da sua SMA de 255 dias, é considerado um sinal altista
+   - Quando o PVI está abaixo da sua SMA de 255 dias, é considerado um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o PVI forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o PVI forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o PVI forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o PVI forma um máximo mais baixo
 
 4. **Combinação com NVI**:
-   - Quando tanto o PVI como o NVI estão a subir, é um forte sinal bullish
-   - Quando tanto o PVI como o NVI estão a cair, é um forte sinal bearish
-   - Quando o PVI sobe e o NVI cai, pode indicar que a "multidão" compra enquanto o "smart money" vende (cenário potencialmente bullish)
-   - Quando o PVI cai e o NVI sobe, pode indicar que a "multidão" vende enquanto o "smart money" compra (cenário potencialmente bearish)
+   - Quando tanto o PVI como o NVI estão a subir, é um forte sinal altista
+   - Quando tanto o PVI como o NVI estão a cair, é um forte sinal baixista
+   - Quando o PVI sobe e o NVI cai, pode indicar que a "multidão" compra enquanto o "smart money" vende (cenário potencialmente altista)
+   - Quando o PVI cai e o NVI sobe, pode indicar que a "multidão" vende enquanto o "smart money" compra (cenário potencialmente baixista)
 
 5. **Alterações de longo prazo**:
    - O PVI é frequentemente visto como um indicador de longo prazo

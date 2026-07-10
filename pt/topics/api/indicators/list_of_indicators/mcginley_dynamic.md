@@ -46,14 +46,14 @@ O McGinley Dynamic pode ser interpretado de forma semelhante a outras médias m�
    - Uma inclinação acentuada do MGD indica uma tendência forte
 
 2. **Cruzamentos de Preço**:
-   - O preço cruzar o MGD de baixo para cima pode ser visto como um sinal bullish
-   - O preço cruzar o MGD de cima para baixo pode ser visto como um sinal bearish
+   - O preço cruzar o MGD de baixo para cima pode ser visto como um sinal altista
+   - O preço cruzar o MGD de cima para baixo pode ser visto como um sinal baixista
    - Devido à sua natureza adaptativa, estes cruzamentos normalmente formam-se mais cedo do que com médias móveis tradicionais
 
 3. **Cruzamentos de Múltiplos MGD**:
    - Podem ser usados vários MGD com períodos diferentes (por exemplo, MGD(14) e MGD(30))
-   - Um MGD curto cruzar um MGD longo de baixo para cima pode ser visto como confirmação de tendência bullish
-   - Um MGD curto cruzar um MGD longo de cima para baixo pode ser visto como confirmação de tendência bearish
+   - Um MGD curto cruzar um MGD longo de baixo para cima pode ser visto como confirmação de tendência altista
+   - Um MGD curto cruzar um MGD longo de cima para baixo pode ser visto como confirmação de tendência baixista
 
 4. **Níveis de Suporte e Resistência**:
    - O MGD serve frequentemente como nível de suporte dinâmico numa tendência ascendente

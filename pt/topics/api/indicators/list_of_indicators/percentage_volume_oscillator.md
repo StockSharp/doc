@@ -57,24 +57,24 @@ Onde:
 O Percentage Volume Oscillator pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento da linha PVO da linha zero de baixo para cima indica aceleração do volume acima da média, o que pode anunciar um movimento bullish
-   - O cruzamento da linha PVO da linha zero de cima para baixo indica desaceleração do volume abaixo da média, o que pode anunciar um movimento bearish
+   - O cruzamento da linha PVO da linha zero de baixo para cima indica aceleração do volume acima da média, o que pode anunciar um movimento altista
+   - O cruzamento da linha PVO da linha zero de cima para baixo indica desaceleração do volume abaixo da média, o que pode anunciar um movimento baixista
 
 2. **Cruzamentos da linha de sinal**:
-   - O cruzamento da linha PVO da linha de sinal de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento da linha PVO da linha de sinal de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento da linha PVO da linha de sinal de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento da linha PVO da linha de sinal de cima para baixo pode ser visto como um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o PVO forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o PVO forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o PVO forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o PVO forma um máximo mais baixo
 
 4. **Valores extremos**:
    - Valores muito elevados do PVO podem indicar volume excessivo, frequentemente observado em topos de mercado ou em pânico
    - Valores muito baixos do PVO podem indicar volume insuficiente, frequentemente observado em pausas do mercado
 
 5. **Análise do histograma**:
-   - Histograma positivo crescente indica reforço do momentum bullish do volume
-   - Histograma negativo crescente indica reforço do momentum bearish do volume
+   - Histograma positivo crescente indica reforço do momentum altista do volume
+   - Histograma negativo crescente indica reforço do momentum baixista do volume
    - Contração do histograma indica enfraquecimento do momentum de volume atual
 
 6. **Confirmação da tendência do preço**:

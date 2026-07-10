@@ -54,12 +54,12 @@ O Demand Index pode ser interpretado de várias formas:
    - Valores negativos elevados indicam procura fraca (pressão vendedora)
 
 2. **Cruzamentos da linha zero**:
-   - O cruzamento de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento de cima para baixo pode ser visto como um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, mas o DI forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, mas o DI forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, mas o DI forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, mas o DI forma um máximo mais baixo
 
 4. **Tendências do DI**:
    - Valores positivos sustentados de DI confirmam uma tendência ascendente

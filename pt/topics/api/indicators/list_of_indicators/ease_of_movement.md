@@ -57,16 +57,16 @@ Onde:
 O indicador EMV pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento de baixo para cima (de valores negativos para positivos) pode ser visto como um sinal bullish, indicando que o preço começa a subir com facilidade
-   - O cruzamento de cima para baixo (de valores positivos para negativos) pode ser visto como um sinal bearish, indicando que o preço começa a descer com facilidade
+   - O cruzamento de baixo para cima (de valores negativos para positivos) pode ser visto como um sinal altista, indicando que o preço começa a subir com facilidade
+   - O cruzamento de cima para baixo (de valores positivos para negativos) pode ser visto como um sinal baixista, indicando que o preço começa a descer com facilidade
 
 2. **Valores extremos**:
    - Valores positivos elevados indicam que o preço está a subir com muita facilidade (com pouco volume)
    - Valores negativos elevados indicam que o preço está a descer com muita facilidade (com pouco volume)
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o EMV forma um mínimo mais alto (pode indicar uma potencial reversão ascendente)
-   - Divergência bearish: o preço forma um novo máximo, enquanto o EMV forma um máximo mais baixo (pode indicar uma potencial reversão descendente)
+   - Divergência altista: o preço forma um novo mínimo, enquanto o EMV forma um mínimo mais alto (pode indicar uma potencial reversão ascendente)
+   - Divergência baixista: o preço forma um novo máximo, enquanto o EMV forma um máximo mais baixo (pode indicar uma potencial reversão descendente)
 
 4. **Tendências do EMV**:
    - Valores positivos sustentados confirmam uma tendência ascendente

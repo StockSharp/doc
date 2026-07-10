@@ -73,12 +73,12 @@ O Laguerre RSI é interpretado de forma semelhante ao RSI tradicional, mas com a
    - Devido às características do filtro de Laguerre, estes níveis podem ser ajustados com base na volatilidade do mercado
 
 2. **Cruzamentos da Linha Central**:
-   - Cruzar o nível 0,5 (ou 50) de baixo para cima pode ser visto como um sinal bullish
-   - Cruzar o nível 0,5 (ou 50) de cima para baixo pode ser visto como um sinal bearish
+   - Cruzar o nível 0,5 (ou 50) de baixo para cima pode ser visto como um sinal altista
+   - Cruzar o nível 0,5 (ou 50) de cima para baixo pode ser visto como um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o LRSI forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o LRSI forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o LRSI forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o LRSI forma um máximo mais baixo
 
 4. **Ressaltos dos Extremos**:
    - A inversão do LRSI a partir de níveis de sobrecompra ou sobrevenda pode servir como sinal de entrada no mercado

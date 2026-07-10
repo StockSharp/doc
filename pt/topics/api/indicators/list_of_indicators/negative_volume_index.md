@@ -45,18 +45,18 @@ O Negative Volume Index pode ser interpretado da seguinte forma:
 
 2. **Cruzamentos de médias móveis**:
    - O NVI é frequentemente comparado com a sua média móvel de 255 dias (aproximadamente um ano de negociação)
-   - Quando o NVI está acima da sua SMA de 255 dias, é considerado um sinal bullish
-   - Quando o NVI está abaixo da sua SMA de 255 dias, é considerado um sinal bearish
+   - Quando o NVI está acima da sua SMA de 255 dias, é considerado um sinal altista
+   - Quando o NVI está abaixo da sua SMA de 255 dias, é considerado um sinal baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o NVI forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o NVI forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o NVI forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o NVI forma um máximo mais baixo
 
 4. **Combinação com PVI**:
-   - Quando tanto o NVI como o PVI estão a subir, é um forte sinal bullish
-   - Quando tanto o NVI como o PVI estão a cair, é um forte sinal bearish
-   - Quando o NVI sobe e o PVI cai, pode indicar que o "smart money" compra enquanto a "multidão" vende (cenário potencialmente bullish)
-   - Quando o NVI cai e o PVI sobe, pode indicar que o "smart money" vende enquanto a "multidão" compra (cenário potencialmente bearish)
+   - Quando tanto o NVI como o PVI estão a subir, é um forte sinal altista
+   - Quando tanto o NVI como o PVI estão a cair, é um forte sinal baixista
+   - Quando o NVI sobe e o PVI cai, pode indicar que o "smart money" compra enquanto a "multidão" vende (cenário potencialmente altista)
+   - Quando o NVI cai e o PVI sobe, pode indicar que o "smart money" vende enquanto a "multidão" compra (cenário potencialmente baixista)
 
 5. **Alterações de longo prazo**:
    - O NVI é frequentemente visto como um indicador de longo prazo

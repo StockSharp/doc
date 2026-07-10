@@ -45,8 +45,8 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 O Momentum of Moving Average pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento do MOMA da linha zero de baixo para cima pode ser visto como um sinal bullish, indicando o início ou reforço de uma tendência ascendente
-   - O cruzamento do MOMA da linha zero de cima para baixo pode ser visto como um sinal bearish, indicando o início ou reforço de uma tendência descendente
+   - O cruzamento do MOMA da linha zero de baixo para cima pode ser visto como um sinal altista, indicando o início ou reforço de uma tendência ascendente
+   - O cruzamento do MOMA da linha zero de cima para baixo pode ser visto como um sinal baixista, indicando o início ou reforço de uma tendência descendente
 
 2. **Valores absolutos**:
    - Valores positivos elevados de MOMA indicam forte momentum ascendente da média móvel
@@ -54,8 +54,8 @@ O Momentum of Moving Average pode ser interpretado da seguinte forma:
    - Valores próximos de zero indicam ausência de momentum pronunciado ou uma tendência lateral
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o MOMA forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o MOMA forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o MOMA forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o MOMA forma um máximo mais baixo
 
 4. **Alteração de direção**:
    - Quando o MOMA altera a direção do movimento (de subida para descida ou vice-versa), isto pode sinalizar uma potencial alteração na tendência da média móvel
@@ -69,7 +69,7 @@ O Momentum of Moving Average pode ser interpretado da seguinte forma:
 
 6. **Filtragem de sinais**:
    - O MOMA pode ser usado para filtrar sinais de outros indicadores
-   - Por exemplo, considerar apenas sinais bullish quando o MOMA é positivo, e apenas sinais bearish quando o MOMA é negativo
+   - Por exemplo, considerar apenas sinais altista quando o MOMA é positivo, e apenas sinais baixista quando o MOMA é negativo
 
 7. **Seleção de parâmetros**:
    - Períodos mais curtos para Length e MomentumPeriod tornam o MOMA mais sensível, mas também mais propenso a sinais falsos

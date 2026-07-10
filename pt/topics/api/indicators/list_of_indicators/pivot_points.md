@@ -50,17 +50,17 @@ Pivot Points podem ser interpretados da seguinte forma:
 
 1. **Ponto pivô principal (PP)**:
    - O PP serve como referência principal para determinar o sentimento geral do mercado
-   - Se o preço estiver acima do PP, indica um sentimento bullish
-   - Se o preço estiver abaixo do PP, indica um sentimento bearish
+   - Se o preço estiver acima do PP, indica um sentimento altista
+   - Se o preço estiver abaixo do PP, indica um sentimento baixista
    - O PP também pode servir como nível de suporte ou resistência
 
 2. **Níveis de resistência (R1, R2, R3)**:
-   - Estes níveis representam potenciais zonas de resistência num mercado bullish
+   - Estes níveis representam potenciais zonas de resistência num mercado altista
    - Um breakout de um nível pode levar à continuação do movimento até ao nível seguinte
    - Um ressalto a partir de um nível pode levar a uma reversão descendente
 
 3. **Níveis de suporte (S1, S2, S3)**:
-   - Estes níveis representam potenciais zonas de suporte num mercado bearish
+   - Estes níveis representam potenciais zonas de suporte num mercado baixista
    - Um breakout de um nível pode levar à continuação do movimento até ao nível seguinte
    - Um ressalto a partir de um nível pode levar a uma reversão ascendente
 

@@ -61,8 +61,8 @@ O CMF oscila em torno da linha zero e normalmente fica no intervalo entre -1 e +
   - O cruzamento de cima para baixo pode sinalizar o início de uma tendência descendente
 
 - **Divergências**:
-  - Divergência bullish: o preço desce enquanto o CMF sobe (potencial reversão para cima)
-  - Divergência bearish: o preço sobe enquanto o CMF desce (potencial reversão para baixo)
+  - Divergência altista: o preço desce enquanto o CMF sobe (potencial reversão para cima)
+  - Divergência baixista: o preço sobe enquanto o CMF desce (potencial reversão para baixo)
 
 - **Níveis extremos**:
   - Valores acima de +0,25 podem indicar forte acumulação

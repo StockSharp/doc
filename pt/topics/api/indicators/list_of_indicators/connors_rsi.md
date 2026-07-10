@@ -37,7 +37,7 @@ O cálculo do Connors RSI envolve três componentes que são depois promediados 
    - Primeiro, calcular a sequência (número de dias consecutivos de subida ou queda do preço)
    - Depois aplicar RSI a esta sequência usando o StreakRSIPeriod
 
-3. **Componente Rate of Change RSI (ROC RSI)**:
+3. **Componente RSI de taxa de variação (ROC RSI)**:
    - Calcular o Percentile Rank do ROC atual ao longo do ROCRSIPeriod
    - Escalar o Percentile Rank de 0 a 100
 
@@ -60,8 +60,8 @@ Connors RSI oscila entre 0 e 100, de forma semelhante ao RSI padrão:
   - 40-60: zona neutra
 
 - **Divergências**:
-  - Divergência bullish: o preço forma um novo mínimo, enquanto o CRSI forma um mínimo mais alto
-  - Divergência bearish: o preço forma um novo máximo, enquanto o CRSI forma um máximo mais baixo
+  - Divergência altista: o preço forma um novo mínimo, enquanto o CRSI forma um mínimo mais alto
+  - Divergência baixista: o preço forma um novo máximo, enquanto o CRSI forma um máximo mais baixo
 
 Connors RSI funciona melhor em gráficos com períodos diários a semanais e em estratégias de trading orientadas para reversão à média.
 

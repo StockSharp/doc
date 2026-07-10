@@ -52,16 +52,16 @@ O DZRSI é interpretado de forma semelhante ao RSI tradicional, mas tendo em con
    - Uma reversão ascendente a partir do nível dinâmico de sobrevenda pode ser vista como um sinal de compra
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o DZRSI forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o DZRSI forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o DZRSI forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o DZRSI forma um máximo mais baixo
 
 4. **Análise de tendência**:
    - Numa tendência ascendente, o nível dinâmico de sobrevenda pode ser mais alto do que o tradicional 30
    - Numa tendência descendente, o nível dinâmico de sobrecompra pode ser mais baixo do que o tradicional 70
 
 5. **Cruzamentos da linha central (50)**:
-   - O cruzamento de baixo para cima pode ser visto como um sinal bullish
-   - O cruzamento de cima para baixo pode ser visto como um sinal bearish
+   - O cruzamento de baixo para cima pode ser visto como um sinal altista
+   - O cruzamento de cima para baixo pode ser visto como um sinal baixista
 
 ![indicator_dynamic_zones_rsi](../../../../images/indicator_dynamic_zones_rsi.png)
 

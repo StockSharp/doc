@@ -53,8 +53,8 @@ Este índice combinado pode depois ser suavizado para reduzir ruído.
   - Valores abaixo de 20 podem indicar condições de sobrevenda no mercado
 
 - **Cruzamentos da linha central**:
-  - O cruzamento de baixo para cima da linha 50 pode ser visto como um sinal bullish
-  - O cruzamento de cima para baixo da linha 50 pode ser visto como um sinal bearish
+  - O cruzamento de baixo para cima da linha 50 pode ser visto como um sinal altista
+  - O cruzamento de cima para baixo da linha 50 pode ser visto como um sinal baixista
 
 - **Divergências**:
   - Divergências clássicas: quando o preço e o CBCI se movem em direções opostas

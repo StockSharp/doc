@@ -46,8 +46,8 @@ O cálculo do McClellan Oscillator envolve os seguintes passos:
 O McClellan Oscillator pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da Linha Zero**:
-   - O MCO cruzar a linha zero de baixo para cima pode ser visto como um sinal bullish, indicando um potencial início de tendência ascendente
-   - O MCO cruzar a linha zero de cima para baixo pode ser visto como um sinal bearish, indicando um potencial início de tendência descendente
+   - O MCO cruzar a linha zero de baixo para cima pode ser visto como um sinal altista, indicando um potencial início de tendência ascendente
+   - O MCO cruzar a linha zero de cima para baixo pode ser visto como um sinal baixista, indicando um potencial início de tendência descendente
 
 2. **Valores Extremos**:
    - Valores acima de +100 frequentemente indicam condições de sobrecompra do mercado
@@ -55,8 +55,8 @@ O McClellan Oscillator pode ser interpretado da seguinte forma:
    - Valores extremos (+150/-150 e acima/abaixo) podem sinalizar uma potencial inversão do mercado
 
 3. **Divergências**:
-   - Divergência bullish: o índice forma um novo mínimo, enquanto o MCO forma um mínimo mais alto
-   - Divergência bearish: o índice forma um novo máximo, enquanto o MCO forma um máximo mais baixo
+   - Divergência altista: o índice forma um novo mínimo, enquanto o MCO forma um mínimo mais alto
+   - Divergência baixista: o índice forma um novo máximo, enquanto o MCO forma um máximo mais baixo
 
 4. **Estado da Amplitude do Mercado**:
    - Valores positivos do MCO indicam que a maioria das acções no mercado está a subir
@@ -70,9 +70,9 @@ O McClellan Oscillator pode ser interpretado da seguinte forma:
    - McClellan Summation Index (MSI) é a soma cumulativa dos valores do MCO
    - O MSI cruzar zero pode confirmar sinais do MCO e indicar alterações de tendência de longo prazo
 
-7. **Padrões Bullish/Bearish**:
-   - "Bullish Tail" - queda rápida do MCO seguida de recuperação rápida, frequentemente indicando um potencial fundo de mercado
-   - "Bearish Tail" - subida rápida do MCO seguida de queda rápida, frequentemente indicando um potencial topo de mercado
+7. **Padrões Altista/Baixista**:
+   - "Cauda altista" - queda rápida do MCO seguida de recuperação rápida, frequentemente indicando um potencial fundo de mercado
+   - "Cauda baixista" - subida rápida do MCO seguida de queda rápida, frequentemente indicando um potencial topo de mercado
 
 ![indicator_mcclellan_oscillator](../../../../images/indicator_mcclellan_oscillator.png)
 

@@ -8,7 +8,7 @@ Para usar o indicador, é necessário usar a classe [OscillatorOfMovingAverage](
 
 O Oscillator of Moving Average (OMA) representa a diferença entre uma média móvel curta e uma média móvel longa. Este indicador ajuda a determinar a força da tendência e as suas potenciais alterações ao analisar a relação entre médias móveis de diferentes períodos.
 
-O OMA funciona segundo um princípio semelhante ao MACD (Moving Average Convergence Divergence), mas numa forma mais simples, pois não inclui uma linha de sinal. O indicador oscila em torno da linha zero, onde valores positivos indicam que a média móvel curta está acima da média móvel longa (estado bullish), e valores negativos indicam que a média móvel curta está abaixo da média móvel longa (estado bearish).
+O OMA funciona segundo um princípio semelhante ao MACD (Moving Average Convergence Divergence), mas numa forma mais simples, pois não inclui uma linha de sinal. O indicador oscila em torno da linha zero, onde valores positivos indicam que a média móvel curta está acima da média móvel longa (estado altista), e valores negativos indicam que a média móvel curta está abaixo da média móvel longa (estado baixista).
 
 A principal força do OMA está na sua capacidade de identificar alterações no momentum da tendência e gerar sinais de trading com base em cruzamentos da linha zero e divergências de preço.
 
@@ -50,8 +50,8 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 O Oscillator of Moving Average pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento do OMA da linha zero de baixo para cima (a MA curta cruza a MA longa de baixo para cima) pode ser visto como um sinal bullish
-   - O cruzamento do OMA da linha zero de cima para baixo (a MA curta cruza a MA longa de cima para baixo) pode ser visto como um sinal bearish
+   - O cruzamento do OMA da linha zero de baixo para cima (a MA curta cruza a MA longa de baixo para cima) pode ser visto como um sinal altista
+   - O cruzamento do OMA da linha zero de cima para baixo (a MA curta cruza a MA longa de cima para baixo) pode ser visto como um sinal baixista
 
 2. **Valores extremos**:
    - Valores positivos elevados do OMA indicam que o mercado pode estar em sobrecompra
@@ -59,8 +59,8 @@ O Oscillator of Moving Average pode ser interpretado da seguinte forma:
    - Valores extremos antecedem frequentemente correções ou reversões de tendência
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o OMA forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o OMA forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o OMA forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o OMA forma um máximo mais baixo
    - As divergências antecedem frequentemente reversões significativas de tendência
 
 4. **Confirmação da tendência**:

@@ -62,16 +62,16 @@ Onde:
 O Klinger Volume Oscillator pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da Linha Zero**:
-   - O KVO cruzar a linha zero de baixo para cima pode ser visto como um sinal bullish
-   - O KVO cruzar a linha zero de cima para baixo pode ser visto como um sinal bearish
+   - O KVO cruzar a linha zero de baixo para cima pode ser visto como um sinal altista
+   - O KVO cruzar a linha zero de cima para baixo pode ser visto como um sinal baixista
 
 2. **Cruzamentos da Linha de Sinal**:
-   - O KVO cruzar a linha de sinal de baixo para cima pode ser visto como um sinal de entrada bullish
-   - O KVO cruzar a linha de sinal de cima para baixo pode ser visto como um sinal de entrada bearish
+   - O KVO cruzar a linha de sinal de baixo para cima pode ser visto como um sinal de entrada altista
+   - O KVO cruzar a linha de sinal de cima para baixo pode ser visto como um sinal de entrada baixista
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o KVO forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o KVO forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o KVO forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o KVO forma um máximo mais baixo
 
 4. **Confirmação da Tendência**:
    - Valores positivos do KVO confirmam uma tendência ascendente

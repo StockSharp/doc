@@ -37,16 +37,16 @@ O valor final de CM é um oscilador que pode flutuar em zonas positivas e negati
 ## Interpretação
 
 - **Cruzamento da linha zero**:
-  - A transição da zona negativa para a positiva pode ser vista como um sinal bullish
-  - A transição da zona positiva para a negativa pode ser vista como um sinal bearish
+  - A transição da zona negativa para a positiva pode ser vista como um sinal altista
+  - A transição da zona positiva para a negativa pode ser vista como um sinal baixista
 
 - **Valores extremos**:
   - Valores positivos muito elevados podem indicar condições de sobrecompra no mercado
   - Valores negativos muito baixos podem indicar condições de sobrevenda no mercado
 
 - **Divergências**:
-  - Divergência bullish: o preço forma um novo mínimo, enquanto o CM forma um mínimo mais alto
-  - Divergência bearish: o preço forma um novo máximo, enquanto o CM forma um máximo mais baixo
+  - Divergência altista: o preço forma um novo mínimo, enquanto o CM forma um mínimo mais alto
+  - Divergência baixista: o preço forma um novo máximo, enquanto o CM forma um máximo mais baixo
 
 - **Confirmação da tendência**:
   - Valores consistentemente positivos de CM confirmam a força de uma tendência ascendente

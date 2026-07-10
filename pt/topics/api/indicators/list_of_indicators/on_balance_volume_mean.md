@@ -50,18 +50,18 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 On Balance Volume Mean pode ser interpretado da seguinte forma:
 
 1. **Análise da tendência**:
-   - OBVM em subida indica uma tendência bullish com forte suporte de volume
-   - OBVM em queda indica uma tendência bearish com forte suporte de volume
+   - OBVM em subida indica uma tendência altista com forte suporte de volume
+   - OBVM em queda indica uma tendência baixista com forte suporte de volume
    - OBVM plano indica ausência de tendência pronunciada
 
 2. **Cruzamentos entre OBV e OBVM**:
-   - Quando o OBV cruza o OBVM de baixo para cima, pode ser visto como um sinal bullish
-   - Quando o OBV cruza o OBVM de cima para baixo, pode ser visto como um sinal bearish
+   - Quando o OBV cruza o OBVM de baixo para cima, pode ser visto como um sinal altista
+   - Quando o OBV cruza o OBVM de cima para baixo, pode ser visto como um sinal baixista
    - Estes cruzamentos indicam frequentemente o início de novas tendências ou movimentos significativos do preço
 
 3. **Divergências**:
-   - Divergência bullish: o preço forma um novo mínimo, enquanto o OBVM forma um mínimo mais alto
-   - Divergência bearish: o preço forma um novo máximo, enquanto o OBVM forma um máximo mais baixo
+   - Divergência altista: o preço forma um novo mínimo, enquanto o OBVM forma um mínimo mais alto
+   - Divergência baixista: o preço forma um novo máximo, enquanto o OBVM forma um máximo mais baixo
    - As divergências antecedem frequentemente reversões significativas de tendência
 
 4. **Confirmação da tendência do preço**:

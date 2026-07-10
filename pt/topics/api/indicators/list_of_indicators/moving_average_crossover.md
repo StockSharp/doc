@@ -54,12 +54,12 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 O indicador Moving Average Crossover pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
-   - O cruzamento da linha zero do MAC de baixo para cima (FastMA cruza a SlowMA de baixo para cima) gera um sinal bullish, indicando um potencial início de tendência ascendente
-   - O cruzamento da linha zero do MAC de cima para baixo (FastMA cruza a SlowMA de cima para baixo) gera um sinal bearish, indicando um potencial início de tendência descendente
+   - O cruzamento da linha zero do MAC de baixo para cima (FastMA cruza a SlowMA de baixo para cima) gera um sinal altista, indicando um potencial início de tendência ascendente
+   - O cruzamento da linha zero do MAC de cima para baixo (FastMA cruza a SlowMA de cima para baixo) gera um sinal baixista, indicando um potencial início de tendência descendente
 
 2. **Valor do indicador**:
-   - Um valor positivo do MAC indica que a média móvel curta está acima da média móvel longa, frequentemente interpretado como um estado de mercado bullish
-   - Um valor negativo do MAC indica que a média móvel curta está abaixo da média móvel longa, frequentemente interpretado como um estado de mercado bearish
+   - Um valor positivo do MAC indica que a média móvel curta está acima da média móvel longa, frequentemente interpretado como um estado de mercado altista
+   - Um valor negativo do MAC indica que a média móvel curta está abaixo da média móvel longa, frequentemente interpretado como um estado de mercado baixista
 
 3. **Distância entre médias móveis**:
    - O aumento da distância entre médias móveis (aumento do valor absoluto do MAC) indica reforço da tendência

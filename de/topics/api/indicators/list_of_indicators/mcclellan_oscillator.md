@@ -71,8 +71,8 @@ Der McClellan Oscillator kann wie folgt interpretiert werden:
    - Der Nulldurchgang von MSI kann MCO-Signale bestätigen und langfristige Trendänderungen anzeigen
 
 7. **Bulnische/bärische Muster**:
-   - „Bullish Tail“ – schneller MCO-Rückgang, gefolgt von einer schnellen Erholung, was oft auf einen möglichen Markttiefpunkt hindeutet
-   - „Bearish Tail“ – schneller MCO-Anstieg, gefolgt von einem schnellen Rückgang, was oft auf ein potenzielles Markthoch hindeutet
+   - „Bullischer Ausläufer“ – schneller MCO-Rückgang, gefolgt von einer schnellen Erholung, was oft auf einen möglichen Markttiefpunkt hindeutet
+   - „Bärischer Ausläufer“ – schneller MCO-Anstieg, gefolgt von einem schnellen Rückgang, was oft auf ein potenzielles Markthoch hindeutet
 
 ![indicator_mcclellan_oscillator](../../../../images/indicator_mcclellan_oscillator.png)
 

@@ -2,7 +2,7 @@
 
 **McClellan Oscillator (MCO)** es un indicador técnico desarrollado por Sherman y Marian McClellan que mide la amplitud del mercado analizando la diferencia entre los promedios móviles de las acciones que suben y bajan.
 
-Para utilizar el indicador, debe utilizar la clase [McClellanOscillator](xref:StockSharp.Algo.Indicators.McClellanOscillator).
+aara utilizar el indicador, debe utilizar la clase [McClellanOscillator](xref:StockSharp.Algo.Indicators.McClellanOscillator).
 
 ## Descripción
 
@@ -70,7 +70,7 @@ El oscilador McClellan se puede interpretar de la siguiente manera:
    - El índice de suma McClellan (MSI) es la suma acumulativa de los valores MCO
    - MSI cruzando cero puede confirmar señales MCO e indicar cambios de tendencia a largo plazo
 
-7. **Patrones Bullish/Bearish**:
+7. **Patrones alcistas/bajistas**:
    - "Cola alcista": rápida caída de MCO seguida de una rápida recuperación, que a menudo indica un posible fondo del mercado.
    - "Cola bajista": rápido aumento de MCO seguido de una rápida caída, que a menudo indica un máximo potencial del mercado
 
