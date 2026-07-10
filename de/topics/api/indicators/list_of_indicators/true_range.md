@@ -1,6 +1,6 @@
-# True Range
+# Wahre Spanne
 
-**True Range (TR)** zeigt die aktuelle Marktvolatilität, indem er die Schwankungsbreite von Höchst-, Tiefst- und Schlusskursen bestimmt.
+**Wahre Spanne (TR)** zeigt die aktuelle Marktvolatilität, indem sie die Schwankungsbreite von Höchst-, Tiefst- und Schlusskursen bestimmt.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [TrueRange](xref:StockSharp.Algo.Indicators.TrueRange).
 
@@ -9,4 +9,3 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [TrueRange](xref:StockSharp
 ## Empfohlene Inhalte
 
 [UO](uo.md)
-

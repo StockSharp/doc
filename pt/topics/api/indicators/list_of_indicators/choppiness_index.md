@@ -27,7 +27,7 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do Choppiness Index envolve os seguintes passos:
 
-1. Calcular a soma dos True Ranges ao longo do período selecionado:
+1. Calcular a soma dos intervalos verdadeiros ao longo do período selecionado:
    ```
    Sum of TR = Sum(TR(i)) para i de 1 até Length
    ```
@@ -44,7 +44,7 @@ O cálculo do Choppiness Index envolve os seguintes passos:
    ```
 
 Onde:
-- TR - true range de cada vela
+- TR - intervalo verdadeiro de cada vela
 - Length - período selecionado
 - LOG10 - logaritmo decimal
 
@@ -68,4 +68,4 @@ Onde:
 [ATR](atr.md)
 [ADX](adx.md)
 [VHF](vhf.md)
-[TrueRange](true_range.md)
+[Intervalo verdadeiro](true_range.md)

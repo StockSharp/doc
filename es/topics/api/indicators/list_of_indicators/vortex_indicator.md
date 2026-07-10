@@ -35,7 +35,7 @@ El cálculo del indicador Vortex se realiza en varios pasos:
    VM- = |Current Low - Previous High|
    ```
 
-2. Calcular True Range:
+2. Calcular el rango verdadero:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
@@ -46,7 +46,7 @@ El cálculo del indicador Vortex se realiza en varios pasos:
    Sum_VM- = Sum(VM-, Length)
    ```
 
-4. Sum True Range durante el período Length:
+4. Sumar el rango verdadero durante el período Length:
    ```
    Sum_TR = Sum(TR, Length)
    ```

@@ -94,4 +94,4 @@ MI измеряет волатильность с помощью экспоне�
 [ATR](atr.md)
 [BollingerBands](bollinger_bands.md)
 [ChoppinessIndex](choppiness_index.md)
-[TrueRange](true_range.md)
+[Истинный диапазон](true_range.md)

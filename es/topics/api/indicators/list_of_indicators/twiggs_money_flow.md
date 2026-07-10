@@ -26,7 +26,7 @@ El indicador es útil para:
 
 El cálculo de Twiggs Money Flow se realiza en varios pasos:
 
-1. Calcular True Range:
+1. Calcular el rango verdadero:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```

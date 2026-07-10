@@ -35,7 +35,7 @@ Die Berechnung des Vortex-Indikators erfolgt in mehreren Schritten:
    VM- = |Current Low - Previous High|
    ```
 
-2. True Range berechnen:
+2. Wahre Spanne berechnen:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
@@ -46,7 +46,7 @@ Die Berechnung des Vortex-Indikators erfolgt in mehreren Schritten:
    Sum_VM- = Sum(VM-, Length)
    ```
 
-4. True Range über die Length-Periode summieren:
+4. Wahre Spanne über die Length-Periode summieren:
    ```
    Sum_TR = Sum(TR, Length)
    ```
@@ -65,4 +65,3 @@ Das Kreuzen dieser beiden Linien erzeugt Handelssignale: Wenn VI+ über VI- stei
 
 [ADX](adx.md)
 [DMI](dmi.md)
-

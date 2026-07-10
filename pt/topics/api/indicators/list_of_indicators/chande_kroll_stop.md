@@ -33,7 +33,7 @@ O cálculo do Chande Kroll Stop envolve os seguintes passos:
    LowestLow = valor Low mais baixo durante Period
    ```
 
-2. Calcular o Average True Range (ATR) ao longo do Period:
+2. Calcular o intervalo verdadeiro médio (ATR) ao longo do Period:
    ```
    ATR = valor TR médio durante Period
    ```

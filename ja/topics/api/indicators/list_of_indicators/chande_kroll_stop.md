@@ -33,7 +33,7 @@ Chande Kroll Stop の計算には、次の手順が含まれます。
    LowestLow = Period における Low の最小値
    ```
 
-2. Period にわたる Average True Range (ATR) を計算します。
+2. Period にわたる平均真の値幅 (ATR) を計算します。
    ```
    ATR = Period における TR の平均値
    ```

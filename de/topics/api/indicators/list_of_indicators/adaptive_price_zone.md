@@ -22,7 +22,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die APZ-Berechnung basiert auf dem Exponential Moving Average (EMA) und dem Average True Range (ATR):
+Die APZ-Berechnung basiert auf dem exponentiellen gleitenden Durchschnitt (EMA) und der durchschnittlichen wahren Spanne (ATR):
 
 1. Zunächst wird der EMA des Preises für die angegebene Periode berechnet:
    ```

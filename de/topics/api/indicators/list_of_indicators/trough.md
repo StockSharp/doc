@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [Trough](xref:StockSharp.Al
 
 ## Empfohlene Inhalte
 
-[True Range](true_range.md)
-
+[Wahre Spanne](true_range.md)

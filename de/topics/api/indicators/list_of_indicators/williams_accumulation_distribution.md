@@ -22,7 +22,7 @@ Wichtige Anwendungsfälle des Indikators:
 
 Der Williams Accumulation/Distribution-Indikator wird nach folgender Logik berechnet:
 
-1. True Range Protection (TRP) für die aktuelle Periode bestimmen:
+1. Schutz der wahren Spanne (TRP) für die aktuelle Periode bestimmen:
    ```
    TRP = Max(High - Low, |High - Close_prev|, |Low - Close_prev|)
    ```

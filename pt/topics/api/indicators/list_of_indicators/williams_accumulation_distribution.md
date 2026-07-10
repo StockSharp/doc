@@ -22,7 +22,7 @@ Principais aplicações do indicador:
 
 O indicador Williams Accumulation/Distribution é calculado usando a seguinte lógica:
 
-1. Determinar a True Range Protection (TRP) para o período atual:
+1. Determinar a proteção do intervalo verdadeiro (TRP) para o período atual:
    ```
    TRP = Max(High - Low, |High - Close_prev|, |Low - Close_prev|)
    ```

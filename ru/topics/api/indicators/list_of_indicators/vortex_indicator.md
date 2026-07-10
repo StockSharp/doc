@@ -35,7 +35,7 @@
    VM- = |Current Low - Previous High|
    ```
 
-2. Рассчитывается True Range:
+2. Рассчитывается истинный диапазон:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
@@ -46,7 +46,7 @@
    Sum_VM- = Sum(VM-, Length)
    ```
 
-4. Суммируется True Range за период Length:
+4. Суммируется истинный диапазон за период Length:
    ```
    Sum_TR = Sum(TR, Length)
    ```

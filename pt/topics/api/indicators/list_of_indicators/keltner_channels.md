@@ -1,6 +1,6 @@
 # KC
 
-**Keltner Channels (KC)** é um indicador técnico composto por um conjunto de bandas de volatilidade que usa uma média móvel exponencial (EMA) como linha central e o average true range (ATR) para determinar a largura do canal.
+**Keltner Channels (KC)** é um indicador técnico composto por um conjunto de bandas de volatilidade que usa uma média móvel exponencial (EMA) como linha central e o intervalo verdadeiro médio (ATR) para determinar a largura do canal.
 
 Para utilizar o indicador, é necessário usar a classe [KeltnerChannels](xref:StockSharp.Algo.Indicators.KeltnerChannels).
 
@@ -30,7 +30,7 @@ O cálculo dos Keltner Channels envolve os seguintes passos:
    Middle Line = EMA(Price, Length)
    ```
 
-2. Calcular o average true range:
+2. Calcular o intervalo verdadeiro médio:
    ```
    ATR = intervalo verdadeiro médio durante o período Length
    ```
@@ -44,7 +44,7 @@ O cálculo dos Keltner Channels envolve os seguintes passos:
 Onde:
 - Price - normalmente o preço de fecho
 - EMA - média móvel exponencial
-- ATR - average true range
+- ATR - intervalo verdadeiro médio
 - Length - período para o cálculo da EMA e do ATR
 - Multiplier - multiplicador que determina a largura do canal
 
@@ -88,4 +88,3 @@ Os Keltner Channels podem ser interpretados da seguinte forma:
 [DonchianChannels](donchian_channels.md)
 [EMA](ema.md)
 [ATR](atr.md)
-

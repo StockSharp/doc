@@ -68,4 +68,4 @@ Dabei gilt:
 [ATR](atr.md)
 [ADX](adx.md)
 [VHF](vhf.md)
-[TrueRange](true_range.md)
+[Wahre Spanne](true_range.md)

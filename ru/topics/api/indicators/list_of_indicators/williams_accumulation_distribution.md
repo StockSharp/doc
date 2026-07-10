@@ -22,7 +22,7 @@
 
 Расчет индикатора Williams Accumulation/Distribution осуществляется по следующей логике:
 
-1. Определяем значение True Range Protection (TRP) для текущего периода:
+1. Определяем защиту истинного диапазона (TRP) для текущего периода:
    ```
    TRP = Max(High - Low, |High - Close_prev|, |Low - Close_prev|)
    ```

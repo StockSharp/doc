@@ -22,7 +22,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de APZ se basa en Exponential Moving Average (EMA) y Average True Range (ATR):
+El cálculo de APZ se basa en la media móvil exponencial (EMA) y el rango verdadero promedio (ATR):
 
 1. Primero, calcule el precio EMA para el período especificado:
    ```

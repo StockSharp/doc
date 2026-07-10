@@ -94,4 +94,4 @@ O Mass Index é interpretado da seguinte forma:
 [ATR](atr.md)
 [BollingerBands](bollinger_bands.md)
 [ChoppinessIndex](choppiness_index.md)
-[TrueRange](true_range.md)
+[Intervalo verdadeiro](true_range.md)

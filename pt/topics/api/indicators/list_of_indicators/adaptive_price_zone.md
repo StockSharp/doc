@@ -24,7 +24,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do APZ baseia-se na Exponential Moving Average (EMA) e no Average True Range (ATR):
+O cálculo do APZ baseia-se na média móvel exponencial (EMA) e no intervalo verdadeiro médio (ATR):
 
 1. Primeiro, calcule a EMA do preço para o período especificado:
    ```

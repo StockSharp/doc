@@ -22,7 +22,7 @@ APZ は特に次の用途に役立ちます。
 
 ## 計算
 
-APZ の計算は Exponential Moving Average (EMA) と Average True Range (ATR) に基づきます。
+APZ の計算は指数移動平均 (EMA) と平均真の値幅 (ATR) に基づきます。
 
 1. まず、指定期間における価格の EMA を計算します。
    ```

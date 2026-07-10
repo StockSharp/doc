@@ -26,7 +26,7 @@ Twiggs Money Flow анализирует взаимосвязь между це�
 
 Расчет Twiggs Money Flow выполняется в несколько этапов:
 
-1. Рассчитывается True Range:
+1. Рассчитывается истинный диапазон:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```

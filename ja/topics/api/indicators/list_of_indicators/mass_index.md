@@ -94,4 +94,4 @@ Mass Index は次のように解釈されます。
 [ATR](atr.md)
 [BollingerBands](bollinger_bands.md)
 [ChoppinessIndex](choppiness_index.md)
-[TrueRange](true_range.md)
+[真の値幅](true_range.md)

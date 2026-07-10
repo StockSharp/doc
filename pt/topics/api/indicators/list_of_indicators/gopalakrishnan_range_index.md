@@ -70,5 +70,4 @@ O Gopalakrishnan Range Index pode ser interpretado da seguinte forma:
 
 [ATR](atr.md)
 [ChoppinessIndex](choppiness_index.md)
-[TrueRange](true_range.md)
-
+[Intervalo verdadeiro](true_range.md)

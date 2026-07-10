@@ -8,4 +8,4 @@
 
 ## См. также
 
-[True Range](true_range.md)
+[Истинный диапазон](true_range.md)

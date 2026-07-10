@@ -27,7 +27,7 @@ CHOP は特に次の用途に役立ちます。
 
 Choppiness Index の計算には、次の手順が含まれます。
 
-1. 選択した期間にわたる True Range の合計を計算します。
+1. 選択した期間にわたる真の値幅の合計を計算します。
    ```
    Sum of TR = i = 1 から Length までの Sum(TR(i))
    ```
@@ -68,4 +68,4 @@ Choppiness Index の計算には、次の手順が含まれます。
 [ATR](atr.md)
 [ADX](adx.md)
 [VHF](vhf.md)
-[TrueRange](true_range.md)
+[真の値幅](true_range.md)

@@ -26,7 +26,7 @@ Der Indikator ist nützlich für:
 
 Twiggs Money Flow wird in mehreren Schritten berechnet:
 
-1. True Range berechnen:
+1. Wahre Spanne berechnen:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
@@ -57,4 +57,3 @@ TMF-Werte reichen von -1 (starkes bärisches Signal) bis +1 (starkes bullisches 
 [ADL](accumulation_distribution_line.md)
 [Money Flow Index](money_flow_index.md)
 [OBV](on_balance_volume.md)
-

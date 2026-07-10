@@ -35,7 +35,7 @@ Vortex インジケーターの計算は、いくつかの手順で実行され�
    VM- = |Current Low - Previous High|
    ```
 
-2. True Range を計算します。
+2. 真の値幅を計算します。
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```
@@ -46,7 +46,7 @@ Vortex インジケーターの計算は、いくつかの手順で実行され�
    Sum_VM- = Sum(VM-, Length)
    ```
 
-4. Length 期間にわたって True Range を合計します。
+4. Length 期間にわたって真の値幅を合計します。
    ```
    Sum_TR = Sum(TR, Length)
    ```

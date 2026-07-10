@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [Trough](xref:StockSharp.Algo
 
 ## Contenido recomendado
 
-[True Range](true_range.md)
+[Rango verdadero](true_range.md)

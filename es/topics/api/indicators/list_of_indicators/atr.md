@@ -1,11 +1,11 @@
 # ATR
 
-**Average True Range (ATR)** es un indicador que muestra el nivel de volatilidad actual.
+**Rango verdadero promedio (ATR)** es un indicador que muestra el nivel de volatilidad actual.
 
 Para utilizar el indicador, se debe utilizar la clase [AverageTrueRange](xref:StockSharp.Algo.Indicators.AverageTrueRange).
 ##### Cálculo del indicador
   
-El cálculo del indicador comienza con la determinación del True Range (TR), que se calcula como el máximo de los siguientes tres valores:  
+El cálculo del indicador comienza con la determinación del rango verdadero (TR), que se calcula como el máximo de los siguientes tres valores:
 - la diferencia entre el máximo y el mínimo actuales;  
 - la diferencia entre el máximo actual y el precio de cierre anterior (valor absoluto);  
 - la diferencia entre el mínimo actual y el precio de cierre anterior (valor absoluto).  

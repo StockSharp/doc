@@ -70,4 +70,4 @@ GAPO = log(N) * log(Highest High - Lowest Low)
 
 [ATR](atr.md)
 [ChoppinessIndex](choppiness_index.md)
-[TrueRange](true_range.md)
+[Истинный диапазон](true_range.md)

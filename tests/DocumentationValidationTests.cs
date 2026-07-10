@@ -2141,6 +2141,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishTrueRangeTerm()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var content = ReadAllText(file);
+
+				if (content.Contains("[TrueRange](true_range.md)", StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}: localized indicator documentation keeps API-style link label '[TrueRange](true_range.md)'. Localize the link label.");
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(content))
+				{
+					if (!ContainsStandaloneText(text, "True Range"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English term 'True Range'. Localize the term while keeping TR/ATR abbreviations where useful.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

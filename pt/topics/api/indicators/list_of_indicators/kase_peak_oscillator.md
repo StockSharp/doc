@@ -51,7 +51,7 @@ O cálculo do Kase Peak Oscillator envolve vários passos:
 Onde:
 - Price - normalmente o preço de fecho
 - EMA - média móvel exponencial
-- ATR - average true range
+- ATR - intervalo verdadeiro médio
 - ShortPeriod - período curto de cálculo
 - LongPeriod - período longo de cálculo
 
@@ -91,4 +91,3 @@ O Kase Peak Oscillator pode ser interpretado da seguinte forma:
 [MACD](macd.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)
 [ATR](atr.md)
-

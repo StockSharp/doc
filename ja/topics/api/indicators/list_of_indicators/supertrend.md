@@ -1,6 +1,6 @@
 # SuperTrend
 
-**SuperTrend インジケーター** は、Average True Range (ATR) に基づくトレンドフォロー型インジケーターです。現在のトレンド方向と、反転の可能性があるポイントを識別するのに役立ちます。
+**SuperTrend インジケーター** は、平均真の値幅 (ATR) に基づくトレンドフォロー型インジケーターです。現在のトレンド方向と、反転の可能性があるポイントを識別するのに役立ちます。
 
 このインジケーターを使用するには、[SuperTrend](xref:StockSharp.Algo.Indicators.SuperTrend) クラスを使用する必要があります。
 

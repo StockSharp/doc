@@ -22,7 +22,7 @@ WAD の主な特徴:
 
 Williams Accumulation/Distribution インジケーターは、次のロジックを使用して計算されます。
 
-1. 現在期間の True Range Protection (TRP) を決定します。
+1. 現在期間の真の値幅保護 (TRP) を決定します。
    ```
    TRP = Max(High - Low, |High - Close_prev|, |Low - Close_prev|)
    ```

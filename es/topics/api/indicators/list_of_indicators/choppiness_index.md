@@ -27,7 +27,7 @@ El indicador tiene los siguientes parámetros:
 
 El cálculo de Choppiness Index implica los siguientes pasos:
 
-1. Calcule la suma de True Range durante el período seleccionado:
+1. Calcule la suma de los rangos verdaderos durante el período seleccionado:
    ```
    Sum of TR = Sum(TR(i)) para i de 1 a Length
    ```
@@ -68,4 +68,4 @@ donde:
 [ATR](atr.md)
 [ADX](adx.md)
 [VHF](vhf.md)
-[TrueRange](true_range.md)
+[Rango verdadero](true_range.md)

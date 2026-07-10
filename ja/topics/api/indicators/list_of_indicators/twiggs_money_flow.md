@@ -26,7 +26,7 @@ TMF の主な特徴:
 
 Twiggs Money Flow の計算は、いくつかの手順で実行されます:
 
-1. True Range を計算します:
+1. 真の値幅を計算します:
    ```
    TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
    ```

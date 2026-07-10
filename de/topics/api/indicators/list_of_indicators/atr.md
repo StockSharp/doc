@@ -1,11 +1,11 @@
 # ATR
 
-**Average True Range (ATR)** ist ein Indikator, der das Niveau der aktuellen Volatilität zeigt.
+**Durchschnittliche wahre Spanne (ATR)** ist ein Indikator, der das Niveau der aktuellen Volatilität zeigt.
 
 Zur Verwendung des Indikators sollte die Klasse [AverageTrueRange](xref:StockSharp.Algo.Indicators.AverageTrueRange) verwendet werden.
 ##### Berechnung des Indikators
 
-Die Berechnung des Indikators beginnt mit der Bestimmung der True Range (TR), die als Maximum der folgenden drei Werte berechnet wird:
+Die Berechnung des Indikators beginnt mit der Bestimmung der wahren Spanne (TR), die als Maximum der folgenden drei Werte berechnet wird:
 - Differenz zwischen aktuellem Maximum und Minimum;
 - Differenz zwischen aktuellem Maximum und vorherigem Schlusskurs (Absolutwert);
 - Differenz zwischen aktuellem Minimum und vorherigem Schlusskurs (Absolutwert).
