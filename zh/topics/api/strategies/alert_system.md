@@ -108,7 +108,7 @@ public class AlertStrategy : Strategy
             .Start();
 
         // 策略启动提醒
-        AlertLog("Strategy started, tracked level: " + PriceLevel);
+        AlertLog("策略已启动，跟踪级别: " + PriceLevel);
     }
 
     private void ProcessCandle(ICandleMessage candle)

@@ -108,7 +108,7 @@ public class AlertStrategy : Strategy
             .Start();
 
         // ストラテジー開始に関するアラート
-        AlertLog("Strategy started, tracked level: " + PriceLevel);
+        AlertLog("ストラテジー開始、追跡レベル: " + PriceLevel);
     }
 
     private void ProcessCandle(ICandleMessage candle)

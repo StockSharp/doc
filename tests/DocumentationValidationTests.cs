@@ -3791,7 +3791,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private static bool IsCodeOutputInvocationStart(string text)
-		=> Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant);
+		=> Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|AlertLog|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant);
 
 	private static bool IsCodeOutputInvocationEnd(string text)
 		=> Regex.IsMatch(text, @"\)\s*;", RegexOptions.CultureInvariant);
