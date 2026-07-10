@@ -33,7 +33,7 @@ MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous
 对于初始 MGD 值，通常使用指定时期的简单移动平均值：
 
 ```
-For first calculation: MGD = SMA(Price, Length)
+首次计算: MGD = SMA(Price, Length)
 ```
 
 ## 解释

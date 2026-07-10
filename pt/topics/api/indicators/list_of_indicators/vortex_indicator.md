@@ -1,22 +1,22 @@
 # VI
 
-**Vortex Indicator (VI)** é um indicador técnico desenvolvido por Etienne e Julia Boisse em 2009. O indicador é composto por duas linhas, VI+ e VI-, que mostram o movimento ascendente e descendente do preço, ajudando a identificar o início de novas tendências e a confirmar as existentes.
+**Indicador Vortex (VI)** é um indicador técnico desenvolvido por Etienne e Julia Boisse em 2009. O indicador é composto por duas linhas, VI+ e VI-, que mostram o movimento ascendente e descendente do preço, ajudando a identificar o início de novas tendências e a confirmar as existentes.
 
 Para usar o indicador, é necessário usar a classe [VortexIndicator](xref:StockSharp.Algo.Indicators.VortexIndicator).
 
 ## Descrição
 
-O Vortex Indicator é inspirado nos princípios do movimento em vórtice na natureza e pretende refletir a natureza cíclica dos movimentos do mercado. É composto por duas linhas:
+O indicador Vortex é inspirado nos princípios do movimento em vórtice na natureza e pretende refletir a natureza cíclica dos movimentos do mercado. É composto por duas linhas:
 
-- **VI+** (Vortex Indicator positivo) - mede o movimento ascendente do preço
-- **VI-** (Vortex Indicator negativo) - mede o movimento descendente do preço
+- **VI+** (indicador Vortex positivo) - mede o movimento ascendente do preço
+- **VI-** (indicador Vortex negativo) - mede o movimento descendente do preço
 
 Principais sinais do indicador:
 - Comprar quando VI+ cruza VI- de baixo para cima
 - Vender quando VI- cruza VI+ de baixo para cima
 - O grau de separação entre as linhas indica a força da tendência
 
-O Vortex Indicator é particularmente útil para:
+O indicador Vortex é particularmente útil para:
 - Determinar o início de novas tendências
 - Avaliar a força de uma tendência existente
 - Identificar potenciais pontos de inversão
@@ -27,7 +27,7 @@ O Vortex Indicator é particularmente útil para:
 
 ## Cálculo
 
-O cálculo do Vortex Indicator é efetuado em vários passos:
+O cálculo do indicador Vortex é efetuado em vários passos:
 
 1. Calcular o movimento positivo e negativo:
    ```

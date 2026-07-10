@@ -26,12 +26,12 @@ APZ の計算は Exponential Moving Average (EMA) と Average True Range (ATR) �
 
 1. まず、指定期間における価格の EMA を計算します。
    ```
-   EMA = Exponential Moving Average of price over Period
+   EMA = Period における価格の指数移動平均
    ```
 
 2. 次に、ATR を使用してボラティリティを計算します。
    ```
-   Volatility = Exponential Moving Average of ATR over Period
+   Volatility = Period における ATR の指数移動平均
    ```
 
 3. 上側および下側の APZ ラインは次のように計算されます。

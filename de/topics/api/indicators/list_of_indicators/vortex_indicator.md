@@ -1,22 +1,22 @@
 # VI
 
-**Vortex Indicator (VI)** ist ein technischer Indikator, der 2009 von Etienne und Julia Boisse entwickelt wurde. Der Indikator besteht aus zwei Linien, VI+ und VI-, die aufwärts- und abwärtsgerichtete Preisbewegungen anzeigen und dabei helfen, den Beginn neuer Trends zu erkennen und bestehende Trends zu bestätigen.
+**Vortex-Indikator (VI)** ist ein technischer Indikator, der 2009 von Etienne und Julia Boisse entwickelt wurde. Der Indikator besteht aus zwei Linien, VI+ und VI-, die aufwärts- und abwärtsgerichtete Preisbewegungen anzeigen und dabei helfen, den Beginn neuer Trends zu erkennen und bestehende Trends zu bestätigen.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [VortexIndicator](xref:StockSharp.Algo.Indicators.VortexIndicator).
 
 ## Beschreibung
 
-Der Vortex Indicator ist von den Prinzipien wirbelartiger Bewegungen in der Natur inspiriert und soll die zyklische Natur von Marktbewegungen abbilden. Er besteht aus zwei Linien:
+Der Vortex-Indikator ist von den Prinzipien wirbelartiger Bewegungen in der Natur inspiriert und soll die zyklische Natur von Marktbewegungen abbilden. Er besteht aus zwei Linien:
 
-- **VI+** (positiver Vortex Indicator) - misst aufwärtsgerichtete Preisbewegungen
-- **VI-** (negativer Vortex Indicator) - misst abwärtsgerichtete Preisbewegungen
+- **VI+** (positiver Vortex-Indikator) - misst aufwärtsgerichtete Preisbewegungen
+- **VI-** (negativer Vortex-Indikator) - misst abwärtsgerichtete Preisbewegungen
 
 Wichtige Indikatorsignale:
 - Kaufen, wenn VI+ VI- von unten nach oben kreuzt
 - Verkaufen, wenn VI- VI+ von unten nach oben kreuzt
 - Der Abstand zwischen den Linien zeigt die Trendstärke an
 
-Der Vortex Indicator ist besonders nützlich für:
+Der Vortex-Indikator ist besonders nützlich für:
 - Bestimmung des Beginns neuer Trends
 - Einschätzung der Stärke eines bestehenden Trends
 - Identifikation möglicher Wendepunkte
@@ -27,7 +27,7 @@ Der Vortex Indicator ist besonders nützlich für:
 
 ## Berechnung
 
-Die Berechnung des Vortex Indicator erfolgt in mehreren Schritten:
+Die Berechnung des Vortex-Indikators erfolgt in mehreren Schritten:
 
 1. Positive und negative Bewegung berechnen:
    ```

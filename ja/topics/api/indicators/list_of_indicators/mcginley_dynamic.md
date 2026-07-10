@@ -33,7 +33,7 @@ MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous
 初期 MGD 値には、通常、指定期間の単純移動平均が使用されます。
 
 ```
-For first calculation: MGD = SMA(Price, Length)
+初回計算: MGD = SMA(Price, Length)
 ```
 
 ## 解釈

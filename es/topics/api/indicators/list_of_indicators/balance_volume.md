@@ -18,7 +18,7 @@ El indicador BV es particularmente útil para:
 
 ## Cálculo
 
-El cálculo de Balance Volume indicator se basa en comparar el precio de cierre con el precio de cierre anterior y ponderar el volumen de negociación:
+El cálculo del indicador Balance Volume se basa en comparar el precio de cierre con el precio de cierre anterior y ponderar el volumen de negociación:
 
 ```
 Si Close > Previous Close:
@@ -33,7 +33,7 @@ donde:
 - Close - precio de cierre actual
 - Anterior Close - precio de cierre anterior
 - Volume - volumen de operaciones actual
-- BV anterior - valor Balance Volume indicator anterior
+- BV anterior - valor anterior del indicador Balance Volume
 
 ## Interpretación
 

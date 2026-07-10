@@ -1877,6 +1877,107 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorFormulaNotesDoNotKeepEnglishProseFragments()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Exponential Moving Average of price over Period",
+			"Exponential Moving Average of ATR over Period",
+			"Highest High value over Period",
+			"Lowest Low value over Period",
+			"Average TR value over Period",
+			"Highest value of upper band over StopPeriod",
+			"Lowest value of lower band over StopPeriod",
+			"For first calculation:",
+			"Extract Top N Spectral Components based on amplitude",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!text.Contains(phrase, StringComparison.OrdinalIgnoreCase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: indicator formula note keeps English prose fragment '{phrase}'. Localize explanatory words around invariant formula terms.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepKnownEnglishGenericIndicatorPhrases()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Aroon Indicator",
+			"Balance Volume indicator",
+			"Lunar Phase indicator",
+			"Momentum Pinball Indicator",
+			"Vortex Indicator",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: indicator documentation keeps English generic phrase '{phrase}'. Localize generic words such as 'Indicator' while keeping invariant names or acronyms.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void SpanishIndicatorDocsDoNotKeepEnglishGenericIndicatorWord()
+	{
+		var errors = new List<string>();
+		var indicatorRoot = Path.Combine(_repoRoot, "es", "topics", "api", "indicators", "list_of_indicators");
+
+		foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!ContainsStandaloneText(text, "indicator"))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Spanish indicator documentation keeps English generic word 'indicator'. Use 'indicador' unless it is an invariant identifier.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

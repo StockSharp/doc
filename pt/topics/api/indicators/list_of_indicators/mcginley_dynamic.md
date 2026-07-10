@@ -33,7 +33,7 @@ Onde:
 Para o valor inicial do MGD, normalmente é usada uma média móvel simples durante o período especificado:
 
 ```
-For first calculation: MGD = SMA(Price, Length)
+Primeiro cálculo: MGD = SMA(Price, Length)
 ```
 
 ## Interpretação

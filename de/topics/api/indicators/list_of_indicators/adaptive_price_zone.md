@@ -26,12 +26,12 @@ Die APZ-Berechnung basiert auf dem Exponential Moving Average (EMA) und dem Aver
 
 1. Zunächst wird der EMA des Preises für die angegebene Periode berechnet:
    ```
-   EMA = Exponential Moving Average of price over Period
+   EMA = exponentieller gleitender Durchschnitt des Preises über Period
    ```
 
 2. Danach wird die Volatilität mit ATR berechnet:
    ```
-   Volatility = Exponential Moving Average of ATR over Period
+   Volatility = exponentieller gleitender Durchschnitt des ATR über Period
    ```
 
 3. Die oberen und unteren APZ-Linien werden wie folgt berechnet:

@@ -29,13 +29,13 @@ O cálculo do Chande Kroll Stop envolve os seguintes passos:
 
 1. Determinar os extremos máximo e mínimo ao longo do Period:
    ```
-   HighestHigh = Highest High value over Period
-   LowestLow = Lowest Low value over Period
+   HighestHigh = valor High mais alto durante Period
+   LowestLow = valor Low mais baixo durante Period
    ```
 
 2. Calcular o Average True Range (ATR) ao longo do Period:
    ```
-   ATR = Average TR value over Period
+   ATR = valor TR médio durante Period
    ```
 
 3. Calcular as bandas superior e inferior:
@@ -46,8 +46,8 @@ O cálculo do Chande Kroll Stop envolve os seguintes passos:
 
 4. Determinar as linhas de stop finais com base no StopPeriod:
    ```
-   Upper Stop = Highest value of upper band over StopPeriod
-   Lower Stop = Lowest value of lower band over StopPeriod
+   Upper Stop = valor mais alto da banda superior durante StopPeriod
+   Lower Stop = valor mais baixo da banda inferior durante StopPeriod
    ```
 
 ## Interpretação

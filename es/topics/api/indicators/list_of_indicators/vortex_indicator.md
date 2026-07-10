@@ -1,6 +1,6 @@
 # VI
 
-**Vortex Indicator (VI)** es un indicador técnico desarrollado por Etienne y Julia Boisse en 2009. El indicador consta de dos líneas, VI+ y VI-, que muestran el movimiento de precios al alza y a la baja, lo que ayuda a identificar el comienzo de nuevas tendencias y confirmar las existentes.
+**Indicador Vortex (VI)** es un indicador técnico desarrollado por Etienne y Julia Boisse en 2009. El indicador consta de dos líneas, VI+ y VI-, que muestran el movimiento de precios al alza y a la baja, lo que ayuda a identificar el comienzo de nuevas tendencias y confirmar las existentes.
 
 Para utilizar el indicador, debe utilizar la clase [VortexIndicator](xref:StockSharp.Algo.Indicators.VortexIndicator).
 

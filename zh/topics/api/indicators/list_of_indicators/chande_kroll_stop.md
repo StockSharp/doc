@@ -29,13 +29,13 @@ Chande Kroll 停止计算涉及以下步骤：
 
 1. 确定周期内的高低极值：
    ```
-   HighestHigh = Highest High value over Period
-   LowestLow = Lowest Low value over Period
+   HighestHigh = Period 内 High 的最高值
+   LowestLow = Period 内 Low 的最低值
    ```
 
 2. 计算一段时间的平均真实波幅（ATR）:
    ```
-   ATR = Average TR value over Period
+   ATR = Period 内 TR 的平均值
    ```
 
 3. 计算上轨和下轨：
@@ -46,8 +46,8 @@ Chande Kroll 停止计算涉及以下步骤：
 
 4. 根据停车周期确定最终停止线：
    ```
-   Upper Stop = Highest value of upper band over StopPeriod
-   Lower Stop = Lowest value of lower band over StopPeriod
+   Upper Stop = StopPeriod 内上轨的最高值
+   Lower Stop = StopPeriod 内下轨的最低值
    ```
 
 ## 解释

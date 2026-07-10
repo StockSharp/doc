@@ -1,4 +1,4 @@
-﻿# LP
+# LP
 
 **Lunar Phase (LP)** es un indicador técnico no convencional basado en datos astronómicos sobre las fases lunares para analizar la influencia potencial de los ciclos lunares en los mercados financieros.
 
@@ -22,7 +22,7 @@ El indicador rastrea la fase lunar actual y representa esta información como un
 
 ## Cálculo
 
-El cálculo de Lunar Phase indicator se basa en algoritmos astronómicos para determinar la fase lunar actual:
+El cálculo del indicador Lunar Phase se basa en algoritmos astronómicos para determinar la fase lunar actual:
 
 1. Determine la cantidad de días transcurridos desde el inicio del ciclo lunar (luna nueva):
    ```
@@ -38,7 +38,7 @@ El valor resultante es el indicador Lunar Phase (LP).
 
 ## Interpretación
 
-La interpretación de Lunar Phase indicator puede variar, ya que es una herramienta de análisis técnico poco convencional. Sin embargo, existen algunos enfoques comúnmente aceptados:
+La interpretación del indicador Lunar Phase puede variar, ya que es una herramienta de análisis técnico poco convencional. Sin embargo, existen algunos enfoques comúnmente aceptados:
 
 1. **Posibles puntos de reversión**:
    - Algunos operadores creen que las lunas nueva y llena pueden coincidir con puntos de reversión del mercado.

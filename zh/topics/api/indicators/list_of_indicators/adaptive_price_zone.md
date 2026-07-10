@@ -26,12 +26,12 @@ APZ 计算基于指数移动平均线（EMA）和平均真实波幅（ATR）：
 
 1. 首先，计算指定期间的价格指数移动平均（EMA）：
    ```
-   EMA = Exponential Moving Average of price over Period
+   EMA = Period 内价格的指数移动平均
    ```
 
 2. 然后使用 ATR 计算波动性：
    ```
-   Volatility = Exponential Moving Average of ATR over Period
+   Volatility = Period 内 ATR 的指数移动平均
    ```
 
 3. 上下 APZ 线的计算如下：

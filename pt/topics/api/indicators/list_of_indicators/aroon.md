@@ -2,13 +2,13 @@
 
 ﻿# Aroon
 
-O **Aroon Indicator** é um indicador técnico desenvolvido por Tushar Chande em 1995 para identificar alterações de tendência e a força da tendência. O nome "Aroon" vem de uma palavra em sânscrito que significa "amanhecer de uma nova era".
+O **Indicador Aroon** é um indicador técnico desenvolvido por Tushar Chande em 1995 para identificar alterações de tendência e a força da tendência. O nome "Aroon" vem de uma palavra em sânscrito que significa "amanhecer de uma nova era".
 
 Para usar o indicador, é necessário usar a classe [Aroon](xref:StockSharp.Algo.Indicators.Aroon).
 
 ## Descrição
 
-O Aroon Indicator é composto por duas linhas:
+O indicador Aroon é composto por duas linhas:
 - **Aroon Up** - mede a força de uma tendência ascendente
 - **Aroon Down** - mede a força de uma tendência descendente
 
@@ -27,7 +27,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Aroon Indicator baseia-se na determinação do tempo (número de períodos) decorrido desde que foram atingidos os preços máximo e mínimo dentro do período especificado:
+O cálculo do indicador Aroon baseia-se na determinação do tempo (número de períodos) decorrido desde que foram atingidos os preços máximo e mínimo dentro do período especificado:
 
 1. Aroon Up é calculado usando a fórmula:
    ```

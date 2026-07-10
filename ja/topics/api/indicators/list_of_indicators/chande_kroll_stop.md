@@ -29,13 +29,13 @@ Chande Kroll Stop の計算には、次の手順が含まれます。
 
 1. Period にわたる高値と安値の極値を決定します。
    ```
-   HighestHigh = Highest High value over Period
-   LowestLow = Lowest Low value over Period
+   HighestHigh = Period における High の最大値
+   LowestLow = Period における Low の最小値
    ```
 
 2. Period にわたる Average True Range (ATR) を計算します。
    ```
-   ATR = Average TR value over Period
+   ATR = Period における TR の平均値
    ```
 
 3. 上側および下側のバンドを計算します。
@@ -46,8 +46,8 @@ Chande Kroll Stop の計算には、次の手順が含まれます。
 
 4. StopPeriod に基づいて最終的なストップラインを決定します。
    ```
-   Upper Stop = Highest value of upper band over StopPeriod
-   Lower Stop = Lowest value of lower band over StopPeriod
+   Upper Stop = StopPeriod における上側バンドの最大値
+   Lower Stop = StopPeriod における下側バンドの最小値
    ```
 
 ## 解釈

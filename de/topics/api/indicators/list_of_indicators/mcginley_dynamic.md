@@ -33,7 +33,7 @@ Dabei gilt:
 Für den anfänglichen MGD-Wert wird normalerweise ein einfacher gleitender Durchschnitt über den angegebenen Zeitraum verwendet:
 
 ```
-For first calculation: MGD = SMA(Price, Length)
+Erste Berechnung: MGD = SMA(Price, Length)
 ```
 
 ## Interpretation

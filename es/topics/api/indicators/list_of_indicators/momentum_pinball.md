@@ -56,7 +56,7 @@ donde:
 
 ## Interpretación
 
-El Momentum Pinball indicator se puede interpretar de la siguiente manera:
+El indicador Momentum Pinball se puede interpretar de la siguiente manera:
 
 1. **Niveles extremos**:
    - Los valores superiores a 0,8 indican condiciones de sobrecompra en el mercado.

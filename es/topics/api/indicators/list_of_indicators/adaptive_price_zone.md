@@ -26,12 +26,12 @@ El cálculo de APZ se basa en Exponential Moving Average (EMA) y Average True Ra
 
 1. Primero, calcule el precio EMA para el período especificado:
    ```
-   EMA = Exponential Moving Average of price over Period
+   EMA = media móvil exponencial del precio durante Period
    ```
 
 2. Luego calcule la volatilidad usando ATR:
    ```
-   Volatility = Exponential Moving Average of ATR over Period
+   Volatility = media móvil exponencial de ATR durante Period
    ```
 
 3. Las líneas APZ superior e inferior se calculan de la siguiente manera:
