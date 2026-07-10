@@ -36,7 +36,7 @@ def __init__(self):
 
 	# Strategieparameter initialisieren
 	self._candleTypeParam = self.Param("CandleType", DataType.TimeFrame(TimeSpan.FromMinutes(1))) \
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("Kerzentyp", "Kerzentyp für die Strategieberechnung.", "Allgemein")
 
 	self._long = self.Param("Long", 80)
 	self._short = self.Param("Short", 30)

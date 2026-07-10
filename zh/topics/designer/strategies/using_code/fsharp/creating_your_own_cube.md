@@ -22,7 +22,7 @@ type EmptyDiagramElement() as this =
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
 			.SetBasic(true)  // make the parameter visible in basic mode
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+			.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 
 	// 输出插槽是带 DiagramExternal 特性的事件
 	let output1Event = new Event<Unit>()
@@ -100,7 +100,7 @@ member this.Output2 = output2Event.Publish
 let minValueParam =
 	this.AddParam<int>("MinValue", 10)
 		.SetBasic(true)  // make the parameter visible in basic mode
-		.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+		.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 ```
 
 使用 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) 类后，系统会自动处理设置的保存和恢复。

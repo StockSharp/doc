@@ -22,7 +22,7 @@ type EmptyDiagramElement() as this =
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
 			.SetBasic(true)  // パラメーターを basic モードで表示します。
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+			.SetDisplay("パラメーター", "最小値", "最小値パラメーターの説明", 10)
 
 	// 出力ソケットは DiagramExternal 属性でマークされたイベントです。
 	let output1Event = new Event<Unit>()
@@ -100,7 +100,7 @@ member this.Output2 = output2Event.Publish
 let minValueParam =
 	this.AddParam<int>("MinValue", 10)
 		.SetBasic(true)  // パラメーターを basic モードで表示します。
-		.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+		.SetDisplay("パラメーター", "最小値", "最小値パラメーターの説明", 10)
 ```
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定を保存および復元する方法が自動的に利用されます。

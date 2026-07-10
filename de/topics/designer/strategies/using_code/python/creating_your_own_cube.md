@@ -38,7 +38,7 @@ class empty_diagram_element(DiagramExternalElement):
 		# Dieser Parameter heißt "MinValue" und hat den Standardwert 10
 		self._minValue = self.AddParam("MinValue", 10)\
 							.SetBasic(True)\
-							.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+							.SetDisplay("Parameter", "Mindestwert", "Beschreibung des Mindestwert-Parameter", 10)
 
 		# Ausgabeereignishandler als leere Listen initialisieren
 		# Abonnenten können diesen Handlern aufrufbare Methoden zuweisen
@@ -190,7 +190,7 @@ Zusätzlich wird gezeigt, wie eine Eigenschaft für den Würfel erstellt wird:
 ```python
 self._minValue = self.AddParam("MinValue", 10)\
 					.SetBasic(True)\
-					.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+					.SetDisplay("Parameter", "Mindestwert", "Beschreibung des Mindestwert-Parameter", 10)
 ```
 
 Bei Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) wird automatisch der Ansatz zum Speichern und Wiederherstellen von Einstellungen verwendet.

@@ -23,7 +23,7 @@ public class SmaStrategy : Strategy
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Base settings");
+							.SetDisplay("Long SMA length", string.Empty, "基本設定");
 	}
 }
 ```
@@ -40,7 +40,7 @@ public class SmaStrategy : Strategy
 
 ```cs
 _longSmaLength = Param(nameof(LongSmaLength), 80)
-					.SetDisplay("Long SMA length", "Period of the long moving average", "Base settings");
+					.SetDisplay("Long SMA length", "Period of the long moving average", "基本設定");
 ```
 
 ### SetValidator
@@ -218,18 +218,18 @@ public class SmaStrategy : Strategy
 		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetGreaterThanZero()
-							.SetDisplay("Long SMA length", string.Empty, "Base settings")
+							.SetDisplay("Long SMA length", string.Empty, "基本設定")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
 		
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
-							.SetDisplay("Short SMA length", string.Empty, "Base settings")
+							.SetDisplay("Short SMA length", string.Empty, "基本設定")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-					.SetDisplay("Series", string.Empty, "Base settings");
+					.SetDisplay("Series", string.Empty, "基本設定");
 	}
 
 	// ...

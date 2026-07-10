@@ -12,7 +12,7 @@ Patterns werden üblicherweise unterteilt in:
 
 ## Verwenden von Patterns
 
-### In Designer
+### Im Designer
 
 [Designer](../designer.md) enthält integrierte vordefinierte Candlestick-Muster, die in Ihrer Handelsstrategie verwendet werden können. Patterns werden über den [Indikator](../designer/strategies/using_visual_designer/elements/common/indicator.md)-Würfel aufgerufen, anschließend wird der entsprechende Wert ausgewählt. Das Pattern selbst wird aus der Dropdown-Liste im rechten Fenster ausgewählt.
 
@@ -24,11 +24,11 @@ Es ist auch möglich, vorhandene Patterns zu bearbeiten und eigene benutzerdefin
 
 Um ein eigenes Pattern zu erstellen, klicken Sie oben im Fenster auf die Schaltfläche ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png). Ein Klick auf die Schaltfläche ![DesignerDeleteButton](../../images/designer_delete_button.png) löscht das Pattern.
 
-### In Terminal
+### Im Terminal
 
 In [Terminal](../terminal.md) werden Patterns wie jeder andere Indikator zum Chart hinzugefügt. Klicken Sie dazu einfach mit der rechten Maustaste auf den Chart und wählen Sie den passenden Indikator aus der Liste der verfügbaren Indikatoren aus.
 
-### In StockSharp API
+### In der StockSharp API
 
 Bei Verwendung von [S#](../api.md) (oder beim Erstellen von [Strategien aus Code](../designer/strategies/using_code.md) in Designer) erfolgt die Arbeit mit Patterns wie bei jedem anderen Indikator. Verwendungsbeispiel:
 

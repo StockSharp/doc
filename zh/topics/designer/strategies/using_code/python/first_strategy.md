@@ -36,7 +36,7 @@ def __init__(self):
 
 	# 初始化策略参数
 	self._candleTypeParam = self.Param("CandleType", DataType.TimeFrame(TimeSpan.FromMinutes(1))) \
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("K线类型", "用于策略计算的K线类型。", "常规")
 
 	self._long = self.Param("Long", 80)
 	self._short = self.Param("Short", 30)

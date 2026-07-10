@@ -29,7 +29,7 @@ Quanto mais contexto a IA tiver, mais preciso será o resultado. Especifique:
 - Tipo de estratégia (seguimento de tendência, arbitragem, scalping)
 - Restrições (apenas long, tamanho máximo de posição, etc.)
 
-### 2. Use CLAUDE.md / .cursorrules
+### 2. Usar CLAUDE.md / .cursorrules
 
 Crie um arquivo de regras do projeto na raiz do repositório:
 

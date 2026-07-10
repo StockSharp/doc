@@ -15,7 +15,7 @@ Esta secção não descreve construções da linguagem F# (nem a [Strategy](../.
 // Parâmetro para o tipo de candle
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("Tipo de candle", "Tipo de candle para cálculo da estratégia.", "Configurações gerais")
 
 // Parâmetro para a SMA longa
 let longParam =

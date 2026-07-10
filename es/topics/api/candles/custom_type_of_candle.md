@@ -254,17 +254,17 @@ public class DeltaCandleStrategy : Strategy
 	{
 		// Parámetros de la estrategia
 		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
-			.SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
+			.SetDisplay("Valor umbral de delta", "Valor delta de volumen para la formación de velas", "Configuración principal")
 			.SetGreaterThanZero()
 			.SetCanOptimize(true)
 			.SetOptimize(500m, 2000m, 100m);
 
 		_volume = Param(nameof(Volume), 1m)
-			.SetDisplay("Order Volume", "Volume for trading operations", "Main Settings")
+			.SetDisplay("Volumen de orden", "Volumen para operaciones de trading", "Configuración principal")
 			.SetGreaterThanZero();
 
 		_signalDelta = Param(nameof(SignalDelta), 500m)
-			.SetDisplay("Minimum Delta for Signal", "Minimum delta value for signal generation", "Main Settings")
+			.SetDisplay("Delta mínimo para señal", "Valor delta mínimo para la generación de señales", "Configuración principal")
 			.SetGreaterThanZero()
 			.SetCanOptimize(true);
 

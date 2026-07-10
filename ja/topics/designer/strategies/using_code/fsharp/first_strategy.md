@@ -15,7 +15,7 @@
 // ローソク足タイプのパラメーター
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("ローソク足タイプ", "戦略計算用のローソク足タイプ。", "一般")
 
 // 長期 SMA のパラメーター
 let longParam =

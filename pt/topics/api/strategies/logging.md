@@ -131,7 +131,7 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
-					.SetDisplay("Logging Level", "Level of log message detail", "Logging Settings");
+					.SetDisplay("Nível de log", "Nível de detalhe das mensagens de log", "Configurações de log");
 	}
 	
 	public override LogLevels LogLevel

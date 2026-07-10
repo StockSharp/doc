@@ -254,17 +254,17 @@ public class DeltaCandleStrategy : Strategy
 	{
 		// 戦略パラメーター
 		_deltaThreshold = Param(nameof(DeltaThreshold), 1000m)
-			.SetDisplay("Delta Threshold Value", "Volume delta value for candle formation", "Main Settings")
+			.SetDisplay("デルタしきい値", "ローソク足形成用の出来高デルタ値", "メイン設定")
 			.SetGreaterThanZero()
 			.SetCanOptimize(true)
 			.SetOptimize(500m, 2000m, 100m);
 
 		_volume = Param(nameof(Volume), 1m)
-			.SetDisplay("Order Volume", "Volume for trading operations", "Main Settings")
+			.SetDisplay("注文数量", "取引操作の数量", "メイン設定")
 			.SetGreaterThanZero();
 
 		_signalDelta = Param(nameof(SignalDelta), 500m)
-			.SetDisplay("Minimum Delta for Signal", "Minimum delta value for signal generation", "Main Settings")
+			.SetDisplay("シグナル用の最小デルタ", "シグナル生成用の最小デルタ値", "メイン設定")
 			.SetGreaterThanZero()
 			.SetCanOptimize(true);
 

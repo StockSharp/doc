@@ -24,7 +24,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 
 		_minValue = AddParam("MinValue", 10)
 			.SetBasic(true) // tornar o parâmetro visível no modo básico
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+			.SetDisplay("Parâmetros", "Valor mínimo", "Descrição do parâmetro de valor mínimo", 10);
 	}
 
 	// sockets de saída são eventos marcados com o atributo DiagramExternal
@@ -100,7 +100,7 @@ Além disso, é mostrado como criar uma propriedade para o cubo:
 ```cs
 _minValue = AddParam("MinValue", 10)
 	.SetBasic(true) // tornar o parâmetro visível no modo básico
-	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
+	.SetDisplay("Parâmetros", "Valor mínimo", "Descrição do parâmetro de valor mínimo", 10);
 ```
 
 A utilização da classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) aplica automaticamente a abordagem de guardar e restaurar definições.

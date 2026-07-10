@@ -38,7 +38,7 @@ class empty_diagram_element(DiagramExternalElement):
 		# Este parámetro se llama "MinValue" y tiene un valor predeterminado de 10
 		self._minValue = self.AddParam("MinValue", 10)\
 							.SetBasic(True)\
-							.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+							.SetDisplay("Parámetros", "Valor mínimo", "Descripción del parámetro de valor mínimo", 10)
 
 		# Inicializar manejadores de eventos de salida como listas vacías
 		# Los suscriptores pueden asignar métodos invocables a estos manejadores
@@ -190,7 +190,7 @@ Además, se muestra cómo crear una propiedad para el cubo:
 ```python
 self._minValue = self.AddParam("MinValue", 10)\
 					.SetBasic(True)\
-					.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+					.SetDisplay("Parámetros", "Valor mínimo", "Descripción del parámetro de valor mínimo", 10)
 ```
 
 Al usar la clase [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1), se aplica automáticamente el enfoque de guardar y restaurar configuración.

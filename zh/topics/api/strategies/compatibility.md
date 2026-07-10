@@ -49,7 +49,7 @@ public int LongSmaLength
 public SmaStrategy()
 {
 	_longSmaLength = Param(nameof(LongSmaLength), 80)
-						.SetDisplay("Long SMA length", string.Empty, "Base settings");
+						.SetDisplay("Long SMA length", string.Empty, "基本设置");
 }
 
 // 错误：使用普通属性
@@ -344,15 +344,15 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
-							.SetDisplay("Long SMA length", string.Empty, "Base settings")
+							.SetDisplay("Long SMA length", string.Empty, "基本设置")
 							.SetCanOptimize(true);
 							
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
-							.SetDisplay("Short SMA length", string.Empty, "Base settings")
+							.SetDisplay("Short SMA length", string.Empty, "基本设置")
 							.SetCanOptimize(true);
 							
 		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
-					.SetDisplay("Series", string.Empty, "Base settings");
+					.SetDisplay("Series", string.Empty, "基本设置");
 	}
 
 	protected override void OnStarted2(DateTime time)

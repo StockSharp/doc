@@ -15,7 +15,7 @@
 // K线类型参数
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("K线类型", "用于策略计算的K线类型。", "常规")
 
 // 长周期 SMA 参数
 let longParam =

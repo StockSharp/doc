@@ -124,6 +124,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Tools → Options → NuGet Package Manager → Package Sources",
 	];
 
+	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"Description",
+		"Example",
+		"Examples",
+		"Input",
+		"Incoming Socket",
+		"Incoming Sockets",
+		"Inputs",
+		"Next Steps",
+		"Output",
+		"Outgoing Socket",
+		"Outgoing Sockets",
+		"Outputs",
+		"Overview",
+		"Parameters",
+		"Prerequisites",
+		"Properties",
+		"Result",
+		"Results",
+		"See Also",
+		"Usage",
+	};
+
 	private static readonly (string Name, string Pattern)[] _knownEnglishCodeOutputPatterns =
 	[
 		("subscription lifecycle output", @"\bSubscription (?:started|completed|interrupted|online|switched to real-time mode)\b"),
@@ -154,27 +178,39 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"created",
 		"data",
 		"delta",
+		"description",
 		"direction",
+		"display",
 		"error",
 		"exchange",
 		"exit",
 		"failed",
 		"found",
+		"general",
 		"greater",
 		"instrument",
 		"instruments",
 		"invalid",
 		"large",
+		"level",
 		"less",
 		"loaded",
+		"logging",
 		"lost",
+		"main",
 		"message",
+		"max",
+		"maximum",
+		"min",
+		"minimum",
 		"mode",
 		"not",
 		"online",
 		"operation",
 		"order",
 		"orders",
+		"parameter",
+		"parameters",
 		"percentage",
 		"price",
 		"profit",
@@ -185,6 +221,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"rule",
 		"search",
 		"sell",
+		"setting",
+		"settings",
 		"signal",
 		"spread",
 		"successfully",
@@ -237,11 +275,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Backup",
 		"Basket",
 		"Black-Scholes",
+		"C#",
 		"Chart",
 		"Debugging",
 		"Designer",
 		"Emulation",
 		"Export",
+		"F#",
 		"Flag",
 		"Hedging",
 		"Hydra",
@@ -251,23 +291,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Index",
 		"Indexer",
 		"Installer",
+		"Interpretation",
 		"Interface",
+		"JetBrains Rider",
 		"Level 1",
 		"Level1",
 		"MATLAB",
+		"Open Source",
 		"Orders",
 		"Portfolios",
 		"Position",
 		"RemoteManager",
+		"Rider",
 		"Runner",
 		"Shell",
 		"Simulator",
+		"Start / Stop",
 		"Strikes",
 		"Terminal",
+		"Testing",
 		"Ticks",
 		"Trades",
+		"Trading",
 		"UDP Dumper",
 		"Variable",
+		"Via JetBrains Rider",
+		"Via Visual Studio",
+		"Visual Studio",
+		"Visual Studio 2022+",
 	};
 
 	private static readonly HashSet<string> _allowedInvariantIndicatorHeadingPaths = new(StringComparer.OrdinalIgnoreCase)
@@ -676,8 +727,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
 		{
 			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
-			var defaultHeading = GetFirstHeadingText(defaultFile);
-			if (defaultHeading.Length == 0)
+			var defaultHeadings = EnumerateHeadingTexts(ReadAllText(defaultFile)).ToArray();
+			if (defaultHeadings.Length == 0)
 				continue;
 
 			foreach (var lang in GetTranslatedContentLanguages())
@@ -687,14 +738,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				if (!File.Exists(file))
 					continue;
 
-				var localizedHeading = GetFirstHeadingText(file);
-				if (!localizedHeading.Equals(defaultHeading, StringComparison.Ordinal))
-					continue;
+				var localizedHeadings = EnumerateHeadingTexts(ReadAllText(file)).ToArray();
+				var count = Math.Min(defaultHeadings.Length, localizedHeadings.Length);
 
-				if (IsAllowedInvariantHeading(relative, localizedHeading))
-					continue;
+				for (var i = 0; i < count; i++)
+				{
+					var defaultHeading = defaultHeadings[i].Text;
+					var localizedHeading = localizedHeadings[i];
+					if (!localizedHeading.Text.Equals(defaultHeading, StringComparison.Ordinal))
+						continue;
 
-				errors.Add($"{RelativeToRepo(file)}: H1 is identical to the English H1 '{localizedHeading}'. Localize it or add a deliberate allowlist entry.");
+					if (IsAllowedInvariantHeading(relative, localizedHeading.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{localizedHeading.Line}: heading is identical to the English source heading '{localizedHeading.Text}'. Localize it or add a deliberate allowlist entry.");
+				}
 			}
 		}
 
@@ -816,6 +874,33 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English UI phrase '{phrase}'.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownDoesNotKeepKnownEnglishSectionLabels()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var normalized = NormalizeMarkdownTextForTranslationCheck(text);
+					if (!_knownEnglishSectionLabels.Contains(normalized) || IsAllowedInvariantMarkdownText(relative, text, normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: markdown section label '{normalized}' is still English. Localize it or add a deliberate allowlist entry.");
 				}
 			}
 		}
@@ -958,6 +1043,45 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string looks like untranslated English. Localize it or add a deliberate allowlist entry. String: {Truncate(output.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeUiStringsAreTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var defaultUiStrings = EnumerateCodeUiStrings(ReadAllText(defaultFile))
+				.Select(uiString => NormalizeCodeUiStringForTranslationCheck(uiString.Text))
+				.Where(IsTranslatableEnglishCodeUiString)
+				.ToHashSet(StringComparer.Ordinal);
+
+			if (defaultUiStrings.Count == 0)
+				continue;
+
+			foreach (var lang in GetTranslatedContentLanguages())
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var uiString in EnumerateCodeUiStrings(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeUiStringForTranslationCheck(uiString.Text);
+					if (!defaultUiStrings.Contains(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{uiString.Line}: code UI string is identical to the English source. Localize it or add a deliberate allowlist entry. String: {Truncate(uiString.Text, 180)}");
 				}
 			}
 		}
@@ -1489,6 +1613,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			: GetInlineText(heading.Inline);
 	}
 
+	private static IEnumerable<HeadingText> EnumerateHeadingTexts(string markdown)
+	{
+		var document = Markdown.Parse(markdown, _markdown);
+		var lineStarts = GetLineStarts(markdown);
+
+		foreach (var heading in EnumerateHeadings(document))
+		{
+			if (heading.Inline is null)
+				continue;
+
+			var text = GetInlineText(heading.Inline);
+			if (text.Length == 0)
+				continue;
+
+			yield return new HeadingText(text, GetLineNumber(lineStarts, heading.Span.Start));
+		}
+	}
+
 	private static string GetInlineText(ContainerInline inline)
 	{
 		var text = string.Concat(inline.Descendants<LiteralInline>().Select(literal => literal.Content.ToString()));
@@ -1503,6 +1645,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var normalizedPath = relativePath.Replace('\\', '/');
 
+		if (IsCodeLikeHeading(heading))
+			return true;
+
 		if (normalizedPath.StartsWith("topics/api/connectors/", StringComparison.OrdinalIgnoreCase))
 			return true;
 
@@ -1513,6 +1658,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			if (_allowedInvariantIndicatorHeadingPaths.Contains(normalizedPath))
 				return true;
+		}
+
+		if (normalizedPath.StartsWith("topics/api/patterns/", StringComparison.OrdinalIgnoreCase)
+			&& IsCandlePatternHeading(heading))
+		{
+			return true;
 		}
 
 		return _allowedInvariantHeadingTexts.Contains(heading) || IsShortInvariantName(heading);
@@ -1533,6 +1684,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		=> !text.Contains(' ')
 			&& !text.Contains('-')
 			&& Regex.IsMatch(text, @"^[A-Za-z][A-Za-z0-9]*$", RegexOptions.CultureInvariant);
+
+	private static bool IsCodeLikeHeading(string text)
+	{
+		if (Regex.IsMatch(text, @"^[A-Z][A-Za-z0-9]*(?:\.[A-Z][A-Za-z0-9]*)*(?:\(\))?$", RegexOptions.CultureInvariant))
+			return true;
+
+		if (Regex.IsMatch(text, @"^I[A-Z][A-Za-z0-9]+$", RegexOptions.CultureInvariant))
+			return true;
+
+		return Regex.IsMatch(text, @"^[A-Z][A-Za-z0-9]+\s+(?:enum|class|interface)$", RegexOptions.CultureInvariant);
+	}
+
+	private static bool IsCandlePatternHeading(string text)
+	{
+		if (text.Length is < 4 or > 64)
+			return false;
+
+		if (!Regex.IsMatch(text, @"^[A-Z0-9][A-Za-z0-9' -]+$", RegexOptions.CultureInvariant))
+			return false;
+
+		var words = Regex.Matches(text, @"[A-Za-z]+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value)
+			.ToArray();
+
+		return words.Length > 0 && words.All(word => char.IsUpper(word[0]));
+	}
 
 	private static MarkdownTarget ResolveMarkdownPage(string lang, string relativePath)
 	{
@@ -1759,6 +1936,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 		var defaultMarkdownTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
 		var defaultOutputsByRelativePath = BuildDefaultCodeOutputMap(defaultRoot);
+		var defaultUiStringsByRelativePath = BuildDefaultCodeUiStringMap(defaultRoot);
 		var defaultCommentsByRelativePath = BuildDefaultCodeCommentMap(defaultRoot);
 		var textExtensions = new HashSet<string>(_textFileExtensions, StringComparer.OrdinalIgnoreCase);
 
@@ -1774,6 +1952,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				.ToArray();
 
 			var outputCount = 0;
+			var uiStringCount = 0;
 			var commentCount = 0;
 			var markdownTextCount = 0;
 
@@ -1786,6 +1965,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var markdown = ReadAllText(file);
 				defaultMarkdownTextByRelativePath.TryGetValue(relative, out var defaultMarkdownTexts);
 				defaultOutputsByRelativePath.TryGetValue(relative, out var defaultOutputs);
+				defaultUiStringsByRelativePath.TryGetValue(relative, out var defaultUiStrings);
 				defaultCommentsByRelativePath.TryGetValue(relative, out var defaultComments);
 
 				foreach (var textLine in EnumerateTranslatableMarkdownTextLines(markdown, relative))
@@ -1796,6 +1976,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 					issues.Add(new AuditIssue("markdown-text-exact-english", RelativeToRepo(file), textLine.Line, $"is identical to the English source text: {Truncate(textLine.Text, 180)}"));
 				}
+
+				foreach (var sectionLabel in EnumerateKnownEnglishSectionLabels(markdown, relative))
+					issues.Add(new AuditIssue("markdown-section-label-english", RelativeToRepo(file), sectionLabel.Line, $"section label is still English: {sectionLabel.Text}"));
 
 				foreach (var textLine in EnumerateLikelyEnglishMarkdownTextLines(markdown, relative))
 					issues.Add(new AuditIssue("markdown-text-likely-english", RelativeToRepo(file), textLine.Line, $"looks like untranslated English: {Truncate(textLine.Text, 180)}"));
@@ -1824,6 +2007,16 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						issues.Add(new AuditIssue("code-output-likely-english", RelativeToRepo(file), output.Line, $"looks like untranslated English: {Truncate(output.Text, 180)}"));
 				}
 
+				foreach (var uiString in EnumerateCodeUiStrings(markdown))
+				{
+					uiStringCount++;
+					var normalized = NormalizeCodeUiStringForTranslationCheck(uiString.Text);
+					if (normalized.Length == 0 || defaultUiStrings is null || !defaultUiStrings.Contains(normalized))
+						continue;
+
+					issues.Add(new AuditIssue("code-ui-exact-english", RelativeToRepo(file), uiString.Line, $"is identical to the English source UI string: {Truncate(uiString.Text, 180)}"));
+				}
+
 				foreach (var comment in EnumerateCodeComments(markdown))
 				{
 					commentCount++;
@@ -1835,7 +2028,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				}
 			}
 
-			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, outputCount, commentCount));
+			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, outputCount, uiStringCount, commentCount));
 		}
 
 		return new LocalizedDocumentationAudit(languages, stats, issues);
@@ -1871,6 +2064,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			})
 			.Where(entry => entry.Outputs.Count > 0)
 			.ToDictionary(entry => entry.RelativePath, entry => entry.Outputs, StringComparer.OrdinalIgnoreCase);
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultCodeUiStringMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file => new
+			{
+				RelativePath = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'),
+				UiStrings = EnumerateCodeUiStrings(ReadAllText(file))
+					.Select(uiString => NormalizeCodeUiStringForTranslationCheck(uiString.Text))
+					.Where(IsTranslatableEnglishCodeUiString)
+					.ToHashSet(StringComparer.Ordinal),
+			})
+			.Where(entry => entry.UiStrings.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.UiStrings, StringComparer.OrdinalIgnoreCase);
 
 	private static Dictionary<string, HashSet<string>> BuildDefaultCodeCommentMap(string defaultRoot)
 		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
@@ -1936,19 +2143,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine();
 		report.AppendLine("## Coverage");
 		report.AppendLine();
-		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Code output strings | Code comments |");
-		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: |");
+		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Code output strings | Code UI strings | Code comments |");
+		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: | ---: |");
 
 		foreach (var stat in audit.Stats)
-			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.CodeOutputStrings} | {stat.CodeComments} |");
+			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.CodeOutputStrings} | {stat.CodeUiStrings} | {stat.CodeComments} |");
 
 		report.AppendLine();
 		report.AppendLine("## Checks");
 		report.AppendLine();
 		report.AppendLine("- Markdown text: full normalized English-like visible text candidates must not be identical to the English source.");
+		report.AppendLine("- Markdown text: short known section labels must not remain in English.");
 		report.AppendLine("- Markdown text: visible localized text must not have a high ratio of English stop words.");
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
+		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
 		report.AppendLine("- Code comments: exact matches with English source comments.");
 		report.AppendLine("- Markdown structure parity is covered by `LocalizedMarkdownStructureMatchesDefaultLanguage`.");
 		report.AppendLine();
@@ -1988,6 +2197,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		{
 			var normalized = NormalizeMarkdownTextForTranslationCheck(text);
 			if (!IsTranslatableEnglishMarkdownText(relativePath, text, normalized))
+				continue;
+
+			yield return new MarkdownTextLine(normalized, line);
+		}
+	}
+
+	private static IEnumerable<MarkdownTextLine> EnumerateKnownEnglishSectionLabels(string markdown, string relativePath)
+	{
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+		{
+			var normalized = NormalizeMarkdownTextForTranslationCheck(text);
+			if (!_knownEnglishSectionLabels.Contains(normalized) || IsAllowedInvariantMarkdownText(relativePath, text, normalized))
 				continue;
 
 			yield return new MarkdownTextLine(normalized, line);
@@ -2155,11 +2376,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
 		{
 			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
+			var inOutputInvocation = false;
 			using var reader = new StringReader(block.Groups["code"].Value);
 
 			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
 			{
-				if (!Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant))
+				if (!inOutputInvocation && IsCodeOutputInvocationStart(text))
+					inOutputInvocation = true;
+
+				if (!inOutputInvocation)
 					continue;
 
 				foreach (Match literal in Regex.Matches(text, @"\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
@@ -2171,9 +2396,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					if (value.Length > 0)
 						yield return new CodeOutputString(value, line);
 				}
+
+				if (IsCodeOutputInvocationEnd(text))
+					inOutputInvocation = false;
 			}
 		}
 	}
+
+	private static bool IsCodeOutputInvocationStart(string text)
+		=> Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant);
+
+	private static bool IsCodeOutputInvocationEnd(string text)
+		=> Regex.IsMatch(text, @"\)\s*;", RegexOptions.CultureInvariant);
 
 	private static string NormalizeCodeOutputForTranslationCheck(string text)
 		=> Regex.Replace(text ?? string.Empty, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
@@ -2199,6 +2433,70 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 
 		return words >= 2 && hits >= 2;
+	}
+
+	private static IEnumerable<CodeUiString> EnumerateCodeUiStrings(string markdown)
+	{
+		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+		{
+			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
+			var inUiInvocation = false;
+			using var reader = new StringReader(block.Groups["code"].Value);
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!inUiInvocation && IsCodeUiInvocationStart(text))
+					inUiInvocation = true;
+
+				if (!inUiInvocation)
+					continue;
+
+				foreach (Match literal in Regex.Matches(text, @"\$?""(?<value>[^""\\]*(?:\\.[^""\\]*)*)""", RegexOptions.CultureInvariant))
+				{
+					var value = literal.Groups["value"].Value;
+					value = Regex.Replace(value, @"\{[^{}]*\}", " ", RegexOptions.CultureInvariant);
+					value = Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+					if (value.Length > 0)
+						yield return new CodeUiString(value, line);
+				}
+
+				if (IsCodeUiInvocationEnd(text))
+					inUiInvocation = false;
+			}
+		}
+	}
+
+	private static bool IsCodeUiInvocationStart(string text)
+		=> Regex.IsMatch(text, @"\bSetDisplay\s*\(", RegexOptions.CultureInvariant);
+
+	private static bool IsCodeUiInvocationEnd(string text)
+		=> Regex.IsMatch(text, @"\)\s*;?\s*$", RegexOptions.CultureInvariant);
+
+	private static string NormalizeCodeUiStringForTranslationCheck(string text)
+		=> Regex.Replace(text ?? string.Empty, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static bool IsTranslatableEnglishCodeUiString(string text)
+	{
+		if (string.IsNullOrWhiteSpace(text))
+			return false;
+
+		if (Regex.IsMatch(text, @"^(?:[A-Z0-9_./:+#-]+|[a-zA-Z_][a-zA-Z0-9_.]*\(\))$", RegexOptions.CultureInvariant))
+			return false;
+
+		if (_knownEnglishSectionLabels.Contains(text))
+			return true;
+
+		var words = Regex.Matches(text, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 2 && !_allowedInvariantCodeOutputWords.Contains(word))
+			.ToArray();
+
+		if (words.Length == 0)
+			return false;
+
+		var hits = words.Count(word => _translatableEnglishCodeOutputWords.Contains(word));
+		return words.Length == 1 ? hits == 1 : hits >= 1;
 	}
 
 	private static string NormalizeCodeCommentForTranslationCheck(string comment)
@@ -2556,11 +2854,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private readonly record struct TableShape(int Columns, int BodyRows);
 
+	private readonly record struct HeadingText(string Text, int Line);
+
 	private readonly record struct MarkdownTextLine(string Text, int Line);
 
 	private readonly record struct CodeComment(string Text, int Line);
 
 	private readonly record struct CodeOutputString(string Text, int Line);
+
+	private readonly record struct CodeUiString(string Text, int Line);
 
 	private sealed record LocalizedDocumentationAudit(
 		IReadOnlyList<string> Languages,
@@ -2573,6 +2875,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		int TextFiles,
 		int MarkdownTextCandidates,
 		int CodeOutputStrings,
+		int CodeUiStrings,
 		int CodeComments);
 
 	private readonly record struct AuditIssue(string Category, string File, int Line, string Message)

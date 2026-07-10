@@ -38,7 +38,7 @@ class empty_diagram_element(DiagramExternalElement):
 		# 此参数名为 "MinValue"，默认值为 10
 		self._minValue = self.AddParam("MinValue", 10)\
 							.SetBasic(True)\
-							.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+							.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 
 		# 将输出事件处理程序初始化为空列表
 		# 订阅者可以为这些处理程序分配可调用方法
@@ -190,7 +190,7 @@ def remove_Output2(self, handler):
 ```python
 self._minValue = self.AddParam("MinValue", 10)\
 					.SetBasic(True)\
-					.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+					.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 ```
 
 使用 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) 类后，系统会自动处理设置的保存和恢复。

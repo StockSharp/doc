@@ -15,7 +15,7 @@ Dieser Abschnitt beschreibt keine F#-Sprachkonstrukte (oder [Strategy](../../../
 // Parameter für den Kerzentyp
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Candle type", "Candle type for strategy calculation.", "General")
+		.SetDisplay("Kerzentyp", "Kerzentyp für die Strategieberechnung.", "Allgemein")
 
 // Parameter für den langen SMA
 let longParam =

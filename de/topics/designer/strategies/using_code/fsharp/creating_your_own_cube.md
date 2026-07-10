@@ -22,7 +22,7 @@ type EmptyDiagramElement() as this =
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
 			.SetBasic(true)  // Parameter im Basismodus sichtbar machen
-			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+			.SetDisplay("Parameter", "Mindestwert", "Beschreibung des Mindestwert-Parameter", 10)
 
 	// Ausgabesockets sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind
 	let output1Event = new Event<Unit>()
@@ -100,7 +100,7 @@ Zusätzlich wird gezeigt, wie eine Eigenschaft für den Würfel erstellt wird:
 let minValueParam =
 	this.AddParam<int>("MinValue", 10)
 		.SetBasic(true)  // Parameter im Basismodus sichtbar machen
-		.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
+		.SetDisplay("Parameter", "Mindestwert", "Beschreibung des Mindestwert-Parameter", 10)
 ```
 
 Bei Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) wird automatisch der Ansatz zum Speichern und Wiederherstellen von Einstellungen verwendet.
