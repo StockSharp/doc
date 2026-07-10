@@ -123,7 +123,7 @@ await provider.InitAsync(CancellationToken.None);
 // Ereignis für die Erstellung neuer Muster abonnieren
 provider.PatternCreated += pattern =>
 {
-    Console.WriteLine($"Pattern created: {pattern.Name}");
+    Console.WriteLine($"Muster erstellt: {pattern.Name}");
 };
 
 // Komplexes Muster erstellen und speichern
@@ -141,7 +141,7 @@ provider.Save(myPattern);
 // Muster nach Namen suchen
 if (provider.TryFind("My Pattern", out var found))
 {
-    Console.WriteLine($"Found: {found.Name}, candles: {found.CandlesCount}");
+    Console.WriteLine($"Gefunden: {found.Name}, Kerzen: {found.CandlesCount}");
 }
 ```
 

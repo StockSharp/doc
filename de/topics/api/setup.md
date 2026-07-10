@@ -323,10 +323,10 @@ Erstellen Sie eine minimale Anwendung:
 using StockSharp.Algo;
 using StockSharp.BusinessEntities;
 
-Console.WriteLine("StockSharp successfully configured!");
+Console.WriteLine("StockSharp erfolgreich konfiguriert!");
 
 var connector = new Connector();
-Console.WriteLine($"Connector created: {connector}");
+Console.WriteLine($"Connector erstellt: {connector}");
 ```
 
 ```bash

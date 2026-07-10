@@ -210,7 +210,7 @@
    _connector.SubscriptionOnline += sub =>
    {
        if (sub == subscription)
-           Console.WriteLine("Delta-candle subscription has transitioned to online mode");
+           Console.WriteLine("Delta-Kerzen-Abonnement ist in den Online-Modus gewechselt");
    };
 
    // Abonnement starten

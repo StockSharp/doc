@@ -17,7 +17,7 @@
      };
      order
          .WhenRegistered(Connector)
-         .Do(() => Connector.AddInfoLog("Order successfully registered"))
+         .Do(() => Connector.AddInfoLog("Order erfolgreich registriert"))
          .Once()
          .Apply(this);
 
@@ -76,7 +76,7 @@
   ruleCanceled
       .Do(() =>
       {
-          this.AddInfoLog("Order successfully canceled");
+          this.AddInfoLog("Order erfolgreich storniert");
           // Alle mit der Order verbundenen Regeln entfernen
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
@@ -84,12 +84,12 @@
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() => this.AddInfoLog("Order successfully registered"))
+      .Do(() => this.AddInfoLog("Order erfolgreich registriert"))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() => this.AddInfoLog("Order not accepted by the exchange"))
+      .Do(() => this.AddInfoLog("Order wurde von der Börse nicht akzeptiert"))
       .Once()
       .Apply(this);
   order
@@ -208,8 +208,8 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+				LogInfo($"Regel WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+				LogInfo($"Regel WhenCandlesStarted and WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);
 

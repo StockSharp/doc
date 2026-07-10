@@ -73,7 +73,7 @@ On Balance Volume Mean kann wie folgt interpretiert werden:
    - Der Ausbruch dieser Niveaus kann ähnlichen Ausbrüchen im Preisdiagramm vorausgehen
 
 6. **Vergleich mit anderen Volume-Indikatoren**:
-   - OBVM kann mit anderen Lautstärkeanzeigen verglichen werden, um Signale zu bestätigen
+   - OBVM kann mit anderen Volumenindikatoren verglichen werden, um Signale zu bestätigen
    - Die Konsistenz der Signale mehrerer Volumenindikatoren erhöht deren Zuverlässigkeit
 
 7. **Length Parameterauswahl**:

@@ -66,10 +66,10 @@ Um die Arbeit mit arithmetischen Operationen auf Werten wie Prozentangaben und a
 
   ```csharp
   if (absolute > percent)
-      Console.WriteLine("Absolute value is greater than percentage");
+      Console.WriteLine("Absoluter Wert ist größer als Prozentwert");
 
   if (absolute == percent)
-      Console.WriteLine("Values are equal");
+      Console.WriteLine("Werte sind gleich");
   ```
 
 - Um einen Wert positiv zu machen, können Sie die Methode `Abs()` verwenden:

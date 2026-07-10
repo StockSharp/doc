@@ -22,7 +22,7 @@ Der Ansatz zur Arbeit mit dem gefilterten Orderbuch verwendet dieselbe Methode w
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
             // Verarbeitungslogik für das gefilterte Orderbuch
-            Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
+            Console.WriteLine($"Gefiltertes Orderbuch für {orderBook.SecurityId} empfangen.");
         }
     };
     ```

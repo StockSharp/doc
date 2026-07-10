@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}");
+	Console.WriteLine($"Bester Kaufpreis: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}");
+	Console.WriteLine($"Bester Verkaufspreis: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"Bester Kaufpreis: {bestBid.Price}, Volumen: {bestBid.Volume}");
 }
 else
 {
-	Console.WriteLine("No best buy orders.");
+	Console.WriteLine("Keine besten Kauforders.");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"Bester Verkaufspreis: {bestAsk.Price}, Volumen: {bestAsk.Volume}");
 }
 else
 {
-	Console.WriteLine("No best sell orders.");
+	Console.WriteLine("Keine besten Verkaufsorders.");
 }
 ```
 
@@ -51,12 +51,12 @@ Zur Analyse der Tiefe des Orderbuchs können Sie die Elemente in den Listen [Bid
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-	Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
+	Console.WriteLine($"Kaufpreis: {bid.Price}, Volumen: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-	Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
+	Console.WriteLine($"Verkaufspreis: {ask.Price}, Volumen: {ask.Volume}");
 }
 ```
 
@@ -79,7 +79,7 @@ foreach (var bid in orderBook.Bids)
 {
 	if (bid.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
+		Console.WriteLine($"Kauf: Preis {bid.Price}, Volumen {bid.Volume}");
 	}
 }
 
@@ -87,7 +87,7 @@ foreach (var ask in orderBook.Asks)
 {
 	if (ask.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
+		Console.WriteLine($"Verkauf: Preis {ask.Price}, Volumen {ask.Volume}");
 	}
 }
 ```

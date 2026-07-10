@@ -97,7 +97,7 @@ private void OnOrderReceived(Order order)
 private void OnOrderRegisterFailed(OrderFail fail)
 {
 	// Fehler bei der Order-Registrierung verarbeiten
-	LogError($"Order registration error: {fail.Error}");
+	LogError($"Fehler bei der Orderregistrierung: {fail.Error}");
 }
 ```
 
@@ -114,7 +114,7 @@ order
 	.WhenMatched(this)
 	.Do(() => {
 		// Aktionen nach Order-Ausführung
-		LogInfo($"Order {order.TransactionId} executed");
+		LogInfo($"Order {order.TransactionId} ausgeführt");
 
 		// Zum Beispiel eine Stop-Order platzieren
 		var stopOrder = SellLimit(price * 0.95, volume);
@@ -125,7 +125,7 @@ order
 order
 	.WhenRegisterFailed(this)
 	.Do(fail => {
-		LogError($"Order registration error: {fail.Error}");
+		LogError($"Fehler bei der Orderregistrierung: {fail.Error}");
 		// Möglicherweise mit anderen Parametern erneut versuchen
 	})
 	.Apply(this);

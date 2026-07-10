@@ -11,13 +11,13 @@ Manchmal sollen mehrere Regeln in einen Aussetzungsmodus versetzt werden, damit 
   {
   	order
   		.WhenRegistered(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
+		.Do(() => Connector.AddInfoLog("Order erfolgreich registriert."))
   		.Once()
   		.Apply(this);
 
   	order
   		.WhenCanceled(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
+		.Do(() => Connector.AddInfoLog("Order erfolgreich storniert."))
   		.Once()
   		.Apply(this);
   });

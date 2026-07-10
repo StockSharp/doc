@@ -9,12 +9,12 @@ var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direc
 var ruleReg = order.WhenRegistered();
 var ruleRegFailed = order.WhenRegisterFailed();
 ruleReg
-	.Do(() => this.AddInfoLog("The order was successfully registered."))
+	.Do(() => this.AddInfoLog("Order erfolgreich registriert."))
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleRegFailed);
 ruleRegFailed
-	.Do(() => this.AddInfoLog("The order was not accepted by broker."))
+	.Do(() => this.AddInfoLog("Order wurde vom Broker nicht akzeptiert."))
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleReg);
@@ -32,11 +32,11 @@ var ruleRegFailed = order.WhenRegisterFailed(Connector);
 ruleReg.ExclusiveRules.Add(ruleRegFailed);
 ruleRegFailed.ExclusiveRules.Add(ruleReg);
 ruleReg
-	.Do(() => this.AddInfoLog("The order was successfully registered."))
+	.Do(() => this.AddInfoLog("Order erfolgreich registriert."))
 	.Once()
 	.Apply(this);
 ruleRegFailed
-	.Do(() => this.AddInfoLog("The order was not accepted by broker."))
+	.Do(() => this.AddInfoLog("Order wurde vom Broker nicht akzeptiert."))
 	.Once()
 	.Apply(this);
 // Order registrieren

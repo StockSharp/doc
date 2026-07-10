@@ -38,7 +38,7 @@ Die Methode [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}",
+	LogDebug("Kerze wird verarbeitet: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volumen={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
 
 	// ...
@@ -55,7 +55,7 @@ private void CalculateSignal(decimal shortSma, decimal longSma)
 	bool isShortGreaterThanLong = shortSma > longSma;
 
 	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}",
-		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
+		isShortGreaterThanLong ? "Kauf" : "Verkauf", shortSma, longSma);
 
 	// ...
 }
@@ -70,7 +70,7 @@ public void RegisterOrder(Order order)
 {
 	if (order.Volume <= 0)
 	{
-		LogWarning("Attempt to register an order with invalid volume: {0}", order.Volume);
+		LogWarning("Versuch, eine Order mit ungültigem Volumen zu registrieren: {0}", order.Volume);
 		return;
 	}
 
@@ -89,7 +89,7 @@ try
 }
 catch (Exception ex)
 {
-	LogError("Error while performing operation: {0}", ex.Message);
+	LogError("Fehler beim Ausführen der Operation: {0}", ex.Message);
 	Stop();
 }
 ```
@@ -131,7 +131,7 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
-					.SetDisplay("Logging Level", "Level of log message detail", "Logging Settings");
+					.SetDisplay("Logging-Stufe", "Detailstufe der Logmeldung", "Logging-Einstellungen");
 	}
 
 	public override LogLevels LogLevel
@@ -153,7 +153,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
+	LogInfo("Strategie {0} gestartet um {1}. Instrument: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
 
 	// ...
@@ -161,7 +161,7 @@ protected override void OnStarted2(DateTime time)
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
+	LogInfo("Strategie {0} gestoppt. Position: {1}, P&L: {2}",
 		Name, Position, PnL);
 
 	base.OnStopped();
@@ -173,8 +173,8 @@ protected override void OnStopped()
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
-		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+	LogInfo("{0} {1} {2} zum Preis {3}. Volumen: {4}",
+		trade.Order.Direction == Sides.Buy ? "Gekauft" : "Verkauft",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,
@@ -189,7 +189,7 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Order registration error {0}: {1}",
+	LogError("Fehler bei der Orderregistrierung {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
 
 	base.OnOrderRegisterFailed(fail, calcRisk);
@@ -228,4 +228,3 @@ Meldungen, die in das Strategielog geschrieben wurden, können angezeigt werden:
 
 [Protokollierung](../logging.md)
 [LogControl-Komponente](../graphical_user_interface/logging/log_panel.md)
-
