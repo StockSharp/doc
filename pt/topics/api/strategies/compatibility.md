@@ -21,7 +21,7 @@ public class SmaStrategy : Strategy
 // Incorreto: construtor com parâmetros
 public class SmaStrategy : Strategy
 {
-	public SmaStrategy(int longLength, int shortLength) // Don't use this approach
+	public SmaStrategy(int longLength, int shortLength) // Não use esta abordagem
 	{
 		// ...
 	}
@@ -53,7 +53,7 @@ public SmaStrategy()
 }
 
 // Incorreto: usando propriedades comuns
-private int _longSmaLength = 80; // Don't use this approach
+private int _longSmaLength = 80; // Não use esta abordagem
 
 public int LongSmaLength
 {
@@ -121,7 +121,7 @@ Verifique sempre a disponibilidade do gráfico antes de o usar:
 ```cs
 private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
 {
-	if (_chart == null) return; // Important check
+	if (_chart == null) return; // Verificação importante
 	
 	var data = _chart.CreateData();
 	data.Group(candle.OpenTime)
@@ -232,7 +232,7 @@ Os métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.S
 ```cs
 public override void Save(SettingsStorage settings)
 {
-	base.Save(settings); // First save strategy parameters
+	base.Save(settings); // Primeiro salve os parâmetros da estratégia
 	
 	// Então salvar dados personalizados
 	settings.SetValue("CustomState", _customState);
@@ -241,7 +241,7 @@ public override void Save(SettingsStorage settings)
 
 public override void Load(SettingsStorage settings)
 {
-	base.Load(settings); // First load strategy parameters
+	base.Load(settings); // Primeiro carregue os parâmetros da estratégia
 	
 	// Então carregar dados personalizados
 	if (settings.Contains("CustomState"))

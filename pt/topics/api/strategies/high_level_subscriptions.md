@@ -75,8 +75,8 @@ O objeto `ISubscriptionHandler<T>` fornece os seguintes métodos:
 Iniciar e parar a subscrição:
 
 ```csharp
-handler.Start();   // calls Subscribe
-handler.Stop();    // calls UnSubscribe
+handler.Start();   // chama Subscribe
+handler.Stop();    // chama UnSubscribe
 ```
 
 ### Bind (sem indicadores)

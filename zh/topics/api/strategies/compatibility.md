@@ -21,7 +21,7 @@ public class SmaStrategy : Strategy
 // 错误：带参数的构造函数
 public class SmaStrategy : Strategy
 {
-	public SmaStrategy(int longLength, int shortLength) // Don't use this approach
+	public SmaStrategy(int longLength, int shortLength) // 不要使用这种方式
 	{
 		// ...
 	}
@@ -53,7 +53,7 @@ public SmaStrategy()
 }
 
 // 错误：使用普通属性
-private int _longSmaLength = 80; // Don't use this approach
+private int _longSmaLength = 80; // 不要使用这种方式
 
 public int LongSmaLength
 {

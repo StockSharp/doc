@@ -21,7 +21,7 @@ type EmptyDiagramElement() as this =
 	// Пример свойства, показывающий создание параметров
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
-			.SetBasic(true)  // make the parameter visible in basic mode
+			.SetBasic(true)  // сделать параметр видимым в базовом режиме
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 
 	// Выходные сокеты — это события, помеченные атрибутом DiagramExternal
@@ -100,7 +100,7 @@ member this.Output2 = output2Event.Publish
 // Пример свойства, показывающий создание параметров
 let minValueParam =
 	this.AddParam<int>("MinValue", 10)
-		.SetBasic(true)  // make the parameter visible in basic mode
+		.SetBasic(true)  // сделать параметр видимым в базовом режиме
 		.SetDisplay("Parameters", "Min value", "Min value parameter description", 10)
 ```
 

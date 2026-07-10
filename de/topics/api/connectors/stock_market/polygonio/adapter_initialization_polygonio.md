@@ -8,7 +8,7 @@ Connector Connector = new Connector();
 var messageAdapter = new PolygonIOMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Token = "<Your Token>".To<SecureString>(),
-	ConnectionType = PolygonIOConnectionTypes.History, // connection for REST data sources
+	ConnectionType = PolygonIOConnectionTypes.History, // Verbindung für REST-Datenquellen
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...

@@ -144,8 +144,8 @@ class chart3d_script(IAnalyticsScript):
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		x = []  # X labels for instruments
-		y = []  # Y labels for hours
+		x = []  # 标的的 X 标签
+		y = []  # 小时的 Y 标签
 
 		# 用 0 到 23 小时填充 Y 标签
 		for h in range(24):

@@ -12,7 +12,7 @@ decimal gamma = bs.Gamma(currentTime);
 decimal vega = bs.Vega(currentTime);
 decimal theta = bs.Theta(currentTime);
 decimal rho = bs.Rho(currentTime);
-decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium is premium of the option contract
+decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium 是期权合约的权利金
 ```
 
 此外，安装包中包括 OptionCalculator 示例，其中所有的“希腊字母”都使用 [OptionDesk](xref:StockSharp.Xaml.OptionDesk) 图形组件进行计算和可视化。请参阅 [图形组件](graphic_components.md)。

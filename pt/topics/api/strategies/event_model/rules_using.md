@@ -296,13 +296,13 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Do(() => LogInfo("Ordem #1 registrada"))
 		.Once()
 		.Apply(this)
-		.Exclusive(ruleRegFailed);  // Rules are mutually exclusive
+		.Exclusive(ruleRegFailed);  // As regras são mutuamente exclusivas
 
 	ruleRegFailed
 		.Do(() => LogInfo("Ordem #1 não registrada"))
 		.Once()
 		.Apply(this)
-		.Exclusive(ruleReg);  // Rules are mutually exclusive
+		.Exclusive(ruleReg);  // As regras são mutuamente exclusivas
 
 	RegisterOrder(order);
 }).Once().Apply(this);
@@ -330,7 +330,7 @@ sub.WhenTickTradeReceived(this).Do(t =>
 		})
 		.Apply(this);
 })
-.Once() // call this rule only once
+.Once() // chamar esta regra apenas uma vez
 .Apply(this);
 
 // Enviar solicitação de assinatura

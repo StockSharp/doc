@@ -23,7 +23,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 		// пример свойства, показывающий создание параметров
 	
 		_minValue = AddParam("MinValue", 10)
-			.SetBasic(true) // make parameter visible in basic mode
+			.SetBasic(true) // сделать параметр видимым в базовом режиме
 			.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
 	}
 
@@ -98,7 +98,7 @@ public event Action<Unit> Output2;
 
 ```cs
 _minValue = AddParam("MinValue", 10)
-	.SetBasic(true) // make parameter visible in basic mode
+	.SetBasic(true) // сделать параметр видимым в базовом режиме
 	.SetDisplay("Parameters", "Min value", "Min value parameter description", 10);
 ```
 

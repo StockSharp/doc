@@ -26,17 +26,17 @@ class SmaStrategy : Strategy
     {
         _longSma = Param(nameof(LongSma), 80)
             .SetCanOptimize(true)
-            .SetOptimize(50, 100, 5);      // from 50 to 100 with a step of 5
+            .SetOptimize(50, 100, 5);      // 从 50 到 100，步长为 5
 
         _shortSma = Param(nameof(ShortSma), 30)
             .SetCanOptimize(true)
-            .SetOptimize(20, 40, 1);        // from 20 to 40 with a step of 1
+            .SetOptimize(20, 40, 1);        // 从 20 到 40，步长为 1
 
         _candleTimeFrame = Param<TimeSpan?>(nameof(CandleTimeFrame))
             .SetCanOptimize(true)
             .SetOptimize(
-                TimeSpan.FromMinutes(5),    // from 5 minutes
-                TimeSpan.FromMinutes(15),   // to 15 minutes
+                TimeSpan.FromMinutes(5),    // 从 5 分钟
+                TimeSpan.FromMinutes(15),   // 到 15 分钟
                 TimeSpan.FromMinutes(5));   // with a step of 5 minutes
 
         _candleType = Param(nameof(CandleType),
@@ -235,7 +235,7 @@ await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, st
 如果遍历所有组合耗时过长，可以使用随机抽样。`ToBruteForceRandom` 方法会生成指定数量的随机组合：
 
 ```csharp
-var randomCount = 50; // number of random combinations
+var randomCount = 50; // 随机组合数量
 
 var strategies = strategy.ToBruteForceRandom(
     optimizeParams,
@@ -260,18 +260,18 @@ var optimizer = new GeneticOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),
     storageRegistry,
-    Paths.FileSystem);    // file system for the fitness formula
+    Paths.FileSystem);    // 适应度公式的文件系统
 
 optimizer.AdapterCache = new();
 
 // 配置遗传算法。
-optimizer.Settings.Population = 8;            // population size
-optimizer.Settings.PopulationMax = 16;        // maximum population size
-optimizer.Settings.GenerationsMax = 20;       // maximum generations
-optimizer.Settings.GenerationsStagnation = 5; // stop after N generations without improvement
+optimizer.Settings.Population = 8;            // 种群大小
+optimizer.Settings.PopulationMax = 16;        // 最大种群大小
+optimizer.Settings.GenerationsMax = 20;       // 最大代数
+optimizer.Settings.GenerationsStagnation = 5; // 连续 N 代没有改进后停止
 optimizer.Settings.MutationProbability = 0.1m;
 optimizer.Settings.CrossoverProbability = 0.75m;
-optimizer.Settings.Fitness = "PnL";           // fitness formula (PnL by default)
+optimizer.Settings.Fitness = "PnL";           // 适应度公式（默认 PnL）
 
 optimizer.EmulationSettings.MaxIterations = 100;
 ```

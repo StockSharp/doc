@@ -21,7 +21,7 @@ type EmptyDiagramElement() as this =
 	// 演示如何创建参数的示例属性
 	let minValueParam =
 		this.AddParam<int>("MinValue", 10)
-			.SetBasic(true)  // make the parameter visible in basic mode
+			.SetBasic(true)  // 使参数在基本模式中可见
 			.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 
 	// 输出插槽是带 DiagramExternal 特性的事件
@@ -99,7 +99,7 @@ member this.Output2 = output2Event.Publish
 ```fsharp
 let minValueParam =
 	this.AddParam<int>("MinValue", 10)
-		.SetBasic(true)  // make the parameter visible in basic mode
+		.SetBasic(true)  // 使参数在基本模式中可见
 		.SetDisplay("参数", "最小值", "最小值参数说明", 10)
 ```
 

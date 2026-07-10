@@ -17,7 +17,7 @@ var storageRegistry = new StorageRegistry();
 
 ```cs
 // 使用 NuGet 包数据路径创建 StorageRegistry
-var pathHistory = Paths.HistoryDataPath; // path to data from the NuGet package
+var pathHistory = Paths.HistoryDataPath; // NuGet 包中数据的路径
 var localDrive = new LocalMarketDataDrive(pathHistory);
 var storageRegistry = new StorageRegistry()
 {

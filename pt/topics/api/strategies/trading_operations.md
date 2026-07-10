@@ -148,7 +148,7 @@ ClosePosition();
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute),   // take-profit
 	stopLoss: new Unit(20, UnitTypes.Absolute),     // stop-loss
-	isStopTrailing: true,                        // trailing stop
+	isStopTrailing: true,                        // stop móvel
 	useMarketOrders: true                        // usar ordens de mercado
 );
 ```

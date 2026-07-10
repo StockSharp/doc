@@ -186,9 +186,9 @@ O método [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(Sto
 IChartCandleElement candles = DrawCandles(area, subscription);
 
 // Parâmetros adicionais do elemento podem ser configurados
-candles.DrawOpenClose = true;  // Display open/close lines
-candles.DrawHigh = true;       // Display highs
-candles.DrawLow = true;        // Display lows
+candles.DrawOpenClose = true;  // Exibir linhas de abertura/fechamento
+candles.DrawHigh = true;       // Exibir máximas
+candles.DrawLow = true;        // Exibir mínimas
 ```
 
 O método devolve um elemento de gráfico [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) que pode ser personalizado posteriormente.
@@ -208,14 +208,14 @@ IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.R
 IChartIndicatorElement bollingerElem = DrawIndicator(
 	area, 
 	bollinger, 
-	System.Drawing.Color.Blue,    // Primary color
-	System.Drawing.Color.Gray     // Secondary color (for the second line)
+	System.Drawing.Color.Blue,    // Cor primária
+	System.Drawing.Color.Gray     // Cor secundária (para a segunda linha)
 );
 
 // Configuração adicional do elemento
-smaElem.DrawStyle = DrawStyles.Line;           // Drawing style: line
-rsiFast.DrawStyle = DrawStyles.Dot;            // Drawing style: dots
-bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Drawing style: dash-dot
+smaElem.DrawStyle = DrawStyles.Line;           // Estilo de desenho: linha
+rsiFast.DrawStyle = DrawStyles.Dot;            // Estilo de desenho: pontos
+bollingerElem.DrawStyle = DrawStyles.Dashdot;  // Estilo de desenho: traço-ponto
 ```
 
 O método devolve um elemento de gráfico [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) que pode ser personalizado. Para indicadores com vários valores (por exemplo, [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)), a cor primária é aplicada ao primeiro valor e a cor secundária ao segundo.
@@ -303,9 +303,9 @@ Exemplo com parâmetros adicionais:
 // Iniciar proteção com trailing stop e ordens de mercado
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
-	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in percentage
-	isStopTrailing: true,                         // Enable trailing stop
-	useMarketOrders: true                         // Use market orders
+	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss em porcentagem
+	isStopTrailing: true,                         // Ativar stop móvel
+	useMarketOrders: true                         // Usar ordens a mercado
 );
 ```
 

@@ -171,7 +171,7 @@ member private this.OnProcess
 				match direction with
 				| Sides.Buy  -> candle.ClosePrice + priceStep
 				| Sides.Sell -> candle.ClosePrice - priceStep
-				| _          -> candle.ClosePrice // should not occur
+				| _          -> candle.ClosePrice // 不应发生
 
 			// 发送限价单
 			match direction with

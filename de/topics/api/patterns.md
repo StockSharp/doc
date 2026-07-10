@@ -39,8 +39,8 @@ var patternIndicator = new CandlePatternIndicator
 	// Festlegen des gewünschten Patterns
 	Pattern = new ExpressionCandlePattern("Mein Muster", new[]
 	{
-		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Current candle is rising
-		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Previous candle is falling
+		new CandleExpressionCondition(Paths.FileSystem, "C > O"), // Aktuelle Kerze steigt
+		new CandleExpressionCondition(Paths.FileSystem, "pC < pO") // Vorherige Kerze fällt
 	})
 };
 

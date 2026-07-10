@@ -95,13 +95,13 @@
        {
            // 在 StockSharp 中注册新的 K线类型
            Extensions.RegisterCandleType<decimal>(
-               typeof(DeltaCandleMessage),      // Candle message type
-               DeltaCandleType,                // Message type
-               "delta",                        // File name for storage
-               str => str.To<decimal>(),       // Converter from string to parameter
-               arg => arg.ToString(),          // Converter from parameter to string
-               a => a > 0,                     // Parameter validator
-               false                           // Whether such candles can be obtained from the source (not only built)
+               typeof(DeltaCandleMessage),      // K线消息类型
+               DeltaCandleType,                // 消息类型
+               "delta",                        // 用于存储的文件名
+               str => str.To<decimal>(),       // 从字符串到参数的转换器
+               arg => arg.ToString(),          // 从参数到字符串的转换器
+               a => a > 0,                     // 参数验证器
+               false                           // 这些K线是否可以从源获取（而不仅是构建）
            );
        }
    }

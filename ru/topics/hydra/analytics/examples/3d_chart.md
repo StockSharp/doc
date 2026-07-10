@@ -144,8 +144,8 @@ class chart3d_script(IAnalyticsScript):
 			logs.LogWarning("No instruments.")
 			return Task.CompletedTask
 
-		x = []  # X labels for instruments
-		y = []  # Y labels for hours
+		x = []  # Метки X для инструментов
+		y = []  # Метки Y для часов
 
 		# Заполнить подписи Y часами от 0 до 23
 		for h in range(24):

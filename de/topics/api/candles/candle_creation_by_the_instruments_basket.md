@@ -60,8 +60,8 @@ private void CreateIndexAndSubscribe()
 
 	// Abonnement für Kerzen des Indexinstruments erstellen
 	_indexSubscription = new Subscription(
-		DataType.TimeFrame(_timeFrame),  // 1-minute candles
-		_indexInstr)  // Our index instrument
+		DataType.TimeFrame(_timeFrame),  // 1-Minuten-Kerzen
+		_indexInstr)  // Unser Indexinstrument
 	{
 		MarketData =
 		{
@@ -149,7 +149,7 @@ var indexFromDepthSubscription = new Subscription(
 		// Abonnement zum Erstellen aus Orderbüchern konfigurieren
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.MarketDepth,
-		BuildField = Level1Fields.SpreadMiddle,  // Use middle of spread
+		BuildField = Level1Fields.SpreadMiddle,  // Spread-Mitte verwenden
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(7)),
 		To = DateTime.Now
 	}
@@ -167,7 +167,7 @@ var volatilityIndex = new ExpressionIndexSecurity
 {
 	Board = ExchangeBoard.Nyse,
 	Id = "VOLX",
-	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Formula for calculating volatility
+	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Formel zur Berechnung der Volatilität
 };
 
 // Hauptinstrument zum Index hinzufügen

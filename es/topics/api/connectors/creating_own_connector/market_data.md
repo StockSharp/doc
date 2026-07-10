@@ -162,7 +162,7 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 		LowPrice = (decimal)candle.Low,
 		TotalVolume = (decimal)candle.Volume,
 		OpenTime = candle.Time,
-		State = CandleStates.Active,  // The candle is considered active as it may still change
+		State = CandleStates.Active,  // La vela se considera activa porque aún puede cambiar
 
 		// Al identificar datos por suscripción no es necesario rellenar la información del instrumento
 		OriginalTransactionId = transId,

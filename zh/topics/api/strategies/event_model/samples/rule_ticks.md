@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 			})
 			.Apply(this);
 	})
-	.Once() // call this rule only once
+	.Once() // 只调用此规则一次
 	.Apply(this);
 
 	// 发送市场数据订阅请求。

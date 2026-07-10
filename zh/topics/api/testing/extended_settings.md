@@ -202,7 +202,7 @@ var bestAsk = orderBook.GetBestAsk();
 var spreadMiddle = orderBook.GetSpreadMiddle(Security.PriceStep);
 
 // 按订单方向获取价格
-var price = orderBook.GetPrice(Sides.Buy); // or Sides.Sell, or null for the middle of the spread
+var price = orderBook.GetPrice(Sides.Buy); // 或 Sides.Sell，或使用 null 表示价差中点
 ```
 
 在处理 Level1 数据时，你也可以获取买卖价差的中间值：

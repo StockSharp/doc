@@ -75,8 +75,8 @@ ISubscriptionHandler<IOrderBookMessage> SubscribeOrderBook(Subscription subscrip
 开始和停止订阅：
 
 ```csharp
-handler.Start();   // calls Subscribe
-handler.Stop();    // calls UnSubscribe
+handler.Start();   // 调用 Subscribe
+handler.Stop();    // 调用 UnSubscribe
 ```
 
 ### 绑定（无指示器）

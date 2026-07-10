@@ -95,13 +95,13 @@
        {
            // Neuen Kerzentyp in StockSharp registrieren
            Extensions.RegisterCandleType<decimal>(
-               typeof(DeltaCandleMessage),      // Candle message type
-               DeltaCandleType,                // Message type
-               "delta",                        // File name for storage
-               str => str.To<decimal>(),       // Converter from string to parameter
-               arg => arg.ToString(),          // Converter from parameter to string
-               a => a > 0,                     // Parameter validator
-               false                           // Whether such candles can be obtained from the source (not only built)
+               typeof(DeltaCandleMessage),      // Kerzennachrichtentyp
+               DeltaCandleType,                // Nachrichtentyp
+               "delta",                        // Dateiname für die Speicherung
+               str => str.To<decimal>(),       // Konverter von Zeichenfolge zu Parameter
+               arg => arg.ToString(),          // Konverter von Parameter zu Zeichenfolge
+               a => a > 0,                     // Parametervalidator
+               false                           // Ob solche Kerzen aus der Quelle bezogen werden können (nicht nur erstellt)
            );
        }
    }

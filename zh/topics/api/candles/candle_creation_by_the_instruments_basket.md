@@ -60,8 +60,8 @@ private void CreateIndexAndSubscribe()
 	
 	// 创建指数交易品种 K线订阅
 	_indexSubscription = new Subscription(
-		DataType.TimeFrame(_timeFrame),  // 1-minute candles
-		_indexInstr)  // Our index instrument
+		DataType.TimeFrame(_timeFrame),  // 1分钟K线
+		_indexInstr)  // 我们的指数工具
 	{
 		MarketData = 
 		{
@@ -149,7 +149,7 @@ var indexFromDepthSubscription = new Subscription(
 		// 配置订阅以从订单簿构建
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.MarketDepth,
-		BuildField = Level1Fields.SpreadMiddle,  // Use middle of spread
+		BuildField = Level1Fields.SpreadMiddle,  // 使用价差中点
 		From = DateTime.Today.Subtract(TimeSpan.FromDays(7)),
 		To = DateTime.Now
 	}
@@ -167,7 +167,7 @@ var volatilityIndex = new ExpressionIndexSecurity
 {
 	Board = ExchangeBoard.Nyse,
 	Id = "VOLX",
-	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // Formula for calculating volatility
+	Expression = "StdDev({0}, 20) / SMA({0}, 20) * 100",  // 计算波动率的公式
 };
 
 // 将主交易品种添加到指数

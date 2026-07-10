@@ -95,13 +95,13 @@
        {
            // Registrar novo tipo de vela no StockSharp
            Extensions.RegisterCandleType<decimal>(
-               typeof(DeltaCandleMessage),      // Candle message type
-               DeltaCandleType,                // Message type
-               "delta",                        // File name for storage
-               str => str.To<decimal>(),       // Converter from string to parameter
-               arg => arg.ToString(),          // Converter from parameter to string
-               a => a > 0,                     // Parameter validator
-               false                           // Whether such candles can be obtained from the source (not only built)
+               typeof(DeltaCandleMessage),      // Tipo de mensagem de candle
+               DeltaCandleType,                // Tipo de mensagem
+               "delta",                        // Nome do arquivo para armazenamento
+               str => str.To<decimal>(),       // Conversor de string para parâmetro
+               arg => arg.ToString(),          // Conversor de parâmetro para string
+               a => a > 0,                     // Validador de parâmetros
+               false                           // Se esses candles podem ser obtidos da fonte (não apenas construídos)
            );
        }
    }

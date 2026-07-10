@@ -38,7 +38,7 @@ var storageRegistry = new StorageRegistry
 // テスト用の銘柄を作成
 var security = new Security
 {
-	Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
+	Id = SecId.Text, // 銘柄 ID は履歴データフォルダー名に対応
 	Code = secCode,
 	Board = board,
 };

@@ -12,7 +12,7 @@ decimal gamma = bs.Gamma(currentTime);
 decimal vega = bs.Vega(currentTime);
 decimal theta = bs.Theta(currentTime);
 decimal rho = bs.Rho(currentTime);
-decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium is premium of the option contract
+decimal iv = bs.ImpliedVolatility(currentTime, premium);  // premium es la prima del contrato de opción
 ```
 
 Además, el paquete de instalación incluye el ejemplo OptionCalculator, en el que todas las “griegas” se calculan y visualizan mediante el componente gráfico [OptionDesk](xref:StockSharp.Xaml.OptionDesk). Véase [Componentes gráficos](graphic_components.md).

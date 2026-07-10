@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 			})
 			.Apply(this);
 	})
-	.Once() // call this rule only once
+	.Once() // вызвать это правило только один раз
 	.Apply(this);
 
 	// Отправка запроса на подписку на рыночные данные.

@@ -330,7 +330,7 @@ sub.WhenTickTradeReceived(this).Do(t =>
 		})
 		.Apply(this);
 })
-.Once() // call this rule only once
+.Once() // 只调用此规则一次
 .Apply(this);
 
 // 发送订阅请求

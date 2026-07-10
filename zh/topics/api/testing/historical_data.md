@@ -38,7 +38,7 @@ var storageRegistry = new StorageRegistry
 // 创建用于测试的测试工具
 var security = new Security
 {
-	Id = SecId.Text, // ID of the instrument corresponds to the name of the folder with historical data
+	Id = SecId.Text, // 标的 ID 对应历史数据文件夹的名称
 	Code = secCode,
 	Board = board,
 };

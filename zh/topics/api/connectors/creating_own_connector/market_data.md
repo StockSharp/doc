@@ -162,7 +162,7 @@ private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken c
 		LowPrice = (decimal)candle.Low,
 		TotalVolume = (decimal)candle.Volume,
 		OpenTime = candle.Time,
-		State = CandleStates.Active,  // The candle is considered active as it may still change
+		State = CandleStates.Active,  // K线被视为活动状态，因为它仍可能变化
 
 		// 按订阅识别数据时无需填写交易品种信息
 		OriginalTransactionId = transId,

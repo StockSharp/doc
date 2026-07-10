@@ -3375,28 +3375,100 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{
-		foreach (Match block in Regex.Matches(markdown, "```[^\\r\\n]*\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+		foreach (Match block in Regex.Matches(markdown, "```(?<info>[^\\r\\n]*)\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
 		{
+			var info = block.Groups["info"].Value.Trim();
 			var line = GetLineNumber(GetLineStarts(markdown), block.Groups["code"].Index);
 			using var reader = new StringReader(block.Groups["code"].Value);
 
 			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
 			{
 				var trimmed = text.Trim();
+				var fullLineComment = false;
+
 				foreach (Match xmlComment in Regex.Matches(trimmed, @"<!--\s*.*?\s*-->", RegexOptions.CultureInvariant))
+				{
+					fullLineComment = true;
 					yield return new CodeComment(xmlComment.Value, line);
+				}
 
 				foreach (Match blockComment in Regex.Matches(trimmed, @"/\*\s*.*?\s*\*/", RegexOptions.CultureInvariant))
+				{
+					fullLineComment = true;
 					yield return new CodeComment(blockComment.Value, line);
+				}
 
 				if (trimmed.StartsWith("///", StringComparison.Ordinal)
 					|| trimmed.StartsWith("//", StringComparison.Ordinal)
 					|| trimmed.StartsWith("#", StringComparison.Ordinal))
 				{
+					fullLineComment = true;
 					yield return new CodeComment(trimmed, line);
+				}
+
+				if (fullLineComment)
+					continue;
+
+				var slashComment = FindInlineLineCommentStart(text, "//");
+				if (slashComment > 0)
+					yield return new CodeComment(text[slashComment..].Trim(), line);
+
+				if (IsPythonCodeBlock(info))
+				{
+					var hashComment = FindInlineLineCommentStart(text, "#");
+					if (hashComment > 0)
+						yield return new CodeComment(text[hashComment..].Trim(), line);
 				}
 			}
 		}
+	}
+
+	private static bool IsPythonCodeBlock(string info)
+		=> info.Equals("python", StringComparison.OrdinalIgnoreCase)
+			|| info.Equals("py", StringComparison.OrdinalIgnoreCase);
+
+	private static int FindInlineLineCommentStart(string text, string marker)
+	{
+		var inSingleQuotedString = false;
+		var inDoubleQuotedString = false;
+
+		for (var i = 0; i <= text.Length - marker.Length; i++)
+		{
+			var ch = text[i];
+			if (ch == '\\')
+			{
+				i++;
+				continue;
+			}
+
+			if (!inDoubleQuotedString && ch == '\'')
+			{
+				inSingleQuotedString = !inSingleQuotedString;
+				continue;
+			}
+
+			if (!inSingleQuotedString && ch == '"')
+			{
+				inDoubleQuotedString = !inDoubleQuotedString;
+				continue;
+			}
+
+			if (inSingleQuotedString || inDoubleQuotedString)
+				continue;
+
+			if (!text.AsSpan(i).StartsWith(marker, StringComparison.Ordinal))
+				continue;
+
+			if (marker == "//" && i > 0 && text[i - 1] == ':')
+				continue;
+
+			if (text[..i].Trim().Length == 0)
+				continue;
+
+			return i;
+		}
+
+		return -1;
 	}
 
 	private static IEnumerable<CodeOutputString> EnumerateCodeOutputStrings(string markdown)
@@ -3747,7 +3819,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		// Skip commented-out code and compiler/preprocessor directives without hiding prose comments
 		// such as "if no historical data..." or "Class for analyzing...".
-		return Regex.IsMatch(text, @"^(?:if|for|while)\s*\(", RegexOptions.CultureInvariant)
+		return Regex.IsMatch(text, @"^[+\-*/]\s*[A-Za-z_][A-Za-z0-9_.]*(?:\.|\()", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(text, @"^(?:if|for|while)\s*\(", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^return\s+(?:true|false|null|default|new\b|[A-Za-z_][A-Za-z0-9_.]*(?:\([^)]*\))?)$", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^(?:using|var|let|public|private|protected|await|yield|pragma|region|endregion|nullable|define|endif|else|elif|def|with)\b", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^(?:class|new)\s+[A-Za-z_][A-Za-z0-9_.]*(?:\b|[<(])", RegexOptions.CultureInvariant);

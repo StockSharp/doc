@@ -170,7 +170,7 @@ member private this.OnProcess
 				match direction with
 				| Sides.Buy  -> candle.ClosePrice + priceStep
 				| Sides.Sell -> candle.ClosePrice - priceStep
-				| _          -> candle.ClosePrice // should not occur
+				| _          -> candle.ClosePrice // не должно происходить
 
 			// Отправить лимитную заявку
 			match direction with

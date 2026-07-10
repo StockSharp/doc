@@ -23,7 +23,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 		// 演示如何创建参数的示例属性
 	
 		_minValue = AddParam("MinValue", 10)
-			.SetBasic(true) // make parameter visible in basic mode
+			.SetBasic(true) // 使参数在基本模式中可见
 			.SetDisplay("参数", "最小值", "最小值参数说明", 10);
 	}
 
@@ -99,7 +99,7 @@ public event Action<Unit> Output2;
 
 ```cs
 _minValue = AddParam("MinValue", 10)
-	.SetBasic(true) // make parameter visible in basic mode
+	.SetBasic(true) // 使参数在基本模式中可见
 	.SetDisplay("参数", "最小值", "最小值参数说明", 10);
 ```
 

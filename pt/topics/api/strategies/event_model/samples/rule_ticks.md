@@ -37,7 +37,7 @@ protected override void OnStarted2(DateTime time)
 			})
 			.Apply(this);
 	})
-	.Once() // call this rule only once
+	.Once() // chamar esta regra apenas uma vez
 	.Apply(this);
 
 	// Enviar solicitação de assinatura de dados de mercado.

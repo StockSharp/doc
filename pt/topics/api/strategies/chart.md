@@ -102,14 +102,14 @@ private void ConfigureChartElements()
 	_candleElement = _mainArea.AddCandles();
 	
 	// Configurando exibição de velas
-	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Japanese candles
+	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Velas japonesas
 	_candleElement.AntiAliasing = true; // Smoothing
-	_candleElement.UpFillColor = Color.Green; // Rising candle body color
-	_candleElement.DownFillColor = Color.Red; // Falling candle body color
-	_candleElement.UpBorderColor = Color.DarkGreen; // Rising candle border color
-	_candleElement.DownBorderColor = Color.DarkRed; // Falling candle border color
-	_candleElement.StrokeThickness = 1; // Line thickness
-	_candleElement.ShowAxisMarker = true; // Show Y-axis marker
+	_candleElement.UpFillColor = Color.Green; // Cor do corpo da vela de alta
+	_candleElement.DownFillColor = Color.Red; // Cor do corpo da vela de baixa
+	_candleElement.UpBorderColor = Color.DarkGreen; // Cor da borda da vela de alta
+	_candleElement.DownBorderColor = Color.DarkRed; // Cor da borda da vela de baixa
+	_candleElement.StrokeThickness = 1; // Espessura da linha
+	_candleElement.ShowAxisMarker = true; // Mostrar marcador do eixo Y
 }
 ```
 
@@ -207,9 +207,9 @@ Para apresentar ordens, use o método [DrawOrders](xref:StockSharp.Algo.Strategi
 _ordersElement = DrawOrders(_mainArea);
 
 // Configurando exibição de ordens
-_ordersElement.ActiveBrush = Color.Blue;     // Active orders color
-_ordersElement.CanceledBrush = Color.Gray;   // Canceled orders color
-_ordersElement.DoneBrush = Color.Green;      // Completed orders color
+_ordersElement.ActiveBrush = Color.Blue;     // Cor das ordens ativas
+_ordersElement.CanceledBrush = Color.Gray;   // Cor das ordens canceladas
+_ordersElement.DoneBrush = Color.Green;      // Cor das ordens concluídas
 _ordersElement.ErrorColor = Color.Red;       // Error color
 _ordersElement.PointSize = 8;                // Point size
 ```
