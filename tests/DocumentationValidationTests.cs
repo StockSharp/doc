@@ -1682,6 +1682,25 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void RussianIndicatorListDescriptionsDoNotStartWithEnglishPhrases()
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "ru", "topics", "api", "indicators", "list_of_indicators.md");
+		var pattern = new Regex(@"^\s*-\s+\[[^\]\r\n]+\]\([^\)\r\n]+\)\s+-\s+(?<lead>[A-Za-z][^,\r\n]*),", RegexOptions.CultureInvariant);
+
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+		{
+			var match = pattern.Match(text);
+			if (!match.Success)
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: indicator list description starts with an English phrase '{match.Groups["lead"].Value}'. Start the Russian description in Russian; keep invariant indicator names in the link label if needed.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
