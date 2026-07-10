@@ -1,6 +1,6 @@
 # Benutzerdefinierter Indikator
 
-Um einen eigenen Indikator zu erstellen, müssen Sie das Interface [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) implementieren. Als Beispiel können Sie sich den Quellcode anderer Indikatoren im Repository [GitHub/StockSharp](https://github.com/StockSharp/StockSharp) ansehen. So sieht die Implementierung des Simple Moving Average [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) aus:
+Um einen eigenen Indikator zu erstellen, müssen Sie das Interface [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) implementieren. Als Beispiel können Sie sich den Quellcode anderer Indikatoren im Repository [GitHub/StockSharp](https://github.com/StockSharp/StockSharp) ansehen. So sieht die Implementierung des einfachen gleitenden Durchschnitts [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) aus:
 
 ```cs
 /// <summary>

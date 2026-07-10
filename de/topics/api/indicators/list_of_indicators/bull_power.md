@@ -34,4 +34,4 @@ Bull Power übernimmt seine Parameter von [ExponentialMovingAverage](xref:StockS
 
 [Bear Power](bear_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Exponentieller gleitender Durchschnitt](ema.md)

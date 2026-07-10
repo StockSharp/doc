@@ -1,6 +1,6 @@
 # カスタムインジケーター
 
-独自のインジケーターを作成するには、[IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) インターフェイスを実装する必要があります。例として、[GitHub/StockSharp](https://github.com/StockSharp/StockSharp) リポジトリにある他のインジケーターのソースコードを参照できます。Simple Moving Average [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) の実装は次のようになります。
+独自のインジケーターを作成するには、[IIndicator](xref:StockSharp.Algo.Indicators.IIndicator) インターフェイスを実装する必要があります。例として、[GitHub/StockSharp](https://github.com/StockSharp/StockSharp) リポジトリにある他のインジケーターのソースコードを参照できます。単純移動平均 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) の実装は次のようになります。
 
 ```cs
 /// <summary>

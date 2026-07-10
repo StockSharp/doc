@@ -31,7 +31,7 @@ O cálculo do BMP ocorre em duas etapas:
    ```
    Se (High - Low) for zero, o BMP bruto é definido como zero.
 
-2. Suavizar o BMP usando uma Simple Moving Average (SMA):
+2. Suavizar o BMP usando uma média móvel simples (SMA):
    ```
    BMP = SMA(Raw BMP, Length)
    ```

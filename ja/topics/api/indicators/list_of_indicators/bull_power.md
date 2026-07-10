@@ -33,5 +33,4 @@ Bull Power は [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.Expone
 
 [Bear Power](bear_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
-
+[指数移動平均](ema.md)

@@ -1,12 +1,12 @@
 # ZLEMA
 
-**Zero Lag Exponential Moving Average (ZLEMA)** は、John Ehlers によって開発された指数移動平均 (EMA) の修正版です。ZLEMA は、従来の移動平均に固有の遅延を排除する、または大幅に低減するように設計されています。
+**ゼロラグ指数移動平均 (ZLEMA)** は、John Ehlers によって開発された指数移動平均 (EMA) の修正版です。ZLEMA は、従来の移動平均に固有の遅延を排除する、または大幅に低減するように設計されています。
 
 このインジケーターを使用するには、[ZeroLagExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ZeroLagExponentialMovingAverage) クラスを使用する必要があります。
 
 ## 説明
 
-Zero Lag Exponential Moving Average (ZLEMA) は、ほとんどの移動平均における主要な問題であるシグナル遅延を解決するために作成されました。従来の移動平均は、計算に使用される時間ウィンドウのために価格変動に遅れて反応します。ZLEMA は、現在価格と過去の価格との差に基づく補正メカニズムを使用することで、この遅延を最小化します。
+ゼロラグ指数移動平均 (ZLEMA) は、ほとんどの移動平均における主要な問題であるシグナル遅延を解決するために作成されました。従来の移動平均は、計算に使用される時間ウィンドウのために価格変動に遅れて反応します。ZLEMA は、現在価格と過去の価格との差に基づく補正メカニズムを使用することで、この遅延を最小化します。
 
 ZLEMA の主な利点:
 - 価格変化への反応が速い

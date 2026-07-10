@@ -29,7 +29,7 @@ Die BMP-Berechnung erfolgt in zwei Schritten:
    ```
    Wenn (High - Low) null ist, wird der rohe BMP auf null gesetzt.
 
-2. Glättung von BMP mit einem Simple Moving Average (SMA):
+2. Glättung von BMP mit einem einfachen gleitenden Durchschnitt (SMA):
    ```
    BMP = SMA(Raw BMP, Length)
    ```

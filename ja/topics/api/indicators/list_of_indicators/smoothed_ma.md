@@ -1,6 +1,6 @@
 # Smoothed MA
 
-**Smoothed Moving Average (SMA)** - このインジケーターは、一定期間における平滑化された平均価格の方向を表示します。
+**平滑移動平均 (SMA)** - このインジケーターは、一定期間における平滑化された平均価格の方向を表示します。
 
 このインジケーターを使用するには、[SmoothedMovingAverage](xref:StockSharp.Algo.Indicators.SmoothedMovingAverage) クラスを使用する必要があります。
 

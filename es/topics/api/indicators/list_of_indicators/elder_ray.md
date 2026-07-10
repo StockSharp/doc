@@ -36,4 +36,4 @@ el EMA está subiendo, el Bear Power se recupera de un nuevo mínimo y el Bull P
 
 [Bull Power](bull_power.md)
 [Bear Power](bear_power.md)
-[ExponentialMovingAverage](ema.md)
+[Media móvil exponencial](ema.md)

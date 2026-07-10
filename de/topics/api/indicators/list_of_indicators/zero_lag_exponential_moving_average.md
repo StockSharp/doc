@@ -1,12 +1,12 @@
 # ZLEMA
 
-**Zero Lag Exponential Moving Average (ZLEMA)** ist eine modifizierte Version des exponentiellen gleitenden Durchschnitts (EMA), entwickelt von John Ehlers. ZLEMA wurde entwickelt, um die Verzögerung herkömmlicher gleitender Durchschnitte zu beseitigen oder deutlich zu reduzieren.
+**Exponentieller gleitender Durchschnitt ohne Verzögerung (ZLEMA)** ist eine modifizierte Version des exponentiellen gleitenden Durchschnitts (EMA), entwickelt von John Ehlers. ZLEMA wurde entwickelt, um die Verzögerung herkömmlicher gleitender Durchschnitte zu beseitigen oder deutlich zu reduzieren.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [ZeroLagExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ZeroLagExponentialMovingAverage).
 
 ## Beschreibung
 
-Der Zero Lag Exponential Moving Average (ZLEMA) wurde geschaffen, um das Hauptproblem der meisten gleitenden Durchschnitte zu lösen - die Signalverzögerung. Traditionelle gleitende Durchschnitte hinken Preisbewegungen wegen des verwendeten Zeitfensters hinterher. ZLEMA minimiert diese Verzögerung durch einen Korrekturmechanismus, der auf der Differenz zwischen aktuellem Preis und einem Preis in der Vergangenheit basiert.
+Der exponentielle gleitende Durchschnitt ohne Verzögerung (ZLEMA) wurde geschaffen, um das Hauptproblem der meisten gleitenden Durchschnitte zu lösen - die Signalverzögerung. Traditionelle gleitende Durchschnitte hinken Preisbewegungen wegen des verwendeten Zeitfensters hinterher. ZLEMA minimiert diese Verzögerung durch einen Korrekturmechanismus, der auf der Differenz zwischen aktuellem Preis und einem Preis in der Vergangenheit basiert.
 
 Wichtigste Vorteile von ZLEMA:
 - Schnellere Reaktion auf Preisänderungen
@@ -54,4 +54,3 @@ Das Ergebnis ist ein gleitender Durchschnitt, der dem Preis deutlich enger folgt
 [DEMA](dema.md)
 [TEMA](tema.md)
 [T3MA](t3_moving_average.md)
-

@@ -29,4 +29,4 @@
 
 [SMA](sma.md)
 [EMA](ema.md)
-[Smoothed Moving Average](smoothed_ma.md)
+[Сглаженная скользящая средняя](smoothed_ma.md)

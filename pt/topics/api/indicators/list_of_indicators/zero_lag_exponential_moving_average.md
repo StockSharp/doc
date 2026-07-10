@@ -1,12 +1,12 @@
 # ZLEMA
 
-**Zero Lag Exponential Moving Average (ZLEMA)** é uma versão modificada da média móvel exponencial (EMA), desenvolvida por John Ehlers. A ZLEMA foi concebida para eliminar ou reduzir significativamente o atraso inerente às médias móveis tradicionais.
+**Média móvel exponencial de atraso zero (ZLEMA)** é uma versão modificada da média móvel exponencial (EMA), desenvolvida por John Ehlers. A ZLEMA foi concebida para eliminar ou reduzir significativamente o atraso inerente às médias móveis tradicionais.
 
 Para usar o indicador, é necessário usar a classe [ZeroLagExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ZeroLagExponentialMovingAverage).
 
 ## Descrição
 
-A Zero Lag Exponential Moving Average (ZLEMA) foi criada para resolver o principal problema da maioria das médias móveis - o atraso do sinal. As médias móveis tradicionais ficam atrasadas em relação aos movimentos de preço devido à janela temporal usada no seu cálculo. A ZLEMA minimiza este atraso usando um mecanismo de correção baseado na diferença entre o preço atual e o preço no passado.
+A média móvel exponencial de atraso zero (ZLEMA) foi criada para resolver o principal problema da maioria das médias móveis - o atraso do sinal. As médias móveis tradicionais ficam atrasadas em relação aos movimentos de preço devido à janela temporal usada no seu cálculo. A ZLEMA minimiza este atraso usando um mecanismo de correção baseado na diferença entre o preço atual e o preço no passado.
 
 Principais vantagens da ZLEMA:
 - Reação mais rápida a alterações de preço

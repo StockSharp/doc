@@ -29,7 +29,7 @@ El cálculo de BMP se produce en dos etapas:
    ```
    Si (High - Low) es cero, el BMP sin formato se establece en cero.
 
-2. Suavizado BMP usando un Simple Moving Average (SMA):
+2. Suavizado de BMP usando una media móvil simple (SMA):
    ```
    BMP = SMA(Raw BMP, Length)
    ```

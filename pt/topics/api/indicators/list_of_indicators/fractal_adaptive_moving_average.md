@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [FractalAdaptiveMovingAv
 
 ## Descrição
 
-A Fractal Adaptive Moving Average (FRAMA) é um tipo avançado de Exponential Moving Average (EMA) que ajusta automaticamente a sua sensibilidade às alterações de preço com base na dimensão fractal do mercado. O indicador foi desenvolvido por John Ehlers e apresentado na revista Technical Analysis of Stocks & Commodities em outubro de 2000.
+A Fractal Adaptive Moving Average (FRAMA) é um tipo avançado de média móvel exponencial (EMA) que ajusta automaticamente a sua sensibilidade às alterações de preço com base na dimensão fractal do mercado. O indicador foi desenvolvido por John Ehlers e apresentado na revista Technical Analysis of Stocks & Commodities em outubro de 2000.
 
 A FRAMA usa o conceito de geometria fractal para analisar a estrutura do mercado. Determina quão "fractal" ou caótico está o mercado atual e, com base nisso, ajusta a velocidade de resposta do indicador:
 
@@ -85,4 +85,3 @@ A FRAMA pode ser interpretada de forma semelhante a outras médias móveis, mas 
 [EMA](ema.md)
 [KAMA](kama.md)
 [VIDYA](vidya.md)
-

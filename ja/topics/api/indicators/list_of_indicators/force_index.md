@@ -30,7 +30,7 @@ Force Index の計算には次の手順が含まれます:
    1-Period Force Index = (Close[current] - Close[previous]) * Volume[current]
    ```
 
-2. Exponential Moving Average (EMA) を使用して平滑化します:
+2. 指数移動平均 (EMA) を使用して平滑化します:
    ```
    Force Index = EMA(1-Period Force Index, Length)
    ```
@@ -77,4 +77,3 @@ Force Index はさまざまな方法で解釈できます:
 [EMA](ema.md)
 [OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
-

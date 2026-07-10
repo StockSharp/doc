@@ -35,4 +35,4 @@ Bear Power übernimmt die Konfiguration von [ExponentialMovingAverage](xref:Stoc
 
 [Bull Power](bull_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Exponentieller gleitender Durchschnitt](ema.md)

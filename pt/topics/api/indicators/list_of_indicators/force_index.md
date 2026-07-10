@@ -30,7 +30,7 @@ O cálculo do Force Index envolve os seguintes passos:
    1-Period Force Index = (Close[current] - Close[previous]) * Volume[current]
    ```
 
-2. Suavizar usando a Exponential Moving Average (EMA):
+2. Suavizar usando a média móvel exponencial (EMA):
    ```
    Force Index = EMA(1-Period Force Index, Length)
    ```
@@ -77,4 +77,3 @@ O Force Index pode ser interpretado de várias formas:
 [EMA](ema.md)
 [OBV](on_balance_volume.md)
 [ADL](accumulation_distribution_line.md)
-

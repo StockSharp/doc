@@ -29,4 +29,4 @@
 
 [SMA](sma.md)
 [EMA](ema.md)
-[Smoothed Moving Average](smoothed_ma.md)
+[平滑移動平均](smoothed_ma.md)

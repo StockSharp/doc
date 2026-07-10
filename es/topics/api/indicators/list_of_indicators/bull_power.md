@@ -34,4 +34,4 @@ Bull Power hereda sus parámetros de [ExponentialMovingAverage](xref:StockSharp.
 
 [Bear Power](bear_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Media móvil exponencial](ema.md)

@@ -37,4 +37,4 @@ EMA растёт, Bear Power повышается после нового мин
 
 [Bull Power](bull_power.md)
 [Bear Power](bear_power.md)
-[ExponentialMovingAverage](ema.md)
+[Экспоненциальное скользящее среднее](ema.md)

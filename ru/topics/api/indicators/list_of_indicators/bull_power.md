@@ -35,4 +35,4 @@ Bull Power наследует настройки [ExponentialMovingAverage](xref
 
 [Bear Power](bear_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Экспоненциальное скользящее среднее](ema.md)

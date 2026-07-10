@@ -29,4 +29,4 @@ Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wäh
 
 [SMA](sma.md)
 [EMA](ema.md)
-[Smoothed Moving Average](smoothed_ma.md)
+[Geglätteter gleitender Durchschnitt](smoothed_ma.md)

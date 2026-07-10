@@ -30,7 +30,7 @@ Die Force Index-Berechnung umfasst die folgenden Schritte:
    1-Period Force Index = (Close[current] - Close[previous]) * Volume[current]
    ```
 
-2. Glättung mit Exponential Moving Average (EMA):
+2. Glättung mit einem exponentiellen gleitenden Durchschnitt (EMA):
    ```
    Force Index = EMA(1-Period Force Index, Length)
    ```

@@ -36,4 +36,4 @@ Der EMA steigt, der Bear Power erholt sich von einem neuen Tief und der Bull Pow
 
 [Bull Power](bull_power.md)
 [Bear Power](bear_power.md)
-[ExponentialMovingAverage](ema.md)
+[Exponentieller gleitender Durchschnitt](ema.md)

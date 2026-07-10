@@ -37,4 +37,4 @@
 
 [Bull Power](bull_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Экспоненциальное скользящее среднее](ema.md)

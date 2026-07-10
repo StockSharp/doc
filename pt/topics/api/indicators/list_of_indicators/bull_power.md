@@ -35,4 +35,4 @@ Bull Power herda os seus parâmetros de [ExponentialMovingAverage](xref:StockSha
 
 [Bear Power](bear_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Média móvel exponencial](ema.md)

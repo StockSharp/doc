@@ -36,5 +36,4 @@ EMA が上昇し、Bear Power が直近の安値から回復し、Bull Power が
 
 [Bull Power](bull_power.md)
 [Bear Power](bear_power.md)
-[ExponentialMovingAverage](ema.md)
-
+[指数移動平均](ema.md)

@@ -35,4 +35,4 @@ Bear Power herda a configuração de [ExponentialMovingAverage](xref:StockSharp.
 
 [Bull Power](bull_power.md)
 [Elder Ray](elder_ray.md)
-[ExponentialMovingAverage](ema.md)
+[Média móvel exponencial](ema.md)

@@ -2172,6 +2172,57 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageTerms()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Exponential Moving Average",
+			"Simple Moving Average",
+			"Weighted Moving Average",
+			"Smoothed Moving Average",
+		};
+		var apiStyleLocalLinks = new[]
+		{
+			"[ExponentialMovingAverage](ema.md)",
+			"[SimpleMovingAverage](sma.md)",
+			"[WeightedMovingAverage](weighted_ma.md)",
+			"[SmoothedMovingAverage](smoothed_ma.md)",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var content = ReadAllText(file);
+
+				foreach (var link in apiStyleLocalLinks)
+				{
+					if (content.Contains(link, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(file)}: localized indicator documentation keeps API-style link label '{link}'. Localize the link label.");
+				}
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(content))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English moving-average term '{phrase}'. Localize the term while keeping MA/EMA/SMA abbreviations where useful.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

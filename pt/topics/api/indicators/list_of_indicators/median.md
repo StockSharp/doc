@@ -29,5 +29,4 @@ Um filtro de mediana ordena os preços dentro da janela móvel e selecciona o va
 
 [SMA](sma.md)
 [EMA](ema.md)
-[Smoothed Moving Average](smoothed_ma.md)
-
+[Média móvel suavizada](smoothed_ma.md)
