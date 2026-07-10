@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Standard Deviation](standard_deviation.md)
+[Стандартное отклонение](standard_deviation.md)

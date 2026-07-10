@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Standard Deviation](standard_deviation.md)
+[標準偏差](standard_deviation.md)

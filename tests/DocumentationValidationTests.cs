@@ -2108,6 +2108,39 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedStandardDeviationDocsDoNotKeepEnglishTitleText()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/standard_deviation.md",
+			"topics/api/indicators/list_of_indicators/smoothed_ma.md",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!ContainsStandaloneText(text, "Standard Deviation"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Standard Deviation docs keep English title text. Localize the page title, lead text, and link label.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

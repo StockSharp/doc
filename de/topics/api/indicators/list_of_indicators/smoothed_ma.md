@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [SmoothedMovingAve
 
 ## Empfohlene Inhalte
 
-[Standard Deviation](standard_deviation.md)
+[Standardabweichung](standard_deviation.md)

@@ -8,4 +8,4 @@ Para utilizar o indicador, deve usar a classe [SmoothedMovingAverage](xref:Stock
 
 ## Conteúdo recomendado
 
-[Standard Deviation](standard_deviation.md)
+[Desvio padrão](standard_deviation.md)
