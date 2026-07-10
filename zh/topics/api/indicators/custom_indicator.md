@@ -195,7 +195,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	/// <summary>
 	/// 创建 <see cref="AverageDirectionalIndex"/>。
 	/// </summary>
-	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
+	/// <param name="dx">Welles Wilder 的方向运动指数。</param>
 	/// <param name="movingAverage">移动平均。</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
 	{
@@ -262,7 +262,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	private readonly ExponentialMovingAverage _longEma;
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// 初始化 <see cref="PercentageVolumeOscillator"/> 的新实例。
 	/// </summary>
 	public PercentageVolumeOscillator()
 		: this(new(), new())
@@ -272,10 +272,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// 初始化 <see cref="PercentageVolumeOscillator"/> 的新实例。
 	/// </summary>
-	/// <param name="shortEma">The short-term EMA.</param>
-	/// <param name="longEma">The long-term EMA.</param>
+	/// <param name="shortEma">短期 EMA。</param>
+	/// <param name="longEma">长期 EMA。</param>
 	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
 		: base(shortEma, longEma)
 	{
@@ -372,12 +372,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 
 ```cs
 /// <summary>
-/// <see cref="PercentageVolumeOscillator"/> indicator value.
+/// <see cref="PercentageVolumeOscillator"/> 指标值。
 /// </summary>
 public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
+	/// 初始化 <see cref="PercentageVolumeOscillatorValue"/> 类的新实例。
 	/// </summary>
 	/// <param name="indicator">Indicator.</param>
 	/// <param name="time">Value time.</param>

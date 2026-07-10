@@ -16,7 +16,7 @@ var chartIndicatorElement = new ChartIndicatorElement()
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+	/// Элемент графика для <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
@@ -30,7 +30,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+	/// Элемент графика для <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
@@ -99,7 +99,7 @@ protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<Chart
 
 ```cs
 /// <summary>
-/// The chart element for <see cref="Fractals"/>.
+	/// Элемент графика для <see cref="Fractals"/>.
 /// </summary>
 [Indicator(typeof(Fractals))]
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>

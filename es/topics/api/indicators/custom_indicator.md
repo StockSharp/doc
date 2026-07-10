@@ -195,7 +195,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	/// <summary>
 	/// Crea <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
-	/// <param name="dx">Welles Wilder's Directional Movement Index.</param>
+	/// <param name="dx">Índice de movimiento direccional de Welles Wilder.</param>
 	/// <param name="movingAverage">Media móvil.</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
 	{
@@ -262,7 +262,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	private readonly ExponentialMovingAverage _longEma;
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// Inicializa una nueva instancia de <see cref="PercentageVolumeOscillator"/>.
 	/// </summary>
 	public PercentageVolumeOscillator()
 		: this(new(), new())
@@ -272,10 +272,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	}
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// Inicializa una nueva instancia de <see cref="PercentageVolumeOscillator"/>.
 	/// </summary>
-	/// <param name="shortEma">The short-term EMA.</param>
-	/// <param name="longEma">The long-term EMA.</param>
+	/// <param name="shortEma">EMA de corto plazo.</param>
+	/// <param name="longEma">EMA de largo plazo.</param>
 	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
 		: base(shortEma, longEma)
 	{
@@ -372,12 +372,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 
 ```cs
 /// <summary>
-/// <see cref="PercentageVolumeOscillator"/> indicator value.
+/// Valor del indicador <see cref="PercentageVolumeOscillator"/>.
 /// </summary>
 public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageVolumeOscillator>
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillatorValue"/> class.
+	/// Inicializa una nueva instancia de la clase <see cref="PercentageVolumeOscillatorValue"/>.
 	/// </summary>
 	/// <param name="indicator">Indicator.</param>
 	/// <param name="time">Value time.</param>

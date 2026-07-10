@@ -62,7 +62,7 @@ La clase `CoinbaseOrderCondition` hereda de `BaseWithdrawOrderCondition`, ya que
 public class CoinbaseOrderCondition : BaseWithdrawOrderCondition, IStopLossOrderCondition
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="CoinbaseOrderCondition"/>.
+	/// Inicializa una nueva instancia de <see cref="CoinbaseOrderCondition"/>.
 	/// </summary>
 	public CoinbaseOrderCondition()
 	{

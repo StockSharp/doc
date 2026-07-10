@@ -3719,12 +3719,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeCodeCommentForTranslationCheck(string comment)
 	{
-		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+		if (Regex.IsMatch(comment, @"https?://|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*\*/\s*$", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"<[^>]+>", " ", RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
 		if (text.Length < 12 && !_knownEnglishCodeCommentLabels.Contains(text))
@@ -3742,12 +3743,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeCodeCommentForLikelyEnglishCheck(string comment)
 	{
-		if (Regex.IsMatch(comment, @"https?://|<see\s+cref=|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
+		if (Regex.IsMatch(comment, @"https?://|nameof\(|^[#/\\\s-]*$|^//\s*[A-Z][A-Za-z0-9_.]+\s*=", RegexOptions.CultureInvariant))
 			return string.Empty;
 
 		var text = Regex.Replace(comment, @"^\s*(?:///?|#|<!--|/\*)\s*", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*-->\s*$", string.Empty, RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s*\*/\s*$", string.Empty, RegexOptions.CultureInvariant);
+		text = Regex.Replace(text, @"<[^>]+>", " ", RegexOptions.CultureInvariant);
 		text = Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 
 		if (text.Length < 20)

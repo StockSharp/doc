@@ -78,21 +78,21 @@ type EmptyIndicator() as this =
 			result
 
 	/// <summary>
-	/// Load indicator settings from a given <see cref="SettingsStorage"/>.
+	/// Загружает настройки индикатора из заданного <see cref="SettingsStorage"/>.
 	/// </summary>
 	override this.Load(storage: SettingsStorage) =
 		base.Load(storage)
 		this.Change <- storage.GetValue<int>(nameof(this.Change))
 
 	/// <summary>
-	/// Save indicator settings to a given <see cref="SettingsStorage"/>.
+	/// Сохраняет настройки индикатора в заданный <see cref="SettingsStorage"/>.
 	/// </summary>
 	override this.Save(storage: SettingsStorage) =
 		base.Save(storage)
 		storage.SetValue(nameof(this.Change), this.Change)
 
 	/// <summary>
-	/// A string representation that includes the current <see cref="Change"/> value.
+	/// Строковое представление, включающее текущее значение <see cref="Change"/>.
 	/// </summary>
 	override this.ToString() =
 		sprintf "Change: %d" this.Change

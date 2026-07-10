@@ -14,7 +14,7 @@
 public class SimpleMovingAverage : DecimalLengthIndicator
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SimpleMovingAverage"/>.
+	/// Инициализирует новый экземпляр <see cref="SimpleMovingAverage"/>.
 	/// </summary>
 	public SimpleMovingAverage()
 	{
@@ -126,7 +126,7 @@ public override void Load(SettingsStorage storage)
 public class ChaikinVolatility : BaseIndicator
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="ChaikinVolatility"/>.
+	/// Инициализирует новый экземпляр <see cref="ChaikinVolatility"/>.
 	/// </summary>
 	public ChaikinVolatility()
 	{
@@ -221,7 +221,7 @@ public class ChaikinVolatility : BaseIndicator
 public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalIndexValue>
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>.
+	/// Инициализирует новый экземпляр <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
 	public AverageDirectionalIndex()
 		: this(new DirectionalIndex { Length = 14 }, new WilderMovingAverage { Length = 14 })
@@ -229,10 +229,10 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 	}
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="AverageDirectionalIndex"/>.
+	/// Инициализирует новый экземпляр <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
 	/// <param name="dx">Welles Wilder Directional Movement Index.</param>
-	/// <param name="movingAverage">Moving Average.</param>
+	/// <param name="movingAverage">Скользящая средняя.</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, DecimalLengthIndicator movingAverage)
 		: base(dx, movingAverage)
 	{
@@ -294,7 +294,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 }
 
 /// <summary>
-/// <see cref="AverageDirectionalIndex"/> indicator value.
+/// Значение индикатора <see cref="AverageDirectionalIndex"/>.
 /// </summary>
 public interface IAverageDirectionalIndexValue : IComplexIndicatorValue
 {
@@ -364,7 +364,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 	public ExponentialMovingAverage LongEma { get; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// Инициализирует новый экземпляр <see cref="PercentageVolumeOscillator"/>.
 	/// </summary>
 	public PercentageVolumeOscillator()
 		: this(new(), new())
@@ -374,10 +374,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 	}
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="PercentageVolumeOscillator"/>.
+	/// Инициализирует новый экземпляр <see cref="PercentageVolumeOscillator"/>.
 	/// </summary>
-	/// <param name="shortEma">The short-term EMA.</param>
-	/// <param name="longEma">The long-term EMA.</param>
+	/// <param name="shortEma">Краткосрочная EMA.</param>
+	/// <param name="longEma">Долгосрочная EMA.</param>
 	public PercentageVolumeOscillator(ExponentialMovingAverage shortEma, ExponentialMovingAverage longEma)
 		: base(shortEma, longEma)
 	{
@@ -474,7 +474,7 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolume
 
 ```cs
 /// <summary>
-/// <see cref="PercentageVolumeOscillator"/> indicator value.
+/// Значение индикатора <see cref="PercentageVolumeOscillator"/>.
 /// </summary>
 public interface IPercentageVolumeOscillatorValue : IComplexIndicatorValue
 {

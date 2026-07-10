@@ -62,7 +62,7 @@ public class MyWithdrawCondition : BaseWithdrawOrderCondition
 public class CoinbaseOrderCondition : BaseWithdrawOrderCondition, IStopLossOrderCondition
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="CoinbaseOrderCondition"/>.
+	/// Инициализирует новый экземпляр <see cref="CoinbaseOrderCondition"/>.
 	/// </summary>
 	public CoinbaseOrderCondition()
 	{
