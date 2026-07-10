@@ -5,7 +5,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:
 
-![API GUI Settings BitMax](../../../../../images/api_gui_settings_bitmax.png)
+![API-GUI-Einstellungen BitMax](../../../../../images/api_gui_settings_bitmax.png)
 
 - **Schlüssel** - Key.
 - **Geheimnis** - Secret.

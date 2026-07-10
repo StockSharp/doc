@@ -2,7 +2,7 @@
 
 取引をインポートするには、**インポート \=\> Ticks** タブを選択します。
 
-![hydra import trades](../../../images/hydra_import_trades.png)
+![hydra 取引をインポート](../../../images/hydra_import_trades.png)
 
 ## インポート プロセス。
 
@@ -27,8 +27,8 @@
    - {TradePrice} フィールドについては、**S# フィールド** ウィンドウから **価格** フィールド、つまり取引価格を選択します。値 5 を割り当てます。
    - {TradeVolume} フィールドについては、**S# フィールド** ウィンドウから **数量** フィールド、つまり取引数量を選択します。値 6 を割り当てます。
    - {OriginSide} フィールドについては、**S# フィールド** ウィンドウから **イニシエーター** フィールド、つまり取引のイニシエーター（売り手または買い手）を選択します。値 7 を割り当てます。
-   - フィールド設定ウィンドウは次のようになります。![hydra import prop trade](../../../images/hydra_import_prop_trade.png)
+   - フィールド設定ウィンドウは次のようになります。![hydra import 取引プロパティ](../../../images/hydra_import_prop_trade.png)
 
    ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。
-3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview trade](../../../images/hydra_import_preview_trade.png)
+3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import 取引プレビュー](../../../images/hydra_import_preview_trade.png)
 4. **インポート** ボタンをクリックします。

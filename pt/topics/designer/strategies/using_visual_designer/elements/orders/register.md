@@ -1,6 +1,6 @@
 # Registo de ordem
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer Abertura de posição 00](../../../../../../images/designer_position_opening_00.png)
 
 O componente "Registo de ordem" é utilizado para colocar ordens de negociação para um instrumento seleccionado.
 

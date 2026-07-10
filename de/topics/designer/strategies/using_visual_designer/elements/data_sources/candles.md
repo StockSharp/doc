@@ -1,6 +1,6 @@
 # Kerzen
 
-![Designer Candles 00](../../../../../../images/designer_candles_00.png)
+![Designer Kerzen 00](../../../../../../images/designer_candles_00.png)
 
 Dieser Block wird verwendet, um Kerzen für ein angegebenes Instrument zu bilden.
 

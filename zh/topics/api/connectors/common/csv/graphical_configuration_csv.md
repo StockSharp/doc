@@ -2,7 +2,7 @@
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行：
 
-![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
+![API GUI 设置 CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **设置** - 导入设置
 - **重新连接设置** - 用于跟踪与交易系统连接状态的机制。（[重新连接设置](../../reconnection_settings.md)）

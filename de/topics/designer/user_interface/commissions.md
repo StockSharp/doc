@@ -4,7 +4,7 @@ Im Panel [Backtesting-Einstellungen](components/backtesting_settings.md) können
 
 Im Fenster **Provisionen** sollten Sie den Provisionstyp auswählen, den Provisionswert festlegen und die Bedingung angeben, unter der die Provision berechnet wird.
 
-![Designer Commission Rule](../../../images/designer_commission_rule.png)
+![Designer Provisionsregel](../../../images/designer_commission_rule.png)
 
 ### Liste der Provisionstypen
 

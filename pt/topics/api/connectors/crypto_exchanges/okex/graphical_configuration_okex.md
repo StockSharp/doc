@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
+![Configurações da API GUI OKEx](../../../../../images/api_gui_settings_okex.png)
 
 - **chave** - chave.
 - **segredo** - segredo.

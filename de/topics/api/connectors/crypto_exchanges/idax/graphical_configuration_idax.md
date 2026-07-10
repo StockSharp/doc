@@ -5,7 +5,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings IDAX](../../../../../images/api_gui_settings_idax.png)
+![API-GUI-Einstellungen IDAX](../../../../../images/api_gui_settings_idax.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.

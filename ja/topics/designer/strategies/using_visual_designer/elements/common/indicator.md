@@ -1,6 +1,6 @@
 # インジケーター
 
-![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
+![Designer インジケーター 00](../../../../../../images/designer_indicator_00.png)
 
 このブロックは、インジケーター値を計算するために使用します。
 
@@ -18,7 +18,7 @@
 - **最終** - インジケーターの[最終値](../../../../../api/indicators.md)のみを渡します。
 - **形成済み** - インジケーターが完全に[形成済み](../../../../../api/indicators.md)の場合のみ値を渡します。
 
-![Designer Indicator 01](../../../../../../images/designer_indicator_01.png)
+![Designer インジケーター 01](../../../../../../images/designer_indicator_01.png)
 
 ## 関連項目
 

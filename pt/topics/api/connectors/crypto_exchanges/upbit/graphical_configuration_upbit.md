@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Upbit](../../../../../images/api_gui_settings_upbit.png)
+![Configurações da API GUI Upbit](../../../../../images/api_gui_settings_upbit.png)
 
 - **chave** - Key.
 - **segredo** - Secret.

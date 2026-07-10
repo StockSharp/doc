@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FAST](../../../../../images/api_gui_settings_fast.png)
+![API-GUI-Einstellungen FAST](../../../../../images/api_gui_settings_fast.png)
 
 - **Dialekt** - Dialekt des FAST-Protokolls. Muss als erster Parameter festgelegt werden. Nach der Auswahl enthält der nächste Parameter (**FAST-Einstellungen**) die angegebenen Dialekt-IP-Adressen.
 - **FAST-Einstellungen** - IP-Adressen und Ports des (im vorherigen Parameter ausgewählten) Dialekts. Sie können die folgende Option zum schnellen Laden der Einstellungen verwenden.

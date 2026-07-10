@@ -1,6 +1,6 @@
 # Movimiento de orden
 
-![Designer Moving applications 00](../../../../../../images/designer_moving_applications_00.png)
+![Designer Mover aplicaciones 00](../../../../../../images/designer_moving_applications_00.png)
 
 Este bloque se usa para modificar una orden de un instrumento.
 

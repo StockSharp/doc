@@ -4,7 +4,7 @@ Para trabajar con exchanges y fuentes de datos en [S#](../api.md), se recomienda
 
 Veamos cómo trabajar con [Connector](xref:StockSharp.Algo.Connector). El código fuente del ejemplo se puede encontrar en el proyecto Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
-![multiconnection main](../../images/multiconnection_main.png)
+![multiconnection vista principal](../../images/multiconnection_main.png)
 
 Cree una instancia de la clase [Connector](xref:StockSharp.Algo.Connector):
 

@@ -6,7 +6,7 @@
 
 2. **Designer** の設定ディレクトリは、ユーザーのドキュメントフォルダー配下にあります: …\\StockSharp\\Designer\\ (例: c:\\Users\\User\\Documents\\StockSharp\\Designer\\)。このディレクトリを削除すると、すべての [Designer](../../designer.md) 設定が既定値にリセットされます。**作成済みのすべてのストラテジー、ダウンロード済み銘柄、および設定ディレクトリに保存されているその他の情報は破棄されます。**
 
-![Designer Directory and edit the data manually 00](../../../images/designer_directory_and_edit_data_manually_00.png)
+![Designer ディレクトリとデータの手動編集 00](../../../images/designer_directory_and_edit_data_manually_00.png)
 
 このディレクトリには、次のフォルダーとファイルが含まれます。
 

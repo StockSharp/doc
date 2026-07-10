@@ -4,11 +4,11 @@ Das Erstellen von Strategien aus Code richtet sich an Benutzer, die bevorzugt mi
 
 Der Prozess zum Erstellen einer Strategie findet direkt in [Designer](../../../designer.md) oder in einer **C#**-Entwicklungsumgebung statt (die beliebtesten sind **Visual Studio** und **JetBrains Rider**). Dabei wird eine Bibliothek für die professionelle Entwicklung von Handelsrobotern in **C#** und [API](../../../api.md) verwendet.
 
-Sie können eine neue Strategie hinzufügen, indem Sie im Tab **Allgemein** auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) klicken und **Strategie** auswählen. Alternativ klicken Sie mit der rechten Maustaste auf den Ordner **Strategien** im Panel **Schema** und anschließend im Dropdown-Menü auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png):
+Sie können eine neue Strategie hinzufügen, indem Sie im Tab **Allgemein** auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../../images/designer_panel_circuits_01_button.png) klicken und **Strategie** auswählen. Alternativ klicken Sie mit der rechten Maustaste auf den Ordner **Strategien** im Panel **Schema** und anschließend im Dropdown-Menü auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../../images/designer_panel_circuits_01_button.png):
 
-![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
+![Designer Erstellung einer Strategie 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) erscheint ein Fenster, in dem der Inhaltstyp ausgewählt wird, auf dessen Grundlage die Strategie erstellt werden soll:
+Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../../images/designer_panel_circuits_01_button.png) erscheint ein Fenster, in dem der Inhaltstyp ausgewählt wird, auf dessen Grundlage die Strategie erstellt werden soll:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
@@ -24,6 +24,6 @@ Der Code-Editor-Tab besteht aus den Panels **Quellcode** und **Fehlerliste**. Da
 
 Das Panel **Fehlerliste** ist eine Tabelle mit einer Liste der Fehler im Code. Ein Doppelklick auf eine Zeile bewegt den Cursor im Panel **Quellcode** automatisch an die Fehlerstelle.
 
-Beim Bearbeiten des Codes erscheint in der rechten unteren Ecke des Panels **Fehlerliste** ein Symbol ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png), das anzeigt, dass die Änderungsverfolgung begonnen hat. Der Code wird kompiliert, sobald sich der Code nicht mehr ändert.
+Beim Bearbeiten des Codes erscheint in der rechten unteren Ecke des Panels **Fehlerliste** ein Symbol ![Designer Erstellung des Würfels mit Quellcode 03](../../../../images/designer_creation_of_element_containing_source_code_03.png), das anzeigt, dass die Änderungsverfolgung begonnen hat. Der Code wird kompiliert, sobald sich der Code nicht mehr ändert.
 
 Das Ausführen der Strategie im [Backtest](../../backtesting/user_interface.md), im [Live-Betrieb](../../live_execution/getting_started.md) und andere Operationen funktionieren ähnlich wie bei einer Strategie aus Diagrammen.

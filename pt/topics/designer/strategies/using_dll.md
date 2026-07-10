@@ -11,25 +11,25 @@ Usar DLLs prontas é familiar para quem pretende trabalhar continuamente em ambi
 
 1. Para criar uma estratégia no **Visual Studio**, tem de criar um projeto:
 
-![Designer Creating a DLL cube in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
+![Designer Criação de um cubo DLL no Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
 
 2. Em seguida, tem de escrever o código da estratégia. Para um início rápido, pode copiar o código SmaStrategy, que é criado como modelo em [estratégia a partir de código](using_code/csharp/first_strategy.md):
 
-![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
+![Designer Criação de um cubo DLL no Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
 3. Para compilar o código, inclua o pacote NuGet [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo), que contém a classe base para todas as estratégias: [Strategy](xref:StockSharp.Algo.Strategies.Strategy).
 
-![Designer Creating a DLL cube in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
+![Designer Criação de um cubo DLL no Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
 
 Se a estratégia usar interfaces de gráficos, inclua o pacote NuGet [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces). Estas interfaces não contêm a lógica real dos gráficos e são necessárias apenas para compilar o código. Quando a estratégia é executada no **Designer**, a renderização real dos gráficos ocorre através destas interfaces.
 
 4. Depois de criar a estratégia, o projeto tem de ser compilado premindo **Compilar solução** no separador **Compilar**.
 
-![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
+![Designer Criação de um cubo DLL no Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
 5. Por predefinição, no Visual Studio, o projeto é compilado para a pasta …\bin\Debug\net6.0.
 
-![Designer Creating a DLL cube in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
+![Designer Criação de um cubo DLL no Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
 ### Adicionar DLL ao Designer
 

@@ -2,7 +2,7 @@
 
 Para todos los productos StockSharp, la configuración gráfica de la conexión se realiza en el formulario de pantalla [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
+![Configuración de API GUI cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
 - **Demo** - Conexión al trading demo.
 
@@ -18,7 +18,7 @@ Proceso de autorización OAuth:
 
 2. Después de hacer clic en "Start", el usuario será redirigido al sitio web de cTrader para iniciar sesión. En el sitio web de cTrader debe permitir a la aplicación StockSharp el acceso a las operaciones de trading:
 
-   ![cTrader Login](../../../../../images/api_gui_settings_ctrader_2.png)
+   ![Inicio de sesión cTrader](../../../../../images/api_gui_settings_ctrader_2.png)
 
 3. Después de eso, será redirigido de vuelta al sitio web de StockSharp y el programa iniciará sesión automáticamente.
 

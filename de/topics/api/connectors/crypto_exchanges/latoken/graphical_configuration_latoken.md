@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings LATOKEN](../../../../../images/api_gui_settings_latoken.png)
+![API-GUI-Einstellungen LATOKEN](../../../../../images/api_gui_settings_latoken.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.

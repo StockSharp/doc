@@ -1,6 +1,6 @@
 # Position
 
-![Designer Position 00](../../../../../../images/designer_position_00.png)
+![Designer Positionsansicht 00](../../../../../../images/designer_position_00.png)
 
 Das Element wird verwendet, um Informationen über Positionsänderungen für das angegebene Instrument und Portfolio zu erhalten.
 

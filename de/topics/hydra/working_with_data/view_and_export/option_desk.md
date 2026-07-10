@@ -8,6 +8,6 @@ Wenn keine Historie vorhanden ist, aber Daten zum Spread vorliegen, können Sie 
 
 Um den **Volatilitäts-Smile** anzuzeigen, wechseln Sie zur Registerkarte **Volatilitäts-Smile**.
 
-![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
+![hydra Options-Volatilitäts-Smile](../../../../images/hydra_option_smile_of_volatility.png)
 
 Die berechneten Werte können [in das erforderliche Format exportiert](../export_data.md) werden.

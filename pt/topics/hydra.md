@@ -1,6 +1,6 @@
 # Hydra
 
-![hydra main](../images/hydra_main.png)
+![hydra principal](../images/hydra_main.png)
 
 O **Hydra** descarrega automaticamente dados de mercado de diferentes fontes e armazena-os localmente. Suporta instrumentos, candles, ticks de negócios, livros de ordens e outros tipos de dados. Os dados podem ser guardados no formato binário especial do **Hydra** (BIN), que proporciona uma elevada compressão, ou em formato CSV para análise noutros programas.
 

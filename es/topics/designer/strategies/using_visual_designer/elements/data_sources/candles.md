@@ -1,6 +1,6 @@
 # Velas
 
-![Designer Candles 00](../../../../../../images/designer_candles_00.png)
+![Designer velas 00](../../../../../../images/designer_candles_00.png)
 
 Este bloque se usa para construir velas para un instrumento especificado.
 

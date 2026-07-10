@@ -1,6 +1,6 @@
 # インデックス
 
-![Designer Index 00](../../../../../../images/designer_index_00.png)
+![Designer インデックス 00](../../../../../../images/designer_index_00.png)
 
 このキューブは、独自のインデックスを作成するために使用されます。
 

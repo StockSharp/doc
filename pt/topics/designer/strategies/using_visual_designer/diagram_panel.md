@@ -2,7 +2,7 @@
 
 O principal processo de conceção de uma estratégia e dos seus elementos componentes decorre no painel **Esquema**, através da combinação de blocos e linhas de ligação. O painel Esquema é composto pelos painéis: **Paleta**, **Designer** e **Propriedades**.
 
-![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
+![Designer Esquemas, estratégias e elementos de componentes do Designer 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Painel Palette
 
@@ -16,7 +16,7 @@ O painel **Designer** é onde ocorre todo o processo de criação de uma estrat�
 
 O painel **Propriedades** apresenta os parâmetros do bloco selecionado no painel **Designer**. Quando um bloco é selecionado no painel **Designer**, a sua moldura fica preta.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer Painel de propriedades 00](../../../../images/designer_properties_panel_00.png)
 
 O painel **Propriedades** pode ser apresentado em dois modos: *Definições básicas* e *Definições avançadas*.
 
@@ -26,7 +26,7 @@ No modo *definições básicas*, são apresentadas apenas as propriedades mais n
 
 No modo *advanced settings*, serão apresentadas todas as propriedades do bloco disponíveis para alteração e definição.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer Painel de propriedades 00](../../../../images/designer_properties_panel_01.png)
 
 Todos os blocos contêm um conjunto de propriedades predefinidas, que ficam visíveis no modo *advanced settings*:
 

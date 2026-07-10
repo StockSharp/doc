@@ -10,11 +10,11 @@
 
 构建步骤如下：
 
-1. 选择要获取市场数据的时间范围和交易品种。![hydra LEVEL 1 build depth data](../../../images/hydra_level1_build_depth_data.png)
-2. 打开 **构建来源** 字段并选择所需的数据类型。![hydra type build data](../../../images/hydra_type_build_data.png)
+1. 选择要获取市场数据的时间范围和交易品种。![hydra 构建 一级 深度数据](../../../images/hydra_level1_build_depth_data.png)
+2. 打开 **构建来源** 字段并选择所需的数据类型。![hydra 数据构建类型](../../../images/hydra_type_build_data.png)
 
-   **重要！**如果选择 **订单簿、订单日志、Level 1** 作为K线的数据源，还会出现其他参数供选择。![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
-3. 设置参数后，单击 ![hydra candles](../../../images/hydra_candles.png) 按钮。![hydra LEVEL 1 build depth data result](../../../images/hydra_level1_build_depth_data_result.png)
+   **重要！**如果选择 **订单簿、订单日志、Level 1** 作为K线的数据源，还会出现其他参数供选择。![hydra 扩展构建数据属性](../../../images/hydra_ext_proper_build_data.png)
+3. 设置参数后，单击 ![hydra K线](../../../images/hydra_candles.png) 按钮。![hydra 一级 深度数据结果](../../../images/hydra_level1_build_depth_data_result.png)
 
 对于**K线**，还可以使用较小时间周期的K线构建较大时间周期的K线。
 

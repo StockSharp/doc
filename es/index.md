@@ -43,7 +43,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 ### Terminal
 
-![Terminal main 00](images/terminal_main_00.png)
+![Terminal vista principal 00](images/terminal_main_00.png)
 
 [Terminal](topics/terminal.md) es una aplicación de trading y gráficos (terminal de trading):
 

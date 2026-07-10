@@ -22,23 +22,23 @@ SMA 策略示例使用以下参数：
 
 按上述值设置参数：
 
-![Designer An example of backtesting 00](../../../images/designer_example_of_backtesting_00.png)
+![Designer 回测示例 00](../../../images/designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](../../../images/designer_example_of_backtesting_01.png)
+![Designer 回测示例 01](../../../images/designer_example_of_backtesting_01.png)
 
-设置完所有必需参数后，单击 ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png) 按钮启动策略测试。
+设置完所有必需参数后，单击 ![Designer 回测界面 01](../../../images/designer_interface_backtesting_01.png) 按钮启动策略测试。
 
 测试期间或测试完成后，可以查看包含测试信息的图表和表格。
 
-![Designer An example of backtesting 02](../../../images/designer_example_of_backtesting_02.png)
+![Designer 回测示例 02](../../../images/designer_example_of_backtesting_02.png)
 
 图表表明，成交按照策略设计发生在移动平均线的交叉点。还可以看到，订单由多笔成交完成。这是因为测试使用了生成的订单簿，使测试过程更接近真实交易。通过 Trades 表、Statistics 以及 Positions 图表，可以确认订单由多笔成交完成。
 
-![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
+![Designer 回测示例 03](../../../images/designer_example_of_backtesting_03.png)
 
 从 **持仓图表** 可以看出，策略实际操作的数量有所减少。这是因为生成的订单簿深度为 5，整个订单簿中的可用数量不足以成交 200 手订单。由于该策略只进行持仓反转，因此每当订单簿深度不足以完全成交订单时，后续订单数量都会相应减少。
 
-![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
+![Designer 回测示例 04](../../../images/designer_example_of_backtesting_04.png)
 
 **P\/L** 图表表明，在这些参数下该策略处于亏损状态。
 

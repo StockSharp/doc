@@ -8,11 +8,11 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 2. 在 Visual Studio 中选择 **Debug -> Attach to Process**。
 
-![Designer Debugging DLL cube using Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
+![Designer 使用 Visual Studio 调试 DLL 方块 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
 3. 在 **附加到进程** 对话框的 **可用进程** 列表中，找到需要附加的 **Designer.exe** 进程。
 
-![Designer Debugging DLL cube using Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
+![Designer 使用 Visual Studio 调试 DLL 方块 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
 如果该进程由其他用户账户运行，请选中 **显示所有用户的进程** 复选框。
 
@@ -22,15 +22,15 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 - 在 **选择代码类型** 对话框中选择 **调试这些代码类型**，然后选择需要调试的类型。
 - 单击 OK。
 
-![Designer Debugging DLL cube using Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
+![Designer 使用 Visual Studio 调试 DLL 方块 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
 5. 单击 Attach 按钮。
 
-6. 在 Visual Studio 代码中设置断点。如果 Studio 已进入调试模式，且断点显示为红色实心图标 ![Designer Debugging DLL cube using Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png)，表示已加载正确版本的 DLL。如果断点显示为红色空心图标 ![Designer Debugging DLL cube using Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png)，则表示加载了错误版本的 DLL。
+6. 在 Visual Studio 代码中设置断点。如果 Studio 已进入调试模式，且断点显示为红色实心图标 ![Designer 使用 Visual Studio 调试 DLL 方块 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png)，表示已加载正确版本的 DLL。如果断点显示为红色空心图标 ![Designer 使用 Visual Studio 调试 DLL 方块 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png)，则表示加载了错误版本的 DLL。
 
 7. 本例在 **public void ProcessCandle(Candle candle)** 方法的第一行设置断点。当策略在 [Designer](../../../designer.md) 中运行，并开始向 DLL 传递K线值时，Visual Studio 会在断点处停止。此后即可跟踪代码执行过程：
 
-![Designer Debugging DLL cube using Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
+![Designer 使用 Visual Studio 调试 DLL 方块 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
 > [!WARNING]
 > 代码在调试器中暂停时，**Designer** 内部的所有进程也会暂停。如果程序连接到真实交易环境，长时间停留在断点处可能导致连接中断。

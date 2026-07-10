@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
+![Configurações da API GUI Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
 - **chave** - Chave.
 - **segredo** - Chave secreta.

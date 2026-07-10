@@ -2,7 +2,7 @@
 
 Auf der Registerkarte **Emulation** können Sie Strategien auf historischen Daten testen.
 
-![Shell emulation 00](../../../images/shell_emulation_00.png)
+![Shell Emulation 00](../../../images/shell_emulation_00.png)
 
 Durch Klicken auf die Schaltfläche **Hinzufügen** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) können Sie eine Strategie zum Testen hinzufügen. Jede hinzugefügte Strategie wird auf einer eigenen Registerkarte geöffnet.
 

@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings IEX](../../../../../images/api_gui_settings_iex.png)
+![API-GUI-Einstellungen IEX](../../../../../images/api_gui_settings_iex.png)
 
 - **Token** - Token.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

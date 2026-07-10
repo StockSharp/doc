@@ -2,7 +2,7 @@
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行：
 
-![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
+![API GUI 设置 RSS](../../../../../images/api_gui_settings_rss.png)
 
 - **地址** - RSS 订阅源地址。
 - **日期格式** - 日期格式。如果 RSS 数据流的格式与 `ddd, dd MMM yyyy HH:mm:ss zzzz` 不同，则需要填写此项。

@@ -6,7 +6,7 @@ Los siguientes directorios son importantes para [Designer](../../designer.md):
 
 2. El directorio de configuración de **Designer** se encuentra bajo la carpeta de documentos del usuario: …\\StockSharp\\Designer\\ (por ejemplo, c:\\Users\\User\\Documents\\StockSharp\\Designer\\). Eliminar este directorio restablece toda la configuración de [Designer](../../designer.md) a sus valores predeterminados. **Todas las estrategias creadas, instrumentos descargados y demás información almacenada en el directorio de configuración serán DESTRUIDOS.**
 
-![Designer Directory and edit the data manually 00](../../../images/designer_directory_and_edit_data_manually_00.png)
+![Designer Directorio y edición manual de datos 00](../../../images/designer_directory_and_edit_data_manually_00.png)
 
 Este directorio contiene las siguientes carpetas y archivos:
 

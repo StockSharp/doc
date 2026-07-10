@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster der Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:
 
-![API GUI Settings Coinbase](../../../../../images/api_gui_settings_coinbase.png)
+![API-GUI-Einstellungen Coinbase](../../../../../images/api_gui_settings_coinbase.png)
 
 - **Schlüssel** - Key.
 - **Geheimnis** - Secret.

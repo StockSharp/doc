@@ -1,12 +1,12 @@
 # ストラテジーダッシュボード
 
-**ライブ** タブの ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) ボタンをクリックすると、**ライブ** パネルが開きます。
+**ライブ** タブの ![Designer ストラテジーパネル 00](../../../images/designer_panel_strategies_00.png) ボタンをクリックすると、**ライブ** パネルが開きます。
 
-![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
+![Designer ストラテジーパネル 01](../../../images/designer_panel_strategies_01.png)
 
-**ライブ** パネルは、**ライブ** に追加されたすべてのストラテジーを表示するテーブルです。**ライブ** パネルでは、ストラテジーの現在の状態を確認し、![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png)、![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) ボタンを使用してストラテジーを実行または停止できます。
+**ライブ** パネルは、**ライブ** に追加されたすべてのストラテジーを表示するテーブルです。**ライブ** パネルでは、ストラテジーの現在の状態を確認し、![Designer 回路パネル 02](../../../images/designer_panel_circuits_02.png)、![Designer 回路パネル 03](../../../images/designer_panel_circuits_03.png) ボタンを使用してストラテジーを実行または停止できます。
 
-![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
+![Designer ストラテジーパネル 02](../../../images/designer_panel_strategies_02.png)
 
 - 1 番目の列は、ストラテジーの開始/停止を担当します。
 - 2 番目の列は、ストラテジー設定用です。

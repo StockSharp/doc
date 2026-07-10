@@ -4,7 +4,7 @@ Für die Arbeit mit Börsen und Datenquellen in [S#](../api.md) wird empfohlen, 
 
 Schauen wir uns die Arbeit mit [Connector](xref:StockSharp.Algo.Connector) an. Der Quellcode des Beispiels befindet sich im Projekt Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
-![multiconnection main](../../images/multiconnection_main.png)
+![multiconnection Hauptansicht](../../images/multiconnection_main.png)
 
 Erstellen Sie eine Instanz der Klasse [Connector](xref:StockSharp.Algo.Connector):
 

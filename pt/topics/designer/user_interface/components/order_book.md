@@ -4,7 +4,7 @@ O componente **Livro de ofertas** é uma tabela de ordens limitadas de compra e 
 
 Na estratégia, pode utilizar vários tipos diferentes de livros de ordens (ou de diferentes instrumentos) em simultâneo e apresentá-los em diferentes painéis.
 
-![Designer Panel Market Depth](../../../../images/designer_panel_market_depth.png)
+![Designer Painel de profundidade de mercado](../../../../images/designer_panel_market_depth.png)
 
 ## Conteúdo recomendado
 

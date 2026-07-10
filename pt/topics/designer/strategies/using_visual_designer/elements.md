@@ -2,13 +2,13 @@
 
 Dentro de cada cubo é apresentado um ícone que o caracteriza, bem como um nome que pode ser alterado para um nome definido pelo utilizador no painel **Propriedades**. A dica de contexto do cubo mostra uma descrição da finalidade desse cubo. Ao selecionar um cubo com o rato, pode ver as suas propriedades no painel **Propriedades** e, se necessário, alterar alguns parâmetros.
 
-![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
+![Designer Descrição dos cubos 00](../../../../images/designer_description_of_elements_00.png)
 
 À esquerda e à direita do cubo, as caixas coloridas mostram os parâmetros de entrada (esquerda) e de saída (direita).
 
 Os parâmetros são necessários para preencher o cubo com informações enquanto a estratégia está em execução. Por exemplo, para o cubo [Velas](elements/data_sources/candles.md), o instrumento para o qual pretende construir uma vela é passado para a entrada e as velas construídas são devolvidas na saída. Estas, por sua vez, podem ser usadas como parâmetro de entrada para o elemento [Gráfico](elements/common/chart.md). Ou podem ser passadas para um método que determina o tamanho da vela.
 
-![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
+![Designer Descrição dos cubos 01](../../../../images/designer_description_of_elements_01.png)
 
 A cor indica o tipo de dados que é passado nos parâmetros. Diferentes parâmetros em diferentes cubos podem receber e passar tipos de dados diferentes e incompatíveis. A descrição de cada parâmetro é indicada na dica de contexto. Para evitar muitos erros ao ligar parâmetros de tipos diferentes, cada parâmetro tem o seu próprio tipo de dados, que se distingue pela cor. O seguinte conjunto de cores é usado para indicar os parâmetros:
 

@@ -1,8 +1,8 @@
 # Livro de ofertas agrupado
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer Livro de ofertas agrupado 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer Livro de ofertas agrupado 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 O cubo é usado para obter um livro de ordens agrupado.
 

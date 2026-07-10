@@ -4,9 +4,9 @@ Benutzerdefinierte Panels sind spezielle Steuerelemente, die von S# erstellt wur
 
 Zuerst müssen Sie im XAML-Ordner Ihrer Strategie ein einfaches UserControl erstellen.
 
-![Shell custom strategy panel 00](../../images/shell_custom_strategy_panel_00.png)
+![Shell benutzerdefiniertes Strategie-Panel 00](../../images/shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](../../images/shell_custom_strategy_panel_01.png)
+![Shell benutzerdefiniertes Strategie-Panel 01](../../images/shell_custom_strategy_panel_01.png)
 
 Ersetzen Sie `UserControl` durch `controls:BaseStudioControl`.
 

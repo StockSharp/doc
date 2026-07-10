@@ -1,6 +1,6 @@
 # Registro de orden
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer Apertura de posición 00](../../../../../../images/designer_position_opening_00.png)
 
 El componente "Registro de orden" se usa para colocar órdenes de trading para un instrumento seleccionado.
 

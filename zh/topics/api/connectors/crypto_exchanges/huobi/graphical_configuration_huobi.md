@@ -2,7 +2,7 @@
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中完成：
 
-![API GUI Settings Huobi](../../../../../images/api_gui_settings_huobi.png)
+![API GUI 设置 Huobi](../../../../../images/api_gui_settings_huobi.png)
 
 - **访问密钥** - API 密钥。
 - **密钥** - API 私钥。

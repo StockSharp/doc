@@ -7,7 +7,7 @@ Bearish Candle é um padrão de velas caracterizado por um preço de fecho infer
 - O preço de abertura é superior ao preço de fecho (O > C).
 - Indica pressão bearish no mercado.
 
-![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
+![Padrão de candle baixista](../../../images/bearishcandlepattern.png)
 
 ### Interpretação
 

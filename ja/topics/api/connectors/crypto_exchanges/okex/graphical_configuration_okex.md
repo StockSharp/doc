@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
+![API GUI 設定 OKEx](../../../../../images/api_gui_settings_okex.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

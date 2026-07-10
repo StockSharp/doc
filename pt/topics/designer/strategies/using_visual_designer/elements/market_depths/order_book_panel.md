@@ -1,6 +1,6 @@
 # Painel de livro de ofertas
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer Painel do livro de ofertas](../../../../../../images/designer_orderbook_panel.png)
 
 O cubo foi concebido para apresentar o livro de ordens num componente gráfico especializado [Livro de ordens](../../../../user_interface/components/order_book.md).
 

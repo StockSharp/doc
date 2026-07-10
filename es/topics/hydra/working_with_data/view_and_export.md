@@ -19,7 +19,7 @@ Cada panel contiene una interfaz general de configuración como la siguiente:
   debe aumentar el límite de datos descargados.
 - Si los datos se recibieron de fuentes cuya zona horaria no coincide con la zona horaria actual, puede ajustar la zona horaria. Después de construir, los datos se mostrarán en la zona seleccionada por el usuario. ![hydra TZ](../../../images/hydra_tz.png)
 - Como varias fuentes no ofrecen la posibilidad de descargar algunos datos, el programa proporciona el campo [Construir a partir de](any_market_data_types.md). Con este campo, el usuario puede construir datos de mercado a partir de otro tipo de datos de mercado. La misma función puede usarse para construir datos de mercado sin descarga adicional, usando como base datos ya existentes.
-- Después de seleccionar los parámetros anteriores, debe hacer clic en el botón ![hydra find](../../../images/hydra_find.png).![hydra candles tf](../../../images/hydra_candles_tf.png)
+- Después de seleccionar los parámetros anteriores, debe hacer clic en el botón ![hydra find](../../../images/hydra_find.png).![hydra velas tf](../../../images/hydra_candles_tf.png)
 
 Con el menú contextual, puede configurar distintos parámetros de la tabla de valores de datos de mercado: agrupación de filas, columnas disponibles, formato de visualización, etc.
 

@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Barchart](../../../../../images/api_gui_settings_barchart.png)
+![API GUI 設定 Barchart](../../../../../images/api_gui_settings_barchart.png)
 
 - **ログイン** - Login。
 - **パスワード** - Password。

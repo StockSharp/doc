@@ -2,7 +2,7 @@
 
 **チャート** コンポーネントでは、選択した銘柄のローソク足とインジケーターを描画できます。
 
-![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
+![Terminal グラフィックパネル 00](../../../../images/terminal_panel_graphics_00.png)
 
 新しい領域を追加するには、![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png) ボタンをクリックします。
 
@@ -20,7 +20,7 @@
 
 売り注文は、**Ctrl+右マウスボタン** のキーの組み合わせで登録されます。
 
-![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
+![Terminal グラフィックパネル 01](../../../../images/terminal_panel_graphics_01.png)
 
 グラフィカル要素の設定では、必要なチャートスタイルを設定できます。日本式ローソク足、バー、ボックスチャート、クラスタープロファイルなどです。
 

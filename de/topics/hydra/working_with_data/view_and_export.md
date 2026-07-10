@@ -19,7 +19,7 @@ Jedes Panel enthält eine allgemeine Oberfläche mit folgenden Einstellungen:
   In diesem Fall müssen Sie das Limit für geladene Daten erhöhen.
 - Wenn die Daten aus Quellen empfangen wurden, deren Zeitzone nicht mit der aktuellen Zeitzone übereinstimmt, können Sie die Zeitzone anpassen. Nach dem Aufbau werden die Daten in der vom Benutzer ausgewählten Zone angezeigt. ![hydra TZ](../../../images/hydra_tz.png)
 - Da einige Quellen bestimmte Daten nicht zum Download bereitstellen, enthält das Programm das Feld [Erstellen aus](any_market_data_types.md). Über dieses Feld kann der Benutzer Marktdaten aus einem anderen Marktdatentyp aufbauen. Dieselbe Funktion kann verwendet werden, um Marktdaten ohne zusätzlichen Download auf Basis bereits vorhandener Daten zu erstellen.
-- Nachdem die oben genannten Parameter ausgewählt wurden, klicken Sie auf die Schaltfläche ![hydra find](../../../images/hydra_find.png).![hydra candles tf](../../../images/hydra_candles_tf.png)
+- Nachdem die oben genannten Parameter ausgewählt wurden, klicken Sie auf die Schaltfläche ![hydra find](../../../images/hydra_find.png).![hydra Kerzen tf](../../../images/hydra_candles_tf.png)
 
 Über das Kontextmenü können verschiedene Parameter der Tabelle mit Marktdatenwerten konfiguriert werden: Zeilengruppierung, verfügbare Spalten, Anzeigeformat usw.
 

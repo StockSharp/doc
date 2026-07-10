@@ -9,7 +9,7 @@ Black Candle (vela bajista) es un patrón de velas clásico que se forma cuando 
 - Indica el predominio de vendedores sobre compradores.
 - El tamaño del cuerpo de la vela muestra la fuerza del movimiento bajista.
 
-![Black Candle Pattern](../../../images/blackcandlepattern.png)
+![Patrón de vela negra](../../../images/blackcandlepattern.png)
 
 ### Interpretación
 

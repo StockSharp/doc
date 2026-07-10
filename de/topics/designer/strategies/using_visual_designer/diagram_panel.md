@@ -2,7 +2,7 @@
 
 Der Hauptprozess zum Entwerfen einer Strategie und ihrer Komponentenelemente findet im Panel **Schema** statt, indem Blöcke kombiniert und mit Linien verbunden werden. Das Panel Schema besteht aus den Panels **Elemente-Palette**, **Designer** und **Eigenschaften**.
 
-![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
+![Designer Designer-Schemata, Strategien und Komponentenelemente 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Palette-Panel
 
@@ -16,7 +16,7 @@ Das Panel **Designer** ist der Bereich, in dem der gesamte Prozess zum Erstellen
 
 Das Panel **Eigenschaften** zeigt die Parameter des auf dem Panel **Designer** ausgewählten Blocks an. Wenn ein Block im Panel **Designer** ausgewählt ist, wird sein Rahmen schwarz eingefärbt.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer Eigenschaften-Panel 00](../../../../images/designer_properties_panel_00.png)
 
 Das Panel **Eigenschaften** kann in zwei Modi angezeigt werden: *Basiseinstellungen* und *Erweiterte Einstellungen*.
 
@@ -26,7 +26,7 @@ Im Modus *Basiseinstellungen* werden nur die wichtigsten Eigenschaften des Block
 
 Im Modus *Erweiterte Einstellungen* werden alle änderbaren und konfigurierbaren Eigenschaften des Blocks angezeigt.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer Eigenschaften-Panel 00](../../../../images/designer_properties_panel_01.png)
 
 Alle Blöcke enthalten einen Satz vordefinierter Eigenschaften, die im Modus *Erweiterte Einstellungen* sichtbar werden:
 

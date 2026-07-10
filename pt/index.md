@@ -43,7 +43,7 @@ O [Hydra](topics/hydra.md) baixa automaticamente dados de mercado históricos e 
 
 ### Terminal
 
-![Terminal main 00](images/terminal_main_00.png)
+![Terminal principal 00](images/terminal_main_00.png)
 
 O [Terminal](topics/terminal.md) é uma aplicação de negociação e gráficos (terminal de negociação):
 

@@ -5,7 +5,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
+![API GUI 設定 QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

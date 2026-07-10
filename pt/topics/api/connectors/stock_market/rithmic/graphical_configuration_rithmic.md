@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Rithmic](../../../../../images/api_gui_settings_rithmic.png)
+![Configurações da API GUI Rithmic](../../../../../images/api_gui_settings_rithmic.png)
 
 - **nome de utilizador** - Login.
 - **palavra-passe** - Password.

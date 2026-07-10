@@ -1,6 +1,6 @@
 # ローソク足
 
-![Designer Candles 00](../../../../../../images/designer_candles_00.png)
+![Designer ローソク足 00](../../../../../../images/designer_candles_00.png)
 
 このブロックは、指定された銘柄のローソク足を構築するために使用されます。
 

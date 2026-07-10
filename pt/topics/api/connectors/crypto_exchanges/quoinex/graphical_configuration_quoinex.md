@@ -5,7 +5,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
+![Configurações da API GUI QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
 
 - **chave** - Key.
 - **segredo** - Secret.

@@ -1,6 +1,6 @@
 # Position ändern
 
-![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
+![Designer Positionsansicht ändern 00](../../../../../../images/designer_position_modify_00.png)
 
 Die Komponente „Position ändern“ wird verwendet, um eine Handelsposition anhand angegebener Bedingungen zu ändern.
 

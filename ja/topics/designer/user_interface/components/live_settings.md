@@ -2,7 +2,7 @@
 
 **プロパティ** パネルは、既定ではストラテジータブの右側に最小化されています。このパネルは、エミュレーションプロパティまたは Live 設定のテーブルです。特定のプロパティを選択すると、そのプロパティの詳細な説明がテーブルの下部に表示されます。すべてのプロパティはグループに分類されています。
 
-![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
+![Designer ライブプロパティ 00](../../../../images/designer_properties_live_00.png)
 
 **ログ**
 

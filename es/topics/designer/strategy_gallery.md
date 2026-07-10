@@ -6,11 +6,11 @@ Para descargar una estrategia a su ordenador, debe:
 
 - seleccionar la estrategia de interés y hacer clic en el botón Download:
 
-  ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
+  ![Designer Galería de estrategias 00](../../images/designer_gallery_of_strategies_00.png)
 
 - la estrategia se añadirá al árbol de estrategias en la sección **Prueba histórica**:
 
-  ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
+  ![Designer Galería de estrategias 01](../../images/designer_gallery_of_strategies_01.png)
 
 ## Véase también
 

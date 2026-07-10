@@ -1,6 +1,6 @@
 # 板情報
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer 板情報 00](../../../../../../images/designer_orderbook_00.png)
 
 このキューブは、指定された銘柄の板情報を取得するために使用します。
 

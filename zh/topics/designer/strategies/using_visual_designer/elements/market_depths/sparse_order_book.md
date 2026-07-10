@@ -1,8 +1,8 @@
 # 稀疏市场深度
 
-![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer 稀疏订单簿 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer 稀疏订单簿 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 该模块用于获取指定交易品种的稀疏市场深度。
 

@@ -8,15 +8,15 @@
 
 ![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
 
-![hydra index sec 00](../../../images/hydra_index_sec_00.png)
+![hydra 证券索引 00](../../../images/hydra_index_sec_00.png)
 
 下面以交易品种比值指数 AAPL@NYSE\/GOOG@NYSE 为例。
 
 第一步是创建**指数**。在 **所有交易品种** 选项卡中单击 **创建交易品种\=\>指数** 按钮，随后将显示以下窗口：
 
-![hydra index sec](../../../images/hydra_index_sec.png)
+![hydra 证券索引](../../../images/hydra_index_sec.png)
 
-![hydra index sec 01](../../../images/hydra_index_sec_01.png)
+![hydra 证券索引 01](../../../images/hydra_index_sec_01.png)
 
 创建**指数**交易品种时，需要指定名称，并添加由多个交易品种组成的数学公式。除标准数学运算符外，还可以使用以下函数：
 
@@ -41,7 +41,7 @@
 
 接下来，在 **常规** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的**指数**交易品种和数据时间段，在 **创建来源:** 字段中选择 **复合元素**，然后单击 ![hydra find](../../../images/hydra_find.png) 按钮。
 
-![hydra index candle](../../../images/hydra_index_candle.png)
+![hydra K线索引](../../../images/hydra_index_candle.png)
 
 生成的数据可以导出为 Excel、XML 或 TXT 格式。通过下拉列表选择导出格式。
 

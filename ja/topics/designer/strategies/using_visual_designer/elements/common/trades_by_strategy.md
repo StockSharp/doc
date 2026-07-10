@@ -1,6 +1,6 @@
 # ストラテジー別約定
 
-![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
+![Designer トランザクションストラテジー 00](../../../../../../images/designer_trades_strategy_00.png)
 
 このキューブは、すべてのストラテジー約定を取得するために使用されます。
 

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings MEXC](../../../../../images/api_gui_settings_mexc.png)
+![Configurações da API GUI MEXC](../../../../../images/api_gui_settings_mexc.png)
 
 - **chave** - chave.
 - **segredo** - segredo.

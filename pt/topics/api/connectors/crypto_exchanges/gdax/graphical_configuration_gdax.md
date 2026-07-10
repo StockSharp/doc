@@ -5,7 +5,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings GDAX](../../../../../images/api_gui_settings_gdax.png)
+![Configurações da API GUI GDAX](../../../../../images/api_gui_settings_gdax.png)
 
 - **chave** - Key.
 - **segredo** - Secret.

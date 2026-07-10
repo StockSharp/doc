@@ -2,20 +2,20 @@
 
 用户可以选择K线的 **自定义类型**，自行指定要构建的K线。K线会即时动态生成。
 
-![hydra type candle 00 00](../../../images/hydra_type_candle_00_00.png)
+![hydra K线类型 00 00](../../../images/hydra_type_candle_00_00.png)
 
 下面来看一个构建示例。**Bitmex** 交易所不提供 10 分钟时间周期的K线。
 
-![hydra type candle 00 01](../../../images/hydra_type_candle_00_01.png)
+![hydra K线类型 00 01](../../../images/hydra_type_candle_00_01.png)
 
 获取此类K线的步骤如下：
 
 1. 选择 **Custom** K线。
 2. 在设置中选择 **TF** K线，并将时间周期设为 10 分钟。
-3. 在数据源设置中指定用于构建K线的数据类型：**订单日志**。![hydra type candle 00 02](../../../images/hydra_type_candle_00_02.png)
-4. 设置下载时间范围。可以看到，K线名称旁边出现了 **Generated** 标记。![hydra type candle 00 03](../../../images/hydra_type_candle_00_03.png)
-5. 单击 Start，程序开始下载数据。![hydra type candle 00 04](../../../images/hydra_type_candle_00_04.png)
-6. 打开K线部分并[查看下载的数据](../working_with_data/view_and_export.md)。![hydra type candle 00 06](../../../images/hydra_type_candle_00_06.png)
+3. 在数据源设置中指定用于构建K线的数据类型：**订单日志**。![hydra K线类型 00 02](../../../images/hydra_type_candle_00_02.png)
+4. 设置下载时间范围。可以看到，K线名称旁边出现了 **Generated** 标记。![hydra K线类型 00 03](../../../images/hydra_type_candle_00_03.png)
+5. 单击 Start，程序开始下载数据。![hydra K线类型 00 04](../../../images/hydra_type_candle_00_04.png)
+6. 打开K线部分并[查看下载的数据](../working_with_data/view_and_export.md)。![hydra K线类型 00 06](../../../images/hydra_type_candle_00_06.png)
 
 可以看到，数据已成功接收。
 
@@ -23,7 +23,7 @@
 
 1. 选择 **Custom** K线。
 2. 在设置中选择 Range K线，并将价格范围设为 10。
-3. 在数据源设置中指定用于构建K线的数据类型：**Ticks**。![hydra type candle 00 07](../../../images/hydra_type_candle_00_07.png)
+3. 在数据源设置中指定用于构建K线的数据类型：**Ticks**。![hydra K线类型 00 07](../../../images/hydra_type_candle_00_07.png)
 4. 设置下载时间范围。
-5. 单击 Start，程序开始下载数据。![hydra type candle 00 08](../../../images/hydra_type_candle_00_08.png)
-6. 打开K线部分并[查看下载的数据](../working_with_data/view_and_export.md)。![hydra type candle 00 09](../../../images/hydra_type_candle_00_09.png)
+5. 单击 Start，程序开始下载数据。![hydra K线类型 00 08](../../../images/hydra_type_candle_00_08.png)
+6. 打开K线部分并[查看下载的数据](../working_with_data/view_and_export.md)。![hydra K线类型 00 09](../../../images/hydra_type_candle_00_09.png)

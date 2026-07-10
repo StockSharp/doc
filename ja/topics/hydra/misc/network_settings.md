@@ -2,6 +2,6 @@
 
 **設定 \=\> ネットワーク** 設定機能のクイックアクセスパネル。
 
-![hydra proxy settings](../../../images/hydra_proxy_settings.png)
+![hydra プロキシ設定](../../../images/hydra_proxy_settings.png)
 
 これにより、プロキシ設定を構成できます。

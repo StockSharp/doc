@@ -1,6 +1,6 @@
 # 市场深度
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer 订单簿 00](../../../../../../images/designer_orderbook_00.png)
 
 该模块用于获取指定交易品种的市场深度。
 

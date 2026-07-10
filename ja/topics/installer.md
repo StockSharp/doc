@@ -10,7 +10,7 @@
 - プログラムの更新プロセスを監視する
 - [API](api.md) ライブラリをダウンロードし、その更新を自動的に追跡する
 
-![first win installer](../images/first_win_installer.png)
+![インストーラー初期画面](../images/first_win_installer.png)
 
 ## 推奨コンテンツ
 

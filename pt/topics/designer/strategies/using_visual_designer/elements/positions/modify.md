@@ -1,6 +1,6 @@
 # Modificar posição
 
-![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
+![Designer Modificar posição 00](../../../../../../images/designer_position_modify_00.png)
 
 O componente "Modificar posição" é utilizado para alterar uma posição de negociação com base em condições especificadas.
 

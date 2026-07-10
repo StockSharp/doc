@@ -1,6 +1,6 @@
 # Level1
 
-![GUI Level1Grid](../../../../images/gui_leve1grid.png)
+![GUI レベル1Grid 表示](../../../../images/gui_leve1grid.png)
 
 [Level1Grid](xref:StockSharp.Xaml.Level1Grid) は、Level1 フィールドを表示するためのテーブルです。このテーブルは、[Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) メッセージ形式のデータを使用します。
 

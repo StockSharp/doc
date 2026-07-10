@@ -10,7 +10,7 @@
 - Supervisar el proceso de actualización del programa
 - Descargar la biblioteca [API](api.md) y seguir automáticamente sus actualizaciones
 
-![first win installer](../images/first_win_installer.png)
+![primera ventana del instalador](../images/first_win_installer.png)
 
 ## Contenido recomendado
 

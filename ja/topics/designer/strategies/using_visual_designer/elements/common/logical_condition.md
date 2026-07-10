@@ -1,6 +1,6 @@
 # 論理条件
 
-![Designer The logical condition 00](../../../../../../images/designer_logical_condition_00.png)
+![Designer 論理条件 00](../../../../../../images/designer_logical_condition_00.png)
 
 この要素は、2 つの引数を持つ論理式を計算するために使用します。
 

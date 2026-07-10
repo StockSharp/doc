@@ -2,7 +2,7 @@
 
 Um Level-1-Daten zu importieren, wählen Sie im Hauptmenü der Anwendung **Importieren \=\> Level 1**
 
-![hydra import level1](../../../images/hydra_import_level1.png)
+![hydra Level1-Ansicht importieren](../../../images/hydra_import_level1.png)
 
 ## Importprozess.
 
@@ -30,8 +30,8 @@ Um Level-1-Daten zu importieren, wählen Sie im Hauptmenü der Anwendung **Impor
    - Für das Feld {LastTradeTime} wählen Sie im Fenster **S#-Feld** das Feld **Zeit des letzten Trades**. Wir weisen ihm den Wert 8 zu.
    - Für das Feld {LastTradePrice} wählen Sie im Fenster **S#-Feld** das Feld **Preis des letzten Trades**. Wir weisen ihm den Wert 9 zu.
    - Für das Feld {LastTradeVolume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen des letzten Trades**. Wir weisen ihm den Wert 10 zu.
-   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
+   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import Level-1-Eigenschaften](../../../images/hydra_import_prop_level1.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import Level-1-Vorschau](../../../images/hydra_import_preview_level1.png)
 4. Klicken Sie auf die Schaltfläche **Importieren**.

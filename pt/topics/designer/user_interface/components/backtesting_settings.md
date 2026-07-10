@@ -2,7 +2,7 @@
 
 O painel **Propriedades** está minimizado por predefinição no lado direito do separador da estratégia. Este painel é uma tabela de propriedades de emulação ou de negociação em tempo real. Quando selecciona uma propriedade específica, aparece uma descrição detalhada dessa propriedade na parte inferior da tabela. Todas as propriedades estão agrupadas em grupos:
 
-![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
+![Designer Propriedades de emulação 00](../../../../images/designer_properties_emulation_00.png)
 
 **Definições**
 

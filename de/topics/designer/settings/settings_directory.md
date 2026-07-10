@@ -6,7 +6,7 @@ Die folgenden Verzeichnisse sind für [Designer](../../designer.md) wichtig:
 
 2. Das Einstellungsverzeichnis von **Designer** befindet sich unter dem Dokumentenordner des Benutzers: …\\StockSharp\\Designer\\ (zum Beispiel c:\\Users\\User\\Documents\\StockSharp\\Designer\\). Das Löschen dieses Verzeichnisses setzt alle [Designer](../../designer.md)-Einstellungen auf ihre Standardwerte zurück. **Alle erstellten Strategien, heruntergeladenen Instrumente und anderen im Einstellungsverzeichnis gespeicherten Informationen werden ZERSTÖRT.**
 
-![Designer Directory and edit the data manually 00](../../../images/designer_directory_and_edit_data_manually_00.png)
+![Designer Verzeichnis und manuelles Bearbeiten der Daten 00](../../../images/designer_directory_and_edit_data_manually_00.png)
 
 Dieses Verzeichnis enthält die folgenden Ordner und Dateien:
 

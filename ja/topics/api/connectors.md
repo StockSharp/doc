@@ -4,7 +4,7 @@
 
 [Connector](xref:StockSharp.Algo.Connector) の利用方法を見てみましょう。この例のソースコードは Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments プロジェクトにあります。
 
-![multiconnection main](../../images/multiconnection_main.png)
+![multiconnection メイン](../../images/multiconnection_main.png)
 
 [Connector](xref:StockSharp.Algo.Connector) クラスのインスタンスを作成します。
 

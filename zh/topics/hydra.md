@@ -1,6 +1,6 @@
 # Hydra
 
-![hydra main](../images/hydra_main.png)
+![hydra 主界面](../images/hydra_main.png)
 
 **Hydra** 用于从不同数据源自动下载市场数据（包括交易品种、K线、逐笔成交和订单簿）并将其保存在本地。数据可以使用两种格式存储：一种是 **Hydra** 专用的二进制格式（BIN），可获得最高压缩率；另一种是纯文本 CSV 格式，便于在其他程序中分析数据。保存后的数据可供交易策略使用（有关策略测试的详细信息，请参阅[回测](api/testing.md)）。可以直接通过 [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) 访问数据（详见[市场数据存储](api/market_data_storage.md)），也可以将数据导出为 [Excel](https://en.wikipedia.org/wiki/Excel)、XML、TXT 等常用格式（详见[安装与使用](hydra/installing_hydra.md)）。
 

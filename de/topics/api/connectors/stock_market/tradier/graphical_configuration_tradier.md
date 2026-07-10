@@ -2,7 +2,7 @@
 
 Für alle StockSharp-Produkte erfolgt die grafische Verbindungseinrichtung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Tradier](../../../../../images/api_gui_settings_tradier.png)
+![API-GUI-Einstellungen Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **Token** - Autorisierungstoken.
 - **Demo** - Demomodus.
@@ -20,7 +20,7 @@ OAuth-Autorisierungsprozess:
 
 2. Nach dem Klick auf "Start" wird der Benutzer zur Tradier-Website weitergeleitet, um sich anzumelden:
 
-   ![Tradier Login](../../../../../images/api_gui_settings_tradier_2.png)
+   ![Tradier Anmeldung](../../../../../images/api_gui_settings_tradier_2.png)
 
 3. Auf der Tradier-Website müssen Sie der StockSharp-Anwendung Zugriff auf Handelsoperationen erlauben:
 

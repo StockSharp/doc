@@ -16,13 +16,13 @@
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-**開始** ボタンをクリックした後にソースがデータのダウンロードを開始するには、そのソースを有効にしておく必要があります。これを行うには、左側パネルでソース アイコンを選択し、![hydra source on off](../../../images/hydra_source_on_off.png) ボタンを使用してオンまたはオフを切り替えます。この操作は、ダウンロード対象の銘柄を追加する前でも後でも実行できます。
+**開始** ボタンをクリックした後にソースがデータのダウンロードを開始するには、そのソースを有効にしておく必要があります。これを行うには、左側パネルでソース アイコンを選択し、![hydra ソース オン オフ](../../../images/hydra_source_on_off.png) ボタンを使用してオンまたはオフを切り替えます。この操作は、ダウンロード対象の銘柄を追加する前でも後でも実行できます。
 
 不要なソースは ![hydra delete](../../../images/hydra_delete.png) ボタンで削除できます。
 
 ソース設定は、右側の **プロパティ** パネルで変更できます。
 
-![hydra setting source button](../../../images/hydra_setting_source_button.png)
+![hydra ソース設定ボタン](../../../images/hydra_setting_source_button.png)
 
 すべてのソースに共通する設定は、[共通接続設定](common_connection_settings.md) の項目にあります。
 

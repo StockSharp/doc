@@ -2,7 +2,7 @@
 
 表示されるウィンドウで、銘柄と必要な時間間隔を選択し、![hydra find](../../../../images/hydra_find.png) ボタンをクリックします。
 
-![hydra export trades](../../../../images/hydra_export_trades.png)
+![hydra 取引をエクスポート](../../../../images/hydra_export_trades.png)
 
 非システム取引をアンロードするには、**非システム** ボックスをチェックする必要があります。
 

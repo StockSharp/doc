@@ -4,11 +4,11 @@ La creación de estrategias desde código está pensada para usuarios que prefie
 
 El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **Python** (los entornos de desarrollo más populares son **Visual Studio** y **JetBrains Rider**), usando la biblioteca para el desarrollo profesional de robots de trading en **Python** y la [API](../../../api.md).
 
-Puede añadir una nueva estrategia haciendo clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y seleccionando **Estrategia**. O haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquemas** y pulsando el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
+Puede añadir una nueva estrategia haciendo clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y seleccionando **Estrategia**. O haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquemas** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 
-![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
+![Designer Creación de una estrategia 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido sobre el que crear la estrategia:
+Después de hacer clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido sobre el que crear la estrategia:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
 
@@ -24,7 +24,7 @@ La pestaña del editor de código consta de los paneles **Código fuente** y **L
 
 El panel **Lista de errores** es una tabla con la lista de errores de código; al hacer doble clic en una línea, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error.
 
-Al editar código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. La compilación del código ocurre cuando el código deja de cambiar.
+Al editar código, aparecerá un icono ![Designer Creación del cubo con código fuente 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. La compilación del código ocurre cuando el código deja de cambiar.
 
 La ejecución de la estrategia en [backtest](../../backtesting/user_interface.md), en [live](../../live_execution/getting_started.md) y otras operaciones funcionan de forma similar a las estrategias creadas desde esquemas.
 

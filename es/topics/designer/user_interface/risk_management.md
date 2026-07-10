@@ -6,7 +6,7 @@ En la ventana Riesgos, es necesario seleccionar una **Regla de riesgo**, configu
 
 Es posible usar varias reglas de riesgo del mismo tipo con distintas acciones. Por ejemplo, en la captura siguiente, si el volumen de la orden es 20, se ejecutan las acciones de cancelar órdenes y detener el trading.
 
-![Designer Risk Rule](../../../images/designer_risk_rule.png)
+![Designer Regla de riesgo](../../../images/designer_risk_rule.png)
 
 ### Lista de reglas de riesgo
 

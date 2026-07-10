@@ -2,7 +2,7 @@
 
 **Terminal** ist ein kostenloses Handelsterminal. Sein Hauptvorteil besteht darin, gleichzeitig eine Verbindung zu mehreren Börsen, Brokern und Datenquellen herstellen zu können, einschließlich Handelsplätzen, die kein eigenes Terminal bereitstellen.
 
-![Terminal main 00](../images/terminal_main_00.png)
+![Terminal Hauptansicht 00](../images/terminal_main_00.png)
 
 ## Vorteile und Funktionen von Terminal:
 

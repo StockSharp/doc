@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FXCM](../../../../../images/api_gui_settings_fxcm.png)
+![API-GUI-Einstellungen FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **Token** - Token.
 - **Demo** - Verbindung zum Demo-Handel statt zum Live-Handelsserver.

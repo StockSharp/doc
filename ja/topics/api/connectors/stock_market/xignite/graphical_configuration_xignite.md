@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル構成は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Xignite](../../../../../images/api_gui_settings_xignite.png)
+![API GUI 設定 Xignite](../../../../../images/api_gui_settings_xignite.png)
 
 - **Token** - トークンです。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔です。既定では 1 分です。

@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster der Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:
 
-![API GUI Settings BitMEX](../../../../../images/api_gui_settings_bitmex.png)
+![API-GUI-Einstellungen BitMEX](../../../../../images/api_gui_settings_bitmex.png)
 
 - **Schlüssel** - Key.
 - **Geheimnis** - Secret.

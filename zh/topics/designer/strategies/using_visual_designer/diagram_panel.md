@@ -2,7 +2,7 @@
 
 策略及其组成元素的主要设计工作在 **策略图** 面板中完成，用户通过组合模块和连接线构建策略。策略图面板由 **元素面板**、**设计器** 和 **属性** 三个面板组成。
 
-![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
+![Designer Designer 方案、策略和组件元素 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Palette 面板
 
@@ -16,7 +16,7 @@
 
 **属性** 面板显示 **Designer** 面板中当前选中模块的参数。模块被选中时，其边框会显示为黑色。
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer 属性面板 00](../../../../images/designer_properties_panel_00.png)
 
 **属性** 面板支持两种显示模式：*基本设置* 和 *高级设置*。
 
@@ -26,7 +26,7 @@
 
 *高级设置* 模式会显示该模块所有可修改和配置的属性。
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer 属性面板 00](../../../../images/designer_properties_panel_01.png)
 
 所有模块都包含一组预定义属性，这些属性会在 *高级设置* 模式中显示：
 

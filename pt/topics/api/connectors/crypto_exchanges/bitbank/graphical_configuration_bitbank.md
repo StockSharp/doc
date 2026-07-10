@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitbank](../../../../../images/api_gui_settings_bitbank.png)
+![Configurações da API GUI Bitbank](../../../../../images/api_gui_settings_bitbank.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

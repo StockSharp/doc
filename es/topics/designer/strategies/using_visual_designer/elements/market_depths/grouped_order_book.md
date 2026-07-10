@@ -1,8 +1,8 @@
 # Libro de órdenes agrupado
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer Libro de órdenes agrupado 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer Libro de órdenes agrupado 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 El cubo se usa para obtener un libro de órdenes agrupado.
 

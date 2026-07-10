@@ -1,8 +1,8 @@
 # グループ化された板情報
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer グループ化された板情報 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer グループ化された板情報 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 このキューブは、グループ化された板情報を取得するために使用されます。
 

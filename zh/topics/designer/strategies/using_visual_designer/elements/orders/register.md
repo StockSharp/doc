@@ -1,6 +1,6 @@
 # 注册订单
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer 开仓 00](../../../../../../images/designer_position_opening_00.png)
 
 “订单注册”组件用于为所选交易品种提交交易订单。
 

@@ -6,11 +6,11 @@
 
 - 选择所需策略，然后单击 Download 按钮：
 
-  ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
+  ![Designer 策略库 00](../../images/designer_gallery_of_strategies_00.png)
 
 - 该策略将添加到 **回测** 区域的策略树中：
 
-  ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
+  ![Designer 策略库 01](../../images/designer_gallery_of_strategies_01.png)
 
 ## 另请参阅
 

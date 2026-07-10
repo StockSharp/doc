@@ -16,13 +16,13 @@ También puede crear varias instancias de la misma fuente. Por ejemplo, varias i
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-Para que la fuente empiece a descargar datos después de hacer clic en el botón **Iniciar**, debe estar habilitada. Para ello, seleccione el icono de la fuente en el panel izquierdo y utilice el botón ![hydra source on off](../../../images/hydra_source_on_off.png) para activarla o desactivarla. Puede realizar esta operación antes o después de añadir instrumentos para la descarga.
+Para que la fuente empiece a descargar datos después de hacer clic en el botón **Iniciar**, debe estar habilitada. Para ello, seleccione el icono de la fuente en el panel izquierdo y utilice el botón ![hydra fuente activar desactivar](../../../images/hydra_source_on_off.png) para activarla o desactivarla. Puede realizar esta operación antes o después de añadir instrumentos para la descarga.
 
 Las fuentes innecesarias se pueden eliminar con el botón ![hydra delete](../../../images/hydra_delete.png).
 
 La configuración de la fuente se puede cambiar en el panel **Propiedades** del lado derecho.
 
-![hydra setting source button](../../../images/hydra_setting_source_button.png)
+![hydra botón de configuración de fuente](../../../images/hydra_setting_source_button.png)
 
 La configuración común para todas las fuentes se encuentra en la sección [Configuración común de conexión](common_connection_settings.md).
 

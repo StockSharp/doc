@@ -1,6 +1,6 @@
 # Orderregistrierung
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer Positionseröffnung 00](../../../../../../images/designer_position_opening_00.png)
 
 Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ein ausgewähltes Instrument zu platzieren.
 

@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings EXMO](../../../../../images/api_gui_settings_exmo.png)
+![API GUI 設定 EXMO](../../../../../images/api_gui_settings_exmo.png)
 
 - **キー** - Key。
 - **シークレット** - Secret。

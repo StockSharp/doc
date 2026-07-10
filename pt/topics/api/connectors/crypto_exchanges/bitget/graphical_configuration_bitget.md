@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
+![Configurações da API GUI Bitget](../../../../../images/api_gui_settings_bitget.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

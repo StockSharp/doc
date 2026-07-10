@@ -2,7 +2,7 @@
 
 Para importar velas, selecione o item **Importar \=\> Velas** no menu principal da aplicação.
 
-![hydra import candles](../../../images/hydra_import_candles.png)
+![hydra importar candles](../../../images/hydra_import_candles.png)
 
 ## Processo de importação de velas
 
@@ -33,7 +33,7 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
 
      ```
 
-     Então a seguinte definição corresponderá a esse modelo:![hydra import prop candles](../../../images/hydra_import_prop_candles.png)
+     Então a seguinte definição corresponderá a esse modelo:![hydra import propriedades de candles](../../../images/hydra_import_prop_candles.png)
 
      Aqui:
 
@@ -47,5 +47,5 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
    - **Zero** - em alguns casos, ao guardar dados, algumas propriedades podem ser guardadas como "0", o que é um erro. Por exemplo, o valor do preço, por vários motivos, pode ser igual a 0, o que não é aceitável e, no futuro, levará a uma leitura incorreta. Isto pode causar o funcionamento incorreto das estratégias que trabalham com esses dados e, consequentemente, um resultado errado. Ao assinalar a caixa, o utilizador especifica que os dados nesta secção, se forem iguais a 0, são escritos como vazios, ou seja, como ausentes. Durante o trabalho posterior, por exemplo em testes, o utilizador verá um erro de ausência de dados, que indicará uma importação incorreta. Na prática, isto protege o utilizador contra dados "danificados", permitindo um trabalho mais correto.
 
    O utilizador pode configurar um grande número de propriedades para os dados transferidos. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência.
-3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import preview candles](../../../images/hydra_import_preview_candles.png)
+3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import pré-visualização de candles](../../../images/hydra_import_preview_candles.png)
 4. Clique no botão **Importar**.

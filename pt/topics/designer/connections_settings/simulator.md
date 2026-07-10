@@ -2,13 +2,13 @@
 
 O [Designer](../../designer.md) permite executar as estratégias criadas no modo **Simulação**. Para personalizar a **Simulação**, execute as seguintes ações:
 
-1. Ao clicar na seta junto ao botão **Ligar** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png), aparece o botão **Definições do emulador**:
+1. Ao clicar na seta junto ao botão **Ligar** ![Designer Barra de ferramentas de acesso rápido 00](../../../images/designer_quick_access_toolbar_00.png), aparece o botão **Definições do emulador**:
 
-![Designer The connection settings 00](../../../images/designer_connection_settings_00.png)
+![Designer Configurações de conexão 00](../../../images/designer_connection_settings_00.png)
 
 2. Ao clicar no botão **Definições do emulador**, abre-se a janela **Definições do emulador**:
 
-![Designer Properties emulation 00](../../../images/designer_properties_emulation_00.png)
+![Designer Propriedades de emulação 00](../../../images/designer_properties_emulation_00.png)
 
 1. **Simulador**
 

@@ -4,7 +4,7 @@ Die Komponente **Orderbuch** ist eine Tabelle mit Limit-Orders für Kauf und Ver
 
 In der Strategie können Sie mehrere unterschiedliche Typen von Orderbüchern (oder Orderbücher aus verschiedenen Instrumenten) gleichzeitig verwenden und sie in verschiedenen Panels anzeigen.
 
-![Designer Panel Market Depth](../../../../images/designer_panel_market_depth.png)
+![Designer Markttiefe-Panel](../../../../images/designer_panel_market_depth.png)
 
 ## Empfohlene Inhalte
 

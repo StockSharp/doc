@@ -1,6 +1,6 @@
 # 逻辑条件
 
-![Designer The logical condition 00](../../../../../../images/designer_logical_condition_00.png)
+![Designer 逻辑条件 00](../../../../../../images/designer_logical_condition_00.png)
 
 该元素用于计算包含两个参数的逻辑公式。
 

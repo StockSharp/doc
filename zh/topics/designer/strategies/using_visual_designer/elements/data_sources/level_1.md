@@ -1,6 +1,6 @@
 # Level 1
 
-![Designer Level 1 00](../../../../../../images/designer_level_1_00.png)
+![Designer 一级 00](../../../../../../images/designer_level_1_00.png)
 
 该模块用于接收交易品种的 **一级行情** 数据。
 

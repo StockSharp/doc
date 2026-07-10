@@ -4,7 +4,7 @@ Die Komponente **Kaufen/Verkaufen** ist eine Panelgruppe, die die besten Preisin
 
 Um ein neues Instrument hinzuzufügen, klicken Sie auf die Schaltfläche ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png).
 
-![Terminal Buy Sell 00](../../../../images/terminal_buy_sell_00.png)
+![Terminal Kaufen Verkaufen 00](../../../../images/terminal_buy_sell_00.png)
 
 ## Empfohlene Inhalte
 

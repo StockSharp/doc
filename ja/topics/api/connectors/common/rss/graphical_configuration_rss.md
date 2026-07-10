@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
+![API GUI 設定 RSS](../../../../../images/api_gui_settings_rss.png)
 
 - **アドレス** - RSS フィードのアドレス。
 - **Dates format** - 日付形式。RSS ストリーム形式が `ddd, dd MMM yyyy HH:mm:ss zzzz` と異なる場合に必要です。

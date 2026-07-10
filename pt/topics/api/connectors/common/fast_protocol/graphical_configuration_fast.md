@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FAST](../../../../../images/api_gui_settings_fast.png)
+![Configurações da API GUI FAST](../../../../../images/api_gui_settings_fast.png)
 
 - **Dialeto** - Dialeto do protocolo FAST. Deve ser definido como o primeiro parâmetro. Após a seleção, o próximo parâmetro (**Definições FAST**) conterá os endereços IP do dialeto especificado.
 - **Definições FAST** - Endereços IP e portas do dialeto (selecionado no parâmetro anterior). Você pode usar a opção a seguir para carregar as configurações rapidamente.

@@ -1,6 +1,6 @@
 # Indikator
 
-![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
+![Designer Indikator 00](../../../../../../images/designer_indicator_00.png)
 
 Dieser Block wird zur Berechnung von Indikatorwerten verwendet.
 
@@ -18,7 +18,7 @@ Dieser Block wird zur Berechnung von Indikatorwerten verwendet.
 - **Endwert** - nur [finale Werte](../../../../../api/indicators.md) des Indikators weitergeben.
 - **Abgeschlossen** - nur Werte weitergeben, wenn der Indikator vollständig [gebildet](../../../../../api/indicators.md) ist.
 
-![Designer Indicator 01](../../../../../../images/designer_indicator_01.png)
+![Designer Indikator 01](../../../../../../images/designer_indicator_01.png)
 
 ## Siehe auch
 

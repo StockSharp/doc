@@ -11,7 +11,7 @@ Standardmäßig erscheinen alle Parameter mit diesen Typen in der [Tabelle der O
 
 - Für ein [Diagramm](../strategies/using_visual_designer.md) wählen Sie den erforderlichen Würfel aus, öffnen seine Eigenschaften, wechseln zu **Erweiterte Einstellungen** und deaktivieren das Kontrollkästchen **Parameter**:
 
-![Designer Optimization 01](../../../images/designer_optimization_01.png)
+![Designer Optimierung 01](../../../images/designer_optimization_01.png)
 
 - Bei [Code](../strategies/using_code.md) müssen Sie beim Definieren eines Parameters Code schreiben und die Eigenschaft [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize) ändern:
 

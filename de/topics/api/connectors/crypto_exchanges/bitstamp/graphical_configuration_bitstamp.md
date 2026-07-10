@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster der Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:
 
-![API GUI Settings Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
+![API-GUI-Einstellungen Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
 
 - **Schlüssel** - Key.
 - **Geheimnis** - Secret.

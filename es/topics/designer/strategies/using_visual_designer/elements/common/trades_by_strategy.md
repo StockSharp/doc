@@ -1,6 +1,6 @@
 # Operaciones por estrategia
 
-![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
+![Designer Estrategia de transacción 00](../../../../../../images/designer_trades_strategy_00.png)
 
 El cubo se usa para obtener todas las operaciones de la estrategia.
 

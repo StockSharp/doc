@@ -1,6 +1,6 @@
 # Libro de órdenes
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer Libro de órdenes 00](../../../../../../images/designer_orderbook_00.png)
 
 El cubo se usa para obtener el libro de órdenes del instrumento especificado.
 

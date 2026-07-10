@@ -4,7 +4,7 @@
 
 在 **佣金** 窗口中，需要选择佣金类型，设置佣金值以及收取佣金的条件。
 
-![Designer Commission Rule](../../../images/designer_commission_rule.png)
+![Designer 佣金规则](../../../images/designer_commission_rule.png)
 
 ### 佣金类型列表
 

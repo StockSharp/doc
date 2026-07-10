@@ -2,7 +2,7 @@
 
 **图表** 组件用于绘制所选交易品种的K线和指标。
 
-![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
+![Terminal 图形面板 00](../../../../images/terminal_panel_graphics_00.png)
 
 要添加新的图表区域，请单击 ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png) 按钮。
 
@@ -18,7 +18,7 @@
 
 按 **Ctrl+鼠标右键** 登记卖出订单。
 
-![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
+![Terminal 图形面板 01](../../../../images/terminal_panel_graphics_01.png)
 
 在图形元素设置中，可以选择所需的图表样式，例如日本K线、柱状图、箱形图、聚类轮廓图等。
 

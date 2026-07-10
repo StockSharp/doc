@@ -2,11 +2,11 @@
 
 要使用历史数据运行测试，请先选择需要回测的策略图。在策略文件夹的[策略图面板](../user_interface/schemas.md)中，双击所需策略即可选中该策略。将策略添加到工作区后，会显示一个新的策略选项卡；切换到该选项卡时，功能区中会自动打开 **模拟** 选项卡。
 
-![Designer Interface Backtesting 00](../../../images/designer_interface_backtesting_00.png)
+![Designer 回测界面 00](../../../images/designer_interface_backtesting_00.png)
 
 在 **模拟** 选项卡中，可以修改策略名称并添加简短说明。
 
-要使用历史数据运行测试，请在 **模拟** 选项卡的 **市场数据** 字段中指定历史数据路径，并设置测试时间段。单击 **启动** 按钮 ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png) 启动策略测试。测试启动后，**暂停** ![Designer Interface Backtesting 02](../../../images/designer_interface_backtesting_02.png) 和 **停止** ![Designer Interface Backtesting 03](../../../images/designer_interface_backtesting_03.png) 按钮会变为可用状态：前者用于暂停测试，后者用于彻底停止测试。编辑策略时，还可以使用 **撤销 (Ctrl+Z)** ![Designer Interface Backtesting 04](../../../images/designer_interface_backtesting_04.png) 撤销上一步操作，使用 **重做 (Ctrl+Y)** ![Designer Interface Backtesting 05](../../../images/designer_interface_backtesting_05.png) 恢复被撤销的操作，并使用 **刷新 (Ctrl+R)** ![Designer Interface Backtesting 06](../../../images/designer_interface_backtesting_06.png) 完整刷新策略图。还可以从 **模拟** 选项卡使用 **调试器**（参阅[调试](debugging.md)），或运行策略**优化**。
+要使用历史数据运行测试，请在 **模拟** 选项卡的 **市场数据** 字段中指定历史数据路径，并设置测试时间段。单击 **启动** 按钮 ![Designer 回测界面 01](../../../images/designer_interface_backtesting_01.png) 启动策略测试。测试启动后，**暂停** ![Designer 回测界面 02](../../../images/designer_interface_backtesting_02.png) 和 **停止** ![Designer 回测界面 03](../../../images/designer_interface_backtesting_03.png) 按钮会变为可用状态：前者用于暂停测试，后者用于彻底停止测试。编辑策略时，还可以使用 **撤销 (Ctrl+Z)** ![Designer 回测界面 04](../../../images/designer_interface_backtesting_04.png) 撤销上一步操作，使用 **重做 (Ctrl+Y)** ![Designer 回测界面 05](../../../images/designer_interface_backtesting_05.png) 恢复被撤销的操作，并使用 **刷新 (Ctrl+R)** ![Designer 回测界面 06](../../../images/designer_interface_backtesting_06.png) 完整刷新策略图。还可以从 **模拟** 选项卡使用 **调试器**（参阅[调试](debugging.md)），或运行策略**优化**。
 
 默认情况下，所选策略的选项卡包含以下面板：
 

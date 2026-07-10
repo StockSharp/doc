@@ -134,7 +134,7 @@ settings.Latency = TimeSpan.FromMilliseconds(100);
 
 Das Beispiel SampleRealTimeEmulation zeigt, wie Daten vom realen Connector und vom Emulations-Connector gleichzeitig angezeigt werden können:
 
-![sample realtime emulation](../../../images/sample_realtime_emulation.png)
+![sample Echtzeit-Emulation](../../../images/sample_realtime_emulation.png)
 
 Die Anwendungsoberfläche enthält die folgenden Elemente:
 - Charts zur Anzeige von Kerzen und Orders

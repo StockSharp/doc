@@ -11,7 +11,7 @@
 
 - [ダイアグラム](../strategies/using_visual_designer.md)の場合は、必要なキューブを選択し、そのプロパティを開き、**詳細設定** に切り替えて、**パラメーター** チェックボックスをオフにします。
 
-![Designer Optimization 01](../../../images/designer_optimization_01.png)
+![Designer 最適化 01](../../../images/designer_optimization_01.png)
 
 - [コード](../strategies/using_code.md)の場合は、パラメーターを定義するときにコードを書き、[CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize) プロパティを変更する必要があります。
 

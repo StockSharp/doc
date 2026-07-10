@@ -2,7 +2,7 @@
 
 Die Komponente **Diagramm** enthält alle Würfel **Diagrammbereich**, die in der Strategie vorhanden sind. Wenn die Strategie zum Beispiel zwei Würfel **Diagrammbereich** verwendet, werden in der Komponente **Diagramm** zwei Charts angezeigt, wie in der Abbildung.
 
-![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
+![Designer Grafik-Panel 04](../../../../images/designer_panel_graphics_04.png)
 
 In der oberen linken Ecke jedes Charts werden alle grafischen Elemente angezeigt, die dem Chart hinzugefügt wurden. Wenn Sie das Kontrollkästchen beim grafischen Element ![Designer Schedule 00](../../../../images/designer_schedule_00.png) deaktivieren, wird das Element aus dem Chart entfernt. Ein Klick auf die Schaltfläche ![Designer Schedule 01](../../../../images/designer_schedule_01.png) öffnet die Einstellungen für das grafische Element. Außerdem können Sie das grafische Element in den Eigenschaften des Würfels [Chart](../../strategies/using_visual_designer/elements/common/chart.md) einrichten.
 

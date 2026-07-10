@@ -22,23 +22,23 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 
 É necessário configurar os parâmetros selecionados:
 
-![Designer An example of backtesting 00](../../../images/designer_example_of_backtesting_00.png)
+![Designer Exemplo de backtesting 00](../../../images/designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](../../../images/designer_example_of_backtesting_01.png)
+![Designer Exemplo de backtesting 01](../../../images/designer_example_of_backtesting_01.png)
 
-Depois de configurar todos os parâmetros necessários, inicie o teste da estratégia clicando no botão ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png).
+Depois de configurar todos os parâmetros necessários, inicie o teste da estratégia clicando no botão ![Designer Interface de backtesting 01](../../../images/designer_interface_backtesting_01.png).
 
 Durante ou após o teste, pode ver gráficos e tabelas com a informação do teste.
 
-![Designer An example of backtesting 02](../../../images/designer_example_of_backtesting_02.png)
+![Designer Exemplo de backtesting 02](../../../images/designer_example_of_backtesting_02.png)
 
 O gráfico mostra que as transações ocorrem no cruzamento das médias móveis, conforme previsto pela estratégia. Também se pode ver que as ordens são satisfeitas em várias transações. Isto acontece devido ao uso do livro de ordens gerado, que aumenta o realismo do teste. O facto de as ordens serem satisfeitas em várias transações pode ser visto nas tabelas Trades, em Statistics e no gráfico Positions.
 
-![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
+![Designer Exemplo de backtesting 03](../../../images/designer_example_of_backtesting_03.png)
 
 No **gráfico Positions**, pode ver-se que a estratégia reduziu o volume operado. Isto aconteceu porque o livro de ordens gerado tem uma profundidade de 5 e, como resultado, toda a profundidade do livro de ordens foi insuficiente para satisfazer a ordem de 200 lotes. Como a estratégia apenas inverte a posição, sempre que a profundidade do livro de ordens não foi suficiente para satisfazer a ordem, o tamanho da ordem foi reduzido.
 
-![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
+![Designer Exemplo de backtesting 04](../../../images/designer_example_of_backtesting_04.png)
 
 O gráfico **P\/L** indica que a estratégia não é lucrativa com estes parâmetros.
 

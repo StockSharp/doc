@@ -4,7 +4,7 @@
 
 ストラテジーでは、複数の異なる種類の板情報（または異なる銘柄の板情報）を同時に使用し、それらを異なるパネルに表示できます。
 
-![Designer Panel Market Depth](../../../../images/designer_panel_market_depth.png)
+![Designer 板情報パネル](../../../../images/designer_panel_market_depth.png)
 
 ## 推奨コンテンツ
 

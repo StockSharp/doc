@@ -1,6 +1,6 @@
 # 指标
 
-![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
+![Designer 指标 00](../../../../../../images/designer_indicator_00.png)
 
 该模块用于计算指标值。
 
@@ -18,7 +18,7 @@
 - **最终值** - 仅传递指标的[最终值](../../../../../api/indicators.md)。
 - **已形成** - 仅在指标已经完全[形成](../../../../../api/indicators.md)后传递其值。
 
-![Designer Indicator 01](../../../../../../images/designer_indicator_01.png)
+![Designer 指标 01](../../../../../../images/designer_indicator_01.png)
 
 ## 另请参阅
 

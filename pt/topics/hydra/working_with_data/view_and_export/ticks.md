@@ -2,7 +2,7 @@
 
 Na janela que aparece, selecione os instrumentos, o intervalo temporal necessário e clique no botão ![hydra find](../../../../images/hydra_find.png):
 
-![hydra export trades](../../../../images/hydra_export_trades.png)
+![hydra exportar negociações](../../../../images/hydra_export_trades.png)
 
 Para descarregar negócios não sistémicos, deve assinalar a caixa **Não sistémicos**.
 

@@ -1,6 +1,6 @@
 # 注文登録
 
-![Designer Position opening 00](../../../../../../images/designer_position_opening_00.png)
+![Designer ポジション開始 00](../../../../../../images/designer_position_opening_00.png)
 
 「注文登録」コンポーネントは、選択した銘柄の取引注文を発注するために使用します。
 

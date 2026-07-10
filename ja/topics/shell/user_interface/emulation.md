@@ -2,7 +2,7 @@
 
 **エミュレーション** タブでは、ヒストリカルデータ上でストラテジーをテストできます。
 
-![Shell emulation 00](../../../images/shell_emulation_00.png)
+![Shell エミュレーション 00](../../../images/shell_emulation_00.png)
 
 **追加** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックすると、テスト用のストラテジーを追加できます。追加された各ストラテジーは、個別のタブで開かれます。
 

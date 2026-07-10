@@ -11,7 +11,7 @@
 
 - 对于[策略图](../strategies/using_visual_designer.md)，选择所需模块并打开其属性，切换到 **高级设置**，然后清除 **参数** 复选框：
 
-![Designer Optimization 01](../../../images/designer_optimization_01.png)
+![Designer 优化 01](../../../images/designer_optimization_01.png)
 
 - 对于[代码](../strategies/using_code.md)，在定义参数时编写相应代码，并修改 [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize) 属性：
 

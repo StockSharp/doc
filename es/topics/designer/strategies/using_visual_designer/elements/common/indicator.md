@@ -1,6 +1,6 @@
 # Indicador
 
-![Designer Indicator 00](../../../../../../images/designer_indicator_00.png)
+![Designer indicador 00](../../../../../../images/designer_indicator_00.png)
 
 Este bloque se usa para calcular valores de indicadores.
 
@@ -18,7 +18,7 @@ Este bloque se usa para calcular valores de indicadores.
 - **Final** - pasar solo [valores finales](../../../../../api/indicators.md) del indicador.
 - **Formada** - pasar solo valores cuando el indicador está completamente [formado](../../../../../api/indicators.md).
 
-![Designer Indicator 01](../../../../../../images/designer_indicator_01.png)
+![Designer indicador 01](../../../../../../images/designer_indicator_01.png)
 
 ## Véase también
 

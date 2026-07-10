@@ -2,7 +2,7 @@
 
 La pestaña **Emulación** permite probar estrategias sobre datos históricos.
 
-![Shell emulation 00](../../../images/shell_emulation_00.png)
+![Shell emulación 00](../../../images/shell_emulation_00.png)
 
 Al hacer clic en el botón **Añadir** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), puede añadir una estrategia para pruebas. Cada estrategia añadida se abre en una pestaña individual.
 

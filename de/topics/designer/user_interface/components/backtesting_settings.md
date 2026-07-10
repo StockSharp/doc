@@ -2,7 +2,7 @@
 
 Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulations- oder Live-Trade-Eigenschaften. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
 
-![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
+![Designer Emulationseigenschaften 00](../../../../images/designer_properties_emulation_00.png)
 
 **Einstellungen**
 

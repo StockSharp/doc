@@ -2,7 +2,7 @@
 
 Para todos los productos de [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings ByBit](../../../../../images/api_gui_settings_bybit.png)
+![Configuración de API GUI ByBit](../../../../../images/api_gui_settings_bybit.png)
 
 - **clave** - Clave.
 - **secreto** - Secreto.

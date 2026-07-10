@@ -1,6 +1,6 @@
 # Posición
 
-![Designer Position 00](../../../../../../images/designer_position_00.png)
+![Designer posición 00](../../../../../../images/designer_position_00.png)
 
 El elemento se usa para obtener información sobre el cambio de posición para el instrumento y la cartera especificados.
 

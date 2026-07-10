@@ -9,7 +9,7 @@ White candle (vela altista) é um padrão clássico de velas que se forma quando
 - Indica o predomínio dos compradores sobre os vendedores.
 - O tamanho do corpo da vela mostra a força do movimento altista.
 
-![White Candle Pattern](../../../images/whitecandlepattern.png)
+![Padrão de candle branco](../../../images/whitecandlepattern.png)
 
 ### Interpretação
 

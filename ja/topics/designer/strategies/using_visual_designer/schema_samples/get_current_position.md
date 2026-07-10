@@ -2,7 +2,7 @@
 
 現在ポジションを反対ポジションへ反転するために必要な数量を取得するには、SMA ストラテジー例のスキーマを使用できます:
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer 出来高ポジションの判定 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 [変数](../elements/data_sources/variable.md) キューブでは、**銘柄** データ型が選択されています。インストゥルメントが指定されていないが、**共通** グループの **パラメーター** フラグが設定されている場合、それはストラテジーから取得され、その後 [ポジション](../elements/positions/current.md) に渡されます。
 

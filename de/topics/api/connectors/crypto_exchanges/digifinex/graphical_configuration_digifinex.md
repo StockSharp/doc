@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings DigiFinex](../../../../../images/api_gui_settings_digifinex.png)
+![API-GUI-Einstellungen DigiFinex](../../../../../images/api_gui_settings_digifinex.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.

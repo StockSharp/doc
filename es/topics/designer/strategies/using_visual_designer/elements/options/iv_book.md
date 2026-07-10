@@ -1,6 +1,6 @@
 # Libro IV
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+![Designer Volatilidad implícita en el libro de órdenes 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 El cubo se usa para calcular un libro de órdenes de volatilidad implícita.
 

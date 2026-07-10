@@ -2,7 +2,7 @@
 
 Level 1 データをインポートするには、アプリケーションのメイン メニューから **インポート \=\> Level 1** を選択します。
 
-![hydra import level1](../../../images/hydra_import_level1.png)
+![hydra レベル1 表示 をインポート](../../../images/hydra_import_level1.png)
 
 ## インポート プロセス。
 
@@ -30,8 +30,8 @@ Level 1 データをインポートするには、アプリケーションのメ
    - {LastTradeTime} フィールドについては、**S# フィールド** ウィンドウから **最終約定時刻** フィールドを選択します。値 8 を割り当てます。
    - {LastTradePrice} フィールドについては、**S# フィールド** ウィンドウから **最終約定価格** フィールドを選択します。値 9 を割り当てます。
    - {LastTradeVolume} フィールドについては、**S# フィールド** ウィンドウから **最終約定数量** フィールドを選択します。値 10 を割り当てます。
-   - フィールド設定ウィンドウは次のようになります。![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
+   - フィールド設定ウィンドウは次のようになります。![hydra import レベル 1 プロパティ](../../../images/hydra_import_prop_level1.png)
 
    ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内で必要な番号を割り当てる必要があります。
-3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
+3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import レベル 1 プレビュー](../../../images/hydra_import_preview_level1.png)
 4. **インポート** ボタンをクリックします。

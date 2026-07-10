@@ -4,9 +4,9 @@
 
 首先，在策略的 XAML 文件夹中创建一个普通 UserControl。
 
-![Shell custom strategy panel 00](../../images/shell_custom_strategy_panel_00.png)
+![Shell 自定义策略面板 00](../../images/shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](../../images/shell_custom_strategy_panel_01.png)
+![Shell 自定义策略面板 01](../../images/shell_custom_strategy_panel_01.png)
 
 将 `UserControl` 替换为 `controls:BaseStudioControl`。
 

@@ -10,7 +10,7 @@ O **Installer** é o centro de controlo de todos os programas e aplicações **S
 - Monitorizar o processo de atualização dos programas
 - Descarregar a biblioteca [API](api.md) e acompanhar automaticamente as respetivas atualizações
 
-![first win installer](../images/first_win_installer.png)
+![primeira janela do instalador](../images/first_win_installer.png)
 
 ## Conteúdo recomendado
 

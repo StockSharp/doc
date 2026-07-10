@@ -8,7 +8,7 @@
 
 例として、E-mini S&P 500 先物の結合を考えます。
 
-1. 連続先物契約を作成するには、**すべての銘柄** タブで **銘柄を作成 \=\> 連続銘柄** ボタンをクリックします。![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. 連続先物契約を作成するには、**すべての銘柄** タブで **銘柄を作成 \=\> 連続銘柄** ボタンをクリックします。![Hydra 結合データチェック 00](../../../images/hydragluingcheckdata_00.png)
 
    その後、次のウィンドウが表示されます。![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. 連続先物を作成するには、名前を指定して限月を追加する必要があります。

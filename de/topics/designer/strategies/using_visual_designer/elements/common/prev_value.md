@@ -1,6 +1,6 @@
 # Vorheriger Wert
 
-![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
+![Designer Vorheriger Wert 00](../../../../../../images/designer_previous_value_00.png)
 
 Der Würfel wird verwendet, um den vorherigen an den Eingang übergebenen Wert mit dem angegebenen Offset zu erhalten.
 

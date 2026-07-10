@@ -1,6 +1,6 @@
 # Condición lógica
 
-![Designer The logical condition 00](../../../../../../images/designer_logical_condition_00.png)
+![Designer Condición lógica 00](../../../../../../images/designer_logical_condition_00.png)
 
 Este elemento se usa para calcular una fórmula lógica con dos argumentos.
 

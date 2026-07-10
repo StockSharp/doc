@@ -2,7 +2,7 @@
 
 すべての StockSharp 製品では、グラフィカルな接続設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) 画面フォームで行います。
 
-![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
+![API GUI 設定 cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
 - **Demo** - デモ取引への接続。
 
@@ -18,7 +18,7 @@ OAuth 認証プロセス:
 
 2. "Start" をクリックすると、ユーザーはログインのために cTrader Web サイトへリダイレクトされます。cTrader Web サイトでは、StockSharp アプリケーションに取引操作へのアクセスを許可する必要があります。
 
-   ![cTrader Login](../../../../../images/api_gui_settings_ctrader_2.png)
+   ![cTrader ログイン](../../../../../images/api_gui_settings_ctrader_2.png)
 
 3. その後、StockSharp Web サイトへリダイレクトされ、プログラムは自動的にログインします。
 

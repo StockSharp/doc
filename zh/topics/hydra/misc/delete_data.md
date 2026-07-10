@@ -2,6 +2,6 @@
 
 在 **常规** 选项卡中单击 **删除数据...** 按钮。
 
-![hydra data delete](../../../images/hydra_data_delete.png)
+![hydra 删除数据](../../../images/hydra_data_delete.png)
 
 该功能可以删除全部或指定交易品种在特定日期的数据。

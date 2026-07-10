@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Quandl](../../../../../images/api_gui_settings_quandl.png)
+![Configuración de API GUI Quandl](../../../../../images/api_gui_settings_quandl.png)
 
 - **Token** - Token.
 - **Database** - Identificador de base de datos Quandl.

@@ -8,7 +8,7 @@ Para o fazer, no separador **Comum**, selecione **Instrumentos** para que apare�
 
 Como exemplo, considere a combinação de futuros E-mini S&P 500.
 
-1. Para criar um contrato de futuros contínuo, clique no botão **Criar instrumento \=\> Instrumento contínuo** no separador **Todos os instrumentos**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. Para criar um contrato de futuros contínuo, clique no botão **Criar instrumento \=\> Instrumento contínuo** no separador **Todos os instrumentos**.![Hydra Verificação de dados ao unir 00](../../../images/hydragluingcheckdata_00.png)
 
    Depois disso, aparecerá a seguinte janela:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Para criar um futuro contínuo, é necessário especificar um nome e adicionar contratos.

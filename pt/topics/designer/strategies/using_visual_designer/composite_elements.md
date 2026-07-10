@@ -8,7 +8,7 @@ Quando adiciona um elemento composto a um esquema, todos os parâmetros não lig
 
 Vamos considerar a utilização de elementos compostos no exemplo da estratégia de cruzamento de médias móveis, que ilustra a utilização do elemento composto [Cruzamento](elements/common/crossing.md) várias vezes. A estratégia pode abrir uma posição longa quando a média móvel curta cruza a média móvel longa de baixo para cima, e uma posição curta quando a média móvel curta cruza a média móvel longa de cima para baixo. O esquema da parte da estratégia de cruzamento de médias móveis onde é determinado o momento do cruzamento das médias móveis é apresentado na figura abaixo:
 
-![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
+![Designer Criação de elementos compostos 00](../../../../images/designer_creating_composite_elements_00.png)
 
 Como o cruzamento de médias móveis difere apenas na sua possível direção (a curta cruza de cima para baixo ou de baixo para cima), a parte do esquema que determina o momento do cruzamento pode ser extraída para um elemento composto separado. Quando adiciona este elemento ao esquema, especifica as propriedades que definem o algoritmo de cruzamento das médias móveis. O esquema do elemento composto pelo qual o cruzamento é determinado é apresentado na figura abaixo:
 

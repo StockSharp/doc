@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
+![API GUI 設定 OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
 
 - **アドレス** - サーバーアドレス。
 - **ログイン** - ログイン。

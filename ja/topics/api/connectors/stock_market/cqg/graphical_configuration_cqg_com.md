@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
+![API GUI 設定 CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
 
 - **ログイン** - ログイン。
 - **パスワード** - パスワード。

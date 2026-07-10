@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Alpaca](../../../../../images/api_gui_settings_alpaca.png)
+![API GUI 設定 Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 
 - **キー** - Key。
 - **シークレット** - Secret。

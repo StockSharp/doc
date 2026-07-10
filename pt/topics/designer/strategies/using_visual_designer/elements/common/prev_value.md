@@ -1,6 +1,6 @@
 # Valor anterior
 
-![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
+![Designer Valor anterior 00](../../../../../../images/designer_previous_value_00.png)
 
 O cubo é usado para obter o valor anterior passado para a entrada, com o deslocamento especificado.
 

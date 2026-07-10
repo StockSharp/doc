@@ -2,7 +2,7 @@
 
 **图表** 组件包含策略中的所有 **图表面板** 模块。例如，如果策略使用两个 **图表面板** 模块，则 **图表** 组件中会显示两个图表，如图所示。
 
-![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
+![Designer 图形面板 04](../../../../images/designer_panel_graphics_04.png)
 
 每个图表的左上角会显示添加到图表中的全部图形元素。清除 ![Designer Schedule 00](../../../../images/designer_schedule_00.png) 图形元素旁的复选框后，该元素会从图表中隐藏。单击 ![Designer Schedule 01](../../../../images/designer_schedule_01.png) 按钮可以打开图形元素设置。也可以在 [图表](../../strategies/using_visual_designer/elements/common/chart.md) 模块的属性中配置图形元素。
 

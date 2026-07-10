@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
+![API-GUI-Einstellungen CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
 
 - **Benutzername** - Login.
 - **Passwort** - Password.

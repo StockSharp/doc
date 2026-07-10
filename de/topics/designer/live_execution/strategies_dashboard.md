@@ -1,12 +1,12 @@
 # Strategie-Dashboard
 
-Ein Klick auf die Schaltfläche ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) im Tab **Live-Handel** öffnet das Panel **Live-Handel**.
+Ein Klick auf die Schaltfläche ![Designer Strategie-Panel 00](../../../images/designer_panel_strategies_00.png) im Tab **Live-Handel** öffnet das Panel **Live-Handel**.
 
-![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
+![Designer Strategie-Panel 01](../../../images/designer_panel_strategies_01.png)
 
-Das Panel **Live-Handel** ist eine Tabelle, die alle zu **Live-Handel** hinzugefügten Strategien anzeigt. Im Panel **Live-Handel** können Sie den aktuellen Zustand der Strategie anzeigen und die Strategie mit den Schaltflächen ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) starten oder stoppen.
+Das Panel **Live-Handel** ist eine Tabelle, die alle zu **Live-Handel** hinzugefügten Strategien anzeigt. Im Panel **Live-Handel** können Sie den aktuellen Zustand der Strategie anzeigen und die Strategie mit den Schaltflächen ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png), ![Designer Schaltungs-Panel 03](../../../images/designer_panel_circuits_03.png) starten oder stoppen.
 
-![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
+![Designer Strategie-Panel 02](../../../images/designer_panel_strategies_02.png)
 
 - Die erste Spalte ist für das Starten/Stoppen der Strategie zuständig.
 - Die zweite Spalte ist für Strategieeinstellungen vorgesehen.

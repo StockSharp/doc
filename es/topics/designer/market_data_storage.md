@@ -4,7 +4,7 @@ El almacenamiento de datos históricos está diseñado para cargar datos de merc
 
 Para abrir la pestaña **Datos de mercado**, cambie a la pestaña **Común** y haga clic en el botón **Datos de mercado**. El área **Datos de mercado** está dividida en tres zonas. La zona izquierda contiene la lista de todos los instrumentos recibidos de todas las fuentes que se han conectado alguna vez. Las zonas centrales contienen los instrumentos activos. Con estos instrumentos puede descargar o ver el historial descargado. La zona derecha muestra los datos disponibles para el instrumento seleccionado en la zona central, y también puede descargar datos usando el instrumento seleccionado.
 
-![Designer Repository of historical data 00](../../images/designer_repository_of_historical_data_00.png)
+![Designer Repositorio de datos históricos 00](../../images/designer_repository_of_historical_data_00.png)
 
 ## Contenido recomendado
 

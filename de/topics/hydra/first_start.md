@@ -10,7 +10,7 @@ Markieren Sie im Fenster die erforderlichen Quellen. Sie können Filter nach Reg
 
 Danach werden die Quellen zum linken Panel des Hauptfensters der Anwendung hinzugefügt.
 
-![hydra Quick start 01](../../images/hydra_quick_start_01.png)
+![hydra Schnellstart 01](../../images/hydra_quick_start_01.png)
 
 ## Instrument zum Hochladen von Marktdaten herunterladen:
 
@@ -20,7 +20,7 @@ Nach dem Hinzufügen von Marktdatenquellen werden im zentralen Bereich Panels de
 
 Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Datenquelle herunter.
 
-![hydra choose market data](../../images/hydra_choose_market_data.png)
+![hydra Marktdaten auswählen](../../images/hydra_choose_market_data.png)
 
 > [!TIP]
 > WICHTIG\! Daten werden nur für die Instrumente heruntergeladen, die der Instrumentenliste hinzugefügt wurden
@@ -48,30 +48,30 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
    Die ausgewählten Instrumente werden in der Tabelle **Instrumente** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusätzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
 2. Für jedes ausgewählte Instrument sollten Sie die Marktdatentypen auswählen, die für den Download erforderlich sind.
 
-   Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![hydra zero](../../images/hydra_zero.png). ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
+   Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![hydra zero](../../images/hydra_zero.png). ![hydra Marktdatentyp auswählen](../../images/hydra_type_market_data_choose.png)
 
    Wählen wir für den Download **Ticks** und **Kerzen Zeitrahmen 5** aus.
 
-   Am unteren Rand des Quellenfensters befindet sich ein Panel mit Schaltflächen zur Einrichtung der zu empfangenden Daten und Instrumente. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
+   Am unteren Rand des Quellenfensters befindet sich ein Panel mit Schaltflächen zur Einrichtung der zu empfangenden Daten und Instrumente. ![hydra Schnellstart 02 00](../../images/hydra_quick_start_02_00.png)
 
    In diesem Panel können die folgenden Operationen ausgeführt werden:
    - Konfigurieren der Menge der empfangenen Informationen mit den Schaltflächen: **Geschäfte, Orderbücher, Kerzen, Orderprotokoll, Level 1, Eigene Transaktionen**. Die Listen verfügbarer Marktdatentypen unterscheiden sich je nach Quelle.
-   - Den erforderlichen Zeitrahmen für die geladenen Kerzen angeben. Der Zeitrahmen der empfangenen Kerzen unterscheidet sich je nach Quelle.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
+   - Den erforderlichen Zeitrahmen für die geladenen Kerzen angeben. Der Zeitrahmen der empfangenen Kerzen unterscheidet sich je nach Quelle.![hydra Schnellstart 02](../../images/hydra_quick_start_02.png)
    - Den erforderlichen Zeitraum für das Herunterladen von Marktdaten festlegen. Der Zeitraum kann auch direkt im Marktdatenfenster konfiguriert werden. Dazu wählen Sie den Beginn und das Ende des Zeitraums aus.
 
      Wenn der Benutzer kein Enddatum für den Zeitraum angibt, lädt das Programm alle für das aktuelle Datum verfügbaren Daten herunter. Wenn die Quelle die Übertragung von Marktdaten in Echtzeit unterstützt, werden die Marktdaten bei fehlendem Enddatum für den Zeitraum in Echtzeit heruntergeladen.
 
-     Legen wir den Zeitraum fest, für den die Marktdaten heruntergeladen werden sollen.![hydra Quick start 02 01](../../images/hydra_quick_start_02_01.png)
+     Legen wir den Zeitraum fest, für den die Marktdaten heruntergeladen werden sollen.![hydra Schnellstart 02 01](../../images/hydra_quick_start_02_01.png)
    - Angeben, woraus die Marktdaten erstellt werden sollen. Wenn dieser Parameter nicht angegeben ist, werden die in der Quelle verfügbaren Kerzen empfangen. Wenn der Benutzer den Marktdatentyp angibt, werden Kerzen aus dem angegebenen Marktdatentyp erstellt. Zum Beispiel können Kerzen aus dem letzten Handelspreis, dem Order-Book-Spread (üblicherweise für den Forex-Markt), der Volatilität oder dem besten Preis erstellt werden.
 
-     Diese Funktion ist praktisch, wenn die Quelle keine Daten für die Kerzendarstellung bereitstellt. In diesem Fall werden Kerzen auf Basis gemittelter Datenwerte gezeichnet.![hydra candle build type](../../images/hydra_candle_build_type.png)
+     Diese Funktion ist praktisch, wenn die Quelle keine Daten für die Kerzendarstellung bereitstellt. In diesem Fall werden Kerzen auf Basis gemittelter Datenwerte gezeichnet.![hydra Kerzen-Erstellungstyp](../../images/hydra_candle_build_type.png)
 
      Der Benutzer hat außerdem die Möglichkeit, einen [benutzerdefinierten Typ](prepare_for_download/custom_candles.md) von Kerzen auszuwählen, um die empfangenen Daten anzupassen.
    - Nach Auswahl eines Instruments, eines Marktdatentyps und Festlegung des Zeitraums klicken Sie auf die Schaltfläche **Starten**. Danach beginnt der Download der Marktdaten.
 
    Der Arbeitsprozess kann auf der speziellen Registerkarte **Protokolle** beobachtet werden, die am unteren Rand des Programms fixiert ist. Zusätzlich werden Protokolle in Dateien im lokalen Ordner gespeichert.
 
-![hydra main start](../../images/hydra_main_start.png)
+![hydra Hauptansicht start](../../images/hydra_main_start.png)
 
 Außerdem kann der Benutzer [zusätzliche Quellen](data_sources/select_source.md) hinzufügen.
 

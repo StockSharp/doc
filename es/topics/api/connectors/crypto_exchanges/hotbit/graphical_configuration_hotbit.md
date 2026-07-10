@@ -5,7 +5,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Hotbit](../../../../../images/api_gui_settings_hotbit.png)
+![Configuración de API GUI Hotbit](../../../../../images/api_gui_settings_hotbit.png)
 
 - **clave** - Clave.
 - **secreto** - Secreto.

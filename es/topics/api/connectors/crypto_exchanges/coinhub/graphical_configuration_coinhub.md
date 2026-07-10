@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CoinHub](../../../../../images/api_gui_settings_coinhub.png)
+![Configuración de API GUI CoinHub](../../../../../images/api_gui_settings_coinhub.png)
 
 - **clave** - Clave.
 - **secreto** - Secreto.

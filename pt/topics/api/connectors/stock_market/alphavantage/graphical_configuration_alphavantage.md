@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings AlphaVantage](../../../../../images/api_gui_settings_alphavantage.png)
+![Configurações da API GUI AlphaVantage](../../../../../images/api_gui_settings_alphavantage.png)
 
 - **Token** - Token.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

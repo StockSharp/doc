@@ -2,13 +2,13 @@
 
 [Designer](../../designer.md) 支持在 **模拟** 模式下运行已创建的策略。要配置 **模拟**，请执行以下操作：
 
-1. 单击 **连接** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png) 按钮旁的箭头，会显示 **仿真设置** 按钮：
+1. 单击 **连接** ![Designer 快速访问工具栏 00](../../../images/designer_quick_access_toolbar_00.png) 按钮旁的箭头，会显示 **仿真设置** 按钮：
 
-![Designer The connection settings 00](../../../images/designer_connection_settings_00.png)
+![Designer 连接设置 00](../../../images/designer_connection_settings_00.png)
 
 2. 单击 **仿真设置** 按钮，会打开 **仿真设置** 窗口：
 
-![Designer Properties emulation 00](../../../images/designer_properties_emulation_00.png)
+![Designer 仿真属性 00](../../../images/designer_properties_emulation_00.png)
 
 1. **模拟器**
 

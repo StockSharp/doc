@@ -4,9 +4,9 @@ Os painéis personalizados são controlos especiais criados pela S# para facilit
 
 Primeiro, precisa de criar um UserControl simples na pasta XAML da sua estratégia.
 
-![Shell custom strategy panel 00](../../images/shell_custom_strategy_panel_00.png)
+![Shell painel de estratégia personalizada 00](../../images/shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](../../images/shell_custom_strategy_panel_01.png)
+![Shell painel de estratégia personalizada 01](../../images/shell_custom_strategy_panel_01.png)
 
 Substitua `UserControl` por `controls:BaseStudioControl`.
 

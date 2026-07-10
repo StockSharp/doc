@@ -5,7 +5,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Cryptopia](../../../../../images/api_gui_settings_cryptopia.png)
+![Configurações da API GUI Cryptopia](../../../../../images/api_gui_settings_cryptopia.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

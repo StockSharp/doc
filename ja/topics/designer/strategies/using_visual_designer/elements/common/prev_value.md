@@ -1,6 +1,6 @@
 # 前回値
 
-![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
+![Designer 前の値 00](../../../../../../images/designer_previous_value_00.png)
 
 このキューブは、入力に渡された前の値を、指定されたオフセットで取得するために使用されます。
 

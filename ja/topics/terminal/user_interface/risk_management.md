@@ -4,6 +4,6 @@
 
 パネルの下部で、**リスクルール** を選択し、**リスクルール** のトリガー条件とアクション（ポジションを閉じる、取引を停止、注文をキャンセル）を設定する必要があります。このアクションは、**リスクルール** の条件がトリガーされたときに実行されます。
 
-![Terminal Risk Rule](../../../images/terminal_risk_rule.png)
+![Terminal リスクルール](../../../images/terminal_risk_rule.png)
 
 リスクルールの一覧とその説明は、[リスク管理](../../designer/user_interface/risk_management.md)セクションで確認できます。

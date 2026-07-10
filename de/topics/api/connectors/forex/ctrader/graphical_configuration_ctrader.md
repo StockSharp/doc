@@ -2,7 +2,7 @@
 
 Für alle StockSharp-Produkte erfolgt die grafische Verbindungseinrichtung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings cTrader](../../../../../images/api_gui_settings_ctrader.png)
+![API-GUI-Einstellungen cTrader](../../../../../images/api_gui_settings_ctrader.png)
 
 - **Demo** - Verbindung zum Demo-Handel.
 
@@ -18,7 +18,7 @@ Ablauf der OAuth-Autorisierung:
 
 2. Nach einem Klick auf "Start" wird der Benutzer zur cTrader-Website weitergeleitet, um sich anzumelden. Auf der cTrader-Website müssen Sie der StockSharp-Anwendung Zugriff auf Handelsoperationen erlauben:
 
-   ![cTrader Login](../../../../../images/api_gui_settings_ctrader_2.png)
+   ![cTrader Anmeldung](../../../../../images/api_gui_settings_ctrader_2.png)
 
 3. Danach werden Sie zur StockSharp-Website zurückgeleitet, und das Programm meldet sich automatisch an.
 

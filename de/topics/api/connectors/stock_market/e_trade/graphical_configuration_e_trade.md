@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings E TRADE](../../../../../images/api_gui_settings_e_trade.png)
+![API-GUI-Einstellungen E TRADE](../../../../../images/api_gui_settings_e_trade.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Secret.

@@ -2,7 +2,7 @@
 
 Para obtener el volumen necesario para girar la posición actual a la posición opuesta, puede usarse el esquema del ejemplo de estrategia SMA:
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer Determinación de la posición de volumen 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 Para el cubo [Variable](../elements/data_sources/variable.md), se selecciona el tipo de dato **Instrumento**. Si el instrumento no se especifica, pero se establece la bandera **Parámetros** del grupo **Común**, se tomará de la estrategia y luego se pasará a [Posición](../elements/positions/current.md).
 

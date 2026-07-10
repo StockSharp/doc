@@ -1,6 +1,6 @@
 # IV 板情報
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+![Designer 板情報のインプライドボラティリティ 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 このキューブは、インプライド・ボラティリティの板情報を計算するために使用します。
 

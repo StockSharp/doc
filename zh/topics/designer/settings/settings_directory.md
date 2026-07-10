@@ -6,7 +6,7 @@
 
 2. **Designer** 设置目录位于用户的文档文件夹中：…\\StockSharp\\Designer\\（例如 c:\\Users\\User\\Documents\\StockSharp\\Designer\\）。删除此目录会将全部 [Designer](../../designer.md) 设置恢复为默认值，**所有已创建的策略、已下载的交易品种，以及保存在设置目录中的其他信息都将被销毁。**
 
-![Designer Directory and edit the data manually 00](../../../images/designer_directory_and_edit_data_manually_00.png)
+![Designer 目录和手动编辑数据 00](../../../images/designer_directory_and_edit_data_manually_00.png)
 
 该目录包含以下文件夹和文件：
 

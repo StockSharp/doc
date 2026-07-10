@@ -2,11 +2,11 @@
 
 El componente **Libro de órdenes** es una tabla de órdenes limitadas de compra y venta.
 
-Al hacer clic en el botón de configuración ![Designer The quick access toolbar 02](../../../../images/designer_quick_access_toolbar_02.png), aparece un panel donde puede establecer el instrumento y la cartera necesarios, así como configurar las opciones de visualización del libro de órdenes.
+Al hacer clic en el botón de configuración ![Designer Barra de herramientas de acceso rápido 02](../../../../images/designer_quick_access_toolbar_02.png), aparece un panel donde puede establecer el instrumento y la cartera necesarios, así como configurar las opciones de visualización del libro de órdenes.
 
 Las órdenes se pueden registrar haciendo clic en los botones **Comprar/Vender** o haciendo clic en las celdas de las columnas **Compra/Venta** en el propio libro de órdenes.
 
-![Terminal Panel Market Depth](../../../../images/terminal_panel_market_depth.png)
+![Terminal Panel de profundidad de mercado](../../../../images/terminal_panel_market_depth.png)
 
 ## Contenido recomendado
 

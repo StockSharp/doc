@@ -4,7 +4,7 @@ En el panel [Configuración de backtesting](components/backtesting_settings.md),
 
 En la ventana **Comisiones**, debe seleccionar el tipo de comisión, establecer el valor de comisión y la condición bajo la cual se cobrará.
 
-![Designer Commission Rule](../../../images/designer_commission_rule.png)
+![Designer Regla de comisión](../../../images/designer_commission_rule.png)
 
 ### Lista de tipos de comisión
 

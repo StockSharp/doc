@@ -1,6 +1,6 @@
 # 指数
 
-![Designer Index 00](../../../../../../images/designer_index_00.png)
+![Designer 索引 00](../../../../../../images/designer_index_00.png)
 
 该模块用于创建自定义指数。
 

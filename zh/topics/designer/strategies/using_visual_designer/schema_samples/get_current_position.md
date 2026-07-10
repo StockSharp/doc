@@ -2,7 +2,7 @@
 
 可以使用 SMA 策略示例中的策略图，计算将当前持仓反转为相反方向所需的数量：
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer 确定成交量位置 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 在 [变量](../elements/data_sources/variable.md) 模块中选择 **交易品种** 数据类型。如果未指定交易品种，但已设置 **常规** 组中的 **参数** 标志，则会从策略中获取交易品种，再将其传递给 [持仓](../elements/positions/current.md)。
 

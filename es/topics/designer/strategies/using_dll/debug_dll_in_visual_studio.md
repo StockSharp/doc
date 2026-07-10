@@ -8,11 +8,11 @@ Visual Studio proporciona un mecanismo para adjuntarse a procesos en ejecución 
 
 2. En Visual Studio, seleccione **Debug -> Attach to Process**.
 
-![Designer Debugging DLL cube using Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
+![Designer Depuración de un cubo DLL con Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
 3. En el cuadro de diálogo **Asociar al proceso**, busque el proceso **Designer.exe** en la lista **Procesos disponibles** al que desea adjuntarse.
 
-![Designer Debugging DLL cube using Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
+![Designer Depuración de un cubo DLL con Visual Studio 01](../../../../images/designer_debugging_dll_using_visual_studio_01.png)
 
 Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **Mostrar procesos de todos los usuarios**.
 
@@ -22,15 +22,15 @@ Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **M
 - En el cuadro de diálogo **Seleccionar tipo de código**, haga clic en el botón **Depurar estos tipos de código** y seleccione los tipos para depuración.
 - Haga clic en OK.
 
-![Designer Debugging DLL cube using Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
+![Designer Depuración de un cubo DLL con Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
 5. Haga clic en el botón Attach.
 
-6. En Visual Studio, establezca puntos de interrupción en el código. Si los puntos de interrupción son rojos y están rellenos de rojo ![Designer Debugging DLL cube using Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png) (y Studio está en modo de depuración), significa que se cargó la versión exacta de la DLL. Si los puntos de interrupción son rojos y están rellenos de blanco ![Designer Debugging DLL cube using Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png) (y Studio está en modo de depuración), significa que se cargó una versión incorrecta de la DLL.
+6. En Visual Studio, establezca puntos de interrupción en el código. Si los puntos de interrupción son rojos y están rellenos de rojo ![Designer Depuración de un cubo DLL con Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png) (y Studio está en modo de depuración), significa que se cargó la versión exacta de la DLL. Si los puntos de interrupción son rojos y están rellenos de blanco ![Designer Depuración de un cubo DLL con Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png) (y Studio está en modo de depuración), significa que se cargó una versión incorrecta de la DLL.
 
 7. En el ejemplo, el punto de interrupción se establece en la primera línea del método **public void ProcessCandle(Candle candle)**. Cuando la estrategia se ejecuta en [Designer](../../../designer.md), en cuanto los valores de velas comiencen a pasarse a la DLL, Visual Studio se detendrá en el punto de interrupción. Desde allí, puede seguir la ejecución del código:
 
-![Designer Debugging DLL cube using Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
+![Designer Depuración de un cubo DLL con Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
 > [!WARNING]
 > Cuando el código se detiene bajo el depurador, todos los procesos dentro del programa **Designer** se suspenden. Si el programa está conectado a trading real, en caso de una detención prolongada bajo el depurador se producirán desconexiones.

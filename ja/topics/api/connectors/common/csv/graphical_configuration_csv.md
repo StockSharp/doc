@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
+![API GUI 設定 CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **Settings** - インポート設定。
 - **再接続設定** - 取引システムとの接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))

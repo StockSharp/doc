@@ -2,7 +2,7 @@
 
 Propriedades de ligação comuns a todas as fontes.
 
-![hydra settings connectionparams](../../../images/hydra_settings_connectionparams.png)
+![hydra configurações de parâmetros de conexão](../../../images/hydra_settings_connectionparams.png)
 
 **Ligação**
 

@@ -10,7 +10,7 @@
 
 4. 下载所需交易品种的历史数据。本例使用 **AAPL@NASDAQ** 交易品种。策略将使用 5 秒周期的K线；虽然并不需要这些历史数据，但下载这些数据足以演示相应功能。
 
-![Designer Example of Live trading 00](../../../images/designer_example_of_live_trading_00.png)
+![Designer 实盘交易示例 00](../../../images/designer_example_of_live_trading_00.png)
 
 5. 配置并启动策略。
 
@@ -24,23 +24,23 @@ SMA 策略示例使用以下参数：
 - 成交量 \- 100
 - 历史数据天数 \- 2
 
-![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
+![Designer 实盘交易示例 01](../../../images/designer_example_of_live_trading_01.png)
 
-设置完所有必需参数后，单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮启动策略。
+设置完所有必需参数后，单击 ![Designer 线路面板 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮启动策略。
 
-单击 ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮后，图表会开始显示已下载的完整两天历史数据：
+单击 ![Designer 线路面板 02](../../../images/designer_panel_circuits_02.png) **启动** 按钮后，图表会开始显示已下载的完整两天历史数据：
 
-![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
+![Designer 实盘交易示例 02](../../../images/designer_example_of_live_trading_02.png)
 
 从[市场数据存储](../market_data_storage.md)下载全部历史数据，并从终端接收到匿名成交表后，策略将开始交易。
 
 下图显示了 [Designer](../../designer.md) 中的成交：
 
-![Designer Example of Live trading 03](../../../images/designer_example_of_live_trading_03.png)
+![Designer 实盘交易示例 03](../../../images/designer_example_of_live_trading_03.png)
 
 在 [Designer](../../designer.md) 中，策略继续在 Live 模式下运行，并显示实时交易结果：
 
-![Designer Example of Live trading 04](../../../images/designer_example_of_live_trading_04.png)
+![Designer 实盘交易示例 04](../../../images/designer_example_of_live_trading_04.png)
 
 ## 推荐内容
 

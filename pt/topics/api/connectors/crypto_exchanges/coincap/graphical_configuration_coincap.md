@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CoinCap](../../../../../images/api_gui_settings_coincap.png)
+![Configurações da API GUI CoinCap](../../../../../images/api_gui_settings_coincap.png)
 
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por defeito, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))

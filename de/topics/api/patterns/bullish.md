@@ -7,7 +7,7 @@ Bullish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs oberhalb 
 - Der Eröffnungskurs ist niedriger als der Schlusskurs (O < C).
 - Zeigt bullischen Druck im Markt an.
 
-![Bullish Candle Pattern](../../../images/bullishcandlepattern.png)
+![Bullisches Kerzenmuster](../../../images/bullishcandlepattern.png)
 
 ### Interpretation
 

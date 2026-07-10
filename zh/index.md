@@ -43,7 +43,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 
 ### 终端
 
-![Terminal main 00](images/terminal_main_00.png)
+![Terminal 主界面 00](images/terminal_main_00.png)
 
 [Terminal](topics/terminal.md) 是一款交易和图表应用程序（交易终端）：
 

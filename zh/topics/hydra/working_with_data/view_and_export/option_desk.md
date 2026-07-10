@@ -8,6 +8,6 @@
 
 要查看**波动率微笑**，请打开 **波动率微笑** 选项卡。
 
-![hydra option smile of volatility](../../../../images/hydra_option_smile_of_volatility.png)
+![hydra 期权波动率微笑](../../../../images/hydra_option_smile_of_volatility.png)
 
 找到的数据可以[导出为所需格式](../export_data.md)。

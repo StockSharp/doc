@@ -123,7 +123,7 @@ _longSmaLength = Param(nameof(LongSmaLength), 80)
 					.SetBasic(true);
 ```
 
-![strategy parameters basic advanced](../../../images/strategy_parameters_basic_advanced.png)
+![Strategie Basis- und erweiterte Parameter](../../../images/strategy_parameters_basic_advanced.png)
 
 ### SetReadOnly
 

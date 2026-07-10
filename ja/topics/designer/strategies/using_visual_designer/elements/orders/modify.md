@@ -1,6 +1,6 @@
 # 注文変更
 
-![Designer Moving applications 00](../../../../../../images/designer_moving_applications_00.png)
+![Designer アプリケーションの移動 00](../../../../../../images/designer_moving_applications_00.png)
 
 このブロックは、銘柄の注文を変更するために使用します。
 

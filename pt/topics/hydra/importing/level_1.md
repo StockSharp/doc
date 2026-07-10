@@ -2,7 +2,7 @@
 
 Para importar dados Level 1, selecione **Importar \=\> Level 1** no menu principal da aplicação
 
-![hydra import level1](../../../images/hydra_import_level1.png)
+![hydra importar Visualização nível1](../../../images/hydra_import_level1.png)
 
 ## Processo de importação.
 
@@ -30,8 +30,8 @@ Para importar dados Level 1, selecione **Importar \=\> Level 1** no menu princip
    - Para o campo {LastTradeTime}, selecione o campo **Hora da última transação** na janela **campo S#**. Atribuímos-lhe o valor 8.
    - Para o campo {LastTradePrice}, selecione o campo **Preço da última transação** na janela **campo S#**. Atribuímos-lhe o valor 9.
    - Para o campo {LastTradeVolume}, selecione o campo **Volume da última transação** na janela **campo S#**. Atribuímos-lhe o valor 10.
-   - A janela de definição de campos terá o seguinte aspeto:![hydra import prop level 1](../../../images/hydra_import_prop_level1.png)
+   - A janela de definição de campos terá o seguinte aspeto:![hydra import propriedades Nível 1](../../../images/hydra_import_prop_level1.png)
 
    O utilizador pode configurar um grande número de propriedades para os dados transferidos. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência.
-3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import preview level 1](../../../images/hydra_import_preview_level1.png)
+3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import pré-visualização Nível 1](../../../images/hydra_import_preview_level1.png)
 4. Clique no botão **Importar**.

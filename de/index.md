@@ -43,7 +43,7 @@ S# funktioniert mit jedem Broker, jeder Börse oder Datenquelle, die von den ver
 
 ### Terminal
 
-![Terminal main 00](images/terminal_main_00.png)
+![Terminal Hauptansicht 00](images/terminal_main_00.png)
 
 [Terminal](topics/terminal.md) ist eine Handels- und Charting-Anwendung (Handelsterminal):
 

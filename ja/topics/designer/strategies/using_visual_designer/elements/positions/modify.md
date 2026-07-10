@@ -1,6 +1,6 @@
 # ポジション変更
 
-![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
+![Designer ポジション変更 00](../../../../../../images/designer_position_modify_00.png)
 
 「ポジション変更」コンポーネントは、指定された条件に基づいて取引ポジションを変更するために使用します。
 

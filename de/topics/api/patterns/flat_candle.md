@@ -9,7 +9,7 @@ Eine flache (neutrale) Candle ist ein Candlestick-Muster, das entsteht, wenn Er�
 - Weist auf Neutralität oder Unentschlossenheit im Markt hin.
 - Kann eine Konsolidierung vor der Fortsetzung des bestehenden Trends oder eine mögliche Umkehr signalisieren.
 
-![Flat Candle Pattern](../../../images/flatcandlepattern.png)
+![Flaches Kerzenmuster](../../../images/flatcandlepattern.png)
 
 ### Interpretation
 

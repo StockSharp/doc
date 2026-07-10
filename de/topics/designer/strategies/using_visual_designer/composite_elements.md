@@ -8,7 +8,7 @@ Wenn Sie ein zusammengesetztes Element zu einem Schema hinzufügen, werden ihm a
 
 Wir betrachten die Verwendung zusammengesetzter Elemente am Beispiel der Strategie für die Kreuzung gleitender Durchschnitte, die die mehrfache Verwendung des zusammengesetzten Elements [Kreuzung](elements/common/crossing.md) zeigt. Die Strategie kann eine Long-Position eröffnen, wenn der kurze gleitende Durchschnitt den langen von unten nach oben kreuzt, und eine Short-Position, wenn der kurze gleitende Durchschnitt den langen von oben nach unten kreuzt. Das Schema des Teils der Strategie zur Kreuzung gleitender Durchschnitte, in dem der Kreuzungszeitpunkt bestimmt wird, ist in der folgenden Abbildung dargestellt:
 
-![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
+![Designer Erstellen zusammengesetzter Elemente 00](../../../../images/designer_creating_composite_elements_00.png)
 
 Da sich die Kreuzung gleitender Durchschnitte nur in ihrer möglichen Richtung unterscheidet (der kurze gleitende Durchschnitt kreuzt von oben nach unten oder von unten nach oben), kann der Teil des Schemas, der den Kreuzungszeitpunkt bestimmt, in ein separates zusammengesetztes Element ausgelagert werden. Wenn Sie dieses Element zum Schema hinzufügen, geben Sie die Eigenschaften an, die den Algorithmus der Kreuzung gleitender Durchschnitte definieren. Das Schema des zusammengesetzten Elements, mit dem die Kreuzung bestimmt wird, ist in der folgenden Abbildung dargestellt:
 

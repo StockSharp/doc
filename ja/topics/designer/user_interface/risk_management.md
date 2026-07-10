@@ -6,7 +6,7 @@
 
 同じ種類の複数のリスク ルールを、異なるアクションで使用できます。たとえば、下のスクリーンショットでは、注文数量が 20 の場合、注文のキャンセルと取引停止のアクションが実行されます。
 
-![Designer Risk Rule](../../../images/designer_risk_rule.png)
+![Designer リスクルール](../../../images/designer_risk_rule.png)
 
 ### リスク ルールの一覧
 

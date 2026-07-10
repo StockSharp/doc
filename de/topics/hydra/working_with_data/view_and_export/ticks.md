@@ -2,7 +2,7 @@
 
 Wählen Sie im angezeigten Fenster die Instrumente und das gewünschte Zeitintervall aus und klicken Sie auf die Schaltfläche ![hydra find](../../../../images/hydra_find.png):
 
-![hydra export trades](../../../../images/hydra_export_trades.png)
+![hydra Trades exportieren](../../../../images/hydra_export_trades.png)
 
 Um nicht systembezogene Ausführungen zu laden, aktivieren Sie das Kontrollkästchen **Nicht systembezogen**.
 

@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Xignite](../../../../../images/api_gui_settings_xignite.png)
+![API-GUI-Einstellungen Xignite](../../../../../images/api_gui_settings_xignite.png)
 
 - **Token** - Token.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bittrex](../../../../../images/api_gui_settings_bittrex.png)
+![Configurações da API GUI Bittrex](../../../../../images/api_gui_settings_bittrex.png)
 
 - **chave** - Chave.
 - **segredo** - Chave secreta.

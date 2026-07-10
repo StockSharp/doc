@@ -99,7 +99,7 @@ private void UnsubscribeFromCandles()
 }
 ```
 
-![indicators chart](../../../images/indicators_chart.png)
+![indicadores gráfico](../../../images/indicators_chart.png)
 
 ## Exemplo de trabalho com vários indicadores
 

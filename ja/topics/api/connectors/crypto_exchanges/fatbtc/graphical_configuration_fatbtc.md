@@ -5,7 +5,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings FatBTC](../../../../../images/api_gui_settings_fatbtc.png)
+![API GUI 設定 FatBTC](../../../../../images/api_gui_settings_fatbtc.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

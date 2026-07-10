@@ -7,7 +7,7 @@ Bullish Candle es un patrón de velas caracterizado por un precio de cierre supe
 - El precio de apertura es menor que el precio de cierre (O < C).
 - Indica presión alcista en el mercado.
 
-![Bullish Candle Pattern](../../../images/bullishcandlepattern.png)
+![Patrón de vela alcista](../../../images/bullishcandlepattern.png)
 
 ### Interpretación
 

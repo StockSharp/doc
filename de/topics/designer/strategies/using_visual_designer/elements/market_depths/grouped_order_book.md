@@ -1,8 +1,8 @@
 # Gruppiertes Orderbuch
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer Gruppiertes Orderbuch 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer Gruppiertes Orderbuch 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 Der Würfel wird verwendet, um ein gruppiertes Orderbuch zu erhalten.
 

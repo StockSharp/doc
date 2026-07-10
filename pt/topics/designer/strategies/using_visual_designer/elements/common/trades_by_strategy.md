@@ -1,6 +1,6 @@
 # Negócios por estratégia
 
-![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
+![Designer Estratégia de transação 00](../../../../../../images/designer_trades_strategy_00.png)
 
 O cubo é usado para obter todos os negócios da estratégia.
 

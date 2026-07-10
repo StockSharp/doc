@@ -6,11 +6,11 @@
 
 - 目的のストラテジーを選択し、Download ボタンをクリックします:
 
-  ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
+  ![Designer ストラテジーギャラリー 00](../../images/designer_gallery_of_strategies_00.png)
 
 - ストラテジーが **バックテスト** セクションのストラテジーツリーに追加されます:
 
-  ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
+  ![Designer ストラテジーギャラリー 01](../../images/designer_gallery_of_strategies_01.png)
 
 ## 関連項目
 

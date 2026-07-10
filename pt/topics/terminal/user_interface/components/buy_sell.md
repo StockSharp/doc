@@ -4,7 +4,7 @@ O componente **Compra/Venda** é um grupo de painéis que apresenta as informaç
 
 Para adicionar um novo instrumento, clique no botão ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png). 
 
-![Terminal Buy Sell 00](../../../../images/terminal_buy_sell_00.png)
+![Terminal Compra Venda 00](../../../../images/terminal_buy_sell_00.png)
 
 ## Conteúdo recomendado
 

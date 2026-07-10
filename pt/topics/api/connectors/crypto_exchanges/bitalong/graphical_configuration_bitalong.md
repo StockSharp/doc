@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
+![Configurações da API GUI Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

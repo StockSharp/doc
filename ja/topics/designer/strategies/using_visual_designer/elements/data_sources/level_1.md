@@ -1,6 +1,6 @@
 # Level 1
 
-![Designer Level 1 00](../../../../../../images/designer_level_1_00.png)
+![Designer レベル 1 00](../../../../../../images/designer_level_1_00.png)
 
 このブロックは、銘柄の **レベル1** データを受信するために使用されます。
 

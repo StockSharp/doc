@@ -24,7 +24,7 @@ Python コードからストラテジーを作成するには、2 番目のタ�
 
 **エラー一覧** パネルはコードエラーの一覧を含むテーブルです。行をダブルクリックすると、**ソースコード** パネル内のエラー位置へカーソルが自動的に移動します。
 
-コードを編集すると、**エラー一覧** パネルの右下隅にアイコン ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) が表示され、変更追跡が開始されたことを示します。コードの変更が停止するとコンパイルが行われます。
+コードを編集すると、**エラー一覧** パネルの右下隅にアイコン ![Designer ソースコードを含むキューブの作成 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) が表示され、変更追跡が開始されたことを示します。コードの変更が停止するとコンパイルが行われます。
 
 [バックテスト](../../backtesting/user_interface.md)、[ライブ](../../live_execution/getting_started.md)でのストラテジー実行、およびその他の操作は、スキームから作成したストラテジーと同様に動作します。
 

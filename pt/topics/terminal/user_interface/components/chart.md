@@ -2,7 +2,7 @@
 
 O componente **Gráfico** permite desenhar velas e indicadores para o instrumento selecionado.
 
-![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
+![Terminal Painel de gráficos 00](../../../../images/terminal_panel_graphics_00.png)
 
 Para adicionar uma nova área, clique no botão ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png). 
 
@@ -20,7 +20,7 @@ As ordens de compra serão registadas pela combinação de teclas **Ctrl+botão 
 
 As ordens de venda serão registadas pela combinação de teclas **Ctrl+botão direito do rato**.
 
-![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
+![Terminal Painel de gráficos 01](../../../../images/terminal_panel_graphics_01.png)
 
 Nas definições do elemento gráfico, pode definir o estilo de gráfico necessário: velas japonesas, barras, gráfico box, perfil de clusters, etc.
 

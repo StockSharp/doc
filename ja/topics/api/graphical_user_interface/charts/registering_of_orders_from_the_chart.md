@@ -2,7 +2,7 @@
 
 S# ではチャートから注文を登録できます。この機能を有効にするには、[Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) プロパティを **"True"** に設定する必要があります。既定では無効になっています。
 
-![API GUI Trading from chart](../../../../images/api_gui_trading_from_chart.png)
+![API GUI チャートからの取引](../../../../images/api_gui_trading_from_chart.png)
 
 買い注文は、**Ctrl + Left Mouse Button** の組み合わせで登録されます。
 

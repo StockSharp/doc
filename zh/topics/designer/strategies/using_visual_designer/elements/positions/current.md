@@ -1,6 +1,6 @@
 # 持仓
 
-![Designer Position 00](../../../../../../images/designer_position_00.png)
+![Designer 持仓 00](../../../../../../images/designer_position_00.png)
 
 该元素用于获取指定交易品种和投资组合的持仓变化信息。
 

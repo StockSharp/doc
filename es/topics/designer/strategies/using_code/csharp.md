@@ -4,11 +4,11 @@ La creación de estrategias desde código está pensada para usuarios que prefie
 
 El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **C#** (los más populares son **Visual Studio** y **JetBrains Rider**), usando una biblioteca para el desarrollo profesional de robots de trading en **C#** y la [API](../../../api.md).
 
-Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
+Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 
-![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
+![Designer Creación de una estrategia 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Después de pulsar el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido para crear la estrategia:
+Después de pulsar el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido para crear la estrategia:
 
 ![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
@@ -24,6 +24,6 @@ La pestaña del editor de código consta de los paneles **Código fuente** y **L
 
 El panel **Lista de errores** es una tabla con la lista de errores en el código; al hacer doble clic en una fila, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error.
 
-Al editar el código, aparecerá un icono ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
+Al editar el código, aparecerá un icono ![Designer Creación del cubo con código fuente 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
 
 La ejecución de la estrategia en [backtest](../../backtesting/user_interface.md), en [live](../../live_execution/getting_started.md) y otras operaciones son similares a las de una estrategia creada a partir de diagramas.

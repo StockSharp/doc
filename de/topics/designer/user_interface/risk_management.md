@@ -6,7 +6,7 @@ Im Fenster Risiken müssen Sie eine **Risikoregel** auswählen, die Auslösebedi
 
 Es ist möglich, mehrere Risikoregeln desselben Typs mit unterschiedlichen Aktionen zu verwenden. Im folgenden Screenshot werden beispielsweise bei einem Ordervolumen von 20 die Aktionen zum Stornieren von Orders und zum Stoppen des Handels ausgeführt.
 
-![Designer Risk Rule](../../../images/designer_risk_rule.png)
+![Designer Risikoregel](../../../images/designer_risk_rule.png)
 
 ### Liste der Risk Rules
 

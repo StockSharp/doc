@@ -9,7 +9,7 @@ On-Neck ist ein bärisches Trendfortsetzungs-Candlestick-Muster aus zwei Candles
 - Der Schlusskurs der zweiten Candle liegt ungefähr am Tief der ersten Candle oder auf dessen Niveau.
 - Entsteht in einem Abwärtstrend.
 
-![On-Neck Pattern](../../../images/onneckpattern.png)
+![On-Neck-Muster](../../../images/onneckpattern.png)
 
 ### Interpretation
 

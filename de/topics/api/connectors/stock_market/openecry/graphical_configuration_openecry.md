@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
+![API-GUI-Einstellungen OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
 
 - **Adresse** - Serveradresse.
 - **Benutzername** - Login.

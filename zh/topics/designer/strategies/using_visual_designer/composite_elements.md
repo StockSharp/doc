@@ -8,7 +8,7 @@
 
 下面以移动平均线交叉策略为例介绍复合元素的使用。该策略多次使用[交叉](elements/common/crossing.md)复合元素：短期移动平均线自下向上穿越长期移动平均线时开多仓，自上向下穿越时开空仓。用于确定移动平均线交叉时刻的策略图如下：
 
-![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
+![Designer 创建复合元素 00](../../../../images/designer_creating_composite_elements_00.png)
 
 移动平均线交叉仅在方向上有所不同（短期均线从上向下或从下向上穿越），因此可以将判断交叉时刻的部分提取为单独的复合元素。把该元素添加到策略图后，需要指定定义移动平均线交叉算法的属性。用于判断交叉的复合元素策略图如下：
 

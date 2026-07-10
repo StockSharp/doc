@@ -1,6 +1,6 @@
 # 板情報パネル
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer 板情報パネル](../../../../../../images/designer_orderbook_panel.png)
 
 このキューブは、専用のグラフィカルコンポーネント [板情報](../../../../user_interface/components/order_book.md) に板情報を表示するために設計されています。
 

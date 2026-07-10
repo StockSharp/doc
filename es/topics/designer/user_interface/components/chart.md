@@ -2,7 +2,7 @@
 
 El componente **Gráfico** contiene todos los cubos **Panel de gráfico** que están en la estrategia. Por ejemplo, si la estrategia usa dos cubos **Panel de gráfico**, en el componente **Gráfico** se muestran 2 gráficos, como en la figura.
 
-![Designer Panel graphics 04](../../../../images/designer_panel_graphics_04.png)
+![Designer Panel de gráficos 04](../../../../images/designer_panel_graphics_04.png)
 
 La esquina superior izquierda de cada gráfico muestra todos los elementos gráficos añadidos al gráfico. Si desmarca la casilla del elemento gráfico ![Designer Schedule 00](../../../../images/designer_schedule_00.png), el elemento se eliminará del gráfico. Al hacer clic en el botón ![Designer Schedule 01](../../../../images/designer_schedule_01.png), se abrirá la configuración del elemento gráfico. También puede configurar el elemento gráfico en las propiedades del cubo [Gráfico](../../strategies/using_visual_designer/elements/common/chart.md).
 

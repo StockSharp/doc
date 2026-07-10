@@ -9,7 +9,7 @@ Black Candle (bärische Candle) ist ein klassisches Candlestick-Muster, das ents
 - Zeigt die Dominanz von Verkäufern gegenüber Käufern.
 - Die Größe des Candle-Körpers zeigt die Stärke der bärischen Bewegung.
 
-![Black Candle Pattern](../../../images/blackcandlepattern.png)
+![Schwarzes Kerzenmuster](../../../images/blackcandlepattern.png)
 
 ### Interpretation
 

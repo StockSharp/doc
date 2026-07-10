@@ -4,7 +4,7 @@
 
 要添加新的交易品种，请单击 ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png) 按钮。
 
-![Terminal Buy Sell 00](../../../../images/terminal_buy_sell_00.png)
+![Terminal 买入 卖出 00](../../../../images/terminal_buy_sell_00.png)
 
 ## 推荐内容
 

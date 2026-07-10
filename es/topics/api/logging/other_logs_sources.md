@@ -81,4 +81,4 @@ En los temas anteriores, los objetos integrados en las clases de [S#](../../api.
    		throw new ArgumentOutOfRangeException();
    }
    ```
-7. Resultado del funcionamiento del ejemplo.![sample logging](../../../images/sample_logging.png)
+7. Resultado del funcionamiento del ejemplo.![sample registro](../../../images/sample_logging.png)

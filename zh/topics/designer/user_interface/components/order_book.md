@@ -4,7 +4,7 @@
 
 策略可以同时使用多种不同类型的市场深度，也可以使用不同交易品种的市场深度，并将其显示在不同面板中。
 
-![Designer Panel Market Depth](../../../../images/designer_panel_market_depth.png)
+![Designer 市场深度面板](../../../../images/designer_panel_market_depth.png)
 
 ## 推荐内容
 

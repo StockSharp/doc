@@ -2,7 +2,7 @@
 
 可以使用以下策略图，将指定交易品种的K线输出到图表：
 
-![Designer The conclusion of the candles on the chart 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
+![Designer 在图表上显示K线 00](../../../../../images/designer_conclusion_of_candles_on_chart_00.png)
 
 在 [变量](../elements/data_sources/variable.md) 模块中选择 **交易品种** 数据类型。如果未指定交易品种，但已设置 **常规** 属性组中的 **参数** 标志，则会从策略中获取交易品种并将其传递给 [K线](../elements/data_sources/candles.md) 模块。[K线](../elements/data_sources/candles.md) 模块设置为构建 5 分钟K线，并且仅传递已完全形成的K线。
 

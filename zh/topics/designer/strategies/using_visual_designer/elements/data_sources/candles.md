@@ -1,6 +1,6 @@
 # K线
 
-![Designer Candles 00](../../../../../../images/designer_candles_00.png)
+![Designer K线 00](../../../../../../images/designer_candles_00.png)
 
 该模块用于为指定交易品种构建K线。
 

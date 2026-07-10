@@ -1,6 +1,6 @@
 # 修改持仓
 
-![Designer position modify 00](../../../../../../images/designer_position_modify_00.png)
+![Designer 修改持仓 00](../../../../../../images/designer_position_modify_00.png)
 
 “修改持仓”组件用于根据指定条件更改交易持仓。
 

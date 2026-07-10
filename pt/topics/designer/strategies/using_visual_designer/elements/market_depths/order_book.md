@@ -1,6 +1,6 @@
 # Livro de ofertas
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer Livro de ofertas 00](../../../../../../images/designer_orderbook_00.png)
 
 O cubo é usado para obter o livro de ordens pelo instrumento especificado.
 

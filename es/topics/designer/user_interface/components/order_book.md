@@ -4,7 +4,7 @@ El componente **Libro de órdenes** es una tabla de órdenes limitadas de compra
 
 En la estrategia puede usar simultáneamente varios tipos distintos de libros de órdenes (o de distintos instrumentos) y mostrarlos en distintos paneles.
 
-![Designer Panel Market Depth](../../../../images/designer_panel_market_depth.png)
+![Designer Panel de profundidad de mercado](../../../../images/designer_panel_market_depth.png)
 
 ## Contenido recomendado
 

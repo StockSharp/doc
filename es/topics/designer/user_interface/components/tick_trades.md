@@ -4,4 +4,4 @@ El componente **Flujo de operaciones** es una tabla con operaciones que muestra 
 
 El **Flujo de operaciones** tiene un filtro para seleccionar los instrumentos necesarios. También puede configurar notificaciones para eventos relacionados con los instrumentos seleccionados en la ventana [Configuración de notificaciones](../../../terminal/notifications.md).
 
-![Designer Tape Trades](../../../../images/designer_tape_trades.png)
+![Designer Operaciones de la cinta](../../../../images/designer_tape_trades.png)

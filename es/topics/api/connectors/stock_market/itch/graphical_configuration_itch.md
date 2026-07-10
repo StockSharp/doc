@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings ITCH](../../../../../images/api_gui_settings_itch.png)
+![Configuración de API GUI ITCH](../../../../../images/api_gui_settings_itch.png)
 
 - **Main** - Grupo UDP principal.
 - **Duplicate** - Grupo UDP duplicado.

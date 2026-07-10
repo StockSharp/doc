@@ -8,7 +8,7 @@ Al añadir un elemento compuesto a un esquema, todos los parámetros no conectad
 
 Consideraremos el uso de elementos compuestos con el ejemplo de la estrategia de cruce de medias móviles, que ilustra el uso del elemento compuesto [Cruce](elements/common/crossing.md) varias veces. La estrategia puede abrir una posición larga cuando la media móvil corta cruza la larga de abajo hacia arriba, y una posición corta cuando la media móvil corta cruza la larga de arriba hacia abajo. El esquema de la parte de la estrategia de cruce de medias móviles donde se determina el momento del cruce se muestra en la siguiente figura:
 
-![Designer Creating a composite elements 00](../../../../images/designer_creating_composite_elements_00.png)
+![Designer Creación de elementos compuestos 00](../../../../images/designer_creating_composite_elements_00.png)
 
 Como el cruce de medias móviles difiere solo por su posible dirección (la corta cruza de arriba abajo o de abajo arriba), la parte del esquema que determina el momento del cruce puede extraerse a un elemento compuesto separado. Al añadir este elemento al esquema, se especifican las propiedades que definen el algoritmo de cruce de medias móviles. El esquema del elemento compuesto por el que se determina el cruce se muestra en la siguiente figura:
 

@@ -2,7 +2,7 @@
 
 **プロパティ** パネルは、既定ではストラテジータブの右側に最小化されています。このパネルは、エミュレーションまたは Live 取引のプロパティのテーブルです。特定のプロパティを選択すると、そのプロパティの詳細な説明がテーブルの下部に表示されます。すべてのプロパティはグループに分類されています。
 
-![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
+![Designer エミュレーションプロパティ 00](../../../../images/designer_properties_emulation_00.png)
 
 **設定**
 

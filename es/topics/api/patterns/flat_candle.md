@@ -9,7 +9,7 @@ Flat (Neutral) Candle es un patrón de velas que se forma cuando los precios de 
 - Indica neutralidad o indecisión en el mercado.
 - Puede señalar consolidación antes de la continuación de la tendencia existente o una posible reversión.
 
-![Flat Candle Pattern](../../../images/flatcandlepattern.png)
+![Patrón de vela plana](../../../images/flatcandlepattern.png)
 
 ### Interpretación
 

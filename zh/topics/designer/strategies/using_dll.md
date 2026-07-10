@@ -11,25 +11,25 @@
 
 1. 要在 **Visual Studio** 中创建策略，请先创建项目：
 
-![Designer Creating a DLL cube in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
+![Designer 在 Visual Studio 中创建 DLL 方块 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
 
 2. 然后编写策略代码。要快速开始，可以复制[代码策略](using_code/csharp/first_strategy.md)模板中的 SmaStrategy 代码：
 
-![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
+![Designer 在 Visual Studio 中创建 DLL 方块 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
 3. 要编译代码，需要添加 NuGet 包 [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo)，所有策略的基类 [Strategy](xref:StockSharp.Algo.Strategies.Strategy) 都位于该包中：
 
-![Designer Creating a DLL cube in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
+![Designer 在 Visual Studio 中创建 DLL 方块 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
 
 如果策略使用图表接口，还需要添加 NuGet 包 [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces)。这些接口不包含实际的图表逻辑，仅用于编译代码。在 **Designer** 中启动策略时，真实数据会通过这些接口绘制到图表上。
 
 4. 创建策略后，请在 **生成** 选项卡中单击 **生成解决方案** 构建项目。
 
-![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
+![Designer 在 Visual Studio 中创建 DLL 方块 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
 5. 默认情况下，Visual Studio 会将项目构建到 …\\bin\\Debug\\net6.0 文件夹。
 
-![Designer Creating a DLL cube in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
+![Designer 在 Visual Studio 中创建 DLL 方块 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
 ### 将 DLL 添加到 Designer
 

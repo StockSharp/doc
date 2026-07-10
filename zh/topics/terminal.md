@@ -2,7 +2,7 @@
 
 **Terminal** 是一款免费的交易终端。它的主要优势是可以同时连接多个交易平台，包括未提供自有交易终端的平台。
 
-![Terminal main 00](../images/terminal_main_00.png)
+![Terminal 主界面 00](../images/terminal_main_00.png)
 
 ## Terminal 的优势和功能
 

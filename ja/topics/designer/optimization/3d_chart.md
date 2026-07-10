@@ -2,7 +2,7 @@
 
 最適化結果は 3D チャートとして表示できます。これを行うには、結果パネルでタブを Chart に切り替える必要があります。
 
-![Designer Optimization Chart 00](../../../images/designer_optimization_chart_00.png)
+![Designer 最適化チャート 00](../../../images/designer_optimization_chart_00.png)
 
 チャートは 3 次元投影で表示できます。つまり、扱える次元は 3 つまでです。そのため、最適化を 4 つ以上のパラメーターで実行する場合、結果を表示するには X と Y の次元を変更する必要があります。
 

@@ -1,8 +1,8 @@
 # Libro de órdenes disperso
 
-![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer Libro de órdenes disperso 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer Libro de órdenes disperso 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 El cubo se usa para obtener un libro de órdenes disperso para el instrumento especificado.
 

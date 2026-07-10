@@ -4,13 +4,13 @@
 
 利用可能な更新を手動で確認するには、プログラムウィンドウ右隅の **更新** ボタンをクリックします。 
 
-![force update installer](../../images/force_update_installer.png)
+![インストーラーの強制更新](../../images/force_update_installer.png)
 
 プログラムの更新が利用可能な場合、[Installer](../installer.md) がその旨を通知します。 
 
 次に、ボタンをクリックする必要があります。
 
-![update installer](../../images/updat_installer.png)
+![インストーラーを更新](../../images/updat_installer.png)
 
 [Installer](../installer.md) は、プログラムウィンドウの **"X"** をクリックしても終了せず、ツールバーを使用して終了します。
 

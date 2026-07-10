@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster der Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:
 
-![API GUI Settings CEX.IO](../../../../../images/api_gui_settings_cex.io.png)
+![API-GUI-Einstellungen CEX.IO](../../../../../images/api_gui_settings_cex.io.png)
 
 - **Schlüssel** - Key.
 - **Geheimnis** - Secret.

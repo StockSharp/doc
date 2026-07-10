@@ -7,7 +7,7 @@ Bearish Candle es un patrón de velas caracterizado por un precio de cierre infe
 - El precio de apertura es mayor que el precio de cierre (O > C).
 - Indica presión bajista en el mercado.
 
-![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
+![Patrón de vela bajista](../../../images/bearishcandlepattern.png)
 
 ### Interpretación
 

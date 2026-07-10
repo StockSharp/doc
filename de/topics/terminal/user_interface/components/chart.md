@@ -2,7 +2,7 @@
 
 Die Komponente **Chart** ermöglicht das Zeichnen von Kerzen und Indikatoren für das ausgewählte Instrument.
 
-![Terminal Panel graphics 00](../../../../images/terminal_panel_graphics_00.png)
+![Terminal Grafik-Panel 00](../../../../images/terminal_panel_graphics_00.png)
 
 Um einen neuen Bereich hinzuzufügen, klicken Sie auf die Schaltfläche ![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png).
 
@@ -20,7 +20,7 @@ Kauforders werden mit der Tastenkombination **Ctrl+linke Maustaste** registriert
 
 Verkaufsorders werden mit der Tastenkombination **Ctrl+rechte Maustaste** registriert.
 
-![Terminal Panel graphics 01](../../../../images/terminal_panel_graphics_01.png)
+![Terminal Grafik-Panel 01](../../../../images/terminal_panel_graphics_01.png)
 
 In den Einstellungen des grafischen Elements können Sie den benötigten Chartstil festlegen: japanische Kerzen, Balken, Box-Chart, Cluster-Profil usw.
 

@@ -9,7 +9,7 @@ White Candle (vela alcista) es un patrón de velas clásico que se forma cuando 
 - Indica el predominio de compradores sobre vendedores.
 - El tamaño del cuerpo de la vela muestra la fuerza del movimiento alcista.
 
-![White Candle Pattern](../../../images/whitecandlepattern.png)
+![Patrón de vela blanca](../../../images/whitecandlepattern.png)
 
 ### Interpretación
 

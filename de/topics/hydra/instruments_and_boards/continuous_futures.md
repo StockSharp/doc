@@ -8,7 +8,7 @@ Wählen Sie dazu auf der Registerkarte **Allgemein** den Punkt **Instrumente**, 
 
 Als Beispiel betrachten wir das Zusammenfassen von E-mini S&P 500 Futures.
 
-1. Um einen fortlaufenden Futures-Kontrakt zu erstellen, klicken Sie auf der Registerkarte **Alle Instrumente** auf die Schaltfläche **Instrument erstellen \=\> Fortlaufendes Instrument**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. Um einen fortlaufenden Futures-Kontrakt zu erstellen, klicken Sie auf der Registerkarte **Alle Instrumente** auf die Schaltfläche **Instrument erstellen \=\> Fortlaufendes Instrument**.![Hydra Datenprüfung beim Zusammenfügen 00](../../../images/hydragluingcheckdata_00.png)
 
    Danach erscheint das folgende Fenster:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Um einen fortlaufenden Future zu erstellen, müssen Sie einen Namen angeben und Kontrakte hinzufügen.

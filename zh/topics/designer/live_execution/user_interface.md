@@ -2,13 +2,13 @@
 
 将策略添加到 **实盘** 文件夹后，双击该策略，会打开标题为“Live [策略名称]”的选项卡。切换到此选项卡时，**功能区** 中会自动打开 **实盘** 选项卡。可以在 **实盘** 选项卡中指定策略使用的交易品种和投资组合。单击 **启动** 按钮可启动策略的实盘交易，单击 **停止** 按钮可停止交易。
 
-![Designer Interface Live trade 00](../../../images/designer_interface_live_trade_00.png)
+![Designer 实盘交易界面 00](../../../images/designer_interface_live_trade_00.png)
 
 策略选项卡包含用于编辑策略图和组件元素的策略设计器，与[策略设计器](../strategies/using_visual_designer/diagram_panel.md)中介绍的界面相似。此外，该选项卡还包含[实盘交易属性](../user_interface/components/live_settings.md)面板。该面板默认折叠并停靠在选项卡右侧。
 
 将策略添加到 **实盘** 时，系统会从原始内容复制一份策略；使用[策略图](../strategies/using_visual_designer.md)或[代码](../strategies/using_code.md)时均是如此。因此，在 **实盘** 副本中修改算法不会影响原始策略。启动策略时，如果 **实盘** 副本与原始策略存在差异，程序会显示警告：
 
-![Designer Interface Live trade 01](../../../images/designer_interface_live_trade_01.png)
+![Designer 实盘交易界面 01](../../../images/designer_interface_live_trade_01.png)
 
 - **是** 表示将原始策略中的更改应用到 **实盘** 副本。
 - **否** 表示忽略差异，不应用更改并直接启动 **实盘** 副本。

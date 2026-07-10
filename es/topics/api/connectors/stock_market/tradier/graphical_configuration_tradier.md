@@ -2,7 +2,7 @@
 
 Para todos los productos StockSharp, la configuración gráfica de la conexión se realiza en el formulario de pantalla [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Tradier](../../../../../images/api_gui_settings_tradier.png)
+![Configuración de API GUI Tradier](../../../../../images/api_gui_settings_tradier.png)
 
 - **Token** - Token de autorización.
 - **Demo** - Modo demo.
@@ -20,7 +20,7 @@ Proceso de autorización OAuth:
 
 2. Después de hacer clic en "Start", el usuario será redirigido al sitio web de Tradier para iniciar sesión:
 
-   ![Tradier Login](../../../../../images/api_gui_settings_tradier_2.png)
+   ![Inicio de sesión Tradier](../../../../../images/api_gui_settings_tradier_2.png)
 
 3. En el sitio web de Tradier, debe permitir a la aplicación StockSharp el acceso a operaciones de trading:
 

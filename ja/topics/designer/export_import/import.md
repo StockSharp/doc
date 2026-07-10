@@ -5,8 +5,8 @@ Designer では、ストラテジー、ブロック、インジケーターな�
 - **スキーマ** パネルでストラテジーフォルダーを右クリックし、表示されるメニューで **インポート** を選択します。
 - **共通** タブで **インポート** ボタンを押し、表示されるメニューで **戦略**、**独自要素**、または **インジケーター** を選択します。
 
-![Designer Import strategies 00](../../../images/designer_import_strategies_00.png)
+![Designer ストラテジーのインポート 00](../../../images/designer_import_strategies_00.png)
 
 同じ名前のデータが既に存在する場合は、上書きするか別の名前で追加するかを提示するウィンドウが表示されます。
 
-![Designer Import strategies 01](../../../images/designer_import_strategies_01.png)
+![Designer ストラテジーのインポート 01](../../../images/designer_import_strategies_01.png)

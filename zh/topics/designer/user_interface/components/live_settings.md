@@ -2,7 +2,7 @@
 
 默认情况下，**属性** 面板会最小化显示在策略选项卡的右侧。该面板以表格形式列出仿真属性或实盘设置。选中某个属性后，表格底部会显示该属性的详细说明。所有属性按以下分组排列：
 
-![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
+![Designer 实盘属性 00](../../../../images/designer_properties_live_00.png)
 
 **日志**
 

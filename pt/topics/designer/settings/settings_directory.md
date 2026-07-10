@@ -6,7 +6,7 @@ As seguintes pastas são importantes para o [Designer](../../designer.md):
 
 2. A pasta de definições do **Designer** está localizada na pasta de documentos do utilizador: ...\\StockSharp\\Designer\\ (por exemplo, c:\\Users\\User\\Documents\\StockSharp\\Designer\\). Eliminar esta pasta repõe todas as definições do [Designer](../../designer.md) para os valores predefinidos. **Todas as estratégias criadas, instrumentos descarregados e outras informações armazenadas na pasta de definições serão DESTRUÍDOS.**
 
-![Designer Directory and edit the data manually 00](../../../images/designer_directory_and_edit_data_manually_00.png)
+![Designer Diretório e edição manual dos dados 00](../../../images/designer_directory_and_edit_data_manually_00.png)
 
 Esta pasta contém as seguintes pastas e ficheiros:
 

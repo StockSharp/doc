@@ -2,7 +2,7 @@
 
 El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o configuración Live. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
 
-![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
+![Designer Propiedades en vivo 00](../../../../images/designer_properties_live_00.png)
 
 **Registro**
 

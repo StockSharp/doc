@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitget](../../../../../images/api_gui_settings_bitget.png)
+![API-GUI-Einstellungen Bitget](../../../../../images/api_gui_settings_bitget.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimnis.

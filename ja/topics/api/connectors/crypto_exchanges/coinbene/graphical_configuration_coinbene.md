@@ -5,7 +5,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います:
 
-![API GUI Settings CoinBene](../../../../../images/api_gui_settings_coinbene.png)
+![API GUI 設定 CoinBene](../../../../../images/api_gui_settings_coinbene.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

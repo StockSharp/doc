@@ -16,13 +16,13 @@ Também pode criar várias instâncias da mesma fonte. Por exemplo, várias inst
 
 ![hydra two sourse](../../../images/hydra_two_sourse.png)
 
-Para que a fonte comece a transferir dados depois de clicar no botão **Iniciar**, esta deve estar ativada. Para isso, selecione o ícone da fonte no painel esquerdo e utilize o botão ![hydra source on off](../../../images/hydra_source_on_off.png) para a ligar ou desligar. Pode executar esta operação antes ou depois de adicionar instrumentos para transferência.
+Para que a fonte comece a transferir dados depois de clicar no botão **Iniciar**, esta deve estar ativada. Para isso, selecione o ícone da fonte no painel esquerdo e utilize o botão ![hydra fonte ligar desligar](../../../images/hydra_source_on_off.png) para a ligar ou desligar. Pode executar esta operação antes ou depois de adicionar instrumentos para transferência.
 
 As fontes desnecessárias podem ser eliminadas com o botão ![hydra delete](../../../images/hydra_delete.png).
 
 As definições da fonte podem ser alteradas no painel **Propriedades** do lado direito.
 
-![hydra setting source button](../../../images/hydra_setting_source_button.png)
+![hydra botão de configuração da fonte](../../../images/hydra_setting_source_button.png)
 
 As definições comuns a todas as fontes encontram-se no item [Definições comuns de ligação](common_connection_settings.md).
 

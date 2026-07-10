@@ -2,10 +2,10 @@
 
 在打开的面板中选择交易品种和所需时间范围，指定用于构建指标的数据类型，设置[指标](../../../api/indicators/list_of_indicators.md)及其参数，然后单击 ![hydra find](../../../../images/hydra_find.png) 按钮：
 
-![hydra export indicator](../../../../images/hydra_export_indicator.png)
+![hydra 导出指标](../../../../images/hydra_export_indicator.png)
 
-要查看数值图表，只需单击 ![hydra candles](../../../../images/hydra_candles.png) 按钮。
+要查看数值图表，只需单击 ![hydra K线](../../../../images/hydra_candles.png) 按钮。
 
-![hydra export indicator view](../../../../images/hydra_export_indicator_view.png)
+![hydra 导出指标视图](../../../../images/hydra_export_indicator_view.png)
 
 可以将接收到的数据[导出为所需格式](../export_data.md)。

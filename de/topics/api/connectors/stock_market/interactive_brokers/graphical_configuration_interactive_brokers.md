@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
+![API-GUI-Einstellungen Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
 - **Adresse** - TWS-Adresse.
 - **Identifier** - Eindeutige ID. Wird verwendet, wenn mehrere Clients mit einem Terminal oder Gateway verbunden sind.

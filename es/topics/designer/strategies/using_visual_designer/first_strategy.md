@@ -2,17 +2,17 @@
 
 Para crear esquemas de estrategias y elementos compuestos, y probar las estrategias obtenidas con datos históricos, puede usar un ejemplo de estrategia de media móvil (SMA). Permite recorrer un ciclo completo desde la creación de una estrategia hasta su prueba y depuración. La estrategia de media móvil (SMA) se encuentra en la carpeta **Estrategias** del panel **Esquemas**.
 
-1. Cree una nueva estrategia a partir de cubos como se describe en [Uso de código](../using_code.md). Para añadir una nueva estrategia, haga clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la pestaña **Común** y seleccione **Estrategia**. O haga clic con el botón derecho en la carpeta **Estrategia** del panel **Esquemas** y haga clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en el menú desplegable.
+1. Cree una nueva estrategia a partir de cubos como se describe en [Uso de código](../using_code.md). Para añadir una nueva estrategia, haga clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01.png) en la pestaña **Común** y seleccione **Estrategia**. O haga clic con el botón derecho en la carpeta **Estrategia** del panel **Esquemas** y haga clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01.png) en el menú desplegable.
 
-![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
+![Designer Creación de una estrategia 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01.png) en la carpeta **Estrategia** del panel **Esquemas**, aparecerá una nueva estrategia. En el espacio de trabajo aparece una nueva pestaña con la estrategia; al cambiar a ella, la pestaña **Emulación** se abrirá automáticamente en la cinta. En la pestaña **Emulación**, puede cambiar el nombre de la estrategia y darle una breve descripción.
+Después de hacer clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01.png) en la carpeta **Estrategia** del panel **Esquemas**, aparecerá una nueva estrategia. En el espacio de trabajo aparece una nueva pestaña con la estrategia; al cambiar a ella, la pestaña **Emulación** se abrirá automáticamente en la cinta. En la pestaña **Emulación**, puede cambiar el nombre de la estrategia y darle una breve descripción.
 
-![Designer The creation of a strategy 01](../../../../images/designer_creation_of_strategy_01.png)
+![Designer Creación de una estrategia 01](../../../../images/designer_creation_of_strategy_01.png)
 
-2. Para trabajar cómodamente, abra y fije los paneles **Paleta** y **Propiedades** del área **Esquemas** haciendo clic en el botón ![Designer Algorithm creation of cubes 13](../../../../images/designer_algorithm_creation_of_elements_13.png). El resultado será una ventana del siguiente tipo.
+2. Para trabajar cómodamente, abra y fije los paneles **Paleta** y **Propiedades** del área **Esquemas** haciendo clic en el botón ![Designer Creación algorítmica de cubos 13](../../../../images/designer_algorithm_creation_of_elements_13.png). El resultado será una ventana del siguiente tipo.
 
-![Designer Algorithm creation of cubes 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
+![Designer Creación algorítmica de cubos 00](../../../../images/designer_algorithm_creation_of_elements_00.png)
 
 3. La esencia de la estrategia de media móvil (SMA) es la siguiente:
 
@@ -23,51 +23,51 @@ Después de hacer clic en el botón **Añadir** ![Designer Panel Circuits 01](..
 
 4. Para todas las estrategias se necesita un instrumento y una cartera, que se usarán para las operaciones. Debe añadirlos desde el panel **Paleta** al panel **Diseñador**. En el ejemplo, el cubo [Variable](elements/data_sources/variable.md) con el tipo **Instrumento** se llama **Instrumento**, y el cubo [Variable](elements/data_sources/variable.md) con el tipo **Cartera** se llama **Cartera**. Marque la casilla **Parámetros** de los cubos **Instrumento** y **Cartera**. Cuando la casilla está seleccionada, el cubo tomará el valor de la configuración de la estrategia. Si no selecciona la casilla, debe introducir manualmente los valores de instrumento y cartera. Si deja vacío el campo **Valor** del cubo [Variable](elements/data_sources/variable.md) y no marca la casilla de parámetros, durante las pruebas la estrategia generará un error por el valor no establecido del cubo [Variable](elements/data_sources/variable.md).
 
-![Designer Algorithm creation of cubes 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
+![Designer Creación algorítmica de cubos 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
 Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo debe desmarcar la casilla **Parámetros** y establecer el valor del instrumento o cartera.
 
-![Designer Algorithm creation of cubes 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
+![Designer Creación algorítmica de cubos 02](../../../../images/designer_algorithm_creation_of_elements_02.png)
 
-![Designer Algorithm creation of cubes 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
+![Designer Creación algorítmica de cubos 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
 5. Después de añadir el instrumento y la cartera, debe añadir dos cubos [Indicador](elements/common/indicator.md), seleccionar el tipo SMA, nombrar el primero **SMA largo** y establecer el período de 80 velas; nombrar el segundo **SMA corto** y establecer el período de 10 velas.
 
-![Designer Algorithm creation of cubes 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
+![Designer Creación algorítmica de cubos 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
 6. Para que los indicadores funcionen, páseles una serie de velas. Para ello, cree el cubo [Velas](elements/data_sources/candles.md). En el ejemplo, se usan solo velas formadas con un marco temporal de 5 minutos.
 
-![Designer Algorithm creation of cubes 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
+![Designer Creación algorítmica de cubos 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
 7. Después de añadir los indicadores, debe añadir dos cubos que definen los cruces de los indicadores. Estos son los cubos [Cruce](elements/common/crossing.md) de los elementos compuestos. El primer cubo se llama **Cruce alcista**. Define el cruce de abajo hacia arriba. El indicador **SMA corto** se pasa a la entrada superior del cubo, y el indicador **SMA largo** a la entrada inferior. El operador CurrComparison se establece en un valor mayor, y el operador PrevComparison se establece en menor o igual. El segundo cubo se llama **Cruce bajista**; define el cruce de arriba hacia abajo. El indicador **SMA corto** se pasa a la entrada superior del cubo, y el indicador **SMA largo** a la entrada inferior. El operador CurrComparison se establece en un valor menor, y el operador PrevComparison se establece en mayor o igual.
 
-![Designer Algorithm creation of cubes 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
+![Designer Creación algorítmica de cubos 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
 8. Añada [Gráfico](elements/common/chart.md) para mostrar visualmente velas, indicadores y operaciones. Añada al [Gráfico](elements/common/chart.md) elementos de visualización para velas, dos indicadores y operaciones.
 
-![Designer Algorithm creation of cubes 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
+![Designer Creación algorítmica de cubos 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
 9. Como fuente de operaciones para mostrar en el gráfico se usa el cubo **Operaciones** de la estrategia. En el ejemplo se llama **Operaciones por estrategia**.
 
-![Designer Algorithm creation of cubes 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
+![Designer Creación algorítmica de cubos 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
 10. Para abrir una posición, añada dos cubos [Registrar orden](elements/orders/register.md). El primer cubo es para comprar con una orden de mercado. A la entrada de este cubo se pasan: **Instrumento**, la señal de apertura de posición desde el cubo de cruce **Cruce alcista**, **Cartera** y el volumen de la orden. El segundo cubo es para vender con una orden de mercado. A la entrada de este cubo se pasan: **Instrumento**, la señal de apertura de posición desde el cubo de cruce **Cruce bajista**, **Cartera** y el volumen de la orden.
 
-![Designer Algorithm creation of cubes 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
+![Designer Creación algorítmica de cubos 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
 11. Al conectar los elementos anteriores con líneas ([Líneas](lines.md)), se obtiene un esquema sin tener en cuenta la posición actual de la estrategia. En tal condición, acumulará una cantidad excesiva de lotes.
 
-![Designer Algorithm creation of cubes 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
+![Designer Creación algorítmica de cubos 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
 Para controlar la posición, debe añadir el cubo [Posición](elements/positions/current.md), a cuya entrada se pasan **Instrumento** y **Cartera**.
 
-![Designer Algorithm creation of cubes 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
+![Designer Creación algorítmica de cubos 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 
 Para procesar la posición actual, puede usar el esquema listo descrito en [Obtener posición actual](schema_samples/get_current_position.md). Este esquema determina el valor real del volumen de orden requerido. Si la posición debe revertirse, devuelve el doble del valor de la cartera.
 
 12. Como resultado, la estrategia completada se ve así:
 
-![Designer Algorithm creation of cubes 12](../../../../images/designer_algorithm_creation_of_elements_12.png)
+![Designer Creación algorítmica de cubos 12](../../../../images/designer_algorithm_creation_of_elements_12.png)
 
 ## Contenido recomendado
 

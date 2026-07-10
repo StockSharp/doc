@@ -2,7 +2,7 @@
 
 Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulationseigenschaften oder Live-Einstellungen. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
 
-![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
+![Designer Live-Eigenschaften 00](../../../../images/designer_properties_live_00.png)
 
 **Protokollierung**
 

@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
+![API-GUI-Einstellungen Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
 
 - **Benutzername** - Login.
 - **Passwort** - Password.

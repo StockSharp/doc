@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings OKEx](../../../../../images/api_gui_settings_okex.png)
+![API-GUI-Einstellungen OKEx](../../../../../images/api_gui_settings_okex.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimer Schlüssel.

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
+![Configurações da API GUI Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
 - **endereço** - Endereço TWS.
 - **Identifier** - ID único. Utilizado quando vários clientes estão ligados a um terminal ou gateway.

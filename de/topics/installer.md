@@ -10,7 +10,7 @@
 - Den Aktualisierungsprozess der Programme überwachen
 - Die Bibliothek [API](api.md) herunterladen und ihre Updates automatisch verfolgen
 
-![first win installer](../images/first_win_installer.png)
+![erstes Installer-Fenster](../images/first_win_installer.png)
 
 ## Empfohlene Inhalte
 

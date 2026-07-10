@@ -10,7 +10,7 @@ Para executar um exemplo em **Ao vivo**, irá precisar de:
 
 4. Transferir o histórico para o instrumento necessário. Por exemplo, será usado o instrumento **AAPL@NASDAQ**. A estratégia utilizará candles com um período de 5 segundos e o histórico não será necessário, mas esse histórico será suficiente para demonstrar a possibilidade.
 
-![Designer Example of Live trading 00](../../../images/designer_example_of_live_trading_00.png)
+![Designer Exemplo de negociação ao vivo 00](../../../images/designer_example_of_live_trading_00.png)
 
 5. Configurar e executar a estratégia.
 
@@ -24,23 +24,23 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 - Volume - 100
 - Dias de histórico - 2
 
-![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
+![Designer Exemplo de negociação ao vivo 01](../../../images/designer_example_of_live_trading_01.png)
 
-Depois de configurar todos os parâmetros necessários, inicie a negociação em tempo real da estratégia clicando no botão ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Iniciar**.
+Depois de configurar todos os parâmetros necessários, inicie a negociação em tempo real da estratégia clicando no botão ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png) **Iniciar**.
 
-Depois de clicar no botão ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Iniciar**, o gráfico começará a apresentar todo o histórico transferido dos 2 dias:
+Depois de clicar no botão ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png) **Iniciar**, o gráfico começará a apresentar todo o histórico transferido dos 2 dias:
 
-![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
+![Designer Exemplo de negociação ao vivo 02](../../../images/designer_example_of_live_trading_02.png)
 
 Depois de transferir todo o histórico do [Armazenamento de dados de mercado](../market_data_storage.md) e a tabela de negócios anónimos do terminal, a estratégia começará a negociar.
 
 Abaixo estão os gráficos do [Designer](../../designer.md) e do terminal de negociação para o mesmo período.
 
-![Designer Example of Live trading 03](../../../images/designer_example_of_live_trading_03.png)
+![Designer Exemplo de negociação ao vivo 03](../../../images/designer_example_of_live_trading_03.png)
 
 Gráfico do [Designer](../../designer.md):
 
-![Designer Example of Live trading 04](../../../images/designer_example_of_live_trading_04.png)
+![Designer Exemplo de negociação ao vivo 04](../../../images/designer_example_of_live_trading_04.png)
 
 Gráfico do terminal de negociação:
 

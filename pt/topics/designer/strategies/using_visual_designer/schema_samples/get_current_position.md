@@ -2,7 +2,7 @@
 
 Para obter o volume necessário para inverter a posição actual para a posição oposta, pode ser utilizado o esquema do exemplo da estratégia SMA:
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer Determinação da posição de volume 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 O tipo de dados **Instrumento** é seleccionado para o cubo [Variável](../elements/data_sources/variable.md). Se o instrumento não for especificado, mas a flag **Parâmetros** do grupo **Geral** estiver definida, então será retirado da estratégia e depois passado para [Posição](../elements/positions/current.md).
 

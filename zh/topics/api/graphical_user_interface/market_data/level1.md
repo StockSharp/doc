@@ -1,6 +1,6 @@
 # 等级1
 
-![GUI Level1Grid](../../../../images/gui_leve1grid.png)
+![GUI 级别1Grid 视图](../../../../images/gui_leve1grid.png)
 
 [Level1Grid](xref:StockSharp.Xaml.Level1Grid) - 一个用于显示 Level1 字段的表格。该表格使用 [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) 消息形式的数据。
 

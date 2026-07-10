@@ -1,6 +1,6 @@
 # Level1
 
-![GUI Level1Grid](../../../../images/gui_leve1grid.png)
+![Visualização GUI nível1Grid](../../../../images/gui_leve1grid.png)
 
 [Level1Grid](xref:StockSharp.Xaml.Level1Grid) - uma tabela para apresentar campos Level1. Esta tabela utiliza dados sob a forma de mensagens [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage).
 

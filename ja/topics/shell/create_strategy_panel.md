@@ -4,9 +4,9 @@
 
 まず、ストラテジーの XAML フォルダー内に単純な UserControl を作成する必要があります。
 
-![Shell custom strategy panel 00](../../images/shell_custom_strategy_panel_00.png)
+![Shell カスタムストラテジーパネル 00](../../images/shell_custom_strategy_panel_00.png)
 
-![Shell custom strategy panel 01](../../images/shell_custom_strategy_panel_01.png)
+![Shell カスタムストラテジーパネル 01](../../images/shell_custom_strategy_panel_01.png)
 
 `UserControl` を `controls:BaseStudioControl` に置き換えます。
 

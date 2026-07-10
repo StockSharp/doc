@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitmart](../../../../../images/api_gui_settings_bitmart.png)
+![API-GUI-Einstellungen Bitmart](../../../../../images/api_gui_settings_bitmart.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimschlüssel.

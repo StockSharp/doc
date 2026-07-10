@@ -1,12 +1,12 @@
 # Painel de estratégias
 
-Ao clicar no botão ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) no separador **Ao vivo**, abre-se o painel **Ao vivo**.
+Ao clicar no botão ![Designer Painel de estratégias 00](../../../images/designer_panel_strategies_00.png) no separador **Ao vivo**, abre-se o painel **Ao vivo**.
 
-![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
+![Designer Painel de estratégias 01](../../../images/designer_panel_strategies_01.png)
 
-O painel **Ao vivo** é uma tabela que apresenta todas as estratégias adicionadas a **Ao vivo**. No painel **Ao vivo**, pode ver o estado atual da estratégia e executar ou parar a estratégia usando os botões ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png).
+O painel **Ao vivo** é uma tabela que apresenta todas as estratégias adicionadas a **Ao vivo**. No painel **Ao vivo**, pode ver o estado atual da estratégia e executar ou parar a estratégia usando os botões ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png), ![Designer Painel de circuitos 03](../../../images/designer_panel_circuits_03.png).
 
-![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
+![Designer Painel de estratégias 02](../../../images/designer_panel_strategies_02.png)
 
 - A primeira coluna é responsável por iniciar/parar a estratégia.
 - A segunda coluna destina-se às definições da estratégia.

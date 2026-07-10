@@ -10,7 +10,7 @@
 - 监控程序更新过程。
 - 下载 [API](api.md) 程序库并自动跟踪其更新。
 
-![first win installer](../images/first_win_installer.png)
+![安装程序初始窗口](../images/first_win_installer.png)
 
 ## 推荐内容
 

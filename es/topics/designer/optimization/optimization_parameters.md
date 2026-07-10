@@ -11,7 +11,7 @@ De forma predeterminada, todos los parámetros con estos tipos aparecen en la [t
 
 - Para un [diagrama](../strategies/using_visual_designer.md), seleccione el cubo requerido, abra sus propiedades, cambie a **Configuración avanzada** y desactive la casilla **Parámetro**:
 
-![Designer Optimization 01](../../../images/designer_optimization_01.png)
+![Designer Optimización 01](../../../images/designer_optimization_01.png)
 
 - En el caso de [código](../strategies/using_code.md), debe escribir código al definir un parámetro y cambiar la propiedad [CanOptimize](xref:StockSharp.Algo.Strategies.IStrategyParam.CanOptimize):
 

@@ -2,13 +2,13 @@
 
 每个模块内部都会显示一个表示其用途的图标和一个名称。名称可以在 **属性** 面板中改为自定义名称。将鼠标指针悬停在模块上时，工具提示会说明该模块的用途。用鼠标选中模块后，可以在 **属性** 面板中查看其属性，并根据需要修改部分参数。
 
-![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
+![Designer 方块说明 00](../../../../images/designer_description_of_elements_00.png)
 
 模块左右两侧的彩色方框分别表示输入参数（左侧）和输出参数（右侧）。
 
 策略运行时，输入参数用于向模块传递所需的数据。例如，[K线](elements/data_sources/candles.md) 模块通过输入端接收要为其生成K线的交易品种，并通过输出端返回生成的K线。这些K线又可以作为 [图表](elements/common/chart.md) 元素的输入参数，也可以传递给用于确定K线大小的方法。
 
-![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
+![Designer 方块说明 01](../../../../images/designer_description_of_elements_01.png)
 
 参数的颜色表示其传递的数据类型。不同模块的参数可以接收和传递不同且互不兼容的数据类型。每个参数的说明都会显示在工具提示中。为了避免连接不同类型的参数时产生大量错误，每种参数数据类型都以不同的颜色表示。参数使用以下颜色：
 

@@ -6,7 +6,7 @@
 
 可以添加多个类型相同但执行操作不同的风险规则。例如，在下图中，当订单数量达到 20 时，会执行撤销订单和停止交易操作。
 
-![Designer Risk Rule](../../../images/designer_risk_rule.png)
+![Designer 风险规则](../../../images/designer_risk_rule.png)
 
 ### 风险规则列表
 

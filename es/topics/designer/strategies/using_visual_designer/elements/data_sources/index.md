@@ -1,6 +1,6 @@
 # Índice
 
-![Designer Index 00](../../../../../../images/designer_index_00.png)
+![Designer Índice 00](../../../../../../images/designer_index_00.png)
 
 El cubo se usa para crear su propio índice.
 

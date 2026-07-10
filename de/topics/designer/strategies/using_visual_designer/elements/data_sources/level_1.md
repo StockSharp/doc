@@ -1,6 +1,6 @@
 # Level 1
 
-![Designer Level 1 00](../../../../../../images/designer_level_1_00.png)
+![Designer Ebene 1 00](../../../../../../images/designer_level_1_00.png)
 
 Dieser Block wird verwendet, um **Level1**-Daten für ein Instrument zu empfangen.
 

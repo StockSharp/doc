@@ -2,7 +2,7 @@
 
 En la ventana que aparece, seleccione los instrumentos, el intervalo de tiempo requerido y haga clic en el botón ![hydra find](../../../../images/hydra_find.png):
 
-![hydra export trades](../../../../images/hydra_export_trades.png)
+![hydra exportar operaciones](../../../../images/hydra_export_trades.png)
 
 Para descargar operaciones no sistémicas, debe marcar la casilla **No sistémicas**.
 

@@ -2,7 +2,7 @@
 
 在**模拟**选项卡中，可以使用历史数据测试策略。
 
-![Shell emulation 00](../../../images/shell_emulation_00.png)
+![Shell 仿真 00](../../../images/shell_emulation_00.png)
 
 单击 **添加** 按钮 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png)，可以添加要测试的策略。每个新增策略都会在单独的选项卡中打开。
 

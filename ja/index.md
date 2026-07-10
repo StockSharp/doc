@@ -43,7 +43,7 @@ S# は、利用可能なコネクタでサポートされている任意のブ�
 
 ### Terminal
 
-![Terminal main 00](images/terminal_main_00.png)
+![Terminal メイン 00](images/terminal_main_00.png)
 
 [Terminal](topics/terminal.md) は、取引およびチャート表示用のアプリケーション (トレーディングターミナル) です:
 

@@ -2,7 +2,7 @@
 
 ストラテジーとその構成要素を設計する主な作業は、ブロックと接続線を組み合わせることで **スキーマ** パネル上で行います。スキーマ パネルは、**パレット**、**デザイナー**、**プロパティ** の各パネルで構成されています。
 
-![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
+![Designer Designer のスキーム、ストラテジー、コンポーネント要素 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Palette パネル
 
@@ -16,7 +16,7 @@
 
 **プロパティ** パネルには、**Designer** パネルで選択したブロックのパラメーターが表示されます。**Designer** パネルでブロックを選択すると、その枠が黒色になります。
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer プロパティパネル 00](../../../../images/designer_properties_panel_00.png)
 
 **プロパティ** パネルは、*基本設定* と *詳細設定* の 2 つのモードで表示できます。
 
@@ -26,7 +26,7 @@
 
 *詳細設定* モードでは、変更および設定が可能なブロックのすべてのプロパティが表示されます。
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer プロパティパネル 00](../../../../images/designer_properties_panel_01.png)
 
 すべてのブロックには、*詳細設定* モードで表示される定義済みプロパティのセットがあります。
 

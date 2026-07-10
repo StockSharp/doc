@@ -5,7 +5,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Livecoin](../../../../../images/api_gui_settings_livecoin.png)
+![Configurações da API GUI Livecoin](../../../../../images/api_gui_settings_livecoin.png)
 
 - **chave** - chave.
 - **segredo** - segredo.

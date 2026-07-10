@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Bitexbook](../../../../../images/api_gui_settings_bitexbook.png)
+![API GUI 設定 Bitexbook](../../../../../images/api_gui_settings_bitexbook.png)
 
 - **キー** - Key。
 - **シークレット** - Secret。

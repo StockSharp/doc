@@ -6,11 +6,11 @@ Para transferir uma estratégia para o seu computador, tem de:
 
 - seleccionar a estratégia pretendida e clicar no botão Download:
 
-  ![Designer The gallery of strategies 00](../../images/designer_gallery_of_strategies_00.png)
+  ![Designer Galeria de estratégias 00](../../images/designer_gallery_of_strategies_00.png)
 
 - a estratégia será adicionada à árvore de estratégias na secção **Teste histórico**:
 
-  ![Designer The gallery of strategies 01](../../images/designer_gallery_of_strategies_01.png)
+  ![Designer Galeria de estratégias 01](../../images/designer_gallery_of_strategies_01.png)
 
 ## Ver também
 

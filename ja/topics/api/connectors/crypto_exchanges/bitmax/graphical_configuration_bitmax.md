@@ -5,7 +5,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings BitMax](../../../../../images/api_gui_settings_bitmax.png)
+![API GUI 設定 BitMax](../../../../../images/api_gui_settings_bitmax.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
+![Configurações da API GUI PolygonIO](../../../../../images/api_gui_settings_polygonio.png)
 
 - **Token** - Token.
 - **Connection type** - Ligar a History (REST) ou Real-Time (WebSockets).

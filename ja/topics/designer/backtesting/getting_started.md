@@ -22,23 +22,23 @@ SMA ストラテジーの例では、次のパラメーターを使用します�
 
 選択したパラメーターを設定する必要があります。
 
-![Designer An example of backtesting 00](../../../images/designer_example_of_backtesting_00.png)
+![Designer バックテストの例 00](../../../images/designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](../../../images/designer_example_of_backtesting_01.png)
+![Designer バックテストの例 01](../../../images/designer_example_of_backtesting_01.png)
 
-必要なすべてのパラメーターを設定したら、![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png) ボタンをクリックしてストラテジーのテストを開始します。
+必要なすべてのパラメーターを設定したら、![Designer バックテスト画面 01](../../../images/designer_interface_backtesting_01.png) ボタンをクリックしてストラテジーのテストを開始します。
 
 テスト中またはテスト後に、テスト情報を含むチャートやテーブルを表示できます。
 
-![Designer An example of backtesting 02](../../../images/designer_example_of_backtesting_02.png)
+![Designer バックテストの例 02](../../../images/designer_example_of_backtesting_02.png)
 
 グラフから、ストラテジーで計画したとおり、移動平均の交差で取引が行われていることがわかります。また、注文が複数の約定で充足されていることも確認できます。これは生成された板を使用しているためで、テストの現実性が高まります。注文が複数の約定で充足されていることは、Trades テーブル、Statistics、および Positions チャートから確認できます。
 
-![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
+![Designer バックテストの例 03](../../../images/designer_example_of_backtesting_03.png)
 
 **ポジションチャート** では、ストラテジーが運用数量を減らしていることがわかります。これは、生成された板の深さが 5 であり、その結果、200 ロットの注文を充足するには板全体の深さが不足していたためです。ストラテジーはポジションを反転するだけなので、板の深さが注文を充足するのに不足するたびに、注文サイズが減少しました。
 
-![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
+![Designer バックテストの例 04](../../../images/designer_example_of_backtesting_04.png)
 
 **P\/L** チャートは、このようなパラメーターではストラテジーが不採算であることを示しています。
 

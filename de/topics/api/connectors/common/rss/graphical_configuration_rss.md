@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings RSS](../../../../../images/api_gui_settings_rss.png)
+![API-GUI-Einstellungen RSS](../../../../../images/api_gui_settings_rss.png)
 
 - **Adresse** - Adresse des RSS-Feeds.
 - **Dates format** - Datumsformat. Erforderlich, wenn das Format des RSS-Streams von `ddd, dd MMM yyyy HH:mm:ss zzzz` abweicht.

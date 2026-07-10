@@ -2,13 +2,13 @@
 
 Dentro de cada cubo se muestra un icono que lo caracteriza, así como un nombre que puede cambiarse por uno definido por el usuario en el panel **Propiedades**. La sugerencia del cubo muestra una descripción de para qué sirve. Al seleccionar un cubo con el ratón, puede ver sus propiedades en el panel **Propiedades** y, si es necesario, cambiar algunos parámetros.
 
-![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
+![Designer Descripción de cubos 00](../../../../images/designer_description_of_elements_00.png)
 
 A la izquierda y a la derecha del cubo, los cuadros de color muestran los parámetros de entrada (izquierda) y salida (derecha).
 
 Los parámetros son necesarios para llenar el cubo con información mientras la estrategia se ejecuta. Por ejemplo, para el cubo [Velas](elements/data_sources/candles.md), se pasa a la entrada el instrumento para el que se desea construir una vela, y en la salida se devuelven las velas construidas. Estas, a su vez, pueden usarse como parámetro de entrada para el elemento [Gráfico](elements/common/chart.md). O pasarse a un método que determina el tamaño de la vela.
 
-![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
+![Designer Descripción de cubos 01](../../../../images/designer_description_of_elements_01.png)
 
 El color denota el tipo de datos que se pasa en los parámetros. Distintos parámetros en distintos cubos pueden recibir y pasar tipos de datos distintos e incompatibles. La descripción de cada parámetro se indica en la sugerencia. Para evitar muchos errores al conectar parámetros de tipos diferentes, cada parámetro tiene su propio tipo de datos, que se diferencia por color. Para indicar los parámetros se usa el siguiente conjunto de colores:
 

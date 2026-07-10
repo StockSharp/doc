@@ -2,13 +2,13 @@
 
 [Designer](../../designer.md) では、作成したストラテジーを **シミュレーション** モードで実行できます。**シミュレーション** をカスタマイズするには、次の操作を実行する必要があります。
 
-1. **接続** ![Designer The quick access toolbar 00](../../../images/designer_quick_access_toolbar_00.png) ボタンの横にある矢印をクリックすると、**エミュレーター設定** ボタンが表示されます。
+1. **接続** ![Designer クイックアクセスツールバー 00](../../../images/designer_quick_access_toolbar_00.png) ボタンの横にある矢印をクリックすると、**エミュレーター設定** ボタンが表示されます。
 
-![Designer The connection settings 00](../../../images/designer_connection_settings_00.png)
+![Designer 接続設定 00](../../../images/designer_connection_settings_00.png)
 
 2. **エミュレーター設定** ボタンをクリックすると、**エミュレーター設定** ウィンドウが開きます。
 
-![Designer Properties emulation 00](../../../images/designer_properties_emulation_00.png)
+![Designer エミュレーションプロパティ 00](../../../images/designer_properties_emulation_00.png)
 
 1. **シミュレーター**
 

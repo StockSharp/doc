@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitalong](../../../../../images/api_gui_settings_bitalong.png)
+![API-GUI-Einstellungen Bitalong](../../../../../images/api_gui_settings_bitalong.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimnis.

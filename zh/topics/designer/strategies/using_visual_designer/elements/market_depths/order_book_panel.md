@@ -1,6 +1,6 @@
 # 市场深度面板
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer 订单簿面板](../../../../../../images/designer_orderbook_panel.png)
 
 该模块用于在专用图形组件 [市场深度](../../../../user_interface/components/order_book.md) 中显示市场深度。
 

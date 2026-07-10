@@ -1,6 +1,6 @@
 # 修改订单
 
-![Designer Moving applications 00](../../../../../../images/designer_moving_applications_00.png)
+![Designer 移动应用程序 00](../../../../../../images/designer_moving_applications_00.png)
 
 该模块用于修改交易品种的订单。
 

@@ -1,6 +1,6 @@
 # IV-Orderbuch
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+![Designer Implizite Volatilität im Orderbuch 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 Der Würfel wird verwendet, um ein Orderbuch der impliziten Volatilität zu berechnen.
 

@@ -6,7 +6,7 @@
 
 さらに、オプションの正確な満期日に対するフィルターと、最小\/最大の権利行使価格に対するフィルターを指定できます。
 
-![Terminal smile of volatility 00](../../../../images/terminal_smile_of_volatility_00.png)
+![Terminal ボラティリティスマイル 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## 推奨コンテンツ
 

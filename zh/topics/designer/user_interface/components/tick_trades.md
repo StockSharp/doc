@@ -4,4 +4,4 @@
 
 **成交流** 提供用于选择所需交易品种的筛选器。还可以在[通知设置](../../../terminal/notifications.md)窗口中，为所选交易品种的相关事件配置通知。
 
-![Designer Tape Trades](../../../../images/designer_tape_trades.png)
+![Designer 逐笔成交](../../../../images/designer_tape_trades.png)

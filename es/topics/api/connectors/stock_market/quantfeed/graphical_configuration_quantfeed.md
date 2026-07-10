@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings QuantFEED](../../../../../images/api_gui_settings_quantfeed.png)
+![Configuración de API GUI QuantFEED](../../../../../images/api_gui_settings_quantfeed.png)
 
 - **dirección** - Dirección del servidor.
 - **usuario** - Login.

@@ -1,6 +1,6 @@
 # Panel de libro de órdenes
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer Panel del libro de órdenes](../../../../../../images/designer_orderbook_panel.png)
 
 El cubo está diseñado para mostrar el libro de órdenes en un componente gráfico especializado [Libro de órdenes](../../../../user_interface/components/order_book.md).
 

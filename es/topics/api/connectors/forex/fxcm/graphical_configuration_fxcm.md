@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FXCM](../../../../../images/api_gui_settings_fxcm.png)
+![Configuración de API GUI FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **Token** - Token.
 - **Demo** - Conectarse al trading demo en lugar del servidor de trading real.

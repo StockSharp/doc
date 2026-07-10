@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
+![API-GUI-Einstellungen CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **Einstellungen** - Import-Einstellungen
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit dem Handelssystem. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))

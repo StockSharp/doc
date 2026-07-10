@@ -8,7 +8,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
 1. No separador **Geral**, clique no botão **Velas**; será aberta a seguinte janela:
 
-   ![hydra candles main](../../../images/hydra_candles_main.png)
+   ![hydra candles principal](../../../images/hydra_candles_main.png)
 
 2. Na janela aberta, é necessário configurar os parâmetros de geração de candles:
 
@@ -35,7 +35,7 @@ Para gerar candles de 5 minutos para o instrumento AAPL@NASDAQ:
 
 Depois da geração dos dados, verá o resultado:
 
-![hydra candles tf](../../../images/hydra_candles_tf.png)
+![Hydra candles por período](../../../images/hydra_candles_tf.png)
 
 ### Exemplo de geração de velas de volume
 
@@ -49,7 +49,7 @@ Para gerar candles de volume:
 
 Resultado da geração:
 
-![hydra candles volume](../../../images/hydra_candles_volume.png)
+![Hydra candles de volume](../../../images/hydra_candles_volume.png)
 
 ## Origens de dados para construir velas
 
@@ -64,11 +64,11 @@ Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, 
 
 - Velas de 10 minutos a partir de ticks:
 
-  ![hydra candles tf 10](../../../images/hydra_candles_tf_10.png)
+  ![Hydra candles por período 10](../../../images/hydra_candles_tf_10.png)
 
 - Velas de 30 minutos a partir de velas de 5 minutos:
 
-  ![hydra candles tf 01](../../../images/hydra_candles_tf_01.png)
+  ![Hydra candles por período 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > Se selecionar **não construir** no campo **Construir a partir de**, serão pesquisadas apenas candles prontas que tenham sido descarregadas diretamente através da origem de dados.
@@ -77,12 +77,12 @@ Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, 
 
 Para apresentação gráfica das candles geradas:
 
-1. Clique no botão ![hydra candles](../../../images/hydra_candles.png)
+1. Clique no botão ![Hydra candles](../../../images/hydra_candles.png)
 2. Será aberto um gráfico com as candles construídas:
 
-   ![hydra candles tf chart](../../../images/hydra_candles_tf_chart.png)
+   ![hydra gráfico de candles por tempo gráfico](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra candles volume chart](../../../images/hydra_candles_volume_chart.png)
+   ![hydra gráfico de volume de candles](../../../images/hydra_candles_volume_chart.png)
 
 ## Adicionar Indicadores ao Gráfico
 
@@ -96,7 +96,7 @@ Podem ser adicionados indicadores técnicos ao gráfico de candles:
 
 Exemplo de um gráfico com indicadores adicionados:
 
-![hydra candles ind chart](../../../images/hydra_candles_ind_chart.png)
+![hydra gráfico de indicadores de candles](../../../images/hydra_candles_ind_chart.png)
 
 ## Exportação de Dados
 

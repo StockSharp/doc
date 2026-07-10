@@ -97,7 +97,7 @@ private void UnsubscribeFromCandles()
 }
 ```
 
-![indicators chart](../../../images/indicators_chart.png)
+![インジケーター チャート](../../../images/indicators_chart.png)
 
 ## 複数インジケーターを扱う例
 

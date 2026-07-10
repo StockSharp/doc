@@ -1150,6 +1150,45 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsAreTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var defaultAltTexts = EnumerateMarkdownImageAltTexts(ReadAllText(defaultFile))
+				.Select(altText => NormalizeMarkdownImageAltTextForTranslationCheck(altText.Text))
+				.Where(IsTranslatableEnglishMarkdownImageAltText)
+				.ToHashSet(StringComparer.Ordinal);
+
+			if (defaultAltTexts.Count == 0)
+				continue;
+
+			foreach (var lang in GetTranslatedContentLanguages())
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var normalized = NormalizeMarkdownImageAltTextForTranslationCheck(altText.Text);
+					if (!defaultAltTexts.Contains(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text is identical to the English source. Localize it or add a deliberate allowlist entry. Alt text: {Truncate(altText.Text, 180)}");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();
@@ -1995,6 +2034,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var stats = new List<LocalizedAuditLanguageStats>();
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 		var defaultMarkdownTextByRelativePath = BuildDefaultMarkdownTextMap(defaultRoot);
+		var defaultImageAltTextsByRelativePath = BuildDefaultMarkdownImageAltTextMap(defaultRoot);
 		var defaultOutputsByRelativePath = BuildDefaultCodeOutputMap(defaultRoot);
 		var defaultUiStringsByRelativePath = BuildDefaultCodeUiStringMap(defaultRoot);
 		var defaultCodeLiteralsByRelativePath = BuildDefaultCodeStringLiteralMap(defaultRoot);
@@ -2017,6 +2057,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			var codeLiteralCount = 0;
 			var commentCount = 0;
 			var markdownTextCount = 0;
+			var imageAltTextCount = 0;
 
 			foreach (var file in textFiles)
 				CollectTextEncodingAuditIssues(file, issues);
@@ -2026,6 +2067,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var relative = Path.GetRelativePath(langRoot, file).Replace('\\', '/');
 				var markdown = ReadAllText(file);
 				defaultMarkdownTextByRelativePath.TryGetValue(relative, out var defaultMarkdownTexts);
+				defaultImageAltTextsByRelativePath.TryGetValue(relative, out var defaultImageAltTexts);
 				defaultOutputsByRelativePath.TryGetValue(relative, out var defaultOutputs);
 				defaultUiStringsByRelativePath.TryGetValue(relative, out var defaultUiStrings);
 				defaultCodeLiteralsByRelativePath.TryGetValue(relative, out var defaultCodeLiterals);
@@ -2045,6 +2087,16 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 				foreach (var textLine in EnumerateLikelyEnglishMarkdownTextLines(markdown, relative))
 					issues.Add(new AuditIssue("markdown-text-likely-english", RelativeToRepo(file), textLine.Line, $"looks like untranslated English: {Truncate(textLine.Text, 180)}"));
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					imageAltTextCount++;
+					var normalized = NormalizeMarkdownImageAltTextForTranslationCheck(altText.Text);
+					if (normalized.Length == 0 || defaultImageAltTexts is null || !defaultImageAltTexts.Contains(normalized))
+						continue;
+
+					issues.Add(new AuditIssue("markdown-image-alt-exact-english", RelativeToRepo(file), altText.Line, $"is identical to the English source image alt text: {Truncate(altText.Text, 180)}"));
+				}
 
 				foreach (var output in EnumerateCodeOutputStrings(markdown))
 				{
@@ -2101,7 +2153,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				}
 			}
 
-			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, outputCount, uiStringCount, codeLiteralCount, commentCount));
+			stats.Add(new LocalizedAuditLanguageStats(lang, markdownFiles.Length, textFiles.Length, markdownTextCount, imageAltTextCount, outputCount, uiStringCount, codeLiteralCount, commentCount));
 		}
 
 		return new LocalizedDocumentationAudit(languages, stats, issues);
@@ -2123,6 +2175,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			})
 			.Where(entry => entry.Texts.Count > 0)
 			.ToDictionary(entry => entry.RelativePath, entry => entry.Texts, StringComparer.OrdinalIgnoreCase);
+
+	private static Dictionary<string, HashSet<string>> BuildDefaultMarkdownImageAltTextMap(string defaultRoot)
+		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.Select(file => new
+			{
+				RelativePath = Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'),
+				AltTexts = EnumerateMarkdownImageAltTexts(ReadAllText(file))
+					.Select(altText => NormalizeMarkdownImageAltTextForTranslationCheck(altText.Text))
+					.Where(IsTranslatableEnglishMarkdownImageAltText)
+					.ToHashSet(StringComparer.Ordinal),
+			})
+			.Where(entry => entry.AltTexts.Count > 0)
+			.ToDictionary(entry => entry.RelativePath, entry => entry.AltTexts, StringComparer.OrdinalIgnoreCase);
 
 	private static Dictionary<string, HashSet<string>> BuildDefaultCodeOutputMap(string defaultRoot)
 		=> Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories)
@@ -2230,11 +2296,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine();
 		report.AppendLine("## Coverage");
 		report.AppendLine();
-		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Code output strings | Code UI strings | Code string literals | Code comments |");
-		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |");
+		report.AppendLine("| Language | Markdown files | Text files | Markdown text candidates | Markdown image alt texts | Code output strings | Code UI strings | Code string literals | Code comments |");
+		report.AppendLine("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |");
 
 		foreach (var stat in audit.Stats)
-			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.CodeOutputStrings} | {stat.CodeUiStrings} | {stat.CodeStringLiterals} | {stat.CodeComments} |");
+			report.AppendLine($"| {stat.Language} | {stat.MarkdownFiles} | {stat.TextFiles} | {stat.MarkdownTextCandidates} | {stat.MarkdownImageAltTexts} | {stat.CodeOutputStrings} | {stat.CodeUiStrings} | {stat.CodeStringLiterals} | {stat.CodeComments} |");
 
 		report.AppendLine();
 		report.AppendLine("## Checks");
@@ -2242,6 +2308,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		report.AppendLine("- Markdown text: full normalized English-like visible text candidates must not be identical to the English source.");
 		report.AppendLine("- Markdown text: short known section labels must not remain in English.");
 		report.AppendLine("- Markdown text: visible localized text must not have a high ratio of English stop words.");
+		report.AppendLine("- Markdown image alt text: exact matches with English source alt text for translatable alt candidates.");
 		report.AppendLine("- Encoding: repeated question marks, suspicious question marks inside Latin words, Unicode replacement characters, mojibake markers.");
 		report.AppendLine("- Code output: known English phrases, likely English output strings, exact matches with English source output.");
 		report.AppendLine("- Code UI strings: exact matches with English source UI strings in code samples.");
@@ -2438,6 +2505,99 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| word.Equals("with", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("you", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("your", StringComparison.OrdinalIgnoreCase));
+
+	private static IEnumerable<MarkdownImageAltText> EnumerateMarkdownImageAltTexts(string markdown)
+	{
+		var lineStarts = GetLineStarts(markdown);
+
+		foreach (Match match in Regex.Matches(markdown, @"!\[(?<alt>(?:\\.|[^\]\\])*)\]\((?<url>[^\r\n)]*)\)", RegexOptions.CultureInvariant))
+		{
+			var text = NormalizeMarkdownImageAltTextForTranslationCheck(match.Groups["alt"].Value);
+			if (text.Length == 0)
+				continue;
+
+			yield return new MarkdownImageAltText(text, match.Groups["url"].Value.Trim(), GetLineNumber(lineStarts, match.Index));
+		}
+	}
+
+	private static string NormalizeMarkdownImageAltTextForTranslationCheck(string text)
+	{
+		var value = Regex.Replace(text ?? string.Empty, @"\\([\\`*_{}\[\]()#+\-.!|])", "$1", RegexOptions.CultureInvariant);
+		return Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+	}
+
+	private static bool IsTranslatableEnglishMarkdownImageAltText(string text)
+	{
+		if (string.IsNullOrWhiteSpace(text) || text.Length < 8)
+			return false;
+
+		if (text.Contains(RussianSpecificPlaceholderMarker, StringComparison.OrdinalIgnoreCase)
+			|| text.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
+			|| text.StartsWith("https://", StringComparison.OrdinalIgnoreCase)
+			|| Regex.IsMatch(text, @"^[\p{P}\p{S}\p{N}\s]+$", RegexOptions.CultureInvariant)
+			|| Regex.IsMatch(text, @"^[A-Za-z0-9_.:/#?=&%{}+-]+$", RegexOptions.CultureInvariant))
+		{
+			return false;
+		}
+
+		var words = Regex.Matches(text, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant)
+			.Select(match => match.Value.Trim('\''))
+			.Where(word => word.Length > 1 && !_allowedInvariantCodeOutputWords.Contains(word))
+			.ToArray();
+
+		if (words.Length < 2)
+			return false;
+
+		var hits = words.Count(word => _translatableEnglishCodeOutputWords.Contains(word)
+			|| IsCommonEnglishMarkdownWord(word)
+			|| IsTranslatableEnglishMarkdownImageAltWord(word));
+
+		return hits >= 1;
+	}
+
+	private static bool IsTranslatableEnglishMarkdownImageAltWord(string word)
+		=> word.Equals("activating", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("activation", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("administrator", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("book", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("bot", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("channel", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("chart", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("choosing", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("circuits", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("cloud", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("composite", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("cube", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("cubes", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("depth", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("download", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("emulation", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("graphics", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("historical", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("installer", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("installerzip", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("installation", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("interface", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("live", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("login", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("logs", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("market", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("notifications", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("optimization", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("panel", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("portfolio", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("portfolios", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("position", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("properties", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("quick", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("remote", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("repository", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("strategies", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("table", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("telegram", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("tools", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("trading", StringComparison.OrdinalIgnoreCase)
+			|| word.Equals("visual", StringComparison.OrdinalIgnoreCase);
 
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{
@@ -3060,6 +3220,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private readonly record struct MarkdownTextLine(string Text, int Line);
 
+	private readonly record struct MarkdownImageAltText(string Text, string Url, int Line);
+
 	private readonly record struct CodeComment(string Text, int Line);
 
 	private readonly record struct CodeOutputString(string Text, int Line);
@@ -3078,6 +3240,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		int MarkdownFiles,
 		int TextFiles,
 		int MarkdownTextCandidates,
+		int MarkdownImageAltTexts,
 		int CodeOutputStrings,
 		int CodeUiStrings,
 		int CodeStringLiterals,

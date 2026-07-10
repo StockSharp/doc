@@ -2,7 +2,7 @@
 
 Sie können die Daten auf zwei Arten aus dem Speicher wiederherstellen:
 
-- Gespeicherte Objekte aus der AWS-Konsole herunterladen. Klicken Sie dazu mit der rechten Maustaste auf das Objekt und wählen Sie im Kontextmenü **Herunterladen**.![Aws3 download](../../../../images/aws3_download.png)
+- Gespeicherte Objekte aus der AWS-Konsole herunterladen. Klicken Sie dazu mit der rechten Maustaste auf das Objekt und wählen Sie im Kontextmenü **Herunterladen**.![Aws3 herunterladen](../../../../images/aws3_download.png)
 
   > [!TIP]
   > Mit dieser Methode können Sie jeweils nur ein Objekt (eine Datei) herunterladen.

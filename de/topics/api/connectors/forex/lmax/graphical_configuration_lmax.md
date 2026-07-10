@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings LMAX](../../../../../images/api_gui_settings_lmax.png)
+![API-GUI-Einstellungen LMAX](../../../../../images/api_gui_settings_lmax.png)
 
 - **Benutzername** - Login.
 - **Passwort** - Passwort.

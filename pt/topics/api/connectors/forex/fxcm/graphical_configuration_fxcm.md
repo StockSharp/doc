@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings FXCM](../../../../../images/api_gui_settings_fxcm.png)
+![Configurações da API GUI FXCM](../../../../../images/api_gui_settings_fxcm.png)
 
 - **Token** - Token.
 - **Demo** - Ligar à negociação demo em vez do servidor de negociação real.

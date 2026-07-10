@@ -4,7 +4,7 @@
 
 **手数料** ウィンドウでは、手数料の種類を選択し、手数料の値と、手数料が課される条件を設定する必要があります。
 
-![Designer Commission Rule](../../../images/designer_commission_rule.png)
+![Designer 手数料ルール](../../../images/designer_commission_rule.png)
 
 ### 手数料タイプの一覧
 

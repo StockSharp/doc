@@ -2,7 +2,7 @@
 
 S# ermöglicht das Registrieren von Orders aus dem Diagramm. Um diese Funktion zu aktivieren, müssen Sie die Eigenschaft [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) auf **"True"** setzen; standardmäßig ist sie deaktiviert.
 
-![API GUI Trading from chart](../../../../images/api_gui_trading_from_chart.png)
+![API-GUI-Handel aus dem Chart](../../../../images/api_gui_trading_from_chart.png)
 
 Kauforders werden mit der Tastenkombination **Ctrl + Left Mouse Button** registriert.
 

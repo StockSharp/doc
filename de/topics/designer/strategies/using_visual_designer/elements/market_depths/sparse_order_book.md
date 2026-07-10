@@ -1,8 +1,8 @@
 # Ausgedünntes Orderbuch
 
-![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer Ausgedünntes Orderbuch 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer Ausgedünntes Orderbuch 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 Der Würfel wird verwendet, um ein ausgedünntes Orderbuch für das angegebene Instrument zu erhalten.
 

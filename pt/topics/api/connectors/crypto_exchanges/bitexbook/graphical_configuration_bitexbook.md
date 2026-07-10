@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bitexbook](../../../../../images/api_gui_settings_bitexbook.png)
+![Configurações da API GUI Bitexbook](../../../../../images/api_gui_settings_bitexbook.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

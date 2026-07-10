@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Xignite](../../../../../images/api_gui_settings_xignite.png)
+![Configurações da API GUI Xignite](../../../../../images/api_gui_settings_xignite.png)
 
 - **Token** - Token.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

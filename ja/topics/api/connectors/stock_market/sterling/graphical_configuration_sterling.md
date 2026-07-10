@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル構成は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Sterling](../../../../../images/api_gui_settings_sterling.png)
+![API GUI 設定 Sterling](../../../../../images/api_gui_settings_sterling.png)
 
 - **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔です。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズムです。([再接続設定](../../reconnection_settings.md))

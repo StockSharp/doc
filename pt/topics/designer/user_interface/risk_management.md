@@ -6,7 +6,7 @@ Na janela Riscos, é necessário selecionar uma **Regra de risco**, configurar a
 
 É possível usar várias regras de risco do mesmo tipo com ações diferentes. Por exemplo, na captura de ecrã abaixo, se o volume da ordem for 20, são executadas as ações de cancelar ordens e parar a negociação.
 
-![Designer Risk Rule](../../../images/designer_risk_rule.png)
+![Designer Regra de risco](../../../images/designer_risk_rule.png)
 
 ### Lista de regras de risco
 

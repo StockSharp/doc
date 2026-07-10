@@ -81,4 +81,4 @@
    		throw new ArgumentOutOfRangeException();
    }
    ```
-7. サンプル実行の結果。![sample logging](../../../images/sample_logging.png)
+7. サンプル実行の結果。![sample ログ記録](../../../images/sample_logging.png)

@@ -2,11 +2,11 @@
 
 履歴データでテストを実行するには、履歴データでテストするスキーマを持つストラテジーを選択する必要があります。ストラテジーは、ストラテジーフォルダー内の [スキーマ](../user_interface/schemas.md) パネルで、対象のストラテジーをダブルクリックして選択します。ワークスペース用にストラテジーを選択すると、ストラテジーの新しいタブが表示され、このタブに切り替えると、リボンの **エミュレーション** タブが自動的に開きます。
 
-![Designer Interface Backtesting 00](../../../images/designer_interface_backtesting_00.png)
+![Designer バックテスト画面 00](../../../images/designer_interface_backtesting_00.png)
 
 **エミュレーション** タブでは、ストラテジー名を変更し、簡単な説明を付けることができます。
 
-履歴データでテストを実行するには、**エミュレーション** タブで **マーケットデータ** フィールドに履歴データへのパスを指定し、テスト期間を設定します。テスト用ストラテジーは、**開始** ボタン ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png) をクリックして開始します。テスト用ストラテジーを開始すると、テストを一時停止する **一時停止** ![Designer Interface Backtesting 02](../../../images/designer_interface_backtesting_02.png) ボタンと、テストを完全に停止する **停止** ![Designer Interface Backtesting 03](../../../images/designer_interface_backtesting_03.png) ボタンがアクティブになります。ストラテジーを編集する際には、最後の操作を取り消す **元に戻す (Ctrl+Z)** ![Designer Interface Backtesting 04](../../../images/designer_interface_backtesting_04.png)、取り消しを戻す **やり直し (Ctrl+Y)** ![Designer Interface Backtesting 05](../../../images/designer_interface_backtesting_05.png)、スキーマを完全に更新する **更新 (Ctrl+R)** ![Designer Interface Backtesting 06](../../../images/designer_interface_backtesting_06.png) ボタンが便利です。また、**エミュレーション** タブから **デバッガー**（[デバッグ](debugging.md)）を使用したり、ストラテジーの **最適化** を実行したりできます。
+履歴データでテストを実行するには、**エミュレーション** タブで **マーケットデータ** フィールドに履歴データへのパスを指定し、テスト期間を設定します。テスト用ストラテジーは、**開始** ボタン ![Designer バックテスト画面 01](../../../images/designer_interface_backtesting_01.png) をクリックして開始します。テスト用ストラテジーを開始すると、テストを一時停止する **一時停止** ![Designer バックテスト画面 02](../../../images/designer_interface_backtesting_02.png) ボタンと、テストを完全に停止する **停止** ![Designer バックテスト画面 03](../../../images/designer_interface_backtesting_03.png) ボタンがアクティブになります。ストラテジーを編集する際には、最後の操作を取り消す **元に戻す (Ctrl+Z)** ![Designer バックテスト画面 04](../../../images/designer_interface_backtesting_04.png)、取り消しを戻す **やり直し (Ctrl+Y)** ![Designer バックテスト画面 05](../../../images/designer_interface_backtesting_05.png)、スキーマを完全に更新する **更新 (Ctrl+R)** ![Designer バックテスト画面 06](../../../images/designer_interface_backtesting_06.png) ボタンが便利です。また、**エミュレーション** タブから **デバッガー**（[デバッグ](debugging.md)）を使用したり、ストラテジーの **最適化** を実行したりできます。
 
 選択したストラテジータブには、既定で次のパネルが含まれます。
 

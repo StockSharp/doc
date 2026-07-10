@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:
 
-![API GUI Settings IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
+![API-GUI-Einstellungen IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
 
 - **Level1-Server** - Adresse zum Abrufen von Daten auf Level1.
 - **Level2-Server** - Adresse zum Abrufen von Daten auf Level2.

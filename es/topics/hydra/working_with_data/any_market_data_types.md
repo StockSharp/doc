@@ -10,11 +10,11 @@ Recuerde que los valores de **Level 1** se pueden descargar desde cualquier fuen
 
 Para construirlo, debe:
 
-1. Seleccionar el período y el instrumento para los que desea obtener datos de mercado.![hydra LEVEL 1 build depth data](../../../images/hydra_level1_build_depth_data.png)
-2. Seleccionar el campo **Construir a partir de** y elegir el tipo de datos requerido.![hydra type build data](../../../images/hydra_type_build_data.png)
+1. Seleccionar el período y el instrumento para los que desea obtener datos de mercado.![hydra construir datos de profundidad Nivel 1](../../../images/hydra_level1_build_depth_data.png)
+2. Seleccionar el campo **Construir a partir de** y elegir el tipo de datos requerido.![hydra tipo de construcción de datos](../../../images/hydra_type_build_data.png)
 
-   ¡IMPORTANTE\! Si se seleccionan **Libro de órdenes, Registro de órdenes, Level 1** como fuente para construir una vela, aparece una selección de parámetros adicionales.![hydra ext proper build data](../../../images/hydra_ext_proper_build_data.png)
-3. Después de establecer los parámetros, haga clic en el botón ![hydra candles](../../../images/hydra_candles.png).![hydra LEVEL 1 build depth data result](../../../images/hydra_level1_build_depth_data_result.png)
+   ¡IMPORTANTE\! Si se seleccionan **Libro de órdenes, Registro de órdenes, Level 1** como fuente para construir una vela, aparece una selección de parámetros adicionales.![hydra propiedades extendidas de construcción de datos](../../../images/hydra_ext_proper_build_data.png)
+3. Después de establecer los parámetros, haga clic en el botón ![hydra velas](../../../images/hydra_candles.png).![hydra resultado de datos de profundidad de Nivel 1](../../../images/hydra_level1_build_depth_data_result.png)
 
 Para construir **Velas**, también está disponible la opción de construir velas de un marco temporal mayor a partir de velas de un marco temporal menor.
 

@@ -1,8 +1,8 @@
 # 分组市场深度
 
-![Designer Grouped order book 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer 分组订单簿 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Grouped order book 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer 分组订单簿 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 该模块用于生成经过分组的市场深度。
 

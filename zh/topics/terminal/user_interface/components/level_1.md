@@ -4,7 +4,7 @@
 
 **Level 1** 提供筛选器，可用于选择所需交易品种。还可以为所选交易品种的事件配置通知，详见[通知设置](../../notifications.md)。
 
-![Terminal Level1 00](../../../../images/terminal_level1_00.png)
+![Terminal 级别1 视图 00](../../../../images/terminal_level1_00.png)
 
 ## 推荐内容
 

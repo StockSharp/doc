@@ -26,8 +26,8 @@ Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eint
    - Für das Feld {Quote.Price} wählen Sie im Fenster **S#-Feld** das Feld **Preis** - den Quote-Preis. Wir weisen ihm den Wert 4 zu.
    - Für das Feld {Quote.Volume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen** - das Quote-Volumen. Wir weisen ihm den Wert 5 zu.
    - Für das Feld {Side} wählen Sie im Fenster **S#-Feld** das Feld **Richtung** - die Handelsrichtung (Kaufen oder Verkaufen). Wir weisen ihm den Wert 6 zu.
-   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop depth](../../../images/hydra_import_prop_depth.png)
+   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import Markttiefeeigenschaften](../../../images/hydra_import_prop_depth.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview depth](../../../images/hydra_import_preview_depth.png)
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import Markttiefevorschau](../../../images/hydra_import_preview_depth.png)
 4. Klicken Sie auf die Schaltfläche **Importieren**.

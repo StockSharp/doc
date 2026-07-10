@@ -1,8 +1,8 @@
 # 間引き板情報
 
-![Designer Sparse order book 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer 疎な板情報 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Sparse order book 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer 疎な板情報 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 このキューブは、指定された銘柄の間引きされた板情報を取得するために使用します。
 

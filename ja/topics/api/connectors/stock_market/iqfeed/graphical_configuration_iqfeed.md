@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
+![API GUI 設定 IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
 
 - **Level1 サーバー** - Level1 のデータを取得するためのアドレス。
 - **Level2 サーバー** - Level2 のデータを取得するためのアドレス。

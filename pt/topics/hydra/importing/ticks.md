@@ -2,7 +2,7 @@
 
 Para importar transações, selecione o separador **Importar \=\> Ticks**.
 
-![hydra import trades](../../../images/hydra_import_trades.png)
+![hydra importar negociações](../../../images/hydra_import_trades.png)
 
 ## Processo de importação.
 
@@ -27,8 +27,8 @@ Para importar transações, selecione o separador **Importar \=\> Ticks**.
    - Para o campo {TradePrice}, selecione o campo **Preço** - o preço da transação na janela **campo S#**. Atribuímos-lhe o valor 5.
    - Para o campo {TradeVolume}, selecione o campo **Volume** na janela **campo S#** - o volume da transação. Atribuímos-lhe o valor 6.
    - Para o campo {OriginSide}, selecione o campo **Iniciador** na janela **campo S#** - o iniciador da transação (vendedor ou comprador). Atribuímos-lhe o valor 7.
-   - A janela de definição dos campos terá este aspeto:![hydra import prop trade](../../../images/hydra_import_prop_trade.png)
+   - A janela de definição dos campos terá este aspeto:![hydra import propriedades de negociação](../../../images/hydra_import_prop_trade.png)
 
    O utilizador pode configurar um grande número de propriedades para os dados descarregados. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência.
-3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import preview trade](../../../images/hydra_import_preview_trade.png)
+3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import pré-visualização de negociação](../../../images/hydra_import_preview_trade.png)
 4. Clique no botão **Importar**.

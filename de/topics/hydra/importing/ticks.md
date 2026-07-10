@@ -2,7 +2,7 @@
 
 Um Trades zu importieren, wählen Sie die Registerkarte **Importieren \=\> Ticks**.
 
-![hydra import trades](../../../images/hydra_import_trades.png)
+![hydra Trades importieren](../../../images/hydra_import_trades.png)
 
 ## Importprozess.
 
@@ -27,8 +27,8 @@ Um Trades zu importieren, wählen Sie die Registerkarte **Importieren \=\> Ticks
    - Für das Feld {TradePrice} wählen Sie das Feld **Preis** - den Trade-Preis aus dem Fenster **S#-Feld**. Wir weisen ihm den Wert 5 zu.
    - Für das Feld {TradeVolume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen** - das Trade-Volumen. Wir weisen ihm den Wert 6 zu.
    - Für das Feld {OriginSide} wählen Sie im Fenster **S#-Feld** das Feld **Initiator** - den Trade-Initiator (Verkäufer oder Käufer). Wir weisen ihm den Wert 7 zu.
-   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop trade](../../../images/hydra_import_prop_trade.png)
+   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import Trade-Eigenschaften](../../../images/hydra_import_prop_trade.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview trade](../../../images/hydra_import_preview_trade.png)
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import Trade-Vorschau](../../../images/hydra_import_preview_trade.png)
 4. Klicken Sie auf die Schaltfläche **Importieren**.

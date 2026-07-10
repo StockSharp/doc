@@ -8,7 +8,7 @@ Para ello, en la pestaña **Común** seleccione **Instrumentos** para que aparez
 
 Como ejemplo, consideremos la combinación de futuros E-mini S&P 500.
 
-1. Para crear un contrato de futuros continuo, haga clic en el botón **Crear instrumento \=\> Instrumento continuo** en la pestaña **Todos los instrumentos**.![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. Para crear un contrato de futuros continuo, haga clic en el botón **Crear instrumento \=\> Instrumento continuo** en la pestaña **Todos los instrumentos**.![Hydra Comprobación de datos al unir 00](../../../images/hydragluingcheckdata_00.png)
 
    Después aparecerá la siguiente ventana:![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. Para crear un futuro continuo, debe especificar un nombre y añadir contratos.

@@ -9,7 +9,7 @@ On-Neck es un patrón de velas bajista de continuación de tendencia compuesto p
 - El precio de cierre de la segunda vela está alrededor (o al nivel) del mínimo de la primera vela.
 - Se forma en una tendencia bajista.
 
-![On-Neck Pattern](../../../images/onneckpattern.png)
+![Patrón On-Neck](../../../images/onneckpattern.png)
 
 ### Interpretación
 

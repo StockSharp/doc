@@ -2,7 +2,7 @@
 
 El proceso principal de diseño de una estrategia y sus elementos componentes se realiza en el panel **Esquema**, combinando bloques y líneas de conexión. El panel Esquema consta de los paneles **Paleta**, **Designer** y **Propiedades**.
 
-![Designer Designer schemes strategies and component elements 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
+![Designer Esquemas, estrategias y elementos de componentes de Designer 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
 ## Panel Palette
 
@@ -16,7 +16,7 @@ El panel **Diseñador** es donde ocurre todo el proceso de creación de una estr
 
 El panel **Propiedades** muestra los parámetros del bloque seleccionado en el panel **Diseñador**. Cuando se selecciona un bloque en el panel **Diseñador**, su marco se colorea de negro.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer Panel de propiedades 00](../../../../images/designer_properties_panel_00.png)
 
 El panel **Propiedades** puede mostrarse en dos modos: *Configuración básica* y *Configuración avanzada*.
 
@@ -26,7 +26,7 @@ En el modo *configuración básica*, solo se muestran las propiedades más neces
 
 En el modo *advanced settings*, se mostrarán todas las propiedades del bloque disponibles para cambio y configuración.
 
-![Designer The Properties Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer Panel de propiedades 00](../../../../images/designer_properties_panel_01.png)
 
 Todos los bloques contienen un conjunto de propiedades predefinidas que se hacen visibles en el modo *advanced settings*:
 

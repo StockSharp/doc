@@ -1,6 +1,6 @@
 # Orderbuch
 
-![Designer Order Book 00](../../../../../../images/designer_orderbook_00.png)
+![Designer Orderbuch 00](../../../../../../images/designer_orderbook_00.png)
 
 Der Würfel wird verwendet, um das Orderbuch für das angegebene Instrument zu erhalten.
 

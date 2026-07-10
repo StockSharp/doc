@@ -2,7 +2,7 @@
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 中进行：
 
-![API GUI Settings FAST](../../../../../images/api_gui_settings_fast.png)
+![API GUI 设置 FAST](../../../../../images/api_gui_settings_fast.png)
 
 - **协议方言** - FAST 协议方言。必须作为第一个参数进行设置。选择后，下一个参数（**FAST 设置**）将包含所指定方言的 IP 地址。
 - **FAST 设置** - 上一个参数中所选方言的 IP 地址和端口。你可以使用下面的选项快速加载设置。

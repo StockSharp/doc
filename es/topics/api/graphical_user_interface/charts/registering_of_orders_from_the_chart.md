@@ -2,7 +2,7 @@
 
 S# permite registrar órdenes desde el gráfico. Para activar esta función, debe establecer la propiedad [Chart.OrderCreationMode](xref:StockSharp.Xaml.Charting.Chart.OrderCreationMode) en **"True"**; está deshabilitada de forma predeterminada.
 
-![API GUI Trading from chart](../../../../images/api_gui_trading_from_chart.png)
+![Trading desde el gráfico en API GUI](../../../../images/api_gui_trading_from_chart.png)
 
 Las órdenes de compra se registrarán usando la combinación **Ctrl + Left Mouse Button**.
 

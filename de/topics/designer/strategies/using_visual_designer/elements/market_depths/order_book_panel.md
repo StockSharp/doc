@@ -1,6 +1,6 @@
 # Orderbuch-Panel
 
-![Designer Order Book Panel](../../../../../../images/designer_orderbook_panel.png)
+![Designer Orderbuch-Panel](../../../../../../images/designer_orderbook_panel.png)
 
 Der Würfel dient dazu, das Orderbuch in der spezialisierten grafischen Komponente [Orderbuch](../../../../user_interface/components/order_book.md) anzuzeigen.
 

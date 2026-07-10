@@ -9,7 +9,7 @@ On-Neck é um padrão de velas de continuação de tendência bearish composto p
 - O preço de fecho da segunda vela fica em torno (ou ao nível) do mínimo da primeira vela.
 - Forma-se numa tendência descendente.
 
-![On-Neck Pattern](../../../images/onneckpattern.png)
+![Padrão On-Neck](../../../images/onneckpattern.png)
 
 ### Interpretação
 

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings BitMEX](../../../../../images/api_gui_settings_bitmex.png)
+![Configurações da API GUI BitMEX](../../../../../images/api_gui_settings_bitmex.png)
 
 - **chave** - Chave.
 - **segredo** - Chave secreta.

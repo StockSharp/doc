@@ -8,7 +8,7 @@
 
 下面以合并 E-mini S&P 500 期货为例。
 
-1. 要创建连续期货合约，请在 **所有交易品种** 选项卡中单击 **创建交易品种\=\>连续交易品种** 按钮。![Hydra Gluing Check Data 00](../../../images/hydragluingcheckdata_00.png)
+1. 要创建连续期货合约，请在 **所有交易品种** 选项卡中单击 **创建交易品种\=\>连续交易品种** 按钮。![Hydra 合并检查数据 00](../../../images/hydragluingcheckdata_00.png)
 
    随后将显示以下窗口：![HydraGluingWindow](../../../images/hydragluingwindow.png)
 2. 创建连续期货时，需要指定名称并添加合约。

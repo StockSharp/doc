@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
+![Configurações da API GUI IQFeed](../../../../../images/api_gui_settings_iqfeed.png)
 
 - **Servidor Level1** - Endereço para obter dados de Level1.
 - **Servidor Level2** - Endereço para obter dados de Level2.

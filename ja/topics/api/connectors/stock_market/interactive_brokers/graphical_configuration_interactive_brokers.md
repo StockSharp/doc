@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
+![API GUI 設定 Interactive Brokers](../../../../../images/api_gui_settings_interactivebrokers.png)
 
 - **アドレス** - TWS アドレス。
 - **Identifier** - 一意の ID。複数のクライアントが 1 つのターミナルまたはゲートウェイに接続している場合に使用されます。

@@ -2,6 +2,6 @@
 
 Panel de acceso rápido de la aplicación de configuración **Configuración \=\> Red**.
 
-![hydra proxy settings](../../../images/hydra_proxy_settings.png)
+![hydra configuración de proxy](../../../images/hydra_proxy_settings.png)
 
 Permite configurar los ajustes del proxy.

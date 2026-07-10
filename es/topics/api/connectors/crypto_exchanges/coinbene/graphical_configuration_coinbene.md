@@ -5,7 +5,7 @@
 
 Para todos los productos de [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CoinBene](../../../../../images/api_gui_settings_coinbene.png)
+![Configuración de API GUI CoinBene](../../../../../images/api_gui_settings_coinbene.png)
 
 - **clave** - Clave.
 - **secreto** - Secreto.

@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings LBank](../../../../../images/api_gui_settings_lbank.png)
+![Configuración de API GUI LBank](../../../../../images/api_gui_settings_lbank.png)
 
 - **clave** - Clave.
 - **secreto** - Secreto.

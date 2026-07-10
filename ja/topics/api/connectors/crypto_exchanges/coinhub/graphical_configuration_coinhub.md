@@ -2,7 +2,7 @@
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。
 
-![API GUI Settings CoinHub](../../../../../images/api_gui_settings_coinhub.png)
+![API GUI 設定 CoinHub](../../../../../images/api_gui_settings_coinhub.png)
 
 - **キー** - キー。
 - **シークレット** - シークレット。

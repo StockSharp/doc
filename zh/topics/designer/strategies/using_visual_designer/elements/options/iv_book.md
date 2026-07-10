@@ -1,6 +1,6 @@
 # 隐含波动率市场深度
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+![Designer 订单簿隐含波动率 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 该模块用于计算隐含波动率市场深度。
 

@@ -7,7 +7,7 @@ Bearish Candle は、終値が始値より低いことを特徴とするロー�
 - 始値が終値より高い (O > C)。
 - 市場における弱気圧力を示します。
 
-![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
+![弱気ローソク足パターン](../../../images/bearishcandlepattern.png)
 
 ### 解釈
 

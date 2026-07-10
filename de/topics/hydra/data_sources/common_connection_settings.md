@@ -2,7 +2,7 @@
 
 Verbindungseigenschaften, die für alle Quellen gemeinsam gelten.
 
-![hydra settings connectionparams](../../../images/hydra_settings_connectionparams.png)
+![hydra Verbindungsparameter-Einstellungen](../../../images/hydra_settings_connectionparams.png)
 
 **Verbindung**
 

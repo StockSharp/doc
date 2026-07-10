@@ -1,6 +1,6 @@
 # ポジション
 
-![Designer Position 00](../../../../../../images/designer_position_00.png)
+![Designer ポジション 00](../../../../../../images/designer_position_00.png)
 
 この要素は、指定された銘柄とポートフォリオのポジション変化に関する情報を取得するために使用します。
 

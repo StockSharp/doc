@@ -10,7 +10,7 @@ Um ein Beispiel in **Live-Handel** auszuführen, benötigen Sie:
 
 4. Laden Sie die Historie für das erforderliche Instrument herunter. In diesem Beispiel wird das Instrument **AAPL@NASDAQ** verwendet. Die Strategie verwendet Kerzen mit einem Zeitrahmen von 5 Sekunden; die Historie wird nicht benötigt, reicht aber aus, um die Möglichkeit zu demonstrieren.
 
-![Designer Example of Live trading 00](../../../images/designer_example_of_live_trading_00.png)
+![Designer Beispiel für Live-Handel 00](../../../images/designer_example_of_live_trading_00.png)
 
 5. Richten Sie die Strategie ein und starten Sie sie.
 
@@ -24,23 +24,23 @@ Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 - Volumen - 100
 - Historientage - 2
 
-![Designer Example of Live trading 01](../../../images/designer_example_of_live_trading_01.png)
+![Designer Beispiel für Live-Handel 01](../../../images/designer_example_of_live_trading_01.png)
 
-Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie den Live-Handel für die Strategie, indem Sie auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Starten** klicken.
+Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie den Live-Handel für die Strategie, indem Sie auf die Schaltfläche ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png) **Starten** klicken.
 
-Nach dem Klicken auf die Schaltfläche ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png) **Starten** beginnt der Chart, die gesamte heruntergeladene Historie für 2 Tage anzuzeigen:
+Nach dem Klicken auf die Schaltfläche ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png) **Starten** beginnt der Chart, die gesamte heruntergeladene Historie für 2 Tage anzuzeigen:
 
-![Designer Example of Live trading 02](../../../images/designer_example_of_live_trading_02.png)
+![Designer Beispiel für Live-Handel 02](../../../images/designer_example_of_live_trading_02.png)
 
 Nachdem die gesamte Historie aus dem [Marktdatenspeicher](../market_data_storage.md) und die Tabelle der anonymen Trades aus dem Terminal geladen wurden, beginnt die Strategie zu handeln.
 
 Unten sehen Sie Charts aus [Designer](../../designer.md) und dem Handelsterminal für denselben Zeitraum.
 
-![Designer Example of Live trading 03](../../../images/designer_example_of_live_trading_03.png)
+![Designer Beispiel für Live-Handel 03](../../../images/designer_example_of_live_trading_03.png)
 
 Chart aus [Designer](../../designer.md):
 
-![Designer Example of Live trading 04](../../../images/designer_example_of_live_trading_04.png)
+![Designer Beispiel für Live-Handel 04](../../../images/designer_example_of_live_trading_04.png)
 
 Chart aus dem Handelsterminal:
 

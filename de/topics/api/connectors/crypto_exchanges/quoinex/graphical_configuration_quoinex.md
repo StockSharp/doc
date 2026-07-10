@@ -5,7 +5,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
+![API-GUI-Einstellungen QUOINEX](../../../../../images/api_gui_settings_quoinex.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimer Schlüssel.

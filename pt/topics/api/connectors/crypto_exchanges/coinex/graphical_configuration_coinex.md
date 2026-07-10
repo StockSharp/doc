@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CoinEx](../../../../../images/api_gui_settings_coinex.png)
+![Configurações da API GUI CoinEx](../../../../../images/api_gui_settings_coinex.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

@@ -2,7 +2,7 @@
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é efetuada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings BingX](../../../../../images/api_gui_settings_bingx.png)
+![Configurações da API GUI BingX](../../../../../images/api_gui_settings_bingx.png)
 
 - **chave** - Chave.
 - **segredo** - Segredo.

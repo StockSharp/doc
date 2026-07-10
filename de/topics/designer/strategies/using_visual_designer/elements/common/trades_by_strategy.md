@@ -1,6 +1,6 @@
 # Trades nach Strategie
 
-![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
+![Designer Transaktionsstrategie 00](../../../../../../images/designer_trades_strategy_00.png)
 
 Der Würfel wird verwendet, um alle Trades der Strategie zu erhalten.
 

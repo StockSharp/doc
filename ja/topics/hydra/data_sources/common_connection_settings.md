@@ -2,7 +2,7 @@
 
 すべてのソースに共通する接続プロパティです。
 
-![hydra settings connectionparams](../../../images/hydra_settings_connectionparams.png)
+![hydra 接続パラメーター設定](../../../images/hydra_settings_connectionparams.png)
 
 **接続**
 

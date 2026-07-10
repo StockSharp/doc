@@ -1,6 +1,6 @@
 # Index
 
-![Designer Index 00](../../../../../../images/designer_index_00.png)
+![Designer Indexansicht 00](../../../../../../images/designer_index_00.png)
 
 Der Würfel wird verwendet, um einen eigenen Index zu erstellen.
 

@@ -2,7 +2,7 @@
 
 **Terminal** は無料の取引ターミナルです。主な利点は、独自のターミナルを提供していない取引場所を含め、複数の取引所、ブローカー、データソースに同時に接続できることです。
 
-![Terminal main 00](../images/terminal_main_00.png)
+![Terminal メイン 00](../images/terminal_main_00.png)
 
 ## Terminal の利点と機能:
 

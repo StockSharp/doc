@@ -22,23 +22,23 @@ Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
 
 Die ausgewählten Parameter müssen eingerichtet werden:
 
-![Designer An example of backtesting 00](../../../images/designer_example_of_backtesting_00.png)
+![Designer Beispiel für Backtesting 00](../../../images/designer_example_of_backtesting_00.png)
 
-![Designer An example of backtesting 01](../../../images/designer_example_of_backtesting_01.png)
+![Designer Beispiel für Backtesting 01](../../../images/designer_example_of_backtesting_01.png)
 
-Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie das Strategietesting durch Klicken auf die Schaltfläche ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png).
+Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie das Strategietesting durch Klicken auf die Schaltfläche ![Designer Backtesting-Oberfläche 01](../../../images/designer_interface_backtesting_01.png).
 
 Während oder nach dem Testing können Sie Charts und Tabellen mit Testinformationen anzeigen.
 
-![Designer An example of backtesting 02](../../../images/designer_example_of_backtesting_02.png)
+![Designer Beispiel für Backtesting 02](../../../images/designer_example_of_backtesting_02.png)
 
 Der Chart zeigt, dass die Trades wie von der Strategie vorgesehen an den Schnittpunkten der gleitenden Durchschnitte stattfinden. Außerdem ist zu sehen, dass Orders über mehrere Trades ausgeführt werden. Dies geschieht durch die Verwendung eines generierten Orderbuchs, das die Realitätsnähe des Testings erhöht. Dass Orders über mehrere Trades ausgeführt werden, ist in den Tabellen Trades und Statistics sowie im Positions-Chart zu sehen.
 
-![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
+![Designer Beispiel für Backtesting 03](../../../images/designer_example_of_backtesting_03.png)
 
 Im **Positionsdiagramm** ist zu sehen, dass die Strategie das gehandelte Volumen verringert hat. Dies geschah, weil das generierte Orderbuch eine Tiefe von 5 hat und die gesamte Orderbuchtiefe dadurch nicht ausreichte, um die Order über 200 Lots auszuführen. Da die Strategie lediglich die Position umkehrt, wurde die Ordergröße jedes Mal reduziert, wenn die Orderbuchtiefe für die Orderausführung nicht ausreichte.
 
-![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
+![Designer Beispiel für Backtesting 04](../../../images/designer_example_of_backtesting_04.png)
 
 Der **P\/L**-Chart zeigt, dass die Strategie mit diesen Parametern unprofitabel ist.
 

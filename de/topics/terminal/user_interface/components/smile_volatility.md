@@ -6,7 +6,7 @@ Um den Volatilitäts-Smile anzuzeigen, müssen Sie den Basiswert und die Optione
 
 Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
 
-![Terminal smile of volatility 00](../../../../images/terminal_smile_of_volatility_00.png)
+![Terminal Volatilitäts-Smile 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## Empfohlene Inhalte
 

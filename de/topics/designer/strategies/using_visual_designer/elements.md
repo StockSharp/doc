@@ -2,13 +2,13 @@
 
 In jedem Würfel wird ein Symbol angezeigt, das ihn charakterisiert, sowie ein Name, der im Panel **Eigenschaften** in einen benutzerdefinierten Namen geändert werden kann. Ein Tooltip für den Würfel zeigt eine Beschreibung, wofür dieser Würfel vorgesehen ist. Wenn Sie einen Würfel mit der Maus auswählen, können Sie seine Eigenschaften im Panel **Eigenschaften** anzeigen und bei Bedarf einige Parameter ändern.
 
-![Designer Description of cubes 00](../../../../images/designer_description_of_elements_00.png)
+![Designer Beschreibung der Würfel 00](../../../../images/designer_description_of_elements_00.png)
 
 Links und rechts vom Würfel zeigen farbige Kästchen die eingehenden (links) und ausgehenden (rechts) Parameter.
 
 Parameter werden benötigt, um den Würfel während der Ausführung der Strategie mit Informationen zu füllen. Zum Beispiel wird beim Würfel [Kerzen](elements/data_sources/candles.md) das Instrument, für das eine Kerze erstellt werden soll, an den Eingang übergeben; die erstellten Kerzen werden am Ausgang zurückgegeben. Diese können wiederum als Eingabeparameter für das Element [Chart](elements/common/chart.md) verwendet oder an eine Methode übergeben werden, die die Kerzengröße bestimmt.
 
-![Designer Description of cubes 01](../../../../images/designer_description_of_elements_01.png)
+![Designer Beschreibung der Würfel 01](../../../../images/designer_description_of_elements_01.png)
 
 Die Farbe bezeichnet den Datentyp, der in den Parametern übergeben wird. Unterschiedliche Parameter in unterschiedlichen Würfeln können unterschiedliche und inkompatible Datentypen empfangen und weitergeben. Die Beschreibung jedes Parameters wird im Tooltip angezeigt. Um viele Fehler beim Verbinden von Parametern unterschiedlicher Typen zu vermeiden, hat jeder Parameter einen eigenen Datentyp, der sich durch seine Farbe unterscheidet. Die folgende Farbpalette wird zur Kennzeichnung der Parameter verwendet:
 

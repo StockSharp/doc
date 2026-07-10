@@ -1,6 +1,6 @@
 # 前一个值
 
-![Designer The previous value 00](../../../../../../images/designer_previous_value_00.png)
+![Designer 上一个值 00](../../../../../../images/designer_previous_value_00.png)
 
 该模块用于获取此前传入输入端的值，并可指定偏移量。
 

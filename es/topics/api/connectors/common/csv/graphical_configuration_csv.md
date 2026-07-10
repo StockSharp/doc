@@ -2,7 +2,7 @@
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings CSV](../../../../../images/api_gui_settings_csv.png)
+![Configuración de API GUI CSV](../../../../../images/api_gui_settings_csv.png)
 
 - **Configuración** - Configuración de importación
 - **Configuración de reconexión** - Mecanismo para el seguimiento de la conexión con el sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))

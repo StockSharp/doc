@@ -2,7 +2,7 @@
 
 O separador **Emulação** permite-lhe testar estratégias em dados históricos.
 
-![Shell emulation 00](../../../images/shell_emulation_00.png)
+![Shell emulação 00](../../../images/shell_emulation_00.png)
 
 Ao clicar no botão **Adicionar** ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), pode adicionar uma estratégia para teste. Cada estratégia adicionada é aberta num separador individual.
 

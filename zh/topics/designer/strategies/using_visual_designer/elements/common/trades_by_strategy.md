@@ -1,6 +1,6 @@
 # 策略成交
 
-![Designer The transaction strategy 00](../../../../../../images/designer_trades_strategy_00.png)
+![Designer 事务策略 00](../../../../../../images/designer_trades_strategy_00.png)
 
 该模块用于获取策略的全部成交。
 

@@ -11,25 +11,25 @@ Die Verwendung fertiger DLLs ist für Benutzer vertraut, die kontinuierlich in d
 
 1. Um eine Strategie in **Visual Studio** zu erstellen, müssen Sie ein Projekt anlegen:
 
-![Designer Creating a DLL cube in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
+![Designer Erstellen eines DLL-Würfels in Visual Studio 00](../../../images/designer_creating_dll_element_in_visual_studio_00.png)
 
 2. Anschließend müssen Sie den Strategiecode schreiben. Für einen schnellen Start können Sie den SmaStrategy-Code kopieren, der als Vorlage in [Strategie aus Code](using_code/csharp/first_strategy.md) erstellt wird:
 
-![Designer Creating a DLL cube in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
+![Designer Erstellen eines DLL-Würfels in Visual Studio 03](../../../images/designer_creating_dll_element_in_visual_studio_03.png)
 
 3. Um den Code zu kompilieren, binden Sie das NuGet-Paket [StockSharp.Algo](https://www.nuget.org/packages/stocksharp.algo) ein, das die Basisklasse für alle Strategien enthält: [Strategy](xref:StockSharp.Algo.Strategies.Strategy).
 
-![Designer Creating a DLL cube in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
+![Designer Erstellen eines DLL-Würfels in Visual Studio 04](../../../images/designer_creating_dll_element_in_visual_studio_04.png)
 
 Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/stockSharp.charting.interfaces) ein. Diese Schnittstellen enthalten keine eigentliche Chartlogik und werden nur benötigt, um den Code zu kompilieren. Wenn die Strategie in **Designer** läuft, erfolgt die reale Chartdarstellung über diese Schnittstellen.
 
 4. Nach dem Erstellen der Strategie muss das Projekt gebaut werden, indem Sie im Tab **Erstellen** auf **Projektmappe erstellen** klicken.
 
-![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
+![Designer Erstellen eines DLL-Würfels in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
 5. Standardmäßig wird das Projekt in Visual Studio in den Ordner …\\bin\\Debug\\net6.0 gebaut.
 
-![Designer Creating a DLL cube in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
+![Designer Erstellen eines DLL-Würfels in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
 ### DLL zu Designer hinzufügen
 

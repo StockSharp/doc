@@ -7,7 +7,7 @@ Bearish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs unterhalb
 - Der Eröffnungskurs ist höher als der Schlusskurs (O > C).
 - Zeigt bärischen Druck im Markt an.
 
-![Bearish Candle Pattern](../../../images/bearishcandlepattern.png)
+![Bärisches Kerzenmuster](../../../images/bearishcandlepattern.png)
 
 ### Interpretation
 

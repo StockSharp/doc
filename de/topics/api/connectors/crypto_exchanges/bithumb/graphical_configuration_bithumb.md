@@ -2,7 +2,7 @@
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Bithumb](../../../../../images/api_gui_settings_bithumb.png)
+![API-GUI-Einstellungen Bithumb](../../../../../images/api_gui_settings_bithumb.png)
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimnis.

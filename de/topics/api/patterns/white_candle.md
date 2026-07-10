@@ -9,7 +9,7 @@ White Candle (bullische Candle) ist ein klassisches Candlestick-Muster, das ents
 - Weist auf die Dominanz von Käufern gegenüber Verkäufern hin.
 - Die Größe des Candle-Körpers zeigt die Stärke der bullischen Bewegung.
 
-![White Candle Pattern](../../../images/whitecandlepattern.png)
+![Weißes Kerzenmuster](../../../images/whitecandlepattern.png)
 
 ### Interpretation
 

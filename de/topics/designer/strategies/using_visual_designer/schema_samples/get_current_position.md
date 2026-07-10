@@ -2,7 +2,7 @@
 
 Um das Volumen zu erhalten, das zum Drehen der aktuellen Position in die entgegengesetzte Position erforderlich ist, kann das Schema aus dem SMA-Strategiebeispiel verwendet werden:
 
-![Designer Determination of the volume position 00](../../../../../images/designer_determination_of_volume_position_00.png)
+![Designer Bestimmung der Volumenposition 00](../../../../../images/designer_determination_of_volume_position_00.png)
 
 Für den Würfel [Variable](../elements/data_sources/variable.md) wird der Datentyp **Handelsinstrument** ausgewählt. Wenn das Instrument nicht angegeben ist, aber das Flag **Parameter** der Gruppe **Allgemein** gesetzt ist, wird es aus der Strategie übernommen und anschließend an [Position](../elements/positions/current.md) übergeben.
 

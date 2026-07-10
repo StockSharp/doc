@@ -2,7 +2,7 @@
 
 El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o trading en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
 
-![Designer Properties emulation 00](../../../../images/designer_properties_emulation_00.png)
+![Designer Propiedades de emulación 00](../../../../images/designer_properties_emulation_00.png)
 
 **Configuración**
 

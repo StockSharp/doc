@@ -1,6 +1,6 @@
 # Livro de IV
 
-![Designer Glass implied volatility 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
+![Designer Volatilidade implícita no livro de ofertas 00](../../../../../../images/designer_orderbook_implied_volatility_00.png)
 
 O cubo é usado para calcular um livro de ordens de volatilidade implícita.
 

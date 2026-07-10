@@ -19,7 +19,7 @@ Cada painel contém uma interface geral das definições, como se segue:
   é necessário aumentar o limite de dados descarregados.
 - Se os dados tiverem sido recebidos de origens cujo fuso horário não corresponda ao fuso horário atual, pode ajustar o fuso horário. Depois da construção, os dados serão mostrados no fuso selecionado pelo utilizador. ![hydra TZ](../../../images/hydra_tz.png)
 - Como várias origens não oferecem a possibilidade de descarregar alguns dados, o programa disponibiliza o campo [Construir a partir de](any_market_data_types.md). Usando este campo, o utilizador pode construir dados de mercado a partir de outro tipo de dados de mercado. A mesma função pode ser usada para construir dados de mercado sem descarregamento adicional, usando como base dados já existentes.
-- Depois de selecionar os parâmetros acima, deve clicar no botão ![hydra find](../../../images/hydra_find.png).![hydra candles tf](../../../images/hydra_candles_tf.png)
+- Depois de selecionar os parâmetros acima, deve clicar no botão ![hydra find](../../../images/hydra_find.png).![Hydra candles por período](../../../images/hydra_candles_tf.png)
 
 Usando o menu de contexto, pode configurar vários parâmetros da tabela de valores de dados de mercado: agrupamento de linhas, colunas disponíveis, formato de apresentação, etc.
 
