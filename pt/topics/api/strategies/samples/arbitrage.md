@@ -56,16 +56,16 @@ protected override void OnStarted2(DateTime time)
 	base.OnStarted2(time);
 
 	if (FutureSecurity == null)
-		throw new InvalidOperationException("Future security is not specified.");
+		throw new InvalidOperationException("O instrumento futuro não foi especificado.");
 
 	if (StockSecurity == null)
-		throw new InvalidOperationException("Stock security is not specified.");
+		throw new InvalidOperationException("O instrumento de ações não foi especificado.");
 
 	if (FuturePortfolio == null)
-		throw new InvalidOperationException("Future portfolio is not specified.");
+		throw new InvalidOperationException("O portfólio de futuros não foi especificado.");
 
 	if (StockPortfolio == null)
-		throw new InvalidOperationException("Stock portfolio is not specified.");
+		throw new InvalidOperationException("O portfólio de ações não foi especificado.");
 
 	_futId = FutureSecurity.ToSecurityId();
 	_stockId = StockSecurity.ToSecurityId();

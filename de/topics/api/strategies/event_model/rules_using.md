@@ -113,7 +113,7 @@
   Connector
       .WhenIntervalElapsed(timeInterval)
       .Or(this.WhenCandlesStarted(subscription))
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("Kerze geschlossen oder Zeit abgelaufen"))
       .Once()
       .Apply(this);
 
@@ -133,7 +133,7 @@
           Connector.WhenIntervalElapsed(timeInterval),
           this.WhenCandlesStarted(subscription)
       })
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("Kerze geschlossen oder Zeit abgelaufen"))
       .Once()
       .Apply(this);
 
@@ -293,7 +293,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 	var ruleRegFailed = order.WhenRegisterFailed(this);
 
 	ruleReg
-		.Do(() => LogInfo("Order #1 registered"))
+		.Do(() => LogInfo("Order #1 registriert"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleRegFailed);  // Regeln schließen sich gegenseitig aus
@@ -326,7 +326,7 @@ sub.WhenTickTradeReceived(this).Do(t =>
 		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
 		.Do(t =>
 		{
-			LogInfo($"Rule WhenLastTradePriceMore or WhenLastTradePriceLess triggered: tick={t}");
+			LogInfo($"Regel WhenLastTradePriceMore oder WhenLastTradePriceLess ausgelöst: Tick={t}");
 		})
 		.Apply(this);
 })

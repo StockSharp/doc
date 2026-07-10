@@ -24,9 +24,9 @@ StockSharp 支持以下日志级别（按重要性递增顺序列出）：
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-	
+
+	LogVerbose("策略已启动，参数: 长期SMA={0}, 短期SMA={1}", LongSmaLength, ShortSmaLength);
+
 	// ...
 }
 ```
@@ -38,9 +38,9 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+	LogDebug("正在处理K线: {0}, 开盘={1}, 收盘={2}, 最高={3}, 最低={4}, 成交量={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-	
+
 	// ...
 }
 ```
@@ -53,10 +53,10 @@ private void ProcessCandle(ICandleMessage candle)
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
-	
-	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}", 
+
+	LogInfo("信号: {0}, 短期SMA={1}, 长期SMA={2}",
 		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
-	
+
 	// ...
 }
 ```
@@ -73,7 +73,7 @@ public void RegisterOrder(Order order)
 		LogWarning("尝试注册无效数量的订单: {0}", order.Volume);
 		return;
 	}
-	
+
 	// ...
 }
 ```
@@ -127,19 +127,19 @@ strategy.LogLevel = LogLevels.Info;
 public class SmaStrategy : Strategy
 {
 	private readonly StrategyParam<LogLevels> _logLevel;
-	
+
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
 					.SetDisplay("日志级别", "日志消息详细级别", "日志设置");
 	}
-	
+
 	public override LogLevels LogLevel
 	{
 		get => _logLevel.Value;
 		set => _logLevel.Value = value;
 	}
-	
+
 	// ...
 }
 ```
@@ -152,18 +152,18 @@ public class SmaStrategy : Strategy
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
+
+	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
-	
+
 	// ...
 }
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}", 
+	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
 		Name, Position, PnL);
-	
+
 	base.OnStopped();
 }
 ```
@@ -173,7 +173,7 @@ protected override void OnStopped()
 ```cs
 protected override void OnOwnTradeReceived(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
+	LogInfo("{0} {1} {2} 价格 {3}。数量: {4}",
 		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
 		trade.Order.Security.Code,
 		trade.Order.Type,
@@ -189,9 +189,9 @@ protected override void OnOwnTradeReceived(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Order registration error {0}: {1}", 
+	LogError("订单注册错误 {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
-	
+
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
 ```

@@ -87,7 +87,7 @@ _percentage = Param(nameof(Percentage), 50).SetRange(0, 100);
 public class EvenNumberAttribute : ValidationAttribute
 {
 	public EvenNumberAttribute()
-		: base("Value must be an even number.")
+		: base("値は偶数でなければなりません。")
 	{
 	}
 

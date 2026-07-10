@@ -87,7 +87,7 @@ Se os validadores integrados não forem suficientes, pode criar os seus próprio
 public class EvenNumberAttribute : ValidationAttribute
 {
 	public EvenNumberAttribute()
-		: base("Value must be an even number.")
+		: base("O valor deve ser um número par.")
 	{
 	}
 

@@ -142,7 +142,7 @@ Hier ist ein einfaches Beispiel für einen benutzerdefinierten statistischen Par
 [Display(
 	ResourceType = typeof(LocalizedStrings),
 	Name = "My Custom Indicator",
-	Description = "Description of my custom indicator",
+	Description = "Beschreibung meines benutzerdefinierten Indikators",
 	GroupName = "Custom Parameters",
 	Order = 1000
 )]

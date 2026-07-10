@@ -24,9 +24,9 @@ StockSharp は次のログレベルをサポートしています (重要度が�
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-	
+
+	LogVerbose("戦略をパラメーター付きで開始: 長期SMA={0}, 短期SMA={1}", LongSmaLength, ShortSmaLength);
+
 	// ...
 }
 ```
@@ -38,9 +38,9 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+	LogDebug("ローソク足を処理中: {0}, 始値={1}, 終値={2}, 高値={3}, 安値={4}, 出来高={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-	
+
 	// ...
 }
 ```
@@ -53,10 +53,10 @@ private void ProcessCandle(ICandleMessage candle)
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
-	
-	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}", 
+
+	LogInfo("シグナル: {0}, 短期SMA={1}, 長期SMA={2}",
 		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
-	
+
 	// ...
 }
 ```
@@ -73,7 +73,7 @@ public void RegisterOrder(Order order)
 		LogWarning("無効な数量で注文を登録しようとしました: {0}", order.Volume);
 		return;
 	}
-	
+
 	// ...
 }
 ```
@@ -127,19 +127,19 @@ strategy.LogLevel = LogLevels.Info;
 public class SmaStrategy : Strategy
 {
 	private readonly StrategyParam<LogLevels> _logLevel;
-	
+
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
 					.SetDisplay("ログレベル", "ログメッセージの詳細レベル", "ログ設定");
 	}
-	
+
 	public override LogLevels LogLevel
 	{
 		get => _logLevel.Value;
 		set => _logLevel.Value = value;
 	}
-	
+
 	// ...
 }
 ```
@@ -152,18 +152,18 @@ public class SmaStrategy : Strategy
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
+
+	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
-	
+
 	// ...
 }
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}", 
+	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
 		Name, Position, PnL);
-	
+
 	base.OnStopped();
 }
 ```
@@ -173,7 +173,7 @@ protected override void OnStopped()
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
+	LogInfo("{0} {1} {2} 価格 {3}。数量: {4}",
 		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
 		trade.Order.Security.Code,
 		trade.Order.Type,
@@ -189,9 +189,9 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Order registration error {0}: {1}", 
+	LogError("注文登録エラー {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
-	
+
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
 ```

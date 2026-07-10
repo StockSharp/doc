@@ -113,7 +113,7 @@
   Connector
       .WhenIntervalElapsed(timeInterval)
       .Or(this.WhenCandlesStarted(subscription))
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("K线收盘或时间到期"))
       .Once()
       .Apply(this);
       
@@ -133,7 +133,7 @@
           Connector.WhenIntervalElapsed(timeInterval), 
           this.WhenCandlesStarted(subscription)
       })
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("K线收盘或时间到期"))
       .Once()
       .Apply(this);
       
@@ -293,7 +293,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 	var ruleRegFailed = order.WhenRegisterFailed(this);
 
 	ruleReg
-		.Do(() => LogInfo("Order #1 registered"))
+		.Do(() => LogInfo("订单 #1 已注册"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleRegFailed);  // 规则互斥
@@ -326,7 +326,7 @@ sub.WhenTickTradeReceived(this).Do(t =>
 		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
 		.Do(t =>
 		{
-			LogInfo($"Rule WhenLastTradePriceMore or WhenLastTradePriceLess triggered: tick={t}");
+			LogInfo($"规则 WhenLastTradePriceMore 或 WhenLastTradePriceLess 已触发: tick={t}");
 		})
 		.Apply(this);
 })

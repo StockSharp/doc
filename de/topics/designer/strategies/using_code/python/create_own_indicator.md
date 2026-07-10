@@ -42,11 +42,11 @@ class empty_indicator(BaseIndicator):
 		self.Reset()
 
 	def CalcIsFormed(self):
-		"""Determines if the indicator has received sufficient inputs to be considered formed."""
+		"""Bestimmt, ob der Indikator genug Eingaben erhalten hat, um als gebildet zu gelten."""
 		return self._isFormed
 
 	def Reset(self):
-		"""Resets the indicator's state and internal counters."""
+		"""Setzt den Zustand des Indikators und interne Zähler zurück."""
 		super(empty_indicator, self).Reset()
 		self._isFormed = False
 		self._counter = 0

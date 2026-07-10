@@ -24,9 +24,9 @@ El método [LogVerbose](xref:Ecng.Logging.BaseLogReceiver.LogVerbose(System.Stri
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
-	
+
+	LogVerbose("Estrategia iniciada con parámetros: SMA larga={0}, SMA corta={1}", LongSmaLength, ShortSmaLength);
+
 	// ...
 }
 ```
@@ -38,9 +38,9 @@ El método [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,S
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processing candle: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}", 
+	LogDebug("Procesando vela: {0}, Apertura={1}, Cierre={2}, Máximo={3}, Mínimo={4}, Volumen={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
-	
+
 	// ...
 }
 ```
@@ -53,10 +53,10 @@ El método [LogInfo](xref:Ecng.Logging.BaseLogReceiver.LogInfo(System.String,Sys
 private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
-	
-	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}", 
+
+	LogInfo("Señal: {0}, SMA corta={1}, SMA larga={2}",
 		isShortGreaterThanLong ? "Buy" : "Sell", shortSma, longSma);
-	
+
 	// ...
 }
 ```
@@ -73,7 +73,7 @@ public void RegisterOrder(Order order)
 		LogWarning("Intento de registrar una orden con volumen no válido: {0}", order.Volume);
 		return;
 	}
-	
+
 	// ...
 }
 ```
@@ -127,19 +127,19 @@ Para configurar cómodamente el nivel de logging en el constructor de la estrate
 public class SmaStrategy : Strategy
 {
 	private readonly StrategyParam<LogLevels> _logLevel;
-	
+
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
 					.SetDisplay("Nivel de registro", "Nivel de detalle de los mensajes de registro", "Configuración de registro");
 	}
-	
+
 	public override LogLevels LogLevel
 	{
 		get => _logLevel.Value;
 		set => _logLevel.Value = value;
 	}
-	
+
 	// ...
 }
 ```
@@ -152,18 +152,18 @@ public class SmaStrategy : Strategy
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}", 
+
+	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
-	
+
 	// ...
 }
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}", 
+	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
 		Name, Position, PnL);
-	
+
 	base.OnStopped();
 }
 ```
@@ -173,7 +173,7 @@ protected override void OnStopped()
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
-	LogInfo("{0} {1} {2} at price {3}. Volume: {4}",
+	LogInfo("{0} {1} {2} al precio {3}. Volumen: {4}",
 		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
 		trade.Order.Security.Code,
 		trade.Order.Type,
@@ -189,9 +189,9 @@ protected override void OnNewMyTrade(MyTrade trade)
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 {
-	LogError("Order registration error {0}: {1}", 
+	LogError("Error de registro de orden {0}: {1}",
 		fail.Order.TransactionId, fail.Error.Message);
-	
+
 	base.OnOrderRegisterFailed(fail, calcRisk);
 }
 ```

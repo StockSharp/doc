@@ -25,7 +25,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogVerbose("Strategy started with parameters: Long SMA={0}, Short SMA={1}", LongSmaLength, ShortSmaLength);
+	LogVerbose("Strategie mit Parametern gestartet: lange SMA={0}, kurze SMA={1}", LongSmaLength, ShortSmaLength);
 
 	// ...
 }
@@ -54,7 +54,7 @@ private void CalculateSignal(decimal shortSma, decimal longSma)
 {
 	bool isShortGreaterThanLong = shortSma > longSma;
 
-	LogInfo("Signal: {0}, Short SMA={1}, Long SMA={2}",
+	LogInfo("Signal: {0}, kurze SMA={1}, lange SMA={2}",
 		isShortGreaterThanLong ? "Kauf" : "Verkauf", shortSma, longSma);
 
 	// ...

@@ -45,7 +45,7 @@ protected override void OnStarted2(DateTime time)
 	// ペアトレーディング用に 2 つの銘柄を取得
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
-		throw new InvalidOperationException("Two instruments must be specified.");
+		throw new InvalidOperationException("2つの銘柄を指定する必要があります。");
 
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;

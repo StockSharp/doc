@@ -56,16 +56,16 @@ protected override void OnStarted2(DateTime time)
 	base.OnStarted2(time);
 
 	if (FutureSecurity == null)
-		throw new InvalidOperationException("Future security is not specified.");
+		throw new InvalidOperationException("先物銘柄が指定されていません。");
 
 	if (StockSecurity == null)
-		throw new InvalidOperationException("Stock security is not specified.");
+		throw new InvalidOperationException("株式銘柄が指定されていません。");
 
 	if (FuturePortfolio == null)
-		throw new InvalidOperationException("Future portfolio is not specified.");
+		throw new InvalidOperationException("先物ポートフォリオが指定されていません。");
 
 	if (StockPortfolio == null)
-		throw new InvalidOperationException("Stock portfolio is not specified.");
+		throw new InvalidOperationException("株式ポートフォリオが指定されていません。");
 
 	_futId = FutureSecurity.ToSecurityId();
 	_stockId = StockSecurity.ToSecurityId();

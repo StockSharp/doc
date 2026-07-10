@@ -113,7 +113,7 @@
   Connector
       .WhenIntervalElapsed(timeInterval)
       .Or(this.WhenCandlesStarted(subscription))
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("ローソク足が確定または時間切れ"))
       .Once()
       .Apply(this);
       
@@ -133,7 +133,7 @@
           Connector.WhenIntervalElapsed(timeInterval), 
           this.WhenCandlesStarted(subscription)
       })
-      .Do(() => this.AddInfoLog("Candle closed or time expired"))
+      .Do(() => this.AddInfoLog("ローソク足が確定または時間切れ"))
       .Once()
       .Apply(this);
       
@@ -293,7 +293,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 	var ruleRegFailed = order.WhenRegisterFailed(this);
 
 	ruleReg
-		.Do(() => LogInfo("Order #1 registered"))
+		.Do(() => LogInfo("注文 #1 が登録されました"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleRegFailed);  // ルールは相互排他的
@@ -326,7 +326,7 @@ sub.WhenTickTradeReceived(this).Do(t =>
 		.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
 		.Do(t =>
 		{
-			LogInfo($"Rule WhenLastTradePriceMore or WhenLastTradePriceLess triggered: tick={t}");
+			LogInfo($"ルール WhenLastTradePriceMore または WhenLastTradePriceLess が発動: tick={t}");
 		})
 		.Apply(this);
 })

@@ -25,7 +25,7 @@ El método enruta automáticamente los datos a manejadores específicos por tipo
 await using var stream = File.Create("trades.csv");
 var exporter = new TextExporter(DataType.Ticks, stream,
     "{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}",
-    "Date;Price;Volume");
+    "Fecha;Precio;Volumen");
 
 var (count, lastTime) = await exporter.Export(tickMessages, token);
 ```

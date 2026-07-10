@@ -25,7 +25,7 @@ O método encaminha automaticamente os dados para manipuladores específicos por
 await using var stream = File.Create("trades.csv");
 var exporter = new TextExporter(DataType.Ticks, stream,
     "{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}",
-    "Date;Price;Volume");
+    "Data;Preço;Volume");
 
 var (count, lastTime) = await exporter.Export(tickMessages, token);
 ```

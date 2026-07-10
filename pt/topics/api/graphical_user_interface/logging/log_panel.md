@@ -31,6 +31,6 @@ _logManager.Listeners.Add(new GuiLogListener(LogControl));
 // enviar mensagens de teste do TraceSource:
 Trace.TraceInformation("Info  test message");
 Trace.TraceWarning("Warning test message");
-Trace.TraceError("Error test message");
+Trace.TraceError("Mensagem de teste de erro");
 					
 ```

@@ -25,7 +25,7 @@
 await using var stream = File.Create("trades.csv");
 var exporter = new TextExporter(DataType.Ticks, stream,
     "{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}",
-    "Date;Price;Volume");
+    "日付;価格;出来高");
 
 var (count, lastTime) = await exporter.Export(tickMessages, token);
 ```

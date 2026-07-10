@@ -142,7 +142,7 @@ strategy.PositionChanged += () =>
 [Display(
 	ResourceType = typeof(LocalizedStrings),
 	Name = "My Custom Indicator",
-	Description = "Description of my custom indicator",
+	Description = "我的自定义指标说明",
 	GroupName = "Custom Parameters",
 	Order = 1000
 )]

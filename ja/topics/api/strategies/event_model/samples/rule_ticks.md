@@ -33,7 +33,7 @@ protected override void OnStarted2(DateTime time)
 			.Or(sub.WhenLastTradePriceLess(this, t.Price - 2))
 			.Do(t =>
 			{
-				LogInfo($"The rule WhenLastTradePriceMore Or WhenLastTradePriceLess tick={t}");
+				LogInfo($"ルール WhenLastTradePriceMore または WhenLastTradePriceLess tick={t}");
 			})
 			.Apply(this);
 	})

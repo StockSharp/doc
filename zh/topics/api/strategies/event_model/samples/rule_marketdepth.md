@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 	// -----------------------创建规则。方法 №1-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"规则 WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// -----------------------创建规则。方法 №2-----------------------------------
@@ -38,18 +38,18 @@ protected override void OnStarted2(DateTime time)
 
 	whenMarketDepthChanged.Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"规则 WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// ----------------------规则中的规则-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"规则 WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 		// ----------------------不是 Once 规则-----------------------------------
 		mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 		{
-			LogInfo($"The rule WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+			LogInfo($"规则 WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 		}).Apply(this);
 	}).Once().Apply(this);
 

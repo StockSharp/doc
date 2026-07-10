@@ -42,11 +42,11 @@ class empty_indicator(BaseIndicator):
 		self.Reset()
 
 	def CalcIsFormed(self):
-		"""Determines if the indicator has received sufficient inputs to be considered formed."""
+		"""判断指标是否已收到足够的输入并可视为已形成。"""
 		return self._isFormed
 
 	def Reset(self):
-		"""Resets the indicator's state and internal counters."""
+		"""重置指标状态和内部计数器。"""
 		super(empty_indicator, self).Reset()
 		self._isFormed = False
 		self._counter = 0

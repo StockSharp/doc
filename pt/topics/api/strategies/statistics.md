@@ -142,7 +142,7 @@ Segue-se um exemplo simples de um parâmetro estatístico personalizado:
 [Display(
 	ResourceType = typeof(LocalizedStrings),
 	Name = "My Custom Indicator",
-	Description = "Description of my custom indicator",
+	Description = "Descrição do meu indicador personalizado",
 	GroupName = "Custom Parameters",
 	Order = 1000
 )]

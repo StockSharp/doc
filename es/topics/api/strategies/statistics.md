@@ -142,7 +142,7 @@ A continuación se muestra un ejemplo simple de un parámetro estadístico perso
 [Display(
 	ResourceType = typeof(LocalizedStrings),
 	Name = "My Custom Indicator",
-	Description = "Description of my custom indicator",
+	Description = "Descripción de mi indicador personalizado",
 	GroupName = "Custom Parameters",
 	Order = 1000
 )]

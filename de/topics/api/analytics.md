@@ -130,9 +130,9 @@ public class VolumeTableScript : IAnalyticsScript
         StorageFormats format, DataType dataType,
         CancellationToken cancellationToken)
     {
-        var grid = panel.CreateGrid("Instrument", "Total Candles",
-            "Total Volume", "Average Volume");
-        grid.SetSort("Total Volume", false);
+        var grid = panel.CreateGrid("Instrument", "Kerzen gesamt",
+            "Gesamtvolumen", "Durchschnittsvolumen");
+        grid.SetSort("Gesamtvolumen", false);
 
         foreach (var secId in securities)
         {

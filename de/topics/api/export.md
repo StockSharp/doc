@@ -25,7 +25,7 @@ Die Methode leitet Daten automatisch an typspezifische Handler weiter für: [Quo
 await using var stream = File.Create("trades.csv");
 var exporter = new TextExporter(DataType.Ticks, stream,
     "{ServerTime:default:yyyyMMdd};{TradePrice};{TradeVolume}",
-    "Date;Price;Volume");
+    "Datum;Preis;Volumen");
 
 var (count, lastTime) = await exporter.Export(tickMessages, token);
 ```

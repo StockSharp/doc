@@ -45,7 +45,7 @@ protected override void OnStarted2(DateTime time)
 	// Obtener dos instrumentos para pairs trading
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
-		throw new InvalidOperationException("Two instruments must be specified.");
+		throw new InvalidOperationException("Deben especificarse dos instrumentos.");
 
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;

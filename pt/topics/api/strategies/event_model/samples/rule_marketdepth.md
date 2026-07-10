@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 	// -----------------------Criar regra. Método №1-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Regra WhenOrderBookReceived №1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// -----------------------Criar regra. Método №2-----------------------------------
@@ -38,18 +38,18 @@ protected override void OnStarted2(DateTime time)
 
 	whenMarketDepthChanged.Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Regra WhenOrderBookReceived №2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 	}).Once().Apply(this);
 
 	// ----------------------Regra dentro de regra-----------------------------------
 	mdSub.WhenOrderBookReceived(this).Do((depth) =>
 	{
-		LogInfo($"The rule WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Regra WhenOrderBookReceived №3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 		// ----------------------não é regra Once-----------------------------------
 		mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 		{
-			LogInfo($"The rule WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+			LogInfo($"Regra WhenOrderBookReceived №4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 		}).Apply(this);
 	}).Once().Apply(this);
 

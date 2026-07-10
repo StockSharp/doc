@@ -45,7 +45,7 @@ protected override void OnStarted2(DateTime time)
 	// 获取用于配对交易的两个工具
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
-		throw new InvalidOperationException("Two instruments must be specified.");
+		throw new InvalidOperationException("必须指定两个工具。");
 
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;

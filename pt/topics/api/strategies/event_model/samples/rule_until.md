@@ -31,8 +31,8 @@ protected override void OnStarted2(DateTime time)
 	mdSub.WhenOrderBookReceived(this).Do(depth =>
 	{
 		i++;
-		LogInfo($"The rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-		LogInfo($"The rule WhenOrderBookReceived i={i}");
+		LogInfo($"Regra WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+		LogInfo($"Regra WhenOrderBookReceived i={i}");
 	})
 	.Until(() => i >= 10)
 	.Apply(this);

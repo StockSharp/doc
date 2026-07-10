@@ -119,7 +119,7 @@ public class AlertStrategy : Strategy
         // Preis hat das Level von unten nach oben gekreuzt
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
-            AlertPopup("Price crossed level " + PriceLevel + " upward!");
+            AlertPopup("Preis hat Niveau gekreuzt " + PriceLevel + " upward!");
             AlertSound("Level breakout!");
             BuyMarket();
         }
@@ -128,7 +128,7 @@ public class AlertStrategy : Strategy
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
             Alert(AlertNotifications.Telegram, "Trading signal",
-                "Price broke level " + PriceLevel + " downward");
+                "Preis hat Niveau durchbrochen " + PriceLevel + " downward");
             SellMarket();
         }
     }

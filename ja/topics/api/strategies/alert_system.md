@@ -119,7 +119,7 @@ public class AlertStrategy : Strategy
         // 価格が下から上へレベルを交差
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
-            AlertPopup("Price crossed level " + PriceLevel + " upward!");
+            AlertPopup("価格がレベルを交差しました " + PriceLevel + " upward!");
             AlertSound("Level breakout!");
             BuyMarket();
         }
@@ -128,7 +128,7 @@ public class AlertStrategy : Strategy
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
             Alert(AlertNotifications.Telegram, "Trading signal",
-                "Price broke level " + PriceLevel + " downward");
+                "価格がレベルを突破しました " + PriceLevel + " downward");
             SellMarket();
         }
     }
