@@ -14,7 +14,7 @@ MAC utiliza dos medias móviles con períodos diferentes:
 
 El indicador generalmente se representa como la diferencia entre las medias móviles cortas y largas, lo que permite una fácil identificación del momento de cruce (cuando el valor del indicador cruza la línea cero).
 
-MAC se utiliza ampliamente tanto en estrategias de trading independientes como como parte de sistemas más complejos, como MACD (Moving Average Convergence divergencia).
+MAC se utiliza ampliamente tanto en estrategias de trading independientes como como parte de sistemas más complejos, como MACD (convergencia/divergencia de medias móviles).
 
 ## Parámetros
 

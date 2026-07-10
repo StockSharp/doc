@@ -14,7 +14,7 @@ MAC verwendet zwei gleitende Durchschnitte mit unterschiedlichen Perioden:
 
 Der Indikator wird typischerweise als Differenz zwischen den kurzen und langen gleitenden Durchschnitten dargestellt, was eine einfache Identifizierung des Übergangszeitpunkts (wenn der Indikatorwert die Nulllinie kreuzt) ermöglicht.
 
-MAC wird häufig sowohl in eigenständigen Handelsstrategien als auch als Teil komplexerer Systeme wie MACD (Moving Average Convergence Divergence) verwendet.
+MAC wird häufig sowohl in eigenständigen Handelsstrategien als auch als Teil komplexerer Systeme wie MACD (Konvergenz/Divergenz gleitender Durchschnitte) verwendet.
 
 ## Parameter
 

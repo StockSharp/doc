@@ -14,7 +14,7 @@ O MAC usa duas médias móveis com períodos diferentes:
 
 O indicador é normalmente representado como a diferença entre as médias móveis curta e longa, o que permite identificar facilmente o momento do cruzamento (quando o valor do indicador cruza a linha zero).
 
-O MAC é amplamente usado tanto em estratégias de trading autónomas como como parte de sistemas mais complexos, como o MACD (Moving Average Convergence Divergence).
+O MAC é amplamente usado tanto em estratégias de trading autónomas como como parte de sistemas mais complexos, como o MACD (convergência/divergência de médias móveis).
 
 ## Parâmetros
 
@@ -85,4 +85,3 @@ O indicador Moving Average Crossover pode ser interpretado da seguinte forma:
 [EMA](ema.md)
 [MACD](macd.md)
 [MovingAverageRibbon](moving_average_ribbon.md)
-

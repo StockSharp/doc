@@ -6,7 +6,7 @@
 
 ## 説明
 
-Percentage Volume Oscillator (PVO) は、価格ではなく取引量に適用される MACD (Moving Average Convergence Divergence) インジケーターの修正版です。PPO (Percentage Price Oscillator) と同様に、PVO は高速および低速の指数移動平均の差を絶対単位ではなくパーセンテージで表します。これにより、取引量水準の異なる複数の銘柄を比較する場合や、単一の銘柄を長期間にわたって分析する場合に、PVO は特に有用です。
+Percentage Volume Oscillator (PVO) は、価格ではなく取引量に適用される MACD (移動平均収束拡散法) インジケーターの修正版です。PPO (Percentage Price Oscillator) と同様に、PVO は高速および低速の指数移動平均の差を絶対単位ではなくパーセンテージで表します。これにより、取引量水準の異なる複数の銘柄を比較する場合や、単一の銘柄を長期間にわたって分析する場合に、PVO は特に有用です。
 
 PVO は 3 つの構成要素で構成されます。
 1. **PVO ライン** - 高速および低速の取引量 EMA のパーセンテージ差

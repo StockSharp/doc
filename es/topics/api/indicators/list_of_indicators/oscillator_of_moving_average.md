@@ -8,7 +8,7 @@ Para utilizar el indicador, debe utilizar la clase [OscillatorOfMovingAverage](x
 
 El Oscillator of Moving Average (OMA) representa la diferencia entre una media móvil corta y larga. Este indicador ayuda a determinar la fuerza de la tendencia y sus posibles cambios al analizar la relación entre los promedios móviles de diferentes períodos.
 
-OMA funciona según un principio similar a MACD (Convergencia de media móvil divergencia), pero de una forma más sencilla, ya que no incluye una línea de señal. El indicador oscila alrededor de la línea cero, donde los valores positivos indican que la media móvil corta está por encima de la media móvil larga (estado alcista), y los valores negativos indican que la media móvil corta está por debajo de la media móvil larga (estado bajista).
+OMA funciona según un principio similar a MACD (convergencia/divergencia de medias móviles), pero de una forma más sencilla, ya que no incluye una línea de señal. El indicador oscila alrededor de la línea cero, donde los valores positivos indican que la media móvil corta está por encima de la media móvil larga (estado alcista), y los valores negativos indican que la media móvil corta está por debajo de la media móvil larga (estado bajista).
 
 La principal fortaleza de OMA radica en su capacidad para identificar cambios en el impulso de la tendencia y generar señales de trading basadas en cruces de línea cero y divergencias de precios.
 

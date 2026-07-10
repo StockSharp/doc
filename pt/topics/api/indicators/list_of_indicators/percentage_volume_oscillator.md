@@ -6,7 +6,7 @@ Para usar o indicador, é necessário usar a classe [PercentageVolumeOscillator]
 
 ## Descrição
 
-O Percentage Volume Oscillator (PVO) é uma modificação do indicador MACD (Moving Average Convergence Divergence), aplicada ao volume de negociação em vez do preço. Tal como o PPO (Percentage Price Oscillator), o PVO expressa a diferença entre médias móveis exponenciais rápida e lenta como percentagem, em vez de unidades absolutas. Isto torna o PVO particularmente útil ao comparar instrumentos diferentes com níveis de volume distintos ou ao analisar um único instrumento durante um período alargado.
+O Percentage Volume Oscillator (PVO) é uma modificação do indicador MACD (convergência/divergência de médias móveis), aplicada ao volume de negociação em vez do preço. Tal como o PPO (Percentage Price Oscillator), o PVO expressa a diferença entre médias móveis exponenciais rápida e lenta como percentagem, em vez de unidades absolutas. Isto torna o PVO particularmente útil ao comparar instrumentos diferentes com níveis de volume distintos ou ao analisar um único instrumento durante um período alargado.
 
 O PVO consiste em três componentes:
 1. **Linha PVO** - diferença percentual entre a EMA rápida e a EMA lenta do volume
@@ -94,4 +94,3 @@ O Percentage Volume Oscillator pode ser interpretado da seguinte forma:
 [OBV](on_balance_volume.md)
 [MACD](macd.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
-

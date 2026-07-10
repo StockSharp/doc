@@ -8,7 +8,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [OscillatorOfMovin
 
 Der Oscillator of Moving Average (OMA) stellt die Differenz zwischen einem kurzen und einem langen gleitenden Durchschnitt dar. Dieser Indikator hilft bei der Bestimmung der Trendstärke und ihrer möglichen Änderungen, indem er die Beziehung zwischen gleitenden Durchschnitten verschiedener Zeiträume analysiert.
 
-OMA funktioniert nach einem ähnlichen Prinzip wie MACD (Moving Average Convergence Divergence), jedoch in einer einfacheren Form, da es keine Signalleitung enthält. Der Indikator schwingt um die Nulllinie, wobei positive Werte darauf hinweisen, dass der kurze gleitende Durchschnitt über dem langen gleitenden Durchschnitt liegt (bullischer Zustand), und negative Werte anzeigen, dass der kurze gleitende Durchschnitt unter dem langen gleitenden Durchschnitt liegt (bärischer Zustand).
+OMA funktioniert nach einem ähnlichen Prinzip wie MACD (Konvergenz/Divergenz gleitender Durchschnitte), jedoch in einer einfacheren Form, da es keine Signalleitung enthält. Der Indikator schwingt um die Nulllinie, wobei positive Werte darauf hinweisen, dass der kurze gleitende Durchschnitt über dem langen gleitenden Durchschnitt liegt (bullischer Zustand), und negative Werte anzeigen, dass der kurze gleitende Durchschnitt unter dem langen gleitenden Durchschnitt liegt (bärischer Zustand).
 
 Die Hauptstärke von OMA liegt in seiner Fähigkeit, Veränderungen in der Trenddynamik zu erkennen und Handelssignale basierend auf Nulllinienkreuzungen und Preisdivergenzen zu generieren.
 
