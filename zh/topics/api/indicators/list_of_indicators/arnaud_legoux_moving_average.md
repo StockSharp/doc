@@ -39,7 +39,7 @@ ALMA 计算分几个阶段进行：
 
 2. 归一化权重：
    ```
-   Sum_of_weights = sum of all w(i)
+   Sum_of_weights = 所有 w(i) 的总和
    
    For each i from 0 to Length-1:
    w_norm(i) = w(i) / Sum_of_weights

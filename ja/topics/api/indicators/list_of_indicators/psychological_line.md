@@ -25,7 +25,7 @@ PSY 指標は、市場が買われ過ぎまたは売られ過ぎの状態にあ�
 Psychological Line の計算は非常にシンプルです。
 
 ```
-PSY = (Number of rising periods over Length periods / Length) * 100
+PSY = (Length 期間における上昇期間数 / Length) * 100
 ```
 
 ここで:

@@ -42,12 +42,12 @@ O cálculo do indicador FVE envolve vários passos:
 
 4. Normalizar para considerar a escala do mercado:
    ```
-   Normalized Value = Volume-Weighted Price Change / (Average Volume over period * Price Volatility)
+   Normalized Value = Volume-Weighted Price Change / (volume médio durante o período * Price Volatility)
    ```
 
 5. Soma acumulada e suavização:
    ```
-   FVE = SMA(Cumulative Sum of Normalized Values, Length)
+   FVE = SMA(soma acumulada de valores normalizados, Length)
    ```
 
 Onde:

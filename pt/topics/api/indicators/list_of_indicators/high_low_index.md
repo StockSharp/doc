@@ -27,12 +27,12 @@ O cálculo do High Low Index envolve os seguintes passos:
 
 1. Contar o número de títulos que atingem novos máximos ao longo do período Length:
    ```
-   New Highs = Number of instruments reaching new highs over the Length period
+   New Highs = número de instrumentos que atingem novos máximos durante o período Length
    ```
 
 2. Contar o número de títulos que atingem novos mínimos ao longo do período Length:
    ```
-   New Lows = Number of instruments reaching new lows over the Length period
+   New Lows = número de instrumentos que atingem novos mínimos durante o período Length
    ```
 
 3. Calcular o High Low Index como o rácio entre a diferença de novos máximos e mínimos e a sua soma:

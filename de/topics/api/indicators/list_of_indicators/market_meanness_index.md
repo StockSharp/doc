@@ -29,7 +29,7 @@ Die Market Meanness Index-Berechnung umfasst die folgenden Schritte:
 
 3. Berechnen Sie MMI als prozentuales Verhältnis:
    ```
-   MMI = (Number of non-sequential pairs / Total number of pairs) * 100
+   MMI = (Anzahl nichtsequenzieller Paare / Gesamtzahl der Paare) * 100
    ```
 
 Formal lässt sich dies wie folgt darstellen:

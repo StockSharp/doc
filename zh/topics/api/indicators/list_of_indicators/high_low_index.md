@@ -27,12 +27,12 @@ HLI 在以下方面特别有用：
 
 1. 统计在指定期间内达到新高的交易品种数量：
    ```
-   New Highs = Number of instruments reaching new highs over the Length period
+   New Highs = Length 周期内创出新高的工具数量
    ```
 
 2. 统计在指定期间内达到新低的交易品种数量：
    ```
-   New Lows = Number of instruments reaching new lows over the Length period
+   New Lows = Length 周期内创出新低的工具数量
    ```
 
 3. 将新高与新低之差与它们的总和之比计算为高低指数：

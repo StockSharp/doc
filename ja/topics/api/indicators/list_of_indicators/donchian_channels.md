@@ -30,12 +30,12 @@ Donchian Channels の計算は非常に単純です。
 
 1. 上側チャネルライン:
    ```
-   Upper = Highest High over Length period
+   Upper = Length 期間の Highest High
    ```
 
 2. 下側チャネルライン:
    ```
-   Lower = Lowest Low over Length period
+   Lower = Length 期間の Lowest Low
    ```
 
 3. 中央チャネルライン:

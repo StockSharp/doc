@@ -31,7 +31,7 @@ En la implementación práctica, los precios típicos para cada período (vela) 
 
 ```
 Typical Price = (High + Low + Close) / 3
-TWAP = Sum(Typical Price) / Number of Periods
+TWAP = Sum(Typical Price) / número de periodos
 ```
 
 También se puede utilizar una fórmula recursiva para determinar el valor TWAP actual en tiempo real:

@@ -39,7 +39,7 @@ ALMA の計算はいくつかの段階で行われます。
 
 2. 重みを正規化します。
    ```
-   Sum_of_weights = sum of all w(i)
+   Sum_of_weights = すべての w(i) の合計
    
    For each i from 0 to Length-1:
    w_norm(i) = w(i) / Sum_of_weights

@@ -30,12 +30,12 @@
 
 1. 上通道线：
    ```
-   Upper = Highest High over Length period
+   Upper = Length 周期内 Highest High
    ```
 
 2. 下通道线：
    ```
-   Lower = Lowest Low over Length period
+   Lower = Length 周期内 Lowest Low
    ```
 
 3. 中通道线：

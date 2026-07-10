@@ -27,12 +27,12 @@ Die High Low Index-Berechnung umfasst die folgenden Schritte:
 
 1. Zählen Sie die Anzahl der Wertpapiere, die im Length-Zeitraum neue Höchststände erreicht haben:
    ```
-   New Highs = Number of instruments reaching new highs over the Length period
+   New Highs = Anzahl der Instrumente mit neuen Hochs über die Length-Periode
    ```
 
 2. Zählen Sie die Anzahl der Wertpapiere, die im Length-Zeitraum neue Tiefststände erreicht haben:
    ```
-   New Lows = Number of instruments reaching new lows over the Length period
+   New Lows = Anzahl der Instrumente mit neuen Tiefs über die Length-Periode
    ```
 
 3. Berechnen Sie High Low Index als Verhältnis der Differenz zwischen neuen Höchst- und Tiefstständen zu ihrer Summe:

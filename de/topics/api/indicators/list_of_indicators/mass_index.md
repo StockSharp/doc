@@ -44,7 +44,7 @@ Die Mass Index-Berechnung umfasst die folgenden Schritte:
 
 5. Sum-Verhältnisse über 25 Perioden:
    ```
-   MI = Sum(Ratio over last Length periods)
+   MI = Sum(Ratio über die letzten Length-Perioden)
    ```
 
 Dabei gilt:

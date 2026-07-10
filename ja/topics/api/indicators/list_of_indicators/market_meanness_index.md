@@ -29,7 +29,7 @@ Market Meanness Index の計算には、次の手順が含まれます。
 
 3. MMI をパーセンテージ比率として計算します。
    ```
-   MMI = (Number of non-sequential pairs / Total number of pairs) * 100
+   MMI = (非連続ペア数 / ペア総数) * 100
    ```
 
 形式的には、これは次のように表せます。

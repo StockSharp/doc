@@ -44,7 +44,7 @@ MI 使用价格区间的指数移动平均线（EMA）来衡量波动性。它�
 
 5. 在25个周期内求比率之和：
    ```
-   MI = Sum(Ratio over last Length periods)
+   MI = Sum(最近 Length 个周期内的 Ratio)
    ```
 
 其中：

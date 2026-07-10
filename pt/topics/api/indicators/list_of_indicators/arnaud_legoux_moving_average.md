@@ -41,7 +41,7 @@ O cálculo da ALMA ocorre em várias etapas:
 
 2. Normalizar os pesos:
    ```
-   Sum_of_weights = sum of all w(i)
+   Sum_of_weights = soma de todos os w(i)
    
    For each i from 0 to Length-1:
    w_norm(i) = w(i) / Sum_of_weights

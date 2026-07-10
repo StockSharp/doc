@@ -33,8 +33,8 @@ Die Intraday Momentum Index-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie die Summe der positiven und negativen Bewegungen über den Length-Zeitraum:
    ```
-   Sum Gains = Sum of all Gains over Length period
-   Sum Losses = Sum of all Losses over Length period
+   Sum Gains = Summe aller Gains über Length-Periode
+   Sum Losses = Summe aller Losses über Length-Periode
    ```
 
 3. Berechnen Sie IMI mit einer Formel ähnlich der von RSI:

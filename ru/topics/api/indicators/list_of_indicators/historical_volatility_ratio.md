@@ -28,12 +28,12 @@ HVR рассчитывается как отношение краткосроч�
 
 1. Расчет краткосрочной исторической волатильности:
    ```
-   Short-term Volatility = Standard Deviation of Log Returns over ShortPeriod * Sqrt(Trading Days Per Year)
+   Short-term Volatility = стандартное отклонение логарифмических доходностей за ShortPeriod * Sqrt(TradingDaysPerYear)
    ```
 
 2. Расчет долгосрочной исторической волатильности:
    ```
-   Long-term Volatility = Standard Deviation of Log Returns over LongPeriod * Sqrt(Trading Days Per Year)
+   Long-term Volatility = стандартное отклонение логарифмических доходностей за LongPeriod * Sqrt(TradingDaysPerYear)
    ```
 
 3. Расчет HVR как отношения краткосрочной волатильности к долгосрочной:
@@ -44,7 +44,7 @@ HVR рассчитывается как отношение краткосроч�
 где:
 - Log Returns - логарифмические доходности (ln(Price[i] / Price[i-1]))
 - Standard Deviation - стандартное отклонение
-- Trading Days Per Year - количество торговых дней в году (обычно 252 для фондовых рынков)
+- TradingDaysPerYear - количество торговых дней в году (обычно 252 для фондовых рынков)
 - ShortPeriod - короткий период для расчета волатильности
 - LongPeriod - длинный период для расчета волатильности
 

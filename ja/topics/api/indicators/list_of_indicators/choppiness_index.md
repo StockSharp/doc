@@ -29,13 +29,13 @@ Choppiness Index の計算には、次の手順が含まれます。
 
 1. 選択した期間にわたる True Range の合計を計算します。
    ```
-   Sum of TR = Sum(TR(i)) for i from 1 to Length
+   Sum of TR = i = 1 から Length までの Sum(TR(i))
    ```
 
 2. 選択した期間にわたる最高 High と最低 Low を計算します。
    ```
-   Highest High = maximum High value over Length period
-   Lowest Low = minimum Low value over Length period
+   Highest High = Length 期間における High の最大値
+   Lowest Low = Length 期間における Low の最小値
    ```
 
 3. CHOP インデックスを計算します。

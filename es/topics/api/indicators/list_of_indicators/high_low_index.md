@@ -27,12 +27,12 @@ El cálculo de High Low Index implica los siguientes pasos:
 
 1. Cuente la cantidad de valores que alcanzaron nuevos máximos durante el período Length:
    ```
-   New Highs = Number of instruments reaching new highs over the Length period
+   New Highs = número de instrumentos que alcanzan nuevos máximos durante el periodo Length
    ```
 
 2. Cuente la cantidad de valores que alcanzaron nuevos mínimos durante el período Length:
    ```
-   New Lows = Number of instruments reaching new lows over the Length period
+   New Lows = número de instrumentos que alcanzan nuevos mínimos durante el periodo Length
    ```
 
 3. Calcule High Low Index como la relación entre la diferencia entre nuevos máximos y mínimos y su suma:

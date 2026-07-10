@@ -44,7 +44,7 @@ El cálculo de Mass Index implica los siguientes pasos:
 
 5. Ratios Sum en 25 periodos:
    ```
-   MI = Sum(Ratio over last Length periods)
+   MI = Sum(Ratio durante los últimos periodos Length)
    ```
 
 donde:

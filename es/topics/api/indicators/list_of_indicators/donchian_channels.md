@@ -30,12 +30,12 @@ El cálculo de Donchian Channels es bastante simple:
 
 1. Línea del canal superior:
    ```
-   Upper = Highest High over Length period
+   Upper = Highest High durante el periodo Length
    ```
 
 2. Línea de canal inferior:
    ```
-   Lower = Lowest Low over Length period
+   Lower = Lowest Low durante el periodo Length
    ```
 
 3. Línea del canal medio:

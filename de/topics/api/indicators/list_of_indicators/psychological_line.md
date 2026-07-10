@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 Die Psychological Line-Berechnung ist sehr einfach:
 
 ```
-PSY = (Number of rising periods over Length periods / Length) * 100
+PSY = (Anzahl steigender Perioden über Length-Perioden / Length) * 100
 ```
 
 Dabei gilt:

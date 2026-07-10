@@ -47,7 +47,7 @@ FVE особенно полезен для:
 
 5. Кумулятивное суммирование и сглаживание:
    ```
-   FVE = SMA(Cumulative Sum of Normalized Values, Length)
+   FVE = SMA(накопленная сумма нормализованных значений, Length)
    ```
 
 где:

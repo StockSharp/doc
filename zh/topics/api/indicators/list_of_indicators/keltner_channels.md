@@ -32,7 +32,7 @@
 
 2. 计算平均真实波幅：
    ```
-   ATR = Average True Range over Length period
+   ATR = Length 周期内 Average True Range
    ```
 
 3. 计算上轨和下轨：

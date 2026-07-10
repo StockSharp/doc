@@ -44,7 +44,7 @@ Mass Index の計算には、次の手順が含まれます。
 
 5. 25 期間にわたって比率を合計します。
    ```
-   MI = Sum(Ratio over last Length periods)
+   MI = Sum(直近 Length 期間の Ratio)
    ```
 
 ここで:

@@ -39,7 +39,7 @@ CMF 计算包括以下步骤：
 
 3. 计算查金资金流量：
    ```
-   CMF = Sum(Money Flow Volume over Length period) / Sum(Volume over Length period)
+   CMF = Sum(Length 周期内 Money Flow Volume) / Sum(Length 周期内 Volume)
    ```
 
 ## 解释

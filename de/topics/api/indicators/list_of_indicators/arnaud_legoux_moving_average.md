@@ -39,7 +39,7 @@ Die ALMA-Berechnung erfolgt in mehreren Schritten:
 
 2. Normalisierung der Gewichte:
    ```
-   Sum_of_weights = sum of all w(i)
+   Sum_of_weights = Summe aller w(i)
 
    For each i from 0 to Length-1:
    w_norm(i) = w(i) / Sum_of_weights

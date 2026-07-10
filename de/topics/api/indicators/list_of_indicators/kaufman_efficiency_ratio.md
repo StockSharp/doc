@@ -30,7 +30,7 @@ Die Kaufman Efficiency Ratio-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie die Gesamtbewegung (Summe aller Änderungen) über den Zeitraum:
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) for i from (current - Length + 1) to current
+   Volatility = Sum(|Price[i] - Price[i-1]|) für i von (current - Length + 1) bis current
    ```
 
 3. Wirkungsgradverhältnis berechnen:

@@ -31,7 +31,7 @@ TWAP = (P₁ + P₂ + P₃ + ... + Pₙ) / n
 
 ```
 Typical Price = (High + Low + Close) / 3
-TWAP = Sum(Typical Price) / Number of Periods
+TWAP = Sum(Typical Price) / 周期数量
 ```
 
 递归公式也可以用于实时确定当前的TWAP值：

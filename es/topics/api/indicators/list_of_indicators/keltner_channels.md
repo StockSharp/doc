@@ -32,7 +32,7 @@ El cálculo de los canales de Keltner implica los siguientes pasos:
 
 2. Calcular el rango verdadero promedio:
    ```
-   ATR = Average True Range over Length period
+   ATR = Average True Range durante el periodo Length
    ```
 
 3. Calcular las bandas superior e inferior:

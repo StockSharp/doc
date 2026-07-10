@@ -33,8 +33,8 @@ IMI评估在给定周期内收盘价超过开盘价（正动量）或低于开�
 
 2. 计算在长度期间正向和负向波动的总和：
    ```
-   Sum Gains = Sum of all Gains over Length period
-   Sum Losses = Sum of all Losses over Length period
+   Sum Gains = Length 周期内所有 Gains 的总和
+   Sum Losses = Length 周期内所有 Losses 的总和
    ```
 
 3. 使用类似于RSI的公式计算IMI：

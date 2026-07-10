@@ -25,7 +25,7 @@ PSY 指标有助于判断市场是否处于超买或超卖状态，并可以预�
 心理线的计算非常简单：
 
 ```
-PSY = (Number of rising periods over Length periods / Length) * 100
+PSY = (Length 周期内上涨周期数量 / Length) * 100
 ```
 
 其中：

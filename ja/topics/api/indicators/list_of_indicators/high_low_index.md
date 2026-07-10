@@ -27,12 +27,12 @@ High Low Index の計算には、次の手順が含まれます。
 
 1. Length 期間に新高値を付けた証券数を数えます。
    ```
-   New Highs = Number of instruments reaching new highs over the Length period
+   New Highs = Length 期間内に新高値を付けた銘柄数
    ```
 
 2. Length 期間に新安値を付けた証券数を数えます。
    ```
-   New Lows = Number of instruments reaching new lows over the Length period
+   New Lows = Length 期間内に新安値を付けた銘柄数
    ```
 
 3. 新高値と新安値の差をそれらの合計で割った比率として High Low Index を計算します。

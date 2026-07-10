@@ -42,12 +42,12 @@ FVE インジケーターの計算には複数の手順が含まれます:
 
 4. 市場規模を考慮して正規化します:
    ```
-   Normalized Value = Volume-Weighted Price Change / (Average Volume over period * Price Volatility)
+   Normalized Value = Volume-Weighted Price Change / (期間中の平均 Volume * Price Volatility)
    ```
 
 5. 累積合計と平滑化を行います:
    ```
-   FVE = SMA(Cumulative Sum of Normalized Values, Length)
+   FVE = SMA(Normalized Values の累積合計, Length)
    ```
 
 ここで:

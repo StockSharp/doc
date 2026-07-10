@@ -39,7 +39,7 @@ El cálculo de CMF implica los siguientes pasos:
 
 3. Calcular Chaikin Money Flow:
    ```
-   CMF = Sum(Money Flow Volume over Length period) / Sum(Volume over Length period)
+   CMF = Sum(volumen de flujo de dinero durante el periodo Length) / Sum(volumen durante el periodo Length)
    ```
 
 ## Interpretación

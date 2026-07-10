@@ -42,12 +42,12 @@ FVE 指标的计算涉及几个步骤：
 
 4. 进行归一化以考虑市场规模：
    ```
-   Normalized Value = Volume-Weighted Price Change / (Average Volume over period * Price Volatility)
+   Normalized Value = Volume-Weighted Price Change / (周期内平均 Volume * Price Volatility)
    ```
 
 5. 累计求和与平滑：
    ```
-   FVE = SMA(Cumulative Sum of Normalized Values, Length)
+   FVE = SMA(Normalized Values 的累计总和, Length)
    ```
 
 其中：

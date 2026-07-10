@@ -29,13 +29,13 @@ Die Choppiness Index-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Summe der wahren Reichweiten über den ausgewählten Zeitraum:
    ```
-   Sum of TR = Sum(TR(i)) for i from 1 to Length
+   Sum of TR = Sum(TR(i)) für i von 1 bis Length
    ```
 
 2. Berechnen Sie den höchsten High und den niedrigsten Low über den ausgewählten Zeitraum:
    ```
-   Highest High = maximum High value over Length period
-   Lowest Low = minimum Low value over Length period
+   Highest High = maximaler High-Wert über Length-Periode
+   Lowest Low = minimaler Low-Wert über Length-Periode
    ```
 
 3. Berechnen Sie den CHOP-Index:

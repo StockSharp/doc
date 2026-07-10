@@ -30,7 +30,7 @@ KER 值在 0 和 1 之间波动：
 
 2. 计算期间的总移动量（所有变化的总和）：
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) for i from (current - Length + 1) to current
+   Volatility = Sum(|Price[i] - Price[i-1]|) i 从 (current - Length + 1) 到 current
    ```
 
 3. 计算效率比率：

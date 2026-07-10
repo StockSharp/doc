@@ -29,13 +29,13 @@ CHOP 对以下情况特别有用：
 
 1. 计算所选期间的真实波动幅度总和：
    ```
-   Sum of TR = Sum(TR(i)) for i from 1 to Length
+   Sum of TR = i 从 1 到 Length 的 Sum(TR(i))
    ```
 
 2. 计算所选期间的最高高点和最低低点：
    ```
-   Highest High = maximum High value over Length period
-   Lowest Low = minimum Low value over Length period
+   Highest High = Length 周期内 High 的最大值
+   Lowest Low = Length 周期内 Low 的最小值
    ```
 
 3. 计算CHOP指数：

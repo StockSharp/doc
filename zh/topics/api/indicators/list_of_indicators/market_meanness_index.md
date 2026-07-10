@@ -29,7 +29,7 @@ MMI 基于计算不遵循简单线性模式的价格值对（通常是收盘价�
 
 3. 将 MMI 计算为百分比比率：
    ```
-   MMI = (Number of non-sequential pairs / Total number of pairs) * 100
+   MMI = (非连续配对数量 / 配对总数) * 100
    ```
 
 形式上，这可以表示为：

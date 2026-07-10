@@ -32,7 +32,7 @@ Die Keltner Channels-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie die durchschnittliche wahre Reichweite:
    ```
-   ATR = Average True Range over Length period
+   ATR = Average True Range über Length-Periode
    ```
 
 3. Berechnen Sie die oberen und unteren Bänder:
