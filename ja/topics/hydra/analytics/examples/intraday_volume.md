@@ -123,7 +123,7 @@ class time_volume_script(IAnalyticsScript):
 		security = securities[0]
 
 		if data_type is None:
-			logs.LogWarning(f"Unsupported data type {data_type}.")
+			logs.LogWarning(f"サポートされていないデータ型 {data_type}。")
 			return Task.CompletedTask
 
 		message_type = data_type.MessageType

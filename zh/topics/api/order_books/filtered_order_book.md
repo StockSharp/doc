@@ -22,7 +22,7 @@
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
             // 过滤订单簿的处理逻辑
-            Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
+            Console.WriteLine($"已收到 {orderBook.SecurityId} 的过滤订单簿。");
         }
     };
     ```

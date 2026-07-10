@@ -59,7 +59,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
+	Console.WriteLine($"找到证券: {security.Id} - {security.Name}, 类型: {security.Type}");
 	
 	// 这里可以将交易品种添加到集合或执行其他操作
 	Securities.Add(security);
@@ -71,7 +71,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
+	Console.WriteLine($"搜索完成。找到证券数: {Securities.Count}");
 }
 
 // 订阅错误处理器
@@ -80,7 +80,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Instrument search error: {error.Message}");
+	Console.WriteLine($"证券搜索错误: {error.Message}");
 }
 
 // 订阅事件
@@ -129,7 +129,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 			
 		// 将找到的交易品种添加到集合
 		foundSecurities.Add(security);
-		Console.WriteLine($"Found: {security.Id}, {security.Name}");
+		Console.WriteLine($"找到: {security.Id}, {security.Name}");
 	}
 	
 	// 搜索完成订阅
@@ -141,7 +141,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		// 将结果复制到主集合
 		_searchResults.AddRange(foundSecurities);
 		
-		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
+		Console.WriteLine($"搜索完成。找到证券数: {foundSecurities.Count}");
 		
 		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;
@@ -155,7 +155,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		Console.WriteLine($"Instrument search error: {error.Message}");
+		Console.WriteLine($"证券搜索错误: {error.Message}");
 		
 		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;

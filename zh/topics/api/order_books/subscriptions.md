@@ -11,7 +11,7 @@
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
 	// 这里可以处理订单簿数据，例如显示在屏幕上或用于交易策略
-	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
+	Console.WriteLine($"已收到 {orderBook.SecurityId} 的订单簿。最佳买价: {orderBook.GetBestBid()?.Price}, 最佳卖价: {orderBook.GetBestAsk()?.Price}");
 }
 
 // 订阅事件

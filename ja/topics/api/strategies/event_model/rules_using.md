@@ -17,7 +17,7 @@
      };
      order
          .WhenRegistered(Connector)
-         .Do(() => Connector.AddInfoLog("Order successfully registered"))
+         .Do(() => Connector.AddInfoLog("注文が正常に登録されました"))
          .Once()
          .Apply(this);
       
@@ -76,7 +76,7 @@
   ruleCanceled
       .Do(() =>
       {
-          this.AddInfoLog("Order successfully canceled");
+          this.AddInfoLog("注文が正常にキャンセルされました");
           // 注文に関連付けられたすべてのルールを削除
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
@@ -84,12 +84,12 @@
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() => this.AddInfoLog("Order successfully registered"))
+      .Do(() => this.AddInfoLog("注文が正常に登録されました"))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() => this.AddInfoLog("Order not accepted by the exchange"))
+      .Do(() => this.AddInfoLog("注文は取引所に承認されませんでした"))
       .Once()
       .Apply(this);
   order
@@ -208,8 +208,8 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+				LogInfo($"ルール WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+				LogInfo($"ルール WhenCandlesStarted and WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);
 
@@ -299,7 +299,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Exclusive(ruleRegFailed);  // ルールは相互排他的
 
 	ruleRegFailed
-		.Do(() => LogInfo("Order #1 not registered"))
+		.Do(() => LogInfo("注文 #1 は登録されていません"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleReg);  // ルールは相互排他的

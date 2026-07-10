@@ -22,7 +22,7 @@ A abordagem para trabalhar com o livro de ofertas filtrado usa o mesmo método q
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
             // Lógica de processamento do livro de ofertas filtrado
-            Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
+            Console.WriteLine($"Livro de ofertas filtrado recebido para {orderBook.SecurityId}.");
         }
     };
     ```

@@ -66,10 +66,10 @@ Para simplificar o trabalho com operações aritméticas sobre valores como perc
 
   ```csharp
   if (absolute > percent)
-      Console.WriteLine("Absolute value is greater than percentage");
+      Console.WriteLine("O valor absoluto é maior que o percentual");
       
   if (absolute == percent)
-      Console.WriteLine("Values are equal");
+      Console.WriteLine("Os valores são iguais");
   ```
 
 - Para tornar um valor positivo, pode usar o método `Abs()`:

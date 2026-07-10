@@ -22,7 +22,7 @@
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
             // フィルター済み板情報の処理ロジック
-            Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
+            Console.WriteLine($"{orderBook.SecurityId} のフィルター済み板を受信しました。");
         }
     };
     ```

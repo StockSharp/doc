@@ -202,7 +202,7 @@
        var deltaCandle = (DeltaCandleMessage)candle;
        
        // 处理 delta-K线
-       Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+       Console.WriteLine($"Delta K线 {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
    
@@ -210,7 +210,7 @@
    _connector.SubscriptionOnline += sub => 
    {
        if (sub == subscription)
-           Console.WriteLine("Delta-candle subscription has transitioned to online mode");
+           Console.WriteLine("Delta K线订阅已切换到在线模式");
    };
    
    // 启动订阅
@@ -330,14 +330,14 @@ public class DeltaCandleStrategy : Strategy
 		// 检查 delta 是否足以形成信号
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
-			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
+			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} 小于阈值 {SignalDelta}。不生成信号。");
 			return;
 		}
 
 		// 操作方向取决于 delta 符号
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 		
-		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
+		this.AddInfoLog($"Delta K线已完成。Delta: {deltaCandle.CurrentDelta}。方向: {direction}");
 		
 		// 使用 K线收盘价确定价格
 		var price = deltaCandle.ClosePrice;

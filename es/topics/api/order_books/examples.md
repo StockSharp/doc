@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}");
+	Console.WriteLine($"Mejor precio de compra: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}");
+	Console.WriteLine($"Mejor precio de venta: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"Mejor precio de compra: {bestBid.Price}, volume: {bestBid.Volume}");
 }
 else
 {
-	Console.WriteLine("No best buy orders.");
+	Console.WriteLine("No hay mejores órdenes de compra.");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"Mejor precio de venta: {bestAsk.Price}, volume: {bestAsk.Volume}");
 }
 else
 {
-	Console.WriteLine("No best sell orders.");
+	Console.WriteLine("No hay mejores órdenes de venta.");
 }
 ```
 
@@ -51,12 +51,12 @@ Para analizar la profundidad del libro de órdenes, puede iterar por los element
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-	Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
+	Console.WriteLine($"Precio de compra: {bid.Price}, volumen: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-	Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
+	Console.WriteLine($"Precio de venta: {ask.Price}, volumen: {ask.Volume}");
 }
 ```
 
@@ -79,7 +79,7 @@ foreach (var bid in orderBook.Bids)
 {
 	if (bid.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
+		Console.WriteLine($"Compra: precio {bid.Price}, volumen {bid.Volume}");
 	}
 }
 
@@ -87,7 +87,7 @@ foreach (var ask in orderBook.Asks)
 {
 	if (ask.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
+		Console.WriteLine($"Venta: precio {ask.Price}, volumen {ask.Volume}");
 	}
 }
 ```

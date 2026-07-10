@@ -131,7 +131,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		:param longValue: The current value of the long SMA.
 		:param shortValue: The current value of the short SMA.
 	"""
-	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
+	self.LogInfo("新K线 {0}: {6} {1};{2};{3};{4}; 成交量 {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
 	# 如果 K线尚未完成，则不执行任何操作
 	if candle.State != CandleStates.Finished:

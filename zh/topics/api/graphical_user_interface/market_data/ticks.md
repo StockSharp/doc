@@ -198,7 +198,7 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
 	// 输出大额成交信息
-	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"大额交易: {tick.SecurityId}, {tick.ServerTime}, 价格: {tick.Price}, 成交量: {tick.Volume}");
 	
 	// 可以添加声音或视觉通知
 	this.GuiAsync(() => 

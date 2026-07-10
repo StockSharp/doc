@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}");
+	Console.WriteLine($"最佳买价: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}");
+	Console.WriteLine($"最佳卖价: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"最佳买价: {bestBid.Price}, 数量: {bestBid.Volume}");
 }
 else
 {
-	Console.WriteLine("No best buy orders.");
+	Console.WriteLine("没有最佳买单。");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"最佳卖价: {bestAsk.Price}, 数量: {bestAsk.Volume}");
 }
 else
 {
-	Console.WriteLine("No best sell orders.");
+	Console.WriteLine("没有最佳卖单。");
 }
 ```
 
@@ -51,12 +51,12 @@ else
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-	Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
+	Console.WriteLine($"买价: {bid.Price}, 数量: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-	Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
+	Console.WriteLine($"卖价: {ask.Price}, 数量: {ask.Volume}");
 }
 ```
 
@@ -79,7 +79,7 @@ foreach (var bid in orderBook.Bids)
 {
 	if (bid.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
+		Console.WriteLine($"买入: 价格 {bid.Price}, 数量 {bid.Volume}");
 	}
 }
 
@@ -87,7 +87,7 @@ foreach (var ask in orderBook.Asks)
 {
 	if (ask.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
+		Console.WriteLine($"卖出: 价格 {ask.Price}, 数量 {ask.Volume}");
 	}
 }
 ```

@@ -11,7 +11,7 @@ StockSharp で板情報をサブスクライブするには、次の手順を実
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
 	// ここで板情報データを処理できます。たとえば、画面に表示したり、取引戦略で使用したりできます。
-	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
+	Console.WriteLine($"{orderBook.SecurityId} の板を受信しました。最良買値: {orderBook.GetBestBid()?.Price}, 最良売値: {orderBook.GetBestAsk()?.Price}");
 }
 
 // イベントにサブスクライブ

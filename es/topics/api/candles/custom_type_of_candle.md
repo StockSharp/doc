@@ -202,7 +202,7 @@
        var deltaCandle = (DeltaCandleMessage)candle;
 
        // Procesar vela delta
-       Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+       Console.WriteLine($"Vela delta {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
 
@@ -210,7 +210,7 @@
    _connector.SubscriptionOnline += sub =>
    {
        if (sub == subscription)
-           Console.WriteLine("Delta-candle subscription has transitioned to online mode");
+           Console.WriteLine("La suscripción de velas delta pasó al modo en línea");
    };
 
    // Iniciar la suscripción
@@ -330,14 +330,14 @@ public class DeltaCandleStrategy : Strategy
 		// Comprobar si delta es suficiente para una señal
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
-			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
+			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} es menor que el valor umbral {SignalDelta}. No se genera señal.");
 			return;
 		}
 
 		// La dirección de la operación depende del signo de delta
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 
-		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
+		this.AddInfoLog($"Vela delta completada. Delta: {deltaCandle.CurrentDelta}. Dirección: {direction}");
 
 		// Usar el precio de cierre de la vela para determinar el precio
 		var price = deltaCandle.ClosePrice;

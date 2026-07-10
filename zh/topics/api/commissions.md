@@ -93,7 +93,7 @@ manager.Rules.Add(new CommissionTurnOverRule
 decimal? commission = manager.Process(executionMsg);
 if (commission != null)
 {
-    Console.WriteLine($"Commission for message: {commission.Value}");
+    Console.WriteLine($"消息手续费: {commission.Value}");
 }
 
 // 累计总佣金

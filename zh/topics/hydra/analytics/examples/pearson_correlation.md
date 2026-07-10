@@ -154,7 +154,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		closes = []
 
 		if data_type is None:
-			logs.LogWarning(f"Unsupported data type {data_type}.")
+			logs.LogWarning(f"不支持的数据类型 {data_type}。")
 			return Task.CompletedTask
 
 		message_type = data_type.MessageType

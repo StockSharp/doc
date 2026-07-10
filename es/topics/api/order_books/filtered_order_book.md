@@ -22,7 +22,7 @@ El enfoque para trabajar con el libro de órdenes filtrado usa el mismo método 
         if (subscription.DataType == DataType.FilteredMarketDepth)
         {
             // Lógica de manejo para el libro de órdenes filtrado
-            Console.WriteLine($"Received filtered order book for {orderBook.SecurityId}.");
+            Console.WriteLine($"Libro de órdenes filtrado recibido para {orderBook.SecurityId}.");
         }
     };
     ```

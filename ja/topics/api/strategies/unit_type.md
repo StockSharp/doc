@@ -66,10 +66,10 @@
 
   ```csharp
   if (absolute > percent)
-      Console.WriteLine("Absolute value is greater than percentage");
+      Console.WriteLine("絶対値はパーセンテージより大きい");
       
   if (absolute == percent)
-      Console.WriteLine("Values are equal");
+      Console.WriteLine("値は等しい");
   ```
 
 - 値を正にするには、`Abs()` メソッドを使用できます。

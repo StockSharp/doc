@@ -11,13 +11,13 @@
   {
   	order
   		.WhenRegistered(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
+		.Do(() => Connector.AddInfoLog("注文は正常に登録されました。"))
   		.Once()
   		.Apply(this);
   	
   	order
   		.WhenCanceled(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
+		.Do(() => Connector.AddInfoLog("注文は正常にキャンセルされました。"))
   		.Once()
   		.Apply(this);
   });

@@ -11,13 +11,13 @@
   {
   	order
   		.WhenRegistered(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
+		.Do(() => Connector.AddInfoLog("订单已成功注册。"))
   		.Once()
   		.Apply(this);
   	
   	order
   		.WhenCanceled(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
+		.Do(() => Connector.AddInfoLog("订单已成功撤销。"))
   		.Once()
   		.Apply(this);
   });

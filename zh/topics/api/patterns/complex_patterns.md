@@ -141,7 +141,7 @@ provider.Save(myPattern);
 // 按名称查找形态
 if (provider.TryFind("My Pattern", out var found))
 {
-    Console.WriteLine($"Found: {found.Name}, candles: {found.CandlesCount}");
+    Console.WriteLine($"找到: {found.Name}, K线数量: {found.CandlesCount}");
 }
 ```
 

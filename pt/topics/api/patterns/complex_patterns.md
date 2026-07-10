@@ -141,7 +141,7 @@ provider.Save(myPattern);
 // Encontrar um padrão por nome
 if (provider.TryFind("My Pattern", out var found))
 {
-    Console.WriteLine($"Found: {found.Name}, candles: {found.CandlesCount}");
+    Console.WriteLine($"Encontrado: {found.Name}, velas: {found.CandlesCount}");
 }
 ```
 

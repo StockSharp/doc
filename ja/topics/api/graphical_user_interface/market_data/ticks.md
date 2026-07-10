@@ -198,7 +198,7 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
 	// 大口約定に関する情報を出力します
-	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"大口取引: {tick.SecurityId}, {tick.ServerTime}, 価格: {tick.Price}, 出来高: {tick.Volume}");
 	
 	// 音声または視覚的な通知を追加できます
 	this.GuiAsync(() => 

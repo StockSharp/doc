@@ -10,12 +10,12 @@ var bestAsk = orderBook.Asks.FirstOrDefault();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}");
+	Console.WriteLine($"Melhor preço de compra: {bestBid.Price}");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}");
+	Console.WriteLine($"Melhor preço de venda: {bestAsk.Price}");
 }
 ```
 
@@ -27,20 +27,20 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Best buy price: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"Melhor preço de compra: {bestBid.Price}, volume: {bestBid.Volume}");
 }
 else
 {
-	Console.WriteLine("No best buy orders.");
+	Console.WriteLine("Não há melhores ordens de compra.");
 }
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Best sell price: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"Melhor preço de venda: {bestAsk.Price}, volume: {bestAsk.Volume}");
 }
 else
 {
-	Console.WriteLine("No best sell orders.");
+	Console.WriteLine("Não há melhores ordens de venda.");
 }
 ```
 
@@ -51,12 +51,12 @@ Para analisar a profundidade do livro de ofertas, pode percorrer os itens nas li
 ```cs
 foreach (var bid in orderBook.Bids)
 {
-	Console.WriteLine($"Buy price: {bid.Price}, volume: {bid.Volume}");
+	Console.WriteLine($"Preço de compra: {bid.Price}, volume: {bid.Volume}");
 }
 
 foreach (var ask in orderBook.Asks)
 {
-	Console.WriteLine($"Sell price: {ask.Price}, volume: {ask.Volume}");
+	Console.WriteLine($"Preço de venda: {ask.Price}, volume: {ask.Volume}");
 }
 ```
 
@@ -79,7 +79,7 @@ foreach (var bid in orderBook.Bids)
 {
 	if (bid.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Buy: Price {bid.Price}, volume {bid.Volume}");
+		Console.WriteLine($"Compra: preço {bid.Price}, volume {bid.Volume}");
 	}
 }
 
@@ -87,7 +87,7 @@ foreach (var ask in orderBook.Asks)
 {
 	if (ask.Volume >= significantVolumeThreshold)
 	{
-		Console.WriteLine($"Sell: Price {ask.Price}, volume {ask.Volume}");
+		Console.WriteLine($"Venda: preço {ask.Price}, volume {ask.Volume}");
 	}
 }
 ```

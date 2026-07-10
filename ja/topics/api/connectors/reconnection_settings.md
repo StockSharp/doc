@@ -40,8 +40,8 @@
 
    ```cs
    Connector.Adapter.SuppressReconnectingErrors = false;
-   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Connection lost"));
-   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Connection restored"));
+   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "接続が失われました"));
+   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "接続が復元されました"));
    ```
 
    ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)

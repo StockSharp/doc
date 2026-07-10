@@ -96,7 +96,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
 		// Procesamiento adicional de la orden
-		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
+		Console.WriteLine($"Orden recibida: {order.TransactionId}, Estado: {order.State}");
 		
 		// Si la orden está en un estado final, actualizar la UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
@@ -120,11 +120,11 @@ private void CancelOrder(Order order)
 		_connector.CancelOrder(order);
 		
 		// Registrar la acción
-		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
+		_logManager.AddInfoLog($"Comando de cancelación de orden enviado: {order.TransactionId}");
 	}
 	catch (Exception ex)
 	{
-		_logManager.AddErrorLog($"Error when canceling order: {ex.Message}");
+		_logManager.AddErrorLog($"Error al cancelar la orden: {ex.Message}");
 	}
 }
 
@@ -155,14 +155,14 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
 	// Registrar el error
-	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
+	_logManager.AddErrorLog($"Error al registrar la orden: {fail.Error}");
 	
 	// Notificar al usuario
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 
-			$"Failed to register order: {fail.Error}", 
-			"Registration Error", 
+			$"No se pudo registrar la orden: {fail.Error}",
+			"Error de registro",
 			MessageBoxButton.OK, 
 			MessageBoxImage.Error);
 	});

@@ -70,7 +70,7 @@ public void RegisterOrder(Order order)
 {
 	if (order.Volume <= 0)
 	{
-		LogWarning("Attempt to register an order with invalid volume: {0}", order.Volume);
+		LogWarning("尝试注册无效数量的订单: {0}", order.Volume);
 		return;
 	}
 	
@@ -89,7 +89,7 @@ try
 }
 catch (Exception ex)
 {
-	LogError("Error while performing operation: {0}", ex.Message);
+	LogError("执行操作时出错: {0}", ex.Message);
 	Stop();
 }
 ```

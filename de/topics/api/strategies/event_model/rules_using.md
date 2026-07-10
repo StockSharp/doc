@@ -299,7 +299,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Exclusive(ruleRegFailed);  // Regeln schließen sich gegenseitig aus
 
 	ruleRegFailed
-		.Do(() => LogInfo("Order #1 not registered"))
+		.Do(() => LogInfo("Order #1 nicht registriert"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleReg);  // Regeln schließen sich gegenseitig aus

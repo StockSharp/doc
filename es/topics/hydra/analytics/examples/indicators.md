@@ -125,7 +125,7 @@ class indicator_script(IAnalyticsScript):
 		indicator_chart = create_chart(panel, datetime, float)
 
 		if data_type is None:
-			logs.LogWarning(f"Unsupported data type {data_type}.")
+			logs.LogWarning(f"Tipo de datos no admitido {data_type}.")
 			return Task.CompletedTask
 
 		message_type = data_type.MessageType

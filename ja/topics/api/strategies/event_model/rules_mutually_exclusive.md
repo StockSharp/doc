@@ -9,12 +9,12 @@ var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direc
 var ruleReg = order.WhenRegistered();
 var ruleRegFailed = order.WhenRegisterFailed();
 ruleReg
-	.Do(() => this.AddInfoLog("The order was successfully registered."))
+	.Do(() => this.AddInfoLog("注文は正常に登録されました。"))
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleRegFailed);
 ruleRegFailed
-	.Do(() => this.AddInfoLog("The order was not accepted by broker."))
+	.Do(() => this.AddInfoLog("注文はブローカーに承認されませんでした。"))
 	.Once()
 	.Apply(this)
 	.Exclusive(ruleReg);
@@ -32,11 +32,11 @@ var ruleRegFailed = order.WhenRegisterFailed(Connector);
 ruleReg.ExclusiveRules.Add(ruleRegFailed);
 ruleRegFailed.ExclusiveRules.Add(ruleReg);
 ruleReg
-	.Do(() => this.AddInfoLog("The order was successfully registered."))
+	.Do(() => this.AddInfoLog("注文は正常に登録されました。"))
 	.Once()
 	.Apply(this);
 ruleRegFailed
-	.Do(() => this.AddInfoLog("The order was not accepted by broker."))
+	.Do(() => this.AddInfoLog("注文はブローカーに承認されませんでした。"))
 	.Once()
 	.Apply(this);
 // 注文の登録

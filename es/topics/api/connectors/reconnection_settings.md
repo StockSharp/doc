@@ -40,8 +40,8 @@ El mecanismo de reconexión se configura mediante la propiedad [ReConnectionSett
 
    ```cs
    Connector.Adapter.SuppressReconnectingErrors = false;
-   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Connection lost"));
-   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Connection restored"));
+   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Conexión perdida"));
+   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Conexión restaurada"));
    ```
 
    ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)

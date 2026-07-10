@@ -97,7 +97,7 @@ private void OnOrderReceived(Order order)
 private void OnOrderRegisterFailed(OrderFail fail)
 {
 	// Manejar error de registro de orden
-	LogError($"Order registration error: {fail.Error}");
+	LogError($"Error al registrar la orden: {fail.Error}");
 }
 ```
 
@@ -125,7 +125,7 @@ order
 order
 	.WhenRegisterFailed(this)
 	.Do(fail => {
-		LogError($"Order registration error: {fail.Error}");
+		LogError($"Error al registrar la orden: {fail.Error}");
 		// Posiblemente reintentar con parámetros distintos
 	})
 	.Apply(this);

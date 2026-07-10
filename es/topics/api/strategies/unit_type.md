@@ -66,10 +66,10 @@ Para simplificar el trabajo con operaciones aritméticas sobre valores como porc
 
   ```csharp
   if (absolute > percent)
-      Console.WriteLine("Absolute value is greater than percentage");
+      Console.WriteLine("El valor absoluto es mayor que el porcentaje");
       
   if (absolute == percent)
-      Console.WriteLine("Values are equal");
+      Console.WriteLine("Los valores son iguales");
   ```
 
 - Para convertir un valor en positivo, puede usar el método `Abs()`:

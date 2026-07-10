@@ -141,7 +141,7 @@ provider.Save(myPattern);
 // 名前でパターンを検索
 if (provider.TryFind("My Pattern", out var found))
 {
-    Console.WriteLine($"Found: {found.Name}, candles: {found.CandlesCount}");
+    Console.WriteLine($"見つかりました: {found.Name}, ローソク足数: {found.CandlesCount}");
 }
 ```
 

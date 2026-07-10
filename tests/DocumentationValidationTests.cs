@@ -132,6 +132,83 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("field/value output", @"\bField:|\bValue:|\bBids:|\bAsks:"),
 	];
 
+	private static readonly HashSet<string> _translatableEnglishCodeOutputWords = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"absolute",
+		"accepted",
+		"adapter",
+		"adapters",
+		"buy",
+		"canceled",
+		"cancelled",
+		"candle",
+		"candles",
+		"commission",
+		"completed",
+		"configured",
+		"connection",
+		"connector",
+		"created",
+		"data",
+		"delta",
+		"direction",
+		"error",
+		"exchange",
+		"exit",
+		"found",
+		"greater",
+		"instrument",
+		"instruments",
+		"invalid",
+		"less",
+		"loaded",
+		"lost",
+		"message",
+		"mode",
+		"not",
+		"online",
+		"operation",
+		"order",
+		"orders",
+		"percentage",
+		"price",
+		"profit",
+		"received",
+		"registered",
+		"rule",
+		"search",
+		"sell",
+		"signal",
+		"spread",
+		"successfully",
+		"threshold",
+		"transitioned",
+		"type",
+		"unsupported",
+		"value",
+		"values",
+		"volume",
+	};
+
+	private static readonly HashSet<string> _allowedInvariantCodeOutputWords = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"api",
+		"csv",
+		"fast",
+		"fix",
+		"http",
+		"https",
+		"json",
+		"pnl",
+		"rest",
+		"sma",
+		"stocksharp",
+		"tcp",
+		"udp",
+		"ui",
+		"xml",
+	};
+
 	private static readonly string[] _knownBrokenGermanEncodingFragments =
 	[
 		"anschlie?end",
@@ -755,6 +832,45 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string contains known untranslated English {name}. String: {Truncate(output.Text, 180)}");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeOutputStringsAreTranslatedFromDefaultLanguage()
+	{
+		var errors = new List<string>();
+		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
+
+		foreach (var defaultFile in Directory.EnumerateFiles(defaultRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var relative = Path.GetRelativePath(defaultRoot, defaultFile).Replace('\\', '/');
+			var defaultOutputs = EnumerateCodeOutputStrings(ReadAllText(defaultFile))
+				.Select(output => NormalizeCodeOutputForTranslationCheck(output.Text))
+				.Where(IsTranslatableEnglishCodeOutput)
+				.ToHashSet(StringComparer.Ordinal);
+
+			if (defaultOutputs.Count == 0)
+				continue;
+
+			foreach (var lang in GetTranslatedContentLanguages())
+			{
+				var langRoot = Path.Combine(_repoRoot, lang);
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var output in EnumerateCodeOutputStrings(ReadAllText(file)))
+				{
+					var normalized = NormalizeCodeOutputForTranslationCheck(output.Text);
+					if (!defaultOutputs.Contains(normalized))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string is identical to the English source. Localize it or add a deliberate allowlist entry. String: {Truncate(output.Text, 180)}");
 				}
 			}
 		}
@@ -1528,6 +1644,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				}
 			}
 		}
+	}
+
+	private static string NormalizeCodeOutputForTranslationCheck(string text)
+		=> Regex.Replace(text ?? string.Empty, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static bool IsTranslatableEnglishCodeOutput(string text)
+	{
+		if (string.IsNullOrWhiteSpace(text))
+			return false;
+
+		var hits = 0;
+		var words = 0;
+
+		foreach (Match match in Regex.Matches(text, @"[A-Za-z][A-Za-z']+", RegexOptions.CultureInvariant))
+		{
+			var word = match.Value.Trim('\'');
+			if (word.Length <= 2 || _allowedInvariantCodeOutputWords.Contains(word))
+				continue;
+
+			words++;
+
+			if (_translatableEnglishCodeOutputWords.Contains(word))
+				hits++;
+		}
+
+		return words >= 2 && hits >= 2;
 	}
 
 	private static string NormalizeCodeCommentForTranslationCheck(string comment)

@@ -59,7 +59,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
+	Console.WriteLine($"Instrumento encontrado: {security.Id} - {security.Name}, Tipo: {security.Type}");
 	
 	// Aqui pode adicionar o instrumento a uma colecção ou executar outras acções
 	Securities.Add(security);
@@ -71,7 +71,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
+	Console.WriteLine($"Pesquisa concluída. Instrumentos encontrados: {Securities.Count}");
 }
 
 // Manipulador de erros da subscrição
@@ -80,7 +80,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Instrument search error: {error.Message}");
+	Console.WriteLine($"Erro na pesquisa de instrumentos: {error.Message}");
 }
 
 // Subscrever eventos
@@ -129,7 +129,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 			
 		// Adicionar o instrumento encontrado à colecção
 		foundSecurities.Add(security);
-		Console.WriteLine($"Found: {security.Id}, {security.Name}");
+		Console.WriteLine($"Encontrado: {security.Id}, {security.Name}");
 	}
 	
 	// Subscrição para conclusão da pesquisa
@@ -141,7 +141,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		// Copiar resultados para a colecção principal
 		_searchResults.AddRange(foundSecurities);
 		
-		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
+		Console.WriteLine($"Pesquisa concluída. Instrumentos encontrados: {foundSecurities.Count}");
 		
 		// Anular subscrição dos eventos
 		Connector.SecurityReceived -= OnSecurityReceived;
@@ -155,7 +155,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		Console.WriteLine($"Instrument search error: {error.Message}");
+		Console.WriteLine($"Erro na pesquisa de instrumentos: {error.Message}");
 		
 		// Anular subscrição dos eventos
 		Connector.SecurityReceived -= OnSecurityReceived;

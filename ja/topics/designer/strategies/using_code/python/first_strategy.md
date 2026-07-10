@@ -131,7 +131,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		:param longValue: 長期 SMA の現在値。
 		:param shortValue: 短期 SMA の現在値。
 	"""
-	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
+	self.LogInfo("新しいローソク足 {0}: {6} {1};{2};{3};{4}; 出来高 {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
 	# ローソク足が確定していなければ何もしない
 	if candle.State != CandleStates.Finished:

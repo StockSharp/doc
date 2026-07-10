@@ -17,7 +17,7 @@
      };
      order
          .WhenRegistered(Connector)
-         .Do(() => Connector.AddInfoLog("Order successfully registered"))
+         .Do(() => Connector.AddInfoLog("Ordem registrada com sucesso"))
          .Once()
          .Apply(this);
       
@@ -76,7 +76,7 @@
   ruleCanceled
       .Do(() =>
       {
-          this.AddInfoLog("Order successfully canceled");
+          this.AddInfoLog("Ordem cancelada com sucesso");
           // remover todas as regras associadas à ordem
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
@@ -84,12 +84,12 @@
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() => this.AddInfoLog("Order successfully registered"))
+      .Do(() => this.AddInfoLog("Ordem registrada com sucesso"))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() => this.AddInfoLog("Order not accepted by the exchange"))
+      .Do(() => this.AddInfoLog("Ordem não aceita pela bolsa"))
       .Once()
       .Apply(this);
   order
@@ -208,8 +208,8 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+				LogInfo($"Regra WhenCandlesStarted and WhenTotalVolumeMore vela={candle1}");
+				LogInfo($"Regra WhenCandlesStarted and WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);
 
@@ -299,7 +299,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Exclusive(ruleRegFailed);  // Rules are mutually exclusive
 
 	ruleRegFailed
-		.Do(() => LogInfo("Order #1 not registered"))
+		.Do(() => LogInfo("Ordem #1 não registrada"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleReg);  // Rules are mutually exclusive

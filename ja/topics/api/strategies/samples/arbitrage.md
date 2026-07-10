@@ -139,7 +139,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
-	LogInfo($"Entry from spread:{SpreadToGenerateSignal}. Exit from profit:{ProfitToExit}");
+	LogInfo($"スプレッドでエントリー:{SpreadToGenerateSignal}。利益で決済:{ProfitToExit}");
 
 	// 現在の市場状況に基づいて利益を再計算する
 	if (_currentState != ArbitrageState.None && _currentState != ArbitrageState.OrderRegistration)

@@ -161,8 +161,8 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 
-			$"Failed to register order: {fail.Error}", 
-			"Registration Error", 
+			$"订单注册失败: {fail.Error}",
+			"注册错误",
 			MessageBoxButton.OK, 
 			MessageBoxImage.Error);
 	});

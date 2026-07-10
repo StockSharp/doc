@@ -47,7 +47,7 @@ _connector.Connected += () =>
 // Evento de perda de ligação
 _connector.Disconnected += () =>
 {
-	Console.WriteLine("Connection lost");
+	Console.WriteLine("Conexão perdida");
 };
 
 // Evento de instrumento recebido
@@ -103,7 +103,7 @@ _connector.CandleReceived += (subscription, candle) =>
 // Evento de erro de ligação
 _connector.ConnectionError += error =>
 {
-	Console.WriteLine($"Connection error: {error.Message}");
+	Console.WriteLine($"Erro de ligação: {error.Message}");
 };
 
 // Evento de erro geral

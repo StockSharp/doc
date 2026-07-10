@@ -198,7 +198,7 @@ private void OnFilteredTickReceived(Subscription subscription, ITickTradeMessage
 private void NotifyLargeVolumeTrade(ITickTradeMessage tick)
 {
 	// Mostrar información sobre la operación grande
-	Console.WriteLine($"Large trade: {tick.SecurityId}, {tick.ServerTime}, Price: {tick.Price}, Volume: {tick.Volume}");
+	Console.WriteLine($"Operación grande: {tick.SecurityId}, {tick.ServerTime}, Precio: {tick.Price}, Volumen: {tick.Volume}");
 	
 	// Puede agregar una notificación sonora o visual
 	this.GuiAsync(() => 

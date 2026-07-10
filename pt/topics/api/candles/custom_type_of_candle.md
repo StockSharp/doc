@@ -202,7 +202,7 @@
        var deltaCandle = (DeltaCandleMessage)candle;
 
        // Processar vela delta
-       Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+       Console.WriteLine($"Vela delta {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
 
@@ -210,7 +210,7 @@
    _connector.SubscriptionOnline += sub =>
    {
        if (sub == subscription)
-           Console.WriteLine("Delta-candle subscription has transitioned to online mode");
+           Console.WriteLine("A assinatura de velas delta passou para o modo online");
    };
 
    // Iniciar a assinatura

@@ -96,7 +96,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
 		// 追加の注文処理
-		Console.WriteLine($"Order received: {order.TransactionId}, Status: {order.State}");
+		Console.WriteLine($"注文を受信しました: {order.TransactionId}, 状態: {order.State}");
 		
 		// 注文が最終状態の場合、UI を更新します
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
@@ -120,11 +120,11 @@ private void CancelOrder(Order order)
 		_connector.CancelOrder(order);
 		
 		// アクションをログに記録します
-		_logManager.AddInfoLog($"Order cancellation command sent {order.TransactionId}");
+		_logManager.AddInfoLog($"注文キャンセルコマンドを送信しました: {order.TransactionId}");
 	}
 	catch (Exception ex)
 	{
-		_logManager.AddErrorLog($"Error when canceling order: {ex.Message}");
+		_logManager.AddErrorLog($"注文キャンセル時のエラー: {ex.Message}");
 	}
 }
 
@@ -155,14 +155,14 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 	
 	// エラーをログに記録します
-	_logManager.AddErrorLog($"Order registration error: {fail.Error}");
+	_logManager.AddErrorLog($"注文登録エラー: {fail.Error}");
 	
 	// ユーザーに通知します
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 
-			$"Failed to register order: {fail.Error}", 
-			"Registration Error", 
+			$"注文登録に失敗しました: {fail.Error}",
+			"登録エラー",
 			MessageBoxButton.OK, 
 			MessageBoxImage.Error);
 	});

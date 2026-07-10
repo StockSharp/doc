@@ -131,7 +131,7 @@ def OnProcess(self, candle, longValue, shortValue):
 		:param longValue: O valor atual da SMA longa.
 		:param shortValue: O valor atual da SMA curta.
 	"""
-	self.LogInfo("New candle {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
+	self.LogInfo("Nova vela {0}: {6} {1};{2};{3};{4}; volume {5}", candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId)
 
 	# Se a vela não estiver concluída, não fazer nada
 	if candle.State != CandleStates.Finished:

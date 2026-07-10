@@ -59,7 +59,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Found instrument: {security.Id} - {security.Name}, Type: {security.Type}");
+	Console.WriteLine($"銘柄が見つかりました: {security.Id} - {security.Name}, 種類: {security.Type}");
 	
 	// ここで金融商品をコレクションに追加するか、その他の処理を実行できます
 	Securities.Add(security);
@@ -71,7 +71,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Search completed. Instruments found: {Securities.Count}");
+	Console.WriteLine($"検索が完了しました。見つかった銘柄数: {Securities.Count}");
 }
 
 // サブスクリプションエラーのハンドラー
@@ -80,7 +80,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"Instrument search error: {error.Message}");
+	Console.WriteLine($"銘柄検索エラー: {error.Message}");
 }
 
 // イベントを購読します
@@ -129,7 +129,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 			
 		// 見つかった金融商品をコレクションに追加します
 		foundSecurities.Add(security);
-		Console.WriteLine($"Found: {security.Id}, {security.Name}");
+		Console.WriteLine($"見つかりました: {security.Id}, {security.Name}");
 	}
 	
 	// 検索完了用のサブスクリプション
@@ -141,7 +141,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		// 結果をメインコレクションにコピーします
 		_searchResults.AddRange(foundSecurities);
 		
-		Console.WriteLine($"Search completed. Instruments found: {foundSecurities.Count}");
+		Console.WriteLine($"検索が完了しました。見つかった銘柄数: {foundSecurities.Count}");
 		
 		// イベントの購読を解除します
 		Connector.SecurityReceived -= OnSecurityReceived;
@@ -155,7 +155,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		Console.WriteLine($"Instrument search error: {error.Message}");
+		Console.WriteLine($"銘柄検索エラー: {error.Message}");
 		
 		// イベントの購読を解除します
 		Connector.SecurityReceived -= OnSecurityReceived;

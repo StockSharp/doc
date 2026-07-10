@@ -11,13 +11,13 @@ A veces es necesario poner varias reglas en modo de suspensión (evitar que se a
   {
   	order
   		.WhenRegistered(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully registered."))
+		.Do(() => Connector.AddInfoLog("La orden se registró correctamente."))
   		.Once()
   		.Apply(this);
   	
   	order
   		.WhenCanceled(Connector)
-  		.Do(() => Connector.AddInfoLog("The order was successfully cancelled."))
+		.Do(() => Connector.AddInfoLog("La orden se canceló correctamente."))
   		.Once()
   		.Apply(this);
   });

@@ -11,7 +11,7 @@ Para suscribirse al libro de órdenes en StockSharp, debe realizar los siguiente
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
 	// Aquí puede procesar los datos del libro de órdenes, por ejemplo, mostrarlos en pantalla o usarlos en su estrategia de trading
-	Console.WriteLine($"Received order book for {orderBook.SecurityId}. Best buy price: {orderBook.GetBestBid()?.Price}, Best sell price: {orderBook.GetBestAsk()?.Price}");
+	Console.WriteLine($"Libro de órdenes recibido para {orderBook.SecurityId}. Mejor precio de compra: {orderBook.GetBestBid()?.Price}, mejor precio de venta: {orderBook.GetBestAsk()?.Price}");
 }
 
 // suscripción al evento

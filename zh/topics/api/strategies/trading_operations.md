@@ -97,7 +97,7 @@ private void OnOrderReceived(Order order)
 private void OnOrderRegisterFailed(OrderFail fail)
 {
 	// 处理订单注册错误
-	LogError($"Order registration error: {fail.Error}");
+	LogError($"订单注册错误: {fail.Error}");
 }
 ```
 
@@ -125,7 +125,7 @@ order
 order
 	.WhenRegisterFailed(this)
 	.Do(fail => {
-		LogError($"Order registration error: {fail.Error}");
+		LogError($"订单注册错误: {fail.Error}");
 		// 可以使用不同参数重试
 	})
 	.Apply(this);

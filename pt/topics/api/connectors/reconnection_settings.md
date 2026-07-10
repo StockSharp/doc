@@ -40,8 +40,8 @@ O mecanismo de religação é configurado através da propriedade [ReConnectionS
 
    ```cs
    Connector.Adapter.SuppressReconnectingErrors = false;
-   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Connection lost"));
-   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Connection restored"));
+   Connector.ConnectionError += error => this.Sync(() => MessageBox.Show(this, "Conexão perdida"));
+   Connector.ConnectionRestored += adapter => this.Sync(() => MessageBox.Show(this, "Conexão restaurada"));
    ```
 
    ![sampleconnectionerror](../../../images/sample_connection_error.png)![sampleconnectionrestore](../../../images/sample_connection_restored.png)

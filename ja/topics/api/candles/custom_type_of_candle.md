@@ -202,7 +202,7 @@
        var deltaCandle = (DeltaCandleMessage)candle;
        
        // Delta-candle を処理
-       Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+       Console.WriteLine($"デルタローソク足 {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
    
@@ -210,7 +210,7 @@
    _connector.SubscriptionOnline += sub => 
    {
        if (sub == subscription)
-           Console.WriteLine("Delta-candle subscription has transitioned to online mode");
+           Console.WriteLine("デルタローソク足の購読がオンラインモードに移行しました");
    };
    
    // サブスクリプションを開始
@@ -330,14 +330,14 @@ public class DeltaCandleStrategy : Strategy
 		// デルタがシグナルに十分か確認
 		if (Math.Abs(deltaCandle.CurrentDelta) < SignalDelta)
 		{
-			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} is less than the threshold value {SignalDelta}. No signal is generated.");
+			this.AddInfoLog($"Delta {deltaCandle.CurrentDelta} はしきい値 {SignalDelta} 未満です。シグナルは生成されません。");
 			return;
 		}
 
 		// 操作方向はデルタの符号に依存
 		var direction = deltaCandle.CurrentDelta > 0 ? Sides.Buy : Sides.Sell;
 		
-		this.AddInfoLog($"Delta-candle completed. Delta: {deltaCandle.CurrentDelta}. Direction: {direction}");
+		this.AddInfoLog($"デルタローソク足が完了しました。Delta: {deltaCandle.CurrentDelta}。方向: {direction}");
 		
 		// 価格の決定にはローソク足の終値を使用
 		var price = deltaCandle.ClosePrice;

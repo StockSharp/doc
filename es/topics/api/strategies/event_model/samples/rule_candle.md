@@ -49,8 +49,8 @@ protected override void OnStarted2(DateTime time)
 				.WhenTotalVolumeMore(candle, diff)
 				.Do((candle1) =>
 				{
-					LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-					LogInfo($"The rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+					LogInfo($"Regla WhenCandlesStarted and WhenTotalVolumeMore vela={candle1}");
+					LogInfo($"Regla WhenCandlesStarted and WhenTotalVolumeMore i={i}");
 				})
 				.Once().Apply(this);
 

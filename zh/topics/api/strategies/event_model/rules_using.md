@@ -17,7 +17,7 @@
      };
      order
          .WhenRegistered(Connector)
-         .Do(() => Connector.AddInfoLog("Order successfully registered"))
+         .Do(() => Connector.AddInfoLog("订单已成功注册"))
          .Once()
          .Apply(this);
       
@@ -76,7 +76,7 @@
   ruleCanceled
       .Do(() =>
       {
-          this.AddInfoLog("Order successfully canceled");
+          this.AddInfoLog("订单已成功撤销");
           // 删除与订单关联的所有规则
           Rules.RemoveRulesByToken(ruleCanceled, (IMarketRule)ruleCanceled.Token);
       })
@@ -84,12 +84,12 @@
       .Apply(this);
   order
       .WhenRegistered(Connector)
-      .Do(() => this.AddInfoLog("Order successfully registered"))
+      .Do(() => this.AddInfoLog("订单已成功注册"))
       .Once()
       .Apply(this);
   order
       .WhenRegisterFailed(Connector)
-      .Do(() => this.AddInfoLog("Order not accepted by the exchange"))
+      .Do(() => this.AddInfoLog("订单未被交易所接受"))
       .Once()
       .Apply(this);
   order
@@ -208,8 +208,8 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
-				LogInfo($"Rule WhenCandlesStarted and WhenTotalVolumeMore i={i}");
+				LogInfo($"规则 WhenCandlesStarted and WhenTotalVolumeMore candle={candle1}");
+				LogInfo($"规则 WhenCandlesStarted and WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);
 
@@ -299,7 +299,7 @@ sub.WhenTickTradeReceived(this).Do(() =>
 		.Exclusive(ruleRegFailed);  // 规则互斥
 
 	ruleRegFailed
-		.Do(() => LogInfo("Order #1 not registered"))
+		.Do(() => LogInfo("订单 #1 未注册"))
 		.Once()
 		.Apply(this)
 		.Exclusive(ruleReg);  // 规则互斥

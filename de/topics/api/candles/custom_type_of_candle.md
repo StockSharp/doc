@@ -202,7 +202,7 @@
        var deltaCandle = (DeltaCandleMessage)candle;
 
        // Delta-Kerze verarbeiten
-       Console.WriteLine($"Delta-candle {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
+       Console.WriteLine($"Delta-Kerze {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
 

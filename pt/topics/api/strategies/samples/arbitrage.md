@@ -139,7 +139,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
-	LogInfo($"Entry from spread:{SpreadToGenerateSignal}. Exit from profit:{ProfitToExit}");
+	LogInfo($"Entrada pelo spread:{SpreadToGenerateSignal}. Saída pelo lucro:{ProfitToExit}");
 
 	// Recalcular lucro com base nas condições atuais de mercado
 	if (_currentState != ArbitrageState.None && _currentState != ArbitrageState.OrderRegistration)
