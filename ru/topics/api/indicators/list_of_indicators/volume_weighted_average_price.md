@@ -1,6 +1,6 @@
 # VWAP
 
-**Volume Weighted Average Price (VWAP)** показывает среднюю цену, взвешенную по объёму торгов.
+**Средневзвешенная по объему цена (VWAP)** показывает среднюю цену, взвешенную по объёму торгов.
 
 Для использования индикатора необходимо использовать класс [VolumeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.VolumeWeightedAveragePrice).
 

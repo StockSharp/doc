@@ -1,6 +1,6 @@
 # VWAP
 
-**Volume Weighted Average Price (VWAP)** mostra o preço médio ponderado pelo volume negociado.
+**Preço médio ponderado pelo volume (VWAP)** mostra o preço médio ponderado pelo volume negociado.
 
 Para usar o indicador, deve usar a classe [VolumeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.VolumeWeightedAveragePrice).
 

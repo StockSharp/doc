@@ -1830,6 +1830,53 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorExpansionTextDoesNotKeepEnglishPhrases()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/time_weighted_average_price.md",
+			"topics/api/indicators/list_of_indicators/volume_weighted_average_price.md",
+			"topics/api/indicators/list_of_indicators/volume_weighted_ma.md",
+		};
+		var phrases = new[]
+		{
+			"Time-Weighted Average Price",
+			"Time-Weighted precio medio",
+			"Volume Weighted Average Price",
+			"Volume Weighted Moving Average",
+			"Volume Weighted precio medio",
+			"Volume Weighted MA",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: indicator expansion keeps English phrase '{phrase}'. Localize the phrase and keep only the acronym as invariant.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

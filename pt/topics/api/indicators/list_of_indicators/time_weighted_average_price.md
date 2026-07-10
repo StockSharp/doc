@@ -1,6 +1,6 @@
 # TWAP
 
-**Time-Weighted Average Price (TWAP)** é um indicador que calcula o preço médio de um instrumento financeiro ponderado pelo tempo ao longo de um período específico. O TWAP é amplamente utilizado por investidores institucionais para executar grandes ordens com impacto mínimo no mercado.
+**Preço médio ponderado pelo tempo (TWAP)** é um indicador que calcula o preço médio de um instrumento financeiro ponderado pelo tempo ao longo de um período específico. O TWAP é amplamente utilizado por investidores institucionais para executar grandes ordens com impacto mínimo no mercado.
 
 Para utilizar o indicador, é necessário usar a classe [TimeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.TimeWeightedAveragePrice).
 
@@ -13,7 +13,7 @@ Principais aplicações do TWAP:
 - Algoritmo de execução para minimizar o impacto no mercado
 - Ferramenta para análise de mercado e tomada de decisões de negociação
 
-Ao contrário do VWAP (Volume Weighted Average Price), o TWAP não considera os volumes negociados, concentrando-se exclusivamente no aspeto temporal.
+Ao contrário do VWAP (preço médio ponderado pelo volume), o TWAP não considera os volumes negociados, concentrando-se exclusivamente no aspeto temporal.
 
 ## Cálculo
 
