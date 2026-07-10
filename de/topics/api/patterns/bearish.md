@@ -26,7 +26,7 @@ Bearish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 - Einstieg in eine Short-Position nach Bildung einer Bearish Candle an einem Widerstandsniveau oder in einer überkauften Zone.
 - Setzen eines Stop-Loss oberhalb des Maximums der Candle, um sich gegen einen weiteren Anstieg zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
-- Verwendung zur Bestätigung von Abwärtstrendsignalen aus Indikatoren wie MACD oder Moving Averages.
+- Verwendung zur Bestätigung von Abwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.
 - Mögliche Verwendung zum Schließen von Long-Positionen oder zur teilweisen Gewinnmitnahme, wenn dieses Muster innerhalb eines Aufwärtstrends erscheint.
 
@@ -35,4 +35,3 @@ Bearish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 [Bullische Kerze](bullish.md)
 
 [Schwarze Kerze](black_candle.md)
-

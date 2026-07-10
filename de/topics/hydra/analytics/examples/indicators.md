@@ -16,7 +16,7 @@ Das Skript bietet die folgende Funktionalitat:
 
 Das Skript kann mit einer großen Auswahl von Indikatoren arbeiten, darunter unter anderem:
 
-- **Moving Averages (MA)**: Stellen den Durchschnittspreis über einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
+- **Gleitende Durchschnitte (MA)**: Stellen den Durchschnittspreis über einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
 - **Relative Strength Index (RSI)**: Bewertet Ausmass und Geschwindigkeit von Preisanderungen und hilft, uberkaufte oder uberverkaufte Bedingungen zu erkennen.
 - **Bollinger Bands (BB)**: Zeigen Preisspanne und Volatilität auf Basis gleitender Durchschnitte und Standardabweichungen.
 

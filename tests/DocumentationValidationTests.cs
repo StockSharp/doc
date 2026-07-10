@@ -2223,6 +2223,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownDoesNotKeepEnglishMovingAveragesPlural()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!ContainsStandaloneText(text, "Moving Averages"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized markdown keeps English plural term 'Moving Averages'. Localize the generic term or remove the English expansion.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

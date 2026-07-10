@@ -26,7 +26,7 @@ Bullish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 - Einstieg in eine Long-Position nach Bildung einer Bullish Candle an einem Unterstützungsniveau oder in einer überverkauften Zone.
 - Setzen eines Stop-Loss unterhalb des Minimums der Candle, um sich gegen einen weiteren Rückgang zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
-- Verwendung zur Bestätigung von Aufwärtstrendsignalen aus Indikatoren wie MACD oder Moving Averages.
+- Verwendung zur Bestätigung von Aufwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.
 
 ## Siehe auch
@@ -34,4 +34,3 @@ Bullish Candle kann in verschiedenen Handelsstrategien verwendet werden:
 [Bärische Kerze](bearish.md)
 
 [Weiße Kerze](white_candle.md)
-

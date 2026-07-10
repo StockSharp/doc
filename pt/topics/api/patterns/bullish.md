@@ -26,7 +26,7 @@ Bullish Candle pode ser utilizada em várias estratégias de negociação:
 - Entrar numa posição longa após a formação de uma Bullish Candle num nível de suporte ou numa zona de sobrevenda.
 - Definir um stop-loss abaixo do mínimo da vela para proteger contra novas quedas.
 - Combinar com outros indicadores técnicos ou padrões para aumentar a probabilidade de uma negociação bem-sucedida.
-- Utilizar para confirmar sinais de tendência ascendente de indicadores como MACD ou Moving Averages.
+- Utilizar para confirmar sinais de tendência ascendente de indicadores como MACD ou médias móveis.
 - Prestar atenção ao volume de negociação - volume elevado reforça a importância do sinal.
 
 ## Ver também

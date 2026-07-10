@@ -10,6 +10,6 @@ Die Funktion **Analytics** stellt Benutzern ein Werkzeug zur Analyse von Marktda
 
 - **Datenvisualisierung**: Hydra bietet verschiedene Werkzeuge zur Datenvisualisierung, darunter Charts und Diagramme, die bei der Analyse von Trends und beim Erkennen von Mustern helfen.
 
-- **Berechnung von Finanzindikatoren**: Das Programm berechnet eine breite Palette von Finanzindikatoren wie Moving Averages, RSI, MACD und andere und ermöglicht dadurch eine umfassende technische Analyse.
+- **Berechnung von Finanzindikatoren**: Das Programm berechnet eine breite Palette von Finanzindikatoren wie gleitende Durchschnitte, RSI, MACD und andere und ermöglicht dadurch eine umfassende technische Analyse.
 
 **Sehen Sie sich das [Video-Tutorial](videos/analytics.md) an**

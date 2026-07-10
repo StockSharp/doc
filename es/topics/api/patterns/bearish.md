@@ -26,7 +26,7 @@ Bearish Candle se puede usar en varias estrategias de trading:
 - Entrar en una posición corta después de la formación de una Bearish Candle en un nivel de resistencia o en una zona de sobrecompra.
 - Colocar un stop-loss por encima del máximo de la vela para protegerse contra una subida adicional.
 - Combinar con otros indicadores técnicos o patrones para aumentar la probabilidad de una operación exitosa.
-- Usar para confirmar señales de tendencia bajista de indicadores como MACD o Moving Averages.
+- Usar para confirmar señales de tendencia bajista de indicadores como MACD o medias móviles.
 - Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
 - Posible uso para cerrar posiciones largas o toma parcial de beneficios cuando este patrón aparece dentro de una tendencia alcista.
 
