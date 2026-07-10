@@ -32,7 +32,7 @@ Keltner Channels の計算には、次の手順があります。
 
 2. 平均真の値幅を計算します。
    ```
-   ATR = Length 期間の Average True Range
+   ATR = Length 期間の平均真の範囲
    ```
 
 3. 上側バンドと下側バンドを計算します。

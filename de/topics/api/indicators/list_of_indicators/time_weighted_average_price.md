@@ -31,7 +31,7 @@ In der praktischen Umsetzung werden am häufigsten typische Preise für jede Per
 
 ```
 Typischer Preis = (High + Low + Close) / 3
-TWAP = Sum(Typical Price) / Anzahl der Perioden
+TWAP = Sum(typischer Preis) / Anzahl der Perioden
 ```
 
 Zur Bestimmung des aktuellen TWAP-Werts in Echtzeit kann auch eine rekursive Formel verwendet werden:

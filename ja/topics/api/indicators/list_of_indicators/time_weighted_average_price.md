@@ -31,7 +31,7 @@ TWAP = (P1 + P2 + P3 + ... + Pn) / n
 
 ```
 代表価格 = (High + Low + Close) / 3
-TWAP = Sum(Typical Price) / 期間数
+TWAP = Sum(代表価格) / 期間数
 ```
 
 現在の TWAP 値をリアルタイムで求めるために、再帰式を使用することもできます。

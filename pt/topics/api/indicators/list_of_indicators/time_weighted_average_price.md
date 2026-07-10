@@ -31,7 +31,7 @@ Na implementação prática, são usados com maior frequência os preços típic
 
 ```
 Preço típico = (High + Low + Close) / 3
-TWAP = Sum(Typical Price) / número de períodos
+TWAP = Sum(preço típico) / número de períodos
 ```
 
 Também pode ser utilizada uma fórmula recursiva para determinar o valor atual do TWAP em tempo real:
