@@ -2,13 +2,13 @@
 
 Sie können Ihre Strategie veröffentlichen, indem Sie im Panel [Schemata-Panel](../user_interface/schemas.md) mit der linken Maustaste auf die Strategie klicken und **Veröffentlichen** auswählen:
 
-![Designer_publish_00](../../../images/designer_publish_00.png)
+![Eigene Strategie veröffentlichen 00](../../../images/designer_publish_00.png)
 
 Nach dem Klicken auf die Schaltfläche **Veröffentlichen** öffnet sich ein Fenster mit der Auswahl des Exporttyps. Weitere Details finden Sie im Abschnitt [Strategien exportieren](../export_import/export.md).
 
 Nach der Auswahl des Exporttyps wird das Programm [Installer](../../installer.md) mit den Veröffentlichungsparametern aktiviert ([Installer](../../installer.md) muss zuvor gestartet worden sein):
 
-![Designer_publish_01](../../../images/designer_publish_01.png)
+![Eigene Strategie veröffentlichen 01](../../../images/designer_publish_01.png)
 
 Auszufüllende Felder:
 
@@ -22,9 +22,9 @@ Nach dem Klicken auf die Schaltfläche **Speichern** wird die Strategie an den S
 
 Beim Veröffentlichen von Updates müssen nicht alle Parameter erneut eingegeben werden. Statt der Eingabe von Produktparametern erscheint ein Fenster zur Eingabe einer Notiz für das Update:
 
-![Designer_publish_02](../../../images/designer_publish_02.png)
+![Eigene Strategie veröffentlichen 02](../../../images/designer_publish_02.png)
 
 Nach dem Klicken auf die Schaltfläche **OK** erscheint ein Fenster, das ein erfolgreiches Update meldet:
 
-![Designer_publish_03](../../../images/designer_publish_03.png)
+![Eigene Strategie veröffentlichen 03](../../../images/designer_publish_03.png)
 

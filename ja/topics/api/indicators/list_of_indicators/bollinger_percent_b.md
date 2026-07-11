@@ -56,7 +56,7 @@ BBP = (Price - 下側ボリンジャーバンド) / (上側ボリンジャーバ
 4. **隠れたサポートおよびレジスタンス水準の発見**:
    - 0.8 と 0.2 の水準は、追加のサポートおよびレジスタンス水準としてよく使用されます
 
-![indicator_bollinger_percent_b](../../../../images/indicator_bollinger_percent_b.png)
+![BBP](../../../../images/indicator_bollinger_percent_b.png)
 
 ## 関連項目
 

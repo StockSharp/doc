@@ -2,7 +2,7 @@
 
 **Runner** 是控制台应用程序，可以通过命令行参数以不同模式启动。不带参数启动程序时，会显示帮助信息，其中列出所有可用参数：
 
-![Runner_command_line_1](../../images/runner_command_line_1.png)
+![命令行 1](../../images/runner_command_line_1.png)
 
 使用 **Runner** 对历史数据进行测试：
 

@@ -64,7 +64,7 @@ O índice de intervalo de Gopalakrishnan pode ser interpretado da seguinte forma
    - Durante períodos de alta volatilidade, os sinais de indicadores de tendência podem ser mais fiáveis
    - Durante períodos de baixa volatilidade, os sinais de osciladores podem ser mais eficazes
 
-![indicator_gopalakrishnan_range_index](../../../../images/indicator_gopalakrishnan_range_index.png)
+![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## Ver Também
 

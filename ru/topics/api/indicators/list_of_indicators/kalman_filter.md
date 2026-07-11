@@ -21,7 +21,7 @@
 
 Так получается оптимизированная оценка, которая быстро реагирует на изменения цены, отфильтровывая краткосрочные колебания.
 
-![indicator_kalman_filter](../../../../images/indicator_kalman_filter.png)
+![KalmanFilter](../../../../images/indicator_kalman_filter.png)
 
 ## См. также
 

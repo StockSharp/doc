@@ -28,7 +28,7 @@
 
 Индикатор подходит как для поиска точек входа против тренда (на разворотах), так и для подтверждения текущего движения.
 
-![indicator_demarker](../../../../images/indicator_demarker.png)
+![DeMarker](../../../../images/indicator_demarker.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 `Chart3DScript` スクリプトは、さまざまな金融商品の時間帯別取引出来高の分布を可視化する 3D チャートの作成を示します。この可視化方法により、取引動向を明確に表現し、市場活動のピークを識別できます。
 
-![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
+![3D チャート](../../../../images/hydra_analytics_chart3d.png)
 
 ## スクリプト動作の説明
 

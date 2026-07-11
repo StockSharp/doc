@@ -75,7 +75,7 @@ O momentum da média móvel pode ser interpretado da seguinte forma:
    - Períodos mais curtos para Length e MomentumPeriod tornam o MOMA mais sensível, mas também mais propenso a sinais falsos
    - Períodos mais longos tornam o MOMA mais suave, mas podem levar a sinais atrasados
 
-![indicator_momentum_of_moving_average](../../../../images/indicator_momentum_of_moving_average.png)
+![MOMA](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## Ver também
 

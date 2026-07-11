@@ -30,7 +30,7 @@
 取引判断は、EMA と両方のオシレーターを同時に分析して行います。たとえば、買い機会は、
 EMA が上昇し、ベアパワー が直近の安値から回復し、ブルパワー がゼロを上抜けたときに現れます。
 
-![indicator_elder_ray](../../../../images/indicator_elder_ray.png)
+![エルダー・レイ](../../../../images/indicator_elder_ray.png)
 
 ## 関連項目
 

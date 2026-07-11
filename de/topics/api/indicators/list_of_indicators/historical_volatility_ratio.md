@@ -77,7 +77,7 @@ Der Historisches Volatilitätsverhältnis kann wie folgt interpretiert werden:
    - Extreme HVR-Werte gehen häufig erheblichen Preisbewegungen voraus
    - Ein starker HVR-Anstieg nach einer Phase geringer Volatilität könnte den Beginn eines neuen Trends signalisieren
 
-![indicator_historical_volatility_ratio](../../../../images/indicator_historical_volatility_ratio.png)
+![HVR](../../../../images/indicator_historical_volatility_ratio.png)
 
 ## Siehe auch
 

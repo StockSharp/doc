@@ -70,7 +70,7 @@ volumen en balance se puede interpretar de la siguiente manera:
 
 Es importante tener en cuenta que OBV es un indicador acumulativo, por lo que su valor absoluto no es de gran importancia. Lo que importa es la dirección del movimiento OBV y su relación con el movimiento del precio.
 
-![indicator_on_balance_volume](../../../../images/indicator_on_balance_volume.png)
+![OBV](../../../../images/indicator_on_balance_volume.png)
 
 ## Véase también
 

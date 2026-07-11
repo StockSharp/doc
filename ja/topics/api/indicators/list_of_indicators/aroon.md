@@ -54,7 +54,7 @@ Aroon の両ラインは 0 から 100 の間で振動します。
 - **潜在的なトレンド反転**: Aroon 上昇 ラインと Aroon 下降 ラインの交差
 - **保ち合い**: 両方のラインが 50 付近で振動する
 
-![indicator_aroon](../../../../images/indicator_aroon.png)
+![Aroon](../../../../images/indicator_aroon.png)
 
 ## 関連項目
 

@@ -2,7 +2,7 @@
 
 “成交量分布”脚本用于分析所选时间段内成交量在各价格水平上的分布。交易者和量化分析人员可以借此直观查看主要交易活动集中在哪些价位。
 
-![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
+![成交量分布](../../../../images/hydra_analytics_volume_profile.png)
 
 ## 功能描述
 

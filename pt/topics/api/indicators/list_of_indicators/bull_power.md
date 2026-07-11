@@ -27,7 +27,7 @@ força compradora herda os seus parâmetros de [ExponentialMovingAverage](xref:S
 - O preço a fazer novos máximos sem leituras mais altas de força compradora forma divergência baixista.
 - Combine força compradora e força vendedora com a EMA do preço para avaliar a estrutura completa de [raios de Elder](elder_ray.md).
 
-![indicator_bull_power](../../../../images/indicator_bull_power.png)
+![força compradora](../../../../images/indicator_bull_power.png)
 
 ## Ver também
 

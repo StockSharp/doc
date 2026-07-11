@@ -2,7 +2,7 @@
 
 Para probar estrategias en la nube, primero es necesario encontrar todos los instrumentos de interés. Para ello, en **Designer** debe abrir el panel de búsqueda de instrumentos disponibles para pruebas en la pestaña **Nube**:
 
-![Designer_Backtest_Cloud_01](../../../images/designer_backtest_cloud_01.png)
+![Pruebas en la nube 01](../../../images/designer_backtest_cloud_01.png)
 
 Al introducir el nombre del instrumento en el campo de búsqueda y hacer clic en **Buscar** (o pulsar **Intro**), el servidor de StockSharp devuelve los resultados de búsqueda adecuados. A la derecha de los nombres de los instrumentos también se indicarán los rangos de fechas de los datos históricos.
 
@@ -10,16 +10,16 @@ Este procedimiento debe realizarse solo una vez para cada instrumento nuevo. Des
 
 Después de esto, debe volver a la estrategia y habilitar la opción de nube en la pestaña **Prueba histórica**:
 
-![Designer_Backtest_Cloud_00](../../../images/designer_backtest_cloud_00.png)
+![Pruebas en la nube 00](../../../images/designer_backtest_cloud_00.png)
 
 Al iniciar la prueba, la estrategia se enviará a la nube de StockSharp en lugar de probarse localmente:
 
-![Designer_Backtest_Cloud_02](../../../images/designer_backtest_cloud_02.png)
+![Pruebas en la nube 02](../../../images/designer_backtest_cloud_02.png)
 
 Una vez completada la prueba, el informe con los resultados se mostrará en la pestaña de tareas en espera:
 
-![Designer_Backtest_Cloud_03](../../../images/designer_backtest_cloud_03.png)
+![Pruebas en la nube 03](../../../images/designer_backtest_cloud_03.png)
 
 Si desea ver el historial de pruebas en la nube, así como las tareas activas actuales, abra el panel **Tareas** en la pestaña **Nube**:
 
-![Designer_Backtest_Cloud_04](../../../images/designer_backtest_cloud_04.png)
+![Pruebas en la nube 04](../../../images/designer_backtest_cloud_04.png)

@@ -76,7 +76,7 @@ Das Band gleitender Durchschnitte kann wie folgt interpretiert werden:
    - Verlassen Sie eine Position, wenn sich die gleitenden Durchschnitte in die entgegengesetzte Richtung zu kreuzen beginnen
    - Nutzen Sie die Bandbreite, um Stop-Losses und Take-Profits festzulegen
 
-![indicator_moving_average_ribbon](../../../../images/indicator_moving_average_ribbon.png)
+![MAR](../../../../images/indicator_moving_average_ribbon.png)
 
 ## Siehe auch
 

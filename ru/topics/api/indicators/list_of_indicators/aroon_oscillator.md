@@ -39,7 +39,7 @@
 Индикатор часто применяют совместно с базовым индикатором Aroon, чтобы одновременно видеть абсолютные уровни линий и разницу между
 ними.
 
-![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
+![осциллятор Aroon](../../../../images/indicator_aroon_oscillator.png)
 
 ## См. также
 

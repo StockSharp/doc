@@ -80,7 +80,7 @@
    - 突破策略：当价格突破上轨或下轨时开仓，期望价格在相同方向上继续移动
    - “中线到边缘”策略：当价格从中线反弹时开仓，目标是上轨或下轨
 
-![indicator_keltner_channels](../../../../images/indicator_keltner_channels.png)
+![KC](../../../../images/indicator_keltner_channels.png)
 
 ## 另请参阅
 

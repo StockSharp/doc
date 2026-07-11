@@ -77,7 +77,7 @@ HVR рассчитывается как отношение краткосроч�
    - Экстремальные значения HVR часто предшествуют значительным ценовым движениям
    - Резкое увеличение HVR после периода низкой волатильности может сигнализировать о начале нового тренда
 
-![indicator_historical_volatility_ratio](../../../../images/indicator_historical_volatility_ratio.png)
+![HVR](../../../../images/indicator_historical_volatility_ratio.png)
 
 ## См. также
 

@@ -67,7 +67,7 @@ PSY = (Количество растущих периодов за Length пер
    - PSY часто используется в сочетании с другими индикаторами для подтверждения сигналов
    - Особенно полезно сочетание с трендовыми индикаторами и индикаторами объема
 
-![indicator_psychological_line](../../../../images/indicator_psychological_line.png)
+![PSY](../../../../images/indicator_psychological_line.png)
 
 ## См. также
 

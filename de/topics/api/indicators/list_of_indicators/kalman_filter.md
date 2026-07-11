@@ -21,7 +21,7 @@ Bei jedem Schritt führt der Filter Folgendes aus:
 
 Dadurch entsteht eine optimierte Schätzung, die schnell auf Preisänderungen reagiert und gleichzeitig kurzfristige Schwankungen herausfiltert.
 
-![indicator_kalman_filter](../../../../images/indicator_kalman_filter.png)
+![KalmanFilter](../../../../images/indicator_kalman_filter.png)
 
 ## Siehe auch
 

@@ -48,7 +48,7 @@ CGO = - Сумма(Цена(i) * (i + 1)) / Сумма(Цена(i))
 
 Поскольку CGO является опережающим индикатором, его сигналы часто появляются до соответствующих изменений на графике цены, что дает трейдерам преимущество при принятии торговых решений.
 
-![indicator_center_of_gravity_oscillator](../../../../images/indicator_center_of_gravity_oscillator.png)
+![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## См. также
 

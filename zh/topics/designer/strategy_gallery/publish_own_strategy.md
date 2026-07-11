@@ -2,13 +2,13 @@
 
 在[策略图面板](../user_interface/schemas.md)中用鼠标左键单击策略，然后选择 **发布**，即可发布该策略：
 
-![Designer_publish_00](../../../images/designer_publish_00.png)
+![发布自己的策略 00](../../../images/designer_publish_00.png)
 
 单击 **发布** 按钮后，会打开用于选择导出类型的窗口。有关详细信息，请参阅[策略导出](../export_import/export.md)章节。
 
 选择导出类型后，会使用发布参数激活 [安装程序](../../installer.md) 程序（必须提前启动 [安装程序](../../installer.md)）：
 
-![Designer_publish_01](../../../images/designer_publish_01.png)
+![发布自己的策略 01](../../../images/designer_publish_01.png)
 
 必须填写以下字段：
 
@@ -22,8 +22,8 @@
 
 发布更新时无需再次输入所有参数。系统不会再显示产品参数输入窗口，而是显示用于填写更新说明的窗口：
 
-![Designer_publish_02](../../../images/designer_publish_02.png)
+![发布自己的策略 02](../../../images/designer_publish_02.png)
 
 单击 **确定** 按钮后，会显示更新成功的窗口：
 
-![Designer_publish_03](../../../images/designer_publish_03.png)
+![发布自己的策略 03](../../../images/designer_publish_03.png)

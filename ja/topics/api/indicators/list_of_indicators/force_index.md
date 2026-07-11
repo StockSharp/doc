@@ -70,7 +70,7 @@
    - 上昇トレンドでは、フォース指数が負の日は一時的な調整を示す場合があります
    - 下降トレンドでは、フォース指数が正の日は一時的な反発を示す場合があります
 
-![indicator_force_index](../../../../images/indicator_force_index.png)
+![FI](../../../../images/indicator_force_index.png)
 
 ## 関連項目
 

@@ -60,7 +60,7 @@ Der Disparitätsindex kann wie folgt interpretiert werden:
 5. **Mean-Reversion-Strategien**:
    - Extreme DPI-Werte können verwendet werden, um Positionen gegen die aktuelle Preisbewegung zu eröffnen und eine Rückkehr zum Mittelwert zu erwarten
 
-![indicator_disparity_index](../../../../images/indicator_disparity_index.png)
+![DPI](../../../../images/indicator_disparity_index.png)
 
 ## Siehe auch
 

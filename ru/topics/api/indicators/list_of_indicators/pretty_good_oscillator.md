@@ -78,7 +78,7 @@ PGO особенно полезен для выявления состояний
    - Экстремальные значения PGO могут использоваться как сигналы для фиксации прибыли
    - Например, можно выходить из длинных позиций, когда PGO превышает +2, и из коротких, когда PGO падает ниже -2
 
-![indicator_pretty_good_oscillator](../../../../images/indicator_pretty_good_oscillator.png)
+![PGO](../../../../images/indicator_pretty_good_oscillator.png)
 
 ## См. также
 

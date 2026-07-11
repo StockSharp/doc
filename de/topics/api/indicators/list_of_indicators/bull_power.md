@@ -28,7 +28,7 @@ Bullenstärke übernimmt seine Parameter von [ExponentialMovingAverage](xref:Sto
 - Wenn der Preis neue Hochs erreicht, ohne dass Bullenstärke höhere Werte erreicht, entsteht eine bärische Divergenz.
 - Kombinieren Sie Bull und Bärenstärke mit der Preis-EMA, um die vollständige Struktur von [Elder-Ray](elder_ray.md) zu bewerten.
 
-![indicator_bull_power](../../../../images/indicator_bull_power.png)
+![Bullenstärke](../../../../images/indicator_bull_power.png)
 
 ## Siehe auch
 

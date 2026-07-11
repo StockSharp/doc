@@ -74,7 +74,7 @@ EIS особенно полезна для:
    - Последовательность красных свечей подтверждает нисходящий тренд
    - Чередование цветов указывает на боковой тренд или неопределенность
 
-![indicator_elder_impulse_system](../../../../images/indicator_elder_impulse_system.png)
+![EIS](../../../../images/indicator_elder_impulse_system.png)
 
 ## См. также
 

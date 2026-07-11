@@ -34,7 +34,7 @@ Signal = EMA(PPO, SignalPeriod)
 - **趋势确认。** 持续在信号线之上确认了上升趋势，而持续在其下方则支持下降趋势。
 - **背离。** 当价格走势与PPO线在与信号线互动时出现背离，可能预示反转。
 
-![指标_百分比价格振荡器信号](../../../../images/indicator_percentage_price_oscillator_signal.png)
+![百分比价格振荡器信号](../../../../images/indicator_percentage_price_oscillator_signal.png)
 
 ## 另请参阅
 

@@ -77,7 +77,7 @@ Der Indikator zur Kreuzung gleitender Durchschnitte kann wie folgt interpretiert
    - Kürzere Zeiträume (z. B. 5 und 20) sind sensibler und für den kurzfristigen Handel geeignet
    - Längere Zeiträume (z. B. 50 und 200) sind weniger empfindlich und für den langfristigen Handel geeignet
 
-![indicator_moving_average_crossover](../../../../images/indicator_moving_average_crossover.png)
+![MAC](../../../../images/indicator_moving_average_crossover.png)
 
 ## Siehe auch
 

@@ -83,7 +83,7 @@ Der FVE-Indikator kann wie folgt interpretiert werden:
 6. **Unterstützungs- und Widerstandsstufen**:
    - Historische Umkehrpunkte auf dem FVE-Chart können als Richtlinien für zukünftige Umkehrungen dienen
 
-![indicator_finite_volume_element](../../../../images/indicator_finite_volume_element.png)
+![FVE](../../../../images/indicator_finite_volume_element.png)
 
 ## Siehe auch
 

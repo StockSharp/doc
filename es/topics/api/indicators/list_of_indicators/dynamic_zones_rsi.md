@@ -63,7 +63,7 @@ DZRSI se interpreta de manera similar al RSI tradicional, pero teniendo en cuent
    - Cruzar de abajo hacia arriba puede verse como una señal alcista
    - Cruzar de arriba a abajo puede verse como una señal bajista
 
-![indicator_dynamic_zones_rsi](../../../../images/indicator_dynamic_zones_rsi.png)
+![DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## Véase también
 

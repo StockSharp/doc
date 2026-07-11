@@ -28,7 +28,7 @@
 - ゼロラインのクロスは、支配的なトレンドの変化を確認する場合があります。
 - ベアパワー を [ブルパワー](bull_power.md) および価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) インジケーターを構築します。
 
-![indicator_bear_power](../../../../images/indicator_bear_power.png)
+![ベアパワー](../../../../images/indicator_bear_power.png)
 
 ## 関連項目
 

@@ -64,7 +64,7 @@ Este índice combinado puede luego suavizarse para reducir el ruido.
   - Si CBCI se mantiene consistentemente por encima de 50, puede indicar fuerza de tendencia alcista
   - Si CBCI permanece constantemente por debajo de 50, puede indicar fuerza de tendencia bajista
 
-![indicator_constance_brown_composite_index](../../../../images/indicator_constance_brown_composite_index.png)
+![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## Véase también
 

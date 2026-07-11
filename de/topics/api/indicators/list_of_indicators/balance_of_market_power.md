@@ -50,7 +50,7 @@ Wobei:
 - **Extremwerte** (oberhalb oder unterhalb bestimmter Niveaus) können auf überkaufte oder überverkaufte Marktbedingungen hinweisen
 - **Divergenzen** zwischen BMP und Preis können eine mögliche Trendumkehr signalisieren
 
-![indicator_balance_of_market_power](../../../../images/indicator_balance_of_market_power.png)
+![BMP](../../../../images/indicator_balance_of_market_power.png)
 
 ## Siehe auch
 

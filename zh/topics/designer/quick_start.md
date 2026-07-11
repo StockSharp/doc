@@ -10,7 +10,7 @@
 
 ![Designer 快速入门 02](../../images/designer_quick_start_02.png)
 
-单击 ![Designer Edit Tool](../../images/designer_edit_tool_00.png) 会打开 **数据存储设置** 窗口，可在其中配置本地或远程存储。也可以将 [Hydra](../hydra.md) [服务器模式](../hydra/server_mode/settings.md)配置为市场数据源。单击 ![[Designer_Settings_Repository_button.png]] 会打开文件夹选择窗口。请选择之前由 [Hydra](../hydra.md) 下载并保存历史数据的文件夹。
+单击 ![Designer 编辑按钮](../../images/designer_edit_tool_00.png) 会打开 **数据存储设置** 窗口，可在其中配置本地或远程存储。也可以将 [Hydra](../hydra.md) [服务器模式](../hydra/server_mode/settings.md)配置为市场数据源。单击 **仓库按钮** 会打开文件夹选择窗口。请选择之前由 [Hydra](../hydra.md) 下载并保存历史数据的文件夹。
 
 如果没有所需的交易品种，请手动下载它们。
 

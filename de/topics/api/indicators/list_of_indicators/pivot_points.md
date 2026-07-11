@@ -81,7 +81,7 @@ Pivot-Punkte kann wie folgt interpretiert werden:
    - Monatliche Pivot-Punkte werden basierend auf dem Vormonat berechnet
    - Die Auswahl des Zeitrahmens hängt vom Handelsstil und Zeithorizont ab
 
-![indicator_pivot_points](../../../../images/indicator_pivot_points.png)
+![PP](../../../../images/indicator_pivot_points.png)
 
 ## Siehe auch
 

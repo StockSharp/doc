@@ -56,7 +56,7 @@ Ambas as linhas Aroon oscilam entre 0 e 100:
 - **Potencial reversão de tendência**: cruzamento das linhas Aroon ascendente e Aroon descendente
 - **Consolidação**: ambas as linhas oscilam em torno de 50
 
-![indicator_aroon](../../../../images/indicator_aroon.png)
+![Aroon](../../../../images/indicator_aroon.png)
 
 ## Ver também
 

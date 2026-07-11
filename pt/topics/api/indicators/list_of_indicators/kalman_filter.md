@@ -21,7 +21,7 @@ Em cada passo, o filtro executa:
 
 Isto produz uma estimativa otimizada que reage rapidamente às alterações de preço enquanto filtra flutuações de curto prazo.
 
-![indicator_kalman_filter](../../../../images/indicator_kalman_filter.png)
+![KalmanFilter](../../../../images/indicator_kalman_filter.png)
 
 ## Ver Também
 

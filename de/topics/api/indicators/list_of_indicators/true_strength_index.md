@@ -27,7 +27,7 @@ Verwenden Sie die Klasse [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.Tru
 
 Durch die doppelte Glättung und Normalisierung filtert der Indikator Rauschen heraus und bleibt zugleich reaktionsfähiger als einfache Momentum-Berechnungen.
 
-![indicator_true_strength_index](../../../../images/indicator_true_strength_index.png)
+![Index der wahren Stärke](../../../../images/indicator_true_strength_index.png)
 
 ## Siehe auch
 

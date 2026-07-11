@@ -34,7 +34,7 @@ Signal = EMA(PPO, SignalPeriod)
 - **Подтверждение тренда.** Нахождение линии PPO выше сигнальной линии подтверждает восходящий тренд, ниже — нисходящий.
 - **Дивергенции.** Расхождение между ценой и линией PPO вблизи сигнальной линии может заранее предупредить о скором развороте.
 
-![indicator_percentage_price_oscillator_signal](../../../../images/indicator_percentage_price_oscillator_signal.png)
+![PPOS](../../../../images/indicator_percentage_price_oscillator_signal.png)
 
 ## См. также
 

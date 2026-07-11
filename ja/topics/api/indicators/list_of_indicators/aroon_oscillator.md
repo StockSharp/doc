@@ -35,7 +35,7 @@
 このオシレーターは、絶対水準とその差の両方を観察するために、基本の [Aroon](aroon.md) インジケーターとあわせて
 分析されることがよくあります。
 
-![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
+![Aroon オシレーター](../../../../images/indicator_aroon_oscillator.png)
 
 ## 関連項目
 

@@ -74,7 +74,7 @@ El sistema de impulso de Elder se interpreta de la siguiente manera:
    - Una secuencia de velas rojas confirma una tendencia a la baja
    - La alternancia de colores indica una tendencia lateral o incertidumbre
 
-![indicator_elder_impulse_system](../../../../images/indicator_elder_impulse_system.png)
+![EIS](../../../../images/indicator_elder_impulse_system.png)
 
 ## Véase también
 

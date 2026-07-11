@@ -101,5 +101,5 @@ Durch die Implementierung von [IAnalyticsScript](xref:StockSharp.Algo.Analytics.
 
 ## Ausführungsergebnis
 
-![hydra_analytics_chart](../../../images/hydra_analytics_chart.png)
+![Skript erstellen](../../../images/hydra_analytics_chart.png)
 

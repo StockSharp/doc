@@ -67,7 +67,7 @@
    - FOSC が価格と同じ方向に動く場合、現在のトレンドの強さを確認します
    - FOSC が価格と反対方向に動く場合、現在のトレンドの弱まりを示す可能性があります
 
-![indicator_forecast_oscillator](../../../../images/indicator_forecast_oscillator.png)
+![FOSC](../../../../images/indicator_forecast_oscillator.png)
 
 ## 関連項目
 

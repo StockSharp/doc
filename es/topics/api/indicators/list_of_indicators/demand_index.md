@@ -70,7 +70,7 @@ ll Índice de demanda se puede interpretar de varias maneras:
 
 ll uso del Índice de demanda es más efectivo cuando se combina con otros indicadores y métodos de análisis para filtrar señales falsas.
 
-![indicator_demand_index](../../../../images/indicator_demand_index.png)
+![DI](../../../../images/indicator_demand_index.png)
 
 ## Véase también
 

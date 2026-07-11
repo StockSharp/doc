@@ -27,7 +27,7 @@
 
 二重平滑化と正規化により、このインジケーターはノイズを除去しつつ、単純なモメンタム計算と比較して応答性を維持します。
 
-![indicator_true_strength_index](../../../../images/indicator_true_strength_index.png)
+![真の強さ指数](../../../../images/indicator_true_strength_index.png)
 
 ## 関連項目
 

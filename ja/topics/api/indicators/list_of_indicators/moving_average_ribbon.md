@@ -76,7 +76,7 @@ MAR には、期間が段階的に増加する複数の移動平均 (通常 5 �
    - 移動平均が反対方向にクロスし始めたときにポジションを手仕舞います
    - リボン幅を使用してストップロスとテイクプロフィットを設定します
 
-![indicator_moving_average_ribbon](../../../../images/indicator_moving_average_ribbon.png)
+![MAR](../../../../images/indicator_moving_average_ribbon.png)
 
 ## 関連項目
 

@@ -79,7 +79,7 @@ HO особенно полезен для:
    - HO лучше всего работает в сочетании с трендовыми индикаторами
    - В трендовых рынках сигналы HO могут использоваться для определения точек входа в направлении тренда
 
-![indicator_harmonic_oscillator](../../../../images/indicator_harmonic_oscillator.png)
+![HO](../../../../images/indicator_harmonic_oscillator.png)
 
 ## См. также
 

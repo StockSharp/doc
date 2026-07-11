@@ -27,7 +27,7 @@
 - 价格创出新高而多头力量读数没有创高，形成看跌背离。
 - 将多空能量与价格EMA结合，以评估完整的[埃尔德射线指数](elder_ray.md)结构。
 
-![指标_多头力量](../../../../images/indicator_bull_power.png)
+![多头力量](../../../../images/indicator_bull_power.png)
 
 ## 另请参阅
 

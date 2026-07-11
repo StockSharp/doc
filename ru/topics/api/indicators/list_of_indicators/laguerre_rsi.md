@@ -91,7 +91,7 @@ RSI Лагерра интерпретируется аналогично тра�
    - Для более быстрых сигналов - увеличить Gamma (ближе к 0.9)
    - Для более сглаженных сигналов - уменьшить Gamma (ближе к 0.1)
 
-![indicator_laguerre_rsi](../../../../images/indicator_laguerre_rsi.png)
+![LRSI](../../../../images/indicator_laguerre_rsi.png)
 
 ## См. также
 

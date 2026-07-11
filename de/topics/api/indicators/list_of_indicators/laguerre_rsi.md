@@ -91,7 +91,7 @@ Laguerre-RSI wird ähnlich wie herkömmliches RSI interpretiert, jedoch mit erh�
    - Für schnellere Signale - Gamma erhöhen (näher an 0,9)
    - Für glattere Signale - Gamma verringern (näher an 0,1)
 
-![indicator_laguerre_rsi](../../../../images/indicator_laguerre_rsi.png)
+![LRSI](../../../../images/indicator_laguerre_rsi.png)
 
 ## Siehe auch
 

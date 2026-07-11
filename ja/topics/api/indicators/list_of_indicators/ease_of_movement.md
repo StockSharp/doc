@@ -78,7 +78,7 @@ EMV 指標は次のように解釈できます。
    - 価格が負の EMV とともに下落する場合、下降の強さを確認します
    - 価格が負の EMV とともに上昇する場合、または正の EMV とともに下落する場合、現在の動きの不安定さを示している可能性があります
 
-![indicator_ease_of_movement](../../../../images/indicator_ease_of_movement.png)
+![EMV](../../../../images/indicator_ease_of_movement.png)
 
 ## 関連項目
 

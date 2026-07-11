@@ -80,7 +80,7 @@ Os canais de Keltner podem ser interpretados da seguinte forma:
    - Estratégia de rompimento: abrir uma posição quando o preço rompe a banda superior ou inferior, esperando continuação do movimento na mesma direcção
    - Estratégia "Do centro à borda": abrir uma posição quando o preço ressalta da linha média, tendo como alvo a banda superior ou inferior
 
-![indicator_keltner_channels](../../../../images/indicator_keltner_channels.png)
+![KC](../../../../images/indicator_keltner_channels.png)
 
 ## Ver Também
 

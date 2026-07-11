@@ -61,7 +61,7 @@ donde:
   - 30-60: "entrecortamiento" moderado (estado de transición)
   - Por debajo de 30: Low "entrecortamiento" (tendencia fuerte)
 
-![indicator_choppiness_index](../../../../images/indicator_choppiness_index.png)
+![CHOP](../../../../images/indicator_choppiness_index.png)
 
 ## Véase también
 

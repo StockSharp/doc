@@ -62,7 +62,7 @@ CKS は特に次の用途に役立ちます。
 
 - **他のインジケーターとの併用**: CKS は、市場へのエントリー方向を判断するのに役立つ他のトレンド系およびモメンタム系インジケーターと組み合わせると最も効果的です。
 
-![indicator_chande_kroll_stop](../../../../images/indicator_chande_kroll_stop.png)
+![CKS](../../../../images/indicator_chande_kroll_stop.png)
 
 ## 関連項目
 

@@ -29,7 +29,7 @@
 - Индикатор применяют совместно с [сила продавцов](bear_power.md) для оценки баланса сил и построения комплексного индикатора
   [лучи Элдера](elder_ray.md).
 
-![indicator_bull_power](../../../../images/indicator_bull_power.png)
+![сила покупателей](../../../../images/indicator_bull_power.png)
 
 ## См. также
 

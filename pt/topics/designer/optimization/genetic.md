@@ -6,15 +6,15 @@ Para ativar a otimização **Genético**, é necessário:
 
 - mudar o modo:
 
-  ![Designer_Optimization_Genetic_00](../../../images/designer_optimization_genetic_00.png)
+  ![Genética 00](../../../images/designer_optimization_genetic_00.png)
 
 - definir os parâmetros de otimização:
 
-  ![Designer_Optimization_Genetic_01](../../../images/designer_optimization_genetic_01.png)
+  ![Genética 01](../../../images/designer_optimization_genetic_01.png)
 
 - como função objetivo (Fitness), pode especificar uma fórmula alargada:
 
-  ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
+  ![Genética 02](../../../images/designer_optimization_genetic_02.png)
 
   Por exemplo, efetuar cálculos não apenas por **Lucro**, mas também em relação ao seu **Drawdown máximo**. As funções matemáticas disponíveis são semelhantes às do bloco [Fórmula](../strategies/using_visual_designer/elements/common/formula.md).
 

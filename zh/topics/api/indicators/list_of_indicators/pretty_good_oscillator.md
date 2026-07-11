@@ -78,7 +78,7 @@ PGO 对识别超买和超卖状况特别有用，也可用于检测可能预示�
    - 极端的 PGO 值可以用作获利的信号
    - 例如，当PGO超过+2时退出多头持仓，当PGO低于-2时退出空头持仓
 
-![指标_相当好的振荡器](../../../../images/indicator_pretty_good_oscillator.png)
+![PGO](../../../../images/indicator_pretty_good_oscillator.png)
 
 ## 另请参阅
 

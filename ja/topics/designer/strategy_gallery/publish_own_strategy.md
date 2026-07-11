@@ -2,13 +2,13 @@
 
 [スキームパネル](../user_interface/schemas.md) パネルでストラテジーをマウスの左ボタンでクリックし、**公開** を選択することで、ストラテジーを公開できます:
 
-![Designer_publish_00](../../../images/designer_publish_00.png)
+![ストラテジーの公開 00](../../../images/designer_publish_00.png)
 
 **公開** ボタンをクリックすると、エクスポート種類を選択するウィンドウが開きます。詳細については、[ストラテジーのエクスポート](../export_import/export.md) セクションを参照してください。
 
 エクスポート種類を選択すると、公開パラメーターを使用して [インストーラー](../../installer.md) プログラムが起動されます（[インストーラー](../../installer.md) は事前に起動しておく必要があります）:
 
-![Designer_publish_01](../../../images/designer_publish_01.png)
+![ストラテジーの公開 01](../../../images/designer_publish_01.png)
 
 入力が必須のフィールド:
 
@@ -22,8 +22,8 @@
 
 更新を公開する場合、すべてのパラメーターを再度入力する必要はありません。製品パラメーターを入力する代わりに、更新用のノートを入力するウィンドウが表示されます:
 
-![Designer_publish_02](../../../images/designer_publish_02.png)
+![ストラテジーの公開 02](../../../images/designer_publish_02.png)
 
 **確定** ボタンをクリックすると、更新が成功したことを示すウィンドウが表示されます:
 
-![Designer_publish_03](../../../images/designer_publish_03.png)
+![ストラテジーの公開 03](../../../images/designer_publish_03.png)

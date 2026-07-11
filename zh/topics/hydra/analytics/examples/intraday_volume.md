@@ -2,7 +2,7 @@
 
 “日内成交量”脚本用于分析单个交易时段内交易品种成交量的逐小时分布。该脚本面向使用 StockSharp 平台的交易者和量化分析人员，可帮助他们深入研究市场行为并优化交易策略。
 
-![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
+![日内成交量](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## 功能描述
 

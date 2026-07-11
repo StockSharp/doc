@@ -6,15 +6,15 @@
 
 - 切换优化模式：
 
-  ![Designer_Optimization_Genetic_00](../../../images/designer_optimization_genetic_00.png)
+  ![遗传算法 00](../../../images/designer_optimization_genetic_00.png)
 
 - 设置优化参数：
 
-  ![Designer_Optimization_Genetic_01](../../../images/designer_optimization_genetic_01.png)
+  ![遗传算法 01](../../../images/designer_optimization_genetic_01.png)
 
 - 可以为目标函数（Fitness）指定扩展公式：
 
-  ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
+  ![遗传算法 02](../../../images/designer_optimization_genetic_02.png)
 
   例如，不仅根据 **利润** 计算适应度，还可以将其与 **最大回撤** 结合计算。可用的数学函数与 [公式](../strategies/using_visual_designer/elements/common/formula.md) 模块类似。
 

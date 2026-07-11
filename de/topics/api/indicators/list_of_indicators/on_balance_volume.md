@@ -70,7 +70,7 @@ On-Balance-Volumen kann wie folgt interpretiert werden:
 
 Es ist wichtig zu beachten, dass OBV ein kumulativer Indikator ist, sodass sein absoluter Wert keine große Bedeutung hat. Entscheidend ist die Richtung der OBV-Bewegung und ihr Verhältnis zur Preisbewegung.
 
-![indicator_on_balance_volume](../../../../images/indicator_on_balance_volume.png)
+![OBV](../../../../images/indicator_on_balance_volume.png)
 
 ## Siehe auch
 

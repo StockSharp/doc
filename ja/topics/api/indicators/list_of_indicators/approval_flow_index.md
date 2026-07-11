@@ -30,7 +30,7 @@ AFI は、どれだけの取引出来高が価格変動を「承認」してい�
 
 正の AFI 値は強い上昇トレンドを示し、負の値は下降トレンドを示唆します。ゼロに近い値は、明確なトレンドが存在しないことを示す場合があります。
 
-![indicator_approval_flow_index](../../../../images/indicator_approval_flow_index.png)
+![AFI](../../../../images/indicator_approval_flow_index.png)
 
 ## 関連項目
 

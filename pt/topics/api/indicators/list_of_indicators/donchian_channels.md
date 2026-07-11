@@ -67,7 +67,7 @@ canais de Donchian podem ser usados de várias formas:
 5. **Estratégias contra a tendência**:
    - Alguns traders usam sinais opostos, esperando que o preço regresse à linha média após atingir os limites do canal
 
-![indicator_donchian_channels](../../../../images/indicator_donchian_channels.png)
+![DC](../../../../images/indicator_donchian_channels.png)
 
 ## Ver também
 

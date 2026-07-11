@@ -70,7 +70,7 @@ DI は、次の市場状況を特定することを目的としています。
 
 需要指数は、誤シグナルを除外するために、他のインジケーターや分析手法と組み合わせて使用すると最も効果的です。
 
-![indicator_demand_index](../../../../images/indicator_demand_index.png)
+![DI](../../../../images/indicator_demand_index.png)
 
 ## 関連項目
 

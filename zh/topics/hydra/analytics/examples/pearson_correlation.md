@@ -2,7 +2,7 @@
 
 皮尔逊相关系数是一种衡量两个定量变量之间线性关系程度的统计方法。在金融分析中，该方法广泛用于研究股票、货币对等不同资产之间的关系。
 
-![hydra_analytics_pearson_correlation](../../../../images/hydra_analytics_pearson_correlation.png)
+![皮尔逊相关系数](../../../../images/hydra_analytics_pearson_correlation.png)
 
 ## 方法描述
 

@@ -70,7 +70,7 @@ PVI は、補完的な ネガティブ出来高指数 (NVI) と併用される�
    - 一部のトレーダーは、PVI にしきい値水準（例: 移動平均の上下 5%）を設定します
    - これらのしきい値を交差することは、単純なクロスオーバーよりも強いシグナルと見なされる場合があります
 
-![indicator_positive_volume_index](../../../../images/indicator_positive_volume_index.png)
+![PVI](../../../../images/indicator_positive_volume_index.png)
 
 ## 関連項目
 

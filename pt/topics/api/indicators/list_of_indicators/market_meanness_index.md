@@ -76,7 +76,7 @@ O Índice de adversidade do mercado pode ser interpretado da seguinte forma:
    - O MMI de longo prazo ajuda a determinar o estado primário do mercado
    - O MMI de curto prazo ajuda a escolher uma estratégia adequada para as condições actuais
 
-![indicator_market_meanness_index](../../../../images/indicator_market_meanness_index.png)
+![MMI](../../../../images/indicator_market_meanness_index.png)
 
 ## Ver Também
 

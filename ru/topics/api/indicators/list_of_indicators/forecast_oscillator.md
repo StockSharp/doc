@@ -67,7 +67,7 @@
    - Если FOSC движется в том же направлении, что и цена, это подтверждает силу текущего тренда
    - Если FOSC движется в направлении, противоположном цене, это может указывать на ослабление текущего тренда
 
-![indicator_forecast_oscillator](../../../../images/indicator_forecast_oscillator.png)
+![FOSC](../../../../images/indicator_forecast_oscillator.png)
 
 ## См. также
 

@@ -64,7 +64,7 @@ Dieser kombinierte Index kann dann geglättet werden, um das Rauschen zu reduzie
   - Wenn CBCI dauerhaft über 50 bleibt, kann dies auf einen starken Aufwärtstrend hinweisen
   - Wenn CBCI dauerhaft unter 50 bleibt, kann dies auf einen starken Abwärtstrend hinweisen
 
-![indicator_constance_brown_composite_index](../../../../images/indicator_constance_brown_composite_index.png)
+![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## Siehe auch
 

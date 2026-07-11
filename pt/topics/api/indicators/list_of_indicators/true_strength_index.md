@@ -30,7 +30,7 @@ Use a classe [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthInd
 Devido à dupla suavização e à normalização, o indicador filtra ruído, mantendo-se ainda assim reativo em comparação com cálculos
 simples de momentum.
 
-![indicator_true_strength_index](../../../../images/indicator_true_strength_index.png)
+![índice de força verdadeira](../../../../images/indicator_true_strength_index.png)
 
 ## Ver também
 

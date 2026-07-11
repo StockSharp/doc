@@ -71,7 +71,7 @@
 5. **Построение на разных таймфреймах**:
    - Уровни Фибоначчи, построенные на разных таймфреймах, могут создавать зоны кластеризации, где вероятность разворота повышается
 
-![indicator_fibonacci_retracement](../../../../images/indicator_fibonacci_retracement.png)
+![FR](../../../../images/indicator_fibonacci_retracement.png)
 
 ## См. также
 

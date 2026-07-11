@@ -68,7 +68,7 @@ CMF oscila alrededor de la línea cero y normalmente está dentro del rango de -
   - Los valores superiores a +0,25 pueden indicar una fuerte acumulación
   - Los valores inferiores a -0,25 pueden indicar una fuerte distribución
 
-![indicator_chaikin_money_flow](../../../../images/indicator_chaikin_money_flow.png)
+![CMF](../../../../images/indicator_chaikin_money_flow.png)
 
 ## Véase también
 

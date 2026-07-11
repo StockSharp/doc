@@ -73,7 +73,7 @@ Der Intraday-Momentum-Index wird ähnlich wie RSI interpretiert:
    - Anhaltende IMI-Werte über 50 bestätigen einen Aufwärtstrend
    - Anhaltende IMI-Werte unter 50 bestätigen einen Abwärtstrend
 
-![indicator_intraday_momentum_index](../../../../images/indicator_intraday_momentum_index.png)
+![IMI](../../../../images/indicator_intraday_momentum_index.png)
 
 ## Siehe auch
 

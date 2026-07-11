@@ -78,7 +78,7 @@ Der Pretty-Good-Oszillator kann wie folgt interpretiert werden:
    - Extreme PGO-Werte können als Signale für Gewinnmitnahmen genutzt werden
    - Verlassen Sie beispielsweise Kaufpositionen, wenn PGO +2 überschreitet, und Verkaufspositionen, wenn PGO unter -2 fällt
 
-![indicator_pretty_good_oscillator](../../../../images/indicator_pretty_good_oscillator.png)
+![PGO](../../../../images/indicator_pretty_good_oscillator.png)
 
 ## Siehe auch
 

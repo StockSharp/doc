@@ -18,7 +18,7 @@
 - 遅延入力を必要とするカスタム指標やストラテジーを構築します。
 - たとえば、現在価格と過去値の差を計算するために、合成系列を作成します。
 
-![indicator_shift](../../../../images/indicator_shift.png)
+![シフト](../../../../images/indicator_shift.png)
 
 ## 関連項目
 

@@ -80,7 +80,7 @@ KST インジケーターは、次のように解釈できます。
    - 正の KST 値は、強気センチメントが優勢であることを示します
    - 負の KST 値は、弱気センチメントが優勢であることを示します
 
-![indicator_kst](../../../../images/indicator_kst.png)
+![KST](../../../../images/indicator_kst.png)
 
 ## 関連項目
 

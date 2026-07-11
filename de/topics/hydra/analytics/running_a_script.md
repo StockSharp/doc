@@ -2,7 +2,7 @@
 
 Um ein neues Analytics-Skript zu erstellen, wählen Sie im Panel der Datenquellen im Hauptfenster die Registerkarte **Analytics** und wählen im Dropdown-Menü die gewünschte Vorlage für einen schnellen Einstieg aus:
 
-![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+![Skript ausführen 00](../../../images/hydra_analytics_main_00.png)
 
 Der Screenshot zeigt die Hauptoberflache dieser Funktion, die aus mehreren wichtigen Komponenten besteht:
 
@@ -17,7 +17,7 @@ Beim Festlegen der Parameter:
 
 - **Instrument** kann je nach Logik des Skripts auf ein oder mehrere Instrumente gesetzt werden.
 
-![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+![Skript ausführen 01](../../../images/hydra_analytics_main_01.png)
 
 - Der Datumsbereich.
 - Der Speicher, aus dem Daten abgerufen werden sollen.

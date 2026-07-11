@@ -57,7 +57,7 @@ Onde:
 - Offset - parâmetro de deslocamento (de 0 a 1)
 - Sigma - parâmetro sigma (normalmente de 2 a 8)
 
-![indicator_arnaud_legoux_moving_average](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## Ver também
 

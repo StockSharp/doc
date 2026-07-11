@@ -71,7 +71,7 @@ Los niveles retroceso de Fibonacci se interpretan de la siguiente manera:
 5. **Trazado en distintos marcos temporales**:
    - Los niveles de Fibonacci trazados en diferentes períodos de tiempo pueden crear zonas de agrupamiento donde aumenta la probabilidad de reversión.
 
-![indicator_fibonacci_retracement](../../../../images/indicator_fibonacci_retracement.png)
+![FR](../../../../images/indicator_fibonacci_retracement.png)
 
 ## Véase también
 

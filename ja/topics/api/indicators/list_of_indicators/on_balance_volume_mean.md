@@ -81,7 +81,7 @@ OBVM の主な利点は、古典的な OBV と比較して、より明確で誤�
    - 長い期間 (例: 30-50) は、長期トレンドの特定により適しています
    - 最適な期間は、取引の時間軸と特定の銘柄の特性によって異なります
 
-![indicator_on_balance_volume_mean](../../../../images/indicator_on_balance_volume_mean.png)
+![OBVM](../../../../images/indicator_on_balance_volume_mean.png)
 
 ## 関連項目
 

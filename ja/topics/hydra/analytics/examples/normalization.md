@@ -2,7 +2,7 @@
 
 "Closing Price Normalization" スクリプトは、金融商品の終値を標準化し、異なる資産を統一されたスケールで比較および分析できるように設計されています。これは、価格水準やボラティリティが異なる銘柄を比較する場合に特に有用です。
 
-![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
+![終値の正規化](../../../../images/hydra_analytics_normalize.png)
 
 ## スクリプト動作の説明
 

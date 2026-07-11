@@ -30,7 +30,7 @@ Elder-Ray erbt die Einstellungen von [ExponentialMovingAverage](xref:StockSharp.
 Handelsentscheidungen werden durch die gleichzeitige Analyse des EMA und beider Oszillatoren getroffen. Eine Kaufgelegenheit ergibt sich beispielsweise, wenn
 Der EMA steigt, der Bärenstärke erholt sich von einem neuen Tief und der Bullenstärke bricht über Null.
 
-![indicator_elder_ray](../../../../images/indicator_elder_ray.png)
+![Elder-Ray](../../../../images/indicator_elder_ray.png)
 
 ## Siehe auch
 

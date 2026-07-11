@@ -70,7 +70,7 @@ O índice de volume negativo pode ser interpretado da seguinte forma:
    - Alguns traders definem níveis de limiar para o NVI (por exemplo, 5% acima ou abaixo da média móvel)
    - O cruzamento destes limiares pode ser considerado um sinal mais forte do que cruzamentos simples
 
-![indicator_negative_volume_index](../../../../images/indicator_negative_volume_index.png)
+![NVI](../../../../images/indicator_negative_volume_index.png)
 
 ## Ver também
 

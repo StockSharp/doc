@@ -61,7 +61,7 @@ CHOP は特に次の用途に役立ちます。
   - 30-60: 中程度の「チョッピーさ」（移行状態）
   - 30 未満: 低い「チョッピーさ」（強いトレンド）
 
-![indicator_choppiness_index](../../../../images/indicator_choppiness_index.png)
+![CHOP](../../../../images/indicator_choppiness_index.png)
 
 ## 関連項目
 

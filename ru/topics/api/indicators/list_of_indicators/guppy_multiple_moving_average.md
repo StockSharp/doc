@@ -78,7 +78,7 @@ GMMA особенно полезен для:
    - Первыми меняют направление краткосрочные средние, затем изменения начинают проявляться в долгосрочных средних
    - Пересечение между группами может служить подтверждением разворота
 
-![indicator_guppy_multiple_moving_average](../../../../images/indicator_guppy_multiple_moving_average.png)
+![GMMA](../../../../images/indicator_guppy_multiple_moving_average.png)
 
 ## См. также
 

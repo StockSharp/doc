@@ -68,7 +68,7 @@ CMF колеблется около нулевой линии и обычно н
   - Значения выше +0.25 могут указывать на сильное накопление
   - Значения ниже -0.25 могут указывать на сильное распределение
 
-![indicator_chaikin_money_flow](../../../../images/indicator_chaikin_money_flow.png)
+![CMF](../../../../images/indicator_chaikin_money_flow.png)
 
 ## См. также
 

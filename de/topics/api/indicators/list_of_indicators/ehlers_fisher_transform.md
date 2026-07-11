@@ -71,7 +71,7 @@ Der Ehlers-Fisher-Transformation kann wie folgt interpretiert werden:
 
 Der Ehlers-Fisher-Transformation unterscheidet sich von vielen anderen Oszillatoren dadurch, dass er extreme Werte erreichen und dort einige Zeit verharren kann, ohne unbedingt sofort umzukehren. Dies macht es nützlich, um starke Trendbewegungen zu identifizieren.
 
-![indicator_ehlers_fisher_transform](../../../../images/indicator_ehlers_fisher_transform.png)
+![EFT](../../../../images/indicator_ehlers_fisher_transform.png)
 
 ## Siehe auch
 

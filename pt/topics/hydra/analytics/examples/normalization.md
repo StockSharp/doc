@@ -2,7 +2,7 @@
 
 O script "Closing Price Normalization" foi concebido para normalizar os preços de fecho de instrumentos financeiros, permitindo a comparação e análise de diferentes ativos numa escala unificada. Isto é particularmente útil ao comparar instrumentos com custos e volatilidade variados.
 
-![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
+![Normalização do Preço de Fecho](../../../../images/hydra_analytics_normalize.png)
 
 ## Descrição do Funcionamento do Script
 

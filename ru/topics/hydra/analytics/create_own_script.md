@@ -101,4 +101,4 @@ namespace StockSharp.Algo.Analytics
 
 ## Результат выполнения
 
-![hydra_analytics_chart](../../../images/hydra_analytics_chart.png)
+![Создание скрипта](../../../images/hydra_analytics_chart.png)

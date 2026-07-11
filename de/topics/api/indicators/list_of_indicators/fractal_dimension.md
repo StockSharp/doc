@@ -36,7 +36,7 @@ FDI wird durch Vergleich der gesamten Preispfadlänge mit der gesamten Hoch-Tief
 - **FDI etwa 1,5** – Random Walk; Die Trendstärke ist neutral.
 - **FDI näher an 2** – unruhiger oder seitwärts gerichteter Markt.
 
-![indicator_fractal_dimension](../../../../images/indicator_fractal_dimension.png)
+![FDI](../../../../images/indicator_fractal_dimension.png)
 
 ## Siehe auch
 

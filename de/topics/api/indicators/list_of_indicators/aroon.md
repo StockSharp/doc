@@ -54,7 +54,7 @@ Beide Aroon-Linien oszillieren zwischen 0 und 100:
 - **Potenzielle Trendumkehr**: Kreuzung der Linien Aroon-Aufwärts und Aroon-Abwärts
 - **Konsolidierung**: beide Linien oszillieren um 50
 
-![indicator_aroon](../../../../images/indicator_aroon.png)
+![Aroon](../../../../images/indicator_aroon.png)
 
 ## Siehe auch
 

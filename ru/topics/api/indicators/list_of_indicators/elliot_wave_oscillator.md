@@ -63,7 +63,7 @@ EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 6. **Идентификация волны 3**:
    - Волна 3, которая обычно является самой сильной импульсной волной по теории Эллиота, часто характеризуется наивысшими значениями EWO
 
-![indicator_elliot_wave_oscillator](../../../../images/indicator_elliot_wave_oscillator.png)
+![EWO](../../../../images/indicator_elliot_wave_oscillator.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 Das Skript `Chart3DScript` demonstriert die Erstellung eines 3D-Charts zur Visualisierung der Verteilung von Handelsvolumina nach Stunden für verschiedene Finanzinstrumente. Diese Visualisierungsmethode ermöglicht eine klare Darstellung der Handelsdynamik und das Erkennen von Spitzen der Marktaktivitat.
 
-![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
+![3D-Chart](../../../../images/hydra_analytics_chart3d.png)
 
 ## Beschreibung der Skriptausführung
 

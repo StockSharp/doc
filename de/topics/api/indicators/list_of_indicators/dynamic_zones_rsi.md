@@ -63,7 +63,7 @@ DZRSI wird ähnlich wie herkömmliches RSI interpretiert, jedoch unter Berücksi
    - Ein Übergang von unten nach oben kann als bullisches Signal angesehen werden
    - Ein Übergang von oben nach unten kann als bärisches Signal angesehen werden
 
-![indicator_dynamic_zones_rsi](../../../../images/indicator_dynamic_zones_rsi.png)
+![DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## Siehe auch
 

@@ -85,7 +85,7 @@ PPO состоит из трех компонентов:
    - Сигналы пересечения сигнальной линии более надежны, когда PPO находится в соответствии с основным трендом
    - Например, бычьи сигналы более надежны, когда PPO положительный, и медвежьи сигналы более надежны, когда PPO отрицательный
 
-![indicator_percentage_price_oscillator](../../../../images/indicator_percentage_price_oscillator.png)
+![PPO](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## См. также
 

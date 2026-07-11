@@ -8,26 +8,26 @@
 
 - В случае использования программы [Designer](../designer.md) включите на панели Облако режим **Удаленное**:
 
-  ![DesignerRibbon.png](../../images/designerribbon.png)
+  ![Панель управления 01](../../images/designerribbon.png)
 
   Все стратегии, которые запущены в режиме Live, автоматически будут переданы в Telegram-бот, и вы сможете управлять ими с телефона.
   
   В боте [StockSharpBot](https://t.me/StockSharpBot), выбрав команду /apps, можно увидеть список всех программ:
 
-  ![TelegramControlApps.png](../../images/telegramcontrolapps.png)
+  ![Панель управления 02](../../images/telegramcontrolapps.png)
 
   Выбрав нужную программу, можно увидеть стратегии и элементы управления ими:
 
-  ![TelegramControlApp.png](../../images/telegramcontrolapp.png)
+  ![Панель управления 03](../../images/telegramcontrolapp.png)
 
-  ![TelegramControlStrategies.png](../../images/telegramcontrolstrategies.png)
+  ![Панель управления 04](../../images/telegramcontrolstrategies.png)
 
-  ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
+  ![Панель управления 05](../../images/telegramcontrolstrategy.png)
 
 - В случае использования [Shell](../shell.md) вам необходимо перейти в панель **Удалённый менеджер** и сделать настройки, аналогичные тем, что в [Designer](../designer.md).
 - В случае использования [Hydra](../hydra.md) все действия делаются аналогично [Designer](../designer.md). Интеграция с [Hydra](../hydra.md) позволяет управлять скачиванием маркет-данных и отслеживать количественную статистику.
 
-  ![TelegramHydra.png](../../images/telegramhydra.png)
-  ![TelegramHydraStat.png](../../images/telegramhydrastat.png)
+  ![Панель управления 06](../../images/telegramhydra.png)
+  ![Панель управления 07](../../images/telegramhydrastat.png)
 
 - В случае использования [S\#](../api.md), вы можете сделать интеграцию, используя код из [Shell](../shell.md). Благодаря тому, что [S\#](../api.md) является кросс-платформенной, ваши роботы могут быть запущены на любой операционной системе.

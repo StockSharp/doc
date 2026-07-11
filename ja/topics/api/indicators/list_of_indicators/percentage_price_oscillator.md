@@ -85,7 +85,7 @@ PPO は、次のように解釈できます。
    - シグナルラインのクロスオーバーシグナルは、PPO が主トレンドと一致している場合に、より信頼性が高くなります
    - たとえば、PPO が正の場合は強気シグナルの信頼性が高く、PPO が負の場合は弱気シグナルの信頼性が高くなります
 
-![indicator_percentage_price_oscillator](../../../../images/indicator_percentage_price_oscillator.png)
+![PPO](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## 関連項目
 

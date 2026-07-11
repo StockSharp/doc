@@ -81,7 +81,7 @@ puntos pivote se puede interpretar de la siguiente manera:
    - Los puntos pivote mensuales se calculan en función del mes anterior
    - La selección del plazo depende del estilo de negociación y del horizonte temporal.
 
-![indicator_pivot_points](../../../../images/indicator_pivot_points.png)
+![PP](../../../../images/indicator_pivot_points.png)
 
 ## Véase también
 

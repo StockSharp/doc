@@ -77,7 +77,7 @@ O indicador de cruzamento de médias móveis pode ser interpretado da seguinte f
    - Períodos mais curtos (por exemplo, 5 e 20) são mais sensíveis e adequados para trading de curto prazo
    - Períodos mais longos (por exemplo, 50 e 200) são menos sensíveis e adequados para trading de longo prazo
 
-![indicator_moving_average_crossover](../../../../images/indicator_moving_average_crossover.png)
+![MAC](../../../../images/indicator_moving_average_crossover.png)
 
 ## Ver também
 

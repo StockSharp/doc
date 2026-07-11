@@ -89,7 +89,7 @@ KVO объединяет информацию о цене с объемом, и�
    - KVO позволяет оценить согласованность движения цены и объема
    - Сильный объем в направлении тренда приводит к более экстремальным значениям KVO
 
-![indicator_klinger_volume_oscillator](../../../../images/indicator_klinger_volume_oscillator.png)
+![KVO](../../../../images/indicator_klinger_volume_oscillator.png)
 
 ## См. также
 

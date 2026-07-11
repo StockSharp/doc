@@ -72,7 +72,7 @@ MGD = MGD[предыдущий] + (Price - MGD[предыдущий]) / (Length 
    - Меньшие значения Length (например, 8-12) делают MGD более чувствительным к изменениям цены и подходят для краткосрочной торговли
    - Большие значения Length (например, 20-50) делают MGD более сглаженным и подходят для долгосрочной торговли
 
-![indicator_mcginley_dynamic](../../../../images/indicator_mcginley_dynamic.png)
+![MGD](../../../../images/indicator_mcginley_dynamic.png)
 
 ## См. также
 

@@ -79,7 +79,7 @@ El oscilador armónico se puede interpretar de la siguiente manera:
    - HO funciona mejor en combinación con indicadores de tendencia
    - En mercados de tendencia, las señales HO se pueden utilizar para determinar puntos de entrada en la dirección de la tendencia.
 
-![indicator_harmonic_oscillator](../../../../images/indicator_harmonic_oscillator.png)
+![HO](../../../../images/indicator_harmonic_oscillator.png)
 
 ## Véase también
 

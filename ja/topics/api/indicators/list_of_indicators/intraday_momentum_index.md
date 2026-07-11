@@ -73,7 +73,7 @@ IMI は、指定された期間において、終値が始値をどのくらい�
    - 50 を超える IMI 値が持続する場合、上昇トレンドを確認します
    - 50 未満の IMI 値が持続する場合、下降トレンドを確認します
 
-![indicator_intraday_momentum_index](../../../../images/indicator_intraday_momentum_index.png)
+![IMI](../../../../images/indicator_intraday_momentum_index.png)
 
 ## 関連項目
 

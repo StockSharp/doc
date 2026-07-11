@@ -21,7 +21,7 @@
 
 这产生了一个优化的估计，能够快速对价格变化作出反应，同时过滤掉短期波动。
 
-![indicator_kalman_filter](../../../../images/indicator_kalman_filter.png)
+![卡尔曼滤波器](../../../../images/indicator_kalman_filter.png)
 
 ## 另请参阅
 

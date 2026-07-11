@@ -45,7 +45,7 @@ Close = 前回終値 の場合:
   - BV が低下する一方で価格が上昇している場合、すばやい下方反転が差し迫っている可能性があります
   - BV が上昇する一方で価格が下落している場合、すばやい上方反転が差し迫っている可能性があります
 
-![indicator_balance_volume](../../../../images/indicator_balance_volume.png)
+![BV](../../../../images/indicator_balance_volume.png)
 
 ## 関連項目
 

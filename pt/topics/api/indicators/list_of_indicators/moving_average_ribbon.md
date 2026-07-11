@@ -76,7 +76,7 @@ A faixa de médias móveis pode ser interpretada da seguinte forma:
    - Sair de uma posição quando as médias móveis começam a cruzar na direção oposta
    - Usar a largura da fita para definir stop-losses e take-profits
 
-![indicator_moving_average_ribbon](../../../../images/indicator_moving_average_ribbon.png)
+![MAR](../../../../images/indicator_moving_average_ribbon.png)
 
 ## Ver também
 

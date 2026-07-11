@@ -3,7 +3,7 @@
 
 **Runner**, al ser una aplicación de consola, ofrece la posibilidad de iniciarse en distintos modos especificando parámetros en la línea de comandos. Al iniciar el programa sin parámetros, se mostrará un mensaje de ayuda con los parámetros disponibles:
 
-![Runner_command_line_1](../../images/runner_command_line_1.png)
+![Línea de comandos 1](../../images/runner_command_line_1.png)
 
 Inicio de **Runner** para pruebas sobre datos históricos:
 

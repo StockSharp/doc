@@ -6,17 +6,17 @@
 
 1. 右键单击交易策略项目，然后在上下文菜单中选择 **属性**：
 
-![runner_debug_00](../../images/runner_debug_00.png)
+![与 Visual Studio 集成 00](../../images/runner_debug_00.png)
 
 在打开的选项卡中找到 **调试**，选择 **常规** 部分，然后单击 **打开调试启动配置文件界面**。
 
 2. 在随后打开的窗口中，创建一个启动外部程序的新调试配置文件：
 
-![runner_debug_01](../../images/runner_debug_01.png)
+![与 Visual Studio 集成 01](../../images/runner_debug_01.png)
 
 3. 输入 **Runner** 的完整路径，并指定启动所需的命令行参数。有关详细信息，请参阅 [Runner 命令行](command_line.md)。
 
-![runner_debug_02](../../images/runner_debug_02.png)
+![与 Visual Studio 集成 02](../../images/runner_debug_02.png)
 
 示例使用的命令行参数：
 
@@ -28,8 +28,8 @@ $(TargetPath) 是一个特殊的 **Visual Studio** 宏。开始调试时，它�
 
 4. 关闭项目设置窗口，然后开始调试项目，例如按 F5。此时会出现 **Runner** 程序窗口，并显示交易连接过程：
 
-![runner_debug_03](../../images/runner_debug_03.png)
+![与 Visual Studio 集成 03](../../images/runner_debug_03.png)
 
 5. 设置断点后，程序执行到断点位置时会暂停。例如，可以在新K线出现时调试交易逻辑：
 
-![runner_debug_04](../../images/runner_debug_04.png)
+![与 Visual Studio 集成 04](../../images/runner_debug_04.png)

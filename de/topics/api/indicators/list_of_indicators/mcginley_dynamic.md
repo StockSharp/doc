@@ -72,7 +72,7 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - Kleinere Length-Werte (z. B. 8-12) machen MGD empfindlicher gegenüber Preisänderungen und eignen sich für den kurzfristigen Handel
    - Größere Length-Werte (z. B. 20-50) machen MGD flüssiger und eignen sich für den langfristigen Handel
 
-![indicator_mcginley_dynamic](../../../../images/indicator_mcginley_dynamic.png)
+![MGD](../../../../images/indicator_mcginley_dynamic.png)
 
 ## Siehe auch
 

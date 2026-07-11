@@ -36,7 +36,7 @@ FDI принимает значения от 1 до 2 и отражает хар
 - **FDI примерно 1.5** – нейтральное состояние, случайное движение.
 - **FDI ближе к 2** – рынок в боковом движении, много шума.
 
-![indicator_fractal_dimension](../../../../images/indicator_fractal_dimension.png)
+![FDI](../../../../images/indicator_fractal_dimension.png)
 
 ## См. также
 

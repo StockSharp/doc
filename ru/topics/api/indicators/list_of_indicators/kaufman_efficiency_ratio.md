@@ -75,7 +75,7 @@ KER был разработан Перри Кауфманом и первона�
    - Резкое изменение KER часто предшествует новому ценовому движению
    - Падение KER после периода высоких значений может предупреждать о потенциальном развороте тренда
 
-![indicator_kaufman_efficiency_ratio](../../../../images/indicator_kaufman_efficiency_ratio.png)
+![KER](../../../../images/indicator_kaufman_efficiency_ratio.png)
 
 ## См. также
 

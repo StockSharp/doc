@@ -78,7 +78,7 @@ PGO は、買われ過ぎおよび売られ過ぎ状態の特定に加え、ト�
    - 極端な PGO 値は、利益確定のシグナルとして使用できます
    - たとえば、PGO が +2 を超えたらロングポジションを手仕舞いし、PGO が -2 を下回ったらショートポジションを手仕舞いします
 
-![indicator_pretty_good_oscillator](../../../../images/indicator_pretty_good_oscillator.png)
+![PGO](../../../../images/indicator_pretty_good_oscillator.png)
 
 ## 関連項目
 

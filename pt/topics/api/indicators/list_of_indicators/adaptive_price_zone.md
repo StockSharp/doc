@@ -44,7 +44,7 @@ O cálculo do APZ baseia-se na média móvel exponencial (EMA) e no intervalo ve
 
 Quando o preço está acima da linha superior do APZ, isto pode ser considerado uma tendência ascendente. Quando o preço está abaixo da linha inferior do APZ, isto pode indicar uma tendência descendente. Quando o preço se move dentro da zona APZ, o mercado pode estar numa fase de consolidação ou movimento lateral.
 
-![indicator_adaptive_price_zone](../../../../images/indicator_adaptive_price_zone.png)
+![APZ](../../../../images/indicator_adaptive_price_zone.png)
 
 ## Ver também
 

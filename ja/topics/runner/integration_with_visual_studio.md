@@ -6,17 +6,17 @@
 
 1. 取引ストラテジープロジェクトを右クリックし、コンテキストメニューから **プロパティ** を選択します。
 
-![runner_debug_00](../../images/runner_debug_00.png)
+![Visual Studio との統合 00](../../images/runner_debug_00.png)
 
 表示されるタブで **デバッグ** 項目を見つけ、**全般** セクションを選択して **デバッグ起動プロファイル UI を開く** をクリックします。
 
 2. 次に、開いたウィンドウで、外部プログラムを起動する新しいデバッグプロファイルを作成します。
 
-![runner_debug_01](../../images/runner_debug_01.png)
+![Visual Studio との統合 01](../../images/runner_debug_01.png)
 
 3. **Runner** へのフルパスを入力し、起動用のコマンドラインパラメーターを指定します。[Runner のコマンドライン](command_line.md)の詳細。
 
-![runner_debug_02](../../images/runner_debug_02.png)
+![Visual Studio との統合 02](../../images/runner_debug_02.png)
 
 例のコマンドライン引数:
 
@@ -28,8 +28,8 @@ $(TargetPath) - は、デバッグ起動時に、ストラテジーを含むコ�
 
 4. プロジェクト設定ウィンドウを閉じ、プロジェクトのデバッグを開始します（たとえば F5 キー）。**Runner** プログラムウィンドウが表示され、取引接続プロセスが表示されます。
 
-![runner_debug_03](../../images/runner_debug_03.png)
+![Visual Studio との統合 03](../../images/runner_debug_03.png)
 
 5. ブレークポイントを設定すると、そこに到達した時点でプログラムの実行が停止します。たとえば、新しいローソク足が表示されたときの取引ロジックをデバッグする場合:
 
-![runner_debug_04](../../images/runner_debug_04.png)
+![Visual Studio との統合 04](../../images/runner_debug_04.png)

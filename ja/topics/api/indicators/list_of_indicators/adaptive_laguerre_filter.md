@@ -39,7 +39,7 @@ Gamma パラメーターは平滑化の度合いを決定します。値が低�
 - price(t) - 現在価格
 - L0, L1, L2, L3 - フィルターの中間値
 
-![indicator_adaptive_laguerre_filter](../../../../images/indicator_adaptive_laguerre_filter.png)
+![ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
 
 ## 関連項目
 

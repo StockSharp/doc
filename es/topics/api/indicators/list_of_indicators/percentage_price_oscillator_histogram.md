@@ -27,7 +27,7 @@ Los valores superiores a cero resaltan la presión alcista, mientras que los inf
 - **Impulsos de momentum.** El rápido crecimiento de las barras positivas sugiere un fortalecimiento del impulso alcista; Las barras que se contraen insinúan un debilitamiento de la fuerza y ​​una posible reversión.
 - **Divergencias.** Divergencia entre la acción del precio y el histograma puede alertar a los operadores sobre el posible agotamiento de la tendencia antes de que se vuelva visible en los gráficos de precios.
 
-![indicator_percentage_price_oscillator_histogram](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![Histograma del PPO](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## Véase también
 

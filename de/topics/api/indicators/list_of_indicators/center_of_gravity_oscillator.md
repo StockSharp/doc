@@ -48,7 +48,7 @@ In dieser Formel wird jeder Preis anhand seiner Position in der Zeitreihe gewich
 
 Da es sich bei CGO um einen Frühindikator handelt, erscheinen seine Signale häufig vor entsprechenden Änderungen im Preisdiagramm, was Händlern einen Vorteil bei Handelsentscheidungen verschafft.
 
-![indicator_center_of_gravity_oscillator](../../../../images/indicator_center_of_gravity_oscillator.png)
+![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## Siehe auch
 

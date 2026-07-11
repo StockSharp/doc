@@ -85,7 +85,7 @@ O PPO pode ser interpretado da seguinte forma:
    - Os sinais de cruzamento da linha de sinal são mais fiáveis quando o PPO está alinhado com a tendência principal
    - Por exemplo, sinais de alta são mais fiáveis quando o PPO é positivo, e sinais de baixa são mais fiáveis quando o PPO é negativo
 
-![indicator_percentage_price_oscillator](../../../../images/indicator_percentage_price_oscillator.png)
+![PPO](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## Ver também
 

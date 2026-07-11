@@ -85,7 +85,7 @@ R-Quadrat der linearen Regression kann wie folgt interpretiert werden:
    - R² kann in unterschiedlichen Zeitrahmen zu unterschiedlichen Ergebnissen führen
    - Der Vergleich von R² über Zeiträume hinweg kann zusätzliche Informationen über die Marktstruktur liefern
 
-![indicator_linear_reg_r_squared](../../../../images/indicator_linear_reg_rsquared.png)
+![R-Quadrat](../../../../images/indicator_linear_reg_rsquared.png)
 
 ## Siehe auch
 

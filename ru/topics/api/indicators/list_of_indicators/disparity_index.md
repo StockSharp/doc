@@ -60,7 +60,7 @@ DPI = ((Price / MA) - 1) * 100
 5. **Стратегии возврата к среднему**:
    - Экстремальные значения DPI могут использоваться для открытия позиций против текущего движения цены, ожидая возврата к среднему
 
-![indicator_disparity_index](../../../../images/indicator_disparity_index.png)
+![DPI](../../../../images/indicator_disparity_index.png)
 
 ## См. также
 

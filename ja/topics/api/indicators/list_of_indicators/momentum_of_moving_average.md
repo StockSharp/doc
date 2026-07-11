@@ -75,7 +75,7 @@ MOMA は、価格そのものではなく移動平均のダイナミクスの変
    - Length と MomentumPeriod の期間を短くすると MOMA はより敏感になりますが、誤シグナルも発生しやすくなります
    - 期間を長くすると MOMA はより滑らかになりますが、シグナルが遅れる可能性があります
 
-![indicator_momentum_of_moving_average](../../../../images/indicator_momentum_of_moving_average.png)
+![MOMA](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## 関連項目
 

@@ -86,7 +86,7 @@ PVO состоит из трех компонентов:
    - Резкие скачки PVO указывают на значительные изменения в объеме, которые часто сопровождают важные рыночные события
    - Такие всплески могут предшествовать или сопровождать прорывы ключевых уровней цены
 
-![indicator_percentage_volume_oscillator](../../../../images/indicator_percentage_volume_oscillator.png)
+![PVO](../../../../images/indicator_percentage_volume_oscillator.png)
 
 ## См. также
 

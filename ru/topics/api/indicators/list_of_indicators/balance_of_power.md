@@ -42,7 +42,7 @@ BOP = (Close - Open) / (High - Low)
   - Если цена растет, а BOP падает, это может быть предупреждением о ослаблении восходящего тренда.
   - Если цена падает, а BOP растет, это может указывать на потенциальное окончание нисходящего тренда.
 
-![indicator_balance_of_power](../../../../images/indicator_balance_of_power.png)
+![BOP](../../../../images/indicator_balance_of_power.png)
 
 ## См. также
 

@@ -50,7 +50,7 @@ BMP の計算は 2 段階で行われます。
 - **極端な値**（一定の水準を上回る、または下回る値）は、市場が買われ過ぎまたは売られ過ぎの状態にあることを示す場合があります
 - **BMP と価格の間のダイバージェンス** は、潜在的なトレンド反転を示す場合があります
 
-![indicator_balance_of_market_power](../../../../images/indicator_balance_of_market_power.png)
+![BMP](../../../../images/indicator_balance_of_market_power.png)
 
 ## 関連項目
 

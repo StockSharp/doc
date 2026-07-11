@@ -6,17 +6,17 @@ Para configurar o processo de depuração, é necessário realizar os seguintes 
 
 1. Clique com o botão direito no projeto da estratégia de negociação e selecione **Propriedades** no menu de contexto:
 
-![runner_debug_00](../../images/runner_debug_00.png)
+![Integração com o Visual Studio 00](../../images/runner_debug_00.png)
 
 No separador apresentado, encontre o item **Depurar**, selecione a secção **Geral** e clique em **Abrir interface de perfis de arranque de depuração**.
 
 2. Em seguida, na janela que abre, crie um novo perfil de depuração com o lançamento de um programa externo:
 
-![runner_debug_01](../../images/runner_debug_01.png)
+![Integração com o Visual Studio 01](../../images/runner_debug_01.png)
 
 3. Introduza o caminho completo para o **Runner** e especifique os parâmetros da linha de comandos para o lançamento. Mais sobre a [linha de comandos do Runner](command_line.md).
 
-![runner_debug_02](../../images/runner_debug_02.png)
+![Integração com o Visual Studio 02](../../images/runner_debug_02.png)
 
 Argumentos da linha de comandos para o exemplo:
 
@@ -28,8 +28,8 @@ $(TargetPath) - é uma macro especial do **Visual Studio** que é automaticament
 
 4. Feche a janela de definições do projeto e inicie a depuração do projeto (por exemplo, através de F5). A janela do programa **Runner** será apresentada, mostrando o processo de ligação de negociação:
 
-![runner_debug_03](../../images/runner_debug_03.png)
+![Integração com o Visual Studio 03](../../images/runner_debug_03.png)
 
 5. Ao definir breakpoints, a execução do programa irá parar quando os atingir. Por exemplo, para depurar a lógica de negociação quando aparece uma nova vela:
 
-![runner_debug_04](../../images/runner_debug_04.png)
+![Integração com o Visual Studio 04](../../images/runner_debug_04.png)

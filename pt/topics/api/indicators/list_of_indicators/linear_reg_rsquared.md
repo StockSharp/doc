@@ -85,7 +85,7 @@ R-quadrado na regressão linear pode ser interpretado da seguinte forma:
    - R² pode produzir resultados diferentes em períodos diferentes
    - Comparar R² entre períodos pode fornecer informação adicional sobre a estrutura do mercado
 
-![indicator_linear_reg_r_squared](../../../../images/indicator_linear_reg_rsquared.png)
+![R-quadrado](../../../../images/indicator_linear_reg_rsquared.png)
 
 ## Ver Também
 

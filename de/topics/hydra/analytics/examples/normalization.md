@@ -2,7 +2,7 @@
 
 Das Skript "Closing Price Normalization" dient zur Standardisierung der Schlusskurse von Finanzinstrumenten und ermöglicht den Vergleich und die Analyse unterschiedlicher Assets auf einer einheitlichen Skala. Dies ist besonders nutzlich beim Vergleich von Instrumenten mit unterschiedlichen Preisen und unterschiedlicher Volatilität.
 
-![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
+![Normalisierung des Schlusskurses](../../../../images/hydra_analytics_normalize.png)
 
 ## Beschreibung der Skriptausführung
 

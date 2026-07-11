@@ -74,7 +74,7 @@ O Sistema de Impulso de Elder é interpretado da seguinte forma:
    - Uma sequência de velas vermelhas confirma uma tendência descendente
    - A alternância de cores indica uma tendência lateral ou incerteza
 
-![indicator_elder_impulse_system](../../../../images/indicator_elder_impulse_system.png)
+![EIS](../../../../images/indicator_elder_impulse_system.png)
 
 ## Ver também
 

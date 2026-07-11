@@ -2,7 +2,7 @@
 
 O script "Maiores velas" foi concebido para identificar velas com o volume máximo e o maior comprimento de corpo nos gráficos dos instrumentos financeiros selecionados ao longo de um determinado período. Esta ferramenta permite que traders e analistas identifiquem eventos significativos do mercado e a reação dos participantes do mercado.
 
-![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
+![Maiores velas](../../../../images/hydra_analytics_big_candle.png)
 
 ## Funcionalidades Principais
 

@@ -86,7 +86,7 @@ PVO インジケーターは、大きな価格変動に先行する可能性が�
    - PVO の急上昇は重要な取引量の変化を示し、多くの場合、重要な市場イベントを伴います
    - そのようなスパイクは、主要な価格水準のブレイクアウトに先行または同時発生する場合があります
 
-![indicator_percentage_volume_oscillator](../../../../images/indicator_percentage_volume_oscillator.png)
+![PVO](../../../../images/indicator_percentage_volume_oscillator.png)
 
 ## 関連項目
 

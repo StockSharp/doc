@@ -63,7 +63,7 @@ EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 6. **第 3 波の識別**:
    - Elliott Wave Theory において通常最も強い推進波である第 3 波は、多くの場合、最も高い EWO 値によって特徴付けられます
 
-![indicator_elliot_wave_oscillator](../../../../images/indicator_elliot_wave_oscillator.png)
+![EWO](../../../../images/indicator_elliot_wave_oscillator.png)
 
 ## 関連項目
 

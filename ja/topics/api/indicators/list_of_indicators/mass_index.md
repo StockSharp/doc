@@ -87,7 +87,7 @@ MI は、価格レンジの指数移動平均 (EMA) を使用してボラティ�
    - 標準パラメーター（EMA は 9、合計は 25）は、ほとんどの時間枠で良好に機能します
    - 期間を短くするとシグナルは速くなりますが、ダマシのシグナルが増える可能性があります
 
-![indicator_mass_index](../../../../images/indicator_mass_index.png)
+![MI](../../../../images/indicator_mass_index.png)
 
 ## 関連項目
 

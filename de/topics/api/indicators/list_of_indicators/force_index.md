@@ -70,7 +70,7 @@ Der Kraftindex kann auf verschiedene Arten interpretiert werden:
    - Bei einem Aufwärtstrend können Tage mit negativem Kraftindex auf vorübergehende Korrekturen hinweisen
    - Bei einem Abwärtstrend können Tage mit positivem Kraftindex auf vorübergehende Aufschwünge hinweisen
 
-![indicator_force_index](../../../../images/indicator_force_index.png)
+![FI](../../../../images/indicator_force_index.png)
 
 ## Siehe auch
 

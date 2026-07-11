@@ -62,7 +62,7 @@ Chande Kroll 停止计算涉及以下步骤：
 
 - **与其他指标一起使用**：CKS 在与其他趋势和动量指标结合使用时效果最佳，这些指标有助于确定市场进入方向。
 
-![指示器_chande_kroll_stop](../../../../images/indicator_chande_kroll_stop.png)
+![CKS](../../../../images/indicator_chande_kroll_stop.png)
 
 ## 另请参阅
 

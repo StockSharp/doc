@@ -80,7 +80,7 @@ Der KST-Indikator kann wie folgt interpretiert werden:
    - Positive KST-Werte deuten auf eine vorherrschende bullische Stimmung hin
    - Negative KST-Werte deuten auf eine vorherrschende bärische Stimmung hin
 
-![indicator_kst](../../../../images/indicator_kst.png)
+![KST](../../../../images/indicator_kst.png)
 
 ## Siehe auch
 

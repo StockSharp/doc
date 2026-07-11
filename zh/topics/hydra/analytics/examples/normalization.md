@@ -2,7 +2,7 @@
 
 `Closing Price Normalization` 脚本用于对交易品种的收盘价进行归一化，以便在统一尺度下比较和分析不同资产。这在比较价格水平和波动性各不相同的交易品种时尤其有用。
 
-![hydra_analytics_normalize](../../../../images/hydra_analytics_normalize.png)
+![收盘价归一化](../../../../images/hydra_analytics_normalize.png)
 
 ## 脚本运行说明
 

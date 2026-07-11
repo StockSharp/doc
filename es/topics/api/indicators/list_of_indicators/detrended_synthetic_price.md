@@ -68,7 +68,7 @@ El indicador DSP oscila alrededor de la línea cero y se puede interpretar de la
 5. **Formación de patrones**:
    - Se pueden formar patrones técnicos (cabeza y hombros, doble fondo, etc.) en el gráfico DSP, lo que podría proporcionar señales de trading adicionales.
 
-![indicator_detrended_synthetic_price](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## Véase también
 

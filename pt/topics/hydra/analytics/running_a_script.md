@@ -2,7 +2,7 @@
 
 Para criar um novo script de analytics, selecione o separador **Analytics** no painel de fontes de dados da janela principal e escolha o modelo pretendido no menu pendente para um arranque rápido:
 
-![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+![Executar um Script 00](../../../images/hydra_analytics_main_00.png)
 
 A captura de ecrã apresenta a interface principal desta funcionalidade, composta por vários componentes principais:
 
@@ -17,7 +17,7 @@ Ao definir parâmetros:
 
 - O **Instrumento** pode ser definido de um a vários instrumentos, consoante a lógica do script.
 
-![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+![Executar um Script 01](../../../images/hydra_analytics_main_01.png)
 
 - O intervalo de datas.
 - O armazenamento de onde obter os dados.

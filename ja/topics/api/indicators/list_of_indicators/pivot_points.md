@@ -81,7 +81,7 @@
    - 月次 ピボットポイント は、前月に基づいて計算されます
    - 時間軸の選択は、取引スタイルと時間的視野によって異なります
 
-![indicator_pivot_points](../../../../images/indicator_pivot_points.png)
+![PP](../../../../images/indicator_pivot_points.png)
 
 ## 関連項目
 

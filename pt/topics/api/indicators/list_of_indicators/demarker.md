@@ -27,7 +27,7 @@ A saída é normalizada entre 0 e 1.
 
 DeMarker pode ser usado para entradas contra a tendência, bem como para confirmar sinais de osciladores de momentum.
 
-![indicator_demarker](../../../../images/indicator_demarker.png)
+![DeMarker](../../../../images/indicator_demarker.png)
 
 ## Ver também
 

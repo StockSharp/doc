@@ -2,13 +2,13 @@
 
 Pode publicar a sua estratégia clicando na estratégia com o botão esquerdo do rato no painel [Painel de esquemas](../user_interface/schemas.md) e seleccionando **Publicar**:
 
-![Designer_publish_00](../../../images/designer_publish_00.png)
+![Publicar a sua estratégia 00](../../../images/designer_publish_00.png)
 
 Depois de clicar no botão **Publicar**, será aberta uma janela com a escolha do tipo de exportação. Para mais detalhes, consulte a secção [Exportar estratégias](../export_import/export.md).
 
 Depois de escolher o tipo de exportação, o programa [Installer](../../installer.md) é activado com os parâmetros de publicação ([Installer](../../installer.md) deve ser iniciado antecipadamente):
 
-![Designer_publish_01](../../../images/designer_publish_01.png)
+![Publicar a sua estratégia 01](../../../images/designer_publish_01.png)
 
 Campos que devem ser preenchidos:
 
@@ -22,8 +22,8 @@ Depois de clicar no botão **Guardar**, a estratégia será enviada para o servi
 
 Ao publicar actualizações, não é necessário introduzir novamente todos os parâmetros. Em vez de introduzir os parâmetros do produto, aparecerá uma janela para introduzir uma nota para a actualização:
 
-![Designer_publish_02](../../../images/designer_publish_02.png)
+![Publicar a sua estratégia 02](../../../images/designer_publish_02.png)
 
 Depois de clicar no botão **Confirmar**, aparecerá uma janela a indicar uma actualização bem-sucedida:
 
-![Designer_publish_03](../../../images/designer_publish_03.png)
+![Publicar a sua estratégia 03](../../../images/designer_publish_03.png)

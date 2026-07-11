@@ -74,7 +74,7 @@ EIS は特に次の用途に有用です。
    - 赤のローソク足の連続は下降トレンドを確認します
    - 色の交互出現は横ばいトレンドまたは不確実性を示します
 
-![indicator_elder_impulse_system](../../../../images/indicator_elder_impulse_system.png)
+![EIS](../../../../images/indicator_elder_impulse_system.png)
 
 ## 関連項目
 

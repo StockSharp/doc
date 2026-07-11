@@ -2,7 +2,7 @@
 
 Para crear un nuevo script analítico, seleccione la pestaña **Analytics** en el panel de fuentes de datos de la ventana principal y elija la plantilla deseada en el menú desplegable para un inicio rápido:
 
-![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+![Ejecución de un script 00](../../../images/hydra_analytics_main_00.png)
 
 La captura muestra la interfaz principal de esta función, compuesta por varios componentes clave:
 
@@ -17,7 +17,7 @@ Al configurar parámetros:
 
 - **Instrumento** puede establecerse de uno a varios instrumentos, según la lógica del script.
 
-![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+![Ejecución de un script 01](../../../images/hydra_analytics_main_01.png)
 
 - El rango de fechas.
 - El almacenamiento desde el que obtener los datos.

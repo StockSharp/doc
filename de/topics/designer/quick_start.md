@@ -10,7 +10,7 @@ Nachdem die Daten mit [Hydra](../hydra.md) heruntergeladen wurden, geben Sie in 
 
 ![Designer Schnellstart 02](../../images/designer_quick_start_02.png)
 
-Ein Klick auf ![Designer Edit Tool](../../images/designer_edit_tool_00.png) öffnet das Fenster **Datenspeichereinstellungen**, in dem Sie lokalen oder entfernten Speicher konfigurieren können. Sie können [Hydra](../hydra.md) auch [im Servermodus](../hydra/server_mode/settings.md) als Marktdatenquelle konfigurieren. Ein Klick auf ![[Designer_Settings_Repository_button.png]] öffnet das Fenster zur Ordnerauswahl. Wählen Sie den Ordner aus, in dem Sie zuvor die von [Hydra](../hydra.md) heruntergeladene Historie gespeichert haben.
+Ein Klick auf ![Designer Bearbeitungsschaltfläche](../../images/designer_edit_tool_00.png) öffnet das Fenster **Datenspeichereinstellungen**, in dem Sie lokalen oder entfernten Speicher konfigurieren können. Sie können [Hydra](../hydra.md) auch [im Servermodus](../hydra/server_mode/settings.md) als Marktdatenquelle konfigurieren. Ein Klick auf die **Repository-Schaltfläche** öffnet das Fenster zur Ordnerauswahl. Wählen Sie den Ordner aus, in dem Sie zuvor die von [Hydra](../hydra.md) heruntergeladene Historie gespeichert haben.
 
 Rufen Sie nun die Instrumente und ihre Daten aus dem konfigurierten lokalen Speicher ab. Wechseln Sie zum Tab **Allgemein** und wählen Sie die Komponente **Marktdaten**.
 

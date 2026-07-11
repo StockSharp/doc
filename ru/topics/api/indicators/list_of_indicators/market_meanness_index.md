@@ -76,7 +76,7 @@ MMI основан на подсчете количества пар ценов�
    - Долгосрочный MMI помогает определить основное состояние рынка
    - Краткосрочный MMI помогает выбрать подходящую стратегию для текущих условий
 
-![indicator_market_meanness_index](../../../../images/indicator_market_meanness_index.png)
+![MMI](../../../../images/indicator_market_meanness_index.png)
 
 ## См. также
 

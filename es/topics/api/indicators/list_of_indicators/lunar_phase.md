@@ -65,7 +65,7 @@ La interpretación del indicador Fase lunar puede variar, ya que es una herramie
 
 Tenga en cuenta que no hay pruebas científicas suficientes de la influencia directa de la fase lunar en los mercados financieros, y muchos traders profesionales abordan estas herramientas con escepticismo. Sin embargo, algunos participantes del mercado consideran valioso incluir LP en su arsenal analítico.
 
-![indicator_lunar_phase](../../../../images/indicator_lunar_phase.png)
+![LP](../../../../images/indicator_lunar_phase.png)
 
 ## Véase también
 

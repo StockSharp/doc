@@ -91,7 +91,7 @@ Gamma パラメーターはフィルタリングの程度を決定し、イン�
    - より速いシグナルには、Gamma を増やします（0.9 に近づける）
    - より滑らかなシグナルには、Gamma を減らします（0.1 に近づける）
 
-![indicator_laguerre_rsi](../../../../images/indicator_laguerre_rsi.png)
+![LRSI](../../../../images/indicator_laguerre_rsi.png)
 
 ## 関連項目
 

@@ -78,7 +78,7 @@ FRAMA kann ähnlich wie andere gleitende Durchschnitte interpretiert werden, jed
    - FRAMA kann in einem Aufwärtstrend als dynamisches Unterstützungsniveau dienen
    - FRAMA kann als dynamisches Widerstandsniveau in einem Abwärtstrend dienen
 
-![indicator_fractal_adaptive_moving_average](../../../../images/indicator_fractal_adaptive_moving_average.png)
+![FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
 
 ## Siehe auch
 

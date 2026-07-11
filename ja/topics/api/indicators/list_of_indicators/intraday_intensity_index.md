@@ -73,7 +73,7 @@ III は、日中の市場センチメントの変化を特定し、潜在的な�
    - 負の値から正の値への急速な変化は、市場センチメントの急激な転換を示す場合があります
    - ゼロラインに向かう緩やかな収束は、現在のモメンタムの弱まりを示す場合があります
 
-![indicator_intraday_intensity_index](../../../../images/indicator_intraday_intensity_index.png)
+![III](../../../../images/indicator_intraday_intensity_index.png)
 
 ## 関連項目
 

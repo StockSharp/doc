@@ -27,7 +27,7 @@
 - 価格が新高値を付けている一方で ブルパワー の読み取り値がより高くならない場合、弱気ダイバージェンスが形成されます。
 - ブルパワー と ベアパワー を価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) 構造を評価します。
 
-![indicator_bull_power](../../../../images/indicator_bull_power.png)
+![ブルパワー](../../../../images/indicator_bull_power.png)
 
 ## 関連項目
 

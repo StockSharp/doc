@@ -2,7 +2,7 @@
 
 要创建新的分析脚本，请在主窗口的数据源面板中选择 **Analytics** 选项卡，然后从下拉菜单中选择所需模板，以便快速开始：
 
-![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+![运行脚本 00](../../../images/hydra_analytics_main_00.png)
 
 截图展示了该功能的主界面，其中包含以下主要组件：
 
@@ -17,7 +17,7 @@
 
 - **Instrument**：根据脚本逻辑，可以选择一个或多个交易品种。
 
-![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+![运行脚本 01](../../../images/hydra_analytics_main_01.png)
 
 - 日期范围。
 - 用于获取数据的存储。

@@ -20,7 +20,7 @@ más corto que el desplazamiento requerido, el valor se considera indefinido.
 - Cree indicadores y estrategias personalizados que requieran aportes retrasados.
 - Cree series sintéticas, por ejemplo, para calcular la diferencia entre los precios actuales y los valores pasados.
 
-![indicator_shift](../../../../images/indicator_shift.png)
+![Desplazamiento](../../../../images/indicator_shift.png)
 
 ## Véase también
 

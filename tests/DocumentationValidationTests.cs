@@ -2009,6 +2009,43 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsDoNotLookLikeRawFileNames()
+	{
+		var errors = new List<string>();
+		var rawFileNamePattern = new Regex(@"_|(?:\.(?:png|jpe?g|gif|webp|svg))\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (!rawFileNamePattern.IsMatch(altText.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text looks like a raw file name '{altText.Text}'. Use a localized description instead.");
+				}
+
+				var lineStarts = GetLineStarts(markdown);
+				foreach (Match match in Regex.Matches(markdown, @"!\[\[(?<alt>[^\]\r\n]+)\]\]", RegexOptions.CultureInvariant))
+				{
+					var alt = NormalizeMarkdownImageAltTextForTranslationCheck(match.Groups["alt"].Value);
+					if (!rawFileNamePattern.IsMatch(alt))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{GetLineNumber(lineStarts, match.Index)}: image alt text looks like a raw wiki-style file name '{alt}'. Use a standard markdown image with a localized description instead.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();
@@ -2027,6 +2064,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Designer Crossing",
 			"Designer Debug",
 			"Designer Delay",
+			"Designer Edit Tool",
 			"Designer Event model",
 			"Designer Graph options positions",
 			"Designer Options Board",

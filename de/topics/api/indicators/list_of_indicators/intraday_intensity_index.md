@@ -73,7 +73,7 @@ Der Intraday-Intensitätsindex kann wie folgt interpretiert werden:
    - Ein schneller Wechsel von negativen zu positiven Werten kann auf eine starke Veränderung der Marktstimmung hinweisen
    - Eine allmähliche Annäherung an die Nulllinie könnte auf eine Abschwächung der aktuellen Dynamik hinweisen
 
-![indicator_intraday_intensity_index](../../../../images/indicator_intraday_intensity_index.png)
+![III](../../../../images/indicator_intraday_intensity_index.png)
 
 ## Siehe auch
 

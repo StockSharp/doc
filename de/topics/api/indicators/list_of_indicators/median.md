@@ -23,7 +23,7 @@ Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wäh
 - Kreuzungen zwischen Preis und Median können als Trendwechselsignale behandelt werden.
 - Kombinieren Sie den Median mit anderen Filtern, um Trends zu extrahieren und gleichzeitig wichtige Preissprünge beizubehalten.
 
-![indicator_median](../../../../images/indicator_median.png)
+![Gleitender Median](../../../../images/indicator_median.png)
 
 ## Siehe auch
 

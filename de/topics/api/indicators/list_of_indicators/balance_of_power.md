@@ -42,7 +42,7 @@ BOP wird häufig zusätzlich mit einem gleitenden Durchschnitt geglättet, um Vo
   - Wenn der Preis steigt und BOP fällt, kann dies vor einer Abschwächung des Aufwärtstrends warnen.
   - Wenn der Preis fällt und BOP steigt, kann dies auf ein mögliches Ende des Abwärtstrends hindeuten.
 
-![indicator_balance_of_power](../../../../images/indicator_balance_of_power.png)
+![BOP](../../../../images/indicator_balance_of_power.png)
 
 ## Siehe auch
 

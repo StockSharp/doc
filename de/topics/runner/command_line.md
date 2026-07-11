@@ -3,7 +3,7 @@
 
 **Runner** ist eine Konsolenanwendung und kann daher durch Angabe von Parametern in der Befehlszeile in verschiedenen Modi gestartet werden. Wird das Programm ohne Parameter gestartet, erscheint eine Hilfemeldung mit den verfügbaren Parametern:
 
-![Runner_command_line_1](../../images/runner_command_line_1.png)
+![Befehlszeile 1](../../images/runner_command_line_1.png)
 
 Start von **Runner** für Tests auf historischen Daten:
 

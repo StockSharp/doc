@@ -28,7 +28,7 @@
 
 指数の値が高いほど、より強いトレンド形成の挙動を示し、値が低いほど、より大きな平均回帰を示唆します。
 
-![indicator_hurst_exponent](../../../../images/indicator_hurst_exponent.png)
+![HurstExponent](../../../../images/indicator_hurst_exponent.png)
 
 ## 関連項目
 

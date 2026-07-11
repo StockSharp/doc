@@ -90,7 +90,7 @@ MP は現在のモメンタムとその過去の極値との関係を分析し�
    - MP は、トレンドインジケーターと組み合わせて使用されることがよくあります
    - たとえば、移動平均を使用してトレンド方向を判定し、MP をエントリーおよびエグジットポイントに使用できます
 
-![indicator_momentum_pinball](../../../../images/indicator_momentum_pinball.png)
+![MP](../../../../images/indicator_momentum_pinball.png)
 
 ## 関連項目
 

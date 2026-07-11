@@ -27,7 +27,7 @@ Histogram = PPO - сигнал
 - **Импульсные всплески.** Быстро растущие положительные столбики свидетельствуют об усилении бычьего импульса; сокращение столбиков может сигнализировать о скором развороте.
 - **Дивергенции.** Расхождение между движением цены и гистограммой заранее предупреждает о возможной потере трендовой силы.
 
-![indicator_percentage_price_oscillator_histogram](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![PPOH](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## См. также
 

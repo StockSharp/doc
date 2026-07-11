@@ -90,7 +90,7 @@
    - MP通常与趋势指标结合使用
    - 例如，移动平均线可以用来确定趋势方向，而MP可以用来确定进出点
 
-![indicator_momentum_pinball](../../../../images/indicator_momentum_pinball.png)
+![MP](../../../../images/indicator_momentum_pinball.png)
 
 ## 另请参阅
 

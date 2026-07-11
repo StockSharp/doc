@@ -42,7 +42,7 @@ El cálculo de APZ se basa en la media móvil exponencial (EMA) y el rango verda
 
 Cuando el precio está por encima de la línea superior APZ, esto puede considerarse una tendencia alcista. Cuando el precio está por debajo de la línea inferior APZ, esto puede indicar una tendencia a la baja. Cuando el precio se mueve dentro de la zona APZ, el mercado puede estar en una fase de consolidación o de movimiento lateral.
 
-![indicator_adaptive_price_zone](../../../../images/indicator_adaptive_price_zone.png)
+![APZ](../../../../images/indicator_adaptive_price_zone.png)
 
 ## Véase también
 

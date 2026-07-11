@@ -80,7 +80,7 @@ KST指标可以解释如下：
    - 正的 KST 值表示看涨情绪占主导
    - 负的 KST 值表示看跌情绪占主导
 
-![indicator_kst](../../../../images/indicator_kst.png)
+![KST](../../../../images/indicator_kst.png)
 
 ## 另请参阅
 

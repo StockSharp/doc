@@ -73,7 +73,7 @@ IMI оценивает, насколько часто и насколько си
    - Устойчивые значения IMI выше 50 подтверждают восходящий тренд
    - Устойчивые значения IMI ниже 50 подтверждают нисходящий тренд
 
-![indicator_intraday_momentum_index](../../../../images/indicator_intraday_momentum_index.png)
+![IMI](../../../../images/indicator_intraday_momentum_index.png)
 
 ## См. также
 

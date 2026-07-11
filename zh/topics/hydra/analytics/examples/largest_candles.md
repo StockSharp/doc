@@ -2,7 +2,7 @@
 
 `Largest Candles` 脚本用于在指定时间段内，从所选交易品种的图表中找出成交量最大以及实体最长的K线。该工具可帮助交易者和分析人员识别重要的市场事件及市场参与者的反应。
 
-![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
+![最大K线](../../../../images/hydra_analytics_big_candle.png)
 
 ## 主要特点
 

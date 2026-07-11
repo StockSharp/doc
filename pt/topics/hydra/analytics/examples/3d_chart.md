@@ -2,7 +2,7 @@
 
 O script `Chart3DScript` demonstra a criação de um gráfico 3D para visualizar a distribuição dos volumes de negociação por hora para vários instrumentos financeiros. Este método de visualização permite representar claramente a dinâmica de negociação e identificar picos de atividade do mercado.
 
-![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
+![Gráfico 3D](../../../../images/hydra_analytics_chart3d.png)
 
 ## Descrição do Funcionamento do Script
 

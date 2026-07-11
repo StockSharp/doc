@@ -32,7 +32,7 @@ O AFI procura determinar em que medida o volume de negociação "aprova" o movim
 
 Valores positivos de AFI indicam uma tendência ascendente forte, enquanto valores negativos sugerem uma tendência descendente. Valores próximos de zero podem indicar ausência de uma tendência pronunciada.
 
-![indicator_approval_flow_index](../../../../images/indicator_approval_flow_index.png)
+![AFI](../../../../images/indicator_approval_flow_index.png)
 
 ## Ver também
 

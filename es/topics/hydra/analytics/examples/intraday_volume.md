@@ -2,7 +2,7 @@
 
 El script "Volumen intradía" es una herramienta para analizar la distribución del volumen de negociación de valores por horas dentro de una sola sesión de trading. Diseñado para usarse dentro de la plataforma StockSharp, está orientado a traders y analistas cuantitativos que buscan estudiar en profundidad el comportamiento del mercado y optimizar estrategias de trading.
 
-![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
+![Volumen intradía](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## Descripción funcional
 

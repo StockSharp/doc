@@ -72,7 +72,7 @@ O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médi
    - Valores Length menores (por exemplo, 8-12) tornam o MGD mais sensível a alterações de preço e adequam-se à negociação de curto prazo
    - Valores Length maiores (por exemplo, 20-50) tornam o MGD mais suave e adequam-se à negociação de longo prazo
 
-![indicator_mcginley_dynamic](../../../../images/indicator_mcginley_dynamic.png)
+![MGD](../../../../images/indicator_mcginley_dynamic.png)
 
 ## Ver Também
 

@@ -101,4 +101,4 @@ Al implementar [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScrip
 
 ## Resultado de ejecución
 
-![hydra_analytics_chart](../../../images/hydra_analytics_chart.png)
+![Creación de un script](../../../images/hydra_analytics_chart.png)

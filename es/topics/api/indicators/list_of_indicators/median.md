@@ -23,7 +23,7 @@ Un filtro mediano ordena los precios dentro de la ventana móvil y selecciona el
 - Crossovers entre el precio y la mediana pueden tratarse como señales de cambio de tendencia.
 - Combine la mediana con otros filtros para extraer tendencias manteniendo importantes saltos de precios.
 
-![indicator_median](../../../../images/indicator_median.png)
+![Mediana móvil](../../../../images/indicator_median.png)
 
 ## Véase también
 

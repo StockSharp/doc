@@ -2,7 +2,7 @@
 
 Das Skript "Largest Candles" dient dazu, Kerzen mit maximalem Volumen und der größten Körperlänge in den Charts ausgewahlter Finanzinstrumente über einen bestimmten Zeitraum zu identifizieren. Dieses Werkzeug hilft Tradern und Analysten, wichtige Marktereignisse und die Reaktion der Marktteilnehmer zu erkennen.
 
-![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
+![Grosste Kerzen](../../../../images/hydra_analytics_big_candle.png)
 
 ## Hauptfunktionen
 

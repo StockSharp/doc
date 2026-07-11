@@ -2,7 +2,7 @@
 
 O painel DLL apresenta as metainformações de um assembly .NET:
 
-![Designer_Panel_DLL](../../../../images/designer_panel_dll_00.png)
+![Painel DLL](../../../../images/designer_panel_dll_00.png)
 
 No painel, pode ver a hora de criação do ficheiro, a sua versão e o caminho. A hora de criação é a forma mais simples de determinar que versão do assembly está a ser usada pelo **Designer**.
 

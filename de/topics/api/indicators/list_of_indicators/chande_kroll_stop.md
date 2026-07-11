@@ -62,7 +62,7 @@ Die Chande-Kroll-Stop-Berechnung umfasst die folgenden Schritte:
 
 - **Verwendung mit anderen Indikatoren**: CKS funktioniert am besten in Kombination mit anderen Trend- und Momentumindikatoren, die bei der Bestimmung der Markteintrittsrichtung helfen.
 
-![indicator_chande_kroll_stop](../../../../images/indicator_chande_kroll_stop.png)
+![CKS](../../../../images/indicator_chande_kroll_stop.png)
 
 ## Siehe auch
 

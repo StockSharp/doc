@@ -30,7 +30,7 @@ AFI tiene como objetivo determinar cuánto volumen de operaciones "aprueba" el m
 
 Los valores positivos de AFI indican una fuerte tendencia al alza, mientras que los valores negativos sugieren una tendencia a la baja. Los valores cercanos a cero pueden indicar la ausencia de una tendencia pronunciada.
 
-![indicator_approval_flow_index](../../../../images/indicator_approval_flow_index.png)
+![AFI](../../../../images/indicator_approval_flow_index.png)
 
 ## Véase también
 

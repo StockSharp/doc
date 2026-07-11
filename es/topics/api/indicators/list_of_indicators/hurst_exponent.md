@@ -28,7 +28,7 @@ Un método común se basa en el enfoque de rango reescalado (R/S):
 
 Los valores más altos del exponente sugieren un comportamiento de tendencia más fuerte, mientras que los valores más bajos implican una mayor reversión a la media.
 
-![indicator_hurst_exponent](../../../../images/indicator_hurst_exponent.png)
+![HurstExponent](../../../../images/indicator_hurst_exponent.png)
 
 ## Véase también
 

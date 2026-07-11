@@ -2,7 +2,7 @@
 
 `Chart3DScript` 脚本演示如何创建 3D 图表，以可视化不同交易品种按小时统计的成交量分布。这种可视化方式可以清楚地呈现交易动态，并识别市场活跃度的高峰。
 
-![hydra_analytics_chart3d](../../../../images/hydra_analytics_chart3d.png)
+![3D 图表](../../../../images/hydra_analytics_chart3d.png)
 
 ## 脚本运行说明
 

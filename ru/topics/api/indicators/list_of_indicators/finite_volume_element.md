@@ -83,7 +83,7 @@ FVE особенно полезен для:
 6. **Уровни поддержки и сопротивления**:
    - Исторические точки разворота на графике FVE могут служить ориентирами для будущих разворотов
 
-![indicator_finite_volume_element](../../../../images/indicator_finite_volume_element.png)
+![FVE](../../../../images/indicator_finite_volume_element.png)
 
 ## См. также
 

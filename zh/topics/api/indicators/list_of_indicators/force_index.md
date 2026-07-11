@@ -70,7 +70,7 @@
    - 在上升趋势中，负的力量指数日可能表示暂时的回调
    - 在下行趋势中，正的力量指数日可能表示短暂反弹
 
-![指标_力量指数](../../../../images/indicator_force_index.png)
+![FI](../../../../images/indicator_force_index.png)
 
 ## 另请参阅
 

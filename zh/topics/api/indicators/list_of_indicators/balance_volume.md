@@ -45,7 +45,7 @@ BV 指标尤其适用于：
   - 如果价格上涨而账面价值下降，可能很快会出现下跌反转
   - 如果价格下跌而账面价值上升，可能很快会出现向上的反转
 
-![指标_平衡交易量](../../../../images/indicator_balance_volume.png)
+![BV](../../../../images/indicator_balance_volume.png)
 
 ## 另请参阅
 

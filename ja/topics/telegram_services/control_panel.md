@@ -8,26 +8,26 @@ Telegram ボットを介して取引ストラテジーとロボットを管理�
 
  - [Designer](../designer.md) プログラムを使用する場合は、クラウド パネルでリモートモードを有効にします。
 
-  ![DesignerRibbon.png](../../images/designerribbon.png)
+  ![コントロールパネル 01](../../images/designerribbon.png)
 
   Live モードで実行されるすべてのストラテジーは自動的に Telegram ボットに転送され、スマートフォンから制御できるようになります。
 
   [StockSharpBot](https://t.me/StockSharpBot) で /apps コマンドを選択し、すべてのプログラム一覧を表示します。
 
-  ![TelegramControlApps.png](../../images/telegramcontrolapps.png)
+  ![コントロールパネル 02](../../images/telegramcontrolapps.png)
 
   目的のプログラムを選択すると、ストラテジーとその制御項目を確認できます。
 
-  ![TelegramControlApp.png](../../images/telegramcontrolapp.png)
+  ![コントロールパネル 03](../../images/telegramcontrolapp.png)
 
-  ![TelegramControlStrategies.png](../../images/telegramcontrolstrategies.png)
+  ![コントロールパネル 04](../../images/telegramcontrolstrategies.png)
 
-  ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
+  ![コントロールパネル 05](../../images/telegramcontrolstrategy.png)
 
  - [Shell](../shell.md) を使用する場合は、RemoteManager パネルに移動し、[Designer](../designer.md) と同様に設定を構成します。
  - [Hydra](../hydra.md) を使用する場合は、[Designer](../designer.md) と同様の操作を行います。[Hydra](../hydra.md) との連携により、市場データのダウンロードを管理し、数量統計を監視できます。
 
-  ![TelegramHydra.png](../../images/telegramhydra.png)
-  ![TelegramHydraStat.png](../../images/telegramhydrastat.png)
+  ![コントロールパネル 06](../../images/telegramhydra.png)
+  ![コントロールパネル 07](../../images/telegramhydrastat.png)
 
  - [S#](../api.md) を使用する場合は、[Shell](../shell.md) のコードを使用して連携できます。[S#](../api.md) はクロスプラットフォームであるため、ロボットは任意のオペレーティングシステムで実行できます。

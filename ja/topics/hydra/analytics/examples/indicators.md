@@ -2,7 +2,7 @@
 
 "Indicator" スクリプトは、StockSharp プラットフォーム内でテクニカル分析インジケーターを扱う方法を示すことを目的としています。ユーザーは履歴データを読み込み、さまざまなインジケーターを適用し、その結果をチャートに表示できます。このアプローチは、市場トレンドの分析と、情報に基づく取引判断に役立ちます。
 
-![hydra_analytics_indicator](../../../../images/hydra_analytics_indicator.png)
+![インジケーター](../../../../images/hydra_analytics_indicator.png)
 
 ## 機能
 

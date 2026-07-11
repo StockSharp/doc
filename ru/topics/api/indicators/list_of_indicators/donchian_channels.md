@@ -67,7 +67,7 @@
 5. **Контр-трендовые стратегии**:
    - Некоторые трейдеры используют противоположные сигналы, предполагая, что цена вернется к средней линии после достижения краев канала
 
-![indicator_donchian_channels](../../../../images/indicator_donchian_channels.png)
+![DC](../../../../images/indicator_donchian_channels.png)
 
 ## См. также
 

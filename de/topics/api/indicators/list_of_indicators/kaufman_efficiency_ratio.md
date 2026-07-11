@@ -75,7 +75,7 @@ Der Kaufman-Effizienzverhältnis kann wie folgt interpretiert werden:
    - Starke KER-Änderungen gehen oft neuen Preisbewegungen voraus
    - Der Rückgang des KER nach einer Phase hoher Werte könnte auf eine mögliche Trendumkehr hinweisen
 
-![indicator_kaufman_efficiency_ratio](../../../../images/indicator_kaufman_efficiency_ratio.png)
+![KER](../../../../images/indicator_kaufman_efficiency_ratio.png)
 
 ## Siehe auch
 

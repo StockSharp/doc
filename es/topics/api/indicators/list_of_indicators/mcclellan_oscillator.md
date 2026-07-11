@@ -74,7 +74,7 @@ El oscilador McClellan se puede interpretar de la siguiente manera:
    - "Cola alcista": rápida caída de MCO seguida de una rápida recuperación, que a menudo indica un posible fondo del mercado.
    - "Cola bajista": rápido aumento de MCO seguido de una rápida caída, que a menudo indica un máximo potencial del mercado
 
-![indicator_mcclellan_oscillator](../../../../images/indicator_mcclellan_oscillator.png)
+![MCO](../../../../images/indicator_mcclellan_oscillator.png)
 
 ## Véase también
 

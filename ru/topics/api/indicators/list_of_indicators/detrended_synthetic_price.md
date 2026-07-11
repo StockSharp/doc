@@ -68,7 +68,7 @@ DSP полезен для:
 5. **Формирование паттернов**:
    - На графике DSP могут формироваться технические паттерны (голова и плечи, двойное дно и т.д.), которые могут предоставлять дополнительные торговые сигналы
 
-![indicator_detrended_synthetic_price](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## См. также
 

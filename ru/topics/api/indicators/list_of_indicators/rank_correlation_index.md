@@ -28,7 +28,7 @@ RCI принимает значения от −100 до +100 (при умнож
 
 Индикатор полезен для краткосрочного анализа тренда и обнаружения разворотных зон, особенно в сочетании с осцилляторами моментума.
 
-![indicator_rank_correlation_index](../../../../images/indicator_rank_correlation_index.png)
+![индекс ранговой корреляции](../../../../images/indicator_rank_correlation_index.png)
 
 ## См. также
 

@@ -2,7 +2,7 @@
 
 「日中出来高」スクリプトは、単一の取引セッション内で証券の取引出来高が時間別にどのように分布するかを分析するためのツールです。StockSharp プラットフォーム内で使用するように設計されており、市場行動の詳細な研究と取引戦略の最適化を目指すトレーダーやクオンツアナリストを対象としています。
 
-![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
+![日中出来高](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## 機能説明
 

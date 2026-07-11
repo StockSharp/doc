@@ -81,7 +81,7 @@ volumen en balance Mean se puede interpretar de la siguiente manera:
    - Períodos más largos (por ejemplo, 30-50) identifican mejor las tendencias a largo plazo
    - El período óptimo depende del horizonte temporal de negociación y de las características específicas del instrumento.
 
-![indicator_on_balance_volume_mean](../../../../images/indicator_on_balance_volume_mean.png)
+![OBVM](../../../../images/indicator_on_balance_volume_mean.png)
 
 ## Véase también
 

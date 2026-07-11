@@ -89,7 +89,7 @@ Der Klinger-Volumenoszillator kann wie folgt interpretiert werden:
    - KVO ermöglicht die Beurteilung der Konsistenz von Preis- und Volumenbewegungen
    - Starkes Volumen in Trendrichtung führt zu extremeren KVO-Werten
 
-![indicator_klinger_volume_oscillator](../../../../images/indicator_klinger_volume_oscillator.png)
+![KVO](../../../../images/indicator_klinger_volume_oscillator.png)
 
 ## Siehe auch
 

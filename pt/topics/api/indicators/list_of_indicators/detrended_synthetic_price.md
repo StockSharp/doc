@@ -68,7 +68,7 @@ O indicador DSP oscila em torno da linha zero e pode ser interpretado da seguint
 5. **Formação de padrões**:
    - Padrões técnicos (head and shoulders, double bottom, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de trading
 
-![indicator_detrended_synthetic_price](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## Ver também
 

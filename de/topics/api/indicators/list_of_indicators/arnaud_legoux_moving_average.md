@@ -55,7 +55,7 @@ Wobei:
 - Offset - Offset-Parameter (von 0 bis 1)
 - Sigma - Sigma-Parameter (normalerweise von 2 bis 8)
 
-![indicator_arnaud_legoux_moving_average](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## Siehe auch
 

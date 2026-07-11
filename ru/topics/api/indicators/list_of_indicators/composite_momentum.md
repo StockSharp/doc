@@ -55,7 +55,7 @@ CM эффективен для:
 - **Потеря импульса**:
   - Снижение абсолютного значения CM в направлении тренда может сигнализировать о потере импульса и потенциальном развороте
 
-![indicator_composite_momentum](../../../../images/indicator_composite_momentum.png)
+![CM](../../../../images/indicator_composite_momentum.png)
 
 ## См. также
 

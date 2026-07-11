@@ -28,7 +28,7 @@ Um método comum baseia-se na abordagem de intervalo reescalado (R/S):
 
 Valores mais elevados do expoente sugerem comportamento tendencial mais forte, enquanto valores mais baixos implicam maior reversão à média.
 
-![indicator_hurst_exponent](../../../../images/indicator_hurst_exponent.png)
+![HurstExponent](../../../../images/indicator_hurst_exponent.png)
 
 ## Ver Também
 

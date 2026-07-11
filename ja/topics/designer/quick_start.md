@@ -10,7 +10,7 @@
 
 ![Designer クイックスタート 02](../../images/designer_quick_start_02.png)
 
-![Designer Edit Tool](../../images/designer_edit_tool_00.png) をクリックすると **データストレージ設定** ウィンドウが開き、ローカルストレージまたはリモートストレージを設定できます。また、[Hydra](../hydra.md) をマーケットデータソースとして [サーバーモード](../hydra/server_mode/settings.md) で設定することもできます。![[Designer_Settings_Repository_button.png]] をクリックすると、フォルダー選択ウィンドウが開きます。以前に [Hydra](../hydra.md) でダウンロードした履歴を保存したフォルダーを選択します。
+![Designer 編集ボタン](../../images/designer_edit_tool_00.png) をクリックすると **データストレージ設定** ウィンドウが開き、ローカルストレージまたはリモートストレージを設定できます。また、[Hydra](../hydra.md) をマーケットデータソースとして [サーバーモード](../hydra/server_mode/settings.md) で設定することもできます。**リポジトリボタン** をクリックすると、フォルダー選択ウィンドウが開きます。以前に [Hydra](../hydra.md) でダウンロードした履歴を保存したフォルダーを選択します。
 
 次に、設定済みのローカルストレージから銘柄とそのデータを取得します。**共通** タブに移動し、**市場データ** コンポーネントを選択します。
 

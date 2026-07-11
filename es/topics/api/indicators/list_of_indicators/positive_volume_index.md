@@ -70,7 +70,7 @@ El índice de volumen positivo se puede interpretar de la siguiente manera:
    - Algunos operadores establecen niveles de umbral para PVI (por ejemplo, 5% por encima o por debajo de la media móvil)
    - Cruzar estos umbrales puede considerarse una señal más fuerte que los simples cruces.
 
-![indicator_positive_volume_index](../../../../images/indicator_positive_volume_index.png)
+![PVI](../../../../images/indicator_positive_volume_index.png)
 
 ## Véase también
 

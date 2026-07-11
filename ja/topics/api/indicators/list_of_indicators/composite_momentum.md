@@ -55,7 +55,7 @@ CM は次の用途に有効です。
 - **モメンタムの喪失**:
   - トレンド方向における CM の絶対値の低下は、モメンタムの喪失と潜在的な反転を示す場合があります
 
-![indicator_composite_momentum](../../../../images/indicator_composite_momentum.png)
+![CM](../../../../images/indicator_composite_momentum.png)
 
 ## 関連項目
 

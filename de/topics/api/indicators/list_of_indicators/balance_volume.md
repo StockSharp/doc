@@ -45,7 +45,7 @@ Wobei:
   - Wenn der Preis steigt, während BV fällt, kann eine schnelle Abwärtsumkehr bevorstehen
   - Wenn der Preis fällt, während BV steigt, kann eine schnelle Aufwärtsumkehr bevorstehen
 
-![indicator_balance_volume](../../../../images/indicator_balance_volume.png)
+![BV](../../../../images/indicator_balance_volume.png)
 
 ## Siehe auch
 

@@ -64,7 +64,7 @@ Este índice combinado pode depois ser suavizado para reduzir ruído.
   - Se o CBCI se mantiver consistentemente acima de 50, pode indicar força de tendência ascendente
   - Se o CBCI se mantiver consistentemente abaixo de 50, pode indicar força de tendência descendente
 
-![indicator_constance_brown_composite_index](../../../../images/indicator_constance_brown_composite_index.png)
+![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## Ver também
 

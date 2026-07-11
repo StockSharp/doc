@@ -2,7 +2,7 @@
 
 ピアソン相関は、2 つの量的変数の間にある線形関係の程度を測定するために使用される統計手法です。金融分析では、この手法は株式や通貨ペアなど、異なる資産間の関係を調査するために広く利用されています。
 
-![hydra_analytics_pearson_correlation](../../../../images/hydra_analytics_pearson_correlation.png)
+![ピアソン相関](../../../../images/hydra_analytics_pearson_correlation.png)
 
 ## 手法の説明
 

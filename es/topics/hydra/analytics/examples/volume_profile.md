@@ -2,7 +2,7 @@
 
 El script "Perfil de volumen" sirve como herramienta para analizar la distribución del volumen de trading por niveles de precio durante un período seleccionado. Permite a traders y analistas cuantitativos visualizar y examinar dónde se concentró la principal actividad de trading en términos de niveles de precio.
 
-![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
+![Perfil de volumen](../../../../images/hydra_analytics_volume_profile.png)
 
 ## Descripción de funcionalidad
 

@@ -28,7 +28,7 @@
 
 指数值较高表明趋势行为更强，而较低的值则意味着均值回归更明显。
 
-![indicator_hurst_exponent](../../../../images/indicator_hurst_exponent.png)
+![赫斯特指数](../../../../images/indicator_hurst_exponent.png)
 
 ## 另请参阅
 

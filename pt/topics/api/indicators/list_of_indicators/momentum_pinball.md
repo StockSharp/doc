@@ -90,7 +90,7 @@ O indicador pinball de momentum pode ser interpretado da seguinte forma:
    - O MP é frequentemente usado em conjunto com indicadores de tendência
    - Por exemplo, médias móveis podem ser usadas para determinar a direção da tendência, enquanto o MP pode ser usado para pontos de entrada e saída
 
-![indicator_momentum_pinball](../../../../images/indicator_momentum_pinball.png)
+![MP](../../../../images/indicator_momentum_pinball.png)
 
 ## Ver também
 

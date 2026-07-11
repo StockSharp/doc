@@ -63,7 +63,7 @@ Der Elliott-Wellen-Oszillator kann wie folgt interpretiert werden:
 6. **Welle 3-Identifikation**:
    - Welle 3, die normalerweise die stärkste Impulswelle in der Elliott-Wellen-Theorie ist, zeichnet sich häufig durch die höchsten EWO-Werte aus
 
-![indicator_elliot_wave_oscillator](../../../../images/indicator_elliot_wave_oscillator.png)
+![EWO](../../../../images/indicator_elliot_wave_oscillator.png)
 
 ## Siehe auch
 

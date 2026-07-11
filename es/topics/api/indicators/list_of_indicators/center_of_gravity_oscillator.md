@@ -48,7 +48,7 @@ En esta fórmula, cada precio se pondera por su posición en la serie temporal y
 
 Dado que CGO es un indicador adelantado, sus señales suelen aparecer antes de los cambios correspondientes en el gráfico de precios, lo que brinda a los operadores una ventaja a la hora de tomar decisiones de trading.
 
-![indicator_center_of_gravity_oscillator](../../../../images/indicator_center_of_gravity_oscillator.png)
+![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## Véase también
 

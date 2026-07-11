@@ -36,7 +36,7 @@ FDI は、価格経路の総長と全体の高値-安値範囲を比較するこ
 - **1.5 付近の FDI** - ランダムウォーク。トレンドの強さは中立です。
 - **2 に近い FDI** - 荒い、または横ばいの市場。
 
-![indicator_fractal_dimension](../../../../images/indicator_fractal_dimension.png)
+![FDI](../../../../images/indicator_fractal_dimension.png)
 
 ## 関連項目
 

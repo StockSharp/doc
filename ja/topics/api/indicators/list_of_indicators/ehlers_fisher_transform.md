@@ -71,7 +71,7 @@ EFT は特に次の用途に有用です。
 
 エーラーズ・フィッシャー変換 は、極端な値に達し、必ずしもすぐに反転することなくしばらくその水準にとどまることがある点で、多くの他のオシレーターと異なります。このため、強いトレンドの動きを特定するのに有用です。
 
-![indicator_ehlers_fisher_transform](../../../../images/indicator_ehlers_fisher_transform.png)
+![EFT](../../../../images/indicator_ehlers_fisher_transform.png)
 
 ## 関連項目
 

@@ -63,7 +63,7 @@ DZRSI интерпретируется аналогично традиционн
    - Пересечение снизу вверх может рассматриваться как бычий сигнал
    - Пересечение сверху вниз может рассматриваться как медвежий сигнал
 
-![indicator_dynamic_zones_rsi](../../../../images/indicator_dynamic_zones_rsi.png)
+![DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## См. также
 

@@ -28,7 +28,7 @@
 
 DeMarker 可用于反趋势入场，也可用于确认来自动量振荡器的信号。
 
-![indicator_demarker](../../../../images/indicator_demarker.png)
+![德马克指标](../../../../images/indicator_demarker.png)
 
 ## 另请参阅
 

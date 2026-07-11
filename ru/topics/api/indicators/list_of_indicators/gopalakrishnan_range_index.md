@@ -64,7 +64,7 @@ GAPO = log(N) * log(наивысший максимум - наинизший м�
    - В периоды высокой волатильности сигналы трендовых индикаторов могут быть более надежными
    - В периоды низкой волатильности сигналы осцилляторов могут быть более эффективными
 
-![indicator_gopalakrishnan_range_index](../../../../images/indicator_gopalakrishnan_range_index.png)
+![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## См. также
 

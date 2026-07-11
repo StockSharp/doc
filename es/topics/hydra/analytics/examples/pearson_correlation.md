@@ -2,7 +2,7 @@
 
 La correlación de Pearson es un método estadístico usado para medir el grado de relación lineal entre dos variables cuantitativas. En el análisis financiero, este método se usa ampliamente para estudiar relaciones entre distintos activos, como acciones o pares de divisas.
 
-![hydra_analytics_pearson_correlation](../../../../images/hydra_analytics_pearson_correlation.png)
+![Correlación de Pearson](../../../../images/hydra_analytics_pearson_correlation.png)
 
 ## Descripción del método
 

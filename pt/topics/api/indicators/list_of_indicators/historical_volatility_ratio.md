@@ -77,7 +77,7 @@ O rácio de volatilidade histórica pode ser interpretado da seguinte forma:
    - Valores extremos do HVR precedem frequentemente movimentos significativos do preço
    - Um aumento acentuado do HVR após um período de baixa volatilidade pode sinalizar o início de uma nova tendência
 
-![indicator_historical_volatility_ratio](../../../../images/indicator_historical_volatility_ratio.png)
+![HVR](../../../../images/indicator_historical_volatility_ratio.png)
 
 ## Ver Também
 

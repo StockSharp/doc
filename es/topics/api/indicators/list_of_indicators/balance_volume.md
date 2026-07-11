@@ -45,7 +45,7 @@ donde:
   - Si el precio sube mientras BV cae, una rápida reversión a la baja puede ser inminente
   - Si el precio cae mientras BV sube, una rápida reversión al alza puede ser inminente
 
-![indicator_balance_volume](../../../../images/indicator_balance_volume.png)
+![BV](../../../../images/indicator_balance_volume.png)
 
 ## Véase también
 

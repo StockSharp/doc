@@ -89,7 +89,7 @@ O Oscilador de volume de Klinger pode ser interpretado da seguinte forma:
    - O KVO permite avaliar a consistência entre o movimento do preço e do volume
    - Volume forte na direcção da tendência conduz a valores mais extremos do KVO
 
-![indicator_klinger_volume_oscillator](../../../../images/indicator_klinger_volume_oscillator.png)
+![KVO](../../../../images/indicator_klinger_volume_oscillator.png)
 
 ## Ver Também
 

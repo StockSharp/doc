@@ -28,7 +28,7 @@ Bei Multiplikation mit 100 liegt der Indikator zwischen −100 und +100.
 
 Der Indikator ist hilfreich für die kurzfristige Trendbewertung und das Erkennen von Wendepunkten, insbesondere in Kombination mit Momentum-Tools.
 
-![indicator_rank_correlation_index](../../../../images/indicator_rank_correlation_index.png)
+![Rangkorrelationsindex](../../../../images/indicator_rank_correlation_index.png)
 
 ## Siehe auch
 

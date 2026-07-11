@@ -2,7 +2,7 @@
 
 `Indicator` 脚本用于演示如何在 StockSharp 平台中使用技术分析指标。用户可以加载历史数据、对其应用各种指标，并在图表中显示结果。这种方式有助于分析市场趋势并作出有依据的交易决策。
 
-![hydra_analytics_indicator](../../../../images/hydra_analytics_indicator.png)
+![指标](../../../../images/hydra_analytics_indicator.png)
 
 ## 功能
 

@@ -2,7 +2,7 @@
 
 "Largest Candles" スクリプトは、選択された金融商品のチャート上で、指定された期間における最大出来高と最大の実体長を持つローソク足を識別するように設計されています。このツールにより、トレーダーやアナリストは重要な市場イベントと市場参加者の反応を識別できます。
 
-![hydra_analytics_big_candle](../../../../images/hydra_analytics_big_candle.png)
+![最大ローソク足](../../../../images/hydra_analytics_big_candle.png)
 
 ## 主な機能
 

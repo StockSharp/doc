@@ -28,7 +28,7 @@ La salida se normaliza entre 0 y 1.
 
 DeMarker se puede utilizar para entradas de contratendencia, así como para confirmar señales de osciladores de impulso.
 
-![indicator_demarker](../../../../images/indicator_demarker.png)
+![DeMarker](../../../../images/indicator_demarker.png)
 
 ## Véase también
 

@@ -23,7 +23,7 @@
 - 价格与中位数之间的交叉可以被视为趋势变化信号。
 - 将中位数与其他滤波器结合使用，以提取趋势，同时保留重要的价格跳跃。
 
-![indicator_median](../../../../images/indicator_median.png)
+![移动中位数](../../../../images/indicator_median.png)
 
 ## 另请参阅
 

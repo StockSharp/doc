@@ -31,7 +31,7 @@
 - Индикатор обычно анализируется совместно с [сила покупателей](bull_power.md) и EMA цены, формируя комплексный индикатор
   [лучи Элдера](elder_ray.md).
 
-![indicator_bear_power](../../../../images/indicator_bear_power.png)
+![сила продавцов](../../../../images/indicator_bear_power.png)
 
 ## См. также
 

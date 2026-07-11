@@ -6,17 +6,17 @@ Um den Debugging-Prozess einzurichten, führen Sie die folgenden Schritte aus:
 
 1. Klicken Sie mit der rechten Maustaste auf das Handelsstrategieprojekt und wählen Sie im Kontextmenü **Eigenschaften**:
 
-![runner_debug_00](../../images/runner_debug_00.png)
+![Integration mit Visual Studio 00](../../images/runner_debug_00.png)
 
 Suchen Sie auf der geöffneten Registerkarte den Punkt **Debuggen**, wählen Sie den Abschnitt **Allgemein** aus und klicken Sie auf **Benutzeroberfläche für Debugstartprofile öffnen**.
 
 2. Erstellen Sie anschließend im geöffneten Fenster ein neues Debugging-Profil mit dem Start eines externen Programms:
 
-![runner_debug_01](../../images/runner_debug_01.png)
+![Integration mit Visual Studio 01](../../images/runner_debug_01.png)
 
 3. Geben Sie den vollständigen Pfad zu **Runner** ein und legen Sie die Befehlszeilenparameter für den Start fest. Mehr dazu in der [Runner-Befehlszeile](command_line.md).
 
-![runner_debug_02](../../images/runner_debug_02.png)
+![Integration mit Visual Studio 02](../../images/runner_debug_02.png)
 
 Befehlszeilenargumente für das Beispiel:
 
@@ -28,8 +28,8 @@ $(TargetPath) - ist ein spezielles **Visual Studio**-Makro, das beim Debugging-S
 
 4. Schließen Sie das Fenster mit den Projekteinstellungen und starten Sie das Debugging des Projekts (zum Beispiel mit F5). Das Programmfenster von **Runner** erscheint und zeigt den Verbindungsprozess zum Handel an:
 
-![runner_debug_03](../../images/runner_debug_03.png)
+![Integration mit Visual Studio 03](../../images/runner_debug_03.png)
 
 5. Beim Setzen von Haltepunkten hält die Programmausführung an, sobald diese erreicht werden. Zum Beispiel zum Debuggen der Handelslogik, wenn eine neue Kerze erscheint:
 
-![runner_debug_04](../../images/runner_debug_04.png)
+![Integration mit Visual Studio 04](../../images/runner_debug_04.png)

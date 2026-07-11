@@ -35,7 +35,7 @@
 振荡器通常与基础 [阿隆](aroon.md) 指标一起分析，以观察绝对水平及其
 差异。
 
-![indicator_aroon_oscillator](../../../../images/indicator_aroon_oscillator.png)
+![阿隆振荡器](../../../../images/indicator_aroon_oscillator.png)
 
 ## 另请参阅
 

@@ -10,7 +10,7 @@ Depois de os dados serem descarregados com o [Hydra](../hydra.md), indique a pas
 
 ![Designer Início rápido 02](../../images/designer_quick_start_02.png)
 
-Ao clicar em ![Designer Edit Tool](../../images/designer_edit_tool_00.png), é aberta a janela **Definições de armazenamento de dados**, onde pode configurar armazenamento local ou remoto. Também pode configurar o [Hydra](../hydra.md) [em modo de servidor](../hydra/server_mode/settings.md) como fonte de dados de mercado. Ao clicar em ![[Designer_Settings_Repository_button.png]], é aberta a janela de seleção de pasta. Selecione a pasta onde guardou anteriormente o histórico descarregado pelo [Hydra](../hydra.md).
+Ao clicar em ![Designer botão Editar](../../images/designer_edit_tool_00.png), é aberta a janela **Definições de armazenamento de dados**, onde pode configurar armazenamento local ou remoto. Também pode configurar o [Hydra](../hydra.md) [em modo de servidor](../hydra/server_mode/settings.md) como fonte de dados de mercado. Ao clicar no **botão do repositório**, é aberta a janela de seleção de pasta. Selecione a pasta onde guardou anteriormente o histórico descarregado pelo [Hydra](../hydra.md).
 
 Agora obtenha os instrumentos e os respetivos dados a partir do armazenamento local configurado. Aceda ao separador **Geral** e selecione o componente **Dados de mercado**.
 

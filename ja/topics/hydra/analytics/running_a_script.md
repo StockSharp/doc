@@ -2,7 +2,7 @@
 
 新しい分析スクリプトを作成するには、メインウィンドウのデータソースパネルで **Analytics** タブを選択し、すぐに開始できるようにドロップダウンメニューから目的のテンプレートを選択します。
 
-![hydra_analytics_main_00](../../../images/hydra_analytics_main_00.png)
+![スクリプトの実行 00](../../../images/hydra_analytics_main_00.png)
 
 スクリーンショットには、この機能のメインインターフェイスが示されており、いくつかの主要コンポーネントで構成されています。
 
@@ -17,7 +17,7 @@
 
 - **Instrument** は、スクリプトのロジックに応じて 1 つから複数の銘柄に設定できます。
 
-![hydra_analytics_main_01](../../../images/hydra_analytics_main_01.png)
+![スクリプトの実行 01](../../../images/hydra_analytics_main_01.png)
 
 - 日付範囲。
 - データを取得するストレージ。

@@ -56,7 +56,7 @@ Bollinger El porcentaje B se puede utilizar de varias maneras:
 4. **Encontrar niveles de soporte y resistencia ocultos para H**:
    - Los niveles 0,8 y 0,2 se utilizan a menudo como niveles adicionales de soporte y resistencia.
 
-![indicator_bollinger_percent_b](../../../../images/indicator_bollinger_percent_b.png)
+![BBP](../../../../images/indicator_bollinger_percent_b.png)
 
 ## Véase también
 

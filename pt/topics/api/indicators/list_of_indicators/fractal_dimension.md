@@ -36,7 +36,7 @@ O FDI é calculado comparando o comprimento total do percurso do preço com o in
 - **FDI em torno de 1,5** - passeio aleatório; a força da tendência é neutra.
 - **FDI mais próximo de 2** - mercado instável ou lateral.
 
-![indicator_fractal_dimension](../../../../images/indicator_fractal_dimension.png)
+![FDI](../../../../images/indicator_fractal_dimension.png)
 
 ## Ver Também
 

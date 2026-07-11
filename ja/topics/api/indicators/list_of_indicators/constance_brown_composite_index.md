@@ -64,7 +64,7 @@ CBCI の計算には、次の手順が含まれます。
   - CBCI が一貫して 50 を上回っている場合、上昇トレンドの強さを示すことがあります
   - CBCI が一貫して 50 を下回っている場合、下降トレンドの強さを示すことがあります
 
-![indicator_constance_brown_composite_index](../../../../images/indicator_constance_brown_composite_index.png)
+![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## 関連項目
 

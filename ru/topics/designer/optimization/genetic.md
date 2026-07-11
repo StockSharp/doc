@@ -6,15 +6,15 @@
 
 - переключить режим:
 
-  ![Designer_Optimization_Genetic_00](../../../images/designer_optimization_genetic_00.png)
+  ![Генетика 00](../../../images/designer_optimization_genetic_00.png)
 
 - задать параметры оптимизации:
 
-  ![Designer_Optimization_Genetic_01](../../../images/designer_optimization_genetic_01.png)
+  ![Генетика 01](../../../images/designer_optimization_genetic_01.png)
 
 - в качестве целевой функции (Фитнес) можно указать расширенную формулу:
 
-  ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
+  ![Генетика 02](../../../images/designer_optimization_genetic_02.png)
 
   Например, сделать расчет не только по **Прибыли**, но так же относительно ее к **Максимальной Просадке**. Доступные математические функции аналогичны кубику [Формула](../strategies/using_visual_designer/elements/common/formula.md).
 

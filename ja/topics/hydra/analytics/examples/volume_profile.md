@@ -2,7 +2,7 @@
 
 「ボリュームプロファイル」スクリプトは、選択した期間における価格水準ごとの取引高分布を分析するためのツールです。トレーダーやクオンツアナリストは、主な取引活動がどの価格水準に集中していたかを可視化し、調査できます。
 
-![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
+![ボリュームプロファイル](../../../../images/hydra_analytics_volume_profile.png)
 
 ## 機能の説明
 

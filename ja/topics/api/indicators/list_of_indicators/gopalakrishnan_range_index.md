@@ -64,7 +64,7 @@ GAPO = log(N) * log(最高値 - 最安値)
    - 高ボラティリティ期間中は、トレンドインジケーターのシグナルの信頼性が高くなる場合があります
    - 低ボラティリティ期間中は、オシレーターのシグナルがより効果的な場合があります
 
-![indicator_gopalakrishnan_range_index](../../../../images/indicator_gopalakrishnan_range_index.png)
+![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## 関連項目
 

@@ -2,7 +2,7 @@
 
 要在云端测试策略，首先需要找到所有相关交易品种。为此，请在 **Designer** 中打开 **云** 选项卡内用于测试的交易品种搜索面板：
 
-![Designer_Backtest_Cloud_01](../../../images/designer_backtest_cloud_01.png)
+![云端测试 01](../../../images/designer_backtest_cloud_01.png)
 
 在搜索字段中输入交易品种名称，然后单击 **搜索**（或按 **回车键**），StockSharp 服务器会返回符合条件的搜索结果。交易品种名称右侧还会显示可用历史数据的日期范围。
 
@@ -10,16 +10,16 @@
 
 接下来返回策略，并在 **回测** 选项卡中启用云端选项：
 
-![Designer_Backtest_Cloud_00](../../../images/designer_backtest_cloud_00.png)
+![云端测试 00](../../../images/designer_backtest_cloud_00.png)
 
 启动测试后，策略不会在本地执行测试，而是发送到 StockSharp 云端：
 
-![Designer_Backtest_Cloud_02](../../../images/designer_backtest_cloud_02.png)
+![云端测试 02](../../../images/designer_backtest_cloud_02.png)
 
 测试完成后，结果报告会显示在任务等待选项卡中：
 
-![Designer_Backtest_Cloud_03](../../../images/designer_backtest_cloud_03.png)
+![云端测试 03](../../../images/designer_backtest_cloud_03.png)
 
 要查看云端测试历史记录和当前正在执行的任务，请打开 **云** 选项卡中的 **任务** 面板：
 
-![Designer_Backtest_Cloud_04](../../../images/designer_backtest_cloud_04.png)
+![云端测试 04](../../../images/designer_backtest_cloud_04.png)

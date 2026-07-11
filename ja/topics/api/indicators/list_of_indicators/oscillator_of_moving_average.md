@@ -80,7 +80,7 @@ OMA の主な強みは、トレンドモメンタムの変化を特定し、ゼ�
    - OMA は、シグナルを確認するために他のインジケーターと組み合わせて使用されることがよくあります
    - RSI や ストキャスティクス などの買われ過ぎ/売られ過ぎインジケーターと組み合わせると特に効果的です
 
-![indicator_oscillator_of_moving_average](../../../../images/indicator_oscillator_of_moving_average.png)
+![OMA](../../../../images/indicator_oscillator_of_moving_average.png)
 
 ## 関連項目
 

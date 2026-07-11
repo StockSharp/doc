@@ -76,7 +76,7 @@ MMI は、単純な線形パターンに従わない価格値ペア（通常は�
    - 長期 MMI は、市場の主要な状態を判断するのに役立ちます
    - 短期 MMI は、現在の状況に適したストラテジーを選択するのに役立ちます
 
-![indicator_market_meanness_index](../../../../images/indicator_market_meanness_index.png)
+![MMI](../../../../images/indicator_market_meanness_index.png)
 
 ## 関連項目
 

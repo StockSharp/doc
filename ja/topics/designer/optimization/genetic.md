@@ -6,15 +6,15 @@
 
 - モードを切り替えます。
 
-  ![Designer_Optimization_Genetic_00](../../../images/designer_optimization_genetic_00.png)
+  ![遺伝的最適化 00](../../../images/designer_optimization_genetic_00.png)
 
 - 最適化パラメーターを設定します。
 
-  ![Designer_Optimization_Genetic_01](../../../images/designer_optimization_genetic_01.png)
+  ![遺伝的最適化 01](../../../images/designer_optimization_genetic_01.png)
 
 - 目的関数（Fitness）として、拡張式を指定できます。
 
-  ![Designer_Optimization_Genetic_02](../../../images/designer_optimization_genetic_02.png)
+  ![遺伝的最適化 02](../../../images/designer_optimization_genetic_02.png)
 
   たとえば、**利益** だけでなく、その **最大ドローダウン** との相対関係でも計算できます。利用可能な数学関数は、[数式](../strategies/using_visual_designer/elements/common/formula.md) ブロックと同様です。
 

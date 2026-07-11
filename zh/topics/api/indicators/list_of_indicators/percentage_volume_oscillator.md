@@ -86,7 +86,7 @@ PVO 指标有助于识别可能预示重大价格变动的成交量异常。它�
    - 尖锐的PVO跳跃表示显著的成交量变化，通常伴随重要的市场事件
    - 这种尖峰可能出现在关键价格水平的突破之前或伴随其发生
 
-![指标_百分比_成交量_振荡器](../../../../images/indicator_percentage_volume_oscillator.png)
+![PVO](../../../../images/indicator_percentage_volume_oscillator.png)
 
 ## 另请参阅
 

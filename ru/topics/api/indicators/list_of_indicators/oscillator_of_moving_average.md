@@ -80,7 +80,7 @@ OMA работает по принципу, схожему с MACD (схожде
    - OMA часто используется в сочетании с другими индикаторами для подтверждения сигналов
    - Особенно эффективно сочетание с индикаторами перекупленности/перепроданности, такими как RSI или Стохастик
 
-![indicator_oscillator_of_moving_average](../../../../images/indicator_oscillator_of_moving_average.png)
+![OMA](../../../../images/indicator_oscillator_of_moving_average.png)
 
 ## См. также
 

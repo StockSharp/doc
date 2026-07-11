@@ -2,7 +2,7 @@
 
 O script "Indicator" destina-se a demonstrar o trabalho com indicadores de análise técnica na plataforma StockSharp. Permite aos utilizadores carregar dados históricos, aplicar-lhes vários indicadores e apresentar os resultados num gráfico. Esta abordagem ajuda na análise das tendências do mercado e na tomada de decisões de negociação informadas.
 
-![hydra_analytics_indicator](../../../../images/hydra_analytics_indicator.png)
+![Indicadores](../../../../images/hydra_analytics_indicator.png)
 
 ## Capacidades Funcionais
 

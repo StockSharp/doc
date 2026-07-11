@@ -42,7 +42,7 @@ BOP a menudo se suaviza adicionalmente mediante una media móvil para reducir la
   - Si el precio sube y BOP baja, esto puede ser una advertencia de que la tendencia alcista se está debilitando.
   - Si el precio cae y BOP aumenta, esto puede indicar un posible fin de la tendencia a la baja.
 
-![indicator_balance_of_power](../../../../images/indicator_balance_of_power.png)
+![BOP](../../../../images/indicator_balance_of_power.png)
 
 ## Véase también
 

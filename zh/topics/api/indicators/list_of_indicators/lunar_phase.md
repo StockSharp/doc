@@ -65,7 +65,7 @@
 
 需要注意的是，目前没有足够的科学证据表明月相会直接影响金融市场，许多专业交易员对这种工具持怀疑态度。然而，一些市场参与者认为将月相（LP）纳入分析工具中是有价值的。
 
-![indicator_lunar_phase](../../../../images/indicator_lunar_phase.png)
+![LP](../../../../images/indicator_lunar_phase.png)
 
 ## 另请参阅
 

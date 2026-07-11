@@ -45,7 +45,7 @@
   - Если цена растет, а BV падает, возможен скорый разворот вниз
   - Если цена падает, а BV растет, возможен скорый разворот вверх
 
-![indicator_balance_volume](../../../../images/indicator_balance_volume.png)
+![BV](../../../../images/indicator_balance_volume.png)
 
 ## См. также
 

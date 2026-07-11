@@ -68,7 +68,7 @@ Der DSP-Indikator schwingt um die Nulllinie und kann wie folgt interpretiert wer
 5. **Musterbildung**:
    - Auf dem DSP-Chart können sich technische Muster (Kopf-Schulter-Muster, Doppelboden usw.) bilden, die möglicherweise zusätzliche Handelssignale liefern
 
-![indicator_detrended_synthetic_price](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## Siehe auch
 

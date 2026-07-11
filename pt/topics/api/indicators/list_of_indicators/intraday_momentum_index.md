@@ -73,7 +73,7 @@ O índice de momentum intradiário é interpretado de forma semelhante ao RSI:
    - Valores sustentados do IMI acima de 50 confirmam uma tendência de alta
    - Valores sustentados do IMI abaixo de 50 confirmam uma tendência de baixa
 
-![indicator_intraday_momentum_index](../../../../images/indicator_intraday_momentum_index.png)
+![IMI](../../../../images/indicator_intraday_momentum_index.png)
 
 ## Ver Também
 

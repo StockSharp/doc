@@ -75,7 +75,7 @@ MOMA помогает определить силу тренда и потенц
    - Более короткие периоды для Length и MomentumPeriod делают MOMA более чувствительным, но и более подверженным ложным сигналам
    - Более длинные периоды делают MOMA более сглаженным, но могут приводить к запаздыванию сигналов
 
-![indicator_momentum_of_moving_average](../../../../images/indicator_momentum_of_moving_average.png)
+![MOMA](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## См. также
 

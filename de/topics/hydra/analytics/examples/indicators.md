@@ -2,7 +2,7 @@
 
 Das Skript "Indicator" demonstriert die Arbeit mit technischen Analyseindikatoren innerhalb der StockSharp-Plattform. Es ermöglicht Benutzern, historische Daten zu laden, verschiedene Indikatoren darauf anzuwenden und die Ergebnisse in einem Chart anzuzeigen. Dieser Ansatz unterstützt die Analyse von Markttrends und fundierte Handelsentscheidungen.
 
-![hydra_analytics_indicator](../../../../images/hydra_analytics_indicator.png)
+![Indikatoren](../../../../images/hydra_analytics_indicator.png)
 
 ## Funktionen
 
