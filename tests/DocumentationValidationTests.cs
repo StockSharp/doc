@@ -1354,6 +1354,67 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedConnectorDocsDoNotKeepEnglishCredentialDescriptions()
+	{
+		var errors = new List<string>();
+		var credentialPattern = new Regex(@"^\s*[-*]\s+\*\*[^*]+\*\*\s*(?:-|—|:)\s*(?:Login|Password)\.\s*$|\b(?:Login|Password) adicional\b|\bZusätzliches Login\.", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					if (!credentialPattern.IsMatch(text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: connector field description keeps untranslated English credential text. Localize 'Login' and 'Password' descriptions.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedBlackwoodFusionGraphicalConfigurationDoesNotKeepEnglishFieldLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md";
+		var fieldPattern = new Regex(@"\*\*(?:Market data|History|Transactions|Override)\*\*|!\[API GUI Settings Fusion(?: \(Blackwood\))?\]", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = fieldPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Blackwood Fusion graphical configuration keeps English UI label '{match.Value}'. Localize the visible field label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownDoesNotKeepKnownEnglishBoldUiLabels()
 	{
 		var errors = new List<string>();

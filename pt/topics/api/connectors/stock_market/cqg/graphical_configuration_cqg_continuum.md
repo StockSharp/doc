@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI CQG Continuum](../../../../../images/api_gui_settings_cqg_continuum.png)
 
-- **nome de utilizador** - Login.
-- **palavra-passe** - Password.
+- **nome de utilizador** - Nome de utilizador.
+- **palavra-passe** - Palavra-passe.
 - **endereço** - Endereço do servidor.
 - **ID do software** - ID único do software.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

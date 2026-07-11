@@ -5,8 +5,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen OpenECry GainFutures](../../../../../images/api_gui_settings_openecry_gainfutures.png)
 
 - **Adresse** - Serveradresse.
-- **Benutzername** - Login.
-- **Passwort** - Password.
+- **Benutzername** - Benutzername.
+- **Passwort** - Passwort.
 - **Arbeitszeitplan** - Erforderlicher Modus für die Verbindung zum Terminal.
 - **Reconnection** - Nativen Wiederverbindungsmechanismus verwenden.
 - **Protokollierungsstufe** - Protokollierung der OpenECry API verwenden.

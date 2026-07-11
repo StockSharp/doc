@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Fusion](../../../../../images/api_gui_settings_fusion.png)
+![Настройки API GUI Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
 
 - **Логин** \- Логин.
 - **Пароль** \- Пароль.

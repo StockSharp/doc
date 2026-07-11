@@ -4,14 +4,14 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API-GUI-Einstellungen Rithmic](../../../../../images/api_gui_settings_rithmic.png)
 
-- **Benutzername** - Login.
-- **Passwort** - Password.
+- **Benutzername** - Benutzername.
+- **Passwort** - Passwort.
 - **Zertifikat** - Pfad zur Zertifikatsdatei, erforderlich für die Verbindung zum Rithmic-System.
 - **Protokolldatei** - Pfad zur Logdatei.
 - **Servertyp** - Servertyp.
 - **Punkt (Administration)** - Verbindungspunkt für administrative Funktionen (Initialisierung/Deinitialisierung).
 - **Punkt (Daten)** - Verbindungspunkt für Marktdaten.
-- **Benutzername (Transaktionen)** - Zusätzliches Login. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
+- **Benutzername (Transaktionen)** - Zusätzlicher Benutzername. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
 - **Punkt (Transaktionen)** - Verbindungspunkt zum System für die Transaktionsausführung.
 - **Passwort (Transaktionen)** - Zusätzliches Passwort. Wird verwendet, wenn Transaktionen an einen separaten Server gesendet werden.
 - **Punkt (Positionen)** - Verbindungspunkt für den Zugriff auf Portfolio- und Positionsinformationen.
@@ -21,7 +21,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Lizenzen** - Adresse des Lizenzservers.
 - **Brokeradresse** - Brokeradresse.
 - **Log (Adresse)** - Logger-Adresse.
-- **Benutzername (hist)** - Zusätzliches Login. Benutzer-ID für die Authentifizierung beim Historienservice.
+- **Benutzername (hist)** - Zusätzlicher Benutzername. Benutzer-ID für die Authentifizierung beim Historienservice.
 - **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim Historienservice.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

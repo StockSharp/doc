@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![Configuración de API GUI CQG Continuum](../../../../../images/api_gui_settings_cqg_continuum.png)
 
-- **usuario** - Login.
-- **contraseña** - Password.
+- **usuario** - Usuario.
+- **contraseña** - Contraseña.
 - **dirección** - Dirección del servidor.
 - **ID de software** - ID de software único.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

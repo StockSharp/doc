@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI LMAX](../../../../../images/api_gui_settings_lmax.png)
 
-- **nome de utilizador** - Login.
-- **palavra-passe** - Password.
+- **nome de utilizador** - Nome de utilizador.
+- **palavra-passe** - Palavra-passe.
 - **Demonstração** - Ligar à negociação demo em vez do servidor de negociação real.
 - **LMAX location** - Localização da bolsa LMAX.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

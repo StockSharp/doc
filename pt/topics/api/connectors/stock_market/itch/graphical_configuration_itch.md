@@ -8,8 +8,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Duplicate** - Grupo UDP duplicado.
 - **Recovery** - Servidor de recuperação.
 - **Replay** - Servidor de replay.
-- **nome de utilizador** - Login.
-- **palavra-passe** - Password.
+- **nome de utilizador** - Nome de utilizador.
+- **palavra-passe** - Palavra-passe.
 - **Securities** - Ficheiro com títulos.
 - **Delay** - Atrasar o carregamento de instrumentos.
 - **Active** - Apenas instrumentos ativos.

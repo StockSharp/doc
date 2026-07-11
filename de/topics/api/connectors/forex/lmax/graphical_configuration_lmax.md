@@ -4,7 +4,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API-GUI-Einstellungen LMAX](../../../../../images/api_gui_settings_lmax.png)
 
-- **Benutzername** - Login.
+- **Benutzername** - Benutzername.
 - **Passwort** - Passwort.
 - **Demomodus** - Verbindung zum Demo-Handel statt zum Live-Handelsserver.
 - **LMAX location** - Standort der LMAX-Börse.

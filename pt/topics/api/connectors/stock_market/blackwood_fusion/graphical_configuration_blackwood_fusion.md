@@ -4,13 +4,13 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI Fusion (Blackwood)](../../../../../images/api_gui_settings_fusion.png)
 
-- **nome de utilizador** - Login.
-- **palavra-passe** - Password.
-- **Market data** - Endereço do servidor de dados de mercado.
-- **History** - Endereço do servidor de dados históricos.
-- **Transactions** - Endereço do servidor de execução de transações.
+- **nome de utilizador** - Nome de utilizador.
+- **palavra-passe** - Palavra-passe.
+- **Dados de mercado** - Endereço do servidor de dados de mercado.
+- **Histórico** - Endereço do servidor de dados históricos.
+- **Transações** - Endereço do servidor de execução de transações.
 - **Caminho para logs** - Caminho para o diretório onde será criado o ficheiro BWOrders.Log.
-- **Override** - Substituir o ficheiro dll a partir dos recursos. Ativado por predefinição.
+- **Substituir** - Substituir o ficheiro dll a partir dos recursos. Ativado por predefinição.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para monitorizar as ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 

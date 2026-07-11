@@ -8,8 +8,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Duplicate** - Doppelte UDP-Gruppe.
 - **Recovery** - Recovery-Server.
 - **Replay** - Replay-Server.
-- **Benutzername** - Login.
-- **Passwort** - Password.
+- **Benutzername** - Benutzername.
+- **Passwort** - Passwort.
 - **Securities** - Datei mit Wertpapieren.
 - **Delay** - Instrumente verzögert laden.
 - **Active** - Nur aktive Instrumente.

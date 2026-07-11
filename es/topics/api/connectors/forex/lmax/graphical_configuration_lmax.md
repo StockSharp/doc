@@ -4,8 +4,8 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![Configuración de API GUI LMAX](../../../../../images/api_gui_settings_lmax.png)
 
-- **usuario** - Login.
-- **contraseña** - Password.
+- **usuario** - Usuario.
+- **contraseña** - Contraseña.
 - **Demostración** - Conectarse a la negociación de demostración en lugar del servidor de negociación real.
 - **LMAX location** - Ubicación de LMAX Exchange.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

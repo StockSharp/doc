@@ -4,8 +4,8 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI CQG COM](../../../../../images/api_gui_settings_cqg_com.png)
 
-- **nome de utilizador** - Login.
-- **palavra-passe** - Password.
+- **nome de utilizador** - Nome de utilizador.
+- **palavra-passe** - Palavra-passe.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo de controlo das ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
 
