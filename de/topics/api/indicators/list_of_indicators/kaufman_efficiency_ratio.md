@@ -8,7 +8,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [KaufmanEfficiency
 
 Der Kaufman Efficiency Ratio (KER) bewertet, wie „effizient“ sich der Preis im Vergleich zum gesamten zurückgelegten Weg in eine bestimmte Richtung bewegt. Es stellt das Verhältnis der Nettopreisbewegung zur Summe aller Preisänderungen über einen bestimmten Zeitraum dar.
 
-KER wurde von Perry Kaufman entwickelt und ursprünglich als Komponente des Adaptive Moving Average (KAMA) verwendet. KER selbst ist jedoch ein wertvolles Tool, das dabei hilft, festzustellen, ob sich der Markt in einem Trend- oder Schwankungszustand befindet.
+KER wurde von Perry Kaufman entwickelt und ursprünglich als Komponente des adaptiven gleitenden Durchschnitts nach Kaufman (KAMA) verwendet. KER selbst ist jedoch ein wertvolles Tool, das dabei hilft, festzustellen, ob sich der Markt in einem Trend- oder Schwankungszustand befindet.
 
 KER-Werte schwanken zwischen 0 und 1:
 - Werte nahe 1 weisen auf eine hocheffiziente Preisbewegung hin (starker Trend)

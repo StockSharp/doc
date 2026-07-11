@@ -8,7 +8,7 @@ Para utilizar o indicador, é necessário usar a classe [KaufmanEfficiencyRatio]
 
 O Kaufman Efficiency Ratio (KER) avalia quão "eficientemente" o preço se move numa direcção específica em comparação com o percurso total que percorre. Representa o rácio entre o movimento direccional líquido do preço e a soma de todas as variações de preço durante um período específico.
 
-O KER foi desenvolvido por Perry Kaufman e foi originalmente usado como componente da Adaptive Moving Average (KAMA). No entanto, o próprio KER é uma ferramenta valiosa que ajuda a determinar se o mercado está num estado tendencial ou oscilante.
+O KER foi desenvolvido por Perry Kaufman e foi originalmente usado como componente da média móvel adaptativa de Kaufman (KAMA). No entanto, o próprio KER é uma ferramenta valiosa que ajuda a determinar se o mercado está num estado tendencial ou oscilante.
 
 Os valores do KER oscilam entre 0 e 1:
 - Valores próximos de 1 indicam movimento de preço altamente eficiente (tendência forte)
@@ -83,4 +83,3 @@ O Kaufman Efficiency Ratio pode ser interpretado da seguinte forma:
 [ADX](adx.md)
 [VHF](vhf.md)
 [VIDYA](vidya.md)
-

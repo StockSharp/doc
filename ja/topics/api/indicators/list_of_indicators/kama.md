@@ -1,6 +1,6 @@
 # KAMA
 
-**Kaufman's Adaptive Moving Average (AMA, KAMA, AMkA)** は、市場ノイズとボラティリティを考慮するために Perry Kaufman によって開発されました。KAMA インジケーターは、時間上の反転ポイントを特定し、全体的なトレンドを判断し、価格変動をフィルタリングするために使用できます。
+**Kaufman適応移動平均 (AMA, KAMA, AMkA)** は、市場ノイズとボラティリティを考慮するために Perry Kaufman によって開発されました。KAMA インジケーターは、時間上の反転ポイントを特定し、全体的なトレンドを判断し、価格変動をフィルタリングするために使用できます。
 
 インジケーターを使用するには、[KaufmanAdaptiveMovingAverage](xref:StockSharp.Algo.Indicators.KaufmanAdaptiveMovingAverage) クラスを使用する必要があります。
 
@@ -11,4 +11,3 @@
 - Period - Kaufman 移動平均の期間。
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
-
