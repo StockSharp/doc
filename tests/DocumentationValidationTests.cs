@@ -215,6 +215,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Logging",
 	];
 
+	private static readonly string[] _knownEnglishDesignerElementColorLabels =
+	[
+		"Black",
+		"Dark green",
+		"Dark cyan",
+		"Cyan",
+		"Orange red",
+		"Dark goldenrod",
+		"Olive",
+		"Pale violet red",
+		"Dark olive green",
+		"Dodger blue",
+		"Medium sea green",
+		"Dark slate blue",
+		"Brown",
+		"Deep pink",
+		"Dark khaki",
+		"Dark blue",
+		"Saddle brown",
+		"Gainsboro",
+		"Tan",
+		"Purple",
+	];
+
 	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"Description",
@@ -1370,6 +1394,33 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line.Line}: markdown code block list keeps English label '{label}'. Localize the label in the target language.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerElementDocsDoNotKeepEnglishColorLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/designer/strategies/using_visual_designer/elements.md";
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+			{
+				foreach (var color in _knownEnglishDesignerElementColorLabels)
+				{
+					if (!ContainsStandaloneText(label.Text, color))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: designer element color legend keeps English color label '{color}'. Localize color names in the target language.");
 				}
 			}
 		}

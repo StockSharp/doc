@@ -12,35 +12,35 @@ Os parâmetros são necessários para preencher o cubo com informações enquant
 
 A cor indica o tipo de dados que é passado nos parâmetros. Diferentes parâmetros em diferentes cubos podem receber e passar tipos de dados diferentes e incompatíveis. A descrição de cada parâmetro é indicada na dica de contexto. Para evitar muitos erros ao ligar parâmetros de tipos diferentes, cada parâmetro tem o seu próprio tipo de dados, que se distingue pela cor. O seguinte conjunto de cores é usado para indicar os parâmetros:
 
-- **Black** - qualquer tipo de dados, normalmente usado como sinal para executar determinadas ações dentro do elemento.
-- **Dark green** - o instrumento.
-- **Dark cyan** - o livro de ordens.
-- **Cyan** - a cotação (um par de preço e volume).
-- **Orange red** - velas e estado da vela.
-- **Dark goldenrod** - o valor do indicador.
-- **Olive** - a ordem.
-- **Pale violet red** - erro da ordem.
-- **Dark olive green** - negócio próprio.
-- **Dodger blue** - o valor da flag (indica o estado e tem dois valores: levantada (true) e baixada (false)).
-- **Medium sea green** - um valor numérico, que pode ser definido como número ou percentagem.
-- **Dark slate blue** - valores que podem ser comparados (por exemplo, um valor numérico, uma cadeia de texto, um valor de indicador, etc.).
-- **Brown** - o portefólio.
-- **Deep pink** - opções.
-- **Beige** - o lado.
-- **Dark khaki** - o negócio.
-- **Dark blue** - a estratégia.
+- **Preto** - qualquer tipo de dados, normalmente usado como sinal para executar determinadas ações dentro do elemento.
+- **Verde escuro** - o instrumento.
+- **Ciano escuro** - o livro de ordens.
+- **Ciano** - a cotação (um par de preço e volume).
+- **Vermelho-alaranjado** - velas e estado da vela.
+- **Dourado escuro** - o valor do indicador.
+- **Oliva** - a ordem.
+- **Vermelho-violeta pálido** - erro da ordem.
+- **Verde-oliva escuro** - negócio próprio.
+- **Azul vivo** - o valor da flag (indica o estado e tem dois valores: levantada (true) e baixada (false)).
+- **Verde-mar médio** - um valor numérico, que pode ser definido como número ou percentagem.
+- **Azul-ardósia escuro** - valores que podem ser comparados (por exemplo, um valor numérico, uma cadeia de texto, um valor de indicador, etc.).
+- **Castanho** - o portefólio.
+- **Rosa intenso** - opções.
+- **Bege** - o lado.
+- **Caqui escuro** - o negócio.
+- **Azul escuro** - a estratégia.
 - **Chocolate** - a data.
 - **Coral** - a hora.
-- **Saddle brown** - a posição.
-- **Chartreuse** - o estado da ordem.
-- **Gainsboro** - o modelo Black-Scholes.
-- **Tan** - o modelo Black-Scholes de cabaz.
-- **Purple** - a cadeia de texto.
+- **Castanho-sela** - a posição.
+- **Verde chartreuse** - o estado da ordem.
+- **Cinzento claro** - o modelo Black-Scholes.
+- **Castanho-claro** - o modelo Black-Scholes de cabaz.
+- **Púrpura** - a cadeia de texto.
 
 Assim, pode ligar parâmetros das mesmas cores (os mesmos tipos de dados), exceto nos seguintes tipos de parâmetros:
 
-1. O parâmetro **black** pode aceitar quaisquer dados. Na maioria das vezes, esses parâmetros são usados para passar sinais para quaisquer ações dentro do cubo. Por exemplo, o cubo [Variável](elements/data_sources/variable.md) armazena um determinado valor e envia-o para a saída quando recebe um sinal.
-2. O parâmetro **dark slate blue** pode receber na entrada vários tipos de dados comparáveis. Por exemplo, valores numéricos, valores de indicadores, cadeias de texto, etc.
+1. O parâmetro **preto** pode aceitar quaisquer dados. Na maioria das vezes, esses parâmetros são usados para passar sinais para quaisquer ações dentro do cubo. Por exemplo, o cubo [Variável](elements/data_sources/variable.md) armazena um determinado valor e envia-o para a saída quando recebe um sinal.
+2. O parâmetro **azul-ardósia escuro** pode receber na entrada vários tipos de dados comparáveis. Por exemplo, valores numéricos, valores de indicadores, cadeias de texto, etc.
 
 Deve notar-se que os tipos de parâmetros podem depender das propriedades do cubo. Por exemplo, para o cubo [Conversor](elements/converters/converter.md), o tipo do parâmetro de entrada é automaticamente determinado pelo tipo de dados do cubo de origem de dados para [Conversor](elements/converters/converter.md). Ao criar uma ligação, a cor do quadrado no elemento muda automaticamente.
 

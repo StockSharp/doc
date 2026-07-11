@@ -12,35 +12,35 @@ Parameter werden benötigt, um den Würfel während der Ausführung der Strategi
 
 Die Farbe bezeichnet den Datentyp, der in den Parametern übergeben wird. Unterschiedliche Parameter in unterschiedlichen Würfeln können unterschiedliche und inkompatible Datentypen empfangen und weitergeben. Die Beschreibung jedes Parameters wird im Tooltip angezeigt. Um viele Fehler beim Verbinden von Parametern unterschiedlicher Typen zu vermeiden, hat jeder Parameter einen eigenen Datentyp, der sich durch seine Farbe unterscheidet. Die folgende Farbpalette wird zur Kennzeichnung der Parameter verwendet:
 
-- **Black** - beliebiger Datentyp, normalerweise als Signal zum Ausführen bestimmter Aktionen innerhalb des Elements verwendet.
-- **Dark green** - das Instrument.
-- **Dark cyan** - das Orderbuch.
-- **Cyan** - die Quote (ein Paar aus Preis und Volumen).
-- **Orange red** - Kerzen und Kerzenstatus.
-- **Dark goldenrod** - der Indikatorwert.
-- **Olive** - die Order.
-- **Pale violet red** - Orderfehler.
-- **Dark olive green** - eigener Trade.
-- **Dodger blue** - der Flagwert (zeigt den Zustand an und hat zwei Werte: oben (true) und unten (false)).
-- **Medium sea green** - ein numerischer Wert, der als Zahl oder Prozentwert gesetzt werden kann.
-- **Dark slate blue** - Werte, die verglichen werden können (zum Beispiel ein numerischer Wert, eine Zeichenfolge, ein Indikatorwert usw.).
-- **Brown** - das Portfolio.
-- **Deep pink** - Optionen.
+- **Schwarz** - beliebiger Datentyp, normalerweise als Signal zum Ausführen bestimmter Aktionen innerhalb des Elements verwendet.
+- **Dunkelgrün** - das Instrument.
+- **Dunkeltürkis** - das Orderbuch.
+- **Türkis** - die Quote (ein Paar aus Preis und Volumen).
+- **Orangerot** - Kerzen und Kerzenstatus.
+- **Dunkles Goldgelb** - der Indikatorwert.
+- **Oliv** - die Order.
+- **Blassviolettrot** - Orderfehler.
+- **Dunkles Olivgrün** - eigener Trade.
+- **Leuchtblau** - der Flagwert (zeigt den Zustand an und hat zwei Werte: oben (true) und unten (false)).
+- **Mittleres Seegrün** - ein numerischer Wert, der als Zahl oder Prozentwert gesetzt werden kann.
+- **Dunkles Schieferblau** - Werte, die verglichen werden können (zum Beispiel ein numerischer Wert, eine Zeichenfolge, ein Indikatorwert usw.).
+- **Braun** - das Portfolio.
+- **Tiefrosa** - Optionen.
 - **Beige** - die Seite.
-- **Dark khaki** - der Trade.
-- **Dark blue** - die Strategie.
-- **Chocolate** - das Datum.
-- **Coral** - die Uhrzeit.
-- **Saddle brown** - die Position.
-- **Chartreuse** - der Orderstatus.
-- **Gainsboro** - das Black-Scholes-Modell.
-- **Tan** - das Basket-Black-Scholes-Modell.
-- **Purple** - die Textzeichenfolge.
+- **Dunkles Khaki** - der Trade.
+- **Dunkelblau** - die Strategie.
+- **Schokoladenbraun** - das Datum.
+- **Koralle** - die Uhrzeit.
+- **Sattelbraun** - die Position.
+- **Chartreusegrün** - der Orderstatus.
+- **Hellgrau** - das Black-Scholes-Modell.
+- **Hellbraun** - das Basket-Black-Scholes-Modell.
+- **Violett** - die Textzeichenfolge.
 
 Somit können Sie Parameter gleicher Farbe (also gleicher Datentypen) verbinden, mit Ausnahme der folgenden Parametertypen:
 
-1. Der Parameter **black** kann beliebige Daten akzeptieren. Meist werden solche Parameter verwendet, um Signale für Aktionen innerhalb des Würfels zu übergeben. Zum Beispiel speichert der Würfel [Variable](elements/data_sources/variable.md) einen bestimmten Wert und sendet ihn an den Ausgang, wenn er ein Signal empfängt.
-2. Der Parameter **dark slate blue** kann am Eingang verschiedene vergleichbare Datentypen empfangen. Zum Beispiel numerische Werte, Indikatorwerte, Zeichenfolgen usw.
+1. Der Parameter **Schwarz** kann beliebige Daten akzeptieren. Meist werden solche Parameter verwendet, um Signale für Aktionen innerhalb des Würfels zu übergeben. Zum Beispiel speichert der Würfel [Variable](elements/data_sources/variable.md) einen bestimmten Wert und sendet ihn an den Ausgang, wenn er ein Signal empfängt.
+2. Der Parameter **Dunkles Schieferblau** kann am Eingang verschiedene vergleichbare Datentypen empfangen. Zum Beispiel numerische Werte, Indikatorwerte, Zeichenfolgen usw.
 
 Es ist zu beachten, dass die Parametertypen von den Eigenschaften des Würfels abhängen können. Zum Beispiel wird beim Würfel [Konverter](elements/converters/converter.md) der Typ des Eingabeparameters automatisch anhand des Datentyps des Datenquellenwürfels für [Konverter](elements/converters/converter.md) bestimmt. Beim Erstellen einer Verbindung ändert sich die Farbe des Quadrats am Element automatisch.
 
