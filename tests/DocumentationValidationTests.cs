@@ -3208,6 +3208,62 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishVolumeProfileLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Volume Profile|Intraday Volume)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var topicsRoot = Path.Combine(_repoRoot, lang, "topics");
+			if (!Directory.Exists(topicsRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(topicsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English volume-analysis label '{match.Value}'. Localize visible indicator and script names in prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishPossessiveIndicatorLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Welles Wilder's ADX|Elder Index)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English indicator label '{match.Value}'. Localize visible indicator names in prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
 	{
 		var errors = new List<string>();

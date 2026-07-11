@@ -1,6 +1,6 @@
 # Volumenprofil
 
-Das Skript "Volume Profile" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
+Das Skript "Volumenprofil" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
 
 ![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
 
@@ -10,7 +10,7 @@ Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgef
 
 ## Praktische Bedeutung
 
-Die Analyse des Volume Profile hilft beim Erkennen wichtiger Nachfrage- und Angebotszonen und kann für Folgendes genutzt werden:
+Die Analyse des Volumenprofils hilft beim Erkennen wichtiger Nachfrage- und Angebotszonen und kann für Folgendes genutzt werden:
 
 - Identifikation von Unterstutzungs- und Widerstandsniveaus, an denen das Instrument erhebliches Interesse von Marktteilnehmern findet.
 - Einschatzung der Starke des aktuellen Trends oder einer möglichen Abschwachung anhand der Anderung der Volumenverteilung.
@@ -18,18 +18,18 @@ Die Analyse des Volume Profile hilft beim Erkennen wichtiger Nachfrage- und Ange
 
 ## Anwendung im Handel und in der quantitativen Analyse
 
-- **Handel**: Das Volume Profile kann zur Entwicklung von Strategien auf Basis der Volumenanalyse verwendet werden und zeigt klar, wo die wichtigsten Handelsoperationen stattfinden.
+- **Handel**: Das Volumenprofil kann zur Entwicklung von Strategien auf Basis der Volumenanalyse verwendet werden und zeigt klar, wo die wichtigsten Handelsoperationen stattfinden.
 - **Quantitative Analyse**: Daten zur Volumenverteilung können als Eingangsdaten für quantitative Modelle dienen, die die Wahrscheinlichkeit von Preisbewegungen auf Basis des auf einem Niveau angesammelten Volumens prognostizieren.
 
 ## Skriptimplementierung
 
-Das Skript "Volume Profile" führt die folgenden Schritte aus:
+Das Skript "Volumenprofil" führt die folgenden Schritte aus:
 
 1. **Datenerfassung**: Das Skript aggregiert Transaktionsdaten für den angegebenen Zeitraum.
 2. **Profilbildung**: Auf Grundlage der gesammelten Daten erstellt das Skript ein Volumenprofil, das die Handelsaktivitat auf jedem Preisniveau widerspiegelt.
 3. **Visualisierung**: Die Ergebnisse der Skriptausführung werden als Chart oder Histogramm visualisiert, wobei jeder Balken einem bestimmten Preisniveau und dessen Handelsvolumen entspricht.
 
-Die Verwendung des Skripts "Volume Profile" innerhalb der StockSharp-Plattform ermöglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualitat getroffener Handelsentscheidungen.
+Die Verwendung des Skripts "Volumenprofil" innerhalb der StockSharp-Plattform ermöglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualitat getroffener Handelsentscheidungen.
 
 ## Skriptcode in C#
 

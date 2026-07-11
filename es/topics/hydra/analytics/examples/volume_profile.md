@@ -1,6 +1,6 @@
 # Perfil de volumen
 
-El script "Volume Profile" sirve como herramienta para analizar la distribución del volumen de trading por niveles de precio durante un período seleccionado. Permite a traders y analistas cuantitativos visualizar y examinar dónde se concentró la principal actividad de trading en términos de niveles de precio.
+El script "Perfil de volumen" sirve como herramienta para analizar la distribución del volumen de trading por niveles de precio durante un período seleccionado. Permite a traders y analistas cuantitativos visualizar y examinar dónde se concentró la principal actividad de trading en términos de niveles de precio.
 
 ![hydra_analytics_volume_profile](../../../../images/hydra_analytics_volume_profile.png)
 
@@ -23,13 +23,13 @@ El análisis del perfil de volumen ayuda a identificar zonas clave de demanda y 
 
 ## Implementación del script
 
-El script "Volume Profile" realiza los siguientes pasos:
+El script "Perfil de volumen" realiza los siguientes pasos:
 
 1. **Recopilación de datos**: el script agrega datos de transacciones para el período especificado.
 2. **Formación del perfil**: con base en los datos recopilados, el script forma un perfil de volumen que refleja la actividad de trading en cada nivel de precio.
 3. **Visualización**: los resultados del script se visualizan como gráfico o histograma, donde cada barra corresponde a un nivel de precio específico y su volumen de trading.
 
-Usar el script "Volume Profile" dentro de la plataforma StockSharp permite realizar un análisis de mercado integral, construir hipótesis de trading fundamentadas y mejorar la calidad de las decisiones de trading tomadas.
+Usar el script "Perfil de volumen" dentro de la plataforma StockSharp permite realizar un análisis de mercado integral, construir hipótesis de trading fundamentadas y mejorar la calidad de las decisiones de trading tomadas.
 
 ## Código del script en C#
 

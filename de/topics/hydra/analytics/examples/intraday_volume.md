@@ -1,6 +1,6 @@
 # Intraday-Volumen
 
-Das Skript "Intraday Volume" ist ein Werkzeug zur Analyse der Verteilung des Handelsvolumens von Wertpapieren nach Stunden innerhalb einer einzelnen Handelssitzung. Es ist für die Verwendung innerhalb der StockSharp-Plattform konzipiert und richtet sich an Trader und quantitative Analysten, die Marktverhalten detailliert untersuchen und Handelsstrategien optimieren möchten.
+Das Skript "Intraday-Volumen" ist ein Werkzeug zur Analyse der Verteilung des Handelsvolumens von Wertpapieren nach Stunden innerhalb einer einzelnen Handelssitzung. Es ist für die Verwendung innerhalb der StockSharp-Plattform konzipiert und richtet sich an Trader und quantitative Analysten, die Marktverhalten detailliert untersuchen und Handelsstrategien optimieren möchten.
 
 ![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
 
@@ -19,12 +19,12 @@ Die Verteilung des Handelsvolumens nach Stunden verdeutlicht die Marktdynamik un
 
 ## Datenanwendung
 
-Das Skript "Intraday Volume" kann in ein breiteres Marktanalysesystem integriert werden und Daten liefern, die für Folgendes genutzt werden können:
+Das Skript "Intraday-Volumen" kann in ein breiteres Marktanalysesystem integriert werden und Daten liefern, die für Folgendes genutzt werden können:
 
 - **Strategieanpassung**: Anpassung der Parameter von Handelsalgorithmen an das Niveau der Marktaktivitat.
 - **Risikobewertung**: Berechnung der Wahrscheinlichkeit signifikanter Preisbewegungen in Abhangigkeit von der Tageszeit.
 
-Die Verwendung des Skripts "Intraday Volume" innerhalb der StockSharp-Handelsplattform ermöglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivitat zu stutzen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
+Die Verwendung des Skripts "Intraday-Volumen" innerhalb der StockSharp-Handelsplattform ermöglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivitat zu stutzen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
 
 ## Skriptcode in C#
 

@@ -1,6 +1,6 @@
 # Volume Intradiário
 
-O script "Intraday Volume" é uma ferramenta para analisar a distribuição do volume de negociação de securities por horas dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a traders e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
+O script "Volume intradiário" é uma ferramenta para analisar a distribuição do volume de negociação de securities por horas dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a traders e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
 
 ![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
 
@@ -19,12 +19,12 @@ A distribuição do volume de negociação por hora esclarece a dinâmica do mer
 
 ## Aplicação dos Dados
 
-O script "Intraday Volume" pode ser integrado num sistema mais amplo de análise de mercado, fornecendo dados que podem ser usados para:
+O script "Volume intradiário" pode ser integrado num sistema mais amplo de análise de mercado, fornecendo dados que podem ser usados para:
 
 - **Adaptação da Estratégia**: Ajustar parâmetros de algoritmos de negociação de acordo com os níveis de atividade do mercado.
 - **Avaliação de Risco**: Calcular a probabilidade de movimentos significativos de preço consoante a hora do dia.
 
-A utilização do script "Intraday Volume" na plataforma de negociação StockSharp permite que traders e analistas baseiem as suas decisões em dados específicos relativos à atividade do mercado e adaptem as suas estratégias para corresponder de forma ótima às condições atuais de negociação.
+A utilização do script "Volume intradiário" na plataforma de negociação StockSharp permite que traders e analistas baseiem as suas decisões em dados específicos relativos à atividade do mercado e adaptem as suas estratégias para corresponder de forma ótima às condições atuais de negociação.
 
 ## Código do Script em C#
 

@@ -1,7 +1,7 @@
-# rayos de Elder
+# Rayos de Elder
 
-El **rayos de Elder Index** es un indicador compuesto de Alexander Elder que combina una media móvil exponencial con el fuerza alcista.
-y osciladores fuerza bajista. Visualiza el equilibrio entre compradores y vendedores y ayuda a identificar cuándo una de las partes pierde el control.
+El **índice Elder-Ray** es un indicador compuesto de Alexander Elder que combina una media móvil exponencial con osciladores de fuerza alcista
+y fuerza bajista. Visualiza el equilibrio entre compradores y vendedores y ayuda a identificar cuándo una de las partes pierde el control.
 
 Utilice la clase [ElderRay](xref:StockSharp.Algo.Indicators.ElderRay) para acceder al indicador.
 
@@ -15,7 +15,7 @@ El indicador devuelve una estructura [ElderRayValue](xref:StockSharp.Algo.Indica
 
 ## Parámetros
 
-rayos de Elder hereda la configuración de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
+Rayos de Elder hereda la configuración de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
 - **Length** — período EMA;
 - **Alpha** — coeficiente de suavizado, cuando se configura directamente.
@@ -25,7 +25,7 @@ rayos de Elder hereda la configuración de [ExponentialMovingAverage](xref:Stock
 - **fuerza alcista > 0** junto con un EMA en aumento confirma una tendencia alcista.
 - **fuerza bajista < 0** con un EMA a la baja confirma una tendencia bajista.
 - La reducción de fuerza alcista ante el aumento de precios o la subida de fuerza bajista ante la caída de precios forman divergencias y advierten sobre reversiones.
-- Zero-line crossings de fuerza alcista o fuerza bajista marcan el cambio en el control del mercado.
+- Los cruces de la línea cero de fuerza alcista o fuerza bajista marcan el cambio en el control del mercado.
 
 Las decisiones de trading se toman analizando el EMA y ambos osciladores simultáneamente. Por ejemplo, una oportunidad de compra aparece cuando
 el EMA está subiendo, el fuerza bajista se recupera de un nuevo mínimo y el fuerza alcista supera el cero.

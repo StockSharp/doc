@@ -1,6 +1,6 @@
 # Volumen intradía
 
-El script "Intraday Volume" es una herramienta para analizar la distribución del volumen de negociación de valores por horas dentro de una sola sesión de trading. Diseñado para usarse dentro de la plataforma StockSharp, está orientado a traders y analistas cuantitativos que buscan estudiar en profundidad el comportamiento del mercado y optimizar estrategias de trading.
+El script "Volumen intradía" es una herramienta para analizar la distribución del volumen de negociación de valores por horas dentro de una sola sesión de trading. Diseñado para usarse dentro de la plataforma StockSharp, está orientado a traders y analistas cuantitativos que buscan estudiar en profundidad el comportamiento del mercado y optimizar estrategias de trading.
 
 ![hydra_analytics_intraday_volume](../../../../images/hydra_analytics_intraday_volume.png)
 
@@ -19,12 +19,12 @@ La distribución del volumen de trading por hora arroja luz sobre la dinámica d
 
 ## Aplicación de datos
 
-El script "Intraday Volume" puede integrarse en un sistema más amplio de análisis de mercado, proporcionando datos que pueden usarse para:
+El script "Volumen intradía" puede integrarse en un sistema más amplio de análisis de mercado, proporcionando datos que pueden usarse para:
 
 - **Adaptación de estrategias**: ajustar parámetros de algoritmos de trading según niveles de actividad del mercado.
 - **Evaluación de riesgos**: calcular la probabilidad de movimientos significativos de precio según la hora del día.
 
-El uso del script "Intraday Volume" dentro de la plataforma de trading StockSharp permite a traders y analistas basar sus decisiones en datos específicos sobre la actividad del mercado y adaptar sus estrategias para ajustarse de forma óptima a las condiciones actuales de trading.
+El uso del script "Volumen intradía" dentro de la plataforma de trading StockSharp permite a traders y analistas basar sus decisiones en datos específicos sobre la actividad del mercado y adaptar sus estrategias para ajustarse de forma óptima a las condiciones actuales de trading.
 
 ## Código del script en C#
 

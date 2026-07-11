@@ -6,7 +6,7 @@ Um ein neues Analytics-Skript zu erstellen, wählen Sie im Panel der Datenquelle
 
 Der Screenshot zeigt die Hauptoberflache dieser Funktion, die aus mehreren wichtigen Komponenten besteht:
 
-- **Navigationsbaum**: Bietet schnellen Zugriff auf verschiedene Analytics-Funktionen und erstellte Analyseskripte, zum Beispiel Intraday-Volumenanalyse, Volume Profile, Charts, Indikatoren und andere Analysewerkzeuge.
+- **Navigationsbaum**: Bietet schnellen Zugriff auf verschiedene Analytics-Funktionen und erstellte Analyseskripte, zum Beispiel Intraday-Volumenanalyse, Volumenprofil, Charts, Indikatoren und andere Analysewerkzeuge.
 - **Codefenster**: Das Codefenster zeigt den Quellcode des ausgewählten Analyseskripts. Benutzer können den Code direkt bearbeiten, um analytische Berechnungen und Strategien anzupassen oder zu erstellen.
 - **Parameterpanel**: Auf der rechten Seite befindet sich ein Parameterpanel, in dem Sie Parameter für Analyseskripte festlegen können, einschliesslich Auswahl von Instrumenten, Analysezeitraum, Datenpfad und weiteren Einstellungen.
 - **Fehlerliste**: Am unteren Rand der Oberfläche befindet sich eine Liste der Fehler, die während der Kompilierung oder Ausführung des Analyseskripts erkannt wurden.
