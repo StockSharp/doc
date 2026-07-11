@@ -33,7 +33,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
 
    Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Instrumente herunterladen**.
 
-   Danach erscheint auf dem Bildschirm ein Menü, in dem der Benutzer **Alle Instrumente herunterladen** auswählen kann.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Danach erscheint auf dem Bildschirm ein Menü, in dem der Benutzer **Alle Instrumente herunterladen** auswählen kann.![Hydra alle Instrumente auswählen](../../images/hydra_securities_choose_all.png)
 
    Oder Sie können für eine Reihe von Quellen die Instrumente [konfigurieren](prepare_for_download/instruments_list.md), die heruntergeladen werden sollen.
 

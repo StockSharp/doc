@@ -33,7 +33,7 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    Para transferir os instrumentos, é necessário clicar no botão **Transferir instrumentos** correspondente.
 
-   Depois disso, será apresentado no ecrã um menu no qual o utilizador pode selecionar **Transferir todos os instrumentos**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Depois disso, será apresentado no ecrã um menu no qual o utilizador pode selecionar **Transferir todos os instrumentos**.![Hydra selecionar todos os instrumentos](../../images/hydra_securities_choose_all.png)
 
    Ou, para algumas fontes, [configurar](prepare_for_download/instruments_list.md) os instrumentos que pretende transferir.
 

@@ -1,6 +1,6 @@
 # Optionsdesk
 
-![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
+![Designer Optionsboard 00](../../../../../../images/designer_options_board_00.png)
 
 Der Würfel wird verwendet, um den Optionsdesk anzuzeigen.
 
@@ -12,9 +12,9 @@ Eingehende Sockets
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 
-![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
+![Designer Optionsboard 01](../../../../../../images/designer_options_board_01.png)
 
-![Designer Options Board 02](../../../../../../images/designer_options_board_02.png)
+![Designer Optionsboard 02](../../../../../../images/designer_options_board_02.png)
 
 ## Empfohlene Inhalte
 

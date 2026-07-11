@@ -1,6 +1,6 @@
 # Доска опционов
 
-![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
+![Designer доска опционов 00](../../../../../../images/designer_options_board_00.png)
 
 Кубик используется для отображения доски опционов.
 
@@ -12,9 +12,9 @@
 
 - **Модель** – модель расчета (например, Блэк-Шоулз).
 
-![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
+![Designer доска опционов 01](../../../../../../images/designer_options_board_01.png)
 
-![Designer Options Board 02](../../../../../../images/designer_options_board_02.png)
+![Designer доска опционов 02](../../../../../../images/designer_options_board_02.png)
 
 ## См. также
 

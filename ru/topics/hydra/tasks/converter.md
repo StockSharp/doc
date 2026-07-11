@@ -24,7 +24,7 @@
   - **ITCH** \- используется для протокола ITCH (биржи: LSE и Nasdaq).
   - **Plaza** \- используется для Московской Биржи.
 
-  ![hydra choose ITCH Plaza 00](../../../images/hydra_choose_itch_plaza_00.png)
+  ![Hydra выбор ITCH Plaza 00](../../../images/hydra_choose_itch_plaza_00.png)
 
 **Основные**
 

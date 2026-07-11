@@ -6,7 +6,7 @@
 - **追加** を選択する
 - **ソース** を選択します
 
-![hydra source choose](../../../images/hydra_source_choose.png)
+![Hydra ソース選択](../../../images/hydra_source_choose.png)
 
 すると、ソースの一覧が表示されます。ユーザーは複数のソースを同時に選択できます。
 

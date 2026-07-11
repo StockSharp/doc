@@ -33,7 +33,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Descargar instrumentos**.
 
-   Después aparecerá en pantalla un menú donde el usuario puede seleccionar **Descargar todos los instrumentos**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   Después aparecerá en pantalla un menú donde el usuario puede seleccionar **Descargar todos los instrumentos**.![Hydra seleccionar todos los instrumentos](../../images/hydra_securities_choose_all.png)
 
    O bien, para varias fuentes, [configurar](prepare_for_download/instruments_list.md) los instrumentos que necesita descargar.
 

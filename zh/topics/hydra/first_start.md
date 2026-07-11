@@ -33,7 +33,7 @@
 
    要下载交易品种，请单击相应的 **下载交易品种** 按钮。
 
-   随后屏幕上会出现一个菜单，用户可以在其中选择 **下载所有交易品种**。![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   随后屏幕上会出现一个菜单，用户可以在其中选择 **下载所有交易品种**。![Hydra 选择所有交易品种](../../images/hydra_securities_choose_all.png)
 
    对于部分数据源，也可以[配置](prepare_for_download/instruments_list.md)需要下载的交易品种。
 

@@ -6,7 +6,7 @@ Um eine neue Marktdatenquelle hinzuzufügen, gehen Sie wie folgt vor:
 - **Hinzufügen** auswählen
 - **Quellen** auswählen
 
-![hydra source choose](../../../images/hydra_source_choose.png)
+![Hydra Quellenauswahl](../../../images/hydra_source_choose.png)
 
 Danach erscheint eine Liste der Quellen. Der Benutzer kann mehrere Quellen gleichzeitig auswählen.
 

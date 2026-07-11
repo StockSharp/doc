@@ -1,6 +1,6 @@
 # 期权面板
 
-![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
+![Designer 期权面板 00](../../../../../../images/designer_options_board_00.png)
 
 该模块用于显示期权面板。
 
@@ -12,9 +12,9 @@
 
 - **模型** – 计算模型（例如 Black-Scholes）。
 
-![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
+![Designer 期权面板 01](../../../../../../images/designer_options_board_01.png)
 
-![Designer Options Board 02](../../../../../../images/designer_options_board_02.png)
+![Designer 期权面板 02](../../../../../../images/designer_options_board_02.png)
 
 ## 推荐内容
 

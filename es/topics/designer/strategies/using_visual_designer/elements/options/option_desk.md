@@ -1,6 +1,6 @@
 # Mesa de opciones
 
-![Designer Options Board 00](../../../../../../images/designer_options_board_00.png)
+![Designer panel de opciones 00](../../../../../../images/designer_options_board_00.png)
 
 El cubo se usa para mostrar el option desk.
 
@@ -12,9 +12,9 @@ Sockets de entrada
 
 - **Modelo** – modelo de cálculo (por ejemplo, Black-Scholes).
 
-![Designer Options Board 01](../../../../../../images/designer_options_board_01.png)
+![Designer panel de opciones 01](../../../../../../images/designer_options_board_01.png)
 
-![Designer Options Board 02](../../../../../../images/designer_options_board_02.png)
+![Designer panel de opciones 02](../../../../../../images/designer_options_board_02.png)
 
 ## Contenido recomendado
 

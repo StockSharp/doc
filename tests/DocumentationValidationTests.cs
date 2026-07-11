@@ -2009,6 +2009,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"^(?:hydra choose securitiy|hydra source choose|hydra securities choose all|hydra choose ITCH Plaza|Designer Options Board)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var match = pattern.Match(altText.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text keeps English product label '{match.Value}'. Localize the image description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedConnectorDocsDoNotKeepEnglishApiGuiSettingsLabels()
 	{
 		var errors = new List<string>();

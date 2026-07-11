@@ -33,7 +33,7 @@
 
    銘柄をダウンロードするには、対応する **銘柄のダウンロード** ボタンをクリックする必要があります。
 
-   その後、画面にメニューが表示され、ユーザーは **すべての銘柄をダウンロード** を選択できます。![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+   その後、画面にメニューが表示され、ユーザーは **すべての銘柄をダウンロード** を選択できます。![Hydra すべての銘柄を選択](../../images/hydra_securities_choose_all.png)
 
    または、一部のソースでは、ダウンロードする必要がある銘柄を[設定](prepare_for_download/instruments_list.md)できます。
 

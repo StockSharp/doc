@@ -6,7 +6,7 @@
 - 选择 **添加**。
 - 选择 **数据源**。
 
-![hydra source choose](../../../images/hydra_source_choose.png)
+![Hydra 数据源选择](../../../images/hydra_source_choose.png)
 
 随后会显示数据源列表。用户可以一次选择多个数据源。
 
