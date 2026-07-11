@@ -2,11 +2,11 @@
 
 ブロックを使用する場合、プログラミングスキルは不要です。ストラテジーを作成するプロセスでは、ブロックと接続（線）を組み合わせ、ワークフロー全体を視覚的に表現します。
 
-**共通** タブで **追加** ![Designer パネル Circuits 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押し、**ストラテジー** を選択すると、新しいストラテジーを追加できます。または、**スキーム** パネルの **ストラテジー** フォルダーを右クリックし、ドロップダウンメニューの **追加** ![Designer パネル Circuits 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押します。
+**共通** タブで **追加** ![Designer 回路パネル 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押し、**ストラテジー** を選択すると、新しいストラテジーを追加できます。または、**スキーム** パネルの **ストラテジー** フォルダーを右クリックし、ドロップダウンメニューの **追加** ![Designer 回路パネル 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押します。
 
 ![Designer ストラテジー作成 00](../../../images/designer_creation_of_strategy_00.png)
 
-**追加** ![Designer パネル Circuits 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押すと、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
+**追加** ![Designer 回路パネル 01](../../../images/designer_panel_circuits_01_button.png) ボタンを押すと、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
 
 ![Designer ストラテジー作成 02](../../../images/designer_creation_of_strategy_02.png)
 

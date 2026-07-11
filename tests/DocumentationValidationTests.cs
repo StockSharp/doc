@@ -2153,6 +2153,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCjkMarkdownImageAltTextsDoNotKeepKnownEnglishUiWords()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bCircuits\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages().Where(_cjkLanguageCodes.Contains))
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var match = pattern.Match(altText.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: CJK image alt text '{altText.Text}' keeps the English UI word '{match.Value}'. Localize the UI description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();

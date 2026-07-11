@@ -4,11 +4,11 @@
 
 ストラテジー作成プロセスは、[Designer](../../../designer.md) 内で直接行うことも、**Python** 開発環境（最もよく使われる開発環境は **Visual Studio** と **JetBrains Rider**）で行うこともできます。その際は、**Python** で取引ロボットを専門的に開発するためのライブラリと [API](../../../api.md) を使用します。
 
-**共通** タブで **追加** ボタン ![Designer パネル Circuits 01](../../../../images/designer_panel_circuits_01_button.png) をクリックし、**ストラテジー** を選択すると、新しいストラテジーを追加できます。または、**スキーム** パネルの **ストラテジー** フォルダーを右クリックし、ドロップダウンメニューの **追加** ボタン ![Designer パネル Circuits 01](../../../../images/designer_panel_circuits_01_button.png) をクリックします。
+**共通** タブで **追加** ボタン ![Designer 回路パネル 01](../../../../images/designer_panel_circuits_01_button.png) をクリックし、**ストラテジー** を選択すると、新しいストラテジーを追加できます。または、**スキーム** パネルの **ストラテジー** フォルダーを右クリックし、ドロップダウンメニューの **追加** ボタン ![Designer 回路パネル 01](../../../../images/designer_panel_circuits_01_button.png) をクリックします。
 
 ![Designer ストラテジー作成 00](../../../../images/designer_creation_of_strategy_00.png)
 
-**追加** ボタン ![Designer パネル Circuits 01](../../../../images/designer_panel_circuits_01_button.png) をクリックすると、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
+**追加** ボタン ![Designer 回路パネル 01](../../../../images/designer_panel_circuits_01_button.png) をクリックすると、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
 
 ![Designer ソースコード要素の作成 00](../../../../images/designer_python_create_strategy_00.png)
 
