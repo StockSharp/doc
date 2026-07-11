@@ -14,7 +14,7 @@ El indicador OBV fue introducido por primera vez por Joseph Granville en 1963 en
 
 ## Cálculo
 
-El cálculo del Volume en equilibrio es muy sencillo:
+El cálculo del volumen en balance es muy sencillo:
 
 1. Establezca el valor inicial OBV (normalmente 0 o un número arbitrario):
    ```
@@ -42,7 +42,7 @@ volumen en balance se puede interpretar de la siguiente manera:
 1. **Análisis de tendencias**:
    - El aumento de OBV indica volumen que ingresa al mercado (acumulación), lo que puede predecir un aumento de precios
    - La caída de OBV indica que el volumen sale del mercado (distribución), lo que puede predecir una caída de precios.
-   - Flat OBV indica que no hay movimiento de volumen direccional, lo que puede corresponder a una tendencia lateral
+   - Un OBV plano indica que no hay movimiento de volumen direccional, lo que puede corresponder a una tendencia lateral
 
 2. **Confirmación de tendencia de precios**:
    - Si OBV se mueve en la misma dirección que el precio, esto confirma la tendencia actual del precio.
@@ -60,11 +60,11 @@ volumen en balance se puede interpretar de la siguiente manera:
    - Algunos operadores utilizan las medias móviles OBV como líneas "de referencia"
    - El cruce del OBV con su media móvil puede generar señales de negociación
 
-6. **Análisis técnico Patterns**:
+6. **Patrones de análisis técnico**:
    - En el gráfico OBV se pueden formar patrones de análisis técnico clásicos, como "cabeza y hombros", "doble fondo", etc.
    - Estos patrones pueden proporcionar señales de trading adicionales.
 
-7. **XQX000Picos XQX**:
+7. **Picos**:
    - Los cambios bruscos y repentinos en OBV pueden indicar cambios significativos en el sentimiento del mercado
    - Estos "picos de volumen" suelen preceder a movimientos sustanciales de precios.
 

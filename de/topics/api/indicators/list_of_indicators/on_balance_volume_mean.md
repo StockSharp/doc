@@ -1,12 +1,12 @@
 # OBVM
 
-**On-Balance-Volumen Mean (OBVM)** ist ein technischer Indikator, der einen gleitenden Durchschnitt des Indikators On-Balance-Volumen (OBV) darstellt und so klarere Trendsignale basierend auf dem Volumen ermöglicht.
+**On-Balance-Volumen-Durchschnitt (OBVM)** ist ein technischer Indikator, der einen gleitenden Durchschnitt des Indikators On-Balance-Volumen (OBV) darstellt und so klarere Trendsignale basierend auf dem Volumen ermöglicht.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean) verwenden.
 
 ## Beschreibung
 
-On-Balance-Volumen Mean (OBVM) ist eine Modifikation des klassischen Indikators On-Balance-Volumen (OBV), der einen gleitenden Durchschnitt auf OBV-Werte anwendet, um Schwankungen zu glätten und klarere Trends zu erkennen. Der Indikator behält das Kernkonzept von OBV bei – Volumenakkumulation basierend auf Preisrichtungsänderungen, fügt jedoch eine zusätzliche Filterebene hinzu.
+On-Balance-Volumen-Durchschnitt (OBVM) ist eine Modifikation des klassischen Indikators On-Balance-Volumen (OBV), der einen gleitenden Durchschnitt auf OBV-Werte anwendet, um Schwankungen zu glätten und klarere Trends zu erkennen. Der Indikator behält das Kernkonzept von OBV bei – Volumenakkumulation basierend auf Preisrichtungsänderungen, fügt jedoch eine zusätzliche Filterebene hinzu.
 
 OBVM trägt dazu bei, das im ursprünglichen OBV vorhandene Rauschen zu eliminieren und macht langfristige Volumenstromtrends deutlicher wahrnehmbar. Dies ist besonders nützlich in volatilen Märkten oder bei der Analyse von Instrumenten mit unregelmäßigen Handelsvolumina.
 
@@ -19,9 +19,9 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die On-Balance-Volumen Mean-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des On-Balance-Volumen-Durchschnitts umfasst die folgenden Schritte:
 
-1. Berechnen Sie den Basis-On-Balance-Indikator Volume (OBV):
+1. Berechnen Sie den Basisindikator On-Balance-Volumen (OBV):
    ```
    Wenn Close[current] > Close[previous]:
        OBV[current] = OBV[previous] + Volume[current]
@@ -39,7 +39,7 @@ Die On-Balance-Volumen Mean-Berechnung umfasst die folgenden Schritte:
 Dabei gilt:
 - Close - Schlusskurs
 - Volume - Handelsvolumen
-- OBV - Im Gleichgewicht Volume
+- OBV - On-Balance-Volumen
 - SMA – einfacher gleitender Durchschnitt
 - Length – gleitender Durchschnittszeitraum
 
@@ -47,17 +47,17 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 
 ## Interpretation
 
-On-Balance-Volumen Mean kann wie folgt interpretiert werden:
+Der On-Balance-Volumen-Durchschnitt kann wie folgt interpretiert werden:
 
 1. **Trendanalyse**:
    - Steigender OBVM weist auf einen Aufwärtstrend mit starker Volumenunterstützung hin
    - Ein fallender OBVM weist auf einen rückläufigen Trend mit starker Volumenunterstützung hin
    - Der flache OBVM weist auf keinen ausgeprägten Trend hin
 
-2. **OBV- und OBVM-Frequenzweichen**:
+2. **OBV- und OBVM-Kreuzungen**:
    - Wenn OBV OBVM von unten nach oben kreuzt, kann dies als bullisches Signal angesehen werden
    - Wenn OBV OBVM von oben nach unten kreuzt, kann dies als rückläufiges Signal angesehen werden
-   - Diese Überschneidungen weisen oft auf den Beginn neuer Trends oder bedeutender Preisbewegungen hin
+   - Diese Kreuzungen weisen oft auf den Beginn neuer Trends oder bedeutender Preisbewegungen hin
 
 3. **Abweichungen**:
    - Bullische Divergenz: Der Preis bildet ein neues Tief, während OBVM ein höheres Tief bildet

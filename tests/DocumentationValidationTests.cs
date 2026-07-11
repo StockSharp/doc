@@ -3292,6 +3292,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepMachineTranslatedObvFragments()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Flat OBV|Análisis técnico Patterns|XQX\d+|Volume en equilibrio|On-Balance-Volumen Mean|オンバランスボリューム Mean)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps machine-translated OBV fragment '{match.Value}'. Localize or rewrite the visible prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
 	{
 		var errors = new List<string>();
