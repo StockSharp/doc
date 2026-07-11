@@ -33,7 +33,7 @@ ALMA の計算はいくつかの段階で行われます。
    m = floor(Offset * (Length - 1))
    s = Length / Sigma
    
-   For each i from 0 to Length-1:
+   0 から Length-1 までの各 i について:
    w(i) = exp(-((i - m)^2) / (2 * s^2))
    ```
 
@@ -41,13 +41,13 @@ ALMA の計算はいくつかの段階で行われます。
    ```
    Sum_of_weights = すべての w(i) の合計
    
-   For each i from 0 to Length-1:
+   0 から Length-1 までの各 i について:
    w_norm(i) = w(i) / Sum_of_weights
    ```
 
 3. ALMA を加重和として計算します。
    ```
-   ALMA = sum(Price(t-i) * w_norm(i)) for all i from 0 to Length-1
+   ALMA = sum(Price(t-i) * w_norm(i))（0 から Length-1 までのすべての i）
    ```
 
 ここで:

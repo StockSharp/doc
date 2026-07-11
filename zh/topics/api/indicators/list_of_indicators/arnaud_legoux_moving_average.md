@@ -33,7 +33,7 @@ ALMA 计算分几个阶段进行：
    m = floor(Offset * (Length - 1))
    s = Length / Sigma
    
-   For each i from 0 to Length-1:
+   对于从 0 到 Length-1 的每个 i：
    w(i) = exp(-((i - m)^2) / (2 * s^2))
    ```
 
@@ -41,13 +41,13 @@ ALMA 计算分几个阶段进行：
    ```
    Sum_of_weights = 所有 w(i) 的总和
    
-   For each i from 0 to Length-1:
+   对于从 0 到 Length-1 的每个 i：
    w_norm(i) = w(i) / Sum_of_weights
    ```
 
 3. 将 ALMA 计算为加权和：
    ```
-   ALMA = sum(Price(t-i) * w_norm(i)) for all i from 0 to Length-1
+   ALMA = sum(Price(t-i) * w_norm(i))（对从 0 到 Length-1 的所有 i）
    ```
 
 其中：

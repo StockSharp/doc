@@ -36,11 +36,11 @@ O cálculo dos níveis de Fibonacci Retracement envolve os seguintes passos:
    Range = |High - Low|
    
    Nível 0% = High (para tendência de alta) ou Low (para tendência de baixa)
-   Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
-   Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)
-   Level 50.0% = High - (Range * 0.5) or Low + (Range * 0.5)
-   Level 61.8% = High - (Range * 0.618) or Low + (Range * 0.618)
-   Level 78.6% = High - (Range * 0.786) or Low + (Range * 0.786)
+   Nível 23.6% = High - (Range * 0.236) ou Low + (Range * 0.236)
+   Nível 38.2% = High - (Range * 0.382) ou Low + (Range * 0.382)
+   Nível 50.0% = High - (Range * 0.5) ou Low + (Range * 0.5)
+   Nível 61.8% = High - (Range * 0.618) ou Low + (Range * 0.618)
+   Nível 78.6% = High - (Range * 0.786) ou Low + (Range * 0.786)
    Nível 100% = Low (para tendência de alta) ou High (para tendência de baixa)
    ```
 

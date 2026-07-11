@@ -30,7 +30,7 @@ CRSI 尤其适用于：
 1. **价格 RSI 组件** - 在短期内（通常为 3 天）计算的标准 RSI：
    ```
    RSI = 100 - (100 / (1 + RS))
-   where RS = Average Positive Change / Average Negative Change
+   其中 RS = 平均正变化 / 平均负变化
    ```
 
 2. **连续上涨/下跌RSI组件**：

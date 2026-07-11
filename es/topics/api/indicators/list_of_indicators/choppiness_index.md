@@ -29,7 +29,7 @@ El cálculo de Choppiness Index implica los siguientes pasos:
 
 1. Calcule la suma de los rangos verdaderos durante el período seleccionado:
    ```
-   Sum of TR = Sum(TR(i)) para i de 1 a Length
+   Suma de TR = Sum(TR(i)) para i de 1 a Length
    ```
 
 2. Calcule el High más alto y el Low más bajo durante el período seleccionado:

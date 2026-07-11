@@ -30,7 +30,7 @@ Connors RSI の計算には 3 つの構成要素が含まれ、それらを平�
 1. **価格 RSI 構成要素** - 短い期間（通常は 3 日）で計算される標準的な RSI:
    ```
    RSI = 100 - (100 / (1 + RS))
-   where RS = Average Positive Change / Average Negative Change
+   ここで RS = 平均上昇変化 / 平均下落変化
    ```
 
 2. **ストリーク RSI 構成要素**:

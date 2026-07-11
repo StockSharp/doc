@@ -35,7 +35,7 @@ O cálculo da ALMA ocorre em várias etapas:
    m = floor(Offset * (Length - 1))
    s = Length / Sigma
    
-   For each i from 0 to Length-1:
+   Para cada i de 0 a Length-1:
    w(i) = exp(-((i - m)^2) / (2 * s^2))
    ```
 
@@ -43,13 +43,13 @@ O cálculo da ALMA ocorre em várias etapas:
    ```
    Sum_of_weights = soma de todos os w(i)
    
-   For each i from 0 to Length-1:
+   Para cada i de 0 a Length-1:
    w_norm(i) = w(i) / Sum_of_weights
    ```
 
 3. Calcular a ALMA como uma soma ponderada:
    ```
-   ALMA = sum(Price(t-i) * w_norm(i)) for all i from 0 to Length-1
+   ALMA = sum(Price(t-i) * w_norm(i)) para todo i de 0 a Length-1
    ```
 
 Onde:

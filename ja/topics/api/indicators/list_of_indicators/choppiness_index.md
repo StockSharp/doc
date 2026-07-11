@@ -29,7 +29,7 @@ Choppiness Index の計算には、次の手順が含まれます。
 
 1. 選択した期間にわたる真の値幅の合計を計算します。
    ```
-   Sum of TR = i = 1 から Length までの Sum(TR(i))
+   TRの合計 = i = 1 から Length までの Sum(TR(i))
    ```
 
 2. 選択した期間にわたる最高 High と最低 Low を計算します。

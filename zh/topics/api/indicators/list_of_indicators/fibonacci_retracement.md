@@ -36,11 +36,11 @@
    Range = |High - Low|
    
    水平 0% = High（上升趋势）或 Low（下降趋势）
-   Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
-   Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)
-   Level 50.0% = High - (Range * 0.5) or Low + (Range * 0.5)
-   Level 61.8% = High - (Range * 0.618) or Low + (Range * 0.618)
-   Level 78.6% = High - (Range * 0.786) or Low + (Range * 0.786)
+   水平 23.6% = High - (Range * 0.236) 或 Low + (Range * 0.236)
+   水平 38.2% = High - (Range * 0.382) 或 Low + (Range * 0.382)
+   水平 50.0% = High - (Range * 0.5) 或 Low + (Range * 0.5)
+   水平 61.8% = High - (Range * 0.618) 或 Low + (Range * 0.618)
+   水平 78.6% = High - (Range * 0.786) 或 Low + (Range * 0.786)
    水平 100% = Low（上升趋势）或 High（下降趋势）
    ```
 

@@ -36,11 +36,11 @@ Fibonacci Retracement 水準の計算には、次の手順が含まれます:
    Range = |High - Low|
    
    レベル 0% = High（上昇トレンドの場合）または Low（下降トレンドの場合）
-   Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
-   Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)
-   Level 50.0% = High - (Range * 0.5) or Low + (Range * 0.5)
-   Level 61.8% = High - (Range * 0.618) or Low + (Range * 0.618)
-   Level 78.6% = High - (Range * 0.786) or Low + (Range * 0.786)
+   レベル 23.6% = High - (Range * 0.236) または Low + (Range * 0.236)
+   レベル 38.2% = High - (Range * 0.382) または Low + (Range * 0.382)
+   レベル 50.0% = High - (Range * 0.5) または Low + (Range * 0.5)
+   レベル 61.8% = High - (Range * 0.618) または Low + (Range * 0.618)
+   レベル 78.6% = High - (Range * 0.786) または Low + (Range * 0.786)
    レベル 100% = Low（上昇トレンドの場合）または High（下降トレンドの場合）
    ```
 

@@ -30,7 +30,7 @@ Die Connors RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, 
 1. **Price RSI-Komponente** – Standard-RSI, berechnet über einen kurzen Zeitraum (normalerweise 3 Tage):
    ```
    RSI = 100 - (100 / (1 + RS))
-   where RS = Average Positive Change / Average Negative Change
+   wobei RS = durchschnittliche positive Änderung / durchschnittliche negative Änderung
    ```
 
 2. **Streak RSI-Komponente**:

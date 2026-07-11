@@ -26,15 +26,15 @@ El cálculo de DZRSI implica varios pasos:
 1. Calcule el RSI estándar durante el período Length especificado:
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Positive Change / Average Negative Change
+   RS = Cambio positivo medio / Cambio negativo medio
    ```
 
 2. Determine el rango de oscilación RSI durante un período histórico específico.
 
 3. Adapte los niveles de sobrecompra y sobreventa en función de este rango:
    ```
-   Dynamic Overbought Level = Base Overbought Level + Adjustment Based on Historical Data
-   Dynamic Oversold Level = Base Oversold Level - Adjustment Based on Historical Data
+   Nivel dinámico de sobrecompra = Nivel base de sobrecompra + Ajuste basado en datos históricos
+   Nivel dinámico de sobreventa = Nivel base de sobreventa - Ajuste basado en datos históricos
    ```
 
 4. Ajuste las zonas dinámicas según la fuerza de la tendencia actual.

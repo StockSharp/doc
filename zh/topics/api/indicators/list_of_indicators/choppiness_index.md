@@ -29,7 +29,7 @@ CHOP 对以下情况特别有用：
 
 1. 计算所选期间的真实波动幅度总和：
    ```
-   Sum of TR = i 从 1 到 Length 的 Sum(TR(i))
+   TR之和 = i 从 1 到 Length 的 Sum(TR(i))
    ```
 
 2. 计算所选期间的最高高点和最低低点：

@@ -29,7 +29,7 @@ Die Choppiness Index-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Summe der wahren Reichweiten über den ausgewählten Zeitraum:
    ```
-   Sum of TR = Sum(TR(i)) für i von 1 bis Length
+   Summe von TR = Sum(TR(i)) für i von 1 bis Length
    ```
 
 2. Berechnen Sie den höchsten High und den niedrigsten Low über den ausgewählten Zeitraum:

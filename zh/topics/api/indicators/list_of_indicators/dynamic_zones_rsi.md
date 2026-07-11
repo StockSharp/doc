@@ -26,15 +26,15 @@ DZRSI 计算涉及几个步骤：
 1. 计算指定周期长度的标准RSI：
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Positive Change / Average Negative Change
+   RS = 平均正变化 / 平均负变化
    ```
 
 2. 确定特定历史期间的RSI振荡范围。
 
 3. 根据此范围调整超买和超卖水平：
    ```
-   Dynamic Overbought Level = Base Overbought Level + Adjustment Based on Historical Data
-   Dynamic Oversold Level = Base Oversold Level - Adjustment Based on Historical Data
+   动态超买水平 = 基准超买水平 + 基于历史数据的调整
+   动态超卖水平 = 基准超卖水平 - 基于历史数据的调整
    ```
 
 4. 根据当前趋势的强度调整动态区域。

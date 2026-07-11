@@ -30,7 +30,7 @@ O cálculo do Connors RSI envolve três componentes que são depois promediados 
 1. **Componente Price RSI** - RSI padrão calculado ao longo de um curto período (normalmente 3 dias):
    ```
    RSI = 100 - (100 / (1 + RS))
-   where RS = Average Positive Change / Average Negative Change
+   onde RS = alteração positiva média / alteração negativa média
    ```
 
 2. **Componente Streak RSI**:

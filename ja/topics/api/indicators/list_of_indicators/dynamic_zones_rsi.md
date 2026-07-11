@@ -26,15 +26,15 @@ DZRSI の計算には、いくつかの手順が含まれます。
 1. 指定された Length 期間にわたって標準 RSI を計算します。
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Positive Change / Average Negative Change
+   RS = 平均上昇変化 / 平均下落変化
    ```
 
 2. 特定の過去期間における RSI の振動範囲を決定します。
 
 3. この範囲に基づいて買われ過ぎおよび売られ過ぎ水準を適応させます。
    ```
-   Dynamic Overbought Level = Base Overbought Level + Adjustment Based on Historical Data
-   Dynamic Oversold Level = Base Oversold Level - Adjustment Based on Historical Data
+   動的買われ過ぎレベル = 基準買われ過ぎレベル + 履歴データに基づく調整
+   動的売られ過ぎレベル = 基準売られ過ぎレベル - 履歴データに基づく調整
    ```
 
 4. 現在のトレンドの強さに基づいて動的ゾーンを調整します。

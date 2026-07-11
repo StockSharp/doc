@@ -1,6 +1,6 @@
 # Volume
 
-**Candle volume** インジケーターは、ローソク足の出来高を表示します。
+**ローソク足出来高** インジケーターは、ローソク足の出来高を表示します。
 
 このインジケーターを使用するには、[VolumeIndicator](xref:StockSharp.Algo.Indicators.VolumeIndicator) クラスを使用する必要があります。
 

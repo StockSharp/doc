@@ -35,13 +35,13 @@ Die Berechnung der Fibonacci Retracement-Werte umfasst die folgenden Schritte:
    ```
    Range = |High - Low|
 
-   Level 0% = High (für Aufwärtstrend) oder Low (für Abwärtstrend)
-   Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
-   Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)
-   Level 50.0% = High - (Range * 0.5) or Low + (Range * 0.5)
-   Level 61.8% = High - (Range * 0.618) or Low + (Range * 0.618)
-   Level 78.6% = High - (Range * 0.786) or Low + (Range * 0.786)
-   Level 100% = Low (für Aufwärtstrend) oder High (für Abwärtstrend)
+   Niveau 0% = High (für Aufwärtstrend) oder Low (für Abwärtstrend)
+   Niveau 23.6% = High - (Range * 0.236) oder Low + (Range * 0.236)
+   Niveau 38.2% = High - (Range * 0.382) oder Low + (Range * 0.382)
+   Niveau 50.0% = High - (Range * 0.5) oder Low + (Range * 0.5)
+   Niveau 61.8% = High - (Range * 0.618) oder Low + (Range * 0.618)
+   Niveau 78.6% = High - (Range * 0.786) oder Low + (Range * 0.786)
+   Niveau 100% = Low (für Aufwärtstrend) oder High (für Abwärtstrend)
    ```
 
 ## Interpretation

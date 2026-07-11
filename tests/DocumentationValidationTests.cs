@@ -2247,9 +2247,24 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var phrases = new[]
 		{
+			"Adjustment Based on Historical Data",
+			"Average Negative Change",
+			"Average Positive Change",
+			"Base Overbought Level",
+			"Base Oversold Level",
+			"Candle volume",
 			"Centerline",
 			"Fast MA",
+			"For each i from",
 			"for each Period",
+			"for all i from",
+			"Level 0%",
+			"Level 23.6%",
+			"Level 38.2%",
+			"Level 50.0%",
+			"Level 61.8%",
+			"Level 78.6%",
+			"Level 100%",
 			"Long EMA",
 			"Lower Band",
 			"MACD Histogram",
@@ -2260,8 +2275,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Short EMA",
 			"Signal Line",
 			"Slow MA",
+			"Sum of TR",
 			"Upper Band",
+			"Dynamic Overbought Level",
+			"Dynamic Oversold Level",
 			"signal period",
+			"where RS",
 		};
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
