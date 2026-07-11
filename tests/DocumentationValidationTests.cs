@@ -2179,6 +2179,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedOptionGreeksDocsDoNotKeepEnglishGreeksText()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/options/greeks.md";
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (ContainsStandaloneText(text, "Black-Scholes model"))
+					errors.Add($"{RelativeToRepo(file)}:{line}: option Greeks documentation keeps English link label 'Black-Scholes model'. Localize the model label.");
+
+				if (ContainsStandaloneText(text, "Greeks"))
+					errors.Add($"{RelativeToRepo(file)}:{line}: option Greeks documentation keeps English term 'Greeks'. Localize it in prose.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void PortugueseIndicatorDocsDoNotKeepEnglishRateOfChangePhrase()
 	{
 		var errors = new List<string>();
