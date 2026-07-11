@@ -136,7 +136,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	}
 
 	// 记录当前状态和价差
-	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
+	LogInfo($"当前状态 {_currentState}, 入场价差 = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
 	LogInfo($"从价差入场:{SpreadToGenerateSignal}。从利润出场:{ProfitToExit}");

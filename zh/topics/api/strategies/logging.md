@@ -153,7 +153,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
+	LogInfo("策略 {0} 已于 {1} 启动。证券: {2}, 投资组合: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
 
 	// ...
@@ -161,7 +161,7 @@ protected override void OnStarted2(DateTime time)
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
+	LogInfo("策略 {0} 已停止。持仓: {1}, P&L: {2}",
 		Name, Position, PnL);
 
 	base.OnStopped();

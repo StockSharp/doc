@@ -106,7 +106,7 @@ strategy.Start();
 // 当需要响应统计变化时
 strategy.PnLChanged += () =>
 {
-	Console.WriteLine($"Current PnL: {strategy.PnL}");
+	Console.WriteLine($"当前 PnL: {strategy.PnL}");
 	
 	// 也可以访问单个统计参数
 	var netProfit = statisticManager.Parameters
@@ -122,7 +122,7 @@ strategy.PnLChanged += () =>
 // 用于跟踪持仓统计
 strategy.PositionChanged += () =>
 {
-	Console.WriteLine($"Current Position: {strategy.Position}");
+	Console.WriteLine($"当前持仓: {strategy.Position}");
 };
 ```
 

@@ -98,7 +98,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Ошибка заявки: {fail.Error.Message}");
 
 	_quotingProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Сделка исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка исполнена: {trade.Trade.Volume} по цене {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk => {
 		this.AddInfoLog($"Котирование успешно завершено: {isOk}");

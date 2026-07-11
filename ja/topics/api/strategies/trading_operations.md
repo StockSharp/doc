@@ -114,7 +114,7 @@ order
 	.WhenMatched(this)
 	.Do(() => {
 		// 注文約定後のアクション
-		LogInfo($"Order {order.TransactionId} executed");
+		LogInfo($"注文 {order.TransactionId} が約定しました");
 		
 		// たとえば、ストップ注文を発注
 		var stopOrder = SellLimit(price * 0.95, volume);

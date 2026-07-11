@@ -117,12 +117,12 @@ public class TimerStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        this.AddInfoLog("Checking market conditions at {0}", CurrentTime);
+        this.AddInfoLog("正在检查市场条件: {0}", CurrentTime);
 
         // 定期检查持仓状态
         if (Position != 0)
         {
-            this.AddInfoLog("Current position: {0}", Position);
+            this.AddInfoLog("当前持仓: {0}", Position);
         }
     }
 
@@ -130,7 +130,7 @@ public class TimerStrategy : Strategy
     {
         if (Position != 0)
         {
-            this.AddInfoLog("Position hold time expired, closing");
+            this.AddInfoLog("持仓时间已过期，正在平仓");
             ClosePosition();
 
             // 关闭定时器触发后停止它

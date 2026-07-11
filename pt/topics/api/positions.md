@@ -27,7 +27,7 @@ var posChange = manager.ProcessMessage(executionMsg);
 
 if (posChange != null)
 {
-    Console.WriteLine($"Position: {posChange.CurrentValue}");
+    Console.WriteLine($"Posição: {posChange.CurrentValue}");
 }
 ```
 
@@ -66,7 +66,7 @@ state.UpdateOrderBalance(12345, newBalance: 60);
 
 // Atualizar posição diretamente
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
-Console.WriteLine($"Current position: {newPosition}");
+Console.WriteLine($"Posição atual: {newPosition}");
 
 // Clear
 state.Clear();
@@ -97,9 +97,9 @@ var tracker = new PositionLifecycleTracker();
 
 tracker.RoundTripClosed += report =>
 {
-    Console.WriteLine($"Round-trip completed:");
-    Console.WriteLine($"  Opened: {report.OpenTime}");
-    Console.WriteLine($"  Closed: {report.CloseTime}");
+    Console.WriteLine($"Operação completa concluída:");
+    Console.WriteLine($"  Aberta: {report.OpenTime}");
+    Console.WriteLine($"  Fechada: {report.CloseTime}");
 };
 
 // Processar atualizações de posição

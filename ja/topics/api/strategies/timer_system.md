@@ -117,12 +117,12 @@ public class TimerStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        this.AddInfoLog("Checking market conditions at {0}", CurrentTime);
+        this.AddInfoLog("市場条件を確認中: {0}", CurrentTime);
 
         // 定期的なポジション状態チェック
         if (Position != 0)
         {
-            this.AddInfoLog("Current position: {0}", Position);
+            this.AddInfoLog("現在ポジション: {0}", Position);
         }
     }
 
@@ -130,7 +130,7 @@ public class TimerStrategy : Strategy
     {
         if (Position != 0)
         {
-            this.AddInfoLog("Position hold time expired, closing");
+            this.AddInfoLog("ポジション保有時間が期限切れのため、クローズします");
             ClosePosition();
 
             // 発火後にクローズタイマーを停止

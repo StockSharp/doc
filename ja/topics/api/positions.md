@@ -27,7 +27,7 @@ var posChange = manager.ProcessMessage(executionMsg);
 
 if (posChange != null)
 {
-    Console.WriteLine($"Position: {posChange.CurrentValue}");
+    Console.WriteLine($"ポジション: {posChange.CurrentValue}");
 }
 ```
 

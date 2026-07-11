@@ -136,7 +136,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	}
 
 	// Aktuellen Zustand und Spreads protokollieren
-	LogInfo($"Current state {_currentState}, enter spread = {_enterSpread}");
+	LogInfo($"Aktueller Status {_currentState}, Einstiegsspread = {_enterSpread}");
 	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
 	LogInfo($"Einstieg über Spread:{SpreadToGenerateSignal}. Ausstieg über Gewinn:{ProfitToExit}");

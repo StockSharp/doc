@@ -27,7 +27,7 @@ var posChange = manager.ProcessMessage(executionMsg);
 
 if (posChange != null)
 {
-    Console.WriteLine($"Position: {posChange.CurrentValue}");
+    Console.WriteLine($"持仓: {posChange.CurrentValue}");
 }
 ```
 
@@ -66,7 +66,7 @@ state.UpdateOrderBalance(12345, newBalance: 60);
 
 // 直接更新仓位
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
-Console.WriteLine($"Current position: {newPosition}");
+Console.WriteLine($"当前持仓: {newPosition}");
 
 // Clear
 state.Clear();
@@ -97,9 +97,9 @@ var tracker = new PositionLifecycleTracker();
 
 tracker.RoundTripClosed += report =>
 {
-    Console.WriteLine($"Round-trip completed:");
-    Console.WriteLine($"  Opened: {report.OpenTime}");
-    Console.WriteLine($"  Closed: {report.CloseTime}");
+    Console.WriteLine($"往返交易已完成:");
+    Console.WriteLine($"  开仓: {report.OpenTime}");
+    Console.WriteLine($"  平仓: {report.CloseTime}");
 };
 
 // 处理仓位更新

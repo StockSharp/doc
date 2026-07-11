@@ -114,7 +114,7 @@ order
 	.WhenMatched(this)
 	.Do(() => {
 		// Acciones después de la ejecución de la orden
-		LogInfo($"Order {order.TransactionId} executed");
+		LogInfo($"Orden {order.TransactionId} ejecutada");
 		
 		// Por ejemplo, colocar una orden stop
 		var stopOrder = SellLimit(price * 0.95, volume);

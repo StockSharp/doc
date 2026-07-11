@@ -114,7 +114,7 @@ order
 	.WhenMatched(this)
 	.Do(() => {
 		// 订单成交后的操作
-		LogInfo($"Order {order.TransactionId} executed");
+		LogInfo($"订单 {order.TransactionId} 已成交");
 		
 		// 例如，提交止损单
 		var stopOrder = SellLimit(price * 0.95, volume);

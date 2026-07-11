@@ -106,7 +106,7 @@ strategy.Start();
 // Wenn Sie auf Änderungen der Statistik reagieren müssen
 strategy.PnLChanged += () =>
 {
-	Console.WriteLine($"Current PnL: {strategy.PnL}");
+	Console.WriteLine($"Aktuelles PnL: {strategy.PnL}");
 
 	// Sie können auch auf einzelne statistische Parameter zugreifen
 	var netProfit = statisticManager.Parameters
@@ -122,7 +122,7 @@ strategy.PnLChanged += () =>
 // Positionenstatistiken verfolgen
 strategy.PositionChanged += () =>
 {
-	Console.WriteLine($"Current Position: {strategy.Position}");
+	Console.WriteLine($"Aktuelle Position: {strategy.Position}");
 };
 ```
 

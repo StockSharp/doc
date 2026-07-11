@@ -401,11 +401,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	[
 		("subscription lifecycle output", @"\bSubscription (?:started|completed|interrupted|online|switched to real-time mode)\b"),
 		("adapter connection output", @"\bAdapter (?:connected|disconnected|connection error)\b"),
+		("order execution output", @"\bOrder\s+executed\b|\bOrder fully executed\b|\bOrder successfully (?:registered|canceled)\b|\bOrder not accepted by the exchange\b|\bOrder #1 (?:registered|not registered)\b|\bOrder №[12] RegisterFailed\b"),
+		("rule output", @"\bRule WhenOrderBookReceived\b"),
+		("strategy timer output", @"\bChecking market conditions at\b|\bCurrent position:|\bCurrent PnL:|\bPosition hold time expired, closing\b|\bTarget position reached:"),
+		("strategy logging output", @"\bStrategy\s+started at\b|\bStrategy\s+stopped\. Position:"),
+		("strategy state output", @"\bCurrent state\b.*\benter spread\b"),
+		("market data output", @"\bLast price\b|\bDrive created:"),
 		("round-trip output", @"\bPosition closed:|\bMax volume:"),
+		("round-trip details output", @"\bRound-trip completed:|\bOpened:|\bClosed:"),
 		("ShrinkPrice output", @"\bOrder price:|\bOriginal price:|\bAfter ShrinkPrice:"),
 		("tick price output", @"\bTick:.*\bPrice:"),
 		("order book output", @"\bOrder Book:|\bBest Bid\b|\bBest Ask\b|\bMiddle of Spread\b|\bBid Price:|\bAsk Price:"),
 		("field/value output", @"\bField:|\bValue:|\bBids:|\bAsks:"),
+		("event rule output", @"\bCandle closed or time expired\b|\bLast trade price is in the range from\b"),
 		("stairs countertrend candle output", @"\b(?:Bullish|Bearish) candle detected\. Streak:"),
 	];
 
@@ -1814,7 +1822,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 
@@ -1855,6 +1863,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 
 				errors.Add($"{RelativeToRepo(file)}:{output.Line}: localized Stairs countertrend quoting log keeps English candle message '{output.Text}'. Localize the log string.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTradeExecutionLogsDoNotUseEnglishAtPriceSeparator()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "api", "strategies", "samples", "stairs_countertrend_quoting.md"),
+			Path.Combine("topics", "api", "strategies", "samples", "mq_spread.md"),
+			Path.Combine("topics", "api", "strategies", "samples", "mq.md"),
+			Path.Combine("topics", "api", "strategies", "quoting.md"),
+		};
+		var pattern = new Regex(@"\bat\s+\{trade\.Trade\.Price\}", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath);
+				if (!File.Exists(file))
+					continue;
+
+				var markdown = ReadAllText(file);
+				foreach (Match match in pattern.Matches(markdown))
+					errors.Add($"{RelativeToRepo(file)}:{GetLineNumber(GetLineStarts(markdown), match.Index)}: localized trade execution log keeps English price separator 'at'. Localize the log string.");
 			}
 		}
 
@@ -6231,7 +6269,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private static bool IsCodeOutputInvocationStart(string text)
-		=> Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|AlertLog|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant);
+		=> Regex.IsMatch(text, @"\b(?:Console\.Write(?:Line)?|Add(?:Info|Debug|Warning|Error)Log|Log(?:Verbose|Info|Debug|Warning|Error)|AlertLog|MessageBox\.Show|Trace\.Write(?:Line)?)\s*\(", RegexOptions.CultureInvariant);
 
 	private static bool IsCodeOutputInvocationEnd(string text)
 		=> Regex.IsMatch(text, @"\)\s*;", RegexOptions.CultureInvariant);

@@ -104,7 +104,7 @@ var anotherDrive = driveCache.GetDrive(@"D:\MarketData");
 
 // Subscrever eventos
 driveCache.NewDriveCreated += drive =>
-    Console.WriteLine($"Drive created: {drive.Path}");
+    Console.WriteLine($"Unidade criada: {drive.Path}");
 ```
 
 ## Ver Também

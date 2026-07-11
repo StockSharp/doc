@@ -94,7 +94,7 @@
       .Apply(this);
   order
       .WhenMatched(Connector)
-      .Do(() => this.AddInfoLog("Order fully executed"))
+      .Do(() => this.AddInfoLog("注文が完全に約定しました"))
       .Once()
       .Apply(this);
   // 注文登録
@@ -228,7 +228,7 @@ var mdSub = new Subscription(DataType.MarketDepth, Security);
 // 方法 1: チェーン内でルールを作成
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"ルール WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // 方法 2: 先にルール変数を作成
@@ -236,18 +236,18 @@ var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"ルール WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // ルール内のルール
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"ルール WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 	// Once() を指定しないルール
 	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 	{
-		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+		LogInfo($"ルール WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 	}).Apply(this);
 }).Once().Apply(this);
 
@@ -268,8 +268,8 @@ var i = 0;
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
 	i++;
-	LogInfo($"Rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-	LogInfo($"Rule WhenOrderBookReceived i={i}");
+	LogInfo($"ルール WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"ルール WhenOrderBookReceived i={i}");
 })
 .Until(() => i >= 10)
 .Apply(this);

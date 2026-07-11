@@ -133,7 +133,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Ошибка заявки на покупку: {fail.Error.Message}");
 
 	_buyProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Сделка покупки исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка покупки исполнена: {trade.Trade.Volume} по цене {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
 		this.AddInfoLog($"Котирование покупки успешно завершено: {isOk}");
@@ -149,7 +149,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Ошибка заявки на продажу: {fail.Error.Message}");
 
 	_sellProcessor.OwnTrade += trade =>
-		this.AddInfoLog($"Сделка продажи исполнена: {trade.Trade.Volume} at {trade.Trade.Price}");
+		this.AddInfoLog($"Сделка продажи исполнена: {trade.Trade.Volume} по цене {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
 		this.AddInfoLog($"Котирование продажи успешно завершено: {isOk}");

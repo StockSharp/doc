@@ -40,7 +40,7 @@ protected override void OnStarted2(DateTime time)
 			.Exclusive(ruleRegFailed);
 
 		ruleRegFailed
-			.Do(() => LogInfo("Order №1 RegisterFailed"))
+			.Do(() => LogInfo("Orden №1: registro fallido"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleReg);
@@ -62,7 +62,7 @@ protected override void OnStarted2(DateTime time)
 			.Exclusive(ruleRegFailed);
 
 		ruleRegFailed
-			.Do(() => LogInfo("Order №2 RegisterFailed"))
+			.Do(() => LogInfo("Orden №2: registro fallido"))
 			.Once()
 			.Apply(this)
 			.Exclusive(ruleReg);

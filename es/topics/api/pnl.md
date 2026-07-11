@@ -92,7 +92,7 @@ var pnlManager = new PnLManager
 var info = pnlManager.ProcessMessage(executionMsg);
 if (info != null)
 {
-    Console.WriteLine($"Closed: {info.ClosedVolume}, PnL: {info.PnL}");
+    Console.WriteLine($"Cerrado: {info.ClosedVolume}, PnL: {info.PnL}");
 }
 
 // Beneficio/pérdida total

@@ -38,7 +38,7 @@ O método [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,Sy
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Processando candle: {0}, Abertura={1}, Fechamento={2}, Máxima={3}, Mínima={4}, Volume={5}",
+	LogDebug("Processando vela: {0}, Abertura={1}, Fechamento={2}, Máxima={3}, Mínima={4}, Volume={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
 
 	// ...
@@ -153,7 +153,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogInfo("Strategy {0} started at {1}. Instrument: {2}, Portfolio: {3}",
+	LogInfo("Estratégia {0} iniciada em {1}. Instrumento: {2}, Portfólio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
 
 	// ...
@@ -161,7 +161,7 @@ protected override void OnStarted2(DateTime time)
 
 protected override void OnStopped()
 {
-	LogInfo("Strategy {0} stopped. Position: {1}, P&L: {2}",
+	LogInfo("Estratégia {0} parada. Posição: {1}, P&L: {2}",
 		Name, Position, PnL);
 
 	base.OnStopped();

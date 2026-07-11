@@ -103,7 +103,7 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 					case Level1Fields.LastTradePrice:
 						// 直近約定価格の変更を処理します
 						var lastPrice = (decimal)change.Value;
-						Console.WriteLine($"Last price {security.Code}: {lastPrice}");
+						Console.WriteLine($"最終価格 {security.Code}: {lastPrice}");
 						break;
 						
 					case Level1Fields.BestBidPrice:

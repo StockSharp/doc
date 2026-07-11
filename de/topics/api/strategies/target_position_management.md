@@ -104,7 +104,7 @@ public class TargetPositionStrategy : Strategy
         TargetPositionManager.MaxRetries = 5;
         TargetPositionManager.TargetReached += (sec, pf) =>
         {
-            this.AddInfoLog("Target position reached: {0}, {1}", sec, pf);
+            this.AddInfoLog("Zielposition erreicht: {0}, {1}", sec, pf);
         };
 
         var subscription = SubscribeCandles(CandleType);

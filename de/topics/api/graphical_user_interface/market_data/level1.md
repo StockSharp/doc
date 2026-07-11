@@ -103,7 +103,7 @@ private void OnLevel1Received(Subscription subscription, Level1ChangeMessage lev
 					case Level1Fields.LastTradePrice:
 						// Änderung des letzten Handelspreises verarbeiten
 						var lastPrice = (decimal)change.Value;
-						Console.WriteLine($"Last price {security.Code}: {lastPrice}");
+						Console.WriteLine($"Letzter Preis {security.Code}: {lastPrice}");
 						break;
 
 					case Level1Fields.BestBidPrice:

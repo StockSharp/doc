@@ -117,12 +117,12 @@ public class TimerStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        this.AddInfoLog("Checking market conditions at {0}", CurrentTime);
+        this.AddInfoLog("Prüfe Marktbedingungen um {0}", CurrentTime);
 
         // Regelmäßige Prüfung des Positionszustands
         if (Position != 0)
         {
-            this.AddInfoLog("Current position: {0}", Position);
+            this.AddInfoLog("Aktuelle Position: {0}", Position);
         }
     }
 
@@ -130,7 +130,7 @@ public class TimerStrategy : Strategy
     {
         if (Position != 0)
         {
-            this.AddInfoLog("Position hold time expired, closing");
+            this.AddInfoLog("Haltezeit der Position abgelaufen, schließe");
             ClosePosition();
 
             // Close-Timer nach Auslösung stoppen

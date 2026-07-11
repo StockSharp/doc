@@ -94,7 +94,7 @@
       .Apply(this);
   order
       .WhenMatched(Connector)
-      .Do(() => this.AddInfoLog("Order fully executed"))
+      .Do(() => this.AddInfoLog("Ordem totalmente executada"))
       .Once()
       .Apply(this);
   // registro de ordem
@@ -228,7 +228,7 @@ var mdSub = new Subscription(DataType.MarketDepth, Security);
 // Método 1: criar regra em cadeia
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Regra WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Método 2: primeiro criar variável de regra
@@ -236,18 +236,18 @@ var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Regra WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // Regra dentro de regra
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Regra WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 // Regra sem especificar Once()
 	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 	{
-		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+		LogInfo($"Regra WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 	}).Apply(this);
 }).Once().Apply(this);
 
@@ -268,8 +268,8 @@ var i = 0;
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
 	i++;
-	LogInfo($"Rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-	LogInfo($"Rule WhenOrderBookReceived i={i}");
+	LogInfo($"Regra WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"Regra WhenOrderBookReceived i={i}");
 })
 .Until(() => i >= 10)
 .Apply(this);

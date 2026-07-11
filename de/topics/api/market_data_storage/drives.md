@@ -104,7 +104,7 @@ var anotherDrive = driveCache.GetDrive(@"D:\MarketData");
 
 // Ereignisse abonnieren
 driveCache.NewDriveCreated += drive =>
-    Console.WriteLine($"Drive created: {drive.Path}");
+    Console.WriteLine($"Speicher erstellt: {drive.Path}");
 ```
 
 ## Siehe auch

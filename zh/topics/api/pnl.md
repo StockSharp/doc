@@ -92,7 +92,7 @@ var pnlManager = new PnLManager
 var info = pnlManager.ProcessMessage(executionMsg);
 if (info != null)
 {
-    Console.WriteLine($"Closed: {info.ClosedVolume}, PnL: {info.PnL}");
+    Console.WriteLine($"已平仓: {info.ClosedVolume}, PnL: {info.PnL}");
 }
 
 // 总盈亏

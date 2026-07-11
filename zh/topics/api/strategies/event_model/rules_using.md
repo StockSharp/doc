@@ -94,7 +94,7 @@
       .Apply(this);
   order
       .WhenMatched(Connector)
-      .Do(() => this.AddInfoLog("Order fully executed"))
+      .Do(() => this.AddInfoLog("订单已完全成交"))
       .Once()
       .Apply(this);
   // 订单注册
@@ -228,7 +228,7 @@ var mdSub = new Subscription(DataType.MarketDepth, Security);
 // 方法 1：在链中创建规则
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"规则 WhenOrderBookReceived #1 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // 方法 2：先创建规则变量
@@ -236,18 +236,18 @@ var whenMarketDepthChanged = mdSub.WhenOrderBookReceived(this);
 
 whenMarketDepthChanged.Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"规则 WhenOrderBookReceived #2 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 }).Once().Apply(this);
 
 // 规则中的规则
 mdSub.WhenOrderBookReceived(this).Do((depth) =>
 {
-	LogInfo($"Rule WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"规则 WhenOrderBookReceived #3 BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
 
 	// 未指定 Once() 的规则
 	mdSub.WhenOrderBookReceived(this).Do((depth1) =>
 	{
-		LogInfo($"Rule WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
+		LogInfo($"规则 WhenOrderBookReceived #4 BestBid={depth1.GetBestBid()}, BestAsk={depth1.GetBestAsk()}");
 	}).Apply(this);
 }).Once().Apply(this);
 
@@ -268,8 +268,8 @@ var i = 0;
 mdSub.WhenOrderBookReceived(this).Do(depth =>
 {
 	i++;
-	LogInfo($"Rule WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
-	LogInfo($"Rule WhenOrderBookReceived i={i}");
+	LogInfo($"规则 WhenOrderBookReceived BestBid={depth.GetBestBid()}, BestAsk={depth.GetBestAsk()}");
+	LogInfo($"规则 WhenOrderBookReceived i={i}");
 })
 .Until(() => i >= 10)
 .Apply(this);
