@@ -35,8 +35,8 @@ Die FRAMA-Berechnung umfasst mehrere Schritte:
 
 2. Konvertieren Sie die fraktale Dimension in einen Alpha-Faktor für die exponentielle Glättung:
    ```
-   Smoothing Factor = exp(-4.6 * (D - 1))
-   Alpha = Smoothing Factor * Smoothing Factor
+   Glättungsfaktor = exp(-4.6 * (D - 1))
+   Alpha = Glättungsfaktor * Glättungsfaktor
    ```
 
 3. Wenden Sie den Alpha-Faktor auf den aktuellen Preis und den vorherigen FRAMA-Wert an:

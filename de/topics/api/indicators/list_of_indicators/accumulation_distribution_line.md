@@ -16,7 +16,7 @@ Der ADL-Indikator hilft, einen Trend zu bestätigen oder vor einer möglichen Um
 
 Die Berechnung der Akkumulations-/Distributionslinie erfolgt in zwei Schritten:
 
-**1. Berechnung des Volumenmultiplikators (CLV - Close Location Value):**
+**1. Berechnung des Volumenmultiplikators (CLV - Schlusskurspositionswert):**
 ```
 CLV = ((Close - Low) - (High - Close)) / (High - Low)
 ```

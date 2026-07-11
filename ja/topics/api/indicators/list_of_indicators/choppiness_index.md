@@ -34,13 +34,13 @@ CHOP は特に次の用途に役立ちます。
 
 2. 選択した期間にわたる最高 High と最低 Low を計算します。
    ```
-   Highest High = Length 期間における High の最大値
-   Lowest Low = Length 期間における Low の最小値
+   最高値 = Length 期間における High の最大値
+   最安値 = Length 期間における Low の最小値
    ```
 
 3. CHOP インデックスを計算します。
    ```
-   CHOP = 100 * LOG10(Sum TR / (Highest High - Lowest Low)) / LOG10(Length)
+   CHOP = 100 * LOG10(Sum TR / (最高値 - 最安値)) / LOG10(Length)
    ```
 
 ここで:

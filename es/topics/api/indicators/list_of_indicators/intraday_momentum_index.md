@@ -27,19 +27,19 @@ El cálculo de índice de impulso intradía implica los siguientes pasos:
 
 1. Determinar el movimiento del precio intradía:
    ```
-   Gain = Close - Open, if Close > Open
-   Loss = Open - Close, if Close < Open
+   ganancia = Close - Open, si Close > Open
+   pérdida = Open - Close, si Close < Open
    ```
 
 2. Calcule la suma de los movimientos positivos y negativos durante el período Length:
    ```
-   Sum Gains = suma de todas las ganancias durante el periodo Length
-   Sum Losses = suma de todas las pérdidas durante el periodo Length
+   suma de ganancias = suma de todas las ganancias durante el periodo Length
+   suma de pérdidas = suma de todas las pérdidas durante el periodo Length
    ```
 
 3. Calcule IMI usando una fórmula similar a RSI:
    ```
-   IMI = 100 * (Sum Gains / (Sum Gains + Sum Losses))
+   IMI = 100 * (suma de ganancias / (suma de ganancias + suma de pérdidas))
    ```
 
 Nota: Si (Ganancias Sum + Pérdidas Sum) es igual a cero, IMI se establece en 50 para evitar la división por cero.

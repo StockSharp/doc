@@ -34,13 +34,13 @@ CHOP 对以下情况特别有用：
 
 2. 计算所选期间的最高高点和最低低点：
    ```
-   Highest High = Length 周期内 High 的最大值
-   Lowest Low = Length 周期内 Low 的最小值
+   最高高点 = Length 周期内 High 的最大值
+   最低低点 = Length 周期内 Low 的最小值
    ```
 
 3. 计算CHOP指数：
    ```
-   CHOP = 100 * LOG10(Sum TR / (Highest High - Lowest Low)) / LOG10(Length)
+   CHOP = 100 * LOG10(Sum TR / (最高高点 - 最低低点)) / LOG10(Length)
    ```
 
 其中：

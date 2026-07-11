@@ -30,12 +30,12 @@ Die Donchian-Kanäle-Berechnung ist ganz einfach:
 
 1. Upper-Kanalleitung:
    ```
-   Upper = Highest High über Length-Periode
+   Upper = höchstes Hoch über Length-Periode
    ```
 
 2. Lower-Kanalleitung:
    ```
-   Lower = Lowest Low über Length-Periode
+   Lower = tiefstes Tief über Length-Periode
    ```
 
 3. Middle-Kanalleitung:

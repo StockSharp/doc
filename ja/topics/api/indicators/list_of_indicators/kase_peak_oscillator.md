@@ -24,12 +24,12 @@ KPO は、価格変動のモメンタムが尽き始めると市場のピーク�
 
 1. 短期期間に基づいて短期モメンタムを計算します。
    ```
-   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   短期モメンタム = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
    ```
 
 2. 長期期間に基づいて長期モメンタムを計算します。
    ```
-   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   長期モメンタム = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
 3. 現在のボラティリティを計算します。
@@ -39,13 +39,13 @@ KPO は、価格変動のモメンタムが尽き始めると市場のピーク�
 
 4. ボラティリティに対してモメンタムを正規化します。
    ```
-   Normalized Short Momentum = Short Momentum / Volatility
-   Normalized Long Momentum = Long Momentum / Volatility
+   正規化短期モメンタム = 短期モメンタム / Volatility
+   正規化長期モメンタム = 長期モメンタム / Volatility
    ```
 
 5. 最終的な KPO を計算します。
    ```
-   KPO = Normalized Short Momentum - Normalized Long Momentum
+   KPO = 正規化短期モメンタム - 正規化長期モメンタム
    ```
 
 ここで:

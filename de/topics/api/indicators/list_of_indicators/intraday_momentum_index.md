@@ -27,22 +27,22 @@ Die Intraday-Momentum-Index-Berechnung umfasst die folgenden Schritte:
 
 1. Bestimmen Sie die Intraday-Preisbewegung:
    ```
-   Gain = Close - Open, if Close > Open
-   Loss = Open - Close, if Close < Open
+   Gewinn = Close - Open, wenn Close > Open
+   Verlust = Open - Close, wenn Close < Open
    ```
 
 2. Berechnen Sie die Summe der positiven und negativen Bewegungen über den Length-Zeitraum:
    ```
-   Sum Gains = Summe aller Gains über Length-Periode
-   Sum Losses = Summe aller Losses über Length-Periode
+   Summe der Gewinne = Summe aller Gewinne über Length-Periode
+   Summe der Verluste = Summe aller Verluste über Length-Periode
    ```
 
 3. Berechnen Sie IMI mit einer Formel ähnlich der von RSI:
    ```
-   IMI = 100 * (Sum Gains / (Sum Gains + Sum Losses))
+   IMI = 100 * (Summe der Gewinne / (Summe der Gewinne + Summe der Verluste))
    ```
 
-Hinweis: Wenn (Sum-Gewinne + Sum-Verluste) gleich Null sind, wird IMI auf 50 gesetzt, um eine Division durch Null zu vermeiden.
+Hinweis: Wenn (Summe der Gewinne + Summe der Verluste) gleich null ist, wird IMI auf 50 gesetzt, um eine Division durch Null zu vermeiden.
 
 ## Interpretation
 

@@ -30,12 +30,12 @@ El cálculo de CBCI implica los siguientes pasos:
 1. Calcule RSI durante el período Length:
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Gain / Average Loss
+   RS = ganancia media / pérdida media
    ```
 
 2. Calcule el oscilador estocástico:
    ```
-   %K = ((Close - Lowest Low) / (Highest High - Lowest Low)) * 100
+   %K = ((Close - mínimo más bajo) / (máximo más alto - mínimo más bajo)) * 100
    %D = SMA(%K, StochasticDPeriod)
    ```
 

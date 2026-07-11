@@ -24,12 +24,12 @@ Die Kase-Peak-Oszillator-Berechnung umfasst mehrere Schritte:
 
 1. Berechnen Sie das kurzfristige Momentum basierend auf dem kurzen Zeitraum:
    ```
-   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   kurzfristiges Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
    ```
 
 2. Berechnen Sie das langfristige Momentum basierend auf dem langen Zeitraum:
    ```
-   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   langfristiges Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
 3. Berechnen Sie die aktuelle Volatilität:
@@ -39,13 +39,13 @@ Die Kase-Peak-Oszillator-Berechnung umfasst mehrere Schritte:
 
 4. Normalisieren Sie das Momentum im Verhältnis zur Volatilität:
    ```
-   Normalized Short Momentum = Short Momentum / Volatility
-   Normalized Long Momentum = Long Momentum / Volatility
+   normalisiertes kurzfristiges Momentum = kurzfristiges Momentum / Volatility
+   normalisiertes langfristiges Momentum = langfristiges Momentum / Volatility
    ```
 
 5. Endgültige KPO-Berechnung:
    ```
-   KPO = Normalized Short Momentum - Normalized Long Momentum
+   KPO = normalisiertes kurzfristiges Momentum - normalisiertes langfristiges Momentum
    ```
 
 Dabei gilt:

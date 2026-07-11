@@ -134,7 +134,7 @@
 - [移位](list_of_indicators/shift.md) - 将数据流按选定的周期数进行偏移
 - [SW](list_of_indicators/sine_wave.md) - 正弦波，用于识别价格数据中的周期性模式
 - [SMMA](list_of_indicators/smoothed_ma.md) - 平滑移动平均线，一种对最近价格给予更多权重的移动平均线
-- [Std Dev](list_of_indicators/standard_deviation.md) - 标准差，衡量价格数据的分散程度
+- [标准差](list_of_indicators/standard_deviation.md) - 标准差，衡量价格数据的分散程度
 - [标准误差](list_of_indicators/standard_error.md) - 线性回归中的标准误差，衡量预测的准确性
 - [随机指标 %K](list_of_indicators/stochastic_oscillator_k.md) - 随机指标 %K，根据价格在区间内的位置衡量动量
 - [随机振荡器](list_of_indicators/stochastic_oscillator.md) - 随机振荡器，用于识别超买和超卖状况
@@ -160,7 +160,7 @@
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - 波浪趋势振荡器，识别趋势反转
 - [WMA](list_of_indicators/weighted_ma.md) - 加权移动平均，更重视近期价格
 - [WCP](list_of_indicators/weighted_close_price.md) - 加权收盘价, (最高 + 最低 + 2 × 收盘) / 4
-- [Wilder MA](list_of_indicators/wilder_ma.md) - 韦尔斯·怀尔德移动平均线，一种平滑的移动平均线
+- [威尔德移动平均](list_of_indicators/wilder_ma.md) - 韦尔斯·怀尔德移动平均线，一种平滑的移动平均线
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - 威廉姆斯累积/派发指标，衡量买卖压力
 - [%R](list_of_indicators/williams_r.md) - 威廉指标百分比范围，用于识别超买和超卖状态
 - [WCCI](list_of_indicators/woodies_cci.md) - 伍迪 CCI 指标，一种用于趋势识别的CCI变体

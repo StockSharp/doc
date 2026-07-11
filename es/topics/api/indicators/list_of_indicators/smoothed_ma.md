@@ -1,4 +1,4 @@
-# Smoothed MA
+# media móvil suavizada
 
 **Media móvil suavizada (SMA)** - el indicador muestra la dirección del precio promedio suavizado durante un período de tiempo determinado.
 

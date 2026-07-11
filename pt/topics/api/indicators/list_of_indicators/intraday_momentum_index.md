@@ -27,22 +27,22 @@ O cálculo do índice de momentum intradiário envolve os seguintes passos:
 
 1. Determinar o movimento intradiário do preço:
    ```
-   Gain = Close - Open, if Close > Open
-   Loss = Open - Close, if Close < Open
+   ganho = Close - Open, se Close > Open
+   perda = Open - Close, se Close < Open
    ```
 
 2. Calcular a soma dos movimentos positivos e negativos ao longo do período Length:
    ```
-   Sum Gains = soma de todos os Gains durante o período Length
-   Sum Losses = soma de todas as Losses durante o período Length
+   soma dos ganhos = soma de todos os ganhos durante o período Length
+   soma das perdas = soma de todas as perdas durante o período Length
    ```
 
 3. Calcular o IMI usando uma fórmula semelhante ao RSI:
    ```
-   IMI = 100 * (Sum Gains / (Sum Gains + Sum Losses))
+   IMI = 100 * (soma dos ganhos / (soma dos ganhos + soma das perdas))
    ```
 
-Nota: Se (Sum Gains + Sum Losses) for igual a zero, o IMI é definido como 50 para evitar divisão por zero.
+Nota: Se (soma dos ganhos + soma das perdas) for igual a zero, o IMI é definido como 50 para evitar divisão por zero.
 
 ## Interpretação
 

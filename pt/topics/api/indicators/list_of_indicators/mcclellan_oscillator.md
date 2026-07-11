@@ -20,20 +20,20 @@ O Oscilador de McClellan é particularmente útil para:
 
 O cálculo do Oscilador de McClellan envolve os seguintes passos:
 
-1. Calcular Net Advances para cada dia de negociação:
+1. Calcular avanços líquidos para cada dia de negociação:
    ```
-   Net Advances = Advances - Declines
+   avanços líquidos = avanços - declínios
    ```
-   onde Advances é o número de acções em alta, Declines é o número de acções em queda.
+   onde avanços é o número de acções em alta, declínios é o número de acções em queda.
 
-2. Calcular a média móvel exponencial de 19 períodos de Net Advances:
+2. Calcular a média móvel exponencial de 19 períodos de avanços líquidos:
    ```
-   EMA19 = EMA(Net Advances, 19)
+   EMA19 = EMA(avanços líquidos, 19)
    ```
 
-3. Calcular a média móvel exponencial de 39 períodos de Net Advances:
+3. Calcular a média móvel exponencial de 39 períodos de avanços líquidos:
    ```
-   EMA39 = EMA(Net Advances, 39)
+   EMA39 = EMA(avanços líquidos, 39)
    ```
 
 4. Calcular o Oscilador de McClellan como a diferença entre estas duas EMAs:

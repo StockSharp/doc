@@ -27,22 +27,22 @@ IMI は、指定された期間において、終値が始値をどのくらい�
 
 1. 日中の価格変動を決定します。
    ```
-   Gain = Close - Open, if Close > Open
-   Loss = Open - Close, if Close < Open
+   上昇幅 = Close - Open、Close > Open の場合
+   下落幅 = Open - Close、Close < Open の場合
    ```
 
 2. Length 期間における正および負の変動の合計を計算します。
    ```
-   Sum Gains = Length 期間のすべての Gains の合計
-   Sum Losses = Length 期間のすべての Losses の合計
+   上昇幅合計 = Length 期間のすべての 上昇幅 の合計
+   下落幅合計 = Length 期間のすべての 下落幅 の合計
    ```
 
 3. RSI に似た式を使用して IMI を計算します。
    ```
-   IMI = 100 * (Sum Gains / (Sum Gains + Sum Losses))
+   IMI = 100 * (上昇幅合計 / (上昇幅合計 + 下落幅合計))
    ```
 
-注: (Sum Gains + Sum Losses) がゼロに等しい場合、ゼロ除算を避けるために IMI は 50 に設定されます。
+注: (上昇幅合計 + 下落幅合計) がゼロに等しい場合、ゼロ除算を避けるために IMI は 50 に設定されます。
 
 ## 解釈
 

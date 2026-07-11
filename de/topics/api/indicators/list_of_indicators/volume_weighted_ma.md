@@ -8,4 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [VolumeWeightedMovingAverag
 
 ## Empfohlene Inhalte
 
-[Weighted MA](weighted_ma.md)
+[gewichteter gleitender Durchschnitt](weighted_ma.md)

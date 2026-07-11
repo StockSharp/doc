@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [SimpleMovingAvera
 
 ## Empfohlene Inhalte
 
-[Smoothed MA](smoothed_ma.md)
+[geglätteter gleitender Durchschnitt](smoothed_ma.md)

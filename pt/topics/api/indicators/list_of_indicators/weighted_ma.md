@@ -1,4 +1,4 @@
-# Weighted MA
+# média móvel ponderada
 
 **Média móvel ponderada (WMA)** - o indicador apresenta o preço médio ponderado durante um determinado período. Este indicador acompanha o preço como uma linha ondulada, com um certo desvio em relação ao gráfico de preços.
 

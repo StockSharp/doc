@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Smoothed MA](smoothed_ma.md)
+[сглаженная скользящая средняя](smoothed_ma.md)

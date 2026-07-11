@@ -27,18 +27,18 @@ Die Berechnung des Endpunkt-Gleitenden Durchschnitts basiert auf der linearen Re
 
 1. Bestimmung des linearen Trends zwischen Anfangs- und Endpunkt der Periode:
    ```
-   Start Value = Price[current - Length + 1]
-   End Value = Price[current]
+   Startwert = Price[current - Length + 1]
+   Endwert = Price[current]
    ```
 
 2. Berechnung der Steigung der Trendlinie:
    ```
-   Slope = (End Value - Start Value) / (Length - 1)
+   Slope = (Endwert - Startwert) / (Length - 1)
    ```
 
 3. Berechnen von EPMA als Projektion der Trendlinie zum aktuellen Punkt:
    ```
-   EPMA = Start Value + Slope * (Length - 1)
+   EPMA = Startwert + Slope * (Length - 1)
    ```
 
 Tatsächlich entspricht EPMA dem letzten Preiswert (Endwert) im betrachteten Zeitraum, konzeptionell handelt es sich jedoch um eine Projektion des durch die Endpunktpunkte definierten linearen Trends.

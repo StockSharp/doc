@@ -30,12 +30,12 @@
 
 1. 上通道线：
    ```
-   Upper = Length 周期内 Highest High
+   Upper = Length 周期内 最高高点
    ```
 
 2. 下通道线：
    ```
-   Lower = Length 周期内 Lowest Low
+   Lower = Length 周期内 最低低点
    ```
 
 3. 中通道线：

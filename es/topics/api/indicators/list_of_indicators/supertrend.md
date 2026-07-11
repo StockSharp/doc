@@ -10,7 +10,7 @@ SuperTrend se construye utilizando el precio promedio y el valor ATR. La línea 
 
 ## Parámetros
 
-- **ATR Length**: el período utilizado para el cálculo de ATR.
+- **periodo ATR**: el período utilizado para el cálculo de ATR.
 - **Multiplier**: el factor que define en qué medida se compensa la línea con respecto al precio promedio.
 
 ## Cálculo

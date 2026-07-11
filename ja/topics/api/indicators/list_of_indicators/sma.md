@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Smoothed MA](smoothed_ma.md)
+[平滑移動平均](smoothed_ma.md)

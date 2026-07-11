@@ -26,14 +26,14 @@ GAPO インジケーターは特に次の用途に役立ちます:
 ゴパラクリシュナン・レンジ指数 の計算は非常に単純です:
 
 ```
-GAPO = log(N) * log(Highest High - Lowest Low)
+GAPO = log(N) * log(最高値 - 最安値)
 ```
 
 ここで:
 - log - 自然対数
 - N - 期間数 (Length)
-- Highest High - Length 期間内の最高高値
-- Lowest Low - Length 期間内の最低安値
+- 最高値 - Length 期間内の最高高値
+- 最安値 - Length 期間内の最低安値
 
 ## 解釈
 

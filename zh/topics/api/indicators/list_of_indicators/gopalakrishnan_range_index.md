@@ -26,7 +26,7 @@ GAPO 指标特别适用于：
 Gopalakrishnan 范围指数的计算非常简单：
 
 ```
-GAPO = log(N) * log(Highest High - Lowest Low)
+GAPO = log(N) * log(最高高点 - 最低低点)
 ```
 
 其中：

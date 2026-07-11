@@ -30,12 +30,12 @@ CBCI の計算には、次の手順が含まれます。
 1. Length 期間にわたる RSI を計算します。
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Gain / Average Loss
+   RS = 平均上昇幅 / 平均下落幅
    ```
 
 2. ストキャスティクスオシレーターを計算します。
    ```
-   %K = ((Close - Lowest Low) / (Highest High - Lowest Low)) * 100
+   %K = ((Close - 最安値) / (最高値 - 最安値)) * 100
    %D = SMA(%K, StochasticDPeriod)
    ```
 

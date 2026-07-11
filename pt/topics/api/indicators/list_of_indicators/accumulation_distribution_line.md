@@ -18,7 +18,7 @@ O indicador ADL ajuda a confirmar uma tendência ou a avisar sobre a sua potenci
 
 O cálculo da linha de acumulação/distribuição ocorre em dois passos:
 
-**1. Cálculo do multiplicador de volume (CLV - Close Location Value):**
+**1. Cálculo do multiplicador de volume (CLV - valor da localização do fecho):**
 ```
 CLV = ((Close - Low) - (High - Close)) / (High - Low)
 ```

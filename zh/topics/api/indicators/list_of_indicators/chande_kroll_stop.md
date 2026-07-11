@@ -46,8 +46,8 @@ Chande Kroll 停止计算涉及以下步骤：
 
 4. 根据停车周期确定最终停止线：
    ```
-   Upper Stop = StopPeriod 内上轨的最高值
-   Lower Stop = StopPeriod 内下轨的最低值
+   上止损 = StopPeriod 内上轨的最高值
+   下止损 = StopPeriod 内下轨的最低值
    ```
 
 ## 解释

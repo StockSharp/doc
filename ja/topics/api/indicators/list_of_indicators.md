@@ -134,7 +134,7 @@
 - [Shift](list_of_indicators/shift.md) - インジケーター Shift、データストリームを選択した期間数だけオフセットします
 - [SW](list_of_indicators/sine_wave.md) - インジケーター SW、価格データ内の周期的パターンを特定します
 - [SMMA](list_of_indicators/smoothed_ma.md) - インジケーター SMMA、直近の価格により大きな重みを与える移動平均です
-- [Std Dev](list_of_indicators/standard_deviation.md) - インジケーター Std Dev、価格データのばらつきを測定します
+- [標準偏差](list_of_indicators/standard_deviation.md) - インジケーター 標準偏差、価格データのばらつきを測定します
 - [標準誤差](list_of_indicators/standard_error.md) - インジケーター 標準誤差、予測精度を測定します
 - [ストキャスティクス %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター ストキャスティクス %K、レンジ内の価格位置に基づいてモメンタムを測定します
 - [ストキャスティクスオシレーター](list_of_indicators/stochastic_oscillator.md) - インジケーター ストキャスティクスオシレーター、買われ過ぎと売られ過ぎの状態を特定します
@@ -160,7 +160,7 @@
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - インジケーター WTO、トレンド反転を特定します
 - [WMA](list_of_indicators/weighted_ma.md) - インジケーター WMA、直近の価格により大きな重みを与えます
 - [WCP](list_of_indicators/weighted_close_price.md) - 加重終値。(High + Low + 2 × Close) / 4
-- [Wilder MA](list_of_indicators/wilder_ma.md) - インジケーター Wilder MA、平滑化された移動平均です
+- [ワイルダー移動平均](list_of_indicators/wilder_ma.md) - インジケーター ワイルダー移動平均、平滑化された移動平均です
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - インジケーター WAD、買い圧力と売り圧力を測定します
 - [%R](list_of_indicators/williams_r.md) - インジケーター %R、買われ過ぎと売られ過ぎの状態を特定します
 - [WCCI](list_of_indicators/woodies_cci.md) - インジケーター WCCI、トレンド識別のための CCI の変種です

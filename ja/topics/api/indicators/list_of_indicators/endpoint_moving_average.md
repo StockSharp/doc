@@ -27,21 +27,21 @@ EPMA は特に次の用途に役立ちます:
 
 1. 期間の初期ポイントと最終ポイントの間の線形トレンドを決定します:
    ```
-   Start Value = Price[current - Length + 1]
-   End Value = Price[current]
+   開始値 = Price[current - Length + 1]
+   終了値 = Price[current]
    ```
 
 2. トレンドラインの傾きを計算します:
    ```
-   Slope = (End Value - Start Value) / (Length - 1)
+   Slope = (終了値 - 開始値) / (Length - 1)
    ```
 
 3. トレンドラインを現在ポイントへ投影したものとして EPMA を計算します:
    ```
-   EPMA = Start Value + Slope * (Length - 1)
+   EPMA = 開始値 + Slope * (Length - 1)
    ```
 
-実際には、EPMA は対象期間の最後の価格値 (End Value) と等しくなりますが、概念的には終点によって定義される線形トレンドの投影です。
+実際には、EPMA は対象期間の最後の価格値 (終了値) と等しくなりますが、概念的には終点によって定義される線形トレンドの投影です。
 
 ## 解釈
 

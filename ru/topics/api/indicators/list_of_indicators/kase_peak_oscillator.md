@@ -24,12 +24,12 @@ KPO основан на концепции, что рыночные пики и 
 
 1. Расчет показателя краткосрочного импульса на основе короткого периода:
    ```
-   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   краткосрочный моментум = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
    ```
 
 2. Расчет показателя долгосрочного импульса на основе длинного периода:
    ```
-   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   долгосрочный моментум = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
 3. Расчет текущей волатильности:
@@ -39,13 +39,13 @@ KPO основан на концепции, что рыночные пики и 
 
 4. Нормализация импульса относительно волатильности:
    ```
-   Normalized Short Momentum = Short Momentum / Volatility
-   Normalized Long Momentum = Long Momentum / Volatility
+   нормализованный краткосрочный моментум = краткосрочный моментум / Volatility
+   нормализованный долгосрочный моментум = долгосрочный моментум / Volatility
    ```
 
 5. Итоговый расчет KPO:
    ```
-   KPO = Normalized Short Momentum - Normalized Long Momentum
+   KPO = нормализованный краткосрочный моментум - нормализованный долгосрочный моментум
    ```
 
 где:

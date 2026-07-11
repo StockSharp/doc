@@ -16,7 +16,7 @@ El histograma reacciona rápidamente a los cambios en el diferencial entre el PP
 2. Reste la línea de señal de la línea PPO para obtener el valor del histograma.
 
 ```
-Histogram = PPO - Signal
+Histogram = PPO - señal
 ```
 
 Los valores superiores a cero resaltan la presión alcista, mientras que los inferiores a cero reflejan una presión bajista. La velocidad a la que las barras del histograma se expanden o contraen proporciona pistas sobre la aceleración o desaceleración del impulso.

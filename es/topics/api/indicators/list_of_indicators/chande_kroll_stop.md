@@ -46,15 +46,15 @@ El cálculo de stop Chande Kroll implica los siguientes pasos:
 
 4. Determinación de líneas de parada final basadas en StopPeriod:
    ```
-   Upper Stop = valor más alto de la banda superior durante StopPeriod
-   Lower Stop = valor más bajo de la banda inferior durante StopPeriod
+   tope superior = valor más alto de la banda superior durante StopPeriod
+   tope inferior = valor más bajo de la banda inferior durante StopPeriod
    ```
 
 ## Interpretación
 
-- **Upper Stop** se utiliza para posiciones cortas. Si el precio de cierre excede el tope superior, esto puede considerarse una señal para cerrar una posición corta o abrir una posición larga.
+- **tope superior** se utiliza para posiciones cortas. Si el precio de cierre excede el tope superior, esto puede considerarse una señal para cerrar una posición corta o abrir una posición larga.
 
-- **Lower Stop** se utiliza para posiciones largas. Si el precio de cierre cae por debajo del tope inferior, esto puede considerarse una señal para cerrar una posición larga o abrir una posición corta.
+- **tope inferior** se utiliza para posiciones largas. Si el precio de cierre cae por debajo del tope inferior, esto puede considerarse una señal para cerrar una posición larga o abrir una posición corta.
 
 - **Cruce del precio con las líneas de stop** puede indicar un posible cambio de tendencia o el comienzo de un nuevo impulso.
 

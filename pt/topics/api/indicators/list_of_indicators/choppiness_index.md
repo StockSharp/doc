@@ -34,13 +34,13 @@ O cálculo do índice de lateralidade envolve os seguintes passos:
 
 2. Calcular o High mais alto e o Low mais baixo ao longo do período selecionado:
    ```
-   Highest High = valor High máximo durante o período Length
-   Lowest Low = valor Low mínimo durante o período Length
+   máxima mais alta = valor High máximo durante o período Length
+   mínima mais baixa = valor Low mínimo durante o período Length
    ```
 
 3. Calcular o índice CHOP:
    ```
-   CHOP = 100 * LOG10(Sum TR / (Highest High - Lowest Low)) / LOG10(Length)
+   CHOP = 100 * LOG10(Sum TR / (máxima mais alta - mínima mais baixa)) / LOG10(Length)
    ```
 
 Onde:

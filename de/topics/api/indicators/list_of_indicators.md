@@ -134,7 +134,7 @@
 - [Shift](list_of_indicators/shift.md) - Indikator Shift, verschiebt den Datenstrom um eine gewählte Anzahl von Perioden
 - [SW](list_of_indicators/sine_wave.md) - Indikator SW, identifiziert zyklische Muster in Preisdaten
 - [SMMA](list_of_indicators/smoothed_ma.md) - Indikator SMMA, ein gleitender Durchschnitt mit höherer Gewichtung jüngerer Preise
-- [Std Dev](list_of_indicators/standard_deviation.md) - Indikator Std Dev, misst die Streuung von Preisdaten
+- [Standardabweichung](list_of_indicators/standard_deviation.md) - Indikator Standardabweichung, misst die Streuung von Preisdaten
 - [Standardfehler](list_of_indicators/standard_error.md) - Indikator Standardfehler, misst die Prognosegenauigkeit
 - [Stochastik %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastik %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
 - [Stochastischer Oszillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastischer Oszillator, erkennt überkaufte und überverkaufte Bedingungen
@@ -160,7 +160,7 @@
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - Indikator WTO, erkennt Trendumkehrungen
 - [WMA](list_of_indicators/weighted_ma.md) - Indikator WMA, gewichtet jüngere Preise stärker
 - [WCP](list_of_indicators/weighted_close_price.md) - Indikator WCP, (High + Low + 2 * Close) / 4
-- [Wilder MA](list_of_indicators/wilder_ma.md) - Indikator Wilder MA, ein geglätteter gleitender Durchschnitt
+- [Wilder-Gleitender Durchschnitt](list_of_indicators/wilder_ma.md) - Indikator Wilder-Gleitender Durchschnitt, ein geglätteter gleitender Durchschnitt
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - Indikator WAD, misst Kauf- und Verkaufsdruck
 - [%R](list_of_indicators/williams_r.md) - Indikator %R, erkennt überkaufte und überverkaufte Bedingungen
 - [WCCI](list_of_indicators/woodies_cci.md) - Indikator WCCI, eine CCI-Variante zur Trendidentifikation

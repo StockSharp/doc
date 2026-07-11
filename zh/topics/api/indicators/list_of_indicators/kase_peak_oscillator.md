@@ -24,12 +24,12 @@ Kase 峰值振荡器的计算涉及几个步骤：
 
 1. 根据短期计算短期动量：
    ```
-   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   短期动量 = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
    ```
 
 2. 根据长期周期计算长期动量：
    ```
-   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   长期动量 = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
 3. 计算当前波动率：
@@ -39,13 +39,13 @@ Kase 峰值振荡器的计算涉及几个步骤：
 
 4. 将动量标准化相对于波动性：
    ```
-   Normalized Short Momentum = Short Momentum / Volatility
-   Normalized Long Momentum = Long Momentum / Volatility
+   归一化短期动量 = 短期动量 / Volatility
+   归一化长期动量 = 长期动量 / Volatility
    ```
 
 5. 最终KPO计算：
    ```
-   KPO = Normalized Short Momentum - Normalized Long Momentum
+   KPO = 归一化短期动量 - 归一化长期动量
    ```
 
 其中：

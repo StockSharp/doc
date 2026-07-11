@@ -27,17 +27,17 @@ El cálculo de índice máximo-mínimo implica los siguientes pasos:
 
 1. Cuente la cantidad de valores que alcanzaron nuevos máximos durante el período Length:
    ```
-   New Highs = número de instrumentos que alcanzan nuevos máximos durante el periodo Length
+   nuevos máximos = número de instrumentos que alcanzan nuevos máximos durante el periodo Length
    ```
 
 2. Cuente la cantidad de valores que alcanzaron nuevos mínimos durante el período Length:
    ```
-   New Lows = número de instrumentos que alcanzan nuevos mínimos durante el periodo Length
+   nuevos mínimos = número de instrumentos que alcanzan nuevos mínimos durante el periodo Length
    ```
 
 3. Calcule índice máximo-mínimo como la relación entre la diferencia entre nuevos máximos y mínimos y su suma:
    ```
-   HLI = ((New Highs - New Lows) / (New Highs + New Lows)) * 100
+   HLI = ((nuevos máximos - nuevos mínimos) / (nuevos máximos + nuevos mínimos)) * 100
    ```
 
 Nota: Si (Nuevos máximos + Nuevos mínimos) es igual a cero, HLI se establece en cero para evitar la división por cero.

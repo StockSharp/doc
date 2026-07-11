@@ -35,8 +35,8 @@ O cálculo da FRAMA envolve vários passos:
 
 2. Converter a dimensão fractal no fator alpha para suavização exponencial:
    ```
-   Smoothing Factor = exp(-4.6 * (D - 1))
-   Alpha = Smoothing Factor * Smoothing Factor
+   fator de suavização = exp(-4.6 * (D - 1))
+   Alpha = fator de suavização * fator de suavização
    ```
 
 3. Aplicar o fator alpha ao preço atual e ao valor anterior da FRAMA:

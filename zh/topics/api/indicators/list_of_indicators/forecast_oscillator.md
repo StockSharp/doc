@@ -27,7 +27,7 @@
 
 1. 使用线性回归在指定期间计算预测线：
    ```
-   Forecast = Linear Regression Line(Close, Length)
+   Forecast = 线性回归线(Close, Length)
    ```
 
 2. 将振荡器计算为当前价格与预测值之间的百分比比率：

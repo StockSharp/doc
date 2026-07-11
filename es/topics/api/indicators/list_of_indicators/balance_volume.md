@@ -22,11 +22,11 @@ El cálculo del indicador volumen de balance se basa en comparar el precio de ci
 
 ```
 Si Close > cierre anterior:
-	BV = Previous BV + Volume
+	BV = BV anterior + Volume
 Si Close < cierre anterior:
-	BV = Previous BV - Volume
+	BV = BV anterior - Volume
 Si Close = cierre anterior:
-	BV = Previous BV
+	BV = BV anterior
 ```
 
 donde:

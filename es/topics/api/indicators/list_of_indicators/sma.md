@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [SimpleMovingAverage](xref:St
 
 ## Contenido recomendado
 
-[Smoothed MA](smoothed_ma.md)
+[media móvil suavizada](smoothed_ma.md)

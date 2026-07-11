@@ -6,12 +6,12 @@ Para usar o indicador, deve ser usada a classe [ChandeKrollStop](xref:StockSharp
 
 ## Descrição
 
-O indicador stop Chande Kroll foi desenvolvido como uma ferramenta dinâmica para definir níveis de stop-loss que responde a alterações na volatilidade e na tendência do mercado. É composto por duas linhas: uma linha de stop superior (para posições short) e uma linha de stop inferior (para posições long).
+O indicador stop Chande Kroll foi desenvolvido como uma ferramenta dinâmica para definir níveis de stop-loss que responde a alterações na volatilidade e na tendência do mercado. É composto por duas linhas: uma linha de stop superior (para posições vendidas) e uma linha de stop inferior (para posições compradas).
 
 A principal vantagem do CKS está na sua capacidade de se adaptar às condições atuais do mercado. Durante períodos de elevada volatilidade, as linhas de stop são posicionadas mais longe do preço, ajudando a evitar o encerramento prematuro da posição devido ao ruído do mercado. Durante períodos de baixa volatilidade, as linhas de stop aproximam-se do preço, proporcionando um seguimento de tendência mais apertado.
 
 CKS é particularmente útil para:
-- Determinar níveis de stop-loss para posições long e short
+- Determinar níveis de stop-loss para posições compradas e vendidas
 - Seguir a tendência com controlo de risco adaptativo
 - Identificar potenciais pontos de reversão da tendência
 - Criar sistemas de trading mecânicos com regras de saída claras
@@ -46,15 +46,15 @@ O cálculo do stop Chande Kroll envolve os seguintes passos:
 
 4. Determinar as linhas de stop finais com base no StopPeriod:
    ```
-   Upper Stop = valor mais alto da banda superior durante StopPeriod
-   Lower Stop = valor mais baixo da banda inferior durante StopPeriod
+   stop superior = valor mais alto da banda superior durante StopPeriod
+   stop inferior = valor mais baixo da banda inferior durante StopPeriod
    ```
 
 ## Interpretação
 
-- **Upper Stop** é usado para posições short. Se o preço de fecho ultrapassar o upper stop, isto pode ser considerado um sinal para fechar uma posição short ou abrir uma posição long.
+- **Stop superior** é usado para posições vendidas. Se o preço de fecho ultrapassar o stop superior, isto pode ser considerado um sinal para fechar uma posição vendida ou abrir uma posição comprada.
 
-- **Lower Stop** é usado para posições long. Se o preço de fecho cair abaixo do lower stop, isto pode ser considerado um sinal para fechar uma posição long ou abrir uma posição short.
+- **Stop inferior** é usado para posições compradas. Se o preço de fecho cair abaixo do stop inferior, isto pode ser considerado um sinal para fechar uma posição comprada ou abrir uma posição vendida.
 
 - **Cruzamento do preço com as linhas de stop** pode indicar uma potencial reversão da tendência ou o início de um novo momentum.
 

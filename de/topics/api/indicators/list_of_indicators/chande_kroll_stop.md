@@ -46,15 +46,15 @@ Die Chande-Kroll-Stop-Berechnung umfasst die folgenden Schritte:
 
 4. Festlegung der Endhaltelinien anhand von StopPeriod:
    ```
-   Upper Stop = höchster Wert des oberen Bands über StopPeriod
-   Lower Stop = niedrigster Wert des unteren Bands über StopPeriod
+   oberer Stop = höchster Wert des oberen Bands über StopPeriod
+   unterer Stop = niedrigster Wert des unteren Bands über StopPeriod
    ```
 
 ## Interpretation
 
-- **Upper Stop** wird für Short-Positionen verwendet. Übersteigt der Schlusskurs den oberen Stop, kann dies als Signal gewertet werden, eine Short-Position zu schließen oder eine Long-Position zu eröffnen.
+- **oberer Stop** wird für Short-Positionen verwendet. Übersteigt der Schlusskurs den oberen Stop, kann dies als Signal gewertet werden, eine Short-Position zu schließen oder eine Long-Position zu eröffnen.
 
-- **Lower Stop** wird für Long-Positionen verwendet. Fällt der Schlusskurs unter den unteren Stop, kann dies als Signal gewertet werden, eine Long-Position zu schließen oder eine Short-Position zu eröffnen.
+- **unterer Stop** wird für Long-Positionen verwendet. Fällt der Schlusskurs unter den unteren Stop, kann dies als Signal gewertet werden, eine Long-Position zu schließen oder eine Short-Position zu eröffnen.
 
 - Das Überqueren der Stopplinien **Price** kann auf eine mögliche Trendumkehr oder den Beginn einer neuen Dynamik hinweisen.
 

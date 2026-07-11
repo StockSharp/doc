@@ -16,7 +16,7 @@ Das Histogramm reagiert schnell auf Änderungen in der Spanne zwischen PPO und d
 2. Subtrahieren Sie die Signallinie von der PPO-Linie, um den Histogrammwert zu erhalten.
 
 ```
-Histogram = PPO - Signal
+Histogram = PPO - Signallinie
 ```
 
 Werte über Null verdeutlichen den Aufwärtsdruck, während Werte unter Null den Abwärtsdruck widerspiegeln. Die Geschwindigkeit, mit der sich die Histogrammbalken ausdehnen oder zusammenziehen, gibt Hinweise auf die Impulsbeschleunigung oder -verzögerung.

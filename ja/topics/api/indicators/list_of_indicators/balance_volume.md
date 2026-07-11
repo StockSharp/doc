@@ -22,18 +22,18 @@ BV インジケーターは特に次の用途に有用です。
 
 ```
 Close > 前回終値 の場合:
-	BV = Previous BV + Volume
+	BV = 前回の BV + Volume
 Close < 前回終値 の場合:
-	BV = Previous BV - Volume
+	BV = 前回の BV - Volume
 Close = 前回終値 の場合:
-	BV = Previous BV
+	BV = 前回の BV
 ```
 
 ここで:
 - Close - 現在の終値
 - 前回終値 - 前回の終値
 - Volume - 現在の出来高
-- Previous BV - 前回の バランス出来高 インジケーター値
+- 前回の BV - 前回の バランス出来高 インジケーター値
 
 ## 解釈
 

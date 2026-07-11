@@ -21,10 +21,10 @@ PGO は、買われ過ぎおよび売られ過ぎ状態の特定に加え、ト�
 
 プリティグッドオシレーター の計算は、次の手順で行います。
 
-1. 指定期間における最高値（Highest High）と最安値（Lowest Low）を決定します。
+1. 指定期間における最高値（最高値）と最安値（最安値）を決定します。
    ```
-   Highest High = Highest(High, Length)
-   Lowest Low = Lowest(Low, Length)
+   最高値 = Highest(High, Length)
+   最安値 = Lowest(Low, Length)
    ```
 
 2. 指定期間における終値の標準偏差を計算します。
@@ -34,7 +34,7 @@ PGO は、買われ過ぎおよび売られ過ぎ状態の特定に加え、ト�
 
 3. プリティグッドオシレーター を計算します。
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / 標準偏差
+   PGO = (Close - (最高値 + 最安値) / 2) / 標準偏差
    ```
 
 ここで:

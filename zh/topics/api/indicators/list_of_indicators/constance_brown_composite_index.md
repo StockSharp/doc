@@ -30,12 +30,12 @@ CBCI 计算包括以下步骤：
 1. 在指定周期内计算RSI：
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Gain / Average Loss
+   RS = 平均上涨幅度 / 平均下跌幅度
    ```
 
 2. 计算随机振荡器：
    ```
-   %K = ((Close - Lowest Low) / (Highest High - Lowest Low)) * 100
+   %K = ((Close - 最低低点) / (最高高点 - 最低低点)) * 100
    %D = SMA(%K, StochasticDPeriod)
    ```
 

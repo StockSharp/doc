@@ -21,10 +21,10 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do oscilador bastante bom envolve os seguintes passos:
 
-1. Determinar o máximo mais alto (Highest High) e o mínimo mais baixo (Lowest Low) durante o período especificado:
+1. Determinar o máximo mais alto (máxima mais alta) e o mínimo mais baixo (mínima mais baixa) durante o período especificado:
    ```
-   Highest High = Highest(High, Length)
-   Lowest Low = Lowest(Low, Length)
+   máxima mais alta = Highest(High, Length)
+   mínima mais baixa = Lowest(Low, Length)
    ```
 
 2. Calcular o desvio padrão dos preços de fecho durante o período especificado:
@@ -34,7 +34,7 @@ O cálculo do oscilador bastante bom envolve os seguintes passos:
 
 3. Calcular o oscilador bastante bom:
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / desvio padrão
+   PGO = (Close - (máxima mais alta + mínima mais baixa) / 2) / desvio padrão
    ```
 
 Onde:

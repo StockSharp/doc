@@ -27,18 +27,18 @@ EPMA 特别适用于：
 
 1. 确定期间初始点和终点之间的线性趋势：
    ```
-   Start Value = Price[current - Length + 1]
-   End Value = Price[current]
+   起始值 = Price[current - Length + 1]
+   结束值 = Price[current]
    ```
 
 2. 计算趋势线的斜率：
    ```
-   Slope = (End Value - Start Value) / (Length - 1)
+   Slope = (结束值 - 起始值) / (Length - 1)
    ```
 
 3. 将 EPMA 计算为趋势线在当前点的投影：
    ```
-   EPMA = Start Value + Slope * (Length - 1)
+   EPMA = 起始值 + Slope * (Length - 1)
    ```
 
 实际上，EPMA 等于所考虑期间的最后价格值（期末值），但从概念上讲，它是由端点定义的线性趋势的投射。

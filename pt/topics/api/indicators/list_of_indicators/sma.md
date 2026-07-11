@@ -8,4 +8,4 @@ Para utilizar o indicador, deve usar a classe [SimpleMovingAverage](xref:StockSh
 
 ## Conteúdo recomendado
 
-[Smoothed MA](smoothed_ma.md)
+[média móvel suavizada](smoothed_ma.md)

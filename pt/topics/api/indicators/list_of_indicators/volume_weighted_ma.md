@@ -8,4 +8,4 @@ Para usar o indicador, deve usar a classe [VolumeWeightedMovingAverage](xref:Sto
 
 ## Conteúdo recomendado
 
-[Weighted MA](weighted_ma.md)
+[média móvel ponderada](weighted_ma.md)

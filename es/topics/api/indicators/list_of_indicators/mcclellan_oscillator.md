@@ -22,18 +22,18 @@ El cálculo del oscilador McClellan implica los siguientes pasos:
 
 1. Calcule los Avances Netos para cada día de negociación:
    ```
-   Net Advances = Advances - Declines
+   avances netos = avances - descensos
    ```
    donde Avances es el número de acciones en alza, Declives es el número de acciones en caída.
 
 2. Calcule el promedio móvil exponencial de 19 períodos de los avances netos:
    ```
-   EMA19 = EMA(Net Advances, 19)
+   EMA19 = EMA(avances netos, 19)
    ```
 
 3. Calcule el promedio móvil exponencial de 39 períodos de avances netos:
    ```
-   EMA39 = EMA(Net Advances, 39)
+   EMA39 = EMA(avances netos, 39)
    ```
 
 4. Calcule el oscilador McClellan como la diferencia entre estos dos EMA:

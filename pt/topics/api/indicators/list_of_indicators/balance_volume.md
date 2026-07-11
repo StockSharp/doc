@@ -24,18 +24,18 @@ O cálculo do indicador volume de balanço baseia-se na comparação do preço d
 
 ```
 Se Close > fecho anterior:
-	BV = Previous BV + Volume
+	BV = BV anterior + Volume
 Se Close < fecho anterior:
-	BV = Previous BV - Volume
+	BV = BV anterior - Volume
 Se Close = fecho anterior:
-	BV = Previous BV
+	BV = BV anterior
 ```
 
 Onde:
 - Close - preço de fecho atual
 - fecho anterior - preço de fecho anterior
 - Volume - volume de negociação atual
-- Previous BV - valor anterior do indicador volume de balanço
+- BV anterior - valor anterior do indicador volume de balanço
 
 ## Interpretação
 

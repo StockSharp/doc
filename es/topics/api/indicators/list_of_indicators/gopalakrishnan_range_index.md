@@ -26,14 +26,14 @@ El indicador tiene los siguientes parámetros:
 El cálculo de índice de rango de Gopalakrishnan es bastante sencillo:
 
 ```
-GAPO = log(N) * log(Highest High - Lowest Low)
+GAPO = log(N) * log(máximo más alto - mínimo más bajo)
 ```
 
 donde:
 - log - logaritmo natural
 - N - número de períodos (Length)
-- Highest High: máximo máximo durante el período Length
-- Lowest Low: mínimo más bajo durante el período Length
+- máximo más alto: máximo máximo durante el período Length
+- mínimo más bajo: mínimo más bajo durante el período Length
 
 ## Interpretación
 

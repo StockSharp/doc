@@ -1,4 +1,4 @@
-# Smoothed MA
+# geglätteter gleitender Durchschnitt
 
 **Geglätteter gleitender Durchschnitt (SMA)** – der Indikator zeigt die geglättete durchschnittliche Preisrichtung für einen bestimmten Zeitraum an.
 

@@ -35,8 +35,8 @@ FRAMA 计算涉及几个步骤：
 
 2. 将分形维数转换为指数平滑的α因子：
    ```
-   Smoothing Factor = exp(-4.6 * (D - 1))
-   Alpha = Smoothing Factor * Smoothing Factor
+   平滑因子 = exp(-4.6 * (D - 1))
+   Alpha = 平滑因子 * 平滑因子
    ```
 
 3. 将 alpha 因子应用于当前价格和之前的 FRAMA 值：

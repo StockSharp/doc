@@ -27,19 +27,19 @@ IMI评估在给定周期内收盘价超过开盘价（正动量）或低于开�
 
 1. 确定日内价格变动：
    ```
-   Gain = Close - Open, if Close > Open
-   Loss = Open - Close, if Close < Open
+   上涨幅度 = Close - Open，如果 Close > Open
+   下跌幅度 = Open - Close，如果 Close < Open
    ```
 
 2. 计算在长度期间正向和负向波动的总和：
    ```
-   Sum Gains = Length 周期内所有 Gains 的总和
-   Sum Losses = Length 周期内所有 Losses 的总和
+   上涨幅度总和 = Length 周期内所有 上涨幅度 的总和
+   下跌幅度总和 = Length 周期内所有 下跌幅度 的总和
    ```
 
 3. 使用类似于RSI的公式计算IMI：
    ```
-   IMI = 100 * (Sum Gains / (Sum Gains + Sum Losses))
+   IMI = 100 * (上涨幅度总和 / (上涨幅度总和 + 下跌幅度总和))
    ```
 
 注意：如果（总收益 + 总损失）等于零，为了避免除以零，IMI 设置为 50。

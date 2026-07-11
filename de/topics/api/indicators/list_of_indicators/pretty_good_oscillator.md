@@ -21,10 +21,10 @@ Der Indikator hat die folgenden Parameter:
 
 Die Pretty-Good-Oszillator-Berechnung umfasst die folgenden Schritte:
 
-1. Bestimmen Sie den höchsten Höchstwert (Highest High) und den niedrigsten Tiefstwert (Lowest Low) über den angegebenen Zeitraum:
+1. Bestimmen Sie den höchsten Höchstwert (höchstes Hoch) und den niedrigsten Tiefstwert (tiefstes Tief) über den angegebenen Zeitraum:
    ```
-   Highest High = Highest(High, Length)
-   Lowest Low = Lowest(Low, Length)
+   höchstes Hoch = Highest(High, Length)
+   tiefstes Tief = Lowest(Low, Length)
    ```
 
 2. Berechnen Sie die Standardabweichung der Schlusskurse über den angegebenen Zeitraum:
@@ -34,7 +34,7 @@ Die Pretty-Good-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 3. Berechnen Sie den Pretty-Good-Oszillator:
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / Standardabweichung
+   PGO = (Close - (höchstes Hoch + tiefstes Tief) / 2) / Standardabweichung
    ```
 
 Dabei gilt:

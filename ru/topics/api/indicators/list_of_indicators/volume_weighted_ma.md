@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Weighted MA](weighted_ma.md)
+[взвешенная скользящая средняя](weighted_ma.md)

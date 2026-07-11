@@ -27,7 +27,7 @@
 
 1. 指定された期間にわたる線形回帰を使用して予測ラインを計算します:
    ```
-   Forecast = Linear Regression Line(Close, Length)
+   Forecast = 線形回帰線(Close, Length)
    ```
 
 2. 現在価格と予測値の間のパーセンテージ比率としてオシレーターを計算します:

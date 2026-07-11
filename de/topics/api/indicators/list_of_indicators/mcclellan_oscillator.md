@@ -22,18 +22,18 @@ Die McClellan-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Nettovorschüsse für jeden Handelstag:
    ```
-   Net Advances = Advances - Declines
+   Netto-Anstiege = Anstiege - Rückgänge
    ```
-   Dabei ist Advances die Anzahl steigender Aktien und Declines die Anzahl fallender Aktien.
+   Dabei ist Anstiege die Anzahl steigender Aktien und Rückgänge die Anzahl fallender Aktien.
 
 2. Berechnen Sie den exponentiellen gleitenden Durchschnitt der Nettovorschüsse über 19 Perioden:
    ```
-   EMA19 = EMA(Net Advances, 19)
+   EMA19 = EMA(Netto-Anstiege, 19)
    ```
 
 3. Berechnen Sie den exponentiellen gleitenden Durchschnitt der Nettovorschüsse über 39 Perioden:
    ```
-   EMA39 = EMA(Net Advances, 39)
+   EMA39 = EMA(Netto-Anstiege, 39)
    ```
 
 4. Berechnen Sie McClellan-Oszillator als Differenz zwischen diesen beiden EMAs:

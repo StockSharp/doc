@@ -34,13 +34,13 @@ Die Choppiness-Index-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnen Sie den höchsten High und den niedrigsten Low über den ausgewählten Zeitraum:
    ```
-   Highest High = maximaler High-Wert über Length-Periode
-   Lowest Low = minimaler Low-Wert über Length-Periode
+   höchstes Hoch = maximaler High-Wert über Length-Periode
+   tiefstes Tief = minimaler Low-Wert über Length-Periode
    ```
 
 3. Berechnen Sie den CHOP-Index:
    ```
-   CHOP = 100 * LOG10(Sum TR / (Highest High - Lowest Low)) / LOG10(Length)
+   CHOP = 100 * LOG10(Sum TR / (höchstes Hoch - tiefstes Tief)) / LOG10(Length)
    ```
 
 Dabei gilt:

@@ -30,12 +30,12 @@
 
 1. 上側チャネルライン:
    ```
-   Upper = Length 期間の Highest High
+   Upper = Length 期間の 最高値
    ```
 
 2. 下側チャネルライン:
    ```
-   Lower = Length 期間の Lowest Low
+   Lower = Length 期間の 最安値
    ```
 
 3. 中央チャネルライン:

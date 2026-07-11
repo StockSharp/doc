@@ -27,17 +27,17 @@ Die Hoch-Tief-Index-Berechnung umfasst die folgenden Schritte:
 
 1. Zählen Sie die Anzahl der Wertpapiere, die im Length-Zeitraum neue Höchststände erreicht haben:
    ```
-   New Highs = Anzahl der Instrumente mit neuen Hochs über die Length-Periode
+   neue Hochs = Anzahl der Instrumente mit neuen Hochs über die Length-Periode
    ```
 
 2. Zählen Sie die Anzahl der Wertpapiere, die im Length-Zeitraum neue Tiefststände erreicht haben:
    ```
-   New Lows = Anzahl der Instrumente mit neuen Tiefs über die Length-Periode
+   neue Tiefs = Anzahl der Instrumente mit neuen Tiefs über die Length-Periode
    ```
 
 3. Berechnen Sie Hoch-Tief-Index als Verhältnis der Differenz zwischen neuen Höchst- und Tiefstständen zu ihrer Summe:
    ```
-   HLI = ((New Highs - New Lows) / (New Highs + New Lows)) * 100
+   HLI = ((neue Hochs - neue Tiefs) / (neue Hochs + neue Tiefs)) * 100
    ```
 
 Hinweis: Wenn (Neue Hochs + Neue Tiefs) gleich Null ist, wird HLI auf Null gesetzt, um eine Division durch Null zu vermeiden.

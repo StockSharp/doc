@@ -26,7 +26,7 @@ Der Indikator hat die folgenden Parameter:
 Die Gopalakrishnan-Range-Index-Berechnung ist ganz einfach:
 
 ```
-GAPO = log(N) * log(Highest High - Lowest Low)
+GAPO = log(N) * log(höchstes Hoch - tiefstes Tief)
 ```
 
 Dabei gilt:

@@ -16,7 +16,7 @@ O histograma reage rapidamente a alterações no spread entre o PPO e a linha de
 2. Subtrair a linha de sinal da linha PPO para obter o valor do histograma.
 
 ```
-Histogram = PPO - Signal
+Histogram = PPO - sinal
 ```
 
 Valores acima de zero destacam pressão de alta, enquanto valores abaixo de zero refletem pressão de baixa. A velocidade com que as barras do histograma se expandem ou contraem fornece pistas sobre a aceleração ou desaceleração do momentum.

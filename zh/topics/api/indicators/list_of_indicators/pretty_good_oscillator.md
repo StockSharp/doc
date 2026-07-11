@@ -23,8 +23,8 @@ PGO 对识别超买和超卖状况特别有用，也可用于检测可能预示�
 
 1. 确定指定周期内的最高高点（最高高）和最低低点（最低低）:
    ```
-   Highest High = Highest(High, Length)
-   Lowest Low = Lowest(Low, Length)
+   最高高点 = Highest(High, Length)
+   最低低点 = Lowest(Low, Length)
    ```
 
 2. 计算指定期间收盘价的标准差：
@@ -34,7 +34,7 @@ PGO 对识别超买和超卖状况特别有用，也可用于检测可能预示�
 
 3. 计算漂亮振荡器：
    ```
-   PGO = (Close - (Highest High + Lowest Low) / 2) / 标准差
+   PGO = (Close - (最高高点 + 最低低点) / 2) / 标准差
    ```
 
 其中：

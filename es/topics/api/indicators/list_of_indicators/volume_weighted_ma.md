@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [VolumeWeightedMovingAverage]
 
 ## Contenido recomendado
 
-[Weighted MA](weighted_ma.md)
+[media móvil ponderada](weighted_ma.md)

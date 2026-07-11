@@ -136,7 +136,7 @@
 - [Shift](list_of_indicators/shift.md) - индикатор Shift, сдвигает поток данных на заданное количество периодов
 - [SW](list_of_indicators/sine_wave.md) - индикатор SW, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - индикатор SMMA, скользящая средняя с большим весом последних цен
-- [Std Dev](list_of_indicators/standard_deviation.md) - индикатор Std Dev, измеряет разброс ценовых данных
+- [стандартное отклонение](list_of_indicators/standard_deviation.md) - индикатор стандартное отклонение, измеряет разброс ценовых данных
 - [стандартная ошибка](list_of_indicators/standard_error.md) - индикатор стандартная ошибка, измеряет точность прогнозов
 - [Стохастик %K](list_of_indicators/stochastic_oscillator_k.md) - Стохастик %K, измеряет импульс на основе положения цены в диапазоне
 - [стохастический осциллятор](list_of_indicators/stochastic_oscillator.md) - индикатор стохастический осциллятор, определяет состояния перекупленности и перепроданности
@@ -162,7 +162,7 @@
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - индикатор WTO, определяет развороты тренда
 - [WMA](list_of_indicators/weighted_ma.md) - индикатор WMA, придаёт больший вес последним ценам
 - [WCP](list_of_indicators/weighted_close_price.md) - индикатор WCP, (High + Low + 2 × Close) / 4
-- [Wilder MA](list_of_indicators/wilder_ma.md) - индикатор Wilder MA, сглаженная скользящая средняя
+- [скользящая средняя Уайлдера](list_of_indicators/wilder_ma.md) - индикатор скользящая средняя Уайлдера, сглаженная скользящая средняя
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - индикатор WAD, измеряет давление покупок и продаж
 - [WVAD](list_of_indicators/williams_variable_accumulation_distribution.md) - индикатор WVAD, кумулятивный индикатор объёма на основе соотношения цен и объёма
 - [%R](list_of_indicators/williams_r.md) - индикатор %R, определяет состояния перекупленности и перепроданности

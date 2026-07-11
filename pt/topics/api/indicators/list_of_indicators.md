@@ -136,7 +136,7 @@
 - [Shift](list_of_indicators/shift.md) - indicador Shift, desloca o fluxo de dados por um número escolhido de períodos
 - [SW](list_of_indicators/sine_wave.md) - indicador SW, identifica padrões cíclicos em dados de preço
 - [SMMA](list_of_indicators/smoothed_ma.md) - indicador SMMA, uma média móvel que dá mais peso aos preços recentes
-- [Std Dev](list_of_indicators/standard_deviation.md) - indicador Std Dev, mede a dispersão dos dados de preço
+- [desvio padrão](list_of_indicators/standard_deviation.md) - indicador desvio padrão, mede a dispersão dos dados de preço
 - [erro padrão](list_of_indicators/standard_error.md) - indicador erro padrão, mede a precisão da previsão
 - [Estocástico %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Estocástico %K, mede o momentum com base na posição do preço dentro de um intervalo
 - [Oscilador estocástico](list_of_indicators/stochastic_oscillator.md) - indicador Oscilador estocástico, identifica condições de sobrecompra e sobrevenda
@@ -162,7 +162,7 @@
 - [WTO](list_of_indicators/wave_trend_oscillator.md) - indicador WTO, identifica reversões de tendência
 - [WMA](list_of_indicators/weighted_ma.md) - indicador WMA, dá mais peso aos preços recentes
 - [WCP](list_of_indicators/weighted_close_price.md) - indicador WCP, (High + Low + 2 × Close) / 4
-- [Wilder MA](list_of_indicators/wilder_ma.md) - indicador Wilder MA, uma média móvel suavizada
+- [média móvel de Wilder](list_of_indicators/wilder_ma.md) - indicador média móvel de Wilder, uma média móvel suavizada
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - indicador WAD, mede a pressão de compra e venda
 - [%R](list_of_indicators/williams_r.md) - indicador %R, identifica condições de sobrecompra e sobrevenda
 - [WCCI](list_of_indicators/woodies_cci.md) - indicador WCCI, uma variação do CCI para identificação de tendências

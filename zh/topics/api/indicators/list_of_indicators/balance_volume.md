@@ -22,11 +22,11 @@ BV 指标尤其适用于：
 
 ```
 如果 Close > 前一收盘价：
-	BV = Previous BV + Volume
+	BV = 前一 BV + Volume
 如果 Close < 前一收盘价：
-	BV = Previous BV - Volume
+	BV = 前一 BV - Volume
 如果 Close = 前一收盘价：
-	BV = Previous BV
+	BV = 前一 BV
 ```
 
 其中：

@@ -1,4 +1,4 @@
-# Weighted MA
+# gewichteter gleitender Durchschnitt
 
 **Gewichteter gleitender Durchschnitt (WMA)** - der Indikator zeigt den gewichteten Durchschnittspreis für einen bestimmten Zeitraum. Er folgt dem Preis als wellenförmige Linie und weist eine gewisse Abweichung gegenüber dem Preis-Chart auf.
 

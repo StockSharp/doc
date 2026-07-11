@@ -27,18 +27,18 @@ El cálculo de la media móvil de punto final se basa en el método de regresió
 
 1. Determinación de la tendencia lineal entre el punto inicial y final del período:
    ```
-   Start Value = Price[current - Length + 1]
-   End Value = Price[current]
+   valor inicial = Price[current - Length + 1]
+   valor final = Price[current]
    ```
 
 2. Calculando la pendiente de la línea de tendencia:
    ```
-   Slope = (End Value - Start Value) / (Length - 1)
+   Slope = (valor final - valor inicial) / (Length - 1)
    ```
 
 3. Calcular EPMA como una proyección de la línea de tendencia hasta el punto actual:
    ```
-   EPMA = Start Value + Slope * (Length - 1)
+   EPMA = valor inicial + Slope * (Length - 1)
    ```
 
 De hecho, EPMA es igual al último valor del precio (valor final) en el período considerado, pero conceptualmente es una proyección de la tendencia lineal definida por los puntos finales.

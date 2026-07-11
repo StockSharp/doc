@@ -27,7 +27,7 @@ O cálculo do Oscilador de previsão envolve os seguintes passos:
 
 1. Calcular a linha de previsão usando regressão linear ao longo do período especificado:
    ```
-   Forecast = Linear Regression Line(Close, Length)
+   Forecast = linha de regressão linear(Close, Length)
    ```
 
 2. Calcular o oscilador como rácio percentual entre o preço atual e o valor previsto:

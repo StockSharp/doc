@@ -24,12 +24,12 @@ O cálculo do oscilador Kase Peak envolve vários passos:
 
 1. Calcular o momentum de curto prazo com base no período curto:
    ```
-   Short Momentum = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
+   momentum curto = EMA(Price, ShortPeriod) - EMA(Price, ShortPeriod)[previous]
    ```
 
 2. Calcular o momentum de longo prazo com base no período longo:
    ```
-   Long Momentum = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
+   momentum longo = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
 3. Calcular a volatilidade actual:
@@ -39,13 +39,13 @@ O cálculo do oscilador Kase Peak envolve vários passos:
 
 4. Normalizar o momentum relativamente à volatilidade:
    ```
-   Normalized Short Momentum = Short Momentum / Volatility
-   Normalized Long Momentum = Long Momentum / Volatility
+   momentum curto normalizado = momentum curto / Volatility
+   momentum longo normalizado = momentum longo / Volatility
    ```
 
 5. Cálculo final do KPO:
    ```
-   KPO = Normalized Short Momentum - Normalized Long Momentum
+   KPO = momentum curto normalizado - momentum longo normalizado
    ```
 
 Onde:

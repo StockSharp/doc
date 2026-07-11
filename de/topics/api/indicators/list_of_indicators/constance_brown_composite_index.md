@@ -30,12 +30,12 @@ Die CBCI-Berechnung umfasst die folgenden Schritte:
 1. Berechnen Sie RSI über den Length-Zeitraum:
    ```
    RSI = 100 - (100 / (1 + RS))
-   RS = Average Gain / Average Loss
+   RS = durchschnittlicher Gewinn / durchschnittlicher Verlust
    ```
 
 2. Berechnen Sie den stochastischen Oszillator:
    ```
-   %K = ((Close - Lowest Low) / (Highest High - Lowest Low)) * 100
+   %K = ((Close - tiefstes Tief) / (höchstes Hoch - tiefstes Tief)) * 100
    %D = SMA(%K, StochasticDPeriod)
    ```
 

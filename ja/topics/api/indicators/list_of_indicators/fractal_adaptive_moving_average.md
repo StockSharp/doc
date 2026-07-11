@@ -35,8 +35,8 @@ FRAMA の計算には複数の手順が含まれます:
 
 2. フラクタル次元を指数平滑化のためのアルファ係数に変換します:
    ```
-   Smoothing Factor = exp(-4.6 * (D - 1))
-   Alpha = Smoothing Factor * Smoothing Factor
+   平滑化係数 = exp(-4.6 * (D - 1))
+   Alpha = 平滑化係数 * 平滑化係数
    ```
 
 3. アルファ係数を現在価格と前回の FRAMA 値に適用します:
