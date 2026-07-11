@@ -37,7 +37,7 @@ DSP 的用途包括：
 
 3. 通过从当前价格中减去平移移动平均线来计算合成价格：
    ```
-   DSP = Price - MA[shifted (Length/2) + 1 periods back]
+   DSP = Price - MA[向前回溯 (Length/2) + 1 个周期]
    ```
 
 其中：

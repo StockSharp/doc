@@ -27,12 +27,12 @@ El cálculo de índice de intensidad intradía implica los siguientes pasos:
 
 1. Calcule el valor III individual para cada período:
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   III bruto = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. Suave usando una media móvil simple:
    ```
-   III = SMA(III raw, Length)
+   III = SMA(III bruto, Length)
    ```
 
 donde:

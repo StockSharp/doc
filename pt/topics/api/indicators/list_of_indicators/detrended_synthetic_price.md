@@ -37,7 +37,7 @@ O cálculo do preço sintético sem tendência envolve os seguintes passos:
 
 3. Calcular o preço sintético subtraindo a média móvel deslocada ao preço atual:
    ```
-   DSP = Price - MA[shifted (Length/2) + 1 periods back]
+   DSP = Price - MA[deslocada (Length/2) + 1 períodos para trás]
    ```
 
 Onde:

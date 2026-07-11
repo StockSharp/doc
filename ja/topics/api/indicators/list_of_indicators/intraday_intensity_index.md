@@ -27,12 +27,12 @@ III は、日中の市場センチメントの変化を特定し、潜在的な�
 
 1. 各期間の個別の III 値を計算します。
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   未加工III = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. 単純移動平均を使用して平滑化します。
    ```
-   III = SMA(III raw, Length)
+   III = SMA(未加工III, Length)
    ```
 
 ここで:

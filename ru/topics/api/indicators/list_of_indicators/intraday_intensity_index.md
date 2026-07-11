@@ -27,12 +27,12 @@ III особенно полезен для выявления внутридне
 
 1. Расчет индивидуального значения III для каждого периода:
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   сырой III = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. Сглаживание с использованием простого скользящего среднего:
    ```
-   III = SMA(III raw, Length)
+   III = SMA(сырой III, Length)
    ```
 
 где:

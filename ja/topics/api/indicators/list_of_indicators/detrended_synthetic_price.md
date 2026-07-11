@@ -37,7 +37,7 @@ DSP は次の用途に有用です。
 
 3. 現在価格からシフトした移動平均を差し引いて合成価格を計算します。
    ```
-   DSP = Price - MA[shifted (Length/2) + 1 periods back]
+   DSP = Price - MA[(Length/2) + 1 期間前にシフト]
    ```
 
 ここで:

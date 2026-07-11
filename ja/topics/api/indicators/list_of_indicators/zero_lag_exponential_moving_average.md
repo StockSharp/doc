@@ -34,14 +34,14 @@ ZLEMA の計算は、予測によって遅延を排除することに基づい�
 
 2. 「デトレンド」価格を計算します。
    ```
-   detrendedPrice = 2 * Price - Price[lag]
+   トレンド除去価格 = 2 * Price - Price[lag]
    ```
    これは「先を見る」ことを可能にし、遅延を排除するための重要な手順です。
 
 3. デトレンド価格に指数平滑化を適用します。
    ```
    k = 2 / (Length + 1)
-   ZLEMA = k * detrendedPrice + (1 - k) * ZLEMA[previous]
+   ZLEMA = k * トレンド除去価格 + (1 - k) * ZLEMA[previous]
    ```
 
 その結果、同じ期間の通常の EMA よりも価格にはるかに近く追随しながら、平滑化効果を維持する移動平均が得られます。

@@ -27,12 +27,12 @@ III 对于识别日内市场情绪的变化和确定潜在反转点尤其有用�
 
 1. 计算每个时期的个体 III 值：
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   原始 III = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. 使用简单移动平均进行平滑处理：
    ```
-   III = SMA(III raw, Length)
+   III = SMA(原始 III, Length)
    ```
 
 其中：

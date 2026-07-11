@@ -34,14 +34,14 @@ ZLEMA 的计算基于通过预测消除滞后，包括以下步骤：
 
 2. 计算“去趋势”的价格：
    ```
-   detrendedPrice = 2 * Price - Price[lag]
+   去趋势价格 = 2 * Price - Price[lag]
    ```
 这是一个关键步骤，它可以实现“前瞻”并消除滞后。
 
 3. 对去趋势后的价格应用指数平滑：
    ```
    k = 2 / (Length + 1)
-   ZLEMA = k * detrendedPrice + (1 - k) * ZLEMA[previous]
+   ZLEMA = k * 去趋势价格 + (1 - k) * ZLEMA[previous]
    ```
 
 结果是一个移动平均线，它比具有相同期的普通EMA更紧密地跟随价格，同时保持平滑效果。

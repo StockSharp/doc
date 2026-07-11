@@ -34,14 +34,14 @@ El cálculo de ZLEMA se basa en la eliminación del retraso mediante la previsi�
 
 2. Calcule el precio "sin tendencia":
    ```
-   detrendedPrice = 2 * Price - Price[lag]
+   precio sin tendencia = 2 * Price - Price[lag]
    ```
    Este es un paso clave que permite "mirar hacia adelante" y eliminar retrasos.
 
 3. Aplique suavizado exponencial al precio sin tendencia:
    ```
    k = 2 / (Length + 1)
-   ZLEMA = k * detrendedPrice + (1 - k) * ZLEMA[previous]
+   ZLEMA = k * precio sin tendencia + (1 - k) * ZLEMA[previous]
    ```
 
 El resultado es una media móvil que sigue el precio mucho más cerca que un EMA normal con el mismo período, manteniendo al mismo tiempo el efecto de suavizado.

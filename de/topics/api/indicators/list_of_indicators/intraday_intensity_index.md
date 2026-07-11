@@ -27,12 +27,12 @@ Die Intraday-Intensitätsindex-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den individuellen III-Wert für jede Periode:
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   roher III = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. Glätten Sie mit einem einfachen gleitenden Durchschnitt:
    ```
-   III = SMA(III raw, Length)
+   III = SMA(roher III, Length)
    ```
 
 Dabei gilt:

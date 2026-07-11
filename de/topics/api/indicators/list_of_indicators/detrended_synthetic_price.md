@@ -37,7 +37,7 @@ Die Berechnung des Trendbereinigter synthetischer Preis umfasst die folgenden Sc
 
 3. Berechnen Sie den synthetischen Preis, indem Sie den verschobenen gleitenden Durchschnitt vom aktuellen Preis subtrahieren:
    ```
-   DSP = Price - MA[shifted (Length/2) + 1 periods back]
+   DSP = Price - MA[um (Length/2) + 1 Perioden zurück verschoben]
    ```
 
 Dabei gilt:

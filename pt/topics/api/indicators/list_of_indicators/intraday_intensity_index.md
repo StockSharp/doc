@@ -27,12 +27,12 @@ O cálculo do índice de intensidade intradiária envolve os seguintes passos:
 
 1. Calcular o valor III individual para cada período:
    ```
-   III raw = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
+   III bruto = ((2 * Close - High - Low) / ((High - Low) * Volume)) * Volume
    ```
 
 2. Suavizar usando uma média móvel simples:
    ```
-   III = SMA(III raw, Length)
+   III = SMA(III bruto, Length)
    ```
 
 Onde:
@@ -81,4 +81,3 @@ O índice de intensidade intradiária pode ser interpretado da seguinte forma:
 [BalanceOfPower](balance_of_power.md)
 [ForceIndex](force_index.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
-

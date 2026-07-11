@@ -34,14 +34,14 @@ Die ZLEMA-Berechnung basiert auf der Beseitigung von Verzögerung durch Prognose
 
 2. Den "detrended" Preis berechnen:
    ```
-   detrendedPrice = 2 * Price - Price[lag]
+   trendbereinigter Preis = 2 * Price - Price[lag]
    ```
    Dies ist ein zentraler Schritt, der ein "Vorausschauen" ermöglicht und Verzögerung beseitigt.
 
-3. Exponentielle Glättung auf den detrendedPrice anwenden:
+3. Exponentielle Glättung auf den trendbereinigten Preis anwenden:
    ```
    k = 2 / (Length + 1)
-   ZLEMA = k * detrendedPrice + (1 - k) * ZLEMA[previous]
+   ZLEMA = k * trendbereinigter Preis + (1 - k) * ZLEMA[previous]
    ```
 
 Das Ergebnis ist ein gleitender Durchschnitt, der dem Preis deutlich enger folgt als ein gewöhnlicher EMA mit derselben Periode und gleichzeitig den Glättungseffekt beibehält.
