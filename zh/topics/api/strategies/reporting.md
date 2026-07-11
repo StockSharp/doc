@@ -40,8 +40,8 @@ source.Name = "我的策略";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 
-source.AddParameter("Timeframe", "5 minutes");
-source.AddStatisticParameter("Sharpe Ratio", 1.85);
+source.AddParameter("时间周期", "5 分钟");
+source.AddStatisticParameter("夏普比率", 1.85);
 
 source.AddOrder(new ReportOrder(
     Id: 123,

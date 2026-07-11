@@ -41,7 +41,7 @@ source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 
 source.AddParameter("Таймфрейм", "5 минут");
-source.AddStatisticParameter("Sharpe Ratio", 1.85);
+source.AddStatisticParameter("Коэффициент Шарпа", 1.85);
 
 source.AddOrder(new ReportOrder(
     Id: 123,

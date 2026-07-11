@@ -40,8 +40,8 @@ source.Name = "Minha estratégia";
 source.PnL = 15000m;
 source.TotalWorkingTime = TimeSpan.FromHours(8);
 
-source.AddParameter("Timeframe", "5 minutes");
-source.AddStatisticParameter("Sharpe Ratio", 1.85);
+source.AddParameter("Período", "5 minutos");
+source.AddStatisticParameter("Índice de Sharpe", 1.85);
 
 source.AddOrder(new ReportOrder(
     Id: 123,

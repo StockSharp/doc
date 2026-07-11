@@ -1562,6 +1562,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedReportingSampleParameterLiteralsAreLocalized()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "strategies", "reporting.md");
+		var badPattern = new Regex(@"AddParameter\(""Timeframe"",\s*""5 minutes""\)|AddStatisticParameter\(""Sharpe Ratio""", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!badPattern.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: reporting sample keeps an English display literal. Localize report parameter display names and values.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownCodeBlockListLabelsDoNotKeepKnownEnglishLabels()
 	{
 		var errors = new List<string>();
