@@ -1531,6 +1531,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void IqFeedLevel1DataDescriptionDoesNotUseTranslationTerminology()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "connectors", "stock_market", "iqfeed", "graphical_configuration_iqfeed.md");
+		var badPattern = new Regex(@"have to be translated|\u8F6C\u6362\u4E3A\s+Level1", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!badPattern.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: IQFeed Level1 data description uses translation/conversion terminology instead of transmission terminology.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownCodeBlockListLabelsDoNotKeepKnownEnglishLabels()
 	{
 		var errors = new List<string>();

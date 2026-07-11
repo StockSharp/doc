@@ -9,7 +9,7 @@ For all [S#](../../../../api.md) products, graphical configuration of the connec
 - **Lookup server** - Address for obtaining history data.
 - **Admin server** - Address for obtaining service data.
 - **Derivatives** - Address for obtaining derivative data.
-- **Data for Level1** - All types of data for Level1, which have to be translated.
+- **Data for Level1** - All types of Level1 data that must be transmitted.
 - **Data type** - Securities types, for which data must be received.
 - **Load securities** - Should the whole set of securities be loaded from IQFeed website archive.
 - **File with securities** - Path to file with IQFeed list of securities, downloaded from the website. If path is specified, then secondary download from website does not occur, and only the local copy gets parsed.
