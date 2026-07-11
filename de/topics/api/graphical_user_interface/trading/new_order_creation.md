@@ -2,7 +2,7 @@
 
 [OrderWindow](xref:StockSharp.Xaml.OrderWindow) - Fenster zum Erstellen einer Order.
 
-![Erstellen einer neuen Order Screenshot](../../../../images/gui_orderwindow.png)
+![Erstellen einer neuen Order Bildschirmfoto](../../../../images/gui_orderwindow.png)
 
 Wenn die Verbindung das Registrieren einer bedingten Order (Stop-Loss, Take-Profit) unterstützt, können Sie in diesem Fenster eine bedingte Order mit erweiterten Bedingungen registrieren, indem Sie das Flag **Erweiterte Bedingungen** setzen.
 

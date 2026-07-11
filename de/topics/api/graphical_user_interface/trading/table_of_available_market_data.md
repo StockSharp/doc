@@ -2,7 +2,7 @@
 
 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - eine Tabelle, die verfügbare Marktdaten anzeigt.
 
-![Tabelle verfügbarer Marktdaten Screenshot](../../../../images/api_gui_marketdatagrid.png)
+![Tabelle verfügbarer Marktdaten Bildschirmfoto](../../../../images/api_gui_marketdatagrid.png)
 
 Nachfolgend sehen Sie ein Codebeispiel zum Hinzufügen einer [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid)-Tabelle zum Bildschirmformular.
 

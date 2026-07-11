@@ -1,6 +1,6 @@
 # Griechen
 
-![Griechen Screenshot](../../../../../../images/designer_greek_00.png)
+![Griechen Bildschirmfoto](../../../../../../images/designer_greek_00.png)
 
 Dieser Block wird verwendet, um die wichtigsten Optionsgriechen zum aktuellen Zeitpunkt zu berechnen: Delta, Gamma, Vega, Theta und Rho.
 

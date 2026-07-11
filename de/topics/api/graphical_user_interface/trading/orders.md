@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) ist eine Tabelle zur Anzeige von Orders und bedingten Orders. Außerdem enthält das Kontextmenü dieser Tabelle Befehle für Operationen mit Orders: Registrierung, Änderung und Stornierung von Orders. Die Auswahl eines Menüeintrags erzeugt die Ereignisse [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) bzw. [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling).
 
-![Orders Screenshot](../../../../images/gui_ordergrid.png)
+![Orders Bildschirmfoto](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > Die Operation selbst (Registrierung, Änderung, Stornierung) wird nicht ausgeführt. Der entsprechende Code muss manuell in den Ereignishandlern geschrieben werden.

@@ -1,6 +1,6 @@
 # Ausübungspreise
 
-![Ausübungspreise Screenshot](../../../../../../images/designer_derivatives_00.png)
+![Ausübungspreise Bildschirmfoto](../../../../../../images/designer_derivatives_00.png)
 
 Der Würfel wird verwendet, um eine Liste von Optionen anhand eines angegebenen Filters zu erhalten.
 

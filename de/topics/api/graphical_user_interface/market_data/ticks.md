@@ -1,6 +1,6 @@
 # Tick-Trades
 
-![Tick-Trades Screenshot](../../../../images/gui_tradegrid.png)
+![Tick-Trades Bildschirmfoto](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - eine Trade-Tabelle.
 

@@ -6,7 +6,7 @@ Beim ersten Start erscheint das folgende Fenster zur Auswahl von Datenquellen. S
 
 Markieren Sie im Fenster die erforderlichen Quellen. Sie können Filter nach Region, Board, Datentyp, Zahlungsart, Echtzeit oder nicht verwenden. Wenn die Auswahl abgeschlossen ist, klicken Sie auf **OK**. Danach bietet das Programm an, die Hilfsprogramme zu aktivieren. Weitere Details zur Arbeit mit Hilfsprogrammen finden Sie im Abschnitt [Utilities](tasks.md). Klicken Sie auf **OK**.
 
-![Erster Start Screenshot 1](../../images/hydra_first_started_utilities00.png)
+![Erster Start Bildschirmfoto 1](../../images/hydra_first_started_utilities00.png)
 
 Danach werden die Quellen zum linken Panel des Hauptfensters der Anwendung hinzugefügt.
 
@@ -29,7 +29,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
 
    Beim ersten Start bietet das Programm an, alle Instrumente für die ausgewählte Quelle auf einmal herunterzuladen. Danach lädt der Benutzer die Instrumente selbst herunter. Anfänglich ist die Instrumentendatenbank in [Hydra](../hydra.md) leer; es gibt nur das Hilfsinstrument **ALL@ALL**. Wenn dieses Instrument ausgewählt ist, werden Daten für alle für diese Quelle verfügbaren Instrumente heruntergeladen.
 
-   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![Hydra Schaltfläche Hinzufügen](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![Erster Start Screenshot 2](../../images/hydra_securities.png)
+   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![Hydra Schaltfläche Hinzufügen](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![Erster Start Bildschirmfoto 2](../../images/hydra_securities.png)
 
    Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Instrumente herunterladen**.
 
@@ -48,7 +48,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
    Die ausgewählten Instrumente werden in der Tabelle **Instrumente** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusätzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
 2. Für jedes ausgewählte Instrument sollten Sie die Marktdatentypen auswählen, die für den Download erforderlich sind.
 
-   Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![Erster Start Screenshot 3](../../images/hydra_zero.png). ![hydra Marktdatentyp auswählen](../../images/hydra_type_market_data_choose.png)
+   Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![Erster Start Bildschirmfoto 3](../../images/hydra_zero.png). ![hydra Marktdatentyp auswählen](../../images/hydra_type_market_data_choose.png)
 
    Wählen wir für den Download **Ticks** und **Kerzen Zeitrahmen 5** aus.
 

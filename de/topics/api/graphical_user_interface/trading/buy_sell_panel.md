@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - ein spezielles Panel, mit dem Sie schnell eine Order zu den besten Preisen registrieren können.
 
-![Kauf-/Verkaufspanel Screenshot](../../../../images/api_gui_buysell.png)
+![Kauf-/Verkaufspanel Bildschirmfoto](../../../../images/api_gui_buysell.png)
 
 Unten sehen Sie ein Codebeispiel zum Hinzufügen von [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel).
 

@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - ein spezielles Fenster zum Konfigurieren der Risikokontrolle.
 
-![Fenster für Risikoeinstellungen Screenshot](../../../images/api_gui_riskwindow.png)
+![Fenster für Risikoeinstellungen Bildschirmfoto](../../../images/api_gui_riskwindow.png)
 
 Nachfolgend sehen Sie ein Codebeispiel zum Aufrufen des Fensters für Risikokontrolleinstellungen der Strategie.
 

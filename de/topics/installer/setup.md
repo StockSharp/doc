@@ -2,7 +2,7 @@
 
 1. Um den [Installer](../installer.md) zu installieren, öffnen Sie die Seite [Downloadseite](https://stocksharp.com/products/download/):
 
-    ![Erster Start Screenshot](../../images/installer_installation.png)
+    ![Erster Start Bildschirmfoto](../../images/installer_installation.png)
 
 2. Laden Sie die Distribution des [Installer](../installer.md) herunter.
 3. Starten Sie die Installationsdatei **stocksharp_setup.exe** und folgen Sie den Anweisungen des Installers.

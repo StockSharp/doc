@@ -2,7 +2,7 @@
 
 Um Ihre eigenen Transaktionen zu importieren, wählen Sie im Hauptmenü der Anwendung **Importieren \=\> Eigene Transaktionen**.
 
-![Transaktionen Screenshot](../../../images/hydra_import_executions.png)
+![Transaktionen Bildschirmfoto](../../../images/hydra_import_executions.png)
 
 ## Prozess zum Importieren eigener Transaktionen
 

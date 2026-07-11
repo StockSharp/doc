@@ -1,6 +1,6 @@
 # Gekürztes Orderbuch
 
-![Gekürztes Orderbuch Screenshot](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![Gekürztes Orderbuch Bildschirmfoto](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 Der Würfel wird verwendet, um ein auf eine angegebene Tiefe gekürztes Orderbuch zu erhalten.
 

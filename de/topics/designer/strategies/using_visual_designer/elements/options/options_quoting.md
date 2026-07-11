@@ -1,6 +1,6 @@
 # Optionsquotierung
 
-![Optionsquotierung Screenshot](../../../../../../images/designer_quoting_00.png)
+![Optionsquotierung Bildschirmfoto](../../../../../../images/designer_quoting_00.png)
 
 Der Würfel wird verwendet, um Optionen gemäß den angegebenen Parametern zu quotieren.
 

@@ -2,7 +2,7 @@
 
 [S#](../../../api.md) bietet die Möglichkeit, Annotationen in Form von Text, Linien usw. zum Diagramm hinzuzufügen.
 
-![Annotationen Screenshot](../../../../images/chartannotations.png)
+![Annotationen Bildschirmfoto](../../../../images/chartannotations.png)
 
 Das Hinzufügen von Annotationen erfolgt genauso wie das Hinzufügen anderer Informationen zum Diagramm. Zunächst müssen Sie eine [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) erstellen und dem Diagrammbereich hinzufügen:
 

@@ -6,12 +6,12 @@ Installieren Sie UDPDumper über [Installer](installer.md).
 
 ## Einrichtung und Start
 
-1. Beim ersten Start zeigt die App Folgendes an:![UDP Dumper Screenshot 1](../images/dumper_1.png)
-2. Um Netzwerk-Feeds hinzuzufügen, fügen Sie sie entweder manuell hinzu oder laden alle Feeds aus den Konfigurationsdateien der Börse. Klicken Sie dazu auf die Schaltfläche:![UDP Dumper Screenshot 2](../images/dumper_2.png)
-3. Im angezeigten Fenster müssen Sie die gewünschte Konfigurationsdatei der Börse suchen und öffnen:![UDP Dumper Screenshot 3](../images/dumper_3.png)
-4. Alle Feeds mit IP-Adressen und Porteinstellungen werden aus einer Datei geladen:![UDP Dumper Screenshot 4](../images/dumper_4.png)
-5. Wählen Sie die benötigten Feeds aus und klicken Sie auf die Schaltfläche zum Starten des Downloads:![UDP Dumper Screenshot 5](../images/dumper_5.png)
-6. Wenn die Einstellungen korrekt sind, beginnt das Programm, UDP-Datagramme zu empfangen und auf die Festplatte zu schreiben. Die App zeigt die Anzahl der für jeden Feed empfangenen Bytes an:![UDP Dumper Screenshot 6](../images/dumper_6.png)
+1. Beim ersten Start zeigt die App Folgendes an:![UDP Dumper Bildschirmfoto 1](../images/dumper_1.png)
+2. Um Netzwerk-Feeds hinzuzufügen, fügen Sie sie entweder manuell hinzu oder laden alle Feeds aus den Konfigurationsdateien der Börse. Klicken Sie dazu auf die Schaltfläche:![UDP Dumper Bildschirmfoto 2](../images/dumper_2.png)
+3. Im angezeigten Fenster müssen Sie die gewünschte Konfigurationsdatei der Börse suchen und öffnen:![UDP Dumper Bildschirmfoto 3](../images/dumper_3.png)
+4. Alle Feeds mit IP-Adressen und Porteinstellungen werden aus einer Datei geladen:![UDP Dumper Bildschirmfoto 4](../images/dumper_4.png)
+5. Wählen Sie die benötigten Feeds aus und klicken Sie auf die Schaltfläche zum Starten des Downloads:![UDP Dumper Bildschirmfoto 5](../images/dumper_5.png)
+6. Wenn die Einstellungen korrekt sind, beginnt das Programm, UDP-Datagramme zu empfangen und auf die Festplatte zu schreiben. Die App zeigt die Anzahl der für jeden Feed empfangenen Bytes an:![UDP Dumper Bildschirmfoto 6](../images/dumper_6.png)
 7. **UDPDumper** verfügt über eine grafische Oberfläche. Wenn Sie es ohne grafische Oberfläche ausführen müssen, zum Beispiel unter Linux, verwenden Sie **UDPDumper.Console**, die plattformübergreifende Konsolenversion.
 
    Die App **UDPDumper.Console** erwartet als Parameter den Pfad zu der Datei, die von der UI-Version erstellt wurde (genau von der UI-Version und **nicht zu einer Börsenkonfiguration**):

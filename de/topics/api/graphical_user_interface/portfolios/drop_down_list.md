@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) ist eine ComboBox zur Portfolioauswahl.
 
-![Dropdown-Liste Screenshot](../../../../images/gui_portfoliocombobox.png)
+![Dropdown-Liste Bildschirmfoto](../../../../images/gui_portfoliocombobox.png)
 
 **Wichtigste Eigenschaften**
 

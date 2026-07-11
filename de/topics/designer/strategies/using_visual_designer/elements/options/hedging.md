@@ -1,6 +1,6 @@
 # Absicherung
 
-![Absicherung Screenshot](../../../../../../images/designer_hedging_00.png)
+![Absicherung Bildschirmfoto](../../../../../../images/designer_hedging_00.png)
 
 Der Würfel wird zur Absicherung von Optionspositionen verwendet.
 

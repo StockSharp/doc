@@ -1,6 +1,6 @@
 # Benachrichtigung
 
-![Benachrichtigung Screenshot](../../../../../../images/designer_notice_00.png)
+![Benachrichtigung Bildschirmfoto](../../../../../../images/designer_notice_00.png)
 
 Der Würfel sendet eine Benachrichtigung, wenn Daten an seinem Eingabe-Socket eintreffen. Der eingehende Wert wird über `ToString` in Text umgewandelt. Sie können eine [Variable](../data_sources/variable.md) verbinden, um festen Text zu senden, Trades- oder Kerzen-Streams anschließen, um deren Details anzuzeigen, oder die Würfel [Zeichenkettenformatierung](string_format.md) und [Zeichenkettenverkettung](string_concat.md) verwenden, um eine eigene Nachricht vorzubereiten.
 

@@ -1,6 +1,6 @@
 # Massenstornierung von Orders
 
-![Massenstornierung von Orders Screenshot](../../../../../../images/designer_mass_cancellations_00.png)
+![Massenstornierung von Orders Bildschirmfoto](../../../../../../images/designer_mass_cancellations_00.png)
 
 Dieser Block wird verwendet, um alle Orders für ein Instrument zu stornieren.
 

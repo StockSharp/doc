@@ -2,7 +2,7 @@
 
 [StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) - eine Tabelle zur Anzeige von Parametern und Statistiken der Strategien.
 
-![Statistik Screenshot](../../../../images/gui_strategiesstatisticspanel.png)
+![Statistik Bildschirmfoto](../../../../images/gui_strategiesstatisticspanel.png)
 
 **Wichtigste Eigenschaften und Methoden**
 

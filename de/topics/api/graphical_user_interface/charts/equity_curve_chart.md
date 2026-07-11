@@ -4,7 +4,7 @@
 
 Unten sehen Sie ein Beispiel für die Verwendung dieser Komponente. Der vollständige Beispielcode befindet sich in Samples/Testing/SampleHistoryTesting.
 
-![Equity-Curve-Diagramm Screenshot](../../../../images/gui_equitycurvechart.png)
+![Equity-Curve-Diagramm Bildschirmfoto](../../../../images/gui_equitycurvechart.png)
 
 ## Beispiel für das Zeichnen eines EquityCurveChart
 

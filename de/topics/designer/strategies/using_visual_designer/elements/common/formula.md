@@ -1,6 +1,6 @@
 # Formel
 
-![Formel Screenshot](../../../../../../images/designer_universal_formula_00.png)
+![Formel Bildschirmfoto](../../../../../../images/designer_universal_formula_00.png)
 
 Ein Würfel wird verwendet, um eine mathematische Formel mit einer beliebigen Anzahl von Argumenten zu berechnen. Sie können eine Formel aus der verfügbaren Liste auswählen oder eine eigene schreiben. Beim Schreiben einer eigenen Formel wird die Anzahl der eingehenden Sockets automatisch bestimmt.
 

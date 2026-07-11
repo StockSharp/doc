@@ -1,6 +1,6 @@
 # Konverter
 
-![Konverter Screenshot](../../../../../../images/designer_converter_00.png)
+![Konverter Bildschirmfoto](../../../../../../images/designer_converter_00.png)
 
 Der Würfel wird verwendet, um komplexe Objekte in einfache Datentypen umzuwandeln. So können Sie beispielsweise den Wert des Preisschritts für ein Instrument abrufen.
 

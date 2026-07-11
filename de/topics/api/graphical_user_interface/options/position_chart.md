@@ -4,7 +4,7 @@ Die grafische Komponente [OptionPositionChart](xref:StockSharp.Xaml.Charting.Opt
 
 Nachfolgend wird das Beispiel SampleOptionQuoting gezeigt, in dem dieses Diagramm verwendet wird. Der Quellcode des Beispiels befindet sich im Ordner *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
-![Positionsdiagramm Screenshot](../../../../images/option_volsmile.png)
+![Positionsdiagramm Bildschirmfoto](../../../../images/option_volsmile.png)
 
 ## Beispiel SampleOptionQuoting
 

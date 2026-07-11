@@ -2,7 +2,7 @@
 
 Wenn Sie auf der Registerkarte General auf die Schaltfläche **Instrumente** klicken, erscheint das Panel **Instrumente**. Das Panel **Instrumente** zeigt alle verfügbaren Instrumente sowie deren Marktdaten an.
 
-![Instrumentenliste Screenshot](../../../images/hydra_securitiespanel_00.png)
+![Instrumentenliste Bildschirmfoto](../../../images/hydra_securitiespanel_00.png)
 
 Am unteren Rand des Panels **Instrumente** befinden sich Schaltflächen, mit denen Sie Folgendes ausführen können:
 

@@ -2,7 +2,7 @@
 
 [Monitor](xref:StockSharp.Xaml.Monitor) ist ein visuelles Element, in dem [LogControl](log_panel.md) zusammen mit dem hierarchischen **TreeView**-Baum verwendet wird, in dem Logquellen angezeigt werden. Ursprünglich wurde die Komponente zur Überwachung von Handelsstrategien entwickelt. Daher enthält der "Baum" standardmäßig den Knoten **Strategie**. Gleichzeitig können mit dieser Komponente auch andere Quellen verwendet werden.
 
-![Erweitertes Log-Panel Screenshot](../../../../images/gui_monitor.png)
+![Erweitertes Log-Panel Bildschirmfoto](../../../../images/gui_monitor.png)
 
 Beispielcode
 

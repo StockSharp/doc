@@ -1,6 +1,6 @@
 # Orderstornierung
 
-![Orderstornierung Screenshot](../../../../../../images/designer_cancellations_00.png)
+![Orderstornierung Bildschirmfoto](../../../../../../images/designer_cancellations_00.png)
 
 Dieser Block wird verwendet, um eine Order für ein Instrument zu stornieren.
 

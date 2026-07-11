@@ -2129,6 +2129,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsDoNotKeepEnglishScreenshotWord()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					if (!Regex.IsMatch(altText.Text, @"\bScreenshot\b", RegexOptions.CultureInvariant))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text '{altText.Text}' keeps the English word 'Screenshot'. Use localized image wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();

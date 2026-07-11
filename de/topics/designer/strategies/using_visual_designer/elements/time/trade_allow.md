@@ -1,6 +1,6 @@
 # Handel erlaubt
 
-![Handel erlaubt Screenshot](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Handel erlaubt Bildschirmfoto](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 Dieser Block wird verwendet, um zu prüfen, ob der Handel aktuell erlaubt ist. Die folgenden Bedingungen werden geprüft:
 

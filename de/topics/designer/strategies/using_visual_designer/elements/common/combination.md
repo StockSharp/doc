@@ -1,6 +1,6 @@
 # Kombination
 
-![Kombination Screenshot](../../../../../../images/designer_association_00.png)
+![Kombination Bildschirmfoto](../../../../../../images/designer_association_00.png)
 
 Der Würfel wird verwendet, um gleichartige Daten aus verschiedenen Würfeln in einem Ausgangsparameter zusammenzuführen und an ein anderes Element weiterzugeben oder um empfangene Daten auf mehrere Elemente aufzuteilen.
 

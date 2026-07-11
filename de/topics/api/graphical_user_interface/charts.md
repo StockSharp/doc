@@ -15,7 +15,7 @@ Zusätzlich enthält [S#](../../api.md) zwei Diagrammtypen für die Volumenanaly
 
 Die folgende Abbildung zeigt die Hauptelemente der grafischen Komponente.
 
-![Diagramme Screenshot](../../../images/gui_chartelements.png)
+![Diagramme Bildschirmfoto](../../../images/gui_chartelements.png)
 
 ## Elemente der grafischen Komponente
 

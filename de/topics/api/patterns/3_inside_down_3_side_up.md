@@ -18,7 +18,7 @@ Die aufwärtsgerichtete Variante des Musters ist bullisch und zeigt an, dass die
 3. Die zweite Candle ist eine weiße (aufwärtsgerichtete) Candle mit kleinem Körper, die innerhalb des Körpers der ersten Candle eröffnet und schließt.
 4. Die dritte Candle ist eine weiße (aufwärtsgerichtete) Candle, die über dem Schlusskurs der zweiten Candle schließt.
 
-![3 Inside Down und 3 Inside Up Screenshot 1](../../../images/indicatorpattern3iu.png)
+![3 Inside Down und 3 Inside Up Bildschirmfoto 1](../../../images/indicatorpattern3iu.png)
 
 ### 3 Inside Down
 
@@ -31,7 +31,7 @@ Die abwärtsgerichtete Variante des Musters ist bärisch. Sie zeigt, dass die Au
 
 Diese Muster sind im Kern Harami-Muster, denen eine bestätigende Candle folgt, auf die viele Trader bei Haramis warten.
 
-![3 Inside Down und 3 Inside Up Screenshot 2](../../../images/indicatorpattern3id.png)
+![3 Inside Down und 3 Inside Up Bildschirmfoto 2](../../../images/indicatorpattern3id.png)
 
 ## Siehe auch
 

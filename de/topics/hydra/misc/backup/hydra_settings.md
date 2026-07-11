@@ -2,8 +2,8 @@
 
 Im Folgenden wird beschrieben, wie Sie eine Backup-Aufgabe erstellen und konfigurieren.
 
-1. Um eine Aufgabe zu erstellen, klicken Sie auf die Schaltfläche **Aufgaben hinzufügen...**, wählen im geöffneten Fenster den Eintrag **Sicherung** aus und klicken auf die Schaltfläche **OK**.![Hydra-Einstellungen Screenshot 1](../../../../images/hydra_tasks_backup_add.png)
-2. Danach müssen Sie die Aufgabe konfigurieren.![Hydra-Einstellungen Screenshot 2](../../../../images/hydra_tasks_backup.png)
+1. Um eine Aufgabe zu erstellen, klicken Sie auf die Schaltfläche **Aufgaben hinzufügen...**, wählen im geöffneten Fenster den Eintrag **Sicherung** aus und klicken auf die Schaltfläche **OK**.![Hydra-Einstellungen Bildschirmfoto 1](../../../../images/hydra_tasks_backup_add.png)
+2. Danach müssen Sie die Aufgabe konfigurieren.![Hydra-Einstellungen Bildschirmfoto 2](../../../../images/hydra_tasks_backup.png)
 
    **Sicherung**
    - **Dienst** - die Dienstadresse.

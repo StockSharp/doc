@@ -2,7 +2,7 @@
 
 [CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) ist ein spezielles Fenster zum Festlegen der Regeln für die Berechnung von Provisionen.
 
-![Fenster für Provisionseinstellungen Screenshot](../../../images/api_comissionwindow.png)
+![Fenster für Provisionseinstellungen Bildschirmfoto](../../../images/api_comissionwindow.png)
 
 Unten sehen Sie ein Codebeispiel zum Aufrufen eines Fensters für die Festlegung von Provisionsregeln.
 

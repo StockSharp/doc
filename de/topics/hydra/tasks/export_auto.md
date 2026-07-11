@@ -15,7 +15,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 
 **Neue Verbindungszeichenfolge**
 
-![Automatischer Export Screenshot](../../../images/hydra_tasks_connstring.png)
+![Automatischer Export Bildschirmfoto](../../../images/hydra_tasks_connstring.png)
 
 - **Provider** - Provider-Einstellungen.
 - **Server** - Serveradresse oder Pfad zur Datenbank.

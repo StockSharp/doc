@@ -2,7 +2,7 @@
 
 Alle Connectoren bieten die Möglichkeit, eine Wiederverbindung für den Fall eines Verbindungsabbruchs zu konfigurieren. Im grafischen Element [Fenster für Verbindungseinstellungen](../graphical_user_interface/connection_settings_window.md) sieht dies so aus:
 
-![Einstellungen für die Wiederverbindung Screenshot 1](../../../images/api_gui_reconnectionsettings.png)
+![Einstellungen für die Wiederverbindung Bildschirmfoto 1](../../../images/api_gui_reconnectionsettings.png)
 
 **Eigenschaften der Wiederverbindung**
 
@@ -32,10 +32,10 @@ Der Wiederverbindungsmechanismus wird über die Eigenschaft [ReConnectionSetting
    ```
 2. Um zu prüfen, wie der Mechanismus zur Verbindungskontrolle funktioniert, können Sie die Internetverbindung ausschalten:
 
-   ![Einstellungen für die Wiederverbindung Screenshot 2](../../../images/transactions.png)
+   ![Einstellungen für die Wiederverbindung Bildschirmfoto 2](../../../images/transactions.png)
 3. Unten sehen Sie das Programmlog. Es zeigt, dass die Anwendung zunächst verbunden ist und nach dem Ausschalten der Internetverbindung versucht, die Verbindung erneut herzustellen. Nach der Wiederherstellung der Internetverbindung wird die Anwendungsverbindung wiederhergestellt:
 
-   ![Einstellungen für die Wiederverbindung Screenshot 3](../../../images/api_reconnectionlog.png)
+   ![Einstellungen für die Wiederverbindung Bildschirmfoto 3](../../../images/api_reconnectionlog.png)
 4. Da in [Connector](xref:StockSharp.Algo.Connector) mehrere Verbindungen verwendet werden können, werden Ereignisse im Zusammenhang mit der Wiederverbindung, beispielsweise [ConnectionRestored](xref:StockSharp.Algo.Connector.ConnectionRestored), standardmäßig nicht ausgelöst, und die Verbindungsadapter versuchen selbst, die Verbindung erneut herzustellen. Damit das Ereignis ausgelöst wird, müssen Sie den Wert der Eigenschaft [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) des Adapters auf **false** setzen.
 
    ```cs
