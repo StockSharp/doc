@@ -69,11 +69,11 @@ El ratio de volatilidad histórica se puede interpretar de la siguiente manera:
    - Cuando HVR es alto, puede ser apropiado utilizar estrategias basadas en rupturas
    - Cuando HVR es bajo, las estrategias de trading de reversión a la media o de rango pueden ser más adecuadas
 
-5. **Risk Management**:
+5. **Gestión del riesgo**:
    - Los valores High HVR pueden indicar la necesidad de reducir el tamaño de las posiciones debido al aumento de la volatilidad
    - Los valores Low HVR pueden permitir mayores tamaños de posición debido a la reducción de la volatilidad
 
-6. **Potential Reversals**:
+6. **Reversiones potenciales**:
    - Los valores extremos de HVR a menudo preceden a movimientos de precios significativos
    - Un fuerte aumento de HVR después de un período de baja volatilidad puede indicar el inicio de una nueva tendencia
 

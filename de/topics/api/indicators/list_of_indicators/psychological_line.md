@@ -59,7 +59,7 @@ Der Psychologische Linie kann wie folgt interpretiert werden:
    - In einem starken Aufwärtstrend bleibt PSY oft über 50, mit periodischen Erholungen aus der überkauften Zone
    - In einem starken Abwärtstrend bleibt PSY oft unter 50, mit periodischen Erholungen aus der überverkauften Zone
 
-6. **Length Parameteroptimierung**:
+6. **Optimierung des Längenparameters**:
    - Kürzere Zeiträume (z. B. 5-8) machen PSY empfindlicher und für den kurzfristigen Handel geeignet
    - Längere Zeiträume (z. B. 20-25) machen PSY reibungsloser und für den langfristigen Handel geeignet
 

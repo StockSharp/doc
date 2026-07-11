@@ -2537,7 +2537,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 		var pattern = new Regex(
-			@"Price[-\s](?:Trend|RSI|Frequenzweichen|Beziehung)|Volume[-\s](?:Spikes|Indikatoren|Multiplier)|Volume\s+(?:und|y)\s+Price|Rebounds von extremen Levels|Amplitude Changes|False Signals|KER Changes|(?:DI|EMV|GAPO|HVR|HLI|III)\s+Trends",
+			@"Price[-\s](?:Trend|RSI|Frequenzweichen|Beziehung)|Volume[-\s](?:Spikes|Indikatoren|Multiplier)|Volume\s+(?:und|y)\s+Price|Rebounds von extremen Levels|Amplitude Changes|False Signals|KER Changes|(?:DI|EMV|GAPO|HVR|HLI|III)\s+Trends|Risk Management|Potential Reversals|Cycle Projection|Parameter Selection|Group Positioning|Optimal Entry Points|Momentum Loss|Length Parameter(?: Tuning| Selection|optimierung|auswahl)|Parameter Tuning|Gamma Parameter Tuning|Failed Swings|Componente Streak RSI|Average-Frequenzweichen",
 			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())

@@ -81,7 +81,7 @@ El Oscilador de volumen de Klinger se puede interpretar de la siguiente manera:
    - El aumento del valor KVO (tanto positivo como negativo) indica un fortalecimiento de la tendencia actual
    - La disminución del valor KVO indica un debilitamiento de la tendencia actual
 
-6. **Potential Reversals**:
+6. **Reversiones potenciales**:
    - Los valores extremos de KVO pueden indicar condiciones de sobrecompra o sobreventa del mercado y una posible reversión.
    - La desaceleración en la subida o bajada de KVO puede preceder a un cambio de tendencia
 

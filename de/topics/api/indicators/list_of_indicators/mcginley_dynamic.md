@@ -68,7 +68,7 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - MGD funktioniert gut mit Oszillatoren (RSI, Stochastik)
    - Kann als Trendfilter für andere Handelssysteme verwendet werden
 
-7. **Length Parameterauswahl**:
+7. **Auswahl des Längenparameters**:
    - Kleinere Length-Werte (z. B. 8-12) machen MGD empfindlicher gegenüber Preisänderungen und eignen sich für den kurzfristigen Handel
    - Größere Length-Werte (z. B. 20-50) machen MGD flüssiger und eignen sich für den langfristigen Handel
 

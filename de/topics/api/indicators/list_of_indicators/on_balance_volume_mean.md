@@ -76,7 +76,7 @@ On-Balance-Volumen Mean kann wie folgt interpretiert werden:
    - OBVM kann mit anderen Volumenindikatoren verglichen werden, um Signale zu bestätigen
    - Die Konsistenz der Signale mehrerer Volumenindikatoren erhöht deren Zuverlässigkeit
 
-7. **Length Parameterauswahl**:
+7. **Auswahl des Längenparameters**:
    - Kürzere Zeiträume (z. B. 10–15) machen OBVM empfindlicher gegenüber kurzfristigen Änderungen
    - Längere Zeiträume (z. B. 30–50) ermöglichen eine bessere Identifizierung langfristiger Trends
    - Der optimale Zeitraum hängt vom Handelszeithorizont und den spezifischen Instrumenteigenschaften ab

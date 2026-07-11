@@ -87,7 +87,7 @@ RSI de Laguerre se interpreta de manera similar al RSI tradicional, pero con may
    - Los valores LRSI superiores a 0,5 confirman una tendencia alcista
    - Los valores de LRSI por debajo de 0,5 confirman una tendencia a la baja
 
-6. **Gamma Parameter Tuning**:
+6. **Ajuste del parámetro gamma**:
    - Para señales más rápidas: aumente Gamma (más cerca de 0,9)
    - Para señales más suaves: disminuya Gamma (más cerca de 0,1)
 

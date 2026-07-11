@@ -43,7 +43,7 @@ Der Positiver Volumenindex kann wie folgt interpretiert werden:
    - Steigender PVI deutet darauf hin, dass die „Masse“ kauft, was einen zukünftigen Preisanstieg vorhersagen könnte
    - Ein fallender PVI deutet darauf hin, dass die „Masse“ verkauft, was einen zukünftigen Preisrückgang vorhersagen könnte
 
-2. **Verschieben von Average-Frequenzweichen**:
+2. **Kreuzungen des gleitenden Durchschnitts**:
    - PVI wird häufig mit seinem gleitenden 255-Tage-Durchschnitt (ungefähr ein Handelsjahr) verglichen.
    - Wenn PVI über seinem 255-Tage-SMA liegt, gilt dies als bullisches Signal
    - Wenn PVI unter seinem 255-Tage-SMA liegt, gilt dies als rückläufiges Signal

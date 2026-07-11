@@ -65,7 +65,7 @@ O índice de momentum intradiário é interpretado de forma semelhante ao RSI:
    - Divergência de alta: o preço forma um novo mínimo, enquanto o IMI forma um mínimo mais alto
    - Divergência de baixa: o preço forma um novo máximo, enquanto o IMI forma um máximo mais baixo
 
-5. **Failed Swings**:
+5. **Falhas de oscilação**:
    - Se o IMI não conseguir atingir o nível de sobrecompra durante uma tendência de alta, isto pode indicar fraqueza da tendência
    - Se o IMI não conseguir atingir o nível de sobrevenda durante uma tendência de baixa, isto pode indicar fraqueza da tendência
 
@@ -81,4 +81,3 @@ O índice de momentum intradiário é interpretado de forma semelhante ao RSI:
 [IntradayIntensityIndex](intraday_intensity_index.md)
 [Momentum](momentum.md)
 [RelativeMomentumIndex](relative_momentum_index.md)
-

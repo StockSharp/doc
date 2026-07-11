@@ -52,7 +52,7 @@ El valor final CM es un oscilador que puede fluctuar tanto en áreas positivas c
   - Los valores CM consistentemente positivos confirman la fuerza de una tendencia alcista
   - Los valores CM consistentemente negativos confirman la fuerza de una tendencia a la baja
 
-- **Momentum Loss**:
+- **Pérdida de momentum**:
   - La disminución del valor absoluto de CM en la dirección de la tendencia puede indicar una pérdida de impulso y una posible reversión
 
 ![indicator_composite_momentum](../../../../images/indicator_composite_momentum.png)

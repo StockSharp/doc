@@ -83,7 +83,7 @@ ll Índice de masa se interpreta de la siguiente manera:
    - Un fuerte aumento del índice de masa indica una expansión significativa del rango de precios, que puede preceder a un fuerte movimiento
    - La caída gradual del índice sugiere un estrechamiento del rango y una posible consolidación
 
-7. **Parameter Tuning**:
+7. **Ajuste de parámetros**:
    - Los parámetros estándar (9 para lMA, 25 para suma) funcionan bien en la mayoría de los períodos de tiempo
    - La reducción de los períodos puede crear señales más rápidas, pero puede aumentar las señales falsas.
 

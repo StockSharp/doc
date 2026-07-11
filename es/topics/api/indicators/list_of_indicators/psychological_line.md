@@ -59,7 +59,7 @@ El línea psicológica se puede interpretar de la siguiente manera:
    - En una fuerte tendencia alcista, PSY a menudo se mantiene por encima de 50, con rebotes periódicos desde la zona de sobrecompra.
    - En una fuerte tendencia a la baja, PSY a menudo permanece por debajo de 50, con rebotes periódicos desde la zona de sobreventa.
 
-6. **Length Parameter Tuning**:
+6. **Ajuste del parámetro de longitud**:
    - Períodos más cortos (por ejemplo, 5-8) hacen que PSY sea más sensible y adecuado para operaciones a corto plazo
    - Períodos más largos (por ejemplo, 20-25) hacen que PSY sea más fluido y adecuado para operaciones a largo plazo
 

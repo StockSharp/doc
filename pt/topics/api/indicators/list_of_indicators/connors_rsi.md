@@ -33,7 +33,7 @@ O cálculo do RSI de Connors envolve três componentes que são depois promediad
    onde RS = alteração positiva média / alteração negativa média
    ```
 
-2. **Componente Streak RSI**:
+2. **Componente RSI de sequência**:
    - Primeiro, calcular a sequência (número de dias consecutivos de subida ou queda do preço)
    - Depois aplicar RSI a esta sequência usando o StreakRSIPeriod
 

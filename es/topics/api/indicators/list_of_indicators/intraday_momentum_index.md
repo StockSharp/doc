@@ -65,7 +65,7 @@ El índice de impulso intradía se interpreta de manera similar a RSI:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que IMI forma un mínimo más alto
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que IMI forma un máximo más bajo
 
-5. **Failed Swings**:
+5. **Oscilaciones fallidas**:
    - Si IMI no puede alcanzar el nivel de sobrecompra durante una tendencia alcista, esto puede indicar debilidad de la tendencia.
    - Si IMI no puede alcanzar el nivel de sobreventa durante una tendencia a la baja, esto puede indicar debilidad de la tendencia.
 

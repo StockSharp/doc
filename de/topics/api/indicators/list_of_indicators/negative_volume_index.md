@@ -43,7 +43,7 @@ Der Negativer Volumenindex kann wie folgt interpretiert werden:
    - Steigender NVI deutet darauf hin, dass „Smart Money“ kauft, was einen zukünftigen Preisanstieg vorhersagen könnte
    - Ein fallender NVI deutet darauf hin, dass „Smart Money“ verkauft wird, was einen zukünftigen Preisrückgang vorhersagen könnte
 
-2. **Verschieben von Average-Frequenzweichen**:
+2. **Kreuzungen des gleitenden Durchschnitts**:
    - NVI wird häufig mit seinem gleitenden 255-Tage-Durchschnitt (ungefähr ein Handelsjahr) verglichen.
    - Wenn NVI über seinem 255-Tage-SMA liegt, gilt dies als bullisches Signal
    - Wenn NVI unter seinem 255-Tage-SMA liegt, gilt dies als rückläufiges Signal

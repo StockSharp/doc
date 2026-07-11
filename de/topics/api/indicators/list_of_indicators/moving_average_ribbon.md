@@ -57,7 +57,7 @@ Das Band gleitender Durchschnitte kann wie folgt interpretiert werden:
    - Ein schrumpfendes Band (kleinerer Abstand zwischen den Linien) weist auf eine Abschwächung des Trends hin
    - Eine enge Gruppierung der Linien weist auf eine Konsolidierung oder das Fehlen eines ausgeprägten Trends hin
 
-3. **Verschieben von Average-Frequenzweichen**:
+3. **Kreuzungen gleitender Durchschnitte**:
    - Der Beginn von Linienkreuzungen kann auf eine mögliche Trendänderung hinweisen
    - Wenn kurze gleitende Durchschnitte beginnen, länge gleitende Durchschnitte zu kreuzen, kann dies ein frühes Signal für eine Trendumkehr sein
 

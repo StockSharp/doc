@@ -71,7 +71,7 @@ El impulso de la media móvil se puede interpretar de la siguiente manera:
    - MOMA se puede utilizar para filtrar señales de otros indicadores
    - Por ejemplo, considere solo señales alcistas cuando MOMA sea positivo y solo señales bajistas cuando MOMA sea negativo.
 
-7. **Parameter Selection**:
+7. **Selección de parámetros**:
    - Períodos más cortos para Length y MomentumPeriod hacen que MOMA sea más sensible, pero también más propenso a señales falsas
    - Los períodos más largos hacen que MOMA sea más suave, pero pueden generar señales retrasadas
 

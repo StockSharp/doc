@@ -50,7 +50,7 @@ donde:
 
 La interpretación de GMMA implica analizar tanto los grupos individuales como su interacción:
 
-1. **Group Positioning**:
+1. **Posicionamiento de grupos**:
    - Cuando el grupo de corto plazo está por encima del grupo de largo plazo, indica una tendencia al alza.
    - Cuando el grupo de corto plazo está por debajo del grupo de largo plazo, indica una tendencia a la baja.
 
@@ -70,7 +70,7 @@ La interpretación de GMMA implica analizar tanto los grupos individuales como s
    - Cuando el grupo de largo plazo comienza a cambiar de dirección, indica un cambio significativo en el sentimiento de los inversores a largo plazo.
    - La reversión grupo de corto plazo sin cambios en el grupo a largo plazo a menudo indica una corrección temporal
 
-6. **Optimal Entry Points**:
+6. **Puntos óptimos de entrada**:
    - Después de una fuerte expansión, puede ocurrir compresión, lo que indica una corrección dentro de la tendencia.
    - El fin de dicha compresión (nueva expansión) puede ser un buen punto de entrada en la dirección de la tendencia principal.
 

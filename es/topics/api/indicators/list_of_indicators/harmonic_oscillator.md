@@ -67,7 +67,7 @@ El oscilador armónico se puede interpretar de la siguiente manera:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que HO forma un mínimo más alto
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que HO forma un máximo más bajo
 
-4. **Cycle Projection**:
+4. **Proyección de ciclos**:
    - Los picos y valles regulares de HO se pueden utilizar para proyectar futuros puntos de inversión
    - Analizar la duración entre peaks/troughs puede ayudar a determinar la duración del ciclo dominante
 

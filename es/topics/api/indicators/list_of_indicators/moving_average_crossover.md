@@ -73,7 +73,7 @@ El indicador de cruce de medias móviles se puede interpretar de la siguiente ma
    - MAC se utiliza a menudo en combinación con indicadores de impulso (RSI, estocástico) para confirmar señales
    - También se puede combinar con indicadores de tendencia y volatilidad para crear sistemas de trading más completos.
 
-6. **Parameter Selection**:
+6. **Selección de parámetros**:
    - Los períodos más cortos (por ejemplo, 5 y 20) son más sensibles y adecuados para operaciones a corto plazo.
    - Los períodos más largos (por ejemplo, 50 y 200) son menos sensibles y adecuados para operaciones a largo plazo.
 
