@@ -1,6 +1,6 @@
 # Painel de log alargado
 
-[Monitor](xref:StockSharp.Xaml.Monitor) - é o elemento visual onde [LogControl](log_panel.md) é utilizado em conjunto com a árvore hierárquica **TreeView**, na qual são apresentadas as fontes de log. Inicialmente, o componente foi concebido para monitorizar estratégias de negociação. Por isso, por predefinição, a "árvore" inclui o nó **Strategy**. Ao mesmo tempo, podem ser utilizadas outras fontes com este componente.
+[Monitor](xref:StockSharp.Xaml.Monitor) - é o elemento visual onde [LogControl](log_panel.md) é utilizado em conjunto com a árvore hierárquica **TreeView**, na qual são apresentadas as fontes de log. Inicialmente, o componente foi concebido para monitorizar estratégias de negociação. Por isso, por predefinição, a "árvore" inclui o nó **Estratégia**. Ao mesmo tempo, podem ser utilizadas outras fontes com este componente.
 
 ![GUI Monitor](../../../../images/gui_monitor.png)
 

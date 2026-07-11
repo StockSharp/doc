@@ -198,6 +198,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Starknet key",
 		"Settings",
 		"Strategies",
+		"Strategy",
 		"Testnet",
 		"Vault address",
 		"Wallet address",
