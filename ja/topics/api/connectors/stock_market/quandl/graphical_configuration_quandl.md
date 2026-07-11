@@ -4,8 +4,8 @@
 
 ![API GUI 設定 Quandl](../../../../../images/api_gui_settings_quandl.png)
 
-- **Token** - Token。
-- **Database** - データベースの Quandl 識別子。
+- **トークン** - トークン。
+- **データベース** - データベースの Quandl 識別子。
 - **ハートビート** - 接続が有効であることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
 

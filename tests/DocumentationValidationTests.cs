@@ -2015,6 +2015,42 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCjkConnectorDocsDoNotKeepKnownEnglishFieldLabels()
+	{
+		var errors = new List<string>();
+		var labels = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+		{
+			"Compression",
+			"Database",
+			"Server",
+			"Token",
+			"Tokens",
+			"Transactions only",
+		};
+
+		foreach (var lang in new[] { "ja", "zh" })
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+				{
+					if (!labels.Contains(label.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: CJK connector documentation keeps English field label '{label.Text}'. Localize visible field labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownLinkLabelsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();

@@ -4,7 +4,7 @@
 
 ![API GUI 設定 Tradier](../../../../../images/api_gui_settings_tradier.png)
 
-- **Token** - 認証トークンです。
+- **トークン** - 認証トークンです。
 - **デモ** - デモモードです。
 
 OAuth 認可:
