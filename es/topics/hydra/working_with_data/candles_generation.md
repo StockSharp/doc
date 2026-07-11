@@ -89,7 +89,7 @@ Para mostrar gráficamente las velas generadas:
 Se pueden añadir indicadores técnicos al gráfico de velas:
 
 1. Abra el menú contextual haciendo clic derecho en el panel del gráfico.
-2. Seleccione el elemento **Indicator** y el indicador deseado de la lista.
+2. Seleccione el elemento **Indicador** y el indicador deseado de la lista.
 3. Para mostrar el indicador en un panel separado:
    - Añada un nuevo panel usando el botón ![hydra add](../../../images/hydra_add.png).
    - Seleccione el indicador deseado en el menú contextual.

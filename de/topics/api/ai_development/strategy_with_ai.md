@@ -34,7 +34,7 @@ Erstellen Sie eine Datei `CLAUDE.md` (oder `.cursorrules`) im Projekt-Root:
 - Strategien erben von der Klasse Strategy
 - Kerzen über Connector.Subscribe(subscription) abonnieren
 - Orders über RegisterOrder(order) registrieren
-- Logging: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
+- Protokollierung: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - Indikatoren: mit new erstellen und indicator.Process(candle) aufrufen
 - connector.Error und Strategiefehler immer behandeln
 ```

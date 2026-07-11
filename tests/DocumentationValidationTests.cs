@@ -182,6 +182,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Derivatives mode",
 		"Expires after",
 		"Info endpoint / Exchange endpoint / WS endpoint",
+		"Indicator",
 		"Key",
 		"Licenses",
 		"Market slippage",
@@ -201,6 +202,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static readonly Regex[] _knownEnglishLowercaseProseTerms =
 	[
 		new(@"\bpassphrases?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+	];
+
+	private static readonly string[] _knownEnglishMarkdownCodeBlockListLabels =
+	[
+		"Logging",
 	];
 
 	private static readonly HashSet<string> _knownEnglishSectionLabels = new(StringComparer.OrdinalIgnoreCase)
@@ -1330,6 +1336,33 @@ public sealed class DocumentationValidationTests : BaseTestClass
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English bold UI label '{label}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMarkdownCodeBlockListLabelsDoNotKeepKnownEnglishLabels()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var line in EnumerateMarkdownTextLikeCodeBlockLines(ReadAllText(file)))
+				{
+					foreach (var label in _knownEnglishMarkdownCodeBlockListLabels)
+					{
+						if (!Regex.IsMatch(line.Text, @"^\s*-\s+" + Regex.Escape(label) + @"\s*:", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line.Line}: markdown code block list keeps English label '{label}'. Localize the label in the target language.");
 					}
 				}
 			}
@@ -3184,11 +3217,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	private static IEnumerable<MarkdownTextLine> EnumerateMarkdownTextLikeCodeBlockLines(string markdown)
+	{
+		var lineStarts = GetLineStarts(markdown);
+
+		foreach (Match match in Regex.Matches(markdown, @"(?m)^(?<fence>`{3,}|~{3,})(?<info>[^\r\n]*)\r?\n(?<content>.*?)(?m)^\k<fence>\s*$", RegexOptions.Singleline | RegexOptions.CultureInvariant))
+		{
+			var info = match.Groups["info"].Value.Trim();
+			if (!IsTextLikeMarkdownFenceInfo(info))
+				continue;
+
+			var line = GetLineNumber(lineStarts, match.Groups["content"].Index);
+			using var reader = new StringReader(match.Groups["content"].Value);
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!string.IsNullOrWhiteSpace(text))
+					yield return new MarkdownTextLine(text, line);
+			}
+		}
+	}
+
 	private static bool IsPlainTextMarkdownFenceInfo(string info)
 		=> string.IsNullOrWhiteSpace(info)
 			|| info.Equals("text", StringComparison.OrdinalIgnoreCase)
 			|| info.Equals("txt", StringComparison.OrdinalIgnoreCase)
 			|| info.Equals("plain", StringComparison.OrdinalIgnoreCase);
+
+	private static bool IsTextLikeMarkdownFenceInfo(string info)
+		=> IsPlainTextMarkdownFenceInfo(info)
+			|| info.Equals("markdown", StringComparison.OrdinalIgnoreCase)
+			|| info.Equals("md", StringComparison.OrdinalIgnoreCase);
 
 	private static string NormalizeMarkdownPlainTextBlockForTranslationCheck(string text)
 	{

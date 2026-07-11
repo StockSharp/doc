@@ -89,7 +89,7 @@ Para apresentação gráfica das candles geradas:
 Podem ser adicionados indicadores técnicos ao gráfico de candles:
 
 1. Abra o menu de contexto clicando com o botão direito do rato no painel do gráfico
-2. Selecione o item **Indicator** e o indicador pretendido na lista
+2. Selecione o item **Indicador** e o indicador pretendido na lista
 3. Para apresentar o indicador num painel separado:
    - Adicione um novo painel usando o botão ![hydra add](../../../images/hydra_add.png)
    - Selecione o indicador pretendido no menu de contexto

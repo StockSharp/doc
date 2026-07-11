@@ -34,7 +34,7 @@ Cree un archivo `CLAUDE.md` (o `.cursorrules`) en la raíz del proyecto:
 - Las estrategias heredan de la clase Strategy
 - Suscribirse a velas mediante Connector.Subscribe(subscription)
 - Registrar órdenes mediante RegisterOrder(order)
-- Logging: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
+- Registro: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - Indicadores: crearlos con new y llamar a indicator.Process(candle)
 - Gestionar siempre connector.Error y los errores de la estrategia
 ```
