@@ -31,7 +31,7 @@ O cálculo da faixa de médias móveis envolve os seguintes passos:
 
 2. Calcular a média móvel para cada período:
    ```
-   MAs = [SMA(Price, Period) for each Period in Periods]
+   MAs = [SMA(Preço, Período) para cada Período em Períodos]
    ```
 
 Onde:

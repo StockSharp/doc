@@ -36,18 +36,18 @@ O cálculo do Klinger Volume Oscillator envolve vários passos:
 
 3. Calcular a EMA para dois períodos:
    ```
-   Short EMA = EMA(Volume Force, ShortPeriod)
-   Long EMA = EMA(Volume Force, LongPeriod)
+   EMA curta = EMA(Força de volume, ShortPeriod)
+   EMA longa = EMA(Força de volume, LongPeriod)
    ```
 
 4. Cálculo final do KVO:
    ```
-   KVO = Short EMA - Long EMA
+   KVO = EMA curta - EMA longa
    ```
 
 5. Calcular a linha de sinal (opcional):
    ```
-   Signal Line = EMA(KVO, 13)
+   Linha de sinal = EMA(KVO, 13)
    ```
 
 Onde:
@@ -97,4 +97,3 @@ O Klinger Volume Oscillator pode ser interpretado da seguinte forma:
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ADL](accumulation_distribution_line.md)
 [ForceIndex](force_index.md)
-

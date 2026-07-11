@@ -6,8 +6,8 @@
 
 ##### インジケーター設定。
 
-- Fast MA - 高速平滑化定数。
-- Slow MA - 低速平滑化定数。
+- 高速 MA - 高速平滑化定数。
+- 低速 MA - 低速平滑化定数。
 - Period - Kaufman 移動平均の期間。
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

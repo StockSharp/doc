@@ -31,7 +31,7 @@ MAR 包括几条移动平均线（通常为 5 到 10 条），其周期逐步增
 
 2. 计算每个周期的移动平均值：
    ```
-   MAs = [SMA(Price, Period) for each Period in Periods]
+   MAs = [对每个周期执行 SMA(价格, 周期)]
    ```
 
 其中：

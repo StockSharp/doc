@@ -27,23 +27,23 @@ PPO 指标围绕零线波动，正值表示看涨的市场情绪，负值表示�
 
 1. 计算短期和长期指数移动平均线：
    ```
-   Short EMA = EMA(Price, ShortPeriod)
-   Long EMA = EMA(Price, LongPeriod)
+   短期 EMA = EMA(价格, ShortPeriod)
+   长期 EMA = EMA(价格, LongPeriod)
    ```
 
 2. 将PPO线计算为短期EMA和长期EMA之间的百分比差异：
    ```
-   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PPO线 = ((短期 EMA - 长期 EMA) / 长期 EMA) * 100
    ```
 
 3. 计算信号线（通常为PPO线的9周期EMA）：
    ```
-   Signal Line = EMA(PPO Line, 9)
+   信号线 = EMA(PPO线, 9)
    ```
 
 4. 计算直方图：
    ```
-   Histogram = PPO Line - Signal Line
+   柱状图 = PPO线 - 信号线
    ```
 
 其中：

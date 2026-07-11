@@ -27,23 +27,23 @@ PVO インジケーターは、大きな価格変動に先行する可能性が�
 
 1. 取引量の短期および長期の指数移動平均を計算します。
    ```
-   Short EMA = EMA(Volume, ShortPeriod)
-   Long EMA = EMA(Volume, LongPeriod)
+   短期EMA = EMA(出来高, ShortPeriod)
+   長期EMA = EMA(出来高, LongPeriod)
    ```
 
 2. 短期 EMA と長期 EMA のパーセンテージ差として PVO ラインを計算します。
    ```
-   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PVOライン = ((短期EMA - 長期EMA) / 長期EMA) * 100
    ```
 
 3. シグナルライン（通常は PVO ラインの 9 期間 EMA）を計算します。
    ```
-   Signal Line = EMA(PVO Line, 9)
+   シグナルライン = EMA(PVOライン, 9)
    ```
 
 4. ヒストグラムを計算します。
    ```
-   Histogram = PVO Line - Signal Line
+   ヒストグラム = PVOライン - シグナルライン
    ```
 
 ここで:

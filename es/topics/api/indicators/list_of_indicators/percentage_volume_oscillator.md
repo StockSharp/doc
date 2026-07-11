@@ -27,23 +27,23 @@ El cálculo del oscilador porcentual de volumen implica los siguientes pasos:
 
 1. Calcule las medias móviles exponenciales cortas y largas de volumen:
    ```
-   Short EMA = EMA(Volume, ShortPeriod)
-   Long EMA = EMA(Volume, LongPeriod)
+   EMA corta = EMA(Volumen, ShortPeriod)
+   EMA larga = EMA(Volumen, LongPeriod)
    ```
 
 2. Calcule la línea PVO como diferencia porcentual entre EMA corto y largo:
    ```
-   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   Línea PVO = ((EMA corta - EMA larga) / EMA larga) * 100
    ```
 
 3. Calcule la línea de señal (normalmente EMA de 9 períodos de la línea PVO):
    ```
-   Signal Line = EMA(PVO Line, 9)
+   Línea de señal = EMA(Línea PVO, 9)
    ```
 
 4. Calcular histograma:
    ```
-   Histogram = PVO Line - Signal Line
+   Histograma = Línea PVO - Línea de señal
    ```
 
 donde:

@@ -6,8 +6,8 @@ Um den Indikator zu verwenden, sollte die Klasse [KaufmanAdaptiveMovingAverage](
 
 ##### Anzeigeeinstellungen.
 
-- Fast MA – die schnelle Glättungskonstante;
-- Slow MA – die langsame Glättungskonstante;
+- Schnelle MA – die schnelle Glättungskonstante;
+- Langsame MA – die langsame Glättungskonstante;
 - Period – die Periode des gleitenden Kaufman-Durchschnitts.
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

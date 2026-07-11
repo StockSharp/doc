@@ -32,15 +32,15 @@ EIS 尤其适用于：
 
 2. 计算MACD柱状图（标准值：12, 26, 9）：
    ```
-   MACD Line = EMA(Close, 12) - EMA(Close, 26)
-   Signal Line = EMA(MACD Line, 9)
-   MACD Histogram = MACD Line - Signal Line
+   MACD线 = EMA(Close, 12) - EMA(Close, 26)
+   信号线 = EMA(MACD线, 9)
+   MACD柱状图 = MACD线 - 信号线
    ```
 
 3. 确定当前K线的颜色分类：
    ```
-   如果 EMA[current] > EMA[previous] 且 MACD Histogram[current] > MACD Histogram[previous]，则为绿色（看涨脉冲）
-   如果 EMA[current] < EMA[previous] 且 MACD Histogram[current] < MACD Histogram[previous]，则为红色（看跌脉冲）
+   如果 EMA[current] > EMA[previous] 且 MACD柱状图[current] > MACD柱状图[previous]，则为绿色（看涨脉冲）
+   如果 EMA[current] < EMA[previous] 且 MACD柱状图[current] < MACD柱状图[previous]，则为红色（看跌脉冲）
    否则为蓝色（无脉冲）
    ```
 

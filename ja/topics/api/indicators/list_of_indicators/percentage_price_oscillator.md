@@ -27,23 +27,23 @@ PPO の計算は、次の手順で行います。
 
 1. 短期および長期の指数移動平均を計算します。
    ```
-   Short EMA = EMA(Price, ShortPeriod)
-   Long EMA = EMA(Price, LongPeriod)
+   短期EMA = EMA(価格, ShortPeriod)
+   長期EMA = EMA(価格, LongPeriod)
    ```
 
 2. 短期 EMA と長期 EMA のパーセンテージ差として PPO ラインを計算します。
    ```
-   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PPOライン = ((短期EMA - 長期EMA) / 長期EMA) * 100
    ```
 
 3. シグナルライン（通常は PPO ラインの 9 期間 EMA）を計算します。
    ```
-   Signal Line = EMA(PPO Line, 9)
+   シグナルライン = EMA(PPOライン, 9)
    ```
 
 4. ヒストグラムを計算します。
    ```
-   Histogram = PPO Line - Signal Line
+   ヒストグラム = PPOライン - シグナルライン
    ```
 
 ここで:

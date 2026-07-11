@@ -40,8 +40,8 @@ Die Chande Kroll Stop-Berechnung umfasst die folgenden Schritte:
 
 3. Berechnen der oberen und unteren Bänder:
    ```
-   Upper Band = HighestHigh - (Multiplier * ATR)
-   Lower Band = LowestLow + (Multiplier * ATR)
+   Oberes Band = HighestHigh - (Multiplikator * ATR)
+   Unteres Band = LowestLow + (Multiplikator * ATR)
    ```
 
 4. Festlegung der Endhaltelinien anhand von StopPeriod:

@@ -36,18 +36,18 @@ KVO объединяет информацию о цене с объемом, и�
 
 3. Расчет EMA для двух периодов:
    ```
-   Short EMA = EMA(Volume Force, ShortPeriod)
-   Long EMA = EMA(Volume Force, LongPeriod)
+   Короткая EMA = EMA(Сила объема, ShortPeriod)
+   Длинная EMA = EMA(Сила объема, LongPeriod)
    ```
 
 4. Итоговый расчет KVO:
    ```
-   KVO = Short EMA - Long EMA
+   KVO = короткая EMA - длинная EMA
    ```
 
 5. Расчет сигнальной линии (опционально):
    ```
-   Signal Line = EMA(KVO, 13)
+   Сигнальная линия = EMA(KVO, 13)
    ```
 
 где:

@@ -36,18 +36,18 @@ Klinger Volume Oscillator の計算には、いくつかの手順があります
 
 3. 2 つの期間について EMA を計算します。
    ```
-   Short EMA = EMA(Volume Force, ShortPeriod)
-   Long EMA = EMA(Volume Force, LongPeriod)
+   短期EMA = EMA(ボリュームフォース, ShortPeriod)
+   長期EMA = EMA(ボリュームフォース, LongPeriod)
    ```
 
 4. 最終的な KVO を計算します。
    ```
-   KVO = Short EMA - Long EMA
+   KVO = 短期EMA - 長期EMA
    ```
 
 5. シグナルラインを計算します（任意）。
    ```
-   Signal Line = EMA(KVO, 13)
+   シグナルライン = EMA(KVO, 13)
    ```
 
 ここで:
@@ -97,4 +97,3 @@ Klinger Volume Oscillator は、次のように解釈できます。
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ADL](accumulation_distribution_line.md)
 [ForceIndex](force_index.md)
-

@@ -31,7 +31,7 @@ Die Berechnung des Bands gleitender Durchschnitte umfasst die folgenden Schritte
 
 2. Berechnen Sie den gleitenden Durchschnitt für jeden Zeitraum:
    ```
-   MAs = [SMA(Price, Period) for each Period in Periods]
+   MAs = [SMA(Preis, Periode) für jede Periode in Perioden]
    ```
 
 Dabei gilt:

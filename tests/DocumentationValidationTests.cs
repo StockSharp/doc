@@ -2242,6 +2242,55 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishFormulaLabels()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Fast MA",
+			"for each Period",
+			"Long EMA",
+			"Lower Band",
+			"MACD Histogram",
+			"MACD Line",
+			"Middle Line",
+			"PPO Line",
+			"PVO Line",
+			"Short EMA",
+			"Signal Line",
+			"Slow MA",
+			"Upper Band",
+			"signal period",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: indicator formula or label keeps English text '{phrase}'. Localize formula labels and explanatory parameter names.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishPivotPointStrategyLabels()
 	{
 		var errors = new List<string>();

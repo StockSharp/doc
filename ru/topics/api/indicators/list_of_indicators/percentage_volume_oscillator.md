@@ -27,23 +27,23 @@ PVO состоит из трех компонентов:
 
 1. Расчет короткой и длинной экспоненциальных скользящих средних объема:
    ```
-   Short EMA = EMA(Volume, ShortPeriod)
-   Long EMA = EMA(Volume, LongPeriod)
+   Короткая EMA = EMA(Объем, ShortPeriod)
+   Длинная EMA = EMA(Объем, LongPeriod)
    ```
 
 2. Расчет линии PVO как процентной разницы между короткой и длинной EMA:
    ```
-   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   Линия PVO = ((короткая EMA - длинная EMA) / длинная EMA) * 100
    ```
 
 3. Расчет сигнальной линии (обычно 9-периодная EMA от линии PVO):
    ```
-   Signal Line = EMA(PVO Line, 9)
+   Сигнальная линия = EMA(Линия PVO, 9)
    ```
 
 4. Расчет гистограммы:
    ```
-   Histogram = PVO Line - Signal Line
+   Гистограмма = Линия PVO - Сигнальная линия
    ```
 
 где:

@@ -27,23 +27,23 @@ Die Berechnung des prozentualen Volumenoszillators umfasst die folgenden Schritt
 
 1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte des Volumens:
    ```
-   Short EMA = EMA(Volume, ShortPeriod)
-   Long EMA = EMA(Volume, LongPeriod)
+   Kurze EMA = EMA(Volumen, ShortPeriod)
+   Lange EMA = EMA(Volumen, LongPeriod)
    ```
 
 2. Berechnen Sie die PVO-Linie als prozentuale Differenz zwischen Short- und Long-EMA:
    ```
-   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PVO-Linie = ((kurze EMA - lange EMA) / lange EMA) * 100
    ```
 
 3. Berechnen Sie die Signalleitung (typischerweise 9-Perioden-EMA- oder PVO-Leitung):
    ```
-   Signal Line = EMA(PVO Line, 9)
+   Signallinie = EMA(PVO-Linie, 9)
    ```
 
 4. Histogramm berechnen:
    ```
-   Histogram = PVO Line - Signal Line
+   Histogramm = PVO-Linie - Signallinie
    ```
 
 Dabei gilt:

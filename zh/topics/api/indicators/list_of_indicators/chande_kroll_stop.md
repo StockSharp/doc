@@ -40,8 +40,8 @@ Chande Kroll 停止计算涉及以下步骤：
 
 3. 计算上轨和下轨：
    ```
-   Upper Band = HighestHigh - (Multiplier * ATR)
-   Lower Band = LowestLow + (Multiplier * ATR)
+   上轨 = HighestHigh - (乘数 * ATR)
+   下轨 = LowestLow + (乘数 * ATR)
    ```
 
 4. 根据停车周期确定最终停止线：

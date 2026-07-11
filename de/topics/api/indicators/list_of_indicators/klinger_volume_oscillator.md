@@ -36,18 +36,18 @@ Die Klinger Volume Oscillator-Berechnung umfasst mehrere Schritte:
 
 3. Berechnen Sie EMA für zwei Zeiträume:
    ```
-   Short EMA = EMA(Volume Force, ShortPeriod)
-   Long EMA = EMA(Volume Force, LongPeriod)
+   Kurze EMA = EMA(Volumenkraft, ShortPeriod)
+   Lange EMA = EMA(Volumenkraft, LongPeriod)
    ```
 
 4. Endgültige KVO-Berechnung:
    ```
-   KVO = Short EMA - Long EMA
+   KVO = kurze EMA - lange EMA
    ```
 
 5. Signalleitung berechnen (optional):
    ```
-   Signal Line = EMA(KVO, 13)
+   Signallinie = EMA(KVO, 13)
    ```
 
 Dabei gilt:

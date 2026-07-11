@@ -27,7 +27,7 @@ Keltner Channels の計算には、次の手順があります。
 
 1. 指数移動平均を計算します。
    ```
-   Middle Line = EMA(Price, Length)
+   中央線 = EMA(価格, 期間)
    ```
 
 2. 平均真の値幅を計算します。
@@ -37,8 +37,8 @@ Keltner Channels の計算には、次の手順があります。
 
 3. 上側バンドと下側バンドを計算します。
    ```
-   Upper Band = Middle Line + (Multiplier * ATR)
-   Lower Band = Middle Line - (Multiplier * ATR)
+   上限バンド = 中央線 + (乗数 * ATR)
+   下限バンド = 中央線 - (乗数 * ATR)
    ```
 
 ここで:
@@ -88,4 +88,3 @@ Keltner Channels は、次のように解釈できます。
 [DonchianChannels](donchian_channels.md)
 [EMA](ema.md)
 [ATR](atr.md)
-

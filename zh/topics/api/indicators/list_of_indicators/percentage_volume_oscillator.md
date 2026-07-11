@@ -27,23 +27,23 @@ PVO 指标有助于识别可能预示重大价格变动的成交量异常。它�
 
 1. 计算成交量的短期和长期指数移动平均线：
    ```
-   Short EMA = EMA(Volume, ShortPeriod)
-   Long EMA = EMA(Volume, LongPeriod)
+   短期 EMA = EMA(成交量, ShortPeriod)
+   长期 EMA = EMA(成交量, LongPeriod)
    ```
 
 2. 将PVO线计算为短期和长期EMA之间的百分比差异：
    ```
-   PVO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PVO线 = ((短期 EMA - 长期 EMA) / 长期 EMA) * 100
    ```
 
 3. 计算信号线（通常为PVO线的9周期EMA）:
    ```
-   Signal Line = EMA(PVO Line, 9)
+   信号线 = EMA(PVO线, 9)
    ```
 
 4. 计算直方图：
    ```
-   Histogram = PVO Line - Signal Line
+   柱状图 = PVO线 - 信号线
    ```
 
 其中：

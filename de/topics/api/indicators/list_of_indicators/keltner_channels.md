@@ -27,7 +27,7 @@ Die Keltner Channels-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den exponentiellen gleitenden Durchschnitt:
    ```
-   Middle Line = EMA(Price, Length)
+   Mittellinie = EMA(Preis, Länge)
    ```
 
 2. Berechnen Sie die durchschnittliche wahre Reichweite:
@@ -37,8 +37,8 @@ Die Keltner Channels-Berechnung umfasst die folgenden Schritte:
 
 3. Berechnen Sie die oberen und unteren Bänder:
    ```
-   Upper Band = Middle Line + (Multiplier * ATR)
-   Lower Band = Middle Line - (Multiplier * ATR)
+   Oberes Band = Mittellinie + (Multiplikator * ATR)
+   Unteres Band = Mittellinie - (Multiplikator * ATR)
    ```
 
 Dabei gilt:

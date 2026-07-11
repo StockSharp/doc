@@ -39,14 +39,14 @@ O cálculo do indicador KST envolve os seguintes passos:
 
 4. Calcular a linha de sinal:
    ```
-   Signal Line = SMA(KST, signal period)
+   Linha de sinal = SMA(KST, período de sinal)
    ```
 
 Onde:
 - Close - preço de fecho
 - n1, n2, n3, n4 - períodos para o cálculo do ROC (valores predefinidos: 10, 15, 20, 30)
 - m1, m2, m3, m4 - períodos para suavização do ROC (valores predefinidos: 10, 10, 10, 15)
-- signal period - período da linha de sinal (valor predefinido: 9)
+- período de sinal - período da linha de sinal (valor predefinido: 9)
 
 ## Interpretação
 

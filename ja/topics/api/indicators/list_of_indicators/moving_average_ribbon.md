@@ -31,7 +31,7 @@ MAR には、期間が段階的に増加する複数の移動平均 (通常 5 �
 
 2. 各期間について移動平均を計算します:
    ```
-   MAs = [SMA(Price, Period) for each Period in Periods]
+   MAs = [各期間について SMA(価格, 期間)]
    ```
 
 ここで:

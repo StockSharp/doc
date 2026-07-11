@@ -39,7 +39,7 @@ Die Berechnung des KST-Indikators umfasst die folgenden Schritte:
 
 4. Signalleitung berechnen:
    ```
-   Signal Line = SMA(KST, signal period)
+   Signallinie = SMA(KST, Signalperiode)
    ```
 
 Dabei gilt:

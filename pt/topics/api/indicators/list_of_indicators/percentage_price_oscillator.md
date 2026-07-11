@@ -27,23 +27,23 @@ O cálculo do PPO envolve os seguintes passos:
 
 1. Calcular as médias móveis exponenciais curta e longa:
    ```
-   Short EMA = EMA(Price, ShortPeriod)
-   Long EMA = EMA(Price, LongPeriod)
+   EMA curta = EMA(Preço, ShortPeriod)
+   EMA longa = EMA(Preço, LongPeriod)
    ```
 
 2. Calcular a linha PPO como a diferença percentual entre a EMA curta e a EMA longa:
    ```
-   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   Linha PPO = ((EMA curta - EMA longa) / EMA longa) * 100
    ```
 
 3. Calcular a linha de sinal (normalmente EMA de 9 períodos da linha PPO):
    ```
-   Signal Line = EMA(PPO Line, 9)
+   Linha de sinal = EMA(Linha PPO, 9)
    ```
 
 4. Calcular o histograma:
    ```
-   Histogram = PPO Line - Signal Line
+   Histograma = Linha PPO - Linha de sinal
    ```
 
 Onde:

@@ -6,9 +6,8 @@ Para utilizar el indicador, se debe utilizar la clase [KaufmanAdaptiveMovingAver
 
 ##### Configuración del indicador.
 
-- Fast MA: la constante de suavizado rápido;
+- MA rápida: la constante de suavizado rápido;
 - MA lenta: la constante de suavizado lento;
 - Period: el período de la media móvil de Kaufman.
 
 ![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
-

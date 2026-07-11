@@ -27,23 +27,23 @@ Die PPO-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte:
    ```
-   Short EMA = EMA(Price, ShortPeriod)
-   Long EMA = EMA(Price, LongPeriod)
+   Kurze EMA = EMA(Preis, ShortPeriod)
+   Lange EMA = EMA(Preis, LongPeriod)
    ```
 
 2. Berechnen Sie die PPO-Linie als prozentuale Differenz zwischen Short- und Long-EMA:
    ```
-   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   PPO-Linie = ((kurze EMA - lange EMA) / lange EMA) * 100
    ```
 
 3. Berechnen Sie die Signalleitung (typischerweise 9-Perioden-EMA- oder PPO-Leitung):
    ```
-   Signal Line = EMA(PPO Line, 9)
+   Signallinie = EMA(PPO-Linie, 9)
    ```
 
 4. Histogramm berechnen:
    ```
-   Histogram = PPO Line - Signal Line
+   Histogramm = PPO-Linie - Signallinie
    ```
 
 Dabei gilt:

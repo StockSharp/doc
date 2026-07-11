@@ -27,7 +27,7 @@
 
 1. 计算指数移动平均值：
    ```
-   Middle Line = EMA(Price, Length)
+   中线 = EMA(价格, 周期)
    ```
 
 2. 计算平均真实波幅：
@@ -37,8 +37,8 @@
 
 3. 计算上轨和下轨：
    ```
-   Upper Band = Middle Line + (Multiplier * ATR)
-   Lower Band = Middle Line - (Multiplier * ATR)
+   上轨 = 中线 + (乘数 * ATR)
+   下轨 = 中线 - (乘数 * ATR)
    ```
 
 其中：

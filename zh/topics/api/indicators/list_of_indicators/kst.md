@@ -39,7 +39,7 @@ KST 指标的计算涉及以下步骤：
 
 4. 计算信号线：
    ```
-   Signal Line = SMA(KST, signal period)
+   信号线 = SMA(KST, 信号周期)
    ```
 
 其中：

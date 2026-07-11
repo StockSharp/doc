@@ -31,7 +31,7 @@ El cálculo de la cinta de medias móviles implica los siguientes pasos:
 
 2. Calcule el promedio móvil para cada período:
    ```
-   MAs = [SMA(Price, Period) for each Period in Periods]
+   MAs = [SMA(Precio, Período) para cada Período en Períodos]
    ```
 
 donde:

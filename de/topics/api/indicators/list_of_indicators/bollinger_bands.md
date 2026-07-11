@@ -12,8 +12,8 @@ Zur Berechnung der Bollinger Bands werden die folgenden Parameter mit entspreche
 Der Indikator besteht somit aus drei Linien: mittlere, obere und untere Linie, jeweils mit eigener Formel:
 
 Mittlere Linie (ML) = gleitender Durchschnitt (SMA (Close, N))
-Upper Band = ML + (D x Standardabweichung)
-Lower Band = ML - (D x Standardabweichung), wobei
+Oberes Band = ML + (D x Standardabweichung)
+Unteres Band = ML - (D x Standardabweichung), wobei
 
 D - die in den Einstellungen festgelegte Kanalbreite, Standardabweichung (StdDev) - Standardabweichung, berechnet mit der Formel: SQRT(Sum(Close, n))^2, n)/n), wobei
 Sum - Summe über n Perioden, n - Berechnungsperiode, SQRT - Quadratwurzel, Close - Schlusskurs.

@@ -27,7 +27,7 @@ O cálculo dos Keltner Channels envolve os seguintes passos:
 
 1. Calcular a média móvel exponencial:
    ```
-   Middle Line = EMA(Price, Length)
+   Linha média = EMA(Preço, Período)
    ```
 
 2. Calcular o intervalo verdadeiro médio:
@@ -37,8 +37,8 @@ O cálculo dos Keltner Channels envolve os seguintes passos:
 
 3. Calcular as bandas superior e inferior:
    ```
-   Upper Band = Middle Line + (Multiplier * ATR)
-   Lower Band = Middle Line - (Multiplier * ATR)
+   Banda superior = Linha média + (Multiplicador * ATR)
+   Banda inferior = Linha média - (Multiplicador * ATR)
    ```
 
 Onde:

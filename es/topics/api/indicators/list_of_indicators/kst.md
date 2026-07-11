@@ -39,7 +39,7 @@ El cálculo del indicador KST implica los siguientes pasos:
 
 4. Calcular la línea de señal:
    ```
-   Signal Line = SMA(KST, signal period)
+   Línea de señal = SMA(KST, período de señal)
    ```
 
 donde:

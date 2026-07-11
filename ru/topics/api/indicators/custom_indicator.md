@@ -352,13 +352,13 @@ public class AverageDirectionalIndexValue(AverageDirectionalIndex indicator, Dat
 public class PercentageVolumeOscillator : BaseComplexIndicator<IPercentageVolumeOscillatorValue>
 {
 	/// <summary>
-	/// Short EMA.
+	/// Короткая EMA.
 	/// </summary>
 	[Browsable(false)]
 	public ExponentialMovingAverage ShortEma { get; }
 
 	/// <summary>
-	/// Long EMA.
+	/// Длинная EMA.
 	/// </summary>
 	[Browsable(false)]
 	public ExponentialMovingAverage LongEma { get; }

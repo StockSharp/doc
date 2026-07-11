@@ -8,8 +8,8 @@ Para utilizar el indicador, debe utilizar la clase [KeltnerChannels](xref:StockS
 
 Los canales Keltner constan de tres líneas:
 1. **Línea Central**: normalmente representado por un EMA de 20 períodos
-2. **Upper Band**: línea central más un multiplicador de ATR
-3. **Lower Band**: línea central menos el mismo multiplicador ATR
+2. **Banda superior**: línea central más un multiplicador de ATR
+3. **Banda inferior**: línea central menos el mismo multiplicador ATR
 
 El indicador fue desarrollado por Chester Keltner en la década de 1960 y posteriormente modificado por Linda Raschke, quien reemplazó la media móvil simple (SMA) por una media móvil exponencial (EMA) y comenzó a utilizar ATR en lugar del rango High-Low para calcular el ancho del canal.
 
@@ -27,7 +27,7 @@ El cálculo de los canales de Keltner implica los siguientes pasos:
 
 1. Calcular la media móvil exponencial:
    ```
-   Middle Line = EMA(Price, Length)
+   Línea media = EMA(Precio, Longitud)
    ```
 
 2. Calcular el rango verdadero promedio:
@@ -37,8 +37,8 @@ El cálculo de los canales de Keltner implica los siguientes pasos:
 
 3. Calcular las bandas superior e inferior:
    ```
-   Upper Band = Middle Line + (Multiplier * ATR)
-   Lower Band = Middle Line - (Multiplier * ATR)
+   Banda superior = Línea media + (Multiplicador * ATR)
+   Banda inferior = Línea media - (Multiplicador * ATR)
    ```
 
 donde:

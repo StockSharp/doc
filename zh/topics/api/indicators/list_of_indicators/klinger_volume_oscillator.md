@@ -36,18 +36,18 @@ KVO 将价格信息与成交量结合，使用一个考虑价格变动方向和�
 
 3. 计算两个周期的EMA：
    ```
-   Short EMA = EMA(Volume Force, ShortPeriod)
-   Long EMA = EMA(Volume Force, LongPeriod)
+   短期 EMA = EMA(成交量力度, ShortPeriod)
+   长期 EMA = EMA(成交量力度, LongPeriod)
    ```
 
 4. 最终KVO计算：
    ```
-   KVO = Short EMA - Long EMA
+   KVO = 短期 EMA - 长期 EMA
    ```
 
 5. 计算信号线（可选）：
    ```
-   Signal Line = EMA(KVO, 13)
+   信号线 = EMA(KVO, 13)
    ```
 
 其中：

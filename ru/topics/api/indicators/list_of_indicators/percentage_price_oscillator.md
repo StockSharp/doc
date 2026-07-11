@@ -27,23 +27,23 @@ PPO состоит из трех компонентов:
 
 1. Расчет короткой и длинной экспоненциальных скользящих средних:
    ```
-   Short EMA = EMA(Price, ShortPeriod)
-   Long EMA = EMA(Price, LongPeriod)
+   Короткая EMA = EMA(Цена, ShortPeriod)
+   Длинная EMA = EMA(Цена, LongPeriod)
    ```
 
 2. Расчет линии PPO как процентной разницы между короткой и длинной EMA:
    ```
-   PPO Line = ((Short EMA - Long EMA) / Long EMA) * 100
+   Линия PPO = ((короткая EMA - длинная EMA) / длинная EMA) * 100
    ```
 
 3. Расчет сигнальной линии (обычно 9-периодная EMA от линии PPO):
    ```
-   Signal Line = EMA(PPO Line, 9)
+   Сигнальная линия = EMA(Линия PPO, 9)
    ```
 
 4. Расчет гистограммы:
    ```
-   Histogram = PPO Line - Signal Line
+   Гистограмма = Линия PPO - Сигнальная линия
    ```
 
 где:
