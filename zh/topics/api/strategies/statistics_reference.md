@@ -126,7 +126,7 @@ var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
 
-Console.WriteLine($"Net profit: {netProfit.Value}");
+Console.WriteLine($"净利润: {netProfit.Value}");
 ```
 
 ### 为系数配置无风险利率

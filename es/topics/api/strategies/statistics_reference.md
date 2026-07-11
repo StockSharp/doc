@@ -126,7 +126,7 @@ var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
 
-Console.WriteLine($"Net profit: {netProfit.Value}");
+Console.WriteLine($"Beneficio neto: {netProfit.Value}");
 ```
 
 ### Configurar la tasa libre de riesgo para coeficientes

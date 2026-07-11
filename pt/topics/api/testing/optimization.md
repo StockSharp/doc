@@ -461,7 +461,7 @@ var optimizeParams = new IStrategyParam[] { longParam, shortParam };
 // Gerar combinações.
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
-Console.WriteLine($"Total iterations: {totalCount}");
+Console.WriteLine($"Total de iterações: {totalCount}");
 
 // Executar otimização.
 var startTime = Paths.HistoryBeginDate;

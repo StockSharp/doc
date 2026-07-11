@@ -126,7 +126,7 @@ var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
 
-Console.WriteLine($"Net profit: {netProfit.Value}");
+Console.WriteLine($"Lucro líquido: {netProfit.Value}");
 ```
 
 ### Configurar a Taxa Sem Risco para Coeficientes

@@ -461,7 +461,7 @@ var optimizeParams = new IStrategyParam[] { longParam, shortParam };
 // 組み合わせを生成。
 var strategies = strategy.ToBruteForce(optimizeParams, out _, out var totalCount);
 
-Console.WriteLine($"Total iterations: {totalCount}");
+Console.WriteLine($"総反復回数: {totalCount}");
 
 // 最適化を実行。
 var startTime = Paths.HistoryBeginDate;

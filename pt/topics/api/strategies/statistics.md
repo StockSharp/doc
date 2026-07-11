@@ -115,7 +115,7 @@ strategy.PnLChanged += () =>
 		
 	if (netProfit != null)
 	{
-		Console.WriteLine($"Net Profit: {netProfit.Value}");
+		Console.WriteLine($"Lucro líquido: {netProfit.Value}");
 	}
 };
 

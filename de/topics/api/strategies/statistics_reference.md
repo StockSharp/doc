@@ -126,7 +126,7 @@ var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
 
-Console.WriteLine($"Net profit: {netProfit.Value}");
+Console.WriteLine($"Nettogewinn: {netProfit.Value}");
 ```
 
 ### Risikofreien Zinssatz für Koeffizienten konfigurieren

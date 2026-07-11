@@ -126,7 +126,7 @@ var netProfit = strategy.StatisticManager.Parameters
     .OfType<NetProfitParameter>()
     .First();
 
-Console.WriteLine($"Net profit: {netProfit.Value}");
+Console.WriteLine($"純利益: {netProfit.Value}");
 ```
 
 ### 係数用のリスクフリーレートの設定
