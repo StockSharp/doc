@@ -2416,6 +2416,44 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedNamedMovingAverageIndicatorDocsDoNotKeepEnglishNames()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/hma.md",
+			"topics/api/indicators/list_of_indicators/jma.md",
+			"topics/api/indicators/list_of_indicators/variable_moving_average.md",
+			"topics/api/indicators/list_of_indicators/guppy_multiple_moving_average.md",
+			"topics/api/indicators/list_of_indicators/arnaud_legoux_moving_average.md",
+			"topics/api/indicators/list_of_indicators/fractal_adaptive_moving_average.md",
+			"topics/api/indicators/list_of_indicators/endpoint_moving_average.md",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!ContainsStandaloneText(text, "Moving Average"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized named moving-average indicator page keeps English name text. Localize the repeated indicator name in headings and prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

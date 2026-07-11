@@ -1,12 +1,12 @@
 # EPMA
 
-**Endpoint Moving Average (EPMA)** es un indicador técnico que es una modificación de la media móvil estándar, diseñado para reducir el retraso en la identificación de tendencias.
+**Media móvil de punto final (EPMA)** es un indicador técnico que es una modificación de la media móvil estándar, diseñado para reducir el retraso en la identificación de tendencias.
 
 Para utilizar el indicador, debe utilizar la clase [EndpointMovingAverage](xref:StockSharp.Algo.Indicators.EndpointMovingAverage).
 
 ## Descripción
 
-El Endpoint Moving Average (EPMA) es una forma especial de media móvil que se centra en los puntos de datos del punto final. A diferencia de los promedios móviles estándar que ponderan uniformemente todos los puntos en un período determinado, EPMA otorga más peso a los puntos finales, lo que permite una respuesta más rápida a los cambios de tendencia.
+La media móvil de punto final (EPMA) es una forma especial de media móvil que se centra en los puntos de datos del punto final. A diferencia de los promedios móviles estándar que ponderan uniformemente todos los puntos en un período determinado, EPMA otorga más peso a los puntos finales, lo que permite una respuesta más rápida a los cambios de tendencia.
 
 El objetivo principal de EPMA es reducir el retraso inherente a las medias móviles tradicionales manteniendo al mismo tiempo la capacidad de filtrar el ruido del mercado. Debido a su metodología de cálculo, EPMA a menudo reacciona más rápidamente a los cambios de dirección del precio, lo que lo convierte en una herramienta valiosa para los operadores que buscan identificar cambios de tendencia antes.
 
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Endpoint Moving Average se basa en el método de regresión lineal, centrándose en los puntos finales del período considerado:
+El cálculo de la media móvil de punto final se basa en el método de regresión lineal, centrándose en los puntos finales del período considerado:
 
 1. Determinación de la tendencia lineal entre el punto inicial y final del período:
    ```
@@ -45,7 +45,7 @@ De hecho, EPMA es igual al último valor del precio (valor final) en el período
 
 ## Interpretación
 
-El Endpoint Moving Average se interpreta de manera similar a otras medias móviles, pero teniendo en cuenta su mayor sensibilidad:
+La media móvil de punto final se interpreta de manera similar a otras medias móviles, pero teniendo en cuenta su mayor sensibilidad:
 
 1. **EPMA Dirección**:
    - Hacia arriba EPMA indica una tendencia alcista

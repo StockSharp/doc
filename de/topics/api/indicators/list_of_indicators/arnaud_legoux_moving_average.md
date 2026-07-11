@@ -1,6 +1,6 @@
 # ALMA
 
-**Arnaud Legoux Moving Average (ALMA)** ist ein von Arnaud Legoux entwickelter Indikator, der optimiert wurde, um Marktrauschen zu eliminieren und Signalverzögerungen zu reduzieren.
+**Gleitender Durchschnitt nach Arnaud Legoux (ALMA)** ist ein von Arnaud Legoux entwickelter Indikator, der optimiert wurde, um Marktrauschen zu eliminieren und Signalverzögerungen zu reduzieren.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [ArnaudLegouxMovingAverage](xref:StockSharp.Algo.Indicators.ArnaudLegouxMovingAverage) verwenden.
 

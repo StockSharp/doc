@@ -1,12 +1,12 @@
 # FRAMA
 
-**Fractal Adaptive Moving Average (FRAMA)** は、John Ehlers によって開発されたテクニカルインジケーターで、市場のフラクタル次元に基づいて価格変化への反応速度を適応させます。
+**フラクタル適応移動平均 (FRAMA)** は、John Ehlers によって開発されたテクニカルインジケーターで、市場のフラクタル次元に基づいて価格変化への反応速度を適応させます。
 
 このインジケーターを使用するには、[FractalAdaptiveMovingAverage](xref:StockSharp.Algo.Indicators.FractalAdaptiveMovingAverage) クラスを使用する必要があります。
 
 ## 説明
 
-Fractal Adaptive Moving Average (FRAMA) は、指数移動平均 (EMA) の高度な一種で、市場のフラクタル次元に基づいて価格変化に対する感度を自動的に調整します。このインジケーターは John Ehlers によって開発され、2000 年 10 月に Technical Analysis of Stocks & Commodities 誌で紹介されました。
+フラクタル適応移動平均 (FRAMA) は、指数移動平均 (EMA) の高度な一種で、市場のフラクタル次元に基づいて価格変化に対する感度を自動的に調整します。このインジケーターは John Ehlers によって開発され、2000 年 10 月に Technical Analysis of Stocks & Commodities 誌で紹介されました。
 
 FRAMA はフラクタル幾何の概念を使用して市場構造を分析します。現在の市場がどの程度「フラクタル」または混沌としているかを判断し、それに基づいてインジケーターの応答速度を調整します:
 

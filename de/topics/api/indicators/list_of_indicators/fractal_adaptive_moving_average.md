@@ -1,12 +1,12 @@
 # FRAMA
 
-**Fractal Adaptive Moving Average (FRAMA)** ist ein von John Ehlers entwickelter technischer Indikator, der die Reaktionsgeschwindigkeit auf Preisänderungen basierend auf der fraktalen Dimension des Marktes anpasst.
+**Fraktaler adaptiver gleitender Durchschnitt (FRAMA)** ist ein von John Ehlers entwickelter technischer Indikator, der die Reaktionsgeschwindigkeit auf Preisänderungen basierend auf der fraktalen Dimension des Marktes anpasst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [FractalAdaptiveMovingAverage](xref:StockSharp.Algo.Indicators.FractalAdaptiveMovingAverage) verwenden.
 
 ## Beschreibung
 
-Der Fractal Adaptive Moving Average (FRAMA) ist ein fortschrittlicher Typ des exponentiellen gleitenden Durchschnitts (EMA), der seine Empfindlichkeit gegenüber Preisänderungen basierend auf der fraktalen Dimension des Marktes automatisch anpasst. Der Indikator wurde von John Ehlers entwickelt und im Oktober 2000 in der Zeitschrift Technical Analysis of Stocks & Commodities vorgestellt.
+Der fraktale adaptive gleitende Durchschnitt (FRAMA) ist ein fortschrittlicher Typ des exponentiellen gleitenden Durchschnitts (EMA), der seine Empfindlichkeit gegenüber Preisänderungen basierend auf der fraktalen Dimension des Marktes automatisch anpasst. Der Indikator wurde von John Ehlers entwickelt und im Oktober 2000 in der Zeitschrift Technical Analysis of Stocks & Commodities vorgestellt.
 
 FRAMA nutzt das Konzept der fraktalen Geometrie zur Analyse der Marktstruktur. Es bestimmt, wie „fraktal“ oder chaotisch der aktuelle Markt ist, und passt auf dieser Grundlage die Antwortrate des Indikators an:
 

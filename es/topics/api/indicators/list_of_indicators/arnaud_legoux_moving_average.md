@@ -1,6 +1,6 @@
 # ALMA
 
-**Arnaud Legoux Moving Average (ALMA)** es un indicador desarrollado por Arnaud Legoux y optimizado para eliminar el ruido del mercado y reducir el retraso de la señal.
+**Media móvil de Arnaud Legoux (ALMA)** es un indicador desarrollado por Arnaud Legoux y optimizado para eliminar el ruido del mercado y reducir el retraso de la señal.
 
 Para utilizar el indicador, debe utilizar la clase [ArnaudLegouxMovingAverage](xref:StockSharp.Algo.Indicators.ArnaudLegouxMovingAverage).
 

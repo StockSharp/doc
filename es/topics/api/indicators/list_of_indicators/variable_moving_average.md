@@ -1,6 +1,6 @@
 # Variable MA
 
-**Variable Moving Average (VMA)** adapta su período de suavización en función de la volatilidad del mercado.
+**Media móvil variable (VMA)** adapta su período de suavización en función de la volatilidad del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [VariableMovingAverage](xref:StockSharp.Algo.Indicators.VariableMovingAverage).
 

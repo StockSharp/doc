@@ -1,6 +1,6 @@
 # ALMA
 
-**Arnaud Legoux Moving Average (ALMA)** は Arnaud Legoux によって開発されたインジケーターで、市場ノイズを除去し、シグナルの遅延を減らすよう最適化されています。
+**Arnaud Legoux移動平均 (ALMA)** は Arnaud Legoux によって開発されたインジケーターで、市場ノイズを除去し、シグナルの遅延を減らすよう最適化されています。
 
 このインジケーターを使用するには、[ArnaudLegouxMovingAverage](xref:StockSharp.Algo.Indicators.ArnaudLegouxMovingAverage) クラスを使用する必要があります。
 

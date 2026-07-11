@@ -1,12 +1,12 @@
 # EPMA
 
-**Endpoint Moving Average (EPMA)** ist ein technischer Indikator, der eine Modifikation des standardmäßigen gleitenden Durchschnitts darstellt und darauf ausgelegt ist, Verzögerungen bei der Trenderkennung zu reduzieren.
+**Endpunkt-Gleitender Durchschnitt (EPMA)** ist ein technischer Indikator, der eine Modifikation des standardmäßigen gleitenden Durchschnitts darstellt und darauf ausgelegt ist, Verzögerungen bei der Trenderkennung zu reduzieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [EndpointMovingAverage](xref:StockSharp.Algo.Indicators.EndpointMovingAverage) verwenden.
 
 ## Beschreibung
 
-Der Endpoint Moving Average (EPMA) ist eine spezielle Form des gleitenden Durchschnitts, der sich auf die Endpunktdatenpunkte konzentriert. Im Gegensatz zu standardmäßigen gleitenden Durchschnitten, die alle Punkte in einem bestimmten Zeitraum gleichmäßig gewichten, gibt EPMA den Endpunktpunkten mehr Gewicht und ermöglicht so eine schnellere Reaktion auf Trendänderungen.
+Der Endpunkt-Gleitende Durchschnitt (EPMA) ist eine spezielle Form des gleitenden Durchschnitts, der sich auf die Endpunktdatenpunkte konzentriert. Im Gegensatz zu standardmäßigen gleitenden Durchschnitten, die alle Punkte in einem bestimmten Zeitraum gleichmäßig gewichten, gibt EPMA den Endpunktpunkten mehr Gewicht und ermöglicht so eine schnellere Reaktion auf Trendänderungen.
 
 Der Hauptzweck von EPMA besteht darin, die Verzögerung herkömmlicher gleitender Durchschnitte zu verringern und gleichzeitig die Fähigkeit zur Filterung von Marktstörungen beizubehalten. Aufgrund seiner Berechnungsmethodik reagiert EPMA häufig schneller auf Preisrichtungsänderungen, was es zu einem wertvollen Werkzeug für Händler macht, die Trendumkehrungen früher erkennen möchten.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Endpoint Moving Average-Berechnung basiert auf der linearen Regressionsmethode und konzentriert sich auf die Endpunkte des betrachteten Zeitraums:
+Die Berechnung des Endpunkt-Gleitenden Durchschnitts basiert auf der linearen Regressionsmethode und konzentriert sich auf die Endpunkte des betrachteten Zeitraums:
 
 1. Bestimmung des linearen Trends zwischen Anfangs- und Endpunkt der Periode:
    ```
@@ -45,7 +45,7 @@ Tatsächlich entspricht EPMA dem letzten Preiswert (Endwert) im betrachteten Zei
 
 ## Interpretation
 
-Der Endpoint Moving Average wird ähnlich wie andere gleitende Durchschnitte interpretiert, jedoch unter Berücksichtigung seiner erhöhten Empfindlichkeit:
+Der Endpunkt-Gleitende Durchschnitt wird ähnlich wie andere gleitende Durchschnitte interpretiert, jedoch unter Berücksichtigung seiner erhöhten Empfindlichkeit:
 
 1. **EPMA Richtung**:
    - Aufwärts EPMA zeigt einen Aufwärtstrend an

@@ -1,6 +1,6 @@
 # JMA
 
-**Jurik's Moving Average (JMA)** é um indicador que é uma variação da média móvel. A curva do indicador caracteriza-se por uma boa suavização, bem como por um tempo de antecipação mínimo após o fim dos movimentos de preço e um atraso mínimo em relação a movimentos fortes do preço.
+**Média móvel de Jurik (JMA)** é um indicador que é uma variação da média móvel. A curva do indicador caracteriza-se por uma boa suavização, bem como por um tempo de antecipação mínimo após o fim dos movimentos de preço e um atraso mínimo em relação a movimentos fortes do preço.
 
 Para utilizar o indicador, deve ser usada a classe [JurikMovingAverage](xref:StockSharp.Algo.Indicators.JurikMovingAverage).
 
@@ -14,4 +14,3 @@ Para utilizar o indicador, deve ser usada a classe [JurikMovingAverage](xref:Sto
 ## Ver Também
 
 [KAMA](kama.md)
-
