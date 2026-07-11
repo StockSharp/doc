@@ -1,4 +1,4 @@
-# Optimal Tracking
+# optimale Nachführung
 
 Der **optimaler Nachführfilter**-Indikator passt schnelle Preisänderungen an und ist relativ gleichmäßig, wenn der Preis einen Nebeneffekt hat. Der Effekt dieses Filters ähnelt dem adaptiven gleitenden Durchschnitt nach Kaufman.
 

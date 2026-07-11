@@ -1,6 +1,6 @@
 # FDI
 
-**Fractal Dimension Index (FDI)** cuantifica la rugosidad de una serie de precios.
+**índice de dimensión fractal (FDI)** cuantifica la rugosidad de una serie de precios.
 
 Para utilizar el indicador, debe utilizar la clase [FractalDimension](xref:StockSharp.Algo.Indicators.FractalDimension).
 

@@ -1,6 +1,6 @@
 # WVAD
 
-**Williams Variable Accumulation Distribution (WVAD)** ist ein von Larry Williams entwickelter kumulativer Volumenindikator. Er bewertet Kauf- und Verkaufsdruck, indem er das Verhältnis zwischen Eröffnungskurs, Schlusskurs, Hoch, Tief und Handelsvolumen analysiert.
+**variable Williams-Akkumulation/Distribution (WVAD)** ist ein von Larry Williams entwickelter kumulativer Volumenindikator. Er bewertet Kauf- und Verkaufsdruck, indem er das Verhältnis zwischen Eröffnungskurs, Schlusskurs, Hoch, Tief und Handelsvolumen analysiert.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WilliamsVariableAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsVariableAccumulationDistribution).
 

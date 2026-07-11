@@ -1,6 +1,6 @@
 # FDI
 
-**Fractal Dimension Index (FDI)** quantifiziert die Rauheit einer Preisreihe.
+**Fraktaldimensionsindex (FDI)** quantifiziert die Rauheit einer Preisreihe.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [FractalDimension](xref:StockSharp.Algo.Indicators.FractalDimension) verwenden.
 

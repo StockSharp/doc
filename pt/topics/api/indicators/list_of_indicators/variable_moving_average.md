@@ -1,4 +1,4 @@
-# Variable MA
+# média móvel variável
 
 **Média móvel variável (VMA)** adapta o seu período de suavização com base na volatilidade do mercado.
 

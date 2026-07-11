@@ -1,4 +1,4 @@
-# Variable MA
+# variabler gleitender Durchschnitt
 
 **Variabler gleitender Durchschnitt (VMA)** passt seine Glättungsperiode an die Marktvolatilität an.
 

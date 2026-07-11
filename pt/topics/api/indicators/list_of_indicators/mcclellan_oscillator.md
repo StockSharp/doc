@@ -66,8 +66,8 @@ O Oscilador de McClellan pode ser interpretado da seguinte forma:
    - Valores crescentes do MCO (positivos ou negativos) indicam aceleração do movimento actual do mercado
    - Valores decrescentes do MCO indicam desaceleração do movimento actual do mercado
 
-6. **Combinação com McClellan Summation Index**:
-   - McClellan Summation Index (MSI) é a soma cumulativa dos valores do MCO
+6. **Combinação com índice de somatório de McClellan**:
+   - índice de somatório de McClellan (MSI) é a soma cumulativa dos valores do MCO
    - O MSI cruzar zero pode confirmar sinais do MCO e indicar alterações de tendência de longo prazo
 
 7. **Padrões Altista/Baixista**:

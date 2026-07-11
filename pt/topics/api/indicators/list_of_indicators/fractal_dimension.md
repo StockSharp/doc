@@ -1,6 +1,6 @@
 # FDI
 
-**Fractal Dimension Index (FDI)** quantifica a irregularidade de uma série de preços.
+**índice de dimensão fractal (FDI)** quantifica a irregularidade de uma série de preços.
 
 Para utilizar o indicador, é necessário usar a classe [FractalDimension](xref:StockSharp.Algo.Indicators.FractalDimension).
 

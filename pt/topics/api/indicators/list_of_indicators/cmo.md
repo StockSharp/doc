@@ -1,8 +1,8 @@
 # CMO
 
-**Chande Momentum Oscillator (CMO)** é uma modificação do indicador Momentum. O criador do CMO é o trader Tushar Chande. 
+**oscilador de momentum de Chande (CMO)** é uma modificação do indicador Momentum. O criador do CMO é o trader Tushar Chande.
 
-Para usar o indicador, deve ser usada a classe [ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator). 
+Para usar o indicador, deve ser usada a classe [ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator).
 
 ![IndicatorChandeMomentumOscillator](../../../../images/indicatorchandemomentumoscillator.png)
 

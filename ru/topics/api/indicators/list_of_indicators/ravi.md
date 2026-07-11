@@ -1,8 +1,8 @@
 # RAVI
 
-**Range Action Verification Index (Ravi)** — индикатор технического анализа, определяющий наличие на рынке тренда и его направление, и основанный на паре простых скользящих средних с настраиваемыми периодами. 
+**индекс подтверждения движения диапазона (Ravi)** — индикатор технического анализа, определяющий наличие на рынке тренда и его направление, и основанный на паре простых скользящих средних с настраиваемыми периодами.
 
-Для использования индикатора необходимо использовать класс [RangeActionVerificationIndex](xref:StockSharp.Algo.Indicators.RangeActionVerificationIndex). 
+Для использования индикатора необходимо использовать класс [RangeActionVerificationIndex](xref:StockSharp.Algo.Indicators.RangeActionVerificationIndex).
 
 ![IndicatorRangeActionVerificationIndex](../../../../images/indicatorrangeactionverificationindex.png)
 

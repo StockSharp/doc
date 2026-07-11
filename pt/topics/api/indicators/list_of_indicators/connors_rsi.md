@@ -38,8 +38,8 @@ O cálculo do RSI de Connors envolve três componentes que são depois promediad
    - Depois aplicar RSI a esta sequência usando o StreakRSIPeriod
 
 3. **Componente RSI de taxa de variação (ROC RSI)**:
-   - Calcular o Percentile Rank do ROC atual ao longo do ROCRSIPeriod
-   - Escalar o Percentile Rank de 0 a 100
+   - Calcular a classificação percentil do ROC atual ao longo do ROCRSIPeriod
+   - Escalar a classificação percentil de 0 a 100
 
 4. **Valor final de RSI de Connors**:
    ```

@@ -1,6 +1,6 @@
 # WVAD
 
-**Williams Variable Accumulation Distribution (WVAD)** は、Larry Williams によって開発された累積出来高インジケーターです。始値、終値、高値、安値、取引出来高の関係を分析することで、買い圧力と売り圧力を評価します。
+**ウィリアムズ可変累積/分配 (WVAD)** は、Larry Williams によって開発された累積出来高インジケーターです。始値、終値、高値、安値、取引出来高の関係を分析することで、買い圧力と売り圧力を評価します。
 
 このインジケーターを使用するには、[WilliamsVariableAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsVariableAccumulationDistribution) クラスを使用します。
 

@@ -1,6 +1,6 @@
 # APZ
 
-**Adaptive Price Zone (APZ)** は Lee Leibfarth によって開発されたテクニカルインジケーターで、市場のボラティリティに適応する動的なサポートゾーンとレジスタンスゾーンを作成します。
+**適応価格ゾーン (APZ)** は Lee Leibfarth によって開発されたテクニカルインジケーターで、市場のボラティリティに適応する動的なサポートゾーンとレジスタンスゾーンを作成します。
 
 このインジケーターを使用するには、[AdaptivePriceZone](xref:StockSharp.Algo.Indicators.AdaptivePriceZone) クラスを使用する必要があります。
 

@@ -2,7 +2,7 @@
 
 ﻿# APZ
 
-**Adaptive Price Zone (APZ)** é um indicador técnico desenvolvido por Lee Leibfarth que cria zonas dinâmicas de suporte e resistência, adaptando-se à volatilidade do mercado.
+**zona de preço adaptativa (APZ)** é um indicador técnico desenvolvido por Lee Leibfarth que cria zonas dinâmicas de suporte e resistência, adaptando-se à volatilidade do mercado.
 
 Para usar o indicador, é necessário usar a classe [AdaptivePriceZone](xref:StockSharp.Algo.Indicators.AdaptivePriceZone).
 

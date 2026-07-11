@@ -1,6 +1,6 @@
 # FDI
 
-**Fractal Dimension Index (FDI)** は、価格系列の粗さを定量化します。
+**フラクタル次元指数 (FDI)** は、価格系列の粗さを定量化します。
 
 このインジケーターを使用するには、[FractalDimension](xref:StockSharp.Algo.Indicators.FractalDimension) クラスを使用する必要があります。
 

@@ -1,8 +1,8 @@
 # CMO
 
-**Chande Momentum Oscillator (CMO)** は、Momentum インジケーターを改良したものです。CMO の考案者はトレーダーの Tushar Chande です。 
+**チャンデ・モメンタム・オシレーター (CMO)** は、Momentum インジケーターを改良したものです。CMO の考案者はトレーダーの Tushar Chande です。
 
-このインジケーターを使用するには、[ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator) クラスを使用する必要があります。 
+このインジケーターを使用するには、[ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator) クラスを使用する必要があります。
 
 ![IndicatorChandeMomentumOscillator](../../../../images/indicatorchandemomentumoscillator.png)
 
