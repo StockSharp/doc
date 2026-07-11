@@ -1,6 +1,6 @@
-﻿# Padrão Three Black Crows
+# Padrão Três corvos negros
 
-Three Black Crows é um poderoso padrão de velas de reversão baixista, composto por três velas consecutivas, que se forma numa tendência ascendente. Este padrão indica uma mudança decisiva de controlo dos compradores para os vendedores, sinalizando uma possível reversão de uma tendência ascendente.
+Três corvos negros é um poderoso padrão de velas de reversão baixista, composto por três velas consecutivas, que se forma numa tendência ascendente. Este padrão indica uma mudança decisiva de controlo dos compradores para os vendedores, sinalizando uma possível reversão de uma tendência ascendente.
 
 ##### Características principais:
 
@@ -14,7 +14,7 @@ Three Black Crows é um poderoso padrão de velas de reversão baixista, compost
 
 ### Interpretação
 
-Three Black Crows é considerado um dos sinais mais fiáveis de reversão de uma tendência ascendente:
+Três corvos negros é considerado um dos sinais mais fiáveis de reversão de uma tendência ascendente:
 
 - A sequência de três velas em queda mostra um aumento constante da pressão baixista.
 - A abertura de cada vela subsequente dentro do corpo da anterior indica alguma consolidação, seguida da continuação do movimento baixista.
@@ -24,7 +24,7 @@ Three Black Crows é considerado um dos sinais mais fiáveis de reversão de uma
 
 ### Estratégias de Negociação
 
-Three Black Crows oferece oportunidades fiáveis para entrar numa posição curta:
+Três corvos negros oferece oportunidades fiáveis para entrar numa posição curta:
 
 - Entre numa posição curta após a formação completa do padrão, normalmente na abertura da quarta vela.
 - Coloque um stop-loss acima do máximo da terceira vela ou acima do máximo de todo o padrão.
@@ -36,6 +36,6 @@ Three Black Crows oferece oportunidades fiáveis para entrar numa posição curt
 
 ## Ver também
 
-[Padrão Three White Soldiers](three_white_soldiers.md)
+[Padrão Três soldados brancos](three_white_soldiers.md)
 
-[Padrão Falling Three Methods](falling_three_methods.md)
+[Padrão Três métodos descendentes](falling_three_methods.md)

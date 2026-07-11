@@ -1,6 +1,6 @@
-﻿# Piercing Line
+# Durchdringungslinie
 
-Piercing ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, die unterhalb des Tiefs der vorherigen Candle eröffnet und oberhalb der Mitte des Körpers der vorherigen Candle schließt.
+Durchdringung ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, die unterhalb des Tiefs der vorherigen Candle eröffnet und oberhalb der Mitte des Körpers der vorherigen Candle schließt.
 
 ##### Hauptmerkmale:
 
@@ -9,21 +9,21 @@ Piercing ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in e
 - Der Schlusskurs der zweiten Candle dringt tief in den Körper der ersten Candle ein und schließt oberhalb der Mitte der ersten Candle (C > (pB / 2 + pC)).
 - Entsteht in einem Abwärtstrend.
 
-![Piercing-Muster](../../../images/piercingpattern.png)
+![Durchdringung-Muster](../../../images/piercingpattern.png)
 
 ### Interpretation
 
-Piercing gilt als zuverlässiges Signal für eine mögliche Umkehr eines Abwärtstrends:
+Durchdringung gilt als zuverlässiges Signal für eine mögliche Umkehr eines Abwärtstrends:
 
 - Die Eröffnung der zweiten Candle unterhalb des Tiefs der ersten Candle (Abwärts-Gap) zeigt anhaltenden bärischen Druck.
 - Während der Handelssitzung übernehmen jedoch die Bullen die Kontrolle und drücken den Preis deutlich nach oben, sodass die Candle oberhalb der Mitte des Körpers der vorherigen Candle schließt.
 - Dies zeigt einen abrupten Stimmungswechsel von bärisch zu bullisch.
 - Je tiefer das Eindringen in die zweite Hälfte des Körpers der ersten Candle ist, desto stärker ist das Signal.
-- Wenn der Schlusskurs der zweiten Candle oberhalb des Eröffnungskurses der ersten Candle liegt, geht das Muster in die Kategorie "Bullish Engulfing" über, die als noch stärkeres Signal gilt.
+- Wenn der Schlusskurs der zweiten Candle oberhalb des Eröffnungskurses der ersten Candle liegt, geht das Muster in die Kategorie "Bullische Umschließung" über, die als noch stärkeres Signal gilt.
 
 ### Handelsstrategien
 
-Piercing bietet gute Möglichkeiten für den Einstieg in eine Long-Position:
+Durchdringung bietet gute Möglichkeiten für den Einstieg in eine Long-Position:
 
 - Einstieg in eine Position nach Bestätigung des Musters (üblicherweise bei Eröffnung der dritten Candle oder beim Durchbruch des Hochs der zweiten Candle).
 - Platzieren eines Stop-Loss unterhalb des Tiefs der zweiten Candle oder unterhalb des Tiefs des gesamten Musters.

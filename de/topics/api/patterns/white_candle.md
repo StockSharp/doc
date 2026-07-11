@@ -1,6 +1,6 @@
 # Weiße Kerze
 
-White Candle (bullische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs über dem Eröffnungskurs liegt. Diese Candle spiegelt eine bullische Marktstimmung wider, bei der Käufer während der Candle-Bildungsperiode den Preis kontrollierten.
+Weiße Kerze (bullische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs über dem Eröffnungskurs liegt. Diese Candle spiegelt eine bullische Marktstimmung wider, bei der Käufer während der Candle-Bildungsperiode den Preis kontrollierten.
 
 ##### Hauptmerkmale:
 
@@ -13,7 +13,7 @@ White Candle (bullische Candle) ist ein klassisches Candlestick-Muster, das ents
 
 ### Interpretation
 
-White Candle signalisiert bullischen Druck im Markt:
+Weiße Kerze signalisiert bullischen Druck im Markt:
 
 - Je länger der Candle-Körper ist, desto stärker ist der bullische Druck.
 - Eine länge weiße Candle nach einem Abwärtstrend kann auf eine mögliche Umkehr hinweisen.
@@ -26,7 +26,7 @@ Obwohl eine einzelne weiße Candle normalerweise kein eigenständiges Handelssig
 
 - Bestätigung eines Aufwärtstrends oder einer Umkehr nach einer Abwärtsbewegung.
 - Suche nach langen weißen Candles an Unterstützungsniveaus für mögliche Long-Positionen.
-- Verwendung in Kombination mit anderen Candlestick-Mustern, zum Beispiel einer weißen Candle nach einem Bullish Engulfing.
+- Verwendung in Kombination mit anderen Candlestick-Mustern, zum Beispiel einer weißen Candle nach einer bullischen Umschließung.
 - Identifikation von Widerstandsniveaus nach einer Serie aufeinanderfolgender weißer Candles.
 
 ## Siehe auch

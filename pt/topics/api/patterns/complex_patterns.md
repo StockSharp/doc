@@ -55,13 +55,13 @@ Quando `Recognize` é chamado, o array de velas é dividido em segmentos sequenc
 ```csharp
 using StockSharp.Algo.Candles.Patterns;
 
-// Criar um padrão complexo: primeiro uma vela bearish, depois bullish engulfing
+// Criar um padrão complexo: primeiro uma vela baixista, depois engolfo altista
 var complex = new ComplexCandlePattern(
     "Reversal Up",
     new ICandlePattern[]
     {
-        CandlePatternRegistry.Black,            // 1 vela: bearish
-        CandlePatternRegistry.BullishEngulfing,  // 2 velas: bullish engulfing
+        CandlePatternRegistry.Black,            // 1 vela: baixista
+        CandlePatternRegistry.BullishEngulfing,  // 2 velas: engolfo altista
     }
 );
 

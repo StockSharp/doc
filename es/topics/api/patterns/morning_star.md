@@ -1,6 +1,6 @@
-﻿# Patrón Morning Star
+# Patrón Estrella matinal
 
-Morning Star es un patrón de velas de reversión alcista compuesto por tres velas que se forma en una tendencia bajista. Este patrón muestra una transición de sentimiento bajista a alcista mediante un período de incertidumbre o consolidación.
+Estrella matinal es un patrón de velas de reversión alcista compuesto por tres velas que se forma en una tendencia bajista. Este patrón muestra una transición de sentimiento bajista a alcista mediante un período de incertidumbre o consolidación.
 
 ##### Características clave:
 
@@ -13,17 +13,17 @@ Morning Star es un patrón de velas de reversión alcista compuesto por tres vel
 
 ### Interpretación
 
-Morning Star se considera una señal fuerte de una posible reversión de una tendencia bajista:
+Estrella matinal se considera una señal fuerte de una posible reversión de una tendencia bajista:
 
 - La primera vela confirma la fuerza de la tendencia bajista.
 - La segunda vela (estrella) muestra debilitamiento de la presión bajista e incertidumbre en el mercado.
 - La tercera vela demuestra el regreso de los compradores y un cambio de control de bajistas a alcistas.
 - Cuanto más profundamente penetre la tercera vela en el cuerpo de la primera, más fuerte será la señal de reversión.
-- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Morning Doji Star" y se considera una señal aún más fuerte.
+- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Estrella doji matinal" y se considera una señal aún más fuerte.
 
 ### Estrategias de trading
 
-Morning Star proporciona buenas oportunidades para entrar en una posición larga:
+Estrella matinal proporciona buenas oportunidades para entrar en una posición larga:
 
 - Entrar en una posición larga después de la formación del patrón, normalmente en la apertura de la cuarta vela o cuando se rompe el máximo de la tercera vela.
 - Colocar un stop-loss por debajo del mínimo de la segunda vela o del mínimo de todo el patrón.
@@ -33,6 +33,6 @@ Morning Star proporciona buenas oportunidades para entrar en una posición larga
 
 ## Véase también
 
-[Patrón Evening Star](evening_star.md)
+[Patrón Estrella vespertina](evening_star.md)
 
-[Patrón Three White Soldiers](three_white_soldiers.md)
+[Patrón Tres soldados blancos](three_white_soldiers.md)

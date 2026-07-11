@@ -1,6 +1,6 @@
-# Padrão White Candle
+# Padrão Vela branca
 
-White candle (vela altista) é um padrão clássico de velas que se forma quando o preço de fecho é superior ao preço de abertura. Esta vela reflete um sentimento altista do mercado, em que os compradores controlaram o preço durante o período de formação da vela.
+Vela branca (vela altista) é um padrão clássico de velas que se forma quando o preço de fecho é superior ao preço de abertura. Esta vela reflete um sentimento altista do mercado, em que os compradores controlaram o preço durante o período de formação da vela.
 
 ##### Características principais:
 
@@ -13,7 +13,7 @@ White candle (vela altista) é um padrão clássico de velas que se forma quando
 
 ### Interpretação
 
-White candle sinaliza pressão altista no mercado:
+Vela branca sinaliza pressão altista no mercado:
 
 - Quanto maior for o corpo da vela, mais forte é a pressão altista.
 - Uma vela branca longa após uma tendência descendente pode indicar uma possível reversão.
@@ -26,11 +26,11 @@ Embora uma única vela branca normalmente não seja um sinal de negociação ind
 
 - Confirmação de uma tendência ascendente ou de uma reversão após um movimento descendente.
 - Procura de velas brancas longas em níveis de suporte para potenciais posições longas.
-- Utilização em combinação com outros padrões de velas, por exemplo, uma vela branca após um bullish engulfing.
+- Utilização em combinação com outros padrões de velas, por exemplo, uma vela branca após um engolfo altista.
 - Identificação de níveis de resistência após uma série de velas brancas consecutivas.
 
 ## Ver também
 
-[Padrão Black Candle](black_candle.md)
+[Padrão Vela preta](black_candle.md)
 
-[Padrão White Marubozu](white_marubozu.md)
+[Padrão Marubozu branco](white_marubozu.md)

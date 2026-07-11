@@ -1,6 +1,6 @@
-﻿# Padrão Piercing
+# Padrão Penetrante
 
-Piercing é um padrão de velas de reversão bullish composto por duas velas que se forma numa tendência descendente. A primeira vela é preta (bearish), seguida por uma vela branca (bullish) que abre abaixo do mínimo da vela anterior e fecha acima do ponto médio do corpo da vela anterior.
+Penetrante é um padrão de velas de reversão altista composto por duas velas que se forma numa tendência descendente. A primeira vela é preta (baixista), seguida por uma vela branca (altista) que abre abaixo do mínimo da vela anterior e fecha acima do ponto médio do corpo da vela anterior.
 
 ##### Características Principais:
 
@@ -9,21 +9,21 @@ Piercing é um padrão de velas de reversão bullish composto por duas velas que
 - O preço de fecho da segunda vela penetra profundamente no corpo da primeira vela, fechando acima do ponto médio da primeira vela (C > (pB / 2 + pC)).
 - Forma-se numa tendência descendente.
 
-![Padrão piercing](../../../images/piercingpattern.png)
+![Padrão Penetrante](../../../images/piercingpattern.png)
 
 ### Interpretação
 
-Piercing é considerado um sinal fiável de potencial reversão de uma tendência descendente:
+Penetrante é considerado um sinal fiável de potencial reversão de uma tendência descendente:
 
-- A abertura da segunda vela abaixo do mínimo da primeira vela (gap para baixo) mostra pressão bearish contínua.
+- A abertura da segunda vela abaixo do mínimo da primeira vela (gap para baixo) mostra pressão baixista contínua.
 - No entanto, durante a sessão de negociação, os bulls assumem o controlo e empurram o preço significativamente para cima, fechando a vela acima do ponto médio do corpo da vela anterior.
-- Isto demonstra uma mudança abrupta de sentimento de bearish para bullish.
+- Isto demonstra uma mudança abrupta de sentimento de baixista para altista.
 - Quanto mais profunda for a penetração na segunda metade do corpo da primeira vela, mais forte é o sinal.
-- Se o preço de fecho da segunda vela estiver acima do preço de abertura da primeira vela, o padrão passa para a categoria "Bullish Engulfing", que é considerada um sinal ainda mais forte.
+- Se o preço de fecho da segunda vela estiver acima do preço de abertura da primeira vela, o padrão passa para a categoria "Engolfo altista", que é considerada um sinal ainda mais forte.
 
 ### Estratégias de Negociação
 
-Piercing proporciona boas oportunidades para entrar numa posição longa:
+Penetrante proporciona boas oportunidades para entrar numa posição longa:
 
 - Entrar numa posição após confirmar o padrão (normalmente na abertura da terceira vela ou quando o máximo da segunda vela é rompido).
 - Colocar um stop-loss abaixo do mínimo da segunda vela ou do mínimo de todo o padrão.
@@ -33,4 +33,4 @@ Piercing proporciona boas oportunidades para entrar numa posição longa:
 
 ## Ver também
 
-[Padrão Bullish Engulfing](bullish_engulfing.md)
+[Padrão Engolfo altista](bullish_engulfing.md)

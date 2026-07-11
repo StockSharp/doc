@@ -1,13 +1,13 @@
-﻿# Padrão Rising Three Methods
+# Padrão Três métodos ascendentes
 
-Rising Three Methods é um padrão de continuação de tendência bullish composto por cinco velas que se forma numa tendência ascendente. Este padrão mostra uma consolidação ou pausa temporária dentro de uma tendência ascendente existente antes da sua continuação.
+Três métodos ascendentes é um padrão de continuação de tendência altista composto por cinco velas que se forma numa tendência ascendente. Este padrão mostra uma consolidação ou pausa temporária dentro de uma tendência ascendente existente antes da sua continuação.
 
 ##### Características Principais:
 
-- A primeira vela é branca (bullish), com preço de abertura inferior ao preço de fecho (O < C) e um corpo longo.
-- As três velas seguintes são pretas (bearish), com preço de abertura superior ao preço de fecho (O > C), com corpos pequenos: (B < pB * 0.5m), (B < ppB * 0.5m), (B < pppB * 0.5m).
+- A primeira vela é branca (altista), com preço de abertura inferior ao preço de fecho (O < C) e um corpo longo.
+- As três velas seguintes são pretas (baixista), com preço de abertura superior ao preço de fecho (O > C), com corpos pequenos: (B < pB * 0.5m), (B < ppB * 0.5m), (B < pppB * 0.5m).
 - Os corpos das três velas intermédias não se estendem para além do intervalo da primeira vela.
-- A quinta vela é branca (bullish), com preço de abertura inferior ao preço de fecho (O < C) e um corpo longo (B > pB * 2).
+- A quinta vela é branca (altista), com preço de abertura inferior ao preço de fecho (O < C) e um corpo longo (B > pB * 2).
 - A quinta vela rompe o máximo da primeira vela e fecha mais acima.
 - Forma-se numa tendência ascendente.
 
@@ -15,7 +15,7 @@ Rising Three Methods é um padrão de continuação de tendência bullish compos
 
 ### Interpretação
 
-Rising Three Methods é considerado um sinal fiável de continuação de tendência ascendente:
+Três métodos ascendentes é considerado um sinal fiável de continuação de tendência ascendente:
 
 - A primeira vela branca longa mostra a força da tendência ascendente.
 - Três velas pretas pequenas representam uma consolidação ou correção temporária, durante a qual os vendedores não conseguiram alterar significativamente a tendência.
@@ -25,7 +25,7 @@ Rising Three Methods é considerado um sinal fiável de continuação de tendên
 
 ### Estratégias de Negociação
 
-Rising Three Methods proporciona boas oportunidades para entrar ou reforçar posições longas:
+Três métodos ascendentes proporciona boas oportunidades para entrar ou reforçar posições longas:
 
 - Entrar numa posição longa na abertura após a quinta vela ou quando o máximo da primeira vela é rompido.
 - Colocar um stop-loss abaixo do mínimo das velas de correção ou abaixo do mínimo da primeira vela.
@@ -36,6 +36,6 @@ Rising Three Methods proporciona boas oportunidades para entrar ou reforçar pos
 
 ## Ver também
 
-[Padrão Falling Three Methods](falling_three_methods.md)
+[Padrão Três métodos descendentes](falling_three_methods.md)
 
-[Padrão Three White Soldiers](three_white_soldiers.md)
+[Padrão Três soldados brancos](three_white_soldiers.md)

@@ -1,6 +1,6 @@
-﻿# Bullischer Harami
+# Bullischer Harami
 
-Bullish Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Der Begriff "Harami" stammt aus dem Japanischen und bedeutet "Schwangerschaft", da die kleine Candle (Kind) im Körper der großen Candle (Mutter) enthalten ist.
+Bullischer Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Der Begriff "Harami" stammt aus dem Japanischen und bedeutet "Schwangerschaft", da die kleine Candle (Kind) im Körper der großen Candle (Mutter) enthalten ist.
 
 ##### Hauptmerkmale:
 
@@ -13,17 +13,17 @@ Bullish Harami ist ein Umkehr-Candlestick-Muster aus zwei Candles, das in einem 
 
 ### Interpretation
 
-Bullish Harami signalisiert ein mögliches Ende eines Abwärtstrends:
+Bullischer Harami signalisiert ein mögliches Ende eines Abwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Abwärtstrend und die Stärke der Verkäufer.
 - Die zweite Candle, die vollständig innerhalb der ersten liegt, weist auf nachlassendes bärisches Momentum und ein mögliches Auftreten von Käufern hin.
 - Je kleiner der Körper der zweiten Candle im Vergleich zur ersten ist, desto ausgeprägter sind Unsicherheit und Umkehrpotenzial.
 - Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster als "Harami Cross" bezeichnet und gilt als stärkeres Unsicherheitssignal.
-- Dieses Muster gilt häufig als schwächeres Signal als Bullish Engulfing, kann aber ein früherer Hinweis auf eine mögliche Umkehr sein.
+- Dieses Muster gilt häufig als schwächeres Signal als Bullische Umschließung, kann aber ein früherer Hinweis auf eine mögliche Umkehr sein.
 
 ### Handelsstrategien
 
-Bullish Harami erfordert für den Positionseinstieg normalerweise zusätzliche Bestätigung:
+Bullischer Harami erfordert für den Positionseinstieg normalerweise zusätzliche Bestätigung:
 
 - Warten Sie nach der Musterbildung auf eine bestätigende bullische Candle, bevor Sie in eine Long-Position einsteigen.
 - Platzieren Sie einen Stop-Loss unterhalb des Tiefs des Musters oder unterhalb des Tiefs der ersten Candle.

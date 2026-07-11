@@ -1,6 +1,6 @@
-﻿# Patrón Bearish Engulfing
+# Patrón Envolvente bajista
 
-Bearish Engulfing es un potente patrón de velas de reversión bajista compuesto por dos velas que se forma en una tendencia alcista. La primera vela es blanca (alcista), seguida de una vela negra (bajista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
+Envolvente bajista es un potente patrón de velas de reversión bajista compuesto por dos velas que se forma en una tendencia alcista. La primera vela es blanca (alcista), seguida de una vela negra (bajista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
 
 ##### Características clave:
 
@@ -15,7 +15,7 @@ Bearish Engulfing es un potente patrón de velas de reversión bajista compuesto
 
 ### Interpretación
 
-Bearish Engulfing se considera una de las señales más fiables de reversión de una tendencia alcista:
+Envolvente bajista se considera una de las señales más fiables de reversión de una tendencia alcista:
 
 - La primera vela confirma la tendencia alcista existente y muestra el control de los compradores.
 - La segunda vela demuestra una transición brusca del control hacia los vendedores, que no solo eliminan la ganancia del período anterior sino que también crean una caída significativa.
@@ -25,7 +25,7 @@ Bearish Engulfing se considera una de las señales más fiables de reversión de
 
 ### Estrategias de trading
 
-Bearish Engulfing proporciona excelentes oportunidades para entrar en una posición corta:
+Envolvente bajista proporciona excelentes oportunidades para entrar en una posición corta:
 
 - Entrar en una posición corta después de la formación del patrón, normalmente en la apertura de la siguiente vela.
 - Colocar un stop-loss por encima del máximo de la segunda vela del patrón.

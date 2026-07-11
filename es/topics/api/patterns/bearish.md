@@ -1,6 +1,6 @@
-# Patrón Bearish Candle
+# Patrón Vela bajista
 
-Bearish Candle es un patrón de velas caracterizado por un precio de cierre inferior al precio de apertura. Este patrón muestra un sentimiento de mercado bajista.
+Vela bajista es un patrón de velas caracterizado por un precio de cierre inferior al precio de apertura. Este patrón muestra un sentimiento de mercado bajista.
 
 ##### Características clave:
 
@@ -11,7 +11,7 @@ Bearish Candle es un patrón de velas caracterizado por un precio de cierre infe
 
 ### Interpretación
 
-Bearish Candle señala un sentimiento de mercado bajista con varias características:
+Vela bajista señala un sentimiento de mercado bajista con varias características:
 
 - Una larga sombra superior indica que los compradores intentaron empujar el precio hacia arriba, pero los vendedores tomaron el control.
 - El cierre por debajo de la apertura muestra el predominio de los vendedores al final del período.
@@ -21,9 +21,9 @@ Bearish Candle señala un sentimiento de mercado bajista con varias característ
 
 ### Estrategias de trading
 
-Bearish Candle se puede usar en varias estrategias de trading:
+Vela bajista se puede usar en varias estrategias de trading:
 
-- Entrar en una posición corta después de la formación de una Bearish Candle en un nivel de resistencia o en una zona de sobrecompra.
+- Entrar en una posición corta después de la formación de una vela bajista en un nivel de resistencia o en una zona de sobrecompra.
 - Colocar un stop-loss por encima del máximo de la vela para protegerse contra una subida adicional.
 - Combinar con otros indicadores técnicos o patrones para aumentar la probabilidad de una operación exitosa.
 - Usar para confirmar señales de tendencia bajista de indicadores como MACD o medias móviles.
@@ -32,6 +32,6 @@ Bearish Candle se puede usar en varias estrategias de trading:
 
 ## Véase también
 
-[Patrón Bullish Candle](bullish.md)
+[Patrón Vela alcista](bullish.md)
 
-[Patrón Black Candle](black_candle.md)
+[Patrón Vela negra](black_candle.md)

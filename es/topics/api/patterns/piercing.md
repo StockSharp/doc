@@ -1,6 +1,6 @@
-﻿# Patrón Piercing
+# Patrón Penetrante
 
-Piercing es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista) que abre por debajo del mínimo de la vela anterior y cierra por encima del punto medio del cuerpo de la vela anterior.
+Penetrante es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista) que abre por debajo del mínimo de la vela anterior y cierra por encima del punto medio del cuerpo de la vela anterior.
 
 ##### Características clave:
 
@@ -9,21 +9,21 @@ Piercing es un patrón de velas de reversión alcista compuesto por dos velas qu
 - El precio de cierre de la segunda vela penetra profundamente en el cuerpo de la primera vela, cerrando por encima del punto medio de la primera vela (C > (pB / 2 + pC)).
 - Se forma en una tendencia bajista.
 
-![Patrón piercing](../../../images/piercingpattern.png)
+![Patrón Penetrante](../../../images/piercingpattern.png)
 
 ### Interpretación
 
-Piercing se considera una señal fiable de una posible reversión de una tendencia bajista:
+Penetrante se considera una señal fiable de una posible reversión de una tendencia bajista:
 
 - La apertura de la segunda vela por debajo del mínimo de la primera vela (gap bajista) muestra presión bajista continuada.
 - Sin embargo, durante la sesión de trading, los alcistas toman el control y empujan el precio significativamente más alto, cerrando la vela por encima del punto medio del cuerpo de la vela anterior.
 - Esto demuestra un cambio brusco de sentimiento de bajista a alcista.
 - Cuanto más profunda sea la penetración en la segunda mitad del cuerpo de la primera vela, más fuerte será la señal.
-- Si el precio de cierre de la segunda vela está por encima del precio de apertura de la primera vela, el patrón pasa a la categoría "Bullish Engulfing", que se considera una señal aún más fuerte.
+- Si el precio de cierre de la segunda vela está por encima del precio de apertura de la primera vela, el patrón pasa a la categoría "Envolvente alcista", que se considera una señal aún más fuerte.
 
 ### Estrategias de trading
 
-Piercing proporciona buenas oportunidades para entrar en una posición larga:
+Penetrante proporciona buenas oportunidades para entrar en una posición larga:
 
 - Entrar en una posición después de confirmar el patrón (normalmente en la apertura de la tercera vela o cuando se rompe el máximo de la segunda vela).
 - Colocar un stop-loss por debajo del mínimo de la segunda vela o del mínimo de todo el patrón.
@@ -33,4 +33,4 @@ Piercing proporciona buenas oportunidades para entrar en una posición larga:
 
 ## Véase también
 
-[Patrón Bullish Engulfing](bullish_engulfing.md)
+[Patrón Envolvente alcista](bullish_engulfing.md)

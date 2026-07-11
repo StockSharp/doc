@@ -1,6 +1,6 @@
-﻿# Pinzettenhoch
+# Pinzettenhoch
 
-Tweezer Top ist ein bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Hoch haben und damit einer Pinzette mit zwei identischen Enden ähneln.
+Pinzettenhoch ist ein bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Hoch haben und damit einer Pinzette mit zwei identischen Enden ähneln.
 
 ##### Hauptmerkmale:
 
@@ -14,7 +14,7 @@ Tweezer Top ist ein bärisches Umkehr-Candlestick-Muster aus zwei Candles, das i
 
 ### Interpretation
 
-Tweezer Top gilt als Signal für eine mögliche Umkehr eines Aufwärtstrends:
+Pinzettenhoch gilt als Signal für eine mögliche Umkehr eines Aufwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Aufwärtstrend.
 - Die zweite Candle mit demselben Hoch zeigt, dass die Bullen zweimal versucht haben, dasselbe Niveau zu durchbrechen, dabei jedoch scheiterten.
@@ -24,7 +24,7 @@ Tweezer Top gilt als Signal für eine mögliche Umkehr eines Aufwärtstrends:
 
 ### Handelsstrategien
 
-Tweezer Top erfordert einen vorsichtigen Ansatz und häufig zusätzliche Bestätigung:
+Pinzettenhoch erfordert einen vorsichtigen Ansatz und häufig zusätzliche Bestätigung:
 
 - Warten Sie nach der Musterbildung auf eine bestätigende bärische Candle, bevor Sie in eine Short-Position einsteigen.
 - Platzieren Sie einen Stop-Loss knapp oberhalb des gemeinsamen Hochs des Musters.

@@ -1,6 +1,6 @@
-﻿# Abendstern
+# Abendstern
 
-Evening Star ist ein bärisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt den Übergang von bullischer zu bärischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
+Abendstern ist ein bärisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt den Übergang von bullischer zu bärischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
 
 ##### Hauptmerkmale:
 
@@ -13,7 +13,7 @@ Evening Star ist ein bärisches Umkehr-Candlestick-Muster aus drei Candles, das 
 
 ### Interpretation
 
-Evening Star gilt als starkes Signal für eine mögliche Umkehr eines Aufwärtstrends:
+Abendstern gilt als starkes Signal für eine mögliche Umkehr eines Aufwärtstrends:
 
 - Die erste Candle bestätigt die Stärke des bullischen Trends.
 - Die zweite Candle (Stern) zeigt eine Abschwächung des bullischen Drucks und Unsicherheit im Markt.
@@ -23,7 +23,7 @@ Evening Star gilt als starkes Signal für eine mögliche Umkehr eines Aufwärtst
 
 ### Handelsstrategien
 
-Evening Star bietet gute Möglichkeiten für den Einstieg in eine Short-Position:
+Abendstern bietet gute Möglichkeiten für den Einstieg in eine Short-Position:
 
 - Einstieg in eine Short-Position nach Bildung des Musters, üblicherweise bei Eröffnung der vierten Candle oder beim Durchbruch des Tiefs der dritten Candle.
 - Platzieren eines Stop-Loss oberhalb des Hochs der zweiten Candle oder oberhalb des Hochs des gesamten Musters.

@@ -1,6 +1,6 @@
-﻿# Pinzettentief
+# Pinzettentief
 
-Tweezer Bottom ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Tief haben und damit einer Pinzette mit zwei identischen Enden ähneln.
+Pinzettentief ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Ein charakteristisches Merkmal des Musters ist, dass beide Candles dasselbe oder nahezu dasselbe Tief haben und damit einer Pinzette mit zwei identischen Enden ähneln.
 
 ##### Hauptmerkmale:
 
@@ -15,7 +15,7 @@ Tweezer Bottom ist ein bullisches Umkehr-Candlestick-Muster aus zwei Candles, da
 
 ### Interpretation
 
-Tweezer Bottom gilt als Signal für eine mögliche Umkehr eines Abwärtstrends:
+Pinzettentief gilt als Signal für eine mögliche Umkehr eines Abwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Abwärtstrend.
 - Die zweite Candle mit demselben Tief zeigt, dass die Bären zweimal versucht haben, dasselbe Niveau zu durchbrechen, dabei jedoch scheiterten.
@@ -25,7 +25,7 @@ Tweezer Bottom gilt als Signal für eine mögliche Umkehr eines Abwärtstrends:
 
 ### Handelsstrategien
 
-Tweezer Bottom erfordert einen vorsichtigen Ansatz und häufig zusätzliche Bestätigung:
+Pinzettentief erfordert einen vorsichtigen Ansatz und häufig zusätzliche Bestätigung:
 
 - Warten Sie nach der Musterbildung auf eine bestätigende bullische Candle, bevor Sie in eine Long-Position einsteigen.
 - Platzieren Sie einen Stop-Loss knapp unterhalb des gemeinsamen Tiefs des Musters.

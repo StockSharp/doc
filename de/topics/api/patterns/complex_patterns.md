@@ -55,13 +55,13 @@ Beim Aufruf von `Recognize` wird das Candle-Array entsprechend dem jeweiligen `C
 ```csharp
 using StockSharp.Algo.Candles.Patterns;
 
-// Komplexes Muster erstellen: zuerst eine bärische Candle, dann Bullish Engulfing
+// Komplexes Muster erstellen: zuerst eine bärische Candle, dann bullische Umschließung
 var complex = new ComplexCandlePattern(
     "Reversal Up",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Black,            // 1 Candle: bärisch
-        CandlePatternRegistry.BullishEngulfing,  // 2 Candles: Bullish Engulfing
+        CandlePatternRegistry.BullishEngulfing,  // 2 Candles: bullische Umschließung
     }
 );
 

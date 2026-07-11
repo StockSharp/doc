@@ -29,6 +29,6 @@ Flat（中立）ローソク足は、始値と終値が同一、または非常�
 
 ## 関連項目
 
-[White Candle パターン](white_candle.md)
+[白いローソク足 パターン](white_candle.md)
 
-[Black Candle パターン](black_candle.md)
+[黒いローソク足 パターン](black_candle.md)

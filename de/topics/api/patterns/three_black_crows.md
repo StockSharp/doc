@@ -1,6 +1,6 @@
-﻿# Drei schwarze Krähen
+# Drei schwarze Krähen
 
-Three Black Crows ist ein starkes bärisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Aufwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Käufern zu Verkäufern hin und signalisiert eine mögliche Umkehr eines Aufwärtstrends.
+Drei schwarze Krähen ist ein starkes bärisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Aufwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Käufern zu Verkäufern hin und signalisiert eine mögliche Umkehr eines Aufwärtstrends.
 
 ##### Hauptmerkmale:
 
@@ -14,7 +14,7 @@ Three Black Crows ist ein starkes bärisches Umkehr-Candlestick-Muster aus drei 
 
 ### Interpretation
 
-Three Black Crows gilt als eines der zuverlässigsten Signale für die Umkehr eines Aufwärtstrends:
+Drei schwarze Krähen gilt als eines der zuverlässigsten Signale für die Umkehr eines Aufwärtstrends:
 
 - Die Abfolge von drei fallenden Candles zeigt einen stetigen Anstieg bärischen Drucks.
 - Die Eröffnung jeder nachfolgenden Candle innerhalb des Körpers der vorherigen deutet auf eine gewisse Konsolidierung und anschließend auf die Fortsetzung der bärischen Bewegung hin.
@@ -24,7 +24,7 @@ Three Black Crows gilt als eines der zuverlässigsten Signale für die Umkehr ei
 
 ### Handelsstrategien
 
-Three Black Crows bietet zuverlässige Möglichkeiten für den Einstieg in eine Short-Position:
+Drei schwarze Krähen bietet zuverlässige Möglichkeiten für den Einstieg in eine Short-Position:
 
 - Einstieg in eine Short-Position nach Bildung des vollständigen Musters, üblicherweise bei Eröffnung der vierten Candle.
 - Platzieren eines Stop-Loss oberhalb des Hochs der dritten Candle oder oberhalb des Hochs des gesamten Musters.

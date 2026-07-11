@@ -1,6 +1,6 @@
-﻿# Patrón Bullish Engulfing
+# Patrón Envolvente alcista
 
-Bullish Engulfing es un potente patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
+Envolvente alcista es un potente patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. La primera vela es negra (bajista), seguida de una vela blanca (alcista), cuyo cuerpo envuelve (cubre) completamente el cuerpo de la vela anterior.
 
 ##### Características clave:
 
@@ -15,7 +15,7 @@ Bullish Engulfing es un potente patrón de velas de reversión alcista compuesto
 
 ### Interpretación
 
-Bullish Engulfing se considera una de las señales más fiables de reversión de una tendencia bajista:
+Envolvente alcista se considera una de las señales más fiables de reversión de una tendencia bajista:
 
 - La primera vela confirma la tendencia bajista existente y muestra el control de los vendedores.
 - La segunda vela demuestra una transición brusca del control hacia los compradores, que no solo revierten las pérdidas del período anterior sino que también crean una ganancia significativa.
@@ -25,7 +25,7 @@ Bullish Engulfing se considera una de las señales más fiables de reversión de
 
 ### Estrategias de trading
 
-Bullish Engulfing proporciona excelentes oportunidades para entrar en una posición larga:
+Envolvente alcista proporciona excelentes oportunidades para entrar en una posición larga:
 
 - Entrar en una posición larga después de la formación del patrón, normalmente en la apertura de la siguiente vela.
 - Colocar un stop-loss por debajo del mínimo de la segunda vela del patrón.
@@ -35,6 +35,6 @@ Bullish Engulfing proporciona excelentes oportunidades para entrar en una posici
 
 ## Véase también
 
-[Patrón Bearish Engulfing](bearish_engulfing.md)
+[Patrón Envolvente bajista](bearish_engulfing.md)
 
-[Patrón Piercing](piercing.md)
+[Patrón Penetrante](piercing.md)

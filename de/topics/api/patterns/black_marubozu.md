@@ -1,6 +1,6 @@
-﻿# Schwarzer Marubozu
+# Schwarzer Marubozu
 
-Black Marubozu ist ein bärisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Candle gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Candle ohne Schatten beschreibt.
+Schwarzer Marubozu ist ein bärisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Candle gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Candle ohne Schatten beschreibt.
 
 ##### Hauptmerkmale:
 
@@ -13,19 +13,19 @@ Black Marubozu ist ein bärisches Candlestick-Muster, das durch das Fehlen von S
 
 ### Interpretation
 
-Black Marubozu gilt als starkes bärisches Signal:
+Schwarzer Marubozu gilt als starkes bärisches Signal:
 
 - Das Fehlen von Schatten weist auf vollständige Dominanz der Verkäufer hin - der Preis eröffnete am Hoch und fiel kontinuierlich bis zum Periodenschluss.
-- Ein langer Black Marubozu zeigt sehr starken bärischen Druck.
+- Ein langer Schwarzer Marubozu zeigt sehr starken bärischen Druck.
 - Das Auftreten dieses Musters nach einem Aufwärtstrend kann eine Umkehr signalisieren.
 - Innerhalb eines Abwärtstrends bestätigt es die Stärke der Bewegung.
 
 ### Handelsstrategien
 
-Black Marubozu liefert ein stärkeres Signal als eine reguläre schwarze Candle:
+Schwarzer Marubozu liefert ein stärkeres Signal als eine reguläre schwarze Candle:
 
-- Möglichkeit zum Einstieg in eine Short-Position nach Bildung eines Black Marubozu, insbesondere wenn er an einem wichtigen Widerstandsniveau erscheint.
-- Verwendung des Schlusskurses des Black Marubozu als Widerstandsniveau beim Setzen von Stop-Losses.
+- Möglichkeit zum Einstieg in eine Short-Position nach Bildung eines schwarzen Marubozu, insbesondere wenn er an einem wichtigen Widerstandsniveau erscheint.
+- Verwendung des Schlusskurses des Schwarzer Marubozu als Widerstandsniveau beim Setzen von Stop-Losses.
 - Kombination mit anderen technischen Indikatoren zur Bestätigung des Signals.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.
 

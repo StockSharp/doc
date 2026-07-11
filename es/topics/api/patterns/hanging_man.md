@@ -1,6 +1,6 @@
-﻿# Patrón Hanging Man
+# Patrón Hombre colgado
 
-Hanging Man es un patrón de velas de reversión bajista que se forma en una tendencia alcista. La vela tiene un cuerpo pequeño en la parte superior y una larga sombra inferior, con la sombra superior ausente o muy corta. La forma de la vela se parece a la figura de una persona con piernas colgantes, de ahí el nombre.
+Hombre colgado es un patrón de velas de reversión bajista que se forma en una tendencia alcista. La vela tiene un cuerpo pequeño en la parte superior y una larga sombra inferior, con la sombra superior ausente o muy corta. La forma de la vela se parece a la figura de una persona con piernas colgantes, de ahí el nombre.
 
 ##### Características clave:
 
@@ -14,7 +14,7 @@ Hanging Man es un patrón de velas de reversión bajista que se forma en una ten
 
 ### Interpretación
 
-Hanging Man se considera una advertencia de un posible final de una tendencia alcista:
+Hombre colgado se considera una advertencia de un posible final de una tendencia alcista:
 
 - La larga sombra inferior muestra que el precio cayó significativamente durante la sesión de trading, indicando la aparición de vendedores.
 - A pesar de que los compradores pudieron empujar el precio de vuelta a la parte superior del rango, el hecho mismo de una caída significativa del precio en una tendencia alcista es una señal de advertencia.
@@ -24,10 +24,10 @@ Hanging Man se considera una advertencia de un posible final de una tendencia al
 
 ### Estrategias de trading
 
-Hanging Man normalmente requiere confirmación adicional antes de tomar decisiones de trading:
+Hombre colgado normalmente requiere confirmación adicional antes de tomar decisiones de trading:
 
-- Esperar una vela bajista de confirmación después de la formación de Hanging Man antes de entrar en una posición corta.
-- Colocar un stop-loss por encima del máximo de Hanging Man.
+- Esperar una vela bajista de confirmación después de la formación de Hombre colgado antes de entrar en una posición corta.
+- Colocar un stop-loss por encima del máximo de Hombre colgado.
 - Considerar el volumen de trading: un volumen alto durante la formación del patrón y en la vela de confirmación refuerza la señal bajista.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobrecompra o divergencia en osciladores.
 - Posible uso para cierre parcial de posiciones largas existentes incluso sin abrir una posición corta.
@@ -35,6 +35,6 @@ Hanging Man normalmente requiere confirmación adicional antes de tomar decision
 
 ## Véase también
 
-[Patrón Hammer](hammer.md)
+[Patrón Martillo](hammer.md)
 
-[Patrón Shooting Star](shooting_star.md)
+[Patrón Estrella fugaz](shooting_star.md)

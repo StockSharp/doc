@@ -1,6 +1,6 @@
-﻿# Patrón Tweezer Bottom
+# Patrón Suelo de pinzas
 
-Tweezer Bottom es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. Una característica del patrón es que ambas velas tienen el mismo mínimo o casi el mismo, pareciéndose a unas pinzas con dos extremos idénticos.
+Suelo de pinzas es un patrón de velas de reversión alcista compuesto por dos velas que se forma en una tendencia bajista. Una característica del patrón es que ambas velas tienen el mismo mínimo o casi el mismo, pareciéndose a unas pinzas con dos extremos idénticos.
 
 ##### Características clave:
 
@@ -15,7 +15,7 @@ Tweezer Bottom es un patrón de velas de reversión alcista compuesto por dos ve
 
 ### Interpretación
 
-Tweezer Bottom se considera una señal de una posible reversión de una tendencia bajista:
+Suelo de pinzas se considera una señal de una posible reversión de una tendencia bajista:
 
 - La primera vela confirma la tendencia bajista existente.
 - La segunda vela con el mismo mínimo muestra que los bajistas intentaron dos veces romper el mismo nivel pero fallaron.
@@ -25,7 +25,7 @@ Tweezer Bottom se considera una señal de una posible reversión de una tendenci
 
 ### Estrategias de trading
 
-Tweezer Bottom requiere un enfoque prudente y a menudo confirmación adicional:
+Suelo de pinzas requiere un enfoque prudente y a menudo confirmación adicional:
 
 - Esperar una vela alcista de confirmación después de la formación del patrón antes de entrar en una posición larga.
 - Colocar un stop-loss ligeramente por debajo del mínimo común del patrón.
@@ -36,6 +36,6 @@ Tweezer Bottom requiere un enfoque prudente y a menudo confirmación adicional:
 
 ## Véase también
 
-[Patrón Tweezer Top](tweezer_top.md)
+[Patrón Techo de pinzas](tweezer_top.md)
 
-[Patrón Morning Star](morning_star.md)
+[Patrón Estrella matinal](morning_star.md)

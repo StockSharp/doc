@@ -1,14 +1,14 @@
-# Patrón 3 Outside Down y 3 Outside Up
+# Patrón Tres exteriores bajistas y Tres exteriores alcistas
 
-Los términos 3 Outside Down y 3 Outside Up se refieren a patrones de reversión de tres velas. Para que se forme un patrón, tres velas deben formarse en una secuencia específica, indicando que la tendencia actual ha perdido impulso y puede señalar una reversión de la tendencia existente. En concreto, un patrón se forma cuando una vela bajista (que cierra por debajo de su apertura) es seguida por dos instancias de una vela alcista (que cierra por encima de su apertura), o viceversa.
+Los términos Tres exteriores bajistas y Tres exteriores alcistas se refieren a patrones de reversión de tres velas. Para que se forme un patrón, tres velas deben formarse en una secuencia específica, indicando que la tendencia actual ha perdido impulso y puede señalar una reversión de la tendencia existente. En concreto, un patrón se forma cuando una vela bajista (que cierra por debajo de su apertura) es seguida por dos instancias de una vela alcista (que cierra por encima de su apertura), o viceversa.
 
 ##### Características clave:
 
-- Los patrones 3 Outside Down/Up son patrones de tres velas que suelen señalar una reversión de tendencia.
-- Los patrones 3 Outside Down y 3 Outside Up se caracterizan por una vela seguida inmediatamente por dos velas del color opuesto.
+- Los patrones Tres exteriores bajistas/Up son patrones de tres velas que suelen señalar una reversión de tendencia.
+- Los patrones Tres exteriores bajistas y Tres exteriores alcistas se caracterizan por una vela seguida inmediatamente por dos velas del color opuesto.
 - Cada uno busca usar la psicología del mercado para comprender cambios de ánimo a corto plazo.
 
-### 3 Outside Up
+### Tres exteriores alcistas
 
 Este patrón de velas alcista tiene las siguientes características:
 
@@ -17,9 +17,9 @@ Este patrón de velas alcista tiene las siguientes características:
 3. La segunda vela es alcista con un cuerpo largo y envuelve completamente a la primera vela.
 4. La tercera vela es alcista con un cierre más alto que el de la segunda vela.
 
-![Captura de Patrón 3 Outside Down y 3 Outside Up 1](../../../images/indicatorpattern3ou.png)
+![Captura de Patrón Tres exteriores bajistas y Tres exteriores alcistas 1](../../../images/indicatorpattern3ou.png)
 
-### 3 Outside Down
+### Tres exteriores bajistas
 
 Esta variación del patrón es un modelo de velas bajista con las siguientes características:
 
@@ -30,8 +30,8 @@ Esta variación del patrón es un modelo de velas bajista con las siguientes car
 
 La primera vela significa el comienzo del fin de la tendencia predominante, ya que la segunda vela envuelve a la primera. La tercera vela significa entonces una aceleración de la reversión.
 
-![Captura de Patrón 3 Outside Down y 3 Outside Up 2](../../../images/indicatorpattern3od.png)
+![Captura de Patrón Tres exteriores bajistas y Tres exteriores alcistas 2](../../../images/indicatorpattern3od.png)
 
 ## Véase también
 
-[Patrón 3 Inside Down y 3 Inside Up](3_inside_down_3_side_up.md)
+[Patrón Tres interiores bajistas y Tres interiores alcistas](3_inside_down_3_side_up.md)

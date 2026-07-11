@@ -1,6 +1,6 @@
-﻿# Spinning Top
+# Kreisel
 
-Spinning Top ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper sowie länge obere und untere Schatten von ungefähr gleicher Länge gekennzeichnet ist. Dieses Muster weist auf Unentschlossenheit im Markt und einen Kampf zwischen Käufern und Verkäufern hin.
+Kreisel ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper sowie länge obere und untere Schatten von ungefähr gleicher Länge gekennzeichnet ist. Dieses Muster weist auf Unentschlossenheit im Markt und einen Kampf zwischen Käufern und Verkäufern hin.
 
 ##### Hauptmerkmale:
 
@@ -13,7 +13,7 @@ Spinning Top ist ein Candlestick-Muster, das durch einen kleinen Candle-Körper 
 
 ### Interpretation
 
-Spinning Top signalisiert Unentschlossenheit im Markt:
+Kreisel signalisiert Unentschlossenheit im Markt:
 
 - Länge Schatten zeigen, dass der Preis während der Periode sowohl nach oben als auch nach unten deutlich schwankte.
 - Der kleine Körper bedeutet, dass sich der Schlusskurs trotz hoher Volatilität nicht weit vom Eröffnungskurs entfernte.
@@ -23,12 +23,12 @@ Spinning Top signalisiert Unentschlossenheit im Markt:
 
 ### Handelsstrategien
 
-Spinning Top ist für sich genommen kein starkes Handelssignal, kann aber in Kombination mit anderen Faktoren verwendet werden:
+Kreisel ist für sich genommen kein starkes Handelssignal, kann aber in Kombination mit anderen Faktoren verwendet werden:
 
 - Suchen Sie nach zusätzlicher Bestätigung durch nachfolgende Candles, bevor Sie Handelsentscheidungen treffen.
-- Verwenden Sie es als Teil komplexerer Candlestick-Muster, etwa Morning Star oder Evening Star.
-- Richten Sie nach der Bildung eines Spinning Top an wichtigen Unterstützungs- oder Widerstandsniveaus mehr Aufmerksamkeit auf nachfolgende Preisbewegungen.
-- Mögliches engeres Nachziehen von Stop-Losses, wenn ein Spinning Top nach einem längeren Trend erscheint.
+- Verwenden Sie es als Teil komplexerer Candlestick-Muster, etwa Morgenstern oder Abendstern.
+- Richten Sie nach der Bildung eines Kreisel an wichtigen Unterstützungs- oder Widerstandsniveaus mehr Aufmerksamkeit auf nachfolgende Preisbewegungen.
+- Mögliches engeres Nachziehen von Stop-Losses, wenn ein Kreisel nach einem längeren Trend erscheint.
 
 ## Siehe auch
 

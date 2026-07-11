@@ -1,17 +1,17 @@
-# Padrão Bullish Candle
+# Padrão Vela altista
 
-Bullish Candle é um padrão de velas caracterizado por um preço de fecho superior ao preço de abertura. Este padrão mostra um sentimento de mercado bullish.
+Vela altista é um padrão de velas caracterizado por um preço de fecho superior ao preço de abertura. Este padrão mostra um sentimento de mercado altista.
 
 ##### Características Principais:
 
 - O preço de abertura é inferior ao preço de fecho (O < C).
-- Indica pressão bullish no mercado.
+- Indica pressão altista no mercado.
 
 ![Padrão de candle altista](../../../images/bullishcandlepattern.png)
 
 ### Interpretação
 
-A Bullish Candle sinaliza um sentimento de mercado bullish com várias características:
+A Vela altista sinaliza um sentimento de mercado altista com várias características:
 
 - Uma sombra inferior longa indica que os vendedores tentaram empurrar o preço para baixo, mas os compradores assumiram o controlo.
 - O fecho acima da abertura mostra a predominância dos compradores no fim do período.
@@ -21,9 +21,9 @@ A Bullish Candle sinaliza um sentimento de mercado bullish com várias caracter�
 
 ### Estratégias de Negociação
 
-Bullish Candle pode ser utilizada em várias estratégias de negociação:
+Vela altista pode ser utilizada em várias estratégias de negociação:
 
-- Entrar numa posição longa após a formação de uma Bullish Candle num nível de suporte ou numa zona de sobrevenda.
+- Entrar numa posição longa após a formação de uma vela altista num nível de suporte ou numa zona de sobrevenda.
 - Definir um stop-loss abaixo do mínimo da vela para proteger contra novas quedas.
 - Combinar com outros indicadores técnicos ou padrões para aumentar a probabilidade de uma negociação bem-sucedida.
 - Utilizar para confirmar sinais de tendência ascendente de indicadores como MACD ou médias móveis.
@@ -31,6 +31,6 @@ Bullish Candle pode ser utilizada em várias estratégias de negociação:
 
 ## Ver também
 
-[Padrão Bearish Candle](bearish.md)
+[Padrão Vela baixista](bearish.md)
 
-[Padrão White Candle](white_candle.md)
+[Padrão Vela branca](white_candle.md)

@@ -1,6 +1,6 @@
-﻿# Patrón Falling Three Methods
+# Patrón Tres métodos descendentes
 
-Falling Three Methods es un patrón bajista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia bajista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia bajista existente antes de su continuación.
+Tres métodos descendentes es un patrón bajista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia bajista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia bajista existente antes de su continuación.
 
 ##### Características clave:
 
@@ -15,7 +15,7 @@ Falling Three Methods es un patrón bajista de continuación de tendencia compue
 
 ### Interpretación
 
-Falling Three Methods se considera una señal fiable de continuación de tendencia bajista:
+Tres métodos descendentes se considera una señal fiable de continuación de tendencia bajista:
 
 - La primera vela negra larga muestra la fuerza de la tendencia bajista.
 - Tres velas blancas pequeñas representan una consolidación o corrección temporal, durante la cual los compradores no pudieron cambiar significativamente la tendencia.
@@ -25,7 +25,7 @@ Falling Three Methods se considera una señal fiable de continuación de tendenc
 
 ### Estrategias de trading
 
-Falling Three Methods proporciona buenas oportunidades para entrar o reforzar posiciones cortas:
+Tres métodos descendentes proporciona buenas oportunidades para entrar o reforzar posiciones cortas:
 
 - Entrar en una posición corta en la apertura después de la quinta vela o cuando se rompe el mínimo de la primera vela.
 - Colocar un stop-loss por encima del máximo de las velas de corrección o por encima del máximo de la primera vela.
@@ -36,6 +36,6 @@ Falling Three Methods proporciona buenas oportunidades para entrar o reforzar po
 
 ## Véase también
 
-[Patrón Rising Three Methods](rising_three_methods.md)
+[Patrón Tres métodos ascendentes](rising_three_methods.md)
 
-[Patrón Three Black Crows](three_black_crows.md)
+[Patrón Tres cuervos negros](three_black_crows.md)

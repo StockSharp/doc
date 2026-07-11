@@ -1,6 +1,6 @@
 # Bullische Kerze
 
-Bullish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs oberhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bullische Marktstimmung.
+Bullische Kerze ist ein Candlestick-Muster, das durch einen Schlusskurs oberhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bullische Marktstimmung.
 
 ##### Hauptmerkmale:
 
@@ -11,7 +11,7 @@ Bullish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs oberhalb 
 
 ### Interpretation
 
-Die Bullish Candle signalisiert eine bullische Marktstimmung mit mehreren Merkmalen:
+Die Bullische Kerze signalisiert eine bullische Marktstimmung mit mehreren Merkmalen:
 
 - Ein langer unterer Schatten zeigt, dass Verkäufer versucht haben, den Preis nach unten zu drücken, Käufer jedoch die Kontrolle übernahmen.
 - Ein Schlusskurs über dem Eröffnungskurs zeigt die Dominanz der Käufer am Ende der Periode.
@@ -21,9 +21,9 @@ Die Bullish Candle signalisiert eine bullische Marktstimmung mit mehreren Merkma
 
 ### Handelsstrategien
 
-Bullish Candle kann in verschiedenen Handelsstrategien verwendet werden:
+Bullische Kerze kann in verschiedenen Handelsstrategien verwendet werden:
 
-- Einstieg in eine Long-Position nach Bildung einer Bullish Candle an einem Unterstützungsniveau oder in einer überverkauften Zone.
+- Einstieg in eine Long-Position nach Bildung einer bullischen Kerze an einem Unterstützungsniveau oder in einer überverkauften Zone.
 - Setzen eines Stop-Loss unterhalb des Minimums der Candle, um sich gegen einen weiteren Rückgang zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
 - Verwendung zur Bestätigung von Aufwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.

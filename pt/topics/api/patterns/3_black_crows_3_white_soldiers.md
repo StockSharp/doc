@@ -1,28 +1,28 @@
-# Padrão 3 Black Crows e 3 White Soldiers
+# Padrão Três corvos negros e Três soldados brancos
 
-### 3 Black Crows
+### Três corvos negros
 
-Three Black Crows é um padrão de velas bearish que pode prever uma reversão de uma tendência ascendente.
+Três corvos negros é um padrão de velas baixista que pode prever uma reversão de uma tendência ascendente.
 
-O padrão 3 Black Crows consiste em três velas consecutivas que abriram dentro do corpo da vela anterior e fecharam abaixo da vela anterior. Os traders utilizam frequentemente este indicador em combinação com outros indicadores técnicos ou padrões gráficos como confirmação de uma reversão.
+O padrão Três corvos negros consiste em três velas consecutivas que abriram dentro do corpo da vela anterior e fecharam abaixo da vela anterior. Os traders utilizam frequentemente este indicador em combinação com outros indicadores técnicos ou padrões gráficos como confirmação de uma reversão.
 
 ##### Características Principais:
 
-- Three Black Crows é um padrão de velas bearish utilizado para prever a reversão da tendência ascendente atual.
+- Três corvos negros é um padrão de velas baixista utilizado para prever a reversão da tendência ascendente atual.
 - Os traders utilizam-no juntamente com outros indicadores técnicos, como o Relative Strength Index (RSI).
 - O tamanho das velas e as sombras do padrão podem indicar o risco de reversão para pullback.
-- O padrão oposto a Three Black Crows é Three White Soldiers, que indica uma reversão de tendência descendente.
+- O padrão oposto a Três corvos negros é Três soldados brancos, que indica uma reversão de tendência descendente.
 
-![Captura de tela de Padrão 3 Black Crows e 3 White Soldiers 1](../../../images/indicatorpattern3bc.png)
+![Captura de tela de Padrão Três corvos negros e Três soldados brancos 1](../../../images/indicatorpattern3bc.png)
 
-### 3 White Soldiers
+### Três soldados brancos
 
-Three White Soldiers é um padrão de velas bullish utilizado para prever a reversão da tendência descendente atual no gráfico de preços. O padrão consiste em três velas longas consecutivas que abrem dentro do corpo da vela anterior e fecham acima do máximo da vela anterior. Estas velas não devem ter sombras muito longas e, idealmente, abrem dentro do corpo da vela anterior no padrão.
+Três soldados brancos é um padrão de velas altista utilizado para prever a reversão da tendência descendente atual no gráfico de preços. O padrão consiste em três velas longas consecutivas que abrem dentro do corpo da vela anterior e fecham acima do máximo da vela anterior. Estas velas não devem ter sombras muito longas e, idealmente, abrem dentro do corpo da vela anterior no padrão.
 
 ##### Características Principais
 
-- Three White Soldiers são considerados um modelo de reversão fiável se forem confirmados por outros indicadores técnicos, como o Relative Strength Index (RSI).
+- Três soldados brancos são considerados um modelo de reversão fiável se forem confirmados por outros indicadores técnicos, como o Relative Strength Index (RSI).
 - O tamanho das velas e o comprimento das sombras são utilizados para avaliar se existe risco de pullback.
-- O padrão oposto a Three White Soldiers é Three Black Crows, que indica uma reversão de tendência ascendente.
+- O padrão oposto a Três soldados brancos é Três corvos negros, que indica uma reversão de tendência ascendente.
 
-![Captura de tela de Padrão 3 Black Crows e 3 White Soldiers 2](../../../images/indicatorpattern3ws.png)
+![Captura de tela de Padrão Três corvos negros e Três soldados brancos 2](../../../images/indicatorpattern3ws.png)

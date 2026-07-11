@@ -271,6 +271,48 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Usage",
 	};
 
+	private static readonly string[] _knownEnglishCandlePatternNames =
+	[
+		"3 Black Crows and 3 White Soldiers",
+		"3 Inside Down and 3 Inside Up",
+		"3 Outside Down and 3 Outside Up",
+		"Flat (Neutral) Candle",
+		"Falling Three Methods",
+		"Rising Three Methods",
+		"Three Black Crows",
+		"Three White Soldiers",
+		"Bearish Engulfing",
+		"Bullish Engulfing",
+		"Bearish Harami",
+		"Bullish Harami",
+		"Black Marubozu",
+		"White Marubozu",
+		"Bearish Candle",
+		"Bullish Candle",
+		"Black Candle",
+		"White Candle",
+		"Evening Star",
+		"Morning Star",
+		"Shooting Star",
+		"Morning Doji Star",
+		"Inverted Hammer",
+		"Hanging Man",
+		"Spinning Top",
+		"Tweezer Bottom",
+		"Tweezer Top",
+		"3 Black Crows",
+		"3 White Soldiers",
+		"3 Inside Down",
+		"3 Inside Up",
+		"3 Outside Down",
+		"3 Outside Up",
+		"On-Neck",
+		"Dragonfly",
+		"Gravestone",
+		"Hammer",
+		"Piercing",
+	];
+
 	private static readonly string[] _knownEnglishNotificationDataTypeLabels =
 	[
 		"Customer code",
@@ -1571,6 +1613,81 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{line}: markdown section label '{normalized}' is still English. Localize it or add a deliberate allowlist entry.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCandlePatternDocsDoNotKeepEnglishPatternNames()
+	{
+		var errors = new List<string>();
+		var adjectivePattern = new Regex(@"\b(?:bullish|bearish)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var patternRoot = Path.Combine(_repoRoot, lang, "topics", "api", "patterns");
+			if (!Directory.Exists(patternRoot))
+				continue;
+
+			var patternNames = _knownEnglishCandlePatternNames
+				.Where(name => !lang.Equals("de", StringComparison.OrdinalIgnoreCase) || !name.Equals("Hammer", StringComparison.Ordinal))
+				.ToArray();
+
+			foreach (var file in Directory.EnumerateFiles(patternRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var textWithoutInlineCode = Regex.Replace(text, @"`[^`\r\n]*`", " ", RegexOptions.CultureInvariant);
+					var normalized = NormalizeMarkdownTextForTranslationCheck(textWithoutInlineCode);
+
+					foreach (var patternName in patternNames)
+					{
+						if (!ContainsStandaloneText(normalized, patternName))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized candle pattern documentation keeps English pattern name '{patternName}'. Localize visible pattern prose and link labels.");
+					}
+
+					var adjectiveMatch = adjectivePattern.Match(normalized);
+					if (adjectiveMatch.Success)
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized candle pattern documentation keeps English adjective '{adjectiveMatch.Value}'. Localize visible pattern prose.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var normalized = NormalizeHumanText(altText.Text);
+
+					foreach (var patternName in patternNames)
+					{
+						if (!ContainsStandaloneText(normalized, patternName))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized candle pattern image alt text keeps English pattern name '{patternName}'. Localize the image description.");
+					}
+
+					var adjectiveMatch = adjectivePattern.Match(normalized);
+					if (adjectiveMatch.Success)
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized candle pattern image alt text keeps English adjective '{adjectiveMatch.Value}'. Localize the image description.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					var normalized = NormalizeHumanText(comment.Text);
+
+					foreach (var patternName in patternNames)
+					{
+						if (!ContainsStandaloneText(normalized, patternName))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized candle pattern code comment keeps English pattern name '{patternName}'. Localize the code comment.");
+					}
+
+					var adjectiveMatch = adjectivePattern.Match(normalized);
+					if (adjectiveMatch.Success)
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized candle pattern code comment keeps English adjective '{adjectiveMatch.Value}'. Localize the code comment.");
 				}
 			}
 		}

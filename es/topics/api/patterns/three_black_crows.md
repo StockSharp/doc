@@ -1,6 +1,6 @@
-﻿# Patrón Three Black Crows
+# Patrón Tres cuervos negros
 
-Three Black Crows es un potente patrón de velas de reversión bajista compuesto por tres velas consecutivas que se forma en una tendencia alcista. Este patrón indica un cambio decisivo de control de compradores a vendedores, señalando una posible reversión de una tendencia alcista.
+Tres cuervos negros es un potente patrón de velas de reversión bajista compuesto por tres velas consecutivas que se forma en una tendencia alcista. Este patrón indica un cambio decisivo de control de compradores a vendedores, señalando una posible reversión de una tendencia alcista.
 
 ##### Características clave:
 
@@ -14,7 +14,7 @@ Three Black Crows es un potente patrón de velas de reversión bajista compuesto
 
 ### Interpretación
 
-Three Black Crows se considera una de las señales más fiables de reversión de una tendencia alcista:
+Tres cuervos negros se considera una de las señales más fiables de reversión de una tendencia alcista:
 
 - La secuencia de tres velas descendentes muestra un aumento constante de la presión bajista.
 - La apertura de cada vela posterior dentro del cuerpo de la anterior indica cierta consolidación, seguida de la continuación del movimiento bajista.
@@ -24,7 +24,7 @@ Three Black Crows se considera una de las señales más fiables de reversión de
 
 ### Estrategias de trading
 
-Three Black Crows proporciona oportunidades fiables para entrar en una posición corta:
+Tres cuervos negros proporciona oportunidades fiables para entrar en una posición corta:
 
 - Entrar en una posición corta después de la formación del patrón completo, normalmente en la apertura de la cuarta vela.
 - Colocar un stop-loss por encima del máximo de la tercera vela o por encima del máximo de todo el patrón.
@@ -36,6 +36,6 @@ Three Black Crows proporciona oportunidades fiables para entrar en una posición
 
 ## Véase también
 
-[Patrón Three White Soldiers](three_white_soldiers.md)
+[Patrón Tres soldados blancos](three_white_soldiers.md)
 
-[Patrón Falling Three Methods](falling_three_methods.md)
+[Patrón Tres métodos descendentes](falling_three_methods.md)

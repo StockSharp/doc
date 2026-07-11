@@ -1,6 +1,6 @@
-# Patrón Bullish Candle
+# Patrón Vela alcista
 
-Bullish Candle es un patrón de velas caracterizado por un precio de cierre superior al precio de apertura. Este patrón muestra un sentimiento de mercado alcista.
+Vela alcista es un patrón de velas caracterizado por un precio de cierre superior al precio de apertura. Este patrón muestra un sentimiento de mercado alcista.
 
 ##### Características clave:
 
@@ -11,7 +11,7 @@ Bullish Candle es un patrón de velas caracterizado por un precio de cierre supe
 
 ### Interpretación
 
-Bullish Candle señala un sentimiento de mercado alcista con varias características:
+Vela alcista señala un sentimiento de mercado alcista con varias características:
 
 - Una larga sombra inferior indica que los vendedores intentaron empujar el precio hacia abajo, pero los compradores tomaron el control.
 - El cierre por encima de la apertura muestra el predominio de los compradores al final del período.
@@ -21,9 +21,9 @@ Bullish Candle señala un sentimiento de mercado alcista con varias característ
 
 ### Estrategias de trading
 
-Bullish Candle se puede usar en varias estrategias de trading:
+Vela alcista se puede usar en varias estrategias de trading:
 
-- Entrar en una posición larga después de la formación de una Bullish Candle en un nivel de soporte o en una zona de sobreventa.
+- Entrar en una posición larga después de la formación de una vela alcista en un nivel de soporte o en una zona de sobreventa.
 - Colocar un stop-loss por debajo del mínimo de la vela para protegerse contra una caída adicional.
 - Combinar con otros indicadores técnicos o patrones para aumentar la probabilidad de una operación exitosa.
 - Usar para confirmar señales de tendencia alcista de indicadores como MACD o medias móviles.
@@ -31,6 +31,6 @@ Bullish Candle se puede usar en varias estrategias de trading:
 
 ## Véase también
 
-[Patrón Bearish Candle](bearish.md)
+[Patrón Vela bajista](bearish.md)
 
-[Patrón White Candle](white_candle.md)
+[Patrón Vela blanca](white_candle.md)

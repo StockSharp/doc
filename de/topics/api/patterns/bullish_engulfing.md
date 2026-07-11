@@ -1,6 +1,6 @@
-﻿# Bullisches Engulfing
+# Bullisches Engulfing
 
-Bullish Engulfing ist ein starkes bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
+Bullische Umschließung ist ein starkes bullisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Die erste Candle ist schwarz (bärisch), gefolgt von einer weißen (bullischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
 
 ##### Hauptmerkmale:
 
@@ -15,7 +15,7 @@ Bullish Engulfing ist ein starkes bullisches Umkehr-Candlestick-Muster aus zwei 
 
 ### Interpretation
 
-Bullish Engulfing gilt als eines der zuverlässigsten Signale für eine Umkehr eines Abwärtstrends:
+Bullische Umschließung gilt als eines der zuverlässigsten Signale für eine Umkehr eines Abwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Abwärtstrend und zeigt die Kontrolle der Verkäufer.
 - Die zweite Candle zeigt einen abrupten Kontrollwechsel zu den Käufern, die nicht nur die Verluste der vorherigen Periode ausgleichen, sondern auch einen deutlichen Gewinn erzeugen.
@@ -25,7 +25,7 @@ Bullish Engulfing gilt als eines der zuverlässigsten Signale für eine Umkehr e
 
 ### Handelsstrategien
 
-Bullish Engulfing bietet sehr gute Möglichkeiten für den Einstieg in eine Long-Position:
+Bullische Umschließung bietet sehr gute Möglichkeiten für den Einstieg in eine Long-Position:
 
 - Einstieg in eine Long-Position nach Bildung des Musters, üblicherweise bei Eröffnung der nächsten Candle.
 - Platzieren eines Stop-Loss unterhalb des Tiefs der zweiten Candle des Musters.
@@ -37,4 +37,4 @@ Bullish Engulfing bietet sehr gute Möglichkeiten für den Einstieg in eine Long
 
 [Bärisches Engulfing](bearish_engulfing.md)
 
-[Piercing Line](piercing.md)
+[Durchdringungslinie](piercing.md)

@@ -1,6 +1,6 @@
-﻿# Patrón Tweezer Top
+# Patrón Techo de pinzas
 
-Tweezer Top es un patrón de velas de reversión bajista compuesto por dos velas que se forma en una tendencia alcista. Una característica del patrón es que ambas velas tienen el mismo máximo o casi el mismo, pareciéndose a unas pinzas con dos extremos idénticos.
+Techo de pinzas es un patrón de velas de reversión bajista compuesto por dos velas que se forma en una tendencia alcista. Una característica del patrón es que ambas velas tienen el mismo máximo o casi el mismo, pareciéndose a unas pinzas con dos extremos idénticos.
 
 ##### Características clave:
 
@@ -14,7 +14,7 @@ Tweezer Top es un patrón de velas de reversión bajista compuesto por dos velas
 
 ### Interpretación
 
-Tweezer Top se considera una señal de una posible reversión de una tendencia alcista:
+Techo de pinzas se considera una señal de una posible reversión de una tendencia alcista:
 
 - La primera vela confirma la tendencia alcista existente.
 - La segunda vela con el mismo máximo muestra que los alcistas intentaron dos veces romper el mismo nivel pero fallaron.
@@ -24,7 +24,7 @@ Tweezer Top se considera una señal de una posible reversión de una tendencia a
 
 ### Estrategias de trading
 
-Tweezer Top requiere un enfoque prudente y a menudo confirmación adicional:
+Techo de pinzas requiere un enfoque prudente y a menudo confirmación adicional:
 
 - Esperar una vela bajista de confirmación después de la formación del patrón antes de entrar en una posición corta.
 - Colocar un stop-loss ligeramente por encima del máximo común del patrón.
@@ -35,6 +35,6 @@ Tweezer Top requiere un enfoque prudente y a menudo confirmación adicional:
 
 ## Véase también
 
-[Patrón Tweezer Bottom](tweezer_bottom.md)
+[Patrón Suelo de pinzas](tweezer_bottom.md)
 
-[Patrón Evening Star](evening_star.md)
+[Patrón Estrella vespertina](evening_star.md)

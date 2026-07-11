@@ -1,6 +1,6 @@
 # Schwarze Kerze
 
-Black Candle (bärische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs unter dem Eröffnungskurs liegt. Diese Candle spiegelt eine bärische Marktstimmung wider, bei der Verkäufer während der Candle-Bildungsperiode den Preis kontrollierten.
+Schwarze Kerze (bärische Candle) ist ein klassisches Candlestick-Muster, das entsteht, wenn der Schlusskurs unter dem Eröffnungskurs liegt. Diese Candle spiegelt eine bärische Marktstimmung wider, bei der Verkäufer während der Candle-Bildungsperiode den Preis kontrollierten.
 
 ##### Hauptmerkmale:
 
@@ -13,7 +13,7 @@ Black Candle (bärische Candle) ist ein klassisches Candlestick-Muster, das ents
 
 ### Interpretation
 
-Black Candle signalisiert bärischen Druck im Markt:
+Schwarze Kerze signalisiert bärischen Druck im Markt:
 
 - Je länger der Candle-Körper, desto stärker ist der bärische Druck.
 - Eine länge schwarze Candle nach einem Aufwärtstrend kann auf eine mögliche Umkehr hinweisen.
@@ -26,7 +26,7 @@ Obwohl eine einzelne schwarze Candle normalerweise kein eigenständiges Handelss
 
 - Bestätigung eines Abwärtstrends oder einer Umkehr nach einer Aufwärtsbewegung.
 - Suche nach langen schwarzen Candles an Widerstandsniveaus für mögliche Short-Positionen.
-- Verwendung in Kombination mit anderen Candlestick-Mustern, zum Beispiel einer schwarzen Candle nach einem Bearish Engulfing.
+- Verwendung in Kombination mit anderen Candlestick-Mustern, zum Beispiel einer schwarzen Candle nach einer bärischen Umschließung.
 - Identifikation von Unterstützungsniveaus nach einer Serie aufeinanderfolgender schwarzer Candles.
 
 ## Siehe auch

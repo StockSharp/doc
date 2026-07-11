@@ -1,6 +1,6 @@
-﻿# Patrón Black Marubozu
+# Patrón Marubozu negro
 
-Black Marubozu es un patrón de velas bajista caracterizado por la ausencia de sombras en ambos extremos de la vela. El término "marubozu" proviene de la palabra japonesa que significa "calvo" o "afeitado", reflejando el aspecto de la vela sin sombras.
+Marubozu negro es un patrón de velas bajista caracterizado por la ausencia de sombras en ambos extremos de la vela. El término "marubozu" proviene de la palabra japonesa que significa "calvo" o "afeitado", reflejando el aspecto de la vela sin sombras.
 
 ##### Características clave:
 
@@ -13,24 +13,24 @@ Black Marubozu es un patrón de velas bajista caracterizado por la ausencia de s
 
 ### Interpretación
 
-Black Marubozu se considera una señal bajista fuerte:
+Marubozu negro se considera una señal bajista fuerte:
 
 - La ausencia de sombras indica dominio completo de los vendedores: el precio abrió en el máximo y cayó continuamente hasta el cierre del período.
-- Un Black Marubozu largo indica presión bajista muy fuerte.
+- Un Marubozu negro largo indica presión bajista muy fuerte.
 - La aparición de este patrón después de una tendencia alcista puede señalar una reversión.
 - Dentro de una tendencia bajista, confirma la fuerza del movimiento.
 
 ### Estrategias de trading
 
-Black Marubozu proporciona una señal más fuerte que una vela negra normal:
+Marubozu negro proporciona una señal más fuerte que una vela negra normal:
 
-- Oportunidad de entrar en una posición corta después de la formación de un Black Marubozu, especialmente si aparece en un nivel de resistencia importante.
-- Usar el precio de cierre de Black Marubozu como nivel de resistencia al establecer stop-losses.
+- Oportunidad de entrar en una posición corta después de la formación de un marubozu negro, especialmente si aparece en un nivel de resistencia importante.
+- Usar el precio de cierre del marubozu negro como nivel de resistencia al establecer stop-losses.
 - Combinar con otros indicadores técnicos para confirmar la señal.
 - Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
 
 ## Véase también
 
-[Patrón White Marubozu](white_marubozu.md)
+[Patrón Marubozu blanco](white_marubozu.md)
 
-[Patrón Black Candle](black_candle.md)
+[Patrón Vela negra](black_candle.md)

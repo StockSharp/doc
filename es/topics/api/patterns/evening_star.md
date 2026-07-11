@@ -1,6 +1,6 @@
-﻿# Patrón Evening Star
+# Patrón Estrella vespertina
 
-Evening Star es un patrón de velas de reversión bajista compuesto por tres velas que se forma en una tendencia alcista. Este patrón muestra una transición de sentimiento alcista a bajista mediante un período de incertidumbre o consolidación.
+Estrella vespertina es un patrón de velas de reversión bajista compuesto por tres velas que se forma en una tendencia alcista. Este patrón muestra una transición de sentimiento alcista a bajista mediante un período de incertidumbre o consolidación.
 
 ##### Características clave:
 
@@ -13,7 +13,7 @@ Evening Star es un patrón de velas de reversión bajista compuesto por tres vel
 
 ### Interpretación
 
-Evening Star se considera una señal fuerte de una posible reversión de una tendencia alcista:
+Estrella vespertina se considera una señal fuerte de una posible reversión de una tendencia alcista:
 
 - La primera vela confirma la fuerza de la tendencia alcista.
 - La segunda vela (estrella) muestra debilitamiento de la presión alcista e incertidumbre en el mercado.
@@ -23,7 +23,7 @@ Evening Star se considera una señal fuerte de una posible reversión de una ten
 
 ### Estrategias de trading
 
-Evening Star proporciona buenas oportunidades para entrar en una posición corta:
+Estrella vespertina proporciona buenas oportunidades para entrar en una posición corta:
 
 - Entrar en una posición corta después de la formación del patrón, normalmente en la apertura de la cuarta vela o cuando se rompe el mínimo de la tercera vela.
 - Colocar un stop-loss por encima del máximo de la segunda vela o del máximo de todo el patrón.
@@ -34,6 +34,6 @@ Evening Star proporciona buenas oportunidades para entrar en una posición corta
 
 ## Véase también
 
-[Patrón Morning Star](morning_star.md)
+[Patrón Estrella matinal](morning_star.md)
 
-[Patrón Three Black Crows](three_black_crows.md)
+[Patrón Tres cuervos negros](three_black_crows.md)

@@ -1,6 +1,6 @@
 # Bärische Kerze
 
-Bearish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs unterhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bärische Marktstimmung.
+Bärische Kerze ist ein Candlestick-Muster, das durch einen Schlusskurs unterhalb des Eröffnungskurses gekennzeichnet ist. Dieses Muster zeigt eine bärische Marktstimmung.
 
 ##### Hauptmerkmale:
 
@@ -11,7 +11,7 @@ Bearish Candle ist ein Candlestick-Muster, das durch einen Schlusskurs unterhalb
 
 ### Interpretation
 
-Die Bearish Candle signalisiert eine bärische Marktstimmung mit mehreren Merkmalen:
+Die Bärische Kerze signalisiert eine bärische Marktstimmung mit mehreren Merkmalen:
 
 - Ein langer oberer Schatten zeigt, dass Käufer versucht haben, den Preis nach oben zu treiben, Verkäufer jedoch die Kontrolle übernahmen.
 - Ein Schlusskurs unter dem Eröffnungskurs zeigt die Dominanz der Verkäufer am Ende der Periode.
@@ -21,9 +21,9 @@ Die Bearish Candle signalisiert eine bärische Marktstimmung mit mehreren Merkma
 
 ### Handelsstrategien
 
-Bearish Candle kann in verschiedenen Handelsstrategien verwendet werden:
+Bärische Kerze kann in verschiedenen Handelsstrategien verwendet werden:
 
-- Einstieg in eine Short-Position nach Bildung einer Bearish Candle an einem Widerstandsniveau oder in einer überkauften Zone.
+- Einstieg in eine Short-Position nach Bildung einer bärischen Kerze an einem Widerstandsniveau oder in einer überkauften Zone.
 - Setzen eines Stop-Loss oberhalb des Maximums der Candle, um sich gegen einen weiteren Anstieg zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
 - Verwendung zur Bestätigung von Abwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.

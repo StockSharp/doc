@@ -1,6 +1,6 @@
-﻿# Steigende Drei-Methoden-Formation
+# Steigende Drei-Methoden-Formation
 
-Rising Three Methods ist ein bullisches Trendfortsetzungsmuster aus fünf Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt eine vorübergehende Konsolidierung oder Pause innerhalb eines bestehenden Aufwärtstrends vor dessen Fortsetzung.
+Steigende Drei-Methoden-Formation ist ein bullisches Trendfortsetzungsmuster aus fünf Candles, das in einem Aufwärtstrend entsteht. Dieses Muster zeigt eine vorübergehende Konsolidierung oder Pause innerhalb eines bestehenden Aufwärtstrends vor dessen Fortsetzung.
 
 ##### Hauptmerkmale:
 
@@ -15,7 +15,7 @@ Rising Three Methods ist ein bullisches Trendfortsetzungsmuster aus fünf Candle
 
 ### Interpretation
 
-Rising Three Methods gilt als zuverlässiges Signal für die Fortsetzung eines Aufwärtstrends:
+Steigende Drei-Methoden-Formation gilt als zuverlässiges Signal für die Fortsetzung eines Aufwärtstrends:
 
 - Die erste länge weiße Candle zeigt die Stärke des Aufwärtstrends.
 - Drei kleine schwarze Candles stellen eine vorübergehende Konsolidierung oder Korrektur dar, während der Verkäufer den Trend nicht wesentlich verändern konnten.
@@ -25,7 +25,7 @@ Rising Three Methods gilt als zuverlässiges Signal für die Fortsetzung eines A
 
 ### Handelsstrategien
 
-Rising Three Methods bietet gute Möglichkeiten für den Einstieg in oder den Ausbau von Long-Positionen:
+Steigende Drei-Methoden-Formation bietet gute Möglichkeiten für den Einstieg in oder den Ausbau von Long-Positionen:
 
 - Einstieg in eine Long-Position bei der Eröffnung nach der fünften Candle oder beim Durchbruch des Hochs der ersten Candle.
 - Platzieren eines Stop-Loss unterhalb des Tiefs der Korrektur-Candles oder unterhalb des Tiefs der ersten Candle.

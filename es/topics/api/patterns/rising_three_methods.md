@@ -1,6 +1,6 @@
-﻿# Patrón Rising Three Methods
+# Patrón Tres métodos ascendentes
 
-Rising Three Methods es un patrón alcista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia alcista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia alcista existente antes de su continuación.
+Tres métodos ascendentes es un patrón alcista de continuación de tendencia compuesto por cinco velas que se forma en una tendencia alcista. Este patrón muestra una consolidación o descanso temporal dentro de una tendencia alcista existente antes de su continuación.
 
 ##### Características clave:
 
@@ -15,7 +15,7 @@ Rising Three Methods es un patrón alcista de continuación de tendencia compues
 
 ### Interpretación
 
-Rising Three Methods se considera una señal fiable de continuación de tendencia alcista:
+Tres métodos ascendentes se considera una señal fiable de continuación de tendencia alcista:
 
 - La primera vela blanca larga muestra la fuerza de la tendencia alcista.
 - Tres velas negras pequeñas representan una consolidación o corrección temporal, durante la cual los vendedores no pudieron cambiar significativamente la tendencia.
@@ -25,7 +25,7 @@ Rising Three Methods se considera una señal fiable de continuación de tendenci
 
 ### Estrategias de trading
 
-Rising Three Methods proporciona buenas oportunidades para entrar o reforzar posiciones largas:
+Tres métodos ascendentes proporciona buenas oportunidades para entrar o reforzar posiciones largas:
 
 - Entrar en una posición larga en la apertura después de la quinta vela o cuando se rompe el máximo de la primera vela.
 - Colocar un stop-loss por debajo del mínimo de las velas de corrección o por debajo del mínimo de la primera vela.
@@ -36,6 +36,6 @@ Rising Three Methods proporciona buenas oportunidades para entrar o reforzar pos
 
 ## Véase también
 
-[Patrón Falling Three Methods](falling_three_methods.md)
+[Patrón Tres métodos descendentes](falling_three_methods.md)
 
-[Patrón Three White Soldiers](three_white_soldiers.md)
+[Patrón Tres soldados blancos](three_white_soldiers.md)

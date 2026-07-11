@@ -1,6 +1,6 @@
-﻿# Morgenstern
+# Morgenstern
 
-Morning Star ist ein bullisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt den Übergang von bärischer zu bullischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
+Morgenstern ist ein bullisches Umkehr-Candlestick-Muster aus drei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt den Übergang von bärischer zu bullischer Stimmung über eine Phase der Unsicherheit oder Konsolidierung.
 
 ##### Hauptmerkmale:
 
@@ -13,17 +13,17 @@ Morning Star ist ein bullisches Umkehr-Candlestick-Muster aus drei Candles, das 
 
 ### Interpretation
 
-Morning Star gilt als starkes Signal für eine mögliche Umkehr eines Abwärtstrends:
+Morgenstern gilt als starkes Signal für eine mögliche Umkehr eines Abwärtstrends:
 
 - Die erste Candle bestätigt die Stärke des bärischen Trends.
 - Die zweite Candle (Stern) zeigt eine Abschwächung des bärischen Drucks und Unsicherheit im Markt.
 - Die dritte Candle zeigt die Rückkehr der Käufer und einen Kontrollwechsel von Bären zu Bullen.
 - Je tiefer die dritte Candle in den Körper der ersten Candle eindringt, desto stärker ist das Umkehrsignal.
-- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster als "Morning Doji Star" bezeichnet und gilt als noch stärkeres Signal.
+- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster als "Morgen-Doji-Stern" bezeichnet und gilt als noch stärkeres Signal.
 
 ### Handelsstrategien
 
-Morning Star bietet gute Möglichkeiten für den Einstieg in eine Long-Position:
+Morgenstern bietet gute Möglichkeiten für den Einstieg in eine Long-Position:
 
 - Einstieg in eine Long-Position nach Bildung des Musters, üblicherweise bei Eröffnung der vierten Candle oder beim Durchbruch des Hochs der dritten Candle.
 - Platzieren eines Stop-Loss unterhalb des Tiefs der zweiten Candle oder unterhalb des Tiefs des gesamten Musters.

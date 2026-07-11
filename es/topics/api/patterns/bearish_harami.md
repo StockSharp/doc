@@ -1,6 +1,6 @@
-﻿# Patrón Bearish Harami
+# Patrón Harami bajista
 
-Bearish Harami es un patrón de velas de reversión compuesto por dos velas que se forma en una tendencia alcista. El término "harami" proviene de la palabra japonesa que significa "embarazo", ya que la vela pequeña (hijo) está contenida dentro de la vela grande (madre).
+Harami bajista es un patrón de velas de reversión compuesto por dos velas que se forma en una tendencia alcista. El término "harami" proviene de la palabra japonesa que significa "embarazo", ya que la vela pequeña (hijo) está contenida dentro de la vela grande (madre).
 
 ##### Características clave:
 
@@ -13,17 +13,17 @@ Bearish Harami es un patrón de velas de reversión compuesto por dos velas que 
 
 ### Interpretación
 
-Bearish Harami señala un posible final de una tendencia alcista:
+Harami bajista señala un posible final de una tendencia alcista:
 
 - La primera vela confirma la tendencia alcista existente y la fuerza de los compradores.
 - La segunda vela, completamente contenida dentro de la primera, indica una pérdida de impulso alcista y posible aparición de vendedores.
 - Cuanto menor sea el cuerpo de la segunda vela en comparación con la primera, más pronunciada será la incertidumbre y el potencial de reversión.
 - Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Harami Cross" y se considera una señal más fuerte de incertidumbre.
-- Este patrón suele considerarse una señal más débil en comparación con Bearish Engulfing, pero puede ser un indicador más temprano de una posible reversión.
+- Este patrón suele considerarse una señal más débil en comparación con Envolvente bajista, pero puede ser un indicador más temprano de una posible reversión.
 
 ### Estrategias de trading
 
-Bearish Harami normalmente requiere confirmación adicional para entrar en posición:
+Harami bajista normalmente requiere confirmación adicional para entrar en posición:
 
 - Esperar una vela bajista de confirmación después de la formación del patrón antes de entrar en una posición corta.
 - Colocar un stop-loss por encima del máximo del patrón o del máximo de la primera vela.
@@ -34,6 +34,6 @@ Bearish Harami normalmente requiere confirmación adicional para entrar en posic
 
 ## Véase también
 
-[Patrón Bullish Harami](bullish_harami.md)
+[Patrón Harami alcista](bullish_harami.md)
 
-[Patrón Bearish Engulfing](bearish_engulfing.md)
+[Patrón Envolvente bajista](bearish_engulfing.md)

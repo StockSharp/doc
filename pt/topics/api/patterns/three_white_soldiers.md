@@ -1,6 +1,6 @@
-﻿# Padrão Three White Soldiers
+# Padrão Três soldados brancos
 
-Three White Soldiers é um poderoso padrão de velas de reversão altista, composto por três velas consecutivas, que se forma numa tendência descendente. Este padrão indica uma mudança decisiva de controlo dos vendedores para os compradores, sinalizando uma possível reversão de uma tendência descendente.
+Três soldados brancos é um poderoso padrão de velas de reversão altista, composto por três velas consecutivas, que se forma numa tendência descendente. Este padrão indica uma mudança decisiva de controlo dos vendedores para os compradores, sinalizando uma possível reversão de uma tendência descendente.
 
 ##### Características principais:
 
@@ -14,7 +14,7 @@ Three White Soldiers é um poderoso padrão de velas de reversão altista, compo
 
 ### Interpretação
 
-Three White Soldiers é considerado um dos sinais mais fiáveis de reversão de uma tendência descendente:
+Três soldados brancos é considerado um dos sinais mais fiáveis de reversão de uma tendência descendente:
 
 - A sequência de três velas em subida mostra um aumento constante da pressão altista.
 - A abertura de cada vela subsequente dentro do corpo da anterior indica alguma consolidação, seguida da continuação do movimento altista.
@@ -24,7 +24,7 @@ Three White Soldiers é considerado um dos sinais mais fiáveis de reversão de 
 
 ### Estratégias de Negociação
 
-Three White Soldiers oferece oportunidades fiáveis para entrar numa posição longa:
+Três soldados brancos oferece oportunidades fiáveis para entrar numa posição longa:
 
 - Entre numa posição longa após a formação completa do padrão, normalmente na abertura da quarta vela.
 - Coloque um stop-loss abaixo do mínimo da terceira vela ou abaixo do mínimo de todo o padrão.
@@ -35,6 +35,6 @@ Three White Soldiers oferece oportunidades fiáveis para entrar numa posição l
 
 ## Ver também
 
-[Padrão Three Black Crows](three_black_crows.md)
+[Padrão Três corvos negros](three_black_crows.md)
 
-[Padrão Rising Three Methods](rising_three_methods.md)
+[Padrão Três métodos ascendentes](rising_three_methods.md)

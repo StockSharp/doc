@@ -1,6 +1,6 @@
-﻿# Padrão Bearish Engulfing
+# Padrão Engolfo baixista
 
-Bearish Engulfing é um poderoso padrão de velas de reversão bearish composto por duas velas que se forma numa tendência ascendente. A primeira vela é branca (bullish), seguida por uma vela preta (bearish), cujo corpo engloba completamente (cobre) o corpo da vela anterior.
+Engolfo baixista é um poderoso padrão de velas de reversão baixista composto por duas velas que se forma numa tendência ascendente. A primeira vela é branca (altista), seguida por uma vela preta (baixista), cujo corpo engloba completamente (cobre) o corpo da vela anterior.
 
 ##### Características Principais:
 
@@ -15,17 +15,17 @@ Bearish Engulfing é um poderoso padrão de velas de reversão bearish composto 
 
 ### Interpretação
 
-Bearish Engulfing é considerado um dos sinais mais fiáveis de reversão de uma tendência ascendente:
+Engolfo baixista é considerado um dos sinais mais fiáveis de reversão de uma tendência ascendente:
 
 - A primeira vela confirma a tendência ascendente existente e mostra o controlo dos compradores.
 - A segunda vela demonstra uma transição abrupta do controlo para os vendedores, que não só anulam o lucro do período anterior como também criam uma queda significativa.
-- O engulfing completo do corpo da vela anterior simboliza uma mudança completa no sentimento predominante, de bullish para bearish.
+- O engulfing completo do corpo da vela anterior simboliza uma mudança completa no sentimento predominante, de altista para baixista.
 - Quanto maior for o tamanho da segunda vela em comparação com a primeira, mais forte é o sinal.
 - Se o padrão se formar num nível de resistência ou após uma tendência ascendente prolongada, a sua importância aumenta.
 
 ### Estratégias de Negociação
 
-Bearish Engulfing proporciona excelentes oportunidades para entrar numa posição curta:
+Engolfo baixista proporciona excelentes oportunidades para entrar numa posição curta:
 
 - Entrar numa posição curta após a formação do padrão, normalmente na abertura da vela seguinte.
 - Colocar um stop-loss acima do máximo da segunda vela do padrão.

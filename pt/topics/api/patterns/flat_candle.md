@@ -1,6 +1,6 @@
-# Padrão Flat (Neutral) Candle
+# Padrão Vela plana (neutra)
 
-Flat (neutral) candle é um padrão de velas que se forma quando os preços de abertura e fecho são idênticos ou muito próximos. Esta vela reflete indecisão no mercado, quando as forças dos compradores e dos vendedores estão equilibradas.
+Vela plana (neutra) é um padrão de velas que se forma quando os preços de abertura e fecho são idênticos ou muito próximos. Esta vela reflete indecisão no mercado, quando as forças dos compradores e dos vendedores estão equilibradas.
 
 ##### Características Principais:
 
@@ -29,6 +29,6 @@ As flat candles raramente são utilizadas como sinais autónomos para entrada em
 
 ## Ver também
 
-[Padrão White Candle](white_candle.md)
+[Padrão Vela branca](white_candle.md)
 
-[Padrão Black Candle](black_candle.md)
+[Padrão Vela preta](black_candle.md)

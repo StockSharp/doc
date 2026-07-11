@@ -1,6 +1,6 @@
-# Patrón On-Neck
+# Patrón En el cuello
 
-On-Neck es un patrón de velas bajista de continuación de tendencia compuesto por dos velas que se forma en una tendencia bajista. Este patrón muestra un intento temporal fallido de los alcistas de revertir la tendencia, después de lo cual continúa el movimiento bajista.
+En el cuello es un patrón de velas bajista de continuación de tendencia compuesto por dos velas que se forma en una tendencia bajista. Este patrón muestra un intento temporal fallido de los alcistas de revertir la tendencia, después de lo cual continúa el movimiento bajista.
 
 ##### Características clave:
 
@@ -9,11 +9,11 @@ On-Neck es un patrón de velas bajista de continuación de tendencia compuesto p
 - El precio de cierre de la segunda vela está alrededor (o al nivel) del mínimo de la primera vela.
 - Se forma en una tendencia bajista.
 
-![Patrón On-Neck](../../../images/onneckpattern.png)
+![Patrón En el cuello](../../../images/onneckpattern.png)
 
 ### Interpretación
 
-On-Neck se considera una señal de continuación de tendencia bajista:
+En el cuello se considera una señal de continuación de tendencia bajista:
 
 - La primera vela confirma la tendencia bajista existente.
 - La segunda vela comienza con un gap bajista, indicando presión bajista continuada.
@@ -23,7 +23,7 @@ On-Neck se considera una señal de continuación de tendencia bajista:
 
 ### Estrategias de trading
 
-On-Neck proporciona oportunidades para entrar o reforzar posiciones cortas:
+En el cuello proporciona oportunidades para entrar o reforzar posiciones cortas:
 
 - Entrar en una posición corta o añadir a una posición corta existente después de la formación del patrón, normalmente en la apertura de la tercera vela.
 - Colocar un stop-loss por encima del máximo de la segunda vela o, para mayor protección, por encima del máximo de la primera vela.

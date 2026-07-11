@@ -1,6 +1,6 @@
-﻿# Patrón Spinning Top
+# Patrón Peonza
 
-Spinning Top es un patrón de velas caracterizado por un cuerpo pequeño y largas sombras superior e inferior de longitud aproximadamente igual. Este patrón indica indecisión del mercado y una lucha entre compradores y vendedores.
+Peonza es un patrón de velas caracterizado por un cuerpo pequeño y largas sombras superior e inferior de longitud aproximadamente igual. Este patrón indica indecisión del mercado y una lucha entre compradores y vendedores.
 
 ##### Características clave:
 
@@ -13,7 +13,7 @@ Spinning Top es un patrón de velas caracterizado por un cuerpo pequeño y larga
 
 ### Interpretación
 
-Spinning Top señala indecisión en el mercado:
+Peonza señala indecisión en el mercado:
 
 - Las sombras largas muestran que durante el período el precio fluctuó significativamente tanto hacia arriba como hacia abajo.
 - El cuerpo pequeño significa que el precio de cierre no se alejó mucho del precio de apertura, a pesar de la alta volatilidad.
@@ -23,15 +23,15 @@ Spinning Top señala indecisión en el mercado:
 
 ### Estrategias de trading
 
-Spinning Top por sí mismo no es una señal de trading fuerte, pero se puede usar en combinación con otros factores:
+Peonza por sí mismo no es una señal de trading fuerte, pero se puede usar en combinación con otros factores:
 
 - Buscar confirmación adicional de velas posteriores antes de tomar decisiones de trading.
-- Usar como parte de patrones de velas más complejos, como Morning Star o Evening Star.
-- Aumentar la atención a movimientos de precio posteriores después de la formación de Spinning Top en niveles clave de soporte o resistencia.
-- Posible ajuste de stop-losses cuando aparece Spinning Top después de una tendencia prolongada.
+- Usar como parte de patrones de velas más complejos, como Estrella matinal o Estrella vespertina.
+- Aumentar la atención a movimientos de precio posteriores después de la formación de Peonza en niveles clave de soporte o resistencia.
+- Posible ajuste de stop-losses cuando aparece Peonza después de una tendencia prolongada.
 
 ## Véase también
 
-[Patrón Hammer](hammer.md)
+[Patrón Martillo](hammer.md)
 
-[Patrón Inverted Hammer](inverted_hammer.md)
+[Patrón Martillo invertido](inverted_hammer.md)

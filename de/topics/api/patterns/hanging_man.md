@@ -1,6 +1,6 @@
-﻿# Hanging Man
+# Hängender Mann
 
-Hanging Man ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärtstrend entsteht. Die Candle hat einen kleinen Körper im oberen Bereich und einen langen unteren Schatten; der obere Schatten fehlt oder ist sehr kurz. Die Form der Candle erinnert an eine Figur mit hängenden Beinen, daher der Name.
+Hängender Mann ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärtstrend entsteht. Die Candle hat einen kleinen Körper im oberen Bereich und einen langen unteren Schatten; der obere Schatten fehlt oder ist sehr kurz. Die Form der Candle erinnert an eine Figur mit hängenden Beinen, daher der Name.
 
 ##### Hauptmerkmale:
 
@@ -14,7 +14,7 @@ Hanging Man ist ein bärisches Umkehr-Candlestick-Muster, das in einem Aufwärts
 
 ### Interpretation
 
-Hanging Man gilt als Warnung vor einem möglichen Ende eines Aufwärtstrends:
+Hängender Mann gilt als Warnung vor einem möglichen Ende eines Aufwärtstrends:
 
 - Der länge untere Schatten zeigt, dass der Preis während der Handelssitzung deutlich gefallen ist, was auf das Auftreten von Verkäufern hinweist.
 - Obwohl Käufer den Preis wieder in den oberen Bereich der Spanne drücken konnten, ist bereits die Tatsache eines deutlichen Preisrückgangs in einem Aufwärtstrend ein Warnsignal.
@@ -24,10 +24,10 @@ Hanging Man gilt als Warnung vor einem möglichen Ende eines Aufwärtstrends:
 
 ### Handelsstrategien
 
-Hanging Man erfordert vor Handelsentscheidungen normalerweise zusätzliche Bestätigung:
+Hängender Mann erfordert vor Handelsentscheidungen normalerweise zusätzliche Bestätigung:
 
-- Warten Sie nach der Bildung des Hanging Man auf eine bestätigende bärische Candle, bevor Sie in eine Short-Position einsteigen.
-- Platzieren Sie einen Stop-Loss oberhalb des Hochs des Hanging Man.
+- Warten Sie nach der Bildung des Hängender Mann auf eine bestätigende bärische Candle, bevor Sie in eine Short-Position einsteigen.
+- Platzieren Sie einen Stop-Loss oberhalb des Hochs des Hängender Mann.
 - Berücksichtigen Sie das Handelsvolumen - hohes Volumen während der Musterbildung und bei der bestätigenden Candle verstärkt das bärische Signal.
 - Kombinieren Sie das Muster mit anderen technischen Indikatoren, etwa RSI in der überkauften Zone oder Divergenzen bei Oszillatoren.
 - Mögliche Verwendung zum teilweisen Schließen bestehender Long-Positionen, auch ohne Öffnen einer Short-Position.
@@ -37,4 +37,4 @@ Hanging Man erfordert vor Handelsentscheidungen normalerweise zusätzliche Best�
 
 [Hammer](hammer.md)
 
-[Shooting Star](shooting_star.md)
+[Sternschnuppe](shooting_star.md)

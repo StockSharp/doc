@@ -1,6 +1,6 @@
-﻿# Padrão Tweezer Bottom
+# Padrão Fundo em pinça
 
-Tweezer Bottom é um padrão de velas de reversão altista composto por duas velas, que se forma numa tendência descendente. Uma característica do padrão é que ambas as velas têm o mesmo mínimo ou mínimos quase iguais, lembrando uma pinça com duas extremidades idênticas.
+Fundo em pinça é um padrão de velas de reversão altista composto por duas velas, que se forma numa tendência descendente. Uma característica do padrão é que ambas as velas têm o mesmo mínimo ou mínimos quase iguais, lembrando uma pinça com duas extremidades idênticas.
 
 ##### Características principais:
 
@@ -15,7 +15,7 @@ Tweezer Bottom é um padrão de velas de reversão altista composto por duas vel
 
 ### Interpretação
 
-Tweezer Bottom é considerado um sinal de possível reversão de uma tendência descendente:
+Fundo em pinça é considerado um sinal de possível reversão de uma tendência descendente:
 
 - A primeira vela confirma a tendência descendente existente.
 - A segunda vela com o mesmo mínimo mostra que os vendedores tentaram duas vezes romper o mesmo nível, mas falharam.
@@ -25,7 +25,7 @@ Tweezer Bottom é considerado um sinal de possível reversão de uma tendência 
 
 ### Estratégias de Negociação
 
-Tweezer Bottom exige uma abordagem cautelosa e frequentemente confirmação adicional:
+Fundo em pinça exige uma abordagem cautelosa e frequentemente confirmação adicional:
 
 - Aguarde uma vela altista de confirmação após a formação do padrão antes de entrar numa posição longa.
 - Coloque um stop-loss ligeiramente abaixo do mínimo comum do padrão.
@@ -36,6 +36,6 @@ Tweezer Bottom exige uma abordagem cautelosa e frequentemente confirmação adic
 
 ## Ver também
 
-[Padrão Tweezer Top](tweezer_top.md)
+[Padrão Topo em pinça](tweezer_top.md)
 
-[Padrão Morning Star](morning_star.md)
+[Padrão Estrela da manhã](morning_star.md)

@@ -1,6 +1,6 @@
-﻿# Patrón Three White Soldiers
+# Patrón Tres soldados blancos
 
-Three White Soldiers es un potente patrón de velas de reversión alcista compuesto por tres velas consecutivas que se forma en una tendencia bajista. Este patrón indica un cambio decisivo de control de vendedores a compradores, señalando una posible reversión de una tendencia bajista.
+Tres soldados blancos es un potente patrón de velas de reversión alcista compuesto por tres velas consecutivas que se forma en una tendencia bajista. Este patrón indica un cambio decisivo de control de vendedores a compradores, señalando una posible reversión de una tendencia bajista.
 
 ##### Características clave:
 
@@ -14,7 +14,7 @@ Three White Soldiers es un potente patrón de velas de reversión alcista compue
 
 ### Interpretación
 
-Three White Soldiers se considera una de las señales más fiables de reversión de una tendencia bajista:
+Tres soldados blancos se considera una de las señales más fiables de reversión de una tendencia bajista:
 
 - La secuencia de tres velas ascendentes muestra un aumento constante de la presión alcista.
 - La apertura de cada vela posterior dentro del cuerpo de la anterior indica cierta consolidación, seguida de la continuación del movimiento alcista.
@@ -24,7 +24,7 @@ Three White Soldiers se considera una de las señales más fiables de reversión
 
 ### Estrategias de trading
 
-Three White Soldiers proporciona oportunidades fiables para entrar en una posición larga:
+Tres soldados blancos proporciona oportunidades fiables para entrar en una posición larga:
 
 - Entrar en una posición larga después de la formación del patrón completo, normalmente en la apertura de la cuarta vela.
 - Colocar un stop-loss por debajo del mínimo de la tercera vela o por debajo del mínimo de todo el patrón.
@@ -35,6 +35,6 @@ Three White Soldiers proporciona oportunidades fiables para entrar en una posici
 
 ## Véase también
 
-[Patrón Three Black Crows](three_black_crows.md)
+[Patrón Tres cuervos negros](three_black_crows.md)
 
-[Patrón Rising Three Methods](rising_three_methods.md)
+[Patrón Tres métodos ascendentes](rising_three_methods.md)

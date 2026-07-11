@@ -1,6 +1,6 @@
-﻿# Bärisches Engulfing
+# Bärisches Engulfing
 
-Bearish Engulfing ist ein starkes bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Die erste Candle ist weiß (bullisch), gefolgt von einer schwarzen (bärischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
+Bärische Umschließung ist ein starkes bärisches Umkehr-Candlestick-Muster aus zwei Candles, das in einem Aufwärtstrend entsteht. Die erste Candle ist weiß (bullisch), gefolgt von einer schwarzen (bärischen) Candle, deren Körper den Körper der vorherigen Candle vollständig umschließt (überdeckt).
 
 ##### Hauptmerkmale:
 
@@ -15,7 +15,7 @@ Bearish Engulfing ist ein starkes bärisches Umkehr-Candlestick-Muster aus zwei 
 
 ### Interpretation
 
-Bearish Engulfing gilt als eines der zuverlässigsten Signale für eine Umkehr eines Aufwärtstrends:
+Bärische Umschließung gilt als eines der zuverlässigsten Signale für eine Umkehr eines Aufwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Aufwärtstrend und zeigt die Kontrolle der Käufer.
 - Die zweite Candle zeigt einen abrupten Kontrollwechsel zu den Verkäufern, die nicht nur den Gewinn der vorherigen Periode auslöschen, sondern auch einen deutlichen Rückgang erzeugen.
@@ -25,7 +25,7 @@ Bearish Engulfing gilt als eines der zuverlässigsten Signale für eine Umkehr e
 
 ### Handelsstrategien
 
-Bearish Engulfing bietet gute Möglichkeiten für den Einstieg in eine Short-Position:
+Bärische Umschließung bietet gute Möglichkeiten für den Einstieg in eine Short-Position:
 
 - Einstieg in eine Short-Position nach Bildung des Musters, üblicherweise bei Eröffnung der nächsten Candle.
 - Platzieren eines Stop-Loss oberhalb des Hochs der zweiten Candle des Musters.

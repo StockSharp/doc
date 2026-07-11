@@ -1,6 +1,6 @@
-﻿# Padrão Spinning Top
+# Padrão Pião
 
-Spinning Top é um padrão de velas caracterizado por um corpo pequeno da vela e sombras superior e inferior longas, de comprimento aproximadamente igual. Este padrão indica indecisão do mercado e uma disputa entre compradores e vendedores.
+Pião é um padrão de velas caracterizado por um corpo pequeno da vela e sombras superior e inferior longas, de comprimento aproximadamente igual. Este padrão indica indecisão do mercado e uma disputa entre compradores e vendedores.
 
 ##### Características principais:
 
@@ -13,7 +13,7 @@ Spinning Top é um padrão de velas caracterizado por um corpo pequeno da vela e
 
 ### Interpretação
 
-Spinning Top sinaliza indecisão no mercado:
+Pião sinaliza indecisão no mercado:
 
 - As sombras longas mostram que, durante o período, o preço oscilou significativamente tanto para cima como para baixo.
 - O corpo pequeno significa que o preço de fecho não se afastou muito do preço de abertura, apesar da elevada volatilidade.
@@ -23,15 +23,15 @@ Spinning Top sinaliza indecisão no mercado:
 
 ### Estratégias de Negociação
 
-Spinning Top, por si só, não é um sinal de negociação forte, mas pode ser usado em combinação com outros fatores:
+Pião, por si só, não é um sinal de negociação forte, mas pode ser usado em combinação com outros fatores:
 
 - Procure confirmação adicional nas velas subsequentes antes de tomar decisões de negociação.
-- Use como parte de padrões de velas mais complexos, como morning star ou evening star.
-- Aumente a atenção aos movimentos de preço subsequentes após a formação de um Spinning Top em níveis-chave de suporte ou resistência.
-- Possível aperto dos stop-losses quando um Spinning Top aparece após uma tendência prolongada.
+- Use como parte de padrões de velas mais complexos, como Estrela da manhã ou Estrela da noite.
+- Aumente a atenção aos movimentos de preço subsequentes após a formação de um Pião em níveis-chave de suporte ou resistência.
+- Possível aperto dos stop-losses quando um Pião aparece após uma tendência prolongada.
 
 ## Ver também
 
-[Padrão Hammer](hammer.md)
+[Padrão Martelo](hammer.md)
 
-[Padrão Inverted Hammer](inverted_hammer.md)
+[Padrão Martelo invertido](inverted_hammer.md)

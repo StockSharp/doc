@@ -1,6 +1,6 @@
-﻿# Drei weiße Soldaten
+# Drei weiße Soldaten
 
-Three White Soldiers ist ein starkes bullisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Abwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Verkäufern zu Käufern hin und signalisiert eine mögliche Umkehr eines Abwärtstrends.
+Drei weiße Soldaten ist ein starkes bullisches Umkehr-Candlestick-Muster aus drei aufeinanderfolgenden Candles, das in einem Abwärtstrend entsteht. Dieses Muster weist auf einen entschiedenen Kontrollwechsel von Verkäufern zu Käufern hin und signalisiert eine mögliche Umkehr eines Abwärtstrends.
 
 ##### Hauptmerkmale:
 
@@ -14,7 +14,7 @@ Three White Soldiers ist ein starkes bullisches Umkehr-Candlestick-Muster aus dr
 
 ### Interpretation
 
-Three White Soldiers gilt als eines der zuverlässigsten Signale für die Umkehr eines Abwärtstrends:
+Drei weiße Soldaten gilt als eines der zuverlässigsten Signale für die Umkehr eines Abwärtstrends:
 
 - Die Abfolge von drei steigenden Candles zeigt einen stetigen Anstieg bullischen Drucks.
 - Die Eröffnung jeder nachfolgenden Candle innerhalb des Körpers der vorherigen deutet auf eine gewisse Konsolidierung und anschließend auf die Fortsetzung der bullischen Bewegung hin.
@@ -24,7 +24,7 @@ Three White Soldiers gilt als eines der zuverlässigsten Signale für die Umkehr
 
 ### Handelsstrategien
 
-Three White Soldiers bietet zuverlässige Möglichkeiten für den Einstieg in eine Long-Position:
+Drei weiße Soldaten bietet zuverlässige Möglichkeiten für den Einstieg in eine Long-Position:
 
 - Einstieg in eine Long-Position nach Bildung des vollständigen Musters, üblicherweise bei Eröffnung der vierten Candle.
 - Platzieren eines Stop-Loss unterhalb des Tiefs der dritten Candle oder unterhalb des Tiefs des gesamten Musters.

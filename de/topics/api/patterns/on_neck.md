@@ -1,6 +1,6 @@
-# On-Neck
+# Auf-Hals-Linie
 
-On-Neck ist ein bärisches Trendfortsetzungs-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt einen vorübergehenden erfolglosen Versuch der Bullen, den Trend umzukehren; danach setzt sich die Abwärtsbewegung fort.
+Auf-Hals-Linie ist ein bärisches Trendfortsetzungs-Candlestick-Muster aus zwei Candles, das in einem Abwärtstrend entsteht. Dieses Muster zeigt einen vorübergehenden erfolglosen Versuch der Bullen, den Trend umzukehren; danach setzt sich die Abwärtsbewegung fort.
 
 ##### Hauptmerkmale:
 
@@ -9,11 +9,11 @@ On-Neck ist ein bärisches Trendfortsetzungs-Candlestick-Muster aus zwei Candles
 - Der Schlusskurs der zweiten Candle liegt ungefähr am Tief der ersten Candle oder auf dessen Niveau.
 - Entsteht in einem Abwärtstrend.
 
-![On-Neck-Muster](../../../images/onneckpattern.png)
+![Auf-Hals-Linie-Muster](../../../images/onneckpattern.png)
 
 ### Interpretation
 
-On-Neck gilt als Signal für die Fortsetzung eines Abwärtstrends:
+Auf-Hals-Linie gilt als Signal für die Fortsetzung eines Abwärtstrends:
 
 - Die erste Candle bestätigt den bestehenden Abwärtstrend.
 - Die zweite Candle startet mit einem Abwärts-Gap, was auf anhaltenden bärischen Druck hinweist.
@@ -23,7 +23,7 @@ On-Neck gilt als Signal für die Fortsetzung eines Abwärtstrends:
 
 ### Handelsstrategien
 
-On-Neck bietet Möglichkeiten, Short-Positionen zu eröffnen oder auszubauen:
+Auf-Hals-Linie bietet Möglichkeiten, Short-Positionen zu eröffnen oder auszubauen:
 
 - Einstieg in eine Short-Position oder Aufstockung einer bestehenden Short-Position nach Bildung des Musters, üblicherweise bei Eröffnung der dritten Candle.
 - Platzieren eines Stop-Loss oberhalb des Hochs der zweiten Candle oder, für mehr Schutz, oberhalb des Hochs der ersten Candle.

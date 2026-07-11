@@ -1,6 +1,6 @@
-﻿# Padrão Tweezer Top
+# Padrão Topo em pinça
 
-Tweezer Top é um padrão de velas de reversão baixista composto por duas velas, que se forma numa tendência ascendente. Uma característica do padrão é que ambas as velas têm o mesmo máximo ou máximos quase iguais, lembrando uma pinça com duas extremidades idênticas.
+Topo em pinça é um padrão de velas de reversão baixista composto por duas velas, que se forma numa tendência ascendente. Uma característica do padrão é que ambas as velas têm o mesmo máximo ou máximos quase iguais, lembrando uma pinça com duas extremidades idênticas.
 
 ##### Características principais:
 
@@ -14,7 +14,7 @@ Tweezer Top é um padrão de velas de reversão baixista composto por duas velas
 
 ### Interpretação
 
-Tweezer Top é considerado um sinal de possível reversão de uma tendência ascendente:
+Topo em pinça é considerado um sinal de possível reversão de uma tendência ascendente:
 
 - A primeira vela confirma a tendência ascendente existente.
 - A segunda vela com o mesmo máximo mostra que os compradores tentaram duas vezes romper o mesmo nível, mas falharam.
@@ -24,7 +24,7 @@ Tweezer Top é considerado um sinal de possível reversão de uma tendência asc
 
 ### Estratégias de Negociação
 
-Tweezer Top exige uma abordagem cautelosa e frequentemente confirmação adicional:
+Topo em pinça exige uma abordagem cautelosa e frequentemente confirmação adicional:
 
 - Aguarde uma vela baixista de confirmação após a formação do padrão antes de entrar numa posição curta.
 - Coloque um stop-loss ligeiramente acima do máximo comum do padrão.
@@ -35,6 +35,6 @@ Tweezer Top exige uma abordagem cautelosa e frequentemente confirmação adicion
 
 ## Ver também
 
-[Padrão Tweezer Bottom](tweezer_bottom.md)
+[Padrão Fundo em pinça](tweezer_bottom.md)
 
-[Padrão Evening Star](evening_star.md)
+[Padrão Estrela da noite](evening_star.md)
