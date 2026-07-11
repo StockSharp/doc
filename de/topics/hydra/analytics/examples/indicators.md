@@ -18,7 +18,7 @@ Das Skript kann mit einer großen Auswahl von Indikatoren arbeiten, darunter unt
 
 - **Gleitende Durchschnitte (MA)**: Stellen den Durchschnittspreis über einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
 - **Relative Strength Index (RSI)**: Bewertet Ausmass und Geschwindigkeit von Preisanderungen und hilft, uberkaufte oder uberverkaufte Bedingungen zu erkennen.
-- **Bollinger Bands (BB)**: Zeigen Preisspanne und Volatilität auf Basis gleitender Durchschnitte und Standardabweichungen.
+- **Bollinger-Bänder (BB)**: Zeigen Preisspanne und Volatilität auf Basis gleitender Durchschnitte und Standardabweichungen.
 
 ## Anwendung im Handel und in der Analyse
 

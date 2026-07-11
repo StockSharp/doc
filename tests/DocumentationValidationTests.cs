@@ -3180,6 +3180,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishBollingerBandLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bBollinger Bands?\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var topicsRoot = Path.Combine(_repoRoot, lang, "topics");
+			if (!Directory.Exists(topicsRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(topicsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English Bollinger band label '{match.Value}'. Localize visible indicator names in prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
 	{
 		var errors = new List<string>();

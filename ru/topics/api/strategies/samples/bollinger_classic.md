@@ -23,7 +23,7 @@ public class BollingerStrategyClassicStrategy : Strategy
 
 Стратегия позволяет настраивать следующие параметры:
 
-- **BollingerLength** - период индикатора Bollinger Bands (по умолчанию 20)
+- **BollingerLength** - период индикатора полос Боллинджера (по умолчанию 20)
 - **BollingerDeviation** - множитель стандартного отклонения (по умолчанию 2.0)
 - **CandleType** - тип свечей для работы (по умолчанию 5-минутные)
 
@@ -31,7 +31,7 @@ public class BollingerStrategyClassicStrategy : Strategy
 
 ## Инициализация стратегии
 
-В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) создается индикатор Bollinger Bands, настраивается подписка на свечи и готовится визуализация на графике:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) создается индикатор полос Боллинджера, настраивается подписка на свечи и готовится визуализация на графике:
 
 ```cs
 protected override void OnStarted2(DateTime time)

@@ -2,7 +2,7 @@
 
 ## 概要
 
-`BollingerStrategyLowBandStrategy` は、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) インジケーターに基づくストラテジーです。価格が Bollinger Bands の下限に到達したときにショート ポジションを開き、価格が中央線に到達したときにそれをクローズします。
+`BollingerStrategyLowBandStrategy` は、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) インジケーターに基づくストラテジーです。価格がボリンジャーバンドの下限に到達したときにショート ポジションを開き、価格が中央線に到達したときにそれをクローズします。
 
 ## 主なコンポーネント
 
@@ -23,7 +23,7 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 このストラテジーでは、次のパラメーターをカスタマイズできます。
 
-- **BollingerLength** - Bollinger Bands インジケーターの期間 (既定値 20)
+- **BollingerLength** - ボリンジャーバンド インジケーターの期間 (既定値 20)
 - **BollingerDeviation** - 標準偏差の乗数 (既定値 2.0)
 - **CandleType** - 使用するローソク足の種類 (既定値 5 分足)
 
@@ -31,7 +31,7 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 ## ストラテジーの初期化
 
-[OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) メソッドでは、Bollinger Bands インジケーターが作成され、ローソク足サブスクリプションが設定され、可視化が準備されます。
+[OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) メソッドでは、ボリンジャーバンド インジケーターが作成され、ローソク足サブスクリプションが設定され、可視化が準備されます。
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -95,15 +95,15 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 
 ## 取引ロジック
 
-- **売りシグナル**: オープン ポジションがないときに、ローソク足の終値が Bollinger Band の下限に到達するか、それを下回る
-- **買いシグナル** (ショート ポジションのクローズ): ショート ポジションがあるときに、ローソク足の終値が Bollinger Band の中央線に到達するか、それを上回る
+- **売りシグナル**: オープン ポジションがないときに、ローソク足の終値がボリンジャーバンドの下限に到達するか、それを下回る
+- **買いシグナル** (ショート ポジションのクローズ): ショート ポジションがあるときに、ローソク足の終値がボリンジャーバンドの中央線に到達するか、それを上回る
 - ポジション数量は、オープン時は固定され、クローズ時は現在のポジション全体と等しくなります
 
 ## 特徴
 
 - このストラテジーは `GetWorkingSecurities()` メソッドを通じて、動作対象の銘柄を自動的に判定します
 - このストラテジーは完了したローソク足のみを使用します
-- このストラテジーは Bollinger Bands インジケーターの下限バンドと中央線のみを使用します
+- このストラテジーはボリンジャーバンド インジケーターの下限バンドと中央線のみを使用します
 - ショート ポジションのみが開かれます
 - グラフィック領域が利用可能な場合、インジケーターと取引はチャート上に可視化されます
 - 最適なストラテジー設定を見つけるためのパラメーター最適化がサポートされています

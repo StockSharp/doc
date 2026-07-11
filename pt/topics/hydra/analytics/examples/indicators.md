@@ -18,7 +18,7 @@ O script pode trabalhar com uma ampla gama de indicadores, incluindo, entre outr
 
 - **Médias Móveis (MA)**: Representam o preço médio ao longo de um determinado período, ajudando a identificar tendências.
 - **Relative Strength Index (RSI)**: Avalia a magnitude e a velocidade das alterações de preço, ajudando a identificar condições de sobrecompra ou sobrevenda.
-- **Bollinger Bands (BB)**: Mostram o intervalo e a volatilidade dos preços, com base em médias móveis e desvios-padrão.
+- **Bandas de Bollinger (BB)**: Mostram o intervalo e a volatilidade dos preços, com base em médias móveis e desvios-padrão.
 
 ## Aplicação em Negociação e Análise
 

@@ -23,7 +23,7 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **BollingerLength** - periodo del indicador Bollinger Bands (predeterminado 20)
+- **BollingerLength** - periodo del indicador bandas de Bollinger (predeterminado 20)
 - **BollingerDeviation** - multiplicador de desviación estándar (predeterminado 2.0)
 - **CandleType** - tipo de vela con el que trabajar (predeterminado 5 minutos)
 
@@ -31,7 +31,7 @@ Todos los parámetros están disponibles para optimización con rangos de valore
 
 ## Inicialización de la estrategia
 
-En el método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)), se crea el indicador Bollinger Bands, se configura la suscripción a velas y se prepara la visualización:
+En el método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)), se crea el indicador bandas de Bollinger, se configura la suscripción a velas y se prepara la visualización:
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -103,7 +103,7 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 
 - La estrategia determina automáticamente los instrumentos con los que trabajar mediante el método `GetWorkingSecurities()`
 - La estrategia solo trabaja con velas completadas
-- La estrategia usa solo la banda inferior y la línea media del indicador Bollinger Bands
+- La estrategia usa solo la banda inferior y la línea media del indicador bandas de Bollinger
 - Solo se abren posiciones cortas
 - El indicador y las operaciones se visualizan en un gráfico cuando hay un área gráfica disponible
 - Se admite optimización de parámetros para encontrar ajustes óptimos de estrategia
