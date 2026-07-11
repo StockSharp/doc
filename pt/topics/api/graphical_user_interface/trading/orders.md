@@ -96,7 +96,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 		
 		// Processamento adicional da ordem
-		Console.WriteLine($"Ordem recebida: {order.TransactionId}, Status: {order.State}");
+		Console.WriteLine($"Ordem recebida: {order.TransactionId}, Estado: {order.State}");
 		
 		// Se a ordem estiver num estado final, atualizar a UI
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)

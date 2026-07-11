@@ -38,7 +38,7 @@ Die Methode [LogDebug](xref:Ecng.Logging.BaseLogReceiver.LogDebug(System.String,
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Kerze wird verarbeitet: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volumen={5}",
+	LogDebug("Kerze wird verarbeitet: {0}, Eröffnung={1}, Schluss={2}, Hoch={3}, Tief={4}, Volumen={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
 
 	// ...

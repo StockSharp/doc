@@ -38,7 +38,7 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
-	LogDebug("Обработка свечи: {0}, Open={1}, Close={2}, High={3}, Low={4}, Volume={5}",
+	LogDebug("Обработка свечи: {0}, Открытие={1}, Закрытие={2}, Максимум={3}, Минимум={4}, Объем={5}",
 		candle.OpenTime, candle.OpenPrice, candle.ClosePrice, candle.HighPrice, candle.LowPrice, candle.TotalVolume);
 
 	// ...
