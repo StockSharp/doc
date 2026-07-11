@@ -24,20 +24,20 @@
 
 | 类别 | 描述 | 值类型 |
 |-------|-------------|------------|
-| [净利润参数](xref:StockSharp.Algo.Statistics.NetProfitParameter) | 整个期间的净利润。设置为当前损益值 | `decimal` |
-| [净利润百分比参数](xref:StockSharp.Algo.Statistics.NetProfitPercentParameter) | 净利润占百分比。需要设置 `BeginValue`（初始资本）。公式：`pnl * 100 / BeginValue` | `decimal` |
+| [NetProfitParameter](xref:StockSharp.Algo.Statistics.NetProfitParameter) | 整个期间的净利润。设置为当前损益值 | `decimal` |
+| [NetProfitPercentParameter](xref:StockSharp.Algo.Statistics.NetProfitPercentParameter) | 净利润占百分比。需要设置 `BeginValue`（初始资本）。公式：`pnl * 100 / BeginValue` | `decimal` |
 | [MaxProfitParameter](xref:StockSharp.Algo.Statistics.MaxProfitParameter) | 最大利润（整个期间的最高盈亏值） | `decimal` |
 | [MaxProfitPercentParameter](xref:StockSharp.Algo.Statistics.MaxProfitPercentParameter) | 最大利润百分比。需要 `BeginValue`。公式：`MaxProfit * 100 / BeginValue` | `decimal` |
 | [MaxProfitDateParameter](xref:StockSharp.Algo.Statistics.MaxProfitDateParameter) | 达到最大利润的日期 | `DateTime` |
-| [最大回撤参数](xref:StockSharp.Algo.Statistics.MaxDrawdownParameter) | 最大绝对回撤。股权曲线的峰值和低谷之间的差值 | `decimal` |
-| [最大回撤百分比参数](xref:StockSharp.Algo.Statistics.MaxDrawdownPercentParameter) | 最大回撤百分比。公式：`MaxDrawdown * 100 / MaxEquity` | `decimal` |
-| [最大回撤日期参数](xref:StockSharp.Algo.Statistics.MaxDrawdownDateParameter) | 最大回撤日期 | `DateTime` |
+| [MaxDrawdownParameter](xref:StockSharp.Algo.Statistics.MaxDrawdownParameter) | 最大绝对回撤。股权曲线的峰值和低谷之间的差值 | `decimal` |
+| [MaxDrawdownPercentParameter](xref:StockSharp.Algo.Statistics.MaxDrawdownPercentParameter) | 最大回撤百分比。公式：`MaxDrawdown * 100 / MaxEquity` | `decimal` |
+| [MaxDrawdownDateParameter](xref:StockSharp.Algo.Statistics.MaxDrawdownDateParameter) | 最大回撤日期 | `DateTime` |
 | [MaxRelativeDrawdownParameter](xref:StockSharp.Algo.Statistics.MaxRelativeDrawdownParameter) | 最大相对回撤。计算方法为回撤与峰值资产的比率 | `decimal` |
 | [ReturnParameter](xref:StockSharp.Algo.Statistics.ReturnParameter) | 整个周期的相对回报。从最低点到当前值的最大相对增长 | `decimal` |
 | [CommissionParameter](xref:StockSharp.Algo.Statistics.CommissionParameter) | 支付的总佣金。累计所有佣金数值 | `decimal` |
-| [平均回撤参数](xref:StockSharp.Algo.Statistics.AverageDrawdownParameter) | 平均回撤。所有已完成和当前回撤的算术平均值 | `decimal` |
+| [AverageDrawdownParameter](xref:StockSharp.Algo.Statistics.AverageDrawdownParameter) | 平均回撤。所有已完成和当前回撤的算术平均值 | `decimal` |
 | [RecoveryFactorParameter](xref:StockSharp.Algo.Statistics.RecoveryFactorParameter) | 回收系数。公式：`NetProfit / MaxDrawdown` | `decimal` |
-| [夏普比率参数](xref:StockSharp.Algo.Statistics.SharpeRatioParameter) | 夏普比率。公式: `(annualized return - risk-free rate) / annualized standard deviation` | `decimal` |
+| [SharpeRatioParameter](xref:StockSharp.Algo.Statistics.SharpeRatioParameter) | 夏普比率。公式: `(annualized return - risk-free rate) / annualized standard deviation` | `decimal` |
 | [SortinoRatioParameter](xref:StockSharp.Algo.Statistics.SortinoRatioParameter) | 索提诺比率。类似于夏普比率，但只考虑下行偏差 | `decimal` |
 | [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) | Calmar 比率。公式：`NetProfit / MaxDrawdown` | `decimal` |
 | [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) | 斯特林比率。公式：`NetProfit / AverageDrawdown` | `decimal` |
@@ -61,17 +61,17 @@
 |-------|-------------|------------|
 | [TradeCountParameter](xref:StockSharp.Algo.Statistics.TradeCountParameter) | 交易总数（仅计算具有 `ClosedVolume > 0` 的交易） | `int` |
 | [WinningTradesParameter](xref:StockSharp.Algo.Statistics.WinningTradesParameter) | 盈利交易次数 (`ClosedVolume > 0` 和 `PnL > 0`) | `int` |
-| [亏损交易参数](xref:StockSharp.Algo.Statistics.LossingTradesParameter) | 亏损交易的数量 (`ClosedVolume > 0` 和 `PnL < 0`) | `int` |
+| [LossingTradesParameter](xref:StockSharp.Algo.Statistics.LossingTradesParameter) | 亏损交易的数量 (`ClosedVolume > 0` 和 `PnL < 0`) | `int` |
 | [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | 完成的往返交易次数（与 `ClosedVolume > 0` 进行的平仓交易） | `int` |
-| [平均交易利润参数](xref:StockSharp.Algo.Statistics.AverageTradeProfitParameter) | 每笔交易的平均利润。公式：`SumPnL / Count` | `decimal` |
+| [AverageTradeProfitParameter](xref:StockSharp.Algo.Statistics.AverageTradeProfitParameter) | 每笔交易的平均利润。公式：`SumPnL / Count` | `decimal` |
 | [AverageWinTradeParameter](xref:StockSharp.Algo.Statistics.AverageWinTradeParameter) | 盈利交易的平均利润。仅考虑具有 `PnL > 0` 的交易 | `decimal` |
-| [平均亏损交易参数](xref:StockSharp.Algo.Statistics.AverageLossTradeParameter) | 亏损交易的平均亏损。仅考虑具有 `PnL < 0` 的交易 | `decimal` |
+| [AverageLossTradeParameter](xref:StockSharp.Algo.Statistics.AverageLossTradeParameter) | 亏损交易的平均亏损。仅考虑具有 `PnL < 0` 的交易 | `decimal` |
 | [ProfitFactorParameter](xref:StockSharp.Algo.Statistics.ProfitFactorParameter) | 利润因子。公式：`GrossProfit / GrossLoss` | `decimal` |
-| [期望参数](xref:StockSharp.Algo.Statistics.ExpectancyParameter) | 数学期望。公式：`P(win) * AvgWin + P(loss) * AvgLoss` | `decimal` |
-| [每月交易参数](xref:StockSharp.Algo.Statistics.PerMonthTradeParameter) | 每月平均交易次数 | `decimal` |
-| [每日交易参数](xref:StockSharp.Algo.Statistics.PerDayTradeParameter) | 每日平均交易次数 | `decimal` |
-| [毛利润参数](xref:StockSharp.Algo.Statistics.GrossProfitParameter) | 毛利润。所有盈利交易的损益总和 (`PnL > 0`) | `decimal` |
-| [总亏损参数](xref:StockSharp.Algo.Statistics.GrossLossParameter) | 总亏损。所有亏损交易的盈亏总和（`PnL < 0`，数值为负） | `decimal` |
+| [ExpectancyParameter](xref:StockSharp.Algo.Statistics.ExpectancyParameter) | 数学期望。公式：`P(win) * AvgWin + P(loss) * AvgLoss` | `decimal` |
+| [PerMonthTradeParameter](xref:StockSharp.Algo.Statistics.PerMonthTradeParameter) | 每月平均交易次数 | `decimal` |
+| [PerDayTradeParameter](xref:StockSharp.Algo.Statistics.PerDayTradeParameter) | 每日平均交易次数 | `decimal` |
+| [GrossProfitParameter](xref:StockSharp.Algo.Statistics.GrossProfitParameter) | 毛利润。所有盈利交易的损益总和 (`PnL > 0`) | `decimal` |
+| [GrossLossParameter](xref:StockSharp.Algo.Statistics.GrossLossParameter) | 总亏损。所有亏损交易的盈亏总和（`PnL < 0`，数值为负） | `decimal` |
 
 ## 位置参数
 
@@ -99,9 +99,9 @@
 
 | 类别 | 描述 | 值类型 |
 |-------|-------------|------------|
-| [最大延迟注册参数](xref:StockSharp.Algo.Statistics.MaxLatencyRegistrationParameter) | 最大订单注册延迟 (`Order.LatencyRegistration` 属性) | `TimeSpan` |
+| [MaxLatencyRegistrationParameter](xref:StockSharp.Algo.Statistics.MaxLatencyRegistrationParameter) | 最大订单注册延迟 (`Order.LatencyRegistration` 属性) | `TimeSpan` |
 | [MinLatencyRegistrationParameter](xref:StockSharp.Algo.Statistics.MinLatencyRegistrationParameter) | 最小订单注册延迟 | `TimeSpan` |
-| [最大延迟取消参数](xref:StockSharp.Algo.Statistics.MaxLatencyCancellationParameter) | 最大订单取消延迟 (`Order.LatencyCancellation` 属性) | `TimeSpan` |
+| [MaxLatencyCancellationParameter](xref:StockSharp.Algo.Statistics.MaxLatencyCancellationParameter) | 最大订单取消延迟 (`Order.LatencyCancellation` 属性) | `TimeSpan` |
 | [MinLatencyCancellationParameter](xref:StockSharp.Algo.Statistics.MinLatencyCancellationParameter) | 最小订单取消延迟 | `TimeSpan` |
 
 ## 使用

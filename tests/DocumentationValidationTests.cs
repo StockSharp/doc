@@ -2707,6 +2707,42 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedStatisticsReferenceClassLinkLabelsMatchXrefTypeNames()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "strategies", "statistics_reference.md");
+		var linkPattern = new Regex(@"^\|\s*\[(?<label>[^\]]+)\]\(xref:StockSharp\.Algo\.Statistics\.(?<type>[A-Za-z0-9_]+)\)\s*\|", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = linkPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				var label = match.Groups["label"].Value;
+				var typeName = match.Groups["type"].Value;
+
+				if (label.Equals(typeName, StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: statistics reference class link label '{label}' hides API type '{typeName}'. Keep the class column as the API type name and localize the description column.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorListDescriptionsDoNotStartWithEnglishPhrases()
 	{
 		var errors = new List<string>();
