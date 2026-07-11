@@ -27,7 +27,7 @@ Der Indikator hat die folgenden Parameter:
 
 Die Connors-RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, um den Endwert zu erhalten:
 
-1. **Price RSI-Komponente** – Standard-RSI, berechnet über einen kurzen Zeitraum (normalerweise 3 Tage):
+1. **Preis-RSI-Komponente** – Standard-RSI, berechnet über einen kurzen Zeitraum (normalerweise 3 Tage):
    ```
    RSI = 100 - (100 / (1 + RS))
    wobei RS = durchschnittliche positive Änderung / durchschnittliche negative Änderung

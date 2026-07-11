@@ -54,7 +54,7 @@ El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
    - Los valores medios de KER (0,3-0,6) indican una tendencia moderada
    - Los valores Low KER (<0,3) indican un mercado lateral o alta volatilidad
 
-2. **KER Changes**:
+2. **Cambios de KER**:
    - El crecimiento de KER puede indicar la formación o el fortalecimiento de una tendencia
    - La caída de KER puede indicar un debilitamiento de la tendencia o una transición a un movimiento lateral
 

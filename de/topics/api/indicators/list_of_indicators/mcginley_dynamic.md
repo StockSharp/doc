@@ -45,7 +45,7 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - Wenn der Preis unter MGD liegt, deutet dies auf einen Abwärtstrend hin
    - Eine steile MGD-Steigung weist auf einen starken Trend hin
 
-2. **Price-Frequenzweichen**:
+2. **Kreuzungen mit dem Preis**:
    - Price, das MGD von unten nach oben kreuzt, kann als bullisches Signal angesehen werden
    - Price, das MGD von oben nach unten kreuzt, kann als rückläufiges Signal angesehen werden
    - Aufgrund seiner adaptiven Natur bilden sich diese Überkreuzungen typischerweise früher als bei herkömmlichen gleitenden Durchschnitten
@@ -60,7 +60,7 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - MGD dient oft als dynamisches Widerstandsniveau in einem Abwärtstrend
    - Mehrere Abpraller von MGD bestätigen die Trendstärke
 
-5. **Price-Beziehung**:
+5. **Preisbeziehung**:
    - Der Abstand zwischen Preis und MGD kann auf überkaufte oder überverkaufte Marktbedingungen hinweisen
    - Wenn der Preis erheblich von MGD abweicht, kann dies auf eine mögliche Umkehr oder Korrektur hinweisen
 

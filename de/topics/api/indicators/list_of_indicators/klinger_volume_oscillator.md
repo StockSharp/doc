@@ -85,7 +85,7 @@ Der Klinger-Volumenoszillator kann wie folgt interpretiert werden:
    - Extreme KVO-Werte können auf überkaufte oder überverkaufte Marktbedingungen und eine mögliche Umkehr hinweisen
    - Eine Verlangsamung des KVO-Anstiegs oder -Falls kann einer Trendumkehr vorausgehen
 
-7. **Volume und Price**:
+7. **Volumen und Preis**:
    - KVO ermöglicht die Beurteilung der Konsistenz von Preis- und Volumenbewegungen
    - Starkes Volumen in Trendrichtung führt zu extremeren KVO-Werten
 

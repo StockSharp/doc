@@ -71,7 +71,7 @@ El oscilador armónico se puede interpretar de la siguiente manera:
    - Los picos y valles regulares de HO se pueden utilizar para proyectar futuros puntos de inversión
    - Analizar la duración entre peaks/troughs puede ayudar a determinar la duración del ciclo dominante
 
-5. **Amplitude Changes**:
+5. **Cambios de amplitud**:
    - El aumento de la amplitud de oscilación HO puede indicar un fortalecimiento del componente cíclico
    - La amplitud de oscilación HO disminuida puede indicar una atenuación del componente cíclico
 

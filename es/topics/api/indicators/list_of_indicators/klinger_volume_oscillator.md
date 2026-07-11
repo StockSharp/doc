@@ -85,7 +85,7 @@ El Oscilador de volumen de Klinger se puede interpretar de la siguiente manera:
    - Los valores extremos de KVO pueden indicar condiciones de sobrecompra o sobreventa del mercado y una posible reversión.
    - La desaceleración en la subida o bajada de KVO puede preceder a un cambio de tendencia
 
-7. **Volume y precio**:
+7. **Volumen y precio**:
    - KVO permite evaluar la coherencia del movimiento de precios y volúmenes
    - Un volumen fuerte en la dirección de la tendencia conduce a valores KVO más extremos
 

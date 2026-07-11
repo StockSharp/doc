@@ -2533,6 +2533,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishIndicatorHeadingFragments()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(
+			@"Price[-\s](?:Trend|RSI|Frequenzweichen|Beziehung)|Volume[-\s](?:Spikes|Indikatoren|Multiplier)|Volume\s+(?:und|y)\s+Price|Rebounds von extremen Levels|Amplitude Changes|False Signals|KER Changes|(?:DI|EMV|GAPO|HVR|HLI|III)\s+Trends",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English heading fragment '{match.Value}'. Localize visible interpretation headings.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepKnownEnglishLongIndicatorNames()
 	{
 		var errors = new List<string>();

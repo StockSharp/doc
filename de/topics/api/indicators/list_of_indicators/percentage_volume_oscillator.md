@@ -77,12 +77,12 @@ Der prozentuale Volumenoszillator kann wie folgt interpretiert werden:
    - Ein zunehmendes negatives Histogramm deutet auf eine Verstärkung der rückläufigen Volumendynamik hin
    - Die Kontraktion des Histogramms weist auf eine Abschwächung der aktuellen Volumendynamik hin
 
-6. **Price Trendbestätigung**:
+6. **Bestätigung des Preistrends**:
    - Steigender PVO bestätigt einen Aufwärtstrend des Preises
    - Der fallende PVO bestätigt einen Abwärtstrend des Preises
    - Divergenz zwischen PVO-Richtung und Preis kann auf eine mögliche Umkehr hinweisen
 
-7. **Volume-Spikes**:
+7. **Volumenspitzen**:
    - Starke PVO-Sprünge deuten auf erhebliche Volumenänderungen hin, die oft mit wichtigen Marktereignissen einhergehen
    - Solche Spitzen können Ausbrüchen wichtiger Preisniveaus vorausgehen oder diese begleiten
 

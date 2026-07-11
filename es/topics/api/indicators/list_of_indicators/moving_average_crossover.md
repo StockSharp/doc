@@ -65,7 +65,7 @@ El indicador de cruce de medias móviles se puede interpretar de la siguiente ma
    - La distancia creciente entre promedios móviles (aumento del valor absoluto MAC) indica fortalecimiento de la tendencia
    - La distancia decreciente entre los promedios móviles (valor absoluto MAC decreciente) puede indicar un debilitamiento de la tendencia y una posible reversión.
 
-4. **False Signals**:
+4. **Señales falsas**:
    - Durante los períodos de consolidación lateral, MAC puede generar múltiples señales falsas debido a frecuentes cruces de medias móviles
    - A menudo se utilizan indicadores o reglas adicionales para filtrar señales falsas (por ejemplo, lo que requiere que el precio sea por encima/por debajo en ambas medias móviles).
 

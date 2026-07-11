@@ -63,7 +63,7 @@ El índice máximo-mínimo se interpreta de la siguiente manera:
    - Divergencia alcista: el índice de mercado alcanza un nuevo mínimo, pero HLI forma un mínimo más alto
    - Divergencia bajista: el índice de mercado alcanza un nuevo máximo, pero HLI forma un máximo más bajo
 
-5. **HLI Trends**:
+5. **Tendencias de HLI**:
    - El crecimiento sostenido de HLI indica el fortalecimiento de un mercado alcista
    - La caída sostenida de HLI indica el fortalecimiento de un mercado bajista
 

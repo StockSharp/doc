@@ -51,7 +51,7 @@ Der Psychologische Linie kann wie folgt interpretiert werden:
    - Bullische Divergenz: Der Preis bildet ein neues Tief, während PSY ein höheres Tief bildet
    - Bärische Divergenz: Der Preis bildet ein neues Hoch, während PSY ein niedrigeres Hoch bildet
 
-4. **Rebounds von extremen Levels**:
+4. **Abpraller von extremen Niveaus**:
    - Eine Umkehr des PSY aus der überkauften Zone könnte auf eine mögliche bärische Umkehr hinweisen
    - Die Umkehr des PSY aus der überverkauften Zone könnte auf eine mögliche bullische Umkehr hinweisen
 

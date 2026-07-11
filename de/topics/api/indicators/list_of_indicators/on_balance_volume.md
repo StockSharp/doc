@@ -44,7 +44,7 @@ On-Balance-Volumen kann wie folgt interpretiert werden:
    - Ein fallender OBV weist darauf hin, dass das Volumen den Markt verlässt (Verteilung), was einen Preisrückgang vorhersagen kann
    - Der flache OBV weist auf keine gerichtete Volumenbewegung hin, was einem Seitwärtstrend entsprechen könnte
 
-2. **Price Trendbestätigung**:
+2. **Bestätigung des Preistrends**:
    - Wenn sich OBV in die gleiche Richtung wie der Preis bewegt, bestätigt dies den aktuellen Preistrend
    - Wenn sich OBV und der Preis in entgegengesetzte Richtungen bewegen, kann dies auf eine mögliche Trendumkehr hinweisen
 
@@ -64,7 +64,7 @@ On-Balance-Volumen kann wie folgt interpretiert werden:
    - Auf dem OBV-Chart können sich klassische technische Analysemuster bilden, wie z. B. „Kopf und Schultern“, „Doppelboden“ usw.
    - Diese Muster können zusätzliche Handelssignale liefern
 
-7. **Volume-Spikes**:
+7. **Volumenspitzen**:
    - Plötzliche starke Veränderungen bei OBV können auf erhebliche Veränderungen der Marktstimmung hinweisen
    - Solche „Volumenspitzen“ gehen häufig erheblichen Preisbewegungen voraus
 

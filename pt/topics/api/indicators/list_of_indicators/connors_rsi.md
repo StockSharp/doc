@@ -27,7 +27,7 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do RSI de Connors envolve três componentes que são depois promediados para obter o valor final:
 
-1. **Componente Price RSI** - RSI padrão calculado ao longo de um curto período (normalmente 3 dias):
+1. **Componente RSI de preço** - RSI padrão calculado ao longo de um curto período (normalmente 3 dias):
    ```
    RSI = 100 - (100 / (1 + RS))
    onde RS = alteração positiva média / alteração negativa média

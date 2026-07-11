@@ -44,7 +44,7 @@ El índice de rango de Gopalakrishnan se puede interpretar de la siguiente maner
    - Los valores Low GAPO indican períodos de baja volatilidad
    - Los valores extremadamente altos pueden indicar una posible sobreextensión del mercado y una posible reversión.
 
-2. **GAPO Trends**:
+2. **Tendencias de GAPO**:
    - Los valores crecientes de GAPO indican una volatilidad creciente
    - Los valores GAPO decrecientes indican una volatilidad decreciente
    - Un salto brusco de GAPO puede señalar el comienzo de un nuevo movimiento de tendencia

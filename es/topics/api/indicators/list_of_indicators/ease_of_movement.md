@@ -68,7 +68,7 @@ El indicador EMV se puede interpretar de la siguiente manera:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que EMV forma un mínimo más alto (puede indicar una posible reversión alcista)
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que EMV forma un máximo más bajo (puede indicar una posible reversión a la baja)
 
-4. **EMV Trends**:
+4. **Tendencias de EMV**:
    - Los valores positivos sostenidos confirman una tendencia alcista
    - Los valores negativos sostenidos confirman una tendencia a la baja
    - Las oscilaciones alrededor de cero pueden indicar una tendencia lateral o una consolidación

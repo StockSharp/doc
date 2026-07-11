@@ -61,7 +61,7 @@ El ratio de volatilidad histórica se puede interpretar de la siguiente manera:
    - Valores muy altos de HVR (por ejemplo, > 2,0) pueden indicar un fuerte aumento de la volatilidad, que a menudo ocurre durante pánicos en el mercado o movimientos fuertes.
    - Valores muy bajos de HVR (por ejemplo, < 0,5) pueden indicar un período de compresión de la volatilidad, que a menudo precede a movimientos fuertes
 
-3. **HVR Trends**:
+3. **Tendencias de HVR**:
    - El aumento de HVR indica un aumento en la volatilidad actual
    - La caída de HVR indica una disminución en la volatilidad actual
 

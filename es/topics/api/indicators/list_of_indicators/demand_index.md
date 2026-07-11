@@ -61,7 +61,7 @@ ll Índice de demanda se puede interpretar de varias maneras:
    - Divergencia alcista: el precio forma un nuevo mínimo, pero DI forma un mínimo más alto
    - Divergencia bajista: el precio forma un nuevo máximo, pero DI forma un máximo más bajo
 
-4. **DI Trends**:
+4. **Tendencias de DI**:
    - Los valores positivos sostenidos de DI confirman una tendencia alcista
    - Los valores negativos sostenidos de DI confirman una tendencia a la baja
 

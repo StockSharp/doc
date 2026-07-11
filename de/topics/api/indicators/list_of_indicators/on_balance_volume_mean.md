@@ -64,7 +64,7 @@ On-Balance-Volumen Mean kann wie folgt interpretiert werden:
    - Bärische Divergenz: Der Preis bildet ein neues Hoch, während OBVM ein niedrigeres Hoch bildet
    - Divergenzen gehen oft deutlichen Trendumkehrungen voraus
 
-4. **Price Trendbestätigung**:
+4. **Bestätigung des Preistrends**:
    - Wenn sich OBVM in die gleiche Richtung wie der Preis bewegt, bestätigt dies den aktuellen Preistrend
    - Wenn sich OBVM und der Preis in entgegengesetzte Richtungen bewegen, kann dies auf eine mögliche Trendumkehr hinweisen
 
@@ -72,7 +72,7 @@ On-Balance-Volumen Mean kann wie folgt interpretiert werden:
    - Der OBVM-Chart kann seine eigenen Unterstützungs- und Widerstandsniveaus bilden
    - Der Ausbruch dieser Niveaus kann ähnlichen Ausbrüchen im Preisdiagramm vorausgehen
 
-6. **Vergleich mit anderen Volume-Indikatoren**:
+6. **Vergleich mit anderen Volumenindikatoren**:
    - OBVM kann mit anderen Volumenindikatoren verglichen werden, um Signale zu bestätigen
    - Die Konsistenz der Signale mehrerer Volumenindikatoren erhöht deren Zuverlässigkeit
 

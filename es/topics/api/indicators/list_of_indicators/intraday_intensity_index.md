@@ -60,7 +60,7 @@ El índice de intensidad intradía se puede interpretar de la siguiente manera:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que III forma un mínimo más alto
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que III forma un máximo más bajo
 
-4. **III Trends**:
+4. **Tendencias de III**:
    - Los valores III consistentemente positivos confirman una tendencia alcista
    - Los valores III consistentemente negativos confirman una tendencia a la baja
    - Las oscilaciones alrededor de la línea cero pueden indicar una tendencia lateral o incertidumbre
