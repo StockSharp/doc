@@ -1,12 +1,12 @@
 # WAD
 
-**Williams Accumulation/Distribution (WAD)** es un indicador de volumen desarrollado por Larry Williams. A diferencia de la línea tradicional Accumulation/Distribution, el indicador WAD se centra en la relación entre el precio de cierre del período actual y el precio de cierre del período anterior para determinar la presión del comprador o del vendedor.
+**acumulación/distribución de Williams (WAD)** es un indicador de volumen desarrollado por Larry Williams. A diferencia de la línea tradicional Accumulation/Distribution, el indicador WAD se centra en la relación entre el precio de cierre del período actual y el precio de cierre del período anterior para determinar la presión del comprador o del vendedor.
 
 Para utilizar el indicador, debe utilizar la clase [WilliamsAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsAccumulationDistribution).
 
 ## Descripción
 
-El indicador Williams Accumulation/Distribution está diseñado para identificar discrepancias entre el precio y el volumen que pueden indicar posibles cambios de tendencia. WAD es particularmente útil para revelar debilidades en el movimiento actual de precios.
+El indicador acumulación/distribución de Williams está diseñado para identificar discrepancias entre el precio y el volumen que pueden indicar posibles cambios de tendencia. WAD es particularmente útil para revelar debilidades en el movimiento actual de precios.
 
 Características clave de WAD:
 - Los valores positivos indican acumulación (presión de compra)
@@ -20,7 +20,7 @@ Principales aplicaciones del indicador:
 
 ## Cálculo
 
-El indicador Williams Accumulation/Distribution se calcula utilizando la siguiente lógica:
+El indicador acumulación/distribución de Williams se calcula utilizando la siguiente lógica:
 
 1. Determine la protección del rango verdadero (TRP) para el período actual:
    ```
@@ -30,7 +30,7 @@ El indicador Williams Accumulation/Distribution se calcula utilizando la siguien
 2. Calcule el valor Accumulation/Distribution (AD) para el período actual:
    - Si Close > Close_prev (comercializar hacia arriba):
       ```
-      AD = Close - Min(Low, Close_prev) 
+      AD = Close - Min(Low, Close_prev)
       ```
    - Si Close < Close_prev (mercado a la baja):
       ```

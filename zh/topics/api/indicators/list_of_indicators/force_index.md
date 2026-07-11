@@ -27,12 +27,12 @@
 
 1. 计算单周期力量指数：
    ```
-   1-Period Force Index = (Close[current] - Close[previous]) * Volume[current]
+   单周期力量指数 = (Close[current] - Close[previous]) * Volume[current]
    ```
 
 2. 使用指数移动平均（EMA）进行平滑：
    ```
-   Force Index = EMA(1-Period Force Index, Length)
+   力量指数 = EMA(单周期力量指数, Length)
    ```
 
 其中：

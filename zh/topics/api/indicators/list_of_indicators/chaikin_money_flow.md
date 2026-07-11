@@ -27,19 +27,19 @@ CMF 计算包括以下步骤：
 
 1. 计算每个期间的资金流动乘数：
    ```
-   Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
+   资金流乘数 = ((Close - Low) - (High - Close)) / (High - Low)
    ```
 
 如果（最高价 - 最低价）= 0，则资金流量乘数 = 0。
 
 2. 计算该期间的资金流量
    ```
-   Money Flow Volume = Money Flow Multiplier * Volume
+   资金流量 = 资金流乘数 * Volume
    ```
 
 3. 计算查金资金流量：
    ```
-   CMF = Sum(Length 周期内 Money Flow Volume) / Sum(Length 周期内 Volume)
+   CMF = Sum(Length 周期内 资金流量) / Sum(Length 周期内 Volume)
    ```
 
 ## 解释

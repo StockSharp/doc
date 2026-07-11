@@ -31,13 +31,13 @@ Die Berechnung des Vortex-Indikators erfolgt in mehreren Schritten:
 
 1. Positive und negative Bewegung berechnen:
    ```
-   VM+ = |Current High - Previous Low|
-   VM- = |Current Low - Previous High|
+   VM+ = |aktuelles Hoch - vorheriges Tief|
+   VM- = |aktuelles Tief - vorheriges Hoch|
    ```
 
 2. Wahre Spanne berechnen:
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - vorheriger Schlusskurs|, |Low - vorheriger Schlusskurs|)
    ```
 
 3. Werte von VM+ und VM- über die Length-Periode summieren:

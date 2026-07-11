@@ -1,6 +1,6 @@
-# Типичная цена (Typical Price)
+# Типичная цена
 
-**Типичная цена (Typical Price)** вычисляется как среднее значение High, Low и Close для свечи.
+**Типичная цена** вычисляется как среднее значение High, Low и Close для свечи.
 
 Для использования индикатора необходимо использовать класс [TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice).
 

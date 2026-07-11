@@ -1,8 +1,8 @@
-# Медианная цена (Median Price)
+# Медианная цена
 
-Индикатор **Медианная цена (Median Price)** показывает медианную цену для свечи. 
+Индикатор **Медианная цена** показывает медианную цену для свечи.
 
-Для использования индикатора необходимо использовать класс [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). 
+Для использования индикатора необходимо использовать класс [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice).
 
 ![IndicatorMedianPrice](../../../../images/indicatormedianprice.png)
 

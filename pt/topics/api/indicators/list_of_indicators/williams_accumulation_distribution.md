@@ -1,12 +1,12 @@
 # WAD
 
-**Williams Accumulation/Distribution (WAD)** é um indicador de volume desenvolvido por Larry Williams. Ao contrário da linha Accumulation/Distribution tradicional, o indicador WAD foca-se na relação entre o preço de fecho do período atual e o preço de fecho do período anterior para determinar a pressão compradora ou vendedora.
+**acumulação/distribuição de Williams (WAD)** é um indicador de volume desenvolvido por Larry Williams. Ao contrário da linha Accumulation/Distribution tradicional, o indicador WAD foca-se na relação entre o preço de fecho do período atual e o preço de fecho do período anterior para determinar a pressão compradora ou vendedora.
 
 Para usar o indicador, é necessário usar a classe [WilliamsAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsAccumulationDistribution).
 
 ## Descrição
 
-O indicador Williams Accumulation/Distribution foi concebido para identificar discrepâncias entre preço e volume que possam sinalizar potenciais inversões de tendência. O WAD é particularmente útil para revelar fraqueza no movimento atual do preço.
+O indicador acumulação/distribuição de Williams foi concebido para identificar discrepâncias entre preço e volume que possam sinalizar potenciais inversões de tendência. O WAD é particularmente útil para revelar fraqueza no movimento atual do preço.
 
 Características principais do WAD:
 - Valores positivos indicam acumulação (pressão compradora)
@@ -20,7 +20,7 @@ Principais aplicações do indicador:
 
 ## Cálculo
 
-O indicador Williams Accumulation/Distribution é calculado usando a seguinte lógica:
+O indicador acumulação/distribuição de Williams é calculado usando a seguinte lógica:
 
 1. Determinar a proteção do intervalo verdadeiro (TRP) para o período atual:
    ```
@@ -30,7 +30,7 @@ O indicador Williams Accumulation/Distribution é calculado usando a seguinte l�
 2. Calcular o valor Accumulation/Distribution (AD) para o período atual:
    - Se Close > Close_prev (mercado em alta):
       ```
-      AD = Close - Min(Low, Close_prev) 
+      AD = Close - Min(Low, Close_prev)
       ```
    - Se Close < Close_prev (mercado em baixa):
       ```

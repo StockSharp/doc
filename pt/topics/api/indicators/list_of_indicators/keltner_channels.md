@@ -11,7 +11,7 @@ Os Keltner Channels consistem em três linhas:
 2. **Banda Superior**: linha central mais um multiplicador do ATR
 3. **Banda Inferior**: linha central menos o mesmo multiplicador do ATR
 
-O indicador foi desenvolvido por Chester Keltner nos anos 1960 e posteriormente modificado por Linda Raschke, que substituiu a média móvel simples (SMA) por uma média móvel exponencial (EMA) e começou a usar o ATR em vez do intervalo High-Low para calcular a largura do canal.
+O indicador foi desenvolvido por Chester Keltner nos anos 1960 e posteriormente modificado por Linda Raschke, que substituiu a média móvel simples (SMA) por uma média móvel exponencial (EMA) e começou a usar o ATR em vez do intervalo máximo-mínimo para calcular a largura do canal.
 
 Os Keltner Channels ajudam os traders a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
 

@@ -25,24 +25,24 @@ DI旨在识别以下市场情况：
 
 1. 根据价格变动计算价格组成部分：
    ```
-   Price Component = ((High + Low + Close) / 3) - ((Previous High + Previous Low + Previous Close) / 3)
+   价格组件 = ((High + Low + Close) / 3) - ((前一最高价 + 前一最低价 + 前一收盘价) / 3)
    ```
 
 2. 计算体积分量，同时考虑相对体积变化。
 
 3. 将需求计算为价格和数量组成部分的比率：
    ```
-   Raw Demand = Price Component / Volume Component
+   原始需求 = 价格组件 / 成交量组件
    ```
 
 4. 平滑所获得的值以减少噪声：
    ```
-   Smoothed Demand = EMA(Raw Demand, Length)
+   平滑需求 = EMA(原始需求, Length)
    ```
 
 5. 将结果归一化以获得最终指数：
    ```
-   Demand Index = 100 * Normalized(Smoothed Demand)
+   需求指数 = 100 * Normalized(平滑需求)
    ```
 
 ## 解释

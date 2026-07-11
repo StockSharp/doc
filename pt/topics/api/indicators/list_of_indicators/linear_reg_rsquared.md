@@ -35,17 +35,17 @@ O cálculo de R-quadrado na regressão linear envolve os seguintes passos:
 
 2. Calcular a soma dos desvios quadráticos da regressão (SSE):
    ```
-   SSE = Sum((Actual Price - Predicted Price)^2)
+   SSE = Sum((preço real - preço previsto)^2)
    ```
    Onde:
-   - Actual Price - preço real
-   - Predicted Price - preço previsto pela equação de regressão
+   - preço real - preço real
+   - preço previsto - preço previsto pela equação de regressão
 
 3. Calcular a soma total dos quadrados (SST):
    ```
-   SST = Sum((Actual Price - Average Price)^2)
+   SST = Sum((preço real - preço médio)^2)
    ```
-   Onde Average Price é o preço médio durante o período Length
+   Onde preço médio é o preço médio durante o período Length
 
 4. Calcular R²:
    ```

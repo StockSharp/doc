@@ -28,7 +28,7 @@ Twiggs 资金流计算分为几个步骤进行：
 
 1. 计算真实波幅：
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - 前一收盘价|, |Low - 前一收盘价|)
    ```
 
 2. 确定Twiggs资金流量成交量（TMFV）：

@@ -1,12 +1,12 @@
 # TMF
 
-**Twiggs Money Flow (TMF)** é um indicador de volume desenvolvido por Colin Twiggs como uma versão melhorada do indicador Chaikin Money Flow. O TMF é mais sensível a alterações no sentimento do mercado e tem menos sinais falsos.
+**fluxo monetário de Twiggs (TMF)** é um indicador de volume desenvolvido por Colin Twiggs como uma versão melhorada do indicador fluxo monetário de Chaikin. O TMF é mais sensível a alterações no sentimento do mercado e tem menos sinais falsos.
 
 Para usar o indicador, é necessário usar a classe [TwiggsMoneyFlow](xref:StockSharp.Algo.Indicators.TwiggsMoneyFlow).
 
 ## Descrição
 
-O Twiggs Money Flow analisa a relação entre preço e volume para determinar a direção do fluxo de dinheiro para dentro ou para fora do mercado. Ao contrário dos indicadores de volume tradicionais, o TMF elimina ruído normalizando os valores entre -1 e +1.
+O fluxo monetário de Twiggs analisa a relação entre preço e volume para determinar a direção do fluxo de dinheiro para dentro ou para fora do mercado. Ao contrário dos indicadores de volume tradicionais, o TMF elimina ruído normalizando os valores entre -1 e +1.
 
 Características principais do TMF:
 - Valores positivos indicam entrada de dinheiro no instrumento (sentimento altista)
@@ -24,14 +24,14 @@ O indicador é útil para:
 
 ## Cálculo
 
-O cálculo do Twiggs Money Flow é efetuado em vários passos:
+O cálculo do fluxo monetário de Twiggs é efetuado em vários passos:
 
 1. Calcular o intervalo verdadeiro:
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - fecho anterior|, |Low - fecho anterior|)
    ```
 
-2. Determinar o Twiggs Money Flow Volume (TMFV):
+2. Determinar o volume de fluxo monetário de Twiggs (TMFV):
    ```
    TMFV = Volume * ((Close - Low - (High - Close)) / TR)
    ```
@@ -55,5 +55,5 @@ Os valores do TMF variam de -1 (sinal fortemente baixista) a +1 (sinal fortement
 ## Ver também
 
 [ADL](accumulation_distribution_line.md)
-[Money Flow Index](money_flow_index.md)
+[Índice de fluxo monetário](money_flow_index.md)
 [OBV](on_balance_volume.md)

@@ -1,12 +1,12 @@
 # TMF
 
-**Twiggs Money Flow (TMF)** es un indicador de volumen desarrollado por Colin Twiggs como una versión mejorada del indicador Chaikin Money Flow. TMF es más sensible a los cambios en el sentimiento del mercado y tiene menos señales falsas.
+**flujo de dinero de Twiggs (TMF)** es un indicador de volumen desarrollado por Colin Twiggs como una versión mejorada del indicador flujo de dinero de Chaikin. TMF es más sensible a los cambios en el sentimiento del mercado y tiene menos señales falsas.
 
 Para utilizar el indicador, debe utilizar la clase [TwiggsMoneyFlow](xref:StockSharp.Algo.Indicators.TwiggsMoneyFlow).
 
 ## Descripción
 
-Twiggs Money Flow analiza la relación entre precio y volumen para determinar la dirección del flujo de dinero dentro o fuera del mercado. A diferencia de los indicadores de volumen tradicionales, TMF elimina el ruido normalizando valores entre -1 y +1.
+flujo de dinero de Twiggs analiza la relación entre precio y volumen para determinar la dirección del flujo de dinero dentro o fuera del mercado. A diferencia de los indicadores de volumen tradicionales, TMF elimina el ruido normalizando valores entre -1 y +1.
 
 Características clave de TMF:
 - Los valores positivos indican entrada de dinero en el instrumento (sentimiento alcista)
@@ -24,11 +24,11 @@ El indicador es útil para:
 
 ## Cálculo
 
-El cálculo de Twiggs Money Flow se realiza en varios pasos:
+El cálculo de flujo de dinero de Twiggs se realiza en varios pasos:
 
 1. Calcular el rango verdadero:
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - cierre anterior|, |Low - cierre anterior|)
    ```
 
 2. Determinar el volumen de flujo monetario de Twiggs (TMFV):
@@ -55,5 +55,5 @@ Los valores de TMF oscilan entre -1 (fuerte señal bajista) y +1 (fuerte señal 
 ## Véase también
 
 [ADL](accumulation_distribution_line.md)
-[Money Flow Index](money_flow_index.md)
+[Índice de flujo de dinero](money_flow_index.md)
 [OBV](on_balance_volume.md)

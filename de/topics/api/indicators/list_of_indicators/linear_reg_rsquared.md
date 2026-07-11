@@ -35,7 +35,7 @@ Die R-Quadrat der linearen Regression-Berechnung umfasst die folgenden Schritte:
 
 2. Berechnung der Summe der quadratischen Abweichungen von der Regression (SSE):
    ```
-   SSE = Sum((Actual Price - Predicted Price)^2)
+   SSE = Sum((tatsächlicher Preis - prognostizierter Preis)^2)
    ```
    Dabei gilt:
    - Tatsächlicher Price - tatsächlicher Preis
@@ -43,9 +43,9 @@ Die R-Quadrat der linearen Regression-Berechnung umfasst die folgenden Schritte:
 
 3. Berechnung der Gesamtsumme der Quadrate (SST):
    ```
-   SST = Sum((Actual Price - Average Price)^2)
+   SST = Sum((tatsächlicher Preis - Durchschnittspreis)^2)
    ```
-   Dabei ist Average Price der Durchschnittspreis über den Length-Zeitraum
+   Dabei ist Durchschnittspreis der Durchschnittspreis über den Length-Zeitraum
 
 4. Berechnung von R²:
    ```

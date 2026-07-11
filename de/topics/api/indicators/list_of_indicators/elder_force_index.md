@@ -1,6 +1,6 @@
-# Elder's Force Index
+# Elder-Kraftindex
 
-**Elder's Force Index (EFI)** misst den Kauf- und Verkaufsdruck anhand von Preisänderungen und Volumen.
+**Elder-Kraftindex (EFI)** misst den Kauf- und Verkaufsdruck anhand von Preisänderungen und Volumen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex) verwenden.
 
@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [ElderForceIndex](
 
 ## Empfohlene Inhalte
 
-[Force Index](force_index.md)
+[Kraftindex](force_index.md)

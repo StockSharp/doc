@@ -2,13 +2,13 @@
 
 ﻿# ADL
 
-**Accumulation/Distribution Line (ADL)** é um indicador de volume desenvolvido por Mark Chaikin. O indicador avalia a relação entre oferta e procura no mercado analisando a correlação entre preço e volume.
+**Linha de acumulação/distribuição (ADL)** é um indicador de volume desenvolvido por Mark Chaikin. O indicador avalia a relação entre oferta e procura no mercado analisando a correlação entre preço e volume.
 
 Para usar o indicador, é necessário usar a classe [AccumulationDistributionLine](xref:StockSharp.Algo.Indicators.AccumulationDistributionLine).
 
 ## Descrição
 
-A Accumulation/Distribution Line é um indicador cumulativo que usa volume e preço para determinar se um instrumento está numa fase de acumulação (compra) ou distribuição (venda).
+A linha de acumulação/distribuição é um indicador cumulativo que usa volume e preço para determinar se um instrumento está numa fase de acumulação (compra) ou distribuição (venda).
 
 O indicador ADL ajuda a confirmar uma tendência ou a avisar sobre a sua potencial reversão:
 - Se o preço estiver a subir e o ADL estiver a cair, isto pode sinalizar fraqueza numa tendência ascendente.
@@ -16,7 +16,7 @@ O indicador ADL ajuda a confirmar uma tendência ou a avisar sobre a sua potenci
 
 ## Cálculo
 
-O cálculo da Accumulation/Distribution Line ocorre em dois passos:
+O cálculo da linha de acumulação/distribuição ocorre em dois passos:
 
 **1. Cálculo do multiplicador de volume (CLV - Close Location Value):**
 ```

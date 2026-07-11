@@ -22,7 +22,7 @@ Der Indikator hat die folgenden Parameter:
 
 Die Massenindex-Berechnung umfasst die folgenden Schritte:
 
-1. Berechnen Sie den High-Low-Bereich für jeden Zeitraum:
+1. Berechnen Sie den Hoch-Tief-Bereich für jeden Zeitraum:
    ```
    Range = High - Low
    ```

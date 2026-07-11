@@ -11,7 +11,7 @@ Keltner Channels besteht aus drei Zeilen:
 2. **Upper-Band**: Mittellinie plus ein Multiplikator von ATR
 3. **Lower-Band**: Mittellinie minus dem gleichen ATR-Multiplikator
 
-Der Indikator wurde in den 1960er Jahren von Chester Keltner entwickelt und später von Linda Raschke modifiziert, die den einfachen gleitenden Durchschnitt (SMA) durch einen exponentiellen gleitenden Durchschnitt (EMA) ersetzte und begann, ATR anstelle des Bereichs High-Low zur Berechnung der Kanalbreite zu verwenden.
+Der Indikator wurde in den 1960er Jahren von Chester Keltner entwickelt und später von Linda Raschke modifiziert, die den einfachen gleitenden Durchschnitt (SMA) durch einen exponentiellen gleitenden Durchschnitt (EMA) ersetzte und begann, ATR anstelle des Bereichs Hoch-Tief zur Berechnung der Kanalbreite zu verwenden.
 
 Keltner Channels hilft Händlern dabei, die Trendrichtung sowie potenzielle Unterstützungs- und Widerstandsniveaus zu bestimmen. Sie werden auch verwendet, um überkaufte und überverkaufte Bedingungen zu identifizieren, wenn der Preis das obere bzw. untere Band berührt oder durchbricht.
 

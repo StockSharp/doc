@@ -6,7 +6,7 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [WilliamsVariableAccumulati
 
 ## Beschreibung
 
-Der WVAD-Indikator misst, in welchem Umfang Käufer oder Verkäufer die Preisbewegung innerhalb jedes Balkens kontrollieren, und gewichtet diesen Wert mit dem Volumen. Liegt der Schlusskurs über dem Eröffnungskurs, weist dies auf Käuferdominanz hin und umgekehrt. Die High-Low-Spanne dient als Normalisierungsfaktor.
+Der WVAD-Indikator misst, in welchem Umfang Käufer oder Verkäufer die Preisbewegung innerhalb jedes Balkens kontrollieren, und gewichtet diesen Wert mit dem Volumen. Liegt der Schlusskurs über dem Eröffnungskurs, weist dies auf Käuferdominanz hin und umgekehrt. Die Hoch-Tief-Spanne dient als Normalisierungsfaktor.
 
 Wichtige Anwendungsfälle des Indikators:
 - Bestätigung des aktuellen Trends

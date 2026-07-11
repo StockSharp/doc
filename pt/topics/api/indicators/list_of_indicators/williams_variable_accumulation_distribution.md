@@ -6,7 +6,7 @@ Para usar o indicador, use a classe [WilliamsVariableAccumulationDistribution](x
 
 ## Descrição
 
-O indicador WVAD mede quanto os compradores ou vendedores controlam o movimento do preço em cada barra, e pondera este valor pelo volume. Se o preço de fecho for superior ao preço de abertura, indica domínio comprador, e vice-versa. O intervalo High-Low é usado como fator de normalização.
+O indicador WVAD mede quanto os compradores ou vendedores controlam o movimento do preço em cada barra, e pondera este valor pelo volume. Se o preço de fecho for superior ao preço de abertura, indica domínio comprador, e vice-versa. O intervalo máximo-mínimo é usado como fator de normalização.
 
 Principais aplicações do indicador:
 - Confirmar a tendência atual

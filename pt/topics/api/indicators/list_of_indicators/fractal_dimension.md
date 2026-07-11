@@ -20,7 +20,7 @@ O indicador tem o seguinte parâmetro:
 
 ## Cálculo
 
-O FDI é calculado comparando o comprimento total do percurso do preço com o intervalo high-low global:
+O FDI é calculado comparando o comprimento total do percurso do preço com o intervalo máximo-mínimo global:
 
 1. Somar as diferenças absolutas entre preços consecutivos ao longo do período para obter o comprimento do percurso do preço.
 2. Encontrar a diferença entre o máximo mais alto e o mínimo mais baixo do período.

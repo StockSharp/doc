@@ -8,7 +8,7 @@ Para usar o indicador, é necessário usar a classe [BalanceOfMarketPower](xref:
 
 ## Descrição
 
-O indicador Equilíbrio de poder do mercado foi concebido para avaliar a distribuição atual de forças entre compradores e vendedores no mercado. Analisa quanto o preço de fecho se desvia do seu intervalo (high-low) e correlaciona isto com o volume de negociação.
+O indicador Equilíbrio de poder do mercado foi concebido para avaliar a distribuição atual de forças entre compradores e vendedores no mercado. Analisa quanto o preço de fecho se desvia do seu intervalo (máximo-mínimo) e correlaciona isto com o volume de negociação.
 
 O BMP ajuda os traders a:
 - Determinar o lado dominante do mercado (compradores ou vendedores)
@@ -46,8 +46,8 @@ Onde:
 
 ## Interpretação
 
-- **Valores positivos de BMP** indicam dominância de compradores (bulls) no mercado
-- **Valores negativos de BMP** indicam dominância de vendedores (bears) no mercado
+- **Valores positivos de BMP** indicam dominância de compradores (compradores) no mercado
+- **Valores negativos de BMP** indicam dominância de vendedores (vendedores) no mercado
 - **Cruzamento da linha zero** pode ser considerado um sinal de alteração de tendência
 - **Valores extremos** (acima ou abaixo de certos níveis) podem indicar condições de sobrecompra ou sobrevenda no mercado
 - **Divergências** entre BMP e preço podem sinalizar uma potencial reversão de tendência

@@ -2184,7 +2184,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void LocalizedIndicatorDocsDoNotKeepEnglishBullishBearishWords()
 	{
 		var errors = new List<string>();
-		var phrases = new[] { "bullish", "bearish" };
+		var phrases = new[] { "bullish", "bearish", "bulls", "bears" };
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
@@ -2248,6 +2248,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var phrases = new[]
 		{
 			"Adjustment Based on Historical Data",
+			"Actual Price",
+			"Average Price",
 			"Average Value",
 			"Average Negative Change",
 			"Average Positive Change",
@@ -2258,9 +2260,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Centerline",
 			"Close Price",
 			"Fast MA",
+			"Force Index",
 			"For each i from",
 			"for each Period",
 			"for all i from",
+			"Current High",
+			"Current Low",
+			"High-Low",
 			"Midpoint",
 			"Midpoint Move",
 			"Level 0%",
@@ -2276,18 +2282,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"MACD Line",
 			"Mean Deviation",
 			"Middle Line",
+			"Money Flow",
+			"Money Flow Multiplier",
+			"Money Flow Volume",
 			"Open Price",
 			"PPO Line",
 			"PVO Line",
+			"Previous Close",
+			"Previous High",
+			"Previous Low",
+			"Price Component",
+			"Predicted Price",
 			"Raw BMP",
+			"Raw Demand",
 			"Short EMA",
 			"Signal Line",
 			"Slow MA",
+			"Smoothed Demand",
 			"Sum of TR",
 			"Upper Band",
+			"Volume Component",
 			"Dynamic Overbought Level",
 			"Dynamic Oversold Level",
 			"1-Period EMV",
+			"1-Period Force Index",
 			"signal period",
 			"where RS",
 		};
@@ -2325,10 +2343,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var phrases = new[]
 		{
+			"Accumulation/Distribution Line",
 			"Balance of Market Power",
 			"Balance of Power",
+			"Chaikin Money Flow",
 			"Center of Gravity Oscillator",
+			"Demand Index",
+			"Elder's Force Index",
 			"Ease of Movement",
+			"Force Index",
 			"Linear Regression R-Squared",
 			"Lunar Phase",
 			"Market Facilitation Index",
@@ -2337,10 +2360,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"McClellan Oscillator",
 			"McGinley Dynamic",
 			"Mean Deviation",
+			"Median Price",
+			"Money Flow Index",
 			"Moving Median",
 			"Optimal Tracking Filter",
 			"R-Squared in Linear Regression",
+			"Twiggs Money Flow",
+			"Typical Price",
 			"Weighted Close Price",
+			"Williams Accumulation/Distribution",
 		};
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
@@ -2522,6 +2550,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		{
 			"Lines componen",
 			"Abrupt changes in stop lines",
+			"Correction Identification",
+			"Reverse Divergence",
+			"reversal hump",
 		};
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())

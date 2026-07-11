@@ -35,7 +35,7 @@ R-Squared en el cálculo de regresión lineal implica los siguientes pasos:
 
 2. Calcular la suma de las desviaciones al cuadrado de la regresión (SSE):
    ```
-   SSE = Sum((Actual Price - Predicted Price)^2)
+   SSE = Sum((precio real - precio previsto)^2)
    ```
    donde:
    - Precio real - precio real
@@ -43,7 +43,7 @@ R-Squared en el cálculo de regresión lineal implica los siguientes pasos:
 
 3. Calculando la suma total de cuadrados (SST):
    ```
-   SST = Sum((Actual Price - Average Price)^2)
+   SST = Sum((precio real - precio promedio)^2)
    ```
    Donde precio medio es el precio medio durante el período Length
 

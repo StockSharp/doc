@@ -1,12 +1,12 @@
 # WAD
 
-**Williams Accumulation/Distribution (WAD)** ist ein von Larry Williams entwickelter Volumenindikator. Anders als die klassische Accumulation/Distribution Line konzentriert sich WAD auf das Verhältnis zwischen dem Schlusskurs der aktuellen Periode und dem Schlusskurs der vorherigen Periode, um Kauf- oder Verkaufsdruck zu bestimmen.
+**Williams-Akkumulation/-Distribution (WAD)** ist ein von Larry Williams entwickelter Volumenindikator. Anders als die klassische Akkumulations-/Distributionslinie konzentriert sich WAD auf das Verhältnis zwischen dem Schlusskurs der aktuellen Periode und dem Schlusskurs der vorherigen Periode, um Kauf- oder Verkaufsdruck zu bestimmen.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WilliamsAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsAccumulationDistribution).
 
 ## Beschreibung
 
-Der Williams Accumulation/Distribution-Indikator dient dazu, Abweichungen zwischen Preis und Volumen zu identifizieren, die auf mögliche Trendumkehrungen hinweisen können. WAD ist besonders nützlich, um Schwäche in der aktuellen Preisbewegung sichtbar zu machen.
+Der Williams-Akkumulation/-Distribution-Indikator dient dazu, Abweichungen zwischen Preis und Volumen zu identifizieren, die auf mögliche Trendumkehrungen hinweisen können. WAD ist besonders nützlich, um Schwäche in der aktuellen Preisbewegung sichtbar zu machen.
 
 Wichtige Eigenschaften von WAD:
 - Positive Werte zeigen Akkumulation an (Kaufdruck)
@@ -20,7 +20,7 @@ Wichtige Anwendungsfälle des Indikators:
 
 ## Berechnung
 
-Der Williams Accumulation/Distribution-Indikator wird nach folgender Logik berechnet:
+Der Williams-Akkumulation/-Distribution-Indikator wird nach folgender Logik berechnet:
 
 1. Schutz der wahren Spanne (TRP) für die aktuelle Periode bestimmen:
    ```

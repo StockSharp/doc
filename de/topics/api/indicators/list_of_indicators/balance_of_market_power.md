@@ -6,7 +6,7 @@ Zur Verwendung des Indikators müssen Sie die Klasse [BalanceOfMarketPower](xref
 
 ## Beschreibung
 
-Der Balance-of-Market-Power-Indikator dient dazu, die aktuelle Kräfteverteilung zwischen Käufern und Verkäufern im Markt zu bewerten. Er analysiert, wie stark der Schlusskurs von seiner Spanne (High-Low) abweicht, und setzt dies in Beziehung zum Handelsvolumen.
+Der Balance-of-Market-Power-Indikator dient dazu, die aktuelle Kräfteverteilung zwischen Käufern und Verkäufern im Markt zu bewerten. Er analysiert, wie stark der Schlusskurs von seiner Spanne (Hoch-Tief) abweicht, und setzt dies in Beziehung zum Handelsvolumen.
 
 BMP hilft Tradern:
 - Die dominierende Marktseite zu bestimmen (Käufer oder Verkäufer)

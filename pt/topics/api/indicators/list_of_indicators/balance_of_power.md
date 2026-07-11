@@ -2,13 +2,13 @@
 
 ﻿# BOP
 
-**Equilíbrio de poder (BOP)** é um indicador concebido para medir a força dos bulls (compradores) em relação aos bears (vendedores), avaliando a capacidade dos compradores para elevar o preço do mínimo até ao máximo.
+**Equilíbrio de poder (BOP)** é um indicador concebido para medir a força dos compradores em relação aos vendedores, avaliando a capacidade dos compradores para elevar o preço do mínimo até ao máximo.
 
 Para usar o indicador, é necessário usar a classe [BalanceOfPower](xref:StockSharp.Algo.Indicators.BalanceOfPower).
 
 ## Descrição
 
-O indicador Equilíbrio de poder (BOP) apresenta o equilíbrio de forças entre compradores e vendedores no mercado. Baseia-se na suposição de que, numa tendência, compradores (bulls) ou vendedores (bears) conseguem controlar o preço ao longo da sessão. Ao comparar a diferença entre os preços de fecho e abertura com todo o intervalo de preço (high-low), o indicador permite avaliar quem domina atualmente o mercado.
+O indicador Equilíbrio de poder (BOP) apresenta o equilíbrio de forças entre compradores e vendedores no mercado. Baseia-se na suposição de que, numa tendência, compradores (compradores) ou vendedores (vendedores) conseguem controlar o preço ao longo da sessão. Ao comparar a diferença entre os preços de fecho e abertura com todo o intervalo de preço (máximo-mínimo), o indicador permite avaliar quem domina atualmente o mercado.
 
 O BOP ajuda os traders a:
 - Determinar a direção e a força da tendência atual
@@ -36,8 +36,8 @@ O BOP é muitas vezes adicionalmente suavizado usando uma média móvel para red
 
 ## Interpretação
 
-- **Valores positivos de BOP** (acima de zero) indicam que os compradores (bulls) estão a controlar o mercado, o que pode sinalizar uma tendência ascendente.
-- **Valores negativos de BOP** (abaixo de zero) indicam que os vendedores (bears) estão a controlar o mercado, o que pode sinalizar uma tendência descendente.
+- **Valores positivos de BOP** (acima de zero) indicam que os compradores (compradores) estão a controlar o mercado, o que pode sinalizar uma tendência ascendente.
+- **Valores negativos de BOP** (abaixo de zero) indicam que os vendedores (vendedores) estão a controlar o mercado, o que pode sinalizar uma tendência descendente.
 - **Cruzamento da linha zero** pode ser considerado um sinal de uma potencial alteração da direção da tendência.
 - **Valores extremos** (fortemente positivos ou fortemente negativos) podem indicar condições de sobrecompra ou sobrevenda no mercado.
 - **Divergências** entre BOP e preço podem sinalizar uma possível reversão de tendência:

@@ -1,12 +1,12 @@
 # CMF
 
-**Chaikin Money Flow (CMF)** ist ein von Mark Chaikin entwickelter technischer Indikator, der die Stärke des Geldflusses (Akkumulation und Verteilung) auf dem Markt über einen bestimmten Zeitraum misst.
+**Chaikin-Geldfluss (CMF)** ist ein von Mark Chaikin entwickelter technischer Indikator, der die Stärke des Geldflusses (Akkumulation und Verteilung) auf dem Markt über einen bestimmten Zeitraum misst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ChaikinMoneyFlow](xref:StockSharp.Algo.Indicators.ChaikinMoneyFlow) verwenden.
 
 ## Beschreibung
 
-Chaikin Money Flow (CMF) erweitert das Konzept der Akkumulations-/Verteilungslinie (A/D-Linie) und konzentriert sich auf einen bestimmten Zeitraum. Der Indikator misst das Geldflussvolumen, ausgedrückt als Prozentsatz des Gesamtvolumens über den angegebenen Zeitraum.
+Chaikin-Geldfluss (CMF) erweitert das Konzept der Akkumulations-/Verteilungslinie (A/D-Linie) und konzentriert sich auf einen bestimmten Zeitraum. Der Indikator misst das Geldflussvolumen, ausgedrückt als Prozentsatz des Gesamtvolumens über den angegebenen Zeitraum.
 
 CMF hilft Händlern:
 - Bestimmen Sie die Stärke des Kauf- und Verkaufsdrucks
@@ -27,17 +27,17 @@ Die CMF-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den Geldfluss Multiplier für jede Periode:
    ```
-   Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
+   Geldflussmultiplikator = ((Close - Low) - (High - Close)) / (High - Low)
    ```
 
    Wenn (High - Low) = 0, dann ist der Geldfluss Multiplier = 0.
 
 2. Berechnen Sie den Geldfluss Volume für den Zeitraum:
    ```
-   Money Flow Volume = Money Flow Multiplier * Volume
+   Geldflussvolumen = Geldflussmultiplikator * Volume
    ```
 
-3. Berechnen Sie Chaikin Money Flow:
+3. Berechnen Sie Chaikin-Geldfluss:
    ```
    CMF = Sum(Geldflussvolumen über Length-Periode) / Sum(Volumen über Length-Periode)
    ```

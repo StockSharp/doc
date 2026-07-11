@@ -6,7 +6,7 @@ Zur Verwendung des Indikators müssen Sie die Klasse [BalanceOfPower](xref:Stock
 
 ## Beschreibung
 
-Der Balance-of-Power-Indikator (BOP) zeigt das Kräfteverhältnis zwischen Käufern und Verkäufern im Markt. Er basiert auf der Annahme, dass Käufer (Bullen) oder Verkäufer (Bären) in einem Trend den Preis während der Sitzung kontrollieren können. Durch den Vergleich der Differenz zwischen Schluss- und Eröffnungskurs mit der gesamten Preisspanne (High-Low) lässt sich beurteilen, wer den Markt aktuell dominiert.
+Der Balance-of-Power-Indikator (BOP) zeigt das Kräfteverhältnis zwischen Käufern und Verkäufern im Markt. Er basiert auf der Annahme, dass Käufer (Bullen) oder Verkäufer (Bären) in einem Trend den Preis während der Sitzung kontrollieren können. Durch den Vergleich der Differenz zwischen Schluss- und Eröffnungskurs mit der gesamten Preisspanne (Hoch-Tief) lässt sich beurteilen, wer den Markt aktuell dominiert.
 
 BOP hilft Tradern:
 - Richtung und Stärke des aktuellen Trends zu bestimmen

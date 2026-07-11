@@ -31,13 +31,13 @@ Vortex インジケーターの計算は、いくつかの手順で実行され�
 
 1. 正の変動と負の変動を計算します。
    ```
-   VM+ = |Current High - Previous Low|
-   VM- = |Current Low - Previous High|
+   VM+ = |現在高値 - 前回安値|
+   VM- = |現在安値 - 前回高値|
    ```
 
 2. 真の値幅を計算します。
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - 前回終値|, |Low - 前回終値|)
    ```
 
 3. Length 期間にわたって VM+ と VM- の値を合計します。

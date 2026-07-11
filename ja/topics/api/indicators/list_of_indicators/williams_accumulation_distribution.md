@@ -1,12 +1,12 @@
 # WAD
 
-**Williams Accumulation/Distribution (WAD)** は、Larry Williams によって開発された出来高インジケーターです。従来の Accumulation/Distribution ラインとは異なり、WAD インジケーターは買い手または売り手の圧力を判断するために、現在期間の終値と前期間の終値の関係に注目します。
+**ウィリアムズ・アキュムレーション/ディストリビューション (WAD)** は、Larry Williams によって開発された出来高インジケーターです。従来の Accumulation/Distribution ラインとは異なり、WAD インジケーターは買い手または売り手の圧力を判断するために、現在期間の終値と前期間の終値の関係に注目します。
 
 このインジケーターを使用するには、[WilliamsAccumulationDistribution](xref:StockSharp.Algo.Indicators.WilliamsAccumulationDistribution) クラスを使用する必要があります。
 
 ## 説明
 
-Williams Accumulation/Distribution インジケーターは、潜在的なトレンド反転を示す可能性がある価格と出来高の不一致を特定するように設計されています。WAD は、現在の価格変動における弱さを明らかにするのに特に有用です。
+ウィリアムズ・アキュムレーション/ディストリビューション インジケーターは、潜在的なトレンド反転を示す可能性がある価格と出来高の不一致を特定するように設計されています。WAD は、現在の価格変動における弱さを明らかにするのに特に有用です。
 
 WAD の主な特徴:
 - 正の値はアキュムレーション (買い圧力) を示します
@@ -20,7 +20,7 @@ WAD の主な特徴:
 
 ## 計算
 
-Williams Accumulation/Distribution インジケーターは、次のロジックを使用して計算されます。
+ウィリアムズ・アキュムレーション/ディストリビューション インジケーターは、次のロジックを使用して計算されます。
 
 1. 現在期間の真の値幅保護 (TRP) を決定します。
    ```
@@ -30,7 +30,7 @@ Williams Accumulation/Distribution インジケーターは、次のロジック
 2. 現在期間の Accumulation/Distribution (AD) 値を計算します。
    - Close > Close_prev の場合 (市場が上昇):
       ```
-      AD = Close - Min(Low, Close_prev) 
+      AD = Close - Min(Low, Close_prev)
       ```
    - Close < Close_prev の場合 (市場が下落):
       ```

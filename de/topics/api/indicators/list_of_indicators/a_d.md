@@ -7,13 +7,13 @@ Zur Verwendung des Indikators sollte die Klasse [Acceleration](xref:StockSharp.A
 
 Das A/D-Histogramm ist die Differenz zwischen dem Wert des 5/34-Histogramms der treibenden Kraft und dem 5-periodigen einfachen gleitenden Durchschnitt dieses Histogramms. Die Werte beziehen sich auf den klassischen Oszillator; in den Einstellungen können jederzeit eigene Parameter angegeben werden.
 
-MEDIAN PRICE = (HIGH + LOW) / 2
-AO = SMA (MEDIAN PRICE, 5) - SMA (MEDIAN PRICE, 34)
+MEDIANPREIS = (HIGH + LOW) / 2
+AO = SMA (MEDIANPREIS, 5) - SMA (MEDIANPREIS, 34)
 A/D = AO - SMA (AO, 5)
 
 wobei:
 
-MEDIAN PRICE - Medianpreis;
+MEDIANPREIS - Medianpreis;
 HIGH - höchster Preis des Balkens;
 LOW - niedrigster Preis des Balkens;
 SMA - einfacher gleitender Durchschnitt;

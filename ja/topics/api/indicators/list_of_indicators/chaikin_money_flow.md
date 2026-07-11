@@ -1,12 +1,12 @@
 # CMF
 
-**Chaikin Money Flow (CMF)** は、Mark Chaikin によって開発されたテクニカルインジケーターで、特定の期間にわたる市場内のマネーフロー（蓄積と分配）の強さを測定します。
+**チャイキン・マネーフロー (CMF)** は、Mark Chaikin によって開発されたテクニカルインジケーターで、特定の期間にわたる市場内のマネーフロー（蓄積と分配）の強さを測定します。
 
 このインジケーターを使用するには、[ChaikinMoneyFlow](xref:StockSharp.Algo.Indicators.ChaikinMoneyFlow) クラスを使用する必要があります。
 
 ## 説明
 
-Chaikin Money Flow (CMF) は、Accumulation/Distribution Line（A/D Line）の概念を拡張し、特定の期間に焦点を当てます。このインジケーターは、指定期間における総出来高に対する割合として表されるマネーフロー出来高を測定します。
+チャイキン・マネーフロー (CMF) は、アキュムレーション/ディストリビューションライン（A/D Line）の概念を拡張し、特定の期間に焦点を当てます。このインジケーターは、指定期間における総出来高に対する割合として表されるマネーフロー出来高を測定します。
 
 CMF はトレーダーが次のことを行うのに役立ちます。
 - 買い圧力と売り圧力の強さを判断する
@@ -25,21 +25,21 @@ CMF の主要な考え方は、強い上昇トレンドでは終値が期間の�
 
 CMF の計算には次の手順が含まれます。
 
-1. 各期間の Money Flow Multiplier を計算します。
+1. 各期間の マネーフロー乗数を計算します。
    ```
-   Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
-   ```
-   
-   (High - Low) = 0 の場合、Money Flow Multiplier = 0 です。
-
-2. 期間の Money Flow Volume を計算します。
-   ```
-   Money Flow Volume = Money Flow Multiplier * Volume
+   マネーフロー乗数 = ((Close - Low) - (High - Close)) / (High - Low)
    ```
 
-3. Chaikin Money Flow を計算します。
+   (High - Low) = 0 の場合、マネーフロー乗数 = 0 です。
+
+2. 期間の マネーフロー出来高を計算します。
    ```
-   CMF = Sum(Length 期間の Money Flow Volume) / Sum(Length 期間の Volume)
+   マネーフロー出来高 = マネーフロー乗数 * Volume
+   ```
+
+3. チャイキン・マネーフローを計算します。
+   ```
+   CMF = Sum(Length 期間の マネーフロー出来高) / Sum(Length 期間の Volume)
    ```
 
 ## 解釈

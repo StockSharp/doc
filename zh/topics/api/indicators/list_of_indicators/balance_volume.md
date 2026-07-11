@@ -21,11 +21,11 @@ BV 指标尤其适用于：
 平衡量指标的计算基于将收盘价与前一个收盘价进行比较，并对交易量进行加权：
 
 ```
-如果 Close > Previous Close：
+如果 Close > 前一收盘价：
 	BV = Previous BV + Volume
-如果 Close < Previous Close：
+如果 Close < 前一收盘价：
 	BV = Previous BV - Volume
-如果 Close = Previous Close：
+如果 Close = 前一收盘价：
 	BV = Previous BV
 ```
 

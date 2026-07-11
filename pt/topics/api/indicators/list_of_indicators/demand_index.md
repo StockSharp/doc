@@ -1,12 +1,12 @@
 # DI
 
-**Demand Index (DI)** é um indicador técnico desenvolvido por James Sibbett que analisa a relação entre preço e volume para avaliar a força da procura e a pressão compradora no mercado.
+**Índice de procura (DI)** é um indicador técnico desenvolvido por James Sibbett que analisa a relação entre preço e volume para avaliar a força da procura e a pressão compradora no mercado.
 
 Para usar o indicador, deve ser usada a classe [DemandIndex](xref:StockSharp.Algo.Indicators.DemandIndex).
 
 ## Descrição
 
-O Demand Index (DI) é um indicador de volume abrangente que avalia a relação entre preço e volume para determinar quão forte é a pressão compradora (procura) em comparação com a pressão vendedora. O indicador baseia-se na suposição de que a relação entre a variação do preço e a variação do volume permite uma avaliação mais precisa da procura do mercado do que observar simplesmente preço ou volume individualmente.
+O Índice de procura (DI) é um indicador de volume abrangente que avalia a relação entre preço e volume para determinar quão forte é a pressão compradora (procura) em comparação com a pressão vendedora. O indicador baseia-se na suposição de que a relação entre a variação do preço e a variação do volume permite uma avaliação mais precisa da procura do mercado do que observar simplesmente preço ou volume individualmente.
 
 DI procura identificar as seguintes situações de mercado:
 - Procura forte (pressão compradora)
@@ -21,33 +21,33 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Demand Index é bastante complexo e envolve várias etapas:
+O cálculo do Índice de procura é bastante complexo e envolve várias etapas:
 
 1. Calcular o componente de preço com base na variação do preço:
    ```
-   Price Component = ((High + Low + Close) / 3) - ((Previous High + Previous Low + Previous Close) / 3)
+   componente de preço = ((High + Low + Close) / 3) - ((máximo anterior + mínimo anterior + fecho anterior) / 3)
    ```
 
 2. Calcular o componente de volume, tendo em conta a variação relativa do volume.
 
 3. Calcular a procura como a relação entre os componentes de preço e volume:
    ```
-   Raw Demand = Price Component / Volume Component
+   procura bruta = componente de preço / componente de volume
    ```
 
 4. Suavizar os valores obtidos para reduzir ruído:
    ```
-   Smoothed Demand = EMA(Raw Demand, Length)
+   procura suavizada = EMA(procura bruta, Length)
    ```
 
 5. Normalizar o resultado para obter o índice final:
    ```
-   Demand Index = 100 * Normalized(Smoothed Demand)
+   Índice de procura = 100 * Normalized(procura suavizada)
    ```
 
 ## Interpretação
 
-O Demand Index pode ser interpretado de várias formas:
+O Índice de procura pode ser interpretado de várias formas:
 
 1. **Níveis extremos**:
    - Valores positivos elevados indicam procura forte (pressão compradora)
@@ -68,7 +68,7 @@ O Demand Index pode ser interpretado de várias formas:
 5. **Valores extremos**:
    - Valores muito elevados ou muito baixos podem indicar condições de sobrecompra ou sobrevenda no mercado
 
-Usar o Demand Index é mais eficaz quando combinado com outros indicadores e métodos de análise para filtrar sinais falsos.
+Usar o Índice de procura é mais eficaz quando combinado com outros indicadores e métodos de análise para filtrar sinais falsos.
 
 ![indicator_demand_index](../../../../images/indicator_demand_index.png)
 

@@ -1,6 +1,6 @@
-# Elder's Force Index
+# Índice de fuerza de Elder
 
-**Elder's Force Index (EFI)** mide la presión de compra y venta utilizando el cambio de precio y el volumen.
+**Índice de fuerza de Elder (EFI)** mide la presión de compra y venta utilizando el cambio de precio y el volumen.
 
 Para utilizar el indicador, debe utilizar la clase [ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex).
 
@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [ElderForceIndex](xref:StockS
 
 ## Contenido recomendado
 
-[Force Index](force_index.md)
+[Índice de fuerza](force_index.md)

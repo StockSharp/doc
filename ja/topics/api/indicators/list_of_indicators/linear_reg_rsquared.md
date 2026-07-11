@@ -35,17 +35,17 @@ R² の値は 0 から 1（または 0% から 100%）の範囲です。
 
 2. 回帰からの偏差平方和（SSE）を計算します。
    ```
-   SSE = Sum((Actual Price - Predicted Price)^2)
+   SSE = Sum((実際価格 - 予測価格)^2)
    ```
    ここで:
-   - Actual Price - 実際の価格
-   - Predicted Price - 回帰式からの予測価格
+   - 実際価格 - 実際の価格
+   - 予測価格 - 回帰式からの予測価格
 
 3. 全平方和（SST）を計算します。
    ```
-   SST = Sum((Actual Price - Average Price)^2)
+   SST = Sum((実際価格 - 平均価格)^2)
    ```
-   ここで、Average Price は Length 期間における平均価格です
+   ここで、平均価格 は Length 期間における平均価格です
 
 4. R² を計算します。
    ```

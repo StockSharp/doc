@@ -1,16 +1,16 @@
 # FI
 
-**Force Index (FI)** ist ein von Dr. Alexander Elder entwickelter technischer Indikator, der die Stärke jeder Preisbewegung basierend auf ihrer Richtung, ihrem Ausmaß und ihrem Handelsvolumen misst.
+**Kraftindex (FI)** ist ein von Dr. Alexander Elder entwickelter technischer Indikator, der die Stärke jeder Preisbewegung basierend auf ihrer Richtung, ihrem Ausmaß und ihrem Handelsvolumen misst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ForceIndex](xref:StockSharp.Algo.Indicators.ForceIndex) verwenden.
 
 ## Beschreibung
 
-Der Force Index ist ein Oszillator, der die Stärke von „Bullen“ (Käufern) oder „Bären“ (Verkäufern) bei jeder Preisbewegung misst. Es kombiniert drei wichtige Elemente von Marktinformationen: Richtung der Preisbewegung, Ausmaß der Bewegung und Handelsvolumen.
+Der Kraftindex ist ein Oszillator, der die Stärke von „Bullen“ (Käufern) oder „Bären“ (Verkäufern) bei jeder Preisbewegung misst. Es kombiniert drei wichtige Elemente von Marktinformationen: Richtung der Preisbewegung, Ausmaß der Bewegung und Handelsvolumen.
 
-Die Grundidee des Indikators ist, dass die Marktbewegung umso stärker ist, je größer die Preisänderung und je größer das Handelsvolumen ist. Positive Force Index-Werte weisen auf eine Vorherrschaft des Käufers hin (bullischer Druck), während negative Werte auf eine Vorherrschaft des Verkäufers hindeuten (bärischer Druck).
+Die Grundidee des Indikators ist, dass die Marktbewegung umso stärker ist, je größer die Preisänderung und je größer das Handelsvolumen ist. Positive Kraftindex-Werte weisen auf eine Vorherrschaft des Käufers hin (bullischer Druck), während negative Werte auf eine Vorherrschaft des Verkäufers hindeuten (bärischer Druck).
 
-Der Force Index ist besonders nützlich für:
+Der Kraftindex ist besonders nützlich für:
 - Bestimmung der Stärke des aktuellen Trends
 - Identifizieren potenzieller Umkehrpunkte
 - Bestätigung von Ausbrüchen
@@ -23,16 +23,16 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Force Index-Berechnung umfasst die folgenden Schritte:
+Die Kraftindex-Berechnung umfasst die folgenden Schritte:
 
-1. Berechnung des Einzelperioden-Force Index:
+1. Berechnung des Einzelperioden-Kraftindex:
    ```
-   1-Period Force Index = (Close[current] - Close[previous]) * Volume[current]
+   Einperioden-Kraftindex = (Close[current] - Close[previous]) * Volume[current]
    ```
 
 2. Glättung mit einem exponentiellen gleitenden Durchschnitt (EMA):
    ```
-   Force Index = EMA(1-Period Force Index, Length)
+   Kraftindex = EMA(Einperioden-Kraftindex, Length)
    ```
 
 Dabei gilt:
@@ -43,7 +43,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Force Index kann auf verschiedene Arten interpretiert werden:
+Der Kraftindex kann auf verschiedene Arten interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Der Übergang von negativen zu positiven Werten weist auf einen erhöhten Aufwärtsdruck hin und kann als Kaufsignal gewertet werden
@@ -54,21 +54,21 @@ Der Force Index kann auf verschiedene Arten interpretiert werden:
    - Hohe negative Werte deuten auf einen starken Abwärtsdruck hin, der zu überverkauften Marktbedingungen führen kann
 
 3. **Abweichungen**:
-   - Eine bullische Divergenz (der Preis bildet ein neues Tief, während Force Index ein höheres Tief bildet) könnte eine mögliche Aufwärtsumkehr signalisieren
-   - Eine rückläufige Divergenz (der Preis bildet ein neues Hoch, während Force Index ein niedrigeres Hoch bildet) könnte eine mögliche Abwärtsumkehr signalisieren
+   - Eine bullische Divergenz (der Preis bildet ein neues Tief, während Kraftindex ein höheres Tief bildet) könnte eine mögliche Aufwärtsumkehr signalisieren
+   - Eine rückläufige Divergenz (der Preis bildet ein neues Hoch, während Kraftindex ein niedrigeres Hoch bildet) könnte eine mögliche Abwärtsumkehr signalisieren
 
 4. **Trendbestätigung**:
-   - Durchweg positive Force Index-Werte bestätigen die Stärke eines Aufwärtstrends
-   - Durchweg negative Force Index-Werte bestätigen die Stärke eines Abwärtstrends
+   - Durchweg positive Kraftindex-Werte bestätigen die Stärke eines Aufwärtstrends
+   - Durchweg negative Kraftindex-Werte bestätigen die Stärke eines Abwärtstrends
 
 5. **Dreifacher Nutzen** (laut Elder):
-   - Kurzfristiger Force Index (2 Tage): zur Identifizierung kurzfristiger Chancen
-   - Mittelfristiger Force Index (13 Tage): zur Ermittlung mittelfristiger Trends und Korrekturen
-   - Langfristiger Force Index (100 Tage): zur Identifizierung des Haupttrends
+   - Kurzfristiger Kraftindex (2 Tage): zur Identifizierung kurzfristiger Chancen
+   - Mittelfristiger Kraftindex (13 Tage): zur Ermittlung mittelfristiger Trends und Korrekturen
+   - Langfristiger Kraftindex (100 Tage): zur Identifizierung des Haupttrends
 
 6. **Korrekturkennzeichnung**:
-   - Bei einem Aufwärtstrend können Tage mit negativem Force Index auf vorübergehende Korrekturen hinweisen
-   - Bei einem Abwärtstrend können Tage mit positivem Force Index auf vorübergehende Aufschwünge hinweisen
+   - Bei einem Aufwärtstrend können Tage mit negativem Kraftindex auf vorübergehende Korrekturen hinweisen
+   - Bei einem Abwärtstrend können Tage mit positivem Kraftindex auf vorübergehende Aufschwünge hinweisen
 
 ![indicator_force_index](../../../../images/indicator_force_index.png)
 

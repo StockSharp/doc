@@ -21,17 +21,17 @@ Der BV-Indikator ist besonders nützlich für:
 Die Berechnung des Balance-Volume-Indikators basiert auf dem Vergleich des Schlusskurses mit dem vorherigen Schlusskurs und der Gewichtung des Handelsvolumens:
 
 ```
-Wenn Close > Previous Close:
+Wenn Close > vorheriger Schlusskurs:
 	BV = Previous BV + Volume
-Wenn Close < Previous Close:
+Wenn Close < vorheriger Schlusskurs:
 	BV = Previous BV - Volume
-Wenn Close = Previous Close:
+Wenn Close = vorheriger Schlusskurs:
 	BV = Previous BV
 ```
 
 Wobei:
 - Close - aktueller Schlusskurs
-- Previous Close - vorheriger Schlusskurs
+- vorheriger Schlusskurs - vorheriger Schlusskurs
 - Volume - aktuelles Handelsvolumen
 - Previous BV - vorheriger Wert des Balance-Volume-Indikators
 

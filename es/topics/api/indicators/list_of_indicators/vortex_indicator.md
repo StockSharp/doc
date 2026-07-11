@@ -31,13 +31,13 @@ El cálculo del indicador Vortex se realiza en varios pasos:
 
 1. Calcular el movimiento positivo y negativo:
    ```
-   VM+ = |Current High - Previous Low|
-   VM- = |Current Low - Previous High|
+   VM+ = |máximo actual - mínimo anterior|
+   VM- = |mínimo actual - máximo anterior|
    ```
 
 2. Calcular el rango verdadero:
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - cierre anterior|, |Low - cierre anterior|)
    ```
 
 3. Valores Sum VM+ y VM- durante el período Length:

@@ -18,4 +18,4 @@ CLOSE(i - n) – der Schlusskurs von n Balken zurück.
 
 ## Siehe auch
 
-[Money Flow Index](money_flow_index.md)
+[Geldflussindex](money_flow_index.md)

@@ -1,12 +1,12 @@
 # TMF
 
-**Twiggs Money Flow (TMF)** は、Chaikin Money Flow インジケーターの改良版として Colin Twiggs によって開発された出来高インジケーターです。TMF は市場センチメントの変化に対してより敏感で、誤シグナルが少なくなります。
+**ツイッグス・マネーフロー (TMF)** は、チャイキン・マネーフロー インジケーターの改良版として Colin Twiggs によって開発された出来高インジケーターです。TMF は市場センチメントの変化に対してより敏感で、誤シグナルが少なくなります。
 
 このインジケーターを使用するには、[TwiggsMoneyFlow](xref:StockSharp.Algo.Indicators.TwiggsMoneyFlow) クラスを使用する必要があります。
 
 ## 説明
 
-Twiggs Money Flow は、価格と出来高の関係を分析して、市場へのマネーフローの流入または流出の方向を判定します。従来の出来高インジケーターとは異なり、TMF は値を -1 から +1 の間に正規化することでノイズを排除します。
+ツイッグス・マネーフロー は、価格と出来高の関係を分析して、市場へのマネーフローの流入または流出の方向を判定します。従来の出来高インジケーターとは異なり、TMF は値を -1 から +1 の間に正規化することでノイズを排除します。
 
 TMF の主な特徴:
 - 正の値は、銘柄への資金流入（強気センチメント）を示します
@@ -24,14 +24,14 @@ TMF の主な特徴:
 
 ## 計算
 
-Twiggs Money Flow の計算は、いくつかの手順で実行されます:
+ツイッグス・マネーフロー の計算は、いくつかの手順で実行されます:
 
 1. 真の値幅を計算します:
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - 前回終値|, |Low - 前回終値|)
    ```
 
-2. Twiggs Money Flow Volume (TMFV) を決定します:
+2. ツイッグス・マネーフロー出来高 (TMFV) を決定します:
    ```
    TMFV = Volume * ((Close - Low - (High - Close)) / TR)
    ```

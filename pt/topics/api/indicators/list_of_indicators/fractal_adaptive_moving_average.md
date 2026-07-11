@@ -24,12 +24,12 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo da FRAMA envolve vários passos:
 
-1. Calcular a dimensão fractal (D) com base no rácio logarítmico do comprimento high-low do preço em relação ao número de períodos:
+1. Calcular a dimensão fractal (D) com base no rácio logarítmico do comprimento máximo-mínimo do preço em relação ao número de períodos:
    ```
    N1 = High(1...Length/2) - Low(1...Length/2)
    N2 = High(Length/2+1...Length) - Low(Length/2+1...Length)
    N3 = High(1...Length) - Low(1...Length)
-   
+
    D = (log(N1 + N2) - log(N3)) / log(2)
    ```
 

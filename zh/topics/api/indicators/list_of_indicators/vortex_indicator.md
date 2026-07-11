@@ -31,13 +31,13 @@
 
 1. 计算上涨和下跌：
    ```
-   VM+ = |Current High - Previous Low|
-   VM- = |Current Low - Previous High|
+   VM+ = |当前最高价 - 前一最低价|
+   VM- = |当前最低价 - 前一最高价|
    ```
 
 2. 计算真实波幅：
    ```
-   TR = Max(High - Low, |High - Previous Close|, |Low - Previous Close|)
+   TR = Max(High - Low, |High - 前一收盘价|, |Low - 前一收盘价|)
    ```
 
 3. 在长度周期内对 VM+ 和 VM- 值求和：

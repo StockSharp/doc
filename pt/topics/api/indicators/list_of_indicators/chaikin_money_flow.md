@@ -1,12 +1,12 @@
 # CMF
 
-**Chaikin Money Flow (CMF)** é um indicador técnico desenvolvido por Mark Chaikin que mede a força do fluxo monetário (acumulação e distribuição) no mercado durante um período específico.
+**fluxo monetário de Chaikin (CMF)** é um indicador técnico desenvolvido por Mark Chaikin que mede a força do fluxo monetário (acumulação e distribuição) no mercado durante um período específico.
 
 Para usar o indicador, deve ser usada a classe [ChaikinMoneyFlow](xref:StockSharp.Algo.Indicators.ChaikinMoneyFlow).
 
 ## Descrição
 
-Chaikin Money Flow (CMF) expande o conceito da Accumulation/Distribution Line (A/D Line), concentrando-se num período de tempo específico. O indicador mede o volume do fluxo monetário expresso como percentagem do volume total durante o período especificado.
+fluxo monetário de Chaikin (CMF) expande o conceito da linha de acumulação/distribuição (A/D Line), concentrando-se num período de tempo específico. O indicador mede o volume do fluxo monetário expresso como percentagem do volume total durante o período especificado.
 
 CMF ajuda os traders a:
 - Determinar a força da pressão compradora e vendedora
@@ -25,19 +25,19 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do CMF envolve os seguintes passos:
 
-1. Calcular o Money Flow Multiplier para cada período:
+1. Calcular o multiplicador do fluxo monetário para cada período:
    ```
-   Money Flow Multiplier = ((Close - Low) - (High - Close)) / (High - Low)
-   ```
-   
-   Se (High - Low) = 0, então Money Flow Multiplier = 0.
-
-2. Calcular o Money Flow Volume para o período:
-   ```
-   Money Flow Volume = Money Flow Multiplier * Volume
+   multiplicador do fluxo monetário = ((Close - Low) - (High - Close)) / (High - Low)
    ```
 
-3. Calcular o Chaikin Money Flow:
+   Se (High - Low) = 0, então multiplicador do fluxo monetário = 0.
+
+2. Calcular o volume de fluxo monetário para o período:
+   ```
+   volume de fluxo monetário = multiplicador do fluxo monetário * Volume
+   ```
+
+3. Calcular o fluxo monetário de Chaikin:
    ```
    CMF = Sum(volume de fluxo monetário durante o período Length) / Sum(volume durante o período Length)
    ```

@@ -18,7 +18,7 @@ Das Woodies-CCI-System verwendet diese beiden Linien zusammen mit mehreren wicht
 Wichtige Signale im Woodies-CCI-System:
 - "Zero-line Reject" - wenn sich CCI der Nulllinie nähert und dann davon abprallt, wobei die vorherige Richtung fortgesetzt wird
 - "Trend-line Break" - wenn CCI eine wichtige Trendlinie durchbricht
-- "Reverse Divergence" - eine spezielle Art der Divergenz zwischen Preis und CCI
+- "umgekehrte Divergenz" - eine spezielle Art der Divergenz zwischen Preis und CCI
 
 ## Parameter
 

@@ -22,7 +22,7 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do Índice de massa envolve os seguintes passos:
 
-1. Calcular o intervalo High-Low para cada período:
+1. Calcular o intervalo máximo-mínimo para cada período:
    ```
    Range = High - Low
    ```
@@ -58,8 +58,8 @@ Onde:
 
 O Índice de massa é interpretado da seguinte forma:
 
-1. **"Reversal Hump"**:
-   - O sinal clássico "reversal hump" forma-se quando o índice de massa sobe acima de 27 e depois cai abaixo de 26,5
+1. **"Padrão de inversão"**:
+   - O sinal clássico "padrão de inversão" forma-se quando o índice de massa sobe acima de 27 e depois cai abaixo de 26,5
    - Este padrão indica uma possível inversão de tendência, embora não preveja a sua direcção
 
 2. **Níveis do Índice**:
@@ -72,7 +72,7 @@ O Índice de massa é interpretado da seguinte forma:
    - São necessários indicadores adicionais ou métodos de análise para determinar a direcção (por exemplo, médias móveis ou níveis de suporte/resistência)
 
 4. **Divergências**:
-   - Divergências entre o preço e o índice de massa são menos significativas do que o padrão "reversal hump"
+   - Divergências entre o preço e o índice de massa são menos significativas do que o padrão "padrão de inversão"
    - No entanto, discrepâncias entre novos máximos/mínimos do preço e máximos/mínimos descendentes do índice de massa podem indicar enfraquecimento da tendência
 
 5. **Combinação com Outros Indicadores**:
