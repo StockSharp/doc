@@ -180,10 +180,10 @@ Install-Package StockSharp.Algo.Strategies
 **命令行界面:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
+dotnet nuget add source "https://nuget.stocksharp.com/{你的令牌}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** 打开 **工具 → 选项 → NuGet 包管理器 → 包源** 并添加一个 URL 为 `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` 的新源。
+**Visual Studio:** 打开 **工具 → 选项 → NuGet 包管理器 → 包源** 并添加一个 URL 为 `https://nuget.stocksharp.com/{你的令牌}/v3/index.json` 的新源。
 
 **Rider:** 打开 **设置 → 构建、执行、部署 → NuGet → 源** 并添加该源。
 
@@ -196,7 +196,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json
 **命令行界面:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username YOUR_LOGIN --password YOUR_PASSWORD --store-password-in-clear-text
+dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username 你的登录名 --password 你的密码 --store-password-in-clear-text
 ```
 
 > [!TIP]

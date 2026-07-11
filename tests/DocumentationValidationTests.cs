@@ -1591,6 +1591,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedSetupDocsDoNotKeepEnglishNuGetPlaceholders()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "setup.md");
+		var badPattern = new Regex(@"\bYOUR_(?:TOKEN|LOGIN|PASSWORD)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!badPattern.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: setup documentation keeps an English NuGet placeholder. Localize example placeholder names.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownCodeBlockListLabelsDoNotKeepKnownEnglishLabels()
 	{
 		var errors = new List<string>();

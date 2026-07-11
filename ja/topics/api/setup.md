@@ -180,10 +180,10 @@ Install-Package StockSharp.Algo.Strategies
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
+dotnet nuget add source "https://nuget.stocksharp.com/{あなたのトークン}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** **ツール → オプション → NuGet パッケージ マネージャー → パッケージ ソース** を開き、URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` で新しいソースを追加します。
+**Visual Studio:** **ツール → オプション → NuGet パッケージ マネージャー → パッケージ ソース** を開き、URL `https://nuget.stocksharp.com/{あなたのトークン}/v3/index.json` で新しいソースを追加します。
 
 **Rider:** **設定 → ビルド、実行、デプロイ → NuGet → ソース** を開き、ソースを追加します。
 
@@ -196,7 +196,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username YOUR_LOGIN --password YOUR_PASSWORD --store-password-in-clear-text
+dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username あなたのログイン --password あなたのパスワード --store-password-in-clear-text
 ```
 
 > [!TIP]

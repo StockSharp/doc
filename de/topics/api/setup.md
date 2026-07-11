@@ -180,10 +180,10 @@ Einige Komponenten (Krypto-Connectors usw.) sind nur über den privaten NuGet-Se
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
+dotnet nuget add source "https://nuget.stocksharp.com/{IHR_TOKEN}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** Öffnen Sie **Extras -> Optionen -> NuGet-Paket-Manager -> Paketquellen** und fügen Sie eine neue Quelle mit der URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json` hinzu.
+**Visual Studio:** Öffnen Sie **Extras -> Optionen -> NuGet-Paket-Manager -> Paketquellen** und fügen Sie eine neue Quelle mit der URL `https://nuget.stocksharp.com/{IHR_TOKEN}/v3/index.json` hinzu.
 
 **Rider:** Öffnen Sie **Einstellungen -> Build, Ausführung, Bereitstellung -> NuGet -> Quellen** und fügen Sie die Quelle hinzu.
 
@@ -196,7 +196,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username YOUR_LOGIN --password YOUR_PASSWORD --store-password-in-clear-text
+dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username IHR_LOGIN --password IHR_PASSWORT --store-password-in-clear-text
 ```
 
 > [!TIP]

@@ -180,10 +180,10 @@ Alguns componentes (conectores cripto, etc.) só estão disponíveis através do
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json" --name StockSharpPrivate
+dotnet nuget add source "https://nuget.stocksharp.com/{SEU_TOKEN}/v3/index.json" --name StockSharpPrivate
 ```
 
-**Visual Studio:** abra **Ferramentas → Opções → Gestor de Pacotes NuGet → Origens de Pacotes** e adicione uma nova origem com o URL `https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json`.
+**Visual Studio:** abra **Ferramentas → Opções → Gestor de Pacotes NuGet → Origens de Pacotes** e adicione uma nova origem com o URL `https://nuget.stocksharp.com/{SEU_TOKEN}/v3/index.json`.
 
 **Rider:** abra **Definições → Compilação, Execução, Implementação → NuGet → Origens** e adicione a origem.
 
@@ -196,7 +196,7 @@ dotnet nuget add source "https://nuget.stocksharp.com/{YOUR_TOKEN}/v3/index.json
 **CLI:**
 
 ```bash
-dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username YOUR_LOGIN --password YOUR_PASSWORD --store-password-in-clear-text
+dotnet nuget add source "https://nuget.stocksharp.com/x/v3/index.json" --name StockSharpPrivate --username SEU_LOGIN --password SUA_PALAVRA_PASSE --store-password-in-clear-text
 ```
 
 > [!TIP]
