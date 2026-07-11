@@ -9,7 +9,7 @@
 - **Starknet アカウント** - Starknet アカウントヘッダー値。
 - **Starknet キー** - Starknet 秘密鍵マテリアル。
 - **セクション** - 取引セクション (`Spot` または `Derivatives`)。
-- **スポットを有効化** - Spot セクションを有効にします。
+- **スポットを有効化** - 現物セクションを有効にします。
 - **デモ** - デモ環境モード。
 - **Spot REST / Derivatives REST** - REST エンドポイント。
 - **Spot WS / Derivatives WS** - WebSocket エンドポイント。

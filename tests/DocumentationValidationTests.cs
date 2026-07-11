@@ -2020,12 +2020,33 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var labels = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
 		{
+			"Active",
+			"Board",
+			"Client",
 			"Compression",
 			"Database",
+			"Delay",
+			"Duplicate",
+			"encrypted channel",
+			"Futures",
+			"Initially",
+			"Interval",
+			"LMAX location",
+			"Main",
+			"message",
+			"message adapter",
+			"Recovery",
+			"Reconnection",
+			"Replay",
+			"Securities",
 			"Server",
+			"Spot",
+			"Swap",
 			"Token",
 			"Tokens",
 			"Transactions only",
+			"Timeout",
+			"User",
 		};
 
 		foreach (var lang in new[] { "ja", "zh" })
@@ -2042,7 +2063,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					if (!labels.Contains(label.Text))
 						continue;
 
-					errors.Add($"{RelativeToRepo(file)}:{label.Line}: CJK connector documentation keeps English field label '{label.Text}'. Localize visible field labels.");
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: CJK connector documentation keeps English label '{label.Text}'. Localize visible labels.");
 				}
 			}
 		}
