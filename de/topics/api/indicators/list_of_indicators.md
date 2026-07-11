@@ -47,7 +47,7 @@
 - [Elder-Ray](list_of_indicators/elder_ray.md) - Indikator Elder-Ray, bewertet das Gleichgewicht zwischen Bullen und Bären mithilfe des EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - Indikator EWO, identifiziert Wellenmuster in Preisbewegungen
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - Indikator EPMA, ein gleitender Durchschnitt mit reduzierter Verzögerung
-- [Envelope](list_of_indicators/envelope.md) - Indikator Envelope, erstellt Bänder um einen gleitenden Durchschnitt zur Erkennung überkaufter und überverkaufter Niveaus
+- [Hüllkurven](list_of_indicators/envelope.md) - Indikator Envelope, erstellt Bänder um einen gleitenden Durchschnitt zur Erkennung überkaufter und überverkaufter Niveaus
 - [EMA](list_of_indicators/ema.md) - Indikator EMA, gewichtet jüngere Preise stärker
 - [FR](list_of_indicators/fibonacci_retracement.md) - Indikator FR, bestimmt mögliche Umkehrniveaus anhand von Fibonacci-Verhältnissen
 - [FVE](list_of_indicators/finite_volume_element.md) - Indikator FVE, misst die Stärke von Preisbewegungen unter Berücksichtigung des Volumens
@@ -55,7 +55,7 @@
 - [EFI](list_of_indicators/elder_force_index.md) - Indikator EFI, misst Kauf- und Verkaufsdruck
 - [FOSC](list_of_indicators/forecast_oscillator.md) - Indikator FOSC, vergleicht tatsächliche Preise mit prognostizierten Preisen
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Indikator FRAMA, passt sich der Marktvolatilität an
-- [Fractals](list_of_indicators/fractals.md) - Indikator Fractals, identifiziert mögliche Wendepunkte in Preis-Charts
+- [Fraktale](list_of_indicators/fractals.md) - Indikator Fractals, identifiziert mögliche Wendepunkte in Preis-Charts
 - [FDI](list_of_indicators/fractal_dimension.md) - Indikator FDI, misst die Rauheit des Marktes
 - [Gator](list_of_indicators/gator_oscillator.md) - Indikator Gator, misst Konvergenz und Divergenz gleitender Durchschnitte
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Indikator GAPO, misst die Variabilität von Preisbewegungen
@@ -92,7 +92,7 @@
 - [MeanDev](list_of_indicators/mean_deviation.md) - Indikator MeanDev, misst die mittlere Abweichung vom Mittelwert
 - [Gleitender Median](list_of_indicators/median.md) - Indikator Gleitender Median, glättet Daten mit dem Median des Fensters
 - [MedPr](list_of_indicators/median_price.md) - Indikator MedPr, berechnet die Mitte der Handelsspanne
-- [Momentum](list_of_indicators/momentum.md) - Indikator Momentum, misst die Geschwindigkeit der Preisänderung
+- [Impuls](list_of_indicators/momentum.md) - Indikator Momentum, misst die Geschwindigkeit der Preisänderung
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Indikator MOMA, misst das Momentum eines gleitenden Durchschnitts
 - [MP](list_of_indicators/momentum_pinball.md) - Indikator MP, erkennt überkaufte und überverkaufte Bedingungen
 - [MFI](list_of_indicators/money_flow_index.md) - Indikator MFI, misst Kauf- und Verkaufsdruck anhand von Preis und Volumen

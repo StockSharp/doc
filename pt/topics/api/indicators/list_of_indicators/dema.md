@@ -8,4 +8,4 @@ Para usar o indicador, deve ser usada a classe [DoubleExponentialMovingAverage](
 
 ## Conteúdo recomendado
 
-[Envelope](envelope.md)
+[Envelopes](envelope.md)

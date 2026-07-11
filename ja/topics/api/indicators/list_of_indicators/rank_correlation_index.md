@@ -31,6 +31,6 @@
 
 ## 関連項目
 
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [RoC](roc.md)
 [RSI](rsi.md)

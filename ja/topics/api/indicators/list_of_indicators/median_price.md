@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Momentum](momentum.md)
+[モメンタム](momentum.md)

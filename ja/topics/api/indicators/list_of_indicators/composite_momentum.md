@@ -59,7 +59,7 @@ CM は次の用途に有効です。
 
 ## 関連項目
 
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

@@ -79,7 +79,7 @@ O momentum da média móvel pode ser interpretado da seguinte forma:
 
 ## Ver também
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
 [RoC](roc.md)

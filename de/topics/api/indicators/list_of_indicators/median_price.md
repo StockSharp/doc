@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [MedianPrice](xref
 
 ## Empfohlene Inhalte
 
-[Momentum](momentum.md)
+[Impuls](momentum.md)

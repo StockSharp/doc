@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Momentum](momentum.md)
+[Моментум](momentum.md)

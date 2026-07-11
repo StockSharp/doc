@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Envelope](envelope.md)
+[エンベロープ](envelope.md)

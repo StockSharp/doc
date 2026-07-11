@@ -3332,10 +3332,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"topics/api/indicators/list_of_indicators/sum_n.md",
 			"topics/api/indicators/list_of_indicators/highest.md",
 			"topics/api/indicators/list_of_indicators/lowest.md",
+			"topics/api/indicators/list_of_indicators/envelope.md",
+			"topics/api/indicators/list_of_indicators/fractals.md",
+			"topics/api/indicators/list_of_indicators/momentum.md",
 		};
 
-		var headingPattern = new Regex(@"^#\s*(?:Volume|Peak|Trough|Shift|Sum N|Highest|Lowest)\s*$", RegexOptions.CultureInvariant);
-		var boldPattern = new Regex(@"\*\*(?:Peak|Trough|Shift|Sum N)\*\*|（Shift）", RegexOptions.CultureInvariant);
+		var headingPattern = new Regex(@"^#\s*(?:Volume|Peak|Trough|Shift|Sum N|Highest|Lowest|Envelope|Fractals|Momentum)\s*$", RegexOptions.CultureInvariant);
+		var boldPattern = new Regex(@"\*\*(?:Peak|Trough|Shift|Sum N|Envelope|Fractals|Momentum)\*\*|（Shift）|Фрактал \(Fractals\)|Моментум \(Momentum\)", RegexOptions.CultureInvariant);
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{

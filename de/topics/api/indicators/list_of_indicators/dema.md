@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [DoubleExponential
 
 ## Empfohlene Inhalte
 
-[Envelope](envelope.md)
+[Hüllkurven](envelope.md)

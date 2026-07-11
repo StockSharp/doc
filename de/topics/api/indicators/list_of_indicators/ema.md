@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [ExponentialMoving
 
 ## Empfohlene Inhalte
 
-[Fractals](fractals.md)
+[Fraktale](fractals.md)

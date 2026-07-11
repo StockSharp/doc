@@ -34,5 +34,5 @@ DeMarker は、逆張りエントリーだけでなく、モメンタムオシ�
 
 [RSI](rsi.md)
 [ストキャスティクスオシレーター](stochastic_oscillator.md)
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 

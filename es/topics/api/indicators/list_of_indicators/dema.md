@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [DoubleExponentialMovingAvera
 
 ## Contenido recomendado
 
-[Envelope](envelope.md)
+[Envolvente](envelope.md)

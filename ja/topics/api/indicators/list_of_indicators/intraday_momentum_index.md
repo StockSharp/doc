@@ -79,5 +79,5 @@ IMI は、指定された期間において、終値が始値をどのくらい�
 
 [RSI](rsi.md)
 [IntradayIntensityIndex](intraday_intensity_index.md)
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [RelativeMomentumIndex](relative_momentum_index.md)

@@ -79,5 +79,5 @@ O índice de momentum intradiário é interpretado de forma semelhante ao RSI:
 
 [RSI](rsi.md)
 [IntradayIntensityIndex](intraday_intensity_index.md)
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [RelativeMomentumIndex](relative_momentum_index.md)

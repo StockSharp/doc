@@ -94,7 +94,7 @@ MP は現在のモメンタムとその過去の極値との関係を分析し�
 
 ## 関連項目
 
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [RSI](rsi.md)
 [ストキャスティクスオシレーター](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

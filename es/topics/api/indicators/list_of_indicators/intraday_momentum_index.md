@@ -79,5 +79,5 @@ El índice de impulso intradía se interpreta de manera similar a RSI:
 
 [RSI](rsi.md)
 [IntradayIntensityIndex](intraday_intensity_index.md)
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [RelativeMomentumIndex](relative_momentum_index.md)

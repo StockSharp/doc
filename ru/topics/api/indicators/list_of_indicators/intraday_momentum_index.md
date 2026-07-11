@@ -79,5 +79,5 @@ IMI оценивает, насколько часто и насколько си
 
 [RSI](rsi.md)
 [IntradayIntensityIndex](intraday_intensity_index.md)
-[Momentum](momentum.md)
+[Моментум](momentum.md)
 [RelativeMomentumIndex](relative_momentum_index.md)

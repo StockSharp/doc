@@ -34,6 +34,6 @@ simples de momentum.
 
 ## Ver também
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [MACD](macd.md)
 [RSI](rsi.md)

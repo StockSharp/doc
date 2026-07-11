@@ -49,7 +49,7 @@
 - [raios de Elder](list_of_indicators/elder_ray.md) - indicador raios de Elder, avalia o equilíbrio entre compradores e vendedores usando EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - indicador EWO, identifica padrões de onda no movimento do preço
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - indicador EPMA, uma média móvel com menor atraso
-- [Envelope](list_of_indicators/envelope.md) - indicador Envelope, cria bandas em torno de uma média móvel para identificar níveis de sobrecompra e sobrevenda
+- [Envelopes](list_of_indicators/envelope.md) - indicador Envelope, cria bandas em torno de uma média móvel para identificar níveis de sobrecompra e sobrevenda
 - [EMA](list_of_indicators/ema.md) - indicador EMA, dá mais peso aos preços recentes
 - [FR](list_of_indicators/fibonacci_retracement.md) - indicador FR, determina potenciais níveis de reversão com base em rácios de Fibonacci
 - [FVE](list_of_indicators/finite_volume_element.md) - indicador FVE, mede a força dos movimentos de preço considerando o volume
@@ -57,7 +57,7 @@
 - [EFI](list_of_indicators/elder_force_index.md) - indicador EFI, mede a pressão de compra e venda
 - [FOSC](list_of_indicators/forecast_oscillator.md) - indicador FOSC, compara preços reais com preços previstos
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - indicador FRAMA, adapta-se à volatilidade do mercado
-- [Fractals](list_of_indicators/fractals.md) - indicador Fractals, identifica potenciais pontos de reversão em gráficos de preço
+- [Fractais](list_of_indicators/fractals.md) - indicador Fractals, identifica potenciais pontos de reversão em gráficos de preço
 - [FDI](list_of_indicators/fractal_dimension.md) - indicador FDI, mede a irregularidade do mercado
 - [Gator](list_of_indicators/gator_oscillator.md) - indicador Gator, mede a convergência e divergência de médias móveis
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - indicador GAPO, mede a variabilidade dos movimentos de preço
@@ -94,7 +94,7 @@
 - [MeanDev](list_of_indicators/mean_deviation.md) - indicador MeanDev, mede o desvio médio em relação à média
 - [Mediana móvel](list_of_indicators/median.md) - indicador Mediana móvel, suaviza dados usando a mediana da janela
 - [MedPr](list_of_indicators/median_price.md) - indicador MedPr, calcula o ponto médio do intervalo de negociação
-- [Momentum](list_of_indicators/momentum.md) - indicador Momentum, mede a velocidade da alteração do preço
+- [Impulso](list_of_indicators/momentum.md) - indicador Momentum, mede a velocidade da alteração do preço
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - indicador MOMA, mede o momentum de uma média móvel
 - [MP](list_of_indicators/momentum_pinball.md) - indicador MP, identifica condições de sobrecompra e sobrevenda
 - [MFI](list_of_indicators/money_flow_index.md) - indicador MFI, mede a pressão de compra e venda com base no preço e no volume

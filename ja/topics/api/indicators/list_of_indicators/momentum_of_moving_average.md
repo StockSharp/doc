@@ -79,7 +79,7 @@ MOMA は、価格そのものではなく移動平均のダイナミクスの変
 
 ## 関連項目
 
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
 [RoC](roc.md)

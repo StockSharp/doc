@@ -34,4 +34,4 @@ DeMarker se puede utilizar para entradas de contratendencia, así como para conf
 
 [RSI](rsi.md)
 [Oscilador estocástico](stochastic_oscillator.md)
-[Momentum](momentum.md)
+[Impulso](momentum.md)

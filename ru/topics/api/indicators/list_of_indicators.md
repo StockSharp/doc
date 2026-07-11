@@ -49,7 +49,7 @@
 - [лучи Элдера](list_of_indicators/elder_ray.md) - индикатор лучи Элдера, оценивает баланс быков и медведей на основе EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - индикатор EWO, определяет волновые модели в движении цены
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - индикатор EPMA, скользящая средняя с уменьшенным лагом
-- [Envelope](list_of_indicators/envelope.md) - индикатор Envelope, создаёт полосы вокруг скользящей средней для определения перекупленности и перепроданности
+- [Конверты](list_of_indicators/envelope.md) - индикатор Envelope, создаёт полосы вокруг скользящей средней для определения перекупленности и перепроданности
 - [EMA](list_of_indicators/ema.md) - индикатор EMA, придаёт больший вес последним ценам
 - [FR](list_of_indicators/fibonacci_retracement.md) - индикатор FR, определяет потенциальные уровни разворота на основе коэффициентов Фибоначчи
 - [FVE](list_of_indicators/finite_volume_element.md) - индикатор FVE, измеряет силу движения цены с учётом объёма
@@ -57,7 +57,7 @@
 - [EFI](list_of_indicators/elder_force_index.md) - индикатор EFI, измеряет давление покупателей и продавцов
 - [FOSC](list_of_indicators/forecast_oscillator.md) - индикатор FOSC, сравнивает фактические цены с прогнозируемыми
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - индикатор FRAMA, адаптируется к волатильности рынка
-- [Fractals](list_of_indicators/fractals.md) - индикатор Fractals, определяет потенциальные точки разворота на ценовых графиках
+- [Фракталы](list_of_indicators/fractals.md) - индикатор Fractals, определяет потенциальные точки разворота на ценовых графиках
 - [FDI](list_of_indicators/fractal_dimension.md) - индикатор FDI, измеряет хаотичность рынка
 - [Gator](list_of_indicators/gator_oscillator.md) - индикатор Gator, измеряет схождение и расхождение скользящих средних
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - индикатор GAPO, измеряет вариативность движения цены
@@ -94,7 +94,7 @@
 - [MeanDev](list_of_indicators/mean_deviation.md) - индикатор MeanDev, измеряет среднее отклонение от среднего
 - [Скользящая медиана](list_of_indicators/median.md) - индикатор Скользящая медиана, сглаживает данные с помощью медианы окна
 - [MedPr](list_of_indicators/median_price.md) - индикатор MedPr, вычисляет середину торгового диапазона
-- [Momentum](list_of_indicators/momentum.md) - индикатор Momentum, измеряет скорость изменения цены
+- [Моментум](list_of_indicators/momentum.md) - индикатор Momentum, измеряет скорость изменения цены
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - индикатор MOMA, измеряет импульс скользящей средней
 - [MP](list_of_indicators/momentum_pinball.md) - индикатор MP, определяет состояния перекупленности и перепроданности
 - [MFI](list_of_indicators/money_flow_index.md) - индикатор MFI, измеряет давление покупок и продаж на основе цены и объёма

@@ -94,7 +94,7 @@ Der Momentum-Pinball-Indikator kann wie folgt interpretiert werden:
 
 ## Siehe auch
 
-[Momentum](momentum.md)
+[Impuls](momentum.md)
 [RSI](rsi.md)
 [Stochastischer Oszillator](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

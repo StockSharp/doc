@@ -34,6 +34,6 @@
 
 ## См. также
 
-[Momentum](momentum.md)
+[Моментум](momentum.md)
 [MACD](macd.md)
 [RSI](rsi.md)

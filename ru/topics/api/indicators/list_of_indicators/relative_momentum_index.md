@@ -56,4 +56,4 @@ RMI особенно полезен для определения потенци
 ## См. также
 
 [RSI](rsi.md)
-[Momentum](momentum.md)
+[Моментум](momentum.md)

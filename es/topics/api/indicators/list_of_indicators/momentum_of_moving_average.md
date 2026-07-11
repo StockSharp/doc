@@ -79,7 +79,7 @@ El impulso de la media móvil se puede interpretar de la siguiente manera:
 
 ## Véase también
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
 [RoC](roc.md)

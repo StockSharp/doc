@@ -33,4 +33,4 @@ DeMarker pode ser usado para entradas contra a tendência, bem como para confirm
 
 [RSI](rsi.md)
 [Oscilador estocástico](stochastic_oscillator.md)
-[Momentum](momentum.md)
+[Impulso](momentum.md)

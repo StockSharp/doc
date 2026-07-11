@@ -8,4 +8,4 @@ Para utilizar o indicador, deve usar a classe [ExponentialMovingAverage](xref:St
 
 ## Conteúdo recomendado
 
-[Fractals](fractals.md)
+[Fractais](fractals.md)

@@ -31,7 +31,7 @@ Durch die doppelte Glättung und Normalisierung filtert der Indikator Rauschen h
 
 ## Siehe auch
 
-[Momentum](momentum.md)
+[Impuls](momentum.md)
 [MACD](macd.md)
 [RSI](rsi.md)
 

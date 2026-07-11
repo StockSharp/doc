@@ -94,7 +94,7 @@ MP анализирует отношение текущего импульса �
 
 ## См. также
 
-[Momentum](momentum.md)
+[Моментум](momentum.md)
 [RSI](rsi.md)
 [Стохастический осциллятор](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

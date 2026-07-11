@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Fractals](fractals.md)
+[フラクタル](fractals.md)

@@ -34,6 +34,6 @@ cálculos de impulso.
 
 ## Véase también
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [MACD](macd.md)
 [RSI](rsi.md)

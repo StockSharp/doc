@@ -32,6 +32,6 @@ Der Indikator ist hilfreich für die kurzfristige Trendbewertung und das Erkenne
 
 ## Siehe auch
 
-[Momentum](momentum.md)
+[Impuls](momentum.md)
 [RoC](roc.md)
 [RSI](rsi.md)

@@ -56,4 +56,4 @@ RMI の計算は複数のステップで実行されます。
 ## 関連項目
 
 [RSI](rsi.md)
-[Momentum](momentum.md)
+[モメンタム](momentum.md)

@@ -86,5 +86,5 @@ KST основан на теории, что рыночные циклы раз�
 
 [RoC](roc.md)
 [MACD](macd.md)
-[Momentum](momentum.md)
+[Моментум](momentum.md)
 [RSI](rsi.md)

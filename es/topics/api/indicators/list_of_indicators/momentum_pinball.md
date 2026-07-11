@@ -94,7 +94,7 @@ El indicador pinball de impulso se puede interpretar de la siguiente manera:
 
 ## Véase también
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [RSI](rsi.md)
 [Oscilador estocástico](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

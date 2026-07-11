@@ -59,7 +59,7 @@ El valor final CM es un oscilador que puede fluctuar tanto en áreas positivas c
 
 ## Véase también
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)
 [RoC](roc.md)
 [RSI](rsi.md)
 [MACD](macd.md)

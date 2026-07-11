@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Fractals](fractals.md)
+[Фракталы](fractals.md)

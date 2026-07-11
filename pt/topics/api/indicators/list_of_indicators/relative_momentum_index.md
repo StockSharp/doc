@@ -56,4 +56,4 @@ O cálculo do RMI é efetuado em vários passos:
 ## Ver também
 
 [RSI](rsi.md)
-[Momentum](momentum.md)
+[Impulso](momentum.md)

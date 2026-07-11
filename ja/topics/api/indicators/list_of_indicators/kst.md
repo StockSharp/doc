@@ -86,6 +86,6 @@ KST インジケーターは、次のように解釈できます。
 
 [RoC](roc.md)
 [MACD](macd.md)
-[Momentum](momentum.md)
+[モメンタム](momentum.md)
 [RSI](rsi.md)
 

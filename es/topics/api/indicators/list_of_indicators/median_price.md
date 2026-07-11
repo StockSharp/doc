@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [MedianPrice](xref:StockSharp
 
 ## Contenido recomendado
 
-[Momentum](momentum.md)
+[Impulso](momentum.md)

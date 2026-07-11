@@ -34,4 +34,4 @@
 
 [RSI](rsi.md)
 [стохастический осциллятор](stochastic_oscillator.md)
-[Momentum](momentum.md)
+[Моментум](momentum.md)

@@ -47,7 +47,7 @@
 - [エルダー・レイ](list_of_indicators/elder_ray.md) - インジケーター エルダー・レイ、EMA を使用して強気派と弱気派のバランスを評価します
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - インジケーター EWO、価格変動の波動パターンを特定します
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - インジケーター EPMA、遅延を低減した移動平均です
-- [Envelope](list_of_indicators/envelope.md) - インジケーター Envelope、買われ過ぎと売られ過ぎの水準を特定するため、移動平均の周囲にバンドを作成します
+- [エンベロープ](list_of_indicators/envelope.md) - インジケーター Envelope、買われ過ぎと売られ過ぎの水準を特定するため、移動平均の周囲にバンドを作成します
 - [EMA](list_of_indicators/ema.md) - インジケーター EMA、直近の価格により大きな重みを与えます
 - [FR](list_of_indicators/fibonacci_retracement.md) - インジケーター FR、Fibonacci 比率に基づいて潜在的な反転水準を判定します
 - [FVE](list_of_indicators/finite_volume_element.md) - インジケーター FVE、出来高を考慮して価格変動の強さを測定します
@@ -55,7 +55,7 @@
 - [EFI](list_of_indicators/elder_force_index.md) - インジケーター EFI、買い圧力と売り圧力を測定します
 - [FOSC](list_of_indicators/forecast_oscillator.md) - インジケーター FOSC、実際の価格を予測価格と比較します
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - インジケーター FRAMA、市場ボラティリティに適応します
-- [Fractals](list_of_indicators/fractals.md) - インジケーター Fractals、価格チャート上の潜在的な反転ポイントを特定します
+- [フラクタル](list_of_indicators/fractals.md) - インジケーター Fractals、価格チャート上の潜在的な反転ポイントを特定します
 - [FDI](list_of_indicators/fractal_dimension.md) - インジケーター FDI、市場の粗さを測定します
 - [Gator](list_of_indicators/gator_oscillator.md) - インジケーター Gator、移動平均の収束と発散を測定します
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - インジケーター GAPO、価格変動の変動性を測定します
@@ -92,7 +92,7 @@
 - [MeanDev](list_of_indicators/mean_deviation.md) - インジケーター MeanDev、平均からの平均偏差を測定します
 - [移動中央値](list_of_indicators/median.md) - インジケーター 移動中央値、ウィンドウの中央値を使用してデータを平滑化します
 - [MedPr](list_of_indicators/median_price.md) - インジケーター MedPr、取引レンジの中間点を計算します
-- [Momentum](list_of_indicators/momentum.md) - インジケーター Momentum、価格変化の速度を測定します
+- [モメンタム](list_of_indicators/momentum.md) - インジケーター Momentum、価格変化の速度を測定します
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - インジケーター MOMA、移動平均のモメンタムを測定します
 - [MP](list_of_indicators/momentum_pinball.md) - インジケーター MP、買われ過ぎと売られ過ぎの状態を特定します
 - [MFI](list_of_indicators/money_flow_index.md) - インジケーター MFI、価格と出来高に基づいて買い圧力と売り圧力を測定します

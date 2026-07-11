@@ -79,7 +79,7 @@ Das Momentum des gleitenden Durchschnitts kann wie folgt interpretiert werden:
 
 ## Siehe auch
 
-[Momentum](momentum.md)
+[Impuls](momentum.md)
 [SMA](sma.md)
 [EMA](ema.md)
 [RoC](roc.md)
