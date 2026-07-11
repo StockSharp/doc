@@ -65,11 +65,11 @@ Pivot Points se puede interpretar de la siguiente manera:
    - Un rebote desde un nivel puede provocar una reversión al alza
 
 4. **Estrategias de trading**:
-   - **Bounce Trading**: Ingrese una posición al rebotar en un nivel de soporte o resistencia
-   - **Breakout Trading**: Ingrese una posición después de una ruptura de nivel confirmada
-   - **Range Trading**: Compre en niveles de soporte y venda en niveles de resistencia
-   - **Target Setting**: Utilice el siguiente nivel como objetivo de obtención de beneficios
-   - **Stop-Loss Placement**: Colocar stop-loss más allá de los niveles correspondientes
+   - **Operativa de rebote**: Ingrese una posición al rebotar en un nivel de soporte o resistencia
+   - **Operativa de ruptura**: Ingrese una posición después de una ruptura de nivel confirmada
+   - **Operativa en rango**: Compre en niveles de soporte y venda en niveles de resistencia
+   - **Definición de objetivos**: Utilice el siguiente nivel como objetivo de obtención de beneficios
+   - **Colocación de stop-loss**: Coloque stop-loss más allá de los niveles correspondientes
 
 5. **Combinando con otros indicadores**:
    - Pivot Points se utilizan a menudo en combinación con otros indicadores técnicos para confirmar señales.

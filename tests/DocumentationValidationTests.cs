@@ -126,6 +126,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"File → New Solution",
 		"File → New → Project",
 		"Group ID",
+		"Getting started",
 		"history plant",
 		"Host name",
 		"Info endpoint",
@@ -2136,6 +2137,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English market direction word '{phrase}'. Localize it for the target language.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishPivotPointStrategyLabels()
+	{
+		var errors = new List<string>();
+		var labels = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+		{
+			"Bounce Trading",
+			"Breakout Trading",
+			"Range Trading",
+			"Target Setting",
+			"Stop-Loss Placement",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+				{
+					if (!labels.Contains(label.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: indicator documentation keeps English Pivot Points strategy label '{label.Text}'. Localize the trading label.");
 				}
 			}
 		}

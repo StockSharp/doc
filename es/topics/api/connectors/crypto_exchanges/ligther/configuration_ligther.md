@@ -10,7 +10,7 @@ Configuración principal:
 - Modo de **demostración**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
- - **Modo WS de solo lectura**.
+- **Modo WS de solo lectura**.
 
 Documentación oficial de la API:
 

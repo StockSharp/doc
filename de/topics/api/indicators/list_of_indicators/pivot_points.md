@@ -65,9 +65,9 @@ Pivot Points kann wie folgt interpretiert werden:
    - Ein Absprung von einem Niveau kann zu einer Aufwärtsumkehr führen
 
 4. **Handelsstrategien**:
-   - **Bounce Trading**: Geben Sie eine Position ein, wenn Sie von einem Unterstützungs- oder Widerstandsniveau abprallen
-   - **Breakout-Handel**: Geben Sie eine Position nach einem bestätigten Level-Ausbruch ein
-   - **Range Trading**: Kaufen Sie bei Unterstützungsniveaus und verkaufen Sie bei Widerstandsniveaus
+   - **Rückprall-Handel**: Eröffnen Sie eine Position, wenn der Preis von einem Unterstützungs- oder Widerstandsniveau abprallt
+   - **Ausbruchshandel**: Eröffnen Sie eine Position nach einem bestätigten Ausbruch aus einem Niveau
+   - **Seitwärtshandel**: Kaufen Sie bei Unterstützungsniveaus und verkaufen Sie bei Widerstandsniveaus
    - **Zielsetzung**: Nutzen Sie das nächste Level als Gewinnmitnahmeziel
    - **Stop-Loss-Platzierung**: Platzieren Sie Stop-Loss-Werte über den entsprechenden Niveaus
 

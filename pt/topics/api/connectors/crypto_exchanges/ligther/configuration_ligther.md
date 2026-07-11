@@ -10,11 +10,11 @@ Definições principais:
 - Modo de **demonstração**.
 - Endpoints **Spot REST / Derivatives REST**.
 - Endpoints **Spot WS / Derivatives WS**.
- - **Modo WS só de leitura**.
+- **Modo WS só de leitura**.
 
 Documentação oficial da API:
 
-- [Getting started](https://apidocs.lighter.xyz/docs/getting-started/introduction)
+- [Primeiros passos](https://apidocs.lighter.xyz/docs/getting-started/introduction)
 - [Obter chave e segredo da API](https://apidocs.lighter.xyz/docs/api/get-api-key-and-secret)
 - [Limites de taxa da API](https://apidocs.lighter.xyz/docs/api/get-api-rate-limits)
 - [Canais WebSocket](https://apidocs.lighter.xyz/docs/websocket/channels)

@@ -65,9 +65,9 @@ Pivot Points podem ser interpretados da seguinte forma:
    - Um ressalto a partir de um nível pode levar a uma reversão ascendente
 
 4. **Estratégias de trading**:
-   - **Bounce Trading**: Entrar numa posição quando há ressalto a partir de um nível de suporte ou resistência
-   - **Breakout Trading**: Entrar numa posição após um breakout confirmado de um nível
-   - **Range Trading**: Comprar em níveis de suporte e vender em níveis de resistência
+   - **Negociação por ressalto**: Entrar numa posição quando há ressalto a partir de um nível de suporte ou resistência
+   - **Negociação de rutura**: Entrar numa posição após uma rutura confirmada de um nível
+   - **Negociação em intervalo**: Comprar em níveis de suporte e vender em níveis de resistência
    - **Definição de alvos**: Usar o nível seguinte como alvo de realização de lucro
    - **Colocação de stop-loss**: Colocar stop-losses para lá dos níveis correspondentes
 
