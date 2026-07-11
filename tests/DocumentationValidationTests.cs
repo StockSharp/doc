@@ -406,6 +406,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("tick price output", @"\bTick:.*\bPrice:"),
 		("order book output", @"\bOrder Book:|\bBest Bid\b|\bBest Ask\b|\bMiddle of Spread\b|\bBid Price:|\bAsk Price:"),
 		("field/value output", @"\bField:|\bValue:|\bBids:|\bAsks:"),
+		("stairs countertrend candle output", @"\b(?:Bullish|Bearish) candle detected\. Streak:"),
 	];
 
 	private static readonly HashSet<string> _translatableEnglishCodeOutputWords = new(StringComparer.OrdinalIgnoreCase)
@@ -1829,6 +1830,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						errors.Add($"{RelativeToRepo(file)}:{output.Line}: code output string contains known untranslated English {name}. String: {Truncate(output.Text, 180)}");
 					}
 				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedStairsCountertrendQuotingLogsDoNotKeepEnglishCandleMessages()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "strategies", "samples", "stairs_countertrend_quoting.md");
+		var pattern = new Regex(@"\b(?:Bullish|Bearish) candle detected\. Streak:", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var output in EnumerateCodeOutputStrings(ReadAllText(file)))
+			{
+				if (!pattern.IsMatch(output.Text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{output.Line}: localized Stairs countertrend quoting log keeps English candle message '{output.Text}'. Localize the log string.");
 			}
 		}
 

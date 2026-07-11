@@ -73,14 +73,14 @@ private void ProcessCandle(ICandleMessage candle)
 		_bullLength++;
 		_bearLength = 0;
 
-		this.AddInfoLog($"Bullish candle detected. Streak: {_bullLength}");
+		this.AddInfoLog($"Обнаружена бычья свеча. Серия: {_bullLength}");
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
 		_bullLength = 0;
 		_bearLength++;
 
-		this.AddInfoLog($"Bearish candle detected. Streak: {_bearLength}");
+		this.AddInfoLog($"Обнаружена медвежья свеча. Серия: {_bearLength}");
 	}
 
 	// Остановка существующего процессора при необходимости смены направления
