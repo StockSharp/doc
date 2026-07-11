@@ -6,8 +6,8 @@ Das Element stellt P/L-Informationen der Strategie bereit.
 
 ## Ausgehende Sockets
 
-- **P/L unrealized** – numerischer Wert des nicht realisierten Gewinns/Verlusts.
-- **P/L realized** – numerischer Wert des realisierten Gewinns/Verlusts.
+- **P/L nicht realisiert** – numerischer Wert des nicht realisierten Gewinns/Verlusts.
+- **P/L realisiert** – numerischer Wert des realisierten Gewinns/Verlusts.
 - **Provisionsgebühr** – numerischer Wert der Kommissionsgebühr.
 
 ## Empfohlene Inhalte

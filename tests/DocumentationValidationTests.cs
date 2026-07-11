@@ -198,6 +198,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Licenses",
 		"Market slippage",
 		"Passphrase",
+		"P/L realized",
+		"P/L unrealized",
 		"Private key",
 		"Section",
 		"Sections",
@@ -1497,6 +1499,31 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English bold UI label '{label}'.");
 					}
 				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void DesignerPnlStrategyDocsDoNotKeepRemoteManagerPlaceholder()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "strategies", "using_visual_designer", "elements", "common", "pnl_strategy.md");
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!text.Contains("RemoteManager", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Strategy P/L element documentation keeps an unrelated RemoteManager placeholder.");
 			}
 		}
 

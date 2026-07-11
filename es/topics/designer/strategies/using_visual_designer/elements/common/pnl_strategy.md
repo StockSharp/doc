@@ -2,12 +2,12 @@
 
 ![Captura de Estrategia P&L](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
-Documentación eng RemoteManager
+El elemento proporciona información de P\/L de la estrategia.
 
 ## Sockets de salida
 
-- **P\/L unrealized** – valor numérico del beneficio\/pérdida no realizado.
-- **P\/L realized** – valor numérico del beneficio\/pérdida realizado.
+- **P\/L no realizado** – valor numérico del beneficio\/pérdida no realizado.
+- **P\/L realizado** – valor numérico del beneficio\/pérdida realizado.
 - **Comisión** – valor numérico de la comisión.
 
 ## Contenido recomendado

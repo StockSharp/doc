@@ -2,7 +2,7 @@
 
 ![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
-Documentation eng RemoteManager 
+The element provides the strategy P/L information.
 
 ## Outgoing sockets
 
