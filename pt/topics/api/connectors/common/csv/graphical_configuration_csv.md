@@ -4,7 +4,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![Configurações da API GUI CSV](../../../../../images/api_gui_settings_csv.png)
 
-- **Settings** - Configurações de importação
+- **Configurações** - Configurações de importação
 - **Definições de religação** - Mecanismo para rastrear a conexão com o sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, é igual a 1 minuto.
 
